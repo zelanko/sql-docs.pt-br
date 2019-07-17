@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7385dddea48813615a851979e526af5f03a23332
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134386"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206585"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>Chamando um procedimento armazenado (OLE DB)
   Um procedimento armazenado pode ter zero ou mais parâmetros. Também pode retornar um valor. Ao usar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client, os parâmetros para um procedimento armazenado podem ser passados por:  
@@ -91,7 +91,7 @@ ms.locfileid: "54134386"
   
  A sintaxe geral para chamar um procedimento usando a sequência de escape ODBC CALL é:  
   
- {[**? =**]**chamar**_procedure_name_[**(**[*parâmetro*] [**,**[*parâmetro*]]... **)**]}  
+ {[ **? =** ]**chamar**_procedure_name_[ **(** [*parâmetro*] [ **,** [*parâmetro*]]... **)** ]}  
   
  Por exemplo:  
   

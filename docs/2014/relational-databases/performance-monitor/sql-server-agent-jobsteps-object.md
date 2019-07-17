@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 323bf0c943d12a2d05e5fde80194d35d9ab733cf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753608"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206559"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server Agent, objeto JobSteps
   O objeto de desempenho [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JobSteps **do** Agent contém contadores de desempenho que relatam informações sobre etapas de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. A tabela a seguir lista os contadores contidos nesse objeto.  
   
  A tabela abaixo contém os contadores de **SQLAgent:JobSteps** .  
   
-|Nome|Descrição|  
+|Name|Descrição|  
 |----------|-----------------|  
 |**Etapas ativas**|Este contador informa o número de etapas de trabalho atualmente em execução.|  
 |**Etapas em fila**|Este contador informa o número de etapas de trabalho que estão prontas para execução pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, mas que ainda não foram iniciadas.|  
@@ -43,7 +43,7 @@ ms.locfileid: "52753608"
 |**Distribuição**|Informações de etapas de trabalho que usam o subsistema **Distribution** .|  
 |**Dts**|Informações de etapas de trabalho que usam o subsistema [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
 |**LogReader**|Informações de etapas de trabalho que usam o subsistema **LogReader** .|  
-|**Mesclagem**|Informações de etapas de trabalho que usam o subsistema **Merge** .|  
+|**Mesclar**|Informações de etapas de trabalho que usam o subsistema **Merge** .|  
 |**PowerShell**|Informações de etapas de trabalho que usam o subsistema **PowerShell** .|  
 |**QueueReader**|Informações de etapas de trabalho que usam o subsistema **QueueReader** .|  
 |**Instantâneo**|Informações de etapas de trabalho que usam o subsistema **Snapshot** .|  

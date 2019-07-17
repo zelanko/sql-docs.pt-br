@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: fbd151b0fa8682865e44615c22a9fdd7577014ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62626520"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266501"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Selecionar e configurar os objetos afetados (OracleToSQL)
 Nessa página, você pode selecionar tabelas e chaves estrangeiras, as alterações no qual devem ser comparadas ao SSMA verifica os resultados da execução para os objetos escolhidos na etapa anterior. Além disso, você pode personalizar os parâmetros de verificação.  
@@ -28,12 +28,12 @@ Na árvore de objetos de Oracle localizado no lado esquerdo da janela, verifique
   
 Se o testador SSMA não é possível verificar qualquer um desses objetos, você verá o link rotulado **alguns objetos selecionados contêm erros** abaixo da árvore de objetos. Clique neste link para exibir as razões por que esses objetos não podem ser comparados e desmarque a seleção de objetos errados.  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>Tabela  
 Na guia da tabela contém a exibição de grade da tabela selecionada. A grade contém as seguintes informações sobre a tabela selecionada:  
   
 -   Nome da coluna  
   
--   Tipo de Dados  
+-   Tipo de dados  
   
 -   Precisão  
   
@@ -50,7 +50,7 @@ Na guia da tabela contém a exibição de grade da tabela selecionada. A grade c
 ## <a name="sql"></a>Sql  
 Guia SQL contém a tabela"criar" SQL da tabela selecionada.  
   
-## <a name="data"></a>Dados  
+## <a name="data"></a>Data  
 Guia de dados exibe dados presentes na tabela selecionada.  
   
 ## <a name="properties"></a>Propriedades  

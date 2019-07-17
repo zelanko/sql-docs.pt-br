@@ -16,11 +16,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ac064258da9ae55039c350f50d153d0c60323621
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778569"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211620"
 ---
 # <a name="wmi-provider-for-configuration-management-concepts"></a>Provedor WMI para conceitos de gerenciamento de configuração
   O provedor WMI é uma camada publicada usada com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] snap-in Gerenciador de configuração do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) e o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Configuration Manager. Ele fornece uma forma unificada para fazer a interface com chamadas de API que gerenciam as operações do Registro solicitadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager e fornece controle e manipulação aprimorados sobre os serviços selecionados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

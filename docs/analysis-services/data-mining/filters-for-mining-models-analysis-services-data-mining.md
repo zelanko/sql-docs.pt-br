@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 81592abc0224b2898b64d834857d23484750b326
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410663"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210004"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtros para modelos de mineração (Analysis Services - Mineração de dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52410663"
 ### <a name="creating-model-filters-using-data-mining-designer"></a>Criando filtros de modelo usando o Designer de Mineração de Dados  
  Você filtra um modelo no Designer de Mineração de Dados alterando a propriedade **Filter** do modelo de mineração. É possível digitar uma expressão de filtro diretamente no painel **Propriedades** ou abrir uma caixa de diálogo de filtros para criar condições.  
   
- Há duas caixas de diálogo de filtro. A primeira permite criar condições aplicadas à tabela de casos. Se a fonte de dados contiver várias tabelas, primeiro você escolherá uma tabela e, em seguida, selecionará uma coluna e especificará os operadores e as condições que se aplicam àquela coluna. Você pode unir várias condições usando os operadores **AND**/**OR** . Os operadores disponíveis para definir os valores dependem se a coluna contém valores discretos ou contínuos. Por exemplo, com valores contínuos, você pode usar os operadores **maior** e **menor** . No entanto, para valores discretos, você pode apenas usar os operadores **= (igual a)**, **! = (não igual a)** e **é nulo** .  
+ Há duas caixas de diálogo de filtro. A primeira permite criar condições aplicadas à tabela de casos. Se a fonte de dados contiver várias tabelas, primeiro você escolherá uma tabela e, em seguida, selecionará uma coluna e especificará os operadores e as condições que se aplicam àquela coluna. Você pode unir várias condições usando os operadores **AND**/**OR** . Os operadores disponíveis para definir os valores dependem se a coluna contém valores discretos ou contínuos. Por exemplo, com valores contínuos, você pode usar os operadores **maior** e **menor** . No entanto, para valores discretos, você pode apenas usar os operadores **= (igual a)** , **! = (não igual a)** e **é nulo** .  
   
 > [!NOTE]  
 >  Não há suporte para a palavra-chave **LIKE** . Se quiser incluir vários atributos discretos, será preciso criar várias condições separadas e vinculá-las usando o operador **OR** .  

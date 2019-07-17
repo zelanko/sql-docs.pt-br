@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 533f37252fa16e2e139f29ac843d6d4a933f13de
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7dd10d28855cc4c10f5496c74f1f39a91826052f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106542"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_type = ] 'job\_type'` Tipo de trabalho a ser adicionado. *job_type* está **nvarchar (20)** e não pode ser NULL. As entradas válidas são **'capture'** e **'cleanup'**.  
+`[ @job_type = ] 'job\_type'` Tipo de trabalho a ser adicionado. *job_type* está **nvarchar (20)** e não pode ser NULL. As entradas válidas são **'capture'** e **'cleanup'** .  
   
 `[ @start_job = ] start_job` Sinalizador que indica se o trabalho deve ser iniciado imediatamente depois que ele é adicionado. *start_job* está **bit** com um padrão de 1.  
   
@@ -83,14 +82,14 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="remarks"></a>Comentários  
  Um trabalho de limpeza é criado usando os valores padrão quando a primeira tabela no banco de dados é habilitada para captura de dados de alteração. Um trabalho de captura é criado usando os valores padrão quando a primeira tabela no banco de dados é habilitada para captura de dados de alteração e não há publicações transacionais no banco de dados. Quando existir uma publicação transacional, o leitor do log transacional será usado para orientar o mecanismo de captura e um trabalho de captura separado não será nem necessário, nem permitido.  
   
  Como os trabalhos de limpeza e captura são criados por padrão, este procedimento armazenado será necessário somente quando um trabalho tiver sido explicitamente encerrado e tiver de ser recriado.  
   
- É o nome do trabalho **cdc.**  _\<banco de dados\_nome\>_**\_limpeza** ou **cdc.**  _\<banco de dados\_nome\>_**\_capturar**, onde *< database_name >* é o nome do banco de dados atual. Se um trabalho com o mesmo nome já existir, o nome é anexado com um ponto (**.**) seguido por um identificador exclusivo, por exemplo: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ É o nome do trabalho **cdc.**  _\<banco de dados\_nome\>_ **\_limpeza** ou **cdc.**  _\<banco de dados\_nome\>_ **\_capturar**, onde *< database_name >* é o nome do banco de dados atual. Se um trabalho com o mesmo nome já existir, o nome é anexado com um ponto ( **.** ) seguido por um identificador exclusivo, por exemplo: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Para exibir a configuração atual de um trabalho de limpeza ou captura, use [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Para alterar a configuração de um trabalho, use [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   

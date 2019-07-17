@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: Criar um alerta do SQL Server Agent usando o provedor WMI para eventos de servidor | Microsoft Docs'
+title: 'Amostra: Criar um alerta do SQL Server Agent usando o provedor WMI para eventos de servidor | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a793c6ee6e1f6e168ca2a957b84b1ba4a1d2a453
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823440"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195831"
 ---
-# <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>Exemplo: Criar um alerta do SQL Server Agent usando o provedor WMI para eventos de servidor
+# <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>Amostra: Criação de um alerta do SQL Server Agent usando o provedor WMI para eventos do servidor
   Uma forma comum de usar o Provedor de eventos de WMI é criar alertas do SQL Server Agent que respondem a eventos específicos. O seguinte exemplo apresenta um alerta simples que salva eventos de gráfico de deadlock XML em uma tabela para análise posterior. O SQL Server Agent envia uma solicitação WQL, recebe eventos WMI, e executa um trabalho em resposta ao evento. Observe que, embora vários objetos do Service Broker estejam envolvidos no processamento da mensagem de notificação, o Provedor de eventos de WMI manipula os detalhes da criação e do gerenciamento desses objetos.  
   
 ## <a name="example"></a>Exemplo  
@@ -102,7 +102,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Execute o seguinte script na segunda guia de consulta. Este script gera um conjunto de resultados e então fica bloqueado, aguardando a aquisição de um bloqueio em `Production.Product`.  
+ Execute o seguinte script na segunda guia consulta. Este script produz um conjunto de resultados e, em seguida, bloqueie, esperando para adquirir um bloqueio em `Production.Product`.  
   
 ```  
 USE AdventureWorks ;  
@@ -118,7 +118,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Execute seguinte o script na primeira guia de consulta. Este script fica bloqueado, enquanto esperando adquirir um bloqueio em `Production.Location`. Depois de um tempo limite curto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escolherá este script ou o script no exemplo como a vítima de deadlock e encerrará a transação.  
+ Execute o seguinte script na primeira guia de consulta. Este script fica bloqueado, aguardando para adquirir um bloqueio em `Production.Location`. Depois de um tempo limite curto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escolherá este script ou o script no exemplo como a vítima de deadlock e encerrará a transação.  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  

@@ -1,5 +1,5 @@
 ---
-title: Valores ausentes (Analysis Services – mineração de dados) | Microsoft Docs
+title: Valores ausentes (Analysis Services - mineração de dados) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 662fdd55fc5929fe56734b9894bf971962ff2a7b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017643"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182603"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valores ausentes (Analysis Services - Mineração de dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Tratar  *valores ausentes values* corretamente é uma parte importante da modelagem efetiva. Esta seção explica o que são valores ausentes, e descreve os recursos fornecidos no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para trabalhar com valores ausentes ao criar estruturas de mineração de dados e modelos de mineração.  
+  Tratar *valores ausentes values* corretamente é uma parte importante da modelagem efetiva. Esta seção explica o que são valores ausentes, e descreve os recursos fornecidos no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para trabalhar com valores ausentes ao criar estruturas de mineração de dados e modelos de mineração.  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>Definição de valores ausentes em Mineração de Dados  
  Um valor ausente pode significar várias coisas diferentes. Talvez o campo não fosse aplicável, o evento não aconteceu ou os dados não estavam disponíveis. Pode ser que a pessoa que inseriu os dados não sabia o valor certo, ou não se preocupou que um campo não foi preenchido.  
@@ -41,7 +41,7 @@ ms.locfileid: "34017643"
   
  Por exemplo, a tabela a seguir mostra a distribuição de valores do nó (All) no modelo de árvore de decisão criado para o tutorial Bike Buyer. No cenário do exemplo, a coluna [Bike Buyer] é um atributo previsível, em que 1 indica "Sim" e 0 indica "Não".  
   
-|Value|Casos|  
+|Valor|Casos|  
 |-----------|-----------|  
 |0|9296|  
 |1|9098|  
@@ -49,7 +49,7 @@ ms.locfileid: "34017643"
   
  Essa distribuição mostra que cerca de metade dos clientes comprou uma bicicleta e metade não. Esse conjunto de dados em particular é bem simples; portanto, cada caso tem um valor na coluna [Bike Buyer] e a contagem de valores **Ausentes** é 0. Contudo, se algum caso tivesse um nulo no campo [Bike Buyer], o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contaria essa linha como um caso com valor **Ausente** .  
   
- Se a entrada for uma coluna contínua, o modelo tabulará dois estados possíveis para o atributo: **Existente** e **Ausente**. Em outras palavras, ou a coluna contém um valor de algum tipo de dados numérico ou não contém valor algum. Nos casos que têm um valor, o modelo calculará o desvio médio padrão e outras estatísticas significativas. Para casos que não têm nenhum valor, o modelo fornecerá uma contagem dos valores **Ausentes** e ajustará as previsões de acordo. O método usado para ajustar a previsão varia dependendo do algoritmo e é descrito na próxima seção.  
+ Se a entrada for uma coluna contínua, o modelo tabulará dois estados possíveis para o atributo: **Existente** e **ausente**. Em outras palavras, ou a coluna contém um valor de algum tipo de dados numérico ou não contém valor algum. Nos casos que têm um valor, o modelo calculará o desvio médio padrão e outras estatísticas significativas. Para casos que não têm nenhum valor, o modelo fornecerá uma contagem dos valores **Ausentes** e ajustará as previsões de acordo. O método usado para ajustar a previsão varia dependendo do algoritmo e é descrito na próxima seção.  
   
 > [!NOTE]  
 >  Para atributos em uma tabela aninhada, os valores ausentes não são informativos. Por exemplo, se um cliente não tivesse comprado um produto, a tabela **Produtos** aninhada não teria a linha correspondente a esse produto e o modelo de mineração não criaria um atributo para o produto ausente. No entanto, se você estiver interessado nos clientes que não compraram certos produtos, poderá criar um modelo que seja filtrado pela não existência dos produtos na tabela aninhada usando uma instrução NOT EXISTS no filtro do modelo. Para obter mais informações, consulte [Aplicar um filtro a um modelo de mineração](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md).  
@@ -57,7 +57,7 @@ ms.locfileid: "34017643"
 ## <a name="adjusting-probability-for-missing-states"></a>Ajustando a probabilidade para valores ausentes  
  Além de contar valores, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] calcula a probabilidade de qualquer valor em todo o conjunto de dados. O mesmo é válido para o valor **Ausente** . Por exemplo, a tabela a seguir mostra as probabilidades para os casos do exemplo anterior:  
   
-|Value|Casos|Probabilidade|  
+|Valor|Casos|Probabilidade|  
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
 |1|9098|49.42%|  
@@ -84,7 +84,7 @@ ms.locfileid: "34017643"
   
  StateProbability = (NodePriorProbability) * (StateSupport + 1) / (NodeSupport + TotalStates)  
   
-O algoritmo de árvores de decisão faz um ajuste adicional que ajuda o algoritmo a compensar a presença de filtros no modelo, o que pode resultar em vários estados durante o treinamento.  
+O algoritmo árvores de decisão faz um ajuste adicional que ajuda o algoritmo a compensar a presença de filtros no modelo, que pode resultar em vários estados durante o treinamento.  
   
  No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], se houver um estado durante o treinamento, mas não tiver suporte em determinado nó, o ajuste padrão será feito. Porém, se um estado nunca for encontrado durante o treinamento, o algoritmo definirá a probabilidade exatamente como zero. Esse ajuste é válido não só para o estado **Ausente** , mas também para outros estados que existem nos dados de treinamento, mas com suporte para zero como resultado da filtragem do modelo.  
   
@@ -101,13 +101,13 @@ O algoritmo de árvores de decisão faz um ajuste adicional que ajuda o algoritm
   
 |Tarefas|Links|  
 |-----------|-----------|  
-|Adicione sinalizadores a colunas de modelo individuais para controlar o tratamento de valores ausentes|[Exibir ou alterar modelagem sinalizadores & #40; mineração de dados & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|Adicione sinalizadores a colunas de modelo individuais para controlar o tratamento de valores ausentes|[Exibir ou alterar sinalizadores de modelagem &#40;Mineração de dados&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
 |Defina as propriedades em um modelo de mineração para controlar o tratamento de valores ausentes|[Alterar as propriedades de um modelo de mineração](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)|  
-|Saiba como especificar sinalizadores de modelagem no DMX|[Sinalizadores de modelagem & #40; DMX & #41;](../../dmx/modeling-flags-dmx.md)|  
+|Saiba como especificar sinalizadores de modelagem no DMX|[Sinalizadores de modelagem &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
 |Altere o modo como a estrutura de mineração trata valores ausentes|[Alterar as propriedades de uma estrutura de mineração](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo de mineração & #40; Analysis Services – mineração de dados & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Modelagem sinalizadores & #40; mineração de dados & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
+ [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Sinalizadores de modelagem &#40;Mineração de dados&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 429a0c439f5257989e6fb7e85d34a8ea576ad41a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7e857539c26f7806712c3c8e0fd4222064eac8c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526988"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108700"
 ---
 # <a name="spcopysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Copia a pasta de instantâneo da publicação especificada para a pasta listada na **@destination_folder**. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador. Esse procedimento armazenado é útil para copiar um instantâneo em mídia removível, como CD-ROM.  
+  Copia a pasta de instantâneo da publicação especificada para a pasta listada na **@destination_folder** . Esse procedimento armazenado é executado no Publicador, no banco de dados publicador. Esse procedimento armazenado é útil para copiar um instantâneo em mídia removível, como CD-ROM.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +41,7 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ## <a name="arguments"></a>Argumentos  
 `[ @publication = ] 'publication'` É o nome da publicação cujos conteúdos de instantâneo serão copiados. *publicação* está **sysname**, sem padrão.  
   
-`[ @destination_folder = ] 'destination_folder'` É o nome da pasta onde o conteúdo do instantâneo de publicação devem ser copiados. *destination_folder*está **nvarchar (255)**, sem padrão. O *destination_folder* pode ser um local alternativo, como em outro servidor, em uma unidade de rede ou mídia removível (como CD-ROMs ou discos removíveis).  
+`[ @destination_folder = ] 'destination_folder'` É o nome da pasta onde o conteúdo do instantâneo de publicação devem ser copiados. *destination_folder*está **nvarchar (255)** , sem padrão. O *destination_folder* pode ser um local alternativo, como em outro servidor, em uma unidade de rede ou mídia removível (como CD-ROMs ou discos removíveis).  
   
 `[ @subscriber = ] 'subscriber'` É o nome do assinante. *assinante* é sysname, com um padrão NULL.  
   

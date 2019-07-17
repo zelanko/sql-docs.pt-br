@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bd727b56649ce9ffc237575b0311db256ec9b2fc
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54184922"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207424"
 ---
 # <a name="translation-support-in-analysis-services"></a>Suporte a tradução no Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "54184922"
   
 ## <a name="see-also"></a>Confira também  
  [Cenários de globalização para o Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Idiomas e ordenações &amp;#40;Analysis Services&amp;#41;](../analysis-services/languages-and-collations-analysis-services.md)   
+ [Idiomas e ordenações &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)   
  [Definir ou alterar a ordenação de coluna](../relational-databases/collations/set-or-change-the-column-collation.md)   
  [Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
   

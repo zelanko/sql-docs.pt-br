@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1ce64f821edd68dceaa1809a62a6b894ded6a868
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084686"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211691"
 ---
 # <a name="user-defined-functions"></a>Funções definidas pelo usuário
   Assim como as funções em linguagens de programação, as funções do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definidas pelo usuário são rotinas que aceitam parâmetros, executam uma ação, como um cálculo complexo, e retornam o resultado dessa ação como um valor. O valor de retorno pode ser um único valor escalar ou um conjunto de resultados.  
@@ -61,10 +61,10 @@ ms.locfileid: "48084686"
   
 ##  <a name="FunctionTypes"></a> Tipos de funções  
  Função escalar  
- As funções escalares definidas pelo usuário retornam um valor único de dados do tipo definido na cláusula RETURNS. Para uma função escalar embutida, não há um corpo de função; o valor escalar é o resultado de uma única instrução. Para uma função escalar de várias instruções, o corpo da função, definido em um bloco BEGIN...END, contém uma série de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , que retornam o valor único. O tipo de retorno pode ser qualquer tipo de dados, exceto `text`, `ntext`, `image`, `cursor`, e `timestamp`.  
+ As funções escalares definidas pelo usuário retornam um valor único de dados do tipo definido na cláusula RETURNS. Para uma função escalar embutida, não há um corpo de função; o valor escalar é o resultado de uma única instrução. Para uma função escalar de várias instruções, o corpo da função, definido em um bloco BEGIN...END, contém uma série de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , que retornam o valor único. O tipo de retorno pode ser qualquer tipo de dados, exceto `text`, `ntext`, `image`, `cursor`e `timestamp`.  
   
  Funções com valor de tabela  
- As funções com valor de tabela definidos pelo usuário retornam um `table` tipo de dados. Para uma função com valor de tabela embutida, não há um corpo de função; a tabela é o conjunto de resultados de uma única instrução SELECT.  
+ As funções com valor de tabela definidas pelo usuário retornam um tipo de dados `table`. Para uma função com valor de tabela embutida, não há um corpo de função; a tabela é o conjunto de resultados de uma única instrução SELECT.  
   
  Funções de sistema  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece muitas funções de sistema que você pode usar para executar uma variedade de operações. Elas não podem ser modificadas. Para obter mais informações, consulte [Funções internas &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions), [Funções armazenadas do sistema &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/system-functions-for-transact-sql) e [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views).  

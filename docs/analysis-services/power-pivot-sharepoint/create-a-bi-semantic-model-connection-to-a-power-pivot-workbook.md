@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 992e8a3f84af3de9cb9c8ae461b5c6c0505c1b66
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026503"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164131"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-power-pivot-workbook"></a>Criar uma conexão de modelo semântico de BI para uma pasta de trabalho do Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34026503"
   
  [Configurar permissões do SharePoint na pasta de trabalho](#bkmk_userdb)  
   
- [Próximas etapas](#bkmk_next)  
+ [Próximas Etapas](#bkmk_next)  
   
 ##  <a name="bkmk_prereq"></a> Examinar pré-requisitos  
  É necessário ter permissões Colaborar ou superior para criar um arquivo de conexão de modelo semântico de BI.  
@@ -47,7 +47,7 @@ ms.locfileid: "34026503"
   
 1.  Na biblioteca que conterá a conexão de modelo semântico de BI, clique em **Documentos** na faixa de opções do SharePoint. Clique na seta para baixo em Novo Documento e selecione **Arquivo de Conexão de BISM** para abrir uma nova página de Conexão de Modelo Semântico de BI.  
   
-     ![Submenu novo documento em uma biblioteca do SharePoint](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "submenu novo documento em uma biblioteca do SharePoint")  
+     ![Submenu novo documento em uma biblioteca do SharePoint](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "submenu novo documento na biblioteca do SharePoint")  
   
 2.  Defina a propriedade **Server** como a URL do SharePoint da pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (por exemplo, `http://mysharepoint/shared documents/myWorkbook.xlsx`. Em uma implantação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, dados podem ser carregados em qualquer servidor no farm. Por isso, as conexões da fonte de dados para dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] especificam apenas o caminho para a pasta de trabalho. O Serviço de Sistema do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] determina qual servidor carrega os dados.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "34026503"
   
 ## <a name="see-also"></a>Consulte também  
  [Conexão de modelo semântico de BI &#40;.bism&#41; do Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
- [Usar uma Conexão de modelo semântico de BI no Excel ou Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
+ [Usar uma conexão de modelo semântico de BI no Excel ou Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
  [Criar uma conexão de modelo semântico de BI com um banco de dados de modelo de tabela](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   

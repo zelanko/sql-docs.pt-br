@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 56e490fa3a860b3fc4e18e72d674c70d29130f5b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dc600aeabd1c988c0f9a6768da7fd0f0d280552b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119424"
 ---
 # <a name="spvalidateredirectedpublisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +50,10 @@ ms.locfileid: "58527298"
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhum.  
+ nenhuma.  
   
 ## <a name="remarks"></a>Comentários  
- Se não houver nenhuma entrada para o publicador e o banco de dados de publicação, **sp_validate_redirected_publisher** retorna null no parâmetro de saída *@redirected_publisher*. Se uma entrada existir, ela será retornada no parâmetro de saída nos casos de êxito e de falha.  
+ Se não houver nenhuma entrada para o publicador e o banco de dados de publicação, **sp_validate_redirected_publisher** retorna null no parâmetro de saída *@redirected_publisher* . Se uma entrada existir, ela será retornada no parâmetro de saída nos casos de êxito e de falha.  
   
  Se a validação for bem-sucedida, **sp_validate_redirected_publisher** retorna uma indicação de sucesso.  
   

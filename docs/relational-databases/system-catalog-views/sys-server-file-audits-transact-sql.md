@@ -19,28 +19,27 @@ helpviewer_keywords:
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85ba57ba9e3559a790ae983025356510987c1eae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b3ed8e08d333c4aed2576154c645a0050ebf4df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845124"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133128"
 ---
 # <a name="sysserverfileaudits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contém informações estendidas sobre o tipo de auditoria de arquivo em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de auditoria em uma instância de servidor. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |audit_id|**int**|ID da auditoria.|  
-|nome|**sysname**|Nome da auditoria.|  
+|name|**sysname**|Nome da auditoria.|  
 |audit_guid|**uniqueidentifier**|GUID da auditoria.|  
 |create_date|**datetime**|Data UTC quando a auditoria do arquivo foi criada.|  
 |modify_date|**datatime**|Data em UTC quando a auditoria do arquivo foi modificada pela última vez.|  
 |principal_id|**int**|ID do proprietário da auditoria conforme registrado no servidor.|  
-|Tipo|**char(2)**|Tipo de auditoria:<br /><br /> 0 = log de eventos de Segurança do NT<br /><br /> 1 = log de eventos de Aplicativos do NT<br /><br /> 2= arquivo no sistema de arquivos|  
+|type|**char(2)**|Tipo de auditoria:<br /><br /> 0 = log de eventos de Segurança do NT<br /><br /> 1 = log de eventos de Aplicativos do NT<br /><br /> 2= arquivo no sistema de arquivos|  
 |type_desc|**nvarchar(60)**|Descrição do tipo da auditoria.|  
 |on_failure|**tinyint**|Condição Ao falhar:<br /><br /> 0 = Continuar<br /><br /> 1 = Encerrar a instância de servidor<br /><br /> 2 = Operação com falha|  
 |on_failure_desc|**nvarchar(60)**|Ao Falhar ao escrever uma entrada de ação:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  

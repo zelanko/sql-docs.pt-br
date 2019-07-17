@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39f8bcc63b7e5344f70a6d4a3b6c44ae3e69e108
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 420b1ca4e6cdd72d86c715301957be1f14074fee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685393"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207119"
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>Lição suplementar – Hierarquias desbalanceadas
 
@@ -29,7 +29,7 @@ Modelos de tabela no nível de compatibilidade 1400 têm adicional **ocultar mem
   
 Tempo estimado para concluir esta lição: **20 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 Este artigo de lição suplementar faz parte de um tutorial de modelagem de tabela. Antes de executar as tarefas nesta lição suplementar, você deve ter concluído todas as lições anteriores ou ter um projeto de modelo de exemplo Adventure Works Internet Sales concluído. 
 
 Se você tiver criado o projeto de vendas pela Internet AW como parte do tutorial, seu modelo ainda não contém nenhum dado ou hierarquias desbalanceadas. Para concluir esta lição suplementar, você precisa primeiro criar o problema adicionando algumas tabelas adicionais, criar relações, colunas calculadas, uma medida e uma nova hierarquia da organização. Essa parte leva cerca de 15 minutos. Em seguida, você pode resolvê-la em apenas alguns minutos.  
@@ -48,9 +48,9 @@ Se você tiver criado o projeto de vendas pela Internet AW como parte do tutoria
 
     | Tabela 1           | coluna       | Direção do filtro   | Tabela 2     | coluna      | Ativa |
     |-------------------|--------------|--------------------|-------------|-------------|--------|
-    | FactResellerSales | OrderDateKey | Padrão            | DimDate     | data        | Sim    |
-    | FactResellerSales | DueDate      | Padrão            | DimDate     | data        | Não     |
-    | FactResellerSales | ShipDateKey  | Padrão            | DimDate     | data        | Não     |
+    | FactResellerSales | OrderDateKey | Padrão            | DimDate     | Date        | Sim    |
+    | FactResellerSales | DueDate      | Padrão            | DimDate     | Date        | Não     |
+    | FactResellerSales | ShipDateKey  | Padrão            | DimDate     | Date        | Não     |
     | FactResellerSales | ProductKey   | Padrão            | DimProduct  | ProductKey  | Sim    |
     | FactResellerSales | EmployeeKey  | Para ambas as tabelas | DimEmployee | EmployeeKey | Sim    |
 
@@ -66,7 +66,7 @@ Se você tiver criado o projeto de vendas pela Internet AW como parte do tutoria
     =[FirstName] & " " & [MiddleName] & " " & [LastName]
     ```
 
-    **Level1** 
+    **Nível 1** 
     ```
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],1,1)) 
     ```

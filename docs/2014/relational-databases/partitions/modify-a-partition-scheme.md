@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 56148cca72ca9561219a9ea14025b0bd0f2204b5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753158"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206569"
 ---
 # <a name="modify-a-partition-scheme"></a>Modificar um esquema de partição
   Você pode Modificar um esquema de partição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ao designar um grupo de arquivos para manter a partição seguinte que será adicionada à tabela particionada usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Isso é feito ao atribuir a propriedade NEXT USED a um grupo de arquivos. Você pode atribuir a propriedade NEXT USED a um grupo de arquivos vazio ou para um que já mantenha uma partição. Em outras palavras, um grupo de arquivos pode manter mais de uma partição.  
@@ -36,7 +36,7 @@ ms.locfileid: "52753158"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
  Qualquer grupo de arquivos afetado por ALTER PARTITION SCHEME deve estar online.  
   
 ###  <a name="Security"></a> Segurança  
@@ -67,7 +67,7 @@ ms.locfileid: "52753158"
   
 5.  Na caixa de diálogo **Excluir Objeto** , verifique se o esquema de partição correto está selecionado e clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-modify-a-partition-scheme"></a>Para modificar um esquema de partição  
   

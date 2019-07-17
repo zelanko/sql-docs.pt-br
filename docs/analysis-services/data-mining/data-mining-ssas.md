@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 163314576f609d6fc34ba55b05eff841d1361182
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185092"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210118"
 ---
 # <a name="data-mining-ssas"></a>Mineração de dados (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,21 +32,21 @@ ms.locfileid: "54185092"
 ## <a name="key-data-mining-features"></a>Principais recursos de mineração de dados  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Data Mining fornece os recursos a seguir ao dar suporte a soluções de mineração de dados integradas:  
   
--   várias fontes de dados: Você pode usar qualquer fonte de dados tabular para mineração de dados, incluindo planilhas e arquivos de texto. Também é possível minerar facilmente cubos OLAP criados no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. No entanto, você não pode usar dados de um banco de dados na memória.  
+-   Várias fontes de dados: Você pode usar qualquer fonte de dados tabular para mineração de dados, incluindo planilhas e arquivos de texto. Também é possível minerar facilmente cubos OLAP criados no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. No entanto, você não pode usar dados de um banco de dados na memória.  
   
 -   Limpeza de dados integrada, gerenciamento de dados e relatórios: o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece ferramentas avançadas para criação de perfil e limpeza de dados. Você pode criar processos ETL para limpeza de dados em preparação para modelagem e ssISnoversion também facilita a manter e atualizar modelos.  
   
 -   Vários algoritmos personalizáveis: Além de fornecer algoritmos como clustering, redes neurais e árvores de decisões, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining dá suporte ao desenvolvimento de seus próprios algoritmos de plug-in personalizados.  
   
--   Infraestrutura de teste do modelo: Teste seus modelos e conjuntos de dados usando ferramentas estatísticas importantes como validação cruzada, matrizes de classificação, gráficos de comparação de precisão e dispersões. Crie e gerencie conjuntos de teste e treinamento com facilidade.  
+-   Infraestrutura de teste do modelo: Testar seus modelos e conjuntos de dados usando ferramentas estatísticas importantes como validação cruzada, matrizes de classificação, gráficos de comparação e dispersões. Crie e gerencie conjuntos de teste e treinamento com facilidade.  
   
 -   Consulta e detalhamento: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Mineração de dados fornece a linguagem DMX para integrar consultas de previsão em aplicativos. Você também pode recuperar estatísticas detalhadas e padrões dos modelos e fazer drillthrough para dados de caso.  
   
--   Ferramentas de Cliente: Além dos estúdios de desenvolvimento e design fornecidos pelo SQL Server, você pode usar os Suplementos de Mineração de Dados para Excel para criar, consultar e procurar modelos. Ou crie clientes personalizados, inclusive serviços Web.  
+-   Ferramentas de cliente: Além dos estúdios de desenvolvimento e design fornecidos pelo SQL Server, você pode usar os suplementos de mineração de dados para Excel para criar, consultar e procurar modelos. Ou crie clientes personalizados, inclusive serviços Web.  
   
 -   Suporte a idioma scripts e API gerenciada: Todos os objetos de mineração de dados são completamente programáveis. Gerar scripts é possível por meio do MDX, XMLA ou as extensões de PowerShell para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Use a linguagem DMX (Data Mining Extensions) para consultar e gerar script rapidamente.  
   
--   Segurança e implantação: Fornece segurança baseada em função por meio do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], inclusive permissões separadas para detalhamento para modelar e estruturar dados. Implantação fácil de modelos para outros servidores, de forma que os usuários possam acessar os padrões ou executar previsões  
+-   Segurança e implantação: Fornece segurança baseada em função por meio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], inclusive permissões separadas para drillthrough para modelar e estruturar dados. Implantação fácil de modelos para outros servidores, de forma que os usuários possam acessar os padrões ou executar previsões  
   
 ## <a name="in-this-section"></a>Nesta seção  
  Os tópicos nesta seção apresentam os recursos principais de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining e tarefas relacionadas.  

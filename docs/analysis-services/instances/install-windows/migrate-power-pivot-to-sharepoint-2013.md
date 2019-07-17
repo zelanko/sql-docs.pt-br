@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8df7cc04ea0682212f5a046ca4c614e83ebe9c86
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206815"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68231876"
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>Migrar o Power Pivot para o SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "53206815"
 |1|2|3|4|  
 |-------|-------|-------|-------|  
 |Preparar o farm do SharePoint 2013|Fazer backup, cópia e restauração de bancos de dados.|Montar bancos de dados de conteúdo|Migrar agendas do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]|  
-||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|- Administração Central do SharePoint<br /><br /> - Windows PowerShell|- Páginas do aplicativo do SharePoint<br /><br /> - Windows PowerShell|  
+||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|\- Administração Central do SharePoint<br /><br /> \- Windows PowerShell|\- Páginas do aplicativo do SharePoint<br /><br /> \- Windows PowerShell|  
   
 ##  <a name="bkmk_prepare_sharepoint2013"></a>Preparar o Farm do SharePoint 2013  
   
@@ -92,7 +92,7 @@ ms.locfileid: "53206815"
 ### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>Solucionar problemas ao tentar montar bancos de dados  
  Esta seção resume os possíveis problemas encontrados ao montar o banco de dados.  
   
-1.  **Erros de autenticação:** se você encontrar erros relacionados à autenticação, examine qual modo de autenticação os aplicativos Web de origem estão usando. O erro pode ser causado por uma incompatibilidade na autenticação entre o aplicativo Web do SharePoint 2013 e o aplicativo Web do SharePoint 2010. Consulte [1) Preparar o farm do SharePoint 2013](#bkmk_prepare_sharepoint2013) para obter mais informações.  
+1.  **Erros de autenticação:** Se você encontrar erros relacionados à autenticação, revise qual modo de autenticação os aplicativos da web de origem estão usando. O erro pode ser causado por uma incompatibilidade na autenticação entre o aplicativo Web do SharePoint 2013 e o aplicativo Web do SharePoint 2010. Consulte [1) Preparar o farm do SharePoint 2013](#bkmk_prepare_sharepoint2013) para obter mais informações.  
   
 2.  **Files ausentes:** Se você encontrar erros relacionados à falta [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] DLLs, o **sppowerpivot. msi** não foi instalado ou o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ferramenta de configuração não foi usada para configurar [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)].  
   
@@ -136,7 +136,7 @@ ms.locfileid: "53206815"
   
     1.  Outra opção para migrar agendas é habilitar a atualização agendada para cada pasta de trabalho. Navegue até a biblioteca de documentos que contém as pastas de trabalho.  
   
-    2.  Abra o menu de contexto e clique em **Gerenciar Atualização de Dados do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**.  
+    2.  Abra o menu de contexto e clique em **Gerenciar Atualização de Dados do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** .  
   
     3.  Na seção **atualização da agenda** , clique em **Habilitar**.  
   

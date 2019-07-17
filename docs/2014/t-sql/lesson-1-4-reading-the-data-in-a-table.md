@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 0649e167ebaa90267422594ccd193ba468838e6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182006"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68187293"
 ---
 # <a name="reading-the-data-in-a-table-tutorial"></a>Lendo os dados em uma tabela (tutorial)
   Use a instrução SELECT para ler os dados em uma tabela. A instrução SELECT é um das instruções [!INCLUDE[tsql](../includes/tsql-md.md)] mais importantes e há muitas variações na sintaxe. Para este tutorial, você trabalhará com cinco versões simples.  
@@ -84,7 +84,7 @@ ms.locfileid: "48182006"
 |[Funções matemáticas &#40;Transact-SQL&#41;](/sql/t-sql/functions/mathematical-functions-transact-sql)|[Funções de texto e imagem &#40;Transact-SQL&#41;](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Resumo: Criando objetos de banco de dados](lesson-1-5-summary-creating-database-objects.md)  
+ [Resumo: Criar objetos de bancos de dados](lesson-1-5-summary-creating-database-objects.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)  

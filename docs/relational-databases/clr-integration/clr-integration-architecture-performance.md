@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4415f3e0a6ebf773a3a781a5547a50a578d9d4f9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a4cd3b8f186f1ade85f4ed4533b0549bcd449a69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134949"
 ---
 # <a name="clr-integration-architecture----performance"></a>Arquitetura de integração de CLR – Desempenho
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +52,10 @@ ms.locfileid: "51671985"
  Quando os cursores [!INCLUDE[tsql](../../includes/tsql-md.md)] devem atravessar dados que são expressos mais facilmente como uma matriz, é possível usar código gerenciado com ganhos de desempenho significativos.  
   
 ### <a name="string-data"></a>Dados de cadeia de caracteres  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como os dados, de caractere **varchar**, pode ser do tipo SqlString ou SqlChars em funções gerenciadas. As variáveis SqlString criam uma instância do valor inteiro na memória. As variáveis SqlChars fornecem uma interface de streaming que pode ser usada para obter um melhor desempenho e escalabilidade por não criar uma instância do valor inteiro na memória. Isso se torna especialmente importante no caso de dados LOB (objeto grande). Além disso, os dados XML do servidor pode ser acessado por meio de uma interface de streaming retornada por **SqlXml.CreateReader()**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como os dados, de caractere **varchar**, pode ser do tipo SqlString ou SqlChars em funções gerenciadas. As variáveis SqlString criam uma instância do valor inteiro na memória. As variáveis SqlChars fornecem uma interface de streaming que pode ser usada para obter um melhor desempenho e escalabilidade por não criar uma instância do valor inteiro na memória. Isso se torna especialmente importante no caso de dados LOB (objeto grande). Além disso, os dados XML do servidor pode ser acessado por meio de uma interface de streaming retornada por **SqlXml.CreateReader()** .  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR vs. Procedimentos armazenados estendidos  
- As APIs Microsoft.SqlServer.Server que permitem que procedimentos gerenciados enviem conjuntos de resultados de volta ao cliente têm um desempenho melhor que as APIs ODS (Open Data Services) usadas por procedimentos armazenados estendidos. Além disso, os dados de suporte a APIs System.Data.SqlServer tipos, como **xml**, **varchar (max)**, **nvarchar (max)**, e **varbinary (max)**, apresentada no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], enquanto as APIs ODS não foram estendidas para dar suporte a novos tipos de dados.  
+ As APIs Microsoft.SqlServer.Server que permitem que procedimentos gerenciados enviem conjuntos de resultados de volta ao cliente têm um desempenho melhor que as APIs ODS (Open Data Services) usadas por procedimentos armazenados estendidos. Além disso, os dados de suporte a APIs System.Data.SqlServer tipos, como **xml**, **varchar (max)** , **nvarchar (max)** , e **varbinary (max)** , apresentada no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], enquanto as APIs ODS não foram estendidas para dar suporte a novos tipos de dados.  
   
  Com o código gerenciado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerencia o uso de recursos como a memória, os threads e a sincronização. Isso se deve ao fato de as APIs gerenciadas que expõem esses recursos serem implementadas sobre o gerenciador de recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por outro lado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não tem nenhuma exibição ou controle sobre o uso de recursos do procedimento armazenado estendido. Por exemplo, se um procedimento armazenado estendido consumir muitos recursos de CPU ou de memória, não há uma forma de detectá-lo ou controlá-lo com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Contudo, com o código gerenciado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode detectar que um determinado thread não teve resultados por um longo período e então forçar a geração da tarefa, de forma que outros trabalhos possam ser agendados. Consequentemente, o uso do código gerenciado fornece uma escalabilidade e um uso de recursos do sistema melhores.  
   

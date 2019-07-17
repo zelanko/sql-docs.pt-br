@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798928"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196668"
 ---
 # <a name="use-sparse-columns"></a>Usar colunas esparsas
   Colunas esparsas são colunas comuns que têm um armazenamento otimizado para valores nulos. Elas reduzem os requisitos de espaço para valores nulos às custas de maior sobrecarga para recuperar valores não nulos. Considere o uso de colunas esparsas quando o espaço salvo for pelo menos de 20 a 40 por cento. As colunas esparsas e os conjuntos de colunas são definidos usando as instruções [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) ou [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) .  
@@ -110,7 +110,7 @@ ms.locfileid: "52798928"
 |`xml`|2*|4*|60%|  
 |`hierarchyid`|2*|4*|60%|  
   
- * O comprimento é igual à média dos dados que estão contidos no tipo, mais 2 ou 4 bytes.  
+ \* O comprimento é igual à média dos dados que estão contidos no tipo, mais 2 ou 4 bytes.  
   
 ## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>Sobrecarga na memória necessária para atualizações em colunas esparsas  
  Quando for criar tabelas com colunas esparsas, tenha em mente que uma sobrecarga adicional de 2 bytes é necessária para cada coluna esparsa não nula na tabela quando uma linha está sendo atualizada. Em resultado dessa necessidade de memória adicional, as atualizações podem falhar inesperadamente com o erro 576 quando o tamanho total da linha, incluindo essa sobrecarga de memória, excede 8019, e nenhuma coluna pode ser retirada da linha.  

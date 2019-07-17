@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 002e1a760faf584a556d66a2c228a7838d5f49fd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027193"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165314"
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Processando opções e configurações (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "34027193"
 ## <a name="processing-options"></a>Opções de processamento  
  A tabela a seguir descreve os métodos de processamento disponíveis no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e identifica os objetos compatíveis com cada método.  
   
-|Modo|Aplica-se a|Description|  
+|Modo|Aplica-se a|Descrição|  
 |----------|----------------|-----------------|  
 |**Processar Padrão**|Cubos, bancos de dados, dimensões, cubos, grupos de medidas, modelos de mineração, estruturas de mineração e partições.|Detecta o estado de processamento de objetos de banco de dados e realiza o processamento necessário para passar os objetos não processados ou parcialmente processados para um estado completamente processado. Se você alterar a associação de dados, Processar Padrão fará um Processar Completo no objeto afetado.|  
 |**Processar Completo**|Cubos, bancos de dados, dimensões, cubos, grupos de medidas, modelos de mineração, estruturas de mineração e partições.|Processa um objeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e todos os objetos associados. Quando o comando Processar Completo é executado em um objeto que já foi processado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] descarta todos os dados do objeto e, em seguida, processa o objeto. Esse tipo de processamento é necessário quando uma alteração estrutural foi feita em um objeto, por exemplo, ao adicionar, excluir ou renomear uma hierarquia de atributo.|  
 |**Processar Limpeza**|Cubos, bancos de dados, dimensões, cubos, grupos de medidas, modelos de mineração, estruturas de mineração e partições.|Descarta os dados no objeto especificado e em qualquer objeto constituinte de nível inferior. Depois de serem descartados, os dados não são recarregados.|  
-|**Processar Dados**|Dimensões, cubos, grupos de medidas e partições.|Processa apenas os dados sem criar agregações ou índices. Se houver dados nas partições, eles serão descartados antes de a partição ser populada novamente com dados de origem.|  
-|**Processar adição**|Dimensões, grupos de medidas e partições.<br /><br /> Observação: o **Processo Adicionar** não está disponível para processamento de dimensão no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], mas você pode escrever um script XMLA para executar esta ação.|Para dimensões, adiciona novos membros e atualiza legendas de atributo de dimensão e descrições.<br /><br /> Para grupos de medidas e partições, adiciona processos e dados de fatos recém-disponibilizados apenas às partições pertinentes.|  
+|**Processar dados**|Dimensões, cubos, grupos de medidas e partições.|Processa apenas os dados sem criar agregações ou índices. Se houver dados nas partições, eles serão descartados antes de a partição ser populada novamente com dados de origem.|  
+|**Processar adição**|Dimensões, grupos de medidas e partições.<br /><br /> Observação: **Processar Add** não está disponível para processamento de dimensão no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], mas você pode escrever o script XMLA para executar esta ação.|Para dimensões, adiciona novos membros e atualiza legendas de atributo de dimensão e descrições.<br /><br /> Para grupos de medidas e partições, adiciona processos e dados de fatos recém-disponibilizados apenas às partições pertinentes.|  
 |**Processar Atualização**|Dimensões|Força uma releitura dos dados e uma atualização dos atributos de dimensão. Agregações flexíveis e índices em partições relacionadas serão descartados.|  
 |**Processar Índice**|Cubos, dimensões, grupos de medidas e partições|Cria ou recria índices e agregações para todas as partições processadas. Para objetos não processados, esta opção gera um erro.<br /><br /> O processamento com esta opção será necessário se você desativar Processamento Lento.|  
 |**Processar Estrutura**|Cubos e estruturas de mineração|Se o cubo não estiver processado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] processará, se necessário, todas as dimensões do cubo. Depois disso, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criará apenas definições de cubo. Se esta opção for aplicada a uma estrutura de mineração, essa estrutura será populada com dados de origem. Diferente da opção Processar Completo, essa opção não itera o processamento para os modelos de mineração propriamente ditos.|  
@@ -43,7 +43,7 @@ ms.locfileid: "34027193"
 ## <a name="processing-settings"></a>Configurações de processamento  
  A tabela a seguir descreve as configurações de processamento que estão disponíveis ao criar uma operação de processo.  
   
-|Opção de processamento|Description|Valor de opção|  
+|Opção de processamento|Descrição|Valor de opção|  
 |-----------------------|-----------------|------------------|  
 |**Parallel**|Usado para o processamento em lotes. Esta configuração faz com que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bifurque as tarefas de processamento para executá-las em paralelo dentro de uma única transação. Se houver uma falha, o resultado será uma reversão de todas as alterações. É possível definir o número máximo de tarefas paralelas explicitamente ou deixar o servidor decidir a distribuição ideal. A opção Paralelo é útil para acelerar o processamento.||  
 |**Sequencial (Modo da Transação)**|Controla o comportamento de execução do trabalho de processamento. Duas opções estão disponíveis.<br /><br /> Ao processar usando a opção **Uma Transação**, todas as alterações são confirmadas após o trabalho de processamento ser concluído com êxito. Isso significa que todos os objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] afetados por um determinado trabalho de processamento permanecem disponíveis para consulta até o processo de confirmação. Desse modo, os objetos ficam temporariamente indisponíveis. Com a opção **Separar Transações** , todos os objetos afetados por um processo do trabalho de processamento ficam indisponíveis para consulta assim que o processo é executado com êxito.|**Uma Transação**. O trabalho de processamento é executado como uma transação. Se nenhum processo do trabalho de processamento falhar, todas as alterações feitas pelo trabalho de processamento serão confirmadas. Se algum processo falhar, todas as alterações feitas pelo trabalho de processamento serão revertidas. **Uma Transação** é o valor padrão.<br /><br /> **Separar Transações**. Cada processo do trabalho de processamento é executado como um trabalho autônomo. Se um processo falhar, apenas aquele processo será revertido e o trabalho de processamento continuará. Cada trabalho confirma todas as alterações de processo no final do trabalho.|  

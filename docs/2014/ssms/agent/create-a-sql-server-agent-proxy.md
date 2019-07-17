@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dfaba668e4f2328610656db6a61f01960814bff0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784418"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189511"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>Criar um proxy do SQL Server Agent
   Este tópico descreve como criar um proxy do SQL Server Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "52784418"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Primeiro, é necessário criar uma credencial antes de criar um proxy, caso não haja nenhuma disponível.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52784418"
   
 ####  <a name="Permissions"></a> Permissões  
   
--   Apenas membros da função de servidor fixa **sysadmin** têm permissão para criar, modificar ou excluir contas proxy. Os usuários que não são membros do **sysadmin** função de servidor fixa deve ser adicionada a um dos seguintes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente do banco de dados fixa no **msdb** banco de dados para poderem usar proxies: **SQLAgentUserRole**, **SQLAgentReaderRole**, ou **SQLAgentOperatorRole**.  
+-   Apenas membros da função de servidor fixa **sysadmin** têm permissão para criar, modificar ou excluir contas proxy. Usuários que não sejam membros da função de servidor fixa **sysadmin** devem ser adicionados a uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** para poderem usar proxies: **SQLAgentUserRole**, **SQLAgentReaderRole** ou **SQLAgentOperatorRole**.  
   
 -   Requer a permissão `ALTER ANY CREDENTIAL` para criar uma credencial além do proxy.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "52784418"
   
 9. Quando terminar, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-sql-server-agent-proxy"></a>Para criar um proxy do SQL Server Agent  
   

@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: 16849cfd-050c-4ac7-bd3d-a929aebb5010
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: acfc9cc5593001e3a9a918abe788494b1b7fd405
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 02d1d499cb9030b737028e59219fd779bde295c6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63209840"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264668"
 ---
 # <a name="new-project-oracletosql"></a>Novo projeto (OracleToSQL)
 Use o **novo projeto** caixa de diálogo para criar um novo projeto SSMA. Para acessar o **novo projeto** caixa de diálogo do **arquivo** menu, clique em **novo projeto**.  
   
 ## <a name="options"></a>Opções  
-**Nome**  
+**Name**  
 Insira o nome do projeto. O SSMA acrescentará a extensão de arquivo.  
   
 **Local**  

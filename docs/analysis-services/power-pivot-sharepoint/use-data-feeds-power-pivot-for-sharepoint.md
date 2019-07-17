@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 509d4a5293aef836f8ae9439ad7c8d315bbc790d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979858"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207980"
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>Use feeds de dados (Power Pivot para SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "38979858"
   
  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o Microsoft SharePoint Server 2010 fornecem feeds de dados que podem ser usados em pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Você pode usar as informações deste tópico para aprender como acessar feeds de dados de relatórios e listas já existentes.  
   
- Este tópico contém as seguintes seções:  
+ Esse tópico contém as seguintes seções:  
   
  [Pré-requisitos](#prereq)  
   

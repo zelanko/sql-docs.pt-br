@@ -2,7 +2,7 @@
 title: Migrar SQL Server no local ou o SQL Server em VMs do Azure para o banco de dados SQL usando o Assistente de migração de dados | Microsoft Docs
 description: Saiba como usar o Assistente de migração de dados para migrar um SQL Server no local para o banco de dados SQL
 ms.custom: ''
-ms.date: 03/12/2019
+ms.date: 07/15/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: 49300b679ea650bf4dd6f032fb9c1443224e9f86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37e0065ed711c3cf550fec4bafe9aa08be8398e6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054754"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262309"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migrar SQL Server no local ou o SQL Server em VMs do Azure para banco de dados do SQL Azure usando o Assistente de migração de dados
 
 O Assistente de migração de dados fornece perfeitas avaliações do SQL Server local e as atualizações para versões posteriores do SQL Server ou as migrações para o SQL Server em VMs do Azure ou banco de dados SQL.
 
-Este artigo fornece instruções passo a passo para migração do SQL Server local para o banco de dados SQL usando o Assistente de migração de dados.   
+Este artigo fornece instruções passo a passo para migração do SQL Server local para o banco de dados SQL usando o Assistente de migração de dados.
 
 ## <a name="create-a-new-migration-project"></a>Criar um novo projeto de migração
 
@@ -44,7 +44,7 @@ Este artigo fornece instruções passo a passo para migração do SQL Server loc
 2. Selecione o **tipo de autenticação** com suporte na instância do SQL Server de origem.
 
    > [!NOTE]
-   > É recommedned que você criptografe a conexão selecionando o **criptografar conexão** caixa de seleção sob **Conexão poperties**.
+   > É recomendável que você criptografe a conexão selecionando o **criptografar conexão** caixa de seleção sob **Conexão poperties**.
 
     ![Selecione o servidor de origem](../dma/media/select-source-server.png)
 
@@ -66,7 +66,7 @@ Este artigo fornece instruções passo a passo para migração do SQL Server loc
 2. Selecione o **tipo de autenticação** com suporte na instância de banco de dados SQL de destino.
 
    > [!NOTE]
-   > É recommedned que você criptografe a conexão selecionando o **criptografar conexão** caixa de seleção sob **Conexão poperties**.
+   > É recomendável que você criptografe a conexão selecionando o **criptografar conexão** caixa de seleção sob **Conexão poperties**.
 
      ![Selecione o servidor de destino](../dma/media/select-target-server.png)
 
@@ -83,17 +83,17 @@ Este artigo fornece instruções passo a passo para migração do SQL Server loc
 
 ## <a name="select-schema-objects"></a>Selecione os objetos de esquema
 
-1.  Selecione os objetos de esquema do banco de dados fonte que você deseja migrar para o banco de dados SQL.
+1. Selecione os objetos de esquema do banco de dados fonte que você deseja migrar para o banco de dados SQL.
 
     ![Selecione os objetos de esquema](../dma/media/select-schema-objects.png)
 
        > [!NOTE]
-       > Alguns dos objetos que não podem ser convertidos como-está são apresentados com oportunidades de correção automática. Clicar nesses objetos no painel esquerdo exibe as correções sugeridas no painel à direita. Examine as correções e optar por aplicar ou ignorar todas as alterações, cada objeto. Observe que se aplicam ou ignorar todas as alterações para um objeto não afeta as alterações a outros objetos de banco de dados. Instruções que não podem ser convertidas ou corrigidas automaticamente são reproduzidas no banco de dados de destino e comentadas.
+       > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
 
     ![Correção sugerida](../dma/media/suggested-fix.png)
 
 2. Selecione **script SQL geral**.
- 
+
 3. Examine o script gerado.
 
     ![Script gerado](../dma/media/generated-script.png)
@@ -103,23 +103,23 @@ Este artigo fornece instruções passo a passo para migração do SQL Server loc
 1. Selecione **implantar esquema**.
 
 2. Examine os resultados da implantação do esquema.
- 
+
     ![Resultados de implantação de esquema](../dma/media/schema-deployment-results.png)
 
 3. Selecione **migrar dados** para iniciar o processo de migração de dados.
- 
+
 4. Selecione as tabelas com os dados que você deseja migrar.
 
     ![Selecionar tabelas para migração](../dma/media/select-tables-to-migrate.png) 
 
 5. Selecione **começar a migração de dados**.
- 
+
 A tela final mostra o status geral.
 
    ![Status da migração](../dma/media/migration-status.png) 
 
 ## <a name="see-also"></a>Confira também
 
-- [Assistente de migração de dados (DMA)](../dma/dma-overview.md)
-- [Assistente de migração de dados: Definições de configuração](../dma/dma-configurationsettings.md)
-- [Assistente de migração de dados: Práticas recomendadas](../dma/dma-bestpractices.md)
+* [Assistente de migração de dados (DMA)](../dma/dma-overview.md)
+* [Assistente de migração de dados: Definições de configuração](../dma/dma-configurationsettings.md)
+* [Assistente de migração de dados: Práticas recomendadas](../dma/dma-bestpractices.md)

@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_stoplists (Transact-SQL) | Microsoft Docs
+title: sys. fulltext_stoplists (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,14 +22,13 @@ ms.assetid: eb69fb8f-f6d9-446e-83c0-67afd05dfba0
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: affb9c997b340a61bd435125c80819a04cdec145
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88f4354a343e9748e1111d26c3ce8c248431b1be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133768"
 ---
 # <a name="sysfulltextstoplists-transact-sql"></a>sys.fulltext_stoplists (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

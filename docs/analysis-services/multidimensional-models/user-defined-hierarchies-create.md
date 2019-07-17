@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f6ca49e3a7714134d554538ae4f37e267999f2c2
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52983857"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208407"
 ---
 # <a name="user-defined-hierarchies---create"></a>Hierarquias definidas pelo usuário – Criar
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

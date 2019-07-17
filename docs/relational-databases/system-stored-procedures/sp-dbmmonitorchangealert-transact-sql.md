@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 34fa889c59a6413e5c72138abaa4089186befa46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2749e964b33179d5bf87ee6d464d251c14ee82d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852104"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108146"
 ---
 # <a name="spdbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,10 +78,10 @@ sp_dbmmonitorchangealert database_name
 >  O período de retenção está sempre habilitado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- None  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Exige associação à função de servidor fixa **sysadmin** .  
@@ -95,7 +94,7 @@ sp_dbmmonitorchangealert database_name
 |1|Transação não enviada mais antiga|30 minutos|Sim|  
 |2|Log não enviado|10.000 KB|Sim|  
 |3|Log não restaurado|10.000 KB|Sim|  
-|4|Sobrecarga espelhada confirmada|1.000 milissegundos|não|  
+|4|Sobrecarga espelhada confirmada|1\.000 milissegundos|Não|  
 |5|Período de retenção|8 horas|Sim|  
   
 ```  

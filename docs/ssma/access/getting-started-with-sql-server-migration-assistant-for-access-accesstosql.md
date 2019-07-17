@@ -19,12 +19,12 @@ ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 1168609d35a266f2ac5fe6641aee7ca131bc9d89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 863e62dc9e2970f7531bba15f7242c73c5b0f9e7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759910"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259921"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Introdução ao SQL Server Migration Assistant for Access (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para acesso permite que você converta rapidamente os objetos de banco de dados de acesso à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objetos de BD SQL do Azure, carregue os objetos resultantes em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o Azure SQL DB, e migrar dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou BD SQL do Azure. Se necessário, você também pode vincular tabelas do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou em tabelas de BD SQL do Azure para que você possa continuar a usar seus aplicativos front-end do Access existentes com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou BD SQL do Azure.  
@@ -118,7 +118,7 @@ O SSMA contém os seguintes menus:
   
 |Menu|Descrição|  
 |--------|---------------|  
-|**File**|Contém comandos para o Assistente de migração, trabalhando com projetos, adicionar e remover arquivos de banco de dados do Access e conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou BD SQL do Azure.|  
+|**Arquivo**|Contém comandos para o Assistente de migração, trabalhando com projetos, adicionar e remover arquivos de banco de dados do Access e conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou BD SQL do Azure.|  
 |**Editar**|Contém comandos para localizar e trabalhar com texto nas páginas de detalhes, como copiar [!INCLUDE[tsql](../../includes/tsql-md.md)] do painel de detalhes do SQL. Para abrir o **gerenciar indicadores** caixa de diálogo, no menu Editar, clique em Gerenciar indicadores. Na caixa de diálogo, você verá uma lista de indicadores atuais. Você pode usar os botões no lado direito da caixa de diálogo para gerenciar os indicadores.|  
 |**Exibir**|Contém o **sincronizar metadados Explorers** comando. Isso sincroniza os objetos entre o Gerenciador de metadados de acesso e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Gerenciador de metadados do Azure SQL DB. Também contém comandos para exibir e ocultar os **saída** e **lista de erros** painéis e uma opção **Layouts** para gerenciar com os Layouts.|  
 |**Ferramentas**|Contém comandos para criar relatórios, exportar dados, migrar dados e objetos, vincular tabelas e fornece acesso a globais e configurações de projeto de caixas de diálogo.|  

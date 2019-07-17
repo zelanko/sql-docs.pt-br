@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0b9276d0a8684023d8e6dba1a890b5f1698a017a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700324"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181989"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Limpar os caches do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,13 +46,13 @@ ms.locfileid: "51700324"
   
  É necessário fornecer um identificador de objeto à instrução **ClearCache** na consulta XMLA para limpar o cache. A primeira etapa deste tópico explica como obter um identificador de objeto.  
   
-#### <a name="step-1-get-the-object-identifier"></a>Etapa 1: obter o identificador de objeto  
+#### <a name="step-1-get-the-object-identifier"></a>Etapa 1: Obter o identificador de objeto  
   
 1.  No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], clique com o botão direito do mouse em um objeto, selecione **Propriedades**e copie o valor da propriedade da ID no painel **Propriedades** . Essa abordagem funciona para banco de dados, cubo, dimensão ou tabela.  
   
 2.  Para obter a ID do grupo de medidas, clique com o botão direito do mouse no grupo de medidas e selecione **Script de Grupo de Medidas como**. Escolha **Criar** ou **Alterar**e envie a consulta para uma janela. A ID do grupo de medidas ficará visível na definição do objeto. Copie a ID da definição do objeto.  
   
-#### <a name="step-2-run-the-query"></a>Etapa 2: executar a consulta  
+#### <a name="step-2-run-the-query"></a>Etapa 2: Execute a consulta  
   
 1.  No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], clique com o botão direito do mouse em um banco de dados, aponte para **Nova Consulta**e selecione **XMLA**.  
   

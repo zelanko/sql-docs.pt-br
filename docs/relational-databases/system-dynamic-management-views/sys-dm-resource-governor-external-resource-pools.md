@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c6dde8b57112785bde5377d77cdb1d57f2767e3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2bf0be37313816ef4238df89d9157a2fc771e6e7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624144"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262707"
 ---
 # <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>sys.dm_resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,10 +33,10 @@ Retorna informações sobre o estado atual do pool de recursos externos, a confi
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-|Nome de Colmn      |Tipo de dados      |Description|  
+|Nome de Colmn      |Tipo de dados      |Descrição|  
 |----------------|---------------|-----------------| 
 | external_pool_id|**int**|ID do pool de recursos. Não permite valor nulo. |
-| nome|**sysname**|O nome do pool de recursos. Não permite valor nulo. 
+| name|**sysname**|O nome do pool de recursos. Não permite valor nulo. 
 | pool_version|**int**|Número de versão interno.|
 | max_cpu_percent|**int**|A configuração atual do máximo de largura de banda de CPU média permitida para todas as solicitações no pool de recursos quando houver contenção de CPU. Não permite valor nulo. |
 | max_processes|**int**|Número máximo de processos externos simultâneos. O valor padrão, 0, não especifica nenhum limite. Não permite valor nulo.|

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9207dde54a14e345e99d3c04d4cb66622d85972e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28fcf56293516937455afc387a8d478734f5b006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537634"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121375"
 ---
 # <a name="sqldatasources-function"></a>Função SQLDataSources
 **Conformidade com**  

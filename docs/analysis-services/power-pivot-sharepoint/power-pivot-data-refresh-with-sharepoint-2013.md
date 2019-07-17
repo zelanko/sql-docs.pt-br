@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 583059b93268f3652cf2e8f324574ec739d449dd
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658221"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208187"
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>Atualização de dados do Power Pivot com o SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "58658221"
   
 -   [Mais informações](#bkmk_moreinformation)  
   
-## <a name="background"></a>Plano de fundo  
+## <a name="background"></a>Informações preliminares  
  Os Serviços do Excel do SharePoint Server 2013 gerenciam a atualização de dados de pastas de trabalho do Excel 2013 e disparam o processamento de modelo de dados em um servidor do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que está executando no modo do SharePoint. No caso de pastas de trabalho do Excel 2010, os Serviços do Excel também gerenciam as ações de carregar e salvar pastas de trabalho e modelos de dados. No entanto, os Serviços do Excel se baseiam no Serviço do Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para enviar os comandos de processamento ao modelo de dados. A tabela a seguir resume os componentes que enviam comandos de processamento para atualização de dados, dependendo da versão da pasta de trabalho. Pressupõe-se que o ambiente seja um farm do SharePoint 2013 configurado para usar um [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Server em execução no modo do SharePoint.  
   
 ||||  
@@ -69,7 +69,7 @@ ms.locfileid: "58658221"
   
 -   A atualização de dados interativa atualiza somente os dados na sessão de usuário atual. Os dados não são salvos automaticamente no item de pasta de trabalho no banco de dados de conteúdo do SharePoint.  
   
--   **Credenciais:** A atualização de dados interativa pode usar a identidade do usuário atualmente conectado como credenciais ou credenciais armazenadas para se conectar à fonte de dados. As credenciais usadas dependem das Configurações de Autenticação dos Serviços do Excel definidas para a conexão da pasta de trabalho com a fonte de dados externa.  
+-   **Credenciais:** Atualização de dados interativa pode usar a identidade do usuário conectado no momento como credenciais ou credenciais armazenadas para se conectar à fonte de dados. As credenciais usadas dependem das Configurações de Autenticação dos Serviços do Excel definidas para a conexão da pasta de trabalho com a fonte de dados externa.  
   
 -   **Suporte para pastas de trabalho:**  Pastas de trabalho criadas no Excel 2013.  
   
@@ -92,21 +92,21 @@ ms.locfileid: "58658221"
   
  Experiência típica do usuário: Quando um cliente seleciona "Atualizar todas as conexões" em uma pasta de trabalho do Excel 2013 que contém um [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modelo, eles verão um mensagem de erro semelhante à seguinte:  
   
--   **Falha na atualização de dados externos:** Erro ao trabalhar com o Modelo de Dados na pasta de trabalho. Tente novamente. Não foi possível atualizar uma ou mais conexões de dados nesta pasta de trabalho.  
+-   **Falha na atualização de dados externos:** Ocorreu um erro ao trabalhar com o modelo de dados na pasta de trabalho. Tente novamente. Não foi possível atualizar uma ou mais conexões de dados nesta pasta de trabalho.  
   
  Dependendo do provedor de dados utilizado, você receberá mensagens semelhantes às seguintes no log ULS.  
   
  **Com o SQL Native Client:**  
   
--   Falha ao criar uma conexão externa ou ao executar uma consulta. Mensagem do provedor: O objeto fora de linha 'DataSource', que referencia a(s) ID(s) '20102481-39c8-4d21-bf63-68f583ad22bb', foi especificado, mas não foi usado.  Erro de OLE DB ou ODBC: Ocorreu um erro relacionado à rede ou específico da instância ao estabelecer uma conexão com o SQL Server. O servidor não foi encontrado ou não está acessível. Verifique se o nome da instância está correto e se o SQL Server está configurado para permitir conexões remotas. Para obter mais informações, consulte Manuais Online do SQL Server.; 08001; Provedor SSL: O pacote de segurança solicitado não existe; 08001; O cliente não pode estabelecer conexão. 08001; Criptografia não tem suporte no cliente.; 08001.  , ConnectionName: ThisWorkbookDataModel, pasta de trabalho: book1.xlsx.  
+-   Falha ao criar uma conexão externa ou ao executar uma consulta. Mensagem do provedor: Objeto fora de linha 'DataSource', referindo-se a ID (s) ' 20102481-39 c d de 4 a 8 21-bf63-68f583ad22bb', foi especificado, mas não foi usado.  Erro de OLE DB ou ODBC: Um erro relacionado à rede ou específico da instância ocorreu ao estabelecer uma conexão com o SQL Server. O servidor não foi encontrado ou não está acessível. Verifique se o nome da instância está correto e se o SQL Server está configurado para permitir conexões remotas. Para obter mais informações, consulte os Manuais Online do SQL Server.; 08001; Provedor SSL: O pacote de segurança solicitado não existe; 08001; Cliente não pôde estabelecer conexão; 08001; Criptografia não tem suportada no cliente.; 08001.  , ConnectionName: ThisWorkbookDataModel, pasta de trabalho: book1.xlsx.  
   
  **Com o Microsoft OLE DB Provider para SQL Server:**  
   
--   Falha ao criar uma conexão externa ou ao executar uma consulta. Mensagem do provedor: O objeto fora de linha 'DataSource', que faz referência à(s) ID(s) '6e711bfa-b62f-4879-a177-c5dd61d9c242', foi especificado, mas não foi usado. Erro de OLE DB ou ODBC. , ConnectionName: ThisWorkbookDataModel, pasta de trabalho: OLEDB Provider.xlsx.  
+-   Falha ao criar uma conexão externa ou ao executar uma consulta. Mensagem do provedor: Objeto fora de linha 'DataSource', referindo-se a ID (s) '6e711bfa-b62f-4879-a177-c5dd61d9c242', foi especificado, mas não foi usado. Erro de OLE DB ou ODBC. , ConnectionName: ThisWorkbookDataModel, pasta de trabalho: OLE DB Provider.  
   
  **Com o Provedor de Dados .NET Framework para SQL Server:**  
   
--   Falha ao criar uma conexão externa ou ao executar uma consulta. Mensagem do provedor: O objeto fora de linha 'DataSource', que referencia a(s) ID(s) 'f5fb916c-3eac-4d07-a542-531524c0d44a', foi especificado, mas não foi usado.  Erros no mecanismo relacional de alto nível. A seguinte exceção ocorreu enquanto a interface IDbConnection gerenciada estava sendo usada: Não foi possível carregar o arquivo ou assembly 'System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' ou uma de suas dependências. O nível de representação necessário não foi fornecido ou o nível de representação fornecido é inválido. (Exceção de HRESULT: 0x80070542).  , ConnectionName: ThisWorkbookDataModel, pasta de trabalho: NETProvider.xlsx.  
+-   Falha ao criar uma conexão externa ou ao executar uma consulta. Mensagem do provedor: Fora de linha 'DataSource', referindo-se a ID (s) 'f5fb916c-3eac - 4d 07-a542-531524c0d44a', do objeto foi especificado, mas não foi usado.  Erros no mecanismo relacional de alto nível. A seguinte exceção ocorreu enquanto a interface IDbConnection gerenciada estava sendo usada: Não foi possível carregar arquivo ou assembly ' System. Transactions, versão version=4.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089' ou uma de suas dependências. O nível de representação necessário não foi fornecido ou o nível de representação fornecido é inválido. (Exceção de HRESULT: 0x80070542).  , ConnectionName: ThisWorkbookDataModel, pasta de trabalho: Netprovider.  
   
  **Resumo das etapas de configuração** Para configurar o privilégio de **Atuar como parte do sistema operacional** no servidor local:  
   
@@ -147,9 +147,9 @@ ms.locfileid: "58658221"
   
 -   Consulte a ilustração após as etapas.  
   
-1.  Em uma biblioteca de documentos do SharePoint, clique no **menu Abrir** (**...**) de uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+1.  Em uma biblioteca de documentos do SharePoint, clique no **menu Abrir** ( **...** ) de uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
   
-2.  Clique no segundo **menu Abrir** e clique em **Gerenciar Atualização de Dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+2.  Clique no segundo **menu Abrir** e clique em **Gerenciar Atualização de Dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 3.  Na página **Gerenciar Atualização de Dados** , clique em **Habilitar** e configure o agendamento de atualização.  
   
@@ -193,17 +193,17 @@ ms.locfileid: "58658221"
 ## <a name="data-refresh-log-data"></a>Dados de log de atualização de dados  
  **Dados de uso:** Você pode exibir dados de uso de atualização de dados no [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] painel de gerenciamento. Para consultar os dados de uso:  
   
-1.  Na Administração Central do SharePoint, clique em **Painel de Gerenciamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, no grupo **Configurações gerais do aplicativo**.  
+1.  Na Administração Central do SharePoint, clique em **Painel de Gerenciamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** , no grupo **Configurações gerais do aplicativo**.  
   
 2.  Na parte inferior do painel, consulte o **atualização de dados - atividade recente** e **atualização de dados - falhas recentes**.  
   
 3.  Para obter mais informações sobre dados de uso e como habilitá-los, consulte [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
- **Dados de log de diagnóstico:** É possível exibir os dados do log de diagnóstico do SharePoint relacionados à atualização de dados. Primeiro, verifique a configuração de log de diagnóstico do **Serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** na página **Monitoramento** da Administração Central do SharePoint. Talvez você precise aumentar o nível de registro em log para "evento menos crítico" log. Por exemplo, defina o valor temporariamente como **Detalhado** e execute as operações de atualização de dados novamente.  
+ **Dados de log de diagnóstico:** Você pode exibir dados de log de diagnóstico do SharePoint relacionados à atualização de dados. Primeiro, verifique a configuração de log de diagnóstico do **Serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** na página **Monitoramento** da Administração Central do SharePoint. Talvez você precise aumentar o nível de registro em log para "evento menos crítico" log. Por exemplo, defina o valor temporariamente como **Detalhado** e execute as operações de atualização de dados novamente.  
   
  As entradas de log contêm:  
   
--   A **Área** do **Serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+-   A **Área** do **Serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 -   A categoria de **Atualização de Dados**.  
   
@@ -212,9 +212,9 @@ ms.locfileid: "58658221"
 ##  <a name="datarefresh_additional_authentication"></a> Considerações adicionais sobre autenticação  
  As configurações na caixa de diálogo **Configurações de Autenticação dos Serviços do Excel** no Excel 2013 determinam a identidade do Windows que os Serviços do Excel e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usam para atualização de dados.  
   
--   **Usar conta do usuário autenticado**: os serviços do Excel executam a atualização de dados sob a identidade do usuário conectado no momento.  
+-   **Usar conta do usuário autenticado**: Os serviços do Excel executam a atualização de dados com a identidade do usuário conectado no momento.  
   
--   **Usar uma conta armazenada**: pressupõe uma ID de aplicativo do Serviço de Repositório Seguro do SharePoint, que os Serviços do Excel usam para recuperar o nome do usuário e a senha para autenticação de atualização de dados.  
+-   **Usar uma conta armazenada**: Pressupõe uma ID de aplicativo do serviço de Store de seguro do SharePoint, os serviços do Excel usa para recuperar o nome de usuário e senha para autenticar a autenticação de atualização de dados.  
   
 -   **None**: Os serviços do Excel **conta de serviço autônoma** é usado. A conta de serviço está associada a um Proxy de Repositório Seguro. Defina as configurações na página **Configurações de Aplicativo dos Serviços do Excel** , na seção **Dados Externos** .  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f7b9a69941364b32e6b43d79f2d092511fd61f22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e58551ae3c6edda3cd865817223fd8052d03ec5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240999"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130049"
 ---
 # <a name="decimal-digits"></a>Dígitos decimais
 O *dígitos decimais* de dados decimais e numéricos de tipos é definido como o número máximo de dígitos à direita da vírgula decimal, ou a escala dos dados. Para colunas de número de ponto flutuantes aproximadas ou parâmetros, a escala é indefinida, porque o número de dígitos à direita da vírgula decimal não é fixo. Para datetime ou intervalo de dados que contém um componente de segundos, os dígitos decimais é definido como o número de dígitos à direita da vírgula decimal no componente de segundos de dados.  

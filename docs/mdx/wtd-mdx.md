@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 9a548f25d9114e9032f2462bbc97bda637abd6d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eee40829c72394bf95a1bc06540a434a1c74e166
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125807"
 ---
 # <a name="wtd-mdx"></a>Wtd (MDX)
 
@@ -39,8 +38,8 @@ Wtd( [ Member_Expression ] )
   
 ## <a name="see-also"></a>Consulte também  
  [Qtd &#40;MDX&#41;](../mdx/qtd-mdx.md)   
- [Mtd &#40;MDX&#41;](../mdx/mtd-mdx.md)   
- [Ytd &#40;MDX&#41;](../mdx/ytd-mdx.md)   
+ [MTD &#40;MDX&#41;](../mdx/mtd-mdx.md)   
+ [Acumulado no ano &#40;MDX&#41;](../mdx/ytd-mdx.md)   
  [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -10,51 +10,51 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a5295107016ad95755514625cac6b64b11d27f35
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020273"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165770"
 ---
 # <a name="supported-mdx-mdx"></a>Suporte para MDX (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   As instruções e funções a seguir são suportadas em scripts MDX:  
   
- [& #40; Comentário & #41; & #40; MDX & #41;](../../../mdx/comment-mdx-double-slash.md)  
+ [&#40;Comentário&#41; &#40;MDX&#41;](../../../mdx/comment-mdx-double-slash.md)  
   
- [– & #40; Comentário & #41; & #40; MDX & #41;](../../../mdx/comment-mdx-operator-reference.md)  
+ [-- &#40;Comentário&#41; &#40;MDX&#41;](../../../mdx/comment-mdx-operator-reference.md)  
   
- [Comentário & #40; MDX & #41;](../../../mdx/comment-mdx.md)  
+ [Comentário &#40;MDX&#41;](../../../mdx/comment-mdx.md)  
   
- [Instrução ALTER CUBE & #40; MDX & #41;](../../../mdx/mdx-data-definition-alter-cube.md)  
+ [Instrução ALTER CUBE &#40;MDX&#41;](../../../mdx/mdx-data-definition-alter-cube.md)  
   
 > [!NOTE]  
 >  Apenas a alteração do membro padrão é suportada pelo script MDX.  
   
- [CALCULAR instrução & #40; MDX & #41;](../../../mdx/mdx-scripting-calculate.md)  
+ [Instrução CALCULATE &#40;MDX&#41;](../../../mdx/mdx-scripting-calculate.md)  
   
- [Instrução CASE & #40; MDX & #41;](../../../mdx/case-statement-mdx.md)  
+ [Instrução CASE &#40;MDX&#41;](../../../mdx/case-statement-mdx.md)  
   
- [Criar instrução de CÁLCULO de CÉLULA & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [Instrução CREATE CELL CALCULATION &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
- [Criar declaração de membro & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-member.md)  
+ [Instrução CREATE MEMBER &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)  
   
- [CRIAR a instrução SET & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-set.md)  
+ [Instrução CREATE SET &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-set.md)  
   
- [Palavra-chave existente & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)  
+ [Palavra-chave EXISTING &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)  
   
- [CONGELAR instrução & #40; MDX & #41;](../../../mdx/mdx-scripting-freeze.md)  
+ [Instrução FREEZE &#40;MDX&#41;](../../../mdx/mdx-scripting-freeze.md)  
   
- [Se instrução & #40; MDX & #41;](../../../mdx/mdx-scripting-if.md)  
+ [Instrução IF &#40;MDX&#41;](../../../mdx/mdx-scripting-if.md)  
   
  [Este &#40;MDX&#41;](../../../mdx/this-mdx.md)  
   
 > [!NOTE]  
->  O MDX dá suporte à atribuição para as seguintes propriedades de célula: **BACK_COLOR**, **FORE_COLOR**, **FORMAT_STRING**, **FONT_FLAGS**, **FONT_NAME**e **FONT_SIZE**. Para obter mais informações, consulte [Como usar propriedades da célula &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md). A linguagem MDX também dá suporte à atribuição da propriedade **NON_EMPTY_BEHAVIOR** da instrução [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md) .  
+>  O MDX oferece suporte a atribuição para as seguintes propriedades de célula: **BACK_COLOR**, **FORE_COLOR**, **FORMAT_STRING**, **FONT_FLAGS**, **FONT_NAME**, e **FONT_SIZE** . Para obter mais informações, consulte [Como usar propriedades da célula &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md). A linguagem MDX também dá suporte à atribuição da propriedade **NON_EMPTY_BEHAVIOR** da instrução [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md) .  
   
  [Instrução SCOPE &#40;MDX&#41;](../../../mdx/mdx-scripting-scope.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [O Script básico de MDX & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
+ [O script básico de MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
   
   

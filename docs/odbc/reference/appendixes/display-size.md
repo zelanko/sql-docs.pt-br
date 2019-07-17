@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c7d4a14a6afc2d716e85e687cbae1a202a596d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61afd5c9932f58c49e54b4aff8b053d0a25a6e3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130019"
 ---
 # <a name="display-size"></a>Tamanho de exibição
 O tamanho da exibição de uma coluna é o número máximo de caracteres necessário para exibir dados em formato de caractere. A tabela a seguir define o tamanho de exibição para cada tipo de dados SQL ODBC.  

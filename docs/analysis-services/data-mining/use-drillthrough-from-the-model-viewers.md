@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9c1d636b4435aca63ffadbef3b45e93f3215a40c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016923"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209583"
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>Usar detalhamento dos visualizadores do modelo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "34016923"
   
 2.  Clique com o botão direito do mouse em qualquer nó no gráfico de árvore e selecione **Detalhar**.  
   
-3.  Selecione uma destas opções: **Colunas do Modelo Somente** ou **Colunas do Modelo e da Estrutura**. Se você não tiver permissões, talvez uma opção não esteja disponível.  
+3.  Selecione uma das opções a seguir: **Colunas de modelo somente** ou **modelar e estruturar colunas**. Se você não tiver permissões, talvez uma opção não esteja disponível.  
   
 4.  A caixa de diálogo **Detalhar** é aberta, exibindo os dados de caso e/ou os dados de estrutura. A barra de título da caixa de diálogo também contém uma descrição que identifica o nó do qual a consulta de detalhamento foi executada.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "34016923"
   
 2.  Na guia **Cluster** , clique com o botão direito do mouse em qualquer nó.  
   
-3.  Selecione **Detalhar**e, depois, selecione uma das seguintes opções: **Colunas do Modelo Somente** ou **Colunas do Modelo e da Estrutura**. Se você não tiver permissões, talvez uma opção não esteja disponível.  
+3.  Selecione **drill-through**e, em seguida, selecione uma das seguintes opções: **Colunas de modelo somente** ou **modelar e estruturar colunas**. Se você não tiver permissões, talvez uma opção não esteja disponível.  
   
 4.  A caixa de diálogo **Detalhar** é aberta, exibindo os dados de caso e/ou os dados de estrutura. A barra de título da caixa de diálogo também contém uma descrição que identifica o cluster para os casos.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "34016923"
   
 2.  Na guia **Regras** , clique com o botão direito do mouse em qualquer linha que represente uma regra. Na guia **Conjuntos de itens** , clique em qualquer linha que contenha um conjunto de itens.  
   
-3.  Selecione **Detalhar**e, depois, selecione uma das seguintes opções: **Colunas do Modelo Somente** ou **Colunas do Modelo e da Estrutura**. Se você não tiver permissões, talvez uma opção não esteja disponível.  
+3.  Selecione **drill-through**e, em seguida, selecione uma das seguintes opções: **Colunas de modelo somente** ou **modelar e estruturar colunas**. Se você não tiver permissões, talvez uma opção não esteja disponível.  
   
 4.  A caixa de diálogo **Detalhar** é aberta, exibindo os dados de caso e/ou os dados de estrutura. A barra de título da caixa de diálogo também contém uma descrição que identifica o nome da regra.  
   
@@ -64,14 +64,14 @@ ms.locfileid: "34016923"
   
 2.  Na **guia Diagrama de Cluster**, clique com o botão direito do mouse em qualquer nó que represente um cluster. Na guia **Perfis de Cluster** , clique em qualquer ponto em um perfil de cluster ou no cluster que representa a população modelo total.  
   
-3.  Selecione **Detalhar**e, depois, selecione uma das seguintes opções: **Colunas do Modelo Somente** ou **Colunas do Modelo e da Estrutura**. Se você não tiver permissões, talvez uma opção não esteja disponível.  
+3.  Selecione **drill-through**e, em seguida, selecione uma das seguintes opções: **Colunas de modelo somente** ou **modelar e estruturar colunas**. Se você não tiver permissões, talvez uma opção não esteja disponível.  
   
 4.  A caixa de diálogo **Detalhar** é aberta, exibindo os dados de caso e/ou os dados de estrutura. A barra de título da caixa de diálogo também contém uma descrição que identifica o cluster para os casos.  
   
 5.  Clique com o botão direito do mouse em qualquer ponto nos resultados e selecione **Copiar Tudo** para salvar os resultados na Área de Transferência. Se o modelo contiver uma coluna de tabela aninhada, só o nome da coluna de tabela aninhada será colado; para recuperar os valores de dados dentro da coluna de tabela aninhada para cada caso, crie uma consulta no conteúdo modelo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefas do Visualizador do modelo e instruções de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Tarefas e instruções do visualizador do modelo de mineração](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Detalhamento em modelos de mineração](../../analysis-services/data-mining/drillthrough-on-mining-models.md)   
  [Detalhamento em estruturas de mineração](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   

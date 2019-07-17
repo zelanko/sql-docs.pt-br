@@ -1,5 +1,5 @@
 ---
-title: Editar ou excluir partições (Analysis Services – Multidimensional) | Microsoft Docs
+title: Editar ou excluir partições (Analysis Services - Multidimensional) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 739775890b324c89357ec4f1ba8f627277788087
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024323"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178221"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>Editar ou excluir partições (Analysis Services – Multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "34024323"
 >  Outra opção é usar scripts XMLA que automatizam tarefas para criar, mesclar e excluir partições. O script XMLA pode ser criado e executado no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ou pacotes SSIS personalizados que são executados como uma tarefa agendada. Para obter mais informações, consulte [Automatizar tarefas administrativas do Analysis Services com SSIS](../../analysis-services/instances/automate-analysis-services-administrative-tasks-with-ssis.md).  
   
 ## <a name="partition-source"></a>Origem da partição  
- Especifica a tabela de origem ou a consulta nomeada para a partição. Para alterar a tabela de origem, clique na célula e, em seguida, clique no botão de procura (**...**).  
+ Especifica a tabela de origem ou a consulta nomeada para a partição. Para alterar a tabela de origem, clique na célula e, em seguida, clique no botão de procura ( **...** ).  
   
- ![Coluna de origem no painel partição](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "coluna de origem no painel de partição")  
+ ![Coluna de origem no painel de partição](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "coluna de origem no painel de partição")  
   
- Se a partição for baseada em uma consulta, clique no botão Procurar (**...**) para editar a consulta. A propriedade **Origem** é editada para a partição. Para obter mais informações, consulte [Alterar uma origem de partição para usar uma tabela de fatos diferente](../../analysis-services/multidimensional-models/change-a-partition-source-to-use-a-different-fact-table.md).  
+ Se a partição for baseada em uma consulta, clique no botão Procurar ( **...** ) para editar a consulta. A propriedade **Origem** é editada para a partição. Para obter mais informações, consulte [Alterar uma origem de partição para usar uma tabela de fatos diferente](../../analysis-services/multidimensional-models/change-a-partition-source-to-use-a-different-fact-table.md).  
   
  Você pode especificar uma tabela na exibição da fonte de dados que tenha a mesma estrutura da tabela de origem original (na fonte de dados externa do qual são recuperados dados). A origem pode estar em qualquer fonte de dados ou exibição da fonte de dados do banco de dados de cubo.  
   
@@ -44,8 +44,8 @@ ms.locfileid: "34024323"
  O armazenamento pode ser configurado separadamente para cada partição de cada grupo de medidas em um cubo. Você também pode definir configurações de armazenamento padrão para um cubo ou grupo de medidas. O armazenamento é configurado na guia **Partições** do Assistente para Cubos.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar e gerenciar uma partição Local & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [Projetando agregações & #40; Analysis Services - Multidimensional & #41;](../../analysis-services/multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)   
- [Mesclar partições no Analysis Services & #40; SSAS Multidimensional & #41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Criar e gerenciar uma partição local &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
+ [Projetando agregações &#40;Analysis Services – multidimensional&#41;](../../analysis-services/multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)   
+ [Mesclar partições no Analysis Services &#40;SSAS – Multidimensional&#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c79a3e34ea6ca1bbebfa35a77020b81618514133
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: f87a62e744bcd6032c58cdb3b327b747e5343d2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124006"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
 ## <a name="arguments"></a>Argumentos  
  [ @Resource=] '*resource_name*'  
- É uma cadeia de caracteres especificando um nome que identifica o recurso de bloqueio. O aplicativo deve garantir que o nome do recurso seja exclusivo. O nome especificado é internamente transformado em hash para um valor que pode ser armazenado no gerenciador de bloqueio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* está **nvarchar (255)** sem nenhum padrão. Se uma cadeia de caracteres do recurso for maior que **nvarchar (255)**, ele será truncado para **nvarchar (255)**.  
+ É uma cadeia de caracteres especificando um nome que identifica o recurso de bloqueio. O aplicativo deve garantir que o nome do recurso seja exclusivo. O nome especificado é internamente transformado em hash para um valor que pode ser armazenado no gerenciador de bloqueio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* está **nvarchar (255)** sem nenhum padrão. Se uma cadeia de caracteres do recurso for maior que **nvarchar (255)** , ele será truncado para **nvarchar (255)** .  
   
  *resource_name* é binário comparado e, portanto, diferencia maiusculas de minúsculas, independentemente das configurações de agrupamento do banco de dados atual.  
   
@@ -56,10 +55,10 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  Depois que um bloqueio de aplicativo for adquirido, somente os primeiros 32 caracteres poderão ser recuperados em texto não criptografado, o restante será em modo hash.  
   
  [ @LockMode=] '*lock_mode*'  
- É o modo de bloqueio a ser obtido para um recurso específico. *lock_mode* é **nvarchar(32)** e não tem valor padrão. O valor pode ser um dos seguintes: **Compartilhado**, **Update**, **IntentShared**, **IntentExclusive**, ou **exclusivo**.  
+ É o modo de bloqueio a ser obtido para um recurso específico. *lock_mode* é **nvarchar(32)** e não tem valor padrão. O valor pode ser qualquer um dos seguintes: **Compartilhado**, **Update**, **IntentShared**, **IntentExclusive**, ou **exclusivo**.  
   
  [ @LockOwner=] '*lock_owner*'  
- É o proprietário do bloqueio, que é o valor de *lock_owner* quando o bloqueio foi solicitado. *lock_owner* é **nvarchar(32)**. O valor pode ser **Transaction** (o padrão) ou **Session**. Quando o *lock_owner* valor estiver **transação**, por padrão ou explicitamente especificado, sp_getapplock deve ser executado de dentro de uma transação.  
+ É o proprietário do bloqueio, que é o valor de *lock_owner* quando o bloqueio foi solicitado. *lock_owner* é **nvarchar(32)** . O valor pode ser **Transaction** (o padrão) ou **Session**. Quando o *lock_owner* valor estiver **transação**, por padrão ou explicitamente especificado, sp_getapplock deve ser executado de dentro de uma transação.  
   
  [ @LockTimeout=] '*valor*'  
  É um valor de tempo limite de bloqueio em milissegundos. O valor padrão é o mesmo que o valor retornado por@LOCK_TIMEOUT. Para indicar que uma solicitação de bloqueio deve retornar um código de retorno de -1 em vez de esperar pelo bloqueio quando a solicitação não pode ser concedida imediatamente, especifique 0.  
@@ -80,7 +79,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |-999|Indica uma validação de parâmetro ou outro erro de chamada.|  
   
 ## <a name="remarks"></a>Comentários  
- Bloqueios inseridos em um recurso são associados com a transação atual ou a sessão atual. Os bloqueios associados a uma transação atual são liberados quando a transação for confirmada ou revertida. Bloqueios associados com a sessão são liberados quando a sessão é finalizada. Quando o servidor é desligado por algum motivo, todos os bloqueios são liberados.  
+ Bloqueios inseridos em um recurso são associados com a transação atual ou a sessão atual. Os bloqueios associados a uma transação atual são liberados quando a transação for confirmada ou revertida. Os bloqueios associados a sessão são liberados quando a sessão é desconectada. Quando o servidor é desligado por algum motivo, todos os bloqueios são liberados.  
   
  O recurso de bloqueio criado por sp_getapplock é criado no banco de dados atual para a sessão. Cada recurso de bloqueio é identificado pelos valores combinados de:  
   
@@ -112,7 +111,7 @@ GO
   
  Um deadlock com um bloqueio de aplicativo não reverte a transação que solicitou o bloqueio de aplicativo. Qualquer reversão que poderia ser requerida como resultado do valor de retorno deve ser feita manualmente. Consequentemente, recomendamos que a verificação de erros seja incluída no código de forma que se forem retornados certos valores (por exemplo, -3), um ROLLBACK TRANSACTION ou ação alternativa seja iniciada.  
   
- A seguir está um exemplo:  
+ Veja um exemplo:  
   
 ```  
 USE AdventureWorks2012;  
