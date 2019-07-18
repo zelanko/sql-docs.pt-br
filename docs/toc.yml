@@ -7396,6 +7396,8 @@
       items:
         - name: Criar servidores vinculados
           href: relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
+        - name: Criar provedor de servidor vinculado
+          href: relational-databases/linked-servers/create-linked-servers-sql-server-oledb-provider.md
     - name: Pesquisa de texto completo
       href: relational-databases/search/full-text-search.md
       items:
