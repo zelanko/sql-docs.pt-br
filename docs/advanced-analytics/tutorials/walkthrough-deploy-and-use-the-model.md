@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f1c684aff9c4b31049a04add04e8def642dca1d2
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: e79dd0bce559259863128de1d2490f0fd9197cf1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961693"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Implantar o modelo de R e usá-lo no SQL Server (passo a passo)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -73,7 +72,7 @@ Criar um procedimento armazenado, *PredictTipBatchMode*, que gera várias previs
 
     + Você pode usar uma instrução SELECT para chamar o modelo armazenado em uma tabela SQL. O modelo é recuperado da tabela de **varbinary (max)** dados armazenados na variável SQL  _\@lmodel2_e passado como o parâmetro *mod* no sistema procedimento armazenado [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Os dados usados como entradas para a pontuação é definida como uma consulta SQL e armazenado como uma cadeia de caracteres na variável SQL  _\@entrada_. Como os dados são recuperados do banco de dados, ele é armazenado em um quadro de dados chamado *InputDataSet*, que é apenas o nome padrão para dados de entrada para o [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedimento; você pode definir outro nome de variável, se necessário, usando o parâmetro   *_\@input_data_1_name_*.
+    + Os dados usados como entradas para a pontuação é definida como uma consulta SQL e armazenado como uma cadeia de caracteres na variável SQL  _\@entrada_. Como os dados são recuperados do banco de dados, ele é armazenado em um quadro de dados chamado *InputDataSet*, que é apenas o nome padrão para dados de entrada para o [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedimento; você pode definir outro nome de variável, se necessário, usando o parâmetro * _\@input_data_1_name_* .
 
     + Para gerar as pontuações, o procedimento armazenado chama a função de rxPredict do **RevoScaleR** biblioteca.
 
