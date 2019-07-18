@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6e9c0a8ef6ba891db7575cb9ff9f4128f3fb3b7d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 016abf8c186114726ebd99bbe34ae956cf618591
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63767703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68161575"
 ---
-<Token>**ESTE TÓPICO APLICA-SE A:**![sim](media/yes.png)SQL Server (a partir de 2019)![não](media/no.png)Banco de Dados SQL do Microsoft Azure![não](media/no.png)Azure SQL Data Warehouse ![não](media/no.png)Parallel Data Warehouse </Token>
+<Token>**ESTE TÓPICO APLICA-SE A:** ![sim](media/yes.png)SQL Server![não](media/no.png)Banco de Dados SQL do Azure![não](media/no.png)SQL Data Warehouse do Azure ![não](media/no.png)Parallel Data Warehouse </Token>
 
