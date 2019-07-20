@@ -1,67 +1,67 @@
 ---
-title: Governança de recursos para execução do script R e Python – Machine Learning do SQL Server
-description: Alocar memória RAM, CPU e e/s para cargas de trabalho de R e Python na instância de mecanismo de banco de dados do SQL Server.
+title: Governança de recursos para execução de script R e Python
+description: Aloque memória RAM, CPU e e/s para cargas de trabalho R e Python em SQL Server instância do mecanismo de banco de dados.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e6063f8367e5b91e7e935d6f92515a6dd452dc56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1a665fd92f630b46351ef96cc203c9bbf71f54a2
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67963131"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345139"
 ---
-# <a name="resource-governance-for-machine-learning-in-sql-server"></a>Governança de recursos para o aprendizado de máquina no SQL Server
+# <a name="resource-governance-for-machine-learning-in-sql-server"></a>Governança de recursos para aprendizado de máquina no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Algoritmos de aprendizado de máquina e ciência de dados são computacionalmente intensivas. Dependendo das prioridades de carga de trabalho, talvez seja necessário aumentar os recursos disponíveis para ciência de dados ou diminuição de recursos se a execução do script R e Python prejudica o desempenho de outros serviços em execução simultaneamente. 
+Os algoritmos de ciência de dados e de aprendizado de máquina são computacionalmente intensivos. Dependendo das prioridades de carga de trabalho, talvez seja necessário aumentar os recursos disponíveis para a ciência de dados ou diminuir a origem se a execução do script R e Python subminar o desempenho de outros serviços em execução simultaneamente. 
 
-Quando você precisa balancear novamente a distribuição de recursos do sistema em várias cargas de trabalho, você pode usar [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) para alocar a CPU, e/s física e os recursos de memória consumidos pelos tempos de execução externos para R e Python. Se você mudar as alocações de recursos, lembre-se de que você talvez precise também reduzir a quantidade de memória reservada para outras cargas de trabalho e serviços. 
+Quando você precisa reequilibrar a distribuição de recursos do sistema em várias cargas de trabalho, você pode usar [resource governor](../../relational-databases/resource-governor/resource-governor.md) para alocar CPU, e/s física e recursos de memória consumidos pelos tempos de execução externos para R e Python. Se você mudar as alocações de recursos, lembre-se de que talvez seja necessário reduzir também a quantidade de memória reservada para outras cargas de trabalho e serviços. 
 
 > [!NOTE] 
-> Administrador de recursos é um recurso do Enterprise Edition.
+> O Resource Governor é um recurso de edição Enterprise.
 
 ## <a name="default-allocations"></a>Alocações padrão
 
-Por padrão, os tempos de execução do script externo para o machine learning são limitados a não mais de 20% da memória total do computador. Ele depende do seu sistema, mas em geral, você pode encontrar esse limite inadequado para tarefas de aprendizado de máquina graves, como um modelo de treinamento ou para prever em várias linhas de dados. 
+Por padrão, os tempos de execução de script externo para Machine Learning são limitados a não mais do que 20% da memória total do computador. Depende do seu sistema, mas, em geral, você pode achar esse limite inadequado para tarefas de aprendizado de máquina sérias, como treinar um modelo ou prever muitas linhas de dados. 
 
-## <a name="use-resource-governor-to-control-resourcing"></a>Usar o Resource Governor para controlar a alocação de recursos
+## <a name="use-resource-governor-to-control-resourcing"></a>Usar Resource Governor para controlar a insourcing
  
-Por padrão, os processos externos usam até 20% da memória total do host no servidor local. Você pode modificar o pool de recursos padrão para fazer alterações em todo o servidor, com o R e processos de Python utilizando qualquer capacidade que você disponibilizar para processos externos.
+Por padrão, os processos externos usam até 20% da memória total do host no servidor local. Você pode modificar o pool de recursos padrão para fazer alterações em todo o servidor, com processos de R e Python utilizando qualquer capacidade que você disponibilizar para processos externos.
 
-Como alternativa, você pode construir personalizado *pools de recursos externos*, com grupos de carga de trabalho associada e classificadores, para determinar a alocação de recurso para solicitações provenientes de programas específicos, hosts ou outros critérios que Você pode fornecer. Um pool de recursos externo é um tipo de pool de recursos introduzido no [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] para ajudar a gerenciar os processos de R e Python externos ao mecanismo de banco de dados.
+Como alternativa, você pode construir pools de *recursos externos*personalizados, com classificadores e grupos de carga de trabalho associados, para determinar a alocação de recursos para solicitações provenientes de programas, hosts ou outros critérios específicos que você fornecer. Um pool de recursos externos é um tipo de pool de recursos [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] introduzido no para ajudar a gerenciar os processos de R e Python externos ao mecanismo de banco de dados.
 
-1. [Habilitar a governança de recursos](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) (ele está desativado por padrão).
+1. [Habilitar governança de recursos](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) (está desativado por padrão).
 
-2. Execute [CREATE EXTERNAL RESOURCE POOL](https://docs.microsoft.com/sql/t-sql/statements/create-external-resource-pool-transact-sql) para criar e configurar o pool de recursos, seguido por [ALTER RESOURCE GOVERNOR](https://docs.microsoft.com/sql/t-sql/statements/alter-resource-governor-transact-sql) implementá-lo.
+2. Execute [criar pool de recursos externos](https://docs.microsoft.com/sql/t-sql/statements/create-external-resource-pool-transact-sql) para criar e configurar o pool de recursos, seguido por [ALTER RESOURCE GOVERNOR](https://docs.microsoft.com/sql/t-sql/statements/alter-resource-governor-transact-sql) para implementá-lo.
 
-3. Crie um grupo de carga de trabalho para alocações granulares, por exemplo, entre treinamento e pontuação.
+3. Crie um grupo de cargas de trabalho para alocações granulares, por exemplo, entre treinamento e pontuação.
 
 4. Crie um classificador para interceptar chamadas para processamento externo.
 
-5. Executar consultas e procedimentos usando os objetos que você criou.
+5. Execute consultas e procedimentos usando os objetos que você criou.
 
-Para obter instruções, consulte [como criar um pool de recursos para os scripts de R e Python externos](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md) para obter instruções passo a passo.
+Para obter instruções, consulte [como criar um pool de recursos para scripts R e Python externos](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md) para obter informações passo a passo.
 
-Para obter uma introdução à terminologia e conceitos gerais, consulte [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md).
+Para obter uma introdução à terminologia e conceitos gerais, consulte [resource governor pool de recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md).
 
-## <a name="processes-under-resource-governance"></a>Processos de governança de recursos
+## <a name="processes-under-resource-governance"></a>Processos sob governança de recursos
   
- Você pode usar um *pool de recursos externos* para gerenciar os recursos usados pelos executáveis em uma instância do mecanismo de banco de dados a seguir:
+ Você pode usar um *pool de recursos externos* para gerenciar os recursos usados pelos seguintes executáveis em uma instância do mecanismo de banco de dados:
 
-+ Rterm.exe quando chamado localmente do SQL Server ou chamado remotamente com o SQL Server como o contexto de computação remota
-+ Python.exe quando chamado localmente do SQL Server ou chamado remotamente com o SQL Server como o contexto de computação remota
++ Rterm. exe quando chamado localmente de SQL Server ou chamado remotamente com SQL Server como o contexto de computação remota
++ Python. exe quando chamado localmente de SQL Server ou chamado remotamente com SQL Server como o contexto de computação remota
 + BxlServer.exe e processos satélite
-+ Processos satélite iniciados pelo Launchpad, como PythonLauncher.dll
++ Processos de satélite iniciados pelo Launchpad, como PythonLauncher. dll
   
 > [!NOTE]
-> Não há suporte para o gerenciamento direto de serviço Launchpad pelo administrador de recursos. Barra inicial é um serviço confiável que pode somente os iniciadores de host fornecidos pela Microsoft. Inicializadores confiáveis são configurados explicitamente para evitar o consumo excessivo de recursos.
+> Não há suporte para o gerenciamento direto do serviço Launchpad usando Resource Governor. O Launchpad é um serviço confiável que só pode hospedar iniciadores fornecidos pela Microsoft. Os iniciadores confiáveis são configurados explicitamente para evitar o consumo excessivo de recursos.
   
 ## <a name="see-also"></a>Confira também
 
-+ [Gerenciar integração de aprendizado de máquina](../r/managing-and-monitoring-r-solutions.md)
++ [Gerenciar a integração do Machine Learning](../r/managing-and-monitoring-r-solutions.md)
 + [Criar um pool de recursos para o aprendizado de máquina](../r/how-to-create-a-resource-pool-for-r.md)
-+ [Pools de recursos do administrador de recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
++ [Resource Governor pools de recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)

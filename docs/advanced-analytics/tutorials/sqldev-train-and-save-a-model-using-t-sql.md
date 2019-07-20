@@ -1,33 +1,33 @@
 ---
-title: Lição 3 treinar e salvar um modelo usando R e T-SQL – SQL Server Machine Learning
-description: Tutorial que mostra como treinar, serializar e salvar um modelo do R usando o SQL Server procedimentos armazenados e funções T-SQL.
+title: Lição 3 treinar e salvar um modelo usando R e T-SQL
+description: Tutorial mostrando como treinar, serializar e salvar um modelo R usando SQL Server procedimentos armazenados e funções do T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1953e2a5cfa1671a81630a66a4e6c3589929d1bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0d26f549bcca4860f4febe01a868f360edfa4fa2
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961833"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345864"
 ---
 # <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>Lição 3: Treinar e salvar um modelo usando o T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo faz parte de um tutorial para desenvolvedores SQL sobre como usar o R no SQL Server.
+Este artigo faz parte de um tutorial para desenvolvedores de SQL sobre como usar o R no SQL Server.
 
-Nesta lição, você aprenderá a treinar um modelo de aprendizado de máquina usando o R. Você vai treinar o modelo usando os recursos de dados que você criou na lição anterior e, em seguida, salve o modelo treinado em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela. Nesse caso, os pacotes do R já estão instalados no [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], portanto, tudo o que pode ser feito do SQL.
+Nesta lição, você aprenderá a treinar um modelo de aprendizado de máquina usando o R. Você treinará o modelo usando os recursos de dados criados na lição anterior e, em seguida, salvará o modelo treinado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma tabela. Nesse caso, os pacotes do R já estão instalados com [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]o, portanto, tudo pode ser feito do SQL.
 
 ## <a name="create-the-stored-procedure"></a>Criar o procedimento armazenado
 
-Ao chamar o R de T-SQL, você use o procedimento armazenado do sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). No entanto, para processos que você repetir muitas vezes, como a readaptação de um modelo, é mais fácil encapsular a chamada para sp_execute_exernal_script em outro procedimento armazenado.
+Ao chamar R do T-SQL, você usa o procedimento armazenado do sistema, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). No entanto, para processos que você repete com frequência, como treinar novamente um modelo, é mais fácil encapsular a chamada para sp_execute_exernal_script em outro procedimento armazenado.
 
-1. Na [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra uma nova **consulta** janela.
+1. No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra uma nova janela de **consulta** .
 
-2. Execute a seguinte instrução para criar o procedimento armazenado **RxTrainLogitModel**. Esse procedimento armazenado define os dados de entrada e usa **rxLogit** do RevoScaleR para criar um modelo de regressão logística.
+2. Execute a instrução a seguir para criar o procedimento armazenado **RxTrainLogitModel**. Esse procedimento armazenado define os dados de entrada e usa **rxLogit** de RevoScaleR para criar um modelo de regressão logística.
 
     ```sql
     CREATE PROCEDURE [dbo].[RxTrainLogitModel] (@trained_model varbinary(max) OUTPUT)
@@ -58,21 +58,21 @@ Ao chamar o R de T-SQL, você use o procedimento armazenado do sistema [sp_execu
     GO
     ```
 
-    - Para garantir que alguns dados é restantes para testar o modelo, 70% dos dados são selecionados aleatoriamente da tabela de dados de táxi para fins de treinamento.
+    - Para garantir que alguns dados sejam deixados para testar o modelo, 70% dos dados são selecionados aleatoriamente da tabela de dados de táxi para fins de treinamento.
 
-    - A consulta SELECT usa a função escalar personalizada *fnCalculateDistance* para calcular a distância direta entre os locais de embarque e desembarque de passageiros. os resultados da consulta são armazenados na variável de entrada padrão do R, `InputDataset`.
+    - A consulta SELECT usa a função escalar personalizada *fnCalculateDistance* para calcular a distância direta entre os locais de embarque e desembarque de passageiros. Os resultados da consulta são armazenados na variável de entrada padrão do R, `InputDataset`.
   
-    - O script do R chama o **rxLogit** função, que é uma das funções avançadas do R incluídas com [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], para criar o modelo de regressão logística.
+    - O script R chama a função **rxLogit** , que é uma das funções avançadas do R incluídas no [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], para criar o modelo de regressão logística.
   
         A variável binária _tipped_ é usada como a coluna *label* ou de resultado, e o modelo é ajustado com o uso destas colunas de recursos:  _passenger_count_, _trip_distance_, _trip_time_in_secs_e _direct_distance_.
   
-    - O modelo treinado, salvo na variável do R `logitObj`, é serializado e retornado como um parâmetro de saída.
+    - O modelo treinado, salvo na variável `logitObj`de R, é serializado e retornado como um parâmetro de saída.
 
-## <a name="train-and-deploy-the-r-model-using-the-stored-procedure"></a>Treinar e implantar o modelo do R usando o procedimento armazenado
+## <a name="train-and-deploy-the-r-model-using-the-stored-procedure"></a>Treinar e implantar o modelo R usando o procedimento armazenado
 
 Como o procedimento armazenado já inclui uma definição dos dados de entrada, você não precisa fornecer uma consulta de entrada.
 
-1. Para treinar e implantar o modelo do R, chame o procedimento armazenado e inseri-lo para a tabela de banco de dados _nyc_taxi_models_, de modo que você pode usá-lo para previsões futuras:
+1. Para treinar e implantar o modelo R, chame o procedimento armazenado e insira-o na tabela de banco de dados _nyc_taxi_models_, para que você possa usá-lo para previsões futuras:
 
     ```sql
     DECLARE @model VARBINARY(MAX);
@@ -80,15 +80,15 @@ Como o procedimento armazenado já inclui uma definição dos dados de entrada, 
     INSERT INTO nyc_taxi_models (name, model) VALUES('RxTrainLogit_model', @model);
     ```
 
-2. Assista a **mensagens** janela do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para mensagens que serão redirecionadas para do R **stdout** fluxo, como esta mensagem: 
+2. Observe a janela **mensagens** do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para mensagens que seriam canalizadas para o fluxo **stdout** do R, como esta mensagem: 
 
-    "Mensagem (NS) STDOUT do script externo: Linhas lidas: 1193025, total de linhas processadas: 1193025, total tempo: 0.093 segundos"
+    "Mensagem (ns) STDOUT do script externo: Linhas lidas: 1193025, total de linhas processadas: 1193025, tempo total da parte: 0, 93 segundos "
 
-    Você também poderá ver mensagens específicas de função individual, `rxLogit`, exibindo as variáveis e métricas geradas como parte da criação do modelo de teste.
+    Você também pode ver mensagens específicas para a função individual, `rxLogit`exibindo as variáveis e as métricas de teste geradas como parte da criação do modelo.
 
-3.  Quando a instrução for concluída, abra a tabela *nyc_taxi_models*. Processamento de dados e ajuste do modelo podem levar algum tempo.
+3.  Quando a instrução for concluída, abra a tabela *nyc_taxi_models*. O processamento dos dados e a ajuste do modelo pode levar algum tempo.
 
-    Você pode ver que uma nova linha tiver sido adicionada, que contém o modelo serializado na coluna _modelo_ e o nome do modelo **RxTrainLogit_model** na coluna _nome_.
+    Você pode ver que uma nova linha foi adicionada, que contém o modelo serializado no _modelo_ de coluna e o nome do modelo **RxTrainLogit_model** no _nome_da coluna.
 
     ```sql
     model                        name
@@ -96,13 +96,13 @@ Como o procedimento armazenado já inclui uma definição dos dados de entrada, 
     0x580A00000002000302020....  RxTrainLogit_model
     ```
 
-A próxima etapa, você usará o modelo treinado para gerar previsões.
+Na próxima etapa, você usará o modelo treinado para gerar previsões.
 
 ## <a name="next-lesson"></a>Próxima lição
 
-[Lição 4: Prever resultados possíveis, usando um modelo do R em um procedimento armazenado](../tutorials/sqldev-operationalize-the-model.md)
+[Lição 4: Prever resultados potenciais usando um modelo de R em um procedimento armazenado](../tutorials/sqldev-operationalize-the-model.md)
 
 ## <a name="previous-lesson"></a>Lição anterior
 
-[Lição 2: Criar recursos de dados usando funções de R e T-SQL](..//tutorials/sqldev-create-data-features-using-t-sql.md)
+[Lição 2: Criar recursos de dados usando o R e o T-SQL Functions](..//tutorials/sqldev-create-data-features-using-t-sql.md)
 

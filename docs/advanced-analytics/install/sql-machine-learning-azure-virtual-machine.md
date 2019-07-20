@@ -1,35 +1,35 @@
 ---
-title: Instalar a linguagem R e recursos do Python em uma máquina virtual do Azure - serviços do SQL Server Machine Learning
-description: Executar soluções em uma máquina de virtual do SQL Server na nuvem do Azure de aprendizado de máquina e de ciência de dados R e Python.
+title: Instalar a linguagem R e os recursos do Python em uma máquina virtual do Azure
+description: Execute soluções R e Python data Science e Machine Learning em uma máquina virtual SQL Server na nuvem do Azure.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/09/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 551d7c81220175efd1143323cce0a9bcdb4ad3f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f034f3a766e4f82bd1bcfd182f4eee285f7f829
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962904"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345036"
 ---
-# <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Instalar serviços do SQL Server Machine Learning com R e Python em uma máquina virtual do Azure
+# <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Instalar SQL Server Serviços de Machine Learning com R e Python em uma máquina virtual do Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Você pode instalar a integração de R e Python com os serviços de aprendizado de máquina em uma máquina de virtual do SQL Server no Azure, eliminando as tarefas de instalação e configuração. Depois que a máquina virtual é implantada, os recursos estão prontos para uso.
+Você pode instalar a integração do R e do Python com o Serviços de Machine Learning em uma máquina virtual SQL Server no Azure, eliminando tarefas de instalação e configuração. Depois que a máquina virtual é implantada, os recursos estão prontos para uso.
  
-Para obter instruções passo a passo, consulte [como provisionar uma máquina de virtual do Windows SQL Server no portal do Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision).
+Para obter instruções passo a passo, consulte [como provisionar uma máquina virtual do Windows SQL Server no portal do Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision).
 
-O [configurações de configurar o SQL server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) etapa é onde adicionar o aprendizado de máquina para sua instância.
+A etapa [definir configurações do SQL Server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) é onde você adiciona o aprendizado de máquina à sua instância.
 
 <a name="firewall"></a>
 
 ## <a name="unblock-the-firewall"></a>Desbloquear o firewall
 
-Por padrão, o firewall na máquina virtual do Azure inclui uma regra que bloqueia o acesso para contas de usuário local de rede.
+Por padrão, o firewall na máquina virtual do Azure inclui uma regra que bloqueia o acesso à rede para contas de usuário local.
 
-Você deve desabilitar essa regra para garantir que você pode acessar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância de um cliente de ciência de dados remoto.  Caso contrário, o código de aprendizado de máquina não é possível executar em contextos de computação que usam o espaço de trabalho da máquina virtual.
+Você deve desabilitar essa regra para garantir que você possa acessar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância de um cliente de ciência de dados remoto.  Caso contrário, o código de aprendizado de máquina não poderá ser executado em contextos de computação que usam o espaço de trabalho da máquina virtual.
 
 Para habilitar o acesso de clientes de ciência de dados remotos:
 
@@ -41,9 +41,9 @@ Para habilitar o acesso de clientes de ciência de dados remotos:
   
 ## <a name="enable-odbc-callbacks-for-remote-clients"></a>Habilitar retornos de chamada ODBC para clientes remotos
 
-Se você espera que os clientes que chamam o servidor precisará emitir consultas ODBC como parte de sua soluções de aprendizado de máquina, você deve garantir que o Launchpad possa fazer chamadas ODBC em nome do cliente remoto. 
+Se você espera que os clientes que chamam o servidor precisem emitir consultas ODBC como parte de suas soluções de aprendizado de máquina, você deve garantir que o Launchpad possa fazer chamadas ODBC em nome do cliente remoto. 
 
-Para fazer isso, você deve permitir que as contas de trabalho do SQL que são usadas pelo Launchpad façam logon na instância. Para obter mais informações, consulte [adicionar SQLRUserGroup como um usuário de banco de dados](../security/create-a-login-for-sqlrusergroup.md).
+Para fazer isso, você deve permitir que as contas de trabalho do SQL que são usadas pelo Launchpad façam logon na instância. Para obter mais informações, consulte [Adicionar SQLRUserGroup como um usuário de banco de dados](../security/create-a-login-for-sqlrusergroup.md).
 
 <a name="network"></a>
 
@@ -55,4 +55,4 @@ Para fazer isso, você deve permitir que as contas de trabalho do SQL que são u
   
 + Habilitar TCP/IP
 
-  TCP/IP é necessário para conexões de loopback. Se você receber o erro "DBNETLIB; SQL Server não existe ou acesso negado", habilitar TCP/IP na máquina virtual que oferece suporte a instância.
+  O TCP/IP é necessário para conexões de loopback. Se você receber o erro "DBNETLIB; SQL Server não existe ou acesso negado ", habilite o TCP/IP na máquina virtual que dá suporte à instância.

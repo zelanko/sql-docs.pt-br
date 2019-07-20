@@ -1,7 +1,7 @@
 ---
 title: Função SQLCopyDesc | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLCopyDesc
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLCopyDesc
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bacf438180dd6fe2823660e8275e48a2316e9efa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8aec6dc776f5fdd84932be089e9503f0083a49c2
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121436"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345483"
 ---
 # <a name="sqlcopydesc-function"></a>Função SQLCopyDesc
-**Conformidade com**  
- Versão introduzida: Conformidade com padrões 3.0 ODBC: ISO 92  
+**Conformidade**  
+ Versão introduzida: Conformidade com os padrões do ODBC 3,0: ISO 92  
   
  **Resumo**  
- **SQLCopyDesc** copia informações de descritor de identificador de um descritor para outro.  
+ **SQLCopyDesc** copia informações de descritor de um identificador de descritor para outro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,66 +45,66 @@ SQLRETURN SQLCopyDesc(
   
 ## <a name="arguments"></a>Argumentos  
  *SourceDescHandle*  
- [Entrada] Identificador do descritor de origem.  
+ Entrada Identificador do descritor de origem.  
   
  *TargetDescHandle*  
- [Entrada] Identificador do descritor de destino. O *TargetDescHandle* argumento pode ser um identificador para um descritor de aplicativo ou um IPD. *TargetDescHandle* não pode ser definido como um identificador para um IRD, ou **SQLCopyDesc** retornará HY016 SQLSTATE (não é possível modificar um descritor de linha de implementação).  
+ Entrada Identificador do descritor de destino. O argumento *TargetDescHandle* pode ser um identificador para um descritor de aplicativo ou um IPD. *TargetDescHandle* não pode ser definido como um identificador para um IRD, ou **SQLCOPYDESC** retornará SQLSTATE HY016 (não é possível modificar um descritor de linha de implementação).  
   
 ## <a name="returns"></a>Retorna  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Quando **SQLCopyDesc** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* de SQL _ HANDLE_DESC e uma *manipular* dos *TargetDescHandle*. Se um inválido *SourceDescHandle* foi passado na chamada, SQL_INVALID_HANDLE serão retornadas, mas nenhum SQLSTATE será retornado. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLCopyDesc** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
+ Quando **SQLCopyDesc** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_DESC e um *identificador* de *TargetDescHandle*. Se um *SourceDescHandle* inválido foi passado na chamada, SQL_INVALID_HANDLE será retornado, mas nenhum SQLSTATE será retornado. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLCopyDesc** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
- Quando um erro é retornado, a chamada para **SQLCopyDesc** imediatamente será anulada e o conteúdo dos campos na *TargetDescHandle* descritor são indefinidos.  
+ Quando um erro é retornado, a chamada para **SQLCopyDesc** é anulada imediatamente e o conteúdo dos campos no descritor *TargetDescHandle* são indefinidos.  
   
- Porque **SQLCopyDesc** podem ser implementadas por meio da chamada **SQLGetDescField** e **SQLSetDescField**, **SQLCopyDesc** podem retornar SQLSTATEs retornados por **SQLGetDescField** ou **SQLSetDescField**.  
+ Como **SQLCopyDesc** pode ser implementado chamando **SQLGetDescField** e **SQLSetDescField**, **SQLCopyDesc** pode retornar sqlstates retornado por **SQLGetDescField** ou **SQLSetDescField**.  
   
 |SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
-|01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
-|08S01|Falha de link de comunicação|Falha do link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado antes do processamento da função foi concluída.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não houve nenhum SQLSTATE específico e para o qual não foi definida nenhuma SQLSTATE específicos de implementação. A mensagem de erro retornada por **SQLGetDiagRec** na  *\*MessageText* buffer descreve o erro e sua causa.|  
-|HY001|Erro de alocação de memória|O driver não pôde alocar a memória necessária para dar suporte à execução ou a conclusão da função.|  
-|HY007|Instrução associada não está preparada.|*SourceDescHandle* foi associado um IRD, e o identificador de instrução associado não estava no estado preparado ou executado.|  
-|HY010|Erro de sequência de função|(DM) o descritor de manipular *SourceDescHandle* ou *TargetDescHandle* foi associada com um *StatementHandle* para o qual uma função de execução assíncrona (não Essa) foi chamado e ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) o descritor de manipular *SourceDescHandle* ou *TargetDescHandle* foi associada com um *StatementHandle* para o qual **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** foi chamado e retornou SQL_NEED_DATA. Essa função foi chamada antes de dados foi enviados para todos os parâmetros de dados em execução ou colunas.<br /><br /> (DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado a *SourceDescHandle* ou *TargetDescHandle*. Essa função assíncrona ainda estava em execução quando o **SQLCopyDesc** função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResults** foi chamado para uma das alças de instrução associadas com o *SourceDescHandle* ou *TargetDescHandle* e retornado SQL_PARAM_DATA_AVAILABLE. Essa função foi chamada antes de dados foram recuperados para todos os parâmetros transmitidos.|  
-|HY013|Erro de gerenciamento de memória|A chamada de função não pôde ser processada porque os objetos de memória subjacente não pôde ser acessados, possivelmente devido a condições de memória insuficiente.|  
-|HY016|Não é possível modificar um descritor de linha de implementação|*TargetDescHandle* foi associado um IRD.|  
-|HY021|Informações do descritor inconsistentes|As informações de descritor verificadas durante uma verificação de consistência não eram consistentes. Para obter mais informações, consulte "Verificações de consistência" na **SQLSetDescField**.|  
-|HY092|Identificador de atributo/opção inválido|A chamada para **SQLCopyDesc** solicitado uma chamada para **SQLSetDescField**, mas  *\*ValuePtr* não era válido para o *FieldIdentifier* argumento *TargetDescHandle*.|  
-|HY117|Conexão está suspenso devido ao estado de transação desconhecida. Somente se desconectar e funções de somente leitura são permitidas.|(DM) para obter mais informações sobre o estado suspenso, consulte [função SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Tempo limite da Conexão expirado|O período de tempo limite de conexão expirado antes que a fonte de dados respondeu à solicitação. O período de tempo limite de conexão é definido por meio **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Driver não oferece suporte a essa função|O driver em (DM) associado a *SourceDescHandle* ou *TargetDescHandle* não suporta a função.|  
+|01000|Aviso geral|Mensagem informativa específica do driver. (A função retorna SQL_SUCCESS_WITH_INFO.)|  
+|08S01|Falha no link de comunicação|O link de comunicação entre o driver e a fonte de dados ao qual o driver foi conectado falhou antes da função concluir o processamento.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no  *\*buffer MessageText* descreve o erro e sua causa.|  
+|HY001|Erro de alocação de memória|O driver não pôde alocar a memória necessária para dar suporte à execução ou à conclusão da função.|  
+|HY007|A instrução associada não está preparada|*SourceDescHandle* foi associado a um IRD, e o identificador de instrução associado não estava no estado preparado ou executado.|  
+|HY010|Erro de sequência de função|(DM) o identificador do descritor em *SourceDescHandle* ou *TargetDescHandle* foi associado a um *StatementHandle* para o qual uma função de execução assíncrona (não esta) foi chamada e ainda estava em execução quando essa função foi denomina.<br /><br /> (DM) o identificador do descritor em *SourceDescHandle* ou *TargetDescHandle* foi associado a um *StatementHandle* para o qual **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** foi chamado e retornou SQL_NEED_DATA. Esta função foi chamada antes de os dados serem enviados para todos os parâmetros de dados em execução ou colunas.<br /><br /> (DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado ao *SourceDescHandle* ou *TargetDescHandle*. Esta função assíncrona ainda estava em execução quando a função **SQLCopyDesc** foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** foi chamado para um dos identificadores de instrução associados ao *SOURCEDESCHANDLE* ou ao *TargetDescHandle* e retornou SQL_PARAM_DATA_AVAILABLE. Esta função foi chamada antes de os dados serem recuperados para todos os parâmetros transmitidos.|  
+|HY013|Erro de gerenciamento de memória|A chamada de função não pôde ser processada porque os objetos de memória subjacentes não puderam ser acessados, possivelmente devido a condições de memória insuficiente.|  
+|HY016|Não é possível modificar um descritor de linha de implementação|*TargetDescHandle* foi associado a um IRD.|  
+|HY021|Informações de descritor inconsistentes|As informações de descritor verificadas durante uma verificação de consistência não estavam consistentes. Para obter mais informações, consulte "verificações de consistência" em **SQLSetDescField**.|  
+|HY092|Identificador de atributo/opção inválido|A chamada para **SQLCopyDesc** solicitou uma chamada para **SQLSetDescField**, mas  *\*ValuePtr* não era válida para o argumento *FieldIdentifier* em *TargetDescHandle*.|  
+|HY117|A conexão foi suspensa devido a um estado de transação desconhecido. Somente funções de desconexão e somente leitura são permitidas.|(DM) para obter mais informações sobre o estado suspenso, consulte [função SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Tempo limite de conexão expirado|O período de tempo limite de conexão expirou antes que a fonte de dados respondeu à solicitação. O período de tempo limite de conexão é definido por meio de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|O driver não oferece suporte a essa função|(DM) o driver associado ao *SourceDescHandle* ou *TargetDescHandle* não oferece suporte à função.|  
   
 ## <a name="comments"></a>Comentários  
- Uma chamada para **SQLCopyDesc** cópias lidar com os campos do descritor de origem para o identificador do descritor de destino. Campos podem ser copiados apenas a um descritor de aplicativo ou um IPD, mas não a um IRD. Campos podem ser copiados de um aplicativo ou um descritor de implementação.  
+ Uma chamada para **SQLCopyDesc** copia os campos do identificador do descritor de origem para o identificador do descritor de destino. Os campos podem ser copiados somente para um descritor de aplicativo ou um IPD, mas não para um IRD. Os campos podem ser copiados de um aplicativo ou de um descritor de implementação.  
   
- Campos podem ser copiados de um IRD somente se o identificador de instrução estiver no estado preparado ou executado. Caso contrário, a função retornará SQLSTATE HY007 (a instrução associada não está preparada).  
+ Os campos podem ser copiados de um IRD somente se o identificador da instrução estiver no estado preparado ou executado; caso contrário, a função retornará SQLSTATE HY007 (a instrução associada não será preparada).  
   
- Campos podem ser copiados de um IPD se uma instrução preparada. Se uma instrução SQL com parâmetros dinâmicos foi preparada e a população automática do IPD é compatível e habilitada, o IPD é preenchida pelo driver. Quando **SQLCopyDesc** for chamado com o IPD como o *SourceDescHandle*, os campos preenchidos são copiados. Se o IPD não é populada pelo driver, o conteúdo dos campos originalmente no IPD é copiado.  
+ Os campos podem ser copiados de um IPD se uma instrução tiver sido preparada ou não. Se uma instrução SQL com parâmetros dinâmicos tiver sido preparada e a população automática do IPD tiver suporte e estiver habilitada, o IPD será preenchido pelo driver. Quando **SQLCopyDesc** é chamado com o IPD como *SourceDescHandle*, os campos preenchidos são copiados. Se o IPD não for preenchido pelo driver, o conteúdo dos campos originalmente no IPD será copiado.  
   
- Todos os campos do descritor, exceto SQL_DESC_ALLOC_TYPE (que especifica se o identificador do descritor foi alocado de automaticamente ou explicitamente), são copiados, se o campo é definido para o descritor de destino. Campos copiados substituem os campos existentes.  
+ Todos os campos do descritor, exceto SQL_DESC_ALLOC_TYPE (que especifica se o identificador do descritor foi alocado automaticamente ou explicitamente), são copiados, se o campo está ou não definido para o descritor de destino. Os campos copiados substituem os campos existentes.  
   
- O driver copia todos os campos de descritor se a *SourceDescHandle* e *TargetDescHandle* argumentos estão associados com o mesmo driver, mesmo se os drivers estiverem em duas conexões diferentes ou ambientes. Se o *SourceDescHandle* e *TargetDescHandle* argumentos estão associados a drivers diferentes, o Gerenciador de Driver copia os campos definidos pelo ODBC, mas não copia campos definidos pelo driver ou campos que não são definidas pelo ODBC para o tipo de descritor.  
+ O driver copiará todos os campos de descritor se os argumentos *SourceDescHandle* e *TargetDescHandle* estiverem associados ao mesmo Driver, mesmo que os drivers estejam em duas conexões ou ambientes diferentes. Se os argumentos *SourceDescHandle* e *TargetDescHandle* estiverem associados a drivers diferentes, o Gerenciador de driver copiará campos definidos pelo ODBC, mas não copiará campos ou campos definidos pelo driver que não são definidos pelo ODBC para o tipo de descritor.  
   
  A chamada para **SQLCopyDesc** será anulada imediatamente se ocorrer um erro.  
   
- Quando o campo SQL_DESC_DATA_PTR é copiado, uma verificação de consistência é executada no descritor de destino. Se a verificação de consistência falhar, o SQLSTATE HY021 (informações do descritor inconsistentes) serão retornadas e a chamada para **SQLCopyDesc** imediatamente será anulada. Para obter mais informações sobre as verificações de consistência, consulte "Verificações de consistência" na [função SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md).  
+ Quando o campo SQL_DESC_DATA_PTR é copiado, uma verificação de consistência é executada no descritor de destino. Se a verificação de consistência falhar, SQLSTATE HY021 (informações de descritor inconsistentes) será retornado e a chamada para **SQLCopyDesc** será anulada imediatamente. Para obter mais informações sobre verificações de consistência, consulte "verificações de consistência" na [função SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md).  
   
- Identificadores de descritor podem ser copiados em conexões, mesmo se as conexões são em ambientes diferentes. Se o Gerenciador de Driver detecta que a origem e o descritor de destino identificadores não pertencem a mesma conexão e as duas conexões pertencem para separar os drivers, ele implementa **SQLCopyDesc** pela execução de um campo por campo Copiar usando **SQLGetDescField** e **SQLSetDescField**.  
+ Identificadores de descritor podem ser copiados entre conexões, mesmo se as conexões estiverem em ambientes diferentes. Se o Gerenciador de driver detectar que os identificadores de descritor de origem e destino não pertencem à mesma conexão e as duas conexões pertencem a drivers separados, ele implementa o **SQLCopyDesc** executando uma cópia Field-by-Field usando  **SQLGetDescField** e **SQLSetDescField**.  
   
- Quando **SQLCopyDesc** for chamado com um *SourceDescHandle* em um driver e um *TargetDescHandle* no outro driver, a fila de erros do  *SourceDescHandle* está desmarcada. Isso ocorre porque **SQLCopyDesc** nesse caso, é implementado por chamadas para **SQLGetDescField** e **SQLSetDescField**.  
+ Quando **SQLCopyDesc** é chamado com um *SourceDescHandle* em um driver e um *TargetDescHandle* em outro driver, a fila de erros do *SourceDescHandle* é apagada. Isso ocorre porque **SQLCopyDesc** nesse caso é implementado por chamadas para **SQLGetDescField** e **SQLSetDescField**.  
   
 > [!NOTE]  
->  Um aplicativo pode ser capaz de associar um indicador de descritor alocado explicitamente com um *StatementHandle*, em vez de chamar **SQLCopyDesc** para copiar os campos de um descritor para outro. Um descritor de explicitamente alocado pode ser associado a outro *StatementHandle* no mesmo *ConnectionHandle* definindo-se a instrução SQL_ATTR_APP_ROW_DESC ou SQL_ATTR_APP_PARAM_DESC o atributo para o identificador do descritor alocado explicitamente. Quando isso for feito, **SQLCopyDesc** não precisa ser chamado para copiar valores de campo do descritor de um descritor para outro. Um identificador do descritor não pode ser associado com um *StatementHandle* em outro *ConnectionHandle*, no entanto; para usar os mesmos valores de campo de descritor em *StatementHandles*em diferentes *ConnectionHandles*, **SQLCopyDesc** deve ser chamado.  
+>  Um aplicativo pode ser capaz de associar um identificador de descritor explicitamente alocado a um *StatementHandle*, em vez de chamar **SQLCopyDesc** para copiar campos de um descritor para outro. Um descritor explicitamente alocado pode ser associado a outro *StatementHandle* no mesmo *ConnectionHandle* , definindo o atributo de instrução SQL_ATTR_APP_ROW_DESC ou SQL_ATTR_APP_PARAM_DESC como o identificador de explicitamente descritor alocado. Quando isso é feito, **SQLCopyDesc** não precisa ser chamado para copiar valores de campo de descritor de um descritor para outro. Um identificador de descritor não pode ser associado a um *StatementHandle* em outro *ConnectionHandle*; no entanto; para usar os mesmos valores de campo de descritor em *StatementHandles* em *ConnectionHandles*diferentes, **SQLCopyDesc** deve ser chamado.  
   
- Para obter uma descrição dos campos em um cabeçalho do descritor ou registro, consulte [função SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Para obter mais informações sobre descritores, consulte [descritores](../../../odbc/reference/develop-app/descriptors.md).  
+ Para obter uma descrição dos campos em um cabeçalho ou registro de descritor, consulte a [função SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Para obter mais informações sobre descritores, consulte [descritores](../../../odbc/reference/develop-app/descriptors.md).  
   
 ## <a name="copying-rows-between-tables"></a>Copiando linhas entre tabelas  
- Um aplicativo pode copiar dados de uma tabela para outra sem copiar os dados no nível do aplicativo. Para fazer isso, o aplicativo associa os mesmos buffers de dados e as informações de descritor para uma instrução que busca os dados e a instrução que insere os dados em uma cópia. Isso pode ser feito por meio do compartilhamento de um descritor de aplicativo (associação de um descritor alocado explicitamente como a descartar para uma instrução e APD em outra) ou usando **SQLCopyDesc** para copiar as associações entre a descartar e APD das duas instruções. Se as instruções são em conexões diferentes, **SQLCopyDesc** deve ser usado. Além disso, **SQLCopyDesc** deve ser chamado para copiar as associações entre o IRD e IPD das duas instruções. Ao copiar entre instruções sobre a mesma conexão, o tipo de informação SQL_ACTIVE_STATEMENTS retornado pelo driver para uma chamada para **SQLGetInfo** deve ser maior que 1 para essa operação seja bem-sucedida. (Isso não é o caso ao copiar entre conexões.)  
+ Um aplicativo pode copiar dados de uma tabela para outra sem copiar os dados no nível do aplicativo. Para fazer isso, o aplicativo associa os mesmos buffers de dados e informações de descritor a uma instrução que busca os dados e a instrução que insere os dados em uma cópia. Isso pode ser feito compartilhando um descritor de aplicativo (associando um descritor explicitamente alocado como ARD para uma instrução e o APD em outro) ou usando **SQLCopyDesc** para copiar as associações entre ARD e APD dos dois instruções. Se as instruções estiverem em conexões diferentes, **SQLCopyDesc** deverá ser usado. Além disso, **SQLCopyDesc** precisa ser chamado para copiar as associações entre o IRD e o IPD das duas instruções. Ao copiar entre instruções na mesma conexão, o tipo de informação SQL_ACTIVE_STATEMENTS retornado pelo driver para uma chamada para **SQLGetInfo** deve ser maior que 1 para que essa operação seja realizada com sucesso. (Esse não é o caso ao copiar entre conexões.)  
   
 ### <a name="code-example"></a>Exemplo de código  
- No exemplo a seguir, as operações de descritor são usadas para copiar os campos da tabela PartsSource na tabela PartsCopy. O conteúdo da tabela PartsSource é buscado em buffers de conjunto de linhas no *hstmt0*. Esses valores são usados como parâmetros de uma instrução INSERT em *hstmt1* para preencher as colunas da tabela PartsCopy. Para fazer isso, os campos do IRD dos *hstmt0* são copiados para os campos do IPD do *hstmt1*e os campos de descartar dos *hstmt0* são copiados para os campos de APD de *hstmt1*. Use **SQLSetDescField** para definir o atributo SQL_DESC_PARAMETER_TYPE do IPD para SQL_PARAM_INPUT quando você copia campos IRD de uma instrução com parâmetros de saída para os campos IPD que precisam ser parâmetros de entrada.  
+ No exemplo a seguir, as operações de descritor são usadas para copiar os campos da tabela PartName na tabela PartsCopy. O conteúdo da tabela perparts é buscado em buffers de conjunto de linhas no *hstmt0*. Esses valores são usados como parâmetros de uma instrução INSERT em *hstmt1* para popular as colunas da tabela PartsCopy. Para fazer isso, os campos de IRD de *hstmt0* são copiados para os campos do IPD de *hstmt1*, e os campos do ARD de *hstmt0* são copiados para os campos do APD de *hstmt1*. Use **SQLSetDescField** para definir o atributo SQL_DESC_PARAMETER_TYPE de IPD como SQL_PARAM_INPUT ao copiar campos IRD de uma instrução com parâmetros de saída para os campos de IPD que precisam ser parâmetros de entrada.  
   
 ```cpp  
 #define ROWS 100  
@@ -191,7 +192,7 @@ while (SQL_SUCCEEDED(rc)) {
 |Para obter informações sobre|Consulte|  
 |---------------------------|---------|  
 |Obtendo vários campos de descritor|[Função SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
-|Definir um campo de descritor único|[Função SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
+|Configurando um único campo de descritor|[Função SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
 |Configurando vários campos de descritor|[Função SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
 ## <a name="see-also"></a>Consulte também  

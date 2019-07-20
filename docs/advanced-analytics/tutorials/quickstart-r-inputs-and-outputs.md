@@ -1,33 +1,33 @@
 ---
-title: Guia de início rápido para trabalhar com entradas e saídas em R - aprendizagem de máquina do SQL Server
-description: Neste início rápido para o script de R no SQL Server, saiba como estruturar as entradas e saídas para o procedimento armazenado do sistema de sp_execute_external_script.
+title: Início rápido para trabalhar com entradas e saídas em R
+description: Neste guia de início rápido para o script R no SQL Server, saiba como estruturar entradas e saídas para o procedimento armazenado do sistema sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1672cdeb59dfe35e313c999549e46f3fd76b688e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ccdf5206f2564ead2ca66f40143aee1b4ab1fad
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962009"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344617"
 ---
-# <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>Início Rápido: Lidar com entradas e saídas usando o R no SQL Server
+# <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>Início Rápido: Manipular entradas e saídas usando R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Neste início rápido mostra como lidar com entradas e saídas ao usar R em serviços do SQL Server Machine Learning ou R Services.
+Este guia de início rápido mostra como lidar com entradas e saídas ao usar o R em SQL Server Serviços de Machine Learning ou R Services.
 
-Quando você deseja executar o código R no SQL Server, você deve encapsular o script R em um procedimento armazenado. Você pode escrever uma ou passar o script R à [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Esse sistema de procedimento armazenado é usado para iniciar o tempo de execução de R no contexto do SQL Server, que transmite dados para R, gerencia as sessões de usuário de R com segurança e retorna todos os resultados ao cliente.
+Quando você quiser executar o código R no SQL Server, deverá encapsular o script R em um procedimento armazenado. Você pode escrever um ou passar o script R para [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Esse procedimento armazenado do sistema é usado para iniciar o tempo de execução do R no contexto de SQL Server, que passa dados para o R, gerencia as sessões de usuário do R com segurança e retorna todos os resultados para o cliente.
 
-Por padrão, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) aceita um único conjunto de dados entrado, que normalmente você fornece na forma de uma consulta SQL válida. Outros tipos de entrada podem ser passados como variáveis SQL.
+Por padrão, o [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) aceita um único conjunto de dados de entrada, que normalmente você fornece na forma de uma consulta SQL válida. Outros tipos de entrada podem ser passados como variáveis SQL.
 
-O procedimento armazenado retorna um único quadro de dados de R como saída, mas você também pode gerar modelos como variáveis e escalares. Por exemplo, você pode gerar um modelo treinado como uma variável binária e passá-lo para uma instrução T-SQL INSERT, para gravar esse modelo em uma tabela. Você também pode gerar plotagens (em formato binário) ou escalares (valores individuais, como a data e hora, o tempo decorrido para treinar o modelo e assim por diante).
+O procedimento armazenado retorna um único quadro de dados do R como saída, mas você também pode gerar escalares e modelos como variáveis. Por exemplo, você pode gerar um modelo treinado como uma variável binária e passá-lo para uma instrução T-SQL INSERT, para gravar esse modelo em uma tabela. Você também pode gerar plotagens (em formato binário) ou escalares (valores individuais, como a data e hora, o tempo decorrido para treinar o modelo e assim por diante).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Um início rápido anterior, [R Verifique se existe no SQL Server](quickstart-r-verify.md), fornece informações e links para configurar o ambiente de R necessários para este início rápido.
+Um guia de início rápido anterior, [verificar se o R existe no SQL Server](quickstart-r-verify.md), fornece informações e links para configurar o ambiente de R necessário para este guia de início rápido.
 
 ## <a name="create-the-source-data"></a>Criar os dados de origem
 
@@ -53,11 +53,11 @@ SELECT * FROM RTestData
 
 ## <a name="inputs-and-outputs"></a>Entradas e Saídas
 
-Vamos dar uma olhada no padrão variáveis de entrada e saídas de sp_execute_external_script: `InputDataSet` e `OutputDataSet`.
+Vejamos as variáveis de entrada e saída padrão de sp_execute_external_script: `InputDataSet` e. `OutputDataSet`
 
-1. Você pode obter os dados da tabela como entrada para seu script R. Execute a instrução a seguir. Obtém os dados da tabela, faz uma viagem de ida e por meio de execução R e retornar os valores com o nome da coluna *NewColName*.
+1. Você pode obter os dados da tabela como entrada para o script R. Execute a instrução abaixo. Ele obtém os dados da tabela, faz uma viagem de ida e volta pelo tempo de execução de R e retorna os valores com o nome de coluna *NewColName*.
 
-    Os dados retornados pela consulta são passados para o tempo de execução de R, que retorna os dados ao banco de dados SQL como um quadro de dados. A cláusula WITH RESULT SETS define o esquema da tabela de dados retornados para o banco de dados SQL.
+    Os dados retornados pela consulta são passados para o tempo de execução de R, que retorna os dados para o banco de dados SQL como um quadro de dado. A cláusula com conjuntos de resultados define o esquema da tabela de dados retornada para o banco de dado SQL.
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -71,9 +71,9 @@ Vamos dar uma olhada no padrão variáveis de entrada e saídas de sp_execute_ex
 
     ![Saída do script R que retorna dados de uma tabela](./media/r-output-rtestdata.png)
 
-2. Vamos alterar o nome das variáveis de entrada ou saídas. O script acima usado o padrão de entrada e saída de nomes de variáveis _InputDataSet_ e _OutputDataSet_. Para definir os dados de entrada associados _InputDatSet_, você usa o *@input_data_1* variável.
+2. Vamos alterar o nome das variáveis de entrada ou saída. O script acima usou os nomes de variáveis de entrada e saída padrão, _InputDataSet_ e _OutputDataSet_. Para definir os dados de entrada associados ao _InputDatSet_, use a *@input_data_1* variável.
 
-    Nesse script, os nomes das variáveis de entrada e saída para o procedimento armazenado foi alterados para *SQL_out* e *SQL_in*:
+    Nesse script, os nomes das variáveis de saída e de entrada para o procedimento armazenado foram alterados para *SQL_out* e *SQL_in*:
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -85,13 +85,13 @@ Vamos dar uma olhada no padrão variáveis de entrada e saídas de sp_execute_ex
       WITH RESULT SETS (([NewColName] INT NOT NULL));
     ```
 
-    Observe que o R diferencia maiusculas de minúsculas, portanto, o caso das variáveis de entrada e saídas no `@input_data_1_name` e `@output_data_1_name` precisa coincidir com aqueles no código R em `@script`. 
+    Observe que o R diferencia maiúsculas de minúsculas, portanto, o caso das variáveis de `@input_data_1_name` entrada `@output_data_1_name` e saída no e precisa corresponder àquelas no código `@script`R no. 
 
     Apenas um conjunto de dados de entrada pode ser passado como um parâmetro e é possível retornar apenas um conjunto de dados. No entanto, você pode chamar outros conjuntos de dados no código do R e retornar saídas de outros tipos, além do conjunto de dados. Você também pode adicionar a palavra-chave OUTPUT a qualquer parâmetro para que ele seja retornado com os resultados. 
 
-    O `WITH RESULT SETS` instrução define o esquema para os dados que são usados no SQL Server. Você precisa fornecer tipos de dados compatíveis do SQL para cada coluna retornada do R. Você pode usar a definição de esquema para fornecer novos nomes de coluna muito, pois você não precisará usar os nomes de coluna do quadro de dados de R.
+    A `WITH RESULT SETS` instrução define o esquema para os dados que são usados em SQL Server. Você precisa fornecer tipos de dados compatíveis com SQL para cada coluna retornada do R. Você pode usar a definição de esquema para fornecer novos nomes de coluna também, pois não é necessário usar os nomes de coluna do quadro de dados do R.
 
-3. Você também pode gerar valores usando o script de R e deixar a cadeia de caracteres de consulta de entrada em _@input_data_1_ em branco.
+3. Você também pode gerar valores usando o script R e deixar a cadeia de caracteres de _@input_data_1_ consulta de entrada em branco.
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -104,11 +104,11 @@ Vamos dar uma olhada no padrão variáveis de entrada e saídas de sp_execute_ex
 
     **Resultados**
 
-    ![Os resultados da consulta usando @script como entrada](./media/r-data-generated-output.png)
+    ![Resultados da consulta @script usando como entrada](./media/r-data-generated-output.png)
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Examine alguns dos problemas que podem ocorrer ao passar dados entre R e SQL Server, como conversões implícitas e diferenças de dados tabulares entre R e SQL.
+Examine alguns dos problemas que você pode encontrar ao passar dados entre R e SQL Server, como conversões implícitas e diferenças em dados tabulares entre R e SQL.
 
 > [!div class="nextstepaction"]
-> [Início Rápido: Lidar com tipos de dados e objetos](quickstart-r-data-types-and-objects.md)
+> [Início Rápido: Manipular tipos de dados e objetos](quickstart-r-data-types-and-objects.md)

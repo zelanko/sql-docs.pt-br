@@ -1,29 +1,29 @@
 ---
-title: Guia de início rápido para prever de modelo usando R – Machine Learning do SQL Server
-description: Neste início rápido, saiba mais sobre a pontuação usando um modelo predefinido em dados de R e SQL Server.
+title: Início rápido para prever do modelo usando o R
+description: Neste guia de início rápido, saiba mais sobre a pontuação usando um modelo predefinido em R e SQL Server dados.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 00fdcb0c8c9c535645268a0212e52eef6f7c88f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e81731683fb71b074ed754ab6ab4eaab40d08c20
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961990"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345400"
 ---
-# <a name="quickstart-predict-from-model-using-r-in-sql-server"></a>Início Rápido: Previsão de modelo usando R no SQL Server
+# <a name="quickstart-predict-from-model-using-r-in-sql-server"></a>Início Rápido: Prever do modelo usando R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Neste início rápido, use o modelo criado no início rápido anterior para pontuar previsões em relação aos dados atualizados. Para realizar _pontuação_ usando novos dados, obter um dos modelos treinados da tabela e, em seguida, chame um novo conjunto de dados no qual basear as previsões. A pontuação é um termo, às vezes, usado na ciência de dados para significar a geração de previsões, as probabilidades ou outros valores com base nos novos dados inseridos em um modelo treinado.
+Neste guia de início rápido, use o modelo que você criou no guia de início rápido anterior para pontuar previsões em relação aos dados atualizados. Para executar a _Pontuação_ usando novos dados, obtenha um dos modelos treinados da tabela e, em seguida, chame um novo conjunto de dados no qual basear previsões. A pontuação é um termo, às vezes, usado em ciência de dados para significar a geração de previsões, probabilidades ou outros valores com base em novos dados inseridos em um modelo treinado.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Neste início rápido é uma extensão da [criar um modelo preditivo](quickstart-r-create-predictive-model.md).
+Este guia de início rápido é uma extensão de [criar um modelo de previsão](quickstart-r-create-predictive-model.md).
 
-## <a name="create-the-table-of-new-data"></a>Criar a tabela de dados novos
+## <a name="create-the-table-of-new-data"></a>Criar a tabela de novos dados
 
 Primeiro, crie uma tabela com novos dados. 
 
@@ -49,11 +49,11 @@ VALUES (120, 2.800)
 GO
 ```
 
-## <a name="predict-manual-transmission"></a>Prever transmissão manual
+## <a name="predict-manual-transmission"></a>Prever a transmissão manual
 
-Agora, seu `dbo.GLM_models` tabela pode conter vários modelos de R, todos criados com diferentes parâmetros ou algoritmos ou treinados em diferentes subconjuntos de dados.
+Agora, sua `dbo.GLM_models` tabela pode conter vários modelos de R, todos criados usando parâmetros ou algoritmos diferentes ou treinados em diferentes subconjuntos de dados.
 
-Para obter previsões com base em um modelo específico, você deve escrever um script SQL que faz o seguinte:
+Para obter previsões com base em um modelo específico, você deve escrever um script SQL que faça o seguinte:
 
 1. Obtém o modelo desejado
 2. Obtém os novos dados de entrada
@@ -89,21 +89,21 @@ O script acima executa as seguintes etapas:
 
 + Aplicar a função `predict` com os argumentos apropriados para o modelo e fornecer os novos dados de entrada.
 
-+ No exemplo, o `str` função será adicionada durante a fase de teste para verificar o esquema dos dados que está sendo retornados de R. Você pode remover a instrução mais tarde.
++ No exemplo, a `str` função é adicionada durante a fase de teste para verificar o esquema de dados que está sendo retornado do R. Você pode remover a instrução mais tarde.
 
-+ Os nomes de coluna usados no script R não são necessariamente passados para a saída do procedimento armazenado. Aqui, usamos a cláusula WITH RESULTS para definir alguns novos nomes de coluna.
++ Os nomes de coluna usados no script R não são necessariamente passados para a saída do procedimento armazenado. Aqui, usamos a cláusula WITH RESULTs para definir alguns novos nomes de coluna.
 
 **Resultados**
 
 ![Conjunto de resultados para prever properbility de transmissão manual](./media/r-predict-am-resultset.png)
 
-Também é possível usar o [PREDICT no Transact-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) para gerar um valor previsto ou pontuação com base em um modelo armazenado.
+Também é possível usar a [previsão no Transact-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) para gerar um valor previsto ou uma pontuação com base em um modelo armazenado.
 
 ## <a name="next-steps"></a>Próximas etapas
 
 A integração de R com o SQL Server torna mais fácil implantar soluções de R em grande escala, aproveitando os melhores recursos de R e de bancos de dados relacionais, para manipulação de dados de alto desempenho e rápida análise de R. 
 
-Continue aprendendo sobre soluções que usam R com o SQL Server por meio de cenários de ponta a ponta criados pelas equipes de desenvolvimento Microsoft Data Science e R Services.
+Continue aprendendo sobre soluções usando o R com SQL Server por meio de cenários de ponta a ponta criados pelas equipes de desenvolvimento do Microsoft Data Science e do R Services.
 
 > [!div class="nextstepaction"]
 > [Tutoriais do SQL Server R](sql-server-r-tutorials.md)

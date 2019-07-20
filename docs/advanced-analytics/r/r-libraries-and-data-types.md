@@ -1,37 +1,37 @@
 ---
-title: Conversões - serviços do SQL Server Machine Learning de tipo de dados do R para SQL
-description: Examine os tipo de dados implícitas e explícitas converstions entre R e SQL Server em soluções de aprendizado de máquina e ciência de dados.
+title: Conversões de tipo de dados de R para SQL
+description: Examine o tipo de dados implícito e explícito converstions entre R e SQL Server em soluções de ciência de dados e de aprendizado de máquina.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 93a0e15d8fdca31971cd16d187ae88a180fb481f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 255342113a17b0fb2af58eb6bc173cb6c50aac6d
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962537"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344930"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Mapeamentos de tipo de dados entre R e SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Para soluções de R que são executados sobre o recurso de integração de R em serviços do SQL Server Machine Learning, examine a lista de tipos de dados sem suporte e as conversões de tipo de dados que podem ser executadas implicitamente quando dados são passados entre bibliotecas do R e SQL Server.
+Para soluções de R que são executadas no recurso de integração do R no SQL Server Serviços de Machine Learning, examine a lista de tipos de dados sem suporte e conversões de tipo de dados que podem ser executadas implicitamente quando os dados são passados entre bibliotecas de R e SQL Server.
 
-## <a name="base-r-version"></a>Versão de base R
+## <a name="base-r-version"></a>Versão base do R
 
-SQL Server 2016 R Services e os serviços do SQL Server 2017 Machine Learning com R, são alinhadas com as versões específicas do Microsoft R Open. Por exemplo, a versão mais recente, serviços do SQL Server 2017 Machine Learning, é criada no Microsoft R Open 3.3.3.
+SQL Server 2016 R Services e SQL Server 2017 Serviços de Machine Learning com o R, estão alinhadas a versões específicas do Microsoft R Open. Por exemplo, a versão mais recente, SQL Server 2017 Serviços de Machine Learning, foi criada no Microsoft R Open 3.3.3.
 
-Para exibir a versão de R associada a uma determinada instância do SQL Server, abra **RGui**. Para a instância padrão, o caminho seria da seguinte maneira: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
+Para exibir a versão do R associada a uma instância específica do SQL Server, abra **RGui**. Para a instância padrão, o caminho seria o seguinte:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 
-A ferramenta carrega base R e outras bibliotecas. Informações de versão do pacote são fornecidas em uma notificação para cada pacote que é carregado na inicialização de sessão. 
+A ferramenta carrega R base e outras bibliotecas. As informações de versão do pacote são fornecidas em uma notificação para cada pacote que é carregado na inicialização da sessão. 
 
-## <a name="r-and-sql-data-types"></a>R e tipos de dados SQL
+## <a name="r-and-sql-data-types"></a>Tipos de dados R e SQL
 
-Enquanto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a vários tipos de dados, R tem um número limitado de tipos de dados escalares (numérico, inteiro, complexos, lógicos, caracteres, data/hora e brutos). Como resultado, sempre que você usar dados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em scripts de R, dados podem ser convertidos implicitamente em um tipo de dados compatíveis. No entanto, muitas vezes uma conversão exata não pode ser executada automaticamente e será retornado um erro, como "Tipo de dados SQL sem tratamento".
+Enquanto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dá suporte a várias dúzias de tipos de dados, o R tem um número limitado de tipos de dados escalares (numérico, inteiro, complexo, lógico, caractere, data/hora e RAW). Como resultado, sempre que você usar dados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em scripts R, os dados podem ser convertidos implicitamente em um tipo de dados compatível. No entanto, geralmente uma conversão exata não pode ser executada automaticamente e um erro é retornado, como "tipo de dados SQL sem tratamento".
 
-Esta seção lista as conversões implícitas que são fornecidas e lista os tipos de dados sem suporte. Algumas diretrizes é fornecido para o mapeamento de tipos de dados entre R e SQL Server.
+Esta seção lista as conversões implícitas que são fornecidas e lista os tipos de dados sem suporte. Algumas diretrizes são fornecidas para o mapeamento de tipos de dados entre R e SQL Server.
 
 ## <a name="implicit-data-type-conversions-between-r-and-sql-server"></a>Conversões de tipo de dados implícitos entre R e SQL Server
 
@@ -65,7 +65,7 @@ A tabela a seguir mostra as alterações em tipos de dados e valores quando dado
 
 Das categorias de tipos de dados com suporte no [sistema de tipos do SQL Server](../../t-sql/data-types/data-types-transact-sql.md), os seguintes tipos provavelmente apresentam problemas quando passados para o código R:
 
-+ Tipos de dados listados na **outras** seção do artigo de sistema do tipo SQL: **cursor**, **timestamp**, **hierarchyid**,  **uniqueidentifier**, **sql_variant**, **xml**, **tabela**
++ Tipos de dados listados na **outra** seção do artigo do sistema do tipo SQL **: cursor**, **carimbo de data/hora**, **hierarchyid**, **uniqueidentifier**, **sql_variant**, **XML**, **tabela**
 + Todos os tipos espaciais
 + **image**
 
@@ -92,7 +92,7 @@ Para obter mais informações, consulte [SQL Server 2016: melhorias no tratament
 
 Em geral, sempre que você tiver alguma dúvida sobre como uma estrutura de dados ou um tipo de dados específico está sendo usado em R, use a função  `str()` para obter a estrutura interna e o tipo do objeto R. O resultado da função é impresso no console de R e também está disponível nos resultados da consulta, na guia **Mensagens** em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. 
 
-Ao recuperar dados de um banco de dados para uso no código R, você sempre deve eliminar colunas que não podem ser usadas em R, bem como as colunas que não são úteis para análise, como GUIDS (identificador exclusivo), os carimbos de hora e outras colunas usadas para auditoria ou de linhagem informações criadas por processos ETL. 
+Ao recuperar dados de um banco de dado para uso em código R, você sempre deve eliminar colunas que não podem ser usadas em R, bem como colunas que não são úteis para análise, como GUIDs (uniqueidentifier), carimbos de data/hora e outras colunas usadas para auditoria ou linhagem informações criadas por processos de ETL. 
 
 Observe que incluir colunas desnecessárias pode reduzir significativamente o desempenho do código R, especialmente se colunas de alta cardinalidade forem usadas como fatores. Portanto, é recomendável usar os procedimentos armazenados do sistema do SQL Server e modos de exibição de informações para obter os tipos de dados para uma determinada tabela com antecedência e eliminar ou converter as colunas incompatíveis. Para obter mais informações, consulte [Exibições do esquema de informações em Transact-SQL](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 
@@ -108,7 +108,7 @@ Se R não der suporte para um determinado tipo de dados [!INCLUDE[ssNoVersion](.
 
 O exemplo a seguir demonstra como os dados são transformados ao fazer a viagem de ida e volta entre SQL Server e R.
 
-A consulta obtém uma série de valores de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da tabela e usa o procedimento armazenado [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) para gerar os valores usando o tempo de execução de R.
+A consulta Obtém uma série de valores de uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela e usa o procedimento armazenado [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) para gerar os valores usando o tempo de execução de R.
 
 ```sql
 CREATE TABLE MyTable (    

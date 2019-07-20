@@ -1,5 +1,5 @@
 ---
-title: Documentação - serviços de aprendizado de máquina do SQL Server de aprendizado de máquina de R e Python
+title: Documentação de aprendizado de máquina R e Python
 description: R e Python no SQL Server, com a modelagem de ciência de dados interna e algoritmos de aprendizado de máquina para análise de dados corporativos em escala.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,23 +8,23 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 16bf39172144b17b3ecb03969244f31ac4715400
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8eb391ac4b64c93de255214d748c77f44dccb1b3
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962302"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344743"
 ---
 # <a name="sql-server-machine-learning-services"></a>Serviços de SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-## <a name="sql-server-machine-learning-services-r-and-python-documentation"></a>Documentação dos serviços (R e Python) de aprendizado de máquina do SQL Server
+## <a name="sql-server-machine-learning-services-r-and-python-documentation"></a>Documentação do SQL Server Serviços de Machine Learning (R e Python)
 
-Saiba como usar bibliotecas externas do R e Python e linguagens em dados relacionais residentes com nossos guias de início rápido, tutoriais e artigos de instruções. Bibliotecas de R e Python em [serviços de aprendizado de máquina do SQL Server](what-is-sql-server-machine-learning.md) incluem funções para realizar a análise de alto desempenho em escala, sem a necessidade, modelos de ciência de dados, algoritmos de aprendizado de máquina e distribuições de base transferência de dados pela rede.
+Saiba como usar bibliotecas externas do R e Python e linguagens em dados relacionais residentes com nossos guias de início rápido, tutoriais e artigos de instruções. As bibliotecas R e Python no [SQL Server serviços de Machine Learning](what-is-sql-server-machine-learning.md) incluem distribuições base, modelos de ciência de dados, algoritmos de aprendizado de máquina e funções para realizar análises de alto desempenho em escala, sem precisar transferir dados entre os rede.
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
 > [!NOTE]
-> Para a documentação do Java, consulte o [documentação de extensões de linguagem do SQL Server](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
+> Para obter a documentação sobre Java, consulte a [documentação de extensões de linguagem SQL Server](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 ::: moniker-end
 
 |   |   |
@@ -41,7 +41,7 @@ Saiba como usar bibliotecas externas do R e Python e linguagens em dados relacio
 
 ## <a name="step-by-step-tutorials"></a>Tutoriais passo a passo
 
-- [Como instalar os serviços de Machine Learning para o SQL Server](install/sql-machine-learning-services-windows-install.md)
+- [Como instalar Serviços de Machine Learning para SQL Server](install/sql-machine-learning-services-windows-install.md)
 
 - [Como executar o R do T-SQL e procedimentos armazenados](tutorials/sqldev-in-database-r-for-sql-developers.md)
 

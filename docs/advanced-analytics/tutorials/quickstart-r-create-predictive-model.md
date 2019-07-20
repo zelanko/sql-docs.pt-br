@@ -1,27 +1,27 @@
 ---
-title: Guia de início rápido para criar um modelo de previsão usando o R - aprendizagem de máquina do SQL Server
-description: Neste início rápido, saiba como criar um modelo em R usando dados do SQL Server para plotar previsões.
+title: Início rápido para criar um modelo de previsão usando o R
+description: Neste guia de início rápido, aprenda a criar um modelo em R usando dados de SQL Server para plotar previsões.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f1eaa39e5f22efbe7bea7a44ac2ce93a5e28205e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 39310d935ddefe463b81af495f63304822035818
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962035"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345479"
 ---
 # <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>Início Rápido: Criar um modelo de previsão usando R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Neste início rápido, você aprenderá a treinar um modelo usando R e, em seguida, salvar o modelo em uma tabela no SQL Server. O modelo é um simple modelo linear generalizado (GLM) que prevê a probabilidade de que um veículo ajustá-los com uma transmissão manual. Você usará o `mtcars` conjunto de dados incluído com o R.
+Neste guia de início rápido, você aprenderá a treinar um modelo usando o R e, em seguida, salvar o modelo em uma tabela em SQL Server. O modelo é um modelo linear mais simples (GLM) que prevê a probabilidade de que um veículo tenha sido ajustado com uma transmissão manual. Você usará o `mtcars` conjunto de conjuntos incluído com o R.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Um início rápido anterior, [R Verifique se existe no SQL Server](quickstart-r-verify.md), fornece informações e links para configurar o ambiente de R necessários para este início rápido.
+Um guia de início rápido anterior, [verificar se o R existe no SQL Server](quickstart-r-verify.md), fornece informações e links para configurar o ambiente de R necessário para este guia de início rápido.
 
 ## <a name="create-the-source-data"></a>Criar os dados de origem
 
@@ -43,7 +43,7 @@ CREATE TABLE dbo.MTCars(
 );
 ```
 
-Em seguida, insira os dados da compilação no conjunto de dados `mtcars`.
+Em seguida, insira os dados da compilação no DataSet `mtcars`.
 
 ```SQL
 INSERT INTO dbo.MTCars
@@ -54,15 +54,15 @@ EXEC sp_execute_external_script
         , @output_data_1_name = N'MTCars';
 ```
 
-+ Algumas pessoas gostam de usar tabelas temporárias, mas lembre-se de que alguns clientes do R desconectar sessões entre os lotes.
++ Algumas pessoas gostam de usar tabelas temporárias, mas lembre-se de que alguns clientes de R desconectam sessões entre os lotes.
 
 + Vários conjuntos de dados, pequenos e grandes, estão incluídos com o tempo de execução de R. Para obter uma lista de conjuntos de dados instalados com o R, digite `library(help="datasets")` em um prompt de comando de R.
 
 ## <a name="create-a-model"></a>Criar um modelo
 
-Os dados de velocidade do carro contêm duas colunas, ambas numéricas, potência (`hp`) e o peso (`wt`). A partir desses dados, você criará um modelo linear generalizado (GLM) que estima a probabilidade de que um veículo ajustá-los com uma transmissão manual.
+Os dados de velocidade do carro contêm duas colunas, Numeric, potência`hp`() e peso`wt`(). A partir desses dados, você criará um modelo linear generalizado (GLM) que estima a probabilidade de um veículo ter sido ajustado com uma transmissão manual.
 
-Para criar o modelo, você define a fórmula dentro de seu código R e passa os dados como um parâmetro de entrada.
+Para criar o modelo, você define a fórmula dentro do código R e passa os dados como um parâmetro de entrada.
 
 ```sql
 DROP PROCEDURE IF EXISTS generate_GLM;
@@ -82,12 +82,12 @@ END;
 GO
 ```
 
-+ O primeiro argumento para `glm` é o *fórmula* parâmetro, que define `am` como dependentes `hp + wt`.
++ O primeiro argumento para `glm` é o parâmetro de *fórmula* , que `am` `hp + wt`define como dependente.
 + Os dados de entrada são armazenados na variável `MTCarsData`, preenchido pela consulta SQL. Se você não atribuir um nome específico aos seus dados de entrada, o nome da variável padrão seria _InputDataSet_.
 
 ## <a name="create-a-table-for-the-model"></a>Criar uma tabela para o modelo
 
-Em seguida, armazene o modelo para que você possa treinar novamente ou usá-lo para previsão. A saída de um pacote de R que cria um modelo é geralmente um **objeto binário**. Portanto, a tabela onde armazenar o modelo deve fornecer uma coluna de **varbinary (max)** tipo.
+Em seguida, armazene o modelo para que você possa retreiná-lo ou usá-lo para previsão. A saída de um pacote de R que cria um modelo é geralmente um **objeto binário**. Portanto, a tabela na qual você armazena o modelo deve fornecer uma coluna de tipo **varbinary (max)** .
 
 ```sql
 CREATE TABLE GLM_models (
@@ -105,7 +105,7 @@ INSERT INTO GLM_models(model)
 EXEC generate_GLM;
 ```
 
-Observe que, se você executar esse código uma segunda vez, você receber esse erro:
+Observe que, se você executar esse código uma segunda vez, receberá esse erro:
 
 ```sql
 Violation of PRIMARY KEY constraint...Cannot insert duplicate key in object dbo.stopping_distance_models
@@ -121,7 +121,7 @@ WHERE model_name = 'default model'
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Agora que você tem um modelo, o guia de início rápido final, você aprenderá a gerar previsões com base nele e plotar os resultados.
+Agora que você tem um modelo, no guia de início rápido final, aprenderá a gerar previsões a partir dele e a plotar os resultados.
 
 > [!div class="nextstepaction"]
 > [Início Rápido: Prever e plotar com base no modelo](quickstart-r-predict-from-model.md)

@@ -1,71 +1,71 @@
 ---
-title: R script erros e solução de problemas - serviços do SQL Server Machine Learning
+title: Erros e solução de problemas de script R
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 49ac7419988df86d18f8e44edc8ef9fddacc7f7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 83029a9727a26c647d78c49501fde08f72d7694d
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962725"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68343395"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>Erros de script do R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo documenta várias gerrors. inittabem durante a execução de código R no SQL Server. A lista não é abrangente. Há muitos pacotes e erros podem variar entre as versões do mesmo pacote. É recomendável publicar erros de script na [Fórum do Machine Learning Server](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR), que oferece suporte para os componentes usados no R Services (no banco de dados), o Microsoft R Client e Microsoft R Server de aprendizado de máquina.
+Este artigo documenta vários scripts do gerrors ao executar o código R no SQL Server. A lista não é abrangente. Há muitos pacotes e os erros podem variar entre as versões do mesmo pacote. É recomendável postar erros de script no [Fórum de Machine Learning Server](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR), que dá suporte aos componentes de Machine Learning usados no R Services (no banco de dados), Microsoft R Client e Microsoft R Server.
 
-**Aplica-se a:** SQL Server 2016 R Services, serviços de aprendizado de máquina do SQL Server 2017
+**Aplica-se a:** SQL Server 2016 R Services, SQL Server 2017 Serviços de Machine Learning
 
 
-## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>Falha de script válida em T-SQL ou em procedimentos armazenados
+## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>O script válido falha no T-SQL ou em procedimentos armazenados
 
-Antes de encapsular seu código R em um procedimento armazenado, é recomendável executar o código R em um IDE externo ou em uma das ferramentas do R, como RTerm ou RGui. Usando esses métodos, você pode testar e depurar o código usando as mensagens de erro detalhadas que são retornadas pelo R.
+Antes de encapsular o código R em um procedimento armazenado, é uma boa ideia executar o código R em um IDE externo ou em uma das ferramentas de R, como RTerm ou RGui. Usando esses métodos, você pode testar e depurar o código usando as mensagens de erro detalhadas que são retornadas pelo R.
 
-No entanto, às vezes, códigos que funcionam perfeitamente em um IDE externo ou o utilitário podem falhar ao executar em um procedimento armazenado ou o contexto de computação em um SQL Server. Se isso acontecer, há uma variedade de problemas para procurar antes que você pode presumir que o pacote não funciona no SQL Server.
+No entanto, às vezes, o código que funciona perfeitamente em um IDE ou utilitário externo pode falhar ao ser executado em um procedimento armazenado ou em um contexto de computação SQL Server. Se isso acontecer, há uma variedade de problemas a serem procurados antes que você possa pressupor que o pacote não funciona em SQL Server.
 
-1. Verifique se o Launchpad estiver em execução.
+1. Verifique se o Launchpad está em execução.
 
-2. Examine as mensagens para ver se os dados de entrada ou dados de saída contém colunas com tipos de dados incompatíveis ou sem suporte. Por exemplo, consultas em um banco de dados SQL geralmente retornam GUIDs ou RowGUIDs, que não têm suporte. Para obter mais informações, consulte [tipos de dados e bibliotecas de R](r/r-libraries-and-data-types.md).
+2. Examine as mensagens para ver se os dados de entrada ou de saída contêm colunas com tipos de dados incompatíveis ou sem suporte. Por exemplo, consultas em um banco de dados SQL geralmente retornam GUIDs ou RowGuids, ambos sem suporte. Para obter mais informações, consulte [bibliotecas e tipos de dados do R](r/r-libraries-and-data-types.md).
 
-3. Examine as páginas de ajuda para funções R individuais determinar se todos os parâmetros têm suporte para o contexto de computação do SQL Server. Para obter ajuda de ScaleR, use os comandos de ajuda embutida R ou consulte [referência de pacote](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
+3. Examine as páginas de ajuda para funções individuais do R para determinar se todos os parâmetros têm suporte para o contexto de computação SQL Server. Para obter ajuda do scaler, use os comandos de ajuda de R embutidos ou consulte a [referência do pacote](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
 
-Se o tempo de execução de R está funcionando, mas o script retorna erros, recomendamos que você tente depurar o script em um ambiente de desenvolvimento dedicado do R, como as ferramentas do R para Visual Studio.
+Se o tempo de execução do R estiver funcionando, mas o script retornar erros, recomendamos que você tente depurar o script em um ambiente de desenvolvimento de R dedicado, como Ferramentas do R para Visual Studio.
 
-Também recomendamos que você analise e ligeiramente reescreva o script para corrigir quaisquer problemas com tipos de dados que podem surgir quando você move dados entre R e o mecanismo de banco de dados. Para obter mais informações, consulte [tipos de dados e bibliotecas de R](r/r-libraries-and-data-types.md).
+Também recomendamos que você revise e reescreva um pouco o script para corrigir quaisquer problemas com tipos de dados que possam surgir quando você mover dados entre o R e o mecanismo de banco de dados. Para obter mais informações, consulte [bibliotecas e tipos de dados do R](r/r-libraries-and-data-types.md).
 
-Além disso, você pode usar o pacote de sqlrutils para agrupar seu script R em um formato que seja mais facilmente consumido como um procedimento armazenado. Para obter mais informações, consulte:
-* [pacote de sqlrutils](r/ref-r-sqlrutils.md)
+Além disso, você pode usar o pacote sqlrutils para agrupar o script R em um formato que é mais facilmente consumido como um procedimento armazenado. Para obter mais informações, consulte:
+* [pacote sqlrutils](r/ref-r-sqlrutils.md)
 * [Criar um procedimento armazenado usando sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
-## <a name="script-returns-inconsistent-results"></a>Script retorna resultados inconsistentes
+## <a name="script-returns-inconsistent-results"></a>O script retorna resultados inconsistentes
 
-Scripts de R podem retornar valores diferentes em um contexto do SQL Server, por vários motivos:
+Os scripts do R podem retornar valores diferentes em um contexto de SQL Server, por vários motivos:
 
-- Conversão implícita de tipo é executado automaticamente em alguns tipos de dados, quando os dados são passados entre o SQL Server e R. Para obter mais informações, consulte [tipos de dados e bibliotecas de R](r/r-libraries-and-data-types.md).
+- A conversão implícita de tipo é executada automaticamente em alguns tipos de dados, quando os dados são passados entre SQL Server e R. Para obter mais informações, consulte [bibliotecas e tipos de dados do R](r/r-libraries-and-data-types.md).
 
-- Determine se o número de bits é um fator. Por exemplo, geralmente há diferenças nos resultados de operações matemáticas para bibliotecas de ponto flutuante 32 bits e 64 bits.
+- Determine se o bit de bits é um fator. Por exemplo, geralmente há diferenças nos resultados de operações matemáticas para bibliotecas de ponto flutuante de 32 bits e 64 bits.
 
-- Determine se NaNs foram produzidos em qualquer operação. Isso pode invalidar os resultados.
+- Determine se os NaNs foram produzidos em qualquer operação. Isso pode invalidar os resultados.
 
-- Pequenas diferenças podem ser aumentadas quando você pega um recíproco de um número próximo de zero.
+- Pequenas diferenças podem ser amplificadas quando você assume um recíproco de um número próximo de zero.
 
-- Erros de arredondamento acumulados podem causar coisas como valores que são menor que zero, em vez de zero.
+- Os erros de arredondamento acumulados podem causar coisas como valores menores que zero em vez de zero.
 
-## <a name="implied-authentication-for-remote-execution-via-odbc"></a>Autenticação implícita para execução remota por meio de ODBC
+## <a name="implied-authentication-for-remote-execution-via-odbc"></a>Autenticação implícita para execução remota via ODBC
 
-Se você se conectar à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] comandos de computador para executar o R usando o **RevoScaleR** funções, você poderá receber um erro ao usar chamadas ODBC que gravam dados no servidor. Esse erro ocorre somente quando você estiver usando a autenticação do Windows.
+Se você se conectar ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] computador para executar comandos do R usando as funções **RevoScaleR** , poderá receber um erro ao usar chamadas ODBC que gravam dados no servidor. Esse erro ocorre somente quando você está usando a autenticação do Windows.
 
-O motivo é que as contas de trabalho que são criadas para o R Services não tem permissão para se conectar ao servidor. Portanto, as chamadas ODBC não podem ser executadas em seu nome. O problema não ocorre com logons do SQL Server porque, com logons do SQL Server, as credenciais são passadas explicitamente do cliente R para a instância do SQL Server e, em seguida, para o ODBC. No entanto, também é menos segura do que usando a autenticação do Windows usar logons do SQL Server.
+O motivo é que as contas de trabalho criadas para o R Services não têm permissão para se conectar ao servidor. Portanto, as chamadas ODBC não podem ser executadas em seu nome. O problema não ocorre com logons do SQL porque, com logons do SQL, as credenciais são passadas explicitamente do cliente R para a instância de SQL Server e, em seguida, para o ODBC. No entanto, o uso de logons do SQL também é menos seguro do que usar a autenticação do Windows.
 
-Para habilitar suas credenciais do Windows a ser passado com segurança a partir de um script que tiver iniciado remotamente, SQL Server deve emular suas credenciais. Esse processo é denominado _autenticação implícita_. Para fazer isso funcionar, as contas de trabalho que executam scripts R ou Python no computador do SQL Server devem ter as permissões corretas.
+Para permitir que suas credenciais do Windows sejam passadas com segurança de um script que é iniciado remotamente, SQL Server deve emular suas credenciais. Esse processo é chamado de _autenticação implícita_. Para fazer isso funcionar, as contas de trabalho que executam scripts R ou Python no computador SQL Server devem ter as permissões corretas.
 
-1. Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] como um administrador na instância onde você deseja executar o código R.
+1. Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] como um administrador na instância em que você deseja executar o código R.
 
-2. Execute o script a seguir. Certifique-se de editar o nome de grupo do usuário, se você tiver alterado o padrão e os nomes de computador e da instância.
+2. Execute o script a seguir. Certifique-se de editar o nome do grupo de usuários, se você alterou o padrão e os nomes do computador e da instância.
 
     ```sql
     USE [master]
@@ -76,28 +76,28 @@ Para habilitar suas credenciais do Windows a ser passado com segurança a partir
     GO
     ```
 
-## <a name="avoid-clearing-the-workspace-while-youre-running-r-in-a-sql-compute-context"></a>Evitar a limpeza do espaço de trabalho durante a execução do R em um contexto de computação do SQL
+## <a name="avoid-clearing-the-workspace-while-youre-running-r-in-a-sql-compute-context"></a>Evite limpar o espaço de trabalho enquanto estiver executando o R em um contexto de computação do SQL
 
-Embora a limpar o espaço de trabalho é comum quando você trabalha no console do R, ele pode ter consequências não intencionais em um SQL contexto de computação.
+Embora a limpeza do espaço de trabalho seja comum quando você trabalha no console do R, ela pode ter consequências indesejadas em um contexto de computação do SQL.
 
-`revoScriptConnection` é um objeto no espaço de trabalho R que contém informações sobre uma sessão do R que é chamada a partir do SQL Server. No entanto, se seu código R inclui um comando para limpar o espaço de trabalho (como `rm(list=ls())`), todas as informações sobre a sessão e outros objetos no espaço de trabalho do R também serão limpos.
+`revoScriptConnection`é um objeto no espaço de trabalho do R que contém informações sobre uma sessão de R que é chamada de SQL Server. No entanto, se o código R incluir um comando para limpar o espaço de `rm(list=ls())`trabalho (como), todas as informações sobre a sessão e outros objetos no espaço de trabalho do R também serão apagadas.
 
-Como alternativa, evite a limpeza indiscriminada de variáveis e outros objetos durante a execução do R no SQL Server. Você pode excluir variáveis específicas usando o **remover** função:
+Como alternativa, evite a limpeza indiscriminado de variáveis e outros objetos enquanto você estiver executando o R no SQL Server. Você pode excluir variáveis específicas usando a função **remover** :
 
 ```R
 remove('name1', 'name2', ...)
 ```
 
-Se houver várias variáveis a serem excluídas, sugerimos que você salve os nomes das variáveis temporárias em uma lista e, em seguida, realizar coletas de lixo periódica na lista.
+Se houver várias variáveis a serem excluídas, sugerimos que você salve os nomes das variáveis temporárias em uma lista e, em seguida, execute as coletas de lixo periódicas na lista.
 
 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Problemas conhecidos e solução de problemas de serviços de aprendizado de máquina](machine-learning-troubleshooting-faq.md)
+[Solução de problemas Serviços de Machine Learning e questões conhecidas](machine-learning-troubleshooting-faq.md)
 
 [Coleta de dados para solução de problemas de aprendizado de máquina](data-collection-ml-troubleshooting-process.md)
 
 [Perguntas frequentes sobre atualização e instalação](r/upgrade-and-installation-faq-sql-server-r-services.md)
 
-[Solucionar problemas de conexões do mecanismo de banco de dados](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)
+[Solucionar problemas de conexões do Database Engine](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)
