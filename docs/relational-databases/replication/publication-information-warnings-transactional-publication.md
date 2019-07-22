@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 4d4baf1d-d0a1-4d09-bec7-137811f43f09
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 95074e741823747ba861efcfa6c025b5fb2c9e53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a904ec698311effe100e28a8d8e129c1adc1a80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908131"
 ---
 # <a name="publication-information-warnings-transactional-publication"></a>Informações da publicação, avisos (publicação transacional)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

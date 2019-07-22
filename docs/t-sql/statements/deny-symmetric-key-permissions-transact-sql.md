@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 52d4b12d-17be-4cbd-aa78-65332a4883b0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8aec17fc676ef975a1655be1b7af0e70eb5ee599
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: b4be2767bd0ae3a2486e598678e7654a50b1dc93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984420"
 ---
 # <a name="deny-symmetric-key-permissions-transact-sql"></a>Permissões de chave simétrica DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

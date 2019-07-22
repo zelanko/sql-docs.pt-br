@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 304e5ec2722f8556c2d9c873f4ff5c3cfab4b7d2
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 1e05ad220147e7f46bfaa66127fcc492aaeae6a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927186"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -60,12 +59,12 @@ WITH
  com  
  Introduz as cláusulas que definem a rota a ser alterada.  
   
- SERVICE_NAME **='**_service\_name_**'**  
+ SERVICE_NAME **='** _service\_name_ **'**  
  Especifica o nome do serviço remoto ao qual essa rota aponta. O *service_name* precisa corresponder exatamente ao nome que o serviço remoto usa. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa uma comparação byte a byte para corresponder ao *service_name*. Em outras palavras, a comparação diferencia maiúsculas de minúsculas e não considera a ordenação atual. Uma rota com o nome de serviço **'SQL/ServiceBroker/BrokerConfiguration'** é uma rota para um serviço Broker Configuration Notice. Uma rota para esse serviço pode não especificar uma instância do agente.  
   
  Se a cláusula SERVICE_NAME for omitida, o nome de serviço para a rota permanecerá inalterado.  
   
- BROKER_INSTANCE **='**_broker\_instance_**'**  
+ BROKER_INSTANCE **='** _broker\_instance_ **'**  
  Especifica o banco de dados que hospeda o serviço de destino. O parâmetro *broker_instance* precisa ser o identificador da instância do agente para o banco de dados remoto, que pode ser obtido ao executar a seguinte consulta no banco de dados selecionado:  
   
 ```  
@@ -79,10 +78,10 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
- LIFETIME **=**_route\_lifetime_  
+ LIFETIME **=** _route\_lifetime_  
  Especifica a hora, em segundos, que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retém a rota na tabela de roteamento. No fim do tempo de vida, a rota expira e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não a considera mais ao escolher uma rota para uma nova conversa. Se essa cláusula for omitida, o tempo de vida da rota permanecerá inalterado.  
   
- ADDRESS **='**_next\_hop\_address_'  
+ ADDRESS **='** _next\_hop\_address_'  
 
  Para a instância gerenciada do Banco de Dados SQL do Azure, `ADDRESS` deve ser local.
 
@@ -109,10 +108,10 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
- MIRROR_ADDRESS **='**_next\_hop\_mirror\_address_**'**  
+ MIRROR_ADDRESS **='** _next\_hop\_mirror\_address_ **'**  
  Especifica o endereço de rede para o servidor espelho de um par espelhado cujo servidor principal está no *next_hop_address*. O *next_hop_mirror_address* especifica um endereço TCP/IP no seguinte formato:  
   
- **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
+ **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  O *port_number* especificado precisa corresponder ao número da porta do ponto de extremidade do [!INCLUDE[ssSB](../../includes/sssb-md.md)] de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador especificado. Isso pode ser obtido executando a seguinte consulta no banco de dados selecionado:  
   
@@ -154,7 +153,7 @@ ALTER ROUTE ExpenseRoute
      SERVICE_NAME = '//Adventure-Works.com/Expenses';  
 ```  
   
-### <a name="b-changing-the-target-database-for-a-route"></a>b. Alterando o banco de dados de destino para uma rota  
+### <a name="b-changing-the-target-database-for-a-route"></a>B. Alterando o banco de dados de destino para uma rota  
  O exemplo a seguir altera o banco de dados de destino para a rota `ExpenseRoute` ao banco de dados identificado pelo identificador exclusivo `D8D4D268-00A3-4C62-8F91-634B89B1E317.`  
   
 ```  

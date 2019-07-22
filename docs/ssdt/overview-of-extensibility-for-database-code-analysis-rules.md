@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 32462daf6d747b278be788d2364e01c2e8912114
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd64a7c3152941a88122543dc4b8b80045f175a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101925"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984484"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>Visão geral de extensibilidade para regras de análise de código do banco de dados
 As edições do Visual Studio contendo SQL Server Data Tools incluem regras de análise de código para relatórios em avisos de design, nomeação e desempenho Transact\-SQL em seu código de banco de dados. Para saber mais, confira [Analisar o código do banco de dados para melhorar a qualidade do código](https://msdn.microsoft.com/library/dd172133(v=vs.100).aspx).  

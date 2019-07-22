@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da5528a606fdfc72aec7f1b0bba4348d389f3c98
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: cf54565115df53dc7d502f48aad68f9974adebd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909688"
 ---
 # <a name="indexes-on-computed-columns"></a>Índices em colunas computadas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ A propriedade **IsPrecise** da função COLUMNPROPERTY relata se uma *computed_c
 ## <a name="data-type-requirements"></a>Requisitos de tipo de dados
   
 -   A *computed_column_expression* definida para a coluna computada não pode ser avaliada para os tipos de dados **text**, **ntext**ou **image** .  
--   Colunas computadas derivadas dos tipos de dados **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** e **xml** podem ser indexadas, desde que o tipo de dados da coluna computada seja permitido como uma coluna de chave de índice.  
+-   Colunas computadas derivadas dos tipos de dados **image**, **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** e **xml** podem ser indexadas, desde que o tipo de dados da coluna computada seja permitido como uma coluna de chave de índice.  
 -   Colunas computadas derivadas dos tipos de dados **image**, **ntext**e **text** podem ser colunas (incluídas) não chave em um índice não clusterizado, desde que o tipo de dados da coluna computada seja permitida como uma coluna de índice não chave.  
 
 

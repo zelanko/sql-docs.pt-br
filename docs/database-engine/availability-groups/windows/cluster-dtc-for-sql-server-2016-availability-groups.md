@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bfe3b6cb865736fbc87bfc747fdedfc23f23d7f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 450ea18f977f720b742a9fba28f6d24d01d5373d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988564"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Como agrupar em cluster o serviço DTC de um grupo de disponibilidade Always On
 

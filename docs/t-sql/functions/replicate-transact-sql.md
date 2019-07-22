@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 558d1a1f3d5d0cbb204c5dfd80833ce82a02d0c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27078aceb7bbeb4918c6884bd8a1e984e9384ce5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944485"
 ---
 # <a name="replicate-transact-sql"></a>REPLICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +45,7 @@ REPLICATE ( string_expression ,integer_expression )
  É uma expressão de um tipo de dados binário ou cadeia de caracteres. *string_expression* pode ser dados de caractere ou binários.  
   
 > [!NOTE]  
->  Se *string_expression* não for do tipo **varchar(max)** ou **nvarchar(max)**, REPLICATE truncará o valor retornado em 8.000 bytes. Para retornar valores com mais de 8.000 bytes, *string_expression* deve ser convertida explicitamente no tipo de dados de valor grande apropriado.  
+>  Se *string_expression* não for do tipo **varchar(max)** ou **nvarchar(max)** , REPLICATE truncará o valor retornado em 8.000 bytes. Para retornar valores com mais de 8.000 bytes, *string_expression* deve ser convertida explicitamente no tipo de dados de valor grande apropriado.  
   
  *integer_expression*  
  É uma expressão de qualquer tipo inteiro, incluindo **bigint**. Se *integer_expression* for negativa, NULL será retornado.  

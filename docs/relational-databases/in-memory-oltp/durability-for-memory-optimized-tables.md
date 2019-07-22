@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0fe8886c5c826a6535a7d9898ad7d6f30756effd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca651634947e730df4ae4dda70999c7839521659
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047728"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942804"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidade de tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3b67961b62e3d6629aaa23b485a96d855fe72a9c
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 4ed6e67bbf6f3fcda872650c2d3394d6311802b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914221"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>Permissões REVOKE do Service Broker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,19 +62,19 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Especifica uma permissão que pode ser revogada em um protegível do [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Para obter uma lista dessas permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- CONTRACT **::**_contract_name_  
+ CONTRACT **::** _contract_name_  
  Especifica o contrato no qual a permissão está sendo revogada. O qualificador de escopo **::** é obrigatório.  
   
- MESSAGE TYPE **::**_message_type_name_  
+ MESSAGE TYPE **::** _message_type_name_  
  Especifica o tipo de mensagem no qual a permissão está sendo revogada. O qualificador de escopo **::** é obrigatório.  
   
- REMOTE SERVICE BINDING **::**_remote_binding_name_  
+ REMOTE SERVICE BINDING **::** _remote_binding_name_  
  Especifica a associação de serviço remoto na qual a permissão está sendo revogada. O qualificador de escopo **::** é obrigatório.  
   
- ROUTE **::**_route_name_  
+ ROUTE **::** _route_name_  
  Especifica o roteamento no qual a permissão está sendo revogada. O qualificador de escopo **::** é obrigatório.  
   
- SERVICE **::**_message_type_name_  
+ SERVICE **::** _message_type_name_  
  Especifica o serviço no qual a permissão está sendo revogada. O qualificador de escopo **::** é obrigatório.  
   
  *database_principal*  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9432cd3e3f03db8a96e0535245b50a44777edf75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13e4543020060d875f99e346a7cd73e2b9d5fe49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003680"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opções da solicitação de perfil Padrão de Coluna (tarefa Criação de Perfil de Dados)
 

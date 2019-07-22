@@ -34,13 +34,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a73e8c25d891350f26bfff0ce62a2835fc5355d0
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: d61d42a5b684032898a0eabc3dbc4a1b350653d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405836"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940722"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Gerenciar metadados ao disponibilizar um banco de dados em outro servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +130,7 @@ ms.locfileid: "54405836"
   
  Para permitir a descriptografia automática da chave mestra do banco de dados em uma instância do servidor, uma cópia dessa chave é criptografada usando a chave mestra do serviço. Esta cópia criptografada é armazenada no banco de dados e no **mestre**. Normalmente, a cópia armazenada em **mestre** é silenciosamente atualizada sempre que a chave mestra é alterada. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta primeiramente descriptografar a chave mestra do banco de dados com a chave de serviço mestra da instância. Se essa descriptografia falhar, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pesquisará o repositório de credenciais em busca das credenciais de chave mestra que têm o mesmo GUID de família do banco de dados cuja chave mestra é necessária. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta descriptografar a chave mestra de banco de dados com cada credencial compatível até que a descriptografia obtenha êxito ou não haja mais credenciais. Uma chave mestra não criptografada pela chave mestra de serviço deve ser aberta usando a instrução OPEN MASTER KEY e uma senha.  
   
- Quando um banco de dados criptografado é copiado, restaurado ou anexado a uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma cópia da chave mestra do banco de dados criptografada pela chave mestra do serviço não é armazenada no **mestre** na instância do servidor de destino. Na instância do servidor de destino, você deve abrir a chave mestra do banco de dados. Para abrir a chave mestra, execute a seguinte instrução: OPEN MASTER KEY DECRYPTION BY PASSWORD **=“**_senha_**”**. Recomendamos que você habilite a descriptografia automática da chave mestra do banco de dados executando a seguinte instrução: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Essa instrução ALTER MASTER KEY fornece à instância do servidor uma cópia da chave mestra do banco de dados que é criptografada com a chave mestra do serviço. Para obter mais informações, veja [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
+ Quando um banco de dados criptografado é copiado, restaurado ou anexado a uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma cópia da chave mestra do banco de dados criptografada pela chave mestra do serviço não é armazenada no **mestre** na instância do servidor de destino. Na instância do servidor de destino, você deve abrir a chave mestra do banco de dados. Para abrir a chave mestra, execute a seguinte instrução: OPEN MASTER KEY DECRYPTION BY PASSWORD **=“** _senha_ **”** . Recomendamos que você habilite a descriptografia automática da chave mestra do banco de dados executando a seguinte instrução: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Essa instrução ALTER MASTER KEY fornece à instância do servidor uma cópia da chave mestra do banco de dados que é criptografada com a chave mestra do serviço. Para obter mais informações, veja [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
  Para obter informações sobre como habilitar a descriptografia automática da chave mestra de um banco de dados espelho, veja [Configurar um banco de dados espelho criptografado](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -185,7 +184,7 @@ ms.locfileid: "54405836"
  Os procedimentos armazenados estendidos executam diretamente no espaço de endereço de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e podem produzir vazamentos de memória ou outros problemas que reduzem o desempenho e a confiabilidade do servidor. Você deve pensar em armazenar procedimentos armazenados estendidos em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que seja separada da instância que contém os dados referenciados. Você também deve considerar o uso de consultas distribuídas para acessar o banco de dados.  
   
   > [!IMPORTANT]
-  > Antes de adicionar procedimentos armazenados estendidos ao servidor e conceder permissões de EXECUTE a outros usuários, o administrador do sistema deve examinar detalhadamente cada procedimento armazenado estendido para verificar se ele não contém código nocivo ou mal-intencionado.   
+  > Antes de adicionar procedimentos armazenados estendidos ao servidor e conceder permissões de EXECUTE a outros usuários, o administrador do sistema deve examinar detalhadamente cada procedimento armazenado estendido para verificar se ele não contém código nocivo ou mal-intencionado.  
   
  Para obter mais informações, veja [GRANT Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md), [DENY Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md) e [REVOKE Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md).  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 45df4518b935057e23e46b62583989bf98d0b0ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50323fb31252f116524b150b17d2c3163c4c5a88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941599"
 ---
 # <a name="excel-custom-properties"></a>Propriedades personalizadas do Excel
 

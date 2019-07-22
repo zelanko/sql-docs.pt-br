@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 535a64f7ab8ca820149313d9b5add1de65239675
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 3d49f852c69af4335d3243fb84c921e11268669f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326567"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927207"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -127,7 +126,7 @@ Além disso, para alterar a associação em uma função de banco de dados fixa,
 ALTER ROLE buyers WITH NAME = purchasing;  
 ```  
   
-### <a name="b-add-or-remove-role-members"></a>b. Adicionar ou remover membros da função  
+### <a name="b-add-or-remove-role-members"></a>B. Adicionar ou remover membros da função  
  **APLICA-SE A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  Esse exemplo cria uma função de banco de dados chamada `Sales`. Ele adiciona um usuário de banco de dados chamado Carlos à associação e, em seguida, mostra como remover o membro Carlos.   Este exemplo pode ser executado no banco de dados de exemplo [AdventureWorks](https://msftdbprodsamples.codeplex.com/).

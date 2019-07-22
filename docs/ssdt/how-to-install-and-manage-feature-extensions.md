@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3240bd208a13342782fefeb19532fbabed7e81e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a7d2f4fa27623a75bd49a32a7ce800801f63e9f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929597"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>Como fazer: Instalar e gerenciar extensões de recurso
 Você pode adicionar regras para a análise de código do banco de dados, condições para testes de unidade de banco de dados e colaboradores de criação/implantação para aumentar a funcionalidade que as edições do Visual Studio, que incluem o SQL Server Data Tools, oferecem. No entanto, você deve primeiro instalar uma extensão de recurso antes de poder usá-la, se criou a extensão ou instalou uma que outra pessoa criou.  

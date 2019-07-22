@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b2474bc1f0d0111c4dedd2fa8ce3a9f885503d52
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: bf64036b88b6f29da0404b6e611ae891db93da70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042445"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912662"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -309,7 +308,7 @@ Se *type_schema_name* não for especificado, o [!INCLUDE[ssDE](../../includes/ss
 É um valor padrão para o parâmetro. Se um valor *default* for definido, a função poderá ser executada sem a necessidade de especificar um valor para esse parâmetro.  
   
 > [!NOTE]  
-> Valores de parâmetro padrão podem ser especificados para funções CLR, com exceção dos tipos de dados **varchar(max)** e **varbinary(max)**.  
+> Valores de parâmetro padrão podem ser especificados para funções CLR, com exceção dos tipos de dados **varchar(max)** e **varbinary(max)** .  
   
  Quando um parâmetro da função tiver um valor padrão, a palavra-chave DEFAULT deverá ser especificada quando a função for chamada para recuperar o valor padrão. Esse comportamento é diferente do uso de parâmetros com valores padrão em procedimentos armazenados nos quais a omissão do parâmetro também indica o valor padrão. Porém, a palavra-chave DEFAULT não é necessária ao invocar uma função escalar por meio da instrução EXECUTE.  
   
@@ -367,7 +366,7 @@ Um exemplo típico, para MyFood.DLL, onde todos os tipos estão no namespace MyF
 > [!NOTE]  
 > Essa opção não está disponível em um banco de dados independente.  
   
- *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) Define o tipo de dados da tabela para uma função [!INCLUDE[tsql](../../includes/tsql-md.md)]. A declaração da tabela inclui definições de coluna e restrições de coluna ou tabela. A tabela sempre é colocada no grupo de arquivos primário.  
+ *\<* table_type_definition *>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) Define o tipo de dados da tabela para uma função [!INCLUDE[tsql](../../includes/tsql-md.md)]. A declaração da tabela inclui definições de coluna e restrições de coluna ou tabela. A tabela sempre é colocada no grupo de arquivos primário.  
   
  \< clr_table_type_definition > ( { *column_name**data_type* } [ ,...*n* ] )    
  **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([Versão prévia em algumas regiões](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
@@ -464,7 +463,7 @@ Especifica se este UDF escalar deve ser embutido ou não. Essa cláusula só se 
  A propriedade ROWGUIDCOL não impõe exclusividade dos valores armazenados na coluna. Também não gera automaticamente valores para novas linhas inseridas na tabela. Para gerar valores exclusivos para cada coluna, use a função NEWID em instruções INSERT. Um valor padrão pode ser especificado; entretanto, NEWID não pode ser especificado como o padrão.  
   
  IDENTITY  
- Indica que a nova coluna é uma coluna de identidade. Quando uma nova linha é adicionada à tabela, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um valor incremental exclusivo para a coluna. Geralmente, as colunas de identidade são usadas juntamente com restrições PRIMARY KEY para servir como o identificador exclusivo de linha da tabela. A propriedade IDENTITY pode ser atribuída às colunas **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** ou **numeric(p,0)**. Apenas uma coluna de identidade pode ser criada por tabela. Padrões associados e restrições DEFAULT não podem ser usados com uma coluna de identidade. Você deve especificar *seed* e *increment* ou nenhum dos dois. Se nenhum for especificado, o padrão será (1,1).  
+ Indica que a nova coluna é uma coluna de identidade. Quando uma nova linha é adicionada à tabela, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um valor incremental exclusivo para a coluna. Geralmente, as colunas de identidade são usadas juntamente com restrições PRIMARY KEY para servir como o identificador exclusivo de linha da tabela. A propriedade IDENTITY pode ser atribuída às colunas **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** ou **numeric(p,0)** . Apenas uma coluna de identidade pode ser criada por tabela. Padrões associados e restrições DEFAULT não podem ser usados com uma coluna de identidade. Você deve especificar *seed* e *increment* ou nenhum dos dois. Se nenhum for especificado, o padrão será (1,1).  
   
  IDENTITY não pode ser especificado para funções CLR com valor de tabela.  
   
@@ -558,7 +557,7 @@ Se uma função definida pelo usuário não for criada com a cláusula `SCHEMABI
  Para obter mais informações sobre como programar funções CLR, consulte [Funções CLR definidas pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md).  
   
 ## <a name="general-remarks"></a>Comentários gerais  
- Funções escalares podem ser invocadas quando expressões escalares são usadas. Isso inclui colunas computadas e definições de restrições CHECK. Funções escalares também podem ser executadas com a instrução [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md). Funções escalares devem ser invocadas usando pelo menos o nome de duas partes da função (*<schema>.<function>*). Para obter mais informações sobre nomes de várias partes, confira [Convenções da sintaxe Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). Funções com valor de tabela podem ser invocadas em que as expressões de tabela são permitidas na cláusula `FROM` de instruções `SELECT`, `INSERT`, `UPDATE` ou `DELETE`. Para obter mais informações, consulte [Executar funções definidas pelo usuário](../../relational-databases/user-defined-functions/execute-user-defined-functions.md).  
+ Funções escalares podem ser invocadas quando expressões escalares são usadas. Isso inclui colunas computadas e definições de restrições CHECK. Funções escalares também podem ser executadas com a instrução [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md). Funções escalares devem ser invocadas usando pelo menos o nome de duas partes da função ( *<schema>.<function>* ). Para obter mais informações sobre nomes de várias partes, confira [Convenções da sintaxe Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). Funções com valor de tabela podem ser invocadas em que as expressões de tabela são permitidas na cláusula `FROM` de instruções `SELECT`, `INSERT`, `UPDATE` ou `DELETE`. Para obter mais informações, consulte [Executar funções definidas pelo usuário](../../relational-databases/user-defined-functions/execute-user-defined-functions.md).  
   
 ## <a name="interoperability"></a>Interoperabilidade  
  As instruções a seguir são válidas em uma função:  

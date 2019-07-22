@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d689a6795b1736e16730ba5e31d418aa1b7ec766
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10caa7bd8270cdc73d1d5f9addd2b0ef55b89073
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009544"
 ---
 # <a name="database-suspect-data-page-event-class"></a>classe de evento Database Suspect Data Page
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,8 +36,8 @@ ms.locfileid: "47653280"
 |Nome da coluna de dados|Tipo de Dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|O ID do banco de dados para o qual foi levantado o evento de página suspeita. Isso é igual à coluna **database_id** da tabela **suspect_pages** .|3|Sim|  
-|**EventClass**|**int**|O tipo do evento é 213.|27|não|  
-|**EventSequence**|**int**|Sequência de classe de evento em lote.|51|não|  
+|**EventClass**|**int**|O tipo do evento é 213.|27|Não|  
+|**EventSequence**|**int**|Sequência de classe de evento em lote.|51|Não|  
 |**SPID**|**int**|ID da tarefa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que encontrou a página suspeita.|12|Sim|  
 |**StartTime**|**datetime**|Hora que o evento ocorreu.|14|Sim|  
 |**ObjectID**|**int**|ID do arquivo do banco de dados que encontrou a página suspeita. Isso é igual à coluna **file_id** da tabela **suspect_pages** .|22|Sim|  

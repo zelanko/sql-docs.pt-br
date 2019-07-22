@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e28464059101f6385380ced0a307a61f1e76ba53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cff6d8342ea1fe4d40616bf07e1189e0ffba030e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098067"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897145"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Como fazer: Criar um projeto de teste para testes de unidade de banco de dados do SQL Server
 Antes de gravar testes de unidade que avaliem objetos de banco de dados, você deve primeiro criar um projeto de teste. O projeto contém testes de unidade do SQL Server, mas pode conter também outros tipos de teste.  

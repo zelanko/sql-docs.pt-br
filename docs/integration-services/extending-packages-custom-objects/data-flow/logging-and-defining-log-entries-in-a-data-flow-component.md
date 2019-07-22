@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6e587cfdac199558e9ef15cedfe53592f415d0b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: affcdf9fe7a26f0bf81e3079fea04adb6bfbac8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908674"
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>Registrando em log e definindo entradas de log em um componente de fluxo de dados
 

@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2be43a9ed439d3f4fb72c26683973ca4c18b263f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90eb59652bf64e6e3be4edaa3cce2f0bf3c02df7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897994"
 ---
 # <a name="set-statistics-time-transact-sql"></a>SET STATISTICS TIME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

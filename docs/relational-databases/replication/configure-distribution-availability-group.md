@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: df6e9aa77744039a6d0fbd00e26e8090b15e4284
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: d21b2d74a455ed2967abb6fb102015d42054a706
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903275"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurar o banco de dados de distribuição de replicação no grupo de disponibilidade Always On
 

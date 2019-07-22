@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 7a8ed1c3-a98f-4f93-a6ba-e3901d941db9
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f05e1d15e4ab9e22e3f7b2ecc166029e06a3b374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a42276012f3ef3151f453951b0f5ec55c7736f8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846924"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903672"
 ---
 # <a name="audit-add-login-to-server-role-event-class"></a>Classe de evento Audit Add Login to Server Role
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,8 +32,8 @@ ms.locfileid: "47846924"
 |**DatabaseID**|**int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**DatabaseName**|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |**DBUserName**|**nvarchar**|Nome do usuário do banco de dados que adicionou ou removeu o logon.|40|Sim|  
-|**EventClass**|**int**|Tipo de evento = 108.|27|não|  
-|**EventSequence**|**int**|Sequência de um determinado evento na solicitação.|51|não|  
+|**EventClass**|**int**|Tipo de evento = 108.|27|Não|  
+|**EventSequence**|**int**|Sequência de um determinado evento na solicitação.|51|Não|  
 |**EventSubClass**|**int**|Tipo de subclasse de evento.<br /><br /> 1=Add<br /><br /> 2=Drop|21|Sim|  
 |**HostName**|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
@@ -47,7 +46,7 @@ ms.locfileid: "47846924"
 |**OwnerName**|**nvarchar**|Nome de usuário de banco de dados do proprietário do objeto.|37|Sim|  
 |**RequestID**|**int**|ID da solicitação que contém a instrução.|49|Sim|  
 |**RoleName**|**nvarchar**|Nome da função de servidor fixa cuja associação está sendo modificada.|38|Sim|  
-|**ServerName**|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|não|  
+|**ServerName**|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |**SessionLoginName**|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, o **SessionLoginName** mostrará o Logon1 e o **LoginName** mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |**SPID**|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |**StartTime**|**datetime**|Hora de início do evento, se disponível.|14|Sim|  

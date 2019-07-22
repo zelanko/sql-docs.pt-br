@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6e0e783a4d6a75e87abd366663c5d712d79ee81e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f461997fbbbbc7e63256b67b8fecf40381aab788
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940972"
 ---
 # <a name="back-up-database-backup-options-page"></a>Backup de Banco de Dados (página Opções de Backup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

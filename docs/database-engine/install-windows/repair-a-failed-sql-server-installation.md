@@ -10,13 +10,12 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: jroth
-ms.openlocfilehash: ad2f10d767bc71cfdf3fc3e26cfe7a65354ea5b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9130fd4fae0660008ede059418179b1bb9777a9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990843"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>Reparar uma instalação com falha do SQL Server
 

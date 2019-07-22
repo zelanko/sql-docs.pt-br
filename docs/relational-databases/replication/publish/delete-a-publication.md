@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3739277da5fa62a1fdafb596e44c85d8e9258fac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bffe0040c4108fdadc2ac163b5a48a53abc7173
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907731"
 ---
 # <a name="delete-a-publication"></a>Excluir uma publicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "47625164"
   
     -   Para excluir uma única publicação, execute [sp_droppublication](../../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md) no Publicador do banco de dados de publicação.  
   
-    -   Para excluir todas as publicações e remover todos os objetos de replicação de um banco de dados publicado, execute [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) no Publicador. Especifique um valor de **tran** para **@type**. (Opcional) Se o Distribuidor não puder ser acessado ou se o status do banco de dados estiver suspeito ou offline, especifique um valor **1** para **@force**. (Opcional) Especifique o nome do banco de dados para **@dbname** se [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) não for executado no banco de dados de publicação.  
+    -   Para excluir todas as publicações e remover todos os objetos de replicação de um banco de dados publicado, execute [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) no Publicador. Especifique um valor de **tran** para **@type** . (Opcional) Se o Distribuidor não puder ser acessado ou se o status do banco de dados estiver suspeito ou offline, especifique um valor **1** para **@force** . (Opcional) Especifique o nome do banco de dados para **@dbname** se [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) não for executado no banco de dados de publicação.  
   
         > [!NOTE]  
         >  Especificar um valor **1** para **@force** pode deixar objetos de publicação relacionados a replicação no banco de dados.  
@@ -75,7 +74,7 @@ ms.locfileid: "47625164"
   
     -   Para excluir uma única publicação, execute [sp_dropmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md) no Publicador do banco de dados de publicação.  
   
-    -   Para excluir todas as publicações e remover todos os objetos de replicação de um banco de dados publicado, execute [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) no Publicador. Especifique um valor de **merge** para **@type**. (Opcional) Se o Distribuidor não puder ser acessado ou se o status do banco de dados estiver suspeito ou offline, especifique um valor **1** para **@force**. (Opcional) Especifique o nome do banco de dados para **@dbname** se [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) não for executado no banco de dados de publicação.  
+    -   Para excluir todas as publicações e remover todos os objetos de replicação de um banco de dados publicado, execute [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) no Publicador. Especifique um valor de **merge** para **@type** . (Opcional) Se o Distribuidor não puder ser acessado ou se o status do banco de dados estiver suspeito ou offline, especifique um valor **1** para **@force** . (Opcional) Especifique o nome do banco de dados para **@dbname** se [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) não for executado no banco de dados de publicação.  
   
         > [!NOTE]  
         >  Especificar um valor **1** para **@force** pode deixar objetos de publicação relacionados a replicação no banco de dados.  

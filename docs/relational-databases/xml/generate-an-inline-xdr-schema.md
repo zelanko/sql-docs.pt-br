@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2a40d617-9724-4f7d-80a4-a85c702f14d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5abea91a38a1866a5b1e9409bce5990c94dc3a5c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 2e738002850c372642413c3ffb0b829f899d4060
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943209"
 ---
 # <a name="generate-an-inline-xdr-schema"></a>Gerar um esquema XDR embutido
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "58511273"
   
 -   Se o resultado da consulta FOR XML incluir colunas de tipo **xml** e você solicitar um esquema XDR embutido, será retornado um erro. O XDR embutido não oferece suporte a esses tipos.  
   
--   Os tipos **(n)varchar(max)** e **(n)varbinary(max)** serão mapeados para **(n)varchar(n)** e **varbinary(n)**, respectivamente.  
+-   Os tipos **(n)varchar(max)** e **(n)varbinary(max)** serão mapeados para **(n)varchar(n)** e **varbinary(n)** , respectivamente.  
   
 -   Quando o modo de compatibilidade é definido como 90 ou superior, os valores **timestamp** são considerados como dados **varbinary(8)** , são tratados como dados binários e retornados no resultado da seguinte maneira:  
   
