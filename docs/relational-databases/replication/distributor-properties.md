@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e58ef266f992911dc8360925649959b1aedd13f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3e542e49811ed7f57a9b60dbf1f0428f69706bdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128307"
 ---
 # <a name="sql-server-replication-distributor-properties-dialog-box"></a>Caixa de diálogo Propriedades do Distribuidor de Replicação do SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ A página **Geral** da caixa de diálogo **Propriedades do Distribuidor** permit
  **Bancos de dados**  
  A grade de propriedades dos **Bancos de Dados** mostra as nome e as propriedades de retenção dos bancos de dados de distribuição no Distribuidor. **Retenção de Transação** é o período de tempo em que as transações são armazenadas para replicação transacional (a retenção da transação também é conhecida como retenção de distribuição). **Retenção de Histórico** é o período de tempo em que os metadados de histórico são armazenados para todos os tipos de replicação. Para mais informações sobre retenção de distribuição, consulte [Desativação e expiração da assinatura](../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
- Clique no botão de propriedades (**...**) na grade de propriedades de **Bancos de dados** para iniciar a caixa de diálogo **Propriedades do Banco de Dados de Distribuição** .  
+ Clique no botão de propriedades ( **...** ) na grade de propriedades de **Bancos de dados** para iniciar a caixa de diálogo **Propriedades do Banco de Dados de Distribuição** .  
   
  **Nova**  
  Clique para criar um novo banco de dados de distribuição.  

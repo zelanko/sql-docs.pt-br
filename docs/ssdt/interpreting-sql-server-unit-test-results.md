@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fde3c95b-2f68-483d-a197-0f7161b72fa3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1c68ace0ccbd49b63404aaf52419a06dda297f8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bcaea309d3399d7986ab793ecaf2085180a4c0a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088709"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119826"
 ---
 # <a name="interpreting-sql-server-unit-test-results"></a>Interpretando resultados do teste de unidade do SQL Server
 Quando você executa um teste de unidade do SQL Server, os resultados do teste são gerados automaticamente, salvos em disco e resumidos na janela **Resultados de Teste**. Assim que você iniciar uma execução do teste, a janela **Resultados de Teste** aparecerá e exibirá o andamento da execução do teste. Essa exibição inclui os testes que estão em execução e os que foram concluídos.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 08da0ac24a7999235efc6150d313ca2bb2ae0ea7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ce115a0df8ca77b37a78234247174ca9f2dd006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502202"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041472"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>Restaurar o banco de dados mestre (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "52502202"
   
 1.  Inicie uma instância de servidor no modo de usuário único.  
   
-     Para obter informações sobre como especificar o parâmetro de inicialização de usuário único (**-m**), veja [Configurar opções de inicialização do servidor &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
+     Para obter informações sobre como especificar o parâmetro de inicialização de usuário único ( **-m**), veja [Configurar opções de inicialização do servidor &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
   
 2.  Para restaurar um backup de banco de dados completo do **master**, use a seguinte instrução [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
@@ -46,7 +45,7 @@ ms.locfileid: "52502202"
  O exemplo a seguir restaura o banco de dados `master` na instância do servidor padrão. O exemplo assume que a instância do servidor já está sendo executada no modo de usuário único. O exemplo inicia o `sqlcmd` e executa uma instrução `RESTORE DATABASE` que restaura um backup de banco de dados completo de `master` de um dispositivo de disco: `Z:\SQLServerBackups\master.bak`.  
   
 > [!NOTE]  
->  Para uma instância nomeada, o comando **sqlcmd** deve especificar a opção **-S**_\<ComputerName>_\\*\<InstanceName>*.  
+>  Para uma instância nomeada, o comando **sqlcmd** deve especificar a opção **-S** _\<ComputerName>_ \\ *\<InstanceName>* .  
   
 ```  
   

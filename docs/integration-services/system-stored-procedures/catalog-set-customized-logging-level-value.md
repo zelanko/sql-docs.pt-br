@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0a915eeb07757476929310ada65f99b3408ba373
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0146d58a1495ad5c17625edbb9b9c6f2d295cfb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715958"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985307"
 ---
 # <a name="catalogsetcustomizedlogginglevelvalue"></a>catalog.set_customized_logging_level_value 
 
@@ -39,12 +38,12 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
  [ @level_name = ] *level_name*  
  O nome de um nível de log personalizado existente.  
   
- O *level_name* é **nvarchar(128)**.  
+ O *level_name* é **nvarchar(128)** .  
   
  [ @property_name = ] *property_name*  
  O nome da propriedade a ser alterada. Os valores válidos são **PROFILE** e **EVENTS**.  
   
- O *property_name* é **nvarchar(128)**.  
+ O *property_name* é **nvarchar(128)** .  
   
  [ @property_value = ] *property_value*  
  O novo valor para a propriedade especificada do nível de log personalizado especificado.  

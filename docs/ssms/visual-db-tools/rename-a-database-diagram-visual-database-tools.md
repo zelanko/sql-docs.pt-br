@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 13f06b9e0c0a1eeaceb0f4320082502b2abf2bdd
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 241cd446706d2eacb5e230faf0241be7161f1686
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67679484"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256009"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>Renomear um diagrama de banco de dados (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

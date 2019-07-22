@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 280d5d37ca364e32e2bd8638cdd03563a2b86f49
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: fd74479464d23ab6ce85a92babf6ba92fa8baf49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984348"
 ---
 # <a name="deny-type-permissions-transact-sql"></a>Permissões de tipo DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,8 +54,8 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *permission*  
  Especifica uma permissão que pode ser negada em um tipo. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- ON TYPE **::** [ _schema_name_**.** ] *type_name*  
- Especifica o tipo no qual a permissão está sendo negada. O qualificador de escopo (**::**) é obrigatório. Se *schema_name* não for especificado, o esquema padrão será usado. Se *schema_name* for especificado, o qualificador de escopo de esquema (**.**) será obrigatório.  
+ ON TYPE **::** [ _schema_name_ **.** ] *type_name*  
+ Especifica o tipo no qual a permissão está sendo negada. O qualificador de escopo ( **::** ) é obrigatório. Se *schema_name* não for especificado, o esquema padrão será usado. Se *schema_name* for especificado, o qualificador de escopo de esquema ( **.** ) será obrigatório.  
   
  TO \<database_principal>  
  Especifica a entidade à qual a permissão está sendo negada.  

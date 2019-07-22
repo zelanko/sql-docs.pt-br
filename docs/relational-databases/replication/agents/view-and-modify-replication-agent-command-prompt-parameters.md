@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1137138911519b2e6497525acb39b7de87a4fd63
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 38d86590da144386077b170433c52dcd1cc18d7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254891"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085915"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>Exibir e modificar parâmetros do prompt de comando de agentes de replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Agentes de replicação são executáveis que aceitam parâmetros de linha de comando. Por padrão, os agentes seguem as etapas de trabalho do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agente, assim sendo, esses parâmetros podem ser exibidos e modificados usando a caixa de diálogo **Propriedades do trabalho – \<Trabalho>**. Essa caixa de diálogo está disponível na pasta **Trabalhos** no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e na guia **Agentes** no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
+  Agentes de replicação são executáveis que aceitam parâmetros de linha de comando. Por padrão, os agentes seguem as etapas de trabalho do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agente, assim sendo, esses parâmetros podem ser exibidos e modificados usando a caixa de diálogo **Propriedades do trabalho – \<Trabalho>** . Essa caixa de diálogo está disponível na pasta **Trabalhos** no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e na guia **Agentes** no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
   
 > [!NOTE]  
 >  As alterações do parâmetro de agente entrarão em vigor na próxima vez o agente for iniciado. Se o agente ficar executando continuamente, será necessário parar e reiniciar o agente.  
@@ -59,7 +58,7 @@ ms.locfileid: "54254891"
   
 3.  Clique com o botão direito do mouse em um trabalho e, em seguida, clique em **Propriedades**.  
   
-4.  Na página **Etapas** da caixa de diálogo **Propriedades do Trabalho – \<Trabalho>**, selecione a etapa **Executar agente** e clique em **Editar**.  
+4.  Na página **Etapas** da caixa de diálogo **Propriedades do Trabalho – \<Trabalho>** , selecione a etapa **Executar agente** e clique em **Editar**.  
   
 5.  Na caixa de diálogo **Propriedades da Etapa do Trabalho – Executar agente** , edite o campo **Comando** .  
   
@@ -73,9 +72,9 @@ ms.locfileid: "54254891"
   
 3.  Clique com o botão direito do mouse em uma assinatura e clique em **Exibir Detalhes**.  
   
-4.  Na janela **Assinatura <SubscriptionName>**, clique em **Ação** e depois em **Propriedades do Trabalho de \<AgentName>**.  
+4.  Na janela **Assinatura <SubscriptionName>** , clique em **Ação** e depois em **Propriedades do Trabalho de \<AgentName>** .  
   
-5.  Na página **Etapas** da caixa de diálogo **Propriedades do Trabalho – \<Trabalho>**, selecione a etapa **Executar agente** e clique em **Editar**.  
+5.  Na página **Etapas** da caixa de diálogo **Propriedades do Trabalho – \<Trabalho>** , selecione a etapa **Executar agente** e clique em **Editar**.  
   
 6.  Na caixa de diálogo **Propriedades da Etapa do Trabalho – Executar agente** , edite o campo **Comando** .  
   
@@ -89,7 +88,7 @@ ms.locfileid: "54254891"
   
 3.  Clique com o botão direito do mouse em um agente na grade e em **Propriedades**.  
   
-4.  Na página **Etapas** da caixa de diálogo **Propriedades do Trabalho – \<Trabalho>**, selecione a etapa **Executar agente** e clique em **Editar**.  
+4.  Na página **Etapas** da caixa de diálogo **Propriedades do Trabalho – \<Trabalho>** , selecione a etapa **Executar agente** e clique em **Editar**.  
   
 5.  Na caixa de diálogo **Propriedades da Etapa do Trabalho – Executar agente** , edite o campo **Comando** .  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 729e5866-aa6f-4c7d-9c75-aa2ae5ab9269
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2ca364ce0b1c1d90c153538d9a622b8a56b275ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0ba15dc6224811630bcdfaa5f754b9823cf5dcd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088742"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000632"
 ---
 # <a name="manage-tables-relationships-and-fix-errors"></a>Gerenciar tabelas e relações e corrigir erros
 Os tópicos nesta seção descrevem como usar o Designer de Tabela para projetar tabelas e gerenciar relações de tabela. Tópicos adicionais descrevem como corrigir erros semânticos ou de sintaxe comuns.  

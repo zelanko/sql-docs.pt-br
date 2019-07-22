@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: afb49faa-321a-42b1-a378-955b586429f2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 012afa885490bb180b9ba0cae7b8ad435cf70e58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61db90f4082d19551d1d7b3227069cd0c9cf835a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984533"
 ---
 # <a name="data-tools-operations-window"></a>Janela Operações de Ferramentas de Dados
 A janela **Operações de Ferramentas de Dados** mostra o progresso de algumas operações discutidas neste tópico e o notifica caso ocorram erros.  

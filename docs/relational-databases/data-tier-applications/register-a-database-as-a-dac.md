@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cfcb3a58ee61e7cd4404ec32799fbc265acdc8f6
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 726955115dc956f2ad16e39775610deb16c445a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134682"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar um banco de dados como um DAC
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,7 +108,7 @@ ms.locfileid: "53591350"
  [Usando o Assistente para Registrar o Aplicativo da Camada de Dados](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>Validando objetos  
- **Checking**  _SchemaName_ **.** _ObjectName_ **.** - Exibe uma barra de progresso enquanto o assistente verifica as dependências dos objetos recuperados e se todos eles são objetos válidos para um DAC. _SchemaName_**.**_ObjectName_ identifica qual objeto está sendo verificado no momento.  
+ **Checking**  _SchemaName_ **.** _ObjectName_ **.** - Exibe uma barra de progresso enquanto o assistente verifica as dependências dos objetos recuperados e se todos eles são objetos válidos para um DAC. _SchemaName_ **.** _ObjectName_ identifica qual objeto está sendo verificado no momento.  
   
  **< Anterior** - Retorna para a página **Definir propriedades** para alterar suas entradas.  
   

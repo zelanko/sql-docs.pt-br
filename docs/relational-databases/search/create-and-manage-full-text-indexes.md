@@ -12,14 +12,13 @@ ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5798c0048d10e074f0aa64c3d50ce14027865e4a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: cd0efece05be169ce220d6e16a4bebf10b5ca36d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657911"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082930"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Criar e gerenciar índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -166,7 +165,7 @@ GO
  Este exemplo retorna um conjunto de resultados chamado `Unique Key Column`, que exibe uma única linha contendo o nome da coluna de chave exclusiva da tabela Document, DocumentID. Observe que, se esta consulta continha um nome de índice inválido, se o nome de índice não correspondia à tabela, se a tabela não existia etc., será retornado NULL.  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>Indexar colunas varbinary(max) e xml  
- Se uma coluna **varbinary(max)**, **varbinary**ou **xml** tiver um índice de texto completo, ela poderá ser consultada usando os predicados (CONTAINS e FREETEXT) e as funções (CONTAINSTABLE e FREETEXTTABLE) de texto completo, como qualquer outra coluna indexada de texto completo.
+ Se uma coluna **varbinary(max)** , **varbinary**ou **xml** tiver um índice de texto completo, ela poderá ser consultada usando os predicados (CONTAINS e FREETEXT) e as funções (CONTAINSTABLE e FREETEXTTABLE) de texto completo, como qualquer outra coluna indexada de texto completo.
    
 ### <a name="index-varbinarymax-or-varbinary-data"></a>Indexar dados varbinary(max) ou varbinary  
  Uma única coluna **varbinary (max)** ou **varbinary** pode armazenar vários tipos de documentos. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a qualquer tipo de documento para o qual um filtro está instalado e disponível no sistema operacional. O tipo de cada documento é identificado pela extensão de arquivo do documento. Por exemplo, no caso de uma extensão de arquivo .doc, a pesquisa de texto completo usa o filtro que dá suporte a documentos do Microsoft Word. Para obter uma lista dos tipos de documento disponíveis, veja a exibição de catálogo [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  
@@ -193,7 +192,7 @@ Para criar um índice de texto completo em uma coluna **varbinary(max)** , o Mec
   
 2.  Expanda **Tabelas**e clique com o botão direito do mouse na tabela que você quer desabilitar ou habilitar novamente para indexação de texto completo.  
   
-3.  Selecione **Índice de Texto Completo**e clique em **Disable Full-Text index (Desabilitar Índice de Texto Completo)** ou **Enable Full-Text index (Habilitar Índice de Texto Completo)**.  
+3.  Selecione **Índice de Texto Completo**e clique em **Disable Full-Text index (Desabilitar Índice de Texto Completo)** ou **Enable Full-Text index (Habilitar Índice de Texto Completo)** .  
   
 ##  <a name="remove"></a> Remover um índice de texto completo de uma tabela  
   

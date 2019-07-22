@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6ac4fde8a0058d05125346167e07c3d99e687a8e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2881c4ee5145506158585611f61219983b764936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066109"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ ALTER ASSEMBLY assembly_name
   
  Para obter mais informações, confira [Implementando assemblies](../../relational-databases/clr-integration/assemblies-implementing.md).  
   
- [ DROP FILE { *file_name*[ **,**_...n_] | ALL } ]  
+ [ DROP FILE { *file_name*[ **,** _...n_] | ALL } ]  
  Remove do banco de dados o nome de arquivo associado ao assembly ou todos os arquivos associados ao assembly. Se for usado com ADD FILE a seguir, DROP FILE será executado em primeiro lugar. Isto permite que você substitua um arquivo com o mesmo nome de arquivo.  
   
 > [!NOTE]  
@@ -209,7 +208,7 @@ As seguintes permissões são necessárias para alterar um assembly CLR quando `
 > [!IMPORTANT]
 > O Banco de Dados SQL do Azure não é compatível com a referência a um arquivo.
 
-### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>b. Adicionando um arquivo a ser associado a um assembly  
+### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>B. Adicionando um arquivo a ser associado a um assembly  
  O exemplo a seguir carrega o arquivo de código fonte `Class1.cs` a ser associado ao assembly `MyClass`. Este exemplo assume que o assembly `MyClass` já foi criado no banco de dados.  
   
 ```  

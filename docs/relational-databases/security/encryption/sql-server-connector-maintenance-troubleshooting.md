@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: 67716270a13f71e23a0294db632ef0b0d51ca76e
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: f06a2fd1b8734701fe261cba42d66ca1652e06fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140700"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Manutenção &amp; solução de problemas do Conector do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,9 +99,9 @@ Versões 1.0.0.440 e anteriores foram substituídas e não têm mais suporte em 
 
 Se você estiver usando a Versão 1.0.1.0 ou mais recente, realize as etapas a seguir para atualizar para a última versão do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Essas instruções evitem a necessidade de reiniciar a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
  
-1. Instale a versão mais nova do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=45344). No assistente de instalação, salve o novo arquivo DLL em um caminho de arquivo diferente do caminho do arquivo da DLL original do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Por exemplo, o novo caminho do arquivo poderá ser: `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
+1. Instale a versão mais nova do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=45344). No assistente de instalação, salve o novo arquivo DLL em um caminho de arquivo diferente do caminho do arquivo da DLL original do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Por exemplo, o novo caminho do arquivo poderá ser: `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
  
-2. Na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], execute o seguinte comando Transact-SQL para apontar a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para a nova versão do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:
+2. Na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], execute o seguinte comando Transact-SQL para apontar a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para a nova versão do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :
 
     ``` 
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
@@ -159,7 +158,7 @@ Os backups de chaves podem ser restaurados em todas as regiões do Azure, contan
 ### <a name="on-azure-key-vault"></a>No Cofre de Chaves do Azure  
   
 **Como funcionam as operações de chave com o Cofre de Chaves do Azure?**  
- A chave assimétrica no cofre de chave é usada para proteger chaves de criptografia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Somente a parte pública da chave assimétrica nunca deixa o cofre, a parte particular nunca é exportada pelo cofre. Todas as operações de criptografia usando a chave assimétrica são feitas no serviço do Azure Key Vault e são protegidas pela segurança do serviço.  
+ A chave assimétrica no cofre de chave é usada para proteger chaves de criptografia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Somente a parte pública da chave assimétrica nunca deixa o cofre, a parte particular nunca é exportada pelo cofre. Todas as operações de criptografia usando a chave assimétrica são feitas no serviço do Azure Key Vault e são protegidas pela segurança do serviço.  
   
  **O que é um URI de chave?**  
  Cada chave no Cofre de Chaves do Azure tem um URI (Uniform Resource Identifier), que pode ser usado para fazer referência à chave em seu aplicativo. Use o formato `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` para obter a versão atual e use o formato `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` para obter uma versão específica.  
@@ -168,7 +167,7 @@ Os backups de chaves podem ser restaurados em todas as regiões do Azure, contan
 
 **Quais são os pontos de extremidade que o Conector do SQL Server precisa acessar?** O Conector se comunica com dois pontos de extremidade que precisam ser incluídos na lista de permissões. A única porta necessária para comunicação de saída a esses outros serviços é 443 para Https:
 -  login.microsoftonline.com/*:443
--  *.vault.azure.net/*:443
+-  *.vault.azure.net/* :443
   
 **Quais são os níveis de permissão mínimos necessários para cada etapa da configuração em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]?**  
  Embora você possa executar todas as etapas de configuração como um membro da função de servidor fixa sysadmin, o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] incentiva você a minimizar as permissões utilizadas. A lista a seguir define o nível mínimo de permissão para cada ação.  
@@ -181,7 +180,7 @@ Os backups de chaves podem ser restaurados em todas as regiões do Azure, contan
   
 -   Para adicionar uma credencial a um logon, é necessária a permissão `ALTER ANY LOGIN` .  
   
--   Para criar uma chave assimétrica, é exigida uma permissão `CREATE ASYMMETRIC KEY`.  
+-   Para criar uma chave assimétrica, é exigida uma permissão `CREATE ASYMMETRIC KEY` .  
 
 **Como posso alterar meu Active Directory padrão para que o cofre de chaves seja criado na mesma assinatura e o Active Directory como a entidade de serviço que criei para o Conector do [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] ?**
 
@@ -294,7 +293,7 @@ Versão do SQL Server  |Link de instalação redistribuível
 -   Referência dos [Cmdlets do Cofre de Chaves do Azure](/powershell/module/azurerm.keyvault/) do PowerShell  
   
 ## <a name="see-also"></a>Consulte Também  
- [Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md) [Usar o Conector do SQL Server com recursos de criptografia do SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+ [Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Use SQL Server Connector with SQL Encryption Features (Usar o Conector do SQL Server com recursos de criptografia do SQL)](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [Opção de configuração de servidor EKM provider enabled](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Setup Steps for Extensible Key Management Using the Azure Key Vault (Etapas de instalação para o gerenciamento extensível de chaves usando o Cofre de Chaves do Azure)](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
   
