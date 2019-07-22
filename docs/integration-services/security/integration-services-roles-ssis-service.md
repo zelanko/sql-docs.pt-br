@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e2b8a69e22a9765ee67c9c80a625a0093c268f3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 478bdc8d78b9b6740d0b29f3c9bcbd57e08bf195
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65718053"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063700"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Funções do Integration Services (Serviço do SSIS)
 

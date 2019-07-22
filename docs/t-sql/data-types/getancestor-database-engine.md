@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bd3974aee87cc3a9f0549d51988d8b0e8886a1c6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f13f076309cfc1b78ab5b76676cbf7ec3eb82f87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077981"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor (Mecanismo do Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ FROM HumanResources.EmployeeDemo
 WHERE OrgNode.GetAncestor(1) = @CurrentEmployee ;  
 ```  
   
-### <a name="b-returning-the-grandchildren-of-a-parent"></a>b. Retornando os netos de um pai  
+### <a name="b-returning-the-grandchildren-of-a-parent"></a>B. Retornando os netos de um pai  
 `GetAncestor(2)` retorna os funcionários que estão dois níveis abaixo na hierarquia a partir do nó atual. Estes funcionários são os netos do nó atual. O exemplo a seguir usa `GetAncestor(2)`.
   
 ```sql

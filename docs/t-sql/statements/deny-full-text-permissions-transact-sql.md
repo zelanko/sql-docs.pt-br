@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1e66a6a38350e131f24ea8ba1777b89b97cacec2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c5451cddba8a1719e9672c0d10ffe4a62c960d38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114818"
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>Permissões de texto completo DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,10 +51,10 @@ DENY permission [ ,...n ] ON
  *permission*  
  É o nome de uma permissão. Os mapeamentos válidos de permissões para protegíveis são descritos na seção "Comentários", posteriormente neste tópico.  
   
- ON FULLTEXT CATALOG **::**_nome_do_catálogo_de_texto_completo_  
+ ON FULLTEXT CATALOG **::** _nome_do_catálogo_de_texto_completo_  
  Especifica o catálogo de texto completo no qual a permissão está sendo negada. O qualificador de escopo **::** é obrigatório.  
   
- ON FULLTEXT STOPLIST **::**_nome_da_lista_de_palavras_irrelevantes_de_texto_completo_  
+ ON FULLTEXT STOPLIST **::** _nome_da_lista_de_palavras_irrelevantes_de_texto_completo_  
  Especifica a lista de palavras irrelevantes de texto completo em que a permissão está sendo negada. O qualificador de escopo **::** é obrigatório.  
   
  *database_principal*  

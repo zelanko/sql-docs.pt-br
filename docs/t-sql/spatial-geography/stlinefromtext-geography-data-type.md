@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e0c05bde-077d-4ce2-b4ec-8861db9b996d
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: a35f92c3565ea63c115a4d1ecfd0f09c19fe86a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19572f60d1b13dd7b9e1e03c6d2b75f707962569
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936687"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952252"
 ---
 # <a name="stlinefromtext-geography-data-type"></a>STLineFromText (tipo de dados de geografia)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *linestring_tagged_text*  
- É a representação WKT da instância de **geographyLineString** que você deseja retornar. *linestring_tagged_text* é uma expressão **nvarchar(max)**.  
+ É a representação WKT da instância de **geographyLineString** que você deseja retornar. *linestring_tagged_text* é uma expressão **nvarchar(max)** .  
   
  *SRID*  
  É uma expressão **int** que representa o SRID (ID de referência espacial) da instância de **geographyLineString** que você deseja retornar.  

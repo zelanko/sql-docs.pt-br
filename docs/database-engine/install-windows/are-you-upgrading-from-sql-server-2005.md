@@ -10,13 +10,12 @@ ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: jroth
-ms.openlocfilehash: ab4e56eb51a03d9c1bdbc8e0c4f87f98ddfbf57d
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: 62389a315befed467497f87dd3b86c3f52171e91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051215"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005-2008-or-2008r2"></a>Você está atualizando do SQL Server 2005, 2008 ou 2008R2?
 

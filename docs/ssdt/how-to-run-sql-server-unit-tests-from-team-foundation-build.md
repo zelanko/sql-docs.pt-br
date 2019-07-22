@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b566905aa6814d10c1551b9d96562a28b11da944
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c4008d88a2a353ead1ddd16f678c4167ff6714d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035095"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Como fazer: executar testes de unidade do SQL Server no Team Foundation Build
 Você pode usar o Team Foundation Build para executar os testes de unidade do SQL Server como parte de um teste de verificação da compilação (BVT). Você pode configurar os testes de unidade para implantar o banco de dados, gerar dados de teste e executar os testes selecionados. Se você não estiver familiarizado com o Team Foundation Build, analise as seguintes informações antes de seguir os procedimentos deste tópico:  

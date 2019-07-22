@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b838503365dde968f938efb46c940f3a66ce4357
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d17120b0c13ab1910d4636a376963f5ec74813eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098454"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035024"
 ---
 # <a name="how-to-run-sql-server-unit-tests"></a>Como fazer: Executar testes de unidade do SQL Server
 Você pode executar um teste de unidade do SQL Server de várias maneiras, usando várias janelas e a janela Prompt de Comando.  
