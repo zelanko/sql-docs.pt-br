@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5d923201600adcf0e1bb4026e3feee28dea7e97
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 37da86b825ee68be83d0aa653005a1ea12db5ed7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050813"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>Permissões de esquema GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +78,7 @@ AS *granting_principal*
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Uma combinação das permissões ALTER e REFERENCE em alguns casos pode permitir ao usuário autorizado exibir dados ou executar funções não autorizadas. Por exemplo: um usuário com permissão ALTER em uma tabela e permissão REFERENCE em uma função pode criar uma coluna computada em uma função e fazer com que seja executada. Nesse caso, o usuário também precisará da permissão SELECT na coluna computada.  
+>  Uma combinação das permissões ALTER e REFERENCE em alguns casos pode permitir ao usuário autorizado exibir dados ou executar funções não autorizadas. Por exemplo: Um usuário com a permissão ALTER em uma tabela e a permissão REFERENCE em uma função pode criar uma coluna computada em uma função e fazer com que ela seja executada. Nesse caso, o usuário também precisará da permissão SELECT na coluna computada.  
   
  Um esquema é um item protegível em nível de banco de dados contido no banco de dados pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser concedidas em um esquema estão listadas abaixo, junto com as permissões mais gerais que as contêm implicitamente.  
   
@@ -139,7 +138,7 @@ AS *granting_principal*
 GRANT INSERT ON SCHEMA :: HumanResources TO guest;  
 ```  
   
-### <a name="b-granting-select-permission-on-schema-person-to-database-user-wiljo"></a>b. Concedendo a permissão SELECT no esquema Person para o usuário de banco de dados WilJo  
+### <a name="b-granting-select-permission-on-schema-person-to-database-user-wiljo"></a>B. Concedendo a permissão SELECT no esquema Person para o usuário de banco de dados WilJo  
   
 ```  
 GRANT SELECT ON SCHEMA :: Person TO WilJo WITH GRANT OPTION;  

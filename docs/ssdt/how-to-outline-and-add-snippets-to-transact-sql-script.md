@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 842fb0e2b111b5bcd17b26d13db15e47aa5c1ad1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8ab757cac0622c5674bb2008b5bafbbc07c182c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035122"
 ---
 # <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Como fazer: Estruturar tópicos e adicionar snippets a scripts Transact-SQL
 O SQL Server Data Tools inclui uma biblioteca de códigos que consiste em snippets de código prontos para serem inseridos no seu aplicativo. Cada snippet executa uma tarefa de script completa, como a criação de uma função, tabela, gatilho, índice, exibição, tipo de dados definido pelo usuário etc. Você pode inserir um snippet em seu código-fonte com alguns cliques do mouse. Estes snippets aumentam sua produtividade reduzindo a quantidade de tempo você gasta digitando.  

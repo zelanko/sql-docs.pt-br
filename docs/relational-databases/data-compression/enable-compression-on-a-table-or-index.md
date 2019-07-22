@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 07a13b9a2d6cf54922e0e2ca5d718909a61fd831
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 83cb5bb61d64cab7dc9d45b5aae871a863368f3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007170"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Permitir a compactação em uma tabela ou índice
 
@@ -74,7 +73,7 @@ ms.locfileid: "52502990"
   
 2.  Para compactar um índice, expanda a tabela que contém o índice que você deseja compactar e expanda a pasta **Índices** .  
   
-3.  Clique com o botão direito do mouse na tabela ou no índice a ser compactado, aponte para **Armazenamento** e selecione **Gerenciar Compactação...**.  
+3.  Clique com o botão direito do mouse na tabela ou no índice a ser compactado, aponte para **Armazenamento** e selecione **Gerenciar Compactação...** .  
   
 4.  No Assistente de Compactação de Dados, na página **Bem-vindo ao Assistente de Compactação de Dados** , clique em **Avançar**.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "52502990"
   
      As seguintes opções estão disponíveis na página **Selecionar Tipo de Compactação** :  
   
-     Caixa de seleção**Usar o mesmo tipo de compactação para todas as partições**   
+     Caixa de seleção**Usar o mesmo tipo de compactação para todas as partições**  
      Selecione para configurar a mesma configuração de compactação para todas as partições. Isso habilita a caixa de seleção e desabilita a coluna **Tipo de Compactação** na grade. Quando selecionadas, as opções na lista adjacente são **Nenhum**, **Linha**e **Página**.  
   
      **Número da partição**  
@@ -147,13 +146,13 @@ ms.locfileid: "52502990"
   
                 -   Se você selecionar **Dia**, digite o dia do mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se desejar que a agenda de trabalho seja executada no 15º dia do mês a cada dois meses, selecione **Dia** e digite "15" na primeira caixa e "2" na segunda caixa. Observe que o maior número permitido na segunda caixa é "99".  
   
-                -   Se você selecionar **O**, selecione o dia específico da semana no mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no último dia da semana do mês a cada dois meses, selecione **Dia**, selecione **último** na primeira lista e **dia da semana** na segunda lista e depois digite “2” na última caixa. Você também pode selecionar **primeiro**, **segundo**, **terceiro**ou **quarto**, bem como dias específicos da semana (por exemplo: domingo ou quarta-feira) nas primeiras duas listas. Observe que o maior número permitido na última caixa é "99".  
+                -   Se você selecionar **O**, selecione o dia específico da semana no mês que você deseja que a agenda de trabalho seja executada e a frequência com que a agenda de trabalho se repete em meses. Por exemplo, se você desejar que a agenda de trabalho seja executada no último dia da semana do mês a cada dois meses, selecione **Dia**, selecione **último** na primeira lista e **dia da semana** na segunda lista e depois digite “2” na última caixa. Você também pode selecionar **primeiro**, **segundo**, **terceiro** ou **quarto**, bem como dias específicos da semana (por exemplo: domingo ou quarta-feira) nas primeiras duas listas. Observe que o maior número permitido na última caixa é "99".  
   
         2.  Em **Frequência diária**, especifique a frequência com que a agenda de trabalho se repete no dia da execução da agenda de trabalho:  
   
             -   Se você selecionar **Ocorre uma vez às**, digite a hora específica do dia em que a agenda de trabalho deve ser executada na caixa **Ocorre uma vez às** . Digite a hora, os minutos e os segundos do dia, bem como AM ou PM.  
   
-            -   Se você selecionar **Ocorre a cada**, especifique a frequência com que a agenda de trabalho é executada durante o dia escolhido em **Frequência**. Por exemplo, se você desejar que o agendamento de trabalho se repita a cada 2 horas durante o dia em que é executado, selecione **Ocorre a cada**, digite “2” na primeira caixa e selecione **hora(s)** na lista. Nessa lista, você pode selecionar também **minuto(s)** e **segundo(s)**. Observe que o maior número permitido na primeira caixa é "100".  
+            -   Se você selecionar **Ocorre a cada**, especifique a frequência com que a agenda de trabalho é executada durante o dia escolhido em **Frequência**. Por exemplo, se você desejar que o agendamento de trabalho se repita a cada 2 horas durante o dia em que é executado, selecione **Ocorre a cada**, digite "2" na primeira caixa e selecione **hora(s)** na lista. Nessa lista, você pode selecionar também **minuto(s)** e **segundo(s)** . Observe que o maior número permitido na primeira caixa é "100".  
   
                  Na caixa **Iniciando às** , digite a hora em que a agenda de trabalho deve começar a ser executada. Na caixa **Terminando às** , digite a hora em que a agenda de trabalho deve parar de se repetir. Digite a hora, os minutos e os segundos do dia, bem como AM ou PM.  
   

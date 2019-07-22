@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 22fd8a3e1518c535e61321255fda9c2a3f279ab1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6bfd2e82d861ad36499de86688f346135d2d516b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114566"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do ODBC (Assistente de Importação e Exportação do SQL Server)
 

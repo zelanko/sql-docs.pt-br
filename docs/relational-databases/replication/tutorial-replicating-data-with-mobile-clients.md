@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f967453ff629a7827d47b25085edd4aa304b1aa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7e7a186efb5da3ef509f3ada02e301d0777ffd2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895364"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutorial: Configurar a replicação entre um servidor e clientes móveis (mesclagem)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +107,7 @@ Nesta seção, você criará uma publicação de mesclagem usando o [!INCLUDE[ss
 
     
   
-10. Na página **Filtrar Linhas da Tabela**, selecione **Funcionário (Recursos Humanos)**, **Adicionar** e, em seguida, **Adicionar Junção para Estender o Filtro Selecionado**.  
+10. Na página **Filtrar Linhas da Tabela**, selecione **Funcionário (Recursos Humanos)** , **Adicionar** e, em seguida, **Adicionar Junção para Estender o Filtro Selecionado**.  
   
     A. Na caixa de diálogo **Adicionar Junção**, selecione **Sales.SalesOrderHeader** em **Tabela unida**. Selecione **Gravar a instrução de junção manualmente** e conclua a instrução de junção da seguinte maneira:  
   
@@ -139,7 +138,7 @@ Nesta seção, você criará uma publicação de mesclagem usando o [!INCLUDE[ss
 
     ![Seleção para criar um instantâneo imediatamente](media/tutorial-replicating-data-with-mobile-clients/snapshotagent.png)
   
-22. Na página **Segurança do Agente**, selecione **Configurações de Segurança**. Insira <*Nome_do_Computador_do_Editor*>**\repl_snapshot** na caixa **Conta de Processo**, forneça a senha para essa conta e selecione **OK**. Selecione **Avançar**.  
+22. Na página **Segurança do Agente**, selecione **Configurações de Segurança**. Insira <*Nome_do_Computador_do_Editor*> **\repl_snapshot** na caixa **Conta de Processo**, forneça a senha para essa conta e selecione **OK**. Selecione **Avançar**.  
 
     ![Seleções para configurar a segurança do Agente de Instantâneo](media/tutorial-replicating-data-with-mobile-clients/snapshotagentsecurity.png)
   
@@ -167,7 +166,7 @@ Nesta seção, você criará uma publicação de mesclagem usando o [!INCLUDE[ss
   
    A. Selecione a página **Lista de Acesso à Publicação** e **Adicionar**. 
   
-   B. Na caixa de diálogo **Adicionar Acesso à Publicação**, selecione <*Nome_do_Computador_do_Publicador*>**\repl_merge** e selecione **OK**. Selecione **OK** novamente. 
+   B. Na caixa de diálogo **Adicionar Acesso à Publicação**, selecione <*Nome_do_Computador_do_Publicador*> **\repl_merge** e selecione **OK**. Selecione **OK** novamente. 
 
    ![Seleções para adicionar o logon do Agente de Mesclagem](media/tutorial-replicating-data-with-mobile-clients/mergepal.png) 
 
@@ -205,7 +204,7 @@ Nesta seção, você adicionará uma assinatura à publicação de mesclagem cri
 
    ![Seleções para adicionar um banco de dados ao assinante](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
-8. Na página **Segurança do Agente de Mesclagem**, selecione o botão de reticências (**...**). Digite <*Nome_do_Computador_do_Assinante*>**\repl_merge** na caixa **Conta de processo** e forneça a senha para essa conta. Selecione **OK**, **Avançar** e, em seguida, **Avançar** novamente.  
+8. Na página **Segurança do Agente de Mesclagem**, selecione o botão de reticências ( **...** ). Digite <*Nome_do_Computador_do_Assinante*> **\repl_merge** na caixa **Conta de processo** e forneça a senha para essa conta. Selecione **OK**, **Avançar** e, em seguida, **Avançar** novamente.  
 
    ![Seleções para segurança do Agente de Mesclagem](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 
@@ -227,7 +226,7 @@ Nesta seção, você adicionará uma assinatura à publicação de mesclagem cri
   
 1. Conecte-se ao assinante no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Expanda **Segurança**, clique com o botão direito do mouse em **Logons** e, em seguida, selecione **Novo Logon**.  
   
-   Na página **Geral**, selecione **Pesquisar** e, em seguida, insira <*Nome_do_Computador_do_Assinante*>**\repl_merge** na caixa **Insira o Nome do Objeto**. Selecione **Verificar Nomes** e, em seguida, selecione **OK**. 
+   Na página **Geral**, selecione **Pesquisar** e, em seguida, insira <*Nome_do_Computador_do_Assinante*> **\repl_merge** na caixa **Insira o Nome do Objeto**. Selecione **Verificar Nomes** e, em seguida, selecione **OK**. 
     
    ![Seleções para configurar o logon](media/tutorial-replicating-data-with-mobile-clients/sublogin.png)
   

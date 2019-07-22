@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0cf5f24bc4c330c40323ee18189cc10b0aed080e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 22a1a5d0a4a1e3bc9e1b7afad1aafeaa01e63ac5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951202"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Fazendo backup de um banco de dados com tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

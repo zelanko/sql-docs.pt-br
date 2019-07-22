@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c14818fc3a89800c681aa6eb4a527e281ed91957
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a079ce4bc9bd1ee4014cf2b12a03b5f112d6ab61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099860"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Arquitetura de sistema do Serviço Change Data Capture para Oracle da Attunity
 

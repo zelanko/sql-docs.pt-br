@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8925e71fb7ed3ea6d53f29b438602cae65820fa6
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: cd783ac6f5f6d8c7a9e561614dbe2c06053f758a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050674"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>Permissões de objeto do sistema GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ GRANT VIEW SERVER STATE to Sylvester1;
 GO  
 ```  
   
-### <a name="b-granting-execute-permission-on-an-extended-stored-procedure"></a>b. Concedendo a permissão EXECUTE em um procedimento armazenado estendido  
+### <a name="b-granting-execute-permission-on-an-extended-stored-procedure"></a>B. Concedendo a permissão EXECUTE em um procedimento armazenado estendido  
  O exemplo a seguir concede a permissão `EXECUTE` em `xp_readmail` para `Sylvester1`.  
   
 ```  

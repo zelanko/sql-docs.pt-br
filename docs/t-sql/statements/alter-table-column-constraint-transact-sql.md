@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5190dcadfcef62bf01fdf8208fc102d6cfdd078a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 25d7cc42f65e762ad0a83546aeeb5621c094636c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070458"
 ---
 # <a name="alter-table-columnconstraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,19 +83,19 @@ ms.locfileid: "54327477"
   
  Se uma restrição ou índice clusterizado já existir em uma tabela, CLUSTERED não poderá ser especificado. Se uma restrição ou índice clusterizado já existir em uma tabela, as restrições PRIMARY KEY usam como padrão NONCLUSTERED.  
   
- Colunas que são dos tipos de dados **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** ou **image** não podem ser especificadas como colunas de para índice.  
+ Colunas que são dos tipos de dados **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml** ou **image** não podem ser especificadas como colunas de para índice.  
   
- WITH FILLFACTOR **=**_fillfactor_  
+ WITH FILLFACTOR **=** _fillfactor_  
  Especifica o quanto o [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve preencher cada página de índice usada para armazenar os dados de índice. Os valores de fator de preenchimento especificados pelo usuário podem ser de 1 a 100. Se um valor não for especificado, o padrão será 0.  
   
 > [!IMPORTANT]  
 >  A documentação de WITH FILLFACTOR = *fillfactor* como a única opção de índice aplicável às restrições PRIMARY KEY ou UNIQUE é mantida para fins de compatibilidade com versões anteriores, mas não será documentada dessa maneira em versões futuras. Outras opções de índice podem ser especificadas na cláusula [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) de ALTER TABLE.  
   
- ON { _partition_scheme_name_**(**_partition_column_name_**)** | *filegroup* | **"** default **"** } **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ ON { _partition_scheme_name_ **(** _partition_column_name_ **)**  | *filegroup* |  **"** default **"** } **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica o local de armazenamento do índice criado para a restrição. Se *partition_scheme_name* for especificado, o índice será particionado e as partições serão mapeadas para os grupos de arquivos especificados pelo *partition_scheme_name*. Se *filegroup* for especificado, o índice será criado no grupo de arquivos nomeado. Se **"** default **"** for especificado ou se ON não for especificado de modo algum, o índice será criado no mesmo grupo de arquivos que a tabela. Se ON for especificado quando um índice clusterizado for adicionado a uma restrição PRIMARY KEY ou UNIQUE, a tabela inteira será movida para o grupo de arquivos especificado quando o índice clusterizado for criado.  
   
- Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e precisa ser delimitado, como em ON **"** default **"** ou ON **[** default **]**. Se **"** default **"** for especificado, a opção QUOTED_IDENTIFIER deverá ser ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ Nesse contexto, default não é uma palavra-chave. É um identificador do grupo de arquivos padrão e precisa ser delimitado, como em ON **"** default **"** ou ON **[** default **]** . Se **"** default **"** for especificado, a opção QUOTED_IDENTIFIER deverá ser ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  FOREIGN KEY REFERENCES  
  É uma restrição que fornece integridade referencial para obter dados na coluna. Restrições FOREIGN KEY requerem que cada valor na coluna exista na coluna especificada na tabela referenciada.  

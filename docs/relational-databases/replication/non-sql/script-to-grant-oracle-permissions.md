@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f24cf20be07ac4b632f4daa6f7f7e35278452f19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8158aed0298afe295e82a1b240a3f24ec05b1647
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840944"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100015"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Script para conceder permissões da Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  O script fornecido neste tópico é usado durante a configuração de um banco de dados Oracle que publicará dados usando a replicação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Esse script também está disponível no seguinte diretório após a instalação: *\<unidade>*:\\\Arquivos de Programas\Microsoft SQL Server\\\*\<InstanceName>* \MSSQL\Install\oracleadmin.sql. Para obter mais informações sobre como configurar o banco de dados Oracle, consulte [Configurar um Publicador Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
+  O script fornecido neste tópico é usado durante a configuração de um banco de dados Oracle que publicará dados usando a replicação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Esse script também está disponível no seguinte diretório após a instalação: *\<unidade>* :\\\Arquivos de Programas\Microsoft SQL Server\\\ *\<InstanceName>* \MSSQL\Install\oracleadmin.sql. Para obter mais informações sobre como configurar o banco de dados Oracle, consulte [Configurar um Publicador Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
 > [!NOTE]  
 >  Este script inclui a instrução `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`que é necessária para os gatilhos usados pela replicação transacional. Se você usar somente replicação de instantâneos, remova essa linha do script.  

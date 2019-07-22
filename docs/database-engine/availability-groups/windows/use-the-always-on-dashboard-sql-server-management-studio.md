@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: c150f329f41098755a47ebd7395ba83d6a33aaa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 802fcd6ad0bead99a56f3bd5f8c71639a42a0cc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013536"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Usar o painel do grupo de disponibilidade Always On (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

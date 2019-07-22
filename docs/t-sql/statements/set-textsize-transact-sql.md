@@ -23,22 +23,21 @@ helpviewer_keywords:
 ms.assetid: 787154a6-39a6-4dd6-a6d0-67b4364f95d5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f23352e40c7b068eb0341c97c5f86d1b6f07ad66
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b7e0a949e132f01ce82e46a6e8b4c1d761c1a52a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100051"
 ---
 # <a name="set-textsize-transact-sql"></a>SET TEXTSIZE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Especifica o tamanho dos dados **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext** e **image** retornados por uma instrução SELECT.  
+  Especifica o tamanho dos dados **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext** e **image** retornados por uma instrução SELECT.  
   
 > [!IMPORTANT]
->  Os tipos de dados **ntext**, **text** e **image** serão removidos em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses tipos de dados em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que os utilizam atualmente. Em vez disso, use **nvarchar(max)**, **varchar(max)** e **varbinary(max)** .  
+>  Os tipos de dados **ntext**, **text** e **image** serão removidos em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses tipos de dados em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que os utilizam atualmente. Em vez disso, use **nvarchar(max)** , **varchar(max)** e **varbinary(max)** .  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +49,7 @@ SET TEXTSIZE { number }
   
 ## <a name="arguments"></a>Argumentos  
  *number*  
- É o tamanho dos dados **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext** ou **image** em bytes. *number* é um inteiro com um valor máximo de 2147483647 (2 GB).  Um valor -1 indica um tamanho ilimitado. Um valor 0 redefine o tamanho para o valor padrão de 4 KB.  
+ É o tamanho dos dados **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext** ou **image** em bytes. *number* é um inteiro com um valor máximo de 2147483647 (2 GB).  Um valor -1 indica um tamanho ilimitado. Um valor 0 redefine o tamanho para o valor padrão de 4 KB.  
   
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (10.0 e superior) e o Driver ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificam automaticamente `-1` (ilimitado) durante a conexão.  
   

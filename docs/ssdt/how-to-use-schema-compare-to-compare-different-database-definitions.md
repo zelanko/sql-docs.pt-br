@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cd48c91bee175e3cc2bdb0031d70a9d8e68d95c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce83808ac5953902f8f655c619f87feeffa4e8c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097510"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Como fazer: Usar comparação de esquema para comparar definições de banco de dados diferentes
 O SQL Server Data Tools (SSDT) inclui um utilitário de Comparação de Esquemas que você poderá usar para comparar duas definições de banco de dados.  A origem e o destino da comparação podem ser qualquer combinação do banco de dados conectado, do projeto de banco de dados do SQL Server, do instantâneo ou do arquivo .dacpac.  Os resultados da comparação aparecem como um conjunto de ações que devem ser executadas com o destino para torná-lo igual à origem.  Uma vez que a comparação esteja concluída, você poderá atualizar o destino diretamente (se o destino for um projeto ou um banco de dados) ou gerar um script de atualização que tenha o mesmo efeito.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 07b4c7d08816d84f3e1273f3fcdcf5324602cfc0
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 80c62c0048f40ba945d3204c414180be9f8e0d7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995648"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, objeto Transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

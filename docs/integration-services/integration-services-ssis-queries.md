@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 706ea983c2fcbd8607ed64f8257d96ad89189d27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 338f515547b146d67eeec5d288cce3d433ae2aac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057427"
 ---
 # <a name="integration-services-ssis-queries"></a>Consultas do SSIS (Integration Services)
 

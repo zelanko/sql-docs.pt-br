@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2ddd236ee002015390336c25039158bba70a998
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: c129998db40a64507b119b8392abcb56cc119a8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001687"
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversão de tipo de dados (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
