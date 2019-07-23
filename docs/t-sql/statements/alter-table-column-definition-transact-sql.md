@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f18a3d809be2302732fa4e4aaeaa1b1e19cbb2dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb3802578b7eb500d6b5fd64725a1a03f86fb9c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68232149"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +84,7 @@ column_name <data_type>
  *column_name*  
  É o nome da coluna a ser alterada, adicionada ou removida. *column_name* pode consistir em 1 a 128 caracteres. Para novas colunas, criadas com um tipo de dados timestamp, *column_name* pode ser omitido. Se nenhum *column_name* é especificado para uma coluna do tipo de dados **timestamp**, o nome **timestamp** é usado.  
   
- [ _type_schema_name_**.** ] *type_name*  
+ [ _type_schema_name_ **.** ] *type_name*  
  É o tipo de dados para a coluna adicionada e o esquema ao qual ela pertence.  
   
  *type_name* pode ser:  
@@ -125,7 +124,7 @@ DOCUMENT
  Aplica-se apenas ao tipo de dados **xml** para associar uma coleção de esquemas XML ao tipo. Antes de digitar uma coluna **xml** em um esquema, o esquema deve ser criado primeiramente no banco de dados com [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).  
   
 FILESTREAM  
- Especifica, opcionalmente, o atributo de armazenamento FILESTREAM para a coluna que tem um *type_name* igual a **varbinary(max)**.  
+ Especifica, opcionalmente, o atributo de armazenamento FILESTREAM para a coluna que tem um *type_name* igual a **varbinary(max)** .  
   
  Quando FILESTREAM é especificado para uma coluna, a tabela também deve ter uma coluna do tipo de dados **uniqueidentifier** que tem o atributo ROWGUIDCOL. Essa coluna não deve permitir valores nulos e deve ter uma restrição de coluna única UNIQUE ou PRIMARY KEY. O valor GUID da coluna deve ser fornecido por um aplicativo durante a inserção de dados, ou por uma restrição DEFAULT que utilize a função NEWID ().  
   
@@ -163,7 +162,7 @@ Se isso for usado quando a coluna relacionada também não estiver sendo adicion
 IDENTITY  
  Especifica que a coluna nova é uma coluna de identidade. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] fornece um valor exclusivo e de incremento para a coluna. Quando você adiciona colunas de identificador a tabelas existentes, os números de identidade são adicionados às linhas existentes da tabela, com os valores de semente e de incremento. A ordem em que as linhas são atualizadas não é garantida. Os números de identidade também são gerados para todas as linhas adicionadas.  
   
- As colunas de identidade, em geral, são usadas juntamente com restrições PRIMARY KEY para servir de identificador exclusivo de linha para a tabela. A propriedade IDENTITY pode ser atribuída a uma coluna **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** ou **numeric(p,0)**. Apenas uma coluna de identidade pode ser criada por tabela. A palavra-chave DEFAULT e os padrões associados não podem ser usados com uma coluna de identidade. Ambos os valores de semente e de incremento devem ser identificados, ou nenhum dos dois. Se nenhum dos dois for especificado, o padrão será (1,1).  
+ As colunas de identidade, em geral, são usadas juntamente com restrições PRIMARY KEY para servir de identificador exclusivo de linha para a tabela. A propriedade IDENTITY pode ser atribuída a uma coluna **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** ou **numeric(p,0)** . Apenas uma coluna de identidade pode ser criada por tabela. A palavra-chave DEFAULT e os padrões associados não podem ser usados com uma coluna de identidade. Ambos os valores de semente e de incremento devem ser identificados, ou nenhum dos dois. Se nenhum dos dois for especificado, o padrão será (1,1).  
   
 > [!NOTE]  
 >  Você não pode modificar uma coluna de tabela existente para adicionar a propriedade IDENTITY.  
@@ -215,7 +214,7 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
   
 ALGORITHM  
 **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
-Deve ser **'AEAD_AES_256_CBC_HMAC_SHA_256'**.  
+Deve ser **'AEAD_AES_256_CBC_HMAC_SHA_256'** .  
   
  Para mais informações, incluindo restrições de recursos, veja [Always Encrypted &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   
