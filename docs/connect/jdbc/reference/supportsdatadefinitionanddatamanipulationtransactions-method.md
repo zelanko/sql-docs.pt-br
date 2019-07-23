@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fe91c601-9bb3-4364-9131-575a94d3a1b3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6f0a794d8551d546efbc1933ab93a22aeb829fbd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6f6fd9ac18586c72d1be1a6a4ae5c545b0633d94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794222"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969527"
 ---
 # <a name="supportsdatadefinitionanddatamanipulationtransactions-method-sqlserverdatabasemetadata"></a>Método supportsDataDefinitionAndDataManipulationTransactions (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsDataDefinitionAndDataManipulationTransactions()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se houver suporte. Caso contrário, **false**.  
+ **true** se houver suporte. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método suportsDataDefinitionAndDataManipulationTransactions é especificado pelo método suportsDataDefinitionAndDataManipulationTransactions na interface DatabaseMetadata.  
+ Esse método suportsDataDefinitionAndDataManipulationTransactions é especificado pelo método suportsDataDefinitionAndDataManipulationTransactions na interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

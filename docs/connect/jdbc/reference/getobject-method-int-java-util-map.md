@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 164532be-7ed6-40fa-a273-dece4c8d72c4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 60d12b2fba390418831c56da96079428dbae6b8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5106bddd6cf71401be0f4a71dfaaf0406901a6cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787693"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981243"
 ---
 # <a name="getobject-method-int-javautilmap"></a>Método getObject (int, java.util.Map)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1568aef4-f4c4-40a0-a1ab-9c106905bd92
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bf9c0696c2169ee9b0dd1af198fcb50333c5d9ca
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 08b919ec6b626cd61b757b380d24efffcada0d55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953101"
 ---
 # <a name="getclientinfoproperties-method-sqlserverdatabasemetadata"></a>Método getClientInfoProperties (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,16 +30,16 @@ public java.sql.ResultSet getClientInfoProperties()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- Um objeto de conjunto de resultados.  
+ Um objeto ResultSet.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getClientInfoProperties é especificado pelo método getClientInfoProperties na interface DatabaseMetadata.  
+ Esse método getClientInfoProperties é especificado pelo método getClientInfoProperties na interface java. Sql. DatabaseMetaData.  
   
 > [!NOTE]  
->  Esse método retorna um conjunto de resultados vazio. O driver dá suporte apenas a configuração de **applicationName** e define o **applicationName** somente em tempo de conexão. O SQL Server não dá suporte à atualização das informações de aplicativo cliente depois que a conexão é estabelecida.  
+>  Esse método retorna um conjunto de resultados vazio. O driver dá suporte à configuração somente do **ApplicationName** e define o **ApplicationName** somente no momento da conexão. O SQL Server não dá suporte à atualização das informações de aplicativo cliente depois que a conexão é estabelecida.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   

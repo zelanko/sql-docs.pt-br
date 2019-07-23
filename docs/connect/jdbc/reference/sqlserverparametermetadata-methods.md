@@ -10,17 +10,16 @@ ms.topic: conceptual
 ms.assetid: c72ad4b1-8363-4e0d-af7a-236998dc4a5c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7931e5a3e760f6e01406118e0bcd2abeb80b05bb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b4806eb5b6e6b3f8c739ddbbb6e7d9e02c4ba7c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970888"
 ---
 # <a name="sqlserverparametermetadata-methods"></a>Métodos SQLServerParameterMetaData
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Para obter informações sobre os membros da [SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md), consulte [membros de SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-members.md).  
+  Para obter informações sobre os membros de [SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md), consulte [membros do SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-members.md).  
   
   

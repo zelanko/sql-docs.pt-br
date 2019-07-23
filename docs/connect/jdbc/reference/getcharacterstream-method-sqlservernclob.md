@@ -10,25 +10,24 @@ ms.topic: conceptual
 ms.assetid: 835e9cb8-5fd5-4a05-aa47-59ae3ed1ae6d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ca8ae9c3193f72e7169469f54196c254e915d0f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7a16568d3237f85ecd53ac7ad936f6c46ed0d35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796053"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953209"
 ---
 # <a name="getcharacterstream-method-sqlservernclob"></a>Método getCharacterStream (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o **NCLOB** valor designado por este **NCLOB** do objeto como um **java.io.Reader** objeto.  
+  Recupera o valor **NClob** designado por este objeto **Java. Sql. NClob** como um objeto **Java. IO. Reader** .  
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
 |Nome|Descrição|  
 |----------|-----------------|  
 |[Método getCharacterStream &#40;&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-braces-sqlservernclob.md)|Retorna os dados de **NCLOB** como um objeto **Reader** ou como um fluxo de caracteres.|  
-|[Método getCharacterStream &#40;muito, muito&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-long-long-sqlservernclob.md)|Recupera os dados de **NCLOB** como um objeto **Reader** ou como um fluxo de caracteres com uma posição e um comprimento especificados.|  
+|[método &#40;getCharacterStream longo, Long&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-long-long-sqlservernclob.md)|Recupera os dados de **NCLOB** como um objeto **Reader** ou como um fluxo de caracteres com uma posição e um comprimento especificados.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

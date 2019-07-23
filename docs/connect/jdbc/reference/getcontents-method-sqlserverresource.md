@@ -1,5 +1,5 @@
 ---
-title: Método getContents (SQLServerResource) | Microsoft Docs
+title: Método getconters (SQLServerResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7f25b8e0-a9fb-496f-aa05-84c5fdc9b49f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dc0c113f0f72b818ec5155cf4a88b1ae2b574336
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a24ec2df142b613c16a22d4c936884e369782f6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984250"
 ---
 # <a name="getcontents-method-sqlserverresource"></a>Método getContents (SQLServerResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ protected java.lang.Object[][] getContents()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- Uma matriz multidimensional do **objeto** valores.  
+ Uma matriz multidimensional de valores de **objeto** .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-methods.md)   

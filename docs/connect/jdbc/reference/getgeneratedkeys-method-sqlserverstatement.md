@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a3325950-0e81-4ae8-aa0c-e1f6d371adcd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e81fe589ed70f4d3f230713290f1d7f9b338ea67
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d47ff96fe493053e7a953cfbae53e52be95a0d62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982945"
 ---
 # <a name="getgeneratedkeys-method-sqlserverstatement"></a>Método getGeneratedKeys (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,15 +35,15 @@ public final java.sql.ResultSet getGeneratedKeys()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- Um objeto de conjunto de resultados.  
+ Um objeto ResultSet.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getGeneratedKeys é especificado pelo método getGeneratedKeys na interface Statement.  
+ Esse método getGeneratedKeys é especificado pelo método getGeneratedKeys na interface java. Sql. Statement.  
   
- Para obter mais informações sobre como usar esse método, consulte [usando chaves de geradas automaticamente](../../../connect/jdbc/using-auto-generated-keys.md).  
+ Para obter mais informações sobre como usar esse método, consulte [usando chaves geradas automaticamente](../../../connect/jdbc/using-auto-generated-keys.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

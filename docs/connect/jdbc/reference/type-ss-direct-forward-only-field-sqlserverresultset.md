@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f8eb2fc2-f624-4fd5-a408-ae4bb1de4913
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d57b1066027937450a6c2942a163cc6f1fc25ebf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6717c68136614ddff91f852426284915fcd1f6bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784994"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968447"
 ---
 # <a name="typessdirectforwardonly-field-sqlserverresultset"></a>Campo TYPE_SS_DIRECT_FORWARD_ONLY (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public static final int TYPE_SS_DIRECT_FORWARD_ONLY
 ```  
   
 ## <a name="field-value"></a>Valor do campo  
- Uma **int** valor de 2003.  
+ Um valor **int** de 2003.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

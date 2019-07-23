@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7de05cf4-3a48-4c60-9a1b-6ad2ae43d258
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 89741f02e9a2afa7c1dc8de6f76f599c70a5a45a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45361c22d1e453b12f8bedf2fba2a4c10f02de0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779862"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974190"
 ---
 # <a name="setint-method-sqlservercallablestatement"></a>Método setInt (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void setInt(java.lang.String sCol,
   
  *i*  
   
- Uma **int** valor.  
+ Um valor **int** .  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

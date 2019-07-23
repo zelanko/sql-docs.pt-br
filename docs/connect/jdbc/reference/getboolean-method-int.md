@@ -1,5 +1,5 @@
 ---
-title: Método getBoolean (int) | Microsoft Docs
+title: Método GetBoolean (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4d9db847-df22-40ab-8a5c-ec9158c576ca
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d7909fcf3dd8596086f6d32750b23d70c986a62d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a1f83c94559eeedba5ab01e2ffa1835215d40af9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953664"
 ---
 # <a name="getboolean-method-int"></a>Método getBoolean (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

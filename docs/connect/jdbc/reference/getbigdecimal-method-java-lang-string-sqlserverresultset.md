@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b0ded929-d5f5-4573-bf75-ce5bd32328a5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d753197b6b74dd7a7100906a3dd43d797f774f91
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 985dbed5d9144fab86e934f81b0300c61469165e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953844"
 ---
 # <a name="getbigdecimal-method-javalangstring-sqlserverresultset"></a>Método getBigDecimal (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.math.BigDecimal getBigDecimal(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getBigDecimal é especificado pelo método getBigDecimal na interface do resultset.  
+ Esse método getBigDecimal é especificado pelo método getBigDecimal na interface java. Sql. ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método getBigDecimal &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)   

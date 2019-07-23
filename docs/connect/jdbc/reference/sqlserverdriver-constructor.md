@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6dc1273c-bb42-414f-8e11-bb4673e7423a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ff562a35d61d6f02b878262f1d1fa0ffe359ed7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8e01c04e8d64ea73a9c89783781c54f40f2d517
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66786089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971269"
 ---
 # <a name="sqlserverdriver-constructor-"></a>Constructor SQLServerDriver ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

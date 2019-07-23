@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3202b88f-ce13-44dd-982c-c6a3b0260378
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2c2647b4737268a1550bd9e45deb9557ecc0f81d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6716f670c42172f1721968124d7113e8f1936ddc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790129"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916373"
 ---
 # <a name="using-an-sql-statement-with-parameters"></a>Usando uma instrução SQL com parâmetros
 

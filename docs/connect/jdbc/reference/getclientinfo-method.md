@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b06a5ced-b760-4c78-b17e-854ce95a1a5c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bccb7e0cee039ad6591acf3805f2ba70c9c7655a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a6b68caa4abff00f113176791d06c6361c5da1e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953113"
 ---
 # <a name="getclientinfo-method-"></a>Método getClientInfo ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public java.util.Properties getClientInfo()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getClientInfo é especificado pelo método getClientInfo na interface do Connection.  
+ Esse método getClientInfo é especificado pelo método getClientInfo na interface java. Sql. Connection.  
   
  O [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] não é compatível com nenhuma propriedade de informações do cliente. Como resultado, esse método retorna um objeto de propriedades vazio.  
   

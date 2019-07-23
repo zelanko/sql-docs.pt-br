@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b08c8ffed61f90260617395f3c4df89b64dd6e0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a19bd01a8ebf54eb3e819bd4a82400b8107e382
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799935"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954022"
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>Método getBestRowIdentifier (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -64,7 +63,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
   
  *nullable*  
   
- **True** para incluir colunas que permitem valor nulas. Caso contrário, **false**.  
+ **true** para incluir colunas anuláveis. Caso contrário, **false**.  
   
 ## <a name="return-value"></a>Valor retornado  
  Um objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
@@ -73,7 +72,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getBestRowIdentifier é especificado pelo método getBestRowIdentifier na interface DatabaseMetadata.  
+ Esse método getBestRowIdentifier é especificado pelo método getBestRowIdentifier na interface java. Sql. DatabaseMetaData.  
   
  O conjunto de resultados retornado pelo método getBestRowIdentifier conterá as seguintes informações:  
   

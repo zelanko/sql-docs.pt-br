@@ -1,5 +1,5 @@
 ---
-title: Usando a classificação de dados com o Microsoft ODBC Driver para SQL Server | Microsoft Docs
+title: Usando a classificação de dados com Microsoft ODBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2018
 ms.prod: sql
@@ -13,22 +13,22 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 0d010bcfc74011cb0e7e2864aeff97e65bf16203
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 75688cc1e5155c83501204f1634d320b9ae7d8be
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637436"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264001"
 ---
 # <a name="data-classification"></a>Classificação de dados
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="overview"></a>Visão geral
-Para fins de gerenciamento de dados confidenciais, o SQL Server e SQL Server do Azure introduziram a capacidade de fornecer colunas de banco de dados com metadados de confidencialidade que permite que o aplicativo cliente lidar com diferentes tipos de dados confidenciais (por exemplo, financeiro, saúde, etc. ) acordo com as políticas de proteção de dados.
+Com a finalidade de gerenciar dados confidenciais, o SQL Server e o SQL Server do Azure introduziram a capacidade de fornecer colunas de dados com metadados de sensibilidade que permitem ao aplicativo cliente lidar com diferentes tipos de informações confidenciais (como saúde, financeira etc. ) de acordo com as políticas de proteção de dados.
 
-Para obter mais informações sobre como atribuir a classificação para colunas, consulte [descoberta de dados SQL e classificação](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017).
+Para obter mais informações sobre como atribuir classificação a colunas, consulte [descoberta e classificação de dados SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017).
 
-Microsoft ODBC Driver 17.2 permite a recuperação de metadados via SQLGetDescField usando o identificador de campo SQL_CA_SS_DATA_CLASSIFICATION.
+O Microsoft ODBC Driver 17,2 permite a recuperação desses metadados por meio de SQLGetDescField usando o identificador de campo SQL_CA_SS_DATA_CLASSIFICATION.
 
 ## <a name="format"></a>Formato
 SQLGetDescField tem a seguinte sintaxe:
@@ -43,7 +43,7 @@ SQLRETURN SQLGetDescField(
      SQLINTEGER *    StringLengthPtr);  
 ```
 *DescriptorHandle*  
- [Entrada] Identificador do IRD (descritor de linha de implementação). Pode ser recuperado por uma chamada para SQLGetStmtAttr com o atributo da instrução SQL_ATTR_IMP_ROW_DESC
+ Entrada Identificador de IRD (descritor de linha de implementação). Pode ser recuperado por uma chamada para SQLGetStmtAttr com o atributo de instrução SQL_ATTR_IMP_ROW_DESC
   
  *RecNumber*  
  [Input] 0
@@ -52,30 +52,30 @@ SQLRETURN SQLGetDescField(
  [Entrada] SQL_CA_SS_DATA_CLASSIFICATION
   
  *ValuePtr*  
- [Saída] Buffer de saída
+ Der Buffer de saída
   
  *BufferLength*  
- [Entrada] Comprimento do buffer de saída em bytes
+ Entrada Comprimento do buffer de saída em bytes
 
- *StringLengthPtr* [saída] ponteiro para o buffer no qual retornar o número total de bytes disponíveis para retornar na *ValuePtr*.
+ *StringLengthPtr* Der Ponteiro para o buffer no qual retornar o número total de bytes disponíveis para retornar em *ValuePtr*.
  
 > [!NOTE]
-> Se o tamanho do buffer for desconhecido, ele pode ser determinado chamando SQLGetDescField com *ValuePtr* como NULL e examinando o valor de *StringLengthPtr*.
+> Se o tamanho do buffer for desconhecido, ele poderá ser determinado chamando SQLGetDescField com *ValuePtr* como nulo e examinando o valor de *StringLengthPtr*.
  
-Se as informações de classificação de dados não estiverem disponíveis, um *campo de descritor inválido* erro será retornado.
+Se as informações de classificação de dados não estiverem disponíveis, um erro de *campo de descritor inválido* será retornado.
 
-Após uma chamada bem-sucedida para SQLGetDescField, o buffer apontado por *ValuePtr* conterá os dados a seguir:
+Após uma chamada bem-sucedida para SQLGetDescField, o buffer apontado por *ValuePtr* conterá os seguintes dados:
 
  `nn nn [n sensitivitylabels] tt tt [t informationtypes] cc cc [c columnsensitivitys]`
 
 > [!NOTE]
-> `nn nn`, `tt tt`, e `cc cc` são inteiros multibyte, que são armazenados com o byte menos significativo no menor endereço.
+> `nn nn`, `tt tt` e`cc cc` são inteiros multibyte, que são armazenados com o byte menos significativo no endereço mais baixo.
 
-*`sensitivitylabel`* e *`informationtype`* são ambos do formulário
+*`sensitivitylabel`* e *`informationtype`* estão ambos no formato
 
  `nn [n bytes name] ii [i bytes id]`
 
-*`columnsensitivity`* a forma
+*`columnsensitivity`* está no formato
 
  `nn nn [n sensitivityprops]`
 
@@ -83,13 +83,13 @@ Para cada coluna *(c)* , *n* 4 bytes *`sensitivityprops`* estão presentes:
 
  `ss ss tt tt`
 
-s - o índice para o *`sensitivitylabels`* array, `FF FF` se não rotulado
+s-index na *`sensitivitylabels`* matriz, `FF FF` se não rotulada
 
-t - índice para o *`informationtypes`* array, `FF FF` se não rotulado
+índice t na *`informationtypes`* matriz, `FF FF` se não rotulado
 
 
 <br><br>
-O formato dos dados pode ser expresso como pseudo estruturas a seguir:
+O formato dos dados pode ser expresso como as seguintes pseudos estruturas:
 
 ```
 struct IDnamePair {
@@ -117,7 +117,7 @@ struct {
 
 
 ## <a name="code-sample"></a>Exemplo de código
-Testar o aplicativo que demonstra como ler metadados de classificação de dados. No Windows ele pode ser compilado usando `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` e executar com uma cadeia de caracteres de conexão e uma consulta SQL (que retorna colunas classificadas) como parâmetros:
+Aplicativo de teste que demonstra como ler metadados de classificação de dados. No Windows, ele pode ser compilado `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` usando e executado com uma cadeia de conexão e uma consulta SQL (que retorna colunas classificadas) como parâmetros:
 
 ```
 #ifdef _WIN32

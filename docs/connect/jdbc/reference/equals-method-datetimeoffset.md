@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: d9883c25-5c43-4633-874e-4b490e4bccad
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 61a886e7c280a4181f332bb75a7227c2f6f7161a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5ef0203c8ece600de52a5ba4734249b269f21777
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789282"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955022"
 ---
 # <a name="equals-method-datetimeoffset"></a>Método equals (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Compara essa **DateTimeOffset** objeto para outro **objeto**.  
+  Compara este objeto **DateTimeOffset** com outro **objeto**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +35,7 @@ public boolean equals(Object o)
  O objeto que você deseja comparar com a instância atual.  
   
 ## <a name="return-value"></a>Valor retornado  
- Retornará true se este **DateTimeOffset** objeto representa o mesmo ponto no tempo no mesmo deslocamento do GMT como outro **DateTimeOffset**.  
+ Retorna true se este objeto **DateTimeOffset** representa o mesmo ponto no tempo no mesmo deslocamento de GMT como outro **DateTimeOffset**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)   

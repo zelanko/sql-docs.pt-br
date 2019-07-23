@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5c580a87-88ae-4314-8fe1-54ade83f227f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fd281367c5798a83e295d3d3503e97e2646faa6f
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 73b4be6320ab342bcdee3b2e66d8bcd31445e0d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031514"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>Permissões necessárias para executar o SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ ms.locfileid: "67732959"
   
  O diagrama a seguir mostra esse processo de verificação de permissões durante a repetição de rastreamentos:  
   
- ![Permissões de rastreamento de reprodução do SQL Server Profiler](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif "permissões de rastreamento de reprodução do SQL Server Profiler")  
+ ![SQL Server Profiler as permissões de rastreamento de reprodução](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif "SQL Server Profiler as permissões de rastreamento de reprodução")  
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do SQL Server Profiler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   

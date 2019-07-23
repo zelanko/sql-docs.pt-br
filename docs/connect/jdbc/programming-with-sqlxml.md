@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c4e8d429490a0dd7fe8f0a259d065f1f4914dd29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8d88f6c9febf582aa9aca3d47931ceb72074c87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794044"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956171"
 ---
 # <a name="programming-with-sqlxml"></a>Programando com SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,11 +27,11 @@ ms.locfileid: "66794044"
 ## <a name="reading-and-writing-xml-data-with-sqlxml-objects"></a>Lendo e escrevendo dados XML com objetos SQLXML  
  A lista a seguir descreve como usar os métodos da API [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] para ler e gravar dados XML com objetos SQLXML:  
   
--   Para criar um objeto SQLXML, use o método [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) da classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Observe que esse método cria um objeto SQLXML sem quaisquer dados. Para adicionar **xml** dados ao objeto SQLXML, chame um dos seguintes métodos que são especificados na interface SQLXML: setResult, setCharacterStream, setBinaryStream, ou setString.  
+-   Para criar um objeto SQLXML, use o método [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) da classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Observe que esse método cria um objeto SQLXML sem quaisquer dados. Para adicionar dados **XML** ao objeto SQLXML, chame um dos seguintes métodos especificados na interface do SQLXML: setResult, SetCharacterStream, setBinaryStream ou SetString.  
   
 -   Para recuperar o objeto SQLXML propriamente dito, use os métodos getSQLXML da classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) ou da classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
--   Para recuperar o **xml** dados de um objeto SQLXML, use um dos seguintes métodos que são especificados na interface SQLXML: getSource, getCharacterStream, getBinaryStream, ou getString.  
+-   Para recuperar os dados **XML** de um objeto SQLXML, use um dos seguintes métodos especificados na interface do SQLXML: GetSource, GetCharacterStream, getBinaryStream ou GetString.  
   
 -   Para atualizar os dados **xml** em um objeto SQLXML, use o método [updateSQLXML](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md) da classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
@@ -98,7 +97,7 @@ ms.locfileid: "66794044"
  Os analisadores de XML não podem tratar valores vazios. Porém, o SQL Server permite que os aplicativos recuperem e armazenem valores vazios de e para colunas de banco de dados do tipo de dados XML. Isso significa que, ao analisar os dados XML, se o valor subjacente for vazio, uma exceção será lançada pelo analisador. Para saídas de DOM, o driver JDBC captura essa exceção e lança um erro. Para saídas de SAX e StAX, o erro vem diretamente do analisador.  
   
 ## <a name="adaptive-buffering-and-sqlxml-support"></a>Buffer adaptável e suporte a SQLXML  
- Os fluxos binário e de caracteres retornados pelo objeto SQLXML obedecem aos modos de buffer adaptável ou completo. Por outro lado, se os analisadores de XML não forem fluxos, eles não obedecerão às configurações de adaptável ou completo. Para obter mais informações sobre buffer adaptável, consulte [Using Adaptive Buffering](../../connect/jdbc/using-adaptive-buffering.md).  
+ Os fluxos binário e de caracteres retornados pelo objeto SQLXML obedecem aos modos de buffer adaptável ou completo. Por outro lado, se os analisadores de XML não forem fluxos, eles não obedecerão às configurações de adaptável ou completo. Para obter mais informações sobre o buffer adaptável, consulte [usando o buffer adaptável](../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Dando suporte a dados XML](../../connect/jdbc/supporting-xml-data.md)  

@@ -1,5 +1,5 @@
 ---
-title: Método Length (SQLServerBlob) | Microsoft Docs
+title: Método length (SQLServerBlob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: aa233ccb-72d3-4ea3-979d-07ef9aa47359
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e176624817a67945fa68ef34b2baaad7ed35714c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5848943e2b8540f1c2f7733af404520159dfb5ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976904"
 ---
 # <a name="length-method-sqlserverblob"></a>Método length (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public long length()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método de comprimento é especificado pelo método comprimento na interface Java.  
+ Esse método de comprimento é especificado pelo método length na interface java. Sql. blob.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

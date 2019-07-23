@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c8e6a69ed6300ba6eaaedadbc0b0e7c586738647
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 84367995aa5820bc6078b5e62bc830b0e58c4b0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953170"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>Método getClientConnectionID (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public Java.util.UUID SQLServerConnection.getClientConnectionID();
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Para obter mais informações sobre como acessar as informações de diagnóstico no log de eventos estendidos, consulte [acessando informações de diagnóstico no Log de eventos estendidos](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
+ Para obter mais informações sobre como acessar informações de diagnóstico no log de eventos estendidos, consulte Acessando [informações de diagnóstico no log de eventos estendidos](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
  O exemplo a seguir mostra como obter a ID de conexão:  
   
@@ -57,7 +56,7 @@ Connection cn = pcon.getConnection();
 UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();  
 ```  
   
- **getClientConnectionID** funciona independentemente de qual versão do servidor você se conectar, mas os logs de eventos estendidos e entrada de erros de buffer de anéis de conectividade não estarão presentes no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 e versões anteriores.  
+ o **getClientConnectionID** funciona independentemente de qual versão do servidor você se conecta, mas os logs de eventos estendidos e a entrada em erros de buffer de anéis [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de conectividade não estarão presentes no 2008 R2 e versões anteriores.  
   
  Você também pode localizar a ID de conexão no log de eventos estendidos para verificar se a falha foi no servidor, caso o evento estendido para registro da ID de conexão tiver sido habilitado. Também é possível localizar a ID de conexão no buffer de anéis da conexão ([Solução de problemas de conectividade no SQL Server 2008 com o buffer de anéis de conectividade](https://go.microsoft.com/fwlink/?LinkId=207752)) para saber mais sobre certos erros de conexão. Se a ID de conexão não estiver no buffer de anéis da conexão, você pode presumir que houve erro de rede.  
   

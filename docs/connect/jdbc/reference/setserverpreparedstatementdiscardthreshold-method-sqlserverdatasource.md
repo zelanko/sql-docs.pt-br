@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fb2962f6514fec7211b6d3a5ccd5f3af09a1f066
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 28c3a442f89813a4ce93ded9035c1bc16f9e47c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66782920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972838"
 ---
 # <a name="setserverpreparedstatementdiscardthreshold-method-sqlserverdatasource"></a>Método setServerPreparedStatementDiscardThreshold (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Define o valor da propriedade de conexão serverPreparedStatementDiscardThreshold. Essa configuração controla quantos pendentes preparado descarte instrução ações (sp_unprepare) podem estar pendentes por conexão antes de uma chamada para limpar os identificadores pendentes no servidor é executada. Quando a configuração for < = 1 unprepare ações são executadas imediatamente no fechamento instrução preparada. Se o valor for definido como 1 > essas chamadas são agrupados em lotes, para evitar a sobrecarga da chamada sp_unprepare com muita frequência
+  Define o valor da propriedade de conexão serverPreparedStatementDiscardThreshold. Essa configuração controla quantas ações de descarte de instrução preparadas pendentes (sp_unprepare) podem estar pendentes por conexão antes que uma chamada para limpar os identificadores pendentes no servidor seja executada. Quando a configuração é < = 1 as ações despreparar são executadas imediatamente no fechamento da instrução preparada. Se o valor for definido como > 1, essas chamadas serão agrupadas em lote para evitar a sobrecarga de chamar sp_unprepare com muita frequência
  
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,13 +31,13 @@ public void setServerPreparedStatementDiscardThreshold(int enablePrepareOnFirstP
 #### <a name="parameters"></a>Parâmetros  
  *serverPreparedStatementDiscardThreshold*  
   
- O novo valor de **serverPreparedStatementDiscardThreshold** propriedade de conexão.  
+ O novo valor da propriedade de conexão **serverPreparedStatementDiscardThreshold** .  
 
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Esse método está disponível na versão do JDBC driver 6.4 e daí.
+ Esse método está disponível no JDBC Driver versão 6,4 e em diante.
  
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

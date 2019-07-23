@@ -1,5 +1,5 @@
 ---
-title: Método getDatabaseName (SQLServerDataSource) | Microsoft Docs
+title: Método GetDatabaseName (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cffa1602-c045-4e61-abb6-442ade28dbf6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 46cd39c51ba8c5421083721f868345962937f07a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 77627c6c41a97812b48dc7a308d8ec9f6f2d4657
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762869"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984122"
 ---
 # <a name="getdatabasename-method-sqlserverdatasource"></a>Método getDatabaseName (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

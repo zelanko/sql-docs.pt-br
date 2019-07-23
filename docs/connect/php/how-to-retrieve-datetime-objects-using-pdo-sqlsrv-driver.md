@@ -10,28 +10,28 @@ helpviewer_keywords:
 - date and time types, retrieving as datetime objects
 author: yitam
 ms.author: v-yitam
-manager: mbarwin
-ms.openlocfilehash: 54e5b5c9c1ba59ed64db740fbbb1a643e7cb1b2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: v-mabarw
+ms.openlocfilehash: 165e91cee3b0b4592f9b746f8b35b46bc73bce50
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63210433"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264574"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdosqlsrv-driver"></a>Como recuperar tipos de data e hora como objetos DateTime PHP usando o driver PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Esse recurso adicionado na versão 5.6.0, só é válido ao usar o driver PDO_SQLSRV para o [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].
+Esse recurso, adicionado na versão 5.6.0, só é válido ao usar o driver PDO_SQLSRV para o [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].
 
-### <a name="to-retrieve-date-and-time-types-as-datetime-objects"></a>Para recuperar tipos de data e hora como objetos de data e hora
+### <a name="to-retrieve-date-and-time-types-as-datetime-objects"></a>Para recuperar tipos de data e hora como objetos DateTime
 
-Ao usar PDO_SQLSRV, tipos de data e hora (**smalldatetime**, **datetime**, **data**, **tempo**, **datetime2**, e **datetimeoffset**) por padrão, retornado como cadeias de caracteres. Nem o PDO::ATTR_STRINGIFY_FETCHES nem o atributo PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE tem efeito. Para recuperar os tipos de data e hora como [DateTime do PHP](http://php.net/manual/en/class.datetime.php) objetos, defina o atributo de conexão ou instrução `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` à **verdadeira** (é **false** por padrão).
+Ao usar PDO_SQLSRV, os tipos de data e hora (**smalldatetime**, **DateTime**, **Date**, **time**, **datetime2**e **DateTimeOffset**) são retornados por padrão como cadeias de caracteres. Nem os atributos PDO:: ATTR_STRINGIFY_FETCHES nem PDO:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE têm efeito. Para recuperar os tipos de data e hora como objetos [DateTime php](http://php.net/manual/en/class.datetime.php) , defina o atributo `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` Connection ou Statement como **true** (é **false** por padrão).
 
 > [!NOTE]
-> Essa conexão ou o atributo da instrução só se aplica a buscar regular dos tipos de data e hora porque os objetos DateTime não podem ser especificados como parâmetros de saída.
+> Este atributo de instrução ou conexão só se aplica à busca regular de tipos de data e hora porque os objetos DateTime não podem ser especificados como parâmetros de saída.
 
-## <a name="example---use-the-connection-attribute"></a>Exemplo - usar o atributo de conexão
-Os exemplos a seguir omiti a verificação de erros para maior clareza. Este trecho mostra como definir o atributo de conexão:
+## <a name="example---use-the-connection-attribute"></a>Exemplo – usar o atributo de conexão
+Os exemplos a seguir omitem a verificação de erros de clareza. Este mostra como definir o atributo de conexão:
 
 ```php
 <?php
@@ -58,7 +58,7 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---use-the-statement-attribute"></a>Exemplo - usar o atributo de instrução
+## <a name="example---use-the-statement-attribute"></a>Exemplo – usar o atributo de instrução
 Este exemplo mostra como definir o atributo de instrução:
 
 ```php
@@ -80,8 +80,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---use-the-statement-option"></a>Exemplo - usar a opção de instrução
-Como alternativa, o atributo da instrução pode ser definido como uma opção:
+## <a name="example---use-the-statement-option"></a>Exemplo – use a opção de instrução
+Como alternativa, o atributo de instrução pode ser definido como uma opção:
 
 ```php
 <?php
@@ -103,8 +103,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---retrieve-datetime-types-as-strings"></a>Exemplo - recuperar tipos de data e hora como cadeias de caracteres
-O exemplo a seguir mostra como conseguir o oposto (que não é realmente necessário porque é false por padrão):
+## <a name="example---retrieve-datetime-types-as-strings"></a>Exemplo – recuperar tipos DateTime como cadeias de caracteres
+O exemplo a seguir mostra como alcançar o oposto (que não é realmente necessário porque é false por padrão):
 
 ```php
 <?php

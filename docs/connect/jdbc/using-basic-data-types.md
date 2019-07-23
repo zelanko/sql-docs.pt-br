@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 58948717ce5d9d3600bef865f75231faa1e5dea1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 83bbe2c28e9b353e5a82fa630660756174ad0dab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916365"
 ---
 # <a name="using-basic-data-types"></a>Usando tipos de dados básicos
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] usa os tipos de dados básicos JDBC para converter os tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um formato que pode ser compreendido pela linguagem de programação Java e vice-versa. O driver JDBC fornece suporte para a API do JDBC 4.0, que inclui o **SQLXML** tipo de dados e tipos de dados nacionais (Unicode), tais como **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**, e **NCLOB**.  
+O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] usa os tipos de dados básicos JDBC para converter os tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um formato que pode ser compreendido pela linguagem de programação Java e vice-versa. O driver JDBC fornece suporte para a API JDBC 4,0, que inclui o tipo de dados **SQLXML** e os tipos de dados nacionais (Unicode), como **nchar**, **nvarchar**, **LONGNVARCHAR**e **NClob**.  
   
 ## <a name="data-type-mappings"></a>Mapeamentos de tipo de dados
 
@@ -69,7 +68,7 @@ A tabela a seguir lista os mapeamentos padrão entre o [!INCLUDE[ssNoVersion](..
   
 (1) para usar java.sql.Time com o tipo time de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você deve definir a propriedade de conexão **sendTimeAsDatetime** como false.  
   
-(2) você pode acessar programaticamente os valores de **datetimeoffset** com [DateTimeOffset classe](../../connect/jdbc/reference/datetimeoffset-class.md).  
+(2) você pode acessar de forma programática os valores de **DateTimeOffset** com a [classe DateTimeOffset](../../connect/jdbc/reference/datetimeoffset-class.md).  
   
 As seções a seguir fornecem exemplos de como é possível usar o JDBC Driver e os tipos de dados básicos. Para obter exemplos mais detalhados sobre como usar os tipos de dados básicos em um aplicativo Java, veja [Amostra de tipos e dados básicos](../../connect/jdbc/basic-data-types-sample.md).  
   
@@ -86,11 +85,11 @@ Se tiver que recuperar dados de uma fonte de dados e souber o tipo de dados que 
 [!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
   
 > [!NOTE]  
-> O getUnicodeStream e getBigDecimal com métodos de dimensionamento são preteridos e não têm suporte pelo driver JDBC.
+> O getUnicodeStream e o getBigDecimal com métodos de escala foram preteridos e não têm suporte do driver JDBC.
 
 ## <a name="updating-data-by-data-type"></a>Atualizando dados por tipo de dados
 
-Se você tiver que atualizar o valor de um campo em uma fonte de dados, use uma da atualização\<tipo > métodos da classe SQLServerResultSet. No exemplo a seguir, o método [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) é usado junto com o método [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) para atualizar os dados na fonte de dados:  
+Se você precisar atualizar o valor de um campo em uma fonte de dados, use um dos métodos de\<> de tipo de atualização da classe SQLServerResultSet. No exemplo a seguir, o método [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) é usado junto com o método [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) para atualizar os dados na fonte de dados:  
   
 [!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b299b20d-d1cd-45b3-91dc-dcf579498570
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c0199a2cbbeb5f01472a17ade1575031c3ad994e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c36d7980355eed1e1a1e8f42fb53c75fdb70d0ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976954"
 ---
 # <a name="jdbccompliant-method-sqlserverdriver"></a>Método jdbcCompliant (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,10 +35,10 @@ public boolean jdbcCompliant()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se o driver JDBC atende aos requisitos mínimos. Caso contrário, **false**.  
+ **true** se o driver JDBC atender aos requisitos mínimos. Caso contrário, **false**.  
   
 ## <a name="remarks"></a>Remarks  
- Esse método jdbcCompliant é especificado pelo método jdbcCompliant na interface Java.  
+ Esse método jdbcCompliant é especificado pelo método jdbcCompliant na interface java. Sql. driver.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d9351b35-7046-4852-a612-72d4c46b2bbb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6216ccb9b89de50a506a7c2e59dd962d067faed0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 77fa7092b7835e400b7ced8c7dbc0368188b0eb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799931"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954000"
 ---
 # <a name="getbigdecimal-method-int-int"></a>Método getBigDecimal (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +54,7 @@ public java.math.BigDecimal getBigDecimal(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getBigDecimal é especificado pelo método getBigDecimal na interface do CallableStatement.  
+ Esse método getBigDecimal é especificado pelo método getBigDecimal na interface java. Sql. CallableStatement.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método getBigDecimal &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   

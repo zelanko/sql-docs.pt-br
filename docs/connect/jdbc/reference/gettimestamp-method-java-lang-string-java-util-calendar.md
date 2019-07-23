@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 770668d9-2e52-4ff0-be2f-ebf78fd41644
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 39d50008ac35e592b97ad17726a419c61b2a30e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2f77ce20c948623322b328c52d3f40db812551d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66767413"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978762"
 ---
 # <a name="gettimestamp-method-javalangstring-javautilcalendar"></a>Método getTimestamp (java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String name,
  Um objeto de calendário.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um objeto de carimbo de hora.  
+ Um objeto timestamp.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

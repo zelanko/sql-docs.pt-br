@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 379857c3-9de1-4964-8782-32df317cbfbb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 860e670a74b3882662ae1c48609ef5f95609102d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36563b76c4207b5924bb32f5c8e99cca575c9d72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797555"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970049"
 ---
 # <a name="sstranstightlycpld-field-sqlserverxaresource"></a>Campo SSTRANSTIGHTLYCPLD (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,10 +35,10 @@ public static final int SSTRANSTIGHTLYCPLD
 ```  
   
 ## <a name="field-value"></a>Valor do campo  
- Uma **int** valor igual a 32768.  
+ Um valor **int** de 32768.  
   
 ## <a name="remarks"></a>Remarks  
- Cada transação é identificada por uma ID de transação de filial XA (XID) e uma ID de transação global (GTRID). Para permitir que os aplicativos usem transações XA estritamente acopladas que possuam XIDs diferentes, mas que tenham o mesmo GTRID, você deverá definir [SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) no parâmetro flags do método XAResource.start. Para obter mais informações sobre como usar esse sinalizador, consulte [Noções básicas sobre transações de XA](../../../connect/jdbc/understanding-xa-transactions.md).  
+ Cada transação é identificada por uma ID de transação de filial XA (XID) e uma ID de transação global (GTRID). Para permitir que os aplicativos usem transações XA estritamente acopladas que possuam XIDs diferentes, mas que tenham o mesmo GTRID, você deverá definir [SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) no parâmetro flags do método XAResource.start. Para obter mais informações sobre como usar esse sinalizador, consulte [noções básicas sobre transações XA](../../../connect/jdbc/understanding-xa-transactions.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Campos SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-fields.md)   

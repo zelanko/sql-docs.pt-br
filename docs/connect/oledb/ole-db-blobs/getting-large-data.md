@@ -1,6 +1,6 @@
 ---
 title: Obtendo dados grandes | Microsoft Docs
-description: Obtendo dados grandes usando o Driver do OLE DB para SQL Server
+description: Obtendo dados grandes usando OLE DB driver para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 968ab9c3d586a9a1b49d356a6e55ff35336c28cd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fc9b1ccc24a31083e2a6ef111ad2e79781eef6d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803933"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936532"
 ---
 # <a name="getting-large-data"></a>Obtendo dados grandes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,9 +37,9 @@ ms.locfileid: "66803933"
   
 -   ICommand::Execute  
   
- O consumidor deverá buscar somente uma única linha de dados em uma chamada ao método **GetNextRows** quando a propriedade DBPROP_ACCESSORDER, no grupo de propriedades do conjunto de linhas, for definida como DBPROPVAL_AO_SEQUENTIAL ou DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. Isso ocorre porque não é armazenada em buffer dados de BLOB. Se o valor de DBPROP_ACCESSORDER for definido como DBPROPVAL_AO_RANDOM, o consumidor poderá buscar várias linhas de dados em **GetNextRows**.  
+ O consumidor deverá buscar somente uma única linha de dados em uma chamada ao método **GetNextRows** quando a propriedade DBPROP_ACCESSORDER, no grupo de propriedades do conjunto de linhas, for definida como DBPROPVAL_AO_SEQUENTIAL ou DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. Isso ocorre porque os dados do BLOB não são armazenados em buffer. Se o valor de DBPROP_ACCESSORDER for definido como DBPROPVAL_AO_RANDOM, o consumidor poderá buscar várias linhas de dados em **GetNextRows**.  
   
- O Driver do OLE DB para SQL Server não recupera dados grandes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] até que o solicitado pelo consumidor. O consumidor deve associar todos os dados curtos em um acessador e usar um ou mais acessadores temporários para recuperar valores de dados grandes conforme necessário.  
+ O driver OLE DB para SQL Server não recupera dados grandes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] até que seja solicitado pelo consumidor. O consumidor deve associar todos os dados curtos em um acessador e usar um ou mais acessadores temporários para recuperar valores de dados grandes conforme necessário.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo recupera um valor de dados grandes de uma única coluna:  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: dc8c1a5e-700e-4059-a5ed-5013bbb87fb6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: edebe0f57ed09acbf9faa338355314e0bc6199d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2418bd5e62f00e46ddc329c1c7ba987505fb5a7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774433"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982820"
 ---
 # <a name="getimportedkeys-method-sqlserverdatabasemetadata"></a>Método getImportedKeys (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +56,7 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getImportedKeys é especificado pelo método getImportedKeys na interface DatabaseMetadata.  
+ Esse método getImportedKeys é especificado pelo método getImportedKeys na interface java. Sql. DatabaseMetaData.  
   
  O conjunto de resultados retornado pelo método getImportedKeys conterá as seguintes informações:  
   
