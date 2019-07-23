@@ -9,13 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-manager: craigg
-ms.openlocfilehash: c384881ffdc02af219de417434d882d41d34c1ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06708cc6770779f22bea45eddacba5a5d29f9092
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65718759"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082134"
 ---
 # <a name="integration-services-scale-out-manager"></a>Gerenciador do Integration Services Scale Out
 

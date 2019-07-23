@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 340967f5f44b7cbdec4e23dd0cd9a400522bbe8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a823ffd693e770f97811124d77f39763680fb658
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999264"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>tipos de dados e funções de data e hora (Transact-SQL)
 
@@ -52,7 +51,7 @@ Os tipos de dados de data e hora de [!INCLUDE[tsql](../../includes/tsql-md.md)] 
 |---|---|---|---|---|---|---|
 |[time](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|00:00:00.0000000 a 23:59:59.9999999|100 nanossegundos|3 a 5|Sim|Não|  
 |[date](../../t-sql/data-types/date-transact-sql.md)|AAAA-MM-DD|0001-01-01 a 9999-12-31|1 dia|3|Não|Não|  
-|[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|AAAA-MM-DD hh:mm:ss|01\.01.00 a 06.06.79|1 minuto|4|Não|Não|  
+|[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|AAAA-MM-DD hh:mm:ss|01.01.00 a 06.06.79|1 minuto|4|Não|Não|  
 |[datetime](../../t-sql/data-types/datetime-transact-sql.md)|AAAA-MM-DD hh:mm:ss[.nnn]|1753-01-01 a 9999-12-31|0,00333 segundo|8|Não|Não|  
 |[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|AAAA-MM-DD hh:mm:ss[.nnnnnnn]|0001-01-01 00:00:00.0000000 a 9999-12-31 23:59:59.9999999|100 nanossegundos|6 a 8|Sim|Não|  
 |[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|0001-01-01 00:00:00.0000000 a 9999-12-31 23:59:59.9999999 (em UTC)|100 nanossegundos|8 a 10|Sim|Sim|  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3b0a8bbf-9369-4456-9ab8-1434ccacdd7e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2868fb92161b5e3458e5c5e0dc72ebdef074b3e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3915690475e5ce9321af7fc15498c2bde018c640
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796317"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977132"
 ---
 # <a name="isvalid-method-sqlserverconnection"></a>Método isValid (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public boolean isValid(int timeout)
  Um **int** que especifica o número de segundos de espera para validação a conexão.  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se a conexão for válida. **falsos** se a conexão não é válido ou não é possível determinar a validade da conexão antes do tempo limite expirar.  
+ **true** se a conexão for válida; **false** se a conexão não for válida ou se a validade da conexão não puder ser determinada antes de o tempo limite expirar.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

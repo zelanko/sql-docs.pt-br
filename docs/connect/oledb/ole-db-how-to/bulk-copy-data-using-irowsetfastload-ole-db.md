@@ -1,6 +1,6 @@
 ---
-title: Usando IRowsetFastLoad (OLE DB) de dados de cópia em massa | Microsoft Docs
-description: Dados de cópia em massa em uma interface de usando IRowsetFastLoad de tabela do SQL Server do Driver do OLE DB para SQL Server
+title: Copiar Dados em massa usando IRowsetFastLoad (OLE DB) | Microsoft Docs
+description: Copiar dados em massa em uma tabela SQL Server usando a interface IRowsetFastLoad do driver OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - bulk copy [OLE DB], about bulk copy
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1e4581d06d04727133f5a48f5b663a4b689755f2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 926cc4f4d3dd1f3022c2b653a32f12ee58492b24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015645"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Copiar dados em massa usando IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66785995"
 
   Este exemplo mostra o uso de IRowsetFastLoad para cópia em massa dos registros em uma tabela.  
   
- O consumidor notifica o Driver do OLE DB para SQL Server de sua necessidade de cópia em massa ao definir o Driver OLE DB para a propriedade de específicos do driver do SQL Server SSPROP_ENABLEFASTLOAD como VARIANT_TRUE. Com a propriedade definida na fonte de dados, o consumidor cria um Driver do OLE DB para a sessão do SQL Server. A nova sessão permite o acesso do consumidor **IRowsetFastLoad**.  
+ O consumidor notifica OLE DB driver para SQL Server de sua necessidade de cópia em massa, definindo o driver OLE DB para SQL Server Propriedade específica do driver SSPROP_ENABLEFASTLOAD para VARIANT_TRUE. Com a propriedade definida na fonte de dados, o consumidor cria um driver de OLE DB para SQL Server sessão. A nova sessão permite o acesso do consumidor ao **IRowsetFastLoad**.  
   
  Uma amostra completa que ilustra o uso de **IRowsetFastLoad** para cópia em massa dos registros em uma tabela está disponível. Nesta amostra, são adicionados 10 registros à tabela **IRFLTable**. Você precisa criar a tabela **IRFLTable** no banco de dados.  
   
@@ -43,17 +42,17 @@ ms.locfileid: "66785995"
   
 1.  Estabeleça uma conexão com a fonte de dados.  
   
-2.  Defina o Driver OLE DB para a propriedade de fonte de dados específica do driver do SQL Server SSPROP_ENABLEFASTLOAD como VARIANT_TRUE. Com essa propriedade definida como VARIANT_TRUE, a sessão recém-criada permite o acesso do consumidor a **IRowsetFastLoad**.  
+2.  Defina o driver de OLE DB para SQL Server Propriedade de fonte de dados específica do driver SSPROP_ENABLEFASTLOAD como VARIANT_TRUE. Com essa propriedade definida como VARIANT_TRUE, a sessão recém-criada permite o acesso do consumidor a **IRowsetFastLoad**.  
   
-3.  Crie uma sessão solicitando a **IOpenRowset** interface.  
+3.  Crie uma sessão solicitando a interface **IOpenRowset** .  
   
 4.  Chame **IOpenRowset::OpenRowset** para abrir um conjunto de linhas que inclui todas as linhas da tabela (na qual os dados devem ser copiados usando a operação de cópia em massa).  
   
-5.  Faça as associações necessárias e crie um acessador usando **IAccessor:: CreateAccessor**.  
+5.  Faça as associações necessárias e crie um acessador usando **IAccessor::** createaccesser.  
   
 6.  Configure o buffer de memória do qual os dados serão copiados para a tabela.  
   
-7.  Chame **IRowsetFastLoad:: Insertrow** para cópia em massa os dados em tabela.  
+7.  Chame **IRowsetFastLoad:: InsertRow** para copiar em massa os dados na tabela.  
   
 ## <a name="example"></a>Exemplo  
  Neste exemplo, são adicionados 10 registros à tabela IRFLTable. Você precisa criar a tabela IRFLTable no banco de dados. Este exemplo não tem suporte em IA64.  

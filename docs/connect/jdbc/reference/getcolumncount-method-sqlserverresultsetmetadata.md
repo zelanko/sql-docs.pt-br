@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a1fc3f50-3635-4fc5-b570-94d2c5a1873c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 81ad2209ae8d155274df62ac9dd1c88c761359f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: df819ddaf8f6f574af26c5f7973beb7ae97384e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66763510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952988"
 ---
 # <a name="getcolumncount-method-sqlserverresultsetmetadata"></a>Método getColumnCount (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getColumnCount()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getColumnCount é especificado pelo método getColumnCount na interface resultsetmetadata.  
+ Esse método GetColumnCount é especificado pelo método GetColumnCount na interface java. Sql. ResultSetMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [SQLServerResultSetMetaData Methods](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

@@ -27,14 +27,13 @@ helpviewer_keywords:
 ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 758b31fc070c78e4129447cd02ef5c3360c9fc5e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: c61ca9f853f851bb531abdbcba66773f9e9d9e1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077906"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint e tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,9 +57,9 @@ As funções retornam **bigint** somente se a expressão de parâmetro é um tip
 > [!CAUTION]  
 >  Ao usar os operadores aritméticos +, -, \*, / ou % para executar a conversão implícita ou explícita de valores constantes **int**, **smallint**, **tinyint** ou **bigint** nos tipos de dados **float**, **real**, **decimal** ou **numeric**, as regras que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplica ao calcular o tipo de dados e a precisão dos resultados da expressão diferem, dependendo do fato de a consulta ser ou não automaticamente parametrizada.  
 >   
->  Portanto, as expressões semelhantes em consultas podem, às vezes, produzir resultados diferentes. Quando uma consulta não é automaticamente parametrizada, o valor de constante é primeiramente convertido em **numeric**, cuja precisão é apenas grande o suficiente para conter o valor da constante, antes de fazer a conversão no tipo de dados especificado. Por exemplo, o valor de constante 1 é convertido em **numeric (1, 0)** e o valor de constante 250 é convertido em **numeric (3, 0)**.  
+>  Portanto, as expressões semelhantes em consultas podem, às vezes, produzir resultados diferentes. Quando uma consulta não é automaticamente parametrizada, o valor de constante é primeiramente convertido em **numeric**, cuja precisão é apenas grande o suficiente para conter o valor da constante, antes de fazer a conversão no tipo de dados especificado. Por exemplo, o valor de constante 1 é convertido em **numeric (1, 0)** e o valor de constante 250 é convertido em **numeric (3, 0)** .  
 >   
->  Quando uma consulta é automaticamente parametrizada, o valor de constante sempre é convertido em **numeric (10, 0)** antes da conversão no tipo de dados final. Quando o operador / estiver envolvido, não apenas a precisão do tipo do resultado pode diferir entre consultas semelhantes, mas também o valor do resultado. Por exemplo, o valor do resultado de uma consulta automaticamente parametrizada que inclui a expressão `SELECT CAST (1.0 / 7 AS float)` diferirá do valor do resultado da mesma consulta que não é automaticamente parametrizada, porque os resultados da primeira serão truncados para se ajustarem ao tipo de dados **numeric (10, 0)**.  
+>  Quando uma consulta é automaticamente parametrizada, o valor de constante sempre é convertido em **numeric (10, 0)** antes da conversão no tipo de dados final. Quando o operador / estiver envolvido, não apenas a precisão do tipo do resultado pode diferir entre consultas semelhantes, mas também o valor do resultado. Por exemplo, o valor do resultado de uma consulta automaticamente parametrizada que inclui a expressão `SELECT CAST (1.0 / 7 AS float)` diferirá do valor do resultado da mesma consulta que não é automaticamente parametrizada, porque os resultados da primeira serão truncados para se ajustarem ao tipo de dados **numeric (10, 0)** .  
   
 ## <a name="converting-integer-data"></a>Convertendo dados inteiros
 Quando integers são convertidos implicitamente em um tipo de dados character, se o integer for muito grande para ser ajustado no campo de caractere, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] digitará o caractere ASCII 42, o asterisco (*).

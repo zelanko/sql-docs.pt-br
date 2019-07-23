@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d3e0414c-6809-4bb1-93b1-4960507faecc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ad6ccc7f65d6d4c65fb1bb63b58e0b13269ea351
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 090597e3afcf335aba674cd11e603067892819b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788385"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916581"
 ---
 # <a name="understanding-transactions"></a>Noções básicas sobre transações
 
@@ -24,7 +23,7 @@ ms.locfileid: "66788385"
 
 Transações são grupos de operações que são combinadas em unidades lógicas de trabalho. Elas são usadas para controlar e manter a consistência e a integridade de cada ação em uma transação, apesar de erros que poderiam ocorrer no sistema.
 
-Com o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], as transações podem ser locais ou distribuídas. As transações também podem usar níveis de isolamento. Para obter mais informações sobre os níveis de isolamento com suporte pelo driver JDBC, consulte [Noções básicas sobre níveis de isolamento](../../connect/jdbc/understanding-isolation-levels.md).
+Com o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], as transações podem ser locais ou distribuídas. As transações também podem usar níveis de isolamento. Para obter mais informações sobre os níveis de isolamento com suporte no driver JDBC, consulte [noções básicas sobre níveis de isolamento](../../connect/jdbc/understanding-isolation-levels.md).
 
 Os aplicativos devem controlar transações usando instruções de Transact-SQL ou os métodos fornecidos pelo driver JDBC, mas não ambos. Usar as instruções de Transact-SQL e também os métodos de API do JDBC na mesma transação pode causar problemas, como uma transação não poder ser confirmada quando esperada, uma transação ser confirmada ou revertida e uma nova iniciar inesperadamente ou exceções de "Falha ao retomar a transação".
 
@@ -42,7 +41,7 @@ Uma transação distribuída atualiza dados em dois ou mais bancos de dados em r
 
 O driver JDBC integra-se perfeitamente com o [!INCLUDE[msCoName](../../includes/msconame_md.md)] Coordenador de Transações Distribuídas (MS DTC) para proporcionar um verdadeiro suporte de transação distribuída com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O MS DTC é um recurso de transação distribuída fornecido pela [!INCLUDE[msCoName](../../includes/msconame_md.md)] para sistemas [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. O MS DTC usa a tecnologia de processamento de transações comprovada da [!INCLUDE[msCoName](../../includes/msconame_md.md)] para oferecer suporte a recursos XA como, por exemplo, o protocolo completo de confirmação distribuída de duas fases e a recuperação de transações distribuídas.
 
-Para obter mais informações sobre como usar transações distribuídas, consulte [Noções básicas sobre transações de XA](../../connect/jdbc/understanding-xa-transactions.md).
+Para obter mais informações sobre como usar transações distribuídas, consulte [noções básicas sobre transações XA](../../connect/jdbc/understanding-xa-transactions.md).
 
 ## <a name="see-also"></a>Consulte Também
 

@@ -13,20 +13,19 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, sessions
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 873921a00392a9555c0fa33fe29a2df961128fdc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7bc2ae9c6908bfcd0bf28b4f05be757d22c55f75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768419"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015912"
 ---
 # <a name="session-properties---ole-db-driver-for-sql-server"></a>Propriedades de sessão – OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O Driver do OLE DB para SQL Server interpreta as propriedades de sessão do OLE DB da seguinte maneira.  
+  O driver OLE DB para SQL Server interpreta as propriedades da sessão OLE DB da seguinte maneira.  
   
 |ID da propriedade|Descrição|  
 |-----------------|-----------------|  
@@ -41,6 +40,6 @@ ms.locfileid: "66768419"
 |SSPROP_ASYNCH_BULKCOPY|Para usar o modo assíncrono, defina a propriedade de sessão SSPROP_ASYNCH_BULKCOPY específica do provedor como VARIANT_TRUE antes de chamar o método BCPExec. Essa propriedade está disponível no conjunto de propriedades DBPROPSET_SQLSERVERSESSION.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objetos de fonte de dados &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [OLE DB de objetos &#40;de fonte de dados&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

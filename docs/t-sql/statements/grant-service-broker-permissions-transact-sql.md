@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 272702dcf1d6fa05af9c8df3fa1562a1752890ec
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 33a8623c3e098589015a00185c8ab2a895b1410b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050765"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>Permissões GRANT do Agente de Serviços (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,19 +55,19 @@ GRANT permission  [ ,...n ] ON
  *permission*  
  Especifica uma permissão que pode ser concedida em um Service Broker protegível.  Listada abaixo.  
   
- CONTRACT **::**_contract_name_  
+ CONTRACT **::** _contract_name_  
  Especifica o contrato no qual a permissão está sendo concedida. O qualificador de escopo "::" é obrigatório.  
   
- MESSAGE TYPE **::**_message_type_name_  
+ MESSAGE TYPE **::** _message_type_name_  
  Especifica o tipo de mensagem no qual a permissão está sendo concedida. O qualificador de escopo "::" é obrigatório.  
   
- REMOTE SERVICE BINDING **::**_remote_binding_name_  
+ REMOTE SERVICE BINDING **::** _remote_binding_name_  
  Especifica a associação de serviço remoto na qual a permissão está sendo concedida. O qualificador de escopo "::" é obrigatório.  
   
- ROUTE **::**_route_name_  
+ ROUTE **::** _route_name_  
  Especifica a rota na qual a permissão está sendo concedida. O qualificador de escopo "::" é obrigatório.  
   
- SERVICE **::**_nome_do_serviço_  
+ SERVICE **::** _nome_do_serviço_  
  Especifica o serviço no qual a permissão está sendo concedida. O qualificador de escopo "::" é obrigatório.  
   
  *database_principal*  

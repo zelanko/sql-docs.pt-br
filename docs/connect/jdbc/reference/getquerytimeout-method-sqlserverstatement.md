@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8dff954f-b458-4fa6-abe6-be62ff75e2b9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f24405884d90904ecfc58835f89f7a8a59e8441d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5fd4d7b32c9480fec28e20a9dcbc9c22530eb4a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980646"
 ---
 # <a name="getquerytimeout-method-sqlserverstatement"></a>Método getQueryTimeout (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public final int getQueryTimeout()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getQueryTimeout é especificado pelo método getQueryTimeout na interface Statement.  
+ Esse método getQueryTimeout é especificado pelo método getQueryTimeout na interface java. Sql. Statement.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

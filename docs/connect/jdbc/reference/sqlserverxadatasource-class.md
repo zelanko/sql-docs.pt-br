@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 95fc7b07-2498-4a7e-8f7f-ee0d86b598b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5725da0138ecec2e24f93e16af97a1d3c8a67681
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4c456336170cd7d4ad7cf37a0eebc52637f0a070
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66776024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970226"
 ---
 # <a name="sqlserverxadatasource-class"></a>Classe SQLServerXADataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,11 +38,11 @@ public class SQLServerXADataSource
 ## <a name="remarks"></a>Remarks  
  Um objeto que implementa a interface SQLServerXADataSource normalmente é registrado com um serviço de nomeação que usa a JNDI (Java Naming and Directory Interface).  
   
- A classe SQLServerXADataSource fornece conexões de banco de dados para uso em transações distribuídas (XA). A classe SQLServerXADataSource também dá suporte ao pooling de conexão de conexões físicas. As interfaces SQLServerXADataSource e SQLServerXAConnection, que são definidas em javax o pacote, são implementadas por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ A classe SQLServerXADataSource fornece conexões de banco de dados para uso em transações distribuídas (XA). A classe SQLServerXADataSource também dá suporte ao pool de conexão de conexões físicas. As interfaces SQLServerXADataSource e SQLServerXAConnection, que são definidas no pacote javax. SQL, são implementadas pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Um objeto SQLServerXAConnection é uma conexão em pool que pode participar de uma transação distribuída. Mais precisamente, SQLServerXAConnection estende a interface de SQLServerPooledConnection, adicionando o método [getXAResource](../../../connect/jdbc/reference/getxaresource-method-sqlserverxaconnection.md). Esse método gera um objeto [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) que pode ser usado por um gerenciador de transação para coordenar o trabalho feito nessa conexão com os outros participantes na transação distribuída. Como eles estendem a interface de SQLServerPooledConnection, objetos SQLServerXAConnection oferecem suporte a todos os métodos de objetos de SQLServerPooledConnection. Eles são conexões físicas reutilizáveis com uma fonte de dados subjacente e geram identificadores de conexão lógica que podem ser transmitidos de volta a um aplicativo JDBC.  
+ Um objeto SQLServerXAConnection é uma conexão em pool que pode participar de uma transação distribuída. Mais precisamente, SQLServerXAConnection estende a interface SQLServerPooledConnection adicionando o método [getXAResource](../../../connect/jdbc/reference/getxaresource-method-sqlserverxaconnection.md). Esse método gera um objeto [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) que pode ser usado por um gerenciador de transação para coordenar o trabalho feito nessa conexão com os outros participantes na transação distribuída. Como eles estendem a interface SQLServerPooledConnection, os objetos SQLServerXAConnection dão suporte a todos os métodos de objetos SQLServerPooledConnection. Eles são conexões físicas reutilizáveis com uma fonte de dados subjacente e geram identificadores de conexão lógica que podem ser transmitidos de volta a um aplicativo JDBC.  
   
- Objetos SQLServerXAConnection são produzidos por um objeto SQLServerXADataSource. Objetos de SQLServerConnectionPoolDataSource e SQLServerXADataSource são semelhantes porque eles são implementados abaixo de uma camada de fonte de dados que é visível para o aplicativo JDBC. Essa arquitetura permite que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seja compatível com as transações distribuídas de maneira transparente para o aplicativo. O SQLServerXADataSource pode ser configurado para se integrar ao DTC (Coordenador de Transações Distribuídas) do [!INCLUDE[msCoName](../../../includes/msconame_md.md)] para fornecer processamento de transações distribuído verdadeiro.  
+ Os objetos SQLServerXAConnection são produzidos por um objeto SQLServerXADataSource. Objetos SQLServerConnectionPoolDataSource e objetos SQLServerXADataSource são semelhantes porque ambos são implementados abaixo de uma camada de fonte de dados que é visível para o aplicativo JDBC. Essa arquitetura permite que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seja compatível com as transações distribuídas de maneira transparente para o aplicativo. O SQLServerXADataSource pode ser configurado para se integrar ao DTC (Coordenador de Transações Distribuídas) do [!INCLUDE[msCoName](../../../includes/msconame_md.md)] para fornecer processamento de transações distribuído verdadeiro.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   

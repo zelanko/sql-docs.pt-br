@@ -3,7 +3,6 @@ title: Coleta de dados no Controle do ReportViewer 2016
 uthor: markingmyname
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +10,12 @@ ms.technology: application-integration
 ms.topic: reference
 ms.custom: ''
 ms.date: 09/18/2018
-ms.openlocfilehash: 69d37c54e49943807c35102362f161e2dbf23068
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.openlocfilehash: 747c073907158e16a16dc8acd7f36ec457e32e80
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66823000"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256091"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>Integrando o Reporting Services usando os controles ReportViewer – coleta de dados
 

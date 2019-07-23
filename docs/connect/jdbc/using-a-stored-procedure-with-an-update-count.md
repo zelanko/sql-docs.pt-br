@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 64cf4877-5995-4bfc-8865-b7618a5c8d01
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b65d882365b7424cd88fa0942674cfe0a7660795
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4d66c19e9e033e838eac07f7140ce7864fc049e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004073"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>Usando um procedimento armazenado com uma contagem de atualização
 
@@ -27,7 +26,7 @@ Para modificar dados em um banco de dados do [!INCLUDE[ssNoVersion](../../includ
 Depois de definir a chamada para o procedimento armazenado usando a classe SQLServerCallableStatement, chame o procedimento armazenado usando o método [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) ou o método [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md). O método executeUpdate retornará um valor **int** que contém o número de linhas afetadas pelo procedimento armazenado, mas o método execute não o retornará. Se você usa o método execute e quer obter a contagem do número de linhas afetadas, chame o método [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) depois de executar o procedimento armazenado.
 
 > [!NOTE]  
-> Se você quiser que o driver JDBC retorne todas as contagens de atualização, inclusive contagens de atualização retornadas por gatilhos que possam ter sido acionados, defina a propriedade da cadeia de conexão lastUpdateCount como "false". Para obter mais informações sobre a propriedade lastUpdateCount, consulte [definindo as propriedades de Conexão](../../connect/jdbc/setting-the-connection-properties.md).
+> Se você quiser que o driver JDBC retorne todas as contagens de atualização, inclusive contagens de atualização retornadas por gatilhos que possam ter sido acionados, defina a propriedade da cadeia de conexão lastUpdateCount como "false". Para obter mais informações sobre a propriedade lastUpdateCount, consulte [definindo as propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md).
 
 Como um exemplo, crie a tabela seguinte e o procedimento armazenado e insira dados de exemplo no banco de dados de exemplo do [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:
 

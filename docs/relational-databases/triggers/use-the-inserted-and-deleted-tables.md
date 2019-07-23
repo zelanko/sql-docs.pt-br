@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7c0c75d1bbeb25dade2bb8e333067fb244d8248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e070cfc4b02ae52ab755306a29eb90c6afc912cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830994"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075506"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Usar as tabelas inseridas e excluídas
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47830994"
 > [!NOTE]  
 >  Se as ações de gatilhos dependem do número de linhas que uma modificação de dados afeta, use os testes (como um exame de @@ROWCOUNT) para modificações de dados em várias linhas (uma instrução INSERT, DELETE ou UPDATE com base em uma instrução SELECT) e execute as ações apropriadas.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não permite referências de coluna **text**, **ntext**ou **image** nas tabelas inseridas e excluídas para gatilhos AFTER. Entretanto, esses tipos de dados são incluídos somente para fins de compatibilidade com versões anteriores. O armazenamento preferencial para dados grandes é usar os tipos de dados **varchar(max)**, **nvarchar(max)** e **varbinary(max)** . Os gatilhos AFTER e INSTEAD OF dão suporte a dados **varchar(max)**, **nvarchar(max)** e **varbinary(max)** nas tabelas inseridas e excluídas. Para obter mais informações, veja [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não permite referências de coluna **text**, **ntext**ou **image** nas tabelas inseridas e excluídas para gatilhos AFTER. Entretanto, esses tipos de dados são incluídos somente para fins de compatibilidade com versões anteriores. O armazenamento preferencial para dados grandes é usar os tipos de dados **varchar(max)** , **nvarchar(max)** e **varbinary(max)** . Os gatilhos AFTER e INSTEAD OF dão suporte a dados **varchar(max)** , **nvarchar(max)** e **varbinary(max)** nas tabelas inseridas e excluídas. Para obter mais informações, veja [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  **Um exemplo do uso de tabela inserida em um gatilho para impor regras de negócio**  
   

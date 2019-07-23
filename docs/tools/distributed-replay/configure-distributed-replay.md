@@ -1,5 +1,5 @@
 ---
-title: Configurar o Distributed Replay | Microsoft Docs
+title: Configurar Distributed Replay | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4255b78991e557ab36d7d0f97ab9be0fed5194a3
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 092b08697580d79f800dcc539ed90559262ff44f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023773"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +117,7 @@ ms.locfileid: "67732109"
   
  As definições de configuração de reprodução são especificadas em elementos XML que são filhos dos elementos `<ReplayOptions>` e `<OutputOptions>` do arquivo de configuração de reprodução.  
   
-### <a name="replayoptions-element"></a>\<ReplayOptions > elemento  
+### <a name="replayoptions-element"></a>\<Replayoptions > elemento  
  As configurações especificadas pelo arquivo de configuração de reprodução no elemento `<ReplayOptions>` incluem o seguinte:  
   
 |Configuração|Elemento XML|Descrição|Valores permitidos|Obrigatório|  
@@ -133,7 +132,7 @@ ms.locfileid: "67732109"
 |Tempo limite de consulta|`<QueryTimeout>`|Especifica o valor do tempo limite de consulta, em segundos. Esse valor estará em vigor somente até que a primeira linha tenha sido retornada.|Inteiro >= 1<br /><br /> (`-1` para desabilitar)|Nenhum. Por padrão, o valor é `3600`.|  
 |Threads por cliente|`<ThreadsPerClient>`|Especifica o número de threads de reprodução que devem ser usados para cada cliente de reprodução.|Um inteiro entre `1` e `512`.|Nenhum. Se não especificado, o Distributed Replay usará o valor `255`.|  
   
-### <a name="outputoptions-element"></a>\<OutputOptions > elemento  
+### <a name="outputoptions-element"></a>\<Elemento de > de saídaoptions  
  As configurações especificadas pelo arquivo de configuração de reprodução no elemento `<OutputOptions>` incluem o seguinte:  
   
 |Configuração|Elemento XML|Descrição|Valores permitidos|Obrigatório|  
@@ -165,20 +164,20 @@ ms.locfileid: "67732109"
 </Options>  
 ```  
 
-### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Possível problema durante a execução com a sincronização de modo de sequenciamento
- Você pode encontrar um sintoma em que a funcionalidade de reprodução parece "parada", ou eventos de repetições muito lentamente. Esse fenômeno pode ocorrer se o rastreamento está sendo reproduzido se baseia em dados de e/ou eventos que não existem no banco de dados restaurado do destino. 
+### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Possível problema ao executar com o modo de sequenciamento de sincronização
+ Você pode encontrar um sintoma no qual a funcionalidade de reprodução parece "parada" ou repete eventos de forma muito lenta. Esse fenômeno pode ocorrer se o rastreamento que está sendo reproduzido depende de dados e/ou eventos que não existem no banco de dado de destino restaurado. 
  
- Um exemplo é uma carga de trabalho capturada que usa WAITFOR, como na instrução WAITFOR receber do Service Broker. Ao usar o modo de sequenciamento de sincronização, os lotes são reproduzidos em série. Se uma inserção ocorrer no banco de dados de origem após o backup do banco de dados, mas antes da captura de reprodução de rastreamento é iniciado, o recebimento de WAITFOR emitido durante a repetição talvez precise aguardar durante todo o WAITFOR. Eventos definidos para ser reproduzido depois de receber o WAITFOR será paralisado. Isso pode resultar no contador de monitor de desempenho de solicitações em lote/s para a queda de destino do banco de dados de reprodução para zero até que o WAITFOR é concluída. 
+ Um exemplo é uma carga de trabalho capturada que usa WAITFOR, como na instrução de recebimento do Service Broker WAITFOR. Ao usar o modo de sequenciamento de sincronização, os lotes são reproduzidos em série. Se ocorrer uma inserção no banco de dados de origem após o backup do banco de dados, mas antes da inicialização do rastreamento de captura de reprodução, o WAITFOR RECEIVE emitido durante a reprodução poderá ter que aguardar toda a duração do WAITFOR. Os eventos definidos para serem reproduzidos após o recebimento de WAITFOR serão interrompidos. Isso pode resultar no contador de monitor de desempenho solicitações de lote/s para o destino do banco de dados de repetição descartando para zero até que o WAITFOR seja concluído. 
  
- Se você precisar usar o modo de sincronização e desejos para evitar esse comportamento, faça o seguinte:
+ Se você precisar usar o modo de sincronização e desejar evitar esse comportamento, deverá fazer o seguinte:
  
-1.  Confirme os bancos de dados que você usará como os destinos de reprodução.
+1.  Desative os bancos de dados que você usará como destinos de repetição.
 
-2.  Permita atividade pendente para concluir.
+2.  Permitir que todas as atividades pendentes sejam concluídas.
 
-3.  Fazer backup de bancos de dados e permitir que os backups ser concluída.
+3.  Faça backup dos bancos de dados e permita que os backups sejam concluídos.
 
-4.  Inicie a captura de rastreamento de reprodução distribuída e retomar a carga de trabalho normal. 
+4.  Inicie a captura de rastreamento do Distributed Replay e retome a carga de trabalho normal. 
  
  
 ## <a name="see-also"></a>Consulte Também  

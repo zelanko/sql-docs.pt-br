@@ -1,5 +1,5 @@
 ---
-title: Tela 4 (Driver ODBC para SQL Server) do Assistente de fonte de dados | Microsoft Docs
+title: Tela 4 do assistente de fonte de dados (driver ODBC para SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 93145892c96d2b255dca758e7028d2884cec359b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 177888dd1034bb1edcb870db38b00bbc418cb261
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989460"
 ---
 # <a name="data-source-wizard-screen-4"></a>Tela 4 do Assistente de Fonte de Dados
 
@@ -34,7 +33,7 @@ Quando essa opção está selecionada, os dados passados por conexões estabelec
 
 ### <a name="trust-server-certificate"></a>Confiar em certificado do servidor
 
-Essa opção é aplicável somente quando **usar criptografia forte para dados** está habilitado. Quando selecionada, o certificado do servidor não será validado para que o nome de host correto do servidor e ser emitido por uma autoridade de certificação confiável. 
+Essa opção é aplicável somente quando o **uso de criptografia forte para dados** está habilitado. Quando selecionado, o certificado do servidor não será validado para ter o nome de host correto do servidor e ser emitido por uma autoridade de certificação confiável. 
 
 ### <a name="perform-translation-for-character-data"></a>Executar tradução de dados de caracteres
 
@@ -62,11 +61,11 @@ O log de estatísticas é um arquivo delimitado por tabulações que pode ser an
 
 ### <a name="connect-retry-count"></a>Contagem de repetições de conexão
 
-Especifica o número de vezes para repetir uma tentativa de conexão malsucedida.
+Especifica o número de vezes para tentar novamente uma tentativa de conexão malsucedida.
 
 ### <a name="connect-retry-interval-seconds"></a>Intervalo de repetições de conexão (segundos)
 
-Especifica o número de segundos entre cada tentativa de repetição de conexão. Para obter mais informações sobre a operação e o **contagem de repetição do Connect** opções, consulte [resiliência de Conexão no Driver ODBC do Windows](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
+Especifica o número de segundos entre cada tentativa de repetição de conexão. Para obter mais informações sobre a operação dessa e as opções de **contagem de repetição** de conexão, consulte [resiliência de conexão no driver ODBC do Windows](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
 
 ### <a name="back"></a>Voltar
 
@@ -74,7 +73,7 @@ Clique neste botão para voltar à página anterior do assistente.
 
 ### <a name="finish"></a>Concluir
 
-Se as informações especificadas nesta tela forem concluídas, você poderá clicar **concluir**. O DSN é criado usando todos os atributos especificados sobre esta e outras telas do assistente e você terá a oportunidade de testar o DSN criado recentemente.
+Se as informações especificadas nessa tela estiverem concluídas, você poderá clicar em **concluir**. O DSN é criado usando todos os atributos especificados nesta e em outras telas do assistente, e você terá a oportunidade de testar o DSN recém-criado.
 
 ## <a name="next-steps"></a>Próximas etapas
 

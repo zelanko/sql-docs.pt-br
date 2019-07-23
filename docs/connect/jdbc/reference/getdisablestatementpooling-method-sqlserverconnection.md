@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f475d3d02f671cc9c6d277cc50589c4e6980070
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a2da0a2f04fa90b2d25dbd68baf7b769d5afdcf8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66776942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983644"
 ---
 # <a name="getdisablestatementpooling-method-sqlserverconnection"></a>Método getDisableStatementPooling (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Retorna o valor de **disableStatementPooling** propriedade de conexão. Essa configuração controla se o pooling de instrução está habilitado ou não para essa conexão.
+ Retorna o valor da propriedade de conexão **disableStatementPooling** . Essa configuração controla se o pooling de instruções está habilitado ou não para essa conexão.
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,13 +35,13 @@ public boolean getDisableStatementPooling()
 ```  
 
 ## <a name="return-value"></a>Valor retornado
- Um **boolean** que contém o valor de **disableStatementPooling** propriedade de conexão.
+ Um **booliano** que contém o valor da propriedade de conexão **disableStatementPooling** .
 
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Esse método está disponível na versão do JDBC driver 6.4 e daí.
+ Esse método está disponível no JDBC Driver versão 6,4 e em diante.
  
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

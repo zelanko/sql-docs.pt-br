@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1b47a38cd1fc5cc4d95b611dbafbf8d30b22878
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4575c9cbc20faf6afa03201645b736a13325e66b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140298"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Exibir as dependências de uma tabela
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "52407464"
   
 2.  Clique com o botão direito do mouse em uma tabela e clique em **Exibir Dependências**.  
   
-3.  Na caixa de diálogo **Dependências do Objeto**_\<object name\>_, selecione **Objetos que dependem do** _\<nome do objeto\>_ ou **Objetos dos quais o** _\<nome do objeto\>_**depende**.  
+3.  Na caixa de diálogo **Dependências do Objeto** _\<object name\>_ , selecione **Objetos que dependem do** _\<nome do objeto\>_ ou **Objetos dos quais o** _\<nome do objeto\>_ **depende**.  
   
 4.  Selecione um objeto na grade **Dependências** . O tipo de objeto (como “Gatilho” ou “Procedimento Armazenado”) aparece na caixa **Tipo** .  
   

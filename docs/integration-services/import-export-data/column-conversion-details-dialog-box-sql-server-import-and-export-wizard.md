@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8d2b65f4184ed599cd737cdbb14779f411d09808
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff35dd828062554cd14c3600e9ddfe766edbc981
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723932"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081478"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Caixa de diálogo Detalhes da Conversão de Coluna (Assistente de Importação e Exportação do SQL Server)
 

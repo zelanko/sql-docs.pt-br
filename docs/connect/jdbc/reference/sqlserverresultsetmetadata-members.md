@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 37587981-2979-49a3-a6ab-df4bfb9b8748
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 445e420deaa95354ab9d80105d3510927054d61d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5998d16986c23b351fe565bbad0d84d2619aaa2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802754"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970524"
 ---
 # <a name="sqlserverresultsetmetadata-members"></a>Membros de SQLServerResultSetMetaData
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
