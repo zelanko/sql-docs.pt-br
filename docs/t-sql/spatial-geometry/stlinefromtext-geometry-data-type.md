@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 62526fb80056ea9074f562d304e5d511e898953e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c3dfad17abfe2113807bf8eb9a1570ed0a2f7a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938713"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129459"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *linestring_tagged_text*  
- É a representação WKT da instância de **geometryLineString** que você deseja retornar. *linestring_tagged_text* é uma expressão **nvarchar(max)**.  
+ É a representação WKT da instância de **geometryLineString** que você deseja retornar. *linestring_tagged_text* é uma expressão **nvarchar(max)** .  
   
  *SRID*  
  É uma expressão **int** que representa a SRID (ID de referência espacial) da instância de **geometryLineString** que você deseja retornar.  

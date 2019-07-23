@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 50360a46d7eaba31ad60a94e3e624a641ec1c6ea
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 0e0a46138b9e6c4ccaff09c1ab5261f739deb6b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006497"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ AS condition_expression
  *condition_expression*  
  É a condição ou condições que definem a regra. Uma regra pode ser qualquer expressão válida em uma cláusula WHERE e pode incluir elementos, como operadores aritméticos, operadores relacionais e predicados (por exemplo, IN, LIKE, BETWEEN). Uma regra não pode fazer referência a colunas ou a outros objetos de banco de dados. É possível incluir funções internas que não fazem referência a objetos de banco de dados. As funções definidas pelo usuário não podem ser usadas.  
   
- *condition_expression* inclui uma variável. O sinal de arroba (**@**) precede cada uma das variáveis locais. A expressão se refere ao valor digitado com a instrução UPDATE ou INSERT. Qualquer nome ou símbolo pode ser usado para representar o valor durante a criação da regra. No entanto, o primeiro caractere deve ser o sinal de arroba (**@**).  
+ *condition_expression* inclui uma variável. O sinal de arroba ( **@** ) precede cada uma das variáveis locais. A expressão se refere ao valor digitado com a instrução UPDATE ou INSERT. Qualquer nome ou símbolo pode ser usado para representar o valor durante a criação da regra. No entanto, o primeiro caractere deve ser o sinal de arroba ( **@** ).  
   
 > [!NOTE]  
 >  Evite criar regras em expressões que usam tipos de dados de alias. Embora as regras possam ser criadas em expressões que usam tipos de dados de alias, após associar as regras a tipos de dados de colunas ou de alias, as expressões falham ao compilar quando referenciadas.  
@@ -76,7 +75,7 @@ AS condition_expression
 ## <a name="remarks"></a>Remarks  
  CREATE RULE não pode ser combinada com outras instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um único lote. As regras não se aplicam a dados já existentes no banco de dados no momento da criação das regras, e as regras não podem ser associadas a tipos de dados do sistema.  
   
- A regra só pode ser criada no banco de dados atual. Depois de criar uma regra, execute **sp_bindrule** para associá-la ao tipo de dados de coluna ou de alias. A regra deve ser compatível com o tipo de dados de coluna. Por exemplo, "\@value LIKE A% " não pode ser usado como regra para uma coluna numérica. Uma regra não pode ser associada a um **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, tipo de dado CLR definido pelo usuário ou uma coluna **timestamp**. A regra não pode ser associada a uma coluna computada.  
+ A regra só pode ser criada no banco de dados atual. Depois de criar uma regra, execute **sp_bindrule** para associá-la ao tipo de dados de coluna ou de alias. A regra deve ser compatível com o tipo de dados de coluna. Por exemplo, "\@value LIKE A% " não pode ser usado como regra para uma coluna numérica. Uma regra não pode ser associada a um **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, tipo de dado CLR definido pelo usuário ou uma coluna **timestamp**. A regra não pode ser associada a uma coluna computada.  
   
  Inclua as constantes de caractere e data entre aspas ('), precedendo as constantes binárias com 0x. Se a regra não for compatível com a coluna à qual está associada, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retornará uma mensagem de erro quando o valor for inserido, mas não quando a regra for associada.  
   
@@ -109,7 +108,7 @@ AS
 @range>= $1000 AND @range <$20000;  
 ```  
   
-### <a name="b-creating-a-rule-with-a-list"></a>b. Criando uma regra com uma lista  
+### <a name="b-creating-a-rule-with-a-list"></a>B. Criando uma regra com uma lista  
  O exemplo a seguir cria uma regra que restringe os valores reais digitados na coluna ou colunas (às quais essa regra está associada) somente para aqueles listados na regra.  
   
 ```  

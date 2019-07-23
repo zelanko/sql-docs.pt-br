@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 14ee8d172f48640f414bb27d4c600248acac99cb
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 85820073391fe2c61c297fc3b5d1ddae7e6163bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55420983"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070310"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,13 +81,13 @@ ALTER SERVER AUDIT audit_name
 > [!IMPORTANT]
 > Na instância gerenciada do Banco de Dados SQL do Azure, a auditoria do SQL funciona no nível de servidor e armazena arquivos `.xel` no Armazenamento de Blobs do Azure.
   
- FILEPATH **= '**_os\_file\_path_**'**  
+ FILEPATH **= '** _os\_file\_path_ **'**  
  O caminho da trilha de auditoria. O nome do arquivo é gerado com base no nome da auditoria e no GUID da auditoria.  
   
- MAXSIZE **=**_max\_size_  
+ MAXSIZE **=** _max\_size_  
  Especifica o tamanho máximo até o qual o arquivo de auditoria pode crescer. O valor de *max_size* deve ser um inteiro seguido de **MB**, **GB**, **TB** ou **UNLIMITED**. O tamanho mínimo que você pode especificar para *max_size* é 2 **MB** e o máximo é 2.147.483.647 **TB**. Quando **UNLIMITED** for especificado, o arquivo aumentará até que o disco esteja cheio. Especificar um valor inferior a 2 MB gera o erro MSG_MAXSIZE_TOO_SMALL. O valor padrão é **UNLIMITED**.  
   
- MAX_ROLLOVER_FILES **=**_integer_ | **UNLIMITED**  
+ MAX_ROLLOVER_FILES **=** _integer_ | **UNLIMITED**  
  Especifica o número máximo de arquivos a serem retidos no sistema de arquivos. Ao configurar MAX_ROLLOVER_FILES=0 não haverá nenhum limite ao número de arquivos de substituição a serem criados. O valor padrão é 0. O número máximo de arquivos que pode ser especificado é 2.147.483.647.  
   
  MAX_FILES =*integer*  
@@ -98,7 +97,7 @@ ALTER SERVER AUDIT audit_name
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  Essa opção pré-aloca o arquivo no disco para o valor MAXSIZE. Só será aplicável se MAXSIZE não for igual a UNLIMITED. O valor padrão é OFF.  
   
- QUEUE_DELAY **=**_integer_  
+ QUEUE_DELAY **=** _integer_  
  Determina a hora, em milissegundos, que pode decorrer antes que o processamento das ações de auditoria seja forçado. Um valor 0 indica entrega síncrona. O valor mínimo de atraso de consulta configurável é 1000 (1 segundo), que é o padrão. O máximo é 2.147.483.647 (2.147.483.647 segundos ou 24 dias, 20 horas, 31 minutos, 23.647 segundos). A especificação de um número inválido gera o erro MSG_INVALID_QUEUE_DELAY.  
   
  ON_FAILURE **=** { CONTINUE | SHUTDOWN | FAIL_OPERATION}  
@@ -167,7 +166,7 @@ WITH (STATE = ON);
 GO  
 ```  
   
-### <a name="b-changing-a-server-audit-target"></a>b. Alterando o destino de uma auditoria de servidor  
+### <a name="b-changing-a-server-audit-target"></a>B. Alterando o destino de uma auditoria de servidor  
  O exemplo a seguir altera a auditoria de servidor denominada `HIPAA_Audit` para um destino de arquivo.  
   
 ```  

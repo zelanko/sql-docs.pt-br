@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61961ff888b5de3ffa55ffb47c4986a60583b79e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: ad51052db3f5e86f5d349f8a4fc10fb46a5e311e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114809"
 ---
 # <a name="deny-search-property-list-permissions-transact-sql"></a>Permissões de lista de propriedades de pesquisa DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,7 +46,7 @@ DENY permission [ ,...n ] ON
  *permission*  
  É o nome de uma permissão. Os mapeamentos válidos de permissões para protegíveis são descritos na seção "Comentários", posteriormente neste tópico.  
   
-ON SEARCH PROPERTY LIST **::**_search_property_list_name_  
+ON SEARCH PROPERTY LIST **::** _search_property_list_name_  
  Especifica a lista de propriedades de pesquisa na qual a permissão está sendo negada. O qualificador de escopo :: é necessário.  
   
 *database_principal*  

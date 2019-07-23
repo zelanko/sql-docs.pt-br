@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e47a17c2802b9de56c567d4f12a2edcff84f1061
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f90f42b21946b4a29c81f33f8f484656c6f5919
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944452"
 ---
 # <a name="export-column-transformation"></a>Transformação Exportar Colunas
 

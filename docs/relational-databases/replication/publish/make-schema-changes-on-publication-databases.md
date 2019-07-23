@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c82c9913b75ca363d4ace1413c0c4413989c116a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db839c3afa5b3188a7a37f0575f23d3f9ebadce7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081731"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Fazer alterações de esquema em bancos de dados de publicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,9 +92,9 @@ ms.locfileid: "47605364"
   
 -   Para adicionar uma nova coluna a uma tabela sem incluir essa coluna em uma publicação existente, desabilite a replicação de alterações de esquema e, em seguida, execute ALTER TABLE \<Table> ADD \<Column>.  
   
--   Para incluir uma coluna existente em uma publicação existente, use [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) ou a caixa de diálogo **Propriedades da Publicação – \<Publicação>**.  
+-   Para incluir uma coluna existente em uma publicação existente, use [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) ou a caixa de diálogo **Propriedades da Publicação – \<Publicação>** .  
   
-     Para obter mais informações, consulte [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Isso exigirá que as assinaturas sejam reinicializadas.  
+     Para obter mais informações, consulte [Definir e modificar um filtro de colunas](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Isso exigirá que as assinaturas sejam reinicializadas.  
   
 -   Não há suporte para adicionar uma coluna de identidade a uma tabela publicada, pois isso pode resultar em não convergência quando a coluna é replicada no Assinante. Os valores na coluna de identidade no Publicador dependerão da ordem em que as linhas para a tabela afetada forem armazenadas fisicamente. As linhas podem ser armazenadas de forma diversa no Assinante; assim, o valor da coluna de identidade pode ser diferente para as mesmas linhas.  
   
@@ -103,9 +102,9 @@ ms.locfileid: "47605364"
   
 -   Para remover uma coluna de uma publicação existente e remover a coluna da tabela no Publicador, execute ALTER TABLE \<Table> DROP \<Column>. Por padrão, a coluna é então descartada da tabela em todos os Assinantes.  
   
--   Para remover uma coluna de uma publicação existente, mas manter a coluna na tabela no Publicador, use [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) ou a caixa de diálogo **Propriedades da Publicação – \<Publicação>**.  
+-   Para remover uma coluna de uma publicação existente, mas manter a coluna na tabela no Publicador, use [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) ou a caixa de diálogo **Propriedades da Publicação – \<Publicação>** .  
   
-     Para obter mais informações, consulte [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Isso exigirá a geração de um instantâneo novo.  
+     Para obter mais informações, consulte [Definir e modificar um filtro de colunas](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Isso exigirá a geração de um instantâneo novo.  
   
 -   A coluna a ser descartada não pode ser usada nas cláusulas de filtro de nenhum artigo de nenhuma publicação no banco de dados.  
   

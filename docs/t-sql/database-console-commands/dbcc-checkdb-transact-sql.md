@@ -34,13 +34,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 08d47fc52268df4d5a8fb027cd47572c62428707
-ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
+ms.openlocfilehash: 18fdd8cb0062f2f3adcd5979fb5c9203d93f393d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59429362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102116"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -101,7 +100,7 @@ REPAIR_ALLOW_DATA_LOSS
 > [!WARNING]
 > A opção REPAIR_ALLOW_DATA_LOSS é um recurso compatível, mas nem sempre é a melhor opção para colocar um banco de dados em um estado fisicamente consistente. Se for bem-sucedida, a opção REPAIR_ALLOW_DATA_LOSS poderá resultar em alguma perda de dados. Na verdade, ela pode resultar em mais dados perdidos do que se um usuário restaurar o banco de dados por meio do último backup válido. 
 >
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sempre recomende uma restauração de usuário do último backup válido como o principal método de recuperação de erros relatados pelo DBCC CHECKDB. A opção REPAIR_ALLOW_DATA_LOSS não é uma alternativa para restaurar por meio de um backup válido. É uma opção emergencial de "último recurso" recomendada para uso somente se não for possível restaurar de um backup.    
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] sempre recomenda uma restauração de usuário do último backup válido como o principal método de recuperação de erros relatados pelo DBCC CHECKDB. A opção REPAIR_ALLOW_DATA_LOSS não é uma alternativa para restaurar por meio de um backup válido. É uma opção emergencial de "último recurso" recomendada para uso somente se não for possível restaurar de um backup.    
 >     
 > Determinados erros, que só podem ser reparados usando a opção REPAIR_ALLOW_DATA_LOSS, podem envolver o deslocamento de uma linha, página ou série de páginas para limpar os erros. Qualquer dado desalocado não é mais acessível nem recuperável pelo usuário e o conteúdo exato dos dados desalocados não pode ser determinado. Portanto, a integridade referencial pode não ser precisa após a desalocação de linhas ou páginas porque as restrições de chave estrangeira não estão marcadas nem mantidas como parte da operação de reparo. O usuário deve verificar a integridade referencial do banco de dados (usando DBCC CHECKCONSTRAINTS) depois de usar a opção REPAIR_ALLOW_DATA_LOSS.    
 >     
@@ -246,7 +245,7 @@ Quando o banco de dados está em modo de emergência e DBCC CHECKDB com a cláus
 -   Se, devido a danos no log de transações, a recuperação do banco de dados não tiver êxito, o log de transações será reconstruído. A reconstrução do log de transações pode resultar na perda de consistência transacional.    
     
 > [!WARNING]
-> A opção REPAIR_ALLOW_DATA_LOSS é um recurso com suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No entanto, não sempre é a melhor opção para colocar um banco de dados em um estado fisicamente consistente. Se for bem-sucedida, a opção REPAIR_ALLOW_DATA_LOSS poderá resultar em alguma perda de dados. Na verdade, ela pode resultar em mais dados perdidos do que se um usuário restaurar o banco de dados por meio do último backup válido. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sempre recomende uma restauração de usuário do último backup válido como o principal método de recuperação de erros relatados pelo DBCC CHECKDB. A opção REPAIR_ALLOW_DATA_LOSS **não** é uma alternativa para a restauração de um backup realmente válido. É uma opção emergencial de "último recurso" recomendada para uso somente se não for possível restaurar de um backup.    
+> A opção REPAIR_ALLOW_DATA_LOSS é um recurso com suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No entanto, não sempre é a melhor opção para colocar um banco de dados em um estado fisicamente consistente. Se for bem-sucedida, a opção REPAIR_ALLOW_DATA_LOSS poderá resultar em alguma perda de dados. Na verdade, ela pode resultar em mais dados perdidos do que se um usuário restaurar o banco de dados por meio do último backup válido. [!INCLUDE[msCoName](../../includes/msconame-md.md)] sempre recomenda uma restauração de usuário do último backup válido como o principal método de recuperação de erros relatados pelo DBCC CHECKDB. A opção REPAIR_ALLOW_DATA_LOSS **não** é uma alternativa para a restauração de um backup realmente válido. É uma opção emergencial de "último recurso" recomendada para uso somente se não for possível restaurar de um backup.    
 >     
 >  Depois de recriar o log, não há nenhuma garantia ACID completa.    
 >     

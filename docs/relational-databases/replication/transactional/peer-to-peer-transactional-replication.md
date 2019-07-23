@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 51b083073e38c44708f4d017ee1fd1eb86278f24
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 20469bf6d6d7050c79346afea0f96e4167708f08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121332"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Ponto a ponto – Replicação transacional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +139,7 @@ ms.locfileid: "54129306"
   
 -   O parâmetro Distribution Agent **-SubscriptionStreams** e o parâmetro Log Reader Agent **-MaxCmdsInTran**.  
   
--   As propriedades de artigo **@destination_owner** e **@destination_table**.
+-   As propriedades de artigo **@destination_owner** e **@destination_table** .
 
 -   A replicação transacional ponto a ponto não dá suporte à criação de uma assinatura transacional unidirecional em uma publicação ponto a ponto   
   
@@ -150,7 +149,7 @@ ms.locfileid: "54129306"
   
 -   A propriedade de artigo **@replicate_ddl** requer um valor de **true**; **@identityrangemanagementoption** requer um valor de **manual**; e **@status** requer que a opção **24** esteja definida.  
   
--   O valor para as propriedades de artigo **@ins_cmd**, **@del_cmd**e **@upd_cmd** não podem ser definidas como **SQL**.  
+-   O valor para as propriedades de artigo **@ins_cmd** , **@del_cmd** e **@upd_cmd** não podem ser definidas como **SQL**.  
   
 -   A propriedade de assinatura **@sync_type** requer um valor de **none** ou **automatic**.  
   

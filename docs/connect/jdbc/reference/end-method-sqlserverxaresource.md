@@ -1,5 +1,5 @@
 ---
-title: Método end (SQLServerXAResource) | Microsoft Docs
+title: Método End (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e6418b27-793b-4b36-8dfb-756aec7bcbba
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: da3e368517f41e3eed5d00b51753e0c90a981674
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8aa3da36a6bffbcaf223ea72d4adf5f9e541d90c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786443"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955040"
 ---
 # <a name="end-method-sqlserverxaresource"></a>Método end (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void end(javax.transaction.xa.Xid xid,
   
  *sinalizadores*  
   
- Uma **int** valor.  
+ Um valor **int** .  
   
 ## <a name="exceptions"></a>Exceções  
  javax.transaction.xa.XAException  

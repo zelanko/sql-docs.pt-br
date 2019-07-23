@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7165b90db10cab6060d674ad8ae4779af843173
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f41eb44b026c78a3d99814b231f52b518c18a177
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136577"
 ---
 # <a name="stored-procedures-database-engine"></a>Procedimento armazenados (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +66,7 @@ ms.locfileid: "51671575"
  Procedimentos temporários são uma forma de procedimentos definidos pelo usuário. Os procedimentos armazenados são como um procedimento permanente, exceto que os procedimentos temporários são armazenados em **tempdb**. Há dois tipos de procedimentos temporários: local e global. Elas diferem uma da outra pelo nome, visibilidade e disponibilidade. Os procedimentos temporários locais têm um único sinal numérico (#) como primeiro caractere no nome; eles são visíveis somente na conexão atual do usuário e são excluídas quando a conexão é fechada. Os procedimentos temporários globais têm dois sinais numéricos (##) como os dois primeiros caracteres de seus nomes; ficam visíveis para qualquer usuário depois de criados e são excluído no final da última sessão do procedimento.  
   
  Sistema  
- Os procedimentos do sistema são fornecidos com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eles são fisicamente armazenados no banco de dados **Resource** interno oculto, e logicamente aparecem no esquema **sys** de cada banco de dados definido pelo sistema e pelo usuário. Além disso, o banco de dados **msdb** também pode conter procedimentos armazenados do sistema no esquema **dbo** que são usados para agendar alertas e trabalhos. Como os procedimentos do sistema começam com o prefixo **sp_**, recomendamos que você não use esse perfil quando for nomear procedimentos definidos pelo usuário. Para obter uma lista completa de procedimentos do sistema, veja [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md).  
+ Os procedimentos do sistema são fornecidos com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eles são fisicamente armazenados no banco de dados **Resource** interno oculto, e logicamente aparecem no esquema **sys** de cada banco de dados definido pelo sistema e pelo usuário. Além disso, o banco de dados **msdb** também pode conter procedimentos armazenados do sistema no esquema **dbo** que são usados para agendar alertas e trabalhos. Como os procedimentos do sistema começam com o prefixo **sp_** , recomendamos que você não use esse perfil quando for nomear procedimentos definidos pelo usuário. Para obter uma lista completa de procedimentos do sistema, veja [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md).  
   
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte aos procedimentos do sistema que fornecem uma interface no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a programas externos para várias atividades de manutenção. Esses procedimentos estendidos usam o prefixo xp_. Para obter uma lista completa de procedimentos estendidos, veja [Procedimentos armazenados estendidos gerais &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md).  
   

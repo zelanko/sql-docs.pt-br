@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a1c1d288b79d9058a9aff7609290d2381c715575
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da9a53fa2811589b58ec3001ae5b92d46b4c1aec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911842"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Como fazer: Configurar a execução do teste de unidade do SQL Server
 Configurando o projeto de teste, você pode especificar várias configurações que determinam como os testes de unidade do SQL Server serão executados. Essas configurações são armazenados no arquivo app.config do projeto de teste. Se você editar esse arquivo diretamente, os novos valores aparecerão na caixa de diálogo Configuração de Teste.  
@@ -50,7 +49,7 @@ Essas configurações determinam como o teste se conectará ao banco de dados a 
   
     Essa etapa cria a cadeia de conexão `ExecutionContext`, que é usada para executar o script no teste de unidade. Se você também especificar uma conexão secundária, a cadeia de conexão `PrivilegedContext` também será criada. Essa conexão é usada para testar as interações com o banco de dados fora do script de teste no teste de unidade. Para obter mais informações, consulte [Visão geral das cadeias de conexão e permissões](../ssdt/overview-of-connection-strings-and-permissions.md).  
   
-3.  Clique em **OK** para fechar a caixa de diálogo **Configuração de Teste do SQL Server -'<projectname>'**.  
+3.  Clique em **OK** para fechar a caixa de diálogo **Configuração de Teste do SQL Server -'<projectname>'** .  
   
 4.  Recompile o projeto de teste para aplicar as alterações de configuração.  
   
@@ -76,7 +75,7 @@ Essas configurações determinam como o teste se conectará ao banco de dados a 
   
     -   Em **Configuração da Implantação**, clique na configuração de projeto na qual deseja fazer a implantação. As escolhas são **Depurar**, **Padrão** ou **Versão**. No entanto, se você criar uma configuração para testes de unidade, ela também aparecerá como opção.  
   
-5.  Clique em **OK** para fechar a caixa de diálogo **Configuração de Teste do SQL Server -'<projectname>'**.  
+5.  Clique em **OK** para fechar a caixa de diálogo **Configuração de Teste do SQL Server -'<projectname>'** .  
   
     No início da execução do teste, o script Transact\-SQL gerado na etapa 1 será executado. Essa ação implantará o esquema no banco de dados de destino.  
   

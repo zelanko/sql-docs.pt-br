@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 5c30dbb3d6924187e5bc38ba06c4b291e264e526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e67b62ec00e2dd98ff4289c1f725892592340e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62706438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024763"
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>Criar gráficos, alertas, logs e relatórios
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

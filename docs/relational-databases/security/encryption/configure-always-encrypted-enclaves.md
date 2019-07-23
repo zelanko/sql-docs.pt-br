@@ -9,14 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 87ae14a8acaa94873b81238d998f755a8ee0a8bd
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 7fd710359f6a2d97bebd9785dd010ff586f43cd1
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583654"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307582"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configurar o Always Encrypted com enclaves seguros
 
@@ -151,7 +150,7 @@ Para provisionar uma chave de criptografia de coluna habilitada para enclave, vo
 
 Atualmente, as seguintes limitações se aplicam às chaves de enclave de provisionamento:
 
-- Chaves mestras de coluna habilitadas para enclave precisam ser armazenadas no [Repositório de Certificados do Windows](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores/) ou no [Azure Key Vault](/azure/key-vault/key-vault-whatis/). Atualmente, não há suporte para armazenar chaves mestras de coluna habilitadas para enclave em outros tipos de repositórios de chaves, como módulos de segurança de hardware ou repositórios de chave personalizados.
+- Chaves mestras de coluna habilitadas para enclave precisam ser armazenadas no [Repositório de Certificados do Windows](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores) ou no [Azure Key Vault](/azure/key-vault/key-vault-whatis/). Atualmente, não há suporte para armazenar chaves mestras de coluna habilitadas para enclave em outros tipos de repositórios de chaves, como módulos de segurança de hardware ou repositórios de chave personalizados.
 
 ### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>Provisionar chaves habilitadas para enclave usando o SSMS (SQL Server Management Studio)
 

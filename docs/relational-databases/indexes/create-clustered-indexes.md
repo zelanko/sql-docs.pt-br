@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 514ec88554282cf6e2cf0cc74eb1f35e77091fa9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 79ce697e86adcd7a2b11d4ec1d5f4564d51692e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539034"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024993"
 ---
 # <a name="create-clustered-indexes"></a>Criar índices clusterizados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,11 +83,11 @@ ms.locfileid: "52539034"
   
 1.  No Pesquisador de Objetos, expanda a tabela na qual você deseja criar um índice clusterizado.  
   
-2.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Clusterizado...**.  
+2.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Clusterizado...** .  
   
 3.  Na caixa de diálogo **Novo Índice** , na página **Geral** , insira o nome do novo índice na caixa **Nome do índice** .  
   
-4.  Em **Colunas de chave de índice**, clique em **Adicionar...**.  
+4.  Em **Colunas de chave de índice**, clique em **Adicionar...** .  
   
 5.  Na caixa de diálogo **Selecionar Colunas de** _table\_name_, marque a caixa de seleção da coluna de tabela a ser adicionada ao índice clusterizado.  
   
@@ -100,7 +99,7 @@ ms.locfileid: "52539034"
   
 1.  No Pesquisador de Objetos, expanda o banco de dados na qual você deseja criar uma tabela com um índice clusterizado.  
   
-2.  Clique com o botão direito do mouse na pasta **Tabelas** e clique em **Nova Tabela...**.  
+2.  Clique com o botão direito do mouse na pasta **Tabelas** e clique em **Nova Tabela...** .  
   
 3.  Crie uma tabela como você faria normalmente. Para obter mais informações, veja [Criar tabelas &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/tables/create-tables-database-engine.md).  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7f83b514-6e76-4f37-baf3-a10db2010e7c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7a49ef95ac7e6ee122252577ccff9ec535c912fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b736ed84e0fed6794b036d22af84912f240539fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796419"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977343"
 ---
 # <a name="isqlserverstatement-interface"></a>Interface ISQLServerStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +34,7 @@ public interface ISQLServerStatement
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Essa interface é implementada pelo [classe SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
+ Essa interface é implementada pela [classe SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
   
  Essa interface expõe os seguintes métodos específicos do [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]:  
   

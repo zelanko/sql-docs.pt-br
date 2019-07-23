@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bf755ccfe5a1a6816129173dcb6ad5050ea5e114
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213315"
+---
 
 ## <a name="add-a-database-to-the-availability-group"></a>Adicionar um banco de dados ao grupo de disponibilidade
 
@@ -7,7 +15,7 @@ Verifique se o banco de dados adicionado ao grupo de disponibilidade está em mo
 CREATE DATABASE [db1];
 ALTER DATABASE [db1] SET RECOVERY FULL;
 BACKUP DATABASE [db1]
-   TO DISK = N'/var/opt/mssql/data/db1.bak';
+   TO DISK = N'c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Backup\db1.bak';
 ```
 
 Na réplica primária do SQL Server, execute o seguinte script Transact-SQL para adicionar um banco de dados chamado `db1` a um grupo de disponibilidade denominado `ag1`:

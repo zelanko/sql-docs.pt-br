@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c5692d8bb04c239e0cdb84531ff9fc7fec07cc31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f63fabadc4cf4dea98536c3ef2f8f863fa0dc642
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726842"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941548"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>Extrair dados por meio da origem OLE DB
 

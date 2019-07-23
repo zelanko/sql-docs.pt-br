@@ -1,5 +1,5 @@
 ---
-title: Protegendo aplicativos do JDBC Driver | Microsoft Docs
+title: Protegendo aplicativos JDBC Driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3a7a8079f60336bbdfe7b837afa2313f5fda2691
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c539e94b9fdcd3d1cd281e1a0f1043eec55739bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945743"
 ---
 # <a name="securing-jdbc-driver-applications"></a>Protegendo aplicativos do JDBC Driver
 
@@ -34,7 +33,7 @@ Os tópicos nesta seção descrevem algumas preocupações comuns de segurança 
 | [Validando entradas de usuário](../../connect/jdbc/validating-user-input.md)             | Descreve técnicas para validar a entrada do usuário.                                                                                                                          |
 | [Segurança do aplicativo](../../connect/jdbc/application-security.md)               | Descreve como usar permissões de política de Java para ajudar a proteger um aplicativo do driver JDBC.                                                                                |
 | [Usando criptografia SSL](../../connect/jdbc/using-ssl-encryption.md)               | Descreve como estabelecer um canal de comunicação seguro com um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o protocolo SSL. |
-| [Modo FIPS](../../connect/jdbc/fips-mode.md)                                     | Descreve como usar o JDBC driver em modo compatível com FIPS.                                                                                                              |
+| [Modo FIPS](../../connect/jdbc/fips-mode.md)                                     | Descreve como usar o driver JDBC no modo compatível com FIPS.                                                                                                              |
   
 ## <a name="see-also"></a>Consulte Também  
 
