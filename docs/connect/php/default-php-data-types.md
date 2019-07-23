@@ -1,5 +1,5 @@
 ---
-title: Default PHP Data Types | Microsoft Docs
+title: Tipos de dados padrão do PHP | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01f611e0c11d6a2f3671c8911d41b4c0cfeef83c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11026bcb372759f62aa0b0d5f406a6721b65c135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801478"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993671"
 ---
 # <a name="default-php-data-types"></a>Tipos de dados padrão do PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +38,7 @@ A tabela a seguir lista o tipo de dados do SQL Server (o tipo de dados que está
 |bit|Integer|Caractere de 8 bits<sup>1</sup>|  
 |char|Cadeia de caracteres|Caractere de 8 bits<sup>1</sup>|  
 |date<sup>4</sup>|DATETIME|Não aplicável|  
-|Data e hora<sup>4</sup>|DATETIME|Não aplicável|  
+|data e hora<sup>4</sup>|DATETIME|Não aplicável|  
 |datetime2<sup>4</sup>|DATETIME|Não aplicável|  
 |datetimeoffset<sup>4</sup>|DATETIME|Não aplicável|  
 |Decimal|Cadeia de caracteres|Caractere de 8 bits<sup>1</sup>|  
@@ -84,7 +83,7 @@ A tabela a seguir lista o tipo de dados do SQL Server (o tipo de dados que está
 
 6. Esse é um tipo herdado que é mapeado para o tipo nvarchar(max).
 
-7.  sql_variant não é suportado nos parâmetros bidirecional ou de saída.
+7.  Não há suporte para sql_variant em parâmetros bidirecionais ou de saída.
 
 8.  Esse é um tipo herdado que é mapeado para o tipo varchar(max).  
   

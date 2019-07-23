@@ -10,17 +10,16 @@ ms.topic: conceptual
 ms.assetid: 45d1b1b6-363d-4924-bcb1-b2582b60f76b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fefe21763edc51eacc40506ef35ce6b71b766806
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e1dca1a7240f5e0612713ba7f87a47f938e7e9f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800836"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935653"
 ---
 # <a name="ruby-driver-for-sql-server"></a>Ruby Driver para SQL Server
 
-![Um círculo seta para baixo de download](../../ssdt/media/download.png)[para baixar o driver Ruby para SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-seta-circulado](../../ssdt/media/download.png)[para baixar o driver Ruby para SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 Você pode se conectar a um banco de dados SQL usando Ruby no Windows, Linux ou Mac.   
   
@@ -30,12 +29,12 @@ Você pode se conectar a um banco de dados SQL usando Ruby no Windows, Linux ou 
 * [Etapa 3: Prova de conceito da conexão ao SQL usando Ruby](step-3-proof-of-concept-connecting-to-sql-using-ruby.md)  
   
 ## <a name="documentation"></a>Documentação  
-[Documentação do ruby-lang.org](https://www.ruby-lang.org/en/documentation/)  
+[Documentação em ruby-lang.org](https://www.ruby-lang.org/en/documentation/)  
   
 ## <a name="community"></a>Comunidade  
-[Central de desenvolvedores do Ruby do Azure](https://azure.microsoft.com/develop/ruby/)  
+[Central de desenvolvedores do Azure Ruby](https://azure.microsoft.com/develop/ruby/)  
   
 ## <a name="samples"></a>Exemplos
-* [Guia de Introdução com o Ruby no macOS](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/)
-* [Guia de Introdução com o Ruby no Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/ruby/ubuntu/)
-* [Guia de Introdução com o Ruby no Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/ruby/rhel/)
+* [Introdução com Ruby no macOS](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/)
+* [Introdução com Ruby no Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/ruby/ubuntu/)
+* [Introdução com Ruby no Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/ruby/rhel/)

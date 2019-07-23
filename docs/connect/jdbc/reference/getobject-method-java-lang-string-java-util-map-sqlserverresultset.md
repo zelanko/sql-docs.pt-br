@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8104406b-417d-4ff5-9aca-183ee0f76762
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 59b08ec9038ee9cd786cf5f29bc0714ff8d26952
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e806db63799d57ae935f2288c11b70ff35d20a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981219"
 ---
 # <a name="getobject-method-javalangstring-javautilmap-sqlserverresultset"></a>Método getObject (java.lang.String, java.util.Map) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

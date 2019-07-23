@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a622b748-d10b-4f02-afe3-fba4a5bca17b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 50c77c8af4e71a41ce20565ebbb5081b796a7bdb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 17b42f50fe28ba9d727ea6c897280dcd36034038
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969880"
 ---
 # <a name="storesuppercaseidentifiers-method-sqlserverdatabasemetadata"></a>Método storesUpperCaseIdentifiers (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean storesUpperCaseIdentifiers()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se os identificadores são armazenados em letras maiusculas. Caso contrário, **false**.  
+ **true** se os identificadores forem armazenados em letras maiúsculas. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método storesUpperCaseIdentifiers é especificado pelo método storesUpperCaseIdentifiers na interface DatabaseMetadata.  
+ Esse método storesUpperCaseIdentifiers é especificado pelo método storesUpperCaseIdentifiers na interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

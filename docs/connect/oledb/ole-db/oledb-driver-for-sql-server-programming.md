@@ -1,5 +1,5 @@
 ---
-title: Driver do OLE DB para programação do SQL Server | Microsoft Docs
+title: Driver de OLE DB para programação de SQL Server | Microsoft Docs
 description: Programação no OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
@@ -18,30 +18,29 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, OLE DB
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 54d0a800c3b651162edbf583c8f5e49005ed2628
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0645659036af0b00e2cf1b62b67830ded43aecbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795987"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993934"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>Programação no OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O Driver do OLE DB para SQL Server é uma API COM baixo nível que é usado para acessar os dados. O OLE DB Driver for SQL Server é recomendado para desenvolver ferramentas, utilitários ou componentes de baixo nível que precisem de alto desempenho. O OLE DB Driver for SQL Server é um provedor nativo de alto desempenho que acessa o protocolo TDS do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diretamente.  
+  O driver de OLE DB para SQL Server é uma API COM de baixo nível usada para acessar dados. O OLE DB Driver for SQL Server é recomendado para desenvolver ferramentas, utilitários ou componentes de baixo nível que precisem de alto desempenho. O OLE DB Driver for SQL Server é um provedor nativo de alto desempenho que acessa o protocolo TDS do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diretamente.  
   
- Driver do OLE DB para SQL Server fornece suporte de OLE DB para aplicativos que se conectam ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ O driver de OLE DB para SQL Server fornece suporte de OLE DB aos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]aplicativos que se conectam ao.  
   
- O Driver do OLE DB para SQL Server é um provedor compatível com 2.0 de versão do OLE DB.  
+ O driver OLE DB para SQL Server é um provedor compatível com o OLE DB versão 2,0.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
 -   [Criação de aplicativo do Driver do OLE DB para SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
--   [Objetos de fonte de dados &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [OLE DB de objetos &#40;de fonte de dados&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
 -   [Comandos](../../oledb/ole-db-commands/commands.md)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66795987"
   
 -   [Tabelas e índices](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
--   [Tipos de dados &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+-   [Tipos &#40;de dados OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
 -   [Suporte ao conjunto de linhas de esquema &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
@@ -73,7 +72,7 @@ ms.locfileid: "66795987"
   
 -   [Suporte a colunas esparsas &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
   
--   [Driver do OLE DB para SQL Server &#40;OLE DB&#41; referência](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
+-   [Driver de OLE DB para &#40;referência&#41; de OLE DB de SQL Server](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
 -   [Tópicos de instruções do OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   

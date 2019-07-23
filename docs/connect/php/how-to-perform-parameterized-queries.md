@@ -1,5 +1,5 @@
 ---
-title: 'Como: executar consultas parametrizadas | Microsoft Docs'
+title: Como executar consultas parametrizadas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a7783ac898dff9176a2a148f7c8e01a0ac28047b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7e406d64bd8c56b467c9b331eb4aef132dc0cc67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796099"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993496"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Como executar consultas parametrizadas
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +31,7 @@ As etapas para executar uma consulta parametrizada podem ser resumidas em quatro
   
 2.  Inicialize ou atualize as variáveis do PHP correspondentes aos espaços reservados na consulta Transact-SQL.  
   
-3.  Use as variáveis do PHP da etapa 2 para criar ou atualizar uma matriz de valores de parâmetros que correspondem aos espaços reservados do parâmetro na cadeia de caracteres Transact-SQL. Os valores de parâmetro na matriz devem ser na mesma ordem que os espaços reservados significava para representá-los.
+3.  Use as variáveis do PHP da etapa 2 para criar ou atualizar uma matriz de valores de parâmetros que correspondem aos espaços reservados do parâmetro na cadeia de caracteres Transact-SQL. Os valores de parâmetro na matriz devem estar na mesma ordem em que os espaços reservados destinam-se a representá-los.
   
 4.  Execute a consulta:  
   
@@ -191,7 +190,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>Consulte Também  
 [Convertendo tipos de dados](../../connect/php/converting-data-types.md)
 
-[Considerações de segurança para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)
+[Considerações de segurança para os drivers da Microsoft para PHP para SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)
 
 [Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)
 

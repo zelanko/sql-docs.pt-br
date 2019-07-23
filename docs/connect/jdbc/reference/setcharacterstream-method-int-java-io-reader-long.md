@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cb6ac7f5-81ae-4cb7-87c8-cbee40d278c5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 67b28857940387b6feb7b2ce2bb2e7fed0eceff5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 486fd2b419e96e2a66a3aeca0c792632a462f4bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974756"
 ---
 # <a name="setcharacterstream-method-int-javaioreader-long"></a>Método setCharacterStream (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public final void setCharacterStream(int parameterIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setCharacterStream é especificado pelo método setCharacterStream na interface do PreparedStatement.  
+ Esse método setCharacterStream é especificado pelo método setCharacterStream na interface java. Sql. PreparedStatement.  
   
  Se o comprimento do fluxo for diferente do especificado no parâmetro *length*, o driver JDBC lançará uma exceção quando a linha for atualizada ou inserida.  
   

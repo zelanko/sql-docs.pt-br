@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 902fd2c1-05e0-436e-9779-c048cdb8475a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2faac8d83f79c60551c0d62f18e64ccd427f91bc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 708060b6192e47a126c9c4c3ea47052c098bb1fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796379"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977323"
 ---
 # <a name="isreadonly-method-sqlserverconnection"></a>Método isReadOnly (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,13 +38,13 @@ public boolean isReadOnly()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **Verdadeiro** se a conexão está no modo somente leitura, **falso** se não for.  
+ **true** se a conexão estiver no modo somente leitura, **false** se não for.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método isReadOnly é especificado pelo método na interface do Connection isReadOnly.  
+ Esse método isReadOnly é especificado pelo método isReadOnly na interface java. Sql. Connection.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

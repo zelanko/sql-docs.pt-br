@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c4692a8c-e6b7-4edc-9dad-7af816988de5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 421de1ae536c6bc0ff25f573f131f048df978c3d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 710d06a43aa1eb23ae9750c1cee1b5c4d1460085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976624"
 ---
 # <a name="othersdeletesarevisible-method-sqlserverdatabasemetadata"></a>Método othersDeletesAreVisible (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,13 +58,13 @@ public boolean othersDeletesAreVisible(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se as exclusões são visíveis. Caso contrário, **false**.  
+ **true** se as exclusões estiverem visíveis. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método othersDeletesAreVisible é especificado pelo método othersDeletesAreVisible na interface DatabaseMetadata.  
+ Esse método othersDeletesAreVisible é especificado pelo método othersDeletesAreVisible na interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

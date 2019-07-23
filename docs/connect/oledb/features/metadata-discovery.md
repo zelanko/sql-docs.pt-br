@@ -1,6 +1,6 @@
 ---
 title: Descoberta de metadados | Microsoft Docs
-description: Descoberta de metadados no Driver do OLE DB para SQL Server
+description: Descoberta de metadados no driver de OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 3ed5020498dee14a34bd66076fc74a578bc09e69
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9891e5708110be83a4ef33cb2a142accaf93ffe2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989066"
 ---
 # <a name="metadata-discovery"></a>Descoberta de metadados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "66765965"
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   ICommandWithParameters:: Getparameterinfo (consulte [ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md) para obter mais informações)  
+-   ICommandWithParameters:: GetParameterInfo (consulte [ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md) para obter mais informações)  
   
  Você também verá uma melhoria no desempenho ao especificar o formato de metadados usando IBCPSession::BCPSetBulkMode  
   
- A descoberta de metadados aprimorada no Driver do OLE DB para SQL Server é possível devido à adição de dois procedimentos armazenados no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]:  
+ A descoberta de metadados aprimorada no driver OLE DB para SQL Server é possível devido à adição de dois procedimentos armazenados [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]no:  
   
 -   sp_describe_first_result_set  
   

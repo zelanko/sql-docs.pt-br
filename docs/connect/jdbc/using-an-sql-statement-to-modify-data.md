@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4704199b-c0ae-4c77-8a2e-6963715b4ffb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2da0381f06e5092a7bcdb056d88df1160486ce0f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cbcdf01eed0114e1788f23cec3a24cf4a69329e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004017"
 ---
 # <a name="using-an-sql-statement-to-modify-data"></a>Usando uma instrução SQL para modificar dados
 
@@ -35,7 +34,7 @@ No exemplo a seguir, uma conexão aberta com o banco de dados de exemplo [!INCLU
 >
 > Se a coluna em que estiver tentando inserir dados contiver caracteres especiais como espaços, você deverá fornecer os valores a serem inseridos, mesmo se forem valores padrão. Se isso não acontecer, haverá falha na operação.
 >
-> Se você quiser que o driver JDBC retorne todas as contagens de atualização, inclusive contagens de atualização retornadas por gatilhos que possam ter sido acionados, defina a propriedade da cadeia de conexão lastUpdateCount como "false". Para obter mais informações sobre a propriedade lastUpdateCount, consulte [definindo as propriedades de Conexão](../../connect/jdbc/setting-the-connection-properties.md).
+> Se você quiser que o driver JDBC retorne todas as contagens de atualização, inclusive contagens de atualização retornadas por gatilhos que possam ter sido acionados, defina a propriedade da cadeia de conexão lastUpdateCount como "false". Para obter mais informações sobre a propriedade lastUpdateCount, consulte [definindo as propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md).
 
 ## <a name="see-also"></a>Consulte Também
 
