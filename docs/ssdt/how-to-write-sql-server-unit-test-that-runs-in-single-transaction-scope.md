@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ded1e5f6aeace66f4be991b192e601c455871c26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c1a9bf666ac79b76d94cfbd04c88bde6eafd85b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119878"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Como fazer: Gravar um teste de unidade do SQL Server executado no escopo de uma única transação
 Você pode modificar os teste de unidade para execução no escopo de uma única transação. Se você usar essa abordagem, poderá reverter todas as alterações decretadas pelo teste após seu término. Os procedimentos a seguir descreve como:  

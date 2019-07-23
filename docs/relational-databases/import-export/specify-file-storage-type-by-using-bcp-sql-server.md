@@ -16,21 +16,20 @@ helpviewer_keywords:
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f32cf35670149a42941c91572d25bdd235c503d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aeae859d86f33e264234c38e0d398e772c537ddf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062520"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Especificar tipo de armazenamento de arquivo usando bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   O *tipo de armazenamento de arquivo* descreve como são armazenados os dados no arquivo de dados. Dados podem ser exportados para um arquivo de dados como seu tipo de tabela de banco de dados (formato nativo), em sua representação de caractere (formato de caractere) ou como qualquer tipo de dados em que há suporte para conversão implícita; por exemplo, copiando um **smallint** como um **int**. Os tipos de dados definidos pelo usuário como tipos básicos são exportados.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>Solicitação de bcp para o tipo de armazenamento de arquivo  
- Se um comando **bcp** interativo contiver a opção **in** ou **out** sem a opção do arquivo de formatos (**-f**) ou uma opção do formato de dados (**-n**, **-c**, **-w**ou **-N**), o comando solicitará o tipo de armazenamento de arquivos de cada campo de dados, da seguinte maneira:  
+ Se um comando **bcp** interativo contiver a opção **in** ou **out** sem a opção do arquivo de formatos ( **-f**) ou uma opção do formato de dados ( **-n**, **-c**, **-w**ou **-N**), o comando solicitará o tipo de armazenamento de arquivos de cada campo de dados, da seguinte maneira:  
   
  `Enter the file storage type of field <field_name> [<default>]:`  
   
@@ -73,12 +72,12 @@ ms.locfileid: "64946120"
     |**uniqueidentifier**|**u**|  
     |**sql_variant**|**V[ariant]**|  
     |**timestamp**|**x**|  
-    |um tipo de dados definido pelo usuário**um tipo de dados definido pelo usuário** |**U**|  
+    |um tipo de dados definido pelo usuário**um tipo de dados definido pelo usuário**|**U**|  
     |**XML**|**X**|  
   
      \*A interação do tamanho do campo, do tamanho do prefixo e dos terminadores determina a quantidade de espaço de armazenamento alocado em um arquivo de dados para dados que não são de caractere que é exportada como o tipo de armazenamento de arquivos **char** .  
   
-     \*\* Os tipos de dados **ntext**, **text**e **image** serão removidos em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No novo projeto de desenvolvimento, evite usar esses tipos de dados e planeje modificar os aplicativos que atualmente os utilizam. Em vez disso, use **nvarchar(max)**, **varchar(max)** e **varbinary(max)** .  
+     \*\* Os tipos de dados **ntext**, **text**e **image** serão removidos em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No novo projeto de desenvolvimento, evite usar esses tipos de dados e planeje modificar os aplicativos que atualmente os utilizam. Em vez disso, use **nvarchar(max)** , **varchar(max)** e **varbinary(max)** .  
   
 ## <a name="native-file-storage-types"></a>Tipos de armazenamento de arquivos nativos  
  Cada tipo de armazenamento de arquivo nativo é registrado no arquivo de formato como um tipo de dados do arquivo host correspondente.  

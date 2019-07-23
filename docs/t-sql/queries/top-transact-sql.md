@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70102127d7d48160c5320e02a97113cdd903fb0b
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948244"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -182,7 +181,7 @@ ORDER BY HireDate DESC;
 GO  
 ```  
   
-#### <a name="b-using-top-with-a-variable"></a>b. Usando TOP com uma variável  
+#### <a name="b-using-top-with-a-variable"></a>B. Usando TOP com uma variável  
 O exemplo a seguir usa uma variável para especificar o número de funcionários que são retornados no conjunto de resultados da consulta.  
   
 ```sql  
@@ -253,7 +252,7 @@ WHERE PurchaseOrderDetailID IN
 GO  
 ```  
   
-#### <a name="b-using-top-to-limit-the-number-of-rows-inserted"></a>b. Usando TOP para limitar o número de linhas inseridas  
+#### <a name="b-using-top-to-limit-the-number-of-rows-inserted"></a>B. Usando TOP para limitar o número de linhas inseridas  
 O exemplo a seguir cria a tabela `EmployeeSales` e insere nela o nome e os dados de vendas desde o início do ano dos cinco funcionários principais da tabela `HumanResources.Employee`. A instrução INSERT escolhe cinco linhas retornadas pela instrução `SELECT` que atendam aos critérios definidos na cláusula WHERE. A cláusula OUTPUT exibe as linhas inseridas na tabela `EmployeeSales`. Observe que a cláusula ORDER BY na instrução SELECT não é usada para determinar os cinco funcionários principais.  
   
 ```sql  

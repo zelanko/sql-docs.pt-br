@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4fbd27dd-317b-4916-a8ae-4df1b8a6f27c
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 1f84bd8cd53f68bd45cf91307968b45923e53280
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1feffb9116294c6dc77af5bae2552362fd8e532b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938994"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107844"
 ---
 # <a name="stdimension-geometry-data-type"></a>STDimension (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

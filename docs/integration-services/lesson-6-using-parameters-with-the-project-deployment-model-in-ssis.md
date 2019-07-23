@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 54fb96d23fb02be01068ce5c2206913a0e6716f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 164b66b3e4c6770d3722f32deeca6c2fbaf8478c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65721054"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037184"
 ---
 # <a name="lesson-6-use-parameters-with-the-project-deployment-model-in-ssis"></a>Lição 6: Usar parâmetros com o modelo de implantação de projetos no SSIS
 

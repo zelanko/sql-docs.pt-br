@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 75a1cd07710bb95c041d0de8a00cb23f7354eb91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 235e6e3d5ce700c230641364df548765f3be4255
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65722404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086541"
 ---
 # <a name="lesson-3-1-copy-the-lesson-2-package"></a>Lição 3-1: Copiar o pacote da Lição 2
 

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ca9de3172458d22d13ac6260138aa9895bdeff72
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 14333d96ce4a1022979a2998cb808bfa16cd7a0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51511901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087379"
 ---
 # <a name="export-as-policy-dialog-box"></a>Caixa de diálogo Exportar como Política
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "51511901"
  Selecione para salvar a política na instância do servidor local.  
   
  **Para arquivo**  
- Para salvar a política como um arquivo XML, digite o caminho e nome do arquivo ou use o botão Procurar (**...**).  
+ Para salvar a política como um arquivo XML, digite o caminho e nome do arquivo ou use o botão Procurar ( **...** ).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Administrar servidores com Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

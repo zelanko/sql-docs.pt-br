@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 646a0e6b7885c2b220d7ea5c0165dbcd5a3c4de4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ca7964d61cd272af8adc93aac89f8da68827acac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517076"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139595"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modificar relações de chave estrangeira
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ ms.locfileid: "52517076"
      Verifique todos os dados anteriores existentes na tabela quando a restrição foi criada ou habilitada novamente, em relação à restrição.  
   
      **Categoria de Especificações de Tabelas e Colunas**  
-     Expanda para mostrar quais colunas de quais tabelas atuam como a chave estrangeira e chave primária (ou exclusiva) na relação. Para editar ou definir esses valores, clique no botão de reticências (**...**) à direita do campo de propriedade.  
+     Expanda para mostrar quais colunas de quais tabelas atuam como a chave estrangeira e chave primária (ou exclusiva) na relação. Para editar ou definir esses valores, clique no botão de reticências ( **...** ) à direita do campo de propriedade.  
   
      **Tabela Base de Chaves Estrangeiras**  
      Mostra qual tabela contém a coluna que atua como uma chave estrangeira na relação selecionada.  

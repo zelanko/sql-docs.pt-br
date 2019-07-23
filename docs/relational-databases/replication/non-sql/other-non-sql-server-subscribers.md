@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 60f4b8745432433410ed94b54ea9022fc5a8b1fe
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: dce8d383ca01fd205645a18f7aa181d12cff4675
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110961"
 ---
 # <a name="other-non-sql-server-subscribers"></a>Outros assinantes não SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,15 +41,15 @@ ms.locfileid: "53214307"
 ## <a name="replicating-using-ole-db-interfaces"></a>Replicação com o uso de interfaces OLE DB  
  Provedores OLE DB devem oferecer suporte a esses objetos para replicação transacional:  
   
--   Objeto**DataSource**   
+-   Objeto**DataSource**  
   
--   Objeto**Sessão**   
+-   Objeto**Sessão**  
   
--   Objeto**Comando**   
+-   Objeto**Comando**  
   
--   Objeto**Conjunto de linhas**   
+-   Objeto**Conjunto de linhas**  
   
--   Objeto**Erro**   
+-   Objeto**Erro**  
   
 ### <a name="datasource-object-interfaces"></a>Interfaces de objeto DataSource  
  As interfaces a seguir são exigidas para a conexão com uma fonte de dados:  

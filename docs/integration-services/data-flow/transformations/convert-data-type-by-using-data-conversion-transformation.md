@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 251f3dbb12ac77bfd8a14d50bc10cb692947fd73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 283c033a7c34342c6460ff9acca96e976d1f35a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112689"
 ---
 # <a name="convert-data-type-by-using-data-conversion-transformation"></a>Converter tipo de dados usando a transformação Conversão de Dados
 

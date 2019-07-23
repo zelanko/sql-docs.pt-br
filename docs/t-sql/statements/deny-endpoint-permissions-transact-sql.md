@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b2599cd81950f20b8f1771e5508318955fd8eb80
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: b7bb0f690305320f5ae0f5d4ecdeb8f59b33cb01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114846"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>Permissões de ponto de extremidade DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +51,8 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  *permission*  
  Especifica uma permissão que pode ser negada em um ponto de extremidade. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- ON ENDPOINT **::**_endpoint_name_  
- Especifica o ponto de extremidade no qual a permissão está sendo negada. O qualificador de escopo (**::**) é obrigatório.  
+ ON ENDPOINT **::** _endpoint_name_  
+ Especifica o ponto de extremidade no qual a permissão está sendo negada. O qualificador de escopo ( **::** ) é obrigatório.  
   
  TO \<server_principal>  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao qual a permissão está sendo negada.  
@@ -105,7 +104,7 @@ DENY VIEW DEFINITION ON ENDPOINT::Mirror7 TO ZArifin;
 GO  
 ```  
   
-### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>b. Negando a permissão TAKE OWNERSHIP com a opção CASCADE  
+### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>B. Negando a permissão TAKE OWNERSHIP com a opção CASCADE  
  O exemplo a seguir nega a permissão `TAKE OWNERSHIP` no ponto de extremidade `Shipping83` ao usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` e às entidades às quais `PKomosinski` concedeu `TAKE OWNERSHIP`.  
   
 ```  

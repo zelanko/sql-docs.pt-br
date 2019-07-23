@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a9da86a5e15f1b683a0e7c040cd4e6d906d54f47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0897d9498ca93e915dba5df9c32c4544fe08767d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097470"
 ---
 # <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Como fazer: Usar renomeação e refatoração para fazer alterações em seus objetos de banco de dados
 O menu contextual Refatorar no Editor de Transact\-SQL permite renomear ou mover um objeto para um esquema diferente e permite uma visualização de todas as áreas afetadas antes de confirmar a alteração. Você também pode usar o menu Refatorar para qualificar completamente todas as referências a objetos de banco de dados ou expandir os caracteres curinga nas instruções `SELECT` em seu projeto de banco de dados.  

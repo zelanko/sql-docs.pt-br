@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: bb67ce83-a87a-4e14-84cd-9a5930fe74c8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7d58efcf38da2e444a606967d2daa806c74df4b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6a59755f3c6675830324a314cbf364333e105c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140995"
 ---
 # <a name="how-to-view-and-edit-data-in-a-table"></a>Como fazer: Exibir e editar dados em uma tabela
 Você pode exibir, editar e excluir dados de uma tabela existente usando um Editor de Dados visual.  

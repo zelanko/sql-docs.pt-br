@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5e9bccb13c1c0b2f86e1071da722342c2ec5ffa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ba1146dfe62067ba6371eec6a2b621eb2897852
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118298"
 ---
 # <a name="lockdeadlock-event-class"></a>Classe de evento Lock:Deadlock
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +36,8 @@ ms.locfileid: "47657794"
 |DatabaseName|**nvarchar**|Nome do banco de dados no qual o bloqueio estava sendo adquirido.|35|Sim|  
 |Duração|**bigint**|Tempo (em microssegundos) entre a hora em que a solicitação de deadlock foi emitida e a hora em que ocorreu o deadlock.|13|Sim|  
 |EndTime|**datetime**|Hora em que o deadlock terminou.|15|Sim|  
-|EventClass|**int**|Tipo de evento = 25.|27|não|  
-|EventSequence|**int**|A sequência de determinado evento dentro da solicitação.|51|não|  
+|EventClass|**int**|Tipo de evento = 25.|27|Não|  
+|EventSequence|**int**|A sequência de determinado evento dentro da solicitação.|51|Não|  
 |GroupID|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IntegerData|**int**|Número de deadlock. São atribuídos números, começando com 0 quando o servidor é iniciado, incrementados para cada deadlock.|25|Sim|  
@@ -53,7 +52,7 @@ ms.locfileid: "47657794"
 |ObjectID2|**bigint**|Identificação do objeto ou entidade relacionada, se disponível e aplicável.|56|Sim|  
 |OwnerID|**int**|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE|58|Sim|  
 |RequestID|**int**|O ID da solicitação que contém a instrução.|49|Sim|  
-|ServerName|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|não|  
+|ServerName|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |SessionLoginName|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |SPID|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |StartTime|**datetime**|Horário de início do evento, quando disponível.|14|Sim|  

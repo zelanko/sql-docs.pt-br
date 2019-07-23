@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 40e4dac5c3efaf4df04b8afec3d028d39978e397
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: c71cc0537f79330742282e7a0389187c8424d1f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115529"
 ---
 # <a name="toolbox-component-f1-help"></a>Ajuda de F1 do componente Caixa de Ferramentas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "53328796"
  Os ícones da**Caixa de Ferramentas** podem ser arrastados e soltos ou copiados e colados em editores de códigos ou superfícies de modo exibição de design no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="how-the-toolbox-works"></a>Como funciona a caixa de ferramentas  
- A Caixa de Ferramentas é um controle de árvore deslizante com comportamento parecido com o do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Explorer, mas sem linhas de grade ou de conexão. Vários segmentos da **Caixa de Ferramentas** (chamados de "guias") podem ser expandidos ao mesmo tempo e toda a árvore rola dentro da janela da **Caixa de Ferramentas** . Para expandir qualquer guia da **Caixa de Ferramentas**, clique no sinal de mais (**+**) próximo ao seu nome. Para recolher uma guia expandida, clique no sinal de menos (**-**) próximo a seu nome.  
+ A Caixa de Ferramentas é um controle de árvore deslizante com comportamento parecido com o do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Explorer, mas sem linhas de grade ou de conexão. Vários segmentos da **Caixa de Ferramentas** (chamados de "guias") podem ser expandidos ao mesmo tempo e toda a árvore rola dentro da janela da **Caixa de Ferramentas** . Para expandir qualquer guia da **Caixa de Ferramentas**, clique no sinal de mais ( **+** ) próximo ao seu nome. Para recolher uma guia expandida, clique no sinal de menos ( **-** ) próximo a seu nome.  
   
  Sempre que você retorna para um editor ou designer, a **Caixa de Ferramentas** automaticamente rola para a guia e o item selecionados mais recentemente. À medida que você desloca o foco para um editor ou designer diferente, a seleção atual na **Caixa de Ferramentas** se desloca com você.  
   

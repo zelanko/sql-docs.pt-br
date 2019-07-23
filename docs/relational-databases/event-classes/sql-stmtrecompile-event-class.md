@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f04e82e0111f91f419bc21dcdc75b3a157a21ccb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 214b2e4cc7f72fd34b500a1cefb4fca07bc9b27b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713944"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043366"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>classe de evento SQL:StmtRecompile
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47713944"
 |ClientProcessID|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo.|9|Sim|  
 |DatabaseID|**int**|ID do banco de dados em que o procedimento armazenado está sendo executado. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|**nvarchar**|Nome do banco de dados no qual o procedimento armazenado está sendo executado.|35|Sim|  
-|EventSequence|**int**|A sequência de um evento na solicitação.|51|não|  
+|EventSequence|**int**|A sequência de um evento na solicitação.|51|Não|  
 |EventSubClass|**int**|Descreve a causa da recompilação:<br /><br /> 1 = Esquema alterado<br /><br /> 2 = Estatísticas alteradas<br /><br /> 3 = Compilação adiada<br /><br /> 4 = Opção fixa alterada<br /><br /> 5 = Tabela temporária alterada<br /><br /> 6 = Conjunto de linhas remoto alterado<br /><br /> 7 = Permissões For Browse alteradas<br /><br /> 8 = Ambiente de notificação de consulta alterado<br /><br /> 9 = Exibição particionada alterada<br /><br /> 10 = Opções de cursor alteradas<br /><br /> 11 = Opção (recompilar) solicitada|21|Sim|  
 |GroupID|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|**nvarchar**|Nome do computador no qual o cliente está sendo executado que enviou essa instrução. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
@@ -49,10 +48,10 @@ ms.locfileid: "47713944"
 |ObjectType|**int**|Valor que representa o tipo do objeto envolvido no evento. Para obter mais informações, consulte [ObjectType Trace Event Column](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sim|  
 |Deslocamento|**int**|Deslocamento inicial da instrução dentro do procedimento armazenado ou lote que levou à recompilação.|61|Sim|  
 |RequestID|**int**|ID da solicitação que contém a instrução.|49|Sim|  
-|ServerName|**nvarchar**|Nome do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreado.|26|não|  
+|ServerName|**nvarchar**|Nome do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreado.|26|Não|  
 |SessionLoginName|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |SPID|**int**|ID de processo do servidor da conexão.|12|Sim|  
-|SqlHandle|**varbinary**|Hash de 64 bits com base no texto de uma consulta ad hoc ou na ID de objeto e banco de dados de um objeto SQL. Esse valor pode ser transmitido a sys.dm_exec_sql_text para recuperar o texto SQL associado.|63|não|  
+|SqlHandle|**varbinary**|Hash de 64 bits com base no texto de uma consulta ad hoc ou na ID de objeto e banco de dados de um objeto SQL. Esse valor pode ser transmitido a sys.dm_exec_sql_text para recuperar o texto SQL associado.|63|Não|  
 |StartTime|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
 |TextData|**ntext**|Texto da instrução Transact-SQL recompilado.|1|Sim|  
 |TransactionID|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  

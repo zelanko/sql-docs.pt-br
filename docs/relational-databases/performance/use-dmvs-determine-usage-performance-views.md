@@ -1,7 +1,6 @@
 ---
 title: Usar DMVs para determinar estatísticas de uso e o desempenho das exibições
 description: Usar DMVs para determinar estatísticas de uso e o desempenho das exibições
-manager: craigg
 author: julieMSFT
 ms.author: jrasnick
 ms.date: 09/27/2018
@@ -9,12 +8,12 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 75563b5dcceead80b5b4d55c07413b37c9d0c278
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 944ba06bc1ccf590e8d02a4fd6e44e6c57ec9001
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986663"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Usar DMVs para determinar estatísticas de uso e o desempenho das exibições
 Este artigo aborda a metodologia e os scripts usados para obter informações sobre o **desempenho de consultas que usam exibições**. A finalidade desses scripts é fornecer indicadores de uso e desempenho das diferentes exibições encontradas em um banco de dados. 

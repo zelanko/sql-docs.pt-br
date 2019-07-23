@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2aa9ecc0364accdd9050cae303afb545faf394ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c3c18f666c4e7b7e5f1d161fb78535e8005f1a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045616"
 ---
 # <a name="web-service-task"></a>Tarefa Serviços Web
 
@@ -88,7 +87,7 @@ ms.locfileid: "65727334"
   
 ### <a name="options"></a>Opções  
  **HTTPConnection**  
- Selecione um gerenciador de conexões na lista ou clique em \<**Nova conexão…**> para criar um novo gerenciador de conexões.  
+ Selecione um gerenciador de conexões na lista ou clique em \<**Nova conexão…** > para criar um novo gerenciador de conexões.  
   
 > [!IMPORTANT]  
 >  O gerenciador de conexões HTTP dá suporte apenas para autenticação anônima e autenticação básica. Ele não suporta a Autenticação do Windows.  
@@ -174,13 +173,13 @@ ms.locfileid: "65727334"
   
 #### <a name="outputtype--file-connection"></a>OutputType = File Connection  
  **File**  
- Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão…**> para criar um novo gerenciador de conexões.  
+ Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão…** > para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = Variable  
  **Variável**  
- Selecione uma variável na lista ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Selecione uma variável na lista ou clique em \<**Nova variável...** > para criar uma nova variável.  
   
  **Tópicos relacionados:**  [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

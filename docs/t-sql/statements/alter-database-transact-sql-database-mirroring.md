@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8cdded8444f4778ec7ad46c8b677e6ebb496847b
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 32cc95fa56d909602ab66d3ddad403bf4ceacebc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065826"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>Espelhamento de banco de dados de ALTER DATABASE (Transact-SQL)
 
@@ -88,11 +87,11 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 
 **'** _partner_server_ **'** Especifica o endereço de rede do servidor para uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atuar como um parceiro de failover em uma nova sessão de espelhamento de banco de dados. Cada sessão requer dois parceiros: um começa como servidor principal e o outro, como servidor espelho. Recomendamos que estes parceiros residam em computadores diferentes.
 
-Esta opção é especificada uma vez por sessão em cada parceiro. A inicialização de uma sessão de espelhamento de banco de dados exige duas instruções ALTER DATABASE *database* SET PARTNER **='**_partner_server_**'**. A ordem delas é significativa. Primeiro, conecte ao servidor espelho e especifique a instância de servidor principal como *partner_server* (SET PARTNER **='**_principal_server_**'**). Em segundo lugar, conecte-se ao servidor principal e especifique a instância de servidor espelho como *partner_server* (SET PARTNER **='**_mirror_server_**'**); isto inicia uma sessão de espelhamento de banco de dados entre esses dois parceiros. Para obter mais informações, consulte [Configurando o espelhamento de banco de dados](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).
+Esta opção é especificada uma vez por sessão em cada parceiro. A inicialização de uma sessão de espelhamento de banco de dados exige duas instruções ALTER DATABASE *database* SET PARTNER **='** _partner_server_ **'** . A ordem delas é significativa. Primeiro, conecte ao servidor espelho e especifique a instância de servidor principal como *partner_server* (SET PARTNER **='** _principal_server_ **'** ). Em segundo lugar, conecte-se ao servidor principal e especifique a instância de servidor espelho como *partner_server* (SET PARTNER **='** _mirror_server_ **'** ); isto inicia uma sessão de espelhamento de banco de dados entre esses dois parceiros. Para obter mais informações, consulte [Configurando o espelhamento de banco de dados](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).
 
 O valor de *partner_server* é um endereço de rede do servidor. Tem a seguinte sintaxe:
 
-TCP **://**_\<system-address>_**:**_\<port>_
+TCP **://** _\<system-address>_ **:** _\<port>_
 
 onde
 
@@ -101,7 +100,7 @@ onde
 
 Para obter mais informações, consulte [Especificar um endereço de rede do servidor – espelhamento de banco de dados](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).
 
-O seguinte exemplo ilustra a cláusulaSET PARTNER **='**_partner_server_**'**:
+O seguinte exemplo ilustra a cláusulaSET PARTNER **='** _partner_server_ **'** :
 
 ```
 'TCP://MYSERVER.mydomain.Adventure-Works.com:7777'
@@ -182,7 +181,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 
  **'** _witness_server_ **'** Especifica uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para atuar como servidor testemunha de uma sessão de espelhamento de banco de dados. Você só pode especificar instruções SET WITNESS no servidor principal.
 
-Em uma instrução SET WITNESS **='**_witness_server_**'**, a sintaxe de *witness_server* é igual à sintaxe de *partner_server*.
+Em uma instrução SET WITNESS **='** _witness_server_ **'** , a sintaxe de *witness_server* é igual à sintaxe de *partner_server*.
 
 OFF Remove a testemunha de uma sessão de espelhamento de banco de dados. Definir a testemunha como OFF desabilita o failover automático. Se o banco de dados estiver definido como FULL SAFETY e a testemunha como OFF, uma falha no servidor espelho fará com que o servidor principal torne o banco de dados indisponível.
 
@@ -194,7 +193,7 @@ OFF Remove a testemunha de uma sessão de espelhamento de banco de dados. Defini
 
 A definição do espelhamento de banco de dados com testemunha requer a configuração da segurança e a preparação do banco de dados espelho, além do uso de ALTER DATABASE para definir os parceiros. Para obter um exemplo do processo completo de instalação, consulte [Configurando o espelhamento de banco de dados](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).
 
-### <a name="b-manually-failing-over-a-database-mirroring-session"></a>b. Efetuando manualmente o failover de uma sessão de espelhamento de banco de dados
+### <a name="b-manually-failing-over-a-database-mirroring-session"></a>B. Efetuando manualmente o failover de uma sessão de espelhamento de banco de dados
 
 O failover manual pode ser iniciado a partir de qualquer parceiro de espelhamento de banco de dados. Antes de efetuar o failover, você deve verificar se o servidor que se acredita ser o servidor principal atual o é de fato. Por exemplo, para o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], na instância de servidor que se acredita ser o servidor principal atual, execute a seguinte consulta:
 

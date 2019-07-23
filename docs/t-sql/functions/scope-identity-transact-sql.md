@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 83d1ad7e793e7072345ad0b4ada34162d039ed45
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 86afd9bb2036edb77934f6ae622fafe93bd2d5a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033027"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111332"
 ---
 # <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +132,7 @@ SCOPE_IDENTITY
 115  
 ```  
   
-### <a name="b-using-identity-and-scopeidentity-with-replication"></a>b. Usando @@IDENTITY e SCOPE_IDENTITY() com replicação  
+### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. Usando @@IDENTITY e SCOPE_IDENTITY() com replicação  
  Os exemplos a seguir mostram como usar `@@IDENTITY` e `SCOPE_IDENTITY()` para inserções em um banco de dados publicado para replicação de mesclagem. As duas tabelas dos exemplos estão no banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]: `Person.ContactType` não é publicado e `Sales.Customer` é publicado. A replicação de mesclagem adiciona gatilhos a tabelas que são publicadas. Portanto, `@@IDENTITY` pode retornar o valor da inserção em uma tabela do sistema de replicação em vez da inserção em uma tabela de usuário.  
   
  A tabela `Person.ContactType` tem um valor de identidade máximo de 20. Se você inserir uma linha na tabela, `@@IDENTITY` e `SCOPE_IDENTITY()` retornarão o mesmo valor.  

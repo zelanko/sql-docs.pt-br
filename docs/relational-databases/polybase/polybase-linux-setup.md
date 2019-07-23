@@ -3,19 +3,18 @@ title: Instalar PolyBase no Linux | Microsoft Docs
 description: Este artigo descreve como instalar a Pesquisa de Texto Completo do SQL Server no Linux.
 author: aboke
 ms.author: aboke
-manager: craigg
 ms.date: 4/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 69c256ef52d9c302d55ef1499059d959ed55b528
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33a6a4415b5ced4bb2a5ca4448ccca8618f96832
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63759063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062141"
 ---
 # <a name="install-polybase-on-linux"></a>Instalar PolyBase em Linux
 

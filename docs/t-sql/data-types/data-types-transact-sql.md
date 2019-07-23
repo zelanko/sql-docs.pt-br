@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4d1f3ca61710f1e55d95b8942adc86fea736910
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: a03da24fe18f0d910f5054d8cfb321c42d633db8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802233"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113738"
 ---
 # <a name="data-types-transact-sql"></a>Tipos de dados (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +33,7 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece um conjunto 
   
 Quando duas expressões que possuem diferentes tipos de dados, ordenações, precisão, escala ou comprimento são combinadas por um operador, as características do resultado são determinadas pelo seguinte:
 -   O tipo de dados do resultado é determinado pela aplicação das regras de precedência de tipos de dados em relação aos tipos de dados de expressões de entrada. Para obter mais informações, veja [Precedência de tipo de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
--   A ordenação do resultado é determinada pelas regras de precedência de ordenação quando o tipo de dados do resultado é **char**, **varchar**, **text**, **nchar**, **nvarchar** ou **ntext**. Para obter mais informações, consulte [Precedência de ordenação &#40;Transact-SQL &#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
+-   A ordenação do resultado é determinada pelas regras de precedência de ordenação quando o tipo de dados do resultado é **char**, **varchar**, **text**, **nchar**, **nvarchar** ou **ntext**. Para obter mais informações, consulte [Precedência de ordenação &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
 -   A precisão, a escala e o tamanho do resultado dependem da precisão, da escala e do tamanho das expressões de entrada. Para obter mais informações, consulte [Precisão, escala e comprimento &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece sinônimos de tipo de dados para compatibilidade com ISO. Para obter mais informações, consulte [Sinônimos de tipo de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).

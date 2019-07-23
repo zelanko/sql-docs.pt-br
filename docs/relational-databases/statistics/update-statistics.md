@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0fafe9e457a29a8247478ed9c638c3bddedeee0f
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 59efa5a8143d448ca322ab1b6efa86cbfa9f66d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934087"
 ---
 # <a name="update-statistics"></a>Atualização de Estatísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,9 +59,9 @@ ms.locfileid: "53380857"
   
 5.  Clique com o botão direito do mouse no objeto de estatísticas que você deseja atualizar e selecione **Propriedades**.  
   
-6.  Na caixa de diálogo **Propriedades estatísticas –**_statistics\_name_, marque a caixa de seleção **Atualizar estatísticas destas colunas** e clique em **OK**.  
+6.  Na caixa de diálogo **Propriedades estatísticas –** _statistics\_name_, marque a caixa de seleção **Atualizar estatísticas destas colunas** e clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 ### <a name="to-update-a-specific-statistics-object"></a>Para atualizar um objeto de estatísticas específico  
   

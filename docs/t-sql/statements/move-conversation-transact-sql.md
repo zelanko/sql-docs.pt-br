@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6f6540db42c0f83edd86b66a31fa2217762f4475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d76dd0507336a110337f01509440d4ad64afc085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709714"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129444"
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ MOVE CONVERSATION conversation_handle
  A instrução MOVE CONVERSATION move a conversa especificada por *conversation_handle* para o grupo de conversa identificado por *conversation_group_id*. Os diálogos só podem ser redirecionados entre grupos de conversa que são associados com a mesma fila.  
   
 > [!IMPORTANT]  
->  Se a instrução MOVE CONVERSATION não for a primeira instrução de um procedimento em lote ou armazenado, a instrução anterior deverá ser terminada com ponto e vírgula (**;**), o terminador de instrução do [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+>  Se a instrução MOVE CONVERSATION não for a primeira instrução de um procedimento em lote ou armazenado, a instrução anterior deverá ser terminada com ponto e vírgula ( **;** ), o terminador de instrução do [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  A instrução MOVE CONVERSATION bloqueia o grupo de conversa associado a *conversation_handle* e o grupo de conversa especificado por *conversation_group_id* até que a transação que contém a instrução seja confirmada ou revertida.  
   

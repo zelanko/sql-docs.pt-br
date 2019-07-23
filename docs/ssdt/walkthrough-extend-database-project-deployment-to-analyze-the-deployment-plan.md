@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 13e2b010a193e8c610c54a5b619d8a67c9b4d2d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 167667590df0b2172e05674c462cfa9833d45acd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65097454"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912780"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Passo a passo: Estender a implantação do projeto de banco de dados para analisar o plano de implantação
 Você pode criar colaboradores de implantação para executar ações personalizadas ao implantar um projeto SQL. Você pode criar um DeploymentPlanModifier ou um DeploymentPlanExecutor. Use um DeploymentPlanModifier para alterar o plano antes de ser executado e um DeploymentPlanExecutor para realizar operações enquanto o plano está sendo executado. Neste passo a passo, você cria um DeploymentPlanExecutor chamado DeploymentUpdateReportContributor que cria um relatório das ações executadas quando você implanta um projeto de banco de dados. Como esse colaborador de compilação aceita um parâmetro para controlar se o relatório é gerado, você deverá executar uma etapa necessária adicional.  

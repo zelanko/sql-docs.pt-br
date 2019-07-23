@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 803c1fccf0369497da75554842d34c72d4c5b95f
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 89f1338f2e127742a3e76b4b2dbc2f2ae5e8b8ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326807"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117125"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +84,7 @@ CREATE SERVER ROLE buyers AUTHORIZATION BenMiller;
 GO  
 ```  
   
-### <a name="b-creating-a-server-role-that-is-owned-by-a-fixed-server-role"></a>b. Criando uma função de servidor que é de propriedade de uma função de servidor fixa  
+### <a name="b-creating-a-server-role-that-is-owned-by-a-fixed-server-role"></a>B. Criando uma função de servidor que é de propriedade de uma função de servidor fixa  
  O exemplo a seguir cria a função de servidor `auditors` que é de propriedade da função de servidor fixa `securityadmin`.  
   
 ```  

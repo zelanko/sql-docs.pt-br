@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67aad831c3e5a98817af9ecd34b17501089a1609
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127123"
 ---
 # <a name="use-the-copy-database-wizard"></a>Usar o Assistente para Copiar Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -323,11 +322,11 @@ O exemplo a seguir moverá o banco de dados `Sales` , um logon do Windows chamad
   
 9.  Página **Configurar Banco de Dados de Destino**:  O **Assistente** identificou que `Sales` já existe no servidor de destino, conforme criado na **Etapa 6** acima e acrescentou `_new` ao nome do **Banco de dados de destino**.  Exclua `_new` da caixa de texto **Banco de dados de destino** .  Se desejar, altere o **Nome do Arquivo**e a **Pasta de Destino**.  Selecione **Remover qualquer banco de dados no servidor de destino que tenha o mesmo nome e continuar a transferência do banco de dados, substituindo arquivos de banco de dados existentes**.  Clique em **Avançar**.
   
-10. Página **Selecionar Objetos do Servidor**: No painel **Objetos relacionados selecionados:**, clique no botão de reticências de **Logons do nome de objeto**.  Em **Opções de Cópia** , selecione **Copiar somente os logons selecionados:**.  Marque a caixa de **Mostrar todos os logons de servidor**.  Marque a caixa **Logon** de `contoso\Jennie`.  Clique em **OK**.  No painel **Objetos relacionados disponíveis:** , selecione **Trabalhos do SQL Server Agent** e clique no botão **>** .  No painel **Objetos relacionados selecionados:** , clique no botão de reticências de **Trabalhos do SQL Server Agent**.  Em **Opções de Cópia** , selecione **Copiar somente os trabalhos selecionados**.  Marque a caixa de `Jennie's Report`.  Clique em **OK**.  Clique em **Avançar**.  
+10. Página **Selecionar Objetos do Servidor**: No painel **Objetos relacionados selecionados:** , clique no botão de reticências de **Logons do nome de objeto**.  Em **Opções de Cópia** , selecione **Copiar somente os logons selecionados:** .  Marque a caixa de **Mostrar todos os logons de servidor**.  Marque a caixa **Logon** de `contoso\Jennie`.  Clique em **OK**.  No painel **Objetos relacionados disponíveis:** , selecione **Trabalhos do SQL Server Agent** e clique no botão **>** .  No painel **Objetos relacionados selecionados:** , clique no botão de reticências de **Trabalhos do SQL Server Agent**.  Em **Opções de Cópia** , selecione **Copiar somente os trabalhos selecionados**.  Marque a caixa de `Jennie's Report`.  Clique em **OK**.  Clique em **Avançar**.  
   
 11. Página **Localização dos Arquivos de Banco de Dados de Origem**:  Clique no botão de reticências de **Compartilhamento de arquivos no servidor de origem** e navegue para a localização especificada da Pasta.  Por exemplo, para o local da Pasta `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA` , use `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` em **Compartilhamento de arquivos no servidor de origem**.  Clique em **Avançar**.
   
-12. Página **Configurar o Pacote**:  Na caixa de texto **Nome do pacote:**, insira `SalesFromServer1toServer2_Move`.  Marque a caixa **Salvar logs de transferência?** .  Na lista suspensa **Opções de Log** , selecione **Arquivo de texto**.  Observe o **Caminho do arquivo de log de erros**; examine, conforme desejado.  Clique em **Avançar**.  
+12. Página **Configurar o Pacote**:  Na caixa de texto **Nome do pacote:** , insira `SalesFromServer1toServer2_Move`.  Marque a caixa **Salvar logs de transferência?** .  Na lista suspensa **Opções de Log** , selecione **Arquivo de texto**.  Observe o **Caminho do arquivo de log de erros**; examine, conforme desejado.  Clique em **Avançar**.  
   
      > **OBSERVAÇÃO** O **Caminho do arquivo de log de erros** é o caminho no servidor de destino.
   
@@ -368,7 +367,7 @@ Neste exemplo, o banco de dados `Sales` será copiado e criado como `SalesCopy` 
 
 8.  Página **Configurar Banco de Dados de Destino**: Altere o nome do **Banco de dados de destino** para `SalesCopy`.  Se desejar, altere o **Nome do Arquivo**e a **Pasta de Destino**.  Selecione **Remover qualquer banco de dados no servidor de destino que tenha o mesmo nome e continuar a transferência do banco de dados, substituindo arquivos de banco de dados existentes**.  Clique em **Avançar**.
 
-9.  Página **Configurar o Pacote**:  Na caixa de texto **Nome do pacote:**, insira `SalesCopy Weekly Refresh`.  Marque a caixa **Salvar logs de transferência?** .  Clique em **Avançar**.
+9.  Página **Configurar o Pacote**:  Na caixa de texto **Nome do pacote:** , insira `SalesCopy Weekly Refresh`.  Marque a caixa **Salvar logs de transferência?** .  Clique em **Avançar**.
 
 10. Página **Agendar o Pacote**:  Clique no botão de opção **Agendamento:** e, em seguida, no botão **Alterar Agendamento**. 
  

@@ -22,24 +22,23 @@ helpviewer_keywords:
 ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abf461a516371b78a74989ac26f6b79ebbe4853b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9811fdb3f7199e3a4cf10053f0f8c2f850a57845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086751"
 ---
 # <a name="float-and-real-transact-sql"></a>flutuante e real (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Tipos de dados numéricos aproximados para uso com dados numéricos de ponto flutuante. Os dados de ponto flutuante são aproximados; portanto, nem todos os valores no intervalo de tipo de dados podem ser representados de maneira exata. O sinônimo ISO de **real** é **float(24)**.
+Tipos de dados numéricos aproximados para uso com dados numéricos de ponto flutuante. Os dados de ponto flutuante são aproximados; portanto, nem todos os valores no intervalo de tipo de dados podem ser representados de maneira exata. O sinônimo ISO de **real** é **float(24)** .
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
-**float** [ **(**_n_**)** ] em que *n* é o número de bits usado para armazenar a mantissa do número **float** na notação científica e, portanto, exige a precisão e o tamanho do armazenamento. Se *n* for especificado, ele precisará ser um valor entre **1** e **53**. O valor padrão de *n* é **53**.
+**float** [ **(** _n_ **)** ] em que *n* é o número de bits usado para armazenar a mantissa do número **float** na notação científica e, portanto, exige a precisão e o tamanho do armazenamento. Se *n* for especificado, ele precisará ser um valor entre **1** e **53**. O valor padrão de *n* é **53**.
   
 |Valor de *n*|Precisão|Tamanho de armazenamento|  
 |---|---|---|
@@ -49,7 +48,7 @@ Tipos de dados numéricos aproximados para uso com dados numéricos de ponto flu
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trata *n* como um dos dois valores possíveis. Se **1**<=n<=**24**, *n* é tratado como **24**. Se **25**<=n<=**53**, *n* é tratado como **53**.  
   
-O tipo de dados **float**[**(n)**] do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em conformidade com o padrão ISO para todos os valores de *n* de **1** a **53**. O sinônimo de **double precision** é **float(53)**.
+O tipo de dados **float**[ **(n)** ] do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em conformidade com o padrão ISO para todos os valores de *n* de **1** a **53**. O sinônimo de **double precision** é **float(53)** .
   
 ## <a name="remarks"></a>Remarks  
   

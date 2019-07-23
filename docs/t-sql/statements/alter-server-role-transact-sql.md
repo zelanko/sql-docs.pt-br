@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df9cc3231b9e883857563b2f7ed0bf8bc8d1a2f3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070272"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -65,7 +64,7 @@ Adiciona a entidade de segurança do servidor especificado à função de servid
 DROP MEMBER *server_principal*  
 Remove a entidade de segurança de servidor especificada da função de servidor. *server_principal* pode ser um logon ou uma função de servidor definida pelo usuário. *server_principal* não pode ser uma função de servidor fixa, uma função de banco de dados nem sa.  
   
-WITH NAME **=**_new_server_role_name_  
+WITH NAME **=** _new_server_role_name_  
 Especifica o novo nome da função de servidor definida pelo usuário. Esse nome ainda não pode existir no servidor.  
   
 ## <a name="remarks"></a>Remarks  
@@ -105,7 +104,7 @@ ALTER SERVER ROLE Product WITH NAME = Production ;
 GO  
 ```  
   
-### <a name="b-adding-a-domain-account-to-a-server-role"></a>b. Adicionando uma conta de domínio a uma função de servidor.  
+### <a name="b-adding-a-domain-account-to-a-server-role"></a>B. Adicionando uma conta de domínio a uma função de servidor.  
 O exemplo a seguir adiciona uma conta de domínio chamada `adventure-works\roberto0` à função de servidor definida pelo usuário chamada `Production`.  
   
 ```  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d1b91df1ecce9749ebdec3515a339ac31f2507b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2ad973cf845817a0dbd251bbee23ac6f13d7c04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110583"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>Atualizar um projeto de teste mais antigo contendo testes de unidade de banco de dados
 Você pode atualizar um projeto de teste mais antigo, que foi criado no Visual Studio 2010 e que contém testes de unidade de banco de dados, para usar o novo tempo de execução e as ferramentas do teste de unidade de banco de dados do SQL Server Data Tools. Assim que você tiver atualizado um projeto mais antigo, você poderá adicionar os testes de unidade do SQL Server ao projeto (confira [Criar e definir testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md) para obter mais informações).  
