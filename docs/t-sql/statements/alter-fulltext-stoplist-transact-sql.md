@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fb0a6c02a3211c029c311f07a91da9b26842fc4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 692f62c6a5b9d6268a27de350a860c0cb58c74bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067551"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
 |Formato|Descrição|  
 |------------|-----------------|  
-|Cadeia de caracteres|*language_term* corresponde ao valor da coluna **alias** no modo de exibição de compatibilidade [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). A cadeia de caracteres precisa ser colocada entre aspas, como em **'***language_term***'**.|  
+|Cadeia de caracteres|*language_term* corresponde ao valor da coluna **alias** no modo de exibição de compatibilidade [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). A cadeia de caracteres precisa ser colocada entre aspas, como em **'***language_term***'** .|  
 |Integer|*language_term* é o LCID do idioma.|  
 |Hexadecimal|*language_term* é 0x seguido do valor hexadecimal do LCID. O valor hexadecimal não deve exceder oito dígitos, inclusive zeros à esquerda. Se o valor estiver no formato DBCS (conjunto de caracteres de dois bytes), o SQL Server o converterá em Unicode.|  
   

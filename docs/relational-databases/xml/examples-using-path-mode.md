@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 740ba790bfc261efad9d544668d339dd9e24fa46
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: dd4b9487f6a185b76b5f4ee52d7a39f349906d46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943377"
 ---
-# <a name="examples-using-path-mode"></a>Exemplos: Usando o modo PATH
+# <a name="examples-using-path-mode"></a>Exemplos: uso do modo PATH
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Os exemplos a seguir ilustram o uso do modo PATH para gerar XML a partir de uma consulta SELECT. Muitas dessas consultas são especificadas em relação a documentos XML de instruções da fabricação de bicicletas que são armazenados na coluna Instructions da tabela ProductModel.  
   

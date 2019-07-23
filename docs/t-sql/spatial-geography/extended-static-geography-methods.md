@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a665a137-197c-4201-a2fb-ba639b5f3ca3
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 4435e719e4e15b5e9f16662447aa39ba234622df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ef55fb04372451cb3481956c2d30e4626427c49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930391"
 ---
 # <a name="extended-static-geography-methods"></a>Métodos de geografia estática estendidos
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

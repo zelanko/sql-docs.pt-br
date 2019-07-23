@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d0c25e433fd9e311908d1759bbe75a1e1a1f045
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+ms.openlocfilehash: 5dd4aa4c3beb769509884c6ebb75fd8c82c1c8ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058134"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guia de arquitetura de threads e tarefas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -114,11 +113,11 @@ A tabela a seguir lista os componentes do [!INCLUDE[ssNoVersion](../includes/ssn
 |Nome do processo   |Programa executável |Usar mais de 64 CPUs |  
 |----------|----------|----------|  
 |Mecanismo de Banco de Dados do SQL Server |Sqlserver.exe  |Sim |  
-|Reporting Services |Rs.exe |não |  
-|Analysis Services  |As.exe |não |  
-|Integration Services   |Is.exe |não |  
-|Service Broker |Sb.exe |não |  
-|Pesquisa de Texto Completo   |Fts.exe    |não |  
-|SQL Server Agent   |Sqlagent.exe   |não |  
-|SQL Server Management Studio   |Ssms.exe   |não |  
-|instalação do SQL Server   |Setup.exe  |não |  
+|Reporting Services |Rs.exe |Não |  
+|Analysis Services  |As.exe |Não |  
+|Integration Services   |Is.exe |Não |  
+|Service Broker |Sb.exe |Não |  
+|Pesquisa de Texto Completo   |Fts.exe    |Não |  
+|SQL Server Agent   |Sqlagent.exe   |Não |  
+|SQL Server Management Studio   |Ssms.exe   |Não |  
+|instalação do SQL Server   |Setup.exe  |Não |  

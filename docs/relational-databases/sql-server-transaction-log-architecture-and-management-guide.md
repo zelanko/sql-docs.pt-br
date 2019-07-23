@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 262e55ab61f3e4ee68e905ea264ae15f450b58ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f0011d8ad44a34aee1c6e18f66aa99e2068902c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895219"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guia de arquitetura e gerenciamento do log de transações do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +65,7 @@ São registrados muitos tipos de operações no log de transações. Essas opera
   
  Operações de reversão também são registradas. Cada transação reserva espaço no log de transações para verificar se há espaço de log suficiente para oferecer suporte a uma reversão causada por uma instrução de reversão explícita ou se um erro for encontrado. A quantidade de espaço reservada depende das operações executadas na transação, mas geralmente é igual à quantidade de espaço usada para registrar cada operação. Esse espaço reservado é liberado quando a transação é concluída.  
   
-<a name="minlsn"></a> A seção do arquivo de log do primeiro registro de log que deve estar presente para uma reversão bem-sucedida em todo o banco de dados para o registro de log da última gravação é chamada de parte ativa do log ou *log ativo*. Essa é a seção do log necessária para uma recuperação completa do banco de dados. Nenhuma parte do log ativo pode ter sido truncada. O [LSN (número de sequência de log)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) desse primeiro registro de log é conhecido como **LSN de recuperação mínima (*MinLSN*)**.  
+<a name="minlsn"></a> A seção do arquivo de log do primeiro registro de log que deve estar presente para uma reversão bem-sucedida em todo o banco de dados para o registro de log da última gravação é chamada de parte ativa do log ou *log ativo*. Essa é a seção do log necessária para uma recuperação completa do banco de dados. Nenhuma parte do log ativo pode ter sido truncada. O [LSN (número de sequência de log)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) desse primeiro registro de log é conhecido como **LSN de recuperação mínima (*MinLSN*)** .  
   
 ##  <a name="physical_arch"></a> Arquitetura física de log de transações  
 O log de transações em um banco de dados mapeia um ou mais arquivos físicos. Conceitualmente, o arquivo de log é uma cadeia de caracteres de registros de log. Fisicamente, a sequência de registros de log é armazenada com eficiência no conjunto de arquivos físicos que implementam o log de transações. Deve haver, no mínimo, um arquivo de log para cada banco de dados.  

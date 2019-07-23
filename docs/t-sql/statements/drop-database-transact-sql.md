@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e064ab7ae8ef7776e03cb8d80bb4038a362e7689
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 1fcda20d3efa458808ad9313965feb279a0010c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828056"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898100"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 
@@ -145,7 +144,7 @@ O exemplo a seguir remove o nome do banco de dados `Sales`:
 DROP DATABASE Sales;
 ```
 
-### <a name="b-dropping-multiple-databases"></a>b. Removendo vários bancos de dados
+### <a name="b-dropping-multiple-databases"></a>B. Removendo vários bancos de dados
 
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3dddd702582cdc8b2baea11838b0ad7e0ccd8cc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 612ed6750946dfa5e77970bf6e3a4859cbb0045b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911869"
 ---
 # <a name="how-to-build-and-deploy-to-a-local-database"></a>Como fazer: Criar e implantar em um banco de dados local
 O Microsoft SQL Server 2012 fornece uma instância de servidor local sob demanda, chamada Tempo de Execução de Banco de Dados Local do SQL Server Express, que é ativada quando um projeto de Banco de Dados do SQL Server é depurado. Esta instância de servidor local pode ser usada como uma área restrita para compilar, testar e depurar seu projeto. Isso é independente de qualquer uma de suas instâncias do SQL Server instaladas e não é acessível fora do SQL Server Data Tools (SSDT). Esse tipo de organização é ideal para os desenvolvedores que não têm acesso ou têm acesso limitado a bancos de dados de produção, mas gostariam de testar seus projetos localmente antes que uma equipe autorizada implante-os na produção. Além disso, quando você está desenvolvendo uma solução de banco de dados para o SQL Azure, pode utilizar a conveniência fornecida por este servidor local para desenvolver e testar localmente seu projeto de banco de dados, antes de implantá-lo na nuvem.  

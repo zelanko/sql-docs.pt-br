@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 931c881651b87fd7ab8ce4b47a4e24710ce8c487
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 261f22847c8b397d57ff5f732ea4d97091895daa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939209"
 ---
 # <a name="enhance-merge-replication-performance"></a>Aprimorar o desempenho de replicação de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "54136066"
   
 -   Considere tabelas supernormalizadas que incluam tipos de dados LOB (Large Object).  
   
-     Quando a sincronização ocorre, o Merge Agent poderá precisar ler e transferir a linha de dados inteira de um Publicador ou Assinante. Se a linha contiver colunas que usam LOBs, esse processo poderá precisar alocar memória adicional e comprometer o desempenho negativamente, embora essas colunas possam não ter sido atualizadas. Para reduzir a probabilidade de ocorrer esse comprometimento no desempenho, considere colocar colunas LOB em uma tabela separada, usando uma relação um para um no resto dos dados de linha. Os tipos de dados **text**, **ntext**e **image** são preteridos. Se incluir LOBs, recomendamos o uso dos tipos de dados **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, respectivamente.  
+     Quando a sincronização ocorre, o Merge Agent poderá precisar ler e transferir a linha de dados inteira de um Publicador ou Assinante. Se a linha contiver colunas que usam LOBs, esse processo poderá precisar alocar memória adicional e comprometer o desempenho negativamente, embora essas colunas possam não ter sido atualizadas. Para reduzir a probabilidade de ocorrer esse comprometimento no desempenho, considere colocar colunas LOB em uma tabela separada, usando uma relação um para um no resto dos dados de linha. Os tipos de dados **text**, **ntext**e **image** são preteridos. Se incluir LOBs, recomendamos o uso dos tipos de dados **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , respectivamente.  
   
 ## <a name="publication-design"></a>Design de publicação  
   
@@ -55,7 +54,7 @@ ms.locfileid: "54136066"
   
      O período de retenção da publicação, que é a quantidade máxima de tempo antes que a assinatura tenha de ser sincronizada, determina por quanto tempo os metadados de controle são armazenados. Um valor alto pode afetar armazenamento e o desempenho do processamento. Para obter mais informações sobre como definir o período de retenção de publicação, consulte [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
--   Use artigos de somente download nessas tabelas que só são alteradas no Publicador. Para obter mais informações, consulte [Optimize Merge Replication Performance with Download-Only Articles](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md) (Otimizar o desempenho da replicação de mesclagem com artigos somente para download).  
+-   Use artigos de somente download nessas tabelas que só são alteradas no Publicador. Para obter mais informações, consulte [Otimizar o desempenho da replicação de mesclagem com artigos somente para download](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
 ### <a name="filter-design-and-use"></a>Design e uso de filtro  
   

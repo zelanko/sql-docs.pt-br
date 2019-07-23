@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 9bc65e7f29f75d4aaf2f1e6366f29d45f04cafd0
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 5aa089ac3c8de549e0c2ec33fd413c9cafba24dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685503"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101995"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ DBCC DBREINDEX
   
 ## <a name="arguments"></a>Argumentos  
  *table_name*  
- É o nome da tabela que contém o índice ou índices especificados a serem recriados. Os nomes de tabela precisam seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md)*.*  
+ É o nome da tabela que contém o índice ou índices especificados a serem recriados. Os nomes de tabela precisam seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md) *.*  
   
  *index_name*  
  É o nome do índice a ser recriado. Os nomes de índice devem obedecer às regras para identificadores. Se *index_name* for especificado, *table_name* precisará ser especificado. Se *index_name* não for especificado ou for " ", todos os índices da tabela serão recriados.  
@@ -103,7 +102,7 @@ DBCC DBREINDEX ('HumanResources.Employee', PK_Employee_BusinessEntityID,80);
 GO  
 ```  
   
-### <a name="b-rebuilding-all-indexes"></a>b. Recriando todos os índices  
+### <a name="b-rebuilding-all-indexes"></a>B. Recriando todos os índices  
 O exemplo a seguir recria todos os índices da tabela `Employee` no `AdventureWorks` usando um valor de fator de preenchimento de `70`.
   
 ```sql

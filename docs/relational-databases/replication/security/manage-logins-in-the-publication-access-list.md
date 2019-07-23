@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6d0c686bcc52732f1fa25a4e4b4b83b776bb8633
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2e8ebae67cbe6f4619803648795254ea7a51413
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046683"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>Gerenciar logons na lista de acesso à publicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "63026726"
   
 #### <a name="to-manage-logins-in-the-pal"></a>Para gerenciar logons na PAL  
   
-1.  Na página **Lista de Acesso à Publicação** da caixa de diálogo **Propriedades da Publicação – \<Publicação>**, use os botões **Adicionar**, **Remover** e **Remover Tudo** para adicionar e remover logons e grupos da PAL. Não remova o **distributor_admin** da PAL. Essa conta é usada para replicação.  
+1.  Na página **Lista de Acesso à Publicação** da caixa de diálogo **Propriedades da Publicação – \<Publicação>** , use os botões **Adicionar**, **Remover** e **Remover Tudo** para adicionar e remover logons e grupos da PAL. Não remova o **distributor_admin** da PAL. Essa conta é usada para replicação.  
   
     > [!NOTE]  
     >  Se for usado um Distribuidor remoto, as contas da PAL precisarão estar disponíveis tanto no Publicador quanto no Distribuidor. A conta ou deve ser uma conta de domínio ou uma conta local que é definida em ambos os servidores. As senhas associadas a ambos os logons devem ser as mesmas.  
@@ -62,15 +61,15 @@ ms.locfileid: "63026726"
   
 #### <a name="to-view-groups-and-logins-that-belong-to-the-pal"></a>Para exibir grupos e logons que pertencem à PAL  
   
-1.  No Publicador do banco de dados da publicação, execute [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md). Para **@publication**, especifique o nome da publicação. Isso exibe informações sobre os grupos e logons na PAL.  
+1.  No Publicador do banco de dados da publicação, execute [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md). Para **@publication** , especifique o nome da publicação. Isso exibe informações sobre os grupos e logons na PAL.  
   
 #### <a name="to-add-groups-and-logins-to-the-pal"></a>Para adicionar grupos e logons à PAL  
   
-1.  No Publicador do banco de dados da publicação, execute [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md). Para **@publication**especifique o nome da publicação e para **@login**especifique o nome do logon ou grupo que está sendo adicionado.  
+1.  No Publicador do banco de dados da publicação, execute [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md). Para **@publication** especifique o nome da publicação e para **@login** especifique o nome do logon ou grupo que está sendo adicionado.  
   
 #### <a name="to-remove-groups-and-logins-from-the-pal"></a>Para remover grupos e logons da PAL  
   
-1.  No Publicador do banco de dados da publicação, execute [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md). Para **@publication**especifique o nome da publicação e para **@login**especifique o nome do logon ou grupo que está sendo removido.  
+1.  No Publicador do banco de dados da publicação, execute [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md). Para **@publication** especifique o nome da publicação e para **@login** especifique o nome do logon ou grupo que está sendo removido.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Gerenciar logons na lista de acesso à publicação](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)   

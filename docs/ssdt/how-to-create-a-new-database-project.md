@@ -17,13 +17,12 @@ f1_keywords:
 ms.assetid: 0b7883fa-b6e1-4ccf-b1d8-f522fd03a59d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5861f16d20d95ae6ba9d2024d2199b853934d355
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fb617241f9af31122993bc1d341e433ac62904f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897153"
 ---
 # <a name="how-to-create-a-new-database-project"></a>Como fazer: Criar um projeto de banco de dados
 Você pode criar um novo projeto de banco de dados e importar o esquema de banco de dados de um banco de dados existente, um arquivo de script .sql ou um aplicativo da camada de dados (.dacpac). Você poderá invocar então as mesmas ferramentas de designer visual (Editor de Transact\-SQL, Designer de Tabela) disponíveis para o desenvolvimento de bancos de dados conectados para fazer alterações no projeto de banco de dados offline e para publicar as alterações no banco de dados de produção. As alterações também podem ser salvas como um script a ser publicado posteriormente. Usando o painel **Propriedades do Projeto**, você pode alterar a plataforma de destino para versões diferentes do SQL Server (incluindo o SQL Azure).  

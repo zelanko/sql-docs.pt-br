@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c9beeacd220108b2df83049716387439f0e2a90
-ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
+ms.openlocfilehash: 046ce79c989fdfb24c6615968e6bad951aeb7280
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024906"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Criar tabelas e índices particionados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ ms.locfileid: "53414181"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   O escopo de uma função e de um esquema de partição é limitado ao banco de dados em que foram criados. No banco de dados, as funções de partição residem em um namespace separado das outras funções.  
   
@@ -112,13 +111,13 @@ ms.locfileid: "53414181"
   
 #### <a name="to-create-a-partitioned-table"></a>Para criar uma tabela particionada  
   
-1.  Clique com o botão direito do mouse na tabela que você deseja particionar, aponte para **Armazenamento**e clique em **Criar Partição...**.  
+1.  Clique com o botão direito do mouse na tabela que você deseja particionar, aponte para **Armazenamento**e clique em **Criar Partição...** .  
   
 2.  No **Assistente para Criar Partição**, na página **Bem-vindo ao Assistente para Criar Partição** , clique em **Avançar**.  
   
 3.  Na página **Selecione uma Coluna de Particionamento** , na grade **Colunas de particionamento disponíveis** , selecione a coluna em que deseja particionar sua tabela. Somente colunas com tipos de dados que possam ser usados para particionar dados serão exibidas na grade **Colunas de particionamento disponíveis** . Se você selecionar uma coluna computada como a coluna de particionamento, a coluna deverá ser designada como persistente.  
   
-     As opções que você tem para as colunas de particionamento e o intervalo de valores são determinadas, basicamente, pela extensão na qual seus dados podem ser agrupados de forma lógica. Por exemplo, você pode optar por dividir seus dados em agrupamentos lógicos por meses ou trimestres de um ano. As consultas que você planejar fazer nos seus dados determinarão se o agrupamento lógico é adequado para o gerenciamento de suas partições de tabela. Todos os tipos de dados são válidos para uso como colunas de particionamento, exceto **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, tipos de dados de alias ou tipos de dados CLR definidos pelo usuário.  
+     As opções que você tem para as colunas de particionamento e o intervalo de valores são determinadas, basicamente, pela extensão na qual seus dados podem ser agrupados de forma lógica. Por exemplo, você pode optar por dividir seus dados em agrupamentos lógicos por meses ou trimestres de um ano. As consultas que você planejar fazer nos seus dados determinarão se o agrupamento lógico é adequado para o gerenciamento de suas partições de tabela. Todos os tipos de dados são válidos para uso como colunas de particionamento, exceto **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , tipos de dados de alias ou tipos de dados CLR definidos pelo usuário.  
   
      As opções adicionais a seguir estão disponíveis nessa página:  
   
@@ -210,7 +209,7 @@ ms.locfileid: "53414181"
   
             -   Se você selecionar **Ocorre uma vez às**, digite a hora específica do dia em que a agenda de trabalho deve ser executada na caixa **Ocorre uma vez às** . Digite a hora, os minutos e os segundos do dia, bem como AM ou PM.  
   
-            -   Se você selecionar **Ocorre a cada**, especifique a frequência com que a agenda de trabalho é executada durante o dia escolhido em **Frequência**. Por exemplo, se você desejar que o agendamento de trabalho se repita a cada 2 horas durante o dia em que é executado, selecione **Ocorre a cada**, digite "2" na primeira caixa e selecione **hora(s)** na lista. Nessa lista, você pode selecionar também **minuto(s)** e **segundo(s)**. Observe que o maior número permitido na primeira caixa é "100".  
+            -   Se você selecionar **Ocorre a cada**, especifique a frequência com que a agenda de trabalho é executada durante o dia escolhido em **Frequência**. Por exemplo, se você desejar que o agendamento de trabalho se repita a cada 2 horas durante o dia em que é executado, selecione **Ocorre a cada**, digite "2" na primeira caixa e selecione **hora(s)** na lista. Nessa lista, você pode selecionar também **minuto(s)** e **segundo(s)** . Observe que o maior número permitido na primeira caixa é "100".  
   
                  Na caixa **Iniciando às** , digite a hora em que a agenda de trabalho deve começar a ser executada. Na caixa **Terminando às** , digite a hora em que a agenda de trabalho deve parar de se repetir. Digite a hora, os minutos e os segundos do dia, bem como AM ou PM.  
   
@@ -261,7 +260,7 @@ ms.locfileid: "53414181"
   
  O Assistente para Criar Partição cria a função e o esquema de partição e aplica o particionamento à tabela especificada. Para verificar o particionamento da tabela, no Pesquisador de Objetos, clique com o botão direito do mouse na tabela e selecione **Propriedades**. Clique na página **Armazenamento** . A página exibe informações como o nome da função e do esquema de partição e o número de partições.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-partitioned-table"></a>Para criar uma tabela particionada  
   

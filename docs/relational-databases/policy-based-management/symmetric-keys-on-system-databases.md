@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 28e25ae3-d3dc-45ec-b316-f219512a1a47
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 1d8948a0564dacf74c107b2afcc81b6e10a86802
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c04aaae1d9feccb8c032921535ebe9d5fc61305
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63006058"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021538"
 ---
 # <a name="symmetric-keys-on-system-databases"></a>Chaves simétricas em bancos de dados do sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

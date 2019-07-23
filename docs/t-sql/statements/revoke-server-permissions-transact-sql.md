@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 56703c5c0a2b3bb833b0e600c8dbfbca929ae75a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: eada4b2dbd5a76418ec8de9f988a6291e175da5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914269"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>Permissões de servidor REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +154,7 @@ REVOKE VIEW SERVER STATE FROM WanidaBenshoof;
 GO  
 ```  
   
-### <a name="b-revoking-the-with-grant-option"></a>b. Revogando a opção WITH GRANT  
+### <a name="b-revoking-the-with-grant-option"></a>B. Revogando a opção WITH GRANT  
  O exemplo a seguir revoga o direito de conceder `CONNECT SQL` no logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para `JanethEsteves`.  
   
 ```  

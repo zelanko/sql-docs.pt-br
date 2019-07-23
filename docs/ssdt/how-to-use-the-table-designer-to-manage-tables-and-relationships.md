@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1d70fe813437ff6204173dc20df90d029f6568fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91fddb94bf028ec884a4589c7c4a88bd3be923e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096859"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097485"
 ---
 # <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Como fazer: Usar o Designer de Tabela para gerenciar tabelas e relacionamentos
 O Designer de Tabela fornece uma experiência visual juntamente com o Editor Transact\-SQL para criar e editar a estrutura de tabelas, incluindo objetos de programação específicos de tabela, para bancos de dados do SQL Server.  Ele é iniciado quando você cria uma nova tabela para um banco de dados conectado ou um projeto, ou quando você clica duas vezes para editar uma tabela no Pesquisador de Objetos do SQL Server ou no Gerenciador de Soluções.  

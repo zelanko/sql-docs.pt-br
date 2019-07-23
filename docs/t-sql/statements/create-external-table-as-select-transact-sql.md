@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d1c06397b74ecab0f29cb293d7efa591b36fa1ac
-ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
+ms.openlocfilehash: 24668748b97c44e825baee2dee95d9442aa1e11f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54395405"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073140"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -217,7 +216,7 @@ WITH (
 ) AS SELECT * FROM dimCustomer;  
 ```  
   
-### <a name="b-use-a-query-hint-with-create-external-table-as-select-cetas"></a>b. Usar uma Dica de Consulta com CREATE EXTERNAL TABLE AS SELECT (CETAS)  
+### <a name="b-use-a-query-hint-with-create-external-table-as-select-cetas"></a>B. Usar uma Dica de Consulta com CREATE EXTERNAL TABLE AS SELECT (CETAS)  
  Essa consulta mostra a sintaxe básica para uso de uma dica de consulta de junção com a instrução CETAS. Depois que a consulta é enviada, o banco de dados usa a estratégia de junção hash para gerar o plano de consulta. Para obter mais informações sobre dicas de junção e como usar a cláusula OPTION, consulte [Cláusula OPTION &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
 > [!NOTE]  

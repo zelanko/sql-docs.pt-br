@@ -26,15 +26,14 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c072fc97536259b16938cc36dcbc21dbbbb97b57
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4ea3ad1c2f7cb482888f0cd4d31a91f9975745b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511263"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943382"
 ---
-# <a name="examples-using-openxml"></a>Exemplos: Usando OPENXML
+# <a name="examples-using-openxml"></a>Exemplos: uso do OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Os exemplos neste tópico mostram como o OPENXML é usado para criar uma exibição de conjunto de linhas de um documento XML. Para obter informações sobre a sintaxe do OPENXML, veja [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Os exemplos mostram todos os aspectos do OPENXML, mas não especificam metapropriedades no OPENXML. Para obter mais informações sobre como especificar metapropriedades no OPENXML, veja [Especificar metapropriedades no OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
@@ -97,7 +96,7 @@ LILAS      Carlos Gonzlez
   
  Como os elementos <`Customer`> não têm nenhum subelemento, se a mesma instrução SELECT for executada com *flags* definido como **2** para indicar mapeamento centrado em elemento, os valores de **CustomerID** e **ContactName** dos dois clientes serão retornados como NULL.  
   
- O \@xmlDocument também podem ser do tipo **xml** ou do tipo **(n)varchar(max)**.  
+ O \@xmlDocument também podem ser do tipo **xml** ou do tipo **(n)varchar(max)** .  
   
  Se <`CustomerID`> e <`ContactName`> no documento XML forem subelementos, o mapeamento centrado em elemento recuperará os valores.  
   
@@ -296,7 +295,7 @@ LILAS      Carlos Gonzlez
   
 -   O valor do parâmetro *flags* é definido como **1** e indica o mapeamento centrado em atributo. Como resultado, os atributos XML são mapeados para as colunas do conjunto de linhas definidas em *SchemaDeclaration*.  
   
--   Em *SchemaDeclaration* na cláusula WITH, os nomes das colunas do conjunto de linhas **oid** e **amount** coincidem com os nomes dos atributos XML correspondentes. Portanto o parâmetro *ColPattern* não é especificado. Para a coluna **comment** do conjunto de linhas, a função XPath, **text()**, é especificada como *ColPattern*. Isso substitui o mapeamento centrado em atributo especificado em *flags*, e a coluna contém a cadeia de caracteres do valor de folha do conteúdo do elemento.  
+-   Em *SchemaDeclaration* na cláusula WITH, os nomes das colunas do conjunto de linhas **oid** e **amount** coincidem com os nomes dos atributos XML correspondentes. Portanto o parâmetro *ColPattern* não é especificado. Para a coluna **comment** do conjunto de linhas, a função XPath, **text()** , é especificada como *ColPattern*. Isso substitui o mapeamento centrado em atributo especificado em *flags*, e a coluna contém a cadeia de caracteres do valor de folha do conteúdo do elemento.  
   
  Em seguida, a instrução SELECT recupera todas as colunas no conjunto de linhas fornecido pelo OPENXML.  
   
@@ -476,7 +475,7 @@ EXEC sp_xml_removedocument @docHandle
   
  Em *SchemaDeclaration* na cláusula WITH, *ColPattern* também é especificado com os parâmetros *ColName* e *ColType* . O *ColPattern* opcional é o padrão XPath especificado para indicar o seguinte:  
   
--   O padrão XPath (**.**) especificado como *ColPattern* para a coluna **ProdID** no conjunto de linhas identifica o nó de contexto, o nó atual. De acordo com o *rowpattern* especificado, ele é o atributo **ProductID** do elemento <`OrderDetail`>.  
+-   O padrão XPath ( **.** ) especificado como *ColPattern* para a coluna **ProdID** no conjunto de linhas identifica o nó de contexto, o nó atual. De acordo com o *rowpattern* especificado, ele é o atributo **ProductID** do elemento <`OrderDetail`>.  
   
 -   O *ColPattern*, **../\@Quantity**, especificado para a coluna **Qty** no conjunto de linhas identifica o atributo **Quantity** do pai, <`OrderDetail`>, nó do nó de contexto, \<ProductID>.  
   
@@ -525,7 +524,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. Especificando um documento XML que tem vários nós de texto  
- Se você tiver vários nós de texto em um documento XML, uma instrução SELECT com um *ColPattern*, **text()**, retornará apenas o primeiro nó de texto, em vez de todos eles. Por exemplo:  
+ Se você tiver vários nós de texto em um documento XML, uma instrução SELECT com um *ColPattern*, **text()** , retornará apenas o primeiro nó de texto, em vez de todos eles. Por exemplo:  
   
 ```  
 DECLARE @h int  
@@ -578,7 +577,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- Especificamente, você está passando uma variável de tipo **xml** (\@x) para a função **sp_xml_preparedocument()**.  
+ Especificamente, você está passando uma variável de tipo **xml** (\@x) para a função **sp_xml_preparedocument()** .  
   
  Este é o resultado:  
   
@@ -597,7 +596,7 @@ id  lname   xmlname                   OverFlow
   
  Observe o seguinte no resultado:  
   
--   Para a coluna **lname** de tipo **varchar(30)**, o valor é recuperado do elemento <`lname`> correspondente.  
+-   Para a coluna **lname** de tipo **varchar(30)** , o valor é recuperado do elemento <`lname`> correspondente.  
   
 -   Para a coluna **xmlname** de tipo **xml** , o mesmo elemento de nome é retornado como seu valor.  
   

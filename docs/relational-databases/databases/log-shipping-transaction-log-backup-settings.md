@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98fde530e6d6d15d4abfdd97d53d6beff354a394
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: cf224dd8c5d6973c6aaf5b0af869ace7d43c891c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558673"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032064"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>Configurações de backup de log de transações do envio de log
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "51558673"
  Exibe o nome do trabalho do SQL Server Agent usado para criar os backups de log de transação para envio de logs. Quando for criar o trabalho pela primeira vez, você pode modificar o nome digitando-o na caixa.  
   
  **Agenda**  
- Exibe o cronograma atual para realizar o backup dos logs de transações do banco de dados primário. Antes de criar o o trabalho de backup, você pode modificar este cronograma clicando em **Cronograma...**. Após a criação do trabalho, você pode modificar este cronograma clicando em **Editar Trabalho...**.  
+ Exibe o cronograma atual para realizar o backup dos logs de transações do banco de dados primário. Antes de criar o o trabalho de backup, você pode modificar este cronograma clicando em **Cronograma...** . Após a criação do trabalho, você pode modificar este cronograma clicando em **Editar Trabalho...** .  
   
 ### <a name="backup-job"></a>Trabalho de backup  
  **Cronograma...**  

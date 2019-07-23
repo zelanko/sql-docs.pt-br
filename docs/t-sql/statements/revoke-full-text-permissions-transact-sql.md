@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f9a02f7d9e8d16789151da19d705c49e39421e2e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1f52dd565f634061468a0eee4fbfbb2855da99c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039797"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082219"
 ---
 # <a name="revoke-full-text-permissions-transact-sql"></a>Permissões de texto completo REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,10 +56,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  É o nome de uma permissão. Os mapeamentos válidos de permissões para protegíveis são descritos na seção "Comentários", posteriormente neste tópico.  
   
- ON FULLTEXT CATALOG **::**_nome_do_catálogo_de_texto_completo_  
+ ON FULLTEXT CATALOG **::** _nome_do_catálogo_de_texto_completo_  
  Especifica o catálogo de texto completo no qual a permissão está sendo revogada. O qualificador de escopo **::** é obrigatório.  
   
- ON FULLTEXT STOPLIST **::**_nome_da_lista_de_palavras_irrelevantes_de_texto_completo_  
+ ON FULLTEXT STOPLIST **::** _nome_da_lista_de_palavras_irrelevantes_de_texto_completo_  
  Especifica a lista de palavras irrelevantes de texto completo na qual a permissão está sendo revogada. O qualificador de escopo **::** é obrigatório.  
   
  *database_principal*  
