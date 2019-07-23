@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f0bd6283-83ab-4a0a-b825-ec4cdccf03e1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 407cfc34313605eb0bfa553d439a18329c22fc5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6fbf7a0cf66db8bbcc2f2f69d603bc5d32fb74d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980372"
 ---
 # <a name="getresultsetholdability-method-sqlserverdatabasemetadata"></a>Método getResultSetHoldability (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getResultSetHoldability()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getResultSetHoldability é especificado pelo método getResultSetHoldability na interface DatabaseMetadata.  
+ Esse método getResultSetHoldability é especificado pelo método getResultSetHoldability na interface java. Sql. DatabaseMetaData.  
   
  Durante o uso do [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] com um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], esse método retorna 1, que equivale à constante ResultSet.HOLD_CURSORS_OVER_COMMIT.  
   

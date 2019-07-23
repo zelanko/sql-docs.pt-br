@@ -1,5 +1,5 @@
 ---
-title: Método setDatabaseName (SQLServerDataSource) | Microsoft Docs
+title: Método SetDatabaseName (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4df1bfdb-eea3-4a00-a99f-750a69795ab3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 24c5cb680aa052970279d3b86119ea5199c9294c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: dfd69fa5cbc14af7667c7a7fc00694433a37f951
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66793980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974488"
 ---
 # <a name="setdatabasename-method-sqlserverdatasource"></a>Método setDatabaseName (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

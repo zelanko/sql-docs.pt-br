@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d5d1d7e62709af773ca251a389c8cfaa4981ce58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b83188359489759f50b2929de769721d627c15d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797051"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992905"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>Recuperando dados como um fluxo usando o driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

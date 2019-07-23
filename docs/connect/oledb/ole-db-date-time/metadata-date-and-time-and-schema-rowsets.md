@@ -1,5 +1,5 @@
 ---
-title: Data e hora e conjuntos de linhas de esquema | Microsoft Docs
+title: Conjuntos de linhas de data e hora e esquema | Microsoft Docs
 description: Conjuntos de linhas de esquema e data e hora
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: e9ac734cbc11492074c322c21a9e7127249223a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19524bbd935335cc0568dc499f95a794580df476
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015695"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>Metadados – conjuntos de linhas de esquema e data e hora
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -96,6 +95,6 @@ ms.locfileid: "66800689"
  O OLE DB apenas define MINIMUM_SCALE e MAXIMUM_SCALE para tipos decimais e numéricos e, portanto, o uso do OLE DB Driver for SQL Server dessas colunas para time, datetime2 e datetimeoffset não é padrão.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Metadados &#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
+ [OLE DB &#40;de metadados&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
   
   

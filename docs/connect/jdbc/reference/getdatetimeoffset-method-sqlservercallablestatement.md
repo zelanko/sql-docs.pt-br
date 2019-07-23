@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7d9d7b05-582a-41df-b2c4-ec4a64d49752
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6415a002360cc9fb9940d1cc889e15060048133b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a63f23ef4e9914dfe69c45882098654287c3c9e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983810"
 ---
 # <a name="getdatetimeoffset-method-sqlservercallablestatement"></a>Método getDateTimeOffset (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "66777008"
   
  Recupera o valor do parâmetro designado como um objeto [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) na linguagem de programação Java, considerando o índice do parâmetro.  
   
- Você pode definir um [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) com o valor do parâmetro [Setdatetimeoffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md).  
+ Você pode definir um valor de parâmetro de [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) com [SQLServerCallableStatement. setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md).  
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   

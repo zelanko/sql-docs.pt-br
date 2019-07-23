@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 83fed2e13ad83bdaaf6bb389ae3763210b0e4bd5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a6ed79b08fb4d20e184206185c991336636fe570
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015602"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Ler uma coluna FILESTREAM para o arquivo usando IBCPSession (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "66791537"
 
   Este exemplo lê uma coluna filestream para um arquivo que usa a interface IBCPSession e grava um arquivo de formato.  
   
- Para obter mais informações sobre o recurso filestream, consulte [suporte a FILESTREAM](../../../oledb/features/filestream-support.md).  
+ Para obter mais informações sobre o recurso FileStream, consulte [suporte a FileStream](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Exemplo  
  Verifique se a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  

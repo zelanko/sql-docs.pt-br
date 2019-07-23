@@ -14,13 +14,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 0059c7c6e03c9abb9edf4cb3db35f8435174d8fc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4297feae08376871c68ffab2aa9b977e034c6364
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993799"
 ---
 # <a name="stored-procedures---running"></a>Procedimentos armazenados – em execução
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "66795901"
   
 -   Maior funcionalidade.  
   
- O Driver do OLE DB para SQL Server dá suporte a três dos mecanismos que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] procedimentos armazenados usam para retornar dados:  
+ O driver OLE DB para SQL Server dá suporte a três dos mecanismos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que os procedimentos armazenados usam para retornar dados:  
   
 -   Toda instrução SELECT no procedimento gera um conjunto de resultados.  
   

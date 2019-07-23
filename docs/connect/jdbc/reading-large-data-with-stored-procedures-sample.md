@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 58c76635-a117-4661-8781-d6cb231c5809
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8277cafb173dc28876c95a7ccb60f7ed3ee6396a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cbf339845bd23f1beb4f5cd0f3b3a380689a3120
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66772480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956129"
 ---
 # <a name="reading-large-data-with-stored-procedures-sample"></a>Exemplo de leitura de dados grandes com procedimentos armazenados
 
@@ -32,12 +31,12 @@ O arquivo de código desta amostra chama-se ExecuteStoredProcedure.java e pode s
 
 ## <a name="requirements"></a>Requisitos
 
-Para executar este aplicativo de exemplo, você precisará ter acesso ao banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Você também precisará definir o classpath para incluir o arquivo mssql-jdbc.jar. Para obter mais informações sobre como definir o classpath, consulte [usando o Driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
+Para executar este aplicativo de exemplo, você precisará ter acesso ao banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Você também precisará definir o classpath para incluir o arquivo mssql-jdbc.jar. Para obter mais informações sobre como definir o classpath, consulte [usando o driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
 
 > [!NOTE]  
 > O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece os arquivos de biblioteca de classes mssql-jdbc a serem usados de acordo com suas configurações preferenciais do JRE (Java Runtime Environment). Para saber mais sobre qual arquivo JAR escolher, confira os [requisitos do sistema para o JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
 
-O exemplo cria o procedimento armazenado necessário no [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] banco de dados de exemplo:
+O exemplo criaria o procedimento armazenado necessário no banco [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] de dados de exemplo:
 
 ## <a name="example"></a>Exemplo
 

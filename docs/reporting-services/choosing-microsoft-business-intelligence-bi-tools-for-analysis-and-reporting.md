@@ -2,7 +2,6 @@
 title: Análise e relatório com ferramentas de BI (business intelligence) da Microsoft
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services
 ms.technology: reporting-services
@@ -10,12 +9,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 14aba1a63b068a3a1cbc0400c10b73ed57e3e376
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 9f09757c009c9690c4348b722e498a8772033657
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463402"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264620"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Análise e relatório com ferramentas de BI (business intelligence) da Microsoft
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 56883144-26a0-4f45-ad36-4f616369af3e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3557c60f36ea48a8cb03f58997bc2d8093f432e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc247cd3f97aeebeb6f52e1b4f3f36d8d97f6548
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997153"
 ---
 # <a name="updatebinarystream-method-javalangstring-javaioinputstream"></a>Método updateBinaryStream (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,9 +43,9 @@ public void updateBinaryStream(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método updateBinaryStream é especificado pelo método updateBinaryStream na interface do resultset.  
+ Esse método updateBinaryStream é especificado pelo Método updateBinaryStream na interface java. Sql. ResultSet.  
   
- Usando esse método para o **imagem**, **texto**, e **ntext** tipos de dados do SQL Server podem afetar o desempenho.  
+ O uso desse método para os tipos de dados **Image**, **text**e **ntext** SQL Server pode afetar o desempenho.  
   
  Esse método passa bytes de um objeto InputStream para colunas binárias [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] selecionadas do como binary, varbinary, varbinary(max), image, xml e udt. Não há suporte para a atualização de colunas de caracteres nesse método. Para atualizar colunas de caracteres com um InputStream, use o método [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md).  
   

@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 9819a16a60cc453b8f4277c0fe49053aeca59f48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2671b3df6432e63c0e0b36a24bade60286f72a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015686"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>Suporte da API do OLE DB para melhorias de data e hora
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,13 +26,13 @@ ms.locfileid: "66769300"
   
 |Função|Descrição|  
 |--------------|-----------------|  
-|IAccessor::CreateAccessor|Um sinalizador é adicionado na estrutura DBBINDING para permitir que aplicativos façam discriminação entre **datetime**, **datetime2**, e **smalldatetime** valores. Para obter mais informações, consulte [Parameter and Rowset Metadata](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
-|IBCPSession::BCPColFmt|Para obter mais informações, consulte [alterações de cópia em massa para tipos aprimorada de data e hora &#40;OLE DB&#41;](../../oledb/ole-db-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db.md).|  
-|ICommandWithParameters::GetParameterInfo|Para obter mais informações, consulte[Parameter and Rowset Metadata](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
-|ICommandWithParameters::SetParameterinfo|Para obter mais informações, consulte[Parameter and Rowset Metadata](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
-|IColumnsRowset::GetColumnsRowset|Para obter mais informações, consulte[Parameter and Rowset Metadata](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
-|IColumnsInfo::GetColumnInfo|Para obter mais informações, consulte[Parameter and Rowset Metadata](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
-|IDBSchemaRowset::GetRowset|Para obter detalhes sobre os conjuntos de linhas de esquema afetados, consulte[data e hora e conjuntos de linhas de esquema](../../oledb/ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md).|  
+|IAccessor::CreateAccessor|Um sinalizador é adicionado na estrutura DBBINDING para permitir que os aplicativos discriminar várias entre os valores **DateTime**, **datetime2**e **smalldatetime** . Para obter mais informações, consulte [parâmetros e metadados de conjunto de linhas](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
+|IBCPSession::BCPColFmt|Para obter mais informações, consulte [alterações de cópia em massa para tipos &#40;de data e hora aprimorados OLE DB&#41;](../../oledb/ole-db-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db.md).|  
+|ICommandWithParameters::GetParameterInfo|Para obter mais informações, consulte[parâmetros e metadados de conjunto de linhas](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
+|ICommandWithParameters::SetParameterinfo|Para obter mais informações, consulte[parâmetros e metadados de conjunto de linhas](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
+|IColumnsRowset::GetColumnsRowset|Para obter mais informações, consulte[parâmetros e metadados de conjunto de linhas](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
+|IColumnsInfo::GetColumnInfo|Para obter mais informações, consulte[parâmetros e metadados de conjunto de linhas](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
+|IDBSchemaRowset::GetRowset|Para obter detalhes dos conjuntos de linhas de esquema afetados, consulte[data e hora e conjuntos de linhas de esquema](../../oledb/ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md).|  
 |IRowsetFastLoad|Essa interface dá suporte aos novos tipos de data/hora, mas não passou por nenhuma alteração.|  
 |ITableDefinition::CreateTable|Para obter mais informações, consulte [suporte de tipo de dados para OLE DB aprimoramentos de data e hora](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).|  
   

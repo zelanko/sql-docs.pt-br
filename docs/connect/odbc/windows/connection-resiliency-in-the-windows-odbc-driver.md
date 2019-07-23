@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 94845da5a211c1f5b3ebf9f27a8a7ba780bc4b71
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: eecf4868791a9dcd963a31963f742f90a2cf3843
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008435"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Resiliência de conexão no driver ODBC do Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -72,7 +71,7 @@ ms.locfileid: "66797820"
 |IMC06|A conexão foi interrompida e a recuperação não é possível. A conexão foi marcada pelo driver do cliente como não recuperável. Não foi feita nenhuma tentativa de restaurar a conexão.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir contém duas funções. **func1** mostra como você pode se conectar com um DNS (nome de fonte de dados) que usa o ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Windows. O DSN usa a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e especifica a ID de usuário. **Func1** , em seguida, recupera o número de novas tentativas de conexão com **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
+ O exemplo a seguir contém duas funções. **func1** mostra como você pode se conectar com um DNS (nome de fonte de dados) que usa o ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Windows. O DSN usa a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e especifica a ID de usuário. em seguida, **func1** recupera o número de tentativas de conexão com **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
   
  **func2** usa **SQLDriverConnect**, a palavra-chave de cadeia de conexão **ConnectRetryCount** e atributos de conexão para recuperar a configuração de repetições de conexão e o intervalo de repetição.  
   

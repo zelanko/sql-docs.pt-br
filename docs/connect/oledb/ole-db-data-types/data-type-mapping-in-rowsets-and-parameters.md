@@ -21,13 +21,12 @@ helpviewer_keywords:
 - OLE DB, data types
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: de02099f7d54682b96713d861843b2cf5bd87ffb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 529c3189676ce704d10a90902bd44f7f2c8e8f6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995210"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mapeamento de tipos de dados em conjuntos de linhas e parâmetros
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +67,7 @@ ms.locfileid: "66769656"
 |**varchar**|DBTYPE_STR|  
 |**XML**|DBTYPE_XML|  
   
- O Driver do OLE DB para SQL Server dá suporte a conversões de dados solicitadas pelo consumidor, conforme mostrado na ilustração.  
+ O driver OLE DB para SQL Server dá suporte a conversões de dados solicitadas pelo consumidor, conforme mostrado na ilustração.  
   
  Os objetos **sql_variant** podem armazenar qualquer tipo de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], exceto text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml, timestamp e os tipos CLR (Common Language Runtime) definidos pelo usuário do Microsoft .NET Framework. Uma instância de dados sql_variant também não pode ter sql_variant como seu tipo de dados base subjacente. Por exemplo, a coluna pode conter valores **smallint** em algumas linhas, valores **float** em outras linhas e valores **char**/**nchar** no restante.  
   
@@ -97,6 +96,6 @@ ms.locfileid: "66769656"
 |SSPROP_ALLOWNATIVEVARIANT|Tipo: VT_BOOL<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: Determina se os dados buscados são como DBTYPE_VARIANT ou DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: o tipo de coluna é retornado como DBTYPE_SQLVARIANT e o buffer terá a estrutura SSVARIANT.<br /><br /> VARIANT_FALSE: o tipo de coluna é retornado como DBTYPE_VARIANT e o buffer terá a estrutura VARIANT.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tipos de dados &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+ [Tipos &#40;de dados OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

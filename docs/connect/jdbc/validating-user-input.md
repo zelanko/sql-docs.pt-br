@@ -1,5 +1,5 @@
 ---
-title: Validação de entrada do usuário | Microsoft Docs
+title: Validando entrada do usuário | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8aa867b0-e6f0-49eb-93d3-817ae2ed8f77
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 35a357edee6293f40663628fd0cb66817d042b97
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c2d890c4471dfeb85c1dd4f8f6f614a3b28cff90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003901"
 ---
 # <a name="validating-user-input"></a>Validando entradas de usuário
 

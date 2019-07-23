@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5a207ebd14880519a20ea504a45e541e6d360175
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 04179ee339f41dde1b9e90d7abc30a00e492f3cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034719"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lição 3: Usando o utilitário de prompt de comando dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +50,9 @@ Para concluir este tutorial, você precisará do SQL Server Management Studio, b
 Instruções para restaurar bancos de dados no SSMS são encontradas em [Como restaurar um banco de dados.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
 
   >[!NOTE]
-  > Este tutorial destina-se um usuário familiarizado com o uso do SQL Server Management Studio e as tarefas de administração de banco de dados básico. 
+  > Este tutorial destina-se a um usuário familiarizado com o uso de SQL Server Management Studio e tarefas básicas de administração de banco de dados. 
 
-## <a name="access-dta-command-prompt-utility-help-menu"></a>Menu de ajuda de utilitário de prompt de comando do acesso DTA
+## <a name="access-dta-command-prompt-utility-help-menu"></a>Acessar o menu de ajuda do utilitário de prompt de comando DTA
   
   
 1.  No menu **Iniciar** , aponte para **Todos os Programas**, aponte para **Acessórios**e clique em **Prompt de Comando**.  
@@ -66,9 +65,9 @@ Instruções para restaurar bancos de dados no SSMS são encontradas em [Como re
   
     A parte `| more` desse comando é opcional. Porém, seu uso permite que você pesquise na sintaxe de ajuda do utilitário. Pressione ENTER para avançar o texto de ajuda pela linha ou pressione a SPACEBAR para avançar por página.  
 
-  ![Usando a ajuda com o utilitário DTA cmd](media/dta-tutorials/dta-cmd-help.png)
+  ![Usando a ajuda com o utilitário cmd DTA](media/dta-tutorials/dta-cmd-help.png)
 
-## <a name="tune-simple-workload-using-the-dta-command-prompt-utility"></a>Ajustar a carga de trabalho simple usando o utilitário de prompt de comando DTA  
+## <a name="tune-simple-workload-using-the-dta-command-prompt-utility"></a>Ajustar a carga de trabalho simples usando o utilitário de prompt de comando DTA  
 
 
   
@@ -82,7 +81,7 @@ Instruções para restaurar bancos de dados no SSMS são encontradas em [Como re
   
     onde `-S` especifica o nome de seu servidor e a instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em que o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] é instalado. A configuração `-E` especifica que você quer usar uma conexão confiável com a instância, o que é apropriado se você estiver se conectando com uma conta de domínio Windows. A configuração `-D` especifica o banco de dados que você quer ajustar, `-if` especifica o arquivo de carga de trabalho, `-s` especifica o nome de sessão, `-of` especifica o arquivo para o qual você deseja que a ferramenta escreva o script de recomendações [!INCLUDE[tsql](../../includes/tsql-md.md)] e `-ox` especifica o arquivo para o qual você deseja que a ferramenta escreva as recomendações no formato XML. As três últimas opções especificam opções de ajuste como segue: `-fa IDX_IV` especifica que o Orientador de Otimização do Mecanismo de Banco de Dados só deve considerar adicionar índices (clusterizado e não clusterizado) e exibições indexadas; `-fp NONE` especifica que nenhuma estratégia de partição deve ser considerada durante a análise; e `-fk NONE` especifica que nenhuma estrutura de design física existente no banco de dados deve ser mantida quando o Orientador de Otimização do Mecanismo de Banco de Dados faz suas recomendações.  
 
-  ![usando o CMD do DTA](media/dta-tutorials/dta-cmd.png)
+  ![usando o CMD com o DTA](media/dta-tutorials/dta-cmd.png)
   
 3.  Depois que o Orientador de Otimização do Mecanismo de Banco de Dados termina de ajustar a carga de trabalho, exibe uma mensagem que indica que a sessão de ajuste foi concluída com êxito. Você pode exibir os resultados do ajuste, usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para abrir os arquivos MySession2OutputScript.sql e MySession2Output.xml. Como alternativa, você também pode abrir a sessão de ajuste MySession2 na GUI do Orientador de Otimização do Mecanismo de Banco de Dados e exibir suas recomendações e relatórios da mesma forma que fez em [Exibindo recomendações de ajuste](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md) e [Exibindo relatórios de ajuste](../../tools/dta/lesson-1-3-viewing-tuning-reports.md).  
   

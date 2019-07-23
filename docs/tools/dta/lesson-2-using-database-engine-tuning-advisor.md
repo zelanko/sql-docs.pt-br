@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3317d4f8-ed9e-4f2e-b5f1-a6bf3a9d6c8d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 75f7d30dba13538fdbd735fff34021cbc3497aa0
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: b2f526510f69a91e3228431953f73717790246f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034746"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lição 2: Usando o Orientador de Otimização do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +35,12 @@ Para concluir este tutorial, você precisará do SQL Server Management Studio, b
 Instruções para restaurar bancos de dados no SSMS são encontradas em [Como restaurar um banco de dados.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
 
   >[!NOTE]
-  > Este tutorial destina-se um usuário familiarizado com o uso do SQL Server Management Studio e as tarefas de administração de banco de dados básico. 
+  > Este tutorial destina-se a um usuário familiarizado com o uso de SQL Server Management Studio e tarefas básicas de administração de banco de dados. 
   
 ## <a name="tuning-a-workload"></a>Como ajustar uma carga de trabalho
 O Orientador de Otimização do Mecanismo de Banco de Dados pode ser usado para achar o melhor design de banco de dados físico para desempenho de consulta nos bancos de dados e tabelas que você seleciona para ajustar.  
 
-1.  Copiar uma amostra [selecionar](../../t-sql/queries/select-examples-transact-sql.md) instrução e cole a instrução no Editor de consulta de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Salve o arquivo como **MyScript.sql** em um diretório que você possa localizar facilmente. Um exemplo que funciona no banco de dados AdventureWorks2017 foi fornecido abaixo.  
+1.  Copie uma instrução [Select](../../t-sql/queries/select-examples-transact-sql.md) de exemplo e cole a instrução no editor de consultas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]do. Salve o arquivo como **MyScript.sql** em um diretório que você possa localizar facilmente. Um exemplo que funciona no banco de dados AdventureWorks2017 foi fornecido abaixo.  
 
  ```sql
  Use [Adventureworks2017]; -- may need to modify database name to match database
@@ -63,17 +62,17 @@ O Orientador de Otimização do Mecanismo de Banco de Dados pode ser usado para 
 
   ![Salvar consulta SQL](media/dta-tutorials/dta-save-query.png)
   
-2.  Inicie o Orientador de Otimização do Mecanismo de Banco de Dados. Selecione **Database Tuning Advisor** da **ferramentas** menu no SQL Server Management Studio (SSMS).  Confira mais informações em [Iniciar o Orientador de Otimização do Mecanismo de Banco de Dados](lesson-1-basic-navigation-in-database-engine-tuning-advisor.md#launch-database-tuning-advisor). Conectar-se ao SQL Server no **conectar ao servidor** caixa de diálogo.  
+2.  Inicie o Orientador de Otimização do Mecanismo de Banco de Dados. Selecione **Orientador de otimização de banco de dados** no menu **ferramentas** no SQL Server Management Studio (SSMS).  Confira mais informações em [Iniciar o Orientador de Otimização do Mecanismo de Banco de Dados](lesson-1-basic-navigation-in-database-engine-tuning-advisor.md#launch-database-tuning-advisor). Conecte-se ao seu SQL Server na caixa de diálogo **conectar ao servidor** .  
   
 3.  Na guia **Geral** do painel direito da GUI do Orientador de Otimização do Mecanismo de Banco de Dados, digite **MySession** em **Nome da sessão**. 
   
-4.  Selecione **arquivo** para seu **Workload**e selecione o ícone de binóculos para **procurar um arquivo de carga de trabalho**. Localize o **Myscript** arquivo que você salvou na etapa 1.  
+4.  Selecione **arquivo** para a **carga de trabalho**e selecione o ícone de binóculos para **procurar um arquivo de carga de trabalho**. Localize o arquivo **MyScript. SQL** que você salvou na etapa 1.  
 
-   ![Localize o script que foi salvo anteriormente](media/dta-tutorials/dta-script.png)
+   ![Localizar o script que foi salvo anteriormente](media/dta-tutorials/dta-script.png)
   
 5.  Marque AdventureWorks2017 na lista **Banco de dados para análise de carga de trabalho**, marque AdventureWorks2017 na grade **Selecione bancos de dados e tabelas para ajuste** e marque **Salvar log de ajuste**. **Banco de dados para análise de carga de trabalho** especifica o primeiro banco de dados ao qual o Orientador de Otimização do Mecanismo de Banco de Dados se conecta ao ajustar uma carga de trabalho. Depois que a otimização começa, o Orientador de Otimização do Mecanismo de Banco de Dados se conecta aos bancos de dados especificados pelas instruções `USE DATABASE` contidas na carga de trabalho.  
 
-  ![Opções de DTA para banco de dados](media/dta-tutorials/dta-select-db.png)
+  ![Opções de DTA para BD](media/dta-tutorials/dta-select-db.png)
   
 6.  Clique na guia **Opções de Ajuste** . Você não definirá nenhuma opção de ajuste para esta prática, mas fará a revisão as opções de ajuste padrão. Pressione F1 para exibir a Ajuda da página de guias. Clique em **Opções Avançadas** para exibir outras opções de ajuste. Clique em **Ajuda** na caixa de diálogo **Opções de Ajuste Avançadas** para obter informações sobre as opções de ajuste que são exibidas nessa caixa. Clique em **Cancelar** para fechar a caixa de diálogo **Opções de Ajuste Avançadas** , deixando as opções padrão selecionadas.  
 
@@ -83,12 +82,12 @@ O Orientador de Otimização do Mecanismo de Banco de Dados pode ser usado para 
   
     Se você receber um erro sobre a data e hora de interrupção do ajuste, verifique a hora em **Parar em** na guia principal de **Opções de Ajuste** . Garanta que a data e a hora em **Parar em** são posteriores à data e à hora atuais e, se necessário, altere-as.  
 
-  ![Iniciar a análise do DTA](media/dta-tutorials/dta-start-analysis.png)
+  ![Iniciar análise de DTA](media/dta-tutorials/dta-start-analysis.png)
 
   
 8.  Depois que a análise for concluída, salve sua recomendação como um script [!INCLUDE[tsql](../../includes/tsql-md.md)] clicando em **Salvar Recomendações** no menu **Ações** . Na caixa de diálogo **Salvar Como** , navegue até o diretório em que você quer salvar o script de recomendações e digite o nome de arquivo **MyRecommendations**.  
 
-  ![Salve as recomendações do DTA](media/dta-tutorials/dta-save-recommendations.png)
+  ![Salvar recomendações de DTA](media/dta-tutorials/dta-save-recommendations.png)
 
 ## <a name="view-tuning-recommendations"></a>Exibir recomendações de ajuste
   
@@ -96,11 +95,11 @@ O Orientador de Otimização do Mecanismo de Banco de Dados pode ser usado para 
   
     Se você estiver tendo dificuldades em localizar uma **Definição** que contenha um link, clique para desmarcar a caixa de seleção **Mostrar objetos existentes** na parte inferior da página da guia, o que diminuirá o número de linhas exibidas. Quando você desmarca essa caixa de seleção, o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] mostra só os objetos para os quais gerou uma recomendação. Marque a caixa de seleção **Mostrar objetos existentes** para exibir todos os objetos do banco de dados que existem atualmente no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Use a barra de rolagem à direita da página da guia para exibir todos os objetos.
 
-  ![Recomendação de índice do DTA](media/dta-tutorials/dta-recommendation.png)  
+  ![Recomendação de índice DTA](media/dta-tutorials/dta-recommendation.png)  
   
 2.  Clique com o botão direito do mouse na grade do painel **Recomendações de Índice** . Esse menu permite marcar e desmarcar recomendações. Permite também alterar a fonte do texto da grade.  
  
-   ![Menu de seleção para a recomendação de índice](media/dta-tutorials/dta-index-recommendation-options.png)
+   ![Menu de seleção para recomendação de índice](media/dta-tutorials/dta-index-recommendation-options.png)
   
 3.  No menu **Ações** , clique em **Salvar Recomendações** para salvar todas as recomendações em um script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Nomeie o script como **MySessionRecommendations.sql**.  
   
@@ -123,14 +122,14 @@ Poderão ser exibidas mais informações sobre resultados de ajuste na guia **Re
 Além de ser útil para exibir os scripts que podem ser usados para implementar os resultados de ajuste, o Orientador de Otimização do Mecanismo de Banco de Dados fornece muitos relatórios úteis que você pode exibir. Esses relatórios fornecem informações sobre as estruturas de design físico existentes no banco de dados que você está ajustando, e sobre as estruturas recomendadas. Os relatórios de ajuste podem ser exibidos clicando na guia **Relatórios** , como descrito na prática abaixo.
 
 
-1. Selecione o **relatórios** guia no orientador de otimização do banco de dados. 
+1. Selecione a guia **relatórios** no Orientador de otimização de banco de dados. 
 2. No painel **Resumo do Ajuste** , você pode exibir informações sobre esta sessão de otimização. Use a barra de rolagem para exibir todo o conteúdo do painel. Preste atenção no **Aperfeiçoamento de percentual esperado** e no **Espaço usado por recomendação**. É possível limitar o espaço usado pela recomendação quando você define as opções de ajuste. Na guia **Opções de Ajuste** , selecione **Opções Avançadas**. Marque **Definir espaço máximo para recomendações** e especifique, em megabytes, o espaço máximo que uma configuração de recomendada pode usar. Use o botão **Voltar** em seu navegador de ajuda para voltar a este tutorial. 
 
     ![Resumo do ajuste de DTA](media/dta-tutorials/dta-tuning-summary.png)
   
 3.  No painel **Relatórios de Ajuste** , clique em **Relatório de custo da instrução** na lista **Selecionar relatório** . Se precisar de mais espaço para exibir o relatório, arraste a borda do painel **Monitor de Sessão** para a esquerda. Cada instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] executada em uma tabela em seu banco de dados tem um custo de desempenho associado. Esse custo de desempenho pode ser reduzido criando índices efetivos em colunas acessadas frequentemente em uma tabela. Esse relatório mostra a porcentagem estimada de aperfeiçoamento entre o custo original de executar uma instrução na carga de trabalho e o custo se a recomendação de ajuste for implementada. Note que a quantidade de informações contida no relatório é baseada no tamanho e na complexidade da carga de trabalho.  
 
-    ![Relatório DTA - custo de instrução](media/dta-tutorials/dta-statement-cost.png)
+    ![Relatório DTA-custo da instrução](media/dta-tutorials/dta-statement-cost.png)
   
 4.  Clique com o botão direito do mouse no painel **Relatório de custo da instrução** na área da grade e clique em **Exportar para o Arquivo**. Salve o relatório como **MyReport**. Será anexada automaticamente uma extensão .xml ao nome do arquivo. Você pode abrir MyReport.xml em seu editor de XML favorito ou no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para exibir o conteúdo do relatório.  
   

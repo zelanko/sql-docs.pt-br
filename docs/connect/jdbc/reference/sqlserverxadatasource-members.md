@@ -1,5 +1,5 @@
 ---
-title: Membros de SQLServerXADataSource | Microsoft Docs
+title: Membros SQLServerXADataSource | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 04178645-915f-4569-8907-d45e299bbe7d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8a624c51aed73ccf586d58e35881bde6f883cbb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2baf4e745e18052646e842eb64445690229ed0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66804104"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970179"
 ---
 # <a name="sqlserverxadatasource-members"></a>Membros de SQLServerXADataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

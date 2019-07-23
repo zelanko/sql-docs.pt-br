@@ -9,13 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 45d1fc9d06dd814e4ee6d80ec5ecbbe9e58d09c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4ab43eb8fce50513ae5d9dd726a15223f0f722b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798745"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264151"
 ---
 # <a name="programming-guidelines"></a>Diretrizes de programação
 
@@ -130,6 +129,8 @@ No ODBC Driver 13 e 13.1, quando caracteres multibyte UTF-8 ou UTF-16 substituto
     > As conexões DAC devem usar a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
     
 2.  O gerenciador de driver UnixODBC retorna "identificador de atributo/opção inválido" para todos os atributos de instrução quando eles são passados por meio do SQLSetConnectAttr. No Windows, quando o SQLSetConnectAttr recebe um valor de atributo de instrução, ele faz o driver definir esse valor em todas as instruções ativas que sejam filhos do identificador de conexão.  
+
+3.  Ao usar o driver com aplicativos altamente multissegmentados, a validação do identificador do unixODBC pode se tornar um afunilamento de desempenho. Nesses cenários, um desempenho significativamente maior pode ser obtido com a compilação de unixODBC `--enable-fastvalidate` com a opção. No entanto, lembre-se de que isso pode fazer com que os aplicativos passem identificadores `SQL_INVALID_HANDLE` inválidos para APIs ODBC para falhar em vez de retornar erros.
 
 ## <a name="see-also"></a>Consulte Também  
 [Perguntas frequentes](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)

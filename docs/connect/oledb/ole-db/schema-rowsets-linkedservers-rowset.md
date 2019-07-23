@@ -13,13 +13,12 @@ helpviewer_keywords:
 - enumerating data sources [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 7d2eedc7d8036bfa8507179b97c53e9977f0b5ae
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 75b443df235fd99f262cf3fda0abf6a6354da413
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795935"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993884"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>Conjuntos de linhas do esquema – conjunto de linhas LINKEDSERVERS
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

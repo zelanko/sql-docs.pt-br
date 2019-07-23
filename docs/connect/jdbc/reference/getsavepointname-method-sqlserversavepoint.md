@@ -1,5 +1,5 @@
 ---
-title: Método getSavepointName (SQLServerSavepoint) | Microsoft Docs
+title: método (SQLServerSavepoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6affbe5c-e836-4195-a3ba-1892cbf81907
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f4d695c8c3d81786bdc931d576a701a7b54746a0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8fe7df1dcba7762cded47fb5483e017ed6851054
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980215"
 ---
 # <a name="getsavepointname-method-sqlserversavepoint"></a>Método getSavepointName (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getSavepointName()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getSavepointName é especificado pelo método getSavepointName na interface do savepoint.  
+ Esse método compontos de salvamentoname é especificado pelo método na interface java. Sql. compontos de salvamento.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-methods.md)   

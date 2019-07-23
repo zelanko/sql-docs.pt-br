@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay Requirements | Microsoft Docs
+title: Requisitos de Distributed Replay | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2018
 ms.prod: sql
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 73aca1900afc191dd3df795b1716b624d5c36201
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 12b27321182e19d2a366e44c0a5ad1c325ee486d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075027"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "52527646"
 ### <a name="input-trace-versions"></a>Versões de rastreamento de entrada  
  O Distributed Replay oferece suporte a dados de rastreamento de entrada que são coletados nas seguintes versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  Atualização cumulativa 1 e posterior. Consulte - [atualizações cumulativas do SQL Server 2017](https://aka.ms/sql2017cu).
+-   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]Atualização cumulativa 1 e posterior. Consulte- [SQL Server atualizações cumulativas 2017](https://aka.ms/sql2017cu).
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  

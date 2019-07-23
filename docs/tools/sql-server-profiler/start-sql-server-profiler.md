@@ -1,5 +1,5 @@
 ---
-title: Executar o SQL Server Profiler | Microsoft Docs
+title: Executar SQL Server Profiler | Microsoft Docs
 ms.custom: ''
 ms.date: 07/07/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b3ccffd3ad298d6c9a6bacca3e060d4fc7a5ed24
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 697905061bb60e91884d8844a103ba1302c5c4ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059626"
 ---
 # <a name="run-sql-server-profiler"></a>Executar o SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,13 +30,13 @@ ms.locfileid: "67729680"
   
 Quando você inicia o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pela primeira vez e seleciona **Novo Rastreamento** no menu **Arquivo**, o aplicativo exibe uma caixa de diálogo **Conectar ao Servidor** na qual é possível especificar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à qual você deseja se conectar.  
 ## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>Para iniciar o SQL Server Profiler no menu Iniciar do Windows 10  
--  Clique o Windows **iniciar** ícone ou pressione os Windows de chave e começam a digitar "Profiler de servidor SQL 17". Quando o **17 do SQL Server Profiler** bloco for exibida, clique nela.   
+-  Clique no ícone **Iniciar** do Windows ou pressione a tecla Windows e comece a digitar "SQL Server Profiler 17". Quando o bloco **SQL Server Profiler 17** for exibido, clique nele.   
 
 ## <a name="to-start-sql-server-profiler-in-database-engine-tuning-advisor"></a>Para iniciar o SQL Server Profiler no Orientador de Otimização do Mecanismo de Banco de Dados  
 -  No menu [!INCLUDE[ssDE](../../includes/ssde-md.md)] Ferramentas **do Orientador de Otimização do** , clique em **SQL Server Profiler**.  
 
 ## <a name="to-start-sql-server-profiler-in-sql-server-management-studio"></a>Para iniciar o SQL Server Profiler no SQL Server Management Studio  
- Você pode começar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] em vários locais do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Quando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é iniciado, ele carrega o contexto de conexão, o modelo de rastreamento e o contexto de filtro de seu ponto de inicialização. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] inicia cada sessão do SQL Server Profiler em sua própria instância e Profiler continuará a ser executado se você desligar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Você pode iniciar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] de vários locais no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Quando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é iniciado, ele carrega o contexto de conexão, o modelo de rastreamento e o contexto de filtro de seu ponto de inicialização. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Inicia cada sessão de SQL Server Profiler em sua própria instância e o criador de perfil continua a ser executado [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]se você desligar.  
 ### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>Para iniciar o SQL Server Profiler no menu Ferramentas  
 -  No menu [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Ferramentas** , clique em **SQL Server Profiler**.  
 
@@ -58,5 +57,5 @@ Quando você inicia o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.m
 - Para executar rastreamento com o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], os usuários também devem ter a permissão ALTER TRACE.  
 
 ## <a name="next-steps"></a>Próximas etapas  
- [Visão geral do SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
+ [Visão geral de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [Usar o SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: eadd2c37-d9ec-4b47-a91e-ed90b1eaf4b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 610100e8a9634fd25232b515533d993bb459b2bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c38f17451149e9206cf12329e5ffef314eac7480
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66788617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969384"
 ---
 # <a name="supportsgroupbybeyondselect-method-sqlserverdatabasemetadata"></a>Método supportsGroupByBeyondSelect (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsGroupByBeyondSelect()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se houver suporte. Caso contrário, **false**.  
+ **true** se houver suporte. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método supportsGroupByBeyondSelect é especificado pelo método supportsGroupByBeyondSelect na interface DatabaseMetadata.  
+ Esse método supportsGroupByBeyondSelect é especificado pelo método supportsGroupByBeyondSelect na interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

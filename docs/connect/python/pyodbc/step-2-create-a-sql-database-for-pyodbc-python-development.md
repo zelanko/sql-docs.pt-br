@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9dd871b1-358f-4161-bb79-290bdb024d9d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b5b4da16785ad0665751673efb1b17128bbcb776
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5af059a98f32be562678516bacfd6383114ddac4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66780394"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935719"
 ---
 # <a name="step-2-create-a-sql-database-for-pyodbc-python-development"></a>Etapa 2: Criar um banco de dados SQL para o desenvolvimento Python pyodbc
 

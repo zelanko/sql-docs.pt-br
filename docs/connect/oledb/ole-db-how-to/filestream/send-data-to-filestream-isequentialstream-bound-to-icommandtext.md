@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5c3279e71c3ab206922e396541587702c1805ed1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 452ec857c43f40fcff8727ea652afcaba3950e90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994759"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Enviar dados para FILESTREAM – ISequentialStream associado a ICommandText
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,10 +24,10 @@ ms.locfileid: "66791485"
 
   Este exemplo usa uma interface de ISequentialStream associada a um parâmetro de ICommandText para enviar de 4 MB a 4 GB de dados a uma coluna de filestream.  
   
- Para obter mais informações sobre o recurso filestream, consulte [suporte a FILESTREAM](../../../oledb/features/filestream-support.md).  
+ Para obter mais informações sobre o recurso FileStream, consulte [suporte a FileStream](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Exemplo  
- Antes de compilar e executar esse exemplo, habilitar o suporte a FILESTREAM ([habilitar e configurar FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ Antes de compilar e executar este exemplo, habilite o suporte a FILESTREAM ([habilitar e configurar FileStream](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  Verifique se a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  
   

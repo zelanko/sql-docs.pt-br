@@ -1,5 +1,5 @@
 ---
-title: Uso avançado de recursos de data e hora (OLE DB) | Microsoft Docs
+title: Usar recursos de data e hora aprimorados (OLE DB) | Microsoft Docs
 description: Usar recursos avançados de data e hora (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: cb62604971ab0e16b0fe252534317b586d39ed0c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 907d810c1579229ea69d39ecb32af9f06dec01b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015531"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Usar recursos avançados de data e hora (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

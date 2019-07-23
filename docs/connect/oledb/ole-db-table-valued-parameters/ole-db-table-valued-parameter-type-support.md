@@ -12,13 +12,12 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (OLE DB)
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: fd7b37d6f23aeecc9c9405cd2e31f23173db7809
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: abff9abb82ad0ff54d9b1126541b98babbd6bd76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801132"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015315"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>Suporte ao tipo de parâmetro com valor de tabela OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "66801132"
   Este artigo descreve o suporte de tipos OLE DB em parâmetros com valor de tabela.  
   
 ## <a name="table-valued-parameter-rowset-object"></a>Objeto de conjunto de linhas de parâmetro com valor de tabela  
- É possível criar um objeto de conjunto de linhas especializado para parâmetros com valor de tabela. Você pode criar o objeto de conjunto de linhas de parâmetro com valor de tabela usando ITableDefinitionWithConstraints::CreateTableWithConstraints ou IOpenRowset:: OPENROWSET. Para fazer isso, defina o membro *eKind* do parâmetro *pTableID* como DBKIND_GUID_NAME e forneça o CLSID_ROWSET_INMEMORY como o membro *guid*. O nome do tipo de servidor para o parâmetro com valor de tabela deve ser especificado na *pwszName* membro *pTableID* ao usar IOpenRowset:: OPENROWSET. O objeto de conjunto de linhas de parâmetro com valor de tabela se comporta como um regular Driver do OLE DB para o objeto do SQL Server.  
+ É possível criar um objeto de conjunto de linhas especializado para parâmetros com valor de tabela. Você cria o objeto de conjunto de linhas de parâmetro com valor de tabela usando ITableDefinitionWithConstraints:: CreateTableWithConstraints ou IOpenRowset:: OpenRowset. Para fazer isso, defina o membro *eKind* do parâmetro *pTableID* como DBKIND_GUID_NAME e forneça o CLSID_ROWSET_INMEMORY como o membro *guid*. O nome do tipo de servidor para o parâmetro com valor de tabela deve ser especificado no membro *pwszName* de *PTableID* ao usar IOpenRowset:: OPENROWSET. O objeto de conjunto de linhas de parâmetro com valor de tabela se comporta como um driver de OLE DB regular para SQL Server objeto.  
   
 ```  
 const GUID CLSID_ROWSET_TVP =   
@@ -59,10 +58,10 @@ CoType RowsetTVP
  Não há suporte para conversões bidirecionalmente em DBTYPE_TABLE em qualquer outro tipo. IConvertType::CanConvert retornará S_FALSE em uma conversão não compatível para qualquer solicitação que não seja a conversão de DBTYPE_TABLE em DBTYPE_TABLE. Isso supõe DBCONVERTFLAGS_PARAMETER no objeto Command.  
   
 ## <a name="methods"></a>Métodos  
- Para obter informações sobre métodos OLE DB que dão suporte a parâmetros com valor de tabela, consulte [OLE DB Table-Valued parâmetro de tipo de suporte &#40;métodos&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md).  
+ Para obter informações sobre os métodos de OLE DB que dão suporte a parâmetros com valor de tabela, consulte [OLE DB &#40;métodos&#41;de suporte de tipo de parâmetro com valor de tabela](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md).  
   
 ## <a name="properties"></a>Propriedades  
- Para obter informações sobre as propriedades de OLE DB que dão suporte a parâmetros com valor de tabela, consulte [OLE DB Table-Valued parâmetro de tipo de suporte &#40;propriedades&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
+ Para obter informações sobre OLE DB propriedades que dão suporte a parâmetros com valor de tabela, consulte [OLE DB propriedades&#41;de &#40;suporte ao tipo de parâmetro com valor de tabela](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Parâmetros com valor de tabela &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

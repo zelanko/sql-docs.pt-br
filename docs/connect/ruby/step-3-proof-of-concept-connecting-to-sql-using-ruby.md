@@ -10,21 +10,20 @@ ms.topic: conceptual
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 20b63a0ffbe12f43ff943b9588e8392a90cff7e0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9724fb48f6ae896d9026bfec63056070e2180a8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992493"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Etapa 3: Prova de conceito da conexão ao SQL usando Ruby
 
-Este exemplo deve ser considerado uma prova de conceito apenas.  O código de exemplo é simplificado por motivos de clareza e não representa necessariamente as melhores práticas recomendadas pela Microsoft.  
+Este exemplo deve ser considerado apenas uma prova de conceito.  O código de exemplo é simplificado para fins de clareza e não necessariamente representa as práticas recomendadas recomendadas pela Microsoft.  
   
 ## <a name="step-1--connect"></a>Etapa 1: conectar-se  
   
-O [tinytds:: Client](https://github.com/rails-sqlserver/tiny_tds) função é usada para se conectar ao banco de dados SQL.  
+A função [função tinytds:: Client](https://github.com/rails-sqlserver/tiny_tds) é usada para se conectar ao banco de dados SQL.  
   
 ``` ruby
     require 'tiny_tds'  
@@ -35,11 +34,11 @@ O [tinytds:: Client](https://github.com/rails-sqlserver/tiny_tds) função é us
   
 ## <a name="step-2--execute-a-query"></a>Etapa 2: Executar uma consulta  
   
-Copie e cole o código a seguir em um arquivo vazio. Chamá-lo RB. Em seguida, executá-lo, digitando o seguinte comando do prompt de comando:  
+Copie e cole o código a seguir em um arquivo vazio. Chame-o de Test. rb. Em seguida, execute-o inserindo o seguinte comando no prompt de comando:  
   
     ruby test.rb  
   
-No exemplo de código, o [tinytds:: Result](https://github.com/rails-sqlserver/tiny_tds) função é usada para recuperar um conjunto de resultados de uma consulta no banco de dados SQL. Essa função aceita uma consulta e retorna um conjunto de resultados. O conjunto de resultados é iterado usando a tecla TAB [Result | linha |](https://github.com/rails-sqlserver/tiny_tds).  
+No exemplo de código, a função [função tinytds:: Result](https://github.com/rails-sqlserver/tiny_tds) é usada para recuperar um conjunto de resultados de uma consulta no banco de dados SQL. Essa função aceita uma consulta e retorna um conjunto de resultados. O conjunto de resultados é iterado usando o [resultado. cada | linha |](https://github.com/rails-sqlserver/tiny_tds).  
   
 ``` ruby 
     require 'tiny_tds'    
@@ -53,13 +52,13 @@ No exemplo de código, o [tinytds:: Result](https://github.com/rails-sqlserver/t
     end  
 ```  
   
-## <a name="step-3--insert-a-row"></a>Etapa 3: Inserir uma linha  
+## <a name="step-3--insert-a-row"></a>Etapa 3: inserir uma linha  
   
-Neste exemplo, você verá como executar uma [inserir](../../t-sql/statements/insert-transact-sql.md) instrução com segurança, passar parâmetros que protegem seu aplicativo contra [injeção de SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) valor.    
+Neste exemplo, você verá como executar uma instrução [Insert](../../t-sql/statements/insert-transact-sql.md) com segurança, passar parâmetros que protegem seu aplicativo do valor de [injeção de SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) .    
   
-Para usar o TinyTDS com o Azure, é recomendável que você execute várias `SET` instruções para alterar como a sessão atual lida com informações específicas. Recomendado `SET` instruções são fornecidas no código de exemplo. Por exemplo, `SET ANSI_NULL_DFLT_ON` permitirá novas colunas criadas para permitir valores nulos, mesmo se o status de nulidade da coluna não é explicitamente declarado.  
+Para usar o função tinytds com o Azure, é recomendável executar várias `SET` instruções para alterar a forma como a sessão atual lida com informações específicas. As `SET` instruções recomendadas são fornecidas no exemplo de código. Por exemplo, `SET ANSI_NULL_DFLT_ON` permitirá novas colunas criadas para permitir valores nulos, mesmo se o status de nulidade da coluna não for explicitamente declarado.  
   
-Para se alinhar com o Microsoft SQL Server [datetime](../../t-sql/data-types/datetime-transact-sql.md) Formatar, use o [strftime](https://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime) função a ser convertido para o formato de data e hora correspondente.  
+Para alinhar com o formato de [data e hora](../../t-sql/data-types/datetime-transact-sql.md) Microsoft SQL Server, use a função [strftime](https://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime) para converter para o formato DateTime correspondente.  
   
 ``` ruby
     require 'tiny_tds'  

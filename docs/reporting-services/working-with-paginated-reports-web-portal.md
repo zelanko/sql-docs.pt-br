@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7cab15eb6feb4a502957c7e8a1b929601cd6fd1a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0516adde38fc7f6e9cc1b4e20bc9beef76a4df22
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537346"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68222656"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Trabalhando com relatórios paginados (portal da Web)
 

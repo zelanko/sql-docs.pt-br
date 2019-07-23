@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4e2997a0-c18e-4114-bce9-0ab4b2b9f92c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 81e5350c53f1c55d825c658e6f678a98a6d96bcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c226fa29c1b9ad9d5a88762ebe78dd7530a950d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798935"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985504"
 ---
 # <a name="updateasciistream-method-javalangstring-javaioinputstream-int"></a>Método updateAsciiStream (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public void updateAsciiStream(java.lang.String columnName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método updateAsciiStream é especificado pelo método updateAsciiStream na interface do resultset.  
+ Esse método updateAsciiStream é especificado pelo método updateAsciiStream na interface java. Sql. ResultSet.  
   
  Esse método passa caracteres ASCII (bytes) de um objeto InputStream para colunas de caracteres conversíveis, que são o intervalo ASCII [0x00 - 0x7F] do Unicode e as páginas de código 874, 932, 936, 949, 950 e 1250 a 1258. Esse método executa uma conversão na página de ordenação de destino. A tentativa de atualizar uma coluna de destino não conversível fará com que uma exceção seja lançada. Para colunas binárias, são passados bytes brutos.  
   

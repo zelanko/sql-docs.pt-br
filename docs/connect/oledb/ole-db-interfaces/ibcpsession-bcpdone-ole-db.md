@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) | Microsoft Docs
+title: 'IBCPSession:: BCPDone (OLE DB) | Microsoft Docs'
 description: IBCPSession::BCPDone (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - BCPDone method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: ea7b944d51628e17c778cafe54a1eb384ce05f41
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9df2726898fdbd3d877296d4da67738c3f792234
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790919"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994560"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -464,7 +463,7 @@ void wmain() {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
+ [OLE DB &#40;IBCPSession&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Executando operações de cópia em massa](../../oledb/features/performing-bulk-copy-operations.md)  
   
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3efeec0dee1f1bd66e64b3a1449bbaf1bf08722e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fe44efec59b78fe025cd08207c2026e658466554
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003831"
 ---
 # <a name="working-with-result-sets"></a>Trabalhando com conjuntos de resultados
 
@@ -27,7 +26,7 @@ Quando você trabalha com os dados contidos em um banco de dados do [!INCLUDE[ss
 Além disso, o objeto SQLServerResultSet fornece métodos para navegar pelas respectivas linhas de dados, obter ou definir os dados que ele contém e estabelecer diversos níveis de sensibilidade a alterações no banco de dados subjacente.  
   
 > [!NOTE]  
-> Para obter mais informações sobre como gerenciar conjuntos de resultados, inclusive sua sensibilidade a alterações, consulte [Gerenciando conjuntos de resultados com o Driver JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).  
+> Para obter mais informações sobre como gerenciar conjuntos de resultados, incluindo a sensibilidade a alterações, consulte [Gerenciando conjuntos de resultados com o driver JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).  
   
 Os tópicos desta seção descrevem diversas maneiras de usar um conjunto de resultados para manipular os dados contidos em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

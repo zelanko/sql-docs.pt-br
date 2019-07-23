@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3d0fb6ae351cde68956defff6081fa19f02c092e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7256475421b8666e28eaaf03f3ff4cb9768aa289
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777433"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955609"
 ---
 # <a name="closeunreferencedpreparedstatementhandles-method-sqlserverconnection"></a>Método closeUnreferencedPreparedStatementHandles (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Força o un-preparar solicitações para quaisquer instruções preparadas com descartados pendentes a serem executadas.
+ Força as solicitações de despreparação para qualquer instrução preparada pendente descartada a ser executada.
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +39,7 @@ public void closeUnreferencedPreparedStatementHandles()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
 
 ## <a name="remarks"></a>Remarks  
- Esse método está disponível na versão do JDBC driver 6.4 e daí.
+ Esse método está disponível no JDBC Driver versão 6,4 e em diante.
  
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

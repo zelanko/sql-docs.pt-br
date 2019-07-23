@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ff617165-47f8-41c1-9c51-37ffc7714923
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6ad7f9ee6fc5250ac2bc349ccadb8909fc0e3cbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4591a91d1adb924801a39a132a0f20c68579e31b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66804026"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953381"
 ---
 # <a name="getbytes-method-javalangstring-sqlserverresultset"></a>Método getBytes (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public byte[] getBytes(java.lang.String columnName)
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  
   
 ## <a name="return-value"></a>Valor retornado  
- Uma matriz de **bytes** valores.  
+ Uma matriz de valores de **byte** .  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 49d474e1fcaca6c90cdec5bdfcb0a8194ce7d23f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5a4dd3540f4171847014e6175b84bd861b7abb6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995138"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversões executadas do cliente para o servidor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66769306"
 ## <a name="conversions"></a>Conversões  
  Este artigo descreve as conversões feitas no cliente. Se o cliente especificar a precisão de frações de segundo para um parâmetro diferente do definido no servidor, a conversão do cliente pode gerar uma falha, nos casos em que o servidor permitiria o êxito da operação. Em particular, o cliente trata qualquer truncamento de segundos fracionários como um erro, enquanto o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] arredonda os valores temporais para o segundo inteiro mais próximo.  
   
- Se não for chamado ICommandWithParameters:: SetParameterInfo, associações de DBTYPE_DBTIMESTAMP são convertidas como se fossem **datetime2**.  
+ Se ICommandWithParameters:: SetParameterInfo não for chamado, as associações de DBTYPE_DBTIMESTAMP serão convertidas como se fossem **datetime2**.  
   
 |Para -><br /><br /> De|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
@@ -52,7 +51,7 @@ ms.locfileid: "66769306"
   
 |Símbolo|Significado|  
 |------------|-------------|  
-|-|Não há suporte a nenhuma conversão. Se a associação for validada quando IAccessor:: CreateAccessor é chamado, DBBINDSTATUS_UPSUPPORTEDCONVERSION será retornado em *rgStatus*. Quando a validação de acessador for adiada, DBSTATUS_E_BADACCESSOR será definido.|  
+|-|Não há suporte a nenhuma conversão. Se a associação for validada quando IAccessor:: createaccess for chamado, DBBINDSTATUS_UPSUPPORTEDCONVERSION será retornado em *rgStatus*. Quando a validação de acessador for adiada, DBSTATUS_E_BADACCESSOR será definido.|  
 |N/A|Não aplicável.|  
 |1|Se os dados fornecidos não forem válidos, DBSTATUS_E_CANTCONVERTVALUE será definido. Os dados de entrada são validados antes da aplicação das conversões; assim, mesmo quando um componente for ignorado por uma conversão subsequente, ele ainda deverá ser válido para que a conversão tenha êxito.|  
 |2|Os campos de hora são ignorados.|  

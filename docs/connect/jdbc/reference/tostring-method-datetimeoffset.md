@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: e77b9be3-1a02-4769-8acf-ac71d48d6a76
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 64186b6add766a21e0881fb6b3f59d49048334e8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ef3cd31068c324475e8edfe8bf8f7c16acc4a2de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968516"
 ---
 # <a name="tostring-method-datetimeoffset"></a>Método toString (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Retorna uma representação de cadeia de caracteres da **DateTimeOffset** objeto.  
+  Retorna uma representação de cadeia de caracteres do objeto **DateTimeOffset** .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,12 +30,12 @@ public String toString()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- Uma representação de cadeia de caracteres da **DateTimeOffset** objeto.  
+ Uma representação de cadeia de caracteres do objeto **DateTimeOffset** .  
   
 ## <a name="remarks"></a>Remarks  
- A cadeia de caracteres tem o formato *aaaa*-*MM*-*DD * * hh*:*mm*:*ss*[. *FFFFFFF*] [+ |-]*hh*:*mm*.  
+ A cadeia de caracteres tem o formato *aaaa*-*mm*-*DD * * hh*:*mm*:*SS*[. *fffffff*] [+ |-]*hh*:*mm*.  
   
- Os segundos fracionados da cadeia de caracteres retornada são preenchidas com zeros até obter a precisão declarada. Por exemplo, uma **datetimeoffset(6)** com um valor de "12:34:56.78 2010-03-10-08:00" será formatado por ToString como "12:34:56.780000 2010-03-10-08:00".  
+ Os segundos fracionados da cadeia de caracteres retornada são preenchidas com zeros até obter a precisão declarada. Por exemplo, um **DateTimeOffset (6)** com um valor de "2010-03-10 12:34:56.78-08:00" será formatado por DateTimeOffset. ToString como "2010-03-10 12:34:56.780000-08:00".  
   
 ## <a name="see-also"></a>Consulte Também  
  [Classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)   

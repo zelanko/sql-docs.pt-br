@@ -13,20 +13,19 @@ ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 2610106e0ab691af885bb8eb3c1d62555db7f56f
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: fa579e072ffdddc70e10d3ad1e9a205840374aee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733182"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024088"
 ---
 # <a name="sql-server-configuration-manager-help"></a>Ajuda do SQL Server Configuration Manager
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager para configurar os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e configurar a conectividade de rede. Para criar ou gerenciar objetos de banco de dados, configurar a segurança e escrever consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] , use o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações sobre o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consulte os Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
  > [!TIP]
- > Se você precisar configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no Linux, use o **mssql-conf** ferramenta. Para obter mais informações, consulte [configurar o SQL Server no Linux com a ferramenta mssql-conf](../../linux/sql-server-linux-configure-mssql-conf.md).
+ > Se você precisar configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o no Linux, use a ferramenta **MSSQL-conf** . Para obter mais informações, consulte [configurar SQL Server em Linux com a ferramenta MSSQL-conf](../../linux/sql-server-linux-configure-mssql-conf.md).
 
  Esta seção contém os tópicos da Ajuda F1 para as caixas de diálogo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   

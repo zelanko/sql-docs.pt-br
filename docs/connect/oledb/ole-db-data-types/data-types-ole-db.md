@@ -15,13 +15,12 @@ helpviewer_keywords:
 - OLE DB, data types
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 9eaa809532c97b534480ac752c19756cb550b26b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 05e9714159a3253a92c2eb0aeef3ea48e632345c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015823"
 ---
 # <a name="data-types-ole-db"></a>Tipos de dados (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

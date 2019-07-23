@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1ec7e246-4b91-4420-9a4c-0ebd98e2e38b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ee88066145b42766ebf14f62e438a23e7d70294e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2f7bc5b4729e071f2a65670522735654e550a453
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954203"
 ---
 # <a name="getasciistream-method-int"></a>Método getAsciiStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.io.InputStream getAsciiStream(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getAsciiStream é especificado pelo método getAsciiStream na interface do resultset.  
+ Esse método getAsciiStream é especificado pelo método getAsciiStream na interface java. Sql. ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método getAsciiStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)   

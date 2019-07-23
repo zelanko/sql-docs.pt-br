@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e825765c-eb55-4800-951b-f3495da36641
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4fd42fccc0e6e3e15feb3d866ccb8d40531a1d4f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c91b965498c0b617a02c7707e369a2ba61c0065
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976149"
 ---
 # <a name="preparestatement-method-javalangstring"></a>Método prepareStatement (java.lang.String)
 

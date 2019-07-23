@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3404d7e31cdc5ed82a4a2c57af1a05354104d4bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73b82c550c78d409accd423b485fc7b9825dbc8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787449"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979328"
 ---
 # <a name="getsubstring-method-sqlserverclob"></a>Método getSubString (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +51,7 @@ public java.lang.String getSubString(long pos,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getSubString é especificado pelo método getSubString na interface do CLOB.  
+ Esse método getSubString é especificado pelo método getSubString na interface java. Sql. Clob.  
   
  A tentativa de obter zero caracteres de um CLOB nulo ou de comprimento zero retorna uma cadeia de caracteres vazia. A tentativa de obter qualquer comprimento de caracteres em qualquer posição que não seja a posição 1 em um CLOB de comprimento zero fará com que uma exceção de posição seja lançada.  
   

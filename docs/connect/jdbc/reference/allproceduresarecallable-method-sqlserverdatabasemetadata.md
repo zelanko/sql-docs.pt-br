@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8886137d-455e-497c-afea-4b326eda52f1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f9ea85b706ac852d4dd5438d31267f90f20e8f8c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 559c025a5fcb7d27f4520cea0868761b449107a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955922"
 ---
 # <a name="allproceduresarecallable-method-sqlserverdatabasemetadata"></a>Método allProceduresAreCallable (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean allProceduresAreCallable()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se o usuário tem permissões para chamar todos os procedimentos. Caso contrário, **false**.  
+ **true** se o usuário tiver permissões para chamar todos os procedimentos. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método allProceduresAreCallable é especificado pelo método allProceduresAreCallable na interface DatabaseMetadata.  
+ Esse método allProceduresAreCallable é especificado pelo método allProceduresAreCallable na interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

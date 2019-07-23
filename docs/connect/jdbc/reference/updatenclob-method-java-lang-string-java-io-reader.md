@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 87621ca7-e64a-49e2-b9c2-551390adaa26
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4c67761303fc914b9399c4a7c31faa23f55f1e8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 429ff64469bb904a3cc8de65f518b0e5fa72abad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798389"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998620"
 ---
 # <a name="updatenclob-method-javalangstring-javaioreader"></a>Método updateNClob (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public void updateNClob(java.lang.String columnLabel,
   
  *reader*  
   
- Um objeto do leitor.  
+ Um objeto leitor.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -46,7 +45,7 @@ public void updateNClob(java.lang.String columnLabel,
 ## <a name="remarks"></a>Remarks  
  Esse método updateNClob é especificado pelo método updateNClob na interface java.sql.ResultSet.  
   
- Esse método tem suporte apenas no **nvarchar (max)** , **ntext**, e **xml** colunas. Seu uso em quaisquer outros tipos de dados fará com que uma exceção seja lançada.  
+ Esse método só tem suporte em colunas **nvarchar (max)** , **ntext**e **XML** . Seu uso em quaisquer outros tipos de dados fará com que uma exceção seja lançada.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método updateNClob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   

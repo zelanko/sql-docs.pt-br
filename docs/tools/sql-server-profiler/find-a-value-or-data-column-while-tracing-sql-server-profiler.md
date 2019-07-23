@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fa5212af-1f49-4227-9d80-58003062146f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 199bb840153e55e524b1a090c135b0691a8ce2ce
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 515853eedcee1659a344845405663ad3c7e1c5dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074992"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>Localizar um valor ou coluna de dados durante um rastreamento (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

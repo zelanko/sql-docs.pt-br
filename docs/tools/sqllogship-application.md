@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ca6a9765c7813fd0fbece4d8c392c23e2f784ec2
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 0e59ba2473ce58caebcb76521dcc191479abdb92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065451"
 ---
 # <a name="sqllogship-application"></a>Aplicativo sqllogship
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   O aplicativo **sqllogship** realiza uma operação de backup, cópia ou restauração e as tarefas de limpeza associadas de uma configuração de envio de logs. A operação é realizada em uma instância específica do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para um banco de dados específico.  
   
- ![Ícone de link do tópico](../database-engine/configure-windows/media/topic-link.gif "ícone de link do tópico") para obter as convenções de sintaxe, consulte [referência de utilitários de Prompt de comando &#40;o mecanismo de banco de dados&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
+ ![Ícone de link do tópico](../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") Para obter as convenções de sintaxe, consulte [referência &#40;do utilitário&#41;de prompt de comando mecanismo de banco de dados](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   

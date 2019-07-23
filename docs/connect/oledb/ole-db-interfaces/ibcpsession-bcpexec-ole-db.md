@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession:: BCPExec (OLE DB) | Microsoft Docs'
+title: 'IBCPSession:: BCPExec (OLE DB) | Microsoft Docs'
 description: IBCPSession::BCPExec (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - BCPExec method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 087987f64cf3da6e7f14b30c6014fdcd6e35e243
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6ace2ccd8fbba9c8c3566ad706754ed314152d4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790979"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015487"
 ---
 # <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +71,7 @@ HRESULT BCPExec(
  Ocorreram erros durante a operação de cópia em massa e algumas linhas podem não ter sido copiadas. O número de erros ainda é menor do que o máximo de erros permitido.  
   
 ## <a name="see-also"></a>Consulte Também  
- [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
+ [OLE DB &#40;IBCPSession&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Executando operações de cópia em massa](../../oledb/features/performing-bulk-copy-operations.md)  
   
   

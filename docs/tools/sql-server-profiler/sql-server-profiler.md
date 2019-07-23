@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1395cef2b706cc9e37610686ebae6561f2f22396
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 928901caae5ed500913f59f138499a03f73f5439
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729733"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059732"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ A tabela a seguir mostra os recursos que devem ser usados no [!INCLUDE[ssCurrent
 ||||  
 |-|-|-|  
 |**Recurso\carga de trabalho de destino**|**Mecanismo relacional**|**Analysis Services**|  
-|**Captura de rastreamento**|[Eventos estendidos](../../relational-databases/extended-events/extended-events.md) interface gráfica do usuário no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
+|**Captura de rastreamento**|Interface gráfica do usuário de [eventos estendidos](../../relational-databases/extended-events/extended-events.md) em[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
 |**Reprodução de rastreamento**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
   
 ## <a name="sql-server-profiler"></a>SQL Server Profiler  
@@ -77,7 +76,7 @@ O [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] também oferece 
 Para usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], você precisa compreender os termos que descrevem o modo de funcionamento da ferramenta.  
   
 > [!NOTE]
-> Noções básicas sobre o rastreamento do SQL realmente ajuda a trabalhar com [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Para obter mais informações, consulte [SQL Trace](../../relational-databases/sql-trace/sql-trace.md).  
+> Entender o rastreamento do SQL realmente ajuda ao [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]trabalhar com o. Para obter mais informações, consulte [SQL Trace](../../relational-databases/sql-trace/sql-trace.md).  
   
  **Evento**  
  Um evento é uma ação gerada dentro de uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. São exemplos:  
@@ -128,7 +127,7 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispõe de duas form
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
 |Lista os modelos predefinidos que o SQL Server fornece para monitorar determinados tipos de eventos, e as permissões necessárias para reproduzir rastreamentos.|[Modelos e permissões do SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)|  
-|Descreve como executar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler.|[Permissões necessárias para executar o SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|  
+|Descreve como executar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o profiler.|[Permissões necessárias para executar o SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|  
 |Descreve como criar um rastreamento.|[Criar um rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)|  
 |Descreve como especificar eventos e colunas de dados para um arquivo de rastreamento.|[Especificar eventos e colunas de dados para um arquivo de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)|  
 |Descreve como salvar resultados de rastreamento em um arquivo.|[Salvar resultados de rastreamento em um arquivo &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md)|  
@@ -157,7 +156,7 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispõe de duas form
 |Descreve como reproduzir um único evento de cada vez.|[Reproduzir um único evento de cada vez &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-single-event-at-a-time-sql-server-profiler.md)|  
 |Descreve como reproduzir até um ponto de interrupção.|[Reproduzir em um ponto de interrupção &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-to-a-breakpoint-sql-server-profiler.md)|  
 |Descreve como reproduzir até um cursor.|[Reproduzir para um cursor &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-to-a-cursor-sql-server-profiler.md)|  
-|Descreve como reproduzir uma [!INCLUDE[tsql](../../includes/tsql-md.md)] script.|[Reproduzir um script Transact-SQL &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)|  
+|Descreve como reproduzir um [!INCLUDE[tsql](../../includes/tsql-md.md)] script.|[Reproduzir um script Transact-SQL &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)|  
 |Descreve como criar um modelo de rastreamento.|[Criar um modelo de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)|  
 |Descreve como modificar um modelo de rastreamento.|[Modificar um modelo de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)|  
 |Descreve como definir opções de rastreamento globais.|[Definir opções de rastreamento globais &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)|  
@@ -170,16 +169,16 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispõe de duas form
 |Descreve como extrair um script de um rastreamento.|[Extrair um script de um rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/extract-a-script-from-a-trace-sql-server-profiler.md)|  
 |Descreve como correlacionar um rastreamento com dados de log de desempenho do Windows.|[Correlacionar um rastreamento com dados do log de desempenho do Windows &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
 |Descreve como organizar colunas exibidas em um rastreamento.|[Organizar colunas exibidas em um rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
-|Descreve como iniciar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|[Iniciar o SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
+|Descreve como iniciar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]o.|[Iniciar o SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
 |Descreve como salvar rastreamentos e rastrear modelos.|[Salvar rastreamentos e modelos de rastreamento](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)|  
 |Descreve como modificar modelos de rastreamento.|[Modificar modelos de rastreamento](../../tools/sql-server-profiler/modify-trace-templates.md)|  
 |Descreve como correlacionar um rastreamento com dados de log de desempenho do Windows.|[Correlacionar um rastreamento com os dados de log de desempenho do Windows](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)|  
-|Descreve como exibir e analisar rastreamentos com [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|[Exibir e analisar rastreamentos com o SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)|  
-|Descreve como analisar deadlocks com [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|[Analisar deadlocks com o SQL Server Profiler](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)|  
+|Descreve como exibir e analisar rastreamentos com [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]o.|[Exibir e analisar rastreamentos com o SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)|  
+|Descreve como analisar deadlocks com [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]o.|[Analisar deadlocks com o SQL Server Profiler](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)|  
 |Descreve como analisar consultas com resultados de SHOWPLAN no SQL Server Profiler.|[Analisar consultas com resultados do Plano de Execução no SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)|  
-|Descreve como filtrar rastreamentos com [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|[Filtrar rastreamentos com o SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)|  
+|Descreve como filtrar rastreamentos com [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]o.|[Filtrar rastreamentos com o SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)|  
 |Descreve como usar os recursos de reprodução do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|[Reproduzir rastreamentos](../../tools/sql-server-profiler/replay-traces.md)|  
-|Lista os tópicos de ajuda contextuais para [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|[Ajuda de F1 do SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-f1-help.md)|  
+|Lista os tópicos de ajuda contextual para [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]o.|[Ajuda de F1 do SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-f1-help.md)|  
 |Lista os procedimentos armazenados do sistema que são usados pelo [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para monitorar o desempenho e a atividade.|[Procedimentos armazenados do SQL Server Profiler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|  
   
 ## <a name="see-also"></a>Confira também  

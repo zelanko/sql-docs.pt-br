@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5487631a-1107-4169-84ca-b77fd09bea66
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: edc0b28c132e5422c12ae340e35c1464ee48fa73
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fd9776dd60e82067b0d048e2f385b2bc685b79ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799253"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974123"
 ---
 # <a name="setlastupdatecount-method-sqlserverdatasource"></a>Método setLastUpdateCount (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public void setLastUpdateCount(boolean lastUpdateCount)
 #### <a name="parameters"></a>Parâmetros  
  *lastUpdateCount*  
   
- **True** se lastUpdateCount está habilitada. Caso contrário, **false**.  
+ **true** se lastUpdateCount estiver habilitado. Caso contrário, **false**.  
   
 ## <a name="remarks"></a>Remarks  
  Se a propriedade lastUpdateCount estiver definida como **true**, o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] retornará apenas a última contagem de atualização de uma instrução SQL passada ao servidor. Se a propriedade lastUpdateCount estiver definida como **false**, o driver retornará todas as contagens de atualização, inclusive as retornadas por quaisquer gatilhos que tenham disparado. Se a propriedade lastUpdateCount não estiver definida, o método [getLastUpdateCount](../../../connect/jdbc/reference/getlastupdatecount-method-sqlserverdatasource.md) retornará o valor padrão, **true**.  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9cffd51ef8da35c7ee8c1e424c2cddbac92955cd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 698c78dced26e7981fb7a651c22530909427b796
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517276"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68222559"
 ---
 # <a name="working-with-snapshots-web-portal"></a>Trabalhando com instantâneos (portal da Web)
 

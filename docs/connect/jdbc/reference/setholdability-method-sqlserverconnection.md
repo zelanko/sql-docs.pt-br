@@ -1,5 +1,5 @@
 ---
-title: Método (SQLServerConnection) setHoldability | Microsoft Docs
+title: Método de isholdabilidade (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 552eebd0-4c38-43f0-961f-35244f99109b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 60d46f8f8792eacd7f1f67a67b2fc9fc56bf5a8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe53c38e1b3f1633be27f4c82a9c2edfe9820495
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66764465"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213661"
 ---
 # <a name="setholdability-method-sqlserverconnection"></a>Método setHoldability (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +47,7 @@ public void setHoldability(int nNewHold)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setHoldability é especificado pelo método setHoldability na interface do Connection.  
+ Esse método de habilitação é especificado pelo método de isenção na interface java. Sql. Connection.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

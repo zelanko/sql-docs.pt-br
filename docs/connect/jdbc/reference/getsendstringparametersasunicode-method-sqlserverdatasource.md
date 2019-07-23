@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3836d0ab-c3fb-41ff-bb89-10389594ae51
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 88f5d294e46ddc6dc4da92e437fc4513f9a50a47
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: df27a5368dfea7f417fb84e2ebe38a8987165aec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792004"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979974"
 ---
 # <a name="getsendstringparametersasunicode-method-sqlserverdatasource"></a>Método getSendStringParametersAsUnicode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public boolean getSendStringParametersAsUnicode()
 ## <a name="remarks"></a>Remarks  
  Se a propriedade sendStringParametersAsUnicode for definida como **true**, que é o valor padrão, os parâmetros de cadeia de caracteres serão enviados ao servidor no formato UNICODE. Se a propriedade sendStringParametersAsUnicode for definida como **false**, os parâmetros de cadeia de caracteres serão enviados ao servidor em um formato ASCII/MBCS, e não em UNICODE. Se sendStringParametersAsUnicode não for definida, getSendStringParametersAsUnicode retornará o valor padrão, **true**.  
   
- Para obter mais informações sobre a propriedade de conexão sendStringParametersAsUnicode, consulte [definindo as propriedades de Conexão](../../../connect/jdbc/setting-the-connection-properties.md).  
+ Para obter mais informações sobre a propriedade de conexão sendStringParametersAsUnicode, consulte [definindo as propriedades de conexão](../../../connect/jdbc/setting-the-connection-properties.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

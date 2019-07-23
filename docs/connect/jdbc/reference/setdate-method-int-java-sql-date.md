@@ -1,5 +1,5 @@
 ---
-title: Método setDate em valor de data - int | Microsoft Docs
+title: Método setDate para o valor Date-int | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 12e5a4cc-45a2-4779-bbfc-e4da66829588
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cf86e81c3512ef29cc661388ec02ff204548fcac
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 276533dcda2cf4524ee23f07ac2f102a56c3b788
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66793955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974724"
 ---
 # <a name="setdate-method-int-javasqldate"></a>Método setDate (int, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public final void setDate(int n,
   
  *x*  
   
- Um objeto de data.  
+ Um objeto Date.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

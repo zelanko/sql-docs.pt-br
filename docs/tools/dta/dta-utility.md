@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c5f6df2e302b96d5f49785ee835650a2ef2f788
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ca26b36501052323553eb2c5a2a25557492eec85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132766"
 ---
 # <a name="dta-utility"></a>utilitário dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +177,7 @@ dta -d AdventureWorks2012 ...
  Especifica que os índices filtrados serão considerados em novas recomendações. Para saber mais, confira [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 **-fc**  
- Especifica que os índices columnstore serão considerados em novas recomendações. DTA considerará que ambos os índices columnstore clusterizados e não clusterizados. Para obter mais informações, consulte    
+ Especifica que os índices columnstore serão considerados em novas recomendações. O DTA considerará os índices columnstore clusterizados e não clusterizados. Para obter mais informações, consulte    
 [Recomendações de índice columnstore no Orientador de Otimização do Mecanismo de Banco de Dados (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
@@ -217,7 +216,7 @@ dta -d AdventureWorks2012 ...
  Especifica que o cache de plano seja usado como a carga de trabalho. Os primeiros 1.000 eventos de cache de plano para bancos de dados selecionados explicitamente são analisados. Esse valor pode ser alterado usando a opção **-n**.  
  
 **-iq**  
- Especifica que a consulta Store seja usado como a carga de trabalho. Os primeiros 1.000 eventos de Store de consulta para bancos de dados selecionados explicitamente são analisados. Esse valor pode ser alterado usando a opção **-n**.  Confira [Repositório de Consultas](../../relational-databases/performance/how-query-store-collects-data.md) e [Ajustando o banco de dados usando a carga de trabalho do Repositório de Consultas](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) para obter mais informações.
+ Especifica que o Repositório de Consultas ser usado como a carga de trabalho. Os principais eventos 1.000 do Repositório de Consultas para bancos de dados explicitamente selecionados são analisados. Esse valor pode ser alterado usando a opção **-n**.  Confira [Repositório de Consultas](../../relational-databases/performance/how-query-store-collects-data.md) e [Ajustando o banco de dados usando a carga de trabalho do Repositório de Consultas](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) para obter mais informações.
  ||  
 |-|  
 |**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
@@ -267,11 +266,11 @@ dta -n number_of_events -A 0
  Nessecaso, é importante especificar um tempo de ajuste ilimitado (`-A 0`). Caso contrário, o Orientador de Otimização do Mecanismo de Banco de Dados assume, por padrão, um tempo de ajuste de 8 horas.
  
  **-I** _time_window_in_hours_   
-   Especifica a janela de tempo (em horas) quando uma consulta deve ter sido executado para que ela seja considerada pelo DTA para ajuste ao usar **-iq** opção (carga de trabalho de consulta Store). 
+   Especifica a janela de tempo (em horas) quando uma consulta deve ser executada para que ela seja considerada pelo DTA para ajuste ao usar **a opção-IQ** (carga de trabalho de repositório de consultas). 
 ```  
 dta -iq -I 48  
 ```  
-Nesse caso, DTA usará Store consulta como a origem da carga de trabalho e considere apenas a consultas que foram executadas com as últimas 48 horas.  
+Nesse caso, o DTA usará Repositório de Consultas como a origem da carga de trabalho e apenas considerar as consultas que foram executadas com as últimas 48 horas.  
   ||  
 |-|  
 |**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  

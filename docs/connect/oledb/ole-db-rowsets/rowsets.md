@@ -16,13 +16,12 @@ helpviewer_keywords:
 - rowsets [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 214e1b82f0ba25c34f28bf22d69d83cf45fe0c38
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 23d07cd93ada1d1eeae36b4e4ed104906feef88d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015374"
 ---
 # <a name="rowsets"></a>Conjuntos de linhas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "66801668"
 
   Um conjunto de linhas contém colunas de dados. Os conjuntos de linhas são objetos centrais que permitem que todos os provedores de dados OLE DB exponham dados de conjuntos de resultados em formato tabular.  
   
- Depois que um consumidor cria uma sessão usando o método **IDBCreateSession::CreateSession**, ele pode usar a interface **IOpenRowset** ou **IDBCreateCommand** na sessão para criar um conjunto de linhas. O Driver do OLE DB para SQL Server dá suporte a essas duas interfaces. Esses dois métodos são descritos aqui.  
+ Depois que um consumidor cria uma sessão usando o método **IDBCreateSession::CreateSession**, ele pode usar a interface **IOpenRowset** ou **IDBCreateCommand** na sessão para criar um conjunto de linhas. O driver OLE DB para SQL Server dá suporte a essas duas interfaces. Esses dois métodos são descritos aqui.  
   
 -   Criar um conjunto de linhas chamando o método **IOpenRowset::OpenRowset**.  
   

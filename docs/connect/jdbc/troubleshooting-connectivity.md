@@ -1,5 +1,5 @@
 ---
-title: Solucionando problemas de conectividade | Microsoft Docs
+title: Solução de problemas de conectividade | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 05a8e57b4d531d05cdf14cb57ab164851d0c1800
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7bfb8eee85e9eede4dcf3e47ad4ecbe13a08d2ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004237"
 ---
 # <a name="troubleshooting-connectivity"></a>Solucionando problemas de conectividade
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "66798252"
   
     -   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi instalado, mas o TCP/IP não foi instalado como um protocolo de rede do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Network Utility da [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e posterior.  
   
-    -   O TCP/IP foi instalado como um protocolo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas não está escutando na porta especificada na URL de conexão JDBC. A porta padrão é 1433, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser configurado durante a instalação do produto para escutar em qualquer porta. Verifique se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está escutando na porta 1433. Ou, se a porta foi alterada, verifique se a porta especificada na URL de conexão do JDBC corresponde à porta alterada. Para obter mais informações sobre URLs de conexão do JDBC, consulte [construindo a URL de Conexão](../../connect/jdbc/building-the-connection-url.md).  
+    -   O TCP/IP foi instalado como um protocolo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas não está escutando na porta especificada na URL de conexão JDBC. A porta padrão é 1433, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser configurado durante a instalação do produto para escutar em qualquer porta. Verifique se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está escutando na porta 1433. Ou, se a porta foi alterada, verifique se a porta especificada na URL de conexão do JDBC corresponde à porta alterada. Para obter mais informações sobre URLs de conexão JDBC, consulte [criando a URL de conexão](../../connect/jdbc/building-the-connection-url.md).  
   
     -   O endereço do computador que é especificado na URL de conexão do JDBC não se refere a um servidor em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado e é iniciado.  
   
