@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 60a704adb2fe1bbdcfd5d78cfd02a7b704745642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2f2cdc39fbc79c01f87dbca6051aae551521c99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723435"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057263"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>Lição 1-2: Adicionar e configurar um gerenciador de conexões de Arquivo Simples
 

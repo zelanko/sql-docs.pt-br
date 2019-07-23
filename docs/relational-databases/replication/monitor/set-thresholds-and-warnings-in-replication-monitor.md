@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b3783bbaa861ad857efce87b82c50536757fd499
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e4866e0878411f6e81718df4184c1e5f2ac57f06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135467"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111148"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Definir os limites e avisos no Replication Monitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ ms.locfileid: "54135467"
   
      Essa caixa de diálogo exibe os alertas para todos os tipos de publicação, inclusive alertas que não estão relacionados com o monitoramento de limites. Para obter mais informações, consulte [Usar alertas para eventos do agente de replicação](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>**:  
+3.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>** :  
   
     -   Na página **Geral** , clique em **Habilitar**; especifique em qual banco de dados deverá ser aplicado o alerta.  
   
@@ -119,7 +118,7 @@ ms.locfileid: "54135467"
   
      Essa caixa de diálogo exibe os alertas para todos os tipos de publicação, inclusive alertas que não estão relacionados com o monitoramento de limites.  
   
-3.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>**:  
+3.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>** :  
   
     -   Na página **Geral** , clique em **Habilitar**; especifique em qual banco de dados deverá ser aplicado o alerta.  
   
@@ -151,7 +150,7 @@ ms.locfileid: "54135467"
   
      Essa caixa de diálogo exibe os alertas para todos os tipos de publicação, inclusive alertas que não estão relacionados com o monitoramento de limites. Para obter mais informações, consulte [Usar alertas para eventos do agente de replicação](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>**:  
+3.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>** :  
   
     -   Na página **Geral** , clique em **Habilitar**; especifique em qual banco de dados deverá ser aplicado o alerta.  
   

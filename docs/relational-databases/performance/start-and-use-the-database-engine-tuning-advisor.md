@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 749f94658d03828b30de3b328df1abfc8c932d43
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4da908b06e467e1c80ce528ec95f1a5af0db7638
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351055"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113310"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -399,7 +398,7 @@ database_name.owner_name.table_name
  **Selecionar bancos de dados e tabelas a otimizar**  
  Especifique os bancos de dados e tabelas a serem otimizados. Para especificar todos os bancos de dados, marque a caixa de seleção no cabeçalho da coluna **Nome** . Para especificar alguns bancos de dados, marque a caixa de seleção ao lado do nome do banco de dados. Por padrão, todas as tabelas dos bancos de dados selecionados são automaticamente incluídas na sessão de ajuste. Para excluir tabelas, clique na seta na coluna **Tabelas Selecionadas** e desmarque as caixas de seleção ao lado das tabelas que não desejar ajustar.  
   
- Seta para baixo das**Tabelas Selecionadas**   
+ Seta para baixo das**Tabelas Selecionadas**  
  Expanda a lista de tabelas para permitir a seleção de tabelas individuais para ajuste.  
   
  **Salvar log de ajuste**  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b8b28e23bd9f795b9c8530b0c267589bd2525fe5
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: abec4388ccc56d2d643794cc354167359efa15f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590411"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127299"
 ---
 # <a name="rebuild-system-databases"></a>Recriar bancos de dados do sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "56590411"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
  Quando os bancos de dados do sistema mestre, modelo, msdb e tempdb são recriados, os bancos de dados são descartados e recriados em seu local original. Se uma ordenação nova for especificada na instrução REBUILD, os bancos de dados do sistema serão criados usando essa configuração de ordenação. Todas as modificações do usuário nesses bancos de dados são perdidas. Por exemplo, você pode ter objetos definidos pelo usuário no banco de dados mestre, trabalhos agendados no msdb ou alterações nas configurações padrão do banco de dados modelo.  
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  

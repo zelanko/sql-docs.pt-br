@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c291eecac9972bea6d2fbde5d6e8ccc1c0356178
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3be8fb2d2a918aafdbec48e5eba1c23885585294
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951893"
 ---
 # <a name="coding-a-custom-log-provider"></a>Codificando um provedor de log personalizado
 

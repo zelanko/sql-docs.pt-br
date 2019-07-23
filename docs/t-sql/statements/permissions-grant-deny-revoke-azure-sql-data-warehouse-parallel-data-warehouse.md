@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dda1ea78f8a3c795562faa52478d736f9525a252
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e26d8a84a93c5164fa10894bc444cfbac999a22f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129373"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Permissões: GRANT, DENY, REVOKE (SQL Data Warehouse do Azure, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -78,7 +77,7 @@ REVOKE
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- \<permission>[ **,**...*n* ]  
+ \<permission>[ **,** ...*n* ]  
  Uma ou mais permissões a serem concedidas, negadas ou revogadas.  
   
  ON [ \<class_type> :: ] *securable* A cláusula **ON** descreve o parâmetro protegível no qual as permissões grant, deny ou revoke serão concedidas.  
@@ -88,10 +87,10 @@ REVOKE
  *securable*  
  O nome do logon, do banco de dados, da tabela, da exibição, do esquema, do procedimento, da função ou do usuário em que as permissões serão concedidas, negadas ou revogadas. O nome do objeto pode ser especificado com as regras de nomenclatura de três partes descritas em [Convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
- TO *principal* [ **,**...*n* ]  
+ TO *principal* [ **,** ...*n* ]  
  Uma ou mais entidades de segurança às quais as permissões estão sendo concedidas, negadas ou revogadas. Entidade de segurança é o nome de um logon, um usuário de banco de dados ou uma função de banco de dados.  
   
- FROM *principal* [ **,**...*n* ]  
+ FROM *principal* [ **,** ...*n* ]  
  Uma ou mais entidades de segurança das quais as permissões serão revogadas.  Entidade de segurança é o nome de um logon, um usuário de banco de dados ou uma função de banco de dados. **FROM** só pode ser usado com uma instrução **REVOKE**. **TO** pode ser usado com **GRANT**, **DENY** ou **REVOKE**.  
   
  WITH GRANT OPTION  
@@ -244,7 +243,7 @@ REVOKE
   
  ![Cartaz de permissões de segurança do APS](../../t-sql/statements/media/aps-security-perms-poster.png "Cartaz de permissões de segurança do APS")  
   
- Para baixar uma versão completa desse cartaz, confira [Permissões do SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=244249) na seção de arquivos do site Yammer do APS (ou solicite enviando um email para **apsdoc@microsoft.com**.  
+ Para baixar uma versão completa desse cartaz, confira [Permissões do SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=244249) na seção de arquivos do site Yammer do APS (ou solicite enviando um email para **apsdoc@microsoft.com** .  
   
 ## <a name="default-permissions"></a>Permissões padrão  
  A lista a seguir descreve as permissões padrão:  
@@ -276,7 +275,7 @@ GRANT CONTROL SERVER TO [Ted];
 GRANT ALTER ANY DATABASE TO Mary;  
 ```  
   
-### <a name="b-granting-a-server-level-permission-to-a-login"></a>b. Concedendo uma permissão no nível do servidor para um logon  
+### <a name="b-granting-a-server-level-permission-to-a-login"></a>B. Concedendo uma permissão no nível do servidor para um logon  
  O exemplo a seguir concede uma permissão no nível do servidor em um logon a uma entidade de segurança do servidor (outro logon).  
   
 ```  

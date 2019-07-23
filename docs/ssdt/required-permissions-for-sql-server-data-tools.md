@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1eb77a0990d8f0e19458dd66ea7f73b933de961c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4199109ef0492a23206233c82b6051b88564cc26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101847"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110761"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>Permissões necessárias para SQL Server Data Tools
 Antes de você realizar uma ação em um banco de dados no Visual Studio, faça logon com uma conta que tem determinadas permissões nesse banco de dados. As permissões específicas de que você precisa variam com base na ação que você deseja realizar. As seções a seguir descrevem cada ação que você pode querer realizar e a permissão específica de que você precisa para realizá-la.  

@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4c843fa7af8e3390e820714886b7988edab878d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d6e2115c42fb5fa7e0abb71e12db0c8c28569a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65720822"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082174"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>Lição 6-4: Implantar o pacote da Lição 6
 

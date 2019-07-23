@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7dfb6976d5a08dabe3341a5b9c8644b57e4a3797
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04dd344f9d62e3bc10d26c66a87c8e4bf8395787
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726069"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944321"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>Identificar linhas de dados semelhantes por meio da transformação Agrupamento Difuso
 

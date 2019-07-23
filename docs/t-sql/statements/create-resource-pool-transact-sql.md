@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2f33399282eb92cd2fbdb2a0a57befcf362379d1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 42e114c1d3f884c40ce47edca84261c2582d8576
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117328"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ Anexe o pool de recursos a agendadores específicos. O valor padrão é AUTO.
   
 AFFINITY SCHEDULER = **(** \<scheduler_range_spec> **)** mapeia o pool de recursos para os agendamentos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificados pelos IDs especificados. Essas IDs são mapeadas para os valores na coluna scheduler_id em [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
   
-Quando você usa AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)**, o pool de recursos é agrupado com os agendadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que são mapeados para as CPUs físicas que correspondem ao nó NUMA ou ao intervalo de nós fornecido. Você pode usar a seguinte consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] para descobrir o mapeamento entre a configuração NUMA física e as IDs de agendador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+Quando você usa AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** , o pool de recursos é agrupado com os agendadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que são mapeados para as CPUs físicas que correspondem ao nó NUMA ou ao intervalo de nós fornecido. Você pode usar a seguinte consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] para descobrir o mapeamento entre a configuração NUMA física e as IDs de agendador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
 ```sql  
 SELECT osn.memory_node_id AS [numa_node_id], sc.cpu_id, sc.scheduler_id  

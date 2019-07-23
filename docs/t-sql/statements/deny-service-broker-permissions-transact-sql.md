@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b97c44ae954886058f771ad0ae6571ebe611927d
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 346044530087c40c468abe9d304231ce06220845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984426"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>Permissões DENY do Service Broker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +57,19 @@ DENY permission  [ ,...n ] ON
  *permission*  
  Especifica uma permissão que pode ser negada em um protegível do [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- CONTRACT **::**_contract_name_  
+ CONTRACT **::** _contract_name_  
  Especifica o contrato no qual a permissão está sendo negada. O qualificador de escopo **::** é obrigatório.  
   
- MESSAGE TYPE **::**_message_type_name_  
+ MESSAGE TYPE **::** _message_type_name_  
  Especifica o tipo de mensagem no qual a permissão está sendo negada. O qualificador de escopo **::** é obrigatório.  
   
- REMOTE SERVICE BINDING **::**_remote_binding_name_  
+ REMOTE SERVICE BINDING **::** _remote_binding_name_  
  Especifica a associação de serviço remoto na qual a permissão está sendo negada. O qualificador de escopo **::** é obrigatório.  
   
- ROUTE **::**_route_name_  
+ ROUTE **::** _route_name_  
  Especifica o roteamento no qual a permissão está sendo negada. O qualificador de escopo **::** é obrigatório.  
   
- SERVICE **::**_message_type_name_  
+ SERVICE **::** _message_type_name_  
  Especifica o serviço no qual a permissão está sendo negada. O qualificador de escopo **::** é obrigatório.  
   
  *database_principal*  

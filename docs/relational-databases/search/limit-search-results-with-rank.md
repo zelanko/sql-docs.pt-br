@@ -17,14 +17,13 @@ ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb7d238a3ff475fe47dbe652adab3cc49ca3a3b2
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132284"
 ---
 # <a name="limit-search-results-with-rank"></a>Limite resultados de pesquisa com RANK
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

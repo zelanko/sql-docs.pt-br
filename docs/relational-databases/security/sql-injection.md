@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8521fb6bb67f79ae88e026a3231d733490c5719
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 4c591a2dbc9b3cb5a5d2964875410637efd3149d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126862"
 ---
 # <a name="sql-injection"></a>Injeção SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +93,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |---------------------|------------------------------|  
 |**;**|Delimitador de consulta.|  
 |**'**|Delimitador de cadeia de dados de caractere.|  
-|**--**|Delimitador de cadeia de dados de caractere.<br />para obter informações sobre a ferramenta de configuração e recursos adicionais.|  
+|**--**|Delimitador de cadeia de dados de caractere.<br />.|  
 |**/\*** ... **\*/**|Delimitadores de comentário. Texto entre **/\*** e **\*/** não é avaliado pelo servidor.|  
 |**xp_**|Usado no início do nome de procedimentos armazenados estendidos de catálogo, como `xp_cmdshell`.|  
   

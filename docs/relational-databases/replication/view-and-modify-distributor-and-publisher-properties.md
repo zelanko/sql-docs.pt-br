@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 43830b86ef02a0d9d3edf2db3ee8ebde129963c0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5d654627a3e35aacfebe4b3c69573eff83beaa39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115227"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Exibir e modificar propriedades de Publicador e Distribuidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,11 +59,11 @@ ms.locfileid: "54133386"
   
 2.  Clique com o botão direito do mouse na pasta **Replicação** e em seguida clique em **Propriedades do Distribuidor**.  
   
-3.  Exibir e modificar as propriedades na caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>**.  
+3.  Exibir e modificar as propriedades na caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>** .  
   
-    -   Para exibir e modificar as propriedades de um banco de dados de distribuição, clique no botão de propriedades (**...**) do banco de dados na página **Geral** da caixa de diálogo.  
+    -   Para exibir e modificar as propriedades de um banco de dados de distribuição, clique no botão de propriedades ( **...** ) do banco de dados na página **Geral** da caixa de diálogo.  
   
-    -   Para exibir e modificar as propriedades do Publicador associado ao Distribuidor, clique no botão de propriedades (**…**) para o Publicador na página **Publicadores** da caixa de diálogo.  
+    -   Para exibir e modificar as propriedades do Publicador associado ao Distribuidor, clique no botão de propriedades ( **…** ) para o Publicador na página **Publicadores** da caixa de diálogo.  
   
     -   Para acessar os perfis para os agentes de replicação, clique no botão **Padrões de Perfil** na página **Geral** da caixa de diálogo. Para obter mais informações, consulte [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
@@ -78,13 +77,13 @@ ms.locfileid: "54133386"
   
 2.  Clique com o botão direito do mouse na pasta **Replicação** e, em seguida, em **Propriedades do Publicador**.  
   
-3.  Exibir e modificar as propriedades da caixa de diálogo **Propriedades do Publicador – < Publisher>**.  
+3.  Exibir e modificar as propriedades da caixa de diálogo **Propriedades do Publicador – < Publisher>** .  
   
     -   Um usuário na função de servidor fixa **sysadmin** pode ativar bancos de dados para replicação na página **Bancos de Dados de Publicação** . Habilitando um banco de dados não publica esse banco de dados, mas permite que qualquer usuário na função de banco de dados fixa **db_owner** para aquele banco de dados crie uma ou mais publicações no banco de dados.  
   
 4.  Modifique propriedades, se necessário, depois clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  As propriedades do Publicador e do Distribuidor podem ser exibidas programaticamente usando os procedimentos armazenados de replicação.  
   
 #### <a name="to-view-distributor-and-distribution-database-properties"></a>Para exibir as propriedades do banco de dados de distribuição e do Distribuidor  

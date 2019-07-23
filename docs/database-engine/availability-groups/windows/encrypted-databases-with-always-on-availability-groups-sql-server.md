@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: d529be67fc2d264ca4b2ddaf3b1a6705165e2cc7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5e86fe6a4f37e4ac21afb3a9aa72d80d48f3544
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66775993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000191"
 ---
 # <a name="add-an-encrypted-database-to-an-always-on-availability-group"></a>Adicionar um banco de dados criptografado em um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

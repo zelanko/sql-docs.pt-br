@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5dd029115c99ae4826bf1070a7556c7fbdcb8c55
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: c10e7259062316454e4e0ecf430f6fdb87c53caf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948101"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ WRITETEXT [BULK]
  É o nome da tabela e da coluna de **text**, **ntext** ou **image** a ser atualizado. Os nomes de tabela e de coluna precisam estar de acordo com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md). A especificação do nome do banco de dados e de nomes de proprietários é opcional.  
   
  *text_ptr*  
- É um valor que armazena o ponteiro para os dados de **text**, **ntext** ou **image**. *text_ptr* precisa ser **binary(16)**. Para criar um ponteiro de texto, execute uma instrução [INSERT](../../t-sql/statements/insert-transact-sql.md) ou [UPDATE](../../t-sql/queries/update-transact-sql.md) com os dados não nulos para a coluna **text**, **ntext** ou **image**.  
+ É um valor que armazena o ponteiro para os dados de **text**, **ntext** ou **image**. *text_ptr* precisa ser **binary(16)** . Para criar um ponteiro de texto, execute uma instrução [INSERT](../../t-sql/statements/insert-transact-sql.md) ou [UPDATE](../../t-sql/queries/update-transact-sql.md) com os dados não nulos para a coluna **text**, **ntext** ou **image**.  
   
  WITH LOG  
  Ignorado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A criação de log é determinada pelo modelo de recuperação em vigor para o banco de dados.  
