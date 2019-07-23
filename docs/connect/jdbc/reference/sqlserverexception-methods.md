@@ -10,17 +10,16 @@ ms.topic: conceptual
 ms.assetid: fa607cb5-2526-4608-b812-a70cd3e63441
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: af30734f78dd9ec5cde2fdb841a51c30eef7e1ba
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: db6689363ea9ca255c312b74927df595f419d6a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970976"
 ---
 # <a name="sqlserverexception-methods"></a>Métodos SQLServerException
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Para obter informações sobre os membros de [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md), consulte [membros SQLServerException](../../../connect/jdbc/reference/sqlserverexception-members.md).  
+  Para obter informações sobre os membros de [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md), consulte SQLServerException [Members](../../../connect/jdbc/reference/sqlserverexception-members.md).  
   
   

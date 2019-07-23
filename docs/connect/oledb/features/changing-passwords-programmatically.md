@@ -1,6 +1,6 @@
 ---
 title: Alterando senhas programaticamente | Microsoft Docs
-description: Alterando senhas programaticamente usando o Driver do OLE DB para SQL Server
+description: Alterando as senhas programaticamente usando OLE DB driver para SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -20,20 +20,19 @@ helpviewer_keywords:
 - modifying passwords
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: fdf5afb7cc9eea9beed43726d3c107c9fde9b6e2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a6c9e52dc46818d3d188f2fa742e2bccad769cf8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777887"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989135"
 ---
 # <a name="changing-passwords-programmatically"></a>Alterando senhas programaticamente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Antes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], quando a senha de um usuário expirava, somente um administrador poderia redefini-la. Começando com [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], Driver do OLE DB para SQL Server pode suportar manipulando a expiração de senha programaticamente por meio do Driver do OLE DB e, por meio de alterações para o **logon do SQL Server** caixas de diálogo.  
+  Antes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], quando a senha de um usuário expirava, somente um administrador poderia redefini-la. A partir do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o driver OLE DB para SQL Server dá suporte ao tratamento de expiração de senha programaticamente pelo driver de OLE DB e por meio de alterações nas caixas de diálogo de **logon SQL Server**.  
   
 > [!NOTE]  
 >  Quando possível, solicite aos usuários que insiram suas credenciais em tempo de execução e que evitem armazená-las em um formato persistente. Caso precise persistir as credenciais, criptografe-as usando a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532). Para obter mais informações sobre o uso de senhas, confira [Senhas fortes](../../../relational-databases/security/strong-passwords.md).  
@@ -54,7 +53,7 @@ ms.locfileid: "66777887"
 |18488|Falha no logon do usuário '%.*ls'. Motivo: a senha da conta deve ser alterada.|  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server  
- O Driver do OLE DB para SQL Server dá suporte à expiração de senha mesmo uma interface do usuário e programaticamente.  
+ O driver OLE DB para SQL Server dá suporte à expiração de senha por meio de uma interface do usuário e programaticamente.  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>Expiração de senha da interface do usuário OLE DB  
  O OLE DB Driver for SQL Server dá suporte à expiração de senha por meio de alterações feitas nas caixas de diálogo **Logon do SQL Server**. Se o valor de DBPROP_INIT_PROMPT for definido como DBPROMPT_NOPROMPT, a tentativa de conexão inicial irá falhar, caso a senha tenha expirado.  
@@ -90,7 +89,7 @@ ms.locfileid: "66777887"
   
  Se uma tentativa de alterar a senha falhar inesperadamente, o servidor retornará o código de erro 18468. Um erro OLEDB padrão é retornado da tentativa de conexão.  
   
- Para obter mais informações sobre o conjunto de propriedades DBPROPSET_SQLSERVERDBINIT, consulte [propriedades de inicialização e autorização](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Para obter mais informações sobre o conjunto de propriedades DBPROPSET_SQLSERVERDBINIT, consulte [Propriedades de inicialização e autorização](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
 
   
 ## <a name="see-also"></a>Consulte Também  
