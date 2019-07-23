@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc6b596f6cd55fbd0642768a3323fddb611033ba
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 8c4cfba19dc16e043ba6325fb6c9acb1665a597f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071167"
 ---
 # <a name="insert-sql-graph"></a>INSERT (SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -149,7 +148,7 @@ INSERT INTO dbo.Person VALUES (1, 'Alice');
 INSERT INTO dbo.Person VALUES (2,'John');
 ```
   
-#### <a name="b--insert-into-edge-table"></a>b.  Inserir na tabela de borda  
+#### <a name="b--insert-into-edge-table"></a>B.  Inserir na tabela de borda  
 O exemplo a seguir cria uma tabela de borda de amigo e insere uma borda na tabela.
 
 ```sql

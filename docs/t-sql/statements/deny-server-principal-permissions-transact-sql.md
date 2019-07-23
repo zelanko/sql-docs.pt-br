@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bb2b43324d9147dfdd55f3109842dceb2ffcb975
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 2fc90354abf3c18a5eba7a92b7a5ffa54a84ce3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984504"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>Permissões de principal do servidor DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ DENY permission [ ,...n ] }
  Especifica uma permissão que pode ser negada em um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
  LOGON **::** *SQL_Server_login*  
- Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual a permissão está sendo negada. O qualificador de escopo (**::**) é obrigatório.  
+ Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual a permissão está sendo negada. O qualificador de escopo ( **::** ) é obrigatório.  
   
  SERVER ROLE **::** *server_role*  
- Especifica a função de servidor na qual a permissão está sendo negada. O qualificador de escopo (**::**) é obrigatório.  
+ Especifica a função de servidor na qual a permissão está sendo negada. O qualificador de escopo ( **::** ) é obrigatório.  
   
  TO \<server_principal>  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou função de servidor ao qual a permissão está sendo concedida.  
@@ -125,7 +124,7 @@ DENY IMPERSONATE ON LOGIN::WanidaBenshoof TO [AdvWorks\YoonM];
 GO  
 ```  
   
-### <a name="b-denying-view-definition-permission-with-cascade"></a>b. Negando a permissão VIEW DEFINITION com CASCADE  
+### <a name="b-denying-view-definition-permission-with-cascade"></a>B. Negando a permissão VIEW DEFINITION com CASCADE  
  O exemplo a seguir nega a permissão `VIEW DEFINITION` no logon `EricKurjan` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o logon `RMeyyappan` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A opção `CASCADE` indica que a permissão `VIEW DEFINITION` em `EricKurjan` também será negada a principais aos quais `RMeyyappan` concedeu essa permissão.  
   
 ```  

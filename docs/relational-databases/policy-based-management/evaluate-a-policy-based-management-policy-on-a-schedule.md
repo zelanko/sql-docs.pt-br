@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dc78ec53189ff3f9deae1a95895c12ac33cd25d7
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: ad7d22492411538a1f397f1a7d02436d1a02bde7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901150"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>Avaliar uma política do Gerenciamento Baseado em Políticas em um agendamento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ ms.locfileid: "53588611"
   
 5.  Clique com o botão direito do mouse na política cujo agendamento você deseja avaliar e selecione **Propriedades**.  
   
-6.  Na caixa de diálogo **Abrir Política -**_nome_da_política_, na lista **Modo de Avaliação**, selecione **Ao agendar**.  
+6.  Na caixa de diálogo **Abrir Política -** _nome_da_política_, na lista **Modo de Avaliação**, selecione **Ao agendar**.  
   
 7.  Em **Agenda**, clique em **Escolher** para especificar uma agenda existente ou em **Novo** para criar uma agenda nova.  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bddc7c269443446a6b8de6498cf73dd35f218e16
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f38ee0e89201a1ecc0a8faa145167ad58601c133
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012677"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077818"
 ---
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ SELECT * FROM HumanResources.EmployeeDemo
 WHERE OrgNode.IsDescendantOf(@Manager) = 1  
 ```  
   
-### <a name="b-using-isdescendantof-to-evaluate-a-relationship"></a>b. Usando IsDescendantOf para avaliar uma relação  
+### <a name="b-using-isdescendantof-to-evaluate-a-relationship"></a>B. Usando IsDescendantOf para avaliar uma relação  
 O código a seguir declara e popula três variáveis. Depois, ele avalia a relação hierárquica e retorna um dos dois resultados impressos com base na comparação:
   
 ```sql

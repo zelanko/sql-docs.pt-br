@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f20de20e00e43ee172eab82b3f95d790a32a9d7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f9677502f863f63f26cc2e922d14663cd1c3878
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840714"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062605"
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Classe de evento Lock:Deadlock Chain
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +32,8 @@ ms.locfileid: "47840714"
 |BinaryData|**imagem**|Identificador de recurso bloqueado.|2|Sim|  
 |DatabaseID|**int**|ID do banco de dados ao qual esse recurso pertence. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|**nvarchar**|Nome do banco de dados ao qual o recurso pertence.|35|Sim|  
-|EventClass|**int**|Tipo de evento = 59.|27|não|  
-|EventSequence|**int**|Sequência de um determinado evento na solicitação.|51|não|  
+|EventClass|**int**|Tipo de evento = 59.|27|Não|  
+|EventSequence|**int**|Sequência de um determinado evento na solicitação.|51|Não|  
 |EventSubClass|**int**|Tipo de subclasse de evento.<br /><br /> 101=Bloqueio do tipo de recurso<br /><br /> 102=Troca do tipo de recurso|21|Sim|  
 |IntegerData|**int**|Número de deadlock. Números são atribuídos, começando com 0 quando o servidor é iniciado e incrementados para cada bloqueio.|25|Sim|  
 |IntegerData2|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|55|Sim|  
@@ -45,7 +44,7 @@ ms.locfileid: "47840714"
 |ObjectID2|**bigint**|ID do objeto ou entidade relacionada, se disponível e aplicável.|56|Sim|  
 |OwnerID|**int**|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE|58|Sim|  
 |RequestID|**int**|ID da solicitação que contém a instrução.|49|Sim|  
-|ServerName|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|não|  
+|ServerName|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |SessionLoginName|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Esta coluna exibe os logons do Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|64|Sim|  
 |SPID|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |StartTime|**datetime**|Hora de início do evento, se disponível.|14|Sim|  

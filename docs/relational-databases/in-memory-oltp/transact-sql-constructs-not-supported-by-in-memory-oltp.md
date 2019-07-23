@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5023d29379ab254e85c38e0b9e0b6ae3c8772133
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: e39f991982fbde13259039e8794218819f366b89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081830"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construções do Transact-SQL sem suporte pelo OLTP na memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,7 +103,7 @@ ms.locfileid: "53590760"
 |Recurso|Cursores|Os cursores não têm suporte em procedimentos armazenados nativamente compilados.<br /><br /> Ao executar o procedimento no cliente, use RPC em vez da API do cursor. Com o ODBC, evite a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] de **EXECUTE**, em vez de especificar o nome do procedimento diretamente.<br /><br /> Ao executar o procedimento de um lote do [!INCLUDE[tsql](../../includes/tsql-md.md)] ou outro procedimento armazenado, evite usar um cursor com o procedimento armazenado nativamente compilado.<br /><br /> Ao criar um procedimento armazenado compilado de modo nativo, em vez de usar um cursor, use a lógica baseada em conjunto ou um loop **WHILE** .|  
 |Recurso|Padrões de parâmetro não constantes|Ao usar valores padrão com parâmetros em procedimentos armazenados nativamente compilados, os valores devem ser constantes. Remova todos os curingas das declarações de parâmetro.|  
 |Recurso|EXTERNAL|Os procedimentos armazenados CLR não podem ser compilados de modo nativo. Remova a cláusula AS EXTERNAL ou a opção NATIVE_COMPILATION da instrução CREATE PROCEDURE.|  
-|Recurso|Procedimentos armazenados numerados|Os procedimentos armazenados nativamente compilados não podem ser numerados. Remova o **;**_number_ da instrução **CREATE PROCEDURE** .|  
+|Recurso|Procedimentos armazenados numerados|Os procedimentos armazenados nativamente compilados não podem ser numerados. Remova o **;** _number_ da instrução **CREATE PROCEDURE** .|  
 |Recurso|INSERT de várias linhas... Instruções VALUES|Não é possível inserir várias linhas que usam a mesma instrução **INSERT** em um procedimento armazenado compilado de modo nativo. Crie instruções **INSERT** para cada linha.|  
 |Recurso|CETs (expressões de tabela comum)|As CTEs (expressões de tabela comuns) não têm suporte em procedimentos armazenados nativamente compilados. Regravar a consulta.|  
 |Recurso|COMPUTE|Não há suporte para a cláusula **COMPUTE** . Remova-a da consulta.|  
@@ -171,7 +170,7 @@ ms.locfileid: "53590760"
 |Recurso|BEGIN TRANSACTION, COMMIT TRANSACTION e ROLLBACK TRANSACTION|Use blocos ATOMIC para controlar transações e tratamento de erros. Para obter mais informações, veja [Blocos atômicos](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).|  
 |Recurso|Declarações de variável de tabela embutidas.|As variáveis de tabela devem referenciar explicitamente os tipos de tabela com otimização de memória definidos. Você deve criar um tipo de tabela com otimização de memória e usar esse tipo para a declaração variável, em vez de especificar o tipo embutido.|  
 |Recurso|Tabelas baseadas em disco|As tabelas baseadas em disco não podem ser acessadas nos procedimentos armazenados compilados de modo nativo. Remova as referências a tabelas baseadas em disco dos procedimentos armazenados compilados de modo nativo. Ou migre as tabelas baseadas em disco para tabelas com otimização de memória.|  
-|Recurso|exibições|As exibições não podem ser acessadas nos procedimentos armazenados compilados de modo nativo. Em vez das exibições, referencie as tabelas base subjacentes.|  
+|Recurso|Exibições|As exibições não podem ser acessadas nos procedimentos armazenados compilados de modo nativo. Em vez das exibições, referencie as tabelas base subjacentes.|  
 |Recurso|Funções com valor de tabela|**Aplica-se ao:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partir do [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Funções com valor de tabela com várias instruções não podem ser acessadas em módulos T-SQL compilados nativamente. Há suporte para funções com valor de tabela embutidas, mas elas devem ser criadas WITH NATIVE_COMPILATION.<br/><br/>**Aplica-se ao**: [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)]<br/>As funções com valor de tabela não podem ser referenciadas em módulos T-SQL compilados nativamente.|  
 |Opção|PRINT|Remover referência|  
 |Recurso|DDL|Não há suporte para DDL em módulos T-SQL compilados nativamente.|  

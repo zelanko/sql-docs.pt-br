@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 740a5e5843966a6f4891f195453ffd01ec6ea048
-ms.sourcegitcommit: c8f9e5577465148ffe94eec784848f5a956b1086
+ms.openlocfilehash: 0240c3e4f9f58bfb453e2537695631d8be3aa793
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67517851"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073709"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lição 2: conexão usando outro computador
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

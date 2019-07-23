@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a4743cd96f3075915bb2ed1071f781e1787cf9b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61879cb59b68a085dba07343b60ff0ddec27ee17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049694"
 ---
 # <a name="the-oracle-cdc-databases"></a>Os bancos de dados Oracle CDC
 
@@ -126,8 +125,8 @@ ms.locfileid: "65728512"
 |target_command_timeout|600|1|3600|Falso|O tempo limite de comando ao trabalhar com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |source_character_set|-|-|-|True|Pode ser definido como uma codificação de Oracle específica a ser usada em vez da página de código de banco de dados Oracle. Isto pode ser útil quando a codificação real que os dados de caractere estão usando é diferente de uma expressa pela página de código de banco de dados Oracle.|  
 |source_error_retry_interval|30|1|3600|Falso|Usado antes de tentar novamente vários erros como erro de conexão ou falta temporária de sincronização entre tabelas do sistema.|  
-|source_prefetch_size|100|1|10\.000|True|Tamanho do lote de pré-busca.|  
-|source_max_tables_in_query|100|1|10\.000|True|Número máximo de tabelas na cláusula WHERE antes de alternar para a leitura do log do Oracle sem filtragem de tabela.|  
+|source_prefetch_size|100|1|10.000|True|Tamanho do lote de pré-busca.|  
+|source_max_tables_in_query|100|1|10.000|True|Número máximo de tabelas na cláusula WHERE antes de alternar para a leitura do log do Oracle sem filtragem de tabela.|  
 |source_read_retry_interval|2|1|3600|Falso|A quantidade de tempo que a origem aguarda antes de tentar ler os logs de transação do Oracle no EOF novamente.|  
 |source_reconnect_interval|30|1|3600|Falso|Quanto tempo aguardar (em segundos) antes de tentar reconectar-se ao banco de dados de origem.|  
 |source_reconnect_limit|-1|-1||Falso|O número máximo de reconexões do banco de dados de origem. O padrão -1 significa que o processo tenta se reconectar até ser parado.|  

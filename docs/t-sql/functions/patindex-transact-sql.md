@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a6f6f8c8699cc911d747d07edd9655fd363d667
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f718d61c351e11c0e5d159e683390cf311f49e48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696973"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914361"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +50,7 @@ PATINDEX ( '%pattern%' , expression )
  É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md), geralmente, uma coluna na qual procurar o padrão especificado. *expression* é uma expressão da categoria de tipo de dados de cadeia de caracteres.  
   
 ## <a name="return-types"></a>Tipos de retorno  
-**bigint** se *expression* é dos tipos de dados **varchar(max)** ou **nvarchar(max)**; caso contrário, **int**.  
+**bigint** se *expression* é dos tipos de dados **varchar(max)** ou **nvarchar(max)** ; caso contrário, **int**.  
   
 ## <a name="remarks"></a>Remarks  
 Se *pattern* ou *expression* for NULL, PATINDEX retornará NULL.  
@@ -63,7 +62,7 @@ PATINDEX executa comparações com base na ordenação da entrada. Para fazer um
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)  
 Ao usar ordenações SC, o valor retornado contará os pares alternativos UTF-16 no parâmetro *expression* como um caractere único. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
-0x0000 (**char(0)**) é um caractere indefinido em ordenações do Windows e não pode ser incluído em PATINDEX.  
+0x0000 (**char(0)** ) é um caractere indefinido em ordenações do Windows e não pode ser incluído em PATINDEX.  
   
 ## <a name="examples"></a>Exemplos  
   

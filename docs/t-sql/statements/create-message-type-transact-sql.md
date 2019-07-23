@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5c19e21af440dd7f3293b706d38498e102c76248
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 834a5ba4ee456ad7e9dfd538468b66fe3472cd1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006534"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +102,7 @@ CREATE MESSAGE TYPE
   VALIDATION = WELL_FORMED_XML ;     
 ```  
   
-### <a name="b-creating-a-message-type-containing-typed-xml"></a>b. Criando um tipo de mensagem que contém XML com tipo  
+### <a name="b-creating-a-message-type-containing-typed-xml"></a>B. Criando um tipo de mensagem que contém XML com tipo  
  O exemplo a seguir cria um tipo de mensagem para um relatório de despesas codificado em XML. Ele cria uma coleção de esquema XML que contém o esquema para um relatório de despesas simples. Ele também cria um novo tipo de mensagem que valida mensagens no esquema.  
   
 ```  

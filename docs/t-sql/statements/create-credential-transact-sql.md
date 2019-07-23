@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e9fba374be6a12a440138e3fa6a70975c5d3fdd7
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 875b66df7f2788d253bad98b92f19c7d63393885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556158"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061035"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,19 +55,19 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  Especifica o nome da credencial que está sendo criada. *credential_name* não pode começar com a tecla jogo da velha (#). As credenciais de sistema começam com ##.  Ao usar uma SAS (assinatura de acesso compartilhado), esse nome deve corresponder ao caminho do contêiner, começar com https e não deve conter uma barra "/". Veja o exemplo D abaixo.  
   
- IDENTITY **='**_identity\_name_**'**  
+ IDENTITY **='** _identity\_name_ **'**  
  Especifica o nome da conta a ser usada ao conectar o servidor externamente. Quando a credencial é usada para acessar o Azure Key Vault, o **IDENTITY** é o nome do cofre de chaves. Veja o exemplo C a seguir. Quando a credencial usa uma SAS (assinatura de acesso compartilhado), a **IDENTITY** é *SHARED ACCESS SIGNATURE*. Veja o exemplo D abaixo.  
  
 > [!IMPORTANT]
 > O Banco de dados SQL do Azure é compatível apenas as identidades do Azure Key Vault e com Assinatura de Acesso Compartilhado. Não há suporte para identidades de usuário do Windows.
  
- SECRET **='**_secret_**'**  
+ SECRET **='** _secret_ **'**  
  Especifica o segredo necessário para a autenticação de saída.  
   
  Quando a credencial é usada para acessar o Azure Key Vault, o argumento **SECRET** de **CREATE CREDENTIAL** exige que a *\<Client ID>* (sem hifens) e o *\<Secret>* de uma **Entidade de Serviço** no Azure Active Directory sejam passados juntos sem um espaço entre eles. Veja o exemplo C a seguir. Quando a credencial usa uma assinatura de acesso compartilhado, o **SECRET** é o token de assinatura de acesso compartilhado. Veja o exemplo D abaixo.  Confira informações sobre como criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure na [Lição 1: criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
  FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name*  
- Especifica o nome de um *Provedor de EKM (Gerenciamento Extensível de Chaves)*. Para obter mais informações sobre o Gerenciamento de Chaves, consulte [EKM &#40;Gerenciamento Extensível de Chaves&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Especifica o nome de um *Provedor de EKM (Gerenciamento Extensível de Chaves)* . Para obter mais informações sobre o Gerenciamento de Chaves, consulte [EKM &#40;Gerenciamento Extensível de Chaves&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
 ## <a name="remarks"></a>Remarks  
 
@@ -96,7 +95,7 @@ CREATE CREDENTIAL AlterEgo WITH IDENTITY = 'Mary5',
 GO  
 ```  
   
-### <a name="b-creating-a-credential-for-ekm"></a>b. Criando uma credencial para o EKM  
+### <a name="b-creating-a-credential-for-ekm"></a>B. Criando uma credencial para o EKM  
  O exemplo a seguir usa uma conta já criada chamada `User1OnEKM` em um módulo de EKM por meio das ferramentas de gerenciamento de EKM, com um tipo de conta e uma senha básicos. A conta **sysadmin** no servidor cria uma credencial usada para se conectar à conta da EKM e atribui essa credencial à conta `User1`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 ```  
@@ -146,7 +145,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. Criando uma credencial usando um token SAS  
  **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
- O exemplo a seguir cria uma credencial de assinatura de acesso compartilhado usando um token SAS.  Veja um tutorial sobre como criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure e, depois, criar uma credencial usando a assinatura de acesso compartilhado no [Tutorial: Como usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+ O exemplo a seguir cria uma credencial de assinatura de acesso compartilhado usando um token SAS.  Veja um tutorial sobre como criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure e, depois, criar uma credencial usando a assinatura de acesso compartilhado no [Tutorial: usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 >  O argumento **CREDENTIAL NAME** exige que o nome corresponda ao caminho do contêiner, comece com https e não contenha uma barra "/" à direita. O argumento **IDENTITY** exige o nome, *SHARED ACCESS SIGNATURE*. O argumento **SECRET** exige o token de assinatura de acesso compartilhado.  

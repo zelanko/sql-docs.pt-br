@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: dcbf57bfed8a22c957487f82f4f4d0b2086cce89
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 31cf75a57bff14e463864611bc8088e16a0ec998
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035523"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Central de desempenho do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

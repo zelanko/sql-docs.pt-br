@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7bbb2bda32081afff414f33a107381bfa46bc571
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a507bd5425686e7a33a8bbf49e6c8669effed031
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595077"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084091"
 ---
 # <a name="log-file-viewer-f1-help"></a>Ajuda F1 do Visualizador do Arquivo de Log
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c95e031051e15af24ac854e4cf42cadcdb2431e0
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: b681050bdcb101078a8dbab6027e8a2fc162ba4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326777"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065502"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>Permissões de principal do banco de dados GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -176,7 +175,7 @@ GRANT CONTROL ON USER::Wanida TO RolandX;
 GO  
 ```  
   
-### <a name="b-granting-view-definition-permission-on-a-role-to-a-user-with-grant-option"></a>b. Concessão da permissão VIEW DEFINITION em uma função para um usuário com GRANT OPTION  
+### <a name="b-granting-view-definition-permission-on-a-role-to-a-user-with-grant-option"></a>B. Concessão da permissão VIEW DEFINITION em uma função para um usuário com GRANT OPTION  
  O exemplo a seguir concede permissão `VIEW DEFINITION` em `AdventureWorks2012` função `SammamishParking` junto com `GRANT OPTION` para usuário de banco de dados `JinghaoLiu`.  
   
 ```  
@@ -186,7 +185,7 @@ GO
 ```  
   
 ### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>C. Concessão da permissão IMPERSONATE em um usuário para uma função de aplicativo  
- O exemplo a seguir concede permissão no usuário `IMPERSONATE``HamithaL` para `AdventureWorks2012` função de aplicativo `AccountsPayable17`.  
+ O exemplo a seguir concede permissão no usuário `IMPERSONATE` `HamithaL` para `AdventureWorks2012` função de aplicativo `AccountsPayable17`.  
   
 **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   

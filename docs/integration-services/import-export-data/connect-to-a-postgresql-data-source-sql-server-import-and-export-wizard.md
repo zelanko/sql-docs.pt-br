@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 168e53dde51641d79569eb3ef6a1930d0084d10f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d3e27e4f4fdf813e30775c2cf44cfb4ca272b10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723984"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114655"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do PostgreSQL (Assistente de Importação e Exportação do SQL Server)
 
@@ -55,7 +54,7 @@ Para se conectar ao PostgreSQL com o Driver ODBC do PostgreSQL, monte uma cadeia
 > Obtenha ajuda para montar uma cadeia de conexão realmente certa. Em vez de fornecer uma cadeia de conexão, forneça um DSN (nome de fonte de dados) existente ou crie um novo. Para obter mais informações sobre essas opções, consulte [Conectar-se a uma fonte de dados ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
 
 **Driver**  
-O nome do driver ODBC – um entre **PostgreSQL ODBC Driver(UNICODE)** e **PostgreSQL ODBC Driver(ANSI)**.
+O nome do driver ODBC – um entre **PostgreSQL ODBC Driver(UNICODE)** e **PostgreSQL ODBC Driver(ANSI)** .
 
 **Servidor**  
 O nome do servidor PostgreSQL. 

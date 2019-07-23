@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 537f904e7a12003576d790115cf97fe0af5902bd
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: ea7a38c8030323b85c7198f0c6a12165b9d843d5
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67686350"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262569"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>Recolher grupos de linhas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ec90c3ca632a917bd0905063d2fee94f4c0dfa32
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: cbfc9ffa9ba188506e887201ca17ef630f1d04ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065945"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -93,7 +92,7 @@ GO
   
 ```  
   
-### <a name="b-dropping-a-column-encryption-key-value"></a>b. Removendo um valor de chave de criptografia de coluna  
+### <a name="b-dropping-a-column-encryption-key-value"></a>B. Removendo um valor de chave de criptografia de coluna  
  O exemplo a seguir altera uma chave de criptografia de coluna chamada `MyCEK` removendo um valor.  
   
 ```  

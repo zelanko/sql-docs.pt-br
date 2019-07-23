@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b94f389814ff0d0fc9a4adcb26b33431286d1119
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 8c785e98a06e31448c22422f85f3be34efcffa6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559353"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051113"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Estimar o tamanho de um índice clusterizado
 
@@ -216,7 +215,7 @@ ms.locfileid: "51559353"
   
 -   Valores de LOB (Objeto Grande)  
   
-     O algoritmo usado para determinar exatamente quanto espaço será usado para armazenar os valores de tipos de dados LOB **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntext**, **xml**e **image** é complexo. É suficiente adicionar o tamanho médio dos valores LOB esperados, multiplicá-lo por ***Num_Rows***e adicioná-lo ao tamanho total de índice clusterizado.  
+     O algoritmo usado para determinar exatamente quanto espaço será usado para armazenar os valores de tipos de dados LOB **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntext**, **xml**e **image** é complexo. É suficiente adicionar o tamanho médio dos valores LOB esperados, multiplicá-lo por ***Num_Rows***e adicioná-lo ao tamanho total de índice clusterizado.  
   
 -   Compactação  
   

@@ -13,13 +13,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 97eac599fd057d8a9ae335943e7e818df4b49ba4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c7697d72aa98429bdaff64044f447dd11384f6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65372447"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984771"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Auditoria local para coleta de dados de diagnóstico e uso do SQL Server (Programa de Aperfeiçoamento da Experiência do Usuário)
 
@@ -65,7 +64,7 @@ Execute as seguintes etapas para obter a conta de logon do serviço do Programa 
  
 1. Inicie o console **Serviços**. Para fazer isso, selecione a **tecla Windows + R** no teclado para abrir a caixa de diálogo **Executar**. Em seguida, digite *services.msc* no campo de texto e selecione **OK** para iniciar o console **Serviços**.  
 
-2. Navegue até o serviço apropriado. Por exemplo, para o mecanismo de banco de dados, localize o **Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server** **(*nome da instância*)**. Para o Analysis Services, localize **Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Analysis Services** **(*nome da instância*)**. Para o Integration Services, localize o **serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Integration Services**.
+2. Navegue até o serviço apropriado. Por exemplo, para o mecanismo de banco de dados, localize o **Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server** **(*nome da instância*)** . Para o Analysis Services, localize **Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Analysis Services** **(*nome da instância*)** . Para o Integration Services, localize o **serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Integration Services**.
 
 3. Clique com o botão direito do mouse no serviço e escolha **Propriedades**. 
 
@@ -73,7 +72,7 @@ Execute as seguintes etapas para obter a conta de logon do serviço do Programa 
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>Configurar uma nova pasta para os arquivos de auditoria local.    
 
-Crie uma nova pasta (diretório da auditoria local) em que a auditoria local gravará os logs. Por exemplo, o caminho completo para o Diretório da auditoria local para uma instância padrão do mecanismo de banco de dados é: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
+Crie uma nova pasta (diretório da auditoria local) em que a auditoria local gravará os logs. Por exemplo, o caminho completo para o Diretório da auditoria local para uma instância padrão do mecanismo de banco de dados é: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* . 
  
   >[!NOTE] 
   >Configure o caminho do diretório da auditoria local fora do caminho de instalação do SQL Server para evitar que a funcionalidade de auditoria e a aplicação de patches causem problemas com o SQL Server.
@@ -140,7 +139,7 @@ Depois de concluir as etapas de pré-configuração, você pode ativar a auditor
 
 1. Clique com o botão direito do mouse em **UserRequestedLocalAuditDirectory** e selecione *Modificar*. 
 
-1. Para ativar a auditoria local, digite o caminho da auditoria local, por exemplo, *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*.
+1. Para ativar a auditoria local, digite o caminho da auditoria local, por exemplo, *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* .
  
     Para desativar a auditoria local, esvazie o valor em **UserRequestedLocalAuditDirectory**.
 
@@ -152,8 +151,8 @@ O Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server deve re
 
 1. Navegue até o serviço apropriado. 
 
-    - Para o Mecanismo de Banco de Dados, use **Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server (*nome da instância*)**.     
-    - Para o Analysis Services, use **Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Analysis Services (*nome da instância*)**.
+    - Para o Mecanismo de Banco de Dados, use **Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server (*nome da instância*)** .     
+    - Para o Analysis Services, use **Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Analysis Services (*nome da instância*)** .
     - Para o Integration Services, 
         - Para o SQL 2016, use *Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Integration Services 13.0*.
         - Para o SQL 2017, use *Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Integration Services 14.0*.

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c6af1b12-54cd-42f9-b2ef-7164f8078323
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d464ba2cd7b3b5b3cb2ac687f9f9e1b3ae8023b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52818b0d76ae5201fb9bf53376696fab54180cb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098452"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035147"
 ---
 # <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>Como fazer: Abrir um teste de unidade do SQL Server para edição
 Após criar um teste de unidade do SQL Server, use o **Designer de Teste de Unidade do SQL Server** para adicionar instruções Transact\-SQL e condições de teste. Os testes criados por meio do designer geram código do Visual C# ou do Visual Basic. Esse é código executado quando o teste é executado.  

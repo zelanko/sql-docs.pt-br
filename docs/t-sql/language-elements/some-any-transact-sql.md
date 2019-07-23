@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 44dfbf2ce8c11bea93420d1222ae08d1eef3b00e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5b722f37fb6a5e30a50307a5d7828868ecd1fba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072258"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  **Booliano**  
   
 ## <a name="result-value"></a>Valor do resultado  
- SOME ou ANY retornará **TRUE** quando a comparação especificada for TRUE para todos os pares (_scalar_expression_**,**_x_) e quando *x* for um valor no conjunto de uma única coluna, caso contrário retornará **FALSE**.  
+ SOME ou ANY retornará **TRUE** quando a comparação especificada for TRUE para todos os pares (_scalar_expression_ **,** _x_) e quando *x* for um valor no conjunto de uma única coluna, caso contrário retornará **FALSE**.  
   
 ## <a name="remarks"></a>Remarks  
  SOME exige que a *scalar_expression* seja comparada positivamente com, pelo menos, um valor retornado pela subconsulta. Para obter instruções que exigem que *scalar_expression* seja comparada positivamente com todo valor retornado pela subconsulta, consulte [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). Por exemplo, se a subconsulta retornar os valores 2 e 3, *scalar_expression* = SOME (subconsulta) será avaliada como TRUE para um *scalar_express* igual a 2. Se a subconsulta retornar os valores 2 e 3, *scalar_expression* = ALL (subconsulta) será avaliada como FALSE, porque alguns dos valores da subconsulta (o valor 3) não atenderão aos critérios da expressão.  

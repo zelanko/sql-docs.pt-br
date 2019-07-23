@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6d8660aa65699e6abd22c73e13c3673903ff6bfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e9a5e7f4a1f290673ca1a914e883ab359dcc8cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65713542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945341"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Novidades do Integration Services no SQL Server 2017
 

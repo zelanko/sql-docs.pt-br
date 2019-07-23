@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6fa028e20cfb0355fc14cc28a4b2ee08fbf9dcb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e76c7eb85306f63e9be230c76159efbab25444a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083980"
 ---
 # <a name="open-log-file-viewer"></a>Abrir o Visualizador do Arquivo de Log
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 88f175d5d3658a61964ab7d7daba1be88438e2cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ae61bdd59202db73b404bf2c639c2f1cee98e81f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058110"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Replicação de mesclagem avançada – detecção e resolução de conflito
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +126,7 @@ Resolver conflitos de replicação de mesclagem [!INCLUDE[appliesto-ss-xxxx-xxxx
   
  O Visualizador de Conflitos exibe informações de três tabelas do sistema:  
   
--   A replicação cria uma tabela de conflitos para cada tabela em um artigo de mesclagem, com um nome na forma **MSmerge_conflict_\<PublicationName>_\<ArticleName>**.  
+-   A replicação cria uma tabela de conflitos para cada tabela em um artigo de mesclagem, com um nome na forma **MSmerge_conflict_\<PublicationName>_\<ArticleName>** .  
   
      As tabelas de conflitos têm a mesma estrutura das tabelas em que foram baseadas. Uma linha em uma dessas tabelas consiste na versão perdedora de uma linha de conflito (a versão vencedora da linha fica na tabela real do usuário).  
   

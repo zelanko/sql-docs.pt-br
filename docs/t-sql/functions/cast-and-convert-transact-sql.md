@@ -34,14 +34,13 @@ helpviewer_keywords:
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1ff55b99e722a1132114c400688cbc184b1bb04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caba5466432356cf6997b26a0a3b8c732b3179ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65942896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040176"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST e CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -177,12 +176,12 @@ Para uma **expression** *xml*, *style* pode ter um dos valores mostrados na tabe
 |Valor|Saída|  
 |---|---|
 |**0** (padrão)|Use o comportamento de análise padrão que descarta o espaço em branco insignificante e não permite um subconjunto de DTD interno.<br /><br />**Observação:** Ao fazer a conversão no tipo de dados **xml**, o espaço em branco insignificante do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é tratado de maneira diferente do XML 1.0. Para obter mais informações, consulte [Criar instâncias de dados XML](../../relational-databases/xml/create-instances-of-xml-data.md).|  
-|**1**|Preserva espaço em branco insignificante. Essa configuração de estilo define o tratamento padrão de **xml:space** para que ele corresponda ao comportamento de **xml:space="preserve"**.|  
+|**1**|Preserva espaço em branco insignificante. Essa configuração de estilo define o tratamento padrão de **xml:space** para que ele corresponda ao comportamento de **xml:space="preserve"** .|  
 |**2**|Habilita o processamento de subconjunto de DTD interno limitado.<br /><br /> Se for habilitado, o servidor poderá usar as informações a seguir fornecidas em um subconjunto de DTD interno, para executar operações de análise de não validação.<br /><br />   - Os padrões de atributos são aplicados<br />   - As referências a entidades internas são resolvidas e expandidas<br />   - A correção sintática do modelo de conteúdo DTD é verificada<br /><br /> O analisador ignora subconjuntos de DTD externos. Além disso, ele não avalia a declaração XML para ver se o atributo **standalone** tem um valor **sim** ou **não**. Em vez disso, ele analisa a instância XML como um documento autônomo.|  
 |**3**|Preserva o espaço em branco insignificante e habilita o processamento de subconjunto de DTD interno limitado.|  
   
 ## <a name="binary-styles"></a>Estilos binários
-Para uma **expression** de **binary(n)**, **char(n)**, **varchar(n)** ou *varbinary(n)*, *style* pode ter um dos valores mostrados na tabela a seguir. Os valores de estilo que não estão listados na tabela retornarão um erro.
+Para uma **expression** de **binary(n)** , **char(n)** , **varchar(n)** ou *varbinary(n)* , *style* pode ter um dos valores mostrados na tabela a seguir. Os valores de estilo que não estão listados na tabela retornarão um erro.
   
 |Valor|Saída|  
 |---|---|
@@ -205,8 +204,8 @@ Ao converter entre **datetimeoffset** e os tipos de caractere **char**, **nchar*
   
 ## <a name="large-value-data-types"></a>Tipos de dados de valor grande
 Tipos de dados de valor grande têm o mesmo comportamento de conversão implícita e explícita de seus equivalentes menores, escpecificamente, os tipos de dados **varchar**, **nvarchar** e **varbinary**. No entanto, considere as seguintes diretrizes:
--   A conversão de **image** em **varbinary(max)** e vice-versa opera como uma conversão implícita, assim como as conversões entre **text** e **varchar(max)** e **ntext** e **nvarchar(max)**.  
--   A conversão de tipos de dados de valor grande, como **varchar(max)**, em um tipo de dados equivalente menor, como **varchar**, é uma conversão implícita, mas ocorrerá um truncamento se o tamanho do valor grande exceder o tamanho especificado do tipo de dados menor.  
+-   A conversão de **image** em **varbinary(max)** e vice-versa opera como uma conversão implícita, assim como as conversões entre **text** e **varchar(max)** e **ntext** e **nvarchar(max)** .  
+-   A conversão de tipos de dados de valor grande, como **varchar(max)** , em um tipo de dados equivalente menor, como **varchar**, é uma conversão implícita, mas ocorrerá um truncamento se o tamanho do valor grande exceder o tamanho especificado do tipo de dados menor.  
 -   A conversão de **nvarchar**, **varbinary** ou **varchar** em seus tipos de dados de valor grande correspondentes ocorre implicitamente.  
 -   A conversão de tipo de dados **sql_variant** em tipos de dados de valor grande é uma conversão explícita.  
 -   Tipos de dados de valor grande não podem ser convertidos no tipo de dados **sql_variant**.  
@@ -422,7 +421,7 @@ The list price is 364.09
 ```  
   
 ### <a name="d-using-cast-to-produce-more-readable-text"></a>D. Usando CAST para produzir texto mais legível  
-Este exemplo usa CAST na lista SELECT para converter a coluna `Name` em uma coluna **char(10)**. Ele usa o banco de dados AdventureWorksDW.
+Este exemplo usa CAST na lista SELECT para converter a coluna `Name` em uma coluna **char(10)** . Ele usa o banco de dados AdventureWorksDW.
   
 ```sql
 SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  
@@ -674,7 +673,7 @@ ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
 ```  
   
 ### <a name="l-using-cast-with-the-like-clause"></a>L. Usando CAST com a cláusula LIKE  
-Este exemplo converte a coluna `ListPrice` **money** em um tipo **int** e, em seguida, em um tipo **char(20)**, de modo que a cláusula LIKE possa usá-lo. Este exemplo usa o banco de dados AdventureWorksDW.  
+Este exemplo converte a coluna `ListPrice` **money** em um tipo **int** e, em seguida, em um tipo **char(20)** , de modo que a cláusula LIKE possa usá-lo. Este exemplo usa o banco de dados AdventureWorksDW.  
   
 ```sql
 SELECT EnglishProductName AS Name, ListPrice  

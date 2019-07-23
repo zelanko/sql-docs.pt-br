@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e29b874a84001dcd3d25a46bb07f48dd287ab547
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.openlocfilehash: a1421c43f050e438898289a34e86ec4b87185a13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020873"
 ---
 # <a name="data-type-precedence-transact-sql"></a>Precedência de tipo de dados (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,11 +56,11 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a seguinte ordem
 1. **imagem**  
 1. **timestamp**  
 1. **uniqueidentifier**  
-1. **nvarchar** [incluindo **nvarchar(max)**]  
+1. **nvarchar** [incluindo **nvarchar(max)** ]  
 1. **nchar**  
-1. **varchar** [incluindo **varchar(max)**]  
+1. **varchar** [incluindo **varchar(max)** ]  
 1. **char**  
-1. **varbinary** [incluindo **varbinary(max)**]  
+1. **varbinary** [incluindo **varbinary(max)** ]  
 1. **binary** (mais baixo)  
   
 ## <a name="see-also"></a>Confira também
