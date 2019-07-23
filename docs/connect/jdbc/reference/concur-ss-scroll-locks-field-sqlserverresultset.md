@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0fd5d34a-c323-4e9c-a1ef-6288c4a0b4ca
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9660647681d02e5cd5230930a8cec9f3a9c176be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 820982dbb2a984a3aaa92fba0e32d86c1315ca0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66777183"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955381"
 ---
 # <a name="concurssscrolllocks-field-sqlserverresultset"></a>Campo CONCUR_SS_SCROLL_LOCKS (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public static final int CONCUR_SS_SCROLL_LOCKS
 ```  
   
 ## <a name="field-value"></a>Valor do campo  
- Uma **int** valor de 1009.  
+ Um valor **int** de 1009.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

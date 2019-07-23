@@ -1,5 +1,5 @@
 ---
-title: Persistente de objetos de fonte de dados | Microsoft Docs
+title: Objetos de fonte de dados persistentes | Microsoft Docs
 description: Objetos de fonte de dados persistidos
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,20 +15,19 @@ helpviewer_keywords:
 - persisted data source objects
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 9369c4a533778fa460a1aa55cf6e7172ae78c340
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c8ba02b1b459e3f1381138eaa708658b317cd9f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015944"
 ---
 # <a name="persisted-data-source-objects"></a>Objetos persistidos da fonte de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O Driver do OLE DB para SQL Server dá suporte a objetos de fonte de dados persistentes com o **IPersistFile** interface.  
+  O driver OLE DB para SQL Server dá suporte a objetos de fonte de dados persistentes com a interface **IPersistFile** .  
   
 ## <a name="examples"></a>Exemplos  
  **A. Persistir inicialização de fonte de dados:**  
@@ -233,6 +232,6 @@ HRESULT InitFromPersistedDS
  O método **IPersistFile::Save** pode ser chamado antes ou depois de chamar **IDBInitialize::Initialize**. A chamada do método após um retorno bem-sucedido de **IDBInitialize::Initialize** garante que uma especificação de fonte de dados válida seja persistida.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objetos de fonte de dados &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [OLE DB de objetos &#40;de fonte de dados&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

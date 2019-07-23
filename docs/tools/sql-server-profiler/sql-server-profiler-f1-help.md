@@ -1,5 +1,5 @@
 ---
-title: Caixas de diálogo do SQL Server Profiler | Microsoft Docs
+title: Caixas de diálogo SQL Server Profiler | Microsoft Docs
 ms.custom: ''
 ms.date: 07/07/2017
 ms.prod: sql
@@ -41,17 +41,16 @@ helpviewer_keywords:
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e042e9d81d389a323e092b2f370b03cb66c2921c
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 32cc19df636f6e0fa98dca0ab45dd8142d9db54f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059697"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Caixas de diálogo do SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-O Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é uma ferramenta que captura eventos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um servidor. Os eventos são salvos em um arquivo de rastreamento que posteriormente pode ser analisado ou utilizado para reproduzir uma série específica de etapas na tentativa de diagnosticar um problema. A seguir estão os comandos e configurações disponíveis nas caixas de diálogo de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+O Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é uma ferramenta que captura eventos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um servidor. Os eventos são salvos em um arquivo de rastreamento que posteriormente pode ser analisado ou utilizado para reproduzir uma série específica de etapas na tentativa de diagnosticar um problema. A seguir estão os comandos e as configurações disponíveis nas caixas de diálogo [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]do.  
 ## <a name="trace-properties"></a>Propriedades do rastreamento
 ### <a name="general-tab"></a>Guia Geral
 Use a guia **Geral** da caixa de diálogo **Propriedades do Rastreamento** para exibir ou especificar propriedades de um rastreamento.  
@@ -87,7 +86,7 @@ Use a guia **Seleção de Eventos** da caixa de diálogo **Propriedades do Rastr
 |**Organizar Colunas**|Altera a ordem das colunas no rastreamento e agrupa os resultados em uma ou mais colunas.  
 
 ## <a name="trace-template-properties"></a>Propriedades do modelo de rastreamento 
-### <a name="new-general-tab"></a>Novo (guia Geral)
+### <a name="new-general-tab"></a>Novo (guia geral)
 Use a guia **Geral** da caixa de diálogo **Propriedades do Modelo de Rastreamento** para criar novos modelos de rastreamento usando as opções a seguir. Para acessar essa caixa de diálogo, no menu **Arquivo** do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] aponte para **Modelos** e clique em **Novo**.
 
 |Item|Descrição
@@ -97,7 +96,7 @@ Use a guia **Geral** da caixa de diálogo **Propriedades do Modelo de Rastreamen
 |**Basear novo modelo no existente**|Use um modelo da lista como base para esse modelo. Todos os eventos selecionados, colunas de dados e filtros inicialmente correspondem aos do modelo existente e podem, depois, ser modificados conforme necessário.  
 |**Usar como modelo padrão para o tipo de servidor selecionado**|Use esse modelo por padrão para rastreamentos criados para esse tipo de servidor.  
 
-### <a name="edit-general-tab"></a>Editar (guia Geral)
+### <a name="edit-general-tab"></a>Editar (guia geral)
  Use a guia **Geral** da caixa de diálogo **Propriedades do Modelo de Rastreamento** para visualizar ou editar modelos de rastreamento existentes usando as seguintes opções. Para acessar essa caixa de diálogo, no menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **do** , aponte para **Modelos**e clique em **Editar Modelo**.  
 
 |Item|Descrição
@@ -171,7 +170,7 @@ A caixa de diálogo **Limite de Contadores de Desempenho** é populada com objet
 2.  Verifique os contadores que você deseja correlacionar com o arquivo de rastreamento do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
 
 Para selecionar todos os contadores de um objeto de desempenho, marque a caixa adjacente ao objeto. Marcando o nó mais alto, que indica o computador, você seleciona todos os objetos e contadores de desempenho contidos no arquivo de log de desempenho. 
-## <a name="toolsoptions-general-options-page"></a>Ferramentas/Opções (página Opções gerais)
+## <a name="toolsoptions-general-options-page"></a>Ferramentas/opções (página Opções Gerais)
 Use a caixa de diálogo **Opções Gerais** para exibir ou especificar as opções a seguir.  
 ### <a name="display-options"></a>Opções de exibição  
 

@@ -1,5 +1,5 @@
 ---
-title: Tracing Driver Operation | Microsoft Docs
+title: Operação de rastreamento de driver | Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d19cd119ca2d0832f3e3b7fe261245a2a55987a8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a8e04fe67605c97e12c688e0b05b8c437b6aa182
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916682"
 ---
 # <a name="tracing-driver-operation"></a>Operação de rastreamento de driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "66798261"
 > [!NOTE]  
 >  Para o componente nativo (sqljdbc_xa.dll) que está incluído com o driver JDBC, o rastreamento é habilitado pela estrutura de Diagnósticos Internos (BID). Para obter mais informações sobre BID, consulte [Rastreamento do acesso a dados no SQL Server](https://go.microsoft.com/fwlink/?LinkId=70042).  
   
- Quando você desenvolve seu aplicativo, pode fazer chamadas para objetos Logger, que, por sua vez, criam objetos LogRecord, que serão então passados aos objetos Handler para processamento. Agente de log e o manipulador de ambos os níveis de log de uso de objetos e, opcionalmente, filtros de log, para regular quais LogRecords são processados. Quando as operações de log estiverem concluídas, os objetos Handler poderão usar objetos Formatter como opção para publicar as informações de log.  
+ Quando você desenvolve seu aplicativo, pode fazer chamadas para objetos Logger, que, por sua vez, criam objetos LogRecord, que serão então passados aos objetos Handler para processamento. Os objetos Logger e Handler usam níveis de log e, opcionalmente, os filtros de log, para regular quais LogRecords são processados. Quando as operações de log estiverem concluídas, os objetos Handler poderão usar objetos Formatter como opção para publicar as informações de log.  
   
  Por padrão, a estrutura do java.util.logging grava sua saída em um arquivo. Este arquivo de log de saída deve ter permissões de gravação para o contexto sob o qual o driver JDBC está executando.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "66798261"
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|AuthenticationJNI|Problemas de autenticação integrada do registra mensagens sobre o Windows (quando o **authenticationScheme** propriedade de conexão é implicitamente ou explicitamente definida como **NativeAuthentication**).<br /><br /> Os aplicativos podem definir o nível de log como FINEST e FINE.|  
+|AuthenticationJNI|Registra mensagens em relação aos problemas de autenticação integrada do Windows (quando a propriedade de conexão **AuthenticationScheme** é implicitamente ou explicitamente definida como **NativeAuthentication**).<br /><br /> Os aplicativos podem definir o nível de log como FINEST e FINE.|  
 |SQLServerConnection|Registra em log mensagens na classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Os aplicativos podem definir o nível de log como FINE e FINER.|  
 |SQLServerDataSource|Registra mensagens em log nas classes [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) e [SQLServerPooledConnection](../../connect/jdbc/reference/sqlserverpooledconnection-class.md).<br /><br /> Os aplicativos podem definir o nível de log como FINER.|  
 |InputStream|Registra mensagens relativas aos seguintes tipos de dados: java.io.InputStream, java.io.Reader e os tipos de dados que têm um especificador max como tipos de dados varchar, nvarchar e varbinary.<br /><br /> Os aplicativos podem definir o nível de log como FINER.|  
@@ -88,7 +87,7 @@ ms.locfileid: "66798261"
 |SQLServerResultSet|Registra em log mensagens na classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md). Os aplicativos podem definir o nível de log como FINE, FINER e FINEST.|  
 |SQLServerStatement|Registra em log mensagens na classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Os aplicativos podem definir o nível de log como FINE, FINER e FINEST.|  
 |XA|Registra mensagens para todas as transações XA na classe [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md). Os aplicativos podem definir o nível de log como FINE e FINER.|  
-|KerbAuthentication|Registra mensagens sobre a autenticação Kerberos tipo 4 (quando o **authenticationScheme** propriedade de conexão é definida como **JavaKerberos**). O aplicativo pode definir o nível de log como FINE ou FINER.|  
+|KerbAuthentication|Registra mensagens em relação à autenticação Kerberos do tipo 4 (quando a propriedade de conexão **AuthenticationScheme** é definida como **JavaKerberos**). O aplicativo pode definir o nível de log como FINE ou FINER.|  
 |TDS.DATA|Registra mensagens que contêm a conversa no nível do protocolo TDS entre o driver e o SQL Server. O conteúdo detalhado de cada pacote TDS enviado e recebido é registrado em ASCII e hexadecimal. As credenciais de logon (nomes de usuários e senhas) não são registradas. Todos os outros dados são registrados.<br /><br /> Esta categoria cria mensagens muito detalhadas e detalhadas, e só poderá ser habilitada definindo o nível de registro como FINEST.|  
 |TDS.Channel|Esta categoria rastreia ações do canal de comunicação TCP com SQL Server. As mensagens registradas incluem abertura e fechamento de soquete, além de leituras e gravações. Elas também rastreiam mensagens relacionadas a estabelecer uma conexão de Protocolo SSL (SSL) com SQL Server.<br /><br /> Esta categoria só poderá ser habilitada definindo o nível de log como FINE, FINER ou FINEST.|  
 |TDS.Writer|Esta categoria rastreia gravações no canal de TDS. Observe que somente o comprimento das gravações é rastreado, não o conteúdo. Esta categoria também rastreia problemas quando um sinal de atenção é enviado ao servidor para cancelar a execução de uma instrução.<br /><br /> Esta categoria só poderá ser habilitada definindo o nível de log como FINEST.|  
@@ -100,7 +99,7 @@ ms.locfileid: "66798261"
 |SQLServerParameterMetaData|Registra mensagens em log na classe [SQLServerParameterMetaData](../../connect/jdbc/reference/sqlserverparametermetadata-class.md). Os aplicativos podem definir o nível de log como FINE.|  
 |SQLServerBlob|Registra mensagens em log na classe [SQLServerBlob](../../connect/jdbc/reference/sqlserverblob-class.md). Os aplicativos podem definir o nível de log como FINE.|  
 |SQLServerClob|Registra mensagens em log na classe [SQLServerClob](../../connect/jdbc/reference/sqlserverclob-class.md). Os aplicativos podem definir o nível de log como FINE.|  
-|SQLServerSQLXML|Registra mensagens na classe SQLServerSQLXML interna. Os aplicativos podem definir o nível de log como FINE.|  
+|SQLServerSQLXML|Registra as mensagens na classe SQLServerSQLXML interna. Os aplicativos podem definir o nível de log como FINE.|  
 |SQLServerDriver|Registra em log mensagens na classe [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md). Os aplicativos podem definir o nível de log como FINE.|  
 |SQLServerNClob|Registra mensagens em log na classe [SQLServerNClob](../../connect/jdbc/reference/sqlservernclob-class.md). Os aplicativos podem definir o nível de log como FINE.|  
   

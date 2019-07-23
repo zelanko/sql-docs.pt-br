@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 546d77e2-723a-42ac-ba3f-fabf2395d376
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9681ddf0946627306a64c099d2df1c242d95bcbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0a76052ccf05927ebd598e2baa37fbf0229bf54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762813"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981396"
 ---
 # <a name="getnstring-method-javalangstring-sqlserverresultset"></a>Método getNString (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

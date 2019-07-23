@@ -1,5 +1,5 @@
 ---
-title: Repetir até um ponto de interrupção (SQL Server Profiler) | Microsoft Docs
+title: Reproduzir para um ponto de interrupção (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3caf751e-df3b-40c7-b5e8-4490ae178e0c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4cb776b84c68c5903b5c7204109d2d56eb1cbed7
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 1ad35b385cc2427488ca6084646b5e073ff928a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732123"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928843"
 ---
 # <a name="replay-to-a-breakpoint-sql-server-profiler"></a>Repetir até um ponto de interrupção (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: af5ef257-7cf6-4db3-b1ee-07d22d82bef1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cc0193997b2c1e475132e0fb9a8bc43407074039
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 40474f747022c34994dba9f34dbed15f1791c2af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66782297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971151"
 ---
 # <a name="sqlserverexception-class"></a>Classe SQLServerException
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public final class SQLServerException
 ```  
   
 ## <a name="remarks"></a>Remarks  
- A classe SQLServerException manipula códigos de estado SQL 92 e XOPEN. Eles podem ser trocados usando uma propriedade de conexão especificada pelo usuário. As exceções são gravadas em qualquer arquivo de log aberto que foi especificado.  
+ A classe SQLServerException manipula os códigos de estado do SQL 92 e do XOPEN. Eles podem ser trocados usando uma propriedade de conexão especificada pelo usuário. As exceções são gravadas em qualquer arquivo de log aberto que foi especificado.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerException](../../../connect/jdbc/reference/sqlserverexception-members.md)   

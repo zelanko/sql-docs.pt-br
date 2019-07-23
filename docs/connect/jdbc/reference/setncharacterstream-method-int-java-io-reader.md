@@ -1,5 +1,5 @@
 ---
-title: Método setNCharacterStream ao objeto de leitor - int | Microsoft Docs
+title: Método setNCharacterStream para o objeto de leitor-int | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7732746b-eda5-469e-8567-e8546c4d81cd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9a871bbbb7135d22771b3cd769a6ef0e5eb1bbe9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01e501bbe9ae68b35c4e9b8373b0dfe1f55d9f6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66768763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973905"
 ---
 # <a name="setncharacterstream-method-int-javaioreader"></a>Método setNCharacterStream (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,9 +43,9 @@ public final void setNCharacterStream(int parameterIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setNCharacterStream é especificado pelo método setNCharacterStream na interface do PreparedStatement.  
+ Esse método setNCharacterStream é especificado pelo método setNCharacterStream na interface java. Sql. PreparedStatement.  
   
- Esse método deve ser usado para **NCHAR**, **NVARCHAR**, **NTEXT**, e **XML** tipos de dados.  
+ Esse método deve ser usado para tipos de dados **nchar**, **nvarchar**, **ntext**e **XML** .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método setNCharacterStream &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   

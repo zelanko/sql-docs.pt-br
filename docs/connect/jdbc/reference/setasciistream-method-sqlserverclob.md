@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6e1779df-3b2a-41d1-8dca-99692cc9da14
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76d58f43e1caded32ac03e2c8f96ee5b9365bb72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fff312217f9191e6752f8eb753096ff7499a0496
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66764974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975428"
 ---
 # <a name="setasciistream-method-sqlserverclob"></a>Método setAsciiStream (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.io.OutputStream setAsciiStream(long pos)
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setAsciiStream é especificado pelo método setAsciiStream na interface do CLOB.  
+ Esse método setAsciiStream é especificado pelo método setAsciiStream na interface java. Sql. Clob.  
   
  Os dados de caractere no CLOB são substituídos pelo fluxo de saída iniciando na posição determinada e podem ultrapassar o comprimento inicial do CLOB. A especificação de um valor posição +1 acrescentará os caracteres ASCII. A especificação de um valor posição +2 ou maior (ou zero ou menos) lançará um erro de posição.  
   

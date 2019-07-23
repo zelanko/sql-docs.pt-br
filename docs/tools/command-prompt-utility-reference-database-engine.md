@@ -1,5 +1,5 @@
 ---
-title: Utilitários de Prompt de comando do SQL (mecanismo de banco de dados) | Microsoft Docs
+title: Utilitários de prompt de comando do SQL (Mecanismo de Banco de Dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5e83792a7d982dedf41e525fc7801fb76f1db7d5
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 8fdcb3b307f525ff9eda14006e6fd4f6378f418c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010422"
 ---
-# <a name="sql-command-prompt-utilities-database-engine"></a>Utilitários de Prompt de comando do SQL (mecanismo de banco de dados)
+# <a name="sql-command-prompt-utilities-database-engine"></a>Utilitários de prompt de comando do SQL (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Utilitários de prompt de comando permitem executar scripts de operações do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . A tabela a seguir contém uma lista de vários utilitários de prompt de comando que integram o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
-Para obter informações sobre o *principal* SQL ferramentas da gui e linha de comando, consulte [visão geral das ferramentas do SQL](overview-sql-tools.md).
+Para obter informações sobre a GUI do SQL *principal* e as ferramentas de linha de comando, consulte [visão geral das ferramentas SQL](overview-sql-tools.md).
 
   
 |**Utilitário**|**Descrição**|**Instalado no**|  

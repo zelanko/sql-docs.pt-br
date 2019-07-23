@@ -1,5 +1,5 @@
 ---
-title: Exemplo de arquivo (DTA) de entrada XML Simple | Microsoft Docs
+title: Exemplo de arquivo de entrada XML simples (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5b00e4eb-1742-43ec-98d8-d84216b6b840
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 67e18d1be6061dca4e2dd963a359e515ac725b3b
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: a8c020b5a4b168a9f8f5aec62a44983fa9b89bf7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733468"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105978"
 ---
 # <a name="simple-xml-input-file-sample-dta"></a>Exemplo de arquivos de entrada XML simples (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: Propriedades (OLE DB) da fonte de dados | Microsoft Docs
+title: Propriedades da fonte de dados (OLE DB) | Microsoft Docs
 description: Propriedades de fonte de dados (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,20 +15,19 @@ helpviewer_keywords:
 - OLE DB data source properties [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c97c85eaeafd7d811b3f513f7f9cccc30c873b71
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 13dd6afde96d42ac1fcc82b6fb24c721997b951d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015936"
 ---
 # <a name="data-source-properties-ole-db"></a>Propriedades da fonte de dados (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O Driver do OLE DB para SQL Server implementa propriedades da fonte de dados da seguinte maneira.  
+  O driver OLE DB para SQL Server implementa as propriedades da fonte de dados da seguinte maneira.  
   
 |ID da propriedade|Descrição|  
 |-----------------|-----------------|  
@@ -43,6 +42,6 @@ ms.locfileid: "66768646"
 |SSPROP_ENABLEBULKCOPY|Leitura/gravação: leitura/gravação Padrão: VARIANT_FALSE<br /><br /> Descrição: para habilitar a cópia em massa de arquivos, a propriedade SSPROP_ENABLEBULKCOPY deve ser definida como VARIANT_TRUE. Com essa propriedade definida na fonte de dados, o acesso do consumidor à interface IBCPSession está disponível no nível de Sessions.<br /><br /> SSPROP_IRowsetFastLoad também deve ser definido como VARIANT_TRUE.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objetos de fonte de dados &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [OLE DB de objetos &#40;de fonte de dados&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

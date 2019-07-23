@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 737c3785-e2d4-4b5c-8718-c0e435b50599
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6abd9568e00b72d602cd0a889a32e76b661c1e52
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3b4762059620cd4608c7fc817af716bbd7630391
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955980"
 ---
 # <a name="addbatch-method-"></a>Método addBatch ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public final void addBatch()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método addBatch é especificado pelo método addBatch na interface do PreparedStatement.  
+ Esse método addBatch é especificado pelo método addBatch na interface java. Sql. PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método addBatch &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)   

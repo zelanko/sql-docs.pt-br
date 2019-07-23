@@ -15,13 +15,12 @@ helpviewer_keywords:
 - GetStatus method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: d22bc6d19aa4593d400b62c19f72c9fbe3745005
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f05b5c7c7b03fa1b68f3da5c6fbed29ed98a3c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789745"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994380"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +44,7 @@ HRESULT GetStatus(
   
 ## <a name="arguments"></a>Argumentos  
  *hChapter*[in]  
- O identificador do capítulo. Se o objeto poll não é um objeto de conjunto de linhas ou a operação não se aplica a um capítulo, ele deve ser definido como DB_NULL_HCHAPTER, que é ignorado pelo provedor.  
+ O identificador do capítulo. Se o objeto sondado não for um objeto de conjunto de linhas ou se a operação não se aplicar a um capítulo, ela deverá ser definida como DB_NULL_HCHAPTER, que é ignorada pelo provedor.  
   
  *eOperation*[in]  
  A operação cujo status assíncrono está sendo solicitado. O seguinte valor deve ser usado:  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b1990930387dbd68ea843073b9d372ce735273f9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 786f7391d87799a0822f357e449db21fea0d0f09
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542006"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68221249"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>Trabalhando com assinaturas (portal da web)
 

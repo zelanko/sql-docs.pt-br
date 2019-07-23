@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 108f0e2c-7dc5-4195-8248-0758a75a314e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cbfc490be19a2707aaf7943d89c3bc577a7fa9be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f98d3bdb5e893d1c120be059e1ad1de446dc8d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66792685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982254"
 ---
 # <a name="getmaxcolumnsinindex-method-sqlserverdatabasemetadata"></a>Método getMaxColumnsInIndex (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

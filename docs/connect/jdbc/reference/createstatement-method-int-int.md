@@ -1,5 +1,5 @@
 ---
-title: Método createStatement (int, int) | Microsoft Docs
+title: Método createdeclarement (int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 90dbf639-c3d8-4519-9300-5447c79aec17
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: df361da2387a053b9550c4b4e25dc94cced6579b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 84afda93fa79d226eec21cb92c16ff5ebbc55fa5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955310"
 ---
 # <a name="createstatement-method-int-int"></a>Método createStatement (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

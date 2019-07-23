@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ad7363db0cb1de986273e59d698e2f1b00d50deb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 08760680774b2e760b66d9e210c4ef939872444e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779097"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981769"
 ---
 # <a name="getmoreresults-method-int"></a>Método getMoreResults (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,13 +46,13 @@ public final boolean getMoreResults(int mode)
  CLOSE_ALL_RESULTS  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se o resultado retornado é um conjunto de resultados. Caso contrário, **false**.  
+ **true** se o resultado retornado for um conjunto de resultados. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getMoreResults é especificado pelo método getMoreResults na interface Statement.  
+ Esse método getMoreResults é especificado pelo método getMoreResults na interface java. Sql. Statement.  
   
  Se o método getMoreResults for chamado antes da recuperação dos resultados, ele se comportará conforme especificado pelo argumento *mode* e passará para o próximo resultado.  
   

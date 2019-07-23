@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5d6d755283bddca91661907da5a0709cc71c9368
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ac1cf4dbd8c8c14b5c97dbfecbe81d397c1598ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66767128"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983449"
 ---
 # <a name="getenableprepareonfirstpreparedstatementcall-method-sqlserverconnection"></a>Método getEnablePrepareOnFirstPreparedStatementCall (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Retorna o valor de **enablePrepareOnFirstPreparedStatementCall** propriedade de conexão. Se for false, a primeira execução chamará sp_executesql e não preparar uma instrução, depois que a segunda execução ocorre, ele será chamar sp_prepexec e configurar, na verdade, um identificador de instrução preparada. Execuções a seguir chamará sp_execute. Isso alivia a necessidade de sp_unprepare na instrução preparada fechar se a instrução é executada apenas uma vez. O padrão para essa opção pode ser alterado pela chamada setDefaultEnablePrepareOnFirstPreparedStatementCall().
+ Retorna o valor da propriedade de conexão **enablePrepareOnFirstPreparedStatementCall** . Se false, a primeira execução chamará sp_executesql e não preparará uma instrução, assim que a segunda execução ocorrer, chamará sp_prepexec e, na verdade, configurará um identificador de instrução preparado. As execuções a seguir chamarão sp_execute. Isso alivia a necessidade de sp_unprepare na instrução preparada fechar se a instrução for executada apenas uma vez. O padrão para essa opção pode ser alterado chamando setDefaultEnablePrepareOnFirstPreparedStatementCall ().
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,13 +35,13 @@ public boolean getEnablePrepareOnFirstPreparedStatementCall()
 ```  
 
 ## <a name="return-value"></a>Valor retornado
- Um **boolean** que contém o valor de **enablePrepareOnFirstPreparedStatementCall** propriedade de conexão.
+ Um **booliano** que contém o valor da propriedade de conexão **enablePrepareOnFirstPreparedStatementCall** .
 
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Esse método está disponível na versão do JDBC driver 6.4 e daí.
+ Esse método está disponível no JDBC Driver versão 6,4 e em diante.
  
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

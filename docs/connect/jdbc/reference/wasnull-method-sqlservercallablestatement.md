@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1a27b2fe-ae12-46a9-9bca-2c5ca66b9eb3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4e92dd2dc10566961dd037b182c9b33f2c564ca6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 03e2ba3f7721c0322e54686cef0a53d93a9bf79c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802523"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001548"
 ---
 # <a name="wasnull-method-sqlservercallablestatement"></a>Método wasNull (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public boolean wasNull()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se o último parâmetro lido era nulo. Caso contrário, **false**.  
+ **true** se a última leitura do parâmetro for nula. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4923354c5f6dc013d9fee0284279bb5b6b887556
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 244c20b2fb7721d117557581068791e1a2d99d14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956221"
 ---
 # <a name="performing-batch-operations"></a>Executando operações em lote
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "66801819"
   
  As classes [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) podem ser usadas para enviar atualizações em lote. O método [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) é usado para adicionar um comando. O método [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) é usado para limpar a lista de comandos. O método [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) é usado para enviar todos os comandos para processamento. Apenas as instruções DDL (linguagem de definição de dados) e DML (linguagem de manipulação de dados) que retornam uma contagem de atualização simples podem ser executadas como parte de um lote.  
   
- O método executeBatch retorna uma matriz de valores **int** que correspondem à contagem de atualizações de cada comando. Se um dos comandos falhar, um BatchUpdateException é lançada e você deve usar o método getUpdateCounts da classe BatchUpdateException para recuperar a matriz de contagem de atualização. Se um comando falhar, o driver continuará processando os comandos restantes. No entanto, se um comando tiver um erro de sintaxe, as instruções do lote falharão.  
+ O método executeBatch retorna uma matriz de valores **int** que correspondem à contagem de atualizações de cada comando. Se um dos comandos falhar, um BatchUpdateException será gerado e você deverá usar o método getUpdateCounts da classe BatchUpdateException para recuperar a matriz de contagem de atualização. Se um comando falhar, o driver continuará processando os comandos restantes. No entanto, se um comando tiver um erro de sintaxe, as instruções do lote falharão.  
   
 > [!NOTE]  
 >  Caso não precise usar contagens de atualizações, emita primeiro uma instrução SET NOCOUNT ON para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isso reduzirá o tráfego de rede, além de melhorar o desempenho do aplicativo.  

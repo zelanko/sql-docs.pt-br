@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8bb00356-4d6e-4625-b924-67646930fdf2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a83bb0d142860b1cb6f94070b8a85f3c40b23114
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ec297d1b01b6d7cf8d292d2f4518aa5b51cd9704
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983843"
 ---
 # <a name="getdatetimeoffset-method-int"></a>Método getDateTimeOffset (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +37,13 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(int index)
  O ordinal do parâmetro baseado em um.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) objeto.  
+ Um objeto de [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Você pode definir um [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) com o valor do parâmetro [Setdatetimeoffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md).  
+ Você pode definir um valor de parâmetro de [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) com [SQLServerCallableStatement. setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método getDateTimeOffset &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)   

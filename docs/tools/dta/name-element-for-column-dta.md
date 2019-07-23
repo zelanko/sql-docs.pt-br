@@ -1,5 +1,5 @@
 ---
-title: Nome de elemento para coluna (DTA) | Microsoft Docs
+title: Elemento de nome para coluna (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f93b61de-01fe-4237-ada4-f1e481550564
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b135f6f82865d31d05dcd1538e345984b7cbd996
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: a185c94dabf2efdcfa4e29c4a79d0b27f9032b93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034747"
 ---
 # <a name="name-element-for-column-dta"></a>Elemento de nome para coluna (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

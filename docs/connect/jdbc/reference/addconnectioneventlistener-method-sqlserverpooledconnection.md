@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 142830a8-8d4e-48ca-911d-85bf195ca4fe
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4cbd244282f00a83d33f3e813127188c8e00d4c7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e1377e29329f43b9ea982f168e394537295ec889
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803715"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955961"
 ---
 # <a name="addconnectioneventlistener-method-sqlserverpooledconnection"></a>Método addConnectionEventListener (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public void addConnectionEventListener(javax.sql.ConnectionEventListener listene
  Um objeto ConnectionEventListener.  
   
 ## <a name="remarks"></a>Remarks  
- Esse método addConnectionEventListener é especificado pelo método addConnectionEventListener na interface pooledconnection.  
+ Esse método addConnectionEventListener é especificado pelo método addConnectionEventListener na interface javax. Sql. PooledConnection.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-methods.md)   

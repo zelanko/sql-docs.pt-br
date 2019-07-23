@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fe90cfca55fb51af6f599d72320c6a5b9108bf7e
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 4fb9df2d769161213090b33755e1f2ecb018afef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727768"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034574"
 ---
 # <a name="recommendation-element-dta"></a>Elemento de recomendação (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

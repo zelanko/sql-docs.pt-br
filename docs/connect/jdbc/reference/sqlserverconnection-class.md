@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 937292a6-1525-423e-a2b2-a18fd34c2893
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a14627f54e1d297642cb2c555fb8427acb2da5a7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7e09c80081dc4e3c9230cfba51b1b477420146fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971745"
 ---
 # <a name="sqlserverconnection-class"></a>Classe SQLServerConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,12 +36,12 @@ public class SQLServerConnection
 ## <a name="remarks"></a>Remarks  
  O SQLServerConnection é compatível com o pool de conexão JDBC e pode ser uma conexão JDBC física ou uma conexão JDBC lógica. O SQLServerConnection gerencia o controle de transações para todas as instruções que foram criadas dele e pode participar de transações distribuídas XA gerenciadas por meio de um adaptador XAResource.  
   
- SQLServerConnection gerencia um pool de identificadores de instrução preparada. As instruções preparadas são preparadas uma vez e geralmente são executadas várias vezes com valores de dados diferentes para seus parâmetros. Elas também são mantidas entre encerramentos de conexão (em pool) lógica.  
+ O SQLServerConnection gerencia um pool de identificadores de instrução preparados. As instruções preparadas são preparadas uma vez e geralmente são executadas várias vezes com valores de dados diferentes para seus parâmetros. Elas também são mantidas entre encerramentos de conexão (em pool) lógica.  
   
 > [!NOTE]  
 >  SQLServerConnection não é thread-safe. No entanto, várias instruções que são criadas de uma única conexão podem ser processadas ao mesmo tempo em threads simultâneos.  
   
- Esta classe dá suporte ao desencapsulamento para a classe SQLServerConnection, interface Connection e interface ISQLServerConnection. Para obter mais informações, consulte [Wrappers e Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Essa classe dá suporte à desconexão da classe SQLServerConnection, Java. Sql. Connection interface e da interface ISQLServerConnection. Para obter mais informações, consulte [wrappers e interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

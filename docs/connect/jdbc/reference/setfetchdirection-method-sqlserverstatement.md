@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 18176517-2fb3-4266-924d-0f01253083d2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a23f058eea5512181bdbea277c4bccc6d1ff2616
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 995f3f0f63728d397cf51013bd5429943e9cac0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803392"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974400"
 ---
 # <a name="setfetchdirection-method-sqlserverstatement"></a>Método setFetchDirection (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +52,7 @@ public final void setFetchDirection(int nDir)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setFetchDirection é especificado pelo método setFetchDirection na interface Statement.  
+ Esse método setFetchDirection é especificado pelo método setFetchDirection na interface java. Sql. Statement.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

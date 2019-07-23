@@ -1,5 +1,5 @@
 ---
-title: Reproduzir opções (SQL Server Profiler) | Microsoft Docs
+title: Opções de reprodução (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f082f484c945dd6acbb6be2f4bf92cd107605175
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 4a79c932739fa8d9d5d9125cdd93cc3564d16f55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031442"
 ---
 # <a name="replay-options-sql-server-profiler"></a>Opções de repetição (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

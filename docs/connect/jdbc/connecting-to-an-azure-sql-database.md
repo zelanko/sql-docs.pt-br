@@ -1,5 +1,5 @@
 ---
-title: Conectar-se a um banco de dados SQL do Azure | Microsoft Docs
+title: Conectando-se a um banco de dados SQL do Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 01/21/2019
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2eef48c472ee9b23d941be88ae76cb0349067739
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f62ca071f091fb812550315a81accff723422f09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956851"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Conectando-se a um banco de dados SQL do Azure
 
@@ -32,8 +31,8 @@ Este artigo aborda os problemas ocorridos no uso do [!INCLUDE[jdbcNoVersion](../
   
 ## <a name="details"></a>Detalhes
 
-Ao se conectar a um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], você deve se conectar ao banco de dados mestre para chamar **sqlserverdatabasemetadata. GetCatalogs**.  
-O [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] não dá suporte ao retorno de todo o conjunto de catálogos em um banco de dados de usuário. **Sqlserverdatabasemetadata. GetCatalogs** usar a exibição de sys. Databases para obter os catálogos. Consulte a discussão de permissões no [sys. Databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) entender **sqlserverdatabasemetadata. GetCatalogs** comportamento em um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+Ao se conectar a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]um, você deve se conectar ao banco de dados mestre para chamar **SQLServerDatabaseMetaData.** getCatalogs.  
+O [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] não dá suporte ao retorno de todo o conjunto de catálogos em um banco de dados de usuário. **SQLServerDatabaseMetaData.** getCatalogs use a exibição sys. databases para obter os catálogos. Consulte a discussão sobre permissões em [Sys. databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) para entender o comportamento de **SQLServerDatabaseMetaData.** getCatalogs em um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
 ## <a name="connections-dropped"></a>Conexões removidas
 
@@ -81,7 +80,7 @@ Antes da versão 4.0 do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Uso de criptografia requer a configuração de hostNameInCertificate
 
-Antes da versão 7.2 do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], ao se conectar a um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], você deve especificar **hostNameInCertificate** se você especificar **criptografar = true** (se o nome do servidor em que a conexão cadeia de caracteres é *shortName*. *domainName*, defina a **hostNameInCertificate** propriedade \*. *domainName*.). Essa propriedade é opcional a partir da versão 7.2 do driver.
+Antes da versão [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]7,2 do, ao conectar-se a um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], você deve especificar **hostNameInCertificate** se especificar **encrypt = true** (se o nome do servidor na cadeia de conexão for *curtoname*. *nome_do_domínio*, defina a propriedade **hostNameInCertificate** como \*. *nome_do_domínio*.). Essa propriedade é opcional a partir da versão 7,2 do driver.
 
 Por exemplo:
 

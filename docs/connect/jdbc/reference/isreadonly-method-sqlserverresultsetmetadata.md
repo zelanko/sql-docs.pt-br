@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: aba234d9-04ec-46a5-ba9e-7903f48b4ecc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a3cbf45389bd7cb87f724b0ff1db9b2b24e66c8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f88939af9ba975abc32a1c3b7f26e5a3db04ce0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66768897"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977296"
 ---
 # <a name="isreadonly-method-sqlserverresultsetmetadata"></a>Método isReadOnly (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public boolean isReadOnly(int column)
  Um **int** que indica o índice de coluna.  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se a coluna for somente leitura. Caso contrário, **false**.  
+ **true** se a coluna for somente leitura. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método isReadOnly é especificado pelo método na interface do resultsetmetadata isReadOnly.  
+ Esse método isReadOnly é especificado pelo método isReadOnly na interface java. Sql. ResultSetMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [SQLServerResultSetMetaData Methods](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

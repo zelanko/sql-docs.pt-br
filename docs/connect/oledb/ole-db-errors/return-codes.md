@@ -22,13 +22,12 @@ helpviewer_keywords:
 - errors [OLE DB], return codes
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 7bb86d9e9c43b6d8c73f8018e80eebd5a0a54f5e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a1deedd8903f69268ebc5e7f5caafaa79a7f7b18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786056"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994930"
 ---
 # <a name="return-codes"></a>Códigos de retorno
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,15 +38,15 @@ ms.locfileid: "66786056"
   
  Para obter mais informações sobre códigos de retorno do OLE DB, confira [Códigos de retorno (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631).  
   
- Quando um Driver OLE DB para a função de membro do SQL Server Retorna S_OK, a função foi bem-sucedida.  
+ Quando um driver de OLE DB para SQL Server função membro retorna S_OK, a função foi bem-sucedida.  
   
  Quando uma função de membro do OLE DB Driver for SQL Server não retorna S_OK, as macros FAILED e IS_ERROR de descompactação de HRESULT de OLE/COM podem determinar o êxito ou a falha geral de uma função.  
   
- Se FAILED ou IS_ERROR retornar TRUE, o consumidor do OLE DB Driver for SQL Server terá certeza de que a execução da função de membro falhou. Quando FAILED ou IS_ERROR retornar FALSE e o HRESULT não é igual a S_OK, o Driver do OLE DB para SQL Server consumidor é garantido a função teve êxito em algum sentido. O consumidor pode recuperar informações detalhadas sobre este retorno de "êxito com informações" nas interfaces de erro do OLE DB Driver for SQL Server. Além disso, se uma função falhar claramente (a macro FAILED retorna TRUE), as informações de erro estendidas ficarão disponíveis nas interfaces de erro do OLE DB Driver for SQL Server.  
+ Se FAILED ou IS_ERROR retornar TRUE, o consumidor do OLE DB Driver for SQL Server terá certeza de que a execução da função de membro falhou. Quando a falha ou IS_ERROR retorna FALSE e o HRESULT não é igual a S_OK, o driver de OLE DB para SQL Server consumidor está garantido que a função teve êxito em algum sentido. O consumidor pode recuperar informações detalhadas sobre este retorno de "êxito com informações" nas interfaces de erro do OLE DB Driver for SQL Server. Além disso, se uma função falhar claramente (a macro FAILED retorna TRUE), as informações de erro estendidas ficarão disponíveis nas interfaces de erro do OLE DB Driver for SQL Server.  
   
- Driver do OLE DB para consumidores do SQL Server normalmente encontram o retorno HRESULT DB_S_ERRORSOCCURRED "êxito com informações". Normalmente, funções de membro que retornam DB_S_ERRORSOCCURRED definem um ou mais parâmetros que fornecem valores de status ao consumidor. Talvez nenhuma informação de erro esteja disponível para o consumidor além daquela retornada em parâmetros de valor de status; assim, os consumidores deverão implementar a lógica de aplicativo para recuperar valores de status quando eles estiverem disponíveis.  
+ OLE DB driver para consumidores de SQL Server normalmente encontram o retorno de HRESULT de DB_S_ERRORSOCCURRED "êxito com informações". Normalmente, funções de membro que retornam DB_S_ERRORSOCCURRED definem um ou mais parâmetros que fornecem valores de status ao consumidor. Talvez nenhuma informação de erro esteja disponível para o consumidor além daquela retornada em parâmetros de valor de status; assim, os consumidores deverão implementar a lógica de aplicativo para recuperar valores de status quando eles estiverem disponíveis.  
   
- O Driver do OLE DB para funções de membro do SQL Server não retornam o código de êxito S_FALSE. Todos os Driver do OLE DB para funções de membro do SQL Server sempre retornam S_OK para indicar êxito.  
+ O driver de OLE DB para funções de membro de SQL Server não retorna o código de êxito S_FALSE. Todos os OLE DB driver para SQL Server funções membro sempre retornam S_OK para indicar êxito.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Erros](../../oledb/ole-db-errors/errors.md)  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a2dac9b1561fbe5b05c96ce8a9ba5f5dd74594ce
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: db1216f513f353a6c703805c7aabe7b8dd468115
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993403"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Como recuperar parâmetros de saída usando o driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -121,7 +120,7 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> Ao associar um parâmetro de saída para um tipo bigint, se o valor pode acabar fora do intervalo de um [inteiro](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), você precisará especificar seu tipo de campo do SQL como SQLSRV_SQLTYPE_BIGINT. Caso contrário, ele pode resultar em uma exceção de "valor fora do intervalo".
+> Ao associar um parâmetro de saída a um tipo bigint, se o valor puder terminar fora do intervalo de um [inteiro](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), será necessário especificar seu tipo de campo SQL como SQLSRV_SQLTYPE_BIGINT. Caso contrário, isso pode resultar em uma exceção "valor fora do intervalo".
 
 ## <a name="example-2"></a>Exemplo 2
 Este exemplo de código mostra como associar um valor bigint grande como um parâmetro de saída.  

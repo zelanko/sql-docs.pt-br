@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 47ef6547-5ec7-4cf5-a4d4-e34cbeec72eb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7e776aaff34a88554a34f00f360e8c871e701cbf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4dee62a135b45b0181094aeec8b5edc063f6ffea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980385"
 ---
 # <a name="getresultsetconcurrency-method-sqlserverstatement"></a>Método getResultSetConcurrency (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public final int getResultSetConcurrency()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getResultSetConcurrency é especificado pelo método getResultSetConcurrency na interface Statement.  
+ Esse método getResultSetConcurrency é especificado pelo método getResultSetConcurrency na interface java. Sql. Statement.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

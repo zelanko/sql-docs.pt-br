@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9eaafb0e-8bfa-456c-a481-8e06e5d539e1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7025abe6177e0073db09afab4833ca1844a69733
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5c85b92a7c404cda846e7c8189a383877c7d744e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974609"
 ---
 # <a name="setclientinfo-method-sqlserverconnection"></a>Método setClientInfo (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,5 +1,5 @@
 ---
-title: Elemento de banco de dados do servidor (DTA) | Microsoft Docs
+title: Elemento de banco de dados para servidor (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5cd9a87a-af4b-45f3-8c18-f7fd7e7d3064
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e9633ca7dff81a0bae053d56fd8437829f82dc36
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 5817a6d32ff94aaba7e4c0a573e6cd6a5fd586dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730937"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116925"
 ---
 # <a name="database-element-for-server-dta"></a>Elemento de banco de dados para servidor (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: cf5bfcdd-bc03-4c5b-b554-d8a8a4067e93
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f44520d6d6a060bb323436d23fa7335e25551883
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0d1265a48fbe07bdf59616026a069fda05723f10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800659"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955330"
 ---
 # <a name="createsqlxml-method-sqlserverconnection"></a>Método createSQLXML (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Cria uma **SQLXML** objeto sem dados.  
+  Cria um objeto **SQLXML** sem nenhum dado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,7 +36,7 @@ public java.sql.SQLXML createSQLXML()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método createSQLXML é especificado pelo método createSQLXML na interface do Connection.  
+ Esse método createSQLXML é especificado pelo método createSQLXML na interface java. Sql. Connection.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

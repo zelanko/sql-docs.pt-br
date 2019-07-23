@@ -13,13 +13,12 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB Driver for SQL Server)
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: d520d07940acaefeb67d38c1e4da9547c8fea344
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: af89c2e803be83143351db85b48173b15fad04d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802911"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988877"
 ---
 # <a name="table-valued-parameters-ole-db-driver-for-sql-server"></a>Parâmetros com valor de tabela (OLE DB Driver for SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "66802911"
   No [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], foram introduzidos parâmetros com valor de tabela que fornecem uma maneira eficiente de passar várias linhas de dados para o servidor. Os parâmetros com valor de tabela fornecem uma funcionalidade semelhante às matrizes de parâmetro, mas eles oferecem mais flexibilidade e uma integração melhor com o [!INCLUDE[tsql](../../../includes/tsql-md.md)], podendo, com frequência, melhorar o desempenho. Os parâmetros com valor de tabela também podem participar de operações baseadas em conjuntos, o que não ocorre com as matrizes de parâmetro.  
   
   
- Para obter informações sobre parâmetros com valor de tabela e o OLE DB, consulte [parâmetros com valor de tabela &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md).  
+ Para obter informações sobre parâmetros com valor de tabela e OLE DB, consulte [parâmetros &#40;com valor&#41;de tabela OLE DB](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Recursos do Driver do OLE DB para SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md) 

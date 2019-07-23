@@ -1,5 +1,5 @@
 ---
-title: Método getHoldability (SQLServerConnection) | Microsoft Docs
+title: Método getholdabilidade (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b1644791-c36a-4837-86c4-9299537ee1c2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 18712828793011fd37f04d86adf51c5ac83823d7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6f7dfc9609443febe545bd3b6ac7a6cdf75e1756
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982935"
 ---
 # <a name="getholdability-method-sqlserverconnection"></a>Método getHoldability (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public int getHoldability()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getHoldability é especificado pelo método getHoldability na interface do Connection.  
+ Esse método de é especificado pelo método getholdabilidade na interface java. Sql. Connection.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

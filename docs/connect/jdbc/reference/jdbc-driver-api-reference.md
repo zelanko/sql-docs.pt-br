@@ -1,5 +1,5 @@
 ---
-title: Referência de API do JDBC Driver | Microsoft Docs
+title: Referência de API do driver JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b635cfc7ecbe3e658a364a214d5c7cf744095492
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 04cbe39698a99fbde43043b70bb9b1f0e5887f58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803222"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977005"
 ---
 # <a name="jdbc-driver-api-reference"></a>Referência de API do JDBC Driver
 
@@ -26,26 +25,26 @@ O [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fornece uma A
 
 
 
-### <a name="javadocio-website-is-primary"></a>Site JavaDoc.io é primário
+### <a name="javadocio-website-is-primary"></a>O site do JavaDoc.io é primário
 
-A documentação de referência de API do Microsoft JDBC está hospedada para sua exibição no site da JavaDoc.io. JavaDoc.io agora é nosso site primário para documentação de referência do JDBC. Nossa documentação de referência do JDBC em JavaDoc.io está disponível no seguinte link direto:
+A documentação de referência da API JDBC da Microsoft é hospedada para sua exibição no site do JavaDoc.io. JavaDoc.io agora é nosso site primário para a documentação de referência do JDBC. Nossa documentação de referência do JDBC no JavaDoc.io está disponível no link direto a seguir:
 
 - [https://javadoc.io/doc/com.microsoft.sqlserver/mssql-jdbc/](https://javadoc.io/doc/com.microsoft.sqlserver/mssql-jdbc/)
 
-JavaDoc.io tem nossa documentação de referência do JDBC começando com a versão 6.0.
+JavaDoc.io tem nossa documentação de referência JDBC a partir da versão 6,0.
 
-#### <a name="only-legacy-jdbc-documentation-is-here-on-docs"></a>Documentação do JDBC somente herdada está aqui no Docs
+#### <a name="only-legacy-jdbc-documentation-is-here-on-docs"></a>Somente a documentação JDBC herdada está aqui no docs
 
-A documentação de referência de API do JDBC aqui artigos sobre **https://docs.microsoft.com/sql/connect/jdbc/reference/** não estão mais sendo atualizadas quando as classes do JDBC são atualizadas para novas versões. No entanto, os artigos aqui contêm todos os a referência para versões do JDBC 4.1 e 4.2.
+Os artigos de documentação de referência da API **https://docs.microsoft.com/sql/connect/jdbc/reference/** JDBC aqui não estão mais sendo atualizados quando as classes JDBC são atualizadas para novas versões. No entanto, os artigos aqui contêm toda a referência para as versões 4,1 e 4,2 do JDBC.
 
-Documentação de versão do JDBC 6.0 e algumas versões posteriores, também está aqui. Mas, para qualquer versão 6.0 ou posterior, use o site JavaDoc.io.
+A documentação do JDBC versão 6,0 e algumas versões posteriores também estão aqui. Mas, para qualquer versão 6,0 ou posterior, use o site JavaDoc.io.
 
 
 
 ### <a name="important-notes"></a>Observações importantes
 
 > [!NOTE]  
->  Para obter informações conceituais sobre como usar o driver JDBC, consulte [visão geral do Driver JDBC](../../../connect/jdbc/overview-of-the-jdbc-driver.md).  
+>  Para obter informações conceituais sobre como usar o driver JDBC, consulte [visão geral do driver JDBC](../../../connect/jdbc/overview-of-the-jdbc-driver.md).  
   
 > [!IMPORTANT]  
 >  Para obter o suporte de conformidade do JDBC 4.1 e 4.2, use o Microsoft JDBC Driver 4.2 (ou superior) for SQL Server. As versões anteriores do Microsoft JDBC Drivers 4.1 e 4.0 não dão suporte aos novos métodos introduzidos com JDBC 4.1 ou 4.2.  
@@ -58,7 +57,7 @@ Documentação de versão do JDBC 6.0 e algumas versões posteriores, também es
 >   
 >  Detalhes de API para o Always Encrypted, disponíveis do Microsoft JDBC Driver 6.0 for SQL Server em diante, não são encontradas nesta seção. Confira [Referência de API do Always Encrypted para o JDBC Driver](../../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)  
 >   
->  Detalhes de API para parâmetros de Using Table-Valued, disponível a partir do Microsoft JDBC Driver 6.0 para SQL Server, não são encontrados nesta seção. Confira [Usando parâmetros com valor de tabela](../../../connect/jdbc/using-table-valued-parameters.md)  
+>  Os detalhes da API para usar parâmetros com valor de tabela, disponíveis a partir do Microsoft JDBC Driver 6,0 para SQL Server, não foram encontrados nesta seção. Confira [Usando parâmetros com valor de tabela](../../../connect/jdbc/using-table-valued-parameters.md)  
 >   
 >  O Microsoft JDBC Driver 6.4 dá suporte à compilação com o JDK 7.0, 8.0 e 9.0.  
 >   

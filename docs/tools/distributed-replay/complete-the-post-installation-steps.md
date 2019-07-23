@@ -1,5 +1,5 @@
 ---
-title: Conclua as etapas de pós-instalação | Microsoft Docs
+title: Concluir as etapas pós-instalação | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0a788a2a-9b4f-4bfc-b1b5-83eeb1ea9ab2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9aa964e2bcefb9340dd190c7631f599f55a16cee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 934c38028bf187ed0b78f0ad3facccf692022965
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759714"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121553"
 ---
 # <a name="complete-the-post-installation-steps"></a>Concluir as etapas de pós-instalação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

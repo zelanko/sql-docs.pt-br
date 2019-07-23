@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8186b87e5dde50b07aa69e4dde870d8474265bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd3332f9dc12d1cf7df22c097ab9370606985a68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936150"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +38,7 @@ $*data_type*: uma constante PDO::PARAM_* (inteiro) opcional. O padrão é PDO::P
   
 $*length*: um comprimento opcional (inteiro) do tipo de dados. Você pode especificar PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE para indicar o tamanho padrão ao usar PDO::PARAM_INT ou PDO::PARAM_BOOL in $*data_type*.  
   
-$*driver_options*: as opções específicas do driver (mistas) opcionais. Por exemplo, você poderia especificar PDO::SQLSRV_ENCODING_UTF8 para associar a coluna a uma variável como uma cadeia de caracteres codificada em UTF-8.  
+$*driver_options*: as opções opcionais específicas do driver (misto). Por exemplo, você poderia especificar PDO::SQLSRV_ENCODING_UTF8 para associar a coluna a uma variável como uma cadeia de caracteres codificada em UTF-8.  
   
 ## <a name="return-value"></a>Valor retornado  
 TRUE se for bem-sucedido; caso contrário, FALSE.  
@@ -100,7 +99,7 @@ echo $input1;
 ```  
   
 > [!NOTE]
-> Ao associar um parâmetro de saída para um tipo bigint, se o valor pode acabar fora do intervalo de um [inteiro](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), usando PDO:: param_int com PDO:: sqlsrv_param_out_default_size pode resultar em uma exceção de "valor fora do intervalo". Portanto, use o PDO:: param_str padrão em vez disso e forneça o tamanho da cadeia de caracteres resultante, que é, no máximo, 21. É o número máximo de dígitos, incluindo o sinal de negativo, de qualquer valor bigint. 
+> Ao associar um parâmetro de saída a um tipo bigint, se o valor puder terminar fora do intervalo de um [inteiro](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), usando pdo::P ARAM_INT com PDO:: SQLSRV_PARAM_OUT_DEFAULT_SIZE poderá resultar em uma exceção "valor fora do intervalo". Portanto, use o padrão PDO::P ARAM_STR em vez disso e forneça o tamanho da cadeia de caracteres resultante, que é no máximo 21. É o número máximo de dígitos, incluindo o sinal negativo, de qualquer valor bigint. 
 
 ## <a name="example"></a>Exemplo  
 Este exemplo de código mostra como usar um parâmetro de entrada/saída.  

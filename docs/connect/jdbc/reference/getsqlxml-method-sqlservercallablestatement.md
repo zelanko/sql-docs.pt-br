@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8bcf9eda-b36c-480c-8bf2-91c392d5a0ee
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6b4e087643240ce6e47231ed3c15f7350f5fd271
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0596c93f17b2a5179e51055152cc2e126ade1e1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774028"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979655"
 ---
 # <a name="getsqlxml-method-sqlservercallablestatement"></a>Método getSQLXML (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "66774028"
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método getSQLXML &#40;int&#41;](../../../connect/jdbc/reference/getsqlxml-method-int.md)|Recupera o valor do parâmetro designado como um objeto SQLXML dado o índice do parâmetro.|  
+|[Método &#40;getSQLXML int&#41;](../../../connect/jdbc/reference/getsqlxml-method-int.md)|Recupera o valor do parâmetro designado como um objeto SQLXML dado o índice do parâmetro.|  
 |[Método getSQLXML &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getsqlxml-method-java-lang-string.md)|Recupera o valor do parâmetro designado como um objeto SQLXML dado o nome do parâmetro.|  
   
 ## <a name="see-also"></a>Consulte Também  

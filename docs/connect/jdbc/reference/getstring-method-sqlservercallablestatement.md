@@ -1,5 +1,5 @@
 ---
-title: Método getString (SQLServerCallableStatement) | Microsoft Docs
+title: Método GetString (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8e88614b-e1a9-4119-8db0-d1b8de9e7cda
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2bd7ddd361dcf9eb150f52540b82ee87416e0622
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7a303136f34af84290907fd8aa24457d239b0417
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788874"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979424"
 ---
 # <a name="getstring-method-sqlservercallablestatement"></a>Método getString (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

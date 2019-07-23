@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b0728bd-059b-4b71-895c-999335bc7427
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d63b7195e2de73292e56f9a63dcce561ca3b906e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6161f70455e5f1c947841d0381ba1a1de3a778a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006009"
 ---
 # <a name="using-an-sql-statement-with-no-parameters"></a>Usando uma instrução SQL sem parâmetros
 
@@ -28,7 +27,7 @@ No exemplo a seguir, uma conexão aberta com o banco de dados de amostra [!INCLU
 
 [!code[JDBC#UsingSQLWithNoParams1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-w_0_1.java)]
 
-Para obter mais informações sobre como usar conjuntos de resultados, consulte [Gerenciando conjuntos de resultados com o Driver JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).
+Para obter mais informações sobre como usar conjuntos de resultados, consulte [Gerenciando conjuntos de resultados com o driver JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).
 
 ## <a name="see-also"></a>Consulte Também
 
