@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fd6be063-08eb-40cf-9201-5a9f62387726
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5b68714f1fe78a356556bc2a8f379eab60003c57
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0265f06d589ea89b38f995f8a9616fd22bcf92ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975259"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream-int"></a>Método setBinaryStream (int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public final void setBinaryStream(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setBinaryStream é especificado pelo método setBinaryStream na interface do PreparedStatement.  
+ Esse método setBinaryStream é especificado pelo método setBinaryStream na interface java. Sql. PreparedStatement.  
   
  Se o comprimento do fluxo for diferente do especificado no parâmetro *length*, o driver JDBC lançará uma exceção quando a linha for atualizada ou inserida.  
   

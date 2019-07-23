@@ -10,13 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 77125f88ed8d378a0cc2dc60ae47db641a681a95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 38694c8637423c1ecd151d439f48bc1c0e962c04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65720477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054542"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importar dados do Excel ou exportar dados para o Excel com o SSIS (SQL Server Integration Services)
 
@@ -48,7 +47,7 @@ As seções a seguir contêm as informações necessárias para usar o Excel com
 
 Você pode importar dados do Excel ou exportar dados para ele com o SSIS usando uma das seguintes ferramentas:
 
--   **Do SSIS (SQL Server Integration Services)**. Crie um pacote do SSIS que usa a Origem ou o Destino do Excel com o Gerenciador de Conexão do Excel. (Este artigo não descreve como criar pacotes do SSIS.)
+-   **Do SSIS (SQL Server Integration Services)** . Crie um pacote do SSIS que usa a Origem ou o Destino do Excel com o Gerenciador de Conexão do Excel. (Este artigo não descreve como criar pacotes do SSIS.)
 
 -   O **Assistente de Importação e de Exportação do SQL Server**, criado no SSIS. Para saber mais, confira [Importar e exportar dados com o Assistente de Exportação e Importação do SQL Server](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md) e [Conectar-se a uma fonte de dados do Excel (Assistente de Exportação e Importação do SQL Server)](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md).
 
@@ -125,11 +124,11 @@ Se você estiver exportando dados do Excel e habilitar essa opção, a primeira 
 
 Há três tipos de objetos do Excel que podem ser usados como a origem ou o destino dos seus dados: uma planilha, um intervalo nomeado ou um intervalo de células sem nome que você especifica com seu endereço.
 
--   **Planilha.** Para especificar uma planilha, acrescente o caractere `$` ao final do nome da planilha e adicione delimitadores no começo e no final da cadeia de caracteres, por exemplo, **[Sheet1$]**. Ou procure um nome que termina com o caractere `$` na lista de tabelas e exibições existentes.
+-   **Planilha.** Para especificar uma planilha, acrescente o caractere `$` ao final do nome da planilha e adicione delimitadores no começo e no final da cadeia de caracteres, por exemplo, **[Sheet1$]** . Ou procure um nome que termina com o caractere `$` na lista de tabelas e exibições existentes.
 
 -   **Intervalo nomeado.** Para especificar um intervalo nomeado, forneça o nome do intervalo, por exemplo, **MyDataRange**. Ou procure um nome que não termine com o caractere `$` na lista de tabelas e exibições existentes.
     
--   **Intervalo sem nome.** Para especificar um intervalo de células ainda não nomeado, acrescente o caractere $ ao final do nome da planilha, adicione a especificação do intervalo e adicione delimitadores no começo e no final da cadeia de caracteres, por exemplo, **[Sheet1$A1:B4]**.
+-   **Intervalo sem nome.** Para especificar um intervalo de células ainda não nomeado, acrescente o caractere $ ao final do nome da planilha, adicione a especificação do intervalo e adicione delimitadores no começo e no final da cadeia de caracteres, por exemplo, **[Sheet1$A1:B4]** .
 
 Para selecionar ou especificar o tipo de objeto do Excel que você deseja usar com a origem ou o destino dos seus dados, siga um destes procedimentos:
 

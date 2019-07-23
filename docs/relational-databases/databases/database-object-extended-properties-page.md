@@ -12,14 +12,13 @@ f1_keywords:
 ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 773edf9a47ab10af5a1b00ee7f64b27f60c14191
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: de6a4504e0b84efd8fa8fb5b60a8bd01ef85b474
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099641"
 ---
 # <a name="database-object-extended-properties-page"></a>Objeto de banco de dados (página Propriedades Estendidas)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

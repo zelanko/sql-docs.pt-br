@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 513145a1c1968e6ca5dbdc2b8cee0566552e500e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff67ed908a9fe89d24c23d836ce608206575d649
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726718"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941296"
 ---
 # <a name="look-up-process-chain"></a>Pesquisar cadeia de processo
 

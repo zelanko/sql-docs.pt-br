@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9e59dea663e0a18dd9a6b7505d3c4491f0e7128c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 08be945b7703902e72fc92acd2a5462dbbe38fe3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049520"
 ---
 # <a name="data-flow"></a>Fluxo de Dados
 

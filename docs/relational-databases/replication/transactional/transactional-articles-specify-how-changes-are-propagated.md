@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36e6c524a03aef1a55f95d174fff71421d5abe50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a53c0ac886185e2d6723a5a01c055c1c828fe51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683044"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121264"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Artigos transacionais – Especificar como as alterações são propagadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +38,13 @@ ms.locfileid: "47683044"
 ## <a name="default-and-custom-stored-procedures"></a>Procedimentos armazenados padrão e personalizados  
  Os três procedimentos que a replicação cria por padrão para cada artigo de tabela são:  
   
--   **sp_MSins_\<** *tablename* **>**, que manipula inserções.  
+-   **sp_MSins_\<** *tablename* **>** , que manipula inserções.  
   
--   **sp_MSupd_\<** *tablename* **>**, que manipula atualizações.  
+-   **sp_MSupd_\<** *tablename* **>** , que manipula atualizações.  
   
--   **sp_MSdel_\<** *tablename* **>**, que manipula exclusões.  
+-   **sp_MSdel_\<** *tablename* **>** , que manipula exclusões.  
   
- O **\<**_tablename_**>** usado no procedimento depende de como o artigo foi adicionado à publicação e se o banco de dados de assinatura contém uma tabela de mesmo nome com um proprietário diferente.  
+ O **\<** _tablename_ **>** usado no procedimento depende de como o artigo foi adicionado à publicação e se o banco de dados de assinatura contém uma tabela de mesmo nome com um proprietário diferente.  
   
  Qualquer um desses procedimentos pode ser substituído com um procedimento personalizado que você especifica ao adicionar um artigo a uma publicação. Os procedimentos personalizados são usados se um aplicativo requerer lógica personalizada, como inserir dados em uma tabela de auditoria quando uma linha é atualizada em um Assinante. Para obter mais informações sobre como especificar procedimentos armazenados personalizados, consulte os tópicos de instruções relacionados acima.  
   
@@ -118,7 +117,7 @@ pkc1, pkc2, pkc3,... pkcn
   
 #### <a name="scall-syntax"></a>Sintaxe SCALL  
  Procedimentos armazenados de UPDATE  
- Procedimentos armazenados que controlam instruções UPDATE receberão valores atualizados apenas para as colunas que foram alteradas, seguidos pelos valores originais para as colunas de chave primária, seguidos por um parâmetro (**binary(n)**) bitmask que indica as colunas alteradas. No exemplo seguinte, a coluna 2 (c2) não foi alterada:  
+ Procedimentos armazenados que controlam instruções UPDATE receberão valores atualizados apenas para as colunas que foram alteradas, seguidos pelos valores originais para as colunas de chave primária, seguidos por um parâmetro (**binary(n)** ) bitmask que indica as colunas alteradas. No exemplo seguinte, a coluna 2 (c2) não foi alterada:  
   
 ```  
 c1, , c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask  
@@ -126,7 +125,7 @@ c1, , c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask
   
 #### <a name="mcall-syntax"></a>Sintaxe MCALL  
  Procedimentos armazenados de UPDATE  
- Procedimentos armazenados que controlam instruções UPDATE receberão valores atualizados para todas as colunas definidas no artigo, seguidos pelos valores originais para as colunas de chave primária, seguidos por um parâmetro (**binary(n)**) bitmask que indica as colunas alteradas.  
+ Procedimentos armazenados que controlam instruções UPDATE receberão valores atualizados para todas as colunas definidas no artigo, seguidos pelos valores originais para as colunas de chave primária, seguidos por um parâmetro (**binary(n)** ) bitmask que indica as colunas alteradas.  
   
 ```  
 c1, c2, c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask  

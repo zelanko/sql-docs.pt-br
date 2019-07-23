@@ -12,14 +12,13 @@ f1_keywords:
 ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd6dc5a98da7bf06f4bd24bd045fcc76d880e93d
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 2661424dcfe87f7151bbd92b2dfbf76861913fbb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099628"
 ---
 # <a name="database-properties-changetracking-page"></a>Propriedades do Banco de Dados (página Controle de Alterações)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

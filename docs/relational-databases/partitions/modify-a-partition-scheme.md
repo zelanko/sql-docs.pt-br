@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e3f5e060d90863292dd00e423b8dc334c8025dc
-ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
+ms.openlocfilehash: 9efb96c0bb54e3887f6c3fd101633a0efe664bdc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091050"
 ---
 # <a name="modify-a-partition-scheme"></a>Modificar um esquema de partição
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "53414131"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
  Qualquer grupo de arquivos afetado por ALTER PARTITION SCHEME deve estar online.  
   
 ###  <a name="Security"></a> Segurança  
@@ -69,7 +68,7 @@ ms.locfileid: "53414131"
   
 5.  Na caixa de diálogo **Excluir Objeto** , verifique se o esquema de partição correto está selecionado e clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-modify-a-partition-scheme"></a>Para modificar um esquema de partição  
   

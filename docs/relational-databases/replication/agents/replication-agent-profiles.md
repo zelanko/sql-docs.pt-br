@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 35be93e6c3150c8d8237681301333964ab67cccf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7fbff0263053594af99e21bb507ed71ee8628a93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027774"
 ---
 # <a name="replication-agent-profiles"></a>Perfis do Agente de Replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,9 +69,9 @@ ms.locfileid: "47595815"
   
 ||padrão|histórico detalhado|Gerenciador de Sincronização do Windows|Continuar em erros de consistência de dados|Perfil de distribuição para fluxo contínuo do banco de dados OLE|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
-|**-BcpBatchSize**|100000|100000|1.000|100000|2147473647|  
+|**-BcpBatchSize**|100000|100000|1\.000|100000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
-|**-CommitBatchThreshold**|1.000|1.000|1.000|1.000|1.000|  
+|**-CommitBatchThreshold**|1\.000|1\.000|1\.000|1\.000|1\.000|  
 |**-HistoryVerboseLevel**|1|2|1|1|1|  
 |**-KeepAliveMessageInterval**|300|300|300|300|300|  
 |**-LoginTimeout**|15|15|15|15|15|  
@@ -91,8 +90,8 @@ ms.locfileid: "47595815"
   
 ||padrão|histórico detalhado|Gerenciador de Sincronização do Windows|validação do número de linhas.|validação do número de linhas e da soma de verificação|vínculo lento|servidor a servidor de alto volume|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
-|**-BcpBatchSize**|100000|100000|1.000|100000|100000|100000|100000|  
-|**-ChangesPerHistory**|100|50|50|100|100|100|1.000|  
+|**-BcpBatchSize**|100000|100000|1\.000|100000|100000|100000|100000|  
+|**-ChangesPerHistory**|100|50|50|100|100|100|1\.000|  
 |**-DestThreads**|2|1|1|1|1|1|4|  
 |**-DownloadGenerationsPerBatch**|50|50|50|50|50|1|500|  
 |**-DownloadReadChangesPerBatch**|100|100|100|100|100|100|100|  

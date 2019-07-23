@@ -1,5 +1,5 @@
 ---
-title: Suporte para alta disponibilidade, recuperação de desastres para o Microsoft Drivers for PHP para SQL Server | Microsoft Docs
+title: Suporte para alta disponibilidade e recuperação de desastre para os drivers da Microsoft para PHP para SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5e0ad826c8846330c7207b14ac2344687563bbfa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fab65d777025f59fab6566d118233febbb51aaa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992975"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>Suporte a alta disponibilidade e recuperação de desastres
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +34,7 @@ A propriedade de conexão **MultiSubnetFailover** indica que o aplicativo está 
   
 Sempre especifique **MultiSubnetFailover=True** quando for se conectar a um ouvinte de grupo de disponibilidade do SQL Server 2012 ou uma instância de cluster de failover do SQL Server 2012. **MultiSubnetFailover** permite o failover mais rápido para todos os grupos de disponibilidade e as instâncias de cluster de failover do SQL Server 2012 e reduz significativamente o tempo de failover para topologias AlwaysOn de uma ou várias sub-redes. Durante um failover de várias sub-redes, o cliente tentará conexões em paralelo. Durante um failover de sub-rede, o [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] repetirá agressivamente a conexão TCP.  
   
-Para obter mais informações sobre palavras-chave de cadeia de caracteres de conexão no [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], consulte [opções de Conexão](../../connect/php/connection-options.md).  
+Para obter mais informações sobre palavras-chave da cadeia [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]de conexão no, consulte [Opções de conexão](../../connect/php/connection-options.md).  
   
 A especificação de **MultiSubnetFailover=true** durante a conexão a algo que não seja um ouvinte de grupo de disponibilidade ou uma Instância de Cluster de Failover pode resultar em um impacto de desempenho negativo e não há suporte para isso.  
   
@@ -63,16 +62,16 @@ Uma conexão falhará se uma réplica primária for configurada para rejeitar ca
 
 ## <a name="transparent-network-ip-resolution-tnir"></a>Resolução IP de Rede Transparente (TNIR)
 
-Resolução de IP de rede transparente (TNIR) é uma revisão do recurso MultiSubnetFailover existente. Ele afeta a sequência de conexão do driver quando o primeiro resolvida IP do nome do host não responde e há vários IPs associados com o nome do host. Junto com MultiSubnetFailover eles fornecem as sequências de conexão de quatro a seguir: 
+A resolução de IP de rede transparente (TNIR) é uma revisão do recurso MultiSubnetFailover existente. Ele afeta a sequência de conexão do driver quando o primeiro IP resolvido do nome do host não responde e há vários IPs associados ao nome do host. Junto com o MultiSubnetFailover, eles fornecem as quatro sequências de conexão a seguir: 
 
-- TNIR habilitado e desabilitado MultiSubnetFailover: um IP for tentado, seguido por todos os IPs em paralelo
-- TNIR habilitada & MultiSubnetFailover habilitado: todos os IPs são tentadas em paralelo
-- Desabilitado TNIR & MultiSubnetFailover desabilitado: todos os IPs são tentadas após o outro
-- Desabilitado TNIR & MultiSubnetFailover habilitado: todos os IPs são tentadas em paralelo
+- TNIR habilitado & MultiSubnetFailover desabilitado: um IP é tentado, seguido por todos os IPs em paralelo
+- TNIR habilitado & MultiSubnetFailover habilitado: todos os IPs são tentados em paralelo
+- TNIR desabilitado & MultiSubnetFailover desabilitado: todos os IPs são tentados um após o outro
+- TNIR desabilitado & MultiSubnetFailover habilitado: todos os IPs são tentados em paralelo
 
-TNIR é habilitado por padrão e MultiSubnetFailover é desabilitada por padrão.
+TNIR é habilitado por padrão e MultiSubnetFailover é desabilitado por padrão.
 
-Este é um exemplo de habilitação TNIR e MultiSubnetFailover usando o driver PDO_SQLSRV:
+Este é um exemplo de como habilitar TNIR e MultiSubnetFailover usando o driver PDO_SQLSRV:
 
 ```
 <?php

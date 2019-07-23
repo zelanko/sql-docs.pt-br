@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84016132e2f61816cc392175927296786f27ce24
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0e5232f1f8cad8ba9e6dc4ffcb9d838614a8c2c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696754"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044707"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Atualizar uma instância de cluster de failover do SQL Server (instalação)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

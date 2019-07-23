@@ -10,50 +10,49 @@ ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6452fc506814cdfdeee4f61085ec9a1ee0cededa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac090ad8831397bf31c0911ab8a8db21486528db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015107"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>Tipos de cursor (driver SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-O driver SQLSRV permite que você crie um conjunto de resultados com linhas que pode acessar em qualquer ordem, dependendo do tipo de cursor.  Este tópico descreverá (em buffer) do cliente e servidor (sem buffer) cursores.  
+O driver SQLSRV permite que você crie um conjunto de resultados com linhas que pode acessar em qualquer ordem, dependendo do tipo de cursor.  Este tópico discutirá os cursores do lado do cliente (em buffer) e do lado do servidor (sem buffer).  
   
 ## <a name="cursor-types"></a>Tipos de cursor  
-Quando você cria um conjunto de resultados com [sqlsrv_query](../../connect/php/sqlsrv-query.md) ou com [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md), você pode especificar o tipo de cursor. Por padrão, um cursor somente de avanço é usado, o que permite mover uma linha por vez, começando na primeira linha do resultado definido até atingir o final do conjunto de resultados.  
+Quando você cria um conjunto de resultados com [sqlsrv_query](../../connect/php/sqlsrv-query.md) ou com [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md), pode especificar o tipo de cursor. Por padrão, um cursor de somente avanço é usado, o que permite que você mova uma linha por vez, começando na primeira linha do conjunto de resultados até chegar ao final do conjunto de resultados.  
   
-Você pode criar um conjunto de resultados com um cursor rolável, o que permite que você acesse qualquer linha no conjunto de resultados, em qualquer ordem. A tabela a seguir lista os valores que podem ser passados para o **rolável** opção no sqlsrv_query ou sqlsrv_prepare.  
+Você pode criar um conjunto de resultados com um cursor rolável, que permite acessar qualquer linha no conjunto de resultados, em qualquer ordem. A tabela a seguir lista os valores que podem ser passados para a opção **rolável** em sqlsrv_query ou sqlsrv_prepare.  
   
 |Opção|Descrição|  
 |----------|---------------|  
-|SQLSRV_CURSOR_FORWARD|Permite mover uma linha por vez, começando na primeira linha do resultado definido até atingir o final do conjunto de resultados.<br /><br />Isso é o tipo de cursor padrão.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) retorna um erro para conjuntos de resultados criados com esse tipo de cursor.<br /><br />**Encaminhar** é a forma abreviada de SQLSRV_CURSOR_FORWARD.|  
-|SQLSRV_CURSOR_STATIC|Permite que você acessar linhas em qualquer ordem, mas não refletirá as alterações no banco de dados.<br /><br />**estático** é a forma abreviada de SQLSRV_CURSOR_STATIC.|  
-|SQLSRV_CURSOR_DYNAMIC|Permite que você acessar linhas em qualquer ordem e que refletirá as alterações no banco de dados.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) retorna um erro para conjuntos de resultados criados com esse tipo de cursor.<br /><br />**dinâmico** é a forma abreviada de SQLSRV_CURSOR_DYNAMIC.|  
-|SQLSRV_CURSOR_KEYSET|Permite que você acessar linhas em qualquer ordem. Porém, um cursor de conjunto de chaves não atualizará a contagem de linhas se uma linha for excluída da tabela (uma linha excluída será retornada sem valores).<br /><br />**conjunto de chaves** é a forma abreviada de SQLSRV_CURSOR_KEYSET.|  
-|SQLSRV_CURSOR_CLIENT_BUFFERED|Permite que você acessar linhas em qualquer ordem. Cria uma consulta de cursor do lado do cliente.<br /><br />**armazenados em buffer** é a forma abreviada de SQLSRV_CURSOR_CLIENT_BUFFERED.|  
+|SQLSRV_CURSOR_FORWARD|Permite que você mova uma linha por vez, começando na primeira linha do conjunto de resultados até chegar ao final do conjunto de resultados.<br /><br />Esse é o tipo de cursor padrão.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) retorna um erro para conjuntos de resultados criados com esse tipo de cursor.<br /><br />**Forward** é a forma abreviada de SQLSRV_CURSOR_FORWARD.|  
+|SQLSRV_CURSOR_STATIC|Permite que você acesse linhas em qualquer ordem, mas não refletirá as alterações no banco de dados.<br /><br />**static** é a forma abreviada de SQLSRV_CURSOR_STATIC.|  
+|SQLSRV_CURSOR_DYNAMIC|Permite que você acesse linhas em qualquer ordem e reflita alterações no banco de dados.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) retorna um erro para conjuntos de resultados criados com esse tipo de cursor.<br /><br />**dinâmico** é a forma abreviada de SQLSRV_CURSOR_DYNAMIC.|  
+|SQLSRV_CURSOR_KEYSET|Permite que você acesse linhas em qualquer ordem. Porém, um cursor de conjunto de chaves não atualizará a contagem de linhas se uma linha for excluída da tabela (uma linha excluída será retornada sem valores).<br /><br />o conjunto de **chaves** é a forma abreviada de SQLSRV_CURSOR_KEYSET.|  
+|SQLSRV_CURSOR_CLIENT_BUFFERED|Permite que você acesse linhas em qualquer ordem. Cria uma consulta de cursor do lado do cliente.<br /><br />**Buffered** é a forma abreviada de SQLSRV_CURSOR_CLIENT_BUFFERED.|  
   
-Se uma consulta gera vários conjuntos de resultados, o **rolável** opção se aplica a todos os conjuntos de resultados.  
+Se uma consulta gerar vários conjuntos de resultados, a opção **rolável** será aplicada a todos os conjuntos de resultados.  
   
-## <a name="selecting-rows-in-a-result-set"></a>Seleção de linhas em um conjunto de resultados  
-Depois de criar um conjunto de resultados, você pode usar [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md), [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md), ou [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) para especificar uma linha.  
+## <a name="selecting-rows-in-a-result-set"></a>Selecionando linhas em um conjunto de resultados  
+Depois de criar um conjunto de resultados, você pode usar [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md), [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)ou [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) para especificar uma linha.  
   
-A tabela a seguir descreve os valores que você pode especificar o *linha* parâmetro.  
+A tabela a seguir descreve os valores que você pode especificar no parâmetro *Row* .  
   
 |Parâmetro|Descrição|  
 |-------------|---------------|  
-|SQLSRV_SCROLL_NEXT|Especifica a próxima linha. Isso é o valor padrão, se você não especificar o *linha* parâmetro para um conjunto de resultados roláveis.|  
+|SQLSRV_SCROLL_NEXT|Especifica a próxima linha. Esse é o valor padrão se você não especificar o parâmetro de *linha* para um conjunto de resultados rolável.|  
 |SQLSRV_SCROLL_PRIOR|Especifica a linha antes da linha atual.|  
 |SQLSRV_SCROLL_FIRST|Especifica a primeira linha no conjunto de resultados.|  
 |SQLSRV_SCROLL_LAST|Especifica a última linha no conjunto de resultados.|  
-|SQLSRV_SCROLL_ABSOLUTE|Especifica a linha especificada com o *deslocamento* parâmetro.|  
-|SQLSRV_SCROLL_RELATIVE|Especifica a linha especificada com o *deslocamento* parâmetro da linha atual.|  
+|SQLSRV_SCROLL_ABSOLUTE|Especifica a linha especificada com o parâmetro *offset* .|  
+|SQLSRV_SCROLL_RELATIVE|Especifica a linha especificada com o parâmetro *offset* da linha atual.|  
   
-## <a name="server-side-cursors-and-the-sqlsrv-driver"></a>Cursores do lado do servidor e o Driver SQLSRV  
-O exemplo a seguir mostra o efeito dos vários cursores. Na linha 33 do exemplo, você verá a primeira das três instruções de consulta que especificam cursores diferentes.  Duas das instruções de consulta são comentadas. Sempre que você executar o programa, use um tipo de cursor diferente para ver o efeito da atualização do banco de dados na linha 47.  
+## <a name="server-side-cursors-and-the-sqlsrv-driver"></a>Cursores do lado do servidor e o driver SQLSRV  
+O exemplo a seguir mostra o efeito dos vários cursores. Na linha 33 do exemplo, você verá o primeiro de três instruções de consulta que especificam cursores diferentes.  Duas das instruções de consulta são comentadas. Cada vez que você executar o programa, use um tipo de cursor diferente para ver o efeito da atualização do banco de dados na linha 47.  
   
 ```  
 <?php  
@@ -119,18 +118,18 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="client-side-cursors-and-the-sqlsrv-driver"></a>Cursores do lado do cliente e o Driver SQLSRV  
-Cursores do lado do cliente são um recurso adicionado na versão 3.0 do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] que lhe permite armazenar em cache um conjunto na memória de resultados inteiro. Contagem de linhas está disponível depois que a consulta é executada ao usar um cursor do lado do cliente.  
+## <a name="client-side-cursors-and-the-sqlsrv-driver"></a>Cursores do lado do cliente e o driver SQLSRV  
+Cursores do lado do cliente são um recurso adicionado na versão 3,0 do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] que permite armazenar em cache um conjunto de resultados inteiro na memória. A contagem de linhas está disponível depois que a consulta é executada ao usar um cursor do lado do cliente.  
   
 Os cursores do lado do cliente devem ser usados para conjuntos de resultados pequeno a médio porte. Use cursores do lado do servidor para grandes conjuntos de resultados.  
   
-Uma consulta retornará false se o buffer não é grande o suficiente para conter o conjunto de resultados inteiro. Você pode aumentar o tamanho do buffer até o limite de memória do PHP.  
+Uma consulta retornará false se o buffer não for grande o suficiente para manter todo o conjunto de resultados. Você pode aumentar o tamanho do buffer até o limite de memória do PHP.  
   
-Usando o driver SQLSRV, você pode configurar o tamanho do buffer que contém o conjunto de resultados com a configuração ClientBufferMaxKBSize [sqlsrv_configure](../../connect/php/sqlsrv-configure.md). [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md) retorna o valor de ClientBufferMaxKBSize. Você também pode definir o tamanho máximo do buffer no arquivo PHP. ini com sqlsrv. ClientBufferMaxKBSize (por exemplo, sqlsrv. ClientBufferMaxKBSize = 1024).  
+Usando o driver SQLSRV, você pode configurar o tamanho do buffer que contém o conjunto de resultados com a configuração ClientBufferMaxKBSize para [sqlsrv_configure](../../connect/php/sqlsrv-configure.md). [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md) retorna o valor de ClientBufferMaxKBSize. Você também pode definir o tamanho máximo do buffer no arquivo php. ini com sqlsrv. ClientBufferMaxKBSize (por exemplo, sqlsrv. ClientBufferMaxKBSize = 1024).  
   
 O exemplo a seguir mostra:  
   
--   Contagem de linhas está sempre disponível com um cursor do lado do cliente.  
+-   A contagem de linhas está sempre disponível com um cursor do lado do cliente.  
   
 -   Uso de cursores do lado do cliente e instruções em lote.  
   
@@ -190,7 +189,7 @@ echo "Employee ID = $EmployeeID \n";
 ?>  
 ```  
   
-O exemplo a seguir mostra um cursor do lado do cliente usando [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) e um tamanho de buffer de cliente diferentes.
+O exemplo a seguir mostra um cursor do lado do cliente usando [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) e um tamanho de buffer de cliente diferente.
   
 ```  
 <?php  

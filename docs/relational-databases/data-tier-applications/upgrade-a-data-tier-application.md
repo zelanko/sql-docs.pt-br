@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: da5e69d974f33f7eeb60e185a5a4a67dae6c01a8
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 7030f40419850454e90978168e72846331b5e865
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134662"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Atualizar um aplicativo da camada de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -205,7 +204,7 @@ ms.locfileid: "53589690"
   
  **< Anterior** – Retorna à página **Detectar Alteração**.  
   
- **Avançar >**: continua para a página **Resumo**.  
+ **Avançar >** : continua para a página **Resumo**.  
   
  **Cancelar** – Encerra o assistente sem implantar o DAC.  
   

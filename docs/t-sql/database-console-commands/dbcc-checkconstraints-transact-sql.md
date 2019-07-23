@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 911cb0643318e98b46746c7cd11ef2ebbfcaca2b
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 8653b197e0fa16b4e939ab94865395d68bf1f852
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685663"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102121"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +132,7 @@ DBCC CHECKCONSTRAINTS(Table1);
 GO  
 ```  
   
-### <a name="b-checking-a-specific-constraint"></a>b. Verificando uma restrição específica  
+### <a name="b-checking-a-specific-constraint"></a>B. Verificando uma restrição específica  
 O exemplo a seguir verifica a integridade da restrição `CK_ProductCostHistory_EndDate`.
   
 ```sql  

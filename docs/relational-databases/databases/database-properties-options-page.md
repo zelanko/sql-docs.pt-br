@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ce814d567aa695be417fa4fa92d988938dfec6bf
-ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
+ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049027"
 ---
 # <a name="database-properties-options-page"></a>Propriedades do banco de dados (página Opções)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

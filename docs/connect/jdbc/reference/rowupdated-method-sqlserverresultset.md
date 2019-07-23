@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 29303550-294e-4d43-b892-312b42e21271
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b827ebb9740c9d88017c5d47626b9a1cef493143
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9eb0f1bf73f719550ce0a00b3b7f96fab9c2af38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765271"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975667"
 ---
 # <a name="rowupdated-method-sqlserverresultset"></a>Método rowUpdated (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean rowUpdated()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se a linha foi atualizada visivelmente pelo proprietário ou de outro usuário e as atualizações são detectadas. Caso contrário, **false**.  
+ **true** se a linha tiver sido visivelmente atualizada pelo proprietário ou por outro usuário, e as atualizações forem detectadas. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método rowUpdated é especificado pelo método rowUpdated na interface do resultset.  
+ Esse método de teleupdated é especificado pelo método de isUpdated na interface java. Sql. ResultSet.  
   
  O valor que é retornado dependerá da capacidade do conjunto de resultados de detectar atualizações.  
   

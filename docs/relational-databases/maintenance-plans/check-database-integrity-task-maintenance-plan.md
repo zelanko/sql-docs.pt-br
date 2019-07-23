@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0e2fcdfe89cdcefac03e6a6561e7fa5c7ccccacf
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 68bdea5d7c63f8d4781dadd8250a14f258c0866f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083925"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>Tarefa Verificar Integridade do Banco de Dados (Plano de Manutenção)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

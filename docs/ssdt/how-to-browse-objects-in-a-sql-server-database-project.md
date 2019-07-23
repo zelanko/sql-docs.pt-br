@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5a6443c6-857e-4756-8d87-ae520953335b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 948749635ebec1106d6b950a65c9f6429d01888a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4aff7505035864028f1e50b4e11b8e40490f334d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65103239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898990"
 ---
 # <a name="how-to-browse-objects-in-a-sql-server-database-project"></a>Como fazer: Procurar objetos em um projeto de banco de dados do SQL Server
 O Pesquisador de Objetos do SQL Server no Visual Studio agora contém um nó Projetos dedicado, sob o qual todos os projetos de bancos de dados do SQL Server em sua solução são agrupados em uma hierarquia semelhante à do SQL Server Management Studio.  

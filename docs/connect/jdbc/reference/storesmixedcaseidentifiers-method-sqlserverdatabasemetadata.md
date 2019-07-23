@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a91e5cd6-22b1-464e-aeec-665590737a74
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6455b582fe89fc12d32b52a2c4c1edfc323bdd73
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a1d1a924b913ecffc4baea959053001d7e30c1db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969903"
 ---
 # <a name="storesmixedcaseidentifiers-method-sqlserverdatabasemetadata"></a>Método storesMixedCaseIdentifiers (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean storesMixedCaseIdentifiers()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se os identificadores são armazenados em maiusculas e minúsculas. Caso contrário, **false**.  
+ **true** se os identificadores forem armazenados em maiúsculas e minúsculas. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método storesMixedCaseIdentifiers é especificado pelo método storesMixedCaseIdentifiers na interface DatabaseMetadata.  
+ Esse método storesMixedCaseIdentifiers é especificado pelo método storesMixedCaseIdentifiers na interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

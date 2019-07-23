@@ -1,5 +1,5 @@
 ---
-title: Padrão de tipos de dados do SQL Server | Microsoft Docs
+title: Tipos de dados de SQL Server padrão | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 975fdc643bfd094eee2385ae345aed29ee708841
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 69c138e7eb5d2c4f6dbace0db59ce235e1c0a5f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993663"
 ---
 # <a name="default-sql-server-data-types"></a>Tipos de dados do SQL Server padrão
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

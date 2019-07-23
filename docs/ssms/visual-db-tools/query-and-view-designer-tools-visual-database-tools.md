@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 52c8f9e450998b887b2c5e05cedc8f97c753e932
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: d8a1cbdc010f614c9b3cc72c1d3f9549b00ec8b2
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67687540"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266327"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>Ferramentas do Designer de Consulta e Exibição (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

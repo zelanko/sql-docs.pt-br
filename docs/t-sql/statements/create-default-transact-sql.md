@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 230a87a1138bf2b97ece66246d86a8264341446c
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 0d6b786725dfb50fceb1376fd104a4b5e5afbc76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902854"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ AS constant_expression [ ; ]
  O nome do padrão. Os nomes padrão devem estar em conformidade com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md). Especificar o nome do proprietário do padrão é opcional.  
   
 *constant_expression*  
-Uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) que contém somente valores constantes (não pode incluir os nomes de nenhuma coluna ou outros objetos de banco de dados). Você pode usar qualquer constante, função interna ou expressão matemática, menos aquelas que contêm tipos de dados de alias. As funções definidas pelo usuário não podem ser usadas. Coloque as constantes de caractere e de data entre aspas simples (**'**); as constantes monetárias, de inteiro e de ponto flutuante não exigem aspas. Dados binários devem ser precedidos por 0x e dados monetários por um sinal de dólar ($). O valor padrão deve ser compatível com o tipo de dados de coluna.  
+Uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) que contém somente valores constantes (não pode incluir os nomes de nenhuma coluna ou outros objetos de banco de dados). Você pode usar qualquer constante, função interna ou expressão matemática, menos aquelas que contêm tipos de dados de alias. As funções definidas pelo usuário não podem ser usadas. Coloque as constantes de caractere e de data entre aspas simples ( **'** ); as constantes monetárias, de inteiro e de ponto flutuante não exigem aspas. Dados binários devem ser precedidos por 0x e dados monetários por um sinal de dólar ($). O valor padrão deve ser compatível com o tipo de dados de coluna.  
   
 ## <a name="remarks"></a>Remarks  
  Só é possível criar um nome padrão no banco de dados atual. Dentro de um banco de dados, os nomes padrão devem ser exclusivos por esquema. Quando você criar um padrão, use **sp_bindefault** para associá-lo a uma coluna ou a um tipo de dados de alias.  
@@ -99,7 +98,7 @@ GO
 CREATE DEFAULT phonedflt AS 'unknown';  
 ```  
   
-### <a name="b-binding-a-default"></a>b. Associando um padrão  
+### <a name="b-binding-a-default"></a>B. Associando um padrão  
  O exemplo a seguir associa o padrão criado no exemplo A. O padrão entra em vigor somente se nenhuma entrada for especificada para a coluna `Phone` da tabela `Contact`. 
  
  > [!Note] 

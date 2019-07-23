@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 7adcc36bfaf41240ae5c1da0d8934ffdda67bada
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.openlocfilehash: f0820f42d95f0320dbdf843ab1715b49994cb613
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506513"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68252111"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services com grupos de disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,25 +28,7 @@ ms.locfileid: "59506513"
  O principal benefício de usar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] com fontes de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] é aproveitar réplicas secundárias legíveis como uma fonte de dados de relatório enquanto, ao mesmo tempo, as réplicas secundárias estão fornecendo um failover para um banco de dados primário.  
   
  Para obter informações gerais sobre o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [Perguntas frequentes sobre o Always On do SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768)).  
-  
- **Neste tópico:**  
-  
--   [Requisitos para usar o Reporting Services e os grupos de disponibilidade AlwaysOn](#bkmk_requirements)  
-  
--   [Fontes de dados de relatório e grupos de disponibilidade](#bkmk_reportdatasources)  
-  
--   [Design de relatório e grupos de disponibilidade](#bkmk_reportdesign)  
-  
--   [Bancos de dados do servidor de relatório e grupos de disponibilidade](#bkmk_reportserverdatabases)  
-  
--   -   [Diferenças entre o modo nativo do SharePoint](#bkmk_differences_in_server_mode)  
-  
-    -   [Preparar os bancos de dados do servidor de relatório para grupos de disponibilidade](#bkmk_prepare_databases)  
-  
-    -   [Etapas para concluir a recuperação de bancos de dados do servidor de relatório](#bkmk_steps_to_complete_failover)  
-  
-    -   [Comportamento do servidor de relatório quando ocorre um failover](#bkmk_failover_behavior)  
-  
+
 ##  <a name="bkmk_requirements"></a> Requisitos para usar o Reporting Services e os grupos de disponibilidade AlwaysOn  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e o Servidor de Relatórios do Power BI usa o .Net Framework 4.0 e dá suporte às propriedades de cadeia de conexão do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para uso com fontes de dados.  
   
@@ -61,7 +43,7 @@ ms.locfileid: "59506513"
  Para obter informações sobre outros requisitos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], veja [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] como **RSreportserver.config** não têm suporte como parte da funcionalidade do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Se você fizer alterações manualmente em um arquivo de configuração em um dos servidores de relatórios, precisará atualizar as réplicas manualmente.  
+>  Não há suporte para arquivos de configuração do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] como **RSreportserver.config**, como parte da funcionalidade do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Se você fizer alterações manualmente em um arquivo de configuração em um dos servidores de relatórios, precisará atualizar as réplicas manualmente.  
   
 ##  <a name="bkmk_reportdatasources"></a> Fontes de dados de relatório e grupos de disponibilidade  
  O comportamento de fontes de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] com base no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pode variar, dependendo de como o administrador configurou o ambiente do AG.  
@@ -196,7 +178,7 @@ ms.locfileid: "59506513"
  [Introdução aos Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)   
  [Usando palavras-chave da cadeia de conexão com o SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)   
  [Suporte do SQL Server Native Client à alta disponibilidade e recuperação de desastre](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
- [Sobre Acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
+ [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
   
 

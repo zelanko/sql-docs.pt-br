@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ee0c340ebc917d7ced83b453d1cfd6126ff42f2e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 86bdd12d5dabd7ad74662cd47b2004594328a6c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048143"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ DEFAULT <xml_namespace_uri>
   
 -   O prefixo de namespace XML `xsi` não pode ser redeclarado quando a diretiva ELEMENTS XSINIL está sendo usada na consulta.  
 
--   Não é necessário declarar o 'http://www.w3.org/2001/XMLSchema-instance' para usar o namespace padrão xsi. Ele será implicitamente adicionado pelo processador de XML/XPATH se não for especificado e as expressões xpath poderão usar o prefixo, desde que o esquema 'http://www.w3.org/2001/XMLSchema-instance' seja corretamente declarado no documento xml.
+-   Não é necessário declarar o 'http://www.w3.org/2001/XMLSchema-instance ' para usar o namespace padrão xsi. Ele será implicitamente adicionado pelo processador de XML/XPATH se não for especificado e as expressões xpath poderão usar o prefixo, desde que o esquema 'http://www.w3.org/2001/XMLSchema-instance ' seja corretamente declarado no documento xml.
 
 -   Os valores de cadeia de caracteres URI são codificados de acordo com a página de código de ordenação de banco de dados atual e são convertidos internamente em Unicode.  
   

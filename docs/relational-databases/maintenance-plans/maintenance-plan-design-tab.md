@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e10313d27d7760d05ed79e1fa5d5cd1944009778
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: e4de9bbecbd7c473780d8baa598246f732b0ebcd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215954"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115738"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plano de manutenção (Guia Design)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

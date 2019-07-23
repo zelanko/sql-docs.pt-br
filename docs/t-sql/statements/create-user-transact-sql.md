@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae453fa3cc9d51fae7402469989c3a25fc782e1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db74b6381962d200242f1db912a18404d67ef06a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938892"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -177,7 +176,7 @@ CREATE USER user_name
  Especifica o nome pelo qual o usuário é identificado nesse banco de dados. *user_name* é um **sysname**. Pode ter até 128 caracteres. Ao criar um usuário baseado em uma entidade de segurança do Windows, o nome da entidade de segurança do Windows se tornará o nome do usuário, a menos que outro nome de usuário seja especificado.  
   
  LOGIN *login_name*  
- Especifica o logon para o qual o usuário do banco de dados está sendo criado. *login_name* deve se um logon válido no servidor. Pode ser um logon baseado em uma entidade de segurança do Windows (usuário ou grupo) ou um logon que usa a autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando esse logon do SQL Server entra no banco de dados, ele adquire o nome e a ID do usuário de banco de dados que está sendo criado. Ao criar um logon mapeado de uma entidade de segurança do Windows, use o formato **[**_\<domainName\>_**\\**_\<loginName\>_**]**. Para obter exemplos, veja [Resumo da sintaxe](#SyntaxSummary).  
+ Especifica o logon para o qual o usuário do banco de dados está sendo criado. *login_name* deve se um logon válido no servidor. Pode ser um logon baseado em uma entidade de segurança do Windows (usuário ou grupo) ou um logon que usa a autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando esse logon do SQL Server entra no banco de dados, ele adquire o nome e a ID do usuário de banco de dados que está sendo criado. Ao criar um logon mapeado de uma entidade de segurança do Windows, use o formato **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** . Para obter exemplos, veja [Resumo da sintaxe](#SyntaxSummary).  
   
  Se a instrução CREATE USER for a única em um lote SQL, o Banco de Dados SQL do Windows Azure oferecerá suporte à cláusula WITH LOGIN. Se a instrução CREATE USER não for a única em um lote SQL ou for executada na SQL dinâmica, não haverá suporte para a cláusula WITH LOGIN.  
   
@@ -185,7 +184,7 @@ CREATE USER user_name
  Especifica o primeiro esquema que será pesquisado pelo servidor quando ele resolver os nomes de objetos para esse usuário de banco de dados.  
   
  '*windows_principal*'  
- Especifica a entidade de segurança do Windows para a qual o usuário de banco de dados está sendo criado. A *windows_principal* pode ser um usuário do Windows ou um grupo do Windows. O usuário será criado mesmo que a *windows_principal* não tenha um logon. Ao conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se a *windows_principal* não tiver um logon, a entidade de segurança do Windows deverá autenticar-se no [!INCLUDE[ssDE](../../includes/ssde-md.md)] por meio de associação em um grupo do Windows que tenha um logon, ou a cadeia de conexão deverá especificar o banco de dados contido como o catálogo inicial. Ao criar um usuário com base em uma entidade de segurança do Windows, use o formato **[**_\<domainName\>_**\\**_\<loginName\>_**]**. Para obter exemplos, veja [Resumo da sintaxe](#SyntaxSummary). Os usuários baseados em usuários do Active Directory estão limitados a nomes com menos de 21 caracteres.
+ Especifica a entidade de segurança do Windows para a qual o usuário de banco de dados está sendo criado. A *windows_principal* pode ser um usuário do Windows ou um grupo do Windows. O usuário será criado mesmo que a *windows_principal* não tenha um logon. Ao conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se a *windows_principal* não tiver um logon, a entidade de segurança do Windows deverá autenticar-se no [!INCLUDE[ssDE](../../includes/ssde-md.md)] por meio de associação em um grupo do Windows que tenha um logon, ou a cadeia de conexão deverá especificar o banco de dados contido como o catálogo inicial. Ao criar um usuário com base em uma entidade de segurança do Windows, use o formato **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** . Para obter exemplos, veja [Resumo da sintaxe](#SyntaxSummary). Os usuários baseados em usuários do Active Directory estão limitados a nomes com menos de 21 caracteres.
   
  '*Azure_Active_Directory_principal*'  
  **Aplica-se a**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
@@ -259,7 +258,7 @@ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
   
  A cláusula WITHOUT LOGIN cria um usuário que não é mapeado para um logon do SQL Server. Pode conectar-se a outros bancos de dados como convidado. Podem ser atribuídas permissões a esse usuário sem logon e quando o contexto de segurança for alterado para um usuário sem logon, os usuários originais receberão as permissões do usuário sem logon. Veja o exemplo [D. Criando e usando um usuário sem um logon](#withoutLogin).  
   
- Apenas usuários mapeados para entidades de segurança do Windows podem conter o caractere de barra invertida (**\\**).
+ Apenas usuários mapeados para entidades de segurança do Windows podem conter o caractere de barra invertida ( **\\** ).
   
  CREATE USER não pode ser usado para criar um usuário convidado porque o usuário convidado já existe dentro de todo banco de dados. Você pode ativar o usuário convidado concedendo permissão CONNECT, conforme mostrado:  
   

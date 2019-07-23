@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b92410945bd9d123b103272943a663b87b8adec8
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 0d8baf8700afde2b6534a173a5d81912dbe61a13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045638"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificações de capacidade máxima do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +48,14 @@ ms.locfileid: "57973805"
 |Tamanho do lote||65.536 * Tamanho do pacote de rede|Tamanho do pacote de rede é o tamanho dos pacotes do protocolo TDS usados para comunicação entre aplicativos e o [!INCLUDE[ssDE](../includes/ssde-md.md)]relacional. O tamanho de pacote padrão é 4 KB e é controlado pela opção de configuração tamanho do pacote de rede.|  
 |Bytes por coluna de cadeia de caracteres curta||8,000||  
 |Bytes por GROUP BY, ORDER BY||8,060||  
-|Bytes por chave de índice||900 bytes para um índice clusterizado. 1.700 para um índice não clusterizado.|O número máximo de bytes em qualquer chave de índice clusterizado não pode exceder 900 no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para uma chave de índice não clusterizado, o máximo é 1.700 bytes.<br /><br /> Você pode definir uma chave usando colunas de comprimento variável cujos tamanhos máximos se acumulam até mais do que o limite. No entanto, os tamanhos combinados dos dados nessas colunas nunca pode exceder o limite.<br /><br /> Em um índice não clusterizado, você pode incluir colunas adicionais não chave e não contam em relação ao limite de tamanho da chave. As colunas não chave podem ajudar algumas consultas a ter um melhor desempenho.|  
-|Bytes por chave de índice para tabelas com otimização de memória||2.500 bytes para um índice não clusterizado. Nenhum limite para um índice de hash, desde que todas as chaves de índice caibam em linha.|Em uma tabela com otimização de memória, um índice não clusterizado não pode ter colunas de chave cujos tamanhos máximos de declarados excedem 2.500 bytes. É irrelevante se os dados reais nas colunas de chave são menores que os tamanhos máximos declarados.<br /><br /> Para uma chave de índice de hash, não há um limite fixo no tamanho.<br /><br /> Para índices em tabelas com otimização de memória, não há nenhum conceito de colunas incluídas, pois inerentemente todos os índices abrangem todas as colunas.<br /><br /> Para uma tabela com otimização de memória, mesmo que o tamanho da linha seja 8.060 bytes, algumas colunas de comprimento variável podem ser fisicamente armazenadas fora desses 8.060 bytes. No entanto, os tamanhos máximos declarados de todas as colunas de chave para todos os índices em uma tabela, além de quaisquer colunas de comprimento fixo adicionais, devem caber nos 8.060 bytes.|  
+|Bytes por chave de índice||900 bytes para um índice clusterizado. 1\.700 para um índice não clusterizado.|O número máximo de bytes em qualquer chave de índice clusterizado não pode exceder 900 no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para uma chave de índice não clusterizado, o máximo é 1.700 bytes.<br /><br /> Você pode definir uma chave usando colunas de comprimento variável cujos tamanhos máximos se acumulam até mais do que o limite. No entanto, os tamanhos combinados dos dados nessas colunas nunca pode exceder o limite.<br /><br /> Em um índice não clusterizado, você pode incluir colunas adicionais não chave e não contam em relação ao limite de tamanho da chave. As colunas não chave podem ajudar algumas consultas a ter um melhor desempenho.|  
+|Bytes por chave de índice para tabelas com otimização de memória||2\.500 bytes para um índice não clusterizado. Nenhum limite para um índice de hash, desde que todas as chaves de índice caibam em linha.|Em uma tabela com otimização de memória, um índice não clusterizado não pode ter colunas de chave cujos tamanhos máximos de declarados excedem 2.500 bytes. É irrelevante se os dados reais nas colunas de chave são menores que os tamanhos máximos declarados.<br /><br /> Para uma chave de índice de hash, não há um limite fixo no tamanho.<br /><br /> Para índices em tabelas com otimização de memória, não há nenhum conceito de colunas incluídas, pois inerentemente todos os índices abrangem todas as colunas.<br /><br /> Para uma tabela com otimização de memória, mesmo que o tamanho da linha seja 8.060 bytes, algumas colunas de comprimento variável podem ser fisicamente armazenadas fora desses 8.060 bytes. No entanto, os tamanhos máximos declarados de todas as colunas de chave para todos os índices em uma tabela, além de quaisquer colunas de comprimento fixo adicionais, devem caber nos 8.060 bytes.|  
 |Bytes por chave estrangeira||900||  
 |Bytes por chave primária||900||  
 |Bytes por linha||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte ao armazenamento de estouro de linha, o que permite que colunas de comprimento variável sejam enviadas por push para fora da linha. Somente uma raiz de 24 bytes é armazenada no registro principal para colunas de comprimento variável empurradas para fora da linha; por isso, o limite efetivo de linha é maior que nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para saber mais, confira [Large Row Support](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support) (Suporte de linha grande).|  
 |Bytes por linha em tabelas com otimização de memória||8,060|Começando no [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] , as tabelas com otimização de memória dão suporte ao armazenamento fora da linha. Colunas de comprimento variável são enviadas por push para fora da linha se os tamanhos máximos de todas as colunas na tabela excederem 8.060 bytes. Esta é uma decisão de tempo de compilação. Apenas uma referência de 8 bytes é armazenada na linha para colunas armazenadas fora de linha. Para obter mais informações, consulte [Tamanho da tabela e da linha em tabelas com otimização de memória](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|  
 |Bytes em texto de fonte de um procedimento armazenado||Menor que o tamanho do lote ou 250 MB||  
-|Bytes por coluna **varchar(max)**, **varbinary(max)**, **xml**, **text**ou **image**||2^31-1||  
+|Bytes por coluna **varchar(max)** , **varbinary(max)** , **xml**, **text**ou **image**||2^31-1||  
 |Caracteres por coluna **ntext** ou **nvarchar(max)**||2^30-1||  
 |Índices clusterizados por tabela||1||  
 |Colunas em GROUP BY, ORDER BY||Limitado somente pelo número de bytes||  
@@ -76,7 +75,7 @@ ms.locfileid: "57973805"
 |Arquivos por banco de dados||32,767||  
 |Tamanho de arquivo (dados)||16 terabytes||  
 |Tamanho de arquivo (log)||2 terabytes||  
-|Arquivos de dados para dados com otimização de memória por banco de dados||4.096 no [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)]. As versões posteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não impõem um limite estrito como esse.||  
+|Arquivos de dados para dados com otimização de memória por banco de dados||4\.096 no [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)]. As versões posteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não impõem um limite estrito como esse.||  
 |Arquivo delta por arquivo de dados para dados com otimização de memória||1||  
 |Referências de tabela de chave estrangeira por tabela||Saída = 253. Entrada= 10.000.|Para restrições, consulte [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md).|  
 |Comprimento de identificador (em caracteres)||128||  
