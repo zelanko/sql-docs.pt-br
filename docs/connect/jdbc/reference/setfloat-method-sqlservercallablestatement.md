@@ -1,5 +1,5 @@
 ---
-title: Método setFloat (SQLServerCallableStatement) | Microsoft Docs
+title: Método SetFloat (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 26d861da-bb6a-4197-8b32-13dc7781c2bb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7153706f6428cff7c41ae366085ae3fef7cc8cb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eefde521b4a8dab594b4c42799f1b42e5bf445ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66764449"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213677"
 ---
 # <a name="setfloat-method-sqlservercallablestatement"></a>Método setFloat (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void setFloat(java.lang.String sCol,
   
  *f*  
   
- Um **float** valor.  
+ Um valor **float** .  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

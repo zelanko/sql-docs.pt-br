@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e7045a909af200ee51da89d4309b94b1437fdf99
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cc7cb345bd79ff38d2ed2512a50e1962a68eeada
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111074"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Exibir informações e executar tarefas usando o Replication Monitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ O Replication Monitor fornece as seguintes guias que exibem informações sobre 
   
 1.  Expanda um Grupo do publicador no painel esquerdo e clique em um Publicador.    
 2.  Para exibir informações sobre assinaturas, clique na guia **Lista de Observação da Assinatura** .    
-3.  Selecione o tipo de assinatura a ser exibido da lista suspensa **Mostrar \<Assinaturas <SubscriptionType>**. Para exibir somente as assinaturas em um determinado estado, por exemplo, em sincronização, selecione uma opção da lista suspensa **Mostrar** .    
+3.  Selecione o tipo de assinatura a ser exibido da lista suspensa **Mostrar \<Assinaturas <SubscriptionType>** . Para exibir somente as assinaturas em um determinado estado, por exemplo, em sincronização, selecione uma opção da lista suspensa **Mostrar** .    
 4.  Para exibir e modificar as propriedades da assinatura, clique com o botão direito do mouse na assinatura  e, então, clique em **Propriedades**. Também é possível acessar informações mais detalhadas e executar tarefas nessa guia. 
   
   

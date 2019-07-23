@@ -1,6 +1,6 @@
 ---
 title: Buscando uma única linha com IRow | Microsoft Docs
-description: Buscando uma única linha usando a interface IRow do Driver do OLE DB para SQL Server
+description: Buscando uma única linha usando a interface IRow do driver OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,20 +17,19 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, fetching
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 6e9f48ba7f2472fa215b267c915900d7c616dba0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 542875dc322cd94970c238747db0adb139b9a480
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994287"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>Buscando uma única linha com IRow
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O **IRow** interface implementação no Driver do OLE DB para SQL Server é simplificado para aumentar o desempenho. **IRow** permite o acesso direto a colunas de um único objeto de linha. Se você souber com antecedência que o resultado de uma execução de comando produzirá exatamente uma linha, **IRow** recuperará as colunas da linha. Se o conjunto de resultados incluir várias linhas, **IRow** exporá apenas a primeira linha.  
+  A implementação da interface **IRow** no driver OLE DB para SQL Server é simplificada para aumentar o desempenho. **IRow** permite o acesso direto a colunas de um único objeto de linha. Se você souber com antecedência que o resultado de uma execução de comando produzirá exatamente uma linha, **IRow** recuperará as colunas da linha. Se o conjunto de resultados incluir várias linhas, **IRow** exporá apenas a primeira linha.  
   
  A implementação de **IRow** não permite nenhuma navegação da linha. Todas as colunas na linha são acessadas apenas uma vez com uma exceção: uma coluna pode ser acessada uma vez para localizar o tamanho da coluna e novamente para buscar os dados.  
   

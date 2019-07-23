@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 70a595b13bde3f013e07af02d0599b240a7bdbfc
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 15f7c220cbf167c91e052c18d61b2c0c579ea63e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065555"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>Permissões de grupo de disponibilidade GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +51,8 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  *permission*  
  Especifica uma permissão que pode ser concedida em um grupo de disponibilidade. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
- ON AVAILABILITY GROUP **::**_availability_group_name_  
- Especifica o grupo de disponibilidade no qual a permissão está sendo concedida. O qualificador de escopo (**::**) é obrigatório.  
+ ON AVAILABILITY GROUP **::** _availability_group_name_  
+ Especifica o grupo de disponibilidade no qual a permissão está sendo concedida. O qualificador de escopo ( **::** ) é obrigatório.  
   
  TO \<server_principal>  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao qual a permissão está sendo concedida.  
@@ -107,7 +106,7 @@ GRANT VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;
 GO  
 ```  
   
-### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>b. Concedendo a permissão TAKE OWNERSHIP com GRANT OPTION  
+### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. Concedendo a permissão TAKE OWNERSHIP com GRANT OPTION  
  O exemplo a seguir concede a permissão `TAKE OWNERSHIP` no grupo de disponibilidade `MyAg` para o usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` com `GRANT OPTION`.  
   
 ```  

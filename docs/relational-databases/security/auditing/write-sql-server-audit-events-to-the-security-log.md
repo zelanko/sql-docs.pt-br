@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 53f613bd2a791eb210d908e3e84f8f09098db977
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c998b4d5ed5988d5a5e2a01bf0cbd611157f665
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62715873"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095097"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Gravar eventos de auditoria do SQL Server no log de segurança  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ A política de auditoria do Windows poderá afetar a auditoria do [!INCLUDE[ssNo
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
- Os administradores do computador com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devem entender que as configurações locais do log de segurança podem ser substituídas por uma política de domínio. Nesse caso, a política de domínio poderá substituir a configuração de subcategoria (**auditpol /get /subcategory:"application generated"**). Isso pode afetar a capacidade do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de registrar eventos em log, sem que haja uma maneira de detectar que os eventos que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está tentando auditar não serão registrados.  
+ Os administradores do computador com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devem entender que as configurações locais do log de segurança podem ser substituídas por uma política de domínio. Nesse caso, a política de domínio poderá substituir a configuração de subcategoria (**auditpol /get /subcategory:"application generated"** ). Isso pode afetar a capacidade do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de registrar eventos em log, sem que haja uma maneira de detectar que os eventos que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está tentando auditar não serão registrados.  
   
 ###  <a name="Security"></a> Segurança  
   

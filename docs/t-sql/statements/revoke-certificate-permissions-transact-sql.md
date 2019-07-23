@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 4cd2c67c8dd24a7e6a39a98285235090017adb1e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: fc7a59b36d7fce90315833baf8461a1860be2a64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140913"
 ---
 # <a name="revoke-certificate-permissions-transact-sql"></a>Permissões de certificado REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Especifica uma permissão que pode ser revogada em um certificado. Listada abaixo.  
   
- ON CERTIFICATE **::**_certificate_name_  
+ ON CERTIFICATE **::** _certificate_name_  
  Especifica o certificado no qual a permissão está sendo revogada. O qualificador de escopo "::" é obrigatório.  
   
  *database_principal*  

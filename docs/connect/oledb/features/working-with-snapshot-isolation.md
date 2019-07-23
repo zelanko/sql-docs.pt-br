@@ -1,6 +1,6 @@
 ---
 title: Trabalhando com isolamento de instantâneo | Microsoft Docs
-description: Trabalhando com isolamento de instantâneo no Driver do OLE DB para SQL Server
+description: Trabalhando com isolamento de instantâneo no driver OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,13 +21,12 @@ helpviewer_keywords:
 - SQLSetConnectAttr function
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 74c80e0db7a6059e9a871553f2e11c6a16360ec3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 25d3dbaf09e5cdd6dc6726402275376766cf0591
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988693"
 ---
 # <a name="working-with-snapshot-isolation"></a>Trabalhando com isolamento de instantâneo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,13 +35,13 @@ ms.locfileid: "66796021"
 
   O [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduziu um novo nível de isolamento de "instantâneo" cujo objeto é aumentar a simultaneidade para aplicativos OLTP (online transaction processing). Nas versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a simultaneidade baseava-se apenas no bloqueio, o que pode causar problemas de bloqueio e de deadlock em alguns aplicativos. O isolamento de instantâneo depende de aprimoramentos no controle de versão de linha e seu objetivo é melhorar o desempenho evitando cenários de bloqueio de leitor/gravador.  
   
- As transações que iniciam com o isolamento de instantâneo leem um instantâneo de banco de dados a partir da hora em que a transação inicia. Os cursores de servidor de conjunto de chaves, dinâmicos e estáticos, abertos em um contexto de transação de instantâneo, comportam-se como os cursores estáticos que foram abertos em transações serializáveis. No entanto, quando os cursores são abertos com os bloqueios de nível de isolamento de instantâneo não são usados. Esse fato pode reduzir o bloqueio no servidor.  
+ As transações que iniciam com o isolamento de instantâneo leem um instantâneo de banco de dados a partir da hora em que a transação inicia. Os cursores de servidor de conjunto de chaves, dinâmicos e estáticos, abertos em um contexto de transação de instantâneo, comportam-se como os cursores estáticos que foram abertos em transações serializáveis. No entanto, quando os cursores são abertos nos bloqueios do nível de isolamento de instantâneo não são obtidos. Esse fato pode reduzir o bloqueio no servidor.  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server  
- O Driver do OLE DB para SQL Server tem aprimoramentos que aproveitam o isolamento de instantâneo introduzido no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Esses aprimoramentos incluem alterações aos conjuntos de propriedades DBPROPSET_DATASOURCEINFO e DBPROPSET_SESSION.  
+ O driver OLE DB para SQL Server tem aprimoramentos que aproveitam o isolamento de instantâneo introduzido no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Esses aprimoramentos incluem alterações aos conjuntos de propriedades DBPROPSET_DATASOURCEINFO e DBPROPSET_SESSION.  
   
 ### <a name="dbpropsetdatasourceinfo"></a>DBPROPSET_DATASOURCEINFO  
- O conjunto de propriedades DBPROPSET_DATASOURCEINFO tem sido alterado para indicar que o nível de isolamento de instantâneo é suportado pela adição do valor DBPROPVAL_TI_SNAPSHOT usado na propriedade DBPROP_SUPPORTEDTXNISOLEVELS. Esse novo valor indica que haverá suporte para o nível de isolamento do instantâneo se o controle de versão tiver sido ou não habilitado no banco de dados. A tabela a seguir lista os valores DBPROP_SUPPORTEDTXNISOLEVELS:  
+ O conjunto de propriedades DBPROPSET_DATASOURCEINFO tem sido alterado para indicar que o nível de isolamento de instantâneo é suportado pela adição do valor DBPROPVAL_TI_SNAPSHOT usado na propriedade DBPROP_SUPPORTEDTXNISOLEVELS. Esse novo valor indica que haverá suporte para o nível de isolamento do instantâneo se o controle de versão tiver sido ou não habilitado no banco de dados. A tabela a seguir lista os valores de DBPROP_SUPPORTEDTXNISOLEVELS:  
   
 |ID da propriedade|Descrição|  
 |-----------------|-----------------|  
@@ -58,7 +57,7 @@ ms.locfileid: "66796021"
 > [!NOTE]  
 >  Os erros DB_S_ERRORSOCCURRED ou DB_E_ERRORSOCCURRED ocorrerão se DBPROPVAL_TI_SNAPSHOT for definido durante o uso de versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
- Para obter informações sobre o suporte do isolamento de instantâneo em transações, consulte [que dão suporte a transações locais](../../oledb/ole-db-transactions/supporting-local-transactions.md).  
+ Para obter informações sobre como o isolamento de instantâneo tem suporte em transações, consulte [dando suporte a transações locais](../../oledb/ole-db-transactions/supporting-local-transactions.md).  
 
   
 ## <a name="see-also"></a>Consulte Também  

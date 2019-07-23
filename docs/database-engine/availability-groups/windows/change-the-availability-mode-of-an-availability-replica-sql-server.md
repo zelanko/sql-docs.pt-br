@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4da8f25-fb1b-45a4-8bf2-195df6df634c
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: ec2015fd96f523054ca48e2ba78f410594c0b2ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c17beebfd689e5e768450d92353b87f8fcfa1ae2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66772692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988593"
 ---
 # <a name="change-the-availability-mode-of-a-replica-within-an-always-on-availability-group"></a>Alterar o modo de disponibilidade de uma réplica dentro de um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

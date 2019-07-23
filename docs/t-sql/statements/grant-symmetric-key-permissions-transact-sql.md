@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d105d91926c123670f63102d4b7dbb31a4b2ecc7
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: a7c592af7f2971cc637c9049b8ca06a92a2f3c05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050771"
 ---
 # <a name="grant-symmetric-key-permissions-transact-sql"></a>Permissões de chave simétrica GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

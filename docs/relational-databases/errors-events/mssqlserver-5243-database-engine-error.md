@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e04a1934-e57d-420e-ac79-97071745824e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8919457cb10ae9feaa7e1c82eed5a73860fd6d42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19fd1351963a578d83e8cf67a48c6f97dcd96afe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078865"
 ---
 # <a name="mssqlserver5243"></a>MSSQLSERVER_5243
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,8 +46,8 @@ Restaure do backup. Se o problema não estiver relacionado ao hardware e um back
 
 Execute DBCC CHECKDB Se nenhum backup limpo estiver disponível, execute DBCC CHECKDB sem a cláusula REPAIR para determinar a extensão do dano. DBCC CHECKDB recomendará uma cláusula REPAIR para ser usada. Execute DBCC CHECKDB com a cláusula REPAIR apropriada para reparar o dano.
 
-> **não há suporte para a marca de alerta!**
->  **não há suporte para a marca de alerta!**
+> **não há suporte para a marca de alerta!** 
+>  **não há suporte para a marca de alerta!** 
 >  **não há suporte para a marca de alerta!**
 
 Se a execução de DBCC CHECKDB com uma das cláusulas REPAIR não corrigir o problema, contate seu provedor de suporte.

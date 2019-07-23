@@ -1,6 +1,6 @@
 ---
 title: Executar o procedimento armazenado com ODBC CALL e a saída do processo | Microsoft Docs
-description: Processar códigos de retorno e parâmetros de saída usando o Driver do OLE DB para SQL Server
+description: Processar códigos de retorno e parâmetros de saída usando OLE DB driver para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 - ODBC CALL syntax
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 2985c343d7e7b330197ed5c0e3b7aeff1284d279
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c8b591cf2c903bb974af613dec17269c2d9f10fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015628"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Executar o procedimento armazenado com ODBC CALL e a saída do processo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,13 +36,13 @@ ms.locfileid: "66791255"
   
 2.  Crie um conjunto de associações (um para cada criador de parâmetro) usando uma matriz de estrutura DBBINDING.  
   
-3.  Criar um acessador para os parâmetros definidos usando o **IAccessor:: CreateAccessor** método. **CreateAccessor** cria um acessador com base em um conjunto de associações.  
+3.  Crie um acessador para os parâmetros definidos usando o método **IAccessor::** createaccesser. **CreateAccessor** cria um acessador com base em um conjunto de associações.  
   
 4.  Preencha a estrutura DBPARAMS.  
   
 5.  Chame o comando **Execute** (neste caso, uma chamada a um procedimento armazenado).  
   
-6.  Processar o conjunto de linhas e liberá-lo usando o **IRowset:: Release** método.  
+6.  Processe o conjunto de linhas e libere-o usando o método **IRowset:: Release** .  
   
 7.  Processe os valores de código de retorno e de parâmetro de saída recebidos do procedimento armazenado.  
   

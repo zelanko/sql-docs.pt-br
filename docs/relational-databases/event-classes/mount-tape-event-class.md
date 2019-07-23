@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42d3a15f611f56d6b8a3bb81511be036b09c7f52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7742b42395ced53ecbe479a463a41c640cf0d395
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116114"
 ---
 # <a name="mount-tape-event-class"></a>classe de evento Mount Tape
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,8 +33,8 @@ ms.locfileid: "47697589"
 |DatabaseName|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |Duração|**bigint**|Período de tempo (em microssegundos) utilizado pelo evento.|13|Sim|  
 |EndTime|**datetime**|Para eventos de Solicitação de Montagem, o tempo limite da montagem, se houver um tempo-limite; caso contrário, o tempo do evento em si (em tais casos,  StartTime indica o tempo da solicitação de montagem correspondente).|15|Sim|  
-|EventClass|**int**|Tipo de evento = 195.|27|não|  
-|EventSequence|**int**|A sequência de um evento especificado na solicitação.|51|não|  
+|EventClass|**int**|Tipo de evento = 195.|27|Não|  
+|EventSequence|**int**|A sequência de um evento especificado na solicitação.|51|Não|  
 |EventSubClass|**int**|Tipo de subclasse de evento.<br /><br /> 1 = Solicitação de montagem de fita<br /><br /> 2 = Montagem de fita completa<br /><br /> 3 = Montagem de fita cancelada|21|Sim|  
 |GroupID|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
@@ -43,7 +42,7 @@ ms.locfileid: "47697589"
 |LoginName|**nvarchar**|Nome de logon do usuário (logon de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou as credenciais de logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows no formato DOMAIN\\*username*).|11|Sim|  
 |NTDomainName|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |NTUserName|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
-|ServerName|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|não|  
+|ServerName|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |SessionLoginName|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |SPID|**int**|ID da sessão em que o evento ocorreu.|12|Sim|  
 |StartTime|**datetime**|Hora de início do evento, se disponível.|14|Sim|  

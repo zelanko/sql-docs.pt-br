@@ -19,11 +19,11 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 4af50c6df7ef8ea451f38a038d19e39491604308
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516552"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68231669"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Atualizando bancos de dados usando o Assistente de Ajuste de Consulta
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -161,7 +161,7 @@ O QTA é um recurso baseado em sessão que armazena o estado de sessão no esque
 
         A lista contém as seguintes informações:
         -  **ID da Consulta** 
-        -  **Texto da Consulta**: instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que pode ser expandida clicando no botão **...**.
+        -  **Texto da Consulta**: instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que pode ser expandida clicando no botão **...** .
         -  **Execuções**: exibe o número de execuções dessa consulta para toda a coleção da carga de trabalho.
         -  **Métrica de Linha de Base**: a métrica selecionada (Duração ou CpuTime) em ms para a coleta de dados de linha de base antes da atualização de compatibilidade do banco de dados.
         -  **Métrica Observada**: a métrica selecionada (Duração ou CpuTime) em ms para a coleta de dados após a atualização de compatibilidade do banco de dados.
@@ -183,7 +183,7 @@ O QTA é um recurso baseado em sessão que armazena o estado de sessão no esque
 
     A lista contém as seguintes informações:
     -  **ID da Consulta** 
-    -  **Texto da Consulta**: instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que pode ser expandida clicando no botão **...**.
+    -  **Texto da Consulta**: instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que pode ser expandida clicando no botão **...** .
     -  **Status**: exibe o estado atual de experimentação para a consulta.
     -  **Métrica de Linha de Base**: a métrica selecionada (Duração ou CpuTime) em ms para a consulta executada na **Subetapa 3 da Etapa 2**, que representa a consulta regredida após a atualização de compatibilidade do banco de dados.
     -  **Métrica Observada**: a métrica selecionada (Duração ou CpuTime) em ms para a consulta após a experimentação, para uma otimização suficientemente boa.

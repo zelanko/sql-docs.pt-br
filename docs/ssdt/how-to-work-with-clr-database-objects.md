@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9e0abe651d44c045f3ab92c5388aa740216cff0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a8ea668f0672a40e8af6fbb81bbce469652eeb54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119885"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>Como fazer: Trabalhar com objetos de banco de dados CLR
 Além da linguagem de programação Transact\-SQL, você pode usar as linguagens .NET Framework para criar objetos de banco de dados que recuperam e atualizam dados. Objetos de banco de dados que são gravados em código gerenciado são chamados objetos de banco de dados CLR (Common Language Runtime) do SQL Server. Para obter uma explicação das vantagens de usar objetos de banco de dados CLR hospedados no SQL Server e também para saber como escolher entre o Transact\-SQL e o CLR, confira [Vantagens da integração CLR](../relational-databases/clr-integration/clr-integration-overview.md) e [Vantagens de usar código gerenciado para criar objetos de bancos de dados](https://msdn.microsoft.com/library/k2e1fb36.aspx).  

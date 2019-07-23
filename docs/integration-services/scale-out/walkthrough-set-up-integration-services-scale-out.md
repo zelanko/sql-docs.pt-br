@@ -10,13 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
-manager: craigg
-ms.openlocfilehash: 001172611503dbff0275448833d05b06aa22512e
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: d3b6ea9f53a54b7f02042b85781bc8fe24028a69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896131"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Passo a passo: Configurar o Integration Services (SSIS) Scale Out
 

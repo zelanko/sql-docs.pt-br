@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 40350310858415cd7e5451bbd2f99e9d00ddbf4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d891c38cecd1132fc5b3779c082a69c72e407b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991145"
 ---
 # <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>Página Conectar-se às Réplicas Secundárias Existentes – Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

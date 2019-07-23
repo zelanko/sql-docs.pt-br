@@ -1,5 +1,5 @@
 ---
-title: Método para entrada de fluxo - longa setBinaryStream | Microsoft Docs
+title: Método setBinaryStream para entrada de fluxo-longo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d59c7327-c9dc-4e4f-9dff-19e1a3c62eb2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 65c4a60dbd9dd4d7f0d3ffd59897262679b9a656
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 32d909e721e38ac2a459188e31236e43398a28de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975163"
 ---
 # <a name="setbinarystream-method-javalangstring-javaioinputstream-long"></a>Método setBinaryStream (java.lang.String, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public void setBinaryStream(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setBinaryStream é especificado pelo método setBinaryStream na interface do CallableStatement.  
+ Esse método setBinaryStream é especificado pelo método setBinaryStream na interface java. Sql. CallableStatement.  
   
  Se o comprimento do fluxo for diferente do especificado no parâmetro *length*, o driver JDBC lançará uma exceção quando a linha for atualizada ou inserida.  
   

@@ -14,12 +14,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 3d7a1d96603168560c55b78fb05b5546e8674c7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d458e7696719c383b03a5cc3f259de08e4b8c37
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65805391"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262778"
 ---
 # <a name="upgrade-integration-services-packages"></a>Atualizar pacotes do Integration Services
 

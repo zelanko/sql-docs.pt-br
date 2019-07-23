@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 3c082177-a2b1-4fde-8833-b49b2a351815
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ba48569633363dc7a1714bb036f40abcc0249160
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b920803c317920c6336dbdde0990b4ad511cccb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984592"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>Criando e definindo testes de unidade do SQL Server
 Você pode executar testes de unidade do SQL Server para verificar se as alterações feitas em um ou mais objetos de banco de dados de um esquema interromperam a funcionalidade existente em um aplicativo de banco de dados. Esses testes complementam os testes de unidade criados pelos desenvolvedores de software. Você deve executar os dois tipos de teste para verificar o comportamento do aplicativo.  

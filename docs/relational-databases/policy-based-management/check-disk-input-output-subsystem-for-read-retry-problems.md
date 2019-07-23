@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cedf4097-5b73-4964-9935-74a101847019
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: aa5de132741edb085dd944be34e93997456ddecc
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 1540314e6dfe9370cd11b7638e003b5e230c32d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109930"
 ---
 # <a name="check-disk-input-output-subsystem-for-read-retry-problems"></a>Verificar o subsistema de entrada e saída de disco para problemas de repetição de leitura
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

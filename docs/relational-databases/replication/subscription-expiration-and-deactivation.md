@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30636d3dca44e93b67d67d330dbabd04d6feb4ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90163caba595936f5c9ef9854b8e1f0af2890673
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820384"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129838"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Validade e desativação de assinatura
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ ms.locfileid: "47820384"
   
     -   A replicação não poderá limpar os metadados na publicação e nos bancos de dados de assinatura antes de o período de retenção ser atingido. Cuidado ao especificar um valor alto para o período de retenção, pois poderá impactar negativamente o desempenho da replicação. Recomendamos que use uma definição mais baixa se puder prevenir com certeza que todos os Assinantes sincronizarão normalmente dentro daquele período de tempo.  
   
-    -   É possível especificar para que as assinaturas nunca expirem (um valor de 0 para a **@retention**), mas recomendamos não usar este valor, pois os metadados não poderão ser limpos.  
+    -   É possível especificar para que as assinaturas nunca expirem (um valor de 0 para a **@retention** ), mas recomendamos não usar este valor, pois os metadados não poderão ser limpos.  
   
 -   O período de retenção para qualquer republicador deve ser definido com um valor igual ou inferior ao período de retenção definido no Publicador original. Você também deve usar os mesmos valores de retenção da publicação para todos os Publicadores e seus parceiros de sincronização alternativos. O uso de valores diferentes pode levar a uma não convergência. Se precisar alterar o valor de retenção da publicação, reinicialize o Assinante para evitar a não convergência de dados.  
   

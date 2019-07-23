@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6b82f300-f906-4d11-b810-525bda4a88ee
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 95a9dd888224720874e57bc74d39bec441190e6b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 73cbbaf8d1a3b3e6bc5e5ba7cd4b43df01c0f7f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969599"
 ---
 # <a name="supportscoresqlgrammar-method-sqlserverdatabasemetadata"></a>Método supportsCoreSQLGrammar (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsCoreSQLGrammar()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se houver suporte. Caso contrário, **false**.  
+ **true** se houver suporte. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método supportsCoreSQLGrammer é especificado pelo método supportsCoreSQLGrammer na interface DatabaseMetadata.  
+ Esse método supportsCoreSQLGrammer é especificado pelo método supportsCoreSQLGrammer na interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

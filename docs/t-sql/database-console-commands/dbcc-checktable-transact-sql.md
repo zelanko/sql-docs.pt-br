@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: c3c8e4e2617e3bf1cd7f5f3627aab0c9a4cf0be4
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: bf9207498575a52c5d9c2c1a6076110260c1f588
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685443"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102009"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -120,7 +119,7 @@ O uso da opção PHYSICAL_ONLY pode provocar um tempo de execução muito mais c
 DATA_PURITY  
  Faz com que o DBCC CHECKTABLE verifique valores de colunas na tabela que não são válidos ou estão fora do intervalo. Por exemplo, o DBCC CHECKDB detecta colunas com valores de data e hora que são maiores ou menores do que o intervalo aceitável para o tipo de dados **datetime** ou **decimal** ou colunas de tipo de dados numérico aproximado com valores de escala ou de precisão que não são válidos.  
  Verificações de integridade de valor de coluna são habilitadas por padrão e não exigem a opção DATA_PURITY. Para bancos de dados atualizados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é possível usar DBCC CHECKTABLE WITH DATA_PURITY para localizar e corrigir erros em uma tabela específica. No entanto verificações de valores de colunas na tabela não são habilitadas por padrão até que o DBCC CHECKDB WITH DATA_PURITY tenha sido executado sem erros no banco de dados. Depois disto, por padrão, DBCC CHECKDB e DBCC CHECKTABLE verificam a integridade de valores de colunas.  
- Erros de validação relatados por essa opção não podem ser corrigidos usando opções de reparo de DBCC. Para obter informações sobre como corrigir esses erros manualmente, consulte o artigo 923247 da Base de Dados de Conhecimento: [Solução de problemas do erro 2570 do DBCC no SQL Server 2005 e versões posteriores](https://support.microsoft.com/kb/923247).  
+ Erros de validação relatados por essa opção não podem ser corrigidos usando opções de reparo de DBCC. Para obter informações sobre como corrigir esses erros manualmente, confira o artigo 923247 da Base de Dados de Conhecimento: [Solução de problemas do erro 2570 do DBCC no SQL Server 2005 e versões posteriores](https://support.microsoft.com/kb/923247).  
  Se PHYSICAL_ONLY estiver especificado, não serão executadas verificações de integridade de colunas.  
     
 MAXDOP  
@@ -230,7 +229,7 @@ DBCC CHECKTABLE ('HumanResources.Employee');
 GO    
 ```    
     
-### <a name="b-performing-a-low-overhead-check-of-the-table"></a>b. Executando uma verificação de sobrecarga baixa da tabela    
+### <a name="b-performing-a-low-overhead-check-of-the-table"></a>B. Executando uma verificação de sobrecarga baixa da tabela    
  O exemplo a seguir executa uma verificação de sobrecarga baixa da tabela `Employee` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].    
     
 ```sql    

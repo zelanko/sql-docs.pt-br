@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 116cd6a5-32ac-4273-81a2-d184408e0f07
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e8370c989cb442de305c57e239beaff827bef37f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1813cb8f1790fc7383b4eb2fac747cb3efdcb290
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021284"
 ---
 # <a name="publishers"></a>Publicadores
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47701164"
   
 ## <a name="options"></a>Opções  
  **Publicadores**  
- Selecione os servidores que têm permissão para usar esse Distribuidor. Clique no botão de propriedades (**...**) próximo ao Publicador para exibir e definir propriedades adicionais.  
+ Selecione os servidores que têm permissão para usar esse Distribuidor. Clique no botão de propriedades ( **...** ) próximo ao Publicador para exibir e definir propriedades adicionais.  
   
  **Adicionar**  
  Se o servidor que você deseja permitir não estiver na lista, clique em **Adicionar** para adicionar um Editor [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um Editor Oracle à lista de Publicadores disponíveis.  

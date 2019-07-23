@@ -31,14 +31,13 @@ helpviewer_keywords:
 ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5611d597145d784905ead0565bd6230b727fea0e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f469222ff5d511447574c1bfb1e0bc2500cfae6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017097"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125966"
 ---
 # <a name="constants-transact-sql"></a>Constantes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +66,7 @@ As cadeias de caracteres vazias são representadas como duas aspas simples sem n
 As constantes de cadeia de caracteres oferecem suporte a ordenações avançadas.
   
 > [!NOTE]  
->  As constantes de caractere maiores que 8.000 bytes são tipadas como dados **varchar(max)**.  
+>  As constantes de caractere maiores que 8.000 bytes são tipadas como dados **varchar(max)** .  
   
 ## <a name="unicode-strings"></a>Cadeias de caracteres Unicode
 As cadeias de caracteres Unicode têm um formato semelhante ao das cadeias de caracteres, mas são precedidas por um identificador N (N significa National Language no padrão SQL-92). O prefixo N deve ser maiúsculo. Por exemplo, 'Michél' é uma constante de caracteres, enquanto N'Michél' é uma constante Unicode. As constantes Unicode são interpretadas como dados Unicode e não são avaliadas com o uso de uma página de código. As constantes Unicode têm uma ordenação. Esse ordenação controla principalmente comparações e diferenciação de maiúsculas e minúsculas. Às constantes Unicode é atribuída a ordenação padrão do banco de dados atual, a menos que a cláusula COLLATE seja usada para especificar uma ordenação. Os dados Unicode são armazenados usando 2 bytes por caractere, em vez de 1 byte por caractere para dados de caractere. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
@@ -75,7 +74,7 @@ As cadeias de caracteres Unicode têm um formato semelhante ao das cadeias de ca
 As constantes da cadeira de caracteres Unicode oferecem suporte a ordenações avançados.
   
 > [!NOTE]  
->  As constantes Unicode maiores que 8.000 bytes são tipadas como dados **nvarchar(max)**.  
+>  As constantes Unicode maiores que 8.000 bytes são tipadas como dados **nvarchar(max)** .  
   
 ## <a name="binary-constants"></a>Constantes binárias
 As constantes binárias têm o prefixo `0x` e são uma cadeia de números hexadecimais. Elas não são incluídas entre aspas.
@@ -90,7 +89,7 @@ Os seguintes são exemplos de cadeias binárias:
 ```  
   
 > [!NOTE]  
->  As constantes binárias maiores que 8.000 bytes são tipadas como dados **varbinary(max)**.  
+>  As constantes binárias maiores que 8.000 bytes são tipadas como dados **varbinary(max)** .  
   
 ## <a name="bit-constants"></a>Constantes bit
 As constantes **bit** são representadas pelos números 0 ou 1 e não são incluídas entre aspas. Se um número maior que um for usado, ele será convertido em um.

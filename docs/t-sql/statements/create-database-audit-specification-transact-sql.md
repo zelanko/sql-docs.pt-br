@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f691bd99036ea6b27f9f20cd53e8d6bc72312224
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e1340fd34fe452babf96a3bcd7fcd205a0aa85b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060995"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +119,7 @@ WITH (STATE = ON) ;
 GO  
 ``` 
 
-### <a name="b-audit-any-dml-insert-update-or-delete-on-all-objects-in-the-sales-schema-for-a-specific-database-role"></a>b. Faça a auditoria de qualquer DML (INSERT, UPDATE ou DELETE) em _todos_ os objetos no esquema _vendas_ para uma função de banco de dados específica  
+### <a name="b-audit-any-dml-insert-update-or-delete-on-all-objects-in-the-sales-schema-for-a-specific-database-role"></a>B. Faça a auditoria de qualquer DML (INSERT, UPDATE ou DELETE) em _todos_ os objetos no esquema _vendas_ para uma função de banco de dados específica  
  O exemplo a seguir cria uma auditoria de servidor denominada `DataModification_Security_Audit` e, em seguida, uma especificação de auditoria de banco de dados chamada `Audit_Data_Modification_On_All_Sales_Tables` que audita instruções `INSERT`, `UPDATE` e `DELETE` por usuários em uma nova função de banco de dados `SalesUK`, para todos os objetos no esquema `Sales` no banco de dados `AdventureWorks2012`.  
   
 ```  

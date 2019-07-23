@@ -1,5 +1,5 @@
 ---
-title: Método (lang, longo) updateLong | Microsoft Docs
+title: Método updateLong (Java. lang. String, Long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f6003706-35de-42b1-8f23-899a388adb5b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 09cc448d45256cd09e66a3548f6e93d886500194
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 932035288f74c582620108db697cb898c59159bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999168"
 ---
 # <a name="updatelong-method-javalangstring-long"></a>Método updateLong (java.lang.String, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void updateLong(java.lang.String columnName,
   
  *x*  
   
- Um **longo** valor.  
+ Um valor **longo** .  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -52,7 +51,7 @@ public void updateLong(java.lang.String columnName,
  Esse método updateLong é especificado pelo método updateLong na interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método updateLong &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatelong-method-sqlserverresultset.md)   
+ [Método &#40;updateLong SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatelong-method-sqlserverresultset.md)   
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

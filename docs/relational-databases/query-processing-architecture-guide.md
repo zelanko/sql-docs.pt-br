@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 40dac2df410456b0f3db7aff931e523fe350960b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 309d97c52130eeb3477952cb70446c20787351cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929809"
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -334,7 +333,7 @@ O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
   * Predicados de critérios de pesquisa na cláusula WHERE
   * Operações de união
   * Funções de agregação
-  * Cláusulas`GROUP BY` 
+  * Cláusulas`GROUP BY`
   * Referências de tabela
 * O custo estimado do uso do índice é o custo mais baixo de qualquer mecanismo de acesso considerado pelo otimizador de consulta. 
 * Toda tabela referenciada na consulta (diretamente ou ao expandir uma exibição para acessar suas tabelas subjacentes) que corresponde a uma referência de tabela na exibição indexada deve ter o mesmo conjunto de dicas aplicado na consulta.
@@ -753,7 +752,7 @@ Os constructos que inibem o paralelismo incluem:
 >   Para saber mais sobre cursores, confira [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
 > - **Consultas recursivas**    
 >   Para saber mais sobre recursão, confira [Guidelines for Defining and Using Recursive Common Table Expressions ](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) (Diretrizes para definir e usar Expressões de Tabela Comum Recursivas) e [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx) (Recursão em T-SQL).
-> - **TVFs (Funções com valor de tabela)**    
+> - **TVFs (Funções com valor de tabela)**     
 >   Para saber mais sobre TVFs, confira [Criar funções definidas pelo usuário (Mecanismo de Banco de Dados)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 > - **Palavra-chave TOP**    
 >   Para saber mais, confira [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).

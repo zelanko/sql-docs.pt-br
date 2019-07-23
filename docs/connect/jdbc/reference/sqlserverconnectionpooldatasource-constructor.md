@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0f5d1ee5-7996-4e20-956e-fe72cb64a588
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 902d74a808e24db3f8291b32e89c9cd908c0fee5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9799379cc9121511c0927b56d808d27dda0c18c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971605"
 ---
 # <a name="sqlserverconnectionpooldatasource-constructor-"></a>Construtor SQLServerConnectionPoolDataSource ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

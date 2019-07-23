@@ -17,27 +17,26 @@ helpviewer_keywords:
 - multiple-rowset results
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 29504408c66cb5bada0e180eeda8f41834e10288
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5374e1ccd1024993369091b431a025676bccf1f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016060"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Comandos que geram resultados de vários conjuntos de linhas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O Driver do OLE DB para SQL Server pode retornar vários conjuntos de linhas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instruções. As instruções do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] retornam resultados de vários conjuntos de linhas nas seguintes condições:  
+  O driver OLE DB para SQL Server pode retornar vários conjuntos de linhas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de instruções. As instruções do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] retornam resultados de vários conjuntos de linhas nas seguintes condições:  
   
 -   Instruções SQL processadas em lotes são enviadas como um único comando.  
   
 -   Os procedimentos armazenados implementam um lote de instruções SQL.  
   
 ## <a name="batches"></a>Lotes  
- O Driver do OLE DB para SQL Server reconhece o caractere de ponto e vírgula como delimitador de lote para instruções SQL:  
+ O driver OLE DB para SQL Server reconhece o caractere ponto e vírgula como um delimitador de lote para instruções SQL:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

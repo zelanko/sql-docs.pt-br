@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 07cf3d71690dd7f7b493970b62ac0130a8530b16
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 4593a57ab3d6b0c4b5cfff067c0f34b87f50796c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558553"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137319"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiar bancos de dados com backup e restauração
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ Algumas considerações adicionais que podem afetar esse processo:
  O nome de banco de dados que é fornecido explicitamente ao restaurar um banco de dados é usado, automaticamente, como o nome do novo banco de dados. Como o nome do banco de dados ainda não existe, é criado um novo usando os arquivos no backup.  
   
 ## <a name="when-upgrading-a-database-by-using-restore"></a>Ao atualizar um banco de dados usando a restauração  
- Ao restaurar backups de uma versão anterior, é útil saber com antecedência se o caminho (unidade e diretório) de cada catálogo de texto completo em um backup existe no computador de destino. Para listar os nomes lógicos e nomes físicos, caminho e nome de arquivo, de todos os arquivos de um backup, inclusive os arquivos de catálogo, use uma instrução RESTORE FILELISTONLY FROM *<backup_device>*. Para obter mais informações, veja [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
+ Ao restaurar backups de uma versão anterior, é útil saber com antecedência se o caminho (unidade e diretório) de cada catálogo de texto completo em um backup existe no computador de destino. Para listar os nomes lógicos e nomes físicos, caminho e nome de arquivo, de todos os arquivos de um backup, inclusive os arquivos de catálogo, use uma instrução RESTORE FILELISTONLY FROM *<backup_device>* . Para obter mais informações, veja [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
  Se o mesmo caminho não existir no computador de destino, você terá duas alternativas:  
   

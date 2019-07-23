@@ -1,5 +1,5 @@
 ---
-title: Suporte para o LocalDB | Microsoft Docs
+title: Suporte para LocalDB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -9,25 +9,24 @@ ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 48c9955733672699e16cb4a00e28fa2f59717b80
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f6da7f1aed956c8b2f5c71496c9c121f6006eabb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935954"
 ---
 # <a name="support-for-localdb"></a>Suporte ao LocalDB
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-O LocalDB é uma versão leve do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está disponível desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Este tópico descreve como conectar-se a um banco de dados em uma instância do LocalDB.
+O LocalDB é uma versão leve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do que está disponível desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o. Este tópico descreve como conectar-se a um banco de dados em uma instância do LocalDB.
 
 ## <a name="remarks"></a>Remarks
 
-Para obter mais informações sobre o LocalDB, inclusive como instalá-lo e configurar sua instância de LocalDB, consulte o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tópico dos Manuais Online sobre [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Express LocalDB.
+Para obter mais informações sobre o LocalDB, incluindo como instalar o LocalDB e configurar sua instância do LocalDB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte o tópico [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] nos manuais online sobre o Express LocalDB.
 
-Em suma, o LocalDB permite:
+Em resumo, o LocalDB permite que você:
 
 -   Usar **sqllocaldb.exe i** para descobrir o nome da instância padrão.
 
@@ -46,7 +45,7 @@ Em suma, o LocalDB permite:
         array('AttachDBFileName'=>'c:\\myData.MDF'));
     ```
 
-    Em seguida, é uma cadeia de caracteres de conexão do exemplo PDO_SQLSRV:  
+    A seguir está um exemplo de cadeia de conexão PDO_SQLSRV:  
 
     ```php
     $conn = new PDO( 'sqlsrv:server=(localdb)\\v11.0;'
@@ -60,23 +59,23 @@ Em suma, o LocalDB permite:
         . 'AttachDBFileName=c:\\myData.MDF', NULL, NULL);  
     ```
 
-Se necessário, você pode criar uma instância do LocalDB com sqllocaldb.exe. Você também pode usar sqlcmd.exe para adicionar e modificar bancos de dados em uma instância do LocalDB. Por exemplo, `sqlcmd -S (localdb)\v11.0`. (Quando em execução no IIS, você precisa ser executado com a conta correta para obter os mesmos resultados que quando você executa na linha de comando; consulte [usando LocalDB com o IIS completo, parte 2: propriedade de instância](https://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) para obter mais informações.)
+Se necessário, você pode criar uma instância do LocalDB com sqllocaldb.exe. Você também pode usar sqlcmd.exe para adicionar e modificar bancos de dados em uma instância do LocalDB. Por exemplo, `sqlcmd -S (localdb)\v11.0`. (Ao executar no IIS, você precisa executar sob a conta correta para obter os mesmos resultados que ao executar na linha de comando; consulte usando o [LocalDB com o IIS completo, parte 2: propriedade da instância](https://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) para obter mais informações.)
 
-Estas são as cadeias de conexão de exemplo usando o driver SQLSRV que se conectam a um banco de dados em um instância chamada myInstance nomeado de LocalDB:
+Veja a seguir exemplos de cadeias de conexão usando o driver SQLSRV que se conecta a um banco de dados em uma instância nomeada do LocalDB chamada MyInstance:
 
 ```php
 $conn = sqlsrv_connect( '(localdb)\\myInstance',
     array( 'Database'=>'myData'));
 ```
 
-Estas são as cadeias de conexão de exemplo usando o driver PDO_SQLSRV que se conectam a um banco de dados em um instância chamada myInstance nomeado de LocalDB:  
+Veja a seguir exemplos de cadeias de conexão usando o driver PDO_SQLSRV que se conecta a um banco de dados em uma instância nomeada do LocalDB chamada MyInstance:  
   
 ```php
 $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
     . 'database=myData', NULL, NULL);
 ```
 
-Para obter instruções sobre como instalar o LocalDB, consulte o [documentação do LocalDB](../../database-engine/configure-windows/sql-server-2016-express-localdb.md). Se você usar sqlcmd.exe para modificar dados em sua instância de LocalDB, será necessário o [utilitário sqlcmd](../../tools/sqlcmd-utility.md).
+Para obter instruções sobre como instalar o LocalDB, consulte a [documentação do LocalDB](../../database-engine/configure-windows/sql-server-2016-express-localdb.md). Se você usar sqlcmd. exe para modificar dados em sua instância de LocalDB, será necessário o [utilitário sqlcmd](../../tools/sqlcmd-utility.md).
 
 ## <a name="see-also"></a>Consulte Também
 

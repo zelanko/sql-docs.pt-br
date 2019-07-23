@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 74fe3be365919d61a7b32587f910f083cc5e846d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 30a66dbcf9126031caa84cdf0ff7623d2dd16046
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034207"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927779"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>Sinônimos de tipo de dados (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,21 +34,21 @@ Os sinônimos de tipos de dados são incluídos no [!INCLUDE[ssNoVersion](../../
 |**char varying**|**varchar**|  
 |**character**|**char**|  
 |**character**|**char(1)**|  
-|**character(**_n_**)**|**char(n)**|  
-|**character varying(**_n_**)**|**varchar(n)**|  
+|**character(** _n_ **)**|**char(n)**|  
+|**character varying(** _n_ **)**|**varchar(n)**|  
 |**Dec**|**decimal**|  
 |**Precisão dupla**|**float**|  
-|**float**[**(**_n_**)**] para _n_ = 1-7|**real**|  
-|**float**[**(**_n_**)**] para _n_ = 8-15|**float**|  
+|**float**[ **(** _n_ **)** ] para _n_ = 1-7|**real**|  
+|**float**[ **(** _n_ **)** ] para _n_ = 8-15|**float**|  
 |**inteiro**|**int**|  
-|**national character(**_n_**)**|**nchar(n)**|  
-|**national char(**_n_**)**|**nchar(n)**|  
-|**national character varying(**_n_**)**|**nvarchar(n)**|  
-|**national char varying(**_n_**)**|**nvarchar(n)**|  
+|**national character(** _n_ **)**|**nchar(n)**|  
+|**national char(** _n_ **)**|**nchar(n)**|  
+|**national character varying(** _n_ **)**|**nvarchar(n)**|  
+|**national char varying(** _n_ **)**|**nvarchar(n)**|  
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   
-Os sinônimos de tipo de dados podem ser usados no lugar do nome do tipo de dados base correspondente em instruções DDL (linguagem de definição de dados). Essas instruções incluem CREATE TABLE, CREATE PROCEDURE e DECLARE *@variable*. Entretanto, depois que o objeto é criado, os sinônimos não têm nenhuma visibilidade. Quando o objeto é criado, é atribuído a ele o tipo de dados base associado ao sinônimo. Não há nenhum registro de que o sinônimo foi especificado na instrução que criou o objeto.
+Os sinônimos de tipo de dados podem ser usados no lugar do nome do tipo de dados base correspondente em instruções DDL (linguagem de definição de dados). Essas instruções incluem CREATE TABLE, CREATE PROCEDURE e DECLARE *@variable* . Entretanto, depois que o objeto é criado, os sinônimos não têm nenhuma visibilidade. Quando o objeto é criado, é atribuído a ele o tipo de dados base associado ao sinônimo. Não há nenhum registro de que o sinônimo foi especificado na instrução que criou o objeto.
   
 O tipo de dados base é atribuído aos objetos derivados do objeto original, como expressões ou colunas de conjuntos de resultados. Todas as funções de metadados que usam o objeto original ou qualquer objeto derivado relatarão o tipo de dados base, não o sinônimo, incluindo:
 
@@ -63,7 +62,7 @@ Por exemplo, você pode criar uma tabela especificando `national character varyi
 CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, VarCharCol national character varying(10))  
 ```  
   
-`VarCharCol` é atribuído a um tipo de dados **nvarchar(10)**, e todas as funções de metadados seguintes relatarão a coluna como **nvarchar(10)**. As funções de metadados nunca serão informadas como uma coluna **national character varying(10)**.
+`VarCharCol` é atribuído a um tipo de dados **nvarchar(10)** , e todas as funções de metadados seguintes relatarão a coluna como **nvarchar(10)** . As funções de metadados nunca serão informadas como uma coluna **national character varying(10)** .
   
 ## <a name="see-also"></a>Confira também
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)

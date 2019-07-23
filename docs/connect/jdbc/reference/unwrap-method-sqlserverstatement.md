@@ -1,5 +1,5 @@
 ---
-title: Método unwrap (SQLServerStatement) | Microsoft Docs
+title: desencapsular método (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ce680176-ef04-4e44-bb6c-ec50bd06e7e6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cadd692cb6fe3cdedcad04f462dc46e6a8070b94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9b57c0d984198a40e04c1dfe6eeb6ce946d2d13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66790000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985609"
 ---
 # <a name="unwrap-method-sqlserverstatement"></a>Método unwrap (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,9 +47,9 @@ public <T> T unwrap(Class<T> iface)
   
  Quando esse método é chamado, o objeto é desencapsulado na classe [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
   
- Por exemplo de código, consulte [atualizando exemplo de dados grandes](../../../connect/jdbc/updating-large-data-sample.md), ou [método unwrap &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md).  
+ Para obter um exemplo de código, consulte Atualizando o [exemplo de dados grandes](../../../connect/jdbc/updating-large-data-sample.md)ou desencapsular o [método &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md).  
   
- Para obter mais informações, consulte [Wrappers e Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Para obter mais informações, consulte [wrappers e interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método isWrapperFor &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)   

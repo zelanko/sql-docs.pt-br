@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1f0a85482a663b9be77ea455bdbabe87acf3b1e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 527e59ef18d152b4546619cf67130dc7aecbfe6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050827"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>Permissões de texto completo GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,10 +53,10 @@ GRANT permission [ ,...n ] ON
  *permission*  
  É o nome de uma permissão. Os mapeamentos válidos de permissões para protegíveis são descritos na seção "Comentários", posteriormente neste tópico.  
   
- ON FULLTEXT CATALOG **::**_nome_do_catálogo_de_texto_completo_  
+ ON FULLTEXT CATALOG **::** _nome_do_catálogo_de_texto_completo_  
  Especifica o catálogo de texto completo no qual a permissão está sendo concedida. O qualificador de escopo **::** é obrigatório.  
   
- ON FULLTEXT STOPLIST **::**_nome_da_lista_de_palavras_irrelevantes_de_texto_completo_  
+ ON FULLTEXT STOPLIST **::** _nome_da_lista_de_palavras_irrelevantes_de_texto_completo_  
  Especifica a lista de palavras irrelevantes de texto completo no qual a permissão está sendo concedida. O qualificador de escopo **::** é obrigatório.  
   
  *database_principal*  
@@ -142,7 +141,7 @@ GRANT CONTROL
     TO Ted ;  
 ```  
   
-### <a name="b-granting-permissions-to-a-stoplist"></a>b. Concedendo permissões a uma lista de palavras irrelevantes  
+### <a name="b-granting-permissions-to-a-stoplist"></a>B. Concedendo permissões a uma lista de palavras irrelevantes  
  O seguinte exemplo concede a `Mary` a permissão `VIEW DEFINITION` na lista de palavras irrelevantes de texto completo `ProductStoplist`.  
   
 ```  

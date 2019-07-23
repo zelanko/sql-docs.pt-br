@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2e8a6d88387fb0674cd8d39f44a30358009e44f9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 84dfb4e9f5027650ae3a35146b13f70fd0f84a2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076161"
 ---
 # <a name="connect-to-microsoft-azure-storage-restore"></a>Conectar ao Armazenamento do Microsoft Azure (Restaurar)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,10 +30,10 @@ ms.locfileid: "52503971"
  **Chave de conta**  
  Especifique a chave de acesso da conta de armazenamento do Windows Azure.  
   
- Caixa de seleção**Usar pontos de extremidade seguros (HTTPS)**   
+ Caixa de seleção**Usar pontos de extremidade seguros (HTTPS)**  
  Selecione esta opção para estabelecer uma conexão segura com o armazenamento do Microsoft Azure – recomendado.  
   
- Caixa de seleção**Salvar chave de conta**   
+ Caixa de seleção**Salvar chave de conta**  
  Marque esta caixa de seleção se desejar que o SQL Server se lembre da chave de acesso para essa conta de armazenamento.  
   
 ### <a name="sql-credential"></a>CREDENCIAL DO SQL  

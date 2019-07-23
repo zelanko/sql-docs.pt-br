@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ba52dfc0ff41cb1ee4a92fda4a37e368f0533474
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7edcc2212ab54765d92cc119dfd86322ae0d523
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140940"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>Passo a passo da criação de um assembly de regra de análise de código estático personalizado para o SQL Server
 Este passo a passo demonstra as etapas usadas para criar uma regra de Análise de Código do SQL Server. A regra criada neste passo a passo é usada para evitar instruções WAITFOR DELAY em procedimentos armazenados, gatilhos e funções.  
@@ -495,7 +494,7 @@ Agora que você adicionou as classes auxiliares que a regra de Análise de códi
   
 3.  Clique em **Assinar o assembly**.  
   
-4.  Em **Escolher um arquivo de chave de nome forte**, clique em **<New>**.  
+4.  Em **Escolher um arquivo de chave de nome forte**, clique em **<New>** .  
   
 5.  Na caixa de diálogo **Criar chave de nome forte**, em **Nome do arquivo de chaves**, digite MyRefKey.  
   

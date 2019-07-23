@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0018e80cb5795775b18c1700cbd470831bb1c25f
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: d27395a66cd9bddb66bd2a74bcd13492509046e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115796"
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>Tarefa Executar Instrução T-SQL (Plano de Manutenção)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

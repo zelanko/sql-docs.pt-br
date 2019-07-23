@@ -16,14 +16,13 @@ ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 717eee6067ae024465b68fd2e4a0d8a174e77d10
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 9c474a387002070534fe228b67e4ef1152fdbd64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973695"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093307"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurar e gerenciar palavras irrelevantes e listas de palavras irrelevantes (stoplists) para pesquisa de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +96,7 @@ Use [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alte
   
 5.  Na caixa de diálogo [Propriedades da lista de palavras irrelevantes de texto completo](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) :  
   
-    1.  Na caixa de listagem **Ação**, selecione uma das seguintes ações: **Adicionar palavra irrelevante (stop word)**, **Excluir palavra irrelevante (stop word)**, **Excluir todas as palavras irrelevantes** ou **Limpar lista de palavras irrelevantes**.  
+    1.  Na caixa de listagem **Ação**, selecione uma das seguintes ações: **Adicionar palavra irrelevante (stop word)** , **Excluir palavra irrelevante (stop word)** , **Excluir todas as palavras irrelevantes** ou **Limpar lista de palavras irrelevantes**.  
   
     2.  Se a caixa de texto **Palavra irrelevante** estiver habilitada para a ação selecionada, insira uma única palavra irrelevante. Essa palavra irrelevante deve ser exclusiva; ou seja, ainda não deve estar na lista de palavras irrelevantes para o idioma selecionado.  
   

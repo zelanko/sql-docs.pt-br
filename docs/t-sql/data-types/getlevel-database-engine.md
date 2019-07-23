@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 527c08a55fca49f2545c0757091f67442b3a495f
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: f05c80a78417a8b5153345466eadcd49fa810228
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077996"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ OrgNode.GetLevel() AS EmpLevel, *
 FROM HumanResources.EmployeeDemo;  
 ```  
   
-### <a name="b-returning-all-members-of-a-hierarchy-level"></a>b. Retornando todos os membros de um nível de hierarquia  
+### <a name="b-returning-all-members-of-a-hierarchy-level"></a>B. Retornando todos os membros de um nível de hierarquia  
 O seguinte exemplo retorna todas as linhas na tabela no nível de hierarquia 2:
   
 ```sql
