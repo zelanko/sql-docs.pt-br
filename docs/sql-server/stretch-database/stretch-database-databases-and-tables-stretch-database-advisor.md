@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cc6869720018e6787c915fd56e5810b319c651de
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: 304aba1c33dcfd46a2dbfb27e8eeefff8c0f6436
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091848"
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Identificar bancos de dados e tabelas do Stretch Database com o Assistente de Migração de Dados
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

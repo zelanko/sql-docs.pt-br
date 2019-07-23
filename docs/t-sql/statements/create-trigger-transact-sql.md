@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 737f337369b04c59d34bb8ab4335a2491e843927
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 900d91223aea28d0809c3d3aab9acd574c3d2df2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802392"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130127"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -263,7 +262,7 @@ Gatilhos DDL e logon capturam informações sobre o evento de gatilho usando a f
 O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite a atualização das colunas **text**, **ntext** ou **image** por meio do gatilho INSTEAD OF em tabelas ou exibições.  
   
 > [!IMPORTANT]
->  Os tipos de dados **ntext**, **text** e **image** serão removidos em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses tipos de dados em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que os utilizam atualmente. Em vez disso, use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)e [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) . Os gatilhos AFTER e INSTEAD OF dão ambos suporte a dados **varchar(MAX)**, **nvarchar(MAX)** e **varbinary(MAX)** nas tabelas inseridas e excluídas.  
+>  Os tipos de dados **ntext**, **text** e **image** serão removidos em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses tipos de dados em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que os utilizam atualmente. Em vez disso, use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)e [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) . Os gatilhos AFTER e INSTEAD OF dão ambos suporte a dados **varchar(MAX)** , **nvarchar(MAX)** e **varbinary(MAX)** nas tabelas inseridas e excluídas.  
   
 Para gatilhos em tabelas com otimização de memória, a única *sql_statement* permitida no nível superior é um bloco ATOMIC. O T-SQL permitido dentro do bloco ATOMIC é limitado pelo T-SQL permitido dentro de procedimentos nativos.  
   
@@ -427,7 +426,7 @@ AS RAISERROR ('Notify Customer Relations', 16, 10);
 GO  
 ```  
   
-### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>b. Usando um gatilho DML com uma mensagem de email de lembrete  
+### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>B. Usando um gatilho DML com uma mensagem de email de lembrete  
 O exemplo a seguir envia uma mensagem de email a uma pessoa especificada (`MaryM`) quando a tabela `Customer` é alterada.  
   
 ```sql  
