@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bbe729ebef5d156f6c946e0c5cda62c1cefdcd81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d966b147c8475b357a3239ca36654e087f9ccbeb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068698"
 ---
 # <a name="catalogadddatatapbyguid"></a>catalog.add_data_tap_by_guid 
 
@@ -50,10 +49,10 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
   
  Para localizar a cadeia de caracteres de identificação, no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], clique com o botão direito do mouse no caminho entre dois componentes de fluxo de dados e, depois, clique em **Propriedades**. A propriedade **IdentificationString** aparece na janela **Propriedades**.  
   
- O *dataflow_path_id_string* é um **nvarchar(4000)**.  
+ O *dataflow_path_id_string* é um **nvarchar(4000)** .  
   
  [ @data_filename = ] *data_filename*  
- O nome do arquivo de dados que armazena os dados tocados. Se a tarefa de fluxo de dados for executada dentro de um contêiner de Loop Foreach ou Loop For, arquivos separados armazenarão os dados tocados para cada iteração do loop. Cada arquivo é prefixado com um número que corresponde a uma iteração. Arquivos de coleta de dados são gravados na pasta "*\<pasta de instalação do SQL Server>* \130\DTS\\". O *data_filename* é um **nvarchar(4000)**.  
+ O nome do arquivo de dados que armazena os dados tocados. Se a tarefa de fluxo de dados for executada dentro de um contêiner de Loop Foreach ou Loop For, arquivos separados armazenarão os dados tocados para cada iteração do loop. Cada arquivo é prefixado com um número que corresponde a uma iteração. Arquivos de coleta de dados são gravados na pasta " *\<pasta de instalação do SQL Server>* \130\DTS\\". O *data_filename* é um **nvarchar(4000)** .  
   
  [ @max_rows = ] max_rows  
  O número de linhas capturadas durante o toque de dados. Se esse valor não for especificado, todas as linhas serão capturadas. O max_rows é um **int**.  

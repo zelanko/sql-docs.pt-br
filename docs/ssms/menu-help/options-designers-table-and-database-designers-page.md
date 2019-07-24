@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: a7a875e114c9f1e485442191ae077339c967274e
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 04204d6d6c83411d1a47caa8f573bdbc2601d9f0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67684807"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262750"
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>Opções (Designers – página de Designers de Tabela e Banco de Dados)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

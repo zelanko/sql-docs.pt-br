@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 149fc4781c0a93db423a863c98f7eeaf0afcf2da
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 39183d699bfa27430a35012d353b8f3bc70d6be0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727613"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034779"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Lição 1: Navegação básica no Orientador de Otimização do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,25 +35,25 @@ Para concluir este tutorial, você precisará do SQL Server Management Studio, b
 Instruções para restaurar bancos de dados no SSMS são encontradas em [Como restaurar um banco de dados.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
 
   >[!NOTE]
-  > Este tutorial destina-se um usuário familiarizado com o uso do SQL Server Management Studio e as tarefas de administração de banco de dados básico. 
+  > Este tutorial destina-se a um usuário familiarizado com o uso de SQL Server Management Studio e tarefas básicas de administração de banco de dados. 
   
 
 ## <a name="launch-database-tuning-advisor"></a>Inicializar o Orientador de Otimização de Banco de Dados 
 Para começar, abra a GUI (interface gráfica do usuário) do DTA (Orientador de Otimização do Mecanismo de Banco de Dados). Ao usá-lo pela primeira vez, um membro da função de servidor fixa **sysadmin** deve iniciar o Orientador de Otimização do Mecanismo de Banco de Dados para inicializar o aplicativo. Após a inicialização, os membros da função de banco de dados fixa **db_owner** podem usar o Orientador de Otimização do Mecanismo de Banco de Dados para ajustar seus bancos de dados. Para obter mais informações sobre como inicializar o Orientador de Otimização do Mecanismo de Banco de Dados, consulte [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-1. Inicie o SSMS (Start SQL Server Management Studio). Sobre o Windows **Menu Iniciar**, aponte para **todos os programas** e localize **SQL Server Management Studio**. 
-2. Depois que o SSMS estiver aberto, selecione o **ferramentas** menu e selecione **orientador de otimização do banco de dados**. 
+1. Inicie o SSMS (Start SQL Server Management Studio). No **menu iniciar**do Windows, aponte para **todos os programas** e localize **SQL Server Management Studio**. 
+2. Depois que o SSMS estiver aberto, selecione o menu **ferramentas** e selecione Orientador de **otimização de banco de dados**. 
 
-  ![Inicie o DTA do SSMS](media/dta-tutorials/launch-dta.png)
+  ![iniciar o DTA do SSMS](media/dta-tutorials/launch-dta.png)
 
-3. Lançamentos do Orientador de otimização do banco de dados e abre o **conectar ao servidor** caixa de diálogo. Verifique as configurações padrão e, em seguida, selecione **Connect** para se conectar ao SQL Server.  
+3. O Orientador de otimização de banco de dados é iniciado e abre a caixa de diálogo **conectar ao servidor** . Verifique as configurações padrão e, em seguida, selecione **conectar** para se conectar ao seu SQL Server.  
   
 Por padrão, o Orientador de Otimização do Mecanismo de Banco de Dados é aberto para configuração na seguinte ilustração:  
   
 ![Janela padrão do Orientador de Otimização do Mecanismo de Banco de Dados](media/dta-tutorials/dta-default-gui.png)
   
 > [!NOTE]  
-> O **Monitor de sessão** guia exibe o nome da sessão, que é o nome do usuário conectado e os dados atuais. 
+> A guia **Monitor de sessão** exibe o nome da sessão, que é o nome do usuário conectado e os dados atuais. 
   
 Dois painéis principais são exibidos na GUI do Orientador de Otimização do Mecanismo de Banco de Dados quando ele é aberto pela primeira vez.  
   
@@ -65,11 +64,11 @@ Dois painéis principais são exibidos na GUI do Orientador de Otimização do M
 > [!NOTE]
 > O Orientador de Otimização do Mecanismo de Banco de Dados pode usar arquivos XML como entrada quando um script [!INCLUDE[tsql](../../includes/tsql-md.md)] é importado do Editor de Consultas do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Para obter mais informações, consulte a seção sobre como iniciar o Orientador de Otimização do Mecanismo de Banco de Dados no Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] em [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-## <a name="configure-tool-options-and-layout"></a>Configurar o layout e opções de ferramentas 
+## <a name="configure-tool-options-and-layout"></a>Configurar opções e layout da ferramenta 
 
 1.  No menu **Ferramentas** , clique em **Opções**.  
 
-   ![Opções do DTA](media/dta-tutorials/dta-settings.png) 
+   ![Opções de DTA](media/dta-tutorials/dta-settings.png) 
   
 2.  Na caixa de diálogo **Opções** , exiba as seguintes opções:  
   

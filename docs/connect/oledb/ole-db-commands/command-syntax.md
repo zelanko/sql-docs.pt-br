@@ -1,5 +1,5 @@
 ---
-title: Sintaxe de comando | Microsoft Docs
+title: Sintaxe do comando | Microsoft Docs
 description: Sintaxe de comando e procedimentos armazenados
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,20 +15,19 @@ helpviewer_keywords:
 - stored procedures [OLE DB], command syntax
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: ac3ea02fbdf4a94f7f524022a1808410ca1dfd61
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 15d6d221c9e3435a3ba4c3f58c7d6b6e55314f29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016126"
 ---
 # <a name="command-syntax"></a>Sintaxe de comando
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O Driver do OLE DB para SQL Server reconhece a sintaxe de comando especificada pela macro DBGUID_SQL. Para o Driver do OLE DB para SQL Server, o especificador indica que um amálgama de ODBC SQL, ISO, e [!INCLUDE[tsql](../../../includes/tsql-md.md)] é uma sintaxe válida. Por exemplo, a seguinte instrução SQL usa uma sequência de escape do ODBC SQL para especificar a função de cadeia de caracteres LCASE:  
+  O driver OLE DB para SQL Server reconhece a sintaxe de comando especificada pela macro DBGUID_SQL. Para o driver de OLE DB para SQL Server, o especificador indica que um mistura de ODBC SQL, ISO [!INCLUDE[tsql](../../../includes/tsql-md.md)] e é uma sintaxe válida. Por exemplo, a seguinte instrução SQL usa uma sequência de escape do ODBC SQL para especificar a função de cadeia de caracteres LCASE:  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  

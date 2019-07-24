@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ee1af47a-4c04-4391-83a5-54ced80218c8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 03e938e89241c95af88a35b616791318a1b4c979
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bed23d0a0781de7c384e61cb09903e2ab2136268
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969736"
 ---
 # <a name="supportscatalogsindatamanipulation-method-sqlserverdatabasemetadata"></a>Método supportsCatalogsInDataManipulation (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsCatalogsInDataManipulation()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se houver suporte. Caso contrário, **false**.  
+ **true** se houver suporte. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método supportsCatalogInDataManipulation é especificado pelo método supportsCatalogInDataManipulation na interface DatabaseMetadata.  
+ Esse método supportsCatalogInDataManipulation é especificado pelo método supportsCatalogInDataManipulation na interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

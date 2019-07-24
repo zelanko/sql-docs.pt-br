@@ -1,5 +1,5 @@
 ---
-title: Tipos definidos pelo usuário CLR grandes (OLE DB) | Microsoft Docs
+title: Tipos de CLR grandes definidos pelo usuário (OLE DB) | Microsoft Docs
 description: Tipos definidos pelo usuário CLR grandes (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 2af61fea9909597736769eb3d28fda43753a800b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 228054b56d6b26bf4439c01363d6cad24422f938
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015226"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipos definidos pelo usuário CLR grandes (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "66795982"
 
   Este tópico aborda as alterações feitas no OLE DB no OLE DB Driver for SQL Server para dar suporte aos UDTs (tipos definidos pelo usuário) CLR (Common Language Runtime) grandes.  
   
- Para obter mais informações sobre o suporte para UDTs CLR grandes no Driver do OLE DB para SQL Server, consulte [Large CLR User-Defined tipos](../../oledb/features/large-clr-user-defined-types.md). Para obter um exemplo, consulte [UDTs CLR grandes de uso &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Para obter mais informações sobre o suporte a UDTs CLR grandes no driver OLE DB para SQL Server, consulte [grandes tipos CLR definidos pelo usuário](../../oledb/features/large-clr-user-defined-types.md). Para obter um exemplo, consulte [usar UDTS &#40;CLR grandes&#41;OLE DB](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Formato de Dados  
  O OLE DB Driver for SQL Server usa ~0 para representar o tamanho de valores de tamanho ilimitado para tipos de objeto grande (LOB). ~ 0 também representa o tamanho de UDTs CLR maiores que 8.000 bytes.  
@@ -140,7 +139,7 @@ ms.locfileid: "66795982"
 |3|Os dados são convertidos de dados binários em cadeia de caracteres hexadecimal.|  
 |4|A validação pode ser feita usando **CreateAccessor** ou **GetNextRows**. O erro é DB_E_ERRORSOCCURRED. O status de associação é definido como DBBINDSTATUS_UNSUPPORTEDCONVERSION.|  
 |5|BY_REF pode ser usado.|  
-|6|Os parâmetros de UDT podem ser associados como DBTYPE_IUNKNOWN no DBBINDING. A associação a DBTYPE_IUNKNOWN indica que o aplicativo deseja processar os dados como um fluxo usando a interface ISequentialStream. Quando um consumidor especifica *wType* em uma associação como tipo DBTYPE_IUNKNOWN e a coluna correspondente ou a saída o parâmetro do procedimento armazenado é um UDT, o Driver do OLE DB para SQL Server retornará ISequentialStream. Um parâmetro de entrada para o Driver do OLE DB para SQL Server irá consultar o para a interface ISequentialStream.<br /><br /> Você pode optar por não associar o comprimento de dados de UDT enquanto estiver usando a associação DBTYPE_IUNKNOWN, no caso de UDTs grandes. Porém, o comprimento deve estar associado a UDTs pequenos. Um parâmetro DBTYPE_UDT poderá ser especificado como um UDT grande nos seguintes casos:<br />*ulParamParamSize* é ~ 0.<br />Se DBPARAMFLAGS_ISLONG estiver definido na estrutura DBPARAMBINDINFO.<br /><br /> Para dados de linha, a associação de DBTYPE_IUNKNOWN é permitida só para UDTs grandes. Você pode descobrir se uma coluna é um tipo UDT grande, usando o método icolumnsinfo:: Getcolumninfo em um conjunto de linhas ou interface de IColumnsInfo do objeto de comando. Uma coluna DBTYPE_UDT será uma coluna de UDT grande se uma ou mais destas condições for verdadeira:<br />O sinalizador DBCOLUMNFLAGS_ISLONG é definido no membro *dwFlags* da estrutura DBCOLUMNINFO. <br />*ulColumnSize* membro de DBCOLUMNINFO é ~ 0.|  
+|6|Os parâmetros de UDT podem ser associados como DBTYPE_IUNKNOWN no DBBINDING. A associação a DBTYPE_IUNKNOWN indica que o aplicativo deseja processar os dados como um fluxo usando a interface ISequentialStream. Quando um consumidor especifica *wType* em uma associação como o tipo DBTYPE_IUNKNOWN, e o parâmetro de coluna ou saída correspondente do procedimento armazenado é um UDT, OLE DB Driver para SQL Server retornará ISequentialStream. Para um parâmetro de entrada, OLE DB driver para SQL Server irá consultar o para a interface ISequentialStream.<br /><br /> Você pode optar por não associar o comprimento de dados de UDT enquanto estiver usando a associação DBTYPE_IUNKNOWN, no caso de UDTs grandes. Porém, o comprimento deve estar associado a UDTs pequenos. Um parâmetro DBTYPE_UDT poderá ser especificado como um UDT grande nos seguintes casos:<br />*ulParamParamSize* é ~ 0.<br />Se DBPARAMFLAGS_ISLONG estiver definido na estrutura DBPARAMBINDINFO.<br /><br /> Para dados de linha, a associação de DBTYPE_IUNKNOWN é permitida só para UDTs grandes. Você pode descobrir se uma coluna é um tipo UDT grande usando o método IColumnsInfo:: GetColumnInfo em uma interface IColumnsInfo de conjunto de linhas ou objeto de comando. Uma coluna DBTYPE_UDT será uma coluna de UDT grande se uma ou mais destas condições for verdadeira:<br />O sinalizador DBCOLUMNFLAGS_ISLONG é definido no membro *dwFlags* da estrutura DBCOLUMNINFO. <br />*ulColumnSize* membro de DBCOLUMNINFO é ~ 0.|  
   
  DBTYPE_NULL e DBTYPE_EMPTY podem ser associados aos parâmetros de entrada, mas não a parâmetros ou resultados de saída. Quando associado a parâmetros de entrada, o status deve ser definido como DBSTATUS_S_ISNULL para DBTYPE_NULL ou DBSTATUS_S_DEFAULT para DBTYPE_EMPTY. DBTYPE_BYREF não pode ser usado com DBTYPE_NULL ou DBTYPE_EMPTY.  
   

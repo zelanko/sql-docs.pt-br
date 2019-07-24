@@ -1,5 +1,5 @@
 ---
-title: Visão geral do JDBC Driver | Microsoft Docs
+title: Visão geral do driver JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9e9e7c7c6c29847fef54ac3e484e7ed7b1821f4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 770352acd95fd2fb947e29f79230dedab575602b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956231"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Visão geral do JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "66801802"
 |[Redistribuindo o Microsoft JDBC Driver](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md)|Descreve como registrar-se para redistribuir o Microsoft JDBC Driver.|  
 |[Localizando informações adicionais sobre o JDBC Driver](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|Descreve onde localizar recursos adicionais para o Microsoft JDBC Driver, inclusive links para recursos externos.|  
 |[Matriz de suporte do Microsoft JDBC Driver para SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Matriz de suporte e política de ciclo de vida de suporte para o Microsoft JDBC driver para SQL Server.|  
-|[Perguntas frequentes &#40;perguntas Frequentes&#41; para o Driver JDBC](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Perguntas frequentes sobre o Microsoft JDBC Driver.|  
+|[FAQ&#41; de perguntas &#40;frequentes sobre o driver JDBC](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Perguntas frequentes sobre o Microsoft JDBC Driver.|  
 |[Dependências de recurso do Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Dependências de recurso do Microsoft JDBC Driver para SQL Server.|
 
 ## <a name="see-also"></a>Consulte Também  

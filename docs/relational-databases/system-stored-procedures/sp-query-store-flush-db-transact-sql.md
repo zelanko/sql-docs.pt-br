@@ -21,17 +21,17 @@ ms.assetid: 580c03ae-57fc-4562-a6bb-5ec89521e38c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2027e284e40a28ed8636b9c4043c8ce4d49ca93
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 96c4e7a366c1235fa1062e5d66c2d6be160a6d22
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896449"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418885"
 ---
 # <a name="spquerystoreflushdb-transact-sql"></a>sp_query_store_flush_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Libera a parte na memória dos dados de Store de consulta para o disco.  
+  Libera a parte na memória do Repositório de Consultas dados para o disco.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,10 +48,10 @@ sp_query_store_flush_db [;]
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="permissions"></a>Permissões  
- Requer o **EXECUTE** permissão no banco de dados, e **excluir** permissão em exibições de catálogo de repositório de consultas.  
+ Requer a permissão **ALTER** no banco de dados.
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir libera a parte na memória dos dados de Store de consulta para o disco.  
+ O exemplo a seguir libera a parte na memória do Repositório de Consultas dados para o disco.  
   
 ```  
 EXEC sp_query_store_flush_db;  

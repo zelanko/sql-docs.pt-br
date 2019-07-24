@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bfa24c46-b7cf-470a-afa1-52301847a448
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6cdfd42d0670d8d536e0a9bf40f2a6981ef5b937
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: acd1beaa07ab9d1867fe99e519d3969f4efec3ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796355"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977305"
 ---
 # <a name="issamerm-method-sqlserverxaresource"></a>Método isSameRM (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +37,10 @@ public boolean isSameRM(javax.transaction.xa.XAResource xares)
 #### <a name="parameters"></a>Parâmetros  
  *xares*  
   
- Um objeto de XAResource.  
+ Um objeto XAResource.  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se as instâncias forem iguais. Caso contrário, **false**.  
+ **true** se as instâncias forem as mesmas. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  javax.transaction.xa.XAException  

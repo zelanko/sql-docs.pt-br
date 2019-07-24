@@ -1,5 +1,5 @@
 ---
-title: Método setString (SQLServerPreparedStatement) | Microsoft Docs
+title: Método SetString (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 25dabdc9-c60f-485a-87eb-306067964765
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 204a7e330dd5a5fc98669f65f1407d80989a4852
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca49c8e50527ab7cafce9c93c314a0e363b45402
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66773324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972578"
 ---
 # <a name="setstring-method-sqlserverpreparedstatement"></a>Método setString (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de logon do SQL Server (ODBC) | Microsoft Docs
+title: Caixa de diálogo SQL Server logon (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/21/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-manager: jroth
-ms.openlocfilehash: 2d7cf1f31ce5cf42b9c2e4c7b72938b8def2ed4f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fcfde122b978fa1e77baa690a1f3e09417dab1c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989424"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Caixa de diálogo Logon do SQL Server (ODBC)
 
@@ -36,12 +35,12 @@ Para obter mais informações sobre nomes de servidor para diferentes tipos de r
 
 Seleciona o modo de autenticação de um dos seguintes:
 - **SQL Server** com ID de logon e senha
-- **Integrada do Windows** autenticação usando a conta do usuário conectado no momento
-- **Senha do Active Directory** com ID de logon e senha
-- **Integrado ao Active Directory** autenticação usando a conta do usuário conectado no momento
+- Autenticação **integrada do Windows** usando a conta do usuário conectado no momento
+- **Active Directory senha** com ID de logon e senha
+- **Active Directory autenticação integrada** usando a conta do usuário conectado no momento
 - Autenticação **Interativa do Active Directory** com ID de logon
 
-Ver [dados de origem Assistente tela 2](../../../connect/odbc/windows/dsn-wizard-2.md) para obter mais informações sobre os modos de autenticação.
+Consulte a [tela 2 do assistente de fonte de dados](../../../connect/odbc/windows/dsn-wizard-2.md) para obter mais informações sobre os modos de autenticação.
 
 ### <a name="server-spn"></a>SPN do servidor
 
@@ -49,11 +48,11 @@ Se você usar uma conexão confiável, poderá especificar um SPN (nome de entid
 
 ### <a name="login-id"></a>ID de Logon
 
-Especifica a ID de logon do SQL Server ou do Active Directory do Azure a ser usado para a conexão se **modo de autenticação** é definido como **SQL Server** ou **senha do Active Directory** ou **Interativa do Active Directory**. Caso contrário, o **ID de logon** caixa está desabilitada.
+Especifica a ID de logon SQL Server ou Azure Active Directory a ser usada para a conexão se o **modo de autenticação** estiver definido como **SQL Server** ou **Active Directory senha** ou **Active Directory interativo**. Caso contrário, a caixa **ID de logon** será desabilitada.
 
 ### <a name="password"></a>Senha
 
-Especifica a senha para a ID de logon do SQL Server ou o Azure Active Directory usada para a conexão se **modo de autenticação** é definido como **SQL Server** ou **senhadoActiveDirectory**. Caso contrário, o **senha** caixa está desabilitada.
+Especifica a senha para a ID de logon SQL Server ou Azure Active Directory usada para a conexão se o **modo de autenticação** estiver definido como **SQL Server** ou **Active Directory senha**. Caso contrário, a caixa **senha** será desabilitada.
 
 ### <a name="options"></a>Opções
 
@@ -97,11 +96,11 @@ Especifica o idioma nacional a ser usado para mensagens de sistema do SQL Server
 
 ### <a name="use-strong-encryption-for-data"></a>Usar criptografia forte para dados
 
-Quando selecionada, os dados que são passados por meio de conexão serão criptografados. Os logons são criptografados por padrão, até mesmo quando a caixa de seleção está desmarcada.
+Quando selecionado, os dados que são passados pela conexão serão criptografados. Os logons são criptografados por padrão, até mesmo quando a caixa de seleção está desmarcada.
 
 ### <a name="trust-server-certificate"></a>Confiar em certificado do servidor
 
-Essa opção é aplicável somente quando **usar criptografia forte para dados** está habilitado. Quando selecionada, o certificado do servidor não será validado para que o nome de host correto do servidor e ser emitido por uma autoridade de certificação confiável.
+Essa opção é aplicável somente quando o **uso de criptografia forte para dados** está habilitado. Quando selecionado, o certificado do servidor não será validado para ter o nome de host correto do servidor e ser emitido por uma autoridade de certificação confiável.
 
 ## <a name="see-also"></a>Consulte Também
 

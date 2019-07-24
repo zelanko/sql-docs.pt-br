@@ -1,76 +1,76 @@
 ---
 title: Carregar dados de exemplo
 titleSuffix: SQL Server big data clusters
-description: Este tutorial demonstra como carregar dados de exemplo em um cluster de big data do SQL Server. Os dados de exemplo incluem dados relacionais na instância mestre do SQL Server. Ele também inclui dados do HDFS no pool de armazenamento. Esses dados dá suporte a outros tutoriais nesta seção.
+description: Este tutorial demonstra como carregar dados de exemplo em um cluster SQL Server Big Data. Os dados de exemplo incluem dados relacionais na instância mestra de SQL Server. Ele também inclui dados do HDFS no pool de armazenamento. Esses dados dão suporte a outros tutoriais nesta seção.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 04/23/2019
+ms.date: 07/24/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 30e3756251cc8df5ba9e14278983d44d0f6d4ef3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b35eccece4df47cb483932386cf6a38e45d2dc8
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957784"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419279"
 ---
-# <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutorial: Carregar dados de exemplo em um cluster de big data do SQL Server
+# <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutorial: Carregar dados de exemplo em um cluster SQL Server Big Data
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este tutorial explica como usar um script para carregar dados de exemplo em um cluster de big data do SQL Server 2019 (visualização). Muitos dos tutoriais na documentação do usam esses dados de exemplo.
+Este tutorial explica como usar um script para carregar dados de exemplo em um cluster SQL Server Big Data 2019 (versão prévia). Muitos dos outros tutoriais da documentação usam esses dados de exemplo.
 
 > [!TIP]
-> Você pode encontrar exemplos adicionais para o cluster de big data de 2019 do SQL Server (versão prévia) na [exemplos do sql server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) repositório do GitHub. Eles estão localizados os **sql-server-samples/samples/features/sql-big-data-cluster/** caminho.
+> Você pode encontrar exemplos adicionais para SQL Server Cluster de Big Data 2019 (versão prévia) no repositório GitHub [SQL-Server-Samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) . Eles estão localizados no **SQL-Server-Samples/Samples/Features/SQL-Big-data-cluster/** Path.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- [Um cluster de big data implantados](deployment-guidance.md)
-- [Ferramentas de big data](deploy-big-data-tools.md)
-   - **mssqlctl**
+- [Um cluster Big Data implantado](deployment-guidance.md)
+- [Ferramentas de Big data](deploy-big-data-tools.md)
+   - **azdata**
    - **kubectl**
    - **sqlcmd**
    - **curl**
 
-## <a id="sampledata"></a> Carregar dados de exemplo
+## <a id="sampledata"></a>Carregar dados de exemplo
 
-As etapas a seguir usam um script de inicialização para baixar um backup de banco de dados do SQL Server e carregar os dados em seu cluster de big data. Para facilidade de uso, essas etapas foram divididas [Windows](#windows) e [Linux](#linux) seções.
+As etapas a seguir usam um script de inicialização para baixar um SQL Server backup de banco de dados e carregar os mesmos em seu cluster Big Data. Para facilitar o uso, essas etapas foram divididas em seções do [Windows](#windows) e do [Linux](#linux) .
 
 ## <a id="windows"></a> Windows
 
-As etapas a seguir descrevem como usar um cliente do Windows para carregar os dados de exemplo no seu cluster de big data.
+As etapas a seguir descrevem como usar um cliente Windows para carregar os dados de exemplo em seu cluster Big Data.
 
 1. Abra um novo prompt de comando do Windows.
 
    > [!IMPORTANT]
-   > Não use o Windows PowerShell para essas etapas. No PowerShell, o script falhará, pois ele usará a versão do PowerShell do **curl**.
+   > Não use o Windows PowerShell para essas etapas. No PowerShell, o script falhará, pois usará a versão do PowerShell da ondulação.
 
-1. Use **curl** para baixar o script de inicialização para os dados de exemplo.
+1. Use a **rotação** para baixar o script de Bootstrap para os dados de exemplo.
 
    ```cmd
    curl -o bootstrap-sample-db.cmd "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/bootstrap-sample-db.cmd"
    ```
 
-1. Baixe o **bootstrap-exemplo-db.sql** script Transact-SQL. Esse script é chamado pelo script de inicialização.
+1. Baixe o script Transact-SQL **Bootstrap-Sample-DB. SQL** . Esse script é chamado pelo script de inicialização.
 
    ```cmd
    curl -o bootstrap-sample-db.sql "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/bootstrap-sample-db.sql"
    ```
 
-1. O script de inicialização requer os seguintes parâmetros posicionais para seu cluster de big data:
+1. O script de inicialização requer os seguintes parâmetros posicionais para o cluster Big Data:
 
    | Parâmetro | Descrição |
    |---|---|
-   | <CLUSTER_NAMESPACE> | O nome fornecido para seu cluster de big data. |
-   | <SQL_MASTER_IP> | O endereço IP da sua instância do mestre. |
-   | <SQL_MASTER_SA_PASSWORD> | A senha de SA para a instância mestre. |
-   | <KNOX_IP> | O endereço IP do Gateway de HDFS/Spark. |
-   | <KNOX_PASSWORD> | A senha para o Gateway HDFS/Spark. |
+   | <CLUSTER_NAMESPACE> | O nome que você atribuiu ao cluster Big Data. |
+   | <SQL_MASTER_IP> | O endereço IP da instância mestra. |
+   | <SQL_MASTER_SA_PASSWORD> | A senha SA para a instância mestra. |
+   | <KNOX_IP> | O endereço IP do gateway HDFS/Spark. |
+   | <KNOX_PASSWORD> | A senha para o gateway HDFS/Spark. |
 
    > [!TIP]
-   > Use [kubectl](cluster-troubleshooting-commands.md) para localizar os endereços IP para a instância mestre do SQL Server e o Knox. Execute `kubectl get svc -n <your-big-data-cluster-name>` e examine os endereços de IP externo para a instância mestre (**master-svc-externo**) e Knox (**gateway-svc-externo**). É o nome padrão de um cluster **mssql-cluster**.
+   > Use [kubectl](cluster-troubleshooting-commands.md) para localizar os endereços IP para a instância mestra do SQL Server e o Knox. Execute `kubectl get svc -n <your-big-data-cluster-name>` e examine os endereços IP externos para a instância mestra (**Master-svc-external**) e Knox (**Gateway-svc-external**). O nome padrão de um cluster é **MSSQL-cluster**.
 
 1. Execute o script de inicialização.
 
@@ -80,33 +80,33 @@ As etapas a seguir descrevem como usar um cliente do Windows para carregar os da
 
 ## <a id="linux"></a> Linux
 
-As etapas a seguir descrevem como usar um cliente Linux para carregar os dados de exemplo no seu cluster de big data.
+As etapas a seguir descrevem como usar um cliente Linux para carregar os dados de exemplo em seu cluster Big Data.
 
-1. Baixe o script de inicialização e atribua permissões executáveis a ele.
+1. Baixe o script de inicialização e atribua permissões de executável a ele.
 
    ```bash
    curl -o bootstrap-sample-db.sh "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/bootstrap-sample-db.sh"
    chmod +x bootstrap-sample-db.sh
    ```
 
-1. Baixe o **bootstrap-exemplo-db.sql** script Transact-SQL. Esse script é chamado pelo script de inicialização.
+1. Baixe o script Transact-SQL **Bootstrap-Sample-DB. SQL** . Esse script é chamado pelo script de inicialização.
 
    ```bash
    curl -o bootstrap-sample-db.sql "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/bootstrap-sample-db.sql"
    ```
 
-1. O script de inicialização requer os seguintes parâmetros posicionais para seu cluster de big data:
+1. O script de inicialização requer os seguintes parâmetros posicionais para o cluster Big Data:
 
    | Parâmetro | Descrição |
    |---|---|
-   | <CLUSTER_NAMESPACE> | O nome fornecido para seu cluster de big data. |
-   | <SQL_MASTER_IP> | O endereço IP da sua instância do mestre. |
-   | <SQL_MASTER_SA_PASSWORD> | A senha de SA para a instância mestre. |
-   | <KNOX_IP> | O endereço IP do Gateway de HDFS/Spark. |
-   | <KNOX_PASSWORD> | A senha para o Gateway HDFS/Spark. |
+   | <CLUSTER_NAMESPACE> | O nome que você atribuiu ao cluster Big Data. |
+   | <SQL_MASTER_IP> | O endereço IP da instância mestra. |
+   | <SQL_MASTER_SA_PASSWORD> | A senha SA para a instância mestra. |
+   | <KNOX_IP> | O endereço IP do gateway HDFS/Spark. |
+   | <KNOX_PASSWORD> | A senha para o gateway HDFS/Spark. |
 
    > [!TIP]
-   > Use [kubectl](cluster-troubleshooting-commands.md) para localizar os endereços IP para a instância mestre do SQL Server e o Knox. Execute `kubectl get svc -n <your-big-data-cluster-name>` e examine os endereços de IP externo para a instância mestre (**master-svc-externo**) e Knox (**gateway-svc-externo**). É o nome padrão de um cluster **mssql-cluster**.
+   > Use [kubectl](cluster-troubleshooting-commands.md) para localizar os endereços IP para a instância mestra do SQL Server e o Knox. Execute `kubectl get svc -n <your-big-data-cluster-name>` e examine os endereços IP externos para a instância mestra (**Master-svc-external**) e Knox (**Gateway-svc-external**). O nome padrão de um cluster é **MSSQL-cluster**.
 
 1. Execute o script de inicialização.
 
@@ -116,18 +116,18 @@ As etapas a seguir descrevem como usar um cliente Linux para carregar os dados d
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Depois que o script de inicialização é executado, o seu cluster de big data tem bancos de dados de exemplo e dados do HDFS. Os tutoriais a seguir usam os dados de exemplo para demonstrar os recursos de cluster de big data:
+Depois que o script de inicialização é executado, seu cluster de Big Data tem os bancos de dados de exemplo e de HDFS. Os tutoriais a seguir usam os dados de exemplo para demonstrar Big Data recursos de cluster:
 
 Virtualização de dados:
 
-- [Tutorial: Consulta HDFS em um cluster de big data do SQL Server](tutorial-query-hdfs-storage-pool.md)
-- [Tutorial: Consulta Oracle em um cluster de big data do SQL Server](tutorial-query-oracle.md)
+- [Tutorial: Consultar HDFS em um cluster SQL Server Big Data](tutorial-query-hdfs-storage-pool.md)
+- [Tutorial: Consultar o Oracle em um cluster SQL Server Big Data](tutorial-query-oracle.md)
 
 Ingestão de dados:
 
-- [Tutorial: Ingestão de dados para um pool de dados do SQL Server com o Transact-SQL](tutorial-data-pool-ingest-sql.md)
-- [Tutorial: Ingestão de dados para um pool de dados do SQL Server com trabalhos do Spark](tutorial-data-pool-ingest-spark.md)
+- [Tutorial: Ingerir dados em um pool de dados de SQL Server com o Transact-SQL](tutorial-data-pool-ingest-sql.md)
+- [Tutorial: Ingerir dados em um pool de dados de SQL Server com trabalhos do Spark](tutorial-data-pool-ingest-spark.md)
 
-Blocos de anotações:
+Notebooks
 
-- [Tutorial: Executar um exemplo de notebook em um cluster de big data do SQL Server de 2019](tutorial-notebook-spark.md)
+- [Tutorial: Executar um bloco de anotações de exemplo em um cluster SQL Server Big Data 2019](tutorial-notebook-spark.md)

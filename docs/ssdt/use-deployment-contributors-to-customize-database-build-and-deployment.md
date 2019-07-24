@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3952706cebfd5f26f68e2dd103de1cb19c46bd05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa22592bbe86707ec4efa43ba0c188c21a07351e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110569"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>Personalize a compilação e a implantação do banco de dados usando os colaboradores de compilação e implantação
 O Visual Studio fornece os pontos de extensibilidade que você pode usar para modificar o comportamento das ações de compilação e implantação de projetos de banco de dados.  

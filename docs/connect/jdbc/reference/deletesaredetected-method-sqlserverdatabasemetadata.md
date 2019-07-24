@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d6e0fc0bad10ad67c549a3ab3d505af899f67c45
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: aef2ebd78b1aed2d03ba56ef3371d7f0dbfade31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955127"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>Método deletesAreDetected (SQLServerDatabaseMetaData)
 
@@ -59,7 +58,7 @@ public boolean deletesAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se uma lacuna substitui a linha excluída. **False** se a linha excluída for removida.  
+ **true** se uma lacuna substituir a linha excluída. **false** se a linha excluída for removida.  
   
  Ao usar o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] com um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], este método retorna **true** para cursores de TYPE_SS_SCROLL_KEYSET e **false** para todos os outros tipos de conjunto de resultados.  
   
@@ -67,7 +66,7 @@ public boolean deletesAreDetected(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método deletesAreDetected é especificado pelo método deletesAreDetected na interface DatabaseMetadata.  
+ Esse método deletesAreDetected é especificado pelo método deletesAreDetected na interface java. Sql. DatabaseMetaData.  
   
 > [!NOTE]  
 >  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] detecta linhas excluídas para todos os tipos de cursores atualizáveis, embora a detecção seja transiente para cursores dinâmicos e de avanço.  

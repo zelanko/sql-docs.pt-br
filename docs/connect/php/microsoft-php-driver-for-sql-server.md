@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9dc380ea7eab9876980dfc9ee1ee050ff77fa237
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8fcc4a39edfaafd7ae66990a2f1161d781d1219
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800251"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936341"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Drivers da Microsoft para PHP para SQL Server
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-O Microsoft Drivers for PHP para SQL Server habilitar a integração com o SQL Server para aplicativos PHP. Os drivers são extensões PHP que permitem a leitura e gravação de dados do SQL Server dentro de scripts PHP. Os drivers fornecem interfaces para acessar dados em bancos de dados SQL do Azure e em todas as edições do SQL Server 2005 e posterior (incluindo as edições Express). Os drivers de fazer uso de recursos PHP, incluindo fluxos PHP para ler e gravar objetos grandes.  
+Os drivers da Microsoft para PHP para SQL Server habilitam a integração com SQL Server para aplicativos PHP. Os drivers são extensões PHP que permitem a leitura e gravação de dados de SQL Server de dentro de scripts PHP. Os drivers fornecem interfaces para acessar dados em bancos de dados SQL do Azure e em todas as edições do SQL Server 2005 e posterior (incluindo Express Editions). Os drivers usam recursos PHP, incluindo fluxos PHP, para ler e gravar objetos grandes.  
   
 ## <a name="getting-started"></a>Introdução  
 * [Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento de PHP](step-1-configure-development-environment-for-php-development.md)  
@@ -40,12 +39,12 @@ O Microsoft Drivers for PHP para SQL Server habilitar a integração com o SQL S
 * [Recursos de suporte para os drivers da Microsoft para PHP para SQL Server](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>Download  
-* ![Um círculo seta para baixo de download](../../ssdt/media/download.png)[para baixar drivers para PHP para SQL](download-drivers-php-sql-server.md)
+* ![Download-seta-Circleed](../../ssdt/media/download.png)[para baixar drivers para PHP para SQL](download-drivers-php-sql-server.md)
   
 ## <a name="samples"></a>Exemplos  
 * [Exemplos de código do Microsoft Drivers para PHP para SQL Server](code-samples-for-php-sql-driver.md)
-* [Introdução ao PHP no Windows](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
-* [Introdução ao PHP no macOS](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
-* [Introdução ao PHP no Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)
-* [Introdução ao PHP no Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/)
-* [Introdução ao PHP no SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/php/sles/)
+* [Introdução com PHP no Windows](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
+* [Introdução com PHP no macOS](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
+* [Introdução com PHP no Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)
+* [Introdução com PHP em Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/)
+* [Introdução com PHP no SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/php/sles/)

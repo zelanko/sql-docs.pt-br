@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d4077f11e28bc382976eb3da441cfd42a24a567f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: eb5654563a0894abd497dfb0053b3e5667bf433d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916509"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>Usando um procedimento armazenado com um status de retorno
 
@@ -29,7 +28,7 @@ Ao chamar esse tipo de procedimento armazenado usando o driver JDBC, você deve 
 `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> Para obter mais informações sobre as sequências de escape SQL, consulte [usando sequências de Escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).
+> Para obter mais informações sobre as sequências de escape do SQL, consulte [usando sequências de escape do SQL](../../connect/jdbc/using-sql-escape-sequences.md).
 
 Ao construir a sequência de escape `call`, especifique o parâmetro de status de retorno usando o ? (ponto de interrogação). Esse caractere age como um espaço reservado para o valor de parâmetro que retornará do procedimento armazenado. Para especificar um valor para um parâmetro de status de retorno, é necessário especificar o tipo de dados do parâmetro usando o método [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) da classe SQLServerCallableStatement antes de executar o procedimento armazenado.
 

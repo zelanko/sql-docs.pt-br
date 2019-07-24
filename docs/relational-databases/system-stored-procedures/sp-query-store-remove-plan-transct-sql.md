@@ -21,12 +21,12 @@ ms.assetid: 88734726-135b-4b61-9f3f-f568c1fbece6
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 027dbe78c663f2aa218ac46b3ad6e54b681a9369
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef04dee7a7384141aab820c2c65343a18b605ad0
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896433"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418941"
 ---
 # <a name="spquerystoreremoveplan-transct-sql"></a>sp_query_store_remove_plan (Transct-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @plan_id = ] plan_id` É a id do plano de consulta a ser removido. *plan_id* é um **bigint**, sem padrão.  
+`[ @plan_id = ] plan_id`É a ID do plano de consulta a ser removido. *plan_id* é um **bigint**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -51,7 +51,7 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="permissions"></a>Permissões  
- Requer o **EXECUTE** permissão no banco de dados, e **excluir** permissão em exibições de catálogo de repositório de consultas.  
+ Requer a permissão **ALTER** no banco de dados.
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna informações sobre as consultas no repositório de consultas.  

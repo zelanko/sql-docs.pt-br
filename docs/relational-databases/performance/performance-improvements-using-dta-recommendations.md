@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: a0f114c9e2783c8989a2bb4682d488eaea087814
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 700deff13eba1ce6320a49f997c20a9b40769eee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369978"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915203"
 ---
 # <a name="performance-improvements-using-dta-recommendations"></a>Melhorias de desempenho usando recomendações do DTA
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,8 +30,8 @@ A partir do SQL Server 2016, o DTA (Orientador de Otimização do Mecanismo de B
 Para demonstrar os benefícios das recomendações do DTA no desempenho da carga de trabalho, tentei isso com várias cargas de trabalho reais do cliente. Para cada carga de trabalho do cliente, deixamos o DTA analisar consultas individuais, bem como a carga de trabalho total das consultas. Consideramos três alternativas:
   
   1. **Somente columnstore**: crie apenas índices columnstore para todas as tabelas sem usar o DTA. 
-  2. **DTA (somente rowstore)**: execute o DTA com a opção para recomendar índices somente rowstore.
-  3. **DTA (rowstore + columnstore)**: Execute o DTA com a opção de recomendar índices columnstore e rowstore.  
+  2. **DTA (somente rowstore)** : execute o DTA com a opção para recomendar índices somente rowstore.
+  3. **DTA (rowstore + columnstore)** : Execute o DTA com a opção de recomendar índices columnstore e rowstore.  
    
 Em cada caso, depois implementamos os índices recomendados. Relatamos o Tempo de CPU (em milissegundos) com a média calculada em várias execuções da consulta ou da carga de trabalho. A figura abaixo plota o tempo de CPU em milissegundos para cargas de trabalho entre dois bancos de dados de cliente diferentes. Observe que o eixo Y (Tempo de CPU) usa uma escala logarítmica.   
 

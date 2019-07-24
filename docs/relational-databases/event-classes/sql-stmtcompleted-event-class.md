@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7a6315631d06d295f223bbf8e2e4117dcd2aaf0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c82db194aa2cdd0eb0a162ee358512f2023adb58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043344"
 ---
 # <a name="sqlstmtcompleted-event-class"></a>Classe de evento SQL:StmtCompleted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,8 +34,8 @@ ms.locfileid: "47616544"
 |DatabaseName|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |Duração|**bigint**|Período de tempo (em microssegundos) utilizado pelo evento.|13|Sim|  
 |EndTime|**datetime**|Horário em que o evento foi encerrado.|15|Sim|  
-|EventClass|**int**|Tipo de evento = 41.|27|não|  
-|EventSequence|**int**|Sequência de um determinado evento na solicitação.|51|não|  
+|EventClass|**int**|Tipo de evento = 41.|27|Não|  
+|EventSequence|**int**|Sequência de um determinado evento na solicitação.|51|Não|  
 |GroupID|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IntegerData|**int**|Número de linhas retornadas pela instrução.|25|Sim|  
@@ -52,7 +51,7 @@ ms.locfileid: "47616544"
 |Reads|**bigint**|Número de leituras de página emitidas pela instrução SQL.|16|Sim|  
 |RequestID|**int**|ID da solicitação que contém a instrução.|49|Sim|  
 |RowCounts|**bigint**|Número de linhas afetadas por um evento.|48|Sim|  
-|ServerName|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|não|  
+|ServerName|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |SessionLoginName|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |SPID|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |StartTime|**datetime**|Hora de início do evento, se disponível.|14|Sim|  

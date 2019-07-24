@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 52975d96b6db206b4cdd2b6b201bc55eb572131c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6406c2e2ff709e163057163424719169cb2b9787
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090263"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911797"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Como fazer: Criar condições de teste para o designer de teste de unidade do SQL Server
 Você pode usar a classe extensível [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) para criar novas condições de teste. Por exemplo, você pode criar uma nova condição de teste que verifica o número de colunas ou os valores em um conjunto de resultados.  

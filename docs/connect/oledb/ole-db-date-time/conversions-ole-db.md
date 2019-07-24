@@ -14,24 +14,23 @@ helpviewer_keywords:
 - OLE DB, bindings and conversions
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 19c732a38c5237811f4f2219292ab4589018f4e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dc86193f40474fc373c1b0e7dd48e579e8548821
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769419"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015841"
 ---
 # <a name="conversions-ole-db"></a>Conversões (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Esta seção discute como converter entre **datetime** e **datetimeoffset** valores. As conversões descritas nesta seção já são fornecidas pelo OLE DB ou são uma extensão consistente do OLE DB.  
+  Esta seção discute como converter entre os valores **DateTime** e **DateTimeOffset** . As conversões descritas nesta seção já são fornecidas pelo OLE DB ou são uma extensão consistente do OLE DB.  
   
- O formato de literais e cadeias de caracteres para datas e horas no OLE DB geralmente segue a norma ISO e não depende da localidade do cliente. Uma exceção é DBTYPE_DATE, em que o padrão é Automação OLE. No entanto, porque o Driver do OLE DB para SQL Server só converte entre tipos quando os dados são transmitidos para ou do cliente, não é possível para um aplicativo forçar o Driver do OLE DB para SQL Server converter entre DBTYPE_DATE e cadeia de caracteres de formatos. Caso contrário, as cadeias de caracteres usam os formatos a seguir (texto entre colchetes indica um elemento opcional):  
+ O formato de literais e cadeias de caracteres para datas e horas no OLE DB geralmente segue a norma ISO e não depende da localidade do cliente. Uma exceção é DBTYPE_DATE, em que o padrão é Automação OLE. No entanto, como OLE DB driver para SQL Server só converte entre tipos quando os dados são transmitidos para ou do cliente, não há nenhuma maneira de um aplicativo forçar OLE DB driver para SQL Server converter entre DBTYPE_DATE e formatos de cadeia de caracteres. Caso contrário, as cadeias de caracteres usam os formatos a seguir (texto entre colchetes indica um elemento opcional):  
   
--   O formato do **datetime** e **datetimeoffset** cadeias de caracteres é:  
+-   O formato das cadeias de caracteres **DateTime** e **DateTimeOffset** é:  
   
      *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
@@ -39,14 +38,14 @@ ms.locfileid: "66769419"
   
      *hh*:*mm*:*ss*[.*9999999*]  
   
--   O formato do **data** cadeias de caracteres é:  
+-   O formato das cadeias de caracteres de **Data** é:  
   
      *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
->  As versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e SQLOLEDB implementavam conversões OLE, caso em que conversões padrão falhavam. O Driver do OLE DB para SQL Server segue o mesmo comportamento que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Como resultado, algumas conversões executadas pelo Driver do OLE DB para SQL Server diferem da especificação OLE DB.  
+>  As versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e SQLOLEDB implementavam conversões OLE, caso em que conversões padrão falhavam. O driver OLE DB para SQL Server segue o mesmo comportamento que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o cliente nativo. Como resultado, algumas conversões executadas pelo driver OLE DB para SQL Server diferem da especificação de OLE DB.  
   
- As conversões de cadeias de caracteres permitem uma flexibilidade nos espaços em branco e na largura dos campos. Para obter mais informações, consulte a seção "Formatos de dados: cadeias de caracteres e literais" [suporte de tipo de dados para OLE DB aprimoramentos de data e hora](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
+ As conversões de cadeias de caracteres permitem uma flexibilidade nos espaços em branco e na largura dos campos. Para obter mais informações, consulte a seção "formatos de dados: cadeias de caracteres e literais" em [suporte de tipo de dados para OLE DB melhorias de data e hora](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   
  Seguem as regras de conversão gerais:  
   

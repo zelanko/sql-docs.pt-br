@@ -21,17 +21,17 @@ ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a00ac999dd3b6f96595f6abaf02b81e4684c55b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0cdb3fc64a18965594c315b589922b14b66be49b
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002614"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418921"
 ---
 # <a name="spquerystoreunforceplan-transact-sql"></a>sp_query_store_unforce_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Habilita unforcing um plano específico para uma consulta específica.  
+  Permite a imposição de um plano específico para uma consulta específica.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +43,9 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @query_id = ] query_id` É a id da consulta. *query_id* é um **bigint**, sem padrão.  
+`[ @query_id = ] query_id`É a ID da consulta. *query_id* é um **bigint**, sem padrão.  
   
-`[ @plan_id = ] plan_id` É a id do plano de consulta que não será imposta. *plan_id* é um **bigint**, sem padrão.  
+`[ @plan_id = ] plan_id`É a ID do plano de consulta que não será mais imposta. *plan_id* é um **bigint**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -53,7 +53,7 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="permissions"></a>Permissões  
- Requer o **EXECUTE** permissão no banco de dados, e **inserir**, **atualização**, e **excluir** permissão no catálogo de repositório de consulta Modos de exibição.  
+ Requer a permissão **ALTER** no banco de dados.
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna informações sobre as consultas no repositório de consultas.  
@@ -67,7 +67,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Depois de identificar a query_id e plan_id que você deseja não forçar, use o exemplo a seguir para impor o plano.  
+ Depois de identificar o query_id e o plan_id que você deseja não forçar, use o exemplo a seguir para não forçar o plano.  
   
 ```  
 EXEC sp_query_store_unforce_plan 3, 3;  

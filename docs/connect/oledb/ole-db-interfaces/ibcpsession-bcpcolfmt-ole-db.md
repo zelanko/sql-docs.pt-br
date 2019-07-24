@@ -15,13 +15,12 @@ helpviewer_keywords:
 - BCPColFmt method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: fdb46a6a2391c70f452d2fcf2c49045c59bd1e0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76dd26d42951a95c604b8d5b3bceaff21c355be2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66791018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994580"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +78,7 @@ HRESULT BCPColFmt(
  Índice do campo no arquivo de dados do usuário.  
   
  *eUserDataType*[in]  
- O tipo de dados do campo no arquivo de dados do usuário. Os tipos de dados disponíveis são listados no Driver OLE DB para o arquivo de cabeçalho do SQL Server (msoledbsql.h) com o formato bcp_type_xxx; por exemplo, BCP_TYPE_SQLINT4. Caso o valor BCP_TYPE_DEFAULT seja especificado, o provedor tenta usar o mesmo tipo como a tabela ou o tipo de coluna de exibição. Para operações de cópia em massa fora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e em um arquivo quando o argumento **eUserDataType** é BCP_TYPE_SQLDECIMAL ou BCP_TYPE_SQLNUMERIC:  
+ O tipo de dados do campo no arquivo de dados do usuário. Os tipos de dados disponíveis são listados no driver de OLE DB para SQL Server arquivo de cabeçalho (msoledbsql. h) com o formato BCP_TYPE_XXX, por exemplo, BCP_TYPE_SQLINT4. Caso o valor BCP_TYPE_DEFAULT seja especificado, o provedor tenta usar o mesmo tipo como a tabela ou o tipo de coluna de exibição. Para operações de cópia em massa fora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e em um arquivo quando o argumento **eUserDataType** é BCP_TYPE_SQLDECIMAL ou BCP_TYPE_SQLNUMERIC:  
   
 -   Se a coluna de origem não for decimal ou numeric, serão usadas a precisão e escala padrão.  
   
@@ -131,7 +130,7 @@ HRESULT BCPColFmt(
  Erro de memória insuficiente.  
   
 ## <a name="see-also"></a>Consulte Também  
- [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
+ [OLE DB &#40;IBCPSession&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Executando operações de cópia em massa](../../oledb/features/performing-bulk-copy-operations.md)  
   
   

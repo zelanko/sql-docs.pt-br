@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 36571f7c-b335-4249-8f83-51dcb6923aec
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b835d6903eaac7cdd45f0073e18361c46c155aee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e26b8c0eb4595403e3370a2e56aabfce63f0c80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981515"
 ---
 # <a name="getnclob-method-javalangstring-sqlserverresultset"></a>Método getNClob (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public java.sql.NClob getNClob(java.lang.String columnLabel)
 ## <a name="remarks"></a>Remarks  
  Esse método getNClob é especificado pelo método getNClob na interface java.sql.ResultSet.  
   
- Esse método tem suporte apenas no **nvarchar (max)** , **ntext**, e **xml** colunas. Seu uso em quaisquer outros tipos de dados fará com que uma exceção seja lançada.  
+ Esse método só tem suporte em colunas **nvarchar (max)** , **ntext**e **XML** . Seu uso em quaisquer outros tipos de dados fará com que uma exceção seja lançada.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método getNClob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-sqlserverresultset.md)   

@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 2048bb9f-7d9b-4aaa-b135-c716910cc800
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 03a11c4479ac860e84009fcd528d932098bdc661
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbe3bc040ba79ad7699a571b13b48f2c41965c60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981425"
 ---
 # <a name="getnstring-method-int"></a>Método getNString (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o valor do designado **NCHAR**, **NVARCHAR**, ou **LONGNVARCHAR** parâmetro como uma cadeia de caracteres no Java linguagem de programação.  
+  Recupera o valor do parâmetro **nchar**, **nvarchar**ou **LONGNVARCHAR** designado como uma cadeia de caracteres na linguagem de programação Java.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +35,7 @@ public final java.lang.String getNString(int parameterIndex)
  Um **int** que indica o índice do parâmetro.  
   
 ## <a name="return-value"></a>Valor retornado  
- AStringobject.  
+ Asastringobject.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,123 +1,123 @@
 ---
 title: Exibir status do cluster
 titleSuffix: SQL Server big data clusters
-description: Este artigo explica como exibir o status de um cluster de big data usando o Studio de dados do Azure, os blocos de anotações e mssqlctl comandos.
+description: Este artigo explica como exibir o status de um cluster Big Data usando os comandos Azure Data Studio, notebooks e azdata.
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 06/27/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1a8d04ab43adac77a534a82626cc4a018c24b68f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6dca94b8bd7547222394d7809cb003b9e936982
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957674"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419291"
 ---
-# <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Como exibir o status de um cluster de big data
+# <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Como exibir o status de um cluster Big Data
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este artigo descreve como acessar os pontos de extremidade de serviço e exibir o status de um cluster de big data do SQL Server (versão prévia). Você pode usar ambos os Studio de dados do Azure e **mssqlctl**, e este artigo aborda ambas as técnicas.
+Este artigo descreve como acessar os pontos de extremidade de serviço e exibir o status de um cluster SQL Server Big Data (versão prévia). Você pode usar o Azure Data Studio e o **azdata**, e este artigo aborda as duas técnicas.
 
-## <a id="datastudio"></a> Usar o Studio de dados do Azure
+## <a id="datastudio"></a>Usar Azure Data Studio
 
-Depois de baixar a versão mais recente **build insiders** dos [Studio do Azure Data](https://aka.ms/azdata-insiders), você pode exibir os pontos de extremidade de serviço e o status de um grande de dados de cluster com o painel do cluster grande de dados do SQL Server. Observe que alguns dos recursos a seguir estão apenas pela primeira vez disponíveis no build insiders do estúdio de dados do Azure.
+Depois de baixar a **versão** mais recente do [Azure Data Studio](https://aka.ms/azdata-insiders), você pode exibir pontos de extremidade de serviço e o status de um cluster Big Data com o painel SQL Server Big data cluster. Observe que alguns dos recursos a seguir estão disponíveis apenas na compilação de insiders de Azure Data Studio.
 
-1. Primeiro, crie uma conexão para seu cluster de big data no estúdio de dados do Azure. Para obter mais informações, consulte [conectar-se a um SQL Server cluster de big data com o Azure Data Studio](connect-to-big-data-cluster.md).
+1. Primeiro, crie uma conexão com o cluster Big Data no Azure Data Studio. Para obter mais informações, consulte [conectar-se a um cluster SQL Server Big data com o Azure Data Studio](connect-to-big-data-cluster.md).
 
-1. Clique com botão direito no ponto de extremidade de cluster de big data e, em seguida, clique em **gerenciar**.
+1. Clique com o botão direito do mouse no ponto de extremidade do cluster Big Data e clique em **gerenciar**.
 
-   ![gerenciar o botão direito do mouse](media/view-cluster-status/right-click-manage.png)
+   ![Clique com o botão direito gerenciar](media/view-cluster-status/right-click-manage.png)
 
-1. Selecione o **Cluster grande de dados do SQL Server** tab para acessar o painel do cluster de big data.
+1. Selecione a guia **SQL Server Cluster de Big data** para acessar o painel de cluster Big Data.
 
-   ![Painel do cluster de big data](media/view-cluster-status/bdc-dashboard.png)
+   ![Painel de cluster de Big data](media/view-cluster-status/bdc-dashboard.png)
 
 ### <a name="service-endpoints"></a>Pontos de extremidade de serviço
 
-É importante ser capaz de acessar facilmente os vários serviços dentro de um cluster de big data. O painel do cluster de big data fornece uma tabela de pontos de extremidade de serviço que permite que você veja e copie os pontos de extremidade de serviço.
+É importante poder acessar facilmente os vários serviços em um cluster Big Data. O painel de cluster Big Data fornece uma tabela de pontos de extremidade de serviço que permite ver e copiar os pontos de extremidade de serviço.
 
-![Pontos de extremidade de serviço](media/view-cluster-status/service-endpoints.png)
+![pontos de extremidade de serviço](media/view-cluster-status/service-endpoints.png)
 
-As primeiras linhas expõem os seguintes serviços:
+As primeiras várias linhas expõem os seguintes serviços:
 
 - Proxy de aplicativo
 - Serviço de gerenciamento de cluster
 - HDFS e Spark
 - Proxy de gerenciamento
 
-Esses serviços listam os pontos de extremidade que podem ser copiados e colados quando precisar que o ponto de extremidade para se conectar a esses serviços. Você pode, por exemplo, clique no ícone de cópia à direita do ponto de extremidade e, em seguida, cole-o em uma janela de texto, solicitando esse ponto de extremidade. O ponto de extremidade do serviço de gerenciamento de Cluster é necessário executar o [bloco de anotações do cluster status](#notebook).
+Esses serviços listam os pontos de extremidade que podem ser copiados e colados quando você precisa do ponto de extremidades para se conectar a esses serviços. Por exemplo, você pode clicar no ícone de cópia à direita do ponto de extremidade e, em seguida, colá-lo em uma janela de texto solicitando esse ponto de extremidade. O ponto de extremidade do serviço de gerenciamento de cluster é necessário para executar o [bloco de anotações de status do cluster](#notebook).
 
 ### <a name="dashboards"></a>Painéis
 
-A tabela de pontos de extremidade de serviço também expõe vários painéis de monitoramento:
+A tabela de pontos de extremidade de serviço também expõe vários painéis para monitoramento:
 
 - Métricas (Grafana)
 - Logs (Kibana)
-- Monitoramento de trabalho do Spark
+- Monitoramento de trabalhos do Spark
 - Gerenciamento de recursos do Spark
 
-Você pode clicar diretamente nesses links. Você será solicitado duas vezes a fornecer seu nome de usuário e senha antes de se conectar ao serviço.
+Você pode clicar diretamente nesses links. Você é solicitado duas vezes a fornecer seu nome de usuário e senha antes de se conectar ao serviço.
 
-### <a id="notebook"></a> Bloco de anotações de Status de cluster
+### <a id="notebook"></a>Bloco de anotações de status do cluster
 
-1. Você também pode exibir o status do cluster do cluster de big data iniciando o bloco de anotações do Status do Cluster. Para iniciar o bloco de anotações, clique o **Status do Cluster** tarefa.
+1. Você também pode exibir o status do cluster do Big Data cluster iniciando o bloco de anotações de status do cluster. Para iniciar o bloco de anotações, clique na tarefa **status do cluster** .
 
     ![Iniciar](media/view-cluster-status/cluster-status-launch.png)
 
 2. Antes de começar, você precisará dos seguintes itens:
 
-    - Nome do cluster de big data
+    - Nome do cluster de Big data
     - Nome de usuário do controlador
     - Senha do controlador
     - Pontos de extremidade do controlador
 
-    É o nome padrão do cluster de big data **mssql-cluster** , a menos que você o personalizado durante a implantação. Você pode encontrar o ponto de extremidade de controlador do painel do cluster de big data na tabela de pontos de extremidade de serviço. O ponto de extremidade está listado como **serviço de gerenciamento de Cluster**. Se você não souber as credenciais, peça ao administrador que implantado o cluster.
+    O nome de cluster Big Data padrão é **MSSQL-cluster** , a menos que você o tenha personalizado durante a implantação. Você pode encontrar o ponto de extremidade do controlador no painel Big Data cluster na tabela pontos de extremidade de serviço. O ponto de extremidade é listado como **serviço de gerenciamento de cluster**. Se você não souber as credenciais, peça ao administrador que implantou o cluster.
 
-3. Clique em **células executar** na barra de ferramentas superior.
+3. Clique em **executar células** na barra de ferramentas superior.
 
-4. Siga os prompts para suas credenciais. Pressione pressione ENTER depois de digitar cada credencial para o nome do cluster de big data, nome de usuário do controlador e a senha do controlador.
+4. Siga o prompt para suas credenciais. Pressione ENTER depois de digitar cada credencial para o Big Data nome do cluster, o nome de usuário do controlador e a senha do controlador.
 
     > [!Note]
-    > Se você não tiver uma configuração de arquivo de configuração com seu big data, você será solicitado para o ponto de extremidade do controlador. Digite ou cole-o e, em seguida, pressione ENTER para continuar.
+    > Se você não tiver uma configuração de arquivo de configuração com seu Big Data, você será solicitado para o ponto de extremidade do controlador. Digite ou cole-o e pressione ENTER para continuar.
 
-5. Se você estiver conectado com êxito, o restante do bloco de anotações mostra a saída de cada componente do cluster de big data. Quando você quiser executar novamente uma célula de código determinados, passe o mouse sobre a célula de código e clique no **executar** ícone.
+5. Se você se conectou com êxito, o restante do notebook mostrará a saída de cada componente do cluster de Big Data. Quando você quiser executar novamente uma determinada célula de código, passe o mouse sobre a célula de código e clique no ícone **executar** .
 
-## <a name="use-mssqlctl"></a>Usar mssqlctl
+## <a name="use-azdata"></a>Usar azdata
 
-Você também pode usar [mssqlctl](deploy-install-mssqlctl.md) comandos para exibir os pontos de extremidade e o status do cluster.
+Você também pode usar comandos [azdata](deploy-install-azdata.md) para exibir os dois pontos de extremidade e o status do cluster.
 
 ### <a name="service-endpoints"></a>Pontos de extremidade de serviço
 
-Você pode obter os endereços IP dos pontos de extremidade externos para o cluster de big data usando as etapas a seguir.
+Você pode obter os endereços IP dos pontos de extremidade externos para o cluster Big Data usando as etapas a seguir.
 
-1. Localizar o endereço IP do ponto de extremidade controlador examinando a saída EXTERNAL-IP dos seguintes **kubectl** comando:
+1. Localize o endereço IP do ponto de extremidade do controlador examinando a saída de IP externo do seguinte comando **kubectl** :
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
    > [!TIP]
-   > Se você não alterou o nome padrão durante a implantação, use `-n mssql-cluster` no comando anterior. **MSSQL-cluster** é o nome padrão para o cluster de big data.
+   > Se você não alterou o nome padrão durante a implantação, `-n mssql-cluster` use no comando anterior. **MSSQL-cluster** é o nome padrão para o cluster de Big Data.
 
-1. Faça logon no cluster de big data com [mssqlctl logon](reference-mssqlctl.md). Defina a **– controlador de ponto de extremidade** parâmetro para o endereço IP externo do ponto de extremidade de controlador.
+1. Faça logon no cluster Big Data com [logon azdata](reference-azdata.md). Defina o parâmetro **--Controller-Endpoint** como o endereço IP externo do ponto de extremidade do controlador.
 
    ```bash
-   mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
+   azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
    ```
 
    Especifique o nome de usuário e a senha que você configurou para o controlador (CONTROLLER_USERNAME e CONTROLLER_PASSWORD) durante a implantação.
 
-1. Execute [lista de ponto de extremidade do bdc mssqlctl](reference-mssqlctl-bdc-endpoint.md) para obter uma lista com uma descrição de cada ponto de extremidade e seus valores correspondentes de porta e endereço IP. 
+1. Execute a [lista de pontos de extremidade do BDC do azdata](reference-azdata-bdc-endpoint.md) para obter uma lista com uma descrição de cada ponto de extremidade e seus valores de porta e endereço IP correspondentes. 
 
    ```bash
-   mssqlctl bdc endpoint list -o table
+   azdata bdc endpoint list -o table
    ```
 
-   A lista a seguir mostra um exemplo de saída deste comando:
+   A lista a seguir mostra a saída de exemplo deste comando:
 
    ```output
    Description                                             Endpoint                                                   Ip              Name               Port    Protocol
@@ -137,16 +137,16 @@ Você pode obter os endereços IP dos pontos de extremidade externos para o clus
 
 ### <a name="view-cluster-status"></a>Exibir status do cluster
 
-Você pode exibir o status do cluster com o [show de status do bdc mssqlctl](reference-mssqlctl-bdc-status.md) comando.
+Você pode exibir o status do cluster com o comando [azdata BDC status show](reference-azdata-bdc-status.md) .
 
 ```bash
-mssqlctl bdc status show -o table
+azdata bdc status show -o table
 ```
 
 > [!TIP]
-> Para executar os comandos de status, você deve primeiro fazer logon com o **mssqlctl logon** comando, que foi mostrado na seção de pontos de extremidade anterior.
+> Para executar os comandos de status, primeiro você deve fazer logon com o comando de **logon azdata** , que foi mostrado na seção pontos de extremidade anteriores.
 
-O exemplo a seguir mostra o exemplo de saída desse comando:
+Veja a seguir uma saída de exemplo deste comando:
 
 ```output
 Kind     Name           State
@@ -161,21 +161,21 @@ Storage  default        Ready
 
 ### <a name="view-pool-status"></a>Exibir status do pool
 
-Você pode exibir o status dos pools dentro do cluster com o [mssqlctl show de status de pool de bdc](reference-mssqlctl-bdc-pool-status.md) comando. Para usar esse comando, especifique o tipo de pool com o `--kind` parâmetro. Os tipos de pool são:
+Você pode exibir o status dos pools no cluster com o comando [azdata BDC pool status show](reference-azdata-bdc-pool-status.md) . Para usar esse comando, especifique o tipo de pool com o `--kind` parâmetro. Os tipos de pool são:
 
-- Computação
+- Nós
 - data
 - master
 - Spark
-- Armazenamento
+- Repositório
 
 Por exemplo, o comando a seguir exibe o status do pool do pool de armazenamento:
 
 ```bash
-mssqlctl bdc pool status show --kind storage
+azdata bdc pool status show --kind storage
 ```
 
-Você deve ver o texto semelhante à seguinte saída:
+Você deve ver um texto semelhante à seguinte saída:
 
 ```output
 [
@@ -198,20 +198,20 @@ Você deve ver o texto semelhante à seguinte saída:
 ]
 ```
 
-O `logsUrl` links para um painel kibana com informações do log de valor:
+O `logsUrl` valor é vinculado a um painel do kibana com informações de log:
 
-![painel kibana](./media/view-cluster-status/kibana-dashboard.png)
+![Painel do Kibana](./media/view-cluster-status/kibana-dashboard.png)
 
-O `nodeMetricsUrl` e `sqlMetricsUrl` valores vincular a um painel do grafana para monitoramento de integridade do nó e métricas SQL:
+Os `nodeMetricsUrl` valores `sqlMetricsUrl` e são vinculados a um painel do grafana para monitorar a integridade do nó e as métricas do SQL:
 
 ![Painel do Grafana](./media/view-cluster-status/grafana-dashboard.png)
 
 ![SQL](./media/view-cluster-status/grafana-sql-status.png)
 
-### <a name="view-controller-status"></a>Status do controlador de exibição
+### <a name="view-controller-status"></a>Exibir status do controlador
 
-Você pode exibir o status do controlador com o [mssqlctl bdc controle status mostrar](reference-mssqlctl-bdc-control-status.md) comando. Ele fornece links semelhantes para os painéis de monitoramentos relacionados a nós de cluster de big data controlador.
+Você pode exibir o status do controlador com o comando [azdata BDC Control status show](reference-azdata-bdc-control-status.md) . Ele fornece links semelhantes aos painéis de monitoramento relacionados aos nós do controlador do cluster Big Data.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre clusters de big data, consulte [quais são os clusters de grandes dados do SQL Server](big-data-cluster-overview.md).
+Para obter mais informações sobre clusters Big Data, consulte [o que são SQL Server Big data clusters](big-data-cluster-overview.md).

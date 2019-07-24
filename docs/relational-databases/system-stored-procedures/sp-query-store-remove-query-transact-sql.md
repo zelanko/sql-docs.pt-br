@@ -21,17 +21,17 @@ ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb65ba60dc99be491cffcd70a0eb442bfe61d580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c87dc88db41e6699e1ce39e924b017c11bf5621e
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896403"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418912"
 ---
 # <a name="spquerystoreremovequery-transact-sql"></a>sp_query_store_remove_query (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Remove a consulta, bem como todos os respectivos planos e estatísticas de tempo de execução do repositório de consultas.  
+  Remove a consulta, bem como todos os planos associados e estatísticas de tempo de execução do repositório de consultas.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @query_id = ] query_id` É a id da consulta a ser removido do repositório de consultas. *query_id* é um **bigint**, sem padrão.  
+`[ @query_id = ] query_id`É a ID da consulta a ser removida do repositório de consultas. *query_id* é um **bigint**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -51,7 +51,7 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="permissions"></a>Permissões  
- Requer o **EXECUTE** permissão no banco de dados, e **excluir** permissão em exibições de catálogo de repositório de consultas.  
+ Requer a permissão **ALTER** no banco de dados.
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna informações sobre as consultas no repositório de consultas.  
@@ -65,7 +65,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Depois de identificar a query_id que você deseja excluir, use o exemplo a seguir para excluir a consulta.  
+ Depois de identificar o query_id que você deseja excluir, use o exemplo a seguir para excluir a consulta.  
   
  O exemplo a seguir.  
   

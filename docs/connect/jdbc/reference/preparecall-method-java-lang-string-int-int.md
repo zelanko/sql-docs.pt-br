@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 04d36a25-7f95-4675-9690-4462671b3d67
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 79340619e65fdcfd0bb076697ef6fa63cfb45c03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b51cbe470169459469959448208b3aa53b18cce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66771085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976250"
 ---
 # <a name="preparecall-method-javalangstring-int-int"></a>Método prepareCall (java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +56,7 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método prepareCall é especificado pelo método prepareCall na interface do Connection.  
+ Esse método prepareCall é especificado pelo método prepareCall na interface java. Sql. Connection.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método prepareCall &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)   

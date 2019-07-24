@@ -1,6 +1,6 @@
 ---
-title: Grupos de cálculos em modelos de tabela do Analysis Services | Microsoft Docs
-ms.date: 06/17/2019
+title: Grupos de cálculo em Analysis Services modelos de tabela | Microsoft Docs
+ms.date: 07/24/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6dfe3516a36fa0ee6e8644b46b5caeb2a7cca92b
-ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.openlocfilehash: af63f41555a021fc720c7d1e15778265fe7de500
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263442"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419529"
 ---
 # <a name="calculation-groups-preview"></a>Grupos de cálculo (visualização)
  
 [!INCLUDE[ssas-appliesto-sql2019-aas](../../includes/ssas-appliesto-sql2019-aas.md)]
 
-Grupos de cálculo podem reduzir significativamente o número de medidas com redundância de expressões de medida comum como de agrupamento *itens de cálculo*. Grupos de cálculo têm suporte no Azure Analysis Services e SQL Server Analysis Services 2019 tabulares de modelos no 1470 e acima [nível de compatibilidade](compatibility-level-for-tabular-models-in-analysis-services.md). Modelos de nível de compatibilidade 1470 estão atualmente em **visualização**.  
+Os grupos de cálculo podem reduzir significativamente o número de medidas redundantes agrupando expressões de medida comuns como *itens de cálculo*. Os grupos de cálculo têm suporte em modelos de tabela Azure Analysis Services e SQL Server Analysis Services 2019 no [nível de compatibilidade](compatibility-level-for-tabular-models-in-analysis-services.md)1470 e superior. Modelos no nível de compatibilidade 1470 estão em **Visualização**no momento.  
 
 Este artigo descreve: 
 
@@ -29,6 +29,7 @@ Este artigo descreve:
 > * Benefícios 
 > * Como funcionam os grupos de cálculo
 > * Cadeias de caracteres de formato dinâmico
+> * Ordenação
 > * Precedência
 > * Ferramentas
 > * Limitações
@@ -37,40 +38,40 @@ Este artigo descreve:
 
 ## <a name="benefits"></a>Benefícios
 
-Grupos de cálculo de resolver um problema em modelos complexos, onde pode haver uma proliferação de medidas redundantes usando os mesmos cálculos - mais comuns com cálculos de inteligência de tempo. Por exemplo, um analista de vendas quer exibir totais de vendas e pedidos por month-to-date (MTD) quarter-to-date (QTD), year-to-date (acumulado no ano), ordena year-to-date para o ano anterior (Aj) e assim por diante. O Modelador de dados tem que criar medidas separadas para cada cálculo, que pode levar a dezenas de medidas. Para o usuário, isso pode significar que com a classificação de tantos apenas medidas e aplicá-los individualmente aos seus relatórios. 
+Os grupos de cálculo abordam um problema em modelos complexos em que pode haver uma proliferação de medidas redundantes usando os mesmos cálculos – mais comuns com cálculos de inteligência de tempo. Por exemplo, um analista de vendas deseja exibir os totais de vendas e os pedidos por mês-até-data (MTD), trimestre acumulado (QTD.), ano até a data, pedidos desde o ano anterior (PY) e assim por diante. O modelador de dados precisa criar medidas separadas para cada cálculo, o que pode levar a dezenas de medidas. Para o usuário, isso pode significar ter que classificar apenas quantas medidas e aplicá-las individualmente ao relatório. 
 
-Vamos primeiro dar uma olhada em como os grupos de cálculo aparecem para os usuários em uma ferramenta de relatório como o Power BI. Em seguida, vamos dar uma olhada em como o que compõe um grupo de cálculo e como eles são criados em um modelo.
+Vamos primeiro dar uma olhada em como os grupos de cálculo aparecem para os usuários em uma ferramenta de relatório como Power BI. Em seguida, vamos dar uma olhada no que compõe um grupo de cálculo e como eles são criados em um modelo.
 
-Grupos de cálculos são mostrados em clientes de relatório como uma tabela com uma única coluna. A coluna não é como uma coluna típica ou dimensão, em vez disso, ele representa um ou mais cálculos reutilizáveis, ou *itens de cálculo* que podem ser aplicadas a qualquer medida já adicionada ao filtro de valores para uma visualização.
+Grupos de cálculos são mostrados em clientes de relatório como uma tabela com uma única coluna. A coluna não é como uma coluna ou dimensão típica, mas representa um ou mais cálculos reutilizáveis ou *itens de cálculo* que podem ser aplicados a qualquer medida já adicionada ao filtro de valores para uma visualização.
 
-Na animação a seguir, um usuário está analisando dados de vendas por anos, 2012 e 2013. Antes de aplicar um grupo de cálculo, a medida de base comum **vendas** calcula uma soma do total de vendas para cada mês. O usuário deseja, em seguida, aplicar cálculos de inteligência de tempo para obter totais de vendas para o mês, trimestre até a data, ano e assim por diante. Sem grupos de cálculo, o usuário precisa selecionar medidas de inteligência de tempo individuais.
+Na animação a seguir, um usuário está analisando dados de vendas por anos 2012 e 2013. Antes de aplicar um grupo de cálculo, as **vendas** da medida de base comum calculam uma soma do total de vendas para cada mês. Em seguida, o usuário deseja aplicar cálculos de inteligência de tempo para obter os totais de vendas do mês até a data, trimestre até a data, desde o início do ano e assim por diante. Sem grupos de cálculo, o usuário teria que selecionar medidas individuais de inteligência de tempo.
 
-Com um grupo de cálculo, neste exemplo denominado **inteligência de tempo**, quando o usuário arrasta o **cálculo do tempo** item para o **colunas** área, cada item de cálculo de filtro é exibida como uma coluna separada. Valores para cada linha são calculados a partir a medida base, **vendas**.  
+Com um grupo de cálculo, neste exemplo denominado **inteligência de tempo**, quando o usuário arrasta o item de **cálculo de tempo** para a área de filtro de **colunas** , cada item de cálculo aparece como uma coluna separada. Os valores para cada linha são calculados a partir da medida base, **vendas**.  
 
-![Grupo de cálculo que está sendo aplicado no Power BI](media/calculation-groups/calc-groups-pbi.gif)
+![Grupo de cálculo sendo aplicado no Power BI](media/calculation-groups/calc-groups-pbi.gif)
 
 
-Funcionam com os grupos de cálculo **explícita** medidas DAX. Neste exemplo, **vendas** é uma medida explícita já criada no modelo. Grupos de cálculo não funcionam com as medidas implícitas DAX. Por exemplo, no Power BI medidas implícitas são criadas quando um usuário arrasta colunas para elementos visuais para exibir valores agregados, sem criar uma medida explícita. Neste momento, o Power BI gera o DAX para medidas implícitas escritas como embutido cálculos de DAX – que significa que as medidas implícitas não podem trabalhar com grupos de cálculo. Uma nova propriedade de modelo visível no objeto de modelo de TOM (Tabular) foi introduzida, **DiscourageImplicitMeasures**. Atualmente, a fim de criar grupos de cálculo essa propriedade deve ser definida como **verdadeira**. Quando definido como true, o Power BI Desktop no Live Connect modo desabilita a criação de medidas implícitas.
+Grupos de cálculo funcionam  com medidas Dax explícitas. Neste exemplo, **Sales** é uma medida explícita já criada no modelo. Os grupos de cálculo não funcionam com medidas DAX implícitas. Por exemplo, em Power BI medidas implícitas são criadas quando um usuário arrasta colunas para visuais para exibir valores agregados, sem criar uma medida explícita. Neste momento, Power BI gera DAX para medidas implícitas escritas como cálculos DAX embutidos, o que significa que as medidas implícitas não funcionam com grupos de cálculo. Uma nova propriedade de modelo visível no modelo de objeto de tabela (TOM) foi introduzida, **DiscourageImplicitMeasures**. No momento, para criar grupos de cálculo, essa propriedade deve ser definida como **true**. Quando definido como true, Power BI Desktop no modo Live Connect desabilita a criação de medidas implícitas.
 
-## <a name="how-they-work"></a>Como eles funcionam
+## <a name="how-they-work"></a>Como funcionam
 
-Agora que você já viu como grupos de cálculo se beneficiar os usuários, vamos dar uma olhada em como o exemplo de grupo de cálculo de inteligência de tempo mostrado é criado.
+Agora que você viu como os grupos de cálculo beneficiam os usuários, vamos dar uma olhada em como o exemplo de grupo de cálculo de inteligência de tempo mostrado é criado.
 
-Antes de entrarmos em detalhes, vamos apresentar algumas novas funções DAX especificamente para grupos de cálculo: 
+Antes de entrarmos nos detalhes, vamos introduzir algumas novas funções DAX especificamente para grupos de cálculo: 
 
-[SELECTEDMEASURE](https://docs.microsoft.com/dax/selectedmeasure-function-dax) - usado pelas expressões para itens de cálculo referenciar a medida que está atualmente no contexto. Neste exemplo, a medida Sales.
+[SELECTEDMEASURE](https://docs.microsoft.com/dax/selectedmeasure-function-dax) – usado por expressões para itens de cálculo para referenciar a medida que está atualmente no contexto. Neste exemplo, a medida Sales.
 
-[SELECTEDMEASURENAME](https://docs.microsoft.com/dax/selectedmeasurename-function-dax) - usado pelas expressões para itens de cálculo determinar a medida que está no contexto pelo nome.
+[SELECTEDMEASURENAME](https://docs.microsoft.com/dax/selectedmeasurename-function-dax) – usado por expressões para itens de cálculo para determinar a medida que está no contexto por nome.
 
-[ISSELECTEDMEASURE](https://docs.microsoft.com/dax/isselectedmeasure-function-dax) - usado pelas expressões para itens de cálculo determinar a medida que está no contexto é especificada em uma lista de medidas.
+[ISSELECTEDMEASURE](https://docs.microsoft.com/dax/isselectedmeasure-function-dax) – usado por expressões para itens de cálculo para determinar a medida que está no contexto é especificada em uma lista de medidas.
 
-[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) - usado pelas expressões para itens de cálculo recuperar a cadeia de caracteres de formato da medida que está no contexto.
+[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) – usado por expressões para itens de cálculo para recuperar a cadeia de caracteres de formato da medida que está no contexto.
 
 ### <a name="time-intelligence-example"></a>Exemplo de inteligência de tempo
 
-Nome da tabela - **inteligência de tempo**   
-Nome da coluna - **cálculo do tempo**   
-Precedência - **20**   
+Nome da tabela- **inteligência de tempo**   
+Nome da coluna- **cálculo de tempo**   
+Precedência- **20**   
 
 #### <a name="time-intelligence-calculation-items"></a>Itens de cálculo de inteligência de tempo
 
@@ -98,7 +99,7 @@ CALCULATE(SELECTEDMEASURE(), DATESQTD(DimDate[Date]))
 CALCULATE(SELECTEDMEASURE(), DATESYTD(DimDate[Date]))
 ```
 
-**PY**
+**AJ**
 
 ```dax
 CALCULATE(SELECTEDMEASURE(), SAMEPERIODLASTYEAR(DimDate[Date]))
@@ -114,7 +115,7 @@ CALCULATE(
 )
 ```
 
-**AJ QTD**
+**QTD. DO PY**
 
 ```dax
 CALCULATE(
@@ -124,7 +125,7 @@ CALCULATE(
 )
 ```
 
-**PY YTD**
+**AJ POR ANO**
 
 ```dax
 CALCULATE(
@@ -144,7 +145,7 @@ CALCULATE(
 )
 ```
 
-**YOY%**
+**YOY**
 
 ```dax
 DIVIDE(
@@ -159,7 +160,7 @@ DIVIDE(
 )
 ```
 
-Para testar esse grupo de cálculo, você pode executar uma consulta DAX no SSMS ou o código-fonte aberto [Studio DAX](http://daxstudio.org/). Ano a ano e YOY % são omitidas deste exemplo de consulta.
+Para testar esse grupo de cálculo, você pode executar uma consulta DAX no SSMS ou no [Dax Studio](http://daxstudio.org/)de código aberto. YOY e YOY% são omitidos deste exemplo de consulta.
 
 #### <a name="time-intelligence-query"></a>Consulta de inteligência de tempo
 
@@ -180,50 +181,50 @@ CALCULATETABLE (
 )
 ```
 
-#### <a name="time-intelligence-query-return"></a>Consulta de inteligência de tempo de retorno
+#### <a name="time-intelligence-query-return"></a>Retorno de consulta de inteligência de tempo
 
-A tabela de retorno mostra cálculos para cada cálculo item aplicado. Por exemplo, você pode ver que Qtd para março de 2012 é a soma de janeiro, fevereiro e março de 2012.
+A tabela de retorno mostra os cálculos para cada item de cálculo aplicado. Por exemplo, você pode ver QTD para março de 2012 é a soma de Janeiro, fevereiro e 2012 de março.
 
 ![Retorno de consulta](media/calculation-groups/calc-groups-query-return.png)
 
 
 ## <a name="dynamic-format-strings"></a>Cadeias de caracteres de formato dinâmico
 
-*Cadeias de caracteres de formato dinâmico* com cálculo de grupos permitem que aplicativos condicional de cadeias de caracteres de formato para medidas sem forçá-los para retornar cadeias de caracteres.
+*Cadeias de formato dinâmico* com grupos de cálculo permitem a aplicação condicional de cadeias de caracteres de formato a medidas sem forçá-las a retornar cadeias de caracteres
 
-Modelos de tabela oferecem suporte à formatação dinâmica de medidas por meio do DAX [formato](https://docs.microsoft.com/dax/format-function-dax) função. No entanto, a função de formato tem a desvantagem de retornar uma cadeia de caracteres, forçando a medidas que podem ser numéricas também sejam retornados como uma cadeia de caracteres. Isso pode ter algumas limitações, como não trabalhar com a maioria dos visuais do Power BI, dependendo dos valores numéricos, como gráficos.
+Os modelos de tabela dão suporte à formatação dinâmica de medidas usando a função de [formato](https://docs.microsoft.com/dax/format-function-dax) Dax. No entanto, a função FORMAT tem a desvantagem de retornar uma cadeia de caracteres, forçando medidas que, de outra forma, seriam numéricas também para serem retornadas como uma cadeia de caracteres. Isso pode ter algumas limitações, como não trabalhar com a maioria dos Power BI visuais, dependendo dos valores numéricos, como gráficos.
 
 ### <a name="dynamic-format-strings-for-time-intelligence"></a>Cadeias de caracteres de formato dinâmico para inteligência de tempo
 
-Se observarmos o exemplo de inteligência de tempo mostrado acima, o cálculo todos os itens, exceto **% de YOY** deve usar o formato da medida atual no contexto. Por exemplo, **YTD** calculado na medida vendas a base deve ser moeda. Se esse fosse um grupo de cálculo para algo como uma medida de base de pedidos, o formato seria numérico. **% De YOY de**, no entanto, deve ser uma porcentagem, independentemente do formato da medida base.
+Se observarmos o exemplo de inteligência de tempo mostrado acima, todos os itens de cálculo, exceto **yoy%** , devem usar o formato da medida atual no contexto. Por exemplo,  calculado acumulado na medida de base de vendas deve ser moeda. Se esse fosse um grupo de cálculo para algo como uma medida base de pedidos, o formato seria numérico. **Yoy%** , no entanto, deve ser uma porcentagem, independentemente do formato da medida base.
 
-Para **% de YOY**, podemos substituir a cadeia de caracteres de formato, definindo a propriedade de expressão de cadeia de caracteres de formato **0,00%;-0.00%; % 0,00**. Para saber mais sobre as propriedades de expressão de cadeia de caracteres de formato, consulte [propriedades de célula MDX – conteúdo de cadeia de caracteres de formato](../multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md#numeric-values).
+Para **yoy%** , podemos substituir a cadeia de caracteres de formato definindo a propriedade Format String Expression como **0,00%;-0,00%; 0,00%** . Para saber mais sobre propriedades de expressão de cadeia de caracteres de formato, consulte [Propriedades da célula MDX – conteúdo da cadeia de caracteres de formato](../multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md#numeric-values).
 
-Nesta matriz visual no Power BI, você deve ver **vendas atual/YOY** e **pedidos atual/YOY** reter suas cadeias de caracteres de formato respectivo medida base. **% De YOY de venda** e **ordena % de YOY**, no entanto, substitui a cadeia de caracteres de formato para usar *porcentagem* formato.
+Neste visual de matriz no Power BI, você vê **Sales Current/yoy** e **Orders Current/yoy** retêm suas respectivas cadeias de caracteres de formato de medida base. **Sales yoy%** e **Orders yoy%** , no entanto, substitui a cadeia de caracteres de formato para usar o formato de *porcentagem* .
 
-![Inteligência de tempo no visual de matriz](media/calculation-groups/calc-groups-dynamicstring-timeintel.png)
+![Inteligência de tempo no Visual de matriz](media/calculation-groups/calc-groups-dynamicstring-timeintel.png)
 
 ### <a name="dynamic-format-strings-for-currency-conversion"></a>Cadeias de caracteres de formato dinâmico para conversão de moeda
 
-Cadeias de caracteres de formato dinâmico fornecem conversão de moeda fácil. Considere o seguinte modelo de dados do Adventure Works. Ela é modelada para *um-para-muitos* conversão de moeda, conforme definido pela [tipos de conversão](../currency-conversions-analysis-services.md#conversion-types).
+Cadeias de caracteres de formato dinâmico fornecem uma conversão de moeda fácil. Considere o modelo de dados do Adventure Works a seguir. Ele é modelado para conversão de moeda de *um para muitos* , conforme definido por [tipos de conversão](../currency-conversions-analysis-services.md#conversion-types).
 
-![Taxa de câmbio no modelo de tabela](media/calculation-groups/calc-groups-currency-conversion.png)
+![Taxa de moeda no modelo de tabela](media/calculation-groups/calc-groups-currency-conversion.png)
 
-Um **FormatString** coluna é adicionada para o **DimCurrency** de tabela e populados com cadeias de caracteres de formato para as respectivas moedas.
+Uma coluna **FormatString** é adicionada à tabela **DimCurrency** e preenchida com cadeias de caracteres de formato para as respectivas moedas.
 
 ![Coluna de cadeia de caracteres de formato](media/calculation-groups/calc-groups-formatstringcolumn.png)
 
-Neste exemplo, o seguinte grupo de cálculo, em seguida, é definido como:
+Neste exemplo, o seguinte grupo de cálculo é definido como:
 
 ### <a name="currency-conversion-example"></a>Exemplo de conversão de moeda
 
-Nome da tabela - **conversão de moeda**   
-Nome da coluna - **cálculo de conversão**   
-Precedência - **5**   
+Nome da tabela- **conversão de moeda**   
+Nome da coluna – **cálculo de conversão**   
+Precedência- **5**   
 
 #### <a name="calculation-items-for-currency-conversion"></a>Itens de cálculo para conversão de moeda
 
-**Nenhuma conversão**
+**Sem conversão**
 
 ```dax
 SELECTEDMEASURE()
@@ -251,31 +252,31 @@ SELECTEDVALUE(
     SELECTEDMEASUREFORMATSTRING()
 )
 ```
-A expressão de cadeia de caracteres de formato deve retornar uma cadeia de caracteres de escalar. Ele usa o novo [SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) função para reverter para a cadeia de caracteres de formato de medida base, se houver várias moedas no contexto de filtro.
+A expressão de cadeia de caracteres de formato deve retornar uma cadeia de caracteres escalar. Ele usa a nova função [SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) para reverter para a cadeia de caracteres de formato de medida base se houver várias moedas no contexto de filtro.
 
-A animação a seguir mostra a conversão de moeda de um formato dinâmico a **vendas** medidas em um relatório.
+A animação a seguir mostra a conversão de moeda de formato dinâmico da medida **vendas** em um relatório.
 
-![Cadeia de formato dinâmica de conversão de moeda aplicada](media/calculation-groups/calc-groups-dynamic-format-string.gif)
+![Cadeia de caracteres de formato dinâmico de conversão de moeda aplicada](media/calculation-groups/calc-groups-dynamic-format-string.gif)
 
 ## <a name="precedence"></a>Precedência
 
-A precedência é uma propriedade definida para um grupo de cálculo. Ele especifica a ordem de avaliação quando há mais de um grupo de cálculo. Um número mais alto indica uma precedência maior, que significa que ele será avaliado antes de grupos de cálculo com menor precedência.
+Precedência é uma propriedade definida para um grupo de cálculo. Especifica a ordem de avaliação quando há mais de um grupo de cálculo. Um número mais alto indica maior precedência, o que significa que ele será avaliado antes dos grupos de cálculo com precedência mais baixa.
 
-Neste exemplo, vamos usar o mesmo modelo como o exemplo de inteligência de tempo acima, mas também adicionar uma **médias** grupo de cálculo. O grupo de cálculo de médias contém cálculos médios que são independentes da inteligência de tempo tradicional, em que eles não alterarem o contexto de filtro de data - eles apenas aplicarem cálculos médios dentro dele.
+Para este exemplo, usaremos o mesmo modelo que o exemplo de inteligência de tempo acima, mas também adicionamos  um grupo de cálculo de médias. O grupo de cálculo de médias contém cálculos médios que são independentes da inteligência de tempo tradicional, pois eles não alteram o contexto de filtro de data. eles simplesmente aplicam cálculos médios dentro dele.
 
-Neste exemplo, um cálculo de média diário é definido. Cálculos como barris média de óleo por dia são comuns em aplicativos de petróleo e gás. Outros exemplos de negócios comuns incluem a média de vendas de repositório no varejo.
+Neste exemplo, um cálculo de média diária é definido. Cálculos como a média de cilindros de óleo por dia são comuns em aplicativos de petróleo e gás. Outros exemplos de negócios comuns incluem média de vendas da loja no varejo.
 
-Enquanto esses cálculos são calculados independentemente dos cálculos de inteligência de tempo, pode haver um requisito para combiná-los. Por exemplo, um usuário pode querer ver barris de petróleo por dia até a presente data para exibir a taxa diária de petróleo desde o início do ano até a data atual. Nesse cenário, a precedência deve ser definida para itens de cálculo.
+Embora esses cálculos sejam calculados independentemente dos cálculos de inteligência de tempo, pode haver um requisito para combiná-los. Por exemplo, um usuário pode querer ver cilindros de óleo por dia até exibir a taxa diária de óleo desde o início do ano até a data atual. Nesse cenário, a precedência deve ser definida para itens de cálculo.
 
 ### <a name="averages-example"></a>Exemplo de médias
 
-Nome da tabela **médias**.   
-Nome da coluna é **cálculo de média**.   
+O nome da tabela é a **média**.   
+O nome da coluna é **cálculo médio**.   
 A precedência é **10**.   
 
 #### <a name="calculation-items-for-averages"></a>Itens de cálculo para médias
 
-**Não há média**
+**Sem média**
 
 ```dax
 SELECTEDMEASURE()
@@ -322,7 +323,7 @@ EVALUATE
 )
 ```
 
-#### <a name="averages-query-return"></a>Consulta de médias retornada
+#### <a name="averages-query-return"></a>Retorno de consulta de médias
 
 ![Retorno de consulta](media/calculation-groups/calc-groups-ytd-daily-avg.png)
 
@@ -331,39 +332,39 @@ A tabela a seguir mostra como os valores de março de 2012 são calculados.
 
 |Nome da coluna  |Cálculo |
 |---------|---------|
-|YTD     |    Soma das vendas de Jan, Feb, Mar de 2012<br />= 495,364 + 506,994 + 373,483     |
-|Média diária    |     Vendas para o Mar dividido pelo número de dias em março de 2012<br />= 373,483 / 31       |
-|Média diária da acumulados no ano     | Acumulado no ano para o Mar dividido pelo número de dias em janeiro, fevereiro e março de 2012<br />=  1,375,841 / (31 + 29 + 31)       |
+|YTD     |    Soma de vendas para Jan, Fev, mar 2012<br />= 495.364 + 506.994 + 373.483     |
+|Média diária    |     Vendas para mar 2012 divididas por n º de dias em março<br />= 373.483/31       |
+|Média diária acumulada no ano     | No ano para mar 2012 dividido por n º de dias em Jan, fev e mar<br />= 1.375.841/(31 + 29 + 31)       |
 
-Aqui está a definição do item de cálculo acumulado no ano, aplicada com a precedência dos **20**.
+Aqui está a definição do item de cálculo do ano, aplicada com a precedência de **20**.
 
 ```dax
 CALCULATE(SELECTEDMEASURE(), DATESYTD(DimDate[Date]))
 ```
 
-Aqui está o diário médio, aplicada com uma precedência de **10**.
+Aqui está a média diária, aplicada com uma precedência de **10**.
 
 ```dax
 DIVIDE(SELECTEDMEASURE(), COUNTROWS(DimDate))
 ```
 
-Como a precedência do grupo de cálculo de inteligência de tempo é mais alta do que o grupo de cálculo de médias, ela é aplicada como amplamente quanto possível. O cálculo de média diária da acumulados no ano se aplica a acumulado no ano para o numerador e o denominador (contagem de dias) do cálculo de média diário.
+Como a precedência do grupo de cálculo de inteligência de tempo é maior do que a do grupo de cálculo de médias, ela é aplicada o mais amplamente possível. O cálculo da média diária no ano se aplica ao ano até o numerador e o denominador (contagem de dias) do cálculo da média diária.
 
-Isso é equivalente à expressão a seguir:
+Isso é equivalente à seguinte expressão:
 
 ```dax
 CALCULATE(DIVIDE(SELECTEDMEASURE(), COUNTROWS(DimDate)), DATESYTD(DimDate[Date]))
 ```
 
-Não esta expressão:
+Não é esta expressão:
 
 ```dax
 DIVIDE(CALCULATE(SELECTEDMEASURE(), DATESYTD(DimDate[Date])), COUNTROWS(DimDate)))
 ```
 
-## <a name="sideways-recursion"></a>Para os lados recursão
+## <a name="sideways-recursion"></a>Recursão lateral
 
-O exemplo de inteligência de tempo acima, alguns dos itens de cálculo se referir a outras pessoas no mesmo grupo de cálculo. Isso é chamado *recursão para os lados*. Por exemplo, **% de YOY** faz referência aos **YOY** e **PY**.
+No exemplo de inteligência de tempo acima, alguns dos itens de cálculo referem-se a outros no mesmo grupo de cálculo. Isso é chamado de *recursão lateral*. Por exemplo, **yoy%** faz referência a **yoy** e **py**.
 
 ```dax
 DIVIDE(
@@ -378,11 +379,11 @@ DIVIDE(
 )
 ```
 
-Nesse caso, ambas as expressões são avaliadas separadamente porque eles estão usando diferentes calcular instruções. Não há suporte para outros tipos de recursão.
+Nesse caso, ambas as expressões são avaliadas separadamente porque estão usando diferentes instruções Calculate. Não há suporte para outros tipos de recursão.
 
-## <a name="single-calculation-item-in-filter-context"></a>Item de cálculo única no contexto de filtro
+## <a name="single-calculation-item-in-filter-context"></a>Item de cálculo único no contexto de filtro
 
-Em nosso exemplo de inteligência de tempo, o **YTD PY** item de cálculo, que tem um único calcular expressão:
+No nosso exemplo de inteligência de tempo, o item de cálculo de **py no ano** tem uma única expressão Calculate:
 
 ```dax
 CALCULATE(
@@ -392,23 +393,23 @@ CALCULATE(
 )
 ```
 
-O argumento da acumulados no ano para a função CALCULATE() substitui o contexto de filtro para reutilizar a lógica já definida no item de cálculo da acumulados no ano. Não é possível aplicar PY e acumulado no ano em uma única avaliação. Os grupos de cálculo são *aplicadas apenas* se um item único de cálculo do grupo de cálculo está no contexto de filtro.
+O argumento do ano para a função CALCULATE () substitui o contexto do filtro para reutilizar a lógica já definida no item de cálculo do ano. Não é possível aplicar PY e no ano em uma única avaliação. Os grupos de cálculo são *aplicados somente* se um único item de cálculo do grupo de cálculo estiver no contexto de filtro.
 
-## <a name="mdx-support"></a>Suporte MDX
+## <a name="mdx-support"></a>Suporte a MDX
 
-Grupos de cálculo dão suporte a consultas de dados MDX (Multidimensional Expressions). Isso significa, os usuários do Microsoft Excel, quais modelos de dados tabulares de consulta usando MDX, pode aproveitar ao máximo de grupos de cálculo na planilha de tabelas dinâmicas e gráficos.
+Os grupos de cálculo dão suporte a consultas MDX (multidimensional data Expressions). Isso significa que os usuários do Microsoft Excel, que consultam modelos de dados tabulares usando MDX, podem aproveitar ao máximo os grupos de cálculo em gráficos e tabelas dinâmicas de planilha.
 
 ## <a name="tools"></a>Ferramentas
 
-Grupos de cálculo ainda não têm suporte no SQL Server Data Tools, Visual Studio com extensões do Analysis Services. No entanto, os grupos de cálculo podem ser criados usando a linguagem de script de modelo Tabular (TMSL) ou de software livre [Editor de tabelas](https://github.com/otykier/TabularEditor).
+Os grupos de cálculo ainda não têm suporte no SQL Server Data Tools, no Visual Studio com extensões de Analysis Services. No entanto, os grupos de cálculo podem ser criados usando TMSL (linguagem de script de modelo de tabela) ou o [Editor de tabela](https://github.com/otykier/TabularEditor)de código aberto.
 
 ## <a name="limitations"></a>Limitações
 
-[Segurança em nível de objeto](object-level-security.md) (ferramentas) definidos no cálculo não há suporte para tabelas de grupos. No entanto, as ferramentas podem ser definidas em outras tabelas no mesmo modelo. Se um item de cálculo se refere a um objeto protegido de ferramentas, é retornado um erro genérico.
+[Segurança em nível de objeto](object-level-security.md) (OLS) definido em tabelas de grupo de cálculo não tem suporte. No entanto, OLS pode ser definido em outras tabelas no mesmo modelo. Se um item de cálculo se referir a um objeto OLS protegido, um erro genérico será retornado.
 
-[Segurança em nível de linha](roles-ssas-tabular.md#bkmk_rowfliters) (RLS) não tem suporte. Você pode definir o RLS em tabelas no mesmo modelo, mas não em grupos de cálculo em si (direta ou indiretamente).
+[Segurança em nível de linha](roles-ssas-tabular.md#bkmk_rowfliters) (RLS) não é suportado. Você pode definir a RLS em tabelas no mesmo modelo, mas não nos próprios grupos de cálculo (direta ou indiretamente).
 
 ## <a name="see-also"></a>Confira também  
 
 [DAX em modelos de tabela](understanding-dax-in-tabular-models-ssas-tabular.md)   
-[Referência de DAX](https://docs.microsoft.com/dax/data-analysis-expressions-dax-reference)  
+[Referência DAX](https://docs.microsoft.com/dax/data-analysis-expressions-dax-reference)  

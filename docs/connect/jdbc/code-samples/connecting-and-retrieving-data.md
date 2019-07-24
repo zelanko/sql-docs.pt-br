@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c87089b59855ef2c68a9e3b1051ed39850d7b17e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 310c66f6951a467b368fc44e1933bc6c8b6b36b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957275"
 ---
 # <a name="connecting-and-retrieving-data"></a>Conectando e recuperando dados
 
@@ -25,7 +24,7 @@ ms.locfileid: "66770068"
 Quando você trabalha com o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], há dois métodos principais para estabelecer uma conexão com um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Um é definir as propriedades de conexão na URL de conexão e, em seguida, chamar o método getConnection da classe DriverManager para retornar um objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
 > [!NOTE]  
-> Para obter uma lista de propriedades de conexão com suporte pelo driver JDBC, consulte [definindo as propriedades de Conexão](../../../connect/jdbc/setting-the-connection-properties.md).  
+> Para obter uma lista das propriedades de conexão com suporte pelo driver JDBC, consulte [definindo as propriedades de conexão](../../../connect/jdbc/setting-the-connection-properties.md).  
   
 O segundo método envolve definir as propriedades de conexão usando métodos setter da classe [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) e, em seguida, chamar o método [getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) para retornar um objeto SQLServerConnection.  
   

@@ -39,12 +39,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e480363941d8928d270f978471b5474a8e24b0a1
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872212"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418877"
 ---
 # <a name="configure-database-mail"></a>Configurar o Database Mail
   Este tópico descreve como habilitar e configurar o Database Mail usando o Assistente para Configuração do Database Mail e cria um script de Configuração do Database Mail usando modelos.  
@@ -67,7 +67,7 @@ ms.locfileid: "62872212"
   
 2.  Expanda o nó **Gerenciamento** .  
   
-3.  Clique estreito **Database Mail**e, em seguida, clique em **configurar o Database Mail**.  
+3.  Clique com o botão direito do mouse em **Database Mail**e clique em **Configurar o Database Mail**.  
   
 4.  Conclua os diálogos do Assistente:  
   
@@ -129,7 +129,7 @@ ms.locfileid: "62872212"
  Digite o endereço de email que será usado em respostas a mensagens de email enviadas por esta conta. O email de resposta é opcional. Por exemplo, respostas a uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent podem ir para o administrador de banco de dados, danw@Adventure-Works.com.  
   
  **Nome do servidor**  
- Digite o nome ou o endereço IP do servidor SMTP que a conta usa para enviar email. Geralmente, está em um formato semelhante ao `smtp.` *< sua_empresa >* `.com`. Para obter mais ajuda sobre isso, consulte o administrador de mail.  
+ Digite o nome ou o endereço IP do servidor SMTP que a conta usa para enviar email. Normalmente, isso está em um formato semelhante `smtp.`a *< your_company >* `.com`. Para obter mais ajuda sobre isso, consulte o administrador de mail.  
   
  **Número da porta**  
  Digite o número da porta do servidor SMTP para a conta. A maioria dos servidores SMTP usa a porta 25.  
@@ -163,7 +163,7 @@ ms.locfileid: "62872212"
  **Nome da conta**  
  Selecione a conta a exibir, atualizar ou excluir.  
   
- **Delete (excluir)**  
+ **Excluir**  
  Excluir a conta selecionada. Você deve remover esta conta de perfis associados, ou excluir esses perfis, antes de excluir a conta selecionada.  
   
  **Descrição**  
@@ -224,7 +224,7 @@ ms.locfileid: "62872212"
  **Adicionar**  
  Adiciona uma conta ao perfil.  
   
- **Remover**  
+ **Removerr**  
  Remove a conta selecionada do perfil.  
   
  **Mover para Cima**  
@@ -243,7 +243,7 @@ ms.locfileid: "62872212"
  **Nome do perfil**  
  Selecione o nome do perfil a gerenciar.  
   
- **Delete (excluir)**  
+ **Excluir**  
  Exclui o perfil selecionado. Você será solicitado a selecionar **Sim** para excluir o perfil selecionado e para optar por falhar em todas as mensagens não enviadas ou a selecionar **Não** para excluir o perfil selecionado apenas se não houver mensagens não enviadas.  
   
  **Descrição**  
@@ -255,7 +255,7 @@ ms.locfileid: "62872212"
  **Adicionar**  
  Adiciona uma conta ao perfil.  
   
- **Remover**  
+ **Removerr**  
  Remove a conta selecionada do perfil.  
   
  **Mover para Cima**  

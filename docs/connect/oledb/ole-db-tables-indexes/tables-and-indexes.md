@@ -1,6 +1,6 @@
 ---
 title: Tabelas e índices | Microsoft Docs
-description: Criando, alterando e droping tabelas e índices usando o Driver do OLE DB para SQL Server
+description: Criando, alterando e removendo tabelas e índices usando OLE DB driver para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 - indexes [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 8fd98f67a35985474d73225db7991aeeafb9119e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0fc8aeed348f64c17894fa3432a7a81274ffbea4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015241"
 ---
 # <a name="tables-and-indexes"></a>Tabelas e índices
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "66801591"
   
  A capacidade de criar ou descartar tabelas e índices depende dos direitos de acesso do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do usuário do aplicativo de consumidor. Descartar uma tabela pode ser uma operação ainda mais restrita pela presença de restrições de integridade referencial declarativas ou outros fatores.  
   
- A maioria dos aplicativos destinados ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usar SQL-DMO em vez dessas Driver do OLE DB para interfaces do SQL Server. SQL-DMO é uma coleção de objetos de automação OLE que dão suporte a todas as funções administrativas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Os aplicativos destinados a vários provedores OLE DB usam essas interfaces OLE DB genéricas suportadas pelos vários provedores OLE DB.  
+ A maioria dos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aplicativos que visam usar o SQL-DMO em vez desses OLE DB driver para interfaces SQL Server. SQL-DMO é uma coleção de objetos de automação OLE que dão suporte a todas as funções administrativas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Os aplicativos destinados a vários provedores OLE DB usam essas interfaces OLE DB genéricas suportadas pelos vários provedores OLE DB.  
   
  No conjunto de propriedades específico de provedor DBPROPSET_SQLSERVERCOLUMN, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] define a propriedade a seguir.  
   

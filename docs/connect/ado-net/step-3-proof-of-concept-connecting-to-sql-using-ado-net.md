@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3ceea73eba8f1c01590218c106f3b2b10237408e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 743eab241fa9feb4a622054b3be48b887b804813
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957613"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Etapa 3: Prova de conceito da conexão ao SQL usando ADO.NET
 
@@ -24,7 +23,7 @@ ms.locfileid: "66770565"
 - Próximo artigo:&nbsp;&nbsp;&nbsp;[Etapa 4: conectar-se de forma resiliente ao SQL com o ADO.NET](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 
   
-Este exemplo de código do c# deve ser considerado uma prova de conceito apenas. O código de exemplo é simplificado por motivos de clareza e não representa necessariamente as melhores práticas recomendadas pela Microsoft.  
+Este C# exemplo de código deve ser considerado apenas uma prova de conceito. O código de exemplo é simplificado para fins de clareza e não necessariamente representa as práticas recomendadas recomendadas pela Microsoft.  
   
 ## <a name="step-1-connect"></a>Etapa 1: conectar-se
   
@@ -67,10 +66,10 @@ O método **SqlConnection. Open** é usado para se conectar ao banco de dados SQ
 
 ## <a name="step-2--execute-a-query"></a>Etapa 2: Executar uma consulta  
   
-O método ExecuteReader:  
+O método SqlCommand. ExecuteReader:  
   
 - Emite a instrução SQL SELECT para o sistema SQL.  
-- Retorna uma instância do SqlDataReader para fornecer acesso a linhas de resultados.  
+- Retorna uma instância de SqlDataReader para fornecer acesso às linhas de resultado.  
   
   
   
@@ -151,13 +150,13 @@ O método ExecuteReader:
   
   
   
-## <a name="step-3-insert-a-row"></a>Etapa 3: Inserir uma linha  
+## <a name="step-3-insert-a-row"></a>Etapa 3: inserir uma linha  
   
   
 Este exemplo demonstra como:  
   
-- Execute uma instrução SQL INSERT com segurança, passando parâmetros.  
-  - Uso de parâmetros protege contra ataques de injeção de SQL.  
+- Execute uma instrução SQL INSERT com segurança passando parâmetros.  
+  - O uso de parâmetros protege contra ataques de injeção de SQL.  
 - Recupere o valor gerado automaticamente.  
   
   

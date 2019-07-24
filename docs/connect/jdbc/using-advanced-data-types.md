@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2682d5fe31bcd2f22eb92960ab16f70458687b55
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5faf330b80f0d8ece7ee4482e881de9c7dd8ead9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004068"
 ---
 # <a name="using-advanced-data-types"></a>Usando tipos de dados avançados
 
@@ -48,7 +47,7 @@ As seguintes seções fornecem exemplos de como é possível usar o driver JDBC 
 O JDBC Driver implementa todos os métodos das interfaces java.sql.Blob, java.sql.Clob e java.sql.NClob.  
   
 > [!NOTE]  
-> Os valores CLOB podem ser usados com tipos de dados de valor grande do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (ou posterior). Especificamente, tipos CLOB podem ser usados com o **varchar (max)** e **nvarchar (max)** tipos de dados, tipos BLOB podem ser usada com **varbinary (max)** e **imagem**  tipos de dados e tipos NCLOB podem ser usados com **ntext** e **nvarchar (max)** .  
+> Os valores CLOB podem ser usados com tipos de dados de valor grande do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (ou posterior). Especificamente, os tipos CLOB podem ser usados com os tipos de dados **varchar (max)** e **nvarchar (max)** , os tipos de blob podem ser usados com os tipos de dados **varbinary (Max** ) e **Image** , e os tipos NClob podem ser usados com **ntext** e **nvarchar (Max )** .  
 
 ## <a name="large-value-data-types"></a>Tipos de dados de valor grande
 
@@ -67,7 +66,7 @@ Reader reader = rs.getCharacterStream(2);
 ```
 
 > [!NOTE]
-> Essa mesma abordagem também pode ser usada para o **texto**, **ntext**, e **nvarchar (max)** tipos de dados.  
+> Essa mesma abordagem também pode ser usada para os tipos de dados **Text**, **ntext**e **nvarchar (max)** .  
 
 Quando você recupera um tipo de dados de valor grande binário, como o tipo de dados **varbinary(max)** , de um banco de dados, há diversas abordagens que você pode adotar. A abordagem mais eficiente é ler os dados como um fluxo binário, da seguinte maneira:  
 
@@ -102,7 +101,7 @@ pstmt.executeUpdate();
 ```
 
 > [!NOTE]  
-> Essa abordagem também pode ser usada para valores que são armazenados em **texto**, **ntext**, e **nvarchar (max)** colunas.  
+> Essa abordagem também pode ser usada para valores que são armazenados em colunas **Text**, **ntext**e **nvarchar (max)** .  
 
 Se você tiver uma biblioteca de imagem no servidor e precisar carregar arquivos de imagem binários inteiros para uma coluna **varbinary(max)** , o método mais eficiente com o driver JDBC será usar fluxos diretamente, da seguinte maneira:  
 
@@ -149,7 +148,7 @@ Para obter mais informações sobre tipos de valor grande, consulte "Usando tipo
 
 O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um tipo de dados **xml** que permite armazenar fragmentos e documentos XML em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O tipo de dados **xml** é interno no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e tem algumas semelhanças com outros tipos internos, como **int** e **varchar**. Assim como ocorre com outros tipos internos, você pode usar o tipo de dados **xml** como um tipo de coluna ao criar uma tabela; como um tipo de variável, de parâmetro ou de retorno de função; ou em funções CAST e CONVERT do [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-No driver JDBC, o tipo de dados **xml** pode ser mapeado como um objeto de Cadeia de Caracteres, matriz de bytes, fluxo, CLOB, BLOB ou SQLXML. Cadeia de caracteres é o padrão. A partir do JDBC Driver versão 2.0, o driver JDBC dá suporte à API do JDBC 4.0, que apresenta a interface SQLXML. A interface SQLXML define métodos para interagir com os dados XML e manipulá-los. O **SQLXML** tipo de dados é mapeado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml** tipo de dados. Para obter mais informações sobre como ler e escrever dados XML bidirecionalmente no banco de dados relacional com o tipo de dados Java **SQLXML**, confira [Dando suporte a dados XML](../../connect/jdbc/supporting-xml-data.md).  
+No driver JDBC, o tipo de dados **xml** pode ser mapeado como um objeto de Cadeia de Caracteres, matriz de bytes, fluxo, CLOB, BLOB ou SQLXML. Cadeia de caracteres é o padrão. A partir do JDBC Driver versão 2.0, o driver JDBC dá suporte à API do JDBC 4.0, que apresenta a interface SQLXML. A interface SQLXML define métodos para interagir com os dados XML e manipulá-los. O tipo de dados **SQLXML** é mapeado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para o tipo de dados **XML** . Para obter mais informações sobre como ler e escrever dados XML bidirecionalmente no banco de dados relacional com o tipo de dados Java **SQLXML**, confira [Dando suporte a dados XML](../../connect/jdbc/supporting-xml-data.md).  
   
 A implementação do tipo de dados **xml** no driver JDBC fornece suporte para o seguinte:  
   
@@ -173,11 +172,11 @@ Para obter mais informações sobre tipos de dados definidos pelo usuário, conf
   
 ## <a name="sqlvariant-data-type"></a>Tipo de dados Sql_variant
 
-Para obter informações sobre o tipo de dados sql_variant, consulte [usando o tipo de dados Sql_variant](../../connect/jdbc/using-sql-variant-datatype.md).  
+Para obter informações sobre o tipo de dados sql_variant, consulte [usando o tipo de dados sql_variant](../../connect/jdbc/using-sql-variant-datatype.md).  
 
 ## <a name="spatial-data-types"></a>Tipos de dados espaciais
 
-Para obter informações sobre tipos de dados espaciais, consulte [usando tipos de dados espaciais](../../connect/jdbc/use-spatial-datatypes.md).  
+Para obter informações sobre os tipos de dados espaciais, consulte [usando](../../connect/jdbc/use-spatial-datatypes.md)tipos de dado espaciais.  
 
 ## <a name="see-also"></a>Consulte Também
 

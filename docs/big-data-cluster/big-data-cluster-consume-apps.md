@@ -1,57 +1,57 @@
 ---
-title: Consumir aplicativos em clusters de big data
+title: Consumir aplicativos em clusters Big Data
 titleSuffix: SQL Server big data clusters
-description: Consuma um aplicativo implantado em um cluster de big data de 2019 do SQL Server usando um serviço web RESTful (visualização).
+description: Consuma um aplicativo implantado no SQL Server 2019 Big Data cluster usando um serviço Web RESTful (versão prévia).
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 03/18/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 919ffb2cd4916451245f29c7d783ca05dbfa6998
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2135ef64fb17eba62eab75b81739eda047167ab
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958887"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419513"
 ---
-# <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Consumir um aplicativo implantado no cluster de big data do SQL Server usando um serviço web RESTful
+# <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Consumir um aplicativo implantado no cluster SQL Server Big Data usando um serviço Web RESTful
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este artigo descreve como consumir um aplicativo implantado em um cluster de big data de 2019 do SQL Server usando um serviço web RESTful (visualização).
+Este artigo descreve como consumir um aplicativo implantado em um cluster SQL Server 2019 Big Data usando um serviço Web RESTful (versão prévia).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- [Cluster de big data do SQL Server de 2019](deployment-guidance.md)
-- [Utilitário de linha de comando mssqlctl](deploy-install-mssqlctl.md)
-- Um aplicativo implantado usando um [ `mssqlctl` ](big-data-cluster-create-apps.md) ou o [implantar o aplicativo de extensão](app-deployment-extension.md)
+- [Cluster SQL Server 2019 Big Data](deployment-guidance.md)
+- [utilitário de linha de comando mssqlctl](deploy-install-azdata.md)
+- Um aplicativo implantado usando [azdata](big-data-cluster-create-apps.md) ou a [extensão de implantação de aplicativo](app-deployment-extension.md)
 
 ## <a name="capabilities"></a>Capacidades
 
-Depois de ter implantado um aplicativo para seu cluster de big data do SQL Server 2019 (visualização), você pode acessar e consumir um aplicativo usando um serviço web RESTful. Isso permite a integração do aplicativo de outros aplicativos ou serviços (por exemplo, um aplicativo móvel ou site). A tabela a seguir descreve os comandos de implantação do aplicativo que você pode usar com **mssqlctl** para obter informações sobre o serviço web RESTful do seu aplicativo.
+Depois de implantar um aplicativo em seu SQL Server 2019 Big Data cluster (versão prévia), você pode acessar e consumir esse aplicativo usando um serviço Web RESTful. Isso permite a integração desse aplicativo de outros aplicativos ou serviços (por exemplo, um aplicativo móvel ou site). A tabela a seguir descreve os comandos de implantação de aplicativo que você pode usar com o **azdata** para obter informações sobre o serviço Web RESTful para seu aplicativo.
 
 |Comando |Descrição |
 |:---|:---|
-|`mssqlctl app describe` | Descreva o aplicativo. |
+|`azdata app describe` | Descreva o aplicativo. |
 
 Você pode obter ajuda com o `--help` parâmetro como no exemplo a seguir:
 
 ```bash
-mssqlctl app describe --help
+azdata app describe --help
 ```
 
-As seções a seguir descrevem como recuperar um ponto de extremidade para um aplicativo e como trabalhar com o serviço web RESTful para integração de aplicativos.
+As seções a seguir descrevem como recuperar um ponto de extremidade para um aplicativo e como trabalhar com o serviço Web RESTful para integração de aplicativos.
 
 ## <a name="retrieve-the-endpoint"></a>Recuperar o ponto de extremidade
 
-O **mssqlctl aplicativo descrevem** comando fornece informações detalhadas sobre o aplicativo, incluindo o ponto de extremidade em seu cluster. Isso normalmente é usado por um desenvolvedor de aplicativo para compilar um aplicativo usando o cliente do swagger e usando o serviço Web para interagir com o aplicativo de maneira RESTful.
+O comando **azdata app Descreva** fornece informações detalhadas sobre o aplicativo, incluindo o ponto de extremidade no cluster. Normalmente, isso é usado por um desenvolvedor de aplicativo para criar um aplicativo usando o cliente do Swagger e usando o WebService para interagir com o aplicativo de maneira RESTful.
 
-Descreva seu aplicativo ao executar um comando semelhante ao seguinte:
+Descreva seu aplicativo executando um comando semelhante ao seguinte:
 
 ```bash
-mssqlctl app describe --name addpy --version v1
+azdata app describe --name addpy --version v1
 ```
 
 ```json
@@ -82,43 +82,43 @@ mssqlctl app describe --name addpy --version v1
 }
 ```
 
-Anote o endereço IP (`10.1.1.3` neste exemplo) e o número da porta (`30777`) na saída.
+Observe o endereço IP (`10.1.1.3` neste exemplo) e o número da porta (`30777`) na saída.
 
 ## <a name="generate-a-jwt-access-token"></a>Gerar um token de acesso JWT
 
-Para acessar o serviço web RESTful para o aplicativo que você implantou pela primeira vez você precisa gerar um token de acesso JWT. Abra a seguinte URL no seu navegador: `https://[IP]:[PORT]/api/docs/swagger.json` usando o endereço IP e porta em execução que você recuperou o `describe` comando acima. Você terá que fazer logon com as mesmas credenciais usadas para `mssqlctl login`.
+Para acessar o serviço Web RESTful para o aplicativo que você implantou, primeiro, você precisa gerar um token de acesso JWT. Abra a seguinte URL no seu navegador: `https://[IP]:[PORT]/api/docs/swagger.json` usando o endereço IP e a porta que você recuperou executando o `describe` comando acima. Você precisará fazer logon com as mesmas credenciais usadas para `azdata login`o.
 
-Cole o conteúdo da `swagger.json` para o [Editor do Swagger](https://editor.swagger.io) para entender quais métodos estão disponíveis:
+Cole o conteúdo do `swagger.json` no editor do [Swagger](https://editor.swagger.io) para entender quais métodos estão disponíveis:
 
-![API Swagger](media/big-data-cluster-consume-apps/api_swagger.png)
+![Swagger de API](media/big-data-cluster-consume-apps/api_swagger.png)
 
-Observe que o `app` método GET, bem como a `token` método POST. Como a autenticação para aplicativos usa tokens JWT é necessário obter um token meu usando sua ferramenta favorita para fazer uma chamada POST para o `token` método. Aqui está um exemplo de como fazer isso [Postman](https://www.getpostman.com/):
+Observe o `app` método Get, bem como o `token` método post. Como a autenticação para aplicativos usa tokens JWT, você precisará obter um token My usando sua ferramenta favorita para fazer uma chamada post para `token` o método. Aqui está um exemplo de como fazer exatamente isso no [postmaster](https://www.getpostman.com/):
 
-![Token do postman](media/big-data-cluster-consume-apps/postman_token.png)
+![Token do postmaster](media/big-data-cluster-consume-apps/postman_token.png)
 
-O resultado dessa solicitação lhe dará um JWT `access_token`, que você precisará chamar a URL para executar o aplicativo.
+O resultado dessa solicitação lhe dará um JWT `access_token`, que será necessário chamar a URL para executar o aplicativo.
 
-## <a name="execute-the-app-using-the-restful-web-service"></a>Execute o aplicativo usando o serviço web RESTful
+## <a name="execute-the-app-using-the-restful-web-service"></a>Executar o aplicativo usando o serviço Web RESTful
 
 > [!NOTE]
-> Se você quiser, você pode abrir a URL para o `swagger` que foi retornado quando você executou `mssqlctl app describe --name [appname] --version [version]` em seu navegador, que deve ser semelhante ao `https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`. Você terá que fazer logon com as mesmas credenciais usadas para `mssqlctl login`. O conteúdo a `swagger.json` você pode colar em [Editor do Swagger](https://editor.swagger.io). Você verá que o serviço web expõe o `run` método. Observe também a URL de Base exibida na parte superior.
+> Se desejar, você pode abrir a URL para o `swagger` que foi retornado quando você executou `azdata app describe --name [appname] --version [version]` em seu navegador, que deve ser semelhante a. `https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json` Você precisará fazer logon com as mesmas credenciais usadas para `azdata login`o. O conteúdo do que `swagger.json` você pode colar no [Editor do Swagger](https://editor.swagger.io). Você verá que o serviço Web expõe o `run` método. Observe também a URL base exibida na parte superior.
 
-Você pode usar sua ferramenta favorita para chamar o `run` método (`https://[IP]:30778/api/app/[appname]/[version]/run`), passando os parâmetros no corpo da solicitação POST como json. Neste exemplo usaremos [Postman](https://www.getpostman.com/). Antes de fazer a chamada, você precisará definir a `Authorization` para `Bearer Token` e cole o token que você recuperou anteriormente. Isso definirá um cabeçalho em sua solicitação. Consulte a captura de tela abaixo.
+Você pode usar sua ferramenta favorita para chamar o `run` método (`https://[IP]:30778/api/app/[appname]/[version]/run`), passando os parâmetros no corpo da solicitação post como JSON. Neste exemplo, usaremos o [postmaster](https://www.getpostman.com/). Antes de fazer a chamada, você precisará definir o `Authorization` para `Bearer Token` e colar o token recuperado anteriormente. Isso definirá um cabeçalho em sua solicitação. Consulte a captura de tela abaixo.
 
-![Postman executar cabeçalhos](media/big-data-cluster-consume-apps/postman_run_1.png)
+![Cabeçalhos de execução do postmaster](media/big-data-cluster-consume-apps/postman_run_1.png)
 
-Em seguida, no corpo de solicitações, passar parâmetros para o aplicativo que você está chamando e defina as `content-type` para `application/json`:
+Em seguida, no corpo de solicitações, passe os parâmetros para o aplicativo que você está chamando e defina `content-type` como `application/json`:
 
-![Corpo de execução do postman](media/big-data-cluster-consume-apps/postman_run_2.png)
+![Corpo da execução do postmaster](media/big-data-cluster-consume-apps/postman_run_2.png)
 
-Quando você envia a solicitação, você receberá a mesma saída de forma que quando você executou o aplicativo por meio de `mssqlctl app run`:
+Ao enviar a solicitação, você receberá a mesma saída que fez quando executou o aplicativo por meio `azdata app run`de:
 
-![Resultado da execução de postman](media/big-data-cluster-consume-apps/postman_result.png)
+![Resultado da execução do postmaster](media/big-data-cluster-consume-apps/postman_result.png)
 
-Agora você ter chamado com êxito o aplicativo por meio do serviço web. Você pode seguir etapas semelhantes para integrar esse web service em seu aplicativo.
+Você agora chamou com êxito o aplicativo por meio do serviço Web. Você pode seguir etapas semelhantes para integrar esse serviço Web em seu aplicativo.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Você também pode conferir exemplos adicionais no [exemplos de implantar o aplicativo](https://aka.ms/sql-app-deploy).
+Você também pode conferir exemplos adicionais em [exemplos de implantação de aplicativo](https://aka.ms/sql-app-deploy).
 
-Para obter mais informações sobre clusters de grandes dados do SQL Server, consulte [quais são os clusters do SQL Server 2019 big data?](big-data-cluster-overview.md).
+Para obter mais informações sobre clusters de Big Data SQL Server, consulte [o que são SQL Server 2019 Big data clusters?](big-data-cluster-overview.md).

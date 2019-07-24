@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa1e912b6a0ec2cce562e6ed6506acfb74a3a17e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 12bcff24be2bf0a722375fa6f7c06444ba818e9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140364"
 ---
 # <a name="use-sparse-columns"></a>Usar colunas esparsas
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ ms.locfileid: "52520975"
 |**xml**|2*|4*|60%|  
 |**hierarchyid**|2*|4*|60%|  
   
- * O comprimento é igual à média dos dados que estão contidos no tipo, mais 2 ou 4 bytes.  
+ \* O comprimento é igual à média dos dados que estão contidos no tipo, mais 2 ou 4 bytes.  
   
 ## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>Sobrecarga na memória necessária para atualizações em colunas esparsas  
  Quando for criar tabelas com colunas esparsas, tenha em mente que uma sobrecarga adicional de 2 bytes é necessária para cada coluna esparsa não nula na tabela quando uma linha está sendo atualizada. Em resultado dessa necessidade de memória adicional, as atualizações podem falhar inesperadamente com o erro 576 quando o tamanho total da linha, incluindo essa sobrecarga de memória, excede 8019, e nenhuma coluna pode ser retirada da linha.  

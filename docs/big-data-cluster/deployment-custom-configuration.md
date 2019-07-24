@@ -1,40 +1,40 @@
 ---
 title: Configurar implantações
 titleSuffix: SQL Server big data clusters
-description: Saiba como personalizar uma implantação de cluster de big data com arquivos de configuração.
+description: Saiba como personalizar uma implantação de cluster Big Data com arquivos de configuração.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ccd7b0955cbeaa22f10a2b81515d7afd892e135e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d7559ecf9c7b17ca21c088ed531a347f88e89ee2
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958446"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419441"
 ---
-# <a name="configure-deployment-settings-for-big-data-clusters"></a>Definir as configurações de implantação para clusters de big data
+# <a name="configure-deployment-settings-for-big-data-clusters"></a>Definir configurações de implantação para clusters de Big Data
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Para personalizar seu arquivo de configuração de implantação de cluster, você pode usar qualquer editor de formato JSON, como o VSCode. Para essas edições para fins de automação de script, use o **seção de configuração do bdc mssqlctl** comando. Este artigo explica como configurar implantações de cluster de big data, modificando arquivos de configuração de implantação. Ele fornece exemplos de como alterar a configuração para cenários diferentes. Para obter mais informações sobre como os arquivos de configuração são usados em implantações, consulte o [diretrizes de implantação](deployment-guidance.md#configfile).
+Para personalizar os arquivos de configuração de implantação de cluster, você pode usar qualquer editor de formato JSON, como VSCode. Para gerar scripts dessas edições para fins de automação, use o comando **azdata BDC config** . Este artigo explica como configurar Big Data implantações de cluster modificando arquivos de configuração de implantação. Ele fornece exemplos de como alterar a configuração para cenários diferentes. Para obter mais informações sobre como os arquivos de configuração são usados em implantações, consulte a [diretriz de implantação](deployment-guidance.md#configfile).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- [Instalar mssqlctl](deploy-install-mssqlctl.md).
+- [Instale o azdata](deploy-install-azdata.md).
 
-- Cada um dos exemplos nesta seção pressupõem que você tenha criado uma cópia de um dos arquivos de configuração padrão. Para obter mais informações, consulte [criar um arquivo de configuração personalizada](deployment-guidance.md#customconfig). Por exemplo, o comando a seguir cria um diretório chamado `custom` que contém um arquivo de configuração de implantação de JSON com base no padrão **aks-dev-test** configuração:
+- Cada um dos exemplos nesta seção pressupõe que você criou uma cópia de uma das configurações padrão. Para obter mais informações, consulte [criar uma configuração personalizada](deployment-guidance.md#customconfig). Por exemplo, o comando a seguir cria um diretório `custom` chamado que contém dois arquivos de configuração de implantação JSON, **cluster. JSON** e **Control. JSON**, com base na configuração padrão de **AKs-dev-Test** :
 
    ```bash
-   mssqlctl bdc config init --source aks-dev-test --target custom
+   azdata bdc config init --source aks-dev-test --target custom
    ```
 
-## <a id="clustername"></a> Alterar o nome do cluster
+## <a id="clustername"></a>Alterar nome do cluster
 
-O nome do cluster é o nome do cluster de big data e o namespace do Kubernetes que será criado na implantação. Ele é especificado na seguinte parte do arquivo de configuração de implantação:
+O nome do cluster é o nome do cluster Big Data e o namespace kubernetes que será criado na implantação. Ele é especificado na seguinte parte do arquivo de configuração de implantação **cluster. JSON** :
 
 ```json
 "metadata": {
@@ -43,18 +43,18 @@ O nome do cluster é o nome do cluster de big data e o namespace do Kubernetes q
 },
 ```
 
-O comando a seguir envia um par chave-valor para o **-- json-values** parâmetro para alterar o nome do cluster de big data para **test-cluster**:
+O comando a seguir envia um par chave-valor para o parâmetro **--JSON-** Values para alterar o nome do cluster Big data para **Test-cluster**:
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "metadata.name=test-cluster"
+azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
 ```
 
 > [!IMPORTANT]
-> O nome do seu cluster de big data deve ser caracteres alfa-numéricos do apenas letras minúsculas, sem espaços. Todos os artefatos de Kubernetes (contêineres, pods, conjuntos com estado, serviços) para o cluster serão criados em um namespace com o mesmo nome que o cluster do nome especificado.
+> O nome do cluster de Big Data deve ter apenas caracteres alfanuméricos minúsculos, sem espaços. Todos os artefatos kubernetes (contêineres, pods, conjuntos com estado, serviços) para o cluster serão criados em um namespace com o mesmo nome que o nome do cluster especificado.
 
-## <a id="ports"></a> Portas de ponto de extremidade de atualização
+## <a id="ports"></a>Atualizar portas de ponto de extremidade
 
-Pontos de extremidade são definidos para o plano de controle, bem como para pools individuais. A seguinte parte do arquivo de configuração mostra as definições de ponto de extremidade para o plano de controle:
+Os pontos de extremidade são definidos para o controlador no **Control. JSON** e para o gateway e SQL Server instância mestra nas seções correspondentes em **cluster. JSON**. A seguinte parte do arquivo de configuração **Control. JSON** mostra as definições de ponto de extremidade para o controlador:
 
 ```json
 "endpoints": [
@@ -71,92 +71,133 @@ Pontos de extremidade são definidos para o plano de controle, bem como para poo
 ]
 ```
 
-O exemplo a seguir usa embutido JSON para alterar a porta para o **controlador** ponto de extremidade:
+O exemplo a seguir usa JSON embutido para alterar a porta para o ponto de extremidade do **controlador** :
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
-## <a id="replicas"></a> Configurar réplicas de pool
+## <a id="replicas"></a>Configurar réplicas do pool
 
-As características de cada pool, como o pool de armazenamento, é definido no arquivo de configuração. Por exemplo, a parte a seguir mostra uma definição de pool de armazenamento:
+As características de cada pool, como o pool de armazenamento, são definidas no arquivo de configuração **cluster. JSON** . Por exemplo, a seguinte parte do **cluster. JSON** mostra uma definição de pool de armazenamento:
 
 ```json
 "pools": [
-    {
-        "metadata": {
-            "kind": "Pool",
-            "name": "default"
-        },
-        "spec": {
-            "type": "Storage",
-            "replicas": 2,
-            "storage": {
-               "data": {
-                  "className": "default",
-                  "accessMode": "ReadWriteOnce",
-                  "size": "15Gi"
-               },
-               "logs": {
-                  "className": "default",
-                  "accessMode": "ReadWriteOnce",
-                  "size": "10Gi"
-               }
-           },
-        }
-    }
+   {
+       "metadata": {
+           "kind": "Pool",
+           "name": "default"
+       },
+       "spec": {
+           "type": "Storage",
+           "replicas": 2
+       }
+   }
 ]
 ```
 
-Você pode configurar o número de instâncias em um pool, modificando o **réplicas** valor para cada pool. O exemplo a seguir usa embutido JSON para alterar esses valores para os pools de armazenamento e dados `10` e `4` , respectivamente:
+Você pode configurar o número de instâncias em um pool modificando o  valor de réplicas para cada pool. O exemplo a seguir usa JSON embutido para alterar esses valores para o armazenamento e os `10` pools de dados para e, `4` respectivamente:
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
-mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4"
+azdata bdc config replace --config-file custom/cluster.json --json-values "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
+azdata bdc config replace --config-file custom/cluster.json --json-values "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4"
 ```
 
-## <a id="storage"></a> Configurar o armazenamento
+## <a id="storage"></a>Configurar o armazenamento
 
-Você também pode alterar a classe de armazenamento e as características que são usadas para cada pool. O exemplo a seguir atribui uma classe de armazenamento personalizado para o pool de armazenamento e atualiza o tamanho da declaração de volume persistente para armazenar dados de 100 GB. Você deve ter esta seção no arquivo de configuração para atualizar as configurações usando o *mssqlctl bdc config set* de comando, consulte abaixo mostra como usar um arquivo de patch para adicionar esta seção:
+Você também pode alterar a classe de armazenamento e as características que são usadas para cada pool. O exemplo a seguir atribui uma classe de armazenamento personalizada ao pool de armazenamento e atualiza o tamanho da declaração de volume persistente para armazenar dados em 100 GB. Primeiro, crie um arquivo patch. JSON como mostrado abaixo, que inclui a nova seção de *armazenamento* , além de *tipos* e *réplicas*
 
+```json
+{
+  "patch": [
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "value": {
+        "storage":{
+        "data":{
+                "size": "100Gi",
+                "className": "myStorageClass",
+                "accessMode":"ReadWriteOnce"
+                },
+        "logs":{
+                "size":"32Gi",
+                "className":"myStorageClass",
+                "accessMode":"ReadWriteOnce"
+                }
+                },
+        "type":"Storage",
+        "replicas":2
+      }
+    }
+  ]
+}
+```
+
+Em seguida, você pode usar o comando **azdata BDC config patch** para atualizar o arquivo de configuração **cluster. JSON** .
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.className=storage-pool-class"
-mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=32Gi"
+azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
 ```
 
 > [!NOTE]
-> Um arquivo de configuração com base em **kubeadm-dev-test** não tem uma definição de armazenamento para cada pool, mas isso pode ser adicionado manualmente se necessário.
+> Um arquivo de configuração baseado em **kubeadm-dev-Test** não tem uma definição de armazenamento para cada pool, mas você pode usar o processo acima para adicionar, se necessário.
 
-Para obter mais informações sobre a configuração de armazenamento, consulte [persistência de dados com o SQL Server, o cluster de big data no Kubernetes](concept-data-persistence.md).
+Para obter mais informações sobre a configuração de armazenamento, consulte [persistência de dados com o cluster SQL Server Big data em kubernetes](concept-data-persistence.md).
 
-## <a id="sparkstorage"></a> Configurar o armazenamento sem spark
+## <a id="sparkstorage"></a>Configurar o pool de armazenamento sem Spark
 
-Você também pode configurar os pools de armazenamento para ser executado sem spark e criar um pool separado do spark. Isso permite que você escala spark computação energia independente de armazenamento. Para ver como configurar o pool de spark, consulte o [exemplo de arquivo de patch JSON](#jsonpatch) no final deste artigo.
+Você também pode configurar os pools de armazenamento para serem executados sem o Spark e criar um pool do Spark separado. Isso permite que você dimensione o poder de computação do Spark independentemente do armazenamento. Para ver como configurar o pool do Spark, consulte o [exemplo de arquivo de patch JSON](#jsonpatch) no final deste artigo.
 
-Você deve ter esta seção no arquivo de configuração para atualizar as configurações usando o `mssqlctl cluster config set command`. O arquivo de patch JSON a seguir mostra como adicionar isso.
 
-Por padrão, o **includeSpark** configuração para o pool de armazenamento é definido como true, você deve adicionar o **includeSpark** campo para a configuração de armazenamento para fazer alterações:
 
-```bash
-mssqlctl cluster config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].includeSpark=false"
+Por padrão, a configuração **includeSpark** para o pool de armazenamento é definida como true, portanto, você deve adicionar o campo **includeSpark** à configuração de armazenamento para fazer alterações. O arquivo de patch JSON a seguir mostra como adicionar isso.
+
+```json
+{
+  "patch": [
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "value": {
+        "type":"Storage",
+        "replicas":2,
+        "includeSpark":false
+      }
+    }
+  ]
+}
 ```
 
-## <a id="podplacement"></a> Configurar o posicionamento de pod usando rótulos de Kubernetes
+```bash
+azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
+```
 
-Você pode controlar o posicionamento de pod em nós de Kubernetes com recursos específicos para acomodar vários tipos de requisitos de carga de trabalho. Por exemplo, você talvez queira garantir que os pods de pool de armazenamento são colocados em nós com mais armazenamento ou instâncias de mestre do SQL Server são colocadas em nós que têm recursos de memória e CPU maior. Nesse caso, primeiro você criará um cluster Kubernetes heterogêneo com diferentes tipos de hardware e, em seguida [atribuir rótulos do nó](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) adequadamente. No momento da implantação de cluster de big data, você pode especificar rótulos mesmos no nível do pool no arquivo de configuração de implantação do cluster. Kubernetes, em seguida, se encarregará de ajustar as os pods em nós que corresponderem aos rótulos especificados.
+## <a id="podplacement"></a>Configurar o posicionamento do pod usando rótulos de kubernetes
 
-O exemplo a seguir mostra como editar um arquivo de configuração personalizada para incluir uma configuração de rótulo do nó para a instância mestre do SQL Server. Observe que não há nenhuma *nodeLabel* chave nas configurações internas para que você precisará editar um arquivo de configuração personalizado manualmente ou criar um arquivo de patch e aplicá-lo para o arquivo de configuração personalizada.
+Você pode controlar o posicionamento do pod em nós kubernetes que têm recursos específicos para acomodar vários tipos de requisitos de carga de trabalho. Por exemplo, talvez você queira garantir que os pods do pool de armazenamento sejam colocados em nós com mais armazenamento, ou SQL Server instâncias mestre sejam colocadas em nós que tenham recursos de CPU e memória maiores. Nesse caso, primeiro você criará um cluster kubernetes heterogêneo com diferentes tipos de hardware e, em seguida, atribuirá os [Rótulos de nó](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) de acordo. No momento da implantação do cluster de Big Data, você pode especificar os mesmos rótulos no nível de pool no arquivo de configuração de implantação de cluster. Kubernetes, em seguida, cuidará do ajustando do pods em nós que correspondem aos rótulos especificados.
 
-Crie um arquivo chamado **patch.json** no seu diretório atual com o seguinte conteúdo:
+O exemplo a seguir mostra como editar um arquivo de configuração personalizado para incluir uma configuração de rótulo de nó para a instância mestra de SQL Server. Observe que não há nenhuma chave *nodeLabel* nas configurações internas, portanto, será necessário editar um arquivo de configuração personalizado manualmente ou criar um arquivo de patch e aplicá-lo ao arquivo de configuração personalizado.
+
+Crie um arquivo chamado **patch. JSON** em seu diretório atual com o seguinte conteúdo:
 
 ```json
 {
   "patch": [
      {
-      "op": "add",
+      "op": "replace",
       "path": "$.spec.pools[?(@.spec.type == 'Master')].spec",
       "value": {
-      "nodeLabel": "<yourNodeLabel>"
+           "type": "Master",
+         "replicas": 1,
+         "hadrEnabled": false,
+         "endpoints": [
+            {
+             "name": "Master",
+             "serviceType": "NodePort",
+             "port": 31433
+            }
+          ],
+         "nodeLabel": "<yourNodeLabel>"
        }
     }
   ]
@@ -164,35 +205,36 @@ Crie um arquivo chamado **patch.json** no seu diretório atual com o seguinte co
 ```
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -p ./patch.json
+azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
 ```
 
-## <a id="jsonpatch"></a> Arquivos de patch JSON
+## <a id="jsonpatch"></a>Arquivos de patch JSON
 
-Arquivos de patch JSON configuram várias configurações de uma só vez. Para obter mais informações sobre os patches JSON, consulte [Patches JSON em Python](https://github.com/stefankoegl/python-json-patch) e o [avaliador on-line de JSONPath](https://jsonpath.com/).
+Os arquivos de patch JSON definem várias configurações ao mesmo tempo. Para obter mais informações sobre patches JSON, consulte [patches JSON em Python](https://github.com/stefankoegl/python-json-patch) e o avaliador do [JSONPath online](https://jsonpath.com/).
 
-O seguinte **patch.json** arquivo executa as seguintes alterações:
+O arquivo **patch. JSON** a seguir executa as seguintes alterações:
 
-- Atualiza a porta do ponto de extremidade única.
-- Atualiza todos os pontos de extremidade (**porta** e **serviceType**).
-- Atualiza o armazenamento de plano de controle. Essas configurações são aplicáveis a todos os componentes de cluster, a menos que substituída no nível do pool.
-- Atualiza o nome de classe de armazenamento no armazenamento de plano de controle.
-- Atualiza as configurações do pool de armazenamento para o pool de armazenamento.
-- Atualiza as configurações do Spark para o pool de armazenamento.
-- Cria um pool do spark com 2 réplicas para o cluster
-
-```json
-{
-  "patch": [
+- Atualiza a porta de um ponto de extremidade único em **Control. JSON**.
+    ```json
     {
-      "op": "replace",
-      "path": "$.spec.controlPlane.spec.endpoints[?(@.name=='Controller')].port",
-      "value": 30000
-    },
+      "patch": [
+        {
+          "op": "replace",
+          "path": "$.spec.endpoints[?(@.name=='Controller')].port",
+          "value": 30000
+        }   
+      ]
+    }
+    ```
+
+- Atualiza todos os pontos de extremidade (**porta** e **ServiceType**) em **Control. JSON**.
+    ```json
     {
-      "op": "replace",
-      "path": "spec.controlPlane.spec.endpoints",
-      "value": [
+      "patch": [
+        {
+          "op": "replace",
+          "path": "spec.endpoints",
+          "value": [
         {
           "serviceType": "LoadBalancer",
           "port": 30001,
@@ -203,12 +245,20 @@ O seguinte **patch.json** arquivo executa as seguintes alterações:
             "port": 30778,
             "name": "ServiceProxy"
         }
+          ]
+        }
       ]
-    },
+    }
+    ```
+
+- Atualiza as configurações de armazenamento do controlador em **Control. JSON**. Essas configurações são aplicáveis a todos os componentes do cluster, a menos que sejam substituídas no nível do pool.
+    ```json
     {
-      "op": "replace",
-      "path": "spec.controlPlane.spec.controlPlane",
-      "value": {
+      "patch": [
+        {
+          "op": "replace",
+          "path": "spec.storage",
+          "value": {
           "data": {
             "className": "managed-premium",
             "accessMode": "ReadWriteOnce",
@@ -220,44 +270,80 @@ O seguinte **patch.json** arquivo executa as seguintes alterações:
             "size": "32Gi"
           }
         }
-    },
+        }   
+      ]
+    }
+    ```
+
+- Atualiza o nome da classe de armazenamento em **Control. JSON**.
+    ```json
     {
-      "op": "replace",
-      "path": "spec.controlPlane.spec.storage.data.className",
-      "value": "managed-premium"
-    },
+      "patch": [
+        {
+          "op": "replace",
+          "path": "spec.storage.data.className",
+          "value": "managed-premium"
+        }   
+      ]
+    }
+    ```
+
+- Atualiza as configurações de armazenamento de pool para o pool de armazenamento em **cluster. JSON**.
+    ```json
     {
-      "op": "add",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage",
-      "value": {
-          "data": {
-            "className": "managed-premium",
-            "accessMode": "ReadWriteOnce",
-            "size": "100Gi"
-          },
-          "logs": {
-            "className": "managed-premium",
-            "accessMode": "ReadWriteOnce",
-            "size": "32Gi"
-          }
+      "patch": [
+        {
+          "op": "replace",
+          "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+          "value": {
+        "type":"Storage",
+        "replicas":2,
+        "storage":{
+        "data":{
+            "size": "100Gi",
+            "className": "myStorageClass",
+            "accessMode":"ReadWriteOnce"
+            },
+        "logs":{
+            "size":"32Gi",
+            "className":"myStorageClass",
+            "accessMode":"ReadWriteOnce"
+            }
+            }
+         }
         }
-    },
+      ]
+    }
+    ```
+
+- Atualiza as configurações do Spark para o pool de armazenamento em **cluster. JSON**.
+    ```json
     {
-      "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].hadoop.spark",
-      "value": {
+      "patch": [
+        {
+          "op": "replace",
+          "path": "$.spec.pools[?(@.spec.type == 'Storage')].hadoop.spark",
+          "value": {
         "driverMemory": "2g",
         "driverCores": 1,
         "executorInstances": 3,
         "executorCores": 1,
         "executorMemory": "1536m"
-      }
-    },
+          }
+        }   
+      ]
+    }
+    ```
+
+- Cria um pool do Spark com 2 instâncias em **cluster. JSON**.
+    ```json
     {
-      "op": "add",
-      "path": "spec.pools/-",
-      "value":
-      {
+      "patch": [
+        {
+          "op": "add",
+          "path": "spec.pools/-",
+          "value":
+          {
         "metadata": {
           "kind": "Pool",
           "name": "default"
@@ -288,21 +374,23 @@ O seguinte **patch.json** arquivo executa as seguintes alterações:
             "executorCores": 1
           }
         }
-      }
-    }   
-  ]
-}
-```
+          }
+        } 
+      ]
+    }
+    ```
+
+
 
 > [!TIP]
-> Para obter mais informações sobre a estrutura e as opções para alterar um arquivo de configuração de implantação, consulte [referência de arquivo de configuração de implantação para clusters de big data](reference-deployment-config.md).
+> Para obter mais informações sobre a estrutura e as opções para alterar um arquivo de configuração de implantação, consulte [referência de arquivo de configuração de implantação para clusters de Big data](reference-deployment-config.md).
 
-Use **conjunto de seção de configuração de bdc mssqlctl** para aplicar as alterações no arquivo de patch JSON. O exemplo a seguir aplica-se a **patch.json** arquivo para um arquivo de configuração de implantação de destino **custom.json**.
+Use os comandos de **configuração do BDC azdata** para aplicar as alterações no arquivo de patch JSON. O exemplo a seguir aplica o arquivo **patch. JSON** a um arquivo de configuração de implantação de destino **Custom/cluster. JSON**.
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -p ./patch.json
+azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
 ```
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre como usar arquivos de configuração em implantações de cluster de big data, consulte [clusters de como implantar grandes de dados do SQL Server em Kubernetes](deployment-guidance.md#configfile).
+Para obter mais informações sobre como usar arquivos de configuração no Big Data implantações de cluster, consulte [como implantar SQL Server Big data clusters no kubernetes](deployment-guidance.md#configfile).
