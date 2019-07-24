@@ -21,17 +21,17 @@ ms.assetid: 899df1ff-e871-44df-9361-f3b87ac3ea31
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b865a0252b4a5f817d879dc2fd3318cfc11ecdd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f20c4740868e0256ceb88c604b5a3eb021d367e5
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990415"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418930"
 ---
 # <a name="spquerystoreresetexecstats-transact-sql"></a>sp_query_store_reset_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Limpa as estatísticas de tempo de execução para um plano de consulta específica do repositório de consultas.  
+  Limpa as estatísticas de tempo de execução de um plano de consulta específico do repositório de consultas.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @plan_id = ] plan_id` É a id do plano de consulta que está sendo limpo. *plan_id* é um **bigint**, sem padrão.  
+`[ @plan_id = ] plan_id`É a ID do plano de consulta a ser limpo. *plan_id* é um **bigint**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -51,7 +51,7 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="permissions"></a>Permissões  
- Requer o **EXECUTE** permissão no banco de dados, e **excluir** permissão em exibições de catálogo de repositório de consultas.  
+ Requer a permissão **ALTER** no banco de dados. 
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna informações sobre as consultas no repositório de consultas.  
@@ -65,7 +65,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Depois de identificar o plan_id que você deseja limpar as estatísticas, use o exemplo a seguir para excluir as estatísticas de execução para um plano de consulta específica. Este exemplo exclui as estatísticas de execução para o número 3 do plano.  
+ Depois de identificar o plan_id que você deseja limpar as estatísticas, use o exemplo a seguir para excluir as estatísticas de execução de um plano de consulta específico. Este exemplo exclui as estatísticas de execução para o número de plano 3.  
   
 ```  
 EXEC sp_query_store_reset_exec_stats 3;  

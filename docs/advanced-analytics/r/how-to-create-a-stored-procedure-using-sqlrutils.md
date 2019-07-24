@@ -1,31 +1,31 @@
 ---
-title: Como criar um procedimento armazenado usando sqlrutils - serviços do SQL Server Machine Learning
-description: Use o pacote sqlrutils R no SQL Server para agrupar o código de idioma R em uma única função que pode ser passada como um argumento para um procedimento armazenado.
+title: Como criar um procedimento armazenado usando sqlrutils
+description: Use o pacote R sqlrutils em SQL Server para agrupar o código de linguagem R em uma única função que pode ser passada como um argumento para um procedimento armazenado.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a9519356bcd4add6887cf5ff41c754583607d1c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0713a126a237f20b2de4e3b16225bb9e5ae26307
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962652"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345574"
 ---
 # <a name="create-a-stored-pprocedure-using-sqlrutils"></a>Criar um pProcedure armazenado usando sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo descreve as etapas para converter seu código R para ser executado como um procedimento armazenado T-SQL. Para obter os melhores resultados possíveis, seu código poderá precisar ser um pouco modificado, para garantir que todas as entradas possam ser parametrizadas.
+Este artigo descreve as etapas para converter seu código R para executar como um procedimento armazenado T-SQL. Para obter os melhores resultados possíveis, seu código poderá precisar ser um pouco modificado, para garantir que todas as entradas possam ser parametrizadas.
 
-## <a name="bkmk_rewrite"></a>Etapa 1. Reescreva o Script R
+## <a name="bkmk_rewrite"></a>Etapa 1. Reescrever script R
 
-Para obter melhores resultados, você deve reescrever seu código R para encapsulá-la como uma única função.
+Para obter os melhores resultados, você deve reescrever o código R para encapsulá-lo como uma única função.
 
-Todas as variáveis usadas pela função devem ser definidas dentro da função, ou devem ser definidas como parâmetros de entrada. Consulte a [código de exemplo](#samples) neste artigo.
+Todas as variáveis usadas pela função devem ser definidas dentro da função ou devem ser definidas como parâmetros de entrada. Consulte o [código de exemplo](#samples) neste artigo.
 
-Além disso, como os parâmetros de entrada para a função R se tornará os parâmetros de entrada do SQL do procedimento de armazenado, você deve garantir que suas entradas e saídas em conformidade com os seguintes requisitos de tipo:
+Além disso, como os parâmetros de entrada para a função R se tornarão os parâmetros de entrada do procedimento armazenado do SQL, você deve garantir que suas entradas e saídas estejam em conformidade com os seguintes requisitos de tipo:
 
 ### <a name="inputs"></a>Entradas
 
@@ -51,75 +51,75 @@ A função pode produzir uma das seguintes opções:
 
 ## <a name="step-2-generate-required-objects"></a>Etapa 2. Gerar objetos necessários
 
-Depois que seu código R foi limpo e pode ser chamado como uma única função, você usará as funções na **sqlrutils** pacote para preparar as entradas e saídas em um formulário que pode ser passado para o construtor que cria, na verdade, o procedimento armazenado.
+Depois que o código R tiver sido limpo e puder ser chamado como uma única função, você usará as funções no pacote **sqlrutils** para preparar as entradas e saídas em um formulário que pode ser passado para o construtor que, na verdade, cria o procedimento armazenado.
 
-**sqlrutils** fornece funções que definem o esquema de dados de entrada e o tipo e definem o esquema de dados de saída e o tipo. Ele também inclui funções que podem converter objetos de R para o tipo de saída necessária. Você pode fazer várias chamadas de função para criar os objetos necessários, dependendo do seu código usa os tipos de dados.
+o **sqlrutils** fornece funções que definem o tipo e o esquema de dados de entrada e definem o tipo e o esquema de dados de saída. Ele também inclui funções que podem converter objetos R para o tipo de saída necessário. Você pode fazer várias chamadas de função para criar os objetos necessários, dependendo dos tipos de dados usados pelo seu código.
 
 ### <a name="inputs"></a>Entradas
 
-Se sua função receber entradas, para cada entrada, chame as funções a seguir:
+Se sua função usa entradas, para cada entrada, chame as seguintes funções:
 
-- `setInputData` Se a entrada for um quadro de dados
-- `setInputParameter` para todos os outros tipos de entrada
+- `setInputData`se a entrada for um quadro de dados
+- `setInputParameter`para todos os outros tipos de entrada
 
-Quando você faz com que cada função de chamada, um objeto de R é criado que você passará mais tarde como um argumento para `StoredProcedure`, para criar o procedimento armazenado concluído.
+Quando você faz cada chamada de função, é criado um objeto R que será passado posteriormente como um argumento para `StoredProcedure`, para criar o procedimento armazenado completo.
 
 ### <a name="outputs"></a>Saídas
 
-**sqlrutils** fornece várias funções para converter R objetos, como listas para o Frame requerida pelo SQL Server.
+o **sqlrutils** fornece várias funções para converter objetos R, como listas, para o Data. frame exigido pelo SQL Server.
 Se sua função gera diretamente um quadro de dados, sem primeiro encapsulá-lo em uma lista, você pode ignorar esta etapa.
-Você também pode ignorar a conversão esta etapa se a função retornará NULL.
+Você também pode ignorar a conversão desta etapa se sua função retornar NULL.
 
-Quando a conversão de uma lista ou obtendo um item específico de uma lista, escolha essas funções:
+Ao converter uma lista ou obter um item específico de uma lista, escolha uma destas funções:
 
-- `setOutputData` Se a variável para obter a lista é um quadro de dados
-- `setOutputParameter` para todos os outros membros da lista
+- `setOutputData`se a variável a ser obtida da lista for um quadro de dados
+- `setOutputParameter`para todos os outros membros da lista
 
-Quando você faz com que cada função de chamada, um objeto de R é criado que você passará mais tarde como um argumento para `StoredProcedure`, para criar o procedimento armazenado concluído.
+Quando você faz cada chamada de função, é criado um objeto R que será passado posteriormente como um argumento para `StoredProcedure`, para criar o procedimento armazenado completo.
 
 ## <a name="step-3-generate-the-stored-procedure"></a>Etapa 3. Gerar o procedimento armazenado
 
-Quando todos os parâmetros de entrada e saídos estiverem prontos, fazer uma chamada para o `StoredProcedure` construtor.
+Quando todos os parâmetros de entrada e saída estiverem prontos, faça uma chamada `StoredProcedure` para o construtor.
 
 **Usage**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 
-Para ilustrar, suponha que você deseja criar um procedimento armazenado denominado **sp_rsample** com estes parâmetros:
+Para ilustrar, suponha que você deseja criar um procedimento armazenado chamado **sp_rsample** com estes parâmetros:
 
-- Usa uma função existente **foosql**. A função foi baseada em função do R de código existente **foo**, mas você reescreveu a função para estar em conformidade com os requisitos conforme descrito em [nesta seção](#bkmk_rewrite)e a chamada a função atualizada como  **foosql**.
+- Usa uma função **foosql**existente. A função era baseada em código existente na função de R **foo**, mas você reescreveu a função para estar de acordo com os requisitos, conforme descrito nesta [seção](#bkmk_rewrite), e denominada a função updated como **foosql**.
 - Usa o quadro de dados **queryinput** como entrada
-- Gera como saída de um quadro de dados com o nome da variável R **sqloutput**
-- Você deseja criar o código T-SQL como um arquivo no `C:\Temp` pasta, para que você pode executá-lo mais tarde usando o SQL Server Management Studio
+- Gera como saída um quadro de dados com o nome da variável  R, sqloutput
+- Você deseja criar o código T-SQL como um arquivo na `C:\Temp` pasta, para que você possa executá-lo usando SQL Server Management Studio mais tarde
 
 ```R
 StoredProcedure (foosql, sp_rsample, queryinput, sqloutput, filePath = "C:\\Temp")
 ```
 
 > [!NOTE]
-> Porque você está escrevendo o arquivo ao sistema de arquivos, você pode omitir os argumentos que definem a conexão de banco de dados.
+> Como você está gravando o arquivo no sistema de arquivos, você pode omitir os argumentos que definem a conexão de banco de dados.
 
-A saída da função é um procedimento armazenado T-SQL que pode ser executado em uma instância do SQL Server 2016 (requer o R Services) ou SQL Server 2017 (requer serviços de Machine Learning com R). 
+A saída da função é um procedimento armazenado T-SQL que pode ser executado em uma instância do SQL Server 2016 (requer R Services) ou SQL Server 2017 (requer Serviços de Machine Learning com R). 
 
-Para obter exemplos adicionais, consulte a Ajuda do pacote, chamando `help(StoredProcedure)` em um ambiente de R.
+Para obter exemplos adicionais, consulte a ajuda do pacote, `help(StoredProcedure)` chamando de um ambiente de R.
 
 ## <a name="step-4-register-and-run-the-stored-procedure"></a>Etapa 4. Registrar e executar o procedimento armazenado
 
-Há duas maneiras que você pode executar o procedimento armazenado:
+Há duas maneiras de executar o procedimento armazenado:
 
 - Usando o T-SQL, de qualquer cliente que dá suporte a conexões com a instância do SQL Server 2016 ou SQL Server 2017
-- Em um ambiente de R
+- De um ambiente de R
 
-Ambos os métodos requerem que o procedimento armazenado ser registrado no banco de dados no qual você pretende usar o procedimento armazenado.
+Os dois métodos exigem que o procedimento armazenado seja registrado no banco de dados em que você pretende usar o procedimento armazenado.
 
 ### <a name="register-the-stored-procedure"></a>Registrar o procedimento armazenado
 
-Você pode registrar o procedimento armazenado usando o R, ou você pode executar a instrução CREATE PROCEDURE no T-SQL.
+Você pode registrar o procedimento armazenado usando o R, ou pode executar a instrução CREATE PROCEDURE no T-SQL.
 
-- Usando o T-SQL.  Se você estiver mais confortável com o T-SQL, abra o SQl Server Management Studio (ou qualquer outro cliente que pode executar comandos de DDL de SQL) e execute a instrução CREATE PROCEDURE usando o código preparado pelo `StoredProcedure` função.
-- Usando o R. Enquanto você ainda estiver em seu ambiente de R, você pode usar o `registerStoredProcedure` funcionar **sqlrutils** para registrar o procedimento armazenado com o banco de dados.
+- Usando o T-SQL.  Se você for mais confortável com o T-SQL, abra o SQL Server Management Studio (ou qualquer outro cliente que possa executar comandos DDL do `StoredProcedure` SQL) e execute a instrução CREATE PROCEDURE usando o código preparado pela função.
+- Usando o R. Enquanto você ainda estiver em seu ambiente de R, poderá usar a `registerStoredProcedure` função no **sqlrutils** para registrar o procedimento armazenado no banco de dados.
 
-  Por exemplo, você poderia registrar o procedimento armazenado **sp_rsample** na instância e banco de dados definidos no *sqlConnStr*, ao fazer essa chamada de R:
+  Por exemplo, você pode registrar o procedimento armazenado **sp_rsample** na instância e no banco de dados definido em *sqlConnStr*, fazendo essa chamada R:
 
   ```R
   registerStoredProcedure(sp_rsample, sqlConnStr)
@@ -127,17 +127,17 @@ Você pode registrar o procedimento armazenado usando o R, ou você pode executa
 
 
 > [!IMPORTANT]
-> Independentemente de você usar R ou do SQL, você deve executar a instrução usando uma conta que tenha permissões para criar novos objetos de banco de dados.
+> Independentemente de você usar R ou SQL, você deve executar a instrução usando uma conta que tenha permissões para criar novos objetos de banco de dados.
 
-### <a name="run-using-sql"></a>Executar usando o SQL
+### <a name="run-using-sql"></a>Executar usando SQL
 
-Depois que o procedimento armazenado foi criado, abra uma conexão ao banco de dados SQL usando qualquer cliente compatível com o T-SQL e passar valores para os parâmetros necessários para o procedimento armazenado.
+Depois que o procedimento armazenado tiver sido criado, abra uma conexão com o banco de dados SQL usando qualquer cliente que ofereça suporte a T-SQL e passe valores para quaisquer parâmetros exigidos pelo procedimento armazenado.
 
 ### <a name="run-using-r"></a>Executar usando o R
 
-Alguma preparação adicional é necessária se você quiser executar o procedimento armazenado a partir do código R, em vez do SQL Server. Por exemplo, se o procedimento armazenado requer valores de entrada, você deve definir esses parâmetros de entrada antes da função pode ser executado e, em seguida, passar esses objetos para o procedimento armazenado em seu código R.
+Será necessária alguma preparação adicional se você quiser executar o procedimento armazenado do código R, em vez de SQL Server. Por exemplo, se o procedimento armazenado exigir valores de entrada, você deverá definir esses parâmetros de entrada antes que a função possa ser executada e, em seguida, passar esses objetos para o procedimento armazenado em seu código R.
 
-O processo geral de chamar o procedimento armazenado SQL preparado é da seguinte maneira:
+O processo geral de chamar o procedimento armazenado SQL preparado é o seguinte:
 
 1. Chamar `getInputParameters` para obter uma lista de objetos de parâmetro de entrada.
 2. Definir um `$query` ou definir um `$value` para cada parâmetro de entrada.
@@ -145,11 +145,11 @@ O processo geral de chamar o procedimento armazenado SQL preparado é da seguint
 
 ## <a name = "samples"></a>Exemplo
 
-Este exemplo mostra o antes e depois de versões de um script de R que obtém dados de um banco de dados do SQL Server, executa algumas transformações nos dados e salva-o em outro banco de dados.
+Este exemplo mostra as versões anteriores e posteriores de um script R que obtém dados de um banco de SQL Server, realiza algumas transformações nos dados e salva-os em um banco de dado diferente.
 
-Esse exemplo simples é usado somente para demonstrar como você pode reorganizar seu código R para tornar mais fácil converter em um procedimento armazenado.
+Esse exemplo simples é usado apenas para demonstrar como você pode reorganizar seu código R para facilitar a conversão em um procedimento armazenado.
 
-### <a name="before-code-preparation"></a>Antes de preparação de código
+### <a name="before-code-preparation"></a>Antes da preparação do código
 
 
 ```R
@@ -187,12 +187,12 @@ rxDataStep(inData = dsSqlFrom,
 
 > [!NOTE]
 > 
-> Quando você usa uma conexão ODBC em vez de invocar o *RxSqlServerData* função, você deve abrir a conexão usando *rxOpen* antes de executar operações no banco de dados.
+> Ao usar uma conexão ODBC em vez de invocar a função *RxSqlServerData* , você deve abrir a conexão usando *rxOpen* antes de executar operações no banco de dados.
 
 
-### <a name="after-code-preparation"></a>Após a preparação de código
+### <a name="after-code-preparation"></a>Após a preparação do código
 
-Na versão atualizada, a primeira linha define o nome da função. Todos os outros códigos de solução de R original se torna parte dessa função.
+Na versão atualizada, a primeira linha define o nome da função. Todos os outros códigos da solução R original se tornam parte dessa função.
 
 ```R
 myetl1function <- function() { 
