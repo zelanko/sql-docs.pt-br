@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 79ff6eef-6ad7-4e33-95be-c2d552c65546
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c666fda3df96e32736c4bfd8c32a92e759142c70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6388ea031c6cbd5c492b5af03bd37a091592868
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66773337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972562"
 ---
 # <a name="settime-method-int-javasqltime-javautilcalendar"></a>Método setTime (int, java.sql.Time, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setTime(int n,
   
  *x*  
   
- Um objeto de tempo.  
+ Um objeto de hora.  
   
  *cal*  
   
@@ -56,9 +55,9 @@ public final void setTime(int n,
 ## <a name="remarks"></a>Remarks  
  Esse método setTime é especificado pelo método setTime na interface java.sql.PreparedStatement.  
   
- Começando com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0, o comportamento desse método é modificado pela **sendTimeAsDatetime** propriedade de conexão ([definindo as propriedades de Conexão](../../../connect/jdbc/setting-the-connection-properties.md)) e [ Setsendtimeasdatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ A partir do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3,0, o comportamento desse método é modificado pela propriedade de conexão **sendTimeAsDatetime** ([definindo as propriedades de conexão](../../../connect/jdbc/setting-the-connection-properties.md)) e  [SQLServerDataSource. setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Para obter mais informações, consulte [time configurando como os valores são enviados para o servidor](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Para obter mais informações, consulte Configurando [como os valores de Java. Sql. time são enviados ao servidor](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método setTime &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/settime-method-sqlserverpreparedstatement.md)   

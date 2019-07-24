@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 61f19faa-3006-4a1c-974c-55951e3b3000
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aaf2b256329c66b6169593f71f4e85439aff21ab
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e4ab210a30080472a777d151695a04ec49ff1041
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973386"
 ---
 # <a name="setobject-method-int-javalangobject"></a>Método setObject (int, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,15 +56,15 @@ public final void setObject(int index,
   
 -   Os métodos setNull da classe SQLServerPreparedStatement e da classe SQLServerCallableStatement  
   
--   O [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) método da classe SQLServerCallableStatement  
+-   O método [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) da classe SQLServerCallableStatement  
   
  Em todos os casos, o tipo do parâmetro é definido automaticamente. Se o aplicativo chamar o método setObject com um valor obj NULL, o driver suporá que o tipo do parâmetro é definido pelo método chamado anteriormente.  
   
  Se o valor obj for NULL e nenhuma informação de tipo para esse parâmetro puder ser determinada, o método setObject converterá o parâmetro especificado em um CHAR antes de enviá-lo ao banco de dados.  
   
- Começando com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0, o comportamento desse método é modificado pela **sendTimeAsDatetime** propriedade de conexão ([definindo as propriedades de Conexão](../../../connect/jdbc/setting-the-connection-properties.md)) e [ Setsendtimeasdatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ A partir do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3,0, o comportamento desse método é modificado pela propriedade de conexão **sendTimeAsDatetime** ([definindo as propriedades de conexão](../../../connect/jdbc/setting-the-connection-properties.md)) e [SQLServerDataSource. setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Para obter mais informações, consulte [time configurando como os valores são enviados para o servidor](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Para obter mais informações, consulte Configurando [como os valores de Java. Sql. time são enviados ao servidor](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método setObject &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)   

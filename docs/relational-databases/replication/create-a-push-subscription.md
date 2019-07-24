@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 419f8c12e3716d295440dae887591b547af54f32
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4ab4102c477a8904dd99eb2717f2c5e31c38b9bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903036"
 ---
 # <a name="create-a-push-subscription"></a>Criar uma assinatura push
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ ms.locfileid: "53208237"
   
 7.  Complete as páginas no Assistente para Novas Assinaturas.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  As assinaturas push podem ser criadas de forma programada, usando procedimentos armazenados de replicação. Os procedimentos armazenados usados dependem do tipo de publicação ao qual a assinatura pertence.  
   
 > **IMPORTANTE:** Quando possível, solicite aos usuários que insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
@@ -91,19 +90,19 @@ ms.locfileid: "53208237"
   
     -   Se o valor de **allow_push** for **1**, as assinaturas push terão suporte.  
   
-    -   Se o valor de **allow_push** for **0**, execute [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), especificando **allow_push** para **@property** e **true** para **@value**.  
+    -   Se o valor de **allow_push** for **0**, execute [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), especificando **allow_push** para **@property** e **true** para **@value** .  
   
-2.  No Publicador do banco de dados da publicação, execute [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md). Especifique **@publication**, **@subscriber** e **@destination_db**. Especifique um valor **push** para **@subscription_type**. Para obter mais informações sobre como atualizar assinaturas, consulte [Criar uma assinatura atualizável em uma publicação transacional](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  No Publicador do banco de dados da publicação, execute [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md). Especifique **@publication** , **@subscriber** e **@destination_db** . Especifique um valor **push** para **@subscription_type** . Para obter mais informações sobre como atualizar assinaturas, consulte [Criar uma assinatura atualizável em uma publicação transacional](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  No Publicador do banco de dados de publicação, execute [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Especifique o seguinte:  
   
-    -   Os parâmetros **@subscriber**, **@subscriber_db**e **@publication** .  
+    -   Os parâmetros **@subscriber** , **@subscriber_db** e **@publication** .  
   
-    -   Os parâmetros [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows com as quais o Distribution Agent do Distribuidor é executado para **@job_login** e **@job_password**.  
+    -   Os parâmetros [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows com as quais o Distribution Agent do Distribuidor é executado para **@job_login** e **@job_password** .  
   
-        > **OBSERVAÇÃO:** As conexões realizadas com Autenticação Integrada do Windows sempre usam as credenciais do Windows especificadas por **@job_login** e **@job_password**. O Distribution Agent sempre faz a conexão local com o Distribuidor usando a Autenticação Integrada do Windows. Por padrão, o agente se conecta ao Assinante usando a Autenticação Integrada do Windows.  
+        > **OBSERVAÇÃO:** As conexões realizadas com Autenticação Integrada do Windows sempre usam as credenciais do Windows especificadas por **@job_login** e **@job_password** . O Distribution Agent sempre faz a conexão local com o Distribuidor usando a Autenticação Integrada do Windows. Por padrão, o agente se conecta ao Assinante usando a Autenticação Integrada do Windows.  
   
-    -   (Opcional) Valor de **0** para **@subscriber_security_mode** e informações de logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@subscriber_login** e **@subscriber_password**. Especifique esses parâmetros se for necessário usar a Autenticação do SQL Server para conexão com o Assinante.  
+    -   (Opcional) Valor de **0** para **@subscriber_security_mode** e informações de logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@subscriber_login** e **@subscriber_password** . Especifique esses parâmetros se for necessário usar a Autenticação do SQL Server para conexão com o Assinante.  
   
     -   Agenda para o trabalho do Distribution Agent para essa assinatura. Para obter mais informações, consulte [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
@@ -115,29 +114,29 @@ ms.locfileid: "53208237"
   
     -   Se o valor de **allow_push** for **1**, a publicação dará suporte às assinaturas push.  
   
-    -   Se o valor de **allow_push** não for **1**, execute [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), especificando **allow_push** para **@property** e **true** para **@value**.  
+    -   Se o valor de **allow_push** não for **1**, execute [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), especificando **allow_push** para **@property** e **true** para **@value** .  
   
 2.  No Publicador, no banco de dados de publicação, execute [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md), especificando os seguintes parâmetros:  
   
-    -   **@publication**. Esse é o nome da publicação.  
+    -   **@publication** . Esse é o nome da publicação.  
   
-    -   **@subscriber_type**. Para uma assinatura de cliente, especifique **local** e, para uma assinatura de servidor, especifique **global**.  
+    -   **@subscriber_type** . Para uma assinatura de cliente, especifique **local** e, para uma assinatura de servidor, especifique **global**.  
   
-    -   **@subscription_priority**. Para uma assinatura de servidor, especifique uma prioridade para a assinatura de (**0,00** a **99,99**).  
+    -   **@subscription_priority** . Para uma assinatura de servidor, especifique uma prioridade para a assinatura de (**0,00** a **99,99**).  
   
          Para obter mais informações, consulte [Detecção e resolução de conflito de replicação de mesclagem avançada ](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 3.  No Publicador, no banco de dados da publicação, execute [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Especifique o seguinte:  
   
-    -   Os parâmetros **@subscriber**, **@subscriber_db**e **@publication** .  
+    -   Os parâmetros **@subscriber** , **@subscriber_db** e **@publication** .  
   
-    -   As credenciais do Windows sob as quais o Merge Agent no Distribuidor é executado para o **@job_login** e **@job_password**.  
+    -   As credenciais do Windows sob as quais o Merge Agent no Distribuidor é executado para o **@job_login** e **@job_password** .  
   
-        > **OBSERVAÇÃO:**  As conexões realizadas com Autenticação Integrada do Windows sempre usam as credenciais do Windows especificadas por **@job_login** e **@job_password**. O Merge Agent sempre faz a conexão local com o Distribuidor usando a Autenticação Integrada do Windows. Por padrão, o agente se conecta ao Assinante usando a Autenticação Integrada do Windows.  
+        > **OBSERVAÇÃO:**  As conexões realizadas com Autenticação Integrada do Windows sempre usam as credenciais do Windows especificadas por **@job_login** e **@job_password** . O Merge Agent sempre faz a conexão local com o Distribuidor usando a Autenticação Integrada do Windows. Por padrão, o agente se conecta ao Assinante usando a Autenticação Integrada do Windows.  
   
-    -   (Opcional) Valor de **0** para **@subscriber_security_mode** e informações de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@subscriber_login** e **@subscriber_password**. Especifique esses parâmetros se for necessário usar a Autenticação do SQL Server para conexão com o Assinante.  
+    -   (Opcional) Valor de **0** para **@subscriber_security_mode** e informações de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@subscriber_login** e **@subscriber_password** . Especifique esses parâmetros se for necessário usar a Autenticação do SQL Server para conexão com o Assinante.  
   
-    -   (Opcional) Valor de **0** para **@publisher_security_mode** e informações de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@publisher_login** e **@publisher_password**. Especifique esses valores se for necessário usar a Autenticação do SQL Server para conexão com o Publicador.  
+    -   (Opcional) Valor de **0** para **@publisher_security_mode** e informações de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@publisher_login** e **@publisher_password** . Especifique esses valores se for necessário usar a Autenticação do SQL Server para conexão com o Publicador.  
   
     -   Agenda para o trabalho do Merge Agent para essa assinatura. Para obter mais informações, consulte [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
@@ -165,7 +164,7 @@ ms.locfileid: "53208237"
   
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se esse método retornar **false**, as propriedades da Etapa 2 estão incorretas ou a publicação não existe no servidor.  
   
-4.  Realize uma lógica AND de bit a bit (**&** no Visual C# e **And** no Visual Basic) entre a propriedade <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Se o resultado for <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, defina <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> para o resultado de uma lógica bit a bit OR (**|** no Visual C# e **Or** em Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Em seguida, chame <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para ativar assinaturas push.  
+4.  Realize uma lógica AND de bit a bit ( **&** no Visual C# e **And** no Visual Basic) entre a propriedade <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Se o resultado for <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, defina <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> para o resultado de uma lógica bit a bit OR ( **|** no Visual C# e **Or** em Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Em seguida, chame <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para ativar assinaturas push.  
   
 5.  Se não houver banco de dados de assinatura, crie-o usando a classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Para obter mais informações, consulte [Creating, Altering, and Removing Databases](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md) (Criando, alterando e removendo bancos de dados).  
   
@@ -203,7 +202,7 @@ ms.locfileid: "53208237"
   
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se esse método retornar **false**, as propriedades da Etapa 2 estão incorretas ou a publicação não existe no servidor.  
   
-4.  Realize uma lógica AND de bit a bit (**&** no Visual C# e **And** no Visual Basic) entre a propriedade <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Se o resultado for <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, defina <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> para o resultado de uma lógica bit a bit OR (**|** no Visual C# e **Or** em Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Em seguida, chame <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para ativar assinaturas push.  
+4.  Realize uma lógica AND de bit a bit ( **&** no Visual C# e **And** no Visual Basic) entre a propriedade <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Se o resultado for <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, defina <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> para o resultado de uma lógica bit a bit OR ( **|** no Visual C# e **Or** em Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Em seguida, chame <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para ativar assinaturas push.  
   
 5.  Se não houver banco de dados de assinatura, crie-o usando a classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Para obter mais informações, consulte [Creating, Altering, and Removing Databases](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md) (Criando, alterando e removendo bancos de dados).  
   

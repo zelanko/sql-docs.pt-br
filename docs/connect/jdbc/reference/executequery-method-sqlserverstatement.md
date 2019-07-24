@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 599cf463-e19f-4baa-bacb-513cad7c6cd8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8755695a805684338378efa4427c24c333c3da08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d66ceda5c9afee28240de5af9fe833acd4e25bbb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954771"
 ---
 # <a name="executequery-method-sqlserverstatement"></a>Método executeQuery (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public java.sql.ResultSet executeQuery(java.lang.String sql)
 ## <a name="remarks"></a>Remarks  
  Esse método executeQuery é especificado pelo método executeQuery na interface java.sql.Statement.  
   
- [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) será lançada se a instrução SQL fornecida produz algo diferente de uma única [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.  
+ O [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) é gerado se a instrução SQL fornecida produz algo diferente de um único objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) .  
   
  Se a execução de um procedimento armazenado resultar em uma contagem de atualização maior que um, ou que gere mais de um conjunto de resultados, use o método [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) para executar o procedimento armazenado.  
   

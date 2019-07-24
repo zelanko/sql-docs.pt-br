@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76af99170edeaca8f600d12955a6de2b09897548
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6af72a4e9157de72a46ecbb7443c0f58d3b400d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003845"
 ---
 # <a name="working-with-data-types-jdbc"></a>Trabalhando com tipos de dados (JDBC)
 
@@ -37,7 +36,7 @@ Os tópicos nesta seção descrevem como usar os tipos de dados do driver JDBC p
 |-----------|-----------------|  
 |[Exemplo de tipos de dados básicos](../../connect/jdbc/basic-data-types-sample.md)|Descreve como usar métodos getter de conjunto de resultados para recuperar valores de tipo de dados básicos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], além de como usar métodos de atualização de conjunto de resultados para atualizar esses valores.|  
 |[Exemplo de tipo de dados SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md)|Descreve como armazenar dados XML em um banco de dados relacional, como recuperar dados XML de um banco de dados, e como analisar dados XML com um tipo de dados **SQLXML** Java.|  
-|[Exemplo de tipos de dados espaciais](../../connect/jdbc/spatial-data-types-sample.md)|Descreve como armazenar e recuperar dados com tipos de dados espaciais 'Geometria' e 'Geography' de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do banco de dados com **geometria** e **geografia** tipos Java definidos pelo Microsoft JDBC Driver.|
+|[Exemplo de tipos de dados espaciais](../../connect/jdbc/spatial-data-types-sample.md)|Descreve como armazenar e recuperar dados com tipos de dataespaciais ' Geometry ' e ' geography [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ' de banco de dado com **geometria** e **geography** de tipo Java definidos pelo Microsoft JDBC Driver.|
 
 ## <a name="see-also"></a>Consulte Também
 

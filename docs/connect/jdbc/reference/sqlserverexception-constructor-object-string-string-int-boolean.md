@@ -13,18 +13,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 868e14c72fbb7c32d394df2fbbdf5cd3a7c36738
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72ae0e8ed3c65a795723326d7ca49e2f5a909f18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66766992"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971141"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-int-boolean"></a>Construtor SQLServerException (java.lang.Object, java.lang.String, java.lang.String, int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Inicializa uma nova instância dos [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) classe quando é fornecido um **objeto**, um **cadeia de caracteres** objeto, um **cadeia de caracteres** objeto, um **int**e um **booliano**.
+  Inicializa uma nova instância da classe [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) quando um **objeto**é dado, um objeto **String** , um objeto **String** , um **int**e um **booliano**.
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,15 +45,15 @@ public SQLServerException(java.lang.Object obj,
 
  *errText*  
   
- Uma cadeia de caracteres que contém o texto de erro.
+ Uma cadeia de caracteres que contém o texto do erro.
   
  *sqlState*  
   
- Um objeto de enumeração que contém o estado do SQL.
+ Um objeto enum que contém o estado SQL.
  
  *errNum*  
   
- Um int que contêm o código de erro da exceção.
+ Um int que contém o código de erro para a exceção.
  
  *bStack*  
   

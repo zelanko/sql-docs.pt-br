@@ -1,5 +1,5 @@
 ---
-title: Construtor SQLServerException (lang. String, Throwable) | Microsoft Docs
+title: Construtor SQLServerException (Java. lang. String, Java. lang. Throwable) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -13,18 +13,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ea105ebb0d0fb2d6bf5e8cec0fadacd369abadc7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 14984450507b5eea63d2fbe88bb2e7f957f61868
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802039"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971088"
 ---
-# <a name="sqlserverexception-constructor-javalangstring-javalangthrowable"></a>Construtor SQLServerException (lang. String, Throwable)
+# <a name="sqlserverexception-constructor-javalangstring-javalangthrowable"></a>Construtor SQLServerException (Java. lang. String, Java. lang. Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Inicializa uma nova instância dos [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) classe quando é fornecido um **cadeia de caracteres** objeto e uma **throwable** objeto.
+  Inicializa uma nova instância da classe [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) quando um **objeto de cadeia** de caracteres é fornecido **e um** objeto rethrowável.
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,11 +36,11 @@ public SQLServerException(java.lang.String errText,
 #### <a name="parameters"></a>Parâmetros  
  *errText*  
   
- Uma cadeia de caracteres que contém o texto de erro.
+ Uma cadeia de caracteres que contém o texto do erro.
  
  *causa*  
   
- Um objeto throwable que contém a causa da exceção.
+ Um objeto rethrowável que contém a causa da exceção.
   
 ## <a name="see-also"></a>Consulte Também  
  [Construtores SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

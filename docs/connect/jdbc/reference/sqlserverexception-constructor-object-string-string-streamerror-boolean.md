@@ -13,18 +13,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 33b5d593cfc5ac4b46fdfe7dcf7a845f754d5f3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1cc42a09e455fa42d3f89b05903a22afc945424
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800922"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971128"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-streamerror-boolean"></a>Construtor SQLServerException (java.lang.Object, java.lang.String, java.lang.String, StreamError, booliano)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Inicializa uma nova instância dos [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) classe quando é fornecido um **objeto**, um **cadeia de caracteres** objeto, um **cadeia de caracteres** objeto, um  **StreamError** objeto e uma **boolean**.
+  Inicializa uma nova instância da classe [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) quando um **objeto**é dado, um objeto **String** , um objeto **String** , um objeto **StreamError** e um **booliano**.
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,11 +45,11 @@ public SQLServerException(java.lang.Object obj,
 
  *errText*  
   
- Uma cadeia de caracteres que contém o texto de erro.
+ Uma cadeia de caracteres que contém o texto do erro.
   
  *sqlState*  
   
- Um objeto de enumeração que contém o estado do SQL.
+ Um objeto enum que contém o estado SQL.
  
  *streamError*  
   
