@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 1394414db170826fa96ca51a5d35ff8dea199310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68212258"
 ---
 Este artigo fornece uma visão geral das soluções de continuidade de negócios para alta disponibilidade e recuperação de desastre no SQL Server. 

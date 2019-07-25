@@ -20,12 +20,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d071c934e5ebf6cb08b649bc33735cf39f4f0cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3201e13c967906c624bee5be28b157a887155c7f
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048953"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388340"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Configurar e gerenciar separadores de palavras e lematizadores de pesquisa
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ Se você adicionar, remover ou alterar um separador de palavras, precisará atua
 Para exibir o idioma do separador de palavras de colunas específicas, execute a seguinte instrução.
    
 ```sql 
-SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
+SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 ```  
 
 Para obter opções adicionais e mais informações, consulte [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md).
@@ -133,11 +133,9 @@ Para obter opções adicionais e mais informações, consulte [sys.fulltext_inde
  Cada versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente inclui novos separadores de palavras que possuem regras linguísticas melhores e mais precisas do que os separadores de palavras anteriores. O comportamento dos novos separadores de palavras pode ser ligeiramente diferente daquele dos separadores de palavras em índices de texto completo importados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
 Isso é significativo se um catálogo de texto completo foi importado durante a atualização de um banco de dados para a versão atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Agora um ou mais dos idiomas usados pelos índices de texto completo no catálogo de texto completo podem ser associados aos novos separadores de palavras. Para obter mais informações, veja [Atualizar pesquisa de texto completo](../../relational-databases/search/upgrade-full-text-search.md).  
-  
-
+ 
 ## <a name="see-also"></a>Consulte Também  
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)    
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [Configurar e gerenciar palavras irrelevantes e listas de palavras irrelevantes (stoplists) para pesquisa de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- 
-  
+
