@@ -1,10 +1,11 @@
 ---
-ms.openlocfilehash: 90efdf00d205cc5dedd7c6645d3c818ed324f147
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 63b66f13f6a0143368ee5c9df6b598aa74b2287d
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68161573"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419295"
 ---
 > [!NOTE]
-> Clusters de grandes dados do SQL Server está disponível como visualização pública limitada por meio do programa de adoção antecipada do SQL Server de 2019. Para solicitar acesso, registre [aqui](https://aka.ms/eapsignup)e especifique seu interesse para tentar a clusters de grandes dados do SQL Server. A Microsoft todas as solicitações de triagem e responder assim que possível.
+> Do SQL Server 2019 CTP 3.2 em diante, clusters de Big Data do SQL Server estão disponíveis para versão prévia pública.
+> Antes do SQL Server 2019 CTP 3.2, clusters de Big Data do SQL Server estavam disponíveis como uma versão prévia pública limitada por meio do Programa de adoção antecipada do SQL Server 2019.
