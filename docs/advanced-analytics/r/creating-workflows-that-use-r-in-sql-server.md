@@ -7,15 +7,15 @@ ms.date: 03/17/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 09547f5f77eae8cff0924dfdf227c31563c10abd
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 79a5eeb48816f858d3e009f8564487fd68769979
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345587"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470206"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Criar fluxos de trabalho do SSIS e do SSRS com R no SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Este artigo explica como usar o script incorporado R e Python usando os recursos de ciência de dados e de linguagem do SQL Server Serviços de Machine Learning com dois recursos importantes de SQL Server: SQL Server Integration Services (SSIS) e SQL Server Reporting Services SSRS. As bibliotecas R e Python no SQL Server fornecem funções estatísticas e preditivas. O SSIS e o SSRS fornecem transformação e visualizações de ETL coordenadas, respectivamente. Este artigo explica como colocar todos esses recursos juntos neste padrão de fluxo de trabalho:
 

@@ -1,7 +1,7 @@
 ---
-title: sys.dm_resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs
+title: sys. dm _resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/02/2018
+ms.date: 07/24/2019
 ms.prod: sql
 ms.technology: machine-learning
 ms.reviewer: ''
@@ -16,24 +16,25 @@ dev_langs:
 helpviewer_keywords:
 - dm_resource_governor_external_resource_pools
 - sys.dm_resource_governor_external_resource_pools
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2bf0be37313816ef4238df89d9157a2fc771e6e7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: cf77a073a1432df839bfd13046c66018496e79f1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262707"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468519"
 ---
-# <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>sys.dm_resource_governor_external_resource_pools (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>sys. dm _resource_governor_external_resource_pools (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Retorna informações sobre o estado atual do pool de recursos externos, a configuração atual de pools de recursos e as estatísticas de pool de recursos. 
+Retorna informações sobre o estado atual do pool de recursos externos, a configuração atual dos pools de recursos e as estatísticas do pool de recursos. 
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-|Nome de Colmn      |Tipo de dados      |Descrição|  
+|Nome do Colmn      |Tipo de dados      |Descrição|  
 |----------------|---------------|-----------------| 
 | external_pool_id|**int**|ID do pool de recursos. Não permite valor nulo. |
 | name|**sysname**|O nome do pool de recursos. Não permite valor nulo. 
@@ -45,8 +46,8 @@ Retorna informações sobre o estado atual do pool de recursos externos, a confi
 | peak_memory_kb|**bigint**|A quantidade máxima de memória usada, em quilobytes, para o pool de recursos. Não permite valor nulo. |
 | write_io_count|**int**|O total de E/Ss de gravação emitidas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo. |
 | read_io_count|**int**|O total de E/S lidas emitidas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo. |
-| total_cpu_kernel_ms|**bigint**|O usuário kernel tempo de CPU cumulativo em milissegundos, desde que as estatísticas do administrador de recursos foram redefinidas. Não permite valor nulo. |
-| total_cpu_user_ms|**bigint**|O tempo de usuário de CPU cumulativo em milissegundos, desde que as estatísticas do administrador de recursos foram redefinidas. Não permite valor nulo. |
+| total_cpu_kernel_ms|**bigint**|O tempo de kernel do usuário cumulativo da CPU em milissegundos desde que as estatísticas de administrador de recursos foram redefinidas. Não permite valor nulo. |
+| total_cpu_user_ms|**bigint**|O tempo de usuário cumulativo da CPU em milissegundos desde que as estatísticas de administrador de recursos foram redefinidas. Não permite valor nulo. |
 | active_processes_count|**int**|O número de processos externos em execução no momento da solicitação. Não permite valor nulo. |
 
  

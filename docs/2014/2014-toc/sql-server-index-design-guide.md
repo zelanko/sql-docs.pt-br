@@ -10,12 +10,12 @@ ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ee47da3e97240ec4573303700e9793ee482821c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 726fb1ffd4175afa0d247d2029db559db2ff3231
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513005"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68475978"
 ---
 # <a name="sql-server-index-design-guide"></a>Guia de criação de índice do SQL Server
 
@@ -25,11 +25,11 @@ ms.locfileid: "62513005"
   
  Este guia presume que o leitor tenha uma compreensão geral dos tipos de índices disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter uma descrição geral dos tipos de índices, consulte [Tipos de índice](../relational-databases/indexes/indexes.md).  
   
-##  <a name="Top"></a> Neste guia  
+##  <a name="Top"></a>Neste guia  
 
- [Noções básicas sobre o Design de índice](#Basics)  
+ [Noções básicas de design de índice](#Basics)  
   
- [Diretrizes para criação de índice geral](#General_Design)  
+ [Diretrizes de design de índice geral](#General_Design)  
   
  [Diretrizes de design de índice clusterizado](#Clustered)  
   
@@ -180,7 +180,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  O plano de execução a seguir, dessa consulta, mostra que o otimizador de consultas usou um operador SORT para retornar o conjunto de resultados na ordem especificada pela cláusula ORDER BY.  
   
- ![Plano de execução mostra uma classificação operador é usado. ](media/indexsort1.gif "Plano de execução mostra uma classificação operador é usado.")  
+ ![Plano de execução mostra que um operador de classificação é usado.](media/indexsort1.gif "Plano de execução mostra que um operador de classificação é usado.")  
   
  Se um índice for criado com colunas de chave correspondentes às da cláusula ORDER BY da consulta, o operador SORT poderá ser eliminado do plano de consulta, e este se tornará mais eficaz.  
   
@@ -192,13 +192,13 @@ ON Purchasing.PurchaseOrderDetail
   
  Depois que a consulta for novamente executada, o plano de execução a seguir mostra que o operador SORT foi eliminado e que o índice não clusterizado recentemente criado é utilizado.  
   
- ![Plano de execução mostra uma classificação de operador não é usado](media/insertsort2.gif "plano de execução mostra uma classificação de operador não é usado.")  
+ ![O plano de execução mostra que um operador de classificação não é usado](media/insertsort2.gif "O plano de execução mostra que um operador de classificação não é usado")  
   
  O [!INCLUDE[ssDE](../includes/ssde-md.md)] pode se mover para qualquer direção de forma igualmente eficaz. Um índice definido como `(RejectedQty DESC, ProductID ASC)` ainda pode ser usado em uma consulta na qual a direção de classificação das colunas da cláusula ORDER BY é invertida. Por exemplo, uma consulta com a cláusula ORDER BY `ORDER BY RejectedQty ASC, ProductID DESC` pode utilizar o índice.  
   
  A ordem de classificação só pode ser especificada para colunas de chave. A exibição de catálogo [sys.index_columns](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) e a função INDEXKEY_PROPERTY relatam se a coluna de índice está armazenada em ordem crescente ou decrescente.  
   
- ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "ícone de seta usado com o link voltar ao início") [neste guia](#Top)  
+ ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "Ícone de seta usado com o link voltar ao início") [Neste guia](#Top)  
   
 ##  <a name="Clustered"></a> Diretrizes de design de índices clusterizados  
 
@@ -213,7 +213,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Pode ser usado em consultas de intervalo.  
   
- Se o índice clusterizado não for criado com a propriedade UNIQUE, o [!INCLUDE[ssDE](../includes/ssde-md.md)] acrescentará uma coluna de indicador de exclusividade de 4 bytes automaticamente à tabela. Quando necessário, o [!INCLUDE[ssDE](../includes/ssde-md.md)] acrescenta um valor de indicador de exclusividade automaticamente a uma linha para tornar cada chave exclusiva. Essa coluna e seus valores são usados internamente e não podem ser vistos ou avaliados por usuários.  
+ Se o índice clusterizado não for criado com a propriedade Unique, o [!INCLUDE[ssDE](../includes/ssde-md.md)] adicionará automaticamente uma coluna uniquifier de 4 bytes à tabela. Quando necessário, o [!INCLUDE[ssDE](../includes/ssde-md.md)] adiciona automaticamente um valor uniquifier a uma linha para tornar cada chave exclusiva. Essa coluna e seus valores são usados internamente e não podem ser vistos ou avaliados por usuários.  
   
 ### <a name="clustered-index-architecture"></a>Arquitetura de índice clusterizado  
 
@@ -227,7 +227,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Esta ilustração mostra a estrutura de um índice clusterizado em um único particionamento.  
   
- ![Níveis de um índice clusterizado](media/bokind2.gif "níveis de um índice clusterizado")  
+ ![Níveis de um índice clusterizado](media/bokind2.gif "Níveis de um índice clusterizado")  
   
 ### <a name="query-considerations"></a>Considerações sobre consultas  
 
@@ -273,7 +273,7 @@ ON Purchasing.PurchaseOrderDetail
   
      Chaves largas são uma combinação de várias colunas ou de várias colunas de tamanho grande. Os valores de chave do índice clusterizado são usados por todos os índices não clusterizados como chaves de pesquisa. Qualquer índice não clusterizado definido na mesma tabela será significativamente maior porque as entradas de índice não clusterizado contêm a chave de cluster e também as colunas de chave definidas para aquele índice não clusterizado.  
   
- ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "ícone de seta usado com o link voltar ao início") [neste guia](#Top)  
+ ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "Ícone de seta usado com o link voltar ao início") [Neste guia](#Top)  
   
 ##  <a name="Nonclustered"></a> Diretrizes de criação de índice não clusterizado  
 
@@ -301,7 +301,7 @@ ON Purchasing.PurchaseOrderDetail
   
  A ilustração a seguir mostra a estrutura de um índice não clusterizado em uma única partição.  
   
- ![Níveis de um índice não clusterizado](media/bokind1.gif "níveis de um índice não clusterizado")  
+ ![Níveis de um índice] não clusterizado (media/bokind1.gif "Níveis de um índice") não clusterizado  
   
 ### <a name="database-considerations"></a>Considerações sobre banco de dados  
 
@@ -453,7 +453,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Você terá que determinar se os ganhos no desempenho de consulta superam o efeito no desempenho durante a modificação de dados, e em requisitos adicionais de espaço em disco.  
   
- ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "ícone de seta usado com o link voltar ao início") [neste guia](#Top)  
+ ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "Ícone de seta usado com o link voltar ao início") [Neste guia](#Top)  
   
 ##  <a name="Unique"></a> Diretrizes de design de índice exclusivo  
 
@@ -479,7 +479,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   Um índice não clusterizado exclusivo pode conter colunas não chave incluídas. Para obter mais informações, consulte [Índice com colunas incluídas](#Included_Columns).  
   
- ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "ícone de seta usado com o link voltar ao início") [neste guia](#Top)  
+ ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "Ícone de seta usado com o link voltar ao início") [Neste guia](#Top)  
   
 ##  <a name="Filtered"></a> Diretrizes de criação de índice filtrado  
 
@@ -626,7 +626,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  A movimentação da conversão de dados da esquerda para a direita de um operador de comparação pode alterar o significado da conversão. No exemplo anterior, quando o operador CONVERT foi adicionado à direita, a comparação mudou de uma comparação de número inteiro para uma comparação `varbinary`.  
   
- ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "ícone de seta usado com o link voltar ao início") [neste guia](#Top)  
+ ![Ícone de seta usado com o link voltar ao início](media/uparrow16x16.gif "Ícone de seta usado com o link voltar ao início") [Neste guia](#Top)  
   
 ##  <a name="Additional_Reading"></a> Leitura adicional  
 

@@ -7,16 +7,16 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 51587878d4a16145ff53eaa397da69130c04d7d5
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 39a9d05761b60878f1d7856378ba4cb28e54e2f9
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343366"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470476"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Visão geral de segurança para a estrutura de extensibilidade no SQL Server Serviços de Machine Learning
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Este artigo descreve a arquitetura de segurança geral usada para integrar o mecanismo de banco de dados SQL Server e os componentes relacionados com a estrutura de extensibilidade. Ele examina os protegíveis, os serviços, a identidade do processo e as permissões. Para obter mais informações sobre os principais conceitos e componentes de extensibilidade no SQL Server, consulte [arquitetura de extensibilidade no SQL Server serviços de Machine Learning](extensibility-framework.md)].
 

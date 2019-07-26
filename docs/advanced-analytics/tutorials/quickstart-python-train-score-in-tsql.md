@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c2c36c5aa81da098064885fd5b006d78494cd962
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 47ee23d945ded9fac97fe3eddc2137eeead00ae1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345770"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469511"
 ---
 # <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>Início Rápido: Criar, treinar e usar um modelo Python com procedimentos armazenados no SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Neste guia de início rápido usando o Python, você criará e executará dois procedimentos armazenados. A primeira usa o conjunto de dados de flor de íris clássico e gera um modelo de Bayes simples para prever uma espécie de íris com base nas características da flor. O segundo procedimento é para pontuação. Ele chama o modelo gerado no primeiro procedimento para gerar um conjunto de previsões. Ao colocar o código em um procedimento armazenado, as operações são contidas, reutilizáveis e podem ser chamadas por outros procedimentos armazenados e aplicativos cliente. 
 

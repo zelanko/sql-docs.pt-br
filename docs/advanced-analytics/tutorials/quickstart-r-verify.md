@@ -1,47 +1,47 @@
 ---
-title: Guia de início rápido para verificar R existe no SQL Server
-description: Guia de início rápido para verificar o R e Machine Learning Services existem no SQL Server.
+title: O início rápido para verificar se o R existe no SQL Server
+description: Início rápido para verificar se o R e o Serviços de Machine Learning existem no SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f294f5f12e3efd734d1e54ace3041702c39d390a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 951ffc07a32434b2f8d333140445f12c2971b811
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961963"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470613"
 ---
 # <a name="quickstart-verify-r-exists-in-sql-server"></a>Início Rápido: Verificar se o R existe no SQL Server 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server inclui o suporte à linguagem de R para análises de ciência de dados em dados do SQL Server residentes. Seu script R pode consistir em funções de R de código-fonte aberto, bibliotecas de R de terceiros ou bibliotecas internas do Microsoft R, como [RevoScaleR](../r/revoscaler-overview.md) para análise preditiva em grande escala.
+O SQL Server inclui suporte à linguagem R para análise de ciência de dados em dados SQL Server residentes. Seu script R pode consistir em funções de R de software livre, bibliotecas de R de terceiros ou bibliotecas do Microsoft R internas, como [RevoScaleR](../r/revoscaler-overview.md) para análise preditiva em escala.
 
-Execução do script é por meio de procedimentos armazenados, usando qualquer uma das seguintes abordagens:
+A execução do script é por meio de procedimentos armazenados, usando uma das seguintes abordagens:
 
-+ Interna [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) procedimento armazenado, passando o script R no como um parâmetro de entrada.
-+ Encapsular o script de R em um [procedimento armazenado de personalizado](sqldev-in-database-r-for-sql-developers.md) criado por você.
++ Procedimento armazenado [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) interno, passando o script R no como um parâmetro de entrada.
++ Encapsular script R em um [procedimento armazenado personalizado](sqldev-in-database-r-for-sql-developers.md) que você criar.
 
-Neste início rápido, você verificará que [serviços do SQL Server 2017 Machine Learning](../what-is-sql-server-machine-learning.md) ou [SQL Server 2016 R Services](../r/sql-server-r-services.md) está instalado e configurado.
+Neste guia de início rápido, você verificará se [SQL Server 2017 serviços de Machine Learning](../what-is-sql-server-machine-learning.md) ou [SQL Server 2016 R Services](../r/sql-server-r-services.md) estão instalados e configurados.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Este exercício exige o acesso a uma instância do SQL Server com um dos seguintes já instalados:
+Este exercício requer acesso a uma instância do SQL Server com uma das seguintes opções já instaladas:
 
-+ [Serviços de aprendizado de máquina do SQL Server 2017](../install/sql-machine-learning-services-windows-install.md), com a linguagem R instalada
++ [SQL Server 2017 serviços de Machine Learning](../install/sql-machine-learning-services-windows-install.md), com a linguagem R instalada
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 
-Instância do SQL Server pode estar em uma máquina virtual do Azure ou no local. Apenas lembre-se de que o recurso de script externo é desabilitado por padrão, portanto, talvez você precise [habilitar scripts externos](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) e verifique **Launchpad do SQL Server service** está em execução antes de começar.
+Sua instância de SQL Server pode estar em uma máquina virtual do Azure ou no local. Apenas esteja ciente de que o recurso de script externo está desabilitado por padrão, portanto, talvez seja necessário [habilitar o script externo](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) e verificar se **SQL Server Launchpad serviço** está em execução antes de iniciar.
 
-Você também precisa de uma ferramenta para executar consultas SQL. Você pode executar os scripts R usando qualquer gerenciamento de banco de dados ou consultar a ferramenta, desde que ele pode se conectar a uma instância do SQL Server e executar uma consulta T-SQL ou procedimento armazenado. Este início rápido usa [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+Você também precisa de uma ferramenta para executar consultas SQL. Você pode executar os scripts do R usando qualquer ferramenta de consulta ou gerenciamento de banco de dados, desde que ele possa se conectar a uma instância de SQL Server e executar uma consulta T-SQL ou um procedimento armazenado. Este início rápido usa o [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
-## <a name="verify-r-exists"></a>Verifique se que existe R
+## <a name="verify-r-exists"></a>Verificar se o R existe
 
-Você pode confirmar que os serviços do Machine Learning (com R) está habilitado para sua instância do SQL Server e qual versão do R está instalado. Siga as etapas abaixo.
+Você pode confirmar se o Serviços de Machine Learning (com R) está habilitado para sua instância do SQL Server e qual versão do R está instalada. Siga as etapas abaixo.
 
-1. Abra o SQL Server Management Studio e conecte-se à instância do SQL Server.
+1. Abra SQL Server Management Studio e conecte-se à sua instância do SQL Server.
 
 2. Execute o código a seguir. 
 
@@ -52,7 +52,7 @@ Você pode confirmar que os serviços do Machine Learning (com R) está habilita
     GO
     ```
 
-3. O R `print` função retorna a versão para o **mensagens** janela. Na saída do exemplo abaixo, você pode ver que, nesse caso, SQL Server tem de R versão 3.3.3 instalado.
+3. A função `print` R retorna a versão para a janela **mensagens** . Na saída de exemplo abaixo, você pode ver que SQL Server nesse caso têm R versão 3.3.3 instalada.
 
     **Resultados**
 
@@ -73,15 +73,15 @@ Você pode confirmar que os serviços do Machine Learning (com R) está habilita
     nickname       Another Canoe               
     ```
 
-Se você receber erros dessa consulta, a regra os problemas de instalação. Configuração de pós-instalação é necessária para habilitar o uso de bibliotecas de código externo. Ver [instalar serviços de aprendizado de máquina do SQL Server 2017](../install/sql-machine-learning-services-windows-install.md) ou [instalar o SQL Server 2016 R Services](../install/sql-r-services-windows-install.md). Da mesma forma, certifique-se de que o serviço Launchpad está em execução.
+Se você receber erros dessa consulta, descartar quaisquer problemas de instalação. A configuração pós-instalação é necessária para habilitar o uso de bibliotecas de código externo. Consulte [instalar SQL Server 2017 serviços de Machine Learning](../install/sql-machine-learning-services-windows-install.md) ou [instalar SQL Server 2016 R Services](../install/sql-r-services-windows-install.md). Da mesma forma, verifique se o serviço Launchpad está em execução.
 
-Dependendo do seu ambiente, você pode precisar habilitar as contas de trabalho R para se conectar ao SQL Server, instalar bibliotecas de rede adicional, habilitar a execução remota de código ou reiniciar a instância depois que tudo estiver configurado. Para obter mais informações, consulte [perguntas frequentes sobre atualização e instalação de serviços de R](../r/upgrade-and-installation-faq-sql-server-r-services.md).
+Dependendo do seu ambiente, você pode precisar habilitar as contas de trabalho R para se conectar ao SQL Server, instalar bibliotecas de rede adicional, habilitar a execução remota de código ou reiniciar a instância depois que tudo estiver configurado. Para obter mais informações, consulte [perguntas frequentes sobre instalação e atualização do R Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 
-## <a name="list-r-packages"></a>Pacotes de R da lista
+## <a name="list-r-packages"></a>Listar pacotes de R
 
-A Microsoft fornece um número de pacotes de R pré-instalados com serviços de Machine Learning em sua instância do SQL Server. Para ver uma lista de quais R pacotes são instalados, incluindo a versão, dependências, licença e informações de caminho de biblioteca, siga as etapas abaixo.
+A Microsoft fornece vários pacotes de R pré-instalados com Serviços de Machine Learning em sua instância de SQL Server. Para ver uma lista de quais pacotes do R estão instalados, incluindo informações de versão, dependências, licença e caminho de biblioteca, siga as etapas abaixo.
 
-1. Execute o script abaixo em sua instância do SQL Server.
+1. Execute o script abaixo em sua instância de SQL Server.
 
     ```SQL
     EXECUTE sp_execute_external_script @language = N'R'
@@ -91,7 +91,7 @@ A Microsoft fornece um número de pacotes de R pré-instalados com serviços de 
         , License NVARCHAR(1000), LibPath NVARCHAR(2000)));
     ```
 
-2. O resultado é de `installed.packages()` em R e retornado como resultado de conjunto.
+2. A saída é de `installed.packages()` em R e retornada como um conjunto de resultados.
 
     **Resultados**
 
@@ -99,7 +99,7 @@ A Microsoft fornece um número de pacotes de R pré-instalados com serviços de 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Agora que você confirmou a que sua instância estiver pronta para trabalhar com R, dar uma olhada mais próxima em uma interação básica do R.
+Agora que você confirmou que sua instância está pronta para trabalhar com o R, dê uma olhada em mais detalhes em uma interação básica de R.
 
 > [!div class="nextstepaction"]
-> [Início Rápido: Script de R "Hello world" no SQL Server](quickstart-r-run-using-tsql.md)
+> [Início Rápido: Script R "Olá mundo" no SQL Server](quickstart-r-run-using-tsql.md)

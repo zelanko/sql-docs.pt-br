@@ -7,15 +7,15 @@ ms.date: 01/25/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 74330d37a037b0951c4964cafbd6e0c26b4fdea1
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: f86bedc3cfd92272b500d5d3edd701b6ca51d38b
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345634"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469984"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>Criar um logon para SQLRUserGroup
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Crie um [logon em SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) para [SQLRUserGroup](../concepts/security.md#sqlrusergroup) quando uma [conexão de retorno de loop](../../advanced-analytics/concepts/security.md#implied-authentication) em seu script especificar uma *conexão confiável*e a identidade usada para executar um objeto contiver seu código é uma conta de usuário do Windows.
 

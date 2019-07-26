@@ -8,15 +8,15 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e849140125ba39c7c1d8601c5ef32880a9d633ac
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 32487d8c1a6c87c9ad916e4cfd517f9ba4cba6e2
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344839"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469903"
 ---
 # <a name="r-services-in-sql-server-2016"></a>Serviços de R no SQL Server 2016
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 O R Services é um complemento a uma instância do mecanismo de banco de dados SQL Server 2016, usada para executar o código R e as funções no SQL Server. O código é executado em uma estrutura de extensibilidade, isolada dos processos principais do mecanismo, mas totalmente disponível para dados relacionais como procedimentos armazenados, como um script T-SQL que contém instruções de R ou como código R que contém T-SQL. 
 

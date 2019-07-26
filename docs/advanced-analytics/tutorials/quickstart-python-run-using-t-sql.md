@@ -7,15 +7,15 @@ ms.date: 04/10/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: caa462fa6449d4d130ace629f99c8061c7b8a35f
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 1281da6a366f7fa9d5fca20cc719a3c86825e56d
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345502"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469614"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>Início Rápido: Script do Python "Olá, mundo" no SQL Server 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Neste guia de início rápido, você aprende os principais conceitos executando um script "Olá, Mundo" do Python inT-SQL, com uma introdução ao procedimento armazenado do sistema **sp_execute_external_script** . 
 

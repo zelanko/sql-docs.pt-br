@@ -7,14 +7,16 @@ ms.date: 05/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0fd6b624b024c51965420dd438b8eb9ec04fbafc
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: ab87112d20d2571936fa7d61c34c5910859f2642
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344954"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470313"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>Downloads CAB para atualizações cumulativas de SQL Server instâncias de análise no banco de dados
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server instâncias configuradas para análise no banco de dados incluem recursos de R e Python. Esses recursos são fornecidos em arquivos CAB, instalados e atendidos por meio da instalação do SQL Server. Em dispositivos conectados à Internet, as atualizações de CAB normalmente são aplicadas por meio de Windows Update. Em servidores desconectados, os arquivos CAB devem ser baixados e aplicados manualmente. 
 

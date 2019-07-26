@@ -1,33 +1,33 @@
 ---
-title: Guia de início rápido mostrando R funções – SQL Server Machine Learning
-description: Neste início rápido, saiba como escrever uma função do R para computação estatística avançada.
+title: Início rápido mostrando funções do R – SQL Server Machine Learning
+description: Neste guia de início rápido, saiba como escrever uma função do R para computação estatística avançada.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: fa2d47729641e8efd13e9e30be7a61186a892b5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f43709f563d1dc5838cdd6636bcac4dc5664a6da
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962018"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469277"
 ---
 # <a name="quickstart-using-r-functions"></a>Início Rápido: Usando funções de R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Se você concluiu os inícios rápidos anteriores, você está familiarizado com operações básicas e pronto para algo mais complexo, como as funções estatísticas. Funções estatísticas avançadas que são complicadas para implementar em T-SQL podem ser feitas em R com apenas uma única linha de código.
+Se você concluiu os guias de início rápido anteriores, está familiarizado com as operações básicas e pronto para algo mais complexo, como funções estatísticas. As funções estatísticas avançadas que são complicadas de implementar no T-SQL podem ser feitas em R com apenas uma única linha de código.
 
-Neste início rápido, você inserirá R matemático e procedimento armazenado de funções de utilitário em um SQL Server.
+Neste guia de início rápido, você vai inserir as funções matemáticas e de utilitário R em um procedimento armazenado SQL Server.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Um início rápido anterior, [R Verifique se existe no SQL Server](quickstart-r-verify.md), fornece informações e links para configurar o ambiente de R necessários para este início rápido.
+Um guia de início rápido anterior, [verificar se o R existe no SQL Server](quickstart-r-verify.md), fornece informações e links para configurar o ambiente de R necessário para este guia de início rápido.
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>Criar um procedimento armazenado para gerar números aleatórios
 
-Para simplificar, vamos usar o R `stats` pacote, que é instalado e carregado por padrão quando você instala o suporte ao recurso de R no SQL Server. O pacote contém centenas de funções para tarefas estatísticas comuns, entre elas, a função `rnorm`, que gera um número específico de números aleatórios usando a distribuição normal, dado um desvio padrão e uma média.
+Para simplificar, vamos usar o pacote `stats` r, que é instalado e carregado por padrão quando você instala o suporte a recursos do r no SQL Server. O pacote contém centenas de funções para tarefas estatísticas comuns, entre elas, a função `rnorm`, que gera um número específico de números aleatórios usando a distribuição normal, dado um desvio padrão e uma média.
 
 Por exemplo, esse código R retorna 100 números em uma média de 50, dado um desvio padrão de 3.
 
@@ -48,7 +48,7 @@ EXEC sp_execute_external_script
 
 E se você quiser facilitar a geração de um conjunto de números aleatórios diferente?
 
-Isso é fácil quando combinado com o SQL Server: defina um procedimento armazenado que obtém os argumentos do usuário. Em seguida, passe esses argumentos para o script de R como variáveis.
+Isso é fácil quando combinado com SQL Server: define um procedimento armazenado que obtém os argumentos do usuário. Em seguida, passe esses argumentos para o script de R como variáveis.
 
 ```sql
 CREATE PROCEDURE MyRNorm (@param1 int, @param2 int, @param3 int)
@@ -79,7 +79,7 @@ EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 
 ## <a name="use-r-utility-functions-for-troubleshooting"></a>Usar funções de utilitário de R para solução de problemas
 
-Por padrão, uma instalação do R inclui o `utils` pacote, que fornece uma variedade de funções de utilitário para investigar o atual ambiente de R. Isso poderá ser útil se você estiver encontrando discrepâncias na maneira como o código R é executado no SQL Server e em ambientes externos.
+Por padrão, uma instalação do R inclui o `utils` pacote, que fornece uma variedade de funções utilitárias para investigar o ambiente de r atual. Isso poderá ser útil se você estiver encontrando discrepâncias na maneira como o código R é executado no SQL Server e em ambientes externos.
 
 Por exemplo, você pode usar a função R `memory.limit()` para obter memória para o ambiente atual de R. Uma vez que o pacote `utils` é instalado, mas não carregado por padrão, primeiro é necessário usar a função `library()` para carregá-lo.
 
@@ -94,9 +94,9 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS (([Col1] int not null));
 ```
 
-Muitos usuários gostam de usar as funções de tempo do sistema em R, como `system.time` e `proc.time`, para capturar o tempo usado por processos de R e analisar problemas de desempenho.
+Muitos usuários gostam de usar as funções de tempo do sistema em R, `system.time` como `proc.time`e, para capturar o tempo usado pelos processos do r e analisar problemas de desempenho.
 
-Para obter um exemplo, consulte este tutorial: [Criar recursos de dados](../tutorials/walkthrough-create-data-features.md). Neste passo a passo, funções de tempo R são inseridas na solução para comparar o desempenho dos dois métodos para criar recursos de dados: Vs de funções de R. funções T-SQL.
+Para obter um exemplo, consulte este tutorial: [Criar recursos de dados](../tutorials/walkthrough-create-data-features.md). Neste tutorial, as funções de tempo do R são inseridas na solução para comparar o desempenho de dois métodos de criação de recursos a partir de dados: Funções do R vs. funções T-SQL.
 
 ## <a name="next-steps"></a>Próximas etapas
 

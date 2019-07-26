@@ -8,15 +8,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: dec0fe7147eab6a4b6545decf99e1731d773957c
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: cec029f4ffb047a49ff9902c430c4bd98aa03850
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343421"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470283"
 ---
 #  <a name="get-r-and-python-package-information"></a>Obter informações do pacote R e Python
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Às vezes, quando você trabalha com vários ambientes ou instalações de R ou Python, precisa verificar se o código que está sendo executado está usando o ambiente esperado para Python ou o espaço de trabalho correto para R. Por exemplo, se você tiver [atualizado R ou Python](../install/upgrade-r-and-python.md), o caminho para a biblioteca do R pode estar em uma pasta diferente da padrão. Além disso, se você instalar o cliente R ou uma instância do servidor autônomo, poderá ter várias bibliotecas de R em seu computador.
 

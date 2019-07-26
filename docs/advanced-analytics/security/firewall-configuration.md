@@ -7,15 +7,15 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 58a10c36eff06cd4e36f3e326407564b2657fec1
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 754e243f45965801b9295d2b40a920d52bd2c95c
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345597"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469859"
 ---
 # <a name="firewall-configuration-for-sql-server-machine-learning-services"></a>Configuração de firewall para SQL Server Serviços de Machine Learning
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Este artigo lista as considerações de configuração do firewall que o administrador ou o arquiteto deve ter em mente ao usar os serviços do Machine Learning.
 

@@ -1,7 +1,7 @@
 ---
 title: Função SQLFreeHandle | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLFreeHandle
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLFreeHandle
@@ -19,22 +20,22 @@ helpviewer_keywords:
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d853d843e7b2cf168516fa4007883f280029e53b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e312bcbc6efcb96ff02657b98034f0340ae377dc
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006236"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345179"
 ---
 # <a name="sqlfreehandle-function"></a>Função SQLFreeHandle
-**Conformidade com**  
- Versão introduzida: Conformidade com padrões 3.0 ODBC: ISO 92  
+**Conformidade**  
+ Versão introduzida: Conformidade com os padrões do ODBC 3,0: ISO 92  
   
  **Resumo**  
- **SQLFreeHandle** libera recursos associados a um identificador de ambiente, conexão, instrução ou descritor específico.  
+ O **SQLFreeHandle** libera recursos associados a um ambiente, uma conexão, uma instrução ou um identificador de descritor específico.  
   
 > [!NOTE]
->  Essa função é uma função genérica para liberar identificadores. Ele substitui as funções ODBC 2.0 **SQLFreeConnect** (para liberar um identificador de conexão) e **SQLFreeEnv** (para liberar um identificador de ambiente). **SQLFreeConnect** e **SQLFreeEnv** foram preteridos em ODBC 3 *. x*. **SQLFreeHandle** também substitui a função ODBC 2.0 **SQLFreeStmt** (com o SQL_DROP *opção*) para liberar um identificador de instrução. Para obter mais informações, consulte "Comentários". Para obter mais informações sobre o que o Gerenciador de Driver mapeia essa função quando um ODBC 3 *. x* aplicativo está funcionando com um ODBC 2 *. x* driver, consulte [funções de mapeamento de substituição para trás Compatibilidade de aplicativos](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
+>  Essa função é uma função genérica para a liberação de identificadores. Ele substitui as funções de ODBC 2,0 **SQLFreeConnect** (para liberar um identificador de conexão) e **SQLFreeEnv** (para liberar um identificador de ambiente). **SQLFreeConnect** e **SQLFreeEnv** são preteridos no ODBC 3 *. x*. O **SQLFreeHandle** também substitui a função **SQLFreeStmt** do ODBC 2,0 (com a *opção*SQL_DROP) para liberar um identificador de instrução. Para obter mais informações, consulte "Comentários". Para obter mais informações sobre como o Gerenciador de driver mapeia essa função quando um aplicativo ODBC 3 *. x* está trabalhando com um driver ODBC 2 *. x* , consulte [mapeando funções de substituição para compatibilidade com versões anteriores de aplicativos](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +48,7 @@ SQLRETURN SQLFreeHandle(
   
 ## <a name="arguments"></a>Argumentos  
  *HandleType*  
- [Entrada] O tipo de identificador a ser liberada por **SQLFreeHandle**. Deve ser um dos seguintes valores:  
+ Entrada O tipo de identificador a ser liberado por **SQLFreeHandle**. Deve ser um dos seguintes valores:  
   
 -   SQL_HANDLE_DBC  
   
@@ -59,64 +60,64 @@ SQLRETURN SQLFreeHandle(
   
 -   SQL_HANDLE_STMT  
   
- Identificador SQL_HANDLE_DBC_INFO_TOKEN é usado somente pelo Gerenciador de Driver e o driver. Aplicativos não devem usar esse tipo de identificador. Para obter mais informações sobre SQL_HANDLE_DBC_INFO_TOKEN, consulte [desenvolvendo o reconhecimento de Pool de Conexão em um Driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
+ O identificador SQL_HANDLE_DBC_INFO_TOKEN é usado somente pelo driver e pelo Gerenciador de driver. Os aplicativos não devem usar esse tipo de identificador. Para obter mais informações sobre o SQL_HANDLE_DBC_INFO_TOKEN, consulte [desenvolvendo o reconhecimento do pool de conexões em um driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   
- Se *HandleType* não é um destes valores **SQLFreeHandle** retorne SQL_INVALID_HANDLE.  
+ Se *HandleType* não for um desses valores, **SQLFreeHandle** retornará SQL_INVALID_HANDLE.  
   
  *Handle*  
- [Entrada] O identificador a ser liberado.  
+ Entrada O identificador a ser liberado.  
   
 ## <a name="returns"></a>Retorna  
  SQL_SUCCESS, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
- Se **SQLFreeHandle** retorna SQL_ERROR, o identificador ainda é válido.  
+ Se **SQLFreeHandle** retornar SQL_ERROR, o identificador ainda será válido.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Quando **SQLFreeHandle** retorna SQL_ERROR, um valor SQLSTATE associado pode ser obtida da estrutura de dados de diagnóstico para o identificador que **SQLFreeHandle** tentou gratuito, mas não foi possível. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLFreeHandle** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
+ Quando **SQLFreeHandle** retorna SQL_ERROR, um valor SQLSTATE associado pode ser obtido na estrutura de dados de diagnóstico para o identificador que **SQLFreeHandle** tentou liberar, mas não pôde. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLFreeHandle** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
 |SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
-|HY000|Erro geral|Ocorreu um erro para o qual não houve nenhum SQLSTATE específico e para o qual não foi definida nenhuma SQLSTATE específicos de implementação. A mensagem de erro retornada por **SQLGetDiagRec** na  *\*MessageText* buffer descreve o erro e sua causa.|  
-|HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou a conclusão da função.|  
-|HY010|Erro de sequência de função|(DM) a *HandleType* argumento era SQL_HANDLE_ENV e pelo menos uma conexão estava em um estado conectado ou alocado. **SQLDisconnect** e **SQLFreeHandle** com um *HandleType* SQL_HANDLE_DBC deve ser chamado para cada conexão antes de chamar **SQLFreeHandle** com um *HandleType* SQL_HANDLE_ENV.<br /><br /> (DM) a *HandleType* argumento era SQL_HANDLE_DBC e a função foi chamada antes de chamar **SQLDisconnect** para a conexão.<br /><br /> (DM) a *HandleType* argumento era SQL_HANDLE_DBC. Uma função de execução assíncrona foi chamada com *manipular* e a função ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) a *HandleType* argumento era SQL_HANDLE_STMT. **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** foi chamado com o identificador de instrução e retornou SQL_NEED_DATA. Essa função foi chamada antes de dados foi enviados para todos os parâmetros de dados em execução ou colunas.<br /><br /> (DM) a *HandleType* argumento era SQL_HANDLE_STMT. Uma função de execução assíncrona foi chamada no identificador da instrução ou o identificador de conexão associado e a função ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) a *HandleType* argumento era SQL_HANDLE_DESC. Uma função de execução assíncrona foi chamada no identificador de conexão associado; e a função ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) identificadores de todas as subsidiárias e outros recursos não foram lançados antes **SQLFreeHandle** foi chamado.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResults** foi chamado para uma das alças de instrução associadas com o *manipular* e *HandleType* foi definido como SQL_HANDLE_STMT ou SQL_HANDLE_DESC retornado SQL_PARAM_DATA_AVAILABLE. Essa função foi chamada antes de dados foram recuperados para todos os parâmetros transmitidos.|  
-|HY013|Erro de gerenciamento de memória|O *HandleType* argumento era SQL_HANDLE_STMT ou SQL_HANDLE_DESC, e a chamada de função não pôde ser processada porque os objetos de memória subjacente não pôde ser acessados, possivelmente devido a condições de memória insuficiente.|  
-|HY017|Uso inválido de um identificador do descritor alocado automaticamente.|(DM) a *manipular* argumento foi definido como o identificador para um descritor alocado automaticamente.|  
-|HY117|Conexão está suspenso devido ao estado de transação desconhecida. Somente se desconectar e funções de somente leitura são permitidas.|(DM) para obter mais informações sobre o estado suspenso, consulte [função SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Tempo limite da Conexão expirado|O período de tempo limite de conexão expirado antes que a fonte de dados respondeu à solicitação. O período de tempo limite de conexão é definido por meio **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Driver não oferece suporte a essa função|(DM) a *HandleType* argumento era SQL_HANDLE_DESC, e o driver foi um ODBC 2 *. x* driver.<br /><br /> (DM) a *HandleType* argumento era SQL_HANDLE_STMT e o driver não era um driver ODBC válido.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no  *\*buffer MessageText* descreve o erro e sua causa.|  
+|HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
+|HY010|Erro de sequência de função|(DM) o  argumento HandleType foi SQL_HANDLE_ENV e pelo menos uma conexão estava em um estado alocado ou conectado. **SQLDisconnect** e **SQLFreeHandle** com um *HandleType* de SQL_HANDLE_DBC devem ser chamados para cada conexão antes de chamar **SQLFreeHandle** com um *HandleType* de SQL_HANDLE_ENV.<br /><br /> (DM) o  argumento HandleType foi SQL_HANDLE_DBC e a função foi chamada antes de chamar **SQLDisconnect** para a conexão.<br /><br /> (DM) o  argumento HandleType foi SQL_HANDLE_DBC. Uma função de execução assíncrona foi chamada com *identificador* e a função ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) o  argumento HandleType foi SQL_HANDLE_STMT. **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** foi chamado com o identificador de instrução e retornou SQL_NEED_DATA. Esta função foi chamada antes de os dados serem enviados para todos os parâmetros de dados em execução ou colunas.<br /><br /> (DM) o  argumento HandleType foi SQL_HANDLE_STMT. Uma função de execução assíncrona foi chamada no identificador de instrução ou no identificador de conexão associado e a função ainda estava sendo executada quando essa função foi chamada.<br /><br /> (DM) o  argumento HandleType foi SQL_HANDLE_DESC. Uma função de execução assíncrona foi chamada no identificador de conexão associado; e a função ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) todos os identificadores de subsidiárias e outros recursos não foram liberados antes de o **SQLFreeHandle** ser chamado.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** foi chamado para um dos identificadores de instrução associados ao *identificador* e ao *HandleType* definido como SQL_HANDLE_STMT ou SQL_HANDLE_DESC retornado SQL_PARAM_DATA_ Há. Esta função foi chamada antes de os dados serem recuperados para todos os parâmetros transmitidos.|  
+|HY013|Erro de gerenciamento de memória|O  argumento HandleType era SQL_HANDLE_STMT ou SQL_HANDLE_DESC, e a chamada de função não pôde ser processada porque os objetos de memória subjacentes não puderam ser acessados, possivelmente devido a condições de memória insuficiente.|  
+|HY017|Uso inválido de um identificador de descritor alocado automaticamente.|(DM) o argumento *Handle* foi definido como o identificador para um descritor alocado automaticamente.|  
+|HY117|A conexão foi suspensa devido a um estado de transação desconhecido. Somente funções de desconexão e somente leitura são permitidas.|(DM) para obter mais informações sobre o estado suspenso, consulte [função SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Tempo limite de conexão expirado|O período de tempo limite de conexão expirou antes que a fonte de dados respondeu à solicitação. O período de tempo limite de conexão é definido por meio de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|O driver não oferece suporte a essa função|(DM) o  argumento HandleType foi SQL_HANDLE_DESC e o driver era um driver ODBC 2 *. x* .<br /><br /> (DM) o  argumento HandleType foi SQL_HANDLE_STMT e o driver não era um driver ODBC válido.|  
   
 ## <a name="comments"></a>Comentários  
- **SQLFreeHandle** é usado para liberar identificadores de ambientes, conexões, instruções e descritores, conforme descrito nas seções a seguir. Para obter informações gerais sobre identificadores, consulte [identificadores](../../../odbc/reference/develop-app/handles.md).  
+ O **SQLFreeHandle** é usado para liberar identificadores para ambientes, conexões, instruções e descritores, conforme descritos nas seções a seguir. Para obter informações gerais sobre identificadores, consulte [Handles](../../../odbc/reference/develop-app/handles.md).  
   
- Um aplicativo não deve usar um identificador depois de ele ter sido liberado; o Gerenciador de Driver não verifica a validade de um identificador de uma chamada de função.  
+ Um aplicativo não deve usar um identificador depois que ele foi liberado; o Gerenciador de driver não verifica a validade de um identificador em uma chamada de função.  
   
 ## <a name="freeing-an-environment-handle"></a>Liberando um identificador de ambiente  
- Antes de chamar **SQLFreeHandle** com um *HandleType* SQL_HANDLE_ENV, um aplicativo deve chamar **SQLFreeHandle** com um *HandleType*SQL_HANDLE_DBC para todas as conexões alocada sob o ambiente. Caso contrário, a chamada para **SQLFreeHandle** retorna SQL_ERROR e o ambiente e qualquer conexão ativa permanece válido. Para obter mais informações, consulte [ambiente manipula](../../../odbc/reference/develop-app/environment-handles.md) e [alocar o identificador de ambiente](../../../odbc/reference/develop-app/allocating-the-environment-handle.md).  
+ Antes de chamar **SQLFreeHandle** com um *HandleType* de SQL_HANDLE_ENV, um aplicativo deve chamar **SQLFreeHandle** com um *HandleType* de SQL_HANDLE_DBC para todas as conexões alocadas no ambiente. Caso contrário, a chamada para **SQLFreeHandle** retornará SQL_ERROR e o ambiente e qualquer conexão ativa permanecerá válida. Para obter mais informações, consulte os identificadores de [ambiente](../../../odbc/reference/develop-app/environment-handles.md) e [a alocação do identificador de ambiente](../../../odbc/reference/develop-app/allocating-the-environment-handle.md).  
   
- Se o ambiente é um ambiente compartilhado, o aplicativo que chama **SQLFreeHandle** com um *HandleType* SQL_HANDLE_ENV não tem mais acesso para o ambiente após a chamada, mas o ambiente recursos não são necessariamente liberados. A chamada para **SQLFreeHandle** diminui a contagem de referência do ambiente. A contagem de referência é mantida pelo Gerenciador de Driver. Se ele não atinja zero, o ambiente compartilhado não é liberado, porque ainda está sendo usado por outro componente. Se a contagem de referência chegar a zero, os recursos do ambiente compartilhado são liberados.  
+ Se o ambiente for um ambiente compartilhado, o aplicativo que chama **SQLFreeHandle** com um *HandleType* de SQL_HANDLE_ENV não terá mais acesso ao ambiente após a chamada, mas os recursos do ambiente não serão necessariamente liberados. A chamada para **SQLFreeHandle** decrementa a contagem de referência do ambiente. A contagem de referência é mantida pelo Gerenciador de driver. Se não chegar a zero, o ambiente compartilhado não será liberado, pois ele ainda está sendo usado por outro componente. Se a contagem de referência chegar a zero, os recursos do ambiente compartilhado serão liberados.  
   
-## <a name="freeing-a-connection-handle"></a>Liberando um identificador de Conexão  
- Antes de chamar **SQLFreeHandle** com um *HandleType* SQL_HANDLE_DBC, um aplicativo deve chamar **SQLDisconnect** para a conexão se não houver uma conexão sobre isso lidar com *.* Caso contrário, a chamada para **SQLFreeHandle** retorna SQL_ERROR e a conexão permanece válido.  
+## <a name="freeing-a-connection-handle"></a>Liberando um identificador de conexão  
+ Antes de chamar **SQLFreeHandle** com um *HandleType* de SQL_HANDLE_DBC, um aplicativo deverá chamar **SQLDisconnect** para a conexão se houver uma conexão nesse identificador *.* Caso contrário, a chamada para **SQLFreeHandle** retornará SQL_ERROR e a conexão permanecerá válida.  
   
- Para obter mais informações, consulte [Conexão manipula](../../../odbc/reference/develop-app/connection-handles.md) e [desconectar-se de uma fonte de dados ou Driver](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md).  
+ Para obter mais informações, consulte identificadores de [conexão](../../../odbc/reference/develop-app/connection-handles.md) e [desconexão de uma fonte de dados ou driver](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md).  
   
 ## <a name="freeing-a-statement-handle"></a>Liberando um identificador de instrução  
- Uma chamada para **SQLFreeHandle** com um *HandleType* sql_handle_stmt libera todos os recursos que foram alocados por uma chamada a **SQLAllocHandle** com um  *HandleType* sql_handle_stmt. Quando um aplicativo chama **SQLFreeHandle** para liberar uma instrução com resultados pendentes, os resultados pendentes serão excluídos. Quando um aplicativo libera um identificador de instrução, o driver libera os descritores de alocado automaticamente quatro associados com esse identificador. Para obter mais informações, consulte [instrução trata](../../../odbc/reference/develop-app/statement-handles.md) e [liberando um identificador de instrução](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md).  
+ Uma chamada para **SQLFreeHandle** com um *HandleType* de SQL_HANDLE_STMT libera todos os recursos que foram alocados por uma chamada para **SQLAllocHandle** com um *HandleType* de SQL_HANDLE_STMT. Quando um aplicativo chama **SQLFreeHandle** para liberar uma instrução com resultados pendentes, os resultados pendentes são excluídos. Quando um aplicativo libera um identificador de instrução, o driver libera os quatro descritores alocados automaticamente associados a esse identificador. Para obter mais informações, consulte manipuladores de [instruções](../../../odbc/reference/develop-app/statement-handles.md) e [liberando um identificador de instrução](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md).  
   
- Observe que **SQLDisconnect** descarta automaticamente quaisquer instruções e descritores de abrir a conexão.  
+ Observe que **SQLDisconnect** descarta automaticamente quaisquer instruções e descritores abertos na conexão.  
   
-## <a name="freeing-a-descriptor-handle"></a>Liberando um identificador do descritor  
- Uma chamada para **SQLFreeHandle** com um *HandleType* de SQL_HANDLE_DESC libera o identificador do descritor na *manipular*. A chamada para **SQLFreeHandle** não libere toda a memória alocada pelo aplicativo que pode ser referenciado por um campo de ponteiro (incluindo SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR) de qualquer registro do descritor de *manipular*. A memória alocada pelo driver para os campos que não são campos de ponteiro é liberada quando o identificador é liberado. Quando um identificador do descritor alocado pelo usuário é liberado, todas as instruções que a alça liberada tinha sido associada com revertem para os identificadores de descritor alocado automaticamente respectivo.  
+## <a name="freeing-a-descriptor-handle"></a>Liberando um identificador de descritor  
+ Uma chamada para **SQLFreeHandle** com um *HandleType* de SQL_HANDLE_DESC libera o identificador do descritor no *identificador*. A chamada para **SQLFreeHandle** não libera nenhuma memória alocada pelo aplicativo que pode ser referenciada por um campo de ponteiro (incluindo SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR) de qualquer registro de descritor de  *Identificador*. A memória alocada pelo driver para campos que não são campos de ponteiro é liberada quando o identificador é liberado. Quando um identificador de descritor alocado pelo usuário é liberado, todas as instruções que o identificador liberado tinha sido associado à reversão para seus respectivos identificadores de descritor alocados automaticamente.  
   
 > [!NOTE]
->  2 de ODBC *. x* drivers não dão suporte a identificadores de descritor liberando, assim que eles não dão suporte ao alocar identificadores de descritor.  
+>  Os drivers ODBC 2 *. x* não dão suporte a identificadores de descritor de liberação, assim como não oferecem suporte a identificadores de descritor de alocação.  
   
- Observe que **SQLDisconnect** descarta automaticamente quaisquer instruções e descritores de abrir a conexão. Quando um aplicativo libera um identificador de instrução, o driver libera todos os descritores de gerado automaticamente associados com esse identificador.  
+ Observe que **SQLDisconnect** descarta automaticamente quaisquer instruções e descritores abertos na conexão. Quando um aplicativo libera um identificador de instrução, o driver libera todos os descritores gerados automaticamente associados a esse identificador.  
   
  Para obter mais informações sobre descritores, consulte [descritores](../../../odbc/reference/develop-app/descriptors.md).  
   
 ## <a name="code-example"></a>Exemplo de código  
- Para obter exemplos de código adicionais, consulte [SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md) e [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
+ Para obter exemplos de código adicionais, consulte [SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md) e SQLConnect. [](../../../odbc/reference/syntax/sqlconnect-function.md)  
   
 ### <a name="code"></a>Código  
   
@@ -177,8 +178,8 @@ int main() {
 |Para obter informações sobre|Consulte|  
 |---------------------------|---------|  
 |Alocando um identificador|[Função SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
-|Cancelando o processamento de instrução|[SQLCance Functionl](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Configuração de um nome de cursor|[Função SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
+|Cancelando o processamento de instrução|[Função SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Definindo um nome de cursor|[Função SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência da API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

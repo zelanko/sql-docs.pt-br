@@ -1,9 +1,9 @@
 ---
-title: sys.external_library_files (Transact-SQL) | Microsoft Docs
+title: sys. external_library_files (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/05/2017
+ms.date: 07/24/2019
 ms.prod: sql
-ms.technology: system-objects
+ms.technology: machine-learning
 ms.topic: language-reference
 f1_keywords:
 - external_library_files
@@ -14,31 +14,31 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.external_library_files catalog view
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9666b58132feb79876c4e8074dc530440c05b2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7af0a7fcb639ae3beab6216e77f9b7b95a398da
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68220341"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471092"
 ---
 # <a name="sysexternallibraryfiles-transact-sql"></a>sys.external_library_files (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Lista uma linha para cada arquivo que compõe uma biblioteca externa.
 
 |Nome da coluna |Tipo de dados |Descrição|
 |------|------|-----|
-|external_library_id | int |ID do objeto de biblioteca externa. |
-|content |varbinary(max) |Conteúdo do artefato de arquivo de biblioteca externa. |
-|Plataforma |TINYINT |ID da plataforma do host no qual o SQL Server está instalado. |
-|platform_desc | nvarchar(60) |Nome da plataforma do host. Os valores válidos são 'WINDOWS', 'LINUX'. |
+|external_library_id | int |ID do objeto da biblioteca externa. |
+|content |varbinary(max) |Conteúdo do artefato do arquivo da biblioteca externa. |
+|plataforma |TINYINT |ID da plataforma de host na qual o SQL Server está instalado. |
+|platform_desc | nvarchar(60) |Nome da plataforma do host. Os valores válidos são ' WINDOWS ', ' LINUX '. |
 
 ### <a name="see-also"></a>Confira também  
 
 [sys.external_libraries](sys-external-libraries-transact-sql.md)  
-[CRIAR A BIBLIOTECA EXTERNA](../../t-sql/statements/create-external-library-transact-sql.md)  
-[Pacote de gerenciamento para o serviço do SQL Server Machine Learning](../../advanced-analytics/r/installing-and-managing-r-packages.md)  
+[CRIAR BIBLIOTECA EXTERNA](../../t-sql/statements/create-external-library-transact-sql.md)  
+[Gerenciamento de pacotes para serviço de Machine Learning SQL Server](../../advanced-analytics/r/installing-and-managing-r-packages.md)  

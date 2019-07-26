@@ -7,15 +7,15 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2cb6bf28fa849e2015d111c564bb0af84f103d19
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 96744b15bef03b7d8badc803b1fa5f5de382e64f
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345851"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470542"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Implantar o modelo do R e usá-lo em SQL Server (passo a passos)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Nesta lição, saiba como implantar modelos de R em um ambiente de produção chamando um modelo treinado de um procedimento armazenado. Você pode invocar o procedimento armazenado do R ou de qualquer linguagem de programação [!INCLUDE[tsql](../../includes/tsql-md.md)] de aplicativo que C#ofereça suporte (como Java, Python e assim por diante) e usar o modelo para fazer previsões sobre novas observações.
 

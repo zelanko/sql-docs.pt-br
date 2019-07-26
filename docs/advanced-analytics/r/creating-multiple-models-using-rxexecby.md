@@ -7,15 +7,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1c51691ad55ac8aa340eb71257489bd14c0099a5
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 5d3e03e718aea725267a2251768ef040905b020e
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345534"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470183"
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>Criar vários modelos usando rxExecBy
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 A função **rxExecBy** no RevoScaleR dá suporte ao processamento paralelo de vários modelos relacionados. Em vez de treinar um modelo grande com base em dados de várias entidades semelhantes, um cientista de dados pode criar rapidamente muitos modelos relacionados, cada um usando dados específicos de uma única entidade. 
 

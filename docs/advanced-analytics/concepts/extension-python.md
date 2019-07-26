@@ -7,15 +7,15 @@ ms.date: 09/05/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 4e95fa47911b3942b44624a141a5c1c4c574b25a
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: f85392f8bfbb7ee89b8387b0f7d27038b9a8303b
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343381"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470463"
 ---
 # <a name="python-language-extension-in-sql-server"></a>Extensão de linguagem Python no SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 A extensão do Python faz parte do complemento SQL Server Serviços de Machine Learning ao mecanismo de banco de dados relacional. Ele adiciona um ambiente de execução Python, a distribuição Anaconda com o tempo de execução e o intérprete do Python 3,5, bibliotecas e ferramentas padrão e as bibliotecas de produtos da Microsoft para Python: [revoscalepy](../python/ref-py-revoscalepy.md) para análise em escala e [microsoftml](../python/ref-py-microsoftml.md) para algoritmos de aprendizado de máquina. 
 

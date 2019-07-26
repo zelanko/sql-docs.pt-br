@@ -1,5 +1,5 @@
 ---
-title: sys.DM db_resource_stats (banco de dados SQL) | Microsoft Docs
+title: sys. dm _db_resource_stats (banco de dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/21/2019
 ms.service: sql-database
@@ -19,12 +19,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d78e3aa24f6e73d624eec1f33fbebb62108bcc65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 71efbc5abad150c599a674ea66409207fc2bf628
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096291"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471081"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -35,34 +35,34 @@ ms.locfileid: "68096291"
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|Hora UTC que indica o término do intervalo de relatório atual.|  
 |avg_cpu_percent|**decimal (5,2)**|Utilização média de computação, em porcentagem, do limite da camada de serviço.|  
-|avg_data_io_percent|**decimal (5,2)**|Média de dados de utilização e/s em percentual do limite da camada de serviço.|  
-|avg_log_write_percent|**decimal (5,2)**|Gravações no log de transação médio (em MBps) como um percentual do limite da camada de serviço.|  
-|avg_memory_usage_percent|**decimal (5,2)**|Utilização média de memória, em porcentagem, do limite da camada de serviço.<br /><br /> Isso inclui a memória usada para páginas de pool de buffer e o armazenamento de objetos OLTP na memória.|  
-|xtp_storage_percent|**decimal (5,2)**|Utilização de armazenamento para o OLTP na memória em percentual do limite da camada de serviço (no final do intervalo de emissão de relatórios). Isso inclui a memória usada para armazenamento dos seguintes objetos OLTP na memória: variáveis de tabela, índices e tabelas com otimização de memória. Ele também inclui a memória usada para processar operações ALTER TABLE.<br /><br /> Retorna 0 se não for usado o OLTP in-memory no banco de dados.|  
+|avg_data_io_percent|**decimal (5,2)**|Média de utilização de e/s de dados em porcentagem do limite da camada de serviço.|  
+|avg_log_write_percent|**decimal (5,2)**|Média de gravações do log de transações (em MBps) como percentual do limite da camada de serviço.|  
+|avg_memory_usage_percent|**decimal (5,2)**|Utilização média de memória, em porcentagem, do limite da camada de serviço.<br /><br /> Isso inclui a memória usada para páginas do pool de buffers e o armazenamento de objetos OLTP na memória.|  
+|xtp_storage_percent|**decimal (5,2)**|Utilização de armazenamento para OLTP na memória em porcentagem do limite da camada de serviço (no final do intervalo de relatórios). Isso inclui a memória usada para o armazenamento dos seguintes objetos OLTP na memória: tabelas com otimização de memória, índices e variáveis de tabela. Ele também inclui a memória usada para processar operações ALTER TABLE.<br /><br /> Retornará 0 se o OLTP na memória não for usado no banco de dados.|  
 |max_worker_percent|**decimal (5,2)**|Máximo de trabalhos simultâneos (solicitações) em porcentagem do limite da camada de serviço do banco de dados.|  
-|max_session_percent|**decimal (5,2)**|Máximo de sessões simultâneas em percentual do limite da camada de serviço do banco de dados.|  
-|dtu_limit|**int**|Banco de dados max DTU configuração atual para este banco de dados durante esse intervalo. Para bancos de dados usando o modelo baseado em vCore, esta coluna é NULL.|
-|cpu_limit|**decimal (5,2)**|Número de vCores para esse banco de dados durante esse intervalo. Para bancos de dados usando o modelo baseado em DTU, esta coluna é NULL.|
-|avg_instance_cpu_percent|**decimal (5,2)**|Banco de dados média da CPU em porcentagem.|
-|avg_instance_memory_percent|**decimal (5,2)**|Média de utilização de memória do banco de dados em percentual.|
+|max_session_percent|**decimal (5,2)**|Máximo de sessões simultâneas em porcentagem do limite da camada de serviço do banco de dados.|  
+|dtu_limit|**int**|Configuração de DTU máxima do banco de dados atual para este banco de dados durante esse intervalo. Para bancos de dados que usam o modelo baseado em vCore, essa coluna é nula.|
+|cpu_limit|**decimal (5,2)**|Número de vCores para este banco de dados durante esse intervalo. Para bancos de dados que usam o modelo baseado em DTU, essa coluna é nula.|
+|avg_instance_cpu_percent|**decimal (5,2)**|Uso médio de CPU do banco de dados como uma porcentagem do processo do BD SQL.|
+|avg_instance_memory_percent|**decimal (5,2)**|Uso médio de memória do banco de dados como uma porcentagem do processo do BD SQL.|
 |avg_login_rate_percent|**decimal (5,2)**|Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.|
-|replica_role|**int**|Representa a função da réplica com 0 como primário, 1 como secundário e 2 como encaminhador (primário do secundário geográfico). Você verá "1" quando conectado com a intenção somente leitura para todos os secundários legíveis. Se estiver se conectando a um secundário geográfico sem especificar intenção somente leitura, você deve ver "2" (conectando-se para o encaminhador).|
+|replica_role|**int**|Representa a função da réplica atual com 0 como primário, 1 como secundário e 2 como encaminhador (primário do secundário geográfico). Você verá "1" quando conectado com a intenção ReadOnly a todos os secundários legíveis. Se estiver se conectando a um secundário geográfico sem especificar a intenção ReadOnly, você deverá ver "2" (conectando-se ao encaminhador).|
 |||
   
 > [!TIP]  
->  Para obter mais contexto sobre esses limites e as camadas de serviço, consulte os tópicos [camadas de serviço](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) e [limites e recursos da camada de serviço](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
+>  Para obter mais contexto sobre esses limites e camadas de serviço, consulte os tópicos [camadas de serviço](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) e [limites e capacidades de camada de serviço](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
   
 ## <a name="permissions"></a>Permissões  
  Essa exibição exige a permissão VIEW DATABASE STATE.  
   
 ## <a name="remarks"></a>Comentários  
- Os dados retornados pelo **sys.DM db_resource_stats** é expresso como uma porcentagem dos limites máximos permitidos para o nível de desempenho/camada de serviço que você está executando.
+ Os dados retornados por **Sys. dm _db_resource_stats** são expressos como uma porcentagem do limite máximo permitido para a camada de serviço/nível de desempenho que você está executando.
  
  Se o banco de dados fez failover para outro servidor nos últimos 60 minutos, a exibição retornará apenas dados para o tempo pelo qual ele foi o banco de dados primário desde esse failover.  
   
- Para obter uma exibição menos detalhada desses dados, use **sys. resource_stats** exibição de catálogo a **mestre** banco de dados. Essa exibição captura dados a cada 5 minutos e mantém dados históricos por 14 dias.  Para obter mais informações, consulte [sys. resource_stats &#40;banco de dados SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
+ Para uma exibição menos granular desses dados, use a exibição de catálogo **Sys. resource_stats** no banco de dados **mestre** . Essa exibição captura dados a cada 5 minutos e mantém dados históricos por 14 dias.  Para obter mais informações, consulte [Sys. &#40;Resource_stats banco de&#41;dados SQL do Azure](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
- Quando um banco de dados é um membro de um pool Elástico, as estatísticas de recursos apresentadas como valores de porcentagem são expressas como a porcentagem do limite máximo para os bancos de dados, conforme definido na configuração do pool Elástico.  
+ Quando um banco de dados é membro de um pool elástico, as estatísticas de recursos apresentadas como valores percentuais são expressas como a porcentagem do limite máximo para os bancos de dados, conforme definido na configuração do pool elástico.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -101,8 +101,8 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sys. resource_stats &#40;banco de dados SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [sys. resource_stats &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [Camadas de serviço](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
- [Limites e recursos de camada de serviço](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
+ [Limites e capacidades da camada de serviço](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   
   

@@ -7,15 +7,15 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2e9c9353acdc0a2641203788c8e4883a9accb021
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: b4284d77464597857eca500b4a8ad29e1f4d06ee
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345683"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469965"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Pontuação em tempo real com sp_rxPredict no aprendizado de máquina SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 A pontuação em tempo real usa o procedimento armazenado do sistema [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) e os recursos de extensão do CLR em SQL Server para previsões ou pontuações de alto desempenho em cargas de trabalho de previsão. A pontuação em tempo real é independente de linguagem e é executada sem nenhuma dependência em tempos de execução de R ou Python. Supondo que um modelo seja criado e treinado usando o Microsoft Functions e, em seguida, serializado em um formato binário no SQL Server, você pode usar a pontuação em tempo real para gerar resultados previstos sobre novas entradas de dados em instâncias de SQL Server que não têm o complemento R ou Python recém-instalado.
 

@@ -7,15 +7,15 @@ ms.date: 10/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: fab91e142fad3bcb1ce23816d6705f7a7d208851
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 705df9d06a7dbf4563df3670894351d15c0962a5
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345324"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470092"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Gerenciar e integrar cargas de trabalho de aprendizado de máquina em SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Este artigo destina-se a administradores de banco de dados SQL Server que são responsáveis por implantar uma infraestrutura eficiente de ciência de dado em um ativo de servidor com suporte a várias cargas de trabalho. Ele codifica o espaço de problema administrativo relevante para o gerenciamento de execução de código R e Python em SQL Server. 
 

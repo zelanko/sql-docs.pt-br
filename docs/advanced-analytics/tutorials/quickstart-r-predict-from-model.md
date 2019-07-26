@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e81731683fb71b074ed754ab6ab4eaab40d08c20
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: aa3a65020f2900bc4d9e0b5c5fd5a200f3334435
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345400"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469332"
 ---
 # <a name="quickstart-predict-from-model-using-r-in-sql-server"></a>Início Rápido: Prever do modelo usando R no SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Neste guia de início rápido, use o modelo que você criou no guia de início rápido anterior para pontuar previsões em relação aos dados atualizados. Para executar a _Pontuação_ usando novos dados, obtenha um dos modelos treinados da tabela e, em seguida, chame um novo conjunto de dados no qual basear previsões. A pontuação é um termo, às vezes, usado em ciência de dados para significar a geração de previsões, probabilidades ou outros valores com base em novos dados inseridos em um modelo treinado.
 

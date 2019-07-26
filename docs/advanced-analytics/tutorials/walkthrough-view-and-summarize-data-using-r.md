@@ -7,15 +7,15 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 52ba1a8f036037ade42c8483b1735c84cc72867e
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: e209b707c3d04cef7709945dc2a32b171f90771e
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345785"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468839"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>Exibir e resumir dados de SQL Server usando o R (Walkthrough)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Esta lição apresenta as funções no pacote **RevoScaleR** e percorre as seguintes tarefas:
 

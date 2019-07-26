@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8de02f679af1bbeed8f65f4e4dc5456cd414e75e
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 1a6459d45d36ff69bdafb62a712e18937bf8eb30
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345549"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470108"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Instalar novos pacotes R no SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Este artigo descreve como instalar novos pacotes do R em uma instância do SQL Server em que o Machine Learning está habilitado. Há vários métodos para instalar novos pacotes de R, dependendo de qual versão do SQL Server você tem e se o servidor tem uma conexão com a Internet. As abordagens a seguir para a instalação de novo pacote são possíveis.
 

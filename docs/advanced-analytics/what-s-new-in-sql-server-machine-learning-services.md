@@ -9,16 +9,16 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e3859cfb1ada6453a353509b68abe34e71d2840
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: c466c7e039e515be4ef65b4f5680ece2e1d861a8
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345772"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468979"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>O que há de novo no SQL Server Serviços de Machine Learning
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Os recursos de aprendizado de máquina são adicionados a SQL Server em cada versão à medida que continuamos a expandir, estender e aprofundar a integração entre a plataforma de dados, a análise avançada e a ciência de dados. 
 
