@@ -1,5 +1,5 @@
 ---
-title: Método (lang) executeQuery | Microsoft Docs
+title: Método executeQuery (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 610205c2-6bcd-426c-ad6f-9682551efdec
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3f881493288c385cb490f9d04b22acce03e19f29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 38e5a31ccaf493a8800f0e15abd1c21424db07c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954817"
 ---
 # <a name="executequery-method-javalangstring"></a>Método executeQuery (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +52,7 @@ public final java.sql.ResultSet executeQuery(java.lang.String sql)
   
  Chamar esse método resultará em uma exceção, uma vez que a instrução SQL para o objeto SQLServerPreparedStatement é especificada quando o objeto é criado.  
   
- [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) será lançada se a instrução SQL fornecida produz algo diferente de uma única [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.  
+ [O SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) é gerado se a instrução SQL fornecida produz algo diferente de um único objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método executeQuery &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)   
