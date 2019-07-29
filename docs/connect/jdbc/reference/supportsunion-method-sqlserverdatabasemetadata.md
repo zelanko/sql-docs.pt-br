@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a757ea51-ff2e-4848-adaf-d9373e418fa3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cfa6c097e57ee9ca8a2eeda26e7fa2857558d428
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b7dd44915a066753e367beb82d88258c3a0d3abf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968566"
 ---
 # <a name="supportsunion-method-sqlserverdatabasemetadata"></a>Método supportsUnion (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsUnion()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se houver suporte. Caso contrário, **false**.  
+ **true** se houver suporte. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método supportsUnion é especificado pelo método supportsUnion na interface DatabaseMetadata.  
+ Esse método supportsUnion é especificado pelo método supportsUnion na interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

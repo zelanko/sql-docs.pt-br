@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4ee82290-508d-4bff-a5c5-8a56338deef8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 31315b70f770d2f95e97d34b2064152234cae248
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d801a0184259ae22f86ea5ec23391ef78b23ce38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974271"
 ---
 # <a name="setfetchdirection-method-sqlserverresultset"></a>Método setFetchDirection (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +52,7 @@ public void setFetchDirection(int direction)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setFetchDirection é especificado pelo método setFetchDirection na interface do resultset.  
+ Esse método setFetchDirection é especificado pelo método setFetchDirection na interface java. Sql. ResultSet.  
   
  O valor inicial deste método é determinado pelo objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) que gerou este objeto SQLServerResultSet. A direção de busca pode ser alterada a qualquer momento.  
   

@@ -1,5 +1,5 @@
 ---
-title: Método (lang) getNString | Microsoft Docs
+title: Método getNString (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: b351e999-85bf-498b-915a-f91d89134bce
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d99c9bf56a6856d953f30f7bd094b205d18bde8e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2d9362a41e5a48400c1b63d52b2ff89095d119d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762849"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981405"
 ---
 # <a name="getnstring-method-javalangstring"></a>Método getNString (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o valor do designado **NCHAR**, **NVARCHAR**, ou **LONGNVARCHAR** parâmetro como uma cadeia de caracteres no Java linguagem de programação.  
+  Recupera o valor do parâmetro **nchar**, **nvarchar**ou **LONGNVARCHAR** designado como uma cadeia de caracteres na linguagem de programação Java.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +35,7 @@ public final java.lang.String getNString(java.lang.String parameterName)
  Uma **String** que contém o nome do parâmetro.  
   
 ## <a name="return-value"></a>Valor retornado  
- AStringobject.  
+ Asastringobject.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

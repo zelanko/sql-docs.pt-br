@@ -1,5 +1,5 @@
 ---
-title: Direcionar Statement - preparado instrução execução PDO_SQLSRV Driver | Microsoft Docs
+title: Driver direto de execução de instrução preparada PDO_SQLSRV Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 96a03a678152c523cdb16b77834863ff920586c8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fa9e544fb7b79009d86a5742946a722d5adc18f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993624"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>Execução de instrução direta e execução de instrução preparada no driver PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,20 +23,20 @@ ms.locfileid: "66801460"
 Este tópico discute o uso do atributo PDO::SQLSRV_ATTR_DIRECT_QUERY para especificar a execução de instrução direta em vez do padrão, que é a execução da instrução preparada. Usar uma instrução preparada pode resultar em melhor desempenho se a instrução for executada mais de uma vez usando a associação de parâmetro.  
   
 ## <a name="remarks"></a>Remarks  
-Se você quiser enviar uma [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução diretamente para o servidor sem preparação da instrução pelo driver, você pode definir o atributo PDO:: sqlsrv_attr_direct_query com [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) (ou como uma opção de driver passado para [PDO::__construct](../../connect/php/pdo-construct.md)) ou quando você chama [PDO:: Prepare](../../connect/php/pdo-prepare.md). Por padrão, o valor de PDO:: sqlsrv_attr_direct_query for False (use a execução da instrução preparada).  
+Se você quiser enviar uma [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução diretamente para o servidor sem a preparação da instrução pelo driver, poderá definir o atributo PDO:: SQLSRV_ATTR_DIRECT_QUERY com [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) (ou como uma opção de driver passada para [PDO:: __construct ](../../connect/php/pdo-construct.md)) ou quando você chama [PDO::p](../../connect/php/pdo-prepare.md)reparênteses. Por padrão, o valor de PDO:: SQLSRV_ATTR_DIRECT_QUERY é false (use a execução da instrução preparada).  
   
-Se você usar [PDO:: Query](../../connect/php/pdo-query.md), convém que a execução direta. Antes de chamar [PDO:: Query](../../connect/php/pdo-query.md), chame [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) e defina o PDO:: sqlsrv_attr_direct_query como True.  Cada chamada para [PDO:: Query](../../connect/php/pdo-query.md) podem ser executadas com uma configuração diferente para PDO:: sqlsrv_attr_direct_query.  
+Se você usar [PDO:: Query](../../connect/php/pdo-query.md), talvez queira a execução direta. Antes de chamar [PDO:: Query](../../connect/php/pdo-query.md), chame [PDO:: SETATTRIBUTE](../../connect/php/pdo-setattribute.md) e defina PDO:: SQLSRV_ATTR_DIRECT_QUERY como true.  Cada chamada para [PDO:: Query](../../connect/php/pdo-query.md) pode ser executada com uma configuração diferente para PDO:: SQLSRV_ATTR_DIRECT_QUERY.  
   
-Se você usar [PDO:: Prepare](../../connect/php/pdo-prepare.md) e [Pdostatement](../../connect/php/pdostatement-execute.md) para executar uma consulta várias vezes usar parâmetros associados, a execução da instrução preparada otimiza a execução da consulta repetida.  Nessa situação, chame [PDO:: Prepare](../../connect/php/pdo-prepare.md) com definido como False no parâmetro de matriz de opções de driver de PDO:: sqlsrv_attr_direct_query. Quando necessário, você pode executar instruções preparadas com PDO:: sqlsrv_attr_direct_query definido como False.  
+Se você usar [PDO::p](../../connect/php/pdo-prepare.md) reparênteses e [PDOStatement:: execute](../../connect/php/pdostatement-execute.md) para executar uma consulta várias vezes usando parâmetros associados, a execução da instrução preparada otimizará a execução da consulta repetida.  Nessa situação, chame [PDO::p](../../connect/php/pdo-prepare.md) reparênteses com PDO:: SQLSRV_ATTR_DIRECT_QUERY definido como false no parâmetro de matriz de opções de driver. Quando necessário, você pode executar instruções preparadas com PDO:: SQLSRV_ATTR_DIRECT_QUERY definido como false.  
   
-Depois de chamar [PDO:: Prepare](../../connect/php/pdo-prepare.md), o valor de PDO:: sqlsrv_attr_direct_query não é possível alterar ao executar a consulta preparada.  
+Depois de chamar [PDO::p](../../connect/php/pdo-prepare.md)reparênteses, o valor de PDO:: SQLSRV_ATTR_DIRECT_QUERY não pode ser alterado ao executar a consulta preparada.  
   
-Se uma consulta exigir o contexto que foi definido em uma consulta anterior, em seguida, execute suas consultas com PDO:: sqlsrv_attr_direct_query definido como True. Por exemplo, se você usar tabelas temporárias em suas consultas, PDO:: sqlsrv_attr_direct_query deve ser definido como True.  
+Se uma consulta exigir o contexto que foi definido em uma consulta anterior, execute suas consultas com PDO:: SQLSRV_ATTR_DIRECT_QUERY definido como true. Por exemplo, se você usar tabelas temporárias em suas consultas, PDO:: SQLSRV_ATTR_DIRECT_QUERY deverá ser definido como true.  
   
-O exemplo a seguir mostra que, quando é necessário o contexto de uma instrução anterior, você precisa definir PDO:: sqlsrv_attr_direct_query como True. Este exemplo usa as tabelas temporárias, que só estão disponíveis para instruções subsequentes no seu programa quando as consultas são executadas diretamente.  
+O exemplo a seguir mostra que, quando o contexto de uma instrução anterior é necessário, você precisa definir PDO:: SQLSRV_ATTR_DIRECT_QUERY como true. Este exemplo usa tabelas temporárias, que só estão disponíveis para instruções subsequentes em seu programa quando as consultas são executadas diretamente.  
   
 > [!NOTE]
-> Se a consulta é invocar um procedimento armazenado e tabelas temporárias são usadas neste procedimento armazenado, use [PDO:: EXEC](../../connect/php/pdo-exec.md) em vez disso.
+> Se a consulta for invocar um procedimento armazenado e tabelas temporárias forem usadas neste procedimento armazenado, use [PDO:: exec](../../connect/php/pdo-exec.md) em vez disso.
 
 ```  
 <?php  
@@ -70,5 +69,5 @@ O exemplo a seguir mostra que, quando é necessário o contexto de uma instruç�
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
-[Guia de programação para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guia de programação para o Microsoft Drivers para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

@@ -9,13 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5442e564d7b085c144ffe98a4b67eb74499bf975
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 13da9b638f117bc84700b044c6c2e8e70ada8518
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015086"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Baixar os Microsoft Drivers for PHP for SQL Server
 
@@ -23,7 +22,7 @@ ms.locfileid: "66796210"
 
 ## <a name="windows"></a>Windows
 
-As seguintes versões de drivers para PHP no Windows estão disponíveis para download:
+As seguintes versões dos drivers para PHP no Windows estão disponíveis para download:
 
 - [Microsoft Drivers 5.6 para PHP para SQL Server](https://www.microsoft.com/download/details.aspx?id=57916)
 - [Microsoft Drivers 5.3 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=57163)
@@ -33,7 +32,7 @@ As seguintes versões de drivers para PHP no Windows estão disponíveis para do
 
 ## <a name="linux-and-macos"></a>Linux e macOS
 
-Os drivers para PHP facilmente são baixados e instalados usando PECL no Linux e macOS. Consulte a [tutorial de instalação do Linux e macOS](installation-tutorial-linux-mac.md) para obter detalhes. Se você precisar instalar os drivers para PHP no Linux e macOS manualmente, as versões a seguir estão disponíveis para download:
+Os drivers para PHP são facilmente baixados e instalados usando o PECL no Linux e no macOS. Consulte o [tutorial de instalação do Linux e MacOS](installation-tutorial-linux-mac.md) para obter detalhes. Se você precisar instalar os drivers para PHP no Linux e no macOS manualmente, as seguintes versões estarão disponíveis para download:
 
 - [Microsoft Drivers 5.6 para PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
 - [Microsoft Drivers 5.3 for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)
@@ -46,7 +45,7 @@ Os drivers para PHP facilmente são baixados e instalados usando PECL no Linux e
 
 [Requisitos do sistema para os Microsoft Drivers for PHP for SQL Server](system-requirements-for-the-php-sql-driver.md)
 
-[Guia de programação para os Drivers da Microsoft para PHP para SQL Server](programming-guide-for-php-sql-driver.md)
+[Guia de programação do Microsoft Drivers para PHP para SQL Server](programming-guide-for-php-sql-driver.md)
 
 [Referência da API do driver SQLSRV](sqlsrv-driver-api-reference.md)
 

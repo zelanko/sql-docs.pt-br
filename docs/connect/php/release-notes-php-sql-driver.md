@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b17e45fee91b293524cca39037f15fac15cd881e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23ac53a8515f55dfc0cad282fd14294e5f285af9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797074"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935913"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Notas de versão dos Microsoft Drivers for PHP for SQL Server
 
@@ -47,38 +46,38 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 | Novo item | Detalhes |
 | :------- | :------ |
 | Suporte para PHP 7.3. | &nbsp; |
-| Retirada do suporte ao PHP 7.0. | &nbsp; |
-| Suporte para o Microsoft ODBC Driver 17.3 em todas as plataformas. | &nbsp; |
-| Suporte para macOS Mojave. | Exige o ODBC Driver 17.3 ou superior. |
-| Suporte para 18.10 do Ubuntu e Suse Linux 15. | Ambas exigem que o ODBC Driver 17.3 ou superior. |
-| Removido o suporte para Linux Ubuntu 17.10 e macOS El Capitan. | &nbsp; |
-| Suporte para o Token de acesso do Azure AD. | No Linux e macOS, requer o Driver ODBC 17.2 + e 2.3.6+ unixODBC. |
-| Suporte para autenticação com o Azure AD usando a identidade gerenciado para recursos do Azure. | Exige o ODBC Driver 17.3 +. |
-| Novas funcionalidades de busca | &bull; &nbsp; Novo sinalizador PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE para pdo_sqlsrv retornar a data e hora como objetos.<br/><br/>&bull; &nbsp; Adicione a opção ReturnDatesAsStrings para o nível de instrução para sqlsrv.<br/><br/>&bull; &nbsp; Novas opções nos níveis de conexão e instrução para ambos os drivers para a formatação de valores decimais nos resultados da buscados. |
-| Suporte para a compilação estática dos drivers, se os usuários optarem por Compile da origem. | &nbsp; |
-| Melhorar o desempenho armazenando em cache os metadados em buscas e acelerando as conversões de cadeia de caracteres Unicode. | &nbsp; |
+| Cancelado suporte para PHP 7,0. | &nbsp; |
+| Suporte para o Microsoft ODBC Driver 17,3 em todas as plataformas. | &nbsp; |
+| Suporte para macOS Mojave. | Requer o driver ODBC 17,3 ou superior. |
+| Suporte para Ubuntu 18,10 e SuSE Linux 15. | Ambos exigem o driver ODBC 17,3 ou superior. |
+| Descartado o suporte para Linux Ubuntu 17,10 e macOS El Capitan. | &nbsp; |
+| Suporte para token de acesso do Azure AD. | No Linux e no macOS, o requer o driver ODBC 17.2 + e unixODBC 2.3.6 +. |
+| Suporte para autenticação com o Azure AD usando a identidade gerenciada para recursos do Azure. | Requer o driver ODBC 17.3 +. |
+| Novas funcionalidades de busca | &bull;&nbsp; Novo sinalizador PDO:: SQLSRV_ATTR_FETCHES_DATETIME_TYPE para pdo_sqlsrv retornar DateTime como objetos.<br/><br/>&bull;&nbsp; Adicione a opção ReturnDatesAsStrings ao nível de instrução para sqlsrv.<br/><br/>&bull;&nbsp; Novas opções nos níveis de conexão e de instrução para ambos os drivers para formatação de valores decimais nos resultados obtidos. |
+| Suporte para compilação estática de drivers se os usuários optarem por criar a partir da origem. | &nbsp; |
+| Desempenho aprimorado armazenando em cache metadados em buscas e acelerando conversões de cadeias de caracteres Unicode. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ## <a name="whats-new-in-version-53"></a>Novidades da versão 5.3
 
-- Suporte para o Microsoft ODBC Driver 17.2 em todas as plataformas
-- Suporte para macOS High Sierra (requer o ODBC Driver 17 e posterior)
-- Para o Azure Key Vault para Always Encrypted básicas CRUD funcionalidades de tal que o recurso sempre criptografado está disponível a todos os suporte para plataformas Windows, Linux ou macOS [usando o Always Encrypted com os Drivers de PHP para SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)
-- Suporte do Ubuntu 18.04 LTS (requer o ODBC Driver 17.2)
-- Suporte para resiliência de Conexão no Linux ou macOS também (requer o ODBC Driver 17.2)
+- Suporte para o Microsoft ODBC Driver 17,2 em todas as plataformas
+- Suporte para macOS High Sierra (requer o driver ODBC 17 e superior)
+- Suporte para Azure Key Vault para Always Encrypted para funcionalidades básicas de CRUD, de forma que Always Encrypted recurso esteja disponível para todas as plataformas Windows, Linux ou macOS com suporte [usando Always Encrypted com os drivers php para SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)
+- Suporte para Ubuntu 18, 4 LTS (requer o driver ODBC 17,2)
+- Suporte para resiliência de conexão no Linux ou macOS também (requer o driver ODBC 17,2)
 
 ## <a name="whats-new-in-version-52"></a>Novidades da versão 5.2
 
-- Suporte para PHP 7.2.1 e até em Windows e 7.2.0 e até em outras plataformas
-- Suporte do Microsoft ODBC Driver 17
-  - Versão 17 agora é o padrão em todas as plataformas
-- Suporte para Ubuntu 17.10, Debian 9 e Enterprise do Suse Linux 12
-- Retirada do suporte ao Ubuntu 15.10
+- Suporte para PHP 7.2.1 e up no Windows e 7.2.0 e em outras plataformas
+- Suporte para o Microsoft ODBC Driver 17
+  - A versão 17 agora é o padrão em todas as plataformas
+- Suporte para Ubuntu 17,10, Debian 9 e SuSE Enterprise Linux 12
+- Cancelado suporte para Ubuntu 15,10
 - Suporte para Always Encrypted com funcionalidades CRUD no Windows. Para saber mais, confira [Como usar Always Encrypted com o PHP Drivers para SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)
-  - Suporte para a Windows Store de certificado
-  - Always Encrypted só tem suporte com o Microsoft ODBC Driver 17 e acima
-- Suporte para localidades não UTF8 no Linux e macOS
-  - Localidades de não-UTF8 no Linux e macOS só têm suporte com o Microsoft ODBC Driver 17 e acima
+  - Suporte para o repositório de certificados do Windows
+  - Só há suporte para Always Encrypted com o Microsoft ODBC Driver 17 e posterior
+- Suporte para localidades não UTF8 no Linux e no macOS
+  - As localidades não UTF8 no Linux e no macOS só têm suporte com o Microsoft ODBC Driver 17 e posterior
 - Suporte para o SQL Data Warehouse do Azure
 - Suporte para a Instância Gerenciada do SQL do Azure (Versão prévia privada estendida)
 
@@ -86,19 +85,19 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 - Suporte para PHP 7.1
 - Suporte para macOS Sierra e macOS El Capitan
-- Suporte para Ubuntu 15.10 e Debian 8
-- Retirada do suporte ao Ubuntu 15.04
-- Suporte para grupos de disponibilidade AlwaysOn por meio da resolução de IP de rede transparente. Para obter mais informações, consulte [Connection Options](../../connect/php/connection-options.md).
-- Adicionado suporte para o tipo de dados sql_variant com limitação.
-- Suporte a resiliência de Conexão ocioso no Windows. Para obter mais informações, consulte [Connection Options](../../connect/php/connection-options.md).
-- Suporte para Linux e macOS de pooling de Conexão. Para obter mais informações, confira [Pooling de conexão](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md).
-- Suporte para autenticação do Azure Active Directory com o ActiveDirectoryPassword e SqlPassword. Para obter mais informações, consulte [Connection Options](../../connect/php/connection-options.md).
+- Suporte para Ubuntu 15,10 e Debian 8
+- Cancelado suporte para Ubuntu 15, 4
+- Suporte para grupos de disponibilidade Always On por meio da resolução de IP de rede transparente. Para obter mais informações, consulte [Connection Options](../../connect/php/connection-options.md).
+- Adicionado suporte para tipo de dados sql_variant com limitação.
+- Suporte à resiliência de conexão ociosa no Windows. Para obter mais informações, consulte [Connection Options](../../connect/php/connection-options.md).
+- Suporte a pooling de conexão para Linux e macOS. Para obter mais informações, confira [Pooling de conexão](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md).
+- Suporte para autenticação de Azure Active Directory com ActiveDirectoryPassword e SQLPassword. Para obter mais informações, consulte [Connection Options](../../connect/php/connection-options.md).
 
 ## <a name="whats-new-in-version-40"></a>Novidades da versão 4.0
 
 - Suporte para PHP 7.0  
-- Suporte total a 64 bits
-- Suporte para Ubuntu 15.04, Ubuntu 16.04 e RedHat 7
+- Suporte completo a 64 bits
+- Suporte para Ubuntu 15, 4, Ubuntu 16, 4 e RedHat 7
 
 ## <a name="whats-new-in-version-32"></a>Novidades da versão 3.2
 
@@ -115,9 +114,9 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 - Suporte para PHP 5.4.  O PHP 5.2 não tem suporte na versão 3 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 - A opção de conexão AttachDBFileName é adicionada. Para obter mais informações, consulte [Connection Options](../../connect/php/connection-options.md).  
-- Suporte para o LocalDB, adicionado no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Para obter mais informações, consulte [suporte para o LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).
+- Suporte para o LocalDB, adicionado no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Para obter mais informações, consulte [suporte para LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).
 - A opção de conexão AttachDBFileName é adicionada. Para obter mais informações, consulte [Connection Options](../../connect/php/connection-options.md).  
-- Suporte para recursos de alta disponibilidade e recuperação de desastres. Para obter mais informações, consulte [suporte para alta disponibilidade, recuperação de desastres](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).
+- Suporte para recursos de alta disponibilidade e recuperação de desastres. Para saber mais, confira [Suporte para alta disponibilidade, recuperação de desastre](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).
 - Suporte para cursores do lado do cliente (armazenando em cache um conjunto de resultados na memória). Para obter mais informações, confira [Tipos de cursor &#40;Driver SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md) e [Tipos de cursor &#40;Driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
 - O atributo PDO::ATTR_EMULATE_PREPARES foi adicionado. Para obter mais informações, confira [PDO::prepare](../../connect/php/pdo-prepare.md).  
 

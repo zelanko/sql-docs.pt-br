@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 50846aa8-e4e5-4fc3-a638-0e5fa8b597be
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 73b9541904e833d47be1e458aa9ee4cddeb2aa6f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8d5a22e4fa9a3bd27da1862b0157324e3fbe9098
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803243"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977016"
 ---
 # <a name="iswritable-method-sqlserverresultsetmetadata"></a>Método isWritable (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public boolean isWritable(int column)
  Um **int** que indica o índice de coluna.  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se gravações terá êxito na coluna. Caso contrário, **false**.  
+ **true** se as gravações forem bem-sucedidos na coluna. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método isWritable é especificado pelo método isWritable na interface do resultsetmetadata.  
+ Esse método iswritable é especificado pelo método iswritable na interface java. Sql. ResultSetMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [SQLServerResultSetMetaData Methods](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

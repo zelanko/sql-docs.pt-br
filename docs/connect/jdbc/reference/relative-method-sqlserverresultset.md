@@ -1,5 +1,5 @@
 ---
-title: Método Relative (SQLServerResultSet) | Microsoft Docs
+title: Método relative (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2bcdbb69-95fd-4ae8-8488-1a75a91fe2e0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b8907a5e2eb2ead5202e8aec9fd5320a6047a5f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b2e644feff3cd2787cc6bd80bce54562ad20794
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975786"
 ---
 # <a name="relative-method-sqlserverresultset"></a>Método relative (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public boolean relative(int nRows)
  Um **int** que indica o número de linhas a serem movidas.  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se o cursor estiver em uma linha. Caso contrário, **false**.  
+ **true** se o cursor estiver em uma linha. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método relativo é especificado pelo método na interface do ResultSet relativo.  
+ Esse método relativo é especificado pelo método relativo na interface java. Sql. ResultSet.  
   
  Ao tentar se mover além da primeira ou última linha no conjunto de resultados, o cursor será posicionado antes ou depois da primeira ou última coluna. Chamar `relative(0)` é válido, mas não altera a posição do cursor.  
   

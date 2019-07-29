@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1af26ac2-76e5-4a26-a600-9919211333ba
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: da5b91da09e0e811a464a63c1ce85e72880fdc34
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 72b483091a3466527f5a394ab37ff21b985857c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66787221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997145"
 ---
 # <a name="updatebinarystream-method-sqlserverresultset"></a>Método updateBinaryStream (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

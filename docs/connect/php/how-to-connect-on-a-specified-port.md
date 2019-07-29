@@ -1,5 +1,5 @@
 ---
-title: 'Como: conectar-se em uma porta especificada | Microsoft Docs'
+title: Como conectar-se a uma porta especificada | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 340cedae8ee5c205e3bc6ea8942151dd4beca168
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: af055a73904bb8feec92fb2afe93df064a09ab23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015055"
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>Como se conectar a uma porta especificada
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +46,7 @@ Este tópico descreve como se conectar ao SQL Server em uma porta especificada c
 ## <a name="see-also"></a>Consulte Também  
 [Conectando-se ao servidor](../../connect/php/connecting-to-the-server.md)
 
-[Guia de programação para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guia de programação para o Microsoft Drivers para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Introdução aos Drivers da Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 

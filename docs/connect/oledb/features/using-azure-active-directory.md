@@ -1,5 +1,5 @@
 ---
-title: Usando o Active Directory do Azure | Documentos do Microsoft para SQL Server
+title: Usando Azure Active Directory | Microsoft Docs para SQL Server
 ms.custom: ''
 ms.date: 01/28/2019
 ms.prod: sql
@@ -10,11 +10,11 @@ ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
 ms.openlocfilehash: 44f92e782a497005ea47847301279e4341722d36
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744783"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68213550"
 ---
 # <a name="using-azure-active-directory"></a>Como usar o Azure Active Directory
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -23,109 +23,109 @@ ms.locfileid: "56744783"
 
 ## <a name="purpose"></a>Finalidade
 
-Começando com a versão 18.2.1, Microsoft Driver do OLE DB para SQL Server permite que os aplicativos OLE DB para se conectar a uma instância do banco de dados SQL usando uma identidade federada. Os novos métodos de autenticação incluem:
-- ID de logon do Active Directory do Azure e a senha
+A partir da versão 18.2.1, o Microsoft OLE DB driver for SQL Server permite que OLE DB aplicativos se conectem a uma instância do banco de dados SQL do Azure usando uma identidade federada. Os novos métodos de autenticação incluem:
+- ID de logon Azure Active Directory e senha
 - Token de acesso do Azure Active Directory
 - Autenticação integrada do Azure Active Directory
-- ID de logon do SQL e a senha
+- ID de logon e senha do SQL
 
 > [!NOTE]  
-> Ao usar as seguintes opções do Azure Active Directory com o driver do OLE DB, certifique-se de que o [Active Directory Authentication Library para SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) foi instalado:
-> - ID de logon do Active Directory do Azure e a senha
+> Ao usar as opções de Azure Active Directory a seguir com o driver OLE DB, verifique se o [biblioteca de autenticação do Active Directory para SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) foi instalado:
+> - ID de logon Azure Active Directory e senha
 > - Autenticação integrada do Azure Active Directory
 >
-> ADAL não é necessária para os outros métodos de autenticação ou operações de banco de dados OLE.
+> A ADAL não é necessária para os outros métodos de autenticação ou operações de OLE DB.
 
 > [!NOTE]
-> Usando os seguintes modos de autenticação com `DataTypeCompatibility` (ou sua propriedade correspondente) definido como `80` é **não** com suporte:
-> - Autenticação do Active Directory do Azure usando a ID de logon e senha
-> - Autenticação do Active Directory do Azure usando o token de acesso
+> O uso dos seguintes modos de `DataTypeCompatibility` autenticação com (ou sua propriedade correspondente) `80` definido como **não** tem suporte:
+> - Azure Active Directory autenticação usando a ID de logon e a senha
+> - Autenticação Azure Active Directory usando o token de acesso
 > - Autenticação integrada do Azure Active Directory
 
-## <a name="connection-string-keywords-and-properties"></a>As propriedades e as palavras-chave de cadeia de caracteres de Conexão
-As seguintes palavras chave cadeia de caracteres de conexão foram introduzidas para dar suporte à autenticação do Active Directory do Azure:
+## <a name="connection-string-keywords-and-properties"></a>Propriedades e palavras-chave da cadeia de conexão
+As seguintes palavras-chave da cadeia de conexão foram introduzidas para dar suporte à autenticação Azure Active Directory:
 
 |Palavras-chave da cadeia de conexão|Propriedades da conexão|Descrição|
 |---               |---                |---        |
-|Token de acesso|SSPROP_AUTH_ACCESS_TOKEN|Especifica um token de acesso para autenticar no Azure Active Directory. |
-|Autenticação|SSPROP_AUTH_MODE|Especifica o método de autenticação a ser usado.|
+|Token de acesso|SSPROP_AUTH_ACCESS_TOKEN|Especifica um token de acesso para autenticar Azure Active Directory. |
+|Autenticação|SSPROP_AUTH_MODE|Especifica método de autenticação a ser usado.|
 
 Para obter mais informações sobre as novas palavras-chave/propriedades, consulte as seguintes páginas:
 - [Uso de palavras-chave de cadeia de conexão com o Driver do OLE DB para SQL Server](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)
 - [Propriedades de inicialização e autorização](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
 
 ## <a name="encryption-and-certificate-validation"></a>Criptografia e validação de certificado
-Esta seção discute as alterações no comportamento de validação de certificado e criptografia. Essas alterações são **apenas** eficaz ao usar as nova autenticação ou Token de acesso conexão palavras-chave (ou suas propriedades correspondentes).
+Esta seção aborda as alterações na criptografia e no comportamento de validação de certificado. Essas alterações **só** são eficazes ao usar as novas palavras-chave de cadeia de conexão de token de acesso ou autenticação (ou suas propriedades correspondentes).
 
 ### <a name="encryption"></a>Criptografia
-Para melhorar a segurança, quando as nova conexão propriedades/palavras-chave são usadas, o driver substitui o valor de criptografia padrão definindo-a para `yes`. Substituindo ocorre em tempo de inicialização do objeto de fonte de dados. Se a criptografia é definida antes da inicialização por qualquer meio, o valor é respeitado e não é substituído.
+Para melhorar a segurança, quando as novas propriedades de conexão/palavras-chave são usadas, o driver substitui o valor de criptografia padrão definindo `yes`-o como. A substituição ocorre no tempo de inicialização do objeto da fonte de dados. Se a criptografia for definida antes da inicialização por qualquer meio, o valor será respeitado e não será substituído.
 
 > [!NOTE]   
-> Em aplicativos ADO e em aplicativos que obtêm as `IDBInitialize` por meio da interface `IDataInitialize::GetDataSource`, o principal componente Implementando a interface explicitamente define a criptografia para seu valor padrão de `no`. Como resultado, as nova autenticação propriedades/palavras-chave respeita essa configuração e o valor de criptografia **não é** substituído. Portanto, é **recomendado** que esses aplicativos definam explicitamente `Use Encryption for Data=true` para substituir o valor padrão.
+> Em aplicativos ADO e em aplicativos que obtêm `IDBInitialize` a interface `IDataInitialize::GetDataSource`por meio do, o componente principal que implementa a interface define explicitamente a criptografia `no`para seu valor padrão de. Como resultado, as novas palavras-chave/propriedades de autenticação respeitam essa configuração e o valor de criptografia **não é** substituído. Portanto, é **recomendável** que esses aplicativos configurados `Use Encryption for Data=true` explicitamente para substituir o valor padrão.
 
 ### <a name="certificate-validation"></a>Validação do certificado
-Para melhorar a segurança, as nova conexão propriedades/palavras-chave respeitam a `TrustServerCertificate` configuração (e suas conexão cadeia de caracteres palavras-chave/propriedades correspondentes) **independentemente da configuração de criptografia do cliente**. Como resultado, o certificado do servidor é validado por padrão.
+Para melhorar a segurança, as novas propriedades de conexão/palavras-chave `TrustServerCertificate` respeitam a configuração (e suas palavras-chave/propriedades de cadeia de conexão correspondentes), **independentemente da configuração de criptografia do cliente**. Como resultado, o certificado do servidor é validado por padrão.
 
 > [!NOTE]   
-> Validação do certificado também pode ser controlada por meio de `Value` campo do `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2` entrada do registro. Os valores válidos são `0` ou `1`. O driver do OLE DB escolhe a opção mais segura entre o registro e as configurações de propriedade/palavra-chave de conexão. Ou seja, o driver validará o certificado do servidor, desde que pelo menos uma das configurações do registro/conexão habilita a validação de certificado do servidor.
+> A validação de certificado também pode ser controlada `Value` por meio do `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2` campo da entrada do registro. Os valores válidos são `0` ou `1`. O driver OLE DB escolhe a opção mais segura entre o registro e as configurações de propriedade/palavra-chave de conexão. Ou seja, o Driver validará o certificado do servidor Contanto que pelo menos uma das configurações de registro/conexão habilite a validação de certificado do servidor.
 
 ## <a name="gui-additions"></a>Adições de GUI
-A interface gráfica do usuário do driver foi aprimorada para permitir a autenticação do Active Directory do Azure. Para obter mais informações, consulte:
+A interface gráfica do usuário do driver foi aprimorada para permitir a autenticação Azure Active Directory. Para obter mais informações, consulte:
 - [Caixa de diálogo de logon do SQL Server](../help-topics/sql-server-login-dialog.md)
-- [Configuração do UDL (Link) de dados universal](../help-topics/data-link-pages.md)
+- [Configuração do UDL (Universal Data Link)](../help-topics/data-link-pages.md)
 
 ## <a name="example-connection-strings"></a>Cadeias de conexão de exemplo
-Esta seção mostra exemplos de conexão nova e existente palavras-chave de cadeia de caracteres a ser usado com `IDataInitialize::GetDataSource` e `DBPROP_INIT_PROVIDERSTRING` propriedade.
+Esta seção mostra exemplos de palavras-chave de cadeia de conexão novas e existentes que serão `IDataInitialize::GetDataSource` usadas `DBPROP_INIT_PROVIDERSTRING` com a propriedade e.
 
 ### <a name="sql-authentication"></a>Autenticação SQL
 - Usando `IDataInitialize::GetDataSource`:
     - Novo:
-        > Provedor = MSOLEDBSQL; fonte de dados = [servidor]; Initial Catalog = [database]; **Autenticação = SqlPassword**; ID de usuário = [username]; Senha = [senha]; Usar a criptografia de dados = true
+        > Provider = MSOLEDBSQL; fonte de dados = [Server]; Initial Catalog = [Database]; **Autenticação = SQLPassword**; ID de usuário = [username]; Senha = [senha]; Usar criptografia para dados = verdadeiro
     - Preterido:
-        > Provedor = MSOLEDBSQL; fonte de dados = [servidor]; Initial Catalog = [database]; ID de usuário = [username]; Senha = [senha]; Usar a criptografia de dados = true
+        > Provider = MSOLEDBSQL; fonte de dados = [Server]; Initial Catalog = [Database]; ID de usuário = [username]; Senha = [senha]; Usar criptografia para dados = verdadeiro
 - Usando `DBPROP_INIT_PROVIDERSTRING`:
     - Novo:
         > Server = [servidor];Database = [banco de dados];**Authentication = SqlPassword**;UID = [nome de usuário];PWD = [senha];Encrypt = yes
     - Preterido:
         > Server = [servidor];Database = [banco de dados];UID = [nome de usuário];PWD = [senha];Encrypt = yes
 
-### <a name="integrated-windows-authentication-using-security-support-provider-interface--sspi"></a>Autenticação integrada do Windows usando a Interface de provedor de suporte de segurança (SSPI)
+### <a name="integrated-windows-authentication-using-security-support-provider-interface--sspi"></a>Autenticação integrada do Windows usando a interface de provedor de suporte de segurança (SSPI)
 
 - Usando `IDataInitialize::GetDataSource`:
     - Novo:
-        > Provedor = MSOLEDBSQL; fonte de dados = [servidor]; Initial Catalog = [database]; **Autenticação = ActiveDirectoryIntegrated**; Usar a criptografia de dados = true
+        > Provider = MSOLEDBSQL; fonte de dados = [Server]; Initial Catalog = [Database]; **Autenticação = ActiveDirectoryIntegrated**; Usar criptografia para dados = verdadeiro
     - Preterido:
-        > Provedor = MSOLEDBSQL; fonte de dados = [servidor]; Initial Catalog = [database]; **a segurança integrada = SSPI**; Usar a criptografia de dados = true
+        > Provider = MSOLEDBSQL; fonte de dados = [Server]; Initial Catalog = [Database]; **Segurança integrada = SSPI**; Usar criptografia para dados = verdadeiro
 - Usando `DBPROP_INIT_PROVIDERSTRING`:
     - Novo:
         > Server = [servidor];Database = [banco de dados];**Authentication = ActiveDirectoryIntegrated**;Encrypt = yes
     - Preterido:
         > Server = [servidor];Database = [banco de dados];**Trusted_Connection = yes**;Encrypt = yes
 
-### <a name="aad-username-and-password-authentication-using-adal"></a>Autenticação de nome de usuário e senha do AAD usando a ADAL
+### <a name="aad-username-and-password-authentication-using-adal"></a>Autenticação de nome de usuário e senha do AAD usando ADAL
 
 - Usando `IDataInitialize::GetDataSource`:
-    > Provedor = MSOLEDBSQL; fonte de dados = [servidor]; Initial Catalog = [database]; **Autenticação = ActiveDirectoryPassword**; ID de usuário = [username]; Senha = [senha]; Usar a criptografia de dados = true
+    > Provider = MSOLEDBSQL; fonte de dados = [Server]; Initial Catalog = [Database]; **Autenticação = ActiveDirectoryPassword**; ID de usuário = [username]; Senha = [senha]; Usar criptografia para dados = verdadeiro
 - Usando `DBPROP_INIT_PROVIDERSTRING`:
     > Server = [servidor];Database = [banco de dados];**Authentication = ActiveDirectoryPassword**;UID = [nome de usuário];PWD = [senha];Encrypt=yes
 
-### <a name="integrated-azure-active-directory-authentication-using-adal"></a>Autenticação integrada do Active Directory do Azure usando a ADAL
+### <a name="integrated-azure-active-directory-authentication-using-adal"></a>Autenticação de Azure Active Directory integrada usando a ADAL
 
 - Usando `IDataInitialize::GetDataSource`:
-    > Provedor = MSOLEDBSQL; fonte de dados = [servidor]; Initial Catalog = [database]; **Autenticação = ActiveDirectoryIntegrated**; Usar a criptografia de dados = true
+    > Provider = MSOLEDBSQL; fonte de dados = [Server]; Initial Catalog = [Database]; **Autenticação = ActiveDirectoryIntegrated**; Usar criptografia para dados = verdadeiro
 - Usando `DBPROP_INIT_PROVIDERSTRING`:
     > Server = [servidor];Database = [banco de dados];**Authentication = ActiveDirectoryIntegrated**;Encrypt = yes
 
-### <a name="azure-active-directory-authentication-using-an-access-token"></a>Autenticação do Active Directory do Azure usando um token de acesso
+### <a name="azure-active-directory-authentication-using-an-access-token"></a>Azure Active Directory autenticação usando um token de acesso
 
 - Usando `IDataInitialize::GetDataSource`:
-    > Provedor = MSOLEDBSQL; fonte de dados = [servidor]; Initial Catalog = [database]; **Token de acesso = [token de acesso]**; Usar a criptografia de dados = true
+    > Provider = MSOLEDBSQL; fonte de dados = [Server]; Initial Catalog = [Database]; **Token de acesso = [token de acesso]** ; Usar criptografia para dados = verdadeiro
 - Usando `DBPROP_INIT_PROVIDERSTRING`:
-    > Fornecendo o token de acesso por meio de `DBPROP_INIT_PROVIDERSTRING` não é suportado
+    > `DBPROP_INIT_PROVIDERSTRING` Não há suporte para o fornecimento de token de acesso
 
 ## <a name="code-samples"></a>Exemplos de código
 
-Os exemplos a seguir mostram o código necessário para se conectar ao Azure Active Directory com palavras-chave de conexão. 
+Os exemplos a seguir mostram o código necessário para se conectar a Azure Active Directory com palavras-chave de conexão. 
 
 ### <a name="access-token"></a>Token de acesso
 ```cpp
@@ -239,8 +239,8 @@ Cleanup:
 ```
 
 ## <a name="next-steps"></a>Próximas etapas
-- [Autorizar o acesso a aplicativos de web do Azure Active Directory usando o fluxo de concessão de código OAuth 2.0](https://go.microsoft.com/fwlink/?linkid=2072672).
+- [Autorize o acesso a Azure Active Directory aplicativos Web usando o fluxo de concessão de código OAuth 2,0](https://go.microsoft.com/fwlink/?linkid=2072672).
 
 - Saiba mais sobre as [Autenticação do Azure Active Directory](https://go.microsoft.com/fwlink/?linkid=2073783) para SQL Server.
 
-- Configurar conexões de driver usando o [palavras-chave de cadeia de caracteres de conexão](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md) o oferece suporte ao driver de banco de dados OLE.
+- Configure conexões de driver usando [palavras-chave de cadeia de conexão](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md) às quais o driver de OLE DB dá suporte.

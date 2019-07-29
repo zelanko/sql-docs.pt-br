@@ -1,5 +1,5 @@
 ---
-title: Método (lang) getInt | Microsoft Docs
+title: Método getInt (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1705812f-1f04-4e84-b6c8-d164dded47b3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 834385df17d3a946bb6fe83ef67f42c869ca05bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5d3e6fc2abd8ab7ccd7c4a27622108ac3d79f18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66781068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982739"
 ---
 # <a name="getint-method-javalangstring"></a>Método getInt (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public int getInt(java.lang.String sCol)
  Uma **String** que contém o nome do parâmetro.  
   
 ## <a name="return-value"></a>Valor retornado  
- Uma **int** valor.  
+ Um valor **int** .  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

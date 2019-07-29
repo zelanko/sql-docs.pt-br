@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2a43d1c8-ec8a-43de-b51e-b9108f4e3eae
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cb1ef3406899dee8b1b9782f92a94bfdfaa79445
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c17e74c6844fa794dadb09e30f0be6822b66eb69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953733"
 ---
 # <a name="getblob-method-sqlserverresultset"></a>Método getBlob (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

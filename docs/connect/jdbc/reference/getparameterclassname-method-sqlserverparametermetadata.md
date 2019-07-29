@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 545634d8-f06b-429a-9293-0087d758f359
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4b793759b1b8144b5df49868d79c7a443aed9f00
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e0c5018dc2058af72028a4114dcc896d06d212d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981014"
 ---
 # <a name="getparameterclassname-method-sqlserverparametermetadata"></a>Método getParameterClassName (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.lang.String getParameterClassName(int param)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getParameterClassName é especificado pelo método getParameterClassName na interface parametermetadata.  
+ Esse método getParameterClassName é especificado pelo método getParameterClassName na interface java. Sql. ParameterMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4fb489ee-185e-405a-a4f7-3eb73c29bcd6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 20dfb1ecadbd417a79e74171e4f247e6b09ed40f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7a17f4482c46b9e9650b9debbb8a1517f022f1bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979373"
 ---
 # <a name="getstringfunctions-method-sqlserverdatabasemetadata"></a>Método getStringFunctions (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public java.lang.String getStringFunctions()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- Um **cadeia de caracteres** que contém o **cadeia de caracteres** funções.  
+ Uma **cadeia de caracteres** que contém as funções de **cadeia de caracteres** .  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getStringFunctions é especificado pelo método getStringFunctions na interface DatabaseMetadata.  
+ O método getStringFunctions é especificado pelo método getStringFunctions na interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: eb4efa8c-c269-457c-9acb-39b8cd6d081c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0199f94179147e494b85577cc60904419390db12
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 42ac0a1b965eb2a8091454ec05504c4012e7dec0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982977"
 ---
 # <a name="getfloat-method-sqlserverresultset"></a>Método getFloat (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

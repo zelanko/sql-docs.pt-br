@@ -1,5 +1,5 @@
 ---
-title: Método (lang) getTime | Microsoft Docs
+title: Método getTime (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ca0a3b29-30d1-4d20-bc8d-d3d9ed19ff50
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6fe0152d23bcf71e371ad778a961dedb9c6ee739
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fba716696627f29127d64c07843e6d9dcf2b3ce0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978968"
 ---
 # <a name="gettime-method-javalangstring"></a>Método getTime (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Time getTime(java.lang.String sCol)
  Uma **String** que contém o nome do parâmetro.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um objeto de tempo.  
+ Um objeto de hora.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -49,7 +48,7 @@ public java.sql.Time getTime(java.lang.String sCol)
 ## <a name="remarks"></a>Remarks  
  Esse método getTime é especificado pelo método getTime na interface java.sql.CallableStatement.  
   
- Consulte o gráfico intitulado "Conversões de método Getter" em [Noções básicas sobre conversões de tipo de dados](../../../connect/jdbc/understanding-data-type-conversions.md) para ver quais [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de dados podem ser recuperados com esse método.  
+ Consulte o gráfico intitulado "conversões do método getter" em [noções básicas sobre](../../../connect/jdbc/understanding-data-type-conversions.md) conversões de tipo de dados para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ver quais tipos de dados podem ser recuperados com esse método.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método getTime &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

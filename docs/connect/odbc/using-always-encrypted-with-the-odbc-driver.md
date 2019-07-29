@@ -7,14 +7,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
-manager: jroth
 author: MightyPen
-ms.openlocfilehash: 0a187f83939ec9758db8ca688a074de530d6cf0d
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 9d85cee931774da3efd0956ae259bd6eecb42eed
+ms.sourcegitcommit: b57d445d73a0133c7998653f2b72cf09ee83a208
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680078"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68231852"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Como usar o recurso Always Encrypted com o ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -58,12 +57,12 @@ Observe que habilitar o Always Encrypted não é suficiente para o êxito da cri
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Recuperando e modificando dados em colunas criptografadas
 
-Depois de habilitar o Always Encrypted em uma conexão, você pode usar APIs de ODBC padrão. As APIs ODBC pode recuperar ou modificar dados em colunas de banco de dados criptografado. Os seguintes itens de documentação podem ajudar com isso:
+Depois de habilitar Always Encrypted em uma conexão, você pode usar APIs ODBC padrão. As APIs ODBC podem recuperar ou modificar dados em colunas de banco de dado criptografado. Os seguintes itens de documentação podem ajudar com isso:
 
-- [Código de exemplo do ODBC](cpp-code-example-app-connect-access-sql-db.md)
+- [Código de exemplo ODBC](cpp-code-example-app-connect-access-sql-db.md)
 - [Referência do programador ODBC](../../odbc/reference/odbc-programmer-s-reference.md)
 
-Seu aplicativo deve ter as permissões de banco de dados necessário e deve ser capaz de acessar a chave mestra de coluna. Em seguida, o driver criptografa todos os parâmetros que se destinam a colunas criptografadas. O driver também descriptografa os dados recuperados de colunas criptografadas. O driver executa todos os essa criptografando e descriptografando sem nenhuma assistência do seu código-fonte. Para o seu programa, é como se as colunas não são criptografadas.
+Seu aplicativo deve ter as permissões de banco de dados necessárias e deve ser capaz de acessar a chave mestra de coluna. Em seguida, o driver criptografa todos os parâmetros de consulta que se destinam a colunas criptografadas. O driver também descriptografa os dados recuperados de colunas criptografadas. O driver executa toda essa criptografia e descriptografia sem nenhuma assistência do seu código-fonte. Para o seu programa, é como se as colunas não estiverem criptografadas.
 
 Se Always Encrypted não estiver habilitado, as consultas com parâmetros que se destinam a colunas criptografadas falharão. Os dados ainda podem ser recuperados de colunas criptografadas, desde que a consulta não tenha parâmetros que se destinem a colunas criptografadas. No entanto, o driver não tenta descriptografar nenhuma criptografia, e o aplicativo recebe os dados binários criptografados (como matrizes de bytes).
 
@@ -363,9 +362,10 @@ O ODBC Driver for SQL Server tem os seguintes provedores de repositório de chav
 
 ### <a name="using-the-azure-key-vault-provider"></a>Uso do provedor do Azure Key Vault
 
-O Cofre de Chaves do Azure é uma opção conveniente para armazenar e gerenciar chaves mestras de coluna do Always Encrypted (especialmente se seus aplicativos estiverem hospedados no Azure). O ODBC Driver for SQL Server no Linux, macOS e Windows inclui um provedor de repositório de chaves mestras de coluna interno para o Azure Key Vault. Confira [Azure Key Vault: passo a passo](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Introdução ao Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) e [Criação de chaves mestras de coluna no Azure Key Vault](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2) para saber mais sobre como configurar um Azure Key Vault para Always Encrypted.
+O AKV (Azure Key Vault) é uma opção conveniente para armazenar e gerenciar chaves mestras de coluna do Always Encrypted (especialmente se seus aplicativos estiverem hospedados no Azure). O ODBC Driver for SQL Server no Linux, macOS e Windows inclui um provedor de repositório de chaves mestras de coluna interno para o Azure Key Vault. Confira [Azure Key Vault: passo a passo](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Introdução ao Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) e [Criação de chaves mestras de coluna no Azure Key Vault](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2) para saber mais sobre como configurar um Azure Key Vault para Always Encrypted.
 
 > [!NOTE]
+> O driver ODBC não oferece suporte a Serviços de Federação do Active Directory (AD FS) para autenticação AKV. Se você estiver usando Azure Active Directory autenticação para AKV e sua configuração de Active Directory incluir serviços federados, a autenticação poderá falhar.
 > No Linux e macOS, para a versão de driver 17.2 e posterior, `libcurl` é necessário para usar esse provedor, mas não é uma dependência explícita, pois outras operações com o driver não precisam dele. Se você encontrar um erro em relação ao `libcurl`, verifique se ele está instalado.
 
 O driver oferece suporte à autenticação no Azure Key Vault usando os seguintes tipos de credenciais:

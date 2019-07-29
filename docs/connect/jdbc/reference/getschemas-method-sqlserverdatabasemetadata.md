@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d26ea46d-a9f5-40ed-af56-2b10a0364882
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 033eeac3d9f0bf14a587d3248899bf0ac4284efa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e08958772ce1c67bbbe9cb3bdad9d290746a9e71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980119"
 ---
 # <a name="getschemas-method-sqlserverdatabasemetadata"></a>Método getSchemas (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "66792171"
 |Nome|Descrição|  
 |----------|-----------------|  
 |[Método getSchemas &#40;&#41;](../../../connect/jdbc/reference/getschemas-method.md)|Recupera os nomes de esquema disponíveis no banco de dados atual.|  
-|[Método getSchemas &#40;cadeia de caracteres, cadeia de caracteres&#41;](../../../connect/jdbc/reference/getschemas-method-string-string.md)|Recupera os nomes de esquemas que estão disponíveis no banco de dados atual usando o nome de catálogo especificado e o nome de esquema.|  
+|[Cadeia de caracteres do &#40;método getSchemas, Cadeia de caracteres&#41;](../../../connect/jdbc/reference/getschemas-method-string-string.md)|Recupera os nomes de esquemas que estão disponíveis no banco de dados atual usando o nome de catálogo especificado e o nome de esquema.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

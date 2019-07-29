@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: eb8abe29-f3ec-4752-a590-1d5dc3e48f08
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e123c7ede812634898d72aca933dbd0150107b0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8cb254ba464b0e051c00c7ac6d410c5e6da1e36
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799384"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997292"
 ---
 # <a name="unwrap-method-sqlserverdatasource"></a>Método unwrap (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +47,7 @@ public <T> T unwrap(Class<T> iface)
   
  Quando esse método é chamado, o objeto é desencapsulado na classe [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
- Para obter mais informações, consulte [Wrappers e Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Para obter mais informações, consulte [wrappers e interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método isWrapperFor &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)   

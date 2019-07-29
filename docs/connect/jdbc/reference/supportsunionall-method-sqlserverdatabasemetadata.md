@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ed8344eb-4d1d-43d3-ade8-935ec677f73c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fad6422ea4c8b8b6cf9f9b3eeab7c2e483e537e6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b232fa2d89844d94b04878e9db99fdd04e819646
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968527"
 ---
 # <a name="supportsunionall-method-sqlserverdatabasemetadata"></a>Método supportsUnionAll (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsUnionAll()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se houver suporte. Caso contrário, **false**.  
+ **true** se houver suporte. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método supportsUnionAll é especificado pelo método supportsUnionAll na interface DatabaseMetadata.  
+ Esse método supportsUnionAll é especificado pelo método supportsUnionAll na interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

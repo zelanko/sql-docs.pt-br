@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 85d4451f-6392-470e-ab21-78a495b45792
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dab78e0f48f2bb7debcf5d993dfb128388a42506
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 840d1183794a5d69ad108aef8eee9ef7aedffe4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977615"
 ---
 # <a name="islast-method-sqlserverresultset"></a>Método isLast (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public boolean isLast()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se o cursor estiver na última linha. **False** se o cursor estiver em nenhuma outra posição ou se o conjunto de resultados não contém linhas.  
+ **true** se o cursor estiver na última linha. **false** se o cursor estiver em qualquer outra posição ou se o conjunto de resultados não contiver nenhuma linha.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

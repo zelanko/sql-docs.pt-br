@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6f2ced5a-1c7d-439a-aaa5-472b9f4fdeab
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3035a4cfefa7138de79d585e5aef22e8a0d1c981
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d70293862bb147b7eab40862368709c338646fb0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66781390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985559"
 ---
 # <a name="updatearray-method-javalangstring-javasqlarray"></a>Método updateArray (java.lang.String, java.sql.Array)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public void updateArray(java.lang.String columnName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método updateArray é especificado pelo método updateArray na interface do resultset.  
+ Esse método updateArray é especificado pelo método updateArray na interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método updateArray &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatearray-method-sqlserverresultset.md)   

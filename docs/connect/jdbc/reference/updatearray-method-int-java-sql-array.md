@@ -1,5 +1,5 @@
 ---
-title: Método updateArray (int, java.sql.Array) | Microsoft Docs
+title: Método updateArray (int, Java. Sql. array) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 464f7e3f-3e8a-4b2d-aebd-1c040583d52c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 93d4d6bb84b3279e60b0b6b69e1b684d6ca75e9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf9dc7a5e2bf04e33f9fb1ea96a0c62f41378f3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66786535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985588"
 ---
 # <a name="updatearray-method-int-javasqlarray"></a>Método updateArray (int, java.sql.Array)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public void updateArray(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método updateArray é especificado pelo método updateArray na interface do resultset.  
+ Esse método updateArray é especificado pelo método updateArray na interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método updateArray &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatearray-method-sqlserverresultset.md)   

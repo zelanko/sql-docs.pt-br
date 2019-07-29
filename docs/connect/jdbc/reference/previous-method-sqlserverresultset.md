@@ -1,5 +1,5 @@
 ---
-title: Método Previous (SQLServerResultSet) | Microsoft Docs
+title: Método previous (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 66eb4e10-c375-4b31-ac46-3ba1d9dbf6a0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e2eb9db321fc8c2b8b20ca41b685cb27f8595072
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e1f13c3fedc3cfaa0645eec5a769ed482b339563
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798723"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976005"
 ---
 # <a name="previous-method-sqlserverresultset"></a>Método previous (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean previous()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se a nova linha atual é válida. **False** se não houver nenhum mais linhas a serem processadas.  
+ **true** se a nova linha atual for válida. **false** se não houver mais linhas para processar.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método anterior é especificado pelo método na interface do ResultSet anterior.  
+ Esse método anterior é especificado pelo método anterior na interface java. Sql. ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

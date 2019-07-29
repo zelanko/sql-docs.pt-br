@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2c118790-5dd2-4b10-93b6-7f065ee324ce
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9c32ebf23d54b9cf284d38f76c846eebbc16d735
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 37c791c80c679afd70f4f1d2f3f2770fb0f38a16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952992"
 ---
 # <a name="getcolumnclassname-method-sqlserverresultsetmetadata"></a>Método getColumnClassName (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.lang.String getColumnClassName(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getColumnClassName é especificado pelo método getColumnClassName na interface resultsetmetadata.  
+ Esse método getColumnClassName é especificado pelo método getColumnClassName na interface java. Sql. ResultSetMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [SQLServerResultSetMetaData Methods](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

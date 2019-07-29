@@ -1,5 +1,5 @@
 ---
-title: Executar método (lang) | Microsoft Docs
+title: Método execute (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a871917e-d286-46c3-96cf-2e8e8b22111c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d3ffb7c175c21d56467899bba9de7c110e324d1d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 09adea323a5a2930e9c636a1b2e1b00567dbd9ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954953"
 ---
 # <a name="execute-method-javalangstring"></a>Método execute (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public final boolean execute(java.lang.String sql)
  Uma **String** que contém uma instrução SQL.  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se a instrução retorna um conjunto de resultados. **False** se ele retorna uma contagem de atualização ou nenhum resultado.  
+ **true** se a instrução retornar um conjunto de resultados. **false** se retornar uma contagem de atualização ou nenhum resultado.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

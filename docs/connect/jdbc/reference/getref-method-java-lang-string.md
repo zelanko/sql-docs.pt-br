@@ -1,5 +1,5 @@
 ---
-title: Método (lang) getRef | Microsoft Docs
+title: Método getRef (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a8ff2dd5-923b-4a2f-ab33-665574b2dfda
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 657c933a06e9b29e69ca138345f68b95fd807db9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd5b2019d31e84406d9386d180b87213273d0389
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800202"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980572"
 ---
 # <a name="getref-method-javalangstring"></a>Método getRef (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Ref getRef(java.lang.String sCol)
  Uma **String** que contém o nome do parâmetro.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um objeto de referência.  
+ Um objeto ref.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

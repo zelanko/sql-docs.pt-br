@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 19f9d124-3184-4985-8b97-503a8ab8b4f9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 505b96129c6d37bbadc464cf45a9ebec8d48f1f2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 233599694c4fb4f7764bbb48d5c77e0fcd273340
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977843"
 ---
 # <a name="isafterlast-method-sqlserverresultset"></a>Método isAfterLast (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean isAfterLast()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se o cursor após a última linha. **False** se o cursor estiver em nenhuma outra posição ou se o conjunto de resultados não contém linhas.  
+ **true** se o cursor for após a última linha. **false** se o cursor estiver em qualquer outra posição ou se o conjunto de resultados não contiver nenhuma linha.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método isAfterLast é especificado pelo método isAfterLast na interface do resultset.  
+ Esse método isAfterLast é especificado pelo método isAfterLast na interface java.sql.ResultSet.  
   
  Se esse método for usado com cursores dinâmicos, incluindo cursores somente encaminhamento e somente leitura, e se a propriedade de conexão selectMethod estiver definida como "cursor", ocorrerá uma exceção.  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6f368df5-e88a-4088-b0de-2b5ab655ebaa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 362fa3a9ba38e65ffc686dedadfc8c671013c3cc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3ee171719a846b9fa8bc1fe6cd6dbf1326e390a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764342"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969398"
 ---
 # <a name="supportsgroupby-method-sqlserverdatabasemetadata"></a>Método supportsGroupBy (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsGroupBy()
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se houver suporte. Caso contrário, **false**.  
+ **true** se houver suporte. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método supportsGroupBy é especificado pelo método supportsGroupBy na interface DatabaseMetadata.  
+ Esse método supportsGroupBy é especificado pelo método supportsGroupBy na interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

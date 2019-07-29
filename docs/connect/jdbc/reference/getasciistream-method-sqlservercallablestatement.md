@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2a3dde54-aace-42b1-97da-4b6a0918a346
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cbc52376ee8e57a1eb4ee5c5c5ce3578b023e82a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0915de12eddfceff753b045c20400c3670a7500b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954141"
 ---
 # <a name="getasciistream-method-sqlservercallablestatement"></a>Método getAsciiStream (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

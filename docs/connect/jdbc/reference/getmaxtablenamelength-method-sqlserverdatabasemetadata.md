@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5c51218f-c6e8-49f4-ad09-292e849ca43a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 644af7e58a5063f68e6c19c544234074fe2ad2bb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: aebb22867f2efb3b31d235f1df9ae73c85bab5e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981964"
 ---
 # <a name="getmaxtablenamelength-method-sqlserverdatabasemetadata"></a>Método getMaxTableNameLength (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxTableNameLength()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getMaxTableNameLength é especificado pelo método getMaxTableNameLength na interface DatabaseMetadata.  
+ Esse método getMaxTableNameLength é especificado pelo método getMaxTableNameLength na interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

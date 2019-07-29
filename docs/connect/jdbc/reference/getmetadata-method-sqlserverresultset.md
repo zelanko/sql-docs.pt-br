@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9dcdbf69-1d47-422c-842e-0bed5afdcb93
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f1b73f9a0d1c95978dc92d3139ba637bfa707b6f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 91cc095971d4cf4b613d1a9447ee10b6c8a65d75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981869"
 ---
 # <a name="getmetadata-method-sqlserverresultset"></a>Método getMetaData (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.sql.ResultSetMetaData getMetaData()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getMetaData é especificado pelo método getMetaData na interface do resultset.  
+ Esse método getMetaData é especificado pelo método getMetaData na interface java. Sql. ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 26888e61-b243-4a1b-922c-c0a451dcff4d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f0298e3c933db4887f1270ff60254103a965c7c2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e89d65955c5637bcd566d48b6e54bcae50397d88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66767150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983306"
 ---
 # <a name="getexportedkeys-method-sqlserverdatabasemetadata"></a>Método getExportedKeys (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +56,7 @@ public java.sql.ResultSet getExportedKeys(java.lang.String cat,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getExportedKeys é especificado pelo método getExportedKeys na interface DatabaseMetadata.  
+ Esse método getExportedKeys é especificado pelo método getExportedKeys na interface java. Sql. DatabaseMetaData.  
   
  O conjunto de resultados retornado pelo método getExportedKeys conterá as seguintes informações:  
   

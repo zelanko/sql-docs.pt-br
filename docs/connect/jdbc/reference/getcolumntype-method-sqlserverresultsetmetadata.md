@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 81815a41-9265-4574-a4d8-f6341a68d9fd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 05cbfe9914dd43718a41a3ad543cc02948a5c5e1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 80f1177506090d459833f70bdc0b5fdcb115d792
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952819"
 ---
 # <a name="getcolumntype-method-sqlserverresultsetmetadata"></a>Método getColumnType (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public int getColumnType(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getColumnType é especificado pelo método getColumnType na interface resultsetmetadata.  
+ Esse método getColumnType é especificado pelo método getColumnType na interface java. Sql. ResultSetMetaData.  
   
  O [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 tem alterações de comportamento na coluna DATA_TYPE. Consulte [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md) para saber mais.  
   

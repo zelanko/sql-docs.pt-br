@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: da3a0122-c842-4e58-9a44-3c2f836d58e8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 43d5e36c961fa21f3c9d3dabeea0d391533b7038
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5d3100ea4de02678a7f429693efecf9a5c0271d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804102"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953433"
 ---
 # <a name="getbyte-method-sqlserverresultset"></a>Método getByte (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

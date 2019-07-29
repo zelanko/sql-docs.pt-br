@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c0fce3fe-5b16-4f60-9b0e-e9b30a90525e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5475726e2905909515003cefc4aba19c1a4b86cf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3918215f40a77fa5288dd345715856829b607dae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977518"
 ---
 # <a name="isnullable-method-sqlserverresultsetmetadata"></a>Método isNullable (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public int isNullable(int column)
  Um **int** que indica o índice de coluna.  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se a coluna pode ser nula. Caso contrário, **false**.  
+ **true** se a coluna puder ser nula. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método isNullable é especificado pelo método isNullable na interface do resultsetmetadata.  
+ Esse método isNullable é especificado pelo método isNullable na interface java. Sql. ResultSetMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [SQLServerResultSetMetaData Methods](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

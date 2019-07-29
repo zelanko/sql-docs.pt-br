@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: dc61c774-dcd9-49c0-8dfa-2e775fe2afa8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0fe798c0c3d7adaa822f29c53be118859ea03d74
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: accd36006c48d13c211d5e0d9db7ecf49cbfd91d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800053"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954262"
 ---
 # <a name="getarray-method-sqlserverresultset"></a>Método getArray (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

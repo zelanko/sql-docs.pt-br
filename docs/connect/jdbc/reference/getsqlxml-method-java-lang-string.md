@@ -1,5 +1,5 @@
 ---
-title: Método (lang) getSQLXML | Microsoft Docs
+title: Método getSQLXML (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f56b192a-3255-4215-b552-8e494fbca083
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e0fde3887e7f8ac1b2444ba81a93715eed631b02
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 125584fd3ad858a4242f6d85e755b3ec04e50ab1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979650"
 ---
 # <a name="getsqlxml-method-javalangstring"></a>Método getSQLXML (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

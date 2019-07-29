@@ -1,5 +1,5 @@
 ---
-title: 'Como: conectar-se usando a autenticação do Windows | Microsoft Docs'
+title: Como conectar-se usando a autenticação do Windows | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 18294f43eceabb531d61c919303b5e874ba63a99
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 84707c67491d4f02be41e6506fb233ee7afef9fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936501"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>Como se conectar usando a Autenticação do Windows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -108,7 +107,7 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ## <a name="see-also"></a>Consulte Também  
 [Como se conectar usando a Autenticação do SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
-[Guia de programação para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guia de programação para o Microsoft Drivers para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)
 

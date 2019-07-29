@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b3fb1a97-86ee-4977-adca-c35ae199dbb3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 50eace66b5f792ce9876d56dab8768555a43392f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c4774dcda174d5260289409053a892cc4039b4f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66775612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980464"
 ---
 # <a name="getreference-method-sqlserverdatasource"></a>Método getReference (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public javax.naming.Reference getReference()
  Um objeto de referência.  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getReference é especificado pelo método getReference na interface referenceable.  
+ Esse método getReference é especificado pelo método getReference na interface javax. naming. Referenceble.  
   
  Antes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0, se SQLServerDataSource.setTrustStorePassword fosse chamado em um objeto SQLServerDataSource, a senha estaria presente no objeto retornado pelo SQLServerDataSource.getReference, permitindo que o objeto fosse usado para fazer conexões adicionais. No JDBC Driver 3.0, será necessário definir a senha no objeto retornado pelo SQLServerDataSource.getReference antes de fazer conexões com o objeto.  
   

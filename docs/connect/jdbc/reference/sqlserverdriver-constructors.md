@@ -10,17 +10,16 @@ ms.topic: conceptual
 ms.assetid: 5088c649-10ee-4b91-ac9d-596d0ab250b9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ef4fe32af6fe6c984aa2856585e25f5c6e645795
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b05a81cb6317fd323702ccb97f46e841b58ea051
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971200"
 ---
 # <a name="sqlserverdriver-constructors"></a>Construtores SQLServerDriver
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Para obter informações sobre os membros [SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md), consulte [membros SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-members.md).  
+  Para obter informações sobre membros de [SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md), consulte [membros do SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-members.md).  
   
   

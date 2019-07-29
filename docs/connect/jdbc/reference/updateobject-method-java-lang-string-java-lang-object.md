@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f6999d9c-eab6-4e4d-96d8-e0fa4b4b87e3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4ac83576a7cea47f4e2c85d4fc8f29c1761abcee
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: de499e4cc11f1da1780878e4c921d161ee8b2693
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998447"
 ---
 # <a name="updateobject-method-javalangstring-javalangobject"></a>Método updateObject (java.lang.String, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public void updateObject(java.lang.String columnName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método updateObject é especificado pelo método updateObject na interface do resultset.  
+ Esse método updateObject é especificado pelo método updateObject na interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método updateObject &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   

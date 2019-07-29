@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 55b5b7d0-448f-4b8a-9ca7-563f674d6b81
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9e993fcae5d75fb126bfa6a9a352263b7f3a19ad
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ffbc28bd432e310e23427a46946abd9a47036bc2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779842"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983475"
 ---
 # <a name="getdouble-method-sqlserverresultset"></a>Método getDouble (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f8128167db6ce60789a93698e775228659fff255
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 93bad991b56928db0d7b872b13904385d79ae788
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014846"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>Atualizando dados (Drivers da Microsoft para PHP para SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,5 +41,5 @@ As etapas para usar os [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]
 ## <a name="see-also"></a>Consulte Também  
 [Aplicativo de exemplo &#40;driver SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)
 
-[Guia de programação para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guia de programação para o Microsoft Drivers para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

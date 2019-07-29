@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f81dde01-d328-4b32-8871-1efac645b68e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bfb5a9df5d403744c87704de2e4c701f7657cb6c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f474b2a15667df10bff8652239e8e00f1c923ba5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788715"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979386"
 ---
 # <a name="getstring-method-sqlserverresultset"></a>Método getString (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

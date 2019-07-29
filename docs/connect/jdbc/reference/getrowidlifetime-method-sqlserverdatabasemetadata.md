@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 317c0b44-fe3f-4142-9cab-e40e4c4fe070
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7aa2b4f740795169824cb4962f17c2dfecdc7974
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9a792f33d598eafa706241329873338998c61865
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980267"
 ---
 # <a name="getrowidlifetime-method-sqlserverdatabasemetadata"></a>Método getRowIdLifetime (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,13 +33,13 @@ public java.sql.RowIdLifetime getRowIdLifetime()
  Um objeto RowIdLifetime.  
   
 > [!NOTE]  
->  Na versão JDBC Driver versão 2.0, esse método retorna o valor de java.sql.RowIdLifetime.ROWID_UNSUPPORTED.  
+>  Na versão 2,0 do driver JDBC, esse método retorna o valor java. Sql. RowIdLifetime. ROWID_UNSUPPORTED.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getRowIdLifetime é especificado pelo método getRowIdLifetime na interface DatabaseMetadata.  
+ Esse método getRowIdLifetime é especificado pelo método getRowIdLifetime na interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

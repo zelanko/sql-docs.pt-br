@@ -1,5 +1,5 @@
 ---
-title: Método (lang) getCharacterStream | Microsoft Docs
+title: Método getCharacterStream (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cdddc572-05c1-480d-b3e5-28270001575c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a818783c51f2629464f650c2985eb20d5f320c95
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 174deb24d78821e30d69dc899c5657909241ad3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953287"
 ---
 # <a name="getcharacterstream-method-javalangstring"></a>Método getCharacterStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public java.io.Reader getCharacterStream(java.lang.String columnName)
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um objeto do leitor.  
+ Um objeto leitor.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getCharacterStream é especificado pelo método getCharacterStream na interface do resultset.  
+ Esse método getCharacterStream é especificado pelo método getCharacterStream na interface java. Sql. ResultSet.  
   
  Esse método lerá apenas tipos de dados de caracteres Unicode do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], como nchar, nvarchar, nvarchar(max) e ntext. Todos os outros tipos de dados, incluindo os tipos de caracteres ASCII, fazem com que uma exceção seja lançada. Para ler os tipos de dados ASCII, use o método [getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md).  
   

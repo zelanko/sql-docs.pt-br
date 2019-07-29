@@ -1,5 +1,5 @@
 ---
-title: Método Execute (lang. String, int[]) | Microsoft Docs
+title: Método execute (java.lang.String, int[]) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: dc73d1c3-e756-43af-b1fc-ac438cbd0965
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d4ae744a27156a59c926f2181ca9aec1146e8cd7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e96e0c9c957522db6a766b3491d394b7337d7b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801663"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954989"
 ---
 # <a name="execute-method-javalangstring-int"></a>Método execute (java.lang.String, int[])
 
@@ -45,7 +44,7 @@ Uma **String** que contém uma instrução SQL.
 Uma matriz de **int**s que indica os índices de coluna das chaves geradas automaticamente que devem ser disponibilizados.
 
 ## <a name="return-value"></a>Valor retornado
-**True** se o primeiro resultado é um conjunto de resultados. Caso contrário, **false**.
+**true** se o primeiro resultado for um conjunto de resultados. Caso contrário, **false**.
   
 ## <a name="exceptions"></a>Exceções
 [SQLServerException](./sqlserverexception-class.md)
@@ -55,7 +54,7 @@ Esse método execute é especificado pelo método execute na interface java.sql.
 
 ## <a name="see-also"></a>Consulte Também
 
-[executar o método &#40;SQLServerStatement&#41;](./execute-method-sqlserverstatement.md)
+[Executar método &#40;SQLServerStatement&#41;](./execute-method-sqlserverstatement.md)
 
 [Membros SQLServerStatement](./sqlserverstatement-members.md)
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f77af027-c021-4a17-b264-1ee592bfdd84
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5dbf1b4159d060fce122455436a3ff7b7199e583
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26986587e9c6f2ba98f5a0a30a5f9ba504d61d6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977085"
 ---
 # <a name="iswrapperfor-method-sqlserverdatasource"></a>Método isWrapperFor (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,10 +32,10 @@ public boolean isWrapperFor(Class iface)
 #### <a name="parameters"></a>Parâmetros  
  *iface*  
   
- Um **classe** definindo uma interface.  
+ Uma **classe** que define uma interface.  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se esse objeto implementa a interface ou encapsula um objeto que implementa a interface. Caso contrário, **false**.  
+ **true** se esse objeto implementar a interface ou encapsular um objeto que implementa a interface. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -46,10 +45,10 @@ public boolean isWrapperFor(Class iface)
   
  Se esse método retornar true, a chamada de [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md) com o mesmo argumento será bem-sucedida.  
   
- Para obter mais informações, consulte [Wrappers e Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Para obter mais informações, consulte [wrappers e interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método unwrap &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)   
+ [desencapsular &#40;o método SQLServerDataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)   
  [Membros de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Classe SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

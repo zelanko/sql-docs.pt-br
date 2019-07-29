@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 028b8d61-9557-4c9f-b732-29e87a962de8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f7862151667bd94eba7cbc97301416d05270d1d2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 27238772e437bc6bd5f8b33bed7e89dd0c294a3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977827"
 ---
 # <a name="isautoincrement-method-sqlserverresultsetmetadata"></a>Método isAutoIncrement (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public boolean isAutoIncrement(int column)
  Um **int** que indica o índice de coluna.  
   
 ## <a name="return-value"></a>Valor retornado  
- **True** se a coluna é numerada automaticamente. Caso contrário, **false**.  
+ **true** se a coluna for numerada automaticamente. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método isAutoIncrement é especificado pelo método isAutoIncrement na interface resultsetmetadata.  
+ Esse método isAutoIncrement é especificado pelo método isAutoIncrement na interface java. Sql. ResultSetMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [SQLServerResultSetMetaData Methods](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

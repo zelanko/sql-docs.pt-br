@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2d1beec5-fc50-4563-81da-835e4b392874
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 74b31873d0986ca229805b6d1129701290c0afe5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f775473fcab7f7019f4ba640fccc8af34188ab12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66793235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982536"
 ---
 # <a name="getlong-method-int-sqlserverresultset"></a>Método getLong (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public long getLong(int columnIndex)
  Um **int** que indica o índice de coluna.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um **longo** valor.  
+ Um valor **longo** .  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -52,7 +51,7 @@ public long getLong(int columnIndex)
  Esse método só é compatível com os tipos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que podem retornar com segurança um valor inteiro como bigint, int, smallint, tinyint e bit. Seu uso em quaisquer outros tipos de dados fará com que uma exceção seja lançada.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método getLong &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getlong-method-sqlserverresultset.md)   
+ [Método &#40;getLong SQLServerResultSet&#41;](../../../connect/jdbc/reference/getlong-method-sqlserverresultset.md)   
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

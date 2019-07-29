@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 66b4473d-a8c1-4d19-8487-b39d6d0597c7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ec6670dda04e3c03ea487e44c37c9332946eb93a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 85a8b46d88ab783c7742ba2af911211baefcffe1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788577"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985986"
 ---
 # <a name="updatearray-method-sqlserverresultset"></a>Método updateArray (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

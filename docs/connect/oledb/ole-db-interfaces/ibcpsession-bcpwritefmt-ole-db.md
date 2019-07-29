@@ -1,6 +1,6 @@
 ---
-title: 'Ibcpsession:: Bcpwritefmt (OLE DB) | Microsoft Docs'
-description: 'Usando ibcpsession:: Bcpwritefmt para salvar os arquivos de formato em formato de texto ou xml (OLE DB)'
+title: IBCPSession::BCPWriteFmt (OLE DB) | Microsoft Docs
+description: 'Usando IBCPSession:: BCPWriteFmt para salvar os arquivos de formato em XML ou no formato de texto (OLE DB)'
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - BCPWriteFmt method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5d93d2114ff462eddd45fb5520a976d148cc96ac
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 42a8b450fcc5536920ead44d4f401fb2e81d2b08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790842"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994540"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +62,7 @@ HRESULT BCPWriteFmt(
  A chamada para o método era inesperada. Por exemplo, o método [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) não foi chamado antes desse método.  
   
 ## <a name="see-also"></a>Consulte Também  
- [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
+ [OLE DB &#40;IBCPSession&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Executando operações de cópia em massa](../../oledb/features/performing-bulk-copy-operations.md) 
   
   

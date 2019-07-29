@@ -1,5 +1,5 @@
 ---
-title: Método executeUpdate (lang, int) | Microsoft Docs
+title: Método executeUpdate (java.lang.String, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4c52a20e-527e-4d14-9a5a-4cd195aac8ed
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 86906a5c0c31f29b77fc899a3553e01adc822e46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 783058a764963637f2c91808424bac7bdd403c02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66786690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954753"
 ---
 # <a name="executeupdate-method-javalangstring-int"></a>Método executeUpdate (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

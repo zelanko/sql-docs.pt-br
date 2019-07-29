@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8bb95e1eb547037d7ecf1855f71fa519102cf621
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 248213fed555ffc029162c44bdcccb656c311703
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974289"
 ---
 # <a name="setencrypt-method-sqlserverdatasource"></a>Método setEncrypt (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public void setEncypt(boolean encrypt)
 #### <a name="parameters"></a>Parâmetros  
  *encrypt*  
   
- **Verdadeiro** se a criptografia Secure Sockets Layer (SSL) está habilitada entre o cliente e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Caso contrário, **false**.  
+ **true** se a criptografia de protocolo SSL (SSL) estiver habilitada entre o cliente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]e o. Caso contrário, **false**.  
   
 ## <a name="remarks"></a>Remarks  
  Se a propriedade de criptografia estiver definida como **true**, o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] garantirá que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] use a criptografia SSL para todos os dados enviados entre o cliente e o servidor se o servidor tiver um certificado instalado. O valor padrão é **false**.  

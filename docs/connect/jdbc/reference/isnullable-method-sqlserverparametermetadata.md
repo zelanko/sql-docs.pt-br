@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d7e07cff-6fc4-4c9c-8e8f-838c77734bc5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b32d98e6be6297bd2bfab2953648be4fca07f6a9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f340a182da1cd232aab70e61c268ba6ec58633db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977536"
 ---
 # <a name="isnullable-method-sqlserverparametermetadata"></a>Método isNullable (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +52,7 @@ public int isNullable(int param)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método isNullable é especificado pelo método isNullable na interface do parametermetadata.  
+ Esse método isNullable é especificado pelo método isNullable na interface java. Sql. ParameterMetaData.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

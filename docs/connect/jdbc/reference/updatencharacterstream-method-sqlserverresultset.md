@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d6a21d01-6d8e-4449-9fdf-ddb09bd4fdb8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 617e9e7c0d8b50a78f99dc421eb62327d4bbe45d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9ccaa98c30f3e50de8fe3858246d274f59a83462
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998777"
 ---
 # <a name="updatencharacterstream-method-sqlserverresultset"></a>Método updateNCharacterStream (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

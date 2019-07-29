@@ -10,17 +10,16 @@ ms.topic: conceptual
 ms.assetid: f10d228a-9c63-4b68-abec-c10b26b258a1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0c241075aa4eec93ca43364c1fe76ef185b34a43
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8655696b7c010befd3bb62e545ad74b2c4f18169
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800595"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971624"
 ---
 # <a name="sqlserverconnectionpooldatasource-constructors"></a>Construtores SQLServerConnectionPoolDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Para obter informações sobre os membros de [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md), consulte [membros SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-members.md).  
+  Para obter informações sobre os membros de [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md), consulte [membros do SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-members.md).  
   
   

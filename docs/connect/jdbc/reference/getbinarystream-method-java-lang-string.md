@@ -1,5 +1,5 @@
 ---
-title: Método (lang) getBinaryStream | Microsoft Docs
+title: Método getBinaryStream (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 149609b5-a6de-4e23-a440-7061775d0899
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 90527a6bfe0b943441f723fd22862832f136c6ca
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a0ee14b90dd8aaffb178c81ea46e5ec914752e28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953691"
 ---
 # <a name="getbinarystream-method-javalangstring"></a>Método getBinaryStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.io.InputStream getBinaryStream(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getBinaryStream é especificado pelo método getBinaryStream na interface do resultset.  
+ Esse método getBinaryStream é especificado pelo método getBinaryStream na interface java. Sql. ResultSet.  
   
  Esse método pode ser usado somente com tipos de dados binary, varbinary, varbinary(max) e image do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A tentativa de usá-lo com outros tipos de dados fará com que uma exceção seja lançada.  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fc3f2d79-7cc3-47fa-a05e-4f7939d7f090
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e00336655f9948becf4d68203dcf6fb137125b4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ad14430d5750befc073489596de2a4082f4ff8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980604"
 ---
 # <a name="getref-method-int-sqlserverresultset"></a>Método getRef (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Ref getRef(int i)
  Um **int** que indica o índice de coluna.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um objeto de referência.  
+ Um objeto ref.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -50,7 +49,7 @@ public java.sql.Ref getRef(int i)
  Esse método getRef é especificado pelo método getRef na interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Método getRef &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)   
+ [Método &#40;GetRef SQLServerResultSet&#41;](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)   
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

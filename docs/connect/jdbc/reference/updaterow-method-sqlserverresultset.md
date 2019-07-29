@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cfced0ca-a281-40dc-8d2f-370d5f0bf12b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4cda7aba62051a42656fd10c6ff8f785b81b96a3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0e33da1c8873bdc2d69c93d533860d9b9f5e227d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778424"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998345"
 ---
 # <a name="updaterow-method-sqlserverresultset"></a>Método updateRow (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void updateRow()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método updateRow é especificado pelo método updateRow na interface do resultset.  
+ O método updateRow é especificado pelo método updateRow na interface java.sql.ResultSet.  
   
  Esse método não pode ser chamado quando o cursor estiver na linha de inserção.  
   
