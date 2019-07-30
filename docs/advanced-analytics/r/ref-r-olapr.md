@@ -7,17 +7,17 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2363b9ba69f914f828d7445a88d6ee1c784bb096
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
-ms.translationtype: HT
+ms.openlocfilehash: 674e4ed4d1967452093e81e7bb4f5518d9237cf6
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344881"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469974"
 ---
 # <a name="olapr-r-library-in-sql-server"></a>olapr (biblioteca do R no SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-o olapr é uma biblioteca da Microsoft de funções do R usadas para consultas MDX em um SQL Server Analysis Services cubo OLAP. As funções não dão suporte a todas as operações de MDX, mas você pode criar consultas que fatiam, combuscam, acúmulos e dinamizações em dimensões. 
+**o olapr** é uma biblioteca da Microsoft de funções do R usadas para consultas MDX em um SQL Server Analysis Services cubo OLAP. As funções não dão suporte a todas as operações de MDX, mas você pode criar consultas que fatiam, combuscam, acúmulos e dinamizações em dimensões. 
 
 Este pacote não está pré-carregado em uma sessão de R. Execute o comando a seguir para carregar a biblioteca.
 

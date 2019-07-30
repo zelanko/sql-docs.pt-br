@@ -7,15 +7,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5a3bd47d8a16a784115136935f669c420cb65e8f
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
-ms.translationtype: HT
+ms.openlocfilehash: a2bd6db3aaae2c07f6f46aecce3e7df913fc2a9e
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345120"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470244"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>Converter código R para execução em instâncias SQL Server (no banco de dados)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Este artigo fornece diretrizes de alto nível sobre como modificar o código R para trabalhar em SQL Server. 
 
@@ -41,9 +41,9 @@ No entanto, seu código poderá exigir alterações substanciais se qualquer uma
 
 + Se você pretende inserir o código R no [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), identifique as fontes de dados primárias e secundárias. 
 
-    + As fontes de dados primárias são grandes conjuntos de dados, como os de treinamento de modelo ou dados de entrada para previsões. Planeje mapear seu maior conjunto de dados para o parâmetro de entrada de [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+    + As fontes de dados **primárias** são grandes conjuntos de dados, como os de treinamento de modelo ou dados de entrada para previsões. Planeje mapear seu maior conjunto de dados para o parâmetro de entrada de [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + As fontes de dados secundárias são normalmente conjuntos de dados menores, como listas de fatores ou variáveis de agrupamento adicionais. 
+    + As fontes de dados **secundárias** são normalmente conjuntos de dados menores, como listas de fatores ou variáveis de agrupamento adicionais. 
     
     Atualmente, o sp_execute_external_script dá suporte a apenas um único conjunto de dados como entrada para o procedimento armazenado. No entanto, você pode adicionar várias entradas escalares ou binárias.
 
