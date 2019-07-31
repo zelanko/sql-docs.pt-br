@@ -19,17 +19,17 @@ helpviewer_keywords:
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b3d5ed50ac407beebfb54370cf91f0f3b8ba3101
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4ced2feee2227ba1db492f721f57907069c5d99
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124688"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661354"
 ---
 # <a name="spenclavesendkeys----transact-sql"></a>sp_enclave_send_keys    (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Envia coluna habilitado de enclave todas as chaves de criptografia no banco de dados para o enclave usado pelo [Always Encrypted com enclaves seguras &#40;mecanismo de banco de dados&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Envia todas as chaves de criptografia de coluna habilitadas para enclave no banco de dados para o enclave usado pelo [Always Encrypted com o Secure enclaves &#40;mecanismo de banco de dados&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,26 +40,26 @@ sp_enclave_send_keys
 
 ## <a name="arguments"></a>Argumentos
 
-Esse procedimento armazenado não tem argumentos.
+Este procedimento armazenado não tem argumentos.
 
 ## <a name="return-value"></a>Valor retornado
 
-Esse procedimento armazenado não tem nenhum valor de retorno.
+Este procedimento armazenado não tem nenhum valor de retorno.
   
 ## <a name="result-sets"></a>Conjuntos de resultados
 
-Esse procedimento armazenado não tem nenhum conjunto de resultados.
+Este procedimento armazenado não tem conjuntos de resultados.
   
 ## <a name="remarks"></a>Comentários
 
-**sp_enclave_send_keys** envia as chaves de criptografia de coluna habilitada para enclave para o enclave se todas as seguintes condições forem atendidas:
+**sp_enclave_send_keys** envia chaves de criptografia de coluna habilitadas para enclave para o enclave se todas as seguintes condições forem atendidas:
 
-- O enclave está habilitado na instância do SQL Server.
-- **sp_enclave_send_keys** foi chamado de um aplicativo usando um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver do cliente, com suporte para Always Encrypted com enclaves seguras usando uma conexão de banco de dados que tem Always Encrypted e o enclave computações habilitadas.
+- O enclave está habilitado na instância de SQL Server.
+- **sp_enclave_send_keys** foi invocado de um aplicativo usando um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver de cliente, dando suporte a Always Encrypted com Secure enclaves usando uma conexão de banco de dados que tenha os cálculos de Always Encrypted e enclave habilitados.
 
 ## <a name="permissions"></a>Permissões
 
- Exigir a **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** e **VIEW ANY COLUMN MASTER KEY DEFINITION** permissões no banco de dados.  
+ Exija as permissões de definição de **chave de criptografia de qualquer coluna** e **exibição qualquer coluna de definição de chave mestra** no banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -69,8 +69,8 @@ EXEC sp_enclave_send_keys;
 
 ## <a name="see-also"></a>Confira também
 
- [Always Encrypted com enclaves seguros &#40;mecanismo de banco de dados&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
- [Tutorial: Criando e usando índices em colunas habilitada para enclave usando a criptografia aleatória](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md#step-3-create-an-index-with-role-separation)   
- [Invocar operações de indexação usando chaves de criptografia de coluna armazenada em cache](../security/encryption/configure-always-encrypted-enclaves.md#invoke-indexing-operations-using-cached-column-encryption-keys)   
- [Índices em colunas habilitada para Enclave usando a criptografia aleatória](../security/encryption/always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns-using-randomized-encryption)   
- [Considerações sobre a migração de banco de dados e do AlwaysOn](../security/encryption/always-encrypted-enclaves.md#considerations-for-alwayson-and-database-migration)
+ [Always Encrypted com o Secure &#40;enclaves mecanismo de banco de dados&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+ [Tutorial: Criando e usando índices em colunas habilitadas para enclave usando criptografia aleatória](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md#step-3-create-an-index-with-role-separation)   
+ [Invocar operações de indexação usando chaves de criptografia de coluna em cache](../security/encryption/configure-always-encrypted-enclaves.md#invoke-indexing-operations-using-cached-column-encryption-keys)   
+ [Índices em colunas habilitadas para enclave usando criptografia aleatória](../security/encryption/always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns-using-randomized-encryption)   
+ [Considerações sobre o AlwaysOn e a migração de banco de dados](../security/encryption/always-encrypted-enclaves.md#anchorname-1-considerations-availability-groups-db-migration)

@@ -9,16 +9,16 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/08/2017
-ms.openlocfilehash: 456dd8e4e232f77e7cc7709a997fdd8ae5ef0e5b
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 77aca108aa3acae73dfb3fa226aa0530b6a9b8b5
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413002"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661287"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Exemplos de expressões (Construtor de Relatórios e SSRS)
 
-Expressões costumam ser usadas em relatórios para controlar o conteúdo e a aparência do relatório. As expressões são escritas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]e pode usar código personalizado de funções internas, relatório e variáveis de grupo e variáveis definidas pelo usuário. As expressões começam com um sinal de igual (=). Para obter mais informações sobre o editor de expressões e os tipos de referências que podem ser incluídos, consulte [Uso de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md) e [Adicionar uma expressão &#40;Construtor de Relatórios e SSRS&#41;](add-an-expression-report-builder-and-ssrs.md).  
+Expressões costumam ser usadas em relatórios para controlar o conteúdo e a aparência do relatório. As expressões são escritas [!INCLUDE[msCoName](../../includes/msconame-md.md)] em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]e podem usar funções internas de código personalizado, de relatório e de grupo e variáveis definidas pelo usuário. As expressões começam com um sinal de igual (=). Para obter mais informações sobre o editor de expressões e os tipos de referências que podem ser incluídos, consulte [Uso de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md) e [Adicionar uma expressão &#40;Construtor de Relatórios e SSRS&#41;](add-an-expression-report-builder-and-ssrs.md).  
 
 > [!IMPORTANT]  
 >  Quando o RDL Sandboxing é habilitado, somente certos tipos e membros podem ser usados no texto da expressão durante o tempo de publicação do relatório. Para obter mais informações, consulte [Habilitar e desabilitar o RDL Sandboxing](../enable-and-disable-rdl-sandboxing.md).  
@@ -51,7 +51,7 @@ Para obter mais informações sobre expressões simples e complexas, em que voc�
 
 Saiba como gravar expressões que usam muitas das funções e dos operadores também empregados por exemplos de expressões neste tópico, mas no contexto da gravação de um relatório, no [Tutorial: Introdução às expressões](../tutorial-introducing-expressions.md).  
 
-O editor de expressão inclui uma exibição hierárquica de funções internas. Quando você seleciona a função, um exemplo de código aparece no painel Valores. Para obter mais informações, consulte o [caixa de diálogo expressão](../expression-dialog-box.md) ou [caixa de diálogo expressão &#40;relatórios&#41;](../expression-dialog-box-report-builder.md).  
+O editor de expressão inclui uma exibição hierárquica de funções internas. Quando você seleciona a função, um exemplo de código aparece no painel Valores. Para obter mais informações, consulte a caixa de diálogo [expressão](../expression-dialog-box.md) ou a [ &#40;caixa&#41;de diálogo expressão Construtor de relatórios](../expression-dialog-box-report-builder.md).  
 
 ## <a name="functions"></a>Funções  
 
@@ -176,9 +176,9 @@ O exemplo a seguir exibe a data de início do ano atual
 =Format(Parameters!StartDate.Value, "D") & " through " &  Format(Parameters!EndDate.Value, "D")    
 ```  
 
-Se a caixa de texto contiver apenas uma data ou número, você deve usar a propriedade de formato da caixa de texto para aplicar a formatação em vez do `Format` função dentro da caixa de texto.  
+Se a caixa de texto contiver apenas uma data ou um número, você deverá usar a propriedade Format da caixa de texto para aplicar a `Format` formatação em vez da função dentro da caixa de texto.  
 
--   O `Right`, `Len`, e `InStr` funções são úteis para retornar uma subcadeia de caracteres, por exemplo, cortar *domínio*\\*nome de usuário* para apenas o nome de usuário. A expressão a seguir retorna a parte da cadeia de caracteres à direita de um caractere de barra invertida (\\) de um parâmetro denominado *User*:  
+-   As `Right`funções `Len`,, `InStr` e são úteis para retornar uma subcadeia de caracteres, por exemplo, aparando o nome de usuário do *domínio*\\*apenas para o* nome. A expressão a seguir retorna a parte da cadeia de caracteres à direita de um caractere de barra invertida (\\) de um parâmetro denominado *User*:  
 
 ```  
 =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -190,7 +190,7 @@ A expressão a seguir resulta no mesmo valor anterior, usando membros da classe 
 =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
 ```  
 
--   Exiba os valores selecionados de um parâmetro de vários valores. O exemplo a seguir usa o `Join` função para concatenar os valores selecionados do parâmetro *MySelection* em uma única cadeia de caracteres que pode ser definida como uma expressão para o valor de uma caixa de texto em um item de relatório:  
+-   Exiba os valores selecionados de um parâmetro de vários valores. O exemplo a seguir usa `Join` a função para concatenar os valores selecionados do parâmetro *myseleções* em uma única cadeia de caracteres que pode ser definida como uma expressão para o valor de uma caixa de texto em um item de relatório:  
 
 ```  
 = Join(Parameters!MySelection.Value)  
@@ -203,7 +203,7 @@ O exemplo a seguir faz o mesmo que exemplo acima, além de exibir uma cadeia de 
 
 ```  
 
--   O `Regex` funções do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> são úteis para alterar o formato de cadeias de caracteres existentes, por exemplo, um número de telefone de formatação. A expressão a seguir usa o `Replace` função para alterar o formato de um número de telefone de dez dígitos em um campo de "*nnn*-*nnn*-*nnnn* "para" (*nnn*) *nnn*-*nnnn*":  
+-   As `Regex` funções [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] dosãoúteisparaalteraroformatodascadeiasdecaracteresexistentes,porexemplo,formatarum<xref:System.Text.RegularExpressions> número de telefone. A expressão a seguir usa `Replace` a função para alterar o formato de um número de telefone de dez dígitos em um campo de "*nnn*-*nnn*-*nnnn*" para "(*nnn*) *nnn* - *nnnn*":  
 
 ```  
 =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -217,7 +217,7 @@ O exemplo a seguir faz o mesmo que exemplo acima, além de exibir uma cadeia de 
 -   Ao especificar um campo chave, você pode usar a função `Lookup` para recuperar um valor de um conjunto de dados para uma relação um-para-um como, por exemplo, um par de valor-chave. A expressão seguinte exibe o nome de produto de um conjunto de dados ("Produto"), considerando o identificador de produto para correspondência:  
 
 ```  
-=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
+=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields!ProductName.Value, "Product")  
 ```  
 
 #### <a name="lookupset"></a>LookupSet  
@@ -433,7 +433,7 @@ Você pode mostrar e ocultar itens em um relatório usando as propriedades de vi
 =IIF(CountRows()>12,false,true)  
 ```  
 
--   A expressão a seguir, quando definida no `Hidden` propriedade de uma coluna, mostrará a coluna apenas se o campo existir no conjunto de dados do relatório depois que os dados são recuperados da fonte de dados:  
+-   A expressão a seguir, quando definida na `Hidden` propriedade de uma coluna, mostrará a coluna somente se o campo existir no conjunto de dados do relatório depois que eles forem recuperados da fonte de dados:  
 
 ```  
 =IIF(Fields!Column_1.IsMissing, true, false)  
