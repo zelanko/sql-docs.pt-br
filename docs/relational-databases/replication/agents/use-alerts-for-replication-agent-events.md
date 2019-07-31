@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e63d7e75b0025fb5e23f2d9bc1120d77ff7faa2f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 84b1656e15f37dd0c1491d9eb8e385813f579fca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085897"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Usar Alertas para eventos do agente de replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ ms.locfileid: "51659395"
 |14150|**Replicação: êxito do agente**|Agente é encerrado com êxito.|Sim|  
 |14151|**Replicação: falha do agente**|Agente é desligado com um erro.|Sim|  
 |14152|**Replicação: repetição do agente**|O agente desliga após repetir uma operação sem-êxito (agente encontra erro, como servidor não disponível, deadlock, falha de conexão ou falha de tempo limite).|Sim|  
-|14157|**Replicação: assinatura expirada cancelada**|A assinatura expirada foi descartada.|não|  
-|20572|**Replicação: assinatura reinicializada após falha de validação**|Trabalho de resposta 'Reinicializar assinatura em falha de validação de dados' reinicializa uma assinatura com êxito.|não|  
+|14157|**Replicação: assinatura expirada cancelada**|A assinatura expirada foi descartada.|Não|  
+|20572|**Replicação: assinatura reinicializada após falha de validação**|Trabalho de resposta 'Reinicializar assinatura em falha de validação de dados' reinicializa uma assinatura com êxito.|Não|  
 |20574|**Replicação: falha na validação de dados do assinante**|O Agente de Distribuição ou Mesclagem falha na validação de dados.|Sim|  
-|20575|**Replicação: êxito na validação de dados do assinante**|Distribution ou Merge Agent passa na validação de dados.|Sim|  
+|20575|**Replicação: o assinante foi aprovado na validação de dados**|Distribution ou Merge Agent passa na validação de dados.|Sim|  
 |20578|**Replicação: desligamento personalizado do agente**|||  
 |22815|**Alerta de detecção de conflito ponto a ponto**|O Agente de Distribuição detectou um conflito ao tentar aplicar uma alteração a um nó ponto a ponto.|Sim|  
   
@@ -51,7 +50,7 @@ ms.locfileid: "51659395"
   
  **Para configurar os alertas de replicação predefinidos**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configurar alertas de replicação predefinidos – &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configurar alertas de replicação predefinidos &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
 ## <a name="viewing-the-application-log-directly"></a>Exibindo o log do aplicativo diretamente  
  Para visualizar o log do aplicativo do Windows, use o recurso Visualizador de Eventos do Windows do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . O log do aplicativo contém mensagens de erro do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , assim como mensagens para muitas outras atividades no computador. Ao contrário do log de erros do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , um novo aplicativo não é criado a cada vez que se inicia o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (cada sessão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grava novos eventos a um log de aplicativos existente); entretanto, é possível especificar quanto tempo os eventos registrados serão retidos. Ao exibir o log do aplicativo do Windows, é possível filtrar o log para eventos específicos. Para obter mais informações, consulte a documentação do Windows.  
@@ -62,7 +61,7 @@ ms.locfileid: "51659395"
 ### <a name="framework-for-automating-responses"></a>Estrutura para automatizar respostas  
  Normalmente, quando ocorre um alerta, a única informação se tem que o ajuda a entender o que causou o alerta e a ação apropriada a tomar está na própria mensagem de alerta. A análise dessas informações pode ser suscetível a erros e ser demorada. A replicação torna as respostas automáticas mais fáceis ao fornecer informações adicionais sobre o alerta na tabela do sistema **sysreplicationalerts** ; a informação fornecida já é analisada em um formato simples usado por programas personalizados.  
   
- Por exemplo, se a validação dos dados na tabela **Sales.SalesOrderHeader** no Assinante A falhar, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode acionar a mensagem 20574, notificando essa falha. A mensagem recebida será: "A assinatura do Assinante 'A', para o artigo 'SalesOrderHeader' na publicação 'MyPublication' falhou na validação de dados".  
+ Por exemplo, se a validação dos dados na tabela **Sales.SalesOrderHeader** no Assinante A falhar, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode acionar a mensagem 20574, notificando essa falha. A mensagem recebida será: "Assinante 'A', a assinatura do artigo 'SalesOrderHeader' na publicação 'MyPublication' falhou na validação de dados."  
   
  Ao criar uma resposta baseada nessa mensagem, é necessário analisar manualmente o nome do Assinante, nome do artigo e nome da publicação e erro da mensagem. Entretanto, como o Agente de Distribuição e o Agente de Mesclagem gravam a mesma informação no **sysreplicationalerts** (junto com detalhes como tipo de agente, hora do alerta, banco de dados de publicação, banco de dados do Assinante e tipo de publicação) o trabalho de resposta pode consultar diretamente a informação relevante da tabela. Embora a linha exata não possa ser associada com a instância específica do alerta, a tabela tem a coluna de **status** , que pode ser usada para controlar as entradas atendidas. As entradas nessa tabela serão mantidas pelo período de retenção do histórico.  
   

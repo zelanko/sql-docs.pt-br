@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ca7cb161bb4b3bebf2d7c65018b5221fd5bf1cf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e16f646a963d22a2fe3a6a67428970d11ee5cb43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100259"
 ---
 # <a name="overview-and-usage-scenarios"></a>Visão geral e cenários de uso
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ Para começar a usar em um aplicativo existente:
 
 #### <a name="customer-case-studies"></a>Estudos de caso de cliente
 
-- O CMC Markets utiliza o OLTP in-memory no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] para conseguir baixa latência consistente: [como um segundo é muito tempo de espera, essa empresa de serviços financeiros está atualizando seu software comercial agora.](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
+- O CMC Markets utiliza o OLTP in-memory no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] para obter baixa latência consistente: [como um segundo é muito tempo de espera, essa empresa de serviços financeiros está atualizando seu software comercial agora.](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
 - A Derivco usa o OLTP in-memory no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] para dar suporte a uma maior taxa de transferência e lidar com picos na carga de trabalho: [quando uma empresa de jogos online não quer correr risco, ela aposta no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
 
 
@@ -93,8 +92,8 @@ O repositório de amostras do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 #### <a name="customer-case-studies"></a>Estudos de caso de cliente
 
 - [A Quorum dobra a carga de trabalho principal do banco de dados, reduzindo a utilização em 70%, aproveitando o OLTP in-memory no Banco de Dados SQL do Azure](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
-- A EdgeNet melhorou o desempenho do carregamento de dados em lote e eliminou a necessidade de manter um cache de camada intermediária, com o OLTP in-memory no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [uma empresa de serviços de dados obtém acesso em tempo real aos dados de produtos com a tecnologia in-memory](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
-- O Beth Israel Deaconess Medical Center conseguiu melhorar de forma significativa a taxa de ingestão de dados de controladores de domínio e lidar com picos na carga de trabalho, com o OLTP In-Memory no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for]
+- A EdgeNet melhorou o desempenho do carregamento de dados em lote e eliminou a necessidade de manter um cache de camada intermediária, com o OLTP in-memory no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Empresa de serviços de dados ganha acesso em tempo real a dados de produto com a tecnologia in-memory](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
+- O Beth Israel Deaconess Medical Center conseguiu melhorar de forma significativa a taxa de ingestão de dados de controladores de domínio e lidar com picos na carga de trabalho, com o OLTP In-Memory no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for ]
 
 ### <a name="caching-and-session-state"></a>Estado de sessão e cache
 
@@ -112,8 +111,8 @@ Comece a usar o estado de sessão do ASP.NET com otimização de memória, aprov
 
 #### <a name="customer-case-studies"></a>Estudos de caso de cliente
 
-- A bwin conseguiu aumentar consideravelmente a taxa de transferência e reduzir a superfície de hardware do estado de sessão do ASP.NET com o OLTP in-memory no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [um site de jogos pode aumentar para 250.000 solicitações por segundo e melhorar a experiência do jogador](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an)
-- A bwin aumentou a taxa de transferência com o estado de sessão do ASP.NET e implementou um sistema de cache intermediário em toda a empresa com o OLTP in-memory no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]: [como a bwin está usando o OLTP in-memory do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] para atingir um desempenho e uma escala sem precedentes](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
+- A bwin conseguiu aumentar consideravelmente a taxa de transferência e reduzir o volume de hardware do estado de sessão do ASP.NET com o OLTP in-memory no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [um site de jogos pode aumentar para 250 mil solicitações por segundo e melhorar a experiência do jogador](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an)
+- a bwin aumentou a taxa de transferência com o estado de sessão do ASP.NET ainda mais e implementou um sistema de cache de camada intermediária em toda a empresa, com o OLTP in-memory no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]: [como a bwin está usando o OLTP in-memory do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] para atingir um desempenho e uma escala sem precedentes](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
 
 ### <a name="tempdb-object-replacement"></a>Substituição de objeto tempdb
 
@@ -123,12 +122,12 @@ Variáveis de tabela com otimização de memória e tabelas não duráveis norma
 
 #### <a name="implementation-considerations"></a>Considerações sobre implementação
 
-Para começar, veja: [Melhorando o desempenho da tabela temporária e da variável de tabela usando a otimização de memória.](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
+Para iniciar, confira: [Melhorar o desempenho da tabela temporária e da variável de tabela usando a otimização de memória.](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
 
 #### <a name="customer-case-studies"></a>Estudos de caso de cliente
 
 - Um cliente foi capaz de melhorar o desempenho em 40%, simplesmente substituindo TVPs tradicionais por TVPs com otimização de memória: [ingestão de dados IoT de alta velocidade usando o OLTP in-memory no Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)
-- A SentryOne melhorou significativamente a capacidade de ingestão de dados, com quase zero de latência em sua solução de monitoramento, trocando as tabelas no tempdb por tabelas OLTP in-memory como parte das melhorias de escalabilidade da empresa: [Solution provider breaks through performance ceiling with data monitoring innovation](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure) (Provedor de soluções supera o limite máximo do desempenho com inovação no monitoramento de dados).
+- A SentryOne melhorou significativamente a capacidade de ingestão de dados, com quase zero latência em sua solução de monitoramento, trocando as tabelas no tempdb por tabelas OLTP in-memory como parte das melhorias de escalabilidade da empresa: [provedor de soluções supera o limite máximo do desempenho com inovação no monitoramento de dados.](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure)
 
 ### <a name="etl-extract-transform-load"></a>ETL (Extrair, Transformar e Carregar)
 

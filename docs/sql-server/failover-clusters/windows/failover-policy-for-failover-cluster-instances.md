@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bce8b626c33bfb5a75fe7614ddb5c55d80d1d906
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8e2fae9bbc5f0f601f4d455204df6c9d18383458
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044754"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Política de failover para instâncias de cluster de failover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +104,7 @@ ms.locfileid: "52398640"
  *Valor padrão  
   
 ####  <a name="respond"></a> Respondendo a falhas  
- Após a detecção de uma ou mais condições de falha, como o serviço do WSFC responderá às falhas dependerá do estado do quorum do WSFC e das configurações de reinicialização e failover do grupo de recursos de FCI. Se a FCI tiver perdido seu quorum do WSFC, toda a FCI é colocada offline e a FCI perdeu sua alta disponibilidade. Se a FCI ainda tiver seu quorum do WSFC, o serviço do WSFC poderá responder primeiro tentando reiniciar o nó com falha e depois executando failover se as tentativas de reinicialização não forem bem-sucedidas. As configurações de reinicialização e failover são definidas no snap-in Gerenciador de Cluster de Failover. Para obter mais informações sobre essas configurações, consulte [\<Recursos> Propriedades: guia Políticas](https://technet.microsoft.com/library/cc725685.aspx).  
+ Após a detecção de uma ou mais condições de falha, como o serviço do WSFC responderá às falhas dependerá do estado do quorum do WSFC e das configurações de reinicialização e failover do grupo de recursos de FCI. Se a FCI tiver perdido seu quorum do WSFC, toda a FCI é colocada offline e a FCI perdeu sua alta disponibilidade. Se a FCI ainda tiver seu quorum do WSFC, o serviço do WSFC poderá responder primeiro tentando reiniciar o nó com falha e depois executando failover se as tentativas de reinicialização não forem bem-sucedidas. As configurações de reinicialização e failover são definidas no snap-in Gerenciador de Cluster de Failover. Para saber mais sobre essas configurações, confira [Propriedades do\<Resource>: guia de políticas](https://technet.microsoft.com/library/cc725685.aspx).  
   
  Para obter mais informações sobre como manter a integridade do quórum, veja [Configuração de modos de quorum e votação do WSFC &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   

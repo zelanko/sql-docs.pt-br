@@ -11,14 +11,13 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: dde30ce48bf559bc72b3cdf3a4544039328f53e7
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 5cc3f92ce5092db0131c9dac4d969b55a903c6e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585095"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126787"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Introdução ao Always Encrypted com enclaves seguros usando o SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -190,7 +189,7 @@ Nesta etapa, você habilitará a funcionalidade de Always Encrypted usando encla
 
     A consulta deve retornar o resultado a seguir:  
 
-    | nome                           | value | value_in_use |
+    | NAME                           | value | value_in_use |
     | ------------------------------ | ----- | -------------- |
     | column encryption enclave type | 1     | 1              |
 
@@ -269,7 +268,7 @@ Nesta etapa, você criará uma chave mestra da coluna e uma chave de criptografi
     4. Selecione **Permitir computações de enclave**.
     5. Se tiver selecionado o Azure Key Vault, entre no Azure e selecione seu cofre de chaves. Para obter mais informações sobre como criar um cofre de chaves para Always Encrypted, veja [Gerenciar cofres de chaves do portal do Azure](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
     6. Selecione seu certificado ou chave do Azure Key Value se ela já existir, ou clique no botão **Gerar Certificado** para criar um novo.
-    7. Selecione **OK**.
+    7. Escolha **OK**.
 
         ![Permitir computações de enclave](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
 
@@ -278,7 +277,7 @@ Nesta etapa, você criará uma chave mestra da coluna e uma chave de criptografi
     1. Clique com o botão direito do mouse em **Chaves Always Encrypted** e selecione **Nova chave de criptografia da coluna**.
     2. Insira um nome para a nova chave de criptografia da coluna: **CEK1**.
     3. No menu suspenso **Chave mestra da coluna**, selecione a chave mestra da coluna criada nas etapas anteriores.
-    4. Selecione **OK**.
+    4. Escolha **OK**.
 
 ## <a name="step-6-encrypt-some-columns-in-place"></a>Etapa 6: Criptografar algumas colunas em vigor
 
@@ -331,7 +330,7 @@ Agora você pode executar consultas avançadas nas colunas criptografadas. Algum
     2. Selecione **Opções...** .
     3. Navegue para **Execução da Consulta** > **SQL Server** > **Avançado**.
     4. A opção **Habilitar Parametrização do Always Encrypted** precisa estar marcada.
-    5. Selecione **OK**.
+    5. Escolha **OK**.
 2. Abra uma nova janela de consulta, cole e execute a consulta abaixo. A consulta deve retornar valores de texto sem formatação e linhas que atendem a critérios de pesquisa especificados.
 
     ```sql
@@ -343,7 +342,7 @@ Agora você pode executar consultas avançadas nas colunas criptografadas. Algum
 
 3. Tente fazer a mesma consulta novamente na instância do SSMS que não tem o Always Encrypted habilitado e observe a falha que ocorre.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>Next Steps
 Vá para [Tutorial: Como criar e usar índices em colunas habilitadas para enclave com criptografia aleatória](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md), que é a continuação deste tutorial.
 
 Confira [Configurar o Always Encrypted com enclaves seguros](encryption/configure-always-encrypted-enclaves.md) para obter informações sobre outros casos de uso do Always Encrypted com enclaves seguros. Por exemplo:

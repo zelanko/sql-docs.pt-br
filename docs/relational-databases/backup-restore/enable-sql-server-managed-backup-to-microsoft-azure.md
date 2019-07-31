@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 870d1b5d1a7bedb0d758be7eef4cb3f7b2e0106c
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: 281f1144fc9698fcb39d974167d02ce36602b4fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527079"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089826"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Habilitar o backup gerenciado do SQL Server no Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +89,7 @@ Registre a URL do contêiner e a SAS para uso na criação de uma CREDENCIAL DO 
   
 2.  **Garantir que o serviço SQL Server Agent foi iniciado e está em execução:** Inicie o SQL Server Agent se ele não estiver em execução.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] requer que o SQL Server Agent esteja em execução na instância para executar operações de backup.  Talvez seja necessário definir o SQL Server Agent para ser executado automaticamente, a fim de assegurar que as operações de backup ocorrerão regularmente.  
   
-3.  **Determinar o período de retenção:** Determine o período de retenção para os arquivos de backup. O período de retenção é especificado em dias e pode variar de 1 a 30.  
+3.  **Determinar o período de retenção:** determine o período de retenção dos arquivos de backup. O período de retenção é especificado em dias e pode variar de 1 a 30.  
   
 4.  **Habilitar e configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:**  Inicie o SQL Server Management Studio e conecte-se à instância e destino do SQL Server. Na janela de consulta, execute a seguinte instrução após modificar os valores do nome do banco de dados, da URL do contêiner e do período de retenção, de acordo com seus requisitos:  
   
@@ -110,7 +109,7 @@ Registre a URL do contêiner e a SAS para uso na criação de uma CREDENCIAL DO 
   
      [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está habilitado no banco de dados que você especificou. Podem ser necessários até 15 minutos para que as operações de backup no banco de dados comecem a ser executadas.  
   
-5.  **Examinar a Configuração Padrão do Evento Estendido:** Examine as configurações do evento estendido executando a instrução Transact-SQL a seguir.  
+5.  **Examinar a Configuração Padrão do Evento Estendido:** examine as configurações do Evento Estendido executando a instrução transact-SQL a seguir.  
   
     ```  
     SELECT * FROM msdb.managed_backup.fn_get_current_xevent_settings()  

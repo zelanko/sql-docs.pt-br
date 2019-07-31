@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bac81675ce0469fe39d11745462f2a3376aed73f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6563abe72382cb912e3d71851398e5d778b47a19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724644"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091747"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  A opção "default" deve estar entre aspas ("") ou colchetes ([]) quando usado com ALTER WORKLOAD GROUP para evitar conflito com DEFAULT, que é uma palavra reservada do sistema. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
-> Os grupos de carga de trabalho predefinidos e os pools de recursos usam nomes de letras minúsculas, como "padrão". Isso deve ser levado em consideração nos servidores que usam agrupamento com diferenciação de maiúsculas e minúsculas. Os servidores com agrupamento sem diferenciação de maiúsculas e minúsculas, como SQL_Latin1_General_CP1_CI_AS, tratarão "default" e "Default" da mesma maneira.  
+> Os grupos de carga de trabalho predefinidos e os pools de recursos usam nomes de letras minúsculas, como "padrão". Isso deve ser levado em consideração nos servidores que usam ordenação com diferenciação de maiúsculas e minúsculas. Os servidores com ordenação sem diferenciação de maiúsculas e minúsculas, como SQL_Latin1_General_CP1_CI_AS, tratarão "default" e "Default" da mesma maneira.  
   
  IMPORTANCE = { LOW | MEDIUM | HIGH }  
  Especifica a importância relativa de uma solicitação no grupo de carga de trabalho. A importância é uma das seguintes:  
@@ -116,7 +115,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Especifica o DOP (grau máximo de paralelismo) para solicitações paralelas. *value* deve ser 0 ou um inteiro positivo, de 1 a 255. Quando *value* for 0, o servidor escolherá o grau máximo de paralelismo. Essa é a configuração padrão e recomendada.  
   
 > [!NOTE]  
-> O valor real que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] define para MAX_DOP poderia ser menos que o valor especificado. O valor final é determinado pela fórmula min(255, *número de CPUs)*.  
+> O valor real que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] define para MAX_DOP poderia ser menos que o valor especificado. O valor final é determinado pela fórmula min(255, *número de CPUs)* .  
   
 > [!CAUTION]  
 > Alterar MAX_DOP pode comprometer o desempenho de um servidor. Se você precisar alterar MAX_DOP, nós recomendaremos que seja definido um valor menor que ou igual ao número máximo de agendadores de hardware que existem em um único nó NUMA. Nós recomendamos que você não defina MAX_DOP como um valor maior que 8.  
@@ -158,7 +157,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  Ao executar instruções DDL, é recomendável estar familiarizado com os estados do Administrador de Recursos. Para obter mais informações, consulte [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
- REQUEST_MEMORY_GRANT_PERCENT: no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], a criação de índice pode usar mais memória do espaço de trabalho do que aquela inicialmente concedida a fim de melhorar o desempenho. Esse tratamento especial tem suporte do Administrador de Recursos em versões posteriores. No entanto, a concessão inicial e qualquer concessão de memória adicional estão limitadas pelas configurações de pool de recursos e de grupo de cargas de trabalho.  
+ REQUEST_MEMORY_GRANT_PERCENT: Em [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], a criação de índice tem permissão para usar mais memória do workspace do que a concedida inicialmente para melhorar o desempenho. Esse tratamento especial tem suporte do Administrador de Recursos em versões posteriores. No entanto, a concessão inicial e qualquer concessão de memória adicional estão limitadas pelas configurações de pool de recursos e de grupo de cargas de trabalho.  
   
  **Criação de índice em uma tabela particionada**  
   

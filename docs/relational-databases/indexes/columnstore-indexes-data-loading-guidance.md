@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b458dc14c0a64428b5d59d7a4411327a82326d0d
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506493"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307633"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Índices columnstore – diretrizes de carregamento de dados
 
@@ -44,11 +43,15 @@ Como sugere o diagrama, um carregamento em massa:
 > Em uma tabela rowstore com os dados de um índice columnstore não clusterizado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre insere dados na tabela base. Os dados nunca são inseridos diretamente no índice columnstore.  
 
 O carregamento em tem estas otimizações de desempenho internas:
--   **Carregamentos paralelos:** Você pode ter várias cargas em massa simultâneas (bcp ou inserção em massa), cada uma carregando um arquivo de dados separado. Ao contrário dos carregamentos em massa rowstore no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], não é necessário especificar `TABLOCK` porque cada thread de importação em massa carregará dados exclusivamente em um rowgroup separado (rowgroups compactados ou delta) com um bloqueio exclusivo nele. O uso de `TABLOCK` forçará um bloqueio exclusivo na tabela e não será possível importar dados em paralelo.  
--   **Log mínimo:** Um carregamento em massa usa o registro em log mínimo nos dados que vão diretamente para rowgroups compactados. Todos os dados que vão para um rowgroup delta são totalmente registrados. Isso inclui qualquer tamanho de lote com menos de 102.400 linhas. No entanto, no carregamento em massa a meta é que a maioria dos dados ignore os rowgroups delta.  
--   **Otimização de bloqueio:** Ao carregar no rowgroup compactado, o bloqueio X no rowgroup é adquirido. No entanto, durante o carregamento em massa em um rowgroup delta, um bloqueio X é adquirido em um rowgroup, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda bloqueia os bloqueios PAGE/EXTENT porque o bloqueio do rowgroup X não faz parte da hierarquia de bloqueios.  
+-   **Carregamentos paralelos:** Você pode ter várias cargas em massa simultâneas (bcp ou inserção em massa), cada uma carregando um arquivo de dados separado. Ao contrário dos carregamentos em massa rowstore no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], não é necessário especificar `TABLOCK` porque cada thread de importação em massa carregará dados exclusivamente em um rowgroup separado (rowgroups compactados ou delta) com um bloqueio exclusivo nele. 
+
+-   **Registro em log reduzido:** Os dados carregados diretamente em grupos de linhas compactadas levam a uma redução significativa no tamanho do log. Por exemplo, se os dados tiverem sido compactados em 10 vezes, o log de transações correspondente será de aproximadamente 10 vezes menor sem a necessidade de um modelo de recuperação TABLOCK ou bulk-logged/simples. Todos os dados que vão para um rowgroup delta são totalmente registrados. Isso inclui qualquer tamanho de lote com menos de 102.400 linhas.  A melhor prática é usar o batchsize > = 102400. Como não há um TABLOCK necessário, você pode carregar os dados em paralelo. 
+
+-   **Log mínimo:** Você poderá obter mais redução no registro em log se seguir os pré-requisitos para o [registro em log mínimo](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md). No entanto, ao contrário do carregamento de dados em um rowstore, o TABLOCK leva a um bloqueio X na tabela em vez de um bloqueio BU (Atualização em Massa) e, portanto, o carregamento de dados paralelo não pode ser feito. Para obter mais informações sobre o bloqueio, confira [Bloqueio e controle de versão de linha[(../sql-server-transaction-locking-and-row-versioning-guide.md).
+
+-   **Otimização de bloqueio:** O bloqueio X em um grupo de linhas é adquirido automaticamente ao carregar dados em um grupo de linhas compactado. No entanto, durante o carregamento em massa em um rowgroup delta, um bloqueio X é adquirido em um rowgroup, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda bloqueia PAGE/EXTENT porque o bloqueio do rowgroup X não faz parte da hierarquia de bloqueios.  
   
-Se você tiver um índice de árvore B não clusterizado em um índice columnstore, não haverá otimização de log nem de bloqueio para o índice em si, mas as otimizações no índice columnstore clusterizado, conforme descrito acima, ainda permanecerão.  
+Se você tiver um índice de árvore B não clusterizado em um índice columnstore, não haverá otimização de log nem de bloqueio para o índice em si, mas as otimizações no índice columnstore clusterizado, conforme descrito acima, ainda serão aplicáveis.  
   
 ## <a name="plan-bulk-load-sizes-to-minimize-delta-rowgroups"></a>Planejar tamanhos de carga em massa para minimizar os rowgroups delta
 Os índices columnstore têm um desempenho melhor quando a maioria das linhas é compactada no columnstore e não permanece nos rowgroups delta. É melhor dimensionar suas cargas de tamanho para que as linhas vão diretamente para o columnstore e ignorem o deltastore o máximo possível.
@@ -59,7 +62,7 @@ Esses cenários descrevem quando as linhas carregadas vão diretamente para o co
 |-----------------------|-------------------------------------------|--------------------------------------|  
 |102.000|0|102.000|  
 |145.000|145.000<br /><br /> Tamanho do rowgroup: 145.000|0|  
-|1,048,577|1.048.576<br /><br /> Tamanho do rowgroup: 1.048.576.|1|  
+|1,048,577|1\.048.576<br /><br /> Tamanho do rowgroup: 1.048.576.|1|  
 |2,252,152|2,252,152<br /><br /> Tamanhos dos rowgroups: 1.048.576, 1.048.576, 155.000.|0|  
 | &nbsp; | &nbsp; | &nbsp; |
   
@@ -83,7 +86,7 @@ INSERT INTO <columnstore index>
 SELECT <list of columns> FROM <Staging Table>  
 ```  
   
- Esse comando carrega os dados no índice columnstore de forma semelhante ao BCP ou à Inserção em Massa, mas em um único lote. Se o número de linhas na tabela de preparo for inferior a 102.400, as linhas serão carregadas em um rowgroup delta, caso contrário, as linhas serão carregadas diretamente no rowgroup compactado. Uma importante limitação era que essa operação `INSERT` era single-threaded. Para carregar dados em paralelo, era possível criar várias tabelas de preparo ou emitir `INSERT`/`SELECT` com intervalos não sobrepostos de linhas da tabela de preparo. Essa limitação não existe no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. O comando abaixo carrega os dados da tabela de preparo em paralelo, mas você precisará especificar `TABLOCK`.  
+ Esse comando carrega os dados no índice columnstore de forma semelhante ao BCP ou à Inserção em Massa, mas em um único lote. Se o número de linhas na tabela de preparo for inferior a 102.400, as linhas serão carregadas em um rowgroup delta, caso contrário, as linhas serão carregadas diretamente no rowgroup compactado. Uma importante limitação era que essa operação `INSERT` era single-threaded. Para carregar dados em paralelo, era possível criar várias tabelas de preparo ou emitir `INSERT`/`SELECT` com intervalos não sobrepostos de linhas da tabela de preparo. Essa limitação não existe no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. O comando abaixo carrega os dados da tabela de preparo em paralelo, mas você precisará especificar `TABLOCK`. Você pode achar isso contraditório em relação ao que foi dito anteriormente com carregamento em massa, mas a principal diferença é que o carregamento de dados paralelos da tabela de preparo é executado na mesma transação.
   
 ```sql  
 INSERT INTO <columnstore index> WITH (TABLOCK) 
@@ -91,7 +94,7 @@ SELECT <list of columns> FROM <Staging Table>
 ```  
   
  Estas são as otimizações disponíveis ao fazer um carregamento em um índice columnstore clusterizado da tabela de preparo:
--   **Otimização de log:** minimamente registrado em log quando os dados são carregados em um rowgroup compactado. Não haverá registro mínimo quando os dados forem carregados no rowgroup delta.  
+-   **Otimização de log:** Registro em log reduzido quando os dados são carregados em um rowgroup compactado.   
 -   **Otimização de bloqueio:** Ao carregar no rowgroup compactado, o bloqueio X no rowgroup é adquirido. No entanto, com o rowgroup delta, um bloqueio X é adquirido em um rowgroup, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda bloqueia os bloqueios PAGE/EXTENT porque o bloqueio do rowgroup X não faz parte da hierarquia de bloqueios.  
   
  Se você tiver um ou mais índices não clusterizados, não haverá otimização de registro nem bloqueio para o índice em si, mas as otimizações no índice columnstore clusterizado, conforme descrito acima, permanecerão.  

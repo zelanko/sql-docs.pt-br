@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7b18f044dbeb09e70b017afa6f78efb84b527336
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecddec60e1a0fd30d28bfae52a5fef29a6425fbf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068487"
 ---
 # <a name="device-contents-sql-server"></a>Conteúdos do dispositivo (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,12 +57,12 @@ ms.locfileid: "47686524"
 |Cabeçalho|Valores|  
 |------------|------------|  
 |**Nome**|O nome do conjunto de backup.|  
-|**Tipo**|O tipo de backup efetuado: Completo, Diferencial ou Log de Transações.|  
-|**Componente**|O componente com backup: Banco de Dados, Arquivo ou *\<blank>* (para logs de transações).|  
+|**Tipo**|O tipo de backup realizado: Total, Diferencial ou Log de Transações.|  
+|**Componente**|o componente de backup: Banco de dados, Arquivo ou *\<blank>* (para logs de transação).|  
 |**Servidor**|O nome da instância de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizou a operação de backup.|  
 |**Backup de banco de dados**|O nome do banco de dados cujo backup foi efetuado.|  
 |**Posição**|A posição do conjunto de backup no volume.|  
-|**Date**|A data e hora da conclusão da operação de backup, apresentadas na configuração regional do cliente.|  
+|**Data**|A data e hora da conclusão da operação de backup, apresentadas na configuração regional do cliente.|  
 |**Tamanho**|O tamanho do conjunto de backup em bytes.|  
 |**Nome do Usuário**|O nome do usuário que realizou a operação de backup.|  
 |**Validade**|A data e hora de validade do conjunto de backup.|  

@@ -37,14 +37,13 @@ helpviewer_keywords:
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b408c61d265506f19c7c9c5a115381fe6b438a7b
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: b856ee0218f7b4909ad9c62a42b95dfd96c93abc
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334673"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68317102"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -121,7 +120,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  Expressões de tabela comuns também podem ser usadas com as instruções SELECT, INSERT, DELETE e CREATE VIEW. Para obter mais informações, confira [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- TOP **(** _expression_**)** [ PERCENT ]  
+ TOP **(** _expression_ **)** [ PERCENT ]  
  Especifica o número ou o percentual de linhas atualizadas. *expression* pode ser um número ou uma porcentagem das linhas.  
   
  As linhas referenciadas na expressão TOP usada com INSERT, UPDATE ou DELETE não são organizadas em qualquer ordem.  
@@ -159,7 +158,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  É uma coluna que contém os dados a serem alterados. *column_name* precisa existir em *table_or view_name*. Colunas de identidade não podem ser atualizadas.  
   
  *expressão*  
- É uma variável, valor literal, expressão ou uma instrução de subseleção (incluída com parênteses) que retorna um único valor. O valor retornado pela *expressão* substituirá o valor existente em *column_name* ou em *@variable*.  
+ É uma variável, valor literal, expressão ou uma instrução de subseleção (incluída com parênteses) que retorna um único valor. O valor retornado pela *expressão* substituirá o valor existente em *column_name* ou em @*variable*.  
   
 > [!NOTE]  
 >  Ao referenciar os tipos de dados de caractere Unicode **nchar**, **nvarchar** e **ntext**, 'expression' deve ter a letra maiúscula 'N' como prefixo. Se N não for especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte a cadeia na página de código correspondente à ordenação padrão do banco de dados ou coluna. Qualquer caractere não localizado nessa página de código será perdido.  
@@ -167,7 +166,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  DEFAULT  
  Especifica que o valor padrão definido para a coluna deve substituir o valor existente na coluna. Isso também poderá ser usado para alterar a coluna para NULL se ela não tiver nenhum padrão e estiver definida para permitir valores nulos.  
   
- { **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
+ { **+=**  |  **-=**  |  **\*=**  |  **/=**  |  **%=**  |  **&=**  |  **^=**  |  **|=** }  
  Operador de atribuição composto:  
  +=                       Adicionar e atribuir  
  -=                        Subtrair e atribuir  
@@ -184,24 +183,24 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *property_name* | *field_name*  
  É uma propriedade pública ou membro de dados público de um tipo definido pelo usuário.  
   
- *method_name* **(** *argument* [ **,**... *n*] **)**  
+ *method_name* **(** *argument* [ **,** ... *n*] **)**  
  É um método modificador público não estático de *udt_column_name* que usa um ou mais argumentos.  
   
- **.** WRITE **(**_expressão_**,**_@Offset_**,**_@Length_**)**  
- Especifica que uma seção do valor de *column_name* deve ser modificada. A *expressão* substitui as unidades de *@Length* de *@Offset* do *column_name*. Somente colunas de **varchar(max)**, **nvarchar(max)** ou **varbinary(max)** podem ser especificadas com esta cláusula. *column_name* não pode ser NULL e não pode ser qualificado com um nome de tabela nem com um alias de tabela.  
+ **.** WRITE **(** _expression_ **,** @_Offset_ **,** @_Length_ **)**  
+ Especifica que uma seção do valor de *column_name* deve ser modificada. A *expressão* substitui as unidades de @*Length* de @*Offset* do *column_name*. Somente colunas de **varchar(max)** , **nvarchar(max)** ou **varbinary(max)** podem ser especificadas com esta cláusula. *column_name* não pode ser NULL e não pode ser qualificado com um nome de tabela nem com um alias de tabela.  
   
- A *expressão* é o valor que é copiado para *column_name*. A *expressão* precisa ser avaliada ou ter a capacidade de ser convertida implicitamente no tipo *column_name*. Se a *expressão* for definida como NULL, *@Length* será ignorado e o valor em *column_name* será truncado no *@Offset* especificado.  
+ A *expressão* é o valor que é copiado para *column_name*. A *expressão* precisa ser avaliada ou ter a capacidade de ser convertida implicitamente no tipo *column_name*. Se a *expressão* for definida como NULL, @*Length* será ignorado e o valor em *column_name* será truncado no @*Offset* especificado.  
   
- *@Offset* é o ponto inicial no valor de *column_name* no qual a *expressão* é escrita. *@Offset* é uma posição ordinal com base em zero, é **bigint** e não pode ser um número negativo. Se *@Offset* for NULL, a operação de atualização acrescentará a *expressão* ao final do valor de *column_name* existente e *@Length* será ignorado. Se @Offset for maior que o comprimento do valor de *column_name*, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] retornará um erro. Se *@Offset* mais *@Length* exceder o final do valor subjacente na coluna, a exclusão ocorrerá até o último caractere do valor. Se *@Offset* mais LEN (*expressão*) for maior do que o tamanho subjacente declarado, ocorrerá um erro.  
+ @*Offset* é o ponto inicial no valor de *column_name* no qual a *expressão* é escrita. @*Offset* é uma posição ordinal com base em zero, é **bigint** e não pode ser um número negativo. Se @*Offset* for NULL, a operação de atualização acrescentará a *expressão* ao final do valor de *column_name* existente e @*Length* será ignorado. Se @Offset for maior que o comprimento do valor de *column_name*, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] retornará um erro. Se @*Offset* mais @*Length* exceder o final do valor subjacente na coluna, a exclusão ocorrerá até o último caractere do valor. Se @*Offset* mais LEN (*expressão*) for maior do que o tamanho subjacente declarado, ocorrerá um erro.  
   
- *@Length* é o comprimento da seção na coluna, começando em *@Offset*, que é substituído pela *expressão*. *@Length* é **bigint** e não pode ser um número negativo. Se *@Length* for NULL, a operação de atualização removerá todos os dados de *@Offset* até final do valor de *column_name*.  
+ @*Length* é o comprimento da seção na coluna, começando em @*Offset*, que é substituído pela *expressão*. @*Length* é **bigint** e não pode ser um número negativo. Se @*Length* for NULL, a operação de atualização removerá todos os dados de @*Offset* até final do valor de *column_name*.  
   
  Para obter mais informações, consulte Comentários.  
   
  **@** *variable*  
  É uma variável declarada definida como o valor retornado pela *expressão*.  
   
- SET **@**_variable_ = *column* = *expression* define a variável como o mesmo valor que a coluna. Isso é diferente de SET **@**_variable_ = _column_, _column_ = _expression_, que define a variável como o valor de pré-atualização da coluna.  
+ SET **@** _variable_ = *column* = *expression* define a variável como o mesmo valor que a coluna. Isso é diferente de SET **@** _variable_ = _column_, _column_ = _expression_, que define a variável como o valor de pré-atualização da coluna.  
   
  \<OUTPUT_Clause>  
  Retorna dados atualizados ou expressões com base neles, como parte da operação UPDATE. A cláusula OUTPUT não tem suporte em nenhuma instrução DML destinada a exibições ou tabelas remotas. Para obter mais informações, confira [Cláusula OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
@@ -240,7 +239,7 @@ GLOBAL
 *cursor_variable_name*  
  É o nome de uma variável de cursor. *cursor_variable_name* precisa fazer referência a um cursor que permita atualizações.  
   
-OPTION **(** \<query_hint> [ **,**... *n* ] **)**  
+OPTION **(** \<query_hint> [ **,** ... *n* ] **)**  
  Especifica que dicas de otimização são usadas para personalizar a maneira como o [!INCLUDE[ssDE](../../includes/ssde-md.md)] processa a instrução. Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="best-practices"></a>Práticas recomendadas  
@@ -331,21 +330,21 @@ GO
 >  Os tipos de dados **ntext**, **text** e **image** serão removidos em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses tipos de dados em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que os utilizam atualmente. Em vez disso, use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)e [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
   
 ### <a name="updating-large-value-data-types"></a>Atualizando tipos de dados de valor grande  
- Use a cláusula **\.** WRITE (_expression_**,** _@Offset_**,**_@Length_) para realizar uma atualização parcial ou completa dos tipos de dados **varchar(max)**, **nvarchar(max)** e **varbinary(max)**. Por exemplo, talvez uma atualização parcial de uma coluna **varchar(max)** poderá excluir ou modificar somente os 200 primeiros caracteres da coluna, enquanto uma atualização completa excluirá ou modificará todos os dados na coluna. As atualizações de **.** WRITE que inserem ou acrescentam novos dados serão registradas em log minimamente se o modelo de recuperação do banco de dados estiver definido como bulk-logged ou simples. A criação mínima de log não é usada quando valores existentes são atualizados. Para obter mais informações, consulte [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ Use a cláusula **.** WRITE **(** _expression_ **,** @_Offset_ **,** @_Length_ **)** para realizar uma atualização parcial ou completa dos tipos de dados **varchar(max)** , **nvarchar(max)** e **varbinary(max)** . Por exemplo, talvez uma atualização parcial de uma coluna **varchar(max)** poderá excluir ou modificar somente os 200 primeiros caracteres da coluna, enquanto uma atualização completa excluirá ou modificará todos os dados na coluna. As atualizações de **.WRITE** que inserem ou acrescentam novos dados serão registradas em log minimamente se o modelo de recuperação do banco de dados estiver definido como bulk-logged ou simples. A criação mínima de log não é usada quando valores existentes são atualizados. Para obter mais informações, consulte [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
  O [!INCLUDE[ssDE](../../includes/ssde-md.md)] converte uma atualização parcial em uma atualização completa quando a instrução UPDATE provoca uma destas ações:  
 -   Altera uma coluna de chave da exibição ou tabela particionada.  
 -   Modifica mais de uma linha e também atualiza a chave de um índice clusterizado não exclusivo para um valor não constante.  
   
-Não é possível usar a cláusula **.** WRITE para atualizar uma coluna NULL nem para definir o valor de *column_name* como NULL.  
+Não é possível usar a cláusula **.WRITE** para atualizar uma coluna NULL nem para definir o valor de *column_name* como NULL.  
   
-*@Offset* e *@Length* são especificados em bytes para os tipos de dados **varbinary** e **varchar** e em caracteres para o tipo de dados **nvarchar**. Os deslocamentos apropriados são computados para ordenações de DBCS (conjunto de caracteres de dois bytes).  
+@*Offset* e @*Length* são especificados em bytes para os tipos de dados **varbinary** e **varchar** e em caracteres para o tipo de dados **nvarchar**. Os deslocamentos apropriados são computados para ordenações de DBCS (conjunto de caracteres de dois bytes).  
   
 Para obter melhor desempenho, é recomendável que os dados sejam inseridos ou atualizados em tamanhos de blocos que sejam múltiplos de 8040 bytes.  
   
-Se a coluna modificada pela cláusula **.** WRITE for referenciada em uma cláusula OUTPUT, o valor completo da coluna, na imagem anterior em **deleted.**_column\_name_ ou na imagem posterior em **inserted.**_column\_name_, será retornado para a coluna especificada na variável de tabela. Veja o exemplo R a seguir.  
+Se a coluna modificada pela cláusula **\.WRITE** for referenciada em uma cláusula OUTPUT, o valor completo da coluna, na imagem anterior em **deleted.** _column\_name_ ou na imagem posterior em **inserted.** _column\_name_, será retornado para a coluna especificada na variável de tabela. Veja o exemplo R a seguir.  
   
-Para obter a mesma funcionalidade de **.** WRITE com outros tipos de dados de caractere ou binários, use [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md).  
+Para obter a mesma funcionalidade de **\.WRITE** com outros tipos de dados de caractere ou binários, use [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md).  
   
 ### <a name="updating-user-defined-type-columns"></a>Atualizando colunas de tipo definido pelo usuário  
  A atualização de valores em colunas de tipo definido pelo usuário pode ser realizada de uma das seguintes maneiras:  
@@ -497,7 +496,7 @@ UPDATE Person.Address
 SET ModifiedDate = GETDATE();  
 ```  
   
-#### <a name="b-updating-multiple-columns"></a>b. Atualizando várias colunas  
+#### <a name="b-updating-multiple-columns"></a>B. Atualizando várias colunas  
  O exemplo a seguir atualiza os valores das colunas `Bonus`, `CommissionPct` e `SalesQuota` de todas as linhas da tabela `SalesPerson`.  
   
 ```sql  

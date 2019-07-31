@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f928fcfc873e1a5e6209338b075a9df0ff543691
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dda51dd5449719aedd7697310c1f7befe3ee1390
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115418"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscrever uma instância do SQL Server (Utilitário do SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,12 +88,12 @@ ms.locfileid: "52509788"
 -   [Inscrevendo a instância do SQL Server](#Enrolling)  
   
 ##  <a name="Welcome"></a> Introdução ao Assistente para Inscrever Instância  
- Para iniciar o Assistente, expanda a árvore do Gerenciador do Utilitário em um ponto de controle do utilitário, clique com o botão direito do mouse em **Instâncias Gerenciadas** e selecione **Adicionar Instância Gerenciada...**.  
+ Para iniciar o Assistente, expanda a árvore do Gerenciador do Utilitário em um ponto de controle do utilitário, clique com o botão direito do mouse em **Instâncias Gerenciadas** e selecione **Adicionar Instância Gerenciada...** .  
   
  Para continuar, clique em **Avançar**.  
   
 ##  <a name="Instance_name"></a> Especificar a instância do SQL Server  
- Para selecionar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na caixa de diálogo de conexão, clique em **Conectar...**. Forneça o nome do computador e o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no formato ComputerName\InstanceName. Para obter mais informações, veja [Conectar-se ao servidor &#40;Mecanismo de Banco de Dados&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ Para selecionar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na caixa de diálogo de conexão, clique em **Conectar...** . Forneça o nome do computador e o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no formato ComputerName\InstanceName. Para obter mais informações, veja [Conectar-se ao servidor &#40;Mecanismo de Banco de Dados&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
  Para continuar, clique em **Avançar**.  
   
@@ -104,7 +103,7 @@ ms.locfileid: "52509788"
 > [!NOTE]  
 >  Se a conexão for criptografada, ela será usada. Se a conexão não for criptografada, o Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conectará novamente usando uma conexão criptografada.  
   
- Para continuar, clique em **Conectar...**.  
+ Para continuar, clique em **Conectar...** .  
   
 ##  <a name="Proxy_configuration"></a> Conta do conjunto de coleta do utilitário  
  Especifique uma conta de domínio do Windows para executar o conjunto de coleta do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa conta é usada como a conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para o conjunto de coleta do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Alternativamente, você pode usar a conta de Serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent existente. Para passar nos requisitos de validação, use as diretrizes a seguir para especificar a conta.  
@@ -147,9 +146,9 @@ ms.locfileid: "52509788"
   
  Configurações de instâncias gerenciadas:  
   
--   Nome da Instância do SQL Server: NomedoComputador\NomedaInstância  
+-   Nome da instância do SQL Server: Nome_do_Computador\Nome_da_Instância  
   
--   Conta de Conjunto de Coleta do Utilitário: NomedoDomínio\NomedoUsuário  
+-   Conta do conjunto de coleta do utilitário: Nome_do_Domínio\Nome_de_Usuário  
   
  Para continuar, clique em **Avançar**.  
   
@@ -171,7 +170,7 @@ ms.locfileid: "52509788"
 >   
 >  Ocorreu uma exceção ao executar uma instrução ou um lote Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Informações adicionais: não foi possível obter informações sobre o grupo/usuário '\<DomainName\AccountName>' do Windows NT, código de erro 0x5. (Microsoft SQL Server, Erro: 15404)  
+>  Informações adicionais:  não foi possível obter informações sobre o grupo/usuário do Windows NT ‘\<NomeDeDomínio\NomeDeConta>', código de erro 0x5. (Microsoft SQL Server, Erro: 15404)  
 >   
 >  Para obter mais informações sobre como solucionar essa falha, veja [Solucionar problemas do Utilitário do SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: usando o tipo de dados hierarchyid | Microsoft Docs'
+title: 'Tutorial: Usando o tipo de dados hierarchyid | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,26 +13,25 @@ helpviewer_keywords:
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 41e33a33d969f074139c6bdeb5eba99f59728831
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ae451d86f2490765f3871deca925f4b6348e2304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140424"
 ---
-# <a name="tutorial-using-the-hierarchyid-data-type"></a>Tutorial: Usando o tipo de dados hierarchyid
+# <a name="tutorial-using-the-hierarchyid-data-type"></a>Tutorial: Como usar o tipo de dados HierarchyId
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 Este tutorial se destina a usuários com experiência no [!INCLUDE[tsql](../../includes/tsql-md.md)], mas não familiarizados com o tipo de dados **hierarchyid** .  
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
 Este tutorial é dividido em duas lições:  
   
-[Lição 1: convertendo uma tabela em uma estrutura hierárquica](../../relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
+[Lição 1: Convertendo uma tabela em uma estrutura hierárquica](../../relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
 Nesta lição, você aprenderá a usar uma tabela de funcionário existente que foi estruturada como uma hierarquia pai/filho e move os dados para uma nova tabela que representa a hierarquia, usando o tipo de dados **hierarchyid** . Esta lição exige o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-[Lição 2: criando e gerenciando dados em uma tabela hierárquica](../../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
+[Lição 2: Criando e gerenciando dados em uma tabela hierárquica](../../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
 Nesta lição, você aprenderá a criar uma tabela usando o tipo de dados **hierarchyid** para representar a estrutura da hierarquia. Em seguida, você manipula os dados da tabela usando os métodos hierárquicos.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -45,7 +44,7 @@ O sistema deverá ter o seguinte instalado:
 -   Internet Explorer 6 ou versão posterior.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Tutorial: introdução ao Mecanismo de Banco de Dados](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
+[Tutorial: Introdução ao Mecanismo de Banco de Dados](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 [Tutorial: Gravando instruções Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
 [Referência de método de tipo de dados hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Dados hierárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  

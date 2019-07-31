@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 0f0dec8faf609eeef7d82e2d746a0f84aec6a6de
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 2dd802097e083adb633549174dbc420b5967fb10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093587"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objeto Recursos Preteridos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |Instâncias do contador de Recursos Preteridos do SQL Server|Descrição|  
 |------------------------------------------------------|-----------------|  
 |'#' e '##' como o nome de tabelas temporárias e procedimentos armazenados|Um identificador que não contém nenhum caractere diferente de # foi encontrado. Use pelo menos um caractere adicional. Ocorre uma vez por compilação.|  
-|sintaxe '::' de chamada de função|A sintaxe de chamada de função :: foi encontrada para uma função com valor de tabela. Substitua por `SELECT column_list FROM` *< function_name>*`()`. Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)` por `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Ocorre uma vez por compilação.|  
+|sintaxe '::' de chamada de função|A sintaxe de chamada de função :: foi encontrada para uma função com valor de tabela. Substitua por `SELECT column_list FROM` *< function_name>* `()`. Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)` por `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Ocorre uma vez por compilação.|  
 |'\@' e nomes que começam com '\@\@' como identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]|Foi encontrado um identificador que começava com \@ ou \@\@. Não use \@ nem \@v@ nem nomes que comecem com \@\@ como identificadores. Ocorre uma vez por compilação.|  
 |ADDING TAPE DEVICE|O recurso preterido sp_addumpdevice'**tape**' foi encontrado. Em seu lugar, use sp_addumpdevice'**disk**'. Ocorre uma vez por uso.|  
 |Permissão ALL|Número total de vezes que a sintaxe GRANT ALL, DENY ALL ou REVOKE ALL foi encontrada. Modifique a sintaxe para negar permissões específicas. Ocorre uma vez por consulta.|  

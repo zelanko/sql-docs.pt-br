@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2db3b6241096501190e2d1c8e3978bd349fed7a3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4729caa9c90ae2ebc90ab3254b4222e0fb47ae46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067529"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -91,7 +90,7 @@ ALTER FULLTEXT INDEX ON table_name
  Especifica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não manterá uma lista de alterações nos dados indexados.  
   
  ADD | DROP *column_name*  
- Especifica as colunas a serem adicionadas ou excluídas de um índice de texto completo. A coluna ou colunas devem ser do tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** ou **varbinary(max)**.  
+ Especifica as colunas a serem adicionadas ou excluídas de um índice de texto completo. A coluna ou colunas devem ser do tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** ou **varbinary(max)** .  
   
  Use a cláusula DROP apenas em colunas que foram habilitadas anteriormente para indexação de texto completo.  
   
@@ -128,7 +127,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Cria a frase-chave adicional e índices de similaridade de documentos que fazem parte da indexação semântica estatística. Para obter mais informações, veja [Pesquisa semântica &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
- [ **,**_...n_]  
+ [ **,** _...n_]  
  Indica que várias colunas podem ser especificadas para as cláusulas ADD, ALTER ou DROP. Ao especificar várias colunas, separe-as com vírgulas.  
   
  WITH NO POPULATION  
@@ -136,7 +135,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Quando a opção NO POPULATION for especificada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não populará um índice. O índice será populado somente depois que o usuário executar um comando ALTER FULLTEXT INDEX...START POPULATION. Quando a opção NO POPULATION não for especificada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] populará o índice.  
   
- Se CHANGE_TRACKING estiver habilitado e WITH NO POPULATION for especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro. Se CHANGE_TRACKING estiver habilitado e WITH NO POPULATION não for especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executará uma população completa no índice.  
+ Se CHANGE_TRACKING estiver habilitado e WITH NO POPULATION for especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro. Se CHANGE_TRACKING estiver habilitado e WITH NO POPULATION não for especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executará um preenchimento completo do índice.  
   
 > [!NOTE]  
 >  Para obter mais informações sobre a interação do controle de alterações e WITH NO POPULATION, consulte "Comentários" mais adiante neste tópico.  
@@ -232,7 +231,7 @@ ALTER FULLTEXT INDEX ON table_name
 > [!NOTE]  
 >  Para obter mais informações sobre como a pesquisa de texto completo funciona com listas de propriedades de pesquisa, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md). Para obter informações sobre índices de texto completo, veja [Preencher índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).  
   
-### <a name="scenario-a-switching-directly-to-a-different-search-property-list"></a>Cenário A: Alternando diretamente para uma outra lista de propriedades de pesquisa  
+### <a name="scenario-a-switching-directly-to-a-different-search-property-list"></a>Cenário A: alternar diretamente para uma outra lista de propriedades de pesquisa  
   
 1.  Um índice de texto completo é criado em `table_1` com uma lista de propriedades de pesquisa `spl_1`:  
   
@@ -256,7 +255,7 @@ ALTER FULLTEXT INDEX ON table_name
   
      Essa instrução gera uma população completa, o comportamento padrão.  Porém, antes de começar essa população, o Mecanismo de Texto Completo trunca o índice automaticamente.  
   
-### <a name="scenario-b-turning-off-the-search-property-list-and-later-associating-the-index-with-any-search-property-list"></a>Cenário B: Desativando a lista de propriedades de pesquisa e depois associando o índice a qualquer lista de propriedades de pesquisa  
+### <a name="scenario-b-turning-off-the-search-property-list-and-later-associating-the-index-with-any-search-property-list"></a>Cenário B: desativar a lista de propriedades de pesquisa e depois associar o índice a qualquer lista de propriedades de pesquisa  
   
 1.  Um índice de texto completo é criado em `table_1` com uma lista de propriedades de pesquisa `spl_1`, seguido pelo preenchimento completo automático (o comportamento padrão):  
   
@@ -283,7 +282,7 @@ ALTER FULLTEXT INDEX ON table_name
      Essa instrução inicia uma população completa, o comportamento padrão.  
   
     > [!NOTE]  
-    >  A recriação também seria necessária para uma lista de propriedades de pesquisa diferente, como `spl_2`.  
+    >  A recompilação também seria necessária para uma lista de propriedades de pesquisa diferente, como `spl_2`.  
   
 ## <a name="permissions"></a>Permissões  
  O usuário deve ter a permissão ALTER na exibição de tabela ou indexada, ou ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** ou **db_owner**.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c93844267fd91f248c073b00b12c4a07d16d7da5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2581a2a6c91640ce00b8bc804d8b52183de533ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063969"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Criar um novo cluster de failover do SQL Server (instalação)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52525289"
   
  As opções a seguir estão disponíveis para a instalação de cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- **Opção 1: Instalação integrada com Adicionar Nó**  
+ **Opção 1: Instalação de integração com Adicionar Nó**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consiste nas seguintes etapas:  
   
@@ -230,7 +229,7 @@ ms.locfileid: "52525289"
   
 ##  <a name="prepare"></a> Preparar  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Etapa 1 da instalação avançada/corporativa do cluster de failover: Preparar  
+#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Etapa 1 da Instalação avançada/corporativa do cluster de failover: Preparar  
   
 1.  Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, na pasta raiz, clique duas vezes em Setup.exe. Para instalar a partir de um compartilhamento de rede, vá para a pasta raiz do compartilhamento e clique duas vezes em Setup.exe. Para obter mais informações sobre como instalar os pré-requisitos, consulte [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md). Talvez você receba uma solicitação para instalar os pré-requisitos, caso eles não tenham sido instalados anteriormente.  
   
@@ -322,7 +321,7 @@ ms.locfileid: "52525289"
   
 ## <a name="complete"></a>Concluído  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Etapa 2 da instalação avançada/corporativa do cluster de failover: Concluir  
+#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Etapa 2 da Instalação avançada/corporativa do cluster de failover: Concluído  
   
 1.  Após a preparação de todos os nós, conforme descrito na [etapa de preparação](#prepare), execute a Instalação em um dos nós preparados, de preferência no nó que tem o disco compartilhado. Na página **Avançado** da Central de Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , clique em **Conclusão de cluster avançado**.  
   

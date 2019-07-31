@@ -1,5 +1,5 @@
 ---
-title: 'Relatório de andamento: classe de evento de operação de índice online | Microsoft Docs'
+title: 'Relatório de andamento: classe de evento Online Index Operation | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1dc6541ec2d4a1efe4227ffc96f5d50ab19edf7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9388483151326222dd8fa5e085467b15600eca9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940647"
 ---
-# <a name="progress-report-online-index-operation-event-class"></a>Classe de evento Progress Report: Online Index Operation
+# <a name="progress-report-online-index-operation-event-class"></a>Relatório de andamento: Classe de evento Operação de Índice Online
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  A classe de evento Progress Report: Online Index Operation  indica o progresso de uma operação de construção de índice online enquanto a operação de construção está em execução.  
+  A classe de evento Progress Report: Online Index Operation indica o progresso de uma operação de build de índice online enquanto o processo de build está em execução.  
   
-## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Colunas de dados de classe de evento Progress Report: Online Index Operation  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Relatório de andamento: colunas de dados da classe de evento Online Index Operation  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -36,8 +35,8 @@ ms.locfileid: "47790864"
 |DatabaseName|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |Duração|**bigint**|Período de tempo (em microssegundos) utilizado pelo evento.|13|Sim|  
 |EndTime|**datetime**|Hora em que a operação de índice online foi concluída.|15|Sim|  
-|EventClass|**int**|Tipo de evento = 190.|27|não|  
-|EventSequence|**int**|Sequência de um determinado evento na solicitação.|51|não|  
+|EventClass|**int**|Tipo de evento = 190.|27|Não|  
+|EventSequence|**int**|Sequência de um determinado evento na solicitação.|51|Não|  
 |EventSubClass|**int**|Tipo de subclasse de evento.<br /><br /> 1 = Iniciar<br /><br /> 2=Início de execução da etapa 1<br /><br /> 3=Término de execução da etapa 1<br /><br /> 4= Início de execução da etapa 2<br /><br /> 5= Término de execução da etapa 2<br /><br /> 6=Contagem de linhas inseridas<br /><br /> 7=Concluído<br /><br /> A etapa 1 refere-se ao objeto base (índice clusterizado ou heap), ou se a operação de índice envolver somente um índice não clusterizado. A etapa 2 é usada quando uma operação de compilação de índice envolver a recompilação original além de índices não clusterizados adicionais.  Por exemplo, se um objeto tiver um índice clusterizado e vários índices não clusterizados, 'recompilar tudo' recompilará todos os índices. O objeto base (o índice clusterizado) é recompilado na etapa 1 e, em seguida, todos os índices não clusterizados são recompilados na etapa 2.|21|Sim|  
 |GroupID|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
@@ -51,7 +50,7 @@ ms.locfileid: "47790864"
 |ObjectName|**nvarchar**|Nome do objeto que está sendo referenciado.|34|Sim|  
 |PartitionId|**bigint**|A ID da partição que está sendo construída.|65|Sim|  
 |PartitionNumber|**int**|O número ordinário da partição que está sendo construída.|25|Sim|  
-|ServerName|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|não|  
+|ServerName|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |SessionLoginName|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |SPID|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |StartTime|**datetime**|Hora do início do evento.|14|Sim|  

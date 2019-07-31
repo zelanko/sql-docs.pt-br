@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5d32e301-0f44-4916-b0db-76e8322c0ab7
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 46426f8bebc3078e4b76712294da8765de24dc4f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e51d931d46fe490303df20c1590e721e25f5ab92
+ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101829"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290333"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Versões anteriores do SQL Server Data Tools (SSDT e SSDT-BI)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,6 +33,7 @@ Os últimos downloads são fornecidos no caso pouco provável de você enfrentar
 
 |Versão do SSDT| Visual Studio 2017|
 |:---|:---|
+|15.9.1|[SSDT para VS2017 15.9.1](https://go.microsoft.com/fwlink/?linkid=2086373)|
 |15.9.0|[SSDT para VS2017 15.9.0](https://go.microsoft.com/fwlink/?linkid=2052454)|
 |15.8.2|[SSDT para VS2017 15.8.2](https://go.microsoft.com/fwlink/?linkid=2038031)|
 |15.8.0|[SSDT para VS2017 15.8.0](https://go.microsoft.com/fwlink/?linkid=2014060)|

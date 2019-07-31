@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0995346ac3c740efb6779f69e29003abf625a81e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100458"
 ---
 # <a name="move-system-databases"></a>Mover bancos de dados do sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -147,9 +146,9 @@ ms.locfileid: "54136116"
   
 1.  Pelo menu **Iniciar** , aponte para **Todos os Programas**, aponte para **Microsoft SQL Server**, aponte para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
   
-2.  No nó **Serviços do SQL Server** , clique com o botão direito do mouse na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, **SQL Server [MSSQLSERVER]**) e escolha **Propriedades**.  
+2.  No nó **Serviços do SQL Server** , clique com o botão direito do mouse na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, **SQL Server [MSSQLSERVER]** ) e escolha **Propriedades**.  
   
-3.  Na caixa de diálogo **Propriedades do SQL Server (**_nome_instância_**)** , clique na guia **Parâmetros de Inicialização** .  
+3.  Na caixa de diálogo **Propriedades do SQL Server (** _nome_instância_ **)** , clique na guia **Parâmetros de Inicialização** .  
   
 4.  Na caixa **Parâmetros existentes**, selecione o parâmetro -d para mover o arquivo de dados mestre. Clique em **Atualizar** para salvar a alteração.  
   
@@ -192,7 +191,7 @@ ms.locfileid: "54136116"
 ##  <a name="Resource"></a> Movendo o banco de dados de recursos  
  A localização do banco de dados Resource é \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\. O banco de dados não pode ser movido.  
   
-##  <a name="Follow"></a> Acompanhamento: Depois de mover todos os bancos de dados do sistema  
+##  <a name="Follow"></a> Acompanhamento: depois de mover todos os bancos de dados do sistema  
  Se você moveu todos os bancos de dados do sistema para uma nova unidade ou volume ou para outro servidor com uma letra de unidade diferente, faça as atualizações a seguir.  
   
 -   Altere o caminho do log do SQL Server Agent. Se você não atualizar este caminho, o SQL Server Agent não iniciará.  

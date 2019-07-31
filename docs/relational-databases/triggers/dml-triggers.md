@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 979866917514cb10689f60bf5114d02dbe889fd9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 543b28f5980c8126a9475a54557a05964718c707
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056130"
 ---
 # <a name="dml-triggers"></a>Gatilhos DML
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ ms.locfileid: "47826704"
 |Aplicabilidade|Tabelas|Tabelas e exibições|  
 |Quantidade por tabela ou exibição|Múltiplas ações por ação de gatilho (UPDATE, DELETE e INSERT)|Uma ação por ação de gatilho (UPDATE, DELETE e INSERT)|  
 |Referências em cascata|Nenhuma restrição se aplica|Os gatilhos INSTEAD OF UPDATE e DELETE não são permitidos em tabelas que são destinos de restrições de integridade referencial em cascata.|  
-|Execução|Após:<br /><br /> Processamento da restrição<br /><br /> Ações referenciais declarativas<br /><br /> Criação de tabelas**inserted** e **deleted** <br /><br /> A ação de gatilho|Antes: processamento da restrição<br /><br /> Em vez de: a ação de gatilho<br /><br /> Depois: criação de tabelas  **inserted** e **deleted**|  
+|Execução|Após:<br /><br /> Processamento da restrição<br /><br /> Ações referenciais declarativas<br /><br /> Criação de tabelas**inserted** e **deleted**<br /><br /> A ação de gatilho|Antes: Processamento da restrição<br /><br /> Em lugar de:  A ação de gatilho<br /><br /> Depois: criação de tabelas  **inserted** e **deleted**|  
 |Ordem de execução|A primeira e a última execução podem ser especificadas|Não aplicável|  
-|Referências de coluna**varchar(max)**, **nvarchar(max)** e **varbinary(max)** nas tabelas **inserted** e **deleted** |Allowed (permitido)|Allowed (permitido)|  
-|Referências de coluna**text**, **ntext**e **image** nas tabelas **inserted** e **deleted** |Não permitido|Allowed (permitido)|  
+|Referências de coluna**varchar(max)** , **nvarchar(max)** e **varbinary(max)** nas tabelas **inserted** e **deleted**|Allowed (permitido)|Allowed (permitido)|  
+|Referências de coluna**text**, **ntext**e **image** nas tabelas **inserted** e **deleted**|Não permitido|Allowed (permitido)|  
   
  Gatilhos CLR  
  Um gatilho CLR pode ser um gatilho AFTER ou INSTEAD OF. Um gatilho CLR também pode ser um gatilho DDL. Em vez de executar um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] , um gatilho CLR executa um ou mais métodos gravados em código gerenciado que são membros de um assembly criado no .NET Framework e carregado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

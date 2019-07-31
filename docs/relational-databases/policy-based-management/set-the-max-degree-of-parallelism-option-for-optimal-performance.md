@@ -1,7 +1,7 @@
 ---
 title: Definir o grau máximo da opção de paralelismo para obter o desempenho ideal | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec908006-67ae-4674-9a61-25ea741d6197
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 10187162bec9286867c56def5c8bc2b4c1ed5382
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 00123da615c420fa3d58daae9a287ce3c13b8329
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51655615"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316670"
 ---
 # <a name="set-the-max-degree-of-parallelism-option-for-optimal-performance"></a>Definir o grau máximo da opção de paralelismo para obtenção do desempenho ideal
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "51655615"
  Defina a opção grau máximo de paralelismo como 8 ou menos usando sp_configure.  
   
 ## <a name="for-more-information"></a>Para obter mais informações  
- [Artigo 329204 da Base de Dados de Conhecimento Microsoft](https://go.microsoft.com/fwlink/?linkid=117786)  
+ [Recomendações e diretrizes para a opção de configuração max degree of parallelism do SQL Server](https://go.microsoft.com/fwlink/?linkid=117786)  
   
  [Configurar a opção de configuração de servidor max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)  
   

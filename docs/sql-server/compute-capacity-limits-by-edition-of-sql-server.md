@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b74eddf6fa77c63d7b4657375883e9b83e1893d4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6bd60789112a8aa28481b3bb615f1df2a957125a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067572"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Computar limites de capacidade por edição do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ A tabela a seguir especifica os limites de capacidade de computação para uma �
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edição|Capacidade máxima de computação para uma única instância ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacidade máxima de computação para uma única instância (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
-|Enterprise Edition: licenciamento baseado em núcleo\*|Máximo do sistema operacional|Máximo do sistema operacional|  
+|Edição Enterprise: Licenciamento baseado em núcleo\*|Máximo do sistema operacional|Máximo do sistema operacional|  
 |Desenvolvedor|Máximo do sistema operacional|Máximo do sistema operacional|  
 |Standard|Limitado a menos de 4 soquetes ou 24 núcleos|Limitado a menos de 4 soquetes ou 24 núcleos|  
 |Express|Limitado a menos de 1 soquete ou 4 núcleos|Limitado a menos de 1 soquete ou 4 núcleos|  

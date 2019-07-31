@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2c9c2cbb9799447ad3e12cab311a5153d6341045
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902807"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
 ## <a name="arguments"></a>Argumentos  
  *event_notification_name*  
- É o nome da notificação de eventos. O nome de uma notificação de eventos deve estar em conformidade com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md) e deve ser exclusivo no escopo em que é criado: SERVER, DATABASE ou *object_name*.  
+ É o nome da notificação de eventos. O nome de uma notificação de evento deve estar em conformidade com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md) e deve ser exclusivo no escopo em que é criado: SERVER, DATABASE ou *object_name*.  
   
  SERVER  
  Aplica o escopo da notificação de eventos à instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se for especificada, a notificação será acionada sempre que o evento especificado na cláusula FOR ocorrer em qualquer lugar na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -95,7 +94,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  As conversas permanecem abertas até que a notificação de eventos seja descartada. Alguns erros podem fazer as conversas fecharem antes. O encerramento explícito de algumas ou todas as conversas pode impedir que o serviço de destino receba mais mensagens.  
   
- { **'**_broker\_instance\_specifier_**'** | **'current database'** }  
+ { **'** _broker\_instance\_specifier_ **'**  |  **'current database'** }  
  Especifica uma instância do Service Broker na qual *broker_service* é resolvido. O valor para um agente de serviços específico pode ser adquirido ao consultar a coluna **service_broker_guid** da exibição do catálogo **sys.databases**. Use **'current database'** para especificar a instância do Service Broker no banco de dados atual. **'current database'** é um literal de cadeia de caracteres que não diferencia maiúsculas de minúsculas.  
   
 > [!NOTE]  
@@ -131,7 +130,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  Nos exemplos A e B abaixo, o GUID na cláusula `TO SERVICE 'NotifyService'` ('8140a771-3c4b-4479-8ac0-81008ab17984') é específico do computador no qual o exemplo foi configurado. Para essa instância, esse era o GUID para o banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
 >   
->  Para copiar e executar esses exemplos, é necessário substituir esse GUID pelo GUID do seu computador e pela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Conforme explicado na seção Argumentos acima, você pode adquirir **'**_broker\_instance\_specifier_**'** consultando a coluna service_broker_guid da exibição de catálogo sys.databases.  
+>  Para copiar e executar esses exemplos, é necessário substituir esse GUID pelo GUID do seu computador e pela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Conforme explicado na seção Argumentos acima, você pode adquirir **'** _broker\_instance\_specifier_ **'** consultando a coluna service_broker_guid da exibição de catálogo sys.databases.  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. Criando uma notificação de eventos no escopo do servidor  
  O exemplo a seguir cria os objetos obrigatórios para configurar um serviço de destino usando o [!INCLUDE[ssSB](../../includes/sssb-md.md)]. O serviço de destino faz referência ao tipo de mensagem e ao contrato do serviço de inicialização específico para notificações de eventos. Em seguida, uma notificação de evento é criada nesse serviço de destino, que envia uma notificação sempre que um evento de rastreamento `Object_Created` acontece na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -32,17 +32,16 @@ helpviewer_keywords:
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f91b618e98fa9036b27a398731ecfaca51925611
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558953"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134426"
 ---
 # <a name="database-mail-configuration-objects"></a>Objetos de configuração do Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  O Database Mail tem dois objetos de configuração: os objetos de configuração de banco de dados permitem que você defina as configurações que Database Email deve usar ao enviar um email de seu aplicativo de banco de dados ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  O Database Mail tem dois objetos de configuração: Os objetos de configuração de banco de dados permitem que você defina as configurações que o Database Mail deve usar ao enviar um email de seu aplicativo de banco de dados ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 -   Contas do Database Mail  
   
@@ -62,9 +61,9 @@ ms.locfileid: "51558953"
   
 -   Autenticação do Windows: O Database Mail usa as credenciais da conta de serviço do Windows do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para autenticação no servidor SMTP.  
   
--   Autenticação Básica: O Database Mail usa o nome de usuário e a senha especificados para autenticação no servidor SMTP.  
+-   Autenticação Básica:  O Database Mail usa o nome de usuário e a senha especificados para autenticação no servidor SMTP.  
   
--   Autenticação Anônima: O servidor SMTP não exige nenhuma autenticação.  O Database Mail não usará nenhuma credencial para a autenticação no servidor SMTP.  
+-   Autenticação Anônima:  O servidor SMTP não exige nenhuma autenticação.  O Database Mail não usará nenhuma credencial para a autenticação no servidor SMTP.  
   
  As informações da conta são armazenadas no banco de dados **msdb** . Cada conta consiste nas seguintes informações:  
   

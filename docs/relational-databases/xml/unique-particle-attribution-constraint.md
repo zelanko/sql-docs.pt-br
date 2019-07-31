@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c213f8923fcdc4751b2944b2e62d4e565a509285
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b09c2392f49bdfb8a86c33ce16679ec02c232310
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078009"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Restrição de atribuição de partícula exclusiva
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,11 +81,11 @@ ms.locfileid: "58510163"
 ## <a name="finding-more-information"></a>Descobrindo mais informações  
  O documento a seguir é publicado pelo World Wide Web Consortium (W3C) e contém a descrição técnica da restrição de atribuição de partícula ambígua.  
   
- "Esquema XML Parte 1: segunda edição das estruturas, recomendações propostas editadas do W3C":  
+ "Parte 1 do esquema XML: segunda edição das estruturas, recomendação proposta editada do W3C":  
   
--   Seção 3.8.6: Restrições em componentes de esquema do grupo de modelos  
+-   Seção 3.8.6: restrições em componentes de esquema do grupo de modelos  
   
--   Apêndice H: Análise da restrição de atribuição de partícula exclusiva (não normativa)  
+-   Apêndice H: análise da restrição de atribuição de partícula exclusiva (não normativa)  
   
  Para consultar o documento, visite [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881).  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7c28685843884275261909cd54309a83e5d3d1e2
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 1d510ad8d52aedb46cf591712467c22c0929c42e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051264"
 ---
 # <a name="query-method-xml-data-type"></a>Método consulta() (Tipo de dados xml)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ A saída a seguir mostra o resultado:
 </Features>        
 ```  
   
-### <a name="b-using-the-query-method-against-an-xml-type-column"></a>b. Usando o método query() em relação a uma coluna do tipo XML  
+### <a name="b-using-the-query-method-against-an-xml-type-column"></a>B. Usando o método query() em relação a uma coluna do tipo XML  
 No seguinte exemplo, o método **query()** é usado para especificar uma consulta XQuery na coluna **CatalogDescription** do tipo **xml** no banco de dados **AdventureWorks**:  
   
 ```  

@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 00b6ddce8d5c69e16913290b0300fc6828352147
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 451743ebafe719b554384edd2d9abadb60e070f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685673"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039136"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ O exemplo a seguir ilustra como limpar caches que são específicos de pool de r
 DBCC FREESYSTEMCACHE ('ALL', default);  
 ```  
   
-### <a name="b-releasing-entries-from-their-respective-caches-after-they-become-unused"></a>b. Removendo entradas de seus respectivos caches quando elas não são mais utilizadas.  
+### <a name="b-releasing-entries-from-their-respective-caches-after-they-become-unused"></a>B. Removendo entradas de seus respectivos caches quando elas não são mais utilizadas.  
 O exemplo seguinte usa a cláusula MARK_IN_USE_FOR_REMOVAL para remover entradas de todos os caches atuais quando elas não são mais utilizadas.
   
 ```sql

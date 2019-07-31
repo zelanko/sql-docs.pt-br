@@ -1,5 +1,5 @@
 ---
-title: 'Lição 2: Criando e gerenciando dados em uma tabela hierárquica | Microsoft Docs'
+title: 'Lição 2: Criar e gerenciar dados em uma tabela hierárquica | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54a3323e550ba3534fdc491e42c70c43ba686dc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 657dedcf4944a2540d1237b53fa8ea822c31ae3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782044"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031638"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>Lição 2: criar e gerenciar dados em uma tabela hierárquica
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ Para concluir este tutorial, você precisará do SQL Server Management Studio, b
 - Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Baixe o [Bancos de dados de exemplo do AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 
-As instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Restaurando um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
+Instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Restaurar um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## <a name="create-a-table-using-the-hierarchyid-data-type"></a>Criar uma tabela por meio de um tipo de dados hierarchyid
 O exemplo a seguir cria uma tabela com o nome EmployeeOrg, que inclui dados de funcionário junto com sua hierarquia de relatórios. O exemplo cria a tabela no banco de dados AdventureWorks2017, mas isso é opcional. Para manter o exemplo simples, essa tabela inclui somente cinco colunas:  
@@ -293,7 +292,7 @@ Agora que a tabela HumanResources.EmployeeOrg está completamente populada, essa
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 Reorganizar uma hierarquia é uma tarefa de manutenção comum. Nesta tarefa, usaremos a instrução UPDATE com o método [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) para mover primeiramente uma única linha para um novo local da hierarquia. Em seguida, moveremos uma subárvore inteira para um novo local.  
   
-O método `GetReparentedValue` toma dois argumentos. O primeiro argumento descreve a parte da hierarquia a ser modificada. Por exemplo, se uma hierarquia for **/1/4/2/3/** e você desejar alterar a seção **/1/4/** , a hierarquia se tornará **/2/1/2/3/**; se deixar os últimos dois nós (**2/3/**) inalterados, você precisará fornecer os nós que estão sendo alterados (**/1/4/**) como o primeiro argumento. O segundo argumento fornece o novo nível hierárquico, em nosso exemplo **/2/1/**. Os dois argumentos não precisam conter o mesmo número de níveis.  
+O método `GetReparentedValue` toma dois argumentos. O primeiro argumento descreve a parte da hierarquia a ser modificada. Por exemplo, se uma hierarquia for **/1/4/2/3/** e você desejar alterar a seção **/1/4/** , a hierarquia se tornará **/2/1/2/3/** ; se deixar os últimos dois nós (**2/3/** ) inalterados, você precisará fornecer os nós que estão sendo alterados ( **/1/4/** ) como o primeiro argumento. O segundo argumento fornece o novo nível hierárquico, em nosso exemplo **/2/1/** . Os dois argumentos não precisam conter o mesmo número de níveis.  
   
 ### <a name="move-a-single-row-to-a-new-location-in-the-hierarchy"></a>Mover uma linha única para um novo local hierárquico  
   
@@ -323,7 +322,7 @@ O método `GetReparentedValue` toma dois argumentos. O primeiro argumento descre
     GO  
     ```  
   
-    Valentina encontra-se agora no nó **/3/1/**.  
+    Valentina encontra-se agora no nó **/3/1/** .  
   
 ### <a name="reorganize-a-section-of-a-hierarchy"></a>Reorganizar uma seção de hierarquia  
   
@@ -334,7 +333,7 @@ O método `GetReparentedValue` toma dois argumentos. O primeiro argumento descre
     GO  
     ```  
   
-2.  Kevin agora se reporta a Wanida, que se reporta a Jill, que se reporta a David. Isso significa que Julio se encontra no nível **/3/1/1/**. Para mover todos os subordinados de Julieta para um novo administrador, atualizaremos todos os nós com **/3/** como seus **OrgNode** para um novo valor. Execute o seguinte código para atualizar Wanida, de modo que passe a se reportar a Sariya, mas deixando Kevin se reportando a Wanida:  
+2.  Kevin agora se reporta a Wanida, que se reporta a Jill, que se reporta a David. Isso significa que Julio se encontra no nível **/3/1/1/** . Para mover todos os subordinados de Julieta para um novo administrador, atualizaremos todos os nós com **/3/** como seus **OrgNode** para um novo valor. Execute o seguinte código para atualizar Wanida, de modo que passe a se reportar a Sariya, mas deixando Kevin se reportando a Wanida:  
   
     ```sql  
     DECLARE @OldParent hierarchyid, @NewParent hierarchyid  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 85643186d92e2033fc909ae166533cac0e18f44d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbe9c2805a6e8b5354207534b5758c28081011e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121280"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Publicando execução de procedimento armazenado em replicação transacional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio: [Publicar a execução de um procedimento armazenado em uma publicação transacional &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   Programação Transact-SQL de replicação: execute [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) e especifique o valor “serializable proc exec” (recomendado) ou “proc exec” para o parâmetro **@type**. Para obter mais informações sobre como definir artigos, consulte [Definir um artigo](../../../relational-databases/replication/publish/define-an-article.md).  
+-   Programação Transact-SQL de replicação: execute [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) e especifique o valor “serializable proc exec” (recomendado) ou “proc exec” para o parâmetro **@type** . Para obter mais informações sobre como definir artigos, consulte [Definir um artigo](../../../relational-databases/replication/publish/define-an-article.md).  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>Modificando o procedimento no Assinante  
  Por padrão, a definição de procedimento armazenado no Publicador é propagada para todos os Assinantes. Porém, é igualmente possível modificar o procedimento armazenado no Assinante. Isso será útil para executar lógicas diferentes no Publicador e no Assinante. Por exemplo, considere **sp_big_delete**, um procedimento armazenado do Publicador que tem duas funções: exclui 1.000.000 linhas da tabela replicada **big_table1** e atualiza a tabela não replicada **big_table2**. Para reduzir a demanda por recursos de rede, propague a exclusão de 1 milhão de linhas como procedimento armazenado publicando **sp_big_delete**. No Assinante, modifique **sp_big_delete** para excluir apenas o 1 milhão de linhas e não realizar a atualização subsequente em **big_table2**.  

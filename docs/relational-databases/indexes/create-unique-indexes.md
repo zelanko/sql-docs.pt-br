@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: caec4221795ed991c01d635931989499302b0c1d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7129c5feb6bc23a7e72dddfa70a10d4d2bc0811c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515079"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898600"
 ---
 # <a name="create-unique-indexes"></a>Criar índices exclusivos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -114,15 +113,15 @@ ms.locfileid: "52515079"
   
 6.  Selecione o novo índice na caixa de texto **Índice ou Chave Exclusiva/Primária Selecionada** .  
   
-7.  Na grade principal, em **(Geral)**, selecione **Tipo** e escolha **Índice** na lista.  
+7.  Na grade principal, em **(Geral)** , selecione **Tipo** e escolha **Índice** na lista.  
   
-8.  Selecione **Colunas** e clique no botão reticências **(...)**.  
+8.  Selecione **Colunas** e clique no botão reticências **(...)** .  
   
 9. Na caixa de diálogo **Colunas de Índice** , em **Nome da Coluna**, selecione as colunas que você deseja indexar. Você pode selecionar até 16 colunas. Para um desempenho ideal, selecione somente uma ou duas colunas por índice. Para cada coluna selecionada, indique se o índice organiza os valores dessa coluna em ordem crescente ou decrescente.  
   
 10. Quando todas as colunas para o índice estiverem selecionadas, clique em **OK**.  
   
-11. Na grade, em **(Geral)**, selecione **É Exclusivo** e escolha **Sim** na lista.  
+11. Na grade, em **(Geral)** , selecione **É Exclusivo** e escolha **Sim** na lista.  
   
 12. Opcional: na grade principal, em **Designer de Tabela**, selecione **Ignorar Chaves Duplicadas** e escolha **Sim** na lista. Faça isso se você desejar ignorar as tentativas de adição de dados que criariam uma chave duplicada no índice exclusivo.  
   
@@ -138,13 +137,13 @@ ms.locfileid: "52515079"
   
 3.  Expanda a tabela na qual você deseja criar um índice exclusivo.  
   
-4.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Não Clusterizado...**.  
+4.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Não Clusterizado...** .  
   
 5.  Na caixa de diálogo **Novo Índice** , na página **Geral** , insira o nome do novo índice na caixa **Nome do índice** .  
   
 6.  Marque a caixa de seleção **Exclusivo** .  
   
-7.  Na guia **Colunas de chave de índice**, clique em **Adicionar...**.  
+7.  Em **Colunas de chave de índice**, clique em **Adicionar...** .  
   
 8.  Na caixa de diálogo **Selecionar Colunas de**_table\_name_, marque as caixas de seleção das colunas da tabela ou das colunas a serem adicionadas ao índice exclusivo.  
   

@@ -31,14 +31,13 @@ helpviewer_keywords:
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 536283eb15d0b2f40e896520ab5d73327320bf56
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: c2ca8bd62bc1f05e655875c528efa8ea32b20ff5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948424"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT – GROUP BY – Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -345,7 +344,7 @@ A cláusula GROUP BY é compatível com todos os recursos de GROUP BY incluídos
 |Recurso|SQL Server Integration Services|Nível de compatibilidade 100 ou superior do SQL Server|Nível de compatibilidade 90 do SQL Server 2008 ou posterior.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |Agregações de DISTINCT|Não há suporte para WITH CUBE ou WITH ROLLUP.|Há suporte para WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE ou ROLLUP.|Igual ao nível de compatibilidade 100.|  
-|Função definida pelo usuário com nome CUBE ou ROLLUP na cláusula GROUP BY|A função definida pelo usuário **dbo.cube(**_arg1_**,**_...argN_**)** ou **dbo.rollup(**_arg1_**,**..._argN_**)** na cláusula GROUP BY é permitida.<br /><br /> Por exemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|A função definida pelo usuário **dbo.cube (**_arg1_**,**...argN **)** ou **dbo.rollup(** arg1 **,**_...argN_**)** na cláusula GROUP BY não é permitida.<br /><br /> Por exemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> A mensagem de erro a seguir será retornada: "Sintaxe incorreta próxima à palavra-chave 'cube'&#124;'rollup."<br /><br /> Para evitar esse problema, substitua `dbo.cube` por `[dbo].[cube]` ou `dbo.rollup` por `[dbo].[rollup]`.<br /><br /> O exemplo a seguir é permitido: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|A função definida pelo usuário **dbo.cube (**_arg1_**,**_...argN_) ou **dbo.rollup(**_arg1_**,**_...argN_**)** na cláusula GROUP BY é permitida<br /><br /> Por exemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|Função definida pelo usuário com nome CUBE ou ROLLUP na cláusula GROUP BY|A função definida pelo usuário **dbo.cube(** _arg1_ **,** _...argN_ **)** ou **dbo.rollup(** _arg1_ **,** ..._argN_ **)** na cláusula GROUP BY é permitida.<br /><br /> Por exemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|A função definida pelo usuário **dbo.cube (** _arg1_ **,** ...argN **)** ou **dbo.rollup(** arg1 **,** _...argN_ **)** na cláusula GROUP BY não é permitida.<br /><br /> Por exemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> A mensagem de erro a seguir será retornada: "Sintaxe incorreta próxima à palavra-chave 'cube'&#124;'rollup."<br /><br /> Para evitar esse problema, substitua `dbo.cube` por `[dbo].[cube]` ou `dbo.rollup` por `[dbo].[rollup]`.<br /><br /> O exemplo a seguir é permitido: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|A função definida pelo usuário **dbo.cube (** _arg1_ **,** _...argN_) ou **dbo.rollup(** _arg1_ **,** _...argN_ **)** na cláusula GROUP BY é permitida<br /><br /> Por exemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|Sem suporte|Tem suporte|Tem suporte|  
 |CUBE|Sem suporte|Tem suporte|Sem suporte|  
 |ROLLUP|Sem suporte|Tem suporte|Sem suporte|  
@@ -369,7 +368,7 @@ GROUP BY SalesOrderID
 ORDER BY SalesOrderID;  
 ```  
   
-### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>b. Usar uma cláusula GROUP BY com várias tabelas  
+### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>B. Usar uma cláusula GROUP BY com várias tabelas  
  O exemplo a seguir recupera o número de funcionários de cada `City` da tabela `Address` unida à tabela `EmployeeAddress`. Este exemplo usa o AdventureWorks. 
   
 ```sql  

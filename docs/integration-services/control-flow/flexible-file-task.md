@@ -12,13 +12,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2d01304a36f7676f53ffef3f6c6e3c600cb87cb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc95201ec856d5e7daa998c7de52b91981af5552
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66411093"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316634"
 ---
 # <a name="flexible-file-task"></a>Tarefa Arquivo Flexível
 
@@ -49,3 +48,22 @@ Para a operação **Copy**, as seguintes propriedades estão disponíveis.
 - **DestinationConnection:** especifica o gerenciador de conexões de destino.
 - **DestinationFolderPath:** especifica o caminho da pasta de destino.
 - **DestinationFileName:** especifica o nome do arquivo de destino.
+
+***Observações sobre a configuração de permissão da entidade de serviço***
+
+Para que a **conexão de teste** funcione (armazenamento de blobs ou Data Lake Storage Gen2), a entidade de serviço deve ser atribuída pelo menos à função de **Leitor de Dados do Storage Blob** para a conta de armazenamento.
+Isso é feito com o [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
+
+Para o armazenamento de blobs, as permissões de leitura e gravação são concedidas por meio da atribuição de pelo menos as funções de **Leitor de Dados do Storage Blob** e **Colaborador de Dados do Storage Blob**, respectivamente.
+
+Para o Azure Data Lake Storage Gen2, a permissão é determinada pelo RBAC e pelas [ACLs](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
+Preste atenção nas ACLs que são configuradas usando a OID (ID de objeto) da entidade de serviço para o registro do aplicativo, conforme detalhado [aqui](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
+Isso é diferente da ID do aplicativo (cliente) que é usada com a configuração de RBAC.
+Quando uma entidade de segurança recebe permissões de dados RBAC por meio de uma função interna ou por meio de uma função personalizada, essas permissões são avaliadas primeiro após a autorização de uma solicitação.
+Se a operação solicitada for autorizada pelas atribuições de RBAC da entidade de segurança, a autorização será imediatamente resolvida e nenhuma verificação de ACL adicional será executada.
+Como alternativa, se a entidade de segurança não tiver uma atribuição de RBAC ou se a operação da solicitação não corresponder à permissão atribuída, as verificações de ACL serão executadas para determinar se a entidade de segurança está autorizada a executar a operação solicitada.
+
+- Para a permissão de leitura, conceda pelo menos a permissão de **execução** no sistema de arquivos de origem, juntamente com a permissão de **Leitura** para os arquivos a serem copiados. Como alternativa, conceda pelo menos a função de **Leitor de dados do blob de armazenamento** com RBAC.
+- Para a permissão de gravação, conceda pelo menos a permissão de **execução** no sistema de arquivos do coletor, juntamente com a permissão de **gravação** para a pasta do coletor. Como alternativa, conceda pelo menos a função de **Colaborador de dados do blob de armazenamento** com RBAC.
+
+Consulte [este](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) artigo para obter detalhes.

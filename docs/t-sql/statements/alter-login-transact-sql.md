@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1273f4fc87728aa30cec9bc51cb119fc2c51551
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 3fb9ce4696ffea2c345eeaeca769dda6548a9ebc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071315"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -95,24 +94,24 @@ ALTER LOGIN login_name
 
 *login_name* Especifica o nome do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo alterado. Logons no domínio devem ser colocados entre colchetes no formato [domínio\usuário].
 
-ENABLE | DISABLE Habilita ou desabilita este logon. Desabilitar um logon não afeta o comportamento de logons que já estão conectados. (Use a instrução `KILL` para encerrar as conexões existentes.) Logons desabilitados retêm suas permissões e ainda podem ser representados.
+ENABLE | DISABLE Habilita ou desabilita este logon. Desabilitar um logon não afeta o comportamento de logons que já estão conectados. (Use a instrução `KILL` para encerrar as conexões existentes.) Os logons desabilitados retêm suas permissões e ainda podem ser representados.
 
-PASSWORD **='**_password_**'** Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica a senha do logon que está sendo alterado. As senhas diferenciam maiúsculas de minúsculas.
+PASSWORD **='** _password_ **'** Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica a senha do logon que está sendo alterado. As senhas diferenciam maiúsculas de minúsculas.
 
-PASSWORD **=**_hashed\_password_ Aplica-se somente à palavra-chave HASHED. Especifica o valor com hash da senha para o logon que está sendo criado.
+PASSWORD **=** _hashed\_password_ Aplica-se somente à palavra-chave HASHED. Especifica o valor com hash da senha para o logon que está sendo criado.
 
 > [!IMPORTANT]
 > Quando um logon (ou um usuário de banco de dados independente) se conecta e é autenticado, a conexão armazena em cache as informações de identidade sobre o logon. Para um logon de Autenticação do Windows, isso inclui informações sobre a associação em grupos do Windows. A identidade do logon permanece autenticada desde que a conexão seja mantida. Para forçar alterações na identidade, como uma redefinição de senha ou alteração na associação de grupo do Windows, o logon deve fazer logoff da autoridade de autenticação (Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e fazer logon novamente. Um membro da função de servidor fixa ou **sysadmin** ou qualquer logon com a permissão **ALTER ANY CONNECTION** pode usar o comando **KILL** para terminar uma conexão e forçar um logon para reconectar. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pode reutilizar informações de conexão ao abrir várias conexões para as janelas do Pesquisador de Objetos e do Editor de Consultas. Feche todas as conexões para forçar a reconexão.
 
 HASHED Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica que a senha digitada depois do argumento PASSWORD já esteja com hash. Se esta opção não for selecionada, a senha terá hash antes de ser armazenada no banco de dados. Essa opção deve ser usada somente para sincronização de logon entre dois servidores. Não use a opção HASHED para alterar senhas rotineiramente.
 
-OLD_PASSWORD **='**_oldpassword_**'** Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A senha atual do logon a que uma senha nova será atribuída. As senhas diferenciam maiúsculas de minúsculas.
+OLD_PASSWORD **='** _oldpassword_ **'** Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A senha atual do logon a que uma senha nova será atribuída. As senhas diferenciam maiúsculas de minúsculas.
 
 MUST_CHANGE Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se esta opção estiver incluída, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicitará uma senha atualizada quando o logon alterado for usado pela primeira vez.
 
-DEFAULT_DATABASE **=**_database_ Especifica um banco de dados padrão a ser atribuído ao logon.
+DEFAULT_DATABASE **=** _database_ Especifica um banco de dados padrão a ser atribuído ao logon.
 
-DEFAULT_LANGUAGE **=**_language_ Especifica um idioma padrão a ser atribuído ao logon. O idioma padrão para todos os logons de Banco de Dados SQL é o inglês e não pode ser alterado. O idioma padrão do logon `sa` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em Linux, é o inglês, mas pode ser alterado.
+DEFAULT_LANGUAGE **=** _language_ Especifica um idioma padrão a ser atribuído ao logon. O idioma padrão para todos os logons de Banco de Dados SQL é o inglês e não pode ser alterado. O idioma padrão do logon `sa` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em Linux, é o inglês, mas pode ser alterado.
 
 NAME = *login_name* O nome novo do logon que está sendo renomeado. Se este for um logon do Windows, o SID do administrador do Windows correspondente ao novo nome deverá corresponder ao SID associado ao logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O nome novo de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode conter um caractere de barra invertida (\\).
 
@@ -183,7 +182,7 @@ O exemplo seguinte ativa o logon `Mary5`.
 ALTER LOGIN Mary5 ENABLE;
 ```
 
-### <a name="b-changing-the-password-of-a-login"></a>b. Alterando a senha de um logon
+### <a name="b-changing-the-password-of-a-login"></a>B. Alterando a senha de um logon
 
 O exemplo seguinte altera a senha de logon `Mary5` para uma senha forte.
 
@@ -302,16 +301,16 @@ ALTER LOGIN login_name
 
 *login_name* Especifica o nome do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo alterado. Logons no domínio devem ser colocados entre colchetes no formato [domínio\usuário].
 
-ENABLE | DISABLE Habilita ou desabilita este logon. Desabilitar um logon não afeta o comportamento de logons que já estão conectados. (Use a instrução `KILL` para encerrar as conexões existentes.) Logons desabilitados retêm suas permissões e ainda podem ser representados.
+ENABLE | DISABLE Habilita ou desabilita este logon. Desabilitar um logon não afeta o comportamento de logons que já estão conectados. (Use a instrução `KILL` para encerrar as conexões existentes.) Os logons desabilitados retêm suas permissões e ainda podem ser representados.
 
-PASSWORD **='**_password_**'** Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica a senha do logon que está sendo alterado. As senhas diferenciam maiúsculas de minúsculas.
+PASSWORD **='** _password_ **'** Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica a senha do logon que está sendo alterado. As senhas diferenciam maiúsculas de minúsculas.
 
 Conexões continuamente ativas para banco de dados SQL exigem nova autorização (executada pelo mecanismo de banco de dados) pelo menos a cada 10 horas. O Mecanismo de Banco de Dados tenta a nova autorização usando a senha enviada originalmente e não é necessária nenhuma entrada do usuário. Por motivos de desempenho, quando uma senha for redefinida no Banco de Dados SQL, a conexão não será autenticada novamente, mesmo que ela seja redefinida devido ao pool de conexões. Isso é diferente do comportamento do SQL Server local. Se a senha for alterada depois que a conexão for autorizada inicialmente, a conexão precisará ser terminada e uma nova conexão deverá ser feita usando a nova senha. Um usuário com a permissão KILL DATABASE CONNECTION pode terminar explicitamente uma conexão com o Banco de Dados SQL usando o comando KILL. Para obter mais informações, consulte [KILL](../../t-sql/language-elements/kill-transact-sql.md).
 
 > [!IMPORTANT]
 > Quando um logon (ou um usuário de banco de dados independente) se conecta e é autenticado, a conexão armazena em cache as informações de identidade sobre o logon. Para um logon de Autenticação do Windows, isso inclui informações sobre a associação em grupos do Windows. A identidade do logon permanece autenticada desde que a conexão seja mantida. Para forçar alterações na identidade, como uma redefinição de senha ou alteração na associação de grupo do Windows, o logon deve fazer logoff da autoridade de autenticação (Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e fazer logon novamente. Um membro da função de servidor fixa ou **sysadmin** ou qualquer logon com a permissão **ALTER ANY CONNECTION** pode usar o comando **KILL** para terminar uma conexão e forçar um logon para reconectar. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pode reutilizar informações de conexão ao abrir várias conexões para as janelas do Pesquisador de Objetos e do Editor de Consultas. Feche todas as conexões para forçar a reconexão.
 
-OLD_PASSWORD **='**_oldpassword_**'** Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A senha atual do logon a que uma senha nova será atribuída. As senhas diferenciam maiúsculas de minúsculas.
+OLD_PASSWORD **='** _oldpassword_ **'** Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A senha atual do logon a que uma senha nova será atribuída. As senhas diferenciam maiúsculas de minúsculas.
 
 NAME = *login_name* O nome novo do logon que está sendo renomeado. Se este for um logon do Windows, o SID do administrador do Windows correspondente ao novo nome deverá corresponder ao SID associado ao logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O nome novo de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode conter um caractere de barra invertida (\\).
 
@@ -344,7 +343,7 @@ O exemplo seguinte ativa o logon `Mary5`.
 ALTER LOGIN Mary5 ENABLE;
 ```
 
-### <a name="b-changing-the-password-of-a-login"></a>b. Alterando a senha de um logon
+### <a name="b-changing-the-password-of-a-login"></a>B. Alterando a senha de um logon
 
 O exemplo seguinte altera a senha de logon `Mary5` para uma senha forte.
 
@@ -496,23 +495,23 @@ ALTER LOGIN login_name
 
 *login_name* Especifica o nome do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo alterado. Os logons do Azure AD precisam ser especificados como user@domain. Por exemplo, john.smith@contoso.com ou como o nome do grupo ou do aplicativo do Azure AD. Para logons do Azure AD, o *login_name* precisa corresponder a um logon existente do Azure AD criado no banco de dados mestre.
 
-ENABLE | DISABLE Habilita ou desabilita este logon. Desabilitar um logon não afeta o comportamento de logons que já estão conectados. (Use a instrução `KILL` para encerrar uma conexão existente.) Logons desabilitados retêm suas permissões e ainda podem ser representados.
+ENABLE | DISABLE Habilita ou desabilita este logon. Desabilitar um logon não afeta o comportamento de logons que já estão conectados. (Use a instrução `KILL` para encerrar uma conexão existente.) Os logons desabilitados retêm suas permissões e ainda podem ser representados.
 
-DEFAULT_DATABASE **=**_database_ Especifica um banco de dados padrão a ser atribuído ao logon.
+DEFAULT_DATABASE **=** _database_ Especifica um banco de dados padrão a ser atribuído ao logon.
 
-DEFAULT_LANGUAGE **=**_language_ Especifica um idioma padrão a ser atribuído ao logon. O idioma padrão para todos os logons de Banco de Dados SQL é o inglês e não pode ser alterado. O idioma padrão do logon `sa` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em Linux, é o inglês, mas pode ser alterado.
+DEFAULT_LANGUAGE **=** _language_ Especifica um idioma padrão a ser atribuído ao logon. O idioma padrão para todos os logons de Banco de Dados SQL é o inglês e não pode ser alterado. O idioma padrão do logon `sa` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em Linux, é o inglês, mas pode ser alterado.
 
 ### <a name="arguments-applicable-only-to-sql-logins"></a>Argumentos aplicáveis somente a logons do SQL Server
 
-PASSWORD **='**_password_**'** Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica a senha do logon que está sendo alterado. As senhas diferenciam maiúsculas de minúsculas. As senhas também não se aplicam quando usado com logons externos, como logons do Azure AD.
+PASSWORD **='** _password_ **'** Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica a senha do logon que está sendo alterado. As senhas diferenciam maiúsculas de minúsculas. As senhas também não se aplicam quando usado com logons externos, como logons do Azure AD.
 
 Conexões continuamente ativas para banco de dados SQL exigem nova autorização (executada pelo mecanismo de banco de dados) pelo menos a cada 10 horas. O Mecanismo de Banco de Dados tenta a nova autorização usando a senha enviada originalmente e não é necessária nenhuma entrada do usuário. Por motivos de desempenho, quando uma senha for redefinida no Banco de Dados SQL, a conexão não será autenticada novamente, mesmo que ela seja redefinida devido ao pool de conexões. Isso é diferente do comportamento do SQL Server local. Se a senha for alterada depois que a conexão for autorizada inicialmente, a conexão precisará ser terminada e uma nova conexão deverá ser feita usando a nova senha. Um usuário com a permissão KILL DATABASE CONNECTION pode terminar explicitamente uma conexão com o Banco de Dados SQL usando o comando KILL. Para obter mais informações, consulte [KILL](../../t-sql/language-elements/kill-transact-sql.md).
 
-PASSWORD **=**_hashed\_password_ Aplica-se somente à palavra-chave HASHED. Especifica o valor com hash da senha para o logon que está sendo criado.
+PASSWORD **=** _hashed\_password_ Aplica-se somente à palavra-chave HASHED. Especifica o valor com hash da senha para o logon que está sendo criado.
 
 HASHED Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica que a senha digitada depois do argumento PASSWORD já esteja com hash. Se esta opção não for selecionada, a senha terá hash antes de ser armazenada no banco de dados. Essa opção deve ser usada somente para sincronização de logon entre dois servidores. Não use a opção HASHED para alterar senhas rotineiramente.
 
-OLD_PASSWORD **='**_oldpassword_**'** Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A senha atual do logon a que uma senha nova será atribuída. As senhas diferenciam maiúsculas de minúsculas.
+OLD_PASSWORD **='** _oldpassword_ **'** Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A senha atual do logon a que uma senha nova será atribuída. As senhas diferenciam maiúsculas de minúsculas.
 
 MUST_CHANGE<br>
 Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se esta opção estiver incluída, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicitará uma senha atualizada quando o logon alterado for usado pela primeira vez.
@@ -588,7 +587,7 @@ O exemplo seguinte ativa o logon `Mary5`.
 ALTER LOGIN Mary5 ENABLE;
 ```
 
-### <a name="b-changing-the-password-of-a-login"></a>b. Alterando a senha de um logon
+### <a name="b-changing-the-password-of-a-login"></a>B. Alterando a senha de um logon
 
 O exemplo seguinte altera a senha de logon `Mary5` para uma senha forte.
 
@@ -709,16 +708,16 @@ ALTER LOGIN login_name
 
 *login_name* Especifica o nome do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo alterado. Logons no domínio devem ser colocados entre colchetes no formato [domínio\usuário].
 
-ENABLE | DISABLE Habilita ou desabilita este logon. Desabilitar um logon não afeta o comportamento de logons que já estão conectados. (Use a instrução `KILL` para encerrar as conexões existentes.) Logons desabilitados retêm suas permissões e ainda podem ser representados.
+ENABLE | DISABLE Habilita ou desabilita este logon. Desabilitar um logon não afeta o comportamento de logons que já estão conectados. (Use a instrução `KILL` para encerrar as conexões existentes.) Os logons desabilitados retêm suas permissões e ainda podem ser representados.
 
-PASSWORD **='**_password_**'** Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica a senha do logon que está sendo alterado. As senhas diferenciam maiúsculas de minúsculas.
+PASSWORD **='** _password_ **'** Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica a senha do logon que está sendo alterado. As senhas diferenciam maiúsculas de minúsculas.
 
 Conexões continuamente ativas para banco de dados SQL exigem nova autorização (executada pelo mecanismo de banco de dados) pelo menos a cada 10 horas. O Mecanismo de Banco de Dados tenta a nova autorização usando a senha enviada originalmente e não é necessária nenhuma entrada do usuário. Por motivos de desempenho, quando uma senha for redefinida no Banco de Dados SQL, a conexão não será autenticada novamente, mesmo que ela seja redefinida devido ao pool de conexões. Isso é diferente do comportamento do SQL Server local. Se a senha for alterada depois que a conexão for autorizada inicialmente, a conexão precisará ser terminada e uma nova conexão deverá ser feita usando a nova senha. Um usuário com a permissão KILL DATABASE CONNECTION pode terminar explicitamente uma conexão com o Banco de Dados SQL usando o comando KILL. Para obter mais informações, consulte [KILL](../../t-sql/language-elements/kill-transact-sql.md).
 
 > [!IMPORTANT]
 > Quando um logon (ou um usuário de banco de dados independente) se conecta e é autenticado, a conexão armazena em cache as informações de identidade sobre o logon. Para um logon de Autenticação do Windows, isso inclui informações sobre a associação em grupos do Windows. A identidade do logon permanece autenticada desde que a conexão seja mantida. Para forçar alterações na identidade, como uma redefinição de senha ou alteração na associação de grupo do Windows, o logon deve fazer logoff da autoridade de autenticação (Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e fazer logon novamente. Um membro da função de servidor fixa ou **sysadmin** ou qualquer logon com a permissão **ALTER ANY CONNECTION** pode usar o comando **KILL** para terminar uma conexão e forçar um logon para reconectar. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pode reutilizar informações de conexão ao abrir várias conexões para as janelas do Pesquisador de Objetos e do Editor de Consultas. Feche todas as conexões para forçar a reconexão.
 
-OLD_PASSWORD **='**_oldpassword_**'** Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A senha atual do logon a que uma senha nova será atribuída. As senhas diferenciam maiúsculas de minúsculas.
+OLD_PASSWORD **='** _oldpassword_ **'** Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A senha atual do logon a que uma senha nova será atribuída. As senhas diferenciam maiúsculas de minúsculas.
 
 NAME = *login_name* O nome novo do logon que está sendo renomeado. Se este for um logon do Windows, o SID do administrador do Windows correspondente ao novo nome deverá corresponder ao SID associado ao logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O nome novo de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode conter um caractere de barra invertida (\\).
 
@@ -751,7 +750,7 @@ O exemplo seguinte ativa o logon `Mary5`.
 ALTER LOGIN Mary5 ENABLE;
 ```
 
-### <a name="b-changing-the-password-of-a-login"></a>b. Alterando a senha de um logon
+### <a name="b-changing-the-password-of-a-login"></a>B. Alterando a senha de um logon
 
 O exemplo seguinte altera a senha de logon `Mary5` para uma senha forte.
 
@@ -868,14 +867,14 @@ ALTER LOGIN login_name
 
 *login_name* Especifica o nome do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo alterado. Logons no domínio devem ser colocados entre colchetes no formato [domínio\usuário].
 
-ENABLE | DISABLE Habilita ou desabilita este logon. Desabilitar um logon não afeta o comportamento de logons que já estão conectados. (Use a instrução `KILL` para encerrar uma conexão existente.) Logons desabilitados retêm suas permissões e ainda podem ser representados.
+ENABLE | DISABLE Habilita ou desabilita este logon. Desabilitar um logon não afeta o comportamento de logons que já estão conectados. (Use a instrução `KILL` para encerrar uma conexão existente.) Os logons desabilitados retêm suas permissões e ainda podem ser representados.
 
-PASSWORD **='**_password_**'** Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica a senha do logon que está sendo alterado. As senhas diferenciam maiúsculas de minúsculas.
+PASSWORD **='** _password_ **'** Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica a senha do logon que está sendo alterado. As senhas diferenciam maiúsculas de minúsculas.
 
 > [!IMPORTANT]
 > Quando um logon (ou um usuário de banco de dados independente) se conecta e é autenticado, a conexão armazena em cache as informações de identidade sobre o logon. Para um logon de Autenticação do Windows, isso inclui informações sobre a associação em grupos do Windows. A identidade do logon permanece autenticada desde que a conexão seja mantida. Para forçar alterações na identidade, como uma redefinição de senha ou alteração na associação de grupo do Windows, o logon deve fazer logoff da autoridade de autenticação (Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e fazer logon novamente. Um membro da função de servidor fixa ou **sysadmin** ou qualquer logon com a permissão **ALTER ANY CONNECTION** pode usar o comando **KILL** para terminar uma conexão e forçar um logon para reconectar. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pode reutilizar informações de conexão ao abrir várias conexões para as janelas do Pesquisador de Objetos e do Editor de Consultas. Feche todas as conexões para forçar a reconexão.
 
-OLD_PASSWORD **='**_oldpassword_**'** Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A senha atual do logon a que uma senha nova será atribuída. As senhas diferenciam maiúsculas de minúsculas.
+OLD_PASSWORD **='** _oldpassword_ **'** Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A senha atual do logon a que uma senha nova será atribuída. As senhas diferenciam maiúsculas de minúsculas.
 
 MUST_CHANGE Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se esta opção estiver incluída, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicitará uma senha atualizada quando o logon alterado for usado pela primeira vez.
 
@@ -940,7 +939,7 @@ O exemplo seguinte ativa o logon `Mary5`.
 ALTER LOGIN Mary5 ENABLE;
 ```
 
-### <a name="b-changing-the-password-of-a-login"></a>b. Alterando a senha de um logon
+### <a name="b-changing-the-password-of-a-login"></a>B. Alterando a senha de um logon
 
 O exemplo seguinte altera a senha de logon `Mary5` para uma senha forte.
 

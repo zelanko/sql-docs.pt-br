@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a4972e42798e1cfeb46b77fb414fa77cd4b6b86a
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: cbcedf14cc2046314c28972c3332df42d70c4539
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901147"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Caixa de diálogo Avaliar Políticas, página Seleção de Políticas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,10 +25,10 @@ ms.locfileid: "51512401"
   
 ## <a name="options"></a>Opções  
  **Origem**  
- Especifica a origem das políticas. Para alterar a origem, clique no botão Procurar (**...**) para abrir a caixa de diálogo **Selecionar Origem** .  
+ Especifica a origem das políticas. Para alterar a origem, clique no botão Procurar ( **...** ) para abrir a caixa de diálogo **Selecionar Origem** .  
   
  **Arquivos**  
- Digite o caminho de um arquivo que contenha uma política de Gerenciamento Baseado em Políticas ou use o botão Procurar (**...**) para selecionar o arquivo.  
+ Digite o caminho de um arquivo que contenha uma política de Gerenciamento Baseado em Políticas ou use o botão Procurar ( **...** ) para selecionar o arquivo.  
   
  **Servidor**  
  Selecione para conectar-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que contenha a política desejada.  
@@ -37,10 +36,10 @@ ms.locfileid: "51512401"
  **Políticas: Política**  
  Clique para abrir a caixa de diálogo da política especificada.  
   
- **Políticas: Categoria**  
+ **Políticas: categoria**  
  A categoria da política. Essa caixa é somente leitura.  
   
- **Políticas: Faceta**  
+ **Políticas: faceta**  
  A faceta implementada pela política. Essa caixa é somente leitura.  
   
  **Avaliar**  

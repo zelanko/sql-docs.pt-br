@@ -1,5 +1,5 @@
 ---
-title: 'Classe de evento TM: Save Tran Starting | Microsoft Docs'
+title: 'TM: Classe de evento Save Tran Starting | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 6f19fe7c-a452-4323-b957-7e17d13bf8fd
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 75c263439a5da45e4a6c751d3a669350b29f153f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3cf22c17cc0b76e9ea05b8f600ae6b695d615777
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821724"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007004"
 ---
-# <a name="tm-save-tran-starting-event-class"></a>classe de evento TM: Save Tran Starting
+# <a name="tm-save-tran-starting-event-class"></a>TM: Classe de evento Save Tran Starting
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  A classe de evento TM: SaveTran Starting indica que uma solicitação SAVE TRANSACTION está sendo iniciada. A solicitação é enviada do cliente pela interface de gerenciamento de transações.  
+  A classe de evento TM: Save Tran Starting indica que uma solicitação SAVE TRANSACTION está sendo iniciada. A solicitação é enviada do cliente pela interface de gerenciamento de transações.  
   
-## <a name="tm-save-tran-starting-event-class-data-columns"></a>Colunas de dados da classe de evento TM: Save Tran Starting  
+## <a name="tm-save-tran-starting-event-class-data-columns"></a>TM: Colunas de dados da classe de evento Save Tran Starting  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -32,8 +31,8 @@ ms.locfileid: "47821724"
 |ClientProcessID|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  
 |DatabaseID|**int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
-|EventClass|**int**|Tipo de evento = 191.|27|não|  
-|EventSequence|**int**|A sequência de determinado evento dentro da solicitação.|51|não|  
+|EventClass|**int**|Tipo de evento = 191.|27|Não|  
+|EventSequence|**int**|A sequência de determinado evento dentro da solicitação.|51|Não|  
 |GroupID|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IsSystem|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
@@ -42,7 +41,7 @@ ms.locfileid: "47821724"
 |NTDomainName|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |NTUserName|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
 |RequestID|**int**|O ID da solicitação que contém a instrução.|49|Sim|  
-|ServerName|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|não|  
+|ServerName|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |SessionLoginName|**nvarchar**|O nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |SPID|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |StartTime|**datetime**|Horário de início do evento, quando disponível.|14|Sim|  

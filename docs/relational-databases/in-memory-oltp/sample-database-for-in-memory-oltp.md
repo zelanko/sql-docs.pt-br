@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddbafb58662497dc2ee9c513aa206d826d5db8c1
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 2806522e0dcc0c9aa7badd099be28e11072b396e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226693"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111801"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Banco de dados de exemplo para OLTP na memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -440,7 +439,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
     -   Sintoma: se há alta utilização da CPU ao executar a carga de trabalho em tabelas baseadas em disco, isso significa não há muita contenção, apontando para uma falta de simultaneidade.  
   
--   Velocidade da unidade de log: Se a unidade de log não consegue acompanhar o nível de transferência de transações no sistema, a carga de trabalho se torna um gargalo na E/S de log. Embora o log seja mais eficiente com OLTP in-memory, se a E/S de log é um gargalo, o ganho de desempenho potencial é limitado.  
+-   Velocidade da unidade de log: se a unidade de log não consegue acompanhar o nível de taxa de transferência de transações no sistema, a carga de trabalho se torna um gargalo na E/S de log. Embora o log seja mais eficiente com OLTP in-memory, se a E/S de log é um gargalo, o ganho de desempenho potencial é limitado.  
   
     -   Sintoma: caso quase 100% da CPU seja utilizada ou apresentar um pico de uso ao executar a carga de trabalho em tabelas com otimização de memória, talvez exista um gargalo de E/S de log. Isso pode ser confirmado abrindo o Monitor de Recursos e examinando o comprimento da fila para a unidade de log.  
   
@@ -496,7 +495,7 @@ WHERE t.type='U'
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
   
- Como você pode ver, as tabelas são pequenas: o SalesOrderHeader_inmem possui cerca de 7 MB e o SalesOrderDetail_inmem possui cerca de 15 MB.  
+ Como você pode ver, as tabelas são pequenas: o SalesOrderHeader_inmem tem cerca de 7 MB e o SalesOrderDetail_inmem tem cerca de 15 MB.  
   
  O que chama a atenção aqui é o tamanho da memória alocada para índices, comparado ao tamanho dos dados da tabela. Isso ocorre porque os índices de hash no exemplo são dimensionados previamente para um tamanho maior de dados. Observe que os índices de hash têm um tamanho fixo e, assim, seu tamanho não aumentará conforme o tamanho dos dados na tabela.  
   

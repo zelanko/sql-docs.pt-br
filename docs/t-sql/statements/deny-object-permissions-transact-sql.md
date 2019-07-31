@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f3d5bea06c12da29eb38c3190682d2fcfe344fe4
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 05f0d6d99ca4e5274882ec5d4e751ba658b62a1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114798"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>Permissões de objeto DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ DENY <permission> [ ,...n ] ON
  - Permissões de função com valor de tabela: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
  - Permissões de procedimento armazenado: EXECUTE.  
  - Permissões de tabela: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
- - Exibir permissões: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ - Permissões de exibição: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
 PRIVILEGES  
  Incluído para conformidade com o ANSI-92. Não altera o comportamento de ALL.  
@@ -77,7 +76,7 @@ PRIVILEGES
 >  Um DENY em nível de tabela não tem precedência sobre um GRANT em nível de coluna. Essa inconsistência na hierarquia de permissões foi preservada para compatibilidade com versões anteriores.  
   
  ON [ OBJECT **::** ] [ *schema_name* ] **.** *object_name*  
- Especifica o objeto no qual a permissão está sendo negada. A frase OBJECT será opcional se *schema_name* for especificado. Se a frase OBJECT for usada, o qualificador de escopo (**::**) será necessário. Se *schema_name* não for especificado, o esquema padrão será usado. Se *schema_name* for especificado, o qualificador de escopo de esquema (**.**) será obrigatório.  
+ Especifica o objeto no qual a permissão está sendo negada. A frase OBJECT será opcional se *schema_name* for especificado. Se a frase OBJECT for usada, o qualificador de escopo ( **::** ) será necessário. Se *schema_name* não for especificado, o esquema padrão será usado. Se *schema_name* for especificado, o qualificador de escopo de esquema ( **.** ) será obrigatório.  
   
  TO \<database_principal>  
  Especifica a entidade à qual a permissão está sendo negada.  
@@ -148,7 +147,7 @@ DENY SELECT ON OBJECT::Person.Address TO RosaQdM;
 GO  
 ```  
   
-### <a name="b-denying-execute-permission-on-a-stored-procedure"></a>b. Negação da permissão EXECUTE em um procedimento armazenado  
+### <a name="b-denying-execute-permission-on-a-stored-procedure"></a>B. Negação da permissão EXECUTE em um procedimento armazenado  
  O exemplo a seguir nega a permissão `EXECUTE` no procedimento armazenado `HumanResources.uspUpdateEmployeeHireInfo` para uma função de aplicativo chamada `Recruiting11`.  
   
 ```  

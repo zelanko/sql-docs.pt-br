@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a482767c416e1adf4de30d6493c4c79ca07d2398
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070330"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -104,7 +103,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
  Para obter exemplos de como criar sequências e usar a função **NEXT VALUE FOR** para gerar números de sequência, consulte [Números de sequência](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
 ### <a name="a-altering-a-sequence"></a>A. Alterando uma sequência  
- O exemplo a seguir cria um esquema chamado Test e uma sequência chamada TestSeq usando o tipo de dados **int** com um intervalo de 0 a 255. A sequência começa com 125 e é incrementada em 25 sempre que um número é gerado. Como a sequência é configurada para executar um ciclo, quando o valor excede o valor máximo de 200, a sequência é reiniciada no valor mínimo de 100.  
+ O exemplo a seguir cria um esquema chamado Test e uma sequência chamada TestSeq usando o tipo de dados **int** com um intervalo de 100 a 200. A sequência começa com 125 e é incrementada em 25 sempre que um número é gerado. Como a sequência é configurada para executar um ciclo, quando o valor excede o valor máximo de 200, a sequência é reiniciada no valor mínimo de 100.  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -122,7 +121,7 @@ CREATE SEQUENCE Test.TestSeq
 GO  
 ```  
   
- O exemplo a seguir altera a sequência TestSeq para ter um intervalo de 0 a 255. A sequência reinicia a série de numeração com 100 e é incrementada em 50 sempre que um número é gerado.  
+ O exemplo a seguir altera a sequência TestSeq para ter um intervalo de 50 a 200. A sequência reinicia a série de numeração com 100 e é incrementada em 50 sempre que um número é gerado.  
   
 ```  
 ALTER SEQUENCE Test. TestSeq  

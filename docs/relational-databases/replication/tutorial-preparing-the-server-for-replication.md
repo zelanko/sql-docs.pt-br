@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39eac1be5a9e6479a7607364bb194b5aa5b8716f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1900d3d447dd7974fb9afbbd83f17ca375bfbe81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672585"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895438"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Tutorial: Preparar o SQL Server para replicação (editor, distribuidor, assinante)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,16 +122,16 @@ Nesta seção, você configurará a pasta de instantâneos, usada para criar e a
 
    ![Seleções para compartilhar a pasta repldata](media/tutorial-preparing-the-server-for-replication/repldata.png)
 
-6. Na caixa de diálogo **Permissões para repldata**, selecione **Adicionar**. Na caixa de texto **Selecionar Usuário, Computadores, Conta de Serviço ou Grupos**, digite o nome da conta do Agente de Instantâneo criado anteriormente, como <*Nome_do_Computador_do_Editor*>**\repl_snapshot**. Selecione **Verificar Nomes** e, em seguida, **OK**.  
+6. Na caixa de diálogo **Permissões para repldata**, selecione **Adicionar**. Na caixa de texto **Selecionar Usuário, Computadores, Conta de Serviço ou Grupos**, digite o nome da conta do Agente de Instantâneo criado anteriormente, como <*Nome_do_Computador_do_Editor*> **\repl_snapshot**. Selecione **Verificar Nomes** e, em seguida, **OK**.  
 
    ![Seleções para adicionar permissões de compartilhamento](media/tutorial-preparing-the-server-for-replication/addshareperms.png)
 
-7. Repita a etapa 6 para adicionar as outras duas contas que você criou anteriormente: <*Nome_do_Computador_do_Editor*>**\repl_merge** e <*Nome_do_Computador_do_Editor*>**\repl_distribution**.
+7. Repita a etapa 6 para adicionar as outras duas contas que você criou anteriormente: <*Nome_do_Computador_do_Editor*> **\repl_merge** e <*Nome_do_Computador_do_Editor*> **\repl_distribution**.
 
 8. Depois de adicionar as três contas, atribua as seguintes permissões:      
    - repl_distribution: **Leitura**  
    - repl_merge: **Leitura**  
-   - repl_snapshot: **Controle Total**    
+   - repl_snapshot: **Controle total**    
 
    ![Permissões compartilhadas para cada conta](media/tutorial-preparing-the-server-for-replication/sharedpermissions.png)
 
@@ -142,19 +141,19 @@ Nesta seção, você configurará a pasta de instantâneos, usada para criar e a
 
     ![Botão "Editar" na guia "Segurança"](media/tutorial-preparing-the-server-for-replication/editsecurity.png)   
 
-11. Na caixa de diálogo **Permissões para repldata**, selecione **Adicionar**. Na caixa de texto **Selecionar Usuários, Computadores, Conta de Serviço ou Grupos**, digite o nome da conta do Agente de Instantâneo criado anteriormente, como <*Nome_do_Computador_do_Editor*>**\repl_snapshot**. Selecione **Verificar Nomes** e, em seguida, **OK**.  
+11. Na caixa de diálogo **Permissões para repldata**, selecione **Adicionar**. Na caixa de texto **Selecionar Usuários, Computadores, Conta de Serviço ou Grupos**, digite o nome da conta do Agente de Instantâneo criado anteriormente, como <*Nome_do_Computador_do_Editor*> **\repl_snapshot**. Selecione **Verificar Nomes** e, em seguida, **OK**.  
 
     ![Seleções para adicionar permissões de segurança](media/tutorial-preparing-the-server-for-replication/addsecuritypermissions.png)
 
   
-12. Repita a etapa anterior para adicionar permissões para o Agente de Distribuição, como <*Nome_do_Computador_do_Editor*>**\repl_distribution**, e para o Agente de Mesclagem, como <*Nome_do_Computador_do_Editor*>**\repl_merge**.  
+12. Repita a etapa anterior para adicionar permissões para o Agente de Distribuição, como <*Nome_do_Computador_do_Editor*> **\repl_distribution**, e para o Agente de Mesclagem, como <*Nome_do_Computador_do_Editor*> **\repl_merge**.  
     
   
 13. Verifique se as permissões a seguir são permitidas:  
   
     - repl_distribution: **Leitura**
     - repl_merge: **Leitura**
-    - repl_snapshot: **Controle Total**   
+    - repl_snapshot: **Controle total**   
  
     ![Permissões de usuário para replicação de dados](media/tutorial-preparing-the-server-for-replication/replpermissions.png) 
 
@@ -185,14 +184,14 @@ A configuração de um editor com um distribuidor remoto está fora do escopo de
   
    O Assistente para Configuração de Distribuição é iniciado.  
   
-3. Na página **Distribuidor**, selecionar <*'ServerName'*>  **atuará como seu próprio Distribuidor; o SQL Server criará um banco de dados de distribuição e um log**. Em seguida, selecione **Avançar**.  
+3. Na página **Distribuidor**, selecionar < *'ServerName'* >  **atuará como seu próprio Distribuidor; o SQL Server criará um banco de dados de distribuição e um log**. Em seguida, selecione **Avançar**.  
 
    ![Opção para fazer o servidor agir como seu próprio distribuidor](media/tutorial-preparing-the-server-for-replication/serverdistributor.png)
   
 4. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não estiver em execução, na página Inicial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agent**, selecione **Sim[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para configurar o serviço**  Agent para ser iniciado automaticamente. Selecione **Avançar**.  
 
      
-5. Insira o caminho \\\\<*Nome_do_Computador_do_Editor*>**\repldata** na caixa de texto **Pasta de instantâneos** e, em seguida, selecione **Avançar**. Esse caminho deve corresponder ao que você viu anteriormente em **Caminho da Rede** para a pasta de propriedades de repldata depois de configurar as propriedades de compartilhamento. 
+5. Insira o caminho \\\\<*Nome_do_Computador_do_Editor*> **\repldata** na caixa de texto **Pasta de instantâneos** e, em seguida, selecione **Avançar**. Esse caminho deve corresponder ao que você viu anteriormente em **Caminho da Rede** para a pasta de propriedades de repldata depois de configurar as propriedades de compartilhamento. 
 
    ![Comparação de caminhos de rede na caixa de diálogo "propriedades de repldata" e no Assistente para configurar distribuição](media/tutorial-preparing-the-server-for-replication/repldatasnapshot.png)
   
@@ -219,7 +218,7 @@ Se a instância do SQL Server Management Studio estiver sendo executada com dire
 
    ![Comando "Novo logon" no menu de atalho](media/tutorial-preparing-the-server-for-replication/newlogin.png)
   
-2. Na página **Geral**, selecione **Pesquisar**. Insira <*Nome_do_Computador_do_Editor*>**\repl_snapshot** na caixa **Inserir o nome do objeto a ser selecionado**, selecione **Verificar Nomes** e **OK**.  
+2. Na página **Geral**, selecione **Pesquisar**. Insira <*Nome_do_Computador_do_Editor*> **\repl_snapshot** na caixa **Inserir o nome do objeto a ser selecionado**, selecione **Verificar Nomes** e **OK**.  
 
    ![Seleções para inserir o nome do objeto](media/tutorial-preparing-the-server-for-replication/addsnapshotlogin.png)
   
@@ -244,7 +243,7 @@ Para obter mais informações, consulte:
 Agora você preparou com êxito o servidor para replicação. O próximo artigo ensina como configurar a Replicação Transacional: 
 
 > [!div class="nextstepaction"]
-> [Tutorial: Configurar a replicação entre dois servidores totalmente conectados (Transacional)](tutorial-replicating-data-between-continuously-connected-servers.md)
+> [Tutorial: Configurar a replicação entre dois servidores totalmente conectados (transacional)](tutorial-replicating-data-between-continuously-connected-servers.md)
 
   
   

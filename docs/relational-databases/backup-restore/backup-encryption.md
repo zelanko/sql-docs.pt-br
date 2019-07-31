@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2420e494a312f64ba84edbd9a77b26be2a53e33b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 862f97bbe21d47c830dad59e69f2c508e7eebc15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103765"
 ---
 # <a name="backup-encryption"></a>Criptografia de backup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,20 +27,20 @@ ms.locfileid: "47659324"
   
  Para realizar a criptografia durante o backup, você deve especificar um algoritmo de criptografia, e um criptografador para proteger a chave de criptografia. Estas são as opções de criptografia com suporte:  
   
--   **Algoritmo de criptografia:** os algoritmos de criptografia com suporte são: AES 128, AES 192, AES 256 e DES triplo  
+-   **Algoritmo de criptografia:** os algoritmos de criptografia com suporte são: AES 128, AES 192, AES 256 e Triple DES  
   
--   **Criptografador:** um certificado ou uma chave assimétrica  
+-   **Criptografador:** um certificado ou chave assimétrica  
   
 > [!CAUTION]  
 >  É muito importante fazer backup do certificado ou da chave assimétrica e, preferencialmente, em um local diferente do arquivo de backup usado para criptografar. Sem o certificado ou a chave assimétrica, você não pode restaurar o backup, tornando o arquivo de backup inutilizável.  
   
- **Restaurando o backup criptografado:** a restauração do SQL Server não requer nenhum parâmetro de criptografia a ser especificado durante as restaurações. Requer que o certificado ou a chave assimétrica usada para criptografar o arquivo de backup esteja disponível na instância em que você está fazendo a restauração. A conta de usuário que executa a restauração deve ter as permissões **VIEW DEFINITION** no certificado ou na chave. Se você estiver restaurando o backup criptografado para uma instância diferente, verifique se o certificado está disponível nessa instância.  
+ **Restaurar o backup criptografado:** a restauração do SQL Server não requer que nenhum parâmetro de criptografia seja especificado durante as restaurações. Requer que o certificado ou a chave assimétrica usada para criptografar o arquivo de backup esteja disponível na instância em que você está fazendo a restauração. A conta de usuário que executa a restauração deve ter as permissões **VIEW DEFINITION** no certificado ou na chave. Se você estiver restaurando o backup criptografado para uma instância diferente, verifique se o certificado está disponível nessa instância.  
   
  Se você estiver restaurando um backup de um banco de dados criptografado TDE, o certificado TDE deverá estar disponível na instância para a qual você estiver restaurando.  
   
 ##  <a name="Benefits"></a> Benefícios  
   
-1.  A criptografia dos backups de banco de dados ajuda a proteger os dados: o SQL Server oferece a opção para criptografar os dados do backup ao criar um backup.  
+1.  Criptografar os backups de banco de dados ajuda a proteger os dados: o SQL Server fornece a opção de criptografar os dados de backup ao criar um backup.  
   
 2.  A criptografia também pode ser usada para bancos de dados criptografados usando a TDE.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "47659324"
 ##  <a name="Prerequisites"></a> Pré-requisitos  
  Estes são os pré-requisitos para criptografar um backup:  
   
-1.  **Criar uma chave mestra de banco de dados para o banco de dados mestre:** a chave mestra de banco de dados é uma chave simétrica usada para proteger as chaves privadas dos certificados e as chaves assimétricas presentes no banco de dados. Para obter mais informações, consulte [Chaves de criptografia do SQL Server e banco de dados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
+1.  **Criar uma chave mestra do banco de dados para o banco de dados mestre:** A chave mestra de banco de dados é uma chave simétrica usada para proteger as chaves privadas dos certificados e as chaves assimétricas presentes no banco de dados. Para obter mais informações, consulte [Chaves de criptografia do SQL Server e banco de dados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
   
 2.  Crie um certificado ou uma chave assimétrica a ser usada na criptografia de backup. Para obter mais informações sobre a criação de um certificado, consulte [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md). Para obter mais informações sobre a criação de uma chave assimétrica, consulte [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md).  
   
@@ -90,7 +89,7 @@ ms.locfileid: "47659324"
   
 1.  [Backup de Banco de Dados &#40;página Opções de Backup&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md) Na página **Opções de Backup**, selecione **Criptografia**; em seguida, especifique o algoritmo de criptografia e o certificado ou a chave assimétrica a serem usados na criptografia.  
   
-2.  [Usando o Assistente de Plano de Manutenção](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) Ao selecionar uma tarefa de backup, na guia **Opções** da página **Define Backup ()Task (Definir ()Tarefa de Backup)**, selecione **Criptografia de Backup** e especifique o algoritmo de criptografia e o certificado ou a chave a serem usados na criptografia.  
+2.  [Usando o Assistente de Plano de Manutenção](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) Ao selecionar uma tarefa de backup, na guia **Opções** da página **Define Backup ()Task (Definir ()Tarefa de Backup)** , selecione **Criptografia de Backup** e especifique o algoritmo de criptografia e o certificado ou a chave a serem usados na criptografia.  
   
 ### <a name="using-transact-sql"></a>Usando Transact-SQL  
  Este é um exemplo de instrução Transact-SQL para criptografar o arquivo de backup:  

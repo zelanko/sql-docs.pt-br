@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: administrando servidores com o gerenciamento baseado em políticas | Microsoft Docs'
+title: 'Tutorial: Administrar servidores com o gerenciamento baseado em políticas | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,14 @@ helpviewer_keywords:
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8447a2e6b6364c702e9f800810fd6295d5641fe7
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: d98e1f1332d75514887858a11087e94bca4caf32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021494"
 ---
-# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Tutorial: Administrando servidores com o uso do Gerenciamento Baseado em Políticas
+# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Tutorial: administração de servidores com Gerenciamento Baseado em Políticas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Bem-vindo ao tutorial Administrando servidores com o uso do Gerenciamento Baseado em Políticas. Este tutorial é dirigido a usuários que estão familiarizado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mas ainda não conhecem o Gerenciamento Baseado em Políticas.  
   
@@ -33,7 +32,7 @@ Este tutorial é dividido em duas lições:
 [Lição 1: Criar e aplicar uma política desativada por padrão](../../relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md)  
 Esta lição cria uma política que especifica que o Database Mail não está habilitado no servidor. Em seguida, ela verifica se o servidor está em conformidade com a política e configura o servidor desabilitando o Database Mail.  
   
-[Lição 2: criar e aplicar uma política de nomeação de padrões](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
+[Lição 2: Criar e aplicar uma política de nomeação de padrões](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
 Esta lição cria uma política que define e aplica uma nomeação padrão para tabelas.  
   
 ## <a name="requirements"></a>Requisitos  

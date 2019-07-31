@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 08185a514dbba480aaef760532430ff7c1f53bf9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d904d16bb54236ee61dd463ca3c7bf829a46c3e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115317"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Usar o Gerenciador do Utilitário para gerenciar o Utilitário do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "51663002"
 ### <a name="sql-server-utility-navigation-pane"></a>Painel de navegação do Utilitário do SQL Server  
  O painel de navegação do Gerenciador do Utilitário oferece uma exibição de árvore de objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, agrupados por ponto de controle do utilitário. Para expandir pastas, clique no sinal de adição (+) ou clique duas vezes no nome do UCP no painel de navegação do Gerenciador do Utilitário. Clique com o botão direito do mouse em pastas ou objetos para executar tarefas comuns. Os nós na exibição de árvore são como se segue:  
   
--   O nó superior na exibição de árvore é o UCP (ponto de controle do utilitário). O nome do nó é construído da seguinte maneira: "Nome_do_Utilitário" (NomeDoComputador\nome_da_instância_UCP). Se você não tiver um UCP, deverá criar um. Se você não estiver conectado a um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, deverá conectar-se a um. Para obter mais informações, consulte [Recursos e tarefas do utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md). Clique no nome do UCP na exibição de árvore para popular o painel de conteúdo do Gerenciador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility com dados na exibição de painel. Para obter mais informações, veja [Painel do Utilitário &#40;Utilitário do SQL Server&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1).  
+-   O nó superior na exibição de árvore é o UCP (ponto de controle do utilitário). O nome do nó é criado como: "Nome_do_utilitário" (Nome_do_computador\Nome_da_instância_UCP). Se você não tiver um UCP, deverá criar um. Se você não estiver conectado a um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, deverá conectar-se a um. Para obter mais informações, consulte [Recursos e tarefas do utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md). Clique no nome do UCP na exibição de árvore para popular o painel de conteúdo do Gerenciador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility com dados na exibição de painel. Para obter mais informações, veja [Painel do Utilitário &#40;Utilitário do SQL Server&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1).  
   
      Clique com o botão direito do mouse no nó UCP para atualizar dados no painel.  
   

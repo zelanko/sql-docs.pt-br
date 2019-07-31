@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: df99a74b9c26e13c9fc2037c9d540ee844bfebfb
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 1fb7e3e0a261c0cf518dda93610b721af14a3472
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136488"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -168,7 +167,7 @@ O padrão do SQL Server 2014 tem as seguintes alterações:
 4.  Execute o script de migração.  
   
 #### <a name="informational-message-file-access-denied-incorrectly-reported-as-an-error-in-the-sql-server-2014-error-log"></a>A mensagem informativa “acesso ao arquivo negado” é relatada incorretamente como um erro no log de erros do SQL Server 2014  
-**Problema:** Quando você reinicia um servidor que possui bancos de dados que contêm tabelas otimizadas em memória, você pode ver o seguinte tipo de mensagens de erro no log de erros do SQL Server 2014:  
+**Problema:** Quando você reinicia um servidor com bancos de dados que contêm tabelas otimizadas em memória, você pode ver o seguinte tipo de mensagens de erro no log de erros do SQL Server 2014:  
   
 ```  
 [ERROR]Unable to delete file C:\Program Files\Microsoft SQL   
@@ -180,19 +179,19 @@ Esta mensagem é apenas informativa, e nenhuma ação do usuário é necessária
 **Solução alternativa:** Nenhum. Essa é uma mensagem informativa.  
   
 #### <a name="missing-index-details-incorrectly-report-included-columns-for-memory-optimized-table"></a>Os detalhes de índice ausentes relatam incorretamente as colunas incluídas para a tabela com otimização de memória  
-**Problema:** Quando o SQL Server 2014 detecta um índice ausente para uma consulta em uma tabela otimizada em memória, ele informa um índice ausente no SHOWPLAN_XML e também nas DMVs de índice ausente como sys.dm_db_missing_index_details. Em alguns casos, os detalhes de índice ausentes conterão as colunas incluídas. Uma vez que todas as colunas são incluídas implicitamente com todos os índices nas tabelas com otimização de memória, não é permitido especificar explicitamente as colunas incluídas com os índices otimizados por memória.  
+**Problema:** Quando o SQL Server 2014 detecta um índice ausente para uma consulta em uma tabela com otimização de memória, ele informa um índice ausente no SHOWPLAN_XML e também nas DMVs de índice ausente como sys.dm_db_missing_index_details. Em alguns casos, os detalhes de índice ausentes conterão as colunas incluídas. Uma vez que todas as colunas são incluídas implicitamente com todos os índices nas tabelas com otimização de memória, não é permitido especificar explicitamente as colunas incluídas com os índices otimizados por memória.  
   
-**Solução alternativa:** Não especifique a cláusula INCLUDE com índices em tabelas otimizadas em memória.  
+**Solução alternativa:** Não especifique a cláusula INCLUDE com índices em tabelas com otimização de memória.  
   
 #### <a name="missing-index-details-omit-missing-indexes-when-a-hash-index-exists-but-is-not-suitable-for-the-query"></a>Os detalhes de índice ausentes omitem os índices ausentes quando um índice de hash existe, mas não é apropriado para a consulta  
-**Problema:** Se você tem um índice HASH em colunas de uma tabela otimizada em memória mencionado em uma consulta, mas o índice não pode ser usado para a consulta, o SQL Server 2014 nem sempre relatará um índice ausente em SHOWPLAN_XML e na DMV sys.dm_db_missing_index_details.  
+**Problema:** Se você tem um índice HASH em colunas de uma tabela com otimização de memória mencionado em uma consulta, mas o índice não pode ser usado para a consulta, o SQL Server 2014 nem sempre relata um índice ausente em SHOWPLAN_XML e na DMV sys.dm_db_missing_index_details.  
   
 Em particular, se uma consulta contiver os predicados de igualdade que envolvem um subconjunto de colunas de chave de índice ou se contiver os predicados de desigualdade que envolvem as colunas de chave de índice, o índice de HASH não pode ser usado como está, e um índice diferente será necessário para executar a consulta de forma eficaz.  
   
-**Solução alternativa:** Quando você usar índices hash, inspecione as consultas e planos de consulta para determinar se as consultas poderiam se beneficiar de operações de Busca de Índice em um subconjunto da chave de índice, ou operações de Busca de Índice em predicados de desigualdade. Se você precisar buscar em um subconjunto de chave de índice, use um índice não clusterizado, ou use um índice de HASH exatamente nas colunas em que você precisa buscar. Se você precisar buscar em um predicado de desigualdade, use um índice não clusterizado em vez de HASH.  
+**Solução alternativa:** Se estiver usando índices de hash, inspecione as consultas e os planos de consulta para determinar se as consultas poderão se beneficiar de operações de Busca de Índice em um subconjunto da chave de índice ou de operações de Busca de Índice em predicados de desigualdade. Se você precisar buscar em um subconjunto de chave de índice, use um índice não clusterizado, ou use um índice de HASH exatamente nas colunas em que você precisa buscar. Se você precisar buscar em um predicado de desigualdade, use um índice não clusterizado em vez de HASH.  
   
 #### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>Ocorrerá uma falha ao usar uma tabela com otimização de memória e uma variável de tabela com otimização de memória na mesma consulta, se a opção READ_COMMITTED_SNAPSHOT do banco de dados for definida como ON  
-**Problema:** Se a opção de banco de dados READ_COMMITTED_SNAPSHOT estiver definida como ON e você acessar uma tabela otimizada em memória e uma variável de tabela otimizada em memória na mesma instrução fora do contexto de uma transação de usuário, esta mensagem de erro poderá ser exibida:  
+**Problema:** Se a opção de banco de dados READ_COMMITTED_SNAPSHOT estiver definida como ON e você acessar uma tabela com otimização de memória e uma variável de tabela com otimização de memória na mesma instrução fora do contexto de uma transação de usuário, esta mensagem de erro poderá ser exibida:  
   
 ```  
 Msg 41359  
@@ -202,7 +201,7 @@ READ_COMMITTED_SNAPSHOT is set to ON. Provide a supported isolation level
 for the memory optimized table using a table hint, such as WITH (SNAPSHOT).  
 ```  
   
-**Solução alternativa:** Use a dica de tabela WITH (SNAPSHOT) com a variável de tabela ou defina a opção de banco de dados para MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT para ON, usando a seguinte instrução:  
+**Solução alternativa:** Use a dica de tabela WITH (SNAPSHOT) com a variável de tabela ou defina a opção de banco de dados para MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT para ON usando a seguinte instrução:  
   
 ```  
 ALTER DATABASE CURRENT   
@@ -210,7 +209,7 @@ SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
 ```  
   
 #### <a name="procedure-and-query-execution-statistics-for-natively-compiled-stored-procedures-record-worker-time-in-multiples-of-1000"></a>Procedimento e estatísticas de execução de consulta para que os procedimentos armazenados compilados de forma nativa armazenem o tempo de trabalho em múltiplos de 1000  
-**Problema:** Quando ativar a coleção de procedimento ou a coleção de estatísticas de execução da consulta para procedimentos armazenados nativamente compilados usando sp_xtp_control_proc_exec_stats ou sp_xtp_control_query_exec_stats, você verá o * _worker_time informado em múltiplos de 1.000, nas DMVs sys.dm_exec_procedure_stats e sys.dm_exec_query_stats. As execuções de consulta com um período de trabalho inferior a 500 microssegundos serão relatadas como tendo um worker_time de 0.  
+**Problema:** Após habilitar a coleção de procedimentos ou a coleção de estatísticas de execução da consulta para procedimentos armazenados nativamente compilados usando sp_xtp_control_proc_exec_stats ou sp_xtp_control_query_exec_stats, você verá o * _worker_time informado em múltiplos de 1.000, nas DMVs sys.dm_exec_procedure_stats e sys.dm_exec_query_stats. As execuções de consulta com um período de trabalho inferior a 500 microssegundos serão relatadas como tendo um worker_time de 0.  
   
 **Solução alternativa:** Nenhum. Não confie no worker_time relatado nos DMVs das estatísticas de execução para consultas de curta duração em procedimentos armazenados compilados de forma nativa.  
   
@@ -263,7 +262,7 @@ DATEPART(weekday, @d)
 ```  
   
 #### <a name="native-compilation-advisor-flags-delete-from-clauses-incorrectly"></a>O Native Compilation Advisor sinaliza as cláusulas DELETE FROM incorretamente  
-**Problema:** O Orientador de Compilação Nativo sinaliza cláusulas DELETE FROM dentro de um procedimento armazenado incorretamente como incompatíveis.  
+**Problema:** O Native Compilation Advisor sinaliza cláusulas DELETE FROM dentro de um procedimento armazenado incorretamente como incompatíveis.  
   
 **Solução alternativa:** Nenhum.  
   
@@ -338,7 +337,7 @@ Para obter mais informações, consulte [Dicas, truques e soluções de problema
 ### <a name="AzureVM"></a>SQL Server 2014 RTM em máquinas virtuais do Microsoft Azure  
   
 #### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-windows-azure"></a>O assistente para adicionar réplica do Azure retorna um erro ao configurar um ouvinte do grupo de disponibilidade no Microsoft Azure  
-**Problema:** Se um Grupo de Disponibilidade tiver um Ouvinte, o Assistente para Adicionar Réplica do Azure retornará um erro quando você tentar configurar o Ouvinte no Windows Azure.  
+**Problema:** Se um Grupo de Disponibilidade tiver um Ouvinte, o Assistente para Adicionar Réplica do Azure retornará um erro quando você tentar configurar o Ouvinte no Microsoft Azure.  
   
 Esse problema se deve ao fato dos ouvintes do grupo de disponibilidade exigirem a atribuição de um endereço IP em cada sub-rede que hospeda réplicas do grupo de disponibilidade, inclusive a sub-rede do Azure.  
   
@@ -404,12 +403,12 @@ Esse problema se deve ao fato dos ouvintes do grupo de disponibilidade exigirem 
   
 -   Master Data Services 2012 hospedado em um banco de dados do Mecanismo de Banco de Dados do SQL Server no SQL Server 2014 com o Data Quality Services 2014 instalado.  
   
-**Solução alternativa:** Use a mesma versão do Master Data Services, como o banco de dados do Mecanismo de Banco de Dados e Data Quality Services.  
+**Solução alternativa:** Use a mesma versão do Master Data Services como o banco de dados do Mecanismo de Banco de Dados e Data Quality Services.  
   
 ### <a name="UA"></a>Problemas do supervisor de atualização (RTM)
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>O Supervisor de Atualização do SQL Server 2014 relata problemas de atualização irrelevantes do SQL Server Reporting Services  
-**Problema:** O SSUA (SQL Server Upgrade Advisor) enviado com a mídia do SQL Server 2014 informa incorretamente vários erros ao analisar o servidor do SQL Server Reporting Services.  
+**Problema:** O SSUA (Supervisor de Atualização do SQL Server) enviado com a mídia do SQL Server 2014 informa incorretamente vários erros ao analisar o servidor do SQL Server Reporting Services.  
   
 **Solução alternativa:** Esse problema foi corrigido no Supervisor de Atualização do SQL Server fornecido no [SQL Server 2014 Feature Pack para SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
   

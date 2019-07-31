@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: be67801f6f386bd4d63a5edc3459820075628864
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 9c09ce1ef34e7355651be0aab473ca39bd2dae1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901970"
 ---
 # <a name="hints-transact-sql---table"></a>Dicas (Transact-SQL) – tabela
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -122,7 +121,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]  
+WITH **(** \<table_hint> **)** [ [ **,** ]...*n* ]  
 Com algumas exceções, há suporte para dicas de tabela na cláusula FROM somente quando elas são especificadas com a palavra-chave WITH. Dicas de tabela também devem ser especificadas com parênteses.  
   
 > [!IMPORTANT]  
@@ -148,7 +147,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 NOEXPAND  
 Especifica que qualquer exibição indexada não será expandida para acessar tabelas subjacentes quando o otimizador de consulta processar a consulta. O otimizador de consulta trata a exibição como uma tabela com índice clusterizado. NOEXPAND aplica-se apenas a exibições indexadas. Para obter mais informações, confira [Usando NOEXPAND](#using-noexpand).  
   
-INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
+INDEX  **(** _index\_value_ [ **,** ... _n_ ] ) | INDEX =  ( _index\_value_ **)**  
 A sintaxe de INDEX() especifica os nomes ou as IDs de um ou mais índices a serem usados pelo otimizador de consulta ao processar a instrução. A alternativa INDEX = sintaxe especifica um único valor de índice. Apenas uma dica de índice por tabela pode ser especificada.  
   
 Se existir um índice clusterizado, INDEX(0) forçará uma verificação de índice clusterizado e INDEX(1) forçará uma verificação ou busca de índice clusterizado. Na ausência de índices clusterizados, INDEX(0) forçará uma verificação de tabela e INDEX(1) será interpretado como um erro.  
@@ -179,7 +178,7 @@ Especifica a inserção de um valor padrão da coluna de tabela, se houver algum
   
 Para obter um exemplo que usa essa dica em uma instrução INSERT... SELECT * FROM OPENROWSET(BULK...), confira [Manter valores nulos ou usar os valores padrão durante a importação em massa &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
-FORCESEEK [ **(**_index\_value_**(**_index\_column\_name_ [ **,**... _n_ ] **))** ]  
+FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] **))** ]  
 Especifica que o otimizador de consulta usará apenas uma operação de busca de índice como o caminho de acesso aos dados na tabela ou exibição. 
 
 > [!NOTE]
@@ -428,7 +427,7 @@ WHERE ProductNumber LIKE 'BK-%';
 GO  
 ```  
   
-### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>b. Usando a dica FORCESEEK para especificar uma operação de busca de índice  
+### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>B. Usando a dica FORCESEEK para especificar uma operação de busca de índice  
  O exemplo a seguir usa a dica FORCESEEK sem especificar um índice para forçar o otimizador de consulta a executar uma operação de busca de índice na tabela `Sales.SalesOrderDetail` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql

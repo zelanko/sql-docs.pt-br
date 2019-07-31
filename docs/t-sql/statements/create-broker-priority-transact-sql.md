@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6029f21d65c3732f7aa1aec2ec6a330c8642c991
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e9ff3121d9a961981b1a6933f3e1433999c72ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061150"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ FOR CONVERSATION
  Especifica o nome desta prioridade de conversa. O nome precisa ser exclusivo no banco de dados atual e estar em conformidade com as regras para [!INCLUDE[ssDE](../../includes/ssde-md.md)] [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  SET  
- Especifica os critérios para determinar se a prioridade de conversa é aplicável a uma conversa. Se for especificado, SET deve conter pelo menos um critério: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME ou PRIORITY_LEVEL. Se SET não for especificado, os padrões serão fixos para os três critérios.  
+ Especifica os critérios para determinar se a prioridade de conversa é aplicável a uma conversa. Se especificado, SET deve conter pelo menos um critério: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME ou PRIORITY_LEVEL. Se SET não for especificado, os padrões serão fixos para os três critérios.  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
  Especifica o nome de um contrato a ser usado como critério para determinar se a prioridade de conversa se aplica a uma conversa. *ContractName* é um identificador [!INCLUDE[ssDE](../../includes/ssde-md.md)] e precisa especificar o nome de um contrato no banco de dados atual.  
@@ -94,7 +93,7 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Especifica o nome de um serviço a ser usado como critério para determinar se a prioridade de conversa é aplicável a um ponto de extremidade de conversa.  
   
- *RemoteServiceName* é um literal do tipo **nvarchar(256)**. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa uma comparação byte a byte para corresponder à cadeia de caracteres *RemoteServiceName*. A comparação diferencia maiúsculas de minúsculas e não considera o agrupamento atual. O serviço de destino pode estar na instância atual do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou em uma instância remota do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ *RemoteServiceName* é um literal do tipo **nvarchar(256)** . O [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa uma comparação byte a byte para corresponder à cadeia de caracteres *RemoteServiceName*. A comparação diferencia maiúsculas de minúsculas e não considera a ordenação atual. O serviço de destino pode estar na instância atual do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou em uma instância remota do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  '*RemoteServiceName*'  
  Especifica que a prioridade de conversa pode ser se aplicada a:  
@@ -219,7 +218,7 @@ CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/BasePriority]
 ```  
   
 ### <a name="d-creating-three-priority-levels-for-a-target-service-by-using-services"></a>D. Criando três níveis de prioridade para um serviço de destino com o uso de serviços  
- Oferece suporte a um sistema que fornece três níveis de desempenho: Ouro (alto), Prata (meio) e Bronze (baixo). Há um contrato, mas cada nível tem um serviço iniciador separado. Todos os serviços de iniciador se comunicam com um serviço de destino central.  
+ Dá suporte a um sistema que fornece três níveis de desempenho: Ouro (alto), Prata (médio) e Bronze (baixo). Há um contrato, mas cada nível tem um serviço iniciador separado. Todos os serviços de iniciador se comunicam com um serviço de destino central.  
   
 ```  
 CREATE BROKER PRIORITY GoldInitToTargetPriority  
@@ -261,7 +260,7 @@ CREATE BROKER PRIORITY BronzeTargetToInitPriority
 ```  
   
 ### <a name="e-creating-three-priority-levels-for-multiple-services-using-contracts"></a>E. Criando três níveis de prioridade para vários serviços com o uso de contratos  
- Oferece suporte a um sistema que fornece três níveis de desempenho: Ouro (alto), Prata (meio) e Bronze (baixo). Cada nível tem um contrato separado. Estas prioridades se aplicam a qualquer serviço mencionado por conversas que usam os contratos.  
+ Dá suporte a um sistema que fornece três níveis de desempenho: Ouro (alto), Prata (médio) e Bronze (baixo). Cada nível tem um contrato separado. Estas prioridades se aplicam a qualquer serviço mencionado por conversas que usam os contratos.  
   
 ```  
 CREATE BROKER PRIORITY GoldPriority  

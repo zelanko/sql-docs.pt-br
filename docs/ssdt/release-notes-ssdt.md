@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: ef3cd72348cc93eee37716007c7975731b2da333
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 4676b4d17dc2de9118623037e6725c2b3c637c7e
+ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400089"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290364"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Notas sobre a versão para o SSDT (SQL Server Data Tools)
 
@@ -44,6 +43,37 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2,&nbsp; SSDT para VS 2017
+
+_Lançamento:_ &nbsp; 17 de julho de 2019  
+_Número de build:_ &nbsp; 14.0.16194.0  
+_SSDT para Visual Studio 2017._
+
+### <a name="whats-new"></a>Novidades
+
+#### <a name="ssis"></a>SSIS
+
+| Novo item | Detalhes |
+| :------- | :------ |
+| Adição do recurso AzureEnabled. Habilitação de pacotes do projeto a serem executados na PaaS (plataforma como serviço) do SSIS no Azure Data Factory | &nbsp; |
+| Correção de um problema em que as propriedades do conector Oracle não podem ser definidas da expressão de variável | &nbsp; |
+| Correção de um problema em que o conector Oracle apresenta o erro VS_NEEDSNEWMETATDATA ao depurar pacotes direcionados para pré-SQL Server 2019 | &nbsp; |
+| Correção de um problema em que o conector Oracle falhou ao atualizar/fazer downgrade do pacote/projeto se o pacote/projeto usa expressões para as propriedades do gerenciador de conexões | &nbsp; |
+| Correção de um problema em que o botão Baixar WSDL do Editor da Tarefa Serviço Web não é compatível com o protocolo de TLS 1.1 e 1.2 (voltado para SQL Server 2019) | &nbsp; |
+| Correção de um problema em que os pacotes que contêm o gerenciador de conexões do DQS não podem ser carregados novamente após salvar | &nbsp; |
+
+### <a name="known-issues"></a>Problemas conhecidos
+
+| Problemas conhecidos | Detalhes |
+| :---------- | :------ |
+| A Tarefa Executar Pacote do SSIS não é compatível com a depuração quando ExecuteOutOfProcess está definido como True. | Esse problema aplica-se somente à depuração. O salvamento, a implantação e a execução por meio do DTExec.exe ou do catálogo do SSIS não são afetados. |
+| O SSDT para Visual Studio 2017 superior a 15.8 não dá suporte para a criação de pacotes com origem/destino Teradata. | Use o SSDT para Visual Studio 2017 (15.8). |
+| Não é possível criar ou editar fontes de dados no modelo de implantação de pacote. | Falha ao abrir o Assistente de Fonte de Dados. |
+| O Power Query Source pode não ser compatível com OData v4 quando SSIS e SSAS estiverem instalados na mesma instância do Visual Studio. | &nbsp; |
+| O Power Query Source pode não ser compatível com o uso de ODBC para se conectar ao Oracle quando SSIS e SSAS estiverem instalados na mesma instância do Visual Studio. | &nbsp; |
+| Power Query Source não é localizado | &nbsp; |
+| &nbsp; | &nbsp; |
+
 ## <a name="1591nbsp-ssdt-for-vs-2017"></a>15.9.1,&nbsp; SSDT para VS 2017
 
 _Lançamento:_ &nbsp; 27 de abril de 2019  

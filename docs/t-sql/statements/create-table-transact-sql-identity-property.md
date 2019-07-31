@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af536ef3867d3f74ce04a8a8fef8b93e224f09c0
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 8cf672f9aefc4b9fa0444c73596d2fac67089474
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938937"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (Propriedade)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +57,7 @@ IDENTITY [ (seed , increment) ]
 ## <a name="remarks"></a>Remarks  
  As colunas de identidade podem ser usadas para gerar valores de chave. A propriedade de identidade em uma coluna garante o seguinte:  
   
--   Cada novo valor é gerado com base nos valores de seed e increment atuais.  
+-   Cada novo valor é gerado com base nos valores de semente e incremento atuais.  
   
 -   Cada novo valor para uma transação específica é diferente de outras transações simultâneas na tabela.  
   
@@ -68,7 +67,7 @@ IDENTITY [ (seed , increment) ]
   
 -   **Valores consecutivos em uma transação** – não é garantido que uma transação que insere várias linhas obtenha valores consecutivos para as linhas porque outras inserções simultâneas podem ocorrer na tabela. Se os valores precisarem ser consecutivos, a transação deverá usar um bloqueio exclusivo na tabela ou usar o nível de isolamento **SERIALIZABLE**.  
   
--   **Valores consecutivos após o reinício do servidor ou outras falhas** – o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode armazenar valores de identidade em cache por questões de desempenho e alguns dos valores atribuídos podem ser perdidos durante uma falha de banco de dados ou uma reinicialização do servidor. Isso pode resultar em intervalos no valor de identidade após a inserção. Se não forem aceitos intervalos, o aplicativo deverá usar seu próprio mecanismo para gerar valores de chave. Usar um gerador de sequência com a opção **NOCACHE** pode limitar os intervalos de transações que nunca são confirmadas.  
+-   **Valores consecutivos após o reinício do servidor ou outras falhas** - o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode armazenar valores de identidade em cache por questões de desempenho e alguns dos valores atribuídos podem ser perdidos durante uma falha de banco de dados ou uma reinicialização do servidor. Isso pode resultar em intervalos no valor de identidade após a inserção. Se não forem aceitos intervalos, o aplicativo deverá usar seu próprio mecanismo para gerar valores de chave. Usar um gerador de sequência com a opção **NOCACHE** pode limitar os intervalos de transações que nunca são confirmadas.  
   
 -   **Reutilização de valores** – para determinada propriedade de identidade com semente/incremento específico, os valores de identidade não são reutilizados pelo mecanismo. Se uma instrução de inserção específica falhar ou se a instrução de inserção for revertida, os valores de identidade consumidos serão perdidos e não serão gerados novamente. Isso pode resultar em intervalos quando os valores de identidade subsequentes são gerados.  
   
@@ -78,7 +77,7 @@ IDENTITY [ (seed , increment) ]
   
  Apenas uma coluna de identidade pode ser criada por tabela.  
   
- Em tabelas com otimização de memória, a semente e o incremento devem ser definidos para 1.1. Definir a semente ou o incremento para um valor diferente de 1 resulta no seguinte erro: Não há suporte para o uso de valores de semente e incremento diferentes de 1 com tabelas com otimização de memória.  
+ Em tabelas com otimização de memória, a semente e o incremento devem ser definidos para 1.1. Definir a semente ou o incremento para um valor diferente de 1 resulta no seguinte erro: Não há suporte para o uso de valores de semente e incremento diferentes de 1 com tabelas otimizadas para memória.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -110,7 +109,7 @@ VALUES
    ('Pirkko', 'O', 'Koskitalo');  
 ```  
   
-### <a name="b-using-generic-syntax-for-finding-gaps-in-identity-values"></a>b. Usando sintaxe genérica para localizar intervalos em valores de identidade  
+### <a name="b-using-generic-syntax-for-finding-gaps-in-identity-values"></a>B. Usando sintaxe genérica para localizar intervalos em valores de identidade  
  O exemplo a seguir mostra a sintaxe genérica para localizar intervalos em valores de identidade quando os dados são removidos.  
   
 > [!NOTE]  

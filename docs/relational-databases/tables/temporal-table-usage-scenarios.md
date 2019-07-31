@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f25c7527000cb95878b60f4dfe05be4b47f943bb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 621387ca62340818cbe8d5529de17bcdf7e96884
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999370"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Cenários de uso da tabela temporal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +139,7 @@ FROM Employee
 > Se você aplicar AT TIME ZONE a colunas de período, o SQL Server executará uma verificação de tabela/índice, que pode ser muito caro. Evite esse tipo de condição em suas consultas:  
 > \<coluna de período> AT TIME ZONE '\<seu fuso horário>' > {< | > | =, ...} date_condition.  
   
- Consulte também: [Querying Data in a System-Versioned Temporal Table](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)(Consultando dados em uma tabela temporal com controle da versão do sistema).  
+ Consulte também: [Consultar dados em uma tabela temporal com controle da versão do sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
   
 ## <a name="point-in-time-analysis-time-travel"></a>Análise pontual (viajar nos tempos)  
  Ao contrário da auditoria de dados, em que o foco normalmente é sobre as alterações que ocorreram em um registros individual, em cenários de viagem nos tempos os usuários querem ver como conjuntos de dados inteiros sofreram alterações ao longo do tempo. Às vezes, viajar nos tempos inclui várias tabelas temporais relacionadas, cada uma sofrendo alterações em um ritmo independente, para as quais você deseja analisar:  
@@ -427,13 +426,13 @@ FROM CTE
   
  Há várias categorias de dimensões de alteração lenta com base em como o histórico de alterações é preservado:  
   
--   Tipo 0: o histórico não é preservado. Os atributos de dimensão refletem os valores originais.  
+-   Tipo 0:  o histórico não é preservado. Os atributos de dimensão refletem os valores originais.  
   
--   Tipo 1: os atributos de dimensão refletirem os valores mais recentes (valores anteriores são substituídos)  
+-   Tipo 1:  os atributos de dimensão refletem os valores mais recentes (os valores anteriores são substituídos)  
   
--   Tipo 2: toda versão do membro da dimensão representado com uma linha separada na tabela, normalmente com colunas que representam o período de validade  
+-   Tipo 2:  toda versão do membro da dimensão representado com uma linha separada na tabela, normalmente com colunas que representam o período de validade  
   
--   Tipo 3: manutenção de um histórico limitado para atributo(s) selecionado(s) usando colunas adicionais na mesma linha  
+-   Tipo 3: manutenção de um histórico limitado para atributos selecionados usando colunas adicionais na mesma linha  
   
 -   Tipo 4: manutenção do histórico na tabela separada, enquanto a tabela de dimensões original mantém as versões de membro da dimensão mais recentes (atuais)  
   

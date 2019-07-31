@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8ff8f2d557fac07f588b278e2b2667b75e60f478
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5bd9dd2e967c1ce6551dbc3b952a8bf8baa09585
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701284"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084491"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ END CONVERSATION conversation_handle
  É o código de erro. O *failure_code* é do tipo **int**. O código de falha é um código definido pelo usuário que é incluído na mensagem de erro enviada ao outro lado da conversa. O código de falha deve ser maior que 0.  
   
  DESCRIPTION =*failure_text*  
- É a mensagem de erro. O *failure_text* é do tipo **nvarchar(3000)**. O texto da falha é um texto definido pelo usuário que é incluído na mensagem de erro enviada ao outro lado da conversa.  
+ É a mensagem de erro. O *failure_text* é do tipo **nvarchar(3000)** . O texto da falha é um texto definido pelo usuário que é incluído na mensagem de erro enviada ao outro lado da conversa.  
   
  WITH CLEANUP  
  Remove todas as mensagens e entradas da exibição do catálogo para um lado de uma conversa que não pode ser concluída normalmente. O outro lado da conversa não é notificado da limpeza. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remove o ponto de extremidade da conversa, todas as mensagens da conversa na fila de transmissão e todas as mensagens da conversa na fila de serviço. Os administradores podem usar essa opção para remover conversas que não podem ser concluídas normalmente. Por exemplo, se o serviço remoto tiver sido removido permanentemente, um administrador poderá usar WITH CLEANUP para remover conversas para esse serviço. Não use WITH CLEANUP no código de um aplicativo do [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Se END CONVERSATION WITH CLEANUP for executado antes de o ponto de extremidade de recepção confirmar o recebimento de uma mensagem, o ponto de extremidade de envio enviará a mensagem novamente. Isto poderá executar novamente o diálogo.  

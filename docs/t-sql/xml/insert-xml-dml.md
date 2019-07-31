@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4cedc8dee9040e198ffc5f229453a10d54065257
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 95cf1eaa68e429d18456d7f0f9490b700efad3db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051291"
 ---
 # <a name="insert-xml-dml"></a>inserir (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ insert
   
 ## <a name="arguments"></a>Argumentos  
  *Expression1*  
- Identifica um ou mais nós para inserir. Pode ser uma instância XML constante, uma referência a uma instância do tipo de dados XML tipada da mesma coleção de esquema XML em que o método modificado está sendo aplicado, uma instância do tipo de dados XML não tipada que usa a função autônoma **sql:column()**/**sql:variable()** ou uma expressão XQuery. A expressão pode resultar em um nó, e também um nó de texto, ou em uma sequência ordenada de nós. Não pode ser resolvida no nó de raiz (/). Se a expressão resultar em um valor ou sequência de valores, os valores serão inseridos como um único nó de texto com um espaço separando cada valor na sequência. Se você especificar vários nós como constantes, os nós serão incluídos em parênteses e separados por vírgulas. Não é possível inserir sequências heterogêneas como uma sequência de elementos, atributos ou valores. Se a *Expression1* for resolvida para uma sequência vazia, não ocorrerá nenhuma inserção e nenhum erro será retornado.  
+ Identifica um ou mais nós para inserir. Pode ser uma instância XML constante, uma referência a uma instância do tipo de dados XML tipada da mesma coleção de esquema XML em que o método modificado está sendo aplicado, uma instância do tipo de dados XML não tipada que usa a função autônoma **sql:column()** /**sql:variable()** ou uma expressão XQuery. A expressão pode resultar em um nó, e também um nó de texto, ou em uma sequência ordenada de nós. Não pode ser resolvida no nó de raiz (/). Se a expressão resultar em um valor ou sequência de valores, os valores serão inseridos como um único nó de texto com um espaço separando cada valor na sequência. Se você especificar vários nós como constantes, os nós serão incluídos em parênteses e separados por vírgulas. Não é possível inserir sequências heterogêneas como uma sequência de elementos, atributos ou valores. Se a *Expression1* for resolvida para uma sequência vazia, não ocorrerá nenhuma inserção e nenhum erro será retornado.  
   
  into  
  Os nós identificados por *Expression1* são inseridos como descendentes diretos (nós filhos) do nó identificado por *Expression2*. Se o nó em *Expression2* já tiver um ou mais nós filhos, será necessário usar **as first** ou **as last** para especificar onde você deseja que o novo nó seja adicionado. Por exemplo, no início ou no fim da lista de filhos, respectivamente. As palavras-chave **as first** e **as last** serão ignoradas quando forem inseridos atributos.  
@@ -105,7 +104,7 @@ GO
   
  Observe que várias expressões de caminho neste exemplo especificam" [1]" como um requisito de digitação estática. Isso assegura um único nó de destino.  
   
-### <a name="b-inserting-multiple-elements-into-the-document"></a>b. Inserção de vários elementos no documento  
+### <a name="b-inserting-multiple-elements-into-the-document"></a>B. Inserção de vários elementos no documento  
  No exemplo a seguir, um documento é atribuído primeiro a uma variável do tipo **XML**. Em seguida, uma sequência de dois elementos, que representa os recursos do produto, é atribuída a uma segunda variável do tipo **XML**. Essa sequência é inserida na primeira variável.  
   
 ```  
@@ -299,7 +298,7 @@ GO
 ```  
   
 ### <a name="i-inserting-based-on-an-if-condition-statement"></a>I. Inserção baseada em uma instrução de condição se  
- No exemplo a seguir, uma condição IF é especificada como parte da Expression1 na instrução XML DML **insert**. Se a condição for True (verdadeira), um atributo será adicionado ao elemento <`WorkCenter`>.  
+ No exemplo a seguir, uma condição IF é especificada como parte da Expression1 na instrução XML DML **insert**. Se a condição for True, um atributo será adicionado ao elemento <`WorkCenter`>.  
   
 ```  
 USE AdventureWorks;  
@@ -323,7 +322,7 @@ SELECT @myDoc;
 GO  
 ```  
   
- O exemplo a seguir é semelhante, exceto que a instrução XML DML **insert** inserirá um elemento no documento se a condição for True. Isto é, se o elemento <`WorkCenter`> tiver menos que ou for igual a dois elementos filhos <`step`>.  
+ O exemplo a seguir é semelhante, exceto que a instrução XML DML **insert** inserirá um elemento no documento se a condição for True. Isto é, se o elemento <`WorkCenter`> tiver um número inferior ou igual a dois elementos filho <`step`>.  
   
 ```  
 USE AdventureWorks;  

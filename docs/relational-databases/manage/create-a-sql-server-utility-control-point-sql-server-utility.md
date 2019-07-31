@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 398820f012e60181ec6327a67fd5e1abb7adc407
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b342e77c542cd9f3357bccd4b97f3a876d1f5f1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115693"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Criar um ponto de controle do Utilitário do SQL Server (Utilitário do SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ ms.locfileid: "52503587"
   
 -   Esse procedimento deve ser executado por um usuário com permissões de sysadmin, as mesmas permissões necessárias para criar um UCP.  
   
--   Todas as instâncias gerenciadas do SQL Server devem ser removidas do UCP. Observe que o UCP é uma instância gerenciada do SQL Server. Para obter mais informações, consulte [Como remover uma instância do SQL Server do Utilitário do SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
+-   Todas as instâncias gerenciadas do SQL Server devem ser removidas do UCP. Observe que o UCP é uma instância gerenciada do SQL Server. Para obter mais informações, confira [Como remover uma instância do SQL Server do Utilitário do SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
   
  Use este procedimento para remover um SQL Server UCP do Utilitário do SQL Server. Após a conclusão da operação, um UCP pode ser novamente criado na instância do SQL Server.  
   
@@ -133,7 +132,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Instance_name"></a> Especificar Instância  
  Especifique as seguintes informações sobre o UCP que você está criando:  
   
--   **Nome da Instância** – para selecionar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na caixa de diálogo de conexão, clique em **Conectar...**. Forneça o nome do computador e o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no formato ComputerName\InstanceName.  
+-   **Nome da Instância** – para selecionar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na caixa de diálogo de conexão, clique em **Conectar...** . Forneça o nome do computador e o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no formato ComputerName\InstanceName.  
   
 -   **Nome do Utilitário** – Especifique um nome que será usado para identificar o Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na rede.  
   
@@ -145,7 +144,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > [!NOTE]  
 >  Se a conexão for criptografada, ela será usada. Se a conexão não for criptografada, o Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conectará novamente usando uma conexão criptografada.  
   
- Para continuar, clique em **Conectar...**.  
+ Para continuar, clique em **Conectar...** .  
   
 ##  <a name="Agent_configuration"></a> Conta do conjunto de coleta do utilitário  
  Especifique uma conta de domínio do Windows para executar o conjunto de coleta do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa conta é usada como a conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para o conjunto de coleta do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Alternativamente, você pode usar a conta de Serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent existente. Para passar nos requisitos de validação, use as diretrizes a seguir para especificar a conta.  

@@ -45,14 +45,13 @@ helpviewer_keywords:
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9bd4b93d90bc75e7dfc97a526cee544cb71b69a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 14597122e586aca0290a4823f07dbb17e5cccda2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801891"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006527"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -157,7 +156,7 @@ OR ALTER
   
  Evite o uso do prefixo **sp_** ao nomear procedimentos. Esse prefixo é usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para designar procedimentos de sistema. O uso do prefixo poderá causar a quebra do código do aplicativo se houver um procedimento de sistema com o mesmo nome.  
   
- Os procedimentos temporários locais ou globais podem ser criados com uma tecla jogo da velha (#) antes de *procedure_name* (*#procedure_name*) para procedimentos temporários locais e duas teclas jogo da velha para procedimentos temporários globais (*##procedure_name*). Um procedimento temporário local é visível somente à conexão que o criou e é descartado quando essa conexão é fechada. Um procedimento temporário global fica disponível para todas as conexões e é descartado ao término da última sessão que usa o procedimento. Nomes temporários não podem ser especificados para procedimentos CLR.  
+ Os procedimentos temporários locais ou globais podem ser criados com uma tecla jogo da velha (#) antes de *procedure_name* ( *#procedure_name*) para procedimentos temporários locais e duas teclas jogo da velha para procedimentos temporários globais ( *##procedure_name*). Um procedimento temporário local é visível somente à conexão que o criou e é descartado quando essa conexão é fechada. Um procedimento temporário global fica disponível para todas as conexões e é descartado ao término da última sessão que usa o procedimento. Nomes temporários não podem ser especificados para procedimentos CLR.  
   
  O nome completo de um procedimento ou um procedimento temporário global, incluindo ##, não pode exceder 128 caracteres. O nome completo de um procedimento temporário local, incluindo #, não pode exceder 116 caracteres.  
   
@@ -172,16 +171,16 @@ OR ALTER
  Procedimentos numerados não podem usar os tipos definidos pelo usuário CLR ou **xml** e não podem ser usados em um guia de plano.  
   
  **@** *parâmetro*  
- Um parâmetro declarado no procedimento. Especifique um nome de parâmetro usando o sinal (**@**) como o primeiro caractere. O nome do parâmetro precisa estar em conformidade com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md). Os parâmetros são locais para o procedimento; os mesmos nomes de parâmetro podem ser usados em outros procedimentos.  
+ Um parâmetro declarado no procedimento. Especifique um nome de parâmetro usando o sinal ( **@** ) como o primeiro caractere. O nome do parâmetro precisa estar em conformidade com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md). Os parâmetros são locais para o procedimento; os mesmos nomes de parâmetro podem ser usados em outros procedimentos.  
   
  Podem ser declarados um ou mais parâmetros; o número máximo é 2.100. O valor de cada parâmetro declarado deve ser fornecido pelo usuário quando o procedimento é chamado, a menos que um valor padrão para o parâmetro seja especificado ou o valor seja definido como igual a outro parâmetro. Se um procedimento contiver [parâmetros com valor de tabela](../../relational-databases/tables/use-table-valued-parameters-database-engine.md) e faltar um parâmetro na chamada, um padrão de tabela vazia será transmitido. Os parâmetros podem assumir apenas o lugar de expressões constantes. Eles não podem ser usados no lugar de nomes de tabela, nomes de coluna ou nomes de outros objetos de banco de dados. Para obter mais informações, veja [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
  Os parâmetros não poderão ser declarados se FOR REPLICATION for especificado.  
   
- [ _type\_schema\_name_**.** ] *data_type*  
+ [ _type\_schema\_name_ **.** ] *data_type*  
  O tipo de dados do parâmetro e o esquema ao qual o tipo de dados pertence.  
   
-**Diretrizes para procedimentos [!INCLUDE[tsql](../../includes/tsql-md.md)]**:  
+**Diretrizes para procedimentos [!INCLUDE[tsql](../../includes/tsql-md.md)]** :  
   
 -   Todos os tipos de dados [!INCLUDE[tsql](../../includes/tsql-md.md)] podem ser usados como parâmetros.  
   
@@ -242,10 +241,10 @@ FOR REPLICATION
  { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  Uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que abrangem o corpo do procedimento. Você pode usar as palavras-chave BEGIN e END para delimitar as instruções. Para obter informações, consulte as seções Práticas recomendadas, Comentários gerais e Limitações e restrições a seguir.  
   
-EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_  
+EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
  **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Especifica o método de um assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para um procedimento CLR a ser referenciado. *classe_name* deve ser um identificador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido e existir como uma classe no assembly. Se a classe tiver um nome qualificado por namespace que use um ponto final (**.**) para separar partes do namespace, o nome de classe deverá ser delimitado usando colchetes (**[]**) ou aspas (**""**). O método especificado deve ser um método estático da classe.  
+ Especifica o método de um assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para um procedimento CLR a ser referenciado. *classe_name* deve ser um identificador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido e existir como uma classe no assembly. Se a classe tiver um nome qualificado por namespace que use um ponto final ( **.** ) para separar partes do namespace, o nome de classe deverá ser delimitado usando colchetes ( **[]** ) ou aspas ( **""** ). O método especificado deve ser um método estático da classe.  
   
  Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode executar código CLR. Você pode criar, modificar e remover objetos de banco de dados que referenciam módulos do Common Language Runtime; entretanto, não pode executar essas referências no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] até habilitar a [opção clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Para habilitar a opção, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
@@ -452,7 +451,7 @@ GO
   
 |Nome de objeto do Monitor de Desempenho|Nome do Contador de Desempenho do Sistema|  
 |-------------------------------------|--------------------------------------|  
-|SQLServer: Objeto do Cache de Planos|Taxa de Acertos do Cache|  
+|SQL Server: Objeto do Cache de Planos|Taxa de Acertos do Cache|  
 ||Páginas do Cache|  
 ||Contagens de Objetos do Cache*|  
   
@@ -529,7 +528,7 @@ GO
 HumanResources.uspGetAllEmployees;  
 ```  
   
-#### <a name="b-returning-more-than-one-result-set"></a>b. Retornando mais de um conjunto de resultados  
+#### <a name="b-returning-more-than-one-result-set"></a>B. Retornando mais de um conjunto de resultados  
  O procedimento a seguir retorna dois conjuntos de resultados.  
   
 ```sql  

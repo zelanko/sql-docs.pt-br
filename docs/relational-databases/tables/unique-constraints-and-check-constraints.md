@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e6f9b1731e49f110da9ac4dbab5ab782f30ba4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 400b028696666b188760f61c2490a218bc8bd2be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017664"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Restrições exclusivas e restrições de verificação
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "47735214"
   
  Você pode aplicar várias restrições CHECK a uma única coluna. Você também pode aplicar uma única restrição CHECK a várias colunas criando-as ao nível de tabela. Por exemplo, uma restrição CHECK de várias colunas poderia ser usada para confirmar que qualquer linha com o valor de coluna **country_region** de **USA** também tenha um valor de dois caracteres na coluna **state** . Isto permite que várias condições sejam verificadas em um local.  
   
- Restrições CHECK são semelhantes a restrições FOREIGN KEY pelo fato de controlarem os valores colocados em uma coluna. A diferença está em como elas determinam quais valores são válidos: restrições FOREIGN KEY obtêm uma lista de valores válidos de uma outra tabela, enquanto que restrições CHECK determinam valores válidos de uma expressão lógica.  
+ Restrições CHECK são semelhantes a restrições FOREIGN KEY pelo fato de controlarem os valores colocados em uma coluna. A diferença está em como eles determinam quais valores são válidos: restrições FOREIGN KEY obtêm a lista de valores válidos de uma outra tabela, enquanto restrições CHECK determinam valores válidos de uma expressão lógica.  
   
 > [!CAUTION]  
 >  Restrições que incluem conversão de tipo de dados implícita ou explícita podem causar falhas em certas operações. Por exemplo, tais restrições definidas em tabelas que são fontes de opção de partição podem causar falha na operação ALTER TABLE...SWITCH. Evite a conversão de tipo de dados em definições de restrição.  

@@ -1,7 +1,7 @@
 ---
 title: Usar o Conector do SQL Server com recursos de criptografia do SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,17 +12,15 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: aliceku
 ms.author: aliceku
-manager: craigg
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b6f47c0b1139e78119a345cfbb7565500dc346a1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 965980bcfe765f291b232a48af946db5f8f4f230
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401079"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329259"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Use SQL Server Connector with SQL Encryption Features (Usar o Conector do SQL Server com recursos de criptografia do SQL)
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   As atividades de criptografia do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comuns do que usam uma chave assimétrica protegidas pelo Cofre de Chaves do Azure incluem três áreas a seguir.  
   
 -   Transparent Data Encryption usando uma chave assimétrica do Cofre de Chaves do Azure  
@@ -49,8 +47,8 @@ Você precisará criar uma credencial e um logon e criar uma chave de criptograf
      Modificar o script [!INCLUDE[tsql](../../../includes/tsql-md.md)] abaixo das seguintes maneiras:  
   
     -   Edite o argumento `IDENTITY` (`ContosoDevKeyVault`) para apontar para o Cofre de Chaves do Azure.
-        - Se você estiver usando o **Azure público**, substitua o argumento `IDENTITY` pelo nome do seu Cofre de Chaves do Azure da Parte II.
-        - Se você estiver usando uma **nuvem privada do Azure** (por ex:. Azure Governamental, Azure China ou Azure Alemanha), substitua o argumento `IDENTITY` pelo URI do Cofre retornado na Parte II, etapa 3. Não inclua “https://” no URI do Cofre.   
+        - Se você estiver usando o **Azure global**, substitua o argumento `IDENTITY` pelo nome do seu Azure Key Vault da Parte II.
+        - Se você estiver usando uma **nuvem privada do Azure** (por ex:. Azure Governamental, Azure China 21Vianet ou Azure Alemanha), substitua o argumento `IDENTITY` pelo URI do Cofre retornado na Parte II, etapa 3. Não inclua “https://” no URI do Cofre.   
   
     -   Substitua a primeira parte do argumento do `SECRET` pela **ID do Cliente** do Azure Active Directory da Parte I. Neste exemplo, a **ID do Cliente** é `EF5C8E094D2A4A769998D93440D8115D`.  
   
@@ -62,9 +60,9 @@ Você precisará criar uma credencial e um logon e criar uma chave de criptograf
     ```sql  
     USE master;  
     CREATE CREDENTIAL Azure_EKM_TDE_cred   
-        WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
+        WITH IDENTITY = 'ContosoDevKeyVault', -- for global Azure
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China
+        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
         SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
@@ -146,8 +144,8 @@ O [!INCLUDE[ssDE](../../../includes/ssde-md.md)] precisa de credenciais ao acess
      Modificar o script [!INCLUDE[tsql](../../../includes/tsql-md.md)] abaixo das seguintes maneiras:  
   
     -   Edite o argumento `IDENTITY` (`ContosoDevKeyVault`) para apontar para o Cofre de Chaves do Azure.
-        - Se você estiver usando o **Azure público**, substitua o argumento `IDENTITY` pelo nome do seu Cofre de Chaves do Azure da Parte II.
-        - Se você estiver usando uma **nuvem privada do Azure** (por ex:. Azure Governamental, Azure China ou Azure Alemanha), substitua o argumento `IDENTITY` pelo URI do Cofre retornado na Parte II, etapa 3. Não inclua “https://” no URI do Cofre.    
+        - Se você estiver usando o **Azure global**, substitua o argumento `IDENTITY` pelo nome do seu Azure Key Vault da Parte II.
+        - Se você estiver usando uma **nuvem privada do Azure** (por ex:. Azure Governamental, Azure China 21Vianet ou Azure Alemanha), substitua o argumento `IDENTITY` pelo URI do Cofre retornado na Parte II, etapa 3. Não inclua “https://” no URI do Cofre.    
   
     -   Substitua a primeira parte do argumento do `SECRET` pela **ID do Cliente** do Azure Active Directory da Parte I. Neste exemplo, a **ID do Cliente** é `EF5C8E094D2A4A769998D93440D8115D`.  
   
@@ -160,9 +158,9 @@ O [!INCLUDE[ssDE](../../../includes/ssde-md.md)] precisa de credenciais ao acess
         USE master;  
   
         CREATE CREDENTIAL Azure_EKM_Backup_cred   
-            WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
+            WITH IDENTITY = 'ContosoDevKeyVault', -- for global Azure
             -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-            -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China
+            -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
             -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
             SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
         FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;    
@@ -214,7 +212,7 @@ O [!INCLUDE[ssDE](../../../includes/ssde-md.md)] precisa de credenciais ao acess
     
     Para restaurar um backup de banco de dados criptografado com TDE, a instância de destino [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] primeiro deve ter uma cópia da chave de cofre de chaves assimétrica usada para criptografia. Isso poderia ser feito assim:  
     
-    - Se a chave assimétrica original usada para TDE não estiver mais no cofre de chaves, restaure o backup da chave de cofre de chaves ou importe novamente a chave de uma HSM local. **Importante:** para que a impressão digital da chave corresponda a impressão digital registrada no backup do banco de dados, a chave deve ser nomeada com o **mesmo nome de chave do Key Vault** que recebeu originalmente.
+    - Se a chave assimétrica original usada para TDE não estiver mais no cofre de chaves, restaure o backup da chave de cofre de chaves ou importe novamente a chave de uma HSM local. **Importante:** Para que a impressão digital da chave corresponda à impressão digital registrada no backup do banco de dados, a chave deve ser nomeada com o **mesmo nome de chave do Key Vault** que recebeu originalmente.
     
     - Aplique as etapas 1 e 2 na instância de destino [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
     

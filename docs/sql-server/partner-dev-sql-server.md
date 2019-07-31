@@ -9,13 +9,12 @@ ms.technology: ''
 ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
-manager: craigg
-ms.openlocfilehash: c47021ce06d51b833ede6ee75f1e575e4b078314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1f3a1e85fa9d6b8e762a5d3fa68e65b098f9cdd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62506944"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132874"
 ---
 # <a name="sql-server-development-partners"></a>Parceiros de desenvolvimento do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,11 +24,11 @@ Para obter suporte sobre como desenvolver soluções de banco de dados do SQL Se
 
 | Partner (parceiro) | Descrição | Links |
 | --- | --- | --- |
-|![idera][1] |**IDERA**<br>Rapid SQL é um ambiente de desenvolvimento integrado inteligente de SQL que permite aos desenvolvedores de banco de dados e administradores de banco de dados a criação de código SQL de alto desempenho em todas as plataformas de banco de dados principais, incluindo o SQL Server, de uma única interface.<br><br>[Requisitos do sistema][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Site][idera_website]<br>[Twitter][idera_twitter]<br>[Vídeo][idera_youtube] |
-|![click2cloud][2] |**Click2Cloud Inc.**<br>A Click2Cloud Inc. permite que a comunidade de desenvolvedores tenha flexibilidade na escolha de linguagens de programação, estruturas e serviços com o uso do conjunto de ferramentas adequado. Com o uso do kit de ferramentas da Click2Cloud, os desenvolvedores podem criar contêineres de 'SQL no Linux' e anexá-los a um aplicativo, enquanto ainda permitem a arquitetura segura e multilocatário. Os contêineres podem ser implantados de forma independente em qualquer plataforma de contêiner baseada em nuvem.|[Marketplace][click2cloud_marketplace]<br>[Site][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[Vídeo][click2cloud_youtube] |
+|![idera][1] |**IDERA**<br>Rapid SQL é um ambiente de desenvolvimento integrado inteligente de SQL que permite aos desenvolvedores de banco de dados e administradores de banco de dados a criação de código SQL de alto desempenho em todas as plataformas de banco de dados principais, incluindo o SQL Server, de uma única interface.<br><br>[Requisitos do sistema][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Site][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube]<br>click2cloud |
+|![**Click2Cloud Inc.**][2] |A Click2Cloud Inc. permite que a comunidade de desenvolvedores tenha flexibilidade na escolha de linguagens de programação, estruturas e serviços com o uso do conjunto de ferramentas adequado.<br>Com o uso do kit de ferramentas da Click2Cloud, os desenvolvedores podem criar contêineres de 'SQL no Linux' e anexá-los a um aplicativo, enquanto ainda permitem a arquitetura segura e multilocatário. Os contêineres podem ser implantados de forma independente em qualquer plataforma de contêiner baseada em nuvem. [Marketplace][click2cloud_marketplace]<br>[Website][click2cloud_website]|[Twitter][click2cloud_twitter]<br>[Vídeo][click2cloud_youtube]<br>Próximas etapas<br>Para saber mais sobre alguns dos nossos outros parceiros, consulte [Parceiros para alta disponibilidade e recuperação de desastre][hadr_partners], [management partners][management_partners] e [parceiros de monitoramento][monitor_partners]. |
 
-## <a name="next-steps"></a>Próximas etapas
-Para saber mais sobre alguns dos nossos outros parceiros, consulte [Parceiros para alta disponibilidade e recuperação de desastre][hadr_partners], [parceiros de gerenciamento][management_partners] e [parceiros de monitoramento][monitor_partners].
+## <a name="next-steps"></a>Next steps
+To learn more about some of our other partners, see <bpt id="p1">[</bpt>High availability, and disaster recovery partners<ept id="p1">][hadr_partners]</ept>, <bpt id="p2">[</bpt>management partners<ept id="p2">][management_partners]</ept>, and <bpt id="p3">[</bpt>monitoring partners<ept id="p3">][monitor_partners]</ept>.
 
 <!--Image references-->
 [1]: ./media/partner-hadr-sql-server/idera_logo.png

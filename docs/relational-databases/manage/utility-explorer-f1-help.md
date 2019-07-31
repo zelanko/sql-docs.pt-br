@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0468195ebe718db73dfa4a302185b677f76c6896
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024489"
 ---
 # <a name="utility-explorer-f1-help"></a>Ajuda de F1 do Gerenciador do Utilitário
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ ms.locfileid: "52413163"
   
  Para criar uma exibição filtrada de uma instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um aplicativo de camada de dados, clique no link para obter uma categoria de utilização ao lado do indicador deslizante no painel do Utility. Por exemplo, se você clicar em **CPU de Instância Superutilizada** no painel **Conteúdo do Gerenciador do Utilitário** , o SSMS criará uma exibição de lista filtrada das instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que têm a CPU superutilizada com base nas configurações de política atuais.  
   
- Observe que, quando você clicar em um link para uma categoria de utilização, o nó correspondente no painel de navegação do Gerenciador do Utilitário será acrescentado com **(filtrado)** – ou seja, **Instâncias Gerenciadas** é rotulado **Instâncias Gerenciadas (filtrado)**. Para exibir as configurações de filtro, clique com o botão direito do mouse no nó do painel de navegação, selecione **Filtrar**e clique em **Configurações de Filtro**. Para limpar as configurações de filtro, clique com o botão direito do mouse no nó do painel de navegação, selecione **Filtrar** e clique em **Remover Filtro**.  
+ Observe que, quando você clicar em um link para uma categoria de utilização, o nó correspondente no painel de navegação do Gerenciador do Utilitário será acrescentado com **(filtrado)** – ou seja, **Instâncias Gerenciadas** é rotulado **Instâncias Gerenciadas (filtrado)** . Para exibir as configurações de filtro, clique com o botão direito do mouse no nó do painel de navegação, selecione **Filtrar**e clique em **Configurações de Filtro**. Para limpar as configurações de filtro, clique com o botão direito do mouse no nó do painel de navegação, selecione **Filtrar** e clique em **Remover Filtro**.  
   
  Para obter mais informações sobre como exibir o status de integridade de instâncias individuais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou para exibir ou alterar definições de configuração de política, veja [Detalhes de instâncias gerenciadas &#40;Utilitário do SQL Server&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2).  
   
@@ -132,7 +131,7 @@ ms.locfileid: "52413163"
   
  A sequência de colunas da exibição de lista pode ser alterada arrastando-se as colunas para a esquerda ou para a direita. Para adicionar ou excluir colunas da exibição de lista, clique com o botão direito do mouse nos títulos das colunas e selecione ou desmarque colunas. O menu de atalho também fornece opções de classificação. A classificação também pode ser ativada clicando-se na parte superior do nome de uma coluna.  
   
- Para acessar as opções de filtro da exibição de lista do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , clique com o botão direito do mouse no nó **Aplicativos da Camada de Dados Implantados** no painel de navegação do Gerenciador do Utilitário e selecione **Filtrar**. Depois que as configurações de filtro forem implementadas, o nó **Aplicativos da Camada de Dados Implantados** no Gerenciador do Utilitário será rotulado **Aplicativos da Camada de Dados Implantados (filtrados)**. Para obter mais informações, consulte [Configurações de filtro &#40;Pesquisador de Objetos e Gerenciador do Utilitário&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
+ Para acessar as opções de filtro da exibição de lista do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , clique com o botão direito do mouse no nó **Aplicativos da Camada de Dados Implantados** no painel de navegação do Gerenciador do Utilitário e selecione **Filtrar**. Depois que as configurações de filtro forem implementadas, o nó **Aplicativos da Camada de Dados Implantados** no Gerenciador do Utilitário será rotulado **Aplicativos da Camada de Dados Implantados (filtrados)** . Para obter mais informações, consulte [Configurações de filtro &#40;Pesquisador de Objetos e Gerenciador do Utilitário&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
   
  Por padrão, as colunas a seguir exibem informações do estado de integridade de cada aplicativo da camada de dados.  
   
@@ -174,11 +173,11 @@ ms.locfileid: "52413163"
   
 -   Nível de Compatibilidade: (por exemplo, Version100)  
   
--   Criptografia Habilitada: (True ou False)  
+-   Criptografia habilitada: (True ou False)  
   
--   Modelo de Recuperação: (Simples, Completa e Bulk-logged)  
+-   Modelo de recuperação: (Simples, Completa e Bulk-logged)  
   
--   Hora do Último Relatório: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, consulte o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, consulte o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Hora do último relato: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, consulte o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, consulte o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Guia Utilização da CPU  
  A guia Utilização da CPU mostra gráficos lado a lado de dados históricos da utilização de CPU do computador e do aplicativo da camada de dados.  
@@ -251,11 +250,11 @@ ms.locfileid: "52413163"
   
 -   Nível de Compatibilidade: (por exemplo, Version100)  
   
--   Criptografia Habilitada: (True ou False)  
+-   Criptografia habilitada: (True ou False)  
   
--   Modelo de Recuperação: (Simples, Completa e Bulk-logged)  
+-   Modelo de recuperação: (Simples, Completa e Bulk-logged)  
   
--   Hora do Último Relatório: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, consulte o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, consulte o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
+-   Hora do último relato: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, consulte o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, consulte o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
 
 ## <a name="managed-instance-details-sql-server-utility"></a>Detalhes de instâncias gerenciadas (Utilitário do SQL Server)
  As informações da exibição Instâncias Gerenciadas do Gerenciador do Utilitário fornecem dados de utilização para instâncias individuais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], histórico de utilização da CPU, detalhes de utilização do armazenamento em nível de arquivo e a capacidade de exibir e atualizar limites de políticas. Os limites de políticas podem ser controlados no nível de instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , para um computador, para arquivos de banco de dados e arquivos de log e no nível de volumes de armazenamento. Você também pode exibir detalhes de propriedades de instâncias gerenciadas individuais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -274,7 +273,7 @@ ms.locfileid: "52413163"
   
  A sequência de colunas da exibição de lista pode ser alterada arrastando-se as colunas para a esquerda ou para a direita. Para adicionar ou excluir colunas da exibição de lista, clique com o botão direito do mouse nos títulos das colunas e selecione ou desmarque colunas. O menu de atalho também fornece opções de classificação. A classificação também pode ser ativada clicando-se na parte superior do nome de uma coluna.  
   
- Para acessar as opções de filtro da exibição de lista do Utilitário, clique com o botão direito do mouse no nó **Instâncias Gerenciadas** no painel de navegação do Gerenciador do Utilitário e selecione **Filtrar**. Depois que as configurações de filtro forem implementadas, o nó **Instâncias Gerenciadas** no Gerenciador do Utilitário será rotulado **Instâncias Gerenciadas (filtradas)**. Para obter mais informações, consulte [Configurações de filtro &#40;Pesquisador de Objetos e Gerenciador do Utilitário&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
+ Para acessar as opções de filtro da exibição de lista do Utilitário, clique com o botão direito do mouse no nó **Instâncias Gerenciadas** no painel de navegação do Gerenciador do Utilitário e selecione **Filtrar**. Depois que as configurações de filtro forem implementadas, o nó **Instâncias Gerenciadas** no Gerenciador do Utilitário será rotulado **Instâncias Gerenciadas (filtradas)** . Para obter mais informações, consulte [Configurações de filtro &#40;Pesquisador de Objetos e Gerenciador do Utilitário&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
   
  Por padrão, as colunas a seguir exibem informações do estado de integridade de cada instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -308,17 +307,17 @@ ms.locfileid: "52413163"
   
 -   Edição do SQL Server:  
   
--   Clusterizado: (Verdadeiro ou Falso)  
+-   Clusterizado: (True ou False)  
   
 -   Diretório de Backup:  
   
 -   Ordenação:  
   
--   Diferenciar Maiúsculas de Minúsculas: (Verdadeiro ou Falso)  
+-   Diferenciar maiúsculas de minúsculas: (True ou False)  
   
 -   Idioma:  
   
--   Hora do Último Relatório: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, consulte o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, consulte o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Hora do último relato: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, consulte o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, consulte o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Guia Utilização da CPU  
  A guia Utilização da CPU mostra gráficos lado a lado de dados históricos da utilização da CPU do computador e da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -405,13 +404,13 @@ ms.locfileid: "52413163"
   
 -   Edição do SQL Server:  
   
--   Clusterizado: (Verdadeiro ou Falso)  
+-   Clusterizado: (True ou False)  
   
 -   Diretório de Backup:  
   
 -   Ordenação:  
   
--   Diferenciar Maiúsculas de Minúsculas: (Verdadeiro ou Falso)  
+-   Diferenciar maiúsculas de minúsculas: (True ou False)  
   
 -   Idioma:  
 
@@ -489,11 +488,11 @@ Use as guias de Administração do Utilitário para gerenciar configurações de
   
 -   Nome do UMDW: Sysutility_mdw_\<GUID>_DATA.  
   
--   Frequência de carregamento do conjunto de coleta: a cada 15 minutos.  
+-   Frequência de upload do conjunto de coleta: a cada 15 minutos.  
   
- O diretório do UMDW é configurável: \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, where \<System drive> normalmente é a unidade C:\. O arquivo de log, UMDW_\<GUID>_LOG, está localizado no mesmo diretório.  
+ O diretório do UMDW é configurável: \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, em que \<System drive> normalmente é a unidade C:\. O arquivo de log, UMDW_\<GUID>_LOG, está localizado no mesmo diretório.  
   
-> **OBSERVAÇÃO:** o local do arquivo UMDW (sysutility_mdw) pode ser alterado com desanexar/anexar ou ALTER DATABASE. É recomendável usar ALTER DATABASE. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+> **OBSERVAÇÃO:** O local do arquivo UMDW (sysutility_mdw) pode ser alterado usando-se desanexar/anexar ou ALTER DATABASE. É recomendável usar ALTER DATABASE. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
  Voltar aos padrões prontos para uso  
  Para redefinir as configurações nessa guia para os valores padrão, clique no botão **Restaurar Padrões** e em **Aplicar**.  

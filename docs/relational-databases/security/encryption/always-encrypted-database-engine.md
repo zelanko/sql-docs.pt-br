@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: aliceku
 ms.author: aliceku
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a3f6ccaf2da262033a291d300fc66c02ca35e78
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 1ded5b442a6a61ba1a6cf2c0313834cce85f674f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043194"
 ---
 # <a name="always-encrypted-database-engine"></a>Sempre criptografados (mecanismo de banco de dados)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ O servidor calcula o conjunto de resultados e, para as colunas criptografadas in
 
 Para obter detalhes sobre como desenvolver aplicativos usando Always Encrypted com drivers cliente específicos, consulte [Always Encrypted (desenvolvimento do cliente)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
-## <a name="remarks"></a>Comentários
+## <a name="remarks"></a>Remarks
 
 A descriptografia ocorre por meio do cliente. Isso significa que algumas ações que ocorrem somente no servidor não funcionarão ao usar Always Encrypted. 
 
@@ -257,7 +256,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
 [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
 [CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   

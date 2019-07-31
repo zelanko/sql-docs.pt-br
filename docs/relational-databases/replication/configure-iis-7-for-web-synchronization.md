@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b7f9083bc5021415691d04da25d6e5e6297031a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b77faf60734e6aad7248c59d37033b26bb6b92e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903207"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurar o IIS 7 para sincronização da Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47620120"
  Para obter uma visão geral de todo o processo de configuração, consulte [Configurar Sincronização da Web](../../relational-databases/replication/configure-web-synchronization.md).  
   
 > [!IMPORTANT]  
->  Certifique-se de que seu aplicativo use apenas versões [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou posteriores e que as versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] não estejam instaladas no servidor IIS. Versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] podem provocar erros, como: "Formato inválido de uma mensagem durante a sincronização da Web. Verifique se os componentes de replicação estão adequadamente configurados no servidor Web".  
+>  Certifique-se de que seu aplicativo use apenas versões [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou posteriores e que as versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] não estejam instaladas no servidor IIS. Versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] podem causar erros, como: "Formato inválido de uma mensagem durante a sincronização da Web. Verifique se os componentes de replicação estão adequadamente configurados no servidor Web".  
   
  Para usar a sincronização da Web, é necessário configurar o IIS concluindo as etapas a seguir. Cada etapa é descrita em detalhes neste tópico.  
   
@@ -67,7 +66,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 6.  Crie um diretório virtual em IIS. O diretório virtual deve ser criado no site criado na etapa 4 e deve ser mapeado para o diretório que foi criado na etapa 1. Seja o mais restritivo possível ao atribuir a esse diretório. Você deve selecionar pelo menos as permissões de **Leitura** e **Execução** .  
   
-    1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)**, no painel **Conexões** , clique com o botão direito em **Site Padrão**e selecione **Adicionar Diretório virtual**.  
+    1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)** , no painel **Conexões** , clique com o botão direito em **Site Padrão**e selecione **Adicionar Diretório virtual**.  
   
     2.  Para **Alias**, insira **SQLReplication**.  
   
@@ -75,7 +74,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 7.  Configure o IIS para habilitar a execução de replisapi.dll.  
   
-    1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)**, clique em **Site Padrão**.  
+    1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)** , clique em **Site Padrão**.  
   
     2.  No painel central, clique em **Mapeamentos do Manipulador**.  
   
@@ -104,7 +103,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 #### <a name="to-configure-iis-authentication"></a>Para configurar a Autenticação IIS  
   
-1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)**, clique em **Site Padrão**.  
+1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)** , clique em **Site Padrão**.  
   
 2.  No painel do meio, clique duas vezes em **Autenticação**.  
   
@@ -132,7 +131,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 #### <a name="to-require-ssl-security-for-a-web-site"></a>Para exigir segurança de SSL para um site  
   
-1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)**, expanda o nó do servidor local e clique no **Site Padrão** (ou no seu site de sincronização da Web se ele for diferente do site padrão).  
+1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)** , expanda o nó do servidor local e clique no **Site Padrão** (ou no seu site de sincronização da Web se ele for diferente do site padrão).  
   
 2.  No painel do meio, clique duas vezes em **Configurações de SSL**.  
   
@@ -140,7 +139,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 #### <a name="to-create-a-self-signed-certificate-for-testing"></a>Para criar um certificado autoassinado para testes  
   
-1.  Em **Gerenciador dos Serviços de Informações da Internet (IIS)**, clique no nó do servidor local e, em seguida, no painel central, clique duas vezes em **Certificados de Servidor**.  
+1.  Em **Gerenciador dos Serviços de Informações da Internet (IIS)** , clique no nó do servidor local e, em seguida, no painel central, clique duas vezes em **Certificados de Servidor**.  
   
 2.  No painel **Ações** , clique em **Criar Certificado Autoassinado**.  
   
@@ -160,9 +159,9 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 1.  No **Noternet Noformation Services (IIS) Manager**, clique em **Site Padrão.**  
   
-2.  No painel **Ações**, clique em **Procurar \*:443(https)**.  
+2.  No painel **Ações**, clique em **Procurar \*:443(https)** .  
   
-3.  O Internet Explorer será aberto e exibirá uma mensagem informando que "Há um problema com o certificado de segurança deste site". Este aviso informa que o certificado associado não foi emitido por uma CA reconhecida e talvez não seja confiável. Esse é um aviso esperado, portanto, clique em **Continuar neste site (não recomendado)**.  
+3.  O Internet Explorer será aberto e exibirá uma mensagem informando que "Há um problema com o certificado de segurança deste site". Este aviso informa que o certificado associado não foi emitido por uma CA reconhecida e talvez não seja confiável. Esse é um aviso esperado, portanto, clique em **Continuar neste site (não recomendado)** .  
   
 4.  Se for solicitado a **Conectar ao host local**, digite um nome de usuário e senha para continuar. Você deve ver a página padrão do site.  
   
@@ -221,7 +220,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
     2.  Na guia **Segurança** , clique em **Editar**.  
   
-    3.  Na caixa de diálogo **Permissões para \<foldername>**, clique em **Adicionar** para adicionar a conta criada na etapa 1.  
+    3.  Na caixa de diálogo **Permissões para \<foldername>** , clique em **Adicionar** para adicionar a conta criada na etapa 1.  
   
     4.  Verifique se **Deste local** exibe o nome do computador local (não um domínio). Se esse campo não exibir o nome do computador local, clique em **Locais**. Na caixa de diálogo **Locais** , selecione o computador local e clique em **OK**.  
   
@@ -229,9 +228,9 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
     6.  Selecione qualquer usuário ou grupo que não requeira acesso ao diretório, clique em **Remover**e clique em **OK**.  
   
-4.  Crie um pool de aplicativos no **Gerenciador dos Serviços de Informação de Internet (IIS)**:  
+4.  Crie um pool de aplicativos no **Gerenciador dos Serviços de Informação de Internet (IIS)** :  
   
-    1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)**, no painel **Conexões** , expanda o nó do servidor local.  
+    1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)** , no painel **Conexões** , expanda o nó do servidor local.  
   
     2.  Clique com o botão direito do mouse em **Pools de Aplicativos**e clique em **Adicionar Pool de Aplicativos**.  
   
@@ -242,7 +241,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 5.  Associe a conta com o pool de aplicativos:  
   
-    1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)**, expanda o nó do servidor local e clique em **Pool de Aplicativos**.  
+    1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)** , expanda o nó do servidor local e clique em **Pool de Aplicativos**.  
   
     2.  Clique com o botão direito do mouse no pool de aplicativos que você criou e clique em **Definir Padrões do Pool de Aplicativos**.  
   
@@ -258,7 +257,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 6.  Associe o pool de aplicativos ao site de replicação:  
   
-    1.  Em **Gerenciador dos Serviços de Informações da Internet (IIS)**, expanda o nó do servidor local e clique no **Site Padrão** (ou no seu site de sincronização da Web se ele for diferente do site padrão).  
+    1.  Em **Gerenciador dos Serviços de Informações da Internet (IIS)** , expanda o nó do servidor local e clique no **Site Padrão** (ou no seu site de sincronização da Web se ele for diferente do site padrão).  
   
     2.  No painel **Ações** , sob **Gerenciar Site**, clique em **Configurações Avançadas**.  
   
@@ -310,7 +309,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
     > [!NOTE]  
     >  Os certificados serão instalados para os usuários. Esse processo deve ser executado para cada usuário que sincronizará com o IIS.  
   
-4.  Na caixa de diálogo **Conectar a \<ServerName>**, especifique o logon e a senha que o Agente de Mesclagem usará para se conectar ao IIS. Essas credenciais também serão especificadas no Assistente para Nova Assinatura.  
+4.  Na caixa de diálogo **Conectar a \<ServerName>** , especifique o logon e a senha que o Agente de Mesclagem usará para se conectar ao IIS. Essas credenciais também serão especificadas no Assistente para Nova Assinatura.  
   
 5.  Na janela do Internet Explorer chamada **Informação diagnóstica do SQL Websync**, verifique se o valor em cada coluna **Status** na página é **ÊXITO**.  
   

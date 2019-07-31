@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48d62232c5d481ccbb6204f5ba14465dea75ca30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 022e1228a9796dadddc4d9adfd20b4faeda35515
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946569"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307643"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "64946569"
   
 -   A tabela não está sendo reproduzida.  
   
--   O bloqueio da tabela é especificado (usando TABLOCK). Para a tabela com um índice columnstore clusterizado, o TABLOCK não é necessário para o log mínimo.  Além disso, somente o carregamento de dados nos grupos de linhas compactados são minimamente registrados, requerendo um tamanho de lote de 102.400 ou superior.  
+-   O bloqueio da tabela é especificado (usando TABLOCK). Para a tabela com um índice columnstore clusterizado, o TABLOCK não é necessário para o log mínimo.  Além disso, somente os dados carregados nos grupos de linhas compactados são minimamente registrados, exigindo um tamanho de lote de 102400 ou superior.  
   
     > [!NOTE]  
     >  Embora as inserções de dados não sejam registradas no log de transações durante uma operação da importação com log em massa, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] ainda faz o log de alocações de extensão cada vez que uma nova extensão é alocada à tabela.  
@@ -50,17 +49,15 @@ ms.locfileid: "64946569"
   
 -   Se a tabela não tiver nenhum índice clusterizado, mas tiver um ou mais índices não clusterizados, as páginas de dados sempre terão log mínimo. No entanto, a forma como as páginas de índice são registradas depende da tabela:  
   
-    -   Se a tabela estiver vazia, a páginas de índice terão log mínimo.  
+    -   Se a tabela estiver vazia, a páginas de índice terão log mínimo.  Se você iniciar com uma tabela vazia e importar os dados em massa em vários lotes, para o primeiro lote as páginas de índice e as páginas de dados terão log mínimo, mas começando com o segundo lote, só as páginas de dados terão log mínimo. 
   
-    -   Se a tabela não estiver vazia, as páginas de índice terão log completo.  
+    -   Se a tabela não estiver vazia, as páginas de índice terão log completo.    
+
+-   Se a tabela tiver um índice clusterizado e estiver vazia, ambas as páginas de dados e de índice terão log mínimo. Por outro lado, se uma tabela tiver um índice clusterizado baseado na árvore b e não estiver vazia, as páginas de dados e as páginas de índice terão um log completo, independentemente do modelo de recuperação. Se você iniciar com uma tabela rowstore vazia e importar em massa os dados em lotes, as páginas de índice e de dados serão registradas minimamente para o primeiro lote, mas do segundo lote em diante, somente as páginas de dados serão registradas em massa.
+
+- Para obter informações sobre como registrar em log um CCI (índice columnstore clusterizado), consulte [Diretrizes de carregamento de dados de índice columnstore](../indexes/columnstore-indexes-data-loading-guidance.md#plan-bulk-load-sizes-to-minimize-delta-rowgroups).
   
-        > [!NOTE]  
-        >  Se você iniciar com uma tabela vazia e importar os dados em massa em vários lotes, para o primeiro lote as páginas de índice e as páginas de dados terão log mínimo, mas começando com o segundo lote, só as páginas de dados terão log mínimo.  
-  
--   Se a tabela tiver um índice clusterizado e estiver vazia, ambas as páginas de dados e de índice terão log mínimo. Por outro lado, se uma tabela tiver um índice clusterizado baseado na árvore b e não estiver vazia, as páginas de dados e as páginas de índice terão um log completo, independentemente do modelo de recuperação. Para as tabelas com índice columnstore clusterizado, o carregamento de dados no grupo de linhas compactado sempre terá um log mínimo, independentemente da tabela estar vazia ou não quando o tamanho do lote for > = 102.400.  
-  
-    > [!NOTE]  
-    >  Se você iniciar com uma tabela rowstore vazia e importar em massa os dados em lotes, as páginas de índice e de dados serão registradas minimamente para o primeiro lote, mas do segundo lote em diante, somente as páginas de dados serão registradas em massa.  
+
   
 > [!NOTE]  
 >  Quando a replicação transacional está habilitada, as operações BULK INSERT são completamente registradas mesmo no modelo de recuperação bulk-logged.  

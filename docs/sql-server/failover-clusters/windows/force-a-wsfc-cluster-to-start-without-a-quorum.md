@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 068d92c4913a59e9c18c601d2c21b8b3c80a0a19
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ac6464cb5bab7e16cb6ee0282f402c1416ec47cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520234"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044740"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forçar um cluster WSFC para iniciar sem um quorum
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "52520234"
   
 -   **Antes de iniciar:**  [Recomendações](#Recommendations), [Segurança](#Security)  
   
--   **Para forçar um cluster a iniciar sem um quorum usando:**  [Usando o Gerenciador de Cluster de Failover](#FailoverClusterManagerProcedure), [Usando o Powershell](#PowerShellProcedure), [Usando Net.exe](#CommandPromptProcedure)  
+-   **Para forçar um cluster a iniciar sem um quorum usando:**  [Usando o Gerenciador de Cluster de Failover](#FailoverClusterManagerProcedure), [Usando o PowerShell](#PowerShellProcedure), [Usando Net.exe](#CommandPromptProcedure)  
   
 -   **Acompanhamento:**  [Acompanhamento: depois de forçar o cluster a iniciar sem um quorum](#FollowUp)  
   
@@ -48,7 +47,7 @@ ms.locfileid: "52520234"
   
 3.  No painel esquerdo, na árvore **Gerenciador de Cluster de Failover** , clique no nome do cluster.  
   
-4.  No painel de resumo, confirme se o valor atual de **Configuração de Quorum** é:  **Aviso: o cluster está sendo executado no estado ForceQuorum**.  
+4.  No painel de resumo, confirme se o valor **Configuração de Quorum** atual é:  **Aviso: o cluster está sendo executado no estado ForceQuorum**.  
   
 ##  <a name="PowerShellProcedure"></a> Usando o Powershell  
   

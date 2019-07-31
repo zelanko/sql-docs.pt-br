@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 28face7dd893a43b9167ff162a3c741b99c65eab
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3d015602e944416435c95aba6aaea1ead84b834a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018867"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077968"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ Retorna um nó filho que é um descendente do pai.
 -   Se parent, child1 e child2 não forem NULL, retornará um filho do pai maior que child1 e menor que child2.  
 -   Se child1 não for NULL e não for um filho de pai, ocorrerá uma exceção.  
 -   Se child2 não for NULL e não for um filho de pai, ocorrerá uma exceção.  
--   Se child1 >= child2, ocorrerá uma exceção.  
+-   Se child1 for >= child2, ocorrerá uma exceção.  
   
 GetDescendant é determinístico. Portanto, se GetDescendant for chamado com as mesmas entradas, sempre produzirá a mesma saída. Contudo, a identidade exata do filho produzida pode variar de acordo com sua relação com os outros nós, como mostrado no exemplo C.
   
@@ -82,7 +81,7 @@ VALUES
 'adventure-works\FirstNewEmployee', 'Application Intern', '3/11/07') ;  
 ```  
   
-### <a name="b-inserting-a-row-as-a-greater-descendant-node"></a>b. Inserindo uma linha como um nó mais descendente  
+### <a name="b-inserting-a-row-as-a-greater-descendant-node"></a>B. Inserindo uma linha como um nó mais descendente  
 Outro funcionário novo é contratado, subordinado ao mesmo gerente, como no exemplo A. Execute o seguinte código para inserir a nova linha usando o método GetDescendant com o argumento child 1 para especificar que o nó da nova linha virá depois do nó do exemplo A, tornando-se `/3/1/2/`:
   
 ```sql
