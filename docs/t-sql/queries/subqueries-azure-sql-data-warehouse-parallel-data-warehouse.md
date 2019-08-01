@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e0c7434f6b4ebee94afdb7ea2ee206bc7b102894
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 675dcd165ec164c9149486d2abae8d4b910df17b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767984"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948268"
 ---
 # <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>Subconsultas (SQL Data Warehouse do Azure, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

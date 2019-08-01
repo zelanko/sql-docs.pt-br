@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9d670c1dbfc94e80394cf34733b8a91aeb6cb056
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68032697"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702784"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna uma lista de procedimentos armazenados do ambiente atual.  
   
@@ -42,9 +43,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @sp_name = ] 'name'` É o nome do procedimento usado para retornar informações de catálogo. *nome da* está **nvarchar(390)** , com um padrão NULL. Há suporte para a correspondência do padrão curinga.  
+`[ @sp_name = ] 'name'`É o nome do procedimento usado para retornar informações do catálogo. o *nome* é **nvarchar (390)** , com um padrão de NULL. Há suporte para a correspondência do padrão curinga.  
   
-`[ @sp_owner = ] 'schema'` É o nome do esquema ao qual pertence o procedimento. *esquema* está **nvarchar(384)** , com um padrão NULL. Há suporte para a correspondência do padrão curinga. Se *proprietário* não é especificado, serão aplicadas as regras de visibilidade de procedimento padrão do DBMS subjacente.  
+`[ @sp_owner = ] 'schema'`É o nome do esquema ao qual o procedimento pertence. o *esquema* é **nvarchar (384)** , com um padrão de NULL. Há suporte para a correspondência do padrão curinga. Se o *proprietário* não for especificado, as regras de visibilidade de procedimento padrão do DBMS subjacente se aplicarão.  
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o esquema atual contiver um procedimento com o nome especificado, será retornado esse procedimento. Se um procedimento armazenado não qualificado for especificado, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] procurará o procedimento na ordem seguinte:  
   
@@ -54,13 +55,13 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   O esquema **dbo** no banco de dados atual.  
   
-`[ @qualifier = ] 'qualifier'` É o nome do qualificador de procedimento. *qualificador* está **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas no formato (_qualificador_ **.** _esquema_ **.** _nome_. Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualificador* representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
+`[ @qualifier = ] 'qualifier'`É o nome do qualificador de procedimento. o qualificador é **sysname**, com um padrão de NULL. Vários produtos DBMS dão suporte à nomeação de três partes para tabelas no formulário (_qualificador_ **.** _esquema_ do **.** _nome_. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o qualificador representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
   
-`[ @fUsePattern = ] 'fUsePattern'` Determina se o caractere de sublinhado (_), porcentagem (%)) ou colchetes []) são interpretados como caracteres curinga. *fUsePattern* está **bit**, com um padrão de 1.  
+`[ @fUsePattern = ] 'fUsePattern'`Determina se o sublinhado (_), percentual (%) ou colchetes []) é interpretado como caracteres curinga. *fUsePattern* é **bit**, com um padrão de 1.  
   
- **0** = padrão de correspondência está desativado.  
+ **0** = a correspondência de padrões está desativada.  
   
- **1** = padrão de correspondência está em.  
+ **1** = a correspondência de padrões está ativada.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  Nenhum  
@@ -81,9 +82,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ## <a name="remarks"></a>Comentários  
  Para obter interoperabilidade máxima, o cliente de gateway deve supor apenas a correspondência de padrões SQL padrão (os caracteres curinga porcentagem % e sublinhado_).  
   
- As informações de permissão relacionadas ao acesso para execução a um determinado procedimento para o usuário atual não são necessariamente confirmadas; portanto, o acesso não é autorizado. Observe que somente o nome de três partes é utilizado. Em outras palavras, somente os procedimentos armazenados locais, e não os procedimentos armazenados remotos (que requerem nome de quatro partes), são retornados quando executados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o atributo do servidor ACCESSIBLE_SPROC for Y no conjunto de resultados de **sp_server_info**, somente os procedimentos armazenados que podem ser executados pelo usuário atual são retornados.  
+ As informações de permissão relacionadas ao acesso para execução a um determinado procedimento para o usuário atual não são necessariamente confirmadas; portanto, o acesso não é autorizado. Observe que somente o nome de três partes é utilizado. Em outras palavras, somente os procedimentos armazenados locais, e não os procedimentos armazenados remotos (que requerem nome de quatro partes), são retornados quando executados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o atributo de servidor ACCESSIBLE_SPROC for Y no conjunto de resultados para **sp_server_info**, somente os procedimentos armazenados que podem ser executados pelo usuário atual serão retornados.  
   
- **sp_stored_procedures** é equivalente a **SQLProcedures** no ODBC. Os resultados retornados são ordenados por **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**, e **PROCEDURE_NAME**.  
+ **sp_stored_procedures** é equivalente a SQLProcedures em ODBC. Os resultados retornados são ordenados por **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**e **procedure_name**.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão SELECT no esquema.  
@@ -109,7 +110,7 @@ sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2012', 1;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Procedimentos armazenados do catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Procedimentos &#40;armazenados de catálogo TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

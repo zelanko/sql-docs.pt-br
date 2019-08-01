@@ -18,14 +18,13 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 089a97d4a2f6476719a3570d4d59bea664b71690
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40fff511c9ff69ce6da9de9cf7bcaf21cb4d9ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909708"
 ---
 # <a name="index-properties-f1-help"></a>Ajuda de F1 de Propriedades do Índice
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "47846357"
  Exibe o nome do índice. Este campo é somente leitura para um índice existente. Ao criar um novo índice, digite o nome do índice.  
   
  **Tipo de índice**  
- Indica o tipo de índice. Para novos índices, indica o tipo de índice selecionado ao abrir a caixa de diálogo. Os índices podem ser: **Clusterizado**, **Não Clusterizado**, **XML Primário**, **XML Secundário**, **Espacial**, **Columnstore clusterizado**ou **Columnstore não clusterizado**.  
+ Indica o tipo de índice. Para novos índices, indica o tipo de índice selecionado ao abrir a caixa de diálogo. Os índices podem ser: **Clusterizado**, **Não clusterizado**, **XML primário**, **XML secundário**, **Espacial**, **Columnstore clusterizado** ou **Columnstore não clusterizado**.  
   
  **Observação** É permitido somente um índice clusterizado para cada tabela. É permitido somente um índice columnstore xVelocity de memória otimizada para cada tabela.  
   
@@ -184,7 +183,7 @@ ms.locfileid: "47846357"
 ### <a name="bounding-box"></a>Caixa delimitadora  
  A *caixa delimitadora* é o perímetro da grade de alto nível de um plano geométrico. Os parâmetros da caixa delimitadora só existem no mosaico de grade geométrica. Esses parâmetros ficarão indisponíveis se o **Esquema de Mosaico** for **Grade geográfica**.  
   
- O painel exibe as coordenadas **(**_X mín._**,**_Y mín._**)** e **(**_X máx._**,**_Y máx._**)** da caixa delimitadora. Não há valores de coordenada padrão. Portanto, ao criar um novo índice espacial em uma **geometry** coluna de tipo, será necessário especificar os valores de coordenada.  
+ O painel exibe as coordenadas **(** _X mín._ **,** _Y mín._ **)** e **(** _X máx._ **,** _Y máx._ **)** da caixa delimitadora. Não há valores de coordenada padrão. Portanto, ao criar um novo índice espacial em uma **geometry** coluna de tipo, será necessário especificar os valores de coordenada.  
   
  **X mín.**  
  A coordenada X do canto inferior esquerdo da caixa delimitadora.  
