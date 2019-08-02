@@ -7,19 +7,20 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 17b2c150368b32960907d6fdd2e31b109f51d771
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 13fb37bee355ce1d379d8348734293baaeb481d8
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469634"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714807"
 ---
 # <a name="quickstart-python-data-structures-in-sql-server"></a>Início Rápido: Estruturas de dados do Python no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Este guia de início rápido mostra como usar estruturas de dados ao usar o Python no SQL Server Serviços de Machine Learning.
 
-SQL Server se baseia no pacote do  Python pandas, que é ótimo para trabalhar com dados tabulares. No entanto, você não pode passar um escalar do Python para SQL Server e esperar que ele "simplesmente funcione". Neste guia de início rápido, examinaremos algumas definições básicas de tipo de dados, para prepará-lo para problemas adicionais que você possa encontrar ao passar dados tabulares entre Python e SQL Server.
+SQL Server se baseia no pacote do Python pandas, que é ótimo para trabalhar com dados tabulares. No entanto, você não pode passar um escalar do Python para SQL Server e esperar que ele "simplesmente funcione". Neste guia de início rápido, examinaremos algumas definições básicas de tipo de dados, para prepará-lo para problemas adicionais que você possa encontrar ao passar dados tabulares entre Python e SQL Server.
 
 + Um quadro de dados é uma tabela com _várias_ colunas.
 + Uma única coluna de um dataframe é um objeto do tipo lista chamado série.

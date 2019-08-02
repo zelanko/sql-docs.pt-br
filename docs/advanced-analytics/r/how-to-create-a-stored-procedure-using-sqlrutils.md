@@ -7,14 +7,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a224bed65cd7d3fd1b6dda4ed10d56f79ecc12ee
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 22faeb2ea9f3e2104c2c1921b91a26ec5068079e
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470143"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715700"
 ---
-# <a name="create-a-stored-pprocedure-using-sqlrutils"></a>Criar um pProcedure armazenado usando sqlrutils
+# <a name="create-a-stored-procedure-using-sqlrutils"></a>Criar um procedimento armazenado usando sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Este artigo descreve as etapas para converter seu código R para executar como um procedimento armazenado T-SQL. Para obter os melhores resultados possíveis, seu código poderá precisar ser um pouco modificado, para garantir que todas as entradas possam ser parametrizadas.
@@ -29,7 +30,7 @@ Além disso, como os parâmetros de entrada para a função R se tornarão os pa
 
 ### <a name="inputs"></a>Entradas
 
-Entre os parâmetros de entrada pode haver no máximo um quadro de dados.
+Entre os parâmetros de entrada, pode haver no máximo um quadro de dados.
 
 Os objetos dentro do quadro de dados, bem como todos os outros parâmetros de entrada da função, devem ser dos seguintes tipos de dados R:
 - POSIXct
@@ -89,7 +90,7 @@ Para ilustrar, suponha que você deseja criar um procedimento armazenado chamado
 
 - Usa uma função **foosql**existente. A função era baseada em código existente na função de R **foo**, mas você reescreveu a função para estar de acordo com os requisitos, conforme descrito nesta [seção](#bkmk_rewrite), e denominada a função updated como **foosql**.
 - Usa o quadro de dados **queryinput** como entrada
-- Gera como saída um quadro de dados com o nome da variável  R, sqloutput
+- Gera como saída um quadro de dados com o nome da variável R, sqloutput
 - Você deseja criar o código T-SQL como um arquivo na `C:\Temp` pasta, para que você possa executá-lo usando SQL Server Management Studio mais tarde
 
 ```R
@@ -116,7 +117,7 @@ Os dois métodos exigem que o procedimento armazenado seja registrado no banco d
 
 Você pode registrar o procedimento armazenado usando o R, ou pode executar a instrução CREATE PROCEDURE no T-SQL.
 
-- Usando o T-SQL.  Se você for mais confortável com o T-SQL, abra o SQL Server Management Studio (ou qualquer outro cliente que possa executar comandos DDL do `StoredProcedure` SQL) e execute a instrução CREATE PROCEDURE usando o código preparado pela função.
+- Usando o T-SQL.  Se você for mais confortável com o T-SQL, abra SQL Server Management Studio (ou qualquer outro cliente que possa executar comandos DDL do `StoredProcedure` SQL) e execute a instrução CREATE PROCEDURE usando o código preparado pela função.
 - Usando o R. Enquanto você ainda estiver em seu ambiente de R, poderá usar a `registerStoredProcedure` função no **sqlrutils** para registrar o procedimento armazenado no banco de dados.
 
   Por exemplo, você pode registrar o procedimento armazenado **sp_rsample** na instância e no banco de dados definido em *sqlConnStr*, fazendo essa chamada R:

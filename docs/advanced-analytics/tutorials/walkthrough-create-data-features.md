@@ -7,12 +7,13 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e799b1ccba38d7716f2987112573a1d2d07203cd
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: f12c20a54c0811e392eaa85684d7fac1a209c396
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468465"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714692"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Criar recursos de dados usando R e SQL Server (explicação)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,9 +55,9 @@ Primeiro, vamos fazer a maneira como os usuários do R estão acostumados: obter
     featureDataSource <- RxSqlServerData(sqlQuery = bigQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
     ```
 
-    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) pode usar uma consulta que consiste em uma consulta SELECT válida, fornecida como o argumento para o parâmetro  SQLQuery ou o nome de um objeto Table, fornecido como o parâmetro _Table_ .
+    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) pode usar uma consulta que consiste em uma consulta SELECT válida, fornecida como o argumento para o parâmetro SQLQuery ou o nome de um objeto Table, fornecido como o parâmetro _Table_ .
     
-    - Se você quiser obter dados de exemplo de uma tabela, deverá usar o  parâmetro SQLQuery, definir parâmetros de amostragem usando a cláusula TABLESAMPLE T-SQL e definir o argumento _armazenado em buffer_ como false.
+    - Se você quiser obter dados de exemplo de uma tabela, deverá usar o parâmetro SQLQuery, definir parâmetros de amostragem usando a cláusula TABLESAMPLE T-SQL e definir o argumento _armazenado em buffer_ como false.
 
 3. Execute o código a seguir para criar a função personalizada do R. O ComputeDist usa dois pares de valores de latitude e longitude e calcula a distância linear entre eles, retornando a distância em milhas.
 
@@ -111,7 +112,7 @@ Primeiro, vamos fazer a maneira como os usuários do R estão acostumados: obter
     
     No entanto, vale a pena observar alguns pontos em relação a rxDataStep: 
     
-    Em outras fontes de dados, você pode usar os argumentos *varsToKeep* e *varsToDrop*, mas eles não têm suporte para SQL Server fontes de dados. Portanto, neste exemplo, usamos o argumento transformações para especificar as colunas de passagem e as colunas transformadas. Além disso, ao executar em um contexto de computação SQL Server  , o argumento Indata só pode pegar uma fonte de dados SQL Server.
+    Em outras fontes de dados, você pode usar os argumentos *varsToKeep* e *varsToDrop*, mas eles não têm suporte para SQL Server fontes de dados. Portanto, neste exemplo, usamos o argumento transformações para especificar as colunas de passagem e as colunas transformadas. Além disso, ao executar em um contexto de computação SQL Server , o argumento Indata só pode pegar uma fonte de dados SQL Server.
 
     O código anterior também pode produzir uma mensagem de aviso quando executado em conjuntos de dados maiores. Quando o número de linhas vezes que o número de colunas que está sendo criado excede um valor definido (o padrão é 3 milhões), rxDataStep retorna um aviso e o número de linhas no quadro de dados retornado será truncado. Para remover o aviso, você pode modificar o argumento _maxRowsByCols_ na função rxDataStep. No entanto, se _maxRowsByCols_ for muito grande, você poderá enfrentar problemas ao carregar o quadro de dados na memória.
 
@@ -134,7 +135,7 @@ Alterne para [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
     -- User-defined function calculates the direct distance between two geographical coordinates.
-    RETURNS
+    RETURNS decimal(28, 10)
     AS
     BEGIN
       DECLARE @distance decimal(28, 10)

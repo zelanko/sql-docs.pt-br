@@ -3,16 +3,17 @@ title: Pontuação em tempo real usando o procedimento armazenado sp_rxPredict
 description: Gere previsões usando sp_rxPredict, pontuação de entradas de dados em um modelo pré-treinado escrito em R em SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/29/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b4284d77464597857eca500b4a8ad29e1f4d06ee
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 26701ac6e538d195a5a85ad66af9578848889d23
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469965"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715641"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Pontuação em tempo real com sp_rxPredict no aprendizado de máquina SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ A pontuação em tempo real usa o procedimento armazenado do sistema [sp_rxPredi
 
 ## <a name="how-real-time-scoring-works"></a>Como a pontuação em tempo real funciona
 
-A pontuação em tempo real tem suporte no SQL Server 2017 e SQL Server 2016, em tipos de modelo específicos com base em funções RevoScaleR ou MicrosoftML como [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Ele usa bibliotecas C++ nativas para gerar pontuações, com base na entrada do usuário fornecida a um modelo de aprendizado de máquina armazenado em um formato binário especial.
+A pontuação em tempo real tem suporte em tipos de modelo específicos com base em funções RevoScaleR ou MicrosoftML como [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Ele usa bibliotecas C++ nativas para gerar pontuações, com base na entrada do usuário fornecida a um modelo de aprendizado de máquina armazenado em um formato binário especial.
 
 Como um modelo treinado pode ser usado para Pontuação sem a necessidade de chamar um tempo de execução de linguagem externo, a sobrecarga de vários processos é reduzida. Isso dá suporte a um desempenho de previsão muito mais rápido para cenários de Pontuação de produção. Como os dados nunca saem SQL Server, os resultados podem ser gerados e inseridos em uma nova tabela sem nenhuma conversão de dados entre R e SQL.
 

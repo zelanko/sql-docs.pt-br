@@ -7,19 +7,20 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 65d5d999df39909a5419883736686c5bc22e0062
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 00c1c1ed13f1257267111c3bdf71277fa41d0bdc
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469805"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714870"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>Criar modelos de R (tutorial de SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Esta lição faz parte do [tutorial do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com SQL Server.
 
-Agora que você enriqueceu os dados de treinamento, é hora de analisar os dados usando a modelagem de regressão. Os modelos lineares são uma ferramenta importante no mundo da análise preditiva, e o pacote **RevoScaleR** inclui algoritmos de regressão que podem subdividir a carga de trabalho e executá-la em paralelo.
+Você enriqueceu os dados de treinamento. Agora é hora de analisar os dados usando a modelagem de regressão. Os modelos lineares são uma ferramenta importante no mundo da análise preditiva. O pacote **RevoScaleR** inclui algoritmos de regressão que podem subdividir a carga de trabalho e executá-la em paralelo.
 
 > [!div class="checklist"]
 > * Criar um modelo de regressão linear

@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c326d51e9b3ac4edac61f97bf5f7fa3143d8d350
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 4db5debf4ba71f29a8870c8674a5422e9ffd334a
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470626"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714880"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Tutorial: Usar funções do R RevoScaleR com dados de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +24,7 @@ Neste tutorial de várias partes, você é apresentado a uma variedade de funç�
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-+ [SQL Server 2017 serviços de Machine Learning](../install/sql-machine-learning-services-windows-install.md) com o recurso r ou [SQL Server 2016 R Services (no banco de dados)](../install/sql-r-services-windows-install.md)
++ [SQL Server serviços de Machine Learning](../install/sql-machine-learning-services-windows-install.md) com o recurso R ou [SQL Server R Services (no banco de dados)](../install/sql-r-services-windows-install.md)
   
 + [Permissões de banco de dados](../security/user-permission.md) e um logon de usuário de banco de dados SQL Server
 
@@ -31,7 +32,7 @@ Neste tutorial de várias partes, você é apresentado a uma variedade de funç�
 
 + Um IDE como RStudio ou a ferramenta RGUI interna incluída com R
 
-Para alternar entre os contextos de computação local e remota, você precisa de dois sistemas. O local é normalmente uma estação de trabalho de desenvolvimento com suficientes Power para cargas de trabalho de ciência de dados. O remoto nesse caso é SQL Server 2017 ou SQL Server 2016 com o recurso R habilitado. 
+Para alternar entre os contextos de computação local e remota, você precisa de dois sistemas. O local é normalmente uma estação de trabalho de desenvolvimento com suficientes Power para cargas de trabalho de ciência de dados. O controle remoto, nesse caso, é SQL Server com o recurso R habilitado. 
 
 A alternância de contextos de computação é predicada sobre ter a mesma versão **RevoScaleR** em sistemas locais e remotos. Em uma estação de trabalho local, você pode obter os pacotes **RevoScaleR** e provedores relacionados instalando Microsoft R Client.
 

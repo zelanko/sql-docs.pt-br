@@ -7,12 +7,13 @@ ms.date: 08/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b148bd1ca51a7121ae043e2b616100e295c008aa
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: f84b799fa901f7461f448683cceffe78e1dddfd3
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344760"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714956"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Pontuação nativa usando a função T-SQL de previsão
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ A função retorna previsões para os dados de entrada, junto com todas as colun
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-A previsão está disponível em todas as edições do mecanismo de banco de dados SQL Server 2017 e habilitada por padrão, incluindo SQL Server 2017 Serviços de Machine Learning no Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) ou banco de dados SQL do Azure. Você não precisa instalar o R, Python ou habilitar recursos adicionais.
+A previsão está disponível em todas as edições do mecanismo de banco de dados do SQL Server 2017 e habilitada por padrão, incluindo SQL Server Serviços de Machine Learning no Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) ou banco de dados SQL do Azure. Você não precisa instalar o R, Python ou habilitar recursos adicionais.
 
 + O modelo deve ser treinado com antecedência usando um dos algoritmos de **RX** com suporte listados abaixo.
 

@@ -1,18 +1,19 @@
 ---
 title: Extensão da linguagem de programação Python
-description: Saiba mais sobre a execução de código do Python e as bibliotecas do Python integradas no SQL Server 2017 Serviços de Machine Learning.
+description: Saiba mais sobre a execução de código do Python e as bibliotecas do Python integradas no SQL Server Serviços de Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/05/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f85392f8bfbb7ee89b8387b0f7d27038b9a8303b
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 61a1a5629d4f0488b5f75a08578c39f2e68f2c7d
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470463"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715871"
 ---
 # <a name="python-language-extension-in-sql-server"></a>Extensão de linguagem Python no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ Microsoftml e revoscalepy estão rigidamente acoplados; as fontes de dados usada
 
 Você importa o módulo **revoscalepy** para seu código Python e, em seguida, chama funções do módulo, como qualquer outra função do Python.
 
-As fontes de dados com suporte incluem bancos de dados ODBC, SQL Server e formato de arquivo XDF para trocar dados com outras fontes, ou com soluções de R. Os dados de entrada para Python devem ser tabulares. Todos os resultados do Python devem ser retornados na forma de  um quadro de dados do pandas.
+As fontes de dados com suporte incluem bancos de dados ODBC, SQL Server e formato de arquivo XDF para trocar dados com outras fontes, ou com soluções de R. Os dados de entrada para Python devem ser tabulares. Todos os resultados do Python devem ser retornados na forma de um quadro de dados do pandas.
 
 Os contextos de computação com suporte incluem o contexto de computação local ou remoto SQL Server. Um contexto de computação remota refere-se à execução de código que começa em um computador como uma estação de trabalho, mas, em seguida, alterna a execução do script para um computador remoto. Alternar o contexto de computação requer que ambos os sistemas tenham a mesma biblioteca revoscalepy.
 

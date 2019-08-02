@@ -1,18 +1,19 @@
 ---
 title: Usar gerenciadores de pacotes R
-description: Use comandos R padrão como install. Packages para adicionar novos pacotes de R a SQL Server 2016 R Services ou SQL Server 2017 Serviços de Machine Learning (no banco de dados).
+description: Use comandos R padrão como install. Packages para adicionar novos pacotes de R a SQL Server 2016 R Services ou SQL Server Serviços de Machine Learning (no banco de dados).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1977e616b8f5ac41f533d49fab684db146cdb204
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 75ef22eb7e06fa1f8d4d2a0d9c754959f1bb1ae4
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469873"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715020"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Usar gerenciadores de pacotes do R para instalar pacotes R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ Este procedimento usa RGui, mas você pode usar o RTerm ou qualquer outra ferram
 
 Se o pacote de destino depender de pacotes adicionais, o instalador do R baixará automaticamente as dependências e as instalará para você.
 
-Se você tiver várias instâncias do SQL Server, como instâncias lado a lado de SQL Server 2016 R Services e SQL Server 2017 Serviços de Machine Learning, execute a instalação separadamente para cada instância se desejar usar o pacote em ambos os contextos. Os pacotes não podem ser compartilhados entre instâncias.
+Se você tiver várias instâncias do SQL Server, como instâncias lado a lado do SQL Server 2016 R Services e SQL Server Serviços de Machine Learning, execute a instalação separadamente para cada instância se desejar usar o pacote em ambos os contextos. Os pacotes não podem ser compartilhados entre instâncias.
 
 ## <a name = "bkmk_offlineInstall"></a>Instalação offline usando ferramentas de R
 

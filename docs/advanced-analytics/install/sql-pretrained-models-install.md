@@ -1,18 +1,19 @@
 ---
 title: Instalar modelos de aprendizado de máquina pré-treinados
-description: Adicione modelos pré-treinados para análise de sentimentos e personalização de imagem a SQL Server 2017 Serviços de Machine Learning (R ou Python) ou SQL Server 2016 R Services.
+description: Adicione modelos pré-treinados para análise de sentimentos e personalização de imagem a SQL Server Serviços de Machine Learning (R ou Python) ou SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/13/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f89e638b6b9486b17974a04af6076e6c7154fa88
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 87f75b8ef8f9f151eb548787da4c9791eb1437b9
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470342"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715166"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Instalar modelos de aprendizado de máquina pré-treinados no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +37,17 @@ Você deve ter direitos de administrador no computador e SQL Server adicionar mo
 
 Os scripts externos devem ser habilitados e SQL Server serviço LaunchPad deve estar em execução. As instruções de instalação fornecem as etapas para habilitar e verificar esses recursos. 
 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 O pacote [MicrosoftML R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) ou o [pacote Python MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) contém os modelos pré-treinados.
 
-+ [SQL Server 2017 serviços de Machine Learning](sql-machine-learning-services-windows-install.md) inclui versões de idioma da biblioteca do Machine Learning, portanto, esse pré-requisito é atendido sem nenhuma ação adicional de sua parte. Como as bibliotecas estão presentes, você pode usar o script do PowerShell descrito neste artigo para adicionar os modelos pré-treinados a essas bibliotecas.
+[SQL Server serviços de Machine Learning](sql-machine-learning-services-windows-install.md) inclui as versões de idioma da biblioteca do Machine Learning, portanto, esse pré-requisito é atendido sem nenhuma ação adicional de sua parte. Como as bibliotecas estão presentes, você pode usar o script do PowerShell descrito neste artigo para adicionar os modelos pré-treinados a essas bibliotecas.
+::: moniker-end
 
-+ [SQL Server o 2016 r Services](sql-r-services-windows-install.md), que é somente R, não inclui o [pacote MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) pronto. Para adicionar o MicrosoftML, você deve fazer uma [atualização de componente](../install/upgrade-r-and-python.md). Uma vantagem da atualização do componente é que você pode adicionar simultaneamente os modelos pré-treinados, o que torna a execução desnecessária do script do PowerShell. No entanto, se você já fez a atualização, mas perdeu a adição dos modelos pré-treinados na primeira vez, você pode executar o script do PowerShell, conforme descrito neste artigo. Funciona para ambas as versões do SQL Server. Antes de fazer isso, confirme se a biblioteca MicrosoftML existe em C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\library.
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+O [pacote R MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) contém os modelos pré-treinados.
 
+[SQL Server R Services](sql-r-services-windows-install.md), que é somente R, não inclui o [pacote MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) pronto. Para adicionar o MicrosoftML, você deve fazer uma [atualização de componente](../install/upgrade-r-and-python.md). Uma vantagem da atualização do componente é que você pode adicionar simultaneamente os modelos pré-treinados, o que torna a execução desnecessária do script do PowerShell. No entanto, se você já fez a atualização, mas perdeu a adição dos modelos pré-treinados na primeira vez, você pode executar o script do PowerShell, conforme descrito neste artigo. Funciona para ambas as versões do SQL Server. Antes de fazer isso, confirme se a biblioteca MicrosoftML existe `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`em.
+::: moniker-end
 
 <a name="file-location"></a>
 
@@ -79,7 +85,7 @@ Clique [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) para baixar o arquivo **
 
 **Saída**
 
-Em uma instância padrão conectada à Internet SQL Server 2017 Machine Learning com R e Python, você deverá ver mensagens semelhantes às seguintes.
+Em uma SQL Server conectada à Internet Serviços de Machine Learning instância padrão com R e Python, você deverá ver mensagens semelhantes às seguintes.
 
    ```powershell
    MSSQL14.MSSQLSERVER
@@ -206,8 +212,7 @@ Para obter mais informações sobre os algoritmos usados nesses modelos de apren
 
 ## <a name="see-also"></a>Confira também
 
-+ [SQL Server 2016 R Services](sql-r-services-windows-install.md)
-+ [SQL Server 2017 Serviços de Machine Learning](sql-machine-learning-services-windows-install.md)
++ [Serviços de aprendizado de máquina do SQL Server](sql-machine-learning-services-windows-install.md)
 + [Atualizar os componentes do R e do Python em instâncias de SQL Server](../install/upgrade-r-and-python.md)
 + [Pacote MicrosoftML para R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + [pacote microsoftml para Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)

@@ -1,29 +1,30 @@
 ---
 title: Instalar novos pacotes de idioma do Python
-description: Adicione novos pacotes do Python a SQL Server 2017 Serviços de Machine Learning (no banco de dados) e Machine Learning Server (autônomo).
+description: Adicione novos pacotes do Python ao SQL Server Serviços de Machine Learning (no banco de dados) e Machine Learning Server (autônomo).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/16/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: fc8c7148369ec1a501106e573e195a8f0b7f060a
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e107622655d5f00d27de6abcea46a92526f47ada
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470254"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715802"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Instalar novos pacotes do Python no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Este artigo descreve como instalar novos pacotes do Python em uma instância do SQL Server 2017 Serviços de Machine Learning. Em geral, o processo de instalação de novos pacotes é semelhante ao de um ambiente padrão do Python. No entanto, algumas etapas adicionais serão necessárias se o servidor não tiver uma conexão com a Internet.
+Este artigo descreve como instalar novos pacotes do Python em uma instância do SQL Server Serviços de Machine Learning. Em geral, o processo de instalação de novos pacotes é semelhante ao de um ambiente padrão do Python. No entanto, algumas etapas adicionais serão necessárias se o servidor não tiver uma conexão com a Internet.
 
 Para obter mais informações sobre o local do pacote e caminhos de instalação, consulte [obter informações do pacote R ou Python](../package-management/installed-package-information.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-+ [SQL Server 2017 serviços de Machine Learning (no banco de dados)](../install/sql-machine-learning-services-windows-install.md) com a opção de linguagem Python. 
++ [SQL Server serviços de Machine Learning (no banco de dados)](../install/sql-machine-learning-services-windows-install.md) com a opção de linguagem Python. 
 
 + Os pacotes devem ser compatíveis com Python 3,5 e ser executados no Windows. 
 

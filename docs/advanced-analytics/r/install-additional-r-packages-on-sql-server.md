@@ -1,18 +1,19 @@
 ---
 title: Instalar novos pacotes de linguagem R
-description: Adicionar novos pacotes de R a SQL Server 2016 R Services ou SQL Server 2017 Serviços de Machine Learning (no banco de dados)
+description: Adicionar novos pacotes de R a SQL Server 2016 R Services ou SQL Server Serviços de Machine Learning (no banco de dados)
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1a6459d45d36ff69bdafb62a712e18937bf8eb30
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 1048dc6ef0a43c5fa41dd5398a5b3dced4a5ebe8
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470108"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715101"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Instalar novos pacotes R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +86,7 @@ Por exemplo, o procedimento a seguir descreve agora para obter a versão correta
 
 Os recursos de R e Python estão incluídos em vários produtos da Microsoft, que podem coexistir no mesmo computador.
 
-Se você instalou SQL Server 2017 Microsoft Machine Learning Server (autônomo) ou SQL Server servidor R 2016 (autônomo), além da análise no banco de dados (SQL Server 2017 Serviços de Machine Learning e SQL Server 2016 R Services), seu computador terá instalações de R para cada, com duplicatas de todas as ferramentas e bibliotecas de R.
+Se você instalou SQL Server 2017 Microsoft Machine Learning Server (autônomo) ou SQL Server servidor R 2016 (autônomo), além da análise no banco de dados (SQL Server Serviços de Machine Learning e SQL Server 2016 R Services), seu computador terá instalações de R para cada, com duplicatas de todas as ferramentas e bibliotecas de R.
 
 Os pacotes instalados na biblioteca R_SERVER são usados somente por um servidor autônomo e não podem ser acessados por uma instância SQL Server (no banco de dados). Sempre use a `R_SERVICES` biblioteca ao instalar pacotes que você deseja usar no banco de dados no SQL Server. Para obter mais informações sobre caminhos, consulte [local da biblioteca de pacotes](../package-management/default-packages.md).
 

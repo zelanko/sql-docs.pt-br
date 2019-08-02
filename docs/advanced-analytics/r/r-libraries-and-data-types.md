@@ -1,18 +1,19 @@
 ---
 title: Conversões de tipo de dados de R para SQL
-description: Examine o tipo de dados implícito e explícito converstions entre R e SQL Server em soluções de ciência de dados e de aprendizado de máquina.
+description: Examine as conversões implícitas e explícitas de tipo de dados entre R e SQL Server em soluções de ciência de dados e de aprendizado de máquina.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5606997e26aa006e102a2cc60f5635702500e53f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 7c829f39ee9c80d1bad3a4fb33c10635897cfb98
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470057"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715090"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Mapeamentos de tipo de dados entre R e SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ Para soluções de R que são executadas no recurso de integração do R no SQL 
 
 ## <a name="base-r-version"></a>Versão base do R
 
-SQL Server 2016 R Services e SQL Server 2017 Serviços de Machine Learning com o R, estão alinhadas a versões específicas do Microsoft R Open. Por exemplo, a versão mais recente, SQL Server 2017 Serviços de Machine Learning, foi criada no Microsoft R Open 3.3.3.
+SQL Server 2016 R Services e SQL Server Serviços de Machine Learning com o R, estão alinhadas a versões específicas do Microsoft R Open. Por exemplo, a versão mais recente, SQL Server Serviços de Machine Learning, foi criada no Microsoft R Open 3.3.3.
 
 Para exibir a versão do R associada a uma instância específica do SQL Server, abra **RGui**. Para a instância padrão, o caminho seria o seguinte:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 

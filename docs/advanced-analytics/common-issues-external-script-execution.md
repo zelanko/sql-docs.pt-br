@@ -2,21 +2,22 @@
 title: Problemas comuns com o serviço Launchpad e a execução de script externo
 ms.prod: sql
 ms.technology: ''
-ms.date: 06/13/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 84c7c8f10c6a5b0da69d24389e12633df3774ffb
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: c90c59f3b59850bb0e2d1cf4cf40eb569e965eba
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470489"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715281"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Problemas comuns com o serviço Launchpad e a execução de script externo no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- SQL Server serviço Launchpad confiável dá suporte à execução de script externo para R e Python. No SQL Server R Services 2016, o SP1 fornece o serviço. SQL Server 2017 inclui o serviço Launchpad como parte da instalação inicial.
+SQL Server serviço Launchpad confiável dá suporte à execução de script externo para R e Python. 
 
 Vários problemas podem impedir que o Launchpad inicie, incluindo problemas de configuração ou alterações ou protocolos de rede ausentes. Este artigo fornece orientação para a solução de muitos problemas. Para qualquer um que não tenhamos sido detectado, você pode postar perguntas no [Fórum de Machine Learning Server](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR).
 
@@ -76,6 +77,7 @@ Para obter mais informações, consulte [Grant (Transact-SQL](../t-sql/statement
 
 Esta seção lista as mensagens de erro mais comuns que o Launchpad retorna.
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 ## <a name="unable-to-launch-runtime-for-r-script"></a>"Não é possível iniciar o tempo de execução para o script R"
 
 Se o grupo do Windows para usuários do R (também usado para Python) não puder fazer logon na instância do que está executando o R Services, você poderá ver os seguintes erros:
@@ -94,10 +96,11 @@ Se o grupo do Windows para usuários do R (também usado para Python) não puder
 
     * *Os logs de segurança indicam que o serviço NT da conta não pôde fazer logon*
 
-Para obter informações sobre como conceder a esse grupo de usuários as permissões necessárias, consulte [instalar SQL Server 2016 R Services](install/sql-r-services-windows-install.md).
+Para obter informações sobre como conceder a esse grupo de usuários as permissões necessárias, consulte [Install SQL Server R Services](install/sql-r-services-windows-install.md).
 
 > [!NOTE]
 > Essa limitação não se aplicará se você usar logons SQL para executar scripts do R em uma estação de trabalho remota.
+::: moniker-end
 
 ## <a name="logon-failure-the-user-has-not-been-granted-the-requested-logon-type"></a>"Falha de logon: o usuário não recebeu o tipo de logon solicitado"
 
@@ -183,9 +186,12 @@ EXEC sp_execute_external_script @language = N'R',
 
 Para resolver o problema, você deve reinstalar o pacote na biblioteca de instâncias de SQL Server.
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 >[!NOTE]
 >Se você tiver atualizado uma instância do SQL Server 2016 para usar a versão mais recente do Microsoft R, o local da biblioteca padrão será diferente. Para obter mais informações, consulte [usar o Sqlbindr para atualizar uma instância do R Services](install/upgrade-r-and-python.md).
+::: moniker-end
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 ## <a name="launchpad-shuts-down-due-to-mismatched-dlls"></a>Launchpad desligado devido a DLLs incompatíveis
 
 Se você instalar o mecanismo de banco de dados com outros recursos, corrija o servidor e, posteriormente, adicione o recurso de Machine Learning usando a mídia original, a versão errada do Machine Learning componentes poderá ser instalada. Quando o Launchpad detecta uma incompatibilidade de versão, ele é desligado e cria um arquivo de despejo.
@@ -224,7 +230,7 @@ Como alternativa, você pode habilitar a notação 8dot3 no volume em que SQL Se
 3. Use o utilitário fsutil com o argumento *File* para especificar um caminho de arquivo curto para a pasta especificada em WORKING_DIRECTORY.
 
 4. Edite o arquivo de configuração para especificar o mesmo diretório de trabalho que você inseriu na propriedade WORKING_DIRECTORY. Como alternativa, você pode especificar um diretório de trabalho diferente e escolher um caminho existente que já seja compatível com a notação 8dot3.
-
+::: moniker-end
 
 ## <a name="next-steps"></a>Próximas etapas
 

@@ -6,12 +6,13 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8d7f046e961efb6129f807a7626e498062c415b6
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: aa56a9367271df2172236b133d85b5771089b1ac
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470155"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715039"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Desempenho do R Services: resultados e recursos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +124,7 @@ Para conjuntos de dados maiores, o efeito da compactação pode ser mais visíve
 
 ### <a name="effect-of-windows-power-plan-options"></a>Efeito das opções do plano de energia do Windows
 
-Nesse experimento, `rxLinMod` foi usado com o a tabela *airlineWithIntCol*. O plano de energia do Windows foi definido  como equilibrado ou **alto desempenho**. Para todos os testes, *numTasks* foi definido como 1. O teste foi executado seis vezes e foi executado duas vezes em ambas as opções de energia para investigar a variabilidade dos resultados.
+Nesse experimento, `rxLinMod` foi usado com o a tabela *airlineWithIntCol*. O plano de energia do Windows foi definido como equilibrado ou **alto desempenho**. Para todos os testes, *numTasks* foi definido como 1. O teste foi executado seis vezes e foi executado duas vezes em ambas as opções de energia para investigar a variabilidade dos resultados.
 
 Opção de energia de **alto desempenho** :
 

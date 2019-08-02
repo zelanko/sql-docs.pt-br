@@ -1,18 +1,19 @@
 ---
 title: Gere previsões e previsões usando modelos de aprendizado de máquina
-description: Use rxPredict ou sp_rxPredict para pontuação em tempo real ou preveja o T-SQL para Pontuação nativa para previsões e previsão em R e Pythin no SQL Server Machine Learning.
+description: Use rxPredict ou sp_rxPredict para pontuação em tempo real ou preveja o T-SQL para Pontuação nativa para previsões e previsão em R e Python no SQL Server Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/30/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 39edb40da1ebbddfff805aca321b99ea766f085c
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: d01be0f7d7a18091b965ad73b9bf035558b34864
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470119"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715691"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Como gerar previsões e previsão usando modelos de aprendizado de máquina no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ Como você deve esperar, o suporte à plataforma é afetado por esses ambientes 
 
 ## <a name="scoring-overview"></a>Visão geral da Pontuação
 
-A _Pontuação_ é um processo de duas etapas. Primeiro, você especifica um modelo já treinado para carregar de uma tabela. Em segundo lugar, passe novos dados de entrada para a função, para gerar valores de previsão (ou pontuações). A entrada geralmente é uma consulta T-SQL, retornando tabular ou linhas únicas. Você pode optar por gerar um valor de coluna única representando uma probabilidade ou pode produzir vários valores, como um intervalo de confiança, um erro ou outro complemento útil para a previsão.
+A _Pontuação_ é um processo de duas etapas. Primeiro, você especifica um modelo já treinado para carregar de uma tabela. Em segundo lugar, passe novos dados de entrada para a função, para gerar valores deprevisão (ou pontuações). A entrada geralmente é uma consulta T-SQL, retornando tabular ou linhas únicas. Você pode optar por gerar um valor de coluna única representando uma probabilidade ou pode produzir vários valores, como um intervalo de confiança, um erro ou outro complemento útil para a previsão.
 
 Voltando um pouco, o processo geral de preparação do modelo e, em seguida, a geração de pontuações pode ser resumido dessa forma:
 

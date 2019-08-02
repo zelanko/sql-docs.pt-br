@@ -7,12 +7,13 @@ ms.date: 03/17/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 79a5eeb48816f858d3e009f8564487fd68769979
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 2b8d55e95991437e4d76911fd26afb5b1bc9c550
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470206"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715169"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Criar fluxos de trabalho do SSIS e do SSRS com R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +83,7 @@ begin
 end;
 ```
 
-No Designer SSIS, crie uma [tarefa Executar SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) que execute o procedimento armazenado que você acabou de definir. O script para  SQLStatement remove os dados existentes, especifica quais dados inserir e, em seguida, chama o procedimento armazenado para fornecer os dados.
+No Designer SSIS, crie uma [tarefa Executar SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) que execute o procedimento armazenado que você acabou de definir. O script para SQLStatement remove os dados existentes, especifica quais dados inserir e, em seguida, chama o procedimento armazenado para fornecer os dados.
 
 ```T-SQL
 truncate table ssis_iris;
@@ -126,7 +127,7 @@ end;
 GO
 ```
 
-No Designer SSIS, crie uma [tarefa Executar SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) para executar o procedimento armazenado **generate_iris_rx_model** . O modelo é serializado e salvo na tabela ssis_iris_models. O script para  SQLStatement é o seguinte:
+No Designer SSIS, crie uma [tarefa Executar SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) para executar o procedimento armazenado **generate_iris_rx_model** . O modelo é serializado e salvo na tabela ssis_iris_models. O script para SQLStatement é o seguinte:
 
 ```T-SQL
 insert into ssis_iris_models (model)

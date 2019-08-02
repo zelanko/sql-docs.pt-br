@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1257cc3f3d0b3ed07bc879f5bc3337d62bc1b3a0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e15e56dfb4a27f0a99262ff1f105ceb0a1fbc294
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470580"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715381"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Tutorial: Análise de dados do R para desenvolvedores do SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ Todas as tarefas podem ser feitas [!INCLUDE[tsql](../../includes/tsql-md.md)] us
 
 Este tutorial pressupõe familiaridade com operações básicas do banco de dados, como criar bancos de dados e tabelas, importar e escrever consultas SQL. Ele não pressupõe que você conhece o R. Como tal, todo o código R é fornecido. 
 
-+ [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) ou [SQL Server 2017 serviços de Machine Learning com R habilitado](../install/sql-machine-learning-services-windows-install.md#verify-installation)
++ [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) ou [SQL Server serviços de Machine Learning com R habilitado](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
 + [Bibliotecas de R](../package-management/installed-package-information.md)
 

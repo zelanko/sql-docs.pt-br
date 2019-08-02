@@ -7,12 +7,13 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0442fd942f0dd509f24b98b5ca1c6d6c31a197f0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 6ee82de1431a6bc21596505dc4b008b817b35830
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470554"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714699"
 ---
 # <a name="explore-and-visualize-the-data"></a>Explorar e visualizar os dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +75,7 @@ O procedimento armazenado retorna um objeto Python `figure` serializado como um 
 
     - A variável `@query` define o texto `SELECT tipped FROM nyctaxi_sample`da consulta, que é passado para o bloco de código do Python como o argumento para a variável `@input_data_1`de entrada do script,.
     - O script Python é bem simples: objetos **matplotlib** `figure` são usados para criar o histograma e gráficos de dispersão, e esses objetos são serializados `pickle` usando a biblioteca.
-    - O objeto de gráfico do Python é serializado  em um dataframe do pandas para saída.
+    - O objeto de gráfico do Python é serializado em um dataframe do pandas para saída.
   
     ```sql
     DROP PROCEDURE IF EXISTS PyPlotMatplotlib;

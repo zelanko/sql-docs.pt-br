@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: d90e2d4887154d3545884a77d0290e632f04a569
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 439b21bce4e081025db1db53ab44498415ca44af
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470594"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715411"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>Executar funções de R personalizadas em SQL Server usando rxExec
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +26,7 @@ Neste tutorial, você usará dados simulados para demonstrar a execução de uma
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-+ [SQL Server 2017 serviços de Machine Learning (com R)](../install/sql-machine-learning-services-windows-install.md) ou [SQL Server 2016 r Services (no banco de dados)](../install/sql-r-services-windows-install.md)
++ [SQL Server serviços de Machine Learning (com R)](../install/sql-machine-learning-services-windows-install.md) ou [SQL Server 2016 R Services (no banco de dados)](../install/sql-r-services-windows-install.md)
   
 + [Permissões de banco de dados](../security/user-permission.md) e um logon de usuário de banco de dados SQL Server
 
@@ -145,7 +146,7 @@ Para executar uma função arbitrária no contexto de um SQL Server remoto, cham
 
 Embora este exercício seja simplista, ele demonstra um mecanismo importante para a integração de funções R arbitrárias no script R em execução no SQL Server. Para resumir os principais pontos que tornam essa técnica possível:
 
-+ SQL Server deve ser configurado para aprendizado de máquina e integração de R: [SQL Server 2017 serviços de Machine Learning](../install/sql-machine-learning-services-windows-install.md) com o recurso r ou [SQL Server 2016 R Services (no banco de dados)](../install/sql-r-services-windows-install.md).
++ SQL Server deve ser configurado para aprendizado de máquina e integração de R: [SQL Server serviços de Machine Learning](../install/sql-machine-learning-services-windows-install.md) com o recurso R ou [SQL Server 2016 R Services (no banco de dados)](../install/sql-r-services-windows-install.md).
 
 + As bibliotecas de software livre ou de terceiros usadas em sua função, incluindo quaisquer dependências, devem ser instaladas em SQL Server. Para obter mais informações, consulte [instalar novos pacotes de R](../r/install-additional-r-packages-on-sql-server.md).
 

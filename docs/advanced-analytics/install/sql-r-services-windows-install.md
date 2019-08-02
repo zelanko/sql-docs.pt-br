@@ -7,19 +7,20 @@ ms.date: 05/03/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 9cc14328e0e43106f9fec0779f073bcd1568e888
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: =sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 61dd49191e85d9fd4685904ae01b72d754d43318
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345010"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715815"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Instalar o SQL Server R Services 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo explica como instalar e configurar o **SQL Server R Services 2016**. Se você tiver SQL Server 2016, instale esse recurso para habilitar a execução do código R no SQL Server.
 
-No SQL Server 2017, a integração do R é oferecida em [serviços de Machine Learning](../r/r-server-standalone.md), refletindo a adição do Python. Se você quiser integração com o R e tiver SQL Server mídia de instalação 2017, consulte [instalar SQL Server 2017 serviços de Machine Learning](sql-machine-learning-services-windows-install.md) para adicionar o recurso. 
+No SQL Server 2017, a integração do R é oferecida em [serviços de Machine Learning](../r/r-server-standalone.md), refletindo a adição do Python. Se você quiser integração com o R e tiver SQL Server mídia de instalação 2017, consulte [instalar SQL Server serviços de Machine Learning](sql-machine-learning-services-windows-install.md) para adicionar o recurso. 
 
 <a name="bkmk_prereqs"> </a> 
 
@@ -27,7 +28,7 @@ No SQL Server 2017, a integração do R é oferecida em [serviços de Machine Le
 
 + Uma instância do mecanismo de banco de dados é necessária. Não é possível instalar apenas o R, embora você possa adicioná-lo de forma incremental a uma instância existente.
 
-+ Para a continuidade dos negócios, [Always on grupos de disponibilidade](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) têm suporte para o R Services. Você precisa instalar o R Services e configurar pacotes, em cada nó.
++ Para a continuidade dos negócios, [Always on os grupos de disponibilidade](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) têm suporte para o R Services. Você precisa instalar o R Services e configurar pacotes, em cada nó.
 
 + Não instale o R Services em um cluster de failover. O mecanismo de segurança usado para isolar processos de R não é compatível com um ambiente de cluster de failover do Windows Server.
 
@@ -156,7 +157,7 @@ Use as etapas a seguir para verificar se todos os componentes usados para inicia
 
 7. Se o Launchpad estiver em execução, você deverá ser capaz de executar R simples para verificar se os tempos de execução de script externo podem se comunicar com SQL Server. 
 
-    Abra uma nova  janela de consulta [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]no e, em seguida, execute um script como o seguinte:
+    Abra uma nova janela de consulta [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]no e, em seguida, execute um script como o seguinte:
     
     ```sql
     EXEC sp_execute_external_script  @language =N'R',

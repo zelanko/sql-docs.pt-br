@@ -1,18 +1,19 @@
 ---
 title: pacote revoscalepy Python
-description: Introdução ao módulo revoscalepy no SQL Server 2017 Serviços de Machine Learning com Python.
+description: Introdução ao módulo revoscalepy no SQL Server Serviços de Machine Learning com Python.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 297e58fe089b0f68670a9d2a994f05d9c8bf4344
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 76c68d0753c4ba29387b3378c1086ce9bce4f53b
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470325"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715772"
 ---
 # <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy (módulo python no SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ A biblioteca **revoscalepy** é distribuída em vários produtos da Microsoft, m
 
 O módulo **revoscalepy** se baseia no Python 3,5 e está disponível somente quando você instala um dos seguintes produtos ou downloads da Microsoft:
 
-+ [SQL Server 2017 Serviços de Machine Learning](../install/sql-machine-learning-services-windows-install.md)
++ [Serviços de aprendizado de máquina do SQL Server](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 ou posterior](https://docs.microsoft.com/machine-learning-server/)
 + [Bibliotecas de cliente Python para um cliente de ciência de dados](setup-python-client-tools-sql.md)
 
@@ -89,7 +90,7 @@ Você também deve examinar as funções no [microsoftml](https://docs.microsoft
 
 | Função| Descrição|
 | ------- | ---------- |
-| [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Gerar previsões de um modelo treinado|) | Gera previsões de um modelo treinado e pode ser usado para pontuação em tempo real. |
+| [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Gerar previsões de um modelo treinado|) | Gera previsões de um modelo treinado e pode ser usada para pontuação em tempo real. |
 |[rx_predict_default](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-default) | Computar valores previstos e resíduos usando objetos rx_lin_mod e rx_logit. |
 |[rx_predict_rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dforest) | Calcule os valores previstos ou ajustados para um conjunto de dados de um objeto rx_dforest ou rx_btrees. |
 |[rx_predict_rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dtree) | Calcule valores previstos ou ajustados para um conjunto de dados de um objeto rx_dtree. |
@@ -102,7 +103,7 @@ Ao executar localmente, você normalmente executa um script Python na linha de c
 
 Quando você estiver pronto para encapsular o script do Python dentro de um procedimento armazenado, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), é recomendável reescrever o código como uma única função que tenha entradas e saídas claramente definidas. 
 
-As entradas e saídas devem  ser quadros de dados pandas. Quando isso for feito, você poderá chamar o procedimento armazenado de qualquer cliente que ofereça suporte a T-SQL, passar consultas SQL facilmente como entradas e salvar os resultados em tabelas SQL. Para obter um exemplo, consulte [Learn in-Database Python Analytics for SQL Developers](../tutorials/sqldev-in-database-python-for-sql-developers.md).
+As entradas e saídas devem ser quadros de dados pandas. Quando isso for feito, você poderá chamar o procedimento armazenado de qualquer cliente que ofereça suporte a T-SQL, passar consultas SQL facilmente como entradas e salvar os resultados em tabelas SQL. Para obter um exemplo, consulte [Learn in-Database Python Analytics for SQL Developers](../tutorials/sqldev-in-database-python-for-sql-developers.md).
 
 ### <a name="using-revoscalepy-with-microsoftml"></a>Usando revoscalepy com microsoftml
 

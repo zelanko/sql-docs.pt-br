@@ -7,18 +7,23 @@ ms.date: 08/28/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0abf14fa61d9408f8403a493b7559148f0f5a775
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 94ca7b3646b9005e11b3ee4968cbfaaa65d42264
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344982"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715842"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Instalar Machine Learning Server (autônomo) ou R Server (autônomo) usando a instalação do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server configuração inclui uma opção de **recurso compartilhado** para instalar um servidor de aprendizado de máquina autônomo sem reconhecimento de instância que é executado fora do SQL Server. No SQL Server 2016, esse recurso é chamado **de R Server (autônomo)** . No SQL Server 2017, ele é chamado de **Machine Learning Server (autônomo)** e inclui R e Python. 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+SQL Server configuração inclui uma opção de **recurso compartilhado** para instalar um servidor de aprendizado de máquina autônomo sem reconhecimento de instância que é executado fora do SQL Server. Ele é chamado de **Machine Learning Server (autônomo)** e inclui R e Python. 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+SQL Server configuração inclui uma opção de **recurso compartilhado** para instalar um servidor de aprendizado de máquina autônomo sem reconhecimento de instância que é executado fora do SQL Server. No SQL Server 2016, esse recurso é chamado **de R Server (autônomo)** .  
+::: moniker-end
 
 Um servidor autônomo como instalado pelo SQL Server configuração é funcionalmente equivalente às versões sem marca SQL do [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), dando suporte aos mesmos casos de uso e cenários, incluindo:
 
@@ -39,7 +44,7 @@ Se você instalou uma versão anterior, como SQL Server servidor R 2016 (autôno
 
 Como regra geral, recomendamos que você trate instalações autônomas de servidor e banco de dados que reconhecem a instância como mutuamente exclusivas para evitar a contenção de recursos, mas se você tiver recursos suficientes, não haverá proibição de instalá-los no mesmo computador físico.
 
-Você só pode ter um servidor autônomo no computador: SQL Server 2017 Machine Learning Server ou SQL Server 2016 R Server (autônomo). Certifique-se de desinstalar uma versão antes de adicionar uma nova.
+Você só pode ter um servidor autônomo no computador: seja SQL Server Machine Learning Server (autônomo) ou SQL Server R Server (autônomo). Certifique-se de desinstalar uma versão antes de adicionar uma nova.
 
 ::: moniker range="=sql-server-2016"
 <a name="bkmk_ga_instalpatch"></a> 
@@ -152,7 +157,7 @@ A tabela a seguir lista os caminhos para distribuições de R e Python criadas p
 |----|----|----|
 |SQL Server 2017 Machine Learning Server (autônomo) |  Assistente de instalação do SQL Server 2017 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Microsoft Machine Learning Server (autônomo) |  Instalador autônomo do Windows |`C:\Program Files\Microsoft\ML Server\R_SERVER`<br/>`C:\Program Files\Microsoft\ML Server\PYTHON_SERVER`|
-|SQL Server 2017 Serviços de Machine Learning (no banco de dados) |Assistente de instalação do SQL Server 2017, com a opção de linguagem R|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  <br/>`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
+|SQL Server Serviços de Machine Learning (no banco de dados) |Assistente de instalação do SQL Server 2017, com a opção de linguagem R|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  <br/>`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 |SQL Server servidor R 2016 (autônomo) |  Assistente de instalação do SQL Server 2016 |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |SQL Server 2016 R Services (no banco de dados) |Assistente de instalação do SQL Server 2016|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
 

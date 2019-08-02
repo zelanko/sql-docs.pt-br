@@ -3,16 +3,17 @@ title: Arquitetura de extensibilidade para linguagem R e script Python
 description: Suporte a código externo para o mecanismo de banco de dados SQL Server, com arquitetura dupla para executar script R e Python em dados relacionais.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/17/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a5c49172ed23867f95e383878f792092bd762177
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 49c45fa39cd271140ba78c2b1b32ee8a2f9c1a7a
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470452"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715250"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Arquitetura de extensibilidade no SQL Server Serviços de Machine Learning 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ SQL Server tem uma estrutura de extensibilidade para executar script externo, co
 
 ## <a name="background"></a>Informações preliminares
 
-A estrutura de extensibilidade foi introduzida no SQL Server 2016 para dar suporte ao tempo de execução de R. SQL Server 2017 adiciona suporte para Python
+A estrutura de extensibilidade foi introduzida no SQL Server 2016 para dar suporte ao tempo de execução de R. SQL Server 2017 e posteriores têm suporte para Python.
 
 A finalidade da estrutura de extensibilidade é fornecer uma interface entre SQL Server e linguagens de ciência de dados como R e Python, reduzindo o conflito ao mover soluções de ciência de dados para produção e proteger os dados expostos durante o desenvolvimento Process. Ao executar uma linguagem de script confiável em uma estrutura segura gerenciada pelo SQL Server, os administradores de banco de dados podem manter a segurança e, ao mesmo tempo, permitir que os cientistas de dados acessem dados corporativos.
 
@@ -55,8 +56,8 @@ O [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] é um servi
 
 | Inicializadores confiáveis | Extensão | Versões do SQL Server |
 |-------------------|-----------|---------------------|
-| RLauncher. dll para a linguagem R | [Extensão de R](extension-r.md) | SQL Server 2016, SQL Server 2017 |
-| Pythonlauncher. dll para Python 3,5 | [Extensão do Python](extension-python.md) | SQL Server 2017 |
+| RLauncher. dll para a linguagem R | [Extensão de R](extension-r.md) | SQL Server 2016 e posterior |
+| Pythonlauncher. dll para Python 3,5 | [Extensão do Python](extension-python.md) | SQL Server 2017 e posterior |
 
 O serviço [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] é executado em sua própria conta de usuário. Se você alterar a conta que executa o Launchpad, certifique-se de fazer isso usando SQL Server Configuration Manager, para garantir que as alterações sejam gravadas em arquivos relacionados.
 
@@ -70,7 +71,7 @@ Para executar tarefas em um idioma com suporte específico, o Launchpad Obtém u
 
 Na verdade, o BxlServer é um complemento para um ambiente de tempo de execução de linguagem que funciona com SQL Server para transferir dados e gerenciar tarefas. BXL significa linguagem de troca binária e refere-se ao formato de dados usado para mover dados com eficiência entre SQL Server e processos externos. O BxlServer também é uma parte importante dos produtos relacionados, como Microsoft R Client e Microsoft R Server.
 
-O **satélite do SQL** é uma API de extensibilidade, incluída no mecanismo de banco de dados começando com SQL Server 2016, que dá suporte a código externo ou C++tempos de execução externos implementados usando C ou.
+O **satélite do SQL** é uma API de extensibilidade, incluída no mecanismo de banco de dados, que dá suporte a código externo ou C++a tempos de execução externos implementados usando C ou.
 
 O BxlServer usa o Satélite SQL para estas tarefas:
 

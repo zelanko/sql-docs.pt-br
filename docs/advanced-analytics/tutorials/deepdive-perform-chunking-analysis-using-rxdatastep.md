@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3aa0b42c9806e8d8972f31c69b1b33b222c43287
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: ed22020b162bfac9f35eb8328ea6409903191a4c
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469703"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714889"
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Executar análise de agrupamento usando rxDataStep (tutorial de SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ Nesta lição, você usará a função **rxDataStep** para processar dados em pa
     rxSetComputeContext(sqlCompute)
     ```
   
-3. Defina uma SQL Server fonte de dados para manter os dados que você está processando. Comece atribuindo uma consulta SQL a uma variável. Em seguida, use essa variável no  argumento SQLQuery de uma nova fonte de dados SQL Server.
+3. Defina uma SQL Server fonte de dados para manter os dados que você está processando. Comece atribuindo uma consulta SQL a uma variável. Em seguida, use essa variável no argumento SQLQuery de uma nova fonte de dados SQL Server.
   
     ```R
     dayQuery <-  "SELECT DayOfWeek FROM AirDemoSmallTest"
