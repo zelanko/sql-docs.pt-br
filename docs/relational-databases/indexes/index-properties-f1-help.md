@@ -19,12 +19,12 @@ ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40fff511c9ff69ce6da9de9cf7bcaf21cb4d9ef3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909708"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476295"
 ---
 # <a name="index-properties-f1-help"></a>Ajuda de F1 de Propriedades do Índice
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,76 @@ ms.locfileid: "67909708"
   
  **Allow Nulls**  
  Exibe **Sim** quando a definição da tabela permitir valores nulos para a coluna. Exibe **Não** quando a definição da tabela não permite nulos para a coluna.  
+
+##  <a name="Options"></a> Opções da página Opções
+ Use essa página para exibir ou modificar as várias opções de índice.
+
+### <a name="general-options"></a>Opções gerais
+**Recomputar estatísticas automaticamente**<br>
+Especifica se as estatísticas de distribuição são recomputadas automaticamente. O padrão é **True**, que equivale a definir STATISTICS_NORECOMPUTE como OFF. Configurar como **False** define STATISTICS_NORECOMPUTE como ON.
+
+**Ignorar valores duplicados** <br>
+Especifica a resposta de erro quando uma operação de inserção tenta inserir valores da chave duplicada em um índice exclusivo.
+
+True<br>
+Uma mensagem de aviso será exibida quando valores de chave duplicados forem inseridos em um índice exclusivo. Ocorrerá falha somente nas linhas que violarem a restrição de exclusividade.
+
+Falso<br>
+Ocorrerá uma mensagem de erro quando os valores de chave duplicados forem inseridos em um índice exclusivo. Toda a operação INSERT será revertida.
+
+### <a name="locks-options"></a>Opções de Bloqueios
+
+**Permitir bloqueios de linha**<br>
+Especifica se bloqueios de linha são permitidos.
+
+**Permitir bloqueios de página**<br>
+Especifica se bloqueios de página são permitidos.
+
+### <a name="operation-options"></a>Opções de Operação
+
+ **Permitir processamento DML online**  
+ Permite aos usuários acessar a tabela subjacente ou dados de índice clusterizado associados a quaisquer índices não clusterizados durante a operação de índice, como CREATE ou ALTER. Para obter mais informações, consulte [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
   
+> [!NOTE]  
+>  Esta opção não está disponível para índices XML ou se o índice for um índice clusterizadoF desabilitado.  
+  
+ **Grau máximo de paralelismo**  
+ Limita o número de processadores a serem usados durante execução do plano paralelo. O valor padrão, 0, usa o número real de CPUs disponíveis. A definição do valor como 1 elimina a geração em plano paralelo; a definição do valor como um número maior que 1 restringe o número máximo de processadores usados por uma única execução da consulta. Esta opção ficará disponível apenas se a caixa de diálogo estiver no estado **Recriar** ou **Recriar** . Para obter mais informações, consulte [definir o Max Degree of Parallelism opção para otimizar o desempenho](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
+  
+> [!NOTE]  
+>  Se um valor maior que o número de CPUs disponíveis for especificado, será usado o número real de CPUs disponíveis.  
+
+
+**Otimizar para chave sequencial**<br>
+Especifica se a contenção de inserção de última página será ou não otimizada. Para saber mais, confira as [Chaves sequenciais](../../t-sql/statements/create-index-transact-sql.md#sequential-keys).
+
+### <a name="storage-options"></a>Opções de armazenamento
+
+**Classificar em tempdb**<br>
+Especifica se os resultados de classificação temporários devem ser armazenados em tempdb.
+
+True<br>
+Os resultados de classificação intermediários usados para criar o índice são armazenados em tempdb. Isso pode reduzir o tempo necessário para criar um índice se tempdb estiver em um conjunto de discos diferente do banco de dados de usuário. Entretanto, isso aumenta o espaço em disco usado durante a criação do índice.
+
+Falso<br>
+Os resultados intermediários de classificação são armazenados no mesmo banco de dados que o índice. Para obter mais informações, consulte a [Opção SORT_IN_TEMPDB para índices](./sort-in-tempdb-option-for-indexes.md).
+
+**Fator de preenchimento**<br>
+Especifica uma porcentagem que indica até que ponto o Mecanismo de Banco de Dados deve preencher o nível folha de cada página de índice durante a criação ou recompilação do índice. fillfactor deve ser um valor inteiro de 1 a 100. Se fillfactor for 100, o Mecanismo de Banco de Dados criará índices com páginas de folhas preenchidas até a capacidade total.
+A configuração FILLFACTOR se aplica somente quando o índice é criado ou recriado. O Mecanismo de Banco de Dados não mantém dinamicamente a porcentagem especificada de espaço vazio nas páginas.
+
+Para obter mais informações, veja [Especificar fator de preenchimento para um índice](./specify-fill-factor-for-an-index.md).
+
+**Preenchimento de índice**<br>
+Especifica o preenchimento do índice.
+
+True<br>
+A porcentagem de espaço livre especificada por fillfactor é aplicada às páginas de nível intermediário do índice.
+
+False ou fillfactor não está especificado<br>
+As páginas de nível intermediário são preenchidas até próximo de sua capacidade, deixando espaço suficiente para pelo menos uma linha do tamanho máximo que o índice pode ter, considerando o conjunto de chaves em páginas intermediárias.
+
+
 ##  <a name="Storage"></a> Opções da página de armazenamento  
  Use essa página para exibir ou modificar grupo de arquivos ou propriedades de esquema de partição para o índice selecionado. Mostra apenas opções relacionadas ao tipo de índice.  
   
@@ -164,18 +233,6 @@ ms.locfileid: "67909708"
   
 > [!NOTE]  
 >  Se a coluna de tabela for uma coluna computada, **Tipo de Dados da Coluna** exibirá "coluna computada."  
-  
- **Permitir o processamento online de instruções DML ao mover o índice**  
- Permite aos usuários acessar a tabela subjacente ou dados de índice clusterizado associados a quaisquer índices não clusterizados durante a operação de índice. Para obter mais informações, consulte [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
-  
-> [!NOTE]  
->  Esta opção não está disponível para índices XML ou se o índice for um índice clusterizadoF desabilitado.  
-  
- **Definir grau máximo de paralelismo**  
- Limita o número de processadores a serem usados durante execução do plano paralelo. O valor padrão, 0, usa o número real de CPUs disponíveis. A definição do valor como 1 elimina a geração em plano paralelo; a definição do valor como um número maior que 1 restringe o número máximo de processadores usados por uma única execução da consulta. Esta opção ficará disponível apenas se a caixa de diálogo estiver no estado **Recriar** ou **Recriar** . Para obter mais informações, consulte [definir o Max Degree of Parallelism opção para otimizar o desempenho](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
-  
-> [!NOTE]  
->  Se um valor maior que o número de CPUs disponíveis for especificado, será usado o número real de CPUs disponíveis.  
   
 ##  <a name="Spatial"></a> Opções de índice da página Espacial  
  Use a página **Espacial** para exibir ou especificar os valores das propriedades espaciais. Para obter mais informações, veja [Dados espaciais &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 4b6b05436f85fa96a164f6e86733c5bc4bf95f0d
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 21c43f2780f555b9cabd0ec84b47f80ff0284764
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345469"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388435"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON – sinalizadores de rastreamento (Transact-SQL)
 
@@ -138,7 +138,7 @@ A tabela a seguir lista e descreve os sinalizadores de rastreamento disponíveis
 |**7412**|Habilita a infraestrutura leve de criação de perfil de estatísticas de execução de consulta. Para obter mais informações, confira este [artigo do Suporte da Microsoft](https://support.microsoft.com/kb/3170113).<br /><br />**Observação:** esse sinalizador de rastreamento aplica-se ao [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e a builds superiores. Começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], este sinalizador de rastreamento não tem nenhum efeito, porque a criação de perfil leve é habilitada por padrão.<br /><br />**Escopo**: apenas global|
 |**7471**|Permite executar várias [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) para estatísticas diferentes em uma única tabela simultaneamente. Para obter mais informações, confira este [artigo do Suporte da Microsoft](https://support.microsoft.com/kb/3156157).<br /><br />**Observação:** esse sinalizador de rastreamento aplica-se ao [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 e a builds superiores.<br /><br />**Escopo**: apenas global|
 |**7745**|Força o Repositório de Consultas a não liberar dados para o disco no desligamento do banco de dados.<br /><br />**Observação:** usar este rastreamento pode fazer com que os dados do Repositório de Consultas que não foram liberados para o disco sejam perdidos em caso de desligamento. Para um desligamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o comando SHUTDOWN WITH NOWAIT pode ser usado em vez do sinalizador de rastreamento para forçar um desligamento imediato.<br /><br />**Escopo**: apenas global|
-|**7752**|Habilita o carregamento assíncrono do Repositório de Consultas.<br /><br />**Observação:** Use este sinalizador de rastreamento se o [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] estiver apresentando um alto número de esperas QDS_LOADDB relacionadas à carga síncrona do Repositório de Consultas (comportamento padrão durante a recuperação do banco de dados).<br /><br />**Escopo**: apenas global|
+|**7752**|Habilita o carregamento assíncrono do Repositório de Consultas.<br /><br />**Observação:** Use este sinalizador de rastreamento se o [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] estiver apresentando um alto número de esperas QDS_LOADDB relacionadas à carga síncrona do Repositório de Consultas (comportamento padrão durante a recuperação do banco de dados).<br /><br />**Observação:** começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], esse comportamento é controlado pelo mecanismo, e o sinalizador de rastreamento 7752 não tem nenhum efeito.<br /><br />**Escopo**: apenas global|
 |**7806**|Habilita uma conexão de administrador dedicada (DAC) no [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Por padrão, nenhum recurso DAC é reservado no [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Para obter mais informações, veja [Conexão de diagnóstico para administradores de banco de dados](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<br /><br />**Escopo**: apenas global|  
 |**8011**|Desabilitar o buffer de anéis do Monitor de Recursos. Para obter mais informações, confira este [artigo do Suporte da Microsoft](https://support.microsoft.com/kb/920093).<br /><br />**Escopo**: global e sessão|
 |**8012**|Desabilitar o buffer de anéis para agendadores. Para obter mais informações, confira este [artigo do Suporte da Microsoft](https://support.microsoft.com/kb/920093).<br /><br />**Escopo**: apenas global|

@@ -24,17 +24,20 @@ helpviewer_keywords:
 - SQL Server collations
 - UTF-8
 - UTF-16
+- UTF8
+- UTF16
+- UCS2
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af749bdb7050d9e71fdfe698fe295255a4603add
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5807b8ae9c3b074068d0422a91b1dc1711c4067a
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118487"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471043"
 ---
 # <a name="collation-and-unicode-support"></a>Suporte a ordenações e a Unicode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -272,7 +275,7 @@ A tabela a seguir descreve os bytes de armazenamento de codificação para cada 
 
 > [!TIP]   
 > É comum pensar em [CHAR(*n*) e em VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) ou em [NCHAR(*n*) e em NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), o *n* define o número de caracteres. Isso ocorre porque, no exemplo de uma coluna CHAR(10), 10 caracteres ASCII no intervalo 0-127 podem ser armazenados usando uma ordenação como Latin1_General_100_CI_AI, porque cada caractere nesse intervalo usa apenas 1 byte.    
-> No entanto, em [CHAR(*n*) e em VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), o *n* define o comprimento da cadeia de caracteres em **bytes** (0-8.000), enquanto em [NCHAR(*n*) e em NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) o *n* define o comprimento da cadeia de caracteres em **pares de bytes** (0-4.000). *n* nunca define números de caracteres que podem ser armazenados.
+> No entanto, em [CHAR(*n*) e em VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), o *n* define o tamanho da cadeia de caracteres em **bytes** (0-8.000), enquanto em [NCHAR(*n*) e em NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) o *n* define o tamanho da cadeia de caracteres em **pares de bytes** (0-4.000). *n* nunca define números de caracteres que podem ser armazenados.
 
 Como descrito acima, a escolha da codificação e do tipo de dados Unicode apropriados pode proporcionar economias significativas de armazenamento ou aumentar o volume de armazenamento atual, dependendo do conjunto de caracteres em uso. Por exemplo, ao usar uma ordenação Latin que é habilitada para UTF-8, como Latin1_General_100_CI_AI_SC_UTF8, uma coluna `CHAR(10)` armazena 10 bytes e pode conter 10 caracteres ASCII no intervalo 0-127, mas apenas cinco caracteres no intervalo 128-2047 e apenas três caracteres no intervalo 2048-65535. Por comparação, como uma coluna `NCHAR(10)` armazena 10 pares de bytes (20 bytes), ela pode conter 10 caracteres no intervalo de 0-65535.  
 
@@ -301,7 +304,9 @@ Para ver outras considerações, confira o artigo [Gravar instruções Transact-
 [Gravar instruções Transact-SQL internacionais](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 ["Práticas recomendadas para migração para Unicode no SQL Server"](https://go.microsoft.com/fwlink/?LinkId=113890) – deixou de receber manutenção   
 [Site do Unicode Consortium](https://go.microsoft.com/fwlink/?LinkId=48619)   
-[Padrão Unicode](http://www.unicode.org/standard/standard.html)      
+[Padrão Unicode](http://www.unicode.org/standard/standard.html)     
+[Suporte ao UTF-8 no OLE DB Driver for SQL Server](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+Blog [Apresentação do suporte a UTF-8 para SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928)       
     
 ## <a name="see-also"></a>Consulte Também    
 [Ordenações de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md)     
