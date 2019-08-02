@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b5f406ec4b6cfbd65db7a4ecd3a1ad14dff6d8e1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a37f0eb62ec0483b8c73bd5cc4d6d29221e8082f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470236"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715179"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Configurar um cliente de ciência de dados para desenvolvimento em Python no SQL Server Serviços de Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +50,9 @@ Um script de instalação adiciona três bibliotecas específicas da Microsoft a
 
 1. Baixar um script de instalação.
 
-  + [https://aka.ms/mls-py](https://aka.ms/mls-py)instala a versão 9.2.1 dos pacotes do Microsoft Python. Esta versão corresponde a uma instância de SQL Server 2017 padrão. 
+  + [https://aka.ms/mls-py](https://aka.ms/mls-py)instala a versão 9.2.1 dos pacotes do Microsoft Python. Esta versão corresponde a uma instância de SQL Server padrão. 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py)instala a versão 9,3 dos pacotes do Microsoft Python. Esta versão é uma opção melhor se a instância remota SQL Server 2017 estiver [associada a Machine Learning Server 9,3](../install/upgrade-r-and-python.md).
+  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py)instala a versão 9,3 dos pacotes do Microsoft Python. Esta versão é uma opção melhor se sua instância de SQL Server remota estiver [associada a Machine Learning Server 9,3](../install/upgrade-r-and-python.md).
 
 2. Abra uma janela do PowerShell com permissões de administrador elevadas (clique com o botão direito do mouse em **Executar como administrador**).
 
