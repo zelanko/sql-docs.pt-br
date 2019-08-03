@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 29974fc7a60f675dc9921f527fd8348beb4f2134
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3715bfacd1a94f588992d7e6832814f50c076d1c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120078"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768897"
 ---
 # <a name="spchangedistributorpassword-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Altera a senha para um Distribuidor. Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados.  
   
@@ -37,7 +37,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @password = ] 'password'` É a nova senha. *senha* está **sysname**, sem padrão. Se o distribuidor for local, a senha das **distributor_admin** logon de sistema é alterado.  
+`[ @password = ] 'password'`É a nova senha. a *senha* é **sysname**, sem padrão. Se o distribuidor for local, a senha do logon do sistema **distributor_admin** será alterada.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -49,7 +49,7 @@ sp_changedistributor_password [ @password= ] 'password'
  [!code-sql[HowTo#sp_changedistributor_password](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pas_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_changedistributor_password**.  
+ Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_changedistributor_password**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibir e modificar configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 15d226e20448e503344667ed801bdbd9b7cb07f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b434d4bda50cf03442020ba2f0c029aaa1e09cd9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950713"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771227"
 ---
 # <a name="spreplicationagentcheckup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Verifica cada banco de dados de distribuição para os agentes de replicação em execução, mas não têm histórico registrado no intervalo de pulsação. Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados.  
   
@@ -37,16 +37,16 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @heartbeat_interval = ] 'heartbeat_interval'` É o número máximo de minutos que um agente pode prosseguir sem registrar uma mensagem de progresso. *heartbeat_interval* está **int**, com um padrão de 10 minutos.  
+`[ @heartbeat_interval = ] 'heartbeat_interval'`É o número máximo de minutos que um agente pode acessar sem registrar uma mensagem de progresso. *heartbeat_interval* é **int**, com um padrão de 10 minutos.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- **sp_replication_agent_checkup** gera erro 14151 para cada agente detectado como suspeito. Também registra uma mensagem de histórico de falha sobre os agentes.  
+ **sp_replication_agent_checkup** gera o erro 14151 para cada agente detectado como suspeito. Também registra uma mensagem de histórico de falha sobre os agentes.  
   
 ## <a name="remarks"></a>Comentários  
- **sp_replication_agent_checkup** é usado em replicação de instantâneo, replicação transacional e replicação de mesclagem.  
+ **sp_replication_agent_checkup** é usado na replicação de instantâneo, na replicação transacional e na replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_replication_agent_checkup**.  
+ Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_replication_agent_checkup**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

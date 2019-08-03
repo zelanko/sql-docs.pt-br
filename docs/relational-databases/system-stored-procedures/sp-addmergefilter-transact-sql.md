@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ce5d59e050aafa69a0b2584c66328c568f5ddee1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ba0e2384ec63d29d3a5030c0b018998896dc8cb
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118064"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769176"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Adiciona um novo filtro de mesclagem para criar uma partição com base em uma junção com outra tabela. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
@@ -45,38 +45,38 @@ sp_addmergefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação na qual o filtro de mesclagem está sendo adicionado. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'`É o nome da publicação na qual o filtro de mesclagem está sendo adicionado. a *publicação* é **sysname**, sem padrão.  
   
-`[ @article = ] 'article'` É o nome do artigo no qual o filtro de mesclagem está sendo adicionado. *artigo* está **sysname**, sem padrão.  
+`[ @article = ] 'article'`É o nome do artigo no qual o filtro de mesclagem está sendo adicionado. o *artigo* é **sysname**, sem padrão.  
   
-`[ @filtername = ] 'filtername'` É o nome do filtro. *FilterName* é um parâmetro obrigatório. *FilterName*está **sysname**, sem padrão.  
+`[ @filtername = ] 'filtername'`É o nome do filtro. *FilterName* é um parâmetro obrigatório. *FilterName*é **sysname**, sem padrão.  
   
-`[ @join_articlename = ] 'join_articlename'` É o artigo pai ao qual o artigo filho, especificado por *artigo*, deve ser Unido com a cláusula de junção especificada por *join_filterclause*, para determinar as linhas no artigo filho que atendem aos o critério de filtro de filtro de mesclagem. *join_articlename* está **sysname**, sem padrão. O artigo deve estar na publicação fornecida por *publicação*.  
+`[ @join_articlename = ] 'join_articlename'`É o artigo pai para o qual o artigo filho, especificado pelo *artigo*, deve ser Unido usando a cláusula de junção especificada por *join_filterclause*, para determinar as linhas no artigo filho que atendem ao critério de filtro do filtro de mesclagem. *join_articlename* é **sysname**, sem padrão. O artigo deve estar na publicação fornecida pela *publicação*.  
   
-`[ @join_filterclause = ] join_filterclause` É a cláusula de junção que deve ser usada para unir o artigo filho especificado por *artigo*e o artigo pai especificado por *join_article*, para determinar as linhas que qualificam o filtro de mesclagem. *join_filterclause* está **nvarchar (1000)** .  
+`[ @join_filterclause = ] join_filterclause`É a cláusula de junção que deve ser usada para ingressar no artigo filho especificado por *artigo*e artigo pai especificados por *join_article*, para determinar as linhas qualificando o filtro de mesclagem. *join_filterclause* é **nvarchar (1000)** .  
   
-`[ @join_unique_key = ] join_unique_key` Especifica se a junção entre o artigo filho *artigo*e o artigo pai *join_article*é um-para-muitos, um para um, muitos-para-um ou muitos-para-muitos. *join_unique_key* está **int**, com um padrão de 0. **0** indica uma junção muitos-para-um ou muitos-para-muitos. **1** indica uma junção ou um-para-muitos. Esse valor é **1** quando as colunas de junção formam uma chave exclusiva *join_article*, ou se *join_filterclause* entre uma chave estrangeira em *artigo* e uma chave primária em *join_article*.  
+`[ @join_unique_key = ] join_unique_key`Especifica se a junção entre o artigo do artigo *filho e o*artigo pai *join_article*é um-para-muitos, um-para-um, muitos para um ou muitos para muitos. *join_unique_key* é **int**, com um padrão de 0. **0** indica uma junção muitos para um ou muitos para muitos. **1** indica uma junção um-para-um ou um-para-muitos. Esse valor é **1** quando as colunas de junção formam uma chave exclusiva em *join_article*, ou se *join_filterclause* estiver entre uma chave estrangeira no *artigo* e uma chave primária em *join_article*.  
   
 > [!CAUTION]  
->  Apenas defina esse parâmetro como **1** se você tiver uma restrição na coluna de junção na tabela subjacente para o artigo pai que garanta exclusividade. Se *join_unique_key* é definido como **1** incorretamente, poderá ocorrer não convergência de dados.  
+>  Somente defina esse parâmetro como **1** se você tiver uma restrição na coluna de junção na tabela subjacente para o artigo pai que garante a exclusividade. Se *join_unique_key* for definido como **1** incorretamente, pode ocorrer não convergência de dados.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`O reconhece que a ação executada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
   
- **0** Especifica que as alterações no artigo de mesclagem não fará com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
+ **0** especifica que as alterações no artigo de mesclagem não farão com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
   
- **1** Especifica que as alterações no artigo de mesclagem podem invalidar o instantâneo ser inválida e se houver assinaturas existentes que exigem um novo instantâneo, dará permissão para o instantâneo existente seja marcado como obsoleto e um novo instantâneo gerado.  
+ **1** especifica que as alterações no artigo de mesclagem podem fazer com que o instantâneo seja inválido e, se houver assinaturas existentes que exijam um novo instantâneo, concederá permissão para que o instantâneo existente seja marcado como obsoleto e um novo instantâneo gerado.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` Reconhece que a ação tomada por esse procedimento armazenado pode requerer que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit**, com um padrão de 0.  
+`[ @force_reinit_subscription = ] force_reinit_subscription`Reconhece que a ação executada por este procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit**, com um padrão de 0.  
   
- **0** Especifica que as alterações no artigo de mesclagem não fará com que a assinatura seja reiniciada. Se o procedimento armazenado detectar que a alteração irá requerer que as assinaturas existentes sejam reiniciadas, ocorrerá um erro e nenhuma alteração será feita.  
+ **0** especifica que as alterações no artigo de mesclagem não farão com que a assinatura seja reinicializada. Se o procedimento armazenado detectar que a alteração irá requerer que as assinaturas existentes sejam reiniciadas, ocorrerá um erro e nenhuma alteração será feita.  
   
- **1** Especifica que as alterações no artigo de mesclagem fará com que as assinaturas existentes sejam reinicializadas e dá permissão para que ocorra a reinicialização da assinatura.  
+ **1** especifica que as alterações no artigo de mesclagem farão com que as assinaturas existentes sejam reinicializadas e concede a permissão para que a reinicialização da assinatura ocorra.  
   
-`[ @filter_type = ] filter_type` Especifica o tipo de filtro que está sendo adicionado. *filter_type* está **tinyint**, e pode ser um dos valores a seguir.  
+`[ @filter_type = ] filter_type`Especifica o tipo de filtro que está sendo adicionado. *filter_type* é **tinyint**e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**1**|Somente filtro de junção. Necessário para dar suporte [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes.|  
+|**1**|Somente filtro de junção. Necessário para dar [!INCLUDE[ssEW](../../includes/ssew-md.md)] suporte a assinantes.|  
 |**2**|Somente relação de registro lógico.|  
 |**3**|Relação de filtro de junção e registro lógico.|  
   
@@ -86,11 +86,11 @@ sp_addmergefilter [ @publication = ] 'publication'
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_addmergefilter** é usado em replicação de mesclagem.  
+ **sp_addmergefilter** é usado na replicação de mesclagem.  
   
  **sp_addmergefilter** só pode ser usado com artigos de tabela. Artigos de exibição e exibição indexada não têm suporte.  
   
- Esse procedimento também pode ser usado para adicionar uma relação lógica entre dois artigos que podem ou não ter um filtro de junção entre eles. *filter_type* é usado para especificar se o filtro de mesclagem está sendo adicionado é um filtro de junção, uma relação lógica ou ambos.  
+ Esse procedimento também pode ser usado para adicionar uma relação lógica entre dois artigos que podem ou não ter um filtro de junção entre eles. *filter_type* é usado para especificar se o filtro de mesclagem que está sendo adicionado é um filtro de junção, uma relação lógica ou ambos.  
   
  Para usar registros lógicos, a publicação e os artigos devem atender a vários requisitos. Para obter mais informações, consulte [Agrupar alterações a linhas relacionadas com registros lógicos](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
@@ -98,13 +98,13 @@ sp_addmergefilter [ @publication = ] 'publication'
   
  Você não pode adicionar um filtro de junção entre dois artigos publicados quando as tabelas de origem de ambos os artigos compartilham o mesmo nome de objeto de tabela. Nesse caso, mesmo que ambas as tabelas sejam de propriedade de esquemas diferentes e tenham nomes de artigo exclusivos, a criação do filtro de junção irá falhar.  
   
- Quando um filtro de linha e um filtro de junção com parâmetros são usados no mesmo artigo de tabela, a replicação determinará se uma linha pertence a uma partição de Assinante. Ele faz isso avaliando a função de filtragem ou o filtro de junção (usando o [OR](../../t-sql/language-elements/or-transact-sql.md) operador), em vez de avaliar a intersecção entre as duas condições (usando o [AND](../../t-sql/language-elements/and-transact-sql.md) operador).  
+ Quando um filtro de linha e um filtro de junção com parâmetros são usados no mesmo artigo de tabela, a replicação determinará se uma linha pertence a uma partição de Assinante. Ele faz isso avaliando a função de filtragem ou o filtro de junção (usando o operador [or](../../t-sql/language-elements/or-transact-sql.md) ), em vez de avaliar a interseção entre as duas condições (usando o operador [and](../../t-sql/language-elements/and-transact-sql.md) ).  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_addmergefilter](../../relational-databases/replication/codesnippet/tsql/sp-addmergefilter-transa_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_addmergefilter**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_addmergefilter**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
