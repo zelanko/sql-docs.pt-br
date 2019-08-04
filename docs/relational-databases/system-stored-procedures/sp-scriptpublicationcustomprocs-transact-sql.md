@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 89cd3991819bdba99d3a4b95c16e7b3247808031
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8436616ced84892dc7e484a5d83f3f0c3779f244
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126377"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771580"
 ---
 # <a name="spscriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Gera scripts dos procedimentos personalizados INSERT, UPDATE e DELETE para todos os artigos de tabela em uma publicação na qual a opção de esquema de procedimento personalizado está habilitada. **sp_scriptpublicationcustomprocs** é particularmente útil para configurar assinaturas para o qual o instantâneo é aplicado manualmente.  
+  Gera scripts dos procedimentos personalizados INSERT, UPDATE e DELETE para todos os artigos de tabela em uma publicação na qual a opção de esquema de procedimento personalizado está habilitada. o **sp_scriptpublicationcustomprocs** é particularmente útil para configurar assinaturas para as quais o instantâneo é aplicado manualmente.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,18 +37,18 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication_name'` É o nome da publicação. *publication_name* está **sysname** sem nenhum padrão.  
+`[ @publication = ] 'publication_name'`É o nome da publicação. *publication_name* é **sysname** sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Retorna um conjunto de resultados que consiste em uma única **nvarchar (4000)** coluna. O conjunto de resultados forma a instrução completa CREATE PROCEDURE necessária para criar o procedimento armazenado personalizado.  
+ Retorna um conjunto de resultados que consiste em uma única coluna **nvarchar (4000)** . O conjunto de resultados forma a instrução completa CREATE PROCEDURE necessária para criar o procedimento armazenado personalizado.  
   
 ## <a name="remarks"></a>Comentários  
  Não são gerados scripts de procedimentos personalizados para artigos sem a opção de geração automática de esquema de procedimento personalizado (0x2).  
   
- Os procedimentos a seguir são usados pelo **sp_scriptpublicationcustomprocs** para criar procedimentos no assinante e não deve ser executado diretamente:  
+ Os procedimentos a seguir são usados pelo **sp_scriptpublicationcustomprocs** para criar procedimentos ao Assinante e não devem ser executados diretamente:  
   
  **sp_script_reconciliation_delproc**  
   
@@ -75,7 +75,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
  **sp_scriptxupdproc**  
   
 ## <a name="permissions"></a>Permissões  
- Executar permissão é concedida a **pública**; uma verificação de segurança procedural é executada dentro do procedimento armazenado para restringir o acesso a membros da **sysadmin** função de servidor fixa e **DB _ proprietário** função de banco de dados fixa no banco de dados atual.  
+ A permissão execute é concedida a **Public**; uma verificação de segurança de procedimento é executada dentro desse procedimento armazenado para restringir o acesso a membros da função de servidor fixa **sysadmin** e à função de banco de dados fixa **db_owner** no banco de dados atual.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

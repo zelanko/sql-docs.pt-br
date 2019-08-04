@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 61d11dd443e68d743b30cee890d33e4852c99b39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4cacb78e797583dbd45954f09c89a774c381966
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902908"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770917"
 ---
 # <a name="sphelpdistributorproperties-transact-sql"></a>sp_helpdistributor_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Retorna propriedades do Distribuidor. Esse procedimento armazenado é executado no Distribuidor, no banco de dados de distribuição.  
   
@@ -49,9 +49,9 @@ sp_helpdistributor_properties
  **sp_helpdistributor_properties** é usado com todos os tipos de replicação.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa, membros da **db_owner** ou **replmonitor** função de banco de dados fixa no banco de dados de distribuição e os usuários no lista de acesso à publicação (PAL) para uma publicação que usa esse distribuidor pode executar **sp_helpdistributor_properties**.  
+ Somente os membros da função de servidor fixa **sysadmin** , os membros da função de banco de dados fixa **db_owner** ou **replmonitor** no banco de dados de distribuição e os usuários na PAL (lista de acesso à publicação) de uma publicação que usa esse distribuidor podem Execute **sp_helpdistributor_properties**.  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
+ [Transact &#40;-SQL sp_changedistributor_property&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
   
   

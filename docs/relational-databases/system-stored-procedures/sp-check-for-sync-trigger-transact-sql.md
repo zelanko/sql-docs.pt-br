@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b7d4d26374d7b582f2ba5ddad79dd317145cecd7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7af80b51c651bd98fd2ac143ac0631901828b6fb
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070435"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771278"
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Determina se um gatilho definido pelo usuário ou procedimento armazenado está sendo chamado no contexto de um gatilho de replicação usado para assinaturas de atualização imediata. Esse procedimento armazenado é executado no publicador do banco de dados de publicação ou no assinante no banco de dados de assinatura.  
+  Determina se um gatilho definido pelo usuário ou procedimento armazenado está sendo chamado no contexto de um gatilho de replicação usado para assinaturas de atualização imediata. Esse procedimento armazenado é executado no Publicador do banco de dados de publicação ou no Assinante no banco de dados de assinatura.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,27 +40,27 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
   
 ## <a name="arguments"></a>Argumentos  
  [ **@tabid =** ] '*tabid*'  
- É a ID de objeto da tabela onde gatilhos de atualização imediata estão sendo verificados. *tabid* está **int** sem nenhum padrão.  
+ É a ID de objeto da tabela onde gatilhos de atualização imediata estão sendo verificados. *tabid* é **int** sem padrão.  
   
- [ **@trigger_op =** ] '*trigger_output_parameters*' saída  
- Especifica se o parâmetro de saída deve retornar o tipo de gatilho de onde ele está sendo chamado. *trigger_output_parameters* está **char(10)** e pode ser um destes valores.  
+ **[@trigger_op =** ] '*trigger_output_parameters*' saída  
+ Especifica se o parâmetro de saída deve retornar o tipo de gatilho de onde ele está sendo chamado. *trigger_output_parameters* é **Char (10)** e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**Ins**|Gatilho INSERT|  
+|**Los**|Gatilho INSERT|  
 |**UPD**|Gatilho UPDATE|  
 |**Del**|Gatilho DELETE|  
 |NULL (padrão)||  
   
-`[ @fonpublisher = ] fonpublisher` Especifica o local em que o procedimento armazenado é executado. *fonpublisher* está **bit**, com um valor padrão de 0. Se for 0 a execução será no Assinante e se for 1 a execução será no Editor.  
+`[ @fonpublisher = ] fonpublisher`Especifica o local em que o procedimento armazenado é executado. *fonpublisher* é **bit**, com um valor padrão de 0. Se for 0 a execução será no Assinante e se for 1 a execução será no Editor.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- 0 indica que o procedimento armazenado não está sendo chamado dentro do contexto de um gatilho da atualização imediata. 1 indica que ele está sendo chamado dentro do contexto de um gatilho de atualização imediata e é o tipo de gatilho que está sendo retornado em *@trigger_op* .  
+ 0 indica que o procedimento armazenado não está sendo chamado dentro do contexto de um gatilho da atualização imediata. 1 indica que ele está sendo chamado dentro do contexto de um gatilho de atualização imediata e é o tipo de gatilho que está sendo *@trigger_op* retornado.  
   
 ## <a name="remarks"></a>Comentários  
- **sp_check_for_sync_trigger** é usado em replicação de instantâneo e replicação transacional.  
+ **sp_check_for_sync_trigger** é usado na replicação de instantâneo e na replicação transacional.  
   
- **sp_check_for_sync_trigger** é usado para coordenar entre a replicação e gatilhos definidos pelo usuário. Esse procedimento armazenado determina se ele está sendo chamado dentro do contexto de um gatilho de replicação. Por exemplo, você pode chamar o procedimento **sp_check_for_sync_trigger** no corpo de um gatilho definido pelo usuário. Se **sp_check_for_sync_trigger** retorna **0**, o gatilho definido pelo usuário continua o processamento. Se **sp_check_for_sync_trigger** retorna **1**, o gatilho definido pelo usuário é encerrada. Isso assegura que o gatilho definido pelo usuário não seja disparado quando o gatilho de replicação atualizar a tabela.  
+ **sp_check_for_sync_trigger** é usado para coordenar entre os gatilhos de replicação e definidos pelo usuário. Esse procedimento armazenado determina se ele está sendo chamado dentro do contexto de um gatilho de replicação. Por exemplo, você pode chamar o procedimento **sp_check_for_sync_trigger** no corpo de um gatilho definido pelo usuário. Se **sp_check_for_sync_trigger** retornar **0**, o gatilho definido pelo usuário continuará o processamento. Se **sp_check_for_sync_trigger** retornar **1**, o gatilho definido pelo usuário será encerrado. Isso assegura que o gatilho definido pelo usuário não seja disparado quando o gatilho de replicação atualizar a tabela.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra código que pode ser usado em um gatilho, em uma tabela de Assinante.  
@@ -74,7 +74,7 @@ RETURN
 ```  
   
 ## <a name="example"></a>Exemplo  
- O código também pode ser adicionado a um gatilho em uma tabela no publicador; o código é semelhante, mas a chamada para **sp_check_for_sync_trigger** inclui um parâmetro adicional.  
+ O código também pode ser adicionado a um gatilho em uma tabela no Publicador; o código é semelhante, mas a chamada para **sp_check_for_sync_trigger** inclui um parâmetro adicional.  
   
 ```  
 DECLARE @retcode int, @trigger_op char(10), @table_id int, @fonpublisher int  
@@ -86,7 +86,7 @@ RETURN
 ```  
   
 ## <a name="permissions"></a>Permissões  
- **sp_check_for_sync_trigger** procedimento armazenado pode ser executado por qualquer usuário com permissões SELECT em de [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) exibição do sistema.  
+ o procedimento armazenado **sp_check_for_sync_trigger** pode ser executado por qualquer usuário com permissões SELECT na exibição do sistema [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) .  
   
 ## <a name="see-also"></a>Consulte também  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  

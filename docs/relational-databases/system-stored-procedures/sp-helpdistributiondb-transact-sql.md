@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2c97fec403da1913f7f39f1da706d107cd964aa4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 90dee1076743ae54201248c808b04c6197d42198
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902924"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770931"
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Retorna as propriedades do banco de dados de distribuição especificado. Esse procedimento armazenado é executado no Distribuidor, no banco de dados de distribuição.  
   
@@ -37,7 +37,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database = ] 'database_name'` É o nome do banco de dados para o qual as propriedades são retornadas. *Database_Name* está **sysname**, com um padrão de **%** para todos os bancos de dados associados ao distribuidor e no qual o usuário tem permissões.  
+`[ @database = ] 'database_name'`É o nome do banco de dados para o qual as propriedades são retornadas. *database_name* é **sysname**, com um padrão de **%** para todos os bancos de dados associados ao distribuidor e em que o usuário tem permissões.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -64,7 +64,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
  **sp_helpdistributiondb** é usado em todos os tipos de replicação.  
   
 ## <a name="permissions"></a>Permissões  
- Os membros a **db_owner** função de banco de dados fixa ou o **replmonitor** função em um banco de dados de distribuição e os usuários na lista de acesso da publicação de uma publicação usando o banco de dados de distribuição podem executar **sp_helpdistributiondb** para retornar informações relacionadas ao arquivo. Os membros de **pública** podem executar **sp_helpdistributiondb** para retornar informações relacionadas ao arquivo para bancos de dados de distribuição aos quais têm acesso.  
+ Os membros da função de banco de dados fixa **db_owner** ou a função **replmonitor** em um banco de dados de distribuição e os usuários na lista de acesso à publicação de uma publicação usando o banco de dados de distribuição podem executar **sp_helpdistributiondb** para retornar informações relacionadas ao arquivo. Os membros da função **pública** podem executar **sp_helpdistributiondb** para retornar informações não relacionadas a arquivos para bancos de dados de distribuição aos quais eles têm acesso.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibir e modificar propriedades de Publicador e Distribuidor](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

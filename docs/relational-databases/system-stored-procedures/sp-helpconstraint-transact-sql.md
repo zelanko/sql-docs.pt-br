@@ -18,15 +18,15 @@ ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd443a8e03663eb3fb46e75e09d852c797f6d427
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d722d3b54c2f0b6d73660e2195aed4039e1eda2c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101382"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771083"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Retorna uma lista de todos os tipos de restrição, seu nome definido pelo usuário ou fornecido pelo sistema, as colunas com base nas quais elas foram definidas e a expressão que define a restrição (somente para restrições DEFAULT e CHECK).  
   
@@ -41,9 +41,9 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @objname = ] 'table'` É a tabela sobre a restrição de quais informações são retornadas. A tabela especificada deve ser local ao banco de dados atual. *tabela* está **nvarchar(776)** , sem padrão.  
+`[ @objname = ] 'table'`É a tabela sobre a qual as informações de restrição são retornadas. A tabela especificada deve ser local ao banco de dados atual. *Table* é **nvarchar (776)** , sem padrão.  
   
-`[ @nomsg = ] 'no_message'` É um parâmetro opcional que imprime o nome da tabela. *no_message* está **varchar(5)** , com um padrão de **msg**. **nomsg** suprime a impressão.  
+`[ @nomsg = ] 'no_message'`É um parâmetro opcional que imprime o nome da tabela. *no_message* é **varchar (5)** , com um padrão de **msg**. **nomsg** suprime a impressão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -52,7 +52,7 @@ sp_helpconstraint [ @objname = ] 'table'
  **sp_helpconstraint** exibe uma coluna indexada decrescente se ela participou de chaves primárias. A coluna indexada de maneira decrescente será listada no conjunto de resultados com um sinal de menos (-) após seu nome. O padrão, uma coluna indexada de maneira crescente, será listada apenas por seu nome.  
   
 ## <a name="remarks"></a>Comentários  
- Executando **sp_help**_tabela_ relata todas as informações sobre a tabela especificada. Para ver apenas as informações de restrição, use **sp_helpconstraint**.  
+ A execução da_tabela_ **sp_help**relata todas as informações sobre a tabela especificada. Para ver apenas as informações de restrição, use **sp_helpconstraint**.  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  
@@ -67,7 +67,7 @@ EXEC sp_helpconstraint 'Production.Product';
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Procedimentos armazenados do mecanismo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Mecanismo de Banco de Dados procedimentos &#40;armazenados TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   

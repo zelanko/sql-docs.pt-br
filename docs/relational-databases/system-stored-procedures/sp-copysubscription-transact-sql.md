@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 71027fb060a5085289aed4c8a637bc76a71bbd2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1a093364192e3bab32a2fa0234c7198d8e0f3ff
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68108686"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771431"
 ---
 # <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
     
 > [!IMPORTANT]  
 >  O recurso de assinaturas anexáveis está preterido e será removido em uma versão futura. Esse recurso não deveria ser usado em novo trabalho de desenvolvimento. Para publicações de mesclagem, que são particionadas usando filtros com parâmetros, recomendamos o uso de novos recursos de instantâneos particionados, que simplificam a inicialização de um grande número de assinaturas. Para obter mais informações, consulte [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Para publicações que não são particionadas, é possível inicializar uma inscrição com um backup. Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
- Copia um banco de dados de assinatura que tem assinatura pull, mas nenhuma assinatura push. Somente bancos de dados de arquivo único podem ser copiados. Esse procedimento armazenado é executado no assinante, no banco de dados de assinatura.  
+ Copia um banco de dados de assinatura que tem assinatura pull, mas nenhuma assinatura push. Somente bancos de dados de arquivo único podem ser copiados. Esse procedimento armazenado é executado no Assinante no banco de dados de assinatura.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,24 +43,24 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @filename = ] 'file_name'` É a cadeia de caracteres que especifica o caminho completo, incluindo o nome do arquivo, no qual uma cópia do arquivo de dados (. mdf) é salva. *nome do arquivo* está **nvarchar (260)** , sem padrão.  
+`[ @filename = ] 'file_name'`É a cadeia de caracteres que especifica o caminho completo, incluindo o nome do arquivo, para o qual uma cópia do arquivo de dados (. MDF) é salva. o *nome do arquivo* é **nvarchar (260)** , sem padrão.  
   
-`[ @temp_dir = ] 'temp_dir'` É o nome do diretório que contém os arquivos temporários. *temp_dir* está **nvarchar (260)** , com um padrão NULL. Se for NULL, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diretório de dados padrão será usado. O diretório deve ter bastante espaço suficiente para conter um arquivo do tamanho de todos os arquivos de banco de dados de assinante combinados.  
+`[ @temp_dir = ] 'temp_dir'`É o nome do diretório que contém os arquivos temporários. *temp_dir* é **nvarchar (260)** , com um padrão de NULL. Se for NULL, [!INCLUDE[msCoName](../../includes/msconame-md.md)] o diretório de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados padrão será usado. O diretório deve ter bastante espaço suficiente para conter um arquivo do tamanho de todos os arquivos de banco de dados de assinante combinados.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'` É um sinalizador booliano opcional que especifica se deve ou não substituir um arquivo existente de mesmo nome especificado na **@filename** . *overwrite_existing_file*está **bit**, com um padrão de **0**. Se **1**, ele substituirá o arquivo especificado por **@filename** , se ele existir. Se **0**, o procedimento armazenado falhará se o arquivo existe e o arquivo não será substituído.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'`É um sinalizador booliano opcional que especifica se deve ou não substituir um arquivo existente com o mesmo nome especificado **@filename** em. *overwrite_existing_file*é **bit**, com um padrão de **0**. Se for **1**, ele substituirá o arquivo especificado por **@filename** , se ele existir. Se **0**, o procedimento armazenado falhará se o arquivo existir e o arquivo não for substituído.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_copysubscription** é usado em todos os tipos de replicação para copiar um banco de dados de assinatura para um arquivo como uma alternativa ao aplicar um instantâneo no assinante. O banco de dados deve ser configurado para oferecer suporte somente a assinaturas pull. Usuários com permissões apropriadas podem fazer cópias do banco de dados de assinatura e enviar por email, copiar ou transportar o arquivo de assinatura (.msf) para outro Assinante, onde poderá ser anexado a uma assinatura.  
+ **sp_copysubscription** é usado em todos os tipos de replicação para copiar um banco de dados de assinatura para um arquivo como uma alternativa para aplicar um instantâneo no Assinante. O banco de dados deve ser configurado para oferecer suporte somente a assinaturas pull. Usuários com permissões apropriadas podem fazer cópias do banco de dados de assinatura e enviar por email, copiar ou transportar o arquivo de assinatura (.msf) para outro Assinante, onde poderá ser anexado a uma assinatura.  
   
  O tamanho do banco de dados de assinatura copiado deve ser menor de 2 gigabytes (GB).  
   
- **sp_copysubscription** tem suporte apenas para bancos de dados com assinaturas de cliente e não pode ser executado quando o banco de dados tem assinaturas de servidor.  
+ o **sp_copysubscription** só tem suporte para bancos de dados com assinaturas de cliente e não pode ser executado quando o banco de dados tiver assinaturas de servidor.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_copysubscription**.  
+ Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_copysubscription**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Locais da pasta de instantâneos alternativos](../../relational-databases/replication/snapshot-options.md)   

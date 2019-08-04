@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 616e5547c4acf59f88dc67c5aabc507eb30fe251
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 398e1eebbb269fa1f1507725fefff820c5174f58
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055302"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771506"
 ---
 # <a name="sphelpagentparameter-transact-sql"></a>sp_help_agent_parameter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Retorna todos os parâmetros de um perfil do [MSagent_parameters &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) tabela do sistema. Esse procedimento armazenado é executado no Distribuidor, onde o agente está sendo executado, ou em qualquer banco de dados.  
+  Retorna todos os parâmetros de um perfil da tabela do sistema [Transact &#40;-&#41; SQL MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) . Esse procedimento armazenado é executado no Distribuidor, onde o agente está sendo executado, ou em qualquer banco de dados.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,7 +37,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] profile_id` É a ID do perfil a partir de [MSagent_parameters &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) tabela. *profile_id* está **int**, com um padrão de **-1**, que retorna todos os parâmetros.  
+`[ @profile_id = ] profile_id`É a ID do perfil da tabela [Transact- &#40;SQL&#41; MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) . *profile_id* é **int**, com um padrão de **-1**, que retorna todos os parâmetros.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -54,7 +54,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
  **sp_help_agent_parameter** é usado em todos os tipos de replicação.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa ou o **replmonitor** banco de dados fixa podem executar **sp_help_agent_parameter**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **replmonitor** podem executar **sp_help_agent_parameter**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Trabalhar com perfis do Agente de Replicação](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

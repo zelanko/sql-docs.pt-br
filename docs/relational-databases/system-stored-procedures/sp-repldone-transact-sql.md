@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5ed4502b7f3e737b8e3adbfae852c2a513e2ccd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 35cd38269fabba59d257e41141141764b6d4919d
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006887"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771111"
 ---
 # <a name="sprepldone-transact-sql"></a>sp_repldone (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Atualiza o registro que identifica a última transação distribuída do servidor. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
 > [!CAUTION]  
->  Se você executar **sp_repldone** manualmente, você poderá invalidar a ordem e a consistência das transações entregues. **sp_repldone** só deve ser usado para solucionar problemas de replicação conforme direcionado por um profissional de suporte de replicação experiente.  
+>  Se você executar o **sp_repldone** manualmente, poderá invalidar a ordem e a consistência das transações entregues. **sp_repldone** só deve ser usado para solucionar problemas de replicação, conforme indicado por um profissional de suporte de replicação experiente.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,33 +44,33 @@ sp_repldone [ @xactid= ] xactid
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @xactid = ] xactid` É o número de sequência de log (LSN) do primeiro registro para a última transação distribuída do servidor. *Xactid* está **binário (10)** , sem padrão.  
+`[ @xactid = ] xactid`É o LSN (número de sequência de log) do primeiro registro da última transação distribuída do servidor. *xactid* é **binary (10)** , sem padrão.  
   
-`[ @xact_seqno = ] xact_seqno` É o LSN do último registro para a última transação distribuída do servidor. *xact_seqno* está **binário (10)** , sem padrão.  
+`[ @xact_seqno = ] xact_seqno`É o LSN do último registro para a última transação distribuída do servidor. *xact_seqno* é **binary (10)** , sem padrão.  
   
-`[ @numtrans = ] numtrans` É o número de transações distribuídas. *numtrans* está **int**, sem padrão.  
+`[ @numtrans = ] numtrans`É o número de transações distribuídas. *numtrans* é **int**, sem padrão.  
   
-`[ @time = ] time` É o número de milissegundos, se fornecido, necessário para distribuir o último lote de transações. *tempo* está **int**, sem padrão.  
+`[ @time = ] time`É o número de milissegundos, se fornecido, necessário para distribuir o último lote de transações. o *tempo* é **int**, sem padrão.  
   
-`[ @reset = ] reset` É o status de redefinição. *Redefinir* está **int**, sem padrão. Se **1**, replicados de todas as transações no log serão marcadas como distribuídas. Se **0**, o log de transações será redefinido para a primeira transação replicada e não há transações replicadas são marcadas como distribuídas. *Redefinir* é válido somente quando ambos *xactid* e *xact_seqno* são NULL.  
+`[ @reset = ] reset`É o status de redefinição. *Reset* é **int**, sem padrão. Se **1**, todas as transações replicadas no log serão marcadas como distribuídas. Se for **0**, o log de transações será redefinido para a primeira transação replicada e nenhuma das transações replicadas será marcada como distribuída. *Reset* é válido somente quando *xactid* e *xact_seqno* são nulos.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_repldone** é usado em replicação transacional.  
+ **sp_repldone** é usado na replicação transacional.  
   
- **sp_repldone** é usado pelo processo do leitor de log para controlar quais transações foram distribuídas.  
+ **sp_repldone** é usado pelo processo de leitor de log para controlar quais transações foram distribuídas.  
   
- Com o **sp_repldone**, você pode informar manualmente ao servidor que uma transação tenha sido replicada (enviada ao distribuidor). Ele também permite alterar a transação marcada como a próxima a ser replicada. Você pode avançar ou retroceder na lista de transações replicadas. (Todas as transações menores ou iguais àquela transação serão marcadas como distribuídas.)  
+ Com o **sp_repldone**, você pode informar manualmente ao servidor que uma transação foi replicada (enviada para o distribuidor). Ele também permite alterar a transação marcada como a próxima a ser replicada. Você pode avançar ou retroceder na lista de transações replicadas. (Todas as transações menores ou iguais àquela transação serão marcadas como distribuídas.)  
   
- Os parâmetros necessários *xactid* e *xact_seqno* pode ser obtida usando **sp_repltrans** ou **sp_replcmds**.  
+ Os parâmetros necessários *xactid* e *xact_seqno* podem ser obtidos usando **sp_repltrans** ou **sp_replcmds**.  
   
 ## <a name="permissions"></a>Permissões  
- Membros do **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_repldone**.  
+ Os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_repldone**.  
   
 ## <a name="examples"></a>Exemplos  
- Quando *xactid* for NULL, *xact_seqno* for NULL, e *redefinir* é **1**, replicados de todas as transações no log serão marcadas como distribuídas. Isso é útil quando há transações replicadas no log de transações que não são mais válidas e você quer truncar o log, por exemplo:  
+ Quando *xactid* é nulo, *xact_seqno* é nulo e *Reset* é **1**, todas as transações replicadas no log são marcadas como distribuídas. Isso é útil quando há transações replicadas no log de transações que não são mais válidas e você quer truncar o log, por exemplo:  
   
 ```  
 EXEC sp_repldone @xactid = NULL, @xact_segno = NULL, @numtrans = 0,     @time = 0, @reset = 1  

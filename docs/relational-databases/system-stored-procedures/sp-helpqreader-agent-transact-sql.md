@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 229442fed0defba9ebe39822a6184ba3b5d35644
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ea01bd3eb765a0a5f7a85245090b79579f347b3a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137563"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771419"
 ---
 # <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Retorna propriedades do Queue Reader Agent. Esse procedimento armazenado é executado no Distribuidor, no banco de dados de distribuição, ou no Publicador, em qualquer banco de dados.  
   
@@ -37,7 +37,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @frompublisher = ] frompublisher` Especifica se o procedimento armazenado é chamado no publicador ou no distribuidor. *frompublisher* é bit, com um valor padrão de 0. **1** significa que o procedimento armazenado é chamado do publicador, e **0** significa que o procedimento armazenado é chamado do distribuidor.  
+`[ @frompublisher = ] frompublisher`Especifica se o procedimento armazenado é chamado no Publicador ou no distribuidor. *frompublisher* é bit, com um valor padrão de 0. **1** significa que o procedimento armazenado é chamado do Publicador e **0** significa que o procedimento armazenado é chamado a partir do distribuidor.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -46,17 +46,17 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 |**id**|**int**|ID do agente.|  
 |**name**|**nvarchar(100)**|O nome do agente.|  
 |**job_id**|**uniqueidentifier**|ID exclusiva do trabalho de agente.|  
-|**job_login**|**nvarchar(512)**|É a conta de Windows na qual o Distribution agent é executado, que é retornada no formato *domínio*\\*username*.|  
-|**job_password**|**sysname**|Por motivos de segurança, um valor de **\* \* \* \* \* \* \* \* \* \*** é sempre retornado.|  
+|**job_login**|**nvarchar(512)**|É a conta do Windows na qual o Distribution Agent é executado, que é retornado no formato *domínio*\\*nome de usuário*.|  
+|**job_password**|**sysname**|Por motivos de segurança, um valor de **\* \* \* \* \* ésempre\* retornado. \* \* \* \***|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_helpqreader_agent** é usado em replicação transacional.  
+ **sp_helpqreader_agent** é usado na replicação transacional.  
   
 ## <a name="permissions"></a>Permissões  
- Quando o valor de *frompublisher* é **1**, somente os membros dos **sysadmin** função de servidor fixa no publicador ou membros do **db_owner**função de banco de dados fixa do banco de dados de publicação pode executar **sp_helpqreader_agent**. Caso contrário, somente os membros dos **sysadmin** função de servidor fixa no distribuidor ou membros da **db_owner** banco de dados fixa no banco de dados de distribuição podem executar **sp_helpqreader_ agente**.  
+ Quando o valor de *frompublisher* é **1**, somente os membros da função de servidor fixa **sysadmin** no Publicador ou membros da função de banco de dados fixa **db_owner** no banco de dados de publicação podem executar **sp_helpqreader_agent**. Caso contrário, somente os membros da função de servidor fixa **sysadmin** no distribuidor ou membros da função de banco de dados fixa **db_owner** no banco de dados de distribuição podem executar **sp_helpqreader_agent**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Habilitar atualização de assinaturas para publicações transacionais](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  

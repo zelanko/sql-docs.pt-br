@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7d3931ff867ef1475165eb6cbac97f4ba4564bf9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fdae843c3918013ec850c5d807853c10a8f3f190
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006959"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771036"
 ---
 # <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Este procedimento armazenado remove todos os objetos de replicação no banco de dados de publicação na instância do Publicador do SQL Server ou no banco de dados de assinatura na instância do Assinante do SQL Server. Execute no banco de dados apropriado ou, se a execução for no contexto de outro banco de dados na mesma instância, especifique o banco de dados em que os objetos de replicação devem ser removidos. Esse procedimento não remove objetos de outros bancos de dados, como o banco de dados de distribuição.  
   
@@ -41,15 +41,15 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'dbname'` É o nome do banco de dados. *dbname* é **sysname**, com um valor padrão de NULL. Quando for NULL, o banco de dados atual será usado.  
+`[ @dbname = ] 'dbname'`É o nome do banco de dados. *dbname* é **sysname**, com um valor padrão de NULL. Quando for NULL, o banco de dados atual será usado.  
   
-`[ @type = ] type` É o tipo de replicação de banco de dados que os objetos estão sendo removidos. *tipo de* está **nvarchar (5)** e pode ser um dos valores a seguir.  
+`[ @type = ] type`É o tipo de replicação para o qual os objetos de banco de dados estão sendo removidos. o *tipo* é **nvarchar (5)** e pode ser um dos valores a seguir.  
   
 |||  
 |-|-|  
-|**tran**|Remove objetos de publicação de replicação transacional.|  
-|**mesclagem**|Remove objetos de publicação de replicação de mesclagem.|  
-|**ambos** (padrão)|Remove todos os objetos de publicação de replicação.|  
+|**transação**|Remove objetos de publicação de replicação transacional.|  
+|**Mescle**|Remove objetos de publicação de replicação de mesclagem.|  
+|**ambos** os|Remove todos os objetos de publicação de replicação.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -57,15 +57,15 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ## <a name="remarks"></a>Comentários  
  **sp_removedbreplication** é usado em todos os tipos de replicação.  
   
- **sp_removedbreplication** é útil ao restaurar um banco de dados replicado que não tem nenhum objeto de replicação a ser restaurado.  
+ **sp_removedbreplication** é útil ao restaurar um banco de dados replicado que não tem objetos de replicação que precisam ser restaurados.  
   
- **sp_removedbreplication** não pode ser usado em relação a um banco de dados está marcado como somente leitura.  
+ **sp_removedbreplication** não pode ser usado em um banco de dados que está marcado como somente leitura.  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_removedbreplication**.  
+ Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_removedbreplication**.  
   
 ## <a name="example"></a>Exemplo  
   

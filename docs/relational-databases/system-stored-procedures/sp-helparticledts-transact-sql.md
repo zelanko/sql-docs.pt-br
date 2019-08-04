@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 153b7736f126a09765eaac4c364b322fffc96c48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9c489a08291aea3d1c50a6418dc8e1e853dce12
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084941"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771069"
 ---
 # <a name="sphelparticledts-transact-sql"></a>sp_helparticledts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Usado para obter informações sobre nomes corretos de tarefas personalizadas para usar ao criar uma assinatura de transformação usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
@@ -37,9 +37,9 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @article = ] 'article'` É o nome de um artigo na publicação. *artigo* está **sysname**, sem padrão.  
+`[ @article = ] 'article'`É o nome de um artigo na publicação. o *artigo* é **sysname**, sem padrão.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -55,11 +55,11 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_helparticledts** é usado em replicação de instantâneo e replicação transacional.  
+ **sp_helparticledts** é usado na replicação de instantâneo e na replicação transacional.  
   
  Existem convenções de nomenclatura, solicitadas pelos agentes de replicação, que devem ser seguidas ao nomear tarefas em um programa DTS (Data Transformation Services). Para tarefas personalizadas, como uma tarefa Executar SQL, o nome é uma cadeia de caracteres concatenada que consiste no nome do artigo, no prefixo e em uma parte opcional. Ao escrever o código, se você não tiver certeza dos nomes das tarefas, o conjunto de resultados dá os nomes de tarefas que devem ser usados.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros da **sysadmin** função de servidor fixa e a **db_owner** banco de dados fixa podem executar **sp_helpparticledts**.  
+ Somente os membros da função de servidor fixa **sysadmin** e a função de banco de dados fixa **db_owner** podem executar **sp_helparticledts**.  
   
   

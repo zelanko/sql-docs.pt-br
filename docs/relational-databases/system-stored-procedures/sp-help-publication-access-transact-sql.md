@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8af56ae768ca883e22d7c9e18150e75025086d63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c562c039b65f99f1d3d9915f0dd00b93dc95860
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085258"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770988"
 ---
 # <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Retorna uma lista de todos os logons concedidos para uma publicação. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
@@ -40,25 +40,25 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação a ser acessada. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'`É o nome da publicação a ser acessada. a *publicação* é **sysname**, sem padrão.  
   
-`[ @return_granted = ] 'return_granted'` É a ID de logon. *return_granted* está **bit**, com um padrão de 1. Se **0** for especificado e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação é usada, os logons disponíveis que aparecem no publicador, mas não no distribuidor serão retornados. Se **0** for especificado e a autenticação do Windows é usada, os logons que não foram especificamente negados acessam em um publicador ou distribuidor serão retornados.  
+`[ @return_granted = ] 'return_granted'`É a ID de logon. *return_granted* é **bit**, com um padrão de 1. Se **0** for especificado e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a autenticação for usada, os logons disponíveis que aparecerem no Publicador, mas não no distribuidor serão retornados. Se **0** for especificado e a autenticação do Windows for usada, os logons não negados o acesso especificamente no Publicador ou distribuidor serão retornados.  
   
-`[ @login = ] 'login'` É a ID de logon de segurança padrão. *login* está **sysname**, com um padrão de **%** .  
+`[ @login = ] 'login'`É a ID de logon de segurança padrão. o *logon* é **sysname**, com um padrão **%** de.  
   
-`[ @initial_list = ] initial_list` Especifica se deve retornar todos os membros com acesso à publicação ou apenas aqueles que tinham acesso antes que novos membros fossem adicionados à lista. *initial_list* é bit, com um padrão de **0**.  
+`[ @initial_list = ] initial_list`Especifica se todos os membros com acesso à publicação devem ser retornados ou apenas aqueles que tinham acesso antes da adição de novos membros à lista. *initial_list* é bit, com um padrão de **0**.  
   
- **1** retorna informações para todos os membros de **sysadmin** a função de servidor fixa com logons válidos no distribuidor que existiu quando a publicação foi criada, bem como o logon atual.  
+ **1** retorna informações para todos os membros da função de servidor fixa **sysadmin** com logons válidos no distribuidor que existia quando a publicação foi criada, bem como o logon atual.  
   
- **0** retorna informações para todos os membros de **sysadmin** a função de servidor fixa com logons válidos no distribuidor que existiu quando a publicação foi criada, bem como todos os usuários na lista de acesso da publicação que não pertencer à **sysadmin** função de servidor fixa.  
+ **0** retorna informações para todos os membros da função de servidor fixa **sysadmin** com logons válidos no distribuidor que existia quando a publicação foi criada, bem como todos os usuários na lista de acesso à publicação que não pertencem ao **sysadmin** função de servidor fixa.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**nvarchar(256)**|Nome de logon atual.|  
-|**isntname**|**int**|**0** = logon não é um usuário do Windows.<br /><br /> **1** = logon é um usuário do Windows.|  
-|**isntgroup**|**int**|**0** = logon não é um grupo do Windows.<br /><br /> **1** = logon é um grupo do Windows.|  
+|**Isntname**|**int**|**0** = o logon não é um usuário do Windows.<br /><br /> **1** = o logon é um usuário do Windows.|  
+|**Isntgroup**|**int**|**0** = o logon não é um grupo do Windows.<br /><br /> **1** = o logon é um grupo do Windows.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -66,10 +66,10 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="remarks"></a>Comentários  
  **sp_help_publication_access** é usado em todos os tipos de replicação.  
   
- Quando ambos **Isntname** e **Isntgroup** no resultado do conjunto são **0**, supõe-se que o logon é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon.  
+ Quando **Isntname** e **Isntgroup** no conjunto de resultados são **0**, supõe-se que o logon seja um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_help_publication_access**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_help_publication_access**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   

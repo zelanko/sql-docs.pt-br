@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fe71adc1be14b40d18baf50eecd68c2bef65c836
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997564"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771527"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Mostra se os bancos de dados no Publicador estão habilitados para replicação. Esse procedimento armazenado é executado no Publicador, em qualquer banco de dados. *Não tem suporte para Publicadores Oracle.*  
+  Mostra se os bancos de dados no Publicador estão habilitados para replicação. Esse procedimento armazenado é executado no Publicador, em qualquer banco de dados. *Não há suporte para Publicadores Oracle.*  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,17 +39,17 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'dbname'` É o nome do banco de dados. *DBName* está **sysname**, com um padrão de **%** . Se **%** , em seguida, o conjunto de resultados contém todos os bancos de dados no publicador, caso contrário, apenas informações sobre o banco de dados especificado serão retornadas. Não são retornadas informações para nenhum banco de dados para o qual o usuário não tenha a permissão apropriada, como descrita abaixo.  
+`[ @dbname = ] 'dbname'`É o nome do banco de dados. *dbname* é **sysname**, com um padrão de **%** . Se **%** , em seguida, o conjunto de resultados contiver todos os bancos de dados no Publicador, caso contrário, apenas as informações sobre o banco de dados especificado serão retornadas. Não são retornadas informações para nenhum banco de dados para o qual o usuário não tenha a permissão apropriada, como descrita abaixo.  
   
-`[ @type = ] 'type'` Restringe o conjunto de resultados para conter apenas bancos de dados no qual a opção de replicação especificada *tipo* valor tiver sido habilitado. *tipo de* está **sysname**, e pode ser um dos valores a seguir.  
+`[ @type = ] 'type'`Restringe o conjunto de resultados para conter somente os bancos de dados nos quais o valor do *tipo* de opção de replicação especificado foi habilitado. o *tipo* é **sysname**e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**Publicar**|Replicação transacional permitida.|  
+|**publicou**|Replicação transacional permitida.|  
 |**publicação de mesclagem**|Replicação de mesclagem permitida.|  
-|**replicação permitida** (padrão)|Replicação transacional ou replicação de mesclagem permitida.|  
+|**replicação permitida** os|Replicação transacional ou replicação de mesclagem permitida.|  
   
-`[ @reserved = ] reserved` Especifica se as informações sobre publicações e assinaturas existentes são retornadas. *reservado* está **bit**, com um valor padrão de 0. Se **1**, o conjunto de resultados inclui informações sobre se o banco de dados especificado tem qualquer publicações ou assinaturas existentes.  
+`[ @reserved = ] reserved`Especifica se as informações sobre publicações e assinaturas existentes são retornadas. *reservado* é um **bit**, com um valor padrão de 0. Se **1**, o conjunto de resultados incluirá informações sobre se o banco de dados especificado tem alguma publicação ou assinatura existente.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -57,21 +57,21 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do banco de dados.|  
 |**id**|**int**|Identificador de banco de dados.|  
-|**transpublish**|**bit**|Se o banco de dados tiver sido habilitado para instantâneo ou publicação transacional; onde um valor de **1** significa que o instantâneo ou publicação transacional está habilitada.|  
-|**mergepublish**|**bit**|Se o banco de dados tiver sido habilitado para mesclagem de publicação; onde um valor de **1** significa que a publicação de mesclagem está habilitado.|  
-|**dbowner**|**bit**|Se o usuário for um membro do **db_owner** fixo de função de banco de dados; onde um valor de **1** indica que o usuário é um membro dessa função.|  
-|**dbreadonly**|**bit**|É se o banco de dados está marcado como somente leitura; onde um valor de **1** significa que o banco de dados é somente leitura.|  
-|**haspublications**|**bit**|Se o banco de dados tiver qualquer publicação existente; onde um valor de **1** significa que há publicações existentes.|  
-|**haspullsubscriptions**|**bit**|Se o banco de dados tiver qualquer assinatura pull existente; onde um valor de **1** significa que existem assinaturas pull.|  
+|**transpublicar**|**bit**|Se o banco de dados tiver sido habilitado para publicação de instantâneo ou transacional; em que um valor de **1** significa que a publicação de instantâneo ou transacional está habilitada.|  
+|**mergepublish**|**bit**|Se o banco de dados tiver sido habilitado para publicação de mesclagem; em que um valor de **1** significa que a publicação de mesclagem está habilitada.|  
+|**dbowner**|**bit**|Se o usuário for um membro da função de banco de dados fixa **db_owner** ; em que um valor de **1** indica que o usuário é um membro dessa função.|  
+|**dbreadonly**|**bit**|Se o banco de dados estiver marcado como somente leitura; em que um valor de **1** significa que o banco de dados é somente leitura.|  
+|**haspublications**|**bit**|É se o banco de dados tiver qualquer publicação existente; em que um valor de **1** significa que há publicações existentes.|  
+|**haspullsubscriptions**|**bit**|É se o banco de dados tiver qualquer assinatura pull existente; em que um valor de **1** significa que há assinaturas pull existentes.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_helpreplicationdboption** é usado em instantâneo, transacional e replicação de mesclagem.  
+ **sp_helpreplicationdboption** é usado em replicação de instantâneo, transacional e de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- Os membros de **sysadmin** pode executar a função de servidor fixa **sp_helpreplicationdboption** para qualquer banco de dados. Os membros de **db_owner** pode executar a função de banco de dados fixa **sp_helpreplicationdboption** desse banco de dados.  
+ Os membros da função de servidor fixa **sysadmin** podem executar **sp_helpreplicationdboption** para qualquer banco de dados. Os membros da função de banco de dados fixa **db_owner** podem executar **sp_helpreplicationdboption** para esse banco de dados.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9852aaaf0b719bfa03736997959d76110dff4d6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1003a1a33565da9b48135123d83c4ea6551debeb
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997512"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771477"
 ---
 # <a name="sphelpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Mostra os tipos de opções de replicação habilitados para um servidor. Esse procedimento armazenado é executado em qualquer servidor, em qualquer banco de dados.  
   
@@ -37,19 +37,19 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @optname = ] 'option_name'` É o nome da opção de replicação para consultar. *option_name* está **sysname**, com um padrão NULL.  
+`[ @optname = ] 'option_name'`É o nome da opção de replicação a ser consultada. *option_name* é **sysname**, com um padrão de NULL.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**transactional**|Um conjunto de resultados é retornado quando replicação transacional é habilitada.|  
-|**mesclagem**|Um conjunto de resultados é retornado quando replicação de mesclagem é habilitada.|  
+|**Mescle**|Um conjunto de resultados é retornado quando replicação de mesclagem é habilitada.|  
 |NULL (padrão)|Um conjunto de resultados não é retornado.|  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**optname**|**sysname**|Nome da opção de replicação e pode ser um dos seguintes:<br /><br /> **transactional**<br /><br /> **mesclagem**|  
+|**OptName**|**sysname**|Nome da opção de replicação e pode ser um dos seguintes:<br /><br /> **transactional**<br /><br /> **Mescle**|  
 |**value**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**major_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**minor_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -60,7 +60,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_helpreplicationoption** é usado para obter informações sobre opções de replicação habilitadas em um servidor específico. Para obter informações sobre um determinado banco de dados, use **sp_helpreplicationdboption**.  
+ **sp_helpreplicationoption** é usado para obter informações sobre as opções de replicação habilitadas em um servidor específico. Para obter informações sobre um banco de dados específico, use **sp_helpreplicationdboption**.  
   
 ## <a name="permissions"></a>Permissões  
  As permissões de execução têm como padrão a função **public** .  

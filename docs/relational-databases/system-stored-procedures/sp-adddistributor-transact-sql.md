@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d4a4105496fff9cf9fa9674495ec44f62b16adba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 45088122cfb6824598aaf40486264d41216d3c39
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072759"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771316"
 ---
 # <a name="spadddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Cria uma entrada na [sys. sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) tabela (se não houver um), marca a entrada do servidor como distribuidor e armazena informações de propriedade. Esse procedimento armazenado é executado no Distribuidor, no banco de dados mestre, para registrar e marcar o servidor como Distribuidor. No caso de um Distribuidor remoto, é também executado no Publicador do banco de dados mestre para registrar o distribuidor remoto.  
+  Cria uma entrada na tabela [Sys. sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) (se não houver uma), marca a entrada do servidor como um distribuidor e armazena informações de propriedade. Esse procedimento armazenado é executado no Distribuidor, no banco de dados mestre, para registrar e marcar o servidor como Distribuidor. No caso de um Distribuidor remoto, é também executado no Publicador do banco de dados mestre para registrar o distribuidor remoto.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +42,11 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @distributor = ] 'distributor'` É o nome do servidor de distribuição. *distribuidor* está **sysname**, sem padrão. Esse parâmetro só é usado na configuração de um Distribuidor remoto. Adiciona entradas para as propriedades do distribuidor o **msdb... MSdistributor** tabela.  
+`[ @distributor = ] 'distributor'`É o nome do servidor de distribuição. o *distribuidor* é **sysname**, sem padrão. Esse parâmetro só é usado na configuração de um Distribuidor remoto. Ele adiciona entradas para as propriedades do distribuidor no **msdb.. Tabela MSdistributor** .  
   
-`[ @heartbeat_interval = ] heartbeat_interval` É o número máximo de minutos que um agente pode prosseguir sem registrar uma mensagem de progresso. *heartbeat_interval* está **int**, com um padrão de 10 minutos. Um trabalho do SQL Server Agent é criado e executado nesse intervalo para verificar os status dos agentes de replicação em execução.  
+`[ @heartbeat_interval = ] heartbeat_interval`É o número máximo de minutos que um agente pode acessar sem registrar uma mensagem de progresso. *heartbeat_interval* é **int**, com um padrão de 10 minutos. Um trabalho do SQL Server Agent é criado e executado nesse intervalo para verificar os status dos agentes de replicação em execução.  
   
-`[ @password = ] 'password']` É a senha das **distributor_admin** logon. *senha* está **sysname**, com um padrão NULL. Se for NULL ou uma cadeia de caracteres vazia, a senha será reajustada a um valor aleatório. A senha deve ser configurada quando o primeiro distribuidor remoto é adicionado. **distributor_admin** login e *senha* são armazenados para entrada de servidor vinculado usado para um *distribuidor* conexão RPC, incluindo conexões locais. Se *distribuidor* é local, a senha para **distributor_admin** é definido como um novo valor. Para Publicadores com um distribuidor remoto, o mesmo valor de *senha* deve ser especificado ao executar **sp_adddistributor** no publicador e distribuidor. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) pode ser usado para alterar a senha do distribuidor.  
+`[ @password = ] 'password']`É a senha do logon do **distributor_admin** . a *senha* é **sysname**, com um padrão de NULL. Se for NULL ou uma cadeia de caracteres vazia, a senha será reajustada a um valor aleatório. A senha deve ser configurada quando o primeiro distribuidor remoto é adicionado. o logon e a *senha* do **distributor_admin** são armazenados para a entrada de servidor vinculada usada para uma conexão RPC do *distribuidor* , incluindo conexões locais. Se o *distribuidor* for local, a senha de **distributor_admin** será definida como um novo valor. Para Publicadores com um distribuidor remoto, o mesmo valor para *senha* deve ser especificado ao executar **sp_adddistributor** no Publicador e no distribuidor. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) pode ser usado para alterar a senha do distribuidor.  
   
 > [!IMPORTANT]  
 >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
@@ -57,13 +57,13 @@ sp_adddistributor [ @distributor= ] 'distributor'
  0 (êxito) ou 1 (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_adddistributor** é usado em replicação de instantâneo, replicação transacional e replicação de mesclagem.  
+ **sp_adddistributor** é usado na replicação de instantâneo, na replicação transacional e na replicação de mesclagem.  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistributor-transa_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_adddistributor**.  
+ Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_adddistributor**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar a publicação e a distribuição](../../relational-databases/replication/configure-publishing-and-distribution.md)   
