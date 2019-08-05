@@ -28,12 +28,12 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 504e0978e37e5c550985e40b7f68e0323a9dc187
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5267b5b02ce84d70feb4245fe75f62591409f39f
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476316"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742999"
 ---
 # <a name="bcp-utility"></a>Utilitário bcp
 
@@ -57,7 +57,7 @@ ms.locfileid: "68476316"
 
 As ferramentas de linha de comando são GA (disponibilidade geral), no entanto, elas estão sendo lançadas com o pacote do instalador para [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]o.
 
-**Informações da versão**
+### <a name="version-information"></a>Informações sobre versão
 
 Número da versão: 15.0 <br>
 Número de build: 15.0.1000.34<br>
@@ -66,7 +66,11 @@ Data do lançamento: 18 de outubro de 2018
 A nova versão do SQLCMD dá suporte à autenticação do Azure AD, incluindo o suporte à autenticação multifator (MFA) para os recursos de banco de dados SQL, SQL Data Warehouse e Always Encrypted.
 O novo BCP dá suporte à autenticação do Azure AD, incluindo suporte à autenticação multifator (MFA) para banco de dados SQL e SQL Data Warehouse.
 
-**Requisitos do sistema** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2 esse componente requer o [Windows Installer 4,5](https://www.microsoft.com/download/details.aspx?id=8483) e [o Microsoft ODBC Driver 17,3 para SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
+### <a name="system-requirements"></a>Requisitos do sistema
+
+Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2
+
+Esse componente requer o [Windows Installer 4,5](https://www.microsoft.com/download/details.aspx?id=8483) e o [Microsoft ODBC Driver 17,3 para SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
 
 Para verificar o comando de execução `bcp /v` da versão bcp e confirmar se o 15.0.1000.34 ou superior está em uso.
 
