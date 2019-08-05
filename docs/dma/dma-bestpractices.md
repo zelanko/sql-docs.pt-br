@@ -32,7 +32,7 @@ Não instale e execute o Assistente de migração de dados diretamente no comput
 - Executar o **problemas de compatibilidade** e **nova recomendação de recurso** avaliações separadamente para reduzir a duração de avaliação.
 
 ## <a name="migration"></a>Migração
-- Não migre um servidor durante horários de pico.
+- Migre um servidor fora dos horários de pico.
 
 - Ao migrar um banco de dados, forneça um local único compartilhamento acessível pelo servidor de origem e o servidor de destino e evite uma operação de cópia, se possível. Uma operação de cópia pode introduzir um atraso de acordo com o tamanho do arquivo de backup. A operação de cópia também aumenta as chances de que a migração falhará devido a uma etapa extra. Quando um único local é fornecido, o Assistente de migração de dados ignora a operação de cópia.
  
