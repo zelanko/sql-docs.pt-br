@@ -5170,6 +5170,37 @@
           items:
             - name: Linguagem de replicação
               href: relational-databases/replication/replication-language-reference.md
+            - name: Exibições do sistema de replicação
+              href: relational-databases/system-views/replication-views-transact-sql.md
+              items:
+                - name: IHextendedArticleView (T-SQL)
+                  href: relational-databases/system-views/ihextendedarticleview-transact-sql.md
+                - name: IHextendedSubscriptionView (T-SQL)
+                  href: relational-databases/system-views/ihextendedsubscriptionview-transact-sql.md
+                - name: IHsyscolumns (T-SQL)
+                  href: relational-databases/system-views/ihsyscolumns-transact-sql.md
+                - name: MSdatatype_mappings (T-SQL)
+                  href: relational-databases/system-views/msdatatype-mappings-transact-sql.md
+                - name: MSdistribution_status (T-SQL)
+                  href: relational-databases/system-views/msdistribution-status-transact-sql.md
+                - name: sysarticlecolumns (Modo de Exibição do Sistema) (T-SQL)
+                  href: relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md
+                - name: sysarticles (Modo de Exibição do Sistema) (T-SQL)
+                  href: relational-databases/system-views/sysarticles-system-view-transact-sql.md
+                - name: sysdatatypemappings (T-SQL)
+                  href: relational-databases/system-views/sysdatatypemappings-transact-sql.md
+                - name: sysextendedarticlesview (T-SQL)
+                  href: relational-databases/system-views/sysextendedarticlesview-transact-sql.md
+                - name: sysmergeextendedarticlesview (T-SQL)
+                  href: relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md
+                - name: sysmergepartitioninfoview (T-SQL)
+                  href: relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md
+                - name: syspublications (Modo de Exibição do Sistema) (T-SQL)
+                  href: relational-databases/system-views/syspublications-system-view-transact-sql.md
+                - name: syssubscriptions (Modo de Exibição do Sistema) (T-SQL)
+                  href: relational-databases/system-views/syssubscriptions-system-view-transact-sql.md
+                - name: systranschemas (T-SQL)
+                  href: relational-databases/system-views/systranschemas-transact-sql.md
             - name: Propriedades dos objetos de replicação
               items:
                 - name: Propriedades do Distribuidor
@@ -10448,7 +10479,7 @@
       items:
         - name: SQL Server >
           href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: Mecanismo de banco de dados >
+        - name: Mecanismo de Banco de Dados >
           href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
         - name: Segurança >
           href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
@@ -10460,7 +10491,7 @@
           href: 'https://aka.ms/sqldocsfeedback'
         - name: SQL Server >
           href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: Editar documentação do SQL!
+        - name: Editar Documentação do SQL!
           href: sql-server/sql-server-docs-contribute.md
     - name: Parceiros
       items:
@@ -15009,37 +15040,6 @@
               href: relational-databases/system-tables/syssubscriptions-transact-sql.md
             - name: sysschemaarticles
               href: relational-databases/system-tables/sysschemaarticles-transact-sql.md
-    - name: Exibições do sistema
-      href: relational-databases/system-views/replication-views-transact-sql.md
-      items:
-        - name: IHextendedArticleView (T-SQL)
-          href: relational-databases/system-views/ihextendedarticleview-transact-sql.md
-        - name: IHextendedSubscriptionView (T-SQL)
-          href: relational-databases/system-views/ihextendedsubscriptionview-transact-sql.md
-        - name: IHsyscolumns (T-SQL)
-          href: relational-databases/system-views/ihsyscolumns-transact-sql.md
-        - name: MSdatatype_mappings (T-SQL)
-          href: relational-databases/system-views/msdatatype-mappings-transact-sql.md
-        - name: MSdistribution_status (T-SQL)
-          href: relational-databases/system-views/msdistribution-status-transact-sql.md
-        - name: sysarticlecolumns (Modo de Exibição do Sistema) (T-SQL)
-          href: relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md
-        - name: sysarticles (Modo de Exibição do Sistema) (T-SQL)
-          href: relational-databases/system-views/sysarticles-system-view-transact-sql.md
-        - name: sysdatatypemappings (T-SQL)
-          href: relational-databases/system-views/sysdatatypemappings-transact-sql.md
-        - name: sysextendedarticlesview (T-SQL)
-          href: relational-databases/system-views/sysextendedarticlesview-transact-sql.md
-        - name: sysmergeextendedarticlesview (T-SQL)
-          href: relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md
-        - name: sysmergepartitioninfoview (T-SQL)
-          href: relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md
-        - name: syspublications (Modo de Exibição do Sistema) (T-SQL)
-          href: relational-databases/system-views/syspublications-system-view-transact-sql.md
-        - name: syssubscriptions (Modo de Exibição do Sistema) (T-SQL)
-          href: relational-databases/system-views/syssubscriptions-system-view-transact-sql.md
-        - name: systranschemas (T-SQL)
-          href: relational-databases/system-views/systranschemas-transact-sql.md
     - name: Referência do T-SQL (Transact-SQL)
       displayName: tsql
       href: t-sql/language-reference.md
