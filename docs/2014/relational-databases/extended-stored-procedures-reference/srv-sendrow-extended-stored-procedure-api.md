@@ -27,7 +27,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62718053"
 ---
-# <a name="srvsendrow-extended-stored-procedure-api"></a>srv_sendrow (API de procedimento armazenado estendido)
+# <a name="srv_sendrow-extended-stored-procedure-api"></a>srv_sendrow (API de procedimento armazenado estendido)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
