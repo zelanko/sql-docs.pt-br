@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 066021013e2c3e3f43c229965152d66ce2c328e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 50a53d5c4c8a805a16b4ddc186531f1bf89509dc
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907589"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769516"
 ---
 # <a name="snapshot-replication"></a>Replicação de instantâneo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   A replicação de instantâneo distribui os dados exatamente como eles aparecem em um momento específico e não monitora as atualizações dos dados. Quando a sincronização ocorre, todo o instantâneo é gerado e enviado aos Assinantes.  
   
 > [!NOTE]  

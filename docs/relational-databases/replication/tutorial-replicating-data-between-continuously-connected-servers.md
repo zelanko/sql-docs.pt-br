@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9c0a47062d50f4306af3ffb92e9e575317a014f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 379a7fe83694307c9f4d981d000dc8b9457fa6c9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895388"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769407"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Configurar a replicação entre dois servidores totalmente conectados (transacional)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ A Replicação transacional é uma boa solução ao problema de movimentação d
 Este tutorial mostra como configurar uma topologia de Replicação transacional para servidores continuamente conectados. Para saber mais sobre como funciona a replicação transacional, veja a [visão geral da replicação transacional](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication). 
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
-Este tutorial ensina você a publicar dados de um banco de dados para outro usando replicação transacional. 
+Este tutorial ensina você a publicar dados de um banco de dados para outro usando replicação transacional.  
 
 Neste tutorial, você aprenderá a:
 > [!div class="checklist"]

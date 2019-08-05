@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: bdeea318-a153-44b8-9e51-9155f3bad18b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 06da0b5b0fb6dbbdbd4a85c2792d19ab288d36bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: e68a2065da5acb7405fc155f4601a9a5dc7a2c3f
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908097"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769955"
 ---
 # <a name="publication-properties-articles"></a>Propriedades de Publicação, Artigos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   A caixa **Artigos** da caixa de diálogo **Propriedades de Publicação** contém informações sobre os artigos de uma publicação; permite adicionar e descartar artigos de publicações existentes; e permite alterar propriedades do artigo e filtragem de colunas.  
   
 > [!NOTE]  

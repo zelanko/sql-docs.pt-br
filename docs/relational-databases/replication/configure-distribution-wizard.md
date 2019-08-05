@@ -12,15 +12,16 @@ helpviewer_keywords:
 ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f64acaac92078b673466874f4fbae02ed4fabbbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 74b4b468f0475b0d1e85c27bfa6780c71eec4b8e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903259"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768153"
 ---
 # <a name="configure-distribution-wizard"></a>Assistente para Configurar a Distribuição
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Esta seção fornece informações sobre as páginas seguintes do Assistente para Configurar a Distribuição:  
   
 -   [Distribuidor](../../relational-databases/replication/distributor.md)  

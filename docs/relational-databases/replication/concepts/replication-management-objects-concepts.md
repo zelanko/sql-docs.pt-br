@@ -20,15 +20,16 @@ helpviewer_keywords:
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98178c2b99d35b0964723533d6dfe5e0efb886f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 0d494427e4963dcd1a6afbde4195255ca4f3585d
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903333"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768179"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   O RMO (Replication Management Objects) é um assembly de código gerenciado que encapsula funcionalidades de replicação para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O RMO é implementado pelo namespace <xref:Microsoft.SqlServer.Replication>.  
   

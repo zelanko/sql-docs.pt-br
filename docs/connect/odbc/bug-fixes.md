@@ -13,16 +13,28 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 096c11c018294cbc92b2be13801d6cd953548fff
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9aba2495e5f4661c7c042125608f34d577cddfe3
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264006"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702815"
 ---
 # <a name="list-of-bugs-fixed"></a>Lista de bugs corrigidos
 
 Esta página contém uma lista de bugs corrigidos em cada versão, começando [!INCLUDE[msCoName](../../includes/msconame_md.md)] com o ODBC Driver 17 for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-174-for-includessnoversionincludesssnoversion-mdmd"></a>Correções de bugs [!INCLUDE[msCoName](../../includes/msconame_md.md)] no driver ODBC 17,4 para[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Correção para interrupção intermitente quando vários MARS (conjuntos de resultados ativos) estiverem habilitados
+- Corrigir resiliência de conexão trava quando a notificação assíncrona está habilitada
+- Correção de falha ao recuperar registros de diagnóstico para tentativas de conexão multi-threaded
+- Corrigir ' criptografia sem suporte ' após a reconexão após chamar SQLGetInfo () com SQL_USER_NAME e SQL_DATA_SOURCE_READ_ONLY
+- Corrigir erro de inicialização COM durante Azure Active Directory autenticação interativa
+- Corrigir SQLGetData () para dados UTF8 de vários bytes
+- Corrigir a recuperação de comprimento de colunas sql_variant usando SQLGetData ()
+- Corrigir a importação de colunas sql_variant contendo mais de 7992 bytes usando bcp
+- Corrigir o envio de codificação correta ao servidor para dados de caracteres estreitos
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>Correções de bugs [!INCLUDE[msCoName](../../includes/msconame_md.md)] no driver ODBC 17,3 para[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

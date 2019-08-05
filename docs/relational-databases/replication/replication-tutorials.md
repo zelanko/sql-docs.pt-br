@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 078d965fbf3963039bb54b70fd63f54aadb9eb95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 6a99d15ba812edac0408262ba1ae26d7ea8b8dbc
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005376"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768444"
 ---
 # <a name="replication-tutorials"></a>Tutoriais de replicação
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 A replicação é uma solução avançada para movimentação de dados, ou de subconjuntos de dados, entre servidores. É possível replicar dados entre servidores totalmente conectados usando a replicação transacional. Também é possível replicar dados entre servidores e clientes conectados intermitentemente usando a replicação de mesclagem. Neste artigo, você encontrará tutoriais que ajudam a preparar o servidor para replicação e, em seguida, ensinam a configurar a replicação transacional e de mesclagem. 
   
 Nos tutoriais de replicação, "editor" refere-se ao servidor que contém os dados de origem que estão sendo replicados. "Assinante" refere-se ao servidor de destino. O editor e o assinante podem compartilhar a mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas isso não é um requisito. Para obter mais informações, consulte a [visão geral do modelo de publicação de replicação](../../relational-databases/replication/publish/replication-publishing-model-overview.md).  
