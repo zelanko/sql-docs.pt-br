@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 121037b11f936894c977e1a8e9b8b38d8717ad42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 53f07adfd7479edba22370f3d4fd8c9ad7ad4450
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027835"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768206"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>Propriedades de &lt;AgentProfileName&gt;
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Use a caixa de diálogo **Propriedades de Perfis do Agente** para exibir os valores especificados para cada parâmetro de agente em um perfil e modificar os valores de perfis definidos pelo usuário.  
   
 ## <a name="options"></a>Opções  

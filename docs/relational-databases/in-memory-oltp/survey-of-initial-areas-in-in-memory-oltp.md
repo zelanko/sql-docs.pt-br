@@ -11,12 +11,12 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c28ca4d58a717d34f6036376f8facc395e30cd3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1cfa9f47e92852929bddb4e3aa3105d8dbf9508e
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063148"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661477"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Pesquisa de áreas iniciais em OLTP in-memory
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -162,14 +162,11 @@ Essa seção inicia uma sequência de sessões numeradas que, juntas, demonstram
   
 Primeiro, é importante que seu banco de dados seja definido para um nível de compatibilidade de pelo menos 130. Next é o código do T-SQL para exibir o nível de compatibilidade efetivo para o qual seu banco de dados atual está definido.  
   
-  
-  
-  
-  
-    SELECT d.compatibility_level  
-        FROM sys.databases as d  
-        WHERE d.name = Db_Name();  
-  
+```sql
+SELECT d.compatibility_level
+    FROM sys.databases as d
+    WHERE d.name = Db_Name();
+```
   
   
   
@@ -177,10 +174,10 @@ Next é o código do T-SQL para atualizar o nível, se necessário.
   
   
   
-  
-    ALTER DATABASE CURRENT  
-        SET COMPATIBILITY_LEVEL = 130;  
-  
+```sql
+ALTER DATABASE CURRENT
+    SET COMPATIBILITY_LEVEL = 130;
+```
   
   
   
@@ -195,10 +192,10 @@ Para impor com segurança este nível para as tabelas com otimização de memór
   
   
   
-  
-    ALTER DATABASE CURRENT  
-        SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = ON;  
-  
+```sql
+ALTER DATABASE CURRENT
+    SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = ON;
+```
   
   
   
@@ -226,18 +223,18 @@ A palavra-chave fundamental do Transact-SQL é MEMORY_OPTIMIZED.
   
   
   
-  
-    CREATE TABLE dbo.SalesOrder  
-    (  
-        SalesOrderId   integer        not null  IDENTITY  
-            PRIMARY KEY NONCLUSTERED,  
-        CustomerId     integer        not null,  
-        OrderDate      datetime       not null  
-    )  
-        WITH  
-            (MEMORY_OPTIMIZED = ON,  
-            DURABILITY = SCHEMA_AND_DATA);  
-  
+```sql
+CREATE TABLE dbo.SalesOrder
+    (
+        SalesOrderId   integer   not null   IDENTITY
+            PRIMARY KEY NONCLUSTERED,
+        CustomerId   integer    not null,
+        OrderDate    datetime   not null
+    )
+        WITH
+            (MEMORY_OPTIMIZED = ON,
+            DURABILITY = SCHEMA_AND_DATA);
+```
   
   
   
@@ -268,8 +265,8 @@ A palavra-chave fundamental é NATIVE_COMPILATION.
   
   
   
-  
-    CREATE PROCEDURE ncspRetrieveLatestSalesOrderIdForCustomerId  
+```sql
+CREATE PROCEDURE ncspRetrieveLatestSalesOrderIdForCustomerId  
         @_CustomerId   INT  
         WITH  
             NATIVE_COMPILATION,  
@@ -277,10 +274,10 @@ A palavra-chave fundamental é NATIVE_COMPILATION.
     AS  
     BEGIN ATOMIC  
         WITH  
-            (TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
+            (TRANSACTION ISOLATION LEVEL = SNAPSHOT,
             LANGUAGE = N'us_english')  
       
-        DECLARE @SalesOrderId int, @OrderDate datetime;  
+        DECLARE @SalesOrderId int, @OrderDate datetime;
       
         SELECT TOP 1  
                 @SalesOrderId = s.SalesOrderId,  
@@ -291,7 +288,7 @@ A palavra-chave fundamental é NATIVE_COMPILATION.
       
         RETURN @SalesOrderId;  
     END;  
-  
+```
   
   
   
@@ -308,13 +305,13 @@ Preencha a tabela com duas linhas de dados.
   
   
   
-  
-    INSERT into dbo.SalesOrder  
-            ( CustomerId, OrderDate )  
-        VALUES  
-            ( 42, '2013-01-13 03:35:59' ),  
-            ( 42, '2015-01-15 15:35:59' );  
-  
+```sql
+INSERT into dbo.SalesOrder  
+        ( CustomerId, OrderDate )  
+    VALUES  
+        ( 42, '2013-01-13 03:35:59' ),
+        ( 42, '2015-01-15 15:35:59' );
+```
   
   
   
@@ -322,15 +319,16 @@ Uma chamada do tipo EXECUTAR para o procedimento armazenado compilado de modo na
   
   
   
-  
-    DECLARE @LatestSalesOrderId int, @mesg nvarchar(128);  
+```sql
+DECLARE @LatestSalesOrderId int, @mesg nvarchar(128);
       
-    EXECUTE @LatestSalesOrderId =  
-        ncspRetrieveLatestSalesOrderIdForCustomerId 42;  
+EXECUTE @LatestSalesOrderId =  
+    ncspRetrieveLatestSalesOrderIdForCustomerId 42;
       
-    SET @mesg = CONCAT(@LatestSalesOrderId,  
-        ' = Latest SalesOrderId, for CustomerId = ', 42);  
-    PRINT @mesg;  
+SET @mesg = CONCAT(@LatestSalesOrderId,  
+    ' = Latest SalesOrderId, for CustomerId = ', 42);
+PRINT @mesg;  
+```
       
     -- Here is the actual PRINT output:  
     -- 2 = Latest SalesOrderId, for CustomerId = 42  
@@ -494,7 +492,7 @@ O seguinte artigo e seus artigos filho no sumário, explicam os detalhes sobre p
   
 ## <a name="related-links"></a>Links relacionados  
   
-- Artigo inicial: [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+- Artigo inicial: [OLTP na memória (otimização na memória)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
     
 Aqui estão os artigos que oferecem o código para demonstrar os ganhos de desempenho que você pode obter usando OLTP in-memory:  
   

@@ -20,24 +20,25 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 695839b7687fb649ffd529ecb3fde7b78d65f3ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: ddfc9d657334e6aa971ff57b2febdff175ce3911
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948680"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768726"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Estratégias para fazer backup e restaurar o instantâneo e a replicação transacional
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Ao projetar uma estratégia de backup e restauração para instantâneo e replicação transacional, há três áreas a serem consideradas:  
   
--   Quais bancos de dados para fazer o backup.  
-  
--   Configurações de backup para replicação transacional.  
-  
+-   Quais bancos de dados para fazer o backup.
+-   Configurações de backup para replicação transacional.
 -   As etapas que são exigidas para restaurar um banco de dados. Dependem do tipo de replicação e das opções escolhidas.  
   
  Este tópico abrange cada uma dessas áreas nas próximas três seções. Para obter informações sobre backup e restauração para publicação Oracle, consulte [Backup e restauração para Publicadores Oracle](../../../relational-databases/replication/non-sql/backup-and-restore-for-oracle-publishers.md).  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ## <a name="backing-up-databases"></a>Fazendo backup de bancos de dados  
  Para instantâneo e replicação transacional, é necessário fazer o backup regularmente dos seguintes bancos de dados:  

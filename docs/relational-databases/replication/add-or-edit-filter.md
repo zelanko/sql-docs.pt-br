@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e9c037b9dea1bc7110245c4836fcc7a23ac5497f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 21d23387b3d17f54cbd6cfed3398cf5a0e8cffe6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939492"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770803"
 ---
 # <a name="add-or-edit-filter"></a>Adicionar ou Editar Filtro
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   As caixas de diálogo **Adicionar Filtro** e **Editar Filtro** permitem adicionar e editar filtros de linhas estáticos e filtros de linhas com parâmetros.  
   
 > [!NOTE]  

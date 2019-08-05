@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e750743eb98307433d8ad6878cec12ea4e43ca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 2e3abb6dfb8556f4e598e55e8ae3d645e117a8b5
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895227"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769287"
 ---
 # <a name="validate-replicated-data"></a>Validar os dados replicados
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Este tópico descreve como validar os dados no Assinante no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], ou RMO (Replication Management Objects).  
   
 A replicação transacional e de mesclagem permitem validar os dados no Assinante que correspondem aos dados no Publicador. A validação pode ser executada para assinaturas específicas ou para todas as assinaturas em uma publicação. Especifique um dos seguintes tipos de validação e o Distribution Agent ou o Merge Agent validarão os dados na próxima vez que executarem:  
@@ -34,6 +34,8 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
 -   **Contagem de linhas e soma de verificação binária.** Além de contar o número de linhas no Publicador e no Assinante, uma soma de verificação de todos os dados é calculada usando o algoritmo de soma de verificação. Se a contagem de linhas falhar, a soma de verificação não será executada.  
   
  Além de validar se esses dados no Assinante e no Publicador são correspondentes, a replicação de mesclagem fornece a capacidade de validar se os dados estão particionados corretamente em cada Assinante. Para obter mais informações, consulte [Validate Partition Information for a Merge Subscriber](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md) (Validar informações de partição para um assinante de mesclagem).  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
    
 ## <a name="how-data-validation-works"></a>Como a validação de dados trabalha  
  O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] faz a validação dos dados calculando o número de linhas ou uma soma de verificação no Publicador e comparando esses valores com o número de linhas ou a soma de verificação do Assinante. Um valor é calculado para a publicação inteira e um valor é calculado para a tabela de assinatura inteira, mas os dados em **text**, **ntext**ou as colunas de **image** não são incluídas nos cálculos.  
