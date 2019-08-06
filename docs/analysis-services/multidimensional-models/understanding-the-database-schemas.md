@@ -1,5 +1,5 @@
 ---
-title: Noções básicas sobre os esquemas de banco de dados | Microsoft Docs
+title: Compreendendo os esquemas de banco de dados | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 91a54be06727a674a16f12295fa886f869b188e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab70f8c3f7bd788214ce6ed27f2e02ea6a0b43ac
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68164968"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811296"
 ---
 # <a name="understanding-the-database-schemas"></a>Entendendo os esquemas de banco de dados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "68164968"
  Relações  
  O assistente gera uma relação para cada relação de dimensão regular entre a tabela de fatos e o atributo de granularidade da tabela de dimensões. Se a granularidade for baseada no atributo de chave da tabela de dimensões, a relação será criada no banco de dados e na exibição da fonte de dados. Se a granularidade for baseada em outro atributo, a relação será criada apenas na exibição da fonte de dados.  
   
- Se você decidir gerar índices pelo assistente, um índice não cluster será gerado para cada uma dessas colunas de relação.  
+ Se você optar por gerar índices no assistente, um índice não clusterizado será gerado para cada uma dessas colunas de relação.  
   
  Restrições  
  Não são geradas chaves primárias em tabelas de fatos.  

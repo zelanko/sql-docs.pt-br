@@ -1,5 +1,5 @@
 ---
-title: A validação cruzada (Analysis Services - mineração de dados) | Microsoft Docs
+title: Validação cruzada (Analysis Services-Mineração de dados) | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bf8960fb659611003325275b2cf86d9325351c29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b207ce822fbe83d4a388ecf9da52b7c6cfa020a1
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68183812"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811372"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Validação cruzada (Analysis Services - Mineração de dados)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "68183812"
   
  O exemplo no diagrama ilustrará o uso de dados se forem especificadas três dobras.  
   
- ![Como dados de segmentos de validação cruzada](../../analysis-services/data-mining/media/xvoverviewmain.gif "como validação cruzada segmentos de dados")  
+ ![Como os dados de segmentos de validação cruzada](../../analysis-services/data-mining/media/xvoverviewmain.gif "Como os dados de segmentos de validação cruzada")  
   
  No cenário do diagrama, a estrutura de mineração contém um conjunto de dados de validação que é utilizado para teste, mas o conjunto de dados de teste não foi incluído para validação cruzada. Como resultado, todos os dados no conjunto de dados de treinamento, 70% dos dados na estrutura de mineração, são utilizados para validação cruzada. O relatório da validação cruzada mostra o número total de casos usados em cada partição.  
   
@@ -77,11 +77,11 @@ ms.locfileid: "68183812"
 ### <a name="choosing-models-and-columns-to-validate"></a>Escolher os modelos e colunas para validar  
  Ao usar a guia **Validação Cruzada** no Designer de Mineração de Dados, você deve primeiro selecionar a coluna previsível de uma lista. Normalmente, uma estrutura de mineração pode aceitar muitos modelos de mineração, porém nem todos os modelos usam a mesma coluna previsível. Ao executar a validação cruzada, só podem ser incluídos no relatório os modelos que usam a mesma coluna previsível.  
   
- Para escolher um atributo previsível, clique em **Atributo de Destino** e selecione a coluna da lista. Se o atributo de destino é uma coluna aninhada, ou uma coluna em uma tabela aninhada, você deve digitar o nome da coluna aninhada usando o formato \<nome da tabela aninhada > (chave).\< Aninhado coluna >. Se a única coluna usada da tabela aninhada é a coluna de chave, você pode usar \<nome da tabela aninhada > (chave).  
+ Para escolher um atributo previsível, clique em **Atributo de Destino** e selecione a coluna da lista. Se o atributo de destino for uma coluna aninhada ou uma coluna em uma tabela aninhada, você deverá digitar o nome da coluna aninhada usando \<o formato nome da tabela aninhada >\< (chave). > De coluna aninhada. Se a única coluna usada da tabela aninhada for a coluna de chave, você poderá \<usar o nome de tabela aninhada > (chave).  
   
  Depois que você seleciona o atributo previsível, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automaticamente testa todos os modelos que usam o mesmo atributo previsível. Se o atributo de destino contém valores discretos, após você ter selecionado a coluna previsível é possível informar opcionalmente um estado de destino, isto se existir um valor específico que você deseja prever.  
   
- A seleção do estado de destino afeta as medidas que são retornadas. Se você especificar um atributo de destino – ou seja, um nome de coluna – e não escolhe um valor específico que você deseja que o modelo para prever, por padrão, o modelo será avaliado em sua previsão do estado mais provável.  
+ A seleção do estado de destino afeta as medidas que são retornadas. Se você especificar um atributo de destino, ou seja, um nome de coluna, e não escolher um valor específico que você deseja que o modelo preveja, por padrão o modelo será avaliado em sua previsão do estado mais provável.  
   
  Quando você usa a validação cruzada com modelos de clustering, não existe a coluna previsível; ao invés disso, você seleciona **#Cluster** de uma lista de atributos previsíveis na caixa de listagem **Atributo de Destino** . Após você ter selecionado essa opção, outras opções que não são relevantes para modelos de clustering, como **Estado de Destino**serão desabilitadas. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] testará todos os modelos de clustering associados com a estrutura de mineração.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "68183812"
  Para ver um exemplo de como criar um relatório de validação cruzada usando a interface do usuário, consulte [Criar um relatório de validação cruzada](../../analysis-services/data-mining/create-a-cross-validation-report.md).  
   
 ### <a name="cross-validation-stored-procedures"></a>Procedimentos armazenados da validação cruzada  
- Para usuários avançados, a validação cruzada também está disponível na forma de procedimentos armazenados do sistema parametrizados completamente. Você pode executar os procedimentos armazenados conectando-se a uma instância de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ou de qualquer aplicativo de código gerenciado.  
+ Para usuários avançados, a validação cruzada também está disponível na forma de procedimentos armazenados do sistema parametrizados completamente. Você pode executar os procedimentos armazenados conectando-se a uma [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]instância do ou de qualquer aplicativo de código gerenciado.  
   
  Os procedimentos armazenados são agrupados pelo tipo de modelo de mineração. Um conjunto de procedimentos armazenados trabalha apenas com modelos de clustering. O outro conjunto de procedimentos armazenados trabalha com outros modelos de mineração.  
   

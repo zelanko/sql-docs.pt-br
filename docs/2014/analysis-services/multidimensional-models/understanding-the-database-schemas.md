@@ -1,5 +1,5 @@
 ---
-title: Noções básicas sobre os esquemas de banco de dados | Microsoft Docs
+title: Compreendendo os esquemas de banco de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b3439fff5e3bba68f01c24a0979434e21a01ded6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072706"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811047"
 ---
 # <a name="understanding-the-database-schemas"></a>Entendendo os esquemas de banco de dados
   O Assistente de Geração de Esquema gera um esquema relacional não normalizado para o banco de dados da área de assunto com base nas dimensões e nos grupos de medidas do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O assistente gera uma tabela relacional para cada dimensão para armazenar dados da dimensão, chamada tabela de dimensões, e uma tabela relacional para cada grupo de medidas para armazenar dados de fatos, chamada tabela de fatos. O assistente ignora dimensões vinculadas, grupos de medidas vinculados e dimensões de tempo de servidor ao gerar essas tabelas relacionais.  
@@ -71,7 +71,7 @@ ms.locfileid: "66072706"
  Relações  
  O assistente gera uma relação para cada relação de dimensão regular entre a tabela de fatos e o atributo de granularidade da tabela de dimensões. Se a granularidade for baseada no atributo de chave da tabela de dimensões, a relação será criada no banco de dados e na exibição da fonte de dados. Se a granularidade for baseada em outro atributo, a relação será criada apenas na exibição da fonte de dados.  
   
- Se você decidir gerar índices pelo assistente, um índice não cluster será gerado para cada uma dessas colunas de relação.  
+ Se você optar por gerar índices no assistente, um índice não clusterizado será gerado para cada uma dessas colunas de relação.  
   
  Restrições  
  Não são geradas chaves primárias em tabelas de fatos.  
@@ -82,7 +82,7 @@ ms.locfileid: "66072706"
  O assistente gera uma tabela separada para manter os valores traduzidos para qualquer propriedade do grupo de medidas que precise de uma coluna de tradução. O assistente cria também uma coluna separada para cada um dos idiomas necessários.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Conversão do tipo de dados e comprimentos padrão  
- Assistente de geração de esquema sempre ignora os tipos de dados em todos os casos, exceto nas colunas que usam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` tipo de dados. O tamanho de dados `wchar` converte-se diretamente no tipo de dados `nvarchar`. No entanto, se o comprimento especificado de uma coluna que usa o tamanho `wchar` for superior a 4000 bytes, o Assistente de Geração de Esquema produzirá um erro.  
+ O assistente de geração de esquema ignora os tipos de dados em todos os casos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exceto as colunas que usam o tipo de `wchar` dados. O tamanho de dados `wchar` converte-se diretamente no tipo de dados `nvarchar`. No entanto, se o comprimento especificado de uma coluna que usa o tamanho `wchar` for superior a 4000 bytes, o Assistente de Geração de Esquema produzirá um erro.  
   
  Se um item de dados, como uma ligação para um atributo, não tiver um comprimento especificado, o comprimento padrão listado na tabela a seguir será usado na coluna.  
   

@@ -21,12 +21,12 @@ ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 204d312e1350e7284b335806a0286baf9603c9a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b2fd7a22c202b1210b17f86903fce32ec8d4b5b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666793"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811085"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Selecionar uma conta para o Serviço do SQL Server Agent
   A conta de inicialização do serviço define a conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é executado, bem como suas permissões de rede. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é executado como uma conta de usuário especificada. Selecione uma conta para o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, no qual estão disponíveis as seguintes opções:  
@@ -74,22 +74,22 @@ ms.locfileid: "62666793"
 ## <a name="supported-service-account-types"></a>Tipos de conta de serviço com suporte  
  A tabela a seguir lista os tipos de conta do Windows que podem ser usadas para o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-|Tipo de conta de serviço|Servidor não cluster|Servidor em cluster|Controlador de domínio (não cluster)|  
+|Tipo de conta de serviço|Servidor não clusterizado|Servidor em cluster|Controlador de domínio (não clusterizado)|  
 |--------------------------|---------------------------|----------------------|------------------------------------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Conta de domínio do Windows (membro do grupo Administradores do Windows)|Tem suporte|Tem suporte|Tem suporte|  
-|Conta de domínio do Windows (não administrativa)|Suporte para<sup>1</sup>|Suporte para<sup>1</sup>|Suporte para<sup>1</sup>|  
-|Conta de Serviço de Rede (NT AUTHORITY\NetworkService)|Suporte para<sup>1, 3, 4</sup>|Sem suporte|Sem suporte|  
-|Conta de usuário local (não administrativa)|Suporte para<sup>1</sup>|Sem suporte|Não aplicável|  
-|Conta Sistema Local (NT AUTHORITY\System)|Suporte para<sup>2</sup>|Sem suporte|Suporte para<sup>2</sup>|  
+|Conta de domínio do Windows (não administrativa)|Com suporte<sup>1</sup>|Com suporte<sup>1</sup>|Com suporte<sup>1</sup>|  
+|Conta de Serviço de Rede (NT AUTHORITY\NetworkService)|Com suporte<sup>1, 3, 4</sup>|Sem suporte|Sem suporte|  
+|Conta de usuário local (não administrativa)|Com suporte<sup>1</sup>|Sem suporte|Não aplicável|  
+|Conta Sistema Local (NT AUTHORITY\System)|Com suporte<sup>2</sup>|Sem suporte|Com suporte<sup>2</sup>|  
 |Conta do Serviço Local (NT AUTHORITY\LocalService)|Sem suporte|Sem suporte|Sem suporte|  
   
- <sup>1</sup> consulte limitação 1, abaixo.  
+ <sup>1</sup> consulte a limitação 1 abaixo.  
   
- <sup>2</sup> consulte limitação 2 abaixo.  
+ <sup>2</sup> consulte a limitação 2 abaixo.  
   
- <sup>3</sup> consulte limitação 3 abaixo.  
+ <sup>3</sup> consulte a limitação 3 abaixo.  
   
- <sup>4</sup> consulte limitação 4 abaixo.  
+ <sup>4</sup> consulte a limitação 4 abaixo.  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Limitação 1: usar contas não administrativas para administração multisservidor  
  A inscrição de servidores de destino para um servidor mestre pode falhar com a seguinte mensagem de erro: "Falha na operação de inscrição".  

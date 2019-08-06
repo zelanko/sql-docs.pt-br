@@ -1,5 +1,5 @@
 ---
-title: 'Relatório de andamento: Classe de evento de operação de índice online | Microsoft Docs'
+title: 'Relatório de andamento: classe de evento Online Index Operation | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a09b4c8f6f6c600ac7b14faf35966a82c0b6905
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d0efc3d22fcba588c1104d716cbab0f26eff374
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62520404"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811263"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>Relatório de andamento: Classe de evento Operação de Índice Online
-  O relatório de progresso: Classe de evento de operação de índice online indica o progresso de uma operação de criação de índice online enquanto o processo de compilação está em execução.  
+  A classe de evento Progress Report: Online Index Operation indica o progresso de uma operação de build de índice online enquanto o processo de build está em execução.  
   
-## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Relatório de andamento: Colunas de dados de classe de evento de operação de índice online  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Relatório de andamento: colunas de dados da classe de evento Online Index Operation  
   
 |Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "62520404"
 |EndTime|`datetime`|Hora em que a operação de índice online foi concluída.|15|Sim|  
 |EventClass|`int`|Tipo de evento = 190.|27|Não|  
 |EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|Não|  
-|EventSubClass|`int`|Tipo de subclasse de evento.<br /><br /> 1 = Iniciar<br /><br /> 2=Início de execução da etapa 1<br /><br /> 3=Término de execução da etapa 1<br /><br /> 4= Início de execução da etapa 2<br /><br /> 5= Término de execução da etapa 2<br /><br /> 6=Contagem de linhas inseridas<br /><br /> 7=Concluído<br /><br /> A etapa 1 refere-se ao objeto base (índice clusterizado ou heap), ou se a operação de índice envolver somente um índice não clusterizado. A etapa 2 é usada quando uma operação de compilação de índice envolver a recompilação original além de índices não clusterizados adicionais.  Por exemplo, se um objeto tiver um índice clusterizado e vários índices não clusterizados, 'recompilar tudo' recompilará todos os índices. O objeto base (o índice clusterizado) é recompilado na etapa 1 e, em seguida, todos os índices não clusterizados são recompilados na etapa 2.|21|Sim|  
+|EventSubClass|`int`|Tipo de subclasse de evento.<br /><br /> 1 = Iniciar<br /><br /> 2=Início de execução da etapa 1<br /><br /> 3=Término de execução da etapa 1<br /><br /> 4= Início de execução da etapa 2<br /><br /> 5= Término de execução da etapa 2<br /><br /> 6=Contagem de linhas inseridas<br /><br /> 7=Concluído<br /><br /> O estágio 1 refere-se ao objeto base (índice clusterizado ou heap) ou se a operação de índice envolve apenas um índice não clusterizado. O estágio 2 é usado quando uma operação de compilação de índice envolve a recompilação original mais índices não clusterizados adicionais.  Por exemplo, se um objeto tiver um índice clusterizado e vários índices não clusterizados, ' Recompilar tudo ' recompilaria todos os índices. O objeto base (o índice clusterizado) é recriado no estágio 1 e todos os índices não clusterizados são recriados no estágio 2.|21|Sim|  
 |GroupID|`int`|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|`nvarchar`|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IndexID|`int`|ID do índice no objeto afetado pelo evento.|24|Sim|  

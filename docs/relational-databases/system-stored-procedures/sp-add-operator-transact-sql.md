@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 49d7ac030eb8e391f083311fc0248b0f0752e72a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 27919edee71f55d6d035f81e92cc12aa298b74e5
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121014"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811424"
 ---
-# <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
+# <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cria um operador (destinatário da notificação) para uso com alertas e trabalhos.  
@@ -52,34 +52,34 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'` O nome de um operador (destinatário da notificação). Esse nome deve ser exclusivo e não pode conter a porcentagem ( **%** ) caracteres. *nome da* está **sysname**, sem padrão.  
+`[ @name = ] 'name'`O nome de um operador (destinatário da notificação). Esse nome deve ser exclusivo e não pode conter o caractere **%** de porcentagem (). o *nome* é **sysname**, sem padrão.  
   
-`[ @enabled = ] enabled` Indica o status atual do operador. *habilitada* está **tinyint**, com um padrão de **1** (habilitado). Se **0**, o operador não está habilitado e não recebe notificações.  
+`[ @enabled = ] enabled`Indica o status atual do operador. *habilitado* é **tinyint**, com um padrão de **1** (habilitado). Se for **0**, o operador não será habilitado e não receberá notificações.  
   
-`[ @email_address = ] 'email_address'` O endereço de email do operador. Essa cadeia de caracteres é passada diretamente para o sistema de email. *email_address* está **nvarchar(100)** , com um padrão NULL.  
+`[ @email_address = ] 'email_address'`O endereço de email do operador. Essa cadeia de caracteres é passada diretamente para o sistema de email. *email_address* é **nvarchar (100)** , com um padrão de NULL.  
   
  Você pode especificar um endereço de email físico ou um alias para *email_address*. Por exemplo:  
   
- '**jdoe**'ou' **jdoe@xyz.com** '  
+ '**jdoe**' ou ' **jdoe@xyz.com** '  
   
 > [!NOTE]  
 >  Você deve usar o endereço de email para Database Mail.  
   
-`[ @pager_address = ] 'pager_address'` O endereço de pager do operador. Essa cadeia de caracteres é passada diretamente para o sistema de email. *pager_address* está **narchar(100)** , com um padrão NULL.  
+`[ @pager_address = ] 'pager_address'`O endereço do pager do operador. Essa cadeia de caracteres é passada diretamente para o sistema de email. *pager_address* é **nvarchar (100)** , com um padrão de NULL.  
   
-`[ @weekday_pager_start_time = ] weekday_pager_start_time` O tempo após o qual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent envia notificação por pager ao operador especificado em dias do semana, de segunda-feira a sexta-feira. *weekday_pager_start_time*está **int**, com um padrão de **090000**, que indica as 9h00 em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
+`[ @weekday_pager_start_time = ] weekday_pager_start_time`O tempo após o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qual o Agent envia a notificação por pager para o operador especificado nos dias da semana, de segunda a sexta-feira. *weekday_pager_start_time*é **int**, com um padrão de **090000**, que indica 9:00 A.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
-`[ @weekday_pager_end_time = ] weekday_pager_end_time` O tempo após o qual **SQLServerAgent** service não mais envia notificação por pager ao operador especificado em dias do semana, de segunda-feira a sexta-feira. *weekday_pager_end_time*está **int**, com um padrão de 180000, que indica às 18h em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
+`[ @weekday_pager_end_time = ] weekday_pager_end_time`O tempo após o qual o serviço **SQLSERVERAGENT** não envia a notificação por pager para o operador especificado nos dias da semana, de segunda a sexta-feira. *weekday_pager_end_time*é **int**, com um padrão de 180000, que indica 6:00 P.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
-`[ @saturday_pager_start_time = ] saturday_pager_start_time` O tempo após o qual **SQLServerAgent** serviço envia notificação por pager ao operador especificado aos sábados. *saturday_pager_start_time* está **int**, com um padrão de 090000, que indica as 9h00 em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
+`[ @saturday_pager_start_time = ] saturday_pager_start_time`O tempo após o qual o serviço **SQLSERVERAGENT** envia a notificação por pager para o operador especificado em sábados. *saturday_pager_start_time* é **int**, com um padrão de 090000, que indica 9:00 A.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
-`[ @saturday_pager_end_time = ] saturday_pager_end_time` O tempo após o qual **SQLServerAgent** service não mais envia notificação de pager ao operador especificado aos sábados. *saturday_pager_end_time*está **int**, com um padrão de **180000**, que indica às 18h em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
+`[ @saturday_pager_end_time = ] saturday_pager_end_time`O tempo após o qual o serviço **SQLSERVERAGENT** não envia a notificação por pager para o operador especificado em sábados. *saturday_pager_end_time*é **int**, com um padrão de **180000**, que indica 6:00 P.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
-`[ @sunday_pager_start_time = ] sunday_pager_start_time` O tempo após o qual **SQLServerAgent** serviço envia notificação por pager ao operador especificado aos domingos. *sunday_pager_start_time*está **int**, com um padrão de **090000**, que indica as 9h00 em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
+`[ @sunday_pager_start_time = ] sunday_pager_start_time`O tempo após o qual o serviço **SQLSERVERAGENT** envia a notificação por pager para o operador especificado nos domingos. *sunday_pager_start_time*é **int**, com um padrão de **090000**, que indica 9:00 A.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
-`[ @sunday_pager_end_time = ] sunday_pager_end_time` O tempo após o qual **SQLServerAgent** service não mais envia notificação de pager ao operador especificado aos domingos. *sunday_pager_end_time*está **int**, com um padrão de **180000**, que indica às 18h em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
+`[ @sunday_pager_end_time = ] sunday_pager_end_time`O tempo após o qual o serviço **SQLSERVERAGENT** não envia a notificação por pager para o operador especificado nos domingos. *sunday_pager_end_time*é **int**, com um padrão de **180000**, que indica 6:00 P.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
-`[ @pager_days = ] pager_days` É um número que indica os dias em que o operador está disponível para páginas (sujeitos aos horários de início/término especificados). *pager_days*está **tinyint**, com um padrão de **0** indicando que o operador nunca está disponível para receber uma página. Valores válidos são de **0** por meio **127**. *pager_days*é calculado somando os valores individuais para os dias necessários. Por exemplo, de segunda-feira a sexta-feira é **2**+**4**+**8**+**16** + **32** = **62**. A tabela a seguir lista o valor de cada dia da semana.  
+`[ @pager_days = ] pager_days`É um número que indica os dias em que o operador está disponível para páginas (sujeito às horas de início/término especificadas). *pager_days*é **tinyint**, com um padrão de **0** , indicando que o operador nunca está disponível para receber uma página. Os valores válidos são de **0** a **127**. *pager_days*é calculado adicionando os valores individuais para os dias necessários. Por exemplo, de segunda a sexta-feira é **2**+**4**+**8**+**16**+**32** = **62**. A tabela a seguir lista o valor de cada dia da semana.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -91,9 +91,9 @@ sp_add_operator [ @name = ] 'name'
 |**32**|Sexta-feira|  
 |**64**|Sábado|  
   
-`[ @netsend_address = ] 'netsend_address'` O endereço de rede do operador para quem a mensagem de rede será enviada. *netsend_address*está **nvarchar(100)** , com um padrão NULL.  
+`[ @netsend_address = ] 'netsend_address'`O endereço de rede do operador para o qual a mensagem de rede é enviada. *netsend_address*é **nvarchar (100)** , com um padrão de NULL.  
   
-`[ @category_name = ] 'category'` O nome da categoria para esse operador. *categoria* está **sysname**, com um padrão NULL.  
+`[ @category_name = ] 'category'`O nome da categoria para este operador. a *categoria* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -102,14 +102,14 @@ sp_add_operator [ @name = ] 'name'
  Nenhum  
   
 ## <a name="remarks"></a>Comentários  
- **sp_add_operator** deve ser executado a partir de **msdb** banco de dados.  
+ **sp_add_operator** deve ser executado do banco de dados **msdb** .  
   
  É oferecido suporte à chamada por pager pelo sistema de email, que deve ter um recurso de email para pager se você quiser usar chamada por pager.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] gerencia trabalhos de forma fácil e com representação gráfica. Além disso, ele é recomendado para criar e gerenciar a infraestrutura de trabalhos.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_add_operator**.  
+ Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_add_operator**.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir configura as informações do operador para `danwi`. O operador está habilitado. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent envia notificações por pager de segunda a sexta-feira, das 8h às 17h.  

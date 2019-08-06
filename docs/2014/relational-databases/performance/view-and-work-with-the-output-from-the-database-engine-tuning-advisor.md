@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 29dac7e1636026da3f77ac832a148a832abe240a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e767348fb5bc01bcdb2aaaa3fad1dd4f461eb6c
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63151451"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811020"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados
   Quando o Orientador de Otimização do Mecanismo de Banco de Dados ajusta os bancos de dados, cria resumos, recomendações, relatórios e logs de ajuste. Você pode usar a saída do log de ajuste para solucionar problemas das sessões de ajuste do Orientador de Otimização do Mecanismo de Banco de Dados. Você pode usar os resumos, as recomendações e os relatórios para determinar se deseja implementar recomendações de ajuste ou continuar ajustando até atingir o desempenho de consulta necessário para instalar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter informações sobre como usar o Database Tuning Advisor para criar cargas de trabalho ou ajustar um banco de dados, consulte [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](database-engine-tuning-advisor.md).  
@@ -163,7 +163,7 @@ ms.locfileid: "63151451"
   
 2.  Copie e cole a [Amostra de arquivo de entrada XML com a configuração especificada pelo usuário &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) no editor XML ou em um editor de texto. Use este exemplo para criar um arquivo de entrada XML para sua sessão de ajuste. Para obter informações sobre como executar esta tarefa, consulte a seção "Criar arquivos de entrada XML" em [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](database-engine-tuning-advisor.md).  
   
-3.  Edite os elementos de `TuningOptions` e `Configuration` no exemplo de arquivo de entrada XML. No elemento de `TuningOptions`, especifique quais estruturas de design físicas deseja que o Orientador de Otimização do Mecanismo de Banco de Dados considere durante a sessão de ajuste. No elemento de `Configuration`, especifique as estruturas de design físicas que correspondem à configuração hipotética de estruturas de design de bancos de dados físicos que devem ser analisadas pelo Orientador de Otimização do Mecanismo de Banco de Dados. Para obter informações sobre quais atributos e elementos filho, você pode usar com o `TuningOptions` e o `Configuration` elementos pai, consulte [referência de arquivo de entrada XML &#40;orientador de otimização do mecanismo de banco de dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+3.  Edite os elementos de `TuningOptions` e `Configuration` no exemplo de arquivo de entrada XML. No elemento de `TuningOptions`, especifique quais estruturas de design físicas deseja que o Orientador de Otimização do Mecanismo de Banco de Dados considere durante a sessão de ajuste. No elemento de `Configuration`, especifique as estruturas de design físicas que correspondem à configuração hipotética de estruturas de design de bancos de dados físicos que devem ser analisadas pelo Orientador de Otimização do Mecanismo de Banco de Dados. Para obter informações sobre quais atributos e elementos filho você pode usar com `TuningOptions` o e `Configuration` os elementos pai, consulte [referência &#40;de arquivo de&#41;entrada XML Orientador de otimização do mecanismo de banco de dados](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 4.  Salve o arquivo de entrada com uma extensão **.xml** .  
   
@@ -282,7 +282,7 @@ ms.locfileid: "63151451"
  Índice ou exibição afetados pela recomendação. O ícone dessa coluna reflete a recomendação para descartar ou adicionar o **Destino da Recomendação**.  
   
  **Detalhes**  
- Uma descrição do **Destino da Recomendação**. Os possíveis valores incluem exibição clusterizada, indexada ou espaço em branco indicando um índice não clusterizado. Indica igualmente quando o índice é exclusivo.  
+ Uma descrição do **Destino da Recomendação**. Os valores possíveis incluem exibição indexada, clusterizada ou em branco, indicando um índice não clusterizado. Indica igualmente quando o índice é exclusivo.  
   
  **Esquema de partição**  
  O esquema de partição é fornecido nessa coluna quando o particionamento é recomendado.  

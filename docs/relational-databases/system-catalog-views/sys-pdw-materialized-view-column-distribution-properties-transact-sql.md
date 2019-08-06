@@ -9,17 +9,17 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 19acc92475716b219485b9366e6facbc89268909
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8713f0728f7afb8e86b693fe5f1e50652bbddf43
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059450"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811430"
 ---
-# <a name="syspdwmaterializedviewcolumndistributionproperties-transact-sql-preview"></a>sys.pdw_materialized_view_column_distribution_properties (Transact-SQL) (preview)
+# <a name="syspdw_materialized_view_column_distribution_properties-transact-sql-preview"></a>sys.pdw_materialized_view_column_distribution_properties (Transact-SQL) (preview)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -29,7 +29,7 @@ Exibe informações de distribuição para colunas em uma exibição materializa
 |-----------------|---------------|-----------------|  
 |object_id|**int**|ID do objeto ao qual a coluna pertence. |  
 |column_id|**int**|A ID da coluna.|  
-|distribution_ordinal|**tinyint**|0 = não é uma coluna de distribuição.</br> 1 = o SQL Data Warehouse está usando esta coluna para distribuir a exibição materializada.|
+|distribution_ordinal|**tinyint**|0 = não é uma coluna de distribuição.</br> 1 = SQL Data Warehouse está usando essa coluna para distribuir a exibição materializada.|
  
 ## <a name="permissions"></a>Permissões 
 

@@ -10,12 +10,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0ee585f9773858848f213b3eeef6e995aedfb53f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250879"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811232"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replicação para assinantes de tabela com otimização de memória
   As tabelas que atuam como assinantes de replicação transacional, com exceção da replicação transacional ponto a ponto, podem ser configuradas como tabelas com otimização de memória. Outras configurações de replicação não são compatíveis com tabelas com otimização de memória.  
@@ -59,9 +59,9 @@ ms.locfileid: "63250879"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  Navegue para a pasta do instantâneo. O local padrão é "C:\Program Files\Microsoft SQL Server\MSSQL12. \<Instância > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\".  
+2.  Navegue para a pasta do instantâneo. O local padrão é "C:\Program Files\Microsoft SQL Server\MSSQL12. Instância > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\". \<  
   
-3.  Localize o **. SCH** para sua tabela de arquivo e abri-lo no Management Studio. Altere o esquema da tabela e atualize o procedimento armazenado conforme descrito abaixo.  
+3.  Localize o **. SCH** o arquivo para a tabela e abra-o no Management Studio. Altere o esquema da tabela e atualize o procedimento armazenado conforme descrito abaixo.  
   
      Avalie os índices definidos no arquivo IDX. Modifique `CREATE TABLE` para especificar os índices necessários, as restrições, a chave primária e a sintaxe com otimização de memória. Para tabelas com otimização de memória, as colunas de índice devem ser NOT NULL e as colunas de índice de tipos de caractere devem ser Unicode e usar a ordenação BIN2. Veja o seguinte exemplo:  
   
@@ -226,7 +226,7 @@ ms.locfileid: "63250879"
     go  
     ```  
   
-5.  Criar banco de dados do assinante usando o **elevar para isolamento de instantâneo** opção e defina o agrupamento padrão como Latin1_General_CS_AS_KS_WS no caso de usando tipos de dados de caractere não Unicode.  
+5.  Crie um banco de dados do assinante usando a opção **elevar ao isolamento de instantâneo** e defina o agrupamento padrão como Latin1_General_CS_AS_KS_WS no caso do uso de tipos de dados de caracteres não Unicode.  
   
     ```  
     CREATE DATABASE [Sub]   
@@ -241,7 +241,7 @@ ms.locfileid: "63250879"
     GO  
     ```  
   
-6.  Aplicar o esquema de banco de dados do assinante e salve o esquema para uso futuro.  
+6.  Aplique o esquema ao banco de dados de um assinante e salve o esquema para uso futuro.  
   
 7.  Carregue os dados do publicador (origem) para o assinante. Os dados não devem ser alterados no publicador até que você adicione uma assinatura.  Você pode usar BCP conforme mostrado abaixo:  
   
@@ -263,7 +263,7 @@ ms.locfileid: "63250879"
     GO  
     ```  
   
- **Adicionar assinatura sem sincronização**  
+ **Adicionar nenhuma assinatura de sincronização**  
   
  Adicione uma assinatura sem sincronização.  
   
@@ -297,9 +297,9 @@ GO
   
 -   As tabelas replicadas nas tabelas com otimização de memória em um assinante estão limitadas a 8060 bytes por limite de linha de tabelas com otimização de memória.  
   
--   As tabelas replicadas nas tabelas com otimização de memória em um assinante estão limitadas a tipos de dados permitidos em tabelas com otimização de memória. Para obter mais informações, consulte [suporte para tipos de dados](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md).  
+-   As tabelas replicadas nas tabelas com otimização de memória em um assinante estão limitadas a tipos de dados permitidos em tabelas com otimização de memória. Para obter mais informações, consulte [tipos de dados com suporte](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md).  
   
--   Há restrições na atualização da chave primária das tabelas que estão sendo replicadas para uma tabela com otimização de memória em um assinante. Para obter mais informações, consulte [replicando alterações para uma chave primária](#PrimaryKey).  
+-   Há restrições na atualização da chave primária das tabelas que estão sendo replicadas para uma tabela com otimização de memória em um assinante. Para obter mais informações, consulte [Replicando alterações em uma chave primária](#PrimaryKey).  
   
 -   A chave estrangeira, a restrição exclusiva, os disparadores, as modificações de esquema, ROWGUIDCOL, as colunas computadas, a compactação de dados, os tipos de dados de alias, o controle de versões e os bloqueios não têm suporte em tabelas com otimização de memória. Consulte [Constructos T-SQL não compatíveis com OLTP in-memory](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) para obter informações.  
   
@@ -313,7 +313,7 @@ GO
   
 -   ANSI_PADDING deve ser ON.  
   
-##  <a name="PrimaryKey"></a> Replicando alterações para uma chave primária  
+##  <a name="PrimaryKey"></a>Replicando alterações em uma chave primária  
  A chave primária de uma tabela com otimização de memória não pode ser atualizada. Para replicar uma atualização de chave primária em um assinante, modifique o procedimento armazenado de atualização para fornecer a atualização como um par de inserção e exclusão.  
   
 ## <a name="see-also"></a>Consulte também  

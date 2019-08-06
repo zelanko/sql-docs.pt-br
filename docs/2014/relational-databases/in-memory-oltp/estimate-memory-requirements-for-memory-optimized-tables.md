@@ -10,15 +10,15 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 15b3b27f859b2ea2ed3008d33f19a682aeef833b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbd8a79bf9d881d2d4c9055531bac2e290f202a4
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157956"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811013"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar requisitos de memória para tabelas com otimização de memória
-  Se você estiver criando um novo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] tabela com otimização de memória ou migrar uma tabela existente com base em disco para uma tabela com otimização de memória, é importante ter uma estimativa razoável das necessidades de memória de cada tabela, portanto, você pode provisionar o servidor com o suficiente memória. Esta seção descreve como estimar a quantidade de memória necessária para manter dados para uma tabela com otimização de memória.  
+  Se você estiver criando uma nova [!INCLUDE[hek_2](../../includes/hek-2-md.md)] tabela com otimização de memória ou migrando uma tabela baseada em disco existente para uma tabela com otimização de memória, é importante ter uma estimativa razoável das necessidades de memória de cada tabela para que você possa provisionar o servidor com o suficiente memória. Esta seção descreve como estimar a quantidade de memória necessária para manter dados para uma tabela com otimização de memória.  
   
  Se você pretende migrar de tabelas baseadas em disco para tabelas com otimização de memória, antes de continuar neste tópico, veja o tópico [Determinando se uma tabela ou procedimento armazenado deve ser movido para OLTP in-memory](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) para obter diretrizes sobre as melhores tabelas para migração. Todos os tópicos em [Migrando para OLTP in-memory](migrating-to-in-memory-oltp.md) fornecem diretrizes sobre como migrar de tabelas baseadas em disco para tabelas com otimização de memória.  
   
@@ -115,34 +115,34 @@ SELECT COUNT(DISTINCT [Col2])
   
  Para obter informações sobre como os índices de hash funcionam em tabelas com otimização de memória [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , veja [Índices de hash](../../database-engine/hash-indexes.md).  
   
- **Observação:** Você não pode alterar dinamicamente o tamanho da matriz de índice de hash. Para alterar o tamanho da matriz de índice de hash é necessário remover a tabela, alterar o valor de bucket_count e recriar a tabela.  
+ **Observação:** Você não pode alterar o tamanho da matriz de índice de hash em tempo real. Para alterar o tamanho da matriz de índice de hash é necessário remover a tabela, alterar o valor de bucket_count e recriar a tabela.  
   
- **Definindo o tamanho de matriz de índice de hash**  
+ **Definindo o tamanho da matriz de índice de hash**  
   
- O tamanho da matriz de hash é definido `(bucket_count= <value>)` onde \<valor > é um valor inteiro maior que zero. Se \<valor > não for uma potência de 2, o bucket_count real será arredondado para a próxima potência mais próxima de 2.  Em nossa tabela de exemplo, (bucket_count = 5000000), já que 5.000.000 não é uma potência de 2, o número real de buckets arredondado até 8.388.608 (2<sup>23</sup>).  Você deve usar esse número, e não 5.000.000 quando calcular a memória necessária à matriz de hash.  
+ O tamanho da matriz de hash é `(bucket_count= <value>)` definido \<por onde o valor > é um valor inteiro maior que zero. Se \<o valor > não for uma potência de 2, o bucket_count real será arredondado para a potência mais próxima de 2.  Em nossa tabela de exemplo, (bucket_count = 5 milhões), como 5 milhões não é uma potência de 2, a contagem de buckets real é arredondada para 8.388.608 (2<sup>23</sup>).  Você deve usar esse número, e não 5.000.000 quando calcular a memória necessária à matriz de hash.  
   
  Assim, em nosso exemplo, a memória necessária para cada matriz de hash é:  
   
- 8.388.608 * 8 = 2<sup>23</sup> \* 8 = 2<sup>23</sup> \* 2<sup>3</sup> = 2<sup>26</sup> = 67.108.864 ou aproximadamente 64 MB.  
+ 8\.388.608 * 8 = 2<sup>23</sup> \* 8 = 2<sup>23</sup> \* 2<sup>3</sup> = 2<sup>26</sup> = 67.108.864 ou aproximadamente 64 MB.  
   
  Como temos três índices de hash, a memória necessária para os índices de hash é 3 * 64MB = 192MB.  
   
  **Memória para índices não clusterizados**  
   
- Os índices não clusterizados são implementados como árvores B com os nós internos que contêm o valor e ponteiros de índice aos nós subsequentes.  Os nós folha contêm o valor de índice e um ponteiro para a linha da tabela na memória.  
+ Os índices não clusterizados são implementados como BTrees com os nós internos que contêm o valor de índice e os ponteiros para os nós subsequentes.  Os nós folha contêm o valor de índice e um ponteiro para a linha da tabela na memória.  
   
- Diferentemente dos índices de hash, os índices não clusterizados não têm um tamanho fixo do bucket. O índice aumenta e diminui dinamicamente com os dados.  
+ Ao contrário dos índices de hash, os índices não clusterizados não têm um tamanho de Bucket fixo. O índice aumenta e diminui dinamicamente com os dados.  
   
- A memória necessária pelos índices não clusterizados pode ser computada da seguinte forma:  
+ A memória necessária para índices não clusterizados pode ser calculada da seguinte maneira:  
   
 -   **Memória alocada a nós que não são nós folha**   
     Para uma configuração comum, a memória alocada para nós não folha é uma porcentagem muito pequena da memória total usada pelo índice. Ela é tão pequena que pode seguramente ser ignorada.  
   
 -   **Memória para nós folha**   
-    Os nós folha têm uma linha para cada chave exclusiva na tabela que aponta para as linhas de dados com essa chave exclusiva.  Se você tiver várias linhas com a mesma chave (isto é, tiver um índice não clusterizado não exclusivo), há apenas uma linha no nó folha de índice que aponta para uma das linhas com as outras linhas vinculadas entre si.  Assim, a memória total necessária pode ser aproximado por:   
+    Os nós folha têm uma linha para cada chave exclusiva na tabela que aponta para as linhas de dados com essa chave exclusiva.  Se você tiver várias linhas com a mesma chave (ou seja, você tiver um índice não-clusterizado não exclusivo), haverá apenas uma linha no nó folha de índice que aponta para uma das linhas com as outras linhas vinculadas umas às outras.  Assim, a memória total necessária pode ser aproximado por:   
     memoryForNonClusteredIndex = (pointerSize + sum(keyColumnDataTypeSizes)) * rowsWithUniqueKeys  
   
- Os índices não clusterizados são os melhores quando usado para pesquisas de intervalo, como exemplificadas pela seguinte consulta:  
+ Os índices não clusterizados são melhores quando usados para pesquisas de intervalo, como exemplificado pela seguinte consulta:  
   
 ```sql  
   
@@ -161,7 +161,7 @@ SELECT * FROM t_hk
   
  `rowVersions = durationOfLongestTransactionInSeconds * peakNumberOfRowUpdatesOrDeletesPerSecond`  
   
- Necessidades de memória para linhas obsoletas é estimada pela multiplicação do número de linhas obsoletas pelo tamanho de uma linha da tabela com otimização de memória (consulte [memória da tabela](#bkmk_MemoryForTable) acima).  
+ As necessidades de memória para linhas obsoletas são então estimadas multiplicando o número de linhas obsoletas pelo tamanho de uma linha de tabela com otimização de memória (consulte [a memória da tabela](#bkmk_MemoryForTable) acima).  
   
  `memoryForRowVersions = rowVersions * rowSize`  
   

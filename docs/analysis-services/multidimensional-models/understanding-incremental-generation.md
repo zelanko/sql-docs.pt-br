@@ -1,5 +1,5 @@
 ---
-title: Noções básicas sobre geração Incremental | Microsoft Docs
+title: Compreendendo a geração incremental | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71b3f839326bec0a8b5606e2c7de3f25584b4ff1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71355cfe5341af74083e21cb786b441c71c48c80
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62802700"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811313"
 ---
 # <a name="understanding-incremental-generation"></a>Entendendo a geração com incremento
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "62802700"
  Adicionando um novo objeto, como uma dimensão, cubo ou atributo.  
  O Assistente de Geração de Esquema adiciona objetos subjacentes para os quais o novo objeto está mapeado.  
   
- Se o Assistente de Geração de Esquema não puder fazer a alteração necessária porque existe um objeto de usuário no banco de dados da área de assunto (porque o Database Engine retorna um erro), ocorrerá uma falha do Assistente de Geração de Esquema e ele exibirá o erro retornado pelo Database Engine. Por exemplo, se você criar uma restrição de chave primária ou um índice não clusterizado de uma tabela depois que o assistente gerar novamente a tabela, o Assistente de Geração de Esquema não descartará essa tabela porque ele não criou a restrição nem o índice.  
+ Se o Assistente de Geração de Esquema não puder fazer a alteração necessária porque existe um objeto de usuário no banco de dados da área de assunto (porque o Database Engine retorna um erro), ocorrerá uma falha do Assistente de Geração de Esquema e ele exibirá o erro retornado pelo Database Engine. Por exemplo, se você criar uma restrição de chave primária ou um índice não clusterizado em uma tabela depois que o assistente gerar a tabela, o assistente de geração de esquema não descartará essa tabela porque ela não criou a restrição ou o índice.  
   
 ## <a name="supporting-schema-changes"></a>Suporte a alterações de esquema  
  Quando você alterar as propriedades de tabelas ou colunas do banco de dados da área de assunto ou da exibição da fonte de dados associada, o Assistente de Geração de Esquema tratará as alterações conforme descrito na tabela a seguir.  

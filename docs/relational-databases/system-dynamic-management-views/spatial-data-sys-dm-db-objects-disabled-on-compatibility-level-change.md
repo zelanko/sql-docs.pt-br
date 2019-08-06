@@ -20,14 +20,14 @@ ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 343acc1c284027dc6faf4eb08fc93e2cd528df05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 30c3a5d7358e49c1e1762fbb9851066bdaf30871
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937102"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809907"
 ---
-# <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Dados espaciais - DM db_objects_disabled_on_compatibility_level_change
+# <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>Dados espaciais-sys. dm _db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Lista os índices e as restrições que serão desabilitados como resultado da alteração do nível de compatibilidade no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Índices e restrições que contêm colunas computadas persistentes cujas expressões usam UDTs espaciais serão desabilitadas depois de atualizar ou alterar nível de compatibilidade. Use essa função de gerenciamento dinâmico para determinar o impacto de uma alteração no nível de compatibilidade.  
@@ -64,60 +64,60 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  Quando as funções a seguir são usadas na expressão de uma coluna computada persistente, elas causam a desabilitação de índices e restrições que fazem referência a essas colunas quando o nível de compatibilidade é alterado de 100 para 110 ou superior:  
   
--   **Soundex**  
+-   **SOUNDEX**  
   
--   **Geography:: GeomFromGML**  
+-   **Geografia:: GeomFromGML**  
   
--   **Geography:: STGeomFromText**  
+-   **Geografia:: STGeomFromText**  
   
--   **Geography:: STLineFromText**  
+-   **Geografia:: STLineFromText**  
   
--   **Geography:: STPolyFromText**  
+-   **Geografia:: STPolyFromText**  
   
--   **Geography:: STMPointFromText**  
+-   **Geografia:: STMPointFromText**  
   
--   **Geography:: STMLineFromText**  
+-   **Geografia:: STMLineFromText**  
   
--   **Geography:: STMPolyFromText**  
+-   **Geografia:: STMPolyFromText**  
   
--   **Geography:: STGeomCollFromText**  
+-   **Geografia:: STGeomCollFromText**  
   
--   **Geography:: STGeomFromWKB**  
+-   **Geografia:: STGeomFromWKB**  
   
--   **Geography:: STLineFromWKB**  
+-   **Geografia:: STLineFromWKB**  
   
--   **Geography:: STPolyFromWKB**  
+-   **Geografia:: STPolyFromWKB**  
   
--   **Geography:: STMPointFromWKB**  
+-   **Geografia:: STMPointFromWKB**  
   
--   **Geography:: STMLineFromWKB**  
+-   **Geografia:: STMLineFromWKB**  
   
--   **Geography:: STMPolyFromWKB**  
+-   **Geografia:: STMPolyFromWKB**  
   
--   **Geography:: STUnion**  
+-   **Geografia:: STUnion**  
   
--   **Geography:: STIntersection**  
+-   **Geografia:: STIntersection**  
   
--   **Geography:: STDifference**  
+-   **Geografia:: STDifference**  
   
--   **Geography:: STSymDifference**  
+-   **Geografia:: STSymDifference**  
   
--   **Geography:: STBuffer**  
+-   **Geografia:: STBuffer**  
   
--   **Geography:: BufferWithTolerance**  
+-   **Geografia:: BufferWithTolerance**  
   
--   **Geography:: Analisar**  
+-   **Geografia:: Passar**  
   
--   **Geography:: reduzir**  
+-   **Geografia:: Diminu**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>Comportamento dos objetos desabilitados  
  **Índices**  
   
- Se o índice clusterizado está desabilitado ou se um índice não agrupado for forçado, será gerado o erro a seguir: "O processador de consultas não consegue produzir um plano porque o índice ' %. \*ls' na tabela ou exibição ' %. \*ls' está desabilitado. " Para habilitar novamente esses objetos, reconstrua os índices após a atualização chamando **ALTER INDEX ON... REBUILD**.  
+ Se o índice clusterizado estiver desabilitado ou se um índice não clusterizado for forçado, o seguinte erro será gerado: "O processador de consultas não pode produzir um plano porque o índice '%. \*ls "na tabela ou exibição"%. \*ls "está desabilitado". Para reabilitar esses objetos, recompile os índices após a atualização chamando **ALTER INDEX on... REBUILD**.  
   
  **Heaps**  
   
- Se uma tabela com um heap desabilitado for usada, o erro a seguir será lançado. Para habilitar novamente esses objetos, reconstrua após a atualização chamando **ALTER INDEX ON todos... REBUILD**.  
+ Se uma tabela com um heap desabilitado for usada, o erro a seguir será lançado. Para reabilitar esses objetos, recompile após a atualização chamando **ALTER INDEX All on... REBUILD**.  
   
 ```  
 // ErrorNumber: 8674  
@@ -130,11 +130,11 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 // ErrorFirstProduct: SQL11  
 ```  
   
- Se você tentar reconstruir o heap durante uma operação online, um erro será gerado.  
+ Se você tentar recriar o heap durante uma operação online, um erro será gerado.  
   
- **Restrições de verificação e as chaves estrangeiras**  
+ **Restrições de verificação e chaves estrangeiras**  
   
- Restrições de verificação desabilitadas e chave estrangeiras não lançam um erro. Porém, as restrições não são impostas quando linhas são modificadas. Para habilitar novamente esses objetos, as restrições de verificação depois de atualizar chamando **ALTER TABLE... RESTRIÇÃO DE VERIFICAÇÃO**.  
+ Restrições de verificação desabilitadas e chave estrangeiras não lançam um erro. Porém, as restrições não são impostas quando linhas são modificadas. Para reabilitar esses objetos, verifique as restrições após a atualização chamando **ALTER TABLE... RESTRIÇÃO**DE VERIFICAÇÃO.  
   
  **Colunas computadas persistentes**  
   
@@ -146,7 +146,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
  Exige a permissão VIEW DATABASE STATE.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra uma consulta em **DM db_objects_disabled_on_compatibility_level_change** para localizar os objetos afetados, alterando o nível de compatibilidade para 120.  
+ O exemplo a seguir mostra uma consulta em **Sys. dm _db_objects_disabled_on_compatibility_level_change** para localizar os objetos afetados alterando o nível de compatibilidade para 120.  
   
 ```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  

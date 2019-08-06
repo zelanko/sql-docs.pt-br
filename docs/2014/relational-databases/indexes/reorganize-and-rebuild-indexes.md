@@ -30,12 +30,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2de93079289ffda8ff6287ad09aa4dea150932d7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8c1c78e1d126420b17a1b8de0499c432059b25ce
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68475962"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811033"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Reorganizar e recriar índices
   Este tópico descreve como reorganizar ou recompilar índice fragmentado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] mantém os índices automaticamente sempre que são realizadas operações de entrada, atualização ou exclusão nos dados subjacentes. No decorrer do tempo, essas modificações podem fazer com que as informações do índice sejam dispersadas pelo banco de dados (fragmentadas). A fragmentação ocorre quando os índices têm páginas nas quais a ordem lógica, com base no valor de chave, não corresponde à ordem física do arquivo de dados. Índices com fragmentação pesada podem degradar o desempenho da consulta e causar lentidão de resposta do aplicativo.  
@@ -103,7 +103,7 @@ Cenários que forçam a recriação automática de todos os índices não cluste
 -  Removendo um índice clusterizado, fazendo com que a tabela seja armazenada como um heap
 -  Alterando a chave de clustering para incluir ou excluir colunas
 
-Os cenários que não exigem que todos os índices não agrupados sejam recompilados automaticamente em uma tabela:
+Cenários que não exigem que todos os índices não clusterizados sejam automaticamente recriados em uma tabela:
 
 -  Recompilando um índice clusterizado exclusivo
 -  Recompilando um índice clusterizado não exclusivo

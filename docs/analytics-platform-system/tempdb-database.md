@@ -1,6 +1,6 @@
 ---
-title: Banco de dados tempdb - Parallel Data Warehouse | Microsoft Docs
-description: Banco de dados tempdb no Parallel Data Warehouse.
+title: data warehouse em paralelo do banco de dados tempdb | Microsoft Docs
+description: Banco de dados tempdb em paralelo data warehouse.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,75 +8,75 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 1790ae3bc63a379c1bcf143655f10829db60a339
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6bdba302778224ab2615018d6c5dec0740328d93
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960014"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810942"
 ---
-# <a name="tempdb-database-in-parallel-data-warehouse"></a>banco de dados tempdb no Parallel Data Warehouse
-**tempdb** é um banco de dados de sistema do PDW do SQL Server que armazena as tabelas temporárias locais para bancos de dados do usuário. Tabelas temporárias são geralmente usadas para melhorar o desempenho da consulta. Por exemplo, você pode usar uma tabela temporária para modularizar um script e reutilizar dados computados.  
+# <a name="tempdb-database-in-parallel-data-warehouse"></a>banco de dados tempdb em paralelo data warehouse
+**tempdb** é um banco de dados do sistema SQL Server PDW que armazena tabelas temporárias locais para bancos de dados de usuário. As tabelas temporárias são geralmente usadas para melhorar o desempenho da consulta. Por exemplo, você pode usar uma tabela temporária para modularizar um script e reutilizar dados computados.  
   
 Para obter mais informações sobre bancos de dados do sistema, consulte [bancos de dados do sistema](system-databases.md).  
   
 ## <a name="Basics"></a>Principais termos e conceitos  
 *tabela temporária local*  
-Um *tabelas temporárias locais* usa o prefixo # antes do nome da tabela e é uma tabela temporária criada por uma sessão de usuário local. Cada sessão só pode acessar os dados em tabelas temporárias locais para sua própria sessão.  
+Uma *tabela temporária local* usa o prefixo # antes do nome da tabela e é uma tabela temporária criada por uma sessão de usuário local. Cada sessão só pode acessar os dados em tabelas temporárias locais para sua própria sessão.  
   
-Cada sessão pode exibir os metadados para tabelas temporárias locais em todas as sessões. Por exemplo, todas as sessões podem exibir os metadados para todas as tabelas temporárias locais com o `SELECT * FROM tempdb.sys.tables` consulta.  
+Cada sessão pode exibir os metadados para tabelas temporárias locais em todas as sessões. Por exemplo, todas as sessões podem exibir os metadados de todas as tabelas temporárias `SELECT * FROM tempdb.sys.tables` locais com a consulta.  
   
 tabela temporária global  
-*Tabelas temporárias globais*, com suporte no SQL Server com o # # sintaxe, não têm suporte nesta versão do SQL Server PDW.  
+As *tabelas temporárias globais*, com suporte na SQL Server com a sintaxe # #, não têm suporte nesta versão do SQL Server PDW.  
   
 pdwtempdb  
-**pdwtempdb** é o banco de dados que armazena as tabelas temporárias locais.  
+**pdwtempdb** é o banco de dados que armazena tabelas temporárias locais.  
   
-PDW não implementa tabelas temporárias, usando o SQL Server**tempdb** banco de dados. Em vez disso, o PDW armazena-os em um banco de dados chamado pdwtempdb. Este banco de dados existe em cada nó de computação e é invisível para o usuário por meio de interfaces PDW. No Console do administrador, na página de armazenamento, você verá essas contabilizado para em um banco de dados do sistema do PDW chamado **tempdb sql**.  
+O PDW não implementa tabelas temporárias usando o banco de dados SQL Server**tempdb** . Em vez disso, o PDW as armazena em um banco de dados chamado pdwtempdb. Esse banco de dados existe em cada nó de computação e é invisível para o usuário por meio das interfaces do PDW. No console de administração, na página armazenamento, você verá isso em um banco de dados do sistema PDW chamado **tempdb-SQL**.  
   
 tempdb  
-**tempdb** é o banco de dados do tempdb do SQL Server. Ele usa o registro em log mínimo. SQL Server usa o tempdb em nós de computação para armazenar tabelas temporárias que ele precisa durante a execução de operações do SQL Server.  
+**tempdb** é o banco de dados SQL Server tempdb. Ele usa o registro em log mínimo. O SQL Server usa tempdb nos nós de computação para armazenar tabelas temporárias necessárias no decorrer da realização de operações de SQL Server.  
   
-SQL Server PDW descarta tabelas do **tempdb** quando:  
+SQL Server PDW descarta as tabelas do **tempdb** quando:  
   
--   A instrução DROP TABLE for executada.  
+-   A instrução DROP TABLE é executada.  
   
--   Uma sessão é desconectada. Somente as tabelas temporárias para a sessão serão descartadas.  
+-   Uma sessão está desconectada. Somente tabelas temporárias para a sessão são descartadas.  
   
--   O dispositivo é desligada.  
+-   O dispositivo está desligado.  
   
--   O nó de controle tem um cluster de failover.  
+-   O nó de controle tem um failover de cluster.  
   
 ## <a name="general-remarks"></a>Comentários gerais  
-SQL Server PDW executa as mesmas operações em tabelas temporárias e tabelas permanentes, a menos que explicitamente indicado em contrário. Por exemplo, os dados em tabelas temporárias locais, assim como tabelas permanentes, são distribuídos ou replicados em todos os nós de computação.  
+SQL Server PDW executa as mesmas operações em tabelas temporárias e tabelas permanentes, a menos que explicitamente declarado de outra forma. Por exemplo, os dados em tabelas temporárias locais, assim como as tabelas permanentes, são distribuídos ou replicados em todos os nós de computação.  
   
 ## <a name="LimitationsRestrictions"></a>Limitações e restrições  
-Limitações e restrições sobre o SQL Server PDW**tempdb** banco de dados. Você *não é possível:*  
+Limitações e restrições no banco de dados SQL Server PDW**tempdb** . Você *não pode:*  
   
--   Criar uma tabela temporária global que começa com # #.  
+-   Crie uma tabela temporária global que comece com # #.  
   
--   Execute um backup ou restauração da **tempdb**.  
+-   Execute um backup ou uma restauração de **tempdb**.  
   
--   Modificar as permissões para **tempdb** com o **GRANT**, **DENY**, ou **REVOGAR** instruções.  
+-   Modifique as permissões para **tempdb** com as instruções **Grant**, **Deny**ou **REVOKE** .  
   
 -   Execute **DBCC SHRINKLOG** para **tempdb**tempdb.  
   
--   Executar operações de DDL **tempdb**. Há duas exceções a isso. Para obter detalhes, consulte a seguinte lista de limitações e restrições em tabelas temporárias locais.  
+-   Execute operações DDL em **tempdb**. Há algumas exceções a isso. Para obter detalhes, consulte a lista de limitações e restrições em tabelas temporárias locais a seguir.  
   
-Limitações e restrições em tabelas temporárias locais. Você *não é possível:*  
+Limitações e restrições em tabelas temporárias locais. Você *não pode:*  
   
 -   Renomear uma tabela temporária  
   
--   Crie índices não clusterizados, exibições ou partições em uma tabela temporária. **ALTER INDEX** pode ser usado para recriar um índice clusterizado para uma tabela criada com um.  
+-   Crie partições, exibições ou índices não clusterizados em uma tabela temporária. **ALTER INDEX** pode ser usado para recriar um índice clusterizado para uma tabela criada com um.  
   
--   Modificar permissões em tabelas temporárias com GRANT, DENY ou REVOGAR as instruções.  
+-   Modifique as permissões para tabelas temporárias com as instruções GRANT, DENY ou REVOKE.  
   
--   Execute comandos do console de banco de dados em tabelas temporárias.  
+-   Execute comandos do console do banco de dados em tabelas temporárias.  
   
--   Use o mesmo nome para duas ou mais tabelas temporárias dentro do mesmo lote. Se mais de uma tabela temporária local for usada em um lote, cada uma precisará ter um nome exclusivo. Se várias sessões estão executando o mesmo lote e criando a mesma tabela temporária local, o SQL Server PDW acrescentará internamente um sufixo numérico ao nome de tabela temporária local para manter um nome exclusivo para cada tabela temporária local.  
+-   Use o mesmo nome para duas ou mais tabelas temporárias dentro do mesmo lote. Se mais de uma tabela temporária local for usada em um lote, cada uma precisará ter um nome exclusivo. Se várias sessões estiverem executando o mesmo lote e criando a mesma tabela temporária local, o SQL Server PDW acrescentará internamente um sufixo numérico ao nome da tabela temporária local para manter um nome exclusivo para cada tabela temporária local.  
   
 > [!NOTE]  
-> Você *podem* criar e atualizar as estatísticas em uma tabela temporária. **ALTER INDEX** pode ser usado para recriar um índice clusterizado.  
+> Você *pode* criar e atualizar estatísticas em uma tabela temporária. **ALTER INDEX** pode ser usado para recriar um índice clusterizado.  
   
 ## <a name="permissions"></a>Permissões  
 Qualquer usuário pode criar objetos temporários no tempdb. Os usuários podem acessar somente seus próprios objetos, a menos que recebam permissões adicionais. É possível revogar a permissão de conexão ao tempdb para impedir um usuário de usar tempdb, mas isto não é recomendado porque algumas operações rotineiras exigem o uso de tempdb.  
@@ -85,10 +85,10 @@ Qualquer usuário pode criar objetos temporários no tempdb. Os usuários podem 
   
 |Tarefas|Descrição|  
 |---------|---------------|  
-|Criar uma tabela no **tempdb**.|Você pode criar uma tabela temporária do usuário com as instruções CREATE TABLE e CREATE TABLE AS SELECT. Para obter mais informações, consulte [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md) e [CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).|  
-|Exibir uma lista de tabelas existentes no **tempdb**.|`SELECT * FROM tempdb.sys.tables;`|  
-|Exibir uma lista de colunas existentes no **tempdb**.|`SELECT * FROM tempdb.sys.columns;`|  
-|Exibir uma lista de objetos existentes no **tempdb**.|`SELECT * FROM tempdb.sys.objects;`|  
+|Crie uma tabela em **tempdb**.|Você pode criar uma tabela temporária de usuário com as instruções CREATE TABLE e CREATE TABLE como SELECT. Para obter mais informações, consulte [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md) e [CREATE TABLE como SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).|  
+|Exiba uma lista de tabelas existentes no **tempdb**.|`SELECT * FROM tempdb.sys.tables;`|  
+|Exiba uma lista de colunas existentes em **tempdb**.|`SELECT * FROM tempdb.sys.columns;`|  
+|Exiba uma lista de objetos existentes no **tempdb**.|`SELECT * FROM tempdb.sys.objects;`|  
   
 <!-- MISSING LINKS 
 ## See Also  

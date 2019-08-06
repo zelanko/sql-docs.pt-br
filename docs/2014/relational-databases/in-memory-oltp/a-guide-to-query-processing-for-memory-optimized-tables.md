@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a610c41fd9e3126bb0f5833dcacfe27ce969a72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468042"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811073"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Um guia para processamento de consulta de tabelas com otimização de memória
   O OLTP na memória incorpora as tabelas com otimização de memória e os procedimentos armazenados compilados nativamente no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Este artigo fornece uma visão geral do processamento de consulta para tabelas com otimização de memória e procedimentos armazenados compilados nativamente.  
@@ -77,7 +77,7 @@ Plano de consulta para a junção de tabelas com base em disco.
   
 -   As linhas da tabela Customer são recuperadas do índice clusterizado, que é a estrutura de dados primária e tem os dados de tabela completos.  
   
--   Os dados da tabela Order são recuperados usando o índice não clusterizado na coluna CustomerID. Esse índice contém a coluna CustomerID, que é usada para a junção, e a coluna de chave primária OrderID, que é retornada ao usuário. O retorno de colunas adicionais da tabela Order exigiria pesquisas no índice clusterizado da tabela Order.  
+-   Os dados da tabela de pedidos são recuperados usando o índice não clusterizado na coluna CustomerID. Esse índice contém a coluna CustomerID, que é usada para a junção, e a coluna de chave primária OrderID, que é retornada ao usuário. O retorno de colunas adicionais da tabela Order exigiria pesquisas no índice clusterizado da tabela Order.  
   
 -   O operador lógico `Inner Join` é implementado pelo operador físico `Merge Join`. Os outros tipos de junção física são `Nested Loops` e `Hash Join`. O operador `Merge Join` aproveita o fato de que ambos os índices são classificados na coluna de junção CustomerID.  
   
@@ -114,7 +114,7 @@ Pipeline do processamento de consulta do SQL Server.
   
 6.  Os Métodos de Acesso recuperam as linhas das páginas de dados e de índice no pool de buffers e carregam as páginas do disco no pool de buffers conforme a necessidade.  
   
- Para a primeira consulta de exemplo, o mecanismo de execução solicita dos Métodos de Acesso as linhas no índice clusterizado em Customer e no índice não clusterizado em Order. Os Métodos de Acesso passam pelas estruturas de índice da árvore B para recuperar as linhas solicitadas. Nesse caso, todas as linhas são recuperadas como os planos de chamada para verificações de índice completo.  
+ Para o primeiro exemplo de consulta, o mecanismo de execução solicita linhas no índice clusterizado no cliente e o índice não clusterizado na ordem dos métodos de acesso. Os Métodos de Acesso passam pelas estruturas de índice da árvore B para recuperar as linhas solicitadas. Nesse caso, todas as linhas são recuperadas como os planos de chamada para verificações de índice completo.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Acesso do [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado a tabelas com otimização de memória  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] ad hoc também são conhecidos como [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Interpretado se refere ao fato de que o plano de consulta é interpretado pelo mecanismo de execução da consulta para cada operador no plano de consulta. O mecanismo de execução lê o operador e seus parâmetros e executa a operação.  
@@ -222,7 +222,7 @@ Execução de procedimentos armazenados compilados nativamente.
   
  A invocação de um procedimento armazenado originalmente compilado é descrita a seguir:  
   
-1.  O usuário emite uma `EXEC` *usp_myproc* instrução.  
+1.  O usuário emite uma `EXEC`instrução *usp_myproc* .  
   
 2.  O analisador extrai os parâmetros de nome e procedimento armazenado.  
   
@@ -255,7 +255,7 @@ GO
 ### <a name="query-operators-in-natively-compiled-stored-procedures"></a>Operadores de consulta nos procedimentos armazenados compilados nativamente  
  A tabela a seguir resume os operadores de consulta com suporte em procedimentos armazenados compilados nativamente:  
   
-|Operador|Consulta de exemplo|  
+|Operator|Consulta de exemplo|  
 |--------------|------------------|  
 |SELECT|`SELECT OrderID FROM dbo.[Order]`|  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`|  
