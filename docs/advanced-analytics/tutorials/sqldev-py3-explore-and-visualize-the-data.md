@@ -194,7 +194,7 @@ O procedimento armazenado retorna um objeto Python `figure` serializado como um 
   
 6.  O arquivo de saída é criado no diretório de trabalho do Python. Para exibir o gráfico, localize o diretório de trabalho do Python e abra o arquivo. A imagem a seguir mostra um gráfico salvo no computador cliente.
   
-    Valor da ![gorjeta versus valor da tarifa] Valor da (media/sqldev-python-sample-plot.png "gorjeta versus valor da tarifa") 
+    ![gorjeta versus valor da tarifa](media/sqldev-python-sample-plot.png "gorjeta versus valor da tarifa") 
 
 ## <a name="next-step"></a>Próxima etapa
 

@@ -233,14 +233,6 @@
                   href: big-data-cluster/reference-azdata-bdc-spark-statement.md
                 - name: bdc status
                   href: big-data-cluster/reference-azdata-bdc-status.md
-            - name: Notebook
-              items:
-                - name: notebook
-                  href: big-data-cluster/reference-azdata-notebook.md
-            - name: SQL
-              items:
-                - name: sql
-                  href: big-data-cluster/reference-azdata-sql.md
 - name: Continuidade de negócios
   items:
     - name: Visão geral
@@ -10479,7 +10471,7 @@
       items:
         - name: SQL Server >
           href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: Mecanismo de Banco de Dados >
+        - name: Mecanismo de banco de dados >
           href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
         - name: Segurança >
           href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
@@ -10491,7 +10483,7 @@
           href: 'https://aka.ms/sqldocsfeedback'
         - name: SQL Server >
           href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: Editar Documentação do SQL!
+        - name: Editar documentação do SQL!
           href: sql-server/sql-server-docs-contribute.md
     - name: Parceiros
       items:

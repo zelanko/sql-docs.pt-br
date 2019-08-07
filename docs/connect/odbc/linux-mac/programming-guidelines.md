@@ -7,14 +7,14 @@ ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
+author: v-makouz
 ms.author: genemi
-ms.openlocfilehash: f4ab43eb8fce50513ae5d9dd726a15223f0f722b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d87e39bcabeabe5c0ea5d5648456eded8ea75510
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264151"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742796"
 ---
 # <a name="programming-guidelines"></a>Diretrizes de programação
 
@@ -64,7 +64,7 @@ Os seguintes recursos não estão disponíveis nesta versão do driver ODBC em m
     -   SQL_COPT_SS_PERF_QUERY  
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
--   SQLBrowseConnect  
+-   SQLBrowseConnect (antes da versão 17,2)
 -   Tipos de intervalo de C, como SQL_C_INTERVAL_YEAR_TO_MONTH (documentado em [Identificadores e descritores de tipo de dados](https://msdn.microsoft.com/library/ms716351(VS.85).aspx))
 -   O valor SQL_CUR_USE_ODBC do atributo SQL_ATTR_ODBC_CURSORS da função SQLSetConnectAttr.
 
@@ -116,6 +116,12 @@ Para obter mais informações sobre ordenações e codificações, confira [Comp
 Há algumas diferenças de conversão de codificação entre o Windows e várias versões da biblioteca iconv no Linux e no macOS. Dados de texto na página de código 1255 (hebraico) têm um ponto de código (0xCA) que se comporta de forma diferente após a conversão em Unicode. No Windows, esse caractere converte no ponto de código UTF-16 de 0x05BA. Em macOS e Linux com versões de libiconv anteriores à 1.15, ele converte em 0x00CA. Em Linux com bibliotecas iconv que não dão suporte para a revisão de 2003 de Big5/CP950 (chamada `BIG5-2003`), caracteres adicionados com essa revisão não serão convertidos corretamente. Na página de código 932 (japonês, Shift-JIS), o resultado da decodificação não originalmente definido no padrão de codificação de caracteres também é diferente. Por exemplo, o byte 0x80 é convertido em U+0080 no Windows, mas pode se tornar U+30FB no Linux e no macOS, dependendo da versão iconv.
 
 No ODBC Driver 13 e 13.1, quando caracteres multibyte UTF-8 ou UTF-16 substitutos são divididos em buffers SQLPutData, isso resulta em dados corrompidos. Use buffers para transmitir SQLPutData que não terminem em codificações parciais de caracteres. Essa limitação foi removida com o ODBC Driver 17.
+
+## <a name="bkmk-openssl"></a>OpenSSL
+A partir da versão 17,4, o driver carrega o OpenSSL dinamicamente, o que permite que ele seja executado em sistemas que tenham a versão 1,0 ou 1,1 sem a necessidade de arquivos de driver separados. Quando várias versões do OpenSSL estiverem presentes, o driver tentará carregar a mais recente. O driver atualmente dá suporte a OpenSSL 1.0. x e 1.1. x
+
+> [!NOTE]  
+> Pode ocorrer um possível conflito se o aplicativo que usa o driver (ou um de seus componentes) estiver vinculado ou carregar dinamicamente uma versão diferente do OpenSSL. Se várias versões do OpenSSL estiverem presentes no sistema e o aplicativo o usar, é altamente recomendável que um tenha um cuidado extra para garantir que a versão carregada pelo aplicativo e o driver não sejam compatíveis, pois os erros podem corromper a memória e, portanto, Não serão necessariamente manifestados de maneiras óbvias ou consistentes.
 
 ## <a name="additional-notes"></a>Observações adicionais  
 

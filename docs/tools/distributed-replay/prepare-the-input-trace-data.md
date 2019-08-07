@@ -21,7 +21,7 @@ ms.locfileid: "67949992"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Antes de iniciar uma reprodução distribuída com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, é necessário preparar os dados de rastreamento de entrada iniciando o estágio de pré-processamento da ferramenta de administração de reprodução distribuída. No estágio de pré-processamento, o controlador de reprodução distribuída processa os dados de rastreamento e gera um arquivo intermediário:  
   
- ![Estágio de pré-processamento] do Distributed Replay (../../tools/distributed-replay/media/preprocess.gif "Estágio de pré-processamento") do Distributed Replay  
+ ![Estágio de pré-processamento](../../tools/distributed-replay/media/preprocess.gif "Estágio de pré-processamento")  
   
  Para obter mais informações sobre o estágio de pré-processamento, consulte [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
   
