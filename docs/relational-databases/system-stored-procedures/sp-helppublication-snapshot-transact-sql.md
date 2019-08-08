@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fa2697548212e3d5c27604533e69bbc07f480864
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8909396e7a7da39ed2ae27c475a154c58bad090
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137596"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771499"
 ---
-# <a name="sphelppublicationsnapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_helppublication_snapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Retorna informações sobre o Agente de Instantâneo para uma determinada publicação. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
@@ -38,12 +38,12 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o Publicador é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  *Publisher* não deve ser usado ao adicionar um artigo a uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
+>  o Publicador não deve ser usado ao adicionar um artigo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a um Publicador.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -51,18 +51,18 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID do Agente de Instantâneo.|  
 |**name**|**nvarchar(100)**|Nome do Agente de Instantâneo.|  
-|**publisher_security_mode**|**smallint**|O modo de segurança usado pelo agente ao se conectar ao Publicador que pode ser um dos seguintes:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows.|  
+|**publisher_security_mode**|**smallint**|O modo de segurança usado pelo agente ao se conectar ao Publicador que pode ser um dos seguintes:<br /><br /> **0**  =  autenticação[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = autenticação do Windows.|  
 |**publisher_login**|**sysname**|Logon usado na conexão com o Publicador.|  
-|**publisher_password**|**nvarchar(524)**|Por motivos de segurança, um valor de **\* \* \* \* \* \* \* \* \* \*** é sempre retornado.|  
+|**publisher_password**|**nvarchar(524)**|Por motivos de segurança, um valor de **\* \* \* \* \* ésempre\* retornado. \* \* \* \***|  
 |**job_id**|**uniqueidentifier**|ID exclusiva do trabalho de agente.|  
-|**job_login**|**nvarchar(512)**|É a conta de Windows na qual o Snapshot agent é executado, que é retornada no formato *domínio*\\*username*.|  
-|**job_password**|**sysname**|Por motivos de segurança, um valor de **\* \* \* \* \* \* \* \* \* \*** é sempre retornado.|  
+|**job_login**|**nvarchar(512)**|É a conta do Windows na qual o Snapshot Agent é executado, que é retornado no formato *domínio*\\*nome de usuário*.|  
+|**job_password**|**sysname**|Por motivos de segurança, um valor de **\* \* \* \* \* ésempre\* retornado. \* \* \* \***|  
 |**schedule_name**|**sysname**|Nome da agenda usado para esse trabalho do agente.|  
-|**frequency_type**|**int**|É a frequência de agendamento para execução do agente, que pode ser um dos valores a seguir.<br /><br /> **1** = uma vez<br /><br /> **2** = sob demanda<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = relativo ao mês<br /><br /> **64** = iniciar automaticamente<br /><br /> **128** = recorrente|  
-|**frequency_interval**|**int**|Os dias de execução do agente, que pode ter um destes valores.<br /><br /> **1** = domingo<br /><br /> **2** = segunda-feira<br /><br /> **3** = terça-feira<br /><br /> **4** = quarta-feira<br /><br /> **5** = quinta-feira<br /><br /> **6** = sexta-feira<br /><br /> **7** = sábado<br /><br /> **8** = dia<br /><br /> **9** = dias da semana<br /><br /> **10** = dias da semana|  
-|**frequency_subday_type**|**int**|É o tipo que define a frequência com que o agente é executado quando *frequency_type* é **4** (diariamente), e pode ser um destes valores.<br /><br /> **1** = na hora especificada<br /><br /> **2** = segundos<br /><br /> **4** = minutos<br /><br /> **8** = horas|  
-|**frequency_subday_interval**|**int**|Número de intervalos de *frequency_subday_type* que ocorre entre execuções programadas do agente.|  
-|**frequency_relative_interval**|**int**|É a que o agente é executado em um determinado mês quando *frequency_type* é **32** (mensal relativo), e pode ser um destes valores.<br /><br /> **1** = primeiro<br /><br /> **2** = segundo<br /><br /> **4** = terceiro<br /><br /> **8** = quarto<br /><br /> **16** = último|  
+|**frequency_type**|**int**|É a frequência de agendamento para execução do agente, que pode ser um dos valores a seguir.<br /><br /> **1** = uma vez<br /><br /> **2** = sob demanda<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = relativo mensal<br /><br /> **64** = inicialização automática<br /><br /> **128** = recorrente|  
+|**frequency_interval**|**int**|Os dias de execução do agente, que pode ter um destes valores.<br /><br /> **1** = domingo<br /><br /> **2** = segunda-feira<br /><br /> **3** = terça-feira<br /><br /> **4** = quarta-feira<br /><br /> **5** = quinta-feira<br /><br /> **6** = sexta-feira<br /><br /> **7** = sábado<br /><br /> **8** = dia<br /><br /> **9** = dias da semana<br /><br /> **10** = dias de semana|  
+|**frequency_subday_type**|**int**|É o tipo que define a frequência com que o agente é executado quando o *frequency_type* é **4** (diário) e pode ser um desses valores.<br /><br /> **1** = na hora especificada<br /><br /> **2** = segundos<br /><br /> **4** = minutos<br /><br /> **8** = horas|  
+|**frequency_subday_interval**|**int**|Número de intervalos de *frequency_subday_type* que ocorrem entre a execução agendada do agente.|  
+|**frequency_relative_interval**|**int**|É a semana em que o agente é executado em um determinado mês quando *frequency_type* é **32** (relativo mensal) e pode ser um desses valores.<br /><br /> **1** = primeiro<br /><br /> **2** = segundo<br /><br /> **4** = terceiro<br /><br /> **8** = quarto<br /><br /> **16** = última|  
 |**frequency_recurrence_factor**|**int**|Número de semanas ou meses entre execuções programadas do agente.|  
 |**active_start_date**|**int**|Data do primeiro agendamento de execução do agente, formatada como YYYYMMDD.|  
 |**active_end_date**|**int**|Data do último agendamento de execução do agente, formatada como YYYYMMDD.|  
@@ -76,7 +76,7 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
  **sp_help_publication_snapshot** é usado em todos os tipos de replicação.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa no publicador ou membros da **db_owner** banco de dados fixa do banco de dados de publicação podem executar **sp_help_publication_snapshot** .  
+ Somente os membros da função de servidor fixa **sysadmin** no Publicador ou membros da função de banco de dados fixa **db_owner** no banco de dados de publicação podem executar **sp_help_publication_snapshot**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   

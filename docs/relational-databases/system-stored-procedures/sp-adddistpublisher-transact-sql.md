@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 5c9cab9530a67b01274bf5d1bafa579199f0a4d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2190e31245cde19eca4c5a47f21ac48e12f57f53
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072777"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771394"
 ---
-# <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Configura um Publicador para usar um banco de dados de distribuição especificado. Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados. Observe que os procedimentos armazenados [sp_adddistributor &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) e [sp_adddistributiondb &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) deverão ter sido executados antes de usar isso armazenados procedimento.  
+  Configura um Publicador para usar um banco de dados de distribuição especificado. Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados. Observe que os procedimentos armazenados [sp_adddistributor &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) e [sp_adddistributiondb &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) devem ter sido executados antes de usar esse procedimento armazenado.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,64 +47,64 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'`É o nome do editor. o Publicador é **sysname**, sem padrão.  
   
-`[ @distribution_db = ] 'distribution_db'` É o nome do banco de dados de distribuição. *distributor_db* está **sysname**, sem padrão. Esse parâmetro é usado por agentes de replicação para conexão com o Publicador.  
+`[ @distribution_db = ] 'distribution_db'`É o nome do banco de dados de distribuição. *distributor_db* é **sysname**, sem padrão. Esse parâmetro é usado por agentes de replicação para conexão com o Publicador.  
   
-`[ @security_mode = ] security_mode` É o modo de segurança implementado. Esse parâmetro só é usado por agentes de replicação para se conectar ao publicador para assinaturas de atualização enfileirada ou com um não - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *security_mode* está **int**, e pode ser um destes valores.  
+`[ @security_mode = ] security_mode`É o modo de segurança implementado. Esse parâmetro é usado apenas pelos agentes de replicação para se conectar ao Publicador para assinaturas de atualização enfileiradas ou com um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não publicador. *security_mode* é **int**e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Agentes de replicação no Distribuidor usam a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conexão com o Publicador.|  
 |**1** (padrão)|Agentes de replicação no Distribuidor usam a Autenticação do Windows para conexão com o Publicador.|  
   
-`[ @login = ] 'login'` É o logon. Esse parâmetro é necessário se *security_mode* é **0**. *login* é **sysname**, com um padrão de NULL. Esse parâmetro é usado por agentes de replicação para conexão com o Publicador.  
+`[ @login = ] 'login'`É o logon. Esse parâmetro será necessário se *security_mode* for **0**. *login* é **sysname**, com um padrão de NULL. Esse parâmetro é usado por agentes de replicação para conexão com o Publicador.  
   
-`[ @password = ] 'password']` É a senha. *senha* está **sysname**, com um padrão NULL. Esse parâmetro é usado por agentes de replicação para conexão com o Publicador.  
+`[ @password = ] 'password']`É a senha. a *senha* é **sysname**, com um padrão de NULL. Esse parâmetro é usado por agentes de replicação para conexão com o Publicador.  
   
 > [!IMPORTANT]  
 >  Não use uma senha em branco. Use uma senha forte.  
   
-`[ @working_directory = ] 'working_directory'` É o nome do diretório de trabalho usado para armazenar dados e arquivos de esquema para a publicação. *working_directory* está **nvarchar (255)** e assume como padrão a pasta ReplData para essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por exemplo `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`. O nome deve ser especificado no formato UNC.  
+`[ @working_directory = ] 'working_directory'`É o nome do diretório de trabalho usado para armazenar dados e arquivos de esquema para a publicação. *working_directory* é **nvarchar (255)** e usa como padrão a pasta repldata para essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por exemplo. `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData` O nome deve ser especificado no formato UNC.  
 
- Para o banco de dados SQL Azure, use `\\<storage_account>.file.core.windows.net\<share>`.
+ Para o banco de dados SQL `\\<storage_account>.file.core.windows.net\<share>`do Azure, use.
 
-`[ @storage_connection_string = ] 'storage_connection_string'` É necessário para o banco de dados SQL. Use a chave de acesso no Portal do Azure em armazenamento > configurações.
+`[ @storage_connection_string = ] 'storage_connection_string'`É necessário para o banco de dados SQL. Use a chave de acesso do portal do Azure em configurações de > de armazenamento.
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
-`[ @trusted = ] 'trusted'` Esse parâmetro foi preterido e é fornecido para compatibilidade com versões anteriores. *confiável* está **nvarchar (5)** e defini-lo como qualquer coisa, exceto **falso** resultará em erro.  
+`[ @trusted = ] 'trusted'`Esse parâmetro foi preterido e é fornecido somente para fins de compatibilidade com versões anteriores. *Trusted* é **nvarchar (5)** e defini-lo como qualquer coisa, exceto **false** , resultará em um erro.  
   
-`[ @encrypted_password = ] encrypted_password` Definindo *encrypted_password* não é mais suportada. Tentativa de definir isso **bits** parâmetro **1** resultará em erro.  
+`[ @encrypted_password = ] encrypted_password`Não há mais suporte para a configuração de *encrypted_password* . A tentativa de definir esse parâmetro de **bit** como **1** resultará em um erro.  
   
-`[ @thirdparty_flag = ] thirdparty_flag` É quando o publicador é [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *thirdparty_flag* está **bit**, e pode ser um dos valores a seguir.  
+`[ @thirdparty_flag = ] thirdparty_flag`É quando o Publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]é. *thirdparty_flag* é **bit**e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**0** (padrão)|Banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**1**|Banco de dados diferente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-`[ @publisher_type = ] 'publisher_type'` Especifica o tipo de publicador quando o publicador não é [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* é sysname, e pode ser um dos valores a seguir.  
+`[ @publisher_type = ] 'publisher_type'`Especifica o tipo de Publicador quando o Publicador não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]estiver. *publisher_type* é sysname e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**MSSQLSERVER**<br /><br /> (padrão)|Especifica um Editor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|Especifica um Publicador Oracle padrão.|  
-|**ORACLE GATEWAY**|Especifica um Editor Oracle Gateway.|  
+|**GATEWAY ORACLE**|Especifica um Editor Oracle Gateway.|  
   
- Para obter mais informações sobre as diferenças entre um publicador Oracle e um publicador Oracle Gateway, consulte [configurar um publicador Oracle](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
+ Para obter mais informações sobre as diferenças entre um Publicador Oracle e um Publicador de gateway Oracle, consulte [configurar um Publicador Oracle](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_adddistpublisher** é usada pela replicação de instantâneo, replicação transacional e replicação de mesclagem.  
+ o **sp_adddistpublisher** é usado pela replicação de instantâneo, replicação transacional e replicação de mesclagem.  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistpublisher-tran_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_adddistpublisher**.  
+ Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_adddistpublisher**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar a publicação e a distribuição](../../relational-databases/replication/configure-publishing-and-distribution.md)   

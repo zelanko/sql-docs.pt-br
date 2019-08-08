@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cddc14c14054ecfa81a963d15a7a604e8d71d085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5684d80bc63fe543e54aa4c38d9f0a516b6334ff
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016535"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770674"
 ---
-# <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_changesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Altera as propriedades de uma assinatura push transacional ou de instantâneo ou uma assinatura pull envolvidas em uma replicação transacional de atualização em fila. Para alterar as propriedades de todos os outros tipos de assinaturas pull, use [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md). **sp_changesubscription** é executado no publicador do banco de dados de publicação.  
+  Altera as propriedades de uma assinatura push transacional ou de instantâneo ou uma assinatura pull envolvidas em uma replicação transacional de atualização em fila. Para alterar propriedades de todos os outros tipos de assinaturas pull, use [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md). **sp_changesubscription** é executado no Publicador do banco de dados de publicação.  
   
 > [!IMPORTANT]  
 >  Quando um Publicador é configurado com um Distribuidor remoto, os valores fornecidos para todos os parâmetros, inclusive *job_login* e *job_password*, são enviados ao Distribuidor como texto sem-formatação. Você deve criptografar a conexão entre o Publicador e seu Distribuidor remoto antes de executar esse procedimento armazenado. Para obter mais informações, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -48,53 +48,53 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação a ser alterada. *publicação*está **sysname**, sem padrão  
+`[ @publication = ] 'publication'`É o nome da publicação a ser alterada. a *publicação*é **sysname**, sem padrão  
   
-`[ @article = ] 'article'` É o nome do artigo a alterar. *artigo* está **sysname**, sem padrão.  
+`[ @article = ] 'article'`É o nome do artigo a ser alterado. o *artigo* é **sysname**, sem padrão.  
   
-`[ @subscriber = ] 'subscriber'` É o nome do assinante. *assinante* está **sysname**, sem padrão.  
+`[ @subscriber = ] 'subscriber'`É o nome do Assinante. o assinante é **sysname**, sem padrão.  
   
-`[ @destination_db = ] 'destination_db'` É o nome do banco de dados de assinatura. *destination_db* está **sysname**, sem padrão.  
+`[ @destination_db = ] 'destination_db'`É o nome do banco de dados de assinatura. *destination_db* é **sysname**, sem padrão.  
   
-`[ @property = ] 'property'` É a propriedade a ser alterada para a assinatura fornecida. *propriedade* está **nvarchar (30)** , e pode ser um dos valores na tabela.  
+`[ @property = ] 'property'`É a propriedade a ser alterada para a assinatura fornecida. a *Propriedade* é **nvarchar (30)** e pode ser um dos valores na tabela.  
   
-`[ @value = ] 'value'` É o novo valor especificado *propriedade*. *valor* está **nvarchar (4000)** , e pode ser um dos valores na tabela.  
+`[ @value = ] 'value'`É o novo valor para a *Propriedade*especificada. o *valor* é **nvarchar (4000)** e pode ser um dos valores na tabela.  
   
 |Propriedade|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Logon para a conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o agente é executado.|  
 |**distrib_job_password**||Senha para a conta do Windows na qual o agente é executado.|  
-|**subscriber_catalog**||Catálogo a ser usado ao fazer uma conexão com o provedor OLE DB. Essa propriedade só é válida para não -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes.|  
-|**subscriber_datasource**||Nome da fonte de dados conforme entendido pelo provedor OLE DB. *Essa propriedade só é válida para não -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *assinantes.*|  
-|**subscriber_location**||Local do banco de dados conforme entendido pelo provedor OLE DB. *Essa propriedade só é válida para não -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *assinantes.*|  
+|**subscriber_catalog**||Catálogo a ser usado ao fazer uma conexão com o provedor OLE DB. Esta propriedade só é válida para[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não.|  
+|**subscriber_datasource**||Nome da fonte de dados conforme entendido pelo provedor OLE DB. *Esta propriedade só é válida para* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não *.*|  
+|**subscriber_location**||Local do banco de dados conforme entendido pelo provedor OLE DB. *Esta propriedade só é válida para* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não *.*|  
 |**subscriber_login**||Nome de logon no Assinante.|  
 |**subscriber_password**||Senha forte para o logon fornecido.|  
 |**subscriber_security_mode**|**1**|Use a Autenticação do Windows ao se conectar ao Assinante.|  
 ||**0**|Use Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao se conectar ao Assinante.|  
-|**subscriber_provider**||PROGID (identificador programático) exclusivo com o qual o provedor OLE DB para fonte de dados não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é registrado. *Essa propriedade só é válida para não -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *assinantes.*|  
-|**subscriber_providerstring**||Cadeia de conexão específica de provedor OLE DB que identifica a fonte de dados. *Essa propriedade só é válida para não -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *assinantes.*|  
-|**fluxos de assinatura**||É o número de conexões permitido por Agente de Distribuição para aplicar lotes de alterações em paralelo a um Assinante. Um intervalo de valores de **1** à **64** há suporte para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. Esta propriedade deve ser **0** para não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes, Publicadores Oracle ou assinaturas ponto a ponto.|  
+|**subscriber_provider**||PROGID (identificador programático) exclusivo com o qual o provedor OLE DB para fonte de dados não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é registrado. *Esta propriedade só é válida para* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não *.*|  
+|**subscriber_providerstring**||Cadeia de conexão específica de provedor OLE DB que identifica a fonte de dados. *Esta propriedade só é válida para* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não *.*|  
+|**SubscriptionStreams**||É o número de conexões permitido por Agente de Distribuição para aplicar lotes de alterações em paralelo a um Assinante. Há suporte para um intervalo de valores de **1** a **64** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. Essa propriedade deve ser **0** para[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não, Publicadores Oracle ou assinaturas ponto a ponto.|  
 |**subscriber_type**|**1**|Servidor de fontes de dados ODBC|  
 ||**3**|Provedor OLE DB|  
-|**memory_optimized**|**bit**|Indica que a assinatura dá suporte a tabelas com otimização de memória. *memory_optimized* está **bit**, onde 1 é igual a true (a assinatura dá suporte a tabelas com otimização de memória).|  
+|**memory_optimized**|**bit**|Indica que a assinatura dá suporte a tabelas com otimização de memória. *memory_optimized* é **bit**, em que 1 é igual a true (a assinatura dá suporte a tabelas com otimização de memória).|  
   
-`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o Publicador é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  *Publisher* não deve ser especificado para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
+>  o Publicador não deve ser especificado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um Publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_changesubscription** é usado em replicação de instantâneo e transacional.  
+ **sp_changesubscription** é usado em instantâneo e replicação transacional.  
   
- **sp_changesubscription** só pode ser usado para modificar as propriedades de assinaturas push ou pull envolvidas em replicação transacional de atualização enfileirada. Para alterar as propriedades de todos os outros tipos de assinaturas pull, use [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md).  
+ **sp_changesubscription** só pode ser usado para modificar as propriedades de assinaturas push ou assinaturas pull envolvidas na replicação transacional de atualização enfileirada. Para alterar propriedades de todos os outros tipos de assinaturas pull, use [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md).  
   
  Depois de alterar o logon ou a senha de um agente, você deve parar e reiniciar o agente antes que as alterações entrem em vigor.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_changesubscription**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_changesubscription**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   

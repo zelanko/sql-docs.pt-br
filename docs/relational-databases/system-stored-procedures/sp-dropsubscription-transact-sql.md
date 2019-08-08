@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 923f3cd5d94bbae8cc9c0eac9361eada0cd73194
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c752adc6ea3c97900956b64a026a5acd13899a98
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124767"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771381"
 ---
-# <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Descarta assinaturas para um artigo específico, publicação ou conjunto de assinaturas no Publicador. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
@@ -42,13 +42,13 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação associada. *publicação* está **sysname**, com um padrão NULL. Se **todos os**, todas as assinaturas para todas as publicações do assinante especificado serão canceladas. *publicação* é um parâmetro obrigatório.  
+`[ @publication = ] 'publication'`É o nome da publicação associada. a *publicação* é **sysname**, com um padrão de NULL. Se **todas**, todas as assinaturas de todas as publicações para o assinante especificado serão canceladas. a *publicação* é um parâmetro necessário.  
   
-`[ @article = ] 'article'` É o nome do artigo. *artigo* está **sysname**, com um valor padrão de NULL. Se **todos os**, especificado de assinaturas para todos os artigos para cada publicação e no assinante serão descartadas. Use **todos os** para publicações que permitem imediatas de atualização.  
+`[ @article = ] 'article'`É o nome do artigo. o *artigo* é **sysname**, com um valor padrão de NULL. Se **todas as**assinaturas, todos os artigos de cada publicação e assinante especificados forem removidos. Use **tudo** para publicações que permitem atualização imediata.  
   
-`[ @subscriber = ] 'subscribe_r'` É o nome do assinante que terá suas assinaturas descartadas. *assinante* está **sysname**, sem padrão. Se **todos os**, todas as assinaturas para todos os assinantes serão descartadas.  
+`[ @subscriber = ] 'subscribe_r'`É o nome do Assinante que terá suas assinaturas descartadas. o assinante é **sysname**, sem padrão. Se **todas**, todas as assinaturas de todos os assinantes forem descartadas.  
   
-`[ @destination_db = ] 'destination_db'` É o nome do banco de dados de destino. *destination_db* está **sysname**, com um padrão NULL. Se for NULL, todas as assinaturas daquele Assinante serão descartadas.  
+`[ @destination_db = ] 'destination_db'`É o nome do banco de dados de destino. *destination_db* é **sysname**, com um padrão de NULL. Se for NULL, todas as assinaturas daquele Assinante serão descartadas.  
   
 `[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -58,7 +58,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_dropsubscription** é usado em replicação de instantâneo e transacional.  
+ **sp_dropsubscription** é usado em instantâneo e replicação transacional.  
   
  Se você descartar a assinatura de um artigo em uma publicação de sincronização imediata, não poderá adicioná-la novamente, exceto se descartar as assinaturas em todos os artigos de publicação e os adicionar novamente, todos de uma vez.  
   
@@ -66,10 +66,10 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
  [!code-sql[HowTo#sp_droptransubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropsubscription-tran_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa, o **db_owner** função fixa de banco de dados ou o usuário que criou a assinatura pode executar **sp_dropsubscription**.  
+ Somente os membros da função de servidor fixa **sysadmin** , a função de banco de dados fixa **db_owner** ou o usuário que criou a assinatura podem executar **sp_dropsubscription**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Excluir uma assinatura Push](../../relational-databases/replication/delete-a-push-subscription.md)   
+ [Excluir uma assinatura push](../../relational-databases/replication/delete-a-push-subscription.md)   
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  

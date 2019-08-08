@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d18282229ec2f481aaab91aff8273bd9b3e72a34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 42b56712e8b441184d55bf12ce16dbcb55930374
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68090059"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68762777"
 ---
-# <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Altera as opções para um Assinante. Qualquer tarefa de distribuição para os Assinantes deste Publicador será atualizada. Esse procedimento armazenado grava os **MSsubscriber_info** tabela no banco de dados de distribuição. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
+  Altera as opções para um Assinante. Qualquer tarefa de distribuição para os Assinantes deste Publicador será atualizada. Esse procedimento armazenado grava na tabela **MSsubscriber_info** no banco de dados de distribuição. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,21 +56,21 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @subscriber = ] 'subscriber'` É o nome do assinante no qual alterar as opções. *assinante* está **sysname**, sem padrão.  
+`[ @subscriber = ] 'subscriber'`É o nome do Assinante no qual as opções serão alteradas. o assinante é **sysname**, sem padrão.  
   
-`[ @type = ] type` É o tipo de assinante. *tipo de* está **tinyint**, com um padrão NULL. **0** indica uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinante. **1** Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou em outro servidor de origem de dados ODBC assinante.  
+`[ @type = ] type`É o tipo de assinante. o *tipo* é **tinyint**, com um padrão de NULL. **0** indica um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinante. **1** especifica um assinante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de servidor de fonte de dados ODBC não ou outro.  
   
-`[ @login = ] 'login'` É o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID de logon de autenticação. *login* é **sysname**, com um padrão de NULL.  
+`[ @login = ] 'login'`É a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID de logon de autenticação. *login* é **sysname**, com um padrão de NULL.  
   
-`[ @password = ] 'password'` É o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senha de autenticação. *senha* está **sysname**, com um padrão de **%** . **%** indica que nenhuma alteração para a propriedade de senha.  
+`[ @password = ] 'password'`É a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senha de autenticação. a *senha* é **sysname**, com um padrão **%** de. **%** indica que não há nenhuma alteração na propriedade password.  
   
-`[ @commit_batch_size = ] commit_batch_size` Suporte para compatibilidade com versões anteriores.  
+`[ @commit_batch_size = ] commit_batch_size`Com suporte apenas para compatibilidade com versões anteriores.  
   
-`[ @status_batch_size = ] status_batch_size` Suporte para compatibilidade com versões anteriores.  
+`[ @status_batch_size = ] status_batch_size`Com suporte apenas para compatibilidade com versões anteriores.  
   
-`[ @flush_frequency = ] flush_frequency` Suporte para compatibilidade com versões anteriores.  
+`[ @flush_frequency = ] flush_frequency`Com suporte apenas para compatibilidade com versões anteriores.  
   
-`[ @frequency_type = ] frequency_type` É a frequência de agendamento da tarefa de distribuição. *frequency_type* está **int**, e pode ser um destes valores.  
+`[ @frequency_type = ] frequency_type`É a frequência com a qual agendar a tarefa de distribuição. *frequency_type* é **int**e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -83,9 +83,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**64**|Iniciar automaticamente|  
 |**128**|Recorrente|  
   
-`[ @frequency_interval = ] frequency_interval` É o intervalo de *frequency_type*. *frequency_interval* está **int**, com um padrão NULL.  
+`[ @frequency_interval = ] frequency_interval`É o intervalo para *frequency_type*. *frequency_interval* é **int**, com um padrão de NULL.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` É a data da tarefa de distribuição. Esse parâmetro é usado quando *frequency_type* é definido como **32** (mensal relativo). *frequency_relative_interval* está **int**, e pode ser um destes valores.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`É a data da tarefa de distribuição. Esse parâmetro é usado quando *frequency_type* é definido como **32** (relativo mensal). *frequency_relative_interval* é **int**e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -95,9 +95,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**8**|Quarto|  
 |**16**|Last|  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` É a frequência com que a tarefa de distribuição deve ser repetido durante o definido *frequency_type*. *frequency_recurrence_factor* está **int**, com um padrão NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`É a frequência com que a tarefa de distribuição deve ocorrer durante o *frequency_type*definido. *frequency_recurrence_factor* é **int**, com um padrão de NULL.  
   
-`[ @frequency_subday = ] frequency_subday` É a frequência de reagendamento durante o período definido. *frequency_subday* está **int**, e pode ser um destes valores.  
+`[ @frequency_subday = ] frequency_subday`É a frequência de reagendar durante o período definido. *frequency_subday* é **int**e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -106,29 +106,29 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**4**|Minuto|  
 |**8**|Hora|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` É o intervalo de *frequence_subday*. *frequency_subday_interval* está **int**, com um padrão NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`É o intervalo para *frequence_subday*. *frequency_subday_interval* é **int**, com um padrão de NULL.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` É a hora do dia quando a tarefa de distribuição é o primeira agendada, formatada como HHMMSS. *active_start_time_of_day* está **int**, com um padrão NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day`É a hora do dia em que a tarefa de distribuição é agendada pela primeira vez, formatada como HHMMSS. *active_start_time_of_day* é **int**, com um padrão de NULL.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` É a hora do dia em que a tarefa de distribuição deixa de ser agendado, formatada como HHMMSS. *active_end_time_of_day*está **int**, com um padrão NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day`É a hora do dia em que a tarefa de distribuição para de ser agendada, formatada como HHMMSS. *active_end_time_of_day*é **int**, com um padrão de NULL.  
   
-`[ @active_start_date = ] active_start_date` É a data quando a tarefa de distribuição é primeiro agendada, formatada como AAAAMMDD. *active_start_date* está **int**, com um padrão NULL.  
+`[ @active_start_date = ] active_start_date`É a data em que a tarefa de distribuição é agendada pela primeira vez, formatada como AAAAMMDD. *active_start_date* é **int**, com um padrão de NULL.  
   
-`[ @active_end_date = ] active_end_date` É a data em que a tarefa de distribuição deixa de ser agendado, formatada como AAAAMMDD. *active_end_date*está **int**, com um padrão NULL.  
+`[ @active_end_date = ] active_end_date`É a data em que a tarefa de distribuição para de ser agendada, formatada como AAAAMMDD. *active_end_date*é **int**, com um padrão de NULL.  
   
-`[ @description = ] 'description'` É uma descrição de texto opcional. *Descrição* está **nvarchar (255)** , com um padrão NULL.  
+`[ @description = ] 'description'`É uma descrição de texto opcional. a *Descrição* é **nvarchar (255)** , com um padrão de NULL.  
   
-`[ @security_mode = ] security_mode` É o modo de segurança implementado. *security_mode* está **int**, e pode ser um destes valores.  
+`[ @security_mode = ] security_mode`É o modo de segurança implementado. *security_mode* é **int**e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticação|  
 |**1**|Autenticação do Windows|  
   
-`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o Publicador é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  *Publisher* não deve ser usado ao alterar as propriedades do artigo em uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
+>  o Publicador não deve ser usado ao alterar as propriedades [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do artigo em um Publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -137,7 +137,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  **sp_changesubscriber** é usado em todos os tipos de replicação.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_changesubscriber**.  
+ Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_changesubscriber**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   

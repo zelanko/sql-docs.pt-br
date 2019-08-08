@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1389e76d4e679a3ee16c548bf752d5668dfa48b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 078cb7f1607e6af94756d43efc2e6d21fbada52c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075669"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68762344"
 ---
-# <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Marca uma assinatura pull transacional ou anônima para reinicialização da próxima vez que o Agente de Distribuição for executado. Esse procedimento armazenado é executado no Assinante, no banco de dados de assinatura pull.  
   
@@ -39,31 +39,31 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'`É o nome do Publicador. o Publicador é **sysname**, sem padrão.  
   
-`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados publicador. *publisher_db* está **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, sem padrão.  
   
-`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, com um padrão de all, que marca todas as assinaturas para reinicialização.  
+`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão de todos, que marca todas as assinaturas para reinicialização.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_reinitpullsubscription** é usado em replicação transacional.  
+ **sp_reinitpullsubscription** é usado na replicação transacional.  
   
- **sp_reinitpullsubscription** não há suporte para replicação transacional ponto a ponto.  
+ **sp_reinitpullsubscription** não tem suporte para replicação transacional ponto a ponto.  
   
- **sp_reinitpullsubscription** pode ser chamado do assinante para reinicializar a assinatura, durante a próxima execução do Distribution Agent.  
+ **sp_reinitpullsubscription** pode ser chamado do assinante para reinicializar a assinatura, durante a próxima execução do agente de distribuição.  
   
- Assinaturas para publicações criadas com um valor de **falsos** para **@immediate_sync** não podem ser reiniciadas no assinante.  
+ As assinaturas para publicações criadas com um valor de **false** para **@immediate_sync** não podem ser reinicializadas do Assinante.  
   
- Você pode reinicializar uma assinatura pull executando qualquer um dos **sp_reinitpullsubscription** no assinante ou **sp_reinitsubscription** no publicador.  
+ Você pode reinicializar uma assinatura pull executando **sp_reinitpullsubscription** no Assinante ou **sp_reinitsubscription** no Publicador.  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_reinitpullsubscription**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_reinitpullsubscription**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Reinicializar uma assinatura](../../relational-databases/replication/reinitialize-a-subscription.md)   

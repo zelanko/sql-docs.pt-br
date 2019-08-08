@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fd7a493a3126aecbf816d364e5b7497f2bf494d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e87e542395c00797ce50b220ad8a6c981f43605a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084960"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771087"
 ---
-# <a name="sphelparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Retorna todas as colunas na tabela subjacente. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador. Para Editores Oracle, esse procedimento armazenado é executado no Distribuidor, em qualquer banco de dados.  
   
@@ -39,14 +39,14 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação que contém o artigo. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'`É o nome da publicação que contém o artigo. a *publicação* é **sysname**, sem padrão.  
   
-`[ @article = ] 'article'` É o nome do artigo que tem suas colunas retornadas. *artigo* está **sysname**, sem padrão.  
+`[ @article = ] 'article'`É o nome do artigo que tem suas colunas retornadas. o *artigo* é **sysname**, sem padrão.  
   
-`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o Publicador é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  *Publisher* não deve ser especificado quando o artigo solicitado é publicado por um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
+>  o Publicador não deve ser especificado quando o artigo solicitado é publicado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por um Publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (colunas que não são publicadas) ou **1** (colunas que são publicadas)  
@@ -55,19 +55,19 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**id da coluna**|**int**|Identificador para a coluna.|  
+|**ID da coluna**|**int**|Identificador para a coluna.|  
 |**column**|**sysname**|Nome da coluna.|  
-|**Publicado**|**bit**|Se a coluna for publicada:<br /><br /> **0** = Não<br /><br /> **1** = Sim|  
-|**tipo de publicador**|**sysname**|Tipo de dados da coluna no Publicador.|  
+|**Checked**|**bit**|Se a coluna for publicada:<br /><br /> **0** = Não<br /><br /> **1** = Sim|  
+|**tipo de editor**|**sysname**|Tipo de dados da coluna no Publicador.|  
 |**tipo de assinante**|**sysname**|Tipo de dados da coluna no Assinante.|  
   
 ## <a name="remarks"></a>Comentários  
- **sp_helparticlecolumns** é usado em replicação de instantâneo e transacional.  
+ **sp_helparticlecolumns** é usado em instantâneo e replicação transacional.  
   
  **sp_helparticlecolumns** é útil para verificar uma partição vertical.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa, o **db_owner** função fixa de banco de dados ou a lista de acesso à publicação para a publicação atual pode executar **sp_helparticlecolumns**.  
+ Somente os membros da função de servidor fixa **sysadmin** , a função de banco de dados fixa **db_owner** ou a lista de acesso à publicação para a publicação atual podem executar **sp_helparticlecolumns**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Definir e modificar um filtro de coluna](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4c9d0a82422675c9698d7216b92e1c9401392a79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f5ee076163ff3cf0f69daab7ceff115bf5876a6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004825"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769017"
 ---
-# <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_article_validation-transact-sql"></a>sp_article_validation (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Inicia uma solicitação de validação de dados para o artigo especificado. Esse procedimento armazenado é executado no Publicador no banco de dados de publicação e no Assinante, no banco de dados de assinatura.  
   
@@ -44,50 +44,50 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação na qual o artigo existe. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'`É o nome da publicação na qual o artigo existe. a *publicação* é **sysname**, sem padrão.  
   
-`[ @article = ] 'article'` É o nome do artigo para validar. *artigo* está **sysname**, sem padrão.  
+`[ @article = ] 'article'`É o nome do artigo a ser validado. o *artigo* é **sysname**, sem padrão.  
   
-`[ @rowcount_only = ] type_of_check_requested` Especifica se apenas o número de linhas da tabela é retornado. *type_of_check_requested* está **smallint**, com um padrão de **1**.  
+`[ @rowcount_only = ] type_of_check_requested`Especifica se apenas o número de linhas da tabela é retornado. *type_of_check_requested* é **smallint**, com um padrão de **1**.  
   
- Se **0**, execute um número de linhas e uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] soma de verificação compatível com 7.0.  
+ Se **0**, execute um número de linhas [!INCLUDE[msCoName](../../includes/msconame-md.md)] e uma soma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verificação compatível com 7,0.  
   
- Se **1**, executar apenas uma verificação de número de linhas.  
+ Se **1**, execute apenas uma verificação de número de linhas.  
   
- Se **2**, executar uma soma de verificação do número de linhas e binário.  
+ Se **2**, execute um número de linhas e uma soma de verificação binária.  
   
-`[ @full_or_fast = ] full_or_fast` O método é usado para calcular o número de linhas. *full_or_fast* está **tinyint**, e pode ser um destes valores.  
+`[ @full_or_fast = ] full_or_fast`É o método usado para calcular o número de linhas. *full_or_fast* é **tinyint**e pode ser um desses valores.  
   
 |**Valor**|**Descrição**|  
 |---------------|---------------------|  
-|**0**|Executa a contagem completa usando COUNT(*).|  
-|**1**|Executa uma contagem rápida de **sysindexes**. Contagem de linhas em **sysindexes** é mais rápido do que contar linhas na tabela atual. No entanto, **sysindexes** é atualizado com lentidão, e o número de linhas pode não ser preciso.|  
-|**2** (padrão)|Executa uma contagem rápida condicional tentando primeiro o método rápido. Se o método rápido mostrar diferenças, reverterá ao método completo. Se *expected_rowcount* for NULL e o procedimento armazenado estiver sendo usado para obter o valor, um COUNT(*) completo sempre será usado.|  
+|**0**|Executa a contagem completa usando COUNT (*).|  
+|**1**|Executa a contagem rápida de **sysindexes. Rows**. A contagem de linhas em **sysindexes** é mais rápida do que a contagem de linhas na tabela real. No entanto, o **sysindexes** é atualizado lentamente e o número de linhas pode não ser preciso.|  
+|**2** (padrão)|Executa a contagem rápida condicional experimentando primeiro o método rápido. Se o método rápido mostrar diferenças, reverterá ao método completo. Se *expected_rowcount* for nulo e o procedimento armazenado estiver sendo usado para obter o valor, uma contagem completa (*) sempre será usada.|  
   
-`[ @shutdown_agent = ] shutdown_agent` Especifica se o Distribution agent deve desligado imediatamente após a conclusão da validação. *shutdown_agent* está **bit**, com um padrão de **0**. Se **0**, o agente de distribuição não é desligado. Se **1**, o Distribution Agent desligará após o artigo é validado.  
+`[ @shutdown_agent = ] shutdown_agent`Especifica se o Distribution Agent deve desligar imediatamente após a conclusão da validação. *shutdown_agent* é **bit**, com um padrão de **0**. Se for **0**, o agente de distribuição não será desligado. Se **1**, o agente de distribuição será desligado depois que o artigo for validado.  
   
-`[ @subscription_level = ] subscription_level` Especifica se a validação é captada por um conjunto de assinantes. *subscription_level* está **bit**, com um padrão de **0**. Se **0**, validação é aplicada a todos os assinantes. Se **1**, validação é aplicada somente a um subconjunto de assinantes especificado por chamadas para **sp_marksubscriptionvalidation** na transação aberta atual.  
+`[ @subscription_level = ] subscription_level`Especifica se a validação é selecionada por um conjunto de assinantes. *subscription_level* é **bit**, com um padrão de **0**. Se **0**, a validação será aplicada a todos os assinantes. Se **1**, a validação será aplicada somente a um subconjunto dos assinantes especificados por chamadas para **sp_marksubscriptionvalidation** na transação aberta atual.  
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o Publicador é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  *Publisher* não deve ser usado ao solicitar uma validação em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
+>  o Publicador não deve ser usado ao solicitar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] validação em um Publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_article_validation** é usado em replicação transacional.  
+ **sp_article_validation** é usado na replicação transacional.  
   
- **sp_article_validation** faz com que as informações de validação sejam coletadas no artigo especificado e envia uma solicitação de validação para o log de transações. Quando o Distribution Agent recebe essa solicitação, compara as informações de validação da solicitação com a tabela do Assinante. Os resultados de validação são exibidos no Replication Monitor e em alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+ **sp_article_validation** faz com que informações de validação sejam coletadas no artigo especificado e posta uma solicitação de validação para o log de transações. Quando o Distribution Agent recebe essa solicitação, compara as informações de validação da solicitação com a tabela do Assinante. Os resultados de validação são exibidos no Replication Monitor e em alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="permissions"></a>Permissões  
- Somente usuários com permissões SELECIONAM ALL na tabela de origem para o artigo que está sendo validado pode executar **sp_article_validation**.  
+ Somente os usuários com permissões selecionar tudo na tabela de origem do artigo que está sendo validado podem executar **sp_article_validation**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Validar os dados replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
+ [Validar dados replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
  [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
  [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   

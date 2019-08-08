@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 83d5789fed1ee9ff8d92d549feeb1ae47a8ed38c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9b4df50d1cf43ba1b0f4eb8b8f313634b4d11d18
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048229"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771539"
 ---
-# <a name="sphelptracertokens-transact-sql"></a>sp_helptracertokens (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_helptracertokens-transact-sql"></a>sp_helptracertokens (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada token de rastreamento que foi inserido em uma publicação para determinar latência. Esse procedimento armazenado é executado no Publicador, no banco de dados de publicação, ou no Distribuidor, no banco de dados de distribuição.  
   
@@ -39,14 +39,14 @@ sp_helptracertokens [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação na qual rastreamento tokens foram inseridos. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'`É o nome da publicação na qual os tokens de rastreamento foram inseridos. a *publicação* é **sysname**, sem padrão.  
   
-`[ @publisher = ] 'publisher'` O nome do publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'`O nome do Publicador. o Publicador é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]
->  Esse parâmetro só deve ser especificado para não - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores.  
+>  Esse parâmetro só deve ser especificado para não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores.  
   
-`[ @publisher_db = ] 'publisher_db'` O nome do banco de dados de publicação. *publisher_db* está **sysname**, com um valor padrão de NULL. Esse parâmetro será ignorado se o procedimento armazenado for executado no Publicador.  
+`[ @publisher_db = ] 'publisher_db'`O nome do banco de dados de publicação. *publisher_db* é **sysname**, com um valor padrão de NULL. Esse parâmetro será ignorado se o procedimento armazenado for executado no Publicador.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
@@ -59,15 +59,15 @@ sp_helptracertokens [ @publication = ] 'publication'
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_helptracertokens** é usado em replicação transacional.  
+ **sp_helptracertokens** é usado na replicação transacional.  
   
- **sp_helptracertokens** é usado para obter IDs de token de rastreamento ao executar [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md).  
+ **sp_helptracertokens** é usado para obter IDs de token de rastreamento ao executar o [Transact&#41;-SQL sp_helptracertokenhistory &#40;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md).  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-helptracertokens-tran_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa, o **db_owner** fixa a função de banco de dados no banco de dados de publicação, ou **db_owner** banco de dados fixo ou  **replmonitor** funções no banco de dados de distribuição podem executar **sp_helptracertokenhistory**.  
+ Somente os membros da função de servidor fixa **sysadmin** , a função de banco de dados fixa **db_owner** no banco de dados de publicação ou as funções de banco de dados fixas **db_owner** ou **replmonitor** no banco de dados de distribuição podem executar **sp_ helptracertokenhistory**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Medir a latência e validar as conexões para a replicação transacional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   

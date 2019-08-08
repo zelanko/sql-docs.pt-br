@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d8c931f4ec38fe6099afa6b098445dcdbc52b0be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: baf3281ade8e62b30f87e01a7024dc12d7032667
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68090006"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770911"
 ---
-# <a name="spreplqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_replqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Lista as mensagens de fila de uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fila ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] enfileiramento de mensagens para assinaturas de atualização em fila para uma publicação especificada. Se as filas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] forem usadas, esse procedimento armazenado será executado no banco de dados de assinatura. Se o Enfileiramento de Mensagens for usado, esse procedimento armazenado será executado no Distribuidor, no banco de dados de distribuição.  
+  Lista as mensagens de fila de [!INCLUDE[msCoName](../../includes/msconame-md.md)] uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fila [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou enfileiramento de mensagens para assinaturas de atualização enfileiradas em uma publicação especificada. Se as filas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] forem usadas, esse procedimento armazenado será executado no banco de dados de assinatura. Se o Enfileiramento de Mensagens for usado, esse procedimento armazenado será executado no Distribuidor, no banco de dados de distribuição.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,16 +41,16 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**, com um padrão NULL. O servidor deve ser configurado para publicação. NULL para todos os Publicadores.  
+`[ @publisher = ] 'publisher'`É o nome do Publicador. o Publicador é **sysname**, com um padrão de NULL. O servidor deve ser configurado para publicação. NULL para todos os Publicadores.  
   
-`[ @publisherdb = ] 'publisher_db' ]` É o nome do banco de dados de publicação. *publisher_db* está **sysname**, com um padrão NULL. NULL para todos os bancos de dados de publicação.  
+`[ @publisherdb = ] 'publisher_db' ]`É o nome do banco de dados de publicação. *publisher_db* é **sysname**, com um padrão de NULL. NULL para todos os bancos de dados de publicação.  
   
-`[ @publication = ] 'publication' ]` É o nome da publicação. *publicação*está **sysname**, com um padrão NULL. NULL para todas as publicações.  
+`[ @publication = ] 'publication' ]`É o nome da publicação. a *publicação*é **sysname**, com um padrão de NULL. NULL para todas as publicações.  
   
-`[ @tranid = ] 'tranid' ]` É a ID da transação. *tranid*está **sysname**, com um padrão NULL. NULL para todas as transações.  
+`[ @tranid = ] 'tranid' ]`É a ID da transação. *tranid*é **sysname**, com um padrão de NULL. NULL para todas as transações.  
   
- [ **@queuetype=** ] **'***queuetype***'** ]  
- É o tipo de fila que armazena transações. *queuetype* está **tinyint** com um padrão de **0**, e pode ser um destes valores.  
+ **[@queuetype=** ] **'***QueueType***'** ]  
+ É o tipo de fila que armazena transações. *QueueType* é **tinyint** com um padrão de **0**e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -62,10 +62,10 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_replqueuemonitor** é usado em replicação de instantâneo ou replicação transacional com assinaturas de atualização enfileirada. As mensagens em fila que não contêm comandos SQL ou são parte de um comando SQL abrangente não são exibidas.  
+ **sp_replqueuemonitor** é usado na replicação de instantâneo ou na replicação transacional com assinaturas de atualização enfileiradas. As mensagens em fila que não contêm comandos SQL ou são parte de um comando SQL abrangente não são exibidas.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_replqueuemonitor**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_replqueuemonitor**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   

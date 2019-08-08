@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 02d46b5df95335920dca9ef9cf80e9fa6dabb94f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bef68803beedbfdb0d6034b2a92665f033d9641
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124796"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768295"
 ---
-# <a name="spdropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_dropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Remove a designação do Assinante de um servidor registrado. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
@@ -42,7 +42,7 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @subscriber = ] 'subscriber'` É o nome do assinante a ser removido. *assinante* está **sysname**, sem padrão.  
+`[ @subscriber = ] 'subscriber'`É o nome do assinante a ser Descartado. o assinante é **sysname**, sem padrão.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -54,14 +54,14 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ## <a name="remarks"></a>Comentários  
  **sp_dropsubscriber** é usado em todos os tipos de replicação.  
   
- Esse procedimento armazenado remove o servidor **sub** opção e remove o mapeamento de logon remoto do administrador do sistema **repl_subscriber**.  
+ Esse procedimento armazenado remove **a opção de** servidor e remove o mapeamento de logon remoto do administrador do sistema para **repl_subscriber**.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_dropsubscriber**.  
+ Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_dropsubscriber**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Excluir uma assinatura Push](../../relational-databases/replication/delete-a-push-subscription.md)   
- [Excluir uma assinatura Pull](../../relational-databases/replication/delete-a-pull-subscription.md)   
+ [Excluir uma assinatura push](../../relational-databases/replication/delete-a-push-subscription.md)   
+ [Excluir uma assinatura pull](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
  [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   

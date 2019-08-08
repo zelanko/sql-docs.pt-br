@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7e6def32ab27560f68902470d0b7add715de665d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6059c4834c37c3c61227fdaf3c9ea3c94e1b5b9a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68090008"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770896"
 ---
-# <a name="spreplmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_replmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Retorna informações sobre o número de comandos pendentes de uma assinatura de publicação transacional e uma estimativa aproximada de quanto tempo é necessário para processá-las. Esse procedimento armazenado retorna uma linha para cada assinatura retornada. Esse procedimento armazenado, usado para monitorar a replicação, é executado no Distribuidor, no banco de dados de distribuição.  
   
@@ -42,22 +42,22 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` É o nome do publicador. *Publisher* está **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'`É o nome do Publicador. o Publicador é **sysname**, sem padrão.  
   
-`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados publicado. *publisher_db* está **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados publicado. *publisher_db* é **sysname**, sem padrão.  
   
-`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @subscriber = ] 'subscriber'` É o nome do assinante. *assinante* está **sysname**, sem padrão.  
+`[ @subscriber = ] 'subscriber'`É o nome do Assinante. o assinante é **sysname**, sem padrão.  
   
-`[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados de assinatura. *subscriber_db* está **sysname**, sem padrão.  
+`[ @subscriber_db = ] 'subscriber_db'`É o nome do banco de dados de assinatura. *subscriber_db* é **sysname**, sem padrão.  
   
-`[ @subscription_type = ] subscription_type` Se o tipo de assinatura. *publication_type* está **int**, sem padrão e pode ser um destes valores.  
+`[ @subscription_type = ] subscription_type`Se o tipo de assinatura. *publication_type* é **int**, sem padrão e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Assinatura push.|  
-|**1**|Assinatura Pull|  
+|**1**|Assinatura pull|  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -73,7 +73,7 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
  **sp_replmonitorsubscriptionpendingcmds** é usado com a replicação transacional.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa no distribuidor ou membros da **db_owner** banco de dados fixa no banco de dados de distribuição podem executar **SP _ replmonitorsubscriptionpendingcmds**. Listam de membros de acesso à publicação de uma publicação que usa o banco de dados de distribuição pode executar **sp_replmonitorsubscriptionpendingcmds** para retornar comandos pendentes para aquela publicação.  
+ Somente os membros da função de servidor fixa **sysadmin** no distribuidor ou membros da função de banco de dados fixa **db_owner** no banco de dados de distribuição podem executar **sp_replmonitorsubscriptionpendingcmds**. Os membros da lista de acesso à publicação para uma publicação que usa o banco de dados de distribuição podem executar **sp_replmonitorsubscriptionpendingcmds** para retornar comandos pendentes para essa publicação.  
   
 ## <a name="see-also"></a>Consulte também  
  [Monitorar programaticamente a replicação](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
