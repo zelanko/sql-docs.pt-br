@@ -1,7 +1,7 @@
 ---
 title: Opções de inicialização do serviço do Mecanismo de Banco de Dados | Microsoft Docs
 ms.custom: ''
-ms.date: 05/31/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 53c7ea706f9e886f147532bfbd3dd148a6ca7d1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91f6f88255fb45e101484637f1db823660796475
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011974"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68763227"
 ---
 # <a name="database-engine-service-startup-options"></a>Opções de inicialização do serviço Mecanismo de Banco de Dados
 
@@ -82,8 +82,9 @@ As opções de inicialização designam certos locais de arquivos necessários d
  Você pode desejar usar algumas opções de inicialização sempre que iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essas opções, como inicialização com um sinalizador de rastreamento, são mais fáceis com a configuração dos parâmetros de inicialização usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Essas ferramentas salvam as opções de inicialização como chaves do Registro, habilitando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para sempre ser iniciado com as opções de inicialização.  
   
 ## <a name="compatibility-support"></a>Suporte de compatibilidade  
- Não há suporte para o parâmetro **-h**  no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Este parâmetro foi usado em versões anteriores de instâncias de 32 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para reservar espaço de endereço de memória virtual para metadados de inclusão de memória a quente quando AWE é habilitado. Para obter mais informações, veja [Recursos descontinuados do SQL Server no SQL Server 2016](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  
-  
+
+Para ver opções que foram removidas de versões anteriores, confira [Aplicativo sqlservr](../../tools/sqlservr-application.md#compatibility-support).
+
 ## <a name="related-tasks"></a>Related Tasks  
 [Configurar a opção de configuração do servidor scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)  
 [Iniciar, parar, pausar, retomar, reiniciar o Mecanismo de Banco de Dados, o SQL Server Agent ou o serviço SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)

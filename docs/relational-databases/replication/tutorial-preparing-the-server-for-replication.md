@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1900d3d447dd7974fb9afbbd83f17ca375bfbe81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 212782574ffa5cc603a8b7c28a9ced3d34d89a50
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895438"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742940"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Tutorial: Preparar o SQL Server para replicação (editor, distribuidor, assinante)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -212,7 +212,7 @@ Se a instância do SQL Server Management Studio estiver sendo executada com dire
 >[!NOTE]
 > Se o SQL Agent não for visivelmente iniciado, clique com o botão direito do mouse no SQL Server Agent no SSMS e selecione **Atualizar**. Se ele ainda estiver em um estado interrompido, você precisará iniciá-lo manualmente no SQL Server Configuration Manager.    
   
-### <a name="set-database-permissions-at-the-publisher"></a>Definir permissões de banco de dados no editor  
+## <a name="set-database-permissions"></a>Definir permissões do banco de dados  
   
 1. No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Segurança**, clique com o botão direito do mouse em **Logons** e, em seguida, selecione **Novo Logon**:  
 
@@ -233,6 +233,8 @@ Se a instância do SQL Server Management Studio estiver sendo executada com dire
 5. Repita as etapas 1 a 4 para criar um logon para outras contas locais (repl_distribution, repl_logreader e repl_merge). Esses logons também devem ser mapeados para usuários que são membros da função de banco de dados fixa **db_owner** nos bancos de dados de **distribuição** e **AdventureWorks**.  
 
    ![Exibição de todas as quatro contas no Pesquisador de Objetos](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
+   
+ 6. Repita as etapas de 1 a 4 no assinante para o agente de distribuição e o agente de mesclagem, alterando o nome do computador para o do assinante. 
   
   
 Para obter mais informações, consulte:

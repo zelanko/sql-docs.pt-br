@@ -1,6 +1,6 @@
 ---
 title: Documentação do SQL Server | Microsoft Docs
-ms.date: 08/12/2018
+ms.date: 08/02/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -20,12 +20,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
 monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d925fcbdb80ada3426b42d4dcb413937f4d3953
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 824036a79897302411ec1a7026351832269511b3
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136337"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771598"
 ---
 # <a name="sql-server-documentation"></a>Documentação do SQL Server
 
@@ -109,7 +109,7 @@ O SQL Server 2014 e versões mais antigas, incluindo o SQL Server 2005, tem a do
 |||
 |-|-|
 |![Mecanismo do Banco de Dados SQL](../sql-server/media/sql-database-engine.png "Mecanismo do Banco de Dados SQL")|**[Mecanismo de Banco de Dados](../database-engine/sql-server-database-engine-overview.md)**<br /><br /> O Mecanismo de Banco de Dados é o serviço principal para armazenamento, processamento e segurança de dados. O Mecanismo de Banco de Dados fornece acesso controlado e processamento rápido de transações para atender aos requisitos dos aplicativos de consumo de dados mais exigentes dentro de sua empresa. O Mecanismo de Banco de Dados também fornece suporte rico para sustentar alta disponibilidade.|
-|![R Server](../sql-server/media/r-server.png "R Server")|**[Serviços de Machine Learning](../advanced-analytics/r-services/r-services.md)**<br /><br /> Os serviços do Microsoft Machine Learning dão suporte à integração de aprendizado de máquina em fluxos de trabalho da empresa usando as linguagens populares R e Python.<br /><br /> Os Serviços de Machine Learning (no banco de dados) integram R e Python com o SQL Server, facilitando a criação, a readaptação e a pontuação dos modelos ao chamar procedimentos armazenados.  O Microsoft Machine Learning Server dá suporte de nível corporativo para R e Python, sem a necessidade do SQL Server.|
+|![Serviços do Machine Learning](../sql-server/media/r-server.png "R Server")|**[Serviços de Machine Learning](../advanced-analytics/index.yml)**<br /><br /> Os Serviços do Machine Learning possibilitam executar scripts de Python e do R com dados relacionais. Você pode usar pacotes de software livre e da Microsoft para análise preditiva e aprendizado de máquina. Os scripts são executados no banco de dados sem mover dados para fora do SQL Server ou pela rede.|
 |![Integration Services](../sql-server/media/integration-services.png "Integration Services")|**[Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é uma plataforma para construir soluções para integração de dados de alto desempenho, inclui também pacotes que fornecem processamento de extração, transformação, e carregamento (ETL) para armazenamento de dados.|
 |![Analysis Services](../sql-server/media/analysis-services.png "Analysis Services")|**[Analysis Services](../analysis-services/analysis-services.md)**<br /><br /> O[!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] é uma plataforma de dados analíticos e um conjunto de ferramentas para pessoal, equipe e business intelligence corporativo. Os servidores e designers de cliente dão suporte a soluções OLAP tradicionais, novas soluções de modelagem de tabela, bem como análises de autoatendimento e colaboração por meio do [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], o Excel e um ambiente do SharePoint Server. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] também inclui Mineração de Dados para que você possa descobrir os padrões e as relações ocultas dentro de grandes volumes de dados.|    
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> O Reporting Services oferece a funcionalidade de relatórios corporativos habilitados para a Web.  É possível criar relatórios que se conectam a conteúdos de várias fontes de dados, publicar relatórios em diversos formatos e centralizar o gerenciamento de segurança e de assinaturas.|

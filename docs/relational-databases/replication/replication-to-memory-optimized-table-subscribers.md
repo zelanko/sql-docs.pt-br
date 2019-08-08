@@ -10,15 +10,16 @@ ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: df3f1e188593e3e193faed98b7932a3dffa1adde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b6ead290451c17499825f051158020b2b88b37b9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005359"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769659"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replicação para assinantes de tabela com otimização de memória
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   As tabelas que atuam como assinantes de replicação transacional e de instantâneo, com exceção da replicação transacional Ponto a Ponto, podem ser configuradas como tabelas com otimização de memória. Outras configurações de replicação não são compatíveis com tabelas com otimização de memória. Este recurso está disponível a partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
@@ -26,7 +27,7 @@ ms.locfileid: "68005359"
   
 -   **Configurar o banco de dados do assinante para oferecer suporte à replicação de tabelas com otimização de memória**  
   
-     Defina a propriedade **@memory_optimized** para **true** usando [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) ou [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md).  
+     Defina a propriedade **\@memory_optimized** para **true** usando [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) ou [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md).  
   
 -   **Configurar o artigo para oferecer suporte à replicação de tabelas com otimização de memória**  
   
@@ -38,7 +39,7 @@ ms.locfileid: "68005359"
   
 2.  Adicione artigos à publicação. Para obter mais informações, consulte [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-     Se a configuração que usa o [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** do **sp_addarticle** procedimento armazenado como   
+     Se a configuração usar [!INCLUDE[tsql](../../includes/tsql-md.md)], defina o parâmetro **\@schema_option** do procedimento armazenado **sp_addarticle** como   
     **0x40000000000**.  
   
 3.  Na janela de propriedades do artigo, defina **Habilitar Otimização de memória** como **true**.  
@@ -55,16 +56,16 @@ ms.locfileid: "68005359"
   
 1.  Vá para propriedades de assinatura no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e defina **Assinatura de Otimização de Memória** como **true**. As alterações não são aplicadas até a assinatura ser reiniciada.  
   
-     Se a configuração que usa o [!INCLUDE[tsql](../../includes/tsql-md.md)] definir o novo parâmetro **@memory_optimized** do **sp_addsubscription** como true.  
+     Se a configuração usar [!INCLUDE[tsql](../../includes/tsql-md.md)], defina o novo parâmetro **\@memory_optimized** do procedimento armazenado **sp_addsubscription** como true.  
   
 2.  Vá até as propriedades do artigo para uma publicação em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e defina a otimização **Habilitar memória** como true.  
   
-     Se a configuração que usa o [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** do **sp_addarticle** procedimento armazenado como   
+     Se a configuração usar [!INCLUDE[tsql](../../includes/tsql-md.md)], defina o parâmetro **\@schema_option** do procedimento armazenado **sp_addarticle** como   
     **0x40000000000**.  
   
 3.  Tabelas com otimização de memória não dão suporte a índices clusterizados. Para que a replicação trate disto, convertendo-o para um índice não clusterizado no destino, defina **Converter índice clusterizado em não clusterizado para artigo com otimização de memória** como true.  
   
-     Se a configuração que usa o [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** do **sp_addarticle** procedimento armazenado como  **0x0000080000000000**.  
+     Se a configuração usar [!INCLUDE[tsql](../../includes/tsql-md.md)], defina o parâmetro **\@schema_option** do procedimento armazenado **sp_addarticle** como  **0x0000080000000000**.  
   
 4.  Regenere o instantâneo.  
   

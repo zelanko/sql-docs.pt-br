@@ -1,7 +1,7 @@
 ---
-title: Ingestão de dados para um pool de dados do SQL Server
+title: Ingerir dados em um pool de dados do SQL Server
 titleSuffix: SQL Server big data clusters
-description: Este tutorial demonstra como ingestão de dados para o pool de dados de um cluster de big data do SQL Server 2019 (visualização).
+description: Este tutorial demonstra como ingerir dados no pool de dados de um cluster de Big Data do SQL Server 2019 (versão prévia).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,55 +9,55 @@ ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 626b5442596c5a0f9beedef779937cf875efff00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 178eceaf99d1f8c2b51f7079d0bdd406c2cb5eef
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957795"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670528"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: Ingestão de dados para um pool de dados do SQL Server com o Transact-SQL
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: Ingerir dados em um pool de dados do SQL Server com Transact-SQL
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este tutorial demonstra como usar o Transact-SQL para carregar dados do [pool de dados](concept-data-pool.md) de um cluster de big data do SQL Server 2019 (visualização). Com clusters de grandes dados do SQL Server, dados de uma variedade de fontes podem ser ingeridos e distribuídos entre instâncias do pool de dados.
+Este tutorial demonstra como usar Transact-SQL para carregar dados no [pool de dados](concept-data-pool.md) de um cluster de Big Data do SQL Server 2019 (versão prévia). Com os clusters de Big Data do SQL Server, os dados de uma variedade de fontes podem ser ingeridos e distribuídos entre as instâncias do pool de dados.
 
-Neste tutorial, você aprenderá como:
+Neste tutorial, você aprenderá a:
 
 > [!div class="checklist"]
-> * Crie uma tabela externa no pool de dados.
-> * Inseri dados de sequência de cliques de web de exemplo na tabela de pool de dados.
-> * Unir dados na tabela de pool de dados com tabelas locais.
+> * Criar uma tabela externa no pool de dados.
+> * Inserir exemplos de dados de cliques da Web na tabela do pool de dados.
+> * Unir dados na tabela do pool de dados com tabelas locais.
 
 > [!TIP]
-> Se você preferir, você pode baixar e executar um script para os comandos neste tutorial. Para obter instruções, consulte a [exemplos de pools de dados](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) no GitHub.
+> Se preferir, você poderá baixar e executar um script para os comandos neste tutorial. Para obter instruções, confira os [Exemplos de pools de dados](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) no GitHub.
 
 ## <a id="prereqs"></a> Pré-requisitos
 
-- [Ferramentas de big data](deploy-big-data-tools.md)
+- [Ferramentas de Big Data](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
-   - **Extensão do SQL Server de 2019**
-- [Carregar dados de exemplo no seu cluster de big data](tutorial-load-sample-data.md)
+   - **Extensão do SQL Server 2019**
+- [Carregar dados de exemplo em seu cluster de Big Data](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Criar uma tabela externa no pool de dados
 
-As seguintes etapas criam uma tabela externa no pool de dados chamado **web_clickstream_clicks_data_pool**. Esta tabela, em seguida, pode ser usada como um local para ingerir dados para o cluster de big data.
+As etapas a seguir criam uma tabela externa no pool de dados chamado **web_clickstream_clicks_data_pool**. Essa tabela pode ser usada como uma localização para ingerir dados no cluster de Big Data.
 
-1. No estúdio de dados do Azure, conecte-se à instância mestre do SQL Server do seu cluster de big data. Para obter mais informações, consulte [conectar-se a instância mestre do SQL Server](connect-to-big-data-cluster.md#master).
+1. No Azure Data Studio, conecte-se à instância mestre do SQL Server do cluster de Big Data. Para obter mais informações, confira [Conectar-se à instância mestre do SQL Server](connect-to-big-data-cluster.md#master).
 
-1. Clique duas vezes em que a conexão na **servidores** janela para mostrar o painel do servidor para a instância mestre do SQL Server. Selecione **nova consulta**.
+1. Clique duas vezes na conexão na janela **Servidores** para mostrar o painel do servidor da instância mestre do SQL Server. Selecione **Nova Consulta**.
 
-   ![Consulta de instância mestre do SQL Server](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
+   ![Consulta da instância mestre do SQL Server](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
 
-1. Execute o seguinte comando Transact-SQL para alterar o contexto para o **vendas** banco de dados na instância do mestre.
+1. Execute o seguinte comando Transact-SQL para alterar o contexto para o banco de dados **Vendas** na instância mestre.
 
    ```sql
    USE Sales
    GO
    ```
 
-1. Crie uma fonte de dados externa ao pool de dados se ele ainda não existir.
+1. Crie uma fonte de dados externos para o pool de dados se ela ainda não existir.
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
@@ -65,7 +65,7 @@ As seguintes etapas criam uma tabela externa no pool de dados chamado **web_clic
      WITH (LOCATION = 'sqldatapool://controller-svc/default');
    ```
 
-1. Criar uma tabela externa chamada **web_clickstream_clicks_data_pool** no pool de dados.
+1. Crie uma tabela externa chamada **web_clickstream_clicks_data_pool** no pool de dados.
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_tables WHERE name = 'web_clickstream_clicks_data_pool')
@@ -78,18 +78,18 @@ As seguintes etapas criam uma tabela externa no pool de dados chamado **web_clic
       );
    ```
   
-1. No CTP 3.1, a criação do pool de dados é assíncrona, mas não há nenhuma maneira de determinar quando ela for concluída ainda. Aguarde dois minutos verificar se que o pool de dados é criado antes de continuar.
+1. No CTP 3.1, a criação do pool de dados é assíncrona, mas ainda não há como determinar quando ele é concluído. Aguarde dois minutos para verificar se o pool de dados foi criado antes de continuar.
 
 ## <a name="load-data"></a>Carregar dados
 
-As etapas a seguir ingestão de dados de sequência de cliques de web de exemplo para o pool de dados usando a tabela externa criada nas etapas anteriores.
+As etapas a seguir ingerem exemplos de dados de cliques da Web no pool de dados usando a tabela externa criada nas etapas anteriores.
 
-1. Use uma `INSERT INTO` instrução para inserir os resultados da consulta no pool de dados (o **web_clickstream_clicks_data_pool** tabela externa).
+1. Use uma instrução `INSERT INTO` para inserir os resultados da consulta no pool de dados (a tabela externa **web_clickstream_clicks_data_pool**).
 
    ```sql
    INSERT INTO web_clickstream_clicks_data_pool
    SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
-     FROM sales.dbo.web_clickstreams_hdfs_parquet
+     FROM sales.dbo.web_clickstreams_hdfs
    INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
                            AND wcs_user_sk IS NOT NULL)
    GROUP BY wcs_user_sk, i_category_id
@@ -105,7 +105,7 @@ As etapas a seguir ingestão de dados de sequência de cliques de web de exemplo
 
 ## <a name="query-the-data"></a>Consultar os dados
 
-Junte-se os resultados armazenados da consulta no pool de dados com dados locais na **vendas** tabela.
+Una os resultados armazenados da consulta no pool de dados com os dados locais na tabela **Vendas**.
 
 ```sql
 SELECT TOP (100)
@@ -128,7 +128,7 @@ GROUP BY w.wcs_user_sk;
 
 ## <a name="clean-up"></a>Limpar
 
-Use o seguinte comando para remover os objetos de banco de dados criados neste tutorial.
+Use o comando a seguir para remover os objetos de banco de dados criados neste tutorial.
 
 ```sql
 DROP EXTERNAL TABLE [dbo].[web_clickstream_clicks_data_pool];
@@ -136,6 +136,6 @@ DROP EXTERNAL TABLE [dbo].[web_clickstream_clicks_data_pool];
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Saiba mais sobre como ingestão de dados no pool de dados com trabalhos do Spark:
+Saiba mais sobre como ingerir dados no pool de dados com trabalhos do Spark:
 > [!div class="nextstepaction"]
-> [Ingestão de dados com trabalhos do Spark](tutorial-data-pool-ingest-spark.md)
+> [Ingerir dados com trabalhos do Spark](tutorial-data-pool-ingest-spark.md)

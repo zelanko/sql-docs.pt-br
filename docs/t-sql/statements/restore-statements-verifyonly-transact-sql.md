@@ -23,12 +23,12 @@ ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: abaee73772c2d0b8f4beaff05c2daaf7fe2e80ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1fec8542ec7575013f8dd101c1e50e3a7b6a13a6
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082441"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742992"
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>Instruções RESTORE – VERIFYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -82,12 +82,14 @@ FROM <backup_device> [ ,...n ]
 {   
    { logical_backup_device_name |  
       @logical_backup_device_name_var }  
-   | { DISK | TAPE } = { 'physical_backup_device_name' |  
+   | { DISK | TAPE | URL } = { 'physical_backup_device_name' |  
        @physical_backup_device_name_var }   
 }  
   
 ```  
-  
+ > [!NOTE] 
+> URL é o formato usado para especificar o local e o nome do arquivo para o Armazenamento de Blobs do Microsoft Azure e o suporte a ele começa no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2. Embora o Armazenamento do Microsoft Azure seja um serviço, a implementação é semelhante ao disco e à fita para permitir uma experiência de restauração consistente e direta para todos os três dispositivos.
+ 
 ## <a name="arguments"></a>Argumentos  
  Para obter descrições dos argumentos de RESTORE VERIFYONLY, consulte [Argumentos de RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   

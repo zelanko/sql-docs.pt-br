@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e4ec4877b7433554ad1f2ef60fdb73ab485cbed7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22570f7ae8a9f11b89f11027698c948be5766d25
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043205"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661223"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted com enclaves seguros
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -149,11 +149,11 @@ As considerações a seguir sobre segurança se aplicam ao Always Encrypted com 
 - Criptografar uma coluna usando criptografia aleatória com um CEK habilitado para enclave pode resultar no vazamento da ordem dos dados armazenados na coluna, pois essas colunas têm suporte para comparações de intervalo. Por exemplo, se uma coluna criptografada contendo salários de funcionários tiver um índice, um administrador de banco de dados mal-intencionado poderá verificar o índice para encontrar o maior valor de salário criptografado e identificar uma pessoa que recebe esse salário (supondo que o nome dela não esteja criptografado). 
 - Se usar o Always Encrypted para proteger dados confidenciais contra o acesso não autorizado por administradores de bancos de dados, não compartilhe as chaves mestras da coluna ou as chaves de criptografia da coluna com os administradores de bancos de dados. Um administrador de banco de dados pode gerenciar índices em colunas criptografadas sem ter acesso direto às chaves, aproveitando o cache de chaves de criptografia da coluna dentro do enclave.
 
-## <a name="considerations-for-alwayson-and-database-migration"></a>Considerações sobre o AlwaysOn e migração de banco de dados
+## <a name="anchorname-1-considerations-availability-groups-db-migration"></a> Considerações sobre grupos de disponibilidade e migração de banco de dados
 
-Ao configurar um grupo de disponibilidade AlwaysOn necessário para o suporte de consultas com enclaves, você precisa garantir que todas as instâncias do SQL Server que hospedam os bancos de dados no grupo de disponibilidade tenham suporte para o recurso Always Encrypted com enclaves seguros e que tenham um enclave configurado. Se o banco de dados primário for compatível com enclaves (mas não uma réplica secundária), qualquer consulta que tente usar a funcionalidade do Always Encrypted com enclaves seguros falhará.
+Ao configurar um grupo de disponibilidade Always On necessário para o suporte de consultas com enclaves, você precisa garantir que todas as instâncias do SQL Server que hospedam os bancos de dados no grupo de disponibilidade tenham suporte para o recurso Always Encrypted com enclaves seguros e que tenham um enclave configurado. Se o banco de dados primário for compatível com enclaves (mas não uma réplica secundária), qualquer consulta que tente usar a funcionalidade do Always Encrypted com enclaves seguros falhará.
 
-Quando você restaura um arquivo de backup de um banco de dados que usa a funcionalidade do Always Encrypted com enclaves seguros em uma instância do SQL Server que não tem o enclave configurado, a operação de restauração será bem-sucedida e todas as funcionalidades que não dependem do enclave ficarão disponíveis. No entanto, todas as consultas posteriores que usam a funcionalidade de enclave falharão, e os índices nas colunas habilitadas para enclave que usam criptografia aleatória ficarão inválidos.  O mesmo se aplica quando você anexa um banco de dados usando o Always Encrypted com enclaves seguros na instância que não têm o enclave configurado.
+Quando você restaura um arquivo de backup de um banco de dados que usa a funcionalidade do Always Encrypted com enclaves seguros em uma instância do SQL Server que não tem o enclave configurado, a operação de restauração será bem-sucedida e todas as funcionalidades que não dependem do enclave ficarão disponíveis. No entanto, todas as consultas posteriores que usam a funcionalidade de enclave falharão, e os índices nas colunas habilitadas para enclave que usam criptografia aleatória ficarão inválidos. O mesmo se aplica quando você anexa um banco de dados usando o Always Encrypted com enclaves seguros na instância que não têm o enclave configurado.
 
 Caso seu banco de dados inclua índices em colunas habilitadas para enclave com criptografia aleatória, habilite a [ADR (Recuperação de Banco de Dados Acelerada)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) no banco de dados, antes de criar um backup. A ADR garantirá que o banco de dados, inclusive os índices, fique disponível imediatamente após a restauração. Para saber mais, confira [Recuperação de banco de dados](#database-recovery).
 

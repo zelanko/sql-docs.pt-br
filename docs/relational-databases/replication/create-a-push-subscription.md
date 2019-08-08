@@ -16,16 +16,19 @@ helpviewer_keywords:
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ab4102c477a8904dd99eb2717f2c5e31c38b9bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b5a52597f2d81fc3d2431d0ab9e97ac0e64f63f9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903036"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768653"
 ---
 # <a name="create-a-push-subscription"></a>Criar uma assinatura push
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Este tópico descreve como criar uma assinatura push no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou RMO (Replication Management Objects). Para obter informações sobre como criar uma assinatura push para um assinante não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira [Criar uma assinatura para um assinante não SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
  
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
@@ -90,19 +93,19 @@ ms.locfileid: "67903036"
   
     -   Se o valor de **allow_push** for **1**, as assinaturas push terão suporte.  
   
-    -   Se o valor de **allow_push** for **0**, execute [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), especificando **allow_push** para **@property** e **true** para **@value** .  
+    -   Se o valor de **allow_push** for **0**, execute [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), especificando **allow_push** para **\@property** e **true** para **\@value**.  
   
-2.  No Publicador do banco de dados da publicação, execute [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md). Especifique **@publication** , **@subscriber** e **@destination_db** . Especifique um valor **push** para **@subscription_type** . Para obter mais informações sobre como atualizar assinaturas, consulte [Criar uma assinatura atualizável em uma publicação transacional](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  No Publicador do banco de dados da publicação, execute [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md). Especifique **\@publication**, **\@subscriber** e **\@destination_db**. Especifique um valor **push** para **\@subscription_type**. Para obter mais informações sobre como atualizar assinaturas, consulte [Criar uma assinatura atualizável em uma publicação transacional](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  No Publicador do banco de dados de publicação, execute [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Especifique o seguinte:  
   
-    -   Os parâmetros **@subscriber** , **@subscriber_db** e **@publication** .  
+    -   Os parâmetros **\@subscriber**, **\@subscriber_db** e **\@publication**.  
   
-    -   Os parâmetros [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows com as quais o Distribution Agent do Distribuidor é executado para **@job_login** e **@job_password** .  
+    -   As credenciais do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] com as quais o Agente de Distribuição do Distribuidor é executado para **\@job_login** e **\@job_password**.  
   
-        > **OBSERVAÇÃO:** As conexões realizadas com Autenticação Integrada do Windows sempre usam as credenciais do Windows especificadas por **@job_login** e **@job_password** . O Distribution Agent sempre faz a conexão local com o Distribuidor usando a Autenticação Integrada do Windows. Por padrão, o agente se conecta ao Assinante usando a Autenticação Integrada do Windows.  
+        > **OBSERVAÇÃO:** as conexões realizadas com Autenticação Integrada do Windows sempre usam as credenciais do Windows especificadas por **\@job_login** e **\@job_password**. O Distribution Agent sempre faz a conexão local com o Distribuidor usando a Autenticação Integrada do Windows. Por padrão, o agente se conecta ao Assinante usando a Autenticação Integrada do Windows.  
   
-    -   (Opcional) Valor de **0** para **@subscriber_security_mode** e informações de logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@subscriber_login** e **@subscriber_password** . Especifique esses parâmetros se for necessário usar a Autenticação do SQL Server para conexão com o Assinante.  
+    -   (Opcional) Valor de **0** para **\@subscriber_security_mode** e informações de logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **\@subscriber_login** e **\@subscriber_password**. Especifique esses parâmetros se for necessário usar a Autenticação do SQL Server para conexão com o Assinante.  
   
     -   Agenda para o trabalho do Distribution Agent para essa assinatura. Para obter mais informações, consulte [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
@@ -114,29 +117,29 @@ ms.locfileid: "67903036"
   
     -   Se o valor de **allow_push** for **1**, a publicação dará suporte às assinaturas push.  
   
-    -   Se o valor de **allow_push** não for **1**, execute [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), especificando **allow_push** para **@property** e **true** para **@value** .  
+    -   Se o valor de **allow_push** não for **1**, execute [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), especificando **allow_push** para **\@property** e **true** para **\@value**.  
   
 2.  No Publicador, no banco de dados de publicação, execute [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md), especificando os seguintes parâmetros:  
   
-    -   **@publication** . Esse é o nome da publicação.  
+    -   **\@publication**. Esse é o nome da publicação.  
   
-    -   **@subscriber_type** . Para uma assinatura de cliente, especifique **local** e, para uma assinatura de servidor, especifique **global**.  
+    -   **\@subscriber_type**. Para uma assinatura de cliente, especifique **local** e, para uma assinatura de servidor, especifique **global**.  
   
-    -   **@subscription_priority** . Para uma assinatura de servidor, especifique uma prioridade para a assinatura de (**0,00** a **99,99**).  
+    -   **\@subscription_priority**. Para uma assinatura de servidor, especifique uma prioridade para a assinatura de (**0,00** a **99,99**).  
   
          Para obter mais informações, consulte [Detecção e resolução de conflito de replicação de mesclagem avançada ](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 3.  No Publicador, no banco de dados da publicação, execute [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Especifique o seguinte:  
   
-    -   Os parâmetros **@subscriber** , **@subscriber_db** e **@publication** .  
+    -   Os parâmetros **\@subscriber**, **\@subscriber_db** e **\@publication**.  
   
-    -   As credenciais do Windows sob as quais o Merge Agent no Distribuidor é executado para o **@job_login** e **@job_password** .  
+    -   As credenciais do Windows sob as quais o Agente de Mesclagem no Distribuidor é executado para o **\@job_login** e **\@job_password**.  
   
-        > **OBSERVAÇÃO:**  As conexões realizadas com Autenticação Integrada do Windows sempre usam as credenciais do Windows especificadas por **@job_login** e **@job_password** . O Merge Agent sempre faz a conexão local com o Distribuidor usando a Autenticação Integrada do Windows. Por padrão, o agente se conecta ao Assinante usando a Autenticação Integrada do Windows.  
+        > **OBSERVAÇÃO:**  as conexões realizadas com Autenticação Integrada do Windows sempre usam as credenciais do Windows especificadas por **\@job_login** e **\@job_password**. O Merge Agent sempre faz a conexão local com o Distribuidor usando a Autenticação Integrada do Windows. Por padrão, o agente se conecta ao Assinante usando a Autenticação Integrada do Windows.  
   
-    -   (Opcional) Valor de **0** para **@subscriber_security_mode** e informações de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@subscriber_login** e **@subscriber_password** . Especifique esses parâmetros se for necessário usar a Autenticação do SQL Server para conexão com o Assinante.  
+    -   (Opcional) Valor de **0** para **\@subscriber_security_mode** e informações de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **\@subscriber_login** e **\@subscriber_password**. Especifique esses parâmetros se for necessário usar a Autenticação do SQL Server para conexão com o Assinante.  
   
-    -   (Opcional) Valor de **0** para **@publisher_security_mode** e informações de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@publisher_login** e **@publisher_password** . Especifique esses valores se for necessário usar a Autenticação do SQL Server para conexão com o Publicador.  
+    -   (Opcional) Valor de **0** para **\@publisher_security_mode** e informações de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **\@publisher_login** e **\@publisher_password**. Especifique esses valores se for necessário usar a Autenticação do SQL Server para conexão com o Publicador.  
   
     -   Agenda para o trabalho do Merge Agent para essa assinatura. Para obter mais informações, consulte [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
@@ -192,7 +195,7 @@ ms.locfileid: "67903036"
   
 8.  Chame o método <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> .  
   
-    > **IMPORTANTE**Ao criar uma assinatura push no Publicador com um Distribuidor remoto, os valores fornecidos para todas as propriedades, inclusive <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, são enviados para o Distribuidor como texto sem formatação. É necessário criptografar a conexão entre o Publicador e o respectivo Distribuidor remoto antes de chamar o método <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>. Para obter mais informações, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    > **IMPORTANTE! Ao criar uma assinatura push no Publicador com um Distribuidor remoto, os valores fornecidos para todas as propriedades, inclusive <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, são enviados para o Distribuidor como texto sem formatação. É necessário criptografar a conexão entre o Publicador e o respectivo Distribuidor remoto antes de chamar o método <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>. Para obter mais informações, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### <a name="to-create-a-push-subscription-to-a-merge-publication"></a>Para criar uma assinatura push para publicação de mesclagem  
   

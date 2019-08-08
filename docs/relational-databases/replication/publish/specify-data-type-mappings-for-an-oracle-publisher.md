@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a5b5a6215127b59d90e1de1188223281024304f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1f86c97036c74024c47d71150586135022543588
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113907"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661313"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Especificar mapeamentos de tipo de dados para um Publicador Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,29 +57,29 @@ ms.locfileid: "68113907"
   
 1.  Se já não houver uma, crie uma publicação Oracle.  
   
-2.  No Distribuidor, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Especifique um valor **0** para **@use_default_datatypes** . Para obter mais informações, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+2.  No Distribuidor, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Especifique um valor **0** para **\@use_default_datatypes**. Para obter mais informações, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 3.  No Distribuidor, execute [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) para exibir o mapeamento existente para uma coluna em um artigo publicado.  
   
-4.  No Distribuidor, execute [sp_changearticlecolumndatatype](../../../relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql.md). Especifique o nome do Editor Oracle para **@publisher** , assim como para **@publication** , **@article** e **@column** , para definir a coluna publicada. Especifique o nome do tipo de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a mapear para **@type** , assim como para **@length** , **@precision** e **@scale** , onde aplicável.  
+4.  No Distribuidor, execute [sp_changearticlecolumndatatype](../../../relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql.md). Especifique o nome do Editor Oracle para **\@publisher**, assim como para **\@publication**, **\@article** e **\@column**, para definir a coluna publicada. Especifique o nome do tipo de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a mapear para **\@type**, assim como para **\@length**, **\@precision** e **\@scale**, onde aplicável.  
   
 5.  No Distribuidor, execute [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Isso cria a exibição usada para gerar o instantâneo da publicação Oracle.  
   
 #### <a name="to-specify-a-mapping-as-the-default-mapping-for-a-data-type"></a>Para especificar um mapeamento como mapeamento padrão para um tipo de dados  
   
-1.  (Opcional) No Distribuidor de qualquer banco de dados, execute [sp_getdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md). Especifique **@source_dbms** , **@source_type** , **@destination_dbms** , **@destination_version** e quaisquer outros parâmetros necessários para identificar a DBMS de origem. As informações sobre o tipo de dados atualmente mapeados no DBMS de destino são retornadas usando os parâmetros de saída.  
+1.  (Opcional) No Distribuidor de qualquer banco de dados, execute [sp_getdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md). Especifique **\@source_dbms**, **\@source_type**, **\@destination_dbms**, **\@destination_version** e quaisquer outros parâmetros necessários para identificar a DBMS de origem. As informações sobre o tipo de dados atualmente mapeados no DBMS de destino são retornadas usando os parâmetros de saída.  
   
-2.  (Opcional) Para o Distribuidor em qualquer banco de dados, execute [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md). Especifique **@source_dbms** e quaisquer outros parâmetros necessários para filtrar o conjunto de resultados. Observe o valor de **mapping_id** para o mapeamento desejado no conjunto de resultados.  
+2.  (Opcional) Para o Distribuidor em qualquer banco de dados, execute [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md). Especifique **\@source_dbms** e quaisquer outros parâmetros necessários para filtrar o conjunto de resultados. Observe o valor de **mapping_id** para o mapeamento desejado no conjunto de resultados.  
   
 3.  (Opcional) No Distribuidor em qualquer banco de dados, execute [sp_getdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md).  
   
-    -   Se você souber o valor desejado de **mapping_id** obtido na etapa 2, especifique-o para **@mapping_id** .  
+    -   Se você souber o valor desejado de **mapping_id** obtido na etapa 2, especifique-o para **\@mapping_id**.  
   
-    -   Se não souber o **mapping_id**, especifique os parâmetros **@source_dbms** , **@source_type** , **@destination_dbms** , **@destination_type** e quaisquer outros parâmetros necessários para identificar um mapeamento existente.  
+    -   Se não souber o **mapping_id**, especifique os parâmetros **\@source_dbms**, **\@source_type**, **\@destination_dbms**, **\@destination_type** e quaisquer outros parâmetros necessários para identificar um mapeamento existente.  
   
 #### <a name="to-find-valid-data-types-for-a-given-oracle-data-type"></a>Para localizar tipos de dados válidos para um determinado tipo de dados Oracle  
   
-1.  No Distribuidor em qualquer banco de dados, execute [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md). Especifique um valor **ORACLE** para **@source_dbms** e quaisquer outros parâmetros necessários para filtrar o conjunto de resultados.  
+1.  No Distribuidor em qualquer banco de dados, execute [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md). Especifique um valor de **ORACLE** para **\@source_dbms** e quaisquer outros parâmetros necessários para filtrar o conjunto de resultados.  
   
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  Este exemplo altera uma coluna com um tipo de dados Oracle de NUMBER, de modo que ele seja mapeado para o tipo de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (38,38) do **ssNoVersion**, em vez do tipo de dados padrão **float**.  

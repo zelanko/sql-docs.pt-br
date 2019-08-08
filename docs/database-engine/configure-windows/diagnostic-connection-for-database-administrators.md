@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c912c17ce6914a2de2425ad61e27f49ef7cab86c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee6c63623cc5b88e0cbb9c4a3edd7a78e6137d77
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011868"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670466"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Conexão de diagnóstico para administradores de banco de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "68011868"
     -   Se não houver nenhuma tarefa no sys.dm_os_tasks associado a esta sessão, mas a sessão continuar em sys.dm_exec_sessions após a execução do comando KILL, significa que você não tem um trabalhador disponível. Selecione uma das tarefas atualmente em execução (uma tarefa listada na exibição de sys.dm_os_tasks com `sessions_id <> NULL`) e interrompa a sessão associada a ela para liberar o trabalhador. Observe que talvez não seja suficiente interromper apenas uma sessão: talvez seja necessário interromper várias.  
   
 ## <a name="dac-port"></a>Porta DAC  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica o DAC em uma porta TCP 1434, se estiver disponível, ou em uma porta TCP dinamicamente atribuída na inicialização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . O log de erros contém o número da porta que o DAC está escutando. Por padrão, a escuta do DAC aceita conexão apenas na porta local. Para obter um exemplo de código que ativa conexões de administração remota, veja [Opção remote admin connections de configuração de servidor](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica o DAC em uma porta TCP 1434, se estiver disponível, ou em uma porta TCP dinamicamente atribuída na inicialização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . O [log de erros](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md) contém o número da porta que o DAC está escutando. Por padrão, a escuta do DAC aceita conexão apenas na porta local. Para obter um exemplo de código que ativa conexões de administração remota, veja [Opção remote admin connections de configuração de servidor](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md).  
   
  Depois que uma conexão de administração remota for configurada, a escuta do DAC será habilitada sem a necessidade de reiniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um cliente poderá se conectar ao DAC remotamente. Você pode habilitar a escuta do DAC para aceitar conexões remotamente, mesmo que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não responda durante a primeira conexão com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o DAC localmente e, em seguida, executar o procedimento armazenado sp_configure para aceitar conexão de conexões remotas.  
   

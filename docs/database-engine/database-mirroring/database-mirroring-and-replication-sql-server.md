@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9296bd28852eda3abd29e8a54984ec37f726c8b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e957d0ae199375ffe13a756cc1a8b0872aa962e3
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006462"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661438"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Espelhamento e replicação de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,9 +72,9 @@ ms.locfileid: "68006462"
   
 3.  Configure a distribuição para o espelho. Especifique o nome do espelho como Publicador e especifique o mesmo Distribuidor e a pasta de instantâneos usada pelo principal. Por exemplo, caso esteja configurando a replicação com procedimentos armazenados, execute [sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) no Distribuidor e execute [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) no espelho. Para **sp_adddistpublisher**:  
   
-    -   Defina o valor do parâmetro **@publisher** para o nome de rede do espelho.  
+    -   Defina o valor do parâmetro **\@publisher** para o nome de rede do espelho.  
   
-    -   Defina o valor do parâmetro **@working_directory** para a pasta de instantâneos usada pelo principal.  
+    -   Defina o valor do parâmetro **\@working_directory** para a pasta de instantâneos usada pelo principal.  
   
 4.  Especifique o nome do espelho para o parâmetro do agente **– PublisherFailoverPartner**. Esse parâmetro de agente é exigido pelos seguintes agentes para identificar o espelho, após o failover:  
   
@@ -134,12 +134,12 @@ ms.locfileid: "68006462"
   
 -   Ao usar os procedimentos armazenados ou RMO (Replication Management Objects) para gerenciar a replicação no espelho, nos casos em que você especifica o nome do Publicador, especifique o nome da instância na qual o banco de dados foi habilitado para a replicação. Para determinar o nome apropriado, use a função [publishingservername](../../t-sql/functions/replication-functions-publishingservername.md).  
   
-     Quando um banco de dados de publicação é espelhado, os metadados de replicação armazenados no banco de dados espelhado são idênticos aos metadados armazenados no banco de dados principal. Portanto, para os bancos de dados de publicação habilitados para replicação no principal, o nome da instância do Publicador armazenado nas tabelas do sistema no espelho será o nome do principal, não do espelho. Isso afetará a configuração e a manutenção da replicação, em caso de failover do banco de dados de publicação no espelho. Por exemplo, se você configurar a replicação com procedimentos armazenados no espelho após o failover e desejar adicionar uma assinatura pull a um banco de dados de publicação habilitado no principal, será necessário especifique o nome do principal, em vez do nome do espelho para o parâmetro **@publisher** de **sp_addpullsubscription** ou **sp_addmergepullsubscription**.  
+     Quando um banco de dados de publicação é espelhado, os metadados de replicação armazenados no banco de dados espelhado são idênticos aos metadados armazenados no banco de dados principal. Portanto, para os bancos de dados de publicação habilitados para replicação no principal, o nome da instância do Publicador armazenado nas tabelas do sistema no espelho será o nome do principal, não do espelho. Isso afetará a configuração e a manutenção da replicação, em caso de failover do banco de dados de publicação no espelho. Por exemplo, se você configurar a replicação com procedimentos armazenados no espelho após o failover e desejar adicionar uma assinatura pull a um banco de dados de publicação habilitado no principal, será necessário especifique o nome do principal, em vez do nome do espelho para o parâmetro **\@publisher** de **sp_addpullsubscription** ou **sp_addmergepullsubscription**.  
   
-     Ao habilitar um banco de dados de publicação no espelho, após o failover para o espelho, o nome da instância do Publicador, armazenado nas tabelas do sistema, será o nome do espelho; neste caso, você usará o nome do espelho para o parâmetro **@publisher** .  
+     Ao habilitar um banco de dados de publicação no espelho, após o failover para o espelho, o nome da instância do Editor, armazenado nas tabelas do sistema, será o nome do espelho; neste caso, você usará o nome do espelho para o parâmetro **\@publisher**.  
   
     > [!NOTE]  
-    >  Em alguns casos, como **sp_addpublication**, o parâmetro **@publisher** tem suporte apenas nos Publicadores não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; nesses casos, ele não é relevante para o espelhamento do banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+    >  Em alguns casos, como **sp_addpublication**, o parâmetro **\@publisher** tem suporte apenas nos Publicadores não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; nesses casos, ele não é relevante para o espelhamento do banco de dados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Para sincronizar uma assinatura no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , após o failover: sincronize as assinaturas pull do Assinante e sincronize as assinaturas push do Publicador ativo.  
   

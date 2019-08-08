@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: da73c06c49f54caf5e750f6816738738e7a03681
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e37586d17a7b99d3dd191f63ed858805ef497a03
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914926"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670532"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -132,7 +132,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
 -   No caso de uma instrução `INSERT ... SELECT` ou `INSERT ... EXEC` em que os dados inseridos são obtidos de uma consulta que usa uma cláusula **ORDER BY**, os valores retornados pela função **NEXT VALUE FOR** serão gerados na ordem especificada pela cláusula **ORDER BY**.  
   
 ## <a name="using-a-sequence-object-with-an-over-order-by-clause"></a>Usando um objeto de sequência com uma cláusula OVER ORDER BY  
- A função **NEXT VALUE FOR** é compatível com a geração de valores de sequência classificados com a aplicação da cláusula **OVER** à chamada **NEXT VALUE FOR**. Usando a cláusula **OVER**, um usuário tem a garantia de que os valores retornados são gerados na ordem da subcláusula **ORDER B**Y da cláusula **OVER**. As seguintes regras adicionais aplicam-se ao usar a função **NEXT VALUE FOR** com a cláusula **OVER**:  
+ A função **NEXT VALUE FOR** é compatível com a geração de valores de sequência classificados com a aplicação da cláusula **OVER** à chamada **NEXT VALUE FOR**. Usando a cláusula **OVER**, um usuário tem a garantia de que os valores retornados são gerados na ordem da subcláusula **ORDER BY** da cláusula **OVER**. As seguintes regras adicionais aplicam-se ao usar a função **NEXT VALUE FOR** com a cláusula **OVER**:  
   
 -   Diversas chamadas à função **NEXT VALUE FOR** para o mesmo gerador de sequência em uma única instrução devem todas usar a mesma definição de cláusula **OVER**.  
   

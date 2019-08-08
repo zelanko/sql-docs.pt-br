@@ -41,15 +41,16 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cdf69cebcb9bae567ebaf4df898a7d6940e881b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7c0e87750bb408e617a94185ad85b101e8893711
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085339"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769899"
 ---
 # <a name="publish-data-and-database-objects"></a>Publicar dados e objetos de banco de dados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Ao criar uma publicação, você escolhe as tabelas e outros objetos de banco de dados que deseja publicar. Você pode publicar os objetos de banco de dados a seguir usando replicação.  
   
 |Objeto de banco de dados|Replicação de instantâneo e replicação transacional|Replicação de mesclagem|  
@@ -114,7 +115,7 @@ ms.locfileid: "68085339"
 ## <a name="publishing-views"></a>Publicando exibições  
  Todos os tipos de replicação permitem que você reproduza exibições. A exibição (e o índice correspondente, se for uma exibição indexada) pode ser copiada para o Assinante, mas a tabela base também deve ser replicada.  
   
- Para exibições indexadas, a replicação transacional também permite que você replique a exibição indexada como uma tabela em vez de uma exibição, eliminando a necessidade de replicar também a tabela base. Para fazer isso, especifique uma das opções “indexed view logbased” do parâmetro *@type* de [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Para obter mais informações sobre como usar **sp_addarticle**, consulte [Definir um artigo](../../../relational-databases/replication/publish/define-an-article.md).  
+ Para exibições indexadas, a replicação transacional também permite que você replique a exibição indexada como uma tabela em vez de uma exibição, eliminando a necessidade de replicar também a tabela base. Para fazer isso, especifique uma das opções “indexed view logbased” do parâmetro *\@type* de [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Para obter mais informações sobre como usar **sp_addarticle**, consulte [Definir um artigo](../../../relational-databases/replication/publish/define-an-article.md).  
   
 ## <a name="publishing-user-defined-functions"></a>Publicando funções definidas pelo usuário  
  As instruções CREATE FUNCTION para as funções CLR e [!INCLUDE[tsql](../../../includes/tsql-md.md)] são copiadas para cada Assinante. No caso das funções CLR, o assembly associado também é copiado. As alterações a funções são replicadas aos Assinantes; as alterações aos assemblies associados não são.  
@@ -152,7 +153,7 @@ ms.locfileid: "68085339"
 -   Se você estiver publicando um objeto de banco de dados que depende de outros objetos de banco de dados, terá de publicar todos os objetos referenciados. Por exemplo, se você publicar uma exibição que depende de uma tabela, terá de publicar a tabela também.  
   
     > [!NOTE]  
-    >  Se você adicionar um artigo a uma publicação de mesclagem e o artigo existente depender do artigo novo, será preciso especificar uma ordem de processamento para ambos os artigos usando o parâmetro **@processing_order** de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Considere o seguinte cenário: uma tabela é publicada, mas não é publicada a função que é referenciada pela tabela. Se a função não for publicada, a tabela não poderá ser criada no Assinante. Ao adicionar a função à publicação: especifique o valor **1** para o parâmetro **@processing_order** de **sp_addmergearticle**e especifique o valor **2** para o parâmetro **@processing_order** de **sp_changemergearticle**, especificando o nome da tabela para o parâmetro **@article** . Essa ordem de processamento garante a criação da função no Assinante antes da tabela que depende disso. Você pode usar números diferentes para cada artigo desde que o número para a função seja menor do que o número para a tabela.  
+    >  Se você adicionar um artigo a uma publicação de mesclagem e o artigo existente depender do artigo novo, será preciso especificar uma ordem de processamento para ambos os artigos usando o parâmetro **\@processing_order** de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Considere o seguinte cenário: uma tabela é publicada, mas não é publicada a função que é referenciada pela tabela. Se a função não for publicada, a tabela não poderá ser criada no Assinante. Ao adicionar a função à publicação: especifique o valor **1** para o parâmetro **\@processing_order** de **sp_addmergearticle** e especifique o valor **2** para o parâmetro **\@processing_order** de **sp_changemergearticle**, especificando o nome da tabela para o parâmetro **\@article**. Essa ordem de processamento garante a criação da função no Assinante antes da tabela que depende disso. Você pode usar números diferentes para cada artigo desde que o número para a função seja menor do que o número para a tabela.  
   
 -   Os nomes de publicação não podem incluir nenhum dos seguintes caracteres: % * [ ] | : " ? \ / < >.  
   
@@ -168,7 +169,7 @@ ms.locfileid: "68085339"
   
 -   Padrões associados criados com [sp_bindefault &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md) não são replicados (padrões associados são preteridos a favor de padrões criados com a palavra-chave DEFAULT de ALTER TABLE ou CREATE TABLE).  
   
--   Funções contendo a dica **NOEXPAND** em exibições indexadas não podem ser publicadas na mesma publicação que as tabelas referenciadas e as exibições indexadas, devido à ordem na qual os agentes e distribuição as entrega. Para solucionar esse problema, coloque a tabela e a criação de exibição indexada em uma primeira publicação e adicione funções contendo a dica **NOEXPAND** nas exibições indexadas para uma segunda publicação, que você publica após a primeira publicação ser concluída. Ou crie scripts para essas funções e entregue o script usando o parâmetro *@post_snapshot_script* de **sp_addpublication**.  
+-   Funções contendo a dica **NOEXPAND** em exibições indexadas não podem ser publicadas na mesma publicação que as tabelas referenciadas e as exibições indexadas, devido à ordem na qual os agentes e distribuição as entrega. Para solucionar esse problema, coloque a tabela e a criação de exibição indexada em uma primeira publicação e adicione funções contendo a dica **NOEXPAND** nas exibições indexadas para uma segunda publicação, que você publica após a primeira publicação ser concluída. Ou crie scripts para essas funções e entregue o script usando o parâmetro *\@post_snapshot_script* de **sp_addpublication**.  
   
 ### <a name="schemas-and-object-ownership"></a>Propriedade de esquemas e objetos  
  A replicação tem o seguinte comportamento padrão no Assistente para Nova Publicação em relação à propriedade de esquemas e objetos:  
@@ -192,9 +193,9 @@ ms.locfileid: "68085339"
 ### <a name="publishing-tables-in-more-than-one-publication"></a>Publicando tabelas em mais de uma publicação  
  A replicação fornece suporte para publicação de artigos em várias publicações (inclusive a republicação de dados) com as seguintes restrições:  
   
--   Se um artigo for publicado em uma publicação transacional e em uma publicação de mesclagem, certifique-se de que a propriedade *@published_in_tran_pub* esteja definida como TRUE para o artigo de mesclagem. Para obter mais informações sobre como definir propriedades, consulte [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md) e [Exibir e modificar as propriedades do artigo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+-   Se um artigo for publicado em uma publicação transacional e em uma publicação de mesclagem, defina a propriedade *\@published_in_tran_pub* como TRUE para o artigo de mesclagem. Para obter mais informações sobre como definir propriedades, consulte [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md) e [Exibir e modificar as propriedades do artigo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
-     Você também deve definir a propriedade *@published_in_tran_pub* se um artigo for parte de uma assinatura transacional e for incluído em uma publicação de mesclagem. Se esse for o caso, esteja ciente de que, por padrão, a replicação transacional espera que as tabelas no Assinante sejam tratadas como somente leitura; se a replicação de mesclagem alterar dados em uma tabela em uma assinatura transacional, pode haver não convergência de dados. Para evitar essa possibilidade, recomendamos que qualquer tabela desse tipo seja especificada como somente download na publicação de mesclagem. Isso impede que um Assinante de mesclagem carregue alterações de dados na tabela. Para obter mais informações, consulte [Otimizar o desempenho da replicação de mesclagem com artigos somente para download](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+     Você também deverá definir a propriedade *\@published_in_tran_pub* se um artigo for parte de uma assinatura transacional e for incluído em uma publicação de mesclagem. Se esse for o caso, esteja ciente de que, por padrão, a replicação transacional espera que as tabelas no Assinante sejam tratadas como somente leitura; se a replicação de mesclagem alterar dados em uma tabela em uma assinatura transacional, pode haver não convergência de dados. Para evitar essa possibilidade, recomendamos que qualquer tabela desse tipo seja especificada como somente download na publicação de mesclagem. Isso impede que um Assinante de mesclagem carregue alterações de dados na tabela. Para obter mais informações, consulte [Otimizar o desempenho da replicação de mesclagem com artigos somente para download](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
 -   Um artigo não pode ser publicado tanto em uma publicação de mesclagem quanto em uma publicação transacional com assinaturas de atualização enfileirada.  
   
@@ -204,10 +205,10 @@ ms.locfileid: "68085339"
   
     |Propriedade|Parâmetro em sp_addarticle|  
     |--------------|---------------------------------|  
-    |Gerenciamento de intervalo de identidade|**@auto_identity_range** (preterido) e **@identityrangemangementoption**|  
-    |Intervalo de identidade do Publicador|**@pub_identity_range**|  
-    |Intervalo de identidade|**@identity_range**|  
-    |Limite de intervalo de identidade|**@threshold**|  
+    |Gerenciamento de intervalo de identidade|**\@auto_identity_range** (preterido) e **\@identityrangemangementoption**|  
+    |Intervalo de identidade do Publicador|**\@pub_identity_range**|  
+    |Intervalo de identidade|**\@identity_range**|  
+    |Limite de intervalo de identidade|**\@threshold**|  
   
      Para obter mais informações sobre esses parâmetros, consulte [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
@@ -215,19 +216,19 @@ ms.locfileid: "68085339"
   
     |Propriedade|Parâmetro em sp_addmergearticle|  
     |--------------|--------------------------------------|  
-    |Rastreamento de coluna|**@column_tracking**|  
-    |Opções de esquema|**@schema_option**|  
-    |Filtragem de coluna|**@vertical_partition**|  
-    |Opções de carregamento do assinante|**@subscriber_upload_options**|  
-    |Controle de exclusão condicional|**@delete_tracking**|  
-    |Compensação de erro|**@compensate_for_errors**|  
-    |Gerenciamento de intervalo de identidade|**@auto_identity_range** (preterido) e **@identityrangemangementoption**|  
-    |Intervalo de identidade do Publicador|**@pub_identity_range**|  
-    |Intervalo de identidade|**@identity_range**|  
-    |Limite de intervalo de identidade|**@threshold**|  
-    |Opções de partição|**@partition_options**|  
-    |Fluxo de coluna de blob|**@stream_blob_columns**|  
-    |Tipo de filtro|**@filter_type** (parâmetro em **sp_addmergefilter**)|  
+    |Rastreamento de coluna|**\@column_tracking**|  
+    |Opções de esquema|**\@schema_option**|  
+    |Filtragem de coluna|**\@vertical_partition**|  
+    |Opções de carregamento do assinante|**\@subscriber_upload_options**|  
+    |Controle de exclusão condicional|**\@delete_tracking**|  
+    |Compensação de erro|**\@compensate_for_errors**|  
+    |Gerenciamento de intervalo de identidade|**\@auto_identity_range** (preterido) e **\@identityrangemangementoption**|  
+    |Intervalo de identidade do Publicador|**\@pub_identity_range**|  
+    |Intervalo de identidade|**\@identity_range**|  
+    |Limite de intervalo de identidade|**\@threshold**|  
+    |Opções de partição|**\@partition_options**|  
+    |Fluxo de coluna de blob|**\@stream_blob_columns**|  
+    |Tipo de filtro|**\@filter_type** (parâmetro em **sp_addmergefilter**)|  
   
      Para obter mais informações sobre esses parâmetros, consulte [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md).  
   

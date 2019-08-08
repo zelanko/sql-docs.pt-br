@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 13a883b6b36bfb2863caa5b066e58216cbad1549
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 259ff6d422788f302d05b435026839970b9f75db
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903059"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768663"
 ---
 # <a name="create-a-pull-subscription"></a>Create a Pull Subscription
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Este tópico descreve como criar uma assinatura pull no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou RMO (Replication Management Objects).  
   
  A configuração de uma assinatura pull para a replicação de P2P é possível por script, mas não está disponível por meio do assistente.  
@@ -91,24 +92,24 @@ ms.locfileid: "67903059"
   
     -   Se o valor de **allow_pull** no conjunto de resultados for **1**, a publicação terá suporte para as assinaturas pull.  
   
-    -   Se o valor de **allow_pull** for **0**, execute [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), especificando **allow_pull** para **@property** e **true** para **@value** .  
+    -   Se o valor de **allow_pull** for **0**, execute [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), especificando **allow_pull** para **\@property** e **true** para **\@value**.  
   
-2.  No Assinante, execute [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Especifique **@publisher** e **@publication** . Para obter mais informações sobre assinaturas de atualização, consulte [Criar uma assinatura atualizável em uma publicação transacional](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+2.  No Assinante, execute [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Especifique **\@publisher** e **\@publication**. Para obter mais informações sobre assinaturas de atualização, consulte [Criar uma assinatura atualizável em uma publicação transacional](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
   
 3.  No Assinante, execute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Especifique o seguinte:  
   
-    -   Os parâmetros **@publisher** , **@publisher_db** , e **@publication** .  
+    -   Os parâmetros **\@publisher**, **\@publisher_db** e **\@publication**.  
   
-    -   Os parâmetros [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sob as quais o Distribution Agent do Assinante é executado para **@job_login** e **@job_password** .  
+    -   As credenciais do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sob as quais o Agente de Distribuição do Assinante é executado para **\@job_login** e **\@job_password**.  
   
         > [!NOTE]  
-        >  As conexões realizadas com Autenticação Integrada do Windows sempre usam as credenciais do Windows especificadas por **@job_login** e **@job_password** . O Distribution Agent sempre faz a conexão local ao Assinante usando a Autenticação Integrada do Windows. Por padrão, o agente conecta-se ao Distribuidor usando a Autenticação Integrada do Windows.  
+        >  As conexões realizadas com Autenticação Integrada do Windows sempre usam as credenciais do Windows especificadas por **\@job_login** e **\@job_password**. O Distribution Agent sempre faz a conexão local ao Assinante usando a Autenticação Integrada do Windows. Por padrão, o agente conecta-se ao Distribuidor usando a Autenticação Integrada do Windows.  
   
-    -   (Opcional) Um valor **0** para **@distributor_security_mode** e as informações de logon do SQL Server para **@distributor_login** e **@distributor_password** , se você precisar usar a Autenticação do SQL Server ao se conectar ao distribuidor.  
+    -   (Opcional) Um valor **0** para **\@distributor_security_mode** e as informações de logon do SQL Server para **\@distributor_login** e **\@distributor_password**, se for necessário usar a Autenticação do SQL Server ao conectar-se com o Distribuidor.  
   
     -   Agenda para o trabalho do Distribution Agent para essa assinatura. Para obter mais informações, consulte [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
-4.  No Publicador, execute [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) para registrar a assinatura pull. Especifique **@publication** , o **@subscriber** , e **@destination_db** . Especifique um valor de **pull** para **@subscription_type** .  
+4.  No Publicador, execute [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) para registrar a assinatura pull. Especifique **\@publication**, **\@subscriber** e **\@destination_db**. Especifique um valor de **pull** para **\@subscription_type**.  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication"></a>Para criar uma assinatura pull para a publicação de mesclagem  
   
@@ -116,32 +117,32 @@ ms.locfileid: "67903059"
   
     -   Se o valor de **allow_pull** no conjunto de resultados for **1**, a publicação terá suporte para as assinaturas pull.  
   
-    -   Se o valor de **allow_pull** for **0**, execute [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), especificando **allow_pull** para **@property** e **true** para **@value** .  
+    -   Se o valor de **allow_pull** for **0**, execute [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), especificando **allow_pull** para **\@property** e **true** para **\@value**.  
   
-2.  No Assinante, execute [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Especifique **@publisher** , **@publisher_db** , **@publication** e os parâmetros a seguir:  
+2.  No Assinante, execute [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Especifique **\@publisher**, **\@publisher_db**, **\@publication** e os seguintes parâmetros:  
   
-    -   **@subscriber_type** – especifique **local** para uma assinatura de cliente e **global** para uma assinatura de servidor.  
+    -   **\@subscriber_type** – especifique **local** para uma assinatura de cliente e **global** para uma assinatura de servidor.  
   
-    -   **@subscription_priority** – especifique uma prioridade para a assinatura (**0.00** a **99.99**). Isso só é necessário para uma assinatura de servidor.  
+    -   **\@subscription_priority** – especifique uma prioridade para a assinatura (**0.00** a **99.99**). Isso só é necessário para uma assinatura de servidor.  
   
          Para obter mais informações, consulte [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 3.  No Assinante, execute [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Especifique os seguintes parâmetros:  
   
-    -   **@publisher** , **@publisher_db** , e **@publication** .  
+    -   **\@publisher**, **\@publisher_db** e **\@publication**.  
   
-    -   As credenciais do Windows sob as quais o Merge Agent no Assinante é executado para **@job_login** e **@job_password** .  
+    -   As credenciais do Windows sob as quais o Agente de Mesclagem no Assinante é executado para **\@job_login** e **\@job_password**.  
   
         > [!NOTE]  
-        >  As conexões realizadas com Autenticação Integrada do Windows sempre usam as credenciais do Windows especificadas por **@job_login** e **@job_password** . O Merge Agent sempre faz a conexão local ao Assinante usando a Autenticação Integrada do Windows. Por padrão, o agente se conecta ao Distribuidor e ao Publicador usando a Autenticação Integrada do Windows.  
+        >  As conexões realizadas com Autenticação Integrada do Windows sempre usam as credenciais do Windows especificadas por **\@job_login** e **\@job_password**. O Merge Agent sempre faz a conexão local ao Assinante usando a Autenticação Integrada do Windows. Por padrão, o agente se conecta ao Distribuidor e ao Publicador usando a Autenticação Integrada do Windows.  
   
-    -   (Opcional) Um valor de **0** para **@distributor_security_mode** e as informações de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@distributor_login** e **@distributor_password** , se for necessário usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao se conectar ao Distribuidor.  
+    -   (Opcional) Um valor **0** para **\@distributor_security_mode** e as informações de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **\@distributor_login** e **\@distributor_password**, se for necessário usar a Autenticação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao conectar-se com o Distribuidor.  
   
-    -   (Opcional) Um valor de **0** para **@publisher_security_mode** e as informações de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@publisher_login** e **@publisher_password** , se for necessário usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao conectar-se ao Publicador.  
+    -   (Opcional) Um valor **0** para **\@publisher_security_mode** e as informações de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **\@publisher_login** e **\@publisher_password**, se for necessário usar a Autenticação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao conectar-se ao Editor.  
   
     -   Agenda para o trabalho do Merge Agent para essa assinatura. Para obter mais informações, consulte [Criar uma assinatura atualizável em uma publicação transacional](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
-4.  No Publicador, execute [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Especifique **@publication** , **@subscriber** , **@subscriber_db** , e o valor **pull** para **@subscription_type** . Isso registra a assinatura pull.  
+4.  No Publicador, execute [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Especifique **\@publication**, **\@subscriber**, **\@subscriber_db** e o valor **pull** para **\@subscription_type**. Isso registra a assinatura pull.  
   
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  O exemplo a seguir cria uma nova assinatura pull para uma publicação transacional. O primeiro lote é executado no Assinante, e o segundo lote é executado no Publicador. Os valores para o logon e senha são fornecidos no tempo de execução usando as variáveis sqlcmd scripting.  

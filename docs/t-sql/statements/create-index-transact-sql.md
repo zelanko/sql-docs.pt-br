@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7808af6be2759b618ec0c57fb9ebb6e97f3b3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae776b53016995fdcfd0ccfdb0c242b19f88addc
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048168"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661451"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -702,7 +702,7 @@ O [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu novas
 - As opções não podem ser especificadas com o uso de sintaxe compatível com versões anteriores e nova sintaxe na mesma instrução. Por exemplo, especificar WITH (**DROP_EXISTING, ONLINE = ON**) faz a instrução falhar.
 - Ao criar um índice XML, as opções devem ser especificadas usando WITH ( **_option_name_= ON | OFF**).
 
-## <a name="dropexisting-clause"></a>Cláusula DROP_EXISTING
+## <a name="drop_existing-clause"></a>Cláusula DROP_EXISTING
 É possível usar a cláusula DROP_EXISTING para recriar o índice, adicionar ou descartar colunas, modificar opções, modificar a ordem de classificação de colunas, ou alterar o esquema de partição ou o grupo de arquivos.
 
 Se o índice impuser uma restrição PRIMARY KEY ou UNIQUE e a definição de índice não for alterada de alguma maneira, o índice será descartado e recriado preservando a restrição existente. Entretanto, se a definição de índice for alterada, a instrução falhará. Para alterar a definição de uma restrição PRIMARY KEY ou UNIQUE, descarte a restrição e adicione uma restrição com a nova definição.
@@ -829,7 +829,7 @@ CREATE NONCLUSTERED INDEX IX_SalesPerson_SalesQuota_SalesYTD ON Sales.SalesPerso
 ```
 
 ### <a name="c-create-an-index-on-a-table-in-another-database"></a>C. Criar um índice em uma tabela em outro banco de dados
-O exemplo a seguir cria um índice não clusterizado na coluna `VendorID` da tabela `ProductVendor` no banco de dados `Purchasing`.
+O exemplo a seguir cria um índice clusterizado na coluna `VendorID` da tabela `ProductVendor` no banco de dados `Purchasing`.
 
 ```sql
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID ON Purchasing..ProductVendor (VendorID);
@@ -873,7 +873,7 @@ Server: Msg 2601, Level 14, State 1, Line 1
 Cannot insert duplicate key row in object 'UnitMeasure' with unique index 'AK_UnitMeasure_Name'. The statement has been terminated.
 ```
 
-### <a name="f-use-the-ignoredupkey-option"></a>F. Use a opção IGNORE_DUP_KEY
+### <a name="f-use-the-ignore_dup_key-option"></a>F. Use a opção IGNORE_DUP_KEY
 O exemplo a seguir demonstra o efeito da opção `IGNORE_DUP_KEY` inserindo várias linhas em uma tabela temporária primeiro com a opção definida como `ON` e, em seguida, com a opção definida como `OFF`. Uma única linha é inserida na tabela `#Test`, causando intencionalmente um valor duplicado quando a segunda instrução de várias linhas `INSERT` for executada. Uma contagem de linhas na tabela retorna o número de linhas inseridas.
 
 ```sql
@@ -934,7 +934,7 @@ Number of rows
 
 Observe que nenhuma linha da tabela `Production.UnitMeasure` foi inserida na tabela, embora somente uma linha violasse a restrição de índice `UNIQUE`.
 
-### <a name="g-using-dropexisting-to-drop-and-re-create-an-index"></a>G. Usando DROP_EXISTING para descartar e recriar um índice
+### <a name="g-using-drop_existing-to-drop-and-re-create-an-index"></a>G. Usando DROP_EXISTING para descartar e recriar um índice
 O exemplo a seguir remove e recria um índice existente na coluna `ProductID` da tabela `Production.WorkOrder` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] usando a opção `DROP_EXISTING`. As opções `FILLFACTOR` e `PAD_INDEX` também são definidas.
 
 ```sql

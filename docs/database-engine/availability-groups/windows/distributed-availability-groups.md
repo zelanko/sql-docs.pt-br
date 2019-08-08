@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e7fadeded7c979631cabc763d1be8d037b5913d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2670a5967c5bb3921cb23d79670eeefe859cb5a0
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968308"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702746"
 ---
 # <a name="distributed-availability-groups"></a>Grupos de disponibilidade distribuídos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -235,7 +235,7 @@ Um exemplo de saída do segundo cluster WSFC que está participando de um grupo 
 
 ![Exemplo de saída da consulta anterior](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
 
-### <a name="dmv-to-list-distribtued-ag-health"></a>DMV para listar a integridade do AG distribuído
+### <a name="dmv-to-list-distributed-ag-health"></a>DMV para listar a integridade do AG distribuído
 
 No SQL Server Management Studio, qualquer status mostrado no painel e em outras áreas é destinado à sincronização local somente dentro desse grupo de disponibilidade. Para exibir a integridade de um grupo de disponibilidade distribuída, consulte as exibições de gerenciamento dinâmico. A consulta de exemplo a seguir amplia e aprimora a consulta anterior:
 

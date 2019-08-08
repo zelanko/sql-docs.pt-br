@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 621a122ae3464f207797b6e51a21674192e2a758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/30/2019
 ms.locfileid: "67902723"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
@@ -73,7 +73,7 @@ WITH
 
 ## <a name="arguments"></a>Argumentos
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 Especifica o nome da fonte de dados definido pelo usuário. O nome deve ser exclusivo no banco de dados no SQL Server.
 
@@ -110,7 +110,7 @@ Observações e orientação adicionais ao definir o local:
 - `wasb` é o protocolo padrão para o armazenamento de blobs do Azure. `wasbs` é opcional, mas recomendado, pois os dados serão enviados usando uma conexão SSL segura.
 - Para garantir consultas do PolyBase com êxito durante um failover `Namenode` do Hadoop, considere usar um endereço IP virtual para o `Namenode` do cluster do Hadoop. Se você não fizer isso, execute um comando [ALTER EXTERNAL DATA SOURCE][alter_eds] para apontar para o novo local.
 
-### <a name="connectionoptions--keyvaluepair"></a>CONNECTION_OPTIONS = *key_value_pair*
+### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
 
 Especifica opções adicionais ao se conectar por meio de `ODBC` a uma fonte de dados externa.
 
@@ -126,7 +126,7 @@ Há suporte para `PUSHDOWN` ao se conectar ao SQL Server, ao Oracle, ao Teradata
 
 Habilitar ou desabilitar a aplicação no nível da consulta é feito por meio de uma [dica][hint_pb].
 
-### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
+### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
 Especifica uma credencial no escopo do banco de dados para a autenticação na fonte de dados externa.
 
@@ -142,19 +142,19 @@ Para ver um exemplo de como usar um `CREDENTIAL` com `SHARED ACCESS SIGNATURE` e
 
 Para criar uma credencial no escopo do banco de dados, veja [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
-### <a name="type---hadoop--blobstorage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
+### <a name="type---hadoop--blob_storage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
 
 Especifica o tipo de fonte de dados externa que está sendo configurada. Esse parâmetro não é sempre necessário.
 
 - Use HADOOP quando a fonte de dados externa for Cloudera, Hortonworks ou Armazenamento de Blobs do Azure.
-- Use BLOB_STORAGE ao executar operações em massa com [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] com [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+- Use BLOB_STORAGE ao executar operações em massa com [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset] com [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 
 > [!IMPORTANT]
 > Não defina `TYPE` se estiver usando qualquer outra fonte de dados externa.
 
 Para ver um exemplo de como usar `TYPE` = `HADOOP` para carregar dados do Armazenamento de Blobs do Azure, veja [Criar fonte de dados externa para referenciar o Armazenamento de Blobs do Azure](#e-create-external-data-source-to-reference-azure-blob-storage).
 
-### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
+### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
 Configure esse valor opcional ao se conectar ao Hortonworks ou ao Cloudera.
 
@@ -317,7 +317,7 @@ WITH
 ### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>F. Criar uma fonte de dados externa para operações em massa recuperando dados do Armazenamento de Blobs do Azure
 
 **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
-Use a seguinte fonte de dados para operações em massa usando [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. A credencial deve ser definida como `SHARED ACCESS SIGNATURE` como a identidade, não deve ter o `?` à esquerda no token SAS, deve ter pelo menos permissão de leitura no arquivo que deve ser carregado (por exemplo `srt=o&sp=r`), e o período de término deve ser válido (todas as datas estão no horário UTC). Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)][sas_token].
+Use a seguinte fonte de dados para operações em massa com [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset]. A credencial deve ser definida como `SHARED ACCESS SIGNATURE` como a identidade, não deve ter o `?` à esquerda no token SAS, deve ter pelo menos permissão de leitura no arquivo que deve ser carregado (por exemplo `srt=o&sp=r`), e o período de término deve ser válido (todas as datas estão no horário UTC). Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)][sas_token].
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -406,7 +406,7 @@ WITH
 
 ## <a name="arguments"></a>Argumentos
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 Especifica o nome da fonte de dados definido pelo usuário. O nome deve ser exclusivo no banco de dados no BD SQL (Banco de Dados SQL).
 
@@ -429,7 +429,7 @@ Observações e orientação adicionais ao definir o local:
 
 - O mecanismo de Banco de Dados SQL não verifica a existência da fonte de dados externa quando o objeto é criado. Para validar, crie uma tabela externa usando a fonte de dados externa.
 
-### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
+### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
 Especifica uma credencial no escopo do banco de dados para a autenticação na fonte de dados externa.
 
@@ -446,18 +446,18 @@ Para ver um exemplo de como usar um `CREDENTIAL` com `SHARED ACCESS SIGNATURE` e
 
 Para criar uma credencial no escopo do banco de dados, veja [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
-### <a name="type---blobstorage--rdbms--shardmapmanager"></a>TYPE = *[ BLOB_STORAGE | RDBMS | SHARD_MAP_MANAGER]*
+### <a name="type---blob_storage--rdbms--shard_map_manager"></a>TYPE = *[ BLOB_STORAGE | RDBMS | SHARD_MAP_MANAGER]*
 
 Especifica o tipo de fonte de dados externa que está sendo configurada. Esse parâmetro não é sempre necessário.
 
 - Use o RDBMS para consultas entre bancos de dados usando a consulta elástica do Banco de Dados SQL.  
 - Use SHARD_MAP_MANAGER ao criar uma fonte de dados externos ao se conectar a um Banco de Dados SQL fragmentado.
-- Use BLOB_STORAGE ao executar operações em massa com [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset].
+- Use BLOB_STORAGE ao executar operações em massa com [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset].
 
 > [!IMPORTANT]
 > Não defina `TYPE` se estiver usando qualquer outra fonte de dados externa.
 
-### <a name="databasename--databasename"></a>DATABASE_NAME = *database_name*
+### <a name="database_name--database_name"></a>DATABASE_NAME = *database_name*
 
 Configure esse argumento quando o `TYPE` estiver definido como `RDBMS` ou `SHARD_MAP_MANAGER`.
 
@@ -468,7 +468,7 @@ Configure esse argumento quando o `TYPE` estiver definido como `RDBMS` ou `SHARD
 
 Para obter um exemplo que mostra como criar uma fonte de dados externa em que `TYPE` = `RDBMS`, veja [Criar uma fonte de dados externa do RDBMS](#b-create-an-rdbms-external-data-source)
 
-### <a name="shardmapname--shardmapname"></a>SHARD_MAP_NAME = *shard_map_name*
+### <a name="shard_map_name--shard_map_name"></a>SHARD_MAP_NAME = *shard_map_name*
 
 Usado quando o argumento `TYPE` é definido como `SHARD_MAP_MANAGER` apenas para definir o nome do mapa de fragmentos.
 
@@ -544,7 +544,7 @@ Para obter um tutorial passo a passo sobre o RDBMS, confira [Introdução às co
 
 ### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>C. Criar uma fonte de dados externa para operações em massa recuperando dados do Armazenamento de Blobs do Azure
 
-Use a seguinte fonte de dados para operações em massa usando [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. A credencial deve ser definida como `SHARED ACCESS SIGNATURE` como a identidade, não deve ter o `?` à esquerda no token SAS, deve ter pelo menos permissão de leitura no arquivo que deve ser carregado (por exemplo `srt=o&sp=r`), e o período de término deve ser válido (todas as datas estão no horário UTC). Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)][sas_token].
+Use a seguinte fonte de dados para operações em massa com [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset]. A credencial deve ser definida como `SHARED ACCESS SIGNATURE` como a identidade, não deve ter o `?` à esquerda no token SAS, deve ter pelo menos permissão de leitura no arquivo que deve ser carregado (por exemplo `srt=o&sp=r`), e o período de término deve ser válido (todas as datas estão no horário UTC). Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)][sas_token].
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -630,7 +630,7 @@ WITH
 
 ## <a name="arguments"></a>Argumentos
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 Especifica o nome da fonte de dados definido pelo usuário. O nome deve ser exclusivo no banco de dados no SQL DW (SQL Data Warehouse).
 
@@ -655,7 +655,7 @@ Observações e orientação adicionais ao definir o local:
 - Use a mesma fonte de dados externa para todas as tabelas ao consultar o Hadoop para garantir semântica de consulta consistente.
 - `wasb` é o protocolo padrão para o armazenamento de blobs do Azure. `wasbs` é opcional, mas recomendado, pois os dados serão enviados usando uma conexão SSL segura.
 
-### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
+### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
 Especifica uma credencial no escopo do banco de dados para a autenticação na fonte de dados externa.
 
@@ -666,7 +666,7 @@ Observações e orientações adicionais ao criar uma credencial:
 
 Para criar uma credencial no escopo do banco de dados, veja [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
-### <a name="type---hadoop--blobstorage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
+### <a name="type---hadoop--blob_storage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
 
 Especifica o tipo de fonte de dados externa que está sendo configurada. Esse parâmetro não é sempre necessário.
 
@@ -849,7 +849,7 @@ WITH
 
 ## <a name="arguments"></a>Argumentos
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 Especifica o nome da fonte de dados definido pelo usuário. O nome precisa ser exclusivo no servidor no Analytics Platform System (Parallel Data Warehouse ou PDW).
 
@@ -876,7 +876,7 @@ Observações e orientação adicionais ao definir o local:
 - `wasb` é o protocolo padrão para o armazenamento de blobs do Azure. `wasbs` é opcional, mas recomendado, pois os dados serão enviados usando uma conexão SSL segura.
 - Para garantir consultas do PolyBase com êxito durante um failover `Namenode` do Hadoop, considere usar um endereço IP virtual para o `Namenode` do cluster do Hadoop. Se você não fizer isso, execute um comando [ALTER EXTERNAL DATA SOURCE][alter_eds] para apontar para o novo local.
 
-### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
+### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
 Especifica uma credencial no escopo do banco de dados para a autenticação na fonte de dados externa.
 
@@ -896,7 +896,7 @@ Especifica o tipo de fonte de dados externa que está sendo configurada. Esse pa
 
 Para ver um exemplo de como usar `TYPE` = `HADOOP` para carregar dados do Armazenamento de Blobs do Azure, veja [Criar fonte de dados externa para referenciar o Armazenamento de Blobs do Azure](#d-create-external-data-source-to-reference-azure-blob-storage).
 
-### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
+### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
 Configure esse valor opcional ao se conectar ao Hortonworks ou ao Cloudera.
 

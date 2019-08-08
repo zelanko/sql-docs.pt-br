@@ -1,7 +1,5 @@
 ---
 title: Provedor do SQL Server PowerShell | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: scripting
@@ -16,14 +14,17 @@ helpviewer_keywords:
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b6358cc9bce9048dfd0554b595ba7c871fbffdd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: ''
+ms.date: 07/31/2019
+ms.openlocfilehash: 1017620181ac127576f02fc792e3c4b85213a6d9
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912221"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731121"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 O provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para o Windows PowerShell expõe a hierarquia de objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em caminhos semelhantes aos caminhos do sistema de arquivos. Você pode usar os caminhos para localizar um objeto e usar os métodos dos modelos SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) para executar ações nos objetos.  
@@ -33,12 +34,13 @@ O provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para o Wind
 > As versões anteriores do módulo do **SqlServer** *foram* incluídas no SQL Server Management Studio (SSMS), mas apenas nas versões 16.x do SSMS. Para usar o PowerShell com o SSMS 17.0 e versões posteriores, o módulo do **SqlServer** deve ser instalado da Galeria do PowerShell.
 > Para instalar o módulo do **SqlServer**, consulte [Instalar o SQL Server PowerShell](download-sql-server-ps-module.md).
 
+## <a name="benefits-of-the-sql-server-powershell-provider"></a>Benefícios do provedor do SQL Server PowerShell
 
-## <a name="benefits-of-the-sql-server-powershell-provider"></a>Benefícios do provedor do SQL Server PowerShell  
- Os caminhos implementados pelo provedor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] habilitam a análise fácil e interativa de todos os objetos em uma instância do SQL Server. Você pode navegar nos caminhos usando aliases do Windows PowerShell semelhantes aos comandos usados para navegar em caminhos do sistema de arquivos.  
+Os caminhos implementados pelo provedor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] habilitam a análise fácil e interativa de todos os objetos em uma instância do SQL Server. Você pode navegar nos caminhos usando aliases do Windows PowerShell semelhantes aos comandos usados para navegar em caminhos do sistema de arquivos.  
   
-## <a name="the-sql-server-powershell-hierarchy"></a>A hierarquia do SQL Server PowerShell  
- Os produtos cujos modelos de objetos ou de dados podem ser representados em uma hierarquia usam os provedores do Windows PowerShell para expor as hierarquias. A hierarquia é exposta usando uma estrutura de unidades e caminhos semelhante à usada pelo sistema de arquivos do Windows.  
+## <a name="the-sql-server-powershell-hierarchy"></a>A hierarquia do SQL Server PowerShell
+
+Os produtos cujos modelos de objetos ou de dados podem ser representados em uma hierarquia usam os provedores do Windows PowerShell para expor as hierarquias. A hierarquia é exposta usando uma estrutura de unidades e caminhos semelhante à usada pelo sistema de arquivos do Windows.  
   
  Cada provedor do Windows PowerShell implementa uma ou mais unidades. Cada unidade é o nó raiz de uma hierarquia de objetos relacionados. O provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementa uma unidade SQLSERVER:. O provedor também define um conjunto de pastas primárias para a unidade SQLSERVER:. Cada pasta e suas respectivas subpastas representam o conjunto de objetos que podem ser acessados usando um modelo de objeto de gerenciamento do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Quando o foco é uma subpasta em um caminho que começa com uma dessas pastas primárias, você pode usar os métodos do modelo de objeto associado para executar ações com o objeto representado pelo nó. As pastas do Windows PowerShell implementadas pelo provedor do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] estão listadas na tabela a seguir:  
   
@@ -51,6 +53,8 @@ O provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para o Wind
 |`SQLSERVER:\DAC`|<xref:Microsoft.SqlServer.Management.DAC>|Objetos de aplicativo da camada de dados como pacotes do DAC e operações como implantação de um DAC.|  
 |`SQLSERVER:\DataCollection`|<xref:Microsoft.SqlServer.Management.Collector>|Objetos de coletor de dados, como conjuntos de coleta e repositórios de configuração.|  
 |`SQLSERVER:\SSIS`|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] objetos como projetos, pacotes e ambientes.|  
+|`SQLSERVER:\XEvent`|<xref:Microsoft.SqlServer.Management.XEvent>|Eventos Estendidos do SQL Server|
+|`SQLSERVER:\DatabaseXEvent`|[Microsoft.SqlServer.Management.XEventDbScoped](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.management.xeventdbscoped)|Eventos Estendidos do SQL Server|
 |`SQLSERVER:\SQLAS`|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objetos como cubos, agregações e dimensões.|  
   
  Por exemplo, você pode usar a pasta SQLSERVER:\SQL para iniciar caminhos que podem representar qualquer objeto com suporte pelo modelo de objeto do SMO. A parte à esquerda de um caminho SQLSERVER:\SQL é SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*. Os nós após o nome da instância alternam entre coleções de objetos (como *Bancos de Dados* ou *Exibições*) e nomes de objetos (como AdventureWorks2012). Os esquemas não são representados como classes de objetos. Ao especificar o nó para um objeto de alto nível em um esquema, como uma tabela ou exibição, é preciso especificar o nome do objeto no formato *SchemaName.ObjectName*.  
@@ -77,9 +81,8 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |Descreve como usar cmdlets do Windows PowerShell para navegar pelos nós em um caminho, e a cada nó obtém uma lista dos objetos desse nó.|[Navegar em caminhos do SQL Server PowerShell](navigate-sql-server-powershell-paths.md)|  
 |Descreve como usar os métodos e propriedades do SMO para relatar e executar trabalho no objeto representado por um nó em um caminho. Também descreve como obter uma lista dos métodos e propriedades do SMO para esse nó.|[Trabalhar com caminhos do SQL Server PowerShell](work-with-sql-server-powershell-paths.md)|  
 |Descreve como converter um URN (Nome de Recurso Uniforme) de SMO em um caminho de provedor SQL Server.|[Converter URNs em caminhos de provedor SQL Server](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)|  
-|Descreve como abrir conexões de Autenticação do SQL Server usando o provedor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Por padrão, o provedor usa as conexões de Autenticação do Windows feitas usando as credenciais da conta Windows que executam a sessão do Windows PowerShell.|[Gerenciar a autenticação no Mecanismo de Banco de Dados com o PowerShell](manage-authentication-in-database-engine-powershell.md)|  
+|Descreve como abrir conexões de Autenticação do SQL Server usando o provedor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Por padrão, o provedor usa as conexões de Autenticação do Windows feitas usando as credenciais da conta Windows que executam a sessão do Windows PowerShell.|[Gerenciar a autenticação no PowerShell do Mecanismo de Banco de Dados](manage-authentication-in-database-engine-powershell.md)|  
   
-## <a name="see-also"></a>Consulte Também  
- [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  
+## <a name="next-steps"></a>Próximas etapas
+
+[SQL Server PowerShell](sql-server-powershell.md)

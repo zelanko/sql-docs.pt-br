@@ -38,12 +38,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b345e8084b491adeadb5a814655284e9699f5550
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094908"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742840"
 ---
 # <a name="database-level-roles"></a>Funções de nível de banco de dados
 
@@ -73,7 +73,7 @@ Para obter uma lista de todas as permissões, consulte o cartaz [Permissões do 
 |Nome da função de banco de dados fixa|Descrição|  
 |-------------------------------|-----------------|  
 |**db_owner**|Os membros da função de banco de dados fixa **db_owner** podem executar todas as atividades de configuração e manutenção no banco de dados, bem como remover o banco de dados no [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (No [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)], algumas atividades de manutenção exigem permissões em nível de servidor e não podem ser executadas por **db_owners**.)|  
-|**db_securityadmin**|Os membros da função de banco de dados fixa **db_securityadmin** podem modificar a associação de função somente para funções personalizadas, criar usuários sem logins e gerenciar permissões. A adição de entidades nesta função pode habilitar o escalonamento não intencional de privilégios.|  
+|**db_securityadmin**|Os membros da função de banco de dados fixa **db_securityadmin** podem modificar a associação de função somente para funções personalizadas e gerenciar permissões. Membros dessa função têm o potencial de elevar seus privilégios e suas ações devem ser monitoradas.|  
 |**db_accessadmin**|Os membros da função de banco de dados fixa **db_accessadmin** podem adicionar ou remover o acesso ao banco de dados para logons do Windows, grupos do Windows e logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |**db_backupoperator**|Os membros da função de banco de dados fixa **db_backupoperator** podem fazer backup do banco de dados.|  
 |**db_ddladmin**|Os membros da função de banco de dados fixa **db_ddladmin** podem executar qualquer comando Data Definition Language (DDL) em um banco de dados.|  
@@ -86,7 +86,7 @@ As permissões atribuídas às funções de banco de dados fixas não podem ser 
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>Funções especiais para [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
+## <a name="special-roles-for-includesssds_mdincludessssds-mdmd-and-includesssdw_mdincludessssdw-mdmd"></a>Funções especiais para [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 
 Essas funções de banco de dados existem somente no banco de dados mestre virtual. As permissões são restritas às ações executadas no mestre. Somente os usuários de banco de dados no mestre podem ser adicionados a essas funções. Logons não podem ser adicionados a essas funções, mas é possível criar usuários com base nos logons e esses usuários podem ser adicionados às funções. Os usuários de banco de dados contidos no mestre também podem ser adicionados a essas funções. No entanto, os usuários de banco de dados adicionados contidos na função **dbmanager** no mestre não podem ser usados para criar novos bancos de dados.
 

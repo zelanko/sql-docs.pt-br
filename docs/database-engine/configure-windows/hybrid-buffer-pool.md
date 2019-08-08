@@ -10,21 +10,22 @@ ms.topic: conceptual
 ms.assetid: ''
 author: DBArgenis
 ms.author: argenisf
-ms.openlocfilehash: 471708dc2e6b6feb3f91bd831ff63fce1177c8d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4808c0895695eba562c25ea0ee412348dc148f5
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998059"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68697553"
 ---
 # <a name="hybrid-buffer-pool"></a>Pool de Buffers Híbrido
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 O Pool de Buffers Híbrido permite que o mecanismo de banco de dados acesse diretamente as páginas de dados em arquivos de banco de dados armazenados em dispositivos PMEM (memória persistente). Esse recurso foi introduzido no [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
 
-Em um sistema tradicional sem PMEM, o SQL Server armazena as páginas de dados em cache no pool de buffers baseados em DRAM. Com o pool de buffers híbrido, o SQL Server ignora a execução de uma cópia da página para a parte do pool de buffers baseada em DRAM. Em vez disso, ele acessa a página diretamente no arquivo de banco de dados que residem no dispositivo PMEM. O acesso aos arquivos de dados em dispositivos PMEM para o pool de buffers híbrido é realizado usando o MMIO (E/S mapeada em memória), também conhecido como *capacitação* dos arquivos de dados no SQL Server.
+Em um sistema tradicional sem PMEM, o SQL Server armazena as páginas de dados em cache no pool de buffers. Com o pool de buffers híbrido, o SQL Server ignora a execução de uma cópia da página para a parte do pool de buffers baseada em DRAM e, em vez disso, acessa a página diretamente no arquivo de banco de dados que reside em um dispositivo PMEM. O acesso de leitura a arquivos de dados em dispositivos PMEM para o pool de buffers híbridos é executado diretamente seguindo um ponteiro para as páginas de dados no dispositivo PMEM.  
 
-Somente páginas limpas podem ser acessadas diretamente em um dispositivo PMEM. Quando uma página é marcada como suja, ela é copiada para o pool de buffers baseados em DRAM antes de ser finalmente gravada mais uma vez no dispositivo PMEM e marcada como limpa de novo. Esse processo acontece durante as operações de ponto de verificação regulares.
+Somente páginas limpas podem ser acessadas diretamente em um dispositivo PMEM. Quando uma página é marcada como suja, ela é copiada para o pool de buffers DRAM antes de ser finalmente gravada mais uma vez no dispositivo PMEM e marcada como limpa de novo. Isso ocorrerá durante as operações de ponto de verificação regulares. O mecanismo para copiar o arquivo do dispositivo PMEM para DRAM é o MMIO (E/S mapeado para memória direta) e também é conhecido como o *esclarecimento* dos arquivos de dados dentro do SQL Server.
+
 
 O recurso de pool de buffers híbrido está disponível para o Windows e o Linux. O dispositivo PMEM precisa ser formatado com um sistema de arquivos que dá suporte ao DAX (DirectAccess). Os sistemas de arquivos XFS, EXT4 e NTFS têm suporte para o DAX. O SQL Server detectará automaticamente se os arquivos de dados residirem em um dispositivo PMEM adequadamente formatado e realizará o mapeamento de memória no espaço do usuário. Esse mapeamento acontece na inicialização, quando um novo banco de dados é anexado, restaurado ou criado ou quando o recurso de pool de buffers híbrido é habilitado para um banco de dados.
 

@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc85c55e86ee026a59c20539eb5c761d0cf66fd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7793c64a6c7d5dc404c24f502a45067d2e95fcca
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129826"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769459"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>Caixa de diálogo Propriedades de Assinatura de Replicação do SQL Server 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 ### <a name="publisher-properties"></a>Propriedades do publicador
 A caixa de diálogo **Propriedades da Assinatura** no Publicador permite exibir e definir propriedades para assinaturas push. Você também pode exibir algumas propriedades de assinaturas pull, mas a caixa de diálogo **Propriedades da Assinatura** no Assinante exibe propriedades adicionais e permite que elas sejam modificadas.  
@@ -46,7 +46,8 @@ A caixa de diálogo **Propriedades da Assinatura** no Assinante permite exibir e
  Se uma opção for exibida como somente leitura, só poderá ser definida quando a assinatura for criada. Se você quiser definir opções que não estão disponíveis no Assistente para Nova Assinatura, crie a assinatura com procedimentos armazenados. Para obter mais informações, consulte [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) e [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
   
 > [!NOTE]  
->  Se um trabalho do Distribution Agent ou Merge Agent ainda não foi criado para a Assinatura, muitas propriedades de assinatura são exibidas agora. Para criar um trabalho de agente para uma assinatura pull, execute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (para uma assinatura de publicação transacional ou de instantâneo) ou [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (para uma assinatura de publicação de mesclagem).  
+>  - Se um trabalho do Distribution Agent ou Merge Agent ainda não foi criado para a Assinatura, muitas propriedades de assinatura são exibidas agora. Para criar um trabalho de agente para uma assinatura pull, execute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (para uma assinatura de publicação transacional ou de instantâneo) ou [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (para uma assinatura de publicação de mesclagem).  
+> - A instância gerenciada do Banco de Dados SQL do Azure pode ser um publicador, um distribuidor e um assinante para replicação de instantâneo e transacional. Bancos de dados SQL do Azure individuais ou em pool só podem ser assinantes por push para replicação de instantâneo e transacional. Para obter mais informações, consulte [Replicação transacional com o Banco de Dados SQL do Azure](/azure/sql-database/sql-database-managed-instance-transactional-replication). 
   
 ## <a name="publisher-options-for-all-subscriptions"></a>Opções do editor para todas as assinaturas  
  **Segurança**  

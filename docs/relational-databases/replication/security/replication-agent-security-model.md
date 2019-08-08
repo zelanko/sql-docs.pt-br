@@ -20,16 +20,18 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 84050cd000ae53b8b913a9652a4ddb323743c8da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd0cafe74b558dc86f6709b23e2f1195ecada520
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046579"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768474"
 ---
 # <a name="replication-agent-security-model"></a>Modelo de segurança do agente de replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   O modelo de segurança do agente de replicação permite um controle refinado das contas nas quais os agentes de replicação executam e efetuam conexões: Uma conta diferente pode ser especificada para cada agente. Para obter mais informações sobre como especificar contas, confira [Controle de acesso e identidade para replicação](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
+
+O modelo de segurança do agente de replicação é um pouco diferente para instâncias gerenciadas do Banco de Dados SQL do Azure, pois não há contas do Windows sob as quais os agentes serão executados. Em vez disso, tudo deve ser feito por meio da autenticação do SQL Server. 
   
 > [!IMPORTANT]  
 >  Quando um membro da função fixa do servidor **sysadmin** configura a replicação, os agentes de replicação podem ser configurados para representar a conta do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Isso é realizado não especificando um logon nem uma senha para um agente de replicação, contudo, não recomendamos essa abordagem. Em vez disso, como a melhor prática de segurança, recomendamos especificar uma conta para cada agente que tenha as permissões mínimas descritas na seção "Permissões exigidas pelos agentes", mais adiante nesse tópico.  

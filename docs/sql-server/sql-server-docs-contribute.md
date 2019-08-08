@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a13421707f332ee992d07daa4e9bd337996a7dad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136392"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68693185"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Como contribuir para a documentação do SQL Server
 
@@ -32,14 +32,24 @@ Todas as contribuições públicas são validadas pela equipe de conteúdo do SQ
 
 ## <a id="githubui"></a> Editar no navegador
 
-Você pode fazer edições simples no conteúdo do SQL Server em seu navegador e, em seguida, enviá-las à Microsoft. O processo completo é documentado no artigo [Visão geral do guia de colaborador do Microsoft Docs](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). O seguinte vídeo mostra o processo de ponta a ponta para enviar as alterações ao seu navegador:
+Você pode fazer edições simples no conteúdo do SQL Server em seu navegador e, em seguida, enviá-las à Microsoft. Para saber mais, confira o [Guia de visão geral do colaborador do Microsoft Docs](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). 
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE23pxh]
+O processo é resumido pelas seguintes etapas: 
 
-> [!TIP]
-> Observe que o local do botão **Editar** é um pouco diferente do que é mostrado no vídeo, mas o processo é o mesmo.
->
-> ![Botão Editar](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
+1. Na página sobre a qual você tem comentários, selecione o link **Editar** no canto superior direito.
+1. Na página seguinte, selecione o ícone de **Lápis** no canto superior direito.
+1. Na página seguinte, na janela de texto **Editar arquivo**, faça suas edições diretamente no texto que deseja alterar.
+    Se precisar de ajuda com a formatação do texto novo ou alterado, consulte a [Folha de Referências de Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+1. Depois de fazer suas edições, em **Confirmar alterações**:
+    1. Na primeira caixa de texto, insira uma breve descrição da alteração feita.
+    1. Na caixa **Adicionar uma descrição estendida opcional**, forneça uma breve explicação de sua alteração.
+1. Selecione **Propor alteração de arquivo**.
+1. Na página **Comparando alterações**, selecione **Criar solicitação de pull**. 
+1. Na página **Abrir solicitação de pull**, selecione **Criar solicitação de pull**. 
+
+O seguinte GIF mostra o processo de ponta a ponta para enviar as alterações ao seu navegador:
+
+![Editar documentos do SQL](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
 ## <a id="tools"></a> Editar localmente com ferramentas
 

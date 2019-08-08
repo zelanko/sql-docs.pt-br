@@ -16,14 +16,14 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3af59410ed151e54a5cc7ea7a546f8979a318693
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d7ef8b52e3ee31e688e51454a72c0f359bcb68b
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906872"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68632129"
 ---
-# <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
+# <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 Concatena os valores das expressões de cadeia de caracteres e coloca os valores de separador entre eles. O separador não é adicionado ao final da cadeia de caracteres.
@@ -95,6 +95,7 @@ FROM Person.Person;
 |Davi <br />Catherine <br />Kim <br />Kim <br />Kim <br />Humberto <br />... | 
 
 Os valores de `NULL` encontrados nas células `name` não são retornados no resultado.   
+
 > [!NOTE]  
 >  Se você estiver usando o Editor de Consultas do Management Studio, a opção **Resultados em Grade** não poderá implementar o retorno de carro. Alterne para **Resultados em Texto** para ver o conjunto de resultados corretamente.   
 
@@ -127,16 +128,17 @@ FROM Person.Person;
 |Ken Sánchez (Feb 8 2003 12:00AM) <br />Manuela Ribeiro (24 de fev de 2002 24h) <br />Henrique Cunha (5 de dez de 2001 24h) <br />Fábio Pena (29 de dez de 2001 24h) <br />... |
 
 > [!NOTE]  
->  Se você estiver usando o Editor de Consultas do Management Studio, a opção **Resultados em Grade** não poderá implementar o retorno de carro. Alterne para **Resultados em Texto** para ver o conjunto de resultados corretamente.   
+> Se você estiver usando o Editor de Consultas do Management Studio, a opção **Resultados em Grade** não poderá implementar o retorno de carro. Alterne para **Resultados em Texto** para ver o conjunto de resultados corretamente.
 
-### <a name="d-return-news-articles-with-related-tags"></a>D. Retornar artigos de notícias com marcas relacionadas 
+### <a name="d-return-news-articles-with-related-tags"></a>D. Retornar artigos de notícias com marcas relacionadas
+
 O artigo e suas marcas são separados em tabelas diferentes. O desenvolvedor deseja retornar uma linha por artigo com todas as marcas associadas. Usando a seguinte consulta:
 
 ```sql
-SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
-FROM dbo.Article AS a       
-LEFT JOIN dbo.ArticleTag AS t 
-    ON a.ArticleId = t.ArticleId 
+SELECT a.articleId, title, STRING_AGG (tag, ',') as tags
+FROM dbo.Article AS a
+LEFT JOIN dbo.ArticleTag AS t
+    ON a.ArticleId = t.ArticleId
 GROUP BY a.articleId, title;
 ```
 
@@ -144,9 +146,12 @@ GROUP BY a.articleId, title;
 
 |articleId |title |marcas |
 |--- |--- |--- |
-|172 |Pesquisas indicam resultados aproximados da eleição |política, pesquisas, câmara municipal | 
+|172 |Pesquisas indicam resultados aproximados da eleição |política, pesquisas, câmara municipal |
 |176 |Previsão de construção de nova estrada para reduzir o congestionamento |NULL |
-|177 |Cachorros continuam sendo mais populares do que gatos |pesquisas, animais| 
+|177 |Cachorros continuam sendo mais populares do que gatos |pesquisas, animais|
+
+> [!NOTE]
+> A cláusula `GROUP BY` será necessária se a função `STRING_AGG` não for o único item na lista `SELECT`.
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. Gerar uma lista de emails por cidades
 

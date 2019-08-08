@@ -22,12 +22,12 @@ ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 176a5d39efc5e0501d425100e458235a971d87da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8865d5c4331fc9414d4621f98d6b21f85561f15f
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914795"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702758"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,6 +115,7 @@ OBJECTPROPERTY ( id , property )
 |IsUserTable|Table|Tabela definida pelo usuário.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsView|Exibição|Exibição.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |OwnerId|Qualquer objeto no escopo do esquema|Proprietário do objeto.<br /><br /> **Observação:**  O proprietário do esquema não é necessariamente o proprietário do objeto. Por exemplo, objetos filho (aqueles em que *parent_object_id* é nonnull) sempre retornarão a mesma ID do proprietário como o pai.<br /><br /> Não nula = A ID de usuário do banco de dados do proprietário do objeto.|  
+|SchemaId|Qualquer objeto no escopo do esquema| ID do esquema ao qual o objeto pertence.| 
 |TableDeleteTrigger|Table|A tabela tem um gatilho DELETE.<br /><br /> >1 = ID do primeiro gatilho com o tipo especificado.|  
 |TableDeleteTriggerCount|Table|A tabela tem o número especificado de gatilhos DELETE.<br /><br /> > 0 = o número de gatilhos DELETE.|  
 |TableFullTextMergeStatus|Table|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Se uma tabela que tem um índice de texto completo está atualmente em mesclagem.<br /><br /> 0 = A tabela não tem um índice de texto completo ou o índice de texto completo não está sendo mesclado.<br /><br /> 1 = O índice de texto completo está em mesclagem.|  
