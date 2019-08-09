@@ -5,22 +5,22 @@ description: Este artigo explica como configurar camadas do HDFS para montar um 
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 07/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 28c80d6076f07c8a4f1605149f4b5c730c8349a1
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 10e7d0e30135622fedfcbe8f8dba67bfaf1908cd
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419342"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702872"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Como montar um S3 para camadas do HDFS em um cluster de Big Data
 
 As seções a seguir fornecem um exemplo de como configurar camadas do HDFS com uma fonte de dados de Armazenamento S3.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [Cluster de Big Data implantado](deployment-guidance.md)
 - [Ferramentas de Big Data](deploy-big-data-tools.md)
@@ -77,13 +77,13 @@ Se a montagem tiver sido bem-sucedida, você poderá consultar os dados do HDFS 
 Para listar o status de todas as montagens no cluster de Big Data, use o seguinte comando:
 
 ```bash
-azdata bdc storage-pool mount status
+azdata bdc hdfs mount status
 ```
 
 Para listar o status de uma montagem em um caminho específico no HDFS, use o seguinte comando:
 
 ```bash
-azdata bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="refresh-a-mount"></a>Atualizar uma montagem
@@ -99,7 +99,7 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 Para excluir a montagem, use o comando **azdata bdc storage-pool mount delete** e especifique o caminho da montagem no HDFS:
 
 ```bash
-azdata bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>Próximas etapas
