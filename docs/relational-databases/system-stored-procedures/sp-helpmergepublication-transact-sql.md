@@ -22,7 +22,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68137648"
 ---
-# <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
+# <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações sobre uma publicação de mesclagem. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
@@ -108,7 +108,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_web_synchronization|**bit**|Determina se a publicação está habilitada para sincronização da Web. Um valor de **1** significa que a sincronização da Web está habilitada.|  
 |web_synchronization_url|**nvarchar(500)**|A URL da Internet usada para a sincronização da Web.|  
 |allow_partition_realignment|**bit**|Determina se as exclusões serão enviadas ao assinante quando a modificação da linha no publicador gerar uma alteração na partição. Um valor de **1** significa que as exclusões serão enviadas ao assinante.  Para obter mais informações, consulte [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).|  
-|retention_period_unit|**tinyint**|Define a unidade usada ao definir a retenção. Esse valor pode ser um dos seguintes:<br /><br /> **0** = dia|<br /><br /> **1** = semana<br /><br /> **2** = mês<br /><br /> **3** = ano|  
+|retention_period_unit|**tinyint**|Define a unidade usada ao definir a retenção. Esse valor pode ser um dos seguintes:<br /><br /> **0** = dia<br /><br /> **1** = semana<br /><br /> **2** = mês<br /><br /> **3** = ano|  
 |has_downloadonly_articles|**bit**|Indica se os artigos pertencentes à publicação são de somente download. Um valor de **1** indica que há artigos de somente download.|  
 |decentralized_conflicts|**int**|Indica se os registros de conflito são armazenados no Assinante que causou o conflito. Um valor de **0** indica que os registros de conflito não são armazenados no assinante. Um valor 1 indica que os registros de conflito são armazenados no Assinante.|  
 |generation_leveling_threshold|**int**|Especifica o número de alterações que estão contidos em uma geração. Uma geração é uma coleção das alterações que são entregues a um publicador ou assinante|  
