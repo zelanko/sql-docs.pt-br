@@ -12,12 +12,12 @@ ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0a7498820bedf5d412fe227c268a6bef35d3d74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072519"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889329"
 ---
 # <a name="ragged-hierarchies"></a>Hierarquias desbalanceadas
   Uma hierarquia desbalanceada é uma hierarquia definida pelo usuário que tem um número irregular de níveis. Exemplos comuns incluem o organograma, onde um gerente de alto nível tem os gerentes departamentais e funcionários não gerentes como subordinados diretos, ou hierarquias geográficas constituídas de País-Região-Cidades, onde algumas cidades não têm um estado ou província pai, como Washington D.C., a Cidade do Vaticano ou Nova Délhi.  
@@ -28,7 +28,7 @@ ms.locfileid: "66072519"
   
  A primeira etapa é verificar como o aplicativo cliente trata o caminho de busca detalhada. Por exemplo, o Excel repete os nomes pai como espaços reservados para valores ausentes. Para ver esse comportamento, crie uma Tabela Dinâmica usando a dimensão Sales Territory no modelo multidimensional do Adventure Works. Em uma Tabela Dinâmica que tem os atributos Group, Country e Region de Sales Territory, você verá que os países sem um valor de região obterão um espaço reservado; nesse caso, uma repetição do pai acima dele (nome do país). Esse comportamento deriva da propriedade da cadeia de conexão MDX Compatibility=1, que é fixa no Excel. Se o cliente não fornece naturalmente os comportamentos de busca detalhada buscados, você pode definir propriedades no modelo para alterar pelo menos alguns desses comportamentos.  
   
- Este tópico contém as seguintes seções:  
+ Esse tópico contém as seguintes seções:  
   
 -   [Abordagens para modificar a navegação da busca detalhada em uma hierarquia desbalanceada](#bkmk_approach)  
   
@@ -41,9 +41,9 @@ ms.locfileid: "66072519"
   
 -   Use uma hierarquia regular, mas defina a propriedade `HideMemberIf` em cada nível para especificar se um nível ausente é visualizado pelo usuário. Ao definir `HideMemberIf`, você também deve definir `MDXCompatibility` na cadeia de conexão para substituir comportamentos da navegação padrão. As instruções para definir essas propriedades são fornecidas neste tópico.  
   
--   Crie uma hierarquia pai-filho que gerencie explicitamente os membros de nível. Para obter uma ilustração da técnica, consulte [Hierarquia desbalanceada em SSAS (postagem de blog)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/). Para obter mais informações nos Manuais Online, consulte [hierarquia pai-filho](parent-child-dimension.md). As desvantagens de criar uma hierarquia pai-filho são que você só pode ter uma por dimensão e, em geral, incorre em uma penalidade de desempenho ao calcular agregações para membros intermediários.  
+-   Crie uma hierarquia pai-filho que gerencie explicitamente os membros de nível. Para obter uma ilustração da técnica, consulte [Hierarquia desbalanceada em SSAS (postagem de blog)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/). Para obter mais informações nos manuais online, consulte [hierarquia pai-filho](parent-child-dimension.md). As desvantagens de criar uma hierarquia pai-filho são que você só pode ter uma por dimensão e, em geral, incorre em uma penalidade de desempenho ao calcular agregações para membros intermediários.  
   
- Se a dimensão contém mais de uma hierarquia desbalanceada, você deve usar a primeira abordagem, definindo `HideMemberIf`. Os desenvolvedores de BI com experiência prática no trabalho com hierarquias desbalanceadas defendem ainda mais as alterações adicionais nas tabelas de dados físicos, criando tabelas separadas para cada nível. Ver [Martin Mason do SSAS Financial Cube – Part irregular de 1a hierarquias (blog)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) para obter detalhes sobre essa técnica.  
+ Se a dimensão contém mais de uma hierarquia desbalanceada, você deve usar a primeira abordagem, definindo `HideMemberIf`. Os desenvolvedores de BI com experiência prática no trabalho com hierarquias desbalanceadas defendem ainda mais as alterações adicionais nas tabelas de dados físicos, criando tabelas separadas para cada nível. Veja [o cubo financeiro do SSAS da Martin Mason – parte 1a – Hierarquias desbalanceadas (blog)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) para obter detalhes sobre essa técnica.  
   
 ##  <a name="bkmk_Hide"></a> Definir HideMemberIf para ocultar membros em uma hierarquia regular  
  Na tabela de uma dimensão imperfeita, os membros logicamente ausentes podem ser representados de formas diferentes. As células da tabela podem conter cadeias de caracteres nulas ou vazias ou podem conter o mesmo valor que o pai, servindo como espaço reservado. A representação de espaços reservados é determinada pelo status de espaço reservado dos membros filho, conforme determinado pela propriedade `HideMemberIf` e pela propriedade de cadeia de conexão `MDX Compatibility` do aplicativo cliente.  
@@ -74,6 +74,6 @@ ms.locfileid: "66072519"
  [Criar hierarquias definidas pelo usuário](user-defined-hierarchies-create.md)   
  [Hierarquias do usuário](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Hierarquia pai-filho](parent-child-dimension.md)   
- [Propriedades de cadeia de conexão &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [Propriedades de cadeia de conexão &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/connection-string-properties-analysis-services)  
   
   

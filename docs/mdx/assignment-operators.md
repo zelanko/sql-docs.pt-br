@@ -8,21 +8,21 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e9081549f34ca4ff9150e2bfe6ab9c1cf5b07e0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f0e587e4c87b8d209c86476b1500ca6bbe3d026a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017023"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893639"
 ---
 # <a name="assignment-operators"></a>Operadores de atribuição
 
 
   Na linguagem MDX, o operador de atribuição é o sinal de igual (=).  
   
- O operador de atribuição é usado para atribuir valores a subcubos em script MDX. Para obter mais informações, consulte [Conceitos básicos do script MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md).  
+ O operador de atribuição é usado para atribuir valores a subcubos em script MDX. Para obter mais informações, consulte [Conceitos básicos do script MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services).  
   
 ## <a name="see-also"></a>Consulte também  
- [Operadores &#40;sintaxe MDX&#41;](../mdx/operators-mdx-syntax.md)  
+ [Sintaxe &#40;de MDX de operadores&#41;](../mdx/operators-mdx-syntax.md)  
   
   

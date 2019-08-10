@@ -14,12 +14,12 @@ ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bdd12cf49c86cb9a622c1ac546fd755056b5e357
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a71c1781432ee4ca35c72beb8b091380f2e72513
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66106977"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891875"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interface de usuário do Designer de Consulta baseado em texto (Construtor de Relatórios)
   Use o designer de consulta baseado em texto para especificar uma consulta usando o idioma de consulta suportado pela fonte de dados, execute a consulta e exiba os resultados no tempo de design. Você pode especificar várias instruções do [!INCLUDE[tsql](../../../includes/tsql-md.md)] , consulta ou sintaxe de comando para as extensões de processamento de dados e consultas que são especificadas como expressões. Como o designer de consulta baseado em texto não processa previamente a consulta e pode acomodar qualquer tipo de sintaxe de consulta, esta é a ferramenta de designer de consulta padrão para muitos tipos de fontes de dados.  
@@ -40,13 +40,13 @@ ms.locfileid: "66106977"
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas. Nem todos os tipos de fonte de dados dão suporte aos designers de consultas gráficas.|  
 |**Importar**|Importa uma consulta existente de um arquivo ou relatório. Apenas os tipos de arquivo .sql e .rdl têm suporte|  
-|![Executar a consulta](../../analysis-services/media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta e exibe o conjunto de resultados no painel Resultado.|  
+|![Executar a consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta e exibe o conjunto de resultados no painel Resultado.|  
 |**Tipo de Comando**|Selecione **Text**, **StoredProcedure**ou **TableDirect**. Se um procedimento armazenado tiver parâmetros, a caixa de diálogo **Definir Parâmetros de Consulta** será aberta quando você clicar em **Executar** na barra de ferramentas e os valores poderão ser preenchidos conforme necessário.<br /><br /> Observação: Se um procedimento armazenado retornar mais de um conjunto de resultados, somente o primeiro será usado para popular o conjunto de dados.|  
   
 ### <a name="command-type-text"></a>Tipo de comando Text  
  Quando você cria um conjunto de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o designer de consulta relacional é aberto por padrão. Para mudar para o designer de consulta baseado em texto, clique no botão de alternância **Editar como Texto** na barra de ferramentas. O designer de consulta baseado em texto apresenta dois painéis: Consulta e Resultado. A imagem a seguir define cada painel.  
   
- ![Designer de consultas genérico para consulta de dados relacionais](../../analysis-services/media/rsqd-dsaw-sql-generic.gif "Designer de consultas genérico para consulta de dados relacionais")  
+ ![Designer de consultas genérico para consulta de dados relacionais](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Designer de consultas genérico para consulta de dados relacionais")  
   
  A tabela a seguir descreve a função de cada painel.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66106977"
 |Resultado|Exibe os resultados da consulta. Para executar a consulta, clique com o botão direito do mouse em qualquer painel e clique em **Executar**ou clique no botão **Executar** na barra de ferramentas.|  
   
 #### <a name="example"></a>Exemplo  
- A consulta a seguir retorna a lista de sobrenomes dos [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** banco de dados `ContactType` de tabela para o `Person` esquema.  
+ A consulta a seguir retorna a lista de sobrenomes [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]da tabela `ContactType` de banco de `Person` dados **2008** para o esquema.  
   
 ```  
 SELECT Name FROM Person.ContactType  
@@ -69,7 +69,7 @@ SELECT Name FROM Person.ContactType
   
  A figura a seguir mostra os painéis Consulta e Resultados quando você executa um procedimento armazenado. Neste caso, os parâmetros de entrada são constantes.  
   
- ![Procedimento armazenado no designer de consultas com base em texto](../../analysis-services/media/rs-relational-text-sp.gif "Procedimento armazenado no designer de consultas com base em texto")  
+ ![Procedimento armazenado no designer de consultas com base em texto](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-text-sp.gif "Procedimento armazenado no designer de consultas com base em texto")  
   
  A tabela a seguir descreve a função de cada painel.  
   
@@ -79,7 +79,7 @@ SELECT Name FROM Person.ContactType
 |Resultado|Exibe os resultados da consulta. Para executar a consulta, clique com o botão direito do mouse em qualquer painel e clique em **Executar**ou clique no botão **Executar** na barra de ferramentas.|  
   
 #### <a name="example"></a>Exemplo  
- A consulta a seguir chama o [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** procedimento armazenado `uspGetWhereUsedProductID`. Você deve inserir um valor para o parâmetro do número de identificação do produto quando executar a consulta.  
+ A consulta a seguir chama [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]o procedimento `uspGetWhereUsedProductID`armazenado **2008** . Você deve inserir um valor para o parâmetro do número de identificação do produto quando executar a consulta.  
   
 ```  
 uspGetWhereUsedProductID  
@@ -98,7 +98,7 @@ uspGetWhereUsedProductID
  Quando você seleciona o **Comando typeTableDirect**, o designer de consulta baseado em texto apresenta dois painéis: Consulta e Resultado. Se você inserir uma tabela e clicar no botão **Executar** , todas as colunas dessa tabela serão retornadas.  
   
 #### <a name="example"></a>Exemplo  
- Para um tipo de fonte de dados OLE DB, a seguinte consulta retorna um conjunto de resultados para tipos de contato de todos os [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** banco de dados.  
+ Para um tipo de fonte de dados OLE DB, a seguinte consulta de conjunto retorna um conjunto de resultados para todos [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]os tipos de contato no banco de dados **2008** .  
   
  `Person.ContactType`  
   

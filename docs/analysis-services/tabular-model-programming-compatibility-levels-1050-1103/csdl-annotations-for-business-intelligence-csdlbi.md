@@ -1,5 +1,5 @@
 ---
-title: Anotações CSDL para Business Intelligence (CSDLBI) | Microsoft Docs
+title: Anotações de CSDL para Business Intelligence (CSDLBI) | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3eac4057f8a4db818a02068f33cbc7b295353f0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23a7433ffb0f06330c948de0955193a885eec768
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68207900"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890191"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>CSDLBI (Anotações CSDL para Business Intelligence)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68207900"
   
  Um esquema da CSDL é gerado pelo servidor do Analysis Services em resposta a uma solicitação por uma definição de modelo de um cliente, como o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. O aplicativo cliente envia uma consulta XML ao servidor do Analysis Services que hospeda os dados modelo. Em resposta, o servidor envia uma mensagem XML que contém uma definição das entidades no modelo, usando as anotações da CSDLBI. O cliente de relatórios usa as informações para apresentar os campos, as agregações e as medidas disponíveis no modelo. As anotações da CSDL também fornecem informações sobre como agrupar, classificar e formatar os dados.  
   
- Para obter informações gerais sobre a CSDLBI, consulte [conceitos da CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts).  
+ Para obter informações gerais sobre CSDLBI, consulte [conceitos de CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts).  
   
 ### <a name="working-with-csdl"></a>Trabalhando com a CSDL  
  O conjunto de anotações da CSDLBI que representa qualquer modelo de tabela específico é um documento XML que contém uma coleção de entidades, simples e complexas. As entidades definem tabelas (ou dimensões), colunas (atributos), associações (relações) e fórmulas incluídas em colunas calculadas, medidas ou KPIs.  
@@ -63,11 +63,11 @@ ms.locfileid: "68207900"
   
 -   Suporte para perspectivas.  
   
- Para obter informações detalhadas sobre os elementos individuais nas anotações da CSDLBI, consulte [referência técnica para anotações de BI para CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl). Para obter informações sobre a especificação principal de CSDL, consulte o [especificação de CSDL](http://go.microsoft.com/fwlink/?LinkId=205855) no MSDN.  
+ Para obter informações detalhadas sobre elementos individuais nas anotações do CSDLBI, consulte [Technical Reference for bi Annotations to CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl). Para obter informações sobre a especificação CSDL principal, consulte a [especificação CSDL](http://go.microsoft.com/fwlink/?LinkId=205855) no msdn.  
   
 ## <a name="see-also"></a>Consulte também  
- [Noções básicas sobre o modelo de objeto Tabular em compatibilidade níveis 1050 até 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
- [Conceitos da CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)   
- [Noções básicas sobre o modelo de objeto Tabular em compatibilidade níveis 1050 até 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
+ [Noções básicas sobre o modelo de objeto de tabela em níveis de compatibilidade 1050 a 1103](https://docs.microsoft.com/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103)   
+ [Conceitos de CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)   
+ [Noções básicas sobre o modelo de objeto de tabela em níveis de compatibilidade 1050 a 1103](https://docs.microsoft.com/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103)  
   
   

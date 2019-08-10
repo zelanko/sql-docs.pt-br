@@ -10,12 +10,12 @@ ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5db09273a26bd8dd596a6ae576b2f8f0cc414190
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86aa646865ecfe3da6ed1ad4bacb75907ab39472
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66106072"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891862"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipos de dados em expressões (Construtor de Relatórios e SSRS)
   Os tipos de dados representam tipos diferentes de dados de forma que eles possam ser armazenados e processados com eficiência. Tipos de dados comuns incluem texto (também conhecido como cadeias de caracteres) com e sem casas decimais, datas e horas e imagens. Os valores em um relatório devem ser um tipo de dados RDL. Você pode formatar um valor de acordo com sua preferência ao exibi-lo em um relatório. Por exemplo, um campo que representa moeda pode ser armazenado na definição de relatório como um número de ponto flutuante, mas pode ser exibido em uma variedade de formatos, dependendo da propriedade de formato escolhida.  
@@ -31,10 +31,10 @@ ms.locfileid: "66106072"
 |Tipo RDL|Tipos CLR|  
 |--------------|---------------|  
 |Cadeia de caracteres|Padrão: Cadeia de caracteres<br /><br /> Chart, GUID, Timespan|  
-|Booliano|Padrão: Booliano|  
-|Integer|Padrão: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
+|Boolean|Padrão: Boolean|  
+|Inteiro|Padrão: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
 |DateTime|Padrão: DateTime<br /><br /> DateTimeOffset|  
-|float|Padrão: Double<br /><br /> Single, Decimal|  
+|Float|Padrão: Double<br /><br /> Single, Decimal|  
 |Binary|Padrão: Byte[]|  
 |Variante|Qualquer um dos itens acima, exceto Byte[]|  
 |VariantArray|Matriz de Variant|  
@@ -118,7 +118,7 @@ ms.locfileid: "66106072"
   
          Se a cadeia `MyDateTime.Value` tiver um deslocamento UTC, a função `DateTime.Parse` primeiro se ajustará para o deslocamento UTC (7 AM - [`+08:00`] para a hora UTC de 11 PM. da noite anterior). A função `DateTime.Parse` então aplicará o deslocamento UTC do servidor de relatórios local e, se necessário, ajustará a hora novamente para o Horário de Verão. Por exemplo, em Redmond, Washington, o deslocamento de horário local ajustado para o Horário de Verão é `[-07:00]`ou 7 horas antes de 11 PM. O resultado é o seguinte `DateTime` valor: `2007-07-06 04:07:07 PM` (6 de julho de 2007 às 16:07).  
   
- Para obter mais informações sobre como converter cadeias de caracteres `DateTime` tipos de dados, consulte [Analisando cadeias de data e hora](https://go.microsoft.com/fwlink/?LinkId=89703), [formatando data e hora para uma cultura específica](https://go.microsoft.com/fwlink/?LinkId=89704), e [escolhendo Entre DateTime, DateTimeOffset e TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) no MSDN.  
+ Para obter mais informações sobre como converter `DateTime` cadeias de caracteres em tipos de dados, consulte Analisando cadeias de [caracteres de data e hora](https://go.microsoft.com/fwlink/?LinkId=89703), [Formatando data e hora para uma cultura específica](https://go.microsoft.com/fwlink/?LinkId=89704)e [escolhendo entre DateTime, DateTimeOffset e TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) em Inglês.  
   
 -   Adicione um novo campo calculado ao conjunto de dados de relatório que use uma expressão para extrair partes da cadeia. Para saber mais, confira [Adicionar, editar e atualizar campos no painel de dados do relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66106072"
   
  Para obter mais informações sobre tipos de dados do banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Tipos de dados &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql) e [Tipos e funções de dados de data e hora &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql) em [Manuais Online do SQL Server](https://go.microsoft.com/fwlink/?linkid=120955).  
   
- Para obter mais emformações sobre tipos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , consulte [Tipos de dados no Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) em [SQL Server Books Onleme](https://go.microsoft.com/fwlink/?linkid=120955).  
+ Para obter mais emformações sobre tipos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , consulte [Tipos de dados no Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services) em [SQL Server Books Onleme](https://go.microsoft.com/fwlink/?linkid=120955).  
   
 ## <a name="see-also"></a>Consulte também  
  [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)  

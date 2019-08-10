@@ -1,5 +1,5 @@
 ---
-title: Usando expressões de conjunto | Microsoft Docs
+title: Usando expressões Set | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 622458f3ea3f8baf74b3aaa4aa9c46f94972f490
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1588d955e728830da4417160591a5c2b6c231473
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038017"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893501"
 ---
 # <a name="using-set-expressions"></a>Usando expressões de conjunto
 
@@ -22,7 +22,7 @@ ms.locfileid: "68038017"
   
  A expressão completa de um conjunto consiste em nenhuma ou algumas tuplas especificadas explicitamente, entre chaves:  
   
- {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* } ] ... ] }  
+ {[{ *Tuple_expression* | *Member_Expression* } [, { *Tuple_expression* | *Member_expression* }]...]}  
   
  As expressões de membro especificadas em uma expressão de conjunto são convertidas em expressões de tupla de um membro.  
   
@@ -49,17 +49,17 @@ ms.locfileid: "68038017"
   
  consiste em dois membros da dimensão Medidas. No eixo Linhas, o conjunto  
   
- {([Produto]. [Categorias de produto]. [Category]. & [4], [Data]. [Calendário]. [Ano civil]. & [2004]),  
+ {([Product]. [Categorias de produto]. [Category]. & [4], [data]. [Calendário]. [Ano civil]. & [2004]),  
   
- ([Produto]. [Categorias de produto]. [Category]. & [1], [Data]. [Calendário]. [Ano civil]. & [2003]),  
+ ([Produto]. [Categorias de produto]. [Category]. & [1], [data]. [Calendário]. [Ano civil]. & [2003]),  
   
- ([Produto]. [Categorias de produto]. [Category]. & [3], [Data]. [Calendário]. [Calendar Year]. & amp;[2004])}  
+ ([Produto]. [Categorias de produto]. [Category]. & [3], [data]. [Calendário]. [Ano civil]. & [2004])}  
   
  consiste em três tuplas, cada uma contendo duas referências explícitas aos membros da hierarquia Categorias de Produto da dimensão Produto e da hierarquia Calendário da dimensão Data.  
   
- Para obter exemplos de funções que retornam conjuntos, consulte [trabalhando com membros, tuplas e conjuntos de &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
+ Para obter exemplos de funções que retornam conjuntos, consulte [trabalhando com membros, tuplas e &#40;conjuntos&#41;MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressões &#40;MDX&#41;](../mdx/expressions-mdx.md)  
+ [MDX &#40;de expressões&#41;](../mdx/expressions-mdx.md)  
   
   

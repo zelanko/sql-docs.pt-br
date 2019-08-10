@@ -25,12 +25,12 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39476a5bc6c1f115595c529e56090f7dda31aba2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db986748530a11057bf55e18c6404160504fdb89
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063875"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891753"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Editores de Consultas e de Texto (SQL Server Management Studio)
   Você pode usar um dos editores do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para editar e testar interativamente um script [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX ou XML/A, ou para editar um arquivo de texto XML ou sem-formatação. Cada editor tem o suporte de um serviço específico de linguagem que colore palavras-chave e verifica a sintaxe e os erros no uso. O Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)] inclui um depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] que você pode usar para ajudar a corrigir problemas em código [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -108,8 +108,8 @@ ms.locfileid: "66063875"
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
 |Descreve como exibir e usar os recursos básicos do Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Editor de Consultas do Mecanismo de Banco de Dados &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
-|Descreve como exibir e usar os recursos básicos do Editor de Consultas MDX.|[Editor de Consultas MDX &#40;Analysis Services - Dados Multidimensionais&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
-|Descreve como exibir e usar os recursos básicos do Editor de Consultas DMX.|[Editor de Consultas DMX &#40;Analysis Services – Mineração de Dados&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
+|Descreve como exibir e usar os recursos básicos do Editor de Consultas MDX.|[Editor de Consultas MDX &#40;Analysis Services - Dados Multidimensionais&#41;](https://docs.microsoft.com/analysis-services/mdx-query-editor-analysis-services-multidimensional-data)|  
+|Descreve como exibir e usar os recursos básicos do Editor de Consultas DMX.|[Editor de Consultas DMX &#40;Analysis Services – Mineração de Dados&#41;](https://docs.microsoft.com/analysis-services/dmx-query-editor-analysis-services-data-mining)|  
 |Descreve como exibir e usar os recursos básicos do Editor XML/A.|[Editor XML &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
 |Descreve como configurar opções para os vários editores, como numeração de linha e opções do IntelliSense.|[Configurar editores &#40;SQL Server Management Studio&#41;](configure-editors-sql-server-management-studio.md)|  
 |Descreve os vários modos nos quais você pode abrir os editores no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Abrir um editor &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  

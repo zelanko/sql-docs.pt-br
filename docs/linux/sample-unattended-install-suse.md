@@ -1,7 +1,7 @@
 ---
-title: Instalação autônoma do SQL Server no SUSE Linux Enterprise Server
+title: Instalação autônoma para SQL Server no SUSE Linux Enterprise Server
 titleSuffix: SQL Server
-description: Exemplo de Script do SQL Server - instalação autônoma no SUSE Linux Enterprise Server
+description: Exemplo de script do SQL Server – Instalação autônoma no SUSE Linux Enterprise Server
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -9,29 +9,29 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: eb19357b739dbc52b3eb19cf2390f225e4205d6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/30/2019
 ms.locfileid: "67910453"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Amostra: Script de instalação autônoma do SQL Server para SUSE Linux Enterprise Server
+# <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Exemplo: Script de instalação autônoma do SQL Server para SUSE Linux Enterprise Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Esse script de Bash de exemplo instala o SQL Server 2017 no SUSE Linux Enterprise Server (SLES) v12 SP2 sem entrada interativa. Ele fornece exemplos de instalação do mecanismo de banco de dados, ferramentas de linha de comando do SQL Server, SQL Server Agent e executa as etapas de pós-instalação. Opcionalmente, você pode instalar a pesquisa de texto completo e criar um usuário administrativo.
+Este script Bash de exemplo instala o SQL Server 2017 no SLES (SUSE Linux Enterprise Server) v12 SP2 sem entrada interativa. Ele fornece exemplos de como instalar o mecanismo de banco de dados, as ferramentas de linha de comando do SQL Server, o SQL Server Agent e executa etapas de pós-instalação. Opcionalmente, é possível instalar a pesquisa de texto completo e criar um usuário administrativo.
 
 > [!TIP]
-> Se você não precisa de um script de instalação autônoma, a maneira mais rápida para instalar o SQL Server é seguir a [guia de início rápido para o SLES](quickstart-install-connect-suse.md). Para outras informações de instalação, consulte [orientação de instalação do SQL Server no Linux](sql-server-linux-setup.md).
+> Se você não precisar de um script de instalação autônoma, a maneira mais rápida de instalar o SQL Server será seguir o [início rápido para SLES.](quickstart-install-connect-suse.md) Para outras informações sobre instalação, confira [Diretrizes de instalação do SQL Server em Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
-- Você precisa de pelo menos 2 GB de memória para executar o SQL Server no Linux.
-- O sistema de arquivos deve ser **XFS** ou **EXT4**. Outros sistemas de arquivos, como **BTRFS**, não têm suporte.
-- Para outros requisitos do sistema, consulte [requisitos de sistema do SQL Server no Linux](sql-server-linux-setup.md#system).
+- É necessário ter pelo menos 2 GB de memória para executar o SQL Server em Linux.
+- O sistema de arquivos deve ser **XFS** ou **EXT4**. Não há suporte para outros sistemas de arquivos, como **BTRFS**.
+- Para obter outros requisitos do sistema, confira [Requisitos do sistema do SQL Server em Linux](sql-server-linux-setup.md#system).
 
 > [!IMPORTANT]
-> SQL Server 2017 requer libsss_nss_idmap0, que não é fornecido pelos repositórios SLES padrão. Você pode instalá-lo no SDK do SLES SP2 v12.
+> O SQL Server 2017 requer libsss_nss_idmap0, que não é fornecido pelos repositórios do SLES padrão. Você pode instalá-lo do SDK do SLES v12 SP2.
 
 ## <a name="sample-script"></a>Exemplo de script
 
@@ -155,60 +155,60 @@ fi
 echo Done!
 ```
 
-### <a name="running-the-script"></a>A execução do script
+### <a name="running-the-script"></a>Executar o script
 
 Para executar o script
 
-1. Cole o exemplo em seu editor de texto favorito e salvá-lo com um nome fácil de lembrar, como `install_sql.sh`.
+1. Cole o exemplo em seu editor de texto favorito e salve-o com um nome fácil de memorizar, como `install_sql.sh`.
 
-1. Personalize `MSSQL_SA_PASSWORD`, `MSSQL_PID`e qualquer uma das outras variáveis que você deseja alterar.
+1. Personalize `MSSQL_SA_PASSWORD`, `MSSQL_PID` e qualquer uma das outras variáveis que você gostaria de alterar.
 
-1. Marque o script como executável
+1. Marcar o script como executável
 
    ```bash
    chmod +x install_sql.sh
    ```
 
-1. Execute o script
+1. Executar o script
 
    ```bash
    ./install_sql.sh
    ```
 
 ### <a name="understanding-the-script"></a>Noções básicas sobre o script
-A primeira coisa que o script de Bash faz é definir algumas variáveis. Eles podem ser variáveis de script, como o exemplo, ou variáveis de ambiente. A variável `MSSQL_SA_PASSWORD` está **necessária** pela instalação do SQL Server, os outros são variáveis personalizadas criadas para o script. O exemplo de script executa as seguintes etapas:
+A primeira coisa que o script Bash faz é definir algumas variáveis. Elas podem ser variáveis de script (como o exemplo) ou variáveis de ambiente. A variável `MSSQL_SA_PASSWORD` é **exigida** pela instalação do SQL Server, as outras são variáveis personalizadas criadas para o script. O script de exemplo executa as seguintes etapas:
 
-1. Importe as chaves públicas do Microsoft GPG.
+1. Importe as chaves GPG públicas da Microsoft.
 
-1. Registre os repositórios da Microsoft para SQL Server e as ferramentas de linha de comando.
+1. Registre os repositórios da Microsoft no SQL Server e as ferramentas de linha de comando.
 
 1. Atualizar os repositórios locais
 
 1. Instalar o SQL Server
 
-1. Configurar o SQL Server com o ```MSSQL_SA_PASSWORD``` e aceitar automaticamente o contrato de licença de usuário final.
+1. Configure o SQL Server com o ```MSSQL_SA_PASSWORD``` e aceite automaticamente o Contrato de Licença de Usuário Final.
 
-1. Aceite o contrato de licença do usuário final para as ferramentas de linha de comando do SQL Server, instalá-los e instalar o pacote de unixodbc-dev automaticamente.
+1. Aceite automaticamente o Contrato de Licença de Usuário Final para as ferramentas de linha de comando do SQL Server, instale-as e instale o pacote unixodbc-dev.
 
-1. Adicione ferramentas de linha de comando do SQL Server para o caminho para facilidade de uso.
+1. Adicione as ferramentas de linha de comando do SQL Server ao caminho para ter facilidade de uso.
 
-1. Instalar o SQL Server Agent se a variável de script ```SQL_INSTALL_AGENT``` for definido, em por padrão.
+1. Instale o SQL Server Agent se a variável de script ```SQL_INSTALL_AGENT``` estiver definida como ativa por padrão.
 
-1. Opcionalmente, instalar a pesquisa de texto completo do SQL Server, se a variável ```SQL_INSTALL_FULLTEXT``` é definido.
+1. Opcionalmente, instale a pesquisa de texto completo do SQL Server, se a variável ```SQL_INSTALL_FULLTEXT``` estiver definida.
 
-1. Desbloquear a porta 1433 TCP no firewall do sistema, necessário para se conectar ao SQL Server de outro sistema.
+1. Desbloqueie a porta 1433 para TCP no firewall do sistema, necessária para se conectar ao SQL Server de outro sistema.
 
-1. Opcionalmente, defina os sinalizadores de rastreamento para rastreamento de deadlock. (requer remover comentários das linhas)
+1. Opcionalmente, defina sinalizadores de rastreamento para o rastreamento de deadlock. (requer a remoção da marca de comentário das linhas)
 
-1. SQL Server agora está instalado, para torná-lo operacional, reinicie o processo.
+1. Agora o SQL Server está instalado; para torná-lo operacional, reinicie o processo.
 
-1. Verifique se o SQL Server está instalado corretamente, enquanto oculta todas as mensagens de erro.
+1. Verifique se o SQL Server está instalado corretamente ao ocultar mensagens de erro.
 
-1. Criar um novo usuário de administrador do servidor se ```SQL_INSTALL_USER``` e ```SQL_INSTALL_USER_PASSWORD``` estão definidos.
+1. Crie um usuário administrador do servidor se ```SQL_INSTALL_USER``` e ```SQL_INSTALL_USER_PASSWORD``` e ambos estiverem definidos.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Simplifique a várias instalações autônomas e criar um script de Bash autônomo que define as variáveis de ambiente apropriadas. Você pode remover qualquer uma das variáveis de script de exemplo usa e colocá-los em seu próprio script de Bash.
+Simplifique várias instalações autônomas e crie um script Bash autônomo que define variáveis de ambiente adequadas. É possível remover as variáveis usadas pelo script de exemplo e colocá-las no próprio script Bash.
 
 ```bash
 #!/bin/bash
@@ -220,9 +220,9 @@ export SQL_INSTALL_USER_PASSWORD='<YourStrong!Passw0rd>'
 export SQL_INSTALL_AGENT='y'
 ```
 
-Em seguida, execute o script de Bash da seguinte maneira:
+Em seguida, execute o script Bash da seguinte maneira:
 ```bash
 . ./my_script_name.sh
 ```
 
-Para obter mais informações sobre o SQL Server no Linux, consulte [SQL Server na visão geral do Linux](sql-server-linux-overview.md).
+Para saber mais sobre o SQL Server em Linux, confira [Visão geral do SQL Server em Linux](sql-server-linux-overview.md).

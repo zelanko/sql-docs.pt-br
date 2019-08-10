@@ -20,22 +20,22 @@ ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8bbec3cd552434070d76913f72812b302440bcdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62775002"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889190"
 ---
 # <a name="upgrade-analysis-services"></a>Atualizar o Analysis Services
-  Use a configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atualizar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter informações detalhadas sobre como atualizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no modo do SharePoint, consulte [atualizar PowerPivot para SharePoint](upgrade-power-pivot-for-sharepoint.md). Para obter mais informações sobre como atualizar um servidor existente do SQL da instância, consulte [atualizar para o SQL Server 2014 usando o Assistente de instalação &#40;instalação&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  
+  Use a configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atualizar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter informações detalhadas sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como atualizar o no modo do SharePoint, consulte [Atualizar PowerPivot para SharePoint](upgrade-power-pivot-for-sharepoint.md). Para obter mais informações sobre como atualizar uma instância existente do SQL Server, consulte [atualizar para o SQL Server 2014 &#40;usando&#41;a instalação do assistente de instalação](upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 ## <a name="known-upgrade-issues"></a>Problemas de atualização conhecidos  
  Antes de atualizar para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], revise o seguinte:  
   
 -   [Notas de Versão do SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
--   Para saber quais [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] recursos e funcionalidades foram descontinuados, preteridos ou alterados ver [compatibilidade com versões anteriores do Analysis Services](../../analysis-services/analysis-services-backward-compatibility.md).  
+-   Para saber quais [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] recursos e funcionalidades foram descontinuados, preteridos ou alterados, consulte [Analysis Services compatibilidade com versões anteriores](https://docs.microsoft.com/analysis-services/analysis-services-backward-compatibility).  
   
 ## <a name="pre-upgrade-checklist"></a>Lista de verificação anterior à atualização  
  Antes de atualizar, revise as informações a seguir:  
@@ -48,16 +48,16 @@ ms.locfileid: "62775002"
   
 -   [Considerações sobre segurança para uma instalação do SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
--   [Backup e restauração de bancos de dados do Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
+-   [Backup e restauração de bancos de dados do Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)  
   
 -   [Usar o Supervisor de Atualização para preparar para atualizações](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   
 ## <a name="upgrading-analysis-services"></a>Atualizando o Analysis Services  
  Você pode escolher entre várias abordagens para atualizar o servidor e os dados:  
   
--   Uma **atualização in loco** substitui o programa existente de arquivos com [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] arquivos de programa. Os bancos de dados permanecem no mesmo local. As pastas de programa são atualizadas para refletir o novo nome.  
+-   Uma **atualização** in-loco substitui os arquivos de programas existentes por arquivos [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de programas. Os bancos de dados permanecem no mesmo local. As pastas de programa são atualizadas para refletir o novo nome.  
   
--   Um **atualização lado a lado** é uma nova instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no mesmo computador que tenha uma instância existente do Analysis Services. Você pode mover bancos de dados para a nova instância no mesmo computador e, em seguida, desinstalar a versão antiga se você não for mais usá-la.  
+-   Uma **atualização lado a lado** é uma nova instalação do no mesmo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] computador que tem uma instância existente do Analysis Services. Você pode mover bancos de dados para a nova instância no mesmo computador e, em seguida, desinstalar a versão antiga se você não for mais usá-la.  
   
 -   Você também pode instalar o Analysis Services em novo hardware e, em seguida, migrar os bancos de dados existentes para aquele servidor.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62775002"
  Para atualizar uma instância existente, execute a Instalação e especifique o nome da instância existente como o nome da nova instância.  
   
 ## <a name="upgrading-databases"></a>Atualizando bancos de dados  
- Bancos de dados que foram criados em versões anteriores do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] são executados no servidor atualizado sob uma configuração em nível de compatibilidade do banco de dados mais antigo. Os bancos de dados criados nas seguintes versões têm um nível de compatibilidade de banco de dados igual a 105. Você pode alterar o nível de compatibilidade se desejar usar recursos que exijam um nível de compatibilidade de banco de dados mais novo. Caso contrário, você poderá executar os bancos de dados no servidor atualizado com o uso das configurações originais. Para obter mais informações, consulte [definir o nível de compatibilidade de um banco de dados Multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
+ Bancos de dados que foram criados em versões anteriores do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] são executados no servidor atualizado sob uma configuração em nível de compatibilidade do banco de dados mais antigo. Os bancos de dados criados nas seguintes versões têm um nível de compatibilidade de banco de dados igual a 105. Você pode alterar o nível de compatibilidade se desejar usar recursos que exijam um nível de compatibilidade de banco de dados mais novo. Caso contrário, você poderá executar os bancos de dados no servidor atualizado com o uso das configurações originais. Para obter mais informações, consulte [definir o nível de compatibilidade de um banco de &#40;dados&#41;multidimensional Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services).  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
@@ -80,8 +80,8 @@ ms.locfileid: "62775002"
 ## <a name="see-also"></a>Consulte também  
  [Recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Planejando uma instalação do SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
- [Noções básicas sobre a arquitetura Microsoft OLAP](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)   
- [Atualizar o PowerPivot para SharePoint](upgrade-power-pivot-for-sharepoint.md)   
+ [Noções básicas sobre a arquitetura Microsoft OLAP](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture)   
+ [Atualizar PowerPivot para SharePoint](upgrade-power-pivot-for-sharepoint.md)   
  [Instalar o Analysis Services em modo multidimensional e de mineração de dados](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [Instalação do PowerPivot para SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   

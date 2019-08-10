@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 235320a65bf04e8b0ce1d7c23da588a4d541a0b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7298f80a7d3f61b5b00692be8fbc480429487454
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915866"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892465"
 ---
 # <a name="concatenation-operators"></a>Operadores de concatenação
 
@@ -32,10 +32,10 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="language-considerations"></a>Considerações sobre idioma  
- Quando as duas cadeias de caracteres usadas em uma concatenação têm a mesma ordenação, a cadeia de caracteres concatenada resultante tem a mesma ordenação das entradas. Quando as cadeias de caracteres usadas em uma concatenação têm ordenações diferentes, as regras de prioridade de ordenação determinam a ordenação da cadeia de caracteres concatenada resultante. Para obter mais informações, consulte [Idiomas e ordenações &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md).  
+ Quando as duas cadeias de caracteres usadas em uma concatenação têm a mesma ordenação, a cadeia de caracteres concatenada resultante tem a mesma ordenação das entradas. Quando as cadeias de caracteres usadas em uma concatenação têm ordenações diferentes, as regras de prioridade de ordenação determinam a ordenação da cadeia de caracteres concatenada resultante. Para obter mais informações, consulte [Idiomas e ordenações &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services).  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de operador MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Operadores &#40;sintaxe MDX&#41;](../mdx/operators-mdx-syntax.md)  
+ [MDX de referência &#40;de operador MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Sintaxe &#40;de MDX de operadores&#41;](../mdx/operators-mdx-syntax.md)  
   
   

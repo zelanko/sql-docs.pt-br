@@ -1,5 +1,5 @@
 ---
-title: 'Lição 4: Definindo avançado de propriedades de dimensão e atributo | Microsoft Docs'
+title: 'Lição 4: Definindo propriedades avançadas de atributo e dimensão | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a8b81a5d2e8bfe57c1ae8d8464b5af9140dd9dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1da73bb522aa3fbf825841e637f01b0c455f09c2
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078636"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888252"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lição 4: Como definir propriedades avançadas de dimensão e de atributo
   Nesta lição, você aprenderá como usar algumas propriedades avançadas de atributos, hierarquias de atributo e propriedades de dimensão.  
@@ -34,7 +34,7 @@ ms.locfileid: "66078636"
  [Agrupando membros de atributo automaticamente](lesson-4-3-automatically-grouping-attribute-members.md)  
  Nesta tarefa, você criará automaticamente agrupamento de membros de atributos com base na distribuição de membros dentro da hierarquia de atributos. Para obter mais informações, consulte [Agrupar membros de atributo &#40;Diferenciação&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
- [Ocultando e desabilitando as hierarquias de atributo](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
+ [Ocultando e desabilitando as hierarquias de atributo](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
  Nesta tarefa, você aprenderá como e quando desativar ou ocultar as hierarquias de atributo.  
   
  [Classificando membros de atributo com base em um atributo secundário](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
@@ -50,8 +50,8 @@ ms.locfileid: "66078636"
  [Lição 5: Definindo relações entre dimensões e grupos de medidas](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Cenário do Tutorial do Analysis Services](analysis-services-tutorial-scenario.md)   
- [Modelagem multidimensional &#40;Tutorial da Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Cenário do tutorial de Analysis Services](analysis-services-tutorial-scenario.md)   
+ [Tutorial de modelagem &#40;multidimensional Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Dimensões em modelos multidimensionais](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

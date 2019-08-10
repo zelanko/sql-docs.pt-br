@@ -22,12 +22,12 @@ ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 96eab9a3b388c8cb68203dce22e8bd1abc013e4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 586a1315c2d8e73d5010964864560db0fc0012fd
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922914"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890814"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Fazer backup e restaurar bancos de dados do SQL Server
   Este tópico descreve os benefícios do backup dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bancos de dados, as condições de backup e restauração básicas, apresenta estratégias de backup e restauração para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e considerações de segurança sobre backup e restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -101,7 +101,7 @@ ms.locfileid: "62922914"
   
 
   
-##  <a name="BnrStrategies"></a> Introdução às estratégias de Backup e restauração  
+##  <a name="BnrStrategies"></a>Introdução às estratégias de backup e restauração  
  O backup e a restauração dos dados devem ser personalizados em um ambiente específico e devem funcionar com os recursos disponíveis. Portanto, um uso confiável de backup e restauração para recuperação requer uma estratégia de backup e restauração. Uma estratégia de backup e restauração bem-planejada maximiza a disponibilidade dos dados e minimiza a perda de dados, considerando, ao mesmo tempo, seus requisitos empresariais específicos.  
   
 > [!IMPORTANT]  
@@ -109,7 +109,7 @@ ms.locfileid: "62922914"
   
  Uma estratégia de backup e restauração contém uma parte de backup e uma parte de restauração. A parte de backup da estratégia define o tipo e a frequência dos backups, a natureza e velocidade do hardware exigido para eles, como os backups serão testados, e onde e como a mídia de backup deve ser armazenada (incluindo considerações de segurança). A parte de restauração da estratégia define quem é responsável pela execução da restauração e como a restauração deve ser executada para atender às metas de disponibilidade do banco de dados e minimizar perda de dados. Recomendamos que você documente seus procedimentos de backup e restauração e mantenha uma cópia da documentação em seu livro de execuções.  
   
- O design de uma estratégia de backup e restauração eficaz requer planejamento, implementação e teste cuidadosos. O teste é obrigatório. Não existirá uma estratégia de backup até que você tenha restaurado com êxito os backups em todas as combinações incluídas na estratégia de restauração. Você deve considerar uma variedade de fatores. Entre elas estão as seguintes:  
+ O design de uma estratégia de backup e restauração eficaz requer planejamento, implementação e teste cuidadosos. O teste é obrigatório. Não existirá uma estratégia de backup até que você tenha restaurado com êxito os backups em todas as combinações incluídas na estratégia de restauração. Você deve considerar uma variedade de fatores. Eles incluem o seguinte:  
   
 -   As metas de produção de sua organização para os bancos de dados, especialmente os requisitos para disponibilidade e proteção contra perda de dados.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "62922914"
   
      Para obter mais informações, consulte [Estimando o tamanho de um backup de banco de dados completo](#EstimateDbBuSize)posteriormente nesta seção.  
   
-####  <a name="EstimateDbBuSize"></a> Estimar o tamanho de um Backup de banco de dados completo  
+####  <a name="EstimateDbBuSize"></a>Estimar o tamanho de um backup de banco de dados completo  
  Antes de implementar uma estratégia de backup e restauração, calcule quanto espaço em disco um backup de banco de dados completo usará. A operação de backup copia os dados no banco de dados para o arquivo de backup. O backup contém só os dados reais no banco de dados e não qualquer espaço não utilizado. Portanto, o backup é geralmente menor do que o próprio banco de dados. Você pode estimar o tamanho de um backup de banco de dados completo usando o procedimento armazenado do sistema **sp_spaceused**. Para obter mais informações, veja [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql).  
   
 ### <a name="schedule-backups"></a>Agendar backups  
@@ -226,7 +226,7 @@ ms.locfileid: "62922914"
 ### <a name="restoring-data-backups"></a>Restaurando backups de dados  
  **Usando o SQL Server Management Studio**  
   
--   [Restaurar um Backup de banco de dados &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [Restaurar um backup &#40;de banco de dados SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [Restaurar um banco de dados em um novo local &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
   
@@ -277,7 +277,7 @@ ms.locfileid: "62922914"
  [Visão geral de restauração e recuperação &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Backup e restauração de bancos de dados do Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)   
+ [Backup e restauração de bancos de dados do Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
  [Fazer backup e restaurar índices e catálogos de texto completo](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [Fazer backup e restaurar bancos de dados replicados](../replication/administration/back-up-and-restore-replicated-databases.md)   
  [O log de transações &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   

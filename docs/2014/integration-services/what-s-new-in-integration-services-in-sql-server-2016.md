@@ -1,5 +1,5 @@
 ---
-title: O que&#39;s novos (Integration Services) | Microsoft Docs
+title: O&#39;que s New (Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6eda4eb4f01819bd569a472df01a276c5f270f31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5562b7424e4a104204becaed10378ffc999c4e98
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62766089"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891110"
 ---
-# <a name="what39s-new-integration-services"></a>O que&#39;s novos (Integration Services)
+# <a name="what39s-new-integration-services"></a>O&#39;que s New (Integration Services)
   O [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] está inalterado desde a versão anterior.  
   
- Para obter informações sobre outros [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] produtos e tecnologias, consulte [o que há de novo no SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
+ Para obter informações sobre [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] outros produtos e tecnologias, consulte [What ' s New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
   
- Para obter mais informações sobre alterações relacionadas ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence, consulte [o que há de novo no Analysis Services e Business Intelligence](../analysis-services/what-s-new-in-analysis-services.md).  
+ Para obter mais informações sobre as alterações [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relacionadas à Business Intelligence, consulte [What ' s New in Analysis Services and Business Intelligence](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services).  
   
 ##  <a name="ValidateXML"></a> Saída de validação de XML avançada na Tarefa XML  
  Valide documentos XML e obtenha saída de erros completa habilitando a propriedade `ValidationDetails` da tarefa XML. Antes da disponibilidade da propriedade `ValidationDetails`, a validação do XML pela tarefa XML retornava apenas um resultado true ou false, sem informações sobre erros ou suas localizações. Agora, quando você define `ValidationDetails` como true, o arquivo de saída contém informações detalhadas sobre cada erro, incluindo o número de linha e a posição. Você pode usar essas informações para entender, localizar e corrigir erros em documentos XML. Para obter mais informações, consulte [Validate XML with the XML Task](control-flow/xml-task.md).  

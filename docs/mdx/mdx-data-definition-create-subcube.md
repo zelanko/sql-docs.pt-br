@@ -1,5 +1,5 @@
 ---
-title: Instrução CREATE SUBCUBE (MDX) | Microsoft Docs
+title: Instrução CREATE SUBCUBO (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d9726d654427d394a5a43712ce70dc4c98a5548f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f137e8c377c94a60fdcfd8f1534069cef4b28f66
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038269"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887433"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Definição de dados MDX – CREATE SUBCUBE
 
@@ -35,7 +35,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  *Select_Statement*  
  Uma expressão SELECT de linguagem MDX válida que não contém as cláusulas WITH, NON EMPTY ou HAVING e não solicita propriedades de dimensão ou célula.  
   
- Ver [instrução SELECT &#40;MDX&#41; ](../mdx/mdx-data-manipulation-select.md) para obter uma explicação detalhada de sintaxe em instruções Select e o **NON VISUAL** cláusula.  
+ Consulte [instrução &#40;Select MDX&#41; ](../mdx/mdx-data-manipulation-select.md) para obter uma explicação de sintaxe detalhada sobre instruções SELECT e a cláusula **non Visual** .  
   
 ## <a name="remarks"></a>Comentários  
  Quando os membros padrão são excluídos na definição de um subcubo, as coordenadas são alteradas de modo correspondente. Para os atributos que podem ser agregados, o membro padrão é movido para o membro [All]. Para os atributos que não podem ser agregados, o membro padrão é movido para um membro que existe no subcubo. A tabela a seguir contém um exemplo de combinações de subcubo e membro padrão.  
@@ -43,19 +43,19 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
 |Membro padrão original|Pode ser agregado|Subseleção|Membro padrão revisado|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
 |Time.Year.All|Sim|{Time.Year.2003}|Nenhuma alteração|  
-|Time.Year. [1997]|Sim|{Time.Year.2003}|Time.Year.All|  
-|Time.Year. [1997]|Não|{Time.Year.2003}|Time.Year. [2003]|  
-|Time.Year. [1997]|Sim|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
-|Time.Year. [1997]|Não|{Time.Year.2003, Time.Year.2004}|Time.Year.[2003] ou<br /><br /> Time.Year.[2004]|  
+|Time. Year. [1997]|Sim|{Time.Year.2003}|Time.Year.All|  
+|Time. Year. [1997]|Não|{Time.Year.2003}|Time. Year. [2003]|  
+|Time. Year. [1997]|Sim|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
+|Time. Year. [1997]|Não|{Time.Year.2003, Time.Year.2004}|Time.Year.[2003] ou<br /><br /> Time.Year.[2004]|  
   
  Os membros [All] sempre existirão em um subcubo.  
   
  Os objetos de sessão criados no contexto de um subcubo são descartados quando o subcubo é descartado.  
   
- Para obter mais informações sobre subcubos, consulte [criando subcubos em MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md).  
+ Para obter mais informações sobre subcubos, consulte [criando subcubos em &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)MDX.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir cria um subcubo que restringe o espaço de cubo aparente aos membros que existem com o país Canadá. Ele usa o **MEMBROS** função para retornar todos os membros do país de nível de hierarquia Geografia do definido pelo usuário - retornando somente o Canadá.  
+ O exemplo a seguir cria um subcubo que restringe o espaço de cubo aparente aos membros que existem com o país Canadá. Em seguida, ele usa a função members para retornar todos os membros do nível de país da hierarquia geography definida pelo usuário, retornando apenas o país do Canadá.  
   
 ```  
 CREATE SUBCUBE [Adventure Works] AS  
@@ -128,9 +128,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  A coluna e a linha [All Products] e [All Resellers], respectivamente, contêm totais de todos os membros, não só dos visíveis.  
   
 ## <a name="see-also"></a>Consulte também  
- [Principais conceitos em MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Instruções de script MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [Instrução de SUBCUBO DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
+ [Principais conceitos em MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [MDX de instruções &#40;de script MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
+ [Instrução &#40;drop subcubo MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
  [Instrução SELECT &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   

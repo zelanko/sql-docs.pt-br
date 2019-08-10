@@ -21,12 +21,12 @@ ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 22355696fda59f984e21b72e1070aaa69cba9b97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 325bedac3968cb59c70863d54c7e0ef429cedd75
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68199245"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941070"
 ---
 # <a name="view-and-modify-article-properties"></a>Visualizar e modificar propriedades de artigos
   Este tópico descreve como exibir e modificar propriedades do artigo no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o RMO (Replication Management Objects).  
@@ -102,29 +102,29 @@ ms.locfileid: "68199245"
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>Para exibir as propriedades de um artigo que pertence a um instantâneo ou publicação transacional  
   
-1.  Execute [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql), especificando o nome da publicação para o parâmetro **@publication** e o nome do artigo para o parâmetro **@article** . Se você não especificar **@article** , serão retornadas informações de todos os artigos na publicação.  
+1.  Execute [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql), especificando o nome da publicação para o  **\@** parâmetro de publicação e o nome do artigo para o  **\@** parâmetro de artigo. Se você não especificar  **\@o artigo**, as informações serão retornadas para todos os artigos na publicação.  
   
 2.  Execute [sp_helparticlecolumns](/sql/relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql) para que os artigos de tabela listem todas as colunas disponíveis na tabela base.  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>Para modificar as propriedades de um artigo que pertence a um instantâneo ou publicação transacional  
   
-1.  Execute [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql), especificando a propriedade do artigo que está sendo alterado no parâmetro **@property** e o novo valor desta propriedade no parâmetro **@value** .  
+1.  Execute [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql), especificando a propriedade do artigo que está sendo  **\@** alterada no parâmetro Property e o novo  **\@** valor dessa propriedade no parâmetro value.  
   
     > [!NOTE]  
-    >  Se a alteração exigir a geração de um novo instantâneo, deve-se também especificar um valor **1** para **@force_invalidate_snapshot** , e se a alteração exigir que os Assinantes sejam reinicializados, deve-se também especificar um valor **1** para **@force_reinit_subscription** . Para obter mais informações sobre as propriedades que, quando alteradas, exigem um novo instantâneo ou uma nova reinicialização, consulte [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md).  
+    >  Se a alteração exigir a geração de um novo instantâneo, você também deverá especificar um valor de **1** para  **\@force_invalidate_snapshot**e, se a alteração exigir que os assinantes sejam reinicializados, você também deverá especificar um valor de **1**  **para\@force_reinit_subscription**. Para obter mais informações sobre as propriedades que, quando alteradas, exigem um novo instantâneo ou uma nova reinicialização, consulte [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>Para exibir as propriedades de um artigo que pertence a uma publicação de mesclagem  
   
-1.  Execute [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql), especificando o nome da publicação para o parâmetro **@publication** e o nome do artigo para o parâmetro **@article** . Se você não especificar esses parâmetros, serão retornadas informações de todos os artigos em uma publicação ou no publicador.  
+1.  Execute [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql), especificando o nome da publicação para o  **\@** parâmetro de publicação e o nome do artigo para o  **\@** parâmetro de artigo. Se você não especificar esses parâmetros, serão retornadas informações de todos os artigos em uma publicação ou no publicador.  
   
 2.  Execute [sp_helpmergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-helpmergearticlecolumn-transact-sql) para que os artigos de tabela listem todas as colunas disponíveis na tabela base.  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-merge-publication"></a>Para modificar as propriedades de um artigo que pertence a uma publicação de mesclagem  
   
-1.  Execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), especificando a propriedade do artigo que está sendo alterado no parâmetro **@property** e o novo valor desta propriedade no parâmetro **@value** .  
+1.  Execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), especificando a propriedade do artigo que está sendo  **\@** alterada no parâmetro Property e o novo  **\@** valor dessa propriedade no parâmetro value.  
   
     > [!NOTE]  
-    >  Se a alteração exigir a geração de um novo instantâneo, deve-se também especificar um valor **1** para **@force_invalidate_snapshot** , e se a alteração exigir que os Assinantes sejam reinicializados, deve-se também especificar um valor **1** para **@force_reinit_subscription** . Para obter mais informações sobre as propriedades que, quando alteradas, exigem um novo instantâneo ou uma nova reinicialização, consulte [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md).  
+    >  Se a alteração exigir a geração de um novo instantâneo, você também deverá especificar um valor de **1** para  **\@force_invalidate_snapshot**e, se a alteração exigir que os assinantes sejam reinicializados, você também deverá especificar um valor de **1**  **para\@force_reinit_subscription**. Para obter mais informações sobre as propriedades que, quando alteradas, exigem um novo instantâneo ou uma nova reinicialização, consulte [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md).  
   
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  Esse exemplo de replicação transacional retorna as propriedades do artigo publicado.  

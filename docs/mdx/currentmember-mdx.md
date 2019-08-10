@@ -1,5 +1,5 @@
 ---
-title: Função CurrentMember (MDX) | Microsoft Docs
+title: CurrentMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 03583c9af74bd21511dfe871b229d03370a7b436
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 374a38d07c3174e799d01199e20e822f85deed13
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047112"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892919"
 ---
 # <a name="currentmember-mdx"></a>Função CurrentMember (MDX)
 
@@ -28,17 +28,17 @@ Hierarchy_Expression.CurrentMember
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Expressão_Hierarquia*  
+ *Hierarchy_Expression*  
  Uma linguagem MDX válida que retorna uma hierarquia.  
   
 ## <a name="remarks"></a>Comentários  
- Durante a iteração de um conjunto de membros de hierarquia, em cada etapa da iteração, o membro que está sendo operado é o membro atual. O **CurrentMember** função retorna esse membro.  
+ Durante a iteração de um conjunto de membros de hierarquia, em cada etapa da iteração, o membro que está sendo operado é o membro atual. A função **CurrentMember** retorna esse membro.  
   
 > [!IMPORTANT]  
 >  Quando uma dimensão contém apenas uma única hierarquia visível, a hierarquia pode ser mencionada pelo nome da dimensão ou pelo nome da hierarquia porque o nome da dimensão é resolvido apenas na hierarquia visível. Por exemplo, `Measures.CurrentMember` é uma expressão MDX válida porque é resolvida na única hierarquia da dimensão Measures.  
   
 ## <a name="examples"></a>Exemplos  
- A consulta a seguir mostra como **Currentmember** pode ser usado para localizar o membro atual de hierarquias em colunas, linhas e o eixo de fatia:  
+ A consulta a seguir mostra como **CurrentMember** pode ser usado para localizar o membro atual de hierarquias nas colunas, linhas e eixo de fatia:  
   
  `WITH MEMBER MEASURES.CURRENTDATE AS`  
   
@@ -74,7 +74,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- O membro atual é alterado em uma hierarquia usada em um eixo em uma consulta. Portanto, o membro atual em outras hierarquias na mesma dimensão que não são usados em um eixo também pode alterar; Esse comportamento é chamado de "auto-exists" e mais detalhes podem ser encontrados em [principais conceitos em MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Por exemplo, a consulta abaixo mostra como o membro atual na hierarquia Ano Civil da dimensão Data é alterado com o membro atual na hierarquia Calendário, quando este último é exibido no eixo Linhas:  
+ O membro atual é alterado em uma hierarquia usada em um eixo em uma consulta. Portanto, o membro atual em outras hierarquias na mesma dimensão que não são usados em um eixo também pode ser alterado; Esse comportamento é chamado de ' auto-Exists ' e mais detalhes podem ser encontrados em [conceitos principais &#40;em&#41;MDX Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services). Por exemplo, a consulta abaixo mostra como o membro atual na hierarquia Ano Civil da dimensão Data é alterado com o membro atual na hierarquia Calendário, quando este último é exibido no eixo Linhas:  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -92,7 +92,7 @@ Hierarchy_Expression.CurrentMember
   
  `FROM [Adventure Works]`  
   
- **CurrentMember** é muito importante para que os cálculos reconheçam o contexto da consulta que estão sendo usados. O exemplo a seguir retorna a quantidade de pedidos de cada produto e a porcentagem de quantidades do pedido por categoria e modelo, do **Adventure Works** cubo. O **CurrentMember** função identifica o produto cuja quantidade do pedido deve ser usado durante o cálculo.  
+ **CurrentMember** é muito importante para fazer cálculos cientes do contexto da consulta em que estão sendo usados. O exemplo a seguir retorna a quantidade de pedidos de cada produto e a porcentagem de quantidades de pedidos por categoria e modelo, do cubo **Adventure Works** . A função **CurrentMember** identifica o produto cuja quantidade de ordem deve ser usada durante o cálculo.  
   
 ```  
 WITH   

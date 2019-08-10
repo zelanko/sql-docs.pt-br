@@ -9,18 +9,18 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cafc62e12bcecad1ac6bcf389b87c864576c83a3
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: d62b1fe82698ff8722786b42f534afe83cd6c481
+ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958709"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68822698"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>O que é a instância mestre em um cluster de Big Data do SQL Server?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este artigo descreve a função da *instância mestre do SQL Server* em um cluster de Big Data do SQL Server 2019. A instância mestre é uma instância do SQL Server em execução em um [plano de controle](big-data-cluster-overview.md#controlplane) do cluster de Big Data do SQL Server.
+Este artigo descreve a função da *instância mestra de SQL Server* em um cluster Big Data para SQL Server 2019. A instância mestra é uma instância de SQL Server em execução em um cluster Big Data para gerenciar a conectividade, as consultas de expansão, os bancos de dados de usuários e de metadados e os serviços de aprendizado de máquina.
 
 A instância mestra do SQL Server fornece a seguinte funcionalidade:
 

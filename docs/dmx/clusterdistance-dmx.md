@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1884bf191d842ba136165cf28aa14c23dd82b2e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 523c57811ca29956edc3c18b8143844732c163b6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071069"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892391"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  O **ClusterDistance** função retorna a distância do caso de entrada do cluster especificado, ou se nenhum cluster tenha sido especificado, a distância do caso de entrada do cluster mais provável.  
+  A função **ClusterDistance** retorna a distância do caso de entrada do cluster especificado ou, se nenhum cluster for especificado, a distância do caso de entrada do cluster mais provável.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,30 +34,30 @@ ClusterDistance([<ClusterID expression>])
  Valor escalar.  
   
 ## <a name="remarks"></a>Comentários  
- O **ClusterDistance** função retorna a distância entre o caso de entrada e o cluster que tem a mais alta probabilidade para esse caso de entrada.  
+ A função **ClusterDistance** retorna a distância entre o caso de entrada e o cluster que tem a probabilidade mais alta para esse caso de entrada.  
   
- No caso da clusterização K-Means, como qualquer caso pode pertencer a apenas um cluster, com um peso de associação de 1.0, a distância do cluster sempre será 0. No entanto, em K-Means, pressupõe-se que cada cluster tem um centroide. Para obter o valor do centroide, consulte ou procure a tabela aninhada NODE_DISTRIBUTION no conteúdo do modelo de mineração. Para obter mais informações, consulte [Conteúdo do modelo de mineração para modelos de clustering &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
+ No caso da clusterização K-Means, como qualquer caso pode pertencer a apenas um cluster, com um peso de associação de 1.0, a distância do cluster sempre será 0. No entanto, em K-Means, pressupõe-se que cada cluster tem um centroide. Para obter o valor do centroide, consulte ou procure a tabela aninhada NODE_DISTRIBUTION no conteúdo do modelo de mineração. Para obter mais informações, consulte [Conteúdo do modelo de mineração para modelos de clustering &#40;Analysis Services – Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining).  
   
- No caso do método de clusterização de EM padrão, todos os pontos dentro do cluster são considerados igualmente prováveis; portanto, por design, não há centroide para o cluster. O valor de **ClusterDistance** entre um caso específico e um cluster específico *N* é calculada da seguinte maneira:  
+ No caso do método de clusterização de EM padrão, todos os pontos dentro do cluster são considerados igualmente prováveis; portanto, por design, não há centroide para o cluster. O valor de **ClusterDistance** entre um caso específico e um determinado cluster *N* é calculado da seguinte maneira:  
   
- ClusterDistance(N) =1-(membershipWeight(N))  
+ ClusterDistance (N) = 1-(membershipWeight (N))  
   
  Ou:  
   
- ClusterDistance(N) = 1-ClusterProbability (N))  
+ ClusterDistance (N) = 1-ClusterProbability (N))  
   
 ## <a name="related-prediction-functions"></a>Funções de previsão relacionadas  
  O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece as seguintes funções adicionais para consultar modelos de clusterização:  
   
--   Use o [Cluster &#40;DMX&#41; ](../dmx/cluster-dmx.md) função para retornar o cluster mais provável.  
+-   Use a [função &#40;DMX&#41; do cluster](../dmx/cluster-dmx.md) para retornar o cluster mais provável.  
   
--   Use o [ClusterProbability &#40;DMX&#41; ](../dmx/clusterprobability-dmx.md) função para obter a probabilidade de um caso pertencer a um determinado cluster. Este valor serve como o inverso da distância de cluster.  
+-   Use a [função &#40;DMX&#41; ClusterProbability](../dmx/clusterprobability-dmx.md) para obter a probabilidade de que um caso pertença a um cluster específico. Este valor serve como o inverso da distância de cluster.  
   
--   Use o [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) função retornar um histograma da probabilidade do caso de entrada existir em cada um dos clusters do modelo.  
+-   Use a [função &#40;DMX&#41; de PredictHistogram](../dmx/predicthistogram-dmx.md) para retornar um histograma da probabilidade do caso de entrada existente em cada um dos clusters do modelo.  
   
--   Use o [PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md) função para retornar uma medida de 0 a 1 que indica a probabilidade um caso de entrada é existir, considerando o modelo aprendido pelo algoritmo.  
+-   Use a [função &#40;DMX&#41; PredictCaseLikelihood](../dmx/predictcaselikelihood-dmx.md) para retornar uma medida de 0 a 1 que indica a probabilidade de que um caso de entrada deve existir Considerando o modelo aprendido pelo algoritmo.  
   
-## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>Exemplo 1: Obtendo a distância do Cluster para Cluster mais provável  
+## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>Example1 Obtendo a distância do cluster para o cluster mais provável  
  O exemplo a seguir retorna a distância do caso especificado para o cluster ao qual o caso provavelmente pertence.  
   
 ```  
@@ -87,8 +87,8 @@ NATURAL PREDICTION JOIN
 |--------------|  
 |Cluster 6|  
   
-## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>Exemplo 2: Obtendo a distância para um Cluster especificado  
- A sintaxe a seguir usa o conjunto de linhas do esquema de conteúdo do modelo de mineração para retornar a lista de IDs de nó e legendas de nó para os clusters que existem no modelo de mineração. Em seguida, você pode usar a legenda do nó como o argumento de identificador de cluster na **ClusterDistance** função.  
+## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>Example2 Obtendo distância para um cluster especificado  
+ A sintaxe a seguir usa o conjunto de linhas do esquema de conteúdo do modelo de mineração para retornar a lista de IDs de nó e legendas de nó para os clusters que existem no modelo de mineração. Em seguida, você pode usar a legenda do nó como o argumento do identificador de cluster na função **ClusterDistance** .  
   
 ```  
 SELECT NODE_UNIQUE_NAME, NODE_CAPTION   
@@ -126,8 +126,8 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Consulte também  
  [Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
- [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Referência da função &#40;DMX&#41; das extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Conteúdo do modelo de mineração para modelos de clustering &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de clustering &#40;Analysis Services – Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   
   

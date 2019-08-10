@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0149898e44476233eafcb226a221fc5cc48ae1d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee90d2c367fa289e8255a84e4eb6da19b37933e0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006259"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891209"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>Manipulação de dados MDX – DRILLTHROUGH
 
@@ -42,16 +42,16 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  Uma lista de atributos de dimensão e medidas separada por vírgulas.  
   
 ## <a name="remarks"></a>Comentários  
- Drillthrough é uma operação na qual o usuário final seleciona uma célula a partir de um cubo e recupera um conjunto de resultados a partir dos dados de origem dessa célula para obter informações mais detalhadas. Por padrão, um conjunto de resultados de drillthrough é derivado das linhas da tabela que foram avaliadas para calcular o valor da célula do cubo selecionado. Para que os usuário finais executem o drillthrough, seus aplicativos cliente devem oferecer suporte a esse recurso. No [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], os resultados são recuperados diretamente do armazenamento MOLAP, a menos que as partições ou dimensões ROLAP são consultadas.  
+ Drillthrough é uma operação na qual o usuário final seleciona uma célula a partir de um cubo e recupera um conjunto de resultados a partir dos dados de origem dessa célula para obter informações mais detalhadas. Por padrão, um conjunto de resultados de drillthrough é derivado das linhas da tabela que foram avaliadas para calcular o valor da célula do cubo selecionado. Para que os usuário finais executem o drillthrough, seus aplicativos cliente devem oferecer suporte a esse recurso. No [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], os resultados são recuperados diretamente do armazenamento MOLAP, a menos que partições ou dimensões ROLAP sejam consultadas.  
   
 > [!IMPORTANT]  
 >  A segurança do drillthrough baseia-se nas opções de segurança gerais definidas no cubo. Caso um usuário não consiga alguns dados usando o MDX, o drillthrough também limitará o usuário exatamente da mesma maneira.  
   
- Uma instrução MDX especifica a célula de assunto. O valor especificado pela **MAXROWS** argumento indica o número máximo de linhas que devem ser retornados pelo conjunto de linhas resultante.  
+ Uma instrução MDX especifica a célula de assunto. O valor especificado pelo argumento **MAXROWS** indica o número máximo de linhas que devem ser retornadas pelo conjunto de linhas resultante.  
   
- Por padrão, o número máximo de linhas retornadas é 10.000. Isso significa que, se você deixar **MAXROWS** não for especificado, você obterá 10.000 linhas ou menos. Se esse valor for muito baixa para seu cenário, você pode definir **MAXROWS** para um número mais alto, como `MAXROWS 20000`. Se ele for baixo demais em geral, você pode aumentar o padrão alterando o **OLAP\Query\DefaultDrillthroughMaxRows** propriedade do servidor. Para obter mais informações sobre como alterar essa propriedade, consulte [propriedades do servidor do Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+ Por padrão, o número máximo de linhas retornadas é 10.000. Isso significa que, se você deixar **MAXROWS** não especificado, receberá 10.000 linhas ou menos. Se esse valor for muito baixo para seu cenário, você poderá definir **MAXROWS** como um número mais alto, `MAXROWS 20000`como. Se estiver em um nível muito baixo, você poderá aumentar o padrão alterando a propriedade do servidor **OLAP\Query\DefaultDrillthroughMaxRows** . Para obter mais informações sobre como alterar essa propriedade, consulte [Propriedades do servidor em Analysis Services](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services).  
   
- A menos que o contrário seja especificado, as colunas retornadas devem incluir todos os atributos de granularidade de todas as dimensões relacionadas ao grupo de medidas da medida especificada, em vez das dimensões muitos para muitos. As dimensões de cubo são precedidas por $ para que possam ser diferenciadas de dimensões e grupos de medidas. O **retornar** cláusula é usada para especificar as colunas retornadas pela consulta de detalhamento. As funções a seguir podem ser aplicadas a um único atributo ou medida pela **retornar** cláusula.  
+ A menos que o contrário seja especificado, as colunas retornadas devem incluir todos os atributos de granularidade de todas as dimensões relacionadas ao grupo de medidas da medida especificada, em vez das dimensões muitos para muitos. As dimensões de cubo são precedidas por $ para que possam ser diferenciadas de dimensões e grupos de medidas. A cláusula **Return** é usada para especificar as colunas retornadas pela consulta de detalhamento. As funções a seguir podem ser aplicadas a um único atributo ou medida pela cláusula de **retorno** .  
   
  Name(attribute_name)  
  Retorna o nome do membro de atributo especificado.  
@@ -97,6 +97,6 @@ RETURN
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Instruções MDX de manipulação de dados &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [MDX instruções &#40;de manipulação de dados MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

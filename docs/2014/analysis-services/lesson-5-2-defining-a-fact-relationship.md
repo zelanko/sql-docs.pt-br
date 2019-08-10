@@ -10,17 +10,17 @@ ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 726b5fa4295d68c5b74d4fb3cac711126a8e570b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26f92fffadba9ceed03518d07fb3f27339ebff38
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078569"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888233"
 ---
 # <a name="defining-a-fact-relationship"></a>Definindo uma relação de fatos
   Algumas vezes, os usuários desejam dimensionar medidas por itens de dados que estão na tabela de fatos ou consultar a tabela de fatos em busca de informações relacionadas específicas, como, por exemplo, números de faturas ou de ordens de compra relacionados a determinados fatos de vendas. Ao definir uma dimensão com base em um item da tabela de fatos, a dimensão será chamada *dimensão de fatos*. As dimensões de fatos também são conhecidas como dimensões de degeneração. Elas são úteis para agrupar em conjunto as linhas de tabelas de fatos relacionadas, como, por exemplo, todas as linhas que estiverem relacionadas a um determinado número de fatura. Embora seja possível colocar essas informações em uma tabela de dimensões separada no banco de dados relacional, criar uma tabela de dimensões separada para essas informações não fornecerá benefício algum, pois a tabela de dimensões tende a aumentar na mesma proporção que a tabela de fatos, duplicando dados e tornando maior sua complexidade.  
   
- No [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você pode determinar se deseja duplicar os dados da dimensão de fatos em uma estrutura de dimensão MOLAP para aumentar o desempenho da consulta ou se deseja definir a dimensão de fatos como uma dimensão ROLAP para economizar mais espaço de armazenamento reduzindo o desempenho da consulta. Ao armazenar uma dimensão com o modo de armazenamento MOLAP, todos os membros da dimensão são armazenados na instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em uma estrutura MOLAP altamente compactada, além de serem armazenados nas partições do grupo de medidas. Ao armazenar uma dimensão com o modo de armazenamento ROLAP, apenas a definição de dimensão é armazenada no MOLAP são consultados próprios membros da dimensão – a estrutura da tabela de fatos relacional subjacente no momento da consulta. O modo de armazenamento apropriado pode ser definido com base na frequência em que a dimensão de fatos é consultada, no número de linhas retornada por uma consulta comum, no desempenho da consulta e no custo de processamento. A definição de uma dimensão como ROLAP não requer que todos os cubos que usam a dimensão também sejam armazenados no modo ROLAP. O modo de armazenamento de cada dimensão pode ser configurado independentemente.  
+ No [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você pode determinar se deseja duplicar os dados da dimensão de fatos em uma estrutura de dimensão MOLAP para aumentar o desempenho da consulta ou se deseja definir a dimensão de fatos como uma dimensão ROLAP para economizar mais espaço de armazenamento reduzindo o desempenho da consulta. Ao armazenar uma dimensão com o modo de armazenamento MOLAP, todos os membros da dimensão são armazenados na instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em uma estrutura MOLAP altamente compactada, além de serem armazenados nas partições do grupo de medidas. Quando você armazena uma dimensão com o modo de armazenamento ROLAP, somente a definição da dimensão é armazenada na estrutura MOLAP – os próprios membros da dimensão são consultados da tabela de fatos relacional subjacente no momento da consulta. O modo de armazenamento apropriado pode ser definido com base na frequência em que a dimensão de fatos é consultada, no número de linhas retornada por uma consulta comum, no desempenho da consulta e no custo de processamento. A definição de uma dimensão como ROLAP não requer que todos os cubos que usam a dimensão também sejam armazenados no modo ROLAP. O modo de armazenamento de cada dimensão pode ser configurado independentemente.  
   
  Quando você define uma dimensão de fatos, é possível definir a relação entre a dimensão de fatos e o grupo de medidas como uma relação de fatos. As restrições a seguir se aplicam às relações de fatos:  
   
@@ -61,17 +61,17 @@ ms.locfileid: "66078569"
   
 12. Na página **Concluindo o Assistente** , altere o nome para **Detalhes do Pedido de Vendas pela Internet** e clique em **Concluir** para concluir o assistente.  
   
-13. No menu **Arquivo** , clique em **Salvar Tudo**.  
+13. No menu **Arquivo**, clique em **Salvar tudo**.  
   
-14. No **atributos** painel do Designer de dimensão para o **detalhes do pedido de vendas pela Internet** dimensão, selecione **Sales Order Number**e, em seguida, altere o  **Nome** propriedade na janela Propriedades para `Item Description.`  
+14. No painel **atributos** do designer de dimensão da dimensão **detalhes do pedido de vendas pela Internet** , selecione **número do pedido de vendas**e altere a propriedade **nome** no janela Propriedades para`Item Description.`  
   
-15. No **NameColumn** propriedade de célula, clique no botão Procurar **(...)** . Na caixa de diálogo **Coluna de Nome** , selecione **Produto** na lista **Tabela de origem** , selecione **EnglishProductName** na **Coluna de origem**e clique em **OK**.  
+15. Na célula da propriedade **NameColumn** , clique no botão procurar **(...)** . Na caixa de diálogo **Coluna de Nome** , selecione **Produto** na lista **Tabela de origem** , selecione **EnglishProductName** na **Coluna de origem**e clique em **OK**.  
   
 16. Adicione o atributo **Número do Pedido de Vendas** à dimensão arrastando a coluna **SalesOrderNumber** da tabela **InternetSales** no painel **Exibição da Fonte de Dados** até o painel **Atributos** .  
   
-17. Alterar o **nome** propriedade da nova **Sales Order Number** atributo `Order Number`e altere o **OrderBy** propriedade para **chave**.  
+17. Altere a propriedade **nome** do atributo número do novo **pedido** de vendas `Order Number`para e altere a propriedade **OrderBy** para **chave**.  
   
-18. No **hierarquias** painel, criar um **pedidos de vendas pela Internet** hierarquia de usuário que contém o `Order Number` e **descrição do Item** níveis, nessa ordem.  
+18. No painel **hierarquias** , crie uma hierarquia de usuário **pedidos de vendas pela Internet** que `Order Number` contenha os níveis de descrição e de **Item** , nessa ordem.  
   
 19. No painel **Atributos** , selecione **Detalhes do Pedido de Vendas pela Internet**e examine o valor da propriedade **StorageMode** na janela Propriedades.  
   
@@ -87,13 +87,13 @@ ms.locfileid: "66078569"
   
      Observe que a dimensão de cubo **Detalhes do Pedido de Vendas pela Internet** é configurada automaticamente como tendo uma relação de fatos, como mostra o ícone exclusivo.  
   
-2.  Clique no botão Procurar ( **...** ) na **descrição do Item** célula na interseção da **vendas pela Internet** grupo de medidas e o **Internet Sales Order Details** de dimensões, como Examine as propriedades de relação de fatos.  
+2.  Clique no botão procurar ( **...** ) na célula **Descrição do item** , na interseção do grupo de medidas **vendas pela Internet** e na dimensão **detalhes do pedido de vendas pela Internet** , para examinar as propriedades da relação de fatos.  
   
      A caixa de diálogo **Definir Relação** é aberta. Observe que nenhuma das propriedades pode ser configurada.  
   
      A imagem a seguir mostra as propriedades da relação de fatos na caixa de diálogo **Definir Relação** .  
   
-     ![Caixa de diálogo Definir relação](../../2014/tutorials/media/l5-factrelationship-2.gif "caixa de diálogo Definir relação")  
+     ![Caixa de diálogo Definir relação](../../2014/tutorials/media/l5-factrelationship-2.gif "Caixa de diálogo Definir relação")  
   
 3.  Clique em **Cancelar**.  
   
@@ -115,10 +115,10 @@ ms.locfileid: "66078569"
   
      A imagem a seguir mostra o resultado das etapas anteriores.  
   
-     ![Dimensionamento de Internet Sales-Sales Amount](../../2014/tutorials/media/l5-factrelationship-3.gif "dimensionamento do volume de vendas pela Internet")  
+     ![Dimensão de vendas pela Internet-valor das vendas](../../2014/tutorials/media/l5-factrelationship-3.gif "Dimensão de vendas pela Internet-valor das vendas")  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Definindo uma relação muitos para muitos](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
+ [Definindo uma relação muitos para muitos](https://docs.microsoft.com/analysis-services/lesson-5-3-defining-a-many-to-many-relationship)  
   
 ## <a name="see-also"></a>Consulte também  
  [Relações de dimensão](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

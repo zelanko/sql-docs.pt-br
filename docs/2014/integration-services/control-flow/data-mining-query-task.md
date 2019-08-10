@@ -15,12 +15,12 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7cd5890df8ddc080aaa3e647c77b3c09d8d35216
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f11f2eac6d1d44ed361324f2b5e25cea80df8768
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832583"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890405"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
   A tarefa Consulta de Mineração de Dados executa consultas de previsão com base em modelos internos de mineração de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. A consulta de previsão cria uma previsão para novos dados usando modelos de mineração. Por exemplo, uma consulta de previsão pode prever quantos veleiros serão vendidos durante os meses de verão ou gerar uma lista de possíveis clientes para a compra de um veleiro.  
@@ -36,9 +36,9 @@ ms.locfileid: "62832583"
 ## <a name="prediction-queries"></a>Consultas de previsão  
  A consulta é uma instrução DMX (Data Mining Extensions). A linguagem DMX é uma extensão da linguagem SQL que fornece suporte ao trabalho com modelos de mineração. Para obter mais informações sobre como usar a linguagem DMX, consulte [Referência de extensões de Data Mining &#40;Extensão de Data Mining&#41;](/sql/dmx/data-mining-extensions-dmx-reference).  
   
- A tarefa pode consultar múltiplos modelos de mineração criados com a mesma estrutura de mineração. Um modelo de mineração é criado com um dos algoritmos de mineração de dados que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece. A estrutura de mineração a que a tarefa Consulta de Mineração de Dados faz referência pode incluir vários modelos de mineração, criados com algoritmos diferentes. Para obter mais informações, consulte [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md) e [Algoritmos de Data Mining &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ A tarefa pode consultar múltiplos modelos de mineração criados com a mesma estrutura de mineração. Um modelo de mineração é criado com um dos algoritmos de mineração de dados que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece. A estrutura de mineração a que a tarefa Consulta de Mineração de Dados faz referência pode incluir vários modelos de mineração, criados com algoritmos diferentes. Para obter mais informações, consulte [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining) e [Algoritmos de Data Mining &#40;Analysis Services – Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
- A consulta de previsão que a tarefa Consulta de Mineração de Dados executa retorna um resultado que é uma única linha ou um conjunto de dados. Uma consulta que retorna uma única linha é chamada consulta singleton: por exemplo, a consulta que prevê quantos veleiros serão vendidos durante os meses de verão retorna um número. Para obter mais informações sobre consultas de previsão que retornam uma única linha, consulte [Interfaces de consulta de mineração de dados](../../analysis-services/data-mining/data-mining-query-tools.md).  
+ A consulta de previsão que a tarefa Consulta de Mineração de Dados executa retorna um resultado que é uma única linha ou um conjunto de dados. Uma consulta que retorna uma única linha é chamada consulta singleton: por exemplo, a consulta que prevê quantos veleiros serão vendidos durante os meses de verão retorna um número. Para obter mais informações sobre consultas de previsão que retornam uma única linha, consulte [interfaces de consulta de mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools).  
   
  Os resultados da consulta são salvos nas tabelas. Se uma tabela com o nome que a tarefa Consulta de Mineração de Dados especifica já existir, a tarefa poderá criar uma nova tabela usando o mesmo nome com um número anexado ou poderá substituir o conteúdo da tabela.  
   

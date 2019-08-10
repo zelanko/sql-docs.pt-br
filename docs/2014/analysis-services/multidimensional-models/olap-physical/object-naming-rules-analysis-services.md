@@ -1,5 +1,5 @@
 ---
-title: As regras de nomenclatura (Analysis Services) do objeto | Microsoft Docs
+title: Regras de nomenclatura de objeto (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,17 +12,17 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 64e04754fd4bc4a404854eb5260daddf543e3c2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be8bec262afc67571c67ad6919ae9e9163a434be
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65979966"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889433"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regras de nomenclatura de objeto (Analysis Services)
   Este tópico descreve as convenções de nomenclatura de objeto, bem como as palavras e os caracteres reservados que não podem ser usados em nomes de objetos, códigos ou scripts no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-##  <a name="bkmk_Names"></a> Convenções de nomenclatura  
+##  <a name="bkmk_Names"></a>Convenções de nomenclatura  
  Todo objeto tem as propriedades `Name` e `ID` que devem ser exclusivas no escopo da coleção pai. Por exemplo, duas dimensões podem ter o mesmo nome, desde que cada uma resida em um banco de dados diferente.  
   
  Embora você possa especificar isso manualmente, a `ID` costuma ser gerada automaticamente quando o objeto é criado. Após começar a criar um modelo, nunca altere a `ID`. Todas as referências de objeto em um modelo se baseiam na `ID`. Então, a alteração de uma `ID` pode facilmente resultar na corrupção do modelo.  
@@ -31,7 +31,7 @@ ms.locfileid: "65979966"
   
  As regras a seguir se aplicam às propriedades `Name` e `ID`.  
   
--   Os nomes não diferenciam maiúsculas de minúsculas. Você não pode ter um cubo chamado "vendas" e outro chamado "Vendas" no mesmo banco de dados.  
+-   Os nomes não diferenciam maiúsculas de minúsculas. Você não pode ter um cubo chamado "Sales" e outro chamado "Sales" no mesmo banco de dados.  
   
 -   Não são permitidos espaços à esquerda ou à direita em um nome de objeto, embora você possa inserir espaços em um nome. Os espaços de abertura e fechamento são eliminados implicitamente. Isso se aplica a `Name` e `ID` de um objeto.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "65979966"
   
 -   Não há nenhum requisito especial para o primeiro caractere de um identificador. O primeiro caractere pode ser qualquer caractere válido.  
   
-##  <a name="bkmk_reserved"></a> Caracteres e palavras reservadas  
+##  <a name="bkmk_reserved"></a>Palavras reservadas e caracteres  
  As palavras reservadas estão em inglês e se aplicam a nomes de objetos, e não a legendas. Se você usar inadvertidamente uma palavra reservada em um nome de objeto, ocorrerá um erro de validação. Nos modelos multidimensionais e de mineração de dados, as palavras reservadas descritas a seguir não podem ser usadas em qualquer objeto, a qualquer momento.  
   
  Em modelos de tabela, em que a compatibilidade do banco de dados é definida como 1103, as regras de validação foram atenuadas para certos objetos, fora de conformidade para os requisitos de caracteres estendidos e convenções de nomenclatura de determinados aplicativos cliente. Os bancos de dados que atendem a esses critérios estão sujeitos a regras de validação menos rigorosas. Nesse caso, é possível que um nome de objeto inclua um caractere restrito e ainda passe na validação.  
@@ -74,7 +74,7 @@ ms.locfileid: "65979966"
 |`Dimension` ou `Hierarchy`|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>````|  
 |Todos os outros objetos|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >````|  
   
- **Exceções: Quando caracteres reservados são permitidos**  
+ **Exceção Quando caracteres reservados são permitidos**  
   
  Conforme observado, os bancos de dados de uma modalidade e de um nível de compatibilidade específicos podem ter nomes de objetos que incluam caracteres reservados. Os nomes de objeto de atributo de dimensão, hierarquia, nível, medida e KPI podem incluir caracteres reservados, para bancos de dados de tabelas (1103 ou superior) que permitem o uso de caracteres estendidos:  
   
@@ -83,13 +83,13 @@ ms.locfileid: "65979966"
 |MOLAP (todas as versões)|Não|  
 |Tabela - 1050|Não|  
 |Tabela - 1100|Não|  
-|Tabela – 1130 e superior|Sim|  
+|Tabular-1130 e superior|Sim|  
   
  Bancos de dados podem ter um ModelType padrão. O padrão é equivalente a multidimensional e, portanto, não dá suporte ao uso de caracteres reservados em nomes de colunas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Palavras reservadas para MDX](/sql/mdx/mdx-reserved-words)   
- [Traduções &#40;Analysis Services&#41;](../../../analysis-services/translations-analysis-services.md)   
- [Conformidade XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
+ [Palavras reservadas MDX](/sql/mdx/mdx-reserved-words)   
+ [Traduções &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/translations-analysis-services)   
+ [XMLA de &#40;conformidade do XML for Analysis&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

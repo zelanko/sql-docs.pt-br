@@ -10,15 +10,15 @@ ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7424a92ce4d8e4f6b0ca4c55238ede33d982933
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db52caa0670af868cd5986c85890c291e5f6aac7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078694"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888304"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>Classificando membros de atributo com base em um atributo secundário
-  Na Lição 3, você aprendeu a classificar membros de atributo com base no nome ou valor de chave deles. Aprendeu também a usar uma chave de membro composta para afetar os membros de atributo e a ordem de classificação. Para obter mais informações, consulte [Modificando a dimensão de data](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). No entanto, se nem o nome e nem a chave do atributo primário fornecerem a ordem de classificação desejada, você poderá usar um atributo secundário para obter a ordem desejada. Com a definição de uma relação entre os atributos, você pode usar o segundo atributo para classificar os membros do primeiro atributo.  
+  Na Lição 3, você aprendeu a classificar membros de atributo com base no nome ou valor de chave deles. Aprendeu também a usar uma chave de membro composta para afetar os membros de atributo e a ordem de classificação. Para obter mais informações, consulte [Modificando a dimensão de data](https://docs.microsoft.com/analysis-services/lesson-3-4-modifying-the-date-dimension). No entanto, se nem o nome e nem a chave do atributo primário fornecerem a ordem de classificação desejada, você poderá usar um atributo secundário para obter a ordem desejada. Com a definição de uma relação entre os atributos, você pode usar o segundo atributo para classificar os membros do primeiro atributo.  
   
  As relações de atributos definem as relações ou dependências entre atributos. Em uma dimensão com base em apenas uma tabela relacional, todos os atributos são geralmente relacionados uns aos outros através do atributo de chave. Isso acontece porque todos os atributos de uma dimensão fornecem informações sobre os membros vinculados pelo atributo de chave da dimensão aos fatos de uma tabela de fatos para cada grupo de medidas relacionado. Em uma dimensão com base em várias tabelas relacionais, os atributos são geralmente vinculados com base na chave de junção entre as tabelas. Se os dados subjacentes derem suporte, os atributos relacionados poderão ser usados para especificar uma ordem de classificação. Por exemplo, você pode criar um novo atributo que forneça a lógica de classificação para um atributo relacionado.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66078694"
   
      Observe que os meses agora estão classificados em ordem cronológica, como mostra a imagem a seguir:  
   
-     ![Modificado a hierarquia de usuário em ordem cronológica](../../2014/tutorials/media/l4-memberproperties-3.gif "modificado a hierarquia de usuário em ordem cronológica")  
+     ![Hierarquia de usuário modificada em ordem cronológica](../../2014/tutorials/media/l4-memberproperties-3.gif "Hierarquia de usuário modificada em ordem cronológica")  
   
 ## <a name="defining-attribute-relationships-and-sort-order-in-the-customer-dimension"></a>Definindo relações de atributo e ordem de classificação na dimensão Cliente  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66078694"
   
      A imagem a seguir mostra os membros da hierarquia de atributo **Distância do Trabalho** , classificados pelos valores ASCII da chave de membro.  
   
-     ![Hierarquia do atributo distância do trabalho](../../2014/tutorials/media/l4-memberproperties-4.gif "hierarquia de atributo distância do trabalho")  
+     ![Hierarquia de atributo de distância] do commudo (../../2014/tutorials/media/l4-memberproperties-4.gif "Hierarquia de atributo de distância") do commudo  
   
 2.  Mude para a guia **Estrutura da Dimensão** no Designer de Dimensão da dimensão Cliente, clique com o botão direito do mouse em **CommuteDistanceSort** na tabela **Cliente** do painel **Exibição da Fonte de Dados** e clique em **Novo Atributo da Coluna**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66078694"
   
      Observe que os membros da hierarquia de atributo agora estão classificados em ordem lógica com base no aumento da distância, como mostra a imagem a seguir:  
   
-     ![Classificados novamente a hierarquia de atributo distância do trabalho](../../2014/tutorials/media/l4-memberproperties-5.gif "hierarquia de atributo distância do trabalho Re-sorted")  
+     ![Hierarquia de atributo de distância do mudo] reclassificada (../../2014/tutorials/media/l4-memberproperties-5.gif "Hierarquia de atributo de distância do mudo") reclassificada  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Especificando relações de atributo entre atributos em uma hierarquia definida pelo usuário](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  

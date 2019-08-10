@@ -10,12 +10,12 @@ ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4b503c63706135b326490ccefc3f0d8ca6ceccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6cf8b025530cbeee236e519564cc5c25861824c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078273"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888103"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definindo e usando uma ação de detalhamento
   Os dados de fato de dimensionamento em uma dimensão de fatos sem filtrar corretamente os dados que a consulta retorna podem causar lentidão no desempenho da consulta. Para evitar esse problema, defina uma ação de detalhamento que restrinja o número total de linhas que serão retornadas. Esse processo melhorará significativamente o desempenho da consulta.  
@@ -30,15 +30,15 @@ ms.locfileid: "66078273"
   
      A imagem a seguir mostra a guia **Ações** do Designer de Cubo.  
   
-     ![Guia Ações do Designer de cubo](../../2014/tutorials/media/l8-action1.gif "guia Ações do Designer de cubo")  
+     ![Guia ações do designer de cubo](../../2014/tutorials/media/l8-action1.gif "Guia ações do designer de cubo")  
   
 2.  Na barra de ferramentas da guia **Ações** , clique no botão **Nova Ação de Detalhamento** .  
   
      Um modelo de ação em branco será exibido na tela.  
   
-     ![Modelo de ação em branco no painel de exibição](../../2014/tutorials/media/l8-action2.gif "modelo de ação em branco no painel de exibição")  
+     ![Modelo de ação em branco no painel de exibição](../../2014/tutorials/media/l8-action2.gif "Modelo de ação em branco no painel de exibição")  
   
-3.  No **nome** , altere o nome dessa ação para `Internet Sales Details Drillthrough Action`.  
+3.  Na caixa **nome** , altere o nome dessa ação para `Internet Sales Details Drillthrough Action`.  
   
 4.  Na lista **Membros do grupo de medidas** , selecione **Vendas pela Internet**.  
   
@@ -46,19 +46,19 @@ ms.locfileid: "66078273"
   
 6.  Na lista **Retornar Colunas** , marque as caixas de seleção **Descrição do Item** e **Número do Pedido** e clique em **OK**. A imagem a seguir mostra como o modelo Ação deve estar sendo exibido neste momento no procedimento.  
   
-     ![Caixa colunas de detalhamento](../../2014/tutorials/media/l8-action3.gif "caixa colunas de detalhamento")  
+     ![Caixa colunas] de detalhamento (../../2014/tutorials/media/l8-action3.gif "Caixa colunas") de detalhamento  
   
 7.  Expanda a caixa **Propriedades Adicionais** , como mostra a imagem a seguir.  
   
-     ![Caixa propriedades adicionais](../../2014/tutorials/media/l8-action4.gif "caixa propriedades adicionais")  
+     ![Caixa de propriedades adicionais](../../2014/tutorials/media/l8-action4.gif "Caixa de propriedades adicionais")  
   
-8.  No **máximo de linhas** , digite `10`.  
+8.  Na caixa **máximo de linhas** , digite `10`.  
   
-9. No **legenda** , digite `Drillthrough to Order Details...`.  
+9. Na caixa **legenda** , digite `Drillthrough to Order Details...`.  
   
      Essas configurações limitam o número de linhas a serem retornadas e especificam a legenda que será exibida no menu do aplicativo cliente. A imagem a seguir mostra essas configurações na caixa **Propriedades Adicionais** .  
   
-     ![Caixa propriedades adicionais](../../2014/tutorials/media/l8-action5.gif "caixa propriedades adicionais")  
+     ![Caixa de propriedades adicionais](../../2014/tutorials/media/l8-action5.gif "Caixa de propriedades adicionais")  
   
 ## <a name="using-the-drillthrough-action"></a>Usando a ação de detalhamento  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66078273"
   
      Os detalhes dos pedidos que foram enviados a Adam Powell são exibidos no **Visualizador de Exemplos de Dados**, como mostra a imagem a seguir. Entretanto, alguns detalhes adicionais também seriam úteis, como a data do pedido, a data de vencimento e a data de envio. No próximo procedimento, você adicionará esses detalhes.  
   
-     ![Pedidos enviados a Adam Powell](../../2014/tutorials/media/l8-action6.gif "pedidos enviados a Adam Powell")  
+     ![Pedidos enviados para Adam Powell](../../2014/tutorials/media/l8-action6.gif "Pedidos enviados para Adam Powell")  
   
 8.  Feche o Excel/  
   
@@ -104,11 +104,11 @@ ms.locfileid: "66078273"
   
     -   ShipDateKey  
   
-6.  Alterar o **nome** propriedade para o **Order Date Key** atributo para `Order Date` , clique no botão Procurar para o **coluna nome** propriedade e o **Coluna de nome** caixa de diálogo, selecione **data** como a tabela de origem e SimpleDate como a coluna de origem. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Altere a propriedade **nome** do atributo de chave de data do `Order Date` **pedido** para, clique no botão procurar da propriedade **coluna de nome** e, na caixa de diálogo coluna de **nome** , selecione **Data** como a tabela de origem e selecione SimpleDate como a coluna de origem. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Alterar o **nome** propriedade para o **Due Date Key** atributo `Due Date`e, em seguida, usando o mesmo método que o **Order Date Key** de atributo, altere o  **Coluna de nome** propriedade para esse atributo para **simpledate (WChar)** .  
+7.  Altere a propriedade **nome** do atributo de chave de data de `Due Date` **vencimento** para e, em seguida, usando o mesmo método que o atributo de chave de **data do pedido** , altere a propriedade de coluna de **nome** desse atributo para **Date. SimpleDate (WCHAR)** .  
   
-8.  Alterar o **nome** propriedade para o **Ship Date Key** atributo `Ship Date`e, em seguida, altere o **coluna nome** propriedade deste atributo para  **Simpledate (WChar)** .  
+8.  Altere a propriedade **Name** do atributo de chave de data de `Ship Date` **envio** para e altere a propriedade de **coluna de nome** desse atributo para **Date. SimpleDate (WCHAR)** .  
   
 9. Mude para a guia **Ações** do Designer do cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66078273"
   
      A imagem a seguir mostra essas colunas selecionadas.  
   
-     ![Caixa colunas de detalhamento](../../2014/tutorials/media/l8-action7.gif "caixa colunas de detalhamento")  
+     ![Caixa colunas] de detalhamento (../../2014/tutorials/media/l8-action7.gif "Caixa colunas") de detalhamento  
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>Revisando a ação de detalhamento modificada  
   
@@ -140,16 +140,16 @@ ms.locfileid: "66078273"
   
      Os detalhes dos pedidos enviados a Adam Powell serão exibidos em uma planilha temporária. Isso inclui descrição do item, número do pedido, data do pedido, data de vencimento e data de envio, como mostra a imagem a seguir.  
   
-     ![Pedidos enviados a Adam Powell](../../2014/tutorials/media/l8-action8.gif "pedidos enviados a Adam Powell")  
+     ![Pedidos enviados para Adam Powell](../../2014/tutorials/media/l8-action8.gif "Pedidos enviados para Adam Powell")  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 9: Definindo perspectivas e traduções](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+ [Lição 9: Definindo perspectivas e traduções](https://docs.microsoft.com/analysis-services/lesson-9-defining-perspectives-and-translations)  
   
 ## <a name="see-also"></a>Consulte também  
- [Ações &#40;Analysis Services - dados multidimensionais&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
+ [Ações &#40;Analysis Services-dados multidimensionais&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Ações em modelos multidimensionais](multidimensional-models/actions-in-multidimensional-models.md)   
  [Relações de dimensão](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Definindo uma relação de fatos](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)   
+ [Definindo uma relação de fatos](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)   
  [Definir uma relação de fato e propriedades de relação de fato](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   

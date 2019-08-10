@@ -15,12 +15,12 @@ ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 126a419f52ee88349d1d64fcfe756fcb3681c03a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d0129290734cfc374ab8b563fab14692a7b59fe6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069178"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893313"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Suporte a SPN (Nome da entidade de serviço) em conexões com o cliente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68069178"
   
  Para obter mais informações sobre Kerberos, consulte os artigos a seguir:  
   
--   [Suplemento técnico do Kerberos para Windows](https://go.microsoft.com/fwlink/?LinkId=101449)  
+-   [Suplemento técnico do Kerberos para Windows](/previous-versions/msp-n-p/ff649429(v=pandp.10))  
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68069178"
  O novo comportamento de conexão é implementado pelo cliente; portanto, ele não é específico para uma versão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Servidores vinculados e delegação  
- Quando servidores vinculados são criados, o parâmetro **@provstr** de [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) pode ser usado para especificar os SPNs do servidor e do parceiro de failover. Os benefícios de fazer isso são os mesmos que especificar SPNs em cadeias de conexão de cliente: É mais simples e confiável para estabelecer conexões que usam a autenticação Kerberos.  
+ Quando servidores vinculados são criados, o parâmetro **@provstr** de [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) pode ser usado para especificar os SPNs do servidor e do parceiro de failover. Os benefícios de fazer isso são os mesmos que especificar SPNs em cadeias de conexão de cliente: É mais simples e mais confiável estabelecer conexões que usam a autenticação Kerberos.  
   
  A delegação com servidores vinculados exige a autenticação Kerberos.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "68069178"
   
 -   Segurança: O SPN especificado divulga informações protegidas?  
   
--   Confiabilidade: Para habilitar o uso de SPNs padrão, a conta de serviço no qual o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] executa de instância deve ter privilégios suficientes para atualizar o Active Directory no KDC.  
+-   Confiabilidade Para habilitar o uso de SPNs padrão, a conta de serviço na qual [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a instância é executada deve ter privilégios suficientes para atualizar o Active Directory no KDC.  
   
--   Conveniência e transparência de local: Como os SPNs do aplicativo serão afetados se seu banco de dados for movido para outro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância? Isto se aplicará ao servidor principal e seu parceiro de failover se você usar espelhamento de banco de dados. Se uma alteração de servidor significar que os SPNs devem ser alterados, como isto afetará os aplicativos? Qualquer alteração será gerenciada?  
+-   Conveniência e transparência do local: Como os SPNs de um aplicativo serão afetados se seu banco de dados mudar para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uma instância diferente? Isto se aplicará ao servidor principal e seu parceiro de failover se você usar espelhamento de banco de dados. Se uma alteração de servidor significar que os SPNs devem ser alterados, como isto afetará os aplicativos? Qualquer alteração será gerenciada?  
   
 ## <a name="specifying-the-spn"></a>Especificando o SPN  
  Você pode especificar um SPN em caixas de diálogo e em código. Esta seção discute como você pode especificar um SPN.  
@@ -105,7 +105,7 @@ ms.locfileid: "68069178"
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>Sintaxe do ODBC e OLE DB que dão suporte a SPNs  
  Para informações específicas de sintaxe, consulte os seguintes tópicos:  
   
--   [Nomes de entidade de serviço &#40;SPNs&#41; em conexões de cliente &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
+-   [SPNs &#40;&#41; de nomes de entidade de serviço &#40;em conexões de cliente ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
 -   [SPNs &#40;Nomes da Entidade de Serviço&#41; em conexões de cliente &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   

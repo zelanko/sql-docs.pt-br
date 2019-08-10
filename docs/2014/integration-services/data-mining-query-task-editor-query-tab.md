@@ -1,5 +1,5 @@
 ---
-title: Editor de tarefa de consulta de mineração de dados (guia consulta) | Microsoft Docs
+title: Editor da tarefa consulta de mineração de dados (guia consulta) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ec0c3e2187bc0fb97af733021e39b405470fc373
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059843"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890716"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Editor da Tarefa Consulta de Mineração de Dados (guia Consulta)
   Use a guia **Consulta** da caixa de diálogo **Tarefa Consulta de Mineração de Dados** para criar consultas de previsão baseadas em um modelo de mineração. Nessa caixa de diálogo, você também pode associar parâmetros e conjuntos de resultados a variáveis.  
   
- Para saber mais sobre como implementar a mineração de dados em pacotes, consulte [Tarefa Consulta de mineração de dados](control-flow/data-mining-query-task.md) e [Soluções de mineração de dados](../analysis-services/data-mining/data-mining-solutions.md).  
+ Para saber mais sobre como implementar a mineração de dados em pacotes, consulte [Tarefa Consulta de mineração de dados](control-flow/data-mining-query-task.md) e [Soluções de mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ## <a name="general-options"></a>Opções gerais  
- **Nome**  
+ **Name**  
  Forneça um nome exclusivo para a tarefa Consulta de Mineração de Dados. Esse nome é usado como rótulo no ícone de tarefa.  
   
 > [!NOTE]  
@@ -57,7 +57,7 @@ ms.locfileid: "66059843"
  **Adicionar**  
  Adicione um parâmetro à lista.  
   
- **Remover**  
+ **Removerr**  
  Selecione um parâmetro e clique em **Remover**.  
   
 ## <a name="result-set-tab-options"></a>Opções da guia Conjunto de Resultados  
@@ -75,13 +75,13 @@ ms.locfileid: "66059843"
  **Adicionar**  
  Adicione um conjunto de resultados à lista.  
   
- **Remover**  
+ **Removerr**  
  Selecione um resultado e clique em **Remover**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor da Tarefa Consulta de Mineração de Dados &#40;Guia Modelo de Mineração&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
  [Editor da Tarefa Consulta de Mineração de Dados &#40;Guia Saída&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [Designer de Mineração de Dados](../analysis-services/data-mining/data-mining-designer.md)  
+ [Designer de Mineração de Dados](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

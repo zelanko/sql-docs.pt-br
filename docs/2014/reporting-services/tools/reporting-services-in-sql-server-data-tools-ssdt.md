@@ -12,15 +12,15 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5c79d078e8a9e2a8928c98c9d7ca56e220e86051
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9c9719f3e73326c2b86117b3a78a8ede927198d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66099987"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888936"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services no SQL Server Data Tools (SSDT)
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] é um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ambiente com aprimoramentos específicos para soluções de business intelligence. O [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] é incluído com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]o é [!INCLUDE[msCoName](../../../includes/msconame-md.md)] um [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ambiente com aprimoramentos específicos para Business Intelligence soluções. O [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] é incluído com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Use o [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] para criar e gerenciar soluções e projetos para relatórios e itens relacionados a relatórios do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . O [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] fornece o ambiente de criação do Designer de Relatórios. No Designer de Relatórios, você pode abrir, modificar, visualizar, salvar e implantar definições de relatório, fontes de dados compartilhadas, conjuntos de dados compartilhados e partes de relatório.  
   
@@ -37,14 +37,14 @@ ms.locfileid: "66099987"
 ##  <a name="bkmk_ReportServerProjects"></a> Projetos do Servidor de Relatório  
  Ao instalar o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], os seguintes modelos de projeto são disponibilizados em [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]:  
   
--   **Projeto do servidor de relatório.** Quando você seleciona um Projeto do Servidor de Relatórios, o Designer de Relatórios é aberto. O Projeto do Servidor de Relatório é um modelo Projetos do Business Intelligence instalado pelo [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] que está disponível na caixa de diálogo **Novo Projeto** . Para obter mais informações, consulte [Adicionar um relatório novo ou existente a um projeto de relatório &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md). As propriedades de projeto do Servidor de Relatório se aplicam a todos os relatórios e a todas as fontes de dados compartilhadas em um projeto do [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Estas propriedades incluem a URL para o servidor de relatórios e os nomes de pastas para relatórios e fontes de dados compartilhadas. Use a caixa de diálogo **Páginas de Propriedades de Projeto** para exibir os valores da propriedade atual. Para abrir a caixa de diálogo, nos **Project** menu, clique em  _\<nome do projeto >_ **propriedades**.  
+-   **Projeto do servidor de relatório.** Quando você seleciona um Projeto do Servidor de Relatórios, o Designer de Relatórios é aberto. O Projeto do Servidor de Relatório é um modelo Projetos do Business Intelligence instalado pelo [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] que está disponível na caixa de diálogo **Novo Projeto** . Para obter mais informações, consulte [Adicionar um relatório novo ou existente a um projeto de relatório &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md). As propriedades de projeto do Servidor de Relatório se aplicam a todos os relatórios e a todas as fontes de dados compartilhadas em um projeto do [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Estas propriedades incluem a URL para o servidor de relatórios e os nomes de pastas para relatórios e fontes de dados compartilhadas. Use a caixa de diálogo **Páginas de Propriedades de Projeto** para exibir os valores da propriedade atual. Para abrir essa caixa de diálogo, no menu **projeto** , clique em  _\<nome do projeto >_ **Propriedades**.  
   
 -   **Assistente de projeto do servidor de relatório.** Quando você seleciona um Projeto do Assistente do Servidor de Relatórios, um projeto do servidor de relatórios é criado automaticamente e o Assistente de Relatório, aberto. No assistente, você pode criar um relatório seguindo as instruções em cada página para criar uma cadeia de conexão em uma origem de dados, definir credenciais de fonte de dados, criar uma consulta, adicionar uma região de dados de tabela ou matriz, especificar dados e grupos de relatórios, selecionar um estilo de fonte e cor, publicar o relatório em um servidor de relatórios e visualizá-lo localmente. Depois de criar um relatório com o assistente, você pode alterar os dados e o designer de relatórios, usando o Designer de Relatórios no Projeto do Servidor de Relatórios.  
   
- ![Novos modelos de Projeto no SSDT](../../analysis-services/media/ssdt-biprojects.png "Novos modelos de Projeto no SSDT")  
+ ![Novos modelos de Projeto no SSDT](https://docs.microsoft.com/analysis-services/analysis-services/media/ssdt-biprojects.png "Novos modelos de Projeto no SSDT")  
 
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Janelas e painéis do Designer de Relatórios  
- Designer de relatórios dá suporte a dois modos de exibição: **Design** para definir os dados e layout do relatório e **Visualização** para mostrar uma exibição renderizada do relatório. Em cada exibição, você pode exibir várias janelas úteis para design ou exibição de um relatório renderizado.  
+ O Report Designer dá suporte a duas exibições: **Design** para definir os dados e layout do relatório e **Visualização** para mostrar uma exibição renderizada do relatório. Em cada exibição, você pode exibir várias janelas úteis para design ou exibição de um relatório renderizado.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Painel de Dados do Relatório  
  O painel de Dados do Relatório exibe campos internos, fontes de dados, conjuntos de dados, coleções de campos, parâmetros do relatório e imagens.  
@@ -63,7 +63,7 @@ ms.locfileid: "66099987"
   
 -   **Imagens** A lista de imagens que estão disponíveis para serem incluídas como um item de Imagem em um relatório.  
   
- As fontes de dados e os conjuntos de dados no painel Dados do Relatório representam os elementos da definição do relatório. O painel de Dados do Relatório é um recurso com suporte de vários ambientes de criação de relatórios. No Construtor de Relatórios, esse é o único painel disponível para gerenciar fontes de dados e conjuntos de dados. No Designer de Relatórios, o painel de Dados do Relatório funciona com o Gerenciador de Soluções, que lista fontes de dados e conjuntos de dados compartilhados como arquivos. As fontes de dados compartilhadas e os conjuntos de dados compartilhados do painel de Dados do Relatório devem apontar para suas fontes de dados compartilhadas e conjuntos de dados compartilhados no Gerenciador de Soluções. Os elementos do painel de Dados do Relatórios então contêm uma referência aos arquivos de dados no Gerenciador de Soluções. As propriedades do projeto determinam se as fontes de dados compartilhadas e os conjuntos de dados compartilhados são implantados no servidor de relatório ou no site do SharePoint. Para obter mais informações, consulte [converter uma fonte de dados de inserida em compartilhada &#40;construtor de relatórios e SSRS&#41;](../report-data/convert-data-sources-report-builder-and-ssrs.md).  
+ As fontes de dados e os conjuntos de dados no painel Dados do Relatório representam os elementos da definição do relatório. O painel de Dados do Relatório é um recurso com suporte de vários ambientes de criação de relatórios. No Construtor de Relatórios, esse é o único painel disponível para gerenciar fontes de dados e conjuntos de dados. No Designer de Relatórios, o painel de Dados do Relatório funciona com o Gerenciador de Soluções, que lista fontes de dados e conjuntos de dados compartilhados como arquivos. As fontes de dados compartilhadas e os conjuntos de dados compartilhados do painel de Dados do Relatório devem apontar para suas fontes de dados compartilhadas e conjuntos de dados compartilhados no Gerenciador de Soluções. Os elementos do painel de Dados do Relatórios então contêm uma referência aos arquivos de dados no Gerenciador de Soluções. As propriedades do projeto determinam se as fontes de dados compartilhadas e os conjuntos de dados compartilhados são implantados no servidor de relatório ou no site do SharePoint. Para obter mais informações, consulte [converter uma fonte de dados de inserido &#40;para compartilhado Construtor de relatórios&#41;e SSRS](../report-data/convert-data-sources-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Se o painel de dados do relatório não estiver visível, no menu **Exibir** , clique em **Dados do Relatório**. Se o painel de dados do relatório estiver flutuando, é possível ancorá-lo. Para obter mais informações, consulte [Encaixar o painel de dados do relatório no Designer de Relatórios &#40;SSRS&#41;](dock-the-report-data-pane-in-report-designer-ssrs.md).  
@@ -232,12 +232,12 @@ ms.locfileid: "66099987"
  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] pode ser integrado com plug-ins de origem. Use as páginas de Projetos e Soluções na caixa de diálogo **Opções** para especificar o plug-in e configurar as propriedades.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Modelos de relatório personalizados  
- Para usar relatórios personalizados como modelos de novos relatórios, basta copiá-los na pasta ReportProject no computador em que o [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] está instalado. Por padrão, esta pasta está em \<unidade >: \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private assemblies\projectitems\reportproject. Quando você adiciona um novo item ao projeto de relatório, o relatório personalizado aparece no painel Modelos.  
+ Para usar relatórios personalizados como modelos de novos relatórios, basta copiá-los na pasta ReportProject no computador em que o [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] está instalado. Por padrão, essa pasta está na \<unidade >: \Program Files\Microsoft Visual Studio 10.0 \ Common7\IDE\Private Assemblies\ProjectItems\ReportProject. Quando você adiciona um novo item ao projeto de relatório, o relatório personalizado aparece no painel Modelos.  
   
  Também é possível adicionar estilos personalizados ao assistente de relatório.  
 
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> Suporte de linha de comando para o SQL Server Data Tools  
- [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] se baseia [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 10.0 e no aplicativo devenv.exe subjacente. Antes de usar essas opções, você deve definir valores válidos para estes dois itens:  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]baseia-se [!INCLUDE[msCoName](../../../includes/msconame-md.md)] em [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 10,0 e no aplicativo devenv. exe subjacente. Antes de usar essas opções, você deve definir valores válidos para estes dois itens:  
   
 -   Propriedades de projeto para OverwriteDataSources, TargetDataSourceFolder, TargetReportFolder e TargetServerURL.  
   
@@ -295,7 +295,7 @@ ms.locfileid: "66099987"
     |Abrir o atalhe de menu do item de relatório selecionado|SHIFT+F10+Tecla de Propriedade, em modelos de teclado mais novos|  
 
 ## <a name="see-also"></a>Consulte também  
- [Gerenciador de soluções](../../ssms/solution/solution-explorer.md)   
+ [Gerenciador de Soluções](../../ssms/solution/solution-explorer.md)   
  [Relatórios do Reporting Services &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)   
  [Linguagem RDL &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
  [Implantação e suporte de versão no SQL Server Data Tools &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  

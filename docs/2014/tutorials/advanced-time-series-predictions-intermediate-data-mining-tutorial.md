@@ -1,5 +1,5 @@
 ---
-title: Advanced previsões de série temporal (Tutorial de mineração de dados intermediário) | Microsoft Docs
+title: Previsões avançadas de série temporal (tutorial de mineração de dados intermediário) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 3db82b977725bdcb615ec67bd66e530b38f385c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca144d1d473f7df49f73d5ed170052c61ce6107d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62822445"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893696"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>Previsões de série temporal avançadas (Tutorial de mineração de dados intermediário)
   Você viu na exploração do modelo de previsão que embora as vendas na maioria das regiões siga um padrão similar, algumas regiões e alguns modelos, como o M200 na região do Pacífico, exibem tendências muito diferentes. Isso não é surpresa para você, já que sabe que as diferenças entre as regiões são comuns e podem ser causadas por muitos fatores, incluindo promoções de marketing, geração de relatórios imprecisos ou eventos geopolíticos.  
@@ -26,24 +26,24 @@ ms.locfileid: "62822445"
   
  **Etapas**  
   
-1.  [Preparar os dados de vendas estendidos (para previsão)](#bkmk_newExtendData)  
+1.  [Preparar os dados de vendas estendidas (para previsão)](#bkmk_newExtendData)  
   
 2.  [Preparar os dados agregados (para criar o modelo)](#bkmk_newReplaceData)  
   
-3.  [Preparar os dados de série (para previsão cruzada)](#bkmk_CrossData2)  
+3.  [Preparar os dados da série (para previsão cruzada)](#bkmk_CrossData2)  
   
-4.  [Fazer a previsão usando EXTEND](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
+4.  [Prever usando estender](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
 5.  [Criar o modelo de previsão cruzada](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
-6.  [Fazer a previsão usando REPLACE](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
+6.  [Prever usando substituir](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
-7.  [Revisar as novas previsões](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
+7.  [Examinar as novas previsões](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
-##  <a name="bkmk_newExtendData"></a> Criando os novos dados de vendas estendidos  
+##  <a name="bkmk_newExtendData"></a>Criando os novos dados de vendas estendidos  
  Para atualizar seus dados de vendas, você precisará obter os números de vendas mais recentes. De interesse em particular são os dados da região do Pacífico, que iniciou uma promoção de vendas regional para chamar a atenção para as novas lojas e aumentar o reconhecimento de seus produtos.  
   
- Para este cenário, vamos supor que os dados importados de uma planilha do Excel que contém apenas três meses de novos dados para duas regiões. Você vai criar uma tabela para os dados usando um script Transact-SQL e, em seguida, definir uma exibição da fonte de dados a ser usado para previsão.  
+ Para este cenário, vamos pressupor que os dados foram importados de uma pasta de trabalho do Excel que contém apenas três meses de novos dados para algumas regiões. Você criará uma tabela para os dados usando um script Transact-SQL e, em seguida, definirá uma exibição da fonte de dados a ser usada para previsão.  
   
 #### <a name="create-the-table-with-new-sales-data"></a>Criar a tabela com os novos dados de vendas  
   
@@ -93,43 +93,43 @@ ms.locfileid: "62822445"
     >   
     >  Observe que as datas usadas no banco de dados de exemplo foram alteradas para esta versão. Se você estiver usando uma edição anterior do AdventureWorks, poderá precisar ajustar as datas inseridas de acordo.  
   
-###  <a name="bkmk_newReplaceData"></a> Criar uma exibição da fonte de dados usando os novos dados de vendas  
+###  <a name="bkmk_newReplaceData"></a>Criar uma exibição da fonte de dados usando os novos dados de vendas  
   
-1.  Na **Gerenciador de soluções**, clique com botão direito **exibições da fonte de dados**e, em seguida, selecione **nova exibição da fonte de dados**.  
+1.  Em **Gerenciador de soluções**, clique com o botão direito do mouse em exibições da **fonte de dados**e selecione **nova exibição da fonte de dados**.  
   
 2.  No Assistente de Exibição da Fonte de Dados, faça as seguintes seleções:  
   
-     **Fonte de dados**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
+     **Fonte de dados**:[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Selecionar tabelas e exibições**: Selecione a tabela que você acabou de criar NewSalesData.  
+     **Selecionar tabelas e exibições**: Selecione a tabela que você acabou de criar, NewSalesData.  
   
-3.  Clique em **Concluir**.  
+3.  Clique em **Finalizar**.  
   
-4.  Na superfície de design de exibição da fonte de dados, NewSalesData com o botão direito e, em seguida, selecione **explorar dados** para verificar os dados.  
+4.  Na superfície de design da exibição da fonte de dados, clique com o botão direito do mouse em NewSalesData e selecione **explorar dados** para verificar os dados.  
   
 > [!WARNING]  
 >  Você usará estes dados somente para previsão. Portanto, não importa se os dados estão incompletos.  
   
-##  <a name="bkmk_CrossData2"></a> Criando os dados para o modelo de previsão cruzada  
- Os dados que foi usados no original previsão de modelo já estava agrupados de certa forma, a exibição vTimeSeries, recolhidas vários modelos de bicicleta em um número menor de categorias e mesclou os resultados de países individuais em regiões. Para criar um modelo que possa ser usado para projeções mundiais, você criará mais algumas agregações simples diretamente no Designer de Exibição da Fonte de Dados. A nova exibição da fonte de dados contém apenas a soma e a média das vendas de todos os produtos para todas as regiões.  
+##  <a name="bkmk_CrossData2"></a>Criando os dados para o modelo de previsão cruzada  
+ Os dados que foram usados no modelo de previsão original já foram agrupados um pouco pelo vTimeSeries de exibição, que recolhidou vários modelos de bicicleta em um número menor de categorias e os resultados mesclados de países individuais em regiões. Para criar um modelo que possa ser usado para projeções mundiais, você criará mais algumas agregações simples diretamente no Designer de Exibição da Fonte de Dados. A nova exibição da fonte de dados contém apenas a soma e a média das vendas de todos os produtos para todas as regiões.  
   
  Depois de criar a fonte de dados usada no modelo, você deve criar uma nova exibição da fonte de dados para usar na previsão. Por exemplo, se você desejar prever vendas para a Europa usando o novo modelo mundial, deverá preencher os dados somente para a região da Europa. Dessa forma, você definirá uma nova exibição de fonte de dados que filtra os dados originais, e alterará a condição de filtro para cada conjunto de consultas de previsão.  
   
 #### <a name="to-create-the-model-data-using-a-custom-data-source-view"></a>Para criar os dados do modelo usando uma exibição de fonte de dados personalizada  
   
-1.  Na **Gerenciador de soluções**, clique com botão direito **exibições da fonte de dados**e, em seguida, selecione **nova exibição da fonte de dados**.  
+1.  Em **Gerenciador de soluções**, clique com o botão direito do mouse em exibições da **fonte de dados**e selecione **nova exibição da fonte de dados**.  
   
 2.  Na página de boas-vindas do assistente, clique em **Avançar**.  
   
 3.  Na página **Selecionar Fonte de Dados** , selecione [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]e, em seguida, clique em **Avançar**.  
   
-4.  Na página de **selecionar tabelas e exibições**, não adicione qualquer clique apenas em tabelas **próxima**.  
+4.  Na página, **selecione tabelas e exibições**, não adicionar nenhuma tabela – basta clicar em **Avançar**.  
   
-5.  Na página de **Concluindo o assistente**, digite o nome `AllRegions`e, em seguida, clique em **concluir**.  
+5.  Na página, **concluindo o assistente**, digite o nome `AllRegions`e clique em **concluir**.  
   
-6.  Em seguida, clique com botão direito a superfície de design de exibição da fonte de dados em branco e, em seguida, selecione **nova consulta nomeada**.  
+6.  Em seguida, clique com o botão direito do mouse na superfície de design da exibição da fonte de dados em branco e selecione **nova consulta nomeada**.  
   
-7.  No **criar consulta nomeada** caixa de diálogo, para **nome**, tipo `AllRegions`e para **descrição**, tipo **soma e média de vendas para todos os modelos e regiões**.  
+7.  Na caixa de diálogo **criar consulta nomeada** , para **nome**, tipo `AllRegions`e **Descrição**, digite **Soma e média de vendas para todos os modelos e regiões**.  
   
 8.  No painel de texto do SQL, digite a seguinte instrução e clique em OK:  
   
@@ -142,29 +142,29 @@ ms.locfileid: "62822445"
     GROUP BY ReportingDate  
     ```  
   
-9. Clique com botão direito do `AllRegions` de tabela e, em seguida, selecione **explorar dados**.  
+9. Clique com o botão `AllRegions` direito do mouse na tabela e selecione **explorar dados**.  
   
-###  <a name="bkmk_CrossData"></a> Para criar os dados de série para previsão cruzada  
+###  <a name="bkmk_CrossData"></a>Para criar os dados de série para previsão cruzada  
   
-1.  Na **Gerenciador de soluções**, clique com botão direito **exibições da fonte de dados**e, em seguida, selecione **nova exibição da fonte de dados**.  
+1.  Em **Gerenciador de soluções**, clique com o botão direito do mouse em exibições da **fonte de dados**e selecione **nova exibição da fonte de dados**.  
   
 2.  No Assistente de Exibição da Fonte de Dados, faça as seguintes seleções:  
   
-     **Fonte de dados**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
+     **Fonte de dados**:[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Selecionar tabelas e exibições**: Não selecione nenhuma tabela  
+     **Selecionar tabelas e exibições**: Não selecionar nenhuma tabela  
   
      **Nome**: `T1000 Pacific Region`  
   
-3.  Clique em **Concluir**.  
+3.  Clique em **Finalizar**.  
   
-4.  A superfície de design vazio para o botão direito do mouse **T1000 Pacific Region**e, em seguida, selecione **nova consulta nomeada**.  
+4.  Clique com o botão direito do mouse na superfície de design vazia para **T1000 Pacífico Region. dsv**e selecione **nova consulta nomeada**.  
   
      A caixa de diálogo **Criar Consulta Nomeada** é aberta. Digite o nome novamente e, em seguida, adicione a seguinte descrição:  
   
      **Nome**: `T1000 Pacific Region`  
   
-     **Descrição**: **Filtro`vTimeSeries`por região e modelo**  
+     **Descrição**: **Filtrar`vTimeSeries`por região e modelo**  
   
 5.  No painel de texto, digite a seguinte consulta e clique em OK:  
   
@@ -177,16 +177,16 @@ ms.locfileid: "62822445"
     > [!NOTE]  
     >  Como você precisará criar previsões para cada série separadamente, talvez você queira copiar o texto da consulta e salvá-lo em um arquivo de texto para que seja possível reutilizá-lo na outra série de dados.  
   
-6.  Na superfície de design de exibição da fonte de dados, clique com botão direito T1000 Pacific e, em seguida, selecione **explorar dados** para verificar se os dados foram filtrados corretamente.  
+6.  Na superfície de design da exibição da fonte de dados, clique com o botão direito do mouse em T1000 Pacífico e, em seguida, selecione **explorar dados** para verificar se os dados foram filtrados corretamente.  
   
      Você usará esses dados como a entrada para o modelo ao criar consultas da previsão cruzada.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Usando dados atualizados de previsões de série temporal &#40;Tutorial intermediário de mineração de dados&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
+ [Previsões de série temporal usando o tutorial &#40;de mineração de dados intermediário de dados atualizados&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Algoritmo MTS](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Referência técnica do algoritmo MTS](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Exibições de fontes de dados em modelos multidimensionais](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [Exibições de fontes de dados em modelos multidimensionais](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
   
   

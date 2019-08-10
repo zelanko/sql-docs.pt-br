@@ -1,5 +1,5 @@
 ---
-title: Adicionar tipos de conteúdo de servidor de relatório a uma biblioteca (Reporting Services no modo integrado do SharePoint) | Microsoft Docs
+title: Adicionar tipos de conteúdo do servidor de relatório a uma biblioteca (Reporting Services no modo integrado do SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6ef4049f10363eca45615db234e3ed63687caf8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78c9080f1ea9ac0d733a45718886e31ab52171c8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66110005"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891626"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>Adicionar tipos de conteúdo do servidor de relatório a uma biblioteca (Reporting Services no modo integrado do SharePoint)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece tipos de conteúdo predefinidos do SharePoint usados para gerenciar arquivos de fonte de dados compartilhada (.rsds), modelos de relatórios (.smdl) e arquivos de definição de relatório (.rdl) do Construtor de Relatórios. A adição de um tipo de conteúdo do **Construtor de Relatórios**, do **Modelo de Relatório**ou da **Fonte de Dados de Relatório** a uma biblioteca ativa o comando **Novo** para que você possa criar novos documentos desse tipo.  
@@ -31,7 +31,7 @@ ms.locfileid: "66110005"
 > [!TIP]  
 >  Se você **não** tiver configurado anteriormente tipos de conteúdo para uma biblioteca, primeiro habilite o gerenciamento de tipos de conteúdo e, depois, habilite os tipos de conteúdo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Consulte os procedimentos para habilitar o gerenciamento de tipo de conteúdo em uma única biblioteca de documentos.  
   
- **Vídeo curto:** [(SSRS) Habilitar tipos de conteúdo em SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
+ **Vídeo curto:** [(SSRS) habilitando tipos de conteúdo em SharePoint2010. wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
   
  **Neste tópico:**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66110005"
   
 2.  Vá para **Configurações de site**.  
   
-    -   No SharePoint 2013, clique no ícone **Configurações** . ![Configurações do SharePoint](../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings")  
+    -   No SharePoint 2013, clique no ícone **Configurações** . ![Configurações do SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings")  
   
     -   No SharePoint 2010, clique em **Ações do Site**e, depois, em **Configurações de Site**.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66110005"
 9. > [!NOTE]  
     >  Se o grupo de tipos de conteúdo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] **Tipos de Conteúdo do SQL Server Reporting Services** não estiver visível na página **Adicionar Tipos de Conteúdo** , uma das seguintes condições será verdadeira:  
   
-    -   O suplemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para produtos do SharePoint não foi instalado. Para obter mais informações, consulte [instalar ou desinstalar o suplemento Reporting Services para SharePoint &#40;do SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). O tópico inclui informações sobre a instalação do suplemento e apresenta as etapa de instalação somente de arquivos do suplemento para oferecer soluções alternativas.  
+    -   O suplemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para produtos do SharePoint não foi instalado. Para obter mais informações, consulte [instalar ou desinstalar o suplemento de Reporting Services para SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). O tópico inclui informações sobre a instalação do suplemento e apresenta as etapa de instalação somente de arquivos do suplemento para oferecer soluções alternativas.  
   
     -   O suplemento está instalado, mas o recurso de coleta de site **Recurso de Integração do Servidor de Relatório** não está ativo. Confirme o recurso de coleta de site em **Configurações do Site**.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66110005"
   
 ##  <a name="bkmk_enable_content_management_2010"></a> Para habilitar o gerenciamento de tipo de conteúdo para uma única biblioteca de documentos (SharePoint 2010)  
   
-1.  Abra a biblioteca para a qual você deseja habilitar vários tipos de conteúdo. Na barra de menus da biblioteca, você deverá ver os seguintes menus: **Novos**, **carregue**, **ações**, e **configurações**. Se **Configurações**não aparecer, você não terá permissão para adicionar um tipo de conteúdo.  
+1.  Abra a biblioteca para a qual você deseja habilitar vários tipos de conteúdo. Na barra de menus da biblioteca, você deve ver os seguintes menus: **Novo**, **carregar**, **ações**e **configurações**. Se **Configurações**não aparecer, você não terá permissão para adicionar um tipo de conteúdo.  
   
 2.  Na faixa de opções **Ferramentas de Biblioteca** , clique em **Biblioteca**.  
   
@@ -164,6 +164,6 @@ ms.locfileid: "66110005"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência à permissão de listas e sites do SharePoint para itens do servidor de relatório](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
- [Iniciar o construtor de relatórios &#40;construtor de relatórios&#41;](report-builder/start-report-builder.md)  
+ [Iniciar Construtor de Relatórios &#40;Construtor de relatórios&#41;](report-builder/start-report-builder.md)  
   
   

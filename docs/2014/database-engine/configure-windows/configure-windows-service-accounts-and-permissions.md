@@ -50,12 +50,12 @@ ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d4ed6f335e3a791d4af8b780527d963115439a7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 329903c084872be2a51ec9a79f72759d503f63dd
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62787803"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889456"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar contas de serviço e permissões do Windows
   Cada serviço no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] representa um processo ou um conjunto de processos para gerenciar a autenticação das operações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o Windows. Este tópico descreve a configuração padrão de serviços nesta versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e as opções de configuração de serviços [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você pode definir durante e após a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -65,13 +65,13 @@ ms.locfileid: "62787803"
   
 -   [Serviços instalados pelo SQL Server](#Service_Details)  
   
--   [Configuração e propriedades de serviço](#Serv_Prop)  
+-   [Propriedades e configuração do serviço](#Serv_Prop)  
   
     -   [Contas de serviço padrão](#Default_Accts)  
   
         -   [Alterando propriedades da conta](#Changing_Accounts)  
   
-    -   [Novos tipos de conta disponíveis com o Windows 7 e Windows Server 2008 R2](#New_Accounts)  
+    -   [Novos tipos de conta disponíveis com o Windows 7 e o Windows Server 2008 R2](#New_Accounts)  
   
     -   [Inicialização automática](#Auto_Start)  
   
@@ -85,9 +85,9 @@ ms.locfileid: "62787803"
   
     -   [Privilégios e direitos do Windows](#Windows)  
   
-    -   [Permissões do sistema de arquivos concedidas a SIDs por serviço do SQL Server ou grupos do Windows Local](#Reviewing_ACLs)  
+    -   [Permissões do sistema de arquivos concedidas a SQL Server SIDs por serviço ou grupos locais do Windows](#Reviewing_ACLs)  
   
-    -   [Permissão do sistema de arquivos concedidas a outros grupos ou contas de usuário do Windows](#File_System_Other)  
+    -   [Permissão do sistema de arquivos concedida a outras contas de usuário ou grupos do Windows](#File_System_Other)  
   
     -   [Permissões do sistema de arquivos relacionadas a locais de disco incomuns](#Unusual_Locations)  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62787803"
   
     -   [Pipes nomeados](#Pipes)  
   
--   [O provisionamento](#Provisioning)  
+-   [Provisionamento](#Provisioning)  
   
     -   [Provisionamento do Mecanismo de Banco de Dados](#DE_Prov)  
   
@@ -123,7 +123,7 @@ ms.locfileid: "62787803"
   
 -   [Atualizando de versões anteriores](#Upgrade)  
   
--   [Apêndice](#Appendix)  
+-   [Anexo](#Appendix)  
   
     -   [Descrição de contas de serviço](#Serv_Accts)  
   
@@ -142,7 +142,7 @@ ms.locfileid: "62787803"
   
 -   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**  : gerencia, executa, cria, agenda e entrega relatórios. O arquivo executável é \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe.  
   
--   **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**  : fornece suporte de gerenciamento para o armazenamento e a execução de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O caminho do executável é \<MSSQLPATH > \120\DTS\Binn\MsDtsSrvr.exe  
+-   **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**  : fornece suporte de gerenciamento para o armazenamento e a execução de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O caminho do executável \<é MSSQLPATH > \120\DTS\Binn\MsDtsSrvr.exe  
   
 -   **Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : o serviço de resolução de nomes que especifica informações de conexão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para computadores cliente. O caminho do executável é c:\Arquivos de Programas (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe  
   
@@ -174,26 +174,26 @@ ms.locfileid: "62787803"
   
 |Componente|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]|Windows 7 e [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 e posterior|  
 |---------------|------------------------------------|----------------------------------------------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta virtual](#VA_Desc) <sup>*</sup>|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|[SERVIÇO DE REDE](#Network_Service)|[Conta virtual](#VA_Desc) <sup>*</sup>|  
-|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta virtual](#VA_Desc) <sup>*</sup>|  
-|[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta virtual](#VA_Desc) <sup>*</sup>|  
-|[!INCLUDE[ssRS](../../includes/ssrs.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta virtual](#VA_Desc) <sup>*</sup>|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Controlador Distributed Replay|[SERVIÇO DE REDE](#Network_Service)|[Conta virtual](#VA_Desc) <sup>*</sup>|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cliente Distributed Replay|[SERVIÇO DE REDE](#Network_Service)|[Conta virtual](#VA_Desc) <sup>*</sup>|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta virtual](#VA_Desc)<sup>*</sup>|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|[SERVIÇO DE REDE](#Network_Service)|[Conta virtual](#VA_Desc)<sup>*</sup>|  
+|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta virtual](#VA_Desc)<sup>*</sup>|  
+|[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta virtual](#VA_Desc)<sup>*</sup>|  
+|[!INCLUDE[ssRS](../../includes/ssrs.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta virtual](#VA_Desc)<sup>*</sup>|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Controlador Distributed Replay|[SERVIÇO DE REDE](#Network_Service)|[Conta virtual](#VA_Desc)<sup>*</sup>|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cliente Distributed Replay|[SERVIÇO DE REDE](#Network_Service)|[Conta virtual](#VA_Desc)<sup>*</sup>|  
 |Iniciador FD (Pesquisa de texto completo)|[SERVIÇO LOCAL](#Local_Service)|[Conta Virtual](#VA_Desc)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Navegador|[SERVIÇO LOCAL](#Local_Service)|[SERVIÇO LOCAL](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gravador VSS|[SISTEMA LOCAL](#Local_System)|[SISTEMA LOCAL](#Local_System)|  
   
- <sup>*</sup> Quando recursos externos para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computador forem necessários, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda usar um serviço conta MSA (gerenciado), configurado com os privilégios mínimos necessários.  
+ <sup>*</sup>Quando são necessários recursos externos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao computador, [!INCLUDE[msCoName](../../includes/msconame-md.md)] o recomenda usar uma MSA (conta de serviço gerenciado), configurada com os privilégios mínimos necessários.  
   
  **Instância de cluster de failover do SQL Server**  
   
 |Componente|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2|  
 |---------------|------------------------------------|---------------------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)]|Nenhum. Forneça uma conta de [usuário de domínio](#Domain_User) .|Forneça uma conta de [usuário de domínio](#Domain_User) .|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|Nenhum. Forneça uma conta de [usuário de domínio](#Domain_User) .|Forneça uma conta de [usuário de domínio](#Domain_User) .|  
-|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|Nenhum. Forneça uma conta de [usuário de domínio](#Domain_User) .|Forneça uma conta de [usuário de domínio](#Domain_User) .|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)]|nenhuma. Forneça uma conta de [usuário de domínio](#Domain_User) .|Forneça uma conta de [usuário de domínio](#Domain_User) .|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|nenhuma. Forneça uma conta de [usuário de domínio](#Domain_User) .|Forneça uma conta de [usuário de domínio](#Domain_User) .|  
+|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|nenhuma. Forneça uma conta de [usuário de domínio](#Domain_User) .|Forneça uma conta de [usuário de domínio](#Domain_User) .|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)|  
 |[!INCLUDE[ssRS](../../includes/ssrs.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)|  
 |Iniciador FD (Pesquisa de texto completo)|[SERVIÇO LOCAL](#Local_Service)|[Conta Virtual](#VA_Desc)|  
@@ -207,7 +207,7 @@ ms.locfileid: "62787803"
 > -   Para instâncias do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implantadas em um farm do SharePoint, use sempre a Administração Central do SharePoint para alterar as contas de servidor dos aplicativos [!INCLUDE[ssGeminiMTS](../../includes/ssgeminimts-md.md)] e [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. As configurações e permissões associadas serão atualizadas para usar as novas informações da conta quando você usar a Administração Central.  
 > -   Para alterar as opções do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , use a Ferramenta de Configuração do Reporting Services.  
   
-###  <a name="New_Accounts"></a> Novos tipos de conta disponíveis com o Windows 7 e Windows Server 2008 R2  
+###  <a name="New_Accounts"></a>Novos tipos de conta disponíveis com o Windows 7 e o Windows Server 2008 R2  
  O Windows 7 e o Windows Server 2008 R2 têm dois novos tipos de contas virtuais e contas de serviço chamadas contas de serviço gerenciado (MSA). As contas de serviço gerenciado e as contas virtuais são criadas para fornecer aplicativos cruciais, como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o isolamento das próprias contas, eliminando a necessidade de um administrador gerenciar manualmente o SPN (Nome da Entidade de Serviço) e as credenciais dessas contas. Isso facilita bastante o gerenciamento de usuários de contas de serviço, senhas e SPNs a longo prazo.  
   
 -   <a name="MSA"></a> **Managed Service Accounts**  
@@ -228,7 +228,7 @@ ms.locfileid: "62787803"
     > [!NOTE]  
     >  A conta de serviço gerenciado de grupo deve ser criada no Active Directory pelo administrador de domínio antes que a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possa usá-la para serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
   
--   <a name="VA_Desc"></a> **Contas virtuais**  
+-   <a name="VA_Desc"></a>**Contas virtuais**  
   
      As contas virtuais (começando com o Windows Server 2008 R2 e no Windows 7) são *contas locais gerenciadas* que fornecem os recursos a seguir para simplificar a administração do serviço. A conta virtual é autogerenciada e pode acessar a rede em um ambiente de domínio. Se o valor padrão for usado para as contas de serviço durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], será usada uma conta virtual que usa o nome da instância como o nome do serviço, no formato **NT SERVICE\\** _\<SERVICENAME>_ . Os serviços executados como contas virtuais acessam recursos de rede usando as credenciais da conta do computador no formato _<domain_name>_ **\\** _<computer_name>_ **$** .  Ao especificar uma conta virtual para iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], deixe a senha em branco. Se a conta virtual não registra o SPN (Nome da Entidade de Serviço), registre-o manualmente. Para obter mais informações sobre como registrar um SPN manualmente, confira [Registro manual de SPN](register-a-service-principal-name-for-kerberos-connections.md#Manual).  
   
@@ -272,9 +272,9 @@ ms.locfileid: "62787803"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Controlador Distributed Replay|DRU_CTLR, CTLRSVCACCOUNT, CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cliente Distributed Replay|DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
   
- <sup>1</sup>para obter mais informações e sintaxe de exemplo para instalações autônomas, consulte [instalar o SQL Server 2014 do Prompt de comando](../install-windows/install-sql-server-from-the-command-prompt.md).  
+ <sup>1</sup> Para obter mais informações e sintaxe de exemplo para instalações autônomas, consulte [instalar SQL Server 2014 no prompt de comando](../install-windows/install-sql-server-from-the-command-prompt.md).  
   
- <sup>2</sup>as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço do Agent é desabilitado em instâncias do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] com Advanced Services.  
+ <sup>2</sup> O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço Agent é desabilitado em instâncias [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e do com Advanced Services.  
   
 ###  <a name="Firewall"></a> Porta do firewall  
  Na maioria dos casos, quando inicialmente instalado, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode ser conectado por ferramentas como o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , instalado no mesmo computador que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A instalação do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não abre portas no firewall do Windows. Talvez não sejam possíveis conexões de outros computadores até que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] seja configurado para ouvir em uma porta TCP e a porta apropriada seja aberta para conexões no firewall do Windows. Para obter mais informações sobre como fazer isso, veja [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
@@ -308,7 +308,7 @@ ms.locfileid: "62787803"
   
  Para a maioria dos componentes, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configura a ACL para a conta por serviço diretamente. Dessa forma, a alteração da conta de serviço pode ser efetuada sem a necessidade de repetir o processo da ACL de recurso.  
   
- Ao instalar o [!INCLUDE[ssAS](../../includes/ssas-md.md)], será criado um SID por serviço para o serviço [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Um grupo local do Windows é criado, nomeado no formato **SQLServerMSASUser$** _computer_name_ **$** _instance_name_. O SID **NT SERVICE\MSSQLServerOLAPService** por serviço recebe permissão de associação no grupo local do Windows, e o grupo local do Windows recebe as permissões apropriadas na ACL. Se a conta usada para iniciar o serviço [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for alterada, o Gerenciador de Configurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deverá alterar algumas permissões do Windows (como o direito de fazer logon como um serviço), mas as permissões atribuídas ao grupo local do Windows ainda estarão disponíveis sem qualquer atualização, pois o SID por serviço não foi alterado. Esse método permite que o serviço [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] seja renomeado durante atualizações.  
+ Ao instalar o [!INCLUDE[ssAS](../../includes/ssas-md.md)], será criado um SID por serviço para o serviço [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Um grupo local do Windows é criado, nomeado no formato **SQLServerMSASUser$** _computer_name_ **$** _instance_name_ . O SID **NT SERVICE\MSSQLServerOLAPService** por serviço recebe permissão de associação no grupo local do Windows, e o grupo local do Windows recebe as permissões apropriadas na ACL. Se a conta usada para iniciar o serviço [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for alterada, o Gerenciador de Configurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deverá alterar algumas permissões do Windows (como o direito de fazer logon como um serviço), mas as permissões atribuídas ao grupo local do Windows ainda estarão disponíveis sem qualquer atualização, pois o SID por serviço não foi alterado. Esse método permite que o serviço [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] seja renomeado durante atualizações.  
   
  Durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria grupos locais do Windows para o serviço [!INCLUDE[ssAS](../../includes/ssas-md.md)] e o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para esses serviços, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configura a ACL para os grupos locais do Windows.  
   
@@ -322,17 +322,17 @@ ms.locfileid: "62787803"
 |Serviço do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Permissões concedidas pela Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |---------------------------------------|------------------------------------------------------------|  
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT SERVICE\MSSQLSERVER**. Instância nomeada: **NT SERVICE\MSSQL$** InstanceName.)|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> **Substituir um token no nível de processo** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Ignorar a verificação completa** (SeChangeNotifyPrivilege)<br /><br /> **Ajustar quotas de memória para um processo** (SeIncreaseQuotaPrivilege)<br /><br /> Permissão para iniciar o Gravador do SQL<br /><br /> Permissão para ler o serviço Log de Eventos<br /><br /> Permissão para ler o serviço Chamada de Procedimento Remoto|  
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agente:** <sup>1</sup><br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT Service\SQLSERVERAGENT**. Instância nomeada: **NT Service\SQLAGENT$** _InstanceName_.)|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> **Substituir um token no nível de processo** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Ignorar a verificação completa** (SeChangeNotifyPrivilege)<br /><br /> **Ajustar quotas de memória para um processo** (SeIncreaseQuotaPrivilege)|  
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Todos os direitos são concedidos a um grupo local do Windows. Instância padrão: **SQLServerMSASUser$** _ComputerName_ **$MSSQLSERVER**. Instância nomeada: **SQLServerMSASUser$** _ComputerName_ **$** _InstanceName_. instância [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]: **SQLServerMSASUser$** _ComputerName_ **$** _PowerPivot_.)|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> Somente tabular:<br /><br /> **Aumentar conjunto de trabalho de processo** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Ajustar cotas de memória para um processo** (SeIncreaseQuotaSizePrivilege)<br /><br /> **Bloquear páginas na memória** (SeLockMemoryPrivilege): isso é necessário somente quando a paginação está totalmente desativada.<br /><br /> Somente para instalações de cluster de failover:<br /><br /> **Aumentar a prioridade de planejamento** (SeIncreaseBasePriorityPrivilege)|  
-|**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT SERVICE\ReportServer**. Instância nomeada: **SERVIÇO NT\\$** _InstanceName_.)|**Fazer logon como um serviço** (SeServiceLogonRight)|  
+|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agente** <sup>uma</sup><br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT Service\SQLSERVERAGENT**. Instância nomeada: **NT Service\SQLAGENT$** _InstanceName_ .)|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> **Substituir um token no nível de processo** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Ignorar a verificação completa** (SeChangeNotifyPrivilege)<br /><br /> **Ajustar quotas de memória para um processo** (SeIncreaseQuotaPrivilege)|  
+|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Todos os direitos são concedidos a um grupo local do Windows. Instância padrão: **SQLServerMSASUser$** _ComputerName_ **$MSSQLSERVER**. Instância nomeada: **SQLServerMSASUser$** _ComputerName_ **$** _InstanceName_ . instância [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]: **SQLServerMSASUser$** _ComputerName_ **$** _PowerPivot_ .)|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> Somente tabular:<br /><br /> **Aumentar conjunto de trabalho de processo** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Ajustar cotas de memória para um processo** (SeIncreaseQuotaSizePrivilege)<br /><br /> **Bloquear páginas na memória** (SeLockMemoryPrivilege): isso é necessário somente quando a paginação está totalmente desativada.<br /><br /> Somente para instalações de cluster de failover:<br /><br /> **Aumentar a prioridade de planejamento** (SeIncreaseBasePriorityPrivilege)|  
+|**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT SERVICE\ReportServer**. Instância nomeada: _InstanceName_ do **\\serviço$NT**.)|**Fazer logon como um serviço** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão e instância nomeada: **NT SERVICE\MsDtsServer120**. O[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não tem um processo separado para uma instância nomeada).|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> Permissão para gravar no log de eventos do aplicativo.<br /><br /> **Ignorar a verificação completa** (SeChangeNotifyPrivilege)<br /><br /> **Representar um cliente após autenticação** (SeImpersonatePrivilege)|  
-|**Pesquisa de texto completo:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT Service\MSSQLFDLauncher**. Instância nomeada: **NT Service\ MSSQLFDLauncher$** _InstanceName_.)|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> **Ajustar quotas de memória para um processo** (SeIncreaseQuotaPrivilege)<br /><br /> **Ignorar a verificação completa** (SeChangeNotifyPrivilege)|  
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Navegador:**<br /><br /> (Todos os direitos são concedidos a um grupo local do Windows. Instância padrão ou nomeada: **SQLServer2005SQLBrowserUser** _$ComputerName_. O Navegador do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não tem um processo separado para uma instância nomeada.)|**Fazer logon como um serviço** (SeServiceLogonRight)|  
+|**Pesquisa de texto completo:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT Service\MSSQLFDLauncher**. Instância nomeada: **NT Service\ MSSQLFDLauncher$** _InstanceName_ .)|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> **Ajustar quotas de memória para um processo** (SeIncreaseQuotaPrivilege)<br /><br /> **Ignorar a verificação completa** (SeChangeNotifyPrivilege)|  
+|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Navegador:**<br /><br /> (Todos os direitos são concedidos a um grupo local do Windows. Instância padrão ou nomeada: **SQLServer2005SQLBrowserUser** _$ComputerName_ . O Navegador do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não tem um processo separado para uma instância nomeada.)|**Fazer logon como um serviço** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gravador VSS:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão ou nomeada: **NT Service\SQLWriter**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Gravador VSS não tem um processo separado para uma instância nomeada).|O SQLWriter é executado sob a conta LOCAL SYSTEM que tem todas as permissões exigidas. A Instalação do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não verifica nem concede permissões para este serviço.|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Controlador Distributed Replay:**|**Fazer logon como um serviço** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cliente Distributed Replay:**|**Fazer logon como um serviço** (SeServiceLogonRight)|  
   
- <sup>1</sup>as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço do Agent é desabilitado em instâncias do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
+ <sup>1</sup> O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço Agent está desabilitado em instâncias [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]do.  
   
 ###  <a name="Reviewing_ACLs"></a> Permissões do sistema de arquivos concedidas a SIDs por serviço do SQL Server ou a grupos locais do Windows  
  As contas de serviço do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devem ter acesso aos recursos. As listas de controle de acesso são definidas para o SID por serviço ou para o grupo local do Windows.  
@@ -352,7 +352,7 @@ ms.locfileid: "62787803"
 ||Instid\MSSQL\Log|Controle total|  
 ||Instid\MSSQL\Repldata|Controle total|  
 ||120\shared|Leitura, Execução|  
-||Instid\MSSQL\Template Data (somente[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] )|leitura|  
+||Instid\MSSQL\Template Data (somente[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] )|Ler|  
 |SQLServerAgent<sup>1</sup>|Instid\MSSQL\binn|Controle total|  
 ||Instid\MSSQL\binn|Controle total|  
 ||Instid\MSSQL\Log|Leitura, Gravação, Exclusão, Execução|  
@@ -376,31 +376,31 @@ ms.locfileid: "62787803"
 |SQLServerReportServerUser|Instid\Reporting Services\Log Files|Leitura, Gravação, Exclusão|  
 ||Instid\Reporting Services\ReportServer|Leitura, Execução|  
 ||Instid\Reportingservices\Reportserver\global.asax|Controle total|  
-||Instid\Reportingservices\Reportserver\Reportserver.config|leitura|  
+||Instid\Reportingservices\Reportserver\Reportserver.config|Ler|  
 ||Instid\Reporting Services\reportManager|Leitura, Execução|  
 ||Instid\Reporting Services\RSTempfiles|Leitura, Gravação, Execução, Exclusão|  
 ||120\shared|Leitura, Execução|  
 ||120\shared\Errordumps|Leitura, Gravação|  
-|MSDTSServer100|120\dts\binn\MsDtsSrvr.ini.xml|leitura|  
+|MSDTSServer100|120\dts\binn\MsDtsSrvr.ini.xml|Ler|  
 ||120\dts\binn|Leitura, Execução|  
 ||120\shared|Leitura, Execução|  
 ||120\shared\Errordumps|Leitura, Gravação|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Navegador|120\shared\ASConfig|leitura|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Navegador|120\shared\ASConfig|Ler|  
 ||120\shared|Leitura, Execução|  
 ||120\shared\Errordumps|Leitura, Gravação|  
 |SQLWriter|N/A (Executado como sistema local)||  
 |User|Instid\MSSQL\binn|Leitura, Execução|  
 ||Instid\Reporting Services\ReportServer|Leitura, Execução, Listar Conteúdo de Pastas|  
-||Instid\Reportingservices\Reportserver\global.asax|leitura|  
+||Instid\Reportingservices\Reportserver\global.asax|Ler|  
 ||Instid\Reporting Services\reportManager|Leitura, Execução|  
-||Instid\Reporting Services\ReportManager\pages|leitura|  
-||Instid\Reporting Services\ReportManager\Styles|leitura|  
+||Instid\Reporting Services\ReportManager\pages|Ler|  
+||Instid\Reporting Services\ReportManager\Styles|Ler|  
 ||120\dts|Leitura, Execução|  
 ||120\tools|Leitura, Execução|  
 ||100\tools|Leitura, Execução|  
 ||90\tools|Leitura, Execução|  
 ||80\tools|Leitura, Execução|  
-||120\sdk|leitura|  
+||120\sdk|Ler|  
 ||Microsoft SQL Server\120\Setup Bootstrap|Leitura, Execução|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Controlador Distributed Replay|\<ToolsDir>\DReplayController\Log\ (diretório vazio)|Leitura, Execução, Listar Conteúdo de Pastas|  
 ||\<ToolsDir>\DReplayController\DReplayController.exe|Leitura, Execução, Listar Conteúdo de Pastas|  
@@ -417,7 +417,7 @@ ms.locfileid: "62787803"
 ||\<ToolsDir>\DReplayClient\IRTemplate.tdf|Leitura, Execução, Listar Conteúdo de Pastas|  
 ||\<ToolsDir>\DReplayClient\IRDefinition.xml|Leitura, Execução, Listar Conteúdo de Pastas|  
   
- <sup>1</sup>as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço do Agent é desabilitado em instâncias do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] com Advanced Services.  
+ <sup>1</sup> O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço Agent é desabilitado em instâncias [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e do com Advanced Services.  
   
  Quando os arquivos de banco de dados são armazenados em um local definido pelo usuário, você deve conceder acesso ao SID por serviço para esse local. Para obter mais informações sobre como conceder permissões para um SID por serviço, consulte [Configurar permissões do sistema de arquivos para acesso ao mecanismo de banco de dados](configure-file-system-permissions-for-database-engine-access.md).  
   
@@ -433,9 +433,9 @@ ms.locfileid: "62787803"
 ||Administradores, Sistema|\tools\binn\schemas\sqlserver\2004\07\showplan|Controle total|  
 ||Usuários|\tools\binn\schemas\sqlserver\2004\07\showplan|Leitura, Execução|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<Report Server Web Service Account>|*\<install>* \Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||Identidade do pool de aplicativos do Gerenciador de Relatórios, conta do [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , Todos|*\<install>* \Reporting Services\ReportManager, *\<install>* \Reporting Services\ReportManager\Pages\\\*.\*, *\<install>* \Reporting Services\ReportManager\Styles\\\*.\*, *\<install>* \Reporting Services\ReportManager\webctrl_client\1_0\\*.\*|leitura|  
-||Identidade do pool de aplicativos do Gerenciador de Relatórios|*\<install>* \Reporting Services\ReportManager\Pages\\*.\*|leitura|  
-||\<Report Server Web Service Account>|*\<install>* \Reporting Services\ReportServer|leitura|  
+||Identidade do pool de aplicativos do Gerenciador de Relatórios, conta do [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , Todos|*\<install>* \Reporting Services\ReportManager, *\<install>* \Reporting Services\ReportManager\Pages\\\*.\*, *\<install>* \Reporting Services\ReportManager\Styles\\\*.\*, *\<install>* \Reporting Services\ReportManager\webctrl_client\1_0\\*.\*|Ler|  
+||Identidade do pool de aplicativos do Gerenciador de Relatórios|*\<install>* \Reporting Services\ReportManager\Pages\\*.\*|Ler|  
+||\<Report Server Web Service Account>|*\<install>* \Reporting Services\ReportServer|Ler|  
 ||\<Report Server Web Service Account>|*\<install>* \Reporting Services\ReportServer\global.asax|Completo|  
 ||Todos|*\<install>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
 ||SERVIÇO DE REDE|*\<install>* \Reporting Services\ReportServer\ReportService.asmx|Completo|  
@@ -445,7 +445,7 @@ ms.locfileid: "62787803"
 ||Usuários dos Serviços de Terminal|Chaves do Servidor de Relatório (ramificação Instid)|Consultar Valor<br /><br /> Definir Valor<br /><br /> Criar Subchave<br /><br /> Enumerar Subchave<br /><br /> Notificar<br /><br /> DELETE<br /><br /> Controle de Leitura|  
 ||Usuários Avançados|Chaves do Servidor de Relatório (ramificação Instid)|Consultar Valor<br /><br /> Definir Valor<br /><br /> Criar Subchave<br /><br /> Enumerar Subchaves<br /><br /> Notificar<br /><br /> DELETE<br /><br /> Controle de Leitura|  
   
- <sup>1</sup>este é o namespace do provedor WMI.  
+ <sup>1</sup> Este é o namespace do provedor WMI.  
   
 ###  <a name="Unusual_Locations"></a> Permissões do sistema de arquivos relacionadas a locais de disco incomuns  
  A unidade padrão de locais para instalação é **systemdrive**, normalmente a unidade C. Quando tempdb ou bancos de dados de usuários são instalados  
@@ -481,7 +481,7 @@ ms.locfileid: "62787803"
   
 -   **HKLM\Software\Microsoft\Microsoft SQL Server\MSASSQL12.MyInstance**  
   
--   **HKLM\Software\Microsoft\Microsoft SQL Server\MSSQL.120**  
+-   **Server\MSSQL.120 HKLM\Software\Microsoft\Microsoft SQL**  
   
  O registro também mantém um mapeamento do ID da instância para o nome da instância. O mapeamento do ID da instância para o nome da instância é mantido como segue:  
   
@@ -560,9 +560,9 @@ ms.locfileid: "62787803"
  A conta especificada durante a instalação é provisionada como membro da função de banco de dados **RSExecRole** . Para obter mais informações, veja [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
 ###  <a name="SSAS"></a> Provisionamento SSAS  
- Os requisitos da conta do serviço[!INCLUDE[ssAS](../../includes/ssas-md.md)] variam, dependendo de como o servidor está implantado. Se você estiver instalando o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer a configuração do serviço [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para a execução em uma conta de domínio. Contas de domínio são necessárias para dar suporte ao recurso de conta gerenciada criada no SharePoint. Por essa razão, a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornece uma conta de serviço padrão, como uma conta virtual, para uma instalação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Para obter mais informações sobre o provisionamento do PowerPivot for SharePoint, consulte [Configurar contas de serviço PowerPivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md).  
+ Os requisitos da conta do serviço[!INCLUDE[ssAS](../../includes/ssas-md.md)] variam, dependendo de como o servidor está implantado. Se você estiver instalando o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer a configuração do serviço [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para a execução em uma conta de domínio. Contas de domínio são necessárias para dar suporte ao recurso de conta gerenciada criada no SharePoint. Por essa razão, a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornece uma conta de serviço padrão, como uma conta virtual, para uma instalação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Para obter mais informações sobre o provisionamento do PowerPivot for SharePoint, consulte [Configurar contas de serviço PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts).  
   
- Para todas as outras instalações autônomas do [!INCLUDE[ssAS](../../includes/ssas-md.md)], você pode provisionar o serviço para ser executado em uma conta de domínio, conta de sistema interna, conta gerenciada ou conta virtual. Para obter mais informações sobre o provisionamento de conta, consulte [Configurar contas de serviço &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md).  
+ Para todas as outras instalações autônomas do [!INCLUDE[ssAS](../../includes/ssas-md.md)], você pode provisionar o serviço para ser executado em uma conta de domínio, conta de sistema interna, conta gerenciada ou conta virtual. Para obter mais informações sobre o provisionamento de conta, consulte [Configurar contas de serviço &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services).  
   
  Para instalações clusterizadas, especifique uma conta de domínio ou uma conta de sistema interna. Não há suporte para contas gerenciadas nem contas virtuais em clusters de failover do [!INCLUDE[ssAS](../../includes/ssas-md.md)] .  
   
@@ -655,7 +655,7 @@ ms.locfileid: "62787803"
   
 -   Gravador do SQL  
   
- <sup>1</sup>analysis Services no modo integrado do SharePoint é executado como 'PowerPivot' como uma instância única e nomeada. O nome da instância é fixo. Não é possível especificar um nome diferente. É possível instalar apenas uma instância do Analysis Services executada como 'PowerPivot' em cada servidor físico.  
+ <sup>1</sup> Analysis Services no modo integrado do SharePoint é executado como ' PowerPivot ' como uma instância única e nomeada. O nome da instância é fixo. Não é possível especificar um nome diferente. É possível instalar apenas uma instância do Analysis Services executada como 'PowerPivot' em cada servidor físico.  
   
 ###  <a name="Localized_service_names"></a> Nomes de serviços localizados  
  A tabela a seguir mostra nomes de serviços que são exibidos por versões localizadas do Windows.  

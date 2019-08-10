@@ -1,5 +1,5 @@
 ---
-title: Tutoriais DMX (Analysis Services - mineração de dados) | Microsoft Docs
+title: Tutoriais do DMX (Analysis Services-Mineração de dados) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 28f7788b0dc11c8c06e98b385d6814cb7fe81142
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 553ae5c425b08dc0b53f101d028fdea1557bf63c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061730"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892782"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>Tutoriais DMX (Analysis Services - Mineração de Dados)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,16 +30,16 @@ ms.locfileid: "68061730"
  Neste tutorial, você aprenderá a criar um modelo de mineração que prevê quais produtos tendem a ser adquiridos ao mesmo tempo. Este tutorial também demonstra o uso de tabelas aninhadas na mineração de dados.  
   
 ## <a name="reference"></a>Referência  
- [Extensões de mineração de dados &#40;DMX&#41; elementos de sintaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
+ [Elementos de sintaxe &#40;DMX&#41; de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
  [Instruções de definição de dados de extensões DMX &#40;extensões DMX&#41;](../dmx/dmx-statements-data-definition.md)  
   
- [Extensões de mineração de dados &#40;DMX&#41; instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)  
+ [Instruções de manipulação &#40;de&#41; dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-manipulation.md)  
   
  [Compreendendo a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Acesso a dados modelo multidimensional &#40;Analysis Services - dados multidimensionais&#41;](../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
+ [Acesso &#40;a dados de modelo multidimensional Analysis Services-dados multidimensionais&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data)  
   
 ## <a name="see-also"></a>Consulte também  
  [Estrutura e uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

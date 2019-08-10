@@ -1,5 +1,5 @@
 ---
-title: Crossjoin (MDX) | Microsoft Docs
+title: Interjunção (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 275a7546bae70ba329cff7af2df107e43c3d1b4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 63de71ae82e60b8ec7d8a39e18f89e6bd2393f2d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047163"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892943"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
 
@@ -39,14 +39,14 @@ Set_Expression1 * Set_Expression2 [* ...n]
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
 ## <a name="remarks"></a>Comentários  
- O **Crossjoin** função retorna o produto cruzado de dois ou mais conjuntos especificados. A ordem das tuplas no conjunto resultante depende da ordem dos conjuntos a serem unidos e da ordem de seus membros. Por exemplo, quando o primeiro conjunto consiste em {x1, x2,..., x*n*}, e o segundo conjunto consiste em {y1, y2,..., y*n*}, o produto cruzado desses conjuntos será:  
+ A função de interjunção retorna o produto cruzado de dois ou mais conjuntos especificados. A ordem das tuplas no conjunto resultante depende da ordem dos conjuntos a serem unidos e da ordem de seus membros. Por exemplo, quando o primeiro conjunto consiste em {X1, X2,..., x*n*} e o segundo conjunto consistir em {Y1, Y2,..., y*n*}, o produto cruzado desses conjuntos será:  
   
- {(x1, y1), (x1, y2),..., (x1, y*n*), (x2, y1), (x2, y2),...,  
+ {(x1, y1), (x1, Y2),..., (x1, y*n*), (x2, y1), (x2, y2),...,  
   
- (x2, y*n*),..., (x*n*, y1), (x*n*, y2),..., (xn, y*n*)}  
+ (x2, y*n*),..., (x*n*, y1), (x*n*, Y2),..., (Xn, y*n*)}  
   
 > [!IMPORTANT]  
->  Se os conjuntos na junção cruzada forem compostos por tuplas de diferentes hierarquias de atributo na mesma dimensão, essa função retornará somente as tuplas que realmente existem. Para obter mais informações, consulte [principais conceitos em MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
+>  Se os conjuntos na junção cruzada forem compostos por tuplas de diferentes hierarquias de atributo na mesma dimensão, essa função retornará somente as tuplas que realmente existem. Para obter mais informações, consulte [Key Concepts &#40;in&#41;MDX Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
 ## <a name="examples"></a>Exemplos  
  A consulta a seguir mostra exemplos simples de uso da função Crossjoin no eixo Colunas e Linhas de uma consulta:  

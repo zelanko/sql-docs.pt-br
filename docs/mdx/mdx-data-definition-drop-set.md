@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 201072b1b0e371e1f22ee9e32b009ebcea47b2b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4e31a687597e454b9afe38d6c6dd1c15af486d0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038173"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893723"
 ---
 # <a name="mdx-data-definition---drop-set"></a>Definição de dados MDX – DROP SET
 
@@ -36,13 +36,13 @@ DROP [SESSION] SET
  *Cube_Name*  
  Uma expressão de cadeia de caracteres válida que fornece o nome do cubo.  
   
- *1&gt;PsFile&lt;1*  
+ *Set_Name*  
  Uma expressão de cadeia de caracteres válida que fornece esse nome do conjunto nomeado a ser descartado.  
   
 ## <a name="remarks"></a>Comentários  
- Para obter mais informações sobre conjuntos nomeados, consulte [Criando conjuntos nomeados em MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md).  
+ Para obter mais informações sobre conjuntos nomeados, consulte [Criando conjuntos nomeados em MDX &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets).  
   
 ## <a name="see-also"></a>Consulte também  
- [Instruções de definição de dados MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [MDX de instruções &#40;de definição de dados MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

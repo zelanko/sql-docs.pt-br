@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0b3e6cd4a38d45f2b63fa5333526832ba31e1ce9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c656bdaa0de108ade568a22bbcc734f38d43bfd
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097196"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893534"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>Usando expressões de cubo e subcubo
 
@@ -23,7 +23,7 @@ ms.locfileid: "68097196"
 ## <a name="cube-expressions"></a>Expressões de cubo  
  As expressões de cubo contêm um identificador de cubo ou a palavra-chave CURRENTCUBE e, portanto, só podem ser expressões simples. Muitas instruções MDX usam a palavra-chave CURRENTCUBE para identificar o contexto de cubo atual em vez de requerer um identificador de cubo.  
   
- Um identificador de cubo aparece como *Cube_Name* nas descrições de notação BNF de instruções MDX.  
+ Um identificador de cubo aparece como *CUBE_NAME* nas descrições de notação de BNF de instruções MDX.  
   
  As expressões de cubo podem aparecer em vários locais. Em uma instrução SELECT MDX, elas especificam o cubo do qual dados serão recuperados. Na consulta de exemplo a seguir, a expressão [Adventure Works] refere-se ao cubo com esse nome:  
   
@@ -69,10 +69,10 @@ ms.locfileid: "68097196"
  Um identificador de subcubo aparece como *Subcube_Name*. em descrições de notação BNF de instruções MDX.  
   
 ## <a name="see-also"></a>Consulte também  
- [A consulta básica de MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
- [Criando subcubos em MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
- [Instrução CREATE SUBCUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
- [Expressões &#40;MDX&#41;](../mdx/expressions-mdx.md)   
+ [A consulta básica de MDX &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
+ [Criando subcubos em &#40;MDX MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
+ [Instrução &#40;Create subcubo MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
+ [MDX &#40;de expressões&#41;](../mdx/expressions-mdx.md)   
  [Instrução SCOPE &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
   
   

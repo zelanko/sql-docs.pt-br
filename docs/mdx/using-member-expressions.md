@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 41ff63d47a62b9b83fb583c55ff2405638de22cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d40d6a3b6cacb65cf1463b0eeb8b29e59e079e4
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097110"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893510"
 ---
 # <a name="using-member-expressions"></a>Usando expressões de membros
 
@@ -56,12 +56,12 @@ Dimension_Name
   
 ```  
   
- Existem muitas funções MDX que retornam membros. Para obter uma lista completa, consulte [referência da função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ Existem muitas funções MDX que retornam membros. Para obter uma lista completa, consulte MDX de [ &#40;referência&#41; de função MDX](../mdx/mdx-function-reference-mdx.md)  
   
 > [!NOTE]  
->  Para obter mais informações sobre nomes de membros e as chaves de membro, consulte [trabalhando com membros, tuplas e conjuntos de &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
+>  Para obter mais informações sobre nomes de membros e chaves de membro, consulte [trabalhando com membros, tuplas &#40;e&#41;conjuntos MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressões &#40;MDX&#41;](../mdx/expressions-mdx.md)  
+ [MDX &#40;de expressões&#41;](../mdx/expressions-mdx.md)  
   
   

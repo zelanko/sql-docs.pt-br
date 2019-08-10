@@ -1,5 +1,5 @@
 ---
-title: Desenvolvedor&#39;guia (mecanismo de banco de dados) | Microsoft Docs
+title: Guia&#39;do Developer s (mecanismo de banco de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba11f16b14520ac5340724597a6e5b9aa3dedbcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: df0b873936d6738e79e656fa0ac5e69e799efe3e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872612"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890809"
 ---
-# <a name="developer39s-guide-database-engine"></a>Desenvolvedor&#39;guia (mecanismo de banco de dados)
+# <a name="developer39s-guide-database-engine"></a>Guia&#39;do Developer s (mecanismo de banco de dados)
   O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece um excelente conjunto ferramentas para desenvolver, administrar e controlar aplicativos de banco de dados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
@@ -52,10 +52,10 @@ ms.locfileid: "62872612"
  Descreve como você pode usar a interface programática da caixa de mensagens de exceção em seus aplicativos de forma a fornecer mais controle sobre a experiência de mensagens, dar aos usuários a opção de salvar o conteúdo de mensagens de erro para referência posterior e obter ajuda com as mensagens.  
   
 ## <a name="see-also"></a>Consulte também  
- [Programação de mineração de dados](../analysis-services/dev-guide/data-mining-programming.md)   
- [Guia do desenvolvedor do &#40;Analysis Services&#41;](../analysis-services/analysis-services-developer-documentation.md)   
- [Guia do desenvolvedor do &#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
- [Guia do desenvolvedor do &#40;replicação&#41;](replication/concepts/replication-developer-documentation.md)   
- [Guia do desenvolvedor do &#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
+ [Programação de mineração de dados](https://docs.microsoft.com/analysis-services/dev-guide/data-mining-programming)   
+ [Guia &#40;do desenvolvedor Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
+ [Guia &#40;do desenvolvedor Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
+ [Guia &#40;do desenvolvedor-replicação&#41;](replication/concepts/replication-developer-documentation.md)   
+ [Guia &#40;do desenvolvedor Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
   
   

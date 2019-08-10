@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: def2004237b7b9fd6d2f73e1e1217aa32ea5f25a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d8b1665c6e6978af7dc673f7dd51a363da5c48d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031382"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892875"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,25 +28,25 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *\<expressão de tabela >*  
+ *\<> De expressão de tabela*  
  O nome de uma coluna de tabela aninhada ou expressão com valor de tabela.  
   
  *\<expressão de classificação >*  
  Uma coluna na tabela aninhada ou expressão avaliada para uma coluna.  
   
- *\<% >*  
+ *\<percentual de >*  
  Um duplo que indica a porcentagem de destino total.  
   
 ## <a name="result-type"></a>Tipo de Resultado  
  Uma tabela.  
   
 ## <a name="remarks"></a>Comentários  
- O **BottomPercent** função retorna as linhas mais baixas em ordem crescente de classificação. A classificação baseia-se no valor avaliado do \<expressão de classificação > argumento para cada linha, de modo que a soma do \<expressão de classificação > valores seja pelo menos a porcentagem dada que é especificada pelo \<% > argumento. **BottomPercent** retorna o menor número de elementos possível embora ainda assim atenda o valor percentual especificado.  
+ A função **BottomPercent** retorna as linhas inferiores em ordem crescente de classificação. A classificação é baseada no valor avaliado da expressão de \<classificação > argumento para cada linha, de modo que a soma \<da expressão de classificação > valores seja pelo menos a porcentagem especificada pelo \<percentual de > argumento. **BottomPercent** retorna o menor número de elementos possíveis ao mesmo tempo em que atende ao valor percentual especificado.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria uma consulta de previsão no modelo de associação que você criou na [Tutorial básico de mineração de dados](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ O exemplo a seguir cria uma consulta de previsão em relação ao modelo de associação que você criou no [tutorial de mineração de dados básico](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
- Para entender como funciona o BottomPercent, pode ser útil primeiro executar uma consulta de previsão que retorna apenas a tabela aninhada.  
+ Para entender como o BottomPercent funciona, pode ser útil primeiro executar uma consulta de previsão que retorna apenas a tabela aninhada.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -57,7 +57,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  Neste exemplo, o valor fornecido como entrada contém uma única aspa e, portanto, deve ser precedido por outra aspa. Se você não tiver certeza da sintaxe para inserção de um caractere de escape, use o Construtor de Consultas de Previsão para criar a consulta. Quando você seleciona o valor da lista suspensa, o caractere de escape exigido é inserido. Para obter mais informações, consulte [criar uma consulta Singleton no Designer de mineração de dados](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md).  
+>  Neste exemplo, o valor fornecido como entrada contém uma única aspa e, portanto, deve ser precedido por outra aspa. Se você não tiver certeza da sintaxe para inserção de um caractere de escape, use o Construtor de Consultas de Previsão para criar a consulta. Quando você seleciona o valor da lista suspensa, o caractere de escape exigido é inserido. Para obter mais informações, consulte [criar uma consulta singleton no designer de mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
   
  Resultados do exemplo:  
   
@@ -74,7 +74,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
   
- A função BottomPercent utiliza os resultados dessa consulta e retorna as linhas com valor menor que totalizam a porcentagem especificada.  
+ A função BottomPercent usa os resultados dessa consulta e retorna as linhas com valores menores que somam ao percentual especificado.  
   
 ```  
 SELECT   
@@ -89,11 +89,11 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- O primeiro argumento para a função BottomPercent é o nome de uma coluna de tabela. Neste exemplo, a tabela aninhada é retornada ao chamar a função Predict e usando o argumento INCLUDE_STATISTICS.  
+ O primeiro argumento para a função BottomPercent é o nome de uma coluna de tabela. Neste exemplo, a tabela aninhada é retornada chamando a função Predict e usando o argumento INCLUDE_STATISTICS.  
   
  O segundo argumento para a função BottomPercent é a coluna na tabela aninhada que você usa para ordenar os resultados. Neste exemplo, a opção INCLUDE_STATISTICS retorna as colunas $SUPPORT, $PROBABILTY e $ADJUSTED PROBABILITY. Este exemplo usa $SUPPORT porque os valores de suporte não são fracionários e, portanto, são mais fáceis de verificar.  
   
- O terceiro argumento para a função BottomPercent Especifica a porcentagem, como um duplo. Para obter as linhas que representam os 50% inferiores do suporte, digite 50.  
+ O terceiro argumento para a função BottomPercent especifica a porcentagem, como um Double. Para obter as linhas que representam os 50% inferiores do suporte, digite 50.  
   
  Resultados do exemplo:  
   
@@ -107,13 +107,13 @@ NATURAL PREDICTION JOIN
 |Mountain-200|1755|0.117951475|0.111260823|  
 |Mountain Tire Tube|1992|0.133879965|0.125304948|  
   
- **Observação** neste exemplo é fornecido apenas para ilustrar o uso de BottomPercent. Dependendo do tamanho do conjunto de dados, esta consulta pode demorar muito para ser executada.  
+ **Observação** Este exemplo é fornecido apenas para ilustrar o uso de BottomPercent. Dependendo do tamanho do conjunto de dados, esta consulta pode demorar muito para ser executada.  
   
 > [!WARNING]  
->  As funções MDX para TOPPERCENT e BOTTOMPERCENT podem gerar resultados inesperados quando os valores usados para calcular o percentual incluem números negativos. Esse comportamento não afeta as funções DMX. Para obter mais informações, consulte [BottomPercent &#40;MDX&#41;](../mdx/bottompercent-mdx.md).  
+>  As funções MDX para TOPPERCENT e BOTTOMPERCENT podem gerar resultados inesperados quando os valores usados para calcular o percentual incluem números negativos. Esse comportamento não afeta as funções DMX. Para obter mais informações, [consulte &#40;MDX&#41;do BottomPercent](../mdx/bottompercent-mdx.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Referência da função &#40;DMX&#41; das extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)  
   
   

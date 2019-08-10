@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b88ad1a7e048495f80d43234cb4e085bae515fa4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e7215f50705b593130a69cfe076f0878b0ac03d6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070998"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889073"
 ---
 # <a name="create-mining-model-dmx"></a>CRIAR UM MODELO DE MINERAÇÃO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "68070998"
   
  A estrutura de mineração recebe o nome anexando "_structure" ao nome do modelo, o que garante que o nome da estrutura seja diferente do nome do modelo.  
   
- Para criar um modelo de mineração para uma estrutura de mineração existente, use o [ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md) instrução.  
+ Para criar um modelo de mineração para uma estrutura de mineração existente, use a instrução [ &#40;DMX&#41; ALTER MINING STRUCTURE](../dmx/alter-mining-structure-dmx.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,19 +47,19 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  O nome de um algoritmo de mineração de dados, conforme definido pelo provedor atual.  
   
 > [!NOTE]  
->  Uma lista dos algoritmos suportados pelo provedor atual pode ser recuperada por meio [conjunto de linhas DMSCHEMA_MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Para exibir os algoritmos suportados na instância atual do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], consulte [propriedades de Data Mining](../analysis-services/server-properties/data-mining-properties.md).  
+>  Uma lista dos algoritmos com suporte pelo provedor atual pode ser recuperada usando o [conjunto de linhas DMSCHEMA_MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Para exibir os algoritmos com suporte na instância atual [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]do, consulte [Propriedades de mineração de dados](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *lista de parâmetros*  
  Opcional. Uma lista separada por vírgulas de parâmetros definidos pelo provedor para o algoritmo.  
   
  *Cadeia de caracteres XML*  
- (Apenas para uso avançado.) Um codificada em XML modelo (PMML). A cadeia deve estar entre aspas simples (').  
+ (Somente para uso avançado.) Um modelo codificado em XML (PMML). A cadeia deve estar entre aspas simples (').  
   
- O **sessão** cláusula permite que você crie um modelo de mineração removido automaticamente do servidor quando a conexão é fechada ou a sessão expira. **SESSÃO** modelos de mineração são úteis porque eles não exigem que o usuário seja um administrador de banco de dados e possa apenas usar espaço em disco para desde que a conexão está aberta.  
+ A cláusula **Session** permite criar um modelo de mineração que é removido automaticamente do servidor quando a conexão é fechada ou o tempo limite da sessão é atingido. Os modelos de mineração de **sessão** são úteis porque não exigem que o usuário seja um administrador de banco de dados e usam apenas espaço em disco, desde que a conexão esteja aberta.  
   
- O **WITH DRILLTHROUGH** cláusula habilita o detalhamento no modelo de mineração novo. O detalhamento pode ser habilitado somente durante a criação do modelo. Para alguns tipos de modelo, o detalhamento é necessário para procurar o modelo no visualizador personalizado. O detalhamento não é necessário para previsão ou para procurar o modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft.  
+ A cláusula **WITH DRILLTHROUGH** permite Drill-through no novo modelo de mineração. O detalhamento pode ser habilitado somente durante a criação do modelo. Para alguns tipos de modelo, o detalhamento é necessário para procurar o modelo no visualizador personalizado. O detalhamento não é necessário para previsão ou para procurar o modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft.  
   
- O **CREATE MINING MODEL** instrução cria um novo modelo de mineração que se baseia a lista de definições de coluna, o algoritmo e a lista de parâmetros de algoritmo.  
+ A instrução **criar modelo de mineração** cria um novo modelo de mineração baseado na lista de definições de coluna, no algoritmo e na lista de parâmetros de algoritmo.  
   
 ### <a name="column-definition-list"></a>Lista de definições de coluna  
  Você define a estrutura de um modelo que usa a lista de definições da coluna incluindo as seguintes informações para cada coluna:  
@@ -74,17 +74,17 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   Tipo de conteúdo (obrigatório)  
   
--   Solicitação de previsão, que indica ao algoritmo para prever esta coluna, indicada pela **PREDICT** ou **PREDICT_ONLY** cláusula  
+-   Solicitação de previsão, que indica para o algoritmo prever esta coluna, indicada pela cláusula **Predict** ou **PREDICT_ONLY**  
   
--   Relação com uma coluna de atributo (obrigatório apenas se aplicável), indicada pela **RELATED TO** cláusula  
+-   Relação com uma coluna de atributo (obrigatória somente se aplicável), indicada pela cláusula **to relacionada**  
   
- Use a seguinte sintaxe para a lista de definições de coluna, para definir uma única coluna:  
+ Use a sintaxe a seguir para a lista definição de coluna, para definir uma única coluna:  
   
 ```  
 <column name>    <data type>    [<Distribution>]    [<Modeling Flags>]    <Content Type>    [<prediction>]    [<column relationship>]   
 ```  
   
- Use a seguinte sintaxe para a lista de definições de coluna, para definir uma coluna de tabela aninhada:  
+ Use a sintaxe a seguir para a lista definição de coluna, para definir uma coluna de tabela aninhada:  
   
 ```  
 <column name>    TABLE    [<prediction>] ( <non-table column definition list> )  
@@ -94,22 +94,22 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Para obter uma lista dos tipos de dados, dos tipos de conteúdo, de distribuições de coluna e de sinalizadores de modelagem que podem ser usados para definir uma coluna, consulte os seguintes tópicos:  
   
--   [Tipos de dados &#40;Mineração de dados&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Tipos de dados &#40;Mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
   
--   [Tipos de conteúdo &#40;Data Mining&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [Tipos de conteúdo &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
   
--   [Distribuições de colunas &#40;Mineração de dados&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [Distribuições de colunas &#40;Mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [Sinalizadores de modelagem &#40;Mineração de dados&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Sinalizadores de modelagem &#40;Mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
- É possível adicionar uma cláusula a instrução para descrever a relação entre duas colunas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oferece suporte ao uso dos seguintes \<Column relationship > cláusula.  
+ É possível adicionar uma cláusula a instrução para descrever a relação entre duas colunas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]dá suporte ao uso da seguinte \<cláusula de > de relação de coluna.  
   
- **RELACIONADOS A**  
+ **RELACIONADO A**  
  Este formulário indica uma hierarquia de valor. O destino de uma coluna RELATED TO pode ser a coluna de chave em uma tabela aninhada, uma coluna com um valor discreto na linha de caso ou outra coluna com uma cláusula RELATED TO, que indica uma hierarquia mais profunda.  
   
  Use uma cláusula de previsão para descrever como a coluna de previsão é usada. A seguinte tabela descreve as duas possíveis cláusulas.  
   
-|\<Previsão > cláusula|Descrição|  
+|\<cláusula de > de previsão|Descrição|  
 |---------------------------|-----------------|  
 |**PREDICT**|Esta coluna pode ser prevista pelo modelo e pode ser fornecida em casos de entrada para prever o valor de outras colunas de previsão.|  
 |**PREDICT_ONLY**|Esta coluna pode ser prevista pelo modelo, mas seus valores não podem ser usados em casos de entrada para prever o valor de outras colunas de previsão.|  
@@ -121,12 +121,12 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
- Para obter uma lista dos parâmetros que estão associados com cada algoritmo, consulte [algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ Para obter uma lista dos parâmetros associados a cada algoritmo, consulte Algoritmos [ &#40;de mineração de dados Analysis Services-Mineração&#41;de dados](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
 ## <a name="remarks"></a>Comentários  
  Se você desejar criar um modelo que tem um conjunto de dados de teste interno, deverá usar a instrução CREATE MINING STRUCTURE seguida por ALTER MINING STRUCTURE. No entanto nem todos os tipos de modelo oferecem suporte a um conjunto de dados de validação. Para obter mais informações, consulte [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
- Para obter uma explicação de como criar um modelo de mineração usando a instrução CREATEMODEL, consulte [Tutorial de DMX de previsão de série temporal](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ Para obter uma explicação de como criar um modelo de mineração usando a instrução CREATEMODEL, consulte [tutorial DMX de previsão de série temporal](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
   
 ## <a name="naive-bayes-example"></a>Exemplo de Naive Bayes  
  O exemplo seguinte usa o algoritmo do Naive Bayes [!INCLUDE[msCoName](../includes/msconame-md.md)] para criar um novo modelo de mineração. A coluna Bike Buyer está definida como o atributo previsível.  
@@ -143,7 +143,7 @@ USING Microsoft_Naive_Bayes
 ```  
   
 ## <a name="association-model-example"></a>Exemplo de modelo de associação  
- O seguinte exemplo usa o algoritmo de associação da [!INCLUDE[msCoName](../includes/msconame-md.md)] para criar um novo modelo de mineração. A instrução aproveita a capacidade de aninhar uma tabela dentro da definição do modelo usando uma coluna de tabelas. O modelo é modificado usando o *MINIMUM_PROBABILITY* e *MINIMUM_SUPPORT* parâmetros.  
+ O seguinte exemplo usa o algoritmo de associação da [!INCLUDE[msCoName](../includes/msconame-md.md)] para criar um novo modelo de mineração. A instrução aproveita a capacidade de aninhar uma tabela dentro da definição do modelo usando uma coluna de tabelas. O modelo é modificado usando os parâmetros *MINIMUM_PROBABILITY* e *MINIMUM_SUPPORT* .  
   
 ```  
 CREATE MINING MODEL MyAssociationModel (  
@@ -171,10 +171,10 @@ USING Microsoft_Sequence_Clustering
 ```  
   
 ## <a name="time-series-example"></a>Exemplo de série temporal  
- O seguinte exemplo usa o algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Times Series para criar um novo modelo de mineração usando o algoritmo ARTxp. ReportingDate é a coluna de chave para a série temporal e ModelRegion é a coluna de chave para a série de dados. Neste exemplo, presume-se que a periodicidade dos dados é a cada 12 meses. Portanto, o *PERIODICITY_HINT* parâmetro for definido como 12.  
+ O seguinte exemplo usa o algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Times Series para criar um novo modelo de mineração usando o algoritmo ARTxp. ReportingDate é a coluna de chave para a série temporal e ModelRegion é a coluna de chave para a série de dados. Neste exemplo, presume-se que a periodicidade dos dados é a cada 12 meses. Portanto, o parâmetro *PERIODICITY_HINT* é definido como 12.  
   
 > [!NOTE]  
->  Você deve especificar o *PERIODICITY_HINT* parâmetro usando caracteres de chave. Além disso, como o valor é uma cadeia de caracteres, ela deve ser colocada entre aspas simples: "{\<valor numérico >}".  
+>  Você deve especificar o parâmetro *PERIODICITY_HINT* usando caracteres de chave. Além disso, como o valor é uma cadeia de caracteres, ele deve ser colocado entre aspas simples:\<"{valor numérico >}".  
   
 ```  
 CREATE MINING MODEL SalesForecast (  
@@ -187,8 +187,8 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Extensões de mineração de dados &#40;DMX&#41; instruções de definição de dados](../dmx/dmx-statements-data-definition.md)   
- [Extensões de mineração de dados &#40;DMX&#41; instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
+ [Instruções de definição &#40;de&#41; dados DMX das extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
+ [Instruções de manipulação &#40;de&#41; dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-manipulation.md)   
  [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

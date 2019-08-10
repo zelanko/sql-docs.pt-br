@@ -1,5 +1,5 @@
 ---
-title: Definindo e procurando KPIs | Microsoft Docs
+title: Definindo e navegando por KPIs | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 27508ec35e6d7d061a278859a0a9bf38e63a95e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7eba0c1778923981361e5ecab1819afe3dec58d9
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078379"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888084"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definindo e procurando KPIs
   Para definir KPIs (indicadores chave de desempenho), você deve definir primeiramente um nome de KPI e o grupo de medidas ao qual o KPI será associado. Um KPI pode ser associado a todos ou apenas a um único grupo de medidas. Depois disso, você define os seguintes elementos do KPI:  
@@ -59,15 +59,15 @@ ms.locfileid: "66078379"
   
      A imagem a seguir mostra a guia **KPIs** do Designer de Cubo.  
   
-     ![Guia KPIs do Designer de cubo](../../2014/tutorials/media/l7-kpi-1.gif "guia KPIs do Designer de cubo")  
+     ![Guia KPIs do designer de cubo](../../2014/tutorials/media/l7-kpi-1.gif "Guia KPIs do designer de cubo")  
   
 2.  Na barra de ferramentas da guia **KPIs** , clique no botão **Novo KPI** .  
   
      Um modelo de KPI em branco aparece no painel de exibição, como mostra a imagem a seguir:  
   
-     ![Modelo KPI em branco no painel de exibição](../../2014/tutorials/media/l7-kpi-2.gif "modelo de KPI em branco no painel de exibição")  
+     ![Modelo de KPI em branco no painel de exibição](../../2014/tutorials/media/l7-kpi-2.gif "Modelo de KPI em branco no painel de exibição")  
   
-3.  No **nome** , digite `Reseller Revenue`e, em seguida, selecione **vendas do revendedor** no **grupo de medidas associado** lista.  
+3.  Na caixa **nome** , digite `Reseller Revenue`e, em seguida, selecione **vendas** do revendedor na lista **grupo de medidas associado** .  
   
 4.  Na guia **Metadados** do painel **Ferramentas de Cálculo** , expanda **Medidas**e **Vendas do Revendedor**e arraste a medida **Vendas do Revendedor-Valor de Vendas** até a caixa **Expressão de Valor** .  
   
@@ -152,7 +152,7 @@ ms.locfileid: "66078379"
   
 1.  Clique no botão **Exibição de Formulário** na barra de ferramentas da guia **KPIs** e clique no botão **Novo KPI** .  
   
-2.  No **nome** , digite `Product Gross Profit Margin`e, em seguida, verifique  **\<todos os >** aparece no **grupo de medidas associado** lista.  
+2.  Na caixa **nome** , digite `Product Gross Profit Margin`e verifique se  **\<todos os >** aparecem na lista grupo de **medidas associado** .  
   
 3.  Na guia **Metadados** no painel **Ferramentas de Cálculo** , arraste a medida **MLB Total** até a caixa **Expressão de Valor** .  
   
@@ -261,13 +261,13 @@ ms.locfileid: "66078379"
   
 2.  Quando a implantação for concluída com êxito, clique no botão **Reconectar** na barra de ferramentas da guia **KPIs** e clique em **Exibição de Navegador**.  
   
-     O `Product Gross Profit Margin` KPI aparece e exibe o valor do KPI para **Q3 CY 2007** e o **América do Norte** território de vendas.  
+     O `Product Gross Profit Margin` KPI é exibido e exibe o valor do KPI para **Q3 CY 2007** e o **América do Norte** território Sales.  
   
 3.  No painel **Filtro** , selecione **Produto** na lista **Dimensão** , **Categoria** na lista **Hierarquia** , **Igual** na lista **Operador** , **Bicicletas** na lista **Expressão de Filtro** e clique em **OK**.  
   
      A margem de lucro bruto para a venda de bicicletas dos revendedores na América do Norte no período Q3 CY 2007 é exibida.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 8: Definindo ações](../analysis-services/lesson-8-defining-actions.md)  
+ [Lição 8: Definindo ações](https://docs.microsoft.com/analysis-services/lesson-8-defining-actions)  
   
   

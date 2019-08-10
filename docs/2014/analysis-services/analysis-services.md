@@ -1,7 +1,7 @@
 ---
-title: Analysis Services | Microsoft Docs
+title: SQL Server 2014 Analysis Services | Microsoft Docs
 ms.custom: ''
-ms.date: 06/14/2017
+ms.date: 06/07/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: analysis-services
@@ -18,23 +18,37 @@ ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 241bb57ffd0ce05f1daa289cc7ae78c365a27cc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5117ec8fd1eae9438569289b05f465fe7616d96
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66062337"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887453"
 ---
-# <a name="analysis-services"></a>Analysis Services
-  O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] é um mecanismo de dados analíticos online usado em soluções de apoio à decisão e business intelligence (BI), que fornece os dados analíticos para relatórios de negócios e aplicativos cliente, tais como Excel, relatórios do Reporting Services e outras ferramentas de BI de terceiros. Um fluxo de trabalho típico do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] inclui criar um modelo de dados OLAP ou de tabela, implantar o modelo como um banco de dados em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], processar o banco de dados para carregá-lo com dados e, em seguida, atribuir permissões para permitir o acesso aos dados. Quando ele estiver pronto, esse modelo de dados com vários fins poderá ser acessado por qualquer aplicativo cliente que suporte o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] como uma fonte de dados.  
+# <a name="sql-server-2014-analysis-services"></a>SQL Server 2014 Analysis Services
+
+  SQL Server 2014 Analysis Services é um mecanismo de dados analíticos usado em soluções de suporte a decisões e de business intelligence (BI), fornecendo os dados analíticos para relatórios de negócios e aplicativos cliente, como Excel, relatórios de Reporting Services e outros ferramentas de BI de terceiros. 
+
+## <a name="about-sql-server-analysis-services-documentation"></a>Sobre a documentação do SQL Server Analysis Services
+
+A documentação é separada por versão. No momento, você está em SQL Server 2014 Analysis Services documentação.
+
+- Para saber mais sobre o SQL Server 2012 e versões anteriores, consulte [SQL Server a documentação de versões anteriores](https://docs.microsoft.com/previous-versions/sql/).
+- Para saber mais sobre o SQL Server 2014, consulte os [manuais online do SQL Server 2014](../2014-toc/books-online-for-sql-server-2014.md)
+- Para saber mais sobre o SQL Server 2016 e posterior, consulte a [documentação do Microsoft SQL](https://docs.microsoft.com/sql/).
+- Para saber mais sobre Azure Analysis Services, consulte [Azure Analysis Services documentação](https://docs.microsoft.com/en-us/azure/analysis-services/).
+
+## <a name="analysis-services-workflow"></a>Fluxo de trabalho Analysis Services
+
+Um fluxo de trabalho típico inclui a criação de um modelo de dados OLAP ou de tabela, a implantação do modelo como um banco de dado em uma instância de servidor, o processamento do banco de dados para carregá-lo e a atribuição de permissões para permitir o acesso a dados. Quando ele estiver pronto, esse modelo de dados com vários fins poderá ser acessado por qualquer aplicativo cliente que suporte o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] como uma fonte de dados.  
   
- Para criar um modelo, use o SQL Server Data Tools (consulte [ferramentas e aplicativos usados no Analysis Services](tools-and-applications-used-in-analysis-services.md)), escolha um modelo de projeto Tabular ou Multidimensional e mineração de dados. O modelo de projeto contém pastas de todos os objetos necessários em um modelo. É possível utilizar assistentes para criar todos os elementos básicos, como fontes de dados, modos de exibição de fonte de dados, dimensões, cubos e funções.  
+ Para criar um modelo, use SQL Server Data Tools (consulte [ferramentas e aplicativos usados no Analysis Services](tools-and-applications-used-in-analysis-services.md)), escolhendo um modelo de projeto tabular ou multidimensional e de mineração de dados. O modelo de projeto contém pastas de todos os objetos necessários em um modelo. É possível utilizar assistentes para criar todos os elementos básicos, como fontes de dados, modos de exibição de fonte de dados, dimensões, cubos e funções.  
   
  Os modelos são preenchidos com dados de sistemas de dados externos, geralmente data warehouses hospedados em um SQL Server ou um mecanismo de banco de dados relacional Oracle (os modelos de tabela oferecem suporte a tipos de fontes de dados). Modelos especificam objetos de consulta, como cubos, mas também especificam as dimensões que podem ser utilizadas em vários cubos, cálculos e KPIs que encapsulam a lógica de negócios e as interações, como comportamentos de detalhamento e navegação.  
   
- Para usar um modelo, ele é implantado em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que executa bancos de dados em um modo de servidor específico, tornando os dados disponíveis para usuários autorizados que se conectam pelo Excel ou por outros aplicativos.  
+ Para usar um modelo, ele é implantado em uma instância de servidor que executa os bancos de dados em um modo de servidor específico, disponibilizando-os para usuários autorizados que se conectam por meio do Excel ou de outros aplicativos.  
   
- Você pode instalar uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em um dos três modos de servidor:  
+ Você pode instalar uma instância em um dos três modos de servidor:  
   
 -   Como uma instância de Tabela, executando modelos de Tabela.  
   
@@ -47,26 +61,26 @@ ms.locfileid: "66062337"
  A documentação fundamental do Analysis Services é organizada em seções que correspondem ao tipo de projeto que você está criando. Escolha entre os links a seguir para saber mais sobre cada modo ou área de recurso.  
   
  **Procurar conteúdo por área**  
- ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [comparando soluções tabulares e multidimensionais &#40;SSAS&#41;](comparing-tabular-and-multidimensional-solutions-ssas.md)  
+ ![Ícone de pasta de arquivo pequeno](../../2014/integration-services/media/filefolder-small.gif "Ícone de pasta de arquivo pequeno") Comparando o [SSAS&#41; de soluções &#40;de tabela e](comparing-tabular-and-multidimensional-solutions-ssas.md) multidimensionais  
   
- ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [gerenciamento de instâncias do Analysis Services](instances/analysis-services-instance-management.md)  
+ ![Ícone de pasta de arquivo pequeno](../../2014/integration-services/media/filefolder-small.gif "Ícone de pasta de arquivo pequeno") [Gerenciamento de instância do Analysis Services](instances/analysis-services-instance-management.md)  
   
- ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [modelagem de tabela &#40;Tabular do SSAS&#41;](tabular-models/tabular-models-ssas.md)  
+ ![Ícone de pasta de arquivo pequeno](../../2014/integration-services/media/filefolder-small.gif "Ícone de pasta de arquivo pequeno") [Modelagem &#40;de tabela SSAS&#41; tabular](tabular-models/tabular-models-ssas.md)  
   
- ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [modelagem Multidimensional &#40;SSAS&#41;](multidimensional-models/multidimensional-models-ssas.md)  
+ ![Ícone de pasta de arquivo pequeno](../../2014/integration-services/media/filefolder-small.gif "Ícone de pasta de arquivo pequeno") [ &#40;SSAS&#41; de modelagem](multidimensional-models/multidimensional-models-ssas.md) multidimensional  
   
- ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [mineração de dados &#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
+ ![Ícone de pasta de arquivo pequeno](../../2014/integration-services/media/filefolder-small.gif "Ícone de pasta de arquivo pequeno") [SSAS&#41; de &#40;mineração de dados](data-mining/data-mining-ssas.md)  
   
- ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [PowerPivot para SharePoint &#40;SSAS&#41;](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
+ ![Ícone de pasta de arquivo pequeno](../../2014/integration-services/media/filefolder-small.gif "Ícone de pasta de arquivo pequeno") [PowerPivot para SharePoint &#40;SSAS&#41; ](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] recursos variam de acordo com a edição. Modelos multidimensional e de mineração de dados estão disponíveis em uma edição padrão, com menos recursos do que edições posteriores. Modelos de tabela e PowerPivot para SharePoint são recursos premium e não estão disponíveis em uma licença de edição padrão. Para obter mais informações, consulte [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutoriais do Analysis Services &#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
+ [TUTORIAIS &#40;de Analysis Services SSAS&#41;](analysis-services-tutorials-ssas.md)   
  [Instalação do SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
- [Guia do desenvolvedor do &#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
- [Central de recursos do SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)   
+ [Guia &#40;do desenvolvedor Analysis Services&#41;](analysis-services-developer-documentation.md)   
+ [Centro de recursos de SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)   
  [SQLCat.com](https://go.microsoft.com/fwlink/?linkID=220963)  
   
   

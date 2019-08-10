@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1bb0dcbd16fc96cb587718504de8fa43babd0db6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ec9ac3eef28c4deae08d577487599575852c132
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097366"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893551"
 ---
 # <a name="unary-operators"></a>Operadores unários
 
@@ -22,7 +22,7 @@ ms.locfileid: "68097366"
   
  O MDX oferece suporte aos operadores unários listados na tabela a seguir.  
   
-|Operador|Descrição|  
+|Operator|Descrição|  
 |--------------|-----------------|  
 |[- (Negativo)](../mdx/negative-mdx.md)|Retorna o valor negativo de uma expressão numérica.|  
 |[+ (Positivo)](../mdx/positive-mdx.md)|Retorna o valor positivo de uma expressão numérica.|  
@@ -40,9 +40,9 @@ FROM [Adventure Works]
 WHERE [Product].[Category].[Bikes]  
 ```  
   
- Além disso, o MDX usa operadores unários especiais para determinar a operação de agregação executada pela [RollupChildren](../mdx/rollupchildren-mdx.md) função. Para obter mais informações sobre estes operadores unários especiais, consulte [adicionar uma agregação personalizada a uma dimensão](../analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension.md).  
+ Além disso, o MDX usa operadores unários especiais para determinar a operação de agregação executada pela função [RollupChildren](../mdx/rollupchildren-mdx.md) . Para obter mais informações sobre esses operadores unários especiais, consulte [Adicionar uma agregação personalizada a uma dimensão](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension).  
   
 ## <a name="see-also"></a>Consulte também  
- [Operadores &#40;sintaxe MDX&#41;](../mdx/operators-mdx-syntax.md)  
+ [Sintaxe &#40;de MDX de operadores&#41;](../mdx/operators-mdx-syntax.md)  
   
   

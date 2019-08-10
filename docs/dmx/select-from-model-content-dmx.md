@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;modelo&gt;. CONTEÚDO (DMX) | Microsoft Docs
+title: Selecione do &lt;modelo&gt;. CONTENT (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 63cd10aaddfb0a22f8942e48007d36f8e634b233
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906731"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892836"
 ---
-# <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;modelo&gt;. CONTEÚDO (DMX)
+# <a name="select-from-ltmodelgtcontent-dmx"></a>Selecione do &lt;modelo&gt;. CONTEÚDO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna o conjunto de linhas do esquema de modelo de mineração para o modelo de mineração de dados especificado.  
@@ -46,12 +46,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Opcional. Uma expressão que retorna um valor escalar.  
   
 ## <a name="remarks"></a>Comentários  
- O **SELECT FROM**  _\<modelo >_ **. CONTEÚDO** instrução retorna o conteúdo é específico para cada algoritmo. Por exemplo, talvez você queira usar as descrições de todas as regras de um modelo de regras associado em um aplicativo personalizado. Você pode usar um **SELECT FROM \<modelo >. CONTEÚDO** instrução para retornar os valores na coluna NODE_RULE do modelo.  
+ O > **selecionar do**  _\<modelo_ **.** A instrução de conteúdo retorna o conteúdo específico de cada algoritmo. Por exemplo, talvez você queira usar as descrições de todas as regras de um modelo de regras associado em um aplicativo personalizado. Você pode usar um **> de \<modelo de seleção.** O demonstrativo de conteúdo para retornar valores na coluna NODE_RULE do modelo.  
   
  A tabela a seguir lista as colunas que são incluídas no conteúdo do modelo de mineração.  
   
 > [!NOTE]  
->  Os algoritmos podem interpretar as colunas de forma diferente para representar corretamente o conteúdo. Para obter uma descrição do modelo de mineração conteúdo para cada algoritmo e dicas sobre como interpretar e consultar o conteúdo para cada tipo de modelo do modelo de mineração, consulte [conteúdo do modelo de mineração &#40;Analysis Services - mineração de dados&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+>  Os algoritmos podem interpretar as colunas de forma diferente para representar corretamente o conteúdo. Para obter uma descrição do conteúdo do modelo de mineração para cada algoritmo e dicas sobre como interpretar e consultar o conteúdo do modelo de mineração para cada tipo de modelo, consulte [conteúdo &#40;do modelo de&#41;mineração Analysis Services-Mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
 |Coluna de conjunto de linhas DE CONTEÚDO|Descrição|  
 |---------------------------|-----------------|  
@@ -88,10 +88,10 @@ WHERE NODE_TYPE = 1
 |-----------------|----------------|  
 |TM_DecisionTree|0|  
   
- A consulta a seguir usa o **IsDescendant** função para retornar os filhos imediatos do nó que foi retornado na consulta anterior.  
+ A consulta a seguir usa a função IsDescendant para retornar os filhos imediatos do nó que foi retornado na consulta anterior.  
   
 > [!NOTE]  
->  Como o valor de NODE_NAME é uma cadeia de caracteres, você não pode usar uma instrução Sub-Select para retornar NODE_ID como um argumento para o **IsDescendant** função.  
+>  Como o valor de NODE_NAME é uma cadeia de caracteres, você não pode usar uma instrução de Subseleção para retornar o NODE_ID como um argumento para a função IsDescendant.  
   
 ```  
 SELECT NODE_NAME, NODETYPE, NODE_CAPTION   
@@ -101,7 +101,7 @@ WHERE ISDESCENDANT('0')
   
  Resultados esperados:  
   
- Como o modelo é um modelo de árvores de decisão, os descendentes do nó pai do modelo incluem um único nó de estatísticas marginais, um nó que representa o atributo previsível e vários nós que contêm atributos e valores de entrada. Para obter mais informações, consulte [Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
+ Como o modelo é um modelo de árvores de decisão, os descendentes do nó pai do modelo incluem um único nó de estatísticas marginais, um nó que representa o atributo previsível e vários nós que contêm atributos e valores de entrada. Para obter mais informações, consulte [Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services – Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining).  
   
 ## <a name="using-the-flattened-keyword"></a>Usando a palavra-chave FLATTENED  
  O conteúdo de modelo de mineração frequentemente contém informações interessantes sobre o modelo nas colunas da tabela aninhada. A palavra-chave FLATTENED lhe permite recuperar os dados de uma coluna de tabela aninhada sem usar um fornecedor com suporte para conjuntos de linhas hierárquicos.  
@@ -144,7 +144,7 @@ WHERE NODE_TYPE = 26
   
 ## <a name="see-also"></a>Consulte também  
  [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Extensões de mineração de dados &#40;DMX&#41; instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
+ [Instruções de manipulação &#40;de&#41; dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-manipulation.md)   
  [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

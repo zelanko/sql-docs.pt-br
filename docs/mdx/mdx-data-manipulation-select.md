@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a209fe7fbd62082d467077a147b52a3f142b8214
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 83a381e36a31542d6ad39ed9d26864350004af5c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003539"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891145"
 ---
 # <a name="mdx-data-manipulation---select"></a>Manipulação de dados MDX – SELECT
 
@@ -116,7 +116,7 @@ FROM
   
  A opção NON VISUAL na instrução subselect lhe permite filtrar os membros enquanto mantém os totais verdadeiros, em vez dos totais filtrados. Isso lhe permite consultar as dez vendas principais (pessoas/produtos/regiões) e obter o total verdadeiro das vendas para todos os membros consultados, em vez do valor total das vendas para os dez principais retornados. Veja os exemplos abaixo para obter mais informações.  
   
- Membros calculados podem ser incluídos no \<cláusula de eixo de consulta SELECT > sempre que a conexão foi aberta usando o parâmetro de cadeia de caracteres de conexão *subconsultas = 1*; consulte [propriedades XMLA com suporte &#40; XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para o uso do parâmetro. Um exemplo é fornecido nos membros calculados em subseleções.  
+ Os membros calculados podem ser \<incluídos na cláusula Selecionar eixo de consulta > sempre que a conexão foi aberta usando as subconsultas do parâmetro de cadeia de conexão *= 1*; consulte [as propriedades &#40;XMLA com suporte XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>para uso de parâmetro. Um exemplo é fornecido nos membros calculados em subseleções.  
   
 ## <a name="autoexists"></a>autoexists  
  Quando dois ou mais atributos da dimensão são usados em uma instrução SELECT, o Analysis Services avalia as expressões dos atributos para assegurar que os membros desses atributos sejam devidamente confinados para atender aos critérios de todos os outros atributos. Por exemplo, vamos supor que você esteja trabalhando com atributos da dimensão Geografia. Se houver uma expressão que retorne todos os membros do atributo Cidade, e outra expressão que confine os membros do atributo País a todos os países na Europa, isso resultará no confinamento dos membros de Cidade apenas às cidades que pertencem a países na Europa. Essas característica do Analysis Services é denominada Autoexists e se aplica apenas aos atributos na mesma dimensão. Autoexists somente se aplica a atributos da mesma dimensão porque tenta impedir que os registros da dimensão excluídos em uma expressão do atributo sejam incluídos pelas outras expressões do atributo. Autoexists também pode ser entendido como a interseção resultante das diferentes expressões de atributo sobre os registros da dimensão. Consulte estes exemplos abaixo:  
@@ -339,10 +339,10 @@ FROM
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Comportamento de Autoexists pode ser modificado usando o AUTOEXISTS = [1 | 2 | 3] parâmetro na cadeia de conexão; ver [propriedades XMLA com suporte &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para o uso do parâmetro.  
+ O comportamento de autoexisteções pode ser modificado usando o parâmetro Autoexists = [1 | 2 | 3] na cadeia de conexão; consulte [Propriedades &#40;XMLA com suporte&#41; XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para uso de parâmetro.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir retorna a soma do `Measures.[Order Quantity]` membro, agregado durante os primeiros oito meses do ano calendário 2003 contidos na `Date` dimensão, da **Adventure Works** cubo.  
+ O exemplo a seguir retorna a soma do `Measures.[Order Quantity]` membro, agregados nos primeiros oito meses do ano civil 2003 que estão contidos `Date` na dimensão, do cubo **Adventure Works** .  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -361,7 +361,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- Para entender **NON VISUAL** o exemplo a seguir é uma consulta da [Adventure Works] para obter números de [vendas do revendedor] em uma tabela na qual as categorias de produto são as colunas e reseller business types são as linhas. Observe que os totais são atribuídos para produtos e revendedores.  
+ Para entender o **não visual,** o exemplo a seguir é uma consulta de [Adventure Works] para obter as figuras [valor de vendas do revendedor] em uma tabela em que as categorias de produto são as colunas e os tipos de negócios revendedor são as linhas. Observe que os totais são atribuídos para produtos e revendedores.  
   
  A seguinte instrução SELECT:  
   
@@ -435,7 +435,7 @@ WHERE
   
  Quando comparados aos resultados anteriores, você poderá observar que a linha [Todos os Revendedores] agora soma os valores exibidos para [Revendedor de Valor Agregado] e [Warehouse], mas a coluna [Todos os Produtos] mostra o valor total para todos os produtos, inclusive aqueles não exibidos.  
   
- O exemplo a seguir demonstra como usar membros calculados em subseleções para filtrá-los. Para poder reproduzir este exemplo, a conexão deve ser estabelecida usando o parâmetro de cadeia de caracteres de conexão *subconsultas = 1*.  
+ O exemplo a seguir demonstra como usar membros calculados em subseleções para filtrá-los. Para poder reproduzir esse exemplo, a conexão deve ser estabelecida usando as subconsultas do parâmetro da cadeia de conexão *= 1*.  
   
  `select Measures.allmembers on 0`  
   
@@ -463,9 +463,9 @@ WHERE
 |$80,450,596.98|$79,980,114.38|$470,482.60|0.58%|  
   
 ## <a name="see-also"></a>Consulte também  
- [Principais conceitos em MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Instruções MDX de manipulação de dados &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Restringindo a consulta com eixos de consulta e segmentação de dados &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
+ [Principais conceitos em MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [MDX instruções &#40;de manipulação de dados MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Restringindo a consulta com a consulta e os eixos &#40;de segmentação MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   
 

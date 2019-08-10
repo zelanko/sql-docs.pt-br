@@ -1,5 +1,5 @@
 ---
-title: database_service_objectives (banco de dados SQL) | Microsoft Docs
+title: sys. database_service_objectives (banco de dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/21/2018
 ms.service: sql-database
@@ -7,45 +7,45 @@ ms.prod_service: sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.topic: conceptual
 keywords:
-- pool Elástico
-- pool Elástico, gerenciamento
+- pool elástico
+- pool elástico, gerenciamento
 f1_keywords:
 - DATABASE_SERVICE_OBJECTIVES_TSQL
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4174e59fd451d1d709decbbc8955c9fe2329703e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fc6c0fc0dbd9ce98d3be2e226e6b2ed3c01cb187
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079409"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893290"
 ---
-# <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>database_service_objectives (banco de dados SQL)
+# <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys. database_service_objectives (banco de dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-Retorna a edição (camada de serviço), o objetivo de serviço (tipo de preço) e o nome do pool Elástico, se houver, para um banco de dados SQL do Azure ou um Azure SQL Data Warehouse. Se conectado ao banco de dados mestre em um servidor de banco de dados SQL, retorna informações sobre todos os bancos de dados. SQL Data Warehouse do Azure, você deve estar conectado ao banco de dados mestre.  
+Retorna a edição (camada de serviço), o objetivo de serviço (tipo de preço) e o nome do pool elástico, se houver, para um banco de dados SQL do Azure ou um SQL Data Warehouse do Azure. Se estiver conectado ao banco de dados mestre em um servidor de banco de dados SQL do Azure, retorna informações sobre todos os bancos de dados. Para o Azure SQL Data Warehouse, você deve estar conectado ao banco de dados mestre.  
   
   
- Para obter informações sobre preços, consulte [opções de banco de dados SQL e desempenho: Preços do banco de dados SQL](https://azure.microsoft.com/pricing/details/sql-database/) e [SQL Data Warehouse preços](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
+ Para obter informações sobre preços, [consulte Opções e desempenho do banco de dados SQL: Preços do banco](https://azure.microsoft.com/pricing/details/sql-database/) de dados SQL e [preços de SQL data warehouse](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
- Para alterar as configurações de serviço, consulte [ALTER DATABASE (banco de dados SQL)](../../t-sql/statements/alter-database-azure-sql-database.md) e [ALTER DATABASE (SQL Data Warehouse do Azure)](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest).  
+ Para alterar as configurações de serviço, consulte [ALTER DATABASE (banco de dados SQL do Azure)](../../t-sql/statements/alter-database-azure-sql-database.md) e [alter database (Azure SQL data warehouse)](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest).  
   
- O modo de exibição database_service_objectives contém as colunas a seguir.  
+ A exibição sys. database_service_objectives contém as colunas a seguir.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|database_id|int|A ID do banco de dados, exclusivo em uma instância do servidor de banco de dados SQL. Permite junções com [sys. Databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
-|edição|sysname|A camada de serviço para o banco de dados ou data warehouse: **Básica**, **padrão**, **Premium** ou **Data Warehouse**.|  
-|service_objective|sysname|O tipo de preço do banco de dados. Se o banco de dados está em um pool Elástico, retornará **ElasticPool**.<br /><br /> Sobre o **básica** tier, retorna **básica**.<br /><br /> **Banco de dados individual em uma camada de serviço standard** retorna um dos seguintes: S0, S1, S2, S3, S4, S6, S7, S9 ou S12.<br /><br /> **Banco de dados individual em uma camada premium** retorna o seguinte: P1, P2, P4, P6, P11 ou P15.<br /><br /> **SQL Data Warehouse** retorna DW100 a DW30000c.|  
-|elastic_pool_name|sysname|O nome da [pool Elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) que o banco de dados pertence. Retorna **nulo** se o banco de dados é um banco de dados ou um warehoue de dados.|  
+|database_id|int|A ID do banco de dados, exclusiva dentro de uma instância do servidor de banco de dados SQL do Azure. Ingresse com o [ &#40;Transact-SQL&#41;sys.](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)databases.|  
+|edição|sysname|A camada de serviço para o banco de dados ou data warehouse: **Básico**, **Standard**, **Premium** ou **data warehouse**.|  
+|service_objective|sysname|O tipo de preço do banco de dados. Se o banco de dados estiver em um pool elástico, retornará **ElasticPool**.<br /><br /> Na camada **básica** , retorna **Basic**.<br /><br /> O **banco de dados individual em uma camada de serviço Standard** retorna um dos seguintes: S0, S1, S2, S3, S4, S6, S7, S9 ou S12.<br /><br /> **Um banco de dados individual em uma camada Premium** retorna do seguinte: P1, P2, P4, P6, P11 ou P15.<br /><br /> **SQL data warehouse** retorna DW100 por meio de DW30000c.<br /><br /> Para obter detalhes, consulte bancos de dados [individuais](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [pools elásticos](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/)e [data warehouses](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/)|  
+|elastic_pool_name|sysname|O nome do [pool elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) ao qual o banco de dados pertence. Retornará **NULL** se o banco de dados for um banco de dado único ou um data warehoue.|  
   
 ## <a name="permissions"></a>Permissões  
- Requer **dbManager** permissão no banco de dados mestre.  No nível do banco de dados, o usuário deve ser o criador ou proprietário.  
+ Requer a permissão **dbManager** no banco de dados mestre.  No nível do banco de dados, o usuário deve ser o criador ou proprietário.  
   
 ## <a name="examples"></a>Exemplos  
- Este exemplo pode ser executado no banco de dados mestre ou em bancos de dados de usuário de banco de dados SQL. A consulta retorna o nome, serviço e informações sobre níveis de desempenho dos bancos de dados.  
+ Este exemplo pode ser executado no banco de dados mestre ou em bancos de dados de usuário do banco de dados SQL do Azure. A consulta retorna o nome, o serviço e as informações do nível de desempenho dos bancos de dados.  
   
 ```sql  
 SELECT  d.name,   

@@ -1,5 +1,5 @@
 ---
-title: Instalar dados de exemplo e projetos para o Tutorial de modelagem Multidimensional do Analysis Services | Microsoft Docs
+title: Instalar dados de exemplo e projetos para o tutorial de modelagem multidimensional Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -10,24 +10,24 @@ ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f0b4a69f7c1a6735fee26f1d622bc0f290e4677
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f5fed7f199f80f59c1983ec5f17a4f922c836333
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080394"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888625"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Instalar dados de exemplo e projetos para o tutorial de modelagem multidimensional do Analysis Services
   Use as instruções e links fornecidos neste tópico para instalar todos os dados e arquivos de projeto usados nos Tutoriais do Analysis Services.  
   
-## <a name="step-1-install-sql-server-software"></a>Etapa 1: Instalar o Software do SQL Server  
- As lições neste tutorial presumem que você tenha o seguinte software instalado. Todos os softwares a seguir são instalados usando a mídia de instalação do SQL Server. Para a simplicidade de implantação, você pode instalar todos os recursos em um único computador. Para instalar estes recursos, execute a Instalação do SQL Server e selecione-os na página Seleção de Recursos. Para obter mais informações, consulte [instalar o SQL Server 2014 do Assistente de instalação do &#40;instalação&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
+## <a name="step-1-install-sql-server-software"></a>Etapa 1: Instalar SQL Server software  
+ As lições neste tutorial presumem que você tenha o seguinte software instalado. Todos os softwares a seguir são instalados usando a mídia de instalação do SQL Server. Para a simplicidade de implantação, você pode instalar todos os recursos em um único computador. Para instalar estes recursos, execute a Instalação do SQL Server e selecione-os na página Seleção de Recursos. Para obter mais informações, consulte [instalar o SQL Server 2014 na instalação &#40;&#41;do assistente de instalação](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 -   Mecanismo de Banco de Dados  
   
 -   Analysis Services  
   
-     Analysis Services está disponível apenas nestas edições: Evaluation, Enterprise, Business Intelligence, Standard.  
+     Analysis Services está disponível somente nestas edições: Avaliação, Enterprise, Business Intelligence, Standard.  
   
      Observe que as edições do SQL Server Express não incluem o Analysis Services. [Baixe a edição Evaluation](https://go.microsoft.com/fwlink/?LinkId=392824) se desejar experimentar gratuitamente o software.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66080394"
   
  Como alternativa, você pode procurar dados usando o designer de consulta MDX interno que é embutido no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. O criador de consultas retorna os mesmos dados, menos os que são apresentados como um conjunto de linhas simples.  
   
-## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>Etapa 2: Baixar o SQL Server Data Tools - Business Intelligence para Visual Studio 2012  
+## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>Etapa 2: Baixe o SQL Server Data Tools-Business Intelligence para Visual Studio 2012  
  Nesta versão, o SQL Server Data Tools é baixado e instalado separadamente de outros recursos do SQL Server. Os designers e os modelos de projeto usados para criar modelos e relatórios de BI agora estão disponíveis como um download gratuito da Web.  
   
 -   [Baixe a versão de Business Intelligence do SQL Server Data Tools](https://go.microsoft.com/fwlink/p/?LinkID=322038). O arquivo é salvo na pasta de Downloads. Execute a instalação para instalar a ferramenta.  
@@ -49,7 +49,7 @@ ms.locfileid: "66080394"
 ## <a name="step-3-install-databases"></a>Etapa 3: Instalar bancos de dados  
  Um modelo multidimensional do Analysis Services usa dados transacionais que você importa de um RDBMS. Para este tutorial, você usará o banco de dados relacional a seguir como sua fonte de dados.  
   
--   **AdventureWorksDW2012** -isso é um data warehouse relacional que é executado em uma instância do mecanismo de banco de dados. Ele fornece os dados originais que serão usados pelos bancos de dados do Analysis Services e projetos que você criar e implantar ao longo do tutorial.  
+-   **AdventureWorksDW2012** – é uma data warehouse relacional que é executada em uma instância de mecanismo de banco de dados. Ele fornece os dados originais que serão usados pelos bancos de dados do Analysis Services e projetos que você criar e implantar ao longo do tutorial.  
   
      Você pode usar esse banco de dados de exemplo com o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] assim como o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
@@ -65,13 +65,13 @@ ms.locfileid: "66080394"
   
 4.  Clique com o botão direito do mouse em Bancos de dados e clique em **Anexar**.  
   
-5.  Clique em **Adicionar**.  
+5.  Clique em **Adicionar** .  
   
 6.  Selecione o arquivo de banco de dados **AdventureWorksDW2012_Data.mdf** e clique em **OK**. Se o arquivo não estiver listado, verifique a pasta C:\Arquivos de Programas\MSSQL12.MSSQLSERVER\MSSQL\Data para ver se ele está lá.  
   
 7.  Em detalhes de banco de dados, remova a entrada de arquivo de log. O programa de instalação pressupõe que você tem um arquivo de log, mas não há arquivo de log no exemplo. Um novo arquivo de log será criado automaticamente quando você anexar o banco de dados. Selecione o arquivo de log, clique em **Remover**e em **OK** para anexar somente o arquivo do banco de dados primário.  
   
-## <a name="step-4-grant-database-permissions"></a>Etapa 4: Permissões Grant de banco de dados  
+## <a name="step-4-grant-database-permissions"></a>Etapa 4: Conceder permissões de banco de dados  
  As projetos de exemplo usam configurações de representação de fonte de dados que especificam o contexto de segurança sob o qual os dados são importados ou processados. Por padrão, as configurações de representação especificam a conta de serviço do Analysis Services para acessar os dados. Para usar essa configuração padrão, você deve assegurar que a conta de serviço na qual o Analysis Services é executado tem permissões de leitura de dados no banco de dados **AdventureWorksDW2012** .  
   
 > [!NOTE]  
@@ -98,9 +98,9 @@ ms.locfileid: "66080394"
   
      Os tutoriais do 2012 são válidos para a versão do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
-     O arquivo "Analysis Services Tutorial SQL Server 2012.zip" será ser salvo na pasta Downloads em seu computador.  
+     O arquivo "tutorial de Analysis Services SQL Server 2012. zip" será salvo na pasta de downloads em seu computador.  
   
-2.  Mova o arquivo .zip para uma pasta debaixo da unidade de raiz (por exemplo, C:\Tutorial). Esta etapa mitigará o erro de "Caminho muito longo" que às vezes ocorre se você tentar descompactar os arquivos na pasta Downloads.  
+2.  Mova o arquivo .zip para uma pasta debaixo da unidade de raiz (por exemplo, C:\Tutorial). Essa etapa reduz o erro de "caminho muito longo" que às vezes ocorre se você tentar descompactar os arquivos na pasta de downloads.  
   
 3.  Descompacte os projetos de exemplo: clique com o botão direito do mouse no arquivo e selecione **Extrair Tudo**. Depois de extrair os arquivos, você deve ter os seguintes projetos instalados em seu computador:  
   
@@ -145,10 +145,10 @@ ms.locfileid: "66080394"
 8.  Inicie o SQL Server Management Studio. No SQL Server Management Studio, conecte-se ao Analysis Services. Verifique se um banco de dados nomeado **Tutorial do Analysis Services** está sendo executado no servidor.  
   
 ## <a name="next-step"></a>Próxima etapa  
- Você agora está pronto para usar o tutorial. Para obter mais informações sobre como começar, consulte [Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md).  
+ Você agora está pronto para usar o tutorial. Para obter mais informações sobre como começar, consulte [Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial).  
   
 ## <a name="see-also"></a>Consulte também  
- [Instalar o SQL Server 2014 do Assistente de instalação &#40;programa de instalação&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
+ [Instalar o SQL Server 2014 da instalação do &#40;assistente de instalação&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   

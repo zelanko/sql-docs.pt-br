@@ -19,20 +19,20 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e6324606dea5f3ea6f094e9b3c3dbe31d5fbcf92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2fc424ec2354130d361305b0e3dd2a0bb015cca6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107257"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891101"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interface de usuário do Designer de consultas gráficas
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece um designer de consultas gráficas e um designer de consultas baseadas em texto; com eles, é possível criar consultas e recuperar dados de um banco de dados relacional relativos a um conjunto de dados de relatório no Designer de Relatórios. Use o designer de consultas gráficas para criar uma consulta interativamente e ver os resultados de tipos de fonte de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB e ODBC. Use o designer de consultas baseadas em texto para especificar várias instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] , consulta complexa ou sintaxe de comando e consultas baseadas em expressões. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas baseado em texto](../text-based-query-designer-user-interface.md). Para obter mais informações sobre como trabalhar com tipos de fonte de dados específicos, consulte [adicionar dados a um relatório &#40;construtor de relatórios e SSRS&#41;](report-datasets-ssrs.md).  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece um designer de consultas gráficas e um designer de consultas baseadas em texto; com eles, é possível criar consultas e recuperar dados de um banco de dados relacional relativos a um conjunto de dados de relatório no Designer de Relatórios. Use o designer de consultas gráficas para criar uma consulta interativamente e ver os resultados de tipos de fonte de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB e ODBC. Use o designer de consultas baseadas em texto para especificar várias instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] , consulta complexa ou sintaxe de comando e consultas baseadas em expressões. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas baseado em texto](../text-based-query-designer-user-interface.md). Para obter mais informações sobre como trabalhar com tipos de fonte de dados específicos, consulte [Adicionar &#40;dados a um&#41;relatório Construtor de relatórios e SSRS](report-datasets-ssrs.md).  
   
  .  
   
 ## <a name="graphical-query-designer"></a>Designer de Consultas Gráficas  
- Esse designer de consultas gráficas dá suporte a três tipos de comandos de consulta: **Texto**, **StoredProcedure**, ou **TableDirect**. Antes de criar uma consulta para seu conjunto de dados, selecione uma opção de tipo de comando na página Consulta da caixa de diálogo [Propriedades do Conjunto de Dados](../dataset-properties-dialog-box-query.md) .  
+ Esse designer de consultas gráficas dá suporte a três tipos de comandos de consulta: **Texto**, **StoredProcedure**ou **TableDirect**. Antes de criar uma consulta para seu conjunto de dados, selecione uma opção de tipo de comando na página Consulta da caixa de diálogo [Propriedades do Conjunto de Dados](../dataset-properties-dialog-box-query.md) .  
   
  As seguintes opções estão disponíveis para o tipo de consulta:  
   
@@ -71,12 +71,12 @@ ms.locfileid: "66107257"
 |Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas.|  
-|**Importar**|Importa uma consulta existente de um arquivo ou relatório. Há suporte apenas para tipos de arquivo .sql e .rdl. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|**Importarar**|Importa uma consulta existente de um arquivo ou relatório. Há suporte apenas para tipos de arquivo .sql e .rdl. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Botão de alternância do painel do diagrama Mostrar/Ocultar](../media/rsqdicon-showhidediagram.gif "Botão de alternância do painel do diagrama Mostrar/Ocultar")|Mostre ou oculte o painel Diagrama.|  
 |![Botão de alternância do painel da grade Mostrar ou Ocultar](../media/rsqdicon-showhidegrid.gif "Botão de alternância do painel da grade Mostrar ou Ocultar")|Mostre ou oculte o painel Grade.|  
 |![Botão de alternância do painel sql Mostrar ou Ocultar](../media/rsqdicon-showhidesql.gif "Botão de alternância do painel sql Mostrar ou Ocultar")|Mostre ou oculte o painel SQL.|  
 |![Botão de alternância do painel de resultado Mostrar ou Ocultar](../media/rsqdicon-showhideresult.gif "Botão de alternância do painel de resultado Mostrar ou Ocultar")|Mostre ou oculte o painel Resultado.|  
-|![Executar a consulta](../../analysis-services/media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta.|  
+|![Executar a consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta.|  
 |![Verificar SQL no botão do painel SQL](../media/rsqdicon-verifysql.gif "Verificar SQL no botão do painel SQL")|Verifique se a sintaxe do texto da consulta está correta.|  
 |![Definir classificação crescente no campo selecionado](../media/rsqdicon-sortascending.gif "Definir classificação crescente no campo selecionado")|Defina a ordem de classificação como **Classificação Crescente** para a coluna selecionada no painel Diagrama.|  
 |![Definir classificação decrescente no campo selecionado](../media/rsqdicon-sortdescending.gif "Definir classificação decrescente no campo selecionado")|Defina a ordem de classificação como **Classificação Decrescente** para a coluna selecionada no painel Diagrama.|  
@@ -116,9 +116,9 @@ EXEC uspGetEmployeeManagers '1';
 |Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas.|  
-|**Importar**|Importa uma consulta existente de um arquivo ou relatório. Há suporte apenas para tipos de arquivo .sql e .rdl. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|**Importarar**|Importa uma consulta existente de um arquivo ou relatório. Há suporte apenas para tipos de arquivo .sql e .rdl. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Ícone do botão Designer de consultas genérico](../media/icongenericquerydesigner.gif "Ícone do botão Designer de consultas genérico")|Alterne entre o designer de consultas genéricas e o designer de consultas gráficas, preservando a exibição do texto da consulta ou do procedimento armazenado.|  
-|![Executar a consulta](../../analysis-services/media/rsqdicon-run.gif "Executar a consulta")|Selecione todas as colunas da tabela selecionada.|  
+|![Executar a consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Executar a consulta")|Selecione todas as colunas da tabela selecionada.|  
   
 ### <a name="command-type-storedprocedure"></a>Tipo de comando StoredProcedure  
  No tipo **StoredProcedure** , o designer de consultas gráficas exibe uma lista suspensa dos procedimentos armazenados disponíveis na fonte de dados e um painel Resultado. A tabela a seguir descreve a função de cada painel.  
@@ -134,8 +134,8 @@ EXEC uspGetEmployeeManagers '1';
 |Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas.|  
-|**Importar**|Importa uma consulta existente de um arquivo ou relatório. Há suporte apenas para tipos de arquivo .sql e .rdl. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Executar a consulta](../../analysis-services/media/rsqdicon-run.gif "Executar a consulta")|Execute o procedimento armazenado selecionado.|  
+|**Importarar**|Importa uma consulta existente de um arquivo ou relatório. Há suporte apenas para tipos de arquivo .sql e .rdl. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|![Executar a consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Executar a consulta")|Execute o procedimento armazenado selecionado.|  
 |Lista suspensa Procedimento armazenado|Clique na seta para baixo para exibir uma lista dos procedimentos armazenados disponíveis na fonte de dados. Clique em qualquer procedimento armazenado da lista para selecioná-lo.|  
   
 #### <a name="example"></a>Exemplo  
@@ -144,11 +144,11 @@ EXEC uspGetEmployeeManagers '1';
  `uspGetEmployeeManagers '1';`  
   
 ## <a name="see-also"></a>Consulte também  
- [Ferramentas de Design no Designer do SQL Server Data Tools de relatório de consulta &#40;SSRS&#41;](query-design-tools-ssrs.md)   
- [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-datasets-ssrs.md)   
+ [Ferramentas de design de consulta no &#40;Report Designer SQL Server Data Tools SSRS&#41;](query-design-tools-ssrs.md)   
+ [Adicionar dados a um relatório &#40;Construtor de relatórios e SSRS&#41;](report-datasets-ssrs.md)   
  [O tipo de conexão do SQL Server &#40;SSRS&#41;](sql-server-connection-type-ssrs.md)   
  [Tipo de conexão OLE DB &#40;SSRS&#41;](ole-db-connection-type-ssrs.md)   
- [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-datasets-ssrs.md)   
+ [Adicionar dados a um relatório &#40;Construtor de relatórios e SSRS&#41;](report-datasets-ssrs.md)   
  [Tipo de conexão Oracle &#40;SSRS&#41;](oracle-connection-type-ssrs.md)   
  [Arquivo de configuração RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)   
  [Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

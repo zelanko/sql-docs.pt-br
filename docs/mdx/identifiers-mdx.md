@@ -8,22 +8,22 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 24a1f2b1cb49335ba529126005c41b062e7a9e60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105411"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891215"
 ---
 # <a name="identifiers-mdx"></a>Identificadores (MDX)
 
 
-  Um identificador é o nome de um objeto do Analysis Services. Cada objeto pode e deve ter um identificador. Isto inclui cubos, dimensões, hierarquias, níveis, membros e assim por diante. Use o identificador de um objeto para fazer referência ao objeto em instruções MDX.  
+  Um identificador é o nome de um objeto de Analysis Services. Cada objeto pode e deve ter um identificador. Isto inclui cubos, dimensões, hierarquias, níveis, membros e assim por diante. Use o identificador de um objeto para fazer referência ao objeto em instruções MDX.  
   
  Dependendo de como o objeto for nomeado, o identificador será um identificador normal ou delimitado.  
   
 > [!NOTE]  
->  Identificadores regulares e delimitados devem conter de 1 a 100 caracteres.  
+>  Os identificadores regulares e delimitados devem conter de 1 a 100 caracteres.  
   
 ## <a name="using-regular-identifiers"></a>Usando identificadores normais  
  Um identificador normal é um nome de objeto que está em conformidade com as regras de formatação a seguir para identificadores normais. Um identificador normal pode ser usado com ou sem delimitadores.  
@@ -32,19 +32,19 @@ ms.locfileid: "68105411"
   
 1.  O primeiro caractere deve ser um dos seguintes:  
   
-    -   Uma letra, conforme definido pelo Unicode Standard 2.0. Além dos caracteres de letras de outros idiomas, a definição de letras do Unicode inclui caracteres latinos de a até z e de A até Z.  
+    -   Uma letra, conforme definido pelo Unicode Standard 2,0. Além dos caracteres de letras de outros idiomas, a definição de letras do Unicode inclui caracteres latinos de a até z e de A até Z.  
   
     -   O sublinhado (_).  
   
 2.  Os caracteres subsequentes podem ser:  
   
-    -   Letras, como definido no Unicode Standard 2.0.  
+    -   As letras, conforme definido no padrão Unicode 2,0.  
   
     -   Números decimais do latim básico ou outros scripts nacionais.  
   
     -   O sublinhado (_).  
   
-3.  O identificador não deve ser uma palavra-chave MDX reservada. As palavras-chave reservadas fazem diferenciação entre maiúsculas e minúsculas em MDX. Para obter mais informações, consulte [palavras-chave reservadas &#40;sintaxe de MDX&#41;](../mdx/reserved-keywords-mdx-syntax.md).  
+3.  O identificador não deve ser uma palavra-chave MDX reservada. As palavras-chave reservadas fazem diferenciação entre maiúsculas e minúsculas em MDX. Para obter mais informações, consulte [sintaxe &#40;&#41;MDX de palavras-chave reservadas](../mdx/reserved-keywords-mdx-syntax.md).  
   
 4.  Não são permitidos espaços ou caracteres especiais.  
   
@@ -75,11 +75,11 @@ ms.locfileid: "68105411"
 > [!NOTE]  
 >  Delimitadores são apenas para identificadores. Os delimitadores não podem ser utilizados para palavras-chave, estejam elas marcadas ou não como reservadas no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- Você pode usar um identificador delimitado nas seguintes situações:  
+ Você usa um identificador delimitado nas seguintes situações:  
   
 -   Quando o nome de um objeto ou parte do nome usar palavras reservadas.  
   
-     Recomendamos que palavras-chave reservadas não sejam usadas como nomes de objeto. Bancos de dados atualizados de versões anteriores do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] podem conter identificadores que incluem palavras não reservadas na versão anterior, mas agora são reservados. Até que seja possível alterar o identificador do objeto, você pode fazer referência ao objeto usando um identificador delimitado.  
+     Recomendamos que palavras-chave reservadas não sejam usadas como nomes de objeto. Os bancos de dados atualizados de versões anteriores [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] do podem conter identificadores que incluem palavras não reservadas na versão anterior, mas agora estão reservados. Até que seja possível alterar o identificador do objeto, você pode fazer referência ao objeto usando um identificador delimitado.  
   
 -   Quando o nome de um objeto usa caracteres não listados como identificadores qualificados.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "68105411"
  O colchete esquerdo antes de `Domestic` não precisou ser alterado para criar o identificador delimitado. Porém, o colchete direito depois de `Domestic` precisou ser substituído por dois colchetes direitos.  
   
 ### <a name="delimiting-identifiers-with-multiple-parts"></a>Identificadores delimitados com várias partes  
- Ao usar nomes de objeto qualificado pode ter que delimitar mais de um dos identificadores que compõem o nome do objeto. Por exemplo, o identificador Front Brakes no código a seguir precisa ser delimitado.  
+ Ao usar nomes de objetos qualificados, talvez seja necessário delimitar mais de um dos identificadores que compõem o nome do objeto. Por exemplo, o identificador Front Brakes no código a seguir precisa ser delimitado.  
   
  SELECT [Measures].MEMBERS ON COLUMNS,  
   
@@ -124,7 +124,7 @@ ms.locfileid: "68105411"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência da linguagem MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [Elementos de sintaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
+ [Elementos &#40;de sintaxe MDX MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

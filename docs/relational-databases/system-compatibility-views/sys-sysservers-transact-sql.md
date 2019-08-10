@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03875d828940a2baa5d9f30f7beb58adb77abf07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 333be9cb6c86c1db3801ac50159610c6d19d1611
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018110"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941108"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68018110"
 |**srvproduct**|**sysname**|Nome de produto do servidor remoto.|  
 |**providername**|**nvarchar(128)**|Nome do provedor OLE DB para acesso a este servidor.|  
 |**datasource**|**nvarchar(4000)**|Valor de fonte de dados OLE DB.|  
-|**Local**|**nvarchar(4000)**|Valor local de OLE DB.|  
+|**local**|**nvarchar(4000)**|Valor local de OLE DB.|  
 |**providerstring**|**nvarchar(4000)**|Valor de cadeia de caracteres do provedor OLE DB.|  
 |**schemadate**|**datetime**|Data da última atualização da linha.|  
 |**topologyx**|**int**|Não usado.|  
@@ -54,22 +54,22 @@ ms.locfileid: "68018110"
 |**querytimeout**|**int**|Configuração de tempo limite para a consultas no servidor.|  
 |**srvnetname**|**char(30)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**isremote**|**bit**|1 = Servidor é um servidor remoto.<br /><br /> 0 = Servidor é um servidor vinculado.|  
-|**rpc**|**bit**|1 = **sp_serveroption@rpc** definido como **verdadeira** ou **em**.<br /><br /> 0 = **sp_serveroption@rpc** definido como **falso** ou **off**.|  
-|**pub**|**bit**|1 = **sp_serveroption@pub** definido como **verdadeira** ou **em**.<br /><br /> 0 = **sp_serveroption@pub** definido como **falso** ou **off**.|  
-|**sub**|**bit**|1 = **sp_serveroption@sub** definido como **verdadeira** ou **em**.<br /><br /> 0 = **sp_serveroption@sub** definido como **falso** ou **off**.|  
-|**dist**|**bit**|1 = **sp_serveroption@dist** definido como **verdadeira** ou **em**.<br /><br /> 0 = **sp_serveroption@dist** definido como **falso** ou **off**.|  
-|**dpub**|**bit**|1 = **sp_serveroption@dpub** definido como **verdadeira** ou **em**.<br /><br /> 0 = **sp_serveroption@dpub** definido como **falso** ou **off**.|  
-|**rpcout**|**bit**|1 =  **sp_serveroption@rpc out** definido como **verdadeira** ou **em**.<br /><br /> 0 =  **sp_serveroption@rpc out** definido como **falso** ou **off**.|  
-|**dataaccess**|**bit**|1 =  **sp_serveroption@data acesso** definido como **verdadeira** ou **em**.<br /><br /> 0 =  **sp_serveroption@data acesso** definido como **falso** ou **off**.|  
-|**collationcompatible**|**bit**|1 =  **sp_serveroption@collation compatível** definido como **verdadeira** ou **em**.<br /><br /> 0 =  **sp_serveroption@collation compatível** definido como **falso** ou **off**.|  
-|**system**|**bit**|1 = **sp_serveroption@system** definido como **verdadeira** ou **em**.<br /><br /> 0 = **sp_serveroption@system** definido como **falso** ou **off**.|  
-|**useremotecollation**|**bit**|1 =  **sp_serveroption@remote agrupamento** definido como **verdadeira** ou **em**.<br /><br /> 0 =  **sp_serveroption@remote agrupamento** definido como **falso** ou **off**.|  
-|**lazyschemavalidation**|**bit**|1 =  **sp_serveroption@lazy validação de esquema** definido como **verdadeira** ou **em**.<br /><br /> 0 =  **sp_serveroption@lazy validação de esquema** definido como **falso** ou **off**.|  
-|**Agrupamento**|**sysname**|Agrupamento do servidor conforme definido pela  **sp_serveroption@collation nome**.|  
+|**rpc**|**bit**|1 = **sp_serveroption\@RPC** definido como **true** ou **on**.<br /><br /> 0 = **sp_serveroption\@RPC** definido como **false** ou **off**.|  
+|**pub**|**bit**|1 = **sp_serveroption\@pub** definido como **true** ou **on**.<br /><br /> 0 = **sp_serveroption\@pub** definido como **false** ou **off**.|  
+|**sub**|**bit**|1 = **sp_serveroption\@sub** definida como **true** ou **on**.<br /><br /> 0 = **sp_serveroption\@sub** definida como **false** ou **off**.|  
+|**dist**|**bit**|1 = **sp_serveroption\@dist** definida como **true** ou **on**.<br /><br /> 0 = **sp_serveroption\@dist** definido como **false** ou **off**.|  
+|**dpub**|**bit**|1 = **sp_serveroption\@dpub** definido como **true** ou **on**.<br /><br /> 0 = **sp_serveroption\@dpub** definido como **false** ou **off**.|  
+|**rpcout**|**bit**|1 = **sp_serveroption\@RPC out** definido como **true** ou **on**.<br /><br /> 0 = **sp_serveroption\@RPC out** definido como **false** ou **off**.|  
+|**dataaccess**|**bit**|1 = **sp_serveroption\@Data Access** definido como **true** ou **on**.<br /><br /> 0 = **sp_serveroption\@Data Access** definido como **false** ou **off**.|  
+|**collationcompatible**|**bit**|1 = **conjunto\@compatível com agrupamento sp_serveroption** definido como **true** ou **on**.<br /><br /> 0 = **conjunto\@compatível com agrupamento sp_serveroption** definido como **false** ou **off**.|  
+|**system**|**bit**|1 = **sistema\@sp_serveroption** definido como **true** ou **on**.<br /><br /> 0 = **sistema\@sp_serveroption** definido como **false** ou **off**.|  
+|**useremotecollation**|**bit**|1 = **agrupamento\@remoto sp_serveroption** definido como **true** ou **on**.<br /><br /> 0 = **sp_serveroption\@agrupamento remoto** definido como **false** ou **off**.|  
+|**lazyschemavalidation**|**bit**|1 = **validação\@de esquema lenta sp_serveroption** definida como **true** ou **on**.<br /><br /> 0 = **sp_serveroption\@validação de esquema lenta** definida como **false** ou **off**.|  
+|**Agrupamento**|**sysname**|Agrupamento de servidor conforme definido **pelo\@nome de agrupamento sp_serveroption**.|  
 |**nonsqlsub**|bit|0 = server é uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 1 = server não é uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
 ## <a name="see-also"></a>Consulte também  
- [Mapeando tabelas do sistema para exibições do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Mapeando tabelas do sistema para &#40;exibições do sistema TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Exibições de compatibilidade &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   
