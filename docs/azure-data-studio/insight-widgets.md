@@ -1,7 +1,7 @@
 ---
-title: Usar os widgets de Insights no estúdio de dados do Azure para monitorar servidores e bancos de dados
+title: Usar widgets de Insights no Azure Data Studio para monitorar servidores e bancos de dados
 titleSuffix: Azure Data Studio
-description: Saiba mais sobre os widgets de Insights no estúdio de dados do Azure
+description: Saiba mais sobre widgets de insights no Azure Data Studio
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
 ms.prod: sql
@@ -11,48 +11,48 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c1ab90efa97878676b1adc2a62579527407d6ba6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959521"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gerenciar servidores e bancos de dados com os widgets de Insights em [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gerenciar servidores e bancos de dados com widgets de insights no [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Widgets de Insights levar as consultas Transact-SQL (T-SQL) que você usa para monitorar os servidores e bancos de dados e as transforma em visualizações interessantes.
+Os widgets de insight usam as consultas Transact-SQL (T-SQL) que você usa para monitorar servidores e bancos de dados e as transforma em visualizações repletas de insights.
 
-Insights são personalizáveis de gráficos que você adiciona ao servidor e painéis de monitoramento de banco de dados. Exibir informações de uma visão geral de seus servidores e bancos de dados, em seguida, analisar os detalhes mais e iniciar ações de gerenciamento que você definir.
+Os insights são quadros e gráficos personalizáveis que você adiciona aos painéis de monitoramento de servidor e de banco de dados. Veja insights rápidos sobre seus servidores e bancos de dados e, em seguida, aprofunde-se em mais detalhes e inicie as ações de gerenciamento que você definir.
 
-Você pode compilar awesome banco de dados e servidor de gerenciamento painéis semelhantes ao exemplo a seguir:
+Você pode criar painéis de gerenciamento de servidor e de banco de dados incríveis semelhantes ao exemplo a seguir:
 
-![Painel de banco de dados](media/insight-widgets/database-dashboard.png)
+![painel de banco de dados](media/insight-widgets/database-dashboard.png)
 
 
-Para entrar e iniciar a criação de diferentes tipos de widgets de Insights, confira os tutoriais a seguir:
+Para começar a criar diferentes tipos de widgets de insights, confira os seguintes tutoriais:
 
-- [Criar um widget de visão personalizada](tutorial-build-custom-insight-sql-server.md)
-- *Habilitar widgets de Insights internos*
-  - [Habilitar informações de monitoramento de desempenho](tutorial-qds-sql-server.md)
-  - [Habilitar o insight de uso do espaço de tabela](tutorial-table-space-sql-server.md)
+- [Criar um widget de insight personalizado](tutorial-build-custom-insight-sql-server.md)
+- *Habilitar widgets de insights internos*
+  - [Habilitar o insight de monitoramento de desempenho](tutorial-qds-sql-server.md)
+  - [Habilitar o insight de uso de espaço de tabela](tutorial-table-space-sql-server.md)
 
 
 ## <a name="sql-queries"></a>Consultas SQL
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] tenta evitar introduzir ainda outro usuário de idioma ou com uso intenso de interface para que ele tenta usar o T-SQL tanto quanto possível com a configuração mínima do JSON. Configurar os widgets de Insights com o T-SQL aproveita o incontáveis número de fontes de consultas T-SQL úteis que podem ser ativadas em widgets criteriosos existentes.
+O [!INCLUDE[name-sos](../includes/name-sos-short.md)] tenta evitar a introdução de mais um idioma ou interface do usuário pesada, assim, ele tenta usar o T-SQL o máximo possível com a configuração de JSON mínima. A configuração de widgets de insight com o T-SQL aproveita as incontáveis fontes existentes de consultas T-SQL úteis que podem ser transformadas em widgets mais sofisticados.
 
-Widgets de Insights são compostos de uma ou duas consultas do T-SQL:
-* *Consulta de widget de Insight* é obrigatório e é a consulta que retorna os dados exibidos no widget.
-* *Consulta de detalhes do Insight* é necessário apenas se você estiver criando uma página de detalhes de informações.
+Os widgets de insight são compostos por uma ou duas consultas T-SQL:
+* A *consulta do widget de insight* é obrigatória e é a consulta que retorna os dados que aparecem no widget.
+* A *consulta de detalhes do insight* só será necessária se você estiver criando uma página de detalhes de insight.
 
-Uma consulta de widget insight define um conjunto de dados que processa uma contagem, gráfico ou gráfico. Consulta de detalhes de informações é usada para listar informações de detalhe de informações relevante em um formato tabular no painel de detalhes de informações. 
+Uma consulta do widget de insight define um conjunto de dados que renderiza uma conta, um quadro ou um gráfico. A consulta de detalhes de insights é usada para listar informações relevantes de detalhes de insight em um formato tabular no painel de detalhes do insight. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] executa consultas de widget do insight e mapeia o conjunto de resultados de consulta ao conjunto de dados de um gráfico e renderiza-o. Quando os usuários abrem os detalhes de um insight, ele executa a consulta de detalhes do insight e imprime o resultado em uma exibição de grade, na caixa de diálogo.
+O [!INCLUDE[name-sos](../includes/name-sos-short.md)] executa consultas do widget de insight e mapeia o conjunto de resultados da consulta para o conjunto de dados do gráfico e então o renderiza. Quando os usuários abrem os detalhes de um insight, ele executa a consulta de detalhes do insight e imprime o resultado em um modo de exibição de grade dentro da caixa de diálogo.
 
-A ideia básica é escrever uma consulta T-SQL de uma forma para que possa ser usado como um conjunto de dados de uma contagem, o gráfico e o widget de gráfico. 
+A ideia básica é escrever uma consulta T-SQL de forma que possa ser usada como um conjunto de dados de um widget de contagem, quadro e gráfico. 
 
 ## <a name="summary"></a>Resumo
 
-A consulta T-SQL e seu conjunto de resultados determinam o comportamento de widget insight. Escrever uma consulta para um tipo de gráfico ou um tipo de gráfico à direita para a consulta existente de mapeamento é a principal consideração para criar um widget de insight em vigor.
+A consulta T-SQL e seu conjunto de resultados determina o comportamento do widget do insight. Escrever uma consulta para um tipo de gráfico ou mapear um tipo de gráfico correto para a consulta existente é a principal consideração para criar um widget de insight eficaz.
 
 
 

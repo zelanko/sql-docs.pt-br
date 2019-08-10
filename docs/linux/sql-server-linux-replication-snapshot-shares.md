@@ -1,6 +1,6 @@
 ---
-title: Configurar o compartilhamento de pasta instantâneo de replicação do SQL Server no Linux
-description: Este artigo descreve como configurar a replicação de SQL Server de compartilhamentos de pasta de instantâneo no Linux.
+title: Configurar compartilhamentos de pasta de instantâneo de Replicação do SQL Server em Linux
+description: Este artigo descreve como configurar compartilhamentos de pasta de instantâneo de Replicação do SQL Server em Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,40 +10,40 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2513511889c4bc22757f0970269fa9ee7b51857d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68093126"
 ---
 # <a name="configure-replication-snapshot-folder-with-shares"></a>Configurar a pasta de instantâneo de replicação com compartilhamentos
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-A pasta de instantâneo é um diretório que você designou como um compartilhamento de; os agentes que leem e gravam nessa pasta devem ter permissões suficientes para acessá-lo.
+A pasta de instantâneo é um diretório que você designou como um compartilhamento, agentes que leem essa pasta e gravam nela devem ter permissões suficientes para acessá-la.
 
 ![diagrama de replicação][1]
 
-### <a name="replication-snapshot-folder-share-explained"></a>Compartilhamento de pasta de instantâneo de replicação explicado
+### <a name="replication-snapshot-folder-share-explained"></a>Compartilhamento da pasta de instantâneo de replicação explicado
 
-Antes dos exemplos, vamos examinar como o SQL Server usa compartilhamentos samba na replicação. Abaixo está um exemplo básico de como isso funciona.
+Antes dos exemplos, vamos examinar como o SQL Server usa os compartilhamentos do Samba na replicação. Veja abaixo um exemplo básico de como isso funciona.
 
-1. Compartilhamentos Samba estão configurados que arquivos gravados `/local/path1` da replicação no publicador, os agentes podem ser vistos por assinante
-2. SQL Server está configurado para usar caminhos de compartilhamento ao configurar o publicador no servidor de distribuição, de modo que todas as instâncias teria esta aparência o `//share/path`
-3. SQL Server localiza o caminho local do `//share/path` saber onde procurar os arquivos
-4. Leituras e gravações do SQL Server para caminhos locais apoiado por um compartilhamento do samba
+1. Os compartilhamentos do Samba são configurados para que os arquivos gravados em `/local/path1` pelos agentes de replicação no publicador possam ser vistos pelo assinante
+2. O SQL Server está configurado para usar caminhos de compartilhamento ao configurar o publicador no servidor de distribuição, de modo que todas as instâncias examinariam o `//share/path`
+3. O SQL Server encontra o caminho local do `//share/path` para saber onde procurar os arquivos
+4. Leituras/gravações do SQL Server para caminhos locais apoiados por um compartilhamento do Samba
 
 
-## <a name="configure-a-samba-share-for-the-snapshot-folder"></a>Configurar um compartilhamento do samba para a pasta de instantâneo 
+## <a name="configure-a-samba-share-for-the-snapshot-folder"></a>Configurar um compartilhamento do Samba para a pasta de instantâneos 
 
-Agentes de replicação serão necessário um diretório compartilhado entre os hosts de replicação para acessar pastas de instantâneo em outros computadores. Por exemplo, na replicação transacional de recepção, o agente de distribuição reside no assinante, o que requer acesso ao distribuidor para obter artigos. Nesta seção, vamos examinar um exemplo de como configurar um compartilhamento do samba em dois hosts de replicação.
+Os agentes de replicação precisarão de um diretório compartilhado entre hosts de replicação para acessar pastas de instantâneo em outros computadores. Por exemplo, na replicação de pull transacional, o agente de distribuição reside no assinante, que requer acesso ao distribuidor para obter artigos. Nesta seção, examinaremos um exemplo de como configurar um compartilhamento do Samba em dois hosts de replicação.
 
 
 ## <a name="steps"></a>Etapas
 
-Por exemplo, configuraremos uma pasta de instantâneo no Host 1 (distribuidor) para ser compartilhado com o Host 2 (assinante) usando o Samba. 
+Como exemplo, configuraremos uma pasta de instantâneo no Host 1 (o distribuidor) para ser compartilhada com o Host 2 (o assinante) usando o Samba. 
 
-### <a name="install-and-start-samba-on-both-machines"></a>Instalar e iniciar o Samba nos dois computadores 
+### <a name="install-and-start-samba-on-both-machines"></a>Instalar e iniciar o Samba em ambos os computadores 
 
 No Ubuntu:
 
@@ -60,15 +60,15 @@ sudo service smb start
 sudo service smb status
 ```
 
-### <a name="on-host-1-distributor-set-up-the-samba-share"></a>Na configuração do Host 1 (distribuidor) o compartilhamento do Samba 
+### <a name="on-host-1-distributor-set-up-the-samba-share"></a>No Host 1 (distribuidor), configurar o compartilhamento do Samba 
 
-1. Usuário de configuração e a senha do samba:
+1. Configurar usuário e a senha para o Samba:
 
   ```bash
   sudo smbpasswd -a mssql 
   ```
 
-1. Editar o `/etc/samba/smb.conf` para incluir a seguinte entrada e preencha o *nome_do_compartilhamento* e *caminho* campos
+1. Edite `/etc/samba/smb.conf` o para incluir a seguinte entrada e preencha os campos *share_name* e *path*
  ```bash
   <[share_name]>
   path = </local/path/on/host/1>
@@ -89,9 +89,9 @@ sudo service smb status
   valid users = mssql   <- list of users who can login to this share
   ```
 
-### <a name="on-host-2-subscriber--mount-the-samba-share"></a>No Host 2 (assinante) montar o compartilhamento do Samba
+### <a name="on-host-2-subscriber--mount-the-samba-share"></a>No Host 2 (assinante), montar o compartilhamento do samba
 
-Edite o comando com os caminhos corretos e execute o seguinte comando em machine2:
+Edite o comando com os caminhos corretos e execute o seguinte comando no computador2:
 
   ```bash
   sudo mount //<name_of_host_1>/<share_name> </local/path/on/host/2> -o user=mssql,uid=mssql,gid=mssql
@@ -107,9 +107,9 @@ Edite o comando com os caminhos corretos e execute o seguinte comando em machine
   gid=mssql   <- sets the mssql group as the owner of the mounted directory
   ```
 
-### <a name="on-both-hosts--configure-sql-server-on-linux-instances-to-use-snapshot-share"></a>Em ambos os Hosts de configurar o SQL Server em instâncias do Linux para usar o compartilhamento de instantâneos
+### <a name="on-both-hosts--configure-sql-server-on-linux-instances-to-use-snapshot-share"></a>Nos dois hosts, configure instâncias do SQL Server em Linux para usar o compartilhamento de instantâneos
 
-Adicione a seguinte seção para `mssql.conf` nos dois computadores. Usar onde quer que o compartilhamento do samba para o / / / caminho do compartilhamento. Neste exemplo, seria `//host1/mssql_data`
+Adicione a seção a seguir a `mssql.conf` em ambos os computadores. Use o compartilhamento do Samba onde quer que ele esteja para o //share/path. Neste exemplo, isso seria `//host1/mssql_data`
 
   ```bash
   [uncmapping]
@@ -132,14 +132,14 @@ Adicione a seguinte seção para `mssql.conf` nos dois computadores. Usar onde q
   //host1/mssql_data = /local/path/on/hosts/2
   ```
 
-### <a name="configuring-publisher-with-shared-paths"></a>Publicador é configurado com caminhos de compartilhado
+### <a name="configuring-publisher-with-shared-paths"></a>Configurar o Publicador com caminhos compartilhados
 
 * Ao configurar a replicação, use o caminho de compartilhamentos (exemplo `//host1/mssql_data`
-* Mapa `//host1/mssql_data` para um diretório local e o mapeamento adicionado ao `mssql.conf`.
+* Mapeie `//host1/mssql_data` para um diretório local e o mapeamento adicionado a `mssql.conf`.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Conceitos: Replicação do SQL Server no Linux](sql-server-linux-replication.md)
+[Conceitos: Replicação do SQL Server em Linux](sql-server-linux-replication.md)
 
 [Procedimentos armazenados de replicação](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 

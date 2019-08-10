@@ -1,6 +1,6 @@
 ---
-title: Como configurar a memória persistente (PMEM) para SQL Server no Linux
-description: Este artigo fornece um passo a passo para configurar PMEM no Linux.
+title: Como configurar a PMEM (memória persistente) para SQL Server em Linux
+description: Este artigo fornece um passo a passo para configurar o PMEM no Linux.
 author: DBArgenis
 ms.author: argenisf
 ms.reviewer: vanto
@@ -10,32 +10,32 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4ed705b1b26193585a6278508ac98666d069418a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077559"
 ---
-# <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Como configurar a memória persistente (PMEM) para SQL Server no Linux
+# <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Como configurar a PMEM (memória persistente) para SQL Server em Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este artigo descreve como configurar a memória persistente (PMEM) para SQL Server no Linux. Suporte PMEM no Linux foi introduzido na versão prévia do SQL Server de 2019.
+Este artigo descreve como configurar a PMEM (memória persistente) para SQL Server em Linux. O suporte a PMEM no Linux foi introduzido na versão prévia do SQL Server 2019.
 
 ## <a name="overview"></a>Visão geral
 
-SQL Server 2016 introduziu o suporte para DIMMs não volátil, e uma otimização chamada [final do Log de armazenamento em cache no NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/). Essas otimizações reduzimos o número de operações necessárias para proteger um buffer de log para o armazenamento persistente. Isso aproveita o acesso direto do Windows Server para um dispositivo de memória persistente no modo DAX.
+O SQL Server 2016 introduziu o suporte para DIMMs não voláteis e uma otimização chamada [Parte final do cache de log no NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/). Essas otimizações reduziram o número de operações necessárias para proteger um buffer de log para o armazenamento persistente. Isso se beneficia do acesso direto do Windows Server a um dispositivo de memória persistente no modo DAX.
 
-Visualização do SQL Server 2019 estende o suporte para memória persistente dispositivos (PMEM) para Linux, fornecendo iluminismo completo dos arquivos de log de transações e dados colocados em PMEM. Iluminismo refere-se para o método de acesso ao dispositivo de armazenamento usando o espaço de usuário eficiente `memcpy()` operações. Em vez de contínuo por meio da pilha de armazenamento e sistema de arquivos, SQL Server aproveita o suporte DAX no Linux para colocar os dados diretamente em dispositivos, o que reduz a latência.
+A versão prévia do SQL Server 2019 estende o suporte para dispositivos PMEM (Memória Persistente) ao Linux, fornecendo capacitação completa de arquivos de log de transações e de dados colocados na PMEM. O esclarecimento refere-se ao método de acesso ao dispositivo de armazenamento usando operações `memcpy()` de espaço de usuário eficientes. Em vez de passar pelo sistema de arquivos e pela pilha de armazenamento, o SQL Server se beneficia do suporte a DAX no Linux para posicionar dados diretamente em dispositivos, o que reduz a latência.
 
-## <a name="enable-enlightenment-of-database-files"></a>Habilitar iluminismo dos arquivos de banco de dados
-Para habilitar iluminismo dos arquivos de banco de dados no SQL Server no Linux, siga as etapas a seguir:
+## <a name="enable-enlightenment-of-database-files"></a>Habilitar a capacitação dos arquivos de banco de dados
+Para habilitar o esclarecimento dos arquivos de banco de dados no SQL Server em Linux, siga as seguintes etapas:
 
 1. Configure os dispositivos.
 
-  No Linux, use o `ndctl` utilitário.
+  No Linux, use o utilitário `ndctl`.
 
-  - Instalar `ndctl` Configurar dispositivo PMEM. Você pode encontrá-lo [aqui](https://docs.pmem.io/getting-started-guide/installing-ndctl).
+  - Instale `ndctl` para configurar o dispositivo PMEM. Você pode encontrá-lo [aqui](https://docs.pmem.io/getting-started-guide/installing-ndctl).
   - Use [ndctl] para criar um namespace.
 
   ```bash 
@@ -43,9 +43,9 @@ Para habilitar iluminismo dos arquivos de banco de dados no SQL Server no Linux,
   ```
 
   >[!NOTE]
-  >Se você estiver usando `ndctl` versão inferior a 59, use `--mode=memory`.
+  >Se você estiver usando uma versão de `ndctl` inferior a 59, use `--mode=memory`.
 
-  Use `ndctl` para verificar se o namespace. Saída de exemplo a seguir:
+  Use `ndctl` para verificar o namespace. Após a saída de exemplo, segue:
 
 ```bash
 ndctl list
@@ -77,12 +77,12 @@ ndctl list
     mount -o dax,noatime /dev/pmem0 /mnt/dax
     ```
 
-  Depois que o dispositivo foi configurado com ndctl, formatado e montado, você pode colocar arquivos de banco de dados nele. Você também pode criar um novo banco de dados 
+  Depois que o dispositivo tiver sido configurado com ndctl, formatado e montado, você poderá colocar arquivos de banco de dados nele. Também é possível criar um banco de dados 
 
-1. Como os dispositivos PMEM são O_DIRECT seguro, habilite o sinalizador de rastreamento 3979 para desabilitar o mecanismo de liberação forçado. Este sinalizador de rastreamento é um sinalizador de rastreamento de inicialização e como tal, precisa ser habilitado usando o utilitário mssql-conf. Observe que essa é uma alteração de configuração do servidor, e você não deve usar este sinalizador de rastreamento se você tiver quaisquer dispositivos sem conformidade O_DIRECT que precisam o mecanismo de liberação forçado para garantir a integridade dos dados. Para obter mais informações, consulte https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
+1. Já que o uso de O_DIRECT é seguro nos dispositivos PMEM, habilite o sinalizador de rastreamento 3979 para desabilitar o mecanismo de liberação forçada. Esse sinalizador de rastreamento é de inicialização e, como tal, precisa ser habilitado usando o utilitário mssql-conf. Observe que essa é uma alteração de configuração de todo o servidor e você não deverá usar esse sinalizador de rastreamento se tiver qualquer dispositivo em não conformidade com O_DIRECT que precise do mecanismo de liberação forçada para assegurar a integridade dos dados. Para obter mais informações, confira https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
 
 1. Reinicie o SQL Server.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre o SQL Server no Linux, consulte [SQL Server no Linux](sql-server-linux-overview.md).
+Para obter mais informações sobre o SQL Server em Linux, confira [SQL Server em Linux](sql-server-linux-overview.md).

@@ -1,7 +1,7 @@
 ---
-title: Conectar o Spark para o SQL Server
+title: Conectar o Spark ao SQL Server
 titleSuffix: SQL Server big data clusters
-description: Saiba como usar o conector do Spark MSSQL no Spark para leitura e gravação para o SQL Server.
+description: Saiba como usar o Conector do Spark MSSQL no Spark para ler e gravar no SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
@@ -10,52 +10,52 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5b603e91e2dffae034dd9d66a1bcd3e5f812a308
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957839"
 ---
-# <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Como ler e gravar para o SQL Server no Spark usando o conector do Spark MSSQL
+# <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Como ler e gravar no SQL Server do Spark usando o Conector do Spark MSSQL
 
-Um padrão de uso de chave de dados grandes é alto volume de processamento de dados no Spark, seguido de gravar os dados no SQL Server para acesso a aplicativos de linha de negócios. Esses padrões de uso se beneficiar de um conector que utiliza otimizações importantes de SQL e fornece um mecanismo de gravação eficiente.
+Um padrão importante de uso de Big Data é o processamento de dados de alto volume no Spark, seguido pela gravação dos dados no SQL Server para acesso a aplicativos de linha de negócios. Esses padrões de uso se beneficiam de um conector que utiliza otimizações de SQL importantes e fornecem um mecanismo de gravação eficiente.
 
-Este artigo fornece um exemplo de como usar o conector do Spark MSSQL para ler e gravar nos seguintes locais dentro de um cluster de big data:
+Este artigo fornece um exemplo de como usar o conector do Spark MSSQL para ler e gravar nos seguintes locais em um cluster de Big Data:
 
-1. A instância mestre do SQL Server
-1. Pool de dados do SQL Server
+1. Na instância mestre do SQL Server
+1. No pool de dados SQL Server
 
-   ![Diagrama de conector do Spark MSSQL](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
+   ![No diagrama do conector do Spark MSSQL](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
 
 O exemplo executa as seguintes tarefas:
 
-- Ler um arquivo do HDFS e fazer algum processamento básico.
-- Gravar o dataframe em uma instância mestre do SQL Server como uma tabela SQL e, em seguida, ler a tabela a um dataframe.
-- Gravar o dataframe para um pool de dados do SQL Server como uma tabela externa do SQL e, em seguida, ler a tabela externa para um dataframe.
+- Leia um arquivo do HDFS e faça alguns processamentos básicos.
+- Grave o dataframe em uma instância mestre do SQL Server como uma tabela SQL e, em seguida, leia a tabela em um dataframe.
+- Grave o dataframe em um pool de dados do SQL Server como uma tabela SQL externa e, em seguida, leia a tabela externa em um dataframe.
 
-## <a name="mssql-spark-connector-interface"></a>Interface de conector do Spark MSSQL
+## <a name="mssql-spark-connector-interface"></a>Interface do Conector do Spark MSSQL
 
-Visualização do SQL Server 2019 fornece o **conector do Spark MSSQL** para big data clusters que usa em massa do SQL Server gravar APIs para o Spark SQL gravações. Conector do Spark MSSQL é baseado na fonte de dados do Spark APIs e fornece uma interface familiar do conector Spark JDBC. Para parâmetros de interface, consulte [documentação do Apache Spark](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). O conector do Spark MSSQL é referenciado pelo nome da **com.microsoft.sqlserver.jdbc.spark**.
+A versão prévia do SQL Server 2019 fornece o **conector do Spark MSSQL** para clusters de Big Data que usam APIs de gravação em massa do SQL Server para gravações do Spark para SQL. O conector do Spark MSSQL é baseado em APIs de fonte de dados do Spark e fornece uma interface de conector JDBC do Spark familiar. Para parâmetros de interface, confira a [documentação do Apache Spark](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). O conector do Spark MSSQL é referenciado pelo nome **com.microsoft.sqlserver.jdbc.spark**.
 
-A tabela a seguir descreve os parâmetros de interface que foram alterados ou novos:
+A tabela a seguir descreve os parâmetros de interface que foram alterados ou são novos:
 
 | Nome da propriedade | Opcional | Descrição |
 |---|---|---|
-| **isolationLevel** | Sim | Descreve o nível de isolamento da conexão. É o padrão para o conector MSSQLSpark **READ_COMMITTED** |
+| **isolationLevel** | Sim | Isso descreve o nível de isolamento da conexão. O padrão para o conector do Spark MSSQL é **READ_COMMITTED** |
 
-O conector usa em massa do SQL Server gravar APIs. Qualquer gravação em massa parâmetros podem ser passados como parâmetros opcionais pelo usuário e são passados como-está pelo conector para a API subjacente. Para obter mais informações sobre em massa operações de gravação, consulte [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
+O conector usa APIs de gravação em massa do SQL Server. Os parâmetros de gravação em massa podem ser passados como parâmetros opcionais pelo usuário e passados no estado em que se encontram pelo conector para a API subjacente. Para obter mais informações sobre operações de gravação em massa, confira [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
-- Um [cluster de big data do SQL Server](deploy-get-started.md).
+- Um [cluster de Big Data do SQL Server](deploy-get-started.md).
 
-- [Dados do Azure Studio](https://aka.ms/azdata-insiders).
+- [Azure Data Studio](https://aka.ms/azdata-insiders).
 
 ## <a name="create-the-target-database"></a>Criar o banco de dados de destino
 
-1. Abra o Studio de dados do Azure, e [conectar-se à instância mestre do SQL Server do seu cluster de big data](connect-to-big-data-cluster.md).
+1. Abra o Azure Data Studio e [conecte-se à instância mestre do SQL Server do cluster de Big Data](connect-to-big-data-cluster.md).
 
-1. Criar uma nova consulta e execute o seguinte comando para criar um banco de dados de exemplo denominado **MinhaBaseDadosTeste**.
+1. Crie uma nova consulta e execute o comando a seguir para criar um banco de dados de exemplo chamado **MyTestDatabase**.
 
    ```sql
    Create DATABASE MyTestDatabase
@@ -66,28 +66,28 @@ O conector usa em massa do SQL Server gravar APIs. Qualquer gravação em massa 
 
 1. Baixe [AdultCensusIncome.csv](https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv) em seu computador local.
 
-1. Inicie o Studio de dados do Azure, e [se conectar ao seu cluster de big data](connect-to-big-data-cluster.md).
+1. Inicie o Azure Data Studio e [conecte-se ao cluster de Big Data](connect-to-big-data-cluster.md).
 
-1. Clique com botão direito na pasta do HDFS do seu cluster de big data e, em seguida, selecione **novo diretório**. Nomeie o diretório **spark_data**.
+1. Clique com o botão direito do mouse na pasta HDFS no cluster de Big Data e selecione **Novo diretório**. Nomeie o diretório **spark_data**.
 
-1. Clique com botão direito do **spark_data** diretório e selecione **carregar arquivos**. Carregar o **AdultCensusIncome.csv** arquivo.
+1. Clique com o botão direito do mouse no diretório **spark_data** e selecione **Fazer upload de arquivos**. Faça upload do arquivo **AdultCensusIncome.csv**.
 
    ![Arquivo CSV AdultCensusIncome](./media/spark-mssql-connector/spark_data.png)
 
-## <a name="run-the-sample-notebook"></a>Executar o notebook de exemplo
+## <a name="run-the-sample-notebook"></a>Executar um notebook de exemplo
 
-Para demonstrar o uso do conector do Spark MSSQL com esses dados, baixar um exemplo de notebook, abri-lo no estúdio de dados do Azure e executar cada bloco de código. Para obter mais informações sobre como trabalhar com blocos de anotações, consulte [como usar blocos de anotações na visualização do SQL Server 2019](notebooks-guidance.md).
+Para demonstrar o uso do conector do Spark MSSQL com esses dados, você pode baixar um notebook de exemplo, abri-lo no Azure Data Studio e executar cada bloco de código. Para obter mais informações sobre como trabalhar com notebooks, confira [Como usar notebooks na versão prévia do SQL Server 2019](notebooks-guidance.md).
 
-1. Em uma linha de comando do PowerShell ou bash, execute o comando a seguir para baixar o **mssql_spark_connector.ipynb** notebook de exemplo:
+1. Em uma linha de comando do PowerShell ou Bash, execute o seguinte comando para baixar o notebook de exemplo **mssql_spark_connector.ipynb**:
 
    ```PowerShell
    curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector.ipynb"
    ```
 
-1. No estúdio de dados do Azure, abra o arquivo do bloco de anotações de exemplo. Verifique se que ele está conectado ao seu Gateway HDFS/Spark para seu cluster de big data.
+1. No Azure Data Studio, abra o arquivo de notebook de exemplo. Verifique se ele está conectado ao seu gateway HDFS/Spark para o cluster de Big Data.
 
 1. Execute cada célula de código no exemplo para ver o uso do conector do Spark MSSQL.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre clusters de big data, consulte [como implantar grandes de dados do SQL Server clusters no Kubernetes](deployment-guidance.md)
+Para obter mais informações sobre os clusters de Big Data, confira [Como implantar clusters de Big Data do SQL Server no Kubernetes](deployment-guidance.md)

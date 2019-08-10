@@ -1,7 +1,7 @@
 ---
-title: Extensão do SQL Server Agent
+title: Extensão de SQL Server Agent
 titleSuffix: Azure Data Studio
-description: Instalar e usar a extensão do SQL Server Agent (versão prévia) para o Studio de dados do Azure
+description: Instale e use a extensão de SQL Server Agent (versão prévia) para o Azure Data Studio
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
@@ -11,43 +11,43 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 05356cc815fdba22d55ee339d60994f2c9423373
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959184"
 ---
-# <a name="sql-server-agent-extension-preview"></a>Extensão do SQL Server Agent (versão prévia)
+# <a name="sql-server-agent-extension-preview"></a>Extensão de SQL Server Agent (versão prévia)
 
-A extensão do SQL Server Agent (versão prévia) é uma extensão para gerenciar e solucionar problemas de configuração e os trabalhos do SQL Agent. Essa extensão está atualmente em versão prévia.
+A extensão de SQL Server Agent (versão prévia) é uma extensão para gerenciar e solucionar problemas de trabalhos e configuração do SQL Agent. Esta extensão está em versão prévia.
 
 As principais ações incluem:
-- Trabalhos do agente lista SQL Server configurados em um SQL Server
-- Exibir o histórico de trabalhos com os resultados de execução do trabalho
+- Listar trabalhos do SQL Server Agent configurados em um SQL Server
+- Exibir o histórico de trabalhos com os resultados da execução do trabalho
 - Controle de trabalho básico para iniciar e parar trabalhos
 
-## <a name="install-the-sql-server-agent-extension"></a>Instalar a extensão do SQL Server Agent
+## <a name="install-the-sql-server-agent-extension"></a>Instalar a extensão de SQL Server Agent
 
-1. Para abrir o Gerenciador de extensões e acessar as **extensões** disponíveis, selecione o ícone de extensões ou selecione extensões no menu **Exibição**.
-2. Selecione uma extensão disponível para exibir seus detalhes.
+1. Para abrir o gerenciador de extensões e acessar as extensões disponíveis, selecione o ícone de extensões ou selecione **Extensões** no menu **Exibir**.
+2. Selecione uma extensão disponível para exibir os detalhes.
 
-   ![Instalar agente](media/extensions/sql-server-agent-extension/install-sql-agent.png)
+   ![Instalar o agente](media/extensions/sql-server-agent-extension/install-sql-agent.png)
 
-1. Selecione a extensão desejada e **instale-a**.
-2. Selecione **Recarregar** para habilitar a extensão (necessário somente na primeira vez que você instalar uma extensão).
-1. Navegue até o painel de gerenciamento clicando duas vezes o seu servidor ou banco de dados e selecionando **gerenciar**.
-2. Extensões instaladas são exibidas como guias no seu painel de gerenciamento:
+1. Selecione a extensão que você deseja e **Instale**-a.
+2. Selecione **Recarregar** para habilitar a extensão (necessário apenas na primeira vez que você instala uma extensão).
+1. Navegue até o painel de gerenciamento clicando com o botão direito do mouse no servidor ou no banco de dados e selecionando **Gerenciar**.
+2. As extensões instaladas aparecem como guias no painel de gerenciamento:
 
-   ![Agente de modo de exibição](media/extensions/sql-server-agent-extension/view-sql-agent.png)
+   ![Exibir o agente](media/extensions/sql-server-agent-extension/view-sql-agent.png)
 
 ## <a name="view-jobs"></a>Exibir trabalhos
 
-Quando você se conecta à extensão do SQL Server Agent, a primeira coisa que você vê é uma lista de todos os seus trabalhos de agente.
+Quando você se conecta à extensão de SQL Server Agent, a primeira coisa que vê é uma lista de todos os seus trabalhos do Agent.
 
    ![Exibir trabalhos](media/extensions/sql-server-agent-extension/job-view.png)
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber mais sobre o SQL Server Agent, [verificar nossa documentação.](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent?view=sql-server-2017)
+Para saber mais sobre o SQL Server Agent, [confira nossa documentação](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent?view=sql-server-2017).
 
 

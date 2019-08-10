@@ -1,7 +1,7 @@
 ---
 title: APIs de extensibilidade
 titleSuffix: Azure Data Studio
-description: Saiba mais sobre as APIs de extensibilidade para o estúdio de dados do Azure
+description: Saiba mais sobre as APIs de extensibilidade para Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,26 +11,26 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 10ebcf94c673df4e8016ae2d0c84d7a5bd89824f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959622"
 ---
-# <a name="azure-data-studio-extensibility-apis"></a>APIs de extensibilidade do Studio de dados do Azure
+# <a name="azure-data-studio-extensibility-apis"></a>APIs de extensibilidade do Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] Fornece uma API que extensões podem usar para interagir com outras partes do Studio de dados do Azure, como o Pesquisador de objetos. Essas APIs estão disponíveis a partir de [ `src/sql/sqlops.d.ts` ](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.d.ts) de arquivo e são descritos abaixo.
+O [!INCLUDE[name-sos](../includes/name-sos.md)] fornece uma API que as extensões podem usar para interagir com outras partes do Azure Data Studio, como o Pesquisador de Objetos. Essas APIs estão disponíveis no arquivo [`src/sql/sqlops.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.d.ts) e são descritas abaixo.
 
-## <a name="connection-management"></a>Gerenciamento de Conexão
+## <a name="connection-management"></a>Gerenciamento de conexões
 `sqlops.connection`
 
 ### <a name="top-level-functions"></a>Funções de nível superior
 
-- `getCurrentConnection(): Thenable<sqlops.connection.Connection>` Obtém a conexão atual com base na seleção do Pesquisador de objetos ou editor ativo.
+- O `getCurrentConnection(): Thenable<sqlops.connection.Connection>` obtém a conexão atual com base no editor ativo ou na seleção do Pesquisador de Objetos.
 
-- `getActiveConnections(): Thenable<sqlops.connection.Connection[]>` Obtém uma lista de todos os as conexões do usuário que estão ativos. Retorna uma lista vazia se não houver nenhum tais conexões.
+- O `getActiveConnections(): Thenable<sqlops.connection.Connection[]>` obtém uma lista de todas as conexões do usuário que estão ativas. Retornará uma lista vazia se não houver essas conexões.
 
-- `getCredentials(connectionId: string): Thenable<{ [name: string]: string }>` Obtém um dicionário que contém as credenciais associadas a uma conexão. Eles caso contrário, seriam retornados como parte do dicionário opções sob um `sqlops.connection.Connection` objeto, mas são removidas do objeto. 
+- O `getCredentials(connectionId: string): Thenable<{ [name: string]: string }>` obtém um dicionário que contém as credenciais associadas a uma conexão. De outra forma, seriam retornados como parte do dicionário de opções `sqlops.connection.Connection` em um objeto, mas são removidos desse objeto. 
 
 ### `Connection`
 - `options: { [name: string]: string }` O dicionário de opções de conexão
@@ -64,16 +64,16 @@ credentials: {
 
 
 ### <a name="top-level-functions"></a>Funções de nível superior
-- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obtenha um nó do Pesquisador de objetos correspondente a determinada conexão e o caminho. Se nenhum caminho for fornecido, ele retorna o nó de nível superior para a determinada conexão. Não se houver nenhum nó no caminho especificado, ele retorna `undefined`. Observação: O `nodePath` para um objeto é gerado pelo back-end do serviço de ferramentas do SQL e é difícil construir manualmente. Melhorias futuras da API permitirá que você obter nós com base nos metadados que você fornece sobre o nó, como nome, tipo e esquema.
+- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obtenha um nó do Pesquisador de Objetos correspondente à conexão e ao caminho fornecidos. Se nenhum caminho for fornecido, ele retornará o nó de nível superior para a conexão especificada. Se não houver nenhum nó no caminho fornecido, ele retornará `undefined`. Observação: O `nodePath` para um objeto é gerado pelo back-end do Serviço de Ferramentas do SQL e é difícil de construir manualmente. Futuros aprimoramentos de API permitirão que você obtenha nós com base nos metadados fornecidos sobre o nó, como nome, tipo e esquema.
 
-- `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obter todos os nós de conexão do Pesquisador de objetos ativos.
+- `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obter todos os nós de conexão ativa do Pesquisador de Objetos.
 
-- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` Localize todos os nós do Pesquisador de objetos que correspondem aos metadados fornecidos. O `schema`, `database`, e `parentObjectNames` argumentos devem ser `undefined` quando eles não são aplicáveis. `parentObjectNames` é uma lista de objetos pai de banco de dados não, da mais alta para o nível mais baixo no Pesquisador de objetos, o que o objeto desejado está sob. Por exemplo, ao pesquisar por uma coluna "Coluna1" que pertence a uma tabela "schema1.table1" e o banco de dados "database1" com a ID de conexão `connectionId`, chame `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`. Consulte também o [lista de tipos que suporta o estúdio de dados do Azure por padrão](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API) para essa chamada à API.
+- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` Localiza todos os nós do Pesquisador de Objetos que correspondem aos metadados especificados. Os argumentos `schema`, `database` e `parentObjectNames` devem ser `undefined` quando não são aplicáveis. O `parentObjectNames` é uma lista de objetos pai que não são do banco de dados, do nível mais alto ao mais baixo no Pesquisador de Objetos, sob o qual o objeto desejado está. Por exemplo, ao procurar uma coluna "column1" que pertença a uma tabela "schema1.table1" e ao banco de dados "database1" com a ID de conexão `connectionId`, chame `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`. Confira também a [lista de tipos compatíveis por padrão com o Azure Data Studio](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API) para essa chamada à API.
 
 ### <a name="objectexplorernode"></a>ObjectExplorerNode
-- `connectionId: string` A id da conexão que o nó existe sob
+- `connectionId: string` A ID da conexão sob a qual o nó existe
 
-- `nodePath: string` O caminho do nó, conforme usado para chamar o `getNode` função.
+- `nodePath: string` O caminho do nó, conforme usado para chamar a função `getNode`.
 
 - `nodeType: string` Uma cadeia de caracteres que representa o tipo do nó
 
@@ -81,23 +81,23 @@ credentials: {
 
 - `nodeStatus: string` Uma cadeia de caracteres que representa o status do nó
 
-- `label: string` O rótulo do nó como ele aparece no Pesquisador de objetos
+- `label: string` O rótulo do nó como ele aparece no Pesquisador de Objetos
 
 - `isLeaf: boolean` Se o nó é um nó folha e, portanto, não tem filhos
 
-- `metadata: sqlops.ObjectMetadata` Metadados que descrevem o objeto representado por este nó
+- `metadata: sqlops.ObjectMetadata` Metadados que descrevem o objeto representado por esse nó
 
 - `errorMessage: string` Mensagem mostrada se o nó está em um estado de erro
 
-- `isExpanded(): Thenable<boolean>` Se o nó está atualmente expandido no Pesquisador de objetos
+- `isExpanded(): Thenable<boolean>` Se o nó está atualmente expandido no Pesquisador de Objetos
 
-- `setExpandedState(expandedState: vscode.TreeItemCollapsibleState): Thenable<void>` Defina se o nó é expandido ou recolhido. Se o estado é definido como None, o nó não será alterado.
+- `setExpandedState(expandedState: vscode.TreeItemCollapsibleState): Thenable<void>` Defina se o nó está expandido ou recolhido. Se o estado for definido como Nenhum, o nó não será alterado.
 
-- `setSelected(selected: boolean, clearOtherSelections?: boolean): Thenable<void>` Defina se o nó é selecionado. Se `clearOtherSelections` for true, desmarque todas as outras seleções ao fazer a nova seleção. Se for false, deixe as seleções existentes. `clearOtherSelections` o padrão é true quando `selected` é true e false quando `selected` é false.
+- `setSelected(selected: boolean, clearOtherSelections?: boolean): Thenable<void>` Defina se o nó está selecionado. Se `clearOtherSelections` for verdadeiro, desmarque as outras seleções ao fazer a nova seleção. Se for falso, deixe as seleções existentes. `clearOtherSelections` usa verdadeiro como padrão quando `selected` é verdadeiro e falso quando `selected` é falso.
 
-- `getChildren(): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` Obter todos os filhos nós deste nó. Retorna uma lista vazia se não houver nenhum filho.
+- `getChildren(): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` Obtenha todos os nós filho deste nó. Retornará uma lista vazia se não houver nenhum filho.
 
-- `getParent(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obtém o nó pai deste nó. Retorna indefinido se não houver nenhum pai.
+- `getParent(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obtenha o nó pai deste nó. Retornará indefinido se não houver nenhum pai.
 
 ### <a name="example-code"></a>Código de exemplo
 
@@ -157,8 +157,8 @@ vscode.commands.registerCommand('mssql.objectexplorer.interact', () => {
 });
 ```
 
-## <a name="proposed-apis"></a>APIs de proposta
+## <a name="proposed-apis"></a>APIs propostas
 
-Adicionamos APIs propostas para permitir extensões exibir a interface do usuário personalizada em guias de documento, entre outros recursos, assistentes e caixas de diálogo. Consulte a [propostas no arquivo tipos API](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.proposed.d.ts) para obter mais documentação, porém lembre-se que essas APIs estão sujeitos a alterações a qualquer momento. Exemplos de como usar algumas dessas APIs podem ser encontrados na [extensão de exemplo "sqlservices"](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices).
+Adicionamos APIs propostas para permitir que as extensões exibam a interface do usuário personalizada em caixas de diálogo, assistentes e guias de documentos, entre outros recursos. Confira o [arquivo de tipos de API propostos](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.proposed.d.ts) para obter mais documentação, mas lembre-se de que essas APIs estão sujeitas a alterações a qualquer momento. Exemplos de como usar algumas dessas APIs podem ser encontrados na [extensão de exemplo "SqlServices"](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices).
 
 

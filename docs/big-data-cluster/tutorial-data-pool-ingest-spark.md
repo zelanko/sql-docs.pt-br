@@ -1,7 +1,7 @@
 ---
-title: Ingestão de dados com trabalhos do Spark
+title: Ingerir dados com trabalhos do Spark
 titleSuffix: SQL Server big data clusters
-description: Este tutorial demonstra como ingestão de dados para o pool de dados de um cluster de big data de 2019 do SQL Server (versão prévia) usando trabalhos do Spark no estúdio de dados do Azure.
+description: Este tutorial demonstra como ingerir dados no pool de dados de um cluster de Big Data do SQL Server 2019 (versão prévia) usando trabalhos do Spark no Azure Data Studio.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
@@ -10,47 +10,47 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 6d0ea6d4fb7a3aea9788c089ad68cb3bf523837f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957811"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Ingestão de dados para um pool de dados do SQL Server com trabalhos do Spark
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Ingerir dados em um pool de dados do SQL Server com trabalhos do Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este tutorial demonstra como usar trabalhos do Spark para carregar dados do [pool de dados](concept-data-pool.md) de um cluster de big data do SQL Server 2019 (visualização). 
+Este tutorial demonstra como usar trabalhos do Spark para carregar dados no [pool de dados](concept-data-pool.md) de um cluster de Big Data do SQL Server 2019 (versão prévia). 
 
-Neste tutorial, você aprenderá como:
+Neste tutorial, você aprenderá a:
 
 > [!div class="checklist"]
-> * Crie uma tabela externa no pool de dados.
+> * Criar uma tabela externa no pool de dados.
 > * Crie um trabalho do Spark para carregar dados do HDFS.
-> * Consulte os resultados na tabela externa.
+> * Consultar os resultados na tabela externa.
 
 > [!TIP]
-> Se você preferir, você pode baixar e executar um script para os comandos neste tutorial. Para obter instruções, consulte a [exemplos de pools de dados](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) no GitHub.
+> Se preferir, você poderá baixar e executar um script para os comandos neste tutorial. Para obter instruções, confira os [Exemplos de pools de dados](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) no GitHub.
 
 ## <a id="prereqs"></a> Pré-requisitos
 
-- [Ferramentas de big data](deploy-big-data-tools.md)
+- [Ferramentas de Big Data](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
-   - **Extensão do SQL Server de 2019**
-- [Carregar dados de exemplo no seu cluster de big data](tutorial-load-sample-data.md)
+   - **Extensão do SQL Server 2019**
+- [Carregar dados de exemplo em seu cluster de Big Data](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Criar uma tabela externa no pool de dados
 
-As seguintes etapas criam uma tabela externa no pool de dados chamado **web_clickstreams_spark_results**. Esta tabela, em seguida, pode ser usada como um local para ingerir dados para o cluster de big data.
+As etapas a seguir criam uma tabela externa no pool de dados chamado **web_clickstreams_spark_results**. Essa tabela pode ser usada como uma localização para ingerir dados no cluster de Big Data.
 
-1. No estúdio de dados do Azure, conecte-se à instância mestre do SQL Server do seu cluster de big data. Para obter mais informações, consulte [conectar-se a instância mestre do SQL Server](connect-to-big-data-cluster.md#master).
+1. No Azure Data Studio, conecte-se à instância mestre do SQL Server do cluster de Big Data. Para obter mais informações, confira [Conectar-se à instância mestre do SQL Server](connect-to-big-data-cluster.md#master).
 
-1. Clique duas vezes em que a conexão na **servidores** janela para mostrar o painel do servidor para a instância mestre do SQL Server. Selecione **nova consulta**.
+1. Clique duas vezes na conexão na janela **Servidores** para mostrar o painel do servidor da instância mestre do SQL Server. Selecione **Nova Consulta**.
 
-   ![Consulta de instância mestre do SQL Server](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
+   ![Consulta da instância mestre do SQL Server](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
-1. Crie uma fonte de dados externa ao pool de dados se ele ainda não existir.
+1. Crie uma fonte de dados externos para o pool de dados se ela ainda não existir.
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
@@ -58,7 +58,7 @@ As seguintes etapas criam uma tabela externa no pool de dados chamado **web_clic
      WITH (LOCATION = 'sqldatapool://controller-svc/default');
    ```
 
-1. Criar uma tabela externa chamada **web_clickstreams_spark_results** no pool de dados.
+1. Crie uma tabela externa chamada **web_clickstreams_spark_results** no pool de dados.
 
    ```sql
    USE Sales
@@ -73,29 +73,29 @@ As seguintes etapas criam uma tabela externa no pool de dados chamado **web_clic
       );
    ```
   
-1. No CTP 3.1, a criação do pool de dados é assíncrona, mas não há nenhuma maneira de determinar quando ela for concluída ainda. Aguarde dois minutos verificar se que o pool de dados é criado antes de continuar.
+1. No CTP 3.1, a criação do pool de dados é assíncrona, mas ainda não há como determinar quando ele é concluído. Aguarde dois minutos para verificar se o pool de dados foi criado antes de continuar.
 
 ## <a name="start-a-spark-streaming-job"></a>Iniciar um trabalho de streaming do Spark
 
-A próxima etapa é criar um trabalho que carrega dados de sequência de cliques da web do pool de armazenamento (HDFS) de streaming do Spark para a tabela externa que você criou no pool de dados.
+A próxima etapa é criar um trabalho de streaming do Spark que carregue dados de cliques da Web do pool de armazenamento (HDFS) na tabela externa que você criou no pool de dados.
 
-1. No estúdio de dados do Azure, conecte-se à instância mestre do seu cluster de big data. Para obter mais informações, consulte [conectar-se a um cluster de big data](connect-to-big-data-cluster.md).
+1. No Azure Data Studio, conecte-se à instância mestre do cluster de Big Data. Para obter mais informações, confira [Conectar-se a um cluster de Big Data](connect-to-big-data-cluster.md).
 
-1. Clique duas vezes na conexão de gateway de HDFS/Spark na **servidores** janela. Em seguida, selecione **novo trabalho de Spark**.
+1. Clique duas vezes na conexão do gateway HDFS/Spark na janela **Servidores**. Em seguida, selecione **Novo Trabalho do Spark**.
 
    ![Novo trabalho do Spark](media/tutorial-data-pool-ingest-spark/hdfs-new-spark-job.png)
 
-1. No **novo trabalho** janela, digite um nome na **nome do trabalho** campo.
+1. Na janela **Novo Trabalho**, insira um nome no campo **Nome do trabalho**.
 
-1. No **arquivo Jar/Aj** lista suspensa, selecione **HDFS**. Em seguida, digite o seguinte caminho do arquivo jar:
+1. Na lista suspensa **Jar/py File**, selecione **HDFS**. Em seguida, insira o seguinte caminho de arquivo jar:
 
    ```text
    /jar/mssql-spark-lib-assembly-1.0.jar
    ```
 
-1. No **classe principal** , insira `FileStreaming`.
+1. No campo **Classe Principal**, digite `FileStreaming`.
 
-1. No **argumentos** , insira o texto a seguir, especificando a senha para a instância mestre do SQL Server no `<your_password>` espaço reservado. 
+1. No campo **Argumentos**, insira o texto a seguir, especificando a senha para a instância mestre do SQL Server no espaço reservado `<your_password>`. 
 
    ```text
    --server mssql-master-pool-0.service-master-pool --port 1433 --user sa --password <your_password> --database sales --table web_clickstreams_spark_results --source_dir hdfs:///clickstream_data --input_format csv --enable_checkpoint false --timeout 380000
@@ -105,32 +105,32 @@ A próxima etapa é criar um trabalho que carrega dados de sequência de cliques
 
    | Argumento | Descrição |
    |---|---|
-   | nome do servidor | Uso do SQL Server para ler o esquema da tabela |
-   | Número da porta | Porta SQL Server está escutando (padrão 1433) |
-   | Nome de Usuário | Nome de usuário de logon do SQL Server |
+   | nome do servidor | Uso do SQL Server para ler o esquema de tabela |
+   | número da porta | SQL Server da porta está escutando (padrão 1433) |
+   | username | Nome de usuário de logon do SQL Server |
    | password | Senha de logon do SQL Server |
    | nome do banco de dados | Banco de dados de destino |
-   | nome da tabela externa | Tabela a ser usada para obter os resultados |
-   | Diretório de origem de streaming | Isso deve ser um URI completo, como "hdfs: / / / clickstream_data" |
-   | formato de entrada | Isso pode ser "csv", "parquet" ou "json" |
-   | Habilitar o ponto de verificação | true ou false |
-   | timeout | tempo para executar o trabalho para em milissegundos antes de sair |
+   | nome da tabela externa | Tabela a ser usada para resultados |
+   | Diretório de origem para streaming | Esse deve ser um URI completo, como "hdfs:///clickstream_data" |
+   | formato de entrada | Pode ser "csv", "parquet" ou "json" |
+   | habilitar ponto de verificação | true ou false |
+   | tempo limite | tempo para executar o trabalho em milissegundos antes de sair |
 
-1. Pressione **enviar** para enviar o trabalho.
+1. Pressione **Enviar** para enviar o trabalho.
 
    ![Envio de trabalho do Spark](media/tutorial-data-pool-ingest-spark/spark-new-job-settings.png)
 
 ## <a name="query-the-data"></a>Consultar os dados
 
-As etapas a seguir mostram que o trabalho de streaming do Spark carregou os dados do HDFS para o pool de dados.
+As etapas a seguir mostram que o trabalho de streaming do Spark carregou os dados do HDFS no pool de dados.
 
-1. Antes de consultar os dados ingeridos, examine a saída do histórico de tarefa para ver que o trabalho foi concluído.
+1. Antes de consultar os dados ingeridos, examine a saída do histórico de tarefas para ver se o trabalho foi concluído.
 
    ![Histórico de trabalhos do Spark](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
 
-1. Retornar à janela de consulta de instância mestre do SQL Server que você abriu no início deste tutorial.
+1. Retorne à janela de consulta da instância mestre do SQL Server que você abriu no início deste tutorial.
 
-1. Execute a seguinte consulta para inspecionar os dados ingeridos.
+1. Execute a consulta a seguir para inspecionar os dados ingeridos.
 
    ```sql
    USE Sales
@@ -141,7 +141,7 @@ As etapas a seguir mostram que o trabalho de streaming do Spark carregou os dado
 
 ## <a name="clean-up"></a>Limpar
 
-Use o seguinte comando para remover os objetos de banco de dados criados neste tutorial.
+Use o comando a seguir para remover os objetos de banco de dados criados neste tutorial.
 
 ```sql
 DROP EXTERNAL TABLE [dbo].[web_clickstreams_spark_results];
@@ -149,6 +149,6 @@ DROP EXTERNAL TABLE [dbo].[web_clickstreams_spark_results];
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Saiba mais sobre como executar um bloco de anotações de exemplo no Studio de dados do Azure:
+Saiba mais sobre como executar um notebook de exemplo no Azure Data Studio:
 > [!div class="nextstepaction"]
-> [Executar um exemplo de notebook](tutorial-notebook-spark.md)
+> [Executar um notebook de exemplo](tutorial-notebook-spark.md)

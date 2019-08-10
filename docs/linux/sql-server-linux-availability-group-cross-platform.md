@@ -1,6 +1,6 @@
 ---
-title: Configurar o SQL Server sempre no grupo de disponibilidade no Windows e Linux
-description: Configurar o grupo de disponibilidade de servidor de SQL com réplicas em Windows e Linux.
+title: Configurar o Grupo de Disponibilidade Always On do SQL Server no Windows e no Linux
+description: Configure o Grupo de Disponibilidade do SQL Server com réplicas no Windows e no Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -11,55 +11,55 @@ ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: f6758760d8ea73d9ec0ac95a0e824a0fd46a6dbb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68045192"
 ---
-# <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Configurar SQL Server sempre no grupo de disponibilidade no Windows e Linux (plataformas)
+# <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Configurar o Grupo de Disponibilidade Always On do SQL Server no Windows e no Linux (multiplataforma)
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Este artigo explica as etapas para criar um sempre no grupo de disponibilidade (AG) com uma réplica em um servidor Windows e a outra réplica em um servidor Linux. Essa configuração é multiplataforma, pois as réplicas estão em diferentes sistemas operacionais. Use essa configuração para a migração de uma plataforma para outra ou recuperação de desastres (DR). Essa configuração não dá suporte a alta disponibilidade porque não há nenhuma solução de cluster para gerenciar uma configuração de plataforma cruzada. 
+Este artigo explica as etapas para criar um AG (grupo de disponibilidade) Always On com uma réplica em um Windows Server e a outra réplica em um servidor Linux. Essa configuração é multiplataforma porque as réplicas estão em sistemas operacionais diferentes. Use essa configuração para migrar de uma plataforma para a outra ou para DR (recuperação de desastre). Essa configuração não é compatível com alta disponibilidade porque não há solução de cluster para gerenciar uma configuração multiplataforma. 
 
-![Híbrido None](./media/sql-server-linux-availability-group-overview/image1.png)
+![Nenhum Híbrido](./media/sql-server-linux-availability-group-overview/image1.png)
 
-Antes de prosseguir, você deve estar familiarizado com a instalação e configuração para instâncias do SQL Server no Windows e Linux. 
+Antes de continuar, você deve estar familiarizado com a instalação e a configuração para instâncias do SQL Server no Windows e no Linux. 
 
 ## <a name="scenario"></a>Cenário
 
-Nesse cenário, dois servidores estiverem em diferentes sistemas operacionais. Windows Server 2016 chamado `WinSQLInstance` hospeda a réplica primária. Um servidor Linux chamado `LinuxSQLInstance` hospedar a réplica secundária.
+Neste cenário, dois servidores estão em sistemas operacionais diferentes. Um Windows Server 2016 chamado `WinSQLInstance` hospeda a réplica primária. Um servidor Linux chamado `LinuxSQLInstance` hospeda a réplica secundária.
 
-## <a name="configure-the-ag"></a>Configurar o grupo de disponibilidade 
+## <a name="configure-the-ag"></a>Configurar o AG 
 
-As etapas para criar o grupo de disponibilidade são o mesmo que as etapas para criar um grupo de disponibilidade para cargas de trabalho de escala de leitura. O tipo de cluster do grupo de disponibilidade é NONE, porque não há nenhum Gerenciador de cluster. 
+As etapas para criar o AG são as mesmas que para criar um AG para cargas de trabalho de escala de leitura. O tipo de cluster AG é NONE, porque não há gerenciador de cluster. 
 
    >[!NOTE]
-   >Para os scripts neste artigo, ângulo colchetes `<` e `>` identificar valores que você precisa substituir para o seu ambiente. Os colchetes angulares em si não são necessários para os scripts. 
+   >Para os scripts neste artigo, colchetes angulares `<` e `>` identificam os valores que você precisa substituir para o seu ambiente. Os colchetes angulares em si não são necessários para os scripts. 
 
-1. Instalar o SQL Server 2017 no Windows Server 2016, habilitar grupos de disponibilidade AlwaysOn do SQL Server Configuration Manager e configurar a autenticação de modo misto. 
+1. Instale o SQL Server 2017 no Windows Server 2016, habilite os Grupos de Disponibilidade Always On usando o SQL Server Configuration Manager e defina a autenticação de modo misto. 
 
    >[!TIP]
-   >Se você está validando essa solução no Azure, coloque ambos os servidores no mesma conjunto de disponibilidade para garantir que eles são separados no data center. 
+   >Se você estiver validando essa solução no Azure, coloque os dois servidores no mesmo conjunto de disponibilidade para garantir que eles estejam separados no data center. 
 
-   **Habilitar grupos de disponibilidade**
+   **Habilitar Grupos de Disponibilidade**
 
-   Para obter instruções, consulte [habilitar e desabilitar grupos de disponibilidade AlwaysOn (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).
+   Para obter instruções, confira [Habilitar e desabilitar Grupos de Disponibilidade AlwaysOn (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).
 
-   ![Habilitar grupos de disponibilidade](./media/sql-server-linux-availability-group-cross-platform/1-sqlserver-configuration-manager.png)
+   ![Habilitar Grupos de Disponibilidade](./media/sql-server-linux-availability-group-cross-platform/1-sqlserver-configuration-manager.png)
 
-   SQL Server Configuration Manager observa que o computador não é um nó em um cluster de failover. 
+   O SQL Server Configuration Manager observa que o computador não é um nó em um cluster de failover. 
 
-   Depois de habilitar grupos de disponibilidade, reinicie o SQL Server.
+   Depois de habilitar os Grupos de Disponibilidade, reinicie o SQL Server.
 
-   **Conjunto de autenticação de modo misto**
+   **Definir autenticação de modo misto**
 
-   Para obter instruções, consulte [alterar modo de autenticação de servidor](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure).
+   Para obter instruções, confira [Alterar o modo de autenticação do servidor](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure).
 
-1. Instale o SQL Server 2017 no Linux. Para obter instruções, consulte [instalar o SQL Server](sql-server-linux-setup.md). Habilitar `hadr` via mssql-conf.
+1. Instale o SQL Server 2017 no Linux. Para obter instruções, confira [Instalar o SQL Server](sql-server-linux-setup.md). Habilite `hadr` via mssql-conf.
 
-   Para habilitar `hadr` via mssql-conf em um prompt de shell, emita o seguinte comando:
+   Para habilitar o `hadr` via mssql-conf de um prompt de shell, emita o seguinte comando:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
@@ -67,15 +67,15 @@ As etapas para criar o grupo de disponibilidade são o mesmo que as etapas para 
 
    Depois de habilitar `hadr`, reinicie a instância do SQL Server.  
 
-   A imagem a seguir mostra essa etapa concluída.
+   A imagem a seguir mostra essa etapa completa.
 
-   ![Habilitar Linux de grupos de disponibilidade](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
+   ![Habilitar Grupos de Disponibilidade do Linux](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
 
-1. Configurar o arquivo de hosts em ambos os servidores ou registrar os nomes do servidor DNS.
+1. Configure o arquivo de hosts em ambos os servidores ou registre os nomes de servidor com DNS.
 
-1. Abra as portas de firewall para TPC 1433 e 5022 no Windows e Linux.
+1. Abra portas de firewall para TPC 1433 e 5022 no Windows e no Linux.
 
-1. Na réplica primária, crie um logon de banco de dados e a senha.
+1. Na réplica primária, crie um logon de banco de dados e uma senha.
 
    ```sql
    CREATE LOGIN dbm_login WITH PASSWORD = '<C0m9L3xP@55w0rd!>';
@@ -97,9 +97,9 @@ As etapas para criar o grupo de disponibilidade são o mesmo que as etapas para 
    GO
    ```
 
-1. Copiar o certificado e a chave privada para o servidor do Linux (réplica secundária) no `/var/opt/mssql/data`. Você pode usar `pscp` para copiar os arquivos para o servidor Linux. 
+1. Copie o certificado e a chave privada para o servidor Linux (réplica secundária) em `/var/opt/mssql/data`. Você pode usar o `pscp` para copiar os arquivos para o servidor Linux. 
 
-1. Definir o grupo e a propriedade de chave privada e o certificado a ser `mssql:mssql`.
+1. Defina o grupo e a propriedade da chave privada e o certificado como `mssql:mssql`.
 
    O script a seguir define o grupo e a propriedade dos arquivos. 
 
@@ -108,12 +108,12 @@ As etapas para criar o grupo de disponibilidade são o mesmo que as etapas para 
    sudo chown mssql:mssql /var/opt/mssql/data/dbm_certificate.cer
    ```
 
-   No diagrama a seguir, propriedade e grupo estão definidas corretamente para o certificado e a chave.
+   No diagrama, a propriedade e o grupo a seguir são definidos corretamente para o certificado e a chave.
 
-   ![Habilitar Linux de grupos de disponibilidade](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
+   ![Habilitar Grupos de Disponibilidade do Linux](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
 
 
-1. Na réplica secundária, crie um logon de banco de dados e a senha e crie uma chave mestra.
+1. Na réplica secundária, crie um logon de banco de dados e uma senha e crie uma chave mestra.
 
    ```sql
    CREATE LOGIN dbm_login WITH PASSWORD = '<C0m9L3xP@55w0rd!>';
@@ -152,26 +152,26 @@ As etapas para criar o grupo de disponibilidade são o mesmo que as etapas para 
    ```
 
    >[!IMPORTANT]
-   >O firewall deve estar aberto para o porta TCP do ouvinte. No script anterior, a porta é 5022. Use qualquer porta TCP disponível. 
+   >O firewall deve estar aberto para a porta TCP do ouvinte. No script anterior, a porta é 5022. Use qualquer porta TCP disponível. 
 
 1. Na réplica secundária, crie o ponto de extremidade. Repita o script anterior na réplica secundária para criar o ponto de extremidade. 
 
-1. Na réplica primária, crie o grupo de disponibilidade com `CLUSTER_TYPE = NONE`. O script de exemplo usa `SEEDING_MODE = AUTOMATIC` para criar o grupo de disponibilidade. 
+1. Na réplica primária, crie o AG com `CLUSTER_TYPE = NONE`. O script de exemplo usa `SEEDING_MODE = AUTOMATIC` para criar o AG. 
 
    >[!NOTE]
-   >Quando a instância do Windows do SQL Server usa diferentes caminhos para arquivos de log e de dados, a propagação falhar para a instância do SQL Server do Linux, porque esses caminhos não existem na réplica secundária automática. Para usar o script a seguir para um grupo de disponibilidade de plataforma cruzada, o banco de dados requer o mesmo caminho para os arquivos de log e de dados no servidor do Windows. Como alternativa, você pode atualizar o script para definir `SEEDING_MODE = MANUAL` e, em seguida, fazer backup e restaurar o banco de dados com `NORECOVERY` para propagar o banco de dados. 
+   >Quando a instância do Windows do SQL Server usa caminhos diferentes para arquivos de dados e de log, a propagação automática falha na instância do Linux do SQL Server porque esses caminhos não existem na réplica secundária. Para usar o script a seguir para um AG multiplataforma, o banco de dados requer o mesmo caminho para os arquivos de log e de dados no Windows Server. Como alternativa, você pode atualizar o script para definir `SEEDING_MODE = MANUAL` e, em seguida, fazer backup e restaurar o banco de dados com o `NORECOVERY` para propagar o banco de dados. 
    >
    >Esse comportamento se aplica a imagens do Azure Marketplace. 
    >
-   >Para obter mais informações sobre a propagação automática, consulte [propagação automática - Layout de disco](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md#disklayout). 
+   >Para saber mais sobre a propagação automática, confira [Propagação Automática – Layout de Disco](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md#disklayout). 
 
-   Antes de executar o script, atualize os valores de seus grupos de disponibilidade.
+   Antes de executar o script, atualize os valores para seus AGs.
 
-      * Substitua `<WinSQLInstance>` com o nome do servidor da instância do SQL Server de réplica primária.
+      * Substitua `<WinSQLInstance>` pelo nome do servidor da instância do SQL Server da réplica primária.
 
-      * Substitua `<LinuxSQLInstance>` com o nome do servidor da instância do SQL Server de réplica secundária. 
+      * Substitua `<LinuxSQLInstance>` pelo nome do servidor da instância do SQL Server da réplica secundária. 
 
-   Para criar o grupo de disponibilidade, atualize os valores e executar o script na réplica primária.  
+   Para criar o AG, atualize os valores e execute o script na réplica primária.  
 
    ```sql
    CREATE AVAILABILITY GROUP [ag1]
@@ -196,9 +196,9 @@ As etapas para criar o grupo de disponibilidade são o mesmo que as etapas para 
    GO
    ```
    
-   Para obter mais informações, consulte [CREATE AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/create-availability-group-transact-sql.md).
+   Para obter mais informações, confira [CREATE AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/create-availability-group-transact-sql.md).
 
-1. Na réplica secundária, una o grupo de disponibilidade.
+1. Na réplica secundária, ingresse no AG.
 
    ```sql
    ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = NONE)
@@ -206,13 +206,13 @@ As etapas para criar o grupo de disponibilidade são o mesmo que as etapas para 
    GO
    ```
 
-1. Crie um banco de dados para o grupo de disponibilidade. As etapas de exemplo usam um banco de dados denominado `<TestDB>`. Se você estiver usando a propagação automática, defina o mesmo caminho para os dados e os arquivos de log. 
+1. Crie um banco de dados para o AG. As etapas de exemplo usam um banco de dados chamado `<TestDB>`. Se você estiver usando a propagação automática, defina o mesmo caminho para os arquivos de dados e de log. 
 
-   Antes de executar o script, atualize os valores do banco de dados.
+   Antes de executar o script, atualize os valores para seu banco de dados.
 
-      * Substitua `<TestDB>` com o nome do banco de dados.
+      * Substitua `<TestDB>` pelo nome do seu banco de dados.
 
-      * Substitua `<F:\Path>` com o caminho para seu banco de dados e arquivos de log. Use o mesmo caminho para os banco de dados e arquivos de log. 
+      * Substitua `<F:\Path>` pelo caminho do banco de dados e dos arquivos de log. Use o mesmo caminho para os arquivos de log e de banco de dados. 
 
       Você também pode usar os caminhos padrão. 
 
@@ -228,25 +228,25 @@ As etapas para criar o grupo de disponibilidade são o mesmo que as etapas para 
 
 1. Faça um backup completo do banco de dados. 
 
-1. Se você não estiver usando a propagação automática, restaure o banco de dados no servidor de réplica secundária (Linux). [Migrar um banco de dados do SQL Server do Windows para Linux usando o backup e restauração](sql-server-linux-migrate-restore-database.md). Restaurar o banco de dados `WITH NORECOVERY` na réplica secundária. 
+1. Se você não estiver usando a propagação automática, restaure o banco de dados no servidor de réplica secundária (Linux). [Migrar um banco de dados do SQL Server do Windows para o Linux usando o recurso de backup e restauração](sql-server-linux-migrate-restore-database.md). Restaure o banco de dados `WITH NORECOVERY` na réplica secundária. 
 
-1. Adicione o banco de dados para o grupo de disponibilidade. Atualize o script de exemplo. Substitua `<TestDB>` com o nome do banco de dados. Na réplica primária, execute a consulta SQL para adicionar o banco de dados para o grupo de disponibilidade.
+1. Adicione o banco de dados ao AG. Atualize o script de exemplo. Substitua `<TestDB>` pelo nome do seu banco de dados. Na réplica primária, execute a consulta SQL para adicionar o banco de dados ao AG.
 
    ```sql
    ALTER AG [ag1] ADD DATABASE <TestDB>
    GO
    ```
 
-1. Verifique se que o banco de dados está sendo preenchido na réplica secundária. 
+1. Verifique se o banco de dados está sendo preenchido na réplica secundária. 
 
 ## <a name="fail-over-the-primary-replica"></a>Fazer failover da réplica primária
 
 [!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
 
-Este artigo revisado as etapas para criar um grupo de disponibilidade de plataforma cruzada para dar suporte a cargas de trabalho de migração ou escala de leitura. Ele pode ser usado para recuperação de desastres manual. Ele também explicou como fazer failover do AG. Um grupo de disponibilidade de plataforma cruzada usa o tipo de cluster `NONE` e não oferece suporte a alta disponibilidade porque não há nenhum cluster ferramenta entre plataformas-. 
+Este artigo analisou as etapas para criar um AG multiplataforma para dar suporte a cargas de trabalho de migração ou de escala de leitura. Ele pode ser usado para recuperação manual de desastre. Ele também explicou como fazer failover do AG. Um AG multiplataforma usa o tipo de cluster `NONE` e não é compatível com alta disponibilidade porque não há nenhuma ferramenta de cluster entre plataformas. 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Visão geral dos grupos de disponibilidade AlwaysOn](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
+[Visão geral de Grupos de Disponibilidade AlwaysOn](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 
 [Noções básicas de disponibilidade do SQL Server para implantações do Linux](sql-server-linux-ha-basics.md)

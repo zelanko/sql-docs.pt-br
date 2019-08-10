@@ -9,107 +9,107 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: d7d7d7eeacca4e18fe5b5fdc97331e24a6ca212d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67952614"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Noções básicas de disponibilidade do SQL Server para implantações do Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Começando com [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] tem suporte no Linux e Windows. Com base em Windows, como [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] implantações, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] instâncias e bancos de dados precisam estar altamente disponível no Linux. Este artigo aborda os aspectos técnicos de planejamento e implantação altamente disponível com base em Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] bancos de dados e instâncias, bem como algumas das diferenças de instalações baseadas em Windows. Porque [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] podem ser novos para os profissionais de Linux e no Linux podem ser novos para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] profissionais, o artigo às vezes apresenta os conceitos que podem estar a algumas familiar e a outras pessoas.
+Começando com o [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] é compatível no Linux e no Windows. Como as implantações do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] baseadas no Windows, os bancos de dados e as instâncias do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] precisam estar altamente disponíveis no Linux. Este artigo aborda os aspectos técnicos do planejamento e da implantação de instâncias e bancos de dados do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] baseados no Linux altamente disponíveis, bem como algumas das diferenças das instalações baseadas no Windows. Como o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pode ser novo para profissionais do Linux e o Linux pode ser novo para profissionais do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], às vezes, o artigo apresenta conceitos que podem ser familiares para alguns e desconhecidos para outros.
 
-## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Opções de disponibilidade para implantações do Linux
-Além de backup e restauração, os mesmos três recursos de disponibilidade estão disponíveis no Linux, como para implantações com base no Windows:
--   Grupos de disponibilidade (grupos de disponibilidade) Always On
--   Sempre em instâncias de Cluster de Failover (FCIs)
+## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>Opções de disponibilidade do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para implantações do Linux
+Além de backup e restauração, os mesmos três recursos de disponibilidade estão disponíveis no Linux como nas implantações baseadas no Windows:
+-   AGs (Grupos de Disponibilidade) Always On
+-   FCIs (Instâncias do cluster de failover) do Always On
 -   [Envio de log](sql-server-linux-use-log-shipping.md)
 
-No Windows, as FCIs exigem sempre um cluster de failover subjacente do Windows Server (WSFC). Dependendo do cenário de implantação, um grupo de disponibilidade normalmente exige um WSFC subjacente, com a exceção que está sendo a nova variante em nenhum [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Um WSFC não existe no Linux. Clustering de implementação no Linux é abordado na seção [instâncias do Pacemaker para grupos de disponibilidade AlwaysOn e o failover de cluster do Linux](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux).
+No Windows, as FCIs exigem sempre um WSFC (cluster de failover do Windows Server) subjacente. Dependendo do cenário de implantação, um AG geralmente exige um WSFC subjacente, com a exceção sendo a nova variante None no [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Um WSFC não existe no Linux. A implementação de clustering no Linux é discutida na seção [Pacemaker para Grupos de Disponibilidade Always On e instâncias de cluster de failover no Linux](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux).
 
-## <a name="a-quick-linux-primer"></a>Uma rápida introdução do Linux
-Embora algumas instalações do Linux podem ser instaladas com uma interface, a maioria não é, que significa que quase tudo na camada do sistema operacional é feito por meio da linha de comando. O termo comum para essa linha de comando no mundo Linux é uma *shell bash*.
+## <a name="a-quick-linux-primer"></a>Um rápido manual do Linux
+Embora algumas instalações do Linux possam ser realizadas com uma interface, a maioria não pode. Isso significa que quase tudo na camada do sistema operacional é feito por meio da linha de comando. O termo comum para essa linha de comando no mundo Linux é um *shell de Bash*.
 
-No Linux, muitos comandos precisam ser executados com privilégios elevados, assim como muitas coisas que precisa ser feitas no Windows Server como um administrador. Há dois métodos principais para executar com privilégios elevados:
-1. Execute no contexto do usuário apropriado. Para alterar para um usuário diferente, use o comando `su`. Se `su` é executada por conta própria sem um nome de usuário, desde que você sabe a senha, você agora deverá estar no como se fosse *raiz*.
+No Linux, muitos comandos precisam ser executados com privilégios elevados, como muitas ações que precisam ser feitas no Windows Server como administrador. Há dois métodos principais a serem executados com privilégios elevados:
+1. Execute no contexto do usuário apropriado. Para alterar para outro usuário, use o comando `su`. Se `su` for executado por conta própria sem um nome de usuário, desde que você saiba a senha, agora você estará em um shell como *raiz*.
    
-2. O mais comum e segurança consciente maneira de executar as coisas é usar `sudo` antes de executar qualquer coisa. Muitos dos exemplos neste artigo usam `sudo`.
+2. A maneira mais comum e segura de executar ações é usar `sudo` antes de executar qualquer coisa. Muitos dos exemplos neste artigo usam `sudo`.
 
-Alguns comandos comuns, cada um deles tem vários parâmetros e opções que podem ser pesquisadas online:
--   `cd` -Altere o diretório
--   `chmod` -alterar as permissões de um arquivo ou diretório
--   `chown` -alterar a propriedade de um arquivo ou diretório
--   `ls` -Mostrar o conteúdo de um diretório
--   `mkdir` -criar uma pasta (diretório) em uma unidade
--   `mv` -Mover um arquivo de um local para outro
--   `ps` -Mostrar todos os processos de trabalho
--   `rm` -Excluir um arquivo localmente em um servidor
--   `rmdir` -Excluir uma pasta (diretório)
--   `systemctl` -Iniciar, parar ou habilitar os serviços
+Alguns comandos comuns, cada um com vários comutadores e opções que podem ser pesquisados online:
+-   `cd` – alterar o diretório
+-   `chmod` – alterar as permissões de um arquivo ou diretório
+-   `chown` – alterar as propriedade de um arquivo ou diretório
+-   `ls` – mostrar o conteúdo de um diretório
+-   `mkdir` – criar uma pasta (diretório) em uma unidade
+-   `mv` – mover um arquivo de uma localização para outra
+-   `ps` – mostrar todos os processos de trabalho
+-   `rm` – excluir um arquivo localmente em um servidor
+-   `rmdir` – excluir uma pasta (diretório)
+-   `systemctl` – iniciar, parar ou habilitar serviços
 -   Comandos do editor de texto. No Linux, há várias opções de editor de texto, como vi e emacs.
 
-## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>Tarefas comuns para as configurações de disponibilidade de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux
-Esta seção aborda as tarefas que são comuns a todos os baseados em Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] implantações.
+## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>Tarefas comuns de configurações de disponibilidade do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux
+Esta seção aborda as tarefas comuns a todas as implantações do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] baseadas no Linux.
 
-### <a name="ensure-that-files-can-be-copied"></a>Certifique-se de que os arquivos podem ser copiados
-Copiar arquivos de um servidor para outro é uma tarefa que qualquer pessoa usando [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux deve ser capaz de fazer. Essa tarefa é muito importante para as configurações de grupo de disponibilidade.
+### <a name="ensure-that-files-can-be-copied"></a>Verifique se os arquivos podem ser copiados
+Copiar arquivos de um servidor para outro é uma tarefa que qualquer pessoa que use o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux deve ser capaz de fazer. Essa tarefa é muito importante para as configurações do AG.
 
-Coisas como problemas de permissão podem existir no Linux, bem como em instalações baseadas em Windows. No entanto, quem está familiarizado com como copiar de um servidor no Windows podem não estar familiarizados com como isso é feito no Linux. Um método comum é usar o utilitário de linha de comando `scp`, que significa de cópia seguro. Nos bastidores, `scp` usa OpenSSH. SSH significa um shell seguro. Dependendo da distribuição do Linux, OpenSSH propriamente dito não pode ser instalado. Se não for, o OpenSSH precisa ser instalado primeiro. Para obter mais informações sobre como configurar o OpenSSH, consulte as informações nos seguintes links para cada distribuição:
+Aspectos como problemas de permissão podem existir no Linux, bem como em instalações baseadas no Windows. No entanto, aqueles familiarizados com a cópia do servidor para o servidor no Windows podem não saber como isso ele é feito no Linux. Um método comum é usar o utilitário `scp` de linha de comando, que representa a cópia segura. Nos bastidores, `scp` o usa o OpenSSH. SSH significa Secure Shell. Dependendo da distribuição do Linux, o OpenSSH pode não estar instalado. Se não estiver, o OpenSSH precisará ser instalado primeiro. Para obter mais informações sobre como configurar o OpenSSH, confira as informações nos links a seguir para cada distribuição:
 -   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
-Ao usar `scp`, você deve fornecer as credenciais do servidor, se não for a origem ou destino. Por exemplo, usando
+Ao usar `scp`, você deverá fornecer as credenciais do servidor se ele não for a origem ou o destino. Por exemplo, usando
 
 ```bash
 scp MyAGCert.cer username@servername:/folder/subfolder
 ```
 
-Copia o arquivo MyAGCert.cer para a pasta especificada no outro servidor. Observe que você deve ter permissões – e, possivelmente, a propriedade - do arquivo para copiá-lo, portanto, `chown` talvez precise ser empregado antes de copiar. Da mesma forma, no lado de recepção, o usuário correto precisa de acesso para manipular o arquivo. Por exemplo, para restaurar esse arquivo de certificado, o `mssql` usuário deve ser capaz de acessá-lo.
+copia o arquivo MyAGCert.cer para a pasta especificada no outro servidor. Observe que você deve ter permissões e, possivelmente, a propriedade do arquivo para copiá-lo. Portanto, `chown` também pode precisar ser empregado antes da cópia. De modo semelhante, no lado de recebimento, o usuário certo precisa de acesso para manipular o arquivo. Por exemplo, para restaurar esse arquivo de certificado, o usuário `mssql` deve ser capaz de acessá-lo.
 
-O Samba, que é a variante do Linux do protocolo SMB (protocolo SMB), também pode ser usado para criar compartilhamentos acessados por caminhos UNC, como `\\SERVERNAME\SHARE`. Para obter mais informações sobre como configurar o Samba, consulte as informações nos seguintes links para cada distribuição:
+Samba, que é a variante do Linux do protocolo SMB, também pode ser usado para criar compartilhamentos acessados por caminhos UNC, como `\\SERVERNAME\SHARE`. Para obter mais informações sobre como configurar Samba, confira as informações nos links a seguir para cada distribuição:
 -   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Managing_Confined_Services/chap-Managing_Confined_Services-Samba.html)
 -   [SLES](https://www.suse.com/documentation/sles11/book_sle_admin/data/cha_samba.html)
 -   [Ubuntu](https://help.ubuntu.com/community/Samba)
 
-Compartilhamentos do SMB baseados no Windows também podem ser usados; Compartilhamentos SMB não precisa ser baseado em Linux, desde que a parte do cliente do Samba está configurada corretamente no servidor Linux que hospeda [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] e o compartilhamento tem o acesso correto. Para aqueles em um ambiente misto, isso seria uma maneira de aproveitar a infra-estrutura existente para baseado em Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] implantações.
+Os compartilhamentos SMB baseados no Windows também podem ser usados; os compartilhamentos SMB não precisam ser baseados no Linux, desde que a parte do cliente do Samba esteja configurada corretamente no servidor Linux que hospeda [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] e o compartilhamento tenha o acesso certo. Para aqueles em um ambiente misto, essa seria uma maneira de aproveitar a infraestrutura existente para implantações do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] baseadas no Linux.
 
-Uma coisa que é importante é que a versão do Samba implantado deve ser compatível com o SMB 3.0. Quando o suporte ao SMB foi adicionado no [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], ela exigia que todos os compartilhamentos para dar suporte a SMB 3.0. Se usando o Samba para o compartilhamento e não o Windows Server, deverá usar o compartilhamento de Samba Samba 4.0 ou posterior e idealmente 4.3 ou posterior, que dá suporte a SMB 3.1.1. É uma boa fonte de informações sobre o Linux e do SMB [SMB3 em Samba](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
+Um aspecto importante é que a versão do Samba implantada deve estar em conformidade com SMB 3.0. Quando o suporte a SMB foi adicionado no [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], ele exigia que todos os compartilhamentos fossem compatíveis com o SMB 3.0. Se estiver usando o Samba para o compartilhamento, e não para o Windows Server, o compartilhamento baseado no Samba deverá usar o Samba 4.0 ou posterior e, idealmente, 4.3 ou posterior, que é compatível com o SMB 3.1.1. Uma boa fonte de informações sobre SMB e Linux é [SMB3 in Samba](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
 
-Por fim, usar um compartilhamento de NFS (sistema) de arquivos de rede é uma opção. Usar o NFS não for uma opção em implantações com base em Windows de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]e só pode ser usado para implantações com base em Linux.
+Por fim, o uso de um compartilhamento NFS (Network File System) é uma opção. Usar o NFS não é uma opção em implantações do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] baseadas no Windows e só pode ser usado para implantações baseadas no Linux.
 
 ### <a name="configure-the-firewall"></a>Configurar o firewall
-Semelhante ao Windows, distribuições do Linux tem um firewall interno. Se sua empresa está usando um firewall externo para os servidores, desabilitar os firewalls no Linux pode ser aceitável. No entanto, independentemente de onde o firewall estiver habilitado, portas precisam ser abertas. A tabela a seguir documenta as portas comuns necessárias para altamente disponível [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] implantações no Linux.
+Semelhantes ao Windows, as distribuições do Linux têm um firewall interno. Se a sua empresa estiver usando um firewall externo para os servidores, a desabilitação dos firewalls no Linux poderá ser aceitável. No entanto, independentemente de onde o firewall está habilitado, as portas precisam estar abertas. A tabela a seguir documenta as portas comuns necessárias para implantações do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] altamente disponíveis no Linux.
 
-| Número da Porta | type     | Descrição                                                                                                                 |
+| Número da Porta | Tipo     | Descrição                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS- `rpcbind/sunrpc`                                                                                                    |
-| 135         | TCP      | Samba (se usado) - mapeador de ponto de extremidade                                                                                          |
-| 137         | UDP      | Samba (se usado) - serviço de nomes NetBIOS                                                                                      |
-| 138         | UDP      | Samba (se usado) - datagrama NetBIOS                                                                                          |
-| 139         | TCP      | Samba (se usado) - sessão NetBIOS                                                                                           |
-| 445         | TCP      | Samba (se usado) - SMB sobre TCP                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -porta; padrão Se desejar, pode alterar com `mssql-conf set network.tcpport <portnumber>`                       |
+| 111         | TCP/UDP  | NFS – `rpcbind/sunrpc`                                                                                                    |
+| 135         | TCP      | Samba (se usado) – Mapeador de ponto de extremidade                                                                                          |
+| 137         | UDP      | Samba (se usado) – Serviço de nome NetBIOS                                                                                      |
+| 138         | UDP      | Samba (se usado) – Datagrama NetBIOS                                                                                          |
+| 139         | TCP      | Samba (se usado) – Sessão NetBIOS                                                                                           |
+| 445         | TCP      | Samba (se usado) – SMB sobre TCP                                                                                              |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – porta padrão; se desejar, pode mudar com `mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP, UDP | NFS (se usado)                                                                                                               |
 | 2224        | TCP      | Pacemaker – usado por `pcsd`                                                                                                |
-| 3121        | TCP      | Pacemaker – necessário se houver nós remotos do Pacemaker                                                                    |
-| 3260        | TCP      | iSCSI Initiator (se usado) – pode ser alterado em `/etc/iscsi/iscsid.config` (RHEL), mas deve corresponder à porta de destino iSCSI |
-| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -padrão a porta usada para um ponto de extremidade do grupo de disponibilidade; pode ser alterado durante a criação de ponto de extremidade                                |
+| 3121        | TCP      | Pacemaker – Obrigatório se houver nós remotos do Pacemaker                                                                    |
+| 3260        | TCP      | Iniciador iSCSI (se usado) – Pode ser alterado em `/etc/iscsi/iscsid.config` (RHEL), mas deve corresponder à porta do destino iSCSI |
+| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – porta padrão usada para um ponto de extremidade do AG; pode ser alterada ao criar o ponto de extremidade                                |
 | 5403        | TCP      | Pacemaker                                                                                                                   |
-| 5404        | UDP      | Pacemaker – necessário por Corosync, se estiver usando o UDP multicast                                                                     |
-| 5405        | UDP      | Pacemaker – exigido pelo Corosync                                                                                            |
-| 21064       | TCP      | Pacemaker – exigido por recursos usando DLM                                                                                 |
-| Variável    | TCP      | Porta de ponto de extremidade do grupo de disponibilidade; o padrão é 5022                                                                                           |
-| Variável    | TCP      | A porta para NFS - `LOCKD_TCPPORT` (encontrado no `/etc/sysconfig/nfs` no RHEL)                                              |
-| Variável    | UDP      | A porta para NFS - `LOCKD_UDPPORT` (encontrado no `/etc/sysconfig/nfs` no RHEL)                                              |
-| Variável    | TCP/UDP  | A porta para NFS - `MOUNTD_PORT` (encontrado no `/etc/sysconfig/nfs` no RHEL)                                                |
-| Variável    | TCP/UDP  | A porta para NFS - `STATD_PORT` (encontrado no `/etc/sysconfig/nfs` no RHEL)                                                 |
+| 5404        | UDP      | Pacemaker – Exigido por Corosync se estiver usando o UDP multicast                                                                     |
+| 5405        | UDP      | Pacemaker – Exigido por Corosync                                                                                            |
+| 21064       | TCP      | Pacemaker – Exigido pelos recursos que usam a DLM                                                                                 |
+| Variável    | TCP      | Porta do ponto de extremidade do AG; o padrão é 5022                                                                                           |
+| Variável    | TCP      | NFS – porta para `LOCKD_TCPPORT` (encontrada em `/etc/sysconfig/nfs` no RHEL)                                              |
+| Variável    | UDP      | NFS – porta para `LOCKD_UDPPORT` (encontrada em `/etc/sysconfig/nfs` no RHEL)                                              |
+| Variável    | TCP/UDP  | NFS – porta para `MOUNTD_PORT` (encontrada em `/etc/sysconfig/nfs` no RHEL)                                                |
+| Variável    | TCP/UDP  | NFS – porta para `STATD_PORT` (encontrada em `/etc/sysconfig/nfs` no RHEL)                                                 |
 
-Para portas adicionais que podem ser usadas por Samba, consulte [uso da porta do Samba](https://wiki.samba.org/index.php/Samba_Port_Usage).
+Para portas adicionais que podem ser usadas pelo Samba, confira [Uso de porta do Samba](https://wiki.samba.org/index.php/Samba_Port_Usage).
 
-Por outro lado, o nome do serviço no Linux também pode ser adicionado como uma exceção em vez da porta; Por exemplo, `high-availability` para Pacemaker. Consulte sua distribuição para os nomes se essa é a direção em que você deseja buscar. Por exemplo, no RHEL o comando para adicionar no Pacemaker é
+Por outro lado, o nome do serviço no Linux também pode ser adicionado como uma exceção, em vez da porta; por exemplo, `high-availability` para Pacemaker. Confira sua distribuição para obter os nomes se essa for a direção que você deseja buscar. Por exemplo, no RHEL, o comando a ser adicionado no Pacemaker é
 
 ```bash
 sudo firewall-cmd --permanent --add-service=high-availability
@@ -119,130 +119,130 @@ sudo firewall-cmd --permanent --add-service=high-availability
 -   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
-### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Instalar [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pacotes para disponibilidade
-Em um Windows baseado em [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] instalação, alguns componentes são instalados, mesmo em uma instalação do mecanismo básico, enquanto outros não são. No Linux, apenas o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] mecanismo é instalado como parte do processo de instalação. Todo o resto é opcional. Para alta disponibilidade [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] instâncias no Linux, dois pacotes devem ser instalados com [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]: [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agente (*mssql-server-agent*) e o pacote de alta disponibilidade (HA) (*mssql-server-ha*). Embora [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent é tecnicamente opcional, ele é [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]do Agendador de trabalhos e é exigido pelo envio de logs, portanto, é recomendável a instalação. Em instalações baseadas em Windows, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente não é opcional.
+### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Instalar pacotes do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para disponibilidade
+Em uma instalação do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] baseada no Windows, alguns componentes são instalados mesmo em uma instalação básica do mecanismo, enquanto outros não são. No Linux, somente o mecanismo do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] é instalado como parte do processo de instalação. Tudo o mais é opcional. Para instâncias do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] altamente disponíveis no Linux, dois pacotes devem ser instalados com o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]: [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent (*mssql-server-agent*) e o pacote de HA (alta disponibilidade) (*mssql-server-ha*). Embora o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent seja tecnicamente opcional, ele é o agendador do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para trabalhos e é exigido pelo envio de logs, portanto, a instalação é recomendada. Em instalações baseadas no Windows, o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent não é opcional.
 
 >[!NOTE]
->Para os iniciantes em [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente é [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]do Agendador de trabalho internas. É uma maneira comum de DBAs agendar a coisas como backups e outras [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] manutenção. Ao contrário de uma instalação baseada em Windows de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] onde [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente é um serviço completamente diferente, no Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente é executado no contexto do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] em si.
+>Para os iniciantes no [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent é o agendador de trabalho interno do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. É uma maneira comum de os DBAs agendarem ações como backups e outras manutenções do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Ao contrário de uma instalação do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] baseada no Windows, em que o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent é um serviço completamente diferente, no Linux, o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent é executado no contexto do próprio [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
-Quando grupos de disponibilidade ou FCIs são configuradas em uma configuração baseada em Windows, eles são com suporte a cluster. Significa que, reconhecimento de cluster [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] tem o recurso específico DLLs que conhece um WSFC (sqagtres. dll e sqsrvres.dll sobre as FCIs, hadrres. dll para grupos de disponibilidade) e são usados pelo WSFC para garantir que o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] funcionalidade clusterizada está ativo, em execução, e funcionando corretamente. Porque o clustering externo não é apenas para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] mas Linux em si, a Microsoft tinha codificar o equivalente de uma DLL de recursos para implantações de AG baseado em Linux e a FCI. Esse é o *mssql-server-ha* de pacote, também conhecido como o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente de recursos do Pacemaker. Para instalar o *mssql-server-ha* do pacote, consulte [instalar os pacotes de alta disponibilidade e o SQL Server Agent](sql-server-linux-deploy-pacemaker-cluster.md#install-the-sql-server-ha-and-sql-server-agent-packages).
+Quando AGs ou FCIs são configurados em uma configuração baseada no Windows, eles têm reconhecimento de cluster. O reconhecimento de cluster significa que o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] tem DLLs de recurso específicas que um WSFC conhece (sqagtres.dll e sqsrvres.dll para FCIs, hadrres.dll para AGs) e são usadas pelo WSFC para garantir que a funcionalidade clusterizada do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] esteja ativa, em execução e funcionando corretamente. Como o clustering é externo não apenas ao [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] como ao próprio Linux, a Microsoft teve de codificar o equivalente a uma DLL de recurso para implantações de FCI e AG baseadas no Linux. Esse é o pacote *mssql-server-ha*, também conhecido como agente de recurso do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para o Pacemaker. Para instalar o pacote *mssql-server-ha*, confira [Instalar os pacotes de HA e do SQL Server Agent](sql-server-linux-deploy-pacemaker-cluster.md#install-the-sql-server-ha-and-sql-server-agent-packages).
 
-Os pacotes opcionais para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pesquisa de texto completo (*mssql-server-fts*) e [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql-server-está*), não são necessária para alta disponibilidade, para uma FCI ou um grupo de disponibilidade.
+Os outros pacotes opcionais para o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux, pesquisa de texto completo do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] (*mssql-server-fts*) e [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql-server-is*), não são necessários para alta disponibilidade, seja para uma FCI ou um AG.
 
-## <a name="pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux"></a>Pacemaker para grupos de disponibilidade AlwaysOn e instâncias de cluster de failover no Linux
-Anterior como observado, o único mecanismo de clustering atualmente com suporte pela Microsoft para grupos de disponibilidade e FCIs é Pacemaker com Corosync. Esta seção aborda as informações básicas para entender a solução, bem como planejar e implantá-lo para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] configurações.
+## <a name="pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux"></a>Pacemaker para Grupos de Disponibilidade Always On e instâncias de cluster de failover no Linux
+Conforme observado anteriormente, o único mecanismo de clustering com suporte no momento pela Microsoft para AGs e FCIs é o Pacemaker com Corosync. Esta seção aborda as informações básicas para entender a solução, bem como planejar e implantá-la em configurações do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
-### <a name="ha-add-onextension-basics"></a>Noções básicas de add-on/extensão de alta disponibilidade
-Todas as distribuições com suporte no momento, envie um add-on/extensão de alta disponibilidade, que se baseia o Pacemaker cluster pilha. Essa pilha incorpora dois componentes principais: Pacemaker e do Corosync. Todos os componentes da pilha são:
--   Pacemaker – o núcleo do clustering de componente, que faz coisas como coordenada entre as máquinas em cluster.
--   Corosync - uma estrutura e um conjunto de APIs que fornece coisas como o quorum, a capacidade de falha ao reiniciar processos e assim por diante.
--   libQB - fornece coisas como o registro em log.
--   Agente de recursos - funcionalidade específica fornecida para que um aplicativo pode integrar com o Pacemaker.
--   De cerca de agente - Scripts/funcionalidade que ajuda a isolar nós e lidar com eles, se eles estão tendo problemas.
+### <a name="ha-add-onextension-basics"></a>Noções básicas de complemento/extensão de HA
+Todas as distribuições com suporte no momento enviam um complemento/extensão de alta disponibilidade, que se baseia na pilha de clustering do Pacemaker. Essa pilha incorpora dois componentes principais: Pacemaker e Corosync. Todos os componentes da pilha são:
+-   Pacemaker – O componente de clustering principal, que realiza ações como coordenar entre as máquinas clusterizadas.
+-   Corosync – Uma estrutura e um conjunto de APIs que fornecem itens como quorum, a capacidade de reiniciar processos com falha e assim por diante.
+-   libQB – Fornece itens como registro em log.
+-   Agente de recursos – Funcionalidade específica fornecida para que um aplicativo possa ser integrado ao Pacemaker.
+-   Agente de isolamento – Scripts/funcionalidade que ajudam a isolar nós e lidar com eles se estiverem tendo problemas.
     
 > [!NOTE]
-> A pilha do cluster é conhecida como Pacemaker no mundo Linux.
+> A pilha de cluster é normalmente conhecida como Pacemaker no mundo Linux.
 
-Essa solução é de certa forma semelhante ao, mas de várias maneiras diferentes de implantar configurações em cluster usando o Windows. Em Windows, o formulário de disponibilidade de clustering, chamado de um cluster de failover do Windows Server (WSFC), é integrado ao sistema operacional e o recurso que permite a criação de um WSFC, cluster de failover, é desabilitada por padrão. No Windows, grupos de disponibilidade e FCIs são criadas sobre um WSFC em compartilhar uma forte integração devido ao recurso específico DLL que é fornecido pelo [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Essa solução firmemente acoplada é possível geral porque se trata tudo a partir de um fornecedor.
+Essa solução é, de alguma forma, semelhante à implantação de configurações clusterizadas usando o Windows, mas diferente de várias maneiras. No Windows, a forma de disponibilidade de clustering, chamada de WSFC (cluster de failover do Windows Server), é incorporada ao sistema operacional e o recurso que permite a criação de um WSFC, clustering de failover, é desabilitado por padrão. No Windows, os AGs e as FCIs são criados sobre um WSFC e compartilham uma forte integração devido à DLL de recurso específica fornecida pelo [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Essa solução totalmente acoplada é possível, de modo geral, por ser toda de um único fornecedor.
 
 ![](./media/sql-server-linux-ha-basics/image1.png)
 
-No Linux, enquanto cada distribuição com suporte tem o Pacemaker disponível, cada distribuição pode personalizar e têm versões e implementações ligeiramente diferentes. Algumas das diferenças serão refletidas nas instruções neste artigo. A camada de clustering é um software livre, portanto, mesmo que ele seja fornecido com as distribuições, ele não integra-se da mesma forma um WSFC no Windows. Isso é por isso que a Microsoft fornece *mssql-server-ha*, de modo que [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] e a pilha do Pacemaker pode fornecer proximidade, mas não exatamente a mesma experiência de grupos de disponibilidade e FCIs no Windows.
+No Linux, embora cada distribuição com suporte tenha o Pacemaker disponível, cada distribuição pode personalizar e ter implementações e versões ligeiramente diferentes. Algumas das diferenças serão refletidas nas instruções neste artigo. A camada de clustering é de software livre, portanto, embora seja fornecida com as distribuições, ela não é totalmente integrada da mesma maneira que um WSFC está sob o Windows. Por esse motivo, a Microsoft fornece *mssql-server-ha*, de modo que o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] e a pilha do Pacemaker possam fornecer quase, mas não exatamente, a mesma experiência para AGs e FCIs como no Windows.
 
-Para obter a documentação completa no Pacemaker, incluindo uma explicação mais detalhada do que tudo o que é com informações de referência completa, para RHEL e SLES:
+Para obter a documentação completa sobre o Pacemaker, incluindo uma explicação mais detalhada de tudo, com informações de referência completa, para RHEL e SLES:
 -   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-overview-HAAR.html)
 -   [SLES](https://www.suse.com/documentation/sle_ha/book_sleha/data/book_sleha.html)
 
-Ubuntu não tem um guia para disponibilidade.
+O Ubuntu não tem um guia para a disponibilidade.
 
-Para obter mais informações sobre a pilha inteira, consulte também a oficial [página de documentação do Pacemaker](https://clusterlabs.org/doc/) no site Clusterlabs.
+Para obter mais informações sobre a pilha inteira, confira também a [página de documentação oficial do Pacemaker](https://clusterlabs.org/doc/) no site do Clusterlabs.
 
-### <a name="pacemaker-concepts-and-terminology"></a>Terminologia e conceitos do pacemaker
-Esta seção documenta os conceitos e terminologia para uma implementação do Pacemaker comuns.
+### <a name="pacemaker-concepts-and-terminology"></a>Conceitos e terminologia do Pacemaker
+Esta seção documenta os conceitos e a terminologia comuns de uma implementação do Pacemaker.
 
 #### <a name="node"></a>Nó
-Um nó é um servidor que participam no cluster. Um cluster Pacemaker nativamente dá suporte a até 16 nós. Esse número pode ser excedido se Corosync não está em execução em nós adicionais, mas Corosync é necessária para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Portanto, o número máximo de nós de um cluster pode ter qualquer [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-com base de configuração é 16; esse é o limite do Pacemaker e não tem nada a ver com as limitações máximas para grupos de disponibilidade ou FCIs impostas pelo [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. 
+Um nó é um servidor que participa do cluster. Um cluster do Pacemaker dá suporte nativo a até 16 nós. Esse número poderá ser excedido se Corosync não estiver em execução em nós adicionais, mas Corosync for necessário para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Portanto, o número máximo de nós que um cluster pode ter para qualquer configuração baseada no [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] é 16; esse é o limite do Pacemaker e não tem nada a ver com as limitações máximas para AGs ou FCIs impostas pelo [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. 
 
-#### <a name="resource"></a>Resource
-Um WSFC e um cluster Pacemaker tem o conceito de um recurso. Um recurso é uma funcionalidade específica que é executado no contexto do cluster, como um disco ou um endereço IP. Por exemplo, sob o Pacemaker FCI e o grupo de disponibilidade de recursos podem ser criados. Isso não é parecido com o que é feito em um WSFC, onde você vê uma [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] recursos para a uma FCI ou em um recurso de grupo de disponibilidade ao configurar um grupo de disponibilidade, mas é não exatamente o mesmo devido a diferenças subjacente como [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] integra-se com o Pacemaker.
+#### <a name="resource"></a>Recurso
+Um WSFC e um cluster do Pacemaker têm o conceito de um recurso. Um recurso é uma funcionalidade específica que é executada no contexto do cluster, como um disco ou um endereço IP. Por exemplo, no Pacemaker, os recursos de FCI e AG podem ser criados. Isso não é diferente do que é feito em um WSFC, no qual você vê um recurso do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para um recurso de FCI ou um AG ao configurar um AG, mas não é exatamente o mesmo devido às diferenças subjacentes em como o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] integra-se ao Pacemaker.
 
-Pacemaker tem recursos standard e clone. Recursos de clonagem são aqueles que são executados simultaneamente em todos os nós. Um exemplo seria um endereço IP que é executado em vários nós para fins de balanceamento de carga. Qualquer recurso que é criado sobre as FCIs usa um recurso padrão, uma vez que apenas um nó pode hospedar uma FCI a qualquer momento.
+O Pacemaker tem recursos padrão e de clone. Os recursos de clone são aqueles executados simultaneamente em todos os nós. Um exemplo seria um endereço IP que é executado em vários nós para fins de balanceamento de carga. Qualquer recurso criado para FCIs usa um recurso padrão, já que apenas um nó pode hospedar uma FCI em um determinado momento.
 
-Quando um grupo de disponibilidade é criado, ele requer uma forma especializada de um recurso de clone chamado um recurso de vários estado. Embora um grupo de disponibilidade tiver apenas uma réplica primária, o grupo de disponibilidade em si está em execução em todos os nós que ele está configurado para funcionar em e potencialmente pode permitir que as coisas, como o acesso somente leitura. Como esse é um uso "ao vivo" do nó, os recursos têm o conceito de dois estados: mestre e subordinado. Para obter mais informações, consulte [recursos de vários estados: Recursos que têm vários modos de](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html).
+Quando um AG é criado, ele requer uma forma especializada de um recurso de clone chamado de recurso de vários estados. Embora um AG tenha apenas uma réplica primária, o AG em si está em execução em todos os nós em que está configurado para trabalhar e pode, potencialmente, permitir ações como o acesso somente leitura. Como esse é um uso "dinâmico" do nó, os recursos têm o conceito de dois estados: mestre e subordinado. Para obter mais informações, confira [Recursos de vários estados: recursos que têm vários modos](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html).
 
-#### <a name="resource-groupssets"></a>Grupos de recursos/conjuntos
-Semelhante às funções em um WSFC, um cluster Pacemaker tem o conceito de um grupo de recursos. Um grupo de recursos (chamado de um conjunto no SLES) é uma coleção de recursos que funcionam em conjunto e pode fazer failover de um nó para outro como uma única unidade. Grupos de recursos não podem conter recursos que são configurados como primário/secundário Portanto, não pode ser usados para grupos de disponibilidade. Embora um grupo de recursos pode ser usado para FCIs, não é geralmente uma configuração recomendada.
+#### <a name="resource-groupssets"></a>Grupos/conjuntos de recursos
+Semelhante às funções em um WSFC, um cluster do Pacemaker tem o conceito de um grupo de recursos. Um grupo de recursos (chamado de um conjunto no SLES) é uma coleção de recursos que funcionam juntos e podem fazer failover de um nó para outro como uma única unidade. Grupos de recursos não podem conter recursos que são configurados como mestre/subordinado. Portanto, eles não podem ser usados para AGs. Embora um grupo de recursos possa ser usado para FCIs, esta geralmente não é uma configuração recomendada.
 
 #### <a name="constraints"></a>Restrições
-WSFCs tem vários parâmetros de recursos, bem como coisas como dependências, que informam o WSFC de uma relação de pai/filho entre dois recursos diferentes. Uma dependência é apenas uma regra informando o WSFC qual recurso precisa estar online pela primeira vez.
+WSFCs têm vários parâmetros para recursos, bem como dependências, que dizem ao WSFC de uma relação pai/filho entre dois recursos diferentes. Uma dependência é apenas uma regra que informa ao WSFC qual recurso precisa estar online primeiro.
 
-Um cluster Pacemaker não tem o conceito de dependências, mas há restrições. Há três tipos de restrições: colocação, o local e a ordenação.
--   Uma restrição de colocação impõe se dois recursos devem estar em execução no mesmo nó.
--   Uma restrição de local informa ao cluster do Pacemaker em que um recurso pode (ou não) ser executado.
--   Uma restrição de ordenação informa ao cluster do Pacemaker a ordem na qual os recursos devem começar.
+Um cluster do Pacemaker não tem o conceito de dependências, mas há restrições. Há três tipos de restrições: colocação, localização e ordenação.
+-   Uma restrição de colocação impõe se dois recursos devem ou não ser executados no mesmo nó.
+-   Uma restrição de localização informa ao cluster do Pacemaker onde um recurso pode (ou não pode) ser executado.
+-   Uma restrição de ordenação informa ao cluster do Pacemaker a ordem em que os recursos devem iniciar.
 
 > [!NOTE]
-> Restrições de colocação não são necessárias para recursos em um grupo de recursos, já que todas essas são vistas como uma única unidade.
+> Restrições de colocação não são necessárias para recursos em um grupo de recursos, pois todas elas são vistas como uma única unidade.
 
-#### <a name="quorum-fence-agents-and-stonith"></a>Quorum, agentes de limite e STONITH
-Quorum sob o Pacemaker é um pouco semelhante a um WSFC em conceito. É o único propósito do mecanismo de quorum do cluster garantir que o cluster permaneça em funcionamento. Um WSFC e os complementos de alta disponibilidade para as distribuições do Linux tem o conceito de votação, em que cada nó de conta para o quorum. Você deseja que a maioria dos votos, caso contrário, na pior das hipóteses, o cluster será desligado.
+#### <a name="quorum-fence-agents-and-stonith"></a>Quorum, agentes de isolamento e STONITH
+O quorum no Pacemaker é um pouco semelhante a um WSFC em conceito. A finalidade total de um mecanismo de quorum do cluster é garantir que o cluster permaneça ativo e em execução. Tanto o WSFC quanto os complementos de HA para as distribuições do Linux têm o conceito de votação, em que cada nó conta para o quorum. Você quer a maioria dos votos, caso contrário, em um cenário desfavorável, o cluster será desligado.
 
-Ao contrário de um WSFC, não há nenhum recurso de testemunha para trabalhar com o quorum. Como um WSFC, o objetivo é manter o número de eleitores ímpares. Configuração de quorum tem diferentes considerações para grupos de disponibilidade que FCIs.
+Ao contrário de um WSFC, não há nenhum recurso de testemunha para trabalhar com o quorum. Como um WSFC, a meta é manter o número de eleitores ímpares. A configuração de quorum tem considerações diferentes para AGs e FCIs.
 
-WSFCs monitoram o status de nós participantes e tratarão-los quando ocorre um problema. Em versões posteriores do WSFCs oferecem recursos como colocar em quarentena um nó que está com comportamento inadequado ou não disponível (o nó não está ativada, comunicação de rede é para baixo, etc.). No lado do Linux, esse tipo de funcionalidade é fornecido por um agente de isolamento. O conceito, às vezes é chamado de isolamento. No entanto, esses agentes de limite são geralmente específicas para a implantação e geralmente são fornecidos por fornecedores de hardware e fornecedores de software, como aqueles que fornecem os hipervisores. Por exemplo, o VMware fornece um agente de isolamento que pode ser usado para VMs do Linux virtualizados usando vSphere.
+WSFCs monitoram o status dos nós participantes e os manipulam quando ocorre um problema. As versões posteriores do WSFCs oferecem recursos como colocar em quarentena um nó que está inadequado ou não disponível (o nó não está ativado, a comunicação de rede está inoperante etc.). No lado do Linux, esse tipo de funcionalidade é fornecido por um agente de isolamento. Às, vezes, o conceito é chamado de isolamento. No entanto, esses agentes de isolamento geralmente são específicos para a implantação e, em geral, fornecidos por fornecedores de hardware e alguns fornecedores de software, como aqueles que fornecem hipervisores. Por exemplo, a VMware fornece um agente de isolamento que pode ser usado para VMs Linux virtualizadas usando vSphere.
 
-Quorum e vínculos de isolamento em outro conceito chamado STONITH, ou envie outro nó no cabeçalho. STONITH é necessário ter um cluster Pacemaker com suporte em todas as distribuições do Linux. Para obter mais informações, consulte [de isolamento em um Cluster de disponibilidade alta do Red Hat](https://access.redhat.com/solutions/15575) (RHEL).
+O quorum e o isolamento vinculam-se a outro conceito chamado STONITH, Shoot the Other Node in the Head. STONITH é necessário para ter um cluster do Pacemaker com suporte em todas as distribuições do Linux. Para obter mais informações, confira [Isolamento em um cluster de alta disponibilidade da Red Hat](https://access.redhat.com/solutions/15575) (RHEL).
 
 #### <a name="corosyncconf"></a>corosync.conf
-O `corosync.conf` arquivo contém a configuração do cluster. Ele está localizado em `/etc/corosync`. No decorrer de suas operações diárias normais, esse arquivo nunca deve ter que ser editado se o cluster está configurado corretamente.
+O arquivo `corosync.conf` contém a configuração do cluster. Ele está localizado em `/etc/corosync`. No decorrer das operações normais do dia a dia, esse arquivo nunca deverá ser editado se o cluster estiver configurado corretamente.
 
-#### <a name="cluster-log-location"></a>Local do log de cluster
-Locais de log para clusters do Pacemaker diferem dependendo da distribuição.
--   RHEL e SLES- `/var/log/cluster/corosync.log`
--   Ubuntu - `/var/log/corosync/corosync.log`
+#### <a name="cluster-log-location"></a>Localização do log do cluster
+Os locais de log para clusters do Pacemaker diferem dependendo da distribuição.
+-   RHEL e SLES – `/var/log/cluster/corosync.log`
+-   Ubuntu – `/var/log/corosync/corosync.log`
 
-Para alterar o local de registro em log padrão, modifique `corosync.conf`.
+Para alterar a localização padrão do registro em log, modifique `corosync.conf`.
 
-## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Planejar clusters Pacemaker para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
-Esta seção discute os pontos importantes de planejamento para um cluster do Pacemaker.
+## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Planejar clusters do Pacemaker para o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+Esta seção aborda os pontos de planejamento importantes para um cluster do Pacemaker.
 
-### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Para clusters do Pacemaker virtualização baseado em Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
-Usando máquinas virtuais para implantar com base em Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] implantações de grupos de disponibilidade e FCIs é coberto pelas mesmas regras de suas contrapartes baseado em Windows. Há um conjunto básico de regras para dar suporte a de virtualizados [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] implantações fornecidas pela Microsoft no [956893 de KB de suporte do Microsoft](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Os hipervisores diferentes, como o Microsoft Hyper-V e ESXi do VMware podem ter diferentes variações disso, devido a diferenças nas plataformas em si.
+### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Virtualização de clusters do Pacemaker baseados no Linux para o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+O uso de máquinas virtuais para implantar implantações do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] baseadas no Linux para AGs e FCIs é coberto pelas mesmas regras que as de suas contrapartes baseadas no Windows. Há um conjunto básico de regras para a compatibilidade de implantações do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] virtualizadas fornecidas pela Microsoft no [Suporte da Microsoft KB 956893](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Hipervisores diferentes, como o Hyper-V da Microsoft e o ESXi da VMware, podem ter variações diferentes sobre isso, devido a diferenças nas próprias plataformas.
 
-Quando se trata de grupos de disponibilidade e FCIs em virtualização, certifique-se de que a antiafinidade está definida para os nós de um determinado cluster Pacemaker. Quando configurado para alta disponibilidade em uma configuração de grupo de disponibilidade ou FCI, VMs que hospedam [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] nunca deve estar em execução no mesmo host do hipervisor. Por exemplo, se uma FCI de dois nós for implantada, precisaria ser *pelo menos* três hosts de hipervisor, portanto, o que há em algum lugar para uma das VMs que hospedam um nó de ir em caso de falha do host, especialmente se o uso de recursos, como ao vivo A migração ou vMotion.
+Quando se trata de AGs e FCIs em virtualização, verifique se a antiafinidade está definida para os nós de um determinado cluster do Pacemaker. Quando configuradas para alta disponibilidade em uma configuração de AG ou FCI, as VMs que hospedam o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] nunca devem estar em execução no mesmo host de hipervisor. Por exemplo, se uma FCI de dois nós for implantada, serão necessários *pelo menos* três hosts de hipervisor para que haja algum lugar para que uma das VMs que hospeda um nó continue no caso de uma falha de host, especialmente se estiver usando recursos como Migração ao Vivo ou vMotion.
 
-Para obter informações mais específicas, consulte:
--   Documentação do Hyper-V - [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
--   White paper (escrito para implantações com base no Windows, mas a maioria dos conceitos ainda se aplicam) - [planejamento altamente disponível, o SQL Server implantações críticas com VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
+Para obter mais especificações, confira:
+-   Documentação do Hyper-V – [Uso de clustering de convidado para alta disponibilidade](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
+-   White paper (escrito para implantações baseadas no Windows, mas a maior parte dos conceitos ainda se aplica) – [Planejamento de implantações do SQL Server críticas e altamente disponíveis com VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
 >[!NOTE]
->RHEL com um cluster Pacemaker com STONITH ainda não é suportado pelo Hyper-V. Até que tenha suporte, para obter mais informações e atualizações, consulte [políticas de suporte para os Clusters de alta disponibilidade RHEL](https://access.redhat.com/articles/29440#3physical_host_mixing).
+>O RHEL com um cluster do Pacemaker com STONITH ainda não tem suporte no Hyper-V. Até que tenha suporte, para obter mais informações e atualizações, confira [Políticas de suporte para clusters de alta disponibilidade do RHEL](https://access.redhat.com/articles/29440#3physical_host_mixing).
 
 ### <a name="networking"></a>Rede
-Ao contrário de um WSFC, o Pacemaker não requer um nome dedicado ou pelo menos um endereço IP dedicado para o cluster do Pacemaker em si. Grupos de disponibilidade e FCIs exigem endereços IP (consulte a documentação para cada um para obter mais informações), mas não nomes, já que não há nenhum recurso de nome de rede. SLES permite a configuração de um endereço IP para fins de administração, mas não é necessário, como pode ser visto na [criar o cluster do Pacemaker](sql-server-linux-deploy-pacemaker-cluster.md#create).
+Ao contrário de um WSFC, o Pacemaker não requer um nome dedicado ou pelo menos um endereço IP dedicado para o próprio cluster do Pacemaker. AGs e FCIs exigirão endereços IP (consulte a documentação de cada um para obter mais informações), mas não nomes, já que não há nenhum recurso de nome da rede. O SLES permite a configuração de um endereço IP para fins de administração, mas não é necessário, como pode ser visto em [Criar o cluster do Pacemaker](sql-server-linux-deploy-pacemaker-cluster.md#create).
 
-Como um WSFC, Pacemaker prefere rede redundante, ou seja, placas de rede distintas (pNICs para máquina física ou NICs) ter endereços IP individuais. Em termos de configuração de cluster, cada endereço IP teria que é conhecido como seu próprio token de autenticação. No entanto, como com e de WSFCs hoje em dia, muitas implementações são virtualizadas ou na nuvem pública em que há realmente apenas uma única virtualizado vNIC (NIC) apresentado ao servidor. Não se todos os pNICs e vNICs estão conectadas ao mesmo comutador físico ou virtual, há nenhuma redundância real na camada de rede, então configurar várias NICs é um pouco de uma ilusão à máquina virtual. Redundância de rede normalmente é compilada em um hipervisor para implantações virtualizadas e definitivamente é criada para a nuvem pública.
+Como um WSFC, o Pacemaker preferiria a rede redundante, o que significa que placas de rede distintas (NICs ou pNICs para físico) com endereços IP individuais. Em termos da configuração do cluster, cada endereço IP teria o que é conhecido como seu próprio anel. No entanto, assim como com o WSFCs hoje, muitas implementações são virtualizadas ou na nuvem pública em que há apenas uma vNIC (NIC virtualizada única) apresentada ao servidor. Se todas as pNICs e vNICs estiverem conectadas ao mesmo comutador virtual ou físico, não haverá nenhuma redundância real na camada de rede, portanto, configurar várias NICs é um pouco de uma ilusão para a máquina virtual. A redundância de rede geralmente é incorporada ao hipervisor para implantações virtualizadas e, definitivamente, é incorporada à nuvem pública.
 
-Uma diferença com várias NICs e Pacemaker versus um WSFC é que o Pacemaker permite vários endereços IP na mesma sub-rede, enquanto um WSFC não. Para obter mais informações em várias sub-redes e clusters do Linux, consulte o artigo [configurar múltiplas sub-redes](sql-server-linux-configure-multiple-subnet.md).
+Uma diferença com várias NICs e o Pacemaker versus um WSFC é que o Pacemaker permite vários endereços IP na mesma sub-rede, enquanto um WSFC não permite. Para obter mais informações sobre várias sub-redes e clusters do Linux, confira o artigo [Configurar várias sub-redes](sql-server-linux-configure-multiple-subnet.md).
 
 ### <a name="quorum-and-stonith"></a>Quorum e STONITH
-Configuração de quorum e os requisitos são relacionados às implantações de grupo de disponibilidade ou FCI específicos do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
+A configuração de quorum e os requisitos estão relacionados a implantações específicas do AG ou da FCI do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
-STONITH é necessária para um cluster Pacemaker com suporte. Use a documentação da distribuição para configurar o STONITH. Um exemplo é em [isolamento baseado em armazenamento](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_storage_protect_fencing.html) para SLES. Também há um agente STONITH para o VMware vCenter para soluções baseadas em ESXI. Para obter mais informações, consulte [Stonith plug-in do agente para VMWare VM VCenter SOAP de isolamento (Unofficial)](https://github.com/olafrv/fence_vmware_soap).
+STONITH é necessário para um cluster do Pacemaker com suporte. Use a documentação da distribuição para configurar o STONITH. Um exemplo está no [Isolamento baseado em armazenamento](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_storage_protect_fencing.html) para SLES. Também há um agente STONITH para soluções baseadas no VMware vCenter para ESXi. Para obter mais informações, confira [Agente do plug-in Stonith para isolamento SOAP do VMWare VM VCenter (não oficial)](https://github.com/olafrv/fence_vmware_soap).
 
 > [!NOTE]
-> No momento da elaboração deste artigo, o Hyper-V não tem uma solução para STONITH. Isso é verdadeiro para implantações locais e também afeta as implantações do Pacemaker baseado no Azure usando determinadas distribuições como RHEL.
+> No momento da elaboração deste artigo, o Hyper-V não tem uma solução para STONITH. Isso é verdadeiro para implantações locais e também afeta implantações do Pacemaker baseadas no Azure usando determinadas distribuições, como RHEL.
 
 ### <a name="interoperability"></a>Interoperabilidade
-Esta seção documenta como um cluster baseado em Linux pode interagir com um WSFC ou com outras distribuições do Linux.
+Esta seção documenta como um cluster baseado no Linux pode interagir com um WSFC ou com outras distribuições do Linux.
 
 #### <a name="wsfc"></a>WSFC
-Atualmente, não há nenhuma maneira direta de um WSFC e um cluster Pacemaker para trabalharem juntos. Isso significa que não há nenhuma maneira de criar um grupo de disponibilidade ou FCI que funciona em um WSFC e o Pacemaker. No entanto, há duas soluções de interoperabilidade, sendo que ambos são projetados para grupos de disponibilidade. A única maneira de que uma FCI pode participar de uma configuração de plataforma cruzada é se ela está participando como uma instância em um desses dois cenários:
--   Um grupo de disponibilidade com um tipo de cluster nenhum. Para obter mais informações, consulte o Windows [documentação dos grupos de disponibilidade](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).
--   Um grupo de disponibilidade distribuído, que é um tipo especial de grupo de disponibilidade que permite que dois grupos de disponibilidade diferentes a ser configurado como seu próprio grupo de disponibilidade. Para obter mais informações sobre grupos de disponibilidade distribuídos, consulte a documentação [grupos de disponibilidade distribuída](../database-engine/availability-groups/windows/distributed-availability-groups.md).
+Atualmente, não existe maneira direta para um WSFC e um cluster do Pacemaker funcionarem juntos. Isso significa que não há como criar um AG ou uma FCI que funcione em um WSFC e em um Pacemaker. No entanto, há duas soluções de interoperabilidade, ambas projetadas para AGs. A única maneira de uma FCI poder participar de uma configuração multiplataforma é se ela estiver participando como uma instância em um destes dois cenários:
+-   Um AG com um tipo de cluster Nenhum. Para obter mais informações, confira a [documentação dos grupos de disponibilidade](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) do Windows.
+-   Um AG distribuído, que é um tipo especial de grupo de disponibilidade que permite que dois AGs diferentes sejam configurados como seu próprio grupo de disponibilidade. Para obter mais informações sobre AGs distribuídos, confira a documentação [Grupos de disponibilidade distribuídos](../database-engine/availability-groups/windows/distributed-availability-groups.md).
 
 #### <a name="other-linux-distributions"></a>Outras distribuições do Linux
-No Linux, todos os nós de um cluster Pacemaker devem ser a mesma distribuição. Por exemplo, isso significa que um nó RHEL não pode ser parte de um cluster Pacemaker que tem um nó SLES. O principal motivo para isso foi mencionado anteriormente: as distribuições podem ter diferentes versões e funcionalidades, então as coisas não poderiam funcionar corretamente. Combinação de distribuições tem a mesma história que misturar WSFCs e Linux: usar nenhum ou distribuído grupos de disponibilidade.
+No Linux, todos os nós de um cluster do Pacemaker devem estar na mesma distribuição. Por exemplo, isso significa que um nó RHEL não pode fazer parte de um cluster do Pacemaker que tem um nó SLES. O principal motivo para isso foi declarado anteriormente: as distribuições podem ter diferentes versões e funcionalidades, portanto, as ações não podiam funcionar corretamente. A combinação de distribuições tem a mesma história que a combinação de WSFCs e Linux: use Nenhum ou AGs distribuídos.
 
 ## <a name="next-steps"></a>Próximas etapas
-[Implantar um cluster de Pacemaker para o SQL Server no Linux](sql-server-linux-deploy-pacemaker-cluster.md)
+[Implantar um cluster do Pacemaker para o SQL Server em Linux](sql-server-linux-deploy-pacemaker-cluster.md)

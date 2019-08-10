@@ -1,6 +1,6 @@
 ---
-title: Configurar o SSIS no Linux com o ssis-conf
-description: Este artigo descreve como configurar o SQL Server Integration Services (SSIS) no Linux com o utilitário de ssis-conf.
+title: Configurar o SSIS no Linux com ssis-conf
+description: Este artigo descreve como agendar pacotes SSIS (SQL Server Integration Services) no Linux com o utilitário ssis-conf.
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -9,42 +9,42 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 51dc2ba27e346dea75f1bd347491d4932695fd43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077529"
 ---
-# <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Configurar o SQL Server Integration Services no Linux com o ssis-conf
+# <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Configurar o SQL Server Integration Services no Linux com ssis-conf
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Executar o `ssis-conf` script de configuração quando você instala o SQL Server Integration Services (SSIS) para o Red Hat Enterprise Linux e Ubuntu. Para obter mais informações sobre como instalar o SSIS, consulte [instalar o SQL Server SSIS (Integration Services) no Linux](sql-server-linux-setup-ssis.md).
+Você executa o script de configuração `ssis-conf` ao instalar o SSIS (SQL Server Integration Services) para Red Hat Enterprise Linux e Ubuntu. Para obter mais informações sobre a instalação do SSIS, confira [Instalar o SSIS (SQL Server Integration Services) no Linux](sql-server-linux-setup-ssis.md).
 
-Você também pode usar o `ssis-conf` utilitário para configurar as propriedades a seguir:
+Você também pode usar o utilitário `ssis-conf` para configurar as seguintes propriedades:
 
 | Comando | Descrição |
 |-------------|---------------------------------------------------------------------|
-| edição de conjunto | Defina a edição do SQL Server                                       |
-| Telemetria   | Habilitar ou desabilitar o serviço de telemetria do SQL Server Integration Services |
+| set-edition | Definir a edição do SQL Server                                       |
+| telemetria   | Habilitar ou desabilitar o serviço de telemetria do SQL Server Integration Services |
 | instalação       | Inicializar e configurar o Microsoft SQL Server Integration Services      |
 |||
 
-## <a name="run-ssis-conf"></a>Executar o ssis-conf
+## <a name="run-ssis-conf"></a>Executar ssis-conf
 
-Os exemplos neste artigo executados `ssis-conf` , especificando o caminho completo: `/opt/ssis/bin/ssis-conf`. Se você navegar para esse local antes de executar `ssis-conf`, você pode executar o utilitário no contexto do diretório atual: `./ssis-conf`.
+Os exemplos neste artigo executam `ssis-conf` especificando o caminho completo: `/opt/ssis/bin/ssis-conf`. Se navegar até essa localização antes de executar `ssis-conf`, você poderá executar o utilitário no contexto do diretório atual: `./ssis-conf`.
 
-Certifique-se de executar os comandos descritos neste artigo com privilégios de raiz. Por exemplo, execute `sudo /opt/ssis/bin/ssis-conf setup` e não `/opt/ssis/bin/ssis-conf setup`.
+É preciso que você execute os comandos que são descritos neste artigo com privilégios de raiz. Por exemplo, execute `sudo /opt/ssis/bin/ssis-conf setup` e não `/opt/ssis/bin/ssis-conf setup`.
 
-Para executar esses comandos com prompts no idioma que você preferir, você pode especificar uma localidade. Por exemplo, para receber solicitações em chinês, execute o seguinte comando: `sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`.
+Para executar esses comandos com prompts no idioma de sua preferência, você pode especificar uma localidade. Por exemplo, para receber prompts em chinês, execute o seguinte comando: `sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`.
 
 ## <a name="use-set-edition-to-set-the-edition-of-sql-server-integration-services"></a>Use set-edition para definir a edição do SQL Server Integration Services
 
-A edição do SSIS é alinhada com a edição do SQL Server.
+A edição do SSIS está alinhada com a edição do SQL Server.
 
-Digite o seguinte comando: `$ sudo /opt/ssis/bin/ssis-conf set-edition`.
+Digite o comando a seguir: `$ sudo /opt/ssis/bin/ssis-conf set-edition`.
 
-Depois de inserir o comando, você receberá a seguinte solicitação:
+Depois de inserir o comando, você receberá o seguinte prompt:
 
 ```
 Choose an edition of SQL Server:
@@ -74,21 +74,21 @@ By choosing a PAID edition, you are verifying that you have the appropriate numb
 Enter your edition (1-8):
 ```
 
-Se você inserir um valor de 1 a 7, o sistema configura uma edição gratuita ou paga. Se você inserir 8, o utilitário solicita que você insira a chave de produto que você comprou:
+Se você inserir um valor de 1 a 7, o sistema configurará uma edição gratuita ou paga. Se você inserir 8, o utilitário solicitará que você insira a chave do produto (Product Key) que adquiriu:
 
 ```
 Enter the 25-character product key:
 ```
 
-## <a name="use-telemetry-to-configure-customer-feedback"></a>Usar a telemetria para configurar os comentários dos clientes
+## <a name="use-telemetry-to-configure-customer-feedback"></a>Usar telemetria para configurar comentários do cliente
 
-O `telemetry` comando determina se o SSIS envia comentários à Microsoft.
+O comando `telemetry` determina se o SSIS envia comentários à Microsoft.
 
-Para as edições gratuitas (ou seja, as edições Evaluation, Developer e Express), o serviço de telemetria está sempre habilitado. Se você tiver uma edição gratuita, você não pode usar o `telemetry` comando para desabilitar a telemetria.
+Para edições gratuitas (ou seja, edições Express, Developer e Evaluation), o serviço de telemetria está sempre habilitado. Se tiver uma edição gratuita, você não poderá usar o comando `telemetry` para desabilitar a telemetria.
 
-Digite o seguinte comando: `$ sudo /opt/ssis/bin/ssis-conf telemetry`.
+Digite o comando a seguir: `$ sudo /opt/ssis/bin/ssis-conf telemetry`.
 
-Para edições pagas, depois de inserir o comando, você receberá a seguinte solicitação:
+Para edições pagas, depois de inserir o comando, você receberá o seguinte prompt:
 
 ```
 Send feature usage data to Microsoft. Feature usage data includes information about your hardware configuration and how you use SQL Server Integration Services.
@@ -96,29 +96,29 @@ Send feature usage data to Microsoft. Feature usage data includes information ab
 [Yes/No]:
 ```
 
-Se você selecionar **Sim**, o serviço de telemetria está habilitado e começa a ser executado. O serviço é iniciado automaticamente após cada inicialização. Se você selecionar **não**, o serviço de telemetria para e está desabilitada.
+Se você selecionar **Sim**, o serviço de telemetria será habilitado e começará a executar. O serviço iniciará automaticamente após cada inicialização. Se você selecionar **Não**, o serviço de telemetria será interrompido e desabilitado.
 
 ## <a name="use-setup-to-initialize-and-set-up-microsoft-sql-server-integration-services"></a>Use a instalação para inicializar e configurar o Microsoft SQL Server Integration Services
 
-Use o `setup` comando sempre que você instale o SSIS.
+Use o comando `setup` toda vez que você instalar o SSIS.
 
-Digite o seguinte comando: `sudo /opt/ssis/bin/ssis-conf setup`.
+Digite o comando a seguir: `sudo /opt/ssis/bin/ssis-conf setup`.
 
-O utilitário solicita que você confirmar ou fornecer valores para os seguintes itens:
+O utilitário solicita que você reconheça ou forneça valores para os itens a seguir:
 -   Licença do produto
--   Termos de licença
+-   Contrato EULA
 -   Serviço de telemetria
--   O idioma usado pelo Integration Services
+-   A linguagem usada pelo Integration Services
 
-Para executar o `setup` comando prompts no idioma que você preferir, você pode especificar uma localidade. Por exemplo, para receber solicitações em chinês, execute o seguinte comando: `sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`.
+Para executar o comando `setup` com prompts no idioma de sua preferência, você pode especificar uma localidade. Por exemplo, para receber prompts em chinês, execute o seguinte comando: `sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`.
 
-## <a name="ssisconf-format"></a>formato de SSIS.conf
+## <a name="ssisconf-format"></a>Formato ssis.conf
 
-O seguinte `/var/opt/ssis/ssis.conf` arquivo fornece um exemplo para cada configuração.
+O arquivo `/var/opt/ssis/ssis.conf` a seguir fornece um exemplo para cada configuração.
 
-Para o SQL Server, você pode alterar as configurações do sistema, alterando os valores no `mssql.conf` arquivo. Para o SSIS, você *não é possível* alterar configurações do sistema, alterando os valores no `ssis.conf` arquivo. O `ssis.conf` arquivo mostra apenas os resultados da instalação. Se você quiser alterar as configurações para o SSIS, você pode excluir o `ssis.conf` do arquivo e execute o `setup` comando novamente.
+Para o SQL Server, você pode alterar as configurações do sistema alterando os valores no arquivo `mssql.conf`. Para o SSIS, você *não pode* alterar as configurações do sistema alterando os valores no arquivo `ssis.conf`. O arquivo `ssis.conf` mostra somente os resultados da instalação. Se você quiser alterar as configurações do SSIS, poderá excluir o arquivo `ssis.conf` e executar o comando `setup` novamente.
 
-Aqui está um exemplo `ssis.conf` arquivo. Cada campo corresponde ao resultado de uma etapa de instalação.
+Aqui está um arquivo `ssis.conf` de exemplo. Cada campo corresponde ao resultado de uma etapa da instalação.
 
 ```
 [LICENSE]
@@ -140,8 +140,8 @@ enabled = Y
 lcid = 2052
 ```
 
-## <a name="related-content-about-ssis-on-linux"></a>Conteúdo relacionado sobre SSIS no Linux
--   [Extrair, transformar e carregar dados em Linux com o SSIS](sql-server-linux-migrate-ssis.md)
--   [Instalar o SQL Server Integration Services (SSIS) no Linux](sql-server-linux-setup-ssis.md)
+## <a name="related-content-about-ssis-on-linux"></a>Conteúdo relacionado sobre o SSIS no Linux
+-   [Extrair, transformar e carregar dados no Linux com o SSIS](sql-server-linux-migrate-ssis.md)
+-   [Instalar o SSIS (SQL Server Integration Services) no Linux](sql-server-linux-setup-ssis.md)
 -   [Limitações e problemas conhecidos do SSIS no Linux](sql-server-linux-ssis-known-issues.md)
--   [SQL Server Integration Services de agenda a execução no Linux com cron do pacote](sql-server-linux-schedule-ssis-packages.md)
+-   [Agendar a execução de pacotes do SQL Server Integration Services no Linux com cron](sql-server-linux-schedule-ssis-packages.md)

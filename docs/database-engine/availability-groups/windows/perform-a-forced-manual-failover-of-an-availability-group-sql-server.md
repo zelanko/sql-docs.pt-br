@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a3c6ba5932e440373ae9e08afc1c8483e25ceebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 167070809d552a40d57761b533fc7954fec76dc1
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014611"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388363"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Executar um failover manual forçado de um Grupo de Disponibilidade Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "68014611"
   
 -   A perda de dados é possível durante o failover forçado de um grupo de disponibilidade. Além disso, se a réplica primária estiver em execução quando você iniciar um failover forçado, os clientes ainda poderão ser conectados a bancos de dados primários antigos. Portanto, é altamente recomendável forçar failover apenas se a réplica primária não estiver mais em execução e se você estiver disposto a arriscar a perda de dados para restaurar o acesso aos bancos de dados no grupo de disponibilidade.  
   
--   Quando um banco de dados secundário estiver no estado REVERTING ou INITIALIZING, o failover forçado causará uma falha na inicialização do banco de dados como um banco de dados primário. Se o banco de dados estiver no estado INITIALIZING, você precisará aplicar os registros de log ausentes de um backup de banco de dados ou restaurar completamente o banco de dados a partir do zero. Se o banco de dados estiver no estado REVERTING, você precisará restaurar completamente o banco de dados dos backups.  
+-   Quando um banco de dados secundário estiver no estado REVERTING ou INITIALIZING, o failover forçado causará uma falha na inicialização do banco de dados como um banco de dados primário. Se o banco de dados estiver no estado INITIALIZING, você precisará aplicar os registros de log ausentes de um backup de banco de dados ou restaurar completamente o banco de dados do zero. Se o banco de dados estiver no estado REVERTING, você precisará restaurar completamente o banco de dados dos backups.  
   
 -   Um comando de failover é retornado assim que o destino de failover aceita o comando. No entanto, a recuperação de banco de dados ocorre de forma assíncrona depois que o grupo de disponibilidade terminar o failover.  
   

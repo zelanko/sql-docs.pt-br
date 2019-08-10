@@ -1,6 +1,6 @@
 ---
-title: Introdução à segurança do SQL Server no Linux
-description: Este artigo descreve as ações de segurança típica.
+title: Introdução à segurança do SQL Server em Linux
+description: Este artigo descreve as ações de segurança típicas.
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -9,25 +9,25 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68019503"
 ---
-# <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Instruções passo a passo para os recursos de segurança do SQL Server no Linux
+# <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Passo a passo dos recursos de segurança do SQL Server em Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Se você for um usuário do Linux que há de novo para o SQL Server, as seguintes tarefas orientarão-lo por meio de algumas das tarefas de segurança. Esses não são exclusivas ou específicas para o Linux, mas ele ajuda a dar uma ideia das áreas para investigar mais. Em cada exemplo é fornecido um link para a documentação detalhada para a área.
+Se você for um usuário do Linux não familiarizado com o SQL Server, as tarefas a seguir o orientarão em algumas das tarefas de segurança. Elas não são exclusivas nem específicas do Linux, mas ajudam a dar uma ideia de áreas para posterior investigação. Em cada exemplo, um link é fornecido para a documentação detalhada dessa área.
 
 > [!NOTE]
->  Os exemplos a seguir usam o **AdventureWorks2014** banco de dados de exemplo. Para obter instruções sobre como obter e instalar esse banco de dados de exemplo, consulte [restaurar um banco de dados do SQL Server do Windows para Linux](sql-server-linux-migrate-restore-database.md).
+>  Os exemplos a seguir usam o banco de dados de exemplo **AdventureWorks2014**. Para obter instruções sobre como obter e instalar esse banco de dados de exemplo, confira [Restaurar um banco de dados do SQL Server do Windows para o Linux](sql-server-linux-migrate-restore-database.md).
 
 
-## <a name="create-a-login-and-a-database-user"></a>Crie um logon e um usuário de banco de dados 
+## <a name="create-a-login-and-a-database-user"></a>Criar um logon e um usuário de banco de dados 
 
-Conceder acesso a outros para o SQL Server, criando um logon no banco de dados mestre usando o [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) instrução. Por exemplo:
+Permite a outros usuários o acesso ao SQL Server criando um logon no banco de dados mestre usando a instrução [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md). Por exemplo:
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
@@ -36,7 +36,7 @@ CREATE LOGIN Larry WITH PASSWORD = '************';
 > [!NOTE]
 >  Sempre use uma senha forte no lugar dos asteriscos no comando anterior.
 
-Logons podem se conectar ao SQL Server e tem acesso (com permissões limitadas) no banco de dados mestre. Para se conectar a um banco de dados do usuário, um logon precisa de uma identidade correspondente no nível do banco de dados, chamado de um usuário de banco de dados. Os usuários são específicos para cada banco de dados e devem ser criados separadamente em cada banco de dados para conceder acesso a eles. O exemplo a seguir move o cursor para o banco de dados AdventureWorks2014 e, em seguida, usa o [criar usuário](../t-sql/statements/create-user-transact-sql.md) instrução para criar um usuário chamado Larry que está associado com o logon chamado Larry. Embora o logon e o usuário relacionados (mapeado para o outro), eles são objetos diferentes. O logon é um princípio de nível de servidor. O usuário é uma entidade de segurança de nível de banco de dados.
+Os logons podem se conectar ao SQL Server e ter acesso (com permissões limitadas) ao banco de dados mestre. Para se conectar a um banco de dados de usuário, um logon precisa ter uma identidade correspondente no nível de banco de dados, chamada usuário de banco de dados. Os usuários são específicos de cada banco de dados e precisam ser criados separadamente em cada banco de dados para permitir acesso a eles. O exemplo a seguir insere você no banco de dados AdventureWorks2014 e, em seguida, usa a instrução [CREATE USER](../t-sql/statements/create-user-transact-sql.md) para criar um usuário chamado Paulo que está associado ao logon chamado Paulo. Embora o logon e o usuário estejam relacionados (mapeados entre si), eles são objetos diferentes. O logon é uma entidade de segurança no nível do servidor. O usuário é uma entidade de segurança no nível do banco de dados.
 
 ```
 USE AdventureWorks2014;
@@ -46,9 +46,9 @@ GO
 ```
 
 - Uma conta de administrador do SQL Server pode se conectar a qualquer banco de dados e pode criar mais logons e usuários em qualquer banco de dados.  
-- Quando alguém cria um banco de dados que eles se tornar o proprietário do banco de dados, o que pode se conectar ao banco de dados. Os proprietários de banco de dados podem criar mais usuários.
+- Quando alguém cria um banco de dados, ele se torna o proprietário do banco de dados, que pode se conectar a esse banco de dados. Os proprietários do banco de dados podem criar mais usuários.
 
-Mais tarde você pode autorizar outros logons para criar um mais logons, concedendo a ela o `ALTER ANY LOGIN` permissão. Dentro de um banco de dados, você pode autorizar que outros usuários para criar mais usuários, concedendo a ela o `ALTER ANY USER` permissão. Por exemplo:   
+Posteriormente, você pode autorizar outros logons a criar mais logons, concedendo a eles a permissão `ALTER ANY LOGIN`. Em um banco de dados, você pode autorizar outros usuários a criarem mais usuários concedendo a eles a permissão `ALTER ANY USER`. Por exemplo:   
 
 ```
 GRANT ALTER ANY LOGIN TO Larry;   
@@ -60,14 +60,14 @@ GRANT ALTER ANY USER TO Jerry;
 GO   
 ```
 
-Agora, o logon Larry pode criar mais logons e o usuário Jerry pode criar mais usuários.
+Agora o logon Paulo pode criar mais logons e o usuário Marco pode criar mais usuários.
 
 
-## <a name="granting-access-with-least-privileges"></a>Conceder acesso com privilégios mínimos
+## <a name="granting-access-with-least-privileges"></a>Como permitir acesso com privilégios mínimos
 
-As pessoas primeiro para se conectar a um banco de dados do usuário será o administrador e contas do proprietário de banco de dados. No entanto, esses usuários têm todas as permissões disponíveis no banco de dados. Esta é a permissão mais do que a maioria dos usuários deve ter. 
+As primeiras pessoas a se conectarem a um banco de dados de usuário serão as contas de administrador e proprietário do banco de dados. No entanto, esses usuários têm todas as permissões disponíveis no banco de dados. Isso representa um número de permissões além do que a maioria dos usuários deve ter. 
 
-Quando você estiver apenas começando, você pode atribuir algumas categorias gerais de permissões usando o interno *funções de banco de dados fixas*. Por exemplo, o `db_datareader` função de banco de dados fixa pode ler todas as tabelas no banco de dados, mas sem fazer alterações. Conceder a associação em uma função de banco de dados fixa usando o [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md) instrução. O exemplo a seguir adicionar o usuário `Jerry` para o `db_datareader` função fixa de banco de dados.   
+Quando você estiver apenas começando, poderá atribuir algumas categorias gerais de permissões usando as *funções de banco de dados fixas* internas. Por exemplo, a função de banco de dados fixa `db_datareader` pode ler todas as tabelas no banco de dados, mas não pode fazer nenhuma alteração. Permita a associação em uma função de banco de dados fixa usando a instrução [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md). O exemplo a seguir adiciona o usuário `Jerry` à função de banco de dados fixa `db_datareader`.   
    
 ```   
 USE AdventureWorks2014;   
@@ -76,11 +76,11 @@ GO
 ALTER ROLE db_datareader ADD MEMBER Jerry;   
 ```   
 
-Para obter uma lista das funções fixas de banco de dados, consulte [funções de nível de banco de dados](../relational-databases/security/authentication-access/database-level-roles.md).
+Para obter uma lista das funções de banco de dados fixas, confira [Funções no nível do banco de dados](../relational-databases/security/authentication-access/database-level-roles.md).
 
-Posteriormente, quando você estiver pronto para configurar o acesso mais preciso aos seus dados (altamente recomendados), crie suas próprias funções de banco de dados definidos pelo usuário usando [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md) instrução. Atribua permissões granulares específicas a você funções personalizadas.
+Posteriormente, quando estiver pronto para configurar o acesso mais preciso aos seus dados (altamente recomendado), crie suas próprias funções de banco de dados definidas pelo usuário usando a instrução [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md). Em seguida, atribua permissões granulares específicas às funções personalizadas.
 
-Por exemplo, as instruções a seguir criam uma função de banco de dados denominada `Sales`, concede a `Sales` a capacidade de ver, atualizar e excluir linhas de grupo a `Orders` da tabela e, em seguida, adiciona o usuário `Jerry` para o `Sales` função.   
+Por exemplo, as instruções a seguir criam uma função de banco de dados chamada `Sales`, concede ao grupo `Sales` a capacidade de ver, atualizar e excluir linhas da tabela `Orders` e, em seguida, adiciona o usuário `Jerry` à função `Sales`.   
    
 ```   
 CREATE ROLE Sales;   
@@ -135,31 +135,31 @@ WHERE ('SalesPerson' + CAST(@SalesPersonId as VARCHAR(16)) = USER_NAME())
 Create a security policy adding the function as both a filter and a block predicate on the table:  
 
 ```
-Criar SalesFilter de política de segurança   
-Adicionar Security.fn_securitypredicate(SalesPersonID) de PREDICADO de filtro    
-  EM Sales. SalesOrderHeader,   
-Adicionar Security.fn_securitypredicate(SalesPersonID) de PREDICADO de bloco    
-  EM Sales. SalesOrderHeader   
+CREATE SECURITY POLICY SalesFilter   
+ADD FILTER PREDICATE Security.fn_securitypredicate(SalesPersonID)    
+  ON Sales.SalesOrderHeader,   
+ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)    
+  ON Sales.SalesOrderHeader   
 WITH (STATE = ON);   
 ```
 
 Execute the following to query the `SalesOrderHeader` table as each user. Verify that `SalesPerson280` only sees the 95 rows from their own sales and that the `Manager` can see all the rows in the table.  
 
 ```    
-Executar como usuário = 'SalesPerson280';   
+EXECUTE AS USER = 'SalesPerson280';   
 SELECT * FROM Sales.SalesOrderHeader;    
-REVERTER; 
+REVERT; 
  
-Executar como usuário = 'Gerenciador';   
+EXECUTE AS USER = 'Manager';   
 SELECT * FROM Sales.SalesOrderHeader;   
-REVERTER;   
+REVERT;   
 ```
  
 Alter the security policy to disable the policy.  Now both users can access all rows. 
 
 ```
-ALTER SalesFilter de política de segurança   
-COM (ESTADO = OFF);    
+ALTER SECURITY POLICY SalesFilter   
+WITH (STATE = OFF);    
 ``` 
 
 
@@ -170,19 +170,19 @@ COM (ESTADO = OFF);
 Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` column in the `Person.EmailAddress` table: 
  
 ```
-USE AdventureWorks2014; VÁ ALTER tabela Person.EmailAddress     ALTER coluna EmailAddress    
-Adicionar MASCARADOS com (função = ' email()');
+USE AdventureWorks2014; GO ALTER TABLE Person.EmailAddress     ALTER COLUMN EmailAddress    
+ADD MASKED WITH (FUNCTION = 'email()');
 ``` 
  
 Create a new user `TestUser` with `SELECT` permission on the table, then execute a query as `TestUser` to view the masked data:   
 
 ```  
-Criar usuário TestUser sem logon;   
-GRANT SELECT ON Person.EmailAddress para TestUser;    
+CREATE USER TestUser WITHOUT LOGIN;   
+GRANT SELECT ON Person.EmailAddress TO TestUser;    
  
-Executar como usuário = "TestUser";   
-Selecione EmailAddressID, EmailAddress do Person.EmailAddress;       
-REVERTER;    
+EXECUTE AS USER = 'TestUser';   
+SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;       
+REVERT;    
 ```
  
 Verify that the masking function changes the email address in the first record from:
@@ -222,21 +222,21 @@ The following example illustrates encrypting and decrypting the `AdventureWorks2
 USE master;  
 GO  
 
-CRIAR CHAVE MESTRA DE CRIPTOGRAFIA POR SENHA = ' * ';  
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';  
 GO  
 
-Criar certificado MyServerCert com o assunto = 'Meu banco de dados chave certificado de criptografia';  
+CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
 GO  
 
 USE AdventureWorks2014;   GO
   
 CREATE DATABASE ENCRYPTION KEY  
 WITH ALGORITHM = AES_256  
-CRIPTOGRAFIA MyServerCert de certificado do servidor;  
+ENCRYPTION BY SERVER CERTIFICATE MyServerCert;  
 GO
   
-Alterar banco de dados AdventureWorks2014  
-DEFINIR CRIPTOGRAFIA;   
+ALTER DATABASE AdventureWorks2014  
+SET ENCRYPTION ON;   
 ```
 
 To remove TDE, execute `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
@@ -258,13 +258,13 @@ SQL Server has the ability to encrypt the data while creating a backup. By speci
  
 The following example creates a certificate, and then creates a backup protected by the certificate.
 ```
-Mestre USE;   VÁ   criar certificado BackupEncryptCert   com o assunto = 'Database backups';   ACESSE o banco de dados de BACKUP [AdventureWorks2014]   no disco = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
+USE master;   GO   CREATE CERTIFICATE BackupEncryptCert   WITH SUBJECT = 'Database backups';   GO BACKUP DATABASE [AdventureWorks2014]   TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
 com  
-  COMPACTAÇÃO,  
+  COMPRESSION,  
   ENCRYPTION   
    (  
    ALGORITHM = AES_256,  
-   CERTIFICADO do servidor = BackupEncryptCert  
+   SERVER CERTIFICATE = BackupEncryptCert  
    ),  
   STATS = 10  
 GO  

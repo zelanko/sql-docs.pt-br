@@ -1,6 +1,6 @@
 ---
-title: Configurar o envio de logs para o SQL Server no Linux
-description: Este tutorial mostra um exemplo básico de como replicar uma instância do SQL Server no Linux para uma instância secundária usando envio de logs.
+title: Configurar o envio de logs do SQL Server em Linux
+description: Este tutorial mostra um exemplo básico de como replicar uma Instância do SQL Server no Linux em uma instância secundária usando o envio de logs.
 author: VanMSFT
 ms.author: vanto
 ms.date: 04/19/2017
@@ -8,43 +8,43 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5f5b795d35899025f1651b0f7db758d60103c511
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032202"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Introdução ao envio de logs no Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Envio de Log do SQL Server é uma configuração de alta disponibilidade em que um banco de dados de um servidor primário é replicado em um ou mais servidores secundários. Em poucas palavras, um backup do banco de dados de origem é restaurado para o servidor secundário. Em seguida, o servidor primário cria backups de log de transações periodicamente, e os servidores secundários restauração-los, atualizar a cópia secundária do banco de dados. 
+O envio de logs do SQL Server é uma configuração de HA, em que um banco de dados de um servidor primário é replicado em um ou mais servidores secundários. Resumindo: um backup do banco de dados de origem é restaurado no servidor secundário. Em seguida, o servidor primário cria backups de log de transações periodicamente e os servidores secundários os restauram, atualizando a cópia secundária do banco de dados. 
 
   ![Envio de logs](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 
-Conforme descrito nesta figura, uma sessão de envio de logs envolve as seguintes etapas:
+Conforme descrito nesta imagem, uma sessão de envio de logs envolve as seguintes etapas:
 
-- Como fazer backup do arquivo de log de transações na instância primária do SQL Server
-- Copiando o arquivo de backup de log de transação em toda a rede para um ou mais instâncias do SQL Server secundárias
-- Restaurar o arquivo de backup de log de transação em instâncias do SQL Server secundários
+- Fazer backup do arquivo de log de transações na Instância primária do SQL Server
+- Copiar o arquivo de backup de log de transações na rede para uma ou mais Instâncias secundárias do SQL Server
+- Restaurar o arquivo de backup de log de transações nas Instâncias secundárias do SQL Server
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 - [Instalar o SQL Server Agent no Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
 
-## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>Configurar um compartilhamento de rede para o envio de logs usando CIFS 
+## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>Configurar um compartilhamento de rede para o envio de logs usando o CIFS 
 
 > [!NOTE] 
-> Este tutorial usa CIFS + Samba para configurar o compartilhamento de rede. Se você quiser usar NFS, deixe um comentário e ele será adicionado ao documento.       
+> Este tutorial usa o CIFS e o Samba para configurar o compartilhamento de rede. Caso deseje usar o NFS, deixe um comentário e o adicionaremos ao documento.       
 
 ### <a name="configure-primary-server"></a>Configurar o servidor primário
--   Execute o seguinte para instalar o Samba
+-   Execute o comando a seguir para instalar o Samba
 
     ```bash
     sudo apt-get install samba #For Ubuntu
     sudo yum -y install samba #For RHEL/CentOS
     ```
--   Crie um diretório para armazenar os logs de envio de logs e conceder as permissões necessárias de mssql
+-   Crie um diretório para armazenar os logs do envio de logs e forneça ao mssql as permissões necessárias
 
     ```bash
     mkdir /var/opt/mssql/tlogs
@@ -52,7 +52,7 @@ Conforme descrito nesta figura, uma sessão de envio de logs envolve as seguinte
     chmod 0700 /var/opt/mssql/tlogs
     ```
 
--   Edite o arquivo /etc/samba/smb.conf (você precisa de permissões de raiz para fazer isso) e adicione a seção a seguir:
+-   Edite o arquivo /etc/samba/smb.conf (você precisa ter permissões raiz para fazer isso) e adicione a seguinte seção:
 
     ```bash
     [tlogs]
@@ -64,7 +64,7 @@ Conforme descrito nesta figura, uma sessão de envio de logs envolve as seguinte
     writable=no
     ```
 
--   Criar um usuário mssql para o Samba
+-   Crie um usuário mssql para o Samba
 
     ```bash
     sudo smbpasswd -a mssql
@@ -75,15 +75,15 @@ Conforme descrito nesta figura, uma sessão de envio de logs envolve as seguinte
     sudo systemctl restart smbd.service nmbd.service
     ```
  
-### <a name="configure-secondary-server"></a>Configurar o servidor secundário
+### <a name="configure-secondary-server"></a>Configure o servidor secundário
 
--   Execute o seguinte para instalar o cliente CIFS
+-   Execute o comando a seguir para instalar o cliente CIFS
     ```bash   
     sudo apt-get install cifs-utils #For Ubuntu
     sudo yum -y install cifs-utils #For RHEL/CentOS
     ```
 
--   Crie um arquivo para armazenar suas credenciais. Use a senha que você definir recentemente para sua conta do Samba mssql 
+-   Crie um arquivo para armazenar suas credenciais. Use a senha que você definiu recentemente para sua conta do mssql no Samba 
 
         vim /var/opt/mssql/.tlogcreds
         #Paste the following in .tlogcreds
@@ -91,7 +91,7 @@ Conforme descrito nesta figura, uma sessão de envio de logs envolve as seguinte
         domain=<domain>
         password=<password>
 
--   Execute os seguintes comandos para criar um diretório vazio para montagem e definir permissão e a propriedade corretamente
+-   Execute os comandos a seguir para criar um diretório vazio para montar e definir a permissão e a propriedade corretamente
     ```bash   
     mkdir /var/opt/mssql/tlogs
     sudo chown root:root /var/opt/mssql/tlogs
@@ -100,18 +100,18 @@ Conforme descrito nesta figura, uma sessão de envio de logs envolve as seguinte
     sudo chmod 0660 /var/opt/mssql/.tlogcreds
     ```
 
--   Adicione a linha a etc/fstab para manter o compartilhamento 
+-   Adicione a linha a etc/fstab para persistir o compartilhamento 
 
         //<ip_address_of_primary_server>/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,ro,uid=mssql,gid=mssql 0 0
         
--   Montar os compartilhamentos
+-   Monte os compartilhamentos
     ```bash   
     sudo mount -a
     ```
        
-## <a name="setup-log-shipping-via-t-sql"></a>Por meio do T-SQL de envio de logs de instalação
+## <a name="setup-log-shipping-via-t-sql"></a>Configurar o envio de logs por meio do T-SQL
 
-- Execute este script do seu servidor primário
+- Execute este script no servidor primário
 
     ```sql
     BACKUP DATABASE SampleDB
@@ -177,7 +177,7 @@ Conforme descrito nesta figura, uma sessão de envio de logs envolve as seguinte
     ```
 
 
-- Execute este script do servidor secundário
+- Execute este script no servidor secundário
 
     ```sql
     RESTORE DATABASE SampleDB FROM DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
@@ -283,7 +283,7 @@ Conforme descrito nesta figura, uma sessão de envio de logs envolve as seguinte
     END 
     ```
 
-## <a name="verify-log-shipping-works"></a>Verifique se o envio de logs funciona
+## <a name="verify-log-shipping-works"></a>Verificar se o envio de logs funciona
 
 - Verifique se o envio de logs funciona iniciando o trabalho a seguir no servidor primário
 

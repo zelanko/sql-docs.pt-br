@@ -1,5 +1,5 @@
 ---
-title: Configurar várias sub-redes grupos de disponibilidade AlwaysOn e instâncias de cluster de failover no Linux
+title: Configurar instâncias de cluster de failover e grupos de disponibilidade Always On com várias sub-redes no Linux
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,37 +9,37 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 2fc848c30af32e5ff2a81ebadf4378b75ff5a521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077595"
 ---
-# <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurar várias sub-redes grupos de disponibilidade AlwaysOn e instâncias de cluster de failover
+# <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurar instâncias de cluster de failover e grupos de disponibilidade Always On com várias sub-redes
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Quando uma instância de cluster sempre no grupo de disponibilidade (AG) ou do failover (FCI) abrange mais de um site, cada site geralmente tem seu próprio sistema de rede. Isso geralmente significa que cada site tem seu próprio endereçamento de IP. Por exemplo, endereços de sites do começam com 192.168.1. *x* e comece a endereços do Site B com 192.168.2. *x*, onde *x* é a parte do endereço IP que é exclusivo para o servidor. Sem algum tipo de roteamento em vigor na camada de rede, esses servidores não poderão se comunicar entre si. Há duas maneiras de lidar com esse cenário: configurar uma rede que conecta as duas sub-redes diferentes, conhecidas como uma VLAN, ou configurar o roteamento entre sub-redes.
+Quando um grupo de disponibilidade Always On ou FCI (instância de cluster de failover) abrange mais de um site, cada site geralmente tem sua própria rede. Isso geralmente significa que cada site tem seu próprio endereçamento IP. Por exemplo, os endereços do site A começam com 192.168.1.*x* e os endereços do site B começam com 192.168.2.*x*, em que *x* é a parte do endereço IP que é exclusiva para o servidor. Sem algum tipo de roteamento em vigor na camada de rede, esses servidores não poderão se comunicar entre si. Há duas maneiras de lidar com esse cenário: configurar uma rede que preencha as duas sub-redes diferentes, conhecidas como uma VLAN, ou configurar o roteamento entre as sub-redes.
 
 ## <a name="vlan-based-solution"></a>Solução baseada em VLAN
  
-**Pré-requisito**: Para uma solução baseada em VLAN, cada servidor que participam de um grupo de disponibilidade ou FCI precisa de duas placas de rede (NICs) para disponibilidade adequada (uma porta dupla NIC seria um ponto único de falha em um servidor físico), para que ele pode ser atribuído a endereços IP em sua sub-rede nativo, bem como um na VLAN. Isso vai além de quaisquer outras necessidades de rede, como iSCSI, que também precisa de sua própria rede.
+**Pré-requisito**: Para uma solução baseada em VLAN, cada servidor que participa de um grupo de disponibilidade ou FCI precisa de duas NICs (placas de rede) para disponibilidade adequada (uma NIC de porta dupla seria um ponto único de falha em um servidor físico), para que endereços IP possam ser atribuídos a esse servidor em sua sub-rede nativa, bem como um na VLAN. Isso se soma às outras necessidades de rede, assim como o iSCSI, que também precisa de sua própria rede.
 
-A criação de endereço IP para o grupo de disponibilidade ou FCI é feita na VLAN. No exemplo a seguir, a VLAN tem uma sub-rede de 192.168.3. *x*, portanto, o endereço IP criado para o grupo de disponibilidade ou FCI é 192.168.3.104. Nenhuma tarefa adicional precisará ser configurado, já que há um único endereço IP atribuído ao grupo de disponibilidade ou FCI.
+A criação do endereço IP para o AG ou FCI é feita na VLAN. No exemplo a seguir, a VLAN tem uma sub-rede de 192.168.3.*x*, portanto, o endereço IP criado para o AG ou FCI é 192.168.3.104. Nenhuma configuração adicional é necessária, já que há um único endereço IP atribuído ao grupo de disponibilidade ou FCI.
 
 ![](./media/sql-server-linux-configure-multiple-subnet/image1.png)
 
 ## <a name="configuration-with-pacemaker"></a>Configuração com o Pacemaker
 
-No mundo do Windows, um Cluster de Failover do Windows Server (WSFC) nativamente dá suporte a várias sub-redes e lida com vários endereços IP por meio de uma dependência OR no endereço IP. No Linux, há nenhuma dependência OR, mas há uma forma de obter um várias sub-redes adequado nativamente com o Pacemaker, conforme mostrado a seguir. Você não pode fazer isso simplesmente usando a linha de comando normal do Pacemaker para modificar um recurso. Você precisará modificar as informações de cluster base (CIB). O CIB é um arquivo XML com a configuração do Pacemaker.
+No mundo do Windows, o WSFC (Cluster de Failover do Windows Server) dá suporte nativamente a várias sub-redes e manipula vários endereços IP por meio de uma dependência OR no endereço IP. No Linux, não há nenhuma dependência OR, mas há uma maneira de obter uma configuração com várias sub-redes adequada nativamente com o Pacemaker, conforme mostrado a seguir. Não é possível fazer isso simplesmente usando a linha de comando normal do Pacemaker para modificar um recurso. Você precisa modificar o CIB (base de informações do cluster). O CIB é um arquivo XML com a configuração do Pacemaker.
 
 ![](./media/sql-server-linux-configure-multiple-subnet/image2.png)
 
-### <a name="update-the-cib"></a>Atualizar o CIB
+### <a name="update-the-cib"></a>Atualize o CIB
 
 1.  Exporte o CIB.
 
-    **Red Hat Enterprise Linux (RHEL) e Ubuntu**
+    **RHEL (Red Hat Enterprise Linux) e Ubuntu**
 
     ```bash
     sudo pcs cluster cib <filename>
@@ -51,9 +51,9 @@ No mundo do Windows, um Cluster de Failover do Windows Server (WSFC) nativamente
     sudo cibadmin -Q > <filename>
     ```
 
-    Em que *filename* é o nome que você deseja chamar o CIB.
+    Em que *filename* é o nome pelo qual você deseja chamar o CIB.
 
-2.  Edite o arquivo que foi gerado. Procure o `<resources>` seção. Você verá os diversos recursos que foram criados para o grupo de disponibilidade ou FCI. Encontre o associado com o endereço IP. Adicionar um `<instance attributes>` seção com as informações para o segundo endereço IP, acima ou abaixo da existente, mas antes `<operations>`. Ele é semelhante à seguinte sintaxe:
+2.  Edite o arquivo que foi gerado. Procure a seção `<resources>`. Você verá os vários recursos que foram criados para o AG ou o FCI. Localize aquele associado ao endereço IP. Adicione uma seção `<instance attributes>` com as informações para o segundo endereço IP acima ou abaixo do existente, mas antes de `<operations>`. Ela é semelhante à seguinte sintaxe:
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">
@@ -65,9 +65,9 @@ No mundo do Windows, um Cluster de Failover do Windows Server (WSFC) nativamente
     </instance attributes>
     ```
     
-    em que *NameForAttribute* é o nome exclusivo para este atributo *pontuação* é o número atribuído ao atributo, que deve ser maior do que a sub-rede primária, *RuleName*é o nome da regra, *ExpressionName* é o nome da expressão, *NodeNameInSubnet2* é o nome do nó em outra sub-rede, *NameForSecondIP* é o nome associado com o segundo endereço IP, *IPAddress* é o endereço IP para a segunda sub-rede, *NameForSecondIPNetmask* é o nome associado com a máscara de rede, e *Máscara de rede* é a máscara de rede para a segunda sub-rede.
+    em que *NameForAttribute* é o nome exclusivo desse atributo, *Score* é o número atribuído ao atributo, que deve ser maior do que as sub-redes primárias, *RuleName* é o nome da regra, *ExpressionName* é o nome da expressão, *NodeNameInSubnet2* é o nome do nó na outra sub-rede, *NameForSecondIP* é o nome associado ao segundo endereço IP, *IPAddress* é o endereço IP para a segunda sub-rede, *NameForSecondIPNetmask* é o nome associado à máscara de rede e *Netmask* é a máscara de rede para a segunda sub-rede.
     
-    O exemplo a seguir mostra um exemplo.
+    Um exemplo é mostrado a seguir.
     
     ```xml
     <instance attributes id="Node3-2nd-IP" score="2">
@@ -79,7 +79,7 @@ No mundo do Windows, um Cluster de Failover do Windows Server (WSFC) nativamente
     </instance attributes>
     ```
 
-3.  Importe o CIB modificado e reconfigurar o Pacemaker.
+3.  Importe o CIB modificado e reconfigure o Pacemaker.
 
     **RHEL/Ubuntu**
     
@@ -93,11 +93,11 @@ No mundo do Windows, um Cluster de Failover do Windows Server (WSFC) nativamente
     sudo cibadmin -R -x <filename>
     ```
 
-    em que *filename* é o nome do arquivo CIB com as informações de endereço IP modificados.
+    em que *filename* é o nome do arquivo do CIB com as informações de endereço IP modificadas.
 
-### <a name="check-and-verify-failover"></a>Verifique e verificar o failover
+### <a name="check-and-verify-failover"></a>Checar e verificar o failover
 
-1.  Depois que o CIB é aplicada com êxito com a configuração atualizada, execute ping no nome DNS associado com o recurso de endereço IP no Pacemaker. Ele deve refletir o endereço IP associado à sub-rede que atualmente hospeda o grupo de disponibilidade ou FCI.
-2.  Falha do grupo de disponibilidade ou FCI para a outra sub-rede.
-3.  Depois que o grupo de disponibilidade ou FCI estiver totalmente online, execute ping no nome DNS associado ao endereço IP. Ele deve refletir o endereço IP na sub-rede do segundo.
-4.  Se desejar, falhe o grupo de disponibilidade ou FCI para a sub-rede original.
+1.  Depois que o CIB for aplicado com êxito com a configuração atualizada, execute ping no nome DNS associado ao recurso de endereço IP no Pacemaker. Ele deve refletir o endereço IP associado à sub-rede que atualmente hospeda o grupo de disponibilidade ou o FCI.
+2.  Faça failover do grupo de disponibilidade ou do FCI para a outra sub-rede.
+3.  Depois que o grupo de disponibilidade ou o FCI estiver totalmente online, execute ping no nome DNS associado ao endereço IP. Ele deve refletir o endereço IP na segunda sub-rede.
+4.  Se desejar, faça failback do grupo de disponibilidade ou FCI para a sub-rede original.

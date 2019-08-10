@@ -2,7 +2,7 @@
 title: Processamento inteligente de consultas em bancos de dados Microsoft SQL | Microsoft Docs
 description: Recursos de processamento inteligente de consulta para melhorar o desempenho da consulta no SQL Server e no Banco de Dados SQL do Azure.
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 07/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,22 +12,22 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57b1cfbafc1ad75db4ca4e0750b8db366b4609d2
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 3f9827a171802f4964f678da5dd4cb3f35fe5d0e
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354619"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388372"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Processamento inteligente de consultas em bancos de dados SQL
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-A família de recursos de QP (processamento de consulta) inteligente inclui recursos de amplo impacto que melhoram o desempenho de cargas de trabalho existentes com esforço mínimo de implementação na adoção. 
+A família de recursos de IQP (processamento de consulta inteligente) inclui recursos de amplo impacto que melhoram o desempenho de cargas de trabalho existentes com esforço mínimo de implementação na adoção. 
 
 ![Processamento de consulta inteligente](./media/iqp-feature-family.png)
 
-Você pode deixar as cargas de trabalho automaticamente qualificadas para o processamento de consulta inteligente habilitando o nível de compatibilidade do banco de dados aplicável. Você pode definir isso usando o Transact-SQL. Por exemplo:  
+Você pode deixar as cargas de trabalho automaticamente qualificadas para o processamento de consulta inteligente habilitando o nível de compatibilidade do banco de dados aplicável. Você pode definir isso usando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por exemplo:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -37,139 +37,19 @@ A tabela a seguir detalha todos os recursos de processamento de consulta intelig
 
 | **Recurso IQP** | **Com suporte no Banco de Dados SQL do Azure** | **Com suporte no SQL Server** |**Descrição** |
 | --- | --- | --- |--- |
-| [Junções adaptáveis (Modo de Lote)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | Sim, no nível de compatibilidade 140| Sim, a partir do SQL Server 2017 no nível de compatibilidade 140|As junções adaptáveis selecionam automaticamente um tipo de junção durante o tempo de execução com base nas linhas de entrada reais.|
-| [Distinção de contagem aproximada](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | Sim, versão prévia pública| Sim, a partir do SQL Server de 2019 CTP 2.0, versão prévia pública|Forneça o COUNT DISTINCT aproximado para cenários de big data com o benefício de alto desempenho e baixo volume de memória. |
-| [Modo de Lote no Rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | Sim, no nível de compatibilidade 150, versão prévia pública| Sim, a partir do SQL Server 2019 CTP 2.0 no nível de compatibilidade 150, versão prévia pública|Forneça o modo de lote para cargas de trabalho de DW relacionais vinculados à CPU sem exigir índices columnstore.  | 
-| [Execução intercalada](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | Sim, no nível de compatibilidade 140| Sim, a partir do SQL Server 2017 no nível de compatibilidade 140|Use a cardinalidade real da função com valor de tabela de várias instruções encontrada na primeira compilação em vez de uma estimativa fixa.|
-| [Comentários de concessão de memória (Modo de Lote)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Sim, no nível de compatibilidade 140| Sim, a partir do SQL Server 2017 no nível de compatibilidade 140|Se uma consulta de modo de lote tiver operações que são despejadas no disco, aumente a memória para execuções consecutivas. Se uma consulta desperdiçar mais de 50% da memória alocada para ela, reduza o lado de concessão de memória para execuções consecutivas.|
-| [Comentários de concessão de memória (Modo de Lote)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Sim, no nível de compatibilidade 150, versão prévia pública| Sim, a partir do SQL Server 2019 CTP 2.0 no nível de compatibilidade 150, versão prévia pública|Se uma consulta de modo de linha tiver operações que são despejadas no disco, aumente a memória para execuções consecutivas. Se uma consulta desperdiçar mais de 50% da memória alocada para ela, reduza o lado de concessão de memória para execuções consecutivas.|
-| [Inlining de UDF escalar](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | Não | Sim, a partir do SQL Server 2019 CTP 2.1 no nível de compatibilidade 150, versão prévia pública|Os UDFs escalares são transformados em expressões relacionais equivalentes que são "embutidas" na consulta que fez a chamada, geralmente resultando em ganhos significativos de desempenho.|
-| [Compilação Adiada de Variável da Tabela](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | Sim, no nível de compatibilidade 150, versão prévia pública| Sim, a partir do SQL Server 2019 CTP 2.0 no nível de compatibilidade 150, versão prévia pública|Use a cardinalidade real da variável de tabela encontrada na primeira compilação em vez de uma estimativa fixa.|
+| [Junções adaptáveis (Modo de Lote)](#batch-mode-adaptive-joins) | Sim, no nível de compatibilidade 140| Sim, começando no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] no nível de compatibilidade 140|As junções adaptáveis selecionam automaticamente um tipo de junção durante o tempo de execução com base nas linhas de entrada reais.|
+| [Distinção de contagem aproximada](#approximate-query-processing) | Sim, versão prévia pública| Sim, começando no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0|Forneça o COUNT DISTINCT aproximado para cenários de big data com o benefício de alto desempenho e baixo volume de memória. |
+| [Modo de Lote no Rowstore](#batch-mode-on-rowstore) | Sim, no nível de compatibilidade 150, versão prévia pública| Sim, começando no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 no nível de compatibilidade 150, versão prévia pública|Forneça o modo de lote para cargas de trabalho de DW relacionais vinculados à CPU sem exigir índices columnstore.  | 
+| [Execução intercalada](#interleaved-execution-for-mstvfs) | Sim, no nível de compatibilidade 140| Sim, começando no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] no nível de compatibilidade 140|Use a cardinalidade real da função com valor de tabela de várias instruções encontrada na primeira compilação em vez de uma estimativa fixa.|
+| [Comentários de concessão de memória (Modo de Lote)](#batch-mode-memory-grant-feedback) | Sim, no nível de compatibilidade 140| Sim, começando no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] no nível de compatibilidade 140|Se uma consulta de modo de lote tiver operações que são despejadas no disco, aumente a memória para execuções consecutivas. Se uma consulta desperdiçar mais de 50% da memória alocada para ela, reduza o lado de concessão de memória para execuções consecutivas.|
+| [Comentários de concessão de memória (Modo de Lote)](#row-mode-memory-grant-feedback) | Sim, no nível de compatibilidade 150, versão prévia pública| Sim, começando no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 no nível de compatibilidade 150, versão prévia pública|Se uma consulta de modo de linha tiver operações que são despejadas no disco, aumente a memória para execuções consecutivas. Se uma consulta desperdiçar mais de 50% da memória alocada para ela, reduza o lado de concessão de memória para execuções consecutivas.|
+| [Inlining de UDF escalar](#scalar-udf-inlining) | Não | Sim, começando no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.1 no nível de compatibilidade 150, versão prévia pública|Os UDFs escalares são transformados em expressões relacionais equivalentes que são "embutidas" na consulta que fez a chamada, geralmente resultando em ganhos significativos de desempenho.|
+| [Compilação Adiada de Variável da Tabela](#table-variable-deferred-compilation) | Sim, no nível de compatibilidade 150, versão prévia pública| Sim, começando no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 no nível de compatibilidade 150, versão prévia pública|Use a cardinalidade real da variável de tabela encontrada na primeira compilação em vez de uma estimativa fixa.|
 
 ## <a name="batch-mode-adaptive-joins"></a>Junções adaptáveis de modo de lote
+O recurso de Junções Adaptáveis de modo de lote permite que a escolha de um método de [Junção hash ou de Junção de loops aninhados](../../relational-databases/performance/joins.md) seja adiada até **depois** que a primeira entrada for verificada, usando um único plano em cache. O operador de Junção Adaptável define um limite que é usado para decidir quando mudar para um plano de Loops aninhados. Seu plano, portanto, pode alternar dinamicamente para uma estratégia de junção melhor durante a execução.
 
-Com esse recurso, seu plano pode mudar dinamicamente para melhorar a estratégia de junção durante a execução ao usar um único plano armazenado em cache.
-
-O recurso de Junções Adaptáveis de modo de lote permite a escolha de um método de [Junção hash ou de Junção de loops aninhados](../../relational-databases/performance/joins.md) a ser adiado até **depois** que a primeira entrada for verificada. O operador de Junção Adaptável define um limite que é usado para decidir quando mudar para um plano de Loops aninhados. Seu plano, portanto, pode alternar dinamicamente para uma estratégia de junção melhor durante a execução.
-Veja como funciona:
--  Se a contagem de linhas da entrada de junção de build for pequena o suficiente para que uma junção de loops aninhados seja mais ideal do que uma Junção Hash, o plano será alternado para um algoritmo de Loops Aninhados.
--  Se a entrada de junção de build exceder um limite de contagem de linhas específico, o plano não mudará e continuará com uma Junção Hash.
-
-A consulta a seguir é usada para ilustrar um exemplo de Junção Adaptável:
-
-```sql
-SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
-FROM [Fact].[Order] AS [fo]
-INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE [fo].[Quantity] = 360;
-```
-
-A consulta retorna 336 linhas. Habilitando as [Estatísticas de consultas dinâmicas](../../relational-databases/performance/live-query-statistics.md), podemos ver o plano a seguir:
-
-![Resultados da consulta: 336 linhas](./media/4_AQPStats336Rows.png)
-
-No plano, vemos o seguinte:
-1. Temos uma verificação de índice columnstore usado para fornecer linhas para a fase de build da junção hash.
-1. Temos o novo operador de Junção Adaptável. Este operador define um limite que é usado para decidir quando mudar para um plano de Loops Aninhados. Para o nosso exemplo, o limite é de 78 linhas. Tudo que for &gt;= 78 linhas usará uma Junção Hash. Quando estiver abaixo do limite, uma junção de Loops Aninhados será usada.
-1. Como retornamos 336 linhas, estamos excedendo o limite e, portanto, a segunda branch representa a fase de investigação de uma operação de Junção de Hash padrão. Observe que as Estatísticas de consultas dinâmicas mostram as linhas que passam pelos operadores – nesse caso, "672 de 672".
-1. E a última branch é nossa Busca de índice clusterizado a ser usada pela junção de loops aninhados que não teve o limite excedido. Observe que podemos ver "0 de 336" linhas exibidas (o branch não é usado).
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
- Agora compare o plano com a mesma consulta, mas desta vez para um valor de *Quantidade* que só tem uma linha na tabela:
- 
-```sql
-SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
-FROM [Fact].[Order] AS [fo]
-INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE [fo].[Quantity] = 361;
-```
-A consulta retorna uma linha. Habilitando as Estatísticas de consultas dinâmicas, podemos ver o plano a seguir:
-
-![Resultado da consulta: uma linha](./media/5_AQPStatsOneRow.png)
-
-No plano, vemos o seguinte:
-- Com uma linha retornada, a Busca de índice clusterizado agora tem linhas que passam por ela.
-- E, como a fase de build da Junção Hash não continuou, não há linhas passando pela segunda branch.
-
-### <a name="adaptive-join-benefits"></a>Benefícios da Junção Adaptável
-As cargas de trabalho com oscilações frequentes entre verificações de entradas de junção pequenas e grandes terão mais benefícios com esse recurso.
-
-### <a name="adaptive-join-overhead"></a>Sobrecarga da Junção Adaptável
-As junções adaptáveis apresentam um requisito de memória maior do que um plano equivalente de Junção de Loops Aninhados indexados. A memória adicional é solicitada como se os Loops Aninhados fossem uma Junção Hash. Também há sobrecarga para a fase de build como uma operação de “parar e ir” em vez de uma junção equivalente de fluxo de Loops Aninhados. Com esse custo adicional vem a flexibilidade para cenários em que as contagens de linhas podem flutuar na entrada de build.
-
-### <a name="adaptive-join-caching-and-re-use"></a>Armazenamento em cache e reutilização de Junção Adaptável
-As Junções Adaptáveis de modo de lote funcionam para a execução inicial de uma instrução e, depois de serem compiladas, as próximas execuções permanecerão adaptáveis com base no limite de Junção Adaptável compilada e nas linhas de tempo de execução que passam pela fase de build da entrada externa.
-
-### <a name="tracking-adaptive-join-activity"></a>Controlando a atividade da Junção Adaptável
-O operador de Junção Adaptável tem os seguintes atributos de operador de plano:
-
-| Atributo de plano | Descrição |
-|--- |--- |
-| AdaptiveThresholdRows | Mostra o uso de limite para alternar de uma junção hash para uma junção de loops aninhados. |
-| EstimatedJoinType | Qual é o provável tipo de junção. |
-| ActualJoinType | Em um plano real, mostra qual algoritmo de junção foi finalmente escolhido com base no limite. |
-
-O plano estimado mostra a forma do plano de Junção Adaptável, juntamente com um limite de Junção Adaptável definido e o tipo de junção estimado.
-
-### <a name="adaptive-join-and-query-store-interoperability"></a>Interoperabilidade entre junção adaptável e o Repositório de Consultas
-O Repositório de Consultas captura e é capaz de forçar um plano de Junção Adaptável de modo de lote.
-
-### <a name="adaptive-join-eligible-statements"></a>Instruções qualificadas para junção adaptável
-Algumas condições tornam uma junção lógica qualificada para uma Junção Adaptável de modo de lote:
-- O nível de compatibilidade do banco de dados é 140.
-- A consulta é uma instrução SELECT (as instruções de modificação de dados não são qualificadas no momento).
-- A junção é qualificada para ser executada por uma Junção de Loops Aninhados indexada ou um algoritmo físico de Junção Hash.
-- A Junção Hash usa o modo de lote – por meio da presença de um Índice columnstore na consulta geral ou de uma Tabela indexada por columnstore referenciada diretamente pela junção.
-- As soluções alternativas geradas da Junção de Loops Aninhados e da Junção Hash devem ter o mesmo primeiro filho (referência externa).
-
-### <a name="adaptive-joins-and-nested-loop-efficiency"></a>Eficiência das junções adaptáveis e de loops aninhados
-Se uma Junção Adaptável alterna para uma operação de Loops Aninhados, ela usa as linhas já lidas pelo build de Junção Hash. O operador **não** lê novamente as linhas de referência externa novamente.
-
-### <a name="adaptive-threshold-rows"></a>Linhas de limite adaptável
-O gráfico a seguir mostra uma interseção de exemplo entre o custo de uma Junção Hash e o custo de uma alternativa de Junção de Loops Aninhados. Neste ponto de interseção, o limite é determinado e, por sua vez, ele determina o algoritmo real usado para a operação de junção.
-
-![Limite de junção](./media/6_AQPJoinThreshold.png)
-
-### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>Desabilitar junções adaptáveis sem alterar o nível de compatibilidade
-
-Junções adaptáveis podem ser desabilitadas no escopo do banco de dados ou da instrução, mantendo o nível de compatibilidade do banco de dados como 140 e superior.  
-Para desabilitar as junções adaptáveis para todas as execuções de consulta originadas do banco de dados, execute o seguinte dentro do contexto do banco de dados aplicável:
-
-```sql
--- SQL Server 2017
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
-
--- Azure SQL Database, SQL Server 2019 and higher
-ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = OFF;
-```
-
-Quando habilitada, essa configuração aparecerá como habilitada em [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
-Para reabilitar as junções adaptáveis para todas as execuções de consulta originadas do banco de dados, execute o seguinte dentro do contexto do banco de dados aplicável:
-
-```sql
--- SQL Server 2017
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
-
--- Azure SQL Database, SQL Server 2019 and higher
-ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
-```
-
-Também é possível desabilitar junções adaptáveis para uma consulta específica designando `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` como uma [dica de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Por exemplo:
-
-```sql
-SELECT s.CustomerID,
-       s.CustomerName,
-       sc.CustomerCategoryName
-FROM Sales.Customers AS s
-LEFT OUTER JOIN Sales.CustomerCategories AS sc
-       ON s.CustomerCategoryID = sc.CustomerCategoryID
-OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
-```
-
-Uma dica de consulta USE HINT tem precedência sobre uma configuração de escopo do banco de dados ou uma configuração de sinalizador de rastreamento.
+Para obter mais informações, confira [Noções básicas sobre junções adaptáveis](../../relational-databases/performance/joins.md#adaptive).
 
 ## <a name="batch-mode-memory-grant-feedback"></a>Comentários de concessão de memória de modo de lote
 Um plano de pós-execução da consulta no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui a memória mínima necessária para execução e o tamanho da concessão de memória ideal para que todas as linhas caibam na memória. Desempenho é prejudicado quando os tamanhos de concessão de memória são dimensionados incorretamente. Concessões excessivas resultam em desperdício de memória e em redução de simultaneidade. Concessões de memória insuficientes causam despejos dispendiosos no disco. Lidando com cargas de trabalho repetitivas, os comentários de concessão de memória de modo de lote recalcula a memória real necessária para uma consulta e atualiza o valor de concessão do plano armazenado em cache. Quando uma instrução de consulta idêntica for executada, a consulta usará o tamanho de concessão de memória revisado, reduzindo concessões de memória excessivas que afetam a simultaneidade e corrigindo concessões de memória subestimadas que causam despejos dispendiosos no disco.
@@ -212,7 +92,11 @@ A memória real concedida cumpre o limite de memória de consulta determinado pe
 Comentários de concessão de memória podem ser desabilitados no escopo do banco de dados ou da instrução, mantendo o nível de compatibilidade do banco de dados como 140 e superior. Para desabilitar os comentários de concessão de memória em modo de lotes para todas as execuções de consulta originadas do banco de dados, execute o seguinte dentro do contexto do banco de dados aplicável:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
 Quando habilitada, essa configuração aparecerá como habilitada em [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
@@ -220,7 +104,11 @@ Quando habilitada, essa configuração aparecerá como habilitada em [sys.databa
 Para reabilitar os comentários de concessão de memória em modo de lotes para todas as execuções de consulta originadas do banco de dados, execute o seguinte dentro do contexto do banco de dados aplicável:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
 Também é possível desabilitar os comentários de concessão de memória em modo de lote para uma consulta específica designando `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` como uma [dica de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Por exemplo:
@@ -354,14 +242,22 @@ Os planos que usam execução intercalada podem ser forçados. O plano é a vers
 A execução intercalada pode ser desabilitada no escopo do banco de dados ou da instrução, mantendo o nível de compatibilidade do banco de dados como 140 e superior.  Para desabilitar a execução intercalada para todas as execuções de consulta originadas do banco de dados, execute o seguinte dentro do contexto do banco de dados aplicável:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
 Quando habilitada, essa configuração aparecerá como habilitada em [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
 Para reabilitar a execução intercalada para todas as execuções de consulta originadas do banco de dados, execute o seguinte dentro do contexto do banco de dados aplicável:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
 Também é possível desabilitar a execução intercalada para uma consulta específica designando `DISABLE_INTERLEAVED_EXECUTION_TVF` como uma [dica de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Por exemplo:

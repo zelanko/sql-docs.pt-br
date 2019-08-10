@@ -1,7 +1,7 @@
 ---
-title: Criar trechos de código reutilizáveis
+title: Criar snippets de código reutilizáveis
 titleSuffix: Azure Data Studio
-description: Saiba como criar e usar trechos de código SQL no estúdio de dados do Azure
+description: Saiba como criar e usar snippets de código do SQL no Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,58 +11,58 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 09a8432d10a70bb8530654d76bce874f735788a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959708"
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Criar e usar trechos de código para criar rapidamente scripts Transact-SQL (T-SQL) [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Criar e usar snippets de código para criar scripts T-SQL (Transact-SQL) rapidamente no [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Trechos de código no [!INCLUDE[name-sos](../includes/name-sos-short.md)] são modelos que tornam fácil para criar bancos de dados e objetos de banco de dados. 
+Os snippets de código do [!INCLUDE[name-sos](../includes/name-sos-short.md)] são modelos que facilitam a criação de bancos de dados e objetos de banco de dados. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] fornece vários trechos de código T-SQL para ajudar a gerar rapidamente a sintaxe apropriada. 
+O [!INCLUDE[name-sos](../includes/name-sos-short.md)] fornece vários snippets T-SQL para ajudá-lo a gerar rapidamente a sintaxe correta. 
 
-Trechos de código definido pelo usuário também podem ser criados.
+Snippets de código definidos pelo usuário também podem ser criados.
 
-## <a name="using-built-in-t-sql-code-snippets"></a>Usando trechos de código internos do T-SQL
+## <a name="using-built-in-t-sql-code-snippets"></a>Como usar snippets de código T-SQL internos
 
-1. Para acessar os trechos de código disponíveis, digite *sql* no editor de consultas para abrir a lista:
+1. Para acessar os snippets disponíveis, digite *sql* no editor de consultas para abrir a lista:
 
-   ![trechos](media/code-snippets/sql-snippets.png)
+   ![snippets](media/code-snippets/sql-snippets.png)
 
-1. Selecione o trecho de código que você deseja usar e gera o script T-SQL. Por exemplo, selecione *sqlCreateTable*:
+1. Selecione o snippet que deseja usar e ele gerará o script T-SQL. Por exemplo, selecione *sqlCreateTable*:
 
-   ![criar trechos de código de tabela](media/code-snippets/create-table.png)
+   ![snippets de create table](media/code-snippets/create-table.png)
 
-1. Atualize os campos realçados com seus valores específicos. Por exemplo, substitua *TableName* e *esquema* com os valores do banco de dados:
+1. Atualize os campos realçados com seus valores específicos. Por exemplo, substitua *TableName* e *Schema* pelos valores do banco de dados:
 
-   ![Substitua o campo de modelo](media/code-snippets/table-from-snippet.png)
+   ![substituir campo de modelo](media/code-snippets/table-from-snippet.png)
 
-   Se o campo que você deseja alterar não é realçado (isso acontece ao mover o cursor em torno do editor), com a palavra que você deseja alterar e selecione o botão direito **alterar todas as ocorrências**:
+   Se o campo que você deseja alterar não estiver mais realçado (isso acontece ao mover o cursor em torno do editor), clique com o botão direito do mouse na palavra que deseja alterar e selecione **Alterar todas as ocorrências**:
 
-   ![Substitua o campo de modelo](media/code-snippets/change-all.png)
+   ![substituir campo de modelo](media/code-snippets/change-all.png)
 
-1. Atualizar ou adicionar qualquer T-SQL adicional necessários para o trecho de código selecionado. Por exemplo, atualize *Column1*, *Column2*e adicionar mais colunas.
+1. Atualize ou adicione qualquer T-SQL adicional necessário para o snippet selecionado. Por exemplo, atualize *Column1*, *Column2* e adicione mais colunas.
 
 
  
-## <a name="creating-sql-code-snippets"></a>Criar trechos de código do SQL 
+## <a name="creating-sql-code-snippets"></a>Como criar snippets de código SQL 
 
-Você pode definir seus próprios trechos. Para abrir o arquivo de trecho de código SQL para edição:
+Você pode definir seus próprios snippets. Para abrir o arquivo de snippet SQL para edição:
 
-1. Abra o *paleta de comandos* (**Ctrl + Shift + P**) e o tipo *recorte*e selecione **preferências: Abra os trechos de código do usuário**:
+1. Abra a *paleta de comandos* (**Shift+Ctrl+P**), digite *captura* e selecione **Preferências: Abrir Snippets de Usuário**:
 
-   ![Substitua o campo de modelo](media/code-snippets/user-snippets.png)
+   ![substituir campo de modelo](media/code-snippets/user-snippets.png)
 
 1. Selecione **SQL**:
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] herda sua funcionalidade de trecho de código do Visual Studio Code para que este artigo aborda especificamente usando trechos de código SQL. Para obter mais informações, consulte [criando seus próprios trechos](https://code.visualstudio.com/docs/editor/userdefinedsnippets) na documentação do Visual Studio Code. 
+   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] herda sua funcionalidade de snippet de código do Visual Studio Code e, portanto, este artigo aborda especificamente o uso de snippets SQL. Para obter informações mais detalhadas, confira [Como criar seus próprios snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets) na documentação do Visual Studio Code. 
 
-   ![Substitua o campo de modelo](media/code-snippets/select-sql.png)
+   ![substituir campo de modelo](media/code-snippets/select-sql.png)
 
-1. Cole o seguinte código no *sql.json*:
+1. Cole o seguinte código em *sql.json*:
 
    ```sql
    {
@@ -95,12 +95,12 @@ Você pode definir seus próprios trechos. Para abrir o arquivo de trecho de có
    ```
 
 1. Salve o arquivo sql.json.
-1. Abra uma nova janela do editor de consultas clicando **Ctrl + N**.
-2. Tipo de **sql**, e você verá os trechos de código de dois usuário que você acabou de adicionar; *sqlCreateTable2* e *sqlSelectTop5*.
+1. Abra uma nova janela do editor de consultas clicando em **Ctrl+N**.
+2. Digite **sql** e você verá os dois snippets de usuário recém-adicionados: *sqlCreateTable2* e *sqlSelectTop5*.
 
-Selecione um dos novos trechos de código e dê a ele uma execução de teste!
+Selecione um dos novos snippets e experimente uma execução de teste.
 
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-Para obter informações sobre o editor SQL, consulte [tutorial do editor de código](tutorial-sql-editor.md).
+Para obter informações sobre o editor SQL, confira [Tutorial do editor de códigos](tutorial-sql-editor.md).

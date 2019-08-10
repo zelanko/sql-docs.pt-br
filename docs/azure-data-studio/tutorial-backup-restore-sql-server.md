@@ -1,7 +1,7 @@
 ---
-title: Fazer backup e restaurar um banco de dados
+title: Backup e restauração de um banco de dados
 titleSuffix: Azure Data Studio
-description: Saiba como fazer backup e restaurar um banco de dados usando o Studio de dados do Azure
+description: Saiba como fazer backup e restauração de um banco de dados usando o Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: tutorial
@@ -11,80 +11,80 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 77679106577cd8f8374f932d8ddd22644beb63d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959108"
 ---
 # <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>Backup e restauração de bancos de dados usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Neste tutorial, você aprenderá a usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para:
+Neste tutorial, você aprenderá a usar o [!INCLUDE[name-sos](../includes/name-sos-short.md)] para:
 > [!div class="checklist"]
 > * Fazer backup de um banco de dados 
-> * Exibir o status do backup
-> * Gerar o script usado para realizar o backup
+> * Exibir o status do backup do banco de dados
+> * Gerar o script usado para executar o backup
 > * Restaurar um banco de dados
 > * Exibir o status da tarefa de restauração
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Este tutorial requer o SQL Server *TutorialDB*. Para criar o *TutorialDB* banco de dados, conclua um dos seguintes inícios rápidos:
+Este tutorial requer o *TutorialDB* do SQL Server. Para criar o banco de dados *TutorialDB*, siga um destes guias de início rápido:
 
-- [Conectar e consultar usando SQL Server [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Conectar e consultar o SQL Server usando [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
-Este tutorial requer conexão com um banco de dados do SQL Server. Banco de dados SQL do Azure tem backups automáticos, portanto, Studio do Azure Data não realizar backup de banco de dados SQL e restaurar. Para obter detalhes, consulte [Saiba mais sobre backups automáticos de banco de dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
+Este tutorial requer a conexão com um banco de dados do SQL Server. O Banco de Dados SQL do Azure tem backups automatizados, portanto o Azure Data Studio não executa o backup e restauração do Banco de Dados SQL do Azure. Para obter detalhes, confira [Saiba mais sobre backups automáticos do Banco de Dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
 
 ## <a name="backup-a-database"></a>Fazer backup de um banco de dados
 
-1. Abra o painel de banco de dados TutorialDB (Abra o **servidores** barra lateral (**CTRL + G**), expanda **bancos de dados**, clique com botão direito **TutorialDB**, e selecione **gerenciar**).
+1. Abra o painel do banco de dados do TutorialDB (abra a barra lateral **SERVIDORES** (**CTRL+G**), expanda **Bancos de Dados**, clique com o botão direito do mouse em **TutorialDB** e selecione **Gerenciar**).
 
-2. Abra o **banco de dados de Backup** caixa de diálogo (clique em **Backup** no **tarefas** widget).
+2. Abra a caixa de diálogo **Fazer backup do banco de dados** (clique em **Backup** no widget **Tarefas**).
 
    ![Widget de tarefas](./media/tutorial-backup-restore-sql-server/tasks.png)
 
-3. Este tutorial usa as opções de backup padrão, clique em **Backup**.
-   ![caixa de diálogo backup](./media/tutorial-backup-restore-sql-server/backup-dialog.png)
+3. Este tutorial usa as opções de backup padrão, sendo assim, clique em **Backup**.
+   ![caixa de diálogo de backup](./media/tutorial-backup-restore-sql-server/backup-dialog.png)
 
-Depois de clicar em **Backup**, o **banco de dados de Backup** caixa de diálogo desaparece e começa o processo de backup.
+Após você clicar em **Backup**, a caixa de diálogo **Fazer backup do banco de dados** desaparece e o processo de backup é iniciado.
 
-## <a name="view-the-backup-status-and-view-the-backup-script"></a>Exibir o status do backup e exibir o script de backup
+## <a name="view-the-backup-status-and-view-the-backup-script"></a>Exibir o status e o script de backup
 
-1. Abra o **histórico de tarefa** barra lateral, clicando no ícone de relógio na *barra de ação* ou pressione **CTRL + T**.
+1. Abra a barra lateral **Histórico de Tarefas** clicando no ícone de relógio na *Barra de ação* ou pressione **CTRL+T**.
 
    ![Histórico de tarefas](./media/tutorial-backup-restore-sql-server/task-history.png)
 
-2. Para exibir o script de backup no editor, clique com botão direito **banco de dados de Backup foi bem-sucedido** e selecione **Script**.
+2. Para exibir o script de backup no editor, clique com o botão direito do mouse em **Backup do banco de dados bem-sucedido** e selecione **Script**.
 
    ![script de backup](./media/tutorial-backup-restore-sql-server/task-script.png) 
 
-## <a name="restore-a-database-from-a-backup-file"></a>Restaurar um banco de dados de um arquivo de backup
+## <a name="restore-a-database-from-a-backup-file"></a>Restaurar um banco de dados usando um arquivo de backup
 
 
-1. Abra o **servidores** barra lateral (**CTRL + G**), seu servidor com o botão direito e selecione **gerenciar**. 
+1. Abra a barra lateral **SERVIDORES** (**CTRL+G**), clique com o botão direito do mouse em seu servidor e selecione **Gerenciar**. 
 
-2. Abra o **restaurar banco de dados** caixa de diálogo (clique em **restaurar** no **tarefas** widget).
+2. Abra a caixa de diálogo **Restaurar banco de dados** (clique em **Restaurar** no widget **Tarefas**).
 
-2. Selecione **arquivo de Backup** na **restaurar a partir de** campo. 
+2. Selecione **Arquivo de backup** no campo **Restaurar de**. 
 
-3. Clique nas reticências (...) na **caminho do arquivo de Backup** campo e, em seguida, selecione o arquivo de backup mais recente para *TutorialDB*.
+3. Clique nas reticências (...) no campo **Caminho do arquivo de backup** e selecione o arquivo de backup mais recente do *TutorialDB*.
 
-3. Tipo de **TutorialDB_Restored** na **banco de dados de destino** campo o **destino** seção para restaurar o arquivo de backup para um novo banco de dados.
+3. Digite **TutorialDB_Restored** no campo **Banco de dados de destino** na seção **Destino** para restaurar o arquivo de backup para um novo banco de dados.
 
    ![restaurar](./media/tutorial-backup-restore-sql-server/restore.png)
 
-4. Clique em **restaurar**
+4. Clique em **Restaurar**
 
-5. Para exibir o status da operação de restauração, pressione **CTRL + T** para abrir o **histórico de tarefa** barra lateral.
+5. Para exibir o status da operação de restauração, pressione **CTRL + T** para abrir a barra lateral **Histórico de Tarefas**.
 
    ![restaurar](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
 
 
-Neste tutorial, você aprendeu como:
+Neste tutorial, você aprendeu a:
 > [!div class="checklist"]
 > * Fazer backup de um banco de dados 
-> * Exibir o status do backup
-> * Gerar o script usado para realizar o backup
+> * Exibir o status do backup do banco de dados
+> * Gerar o script usado para executar o backup
 > * Restaurar um banco de dados
 > * Exibir o status da tarefa de restauração
 

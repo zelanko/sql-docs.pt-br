@@ -1,7 +1,7 @@
 ---
-title: Conectar-se ao mestre e HDFS
+title: Conectar-se ao mestre e ao HDFS
 titleSuffix: SQL Server big data clusters
-description: Saiba como se conectar a instância mestre do SQL Server e o gateway HDFS/Spark para um cluster de big data do SQL Server 2019 (visualização).
+description: Saiba como se conectar à instância mestre do SQL Server e ao gateway HDFS/Spark para um cluster de Big Data do SQL Server 2019 (versão prévia).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,29 +10,29 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 1f09763b210427c84efe75d693fee302d7048db7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958641"
 ---
-# <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Conectar a um cluster de big data do SQL Server com o Studio de dados do Azure
+# <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Conectar-se a um cluster de Big Data do SQL Server com o Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este artigo descreve como se conectar a um cluster de big data de 2019 do SQL Server (versão prévia) no Studio de dados do Azure.
+Este artigo descreve como se conectar a um cluster de Big Data do SQL Server 2019 (versão prévia) do Azure Data Studio.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
-- Implantado [cluster de big data do SQL Server 2019](deployment-guidance.md).
-- [Ferramentas de big data do SQL Server 2019](deploy-big-data-tools.md):
+- Um [cluster de Big Data do SQL Server 2019](deployment-guidance.md) implantado.
+- [Ferramentas de Big Data do SQL Server 2019](deploy-big-data-tools.md):
    - **Azure Data Studio**
-   - **Extensão do SQL Server de 2019**
+   - **Extensão do SQL Server 2019**
    - **kubectl**
 
 ## <a id="master"></a> Conectar-se ao cluster
 
-Para se conectar a um cluster de big data com o Azure Data Studio, faça uma nova conexão para a instância mestre do SQL Server no cluster. As etapas a seguir descrevem como conectar-se à instância mestre usando o Studio de dados do Azure.
+Para se conectar a um cluster de Big Data com o Azure Data Studio, faça uma nova conexão com a instância mestre do SQL Server no cluster. As etapas a seguir descrevem como se conectar à instância mestre usando o Azure Data Studio.
 
 1. Na linha de comando, localize o IP da sua instância mestre com o seguinte comando:
 
@@ -41,33 +41,33 @@ Para se conectar a um cluster de big data com o Azure Data Studio, faça uma nov
    ```
 
    > [!TIP]
-   > O big data padrão é nome do cluster **mssql-cluster** , a menos que você personalizou o nome em um arquivo de configuração de implantação. Para obter mais informações, consulte [definir as configurações de implantação para clusters de big data](deployment-custom-configuration.md#clustername).
+   > O nome do cluster de Big Data usa **mssql-cluster** como padrão, a menos que você tenha personalizado o nome em um arquivo de configuração de implantação. Para obter mais informações, confira [Definir configurações de implantação para clusters de Big Data](deployment-custom-configuration.md#clustername).
 
-1. No Azure Data Studio, pressione **F1** > **nova Conexão**.
+1. No Azure Data Studio, pressione **F1** > **Nova Conexão**.
 
-1. Na **tipo de Conexão**, selecione **Microsoft SQL Server**.
+1. Em **Tipo de conexão**, selecione **Microsoft SQL Server**.
 
-1. Digite o endereço IP da instância mestre do SQL Server no **nome do servidor** (por exemplo: **\<Endereço IP\>, 31433**).
+1. Digite o endereço IP da instância mestre do SQL Server no **Nome do servidor** (por exemplo: **\<Endereço IP\>,31433**).
 
-1. Insira um logon do SQL **nome de usuário** e **senha**.
+1. Insira um **Nome de usuário** e uma **Senha** de logon do SQL.
 
    > [!TIP]
-   > Por padrão, é o nome de usuário **SA** e, a menos que alteradas, a senha corresponde à **MSSQL_SA_PASSWORD** variável de ambiente usada durante a implantação.
+   > Por padrão, o nome de usuário é **SA** e, a menos que alterada, a senha corresponde à variável de ambiente **MSSQL_SA_PASSWORD** usada durante a implantação.
 
-1. Alterar o destino **nome do banco de dados** para um dos seus bancos de dados relacionais.
+1. Altere o **Nome do banco de dados** de destino para um de seus bancos de dados relacionais.
 
-   ![Conectar-se à instância do mestre](./media/connect-to-big-data-cluster/connect-to-cluster.png)
+   ![Conectar-se à instância mestre](./media/connect-to-big-data-cluster/connect-to-cluster.png)
 
-1. Pressione **Connect**e o **painel Server** deve aparecer.
+1. Pressione **Conectar**, e o **Painel do Servidor** deverá aparecer.
 
-Com a versão de fevereiro de 2019 do estúdio de dados do Azure, conectar-se a instância mestre do SQL Server também permite que você interaja com o gateway HDFS/Spark. Isso significa que você não precisará usar uma conexão separada para HDFS e o Spark que descreve a próxima seção.
+Com a versão de fevereiro de 2019 do Azure Data Studio, a conexão com a instância mestre do SQL Server também permite que você interaja com o gateway HDFS/Spark. Isso significa que você não precisa usar uma conexão separada para o HDFS e Spark que a próxima seção descreve.
 
-- O Pesquisador de objetos agora contém uma nova **serviços de dados** nó com o botão direito do mouse suporte para tarefas de cluster de big data, como criar novos notebooks ou envio de trabalhos do spark. 
-- O **serviços de dados** nó também contém uma **HDFS** pasta para executar as ações, como Create External Table ou analisar no bloco de anotações e exploração de HDFS.
-- O **painel do servidor** para a conexão também contém guias para **cluster de big data do SQL Server** e **2019 do SQL Server (versão prévia)** quando a extensão está instalada.
+- Agora, o Pesquisador de Objetos contém um novo nó de **Serviços de Dados** com suporte do botão direito do mouse para tarefas de cluster de Big Data, como criar novos notebooks ou enviar trabalhos do Spark. 
+- O nó de **Serviços de Dados** também contém uma pasta **HDFS** para exploração do HDFS e execução de ações como criar tabela externa ou analisar no notebook.
+- O **Painel do Servidor** para a conexão também contém guias para **cluster de Big Data do SQL Server** e **SQL Server 2019 (versão prévia)** quando a extensão é instalada.
 
-   ![Nó de serviços de dados do Azure Data Studio](./media/connect-to-big-data-cluster/connect-data-services-node.png)
+   ![Nó de Serviços de Dados do Azure Data Studio](./media/connect-to-big-data-cluster/connect-data-services-node.png)
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre clusters de big data de 2019 do SQL Server, consulte [quais são os clusters do SQL Server 2019 grandes dados](big-data-cluster-overview.md).
+Para obter mais informações sobre os clusters de Big Data do SQL Server 2019, confira [O que são clusters de Big Data do SQL Server 2019?](big-data-cluster-overview.md).

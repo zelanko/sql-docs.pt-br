@@ -1,7 +1,7 @@
 ---
 title: Instalar o SQL Server por meio do prompt de comando | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0ed047f78c316cc5bb6308e2bfe425884a649876
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db2bb1f0a4c36b84ac4d4200c0651b407fdf144a
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991092"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419329"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Instalar o SQL Server do prompt de comando
 
@@ -279,6 +279,7 @@ Use as diretrizes a seguir para desenvolver comandos de instalação com a sinta
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |Serviços de Machine Learning/Python (no banco de dados)|MPYCACHEDIRECTORY|Reservado para uso futuro. Use %TEMP% para armazenar arquivos .CAB do Python para instalação em um computador que não tem uma conexão com a Internet. |  
 |Serviços de Machine Learning/R (no banco de dados)|MRCACHEDIRECTORY|Use esse parâmetro para especificar o diretório de Cache para suporte a recurso Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (Autônomo) ou R em Serviços de Machine Learning do SQL Server 2017 ou Machine Learning Server (Autônomo). Essa configuração normalmente é usada ao instalar componentes do R da [linha de comando em um computador sem acesso à Internet](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access).|  
+|Serviços de Machine Learning/Java (no banco de dados)| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "caminho"<br /><br /> **Opcional** | Começando no SQL Server 2019, especifica a instalação do Java com os Serviços de Machine Learning. Se /SQL_INST_JAVA for fornecido sem o parâmetro /SQLJAVADIR, será presumido que você deseja instalar o JRE Zulu fornecido pela mídia de instalação. <br /><br /> Fornecer um caminho para /SQLJAVADIR indica que você gostaria de usar um JRE ou JDK já instalado. |
   
 ###### <a name="sample-syntax"></a>Sintaxe de exemplo:  
  Para instalar uma nova instância autônoma com os componentes [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Replicação e Pesquisa de Texto Completo, e ainda habilitar a inicialização instantânea de arquivo para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 

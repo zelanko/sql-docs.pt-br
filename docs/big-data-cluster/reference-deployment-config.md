@@ -1,7 +1,7 @@
 ---
 title: Referência do arquivo de configuração de implantação
 titleSuffix: SQL Server big data clusters
-description: Referência para um arquivo de configuração de implantação de cluster de big data.
+description: Referência para um arquivo de configuração de implantação de cluster de Big Data.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -10,24 +10,24 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f26d25637ec0739edc31e0d5fa8794f7a887019b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958244"
 ---
-# <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>Referência de arquivo de configuração de implantação para clusters de big data
+# <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>Referência do arquivo de configuração de implantação para clusters de Big Data
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este artigo fornece um arquivo JSON que documenta a estrutura de um arquivo de configuração de implantação do SQL Server 2019 grandes dados cluster.
+Este artigo fornece um arquivo JSON que documenta a estrutura de um arquivo de configuração de implantação de cluster de Big Data do SQL Server 2019.
 
 > [!TIP]
-> Não use isso como seu arquivo de configuração de implantação real. Em vez disso, siga as instruções de [orientações de implantação](deployment-guidance.md#configfile) como trabalhar com arquivos de configuração.
+> Não use isso como seu arquivo de configuração de implantação real. Em vez disso, siga as instruções nas [diretrizes de implantação](deployment-guidance.md#configfile) para saber como trabalhar com arquivos de configuração.
 
 ## <a name="deployment-configuration-file"></a>Arquivo de configuração de implantação
 
-Use o seguinte arquivo JSON como uma referência para a estrutura e as configurações em um arquivo de configuração de implantação de cluster de big data.
+Use o arquivo JSON a seguir como uma referência para a estrutura e as configurações em um arquivo de configuração de implantação de cluster de Big Data.
 
 ```json
 {
@@ -453,4 +453,4 @@ Use o seguinte arquivo JSON como uma referência para a estrutura e as configura
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre como usar e personalizar os arquivos de configuração de implantação, consulte [clusters de como implantar grandes de dados do SQL Server em Kubernetes](deployment-guidance.md#configfile).
+Para obter mais informações sobre como usar e personalizar arquivos de configuração de implantação, confira [Como implantar clusters de Big Data do SQL Server no Kubernetes](deployment-guidance.md#configfile).

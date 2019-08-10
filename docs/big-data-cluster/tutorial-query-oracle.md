@@ -1,7 +1,7 @@
 ---
 title: Consultar dados externos no Oracle
 titleSuffix: SQL Server big data clusters
-description: Este tutorial demonstra como consultar dados do Oracle de um cluster de big data do SQL Server 2019 (visualização). Você cria uma tabela externa sobre os dados no Oracle e, em seguida, executa uma consulta.
+description: Este tutorial demonstra como consultar dados do Oracle de um cluster de Big Data do SQL Server 2019 (versão prévia). Você cria uma tabela externa sobre os dados no Oracle e, em seguida, executa uma consulta.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
@@ -10,42 +10,42 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: bf0efdc3a9be44a0ffad4efcaaeb351bbdbdf626
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957718"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Tutorial: Consulta Oracle em um cluster de big data do SQL Server
+# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Tutorial: Consultar o Oracle em um cluster de Big Data do SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este tutorial demonstra como consultar dados do Oracle de um cluster de big data do SQL Server de 2019. Para executar este tutorial, você precisará ter acesso a um servidor Oracle. Se você não tiver acesso, este tutorial pode dar uma ideia de como funciona a virtualização de dados para fontes de dados externas no cluster de big data do SQL Server.
+Este tutorial demonstra como consultar dados do Oracle de um cluster de Big Data do SQL Server 2019. Para executar este tutorial, você precisará ter acesso a um servidor Oracle. Se você não tiver acesso, este tutorial poderá dar uma noção de como funciona a virtualização de dados para fontes de dados externos no cluster de Big Data do SQL Server.
 
-Neste tutorial, você aprenderá como:
+Neste tutorial, você aprenderá a:
 
 > [!div class="checklist"]
-> * Crie uma tabela externa para dados em um banco de dados externo do Oracle.
-> * Junte-se esses dados com dados de alto valor na instância do mestre.
+> * Criar uma tabela externa para dados em um banco de dados Oracle externo.
+> * Unir esses dados com os dados de alto valor na instância mestre.
 
 > [!TIP]
-> Se você preferir, você pode baixar e executar um script para os comandos neste tutorial. Para obter instruções, consulte a [exemplos de virtualização de dados](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) no GitHub.
+> Se preferir, você poderá baixar e executar um script para os comandos neste tutorial. Para obter instruções, confira os [Exemplos de virtualização de dados](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) no GitHub.
 
 ## <a id="prereqs"></a> Pré-requisitos
 
-- [Ferramentas de big data](deploy-big-data-tools.md)
+- [Ferramentas de Big Data](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
-   - **Extensão do SQL Server de 2019**
-- [Carregar dados de exemplo no seu cluster de big data](tutorial-load-sample-data.md)
+   - **Extensão do SQL Server 2019**
+- [Carregar dados de exemplo em seu cluster de Big Data](tutorial-load-sample-data.md)
 
 ## <a name="create-an-oracle-table"></a>Criar uma tabela do Oracle
 
-As seguintes etapas criam uma tabela de exemplo chamada `INVENTORY` no Oracle.
+As etapas a seguir criam uma tabela de exemplo chamada `INVENTORY` no Oracle.
 
-1. Conecte-se para uma instância do Oracle e o banco de dados que você deseja usar para este tutorial.
+1. Conecte-se a uma instância e banco de dados Oracle que você deseja usar para este tutorial.
 
-1. Execute a seguinte instrução para criar o `INVENTORY` tabela:
+1. Execute a seguinte instrução para criar a tabela `INVENTORY`:
 
    ```sql
     CREATE TABLE "INVENTORY"
@@ -59,33 +59,33 @@ As seguintes etapas criam uma tabela de exemplo chamada `INVENTORY` no Oracle.
     CREATE INDEX INV_ITEM ON HR.INVENTORY(INV_ITEM);
     ```
 
-1. Importar o conteúdo do **inventory.csv** arquivo nessa tabela. Este arquivo foi criado pelos scripts de criação do exemplo na [pré-requisitos](#prereqs) seção.
+1. Importe o conteúdo do arquivo **inventory.csv** para esta tabela. Esse arquivo foi criado pelos scripts de criação de exemplo na seção [Pré-requisitos](#prereqs).
 
-## <a name="create-an-external-data-source"></a>Criar uma fonte de dados externa
+## <a name="create-an-external-data-source"></a>Criar uma fonte de dados externos
 
-A primeira etapa é criar uma fonte de dados externa que pode acessar o servidor Oracle.
+A primeira etapa é criar uma fonte de dados externos que possa acessar seu servidor Oracle.
 
-1. No estúdio de dados do Azure, conecte-se à instância mestre do SQL Server do seu cluster de big data. Para obter mais informações, consulte [conectar-se a instância mestre do SQL Server](connect-to-big-data-cluster.md#master).
+1. No Azure Data Studio, conecte-se à instância mestre do SQL Server do cluster de Big Data. Para obter mais informações, confira [Conectar-se à instância mestre do SQL Server](connect-to-big-data-cluster.md#master).
 
-1. Clique duas vezes em que a conexão na **servidores** janela para mostrar o painel do servidor para a instância mestre do SQL Server. Selecione **nova consulta**.
+1. Clique duas vezes na conexão na janela **Servidores** para mostrar o painel do servidor da instância mestre do SQL Server. Selecione **Nova Consulta**.
 
-   ![Consulta de instância mestre do SQL Server](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
+   ![Consulta da instância mestre do SQL Server](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
 
-1. Execute o seguinte comando Transact-SQL para alterar o contexto para o **vendas** banco de dados na instância do mestre.
+1. Execute o seguinte comando Transact-SQL para alterar o contexto para o banco de dados **Vendas** na instância mestre.
 
    ```sql
    USE Sales
    GO
    ```
 
-1. Crie uma credencial no escopo do banco de dados para se conectar ao servidor Oracle. Forneça as credenciais apropriadas ao servidor Oracle na instrução a seguir.
+1. Crie uma credencial no escopo do banco de dados para se conectar ao servidor Oracle. Forneça as credenciais apropriadas para o servidor Oracle na instrução a seguir.
 
    ```sql
    CREATE DATABASE SCOPED CREDENTIAL [OracleCredential]
    WITH IDENTITY = '<oracle_user,nvarchar(100),SYSTEM>', SECRET = '<oracle_user_password,nvarchar(100),manager>';
    ```
 
-1. Crie uma fonte de dados externa que aponta para o servidor Oracle.
+1. Crie uma fonte de dados externos que aponte para o servidor Oracle.
 
    ```sql
    CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
@@ -94,7 +94,7 @@ A primeira etapa é criar uma fonte de dados externa que pode acessar o servidor
 
 ## <a name="create-an-external-table"></a>Criar uma tabela externa
 
-Em seguida, crie uma tabela externa chamada **iventory_ora** sobre o `INVENTORY` tabela no servidor Oracle.
+Em seguida, crie uma tabela externa chamada **iventory_ora** sobre a tabela `INVENTORY` no servidor Oracle.
 
 ```sql
 CREATE EXTERNAL TABLE [inventory_ora]
@@ -105,11 +105,11 @@ WITH (DATA_SOURCE=[OracleSalesSrvr],
 ```
 
 > [!NOTE]
-> Nomes de tabela e nomes de coluna usará ANSI SQL identificador entre aspas durante a consulta em Oracle. Como resultado, os nomes diferenciam maiusculas de minúsculas. É importante especificar o nome na definição de tabela externa que corresponda exatamente da forma dos nomes de tabela e coluna nos metadados do Oracle.
+> Os nomes da tabela e de coluna usarão o identificador entre aspas do ANSI SQL ao consultar o Oracle. Como resultado, os nomes diferenciam maiúsculas de minúsculas. É importante especificar o nome na definição da tabela externa que corresponde ao caso exato dos nomes de tabela e coluna nos metadados do Oracle.
 
 ## <a name="query-the-data"></a>Consultar os dados
 
-Execute a seguinte consulta para unir os dados `iventory_ora` tabela externa com as tabelas no local `Sales` banco de dados.
+Execute a consulta a seguir para unir os dados na tabela externa `iventory_ora` com as tabelas no banco de dados `Sales` local.
 
 ```sql
 SELECT TOP(100) w.w_warehouse_name, i.inv_item, SUM(i.inv_quantity_on_hand) as total_quantity
@@ -124,7 +124,7 @@ SELECT TOP(100) w.w_warehouse_name, i.inv_item, SUM(i.inv_quantity_on_hand) as t
 
 ## <a name="clean-up"></a>Limpar
 
-Use o seguinte comando para remover os objetos de banco de dados criados neste tutorial.
+Use o comando a seguir para remover os objetos de banco de dados criados neste tutorial.
 
 ```sql
 DROP EXTERNAL TABLE [inventory_ora];
@@ -134,6 +134,6 @@ DROP DATABASE SCOPED CREDENTIAL [OracleCredential];
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Aprenda a ingestão de dados para o pool de dados:
+Saiba como ingerir dados no pool de dados:
 > [!div class="nextstepaction"]
 > [Carregar dados no pool de dados](tutorial-data-pool-ingest-sql.md)

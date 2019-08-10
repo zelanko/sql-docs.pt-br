@@ -1,7 +1,7 @@
 ---
-title: 'Tutorial: Habilitar o widget de insight de exemplo do tabela espaço em uso'
+title: 'Tutorial: Habilitar o widget de insight de exemplo de uso do espaço de tabela'
 titleSuffix: Azure Data Studio
-description: Este tutorial demonstra como habilitar o tabela uso exemplo insight o widget espaço no painel de banco de dados do estúdio de dados do Azure.
+description: Este tutorial demonstra como habilitar o widget de insight de exemplo de uso do espaço de tabela no painel de banco de dados do Azure Data Studio.
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: tutorial
@@ -11,39 +11,39 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 6ec653eac10da8c28f727277fc130722c3badef7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958983"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Tutorial: Habilitar a tabela espaço uso exemplo insight widget [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Tutorial: Habilitar o widget de insight de exemplo de uso do espaço de tabela usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Este tutorial demonstra como habilitar um widget de insight no painel do banco de dados, fornecendo uma exibição de uma visão geral sobre o uso do espaço para todas as tabelas em um banco de dados. Durante este tutorial, você aprenderá como:
+Este tutorial demonstra como habilitar um widget de insight no painel de banco de dados, fornecendo uma visão geral do uso do espaço para todas as tabelas de um banco de dados. Neste tutorial, você aprenderá a:
 
 > [!div class="checklist"]
-> * Ativar rapidamente um widget de insight usando um exemplo de widget de visão interna
-> * Exibir os detalhes de uso do espaço de tabela
-> * Filtrar dados e exibir os detalhes de rótulo em um gráfico de insight
+> * Ativar rapidamente um widget de insight usando um exemplo de widget de insight interno
+> * Exibir os detalhes do uso do espaço de tabela
+> * Filtrar dados e exibir detalhes do rótulo em um gráfico de insight
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Este tutorial requer o SQL Server ou banco de dados SQL *TutorialDB*. Para criar o *TutorialDB* banco de dados, conclua um dos seguintes inícios rápidos:
+Este tutorial requer o SQL Server ou o *TutorialDB* do Banco de Dados SQL do Azure. Para criar o banco de dados *TutorialDB*, siga um destes guias de início rápido:
 
-- [Conectar e consultar usando SQL Server [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Conectar e consultar usando o banco de dados SQL [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Conectar e consultar o SQL Server usando [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Conectar e consultar o Banco de Dados SQL do Azure usando [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
-## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>Ativar-em um insight de gerenciamento [!INCLUDE[name-sos](../includes/name-sos-short.md)]do painel de banco de dados
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] traz um widget de exemplo internos para monitorar o espaço usado por tabelas em um banco de dados.
+## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>Ativar um insight de gerenciamento no painel de banco de dados do [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+O [!INCLUDE[name-sos](../includes/name-sos-short.md)] tem um widget de exemplo interno para monitorar o espaço usado pelas tabelas em um banco de dados.
 
-1. Abra *as configurações de usuário* pressionando **Ctrl + Shift + P** para abrir o *paleta de comandos*.
-2. Tipo de *as configurações* na caixa de pesquisa e selecione **preferências: Abrir configurações de usuário**.
-2. Tipo de *dashboard* na pesquisa de configurações de caixa de entrada e localize **dashboard.database.widgets**.
+1. Abra as *Configurações do Usuário* pressionando **Ctrl+Shift+P** para abrir a *Paleta de Comandos*.
+2. Digite *configurações* na caixa de pesquisa e selecione **Preferências: Abrir Configurações do Usuário**.
+2. Digite *dashboard* na caixa de Pesquisa de Configurações e localize **dashboard.database.widgets**.
 
-3. Para personalizar o **dashboard.database.widgets** as configurações que você precisa editar o **dashboard.database.widgets** entrada no **configurações de usuário** seção (a coluna no lado direito). Se não houver nenhuma **dashboard.database.widgets** na **configurações do usuário** seção, passe o mouse sobre o **dashboard.database.widgets** texto na coluna de configurações padrão e clique em o ícone de lápis que aparece à esquerda do texto e clique em **cópia configurações**. Se o pop-up diz **substituir nas configurações**, não clique nele! Vá para o **as configurações de usuário** coluna à direita e localize o **dashboard.database.widgets** seção e vá para a próxima etapa.
+3. Para personalizar as configurações de **dashboard.database.widgets**, você precisa editar a entrada **dashboard.database.widgets** na seção **CONFIGURAÇÕES DO USUÁRIO** (a coluna no lado direito). Se não houver um **dashboard.database.widgets** na seção **CONFIGURAÇÕES DO USUÁRIO**, passe o mouse sobre o texto **dashboard.database.widgets** na coluna CONFIGURAÇÕES PADRÃO, clique no ícone de lápis que aparece à esquerda do texto e clique em **Copiar para Configurações**. Se o pop-up disser **Substituir nas Configurações**, não clique! Vá para a coluna **CONFIGURAÇÕES DO USUÁRIO** à direita e localize a seção **dashboard.database.widgets** e avance para a próxima etapa.
 
-4. No **dashboard.database.widgets** seção, adicione o seguinte:
+4. Na seção **dashboard.database.widgets**, adicione o seguinte:
 
    ```json
         {
@@ -57,38 +57,38 @@ Este tutorial requer o SQL Server ou banco de dados SQL *TutorialDB*. Para criar
             }
         },
     ```
-O **dashboard.database.widgets** seção deve ser semelhante à seguinte imagem:
+A seção **dashboard.database.widgets** deve ser semelhante à seguinte imagem:
 
-   ![Configurações de pesquisa](./media/tutorial-table-space-sql-server/insight-table-space.png)
+   ![Pesquisar configurações](./media/tutorial-table-space-sql-server/insight-table-space.png)
 
 5. Pressione **Ctrl + S** para salvar as configurações.
 
-6. Painel de banco de dados aberto clicando **TutorialDB** e clique em **gerenciar**.
+6. Abra o painel do banco de dados clicando com o botão direito do mouse em **TutorialDB** e clique em **Gerenciar**.
 
-7. Modo de exibição de *espaço de tabela* widget de insight, conforme mostrado na imagem a seguir: 
+7. Exiba o widget de insight de *espaço de tabela*, conforme mostrado na imagem a seguir: 
 
    ![Widget](./media/tutorial-table-space-sql-server/insight-table-space-result.png)
 
 
 ## <a name="working-with-the-insight-chart"></a>Trabalhando com o gráfico de insight
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]do gráfico de insight fornece detalhes de filtragem e ao passar o mouse. Para experimentar as etapas a seguir:
+O gráfico de insight do [!INCLUDE[name-sos](../includes/name-sos-short.md)] fornece filtragem e detalhes ao passar o ponteiro do mouse. Para testar, siga estas etapas:
 
-1. Clique em e ative/desative o *row_count* legenda no gráfico. [!INCLUDE[name-sos](../includes/name-sos-short.md)] mostra e oculta a série de dados como uma legenda é ligar ou desligar.
+1. Clique e alterne a legenda *row_count* no gráfico. [!INCLUDE[name-sos](../includes/name-sos-short.md)] mostra e oculta a série de dados à medida que você alterna ou desativa uma legenda.
     
-2. Passe o ponteiro do mouse sobre o gráfico. [!INCLUDE[name-sos](../includes/name-sos-short.md)] mostra mais informações sobre o rótulo de série de dados e seu valor, conforme mostrado na seguinte captura de tela.
+2. Passe o ponteiro do mouse sobre o gráfico. [!INCLUDE[name-sos](../includes/name-sos-short.md)] mostra mais informações sobre o rótulo da série de dados e seu valor, conforme mostrado na captura de tela a seguir.
 
-   ![Ativar/desativar o gráfico e legenda](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
+   ![alternância de gráfico e legenda](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
 
 
 ## <a name="next-steps"></a>Próximas etapas
-Neste tutorial, você aprendeu como:
+Neste tutorial, você aprendeu a:
 > [!div class="checklist"]
-> * Ative rapidamente um widget de insight usando uma amostra de widget de visão interna.
-> * Exiba os detalhes de uso do espaço de tabela.
-> * Filtrar dados e exibir os detalhes de rótulo em um gráfico de insight
+> * Ativar rapidamente um widget de insight usando um exemplo de widget de insight interno.
+> * Exibir os detalhes do uso do espaço de tabela.
+> * Filtrar dados e exibir detalhes do rótulo em um gráfico de insight
 
-Para saber como criar um widget de visão personalizada, conclua o próximo tutorial:
+Para saber como criar um widget de insight personalizado, conclua o próximo tutorial:
 
 > [!div class="nextstepaction"]
-> [Criar um widget personalizado insight](tutorial-build-custom-insight-sql-server.md).
+> [Criar um widget de insight personalizado](tutorial-build-custom-insight-sql-server.md).

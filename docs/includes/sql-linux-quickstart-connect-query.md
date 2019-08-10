@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68215631"
 ---
 ## <a name="connect-locally"></a>Conectar-se localmente
@@ -52,7 +52,7 @@ As etapas a seguir criam um novo banco de dados denominado `TestDB`.
    ```
 
 > [!TIP]
-> Para saber mais sobre como escrever consultas e instruções Transact-SQL, consulte [Tutorial: Escrevendo instruções Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
+> Para saber mais sobre como escrever consultas e instruções em Transact-SQL, veja [Tutorial: Escrevendo instruções Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
 ### <a name="insert-data"></a>Inserir dados
 
@@ -108,18 +108,18 @@ QUIT
 
 ## <a name="performance-best-practices"></a>Práticas recomendadas de desempenho
 
-Depois de instalar o SQL Server no Linux, examine as práticas recomendadas para configurar o Linux e do SQL Server para melhorar o desempenho para cenários de produção. Para obter mais informações, consulte [práticas recomendadas de desempenho e diretrizes de configuração do SQL Server no Linux](../linux/sql-server-linux-performance-best-practices.md).
+Após instalar o SQL Server em Linux, examine as práticas recomendadas para configuração do Linux e do SQL Server a fim de melhorar o desempenho para cenários de produção. Para obter mais informações, confira [Práticas recomendadas de desempenho e diretrizes de configuração do SQL Server em Linux](../linux/sql-server-linux-performance-best-practices.md).
 
-## <a name="cross-platform-data-tools"></a>Ferramentas de dados de plataforma cruzada
+## <a name="cross-platform-data-tools"></a>Ferramentas de dados multiplataforma
 
-Além **sqlcmd**, você pode usar as seguintes ferramentas de plataforma cruzada para gerenciar o SQL Server:
+Além de **sqlcmd**, você pode usar as seguintes ferramentas multiplataforma para gerenciar o SQL Server:
 
 |||
 |---|---|
-| [Azure Data Studio](../azure-data-studio/index.md) | Um utilitário de gerenciamento de banco de dados de GUI de plataforma cruzada. |
-| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Um editor de código de GUI de plataforma cruzada que executam instruções Transact-SQL com a extensão mssql. |
-| [O PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Uma ferramenta de automação e configuração de plataforma cruzada com base nos cmdlets. |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Uma interface de linha de comando de plataforma cruzada para a execução de comandos Transact-SQL. |
+| [Azure Data Studio](../azure-data-studio/index.md) | Um utilitário de gerenciamento de banco de dados GUI multiplataforma. |
+| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Um editor de código GUI multiplataforma que executa instruções Transact-SQL com a extensão mssql. |
+| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Uma ferramenta de automação e configuração multiplataforma baseada em cmdlets. |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Uma interface de linha de comando multiplataforma para executar comandos Transact-SQL. |
 
 ## <a name="connecting-from-windows"></a>Conectando do Windows
 
@@ -145,9 +145,9 @@ Para outros cenários de instalação, veja os seguintes recursos:
 | [Instalação offline](../linux/sql-server-linux-setup.md#offline) | Saiba como baixar manualmente os pacotes para instalação offline |
 
 > [!TIP]
-> Para obter respostas para perguntas frequentes, consulte o [SQL Server nas perguntas frequentes sobre o Linux](../linux/sql-server-linux-faq.md).
+> Para obter respostas a perguntas frequentes, confira as [Perguntas frequentes sobre o SQL Server em Linux](../linux/sql-server-linux-faq.md).
 
 ## <a name="next-steps"></a>Próximas etapas
 
 > [!div class="nextstepaction"]
-> [Explore os tutoriais para SQL Server no Linux](../linux/sql-server-linux-migrate-restore-database.md)
+> [Explorar os tutoriais do SQL Server em Linux](../linux/sql-server-linux-migrate-restore-database.md)

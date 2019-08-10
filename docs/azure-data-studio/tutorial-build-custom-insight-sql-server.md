@@ -1,7 +1,7 @@
 ---
-title: 'Tutorial: Criar um widget de visão personalizada'
+title: 'Tutorial: Criar um widget de insight personalizado'
 titleSuffix: Azure Data Studio
-description: Este tutorial demonstra como compilar widgets de Insights personalizados e adicioná-los ao banco de dados e servidor painéis no estúdio de dados do Azure.
+description: Este tutorial demonstra como criar widgets de insights personalizados e adicioná-los aos painéis de banco de dados e de servidor no Azure Data Studio.
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: tutorial
@@ -11,39 +11,39 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 34ee9c23569897247f05d6b9b5f9f2610f5d68fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959095"
 ---
-# <a name="tutorial-build-a-custom-insight-widget"></a>Tutorial: Criar um widget de visão personalizada
+# <a name="tutorial-build-a-custom-insight-widget"></a>Tutorial: Criar um widget de insight personalizado
 
-Este tutorial demonstra como usar suas próprias consultas de análise para compilar widgets insight personalizado.
+Este tutorial demonstra como usar suas próprias consultas de insight para criar widgets de insight personalizados.
 
-Durante este tutorial, você aprenderá como:
+Neste tutorial, você aprenderá a:
 > [!div class="checklist"]
-> * Execute sua própria consulta e exibi-lo em um gráfico
-> * Criar um widget de visão personalizada do gráfico
-> * Adicione o gráfico a um painel de controle de servidor ou banco de dados
-> * Adicionar detalhes ao seu widget insight personalizado
+> * Executar sua própria consulta e exibi-la em um gráfico
+> * Criar um widget de insight personalizado usando o gráfico
+> * Adicionar o gráfico a um painel de servidor ou de banco de dados
+> * Adicionar detalhes ao widget de insight personalizado
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Este tutorial requer o SQL Server ou banco de dados SQL *TutorialDB*. Para criar o *TutorialDB* banco de dados, conclua um dos seguintes inícios rápidos:
+Este tutorial requer o SQL Server ou o *TutorialDB* do Banco de Dados SQL do Azure. Para criar o banco de dados *TutorialDB*, siga um destes guias de início rápido:
 
-- [Conectar e consultar usando SQL Server [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Conectar e consultar usando o banco de dados SQL [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Conectar e consultar o SQL Server usando [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Conectar e consultar o Banco de Dados SQL do Azure usando [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
-## <a name="run-your-own-query-and-view-the-result-in-a-chart-view"></a>Execute sua própria consulta e exibir o resultado em uma exibição de gráfico
-Nesta etapa, execute um script sql para consultar as sessões ativas atuais.
+## <a name="run-your-own-query-and-view-the-result-in-a-chart-view"></a>Executar sua própria consulta e exibir o resultado em um gráfico
+Nesta etapa, execute um script SQL para consultar as sessões ativas atuais.
 
 1. Para abrir um novo editor, pressione **Ctrl + N**. 
 
-2. Alterar o contexto de conexão para **TutorialDB**.
+2. Altere o contexto de conexão para **TutorialDB**.
 
-3. Cole a seguinte consulta no editor de consultas:
+3. Cole a consulta a seguir no editor de consultas:
 
    ```sql
    SELECT count(session_id) as [Active Sessions]
@@ -51,31 +51,31 @@ Nesta etapa, execute um script sql para consultar as sessões ativas atuais.
    WHERE status = 'running'
    ```
 
-4. Salve a consulta no editor para um \*arquivo. SQL. Para este tutorial, salve o script como *activeSession.sql*.
+4. Salve a consulta no editor em um arquivo \*.sql. Para este tutorial, salve o script como *activeSession.sql*.
 
 5. Para executar a consulta, pressione **F5**.
 
-6. Depois que os resultados da consulta são exibidos, clique em **exibir como gráfico**, em seguida, clique no **Visualizador gráfico** guia.
+6. Depois que os resultados da consulta forem exibidos, clique em **Exibir como Gráfico** e, em seguida, clique na guia **Visualizador de Gráfico**.
 
-7. Alteração **tipo de gráfico** à **contagem**. Essas configurações de renderizam um gráfico de contagem.
+7. Altere o **Tipo de Gráfico** para **contagem**. Essas configurações renderizam um gráfico de contagem.
 
-## <a name="add-the-custom-insight-to-the-database-dashboard"></a>Adicione o insight personalizado para o painel de banco de dados
+## <a name="add-the-custom-insight-to-the-database-dashboard"></a>Adicione o insight personalizado ao painel do banco de dados
 
-1. Para abrir a configuração do widget de insight, clique em **criar Insight** nos *Visualizador gráfico*:
+1. Para abrir a configuração do widget de insight, clique em **Criar Insight** no *Visualizador de Gráfico*:
 
    ![configuração](./media/tutorial-build-custom-insight-sql-server/create-insight.png)
    
-2. Copie a configuração de informações (os dados JSON). 
+2. Copie a configuração do insight (os dados JSON). 
 
-3. Pressione **Ctrl + vírgula** para abrir *configurações do usuário*.
+3. Pressione **Ctrl + vírgula** para abrir as *Configurações do Usuário*.
 
-4. Tipo de *dashboard* na *as configurações de pesquisa*.
+4. Digite *dashboard* nas *Configurações de Pesquisa*.
 
-5. Clique em **edite** para *dashboard.database.widgets*.
+5. Clique em **Editar** para *dashboard.database.widgets*.
 
-   ![configurações do Dashboard](./media/tutorial-build-custom-insight-sql-server/dashboard-settings.png)
+   ![configurações do painel](./media/tutorial-build-custom-insight-sql-server/dashboard-settings.png)
 
-6. Cole a configuração de insight JSON em *dashboard.database.widgets*. Banco de dados o painel configurações é semelhante ao seguinte:
+6. Cole do JSON de configuração do insight em *dashboard.database.widgets*. As configurações do painel do banco de dados são parecidas com as seguintes:
 
    ```json
     "dashboard.database.widgets": [
@@ -103,17 +103,17 @@ Nesta etapa, execute um script sql para consultar as sessões ativas atuais.
     ]
    ```
 
-7. Salvar a *as configurações de usuário* e abra o *TutorialDB* painel de banco de dados para ver o widget de sessões ativas:
+7. Salve o arquivo *Configurações do Usuário* e abra o painel do banco de dados *TutorialDB* para ver o widget de sessões ativas:
 
-   ![activesession insight](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
+   ![insight de activesession](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
 
 ## <a name="add-details-to-custom-insight"></a>Adicionar detalhes ao insight personalizado
 
 1. Para abrir um novo editor, pressione **Ctrl + N**.
 
-2. Alterar o contexto de conexão para **TutorialDB**.
+2. Altere o contexto de conexão para **TutorialDB**.
 
-3. Cole a seguinte consulta no editor de consultas:
+3. Cole a consulta a seguir no editor de consultas:
 
    ```sql
     SELECT session_id AS [SID], login_time AS [Login Time], host_name AS [Host Name], program_name AS [Program Name], login_name AS [Login Name]
@@ -121,11 +121,11 @@ Nesta etapa, execute um script sql para consultar as sessões ativas atuais.
     WHERE status = 'running'
    ```
 
-4. Salve a consulta no editor para um \*arquivo. SQL. Para este tutorial, salve o script como *activeSessionDetail.sql*.
+4. Salve a consulta no editor em um arquivo \*.sql. Para este tutorial, salve o script como *activeSessionDetail.sql*.
 
-5. Pressione **Ctrl + vírgula** para abrir *configurações do usuário*.
+5. Pressione **Ctrl + vírgula** para abrir as *Configurações do Usuário*.
 
-6. Editar as existentes *dashboard.database.widgets* nó no arquivo de configurações:
+6. Edite o nó *dashboard.database.widgets* existente em seu arquivo de configurações:
 
    ```json
     "dashboard.database.widgets": [
@@ -158,19 +158,19 @@ Nesta etapa, execute um script sql para consultar as sessões ativas atuais.
     ]
    ```
 
-7. Salvar a *as configurações de usuário* e abra o *TutorialDB* painel de banco de dados. Clique no botão de reticências (...) ao lado *Meus Widget* para mostrar os detalhes:
+7. Salve o arquivo *Configurações do Usuário* e abra o painel do banco de dados *TutorialDB*. Clique no botão de reticências (...) ao lado de *Meu Widget* para mostrar os detalhes:
 
-    ![activesession insight](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
+    ![insight de activesession](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>Próximas etapas
-Neste tutorial, você aprendeu como:
+Neste tutorial, você aprendeu a:
 > [!div class="checklist"]
-> * Execute sua própria consulta e exibi-lo em um gráfico
-> * Criar um widget de visão personalizada do gráfico
-> * Adicione o gráfico a um painel de controle de servidor ou banco de dados
-> * Adicionar detalhes ao seu widget insight personalizado
+> * Executar sua própria consulta e exibi-la em um gráfico
+> * Criar um widget de insight personalizado usando o gráfico
+> * Adicionar o gráfico a um painel de servidor ou de banco de dados
+> * Adicionar detalhes ao widget de insight personalizado
 
 Para saber como fazer backup e restaurar bancos de dados, conclua o próximo tutorial:
 
 > [!div class="nextstepaction"]
-> [Fazer backup e restaurar bancos de dados](tutorial-backup-restore-sql-server.md).
+> [Backup e restauração de bancos de dados](tutorial-backup-restore-sql-server.md).

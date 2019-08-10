@@ -1,6 +1,6 @@
 ---
-title: Configurar o compartilhamento de pasta instantâneo de replicação do SQL Server no Linux
-description: Este artigo descreve como configurar a replicação de SQL Server de compartilhamentos de pasta de instantâneo no Linux.
+title: Configurar compartilhamentos de pasta de instantâneo de Replicação do SQL Server em Linux
+description: Este artigo descreve como configurar compartilhamentos de pasta de instantâneo de Replicação do SQL Server em Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,22 +10,22 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6959b2073871f70fb33823b50419c208a23df2dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68093179"
 ---
-# <a name="configure-replication-with-non-default-ports"></a>Configurar a replicação com portas não padrão
+# <a name="configure-replication-with-non-default-ports"></a>Configurar replicação com portas não padrão
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Você pode configurar a replicação com o SQL Server em instâncias de Linux que escuta em qualquer porta configurada com a configuração de mssql-conf network.tcpport. A porta deve ser acrescentado ao nome do servidor durante a configuração se as seguintes condições forem verdadeiras:
+Você pode configurar a replicação com instâncias de SQL Server em Linux escutando em qualquer porta configurada com a configuração network.tcpport mssql-conf. A porta precisará ser acrescentada ao nome do servidor durante a configuração se as seguintes condições forem verdadeiras:
 
-1. Configuração de replicação envolve uma instância do SQL Server no Linux
-2. Qualquer instância (Windows ou Linux) está escutando uma porta não padrão. 
+1. A configuração de replicação envolve uma instância do SQL Server em Linux
+2. Qualquer instância (Windows ou Linux) está escutando em uma porta não padrão. 
 
-O nome do servidor de uma instância pode ser encontrado executando @@servername na instância.
+O nome do servidor de uma instância pode ser encontrado executando @@servername nessa instância.
 
 ## <a name="examples"></a>Exemplos
 
@@ -35,19 +35,19 @@ O nome do servidor de uma instância pode ser encontrado executando @@servername
 exec sp_adddistributor @distributor = 'Server1,1500'
 ```
 
-'Server1' escuta na porta 1500 no Linux. Para configurar um publicador para o distribuidor, execute `sp_adddistpublisher` com `@publisher`. Por exemplo:
+'Server1' escuta na porta 1500 no Linux. Para configurar um editor para o distribuidor, execute `sp_adddistpublisher` com `@publisher`. Por exemplo:
 
 ```sql
 exec sp_adddistpublisher @publisher = 'Server1,1500' ,  ,  
 ```
 
-'Server2' escuta na porta 6549 no Linux. Para configurar 'Server2' como um assinante, execute `sp_addsubscription` com `@subscriber`. Por exemplo:
+"Server2" escuta na porta 6549 no Linux. Para configurar 'Server2' como um assinante, execute `sp_addsubscription` com `@subscriber`. Por exemplo:
 
 ```sql
 exec sp_addsubscription @subscriber = 'Server2,6549' ,  ,  
 ```
 
-'Servidor3' escuta na porta 6549 no Windows com o nome do servidor do servidor3 e o nome da instância do MSSQL2017. Para configurar 'Servidor3' como um assinante, execute as `sp_addsubscription` com `@subscriber`. Por exemplo:
+'Server3' escuta na porta 6549 no Windows com o nome do servidor Server3 e o nome da instância MSSQL2017. Para configurar 'Server3' como um assinante, execute o `sp_addsubscription` com `@subscriber`. Por exemplo:
 
 ```sql
 exec sp_addsubscription @subscriber = 'Server3/MSSQL2017,6549',  ,  
@@ -55,7 +55,7 @@ exec sp_addsubscription @subscriber = 'Server3/MSSQL2017,6549',  ,
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Conceitos: Replicação do SQL Server no Linux](sql-server-linux-replication.md)
+[Conceitos: Replicação do SQL Server em Linux](sql-server-linux-replication.md)
 
 [Procedimentos armazenados de replicação](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 

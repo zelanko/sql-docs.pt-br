@@ -1,7 +1,7 @@
 ---
-title: 'Tutorial: Usar o editor Transact-SQL para criar objetos de banco de dados'
+title: 'Tutorial: Usar o editor de Transact-SQL para criar objetos de banco de dados'
 titleSuffix: Azure Data Studio
-description: Este tutorial demonstra os principais recursos no estúdio de dados do Azure que simplificam o trabalho com o T-SQL.
+description: Este tutorial demonstra os principais recursos do Azure Data Studio que simplificam o trabalho com T-SQL.
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: tutorial
@@ -11,70 +11,70 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: b4778d54fe3853f2560159a83dae42c4fd8e55e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959019"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: Use o editor Transact-SQL para criar objetos de banco de dados- [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: Usar o editor de Transact-SQL para criar objetos de banco de dados – [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Criando e executando consultas, procedimentos armazenados, scripts, etc. são as tarefas principais de profissionais de banco de dados. Este tutorial demonstra os principais recursos no editor T-SQL para criar objetos de banco de dados.
+Criar e executar consultas, procedimentos armazenados, scripts etc. são as principais tarefas dos profissionais de banco de dados. Este tutorial demonstra os principais recursos do editor de T-SQL para criar objetos de banco de dados.
 
-Neste tutorial, você aprenderá a usar [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] para:
+Neste tutorial, você aprenderá a usar o [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] para:
 > [!div class="checklist"]
-> * Objetos de banco de dados de pesquisa
-> * Editar dados da tabela 
-> * Usar trechos de gravar rapidamente o T-SQL
-> * Exibir detalhes de objeto de banco de dados usando *inspecionar definição* e *ir para definição*
+> * Pesquisar objetos de banco de dados
+> * Editar dados de tabela 
+> * Usar snippets para escrever T-SQL rapidamente
+> * Exibir detalhes do objeto de banco de dados usando *Inspecionar Definição* e *Ir para Definição*
 
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Este tutorial requer o SQL Server ou banco de dados SQL *TutorialDB*. Para criar o *TutorialDB* banco de dados, conclua um dos seguintes inícios rápidos:
+Este tutorial requer o SQL Server ou o *TutorialDB* do Banco de Dados SQL do Azure. Para criar o banco de dados *TutorialDB*, siga um destes guias de início rápido:
 
-- [Conectar e consultar usando SQL Server [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Conectar e consultar usando o banco de dados SQL [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Conectar e consultar o SQL Server usando [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Conectar e consultar o Banco de Dados SQL do Azure usando [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
-## <a name="quickly-locate-a-database-object-and-perform-a-common-task"></a>Localizar um objeto de banco de dados rapidamente e executar uma tarefa comum
+## <a name="quickly-locate-a-database-object-and-perform-a-common-task"></a>Localizar rapidamente um objeto de banco de dados e executar uma tarefa comum
 
-[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] Fornece um widget de pesquisa para localizar rapidamente os objetos de banco de dados. Lista de resultados fornece um menu de contexto para tarefas comuns de relevantes para o objeto selecionado, como *editar dados* para uma tabela.
+[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] fornece um widget de pesquisa para localizar rapidamente objetos de banco de dados. A lista de resultados fornece um menu de contexto com tarefas comuns relevantes para o objeto selecionado, como *Editar Dados* para uma tabela.
 
-1. Abra a barra lateral de servidores (**Ctrl + G**), expanda **bancos de dados**e selecione **TutorialDB**. 
+1. Abra a barra lateral SERVIDORES (**Ctrl+G**), expanda **Bancos de dados** e selecione **TutorialDB**. 
 
-1. Abra o *TutorialDB Dashboard* clicando com o **TutorialDB** e selecionando **gerenciar** no menu de contexto:
+1. Abra o *Painel do TutorialDB* clicando com o botão direito do mouse em **TutorialDB** e selecionando **Gerenciar** no menu de contexto:
 
-   ![menu de contexto - gerenciar](./media/tutorial-sql-editor/insight-open-dashboard.png)
+   ![Menu de contexto – Gerenciar](./media/tutorial-sql-editor/insight-open-dashboard.png)
 
-1. No painel, clique com botão direito **dbo. Os clientes** (no widget de pesquisa) e selecione **editar dados**.
+1. No painel, clique com o botão direito do mouse em **dbo.Customers** (no widget de pesquisa) e selecione **Editar Dados**.
    
    > [!TIP]
-   > Para bancos de dados com muitos objetos, use o widget de pesquisa para localizar rapidamente a tabela, exibição, etc. que você está procurando.
+   > Para bancos de dados com muitos objetos, use o widget de pesquisa para localizar rapidamente a tabela, exibição etc. que você está buscando.
 
    ![widget de pesquisa rápida](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. Editar o **E-mail** coluna na primeira linha, digite *orlando0@adventure-works.com* e pressione **Enter** para salvar a alteração.
+1. Edite a coluna **Email** na primeira linha, digite *orlando0@adventure-works.com* e pressione **Enter** para salvar a alteração.
 
-   ![Editar dados](./media/tutorial-sql-editor/edit-data.png)
+   ![editar dados](./media/tutorial-sql-editor/edit-data.png)
 
-## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Usar trechos de código T-SQL para criar procedimentos armazenados
+## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Usar snippets de T-SQL para criar procedimentos armazenados
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] fornece muitos trechos de código internos do T-SQL para rapidamente criar instruções.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] fornece muitos snippets de T-SQL internos para criar instruções rapidamente.
 
 
-1. Abra um novo editor de consulta pressionando **Ctrl + N**.
+1. Abra um novo editor de consultas pressionando **Ctrl + N**.
 
-2. Tipo de **sql** no editor, seta para baixo até **sqlCreateStoredProcedure**e pressione a *guia* chave (ou *Enter*) para carregar o criar armazenado trecho de código do procedimento.
+2. Digite **sql** no editor, use a seta para baixo até chegar em **sqlCreateStoredProcedure** e pressione a tecla *Tab* (ou *Enter*) para carregar o snippet de criação de procedimento armazenado.
 
-   ![lista de trechos](./media/tutorial-sql-editor/snippet-list.png)
+   ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
 
-3. O trecho de código do procedimento armazenado criar tem dois campos configurados para edição rápida, *StoredProcedureName* e *SchemaName*. Selecione *StoredProcedureName*, mouse e selecione **alteração de todas as ocorrências**. Agora, digite *getCustomer* e todos os *StoredProcedureName* entradas de alteração para *getCustomer*.
+3. O snippet de criação de procedimento armazenado tem dois campos configurados para edição rápida, *StoredProcedureName* e *SchemaName*. Selecione *StoredProcedureName*, clique com o botão direito do mouse e selecione **Alterar Todas as Ocorrências**. Agora, digite *getCustomer* e todas as entradas de *StoredProcedureName* serão alteradas para *getCustomer*.
 
-   ![Trecho de código](./media/tutorial-sql-editor/snippet.png)
+   ![snippet](./media/tutorial-sql-editor/snippet.png)
 
-5. Alterar todas as ocorrências de *SchemaName* à *dbo*. 
-6. O trecho de código contém parâmetros de espaço reservado e o corpo do texto que precisa ser atualizado. O *EXECUTE* instrução também contém o texto do espaço reservado porque não sabe quantos parâmetros terá o procedimento. Para este tutorial o trecho de código de atualização então, ele se parece com o código a seguir:
+5. Altere todas as ocorrências de *SchemaName* para *dbo*. 
+6. O snippet contém parâmetros de espaço reservado e texto de corpo que precisam ser atualizados. A instrução *EXECUTE* também contém texto de espaço reservado porque não sabe quantos parâmetros o procedimento terá. Para este tutorial, atualize o snippet de forma que ele se pareça com o código a seguir:
 
     ```sql
     -- Create a new stored procedure called 'getCustomer' in schema 'dbo'
@@ -107,36 +107,36 @@ Este tutorial requer o SQL Server ou banco de dados SQL *TutorialDB*. Para criar
     GO
     ```
     
-5. Para criar o procedimento armazenado e dê a ele uma execução de teste, pressione **F5**.
+5. Para criar o procedimento armazenado e fazer uma execução de teste, pressione **F5**.
 
-O procedimento armazenado foi criado e o **resultados** painel exibe o cliente retornado em JSON. Para ver o JSON formatado, clique no registro retornado. 
+O procedimento armazenado é criado e o painel **RESULTADOS** exibe o cliente retornado em JSON. Para ver o JSON formatado, clique no registro retornado. 
 
 
-## <a name="use-peek-definition"></a>Usar inspecionar definição 
+## <a name="use-peek-definition"></a>Usar Inspecionar Definição 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] fornece a capacidade de exibir uma definição de objetos usando o recurso de definição de espiada. Esta seção cria um segundo procedimento armazenado e usa a definição de inspeção para ver quais colunas são em uma tabela para criar rapidamente o corpo do procedimento armazenado.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] possibilita exibir a definição de um objeto usando o recurso de inspecionar definição. Esta seção cria um segundo procedimento armazenado e usa inspecionar definição para ver quais colunas estão em uma tabela para criar rapidamente o corpo do procedimento armazenado.
 
 1. Abra um novo editor pressionando **Ctrl + N**. 
 
-2. Tipo de *sql* no editor, seta para baixo até *sqlCreateStoredProcedure*e pressione a *guia* chave (ou *Enter*) para carregar o criar armazenado trecho de código do procedimento.
+2. Digite *sql* no editor, use a seta para baixo até chegar em *sqlCreateStoredProcedure* e pressione a tecla *Tab* (ou *Enter*) para carregar o snippet de criação de procedimento armazenado.
 3. Digite *setCustomer* para *StoredProcedureName* e *dbo* para *SchemaName*
 
-3. Substitua o @param espaços reservados com a seguinte definição de parâmetro:
+3. Substitua os espaços reservados @param pela definição de parâmetro a seguir:
 
    ```sql
    @json_val nvarchar(max)
    ```
 
-4. Substitua o corpo do procedimento armazenado com o código a seguir:
+4. Substitua o corpo do procedimento armazenado pelo código a seguir:
    ```sql
    INSERT INTO dbo.Customers
    ```
 
-5. No *inserir* recém-adicionada, clique com botão direito da linha você **dbo. Os clientes** e selecione **inspecionar definição**.
+5. Na linha *INSERT* que você acabou de adicionar, clique com o botão direito do mouse em **dbo.Customers** e selecione **Inspecionar Definição**.
 
-   ![Inspecionar definição](./media/tutorial-sql-editor/peek-definition.png)
+   ![inspecionar definição](./media/tutorial-sql-editor/peek-definition.png)
 
-6. A definição da tabela é exibida para que você possa ver rapidamente quais colunas são na tabela. Consulte a lista de colunas para concluir facilmente as instruções para o procedimento armazenado. Concluir a criação da instrução INSERT que você adicionou anteriormente para concluir o corpo do procedimento armazenado e fechar uma janela Inspecionar definição:
+6. A definição da tabela é exibida para que você possa ver rapidamente quais colunas estão nela. Confira a lista de colunas para concluir facilmente as instruções para seu procedimento armazenado. Conclua a criação da instrução INSERT que você adicionou anteriormente para preencher o corpo do procedimento armazenado e feche a janela Inspecionar Definição:
 
    ```sql
    INSERT INTO dbo.Customers (CustomerId, Name, Location, Email)
@@ -148,8 +148,8 @@ O procedimento armazenado foi criado e o **resultados** painel exibe o cliente r
                Email nvarchar(50)
     )
    ```
-7. Excluir (ou comente) a *EXECUTE* comando na parte inferior da consulta.
-8. A instrução inteira deve parecer com o código a seguir:
+7. Exclua (ou comente) o comando *EXECUTE* na parte inferior da consulta.
+8. A instrução inteira deve ser semelhante ao seguinte código:
 
    ```sql
    -- Create a new stored procedure called 'setCustomer' in schema 'dbo'
@@ -178,22 +178,22 @@ O procedimento armazenado foi criado e o **resultados** painel exibe o cliente r
    GO
    ```
 
-8. Para criar o *setCustomer* procedimento armazenado, pressione **F5**.
+8. Para criar o procedimento armazenado *setCustomer*, pressione **F5**.
 
-## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Use salvar os resultados da consulta como JSON para testar o procedimento armazenado de setCustomer
+## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Use Salvar resultados da consulta como JSON para testar o procedimento armazenado setCustomer
 
-O *setCustomer* procedimento armazenado criado na seção anterior requer JSON dados passados para o *@json_val* parâmetro. Esta seção mostra como obter um pouco corretamente formatado de JSON para passar para o parâmetro para que você possa testar o procedimento armazenado.
+O procedimento armazenado *setCustomer* criado na seção anterior requer que dados JSON sejam passados para o parâmetro *@json_val* . Esta seção mostra como obter um trecho de JSON formatado corretamente para passar para o parâmetro para que você possa testar o procedimento armazenado.
 
-1. No **servidores** barra lateral com o botão direito do *dbo. Os clientes* tabela e clique em **selecionar 1000 linhas SUPERIORES**.
+1. Na barra lateral **SERVIDORES**, clique com o botão direito do mouse na tabela *dbo.Customers* e clique em **Selecionar 1000 Linhas Superiores**.
 
-2. Selecione a primeira linha na exibição dos resultados, verifique se toda a linha está selecionada (clique no número 1 na coluna mais à esquerda) e selecione **Salvar como JSON**.  
-3. Alterar a pasta para um local que você vai se lembrar para que você pode excluir o arquivo mais tarde (para a área de trabalho de exemplo) e clique em **salvar**. O JSON formatado arquivo é aberto.
+2. Selecione a primeira linha na visualização dos resultados, certifique-se de que a linha inteira esteja selecionada (clique no número 1 na coluna à extrema esquerda) e selecione **Salvar como JSON**.  
+3. Altere a pasta para uma localização da qual você se lembrará para que possa excluir o arquivo posteriormente (por exemplo, a área de trabalho) e clique em **Salvar**. O arquivo formatado em JSON é aberto.
 
    ![Salvar como JSON](./media/tutorial-sql-editor/save-as-json.png)
 
-4. Selecione os dados JSON no editor e copiá-lo.
+4. Selecione os dados JSON no editor e copie-os.
 5. Abra um novo editor pressionando **Ctrl + N**.
-6. As etapas anteriores mostram como você pode obter facilmente os dados formatados corretamente para completar a chamada para o *setCustomer* procedimento. Você pode ver o código a seguir usa o mesmo formato JSON com novos detalhes do cliente para que possamos testar o *setCustomer* procedimento. A instrução inclui a sintaxe para declarar o parâmetro e executar get novo e conjunto de procedimentos. Você pode colar os dados copiados da seção anterior e editá-lo, portanto, é o mesmo que o exemplo a seguir ou simplesmente colar a instrução a seguir no editor de consultas.
+6. As etapas anteriores mostram como você pode formatar facilmente os dados da forma correta para fazer a chamada para o procedimento *setCustomer*. Você pode ver que o seguinte código usa o mesmo formato JSON com novos detalhes do cliente para que possamos testar o procedimento *setCustomer*. A instrução inclui a sintaxe para declarar o parâmetro e executar os novos procedimentos get e set. Você pode colar os dados copiados da seção anterior e editá-los para que eles fiquem iguais ao exemplo a seguir ou simplesmente colar a instrução a seguir no editor de consultas.
 
    ```sql
    -- example to execute the stored procedure we just created
@@ -213,20 +213,20 @@ O *setCustomer* procedimento armazenado criado na seção anterior requer JSON d
    EXECUTE dbo.getCustomer @ID = 5
    ```
 
-7. Execute o script pressionando **F5**. O script insere um novo cliente e retorna as novas informações do cliente no formato JSON. Clique no resultado para abrir uma exibição formatada.
+7. Execute o script pressionando **F5**. O script insere um novo cliente e retorna as informações do novo cliente no formato JSON. Clique no resultado para abrir uma exibição formatada.
 
    ![resultado do teste](./media/tutorial-sql-editor/test-result.png)
 
 ## <a name="next-steps"></a>Próximas etapas
-Neste tutorial, você aprendeu como:
+Neste tutorial, você aprendeu a:
 > [!div class="checklist"]
-> * Objetos de esquema de pesquisa rápida
-> * Editar dados da tabela 
-> * Escrevendo o script T-SQL usando trechos de código
-> * Saiba mais sobre os detalhes do objeto de banco de dados usando inspecionar definição e ir para definição
+> * Pesquisar rapidamente objetos de esquema
+> * Editar dados de tabela 
+> * Escrever script de T-SQL usando snippets
+> * Conheça mais detalhes sobre o objeto de banco de dados usando Inspecionar Definição e Ir para Definição
 
 
-Para saber como habilitar a **cinco consultas mais lentas** widget, conclua o próximo tutorial:
+Para saber como habilitar o widget das **cinco consultas mais lentas**, conclua o seguinte tutorial:
 
 > [!div class="nextstepaction"]
 > [Habilitar o widget de insight de exemplo de consultas lentas](tutorial-qds-sql-server.md)

@@ -1,7 +1,7 @@
 ---
 title: Instalar o SQL Server 2016 por meio do Assistente de Instalação (Instalação) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bdfa96839b92150fde8b6954ffd96f8f34eb7508
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9608e61108ad6f13c14816a35f06ca578e55d192
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991101"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419266"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Instalar o SQL Server por meio do Assistente de Instalação (Instalação)
 
@@ -48,56 +48,43 @@ Antes de instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], c
 > [!NOTE]  
 > Para instalações locais, você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura e de execução no compartilhamento remoto.  
 
+::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+
 ###  <a name="bkmk_ga_instalpatch"></a> Instalar o requisito de patch
 
-A Microsoft identificou um problema com os binários de tempo de execução do Microsoft Visual C++ 2013, que são instalados como um pré-requisito pelo SQL Server. Uma atualização está disponível para correção deste problema. Se essa atualização para os binários de tempo de execução do Visual C++ não for instalada, o SQL Server poderá apresentar problemas de estabilidade em determinados cenários. Antes de instalar o SQL Server, siga as instruções das [Notas de versão do SQL Server](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) para ver se seu computador precisa de um patch para os binários de tempo de execução do Visual C++.  
+A Microsoft identificou um problema com os binários de tempo de execução do Microsoft Visual C++ 2013, que são instalados como um pré-requisito pelo SQL Server 2016 e 2017. Uma atualização está disponível para correção deste problema. Se essa atualização para os binários de tempo de execução do Visual C++ não for instalada, o SQL Server poderá apresentar problemas de estabilidade em determinados cenários. Antes de instalar o SQL Server, siga as instruções das [Notas de versão do SQL Server](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) para ver se seu computador precisa de um patch para os binários de tempo de execução do Visual C++. 
+
+Isso não se aplica ao SQL Server 2019.  
   
-## <a name="to-install-includessnoversionincludesssnoversion-mdmd"></a>Para instalar o [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]  
-  
+
+## <a name="to-install-sql-server-2016-and-2017"></a>Para instalar o SQL Server 2016 e 2017  
+
 1. Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Na pasta raiz, clique duas vezes em **Setup.exe**. Para instalar em um compartilhamento de rede, localize a pasta raiz no compartilhamento e clique duas vezes no arquivo **Setup.exe**.  
   
-2. O Assistente de Instalação executa a Central de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para criar uma nova instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selecione **Instalação**, na área de navegação esquerda, e selecione **Nova instalação autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou adicionar recursos a uma instalação existente**.  
+1. O Assistente de Instalação executa a Central de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para criar uma nova instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selecione **Instalação**, na área de navegação esquerda, e selecione **Nova instalação autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou adicionar recursos a uma instalação existente**.  
 
-3. Na página **Chave do produto (Product Key)** , selecione uma opção para indicar se você está instalando uma edição gratuita do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou uma versão de produção que tem uma chave de PID. Para obter mais informações, consulte [Edições e recursos com suporte para o SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+1. Na página **Chave do produto (Product Key)** , selecione uma opção para indicar se você está instalando uma edição gratuita do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou uma versão de produção que tem uma chave de PID. Para obter mais informações, consulte [Edições e recursos com suporte para o SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
    Para continuar, selecione **Avançar**.
 
-<!--
-The following item is for SQL Server 2019 or later
--->
-  
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-
-4. Na página dos **Termos de Licença**, examine o Contrato de Licença. Se você concordar, marque a caixa de seleção **Aceito os termos da licença e a [política de privacidade](https://privacy.microsoft.com/privacystatement)** e, em seguida, selecione **Avançar**.  
-
-::: moniker-end
-
-<!--
-The following item is for SQL Server 2016-2017
--->
-
-::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
-
-4. Na página dos **Termos de Licença**, examine o Contrato de Licença. Se você concordar, marque a caixa de seleção **Aceito os termos da licença** e, em seguida, selecione **Avançar**.  
-
-::: moniker-end
+1. Na página dos **Termos de Licença**, examine o Contrato de Licença. Se você concordar, marque a caixa de seleção **Aceito os termos da licença** e, em seguida, selecione **Avançar**.  
 
    >[!NOTE]
    > O SQL Server transmite informações sobre sua experiência de instalação, bem como outros dados de uso e desempenho para ajudar a Microsoft a melhorar o produto. Para saber mais sobre o processamento de dados e os controles de privacidade do SQL Server, confira os tópicos [Política de privacidade](https://privacy.microsoft.com/privacystatement) e [Configurar o SQL Server para enviar comentários à Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016).
 
-5. Na página **Regras Globais**, o procedimento de instalação avançará automaticamente para a página **Atualizações de Produto** se não houver nenhum erro de regra.  
+1. Na página **Regras Globais**, o procedimento de instalação avançará automaticamente para a página **Atualizações de Produto** se não houver nenhum erro de regra.  
   
-6. A página do **Microsoft Update** será exibida em seguida se a caixa de seleção do **Microsoft Update** no **Painel de Controle** > **Todos os Itens do Painel de Controle** > **Windows Update** > **Alterar configurações** não estiver marcada. Ao marcar a caixa de seleção do **Microsoft Update**, você altera as configurações do computador para incluir as atualizações mais recentes de todos os produtos da Microsoft quando procurar atualizações do Windows.  
+1. A página do **Microsoft Update** será exibida em seguida se a caixa de seleção do **Microsoft Update** no **Painel de Controle** > **Todos os Itens do Painel de Controle** > **Windows Update** > **Alterar configurações** não estiver marcada. Ao marcar a caixa de seleção do **Microsoft Update**, você altera as configurações do computador para incluir as atualizações mais recentes de todos os produtos da Microsoft quando procurar atualizações do Windows.  
 
-7. Na página **Atualizações de Produto**, nosso sistema exibe as atualizações mais recentes de produto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponíveis. Se nenhuma atualização de produto for descoberta, a Instalação não exibirá essa página e avançará automaticamente para a página **Instalar Arquivos de Instalação**.  
+1. Na página **Atualizações de Produto**, nosso sistema exibe as atualizações mais recentes de produto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponíveis. Se nenhuma atualização de produto for descoberta, a Instalação não exibirá essa página e avançará automaticamente para a página **Instalar Arquivos de Instalação**.  
 
-8. Na página **Instalar Arquivos de Instalação**, a Instalação apresenta o andamento do download, da extração e da instalação dos arquivos de instalação. Se uma atualização da instalação for localizada e for especificada para ser incluída, essa atualização também será instalada. Se nenhuma atualização for encontrada, a instalação avançará automaticamente.
+1. Na página **Instalar Arquivos de Instalação**, a Instalação apresenta o andamento do download, da extração e da instalação dos arquivos de instalação. Se uma atualização da instalação for localizada e for especificada para ser incluída, essa atualização também será instalada. Se nenhuma atualização for encontrada, a instalação avançará automaticamente.
   
-9. Na página **Regras de Instalação**, o recurso verifica possíveis problemas que podem ocorrer durante a execução da instalação. Se ocorrerem falhas, selecione um item na coluna **Status** para saber mais. Caso contrário, selecione **Avançar**.
+1. Na página **Regras de Instalação**, o recurso verifica possíveis problemas que podem ocorrer durante a execução da instalação. Se ocorrerem falhas, selecione um item na coluna **Status** para saber mais. Caso contrário, selecione **Avançar**.
 
-10. Se esta for a primeira instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador, a página **Tipo de Instalação** será ignorada, e a instalação irá diretamente para a página **Seleção de Recursos**. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] já estiver instalado no sistema, vá até a página **Tipo de Instalação** e escolha executar uma nova instalação ou adicionar recursos a uma instalação existente. Para continuar, selecione **Avançar**.
+1. Se esta for a primeira instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador, a página **Tipo de Instalação** será ignorada, e a instalação irá diretamente para a página **Seleção de Recursos**. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] já estiver instalado no sistema, vá até a página **Tipo de Instalação** e escolha executar uma nova instalação ou adicionar recursos a uma instalação existente. Para continuar, selecione **Avançar**.
   
-11. Na página **Seleção de Recursos**, selecione os componentes para a instalação. Por exemplo, para instalar uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], selecione **Serviços de Mecanismo de Banco de Dados**.
+1. Na página **Seleção de Recursos**, selecione os componentes para a instalação. Por exemplo, para instalar uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], selecione **Serviços de Mecanismo de Banco de Dados**.
 
     Uma descrição de cada grupo de componentes é exibida no painel **Descrição do recurso** depois que você seleciona o nome do recurso. Você pode selecionar qualquer combinação de caixas de seleção. Para saber mais, confira [Edições e componentes do SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) e [Edições e componentes do SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
   
@@ -116,9 +103,9 @@ The following item is for SQL Server 2016-2017
      > [!NOTE]
      > O caminho especificado para cada uma das opções anteriores deve ser diferente.  
   
-12. A página **Regras de Recurso** avançará automaticamente se todas as regras passarem.  
+1. A página **Regras de Recurso** avançará automaticamente se todas as regras passarem.  
   
-13. Na página **Configuração da Instância**, especifique se deseja instalar uma instância padrão ou uma instância nomeada. Para saber mais, veja o tópico [Configuração da instância](../../sql-server/install/instance-configuration.md#instance-configuration-page).  
+1. Na página **Configuração da Instância**, especifique se deseja instalar uma instância padrão ou uma instância nomeada. Para saber mais, veja o tópico [Configuração da instância](../../sql-server/install/instance-configuration.md#instance-configuration-page).  
   
      * **ID da Instância**: por padrão, o nome da instância é usado como a ID da Instância. Essa ID é usada para identificar os diretórios de instalação e as chaves do Registro de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O mesmo comportamento ocorre com instâncias padrão e instâncias nomeadas. No caso de uma instância padrão, o nome da instância e a ID da Instância é MSSQLSERVER. Para usar uma ID da Instância não padrão, especifique um valor diferente na caixa de texto **ID da Instância**.  
   
@@ -129,9 +116,12 @@ The following item is for SQL Server 2016-2017
   
      * **Instâncias Instaladas**: a grade mostra todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão no computador cuja instalação está sendo executada. Se já existir uma instância padrão instalada no computador, instale uma instância nomeada do [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)].  
   
-     O fluxo de trabalho do restante da instalação depende dos recursos especificados para a instalação. Talvez você não veja todas as páginas, dependendo de suas seleções.  
-  
-14. Use a página **Configuração do Servidor – Contas de Serviço** para especificar contas de logon para serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os serviços reais configurados nesta página dependem dos recursos selecionados para instalação. Para saber mais sobre as definições de configuração, confira [Ajuda do Assistente de Instalação](../../sql-server/install/instance-configuration.md#serverconfig).
+     O fluxo de trabalho do restante da instalação depende dos recursos especificados para a instalação. Talvez você não veja todas as páginas, dependendo de suas seleções. 
+
+1. Optar pela instalação do recurso PolyBase adicionará a página **Configuração do PolyBase** à instalação do SQL Server, exibida após a página **Configuração da Instância**. O PolyBase requer o Oracle JRE 7 Update 51 (pelo menos). Se ele ainda não estiver instalado, sua instalação será bloqueada. Na página **Configuração do PolyBase**, você pode optar por usar o SQL Server como uma instância autônoma habilitada para PolyBase ou pode usar esse SQL Server como parte de um grupo de escala horizontal do PolyBase. Se optar por usar o grupo de escala horizontal, você precisará especificar um intervalo de portas com 6 portas ou mais. 
+
+
+1. Use a página **Configuração do Servidor – Contas de Serviço** para especificar contas de logon para serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os serviços reais configurados nesta página dependem dos recursos selecionados para instalação. Para saber mais sobre as definições de configuração, confira [Ajuda do Assistente de Instalação](../../sql-server/install/instance-configuration.md#serverconfig).
   
      Você pode atribuir a mesma conta de logon a todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou configurar cada conta de serviço individualmente. Você pode, inclusive, especificar se os serviços serão iniciados automaticamente ou manualmente ou se eles serão desabilitados. Recomendamos configurar as contas de serviço individualmente para fornecer o mínimo de privilégios para cada serviço. Conceda as permissões mínimas necessárias para que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possa concluir as respectivas tarefas. Para saber mais, leia o tópico [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -145,7 +135,7 @@ The following item is for SQL Server 2016-2017
   
      Use a página **Configuração do Servidor – Ordenação** para especificar ordenações não padrão para o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para saber mais, confira [Suporte para ordenações e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
-15. Use a página **Configuração do Mecanismo de Banco de Dados – Configuração do Servidor** para especificar as seguintes opções:  
+1. Use a página **Configuração do Mecanismo de Banco de Dados – Configuração do Servidor** para especificar as seguintes opções:  
   
     * **Modo de segurança**: Selecione **Autenticação do Windows** ou **Autenticação de Modo Misto** para sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se você selecionar **Autenticação de Modo Misto**, forneça uma senha forte para a conta interna do administrador de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -160,19 +150,12 @@ The following item is for SQL Server 2016-2017
   
      Para saber mais, leia a página [Configuração do Mecanismo de Banco de Dados – Diretórios de dados](../../sql-server/install/instance-configuration.md#datadir).
 
-     Use a página **Configuração do Mecanismo de Banco de Dados – TempDB** para configurar o tamanho do arquivo, o número de arquivos, os diretórios de instalação não padrão e as configurações de ampliação de arquivo do **tempdb**. Para saber mais, veja a página [Configuração do Mecanismo de Banco de Dados – TempDB](../../sql-server/install/instance-configuration.md#tempdb).  
+     Use a página **Configuração do Mecanismo de Banco de Dados – TempDB** para configurar o tamanho do arquivo, o número de arquivos, os diretórios de instalação não padrão e as configurações de ampliação de arquivo do **tempdb**. Para saber mais, veja a página [Configuração do Mecanismo de Banco de Dados – TempDB](../../sql-server/install/instance-configuration.md#tempdb). 
 
-     ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-
-     Use a guia **Configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)] – MaxDOP** para especificar o grau máximo de paralelismo. Essa configuração determina a quantidade de processadores que uma única instrução pode usar durante a execução. O valor recomendado é calculado automaticamente durante a instalação. Para saber mais, confira [Diretrizes para grau máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines). Essa opção está disponível apenas do SQL Server 2019 em diante. 
-
-     Use a guia **Configuração do Mecanismo de Banco de Dados – Memória** para especificar os valores MIN e MAX de memória que esta instância do SQL Server usará após a inicialização. Use os valores padrão, os valores recomendados calculados ou especifique manualmente seus próprios valores, depois de escolher a opção **Recomendado**. Esta funcionalidade está disponível apenas na instalação do SQL Server 2019 em diante. 
-
-     ::: moniker-end
-
+ 
      Use a página **Configuração do Mecanismo de Banco de Dados – Fluxo de arquivos** para habilitar o fluxo de arquivos na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para saber mais, leia a página [Configuração do Mecanismo de Banco de Dados – Fluxo de arquivos](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   
-16. Use a página **Configuração do Analysis Services – Provisionamento de Conta** para especificar o modo de servidor e os usuários ou as contas que têm permissões de administrador no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O modo de servidor determina quais subsistemas de memória e de armazenamento são usados no servidor. Tipos de solução diferentes são executados em modos de servidor diferentes. Se você pretende executar bancos de dados de cubo multidimensionais no servidor, escolha a opção padrão do modo de servidor **Multidimensional e Mineração de Dados**.
+1. Use a página **Configuração do Analysis Services – Provisionamento de Conta** para especificar o modo de servidor e os usuários ou as contas que têm permissões de administrador no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O modo de servidor determina quais subsistemas de memória e de armazenamento são usados no servidor. Tipos de solução diferentes são executados em modos de servidor diferentes. Se você pretende executar bancos de dados de cubo multidimensionais no servidor, escolha a opção padrão do modo de servidor **Multidimensional e Mineração de Dados**.
 
     Especifique pelo menos um administrador de sistema para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:
 
@@ -193,7 +176,7 @@ The following item is for SQL Server 2016-2017
 
     Para saber mais, veja a página [Configuração do Analysis Services – Diretórios de Dados](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories-page).  
 
-17. Use a página **Configuração do Distributed Replay Controller** para especificar os usuários aos quais você deseja conceder permissões administrativas para o serviço Distributed Replay Controller. Os usuários com permissões administrativas têm acesso ilimitado ao serviço Distributed Replay Controller.  
+1. Use a página **Configuração do Distributed Replay Controller** para especificar os usuários aos quais você deseja conceder permissões administrativas para o serviço Distributed Replay Controller. Os usuários com permissões administrativas têm acesso ilimitado ao serviço Distributed Replay Controller.  
   
      * Para conceder permissões de acesso para o serviço Distributed Replay Controller aos usuários que estão executando a Instalação do SQL Server, selecione o botão **Adicionar Usuário Atual**.
 
@@ -203,7 +186,7 @@ The following item is for SQL Server 2016-2017
 
      * Para continuar, selecione **Avançar**.  
   
-18. Use a página **Configuração do Distributed Replay Client** para especificar os usuários aos quais você deseja conceder permissões administrativas para o serviço Distributed Replay Client. Os usuários com permissões administrativas têm acesso ilimitado ao serviço Distributed Replay Client.  
+1. Use a página **Configuração do Distributed Replay Client** para especificar os usuários aos quais você deseja conceder permissões administrativas para o serviço Distributed Replay Client. Os usuários com permissões administrativas têm acesso ilimitado ao serviço Distributed Replay Client.  
   
      * O **nome do controlador** é opcional. O valor padrão é \<*em branco*>. Digite o nome do controlador com o qual o computador cliente se comunicará para o serviço Distributed Replay Client:  
   
@@ -217,20 +200,189 @@ The following item is for SQL Server 2016-2017
   
      * Para continuar, selecione **Avançar**.  
   
-19. A página **Pronto para Instalar** mostra uma exibição de árvore das opções especificadas durante a instalação. Nesta página, a instalação indica se o recurso **Atualização de Produto** está habilitado ou desabilitado e mostra a versão final da atualização.  
+1. A página **Pronto para Instalar** mostra uma exibição de árvore das opções especificadas durante a instalação. Nesta página, a instalação indica se o recurso **Atualização de Produto** está habilitado ou desabilitado e mostra a versão final da atualização.  
   
      Para continuar, selecione **Instalar**. A instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalará primeiro os pré-requisitos exigidos para os recursos selecionados, seguidos da instalação desses recursos.  
   
-20. Durante a instalação, a página **Progresso da Instalação** fornece atualizações do status para que você possa monitorar o andamento da instalação.  
+1. Durante a instalação, a página **Progresso da Instalação** fornece atualizações do status para que você possa monitorar o andamento da instalação.  
   
-21. Após a instalação, a página **Concluído** fornece um link para o arquivo de log de resumo da instalação e outras observações importantes.
+1. Após a instalação, a página **Concluído** fornece um link para o arquivo de log de resumo da instalação e outras observações importantes.
   
     > [!IMPORTANT]
     > Não deixe de ler a mensagem do Assistente de Instalação, quando concluir a instalação. Para saber mais, veja [Exibir e ler arquivos de log da instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
     Para concluir o processo de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selecione **Fechar**.  
   
-22. Se você for orientado a reiniciar o computador, faça isso nessa ocasião.
+1. Se você for orientado a reiniciar o computador, faça isso nessa ocasião.
+
+::: moniker-end
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+## <a name="to-install-sql-server-2019"></a>Para instalar o SQL Server 2019 
+  
+1. Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Na pasta raiz, clique duas vezes em **Setup.exe**. Para instalar em um compartilhamento de rede, localize a pasta raiz no compartilhamento e clique duas vezes no arquivo **Setup.exe**.  
+  
+1. O Assistente de Instalação executa a Central de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para criar uma nova instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selecione **Instalação**, na área de navegação esquerda, e selecione **Nova instalação autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou adicionar recursos a uma instalação existente**.  
+
+1. Na página **Chave do produto (Product Key)** , selecione uma opção para indicar se você está instalando uma edição gratuita do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou uma versão de produção que tem uma chave de PID. Para obter mais informações, consulte [Edições e recursos com suporte para o SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+  
+   Para continuar, selecione **Avançar**.
+
+  
+1. Na página dos **Termos de Licença**, examine o Contrato de Licença. Se você concordar, marque a caixa de seleção **Aceito os termos da licença e a [política de privacidade](https://privacy.microsoft.com/privacystatement)** e, em seguida, selecione **Avançar**.  
+
+   >[!NOTE]
+   > O SQL Server transmite informações sobre sua experiência de instalação, bem como outros dados de uso e desempenho para ajudar a Microsoft a melhorar o produto. Para saber mais sobre o processamento de dados e os controles de privacidade do SQL Server, confira os tópicos [Política de privacidade](https://privacy.microsoft.com/privacystatement) e [Configurar o SQL Server para enviar comentários à Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016).
+
+1. Na página **Regras Globais**, o procedimento de instalação avançará automaticamente para a página **Atualizações de Produto** se não houver nenhum erro de regra.  
+  
+1. A página do **Microsoft Update** será exibida em seguida se a caixa de seleção do **Microsoft Update** no **Painel de Controle** > **Todos os Itens do Painel de Controle** > **Windows Update** > **Alterar configurações** não estiver marcada. Ao marcar a caixa de seleção do **Microsoft Update**, você altera as configurações do computador para incluir as atualizações mais recentes de todos os produtos da Microsoft quando procurar atualizações do Windows.  
+
+1. Na página **Atualizações de Produto**, nosso sistema exibe as atualizações mais recentes de produto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponíveis. Se nenhuma atualização de produto for descoberta, a Instalação não exibirá essa página e avançará automaticamente para a página **Instalar Arquivos de Instalação**.  
+
+1. Na página **Instalar Arquivos de Instalação**, a Instalação apresenta o andamento do download, da extração e da instalação dos arquivos de instalação. Se uma atualização da instalação for localizada e for especificada para ser incluída, essa atualização também será instalada. Se nenhuma atualização for encontrada, a instalação avançará automaticamente.
+  
+1. Na página **Regras de Instalação**, o recurso verifica possíveis problemas que podem ocorrer durante a execução da instalação. Se ocorrerem falhas, selecione um item na coluna **Status** para saber mais. Caso contrário, selecione **Avançar**.
+
+1. Se esta for a primeira instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador, a página **Tipo de Instalação** será ignorada, e a instalação irá diretamente para a página **Seleção de Recursos**. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] já estiver instalado no sistema, vá até a página **Tipo de Instalação** e escolha executar uma nova instalação ou adicionar recursos a uma instalação existente. Para continuar, selecione **Avançar**.
+  
+1. Na página **Seleção de Recursos**, selecione os componentes para a instalação. Por exemplo, para instalar uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], selecione **Serviços de Mecanismo de Banco de Dados**.
+
+    Uma descrição de cada grupo de componentes é exibida no painel **Descrição do recurso** depois que você seleciona o nome do recurso. Você pode selecionar qualquer combinação de caixas de seleção. Para saber mais, confira [Edições e componentes do SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) e [Edições e componentes do SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
+  
+     Os pré-requisitos dos recursos selecionados são exibidos no painel **Pré-requisitos dos recursos selecionados** . A instalação instalará os pré-requisitos que não foram instalados na etapa descrita posteriormente neste procedimento.  
+  
+     Você pode também especificar um diretório personalizado para componentes compartilhados usando o campo na parte inferior da página **Seleção de Recursos**. Para alterar o caminho de instalação de componentes compartilhados, atualize o nome do caminho no campo fornecido, na parte inferior da caixa de diálogo, ou selecione **Procurar** para ir até um diretório de instalação. O caminho de instalação padrão é [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)].  
+  
+     > [!NOTE]
+     > O caminho especificado para os componentes compartilhados deve ser um caminho absoluto. A pasta não deve estar compactada ou criptografada. Não há suporte para unidades mapeadas.  
+  
+     O SQL Server usa dois diretórios para recursos compartilhados:
+  
+     * Diretório de recursos compartilhados  
+     * Diretório de recursos compartilhados (x86)  
+  
+     > [!NOTE]
+     > O caminho especificado para cada uma das opções anteriores deve ser diferente.  
+  
+1. A página **Regras de Recurso** avançará automaticamente se todas as regras passarem.  
+  
+1. Na página **Configuração da Instância**, especifique se deseja instalar uma instância padrão ou uma instância nomeada. Para saber mais, veja o tópico [Configuração da instância](../../sql-server/install/instance-configuration.md#instance-configuration-page).  
+  
+     * **ID da Instância**: por padrão, o nome da instância é usado como a ID da Instância. Essa ID é usada para identificar os diretórios de instalação e as chaves do Registro de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O mesmo comportamento ocorre com instâncias padrão e instâncias nomeadas. No caso de uma instância padrão, o nome da instância e a ID da Instância é MSSQLSERVER. Para usar uma ID da Instância não padrão, especifique um valor diferente na caixa de texto **ID da Instância**.  
+  
+       > [!NOTE]  
+       > Instâncias autônomas típicas do [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)], sejam instâncias padrão ou nomeadas, não usam valores não padrão para a ID da Instância.  
+  
+       Todos os service packs e as atualizações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se aplicam a todos os componentes de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+     * **Instâncias Instaladas**: a grade mostra todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão no computador cuja instalação está sendo executada. Se já existir uma instância padrão instalada no computador, instale uma instância nomeada do [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)].  
+  
+     O fluxo de trabalho do restante da instalação depende dos recursos especificados para a instalação. Talvez você não veja todas as páginas, dependendo de suas seleções. 
+
+1. Optar pela instalação do recurso PolyBase adicionará a página **Configuração do PolyBase** à instalação do SQL Server, exibida após a página **Configuração da Instância**. O PolyBase requer o Oracle JRE 7 Update 51 (pelo menos). Se ele ainda não estiver instalado, começando no SQL Server 2019, você poderá instalar o Azul Zulu Open JRE com o SQL Server. Na página **Configuração do PolyBase**, você pode optar por usar o SQL Server como uma instância autônoma habilitada para PolyBase ou pode usar esse SQL Server como parte de um grupo de escala horizontal do PolyBase. Se optar por usar o grupo de escala horizontal, você precisará especificar um intervalo de portas com 6 portas ou mais.  Na página **Localização de Instalação do Java**, você pode optar por instalar o Azul Zulu Open JRE incluído com a instalação do SQL Server 2019 ou por fornecer a localização de um JRE ou JDK diferente que já foi instalado no computador.
+
+1. Começando no SQL Server 2019, o Java foi adicionado à lista de Serviços de Machine Learning e Extensões de Linguagem, com o R e o Python. Optar pela instalação do recurso de Java adicionará a página **Localização de Instalação do Java** à janela de instalação do SQL Server, exibida após a página **Configuração da Instância**. Na página **Localização de Instalação do Java**, você pode optar por instalar o Azul Zulu Open JRE incluído com a instalação do SQL Server 2019 ou por fornecer a localização de um JRE ou JDK diferente que já foi instalado no computador.
+
+1. Use a página **Configuração do Servidor – Contas de Serviço** para especificar contas de logon para serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os serviços reais configurados nesta página dependem dos recursos selecionados para instalação. Para saber mais sobre as definições de configuração, confira [Ajuda do Assistente de Instalação](../../sql-server/install/instance-configuration.md#serverconfig).
+  
+     Você pode atribuir a mesma conta de logon a todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou configurar cada conta de serviço individualmente. Você pode, inclusive, especificar se os serviços serão iniciados automaticamente ou manualmente ou se eles serão desabilitados. Recomendamos configurar as contas de serviço individualmente para fornecer o mínimo de privilégios para cada serviço. Conceda as permissões mínimas necessárias para que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possa concluir as respectivas tarefas. Para saber mais, leia o tópico [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+  
+     Para especificar a mesma conta de logon para todas as contas de serviço nessa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], forneça credenciais nos campos, na parte inferior da página.  
+  
+    > [!IMPORTANT]  
+    > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+
+    > [!NOTE]
+    > Do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] em diante, marque a caixa de seleção **Conceder Realizar Tarefa de Manutenção de Volume para o Serviço do Mecanismo de Banco de Dados do SQL Server** para permitir que a conta de serviço do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] use a [Inicialização Instantânea de Arquivo de Banco de Dados](../../relational-databases/databases/database-instant-file-initialization.md).
+  
+     Use a página **Configuração do Servidor – Ordenação** para especificar ordenações não padrão para o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para saber mais, confira [Suporte para ordenações e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+  
+1. Use a página **Configuração do Mecanismo de Banco de Dados – Configuração do Servidor** para especificar as seguintes opções:  
+  
+    * **Modo de segurança**: Selecione **Autenticação do Windows** ou **Autenticação de Modo Misto** para sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se você selecionar **Autenticação de Modo Misto**, forneça uma senha forte para a conta interna do administrador de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+       Quando um dispositivo estabelecer uma conexão bem-sucedida com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o mecanismo de segurança será o mesmo para a Autenticação do Windows e a Autenticação de Modo Misto. Para saber mais, leia a página [Configuração do Mecanismo de Banco de Dados – Configuração do Servidor](../../sql-server/install/instance-configuration.md#serverconfig).
+  
+    * **Administradores do SQL Server**: especifique pelo menos um administrador de sistema para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para adicionar a conta sob a qual a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada, selecione **Adicionar Usuário Atual**. Para adicionar ou remover contas da lista de administradores do sistema, selecione **Adicionar** ou **Remover** e edite a lista de usuários, grupos ou computadores que têm privilégios de administrador para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+     Use a página **Configuração do Mecanismo de Banco de Dados – Diretórios de Dados** para especificar diretórios de instalação não padrão. Para instalar nos diretórios padrão, selecione **Avançar**.  
+  
+    > [!IMPORTANT]  
+    > Se você especificar diretórios de instalação não padrão, verifique se as pastas de instalação são exclusivas para essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nenhum dos diretórios nesta caixa de diálogo deve ser compartilhado com diretórios de outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+     Para saber mais, leia a página [Configuração do Mecanismo de Banco de Dados – Diretórios de dados](../../sql-server/install/instance-configuration.md#datadir).
+
+     Use a página **Configuração do Mecanismo de Banco de Dados – TempDB** para configurar o tamanho do arquivo, o número de arquivos, os diretórios de instalação não padrão e as configurações de ampliação de arquivo do **tempdb**. Para saber mais, veja a página [Configuração do Mecanismo de Banco de Dados – TempDB](../../sql-server/install/instance-configuration.md#tempdb).
+
+  
+     Use a guia **Configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)] – MaxDOP** para especificar o grau máximo de paralelismo. Essa configuração determina a quantidade de processadores que uma única instrução pode usar durante a execução. O valor recomendado é calculado automaticamente durante a instalação. Para saber mais, confira [Diretrizes para grau máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines). Essa opção está disponível apenas do SQL Server 2019 em diante. 
+
+     Use a guia **Configuração do Mecanismo de Banco de Dados – Memória** para especificar os valores MIN e MAX de memória que esta instância do SQL Server usará após a inicialização. Use os valores padrão, os valores recomendados calculados ou especifique manualmente seus próprios valores, depois de escolher a opção **Recomendado**. Esta funcionalidade está disponível apenas na instalação do SQL Server 2019 em diante. 
+
+     Use a página **Configuração do Mecanismo de Banco de Dados – Fluxo de arquivos** para habilitar o fluxo de arquivos na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para saber mais, leia a página [Configuração do Mecanismo de Banco de Dados – Fluxo de arquivos](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
+  
+1. Use a página **Configuração do Analysis Services – Provisionamento de Conta** para especificar o modo de servidor e os usuários ou as contas que têm permissões de administrador no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O modo de servidor determina quais subsistemas de memória e de armazenamento são usados no servidor. Tipos de solução diferentes são executados em modos de servidor diferentes. Se você pretende executar bancos de dados de cubo multidimensionais no servidor, escolha a opção padrão do modo de servidor **Multidimensional e Mineração de Dados**.
+
+    Especifique pelo menos um administrador de sistema para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:
+
+    * Para adicionar a conta na qual a instalação do SQL Server está sendo executada, selecione **Adicionar Usuário Atual**.
+
+    * Para adicionar ou remover contas da lista de administradores do sistema, selecione **Adicionar** ou **Remover** e edite a lista de usuários, grupos ou computadores que têm privilégios de administrador no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].
+
+    Para saber mais sobre permissões de administrador e modo de servidor, veja a página [Configuração do Analysis Services – Provisionamento de conta](../../sql-server/install/instance-configuration.md#analysis-services-configuration---account-provisioning-page).
+
+    Quando concluir a edição da lista, selecione **OK**. Verifique a lista de administradores na caixa de diálogo de configuração. Quando concluir a lista, selecione **Avançar**.
+
+    Use a página **Configuração do Analysis Services – Diretórios de Dados** para especificar diretórios de instalação não padrão. Para instalar nos diretórios padrão, selecione **Avançar**.  
+
+    > [!IMPORTANT]  
+    > Se você especificar o mesmo caminho de diretório para INSTANCEDIR e SQLUSERDBDIR quando instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o SQL Server Agent e a pesquisa de texto completo não serão iniciados devido à ausência de permissões.  
+    >  
+    > Se você especificar diretórios de instalação não padrão, verifique se as pastas de instalação são exclusivas para essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nenhum dos diretórios nesta caixa de diálogo deve ser compartilhado com diretórios de outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
+    Para saber mais, veja a página [Configuração do Analysis Services – Diretórios de Dados](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories-page).  
+
+1. Use a página **Configuração do Distributed Replay Controller** para especificar os usuários aos quais você deseja conceder permissões administrativas para o serviço Distributed Replay Controller. Os usuários com permissões administrativas têm acesso ilimitado ao serviço Distributed Replay Controller.  
+  
+     * Para conceder permissões de acesso para o serviço Distributed Replay Controller aos usuários que estão executando a Instalação do SQL Server, selecione o botão **Adicionar Usuário Atual**.
+
+     * Para conceder permissões de acesso a outros usuários para o serviço Distributed Replay Controller, selecione o botão **Adicionar**.
+
+     * Para remover permissões de acesso do serviço Distributed Replay Controller, selecione o botão **Remover**.
+
+     * Para continuar, selecione **Avançar**.  
+  
+1. Use a página **Configuração do Distributed Replay Client** para especificar os usuários aos quais você deseja conceder permissões administrativas para o serviço Distributed Replay Client. Os usuários com permissões administrativas têm acesso ilimitado ao serviço Distributed Replay Client.  
+  
+     * O **nome do controlador** é opcional. O valor padrão é \<*em branco*>. Digite o nome do controlador com o qual o computador cliente se comunicará para o serviço Distributed Replay Client:  
+  
+       * Se já configurou um controlador, digite o respectivo nome enquanto configura cada cliente.  
+  
+       * Se ainda não configurou um controlador, pode deixar o nome em branco. No entanto, digite manualmente o nome do controlador no arquivo de **configuração do cliente** .  
+  
+     * Especifique o **Diretório de Trabalho** para o serviço Distributed Replay Client. O diretório de trabalho padrão é \<*drive letter*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\.  
+  
+     * Especifique o **Diretório de Resultado** para o serviço Distributed Replay Client. O diretório de resultado padrão é \<*drive letter*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\.  
+  
+     * Para continuar, selecione **Avançar**.  
+  
+1. A página **Pronto para Instalar** mostra uma exibição de árvore das opções especificadas durante a instalação. Nesta página, a instalação indica se o recurso **Atualização de Produto** está habilitado ou desabilitado e mostra a versão final da atualização.  
+  
+     Para continuar, selecione **Instalar**. A instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalará primeiro os pré-requisitos exigidos para os recursos selecionados, seguidos da instalação desses recursos.  
+  
+1. Durante a instalação, a página **Progresso da Instalação** fornece atualizações do status para que você possa monitorar o andamento da instalação.  
+  
+1. Após a instalação, a página **Concluído** fornece um link para o arquivo de log de resumo da instalação e outras observações importantes.
+  
+    > [!IMPORTANT]
+    > Não deixe de ler a mensagem do Assistente de Instalação, quando concluir a instalação. Para saber mais, veja [Exibir e ler arquivos de log da instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
+
+    Para concluir o processo de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selecione **Fechar**.  
+  
+1. Se você for orientado a reiniciar o computador, faça isso nessa ocasião.
+
+::: moniker-end
 
 ## <a name="next-steps"></a>Próximas etapas
 

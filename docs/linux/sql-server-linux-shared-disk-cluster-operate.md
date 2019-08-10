@@ -1,6 +1,6 @@
 ---
 title: Operar a instância de cluster de failover – SQL Server em Linux
-description: Este artigo explica como operar uma instância de cluster de failover (FCI) do SQL Server no Linux.
+description: Este artigo explica como operar uma FCI (instância de cluster de failover) do SQL Server no Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,62 +10,62 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: a29d1d61b628126d03458fced964bde7c92b6d68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032290"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Operar a instância de cluster de failover – SQL Server em Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este artigo explica como operar uma instância de cluster de failover (FCI) do SQL Server no Linux. Se você não tiver criado um FCI do SQL Server no Linux, consulte [configurar instância de cluster de failover – SQL Server no Linux](sql-server-linux-shared-disk-cluster-configure.md). 
+Este artigo explica como operar uma FCI (instância de cluster de failover) do SQL Server no Linux. Se você não tiver criado uma FCI do SQL Server no Linux, confira [Configurar uma instância de cluster de failover – SQL Server em Linux](sql-server-linux-shared-disk-cluster-configure.md). 
 
 ## <a name="failover"></a>Failover
 
-Failover para FCIs é semelhante a um cluster de failover do Windows Server (WSFC). Se o nó de cluster que hospeda a FCI sofrer algum tipo de falha, a FCI automaticamente deve executar failover para outro nó. Ao contrário de um WSFC, não há nenhuma maneira de definir proprietários preferenciais, para que o Pacemaker seleciona o nó que será o novo host para a FCI.
+O failover para FCIs é semelhante a um WSFC (cluster de failover do Windows Server). Se o nó de cluster que hospeda a FCI apresentar algum tipo de falha, a FCI deverá fazer o failover automaticamente para outro nó. Ao contrário de um WSFC, não há como definir proprietários preferenciais; portanto, o Pacemaker escolhe o nó que será o novo host para a FCI.
 
-Há vezes, que talvez você queira executar manualmente a FCI para outro nó. O processo não é igual ao FCIs em um WSFC. Em um WSFC, você deve fazer failover recursos no nível de função. No Pacemaker, você escolhe um recurso para mover e supondo que todas as restrições estão corretas, tudo será movido também. 
+Há ocasiões em que você pode desejar fazer o failover manual da FCI para outro nó. O processo não é o mesmo que com FCIs em um WSFC. Em um WSFC, você faz failover de recursos no nível da função. No Pacemaker, você escolhe um recurso a ser movido e, supondo que todas as restrições estejam corretas, todo o resto também será movido. 
 
-A forma de failover depende da distribuição do Linux. Siga as instruções para a sua distribuição do linux.
+A forma de failover depende da distribuição do Linux. Siga as instruções da distribuição do Linux.
 
-- [Ubuntu ou RHEL](#-manual-failover-rhel-or-ubuntu)
+- [RHEL ou Ubuntu](#-manual-failover-rhel-or-ubuntu)
 - [SLES](#-manual-failover-sles)
 
-## <a name = "#-manual-failover-rhel-or-ubuntu"></a> Failover manual (Ubuntu ou RHEL)
+## <a name = "#-manual-failover-rhel-or-ubuntu"></a> Failover manual (RHEL ou Ubuntu)
 
-Para executar um failover manual, onn Red Hat Enterprise Linux (RHEL) ou em servidores Ubuntu execute as etapas a seguir.
+Para fazer um failover manual, em servidores do RHEL (Red Hat Enterprise Linux) ou do Ubuntu, execute as etapas a seguir.
 1.  Emita o seguinte comando: 
 
    ```bash
    sudo pcs resource move <FCIResourceName> <NewHostNode> 
    ```
 
-   \<FCIResourceName > é o nome de recurso do Pacemaker para o FCI do SQL Server.
+   \<FCIResourceName> é o nome do recurso do Pacemaker para a FCI do SQL Server.
 
-   \<NewHostNode > é o nome do nó de cluster que você deseja hospedar a FCI. 
+   \<NewHostNode> é o nome do nó de cluster no qual você deseja hospedar a FCI. 
 
-   Você não terá qualquer confirmação.
+   Você não receberá nenhuma confirmação.
 
-2.  Durante um failover manual, Pacemaker cria uma restrição de local do recurso que foi escolhido para mover manualmente. Para ver essa restrição, execute `sudo pcs constraint`.
+2.  Durante um failover manual, o Pacemaker cria uma restrição de localização no recurso que foi escolhido para ser movido manualmente. Para ver essa restrição, execute `sudo pcs constraint`.
 
-3.  Após o failover estiver concluído, remova a restrição emitindo `sudo pcs resource clear <FCIResourceName>`. 
+3.  Após a conclusão do failover, remova a restrição emitindo `sudo pcs resource clear <FCIResourceName>`. 
 
-\<FCIResourceName > é o nome de recursos Pacemaker para a FCI. 
+\<FCIResourceName> é o nome do recurso do Pacemaker para a FCI. 
 
 ## <a name = "#-manual-failover-sles"></a> Failover manual (SLES)
 
 
-No Suse Linux Enterprise Server (SLES), use o `migrate` um FCI do SQL Server de comando para executar failover manual. Por exemplo:
+No SLES (SUSE Linux Enterprise Server), use o comando `migrate` para fazer failover manual de uma FCI do SQL Server. Por exemplo:
 
 ```bash
 crm resource migrate <FCIResourceName> <NewHostNode>
 ```
 
-\<FCIResourceName > é o nome de recursos para a instância de cluster de failover. 
+\<FCIResourceName> é o nome do recurso para a instância de cluster de failover. 
 
-\<NewHostNode > é o nome do novo host de destino. 
+\<NewHostNode> é o nome do novo host de destino. 
 
 
 <!---
@@ -77,8 +77,8 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 
 --->
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>Next Steps
 
-- [Configurar a instância de cluster de failover – SQL Server no Linux](sql-server-linux-shared-disk-cluster-configure.md)
+- [Configurar a instância de cluster de failover – SQL Server em Linux](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->

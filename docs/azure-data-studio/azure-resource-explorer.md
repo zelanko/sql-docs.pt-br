@@ -1,7 +1,7 @@
 ---
-title: Explore os recursos do SQL do Azure com o Gerenciador de recursos do Azure
+title: Explorar os recursos do SQL do Azure com o Azure Resource Explorer
 titleSuffix: Azure Data Studio
-description: Aprenda a explorar e gerenciar a instância gerenciada do SQL por meio do Gerenciador de recursos do Azure, banco de dados SQL e SQL Server do Azure.
+description: Saiba como explorar e gerenciar o SQL Server do Azure, o Banco de Dados SQL do Azure e a Instância Gerenciada do SQL do Azure por meio do Azure Resource Explorer.
 ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
@@ -10,96 +10,96 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.openlocfilehash: 87a0364555b9da22c89470965c281b3d939b6f4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959713"
 ---
-# <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Explorar e gerenciar recursos de SQL do Azure com o Gerenciador de recursos do Azure
+# <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Explorar e gerenciar recursos do SQL do Azure com o Azure Resource Explorer
 
-Neste documento, você aprenderá como você pode explorar e gerenciar o servidor SQL do Azure, banco de dados SQL do Azure e recursos de instância gerenciada do SQL por meio do Gerenciador de recursos do Azure no [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
+Neste documento, você aprenderá a explorar e gerenciar os recursos do SQL Server do Azure, do Banco de Dados SQL do Azure e da Instância Gerenciada do SQL do Azure por meio do Azure Resource Explorer no [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
 
 >[!NOTE]
->O Gerenciador de recursos do Azure terão suporte na versão prévia do SQL Server 2019 em outubro. Depois disso, você pode instalar a extensão de visualização por meio [Gerenciador de extensões](extensions.md) ou por meio das **arquivo** > **instalar pacote do pacote VSIX**.
+>O Azure Resource Explorer terá suporte na versão prévia do SQL Server 2019 em outubro. Depois disso, você poderá instalar a extensão de versão prévia por meio do [gerenciador de extensões](extensions.md) ou por meio de **Arquivo** > **Instalar Pacote do Pacote do VSIX**.
 
 
-## <a name="connect-to-azure"></a>Conecte-se ao Azure
+## <a name="connect-to-azure"></a>Conectar-se ao Azure
 
-Depois de instalar o plug-in de visualização do SQL, um ícone do Azure aparece na barra de menus à esquerda. Clique no ícone para abrir o Gerenciador de recursos do Azure. Se você não vir o ícone do Azure, clique com botão direito na barra de menus à esquerda e selecione **Azure Resource Explorer**.
+Depois de instalar o plug-in de versão prévia do SQL, um ícone do Azure será exibido na barra de menus à esquerda. Clique no ícone para abrir o Azure Resource Explorer. Se o ícone do Azure não for exibido, clique com o botão direito do mouse na barra de menus à esquerda e selecione **Azure Resource Explorer**.
 
 ### <a name="add-an-azure-account"></a>Adicionar uma conta do Azure
 
-Para exibir os recursos SQL associados com uma conta do Azure, você deve primeiro adicionar a conta para [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
+Para exibir os recursos do SQL associados a uma conta do Azure, você deverá primeiro adicionar a conta ao [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
 
-1. Abra **contas vinculadas** caixa de diálogo por meio do ícone de gerenciamento da conta no canto inferior esquerdo ou por meio de **entrar no Azure...**  link no Gerenciador de recursos do Azure.
+1. Abra a caixa de diálogo **Contas Vinculadas** por meio do ícone de gerenciamento de contas na parte inferior esquerda ou por meio do link **Entrar no Azure...** no Azure Resource Explorer.
 
     ![Entrar no Azure](media/azure-resource-explorer/sign-in-to-azure.png)
 
-2. No **contas vinculadas** caixa de diálogo, clique em **adicionar uma conta**.
+2. Na caixa de diálogo **Contas Vinculadas**, clique em **Adicionar uma conta**.
 
     ![Adicionar uma conta do Azure](media/azure-resource-explorer/add-an-azure-account.png)
 
-3. Clique em **copiar e abrir** para abrir o navegador para autenticação.
+3. Clique em **Copiar e Abrir** para abrir o navegador para autenticação.
 
-    ![Página de autenticação aberta no navegador](media/azure-resource-explorer/open-authentication-in-browser.png)
+    ![Abrir a página de autenticação no navegador](media/azure-resource-explorer/open-authentication-in-browser.png)
 
-4. Cole a **código do usuário** na página da web e clique **continuar** para autenticar.
+4. Cole o **Código do usuário** na página da Web e clique em **Continuar** para se autenticar.
 
-    ![Autenticar no navegador](media/azure-resource-explorer/authenticate-in-browser.png)
+    ![Autenticar-se no navegador](media/azure-resource-explorer/authenticate-in-browser.png)
 
-5. Na [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] agora você deve encontrar o fez logon na conta do Azure no **contas vinculadas** caixa de diálogo.
+5. No [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)], agora você deverá encontrar a conta conectada do Azure na caixa de diálogo **Contas Vinculadas**.
 
-    ![Conectado na conta do Azure](media/azure-resource-explorer/signed-in-azure-account.png)
+    ![Conta conectada do Azure](media/azure-resource-explorer/signed-in-azure-account.png)
 
-### <a name="add-more-azure-accounts"></a>Adicione as contas do Azure mais
+### <a name="add-more-azure-accounts"></a>Adicionar mais contas do Azure
 
-Várias contas do Azure têm suporte no [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)]. Para adicionar as contas do Azure mais, clique no botão no canto superior direito da **contas vinculadas** caixa de diálogo e siga as mesmas etapas com adicionam uma seção de conta do Azure para adicionar as contas do Azure mais.
+Há suporte para várias contas do Azure no [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)]. Para adicionar mais contas do Azure, clique no botão na parte superior direita da caixa de diálogo **Contas Vinculadas** e siga as mesmas etapas com a seção Adicionar uma conta do Azure para adicionar mais contas do Azure.
 
-![Adicionar conta do Azure mais](media/azure-resource-explorer/add-more-azure-account.png)
+![Adicionar mais contas do Azure](media/azure-resource-explorer/add-more-azure-account.png)
 
 ### <a name="remove-an-azure-account"></a>Remover uma conta do Azure
 
-Para remover uma conta do Azure conectada existente:
+Para remover uma conta conectada do Azure existente:
 
-1. Abra **contas vinculadas** diálogo por meio do ícone de gerenciamento de conta no canto inferior esquerdo.
-2. Clique o **X** botão à direita da conta do Azure para removê-lo.
+1. Abra a caixa de diálogo **Contas Vinculadas** por meio do ícone gerenciamento de contas na parte inferior esquerda.
+2. Clique no botão **X** à direita da conta do Azure para removê-la.
 
-    ![Remover conta do Azure](media/azure-resource-explorer/remove-azure-account.png)
+    ![Remover uma conta do Azure](media/azure-resource-explorer/remove-azure-account.png)
 
-## <a name="filter-subscription"></a>Filtro de assinatura
+## <a name="filter-subscription"></a>Filtrar uma assinatura
 
-Após fazer logon uma conta do Azure, todas as assinaturas associados com essa exibição da conta do Azure no Gerenciador de recursos do Azure. Você pode filtrar as assinaturas para cada conta do Azure.
+Depois que você estiver conectado a uma conta do Azure, todas as assinaturas associadas a essa conta do Azure serão exibidas no Azure Resource Explorer. Você poderá filtrar assinaturas para cada conta do Azure.
 
-1. Clique o **selecionar assinatura** botão à direita da conta do Azure.
+1. Clique no botão **Selecionar Assinatura** à direita da conta do Azure.
 
-   ![Filtro de assinatura](media/azure-resource-explorer/filter-subscription.png)
+   ![Filtrar uma assinatura](media/azure-resource-explorer/filter-subscription.png)
 
-2. Marque as caixas de seleção para as assinaturas de conta que você deseja procurar e, em seguida, clique em **Okey**.
+2. Marque as caixas de seleção das assinaturas de conta que deseja procurar e, em seguida, clique em **OK**.
 
-   ![Selecionar assinatura](media/azure-resource-explorer/select-subscription.png)
+   ![Selecionar uma assinatura](media/azure-resource-explorer/select-subscription.png)
 
-## <a name="explore-azure-sql-resources"></a>Explore os recursos do SQL do Azure
+## <a name="explore-azure-sql-resources"></a>Explorar os recursos do SQL do Azure
 
-Para navegar de um recurso do SQL do Azure no Gerenciador de recursos do Azure, expanda as contas do Azure e o tipo de grupo de recursos.
+Para navegar por um recurso do SQL do Azure no Azure Resource Explorer, expanda o grupo de tipos de recursos e contas do Azure.
 
-O Gerenciador de recursos do Azure dá suporte ao Azure SQL Server, o banco de dados SQL e a instância gerenciada do SQL no momento.
+Atualmente, o Azure Resource Explorer dá suporte ao SQL Server do Azure, ao Banco de Dados SQL do Azure e à Instância Gerenciada do SQL do Azure.
 
 ## <a name="connect-to-azure-sql-resources"></a>Conectar-se aos recursos do SQL do Azure
 
-O Gerenciador de recursos do Azure fornecem acesso rápido que ajuda você a se conectar a servidores SQL e bancos de dados para consulta e gerenciamento. 
+O Azure Resource Explorer fornece acesso rápido que ajuda você a se conectar a SQL Servers e bancos de dados para consulta e gerenciamento. 
 
-1. Explore o recurso SQL que você gostaria de conectar-se com o modo de exibição de árvore.
-2. Clique com botão direito do recurso e selecione **Connect**, você também pode encontrar o botão Conectar na parte direita do recurso.
+1. Explore o recurso do SQL com o qual deseja se conectar no modo de exibição de árvore.
+2. Clique com o botão direito do mouse no recurso e selecione **Conectar**. Encontre também o botão Conectar à direita do recurso.
 
-   ![Conectar-se ao recurso de SQL do Azure](media/azure-resource-explorer/connect-to-azure-sql-resource.png)
+   ![Conectar-se ao recurso do SQL do Azure](media/azure-resource-explorer/connect-to-azure-sql-resource.png)
 
-3. Em aberto **Conexão** caixa de diálogo, insira sua senha e clique em **Connect**.
+3. Na caixa de diálogo **Conexão** aberta, insira sua senha e clique em **Conectar**.
 
-   ![Caixa de diálogo de conexão SQL](media/azure-resource-explorer/sql-connection-dialog.png)
-4. O **servidores** janela abre automaticamente com o novo SQL server/banco de dados conectado após a conexão bem-sucedida.
+   ![Caixa de diálogo de conexão do SQL](media/azure-resource-explorer/sql-connection-dialog.png)
+4. A janela **Servidores** é aberta automaticamente com o novo SQL Server/banco de dados conectado depois que a conexão é estabelecida com êxito.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Use [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] para se conectar e consultar o banco de dados SQL do Azure](quickstart-sql-database.md)
-- [Use [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] para se conectar e consultar dados no Azure SQL Data Warehouse](quickstart-sql-dw.md)
+- [Use [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] para conectar-se ao Banco de Dados SQL do Azure e consultá-lo](quickstart-sql-database.md)
+- [Use [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] para conectar-se ao SQL Data Warehouse do Azure e consultá-lo](quickstart-sql-dw.md)

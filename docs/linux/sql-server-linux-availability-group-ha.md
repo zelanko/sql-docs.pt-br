@@ -1,5 +1,5 @@
 ---
-title: SQL Server Always On padrões de implantação de grupo de disponibilidade
+title: Padrões de implantação do grupo de disponibilidade Always On do SQL Server
 ms.date: 04/17/2019
 ms.prod: sql
 ms.technology: linux
@@ -9,39 +9,39 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
 ms.openlocfilehash: 637d67767e17344d63498f8cb6a141fa78b11ecb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67996442"
 ---
-# <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade
+# <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Alta disponibilidade e proteção de dados para configurações do grupo de disponibilidade
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este artigo apresenta as configurações de implantação com suporte para grupos de disponibilidade Always On do SQL Server em servidores Linux. Um grupo de disponibilidade dá suporte a alta disponibilidade e proteção de dados. Detecção de falhas automático, failover automático e transparente reconexão, após o failover fornecem alta disponibilidade. Réplicas sincronizadas fornecem proteção de dados. 
+Este artigo apresenta as configurações de implantação compatíveis com os grupos de disponibilidade Always On do SQL Server em servidores Linux. Um grupo de disponibilidade dá suporte à alta disponibilidade e à proteção de dados. Detecção automática de falhas, failover automático e reconexão transparente após o failover fornecem alta disponibilidade. As réplicas sincronizadas fornecem proteção de dados. 
 
-Em um Windows Server Failover Cluster (WSFC), uma configuração comum para alta disponibilidade usa duas réplicas síncronas e um terceiro servidor ou compartilhamento de arquivos para fornecer o quorum. A testemunha de compartilhamento de arquivos valida a configuração de grupo de disponibilidade - status de sincronização e a função da réplica, por exemplo. Essa configuração garante que a réplica secundária escolhida como o destino de failover tem os dados mais recentes e as alterações de configuração do grupo de disponibilidade. 
+Em um WSFC (cluster de failover do Windows Server), uma configuração comum para alta disponibilidade usa duas réplicas síncronas e um terceiro servidor ou compartilhamento de arquivo para fornecer quorum. A testemunha de compartilhamento de arquivo valida a configuração do grupo de disponibilidade – status de sincronização e a função da réplica, por exemplo. Essa configuração garante que a réplica secundária escolhida como o destino de failover tenha as alterações mais recentes de configuração de dados e grupo de disponibilidade. 
 
-O WSFC sincroniza os metadados de configuração para o arbitramento de failover entre as réplicas do grupo de disponibilidade e a testemunha de compartilhamento de arquivos. Quando um grupo de disponibilidade não está em um WSFC, instâncias do SQL Server armazenam os metadados de configuração no banco de dados mestre.
+O WSFC sincroniza os metadados de configuração para arbitragem de failover entre as réplicas do grupo de disponibilidade e a testemunha de compartilhamento de arquivo. Quando um grupo de disponibilidade não está em um WSFC, as Instâncias do SQL Server armazenam os metadados de configuração no banco de dados mestre.
 
-Por exemplo, um grupo de disponibilidade em um cluster do Linux tem `CLUSTER_TYPE = EXTERNAL`. Não há nenhum WSFC arbitrar failover. Nesse caso, os metadados de configuração é gerenciado e mantido por instâncias do SQL Server. Como não há nenhum servidor testemunha neste cluster, uma terceira instância do SQL Server é necessário para armazenar metadados de configuração do estado. Todas as três instâncias do SQL Server juntos fornecem armazenamento de metadados distribuídos para o cluster. 
+Por exemplo, um grupo de disponibilidade em um cluster do Linux tem `CLUSTER_TYPE = EXTERNAL`. Não há um WSFC para arbitrar o failover. Nesse caso, os metadados de configuração são gerenciados e mantidos pelas Instâncias do SQL Server. Como não há nenhum servidor testemunha nesse cluster, uma terceira Instância do SQL Server é necessária para armazenar os metadados do estado de configuração. Todas as três instâncias do SQL Server juntas fornecem armazenamento de metadados distribuído para o cluster. 
 
-O Gerenciador de cluster pode consultar as instâncias do SQL Server no grupo de disponibilidade e orquestrar o failover para manter a alta disponibilidade. Em um cluster do Linux, o Pacemaker é o Gerenciador de cluster. 
+O gerenciador de cluster pode consultar as instâncias do SQL Server no grupo de disponibilidade e orquestrar o failover para manter a alta disponibilidade. Em um cluster do Linux, o Pacemaker é o gerenciador de cluster. 
 
-A Atualização Cumulativa 1 do SQL Server 2017 habilita a alta disponibilidade para um grupo de disponibilidade com `CLUSTER_TYPE = EXTERNAL` para duas réplicas síncronas, mais uma réplica somente de configuração. A réplica somente de configuração pode ser hospedada em qualquer edição do SQL Server 2017 CU1 ou posterior – incluindo o SQL Server Express edition. A réplica somente de configuração mantém informações de configuração sobre o grupo de disponibilidade no banco de dados mestre, mas não contém os bancos de dados do usuário no grupo de disponibilidade. 
+O SQL Server 2017 CU 1 permite alta disponibilidade para um grupo de disponibilidade com `CLUSTER_TYPE = EXTERNAL` para duas réplicas síncronas, mais uma réplica somente de configuração. A réplica somente de configuração pode ser hospedada em qualquer edição do SQL Server 2017 CU1 ou posterior – incluindo o SQL Server Express Edition. A réplica somente de configuração mantém as informações de configuração sobre o grupo de disponibilidade no banco de dados mestre, mas não contém os bancos de dados de usuário no grupo de disponibilidade. 
 
 ## <a name="how-the-configuration-affects-default-resource-settings"></a>Como a configuração afeta as configurações de recurso padrão
 
-SQL Server 2017 apresenta o `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` configuração de recurso de cluster. Essa configuração garante que o número especificado de gravação de réplicas secundárias os dados de transações para fazer logon antes da réplica primária confirma cada transação. Quando você usa um Gerenciador de cluster externo, essa configuração afeta a alta disponibilidade e proteção de dados. O valor padrão para a configuração depende da arquitetura no momento em que o recurso de cluster é criado. Quando você instala o agente de recursos do SQL Server - `mssql-server-ha` - e criar um recurso de cluster para o grupo de disponibilidade, o Gerenciador de cluster detecta a disponibilidade de grupo configuração e conjuntos de `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` adequadamente. 
+O SQL Server 2017 apresenta a configuração de recurso de cluster `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`. Essa configuração garante que o número especificado de réplicas secundárias grave os dados de transação no log antes que a réplica primária confirme cada transação. Quando você usa um gerenciador de cluster externo, essa configuração afeta a alta disponibilidade e a proteção de dados. O valor padrão da configuração depende da arquitetura no momento em que o recurso de cluster é criado. Quando você instala o agente de recursos do SQL Server – `mssql-server-ha` – e cria um recurso de cluster para o grupo de disponibilidade, o gerenciador de cluster detecta a configuração do grupo de disponibilidade e define `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` de acordo. 
 
-Se houver suporte pela configuração, o parâmetro de agente do recurso `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` é definido como o valor que fornece alta disponibilidade e proteção de dados. Para obter mais informações, consulte [agente de recursos de compreender o SQL Server para pacemaker](#pacemakerNotify).
+Se houver suporte na configuração, o parâmetro do agente de recursos `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` será definido com o valor que fornece alta disponibilidade e proteção de dados. Para obter mais informações, confira [Noções básicas do agente de recursos do SQL Server para o Pacemaker](#pacemakerNotify).
 
 As seções a seguir explicam o comportamento padrão para o recurso de cluster. 
 
-Escolha um design de grupo de disponibilidade para atender aos requisitos específicos de negócios para alta disponibilidade, proteção de dados e escala de leitura.
+Escolha um design de grupo de disponibilidade de acordo com seus requisitos empresariais específicos de alta disponibilidade, proteção de dados e escala de leitura.
 
-As configurações a seguir descrevem os padrões de design de grupo de disponibilidade e os recursos de cada padrão. Esses padrões de design se aplicam a grupos de disponibilidade com `CLUSTER_TYPE = EXTERNAL` para soluções de alta disponibilidade. 
+As configurações a seguir descrevem os padrões de design do grupo de disponibilidade e as funcionalidades de cada padrão. Esses padrões de design se aplicam a grupos de disponibilidade com `CLUSTER_TYPE = EXTERNAL` para soluções de alta disponibilidade. 
 
 - **Três réplicas síncronas**
 - **Duas réplicas síncronas**
@@ -51,17 +51,17 @@ As configurações a seguir descrevem os padrões de design de grupo de disponib
 
 ## <a name="three-synchronous-replicas"></a>Três réplicas síncronas
 
-Essa configuração consiste em três réplicas síncronas. Por padrão, ele fornece alta disponibilidade e proteção de dados. Ele também pode fornecer a escala de leitura.
+Essa configuração consiste em três réplicas síncronas. Por padrão, ela fornece alta disponibilidade e proteção de dados. Ela também pode fornecer escala de leitura.
 
 ![Três réplicas][3]
 
-Um grupo de disponibilidade com três réplicas síncronas pode fornecer proteção de dados, alta disponibilidade e escala de leitura. A tabela a seguir descreve o comportamento de disponibilidade. 
+Um grupo de disponibilidade com três réplicas síncronas pode fornecer escala de leitura, alta disponibilidade e proteção de dados. A tabela a seguir descreve o comportamento de disponibilidade. 
 
-| |escala de leitura|Alta disponibilidade & </br> proteção de dados | proteção de dados|
+| |escala de leitura|Alta disponibilidade e </br> proteção de dados | Proteção de dados|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
-|Interrupção principal |Failover automático. A nova primária é R / w. |Failover automático. A nova primária é R / w. |Failover automático. Novo primário não está disponível para transações de usuário até que o antigo primário se recupere e ingresse o grupo de disponibilidade como secundária. |
-|Interrupção de uma réplica secundária  | Primária é R / w. Nenhum failover automático se o principal falhar. |Primária é R / w. Nenhum failover automático se a primária falha também. | Primário não está disponível para transações de usuário. |
+|Interrupção principal |Failover automático. A nova primária é R/W. |Failover automático. A nova primária é R/W. |Failover automático. A nova primária não estará disponível para transações de usuário enquanto a primária anterior não se recuperar e ingressar no grupo de disponibilidade como secundária. |
+|Interrupção de uma réplica secundária  | A primária é R/W. Nenhum failover automático se a primária falhar. |A primária é R/W. Nenhum failover automático se a primária falhar também. | A primária não está disponível para transações de usuário. |
 
 <sup>\*</sup> Padrão
 
@@ -69,17 +69,17 @@ Um grupo de disponibilidade com três réplicas síncronas pode fornecer proteç
 
 ## <a name="two-synchronous-replicas"></a>Duas réplicas síncronas
 
-Essa configuração permite que a proteção de dados. Como as outras configurações de grupo de disponibilidade, ele pode habilitar a escala de leitura. A configuração de duas réplicas síncronas não oferece alta disponibilidade automático. Uma configuração de duas réplicas só é aplicável ao SQL Server 2017 RTM e não é mais compatível com superior (CU1 e além) versões do SQL Server 2017...
+Essa configuração habilita a proteção de dados. Assim como as outras configurações de grupo de disponibilidade, ela pode habilitar a escala de leitura. A configuração de duas réplicas síncronas não fornece alta disponibilidade automática. Uma configuração de duas réplicas só é aplicável ao SQL Server 2017 RTM e não é mais compatível com versões superiores (CU1 e posterior) do SQL Server 2017.
 
 ![Duas réplicas síncronas][1]
 
-Um grupo de disponibilidade com duas réplicas síncronas fornece proteção de dados e escala de leitura. A tabela a seguir descreve o comportamento de disponibilidade. 
+Um grupo de disponibilidade com duas réplicas síncronas fornece escala de leitura e proteção de dados. A tabela a seguir descreve o comportamento de disponibilidade. 
 
-| |escala de leitura |proteção de dados|
+| |escala de leitura |Proteção de dados|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
-|Interrupção principal | Failover manual. Pode ocorrer perda de dados. A nova primária é R / w.| Failover automático. Novo primário não está disponível para transações de usuário até que o antigo primário se recupere e ingresse o grupo de disponibilidade como secundária.|
-|Interrupção de uma réplica secundária  |Primária é R/W, executar exposto à perda de dados. |Primário não está disponível para transações de usuário até que a secundária se recuperar.|
+|Interrupção principal | Failover manual. Pode ocorrer perda de dados. A nova primária é R/W.| Failover automático. A nova primária não estará disponível para transações de usuário enquanto a primária anterior não se recuperar e ingressar no grupo de disponibilidade como secundária.|
+|Interrupção de uma réplica secundária  |A primária é R/W; execução exposta à perda de dados. |A primária não estará disponível para transações de usuário enquanto o secundário não se recuperar.|
 
 <sup>\*</sup> Padrão
 
@@ -87,86 +87,86 @@ Um grupo de disponibilidade com duas réplicas síncronas fornece proteção de 
 
 ## <a name="two-synchronous-replicas-and-a-configuration-only-replica"></a>Duas réplicas síncronas e uma réplica somente de configuração
 
-Um grupo de disponibilidade com réplicas síncronas de duas (ou mais) e uma réplica somente de configuração fornece proteção de dados e também pode fornecer alta disponibilidade. O diagrama a seguir representa essa arquitetura:
+Um grupo de disponibilidade com duas (ou mais) réplicas síncronas e uma réplica somente de configuração fornece proteção de dados e também pode fornecer alta disponibilidade. O seguinte diagrama representa essa arquitetura:
 
 ![Grupo de disponibilidade somente de configuração][2]
 
-1. Replicação síncrona de dados do usuário para a réplica secundária. Ele também inclui metadados de configuração do grupo de disponibilidade.
-2. Replicação síncrona de metadados de configuração do grupo de disponibilidade. Ele não inclui dados de usuário.
+1. Replicação síncrona de dados do usuário para a réplica secundária. Ela também inclui metadados de configuração do grupo de disponibilidade.
+2. Replicação síncrona de metadados de configuração do grupo de disponibilidade. Ela não inclui dados do usuário.
 
-No diagrama de grupo de disponibilidade, uma réplica primária envia dados de configuração para a réplica secundária e a réplica somente de configuração. A réplica secundária também recebe dados de usuário. A réplica somente de configuração não recebe dados de usuário. A réplica secundária está no modo de disponibilidade síncronos. A réplica somente de configuração não contém os bancos de dados no grupo de disponibilidade – apenas os metadados sobre o grupo de disponibilidade. Dados de configuração na réplica somente configuração sincronicamente serão confirmados.
+No diagrama do grupo de disponibilidade, uma réplica primária envia dados de configuração por push para a réplica secundária e a réplica somente de configuração. A réplica secundária também recebe dados do usuário. A réplica somente de configuração não recebe dados do usuário. A réplica secundária está no modo de disponibilidade síncrona. A réplica somente de configuração não contém os bancos de dados no grupo de disponibilidade – apenas os metadados sobre o grupo de disponibilidade. Os dados de configuração na réplica somente de configuração são confirmados de forma síncrona.
 
 > [!NOTE]
-> Um grupo de availabilility com réplica somente configuração é novo no SQL Server 2017 CU1. Todas as instâncias do SQL Server no grupo de disponibilidade devem ser a CU1 do SQL Server 2017 ou posterior. 
+> Um grupo de disponibilidade com réplica somente de configuração é uma novidade do SQL Server 2017 CU1. Todas as instâncias do SQL Server do grupo de disponibilidade precisam ter o SQL Server 2017 CU1 ou posterior. 
 
-O valor padrão para `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` é 0. A tabela a seguir descreve o comportamento de disponibilidade. 
+O valor padrão de `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` é 0. A tabela a seguir descreve o comportamento de disponibilidade. 
 
-| |Alta disponibilidade & </br> proteção de dados | proteção de dados|
+| |Alta disponibilidade e </br> proteção de dados | Proteção de dados|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
-|Interrupção principal | Failover automático. A nova primária é R / w. | Failover automático. Novo primário não está disponível para transações de usuário. |
-|Interrupção da réplica secundária | Primária é R/W, executar exposto à perda de dados (se o principal falha e não pode ser recuperado). Nenhum failover automático se a primária falha também. | Primário não está disponível para transações de usuário. Nenhuma réplica para fazer failover para se a primária falhar também. |
-|Interrupção de réplica somente configuração | Primária é R / w. Nenhum failover automático se a primária falha também. | Primária é R / w. Nenhum failover automático se a primária falha também. |
-|Secundário síncrono + configuração apenas paralisação de réplica| Primário não está disponível para transações de usuário. Nenhum failover automático. | Primário não está disponível para transações de usuário. Nenhuma réplica para o failover para se primário falhar também. |
+|Interrupção principal | Failover automático. A nova primária é R/W. | Failover automático. A nova primária não está disponível para transações de usuário. |
+|Interrupção de uma réplica secundária | A primária é R/W; execução exposta à perda de dados (se a primária falhar e não puder ser recuperada). Nenhum failover automático se a primária falhar também. | A primária não está disponível para transações de usuário. Nenhuma réplica para failover se a primária falhar também. |
+|Interrupção de réplica somente de configuração | A primária é R/W. Nenhum failover automático se a primária falhar também. | A primária é R/W. Nenhum failover automático se a primária falhar também. |
+|Interrupção de réplica somente de configuração + secundária síncrona| A primária não está disponível para transações de usuário. Sem failover automático. | A primária não está disponível para transações de usuário. Nenhuma réplica para failover se a primária falhar também. |
 
 <sup>\*</sup> Padrão
 
 > [!NOTE]
-> A instância do SQL Server que hospeda a réplica somente de configuração também pode hospedar outros bancos de dados. Ele também pode participar como um banco de dados somente de configuração para mais de um grupo de disponibilidade. 
+> A instância do SQL Server que hospeda a réplica somente de configuração também pode hospedar outros bancos de dados. Ela também pode participar como um banco de dados somente de configuração para mais de um grupo de disponibilidade. 
 
 ## <a name="requirements"></a>Requisitos
 
-- Todas as réplicas em um grupo de disponibilidade com uma réplica somente de configuração devem ser SQL Server 2017 CU 1 ou posterior.
+- Todas as réplicas de um grupo de disponibilidade com uma réplica somente de configuração precisam ter o SQL Server 2017 CU 1 ou posterior.
 - Qualquer edição do SQL Server pode hospedar uma réplica somente de configuração, incluindo o SQL Server Express. 
-- O grupo de disponibilidade precisa de pelo menos uma réplica secundária - além da réplica primária.
-- Réplicas de somente de configuração não contam para o número máximo de réplicas por instância do SQL Server. SQL Server standard edition permite até três réplicas, o SQL Server Enterprise Edition permite até 9.
+- O grupo de disponibilidade precisa de, pelo menos, uma réplica secundária, além da réplica primária.
+- As réplicas somente de configuração não são consideradas no número máximo de réplicas por instância do SQL Server. O SQL Server Standard permite até três réplicas, enquanto a SQL Server Enterprise Edition permite até nove.
 
 ## <a name="considerations"></a>Considerações
 
-- Única réplica por grupo de disponibilidade não mais de uma configuração. 
+- Não mais de uma réplica somente de configuração por grupo de disponibilidade. 
 - Uma réplica somente de configuração não pode ser uma réplica primária.
-- Não é possível modificar o modo de disponibilidade de uma réplica somente de configuração. Para alterar de uma réplica somente de configuração para uma réplica secundária síncrona ou assíncrona, remover a réplica somente de configuração e adicionar uma réplica secundária com o modo de disponibilidade necessários. 
-- Uma réplica somente de configuração é sincronizada com os metadados do grupo de disponibilidade. Não há nenhum dado de usuário. 
-- Um grupo de disponibilidade com uma réplica primária e a réplica somente uma configuração, mas nenhuma réplica secundária não é válido. 
-- Você não pode criar um grupo de disponibilidade em uma instância do SQL Server Express edition. 
+- Não é possível modificar o modo de disponibilidade de uma réplica somente de configuração. Para fazer a alteração de uma réplica somente de configuração para uma réplica secundária síncrona ou assíncrona, remova a réplica somente de configuração e adicione uma réplica secundária com o modo de disponibilidade necessário. 
+- Uma réplica somente de configuração é síncrona com os metadados do grupo de disponibilidade. Não há dados do usuário. 
+- Um grupo de disponibilidade com uma réplica primária e uma réplica somente de configuração, mas nenhuma réplica secundária não é válida. 
+- Não é possível criar um grupo de disponibilidade em uma instância do SQL Server Express Edition. 
 
 <a name="pacemakerNotify"></a>
 
-## <a name="understand-sql-server-resource-agent-for-pacemaker"></a>Entender o agente de recursos do SQL Server para pacemaker
+## <a name="understand-sql-server-resource-agent-for-pacemaker"></a>Noções básicas do agente de recursos do SQL Server para o Pacemaker
 
-SQL Server 2017 CTP 1.4 adicionou `sequence_number` para `sys.availability_groups` para permitir que o Pacemaker identificar o grau de atualização secundária réplicas estão com a réplica primária. `sequence_number` é um BIGINT monotônica que representa o grau de atualização a réplica do grupo de disponibilidade local. Atualizações do pacemaker a `sequence_number` com cada alteração de configuração do grupo de disponibilidade. Failover, a adição de réplica ou a remoção são exemplos de alterações de configuração. O número é atualizado na primária, então replicado para réplicas secundárias. Portanto, uma réplica secundária que tem a configuração atualizada tem o mesmo número de sequência que o primário. 
+O SQL Server 2017 CTP 1.4 adicionou o `sequence_number` ao `sys.availability_groups` para permitir que o Pacemaker identifique o grau de atualização das réplicas secundárias em relação à réplica primária. `sequence_number` é um BIGINT que aumenta de forma monotônica e que representa o grau de atualização da réplica de grupo de disponibilidade local. O Pacemaker atualiza o `sequence_number` a cada alteração de configuração de grupo de disponibilidade. Exemplos de alterações de configuração incluem failover, adição de réplica ou remoção. O número é atualizado na primária e então replicado para as réplicas secundárias. Portanto, uma réplica secundária que tem uma configuração atualizada tem o mesmo número de sequência da primária. 
 
-Quando o Pacemaker decide promover uma réplica para primária, ele primeiro envia uma *pré-promoção* notificação para todas as réplicas. As réplicas de retornam o número de sequência. Em seguida, quando o Pacemaker tentar efetivamente promover uma réplica para primária, a réplica apenas promoverá em si se o seu número de sequência é o mais alto de todos os números de sequência. Se o seu próprio número de sequência não coincide com o número de sequência mais alto, a réplica rejeitará a operação de promoção. Dessa maneira, somente a réplica com o maior número de sequência pode ser promovida a primária, garantindo que não haverá perda de dados. 
+Quando o Pacemaker decide promover uma réplica a primária, ele primeiro envia uma *notificação de pré-promoção* a todas as réplicas. As réplicas retornam o número de sequência. Em seguida, quando o Pacemaker tenta efetivamente promover uma réplica como primária, a réplica apenas se promove se o seu número de sequência for o mais alto de todos os números de sequência. Se o seu próprio número de sequência não corresponde ao número de sequência mais alto, a réplica rejeita a operação de promoção. Dessa maneira, somente a réplica com o maior número de sequência pode ser promovida a primária, garantindo que não haverá perda de dados. 
 
-Esse processo requer pelo menos uma réplica disponível para promoção com o mesmo número de sequência que a primária anterior. Os conjuntos de agente de recursos Pacemaker `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` , de modo que pelo menos uma réplica secundária síncrona está atualizado e disponível para ser o destino de um failover automático por padrão. Com cada ação de monitoramento, o valor de `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` calculada (e atualizado, se necessário). O `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` valor é 'número de réplicas síncronas' dividido por 2. No momento do failover, requer que o agente de recursos (`total number of replicas`  -  `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` réplicas) para responder à notificação pré-promoção. A réplica com a mais alta `sequence_number` é promovido a primário. 
+Esse processo exige, pelo menos, uma réplica disponível para promoção com o mesmo número de sequência da primária anterior. O agente de recursos do Pacemaker define `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`, de modo que, pelo menos, uma réplica secundária síncrona esteja atualizada e disponível para ser o destino de um failover automático por padrão. Com cada ação de monitoramento, o valor de `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` é calculado (e atualizado, se necessário). O valor `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` é o 'número de réplicas síncronas' dividido por 2. No tempo de failover, o agente de recursos exige (réplicas `total number of replicas` - `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`) para responder à notificação de pré-promoção. A réplica com o `sequence_number` mais alto é promovida a primária. 
 
-Por exemplo, um grupo de disponibilidade com três réplicas síncronas — uma réplica primária e duas réplicas secundárias síncronas.
+Por exemplo, um grupo de disponibilidade com três réplicas síncronas – uma réplica primária e duas réplicas secundárias síncronas.
 
 - `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` é 1; (3 / 2 -> 1).
 
 - O número necessário de réplicas para responder à ação de pré-promoção é 2; (3 - 1 = 2). 
 
-Nesse cenário, duas réplicas precisam responder para o failover ser disparado. Para failover automático bem-sucedida após uma interrupção da réplica primária, ambas as réplicas secundárias precisam ser atualizadas e responder a notificação pré-promoção. Se eles estiverem online e síncronas, eles têm o mesmo número de sequência. O grupo de disponibilidade promove um deles. Se apenas uma das réplicas secundárias responde de pré-promoção em ação, o agente de recursos não pode garantir que a secundária que respondeu tem o sequence_number mais alto e um failover não será acionado.
+Nesse cenário, duas réplicas precisam responder para que o failover seja disparado. Para um failover automático bem-sucedido após uma interrupção da réplica primária, ambas as réplicas secundárias precisam estar atualizadas e responder à notificação de pré-promoção. Se elas estiverem online e forem síncronas, elas terão o mesmo número de sequência. O grupo de disponibilidade promove uma delas. Se apenas uma das réplicas secundárias responder à ação de pré-promoção, o agente de recursos não poderá garantir que o secundário que respondeu tenha o sequence_number mais alto e um failover não seja disparado.
 
 > [!IMPORTANT]
-> Quando `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` é 0, há risco de perda de dados. Durante uma interrupção da réplica primária, o agente de recursos não dispara automaticamente um failover. Você pode esperar do site primário para recuperar ou failover manualmente usando `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
+> Quando `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` é 0, há risco de perda de dados. Durante uma interrupção da réplica primária, o agente de recursos não dispara um failover automaticamente. Você pode aguardar a recuperação da primária ou fazer failover manualmente usando `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
 
-Você pode optar por substituir o comportamento padrão e impedir que o recurso de grupo de disponibilidade configuração `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` automaticamente.
+Você pode optar por substituir o comportamento padrão e impedir que o recurso de grupo de disponibilidade defina `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` automaticamente.
 
-O script a seguir conjuntos `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` como 0 em um grupo de disponibilidade denominado `<**ag1**>`. Antes da execução, substitua `<**ag1**>` pelo nome do grupo de disponibilidade.
+O script a seguir define `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` como 0 em um grupo de disponibilidade chamado `<**ag1**>`. Antes da execução, substitua `<**ag1**>` pelo nome do grupo de disponibilidade.
 
 ```bash
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=0
 ```
 
-Para reverter para o valor padrão, com base na configuração de grupo de disponibilidade execute:
+Para reverter isso para o valor padrão, com base na execução da configuração do grupo de disponibilidade:
 
 ```bash
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 ```
 
 > [!NOTE]
-> Quando você executa os comandos anteriores, o primário é temporariamente rebaixado para secundária, promovido novamente. A atualização de recurso faz com que todas as réplicas parar e reiniciar. O novo valor para`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` é definido apenas depois que as réplicas forem reiniciadas, não instantaneamente.
+> Quando você executa os comandos anteriores, o primário é temporariamente rebaixado a secundário e promovido novamente. A atualização de recursos faz com que todas as réplicas sejam interrompidas e reiniciadas. O novo valor para `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` é definido apenas depois que as réplicas são reiniciadas, não instantaneamente.
 
 ## <a name="see-also"></a>Confira também
 
