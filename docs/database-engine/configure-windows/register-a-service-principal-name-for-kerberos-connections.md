@@ -1,7 +1,7 @@
 ---
 title: Registrar um nome da entidade de serviço para conexões Kerberos | Microsoft Docs
 ms.custom: ''
-ms.date: 11/20/2017
+ms.date: 08/06/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 06ac9e16ccdd84020d67ce3c3a77abcb49bb4343
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f41567d5c27bfb1d77010d7e0d3fe187adf9a36c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938218"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892436"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrar um nome de entidade de serviço para conexões de Kerberos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -132,7 +132,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com redmond\accountname
 Para uma instância nomeada, use:  
   
 ```  
-setspn -A MSSQLSvc/myhost.redmond.microsoft.com/instancename redmond\accountname  
+setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename redmond\accountname  
 ```  
   
 ##  <a name="Client"></a> Conexões cliente  

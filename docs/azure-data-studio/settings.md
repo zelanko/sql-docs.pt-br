@@ -1,7 +1,7 @@
 ---
-title: Usuário e configurações de espaço de trabalho
+title: Configurações do Workspace e do Usuário
 titleSuffix: Azure Data Studio
-description: Como personalizar o Studio de dados do Azure, modificando as configurações de espaço de trabalho e usuário.
+description: Como personalizar o Azure Data Studio modificando as Configurações do Usuário e do Workspace.
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
@@ -11,56 +11,56 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: a874aaf9ec136ff9ea27cbeaa92011a07f3718c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959279"
 ---
-# <a name="modify-user-and-workspace-settings"></a>Modificar configurações de espaço de trabalho e de usuário
+# <a name="modify-user-and-workspace-settings"></a>Modificar Configurações do Workspace e do Usuário
 
-É fácil configurar [!INCLUDE[name-sos](../includes/name-sos-short.md)] de sua preferência por meio das configurações. Quase todas as partes do [!INCLUDE[name-sos](../includes/name-sos-short.md)]do editor de interface do usuário e comportamento funcional tem opções você pode modificar.
+É fácil configurar o [!INCLUDE[name-sos](../includes/name-sos-short.md)] de acordo com suas preferências usando as configurações. Quase todas as partes do editor, da interface do usuário e do comportamento funcional do [!INCLUDE[name-sos](../includes/name-sos-short.md)] têm opções que podem ser modificadas.
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] fornece dois escopos diferentes para as configurações:
 
-* **Usuário** essas configurações se aplicam globalmente a qualquer instância do [!INCLUDE[name-sos](../includes/name-sos-short.md)] abrir.
-* **Espaço de trabalho** configurações de espaço de trabalho são configurações específicas para uma pasta no seu computador e estão disponíveis somente quando a pasta é aberta na barra lateral do Explorer. As configurações definidas nesse escopo substituem o escopo do usuário.
+* **Usuário** Essas configurações se aplicam globalmente a qualquer instância de [!INCLUDE[name-sos](../includes/name-sos-short.md)] que você abrir.
+* **Workspace** Configurações do workspace são configurações específicas a uma pasta em seu computador e só estão disponíveis quando a pasta está aberta na barra lateral do Explorer. Configurações definidas nesse escopo substituem o escopo do usuário.
 
-## <a name="creating-user-and-workspace-settings"></a>Criação de usuário e configurações de espaço de trabalho
+## <a name="creating-user-and-workspace-settings"></a>Criando Configurações do Workspace e do Usuário
 
-O comando de menu **arquivo** > **preferências** > **configurações** (**código**  >  **Preferências** > **configurações** em Mac) fornece o ponto de entrada para definir as configurações de usuário e o espaço de trabalho. Você receberá uma lista de configurações padrão. Copie qualquer configuração que você deseja alterar para apropriado `settings.json` arquivo. As guias à direita permitem que você alternar rapidamente entre os arquivos de configurações do usuário e o espaço de trabalho.
+O comando de menu **Arquivo** > **Preferências** > **Configurações** (**Código** > **Preferências** > **Configurações** no Mac) fornece o ponto de entrada para definir configurações do usuário e do workspace. Você recebe uma lista de Configurações Padrão. Copie as configurações que quiser alterar para o arquivo `settings.json` apropriado. As guias à direita permitem alternar rapidamente entre os arquivos de configurações do usuário e do workspace.
 
-Você também pode abrir as configurações de usuário e o espaço de trabalho do **paleta de comandos** (**Ctrl + Shift + P**) com **preferências: Abrir configurações de usuário** e **preferências: Abra as configurações de espaço de trabalho** ou use o atalho de teclado (**Ctrl +,** ).
+Você também pode abrir as configurações do usuário e do workspace na **Paleta de Comandos** (**Ctrl+Shift+P**) usando **Preferências: Abrir Configurações do Usuário** e **Preferências: Abrir Configurações do Workspace** ou usando o atalho de teclado (**Ctrl+,** ).
 
-O exemplo a seguir desabilita os números de linha no editor e configura as linhas de código a ser recuado automaticamente.
+O exemplo a seguir desabilita números de linha no editor e configura as linhas de código para serem recuadas automaticamente.
 
 ![Configurações de exemplo](media/settings/sample-settings.png)
 
-As alterações nas configurações são recarregadas por [!INCLUDE[name-sos](../includes/name-sos-short.md)] após a modificação `settings.json` arquivo é salvo.
+Alterações nas configurações são recarregadas por [!INCLUDE[name-sos](../includes/name-sos-short.md)] após o arquivo `settings.json` modificado ser salvo.
 
->**Observação:** Configurações de espaço de trabalho são úteis para compartilhar configurações específicas do projeto em uma equipe.
+>**Observação:** as configurações do workspace são úteis para compartilhar configurações específicas do projeto com uma equipe.
 
-## <a name="settings-file-locations"></a>Locais de arquivo de configurações
+## <a name="settings-file-locations"></a>Locais do arquivo de configurações
 
-Dependendo de sua plataforma, o arquivo de configurações do usuário está localizado aqui:
+Dependendo de sua plataforma, o arquivo de configurações do usuário fica localizado aqui:
 
 * **Windows** `%APPDATA%\azuredatastudio\User\settings.json`
 * **Mac** `$HOME/Library/Application Support/azuredatastudio/User/settings.json`
 * **Linux** `$HOME/.config/azuredatastudio/User/settings.json`
 
-O arquivo de configuração do espaço de trabalho está localizado sob o `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` pasta em seu projeto.
+O arquivo de configuração do workspace fica localizado na pasta `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` de seu projeto.
 
-## <a name="hot-exit"></a>Saída quente
+## <a name="hot-exit"></a>Hot Exit
 
-O estúdio de dados do Azure lembra as alterações não salvas em arquivos quando você sai por padrão. Isso é o mesmo que o recurso hot sair no Visual Studio Code.
+Por padrão, o Azure Data Studio memoriza alterações de arquivos não salvas quando você sai. É o mesmo que o recurso de Hot Exit do Visual Studio Code.
 
-Por padrão, a saída hot está desativado. Habilitar saída hot editando o `files.hotExit` configuração. Para obter detalhes, consulte [Hot Exit (na documentação do Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
+Por padrão, Hot Exit fica desativado. Habilite o recurso de Hot Exit editando a configuração `files.hotExit`. Para obter detalhes, confira [Hot Exit (na documentação do Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
 
 
 ## <a name="tab-color"></a>Cor da guia
 
-Para simplificar a identificar quais conexões que você está trabalhando com guias abertas no editor podem ter suas cores definidas para corresponder a cor do grupo de servidores de conexão pertence. Por padrão, o guia de cores é desativados por padrão. Habilitar o guia de cores, editando o `sql.tabColorMode` configuração.
+Para simplificar a identificação das conexões com que você está trabalhando, as guias abertas no editor podem ter suas cores definidas de forma a corresponder à cor do grupo de servidores ao qual a conexão pertence. Por padrão, as cores das guias ficam desativadas. Habilite o recurso de cores das guias editando a configuração `sql.tabColorMode`.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-Porque [!INCLUDE[name-sos](../includes/name-sos-short.md)] herda as configurações de usuário e o espaço de trabalho, a funcionalidade do Visual Studio Code, informações detalhadas sobre configurações está no [as configurações para o Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings) artigo.
+Como o [!INCLUDE[name-sos](../includes/name-sos-short.md)] herda a funcionalidade de configurações do usuário e do workspace do Visual Studio Code, há informações detalhadas sobre as configurações no artigo [Configurações para o Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings).

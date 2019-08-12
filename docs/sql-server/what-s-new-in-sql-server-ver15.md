@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: caf8b23b823d7863e1bd7c8abd01ef43b0b8ec20
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: bfe22edbc76805fb821ddda42a07a3b74395bdb6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702889"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893997"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novidades no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -46,7 +46,7 @@ O CTP (Community Technology Preview) 3.2 é a última versão pública do [!INCL
 
 | Novo recurso ou atualização | Detalhes |
 |:---|:---| 
-| Configuração de governança para atualizações de cache do Power BI.  | O serviço do Power BI armazena em cache dados de bloco do dashboard e dados de relatório para carregamento inicial do relatório do Live Connect, fazendo com que um número excessivo de consultas de cache seja enviado ao SSAS e, em casos extremos, sobrecarregue o servidor. Esta versão introduz a propriedade **ClientCacheRefreshPolicy**. Essa propriedade permite que você substitua esse comportamento no nível do servidor. Para saber mais, confira [Propriedades gerais](../analysis-services/server-properties/general-properties.md). |
+| Configuração de governança para atualizações de cache do Power BI.  | O serviço do Power BI armazena em cache dados de bloco do dashboard e dados de relatório para carregamento inicial do relatório do Live Connect, fazendo com que um número excessivo de consultas de cache seja enviado ao SSAS e, em casos extremos, sobrecarregue o servidor. Esta versão introduz a propriedade **ClientCacheRefreshPolicy**. Essa propriedade permite que você substitua esse comportamento no nível do servidor. Para saber mais, confira [Propriedades gerais](https://docs.microsoft.com/analysis-services/server-properties/general-properties). |
 | Anexação online  | Esse recurso fornece a capacidade de anexar um modelo de tabela como uma operação online. A anexação online pode ser usada para sincronização de réplicas somente leitura em ambientes de expansão de consulta local. Para saber mais, confira [Anexação online](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32) em Detalhes. |
 | &nbsp; | &nbsp; |
 

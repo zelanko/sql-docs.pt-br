@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3504de2e73d3320768e5db67995285f442dfdf22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8f18c72deffc33878de95ebc07a80c07cd49d67
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013903"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892261"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>Página de Resumo (Assistentes do Grupo de Disponibilidade AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68013903"
  **Cancelar**  
  Clique para cancelar o assistente. Na página **Resumo** , o cancelamento do assistente faz com que ele seja fechado sem executar ações.  
   
- ![Ícone de seta usado com o link Voltar ao início](../../../analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início") [&#91;Top&#93;](#Top)  
+ ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início") [&#91;Top&#93;](#Top)  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68013903"
   
 -   [Usar o Assistente de Grupo de Disponibilidade de Failover &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
- ![Ícone de seta usado com o link Voltar ao início](../../../analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início") [&#91;Top&#93;](#Top)  
+ ![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início") [&#91;Top&#93;](#Top)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  

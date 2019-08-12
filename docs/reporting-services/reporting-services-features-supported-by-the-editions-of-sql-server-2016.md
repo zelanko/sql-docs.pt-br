@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/20/2019
-ms.openlocfilehash: eca8f43d358ca3869c3812a457b710d64dadeaf5
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 3e61381c2298a197be698ed82c247023ad708789
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343875"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893282"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>Recursos do SQL Server Reporting Services compatíveis com as edições dele
 
@@ -24,9 +24,9 @@ Esse tópico explica os recursos do SQL Server Reporting Services (SSRS) que tê
 
  ## <a name="try-sql-server-2017"></a>Experimentar o SQL Server 2017
 
-> [![Baixar o SQL Server 2017](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Baixar o SQL Server 2017 do Centro de Avaliação](https://go.microsoft.com/fwlink/?LinkID=829477)**    
+> [![Baixar o SQL Server 2017](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Baixar o SQL Server 2017 do Centro de Avaliação](https://go.microsoft.com/fwlink/?LinkID=829477)**    
 >
-> ![Máquina Virtual do Azure pequena](../analysis-services/media/azure-virtual-machine-small.png) **[Criar uma Máquina Virtual com o SQL Server 2017 já instalado](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+> ![Máquina Virtual do Azure pequena](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Criar uma Máquina Virtual com o SQL Server 2017 já instalado](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
 
 Para saber quais recursos têm suporte nas edições Evaluation e Developer, confira a coluna SQL Server Enterprise Edition na tabela a seguir.
 

@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 65fd65d6849153b807ecbdb0d24296640ca38390
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 77a7bd22ee9317e60d1b755e8ef3755735e0d845
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098731"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893795"
 ---
-# <a name="tryparse-transact-sql"></a>TRY_PARSE (Transact-SQL)
+# <a name="try_parse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Retorna o resultado de uma expressão, convertido no tipo de dados solicitado, ou nulo se a conversão falha no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use TRY_PARSE somente para converter da cadeia de caracteres em data/hora e tipos numéricos.  
@@ -101,7 +101,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |Nederlands|Holandês|1043|nl-NL|  
 |Norsk|Norueguês|2068|nn-NO|  
 |Português|Português|2070|pt-PT|  
-|Suomi|Finlandês|1035|fi|  
+|Suomi|Finlandês|1035|fi-FI|  
 |Svenska|Sueco|1053|sv-SE|  
 |čeština|Czech|1029|Cs-CZ|  
 |magyar|Húngaro|1038|Hu-HU|  
@@ -127,7 +127,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-simple-example-of-tryparse"></a>A. Exemplo simples de TRY_PARSE  
+### <a name="a-simple-example-of-try_parse"></a>A. Exemplo simples de TRY_PARSE  
   
 ```  
 SELECT TRY_PARSE('Jabberwokkie' AS datetime2 USING 'en-US') AS Result;  
@@ -143,7 +143,7 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-detecting-nulls-with-tryparse"></a>B. Detectando nulos com TRY_PARSE  
+### <a name="b-detecting-nulls-with-try_parse"></a>B. Detectando nulos com TRY_PARSE  
   
 ```  
 SELECT  
@@ -164,7 +164,7 @@ True
 (1 row(s) affected)  
 ```  
   
-### <a name="c-using-iif-with-tryparse-and-implicit-culture-setting"></a>C. Usando IIF com TRY_PARSE e configuração de cultura implícita  
+### <a name="c-using-iif-with-try_parse-and-implicit-culture-setting"></a>C. Usando IIF com TRY_PARSE e configuração de cultura implícita  
   
 ```  
 SET LANGUAGE English;  

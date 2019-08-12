@@ -10,12 +10,12 @@ ms.author: maghan
 ms.custom: seodec18
 ms.date: 07/11/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: a2a4d4e755908d544e79b751d64ee99cad6fc96c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ff212d44fc16ad4a8c6366eda88d92fa78f20d84
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959699"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811224"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Baixar e instalar o Azure Data Studio
 
@@ -41,7 +41,6 @@ Esta versão do [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclui uma e
 
 O *instalador do usuário* é recomendado porque não exige privilégios de administrador, o que simplifica as instalações e as atualizações. O instalador do usuário não exige privilégios de administrador, pois a localização está na pasta AppData Local (LOCALAPPDATA) do usuário. O instalador do usuário também fornece uma experiência de atualização em segundo plano mais tranquila. Para obter mais informações, confira [Configuração de usuário para Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
 
-
 **Instalador do usuário** (recomendado)
 
 1. Baixe e execute o [instalador do *usuário* do [!INCLUDE[name-sos](../includes/name-sos-short.md)] para Windows](https://go.microsoft.com/fwlink/?linkid=2098449).
@@ -51,7 +50,6 @@ O *instalador do usuário* é recomendado porque não exige privilégios de admi
 
 1. Baixe e execute o [instalador do *sistema* do [!INCLUDE[name-sos](../includes/name-sos-short.md)] para Windows](https://go.microsoft.com/fwlink/?linkid=2098450 ).
 2. Inicie o aplicativo [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
-
 
 **arquivo zip**
 
@@ -141,6 +139,7 @@ O [!INCLUDE[name-sos](../includes/name-sos-short.md)] é executado no Windows, n
 - Windows 8.1 (64 bits)
 - Windows 8 (64 bits)
 - Windows 7 (SP1) (64 bits) – exige o [KB2533623](https://www.microsoft.com/download/details.aspx?id=26767)
+- Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2 (64 bits)
 - Windows Server 2012 (64 bits)
@@ -157,8 +156,6 @@ O [!INCLUDE[name-sos](../includes/name-sos-short.md)] é executado no Windows, n
 - Ubuntu 16.04
 
 ## <a name="recommended-system-requirements"></a>Requisitos do sistema recomendados
-Para obter uma experiência ideal, use os requisitos do sistema recomendados.
-[É necessário atualizar esta seção para quantificar a memória]
 
 |             | Núcleos de CPU | Memória/RAM |
 |:-----------|:---------|:----------|

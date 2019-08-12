@@ -16,12 +16,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 372bdfd2bdb749a624f5b68ff69380825d86b3ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a05419d31d7b3c8579afc824b9bb27f15aa9481d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990922"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892707"
 ---
 # <a name="sql-server-installation"></a>Instalação do SQL Server
 
@@ -77,7 +77,7 @@ Descreve como preparar seu computador para [!INCLUDE[ssNoVersion](../../includes
 [Instalar recursos de BI do SQL Server com o SharePoint &#40;Power Pivot e Reporting Services&#41;](https://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
  Esta seção explica como instalar recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um ambiente do SharePoint. Ela identifica quais recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão disponíveis para uma versão e uma edição específicas do SharePoint. Ela também inclui procedimentos de instalação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint e Reporting Services no modo do SharePoint.  
   
-![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Instale o novo banco de dados de exemplo, [Wide World Importers](../../sample/world-wide-importers/wide-world-importers-documentation.md). 
+![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Instale o novo banco de dados de exemplo, [Wide World Importers](../../sample/world-wide-importers/wide-world-importers-documentation.md). 
   
 [Exemplos e bancos de dados de exemplo do SQL Server](https://sqlserversamples.codeplex.com/)  
  Descreve como instalar e configurar os exemplos e bancos de dados de exemplo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
