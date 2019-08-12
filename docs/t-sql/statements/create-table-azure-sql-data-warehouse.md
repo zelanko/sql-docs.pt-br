@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 080037ec68169c08f7e543504c84118d0d01e4fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e913f7c09327be46ab7e4b67ec903fc60e30975
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117004"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419605"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (SQL Data Warehouse do Azure)
 
@@ -167,18 +167,7 @@ Cria uma ou mais partições da tabela. Essas partições são fatias horizontai
 
 O índice columnstore clusterizado é o padrão para a criação de tabelas no SQL Data Warehouse do Azure.  A especificação ORDER é padronizada para as teclas COMPOUND.  A classificação será sempre em ordem crescente. Se nenhuma cláusula ORDER for especificada, a columnstore não será classificada. Devido ao processo de ordenação, uma tabela com índice columnstore clusterizado e ordenado pode ter tempos de carregamento de dados maiores que os índices columnstore clusterizados e não ordenados. Se você precisar de mais espaço de tempdb ao carregar dados, poderá diminuir a quantidade de dados por inserção.
 
-Durante a visualização, você pode executar essa consulta para verificar as colunas com ORDER habilitado.
-
-```sql
-SELECT i.name AS index_name  
-    ,COL_NAME(ic.object_id,ic.column_id) AS column_name  
-    ,ic.index_column_id  
-    ,ic.key_ordinal  
-,ic.is_included_column  
-FROM sys.indexes AS i  
-INNER JOIN sys.index_columns AS ic
-    ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
-```
+Os usuários podem consultar a coluna column_store_order_ordinal em sys.index_columns para obter as colunas nas quais uma tabela é ordenada e qual é a sequência na ordenação.  
 
 ### <a name="DataTypes"></a> Tipo de dados
 

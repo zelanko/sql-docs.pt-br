@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5bfc0e6a64c9895b4b118ec5c6c27a66657b0829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 750679a41b3178dd587ddbdee2fb33ee491a41b5
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065799"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471167"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nível de compatibilidade de ALTER DATABASE (Transact-SQL)
 
@@ -76,7 +76,7 @@ Os comportamentos a seguir são esperadas para [!INCLUDE[ssSQL17](../../includes
 
 - Se o nível de compatibilidade de um banco de dados de usuário era 100 ou mais alto antes da atualização, ele permanecerá o mesmo depois da atualização.
 - Se o nível de compatibilidade de um banco de dados do usuário era 90 antes da atualização, no banco de dados atualizado esse nível será definido como 100, que é o mais baixo com suporte no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
-- Os níveis de compatibilidade dos bancos de dados tempdb, model, msdb e Resource são definidos para o nível de compatibilidade atual após o upgrade.
+- Os níveis de compatibilidade dos bancos de dados tempdb, model, msdb e Resource são definidos para o nível de compatibilidade padrão para determinada versão do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 
 - O banco de dados do sistema mestre retém o nível de compatibilidade anterior ao upgrade.
 
 Use `ALTER DATABASE` para alterar o nível de compatibilidade do banco de dados. A nova configuração do nível de compatibilidade de um banco de dados tem efeito quando um comando `USE <database>` é emitido ou um novo logon é processado com esse banco de dados como o contexto do banco de dados padrão.

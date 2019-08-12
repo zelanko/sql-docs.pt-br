@@ -1,7 +1,7 @@
 ---
 title: Diretrizes de implantação
 titleSuffix: SQL Server big data clusters
-description: Saiba como implantar SQL Server clusters de Big Data 2019 (versão prévia) em kubernetes.
+description: Saiba como implantar clusters de Big Data do SQL Server 2019 (versão prévia) no Kubernetes.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,57 +9,57 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e6f2eefd37c45753e3051722448b80d88712df26
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: d9696cf89d4177d8b78d9a0fe08cd27da5112650
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419423"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68470766"
 ---
-# <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Como implantar SQL Server clusters de Big Data no kubernetes
+# <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Como implantar clusters de Big Data do SQL Server no Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-SQL Server Cluster de Big Data é implantado como contêineres do Docker em um cluster kubernetes. Esta é uma visão geral das etapas de instalação e configuração:
+O cluster de Big Data do SQL Server é implantado como contêineres do Docker em um cluster do Kubernetes. Esta é uma visão geral das etapas de instalação e configuração:
 
-- Configure um cluster kubernetes em uma única VM, cluster de VMs ou no AKS (serviço kubernetes do Azure).
+- Configure um cluster do Kubernetes em uma única VM, no cluster de VMs ou no AKS (Serviço de Kubernetes do Azure).
 - Instale a ferramenta de configuração de cluster **azdata** no computador cliente.
-- Implante um cluster SQL Server Big Data em um cluster kubernetes.
+- Implante um cluster de Big Data do SQL Server em um cluster do Kubernetes.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="install-sql-server-2019-big-data-tools"></a>Instalar as ferramentas do SQL Server 2019 Big Data
+## <a name="install-sql-server-2019-big-data-tools"></a>Instalar as ferramentas de Big Data do SQL Server 2019
 
-Antes de implantar um cluster SQL Server 2019 Big Data, primeiro [Instale as ferramentas de Big data](deploy-big-data-tools.md):
+Antes de implantar um cluster de Big Data do SQL Server 2019, primeiro [instale as ferramentas de Big Data](deploy-big-data-tools.md):
 
 - **azdata**
 - **kubectl**
 - **Azure Data Studio**
-- **Extensão SQL Server 2019**
+- **Extensão do SQL Server 2019**
 
-## <a id="prereqs"></a>Pré-requisitos do kubernetes
+## <a id="prereqs"></a> Pré-requisitos do Kubernetes
 
-SQL Server clusters Big Data exigem uma versão mínima do kubernetes de pelo menos v 1,10 tanto para o servidor quanto para o cliente (kubectl).
+Os clusters de Big Data do SQL Server exigem uma versão mínima do Kubernetes de pelo menos v1.10 tanto para o servidor quanto para o cliente (kubectl).
 
 > [!NOTE]
-> Observe que as versões de kubernetes do cliente e do servidor devem estar dentro de + 1 ou-1 versão secundária. Para obter mais informações, consulte [notas de versão do kubernetes e política de SKU de distorção de versão)](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
+> Observe que as versões do Kubernetes do cliente e do servidor devem estar dentro da versão secundária +1 ou -1. Para obter mais informações, confira [Notas sobre a versão do Kubernetes e política de SKU de distorção de versão)](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
 
-### <a id="kubernetes"></a>Configuração do cluster kubernetes
+### <a id="kubernetes"></a> Configuração do cluster do Kubernetes
 
-Se você já tiver um cluster kubernetes que atenda aos pré-requisitos acima, poderá pular diretamente para a [etapa de implantação](#deploy). Esta seção pressupõe uma compreensão básica dos conceitos de kubernetes.  Para obter informações detalhadas sobre o kubernetes, consulte a [documentação do kubernetes](https://kubernetes.io/docs/home).
+Se você já tiver um cluster do Kubernetes que atenda aos pré-requisitos acima, poderá pular diretamente para a [etapa de implantação](#deploy). Esta seção pressupõe uma compreensão básica dos conceitos do Kubernetes.  Para obter informações detalhadas sobre o Kubernetes, confira a [documentação do Kubernetes](https://kubernetes.io/docs/home).
 
-Você pode optar por implantar o kubernetes de uma das três maneiras:
+Você pode optar por implantar o Kubernetes de uma das três maneiras:
 
-| Implantar kubernetes em: | Descrição | Link |
+| Implantar o Kubernetes em: | Descrição | Link |
 |---|---|---|
-| **AKS (serviços Kubernetess do Azure)** | Um serviço de contêiner kubernetes gerenciado no Azure. | [Sobre](deploy-on-aks.md) |
-| **Vários computadores (kubeadm)** | Um cluster kubernetes implantado em máquinas físicas ou virtuais usando o **kubeadm** | [Sobre](deploy-with-kubeadm.md) |
-| **Minikube** | Um cluster kubernetes de nó único em uma VM. | [Sobre](deploy-on-minikube.md) |
+| **AKS (Serviço de Kubernetes do Azure)** | Um serviço de contêiner do Kubernetes gerenciado no Azure. | [Instruções](deploy-on-aks.md) |
+| **Vários computadores (kubeadm)** | Um cluster do Kubernetes implantado em máquinas virtuais ou físicas usando **kubeadm** | [Instruções](deploy-with-kubeadm.md) |
+| **Minikube** | Um cluster do Kubernetes de nó único em uma VM. | [Instruções](deploy-on-minikube.md) |
 
 > [!TIP]
-> Para obter um exemplo de script Python que implanta AKs e um SQL Server Big data cluster em uma única etapa, [consulte início rápido: Implante SQL Server Cluster de Big Data no serviço de kubernetes do Azure](quickstart-big-data-cluster-deploy.md)(AKs).
+> Você também pode criar o script da implantação do AKS e de um cluster de Big Data em uma única etapa. Para obter mais informações, confira como fazer isso em um [script Python](quickstart-big-data-cluster-deploy.md) ou em um [notebook](deploy-notebooks.md) do Azure Data Studio.
 
-### <a name="verify-kubernetes-configuration"></a>Verificar configuração do kubernetes
+### <a name="verify-kubernetes-configuration"></a>Verificar configuração do Kubernetes
 
 Execute o comando **kubectl** para exibir a configuração do cluster. Verifique se kubectl está apontado para o contexto de cluster correto.
 
@@ -67,27 +67,27 @@ Execute o comando **kubectl** para exibir a configuração do cluster. Verifique
 kubectl config view
 ```
 
-Depois de configurar o cluster kubernetes, você pode prosseguir com a implantação de um novo cluster SQL Server Big Data. Se você estiver atualizando de uma versão anterior, consulte [como atualizar SQL Server clusters de Big data](deployment-upgrade.md).
+Depois de configurar o cluster do Kubernetes, você pode prosseguir com a implantação de um novo cluster de Big Data do SQL Server. Se você estiver atualizando de uma versão anterior, confira [Como atualizar clusters de Big Data do SQL Server](deployment-upgrade.md).
 
-## <a id="deploy"></a>Visão geral da implantação
+## <a id="deploy"></a> Visão geral da implantação
 
-A maioria Big Data configurações de cluster são definidas em um arquivo de configuração de implantação JSON. Você pode usar um perfil de implantação padrão para AKs `kubeadm`, ou `minikube` ou pode personalizar seu próprio arquivo de configuração de implantação a ser usado durante a instalação. Por motivos de segurança, as configurações de autenticação são passadas por meio de variáveis de ambiente.
+A maioria das configurações de cluster de Big Data é definida em um arquivo de configuração de implantação JSON. Você pode usar um perfil de implantação padrão para o AKS, `kubeadm`, ou `minikube` ou pode personalizar seu próprio arquivo de configuração de implantação a ser usado durante a instalação. Por motivos de segurança, as configurações de autenticação são passadas por meio de variáveis de ambiente.
 
-As seções a seguir fornecem mais detalhes sobre como configurar suas implantações de cluster Big Data, bem como exemplos de personalizações comuns. Além disso, você sempre pode editar o arquivo de configuração de implantação personalizada usando um editor como VS Code por exemplo.
+As seções a seguir fornecem mais detalhes sobre como configurar suas implantações de cluster de Big Data, bem como exemplos de personalizações comuns. Além disso, você pode sempre editar o arquivo de configuração de implantação personalizada usando um editor como o VS Code, por exemplo.
 
-## <a id="configfile"></a>Configurações padrão
+## <a id="configfile"></a> Configurações padrão
 
-As opções de implantação de cluster de Big data são definidas em arquivos de configuração JSON. Há três perfis de implantação padrão com configurações padrão para ambientes de desenvolvimento/teste:
+As opções de implantação de cluster de Big Data são definidas em arquivos de configuração JSON. Há três perfis de implantação padrão com configurações padrão para ambientes de desenvolvimento/teste:
 
-| Perfil de implantação | Ambiente kubernetes |
+| Perfil de implantação | Ambiente do Kubernetes |
 |---|---|
-| **aks-dev-test** | AKS (serviço kubernetes do Azure) |
+| **aks-dev-test** | AKS (Serviço de Kubernetes do Azure) |
 | **kubeadm-dev-test** | Vários computadores (kubeadm) |
 | **minikube-dev-test** | minikube |
 
-Você pode implantar um cluster Big Data executando a **criação do BDC azdata**. Isso solicitará que você escolha uma das configurações padrão e, em seguida, o guiará pela implantação.
+Você pode implantar um cluster de Big Data executando **azdata bdc create**. Isso solicitará que você escolha uma das configurações padrão e, em seguida, o guiará pela implantação.
 
-Na primeira vez que você `azdata` executar o, `--accept-eula` deverá incluir para aceitar o EULA (contrato de licença de usuário final).
+Na primeira vez que executar `azdata`, você deverá incluir `--accept-eula` para aceitar o EULA (contrato de licença de usuário final).
 
 ```bash
 azdata bdc create --accept-eula
@@ -95,66 +95,66 @@ azdata bdc create --accept-eula
 
 Nesse cenário, são solicitadas as configurações que não fazem parte da configuração padrão, como senhas. 
 
-> [!NOTE]
-> A partir do SQL Server 2019 CTP 3,2, você não é mais membro do que o SQL Server 2019 [programa de adoção antecipada](https://aka.ms/eapsignup) para experimentar as versões de visualização do cluster Big Data.
-
 > [!IMPORTANT]
-> O nome padrão do cluster de Big Data é **MSSQL-cluster**. Isso é importante saber para executar qualquer um dos comandos **kubectl** que especificam o namespace kubernetes com o `-n` parâmetro.
+> O nome padrão do cluster de Big Data é **mssql-cluster**. É importante saber isso para executar qualquer um dos comandos **kubectl** que especificam o namespace do Kubernetes com o parâmetro `-n`.
 
-## <a id="customconfig"></a>Configurações personalizadas
+## <a id="customconfig"></a> Configurações personalizadas
 
-Também é possível personalizar seu próprio perfil de configuração de implantação. Você pode fazer isso com as seguintes etapas:
+Também é possível personalizar seu próprio perfil de configuração de implantação. Você pode fazer isso executando as etapas a seguir:
 
-1. Comece com um dos perfis de implantação padrão que correspondem ao seu ambiente kubernetes. Você pode usar o comando **azdata BDC config List** para listá-los:
+1. Comece com um dos perfis de implantação padrão que correspondem ao seu ambiente do Kubernetes. Use o comando **azdata bdc config list** para listá-los:
 
    ```bash
    azdata bdc config list
    ```
 
-1. Para personalizar sua implantação, crie uma cópia do perfil de implantação com o comando **azdata BDC config init** . Por exemplo, o comando a seguir cria uma cópia dos arquivos de configuração de implantação **AKs-dev-Test** em um diretório `custom`de destino chamado:
+1. Para personalizar sua implantação, crie uma cópia do perfil de implantação com o comando **azdata bdc config init**. Por exemplo, o comando a seguir cria uma cópia dos arquivos de configuração de implantação **aks-dev-test** em um diretório de destino chamado `custom`:
 
    ```bash
    azdata bdc config init --source aks-dev-test --target custom
    ```
 
    azdata
-   > O `--target` especifica um diretório que contém os arquivos de configuração, **cluster. JSON** e `--source` **Control. JSON**, com base no parâmetro.
+   > O `--target` especifica um diretório que contém os arquivos de configuração, **cluster.json** e **control.json**, com base no parâmetro `--source`.
 
-1. Para personalizar as configurações em seu perfil de configuração de implantação, você pode editar o arquivo de configuração de implantação em uma ferramenta que é boa para editar arquivos JSON, como VS Code. Para automação com script, você também pode editar o perfil de implantação personalizado usando o comando **azdata BDC config** . Por exemplo, o comando a seguir altera um perfil de implantação personalizado para alterar o nome do cluster implantado do padrão (**MSSQL-cluster**) para **Test-cluster**:  
+1. Para personalizar as configurações em seu perfil de configuração de implantação, você pode editar o arquivo de configuração de implantação em uma ferramenta que é boa para editar arquivos JSON, como o VS Code. Para automação com script, você também pode editar o perfil de implantação personalizado usando o comando **azdata bdc config**. Por exemplo, o comando a seguir altera um perfil de implantação personalizado para alterar o nome do cluster implantado do padrão (**mssql-cluster**) para **test-cluster**:  
 
    ```bash
    azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
    ```
+   
+> [!TIP]
+> Você também pode passar o nome do cluster no momento da implantação usando o parâmetro *--name* para o comando *azdata create bdc*. Os parâmetros no comando têm precedência sobre os valores nos arquivos de configuração.
 
-   > Uma ferramenta útil para localizar caminhos JSON é o [avaliador do JSONPath online](https://jsonpath.com/).
+   > Uma ferramenta útil para localizar caminhos JSON é o [JSONPath Online Evaluator](https://jsonpath.com/).
 
-   Além de passar os pares de chave-valor, você também pode fornecer valores JSON embutidos ou passar arquivos de patch JSON. Para obter mais informações, consulte [definir configurações de implantação para clusters de Big data](deployment-custom-configuration.md).
+   Além de passar os pares chave-valor, você também pode fornecer valores JSON embutidos ou passar arquivos de patch JSON. Para obter mais informações, confira [Definir configurações de implantação para clusters de Big Data](deployment-custom-configuration.md).
 
-1. Em seguida, passe o arquivo de configuração personalizada para o **azdata BDC Create**. Observe que você deve definir as [variáveis de ambiente](#env)necessárias, caso contrário, os valores serão solicitados:
+1. Em seguida, passe o arquivo de configuração personalizada para **azdata bdc create**. Observe que você deve definir as [variáveis de ambiente](#env) necessárias, caso contrário, os valores serão solicitados:
 
    ```bash
    azdata bdc create --config-profile custom --accept-eula yes
    ```
 
-> Para obter mais informações sobre a estrutura de um arquivo de configuração de implantação, consulte a [referência do arquivo de configuração de implantação](reference-deployment-config.md). Para obter mais exemplos de configuração, consulte [definir configurações de implantação para clusters de Big data](deployment-custom-configuration.md).
+> Para obter mais informações sobre a estrutura de um arquivo de configuração de implantação, confira a [Referência do arquivo de configuração de implantação](reference-deployment-config.md). Para obter mais exemplos de configuração, confira [Definir configurações de implantação para clusters de Big Data](deployment-custom-configuration.md).
 
-## <a id="env"></a>Variáveis de ambiente
+## <a id="env"></a> Variáveis de ambiente
 
 As variáveis de ambiente a seguir são usadas para configurações de segurança que não são armazenadas em um arquivo de configuração de implantação. Observe que as configurações do Docker, exceto as credenciais, podem ser definidas no arquivo de configuração.
 
 | Variável de ambiente | Requisito |Descrição |
 |---|---|---|
-| **CONTROLLER_USERNAME** | Obrigatório |O nome de usuário para o administrador de cluster. |
-| **CONTROLLER_PASSWORD** | Obrigatório |A senha para o administrador do cluster. |
-| **MSSQL_SA_PASSWORD** | Obrigatório |A senha do usuário SA para a instância mestra do SQL. |
-| **KNOX_PASSWORD** | Obrigatório |A senha do usuário do Knox. |
-| **ACCEPT_EULA**| Necessário para o primeiro uso de`azdata`| Não requer valor. Quando definido como uma variável de ambiente, ele aplica o EULA ao SQL Server `azdata`e ao. Se não estiver definido como variável de ambiente, você `--accept-eula` poderá incluir no primeiro uso `azdata` do comando.|
-| **DOCKER_USERNAME** | Opcional | O nome de usuário para acessar as imagens de contêiner, caso elas sejam armazenadas em um repositório privado. Consulte o tópico [offline](deploy-offline.md) Implantations para obter mais detalhes sobre como usar um repositório privado do Docker para Big data implantação de cluster.|
+| **CONTROLLER_USERNAME** | Obrigatório |O nome de usuário do administrador do cluster. |
+| **CONTROLLER_PASSWORD** | Obrigatório |A senha do administrador do cluster. |
+| **MSSQL_SA_PASSWORD** | Obrigatório |A senha do usuário SA para a instância mestre do SQL. |
+| **KNOX_PASSWORD** | Obrigatório |A senha do usuário Knox. |
+| **ACCEPT_EULA**| Necessário para o primeiro uso de `azdata`| Não requer valor. Quando definido como uma variável de ambiente, ele aplica o EULA ao SQL Server e ao `azdata`. Se não estiver definido como variável de ambiente, você poderá incluir `--accept-eula` no primeiro uso do comando `azdata`.|
+| **DOCKER_USERNAME** | Opcional | O nome de usuário para acessar as imagens de contêiner caso elas sejam armazenadas em um repositório privado. Confira o tópico [Implantações offline](deploy-offline.md) para obter mais detalhes sobre como usar um repositório privado do Docker para implantação de cluster de Big Data.|
 | **DOCKER_PASSWORD** | Opcional |A senha para acessar o repositório privado acima. |
 
-Essas variáveis de ambiente devem ser definidas antes de chamar **azdata BDC Create**. Se qualquer variável não for definida, você será solicitado a fazê-lo.
+Essas variáveis de ambiente devem ser definidas antes de chamar **azdata bdc create**. Se alguma variável não for definida, você deverá fazê-lo.
 
-O exemplo a seguir mostra como definir as variáveis de ambiente para Linux (bash) e Windows (PowerShell):
+O exemplo a seguir mostra como definir as variáveis de ambiente para Linux (Bash) e Windows (PowerShell):
 
 ```bash
 export CONTROLLER_USERNAME=admin
@@ -170,7 +170,7 @@ SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
 ```
 
-Depois de definir as variáveis de ambiente, você `azdata bdc create` deve executar o para disparar a implantação. Este exemplo usa o perfil de configuração de cluster criado acima:
+Depois de definir as variáveis de ambiente, você deve executar `azdata bdc create` para disparar a implantação. Este exemplo usa o perfil de configuração de cluster criado acima:
 
 ```bash
 azdata bdc create --config-profile custom --accept-eula yes
@@ -178,22 +178,22 @@ azdata bdc create --config-profile custom --accept-eula yes
 
 Observe as seguintes diretrizes:
 
-- Certifique-se de encapsular a senha entre aspas duplas se ela contiver caracteres especiais. Você pode definir o **MSSQL_SA_PASSWORD** como o que desejar, mas certifique-se de que a senha seja suficientemente complexa e `!`não `&` use `'` os caracteres ou. Observe que os delimitadores de aspas duplas funcionam apenas em comandos bash.
-- O logon **SA** é um administrador do sistema na instância mestra do SQL Server que é criada durante a instalação. Depois de criar seu contêiner de SQL Server, a variável de ambiente **MSSQL_SA_PASSWORD** especificada é detectável por meio `echo $MSSQL_SA_PASSWORD` da execução no contêiner. Para fins de segurança, altere sua senha SA de acordo com as práticas recomendadas documentadas [aqui](../linux/quickstart-install-connect-docker.md#sapassword).
+- Encapsule a senha entre aspas duplas se ela contiver caracteres especiais. Você pode definir **MSSQL_SA_PASSWORD** como o que desejar, mas garanta que a senha seja suficientemente complexa e não use os caracteres `!`, `&` ou `'`. Observe que os delimitadores de aspas duplas funcionam apenas em comandos de Bash.
+- O logon **SA** é um administrador do sistema na instância mestre do SQL Server que é criada durante a instalação. Depois de criar o contêiner do SQL Server, a variável de ambiente **MSSQL_SA_PASSWORD** especificada é detectável executando `echo $MSSQL_SA_PASSWORD` no contêiner. Para fins de segurança, altere sua senha SA de acordo com as práticas recomendadas documentadas [aqui](../linux/quickstart-install-connect-docker.md#sapassword).
 
-## <a id="unattended"></a>Instalação autônoma
+## <a id="unattended"></a> Instalação autônoma
 
-Para uma implantação autônoma, você deve definir todas as variáveis de ambiente necessárias, usar um arquivo de configuração e chamar `azdata bdc create` o comando com `--accept-eula yes` o parâmetro. Os exemplos na seção anterior demonstram a sintaxe de uma instalação autônoma.
+Para uma implantação autônoma, você precisa definir todas as variáveis de ambiente necessárias, usar um arquivo de configuração e chamar o comando `azdata bdc create` com o parâmetro `--accept-eula yes`. Os exemplos na seção anterior demonstram a sintaxe de uma instalação autônoma.
 
-## <a id="monitor"></a>Monitorar a implantação
+## <a id="monitor"></a> Monitorar a implantação
 
-Durante a inicialização do cluster, a janela de comando do cliente produzirá o status da implantação. Durante o processo de implantação, você deverá ver uma série de mensagens em que ela está aguardando o Pod do controlador:
+Durante a inicialização do cluster, a janela Comando do cliente produzirá o status da implantação. Durante o processo de implantação, você deverá ver uma série de mensagens em que ele está aguardando o pod do controlador:
 
 ```output
 Waiting for cluster controller to start.
 ```
 
-Em 15 a 30 minutos, você deve ser notificado de que o Pod do controlador está em execução:
+Em 15 a 30 minutos, você deve ser notificado de que o pod do controlador está em execução:
 
 ```output
 Cluster controller endpoint is available at 11.111.111.11:30080.
@@ -201,31 +201,31 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> A implantação inteira pode levar muito tempo devido ao tempo necessário para baixar as imagens de contêiner para os componentes do cluster de Big Data. No entanto, não deve levar várias horas. Se você estiver tendo problemas com sua implantação, consulte [monitoramento e solução de problemas SQL Server clusters de Big data](cluster-troubleshooting-commands.md).
+> A implantação inteira pode ser muito demorada devido ao tempo necessário para baixar as imagens de contêiner para os componentes do cluster de Big Data. No entanto, não deve demorar várias horas. Se você estiver tendo problemas com sua implantação, confira [Monitoramento e solução de problemas de clusters de Big Data do SQL Server](cluster-troubleshooting-commands.md).
 
-Quando a implantação for concluída, a saída notifica você sobre o sucesso:
+Quando a implantação for concluída, a saída notificará você sobre o sucesso:
 
 ```output
 Cluster deployed successfully.
 ```
 
 > [!TIP]
-> O nome padrão para o cluster Big data implantado é a menos que seja `mssql-cluster` modificado por uma configuração personalizada.
+> O nome padrão para o cluster de Big Data implantado é `mssql-cluster`, a menos que seja modificado por uma configuração personalizada.
 
-## <a id="endpoints"></a>Recuperar pontos de extremidade
+## <a id="endpoints"></a> Recuperar pontos de extremidade
 
-Depois que o script de implantação for concluído com êxito, você poderá obter os endereços IP dos pontos de extremidade externos para o cluster Big Data usando as etapas a seguir.
+Depois que o script de implantação foi concluído com êxito, você pode obter os endereços IP dos pontos de extremidade externos do cluster de Big Data usando as etapas a seguir.
 
-1. Após a implantação, localize o endereço IP do ponto de extremidade do controlador da saída padrão de implantação ou examinando a saída de IP externo do seguinte comando **kubectl** :
+1. Após a implantação, localize o endereço IP do ponto de extremidade do controlador da saída padrão de implantação ou examinando a saída EXTERNAL-IP do seguinte comando **kubectl**:
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
    > [!TIP]
-   > Se você não alterou o nome padrão durante a implantação, `-n mssql-cluster` use no comando anterior. **MSSQL-cluster** é o nome padrão para o cluster de Big Data.
+   > Se não tiver alterado o nome padrão durante a implantação, use `-n mssql-cluster` no comando anterior. **mssql-cluster** é o nome padrão do cluster de Big Data.
 
-1. Faça logon no cluster Big Data com [logon azdata](reference-azdata.md). Defina o parâmetro **--Controller-Endpoint** como o endereço IP externo do ponto de extremidade do controlador.
+1. Faça logon no cluster de Big Data usando [azdata login](reference-azdata.md). Defina o parâmetro **--controller-endpoint** como o endereço IP externo do ponto de extremidade do controlador.
 
    ```bash
    azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
@@ -233,7 +233,7 @@ Depois que o script de implantação for concluído com êxito, você poderá ob
 
    Especifique o nome de usuário e a senha que você configurou para o controlador (CONTROLLER_USERNAME e CONTROLLER_PASSWORD) durante a implantação.
 
-1. Execute a [lista de pontos de extremidade do BDC do azdata](reference-azdata-bdc-endpoint.md) para obter uma lista com uma descrição de cada ponto de extremidade e seus valores de porta e endereço IP correspondentes. 
+1. Execute [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) para obter uma lista com uma descrição de cada ponto de extremidade e seus valores de porta e endereço IP correspondentes. 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -257,7 +257,7 @@ Depois que o script de implantação for concluído com êxito, você poderá ob
    Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  livy               30443   https
    ```
 
-Você também pode obter todos os pontos de extremidade de serviço implantados para o cluster executando o seguinte comando **kubectl** :
+Você também pode obter todos os pontos de extremidade de serviço implantados para o cluster executando o seguinte comando **kubectl**:
 
 ```bash
 kubectl get svc -n <your-big-data-cluster-name>
@@ -271,18 +271,18 @@ Se você estiver usando o minikube, será necessário executar o comando a segui
 minikube ip
 ```
 
-## <a id="status"></a>Verificar o status do cluster
+## <a id="status"></a> Verificar o status do cluster
 
-Após a implantação, você pode verificar o status do cluster com o comando [azdata BDC status show](reference-azdata-bdc-status.md) .
+Após a implantação, você pode verificar o status do cluster usando o comando [azdata bdc status show](reference-azdata-bdc-status.md).
 
 ```bash
 azdata bdc status show -o table
 ```
 
 > [!TIP]
-> Para executar os comandos de status, primeiro você deve fazer logon com o comando de **logon azdata** , que foi mostrado na seção pontos de extremidade anteriores.
+> Para executar os comandos de status, primeiro você precisa fazer logon usando o comando **azdata login**, que foi mostrado na seção anterior sobre pontos de extremidade.
 
-Veja a seguir uma saída de exemplo deste comando:
+Veja a seguir a saída de exemplo deste comando:
 
 ```output
 Kind     Name           State
@@ -297,21 +297,21 @@ Storage  default        Ready
 
 No status do resumo, você também pode obter o status mais detalhado com os seguintes comandos:
 
-- [status do controle do BDC azdata](reference-azdata-bdc-control-status.md)
-- [status do pool BDC azdata](reference-azdata-bdc-pool-status.md)
+- [azdata bdc control status](reference-azdata-bdc-control-status.md)
+- [azdata bdc pool status](reference-azdata-bdc-pool-status.md)
 
 A saída desses comandos contém URLs para os painéis Kibana e Grafana para uma análise mais detalhada.
 
-Além de usar o **azdata**, você também pode usar Azure Data Studio para localizar os pontos de extremidade e as informações de status. Para obter mais informações sobre como exibir o status do cluster com **azdata** e Azure Data Studio, consulte [como exibir o status de um cluster de Big data](view-cluster-status.md).
+Além de usar **azdata**, você também pode usar o Azure Data Studio para localizar os pontos de extremidade e as informações de status. Para obter mais informações sobre como exibir o status do cluster com **azdata** e o Azure Data Studio, confira [Como exibir o status de um cluster de Big Data](view-cluster-status.md).
 
-## <a id="connect"></a>Conectar-se ao cluster
+## <a id="connect"></a> Conectar-se ao cluster
 
-Para obter mais informações sobre como se conectar ao cluster de Big Data, consulte [conectar-se a um SQL Server Big data cluster com Azure Data Studio](connect-to-big-data-cluster.md).
+Para obter mais informações sobre como conectar-se ao cluster de Big Data, confira [Conectar-se a um cluster de Big Data do SQL Server com o Azure Data Studio](connect-to-big-data-cluster.md).
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber mais sobre a implantação de cluster Big Data, consulte os seguintes recursos:
+Para saber mais sobre a implantação do cluster de Big Data, confira os seguintes recursos:
 
 - [Definir configurações de implantação para clusters de Big Data](deployment-custom-configuration.md)
-- [Executar uma implantação offline de um cluster SQL Server Big Data](deploy-offline.md)
-- [Oficina Arquitetura de clusters de Big Data Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Executar uma implantação offline de um cluster de Big Data do SQL Server](deploy-offline.md)
+- [Workshop: Arquitetura de clusters de Big Data do Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

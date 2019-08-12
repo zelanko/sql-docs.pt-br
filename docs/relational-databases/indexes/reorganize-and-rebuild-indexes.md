@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b02d7c93ad2858c1463e3283135f1a3e2cc841b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18aa4d46a82121d2522260f146315f89b36a1803
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909586"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476254"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Reorganizar e recriar índices
 
@@ -64,18 +64,35 @@ O conjunto de resultados retornado pela função **sys.dm_db_index_physical_stat
 
 Depois que o grau de fragmentação for conhecido, use a tabela a seguir para determinar o melhor método para corrigir a fragmentação.
 
-|Valor**avg_fragmentation_in_percent**|Instrução corretiva|
+|Valor**avg_fragmentation_in_percent** |Instrução corretiva|
 |-----------------------------------------------|--------------------------|
 |> 5% e < = 30%|ALTER INDEX REORGANIZE|
 |> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
 
 <sup>1</sup> A recompilação de um índice pode ser executada online ou offline. A reorganização de um índice sempre é executada online. Para atingir disponibilidade semelhante à opção de reorganização, recrie índices online.
 
-Esses valores fornecem uma orientação aproximada para determinar o ponto em que você deve mudar entre `ALTER INDEX REORGANIZE` e `ALTER INDEX REBUILD`. Contudo, os valores reais podem variar de acordo com o caso. É importante que você experimente para poder determinar o melhor limite para um ambiente.
+> [!TIP]
+> Esses valores fornecem uma orientação aproximada para determinar o ponto em que você deve mudar entre `ALTER INDEX REORGANIZE` e `ALTER INDEX REBUILD`. Contudo, os valores reais podem variar de acordo com o caso. É importante que você experimente para poder determinar o melhor limite para um ambiente. Por exemplo, se um determinado índice for usado principalmente para operações de verificação, o desempenho delas poderá ser aprimorado pela remoção da fragmentação. O benefício de desempenho é menos perceptível para índices que são usados principalmente para operações de busca. Da mesma forma, remover a fragmentação em um heap (uma tabela sem índice clusterizado) é especialmente útil para operações de verificação de índice não clusterizado, mas tem pouco efeito em operações de pesquisa.
+
 Em geral, níveis muito baixos de fragmentação (menos de 5 por cento) não devem ser resolvidos por nenhum desses comandos, pois o benefício da remoção de uma pequena quantidade de fragmentação é quase sempre amplamente excedido pelo custo da reorganização ou da recriação do índice. Para obter mais informações sobre `ALTER INDEX REORGANIZE` e `ALTER INDEX REBUILD`, consulte [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).
 
 > [!NOTE]
 > A recriação ou reorganização de índices pequenos geralmente não reduz a fragmentação. As páginas de índices pequenos às vezes são armazenadas em extensões mistas. Extensões mistas são compartilhadas por até oito objetos, portanto, a fragmentação em um índice pequeno pode não ser reduzida após a reorganização ou recriação.
+
+### <a name="index-defragmentation-considerations"></a>Considerações sobre fragmentação de índice
+Em determinadas condições, recompilar um índice clusterizado recompilará automaticamente qualquer índice não clusterizado que faça referência à chave de clustering, se os identificadores físicos ou lógicos contidos nos registros de índice não clusterizados precisarem ser alterados.
+
+Cenários que requerem que todos os índices não clusterizados sejam recompilados em uma tabela:
+
+-  Criar um índice clusterizado em uma tabela
+-  Remover um índice clusterizado, fazendo com que a tabela seja armazenada como um heap
+-  Alterar a chave de clustering para incluir ou excluir colunas
+
+Cenários que não requerem que todos os índices não clusterizados sejam recompilados em uma tabela:
+
+-  Recompilar um índice clusterizado exclusivo
+-  Recompilar um índice clusterizado não exclusivo
+-  Alterar o esquema de índice (assim como ao aplicar um esquema de particionamento a um índice clusterizado) ou mover o índice clusterizado para um grupo de arquivos diferente
 
 ### <a name="Restrictions"></a> Limitações e restrições
 
@@ -96,7 +113,7 @@ Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no q
 
 #### <a name="Permissions"></a> Permissões
 
-Requer a permissão ALTER na tabela ou exibição. O usuário deve ser um membro de pelo menos uma das seguintes funções:
+Requer a permissão `ALTER` na tabela ou exibição. O usuário deve ser um membro de pelo menos uma das seguintes funções:
 
 - Função de banco de dados **db_ddladmin** <sup>1</sup>
 - Função de banco de dados **db_owner**

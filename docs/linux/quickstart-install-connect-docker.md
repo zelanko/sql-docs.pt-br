@@ -1,7 +1,7 @@
 ---
-title: Introdução aos contêineres do SQL Server Linux no Docker
+title: Introdução a contêineres do Linux do SQL Server no Docker
 titleSuffix: SQL Server
-description: Este guia de início rápido mostra como usar o Docker para executar as imagens de contêiner SQL Server 2017 e 2019. Em seguida, ele mostra como criar e consultar um banco de dados com sqlcmd.
+description: Este guia de início rápido mostra como usar o Docker para executar as imagens de contêiner do SQL Server 2017 e 2019. Em seguida, ele mostra como criar e consultar um banco de dados com sqlcmd.
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
@@ -14,14 +14,14 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: addb8d43a48247206a59d90bac94b998d5b29a81
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
-ms.translationtype: MT
+ms.openlocfilehash: 48f87e876f7b73457cdf1ebf0e6201e9fd8032cc
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329255"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68476040"
 ---
-# <a name="quickstart-run-sql-server-container-images-with-docker"></a>Início Rápido: Executar SQL Server imagens de contêiner com o Docker
+# <a name="quickstart-run-sql-server-container-images-with-docker"></a>Início Rápido: Executar imagens de contêiner do SQL Server com o Docker
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -31,24 +31,24 @@ ms.locfileid: "68329255"
 Neste guia de início rápido, você usará o Docker para efetuar pull e executar a imagem de contêiner do SQL Server 2017, ou seja, a [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server). Em seguida, você se conectará à ferramenta **sqlcmd** para criar seu primeiro banco de dados e executar consultas.
 
 > [!TIP]
-> Se você quiser experimentar a imagem de visualização SQL Server 2019, consulte a [versão de visualização SQL Server 2019 deste artigo](quickstart-install-connect-docker.md?view=sql-server-linux-ver15).
+> Se você quiser experimentar a imagem de versão prévia do SQL Server 2019, confira a [versão prévia do SQL Server 2019 deste artigo](quickstart-install-connect-docker.md?view=sql-server-linux-ver15).
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Neste guia de início rápido, você usa o Docker para efetuar pull e executar a imagem de contêiner SQL Server 2019 Preview, [MSSQL-Server](https://hub.docker.com/r/microsoft/mssql-server). Em seguida, você se conectará à ferramenta **sqlcmd** para criar seu primeiro banco de dados e executar consultas.
+Neste guia de início rápido, você usará o Docker para efetuar pull e executar a imagem de contêiner em versão prévia do SQL Server 2019, ou seja, a [mssql-server](https://hub.docker.com/r/microsoft/mssql-server). Em seguida, você se conectará à ferramenta **sqlcmd** para criar seu primeiro banco de dados e executar consultas.
 
 > [!TIP]
-> Este início rápido cria SQL Server contêineres de versão prévia do 2019. Se preferir criar SQL Server contêineres 2017, consulte a [versão SQL Server 2017 deste artigo](quickstart-install-connect-docker.md?view=sql-server-linux-2017).
+> Este guia de início rápido cria contêineres de versão prévia do SQL Server 2019. Se preferir criar contêineres do SQL Server 2017, confira a [versão do SQL Server 2017 deste artigo](quickstart-install-connect-docker.md?view=sql-server-linux-2017).
 ::: moniker-end
 
-Esta imagem consiste no SQL Server em execução no Linux, com base no Ubuntu 16.04. Ela pode ser usada com o Docker Engine 1.8 ou superior no Linux ou no Docker para Mac/Windows. Este guia de início rápido se concentra principalmente no uso do SQL Server na imagem do **Linux** . A imagem do Windows não é abordada, mas há mais informações sobre ela na [página de Hub do Docker mssql-server-windows-developer](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
+Esta imagem consiste no SQL Server em execução no Linux, com base no Ubuntu 16.04. Ela pode ser usada com o Docker Engine 1.8 ou superior no Linux ou no Docker para Mac/Windows. Este guia de início rápido concentra-se especificamente no uso da imagem do SQL Server em **Linux**. A imagem do Windows não é abordada, mas há mais informações sobre ela na [página de Hub do Docker mssql-server-windows-developer](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
 ## <a id="requirements"></a> Pré-requisitos
 
 - O Docker Engine 1.8 ou superior em qualquer distribuição do Linux ou do Docker para Mac/Windows com suporte. Para obter mais informações, veja [Install Docker](https://docs.docker.com/engine/installation/) (Instalar o Docker).
-- Driver de armazenamento Docker **overlay2** . Esse é o padrão para a maioria dos usuários. Se você achar que não está usando esse provedor de armazenamento e precisar alterar, consulte as instruções e avisos na [documentação do Docker para configurar o overlay2](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver).
+- Driver de armazenamento **overlay2** do Docker. Esse é o padrão para a maioria dos usuários. Se você perceber que não está usando esse provedor de armazenamento e precisar alterar, confira as instruções e avisos na [documentação do Docker para configurar o overlay2](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver).
 - Mínimo de 2 GB de espaço em disco.
 - Mínimo de 2 GB de RAM.
 - [Requisitos do sistema do SQL Server no Linux](sql-server-linux-setup.md#system).
@@ -57,11 +57,11 @@ Esta imagem consiste no SQL Server em execução no Linux, com base no Ubuntu 16
 any changes to one section should be duplicated in the other-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="pullandrun2017"></a>Efetuar pull e executar a imagem de contêiner
+## <a id="pullandrun2017"></a> Efetuar pull e executar a imagem de contêiner
 
-Antes de iniciar as etapas a seguir, verifique se você selecionou seu shell preferencial (bash, PowerShell ou cmd) na parte superior deste artigo.
+Antes de iniciar as etapas a seguir, verifique se você selecionou o shell de sua preferência (Bash, PowerShell ou cmd) na parte superior deste artigo.
 
-1. Receba a imagem de contêiner SQL Server 2017 do Linux do registro de contêiner da Microsoft.
+1. Efetue pull da imagem de contêiner do Linux do SQL Server 2017 no Registro de Contêiner da Microsoft.
 
    ::: zone pivot="cs1-bash"
    ```bash
@@ -82,12 +82,12 @@ Antes de iniciar as etapas a seguir, verifique se você selecionou seu shell pre
    ::: zone-end
 
    > [!TIP]
-   > Se você quiser experimentar a imagem de visualização SQL Server 2019, consulte a [versão de visualização SQL Server 2019 deste artigo](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019).
+   > Se você quiser experimentar a imagem de versão prévia do SQL Server 2019, confira a [versão prévia do SQL Server 2019 deste artigo](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019).
 
-   O comando anterior efetua pull da imagem de contêiner mais recente do SQL Server 2017. Se você quiser efetuar pull de uma imagem específica, adicione dois-pontos e o nome da marca (por exemplo, `mcr.microsoft.com/mssql/server:2017-GA-ubuntu`). Para ver todas as imagens disponíveis, consulte [a página do Hub MSSQL-Server Docker](https://hub.docker.com/r/microsoft/mssql-server).
+   O comando anterior efetua pull da imagem de contêiner mais recente do SQL Server 2017. Se você quiser efetuar pull de uma imagem específica, adicione dois-pontos e o nome da marca (por exemplo, `mcr.microsoft.com/mssql/server:2017-GA-ubuntu`). Para ver todas as imagens disponíveis, confira [a página do Docker Hub do mssql-server](https://hub.docker.com/r/microsoft/mssql-server).
 
    ::: zone pivot="cs1-bash"
-   Para os comandos bash neste artigo, `sudo` é usado. No MacOS, `sudo` talvez não seja necessário. No Linux, se você não quiser usar `sudo` o para executar o Docker, poderá configurar um grupo do **Docker** e adicionar usuários a esse grupo. Para obter mais informações, consulte [etapas pós-instalação para Linux](https://docs.docker.com/install/linux/linux-postinstall/).
+   Para os comandos de Bash neste artigo, `sudo` é usado. No MacOS, `sudo` talvez não seja necessário. No Linux, se você não quiser usar `sudo` o para executar o Docker, poderá configurar um grupo do **docker** e adicionar usuários a esse grupo. Para obter mais informações, veja [Etapas de pós-instalação para o Linux](https://docs.docker.com/install/linux/linux-postinstall/).
    ::: zone-end
 
 2. Para executar a imagem de contêiner com o Docker, você pode usar o comando a seguir de um shell bash (Linux/macOS) ou do prompt de comando do PowerShell elevado.
@@ -117,7 +117,7 @@ Antes de iniciar as etapas a seguir, verifique se você selecionou seu shell pre
    ::: zone-end
 
    > [!NOTE]
-   > A senha deverá seguir a política de senha padrão do SQL Server, caso contrário, o contêiner não poderá instalar o SQL Server e deixará de funcionar. Por padrão, a senha deve ter pelo menos 8 caracteres e conter caracteres de três dos quatro conjuntos a seguir: Letras maiúsculas, letras minúsculas, dígitos de base 10 e símbolos. É possível examinar o log de erros executando o comando [docker logs](https://docs.docker.com/engine/reference/commandline/logs/).
+   > A senha deverá seguir a política de senha padrão do SQL Server, caso contrário, o contêiner não poderá instalar o SQL Server e deixará de funcionar. Por padrão, a senha deve ter pelo menos oito caracteres e conter caracteres de três dos quatro conjuntos a seguir: Letras maiúsculas, letras minúsculas, dígitos de base 10 e símbolos. É possível examinar o log de erros executando o comando [docker logs](https://docs.docker.com/engine/reference/commandline/logs/).
 
    > [!NOTE]
    > Por padrão, isso cria um contêiner com a edição Developer do SQL Server 2017. O processo para executar edições de produção em contêineres é um pouco diferente. Para obter mais informações, veja [Executar imagens de contêiner de produção](sql-server-linux-configure-docker.md#production).
@@ -127,8 +127,8 @@ Antes de iniciar as etapas a seguir, verifique se você selecionou seu shell pre
    | Parâmetro | Descrição |
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  Defina a variável **ACCEPT_EULA** com qualquer valor para confirmar sua aceitação dos [Termos de Licença](https://go.microsoft.com/fwlink/?LinkId=746388). Configuração exigida para a imagem do SQL Server. |
-   | **-e ' SA_PASSWORD =\<YourStrong! Passw0rd\>'** | Especifique sua própria senha forte que tenha pelo menos 8 caracteres e atenda aos [Requisitos de senha do SQL Server](../relational-databases/security/password-policy.md). Configuração exigida para a imagem do SQL Server. |
-   | **-p 1433:1433** | Mapeie uma porta TCP no ambiente do host (primeiro valor) para uma porta TCP no contêiner (segundo valor). Neste exemplo, SQL Server está escutando no TCP 1433 no contêiner e isso é exposto à porta, 1433, no host. |
+   | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | Especifique sua própria senha forte que tenha pelo menos 8 caracteres e atenda aos [Requisitos de senha do SQL Server](../relational-databases/security/password-policy.md). Configuração exigida para a imagem do SQL Server. |
+   | **-p 1433:1433** | Mapeie uma porta TCP no ambiente do host (primeiro valor) para uma porta TCP no contêiner (segundo valor). Neste exemplo, o SQL Server está escutando na TCP 1433 no contêiner e isso é exposto para a porta 1433 no host. |
    | **--name sql1** | Especifique um nome personalizado para o contêiner em vez de um nome gerado aleatoriamente. Se você executar mais de um contêiner, não será possível reutilizar esse mesmo nome. |
    | **mcr.microsoft.com/mssql/server:2017-latest** | A imagem de contêiner do SQL Server 2017 do Linux. |
 
@@ -176,37 +176,37 @@ Configurar `-h` e `--name` com o mesmo valor é uma boa maneira de identificar f
 <!--This is the 2019 version of the "Pull and run" section-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="pullandrun2019"></a>Efetuar pull e executar a imagem de contêiner
+## <a id="pullandrun2019"></a> Efetuar pull e executar a imagem de contêiner
 
-Antes de iniciar as etapas a seguir, verifique se você selecionou seu shell preferencial (bash, PowerShell ou cmd) na parte superior deste artigo.
+Antes de iniciar as etapas a seguir, verifique se você selecionou o shell de sua preferência (Bash, PowerShell ou cmd) na parte superior deste artigo.
 
-1. Receba a imagem de contêiner do Linux da versão prévia SQL Server 2019 do Hub do Docker.
+1. Efetue pull da imagem de contêiner do SQL Server 2019 (versão prévia) em Linux por meio do Docker Hub.
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
    ::: zone-end
 
    > [!TIP]
-   > Este guia de início rápido usa a imagem do Docker do SQL Server 2019 Preview. Se você quiser executar a imagem SQL Server 2017, consulte a [versão SQL Server 2017 deste artigo](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017).
+   > Este guia de início rápido usa a imagem do Docker da versão prévia do SQL Server 2019. Se você quiser executar a imagem do SQL Server 2017, confira a [versão do SQL Server 2017 deste artigo](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017).
 
-   O comando anterior efetua pull da imagem de contêiner SQL Server 2019 Preview com base no Ubuntu. Para usar imagens de contêiner com base no RedHat, consulte [executar imagens de contêiner com base em RHEL](sql-server-linux-configure-docker.md#rhel). Para ver todas as imagens disponíveis, veja [a página de hub do Docker mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server).
+   O comando anterior efetua pull da imagem de contêiner da versão prévia do SQL Server 2019 com base no Ubuntu. Para usar imagens de contêiner com base no RedHat, confira [Executar imagens de contêiner com base em RHEL](sql-server-linux-configure-docker.md#rhel). Para ver todas as imagens disponíveis, veja [a página de hub do Docker mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server).
 
    ::: zone pivot="cs1-bash"
-   Para os comandos bash neste artigo, `sudo` é usado. No MacOS, `sudo` talvez não seja necessário. No Linux, se você não quiser usar `sudo` o para executar o Docker, poderá configurar um grupo do **Docker** e adicionar usuários a esse grupo. Para obter mais informações, consulte [etapas pós-instalação para Linux](https://docs.docker.com/install/linux/linux-postinstall/).
+   Para os comandos de Bash neste artigo, `sudo` é usado. No MacOS, `sudo` talvez não seja necessário. No Linux, se você não quiser usar `sudo` o para executar o Docker, poderá configurar um grupo do **docker** e adicionar usuários a esse grupo. Para obter mais informações, veja [Etapas de pós-instalação para o Linux](https://docs.docker.com/install/linux/linux-postinstall/).
    ::: zone-end
 
 2. Para executar a imagem de contêiner com o Docker, você pode usar o comando a seguir de um shell bash (Linux/macOS) ou do prompt de comando do PowerShell elevado.
@@ -215,7 +215,7 @@ Antes de iniciar as etapas a seguir, verifique se você selecionou seu shell pre
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
    ::: zone-end
 
@@ -223,7 +223,7 @@ Antes de iniciar as etapas a seguir, verifique se você selecionou seu shell pre
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
    ::: zone-end
 
@@ -231,25 +231,25 @@ Antes de iniciar as etapas a seguir, verifique se você selecionou seu shell pre
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
    ::: zone-end
 
    > [!NOTE]
-   > A senha deverá seguir a política de senha padrão do SQL Server, caso contrário, o contêiner não poderá instalar o SQL Server e deixará de funcionar. Por padrão, a senha deve ter pelo menos 8 caracteres e conter caracteres de três dos quatro conjuntos a seguir: Letras maiúsculas, letras minúsculas, dígitos de base 10 e símbolos. É possível examinar o log de erros executando o comando [docker logs](https://docs.docker.com/engine/reference/commandline/logs/).
+   > A senha deverá seguir a política de senha padrão do SQL Server, caso contrário, o contêiner não poderá instalar o SQL Server e deixará de funcionar. Por padrão, a senha deve ter pelo menos oito caracteres e conter caracteres de três dos quatro conjuntos a seguir: Letras maiúsculas, letras minúsculas, dígitos de base 10 e símbolos. É possível examinar o log de erros executando o comando [docker logs](https://docs.docker.com/engine/reference/commandline/logs/).
 
    > [!NOTE]
-   > Por padrão, isso cria um contêiner com a edição Developer do SQL Server 2019 Preview.
+   > Por padrão, isso cria um contêiner com a edição Developer da versão prévia do SQL Server 2019.
 
    A tabela a seguir fornece uma descrição dos parâmetros no exemplo de `docker run` anterior:
 
    | Parâmetro | Descrição |
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  Defina a variável **ACCEPT_EULA** com qualquer valor para confirmar sua aceitação dos [Termos de Licença](https://go.microsoft.com/fwlink/?LinkId=746388). Configuração exigida para a imagem do SQL Server. |
-   | **-e ' SA_PASSWORD =\<YourStrong! Passw0rd\>'** | Especifique sua própria senha forte que tenha pelo menos 8 caracteres e atenda aos [Requisitos de senha do SQL Server](../relational-databases/security/password-policy.md). Configuração exigida para a imagem do SQL Server. |
-   | **-p 1433:1433** | Mapeie uma porta TCP no ambiente do host (primeiro valor) para uma porta TCP no contêiner (segundo valor). Neste exemplo, SQL Server está escutando no TCP 1433 no contêiner e isso é exposto à porta, 1433, no host. |
+   | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | Especifique sua própria senha forte que tenha pelo menos 8 caracteres e atenda aos [Requisitos de senha do SQL Server](../relational-databases/security/password-policy.md). Configuração exigida para a imagem do SQL Server. |
+   | **-p 1433:1433** | Mapeie uma porta TCP no ambiente do host (primeiro valor) para uma porta TCP no contêiner (segundo valor). Neste exemplo, o SQL Server está escutando na TCP 1433 no contêiner e isso é exposto para a porta 1433 no host. |
    | **--name sql1** | Especifique um nome personalizado para o contêiner em vez de um nome gerado aleatoriamente. Se você executar mais de um contêiner, não será possível reutilizar esse mesmo nome. |
-   | **mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu** | A imagem de contêiner do SQL Server 2019 CTP 3.1 Linux. |
+   | **mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu** | A imagem de contêiner do CTP3.2 do SQL Server 2019 do Linux. |
 
 3. Para exibir seus contêineres do Docker, use o comando `docker ps`.
 
@@ -291,7 +291,7 @@ Configurar `-h` e `--name` com o mesmo valor é uma boa maneira de identificar f
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
 
-## <a id="sapassword"></a>Alterar a senha SA
+## <a id="sapassword"></a> Alterar a senha SA
 
 <!-- This section was pasted in from includes/sql-server-linux-change-docker-password.md, to better support zone pivots. 2019/02/11 -->
 
@@ -299,7 +299,7 @@ A conta **SA** é um administrador do sistema na instância do SQL Server que é
 
 1. Escolha uma senha forte para usar no usuário de SA.
 
-1. Use `docker exec` para executar **sqlcmd** para alterar a senha usando o Transact-SQL. No exemplo a seguir, substitua a senha antiga, `<YourStrong!Passw0rd>`e a nova senha, `<YourNewStrong!Passw0rd>`, por seus próprios valores de senha.
+1. Use `docker exec` para executar **sqlcmd** para alterar a senha usando o Transact-SQL. No exemplo a seguir, substitua a senha antiga, `<YourStrong!Passw0rd>`e a nova senha, `<YourNewStrong!Passw0rd>`, por suas próprias senhas.
 
    ::: zone pivot="cs1-bash"
    ```bash
@@ -444,13 +444,13 @@ Agora, execute uma consulta para retornar da tabela `Inventory`.
 
 Você também pode se conectar à instância do SQL Server em seu computador do Docker usando qualquer ferramenta externa do macOS, do Windows ou do Linux que seja compatível com conexões SQL.
 
-As etapas a seguir usam a **sqlcmd** fora do contêiner para conectar-se ao SQL Server em execução no contêiner. Essas etapas consideram que as ferramentas de linha de comando do SQL Server já estejam instaladas fora do contêiner. Os mesmos princípios se aplicam ao usar outras ferramentas, mas o processo de conexão é exclusivo para cada ferramenta.
+As etapas a seguir usam a **sqlcmd** fora do contêiner para conectar-se ao SQL Server em execução no contêiner. Essas etapas consideram que as ferramentas de linha de comando do SQL Server já estejam instaladas fora do contêiner. Os mesmos princípios são aplicados ao usar outras ferramentas, mas o processo de conexão é exclusivo de cada ferramenta.
 
 1. Localize o endereço IP do computador que hospeda o contêiner. No Linux, use **ifconfig** ou **ip addr**. No Windows, use **ipconfig**.
 
-1. Para este exemplo, instale a ferramenta **sqlcmd** em seu computador cliente. Para obter mais informações, consulte [instalar o sqlcmd no Windows](../tools/sqlcmd-utility.md) ou [instalar o sqlcmd no Linux](sql-server-linux-setup-tools.md).
+1. Para este exemplo, instale a ferramenta **sqlcmd** no computador cliente. Para obter mais informações, confira [Instalar o sqlcmd no Windows](../tools/sqlcmd-utility.md) ou [Instalar o sqlcmd no Linux](sql-server-linux-setup-tools.md).
 
-1. Execute a sqlcmd especificando o endereço IP e a porta mapeada para a porta 1433 no seu contêiner. Neste exemplo, essa é a mesma porta, 1433, no computador host. Se você especificou uma porta mapeada diferente no computador host, você a usaria aqui.
+1. Execute a sqlcmd especificando o endereço IP e a porta mapeada para a porta 1433 no seu contêiner. Neste exemplo, é a mesma porta 1433 no computador host. Se você especificou uma porta mapeada diferente no computador host, você a usaria aqui.
 
    ::: zone pivot="cs1-bash"
    ```bash
@@ -477,7 +477,7 @@ Outras ferramentas comuns para conectar-se ao SQL Server incluem:
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [SSMS (SQL Server Management Studio) no Windows](sql-server-linux-manage-ssms.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
-- [mssql-cli (Preview)](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md)
+- [mssql-cli (versão prévia)](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md)
 - [PowerShell Core](sql-server-linux-manage-powershell-core.md)
 
 ## <a name="remove-your-container"></a>Remover o contêiner
@@ -516,6 +516,6 @@ Agora que você já tentou usar a imagem de contêiner do SQL Server para Docker
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter um tutorial sobre como restaurar arquivos de backup do banco de dados em um contêiner, confira [Restaurar um banco de dados do SQL Server em um contêiner do Docker do Linux](tutorial-restore-backup-in-sql-server-container.md). Para explorar outros cenários, como a execução de vários contêineres, persistência de dados e solução de problemas, consulte [configurar SQL Server imagens de contêiner no Docker](sql-server-linux-configure-docker.md).
+Para obter um tutorial sobre como restaurar arquivos de backup do banco de dados em um contêiner, confira [Restaurar um banco de dados do SQL Server em um contêiner do Docker do Linux](tutorial-restore-backup-in-sql-server-container.md). Para explorar outros cenários, como a execução de vários contêineres, a persistência de dados e a solução de problemas, confira [Configurar imagens de contêiner do SQL Server no Docker](sql-server-linux-configure-docker.md).
 
 Além disso, confira o [repositório do GitHub mssql-docker](https://github.com/Microsoft/mssql-docker) para obter recursos, comentários e problemas conhecidos.

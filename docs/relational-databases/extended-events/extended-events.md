@@ -1,7 +1,7 @@
 ---
 title: Visão geral de eventos estendidos - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2019
+ms.date: 07/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -10,29 +10,33 @@ ms.topic: overview
 helpviewer_keywords:
 - extended events [SQL Server]
 - xe
+- XEvents
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: abdb5eae1bb24bcedd2095a607895ffa671b7d53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eca3bed56e39330199d491836ac32fadabea1cce
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021837"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941133"
 ---
 # <a name="extended-events-overview"></a>Visão geral de eventos estendidos
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Os Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] têm uma arquitetura altamente escalonável e configurável que permite aos usuários coletar o máximo ou o mínimo de informações, conforme necessário, para solucionar ou identificar um problema.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A arquitetura de eventos estendidos permite que os usuários coletem um volume de dados tão grande ou tão pequeno quanto necessário para identificar ou solucionar um problema de desempenho. Os Eventos Estendidos são configuráveis e escalam muito bem.
 
 Você pode encontrar mais informações sobre Eventos Estendidos em [Início Rápido: eventos estendidos no SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
-
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Benefícios de Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Eventos Estendidos são um sistema de monitoramento de desempenho de peso leve que usa poucos recursos de desempenho. Os Eventos Estendidos fornecem duas interfaces gráficas do usuário (**Assistente de Nova Sessão** e **Nova Sessão**) para criar, modificar, exibir e analisar os dados da sessão.  
-  
+
+Os Eventos Estendidos são um sistema de monitoramento de desempenho de peso leve que usa o mínimo possível de recursos de desempenho. Os Eventos Estendidos fornecem duas interfaces gráficas do usuário para criar, modificar, exibir e analisar os dados da sessão. Essas interfaces são nomeadas:
+
+- Assistente para Nova Sessão
+- Nova Sessão
+
 ## <a name="extended-events-concepts"></a>Conceitos de eventos estendidos  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Os Eventos Estendidos são criados com base em conceitos existentes, como um evento ou um consumidor do evento, usam conceitos de Rastreamento de Eventos para Windows e apresentam novos conceitos.  
   
@@ -40,16 +44,18 @@ Você pode encontrar mais informações sobre Eventos Estendidos em [Início Rá
   
 |Tópico|Descrição|  
 |-----------|-----------------|  
-|[Pacotes de eventos estendidos do SQL Server](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|Descreve os pacotes de Eventos Estendidos que contêm objetos usados para obter e processar dados quando uma sessão de Eventos Estendidos é executada.|  
+|[Pacotes de eventos estendidos do SQL Server](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|Descreve os pacotes de Eventos Estendidos que contêm objetos. Esses objetos são usados para obter e processar dados quando uma sessão de Eventos Estendidos está em execução.|  
 |[Destinos de eventos estendidos do SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|Descreve os consumidores de evento que podem receber dados durante uma sessão de evento.|  
 |[Mecanismo de eventos estendidos do SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)|Descreve o mecanismo que implementa e gerencia uma sessão de Eventos Estendidos.|  
 |[Sessões de eventos estendidos do SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)|Descreve a sessão de Eventos Estendidos.|  
+| &nbsp; | &nbsp; |
   
 ## <a name="extended-events-architecture"></a>Arquitetura de eventos estendidos  
- Os Eventos Estendidos são um sistema geral de manipulação de eventos para sistemas de servidores. A infraestrutura de Eventos Estendidos oferece suporte à correlação de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e, em certas condições, à correlação de dados entre sistema operacional e aplicativos de banco de dados. No último caso, a saída dos Eventos Estendidos deve ser direcionada para o ETW (Rastreamento de Eventos do Windows) a fim de correlacionar dados de evento com o sistema operacional ou os dados de evento do aplicativo.  
-  
- Todos os aplicativos têm pontos de execução que são úteis dentro e fora de um aplicativo. Dentro do aplicativo, o processamento assíncrono pode ser enfileirado usando informações coletadas durante a execução inicial de uma tarefa. Fora do aplicativo, pontos de execução fornecem utilitários de monitoramento com informações sobre as características comportamentais e de desempenho do aplicativo monitorado.  
-  
+
+Os Eventos Estendidos são o nome que usamos para um sistema geral de manipulação de eventos para sistemas de servidores. A infraestrutura de Eventos Estendidos oferece suporte à correlação de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e, em certas condições, à correlação de dados entre sistema operacional e aplicativos de banco de dados. No caso do sistema operacional, a saída de Eventos Estendidos deve ser direcionada para o ETW (Rastreamento de Eventos para Windows). O ETW ainda pode correlacionar os dados de eventos com o sistema operacional ou os dados de eventos de aplicativos.  
+
+Todos os aplicativos têm pontos de execução que são úteis dentro e fora de um aplicativo. Dentro do aplicativo, o processamento assíncrono pode ser enfileirado usando informações coletadas durante a execução inicial de uma tarefa. Fora do aplicativo, os pontos de execução fornecem informações aos utilitários de monitoramento. As informações são sobre as características de comportamento e de desempenho do aplicativo monitorado.  
+
  O sistema Eventos Estendidos oferece suporte a dados de evento fora de um processo. Esses dados são geralmente usados por:  
   
 -   Ferramentas de rastreamento, como o Rastreamento do SQL e o Monitor do Sistema.  
@@ -60,13 +66,13 @@ Você pode encontrar mais informações sobre Eventos Estendidos em [Início Rá
   
  Os Eventos Estendidos têm os estes aspectos de design principais:  
   
--   O mecanismo Eventos Estendidos é agnóstico. Ele permite que o mecanismo associe qualquer evento a qualquer destino porque o mecanismo não é restrito ao conteúdo do evento. Para obter mais informações sobre o mecanismo Eventos Estendidos, consulte [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md).  
+-   O mecanismo Eventos Estendidos é agnóstico. Já que não é restrito ao conteúdo do evento, o mecanismo pode associar qualquer evento a qualquer destino. Para obter mais informações sobre o mecanismo Eventos Estendidos, consulte [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md).  
   
 -   Os eventos são separados dos consumidores de evento, que são chamados *destinos* em Eventos Estendidos. Isso significa que qualquer destino pode receber qualquer evento. Além disso, qualquer evento gerado pode ser consumido automaticamente pelo destino, que pode registrar em log ou fornecer contexto de evento adicional. Para obter mais informações, consulte [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
 -   Os eventos são distintos quanto à ação quando ocorre um evento. Portanto, qualquer ação pode ser associada a qualquer evento.  
   
--   Os predicados podem filtrar dinamicamente quando os dados de evento devem ser capturados. Isso confere flexibilidade à infraestrutura de Eventos Estendidos. Para obter mais informações, consulte [SQL Server Extended Events Packages](../../relational-databases/extended-events/sql-server-extended-events-packages.md).  
+-   Os predicados podem filtrar dinamicamente quando os dados de evento devem ser capturados. A filtragem dinâmica confere flexibilidade à infraestrutura de Eventos Estendidos. Para obter mais informações, consulte [SQL Server Extended Events Packages](../../relational-databases/extended-events/sql-server-extended-events-packages.md).  
   
  O mecanismo Eventos Estendidos pode gerar dados de evento de forma síncrona (e processar os dados de forma assíncrona) o que fornece uma solução flexível para manipulação de eventos. Além disso, o mecanismo Eventos Estendidos fornece os seguintes recursos:  
   
@@ -100,18 +106,23 @@ Usando o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou [!INCLUDE[
 |Descreve como determinar quais consultas estão mantendo o bloqueio, o plano da consulta e a pilha [!INCLUDE[tsql](../../includes/tsql-md.md)] no momento em que o bloqueio foi realizado.|[Determinar quais consultas estão mantendo bloqueios](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
 |Descreve como identificar a origem de bloqueios que estão obstruindo o desempenho do banco de dados.|[Localizar os objetos que detêm a maioria dos bloqueios](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |Descreve como usar os Eventos Estendidos com o Rastreamento de Eventos do Windows para monitorar a atividade do sistema.|[Monitorar a atividade do sistema usando Eventos Estendidos](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
-| Usando Exibições de catálogo e DMVs (Exibições de gerenciamento dinâmico) para eventos estendidos | [SELECTs e JOINs de exibições do sistema dos Eventos Estendidos no SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
+|Usando Exibições de catálogo e DMVs (Exibições de gerenciamento dinâmico) para eventos estendidos | [SELECTs e JOINs de exibições do sistema dos Eventos Estendidos no SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
+| &nbsp; | &nbsp; |
 
 ## <a name="code-examples-can-differ-for-azure-sql-database"></a>Os exemplos de código podem ser diferentes no Banco de Dados SQL do Azure
 
 [!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
-## <a name="see-also"></a>Consulte Também  
- [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [Suporte ao DAC para objetos e versões do SQL Server](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
- [Implantar um aplicativo da camada de dados](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
- [Monitorar aplicativos da camada de dados](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)   
- [Exibições de gerenciamento dinâmico de eventos estendidos](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [Exibições de catálogo de eventos estendidos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
- [XELite: Biblioteca multiplataforma para ler XEvents de arquivos XEL ou fluxos ao vivo do SQL](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), lançado em maio de 2019.   
- [Cmdlet do PowerShell de leitura SQLXEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent), lançado em junho de 2019.
+## <a name="see-also"></a>Consulte Também
+
+[Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)  
+[Suporte ao DAC para objetos e versões do SQL Server](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
+[Implantar um aplicativo da camada de dados](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
+[Monitorar aplicativos da camada de dados](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)  
+&nbsp;  
+[Exibições de gerenciamento dinâmico de eventos estendidos](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)  
+[Exibições do catálogo de eventos estendidos (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
+&nbsp;  
+[XELite: Biblioteca multiplataforma para ler XEvents de arquivos XEL ou fluxos ao vivo do SQL](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), lançado em maio de 2019.  
+[Cmdlet do PowerShell de leitura SQLXEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent), lançado em junho de 2019.  
+[Mistérios do SQL: acompanhamento de causalidade versus sequência de eventos para sessões de XEvent (blog publicado em 1º de abril de 2019)](https://bobsql.com/sql-mysteries-causality-tracking-vs-event-sequence-for-xevent-sessions/)  

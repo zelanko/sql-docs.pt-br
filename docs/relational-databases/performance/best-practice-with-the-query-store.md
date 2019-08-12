@@ -1,7 +1,7 @@
 ---
 title: Práticas recomendadas com o repositório de consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 07/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa4528b916e70ed838ab8f3665de9293646d94ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 917a471183d31fab92aa871b6f71a5835c7999d1
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985032"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495385"
 ---
 # <a name="best-practice-with-the-query-store"></a>Melhor prática com o Repositório de Consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -51,7 +51,7 @@ Os parâmetros padrão são bons o bastante para iniciar, mas você deve monitor
   
  Conforme o Repositório de Consultas coleta consultas, planos de execução e estatísticas, seu tamanho no banco de dados cresce até esse limite ser atingido. Quando isso acontece, o Repositório de Consultas automaticamente altera o modo de operação para somente leitura e para de coletar novos dados, o que significa que a análise de desempenho não é mais precisa.  
   
- O valor padrão (100 MB) pode não ser suficiente se sua carga de trabalho gerar muitos e planos e consultas diferentes, ou caso você deseje manter o histórico de consulta por um período de tempo maior. Controle o uso de espaço atual e aumente o Tamanho Máximo (MB) para impedir que o Repositório de Consultas passe para o modo somente leitura. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou execute o script a seguir para obter as informações mais recentes sobre o tamanho do Repositório de Consultas:  
+ O valor padrão no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] é de 100 MB e poderá não ser suficiente se a carga de trabalho gerar muitos e planos e consultas diferentes ou se você desejar manter o histórico de consulta por um período de tempo maior. No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versões posteriores, o valor padrão é de 1 GB. Controle o uso de espaço atual e aumente o Tamanho Máximo (MB) para impedir que o Repositório de Consultas passe para o modo somente leitura. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou execute o script a seguir para obter as informações mais recentes sobre o tamanho do Repositório de Consultas:  
   
 ```sql 
 USE [QueryStoreDB];  
@@ -109,11 +109,13 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  **Modo de captura do Repositório de Consultas:** Especifica a política de captura de consulta do Repositório de Consultas.  
   
--   **All** – captura todas as consultas. Essa é a opção padrão.  
+-   **All** – captura todas as consultas. Essa é a opção padrão no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].  
   
--   **Auto** – consultas incomuns e consultas com duração de compilação e execução insignificantes são ignoradas. Os limites para a duração da execução de contagem, da compilação e do tempo de execução são determinados internamente.  
+-   **Auto** – consultas incomuns e consultas com duração de compilação e execução insignificantes são ignoradas. Os limites para a duração da execução de contagem, da compilação e do tempo de execução são determinados internamente. No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versões posteriores, essa é a opção padrão.  
   
 -   **None** – o Repositório de Consultas para de capturar novas consultas.  
+
+-   **Custom** – permite controle adicional e ajuste fino da política de coleta de dados. As novas configurações personalizadas definem o que acontece durante o limite de tempo da política de captura interna: um limite de tempo durante o qual as condições configuráveis são avaliadas e, se alguma é verdadeira, a consulta é qualificada para ser capturada pelo Repositório de Consultas.
   
  O script a seguir define o Modo de Captura de Consultas para Auto:  
   
@@ -121,7 +123,64 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
+
+### <a name="examples"></a>Exemplos
+O exemplo a seguir define o modo de Captura de Consulta como AUTO e define outras opções recomendadas no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]:  
   
+```sql  
+ALTER DATABASE [QueryStoreDB]   
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```  
+
+O exemplo a seguir define o modo de Captura de Consulta como AUTO e define outras opções recomendadas no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] para incluir estatísticas de espera:  
+
+```sql
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+O exemplo a seguir define o modo de Captura de Consulta como Automático e define outras opções recomendadas no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e, opcionalmente, define a política de captura Custom com os respectivos padrões:  
+
+```sql
+ALTER DATABASE [QueryStoreDB]  
+SET QUERY_STORE = ON 
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100 
+      )
+    );
+```
+
 ## <a name="how-to-start-with-query-performance-troubleshooting"></a>Como começar a solução de problemas de desempenho de consulta  
  Solucionar problemas de fluxo de trabalho com o Repositório de Consultas é simples, conforme mostrado no diagrama a seguir:  
   
@@ -132,8 +191,8 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
 ```sql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
-  
- Levará algum tempo até que o Repositório de Consultas colete o conjunto de dados que representa com precisão a sua carga de trabalho. Geralmente, um dia é suficiente até mesmo para cargas de trabalho muito complexas. No entanto, você pode começar a explorar os dados e identificar as consultas que exigem atenção imediatamente após a habilitação do recurso.   
+
+Levará algum tempo até que o Repositório de Consultas colete o conjunto de dados que representa com precisão a sua carga de trabalho. Geralmente, um dia é suficiente até mesmo para cargas de trabalho muito complexas. No entanto, você pode começar a explorar os dados e identificar as consultas que exigem atenção imediatamente após a habilitação do recurso.   
 Navegue até a subpasta do Repositório de Consultas sob o nó do banco de dados no Pesquisador de Objetos de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para abrir modos de exibição de solução de problemas para cenários específicos.   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Os modos de exibição do Repositório de Consultas operam com o conjunto de métricas de execução, cada uma expressa em qualquer uma das seguintes funções de estatística:  
   
@@ -246,7 +305,7 @@ FROM sys.database_query_store_options;
   
  Se o problema persistir, isso indicará corrupção dos dados do Repositório de Consultas que estão persistidos no disco.
  
- Para o SQL 2017 e posteriores, é possível recuperar o Repositório de Consultas executando o procedimento armazenado **sp_query_store_consistency_check** no banco de dados afetado. Para o 2016, você precisará limpar os dados do Repositório de Consultas, como mostrado abaixo.
+ No [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e versões posteriores, é possível recuperar o Repositório de Consultas executando o procedimento armazenado **sp_query_store_consistency_check** no banco de dados afetado. Para o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você precisará limpar os dados do Repositório de Consultas, conforme mostrado abaixo.
  
  Se isso não ajudar, você poderá tentar limpar o Repositório de Consultas antes de solicitar o modo de leitura/gravação.  
   
@@ -271,10 +330,14 @@ FROM sys.database_query_store_options;
   
 |Modo de Captura de Consulta|Cenário|  
 |------------------------|--------------|  
-|All|Analise sua carga de trabalho plenamente em termos de todas as formas de consultas, suas frequências de execução e outras estatísticas.<br /><br /> Identifique novas consultas na carga de trabalho.<br /><br /> Detecte se consultas ad hoc são usadas para identificar oportunidades de parametrização automática ou pelo usuário.|  
-|Auto|Concentre sua atenção nas consultas relevantes e acionáveis; as consultas que são executadas regularmente ou que apresentam consumo significativo de recursos.|  
+|All|Analise sua carga de trabalho plenamente em termos de todas as formas de consultas, suas frequências de execução e outras estatísticas.<br /><br /> Identifique novas consultas na carga de trabalho.<br /><br /> Detecte se consultas ad hoc são usadas para identificar oportunidades de parametrização automática ou pelo usuário.<br /><br />**Observação:** Esse é o modo de captura padrão no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|  
+|Auto|Concentre sua atenção nas consultas relevantes e acionáveis; as consultas que são executadas regularmente ou que apresentam consumo significativo de recursos.<br /><br />**Observação:** No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versões posteriores, esse é o modo de captura padrão.|  
 |None|Você já capturou o conjunto de consultas que deseja monitorar no tempo de execução e você deseja eliminar as distrações que outras consultas podem causar.<br /><br /> Nenhuma é adequado para teste e benchmark de ambientes.<br /><br /> Nenhuma também é adequado para fornecedores de software que entregam o Repositório de Consultas configurado para monitorar a sua carga de trabalho do aplicativo.<br /><br /> Nenhuma deve ser usada com cuidado, pois você poderá perder a oportunidade de acompanhar e otimizar consultas novas importantes. Evite usar Nenhuma, a menos que tenha um cenário específico que precise desse modo.|  
-  
+|Personalizar|O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduz um modo de captura CUSTOM no comando `ALTER DATABASE SET QUERY_STORE`. Quando habilitadas, as configurações adicionais do Repositório de Consultas ficam disponíveis em uma nova configuração da Política de Captura do Repositório de Consultas, a fim de ajustar a coleta de dados em um servidor específico.<br /><br />As novas configurações personalizadas definem o que acontece durante o limite de tempo da política de captura interna: um limite de tempo durante o qual as condições configuráveis são avaliadas e, se alguma é verdadeira, a consulta é qualificada para ser capturada pelo Repositório de Consultas. Para obter mais informações, veja [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
+
+> [!NOTE]
+> Cursores, consultas dentro de procedimentos armazenados e consultas compiladas nativamente são sempre capturados quando o modo de captura de consulta é definido como All, Auto ou Custom.
+
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>Manter os dados mais relevantes no Repositório de Consultas  
  Configure o Repositório de Consultas para conter somente os dados relevantes e ele será executado continuamente, fornecendo uma ótima experiência de solução de problemas com um impacto mínimo sobre a sua carga de trabalho regular.  
 A tabela a seguir fornece as práticas recomendadas:  
@@ -310,7 +373,6 @@ Considere a as opções a seguir:
 O Repositório de Consultas associa a entrada da consulta com um objeto recipiente (procedimento armazenado, função e gatilho).  Ao recriar um objeto recipiente, uma nova entrada da consulta será gerada para o mesmo texto da consulta. Isso impedirá você de acompanhar estatísticas de desempenho para essa consulta ao longo do tempo e de usar o mecanismo de imposição de plano. Para evitar isso, use o processo `ALTER <object>` para alterar uma definição de objeto recipiente sempre que possível.  
   
 ##  <a name="CheckForced"></a> Verifique o status de Planos Forçados regularmente  
-
 A imposição de plano é um mecanismo prático para corrigir o desempenho das consultas críticas e torná-las mais previsíveis. No entanto, assim como ocorre com as dicas de plano e guias de plano, impor um plano não é uma garantia de que ele será usado em execuções futuras. Normalmente, quando o esquema de banco de dados é alterado de forma que os objetos referenciados pelo plano de execução são alterados ou removidos, a imposição de plano passará a falhar. Nesse caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] voltará à recompilação de consultas, enquanto o motivo real da falha da imposição será exposto em [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). A consulta a seguir retorna informações sobre planos impostos:  
   
 ```sql  
@@ -340,10 +402,14 @@ Os sinalizadores de rastreamento globais 7745 e 7752 podem ser usados para melho
   
 -  O sinalizador de rastreamento 7752 permite o carregamento assíncrono do Repositório de Consultas. Isso permite que um banco de dados seja colocado online e que consultas a sejam executadas antes do Repositório de Consultas ser totalmente recuperado. O comportamento padrão é fazer um carregamento assíncrono do Repositório de Consultas. O comportamento padrão impede a execução de consultas antes da recuperação do Repositório de Consultas, mas também impede que consultas sejam perdidas na coleta de dados.
 
+   > [!NOTE]
+   > No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versões posteriores, esse comportamento é controlado pelo mecanismo e o sinalizador de rastreamento 7752 não tem nenhum efeito.
+
 > [!IMPORTANT]
 > Se você estiver usando o Repositório de Consultas para obter informações de carga de trabalho em tempo real no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], planeje instalar as correções de escalabilidade de desempenho na [KB 4340759](https://support.microsoft.com/help/4340759) assim que possível. 
 
 ## <a name="see-also"></a>Consulte Também  
+[Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)     
 [Exibições de Catálogo do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)     
 [Procedimentos armazenados do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)     
 [Usar o Repositório de Consultas com OLTP na memória](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)     

@@ -2373,12 +2373,16 @@
       items:
         - name: Baixe o Microsoft JDBC Driver para SQL Server
           href: ../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md
+        - name: Análise dos resultados
+          href: ../connect/jdbc/parsing-the-results.md
         - name: Notas de versão do JDBC Driver
           href: ../connect/jdbc/release-notes-for-the-jdbc-driver.md
         - name: Requisitos de sistema para o JDBC Driver
           href: ../connect/jdbc/system-requirements-for-the-jdbc-driver.md
         - name: Usando JDBC Driver
           href: ../connect/jdbc/using-the-jdbc-driver.md
+        - name: Usando o useFMTOnly
+          href: ../connect/jdbc/using-usefmtonly.md
         - name: Entendendo suporte ao Java EE
           href: ../connect/jdbc/understanding-java-ee-support.md
         - name: Implantando o JDBC Driver
@@ -2538,6 +2542,8 @@
               href: ../connect/jdbc/understanding-data-type-differences.md
             - name: Usando vários conjuntos de resultados
               href: ../connect/jdbc/using-multiple-result-sets.md
+            - name: Usando a autenticação NTLM
+              href: ../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md
             - name: Usando colocação em espera
               href: ../connect/jdbc/using-holdability.md
             - name: Conectando-se usando a Autenticação do Azure Active Directory
