@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 778980ac6b93e7db79d59182fbd18ab4cfdb8b75
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 6e90887cf83d23dc80afa9e37b429ad958e841ad
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426086"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894025"
 ---
 # <a name="azdata-bdc-spark-statement"></a>azdata bdc spark statement
 
@@ -22,7 +22,7 @@ ms.locfileid: "68426086"
 
 O artigo a seguir fornece referência para os comandos **bdc spark statement** na ferramenta **azdata**. Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md)
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
 [azdata bdc spark statement list](#azdata-bdc-spark-statement-list) | Listar todas as instruções na sessão do Spark fornecida.
@@ -51,7 +51,7 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-spark-statement-create"></a>azdata bdc spark statement create

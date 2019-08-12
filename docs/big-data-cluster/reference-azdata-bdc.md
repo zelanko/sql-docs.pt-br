@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 488394cbf4b52a952ffc46ab2ec6c9a273466bd5
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 0a2891256bd6e45de356d620d3fa75256528b697
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426036"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894017"
 ---
 # <a name="azdata-bdc"></a>bdc de azdata
 
@@ -22,7 +22,7 @@ ms.locfileid: "68426036"
 
 O artigo a seguir fornece referência para os comandos **bdc** na ferramenta **azdata**. Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 
 |     |     |
 | --- | --- |
@@ -75,7 +75,7 @@ Nome do cluster de Big Data, usado para namespaces do Kubernetes.
 #### `--config-profile -c`
 Perfil de configuração do cluster de Big Data, usado para implantar o cluster: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
 #### `--accept-eula -a`
-Você aceita os termos de licença? [sim/não]. Se não quiser usar esse argumento, você poderá definir a variável de ambiente ACCEPT_EULA como 'sim'. Os termos de licença desse produto podem ser exibidos em https://aka.ms/azdata-eula e https://go.microsoft.com/fwlink/?LinkId=2002534.
+Você aceita os termos de licença? [sim/não]. Se não quiser usar esse argumento, você poderá definir a variável de ambiente ACCEPT_EULA como 'sim'. Os termos de licença deste produto podem ser exibidos em [https://go.microsoft.com/fwlink/?LinkId=2002534](https://go.microsoft.com/fwlink/?LinkId=2002534).
 #### `--node-label -l`
 Rótulo do nó de cluster de Big Data, usado para designar em quais nós implantar.
 #### `--force -f`

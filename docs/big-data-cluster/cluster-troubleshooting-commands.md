@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 272249b7bd6c22895b7d10e7fbce4a20cb647a49
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: ccdfe31f7873c44ea09e273d5d9afb2361f9b36b
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419481"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841565"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Monitoramento e solução de problemas de clusters de Big Data do SQL Server
 
@@ -92,7 +92,7 @@ Caso ocorram erros, às vezes, você poderá ver o erro nos eventos recentes do 
 Você poderá recuperar os logs para contêineres em execução em um pod. O seguinte comando recupera os logs de todos os contêineres em execução no pod chamado `master-0` e os gera em um arquivo chamado `master-0-pod-logs.txt`:
 
 ```bash
-kubectl logs master-0 --all-containers=true -n mssql-cluser > master-0-pod-logs.txt
+kubectl logs master-0 --all-containers=true -n mssql-cluster > master-0-pod-logs.txt
 ```
 
 ## <a id="services"></a> Obter o status de serviços
@@ -133,36 +133,6 @@ O seguinte exemplo recupera detalhes do serviço **master-svc-external**:
 
 ```bash
 kubectl describe service master-svc-external -n mssql-cluster
-```
-
-## <a name="run-commands-in-a-container"></a>Executar comandos em um contêiner
-
-Se a infraestrutura ou as ferramentas existentes não permitem que você execute determinada tarefa sem realmente estar no contexto do contêiner, faça logon no contêiner usando o comando `kubectl exec`. Por exemplo, talvez seja necessário verificar se um arquivo específico existe ou reiniciar os serviços no contêiner. 
-
-Para usar o comando `kubectl exec`, use a seguinte sintaxe:
-
-```bash
-kubectl exec -it <pod_name>  -c <container_name> -n <namespace_name> -- /bin/bash <command name> 
-```
-
-As duas seções a seguir fornecem dois exemplos de como executar um comando em um contêiner específico.
-
-### <a id="restartsql"></a> Fazer logon em um contêiner específico e reiniciar o processo do SQL Server
-
-O seguinte exemplo mostra como reiniciar o processo do SQL Server no contêiner `mssql-server` no pod `master-0`:
-
-```bash
-kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
-supervisorctl restart mssql
-```
-
-### <a id="restartservices"></a> Fazer logon em um contêiner específico e reiniciar os serviços em um contêiner
- 
-O seguinte exemplo mostra como reiniciar todos os serviços gerenciados por **supervisord**: 
-
-```bash
-kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
-supervisorctl -c /opt/supervisor/supervisord.conf reload
 ```
 
 ## <a id="copy"></a> Copiar arquivos
@@ -236,9 +206,9 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
 
 > [!Note]
-> Se você receber o seguinte erro: *Não é possível escutar a porta 8001: Falha na criação de todos os ouvintes com os seguintes erros: Não é possível criar o ouvinte: Erro ao escutar tcp4 127.0.0.1:8001: >associação: Normalmente, apenas um tipo de uso de cada endereço de soquete (endereço de rede/protocolo/porta) é permitido. Não é possível criar o ouvinte: Erro ao escutar tcp6: endereço [[::1]]:8001: porta ausente em >erro de endereço: Não é possível escutar nenhuma das portas solicitadas: [{8001 9090}]*. Verifique se o painel já não foi iniciado em outra janela.
+> Se você receber o seguinte erro: *Não é possível escutar a porta 8001: Falha na criação de todos os ouvintes com os seguintes erros: Não é possível criar o ouvinte: Erro ao escutar tcp4 127.0.0.1:8001: >associação: Normalmente, apenas um tipo de uso de cada endereço de soquete (endereço de rede/protocolo/porta) é permitido. Não é possível criar o ouvinte: Erro ao escutar tcp6: endereço [[::1]]:8001: porta ausente em >erro de endereço: Não é possível escutar nenhuma das portas solicitadas: [{8001 9090}]* . Verifique se o painel já não foi iniciado em outra janela.
 
-Ao iniciar o painel no navegador, você poderá obter avisos de permissão devido ao RBAC estar habilitado por padrão em clusters do AKS. Além disso, a conta de serviço usada pelo painel não tem permissões suficientes para acessar todos os recursos (por exemplo, *pods são proibidos: O usuário "system:serviceaccount:kube-system:kubernetes-dashboard" não pode listar os pods no namespace "padrão"*). Execute o seguinte comando para conceder as permissões necessárias ao `kubernetes-dashboard` e, em seguida, reinicie o painel:
+Ao iniciar o painel no navegador, você poderá obter avisos de permissão devido ao RBAC estar habilitado por padrão em clusters do AKS. Além disso, a conta de serviço usada pelo painel não tem permissões suficientes para acessar todos os recursos (por exemplo, *pods são proibidos: O usuário "system:serviceaccount:kube-system:kubernetes-dashboard" não pode listar os pods no namespace "padrão"* ). Execute o seguinte comando para conceder as permissões necessárias ao `kubernetes-dashboard` e, em seguida, reinicie o painel:
 
 ```bash
 kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard

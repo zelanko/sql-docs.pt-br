@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a8136c85f8c32e08423f3d199a021d4f60353b39
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 24a72683c423661a2981e5a16941bcbc180ac6d1
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68425986"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894000"
 ---
 # <a name="azdata"></a>azdata
 
@@ -22,17 +22,16 @@ ms.locfileid: "68425986"
 
 O artigo a seguir fornece referência para a ferramenta **azdata** para [Clusters de Big Data do SQL Server 2019 (versão prévia)](big-data-cluster-overview.md). Para obter mais informações sobre como instalar a ferramenta **azdata**, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](deploy-install-azdata.md).
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
 |[azdata app](reference-azdata-app.md) | Criar, excluir, executar e gerenciar aplicativos. |
 |[azdata bdc](reference-azdata-bdc.md) | Selecionar, gerenciar e operar clusters de Big Data do SQL Server. |
-|[azdata notebook](reference-azdata-notebook.md) | Comandos para exibir, executar e gerenciar notebooks de um terminal. |
-[azdata login](#azdata-login) | Fazer logon no ponto de extremidade do controlador do cluster.
-[azdata logout](#azdata-logout) | Fazer logoff do cluster.
-|[azdata sql](reference-azdata-sql.md) | A CLI do banco de dados SQL permite que o usuário interaja com o SQL Server por meio de T-SQL. |
+|[azdata login](#azdata-login) | Fazer logon no ponto de extremidade do controlador do cluster.
+|[azdata logout](#azdata-logout) | Fazer logoff do cluster.
+
 ## <a name="azdata-login"></a>azdata login
-Quando o cluster for implantado, ele listará o ponto de extremidade do controlador durante a implantação, que você deverá usar para fazer logon.  Se você não conhecer o ponto de extremidade do controlador, você poderá fazer logon colocando a configuração de kube do seu cluster na localização padrão <user home>/.kube/config ou usando a variável de ambiente KUBECONFIG, ou seja, exportar KUBECONFIG=path/to/.kube/config.
+Quando o cluster for implantado, ele listará o ponto de extremidade do controlador durante a implantação, que você deve usar para fazer logon.  Se você não souber o ponto de extremidade do controlador, poderá fazer logon fazendo com que a configuração do Kube do cluster seja feita no seu sistema <user home>no local padrão de/.Kube/config ou usar o var de KUBECONFIG env, ou seja, exportar KUBECONFIG = caminho/para/. Kube/config.
 ```bash
 azdata login [--cluster-name -n] 
              [--controller-username -u]  
@@ -44,7 +43,7 @@ Fazer logon interativamente. O nome do cluster será sempre solicitado se não f
 ```bash
 azdata login
 ```
-Fazer logon (não interativamente). Fazer logon com o nome do cluster, o nome de usuário do controlador, o ponto de extremidade do controlador e o a aceitação do EULA definidos como argumentos. A variável de ambiente CONTROLLER_PASSWORD precisa ser definida.  Se você não quiser especificar o ponto de extremidade do controlador, coloque a configuração de kube em seu computador na localização padrão <user home>/.kube/config ou usando a variável de env KUBECONFIG, ou seja, exportar KUBECONFIG=path/to/.kube/config.
+Fazer logon (não interativamente). Fazer logon com o nome do cluster, o nome de usuário do controlador, o ponto de extremidade do controlador e o a aceitação do EULA definidos como argumentos. A variável de ambiente CONTROLLER_PASSWORD precisa ser definida.  Se você não quiser especificar o ponto de extremidade do controlador, tenha a configuração Kube em seu computador no local padrão de <user home>/.Kube/config ou use KUBECONFIG env var, ou seja, exporte KUBECONFIG = Path/to/. Kube/config.
 ```bash
 azdata login --cluster-name ClusterName --controller-user johndoe@contoso.com  --controller-endpoint https://<ip>:30080 --accept-eula yes
 ```
@@ -58,9 +57,9 @@ Nome do cluster.
 #### `--controller-username -u`
 Usuário da conta. Se não quiser usar esse argumento, você poderá definir a variável de ambiente CONTROLLER_USERNAME.
 #### `--controller-endpoint -e`
-Ponto de extremidade do controlador de cluster "https://host:port". Se não quiser usar esse argumento, você poderá usar a configuração de kube em seu computador. Verifique se a configuração está localizada na localização padrão de <user home>/.kube/config ou use a variável de ambiente KUBECONFIG.
+Ponto de extremidade do controlador de cluster "https://host:port". Se não quiser usar esse argumento, você poderá usar a configuração de kube em seu computador. Verifique se a configuração está localizada no local padrão de <user home>/.Kube/config ou use o var de KUBECONFIG env.
 #### `--accept-eula -a`
-Você aceita os termos de licença? [sim/não]. Se não quiser usar esse argumento, você poderá definir a variável de ambiente ACCEPT_EULA como 'sim'. Os termos de licença desse produto podem ser exibidos em https://aka.ms/azdata-eula.
+Você aceita os termos de licença? [sim/não]. Se não quiser usar esse argumento, você poderá definir a variável de ambiente ACCEPT_EULA como 'sim'. 
 ### <a name="global-arguments"></a>Argumentos globais
 #### `--debug`
 Aumente o detalhamento do log para mostrar todos os logs de depuração.
@@ -69,7 +68,7 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Para obter mais informações, [http://jmespath.org/](http://jmespath.org/]) consulte para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-logout"></a>azdata logout
@@ -90,7 +89,7 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Para obter mais informações, [http://jmespath.org/](http://jmespath.org/]) consulte para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 

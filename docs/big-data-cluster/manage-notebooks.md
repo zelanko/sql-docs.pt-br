@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9c8edd91ced01135d740fecdf6cf837df9cac6b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 1a6156dad127ea2a86e8a6f4dfbdd6f692fd8f6e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470726"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893656"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-with-azure-data-studio-notebooks"></a>Gerenciar clusters de Big Data do SQL Server com os notebooks do Azure Data Studio
 
@@ -26,9 +26,9 @@ Originalmente implementados como um projeto de software livre, os [notebooks](no
 
 Você pode usar notebooks para implantar clusters de Big Data para o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-Além dos notebooks, os usuários podem exibir uma coleção de notebooks, que são chamados de Jupyter Books. Um Jupyter Book fornece um sumário para navegar em uma coleção de notebooks. Dessa forma, um usuário encontra facilmente o notebook de que precisa, se deseja solucionar problemas no SQL Server ou exibir o status do cluster.
+Além dos notebooks, os usuários podem exibir uma coleção de blocos de anotações, que são chamados de livros de Jupyter. Um Jupyter Book fornece um sumário para navegar em uma coleção de notebooks. Dessa forma, um usuário encontra facilmente o notebook de que precisa, se deseja solucionar problemas no SQL Server ou exibir o status do cluster.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Os pré-requisitos a seguir são necessários para poder iniciar o notebook:
 
@@ -53,5 +53,5 @@ Além disso, a implantação do cluster de Big Data do SQL Server 2019 também r
 3. No modo de exibição do Explorer, você deve ver uma seção chamada **Livros**. Se não estiver expandida, clique nela para exibir os notebooks.
 4. Clique no notebook da tarefa que você precisa concluir.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Próximas etapas
 Para obter mais informações sobre notebooks no Azure Data Studio, confira [Como usar notebooks na versão prévia do SQL Server 2019](notebooks-guidance.md).

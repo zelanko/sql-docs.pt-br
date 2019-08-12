@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ed777391af3695da69e04c0e2693cff912c76771
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 1962fd25416ab3546c15f9b894375e0f3ed740c6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426286"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894033"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
@@ -22,7 +22,7 @@ ms.locfileid: "68426286"
 
 O artigo a seguir fornece referência para os comandos **bdc config** na ferramenta **azdata**. Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
 [azdata bdc config init](#azdata-bdc-config-init) | Inicializa um perfil de configuração do cluster de Big Data que pode ser usado com cluster create.
@@ -57,7 +57,7 @@ Origem do perfil de configuração: ['aks-dev-test', 'kubeadm-dev-test', 'miniku
 #### `--force -f`
 Forçar substituição do arquivo de destino.
 #### `--accept-eula -a`
-Você aceita os termos de licença? [sim/não]. Se não quiser usar esse argumento, você poderá definir a variável de ambiente ACCEPT_EULA como 'sim'. Os termos de licença desse produto podem ser exibidos em https://aka.ms/azdata-eula.
+Você aceita os termos de licença? [sim/não]. Se não quiser usar esse argumento, você poderá definir a variável de ambiente ACCEPT_EULA como 'sim'. 
 ### <a name="global-arguments"></a>Argumentos globais
 #### `--debug`
 Aumente o detalhamento do log para mostrar todos os logs de depuração.
@@ -92,7 +92,7 @@ Perfil de configuração padrão: ['aks-dev-test', 'kubeadm-dev-test', 'minikube
 O tipo de configuração que você gostaria de ver.
 `cluster`
 #### `--accept-eula -a`
-Você aceita os termos de licença? [sim/não]. Se não quiser usar esse argumento, você poderá definir a variável de ambiente ACCEPT_EULA como 'sim'. Os termos de licença desse produto podem ser exibidos em https://aka.ms/azdata-eula.
+Você aceita os termos de licença? [sim/não]. Se não quiser usar esse argumento, você poderá definir a variável de ambiente ACCEPT_EULA como 'sim'. 
 ### <a name="global-arguments"></a>Argumentos globais
 #### `--debug`
 Aumente o detalhamento do log para mostrar todos os logs de depuração.
