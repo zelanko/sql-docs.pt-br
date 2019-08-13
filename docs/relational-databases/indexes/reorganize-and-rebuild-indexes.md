@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18aa4d46a82121d2522260f146315f89b36a1803
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 02cc19cb28a3141682786ca8192688c9c451fc43
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476254"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811160"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Reorganizar e recriar índices
 
@@ -64,7 +64,7 @@ O conjunto de resultados retornado pela função **sys.dm_db_index_physical_stat
 
 Depois que o grau de fragmentação for conhecido, use a tabela a seguir para determinar o melhor método para corrigir a fragmentação.
 
-|Valor**avg_fragmentation_in_percent** |Instrução corretiva|
+|Valor**avg_fragmentation_in_percent**|Instrução corretiva|
 |-----------------------------------------------|--------------------------|
 |> 5% e < = 30%|ALTER INDEX REORGANIZE|
 |> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
@@ -80,15 +80,15 @@ Em geral, níveis muito baixos de fragmentação (menos de 5 por cento) não dev
 > A recriação ou reorganização de índices pequenos geralmente não reduz a fragmentação. As páginas de índices pequenos às vezes são armazenadas em extensões mistas. Extensões mistas são compartilhadas por até oito objetos, portanto, a fragmentação em um índice pequeno pode não ser reduzida após a reorganização ou recriação.
 
 ### <a name="index-defragmentation-considerations"></a>Considerações sobre fragmentação de índice
-Em determinadas condições, recompilar um índice clusterizado recompilará automaticamente qualquer índice não clusterizado que faça referência à chave de clustering, se os identificadores físicos ou lógicos contidos nos registros de índice não clusterizados precisarem ser alterados.
+Em determinadas condições, recompilar um índice clusterizado recompilará automaticamente todo índice não clusterizado que faça referência à chave de clustering, se os identificadores físicos ou lógicos contidos nos registros de índice não clusterizados precisarem ser alterados.
 
-Cenários que requerem que todos os índices não clusterizados sejam recompilados em uma tabela:
+Cenários que requerem que todos os índices não clusterizados sejam automaticamente recompilados em uma tabela:
 
 -  Criar um índice clusterizado em uma tabela
 -  Remover um índice clusterizado, fazendo com que a tabela seja armazenada como um heap
 -  Alterar a chave de clustering para incluir ou excluir colunas
 
-Cenários que não requerem que todos os índices não clusterizados sejam recompilados em uma tabela:
+Cenários que não requerem que todos os índices não clusterizados sejam automaticamente recompilados em uma tabela:
 
 -  Recompilar um índice clusterizado exclusivo
 -  Recompilar um índice clusterizado não exclusivo

@@ -10,12 +10,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
-ms.openlocfilehash: ef5664ab93b5e293dd176a91da83284cc2b72743
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 494b682853425b40699ff698117d2941805ab7da
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463604"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941146"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parâmetros de relatório (Construtor de Relatórios e Designer de Relatórios)
 
@@ -75,13 +75,13 @@ Ao ver um relatório que tem parâmetros, a barra de ferramentas do visualizador
   
 1. **Painel de parâmetros** A barra de ferramentas do visualizador de relatórios exibe um aviso e valor padrão para cada parâmetro. Você pode personalizar o layout dos parâmetros no painel de parâmetros. Para obter mais informações, consulte [Personalizar o painel de parâmetros em um relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
   
-2. **parâmetro @SalesDate** O parâmetro @SalesDate é o tipo de dados **DateTime**. O prompt Selecionar uma data é exibido ao lado da caixa de texto. Para modificar a data, digite uma nova data na caixa de texto ou use o controle de calendário.  
+2. **\@Parâmetro SalesDate** O parâmetro @SalesDate é o tipo de dados **DateTime**. O prompt Selecionar uma data é exibido ao lado da caixa de texto. Para modificar a data, digite uma nova data na caixa de texto ou use o controle de calendário.  
   
-3. **parâmetro@ShowAll** O parâmetro @ShowAll é o tipo de dados **Booliano**. Use os botões de opção para especificar **True** ou **False**.  
+3. **\@Parâmetro ShowAll** O parâmetro @ShowAll é o tipo de dados **Boolean**. Use os botões de opção para especificar **True** ou **False**.  
   
 4. **Identificador Mostrar ou Ocultar Área de Parâmetros** Na barra de ferramentas do visualizador de relatórios, clique nessa seta para mostrar ou ocultar o painel de parâmetros.  
   
-5. **parâmetro@CategoryQuota** O parâmetro @CategoryQuota é o tipo de dados **Float** e, portanto, usa um valor numérico.  @CategoryQuota está definido para permitir vários valores.  
+5. **\@Parâmetro CategoryQuota** O parâmetro @CategoryQuota é o tipo de dados **Float**, portanto, leva um valor numérico.  @CategoryQuota está definido para permitir vários valores.  
   
 6. **Exibir Relatório**  Após inserir os valores de parâmetro, clique em **Exibir Relatório** para executar o relatório. Se todos os parâmetros tiverem valores padrão, o relatório será executado automaticamente na primeira exibição.  
   

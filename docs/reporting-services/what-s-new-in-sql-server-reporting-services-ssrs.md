@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/08/2019
-ms.openlocfilehash: d7755f15e78f29814eee93557286736b849c96c6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7e6864a935a9e1d3f2fcdcb1dbe100a65df3789a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264588"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893521"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novidades do SQL Server Reporting Services (SSRS)
 
@@ -26,7 +26,7 @@ Para obter as notas de versão atuais, consulte [Notas de versão do SQL Server 
 
 Para obter informações sobre o Servidor de Relatórios do Power BI, consulte [O que é o Servidor de Relatórios do Power BI?](https://docs.microsoft.com/power-bi/report-server/get-started).
 
-**Download** ![download](../analysis-services/media/download.png "download")
+**Download** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
 
 Para baixar o SQL Server 2017 Reporting Services, acesse o **[Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=55252)** .
 
@@ -34,7 +34,7 @@ Para baixar o SQL Server 2017 Reporting Services, acesse o **[Centro de Download
 
 ## <a name="sql-server-2019-preview-reporting-services"></a>Versão prévia do SQL Server 2019 Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] O Reporting Services não está disponível para o CTP 3.1. Instale a versão atual, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] O Reporting Services não está disponível para o CTP 3.2. Instale a versão atual, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -161,7 +161,7 @@ Para obter mais informações sobre o suporte ao navegador, veja [Suporte ao nav
 2. Escolha o painel no qual você deseja fixar o item.
 3. Escolha a frequência desejada de atualização do bloco no painel.
 
-![observação](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") A atualização é gerenciada pelas assinaturas do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e, depois que o item é fixado, você pode editar a assinatura e configurar outro agendamento de atualização.
+![observação](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") A atualização é gerenciada pelas assinaturas do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e, depois que o item é fixado, você pode editar a assinatura e configurar outro agendamento de atualização.
 
 ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
