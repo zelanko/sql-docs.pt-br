@@ -5,9 +5,9 @@
 - name: Visão geral
   expanded: true
   items:
-    - name: 'Serviços de Machine Learning (R, Python)'
+    - name: O que são os Serviços de Machine Learning (Python e R)?
       href: ../advanced-analytics/what-is-sql-server-machine-learning.md
-    - name: R Services
+    - name: O que são os Serviços R?
       href: ../advanced-analytics/r/sql-server-r-services.md
     - name: Servidor autônomo
       href: ../advanced-analytics/r/r-server-standalone.md
@@ -23,7 +23,7 @@
       href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
     - name: Instalar Serviços R
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
-    - name: 'Instalar servidor autônomo (R, Python)'
+    - name: 'Instalar servidor autônomo (Python, R)'
       href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
     - name: Instalar modelos pré-treinados
       href: ../advanced-analytics/install/sql-pretrained-models-install.md

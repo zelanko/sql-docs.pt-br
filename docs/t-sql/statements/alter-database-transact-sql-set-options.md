@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 30cab7ddfe6c0c6b88f1fb6e619cb84866c3efbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ecd914603883f83d5434327c5528688936aee420
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065718"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495457"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL)
 
@@ -53,7 +53,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 
 > |||||
 > |---|---|---|---|
-> |**_\* SQL Server \*_** &nbsp;|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
+> |** _** &nbsp;|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
 
 &nbsp;
 
@@ -769,7 +769,10 @@ A limpeza baseada no tamanho não será ativada automaticamente.
 SIZE_BASED_CLEANUP_MODE é do tipo **nvarchar**.
 
 QUERY_CAPTURE_MODE { ALL | AUTO | NONE | CUSTOM }         
-Designa o modo de captura da consulta ativa no momento.
+Designa o modo de captura da consulta ativa no momento. Cada modo define políticas de captura de consulta específicas.
+
+> [!NOTE]
+> Cursores, consultas dentro de procedimentos armazenados e consultas compiladas nativamente são sempre capturados quando o modo de captura de consulta é definido como ALL, AUTO ou CUSTOM.
 
 ALL         
 Captura todas as consultas. ALL é o valor de configuração padrão. Esse é o valor de configuração padrão do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] em diante.
@@ -1044,7 +1047,7 @@ Quando OFF é especificado, essa configuração afeta apenas a definição de no
 > [!IMPORTANT]
 > Em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_PADDING sempre será ON e quaisquer aplicativos que definam explicitamente a opção como OFF produzirão um erro. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. É recomendável sempre definir ANSI_PADDING como ON. ANSI_PADDING deve ser ON ao criar ou manipular índices em colunas computadas ou exibições indexadas.
 
-Colunas **char(_n_)** e **binary(_n_)** que permitem valores nulos são preenchidas até o comprimento da coluna quando ANSI_PADDING está definido como ON. Espaços em branco e zeros à direita são cortados quando ANSI_PADDING está OFF. As colunas **char(_n_)** e **binary(_n_)** que não permitem valores nulos sempre são preenchidas até o tamanho da coluna.
+Colunas **char( _)** e **binary( _)** que permitem valores nulos são preenchidas até o comprimento da coluna quando ANSI_PADDING está definido como ON. Espaços em branco e zeros à direita são cortados quando ANSI_PADDING está OFF. As colunas **char( _)** e **binary( _)** que não permitem valores nulos sempre são preenchidas até o tamanho da coluna.
 
 As configurações no nível de conexão que são definidas com o uso de uma instrução SET substituem a configuração no nível de banco de dados padrão para ANSI_PADDING. Clientes ODBC e OLE DB emitem uma instrução SET no nível da configuração de conexão ANSI_PADDING como ON para a sessão por padrão. Os clientes executam a instrução, quando você se conecta a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para saber mais, confira [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md).
 
@@ -1232,7 +1235,7 @@ GO
 
 ```
 
-### <a name="b-setting-the-database-to-readonly"></a>B. Configurando o banco de dados como READ_ONLY
+### <a name="b-setting-the-database-to-read_only"></a>B. Configurando o banco de dados como READ_ONLY
 
 Alterar o estado de um banco de dados ou grupo de arquivos para READ_ONLY ou READ_WRITE requer acesso exclusivo ao banco de dados. O exemplo a seguir define o banco de dados como o modo `SINGLE_USER` para obter acesso exclusivo. Em seguida, o exemplo define o estado do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] como `READ_ONLY` e retorna o acesso ao banco de dados para todos os usuários.
 
@@ -1395,7 +1398,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* Banco de dados individual/pool elástico<br />do Banco de Dados SQL \*_** &nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|** _** &nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -1936,7 +1939,7 @@ Quando OFF é especificado, essa configuração afeta apenas a definição de no
 > [!IMPORTANT]
 > Em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_PADDING sempre será ON e quaisquer aplicativos que definam explicitamente a opção como OFF produzirão um erro. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. É recomendável sempre definir ANSI_PADDING como ON. ANSI_PADDING deve ser ON ao criar ou manipular índices em colunas computadas ou exibições indexadas.
 
-Colunas **char(_n_)** e **binary(_n_)** que permitem valores nulos são preenchidas até o comprimento da coluna quando ANSI_PADDING está definido como ON. Espaços em branco e zeros à direita são cortados quando ANSI_PADDING está OFF. As colunas **char(_n_)** e **binary(_n_)** que não permitem valores nulos sempre são preenchidas até o tamanho da coluna.
+Colunas **char( _)** e **binary( _)** que permitem valores nulos são preenchidas até o comprimento da coluna quando ANSI_PADDING está definido como ON. Espaços em branco e zeros à direita são cortados quando ANSI_PADDING está OFF. As colunas **char( _)** e **binary( _)** que não permitem valores nulos sempre são preenchidas até o tamanho da coluna.
 
   As configurações no nível de conexão que são definidas com o uso de uma instrução SET substituem a configuração no nível de banco de dados padrão para ANSI_PADDING. Clientes ODBC e OLE DB emitem uma instrução SET no nível da configuração de conexão ANSI_PADDING como ON para a sessão por padrão. Os clientes executam a instrução, quando você se conecta a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para saber mais, confira [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md).
 
@@ -2083,7 +2086,7 @@ Nem todas as opções de banco de dados usam a cláusula WITH \<termination> ou 
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-setting-the-database-to-readonly"></a>A. Configurando o banco de dados como READ_ONLY
+### <a name="a-setting-the-database-to-read_only"></a>A. Configurando o banco de dados como READ_ONLY
 Alterar o estado de um banco de dados ou grupo de arquivos para READ_ONLY ou READ_WRITE requer acesso exclusivo ao banco de dados. O exemplo a seguir define o banco de dados como o modo `RESTRICTED_USER` para limitar o acesso. Em seguida, o exemplo define o estado do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] como `READ_ONLY` e retorna o acesso ao banco de dados para todos os usuários.
 
 ```sql
@@ -2186,7 +2189,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* Instância gerenciada<br />do Banco de Dados SQL \*_** &nbsp;||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |** _** &nbsp;||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -2669,7 +2672,7 @@ Quando OFF é especificado, essa configuração afeta apenas a definição de no
 > [!IMPORTANT]
 > Em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_PADDING sempre será ON e quaisquer aplicativos que definam explicitamente a opção como OFF produzirão um erro. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. É recomendável sempre definir ANSI_PADDING como ON. ANSI_PADDING deve ser ON ao criar ou manipular índices em colunas computadas ou exibições indexadas.
 
-Colunas **char(_n_)** e **binary(_n_)** que permitem valores nulos são preenchidas até o comprimento da coluna quando ANSI_PADDING está definido como ON. Espaços em branco e zeros à direita são cortados quando ANSI_PADDING está OFF. As colunas **char(_n_)** e **binary(_n_)** que não permitem valores nulos sempre são preenchidas até o tamanho da coluna.
+Colunas **char( _)** e **binary( _)** que permitem valores nulos são preenchidas até o comprimento da coluna quando ANSI_PADDING está definido como ON. Espaços em branco e zeros à direita são cortados quando ANSI_PADDING está OFF. As colunas **char( _)** e **binary( _)** que não permitem valores nulos sempre são preenchidas até o tamanho da coluna.
 
   As configurações no nível de conexão que são definidas com o uso de uma instrução SET substituem a configuração no nível de banco de dados padrão para ANSI_PADDING. Clientes ODBC e OLE DB emitem uma instrução SET no nível da configuração de conexão ANSI_PADDING como ON para a sessão por padrão. Os clientes executam a instrução, quando você se conecta a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para saber mais, confira [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md).
 
@@ -2789,7 +2792,7 @@ Você pode alterar os valores padrão para qualquer uma das opções de banco de
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-setting-the-database-to-readonly"></a>A. Configurando o banco de dados como READ_ONLY
+### <a name="a-setting-the-database-to-read_only"></a>A. Configurando o banco de dados como READ_ONLY
 Alterar o estado de um banco de dados ou grupo de arquivos para READ_ONLY ou READ_WRITE requer acesso exclusivo ao banco de dados. O exemplo a seguir define o banco de dados como o modo `RESTRICTED_USER` para acesso restrito. Em seguida, o exemplo define o estado do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] como `READ_ONLY` e retorna o acesso ao banco de dados para todos os usuários.
 
 ```sql
@@ -2890,7 +2893,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|** _** &nbsp;||||
 
 &nbsp;
 
