@@ -23,7 +23,7 @@ ms.locfileid: "66087145"
   Esta página do **Assistente de Importação de Tabela** permite que você se conecte a um [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
   
 > [!NOTE]  
->  Se você estiver se conectando a um conjunto de dados do Azure DataMarket, consulte [Conectar-se a um relatório ou feed de dados &#40;SSAS&#41](connect-to-a-report-or-data-feed-ssas.md).  
+>  Se você estiver se conectando a um conjunto de dados do Azure DataMarket, consulte [Conectar-se a um relatório ou feed de dados &#40;SSAS&#41;](connect-to-a-report-or-data-feed-ssas.md).  
   
  O [!INCLUDE[ssSDS](../includes/sssds-md.md)] é um banco de dados hospedado, relacional, a que você se conecta usando a Autenticação do SQL Server. Para obter mais informações sobre o [!INCLUDE[ssSDS](../includes/sssds-md.md)], consulte o site [Banco de dados SQL](https://go.microsoft.com/fwlink/?LinkID=157856). Para conectar uma fonte de dados, você deve ter o provedor apropriado instalado no computador.  
   
