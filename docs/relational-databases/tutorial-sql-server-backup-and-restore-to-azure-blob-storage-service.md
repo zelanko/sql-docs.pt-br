@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 837c720e115a41f9b41dfb0e0e1117966988040f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3ded19a91aba627a9d69d711a1d1640dc042a56
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138365"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893625"
 ---
 # <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Início Rápido: Backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,23 +34,22 @@ Para concluir este início rápido, você deve estar familiarizado com os concei
 ## <a name="create-azure-blob-container"></a>Criar o Contêiner de Blob do Azure
 Um contêiner fornece um agrupamento de conjunto de blobs. Todos os blobs devem estar em um contêiner. Uma conta pode conter um número ilimitado de contêineres, mas deve ter pelo menos um contêiner. Um contêiner pode armazenar um número ilimitado de blobs. 
 
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Para criar um Contêiner, siga estas etapas:
 
 1. Abra o portal do Azure. 
 1. Navegue até sua Conta de Armazenamento. 
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-   1. Selecione a conta de armazenamento e role para baixo até **Serviços de Blob**.
-   1. Selecione **Blobs** e, em seguida, selecione +**Contêiner** para adicionar um novo contêiner. 
-   1. Insira o nome do contêiner e anote o nome especificado. Essas informações são usadas na URL (caminho para o arquivo de backup) nas instruções T-SQL mais adiante neste início rápido. 
-   1. Escolha **OK**. 
+1. Selecione a conta de armazenamento e role para baixo até **Serviços de Blob**.
+1. Selecione **Blobs** e, em seguida, selecione +**Contêiner** para adicionar um novo contêiner. 
+1. Insira o nome do contêiner e anote o nome especificado. Essas informações são usadas na URL (caminho para o arquivo de backup) nas instruções T-SQL mais adiante neste início rápido. 
+1. Escolha **OK**. 
     
     ![Novo contêiner](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
 
-  >[!NOTE]
-  >A autenticação na conta de armazenamento é necessária para o backup e a restauração do SQL Server, mesmo se você optar por criar um contêiner público. Você também pode criar uma contêiner de modo programático usando APIs REST. Para obter mais informações, consulte [Criar contêiner](https://docs.microsoft.com/rest/api/storageservices/Create-Container)
+  > [!NOTE]
+  > A autenticação na conta de armazenamento é necessária para o backup e a restauração do SQL Server, mesmo se você optar por criar um contêiner público. Você também pode criar uma contêiner de modo programático usando APIs REST. Para obter mais informações, consulte [Criar contêiner](https://docs.microsoft.com/rest/api/storageservices/Create-Container)
 
 ## <a name="create-a-test-database"></a>Criar um banco de dados de teste 
 
@@ -93,14 +92,14 @@ GO
 ## <a name="create-a-sql-server-credential"></a>Criar uma credencial do SQL Server
 Uma credencial do SQL Server é um objeto usado para armazenar as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server. Aqui, os processos de backup e restauração do SQL Server usam credenciais para autenticação no serviço de armazenamento de Blob do Windows Azure. A Credencial armazena o nome da conta de armazenamento e os valores de **access key** da conta de armazenamento. Depois que a credencial for criada, ela deverá ser especificada na opção WITH CREDENTIAL ao emitir instruções BACKUP/RESTORE. Para obter mais informações sobre credenciais, consulte [Credenciais](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine). 
 
-  >[!IMPORTANT]
-  >Os requisitos para criar uma credencial do SQL Server descritos abaixo são específicos dos processos do backup do SQL Server ([Backup do SQL Server para URL](backup-restore/sql-server-backup-to-url.md)e [Backup gerenciado do SQL Server no Microsoft Azure](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). O SQL Server usa o nome da conta de armazenamento e as informações da chave de acesso ao acessar o armazenamento do Azure para gravar ou ler backups.
+  > [!IMPORTANT]
+  > Os requisitos para criar uma credencial do SQL Server descritos abaixo são específicos dos processos do backup do SQL Server ([Backup do SQL Server para URL](backup-restore/sql-server-backup-to-url.md)e [Backup gerenciado do SQL Server no Microsoft Azure](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). O SQL Server usa o nome da conta de armazenamento e as informações da chave de acesso ao acessar o armazenamento do Azure para gravar ou ler backups.
 
 ### <a name="access-keys"></a>Chaves de acesso
-Como o portal do Azure ainda está aberto, salve as chaves de acesso necessárias para criar a credencial. 
+Você precisará das chaves de acesso para a conta de armazenamento para criar a credencial. 
 
 1. Navegue até a **Conta de Armazenamento** no portal do Azure. 
-1. Role para baixo até **Configurações** e selecione **Chaves de Acesso**. 
+1. Selecione **Chaves de Acesso** em **Configurações**. 
 1. Salve a chave e a cadeia de conexão para usar mais adiante neste início rápido. 
 
    ![Chaves de acesso](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/access-keys.png)

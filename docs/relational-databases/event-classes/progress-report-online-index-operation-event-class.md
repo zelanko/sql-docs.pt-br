@@ -12,12 +12,12 @@ ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9388483151326222dd8fa5e085467b15600eca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2965fea796efac9a337580ee32c9de53c976320
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940647"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811136"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>Relatório de andamento: Classe de evento Operação de Índice Online
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67940647"
 |EndTime|**datetime**|Hora em que a operação de índice online foi concluída.|15|Sim|  
 |EventClass|**int**|Tipo de evento = 190.|27|Não|  
 |EventSequence|**int**|Sequência de um determinado evento na solicitação.|51|Não|  
-|EventSubClass|**int**|Tipo de subclasse de evento.<br /><br /> 1 = Iniciar<br /><br /> 2=Início de execução da etapa 1<br /><br /> 3=Término de execução da etapa 1<br /><br /> 4= Início de execução da etapa 2<br /><br /> 5= Término de execução da etapa 2<br /><br /> 6=Contagem de linhas inseridas<br /><br /> 7=Concluído<br /><br /> A etapa 1 refere-se ao objeto base (índice clusterizado ou heap), ou se a operação de índice envolver somente um índice não clusterizado. A etapa 2 é usada quando uma operação de compilação de índice envolver a recompilação original além de índices não clusterizados adicionais.  Por exemplo, se um objeto tiver um índice clusterizado e vários índices não clusterizados, 'recompilar tudo' recompilará todos os índices. O objeto base (o índice clusterizado) é recompilado na etapa 1 e, em seguida, todos os índices não clusterizados são recompilados na etapa 2.|21|Sim|  
+|EventSubClass|**int**|Tipo de subclasse de evento.<br /><br /> 1 = Iniciar<br /><br /> 2=Início de execução da etapa 1<br /><br /> 3=Término de execução da etapa 1<br /><br /> 4= Início de execução da etapa 2<br /><br /> 5= Término de execução da etapa 2<br /><br /> 6=Contagem de linhas inseridas<br /><br /> 7=Concluído<br /><br /> A fase 1 refere-se ao objeto base (índice clusterizado ou heap) ou se a operação de índice envolver somente um índice não clusterizado. A fase 2 é usada quando uma operação de build de índice envolve a recompilação original além de índices não clusterizados adicionais.  Por exemplo, se um objeto tiver um índice clusterizado e vários índices não clusterizados, 'recompilar tudo' recompilará todos os índices. O objeto base (o índice clusterizado) é recompilado na fase 1 e, em seguida, todos os índices não clusterizados são recompilados na fase 2.|21|Sim|  
 |GroupID|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IndexID|**int**|ID do índice no objeto afetado pelo evento.|24|Sim|  

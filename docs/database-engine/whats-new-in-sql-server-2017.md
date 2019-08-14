@@ -10,12 +10,12 @@ ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
 author: rothja
 ms.author: jroth
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 4ee8a779ef486246d5f4dd927acf7c57a1261c61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc752d5653c4483552312c45139996e8a84c39e4
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059030"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811277"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Novidades no mecanismo de banco de dados – SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ Este tópico descreve as melhorias feitas no [!INCLUDE[ssdenoversion-md](../incl
 - Os Grupos de Disponibilidade agora podem trabalhar no Windows-Linux para permitir as migrações e testes entre sistemas operacionais.
 - Suporte à Política de Retenção de Tabelas Temporais adicionado,
 - Novo DMV SYS.DM_DB_STATS_HISTOGRAM
-- Adição de suporte ao build e recompilação de índice columnstore não clusterizado online
+- Adição de suporte ao build e à recompilação de índice columnstore não clusterizado online
 - [sys.dm_db_stats_histogram (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) é adicionado para análise de estatísticas.
 - O Database Tuning Advisor (DTA) lançado com o SQL Server Management Studio versão 16.4, ao analisar o SQL Server 2016 e posterior, tem opções adicionais.    
    - Desempenho aprimorado. Para saber mais, veja [Melhorias de desempenho usando as recomendações do Orientador de Otimização do Mecanismo de Banco de Dados (DTA)](../relational-databases/performance/performance-improvements-using-dta-recommendations.md).

@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 18fdd8cb0062f2f3adcd5979fb5c9203d93f393d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15c1fc0789ff665569ed17be9415bdbdd8047714
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102116"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809894"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -258,7 +258,7 @@ Quando o banco de dados está em modo de emergência e DBCC CHECKDB com a cláus
 Se o comando DBCC CHECKDB for bem-sucedido, o banco de dados estará em um estado fisicamente consistente e o status do banco de dados será definido como ONLINE. No entanto, o banco de dados poderá conter uma ou mais inconsistências transacionais. É recomendável executar o [DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md) para identificar qualquer falha na lógica de negócios e fazer backup do banco de dados imediatamente.
 Se o comando DBCC CHECKDB falhar, o banco de dados não poderá ser reparado.
     
-## <a name="running-dbcc-checkdb-with-repairallowdataloss-in-replicated-databases"></a>Executando DBCC CHECKDB com REPAIR_ALLOW_DATA_LOSS em bancos de dados replicados    
+## <a name="running-dbcc-checkdb-with-repair_allow_data_loss-in-replicated-databases"></a>Executando DBCC CHECKDB com REPAIR_ALLOW_DATA_LOSS em bancos de dados replicados    
 A execução do comando DBCC CHECKDB com a opção REPAIR_ALLOW_DATA_LOSS pode afetar bancos de dados de usuário (bancos de dados de publicação e assinatura) e o banco de dados de distribuição usado pela replicação. Bancos de dados de publicação e assinatura incluem tabelas publicadas e tabelas de metadados de replicação. Fique atento aos seguintes problemas potenciais nesses bancos de dados:
 -   Tabelas publicadas. Ações executadas pelo processo CHECKDB para reparar dados de usuário corrompidos podem não ser replicadas:    
 -   A replicação de mesclagem usa gatilhos para controlar alterações em tabelas publicadas. Se linhas forem inseridas, atualizadas ou excluídas pelo processo CHECKDB, os gatilhos não serão disparados. Portanto a alteração não será replicada.

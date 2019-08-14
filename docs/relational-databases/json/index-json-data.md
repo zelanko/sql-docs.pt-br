@@ -13,12 +13,12 @@ ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a31be55598d3a3df42a9d5a5fd39832fdbc08754
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cbdea9d1ffd22fdedbfe15b66eb6d9b57f33d1f8
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909281"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809970"
 ---
 # <a name="index-json-data"></a>Indexar dados JSON
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ Este é o plano de execução para a consulta no exemplo.
   
 ![Plano de execução](../../relational-databases/json/media/jsonindexblog1.png "Plano de execução")  
   
-Em vez de uma verificação completa, o SQL Server usa uma busca de índice no índice não clusterizado e localiza as linhas que atendem às condições especificadas. Em seguida, ele usa uma pesquisa de chave na tabela `SalesOrderHeader` para buscar outras colunas referenciadas na consulta — neste exemplo, `SalesOrderNumber` e `OrderDate`.  
+Em vez de uma verificação de tabela completa, o SQL Server usa uma busca de índice no índice não clusterizado e localiza as linhas que atendem às condições especificadas. Em seguida, ele usa uma pesquisa de chave na tabela `SalesOrderHeader` para buscar outras colunas referenciadas na consulta – neste exemplo, `SalesOrderNumber` e `OrderDate`.  
  
 ### <a name="optimize-the-index-further-with-included-columns"></a>Otimizar ainda mais o índice com colunas incluídas
 Se adicionar as colunas necessárias ao índice, você poderá evitar essa pesquisa adicional na tabela. É possível adicionar essas colunas como colunas incluídas padrão, conforme mostrado no exemplo a seguir, que expande o exemplo `CREATE INDEX` anterior.  

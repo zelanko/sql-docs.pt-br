@@ -1,6 +1,6 @@
 ---
 title: Documentação do SQL Server | Microsoft Docs
-ms.date: 08/02/2019
+ms.date: 08/08/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -20,12 +20,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
 monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 824036a79897302411ec1a7026351832269511b3
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 311e4819751fe9a398643e2005bd8480c781ee9f
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771598"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941149"
 ---
 # <a name="sql-server-documentation"></a>Documentação do SQL Server
 
@@ -111,7 +111,7 @@ O SQL Server 2014 e versões mais antigas, incluindo o SQL Server 2005, tem a do
 |![Mecanismo do Banco de Dados SQL](../sql-server/media/sql-database-engine.png "Mecanismo do Banco de Dados SQL")|**[Mecanismo de Banco de Dados](../database-engine/sql-server-database-engine-overview.md)**<br /><br /> O Mecanismo de Banco de Dados é o serviço principal para armazenamento, processamento e segurança de dados. O Mecanismo de Banco de Dados fornece acesso controlado e processamento rápido de transações para atender aos requisitos dos aplicativos de consumo de dados mais exigentes dentro de sua empresa. O Mecanismo de Banco de Dados também fornece suporte rico para sustentar alta disponibilidade.|
 |![Serviços do Machine Learning](../sql-server/media/r-server.png "R Server")|**[Serviços de Machine Learning](../advanced-analytics/index.yml)**<br /><br /> Os Serviços do Machine Learning possibilitam executar scripts de Python e do R com dados relacionais. Você pode usar pacotes de software livre e da Microsoft para análise preditiva e aprendizado de máquina. Os scripts são executados no banco de dados sem mover dados para fora do SQL Server ou pela rede.|
 |![Integration Services](../sql-server/media/integration-services.png "Integration Services")|**[Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é uma plataforma para construir soluções para integração de dados de alto desempenho, inclui também pacotes que fornecem processamento de extração, transformação, e carregamento (ETL) para armazenamento de dados.|
-|![Analysis Services](../sql-server/media/analysis-services.png "Analysis Services")|**[Analysis Services](../analysis-services/analysis-services.md)**<br /><br /> O[!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] é uma plataforma de dados analíticos e um conjunto de ferramentas para pessoal, equipe e business intelligence corporativo. Os servidores e designers de cliente dão suporte a soluções OLAP tradicionais, novas soluções de modelagem de tabela, bem como análises de autoatendimento e colaboração por meio do [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], o Excel e um ambiente do SharePoint Server. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] também inclui Mineração de Dados para que você possa descobrir os padrões e as relações ocultas dentro de grandes volumes de dados.|    
+|![Analysis Services](../sql-server/media/analysis-services.png "Analysis Services")|**[Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-overview)**<br /><br /> O[!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] é uma plataforma de dados analíticos e um conjunto de ferramentas para pessoal, equipe e business intelligence corporativo. Os servidores e designers de cliente dão suporte a soluções OLAP tradicionais, novas soluções de modelagem de tabela, bem como análises de autoatendimento e colaboração por meio do [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], o Excel e um ambiente do SharePoint Server. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] também inclui Mineração de Dados para que você possa descobrir os padrões e as relações ocultas dentro de grandes volumes de dados.|    
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> O Reporting Services oferece a funcionalidade de relatórios corporativos habilitados para a Web.  É possível criar relatórios que se conectam a conteúdos de várias fontes de dados, publicar relatórios em diversos formatos e centralizar o gerenciamento de segurança e de assinaturas.|
 |![Serviços de replicação](../sql-server/media/replication-services.png "Serviços de replicação")|**[Replicação](../relational-databases/replication/sql-server-replication.md)**<br /><br /> A replicação é um conjunto de tecnologias para copiar e distribuir dados e objetos de um banco de dados para outro e, em seguida, sincronizar entre os bancos de dados para manter a consistência. Ao usar a replicação, é possível distribuir dados para diferentes locais e para usuários remotos e móveis através de redes locais e de longa distância, conexões discadas, conexões sem-fio e a Internet.|
 |![Data Quality Services](../sql-server/media/data-quality-services.png "Data Quality Services")|**[Data Quality Services](../data-quality-services/data-quality-services.md)**<br /><br /> O SQL Server Data Quality Services (DQS) fornece uma solução de limpeza de dados controlada por conhecimento. O DQS permite que você crie uma base de dados de conhecimento e use-a para realizar a correção de dados e a eliminação de duplicação de seus dados, usando meios interativos e por computador. Você pode usar serviços de dados de referência baseados em nuvem e criar uma solução de gerenciamento de dados que integra o DQS com o SQL Server Integration Services e o Master Data Services.|
@@ -124,7 +124,7 @@ O SQL Server 2014 e versões mais antigas, incluindo o SQL Server 2005, tem a do
 - [Importar e exportar dados com o Assistente de Importação e Exportação do SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [Migrar seu banco de dados do SQL Server para o Banco de dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 - [Assistente de migração de dados da Microsoft](https://www.microsoft.com/download/details.aspx?id=53595)
-- [Jornada de migração do Azure – avaliar, migrar, otimizar](https://azure.microsoft.com/migration/)]
+- [Jornada de migração do Azure – avaliar, migrar, otimizar](https://azure.microsoft.com/migration/)
 ::: moniker-end
 
 ::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
@@ -150,6 +150,12 @@ O SQL Server 2014 e versões mais antigas, incluindo o SQL Server 2005, tem a do
 ## <a name="previous-versions-gm66"></a> Versões anteriores do SQL Server 2014, 2012, 2008, 2005
 
 [!INCLUDE[previous-versions](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
+## <a name="versioning-control-for-sql-documentation"></a>Controle de versão para documentação do SQL
+
+O _controle de versão_ nesta página da Web :::no-loc text="Docs"::: está acima do sumário. Para saber mais sobre como você pode usar o controle de versão e exatamente o que ele faz, confira:
+
+- [Sistema de controle de versão para documentação do SQL](../toc/versioning-system-monikers-ui-sql-server.md)
 
 <!--
 The following includes/ files contain their own H2 headers.

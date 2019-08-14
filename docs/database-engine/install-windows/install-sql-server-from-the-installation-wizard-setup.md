@@ -1,7 +1,7 @@
 ---
 title: Instalar o SQL Server 2016 por meio do Assistente de Instalação (Instalação) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9608e61108ad6f13c14816a35f06ca578e55d192
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 86b63bd2ccdb3cb4d8f2c73c2298cce1803e5ee9
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419266"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742913"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Instalar o SQL Server por meio do Assistente de Instalação (Instalação)
 
@@ -280,9 +280,9 @@ Isso não se aplica ao SQL Server 2019.
   
      O fluxo de trabalho do restante da instalação depende dos recursos especificados para a instalação. Talvez você não veja todas as páginas, dependendo de suas seleções. 
 
-1. Optar pela instalação do recurso PolyBase adicionará a página **Configuração do PolyBase** à instalação do SQL Server, exibida após a página **Configuração da Instância**. O PolyBase requer o Oracle JRE 7 Update 51 (pelo menos). Se ele ainda não estiver instalado, começando no SQL Server 2019, você poderá instalar o Azul Zulu Open JRE com o SQL Server. Na página **Configuração do PolyBase**, você pode optar por usar o SQL Server como uma instância autônoma habilitada para PolyBase ou pode usar esse SQL Server como parte de um grupo de escala horizontal do PolyBase. Se optar por usar o grupo de escala horizontal, você precisará especificar um intervalo de portas com 6 portas ou mais.  Na página **Localização de Instalação do Java**, você pode optar por instalar o Azul Zulu Open JRE incluído com a instalação do SQL Server 2019 ou por fornecer a localização de um JRE ou JDK diferente que já foi instalado no computador.
+1. Do SQL Server 2019 em diante, o Polybase não exige mais que o Oracle JRE 7 Atualização 51 (no mínimo) esteja pré-instalado no computador antes de instalar o recurso. Optar pela instalação do recurso Polybase adicionará a página **Local da Instalação do Java** à instalação do SQL Server exibida após a página **Configuração da Instância**. Na página Localização da Instalação do Java, você pode optar por instalar o Azul Zulu Open JRE incluído com a instalação do SQL Server 2019 ou por fornecer a localização de um JRE ou JDK diferente que já foi instalado no computador.
 
-1. Começando no SQL Server 2019, o Java foi adicionado à lista de Serviços de Machine Learning e Extensões de Linguagem, com o R e o Python. Optar pela instalação do recurso de Java adicionará a página **Localização de Instalação do Java** à janela de instalação do SQL Server, exibida após a página **Configuração da Instância**. Na página **Localização de Instalação do Java**, você pode optar por instalar o Azul Zulu Open JRE incluído com a instalação do SQL Server 2019 ou por fornecer a localização de um JRE ou JDK diferente que já foi instalado no computador.
+1. Do SQL Server 2019 em diante, o Java foi adicionado com Extensões de Linguagem. Optar pela instalação do recurso de Java adicionará a página **Localização de Instalação do Java** à janela de instalação do SQL Server, exibida após a página **Configuração da Instância**. Na página **Localização de Instalação do Java**, você pode optar por instalar o Zulu Open JRE incluído com a instalação do SQL Server 2019 ou por fornecer a localização de um JRE ou JDK diferente que já foi instalado no computador.
 
 1. Use a página **Configuração do Servidor – Contas de Serviço** para especificar contas de logon para serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os serviços reais configurados nesta página dependem dos recursos selecionados para instalação. Para saber mais sobre as definições de configuração, confira [Ajuda do Assistente de Instalação](../../sql-server/install/instance-configuration.md#serverconfig).
   

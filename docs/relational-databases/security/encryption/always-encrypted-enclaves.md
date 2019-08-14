@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 22570f7ae8a9f11b89f11027698c948be5766d25
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 998594a4c0c649a0ad73d36e858cf733fc364aae
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661223"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841574"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted com enclaves seguros
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -168,7 +168,6 @@ Enclaves seguros aprimoram a funcionalidade do Always Encrypted. Agora, as segui
     > [!NOTE]
     > As operações acima são compatíveis com colunas de cadeia de caracteres que usam ordenações com classificação binário2 (ordenações BIN2). Colunas de cadeia de caracteres que usam ordenações não BIN2 podem ser criptografadas com criptografia aleatória e chaves de criptografia de coluna habilitadas para enclave. No entanto, a única nova funcionalidade habilitada para essas colunas é a criptografia no local.
 - Criação de índices não clusterizados em colunas usando criptografia aleatória.
-- Colunas computadas com expressões que incluem o predicado LIKE e operadores de comparação, em colunas com criptografia aleatória.
 
 Todas as outras limitações (não solucionadas pelos aprimoramentos acima) descritas sobre o Always Encrypted (sem enclaves seguros), em [Detalhes do Recurso](always-encrypted-database-engine.md#feature-details), também se aplicam a esse recurso com enclaves seguros.
 
@@ -182,6 +181,7 @@ As seguintes limitações são específicas do Always Encrypted com enclaves seg
     - char[n], varchar[n], binary[n], varbinary[n], se n for maior do que 7935.
 - Operações criptográficas in-loco não podem ser combinadas com outras alterações de metadados de coluna, exceto as alterações de ordenação, na mesma página de código e nulidade. Por exemplo, não é possível criptografar, recriptografar ou descriptografar uma coluna E alterar um tipo de dados da coluna em uma única instrução Transact-SQL ALTER TABLE ou ALTER COLUMN. É necessário usar duas instruções separadas.
 - Não há suporte para o uso de chaves habilitadas para enclave para colunas em tabelas na memória.
+- Expressões que definem colunas computadas não podem executar cálculos em colunas habilitadas para enclave usando criptografia aleatória (mesmo que as computações forem comparações LIKE e de intervalo).
 - Os únicos repositórios de chaves compatíveis com o armazenamento de chaves mestras de coluna habilitadas para enclave são o Repositório de Certificados do Windows e o Azure Key Vault.
 
 As seguintes limitações se aplicam ao [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], mas estão no roteiro para serem solucionadas:

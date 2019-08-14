@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae776b53016995fdcfd0ccfdb0c242b19f88addc
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 9fdc5ee7428aec65c96755eb9a1c0e013de80d01
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661451"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809775"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -1109,7 +1109,7 @@ ALTER INDEX test_idx on test_table RESUME
 ALTER INDEX test_idx on test_table ABORT
 ```
 
-### <a name="o-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>O. Criar um índice não clusterizado em uma tabela no banco de dados atual
+### <a name="o-create-a-nonclustered-index-on-a-table-in-the-current-database"></a>O. Criar um índice não clusterizado em uma tabela no banco de dados atual
 O exemplo a seguir cria um índice não clusterizado na coluna `VendorID` da tabela `ProductVendor`.
 
 ```sql

@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf8c6b3de78a1140b1cc153418672fd5b1194e48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 63f1b415471e8793e66bd3e90acc6f6be987904e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070408"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889815"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -1407,7 +1407,7 @@ GO
 DROP TABLE Person.ContactBackup ;
 ```
 
-![Ícone de seta usado com o link Voltar ao início](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Exemplos](#Example_Top)
+![Ícone de seta usado com o link Voltar ao início](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Exemplos](#Example_Top)
 
 ### <a name="alter_column"></a> Alterando uma definição de coluna
 

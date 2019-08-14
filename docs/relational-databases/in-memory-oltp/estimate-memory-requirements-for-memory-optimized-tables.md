@@ -11,12 +11,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aeb9fdd447b36a44803d711a80aa7f2714857d01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2597aa470eea7e69c649b7ce207dffadab81edc3
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050402"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811166"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar requisitos de memória para tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ Assim, em nosso exemplo, a memória necessária para cada matriz de hash é:
   
 Como temos três índices de hash, a memória necessária para os índices de hash é 3 * 64MB = 192MB.  
   
-#### <a name="memory-for-non-clustered-indexes"></a>Memória para índices não clusterizados  
+#### <a name="memory-for-nonclustered-indexes"></a>Memória para índices não clusterizados  
   
 Os índices não clusterizados são implementados como árvores B com os nós internos que contêm o valor e ponteiros de índice aos nós subsequentes.  Os nós folha contêm o valor de índice e um ponteiro para a linha da tabela na memória.  
   
@@ -155,7 +155,7 @@ A memória necessária pelos índices não clusterizados pode ser computada da s
     Para uma configuração comum, a memória alocada para nós não folha é uma porcentagem muito pequena da memória total usada pelo índice. Ela é tão pequena que pode seguramente ser ignorada.  
   
 - **Memória para nós folha**   
-    Os nós folha têm uma linha para cada chave exclusiva na tabela que aponta para as linhas de dados com essa chave exclusiva.  Se você tiver várias linhas com a mesma chave (isto é, tiver um índice não clusterizado não exclusivo), há apenas uma linha no nó folha de índice que aponta para uma das linhas com as outras linhas vinculadas entre si.  Assim, a memória total necessária pode ser aproximado por:
+    Os nós folha têm uma linha para cada chave exclusiva na tabela que aponta para as linhas de dados com essa chave exclusiva.  Se você tiver várias linhas com a mesma chave (isto é, tiver um índice não clusterizado não exclusivo), haverá apenas uma linha no nó folha de índice que apontará para uma das linhas com as outras linhas vinculadas entre si.  Assim, a memória total necessária pode ser aproximado por:
   - memoryForNonClusteredIndex = (pointerSize + sum(keyColumnDataTypeSizes)) * rowsWithUniqueKeys  
   
  Os índices não clusterizados são os melhores quando usado para pesquisas de intervalo, como exemplificadas pela seguinte consulta:  

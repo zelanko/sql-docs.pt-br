@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 1d6a68ea3bc9954cbab62cee7579db6905a4632f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4da9f5118b77fc389e08ddb3c2b351aaaa0fb3b2
+ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67967519"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794996"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Grupos de Disponibilidade AlwaysOn no Linux
 
@@ -24,8 +24,8 @@ Este artigo descreve as características de AGs (Grupos de Disponibilidade Alway
 
 Do ponto de vista de alto nível, os grupos de disponibilidade do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux são os mesmos das implementações baseadas no WSFC. Isso significa que todas as limitações e os recursos são os mesmos, com algumas exceções. As principais diferenças incluem:
 
--   O DTC (Coordenador de Transações Distribuídas) da Microsoft não tem suporte no Linux no [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Se os aplicativos exigirem o uso de transações distribuídas e precisarem de um AG, implante o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Windows.
--   As implantações baseadas no Linux usam o Pacemaker em vez de um WSFC.
+-   O DTC (Coordenador de Transações Distribuídas) da Microsoft é compatível com o Linux a partir do SQL Server 2017 CU16. No entanto, ainda não há suporte para o DTC em Grupos de Disponibilidade no Linux. Se os aplicativos exigirem o uso de transações distribuídas e precisarem de um AG, implante o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Windows.
+-   As implantações baseadas em Linux que exigem alta disponibilidade usam o Pacemaker para clustering em vez de um WSFC.
 -   Ao contrário da maioria das configurações para AGs no Windows, exceto pelo cenário de Cluster de Grupo de Trabalho, o Pacemaker nunca exige o AD DS (Active Directory Domain Services).
 -   Como fazer failover de um AG de um nó para outro é diferente entre o Linux e o Windows.
 -   Algumas configurações, como `required_synchronized_secondaries_to_commit`, só podem ser alteradas por meio do Pacemaker no Linux, enquanto uma instalação baseada no WSFC usa o Transact-SQL.
