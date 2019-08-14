@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cae2c216245fdb6483b3ad07a88b3517c38550bd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 7d04df5bf881f285ab28508443fbf0ce1056fada
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470749"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969498"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>Definir configurações de implantação para clusters de Big Data
 
@@ -22,7 +22,7 @@ ms.locfileid: "68470749"
 
 Para personalizar os arquivos de configuração de implantação de cluster, você pode usar qualquer editor de formato JSON, como o VS Code. Para gerar scripts dessas edições para fins de automação, use o comando **azdata bdc config**. Este artigo explica como configurar implantações de cluster de Big Data modificando arquivos de configuração de implantação. Ele fornece exemplos de como alterar a configuração para cenários diferentes. Para obter mais informações sobre como os arquivos de configuração são usados em implantações, confira a [diretriz de implantação](deployment-guidance.md#configfile).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [Instale o azdata](deploy-install-azdata.md).
 
@@ -174,16 +174,16 @@ azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
 
 ## <a id="podplacement"></a> Configurar o posicionamento do pod usando rótulos do Kubernetes
 
-Você pode controlar o posicionamento do pod em nós do Kubernetes que têm recursos específicos para acomodar vários tipos de requisitos de carga de trabalho. Por exemplo, talvez você queira garantir que os pods do pool de armazenamento sejam colocados em nós com mais armazenamento ou que as instâncias mestre do SQL Server sejam colocadas em nós que tenham recursos de CPU e memória mais elevados. Nesse caso, primeiro você criará um cluster do Kubernetes heterogêneo com diferentes tipos de hardware e, em seguida, [atribuirá os rótulos de nó](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) de acordo. No momento da implantação do cluster de Big Data, você pode especificar os mesmos rótulos no nível de pool no arquivo de configuração de implantação de cluster. Em seguida, o Kubernetes cuidará do ajuste dos pods em nós que correspondem aos rótulos especificados.
+Você pode controlar o posicionamento do pod em nós do Kubernetes que têm recursos específicos para acomodar vários tipos de requisitos de carga de trabalho. Por exemplo, talvez você queira garantir que os pods do pool de armazenamento sejam colocados em nós com mais armazenamento ou que as instâncias mestre do SQL Server sejam colocadas em nós que tenham recursos de CPU e memória mais elevados. Nesse caso, primeiro você criará um cluster do Kubernetes heterogêneo com diferentes tipos de hardware e, em seguida, [atribuirá os rótulos de nó](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) de acordo. No momento da implantação do cluster de Big Data, você pode especificar os mesmos rótulos no nível de pool no arquivo de configuração de implantação de cluster. Em seguida, o Kubernetes cuidará do ajuste dos pods em nós que correspondem aos rótulos especificados. A chave de rótulo específica que precisa ser adicionada aos nós no cluster kubernetes é **MSSQL-cluster-Wide**. O valor desse rótulo pode ser qualquer cadeia de caracteres que você escolher.
 
-O exemplo a seguir mostra como editar um arquivo de configuração personalizado para incluir uma configuração de rótulo de nó para a instância mestre do SQL Server. Observe que não há nenhuma chave *nodeLabel* nas configurações internas, portanto, será necessário editar um arquivo de configuração personalizado manualmente ou criar um arquivo de patch e aplicá-lo ao arquivo de configuração personalizado.
+O exemplo a seguir mostra como editar um arquivo de configuração personalizado para incluir uma configuração de rótulo de nó para a instância mestra de SQL Server, pool de computação, pool de dados & pool de armazenamento. Observe que não há nenhuma chave *nodeLabel* nas configurações internas, portanto, será necessário editar um arquivo de configuração personalizado manualmente ou criar um arquivo de patch e aplicá-lo ao arquivo de configuração personalizado. O Pod da instância mestra de SQL Server será implantado em um nó que contém um rótulo **MSSQL-cluster-Wide** com o valor **BDC-Master**. O pool de computação e os pods do pool de dados serão implantados em nós que contêm um rótulo **MSSQL-cluster-Wide** com o valor **BDC-SQL**. O pods do pool de armazenamento será implantado em nós que contêm um rótulo **MSSQL-cluster-Wide** com valor **BDC-Storage**.
 
 Crie um arquivo chamado **patch.json** no diretório atual com o conteúdo a seguir:
 
 ```json
 {
   "patch": [
-     {
+    {
       "op": "replace",
       "path": "$.spec.pools[?(@.spec.type == 'Master')].spec",
       "value": {
@@ -197,8 +197,35 @@ Crie um arquivo chamado **patch.json** no diretório atual com o conteúdo a seg
              "port": 31433
             }
           ],
-        "nodeLabel": "<yourNodeLabel>"
-       }
+        "nodeLabel": "bdc-master"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Compute')].spec",
+      "value": {
+    "type": "Compute",
+        "replicas": 1,
+        "nodeLabel": "bdc-sql"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Data')].spec",
+      "value": {
+    "type": "Data",
+        "replicas": 2,
+        "nodeLabel": "bdc-sql"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "value": {
+    "type": "Storage",
+        "replicas": 3,
+        "nodeLabel": "bdc-storage"
+      }
     }
   ]
 }

@@ -9,12 +9,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1ad5ca749f3862f0d7df3411efd78104052dba91
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 49cc2cbb4ede2326bf774b5f39968ad4b00ed991
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958620"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969481"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Restaurar um banco de dados na instância mestre de cluster de Big Data do SQL Server
 
@@ -36,19 +36,19 @@ Este artigo mostra como restaurar o banco de dados AdventureWorks, mas você pod
 Copie o arquivo de backup para o contêiner do SQL Server no pod da instância mestre do cluster do Kubernetes.
 
 ```bash
-kubectl cp <path to .bak file> mssql-master-pool-0:/tmp -c mssql-server -n <name of your big data cluster>
+kubectl cp <path to .bak file> master-0:/tmp -c mssql-server -n <name of your big data cluster>
 ```
 
 Exemplo:
 
 ```bash
-kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-master-pool-0:/tmp -c mssql-server -n clustertest
+kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n clustertest
 ```
 
 Em seguida, verifique se o arquivo de backup foi copiado para o contêiner de pod.
 
 ```bash
-kubectl exec -it mssql-master-pool-0 -n <name of your big data cluster> -c mssql-server -- bin/bash
+kubectl exec -it master-0 -n <name of your big data cluster> -c mssql-server -- bin/bash
 cd /var/
 ls /tmp
 exit
@@ -57,7 +57,7 @@ exit
 Exemplo:
 
 ```bash
-kubectl exec -it mssql-master-pool-0 -n clustertest -c mssql-server -- bin/bash
+kubectl exec -it master-0 -n clustertest -c mssql-server -- bin/bash
 ls /tmp
 exit
 ```
