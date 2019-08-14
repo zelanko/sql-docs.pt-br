@@ -40,7 +40,7 @@ ms.locfileid: "66058025"
   
  [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md)  
   
- [Manipuladores de eventos do Integration Services &#40;SSIS&#41](integration-services-ssis-event-handlers.md)  
+ [Manipuladores de eventos do Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)  
   
  [Serviço Integration Services &#40;Serviço SSIS&#41;](service/integration-services-service-ssis-service.md)  
   
