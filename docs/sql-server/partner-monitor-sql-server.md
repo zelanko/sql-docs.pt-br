@@ -8,12 +8,12 @@ ms.date: 11/02/2017
 ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: bc04c25496b10e76eed70f11a37499d4d2395bf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bbf66098bcc2b091ffd97a3f3aebf73c599fbf17
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049756"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68974462"
 ---
 # <a name="sql-server-monitoring-partners"></a>Parceiros de monitoramento do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,16 +29,16 @@ Para monitorar os serviços do SQL Server, escolha de uma ampla variedade de fer
 
 | Partner (parceiro) | Descrição | Links |
 | --- | --- | --- | --- |
-|[![idera][1]][idera_website] |**IDERA**<br>O SQL Diagnostic Manager é uma solução avançada de diagnóstico e de monitoramento de desempenho que alerta os administradores, de maneira proativa, dos problemas de integridade, de desempenho e de disponibilidade em ambientes do SQL Server, tudo em um console central.<br><br>[Requisitos do sistema][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Site][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] | |
-|[![quest][3]][quest_website] |**Busca**<br>Destaque do SQL Server Enterprise – garanta um ótimo desempenho ininterruptamente com incomparável monitoramento, diagnóstico e otimização de ambientes do SQL Server. O Destaque fornece acesso aos detalhes necessários para uma melhor adequação dos bancos de dados do SQL Server. Obtenha visões gerais intuitivas de integridade e desempenho, alertas e ações automatizados e suporte a dispositivos móveis.|[Marketplace][quest_marketplace]<br>[Site][quest_website]<br>[Video][quest_video] | |
+|[![idera][1]][idera_website] |**IDERA**<br>O SQL Diagnostic Manager é uma solução avançada de diagnóstico e de monitoramento de desempenho que alerta os administradores, de maneira proativa, dos problemas de integridade, de desempenho e de disponibilidade em ambientes do SQL Server, tudo em um console central.<br><br>[Requisitos do sistema][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Site][idera_website]<br>[Twitter][idera_twitter]<br>[Vídeo][idera_youtube] | |
+|[![quest][3]][quest_website] |**Busca**<br>Destaque do SQL Server Enterprise – garanta um ótimo desempenho ininterruptamente com incomparável monitoramento, diagnóstico e otimização de ambientes do SQL Server. O Destaque fornece acesso aos detalhes necessários para uma melhor adequação dos bancos de dados do SQL Server. Obtenha visões gerais intuitivas de integridade e desempenho, alertas e ações automatizados e suporte a dispositivos móveis.|[Marketplace][quest_marketplace]<br>[Site][quest_website]<br>[Vídeo][quest_video] | |
 |[![redgate][4]][redgate_website]| **Redgate**<br>O SQL Monitor do Redgate é uma ferramenta de monitoramento do SQL Server que ajuda as equipes que buscam tornar o SQL Server mais proativo. O SQL Monitor não apenas alerta sobre os problemas atuais, mas fornece as informações necessárias para prevenir sua recorrência no futuro. Ideal para grandes instalações do SQL Server, o SQL Monitor garante que você sempre tem a resposta para perguntas sobre desempenho. |[Site][redgate_website]<br>[Twitter][redgate_twitter]<br>[LinkedIn][redgate_linkedin] <br>[Vídeo][redgate_video]| |
-|[![sentryone][2]][sentryone_website] |**SentryOne**<br>As soluções do SentryOne capacitam os profissionais de dados da Microsoft a obter um desempenho inovador em ambientes físicos, virtuais e de nuvem. Com o SentryOne, os profissionais de dados podem consolidar seus conjuntos de ferramentas, reduzir os custos de infraestrutura e aumentar a velocidade do banco de dados e a eficiência para melhorar o desempenho em seus ambientes de plataforma de dados Microsoft, seja qual for o tamanho ou a complexidade.|<!--[Marketplace][idera_marketplace]<br>-->[Site][sentryone_website]<br>[Datasheet][sentryone_datasheet]<br>[Twitter][sentryone_twitter]<br>[LinkedIn][sentryone_linkedin] | |
-|[![solarwinds][5]][solarwinds_website] |**Solarwinds**<br>O Database Performance Analyzer fornece visibilidade de solicitações de aplicativos, de instruções SQL, de recursos de banco de dados, de sistema operacional/host, de rede, de virtualização e de desempenho de armazenamento. O DPA incorpora análise de tempo de espera para que o foco não seja apenas na integridade, mas na velocidade em que o banco de dados responde às solicitações do aplicativo. O DPA fornece cobertura completa dos seus bancos de dados, independentemente de como eles são implantados. Físicos, virtuais, em nuvem ou como serviço (DBaaS), você tem tudo em um único painel de controle.|[Marketplace][solarwinds_marketplace]<br>[Site][solarwinds_website]<br>[Datasheet][solarwinds_datasheet]<br>[LinkedIn][solarwinds_linkedin]<br>[Vídeo][solarwinds_video]| |
+|[![sentryone][2]][sentryone_website] |**SentryOne**<br>As soluções do SentryOne capacitam os profissionais de dados da Microsoft a obter um desempenho inovador em ambientes físicos, virtuais e de nuvem. Com o SentryOne, os profissionais de dados podem consolidar seus conjuntos de ferramentas, reduzir os custos de infraestrutura e aumentar a velocidade do banco de dados e a eficiência para melhorar o desempenho em seus ambientes de plataforma de dados Microsoft, seja qual for o tamanho ou a complexidade.|<!--[Marketplace][idera_marketplace]<br>-->[Site][sentryone_website]<br>[Folha de dados][sentryone_datasheet]<br>[Twitter][sentryone_twitter]<br>[LinkedIn][sentryone_linkedin] | |
+|[![solarwinds][5]][solarwinds_website] |**Solarwinds**<br>O Database Performance Analyzer fornece visibilidade de solicitações de aplicativos, de instruções SQL, de recursos de banco de dados, de sistema operacional/host, de rede, de virtualização e de desempenho de armazenamento. O DPA incorpora análise de tempo de espera para que o foco não seja apenas na integridade, mas na velocidade em que o banco de dados responde às solicitações do aplicativo. O DPA fornece cobertura completa dos seus bancos de dados, independentemente de como eles são implantados. Físicos, virtuais, em nuvem ou como serviço (DBaaS), você tem tudo em um único painel de controle.|[Marketplace][solarwinds_marketplace]<br>[Site][solarwinds_website]<br>[Folha de dados][solarwinds_datasheet]<br>[LinkedIn][solarwinds_linkedin]<br>[Vídeo][solarwinds_video]| |
 
 
 
 ## <a name="next-steps"></a>Próximas etapas
-Para saber mais sobre alguns dos nossos outros parceiros, confira [Alta disponibilidade e parceiros de recuperação de desastre][hadr_partners], [management partners][management_partners] e [parceiros de desenvolvimento][dev_partners].
+Para saber mais sobre alguns dos nossos outros parceiros, confira [Parceiros de alta disponibilidade e recuperação de desastre][hadr_partners], [parceiros de gerenciamento][management_partners] e [parceiros de desenvolvimento][dev_partners].
 
 <!--Image references-->
 [1]: ./media/partner-hadr-sql-server/idera_logo.png
@@ -67,7 +67,9 @@ Para saber mais sobre alguns dos nossos outros parceiros, confira [Alta disponib
 
 <!--Marketplace Links -->
 <!----Not available[idera_marketplace]:https://azure.microsoft.com/marketplace/-->  
-[quest_marketplace]: https://azuremarketplace.microsoft.com/marketplace/apps/quest.spotlight-enterprise-12-3 [solarwinds_marketplace]: https://azuremarketplace.microsoft.com/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer
+
+[quest_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/quest.spotlight-enterprise-12-3
+[solarwinds_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer
 
 <!--Press links-->
 <!--[idera_press]:-->
@@ -81,7 +83,7 @@ Para saber mais sobre alguns dos nossos outros parceiros, confira [Alta disponib
 <!--Twitter links-->
 [idera_twitter]:https://twitter.com/Idera_Software
 [sentryone_twitter]:https://twitter.com/sentryone
-[redgate_twitter]:https://twitter.com/redgate  
+[redgate_twitter]:https://twitter.com/redgate
 
 <!--Supported Systems-->
 [idera_requirements]:https://www.idera.com/productssolutions/sqlserver/sqldiagnosticmanager/systemrequirements
