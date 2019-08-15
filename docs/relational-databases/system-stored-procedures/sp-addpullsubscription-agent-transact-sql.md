@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9ab0624abf7a0479ac12f1ab51efd00c7e45a82a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 79bca732108776b66a2e5750015a27e5931b617a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893813"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028948"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @subscriber = ] 'subscriber'`É o nome da instância do assinante ou o nome do ouvinte do AG se o banco de dados do assinante for um grupo de disponibilidade. o assinante é **sysname**, com um padrão de NULL.  
+`[ @subscriber = ] 'subscriber'`É o nome da instância do assinante ou o nome do ouvinte AG se o banco de dados do Assinante estiver em um grupo de disponibilidade. o assinante é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  Esse parâmetro foi preterido e é mantido para compatibilidade com versões anteriores de scripts.  

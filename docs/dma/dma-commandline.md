@@ -1,6 +1,6 @@
 ---
-title: Executar o Assistente de migração de dados da linha de comando (SQL Server) | Microsoft Docs
-description: Saiba como executar o Assistente de migração de dados da linha de comando para avaliar os bancos de dados do SQL Server para a migração
+title: Executar Assistente de Migração de Dados da linha de comando (SQL Server) | Microsoft Docs
+description: Saiba como executar Assistente de Migração de Dados da linha de comando para avaliar SQL Server bancos de dados para migração
 ms.custom: ''
 ms.date: 05/06/2019
 ms.prod: sql
@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: ed669adc19dddc96ba953ba73f73805925968d19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f98d96547a367dcf7853a5b0d7c14b2d79b7df63
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058908"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028711"
 ---
-# <a name="run-data-migration-assistant-from-the-command-line"></a>Executar o Assistente de migração de dados da linha de comando
+# <a name="run-data-migration-assistant-from-the-command-line"></a>Executar Assistente de Migração de Dados da linha de comando
 
-Com a versão 2.1 e posterior, quando você instala o Assistente de migração de dados, ele também instalará dmacmd.exe na *% ProgramFiles %\\Assistente de migração de dados da Microsoft\\* . Use dmacmd.exe para avaliar seus bancos de dados em um modo autônomo e o resultado para o arquivo CSV ou JSON de saída. Esse método é especialmente útil ao avaliar vários bancos de dados ou bancos de dados grandes. 
+Com a versão 2,1 e superior, quando você instala o assistente de migração de dados, ele também instalará o dmacmd. exe em *%\\ProgramFiles%\\assistente de migração de dados da Microsoft*. Use dmacmd. exe para avaliar seus bancos de dados em um modo autônomo e gerar o resultado para o arquivo JSON ou CSV. Esse método é especialmente útil ao avaliar vários bancos de dados ou bancos de dados enormes. 
 
 > [!NOTE]
-> Dmacmd.exe dá suporte à execução apenas para avaliações. Não há suporte para migrações no momento.
+> O Dmacmd. exe dá suporte apenas a avaliações de execução. No momento, não há suporte para migrações.
 
-## <a name="assessments-using-the-command-line-interface-cli"></a>Avaliações usando a Interface de linha de comando (CLI)
+## <a name="assessments-using-the-command-line-interface-cli"></a>Avaliações usando a CLI (interface de linha de comando)
 
 ```
 DmaCmd.exe /AssessmentName="string"
@@ -40,24 +40,24 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
 
-|Argumento  |Descrição  | Obrigatório (S/N)
+|Argumento  |Descrição  | Necessário (s/N)
 |---------|---------|---------------|
-| `/help or /?`     | Como usar o texto de ajuda de dmacmd.exe        | N
+| `/help or /?`     | Como usar o texto de ajuda do dmacmd. exe        | N
 |`/AssessmentName`     |   Nome do projeto de avaliação   | S
-|`/AssessmentDatabases`     | Lista delimitada por espaço de cadeias de caracteres de conexão. Nome do banco de dados (catálogo inicial) diferencia maiusculas de minúsculas. | S
-|`/AssessmentSourcePlatform`     | Plataforma de origem para a avaliação: <br>Valores com suporte para a avaliação: SqlOnPrem, RdsSqlServer (padrão) <br>Valores com suporte para a avaliação de prontidão de destino: SqlOnPrem RdsSqlServer (padrão), Cassandra (versão prévia)   | N
-|`/AssessmentTargetPlatform`     | Plataforma de destino para a avaliação:  <br> Valores com suporte para a avaliação: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, lt;sqlserver2014, SqlServer2016, SqlServerLinux2017 e SqlServerWindows2017 (padrão)  <br> Valores com suporte para a avaliação de prontidão de destino: ManagedSqlServer (padrão), o cosmos DB (versão prévia)   | N
-|`/AssessmentEvaluateFeatureParity`  | Execute as regras de paridade de recurso. Se a plataforma de origem é RdsSqlServer, avaliação de paridade de recurso não tem suporte para a plataforma de destino AzureSqlDatabase  | N
-|`/AssessmentEvaluateCompatibilityIssues`     | Executar regras de compatibilidade  | S <br> (AssessmentEvaluateCompatibilityIssues ou AssessmentEvaluateRecommendations é necessário.)
-|`/AssessmentEvaluateRecommendations`     | Execute as recomendações de recurso        | S <br> (AssessmentEvaluateCompatibilityIssues ou AssessmentEvaluateRecommendations é necessária)
+|`/AssessmentDatabases`     | Lista delimitada por espaço de cadeias de conexão. O nome do banco de dados (catálogo inicial) diferencia maiúsculas de minúsculas. | S
+|`/AssessmentSourcePlatform`     | Plataforma de origem para a avaliação: <br>Valores com suporte para avaliação: SqlOnPrem, RdsSqlServer (padrão) <br>Valores com suporte para avaliação de preparação de destino: SqlOnPrem, RdsSqlServer (padrão), Cassandra (versão prévia)   | N
+|`/AssessmentTargetPlatform`     | Plataforma de destino para a avaliação:  <br> Valores com suporte para avaliação: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 e SqlServerWindows2017 (padrão)  <br> Valores com suporte para avaliação de preparação de destino: ManagedSqlServer (padrão), CosmosDB (versão prévia)   | N
+|`/AssessmentEvaluateFeatureParity`  | Execute regras de paridade de recurso. Se a plataforma de origem for RdsSqlServer, a avaliação de paridade de recurso não terá suporte para a plataforma de destino AzureSqlDatabase  | N
+|`/AssessmentEvaluateCompatibilityIssues`     | Executar regras de compatibilidade  | S <br> (É necessário o AssessmentEvaluateCompatibilityIssues ou o AssessmentEvaluateRecommendations.)
+|`/AssessmentEvaluateRecommendations`     | Executar recomendações de recursos        | S <br> (É necessário o AssessmentEvaluateCompatibilityIssues ou o AssessmentEvaluateRecommendations)
 |`/AssessmentOverwriteResult`     | Substituir o arquivo de resultado    | N
-|`/AssessmentResultJson`     | Caminho completo para o arquivo de resultado JSON     | S <br> (AssessmentResultJson ou AssessmentResultCsv é necessária)
-|`/AssessmentResultCsv`    | Caminho completo para o arquivo de resultado CSV   | S <br> (AssessmentResultJson ou AssessmentResultCsv é necessária)
-|`/Action`    | Use SkuRecommendation para obter recomendações de SKU, use AssessTargetReadiness para realizar a avaliação de prontidão de destino.   | N
-|`/SourceConnections`    | Lista delimitada de espaço de cadeias de caracteres de conexão. Nome do banco de dados (catálogo inicial) é opcional. Se nenhum nome de banco de dados for fornecido, todos os bancos de dados na origem são avaliados.   | S <br> (Obrigatório se a ação é 'AssessTargetReadiness')
-|`/TargetReadinessConfiguration`    | Caminho completo para o arquivo XML que descreve os valores para o nome, conexões de fonte e o arquivo de resultado.   | S <br> (TargetReadinessConfiguration ou SourceConnections é necessária)
-|`/FeatureDiscoveryReportJson`    | Caminho para a descoberta do recurso relatório JSON. Se esse arquivo é gerado, ele pode ser usado para executar a avaliação de prontidão de destino novamente sem se conectar à fonte. | N
-|`/ImportFeatureDiscoveryReportJson`    | Caminho para o relatório JSON da descoberta de recursos criado anteriormente. Em vez de conexões de origem, esse arquivo será usado.   | N
+|`/AssessmentResultJson`     | Caminho completo para o arquivo de resultado JSON     | S <br> (É necessário o AssessmentResultJson ou o AssessmentResultCsv)
+|`/AssessmentResultCsv`    | Caminho completo para o arquivo de resultado CSV   | S <br> (É necessário o AssessmentResultJson ou o AssessmentResultCsv)
+|`/Action`    | Use SkuRecommendation para obter recomendações de SKU, use AssessTargetReadiness para executar a avaliação de prontidão de destino.   | N
+|`/SourceConnections`    | Lista delimitada por espaço de cadeias de conexão. O nome do banco de dados (catálogo inicial) é opcional. Se nenhum nome de banco de dados for fornecido, todos os bancos de dados na origem serão avaliados.   | S <br> (Obrigatório se action for ' AssessTargetReadiness ')
+|`/TargetReadinessConfiguration`    | Caminho completo para o arquivo XML que descreve os valores para o nome, as conexões de origem e o arquivo de resultado.   | S <br> (É necessário o TargetReadinessConfiguration ou o SourceConnections)
+|`/FeatureDiscoveryReportJson`    | Caminho para o relatório JSON do recurso de descoberta. Se esse arquivo for gerado, ele poderá ser usado para executar a avaliação de prontidão de destino novamente sem se conectar à origem. | N
+|`/ImportFeatureDiscoveryReportJson`    | Caminho para o relatório JSON do recurso de descoberta criado anteriormente. Em vez de conexões de origem, esse arquivo será usado.   | N
 
 ## <a name="examples-of-assessments-using-the-cli"></a>Exemplos de avaliações usando a CLI
 
@@ -65,7 +65,7 @@ DmaCmd.exe /AssessmentName="string"
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
-**Avaliação de banco de dados único usando regras de compatibilidade de autenticação e a execução do Windows**
+**Avaliação de banco de dados único usando autenticação do Windows e regras de compatibilidade em execução**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -75,7 +75,7 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentResultJson="C:\\temp\\Results\\AssessmentReport.json"
 ```
 
-**Avaliação de banco de dados único usando a recomendação de recurso de autenticação e a execução do SQL Server**
+**Avaliação de banco de dados único usando a autenticação de SQL Server e a execução de recomendação de recurso**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -85,7 +85,7 @@ Catalog=DatabaseName;User Id=myUsername;Password=myPassword;"
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
-**Avaliação do banco de dados único para a plataforma de destino SQL Server 2012, salvar resultados em arquivo. JSON e. csv**
+**Avaliação de banco de dados único para plataforma de destino SQL Server 2012, salvar resultados em arquivo. JSON e. csv**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -97,7 +97,7 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
-**Avaliação de banco de dados de único para a plataforma de destino de banco de dados do SQL Azure, salvar resultados em arquivo. JSON e. csv**
+**Avaliação de banco de dados único para plataforma de destino SQL Azure banco de dados, salvar resultados em arquivos. JSON e. csv**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -135,7 +135,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /AssessmentResultJson="C:\temp\Results\AssessmentReport.json"
 ```
 
-**Avaliação de prontidão de destino de banco de dados único usando a autenticação do SQL Server**
+**Avaliação de prontidão de destino de banco de dados único usando a autenticação SQL Server**
 
 ```
 DmaCmd.exe /Action=AssessTargetReadiness 
@@ -146,7 +146,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
-**Avaliação de banco de dados de único para a plataforma de destino de banco de dados do SQL Azure, salvar resultados em arquivo. JSON e. csv**
+**Avaliação de banco de dados único para plataforma de destino SQL Azure banco de dados, salvar resultados em arquivos. JSON e. csv**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -175,7 +175,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 (/AssessmentSourcePlatform and /AssessmentTargetPlatform are optional.)
 ```
 
-**Avaliação de prontidão de destino para todos os bancos de dados em um servidor usando a autenticação do Windows**
+**Avaliação de preparação de destino para todos os bancos de dados em um servidor usando a autenticação do Windows**
 
 ```
 DmaCmd.exe /Action=AssessTargetReadiness
@@ -186,7 +186,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
-**Avaliação de prontidão de destino com a importação de relatório de descoberta do recurso criado anteriormente**
+**Avaliação de preparação de destino importando relatório de descoberta de recursos criado anteriormente**
 
 ```
 DmaCmd.exe /Action=AssessTargetReadiness
@@ -197,18 +197,18 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
-**Avaliação de prontidão de destino, fornecendo o arquivo de configuração**
+**Avaliação de preparação de destino ao fornecer o arquivo de configuração**
 
 ```
 DmaCmd.exe /Action=AssessTargetReadiness 
 /TargetReadinessConfiguration=.\Config.xml
 ```
 
-Conexões de fonte de conteúdo do arquivo de configuração ao usar:
+Conteúdo do arquivo de configuração ao usar conexões de origem:
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>
-<TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
+<TargetReadinessConfiguration xmlns="https://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
   <AssessmentName>name</AssessmentName>
   <SourcePlatform>Source Platform</SourcePlatform> <!-- Optional. The default is SqlOnPrem -->
   <TargetPlatform>TargetPlatform</TargetPlatform> <!-- Optional. The default is ManagedSqlServer -->
@@ -224,10 +224,10 @@ Conexões de fonte de conteúdo do arquivo de configuração ao usar:
 </TargetReadinessConfiguration>
 ```
 
-Conteúdo do arquivo de configuração durante a importação do recurso relatório de descoberta:
+Conteúdo do arquivo de configuração ao importar o relatório de descoberta de recursos:
 
 ```
-<TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
+<TargetReadinessConfiguration xmlns="https://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
   <AssessmentName>name</AssessmentName>
   <ImportFeatureDiscoveryReportJson>path\to\featurediscoveryfile.json</ImportFeatureDiscoveryReportJson>
   <AssessmentResultJson>path\to\resultfile.json</AssessmentResultJson>
@@ -235,9 +235,9 @@ Conteúdo do arquivo de configuração durante a importação do recurso relató
 </TargetReadinessConfiguration>
 ```
 
-## <a name="azure-sql-databasemanaged-instance-sku-recommendations-using-the-cli"></a>Banco de dados SQL/gerenciado instância SKU recomendações do Azure usando a CLI
+## <a name="azure-sql-databasemanaged-instance-sku-recommendations-using-the-cli"></a>Recomendações de SKU da instância gerenciada/banco de dados SQL do Azure usando a CLI
 
-Esses comandos recomendações de suporte para o banco de dados individual do banco de dados SQL e opções de implantação de instância gerenciada.
+Esses comandos dão suporte a recomendações para o banco de dados SQL do Azure e opções de implantação de instância gerenciada.
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -248,25 +248,25 @@ Esses comandos recomendações de suporte para o banco de dados individual do ba
 /SkuRecommendationPreventPriceRefresh=true 
 ```
 
-|Argumento  |Descrição  | Obrigatório (S/N)
+|Argumento  |Descrição  | Necessário (s/N)
 |---------|---------|---------------|
-|`/Action=SkuRecommendation` | Executar avaliação de SKU usando a linha de comando DMA | S
-|`/SkuRecommendationInputDataFilePath` | Caminho completo para o arquivo de contador de desempenho coletado do computador que hospeda seus bancos de dados | S
+|`/Action=SkuRecommendation` | Executar avaliação de SKU usando linha de comando DMA | S
+|`/SkuRecommendationInputDataFilePath` | Caminho completo do arquivo do contador de desempenho coletado do computador que hospeda seus bancos de dados | S
 |`/SkuRecommendationTsvOutputResultsFilePath` | Caminho completo para o arquivo de resultado TSV | S <br> (Requer o caminho do arquivo TSV ou JSON ou HTML)
 |`/SkuRecommendationJsonOutputResultsFilePath` | Caminho completo para o arquivo de resultado JSON | S <br> (Requer o caminho do arquivo TSV ou JSON ou HTML)
 |`/SkuRecommendationHtmlResultsFilePath` | Caminho completo para o arquivo de resultado HTML | S <br> (Requer o caminho do arquivo TSV ou JSON ou HTML)
-|`/SkuRecommendationPreventPriceRefresh` | Impede que o preço de atualização ocorra. Use se executando no modo offline (por exemplo, true). | S <br> (Selecione qualquer um desse argumento para preços estáticos ou abaixo de todos os argumentos precisam ser selecionados para obter os preços mais recentes)
-|`/SkuRecommendationCurrencyCode` | A moeda na qual exibir os preços (por exemplo "US") | S <br> (Para os preços mais recentes)
-|`/SkuRecommendationOfferName` | A oferta de nome (por exemplo "MS-AZR - 0003P"). Para obter mais informações, consulte o [detalhes da oferta do Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) página. | S <br> (Para os preços mais recentes)
-|`/SkuRecommendationRegionName` | A região (por exemplo, nomeie "Oeste dos EUA") | S <br> (Para os preços mais recentes)
-|`/SkuRecommendationSubscriptionId` | A ID da assinatura. | S <br> (Para os preços mais recentes)
-|`/SkuRecommendationDatabasesToRecommend` | Lista separada por espaços dos bancos de dados a ser recomendado (por exemplo "Database1" "Database2" "Database3"). Nomes diferenciam maiusculas de minúsculas e devem ser colocados entre aspas duplas. Se omitido, as recomendações são fornecidas para todos os bancos de dados. | N
-|`/AzureAuthenticationTenantId` | O locatário de autenticação. | S <br> (Para os preços mais recentes)
-|`/AzureAuthenticationClientId` | A ID do cliente do aplicativo AAD usado para autenticação. | S <br> (Para os preços mais recentes)
-|`/AzureAuthenticationInteractiveAuthentication` | Defina como verdadeiro para a janela pop-up. | S <br> (Para os preços mais recentes) <br>(Escolha uma das opções de 3 autenticação - opção 1)
-|`/AzureAuthenticationCertificateStoreLocation` | Definido como o repositório de certificados local (por exemplo "CurrentUser"). | S <br>(Para os preços mais recentes) <br> (Escolha uma das opções de 3 autenticação - opção 2)
-|`/AzureAuthenticationCertificateThumbprint` | Definido como a impressão digital do certificado. | S <br> (Para os preços mais recentes) <br>(Escolha uma das opções de 3 autenticação - opção 2)
-|`/AzureAuthenticationToken` | Defina como o token de certificado. | S <br> (Para os preços mais recentes) <br>(Escolha uma das opções de 3 autenticação - opção 3)
+|`/SkuRecommendationPreventPriceRefresh` | Impede que a atualização de preço ocorra. Use se estiver executando no modo offline (por exemplo, true). | S <br> (Selecione este argumento para preços estáticos ou todos os argumentos abaixo precisam ser selecionados para obter os preços mais recentes)
+|`/SkuRecommendationCurrencyCode` | A moeda na qual os preços são exibidos (por exemplo, "USD") | S <br> (Para obter os preços mais recentes)
+|`/SkuRecommendationOfferName` | O nome da oferta (por exemplo, "MS-AZR-0003P"). Para obter mais informações, consulte a página [detalhes da oferta de Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) . | S <br> (Para obter os preços mais recentes)
+|`/SkuRecommendationRegionName` | O nome da região (por exemplo, "Westus") | S <br> (Para obter os preços mais recentes)
+|`/SkuRecommendationSubscriptionId` | A ID da assinatura. | S <br> (Para obter os preços mais recentes)
+|`/SkuRecommendationDatabasesToRecommend` | Lista de bancos de dados separados por espaços para recomendar (por exemplo, "Database1" "Database2" Database3 "). Os nomes diferenciam maiúsculas de minúsculas e devem estar entre aspas duplas. Se omitido, serão fornecidas recomendações para todos os bancos de dados. | N
+|`/AzureAuthenticationTenantId` | O locatário de autenticação. | S <br> (Para obter os preços mais recentes)
+|`/AzureAuthenticationClientId` | A ID do cliente do aplicativo AAD usado para autenticação. | S <br> (Para obter os preços mais recentes)
+|`/AzureAuthenticationInteractiveAuthentication` | Defina como true para exibir a janela. | S <br> (Para obter os preços mais recentes) <br>(Escolha uma das 3 opções de autenticação-opção 1)
+|`/AzureAuthenticationCertificateStoreLocation` | Defina como o local do repositório de certificados (por exemplo, "CurrentUser"). | S <br>(Para obter os preços mais recentes) <br> (Escolha uma das 3 opções de autenticação-opção 2)
+|`/AzureAuthenticationCertificateThumbprint` | Defina como a impressão digital do certificado. | S <br> (Para obter os preços mais recentes) <br>(Escolha uma das 3 opções de autenticação-opção 2)
+|`/AzureAuthenticationToken` | Defina como o token de certificado. | S <br> (Para obter os preços mais recentes) <br>(Escolha uma das 3 opções de autenticação-opção 3)
 
 ## <a name="examples-of-sku-assessments-using-the-cli"></a>Exemplos de avaliações de SKU usando a CLI
 
@@ -274,7 +274,7 @@ Esses comandos recomendações de suporte para o banco de dados individual do ba
 
 `Dmacmd.exe /? or DmaCmd.exe /help`
 
-**Recomendações de SKU de MI/banco de dados SQL do Azure com a atualização de preço (get preços mais recentes) - autenticação interativa** 
+**Banco de BD SQL do Azure/recomendação de SKU de MI com atualização de preço (obter preços mais recentes)-autenticação interativa** 
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -291,7 +291,7 @@ Esses comandos recomendações de suporte para o banco de dados individual do ba
 /AzureAuthenticationInteractiveAuthentication=true 
 ```
 
-**Recomendações de SKU de MI/banco de dados SQL do Azure com a atualização de preço (get preços mais recentes) - autenticação de certificado**
+**Banco de BD SQL do Azure/recomendação de SKU de MI com atualização de preço (obter preços mais recentes)-autenticação de certificado**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -309,7 +309,7 @@ Esses comandos recomendações de suporte para o banco de dados individual do ba
 /AzureAuthenticationCertificateThumbprint=<Your Certificate Thumbprint>  
 ```
 
-**Recomendações de SKU/MI de banco de dados de SQL do Azure com a atualização de preço (get preços mais recentes) - autenticação de Token e especifique os bancos de dados para recomendar**
+**Recomendação do BD SQL do Azure/MI com atualização de preço (obter preços mais recentes) – autenticação de token e especificar bancos de dados para recomendar**
   
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -327,7 +327,7 @@ Esses comandos recomendações de suporte para o banco de dados individual do ba
 /AzureAuthenticationToken=<Your Authentication Token> 
 ```
 
-**Recomendações de SKU de MI/banco de dados SQL do Azure sem a atualização de preço (preços estática de uso)** 
+**Banco de BD SQL do Azure/recomendação de SKU de MI sem atualização de preço (usar preços estáticos)** 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
 /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
@@ -338,5 +338,5 @@ Esses comandos recomendações de suporte para o banco de dados individual do ba
 ```
 
 ## <a name="see-also"></a>Confira também
-- [Assistente de migração de dados](https://aka.ms/get-dma) baixar.
-- O artigo [identificar a SKU certa de banco de dados de SQL do Azure para seu banco de dados local](https://aka.ms/dma-sku-recommend-sqldb).
+- Download de [Assistente de migração de dados](https://aka.ms/get-dma) .
+- O artigo [identifica o SKU do banco de dados SQL do Azure correto para seu banco de dados local](https://aka.ms/dma-sku-recommend-sqldb).

@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dcc30e8d86a1a767291b410df7cfd3aa42edf27f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ad5efd9c6d7a3750dcf3e35ae4d651e646060ed5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470999"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028589"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistência de dados com o cluster de Big Data do SQL Server no Kubernetes
 
@@ -60,7 +60,7 @@ A seção [Configurar armazenamento](#config-samples) fornece mais exemplos de c
 O AKS é fornecido com [duas classes de armazenamento internas](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **padrão** e **gerenciadas Premium**, juntamente com o provisionador dinâmico para elas. Você pode especificar qualquer uma delas ou criar sua própria classe de armazenamento para implantar o cluster de Big Data com o armazenamento persistente habilitado. Por padrão, o arquivo de configuração de cluster interno para o AKS *aks-dev-test* é fornecido com configurações de armazenamento persistentes para usar a classe de armazenamento **padrão**.
 
 > [!WARNING]
-> Os volumes persistentes criados com as classes de armazenamento internas **padrão** e **gerenciada Premium** têm uma política de recuperação de *Exclusão*. Portanto, no momento em que você exclui o cluster de Big Data do SQL Server, as declarações de volume persistente são excluídas e, em seguida, os volumes persistentes também. Você pode criar classes de armazenamento personalizadas usando o provisionador **azure-disk** com uma política de recuperação de *Retenção* conforme mostrado [neste](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) artigo.
+> Os volumes persistentes criados com as classes de armazenamento internas **padrão** e **gerenciada Premium** têm uma política de recuperação de *Exclusão*. Portanto, no momento em que você exclui o cluster de Big Data do SQL Server, as declarações de volume persistente são excluídas e, em seguida, os volumes persistentes também. Você pode criar classes de armazenamento personalizadas usando o provisionador **azure-disk** com uma política de recuperação de *Retenção* conforme mostrado [neste](https://docs.microsoft.com/azure/aks/concepts-storage#storage-classes) artigo.
 
 
 ## <a name="minikube-storage-class"></a>Classe de armazenamento do Minikube

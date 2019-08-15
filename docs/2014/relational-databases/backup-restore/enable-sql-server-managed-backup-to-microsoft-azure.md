@@ -1,5 +1,5 @@
 ---
-title: Como configurar o SQL Server Managed Backup to Windows Azure | Microsoft Docs
+title: Configurando SQL Server Backup gerenciado para o Windows Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 493f0b885f25cfba956fc8e03505b705c731cf2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b72fcf0a067838651d9c41205c3604750fecc6d
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62875795"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028639"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-windows-azure"></a>Configurando o Backup Gerenciado do SQL Server para Windows Azure
   Este tópico inclui dois tutoriais:  
@@ -24,35 +24,35 @@ ms.locfileid: "62875795"
   
  Ao configurar o  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] no nível da instância, habilite a notificação por email e monitore a atividade de backup.  
   
- Para obter um tutorial sobre como configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para grupos de disponibilidade, consulte [Configurando o SQL Server Managed Backup to Microsoft Azure para grupos de disponibilidade](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
+ Para obter um tutorial sobre como [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configurar grupos de disponibilidade, confira Configurando [SQL Server Backup gerenciado para Microsoft Azure para grupos de disponibilidade](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
   
-## <a name="setting-up-includesssmartbackupincludesss-smartbackup-mdmd"></a>Configurando o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+## <a name="setting-up-includess_smartbackupincludesss-smartbackup-mdmd"></a>Configurando o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
-### <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-for-a-database"></a>Habilitar e configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para um banco de dados  
+### <a name="enable-and-configure-includess_smartbackupincludesss-smartbackup-mdmd-for-a-database"></a>Habilitar e configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para um banco de dados  
  Este tutorial descreve as etapas necessárias para habilitar e configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para um banco de dados (TestDB), seguidas pelas etapas para habilitar o monitoramento do status de integridade do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .  
   
  **Permissões:**  
   
--   Requer associação na **db_backupoperator** função de banco de dados com **ALTER ANY CREDENTIAL** permissões, e `EXECUTE` permissões em **sp_delete_backuphistory**procedimento armazenado.  
+-   Requer associação na função de banco de dados **db_backupoperator** , com permissões **ALTER ANY Credential** e `EXECUTE` permissões no procedimento armazenado **sp_delete_backuphistory**.  
   
 -   Requer permissões **SELECT** na função **smart_admin.fn_get_current_xevent_settings**.  
   
--   Requer `EXECUTE` permissões de **sp_get_backup_diagnostics** procedimento armazenado. Além disso, requer permissões `VIEW SERVER STATE`, pois chama internamente outros objetos do sistema que exigem essa permissão.  
+-   Requer `EXECUTE` permissões no procedimento armazenado **smart_admin. sp_get_backup_diagnostics** . Além disso, requer permissões `VIEW SERVER STATE`, pois chama internamente outros objetos do sistema que exigem essa permissão.  
   
--   Requer `EXECUTE` permissões de `smart_admin.sp_set_instance_backup` e `smart_admin.sp_backup_master_switch` procedimentos armazenados.  
+-   Requer `EXECUTE` `smart_admin.sp_backup_master_switch` permissões`smart_admin.sp_set_instance_backup` nos procedimentos armazenados e.  
 
 
-1.  **Crie uma conta de armazenamento do Microsoft Azure:** Os backups são armazenados no serviço de armazenamento do Microsoft Azure. Primeiro você deve criar uma conta de armazenamento do Microsoft Azure, se você ainda não tiver uma conta.
-    - SQL Server 2014 usa blobs de página, que são diferentes de bloco e blobs de acréscimo. Portanto, você deve criar uma conta de finalidade geral e não uma conta de blob. Para obter mais informações, consulte [contas de armazenamento do Azure sobre](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
+1.  **Criar uma conta de armazenamento Microsoft Azure:** Os backups são armazenados no serviço de armazenamento Microsoft Azure. Você deve primeiro criar uma conta de armazenamento Microsoft Azure, se ainda não tiver uma conta.
+    - SQL Server 2014 usa blobs de página, que são diferentes dos BLOBs de bloco e de acréscimo. Portanto, você deve criar uma conta de uso geral e não uma conta de BLOB. Para obter mais informações, consulte [sobre contas de armazenamento do Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
     - Anote o nome da conta de armazenamento e as chaves de acesso. O nome da conta de armazenamento e as informações de chave de acesso são usados para criar uma Credencial SQL. A Credencial SQL é usada para realizar a autenticação na conta de armazenamento.  
  
-2.  **Crie uma credencial SQL:** Crie uma credencial do SQL usando o nome da conta de armazenamento como a identidade e a chave de acesso de armazenamento como a senha.  
+2.  **Criar uma credencial do SQL:** Crie uma credencial do SQL usando o nome da conta de armazenamento como a identidade e a chave de acesso de armazenamento como a senha.  
   
 3.  **Garantir que o serviço SQL Server Agent foi iniciado e está em execução:**  Inicie o SQL Server Agent se ele não estiver em execução.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] requer que o SQL Server Agent esteja em execução na instância para executar operações de backup.  Talvez seja necessário definir o SQL Server Agent para ser executado automaticamente, a fim de assegurar que as operações de backup ocorrerão regularmente.  
   
-4.  **Determinar o período de retenção:** Determine o período de retenção para os arquivos de backup. O período de retenção é especificado em dias e pode variar de 1 a 30.  
+4.  **Determinar o período de retenção:** determine o período de retenção dos arquivos de backup. O período de retenção é especificado em dias e pode variar de 1 a 30.  
   
-5.  **Habilitar e configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:**  Inicie o SQL Server Management Studio e conecte-se à instância onde o banco de dados está instalado. Na janela de consulta, execute a seguinte instrução após modificar os valores do nome do banco de dados, a Credencial SQL, o período de retenção e as opções de criptografia de acordo com seus requisitos:  
+5.  **Habilitar e configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:**  Inicie o SQL Server Management Studio e conecte-se à instância em que o banco de dados do está instalado. Na janela de consulta, execute a seguinte instrução após modificar os valores do nome do banco de dados, a Credencial SQL, o período de retenção e as opções de criptografia de acordo com seus requisitos:  
   
      Para obter mais informações sobre como criar um certificado para criptografia, consulte a etapa **Criar um certificado de backup** em [Create an Encrypted Backup](create-an-encrypted-backup.md).  
   
@@ -73,13 +73,13 @@ ms.locfileid: "62875795"
   
      [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está habilitado no banco de dados que você especificou. Podem ser necessários até 15 minutos para que as operações de backup no banco de dados comecem a ser executadas.  
   
-6.  **Examinar a Configuração Padrão do Evento Estendido:** Examine as configurações de evento estendido executando a seguinte instrução transact-SQL.  
+6.  **Examinar a Configuração Padrão do Evento Estendido:** examine as configurações do Evento Estendido executando a instrução transact-SQL a seguir.  
   
     ```  
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
     ```  
   
-     Você verá que os eventos de canal Admin, Operacional e Analítico estão habilitados por padrão e não podem ser desabilitados. Isso deve ser suficiente para monitorar os eventos que requerem intervenção manual.  Você pode habilitar os eventos de depuração, mas os canais de depuração incluem eventos informativos e de depuração que o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] usa para detectar problemas e resolvê-los. Para obter mais informações, consulte [Monitor de SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
+     Você verá que os eventos de canal Admin, Operacional e Analítico estão habilitados por padrão e não podem ser desabilitados. Isso deve ser suficiente para monitorar os eventos que requerem intervenção manual.  Você pode habilitar os eventos de depuração, mas os canais de depuração incluem eventos informativos e de depuração que o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] usa para detectar problemas e resolvê-los. Para obter mais informações, consulte [monitorar SQL Server Backup gerenciado para Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
 7.  **Habilitar e configurar a notificação do status de integridade:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] tem um procedimento armazenado que cria um trabalho de agente para enviar notificações por email sobre erros ou avisos que possam exigir atenção. As etapas a seguir descrevem o processo para habilitar e configurar notificações por email:  
   
@@ -96,9 +96,9 @@ ms.locfileid: "62875795"
   
         ```  
   
-         Para obter mais informações e um script de exemplo completo, consulte [Monitor de SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
+         Para obter mais informações e um script de exemplo completo, consulte [monitorar SQL Server Backup gerenciado para Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
-8.  **Exibir arquivos de backup na Conta de Armazenamento do Microsoft Azure:** Conecte-se à conta de armazenamento do SQL Server Management Studio ou o Portal de gerenciamento do Azure. Você verá um contêiner para a instância do SQL Server que hospeda o banco de dados que configurou para usar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Você também poderá consultar um banco de dados e um backup de log 15 minutos depois de habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para o banco de dados.  
+8.  **Exibir arquivos de backup na Conta de Armazenamento do Microsoft Azure:** Conecte-se à conta de armazenamento do SQL Server Management Studio ou do Portal de Gerenciamento do Azure. Você verá um contêiner para a instância do SQL Server que hospeda o banco de dados que configurou para usar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Você também poderá consultar um banco de dados e um backup de log 15 minutos depois de habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para o banco de dados.  
   
 9. **Monitorar o Status de Integridade:**  Realize o monitoramento por meio das notificações por email configuradas anteriormente ou monitore de forma ativa os eventos registrados em log. Estes são alguns exemplos de instruções Transact-SQL usados para exibir os eventos:  
   
@@ -147,31 +147,31 @@ ms.locfileid: "62875795"
   
     ```  
   
- As etapas descritas nesta seção destinam-se especificamente à configuração do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pela primeira vez no banco de dados. Você pode modificar as configurações existentes usando o mesmo procedimento armazenado do sistema **smart_admin.sp_set_db_backup** e fornecer os novos valores. Para obter mais informações, consulte [SQL Server Managed Backup to Microsoft Azure - Retention and Storage Settings](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
+ As etapas descritas nesta seção destinam-se especificamente à configuração do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pela primeira vez no banco de dados. Você pode modificar as configurações existentes usando o mesmo procedimento armazenado do sistema **smart_admin.sp_set_db_backup** e fornecer os novos valores. Para obter mais informações, consulte [SQL Server Backup gerenciado para Microsoft Azure-configurações de armazenamento e retenção](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
   
-### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd-for-the-instance-with-default-settings"></a>Habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para a instância com configurações padrão  
- Este tutorial descreve as etapas para habilitar e configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para a instância 'MyInstance',\\. Inclui etapas para habilitar o monitoramento do status de integridade do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .  
+### <a name="enable-includess_smartbackupincludesss-smartbackup-mdmd-for-the-instance-with-default-settings"></a>Habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para a instância com configurações padrão  
+ Este tutorial descreve as etapas para habilitar e configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] o para a instância do, ' MyInstance\\',. Inclui etapas para habilitar o monitoramento do status de integridade do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .  
   
  **Permissões:**  
   
--   Requer associação na **db_backupoperator** função de banco de dados com **ALTER ANY CREDENTIAL** permissões, e `EXECUTE` permissões em **sp_delete_backuphistory**procedimento armazenado.  
+-   Requer associação na função de banco de dados **db_backupoperator** , com permissões **ALTER ANY Credential** e `EXECUTE` permissões no procedimento armazenado **sp_delete_backuphistory**.  
   
 -   Requer permissões **SELECT** na função **smart_admin.fn_get_current_xevent_settings**.  
   
--   Requer `EXECUTE` permissões de **sp_get_backup_diagnostics** procedimento armazenado. Além disso, requer permissões `VIEW SERVER STATE`, pois chama internamente outros objetos do sistema que exigem essa permissão.  
+-   Requer `EXECUTE` permissões no procedimento armazenado **smart_admin. sp_get_backup_diagnostics** . Além disso, requer permissões `VIEW SERVER STATE`, pois chama internamente outros objetos do sistema que exigem essa permissão.  
 
 
-1.  **Crie uma conta de armazenamento do Microsoft Azure:** Os backups são armazenados no serviço de armazenamento do Microsoft Azure. Primeiro você deve criar uma conta de armazenamento do Microsoft Azure, se você ainda não tiver uma conta.
-    - SQL Server 2014 usa blobs de página, que são diferentes de bloco e blobs de acréscimo. Portanto, você deve criar uma conta de finalidade geral e não uma conta de blob. Para obter mais informações, consulte [contas de armazenamento do Azure sobre](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
+1.  **Criar uma conta de armazenamento Microsoft Azure:** Os backups são armazenados no serviço de armazenamento Microsoft Azure. Você deve primeiro criar uma conta de armazenamento Microsoft Azure, se ainda não tiver uma conta.
+    - SQL Server 2014 usa blobs de página, que são diferentes dos BLOBs de bloco e de acréscimo. Portanto, você deve criar uma conta de uso geral e não uma conta de BLOB. Para obter mais informações, consulte [sobre contas de armazenamento do Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
     - Anote o nome da conta de armazenamento e as chaves de acesso. O nome da conta de armazenamento e as informações de chave de acesso são usados para criar uma Credencial SQL. A Credencial SQL é usada para realizar a autenticação na conta de armazenamento.  
   
-2.  **Crie uma credencial SQL:** Crie uma credencial do SQL usando o nome da conta de armazenamento como a identidade e a chave de acesso de armazenamento como a senha.  
+2.  **Criar uma credencial do SQL:** Crie uma credencial do SQL usando o nome da conta de armazenamento como a identidade e a chave de acesso de armazenamento como a senha.  
   
 3.  **Garantir que o serviço SQL Server Agent foi iniciado e está em execução:** Inicie o SQL Server Agent se ele não estiver em execução. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] requer que o SQL Server Agent esteja em execução na instância para executar operações de backup.  Talvez seja necessário definir o SQL Server Agent para ser executado automaticamente, a fim de assegurar que as operações de backup ocorrerão regularmente.  
   
-4.  **Determinar o período de retenção:** Determine o período de retenção para os arquivos de backup. O período de retenção é especificado em dias e pode variar de 1 a 30. Depois que o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for habilitado no nível da instância com os valores padrão, os novos bancos de dados criados depois herdarão as configurações. Somente os bancos de dados definidos para modelos de recuperação completa ou bulk-logged têm suporte e serão configuradas automaticamente. Você poderá desabilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para um banco de dados específico a qualquer momento se não quiser o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configurado. Você também pode alterar a configuração de um banco de dados configurando o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] no nível do banco de dados.  
+4.  **Determinar o período de retenção:** determine o período de retenção dos arquivos de backup. O período de retenção é especificado em dias e pode variar de 1 a 30. Depois que o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for habilitado no nível da instância com os valores padrão, os novos bancos de dados criados depois herdarão as configurações. Somente os bancos de dados definidos para modelos de recuperação completa ou bulk-logged têm suporte e serão configuradas automaticamente. Você poderá desabilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para um banco de dados específico a qualquer momento se não quiser o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configurado. Você também pode alterar a configuração de um banco de dados configurando o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] no nível do banco de dados.  
   
-5.  **Habilitar e configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:**  Inicie o SQL Server Management Studio e conecte-se à instância do SQL Server. Na janela de consulta, execute a seguinte instrução após modificar os valores do nome do banco de dados, a Credencial SQL, o período de retenção e as opções de criptografia de acordo com seus requisitos:  
+5.  **Habilitar e configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:**  Inicie SQL Server Management Studio e conecte-se à instância do SQL Server. Na janela de consulta, execute a seguinte instrução após modificar os valores do nome do banco de dados, a Credencial SQL, o período de retenção e as opções de criptografia de acordo com seus requisitos:  
   
      Para obter mais informações sobre como criar um certificado para criptografia, consulte a etapa **Criar um certificado de backup** em [Create an Encrypted Backup](create-an-encrypted-backup.md).  
   
@@ -225,9 +225,9 @@ ms.locfileid: "62875795"
   
         ```  
   
-         Para obter mais informações sobre como monitorar e um script de exemplo completo, consulte [Monitor de SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
+         Para obter mais informações sobre como monitorar o e um script de exemplo completo, consulte [monitorar SQL Server Backup gerenciado para Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
-9. **Exibir arquivos de backup na Conta de Armazenamento do Microsoft Azure:** Conecte-se à conta de armazenamento do SQL Server Management Studio ou o Portal de gerenciamento do Azure. Você verá um contêiner para a instância do SQL Server que hospeda o banco de dados que configurou para usar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Você também poderá consultar um banco de dados e um backup de log 15 minutos depois de criar um novo banco de dados.  
+9. **Exibir arquivos de backup na Conta de Armazenamento do Microsoft Azure:** Conecte-se à conta de armazenamento do SQL Server Management Studio ou do Portal de Gerenciamento do Azure. Você verá um contêiner para a instância do SQL Server que hospeda o banco de dados que configurou para usar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Você também poderá consultar um banco de dados e um backup de log 15 minutos depois de criar um novo banco de dados.  
   
 10. **Monitorar o Status de Integridade:**  Realize o monitoramento por meio das notificações por email configuradas anteriormente ou monitore de forma ativa os eventos registrados em log. Estes são alguns exemplos de instruções Transact-SQL usados para exibir os eventos:  
   
@@ -276,6 +276,6 @@ ms.locfileid: "62875795"
   
     ```  
   
- As configurações padrão do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] podem ser substituídas por um banco de dados específico através da definição das configurações no nível do banco de dados. Você também pode pausar e retomar o serviço do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] temporariamente. Para obter mais informações, consulte [SQL Server Managed Backup to Microsoft Azure – configurações de retenção e armazenamento](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)  
+ As configurações padrão do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] podem ser substituídas por um banco de dados específico através da definição das configurações no nível do banco de dados. Você também pode pausar e retomar o serviço do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] temporariamente. Para obter mais informações, consulte [SQL Server Backup gerenciado para Microsoft Azure-configurações de armazenamento e retenção](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)  
   
   

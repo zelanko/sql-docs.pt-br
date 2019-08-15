@@ -1,5 +1,5 @@
 ---
-title: Procedimentos armazenados de argumentos e propriedades de índice espacial | Microsoft Docs
+title: Argumentos e propriedades de procedimentos armazenados de índice espacial | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7adc7ed5677fdc511f0c8801a5ab56b55d4b9cde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 82b906be4568b15a18c55247532bf35b6cd939a7
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950404"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028901"
 ---
-# <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Índice espacial procedimentos armazenados – argumentos e propriedades
+# <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Procedimentos armazenados de índice espacial – argumentos e propriedades
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Este tópico documenta os argumentos e as propriedades para procedimentos armazenados de índice espacial.  
@@ -40,44 +40,44 @@ ms.locfileid: "67950404"
 -   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @tabname = ] 'tabname'` É o nome qualificado ou da tabela para a qual o índice espacial foi especificado.  
+`[ @tabname = ] 'tabname'`É o nome qualificado ou não qualificado da tabela para a qual o índice espacial foi especificado.  
   
- As aspas somente serão requeridas se uma tabela qualificada for especificada. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. *tabname* está **nvarchar**(776), sem padrão.  
+ As aspas somente serão requeridas se uma tabela qualificada for especificada. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. *tabname* é **nvarchar**(776), sem padrão.  
   
-`[ @indexname = ] 'indexname'` É o nome do índice espacial especificado. *indexName* está **sysname** sem nenhum padrão.  
+`[ @indexname = ] 'indexname'`É o nome do índice espacial especificado. *IndexName* é **sysname** sem padrão.  
   
-`[ @verboseoutput = ] 'verboseoutput'` É o intervalo de nomes de propriedade e valores a serem retornados.  
+`[ @verboseoutput = ] 'verboseoutput'`É o intervalo de nomes de propriedade e valores a serem retornados.  
   
  0 = propriedades principais  
   
  \>0 = todas as propriedades  
   
- *verboseoutput* está **tinyint** sem nenhum padrão.  
+ *verboseoutput* é **tinyint** sem padrão.  
   
-`[ @query_sample = ] 'query_sample'` É um exemplo de consulta representativo que pode ser usado para testar a utilidade do índice. Pode ser um objeto representativo ou uma janela de consulta. *query_sample* está **geometria** sem nenhum padrão.  
+`[ @query_sample = ] 'query_sample'`É um exemplo de consulta representativo que pode ser usado para testar a utilidade do índice. Pode ser um objeto representativo ou uma janela de consulta. *query_sample* é **Geometry** sem default.  
   
-`[ @xml_output = ] 'xml_output'` Um parâmetro de saída que retorna o resultado é definido em um fragmento XML. *xml_output* está **xml** sem nenhum padrão.  
+`[ @xml_output = ] 'xml_output'`É um parâmetro de saída que retorna o conjunto de resultados em um fragmento XML. *xml_output* é **XML** sem padrão.  
   
-## <a name="properties"></a>Propriedades  
- Definir **@verboseoutput** = 0 para retornar as propriedades principais, conforme mostrado na tabela a seguir. **@verboseoutput** > 0 para retornar todas as propriedades do índice espacial.  
+## <a name="properties"></a>Properties  
+ Defina verboseoutput = 0 para retornar propriedades de núcleo, conforme mostrado na tabela abaixo;  **\@** VerboseOutput > 0 para retornar todas as propriedades do índice espacial.  **\@**  
   
  **Base_Table_Rows**  
  O número de linhas da tabela base. O valor é **bigint**.  
   
- **Colunas Bounding_Box_xmin**  
- Mínimo de X delimitadora do índice espacial para propriedades da caixa **geometria** tipo. Esse valor da propriedade é NULL para **geografia**tipo. O valor é **float**.  
+ **Bounding_Box_xmin**  
+ X-Propriedades da caixa delimitadora mínima do índice espacial para o tipo **Geometry** . Esse valor de propriedade é nulo para o tipo de **geografia**. O valor é **float**.  
   
  **Bounding_Box_ymin**  
- Propriedades da caixa de índice espacial para delimitadora mínima de Y **geometria** tipo. Esse valor da propriedade é NULL para **geografia** tipo. O valor é **float**.  
+ Propriedades da caixa delimitadora Y mínima do índice espacial para o tipo **Geometry** . Esse valor de propriedade é nulo para o tipo de **geografia** . O valor é **float**.  
   
  **Bounding_Box_xmax**  
- Propriedades da caixa de índice espacial para delimitadora máxima de X **geometria** tipo. Esse valor da propriedade é NULL para **geografia** tipo. O valor é **float**.  
+ X – Propriedades da caixa delimitadora máxima do índice espacial para o tipo **Geometry** . Esse valor de propriedade é nulo para o tipo de **geografia** . O valor é **float**.  
   
  **Bounding_Box_ymax**  
- Propriedades da caixa de índice espacial para delimitadora máxima de Y **geometria** tipo. Esse valor da propriedade é NULL para **geografia** tipo. O valor é **float**.  
+ Y – propriedades da caixa delimitadora máxima do índice espacial para o tipo **Geometry** . Esse valor de propriedade é nulo para o tipo de **geografia** . O valor é **float**.  
   
  **Grid_Size_Level_1**  
- Densidade de grade nível 1 do índice espacial:  
+ Densidade da grade de nível 1 do índice espacial:  
   
  16 para LOW  
   
@@ -88,7 +88,7 @@ ms.locfileid: "67950404"
  O valor é **int**.  
   
  **Grid_Size_Level_2**  
- Densidade de grade de nível 2 do índice espacial:  
+ Densidade da grade de nível 2 do índice espacial:  
   
  16 para LOW  
   
@@ -99,7 +99,7 @@ ms.locfileid: "67950404"
  O valor é **int**.  
   
  **Grid_Size_Level_3**  
- Densidade de grade nível 3 do índice espacial:  
+ Densidade de grade de nível 3 do índice espacial:  
   
  16 para LOW  
   
@@ -133,47 +133,47 @@ ms.locfileid: "67950404"
  O número de linhas do índice/linhas da tabela base. O valor é **bigint**.  
   
  **Total_Number_Of_ObjectCells_In_Level0_For_QuerySample**  
- Indica se o exemplo de consulta representativo está fora da caixa delimitadora do **geometria** índice e, em uma célula raiz (célula nível 0). Este é 0 (não em célula de nível 0) ou 1. Se estiver na célula nível 0, o índice investigado não será um índice apropriado para o exemplo de consulta. Esta é uma propriedade principal. O valor é **bigint**.  
+ Indica se o exemplo de consulta representativo está fora da caixa delimitadora do índice de **geometria** e na célula raiz (nível 0 célula). Este é 0 (não em célula de nível 0) ou 1. Se estiver na célula nível 0, o índice investigado não será um índice apropriado para o exemplo de consulta. Esta é uma propriedade principal. O valor é **bigint**.  
   
  **Total_Number_Of_ObjectCells_In_Level0_In_Index**  
- Número de instâncias de célula de objetos indexados que são incluídas no mosaico no nível 0 (célula raiz, fora da caixa delimitadora para **geometria**). Esta é uma propriedade principal. O valor é **bigint**.  
+ Número de instâncias de célula de objetos indexados que são mosaico no nível 0 (célula raiz, fora da caixa delimitadora para **geometria**). Esta é uma propriedade principal. O valor é **bigint**.  
   
- Para **geometria** índices, isso ocorrerá se a caixa delimitadora do índice é menor do que o domínio de dados. Um grande número de objetos no nível 0 pode exigir filtros secundários caso a janela de consulta esteja parcialmente fora a delimitação caixa e diminuirão o desempenho do índice (por exemplo, **Total_Number_Of_ObjectCells_In_Level0_For_QuerySample** é 1). Se a janela de consulta estiver dentro da caixa delimitadora, um número elevado de objetos no nível 0 pode melhorar o desempenho do índice.  
+ Para índices de **geometria** , isso ocorrerá se a caixa delimitadora do índice for menor do que o domínio de dados. Um grande número de objetos no nível 0 pode exigir filtros secundários se a janela de consulta cair parcialmente fora da caixa delimitadora e diminuir o desempenho do índice (por exemplo, **Total_Number_Of_ObjectCells_In_Level0_For_QuerySample** é 1). Se a janela de consulta estiver dentro da caixa delimitadora, um número elevado de objetos no nível 0 pode melhorar o desempenho do índice.  
   
- As instâncias NULL e vazias são contadas no nível 0, mas não influenciam o desempenho. O nível 0 terá o mesmo número de células e de instâncias NULL e vazias na tabela base. Para **geografia** índices, o nível 0 terá o número de células como NULL e a célula de instâncias vazias + 1, porque o exemplo de consulta é contado como 1.  
+ As instâncias NULL e vazias são contadas no nível 0, mas não influenciam o desempenho. O nível 0 terá o mesmo número de células e de instâncias NULL e vazias na tabela base. Para índices de **geografia** , o nível 0 terá tantas células quanto nulas e instâncias vazias + 1 célula, porque o exemplo de consulta é contado como 1.  
   
  **Total_Number_Of_ObjectCells_In_Level1_In_Index**  
- Número de instâncias de célula de objetos indexados que são incluídas no mosaico com precisão de nível 1. Esta é uma propriedade principal. O valor é **bigint**.  
+ Número de instâncias de célula de objetos indexados que são mosaico com precisão de nível 1. Esta é uma propriedade principal. O valor é **bigint**.  
   
  **Total_Number_Of_ObjectCells_In_Level2_In_Index**  
- Número de instâncias de célula de objetos indexados que são incluídas no mosaico com precisão de nível 2. Esta é uma propriedade principal. O valor é **bigint**.  
+ Número de instâncias de célula de objetos indexados que são mosaico com precisão de nível 2. Esta é uma propriedade principal. O valor é **bigint**.  
   
  **Total_Number_Of_ObjectCells_In_Level3_In_Index**  
- Número de instâncias de célula de objetos indexados que são incluídas no mosaico com precisão de nível 3. Esta é uma propriedade principal. O valor é **bigint**.  
+ Número de instâncias de célula de objetos indexados que são mosaico com precisão de nível 3. Esta é uma propriedade principal. O valor é **bigint**.  
   
  **Total_Number_Of_ObjectCells_In_Level4_In_Index**  
  O número de instâncias de célula de objetos indexados que são incluídas em mosaicos com previsão de nível 4. Esta é uma propriedade principal. O valor é **bigint**.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level1_In_Index**  
- Número de células que são completamente abrangidas por um objeto no mosaico de nível 1 e, portanto, são parte do objeto. (Cell_attributevalue é 2.) Esta é uma propriedade principal. O valor é **bigint**.  
+ Número de células que são completamente cobertas por um objeto no mosaico nível 1 e, portanto, são interiores para o objeto. (Cell_attributevalue é 2.) Esta é uma propriedade principal. O valor é **bigint**.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level2_In_Index**  
- Número de células que são completamente abrangidas por um objeto no mosaico de nível 2 e, portanto, são parte do objeto. (O valor de Cell_attribute é 2.) Esta é uma propriedade principal. O valor é **bigint**.  
+ Número de células que são completamente cobertas por um objeto no nível de mosaico 2 e, portanto, são interiores para o objeto. (O valor de Cell_attribute é 2.) Esta é uma propriedade principal. O valor é **bigint**.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level3_In_Index**  
- Número de células que são completamente abrangidas por um objeto no mosaico de nível 3 e, portanto, são parte do objeto. (O valor de Cell_attribute é 2.) Esta é uma propriedade principal. O valor é **bigint**.  
+ Número de células que são completamente cobertas por um objeto no mosaico nível 3 e, portanto, são interiores para o objeto. (O valor de Cell_attribute é 2.) Esta é uma propriedade principal. O valor é **bigint**.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level4_In_Index**  
  O número de células que são completamente abrangidas por um objeto em um mosaico de nível 4 e, portanto, fazem parte do objeto. (O valor de Cell_attribute é 2.) Esta é uma propriedade principal. O valor é **bigint**.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level1_In_Index**  
- Número de células que são intersectadas por um objeto no mosaico de nível 1. (O valor de Cell_attribute é 1.) Esta é uma propriedade principal. O valor é **bigint**.  
+ Número de células que são interseccionadas por um objeto no nível de mosaico 1. (O valor de Cell_attribute é 1.) Esta é uma propriedade principal. O valor é **bigint**.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level2_In_Index**  
- Número de células que são intersectadas por um objeto no mosaico de nível 2. (O valor de Cell_attribute é 1.) Esta é uma propriedade principal. O valor é **bigint**.  
+ Número de células que são interseccionadas por um objeto no nível de mosaico 2. (O valor de Cell_attribute é 1.) Esta é uma propriedade principal. O valor é **bigint**.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level3_In_Index**  
- Número de células que são intersectadas por um objeto no mosaico de nível 3. (O valor de Cell_attribute é 1.) Esta é uma propriedade principal. O valor é **bigint**.  
+ Número de células que são interseccionadas por um objeto no nível 3 do mosaico. (O valor de Cell_attribute é 1.) Esta é uma propriedade principal. O valor é **bigint**.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level4_In_Index**  
  Número de células que são intersectadas por um objeto no mosaico de nível 4. (O valor de Cell_attribute é 1.) Esta é uma propriedade principal. O valor é **bigint**.  
@@ -188,13 +188,13 @@ ms.locfileid: "67950404"
  Número de objetos em nível 0 que ticam a caixa delimitadora. (O valor de Cell_attribute é 0.)  O valor é **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level1_In_Index**  
- Número de células de objeto que tocam um limite de células de grade no mosaico de nível 1. (O valor de Cell_attribute é 0.) Esta é uma propriedade principal. O valor é **bigint**.  
+ Número de células de objeto que tocam um limite de células de grade no nível de mosaico 1. (O valor de Cell_attribute é 0.) Esta é uma propriedade principal. O valor é **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level2_In_Index**  
- Número de células de objeto que tocam um limite de células de grade no mosaico nível 2. (O valor de Cell_attribute é 0.) Esta é uma propriedade principal. O valor é **bigint**.  
+ Número de células de objeto que tocam um limite de células de grade no nível de mosaico 2. (O valor de Cell_attribute é 0.) Esta é uma propriedade principal. O valor é **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level3_In_Index**  
- Número de células de objeto que tocam um limite de células de grade no mosaico nível 3. (O valor de Cell_attribute é 0.) Esta é uma propriedade principal. O valor é **bigint**.  
+ Número de células de objeto que tocam o limite de uma célula de grade no nível 3 do mosaico. (O valor de Cell_attribute é 0.) Esta é uma propriedade principal. O valor é **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level4_In_Index**  
  Número de células de objeto que tocam um limite de célula de grade no mosaico nível 4. (O valor de Cell_attribute é 0.) Esta é uma propriedade principal. O valor é **bigint**.  
@@ -207,10 +207,10 @@ ms.locfileid: "67950404"
  O valor é **float**.  
   
  **Intersecting_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
- Mesmo que **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**, exceto que essas são células parcialmente cobertas. O valor é **float**.  
+ O mesmo que **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**, exceto que essas são células parcialmente cobertas. O valor é **float**.  
   
  **Border_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
- Mesmo que **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage** , exceto que as células de borda. O valor é **float**.  
+ O mesmo que **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage** , exceto que eles são células de borda. O valor é **float**.  
   
  **Average_Cells_Per_Object_Normalized_To_Leaf_Grid**  
  Células comuns por objeto normalizado na grade da folha. Isso nos dá uma indicação do tamanho espacial do objeto ou de quão grande os objetos são. O valor é **float**.  
@@ -277,7 +277,7 @@ ms.locfileid: "67950404"
  **Number_Of_Rows_Selected_By_Internal_Filter**  
  O número de linhas selecionadas pelo filtro interno. O filtro secundário não é chamado para essas linhas. Esta é uma propriedade principal. O valor é **bigint.**  
   
- O número retornado só é aplicável para **STintersects**.  
+ O número retornado só é aplicável a **interseções**.  
   
  **Number_Of_Times_Secondary_Filter_Is_Called**  
  O número de vezes que o filtro secundário é chamado. Esta é uma propriedade principal. O valor é **bigint.**  
@@ -295,10 +295,10 @@ ms.locfileid: "67950404"
  Se O for o número de saída de linhas, S/O será retornado como uma porcentagem. Esta é uma propriedade principal. O valor é **float.**  
   
  **Primary_Filter_Efficiency**  
- Se linhas P estiverem selecionadas pelo filtro primário e s é o número de linhas de saída, este returnsO/P como uma porcentagem. Quanto mais alta for a eficiência do filtro primário, menores serão os positivos falsos que o filtro secundário terá que processar. Esta é uma propriedade principal. O valor é **float.**  
+ Se P linhas forem selecionadas pelo filtro primário e o for o número de saídas de linhas, isso retornará/P como uma porcentagem. Quanto mais alta for a eficiência do filtro primário, menores serão os positivos falsos que o filtro secundário terá que processar. Esta é uma propriedade principal. O valor é **float.**  
   
 ## <a name="permissions"></a>Permissões  
- Usuário deve ser um membro do **pública** função. Requer permissão READ ACCESS no servidor e no objeto. Isto se aplica a procedimentos armazenados de índice espacial.  
+ O usuário deve ser um membro da função **pública** . Requer permissão READ ACCESS no servidor e no objeto. Isto se aplica a procedimentos armazenados de índice espacial.  
   
 ## <a name="remarks"></a>Comentários  
  As propriedades que contêm valores NULL não são incluídas no conjunto de retorno.  
@@ -317,10 +317,10 @@ ms.locfileid: "67950404"
 ## <a name="requirements"></a>Requisitos  
   
 ## <a name="see-also"></a>Consulte também  
- [Procedimentos armazenados de índice espacial &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [Procedimentos &#40;armazenados de índice espacial TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md)   
- [Fundamentos de XQuery](../../xquery/xquery-basics.md)   
+ [Noções básicas do XQuery](../../xquery/xquery-basics.md)   
  [Referência de linguagem XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
   
   

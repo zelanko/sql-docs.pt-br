@@ -1,5 +1,5 @@
 ---
-title: Arquivos de dados do SQL Server no Windows Azure | Microsoft Docs
+title: SQL Server arquivos de dados no Windows Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,43 +10,43 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 588e656ca71bc5843e3483879f5a58951373aff5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36d940e71dc6a5816dc08fb79e045f46f783116e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62916571"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028619"
 ---
 # <a name="sql-server-data-files-in-windows-azure"></a>Arquivos de dados do SQL Server no Windows Azure
   Arquivos de dados do SQL Server no Windows Azure permitem o suporte nativo para os arquivos de banco de dados do SQL Server armazenados como blobs do Windows Azure. Ele permite que você crie um banco de dados do SQL Server executado localmente ou em uma máquina virtual no Windows Azure com um local de armazenamento dedicado para seus dados no armazenamento de blob do Windows Azure. Esse aprimoramento simplifica especialmente a movimentação de bancos de dados entre computadores usando operações de anexação e desanexação. Além disso, ele fornece um local de armazenamento alternativo para os arquivos de backup de banco de dados ao permitir que você restaure de ou para o Armazenamento do Windows Azure. Em virtude disso, ele permite várias soluções híbridas ao fornecer vários benefícios para virtualização de dados, movimentação de dados, segurança e disponibilidade, baixo custo e facilidade de manutenção, o que proporciona alta disponibilidade e dimensionamento elástico.  
   
  Este tópico apresenta os conceitos e as considerações que são essenciais para armazenar arquivos de dados do SQL Server no serviço de Armazenamento do Microsoft Azure.  
   
- Para uma experiência prática sobre como usar esse novo recurso, consulte [Tutorial: Arquivos de dados do SQL Server no serviço de armazenamento do Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+ Para uma experiência prática sobre como usar esse novo recurso, consulte [Tutorial: SQL Server arquivos de dados no serviço](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)de armazenamento do Windows Azure.  
   
  O diagrama a seguir demonstra que esse aprimoramento permite armazenar arquivos de banco de dados do SQL Server como blobs do Windows Azure no Armazenamento do Windows Azure independentemente de onde o servidor resida.  
   
- ![Integração do SQL Server com o Windows Azure Storage](../../database-engine/media/sql-server-dbfiles-stored-as-blobs.gif "integração do SQL Server com o Windows o armazenamento do Azure")  
+ ![Integração do SQL Server com o armazenamento do Windows Azure](../../database-engine/media/sql-server-dbfiles-stored-as-blobs.gif "Integração do SQL Server com o armazenamento do Windows Azure")  
   
 ## <a name="benefits-of-using-sql-server-data-files-in-windows-azure"></a>Benefícios do uso de arquivos de dados do SQL Server no Windows Azure  
   
--   **Benefícios da migração fácil e rápida:** Esse recurso simplifica o processo de migração movendo um banco de dados cada vez entre computadores no local, bem como entre locais e ambientes sem nenhuma alteração no aplicativo de nuvem. Em virtude disso, ele oferece suporte a uma migração incremental, preservando sua infraestrutura existente local. Além disso, ter acesso a um armazenamento de dados centralizado simplifica a lógica do aplicativo quando um aplicativo precisa ser executado em vários locais em um ambiente local. Em alguns casos, pode ser necessário configurar rapidamente os centros de computação em locais dispersos geograficamente, que coletam dados de várias origens diferentes. Ao usar esse novo aprimoramento, em vez de mover dados de um local para outro, você poderá armazenar muitos bancos de dados como blobs do Windows Azure e, em seguida, executar scripts Transact-SQL para criar bancos de dados em computadores locais ou máquinas virtuais.  
+-   **Benefícios da migração fácil e rápida:** esse recurso simplifica o processo de migração movendo um banco de dados de cada vez entre computadores locais e também entre ambientes locais e de nuvem, sem nenhuma alteração de aplicativo. Em virtude disso, ele oferece suporte a uma migração incremental, preservando sua infraestrutura existente local. Além disso, ter acesso a um armazenamento de dados centralizado simplifica a lógica do aplicativo quando um aplicativo precisa ser executado em vários locais em um ambiente local. Em alguns casos, pode ser necessário configurar rapidamente os centros de computação em locais dispersos geograficamente, que coletam dados de várias origens diferentes. Ao usar esse novo aprimoramento, em vez de mover dados de um local para outro, você poderá armazenar muitos bancos de dados como blobs do Windows Azure e, em seguida, executar scripts Transact-SQL para criar bancos de dados em computadores locais ou máquinas virtuais.  
   
--   **Benefícios de custos e armazenamento ilimitados:** Esse recurso permite que você tenha armazenamento externo ilimitado no Windows Azure, recursos de computação aproveitando no local. Quando você usa o Windows Azure como um local de armazenamento, pode facilmente se concentrar na lógica do aplicativo sem a sobrecarga do gerenciamento de hardware. Se você perder um nó de computação no local, poderá configurar um novo sem nenhuma movimentação de dados.  
+-   **Benefícios de custos e armazenamento ilimitados:** Esse recurso permite que você tenha armazenamento ilimitado fora do local no Windows Azure, aproveitando os recursos de computação no local. Quando você usa o Windows Azure como um local de armazenamento, pode facilmente se concentrar na lógica do aplicativo sem a sobrecarga do gerenciamento de hardware. Se você perder um nó de computação no local, poderá configurar um novo sem nenhuma movimentação de dados.  
   
--   **Benefícios de alta disponibilidade e recuperação de desastres:** Usar arquivos de dados do SQL Server no recurso do Windows Azure pode simplificar as soluções de recuperação de desastres e disponibilidade alta. Por exemplo, se uma máquina virtual no Windows Azure ou em uma instância do SQL Server falhar, você poderá recriar seus bancos de dados em um novo computador apenas restabelecendo links para os blobs do Windows Azure.  
+-   **Benefícios de alta disponibilidade e recuperação de desastres:** O uso de SQL Server arquivos de dados no recurso do Windows Azure pode simplificar as soluções de alta disponibilidade e recuperação de desastres. Por exemplo, se uma máquina virtual no Windows Azure ou em uma instância do SQL Server falhar, você poderá recriar seus bancos de dados em um novo computador apenas restabelecendo links para os blobs do Windows Azure.  
   
--   **Benefícios de segurança:** Esse novo aprimoramento permite que você separe uma instância de computação de uma instância de armazenamento. Você pode ter um banco de dados totalmente criptografado com a descriptografia ocorrendo apenas na instância de computação, mas não em uma instância de armazenamento. Ou seja, com esse novo aprimoramento, você poderá criptografar todos os dados na nuvem pública usando certificados de TDE (Criptografia de Dados Transparente), que são separados fisicamente dos dados. As chaves de TDE podem ser armazenadas no banco de dados mestre, que é armazenado localmente em seu computador local seguro fisicamente e com backup feito localmente. Você pode usar essas chaves locais para criptografar os dados, que residem no Armazenamento do Windows Azure. Se suas credenciais de conta de armazenamento de nuvem forem roubadas, seus dados permanecerão seguros porque os certificados de TDE sempre residirão no local.  
+-   **Benefícios de segurança:** esse novo aprimoramento permite que você separe uma instância de computação de uma instância de armazenamento. Você pode ter um banco de dados totalmente criptografado com a descriptografia ocorrendo apenas na instância de computação, mas não em uma instância de armazenamento. Ou seja, com esse novo aprimoramento, você poderá criptografar todos os dados na nuvem pública usando certificados de TDE (Criptografia de Dados Transparente), que são separados fisicamente dos dados. As chaves de TDE podem ser armazenadas no banco de dados mestre, que é armazenado localmente em seu computador local seguro fisicamente e com backup feito localmente. Você pode usar essas chaves locais para criptografar os dados, que residem no Armazenamento do Windows Azure. Se suas credenciais de conta de armazenamento de nuvem forem roubadas, seus dados permanecerão seguros porque os certificados de TDE sempre residirão no local.  
   
 ## <a name="concepts-and-requirements"></a>Conceitos e requisitos  
   
 ### <a name="windows-azure-storage-concepts"></a>Conceitos de Armazenamento do Windows Azure  
  Ao usar o recurso de arquivos de dados do SQL Server no Windows Azure, você precisará criar uma conta de armazenamento e um contêiner no Windows Azure. Em seguida, você precisará criar uma credencial do SQL Server, que inclui as informações sobre a política do contêiner, assim como uma assinatura de acesso compartilhado que é necessária para acessar o contêiner.  
   
- No Windows Azure, uma conta de armazenamento representa o nível mais alto do namespace para acessar blobs. Uma conta de armazenamento pode conter um número ilimitado de contêineres, contanto que o seu tamanho total seja menor que 500 TB. Para obter as informações mais recentes sobre os limites de armazenamento, consulte [Assinatura e limites de serviço, cotas e restrições do Azure](http://azure.microsoft.com/documentation/articles/azure-subscription-service-limits/). Um contêiner fornece um agrupamento de um conjunto de blobs. Todos os blobs devem estar em um contêiner. Uma conta pode conter um número ilimitado de contêineres. Da mesma maneira, um contêiner também pode armazenar um número ilimitado de blobs. Há dois tipos de blobs que podem ser armazenados no Windows Azure: blobs de bloco e de página. Esse novo recurso usa blobs de página, que podem ter até 1 TB de tamanho e são mais eficientes quando os intervalos de bytes em um arquivo são alterados com frequência. Você pode acessar blobs usando o seguinte formato de URL: `http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
+ No Windows Azure, uma conta de armazenamento representa o nível mais alto do namespace para acessar blobs. Uma conta de armazenamento pode conter um número ilimitado de contêineres, contanto que o seu tamanho total seja menor que 500 TB. Para obter as informações mais recentes sobre os limites de armazenamento, consulte [Assinatura e limites de serviço, cotas e restrições do Azure](https://azure.microsoft.com/documentation/articles/azure-subscription-service-limits/). Um contêiner fornece um agrupamento de um conjunto de blobs. Todos os blobs devem estar em um contêiner. Uma conta pode conter um número ilimitado de contêineres. Da mesma maneira, um contêiner também pode armazenar um número ilimitado de blobs. Há dois tipos de blobs que podem ser armazenados no Windows Azure: blobs de bloco e de página. Esse novo recurso usa blobs de página, que podem ter até 1 TB de tamanho e são mais eficientes quando os intervalos de bytes em um arquivo são alterados com frequência. Você pode acessar blobs usando o seguinte formato de URL: `http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
 ### <a name="windows-azure-billing-considerations"></a>Considerações sobre cobrança do Windows Azure  
- Estimar o custo de usar os serviços do Windows Azure é uma questão importante do processo de tomada de decisão e planejamento. Ao armazenar os arquivos de dados do SQL Server no Armazenamento do Windows Azure, você precisará pagar o custo associado ao armazenamento e às transações. Além disso, a implementação do recurso de arquivos de dados do SQL Server no Armazenamento do Windows Azure exige uma renovação da concessão de blob a cada 45 a 60 segundos implicitamente. Isso também resulta em custo de transações por arquivo de banco de dados, como arquivos .mdf e .ldf. Com base em nossas estimativas, o custo de renovar concessões para dois arquivos de banco de dados (.mdf e .ldf) seria de aproximadamente 2 centavos por mês, de acordo com o modelo de preços atual. Recomendamos que você use as informações na página [Preços do Azure](http://azure.microsoft.com/pricing/) para ajudar a estimar os custos mensais associados ao uso do Armazenamento do Microsoft Azure e das Máquinas Virtuais do Microsoft Azure.  
+ Estimar o custo de usar os serviços do Windows Azure é uma questão importante do processo de tomada de decisão e planejamento. Ao armazenar os arquivos de dados do SQL Server no Armazenamento do Windows Azure, você precisará pagar o custo associado ao armazenamento e às transações. Além disso, a implementação do recurso de arquivos de dados do SQL Server no Armazenamento do Windows Azure exige uma renovação da concessão de blob a cada 45 a 60 segundos implicitamente. Isso também resulta em custo de transações por arquivo de banco de dados, como arquivos .mdf e .ldf. Com base em nossas estimativas, o custo de renovar concessões para dois arquivos de banco de dados (.mdf e .ldf) seria de aproximadamente 2 centavos por mês, de acordo com o modelo de preços atual. Recomendamos que você use as informações na página [Preços do Azure](https://azure.microsoft.com/pricing/) para ajudar a estimar os custos mensais associados ao uso do Armazenamento do Microsoft Azure e das Máquinas Virtuais do Microsoft Azure.  
   
 ### <a name="sql-server-concepts"></a>Conceitos do SQL Server  
  Ao usar esse novo aprimoramento, você deverá fazer o seguinte:  
@@ -77,7 +77,7 @@ ON
   
 ```  
   
- **Observação importante:** Se houver alguma referência ativa aos arquivos de dados em um contêiner, as tentativas de excluir o SQL Server correspondente apresentarão falha.  
+ **Observação importante:** se houver alguma referência ativa aos arquivos de dados em um contêiner, as tentativas de excluir as credenciais correspondentes do SQL Server apresentarão falha.  
   
 ### <a name="security"></a>Segurança  
  Estes são os requisitos e as considerações de segurança ao armazenar os arquivos de dados do SQL Server no Armazenamento do Windows Azure.  
@@ -91,9 +91,9 @@ ON
 ### <a name="installation-prerequisites"></a>Pré-requisitos para instalação  
  Estes são os pré-requisitos de instalação ao armazenar os arquivos de dados do SQL Server no Windows Azure.  
   
--   **SQL Server local:** Versão do SQL Server 2014 inclui esse recurso. Para saber como baixar o SQL Server 2014, consulte [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
+-   **SQL Server local:** SQL Server versão 2014 inclui esse recurso. Para saber como baixar o SQL Server 2014, consulte [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
--   SQL Server em execução em uma máquina virtual Windows Azure: Se você estiver instalando o SQL Server em uma máquina de Virtual do Windows Azure, instale o SQL Server 2014 ou atualize a instância existente. Da mesma forma, você também pode criar uma nova máquina virtual no Windows Azure usando a imagem da plataforma do SQL Server 2014. Para saber como baixar o SQL Server 2014, consulte [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
+-   SQL Server em execução em uma máquina virtual do Windows Azure: Se você estiver instalando o SQL Server em uma máquina virtual do Windows Azure, instale o SQL Server 2014 ou atualize sua instância existente. Da mesma forma, você também pode criar uma nova máquina virtual no Windows Azure usando a imagem da plataforma do SQL Server 2014. Para saber como baixar o SQL Server 2014, consulte [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
 ###  <a name="bkmk_Limitations"></a> Limitações  
   
@@ -125,7 +125,7 @@ ON
  A partir do SQL Server 2014, um novo objeto SQL Server foi adicionado para ser usado com o recurso de arquivos de dados do SQL Server no Armazenamento do Windows Azure. O novo objeto SQL Server é chamado de [SQL Server, HTTP_STORAGE_OBJECT](../performance-monitor/sql-server-http-storage-object.md) e pode ser usado pelo Monitor do Sistema para monitorar a atividade ao executar o SQL Server com o Armazenamento do Microsoft Azure.  
   
 ### <a name="sql-server-management-studio-support"></a>Suporte ao SQL Server Management Studio  
- O SQL Server Management Studio permite usar esse recurso por meio de várias janelas da caixa de diálogo. Por exemplo, você pode digitar o caminho de URL do contêiner de armazenamento, como `https://teststorageaccnt.blob.core.windows.net/testcontainer/` como **Caminho** em várias janelas da caixa de diálogo, como **Novo Banco de Dados**, **Anexar Banco de Dados**e **Restaurar Banco de Dados**. Para saber mais, confira [Tutorial: Arquivos de dados do SQL Server no serviço de armazenamento do Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+ O SQL Server Management Studio permite usar esse recurso por meio de várias janelas da caixa de diálogo. Por exemplo, você pode digitar o caminho de URL do contêiner de armazenamento, como `https://teststorageaccnt.blob.core.windows.net/testcontainer/` como **Caminho** em várias janelas da caixa de diálogo, como **Novo Banco de Dados**, **Anexar Banco de Dados**e **Restaurar Banco de Dados**. Para obter mais informações, confira [Tutorial: SQL Server arquivos de dados no serviço](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)de armazenamento do Windows Azure.  
   
 ### <a name="sql-server-management-objects-support"></a>Suporte ao SQL Server Management Objects  
  Ao usar o recurso de arquivos de dados do SQL Server no Microsoft Azure, todos os SQL Server Management Objects (SMO) têm suporte. Se um objeto SMO exigir um caminho de arquivo, use o formato de URL do BLOB em vez do caminho de um arquivo local, como `https://teststorageaccnt.blob.core.windows.net/testcontainer/`. Para obter mais informações sobre SQL SMO (Server Management Objects), consulte [Guia de Programação do SQL SMO &#40;SQL Server Management Objects&#41;](../server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) nos Manuais Online do SQL Server.  
@@ -135,7 +135,7 @@ ON
   
 -   Uma nova coluna **int** , **credential_id**, na exibição do sistema **sys.master_files** . A coluna **credential_id** é usada para habilitar arquivos de dados habilitados para o Armazenamento do Azure para a referência cruzada a sys.credentials das credenciais criadas para eles. Você pode usá-la para solucionar problemas, como, por exemplo, uma credencial que não pode ser excluída quando há um arquivo de banco de dados que a utiliza.  
   
-##  <a name="bkmk_Troubleshooting"></a> Solução de problemas de arquivos de dados do SQL Server no Windows Azure  
+##  <a name="bkmk_Troubleshooting"></a>Solução de problemas para SQL Server arquivos de dados no Windows Azure  
  Para evitar erros devido a recursos sem suporte ou limitações, primeiro analise [Limitations](sql-server-data-files-in-microsoft-azure.md#bkmk_Limitations).  
   
  A lista de erros que você pode obter ao usar o recurso de arquivos de dados do SQL Server no Armazenamento do Windows Azure é a seguinte:  
@@ -143,13 +143,13 @@ ON
  **Erros de autenticação**  
   
 -   *Não é possível remover a credencial “%.\*ls”, pois ela é usada por um arquivo de banco de dados ativo.*    
-    Resolução: Você poderá ver esse erro ao tentar descartar uma credencial que ainda está sendo usada por um arquivo de banco de dados ativo no armazenamento do Windows Azure. Para descartar a credencial, primeiro exclua o blob associado que contém esse arquivo de banco de dados. Para excluir um blob que tem uma concessão ativa, primeiro você deve interromper a concessão.  
+    Resolução: Você pode ver esse erro ao tentar remover uma credencial que ainda está sendo usada por um arquivo de banco de dados ativo no armazenamento do Windows Azure. Para descartar a credencial, primeiro exclua o blob associado que contém esse arquivo de banco de dados. Para excluir um blob que tem uma concessão ativa, primeiro você deve interromper a concessão.  
   
 -   *A assinatura de acesso compartilhado não foi criada no contêiner corretamente.*    
-     Resolução: Certifique-se de que você tenha criado uma assinatura de acesso compartilhado no contêiner corretamente. Analise as instruções fornecidas na lição 2 em [Tutorial: Arquivos de dados do SQL Server no serviço de armazenamento do Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+     Resolução: verifique se você criou uma assinatura de acesso compartilhado no contêiner corretamente. Analise as instruções fornecidas na lição 2 em [Tutorial: SQL Server arquivos de dados no serviço](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)de armazenamento do Windows Azure.  
   
 -   *A credencial do SQL Server não foi criada corretamente.*    
-    Resolução: Verifique se você usou “Assinatura de Acesso Compartilhado” para o campo **Identity** e criou um segredo corretamente. Analise as instruções fornecidas na lição 3 em [Tutorial: Arquivos de dados do SQL Server no serviço de armazenamento do Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+    Resolução: Verifique se você usou “Assinatura de Acesso Compartilhado” para o campo **Identity** e criou um segredo corretamente. Analise as instruções fornecidas na lição 3 em [Tutorial: SQL Server arquivos de dados no serviço](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)de armazenamento do Windows Azure.  
   
  **Erros de blob de concessão:**  
   
@@ -158,10 +158,10 @@ ON
  **Erros de banco de dados**  
   
 1.  *Erros ao criar um banco de dados*   
-    Resolução: Analise as instruções fornecidas na lição 4 em [Tutorial: Arquivos de dados do SQL Server no serviço de armazenamento do Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+    Resolução: Analise as instruções fornecidas na lição 4 em [Tutorial: SQL Server arquivos de dados no serviço](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)de armazenamento do Windows Azure.  
   
 2.  *Erros ao executar a instrução Alter*   
-    Resolução: Certifique-se de executar a instrução Alter Database, quando o banco de dados está online. Ao copiar os arquivos de dados para o Armazenamento do Windows Azure, sempre crie um blob de página não um blob do bloco. Caso contrário, ALTER Database falhará. Analise as instruções fornecidas na lição 7 em [Tutorial: Arquivos de dados do SQL Server no serviço de armazenamento do Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+    Resolução: execute a instrução Alterar Banco de Dados quando o banco de dados estiver online. Ao copiar os arquivos de dados para o Armazenamento do Windows Azure, sempre crie um blob de página não um blob do bloco. Caso contrário, ALTER Database falhará. Analise as instruções fornecidas na lição 7 em [Tutorial: SQL Server arquivos de dados no serviço](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)de armazenamento do Windows Azure.  
   
 3.  *Código de erro 5120 Não é possível abrir o arquivo físico “%.\*ls”. Erro no sistema operacional %d: “%ls”*    
     Resolução: Atualmente, esse novo aprimoramento não aceita mais de uma instância do SQL Server que acessa os mesmos arquivos de banco de dados no Armazenamento do Windows Azure ao mesmo tempo. Se o Servidor A estiver online com um arquivo de banco de dados ativo e o Servidor B for iniciado por acidente, e também tiver um banco de dados que aponta para o mesmo arquivo de dados, o segundo servidor não iniciará o banco de dados com um código de erro *5120 Não é possível abrir o arquivo físico "%.\*ls". Erro no sistema operacional %d: "%ls"* .  
@@ -177,6 +177,6 @@ ON
     4.  Defina o banco de dados como online.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutorial: Arquivos de dados do SQL Server no serviço de armazenamento do Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [Tutorial: SQL Server arquivos de dados no serviço de armazenamento do Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   

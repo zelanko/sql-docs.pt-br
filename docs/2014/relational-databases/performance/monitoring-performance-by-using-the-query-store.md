@@ -10,22 +10,22 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bfdce1925bc4c73894e1ff1a9bb0d69f6da94501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e380626408a7e50d8940e2cc1b347eac5f32922
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150814"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028601"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoring Performance By Using the Query Store
   O recurso repositório de consultas fornece aos DBAs insights sobre escolha e desempenho do plano de consulta. Ele simplifica a solução de problemas, permitindo que você localize rapidamente diferenças de desempenho causadas por alterações nos planos de consulta. O recurso captura automaticamente um histórico de consultas, planos e estatísticas de tempo de execução e os mantém para sua análise. Ele separa os dados por janelas de tempo, permitindo que você veja os padrões de uso do banco de dados e entenda quando as alterações aos planos de consulta ocorreram no servidor. O repositório de consultas pode ser configurado usando a opção [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) .  
   
 ||  
 |-|  
-|**Aplica-se ao**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obtê-la](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+|**Aplica-se ao**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([Obtenha-](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)o).|  
   
 > [!IMPORTANT]  
->  Este é um recurso de visualização. Para usar o repositório de consultas, você deve reconhecer e concordar que a implementação do repositório está sujeita aos termos de visualização anteriores do contrato de licença (por exemplo, Contrato Enterprise, Contrato do Microsoft Azure ou Contrato de Assinatura do Microsoft Online), bem como quaisquer [Termos suplementares de uso da Visualização do Microsoft Azure](http://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/)aplicáveis.  
+>  Este é um recurso de visualização. Para usar o repositório de consultas, você deve reconhecer e concordar que a implementação do repositório está sujeita aos termos de visualização anteriores do contrato de licença (por exemplo, Contrato Enterprise, Contrato do Microsoft Azure ou Contrato de Assinatura do Microsoft Online), bem como quaisquer [Termos suplementares de uso da Visualização do Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)aplicáveis.  
   
 ##  <a name="Enabling"></a> Habilitando o Repositório de Consultas  
  O repositório de consultas não está ativo para novos bancos de dados por padrão.  
@@ -88,7 +88,7 @@ JOIN sys.query_store_query_text AS Txt
 ## <a name="using-the-regressed-queries-feature"></a>Usando o recurso de consultas regredidas  
  Depois de habilitar o repositório de consultas, atualize a parte do banco de dados do painel Pesquisador de Objetos para adicionar a seção **Repositório de Consultas** .  
   
- ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")  
+ ![A querystore](../../database-engine/media/querystore.PNG "A querystore")  
   
  A seleção de **Consultas Regredidas**abre o painel **Consultas Regredidas** no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]. O painel Consultas Regredidas mostra consultas e planos no repositório de consultas. Caixas de listas suspensas na parte superior permitem que você selecione consultas com base em vários critérios. Selecione um plano para ver o plano de consulta gráfico. Botões estão disponíveis para exibir a consulta de origem, impor e cancelar a imposição de um plano de consulta e atualizar a exibição.  
   
@@ -205,7 +205,7 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
   
- Observe que não são permitidos valores arbitrários – você deve usar um dos seguintes: 1, 5, 10, 15, 30 e 60.  
+ Observe que os valores arbitrários não são permitidos-você deve usar um dos seguintes: 1, 5, 10, 15, 30 e 60.  
   
  O novo valor do intervalo é exposto na exibição `sys.database_query_store_options`.  
   
@@ -277,16 +277,16 @@ DEALLOCATE adhoc_queries_cursor;
   
  O exemplo acima usa o procedimento armazenado estendido `sp_query_store_remove_query` para remover dados desnecessários. Você também pode usar dois outros procedimentos.  
   
--   `sp_query_store_reset_exec_stats` -Limpar as estatísticas de tempo de execução para um plano específico.  
+-   `sp_query_store_reset_exec_stats`-Limpar estatísticas de tempo de execução para um determinado plano.  
   
--   `sp_query_store_remove_plan` -Remove um único plano.  
+-   `sp_query_store_remove_plan`-Remove um único plano.  
   
 
   
 ###  <a name="Peformance"></a> Auditoria e solução de problemas de desempenho  
  Como o repositório de consultas mantém o histórico de compilação e métricas do tempo de execução durante as execuções da consulta, há muitas questões diferentes que podem ser respondidas facilmente com relação à carga de trabalho.  
   
- **Última *n* consultas executadas no banco de dados.**  
+ **Últimas *n* consultas executadas no banco de dados.**  
   
 ```  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
@@ -301,7 +301,7 @@ JOIN sys.query_store_runtime_stats AS rs
 ORDER BY rs.last_execution_time DESC;  
 ```  
   
- **Número de execuções de cada consulta.**  
+ **Número de execuções para cada consulta.**  
   
 ```  
 SELECT q.query_id, qt.query_text_id, qt.query_sql_text,   
@@ -334,7 +334,7 @@ WHERE rs.last_execution_time > DATEADD(hour, -1, GETUTCDATE())
 ORDER BY rs.avg_duration DESC;  
 ```  
   
- **Lê o número de consultas que tiveram a maior média física e/s nas últimas 24 horas, com a contagem de médio da linha correspondente e execução.**  
+ **O número de consultas que tiveram a maior média de leituras físicas de e/s nas últimas 24 horas, com contagem média de linhas e execuções correspondentes.**  
   
 ```  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
@@ -382,7 +382,7 @@ JOIN sys.query_store_query_text qt
 ORDER BY query_id, plan_id;  
 ```  
   
- **Consultas com regressão recente de desempenho (comparando diferentes pontos no tempo).** O exemplo de consulta a seguir retorna todas as consultas para as quais o tempo de execução dobrou nas últimas 48 horas em razão de alteração na escolha do plano. A consulta compara todos os intervalos de estatísticas de tempo de execução lado a lado.  
+ **Consultas que regressivou recentemente o desempenho (comparando diferentes pontos no tempo).** O exemplo de consulta a seguir retorna todas as consultas para as quais o tempo de execução dobrou nas últimas 48 horas em razão de alteração na escolha do plano. A consulta compara todos os intervalos de estatísticas de tempo de execução lado a lado.  
   
 ```  
 SELECT   
@@ -421,7 +421,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
   
  Para ver todas as regressões de desempenho (não apenas as relacionadas a alteração na escolha do plano), basta remover a condição `AND p1.plan_id <> p2.plan_id` da consulta anterior.  
   
- **Consultas com regressão recente de desempenho (comparando execuções recentes e históricas).** A próxima consulta compara os períodos de execução baseados na execução da consulta. Nesse exemplo específico, a consulta compara a execução no período recente (1 hora) versus o período do histórico (último dia) e identifica as que introduziram additional_duration_workload. Essa métrica é calculada como uma diferença entre a média de execução recente e a média de execução do histórico, multiplicado pelo número de execuções recentes. Representa, na verdade, quanto de duração adicional as execuções recentes introduziram em comparação com histórico:  
+ **Consultas que resumiram recentemente no desempenho (comparando a execução recente versus histórico).** A próxima consulta compara os períodos de execução baseados na execução da consulta. Nesse exemplo específico, a consulta compara a execução no período recente (1 hora) versus o período do histórico (último dia) e identifica as que introduziram additional_duration_workload. Essa métrica é calculada como uma diferença entre a média de execução recente e a média de execução do histórico, multiplicado pelo número de execuções recentes. Representa, na verdade, quanto de duração adicional as execuções recentes introduziram em comparação com histórico:  
   
 ```  
 --- "Recent" workload - last 1 hour  
