@@ -13,12 +13,12 @@ ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df0b873936d6738e79e656fa0ac5e69e799efe3e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890809"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530952"
 ---
 # <a name="developer39s-guide-database-engine"></a>Guia&#39;do Developer s (mecanismo de banco de dados)
   O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece um excelente conjunto ferramentas para desenvolver, administrar e controlar aplicativos de banco de dados.  
@@ -52,7 +52,7 @@ ms.locfileid: "68890809"
  Descreve como você pode usar a interface programática da caixa de mensagens de exceção em seus aplicativos de forma a fornecer mais controle sobre a experiência de mensagens, dar aos usuários a opção de salvar o conteúdo de mensagens de erro para referência posterior e obter ajuda com as mensagens.  
   
 ## <a name="see-also"></a>Consulte também  
- [Programação de mineração de dados](https://docs.microsoft.com/analysis-services/dev-guide/data-mining-programming)   
+ [Programação de mineração de dados](../analysis-services/dev-guide/data-mining-programming.md)   
  [Guia &#40;do desenvolvedor Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
  [Guia &#40;do desenvolvedor Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
  [Guia &#40;do desenvolvedor-replicação&#41;](replication/concepts/replication-developer-documentation.md)   

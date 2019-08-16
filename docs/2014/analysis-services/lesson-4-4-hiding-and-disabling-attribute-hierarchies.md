@@ -10,12 +10,12 @@ ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 411e5f822d0f54e6d8b7654b67bf5776ceb3c9e5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4381047ad4373a2a5b03dc9ba1c96274b37621f2
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888360"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530851"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Ocultando e desabilitando as hierarquias de atributo
   Por padrão, uma hierarquia de atributo é criada para cada atributo em uma dimensão e cada hierarquia é disponibilizada para o dimensionamento de dados de fatos. Essa hierarquia é composta por um nível "Todos" e um nível de detalhe que contém todos os membros da hierarquia. Como você já aprendeu, é possível organizar atributos em hierarquias definidas pelo usuário para fornecer caminhos de navegação em um cubo. Sob certas circunstâncias, talvez você queira desativar ou ocultar alguns atributos e suas hierarquias. Por exemplo, determinados atributos como um número de previdência social ou números de identificação nacional, taxas de pagamentos, datas de aniversário e informações de logon não são atributos pelos quais os usuários poderão dimensionar as informações do cubo. Em vez disso, geralmente essas informações são exibidas apenas como detalhes de um membro de atributo específico. É possível ocultar essas hierarquias de atributos, deixando os atributos visíveis apenas como propriedades de membro de um determinado atributo. Você também pode criar membros de outros atributos, como nomes de cliente ou CEPs, visíveis somente quando eles são exibidos através de uma hierarquia de usuário em vez de serem exibidos de forma independente através de uma hierarquia de atributo. Uma razão para seguir esse procedimento pode ser o número absoluto de membros distintos na hierarquia de atributo. Por fim, para melhorar o desempenho do processamento, será preciso desativar as hierarquias de atributo que não serão usadas pelos usuários na navegação.  
@@ -126,6 +126,6 @@ ms.locfileid: "68888360"
      Observe que os níveis ocultos, **CEP** e **Nome Completo**, estão visíveis na hierarquia definida pelo usuário.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Classificando membros de atributo com base em um atributo secundário](https://docs.microsoft.com/analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute)  
+ [Classificando membros de atributo com base em um atributo secundário](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
   
   

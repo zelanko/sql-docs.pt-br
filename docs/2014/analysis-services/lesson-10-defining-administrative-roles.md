@@ -10,12 +10,12 @@ ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 266833abbfa959e39a171eb498701c75c7eb66c8
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 98c6db6e3c7af6f66f4d7a1496bf955a65dd5bb1
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493960"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530868"
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>Lição 10: Como definir funções administrativas
   Nesta lição, você aprenderá a definir funções de segurança para tarefas administrativas.  
@@ -29,7 +29,7 @@ ms.locfileid: "69493960"
  Nesta tarefa, você definirá uma função de segurança que possui permissões para processar o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e, em seguida, testará essa função.  
   
 ## <a name="see-also"></a>Consulte também  
- [Cenário do tutorial de Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
+ [Cenário do tutorial de Analysis Services](analysis-services-tutorial-scenario.md)   
  [Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

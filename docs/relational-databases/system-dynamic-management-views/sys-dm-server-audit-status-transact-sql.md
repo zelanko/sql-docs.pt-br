@@ -18,31 +18,31 @@ helpviewer_keywords:
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3291edb34087e46739cf984d2412821fa66b7a07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff565f46b5329515b1ab4424657c45a12720c28b
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053226"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530858"
 ---
-# <a name="sysdmserverauditstatus-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
+# <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada auditoria de servidor que indica o estado atual da auditoria. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**audit_id**|**int**|ID da auditoria. Mapeia para o **audit_id** campo o **sys.audits** exibição do catálogo.|  
-|**name**|**sysname**|Nome da auditoria. Mesmo que o **nome** campo o **server_audits** exibição do catálogo.|  
-|**status**|**smallint**|Status numérico da auditoria de servidor:<br /><br /> 0 = não iniciado<br /><br /> 1 =<br />        Started (iniciado)<br /><br /> 2 =<br />      Falha de tempo de execução<br /><br /> 3 = destino criar Fail<br /><br /> 4 = desligado|  
+|**audit_id**|**int**|ID da auditoria. Mapeia para o campo **audit_id** na exibição do catálogo **Sys. Auditions** .|  
+|**name**|**sysname**|Nome da auditoria. O mesmo que o campo **nome** na exibição de catálogo **Sys. server_audits** .|  
+|**status**|**smallint**|Status numérico da auditoria de servidor:<br /><br /> 0 = não iniciado<br /><br /> 1 =<br />        Started (iniciado)<br /><br /> 2 =<br />      Falha no tempo de execução<br /><br /> 3 = falha ao criar destino<br /><br /> 4 = desligando|  
 |**status_desc**|**nvarchar(256)**|Cadeia de caracteres que mostra o status da auditoria de servidor:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Carimbo de data e hora em UTC da última alteração de status da auditoria.|  
-|**event_session_address**|**varbinary(8)**|Endereço da sessão de Eventos Estendidos associada à auditoria. Relacionados para o **sys.db_xe_sessions.address** exibição do catálogo.|  
+|**event_session_address**|**varbinary(8)**|Endereço da sessão de Eventos Estendidos associada à auditoria. Relacionado à exibição de catálogo **Sys. dm _xe_sessions. Address** .|  
 |**audit_file_path**|**nvarchar(256)**|Caminho completo e nome de arquivo do destino do arquivo de auditoria que está sendo usado no momento. Populado somente para auditorias de arquivos.|  
 |**audit_file_size**|**bigint**|Tamanho aproximado do arquivo de auditoria, em bytes. Populado somente para auditorias de arquivos.|  
   
 ## <a name="permissions"></a>Permissões  
- As entidades devem ter **VIEW SERVER STATE** e **selecione** permissões.  
+ As entidades de segurança devem ter o **estado do servidor de exibição** e as permissões **selecionadas** .  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

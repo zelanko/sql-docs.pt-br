@@ -12,12 +12,12 @@ ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a18d9d54034ea98cf7a449c8f7147eaa54c65263
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 6b29a31acb4e3dad83c760c27a9591cac026e0ea
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889445"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530901"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Entendendo a arquitetura Microsoft OLAP
   Use estes tópicos para compreender os bancos de dados multidimensionais do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e como planejar a implementação dos bancos de dados multidimensionais em sua solução de Business Intelligence.  
@@ -46,7 +46,7 @@ ms.locfileid: "68889445"
  [Desenvolvendo com ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
  ![Ícone de pasta de arquivo pequeno](../../../integration-services/media/filefolder-small.gif "Ícone de pasta de arquivo pequeno") **Considerações internacionais**  
- [Cenários de globalização para Analysis Services multidimensional](https://docs.microsoft.com/analysis-services/globalization-scenarios-for-analysis-services-multiidimensional)  
+ [Cenários de globalização para Analysis Services multidimensional](../../globalization-scenarios-for-analysis-services-multiidimensional.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência &#40;técnica do SSAS&#41;](../../powershell/technical-reference-ssas.md)  

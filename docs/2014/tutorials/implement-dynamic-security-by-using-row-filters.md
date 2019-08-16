@@ -10,12 +10,12 @@ ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 49a62fb647b7b1a1579103f96907d0635ecc635f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 39d0d92d83a41970dcddae54d74aca3d118dcf6f
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893599"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530880"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implementar a segurança dinâmica usando filtros de linha
   Nesta lição suplementar, você criará uma função adicional que implementa a segurança dinâmica. A segurança dinâmica oferece segurança em nível de linha com base no nome de usuário ou na id de logon do usuário conectado no momento. Para obter mais informações, consulte [Funções &#40;SSAS Tabular&#41;](https://docs.microsoft.com/analysis-services/tabular-models/roles-ssas-tabular).  
@@ -130,7 +130,7 @@ ms.locfileid: "68893599"
  Nesta tarefa, você criará uma nova função de usuário. Esta função incluirá um filtro de linha que define quais linhas da tabela Sales Territory são visíveis a usuários. O filtro é aplicado na direção de relação um para muitos a todas as outras tabelas relacionadas a Sales Territory. Você também aplicará um filtro simples que protege a tabela Employee Security inteira contra a consulta por qualquer usuário que seja membro da função.  
   
 > [!NOTE]  
->  A função Sales Employees by Territory criada nesta lição restringe os membros a procurar (ou consultar) apenas dados de vendas para a região de vendas à qual eles pertencem. Se você adicionar um usuário como um membro à função funcionários de vendas por região que também existe como um membro em uma função criada na [lição 12: Criar funções](https://docs.microsoft.com/analysis-services/lesson-11-create-roles), você obterá uma combinação de permissões. Quando um usuário for membro de várias funções, as permissões e os filtros de linha definidas para cada função serão cumulativos. Quer dizer, o usuário terá as maiores permissões determinadas pela combinação de funções.  
+>  A função Sales Employees by Territory criada nesta lição restringe os membros a procurar (ou consultar) apenas dados de vendas para a região de vendas à qual eles pertencem. Se você adicionar um usuário como um membro à função funcionários de vendas por região que também existe como um membro em uma função criada na [lição 12: Criar funções](../analysis-services/lesson-11-create-roles.md), você obterá uma combinação de permissões. Quando um usuário for membro de várias funções, as permissões e os filtros de linha definidas para cada função serão cumulativos. Quer dizer, o usuário terá as maiores permissões determinadas pela combinação de funções.  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Para criar uma função de usuário Sales Employees by Territory  
   

@@ -1,24 +1,24 @@
 ---
-title: Início rápido para uma "Olá, Mundo" execução básica de código Python no T-SQL
-description: Início rápido do script Python no SQL Server. Aprenda as noções básicas de chamar o script Python usando o procedimento armazenado do sistema sp_execute_external_script em um exercício de Olá, mundo.
+title: 'Início Rápido: Python "Olá, Mundo"'
+description: Neste guia de início rápido, você aprende os principais conceitos executando um script Python "Olá, Mundo" em SQL Server Serviços de Machine Learning. Você usará o procedimento armazenado do sistema sp_execute_external_script T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/10/2019
+ms.date: 08/15/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a170bd2ee3e893a83ebb9d3201ee117321e7562b
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 1149c7888bc783c9d4f658eed5e8405214d6ffc4
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714820"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530973"
 ---
-# <a name="quickstart-hello-world-python-script-in-sql-server"></a>Início Rápido: Script do Python "Olá, mundo" no SQL Server 
+# <a name="quickstart-run-a-hello-world-python-script-on-sql-server-machine-learning-services"></a>Início Rápido: Execute um script Python "Olá, mundo" em SQL Server Serviços de Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Neste guia de início rápido, você aprende os principais conceitos executando um script "Olá, Mundo" do Python inT-SQL, com uma introdução ao procedimento armazenado do sistema **sp_execute_external_script** . 
+Neste guia de início rápido, você aprende os principais conceitos executando um script Python "Olá, Mundo" em SQL Server Serviços de Machine Learning. Você usará o procedimento armazenado do sistema **Sp_execute_external_script** T-SQL.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
