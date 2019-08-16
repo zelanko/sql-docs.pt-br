@@ -10,12 +10,12 @@ ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 914140df4460741f8441ce899a8e73a420806169
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 779d63264280569465ae2c0815caf15ed9b9f8b2
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887890"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493752"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>Lição 9: Como definir perspectivas e traduções
   Nesta lição, você aprenderá a definir perspectivas e traduções. Você pode definir perspectivas para reduzir a complexidade aparente de um cubo e definir traduções que permitam que os usuários exibam os metadados do cubo no idioma que preferirem.  
@@ -28,7 +28,7 @@ ms.locfileid: "68887890"
  [Definindo e procurando perspectivas](multidimensional-models-olap-logical-cube-objects/perspectives.md)  
  Nesta tarefa, você definirá e navegará por perspectivas para simplificar a exibição do cubo para usuários e usos específicos.  
   
- [Definindo e procurando traduções](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
+ [Definindo e procurando traduções](lesson-9-2-defining-and-browsing-translations.md)  
  Nesta tarefa, você definirá e navegará por traduções de metadados específicos para determinados idiomas.  
   
 ## <a name="next-lesson"></a>Próxima lição  

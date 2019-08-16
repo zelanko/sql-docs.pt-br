@@ -10,12 +10,12 @@ ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1da73bb522aa3fbf825841e637f01b0c455f09c2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 11d566c029491378a5e0e091e0803cdf5616e637
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888252"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493990"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lição 4: Como definir propriedades avançadas de dimensão e de atributo
   Nesta lição, você aprenderá como usar algumas propriedades avançadas de atributos, hierarquias de atributo e propriedades de dimensão.  
@@ -34,7 +34,7 @@ ms.locfileid: "68888252"
  [Agrupando membros de atributo automaticamente](lesson-4-3-automatically-grouping-attribute-members.md)  
  Nesta tarefa, você criará automaticamente agrupamento de membros de atributos com base na distribuição de membros dentro da hierarquia de atributos. Para obter mais informações, consulte [Agrupar membros de atributo &#40;Diferenciação&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
- [Ocultando e desabilitando as hierarquias de atributo](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
+ [Ocultando e desabilitando as hierarquias de atributo](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
  Nesta tarefa, você aprenderá como e quando desativar ou ocultar as hierarquias de atributo.  
   
  [Classificando membros de atributo com base em um atributo secundário](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  

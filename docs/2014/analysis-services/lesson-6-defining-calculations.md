@@ -10,12 +10,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fcfa51678379ecf7f54a956db17089544b22f6be
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 1d9b41a37a48e5ff8456eb353e45b894d3bb0757
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888043"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493846"
 ---
 # <a name="lesson-6-defining-calculations"></a>Lição 6: Como definir cálculos
   Nesta lição, você aprenderá a definir cálculos, que são scripts ou expressões MDX (Multidimensional Expressions). Os cálculos permitem que você defina membros calculados, conjuntos nomeados ou execute outros comandos de script para aumentar os recursos de um cubo do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Por exemplo, você pode executar um comando de script para definir um subcubo e depois atribuir um cálculo às células no subcubo.  
@@ -45,14 +45,14 @@ ms.locfileid: "68888043"
   
  Esta lição contém as seguintes tarefas:  
   
- [Definindo membros calculados](https://docs.microsoft.com/analysis-services/lesson-6-1-defining-calculated-members)  
+ [Definindo membros calculados](lesson-6-1-defining-calculated-members.md)  
  Nesta tarefa, você aprenderá a definir membros calculados.  
   
- [Definindo conjuntos nomeados](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
+ [Definindo conjuntos nomeados](lesson-6-2-defining-named-sets.md)  
  Nesta tarefa, você aprenderá a definir conjuntos nomeados.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 7: Definindo KPIs de indicadores &#40;chave de desempenho&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
+ [Lição 7: Definindo KPIs de indicadores &#40;chave de desempenho&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Cenário do tutorial de Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   

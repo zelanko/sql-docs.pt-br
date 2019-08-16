@@ -10,12 +10,12 @@ ms.assetid: d7107c32-69ed-49a8-9b6e-32753eebf42c
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 7fc2d6eebc342de7126ebd3c8c41c12e07107089
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3f85320a99c901a2fd71c9048750825569559099
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888748"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494020"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>Criando uma fonte de dados (Tutorial de mineração de dados básico)
   Uma *fonte de dados* é uma conexão de dados que é salva e gerenciada em seu projeto e [!INCLUDE[msCoName](../includes/msconame-md.md)] implantada em seu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dado. A fonte de dados contém os nomes do servidor e o banco de dados em que a sua fonte de dados reside, além das demais propriedades de conexão necessárias.  
@@ -62,7 +62,7 @@ ms.locfileid: "68888748"
   
 ## <a name="see-also"></a>Consulte também  
  [Criar uma fonte de dados &#40;SSAS multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
- [Definindo uma fonte de dados](https://docs.microsoft.com/analysis-services/lesson-1-2-defining-a-data-source)   
+ [Definindo uma fonte de dados](../analysis-services/lesson-1-2-defining-a-data-source.md)   
  [Definir opções de representação &#40;SSAS – Multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
   
   

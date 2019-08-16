@@ -10,12 +10,12 @@ ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8688e40fc0075bded60069bea24e8114dd51fa0f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ddae9c199f1827d733d0e12f7ff834768aeae937
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888384"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494010"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Definindo propriedades de atributo pai em uma hierarquia pai-filho
   Uma hierarquia pai-filho é uma hierarquia em uma dimensão que se baseia em duas colunas de tabela. Juntas, essas colunas definem as relações hierárquicas entre os membros da dimensão. A primeira coluna, chamada *coluna de chave de membro*, identifica cada membro da dimensão. A outra coluna, chamada *coluna pai*, identifica o pai de cada membro da dimensão. A propriedade **NamingTemplate** de um atributo pai determina o nome de cada nível na hierarquia pai-filho e a propriedade **MembersWithData** determina se os dados dos membros pai deverão ser exibidos.  
@@ -104,7 +104,7 @@ ms.locfileid: "68888384"
      ![Hierarquia de funcionários modificada](../../2014/tutorials/media/l4-employee-2.png "Hierarquia de funcionários modificada")  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Agrupando membros de atributo automaticamente](https://docs.microsoft.com/analysis-services/lesson-4-3-automatically-grouping-attribute-members)  
+ [Agrupando membros de atributo automaticamente](lesson-4-3-automatically-grouping-attribute-members.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Hierarquia pai-filho](multidimensional-models/parent-child-dimension.md)   

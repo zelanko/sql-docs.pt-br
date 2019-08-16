@@ -10,12 +10,12 @@ ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7eba0c1778923981361e5ecab1819afe3dec58d9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888084"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493790"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definindo e procurando KPIs
   Para definir KPIs (indicadores chave de desempenho), você deve definir primeiramente um nome de KPI e o grupo de medidas ao qual o KPI será associado. Um KPI pode ser associado a todos ou apenas a um único grupo de medidas. Depois disso, você define os seguintes elementos do KPI:  
@@ -268,6 +268,6 @@ ms.locfileid: "68888084"
      A margem de lucro bruto para a venda de bicicletas dos revendedores na América do Norte no período Q3 CY 2007 é exibida.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 8: Definindo ações](https://docs.microsoft.com/analysis-services/lesson-8-defining-actions)  
+ [Lição 8: Definindo ações](lesson-8-defining-actions.md)  
   
   

@@ -12,12 +12,12 @@ ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6daa8c4fd9b46fc4dcfec08876d36c1cf0187a94
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7acd40dde7275eb813c5f48a2b6ea97e284cb2c0
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887573"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493811"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>Referência do desenvolvedor para o SQL Server 2014
 
@@ -47,13 +47,13 @@ ms.locfileid: "68887573"
   
  ![Ícone de pasta de arquivo pequeno](../integration-services/media/filefolder-small.gif "Ícone de pasta de arquivo pequeno") [Programação da caixa de mensagem de exceção](../database-engine/dev-guide/exception-message-box-programming.md)  
   
- ![Ícone de pasta de arquivo pequeno](../integration-services/media/filefolder-small.gif "Ícone de pasta de arquivo pequeno") [Desenvolvendo com ADOMD.net](https://docs.microsoft.com/analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net)  
+ ![Ícone de pasta de arquivo pequeno](../integration-services/media/filefolder-small.gif "Ícone de pasta de arquivo pequeno") [Desenvolvendo com ADOMD.net](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
- ![Ícone de pasta de arquivo pequeno](../integration-services/media/filefolder-small.gif "Ícone de pasta de arquivo pequeno") [Desenvolvendo com objetos de gerenciamento de análise &#40;amo&#41; ](https://docs.microsoft.com/analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo)  
+ ![Ícone de pasta de arquivo pequeno](../integration-services/media/filefolder-small.gif "Ícone de pasta de arquivo pequeno") [Desenvolvendo com objetos de gerenciamento de análise &#40;amo&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
  ![Ícone de pasta de arquivo pequeno](../integration-services/media/filefolder-small.gif "Ícone de pasta de arquivo pequeno") [Desenvolvendo com Analysis Services linguagem &#40;de script ASSL&#41; ](https://docs.microsoft.com/analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl)  
   
- ![Ícone de pasta de arquivo pequeno](../integration-services/media/filefolder-small.gif "Ícone de pasta de arquivo pequeno") [OLE DB para mineração de dados](https://docs.microsoft.com/analysis-services/dev-guide/ole-db-for-data-mining)  
+ ![Ícone de pasta de arquivo pequeno](../integration-services/media/filefolder-small.gif "Ícone de pasta de arquivo pequeno") [OLE DB para mineração de dados](https://docs.microsoft.com/sql/analysis-services/dev-guide/ole-db-for-data-mining?view=sql-server-2014)  
   
  ![Ícone de pasta de arquivo pequeno](../integration-services/media/filefolder-small.gif "Ícone de pasta de arquivo pequeno") [Guia do desenvolvedor de Integration Services](../integration-services/integration-services-developer-documentation.md)  
   

@@ -10,12 +10,12 @@ ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b4d2fddf1707ec4e1521b99d9d526f173464cd8e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ede0a23a6e37c47a1af242748233ca49b0cdfab7
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888188"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493880"
 ---
 # <a name="defining-calculated-members"></a>Definindo membros calculados
   Membros calculados são membros de uma dimensão ou um grupo de medidas definidos com base em uma combinação de dados de cubo, operadores aritméticos, números e funções. Por exemplo, você pode criar um membro calculado que possa calcular a soma de duas medidas físicas no cubo. As definições de um membro calculado são armazenadas em cubos, mas seus valores são calculados no momento da consulta.  
@@ -287,7 +287,7 @@ ms.locfileid: "68888188"
      Observe que a venda de acessórios aumentou com o passar do tempo, mas essas vendas equivalem a apenas uma pequena fração do total de vendas. Observe também que a margem de lucro bruto de vendas de acessórios é mais alta do que a de bicicletas.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Definindo conjuntos nomeados](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
+ [Definindo conjuntos nomeados](lesson-6-2-defining-named-sets.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Cálculos](multidimensional-models-olap-logical-cube-objects/calculations.md)   

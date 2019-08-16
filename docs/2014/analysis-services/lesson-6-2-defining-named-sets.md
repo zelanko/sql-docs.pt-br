@@ -10,12 +10,12 @@ ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bd42fdd888ca8d4b7fc72e20fb3c6a71b9e0170f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ff1b386d0f85f1073b533921d690462c9ed25dc0
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888135"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493891"
 ---
 # <a name="defining-named-sets"></a>Definindo conjuntos nomeados
   Um conjunto nomeado é uma linguagem MDX (Multidimensional Expressions) que retorna um conjunto de membros de dimensão. Os conjuntos nomeados podem ser definidos e salvos como parte da definição de cubo; você também pode criar conjuntos nomeados em aplicativos cliente. É possível criar conjuntos nomeados combinando dados de cubo, operadores aritméticos, números e funções. Os conjuntos nomeados podem ser usados em consultas MDX em aplicativos cliente e também podem ser usados para definir conjuntos em subcubos. Um subcubo é uma coleção de conjuntos em interjunção que restringe o espaço do cubo ao subespaço definido para instruções subsequentes. Definir um espaço de cubo restrito é um conceito fundamental para a geração de scripts de MDX.  
@@ -132,7 +132,7 @@ ms.locfileid: "68888135"
      ![Painel de filtro contendo dois conjuntos nomeados](../../2014/tutorials/media/l6-named-set-05.gif "Painel de filtro contendo dois conjuntos nomeados")  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Lição 7: Definindo KPIs de indicadores &#40;chave de desempenho&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
+ [Lição 7: Definindo KPIs de indicadores &#40;chave de desempenho&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Cálculos](multidimensional-models-olap-logical-cube-objects/calculations.md)   

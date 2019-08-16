@@ -10,12 +10,12 @@ ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26f92fffadba9ceed03518d07fb3f27339ebff38
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4408e9b884e2cb5a0b47d9e6f95a16dec2bd20f6
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888233"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493860"
 ---
 # <a name="defining-a-fact-relationship"></a>Definindo uma relação de fatos
   Algumas vezes, os usuários desejam dimensionar medidas por itens de dados que estão na tabela de fatos ou consultar a tabela de fatos em busca de informações relacionadas específicas, como, por exemplo, números de faturas ou de ordens de compra relacionados a determinados fatos de vendas. Ao definir uma dimensão com base em um item da tabela de fatos, a dimensão será chamada *dimensão de fatos*. As dimensões de fatos também são conhecidas como dimensões de degeneração. Elas são úteis para agrupar em conjunto as linhas de tabelas de fatos relacionadas, como, por exemplo, todas as linhas que estiverem relacionadas a um determinado número de fatura. Embora seja possível colocar essas informações em uma tabela de dimensões separada no banco de dados relacional, criar uma tabela de dimensões separada para essas informações não fornecerá benefício algum, pois a tabela de dimensões tende a aumentar na mesma proporção que a tabela de fatos, duplicando dados e tornando maior sua complexidade.  
@@ -118,7 +118,7 @@ ms.locfileid: "68888233"
      ![Dimensão de vendas pela Internet-valor das vendas](../../2014/tutorials/media/l5-factrelationship-3.gif "Dimensão de vendas pela Internet-valor das vendas")  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Definindo uma relação muitos para muitos](https://docs.microsoft.com/analysis-services/lesson-5-3-defining-a-many-to-many-relationship)  
+ [Definindo uma relação muitos para muitos](lesson-5-3-defining-a-many-to-many-relationship.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Relações de dimensão](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

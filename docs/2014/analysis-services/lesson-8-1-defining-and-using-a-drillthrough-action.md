@@ -10,12 +10,12 @@ ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a6cf8b025530cbeee236e519564cc5c25861824c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888103"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493820"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definindo e usando uma ação de detalhamento
   Os dados de fato de dimensionamento em uma dimensão de fatos sem filtrar corretamente os dados que a consulta retorna podem causar lentidão no desempenho da consulta. Para evitar esse problema, defina uma ação de detalhamento que restrinja o número total de linhas que serão retornadas. Esse processo melhorará significativamente o desempenho da consulta.  
@@ -143,13 +143,13 @@ ms.locfileid: "68888103"
      ![Pedidos enviados para Adam Powell](../../2014/tutorials/media/l8-action8.gif "Pedidos enviados para Adam Powell")  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 9: Definindo perspectivas e traduções](https://docs.microsoft.com/analysis-services/lesson-9-defining-perspectives-and-translations)  
+ [Lição 9: Definindo perspectivas e traduções](lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Ações &#40;Analysis Services-dados multidimensionais&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Ações em modelos multidimensionais](multidimensional-models/actions-in-multidimensional-models.md)   
  [Relações de dimensão](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Definindo uma relação de fatos](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)   
+ [Definindo uma relação de fatos](lesson-5-2-defining-a-fact-relationship.md)   
  [Definir uma relação de fato e propriedades de relação de fato](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   

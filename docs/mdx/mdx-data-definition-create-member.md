@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 90db0be2372c3af9d3d079a187e4b3cbd8147566
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 220741cb2103c3428737cdcb9def9463381db900
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892132"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494070"
 ---
 # <a name="mdx-data-definition---create-member"></a>Definição de dados MDX – CREATE MEMBER
 
@@ -57,7 +57,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
   
  Para obter mais informações sobre propriedades do membro definidas por OLE DB, consulte a documentação OLE DB.  
   
-## <a name="scope"></a>Scope  
+## <a name="scope"></a>Escopo  
  Um membro calculado pode acontecer dentro de um dos escopos listados na tabela a seguir.  
   
  Escopo de consulta  
@@ -114,7 +114,7 @@ WHERE ProfitRatio
 |SOLVE_ORDER|A ordem na qual o membro calculado será resolvido quando um membro calculado fizer referência a outro membro calculado (ou seja, quando membros calculados se cruzarem).|  
 |FORMAT_STRING|Uma cadeia de caracteres de formato de estilo do Office que o aplicativo cliente pode usar ao exibir valores de células.|  
 |VISIBLE|Um valor que indica se o membro calculado é visível em um conjunto de linhas de esquema. Membros calculados visíveis podem ser adicionados a um conjunto com a função [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) . Um valor diferente de zero indica que o membro calculado é visível. O valor padrão dessa propriedade é *visível*.<br /><br /> Membros calculados que não são visíveis (em que o valor é definido como zero) são em geral usados como etapas intermediárias em membros calculados mais complexos. Esses membros calculados também podem ser consultados por outros tipos de membros, como medidas.|  
-|NON_EMPTY_BEHAVIOR|A medida ou o conjunto usado para determinar o comportamento de membros calculados ao resolver células vazias.<br /><br /> **Aviso estapropriedade\* foi preterida. \* \* \*** Evite configurá-la. Consulte [Recursos do Analysis Services preteridos no SQL Server 2016](https://docs.microsoft.com/analysis-services/deprecated-analysis-services-features-in-sql-server-2016) para ver detalhes.|  
+|NON_EMPTY_BEHAVIOR|A medida ou o conjunto usado para determinar o comportamento de membros calculados ao resolver células vazias.<br /><br /> **Aviso estapropriedade\* foi preterida. \* \* \*** Evite configurá-la. Consulte [recursos de Analysis Services preteridos no SQL Server 2014](/sql/analysis-services/deprecated-analysis-services-features-in-sql-server-2014) para obter detalhes.|  
 |CAPTION|Uma cadeia de caracteres que o aplicativo cliente usa como legenda para o membro.|  
 |DISPLAY_FOLDER|Uma cadeia de caracteres que identifica o caminho da pasta de exibição que o aplicativo cliente usa para mostrar o membro. O separador de nível de pasta é definido pelo aplicativo cliente. Para as ferramentas e os clientes fornecidos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]pelo, a barra invertida (\\) é o separador de nível. Para fornecer várias pastas de exibição para um membro definido, use um ponto-e-vírgula (;) para separar as pastas.|  
 |ASSOCIATED_MEASURE_GROUP|O nome do grupo de medidas ao qual esse membro está associado.|  

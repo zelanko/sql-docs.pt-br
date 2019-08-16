@@ -10,12 +10,12 @@ ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9b6212bc112768af510bdb4a9dcff25150aa9f5e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888022"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493785"
 ---
 # <a name="defining-and-browsing-translations"></a>Definindo e procurando traduções
   Uma tradução é uma representação dos nomes de objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em uma linguagem específica. Os objetos incluem grupos de medidas, medidas, dimensões, atributos, hierarquias, KPIs, ações e membros calculados. As traduções oferecem suporte de servidor a aplicativos cliente que podem oferecer suporte para vários idiomas. Como cliente, basta passar o identificador de localidade (LCID) para a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], que usa o LCID para determinar qual conjunto de traduções deverá ser usado quando ele fornecer metadados para os objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Se um objeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não tiver uma tradução para o idioma ou para um objeto específico, o idioma padrão será usado para retornar o metadados do objeto ao cliente. Por exemplo, se um usuário empresarial na França acessar um cubo a partir de uma estação de trabalho que tenha uma configuração local francesa, esse usuário poderá visualizar as legendas de membro e os valores de propriedade de membro na França, caso haja uma tradução francesa. Entretanto, se um usuário empresarial na Alemanha acessar o mesmo cubo a partir de uma estação de trabalho que tenha uma configuração local alemã, esse usuário poderá visualizar os nomes de membro e os valores de propriedade de membro em alemão. Para obter mais informações, consulte traduções de [dimensões](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), conversões de [cubo](multidimensional-models-olap-logical-cube-objects/cube-translations.md), [traduções &#40;&#41;Analysis Services](translations-analysis-services.md).  
@@ -123,7 +123,7 @@ ms.locfileid: "68888022"
      Observe que agora os nomes de mês e de medida são exibidos em francês.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 10: Definindo funções administrativas](https://docs.microsoft.com/analysis-services/lesson-10-defining-administrative-roles)  
+ [Lição 10: Definindo funções administrativas](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Traduções de dimensão](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   

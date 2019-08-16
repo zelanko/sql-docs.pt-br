@@ -10,12 +10,12 @@ ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f835defb27410c0c812ac5acf5793cf15accbe60
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 266833abbfa959e39a171eb498701c75c7eb66c8
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888455"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493960"
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>Lição 10: Como definir funções administrativas
   Nesta lição, você aprenderá a definir funções de segurança para tarefas administrativas.  
@@ -25,7 +25,7 @@ ms.locfileid: "68888455"
   
  Esta lição contém a seguinte tarefa:  
   
- [Concedendo permissões ao banco de dados do processo](https://docs.microsoft.com/analysis-services/lesson-10-granting-process-database-permissions)  
+ [Concedendo permissões ao banco de dados do processo](lesson-10-granting-process-database-permissions.md)  
  Nesta tarefa, você definirá uma função de segurança que possui permissões para processar o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e, em seguida, testará essa função.  
   
 ## <a name="see-also"></a>Consulte também  
