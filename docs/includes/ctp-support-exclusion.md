@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: dd52923a1e9c363d527aee9aedc1253e478f3e4e
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: b51f93b12c51bd7bc9659ee1661a7fdc068dd2bd
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419560"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028858"
 ---
 ## <a name="enabled-deployment-scenarios"></a>Cenários de implantação habilitados
 
@@ -19,7 +19,7 @@ O CTP 3.2 permite os seguintes cenários:
 
 ## <a name="support"></a>Suporte
 
-O SQL Server 2019 CTP 3.2 é um software de versão prévia. Ele não é publicamente compatível com operações. Os clientes que estão no [Programa de Usuário Pioneiro do SQL](http://aka.ms/sqleap) podem ter suporte para executar o SQL Server 2019 CTP 3.2 por contrato especial, em consultoria com a Microsoft.
+O SQL Server 2019 CTP 3.2 é um software de versão prévia. Ele não é publicamente compatível com operações. Os clientes que estão no [Programa de Usuário Pioneiro do SQL](https://aka.ms/sqleap) podem ter suporte para executar o SQL Server 2019 CTP 3.2 por contrato especial, em consultoria com a Microsoft.
 
 O suporte limitado para clientes que não estão no programa de adoção antecipada pode ser encontrado em um dos seguintes locais:
 

@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 191c5f2e603821a5bb9d85aa89a630c71800e660
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 9f881367442cfa2e24921300ba7595bdbf28ce27
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68424417"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028874"
 ---
 # <a name="sql-server-2019-ctp-announcement-archive"></a>Arquivo de anúncios do SQL Server 2019 CTP
 
@@ -384,7 +384,7 @@ No CTP 2.4, o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] não intro
 
 O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduz ou aprimora os recursos novos a seguir para o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].
 
-#### <a name="new-querypostexecutionplanprofile-extended-event-ctp-24"></a>Novo evento estendido Query_post_execution_plan_profile (CTP 2.4)
+#### <a name="new-query_post_execution_plan_profile-extended-event-ctp-24"></a>Novo evento estendido Query_post_execution_plan_profile (CTP 2.4)
 
 O novo evento estendido `query_post_execution_plan_profile` coleta o equivalente a um plano de execução real com base em criação de perfil leve, ao contrário de `query_post_execution_showplan`, que usa a criação de perfil padrão. Para obter mais informações, confira [Infraestrutura de criação de perfil de consulta](../relational-databases/performance/query-profiling-infrastructure.md).
 
@@ -416,7 +416,7 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
 
-#### <a name="new-dmf-sysdmexecqueryplanstats-ctp-24"></a>Novo DMF sys.dm_exec_query_plan_stats (CTP 2.4) 
+#### <a name="new-dmf-sysdm_exec_query_plan_stats-ctp-24"></a>Novo DMF sys.dm_exec_query_plan_stats (CTP 2.4) 
 
 O novo DMF `sys.dm_exec_query_plan_stats` retorna o equivalente do último plano de execução real conhecido para a maioria das consultas, com base na criação de perfil leve. Para obter mais informações, consulte [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) e [Infraestrutura de criação de perfil de consulta](../relational-databases/performance/query-profiling-infrastructure.md). Consulte o seguinte script como exemplo:
 
@@ -556,7 +556,7 @@ A criação de índice online retomável dá suporte aos cenários a seguir:
 
 No caso de falha na criação de um índice, sem esse recurso, uma operação de criação de índice online deve ser executada novamente e a operação deve ser reiniciada desde o início.
 
-Com esta versão, estendemos a funcionalidade retomável adicionando o recurso à [recompilação de índice online retomável](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
+Com esta versão, estendemos a funcionalidade retomável adicionando o recurso à [recompilação de índice online retomável](https://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
 
 Além disso, esse recurso pode ser definido como padrão para um banco de dados específico usando a [configuração padrão de escopo do banco de dados para operações de DDL online e retomáveis](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
@@ -688,7 +688,7 @@ Agora, qualquer arquivo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] c
 
 O `DBCC CLONEDATABASE` cria uma cópia somente de esquema de um banco de dados que inclui todos os elementos necessários para solucionar problemas de desempenho de consulta sem copiar os dados. Em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o comando não copiava as estatísticas necessárias para solucionar problemas com precisão em consultas de índice de columnstore, e etapas manuais eram necessárias para capturar essas informações. Agora, no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], o `DBCC CLONEDATABASE` captura automaticamente os blobs de estatísticas para índices columnstore, de modo que nenhuma etapa manual é necessária.
 
-#### <a name="new-options-added-to-spestimatedatacompressionsavings-ctp-20"></a>Novas opções adicionadas a sp_estimate_data_compression_savings (CTP 2.0)
+#### <a name="new-options-added-to-sp_estimate_data_compression_savings-ctp-20"></a>Novas opções adicionadas a sp_estimate_data_compression_savings (CTP 2.0)
 
 `sp_estimate_data_compression_savings` retorna o tamanho atual do objeto solicitado e faz a estimativa do tamanho do objeto para o estado de compactação solicitado. Atualmente, esse procedimento dá suporte a três opções: `NONE`, `ROW` e `PAGE`. O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduz duas novas opções: `COLUMNSTORE` e `COLUMNSTORE_ARCHIVE`. Essas novas opções permitirão que você estime a economia de espaço se um índice columnstore for criado na tabela usando a compactação de columnstore padrão ou de arquivos.
 
@@ -712,7 +712,7 @@ Para obter mais informações sobre essa criação de perfil leve, confira [Infr
 
 - **Novos conectores para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata e MongoDB**: o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduz novos conectores para dados externos para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata e MongoDB.
 
-#### <a name="new-sysdmdbpageinfo-system-function-returns-page-information-ctp-20"></a>A nova função de sistema sys.dm_db_page_info retorna informações da página (CTP 2.0)
+#### <a name="new-sysdm_db_page_info-system-function-returns-page-information-ctp-20"></a>A nova função de sistema sys.dm_db_page_info retorna informações da página (CTP 2.0)
 
 `sys.dm_db_page_info(database_id, file_id, page_id, mode)` retorna informações sobre uma página em um banco de dados. A função retorna uma linha que contém as informações de cabeçalho da página, incluindo `object_id`, `index_id` e `partition_id`. Essa função substitui a necessidade de usar `DBCC PAGE` na maioria dos casos. 
 

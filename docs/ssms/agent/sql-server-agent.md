@@ -1,7 +1,5 @@
 ---
 title: SQL Server Agent | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -13,31 +11,27 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: markingmyname
 ms.author: maghan
+ms.custom: ''
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5a131153b269d68091e0b76cda4bda5f14e62fd9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: af9045220d860efdf60a4df37c138ac81bf3c05d
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265237"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69552661"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > No momento, na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é um serviço do Microsoft Wnodows que executa tarefas admnoistrativas agendadas, que são chamadas de *trabalhos* no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
-**Neste tópico**  
-  
--   [Benefícios do SQL Server Agent](#Benefits)  
-  
--   [Componentes do SQL Server Agent](#Components)  
-  
--   [Segurança de administração do SQL Server Agent](#Security)  
-  
-## <a name="Benefits"></a>Benefícios do SQL Server Agent  
+
+## <a name="Benefits"></a>Benefícios do SQL Server Agent 
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenar informações de trabalhos. Os trabalhos contêm uma ou mais etapas de trabalho. Cada etapa contém sua própria tarefa; por exemplo, fazer o backup de um banco de dados.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode executar um trabalho de uma agenda, em resposta a um evento específico ou sob demanda. Por exemplo, se desejar fazer o backup de todos os servidores da empresa todo dia após o expediente, você pode automatizar essa tarefa. Agende o backup para execução após as 22:00, de segunda a sexta; se o backup encontrar um problema, o SQL Server Agent poderá registrar o evento e notificá-lo.  

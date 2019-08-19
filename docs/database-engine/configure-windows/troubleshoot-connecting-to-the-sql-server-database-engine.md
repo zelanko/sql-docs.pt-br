@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b34746b028f4b7efa884fb7c55e5ce3bf4143b0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac0c2a99577638d72c0db252b79b0a40780e0e6b
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038839"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028760"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Solucionar problemas na conexão com o Mecanismo de Banco de Dados do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ Ambos os problemas são relacionados ao serviço de Navegador do SQL Server, que
   * Iniciar o serviço de Navegador do SQL Server. Confira as instruções para [Iniciar o navegador no SQL Server Configuration Manager](#startbrowser).
   * O serviço de Navegador do SQL Server está sendo bloqueada pelo firewall. Abra a porta UDP 1434 no firewall. Volte para a seção [Abrir uma porta no Firewall](#opening-a-port-in-the-firewall). Verifique se você está abrindo uma porta UDP, não uma porta TCP.
   * As informações da porta UDP 1434 estão sendo bloqueadas por um roteador. A comunicação UDP (protocolo UDP) não foi projetada para passar por roteadores. Isso impede que a rede seja preenchida por tráfego de baixa prioridade. É possível configurar o roteador para encaminhar tráfego UDP ou você pode optar por sempre fornecer o número da porta ao conectar.
-  * Se o computador cliente estiver usando o Windows 7 ou o Windows Server 2008 (ou um sistema operacional mais recente), o tráfego UDP pode ser descartado pelo sistema operacional do cliente porque a resposta do servidor é retornada de um endereço IP diferente daquele foi consultado. Esse é um bloqueio do recurso de segurança "mapeamento de origem flexível". Para obter mais informações, confira a seção **Vários endereços IP do servidor** do tópico dos Manuais Online [Solução de problemas: tempo limite esgotado](http://msdn.microsoft.com/library/ms190181.aspx). Este é um artigo do SQL Server 2008 R2, mas as entidades ainda se aplicam. É possível configurar o cliente para usar o endereço IP correto ou você pode optar por sempre fornecer o número da porta ao conectar.
+  * Se o computador cliente estiver usando o Windows 7 ou o Windows Server 2008 (ou um sistema operacional mais recente), o tráfego UDP pode ser descartado pelo sistema operacional do cliente porque a resposta do servidor é retornada de um endereço IP diferente daquele foi consultado. Esse é um bloqueio do recurso de segurança "mapeamento de origem flexível". Para obter mais informações, confira a seção **Vários endereços IP do servidor** do tópico dos Manuais Online [Solução de problemas: tempo limite esgotado](https://msdn.microsoft.com/library/ms190181.aspx). Este é um artigo do SQL Server 2008 R2, mas as entidades ainda se aplicam. É possível configurar o cliente para usar o endereço IP correto ou você pode optar por sempre fornecer o número da porta ao conectar.
 
 3. Depois que você se conectar, usando o endereço IP (ou o endereço IP e o nome de instância para uma instância nomeada), tente se conectar, usando o nome do computador (ou o nome do computador e o nome de instância para uma instância nomeada). Coloque `tcp:` na frente do nome do computador para forçar uma conexão TCP/IP. Por exemplo, para a instância padrão em um computador chamada `ACCNT27`, use `tcp:ACCNT27` . Para uma instância nomeada chamada `PAYROLL`no computador em questão, use `tcp:ACCNT27\PAYROLL` . Se você puder se conectar usando o endereço IP, mas não usando o nome do computador, isso significa que ocorreu um problema de resolução de nome. Volte para a seção **Testar conectividade TCP/IP**, a seção 4.
 

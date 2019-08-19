@@ -17,12 +17,12 @@ ms.assetid: 7633adb5-d140-4e58-a8f2-5b4b50c2f95b
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 88cecde3bcfd3a7b0c5f7512506dc7c259b1b2cd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 67971ce06b79d7a56af6ae9bfe6f5d153babbe80
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265879"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69552906"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>Inscrever um servidor de destino em um servidor mestre
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,14 +35,6 @@ Este tópico descreve como adicionar servidores de destino a uma configuração 
 Para obter informações sobre como a conta do Windows usada para o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent afeta um ambiente multisservidor, consulte [Criar um ambiente multisservidor](../../ssms/agent/create-a-multiserver-environment.md).  
   
 Criptografia SSL completa e validação de certificado encontram-se habilitadas, por padrão, para conexões entre servidores mestre e servidores de destino. Para obter mais informações, veja [Definir opções de criptografia em servidores de destino](../../ssms/agent/set-encryption-options-on-target-servers.md).  
-  
-**Neste tópico**  
-  
--   **Para inscrever um servidor de destino, usando:**  
-  
-    [SQL Server Management Studio](#SSMSProcedure)  
-  
-    [Transact-SQL](#TsqlProcedure)  
   
 ## <a name="SSMSProcedure"></a>Usando o SQL Server Management Studio  
   

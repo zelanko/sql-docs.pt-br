@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 80b6e7444f77fbd764402643887dcee94eaec7aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5248f97b044cb688174171fdb6ef79943851a92
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091803"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028931"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>Configurar a coleta de dados de diagnóstico e uso do SQL Server (Programa de Aperfeiçoamento da Experiência do Usuário)
 
@@ -144,7 +144,7 @@ O procedimento para ativar ou desativar este recurso depende da versão do SO. P
  
 - Windows Server 2016 e Windows 10
 
-    [Configurar os dados de diagnóstico do Windows na organização](https://docs.microsoft.com/en-us/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
+    [Configurar os dados de diagnóstico do Windows na organização](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 - Windows Server 2008 R2 e Windows 7
 
     [Configurações WER](/windows/desktop/wer/wer-settings)

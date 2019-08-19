@@ -12,12 +12,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e70dc6ddf897b34f5ffd0cf3c573ea973a1a36ad
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: de030c3982fb3e3ed64603707b7e6915779fb4d8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888890"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028811"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Introdução ao Always Encrypted com enclaves seguros usando o SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -37,15 +37,15 @@ Para começar com o Always Encrypted com enclaves seguros, você precisa de pelo
 
 - [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] ou posterior.
 - Windows 10 Enterprise versão 1809 ou Windows Server 2019 Datacenter.
-- Se o computador do SQL Server for um computador físico, ele deverá atender aos [Requisitos de Hardware do Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements):
+- Se o computador do SQL Server for um computador físico, ele deverá atender aos [Requisitos de Hardware do Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements):
    - Processador de 64 bits com Conversão de Endereço de Segundo Nível (SLAT)
    - Suporte de CPU para a Extensão do Modo de Monitor de VM (VT-c em CPUs Intel)
    - Suporte a virtualização habilitada (AMD-V ou Intel VT-x)
 - Se o computador do SQL Server for uma máquina virtual, a VM deverá ser configurada para dar suporte à Segurança Baseada em Virtualização.
-   - No Hyper-V 2016 ou posterior, use a VM de geração 1 e [habilite as extensões de virtualização aninhadas](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) no processador da VM ou use a VM de geração 2. Para saber mais sobre as gerações de VM, confira [Devo criar uma máquina virtual de geração 1 ou 2 no Hyper-V?](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v). 
+   - No Hyper-V 2016 ou posterior, use a VM de geração 1 e [habilite as extensões de virtualização aninhadas](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) no processador da VM ou use a VM de geração 2. Para saber mais sobre as gerações de VM, confira [Devo criar uma máquina virtual de geração 1 ou 2 no Hyper-V?](https://docs.microsoft.com/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v). 
    - No Azure, verifique se você está executando um tamanho de VM que dá suporte a um dos itens a seguir:
-      - Virtualização aninhada, por exemplo, as VMs da série Dv3 e Ev3. Confira [Criar uma VM do Azure compatível com aninhamento](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
-      - VMs de geração 2, por exemplo, VMs da série Dsv3 ou Esv3. Confira [Suporte para VMs de geração 2 no Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/generation-2).
+      - Virtualização aninhada, por exemplo, as VMs da série Dv3 e Ev3. Confira [Criar uma VM do Azure compatível com aninhamento](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+      - VMs de geração 2, por exemplo, VMs da série Dsv3 ou Esv3. Confira [Suporte para VMs de geração 2 no Azure](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2).
    - No VMWare vSphere 6.7 ou posterior, habilite o suporte de segurança baseada em virtualização para a VM conforme descrito na [documentação do VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
    - Outros hipervisores e nuvens públicas podem suportar o uso do Always Encrypted com enclaves seguros em uma VM, desde que as extensões de virtualização (às vezes chamadas de virtualização aninhada) estejam expostas à VM. Verifique a documentação da solução de virtualização para obter instruções sobre compatibilidade e configuração.
 - [SSMS (SQL Server Management Studio) 18.0 ou posterior](../../ssms/download-sql-server-management-studio-ssms.md).

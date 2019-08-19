@@ -32,10 +32,10 @@ author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 22748ad9b34292811c5c133dd02da9a4d734657c
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "68122176"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
@@ -340,7 +340,7 @@ WHERE phone NOT LIKE '612%'
 ORDER by LastName;  
 ```  
   
-### <a name="g-using-like-with-the--wildcard-character"></a>G. Usando LIKE com o caractere curinga _  
+### <a name="g-using-like-with-the-_-wildcard-character"></a>G. Usando LIKE com o caractere curinga _  
  O exemplo a seguir localiza todos os números de telefone que têm um código de área que começa com `6` e termina em `2` na tabela `DimEmployee`. O caractere curinga % é incluído no final do padrão de pesquisa para corresponder a todos os caracteres a seguir no valor de coluna do telefone.  
   
 ```sql  

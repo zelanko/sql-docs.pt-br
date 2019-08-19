@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a4811c1f41c4c8b9a566dc13b3de713576b4980d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 1e8825336edd4e55812f6037bbb4479a3b225e3f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952621"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028736"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>Implantar um grupo de disponibilidade do SQL Server Always On em um cluster do Kubernetes
 
@@ -36,7 +36,7 @@ No Kubernetes, a implantação inclui um operador de SQL Server, os contêineres
 > [!NOTE]
 > Você pode usar qualquer tipo de cluster do Kubernetes. Para criar um cluster do Kubernetes no AKS (Serviço de Kubernetes do Azure), confira [Criar um cluster no AKS](https://docs.microsoft.com/azure/aks/create-cluster).
 >
-> Use a versão mais recente do Kubernetes. A versão específica depende de sua assinatura e região. Confira [Versões compatíveis do Kubernetes no AKS](https://docs.microsoft.com/en-us/azure/aks/supported-kubernetes-versions).  
+> Use a versão mais recente do Kubernetes. A versão específica depende de sua assinatura e região. Confira [Versões compatíveis do Kubernetes no AKS](https://docs.microsoft.com/azure/aks/supported-kubernetes-versions).  
 >
 > O script a seguir cria um cluster do Kubernetes de quatro nós no Azure. Antes de executar o script, substitua `<latest version>` pela versão mais recente disponível. Por exemplo, `1.12.5`.
 >

@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bfe22edbc76805fb821ddda42a07a3b74395bdb6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 2ded17c5baf35949b16c173236f94f8d0d3dd299
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893997"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028907"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novidades no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -83,7 +83,6 @@ Para obter mais detalhes, confira [O que são os clusters de Big Data do SQL Ser
 
 |Novo recurso ou atualização | Detalhes |
 |:---|:---|
-|Restrições da funcionalidade| Prevenir que algumas formas de injeção de SQL vazem informações sobre o banco de dados, mesmo quando a injeção de SQL é bem-sucedida. Confira [Restrições de funcionalidade](../relational-databases/security/feature-restrictions.md)|
 |Indexar colunas criptografadas|Criar índices em colunas criptografadas usando criptografia aleatória e chaves habilitada para enclave, a fim de melhorar o desempenho de consultas avançadas (usando `LIKE` e operadores de comparação). Veja [Always Encrypted com enclaves seguros](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 |Suspender e retomar a verificação inicial para TDE (Transparent Data Encryption)|Confira [Verificação de TDE (Transparent Data Encryption) – suspender e retomar](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
 |Gerenciamento de certificados no SQL Server Configuration Manager|Confira [Gerenciamento de certificado (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md)
