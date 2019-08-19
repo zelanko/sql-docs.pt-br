@@ -25,15 +25,15 @@ ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e06a332823c593468c73fce635e1eac3040c6b6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e1192deaa556dd8546d0d9fbf17d5ff79335173a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62702475"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887822"
 ---
 # <a name="user-hierarchies"></a>Hierarquias do usuário
-  Hierarquias definidas pelo usuário são hierarquias definidas pelo usuário de atributos que são usados em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para organizar os membros de uma dimensão em estruturas hierárquicas e fornecer caminhos de navegação em um cubo. Por exemplo, a tabela a seguir define uma tabela de dimensões para uma dimensão temporal. A tabela de dimensão oferece suporte para três atributos nomeados, Ano, Trimestre e Mês.  
+  As hierarquias definidas pelo usuário são hierarquias definidas pelo usuário de atributos que são usados [!INCLUDE[msCoName](../../includes/msconame-md.md)] no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para organizar os membros de uma dimensão em estruturas hierárquicas e fornecer caminhos de navegação em um cubo. Por exemplo, a tabela a seguir define uma tabela de dimensões para uma dimensão temporal. A tabela de dimensão oferece suporte para três atributos nomeados, Ano, Trimestre e Mês.  
   
 |Year|Quarter|Month|  
 |----------|-------------|-----------|  
@@ -52,7 +52,7 @@ ms.locfileid: "62702475"
   
  São usados os atributos Ano, Trimestre e Mês para criar uma hierarquia definida pelo usuário, nomeado Calendário, na dimensão temporal. A relação entre os níveis e membros da dimensão Calendário (uma dimensão comum) é mostrada no diagrama a seguir.  
   
- ![Nível e membros de hierarquia para uma dimensão de tempo](../../../2014/analysis-services/dev-guide/media/as-levelconcepts.gif "nível e membros de hierarquia para uma dimensão de tempo")  
+ ![Hierarquia de nível e membro para uma dimensão de tempo](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-levelconcepts.gif "Hierarquia de nível e membro para uma dimensão de tempo")  
   
 > [!NOTE]  
 >  Toda hierarquia diferente da hierarquia de atributo de dois níveis padrão é chamada de hierarquia definida pelo usuário. Para obter mais informações sobre hierarquias de atributo, consulte [atributos e hierarquias de atributo](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
@@ -66,7 +66,7 @@ ms.locfileid: "62702475"
 ### <a name="unbalanced-hierarchies"></a>Hierarquias desbalanceadas  
  Em uma hierarquia desbalanceada, ramificações da hierarquia decresce para níveis diferentes. As hierarquias pai-filho são hierarquias desbalanceadas. Por exemplo, a dimensão Organização na amostra [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] do banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contém um membro para cada funcionário. O CEO é o membro que ocupa o lugar no topo da hierarquia e os gerentes de divisão e secretária executiva estão imediatamente abaixo do CEO. Os gerentes de divisão têm membros subordinados, mas a secretária executiva não.  
   
- Pode ser impossível para usuários finais distinguirem entre hierarquias desbalanceadas e imperfeitas. Entretanto, você emprega técnicas e propriedades diferentes no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para oferecer suporte a esses dois tipos de hierarquias. Para obter mais informações, consulte [hierarquias desbalanceadas](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md), e [atributos em hierarquias pai-filho](../multidimensional-models/parent-child-dimension-attributes.md).  
+ Pode ser impossível para usuários finais distinguirem entre hierarquias desbalanceadas e imperfeitas. Entretanto, você emprega técnicas e propriedades diferentes no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para oferecer suporte a esses dois tipos de hierarquias. Para obter mais informações, consulte [Hierarquias desbalanceadas](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md) e [atributos em hierarquias pai-filho](../multidimensional-models/parent-child-dimension-attributes.md).  
   
 ### <a name="ragged-hierarchies"></a>Hierarquias desbalanceadas  
  Em uma hierarquia imperfeita, o membro pai lógico de pelo menos um membro não está no nível imediatamente acima do membro. Isso pode fazer com que ramificações da hierarquia decresçam a níveis diferentes. Por exemplo, em uma dimensão Geografia definida com os níveis Continente, PaísRegião e Cidade, nessa ordem o membro Europa aparece no nível mais alto da hierarquia, o membro França aparece no nível intermediária e o membro Paris aparece no nível mais baixo. França é mais específico que a Europa e Paris é mais específico que França. Para essa hierarquia regular, as seguintes alterações são feitas:  
@@ -80,9 +80,9 @@ ms.locfileid: "62702475"
  O nível Província é populado com membros associados a outros membros no nível PaísRegião e os membros no nível Cidade são associados a seus membros correspondentes no nível Província. Entretanto, como o membro Cidade do Vaticano no nível PaísRegião não possui membros associados no nível Província, os membros devem ser associados do nível Cidade diretamente ao membro Cidade do Vaticano no nível PaísRegião. Devido às alterações, a hierarquia da dimensão está agora imperfeita. O pai de Cidade do Vaticano é a região/país Cidade do Vaticano, que não está imediatamente no nível acima do membro Cidade do Vaticano no nível Cidade. Para obter mais informações, consulte [Hierarquias desbalanceadas](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md).  
   
 ### <a name="parent-child-hierarchies"></a>Hierarquias pai-filho  
- As hierarquias pai-filho de dimensões são definidas usando um atributo especial, chamado de atributo pai, para determinar como os membros relacionam-se entre si. Um atributo pai descreve uma *relação de autorreferência*, ou *autojunção*, em uma tabela principal da dimensão. As hierarquias filho são construídas a partir de um único atributo pai. Somente um nível é atribuído a uma hierarquia pai-filho, pois os níveis existentes na hierarquia são extraídos das relações pai-filho entre os membros associados ao atributo pai. O esquema de dimensão de uma hierarquia pai-filho depende de uma relação de autorreferência existente na tabela principal da dimensão. Por exemplo, o diagrama a seguir ilustra a **DimOrganization** tabela principal da dimensão a [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados de exemplo.  
+ As hierarquias pai-filho de dimensões são definidas usando um atributo especial, chamado de atributo pai, para determinar como os membros relacionam-se entre si. Um atributo pai descreve uma *relação de autorreferência*, ou *autojunção*, em uma tabela principal da dimensão. As hierarquias filho são construídas a partir de um único atributo pai. Somente um nível é atribuído a uma hierarquia pai-filho, pois os níveis existentes na hierarquia são extraídos das relações pai-filho entre os membros associados ao atributo pai. O esquema de dimensão de uma hierarquia pai-filho depende de uma relação de autorreferência existente na tabela principal da dimensão. Por exemplo, o diagrama a seguir ilustra a tabela principal de dimensões de dimorganização no banco de dados de [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exemplo.  
   
- ![Junção referenciada automaticamente na tabela DimOrganization](../../../2014/analysis-services/dev-guide/media/dimorganization.gif "auto-referenciada de junção na tabela DimOrganization")  
+ ![Junção de referência automática na tabela de] dimorganização (https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/dimorganization.gif "Junção de referência automática na tabela de") dimorganização  
   
  Nessa tabela de dimensão, a coluna **ParentOrganizationKey** possui uma relação de chave estrangeira com a coluna da chave primária **OrganizationKey** . Em outras palavras, cada registro dessa tabela pode ser relacionado por meio de uma relação pai-filho com outro registro da tabela. Geralmente, esse tipo de autojunção é usado para representar os dados de uma empresa, como a estrutura de gerenciamento dos funcionários de um departamento.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "62702475"
   
  A profundidade de uma hierarquia pai-filho pode variar entre suas ramificações hierárquicas. Em outras palavras, uma hierarquia pai-filho é considerada uma hierarquia desbalanceada.  
   
- Diferentemente de hierarquias definidas pelo usuário, na qual o número de níveis na hierarquia determina o número de níveis que podem ser visualizados por usuários finais, uma hierarquia pai-filho é definida com o único nível de um atributo de hierarquia e os valores nesse único nível produzem os vários níveis visualizados por usuários. O número de níveis exibidos depende do conteúdo das colunas da tabela de dimensões que armazenam as chaves de membro e as chaves de pai. O número de níveis pode ser alterado quando os dados nas tabelas de dimensões alteram. Para obter mais informações, consulte [hierarquia pai-filho](../multidimensional-models/parent-child-dimension.md), e [atributos em hierarquias pai-filho](../multidimensional-models/parent-child-dimension-attributes.md).  
+ Diferentemente de hierarquias definidas pelo usuário, na qual o número de níveis na hierarquia determina o número de níveis que podem ser visualizados por usuários finais, uma hierarquia pai-filho é definida com o único nível de um atributo de hierarquia e os valores nesse único nível produzem os vários níveis visualizados por usuários. O número de níveis exibidos depende do conteúdo das colunas da tabela de dimensões que armazenam as chaves de membro e as chaves de pai. O número de níveis pode ser alterado quando os dados nas tabelas de dimensões alteram. Para obter mais informações, consulte [hierarquia pai-filho](../multidimensional-models/parent-child-dimension.md)e [atributos em hierarquias pai-filho](../multidimensional-models/parent-child-dimension-attributes.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar hierarquias definidas pelo usuário](../multidimensional-models/user-defined-hierarchies-create.md)   
