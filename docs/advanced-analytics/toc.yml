@@ -1,6 +1,6 @@
 - name: Documentação dos Serviços de Machine Learning do SQL Server
   href: ../advanced-analytics/index.yml
-- name: Bem-vindo ao SQL Server >>
+- name: Bem-vindo ao SQL Server >
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: Visão geral
   expanded: true
@@ -165,7 +165,7 @@
           href: ../advanced-analytics/tutorials/demo-data-iris-in-sql.md
         - name: Conjunto de dados NYC Taxi
           href: ../advanced-analytics/tutorials/demo-data-nyctaxi-in-sql.md
-- name: Exemplos >
+- name: Exemplos >>
   href: 'https://github.com/Microsoft/sql-server-samples'
 - name: Soluções
   href: ../advanced-analytics/tutorials/data-science-scenarios-and-solution-templates.md
@@ -321,7 +321,7 @@
           href: ../advanced-analytics/r/ref-r-sqlrutils.md
 - name: Recursos
   items:
-    - name: Notas sobre a versão >>
+    - name: Notas sobre a versão >
       href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
     - name: Solução de problemas
       items:
