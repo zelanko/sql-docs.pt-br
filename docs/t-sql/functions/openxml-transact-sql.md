@@ -56,7 +56,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**0**|O padrão será o mapeamento **centrado em atributo**.|  
 |**1**|Use o mapeamento **centrado em atributo**. Pode ser combinado com XML_ELEMENTS. Neste caso, o mapeamento **centrado em atributo** é aplicado primeiro. Em seguida, o mapeamento **centrado em elemento** é aplicado às colunas restantes.|  
 |**2**|Use o mapeamento **centrado em elemento**. Pode ser combinado com XML_ATTRIBUTES. Neste caso, o mapeamento **centrado em atributo** é aplicado primeiro. Em seguida, o mapeamento **centrado em elemento** é aplicado às colunas restantes.|  
-|**8**|Pode ser combinado (OR lógico) com XML_ATTRIBUTES ou XML_ELEMENTS. No contexto de recuperação, esse sinalizador indica que os dados consumidos não podem ser copiados para a propriedade de estouro **\@@mp:xmltex**.|  
+|**8**|Pode ser combinado (OR lógico) com XML_ATTRIBUTES ou XML_ELEMENTS. No contexto de recuperação, esse sinalizador indica que os dados consumidos não podem ser copiados para a propriedade de estouro **\@mp:xmltex**.|  
   
  _SchemaDeclaration_  
  É a definição do esquema do formato: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
