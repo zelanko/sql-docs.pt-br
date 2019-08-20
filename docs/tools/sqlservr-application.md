@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1778f9b3f6b4662de36e33e3ae7974f4eef4dd82
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 1feb0cfe509f4dec4e77076021757045628e2e7a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771020"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028968"
 ---
 # <a name="sqlservr-application"></a>Aplicativo sqlservr
 
@@ -84,8 +84,8 @@ Os parâmetros a seguir são obsoletos e não [!INCLUDE[ssCurrent](../includes/s
 
 |Parâmetro | Mais informações|
 |:-----|:-----|
-|**-h** | Em versões anteriores de instâncias de 32 bits do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para reservar espaço de endereço de memória virtual para metadados de inclusão de memória a quente quando AWE é habilitado. Com suporte [!INCLUDE[sssql14](../includes/sssql14-md.md)]por meio de. Para obter mais informações, veja [Recursos descontinuados do SQL Server no SQL Server 2016](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).|
-|**-g** | *memory_to_reserve*<br/><br>Aplica-se a versões anteriores de instâncias de 32 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]bits do. Com suporte [!INCLUDE[sssql14](../includes/sssql14-md.md)]por meio de. Especifica um número inteiro de megabytes (MB) de memória que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deixara disponível para alocações de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , mas fora do pool de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|
+|**-h** | Em versões anteriores de instâncias de 32 bits do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para reservar espaço de endereço de memória virtual para metadados de inclusão de memória a quente quando AWE é habilitado. Com suporte [!INCLUDE[sssql14](../includes/sssql14-md.md)]por meio de. Para obter mais informações, veja [Recursos descontinuados do SQL Server no SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).|
+|**-g** | *memory_to_reserve*<br/><br>Aplica-se a versões anteriores de instâncias de 32 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]bits do. Com suporte [!INCLUDE[sssql14](../includes/sssql14-md.md)]por meio de. Especifica um número inteiro de megabytes (MB) de memória que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deixara disponível para alocações de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , mas fora do pool de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [a documentação do SQL Server 2014 sobre opções de configuração de memória do servidor](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014).|
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>Consulte Também

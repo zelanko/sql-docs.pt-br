@@ -1,7 +1,7 @@
 ---
 title: Atualizando o exemplo de dados grandes | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 201a5999644c77b4934e47c7f1c9184133488e3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 231125f60ec0c5791e55a10cff56b3b93339fb91
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916595"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027068"
 ---
 # <a name="updating-large-data-sample"></a>Atualizando exemplo de dados grande
 
@@ -50,6 +50,6 @@ O comportamento padrão do driver é"**adaptável**". Porém, para os conjuntos 
 
 [!code[JDBC#UsingAdaptiveBuffering3](../../connect/jdbc/codesnippet/Java/updating-large-data-sample_1.java)]
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Manipular dados grandes](../../connect/jdbc/working-with-large-data.md)
