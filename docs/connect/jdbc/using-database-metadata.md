@@ -1,7 +1,7 @@
 ---
-title: Usando metadados de banco de dados | Microsoft Docs
+title: Como usar metadados de banco de dados | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 8b048371-e912-4ed1-afd7-436978f48888
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fbe290c558dd8c64605bad0a977657904582c696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fce2bf9d72136b303ee3bc974f3aede313233a82
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916267"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026425"
 ---
-# <a name="using-database-metadata"></a>Usando metadados de banco de dados
+# <a name="using-database-metadata"></a>Como usar metadados de banco de dados
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -29,6 +29,6 @@ No exemplo a seguir, uma conexão aberta com o [!INCLUDE[ssSampleDBnormal](../..
 
 [!code[JDBC#UsingDBMetaData1](../../connect/jdbc/codesnippet/Java/using-database-metadata_1.java)]
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Tratando metadados com o JDBC Driver](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)

@@ -1,7 +1,7 @@
 ---
-title: Implantar o JDBC Driver | Microsoft Docs
+title: Implantando o JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3e7898f66631fd9ca9d75573d5025bb732db8208
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e8b4655695d37db10d18fbaa6215587036017bf
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956722"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028115"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Implantando o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67956722"
 > [!NOTE]  
 >  Para obter informações sobre como implantar aplicativos Java em geral, consulte o site de Java.  
   
-## <a name="deploying-the-jdbc-driver-on-windows-systems"></a>Implantando o driver JDBC em sistemas Windows  
+## <a name="deploying-the-jdbc-driver-on-windows-systems"></a>Implantando o JDBC Driver em sistemas Windows  
  Ao implantar o driver JDBC em sistemas operacionais Windows, você deve usar a versão de arquivo zip executável do pacote de instalação, geralmente denominado `sqljdbc_<version>_<language>.exe`.  
   
  Para executar o arquivo zip executável silenciosamente, use a opção de linha de comando `/auto` ou um arquivo em lotes, como a seguir:  
@@ -39,7 +39,7 @@ ms.locfileid: "67956722"
 > [!NOTE]  
 >  Quando a opção `/auto` é usada, a instalação não é realmente silenciosa, pois uma caixa de diálogo do WinZip ainda é exibida na tela do usuário. No entanto, não é necessário interagir com ela, que é fechada assim que a operação de descompactação é concluída.  
   
-## <a name="deploying-the-driver-on-unix-systems"></a>Implantando o driver em sistemas UNIX  
+## <a name="deploying-the-driver-on-unix-systems"></a>Implantando o driver em sistemas UNIX 
  Ao implantar o driver JDBC em sistemas operacionais UNIX, é necessário usar a versão do arquivo gzip do pacote de instalação, geralmente chamado `sqljdbc_<version>_<language>.tar.gz`.  
   
  Antes de instalar o driver JDBC, verifique se ambos os utilitários, gzip e tar, estão instalados no sistema do usuário, e se as pastas que contêm os executáveis de ambos os utilitários foram adicionadas à variável de ambiente PATH.  
@@ -52,7 +52,7 @@ ms.locfileid: "67956722"
   
  `tar -xf sqljdbc_<version>_<language>.tar`  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
  [Visão geral do JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

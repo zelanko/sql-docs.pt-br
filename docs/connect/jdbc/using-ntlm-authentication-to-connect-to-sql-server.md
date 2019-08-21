@@ -1,7 +1,7 @@
 ---
-title: Usando a autenticação NTLM para se conectar ao SQL Server | Microsoft Docs
+title: Como usar a autenticação NTLM para se conectar ao SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,14 +12,14 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 11fe35e1dc90e32cac460b61fe8a6078c817b0ca
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894098"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026099"
 ---
-# <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Usando a autenticação NTLM para se conectar ao SQL Server
+# <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Como usar a autenticação NTLM para se conectar ao SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -68,7 +68,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 }
 ```
 
-## <a name="service-principal-names"></a>Nomes de Entidade de Serviço
+## <a name="service-principal-names"></a>Nomes de entidades de serviço
 
 Um SPN (nome da entidade de serviço) é o nome pelo qual um cliente identifica exclusivamente uma instância de um serviço.
 
@@ -102,6 +102,6 @@ Para obter mais informações sobre como se conectar com a criptografia SSL, con
 > [!NOTE]
 > Para a versão 7,4, não **há** suporte para a habilitação da proteção estendida e da criptografia.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Conectando ao SQL Server com o JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

@@ -1,7 +1,7 @@
 ---
-title: Usando a criptografia SSL | Microsoft Docs
+title: Como usar a criptografia SSL | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 98c9cd99d8fd8a54c96a9301ac3a050b54614c17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 34a486a2bcde43ccccc053aed9ebd9392ce34e8c
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003971"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026031"
 ---
-# <a name="using-ssl-encryption"></a>Usando criptografia SSL
+# <a name="using-ssl-encryption"></a>Como usar a criptografia SSL
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -38,10 +38,10 @@ Os tópicos nesta seção descrevem como a versão [!INCLUDE[jdbcNoVersion](../.
 
 | Tópico                                                                                                        | Descrição                                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Noções básicas sobre suporte a SSL](../../connect/jdbc/understanding-ssl-support.md)                                 | Descreve como o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] dá suporte à criptografia SSL.                                              |
+| [Noções básicas do suporte a SSL](../../connect/jdbc/understanding-ssl-support.md)                                 | Descreve como o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] dá suporte à criptografia SSL.                                              |
 | [Conectando-se com criptografia SSL](../../connect/jdbc/connecting-with-ssl-encryption.md)                       | Descreve como conectar-se a um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando as novas propriedades de conexão específicas do SSL. |
 | [Configurando o cliente para criptografia SSL](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md) | Descreve como configurar o repositório de confiança padrão do lado do cliente e como importar um certificado privado para o repositório de confiança do computador cliente.   |
   
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Protegendo aplicativos do JDBC Driver](../../connect/jdbc/securing-jdbc-driver-applications.md)  

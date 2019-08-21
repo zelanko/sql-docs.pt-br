@@ -1,7 +1,7 @@
 ---
 title: Aplicativos de driver JDBC de exemplo | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7e99e122f1e18c320c6ea6e5b18409ca39780d03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ef5c2d71d398be52ebed2b69020e87d54818176
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957074"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028311"
 ---
 # <a name="sample-jdbc-driver-applications"></a>Aplicativos de exemplo do JDBC Driver
 
@@ -41,6 +41,6 @@ Todos os aplicativos de exemplo estão contidos em arquivos de código * .java q
 | [Manipular dados grandes](../../../connect/jdbc/code-samples/working-with-large-data.md)                                            | Estes aplicativos de exemplo demonstram como usar buffer adaptável para recuperar dados de valor grande de um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sem a sobrecarga de cursores de servidor.                                                         |
 | [Descoberta e classificação de dados SQL](../../jdbc/code-samples/data-discovery-and-classification-sample.md) | Este aplicativo de exemplo demonstra como recuperar informações de descoberta e classificação de dados contidas em um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] banco de dado de um objeto ResultSet usando o driver JDBC.                                            |
   
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Visão geral do JDBC Driver](../../../connect/jdbc/overview-of-the-jdbc-driver.md)

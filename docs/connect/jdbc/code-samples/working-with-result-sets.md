@@ -1,7 +1,7 @@
 ---
 title: Trabalhando com conjuntos de resultados | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9d33dbebaad162feb77a4cbea8de33993fc79f14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44eac2fbcc156b3591bdf02fd00ff0d6bd19366b
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956960"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028239"
 ---
 # <a name="working-with-result-sets"></a>Trabalhando com conjuntos de resultados
 
@@ -34,11 +34,11 @@ Os tópicos desta seção descrevem diversas maneiras de usar um conjunto de res
   
 | Tópico                                                                                           | Descrição                                                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Exemplo de recuperação de dados do conjunto de resultados](../../../connect/jdbc/code-samples/retrieving-result-set-data-sample.md) | Descreve como usar um conjunto de resultados para recuperar dados de um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e exibi-los.                                                         |
-| [Exemplo de modificação de dados do conjunto de resultados](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | Descreve como usar um conjunto de resultados para inserir, recuperar e modificar dados de um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].                                                      |
-| [Exemplo de armazenamento de dados do conjunto de resultados em cache](../../../connect/jdbc/code-samples/caching-result-set-data-sample.md)       | Descreve como usar um conjunto de resultados para recuperar grandes volumes de dados de um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e como controlar a maneira como esses dados são armazenados em cache no cliente. |
+| [Recuperando exemplo de dados do conjunto de resultados](../../../connect/jdbc/code-samples/retrieving-result-set-data-sample.md) | Descreve como usar um conjunto de resultados para recuperar dados de um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e exibi-los.                                                         |
+| [Modificando exemplo de dados de conjunto de resultados](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | Descreve como usar um conjunto de resultados para inserir, recuperar e modificar dados de um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].                                                      |
+| [Exemplo de dados do conjunto de resultados de caching](../../../connect/jdbc/code-samples/caching-result-set-data-sample.md)       | Descreve como usar um conjunto de resultados para recuperar grandes volumes de dados de um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e como controlar a maneira como esses dados são armazenados em cache no cliente. |
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
 
 [Aplicativos de exemplo do JDBC Driver](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   

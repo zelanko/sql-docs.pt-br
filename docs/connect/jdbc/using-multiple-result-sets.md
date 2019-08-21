@@ -1,7 +1,7 @@
 ---
-title: Usando vários conjuntos de resultados | Microsoft Docs
+title: Como usar vários conjuntos de resultados | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ab6a3cfa-073b-44e9-afca-a8675cfe5fd1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c471f74fc8e1029cfeaad06b564ea4a9b6641171
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 802ade7a34eb5c5174efc35032587f801ef12179
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005966"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026271"
 ---
-# <a name="using-multiple-result-sets"></a>Usando vários conjuntos de resultados
+# <a name="using-multiple-result-sets"></a>Como usar vários conjuntos de resultados
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -34,11 +34,11 @@ No exemplo a seguir, uma conexão aberta para o banco de dados de amostra [!INCL
 
 [!code[JDBC#UsingMultipleResultSets1](../../connect/jdbc/codesnippet/Java/using-multiple-result-sets_1.java)]
 
-Neste caso, o número de conjuntos de resultados retornado é conhecido para ser dois. Porém, o código é escrito de forma que, se um número desconhecido de conjuntos de resultados fosse retornado, como ao chamar um procedimento armazenado, todos eles seriam processados. Para ver um exemplo de chamada de procedimento armazenado que retorna vários conjuntos de resultados junto com valores de atualização, consulte [Como tratar instruções complexas](../../connect/jdbc/handling-complex-statements.md).
+Neste caso, o número de conjuntos de resultados retornado é conhecido para ser dois. Porém, o código é escrito de forma que, se um número desconhecido de conjuntos de resultados fosse retornado, como ao chamar um procedimento armazenado, todos eles seriam processados. Para ver um exemplo de chamada de procedimento armazenado que retorna vários conjuntos de resultados junto com valores de atualização, confira [Tratando instruções complexas](../../connect/jdbc/handling-complex-statements.md).
 
 > [!NOTE]  
 > Quando você faz a chamada para o método getMoreResults da classe SQLServerStatement, o conjunto de resultados retornado anteriormente é fechado implicitamente.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
-[Usando instruções com o JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)
+[Como usar instruções com o JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)

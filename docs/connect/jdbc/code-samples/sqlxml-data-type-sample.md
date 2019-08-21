@@ -1,7 +1,7 @@
 ---
 title: Exemplo de tipo de dados SQLXML | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8775c93afaa84570c5f4da51672bbec6379a927f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df376535f8f6c6a7d98e1744a2d2b70e813d400a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957065"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028280"
 ---
 # <a name="sqlxml-data-type-sample"></a>Exemplo de tipo de dados SQLXML
 
@@ -60,6 +60,6 @@ O método showTransformer demonstra como obter dados XML de uma tabela e inserir
 
 [!code[JDBC#UsingSQLXML1](../../../connect/jdbc/codesnippet/Java/sqlxml-data-type-sample_1.java)]
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Trabalhando com tipos de dados &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)

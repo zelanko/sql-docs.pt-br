@@ -1,7 +1,7 @@
 ---
-title: Usando o espelhamento de banco de dados (JDBC) | Microsoft Docs
+title: Como usar o espelhamento de banco de dados (JDBC) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6c00b6a0697a4dc6f6e0a358b85fe1e211791826
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e0de521e6ef913d27a020cc76f1dc6de00d0f409
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916249"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026431"
 ---
-# <a name="using-database-mirroring-jdbc"></a>Usando o espelhamento de banco de dados (JDBC)
+# <a name="using-database-mirroring-jdbc"></a>Como usar o espelhamento de banco de dados (JDBC)
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -108,6 +108,6 @@ public class ClientFailover {
 }
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Conectando ao SQL Server com o JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
