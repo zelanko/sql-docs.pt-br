@@ -1,20 +1,20 @@
 ---
 title: Implantar com um script de Bash em um cluster kubeadm de nó único
 titleSuffix: SQL Server big data clusters
-description: Use um script de implantação de Bash para implantar um cluster de Big Data do SQL Server 2019 (versão prévia) em um cluster kubeadm de nó único.
+description: Use um script de implantação bash para implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] um em um cluster kubeadm de nó único.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 09f1d487e82f1e57762a0949f20bf9d43e40abfc
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f6b6581eacad2fa9a65f64fdc29d6dfcde53852a
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715891"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652341"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>Implantar com um script de Bash em um cluster kubeadm de nó único
 

@@ -1,38 +1,41 @@
 ---
 title: Notas de versão
 titleSuffix: SQL Server big data clusters
-description: Este artigo descreve as atualizações mais recentes e problemas conhecidos para clusters de Big Data do SQL Server 2019 (versão prévia).
+description: Este artigo descreve as atualizações mais recentes e problemas conhecidos [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] do (Preview).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7951c79fa457ffa47a2c2a7089c71256d870628b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 66a317fb68dff2dc4914b80f2e70655e1bba2773
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476248"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653432"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notas sobre a versão para clusters de Big Data no SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este artigo lista as atualizações e os problemas conhecidos das versões mais recentes de clusters de Big Data do SQL Server.
+Este artigo lista as atualizações e os problemas conhecidos para as versões mais recentes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]do.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+>[!NOTE]
+>[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 ## <a id="ctp32"></a> CTP 3.2 (julho)
 
 As seções a seguir descrevem os novos recursos e problemas conhecidos de clusters de Big Data no SQL Server 2019 CTP 3.2.
 
-### <a name="whats-new"></a>What's New
+### <a name="whats-new"></a>O Que Há de Novo
 
 |Novo recurso ou atualização | Detalhes |
 |:---|:---|
-|Versão prévia pública |Antes do CTP 3.2, o cluster de Big Data do SQL Server estava disponível para os usuários pioneiros registrados. Esta versão permite que qualquer pessoa experimente os recursos dos clusters de Big Data do SQL Server. <br/><br/> Confira [Introdução aos clusters de Big data do SQL Server](deploy-get-started.md).|
+|Versão prévia pública |Antes do CTP 3.2, o cluster de Big Data do SQL Server estava disponível para os usuários pioneiros registrados. Esta versão permite que qualquer pessoa experimente os recursos dos clusters de Big Data do SQL Server. <br/><br/> Consulte [introdução ao [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deploy-get-started.md).|
 |`azdata` |O CTP 3.2 apresenta o `azdata` – um utilitário de linha de comando escrito em Python que permite aos administradores de cluster inicializar e gerenciar o cluster de Big Data por meio de APIs REST. O `azdata` substitui o `mssqlctl`. Confira [Instalar o `azdata`](deploy-install-azdata.md). |
 |PolyBase |Os nomes de coluna da tabela externa agora são usados para consultar fontes de dados de SQL Server, Oracle, Teradata, MongoDB e ODBC. Nas versões CTP anteriores, as colunas na fonte de dados externa eram vinculadas com base apenas na posição ordinal e os nomes especificados na definição EXTERNAL TABLE não eram usados. |
 |Atualização de camadas do HDFS |Introdução da funcionalidade de atualização de camadas do HDFS para que uma montagem existente possa ser atualizada para o instantâneo mais recente dos dados remotos. Confira [Camadas do HDFS](hdfs-tiering.md) |
@@ -65,7 +68,7 @@ As seções a seguir descrevem os problemas conhecidos e as limitações dessa v
 
 As seções a seguir descrevem os novos recursos e problemas conhecidos de clusters de Big Data no SQL Server 2019 CTP 3.1.
 
-### <a name="whats-new"></a>What's New
+### <a name="whats-new"></a>O Que Há de Novo
 
 | Novo recurso ou atualização | Detalhes |
 |:---|:---|
@@ -132,7 +135,7 @@ As seções a seguir descrevem os problemas conhecidos e as limitações dessa v
 
 - Se você estiver criando uma tabela externa para o Oracle que use tipos de dados de caractere, o assistente de virtualização do Azure Data Studio interpretará essas colunas como VARCHAR na definição da tabela externa. Isso causará uma falha na DDL da tabela externa. Modifique o esquema Oracle para usar o tipo NVARCHAR2 ou crie instruções EXTERNAL TABLE manualmente e especifique NVARCHAR em vez de usar o assistente.
 
-#### <a name="application-deployment"></a>Implantação de aplicativo
+#### <a name="application-deployment"></a>Implantação do aplicativo
 
 - Ao chamar um aplicativo R, Python ou MLeap da API RESTful, o tempo limite da chamada é de 5 minutos.
 
@@ -159,7 +162,7 @@ As seções a seguir descrevem os problemas conhecidos e as limitações dessa v
 
 As seções a seguir descrevem os novos recursos e problemas conhecidos de clusters de Big Data no SQL Server 2019 CTP 3.0.
 
-### <a name="whats-new"></a>What's New
+### <a name="whats-new"></a>O Que Há de Novo
 
 | Novo recurso ou atualização | Detalhes |
 |:---|:---|
@@ -236,7 +239,7 @@ As seções a seguir descrevem os problemas conhecidos e as limitações dessa v
 
 - Se você estiver criando uma tabela externa para o Oracle que use tipos de dados de caractere, o assistente de virtualização do Azure Data Studio interpretará essas colunas como VARCHAR na definição da tabela externa. Isso causará uma falha na DDL da tabela externa. Modifique o esquema Oracle para usar o tipo NVARCHAR2 ou crie instruções EXTERNAL TABLE manualmente e especifique NVARCHAR em vez de usar o assistente.
 
-#### <a name="application-deployment"></a>Implantação de aplicativo
+#### <a name="application-deployment"></a>Implantação do aplicativo
 
 - Ao chamar um aplicativo R, Python ou MLeap da API RESTful, o tempo limite da chamada é de 5 minutos.
 
@@ -258,7 +261,7 @@ As seções a seguir descrevem os problemas conhecidos e as limitações dessa v
 
 As seções a seguir descrevem os novos recursos e problemas conhecidos de clusters de Big Data no SQL Server 2019 CTP 2.5.
 
-### <a name="whats-new"></a>What's New
+### <a name="whats-new"></a>O Que Há de Novo
 
 | Novo recurso ou atualização | Detalhes |
 |:---|:---|
@@ -314,7 +317,7 @@ As seções a seguir descrevem os problemas conhecidos e as limitações dessa v
 
 - Se você estiver criando uma tabela externa para o Oracle que use tipos de dados de caractere, o assistente de virtualização do Azure Data Studio interpretará essas colunas como VARCHAR na definição da tabela externa. Isso causará uma falha na DDL da tabela externa. Modifique o esquema Oracle para usar o tipo NVARCHAR2 ou crie instruções EXTERNAL TABLE manualmente e especifique NVARCHAR em vez de usar o assistente.
 
-#### <a name="application-deployment"></a>Implantação de aplicativo
+#### <a name="application-deployment"></a>Implantação do aplicativo
 
 - Ao chamar um aplicativo R, Python ou MLeap da API RESTful, o tempo limite da chamada é de 5 minutos.
 
@@ -346,7 +349,7 @@ As seções a seguir descrevem os problemas conhecidos e as limitações dessa v
 
 As seções a seguir descrevem os novos recursos e problemas conhecidos de clusters de Big Data no SQL Server 2019 CTP 2.4.
 
-### <a name="whats-new"></a>What's New
+### <a name="whats-new"></a>O Que Há de Novo
 
 | Novo recurso ou atualização | Detalhes |
 |:---|:---|
@@ -445,7 +448,7 @@ Um novo cliente Kubernetes do Python (versão 9.0.0) alterou a API de exclusão 
 
 - Se você estiver criando uma tabela externa para o Oracle que use tipos de dados de caractere, o assistente de virtualização do Azure Data Studio interpretará essas colunas como VARCHAR na definição da tabela externa. Isso causará uma falha na DDL da tabela externa. Modifique o esquema Oracle para usar o tipo NVARCHAR2 ou crie instruções EXTERNAL TABLE manualmente e especifique NVARCHAR em vez de usar o assistente.
 
-#### <a name="application-deployment"></a>Implantação de aplicativo
+#### <a name="application-deployment"></a>Implantação do aplicativo
 
 - Ao chamar um aplicativo R, Python ou MLeap da API RESTful, o tempo limite da chamada é de 5 minutos.
 
@@ -477,13 +480,13 @@ Um novo cliente Kubernetes do Python (versão 9.0.0) alterou a API de exclusão 
 
 As seções a seguir descrevem os novos recursos e problemas conhecidos de clusters de Big Data no SQL Server 2019 CTP 2.3.
 
-### <a name="whats-new"></a>What's New
+### <a name="whats-new"></a>O Que Há de Novo
 
 | Novo recurso ou atualização | Detalhes |
 | :---------- | :------ |
-| Enviar trabalhos do Spark em clusters de Big Data no IntelliJ. | [Enviar trabalhos do Spark em clusters de Big Data do SQL Server no IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
-| CLI comum para gerenciamento de cluster e de implantação do aplicativo. | [Como implantar um aplicativo no cluster de Big Data do SQL Server 2019 (versão prévia)](big-data-cluster-create-apps.md) |
-| Extensão do VS Code para implantar aplicativos em um cluster de Big Data. | [Como usar o VS Code para implantar aplicativos em clusters de Big Data do SQL Server](app-deployment-extension.md) |
+| Enviar trabalhos do Spark em clusters de Big Data no IntelliJ. | [Enviar trabalhos do Spark [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
+| CLI comum para gerenciamento de cluster e de implantação do aplicativo. | [Como implantar um aplicativo em[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
+| Extensão do VS Code para implantar aplicativos em um cluster de Big Data. | [Como usar VS Code para implantar aplicativos no[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
 | Alterações no uso de comandos da ferramenta **azdata**. | Para obter mais detalhes, confira os [problemas conhecidos do azdata](#azdatactp23). |
 | Usar o Sparklyr em um cluster de Big Data | [Usar o Sparklyr em clusters de Big Data do SQL Server 2019](sparklyr-from-RStudio.md) |
 | Montar armazenamento compatível com HDFS externo no cluster de Big Data com a disposição em **camadas do HDFS**. | Veja [Camadas do HDFS](hdfs-tiering.md). |
@@ -567,7 +570,7 @@ Se você usar o kubeadm para implantar o Kubernetes em vários computadores, o p
 
 - Se você estiver criando uma tabela externa para o Oracle que use tipos de dados de caractere, o assistente de virtualização do Azure Data Studio interpretará essas colunas como VARCHAR na definição da tabela externa. Isso causará uma falha na DDL da tabela externa. Modifique o esquema Oracle para usar o tipo NVARCHAR2 ou crie instruções EXTERNAL TABLE manualmente e especifique NVARCHAR em vez de usar o assistente.
 
-#### <a name="application-deployment"></a>Implantação de aplicativo
+#### <a name="application-deployment"></a>Implantação do aplicativo
 
 - Ao chamar um aplicativo R, Python ou MLeap da API RESTful, o tempo limite da chamada é de 5 minutos.
 
@@ -676,7 +679,7 @@ As seções a seguir descrevem os novos recursos e problemas conhecidos de clust
 
 ### <a name="known-issues"></a>Problemas conhecidos
 
-As seções a seguir fornecem problemas conhecidos para clusters de Big Data do SQL Server no CTP 2.1.
+As seções a seguir fornecem problemas [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] conhecidos no CTP 2,1.
 
 #### <a name="deployment"></a>Implantação
 
@@ -751,7 +754,7 @@ As seções a seguir descrevem os novos recursos e problemas conhecidos de clust
 
 ### <a name="known-issues"></a>Problemas conhecidos
 
-As seções a seguir fornecem problemas conhecidos para clusters de Big Data do SQL Server no CTP 2.0.
+As seções a seguir fornecem problemas [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] conhecidos no CTP 2,0.
 
 #### <a name="deployment"></a>Implantação
 
@@ -801,4 +804,4 @@ As seções a seguir fornecem problemas conhecidos para clusters de Big Data do 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre os clusters de Big Data do SQL Server, confira [O que são clusters de Big Data do SQL Server 2019?](big-data-cluster-overview.md).
+Para obter mais informações [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]sobre o, consulte [o que são [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

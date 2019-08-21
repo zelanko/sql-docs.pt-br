@@ -5,22 +5,22 @@ description: Saiba como executar uma implantação offline de um cluster de Big 
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd8b3128fc11037a5ade494813611d473c995f8f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 061e3c39f3cbcfd7e15367bbe9b37f8fc0aebb31
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419371"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652363"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Executar uma implantação offline de um cluster de Big Data do SQL Server
 
-Este artigo descreve como executar uma implantação offline de um cluster de Big Data do SQL Server 2019 (versão prévia). Os clusters de Big Data precisam ter acesso a um repositório do Docker do qual será efetuado pull das imagens de contêiner. Uma instalação offline é aquela em que as imagens necessárias são colocadas em um repositório privado do Docker. Em seguida, esse repositório privado é usado como a origem da imagem para uma nova implantação.
+Este artigo descreve como executar uma implantação offline de um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Os clusters de Big Data precisam ter acesso a um repositório do Docker do qual será efetuado pull das imagens de contêiner. Uma instalação offline é aquela em que as imagens necessárias são colocadas em um repositório privado do Docker. Em seguida, esse repositório privado é usado como a origem da imagem para uma nova implantação.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - O Docker Engine 1.8 ou superior em qualquer distribuição do Linux ou do Docker para Mac/Windows com suporte. Para obter mais informações, veja [Install Docker](https://docs.docker.com/engine/installation/) (Instalar o Docker).
 
@@ -171,4 +171,4 @@ A implantação solicita o nome de usuário e a senha do Docker ou você pode es
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre implantações de cluster de Big Data, confira [Como implantar clusters de Big Data do SQL Server no Kubernetes](deployment-guidance.md).
+Para obter mais informações sobre implantações de cluster Big data, consulte [como implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] em kubernetes](deployment-guidance.md).

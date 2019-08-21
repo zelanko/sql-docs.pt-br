@@ -1,28 +1,28 @@
 ---
 title: Ingerir dados com trabalhos do Spark
 titleSuffix: SQL Server big data clusters
-description: Este tutorial demonstra como ingerir dados no pool de dados de um cluster de Big Data do SQL Server 2019 (versão prévia) usando trabalhos do Spark no Azure Data Studio.
+description: Este tutorial demonstra como ingerir dados no pool de dados de um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] usando trabalhos do Spark no Azure Data Studio.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6d0ea6d4fb7a3aea9788c089ad68cb3bf523837f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5325b44512d2dc1522d4bc49478e65ae4c0999e0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957811"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653294"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Ingerir dados em um pool de dados do SQL Server com trabalhos do Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este tutorial demonstra como usar trabalhos do Spark para carregar dados no [pool de dados](concept-data-pool.md) de um cluster de Big Data do SQL Server 2019 (versão prévia). 
+Este tutorial demonstra como usar trabalhos do Spark para carregar dados no [pool de dados](concept-data-pool.md) de um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. 
 
-Neste tutorial, você aprenderá a:
+Neste tutorial, você aprenderá como:
 
 > [!div class="checklist"]
 > * Criar uma tabela externa no pool de dados.
@@ -114,7 +114,7 @@ A próxima etapa é criar um trabalho de streaming do Spark que carregue dados d
    | Diretório de origem para streaming | Esse deve ser um URI completo, como "hdfs:///clickstream_data" |
    | formato de entrada | Pode ser "csv", "parquet" ou "json" |
    | habilitar ponto de verificação | true ou false |
-   | tempo limite | tempo para executar o trabalho em milissegundos antes de sair |
+   | timeout | tempo para executar o trabalho em milissegundos antes de sair |
 
 1. Pressione **Enviar** para enviar o trabalho.
 

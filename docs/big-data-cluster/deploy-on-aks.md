@@ -1,26 +1,26 @@
 ---
 title: Configurar o Serviço de Kubernetes do Azure
 titleSuffix: SQL Server big data clusters
-description: Saiba como configurar o AKS (Serviço de Kubernetes do Azure) para implantações de cluster de Big Data do SQL Server 2019 (versão prévia).
+description: Saiba como configurar o AKs (serviço kubernetes do Azure) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] para implantações.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/10/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1ba5b4b06d31f391733603ce146a7d05e05aebaf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b33ef15bd6a47bcd2a475f608197a1566bb030b0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470813"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652382"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurar o Serviço de Kubernetes do Azure para implantações de cluster de Big Data do SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este artigo descreve como configurar o AKS (Serviço de Kubernetes do Azure) para implantações de cluster de Big Data do SQL Server 2019 (versão prévia).
+Este artigo descreve como configurar o AKs (serviço kubernetes do Azure) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] para implantações.
 
 O AKS simplifica a criação, a configuração e o gerenciamento de um cluster de máquinas virtuais que são pré-configuradas com um cluster do Kubernetes para executar aplicativos em contêineres. Isso permite que você use suas habilidades existentes ou tire proveito de um corpo grande e crescente de experiência da comunidade, para implantar e gerenciar aplicativos baseados em contêiner no Microsoft Azure.
 
@@ -29,7 +29,7 @@ Este artigo descreve as etapas para implantar o Kubernetes no AKS usando a CLI d
 > [!TIP]
 > Você também pode criar o script da implantação do AKS e de um cluster de Big Data em uma única etapa. Para obter mais informações, confira como fazer isso em um [script Python](quickstart-big-data-cluster-deploy.md) ou em um [notebook](deploy-notebooks.md) do Azure Data Studio.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [Implantar as ferramentas de Big Data do SQL Server 2019](deploy-big-data-tools.md):
    - **Kubectl**
@@ -81,7 +81,7 @@ Use a versão mais recente disponível do Kubernetes. A versão mais recente dis
 
 Antes de executar o comando, atualize o script. Substitua `<Azure data center>` pela localização do cluster.
 
-   **Bash**
+   **bash**
 
    ```bash
    az aks get-versions \
@@ -165,4 +165,4 @@ Se você tiver problemas ao criar um Serviço de Kubernetes do Azure com os coma
 
 As etapas neste artigo configuraram um cluster do Kubernetes no AKS. A próxima etapa é implantar um cluster de Big Data do SQL Server 2019 no cluster do Kubernetes do AKS. Para obter mais informações sobre como implantar clusters de Big Data, confira o seguinte artigo:
 
-[Como implantar clusters de Big Data do SQL Server no Kubernetes](deployment-guidance.md)
+[Como implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] o no kubernetes](deployment-guidance.md)

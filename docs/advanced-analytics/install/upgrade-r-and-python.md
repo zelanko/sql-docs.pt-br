@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 948ce20bf32aaa2051c4a805a3ca2f131a7c0c8f
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715211"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634547"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Atualizar componentes de aprendizado de máquina (R e Python) em instâncias de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -274,7 +274,7 @@ Como alternativa, isso é mais trabalho, mas você também pode desinstalar e re
 
 ### <a name="step-3-add-any-third-party-packages"></a>Etapa 3: Adicionar pacotes de terceiros
 
-Você pode ter adicionado outros pacotes de código-fonte aberto ou de terceiros à biblioteca de pacotes. Como a reversão da Associação alterna o local da biblioteca de pacotes padrão, você deve reinstalar os pacotes na biblioteca que o R e o Python estão usando agora. Para obter mais informações, consulte [pacotes padrão](../package-management/default-packages.md), [instalar novos pacotes de R](../r/install-additional-r-packages-on-sql-server.md)e [instalar novos pacotes do python](../python/install-additional-python-packages-on-sql-server.md).
+Você pode ter adicionado outros pacotes de código-fonte aberto ou de terceiros à biblioteca de pacotes. Como a reversão da Associação alterna o local da biblioteca de pacotes padrão, você deve reinstalar os pacotes na biblioteca que o R e o Python estão usando agora. Para obter mais informações, consulte informações e [instalação](../package-management/install-additional-r-packages-on-sql-server.md)do [pacote R](../package-management/r-package-information.md) e informações e [instalação](../package-management/install-additional-python-packages-on-sql-server.md)do [pacote python](../package-management/python-package-information.md) .
 
 ## <a name="sqlbindrexe-command-syntax"></a>Sintaxe do comando sqlbindr. exe
 

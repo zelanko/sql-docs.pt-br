@@ -1,26 +1,26 @@
 ---
 title: Executar um notebook de exemplo | Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: Este tutorial mostra como você pode carregar e executar um notebook de exemplo em um cluster de Big Data do SQL Server 2019 (versão prévia).
+description: Este tutorial mostra como você pode carregar um exemplo de notebook Spark de execução em [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]um.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ab558194a67118719c144ea20f9e97496d2cb478
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 18e182a251e0f93127ffc376648a29c3e2d9cd02
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957737"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653263"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>Tutorial: Executar um notebook de exemplo em um cluster de Big Data do SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este tutorial demonstra como carregar e executar um notebook no Azure Data Studio em um cluster de Big Data do SQL Server 2019 (versão prévia). Isso permite que os cientistas e os engenheiros de dados executem código Python, R ou Scala no cluster.
+Este tutorial demonstra como carregar e executar um bloco de anotações no Azure Data Studio em [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]um. Isso permite que os cientistas e os engenheiros de dados executem código Python, R ou Scala no cluster.
 
 > [!TIP]
 > Se preferir, você poderá baixar e executar um script para os comandos neste tutorial. Para obter instruções, confira os [Exemplos do Spark](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark) no GitHub.
@@ -67,7 +67,7 @@ Você pode executar cada célula do notebook pressionando o botão Reproduzir à
 
 ![Executar célula do notebook](media/tutorial-notebook-spark/run-notebook-cell.png)
 
-Execute cada uma das células no notebook de exemplo sucessivamente. Para obter mais informações sobre como usar notebooks com clusters de Big Data do SQL Server, confira os seguintes recursos:
+Execute cada uma das células no notebook de exemplo sucessivamente. Para obter mais informações sobre como usar blocos [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]de anotações com o, consulte os seguintes recursos:
 
 - [Como usar notebooks na versão prévia do SQL Server 2019](notebooks-guidance.md)
 - [Como gerenciar notebooks no Azure Data Studio](notebooks-how-to-manage.md)

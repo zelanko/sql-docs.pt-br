@@ -1,26 +1,29 @@
 ---
 title: Introdução
 titleSuffix: SQL Server big data clusters
-description: Conheça as etapas e os recursos para implantar os clusters de Big Data do SQL Server 2019 (versão prévia).
+description: Conheça as etapas e os recursos para implantação [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (visualização).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7d6d1765809092184697d0d2d67b532c31606820
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 323394f9590551528ce9e9dfdf1fb97c7d1c2225
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470906"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653398"
 ---
-# <a name="get-started-with-sql-server-big-data-clusters"></a>Introdução aos clusters de Big Data do SQL Server
+# <a name="get-started-with-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Introdução ao[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este artigo fornece uma visão geral de como implantar um [cluster de Big Data do SQL Server 2019 (versão prévia](big-data-cluster-overview.md)). O objetivo é orientá-lo para os conceitos e fornecer uma estrutura para entender os outros artigos de implantação nesta seção. Suas etapas de implantação específicas variam de acordo com suas opções de plataforma para o cliente e o servidor.
+Este artigo fornece uma visão geral de como implantar [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)o. O objetivo é orientá-lo para os conceitos e fornecer uma estrutura para entender os outros artigos de implantação nesta seção. Suas etapas de implantação específicas variam de acordo com suas opções de plataforma para o cliente e o servidor.
+
+> [!TIP]
+> Para obter rapidamente um ambiente com o kubernetes e o cluster Big Data implantados para ajudá-lo a se familiarizar com seus recursos, use um dos scripts de exemplo apontados na [seção scripts](#scripts). Após a implantação, para gerenciar o cluster, use as [ferramentas de cliente](#tools) na seção a seguir.
 
 ## <a id="tools"></a> Ferramentas de cliente
 
@@ -39,9 +42,9 @@ Outras ferramentas são necessárias para cenários diferentes. Cada artigo deve
 
 Os clusters de Big Data são implantados como uma série de contêineres inter-relacionados que são gerenciados no [Kubernetes](https://kubernetes.io/docs/home). Você pode hospedar o Kubernetes de várias maneiras. Mesmo que você já tenha um ambiente Kubernetes existente, examine os requisitos relacionados para clusters de Big Data.
 
-- **AKS (Serviço de Kubernetes do Azure)** : O AKS permite que você implante um cluster do Kubernetes gerenciado no Azure. Você só gerencia e mantém os nós de agente. Com o AKS, você não precisa provisionar seu próprio hardware para o cluster. Também é fácil usar um [script Python](quickstart-big-data-cluster-deploy.md) ou um [notebook de implantação](deploy-notebooks.md) para criar o cluster do AKS e implantar o cluster de Big Data em uma única etapa. Para obter mais informações sobre como configurar o AKS para uma implantação de cluster de Big Data, confira [Configurar o Serviço de Kubernetes do Azure para implantações de cluster de Big Data do SQL Server 2019 (versão prévia)](deploy-on-aks.md).
+- **AKS (Serviço de Kubernetes do Azure)** : O AKS permite que você implante um cluster do Kubernetes gerenciado no Azure. Você só gerencia e mantém os nós de agente. Com o AKS, você não precisa provisionar seu próprio hardware para o cluster. Também é fácil usar um [script Python](quickstart-big-data-cluster-deploy.md) ou um [notebook de implantação](deploy-notebooks.md) para criar o cluster do AKS e implantar o cluster de Big Data em uma única etapa. Para obter mais informações sobre como configurar o AKs para uma implantação de cluster Big data, consulte [Configurar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] o serviço kubernetes do Azure para](deploy-on-aks.md)implantações.
 
-- **Vários computadores**: Você também pode implantar o Kubernetes em vários computadores Linux, que podem ser servidores físicos ou máquinas virtuais. A ferramenta [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) pode ser usada para criar o cluster do Kubernetes. Você pode usar um [script de Bash](deployment-script-single-node-kubeadm.md) para automatizar esse tipo de implantação. Esse método funcionará bem se você já tiver uma infraestrutura existente que deseja usar para o cluster de Big Data. Para obter mais informações sobre o uso de implantações **kubeadm** com clusters de Big Data, confira [Configurar o Kubernetes em vários computadores para implantações de cluster de Big Data do SQL Server 2019 (versão prévia)](deploy-with-kubeadm.md).
+- **Vários computadores**: Você também pode implantar o Kubernetes em vários computadores Linux, que podem ser servidores físicos ou máquinas virtuais. A ferramenta [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) pode ser usada para criar o cluster do Kubernetes. Você pode usar um [script de Bash](deployment-script-single-node-kubeadm.md) para automatizar esse tipo de implantação. Esse método funcionará bem se você já tiver uma infraestrutura existente que deseja usar para o cluster de Big Data. Para obter mais informações sobre como usar implantações do **kubeadm** com clusters Big data, consulte [Configurar o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] kubernetes em vários computadores para](deploy-with-kubeadm.md)implantações.
 
 - **Minikube**: O Minikube permite executar o Kubernetes localmente em um único servidor. É uma boa opção se você estiver experimentando clusters de Big Data ou precisar usá-lo em um cenário de teste ou desenvolvimento. Para obter mais informações sobre o uso do Minikube, confira a [documentação do Minikube](https://kubernetes.io/docs/setup/minikube/). Para obter requisitos específicos para usar o Minikube com clusters de Big Data, confira [Configurar o Minikube para implantações de cluster de Big Data do SQL Server 2019](deploy-on-minikube.md).
 
@@ -55,7 +58,8 @@ Depois de configurar o Kubernetes, você implanta um cluster de Big Data com o c
 
 - Para uma instalação completamente autônoma, você pode passar todas as outras configurações em variáveis de ambiente. Para obter mais informações, confira [implantações autônomas](deployment-guidance.md#unattended).
 
-## <a name="deployment-scripts"></a>Scripts de implantação
+
+## <a id="scripts"></a>Scripts de implantação
 
 Os scripts de implantação podem ajudar a implantar clusters do Kubernetes e de Big Data em uma única etapa. Geralmente, eles também fornecem valores padrão para configurações de cluster de Big Data. Você pode personalizar qualquer script de implantação criando sua própria versão que configura a implantação do cluster de Big Data de forma diferente.
 

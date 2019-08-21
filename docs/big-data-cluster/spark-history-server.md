@@ -1,22 +1,22 @@
 ---
 title: Depurar/diagnosticar aplicativos Spark
 titleSuffix: SQL Server big data clusters
-description: Use o Servidor de Histórico do Spark para depurar e diagnosticar aplicativos Spark em execução em clusters de Big Data do SQL Server 2019.
+description: Use o servidor de histórico do Spark para depurar e diagnosticar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]aplicativos Spark em execução no.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 12/06/2018
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: abf6b2b3383377a0647f873a8c4a1f6aa9508455
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 9df4f83d319c7d37dd438bcc6a787b4939757e47
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028553"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653672"
 ---
-# <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>Depurar e diagnosticar aplicativos Spark em clusters de Big Data do SQL Server Big no Servidor de Histórico do Spark
+# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Depurar e diagnosticar aplicativos Spark [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no servidor de histórico do Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -203,5 +203,5 @@ O Servidor de Histórico do Spark tem os seguintes problemas conhecidos:
 
 ## <a name="next-steps"></a>Próximas etapas
 
-* [Introdução aos clusters de Big Data do SQL Server](https://docs.microsoft.com/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
+* [Introdução ao[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
 * [Definir configurações do Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)

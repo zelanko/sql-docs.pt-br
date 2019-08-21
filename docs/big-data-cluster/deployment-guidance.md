@@ -1,22 +1,22 @@
 ---
 title: Diretrizes de implantação
 titleSuffix: SQL Server big data clusters
-description: Saiba como implantar clusters de Big Data do SQL Server 2019 (versão prévia) no Kubernetes.
+description: Saiba como implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (visualização) em kubernetes.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b7439fdc93f04ad137b0bb65269b9767d8281798
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.openlocfilehash: 1520254a8a7817db612bf5e42706113495a832de
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995830"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652352"
 ---
-# <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Como implantar clusters de Big Data do SQL Server no Kubernetes
+# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Como implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] o no kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -39,7 +39,7 @@ Antes de implantar um cluster de Big Data do SQL Server 2019, primeiro [instale 
 
 ## <a id="prereqs"></a> Pré-requisitos do Kubernetes
 
-Os clusters de Big Data do SQL Server exigem uma versão mínima do Kubernetes de pelo menos v1.10 tanto para o servidor quanto para o cliente (kubectl).
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]exigir uma versão mínima do kubernetes de pelo menos v 1,10 para servidor e cliente (kubectl).
 
 > [!NOTE]
 > Observe que as versões do Kubernetes do cliente e do servidor devem estar dentro da versão secundária +1 ou -1. Para obter mais informações, confira [Notas sobre a versão do Kubernetes e política de SKU de distorção de versão)](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -67,7 +67,7 @@ Execute o comando **kubectl** para exibir a configuração do cluster. Verifique
 kubectl config view
 ```
 
-Depois de configurar o cluster do Kubernetes, você pode prosseguir com a implantação de um novo cluster de Big Data do SQL Server. Se você estiver atualizando de uma versão anterior, confira [Como atualizar clusters de Big Data do SQL Server](deployment-upgrade.md).
+Depois de configurar o cluster do Kubernetes, você pode prosseguir com a implantação de um novo cluster de Big Data do SQL Server. Se você estiver atualizando de uma versão anterior, consulte [como atualizar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-upgrade.md).
 
 ## <a id="deploy"></a> Visão geral da implantação
 
@@ -201,7 +201,7 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> A implantação inteira pode ser muito demorada devido ao tempo necessário para baixar as imagens de contêiner para os componentes do cluster de Big Data. No entanto, não deve demorar várias horas. Se você estiver tendo problemas com sua implantação, confira [Monitoramento e solução de problemas de clusters de Big Data do SQL Server](cluster-troubleshooting-commands.md).
+> A implantação inteira pode ser muito demorada devido ao tempo necessário para baixar as imagens de contêiner para os componentes do cluster de Big Data. No entanto, não deve demorar várias horas. Se você estiver tendo problemas com sua implantação, consulte [monitoramento e solução [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]de problemas ](cluster-troubleshooting-commands.md).
 
 Quando a implantação for concluída, a saída notificará você sobre o sucesso:
 
@@ -314,4 +314,4 @@ Para saber mais sobre a implantação do cluster de Big Data, confira os seguint
 
 - [Definir configurações de implantação para clusters de Big Data](deployment-custom-configuration.md)
 - [Executar uma implantação offline de um cluster de Big Data do SQL Server](deploy-offline.md)
-- [Workshop: Arquitetura de clusters de Big Data do Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Workshop: Arquitetura [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] da Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

@@ -5,24 +5,24 @@ description: Enviar trabalhos do Spark em clusters de Big Data do SQL Server no 
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 02/28/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f17544ed4dd37ff43be97d114abb58f4fbbbe319
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 59946731dc1e76716b6202dd6f8aa93d777986b3
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470695"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653712"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>Enviar trabalhos do Spark em clusters de Big Data do SQL Server no IntelliJ
+# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-intellij"></a>Enviar trabalhos do Spark [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no IntelliJ
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Um dos principais cenários para clusters de Big Data do SQL Server é a capacidade de enviar trabalhos do Spark. O recurso de envio de trabalhos do Spark permite que você envie arquivos Jar ou Py locais com referências a clusters de Big Data do SQL Server. Ele também permite que você execute arquivos Jar ou Py, que já estão localizados no sistema de arquivos HDFS. 
+Um dos principais cenários do é [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] a capacidade de enviar trabalhos do Spark. O recurso de envio de trabalho do Spark permite que você envie um arquivo jar ou py local [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]com referências a. Ele também permite que você execute arquivos Jar ou Py, que já estão localizados no sistema de arquivos HDFS. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Cluster de Big Data do SQL Server.
 - Kit de Desenvolvimento Java para Oracle. É possível instalá-lo do [site da Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
@@ -51,9 +51,9 @@ Um dos principais cenários para clusters de Big Data do SQL Server é a capacid
 
 1. Inicie o IntelliJ IDEA e, em seguida, crie um projeto. Na caixa de diálogo **Novo Projeto**, siga estas etapas: 
 
-   A. Selecione **Azure Spark/HDInsight** > **Projeto do Spark com Amostras (Scala)** .
+   a. Selecione **Azure Spark/HDInsight** > **Projeto do Spark com Amostras (Scala)** .
 
-   B. Na lista **Ferramenta de build**, selecione uma das opções a seguir de acordo com sua necessidade:
+   b. Na lista **Ferramenta de build**, selecione uma das opções a seguir de acordo com sua necessidade:
 
       * **Maven**, para suporte do assistente de criação de projeto do Scala
       * **SBT**, para gerenciar as dependências e compilações para o projeto do Scala
@@ -74,9 +74,9 @@ Um dos principais cenários para clusters de Big Data do SQL Server é a capacid
 
     ![Selecionando o SDK do Spark](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
-   A. Insira um nome e uma localização para o projeto.
+   a. Insira um nome e uma localização para o projeto.
 
-   B. Na lista suspensa **SDK do Projeto**, selecione **Java 1.8** para o cluster do Spark 2.x ou selecione **Java 1.7** para o cluster do Spark 1.x.
+   b. Na lista suspensa **SDK do Projeto**, selecione **Java 1.8** para o cluster do Spark 2.x ou selecione **Java 1.7** para o cluster do Spark 1.x.
 
    c. Na lista suspensa **Versão do Spark**, o assistente de criação de projeto do Scala integra a versão correta do SDK do Spark e do SDK do Scala. Se a versão do cluster do Spark for anterior à 2.0, selecione **Spark 1.x**. Caso contrário, selecione **Spark2.x**. Este exemplo usa o **Spark 2.0.2 (Scala 2.11.8)** .
 
@@ -84,9 +84,9 @@ Um dos principais cenários para clusters de Big Data do SQL Server é a capacid
 
 7. O projeto do Spark cria automaticamente um artefato para você. Para exibir o artefato, execute as seguintes etapas:
 
-   A. No menu **Arquivo**, selecione **Estrutura do Projeto**.
+   a. No menu **Arquivo**, selecione **Estrutura do Projeto**.
 
-   B. Na caixa de diálogo **Estrutura do Projeto**, selecione **Artefatos** para exibir o artefato padrão que é criado. Você também pode criar seu próprio artefato selecionando o sinal de adição ( **+** ).
+   b. Na caixa de diálogo **Estrutura do Projeto**, selecione **Artefatos** para exibir o artefato padrão que é criado. Você também pode criar seu próprio artefato selecionando o sinal de adição ( **+** ).
 
       ![Informações do artefato na caixa de diálogo](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
@@ -195,4 +195,4 @@ Para sua conveniência, você pode ver o resultado do script enviando código ao
    ![Enviar seleção ao console do Spark](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
 
 ## <a name="next-steps"></a>Próximas etapas
-Para obter mais informações sobre os clusters de Big Data do SQL Server e os cenários relacionados, confira [O que são clusters de Big Data do SQL Server 2019](big-data-cluster-overview.md)?
+Para obter mais informações sobre SQL Server Big Data cluster e cenários relacionados, consulte [o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]que são ](big-data-cluster-overview.md)?

@@ -1,20 +1,20 @@
 ---
 title: O que é a instância mestre?
 titleSuffix: SQL Server big data clusters
-description: Este artigo descreve a função de instância mestre do SQL Server em um cluster de Big Data do SQL Server 2019 (versão prévia).
+description: Este artigo descreve a instância mestra de SQL Server em [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]um.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/28/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d62b1fe82698ff8722786b42f534afe83cd6c481
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.openlocfilehash: 42e16066a08c0b30fd8b43eaf481525c4f510b80
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68822698"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652273"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>O que é a instância mestre em um cluster de Big Data do SQL Server?
 
@@ -53,7 +53,7 @@ Como parte de um cluster de Big Data do SQL Server, os serviços de aprendizado 
 
 O SQL Server 2019 facilita o ingresso de Big Data nos dados dimensionais normalmente armazenados no banco de dados empresarial. O valor dos Big Data aumenta muito quando eles não estão apenas nas mãos de partes de uma organização, mas também estão incluídos em relatórios, painéis e aplicativos. Ao mesmo tempo, os cientistas de dados podem continuar usando as ferramentas do ecossistema do Spark/HDFS e ter acesso fácil e em tempo real aos dados na instância mestre do SQL Server e em fontes de dados externas acessíveis _por meio_ da instância mestre do SQL Server.
 
-Com os clusters de Big Data do SQL Server 2019, você pode fazer mais com seus data lakes corporativos. Desenvolvedores e analistas do SQL Server podem:
+Com [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]o, você pode fazer mais com seus lagos de dados corporativos. Desenvolvedores e analistas do SQL Server podem:
 
 * Criar aplicativos que consomem dados de data lakes corporativos.
 * Explorar todos os dados com consultas Transact-SQL.
@@ -67,7 +67,7 @@ Com os clusters de Big Data do SQL Server 2019, você pode fazer mais com seus d
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber mais sobre os clusters de Big Data do SQL Server, confira os seguintes recursos:
+Para saber mais sobre o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consulte os seguintes recursos:
 
-- [O que são os clusters de Big Data do SQL Server 2019?](big-data-cluster-overview.md)
-- [Workshop: Arquitetura de clusters de Big Data do Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [O que [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]são?](big-data-cluster-overview.md)
+- [Workshop: Arquitetura [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] da Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

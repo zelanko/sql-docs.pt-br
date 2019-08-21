@@ -1,28 +1,28 @@
 ---
 title: Ingerir dados em um pool de dados do SQL Server
 titleSuffix: SQL Server big data clusters
-description: Este tutorial demonstra como ingerir dados no pool de dados de um cluster de Big Data do SQL Server 2019 (versão prévia).
+description: Este tutorial demonstra como ingerir dados no pool de dados de um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 178eceaf99d1f8c2b51f7079d0bdd406c2cb5eef
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670528"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653319"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: Ingerir dados em um pool de dados do SQL Server com Transact-SQL
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este tutorial demonstra como usar Transact-SQL para carregar dados no [pool de dados](concept-data-pool.md) de um cluster de Big Data do SQL Server 2019 (versão prévia). Com os clusters de Big Data do SQL Server, os dados de uma variedade de fontes podem ser ingeridos e distribuídos entre as instâncias do pool de dados.
+Este tutorial demonstra como usar o Transact-SQL para carregar dados no [pool de dados](concept-data-pool.md) de um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Com [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]o, os dados de uma variedade de fontes podem ser ingeridos e distribuídos entre as instâncias do pool de dados.
 
-Neste tutorial, você aprenderá a:
+Neste tutorial, você aprenderá como:
 
 > [!div class="checklist"]
 > * Criar uma tabela externa no pool de dados.

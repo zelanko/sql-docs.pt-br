@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 75ef22eb7e06fa1f8d4d2a0d9c754959f1bb1ae4
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 1f6d828a7267ab2b4b1def17f9d1c6bf4a6018dc
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715020"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633613"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Usar gerenciadores de pacotes do R para instalar pacotes R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ Este procedimento usa RGui, mas você pode usar o RTerm ou qualquer outra ferram
 
 ## <a name="install-a-package-using-rgui"></a>Instalar um pacote usando o RGui
 
-1. [Determine o local da biblioteca de instâncias](../package-management/default-packages.md). Navegue até a pasta em que as ferramentas do R estão instaladas. Por exemplo, o caminho padrão para uma instância padrão do SQL Server 2017 é o seguinte:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+1. [Determine o local da biblioteca de instâncias](../package-management/r-package-information.md). Navegue até a pasta em que as ferramentas do R estão instaladas. Por exemplo, o caminho padrão para uma instância padrão do SQL Server 2017 é o seguinte:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
 1. Clique com o botão direito do mouse em RGui. exe e selecione **Executar como administrador**. Se você não tiver as permissões necessárias, entre em contato com o administrador do banco de dados e forneça uma lista dos pacotes necessários.
 

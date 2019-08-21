@@ -5,22 +5,22 @@ description: Este artigo descreve o pool de dados em um cluster de Big Data do S
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f9355508e4d32dd9a6152781fba325ded2fa7425
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: bfd4d9d6ca24599a2297799555f53a83c6601420
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958732"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652262"
 ---
 # <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>O que são pools de dados em um cluster de Big Data do SQL Server?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este artigo descreve a função dos *Pools de dados do SQL Server* em um cluster de Big Data do SQL Server 2019 (versão prévia). As seções a seguir descrevem a arquitetura e a funcionalidade de um pool de dados do SQL.
+Este artigo descreve a função de *pools de dados SQL Server* em um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. As seções a seguir descrevem a arquitetura e a funcionalidade de um pool de dados do SQL.
 
 ## <a name="data-pool-architecture"></a>Arquitetura do pool de dados
 
@@ -34,7 +34,7 @@ Os pools de dados permitem a criação de data marts de expansão, em que dados 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber mais sobre os clusters de Big Data do SQL Server, confira os seguintes recursos:
+Para saber mais sobre o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consulte os seguintes recursos:
 
-- [O que são os clusters de Big Data do SQL Server 2019?](big-data-cluster-overview.md)
-- [Workshop: Arquitetura de clusters de Big Data do Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [O que [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]são?](big-data-cluster-overview.md)
+- [Workshop: Arquitetura [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] da Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

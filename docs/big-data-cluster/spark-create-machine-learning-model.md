@@ -1,22 +1,22 @@
 ---
 title: Criar e exportar modelos de aprendizado de máquina do Spark com MLeap
 titleSuffix: SQL Server big data clusters
-description: Use o PySpark para treinar e criar modelos de aprendizado de máquina com o Spark em clusters de Big Data SQL Server (versão prévia). Exportar com MLeap e, em seguida, pontuar o modelo com Java em SQL Server.
+description: Use o PySpark para treinar e criar modelos de aprendizado de máquina [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] com o Spark ativado (versão prévia). Exportar com MLeap e, em seguida, pontuar o modelo com Java em SQL Server.
 author: RogPodge
 ms.author: roliu
 ms.reviewer: mikeray
-ms.date: 07/23/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 91c9dad3c87b9c43a611293a549f782b85beec5c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: bba570a4ac68cf5a4d1405d4152669ed9ed211a0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893963"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653418"
 ---
-# <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>Criar, exportar e pontuar modelos de aprendizado de máquina do Spark em clusters SQL Server Big Data
+# <a name="create-export-and-score-spark-machine-learning-models-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Criar, exportar e pontuar modelos de aprendizado de máquina do Spark em[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 O exemplo a seguir mostra como criar um modelo com um [ml do Spark](https://spark.apache.org/docs/latest/ml-guide.html), exportar o modelo para [MLeap](http://mleap-docs.combust.ml/)e pontuar o modelo em SQL Server com sua [extensão de linguagem Java](../language-extensions/language-extensions-overview.md). Isso é feito no contexto de um cluster SQL Server Big Data 2019.
 
@@ -68,4 +68,4 @@ Depois de criar o exemplo, você pode usar o Transact-SQL para chamar o aplicati
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre os clusters de Big Data, confira [Como implantar clusters de Big Data do SQL Server no Kubernetes](deployment-guidance.md)
+Para obter mais informações sobre clusters Big data, consulte [como implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no kubernetes](deployment-guidance.md)

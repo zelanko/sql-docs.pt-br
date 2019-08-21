@@ -1,22 +1,22 @@
 ---
 title: Conceitos de segurança
 titleSuffix: SQL Server big data clusters
-description: Este artigo descreve os conceitos de segurança do cluster de Big Data do SQL Server 2019 (versão prévia). Isso inclui a descrição dos pontos de extremidade e da autenticação do cluster.
+description: Este artigo descreve os conceitos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]segurança para o. Isso inclui a descrição dos pontos de extremidade e da autenticação do cluster.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 54ae86785590eb26fb8ac402f3ae8ab6c7f29a98
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4e4441f0cc4f19d4784019408bfc5309a5734285
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958660"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652251"
 ---
-# <a name="security-concepts-for-sql-server-big-data-clusters"></a>Conceitos de segurança para clusters de Big Data do SQL Server
+# <a name="security-concepts-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Conceitos de segurança para[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -60,7 +60,7 @@ Senha do controlador:
  + CONTROLLER_PASSWORD=<senha_do_controlador>
 
 Senha SA mestre do SQL: 
- + MSSQL_SA_PASSWORD=<senha_sa_do_controlador>
+ + MSSQL_SA_PASSWORD=<controller_sa_password>
 
 Senha para acessar o ponto de extremidade do HDFS/Spark:
  + KNOX_PASSWORD=<senha_do_knox>
@@ -82,7 +82,7 @@ A comunicação com serviços não SQL no cluster de Big Data, como do Livy com 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber mais sobre os clusters de Big Data do SQL Server, confira os seguintes recursos:
+Para saber mais sobre o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consulte os seguintes recursos:
 
-- [O que são os clusters de Big Data do SQL Server 2019?](big-data-cluster-overview.md)
-- [Workshop: Arquitetura de clusters de Big Data do Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [O que [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]são?](big-data-cluster-overview.md)
+- [Workshop: Arquitetura [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] da Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

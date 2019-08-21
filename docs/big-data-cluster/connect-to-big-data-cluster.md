@@ -1,28 +1,27 @@
 ---
-title: Conectar-se ao mestre e ao HDFS
-titleSuffix: SQL Server big data clusters
-description: Saiba como se conectar à instância mestre do SQL Server e ao gateway HDFS/Spark para um cluster de Big Data do SQL Server 2019 (versão prévia).
+title: Conectar-se a clusters de Big data mestre e HDFS
+description: Saiba como se conectar à instância mestra do SQL Server e ao gateway HDFS/Spark para um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 05/22/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1f09763b210427c84efe75d693fee302d7048db7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: fb6e1f684a277740c06fbd0a2fdc23dbd77f8e5c
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958641"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652429"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Conectar-se a um cluster de Big Data do SQL Server com o Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este artigo descreve como se conectar a um cluster de Big Data do SQL Server 2019 (versão prévia) do Azure Data Studio.
+Este artigo descreve como se conectar a um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] de Azure Data Studio.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Um [cluster de Big Data do SQL Server 2019](deployment-guidance.md) implantado.
 - [Ferramentas de Big Data do SQL Server 2019](deploy-big-data-tools.md):
@@ -70,4 +69,4 @@ Com a versão de fevereiro de 2019 do Azure Data Studio, a conexão com a instâ
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre os clusters de Big Data do SQL Server 2019, confira [O que são clusters de Big Data do SQL Server 2019?](big-data-cluster-overview.md).
+Para obter mais informações [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sobre o, consulte [o que são [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](big-data-cluster-overview.md).

@@ -1,20 +1,20 @@
 ---
 title: O que é o controlador?
 titleSuffix: SQL Server big data clusters
-description: Este artigo descreve o controlador de um cluster de Big Data do SQL Server 2019 (versão prévia).
+description: Este artigo descreve o controlador de um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e984c3dced4bde713ac98d67c22481e54491cd68
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 643cb2b4e252e1818940bda2be54917c23cefe06
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419541"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652283"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>O que o controlador em um cluster de Big Data do SQL Server?
 
@@ -36,13 +36,13 @@ O serviço de controlador fornece a seguinte funcionalidade fundamental:
 
 ## <a name="deploying-the-controller-service"></a>Implantação do serviço do controlador
 
-O controlador é implantado e hospedado no mesmo namespace do Kubernetes em que o cliente deseja criar um cluster de Big Data. Esse serviço é instalado por um administrador do Kubernetes durante a inicialização do cluster, usando o utilitário de linha de comando **azdata**. Para saber mais, confira [Introdução aos clusters de Big Data do SQL Server](deploy-get-started.md).
+O controlador é implantado e hospedado no mesmo namespace do Kubernetes em que o cliente deseja criar um cluster de Big Data. Esse serviço é instalado por um administrador do Kubernetes durante a inicialização do cluster, usando o utilitário de linha de comando **azdata**. Para obter mais informações, consulte Introdução [ao [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deploy-get-started.md).
 
 O fluxo de trabalho de buildout será disposto sobre o Kubernetes um cluster de Big Data do SQL Server totalmente funcional que inclui todos os componentes descritos no artigo [Visão geral](big-data-cluster-overview.md). O fluxo de trabalho de inicialização cria primeiro o serviço do controlador e, após ele ser implantado, o serviço do controlador coordenará a instalação e a configuração do restante da parte dos serviços referentes a mestre, computação, dados e pools de armazenamento.
 
 ## <a name="managing-the-cluster-through-the-controller-service"></a>Gerenciando o cluster por meio do serviço de controlador
 
-Você pode gerenciar o cluster por meio do serviço de controlador usando os comandos de **azdata**. Se você implantar objetos de Kubernetes adicionais, como pods, no mesmo namespace, eles não serão gerenciados nem monitorados pelo serviço do controlador. Você também pode usar comandos **kubectl** para gerenciar o cluster no nível de Kubernetes. Para saber mais, confira [Monitoramento e solução de problemas de clusters de Big Data do SQL Server](cluster-troubleshooting-commands.md).
+Você pode gerenciar o cluster por meio do serviço de controlador usando os comandos de **azdata**. Se você implantar objetos de Kubernetes adicionais, como pods, no mesmo namespace, eles não serão gerenciados nem monitorados pelo serviço do controlador. Você também pode usar comandos **kubectl** para gerenciar o cluster no nível de Kubernetes. Para obter mais informações, consulte [monitoramento e [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]solução de problemas ](cluster-troubleshooting-commands.md).
 
 O controlador e os objetos de Kubernetes (conjuntos com estado, pods, segredos, etc.) criados para um cluster de Big Data residem em um namespace dedicado do Kubernetes. O serviço de controlador receberá permissão do administrador de cluster do Kubernetes para gerenciar todos os recursos dentro desse namespace.  A política de RBAC para esse cenário é configurada automaticamente como parte da implantação do cluster inicial usando **azdata**.
 
@@ -61,7 +61,7 @@ A autenticação para o ponto de extremidade de serviço do controlador é basea
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber mais sobre os clusters de Big Data do SQL Server, confira os seguintes recursos:
+Para saber mais sobre o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consulte os seguintes recursos:
 
-- [O que são os clusters de Big Data do SQL Server 2019?](big-data-cluster-overview.md)
-- [Workshop: Arquitetura de clusters de Big Data do Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [O que [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]são?](big-data-cluster-overview.md)
+- [Workshop: Arquitetura [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] da Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

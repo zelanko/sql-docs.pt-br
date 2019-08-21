@@ -1,28 +1,28 @@
 ---
 title: Consultar dados do HDFS no pool de armazenamento
 titleSuffix: SQL Server big data clusters
-description: Este tutorial demonstra como consultar dados do HDFS em um cluster de Big Data do SQL Server 2019 (versão prévia). Você cria uma tabela externa sobre os dados no pool de armazenamento e, em seguida, executa uma consulta.
+description: Este tutorial demonstra como consultar dados do HDFS em um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Você cria uma tabela externa sobre os dados no pool de armazenamento e, em seguida, executa uma consulta.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 77e9e7ddcbca9b397ab4f1ca85ff0d6bada93171
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 7ba5721ef461fe327a3309431cc994a5ed377be7
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957703"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652440"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: Consultar o HDFS em um cluster de Big Data do SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este tutorial demonstra como consultar dados do HDFS em um cluster de Big Data do SQL Server 2019 (versão prévia).
+Este tutorial demonstra como consultar dados do HDFS em um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-Neste tutorial, você aprenderá a:
+Neste tutorial, você aprenderá como:
 
 > [!div class="checklist"]
 > * Criar uma tabela externa apontando para os dados do HDFS em um cluster de Big Data.
