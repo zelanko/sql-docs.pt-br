@@ -54,7 +54,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
 ## <a name="remarks"></a>Remarks  
  Todas as chaves criadas por um provedor farão referência ao provedor por meio de seu GUID. O GUID é retido em todas as versões da DLL.  
   
- A DLL que implementa a interface SQLEKM deve ser assinada digitalmente usando qualquer certificado. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verificará a assinatura. Isso inclui sua cadeia de certificados, que deve ter sua raiz instalada no local **	Autoridades de Certificação Raiz Confiáveis** em um sistema Windows. Se a assinatura não for verificada corretamente, a instrução CREATE CRYPTOGRAPHIC PROVIDER falhará. Para obter mais informações sobre certificados e cadeias de certificados, consulte [Certificados e chaves assimétricas do SQL Server](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
+ A DLL que implementa a interface SQLEKM deve ser assinada digitalmente usando qualquer certificado. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verificará a assinatura. Isso inclui sua cadeia de certificados, que deve ter sua raiz instalada no local **Autoridades de Certificação Raiz Confiáveis** em um sistema Windows. Se a assinatura não for verificada corretamente, a instrução CREATE CRYPTOGRAPHIC PROVIDER falhará. Para obter mais informações sobre certificados e cadeias de certificados, consulte [Certificados e chaves assimétricas do SQL Server](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
  Quando uma dll de provedor EKM não implementar todos os métodos necessários, CREATE CRYPTOGRAPHIC PROVIDER poderá retornar o erro 33085:  
   
