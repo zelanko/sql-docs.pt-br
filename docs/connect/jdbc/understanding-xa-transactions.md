@@ -1,7 +1,7 @@
 ---
 title: Noções básicas sobre transações XA | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7caa67e019ce60f955abf60d215b6c049f3dc708
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e7f602107e828ee0bd985345ed5e641d6870558
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004157"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027221"
 ---
-# <a name="understanding-xa-transactions"></a>Compreendendo transações XA
+# <a name="understanding-xa-transactions"></a>Noções básicas sobre transações XA
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -152,7 +152,7 @@ Um valor de tempo limite é definido para cada transação iniciada e a transaç
   
      Significa que todas as transações terão o tempo limite de 30 segundos (valor máximo) se o cliente não especificar nenhum tempo limite. Se o cliente especificar um tempo limite, ele será usado desde que seja inferior a 30 segundos (o valor máximo).  
   
-### <a name="upgrading-sqljdbcxadll"></a>Atualizando o sqljdbc_xa.dll
+### <a name="upgrading-sqljdbc_xadll"></a>Atualizando o sqljdbc_xa.dll
 
 Ao instalar uma nova versão do driver JDBC, você também deve usar o arquivo sqljdbc_xa.dll da nova versão para atualizar sqljdbc_xa.dll no servidor.  
   
@@ -347,6 +347,6 @@ class XidImpl implements Xid {
 
 ```
 
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
 
 [Executando transações com o JDBC Driver](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

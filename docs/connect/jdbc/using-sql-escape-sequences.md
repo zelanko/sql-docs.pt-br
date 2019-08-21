@@ -1,7 +1,7 @@
 ---
-title: Usando sequências de escape do SQL | Microsoft Docs
+title: Como usar sequências de escape do SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8cd32d41c1ebacc13004a0a5130567b7df9a09a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da2ae6b5353448d5281910d94aeef05ee0999c6a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005930"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025890"
 ---
-# <a name="using-sql-escape-sequences"></a>Usando sequências de escape do SQL
+# <a name="using-sql-escape-sequences"></a>Como usar sequências de escape do SQL
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -159,6 +159,6 @@ LIMIT <rows> [OFFSET <row offset>]
 
 A sintaxe de escape tem duas partes: \<*rows*> é obrigatória e especifica o número de linhas a serem retornadas. OFFSET e \<*deslocamento da linha*> são opcionais e especificam o número de linhas a serem ignoradas antes de começar a retornar linhas. O driver JDBC dá suporte apenas à parte obrigatória, transformando a consulta para usar TOP em vez de LIMIT. O SQL Server não d suporte à cláusula LIMIT. **O driver JDBC não dá suporte opcional \<deslocamento da linha> e o driver gerará uma exceção se for usado**.  
   
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
-[Usando instruções com o JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+[Como usar instruções com o JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

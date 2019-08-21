@@ -1,7 +1,7 @@
 ---
 title: Como usar um procedimento armazenado sem parâmetros | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: e9470a6d-a758-4c56-96ec-7b37139e36a7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3dade70a033ddf2a9e20ffc09930a27e26d9a579
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 01f59f44d42af1d0880df48b043080525d9821ee
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916502"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027018"
 ---
-# <a name="using-a-stored-procedure-with-no-parameters"></a>Usando um procedimento armazenado sem parâmetros
+# <a name="using-a-stored-procedure-with-no-parameters"></a>Como usar um procedimento armazenado sem parâmetros
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -57,6 +57,6 @@ public static void executeSprocNoParams(Connection con) throws SQLException {
 }
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
-[Usando instruções com procedimentos armazenados](../../connect/jdbc/using-statements-with-stored-procedures.md)
+[Como usar instruções com procedimentos armazenados](../../connect/jdbc/using-statements-with-stored-procedures.md)

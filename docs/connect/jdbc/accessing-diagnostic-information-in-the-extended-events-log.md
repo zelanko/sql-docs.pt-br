@@ -1,7 +1,7 @@
 ---
 title: Acessando informações de diagnóstico no log de eventos estendidos | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,24 +10,24 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4e43c9e6c284a5a546f7648b72158597921aa922
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1f4dfb22027ca448848d7027232e41359ff1664d
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957481"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028488"
 ---
-# <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Acessar informações de diagnóstico nos logs de eventos estendidos
+# <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Acessando informações de diagnóstico no log de eventos estendidos
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  No [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], o rastreamento ([Operação de rastreamento de driver](../../connect/jdbc/tracing-driver-operation.md)) foi atualizado para facilitar a correlação de eventos do cliente com as informações de diagnóstico, como falhas na conexão, do buffer de anéis de conectividade do servidor e informações de desempenho do aplicativo no log de eventos estendido. Para obter mais informações sobre como ler o log de eventos estendidos, consulte [View Event Session Data](https://msdn.microsoft.com/library/hh710068(SQL.110).aspx).  
+  No [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], o rastreamento ([Rastreamento de operação do driver](../../connect/jdbc/tracing-driver-operation.md)) foi atualizado para facilitar a correlação de eventos do cliente com as informações de diagnóstico, como falhas na conexão, do buffer de anéis de conectividade do servidor e informações de desempenho do aplicativo no log de eventos estendido. Para obter mais informações sobre como ler o log de eventos estendidos, consulte [View Event Session Data](https://msdn.microsoft.com/library/hh710068(SQL.110).aspx).  
   
 ## <a name="details"></a>Detalhes  
  Para operações de conexão, o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] enviará uma ID de conexão do cliente. Se a conexão falhar, você poderá acessar o buffer de anéis de conectividade ([Solução de problemas de conectividade no SQL Server 2008 com o Buffer de Anéis de Conectividade](https://go.microsoft.com/fwlink/?LinkId=207752)) e localizar o campo **ClientConnectionID** e poderá obter informações de diagnóstico sobre a falha de conexão. As IDs de conexão de cliente estarão registradas no buffer de anéis se um erro ocorrer. (Se uma conexão falhar antes de enviar o pacote pré-logon, uma ID conexão do cliente não será gerada.) A ID de conexão de cliente é um GUID de 16 bytes. Você também poderá localizar a ID de conexão do cliente na saída do destino de eventos estendidos se a ação de **client_connection_id** for adicionada a eventos em uma sessão de eventos estendidos. Caso precise de assistência adicional com o diagnóstico do driver do cliente, habilite o rastreamento e reexecute o comando de execução para observar o campo **ClientConnectionID** no rastreamento.  
   
  Você pode obter a ID de conexão do cliente programaticamente usando a [interface ISQLServerConnection](../../connect/jdbc/reference/isqlserverconnection-interface.md). A ID de conexão também estará presente em todas as exceções relacionadas à conexão.  
   
- Quando há um erro de conexão, a ID de conexão do cliente nas informações de rastreamento BID (Diagnóstico Interno) do servidor e no buffer de anéis de conectividade pode ajudar a correlacionar as conexões do cliente às conexões no servidor. Para obter mais informações sobre rastreamentos BID no servidor, confira [Rastreamento de acesso a dados](https://go.microsoft.com/fwlink/?LinkId=125805). Observe que o artigo sobre rastreamento de acesso a dados também traz informações sobre o rastreamento de acesso a dados que não se aplica ao [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]; confira [Operação de rastreamento de driver](../../connect/jdbc/tracing-driver-operation.md) para obter informações sobre como fazer um rastreamento de acesso a dados usando o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
+ Quando há um erro de conexão, a ID de conexão do cliente nas informações de rastreamento BID (Diagnóstico Interno) do servidor e no buffer de anéis de conectividade pode ajudar a correlacionar as conexões do cliente às conexões no servidor. Para obter mais informações sobre rastreamentos BID no servidor, confira [Rastreamento de acesso a dados](https://go.microsoft.com/fwlink/?LinkId=125805). Observe que o artigo sobre rastreamento de acesso a dados também traz informações sobre o rastreamento de acesso a dados que não se aplica ao [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]; confira [Rastreamento de operação do driver](../../connect/jdbc/tracing-driver-operation.md) para obter informações sobre como fazer um rastreamento de acesso a dados usando o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
   
  O JDBC Driver também envia uma ID de atividade específica do thread. A ID da atividade será capturada nas sessões de eventos estendidas se as sessões forem iniciadas com a opção de TRACK_CAUSAILITY habilitada. Para problemas de desempenho com uma conexão ativa, você pode obter a ID de atividade do rastreamento do cliente (campo ActivityID) e localizar a ID de atividade na saída dos eventos estendidos. A ID de atividade nos eventos estendidos é um GUID de 16 bytes (não é o mesmo que o GUID da ID de conexão do cliente) com o acréscimo de um número de sequência de 4 bytes. O número sequencial representa a ordem de uma solicitação de um thread. O ActivityId é enviado para instruções SQL em lotes e solicitações RPC. Para habilitar o envio de ActivityId ao servidor, você precisa especificar primeiro o par de valores chaves a seguir no arquivo Logging.Properties:  
   
@@ -51,7 +51,7 @@ add event rpc_completed (action (client_connection_id))
 add target ring_buffer with (track_causality=on)  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
  [Diagnosticando problemas com o JDBC Driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

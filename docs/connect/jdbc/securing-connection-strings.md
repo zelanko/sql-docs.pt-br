@@ -1,7 +1,7 @@
 ---
 title: Protegendo cadeias de conexão | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 69ce8557-5260-4ea4-81b8-d0c5481f0868
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 05782c2691b3409339554e2154b385b93c17b4d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1483beed275649156ab84c370facc716818fb974
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945781"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027737"
 ---
 # <a name="securing-connection-strings"></a>Protegendo cadeias de conexão
 
@@ -29,6 +29,6 @@ Outra abordagem é armazenar a senha criptografada em um arquivo. Certifique-se 
 
 Se usar informações sobre a cadeia de conexão de uma fonte externa, como um usuário que forneça uma ID de usuário e senha, você deverá validar todas as entradas na fonte para garantir que elas tenham o formato correto e não contenham parâmetros adicionais que afetem a conexão.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Protegendo aplicativos do JDBC Driver](../../connect/jdbc/securing-jdbc-driver-applications.md)

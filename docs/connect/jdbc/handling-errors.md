@@ -1,7 +1,7 @@
 ---
-title: Manipulando erros | Microsoft Docs
+title: Tratando erros | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8fd5b5ef-d939-4b78-b900-5b7b6ddb3eb9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5bc0e483c70033c8a8132a27879c5616e550ec26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6277b3ecf0160078fa47bc79994d31f64519d9b7
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956530"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028035"
 ---
 # <a name="handling-errors"></a>Tratando erros
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ Os métodos a seguir da `SQLServerError` classe podem ser usados para obter deta
   
  [!code[JDBC#HandlingErrors1](../../connect/jdbc/codesnippet/Java/handling-errors_1.java)]  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
  [Diagnosticando problemas com o JDBC Driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

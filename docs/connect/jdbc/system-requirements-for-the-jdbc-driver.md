@@ -1,7 +1,7 @@
 ---
 title: Requisitos de sistema para o JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e5b317b3483d24087df203eb14fdabe7b12f2539
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 5759a1f9936fdb8a6df4de422ae2ff0542dc63a8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893968"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027668"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Requisitos de sistema para o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -199,11 +199,11 @@ O JDBC Driver 6.4 também está disponível no repositório Maven Central e pode
  O driver JDBC foi desenvolvido para funcionar em qualquer sistema operacional que ofereça suporte ao uso de uma JVM (Máquina Virtual Java). Porém, só os sistemas operacionais Sun Solaris, SUSE Linux e Windows foram testados oficialmente.  
   
 ## <a name="supported-languages"></a>Idiomas com suporte  
- O driver JDBC dá suporte a todas as ordenações de coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para saber mais sobre as ordenações com suporte no driver JDBC, confira os [recursos internacionais do JDBC Driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
+ O driver JDBC dá suporte a todas as ordenações de coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para saber mais sobre as ordenações com suporte no JDBC Driver, confira os [Recursos internacionais do JDBC Driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
   
  Para obter mais informações sobre ordenações, consulte "Trabalhando com ordenações" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
  [Visão geral do JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

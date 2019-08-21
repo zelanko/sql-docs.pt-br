@@ -1,7 +1,7 @@
 ---
 title: Noções básicas sobre os tipos de dados do driver JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a78f6049f49c73c728e3de9329cc6b3e533cdc8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8daea8b477be13dd7b267a17ddf5f960868f579
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916607"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027270"
 ---
-# <a name="understanding-the-jdbc-driver-data-types"></a>Entendendo os tipos de dados do JDBC Driver
+# <a name="understanding-the-jdbc-driver-data-types"></a>Noções básicas sobre os tipos de dados do JDBC Driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -31,15 +31,15 @@ Os tópicos nesta seção descrevem como usar os tipos de dados básicos e avan�
   
 | Tópico                                                                                                                                            | Descrição                                                                                                                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Usando tipos de dados básicos](../../connect/jdbc/using-basic-data-types.md)                                                                           | Descreva os tipos de dados básicos do JDBC. Inclui exemplos de como trabalhar com os tipos de dados usando conjuntos de resultados, consultas parametrizadas e procedimentos armazenados.                                                                                                        |
+| [Como usar tipos de dados básicos](../../connect/jdbc/using-basic-data-types.md)                                                                           | Descreva os tipos de dados básicos do JDBC. Inclui exemplos de como trabalhar com os tipos de dados usando conjuntos de resultados, consultas parametrizadas e procedimentos armazenados.                                                                                                        |
 | [Configurando como os valores de java.sql.Time são enviados ao servidor](../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md) | Descreve como o JDBC Driver gera datas.                                                                                                                                                                                                                       |
-| [Usando tipos de dados avançados](../../connect/jdbc/using-advanced-data-types.md)                                                                     | Descreva os tipos de dados avançados do JDBC.                                                                                                                                                                                                                              |
-| [Noções básicas sobre diferenças de tipo de dados](../../connect/jdbc/understanding-data-type-differences.md)                                                 | Descreve diferenças entre os vários tipos de dados do JDBC Driver.                                                                                                                                                                                                    |
-| [Noções básicas sobre conversões de tipo de dados](../../connect/jdbc/understanding-data-type-conversions.md)                                                 | Descreve como a conversão de tipo de dados é tratada ao usar os métodos getter e setter.                                                                                                                                                                                  |
+| [Como usar tipos de dados avançados](../../connect/jdbc/using-advanced-data-types.md)                                                                     | Descreva os tipos de dados avançados do JDBC.                                                                                                                                                                                                                              |
+| [Entendendo diferenças de tipo de dados](../../connect/jdbc/understanding-data-type-differences.md)                                                 | Descreve diferenças entre os vários tipos de dados do JDBC Driver.                                                                                                                                                                                                    |
+| [Entendendo conversões de tipo de dados](../../connect/jdbc/understanding-data-type-conversions.md)                                                 | Descreve como a conversão de tipo de dados é tratada ao usar os métodos getter e setter.                                                                                                                                                                                  |
 | [Suporte ao conjunto de caracteres nacionais](../../connect/jdbc/national-character-set-support.md)                                                           | Descreve o suporte a tipos de conjunto de caracteres nacionais.                                                                                                                                                                                                          |
-| [Dando suporte a dados XML](../../connect/jdbc/supporting-xml-data.md)                                                                                 | Descreve a interface SQLXML. Também descreve como ler e escrever dados XML de e para o banco de dados relacional com o tipo de dados **SQLXML** Java.                                                                                                             |
+| [Suporte a dados XML](../../connect/jdbc/supporting-xml-data.md)                                                                                 | Descreve a interface SQLXML. Também descreve como ler e escrever dados XML de e para o banco de dados relacional com o tipo de dados **SQLXML** Java.                                                                                                             |
 | [Wrappers e interfaces](../../connect/jdbc/wrappers-and-interfaces.md)                                                                         | Aborda as interfaces que têm os métodos e as constantes específicos do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] que permitem a um servidor de aplicativos criar um proxy da classe. Além disso, descreve suportes à interface `java.sql.Wrapper`. |
   
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Visão geral do JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

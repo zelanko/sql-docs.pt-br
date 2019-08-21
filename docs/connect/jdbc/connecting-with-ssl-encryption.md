@@ -1,7 +1,7 @@
 ---
-title: Conectando com criptografia SSL | Microsoft Docs
+title: Conectando-se com criptografia SSL | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 209ced9fbf6d1ceb21ed4e5b6d686dd87eec0de2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5ccbd9db2ae39113ca157651bdc6dc1486307419
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956801"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028152"
 ---
 # <a name="connecting-with-ssl-encryption"></a>Conectando-se com criptografia SSL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -64,8 +64,8 @@ String connectionUrl =
 >  Como alternativa, você pode definir o valor das propriedades de conexão usando os métodos **setter** apropriados fornecidos pela classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
  Se a propriedade **Encrypt** for definida como **true** e a propriedade **TrustServerCertificate** for definida como **false** e se o nome do servidor na cadeia de conexão não corresponder ao nome do servidor no certificado SSL, o seguinte erro será emitido: `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`. A partir da versão 7,2, o driver dá suporte à correspondência de padrão curinga no rótulo da extrema esquerda do nome do servidor no certificado SSL.
-## <a name="see-also"></a>Consulte Também  
- [Usando criptografia SSL](../../connect/jdbc/using-ssl-encryption.md)   
+## <a name="see-also"></a>Confira também  
+ [Como usar a criptografia SSL](../../connect/jdbc/using-ssl-encryption.md)   
  [Protegendo aplicativos do JDBC Driver](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

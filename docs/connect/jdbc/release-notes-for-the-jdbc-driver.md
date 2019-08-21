@@ -1,7 +1,7 @@
 ---
 title: Notas sobre a versão do JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a4ddc58c624e9177e670e8dcf4fc5bf54ef08e57
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 04a179492b151e664dfe31f4fe4e51c5440fcef5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891282"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027794"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Notas sobre a versão do Microsoft JDBC Driver
 
@@ -69,7 +69,7 @@ O Microsoft JDBC Driver 7.4 para SQL Server é agora compatível com o JDK (Java
 | Problemas conhecidos | Detalhes |
 | :----------- | :------ |
 | Ao usar a Autenticação NTLM. | No momento, não é possível habilitar a Proteção Estendida e as conexões criptografadas ao mesmo tempo. |
-| Ao usar o useFmtOnly. | Há alguns problemas com o recurso, causados por deficiências na lógica de análise do SQL. Confira [Como usar o useFmtOnly](../../connect/jdbc/using-usefmtonly.md) para obter mais detalhes e sugestões de solução alternativa. |
+| Ao usar o useFmtOnly. | Há alguns problemas com o recurso, causados por deficiências na lógica de análise do SQL. Confira [Como usar useFmtOnly](../../connect/jdbc/using-usefmtonly.md) para obter mais detalhes e sugestões de solução alternativa. |
 | &nbsp; | &nbsp; |
 
 ## <a name="722"></a>7.2.2
@@ -160,9 +160,9 @@ O Microsoft JDBC Driver 7.0 para SQL Server agora implementa as APIs `beginReque
 
 ### <a name="support-for-sql-data-discovery-and-classification"></a>Suporte para classificação e descoberta de dados SQL
 
-O Microsoft JDBC Driver 7.0 para o SQL Server oferece suporte para a classificação e descoberta de dados SQL com qualquer banco de dados de destino que dê suporte a esse recurso. O driver agora expõe as APIs `SQLServerResultSet.getSensitivityClassification()` para extrair essas informações do `ResultSet` buscado.
+O Microsoft JDBC Driver 7.0 para o SQL Server dá suporte para a descoberta e classificação de dados SQL em qualquer banco de dados de destino que dê suporte a esse recurso. O driver agora expõe as APIs `SQLServerResultSet.getSensitivityClassification()` para extrair essas informações do `ResultSet` buscado.
 
-Para saber mais sobre como usar esse recurso com o JDBC Driver, confira o exemplo em [classificação e descoberta de dados SQL](../../connect/jdbc/data-discovery-classification-sample.md).
+Para saber mais sobre como usar esse recurso com o JDBC Driver, confira o exemplo em [Descoberta e classificação de dados SQL](../../connect/jdbc/data-discovery-classification-sample.md).
 
 ### <a name="added-connection-property-usebulkcopyforbatchinsert"></a>Foi adicionada a propriedade de conexão: useBulkCopyForBatchInsert
 
@@ -239,7 +239,7 @@ O JDBC Driver agora dá suporte aos tipos de dados `sql_variant` a serem usados 
     
   Como solução alternativa, em vez disso, use o método `getString()` ou `getObject()`.
 
-* **Usando um TVP com sql_variant para valores nulos**:
+* **Como usar um TVP com sql_variant para valores nulos**:
   
   Se estiver usando um TVP para preencher uma tabela e enviar um valor NULL ao tipo de coluna `sql_variant`, você vai se deparar com uma exceção. Atualmente não há suporte para a inserção de um valor NULL com o tipo de coluna `sql_variant` em um TVP.
 
@@ -351,7 +351,7 @@ O driver é compatível com as especificações da API Java Database Connectivit
 
 ### <a name="bulk-copy"></a>Cópia em massa
 
-Você pode usar o recurso de cópia em massa para copiar rapidamente grandes quantidades de dados em tabelas ou em exibições nos bancos de dados do SQL Server. Para obter detalhes, confira [Usando uma cópia em massa com o JDBC Driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md).
+Você pode usar o recurso de cópia em massa para copiar rapidamente grandes quantidades de dados em tabelas ou em exibições nos bancos de dados do SQL Server. Para obter detalhes, confira [Como usar uma cópia em massa com o JDBC Driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md).
 
 ### <a name="xa-transaction-rollback-option"></a>Opção de reversão de transação XA
 
@@ -359,7 +359,7 @@ O driver tem novas opções de tempo limite para reversão automática existente
 
 ### <a name="new-kerberos-principal-connection-property"></a>Nova propriedade de conexão principal Kerberos
 
-O driver usa uma nova propriedade de conexão para facilitar a flexibilidade com conexões Kerberos. Para obter detalhes, confira [Usando a autenticação integrada Kerberos para conectar-se ao SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md).
+O driver usa uma nova propriedade de conexão para facilitar a flexibilidade com conexões Kerberos. Para obter detalhes, confira [Como usar a autenticação integrada Kerberos para conectar-se ao SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md).
 
 ## <a name="41"></a>4.1
 

@@ -1,7 +1,7 @@
 ---
-title: Usando Always Encrypted com o JDBC Driver | Microsoft Docs
+title: Como usar Always Encrypted com o JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f19878f73397b9146765fecd879dad07ebb73dc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1f15e490a8d0e803bf0936c07d2e739009e1bf5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916457"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026640"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Como usar o Always Encrypted com o driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ Para criptografar ou descriptografar dados para colunas criptografadas, SQL Serv
 
 O Microsoft JDBC Driver para SQL Server se comunica com um keystore usando um provedor de repositório de chaves mestra de coluna, que é uma instância de uma classe derivada de **SQLServerColumnEncryptionKeyStoreProvider**.
 
-### <a name="using-built-in-column-master-key-store-providers"></a>Usando provedores internos de repositórios de chaves mestras de coluna
+### <a name="using-built-in-column-master-key-store-providers"></a>Como usar provedores internos de repositórios de chaves mestras de coluna
 O Microsoft JDBC Driver para SQL Server vem com os seguintes provedores internos de repositório de chaves mestras de coluna. Alguns desses provedores são previamente registrados com os nomes de provedor específicos (usados para pesquisar o provedor) e alguns exigem credenciais adicionais ou um registro explícito.
 
 | Classe                                                 | Descrição                                        | Nome (de pesquisa) do provedor  | Está previamente registrado? |
@@ -55,7 +55,7 @@ Para os provedores de repositório de chaves previamente registrados, você não
 
 Todos esses provedores de repositório de chaves são descritos mais detalhadamente nas seções a seguir. Você só precisa implementar um provedor de keystore para usar Always Encrypted.
 
-### <a name="using-azure-key-vault-provider"></a>Usando o provedor do Cofre de Chaves do Azure
+### <a name="using-azure-key-vault-provider"></a>Como usar o provedor do Cofre de Chaves do Azure
 O Azure Key Vault é uma opção conveniente para armazenar e gerenciar chaves mestras de coluna do Always Encrypted (especialmente se o seu aplicativo está hospedado no Azure). O Microsoft JDBC Driver para SQL Server inclui um provedor interno, SQLServerColumnEncryptionAzureKeyVaultProvider, para aplicativos que têm chaves armazenadas no Azure Key Vault. O nome desse provedor é AZURE_KEY_VAULT. Para usar o provedor de repositório de Azure Key Vault, um desenvolvedor de aplicativo precisa criar o cofre e as chaves em Azure Key Vault e criar um registro de aplicativo no Azure Active Directory. O aplicativo registrado deve receber as permissões obter, descriptografar, criptografar, desencapsular chave, encapsular chave e verificar nas políticas de acesso definidas para o cofre de chaves criado para uso com Always Encrypted. Para obter mais informações sobre como configurar o cofre de chaves e criar uma chave mestra de coluna, consulte Azure Key Vault passo a [passo](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) e [criando chaves mestras de coluna em Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
 
 Para os exemplos nesta página, se você tiver criado uma chave mestra de coluna com base em Azure Key Vault e uma chave de criptografia de coluna usando SQL Server Management Studio, o script T-SQL para recriá-las poderá ser semelhante a este exemplo com seu próprio **KEY_PATH** específico e **ENCRYPTED_VALUE**:
@@ -105,7 +105,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > Para obter um exemplo de como incluir essas dependências em um projeto Maven, consulte [baixar dependências ADAL4J e akv com o Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
 ### <a name="using-windows-certificate-store-provider"></a>Uso do Provedor do Repositório de Certificados do Windows
-O SQLServerColumnEncryptionCertificateStoreProvider pode ser usado para armazenar chaves mestras de coluna no Repositório de Certificados do Windows. Use o assistente de Always Encrypted SQL Server Management Studio (SSMS) ou outras ferramentas com suporte para criar as definições de chave mestra de coluna e chave de criptografia de coluna no banco de dados. O mesmo assistente pode ser usado para gerar um certificado autoassinado no repositório de certificados do Windows que pode ser usado como uma chave mestra de coluna para os dados Always Encrypted. Para obter mais informações sobre a chave mestra de coluna e a sintaxe T-SQL da chave de criptografia de coluna, consulte [criar chave mestra](../../t-sql/statements/create-column-master-key-transact-sql.md) de coluna e [criar chave de criptografia de coluna](../../t-sql/statements/create-column-encryption-key-transact-sql.md) , respectivamente.
+O SQLServerColumnEncryptionCertificateStoreProvider pode ser usado para armazenar chaves mestras de coluna no Repositório de Certificados do Windows. Use o assistente de Always Encrypted SQL Server Management Studio (SSMS) ou outras ferramentas com suporte para criar as definições de chave mestra de coluna e chave de criptografia de coluna no banco de dados. O mesmo assistente pode ser usado para gerar um certificado autoassinado no repositório de certificados do Windows que pode ser usado como uma chave mestra de coluna para os dados de Always Encrypted. Para obter mais informações sobre a chave mestra de coluna e a sintaxe T-SQL da chave de criptografia de coluna, consulte [criar chave mestra](../../t-sql/statements/create-column-master-key-transact-sql.md) de coluna e [criar chave de criptografia de coluna](../../t-sql/statements/create-column-encryption-key-transact-sql.md) , respectivamente.
 
 O nome do SQLServerColumnEncryptionCertificateStoreProvider é MSSQL_CERTIFICATE_STORE e pode ser consultado pela API getName () do objeto do provedor. Ele é registrado automaticamente pelo driver e pode ser usado sem qualquer alteração no aplicativo.
 
@@ -131,7 +131,7 @@ WITH VALUES
 > [!IMPORTANT]
 > Embora os outros provedores de repositório de chaves neste artigo estejam disponíveis em todas as plataformas com suporte pelo driver, a implementação SQLServerColumnEncryptionCertificateStoreProvider do driver JDBC está disponível somente em sistemas operacionais Windows. Ele tem uma dependência no sqljdbc_auth. dll que está disponível no pacote de driver. Para usar esse provedor, copie o arquivo sqljdbc_auth.dll para um diretório no caminho do sistema Windows no computador em que o driver JDBC está instalado. Como alternativa, você pode definir a propriedade do sistema java.libary.path para especificar o diretório de sqljdbc_auth.dll. Se você estiver executando uma Máquina Virtual Java (JVM) de 32 bits, use o arquivo sqljdbc_auth.dll na pasta x86, mesmo se o sistema operacional for a versão x64. Se estiver executando uma JVM de 64 bits em um processador x64, use o arquivo sqljdbc_auth.dll na pasta x64. Por exemplo, se você estiver usando a JVM de 32 bits e o driver JDBC estiver instalado no diretório padrão, você poderá especificar o local da DLL usando o seguinte argumento de VM (máquina virtual) quando o aplicativo Java for iniciado: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
-### <a name="using-java-key-store-provider"></a>Usando o provedor de repositório de chaves Java
+### <a name="using-java-key-store-provider"></a>Como usar o provedor de repositório de chaves Java
 O driver JDBC vem com uma implementação de provedor de repositório de chaves interno para o Repositório de Chaves Java. Se a propriedade de cadeia de conexão **keyStoreAuthentication** estiver presente na cadeia de conexão e estiver definida como "JavaKeyStorePassword", o driver instanciará e registrará automaticamente o provedor para o repositório de chaves Java. O nome do provedor de repositório de chaves Java é MSSQL_JAVA_KEYSTORE. Esse nome também pode ser consultado usando a API SQLServerColumnEncryptionJavaKeyStoreProvider. getName (). 
 
 Há três propriedades de cadeia de conexão que permitem que um aplicativo cliente especifique as credenciais que o driver precisa para autenticar no repositório de chaves Java. O driver Inicializa o provedor com base nos valores dessas três propriedades na cadeia de conexão.
@@ -239,7 +239,7 @@ keyStoreMap.put(storeProvider.getName(), storeProvider);
 SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 ```
 
-## <a name="using-column-master-key-store-providers-for-programmatic-key-provisioning"></a>Usando provedores de repositórios de chaves mestras de coluna para o provisionamento programático de chaves
+## <a name="using-column-master-key-store-providers-for-programmatic-key-provisioning"></a>Como usar provedores de repositórios de chaves mestras de coluna para o provisionamento programático de chaves
 Ao acessar colunas criptografadas, o Microsoft JDBC Driver for SQL Server encontra de modo transparente e chama o provedor de repositório de chaves mestras de coluna certo para descriptografar as chaves de criptografia de coluna. Normalmente, o código normal do aplicativo não chama diretamente os provedores de repositórios de chaves mestras de coluna. No entanto, você pode criar uma instância e chamar um provedor programaticamente para provisionar e gerenciar chaves de Always Encrypted. Essa etapa pode ser feita para gerar uma chave de criptografia de coluna criptografada e descriptografar uma chave de criptografia de coluna como rotação de chave mestra de coluna, por exemplo. Para obter mais informações, consulte [Overview of Key Management for Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)(Visão geral do gerenciamento de chaves do Sempre Criptografado).
 
 Caso você use um provedor de repositório de chaves personalizado, poderá ser necessário implementar suas próprias ferramentas de gerenciamento. Ao usar as chaves armazenadas no repositório de certificados do Windows ou no Azure Key Vault, você pode usar ferramentas existentes, como o SQL Server Management Studio ou o PowerShell, para gerenciar e provisionar chaves. Ao usar chaves armazenadas no repositório de chaves Java, você precisa provisionar chaves programaticamente. O exemplo a seguir ilustra o uso da classe SQLServerColumnEncryptionJavaKeyStoreProvider para criptografar a chave com uma chave armazenada no repositório de chaves Java.
@@ -543,7 +543,7 @@ com.microsoft.sqlserver.jdbc.SQLServerException: Operand type clash: varchar is 
 
 Para evitar esses tipos de erros, garanta que:
 
-- Always Encrypted é habilitado para as consultas de aplicativo que se destinam a colunas criptografadas (na cadeia de conexão ou para uma consulta específica).
+- Always Encrypted esteja habilitado para as consultas de aplicativo que se destinam a colunas criptografadas (na cadeia de conexão ou para uma consulta específica).
 - Você usa instruções e parâmetros preparados para enviar dados direcionados a colunas criptografadas. O exemplo a seguir mostra uma consulta filtrada incorretamente por um literal/constante em uma coluna criptografada (SSN), em vez de passar o literal para dentro como um parâmetro. Esta consulta falhará:
 
 ```java
@@ -649,6 +649,6 @@ Com SQLServerBulkCopy, você pode copiar dados que já estão criptografados e a
 > [!NOTE]
 > Tenha cuidado ao especificar AllowEncryptedValueModifications, pois isso pode levar à corrupção de banco de dados, porque o Microsoft JDBC Driver for SQL Server não verifica se os dados estão realmente criptografados ou se estão criptografados corretamente usando o mesmo tipo de criptografia, algoritmo e chave que a coluna de destino.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Always Encrypted (mecanismo de banco de dados)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

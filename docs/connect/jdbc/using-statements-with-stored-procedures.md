@@ -1,7 +1,7 @@
 ---
-title: Usando instruções com procedimentos armazenados | Microsoft Docs
+title: Como usar instruções com procedimentos armazenados | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 774e79b6baa3db1c6356768de4b04226ddbc7688
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7fe07352ff1bcda9dd3ff3e77a6b879e592235a6
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003933"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025860"
 ---
-# <a name="using-statements-with-stored-procedures"></a>Usando instruções com procedimentos armazenados
+# <a name="using-statements-with-stored-procedures"></a>Como usar instruções com procedimentos armazenados
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -50,12 +50,12 @@ Os tópicos desta seção descrevem as maneiras de chamar procedimentos armazena
   
 |Tópico|Descrição|  
 |-----------|-----------------|  
-|[Usando um procedimento armazenado sem parâmetros](../../connect/jdbc/using-a-stored-procedure-with-no-parameters.md)|Descreve como usar o driver JDBC para executar procedimentos armazenados que não contêm parâmetros de entrada ou saída.|  
-|[Usando um procedimento armazenado com parâmetros de entrada](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)|Descreve como usar o driver JDBC para executar procedimentos armazenados que contêm parâmetros de entrada.|  
-|[Usando um procedimento armazenado com parâmetros de saída](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)|Descreve como usar o driver JDBC para executar procedimentos armazenados que contêm parâmetros de saída.|  
-|[Usando um procedimento armazenado com um status de retorno](../../connect/jdbc/using-a-stored-procedure-with-a-return-status.md)|Descreve como usar o driver JDBC para executar procedimentos armazenados que contêm valores de status de retorno.|  
-|[Usando um procedimento armazenado com uma contagem de atualização](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)|Descreve como usar o driver JDBC para executar procedimentos armazenados que retornam contagens de atualização.|  
+|[Como usar um procedimento armazenado sem parâmetros](../../connect/jdbc/using-a-stored-procedure-with-no-parameters.md)|Descreve como usar o driver JDBC para executar procedimentos armazenados que não contêm parâmetros de entrada ou saída.|  
+|[Como usar um procedimento armazenado com parâmetros de entrada](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)|Descreve como usar o driver JDBC para executar procedimentos armazenados que contêm parâmetros de entrada.|  
+|[Como usar um procedimento armazenado com parâmetros de saída](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)|Descreve como usar o driver JDBC para executar procedimentos armazenados que contêm parâmetros de saída.|  
+|[Como usar um procedimento armazenado com um status de retorno](../../connect/jdbc/using-a-stored-procedure-with-a-return-status.md)|Descreve como usar o driver JDBC para executar procedimentos armazenados que contêm valores de status de retorno.|  
+|[Como usar um procedimento armazenado com uma contagem de atualização](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)|Descreve como usar o driver JDBC para executar procedimentos armazenados que retornam contagens de atualização.|  
   
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
-[Usando instruções com o JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+[Como usar instruções com o JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

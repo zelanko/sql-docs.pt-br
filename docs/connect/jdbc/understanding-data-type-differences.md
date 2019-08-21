@@ -1,7 +1,7 @@
 ---
-title: Compreendendo as diferenças de tipo de dados | Microsoft Docs
+title: Entendendo diferenças de tipo de dados | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0cec994768fb5c3a49257da0fb310937c79c25b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 906a4abf0768fcad2e5ac31a0ee93345dcc8b30c
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004167"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027377"
 ---
 # <a name="understanding-data-type-differences"></a>Entendendo diferenças de tipo de dados
 
@@ -23,7 +23,7 @@ ms.locfileid: "68004167"
 
 Há várias diferenças entre os tipos de dados da linguagem de programação Java e os tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ajuda a facilitar essas diferenças por meio de vários tipos de conversões.  
 
-## <a name="character-types"></a>Tipos de caractere
+## <a name="character-types"></a>Tipos de caracteres
 
 Os tipos de dados de cadeia de caracteres JDBC são **Char**, **varchar**e **LONGVARCHAR**. O driver JDBC oferece suporte à API do JDBC 4.0. No JDBC 4,0, os tipos de dados de cadeia de caracteres JDBC também podem ser **nchar**, **nvarchar**e **LONGNVARCHAR**. Estes novos tipos de cadeia de caracteres mantêm tipos de caracteres nativos de Java em formato Unicode e remove a necessidade de executar alguma conversão ANSI-para-Unicode ou Unicode-para-ANSI.  
   
@@ -77,6 +77,6 @@ O tipo de **carimbo de data/hora** JDBC é mapeado para os [!INCLUDE[ssNoVersion
 
 O recurso de mapeamento de tipo personalizado do JDBC que usa as interfaces do SQLData para os tipos avançados do JDBC (UDTs, Struct e assim por diante). não é implementado no JDBC Driver.  
   
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Noções básicas sobre os tipos de dados do JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

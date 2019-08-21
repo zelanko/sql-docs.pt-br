@@ -1,7 +1,7 @@
 ---
-title: Operação de rastreamento de driver | Microsoft Docs
+title: Rastreamento de operação do driver | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a8e04fe67605c97e12c688e0b05b8c437b6aa182
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18bfd63a8cf3255a62b6aef5c4c31573c60e76b0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916682"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027588"
 ---
-# <a name="tracing-driver-operation"></a>Operação de rastreamento de driver
+# <a name="tracing-driver-operation"></a>Rastreamento de operação do driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] é compatível com o uso de rastreamento (ou log) para ajudar a resolver problemas com o driver JDBC quando ele é usado em seu aplicativo. Para habilitar o uso de rastreamento, o driver JDBC usa as APIs de log no java.util.logging, que fornece um conjunto de classes para criar objetos Logger e LogRecord.  
@@ -131,7 +131,7 @@ Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");
 logger.setLevel(Level.OFF);  
 ```  
   
-## <a name="enabling-tracing-by-using-the-loggingproperties-file"></a>Habilitando rastreamento usando o arquivo Logging.Properties  
+## <a name="enabling-tracing-by-using-the-loggingproperties-file"></a>Habilitando rastreamento usando o arquivo logging.properties  
  Você também pode habilitar rastreamento usando o arquivo `logging.properties`, que está localizado no diretório `lib` da instalação do JRE (Java Runtime Environment). Este arquivo poderá ser usado para definir os valores padrão para agentes e manipuladores que serão usados quando o rastreamento for habilitado.  
   
  A seguir está um exemplo das configurações que você pode fazer nos arquivos `logging.properties`:  
@@ -158,7 +158,7 @@ com.microsoft.sqlserver.jdbc.level=FINEST
 > [!NOTE]  
 >  Você pode definir as propriedades no arquivo `logging.properties` usando o objeto LogManager que faz parte de java.util.logging.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
  [Diagnosticando problemas com o JDBC Driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

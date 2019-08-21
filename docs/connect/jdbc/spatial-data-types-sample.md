@@ -1,7 +1,7 @@
 ---
 title: Exemplo de tipos de dados espaciais para o driver MSSQL JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a92320dc854a31384df87806bf4eca4615c819fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e0557030bdec7b566a69696a8fd50cb543a7fc1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004401"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027690"
 ---
 # <a name="spatial-data-types-sample"></a>Exemplo de tipos de dados espaciais
 
@@ -95,7 +95,7 @@ public class SpatialDataTypes {
 }
 ```
 
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
 
 [Trabalhando com tipos de dados JDBC](../../connect/jdbc/working-with-data-types-jdbc.md)  
   

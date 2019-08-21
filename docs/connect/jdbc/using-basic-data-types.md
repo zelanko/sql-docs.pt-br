@@ -1,7 +1,7 @@
 ---
-title: Usando tipos de dados básicos | Microsoft Docs
+title: Como usar tipos de dados básicos | Microsoft Docs
 ms.custom: ''
-ms.date: 07/19/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 83bbe2c28e9b353e5a82fa630660756174ad0dab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abbd2aa3c277ad36f419de849b02433f17d27403
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916365"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026510"
 ---
-# <a name="using-basic-data-types"></a>Usando tipos de dados básicos
+# <a name="using-basic-data-types"></a>Como usar tipos de dados básicos
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -96,7 +96,7 @@ Se você precisar atualizar o valor de um campo em uma fonte de dados, use um do
 > [!NOTE]  
 > O driver JDBC não pode atualizar uma coluna do SQL Server com um nome de coluna com mais de 127 caracteres. Se você tentar fazer uma atualização para uma coluna cujo nome tem mais de 127 caracteres, uma exceção será lançada.  
   
-## <a name="updating-data-by-parameterized-query"></a>Atualizando dados através de consulta parametrizada
+## <a name="updating-data-by-parameterized-query"></a>Atualizando dados por consulta parametrizada
 
 Se você tiver que atualizar dados em uma fonte de dados usando uma consulta parametrizada, poderá definir o tipo de dados dos parâmetros usando um dos métodos set\<Type> da classe [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), também conhecida como *métodos setter*. No exemplo a seguir, o método [prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) é usado para pré-compilar a consulta parametrizada e o método [setString](../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md) é usado para definir o valor da cadeia de caracteres do parâmetro antes de o método [executeUpdate](../../connect/jdbc/reference/executeupdate-method.md) ser chamado.  
   
@@ -126,6 +126,6 @@ Se você tiver que recuperar parâmetros de um procedimento armazenado, primeiro
   
 Para obter mais informações sobre como usar o driver JDBC com procedimentos armazenados e parâmetros de saída, consulte [usando um procedimento armazenado com parâmetros de saída](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Noções básicas sobre os tipos de dados do JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

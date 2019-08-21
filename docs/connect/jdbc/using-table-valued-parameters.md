@@ -1,7 +1,7 @@
 ---
-title: Usando parâmetros com valor de tabela | Microsoft Docs
+title: Como usar parâmetros com valor de tabela | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8cd5f00d551c189f583af4232fe31716b51594df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98863afb5a47eddfd311563bd03a1c7c7120b161
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003931"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025714"
 ---
 # <a name="using-table-valued-parameters"></a>Como usar parâmetros com valor de tabela
 
@@ -100,7 +100,7 @@ Há várias limitações para parâmetros com valor de tabela:
 
 - Você pode transmitir objetos grandes em um parâmetro com valor de tabela.  
   
-## <a name="configuring-a-table-valued-parameter"></a>Configuração de um parâmetro com valor de tabela
+## <a name="configuring-a-table-valued-parameter"></a>Configurando um parâmetro com valor de tabela
 
 A partir do Microsoft JDBC Driver 6,0 para SQL Server, há suporte para parâmetros com valor de tabela com uma instrução parametrizada ou um procedimento armazenado com parâmetros. Os parâmetros com valor de tabela podem ser preenchidos a partir de um SQLServerDataTable, de um ResultSet ou de uma implementação fornecida pelo usuário da interface ISQLServerDataRecord. Ao definir um parâmetro com valor de tabela para uma consulta preparada, você deve especificar um nome de tipo que deve corresponder ao nome de um tipo compatível criado anteriormente no servidor.  
   
@@ -312,6 +312,6 @@ Os métodos a seguir foram adicionados a essa classe para dar suporte à passage
 | public void prestructured final (cadeia de caracteres paratemeterName, Cadeia de caracteres tvpName, ResultSet tvpResultSet)             | Popula um parâmetro com valor de tabela passado para um procedimento armazenado com um ResultSet recuperado de outra tabela. paratemeterName é o nome do parâmetro, tvpName é o nome do tipo TVP e tvpResultSet é o objeto de conjunto de resultados de origem.                                                                              |
 | public void prestructured final (cadeia de caracteres paratemeterName, Cadeia de caracteres tvpName, ISQLServerDataRecord tvpDataRecord) | Popula um parâmetro com valor de tabela passado para um procedimento armazenado com um objeto ISQLServerDataRecord. ISQLServerDataRecord é usado para transmitir dados e o usuário decide como usá-lo. paratemeterName é o nome do parâmetro, tvpName é o nome do tipo TVP e tvpDataRecord é um objeto ISQLServerDataRecord. |
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Visão geral do JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

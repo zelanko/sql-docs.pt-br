@@ -1,7 +1,7 @@
 ---
-title: Noções básicas sobre o suporte a SSL | Microsoft Docs
+title: Noções básicas do suporte a SSL | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 32820e38a8292068aa95c505a04292fbac2c69af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5da6c0f567e86a5d9ba979f01cb82ec382834651
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916609"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027301"
 ---
-# <a name="understanding-ssl-support"></a>Compreendendo o suporte a SSL
+# <a name="understanding-ssl-support"></a>Noções básicas do suporte a SSL
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -80,8 +80,8 @@ Durante o handshake SSL, o servidor envia seu certificado de chave pública ao c
   
 - Um nome DNS pode incluir caracteres curinga. Mas o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] não oferece suporte à correspondência de caracteres curinga. Ou seja, abc.com não corresponderá a \*.com, mas \*.com corresponderá a \*.com.  
   
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
-[Usando criptografia SSL](../../connect/jdbc/using-ssl-encryption.md)
+[Como usar a criptografia SSL](../../connect/jdbc/using-ssl-encryption.md)
 
 [Protegendo aplicativos do JDBC Driver](../../connect/jdbc/securing-jdbc-driver-applications.md)  

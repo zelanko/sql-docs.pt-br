@@ -1,7 +1,7 @@
 ---
 title: Programando com SQLXML | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c8d88f6c9febf582aa9aca3d47931ceb72074c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22f225799e704b7a34449bbfc69ef351cc4d4ac1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956171"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027767"
 ---
 # <a name="programming-with-sqlxml"></a>Programando com SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67956171"
   
 -   Para armazenar um objeto SQLXML em uma coluna de tabela de banco de dados do tipo **xml**, use os métodos setSQLXML da classe [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) ou da classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
- O código de exemplo em [Exemplo de tipo de dados SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md) demonstra como executar essas tarefas de API comuns.  
+ O código de exemplo em [Exemplo de tipo de dados SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md) demonstra como executar essas tarefas comuns da API.  
   
 ## <a name="readable-and-writable-sqlxml-objects"></a>Objetos SQLXML que podem ser lidos e escritos  
  A tabela a seguir relaciona os tipos de objetos SQLXML que têm suporte dos métodos de setter, getter e updater fornecidos pela API do JDBC. As colunas da tabela referem-se ao seguinte:  
@@ -96,10 +96,10 @@ ms.locfileid: "67956171"
   
  Os analisadores de XML não podem tratar valores vazios. Porém, o SQL Server permite que os aplicativos recuperem e armazenem valores vazios de e para colunas de banco de dados do tipo de dados XML. Isso significa que, ao analisar os dados XML, se o valor subjacente for vazio, uma exceção será lançada pelo analisador. Para saídas de DOM, o driver JDBC captura essa exceção e lança um erro. Para saídas de SAX e StAX, o erro vem diretamente do analisador.  
   
-## <a name="adaptive-buffering-and-sqlxml-support"></a>Buffer adaptável e suporte a SQLXML  
+## <a name="adaptive-buffering-and-sqlxml-support"></a>Suporte a buffer adaptável e SQLXML  
  Os fluxos binário e de caracteres retornados pelo objeto SQLXML obedecem aos modos de buffer adaptável ou completo. Por outro lado, se os analisadores de XML não forem fluxos, eles não obedecerão às configurações de adaptável ou completo. Para obter mais informações sobre o buffer adaptável, consulte [usando o buffer adaptável](../../connect/jdbc/using-adaptive-buffering.md).  
   
-## <a name="see-also"></a>Consulte Também  
- [Dando suporte a dados XML](../../connect/jdbc/supporting-xml-data.md)  
+## <a name="see-also"></a>Confira também  
+ [Suporte a dados XML](../../connect/jdbc/supporting-xml-data.md)  
   
   

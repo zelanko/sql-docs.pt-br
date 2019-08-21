@@ -1,7 +1,7 @@
 ---
-title: Uso de um procedimento armazenado com um status de retorno | Microsoft Docs
+title: Como usar um procedimento armazenado com um status de retorno | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: eb5654563a0894abd497dfb0053b3e5667bf433d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b5b5425dcc88a3f4a2b5bc24c85ab41beb04bb48
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916509"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027107"
 ---
-# <a name="using-a-stored-procedure-with-a-return-status"></a>Usando um procedimento armazenado com um status de retorno
+# <a name="using-a-stored-procedure-with-a-return-status"></a>Como usar um procedimento armazenado com um status de retorno
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -59,6 +59,6 @@ No exemplo a seguir, uma conexão aberta com o banco de dados de amostra [!INCLU
 
 [!code[JDBC#UsingSprocWithReturnStatus1](../../connect/jdbc/codesnippet/Java/using-a-stored-procedure_1_1.java)]
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
-[Usando instruções com procedimentos armazenados](../../connect/jdbc/using-statements-with-stored-procedures.md)
+[Como usar instruções com procedimentos armazenados](../../connect/jdbc/using-statements-with-stored-procedures.md)

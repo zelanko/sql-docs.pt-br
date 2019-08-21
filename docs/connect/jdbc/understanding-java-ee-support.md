@@ -1,7 +1,7 @@
 ---
 title: Noções básicas sobre o suporte ao Java EE | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 318800db7335a47226e75a4e05a4493c366507f9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3eb2778f11aa83498bdfc47ece599aa07c403fe0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892315"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027260"
 ---
-# <a name="understanding-java-ee-support"></a>Entendendo suporte ao Java EE
+# <a name="understanding-java-ee-support"></a>Noções básicas sobre o suporte ao Java EE
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -41,7 +41,7 @@ Para o JDBC Driver 7.4, o driver está contido no **mssql-jdbc-7.4.1.jre8.jar**,
   
 O nome da classe é usado sempre que você carrega o driver com a classe JDBC DriverManager e sempre que especifica o nome da classe do driver em qualquer configuração de driver. Por exemplo, a configuração de uma fonte de dados em um servidor de aplicativos do Java EE pode exigir que você insira o nome de classe do driver.  
   
-## <a name="data-sources"></a>Fontes de dados
+## <a name="data-sources"></a>Fontes de Dados
 
 O JDBC driver dá suporte a fontes de dados para Java EE/JDBC 3.0. A classe [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) do JDBC Driver é implementada por `com.microsoft.sqlserver.jdbc.SQLServerXADataSource`.  
   
@@ -55,7 +55,7 @@ Você pode fazer conexões de banco de dados usando fontes de dados. As fontes d
 |ConnectionPoolDataSource|`com.microsoft.sqlserver.jdbc.SQLServerConnectionPoolDataSource` <br/> <br/> A fonte de dados para configurar pools de conexão de servidor de aplicativos do JAVA EE. Geralmente usado quando o aplicativo é executado dentro de um servidor de aplicativos do JAVA EE.|  
 |XADataSource|`com.microsoft.sqlserver.jdbc.SQLServerXADataSource` <br/> <br/> A fonte de dados para configurar fontes de dados do JAVA EE XA. Geralmente usado quando o aplicativo é executado dentro de um servidor de aplicativos do JAVA EE e um gerenciador de transações XA.|  
   
-### <a name="data-source-properties"></a>Propriedades de fonte de dados
+### <a name="data-source-properties"></a>Propriedades da fonte de dados
 
 Todas as fontes de dados oferecem suporte à capacidade de definir e obter qualquer propriedade que está associada com o conjunto de propriedades do driver subjacente.  
   
@@ -74,8 +74,8 @@ DataSource ds = (DataSource) ctx.lookup("MyDataSource");
 Connection c = ds.getConnection("user", "pwd");  
 ```
 
-Para saber mais sobre as propriedades de fonte de dados, confira como [definir as propriedades de fonte de dados](../../connect/jdbc/setting-the-data-source-properties.md).  
+Para saber mais sobre as propriedades de fonte de dados, confira [Definindo as propriedades da fonte de dados](../../connect/jdbc/setting-the-data-source-properties.md).  
   
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Visão geral do JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

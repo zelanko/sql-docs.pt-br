@@ -1,7 +1,7 @@
 ---
 title: Tipos definidos pelo usuário | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 19a71b27-b788-43a3-a76d-fe3001a6f016
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ae4ada0ee18b9066df27a130a8f68405b760159d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ed890ee562d3fcc2221877b23ee09bbf9a8ccf9
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004093"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027144"
 ---
 # <a name="user-defined-types"></a>Tipos definidos pelo usuário
 
@@ -25,6 +25,6 @@ Os UDTs (tipos definidos pelo usuário) foram introduzidos no [!INCLUDE[ssVersio
 
 Não há alteração de comportamento para UDTs inferiores ou iguais a 8.000 bytes, mas são suportados UDTs maiores que informam seu tamanho como "ilimitado".
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Noções básicas sobre os tipos de dados do JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

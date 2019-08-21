@@ -1,7 +1,7 @@
 ---
 title: Noções básicas sobre tipos de cursor | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: dbd7e3622df44d6b696b56745495b684d6100eb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e5ea30d2280ffea4c2ccf09d1f884a03751ed843
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004189"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027495"
 ---
-# <a name="understanding-cursor-types"></a>Compreendendo os tipos de cursor
+# <a name="understanding-cursor-types"></a>Noções básicas sobre tipos de cursor
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   As operações em um ato de banco de dados relacional em um conjunto completo de linhas. O conjunto de linhas retornado por uma instrução SELECT consiste em todas as linhas que satisfazem as condições na cláusula WHERE da instrução. Este conjunto completo de linhas retornado pela instrução é conhecido como conjunto de resultados. Nem sempre os aplicativos podem trabalhar efetivamente com o conjunto de resultados inteiro como uma unidade. Esses aplicativos precisam de um mecanismo para trabalhar com uma linha ou um bloco pequeno de linhas de cada vez. Os cursores são uma extensão dos conjuntos de resultados que proveem esse mecanismo.  
@@ -76,7 +76,7 @@ ms.locfileid: "68004189"
  Para cursores dinâmicos, as linhas atualizadas reterão sua posição dentro do buffer de busca até que a ação saia da janela definida pelo buffer de busca. Linhas atualizadas podem reaparecer subsequentemente em posições diferentes dentro do conjunto de resultados ou podem desaparecer completamente. Os aplicativos que precisam evitar inconsistências transitórias no conjunto de resultados devem usar um tamanho de busca igual a 1 (o padrão é 8 linhas com simultaneidade de CONCUR_SS_SCROLL_LOCKS e 128 linhas com outras simultaneidades).  
   
 ## <a name="cursor-conversion"></a>Conversão de cursores  
- Às vezes, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode escolher implementar um tipo de cursor diferente do solicitado, circunstância conhecida como conversão implícita de cursor (ou degradação de cursor). Para saber mais sobre a conversão implícita de cursor, consulte o tópico "Usando conversões de cursor implícitas" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Às vezes, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode escolher implementar um tipo de cursor diferente do solicitado, circunstância conhecida como conversão implícita de cursor (ou degradação de cursor). Para saber mais sobre a conversão implícita de cursor, consulte o tópico "Como usar conversões de cursor implícitas" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Com [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]o, quando você atualiza os dados por meio do conjunto de resultados ResultSet. TYPE_SCROLL_SENSITIVE e ResultSet. CONCUR_UPDATABLE, uma exceção é lançada com uma mensagem "o cursor é somente leitura". Essa exceção ocorre porque o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] fez uma conversão implícita de cursor para esse conjunto de resultados e não retornou o cursor atualizável que foi solicitado.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "68004189"
 >   
 >  O SQL Server restringe os cursores de servidor a um único conjunto de resultados. Se um procedimento em lote ou armazenado contiver várias instruções, um cursor de cliente somente encaminhamento e somente leitura deverá ser usado.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
  [Gerenciando conjuntos de resultados com o JDBC Driver](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   

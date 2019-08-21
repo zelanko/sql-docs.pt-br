@@ -1,7 +1,7 @@
 ---
 title: Noções básicas sobre o bloqueio de linha | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3a2d4faf6f66942cb8f1053bd7323a77795229d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcd18baf401378605abf0d53e203d0a3745ee887
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916618"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027335"
 ---
-# <a name="understanding-row-locking"></a>Entendendo bloqueio de linha
+# <a name="understanding-row-locking"></a>Noções básicas sobre o bloqueio de linha
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -31,6 +31,6 @@ O bloqueio é usado para garantir a integridade transacional e a consistência d
 > [!NOTE]  
 > Para obter mais informações sobre bloqueio de linha no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja "Bloqueando no [!INCLUDE[ssDE](../../includes/ssde_md.md)]" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Gerenciando conjuntos de resultados com o JDBC Driver](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)

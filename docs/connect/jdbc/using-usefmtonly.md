@@ -1,7 +1,7 @@
 ---
 title: Recuperando ParameterMetaData por meio de useFmtOnly | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: ''
 author: rene-ye
 ms.author: v-reye
 manager: kenvh
-ms.openlocfilehash: 29ee2c5c22baf77b6994a440f1d9d442ba2b812a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 6877a6421622ab52a92b89502c68f47c4c315d93
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894088"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025500"
 ---
 # <a name="retrieving-parametermetadata-via-usefmtonly"></a>Recuperando ParameterMetaData via useFmtOnly
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -73,7 +73,7 @@ try (Connection c = ds.getConnection()) {
 > [!NOTE]  
 >  O driver priorizará a propriedade de nível de instrução sobre a propriedade de nível de conexão.
 
-## <a name="using-the-feature"></a>Usando o recurso
+## <a name="using-the-feature"></a>Como usar o recurso
   Uma vez habilitado, o driver começará internamente a usar o novo recurso `sp_describe_undeclared_parameters` em vez de ao consultar os metadados do parâmetro. Não há nenhuma ação adicional necessária do usuário final.
 ```java
 final String sql = "INSERT INTO #Bar VALUES (?)";
@@ -95,7 +95,7 @@ try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
 ## <a name="known-issues"></a>Problemas conhecidos
   Atualmente, há alguns problemas com o recurso, causados por deficiências na lógica de análise do SQL. Esses problemas podem ser abordados em uma atualização futura do recurso e documentados abaixo, juntamente com sugestões de solução alternativa.
   
-A. Usando um alias ' encaminhar declarado '
+A. Como usar um alias ' encaminhar declarado '
 ```sql
 CREATE TABLE Foo(c1 int)
 
@@ -139,6 +139,6 @@ UPDATE Foo SET c1 = (SELECT c1 FROM Foo HAVING (HASH JOIN)) WHERE c1 = ?;
 ```
 
 ## <a name="see-also"></a>Confira também  
- [Configurando as propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md)  
+ [Configuração das propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md)  
   
   

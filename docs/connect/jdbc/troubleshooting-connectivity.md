@@ -1,7 +1,7 @@
 ---
 title: Solução de problemas de conectividade | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7bfb8eee85e9eede4dcf3e47ad4ecbe13a08d2ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6a64589b44de50328aa3384a51e29e0c2cc9a6e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004237"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027625"
 ---
-# <a name="troubleshooting-connectivity"></a>Solucionando problemas de conectividade
+# <a name="troubleshooting-connectivity"></a>Solução de problemas de conectividade
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] exige que o TCP/IP esteja instalado e em execução para se comunicar com o banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager para verificar quais protocolos de biblioteca de rede estão instalados.  
@@ -42,7 +42,7 @@ ms.locfileid: "68004237"
   
 -   Quando você usa autenticação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o JDBC Driver exige que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja instalado com autenticação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que não é o padrão. Verifique se esta opção estará incluída quando você instalar ou configurar sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
  [Diagnosticando problemas com o JDBC Driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
  [Conectando ao SQL Server com o JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   

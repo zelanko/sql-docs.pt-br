@@ -1,7 +1,7 @@
 ---
 title: Interface SQLXML | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f235525e7a633bc0c49d39f8bec6bf4a79c0885d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 72cccce89d5e30a92f38b956c8b7996949d3bb46
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006026"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027696"
 ---
 # <a name="sqlxml-interface"></a>Interface SQLXML
 
@@ -49,6 +49,6 @@ O objeto SQLXML não é legível nem gravável quando o aplicativo chama qualque
   
 O objeto SQLXML torna-se gravável ou legível quando o aplicativo chama qualquer um dos seguintes métodos setter: setResult, setCharacterStream, setBinaryStream e SetString.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
 
-[Dando suporte a dados XML](../../connect/jdbc/supporting-xml-data.md)  
+[Suporte a dados XML](../../connect/jdbc/supporting-xml-data.md)  

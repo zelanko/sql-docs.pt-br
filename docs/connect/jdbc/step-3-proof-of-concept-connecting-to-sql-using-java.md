@@ -1,7 +1,7 @@
 ---
 title: 'Etapa 3: Prova de conceito da conexão com o SQL usando o Java | Microsoft Docs'
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a801afabe78625f7914d5fc5accfb6a97084c183
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0def25f7fc19344c3548353bbd15ffa27e65caa
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004290"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027515"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Etapa 3: Prova de conceito da conexão com o SQL usando o Java
   
 Este exemplo deve ser considerado apenas uma prova de conceito. O código de exemplo é simplificado para fins de clareza e não necessariamente representa as práticas recomendadas recomendadas pela Microsoft.  
   
-## <a name="step-1--connect"></a>Etapa 1: conectar-se  
+## <a name="step-1-connect"></a>Etapa 1: conectar-se  
   
 Use a classe Connection para se conectar ao banco de dados SQL.   
   

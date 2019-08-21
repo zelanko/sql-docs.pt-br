@@ -1,7 +1,7 @@
 ---
 title: Trabalhando com dados grandes | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b685160f7d6a2c5c413425fe8d150214d3dd9897
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aab60ed1db5d7749c4edbc52fcad4bebddf93d52
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003842"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025459"
 ---
 # <a name="working-with-large-data"></a>Trabalhando com dados grandes
 
@@ -33,10 +33,10 @@ O valor **adaptável** é o modo de buffer padrão, e o driver JDBC armazena em 
   
 | Tópico                                                                                                                      | Descrição                                                              |
 | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [Lendo exemplo de dados grande](../../connect/jdbc/reading-large-data-sample.md)                                               | Descreve como usar uma instrução SQL para recuperar dados de valor grande.       |
-| [Exemplo de leitura de dados grandes com procedimentos armazenados](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) | Descreve como recuperar um valor grande do parâmetro OUT do CallableStatement. |
-| [Atualizando exemplo de dados grande](../../connect/jdbc/updating-large-data-sample.md)                                             | Descreve como atualizar dados de valor grande em um banco de dados.                |
+| [Lendo exemplo de dados grandes](../../connect/jdbc/reading-large-data-sample.md)                                               | Descreve como usar uma instrução SQL para recuperar dados de valor grande.       |
+| [Lendo exemplo de dados grandes com procedimentos armazenados](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) | Descreve como recuperar um valor grande do parâmetro OUT do CallableStatement. |
+| [Atualizando o exemplo de dados grandes](../../connect/jdbc/updating-large-data-sample.md)                                             | Descreve como atualizar dados de valor grande em um banco de dados.                |
   
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Aplicativos de exemplo do JDBC Driver](../../connect/jdbc/sample-jdbc-driver-applications.md)  

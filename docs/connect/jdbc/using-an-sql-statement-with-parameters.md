@@ -1,7 +1,7 @@
 ---
-title: Usando uma instrução SQL com parâmetros | Microsoft Docs
+title: Como usar uma instrução SQL com parâmetros | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 3202b88f-ce13-44dd-982c-c6a3b0260378
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6716f670c42172f1721968124d7113e8f1936ddc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f7b8b3f8b387345d91451c726b7f74a5685913f6
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916373"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026656"
 ---
-# <a name="using-an-sql-statement-with-parameters"></a>Usando uma instrução SQL com parâmetros
+# <a name="using-an-sql-statement-with-parameters"></a>Como usar uma instrução SQL com parâmetros
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -31,6 +31,6 @@ No exemplo a seguir, uma conexão aberta com o banco de dados de amostra [!INCLU
 
 [!code[JDBC#UsingSQLWithParams1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-w_1_1.java)]
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
-[Usando instruções com SQL](../../connect/jdbc/using-statements-with-sql.md)
+[Como usar instruções com SQL](../../connect/jdbc/using-statements-with-sql.md)

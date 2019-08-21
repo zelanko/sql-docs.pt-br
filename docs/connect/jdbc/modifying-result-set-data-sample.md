@@ -1,7 +1,7 @@
 ---
 title: Modificando exemplo de dados de conjunto de resultados | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: b5ae54dc-2a79-4664-bb21-cacdb7d745e1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b253118c8f61a35774a024be3e17704de946d5d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 51e13941945a1be2d3ad1f02ce61fda98696f275
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956293"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027964"
 ---
-# <a name="modifying-result-set-data-sample"></a>Exemplo de modificação de dados do conjunto de resultados
+# <a name="modifying-result-set-data-sample"></a>Modificando exemplo de dados de conjunto de resultados
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -110,6 +110,6 @@ public class UpdateResultSet {
 }
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Trabalhando com conjuntos de resultados](../../connect/jdbc/working-with-result-sets.md)

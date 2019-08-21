@@ -1,7 +1,7 @@
 ---
-title: Usando tipos de dados avançados | Microsoft Docs
+title: Como usar tipos de dados avançados | Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5faf330b80f0d8ece7ee4482e881de9c7dd8ead9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a50bc3e4fae8fe45004374d3dd019a0f65fe544f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004068"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027015"
 ---
-# <a name="using-advanced-data-types"></a>Usando tipos de dados avançados
+# <a name="using-advanced-data-types"></a>Como usar tipos de dados avançados
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -142,13 +142,13 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
 
 Adicionalmente, você pode fazer todo o trabalho no servidor e só passar parâmetros para uma instrução UPDATE preparada.  
 
-Para obter mais informações sobre tipos de valor grande, consulte "Usando tipos de valor grande" nos Manuais Online do SQL Server.  
+Para obter mais informações sobre tipos de valor grande, consulte "Como usar tipos de valor grande" nos Manuais Online do SQL Server.  
 
 ## <a name="xml-data-type"></a>Tipo de dados XML
 
 O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um tipo de dados **xml** que permite armazenar fragmentos e documentos XML em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O tipo de dados **xml** é interno no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e tem algumas semelhanças com outros tipos internos, como **int** e **varchar**. Assim como ocorre com outros tipos internos, você pode usar o tipo de dados **xml** como um tipo de coluna ao criar uma tabela; como um tipo de variável, de parâmetro ou de retorno de função; ou em funções CAST e CONVERT do [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-No driver JDBC, o tipo de dados **xml** pode ser mapeado como um objeto de Cadeia de Caracteres, matriz de bytes, fluxo, CLOB, BLOB ou SQLXML. Cadeia de caracteres é o padrão. A partir do JDBC Driver versão 2.0, o driver JDBC dá suporte à API do JDBC 4.0, que apresenta a interface SQLXML. A interface SQLXML define métodos para interagir com os dados XML e manipulá-los. O tipo de dados **SQLXML** é mapeado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para o tipo de dados **XML** . Para obter mais informações sobre como ler e escrever dados XML bidirecionalmente no banco de dados relacional com o tipo de dados Java **SQLXML**, confira [Dando suporte a dados XML](../../connect/jdbc/supporting-xml-data.md).  
+No driver JDBC, o tipo de dados **xml** pode ser mapeado como um objeto de Cadeia de Caracteres, matriz de bytes, fluxo, CLOB, BLOB ou SQLXML. Cadeia de caracteres é o padrão. A partir do JDBC Driver versão 2.0, o driver JDBC dá suporte à API do JDBC 4.0, que apresenta a interface SQLXML. A interface SQLXML define métodos para interagir com os dados XML e manipulá-los. O tipo de dados **SQLXML** é mapeado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para o tipo de dados **XML** . Para obter mais informações sobre como ler e escrever dados XML bidirecionalmente no banco de dados relacional com o tipo de dados Java **SQLXML**, confira [Suporte a dados XML](../../connect/jdbc/supporting-xml-data.md).  
   
 A implementação do tipo de dados **xml** no driver JDBC fornece suporte para o seguinte:  
   
@@ -168,9 +168,9 @@ A introdução de UDTs (tipos definidos pelo usuário) no [!INCLUDE[ssVersion200
   
 No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um UDT pode ser usado como a definição da coluna de uma tabela, como uma variável em um lote do [!INCLUDE[tsql](../../includes/tsql-md.md)] ou como um argumento de uma função ou procedimento armazenado do [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-Para obter mais informações sobre tipos de dados definidos pelo usuário, confira "Usando e modificando instâncias de tipos definidos pelo usuário" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Para obter mais informações sobre tipos de dados definidos pelo usuário, confira "Como usar e modificando instâncias de tipos definidos pelo usuário" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="sqlvariant-data-type"></a>Tipo de dados Sql_variant
+## <a name="sql_variant-data-type"></a>Tipo de dados Sql_variant
 
 Para obter informações sobre o tipo de dados sql_variant, consulte [usando o tipo de dados sql_variant](../../connect/jdbc/using-sql-variant-datatype.md).  
 
@@ -178,6 +178,6 @@ Para obter informações sobre o tipo de dados sql_variant, consulte [usando o t
 
 Para obter informações sobre os tipos de dados espaciais, consulte [usando](../../connect/jdbc/use-spatial-datatypes.md)tipos de dado espaciais.  
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Noções básicas sobre os tipos de dados do JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

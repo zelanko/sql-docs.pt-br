@@ -1,7 +1,7 @@
 ---
 title: Criando a URL de conexão | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8d26ab3b32f9830127c47b319cc0feddd532f1af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957371"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028448"
 ---
 # <a name="building-the-connection-url"></a>Construindo a URL de conexão
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -83,7 +83,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `jdbc:sqlserver://localhost;instanceName=instance1;integratedSecurity=true;<more properties as required>;`  
   
-## <a name="escaping-values-in-the-connection-url"></a>Escapando valores na URL de conexão  
+## <a name="escaping-values-in-the-connection-url"></a>Valores de escape na URL de conexão  
  Pode ser necessário escapar certas partes dos valores da URL de conexão devido à inclusão de caracteres especiais como espaços, ponto-e-vírgulas e aspas. O driver JDBC dará suporte ao escape desses caracteres se eles estiverem entre chaves. Por exemplo, {;} escapa um ponto-e-vírgula.  
   
  Os valores escapados podem conter caracteres especiais (principalmente '=', ';', '[]' e espaço), mas não podem conter chaves. Convém adicionar os valores que devem ser escapados e contêm chaves a uma coleção de propriedades.  
@@ -107,7 +107,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   
-## <a name="connecting-with-ipv6-addresses"></a>Conectando com endereços IPv6  
+## <a name="connecting-with-ipv6-addresses"></a>Conectando a endereços IPv6  
  O driver JDBC oferece suporte ao uso de endereços IPv6 com a coleção de propriedades de conexão e com a propriedade de cadeia de conexão serverName. Não há suporte para o valor inicial de serverName, como jdbc:*sqlserver*://*serverName* em endereços IPv6 em cadeias de conexão. O uso de um nome para *serverName* em vez de um endereço IPv6 bruto funcionará em todos os casos na conexão. Os exemplos a seguir fornecem mais informações.  
   
  **Para usar a propriedade serverName**  
@@ -122,7 +122,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `Connection con = DriverManager.getConnection("jdbc:sqlserver://;integratedSecurity=true;", pro);`  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
  [Conectando ao SQL Server com o JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

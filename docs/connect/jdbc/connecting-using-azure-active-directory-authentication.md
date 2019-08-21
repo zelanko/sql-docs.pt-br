@@ -1,7 +1,7 @@
 ---
-title: Conectando-se usando a Autenticação do Azure Active Directory | Microsoft Docs
+title: Conectando-se usando a autenticação do Azure Active Directory | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2019
+ms.date: 08/12/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a194338a41e64e18076ad37a4f895180a7d9e448
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b596936010fcdce4eb5c0701c5f0c6631cd9687e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956815"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028117"
 ---
-# <a name="connecting-using-azure-active-directory-authentication"></a>Conectando-se usando a Autenticação do Azure Active Directory
+# <a name="connecting-using-azure-active-directory-authentication"></a>Conectando-se usando a autenticação do Azure Active Directory
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -175,7 +175,7 @@ O JDK é `kinit`fornecido com o, que pode ser usado para obter um TGT de centro 
 #### <a name="linux-and-mac"></a>Linux e Mac
 
 ##### <a name="requirements"></a>Requisitos
-Acesso a um computador ingressado no domínio do Windows para consultar seu controlador de domínio Kerberos.
+Acesso a um computador ingressado no domínio do Windows para consultar o controlador de domínio do Kerberos.
 
 ##### <a name="step-1-find-kerberos-kdc"></a>Etapa 1: localizar o KDC Kerberos
 - **Executar em**: linha de comando do Windows
@@ -191,7 +191,7 @@ Acesso a um computador ingressado no domínio do Windows para consultar seu cont
 
 ##### <a name="step-2-configuring-kdc-in-krb5conf"></a>Etapa 2: Configurando o KDC em krb5. conf
 - **Executar em**: Linux/Mac
-- **Ação**: Edite o/etc/krb5.conf em um editor de sua escolha. Configurar as seguintes chaves
+- **Ação**: Edite o/etc/krb5.conf em um editor de sua escolha. Configure as seguintes chaves
   ```
   [libdefaults]
     default_realm = DOMAIN.COMPANY.COM
@@ -201,12 +201,12 @@ Acesso a um computador ingressado no domínio do Windows para consultar seu cont
      kdc = co1-red-dc-28.domain.company.com
   }
   ```
-  Em seguida, salve o arquivo krb5. conf e saia
+  Em seguida, salve o arquivo krb5.conf e saia
 
 > [!NOTE]
->  O domínio deve estar em todas as MAIÚSCULAs.
+>  O domínio precisa estar em MAIÚSCULAS.
 
-##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>Etapa 3: testando a recuperação do tíquete de concessão de tíquete
+##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>Etapa 3: teste a recuperação do tíquete de concessão de tíquete
 - **Executar em**: Linux/Mac
 - **Ação**:
   - Use o comando `kinit username@DOMAIN.COMPANY.COM` para obter um TGT do KDC e ele solicitará sua senha de domínio.

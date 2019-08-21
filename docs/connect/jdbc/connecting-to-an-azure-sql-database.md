@@ -1,7 +1,7 @@
 ---
 title: Conectando-se a um banco de dados SQL do Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f62ca071f091fb812550315a81accff723422f09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73c7713a013f03879b63ec2a073cc24fd9bdabe1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956851"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028160"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Conectando-se a um banco de dados SQL do Azure
 
@@ -34,7 +34,7 @@ Este artigo aborda os problemas ocorridos no uso do [!INCLUDE[jdbcNoVersion](../
 Ao se conectar a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]um, você deve se conectar ao banco de dados mestre para chamar **SQLServerDatabaseMetaData.** getCatalogs.  
 O [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] não dá suporte ao retorno de todo o conjunto de catálogos em um banco de dados de usuário. **SQLServerDatabaseMetaData.** getCatalogs use a exibição sys. databases para obter os catálogos. Consulte a discussão sobre permissões em [Sys. databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) para entender o comportamento de **SQLServerDatabaseMetaData.** getCatalogs em um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
-## <a name="connections-dropped"></a>Conexões removidas
+## <a name="connections-dropped"></a>Conexões descartadas
 
 Ao se conectar a um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], as conexões ociosas podem ser terminadas por um componente de rede (como um firewall) após um período de inatividade. Existem dois tipos de conexões ociosas nesse contexto:  
 
@@ -88,6 +88,6 @@ Por exemplo:
 jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;
 ```
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Conectando ao SQL Server com o JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

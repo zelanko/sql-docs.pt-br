@@ -1,7 +1,7 @@
 ---
-title: Usando um procedimento armazenado com parâmetros de saída | Microsoft Docs
+title: Como usar um procedimento armazenado com parâmetros de saída | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9ee3a8d6b0a4c6514864a5990a87de9d732684d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: efafaa709666620e7237f2481c392aba25dfd5f8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916490"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026828"
 ---
-# <a name="using-a-stored-procedure-with-output-parameters"></a>Usando um procedimento armazenado com parâmetros de saída
+# <a name="using-a-stored-procedure-with-output-parameters"></a>Como usar um procedimento armazenado com parâmetros de saída
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -86,6 +86,6 @@ public static void executeStoredProcedure(Connection con) throws SQLException {
 
 Os procedimentos armazenados podem retornar contagens de atualização e vários conjuntos de resultados. O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] segue a especificação do JDBC 3.0, a qual declara que vários conjuntos de resultados e contagens de atualizações devem ser recuperados antes da recuperação dos parâmetros OUT. Ou seja, o aplicativo deve recuperar todos os objetos ResultSet e as contagens de atualização antes de recuperar os parâmetros OUT usando os métodos CallableStatement. getter. Caso contrário, os objetos ResultSet e as contagens de atualizações que ainda não foram recuperados serão perdidos quando os parâmetros OUT forem recuperados. Para obter mais informações sobre contagens de atualização e vários conjuntos de resultados, consulte [usando um procedimento armazenado com uma contagem de atualizações](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) e [usando vários conjuntos de resultados](../../connect/jdbc/using-multiple-result-sets.md).
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
-[Usando instruções com procedimentos armazenados](../../connect/jdbc/using-statements-with-stored-procedures.md)
+[Como usar instruções com procedimentos armazenados](../../connect/jdbc/using-statements-with-stored-procedures.md)

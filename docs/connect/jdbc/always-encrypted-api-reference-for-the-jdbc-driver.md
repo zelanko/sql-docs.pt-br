@@ -1,7 +1,7 @@
 ---
 title: Referência da API do Always Encrypted para o JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 08/06/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a17dc46e2ee60832b51d606c2c7caaf497dfc7c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79cf8ce1b951621d58105d18b847306ff620d114
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957477"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028480"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Referência da API do Always Encrypted para o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -193,7 +193,7 @@ Public enum  SQLServerStatementColumnEncryptionSetting
 >   
 >  Se Always Encrypted estiver desabilitada para uma consulta e a consulta retornar resultados de colunas criptografadas, a consulta retornará valores criptografados. Os valores criptografados terão o tipo de dados varbinary.  
   
- ## <a name="see-also"></a>Consulte Também  
- [Use Always Encrypted com o Driver JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
+ ## <a name="see-also"></a>Confira também  
+ [Como usar Always Encrypted com o JDBC Driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
   
 

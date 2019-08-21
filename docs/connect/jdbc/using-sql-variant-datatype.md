@@ -1,7 +1,7 @@
 ---
-title: Usando o tipo de dados sql_variant | Microsoft Docs
+title: Como usar o tipo de dados sql_variant | Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 662362a692742d206902a0cf23aff63a3ba89df9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cdede5d41d5ad7fc22cfed3f1efa9f95612032ca
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916169"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025838"
 ---
-# <a name="using-sqlvariant-data-type"></a>Usando o tipo de dados Sql_variant
+# <a name="using-sql_variant-data-type"></a>Como usar o tipo de dados sql_variant
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -65,7 +65,7 @@ try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("sele
 }
 ```
 
-## <a name="using-stored-procedures-with-sqlvariant"></a>Usando procedimentos armazenados com sql_variant:   
+## <a name="using-stored-procedures-with-sql_variant"></a>Como usar procedimentos armazenados com sql_variant:   
 Tendo um procedimento armazenado, como:     
 
 ```java
@@ -81,7 +81,7 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 }
 ```
 
-## <a name="limitations-of-sqlvariant"></a>Limitações do sql_variant:
+## <a name="limitations-of-sql_variant"></a>Limitações do sql_variant:
 - Ao usar TVP para popular uma tabela com um `datetime` `date` `smalldatetime` / / valor armazenado em uma sql_variant, `getSmallDateTime()` chamando `getDateTime()` / / em um`getDate()` ResultSet não funciona e gera a seguinte exceção:
     
     `Java.lang.String cannot be cast to java.sql.Timestamp`
@@ -92,6 +92,6 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
     
     `Inserting null value with column type sql_variant in TVP is not supported.`
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Noções básicas sobre os tipos de dados do JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

@@ -1,7 +1,7 @@
 ---
-title: Lendo o exemplo de dados grandes | Microsoft Docs
+title: Lendo exemplo de dados grandes | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 6c986144-3854-4352-8331-e79eccbefc28
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: dde0c8eb487fed00996b56a684a0e28326750679
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 260666488a21b02c0c318d3277b72fc576b0ab08
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956163"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027817"
 ---
-# <a name="reading-large-data-sample"></a>Lendo exemplo de dados grande
+# <a name="reading-large-data-sample"></a>Lendo exemplo de dados grandes
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -48,6 +48,6 @@ Por fim, o código de exemplo itera pelas linhas de dados do conjunto de resulta
 
 [!code[JDBC#UsingAdaptiveBuffering1](../../connect/jdbc/codesnippet/Java/reading-large-data-sample_1.java)]
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
-[Manipular dados grandes](../../connect/jdbc/working-with-large-data.md)
+[Trabalhando com dados grandes](../../connect/jdbc/working-with-large-data.md)

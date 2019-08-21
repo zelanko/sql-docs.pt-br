@@ -1,7 +1,7 @@
 ---
-title: Usando instruções com o JDBC Driver | Microsoft Docs
+title: Como usar instruções com o JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7646903fc9efcbdb838b4a2d585735dc3a105639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ddd61d15e3c363766c7e49b8e9045b60a7be164
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005928"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025791"
 ---
-# <a name="using-statements-with-the-jdbc-driver"></a>Usando instruções com o JDBC Driver
+# <a name="using-statements-with-the-jdbc-driver"></a>Como usar instruções com o JDBC Driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -37,14 +37,14 @@ O driver JDBC fornece três classes para recuperar dados de um banco de dados do
 
 | Tópico                                                                                                    | Descrição                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Usando instruções com SQL](../../connect/jdbc/using-statements-with-sql.md)                             | Descreve como usar instruções SQL com o driver JDBC para trabalhar com os dados em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    |
-| [Usando instruções com procedimentos armazenados](../../connect/jdbc/using-statements-with-stored-procedures.md) | Descreve como usar procedimentos armazenados com o driver JDBC para trabalhar com os dados em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. |
-| [Usando vários conjuntos de resultados](../../connect/jdbc/using-multiple-result-sets.md)                           | Descreve como usar o driver JDBC para recuperar dados de vários conjuntos de resultados.                                                                       |
-| [Usando sequências de escape do SQL](../../connect/jdbc/using-sql-escape-sequences.md)                           | Descreve como usar sequências de escape de SQL, como literais e funções de data e hora.                                                               |
-| [Usando chaves geradas automaticamente](../../connect/jdbc/using-auto-generated-keys.md)                             | Descreve como usar chaves automaticamente geradas.                                                                                                     |
+| [Como usar instruções com SQL](../../connect/jdbc/using-statements-with-sql.md)                             | Descreve como usar instruções SQL com o driver JDBC para trabalhar com os dados em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    |
+| [Como usar instruções com procedimentos armazenados](../../connect/jdbc/using-statements-with-stored-procedures.md) | Descreve como usar procedimentos armazenados com o driver JDBC para trabalhar com os dados em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. |
+| [Como usar vários conjuntos de resultados](../../connect/jdbc/using-multiple-result-sets.md)                           | Descreve como usar o driver JDBC para recuperar dados de vários conjuntos de resultados.                                                                       |
+| [Como usar sequências de escape do SQL](../../connect/jdbc/using-sql-escape-sequences.md)                           | Descreve como usar sequências de escape de SQL, como literais e funções de data e hora.                                                               |
+| [Como usar chaves geradas automaticamente](../../connect/jdbc/using-auto-generated-keys.md)                             | Descreve como usar chaves automaticamente geradas.                                                                                                     |
 | [Executando operações em lote](../../connect/jdbc/performing-batch-operations.md)                         | Descreve como usar o driver JDBC para realizar operações em lote.                                                                                      |
 | [Tratando instruções complexas](../../connect/jdbc/handling-complex-statements.md)                         | Descreve como usar o driver JDBC para executar instruções complexas que realizam uma variedade de tarefas e podem retornar tipos diferentes de dados.               |
   
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Visão geral do JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

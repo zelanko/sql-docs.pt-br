@@ -1,7 +1,7 @@
 ---
 title: Segurança do aplicativo | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aa7681890b09647cb554ef6c80e8646fb69c9f42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81c57e5ab7ca88267693690992106b5f39e2af82
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957461"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028509"
 ---
 # <a name="application-security"></a>Segurança do aplicativo
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Ao usar o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], é importante tomar precauções para garantir a segurança de seu aplicativo. As seções a seguir fornecem informações referentes a etapas que você pode realizar para ajudar a proteger seu aplicativo.  
   
-## <a name="using-java-policy-permissions"></a>Usando permissões de política de Java  
+## <a name="using-java-policy-permissions"></a>Como usar permissões de política de Java  
  Ao usar o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], é importante especificar as permissões de política de Java exigidas pelo driver JDBC. O Java Runtime Environment (JRE) fornece um modelo de segurança extensivo que você pode usar em tempo de execução para determinar se um thread tem acesso a um recurso. Os arquivos de política de Segurança podem controlar este acesso. Os próprios arquivos de política são gerenciados pelo implantador e pelo sysadmin para o contêiner, mas as permissões listadas neste tópico são as que afetam o funcionamento do driver JDBC.  
   
  Uma permissão típica no arquivo de política se parece com o seguinte.  
@@ -63,7 +63,7 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
   
  O suporte ao SSL pode ser usado para fornecer um nível adicional de proteção além do IPSEC. Para obter mais informações sobre como usar SSL, consulte [usando criptografia SSL](../../connect/jdbc/using-ssl-encryption.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
  [Protegendo aplicativos do JDBC Driver](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: Usando o JDBC Driver | Microsoft Docs
+title: Como usar o JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b00cd72309fde42ab794d7a365be2a736e3671e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 828f58249f525a7c694b15eb85f051d80ba2211a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893661"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025767"
 ---
-# <a name="using-the-jdbc-driver"></a>Usando JDBC Driver
+# <a name="using-the-jdbc-driver"></a>Como usar o JDBC Driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -41,7 +41,7 @@ O Microsoft JDBC Driver 6.0 e o 4.2 para SQL Server fornecem os arquivos de bibl
   
 O Microsoft JDBC Driver 4.1 para SQL Server fornece o arquivo de biblioteca de classes **sqljdbc41.jar**.
 
-Sua escolha também determinará os recursos disponíveis. Para saber mais sobre qual arquivo JAR escolher, confira os [requisitos do sistema para o JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+Sua escolha também determinará os recursos disponíveis. Para saber mais sobre qual arquivo JAR escolher, confira os [Requisitos do sistema para o JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="setting-the-classpath"></a>Definindo o classpath
 
@@ -208,9 +208,9 @@ Servlets e JSPs são executados em um mecanismo de servlet/JSP como, por exemplo
 
 Enterprise Java Beans (EJB) são executados em um contêiner EJB. Contêineres EJB são originados de vários fornecedores. Miniaplicativos Java são executados em um navegador, mas são baixados de um servidor Web. Copie sqljdbc.jar, sqljdbc4.jar ou sqljdbc41.jar para a raiz do servidor Web e especifique o nome do arquivo JAR na guia do arquivo HTML do miniaplicativo, por exemplo, `<applet ... archive=mssql-jdbc-***.jar>`.  
   
-## <a name="making-a-simple-connection-to-a-database"></a>Fazendo uma conexão simples com um banco de dados
+## <a name="making-a-simple-connection-to-a-database"></a>Fazendo uma conexão simples a um banco de dados
 
-Usando a biblioteca de classes sqljdbc.jar, os aplicativos devem primeiro registrar o driver como segue:  
+Como usar a biblioteca de classes sqljdbc.jar, os aplicativos devem primeiro registrar o driver como segue:  
   
 `Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");`  
 
@@ -227,10 +227,10 @@ Começando pela API do JDBC 4.0, o método `DriverManager.getConnection()` é ap
 Quando o método getConnection da classe DriverManager é chamado, um driver apropriado é localizado no conjunto de drivers JDBC registrados. O arquivo sqljdbc4.jar, sqljdbc41.jar ou sqljdbc42.jar inclui o arquivo "META-INF/services/java.sql.Driver", que contém o **com.microsoft.sqlserver.jdbc.SQLServerDriver** como um driver registrado. Os aplicativos existentes, que atualmente carregam os drivers usando o método Class.forName, continuarão a funcionar sem modificação.  
   
 > [!NOTE]  
-> A biblioteca de classes sqljdbc4.jar, sqljdbc41.jar ou sqljdbc42.jar não pode ser usada com versões anteriores do Java Runtime Environment (JRE). Confira os [requisitos do sistema para o JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md) para obter a lista de versões do JRE com suporte no [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
+> A biblioteca de classes sqljdbc4.jar, sqljdbc41.jar ou sqljdbc42.jar não pode ser usada com versões anteriores do Java Runtime Environment (JRE). Confira os [Requisitos do sistema para o JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md) para obter a lista de versões do JRE com suporte no [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
 
-Para saber mais sobre como se conectar a fontes de dados e usar uma URL de conexão, confira como [construir a URL de Conexão](../../connect/jdbc/building-the-connection-url.md) e [definir as propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md).  
+Para saber mais sobre como se conectar a fontes de dados e usar uma URL de conexão, confira [Construindo a URL de conexão](../../connect/jdbc/building-the-connection-url.md) e [Definindo as propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
 
 [Visão geral do JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

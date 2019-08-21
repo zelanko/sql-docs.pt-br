@@ -1,7 +1,7 @@
 ---
-title: Amostra de leitura de dados grandes com procedimentos armazenados | Microsoft Docs
+title: Lendo exemplo de dados grandes com procedimentos armazenados | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 58c76635-a117-4661-8781-d6cb231c5809
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cbf339845bd23f1beb4f5cd0f3b3a380689a3120
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d7132ddcd254358cd2199145d260f09ed0465adb
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956129"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027811"
 ---
-# <a name="reading-large-data-with-stored-procedures-sample"></a>Exemplo de leitura de dados grandes com procedimentos armazenados
+# <a name="reading-large-data-with-stored-procedures-sample"></a>Lendo exemplo de dados grandes com procedimentos armazenados
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -46,6 +46,6 @@ Por fim, o código de exemplo exibe os dados retornados com os parâmetros OUT e
 
 [!code[JDBC#UsingAdaptiveBuffering2](../../connect/jdbc/codesnippet/Java/reading-large-data-with-_1_1.java)]
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
-[Manipular dados grandes](../../connect/jdbc/working-with-large-data.md)
+[Trabalhando com dados grandes](../../connect/jdbc/working-with-large-data.md)

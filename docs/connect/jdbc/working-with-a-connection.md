@@ -1,7 +1,7 @@
 ---
 title: Trabalhando com uma conexão | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa216c6fb20ab5881865e2baf283d233b4abbfca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 267605b6a89f323570cfacfc66517b028ef716a2
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916082"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025472"
 ---
 # <a name="working-with-a-connection"></a>Trabalhando com uma conexão
 
@@ -39,7 +39,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 Esta técnica criará uma conexão de banco de dados usando o primeiro driver disponível na lista de drivers que podem se conectar com êxito à URL fornecida.
 
 > [!NOTE]  
-> Ao usar a biblioteca de classes sqljdbc4.jar, os aplicativos não precisam registrar explicitamente ou carregar o driver usando o método Class.forName. Quando o método getConnection da classe DriverManager é chamado, um driver apropriado é localizado no conjunto de drivers JDBC registrados. Para obter mais informações, consulte Usando JDBC Driver.
+> Ao usar a biblioteca de classes sqljdbc4.jar, os aplicativos não precisam registrar explicitamente ou carregar o driver usando o método Class.forName. Quando o método getConnection da classe DriverManager é chamado, um driver apropriado é localizado no conjunto de drivers JDBC registrados. Para obter mais informações, consulte Como usar JDBC Driver.
 
 ## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>Criando uma conexão usando a classe SQLServerDriver
 
@@ -124,6 +124,6 @@ Isso liberará os recursos de banco de dados que o objeto SQLServerConnection es
 > [!NOTE]  
 > Chamar o método close também reverterá qualquer transação pendente.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Conectando ao SQL Server com o JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

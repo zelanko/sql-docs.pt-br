@@ -1,7 +1,7 @@
 ---
-title: Usando o buffer adaptável | Microsoft Docs
+title: Como usar o buffer adaptável | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 07a7a67addb10d91b011f821f5b85ed03981d055
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28b2750d96e1fbe5b5a1cfc3021a22415128b7df
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916460"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026805"
 ---
-# <a name="using-adaptive-buffering"></a>Usando buffer adaptável
+# <a name="using-adaptive-buffering"></a>Como usar o buffer adaptável
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -34,7 +34,7 @@ Para permitir que aplicativos administrem resultados muito grandes, o [!INCLUDE[
 > [!NOTE]  
 > Com buffer adaptável, o driver JDBC armazena em buffer somente a quantidade de dados necessária. O driver não fornece nenhum método público para controlar ou limitar o tamanho do buffer.
 
-## <a name="setting-adaptive-buffering"></a>Definindo buffer adaptável
+## <a name="setting-adaptive-buffering"></a>Definindo o buffer adaptável
 
 Do driver JDBC versão 2.0 em diante, o comportamento padrão do driver é "**adaptável**". Em outras palavras, para obter o comportamento de buffer adaptável, o aplicativo não precisa solicitar o comportamento adaptável explicitamente. No entanto, na versão 1.2 o modo padrão de buffer era "**full**" e o aplicativo precisava solicitar explicitamente o modo de buffer adaptável.
 
@@ -46,11 +46,11 @@ Há três maneiras de um aplicativo solicitar que a execução de instrução us
 
 - O aplicativo pode usar o método [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) da classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) para definir o modo de buffer de resposta para um objeto de instrução específico.
 
-Ao usar o JDBC Driver versão 1.2, os aplicativos precisaram converter o objeto de instrução para uma classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) para usar o método [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md). Os exemplos de código no exemplo [lendo dados grandes](../../connect/jdbc/reading-large-data-sample.md) e [lendo dados grandes com procedimentos armazenados](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) demonstram esse uso antigo.
+Ao usar o JDBC Driver versão 1.2, os aplicativos precisaram converter o objeto de instrução para uma classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) para usar o método [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md). Os exemplos de código no exemplo [lendo dados grandes](../../connect/jdbc/reading-large-data-sample.md) e [Lendo dados grandes com procedimentos armazenados](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) demonstram esse uso antigo.
 
 Porém, com o driver JDBC versão 2.0, os aplicativos podem usar o método [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) e o método [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) para acessar a funcionalidade específica do fornecedor sem qualquer pressuposição sobre a hierarquia de classe de implementação. Para obter um exemplo de código, consulte o tópico [atualizando dados grandes exemplo](../../connect/jdbc/updating-large-data-sample.md) .
 
-## <a name="retrieving-large-data-with-adaptive-buffering"></a>Recuperando dados grandes com buffer adaptável
+## <a name="retrieving-large-data-with-adaptive-buffering"></a>Recuperando dados grandes com o buffer adaptável
 
 Quando valores grandes são lidos uma vez usando os métodos get\<Type>Stream e as colunas ResultSet e os parâmetros CallableStatement OUT são acessados na ordem retornada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o buffer adaptável minimiza o uso de memória do aplicativo ao processar os resultados. Ao usar buffer adaptável:
 
@@ -63,7 +63,7 @@ Quando o aplicativo usar buffer adaptável, os valores recuperados pelos método
 > [!NOTE]
 > Uma chamada para ResultSet. Close () no meio do processamento de um ResultSet exigiria que o Microsoft JDBC Driver para SQL Server ler e descartar todos os pacotes restantes. Isso pode levar um tempo considerável se a consulta retornar um conjunto de dados grande e especialmente se a conexão de rede estiver lenta.
 
-## <a name="guidelines-for-using-adaptive-buffering"></a>Diretrizes para usar buffer adaptável
+## <a name="guidelines-for-using-adaptive-buffering"></a>Diretrizes para usar o buffer adaptável
 
 Os desenvolvedores devem seguir estas diretrizes importantes para minimizar o uso de memória pelo aplicativo:
 
@@ -91,6 +91,6 @@ Além disso, a lista a seguir fornece algumas recomendações para conjuntos de 
 
 - Para conjuntos de resultados roláveis, ao buscar um bloco de linhas, o driver geralmente lê na memória o número de linhas indicado pelo método [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) do objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), até mesmo quando o buffer adaptável está habilitado na conexão. Se chamar o método [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md) do objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) resultar em um OutOfMemoryError, você poderá reduzir o número de linhas buscadas chamando o método [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) do objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) para definir o tamanho da busca como um número menor de linhas, até mesmo 1 linha, se necessário. Você também pode forçar o driver a não armazenar em buffer nenhuma linha chamando o método [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) do objeto [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) com o parâmetro "**adaptive**" antes de executar a instrução. Como o conjunto de resultados não é rolável, se o aplicativo acessar um valor de coluna grande usando um dos métodos get\<Type>Stream, o driver descartará o valor assim que ele for lido pelo aplicativo, da mesma maneira que faz para os conjuntos de resultados somente leitura somente avanço.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Melhorando o desempenho e a confiabilidade com o JDBC Driver](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

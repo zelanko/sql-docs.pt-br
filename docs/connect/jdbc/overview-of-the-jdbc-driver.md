@@ -1,7 +1,7 @@
 ---
 title: Visão geral do driver JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/18/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 770352acd95fd2fb947e29f79230dedab575602b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8b9fcab3a49f8cac08d35320cbad0f339cd42b2
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956231"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027930"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Visão geral do JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,18 +29,18 @@ ms.locfileid: "67956231"
 |Tópico|Descrição|  
 |-----------|-----------------|  
 |[Baixar o Microsoft JDBC Driver para SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)|Links para download do Microsoft JDBC Driver para SQL Server|  
-|[Notas de versão do JDBC Driver](../../connect/jdbc/release-notes-for-the-jdbc-driver.md)|Descreve os recursos que foram acrescentados à versão atual do Microsoft JDBC Driver.|  
+|[Notas sobre a versão do JDBC Driver](../../connect/jdbc/release-notes-for-the-jdbc-driver.md)|Descreve os recursos que foram acrescentados à versão atual do Microsoft JDBC Driver.|  
 |[Requisitos de sistema para o JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)|Descreve os requisitos de sistema necessários para usar o Microsoft JDBC Driver.|  
-|[Usando o JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md)|Descreve como configurar seu ambiente para usar o Microsoft JDBC Driver e como fazer uma conexão simples a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Noções básicas do suporte ao Java EE](../../connect/jdbc/understanding-java-ee-support.md)|Descreve como usar o Microsoft JDBC Driver em um ambiente da Plataforma Java, Edição Enterprise (Java EE).|  
+|[Como usar o JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md)|Descreve como configurar seu ambiente para usar o Microsoft JDBC Driver e como fazer uma conexão simples a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Noções básicas sobre o suporte ao Java EE](../../connect/jdbc/understanding-java-ee-support.md)|Descreve como usar o Microsoft JDBC Driver em um ambiente da Plataforma Java, Edição Enterprise (Java EE).|  
 |[Implantando o JDBC Driver](../../connect/jdbc/deploying-the-jdbc-driver.md)|Descreve como implantar o Microsoft JDBC Driver nos sistemas operacionais Windows e Unix.|  
 |[Redistribuindo o Microsoft JDBC Driver](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md)|Descreve como registrar-se para redistribuir o Microsoft JDBC Driver.|  
-|[Localizando informações adicionais sobre o JDBC Driver](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|Descreve onde localizar recursos adicionais para o Microsoft JDBC Driver, inclusive links para recursos externos.|  
+|[Localizando informações adicionais do JDBC Driver](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|Descreve onde localizar recursos adicionais para o Microsoft JDBC Driver, inclusive links para recursos externos.|  
 |[Matriz de suporte do Microsoft JDBC Driver para SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Matriz de suporte e política de ciclo de vida de suporte para o Microsoft JDBC driver para SQL Server.|  
 |[FAQ&#41; de perguntas &#40;frequentes sobre o driver JDBC](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Perguntas frequentes sobre o Microsoft JDBC Driver.|  
 |[Dependências de recurso do Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Dependências de recurso do Microsoft JDBC Driver para SQL Server.|
 
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
  [Repositório GitHub do JDBC Driver](https://github.com/microsoft/mssql-jdbc)  
  [Referência de API do JDBC Driver](../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

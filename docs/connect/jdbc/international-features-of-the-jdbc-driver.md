@@ -1,7 +1,7 @@
 ---
 title: Recursos internacionais do JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f5e9d6902733ea8a9cca91b4bd33adcb66708672
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64c046ade18bfdf8789ce9fec221f3d33517fcbb
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956471"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028015"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Recursos internacionais do JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67956471"
   
 -   Suporte para nomes de domínio internacionais (começando com o Microsoft JDBC Driver 6.0 para o SQL Server)  
   
-## <a name="handling-of-character-data"></a>Tratando de dados de caractere  
+## <a name="handling-of-character-data"></a>Tratando de dados de caracteres  
  Dados de caractere no Java são tratados por padrão como Unicode; o objeto de Java **String** representa dados de caracteres Unicode. No driver JDBC, a única exceção a esta regra são os métodos getter e setter de fluxo ASCII que são casos especiais porque usam fluxos de byte com a pressuposição implícita de páginas de código simples e conhecidas (ASCII).  
   
  Além disso, o driver JDBC fornece a propriedade de cadeia de conexão **sendStringParametersAsUnicode** . Essa propriedade pode ser usada para especificar que os parâmetros preparados para dados de caracteres sejam enviados como ASCII ou conjunto de caracteres multibyte (MBCS) em vez de Unicode. Para obter mais informações sobre a propriedade de cadeia de conexão **sendStringParametersAsUnicode** , consulte [definindo as propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md).  
@@ -56,13 +56,13 @@ ms.locfileid: "67956471"
   
  Para obter mais informações sobre as ordenações, consulte [Suporte a ordenações e a Unicode](https://go.microsoft.com/fwlink/?LinkId=131366) e [Nomes de ordenação do Windows (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=131367) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="using-international-domain-names-idn"></a>Usando nomes de domínio internacionais (IDN)  
+## <a name="using-international-domain-names-idn"></a>Como usar IDN (nomes de domínio internacionais)  
  O JDBC Driver 6.0 para o SQL Server dá suporte ao uso de nomes de domínio internacionalizados (IDNs) e pode converter um serverName Unicode para compatível com codificação ASCII (Punycode) quando solicitado durante a conexão.  Se os IDNs forem armazenados no sistema de nome de domínio (DNS) como cadeias de caracteres ASCII no formato Punycode (especificado pela RFC 3490), habilite a conversão do nome do servidor Unicode definindo a propriedade serverNameAsACE como true.  Caso contrário, se o serviço DNS é configurado para permitir o uso de caracteres Unicode, defina a propriedade de serverNameAsACE como falso (padrão).  Para versões anteriores do driver JDBC, também é possível converter o serverName em Punycode usando os métodos [IDN.toASCII do Java](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) antes de definir essa propriedade para uma conexão.  
   
 > [!NOTE]  
 >  A maioria dos softwares de resolvedor escritos para plataformas não Windows baseia-se nos padrões da Internet DSN e, portanto, é mais provável usar o formato Punycode IDNs, enquanto um servidor DNS baseados no Windows em uma rede privada pode ser configurado para permitir o uso de caracteres UTF-8 em uma base por servidor.  Para saber mais detalhes, consulte [Suporte a caracteres Unicode](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
  [Visão geral do JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

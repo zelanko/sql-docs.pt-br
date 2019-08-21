@@ -1,7 +1,7 @@
 ---
 title: Entendendo o controle de simultaneidade | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b178b0c38b5891d4a3dc13ef620a217bf3ddb186
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3cbc805ece4cc28a646d93d6607bcc45d65cd563
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004201"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027641"
 ---
-# <a name="understanding-concurrency-control"></a>Entendendo controle de simultaneidade
+# <a name="understanding-concurrency-control"></a>Entendendo o controle de simultaneidade
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   O controle de simultaneidade refere-se às várias técnicas que são usadas para preservar a integridade dos bancos de dados quando vários usuários estão atualizando linhas ao mesmo tempo. A simultaneidade incorreta pode conduzir a problemas como leituras sujas, leituras de fantasma e leituras não repetíveis. O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece interfaces a todas as técnicas de simultaneidade usadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para resolver esses problemas.  
@@ -45,7 +45,7 @@ ms.locfileid: "68004201"
 |A instrução é criada usando TYPE_SCROLL_INSENSITIVE|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria um cursor de instantâneo estático. Ele é desconectado das linhas de tabela subjacentes para ajudar a proteger o cursor de atualizações de linha feitas por outros usuários.|Use TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC ou TYPE_FORWARD_ONLY com CONCUR_UPDATABLE para evitar criar um cursor estático.|  
 |O design de tabela impede um cursor KEYSET ou DYNAMIC|A tabela subjacente não tem chaves exclusivas para permitir que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifique uma linha exclusivamente.|Acrescente chaves exclusivas à tabela para fornecer identificação exclusiva de cada linha.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Confira também  
  [Gerenciando conjuntos de resultados com o JDBC Driver](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   
