@@ -3,19 +3,19 @@ title: Extensão do SQL Server 2019 (versão prévia)
 titleSuffix: Azure Data Studio
 description: Extensão da Versão Prévia do SQL Server 2019 para Azure Data Studio
 ms.custom: seodec18
-ms.date: 06/25/2019
+ms.date: 08/15/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 9b25fd044b94e21151b687d428c469a12d8c8a5d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5def1291480b4b2dbe1eca289f02e5c9cfd6b8d7
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959212"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494038"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extensão do SQL Server 2019 (versão prévia)
 
@@ -29,9 +29,9 @@ Para instalar a extensão do SQL Server 2019 (versão prévia), baixe e instale 
 
    |Plataforma|Download|Data de liberação|Versão
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097803)|25 de junho de 2019 |0.14.1
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097802)|25 de junho de 2019 |0.14.1
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097801)|25 de junho de 2019 |0.14.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101241)|15 de agosto de 2019 |0.15.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101240)|15 de agosto de 2019 |0.15.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101239)|15 de agosto de 2019 |0.15.0
 
 1. No Azure Data Studio, escolha **Instalar extensão do pacote VSIX** no menu **Arquivo** e selecione o arquivo .vsix baixado.
 
@@ -42,6 +42,13 @@ Para instalar a extensão do SQL Server 2019 (versão prévia), baixe e instale 
 1. Após o recarregamento, a extensão instalará as dependências. Você pode ver o andamento na janela de Saída. O processo pode levar vários minutos.
 
 1. Após as dependências serem instaladas, feche e reabra Azure Data Studio. O tipo de conexão **Cluster de Big Data do SQL Server** ficará disponível somente após você reiniciar o Azure Data Studio.
+
+## <a name="changes-in-release-015"></a>Alterações na versão 0.15
+* Assistente Criar Tabela Externa:
+  * Redução do tempo necessário para carregar as informações da coluna e da tabela na página de mapeamento de objeto.
+  * Correção de um bug com o carregamento de credenciais de banco de dados com escopo na página de detalhes de conexão.
+* Criar tabela externa do assistente de arquivos CSV:
+  * Aumento no tamanho da amostra padrão usada para análise PROSE.
 
 ## <a name="changes-in-release-0141"></a>Alterações na versão 0.14.1
 * Suporte para a fonte de dados CTP 3.1
@@ -74,7 +81,7 @@ Para instalar a extensão do SQL Server 2019 (versão prévia), baixe e instale 
 O suporte para o SQL Server 2019 foi atualizado. Ao se conectar a uma instância do Cluster de Big Data do SQL Server, uma nova pasta _Serviços de Dados_ será exibida na árvore do Explorer. Ela tem pontos de inicialização para ações como abrir um novo Notebook para a conexão, enviar trabalhos do Spark e trabalhar com o HDFS. Observe que, para algumas ações como _Criar Dados Externos_ em um arquivo/pasta do HDFS, a extensão de _Versão Prévia do SQL Server 2019_ precisa estar instalada.
 
 ### <a name="notebook-support"></a>Suporte para Notebook
-Fizemos atualizações significativas na interface do usuário do Notebook nesta versão. Nosso foco foi facilitar a leitura de Notebooks compartilhados com você. Isso significava remover todas as caixas de contorno em torno das células, a menos que estivessem selecionadas ou focalizadas, adicionar suporte de foco para facilitar ações no nível da célula sem precisar selecionar a célula e esclarecer o estado da execução adicionando uma contagem de execução, um botão animado _parar execução_ , entre outros. Também adicionamos atalhos de teclado para _Novo Notebook_ (`Ctrl+Shift+N`), _Executar Célula_ (`F5`), _Nova Célula de Código_ (`Ctrl+Shift+C`), _Nova Célula de Texto_ (`Ctrl+Shift+T`). Futuramente, faremos com que todas as ações importantes sejam iniciadas por atalho, sendo assim, diga-nos de quais ações você sente falta!
+Fizemos atualizações significativas na interface do usuário do Notebook nesta versão. Nosso foco foi facilitar a leitura de Notebooks compartilhados com você. Isso significava remover todas as caixas de contorno em torno das células, a menos que estivessem selecionadas ou focalizadas, adicionar suporte de foco para facilitar ações no nível da célula sem precisar selecionar a célula e esclarecer o estado da execução adicionando uma contagem de execução, um botão animado _parar execução_, entre outros. Também adicionamos atalhos de teclado para _Novo Notebook_ (`Ctrl+Shift+N`), _Executar Célula_ (`F5`), _Nova Célula de Código_ (`Ctrl+Shift+C`), _Nova Célula de Texto_ (`Ctrl+Shift+T`). Futuramente, faremos com que todas as ações importantes sejam iniciadas por atalho, sendo assim, diga-nos de quais ações você sente falta!
 
 Outras melhorias e correções incluem:
 * Agora, a extensão de _Versão Prévia do SQL Server 2019_ solicita que os usuários escolham um diretório de instalação para as dependências de Python. Além disso, ela não inclui mais o Python no `.vsix file`, reduzindo o tamanho geral da extensão. As dependências do Python são necessárias para dar suporte a kernels do Spark e do Python3, portanto, é necessário instalar essa extensão para usá-las.

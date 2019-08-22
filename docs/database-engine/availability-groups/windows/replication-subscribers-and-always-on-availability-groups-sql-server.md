@@ -1,7 +1,7 @@
 ---
 title: Assinantes de replicação e Grupos de Disponibilidade AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/16/2019
+ms.date: 08/08/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 07865ca96c72e9501382212d75a2223fa652572f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5635d4ce579e01d88079e3a813cddaf3391addc
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014286"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969432"
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>Assinantes de replicação e Grupos de Disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "68014286"
   Quando um grupo de disponibilidade AlwaysOn contendo um banco de dados que é um assinante de replicação executar failover, a assinatura de replicação poderá falhar. Para assinantes por push de replicação transacional, o agente de distribuição continuará a replicar automaticamente após um failover se a assinatura tiver sido criada usando o nome do ouvinte do grupo de disponibilidade. Para assinantes por pull de replicação transacional, o agente de distribuição continuará a replicar automaticamente após um failover se a assinatura tiver sido criada usando o nome do ouvinte do grupo de disponibilidade e o servidor original do assinante estiver em execução. Isso ocorre porque os trabalhos de agente de distribuição são criados somente no assinante original (réplica primária do grupo de disponibilidade). Para mesclar assinantes, um administrador de replicação deve reconfigurar o assinante manualmente, recriando a assinatura.  
   
 ## <a name="what-is-supported"></a>O que tem suporte  
- A replicação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tem suporte para o failover automático do publicador e de assinantes transacionais. Os assinantes de mesclagem podem fazer parte de um grupo de disponibilidade. No entanto, é necessário realizar ações manuais para configurar o novo assinante após um failover. Não é possível combinar Grupos de Disponibilidade com cenários Websync e SQL Server Compact.  
+ A replicação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tem suporte para o failover automático do publicador e de assinantes transacionais. Os assinantes de mesclagem podem fazer parte de um grupo de disponibilidade. No entanto, é necessário realizar ações manuais para configurar o novo assinante após um failover. Não é possível combinar Grupos de Disponibilidade com cenários WebSync e SQL Server Compact.  
   
 ## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>Como criar uma assinatura transacional em um ambiente AlwaysOn  
  Para a replicação transacional, use as seguintes etapas para configurar e fazer o failover de um grupo de disponibilidade do assinante:  
@@ -40,17 +40,13 @@ ms.locfileid: "68014286"
     > [!NOTE]  
     >  A assinatura deve ser criada usando um script [!INCLUDE[tsql](../../../includes/tsql-md.md)] e não pode ser criada usando o [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
-4.  Se estiver criando uma assinatura pull:  
+4.  Para criar uma assinatura pull:  
   
-    1.  No [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], no nó primário do assinante, abra a árvore do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.  
+    1.  Usando o script de exemplo da seção **Como criar uma assinatura pull de replicação transacional** abaixo, crie a assinatura usando o nome do ouvinte do grupo de disponibilidade do assinante. 
+   
+    2.  Após o failover, crie o trabalho do agente de distribuição na nova réplica primária usando o procedimento armazenado **sp_addpullsubscription_agent**. 
   
-    2.  Identifique o trabalho do **Agente de Distribuição de Pull** e edite o trabalho.  
-  
-    3.  Na etapa de trabalho **Executar Agente** , verifique os parâmetros `-Publisher` e `-Distributor` . Verifique se esses parâmetros contêm os nomes diretos do servidor e a instância corretos do servidor do publicador e do distribuidor.  
-  
-    4.  Altere o parâmetro `-Subscriber` para o nome do ouvinte do grupo de disponibilidade do assinante.  
-  
- Quando você cria sua assinatura seguindo essas etapas, não precisa fazer nada após um failover.  
+ Ao criar uma assinatura pull com o banco de dados de assinatura, no Grupo de disponibilidade, depois de um failover, é recomendável desabilitar o trabalho do agente de distribuição na réplica primária antiga e habilitar o trabalho na nova réplica primária.  
   
 ## <a name="creating-a-transactional-replication-push-subscription"></a>Criando uma assinatura push de replicação transacional  
   
@@ -69,6 +65,26 @@ EXEC sp_addpushsubscription_agent @publication = N'<publication name>',
        @subscriber_db = N'<subscriber database name>',   
        @job_login = null, @job_password = null, @subscriber_security_mode = 1;  
 GO  
+```  
+
+## <a name="creating-a-transactional-replication-pull-subscription"></a>Como criar uma assinatura pull de replicação transacional  
+  
+```  
+-- commands to execute at the subscriber, in the subscriber database:  
+use [<subscriber database name>]  
+EXEC sp_addpullsubscription @publisher= N'<publisher name>',
+        @publisher_db= N'<publisher database name>',
+        @publication= N'<publication name>',
+        @subscription_type = N'pull';
+Go
+
+EXEC sp_addpullsubscription_agent 
+        @publisher =  N'<publisher name>', 
+        @subscriber = N'<availability group listener name>',
+        @publisher_db= N'<publisher database name>',
+        @publication= N'<publication name>' ;
+        @job_login = null, @job_password = null, @subscriber_security_mode = 1;  
+GO
 ```  
   
 ## <a name="to-resume-the-merge-agents-after-the-availability-group-of-the-subscriber-fails-over"></a>Para retomar os Agentes de Mesclagem após o failover do grupo de disponibilidade do assinante  

@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c5c5e2ca321deb2b7e82774db1e91c0b0149deb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4f68dd33d2a6d7a91aad0ceb4b606efaaa39429
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024373"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969444"
 ---
-# <a name="identseed-transact-sql"></a>IDENT_SEED (Transact-SQL)
+# <a name="ident_seed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna o valor de semente original (retornado como **numeric**( **@@** MAXPRECISION,0)) especificado ao criar uma coluna de identidade em uma tabela ou exibição. A alteração do valor atual de uma coluna de identidade usando DBCC CHECKIDENT não altera o valor retornado por essa função.  
+  Retorna o valor de semente original especificado ao criar uma coluna de identidade em uma tabela ou exibição. A alteração do valor atual de uma coluna de identidade usando DBCC CHECKIDENT não altera o valor retornado por essa função.  
   
  ![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe do Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 IDENT_SEED ( 'table_or_view' )  
 ```  
   
@@ -45,7 +44,7 @@ IDENT_SEED ( 'table_or_view' )
  É uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) que especifica a tabela ou a exibição a ser verificada para obter um valor de semente de identidade. *table_or_view* pode ser uma constante de cadeia de caracteres incluída entre aspas, uma variável, uma função ou um nome de coluna. *table_or_view* é **char**, **nchar**, **varchar** ou **nvarchar**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **numeric**  
+**numeric**([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
 ## <a name="exceptions"></a>Exceções  
  Retornará NULL em caso de erro ou se um chamador não tiver permissão para exibir o objeto.  
@@ -57,7 +56,7 @@ IDENT_SEED ( 'table_or_view' )
 ### <a name="a-returning-the-seed-value-from-a-specified-table"></a>A. Retornando o valor de semente de uma tabela especificada  
  O exemplo a seguir retorna o valor de semente para a tabela `Person.Address` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT IDENT_SEED('Person.Address') AS Identity_Seed;  
@@ -67,7 +66,7 @@ GO
 ### <a name="b-returning-the-seed-value-from-multiple-tables"></a>B. Retornando o valor de semente de várias tabelas  
  O exemplo a seguir retorna as tabelas no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] com uma coluna de identidade com um valor de semente.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TABLE_SCHEMA, TABLE_NAME,   

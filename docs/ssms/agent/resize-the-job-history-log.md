@@ -18,12 +18,12 @@ ms.assetid: ddee1ce8-9d1b-4017-9894-bf7256aed95d
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1b3a833caee68600ccc2fbf6f92244b5969e7dbb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5dea3b0a7eb9076bb778a14a4c8ab1834df0b93e
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263115"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995840"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ Para obter informações detalhadas, consulte [Implementar a segurança do SQL S
   
 2.  Clique com o botão direito do mouse em **SQL Server Agent**e então clique em **Propriedades**.  
   
-3.  Selecione a página **Histórico** e confirme se a opção **Limitar tamanho do log do histórico de trabalhos**está marcada.  
+3.  Selecione a página **Histórico** e assegure que **Limitar tamanho do log do histórico de trabalho** esteja marcado.  
   
 4.  Na caixa **Tamanho máximo do log do histórico de trabalho** , insira o número máximo de linhas que o log de histórico do trabalho deve permitir.  
   

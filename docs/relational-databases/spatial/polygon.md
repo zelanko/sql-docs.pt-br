@@ -13,12 +13,12 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74e6c8cc19bac4c0428924effda87952642a37dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a82789da3207fc42a820a18ff6d7da438f84cdd7
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081660"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026143"
 ---
 # <a name="polygon"></a>Polygon
 
@@ -49,9 +49,9 @@ Conforme mostrado na ilustração:
  Instâncias **Polygon** aceitas são instâncias que podem ser armazenadas em uma variável **geometry** ou **geography** sem gerar uma exceção. As seguintes instâncias **Polygon** são aceitas:  
   
 -   Uma instância **Polygon** vazia  
--   Uma instância **Polygon** que tem um anel exterior aceitável e zero ou mais anéis interiores aceitáveis  
+-   Uma instância **Polygon** que tem um anel exterior aceitável (**LineString**) e zero ou mais anéis interiores aceitáveis (**LineString**s)  
   
-Os critérios a seguir são necessários para que um anel seja aceitável.  
+Os critérios a seguir são necessários para que um anel (**LineString**) seja aceitável.  
   
 -   A instância **LineString** deve ser aceita.  
 -   A instância **LineString** deve ter, pelo menos, quatro pontos.  

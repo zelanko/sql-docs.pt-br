@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 500171e9aeb9efc66c1e4ba6e5a65c2431306e5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 99a7b94a45b1baf0ffbf1a491a0387ef11108ebd
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050548"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494078"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2016"></a>Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,12 @@ ms.locfileid: "68050548"
 - O nível de compatibilidade 90 foi descontinuado. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 - O subsistema do ActiveX foi descontinuado. Use a linha de comando ou scripts do PowerShell.
+
+- Parâmetros de inicialização **-h** e **-g**. Para obter mais informações, consulte [Opções de inicialização do serviço Mecanismo de Banco de Dados](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014).
   
 ## <a name="previous-versions"></a>Versões anteriores  
   
-- [Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2014](http://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
+- [Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
 
 ## <a name="see-also"></a>Consulte Também  
  [Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   

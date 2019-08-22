@@ -9,17 +9,33 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 07/11/2019
-ms.openlocfilehash: 3e2b75282c9babf876d0daec033a435d75c2e2f1
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.date: 08/15/2019
+ms.openlocfilehash: cad91dc5b48a60746b4f8ef1f4831a1aa9dc2c40
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731059"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553111"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas sobre a versão relacionadas ao Azure Data Studio
 
 **[Baixe e instale a versão mais recente!](download.md)**
+
+## <a name="august-2019"></a>Agosto de 2019
+
+15 de agosto de 2019 &nbsp; / &nbsp; versão: 1.10.0 
+
+&nbsp;
+
+| Alterar | Detalhes |
+| :----- | :------ |
+| Lançamento da extensão SandDance 1.3.1 | &bull; &nbsp; Detecção de gráfico inteligente <br/>&bull; &nbsp; Visualizações 3D <br/> &bull; &nbsp; Filtragem de dados |
+| Melhorias ao Notebook | &bull; &nbsp; Adicionar código ou célula de texto na linha <br/>&bull; &nbsp; Adicionada a possibilidade de clicar com o botão direito do mouse na grade de resultados SQL para salvar o resultado como CSV, JSON etc. <br/> &bull; &nbsp; Melhoria realizada no desempenho de carregamento de notebook, para um carregamento de JSON mais rápido <br/> &bull; &nbsp; Veja a lista completa de melhorias [aqui](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed) |
+| Suporte ao SQL Server 2019 |  Esta versão inclui suporte para recursos adicionais de Cluster de Big Data do SQL Server 2019, incluindo: <br/> &bull; &nbsp; Redução do tempo necessário para carregar as informações da coluna e da tabela na página de mapeamento de objeto. <br/> &bull; &nbsp; Correção de um bug com o carregamento de credenciais de banco de dados com escopo na página de detalhes de conexão. <br/> &bull; &nbsp; Aumento no tamanho da amostra padrão usada para análise PROSE. | 
+| A extensão Dacpac agora dá suporte a AAD | 
+| Mesclagem na versão de maio do Visual Studio Code 1.37 | Os aprimoramentos mais recentes podem ser encontrados [aqui](https://code.visualstudio.com/updates/v1_37). |
+| Bugs e problemas resolvidos | Para obter uma lista completa das correções, confira [Bugs e problemas, no GitHub](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1). |
+| &nbsp; | &nbsp; |
 
 ## <a name="july-2019"></a>Julho de 2019
 
@@ -374,10 +390,10 @@ A *Versão Prévia Pública de julho* se concentra nos seguintes itens:
 
 | Alterar | Detalhes |
 | :----- | :------ |
-| Liberação inicial da extensão **SQL Server Profiler para SQL Operations Studio _Versão Prévia_ ** . | &nbsp; |
+| Liberação inicial da extensão **SQL Server Profiler para SQL Operations Studio _Versão Prévia_** . | &nbsp; |
 | A nova extensão **SQL Data Warehouse** inclui widgets de painel personalizáveis avançados que identificam insights para seu data warehouse. | Isso libera os principais cenários de gerenciamento e ajuste do data warehouse para garantir que ele seja otimizado para um desempenho consistente. |
 | Suporte à **Edição de dados por "Filtragem e Classificação"** . | &nbsp; |
-| Melhorias na extensão **SQL Server Agent para SQL Operations Studio _Versão Prévia_ ** para as exibições Trabalhos e Histórico de Trabalhos. | &nbsp; |
+| Melhorias na extensão **SQL Server Agent para SQL Operations Studio _Versão Prévia_** para as exibições Trabalhos e Histórico de Trabalhos. | &nbsp; |
 | Aprimoramentos nas APIs de extensibilidade do **Assistente e Caixa de diálogo da Estrutura de Construtor de interface do usuário**. | &nbsp; |
 | Atualização no código-fonte da plataforma do VS Code. | Integração das seguintes versões:<br/>&bull; &nbsp; [Março de 2018 (1.22)](https://code.visualstudio.com/updates/v1_22)<br/>&bull; &nbsp; [Abril de 2018 (1.23)](https://code.visualstudio.com/updates/v1_23) |
 | &nbsp; | &nbsp; |

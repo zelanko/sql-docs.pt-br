@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c84ef656fcadee3c66b0155fa587a85ebf453095
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 8661bc871018b542b3388adfcbd63f255c1d32a2
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809834"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553298"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON – sinalizadores de rastreamento (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
 
 Sinalizadores de rastreamento são usados para definir as características do servidor específico ou para alterar um comportamento em particular. Por exemplo, o sinalizador de rastreamento 3226 é um sinalizador de rastreamento de inicialização que suprime mensagens de backup bem-sucedido no log erros. Sinalizadores de rastreamento são usados com frequência para diagnosticar problemas de desempenho ou depurar procedimentos armazenados ou sistemas de computador complexos, mas também podem ser recomendados pelo Suporte da Microsoft para lidar com comportamento que esteja prejudicando uma carga de trabalho específica.  Todos os sinalizadores de rastreamento documentados e aqueles recomendados pelo Suporte da Microsoft têm suporte total em um ambiente de produção quando usados conforme indicado.  Observe que os sinalizadores de rastreamento nesta lista podem ter considerações adicionais sobre seu uso específico, portanto, é aconselhável examinar cuidadosamente todas as recomendações de apresentadas aqui e/ou por seu engenheiro de suporte. Além disso, assim como acontece com qualquer alteração de configuração no SQL Server, sempre é melhor testar minuciosamente o sinalizador em um ambiente não de produção antes de implantar.
 
@@ -51,8 +51,10 @@ Use o comando `DBCC TRACESTATUS` para determinar quais sinalizadores de rastream
 
 ## <a name="trace-flags"></a>Sinalizadores de rastreamento
 
-  
-A tabela a seguir lista e descreve os sinalizadores de rastreamento disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+A tabela a seguir lista e descreve os sinalizadores de rastreamento disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+
+> [!NOTE]
+> A Instância Gerenciada do Banco de Dados SQL do Azure dá suporte aos seguintes Sinalizadores de Rastreamento globais: 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389,1 0316 e 11024. Os sinalizadores de rastreamentos de sessão ainda não são suportados na Instância Gerenciada.
  
 > [!NOTE]
 > Alguns sinalizadores de rastreamento foram introduzidos em versões específicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre a versão aplicável, confira o artigo do Suporte da Microsoft associado a um sinalizador de rastreamento específico.

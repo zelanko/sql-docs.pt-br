@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 6e3a4a360f4a317139908b57421e420e8cd68402
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3831a9244b3e946dcba01b7d8c31825a75f7b39f
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040599"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553263"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 Habilita os sinalizadores de rastreamento especificados.
   
@@ -48,7 +48,7 @@ DBCC TRACEON ( trace# [ ,...n ][ , -1 ] ) [ WITH NO_INFOMSGS ]
 É um espaço reservado que indica que vários sinalizadores de rastreamento podem ser especificados.  
   
 -1  
-Ativa globalmente os sinalizadores de rastreamento especificados.  
+Ativa globalmente os sinalizadores de rastreamento especificados. Este argumento é necessário na Instância Gerenciada do Azure SQL. 
   
 WITH NO_INFOMSGS  
 Suprime todas as mensagens informativas.  
@@ -61,7 +61,9 @@ Em um servidor de produção, para evitar comportamento imprevisível, recomenda
 Sinalizadores de rastreamento são usados para personalizar certas características que controlam o modo operacional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sinalizadores de rastreamento, depois de habilitados, permanecem assim no servidor até que sejam desabilitados executando uma instrução DBCC TRACEOFF. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], há dois tipos de sinalizadores de rastreamento: sessão e global. Os sinalizadores de rastreamento de sessão são ativos para uma conexão e são visíveis apenas para essa conexão. Sinalizadores de rastreamento globais são definidos no nível do servidor e são visíveis em todas as conexões no servidor. Para determinar o status dos sinalizadores de rastreamento, use DBCC TRACESTATUS. Para desabilitar sinalizadores de rastreamento, use DBCC TRACEOFF.
   
 Depois de ativar um sinalizador de rastreamento que afeta os planos de consulta, execute `DBCC FREEPROCCACHE;` para que os planos armazenados em cache sejam recompilados usando o novo comportamento que afeta o plano.
-  
+
+A Instância Gerenciada do Banco de Dados SQL do Azure dá suporte aos seguintes Sinalizadores de Rastreamento globais: 460,2301,2389,2390,2453,2467,7471,8207,9389,10316 e 11024
+
 ## <a name="result-sets"></a>Conjuntos de resultados  
  DBCC TRACEON retorna o conjunto de resultados seguinte (mensagem):  
   

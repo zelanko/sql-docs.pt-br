@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 9538ad04a6e9e1e95a1fafc1080d132e218a196d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 770b7d3d9a16adf64134ba6896c7c3a1f46dcc9b
+ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062205"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69561123"
 ---
 # <a name="install-polybase-on-windows"></a>Instalar o PolyBase no Windows
 
@@ -72,6 +72,9 @@ Depois de instalar o PolyBase autônomo ou em um grupo de escala horizontal, voc
 3. Na página Seleção de Recursos, escolha **Serviço de Consulta do PolyBase para Dados Externos**.  
 
    ![Serviços do PolyBase](../../relational-databases/polybase/media/install-wizard.png "Serviços do PolyBase")  
+   
+   >[!NOTE]
+   >O PolyBase do SQL Server 2019 agora inclui uma opção adicional **Conector Java para fonte de dados HDFS**. Confira os [recursos da versão prévia do SQL Server](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/) para obter mais informações sobre esse recurso.
    
 4. Na página Configuração do Servidor, defina o **Serviço do Mecanismo PolyBase do SQL Server** e o **Serviço de Movimentação de Dados PolyBase do SQL Server** para serem executados na mesma conta de domínio.  
 

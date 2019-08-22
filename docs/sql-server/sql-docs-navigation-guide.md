@@ -1,6 +1,6 @@
 ---
-title: Guia de navegação de documentos do SQL Server
-description: Um guia para navegar na documentação técnica do SQL Server – explica coisas como a página de hub, o sumário, o cabeçalho e como usar as trilhas de navegação e o filtro de versão.
+title: Dicas de navegação de documentos do SQL Server
+description: Dicas e truques para navegar na documentação técnica do SQL Server – explica coisas como a página de hub, o sumário, o cabeçalho e como usar as trilhas de navegação e o filtro de versão.
 ms.date: 07/11/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -8,14 +8,13 @@ ms.custom: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e5a3e33d48b70146b439790e6439ef4f9cac08b5
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 31bdddab8dce33d8bf0e59d3abf7384231a13e53
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941162"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028831"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Guia de navegação de documentos do SQL Server 
 
@@ -61,11 +60,11 @@ Em docs.microsoft.com, você pode pesquisar o conteúdo no sumário usando a cai
 ## <a name="version-filter"></a>Filtro de versão
 A documentação técnica do SQL Server fornece conteúdo sobre várias versões e tipos de SQL Server com suporte. Os recursos podem variar entre as versões e os tipos do SQL Server e, às vezes, o próprio conteúdo pode variar. 
 
-Você pode usar o filtro de versão para garantir que está esteja vendo o conteúdo referente à versão e ao tipo corretos do SQL Server: 
+Você pode usar o [filtro de versão](versioning-system-monikers-ui-sql-server.md) para garantir que está esteja vendo o conteúdo referente à versão e ao tipo corretos do SQL Server: 
 
 ![Filtro de versão dos documentos do SQL](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-Selecionar **Todo o SQL** > **Não ocultar nada** faz todo o conteúdo ficar visível e nada ficar oculto por trás do filtro de versão. 
+Selecionar **Todo o SQL** \> **Não ocultar nada** faz todo o conteúdo ficar visível e nada ficar oculto pelo filtro de versão. A opção [**Não ocultar nada** não é recomendada para uso de rotina](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing).
 
 ## <a name="breadcrumbs"></a>Trilhas de navegação
 
