@@ -53,7 +53,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 
 > |||||
 > |---|---|---|---|
-> |** _** &nbsp;|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
+> |**_\* SQL Server \*_** &nbsp;|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
 
 &nbsp;
 
@@ -1047,7 +1047,7 @@ Quando OFF é especificado, essa configuração afeta apenas a definição de no
 > [!IMPORTANT]
 > Em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_PADDING sempre será ON e quaisquer aplicativos que definam explicitamente a opção como OFF produzirão um erro. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. É recomendável sempre definir ANSI_PADDING como ON. ANSI_PADDING deve ser ON ao criar ou manipular índices em colunas computadas ou exibições indexadas.
 
-Colunas **char( _)** e **binary( _)** que permitem valores nulos são preenchidas até o comprimento da coluna quando ANSI_PADDING está definido como ON. Espaços em branco e zeros à direita são cortados quando ANSI_PADDING está OFF. As colunas **char( _)** e **binary( _)** que não permitem valores nulos sempre são preenchidas até o tamanho da coluna.
+Colunas **char(_n_)** e **binary(_n_)** que permitem valores nulos são preenchidas até o comprimento da coluna quando ANSI_PADDING está definido como ON. Espaços em branco e zeros à direita são cortados quando ANSI_PADDING está OFF. As colunas **char(_n_)** e **binary(_n_)** que não permitem valores nulos sempre são preenchidas até o tamanho da coluna.
 
 As configurações no nível de conexão que são definidas com o uso de uma instrução SET substituem a configuração no nível de banco de dados padrão para ANSI_PADDING. Clientes ODBC e OLE DB emitem uma instrução SET no nível da configuração de conexão ANSI_PADDING como ON para a sessão por padrão. Os clientes executam a instrução, quando você se conecta a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para saber mais, confira [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md).
 
@@ -1398,7 +1398,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|** _** &nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* Banco de dados individual/pool elástico<br />do Banco de Dados SQL \*_** &nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -1939,7 +1939,7 @@ Quando OFF é especificado, essa configuração afeta apenas a definição de no
 > [!IMPORTANT]
 > Em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_PADDING sempre será ON e quaisquer aplicativos que definam explicitamente a opção como OFF produzirão um erro. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. É recomendável sempre definir ANSI_PADDING como ON. ANSI_PADDING deve ser ON ao criar ou manipular índices em colunas computadas ou exibições indexadas.
 
-Colunas **char( _)** e **binary( _)** que permitem valores nulos são preenchidas até o comprimento da coluna quando ANSI_PADDING está definido como ON. Espaços em branco e zeros à direita são cortados quando ANSI_PADDING está OFF. As colunas **char( _)** e **binary( _)** que não permitem valores nulos sempre são preenchidas até o tamanho da coluna.
+Colunas **char(_n_)** e **binary(_n_)** que permitem valores nulos são preenchidas até o comprimento da coluna quando ANSI_PADDING está definido como ON. Espaços em branco e zeros à direita são cortados quando ANSI_PADDING está OFF. As colunas **char(_n_)** e **binary(_n_)** que não permitem valores nulos sempre são preenchidas até o tamanho da coluna.
 
   As configurações no nível de conexão que são definidas com o uso de uma instrução SET substituem a configuração no nível de banco de dados padrão para ANSI_PADDING. Clientes ODBC e OLE DB emitem uma instrução SET no nível da configuração de conexão ANSI_PADDING como ON para a sessão por padrão. Os clientes executam a instrução, quando você se conecta a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para saber mais, confira [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md).
 
@@ -2189,7 +2189,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |** _** &nbsp;||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* Instância gerenciada<br />do Banco de Dados SQL \*_** &nbsp;||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -2672,7 +2672,7 @@ Quando OFF é especificado, essa configuração afeta apenas a definição de no
 > [!IMPORTANT]
 > Em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_PADDING sempre será ON e quaisquer aplicativos que definam explicitamente a opção como OFF produzirão um erro. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. É recomendável sempre definir ANSI_PADDING como ON. ANSI_PADDING deve ser ON ao criar ou manipular índices em colunas computadas ou exibições indexadas.
 
-Colunas **char( _)** e **binary( _)** que permitem valores nulos são preenchidas até o comprimento da coluna quando ANSI_PADDING está definido como ON. Espaços em branco e zeros à direita são cortados quando ANSI_PADDING está OFF. As colunas **char( _)** e **binary( _)** que não permitem valores nulos sempre são preenchidas até o tamanho da coluna.
+Colunas **char(_n_)** e **binary(_n_)** que permitem valores nulos são preenchidas até o comprimento da coluna quando ANSI_PADDING está definido como ON. Espaços em branco e zeros à direita são cortados quando ANSI_PADDING está OFF. As colunas **char(_n_)** e **binary(_n_)** que não permitem valores nulos sempre são preenchidas até o tamanho da coluna.
 
   As configurações no nível de conexão que são definidas com o uso de uma instrução SET substituem a configuração no nível de banco de dados padrão para ANSI_PADDING. Clientes ODBC e OLE DB emitem uma instrução SET no nível da configuração de conexão ANSI_PADDING como ON para a sessão por padrão. Os clientes executam a instrução, quando você se conecta a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para saber mais, confira [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md).
 
@@ -2893,7 +2893,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|** _** &nbsp;||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;||||
 
 &nbsp;
 

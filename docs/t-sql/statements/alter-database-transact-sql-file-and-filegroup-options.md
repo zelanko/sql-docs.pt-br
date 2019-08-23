@@ -63,7 +63,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 
 |||
 |-|-|-|
-|**\* _SQL Server \*_ ** &nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|**\* _SQL Server \*_** &nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -683,7 +683,7 @@ GO
 
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|** _**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\* Instância gerenciada<br />do Banco de Dados SQL \*_**<br />&nbsp;|
 
 &nbsp;
 

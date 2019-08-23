@@ -46,7 +46,7 @@ ms.locfileid: "69493820"
   
 6.  Na lista **Retornar Colunas** , marque as caixas de seleção **Descrição do Item** e **Número do Pedido** e clique em **OK**. A imagem a seguir mostra como o modelo Ação deve estar sendo exibido neste momento no procedimento.  
   
-     ![Caixa colunas] de detalhamento (../../2014/tutorials/media/l8-action3.gif "Caixa colunas") de detalhamento  
+     ![Caixa colunas](../../2014/tutorials/media/l8-action3.gif " de detalhamento Caixa colunas") de detalhamento  
   
 7.  Expanda a caixa **Propriedades Adicionais** , como mostra a imagem a seguir.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "69493820"
   
      A imagem a seguir mostra essas colunas selecionadas.  
   
-     ![Caixa colunas] de detalhamento (../../2014/tutorials/media/l8-action7.gif "Caixa colunas") de detalhamento  
+     ![Caixa colunas](../../2014/tutorials/media/l8-action7.gif " de detalhamento Caixa colunas") de detalhamento  
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>Revisando a ação de detalhamento modificada  
   
