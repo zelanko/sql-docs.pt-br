@@ -188,7 +188,7 @@ ms.locfileid: "69493772"
   
      Observe que em cada grupo de medidas, somente uma medida é exibida, como mostra a imagem a seguir:  
   
-     ![Vendas pela Internet e medidas de vendas] do revendedor (../../2014/tutorials/media/l9-perspectives-4.gif "Vendas pela Internet e medidas de vendas") do revendedor  
+     ![Vendas pela Internet e medidas de vendas](../../2014/tutorials/media/l9-perspectives-4.gif " do revendedor Vendas pela Internet e medidas de vendas") do revendedor  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Definindo e procurando traduções](lesson-9-2-defining-and-browsing-translations.md)  

@@ -153,7 +153,7 @@ GO
 ALTER TABLE bought ADD CONSTRAINT EC_BOUGHT1 CONNECTION (Customer TO Product, Supplier TO Product);
 ```  
 
-No exemplo anterior há duas cláusulas de restrição de borda na restrição *EC_BOUGHT1*, uma que conecta **Customer** a **Product** e o outra que conecta **Supplier** a **Product**. Essas duas cláusulas são aplicadas em disjunção. Ou seja, uma determinada borda precisa satisfazer uma dessas duas cláusulas para ser permitida na tabela de borda.
+No exemplo anterior, há duas cláusulas de restrição de borda na restrição *EC_BOUGHT1*, uma que conecta **Customer** a **Product** e a outra que conecta **Supplier** a **Product**. Essas duas cláusulas são aplicadas em disjunção. Ou seja, uma determinada borda precisa satisfazer uma dessas duas cláusulas para ser permitida na tabela de borda.
 
 #### <a name="creating-a-new-edge-constraint-on-existing-edge-table-with-new-edge-constraint-clause"></a>Criando uma nova restrição de borda na tabela de borda existente com uma nova cláusula de restrição de borda
 

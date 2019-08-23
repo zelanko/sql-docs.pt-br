@@ -79,7 +79,7 @@ ms.locfileid: "69493900"
   
      A imagem a seguir mostra os membros da hierarquia de atributo **Distância do Trabalho** , classificados pelos valores ASCII da chave de membro.  
   
-     ![Hierarquia de atributo de distância] do commudo (../../2014/tutorials/media/l4-memberproperties-4.gif "Hierarquia de atributo de distância") do commudo  
+     ![Hierarquia de atributo de distância](../../2014/tutorials/media/l4-memberproperties-4.gif " do commudo Hierarquia de atributo de distância") do commudo  
   
 2.  Mude para a guia **Estrutura da Dimensão** no Designer de Dimensão da dimensão Cliente, clique com o botão direito do mouse em **CommuteDistanceSort** na tabela **Cliente** do painel **Exibição da Fonte de Dados** e clique em **Novo Atributo da Coluna**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "69493900"
   
      Observe que os membros da hierarquia de atributo agora estão classificados em ordem lógica com base no aumento da distância, como mostra a imagem a seguir:  
   
-     ![Hierarquia de atributo de distância do mudo] reclassificada (../../2014/tutorials/media/l4-memberproperties-5.gif "Hierarquia de atributo de distância do mudo") reclassificada  
+     ![Hierarquia de atributo de distância do mudo](../../2014/tutorials/media/l4-memberproperties-5.gif " reclassificada Hierarquia de atributo de distância do mudo") reclassificada  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Especificando relações de atributo entre atributos em uma hierarquia definida pelo usuário](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  

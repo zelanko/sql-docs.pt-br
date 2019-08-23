@@ -199,7 +199,7 @@ A consulta retorna 336 linhas. Habilitar as [Estatísticas de consultas dinâmic
 No plano, observe o seguinte:
 1. Uma verificação de índice columnstore usada para fornecer linhas para a fase de build da Junção hash.
 2. O novo operador de Junção Adaptável. Este operador define um limite que é usado para decidir quando mudar para um plano de Loops Aninhados. Para esse exemplo, o limite é de 78 linhas. Tudo que for &gt;= 78 linhas usará uma Junção hash. Quando estiver abaixo do limite, uma junção de Loops aninhados será usada.
-3. Como a consulta retorna 336 linhas, isso excedeu o limite e, portanto, a segunda branch representa a fase de investigação de uma operação de Junção de hash padrão. Observe que as Estatísticas de consultas dinâmicas mostram as linhas que passam pelos operadores – nesse caso, "672 de 672".
+3. Como a consulta retorna 336 linhas, excede o limite. Portanto, a segunda branch representa a fase de investigação de uma operação de Junção de hash padrão. Observe que as Estatísticas de consultas dinâmicas mostram as linhas que passam pelos operadores – nesse caso, "672 de 672".
 4. E a última branch é uma Busca de índice clusterizado a ser usada pela junção de Loops aninhados que não teve o limite excedido. Observe que podemos ver "0 de 336" linhas exibidas (o branch não é usado).
 
 Agora compare o plano com a mesma consulta, mas quando o valor de *Quantidade* só tem uma linha na tabela:
@@ -222,7 +222,7 @@ No plano, observe o seguinte:
 ### <a name="adaptive-join-remarks"></a>Comentários de junção adaptável
 As junções adaptáveis apresentam um requisito de memória maior do que um plano equivalente de Junção de Loops Aninhados indexados. A memória adicional é solicitada como se os Loops Aninhados fossem uma Junção hash. Também há sobrecarga para a fase de build como uma operação de “parar e ir” em vez de uma junção equivalente de fluxo de Loops Aninhados. Com esse custo adicional vem a flexibilidade para cenários em que as contagens de linhas podem flutuar na entrada de build.
 
-As Junções adaptáveis de modo de lote funcionam para a execução inicial de uma instrução e, depois de serem compiladas, as próximas execuções permanecerão adaptáveis com base no limite de Junção Adaptável compilada e nas linhas de tempo de execução que passam pela fase de build da entrada externa.
+As Junções adaptáveis de modo de lote funcionam para a execução inicial de uma instrução. Depois que são compiladas, as próximas execuções permanecem adaptáveis com base no limite de Junção Adaptável compilada e nas linhas de tempo de execução que passam pela fase de build da entrada externa.
 
 Se uma Junção Adaptável alterna para uma operação de Loops Aninhados, ela usa as linhas já lidas pelo build de Junção Hash. O operador **não** lê novamente as linhas de referência externa novamente.
 

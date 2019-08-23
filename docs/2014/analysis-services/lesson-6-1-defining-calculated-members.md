@@ -272,7 +272,7 @@ ms.locfileid: "69493880"
   
      Observe que a margem de lucro bruto das vendas do revendedor é significativamente mais baixa que as vendas pela Internet, conforme mostrado na imagem a seguir.  
   
-     ![Painel de dados mostrando vendas] do revendedor (../../2014/tutorials/media/l6-calculatedmembers-7b.gif "Painel de dados mostrando vendas") do revendedor  
+     ![Painel de dados mostrando vendas](../../2014/tutorials/media/l6-calculatedmembers-7b.gif " do revendedor Painel de dados mostrando vendas") do revendedor  
   
 9. Adicione as medidas **Taxa de Vendas Total para Todos os Produtos**, **Taxa de Vendas pela Internet para Todos os Produtos**e **Taxa de Vendas do Revendedor para Todos os Produtos** à área de Valores.  
   

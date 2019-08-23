@@ -72,7 +72,7 @@ Para informações de compatibilidade com versões anteriores, confira [Compatib
   
 -   [Definir e modificar um filtro de colunas](publish/define-and-modify-a-column-filter.md)    
 -   [Definir e modificar um filtro de linha estático](publish/define-and-modify-a-static-row-filter.md)    
--   [Define and Modify a Parameterized Row Filter for a Merge Article](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
+-   [Definir e modificar um filtro de linha parametrizado para um artigo de mesclagem](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
 -   [Otimizar filtros de linha com parâmetros](publish/optimize-parameterized-row-filters.md)    
 -   [Definir e modificar um filtro de junção entre artigos de mesclagem](publish/define-and-modify-a-join-filter-between-merge-articles.md)  
   
