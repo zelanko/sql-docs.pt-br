@@ -508,7 +508,7 @@
               href: database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md
             - name: Interoperabilidade
               href: database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md
-        - name: Guia de início rápido
+        - name: Guia de Início Rápido
           items:
             - name: Guia de introdução
               href: database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md
@@ -2395,7 +2395,7 @@
         - name: Formatar resultados de consulta
           href: relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md
           items:
-            - name: Formatar a saída aninhada com ode PATH
+            - name: Formatar saída aninhada com o modo PATH
               href: relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md
             - name: Formatar com o modo AUTO
               href: relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md
@@ -7694,7 +7694,7 @@
               href: master-data-services/change-an-attribute-group-name-master-data-services.md
             - name: Excluir um grupo de atributos
               href: master-data-services/delete-an-attribute-group-master-data-services.md
-            - name: Controle de alterações
+            - name: Controle de Alterações
               href: master-data-services/change-tracking-master-data-services.md
               items:
                 - name: Adicionar atributos a um grupo de controle de alterações
@@ -8280,7 +8280,7 @@
               href: azure-data-studio/extensibility-apis.md
         - name: Recursos
           items:
-            - name: PERGUNTAS FREQUENTES
+            - name: Perguntas frequentes
               href: azure-data-studio/faq.md
             - name: Repositório GitHub do Azure Data Studio >>
               href: 'https://www.github.com/Microsoft/azuredatastudio'
@@ -10197,7 +10197,7 @@
           href: linux/sql-server-linux-whats-new.md
         - name: Edições e recursos com suporte
           href: linux/sql-server-linux-editions-and-components-2017.md
-        - name: PERGUNTAS FREQUENTES
+        - name: Perguntas frequentes
           href: linux/sql-server-linux-faq.md
     - name: Guias de início rápido
       items:
@@ -12973,7 +12973,7 @@
               href: relational-databases/system-functions/sys-fn-all-changes-capture-instance-transact-sql.md
             - name: sys.fn_net_changes_<capture_instance>
               href: relational-databases/system-functions/sys-fn-net-changes-capture-instance-transact-sql.md
-        - name: Controle de alterações
+        - name: Controle de Alterações
           href: relational-databases/system-functions/change-tracking-functions-transact-sql.md
           items:
             - name: CHANGETABLE
