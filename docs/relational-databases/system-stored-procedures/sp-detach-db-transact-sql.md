@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: eec8b91bbb7d90483b627aebddb7088bc80cb1ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 195da55ed9d4d76298e3a5cbbd44ed562f69da06
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912890"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000803"
 ---
-# <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
+# <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Desanexa um banco de dados que não está em uso atualmente em uma instância de servidor e, opcionalmente, executa UPDATE STATISTICS em todas as tabelas antes de desanexar.  
@@ -45,13 +45,13 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'database_name'` É o nome do banco de dados a ser desanexado. *Database_Name* é um **sysname** valor, com um valor padrão de NULL.  
+`[ @dbname = ] 'database_name'`É o nome do banco de dados a ser desanexado. *database_name* é um valor **sysname** , com um valor padrão de NULL.  
   
-`[ @skipchecks = ] 'skipchecks'` Especifica se deve ignorar ou executar UPDATE STATISTIC. *skipchecks* é um **nvarchar (10)** valor, com um valor padrão de NULL. Para ignorar UPDATE STATISTICS, especifique **verdadeira**. Para executar explicitamente UPDATE STATISTICS, especifique **falsos**.  
+`[ @skipchecks = ] 'skipchecks'`Especifica se a estatística de atualização deve ser ignorada ou executada. *skipchecks* é um valor **nvarchar (10)** , com um valor padrão de NULL. Para ignorar as estatísticas de atualização, especifique **true**. Para executar explicitamente UPDATE STATISTICs, especifique **false**.  
   
  Por padrão, UPDATE STATISTICS é executado para atualizar as informações sobre os dados nas tabelas e os índices. A execução de UPDATE STATISTICS é útil para bancos de dados que serão movidos para mídias somente leitura.  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` Especifica se o arquivo de índice de texto completo associado com o banco de dados que está sendo desanexado não será descartado do banco de dados durante a operação de desanexação. *KeepFulltextIndexFile* é um **nvarchar (10)** valor com um padrão de **true**. Se *KeepFulltextIndexFile* é **falso**, todos os arquivos de índice de texto completo associado com o banco de dados e os metadados do índice de texto completo são descartados, a menos que o banco de dados é somente leitura. Se for NULL ou **verdadeira**, texto completo relacionadas a metadados são mantidos.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`Especifica que o arquivo de índice de texto completo associado ao banco de dados que está sendo desanexado não será removido durante a operação de desanexação do banco de dados. *Keepfulltextindexfile* é um valor **nvarchar (10)** com um padrão de **true**. Se *keepfulltextindexfile* for **false**, todos os arquivos de índice de texto completo associados ao banco de dados e os metadados do índice de texto completo serão descartados, a menos que o banco de dados seja somente leitura. Se for NULL ou **true**, os metadados relacionados a texto completo serão mantidos.  
   
 > [!IMPORTANT]
 >  O **@keepfulltextindexfile** parâmetro será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não use esse parâmetro em desenvolvimentos novos e modifique, assim que possível, os aplicativos que atualmente o usam.  
@@ -63,12 +63,12 @@ sp_detach_db [ @dbname= ] 'database_name'
  Nenhum  
   
 ## <a name="remarks"></a>Comentários  
- Quando um banco de dados é desanexado, todos os metadados são descartados. Se o banco de dados era o banco de dados padrão de quaisquer contas de logon **mestre** torna-se o seu banco de dados padrão.  
+ Quando um banco de dados é desanexado, todos os metadados são descartados. Se o banco de dados for o banco de dados padrão de qualquer conta de logon, o **mestre** se tornará seu banco de dados padrão.  
   
 > [!NOTE]  
->  Para obter informações sobre como exibir o banco de dados padrão de todas as contas de logon, consulte [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Se você tiver as permissões necessárias, você pode usar [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) para atribuir um novo banco de dados padrão para um logon.  
+>  Para obter informações sobre como exibir o banco de dados padrão de todas as contas de logon, consulte [Transact-SQL &#40;&#41;sp_helplogins](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Se você tiver as permissões necessárias, poderá usar [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) para atribuir um novo banco de dados padrão a um logon.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrições  
  Um banco de dados não pode ser desanexado se algum dos seguintes fatores for verdadeiro:  
   
 -   O banco de dados está atualmente em uso. Para obter mais informações, consulte "Obtendo acesso exclusivo”, posteriormente neste tópico.  
@@ -98,9 +98,11 @@ sp_detach_db [ @dbname= ] 'database_name'
 -   O banco de dados é um banco de dados de sistema.  
   
 ## <a name="obtaining-exclusive-access"></a>Obtendo acesso exclusivo  
- A desanexação de um banco de dados exige acesso exclusivo ao banco de dados. Se o banco de dados a ser dexanexado estiver em uso, antes que ele possa ser desanexado, defina o banco de dados como modo SINGLE_USER para obter acesso exclusivo.  
-  
- Por exemplo, a seguinte `ALTER DATABASE` instrução obtém acesso exclusivo para o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] depois que todos os usuários atuais se desconectar do banco de dados do banco de dados.  
+ A desanexação de um banco de dados exige acesso exclusivo ao banco de dados. Se o banco de dados a ser dexanexado estiver em uso, antes que ele possa ser desanexado, defina o banco de dados como modo SINGLE_USER para obter acesso exclusivo.
+
+ Antes de definir o banco de dados como SINGLE_USER, verifique se a opção AUTO_UPDATE_STATISTICS_ASYNC está definida como OFF. Quando esta opção está definida como ON, o thread em segundo plano usado para a atualização de estatísticas estabelece uma conexão com o banco de dados e não será possível acessar o banco de dados em modo de usuário único. Para obter mais informações, consulte [definir um banco de dados para o modo de usuário único](../databases/set-a-database-to-single-user-mode.md).
+
+ Por exemplo, a instrução `ALTER DATABASE` a seguir obtém acesso exclusivo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ao banco de dados depois que todos os usuários atuais se desconectam do banco de dados.  
   
 ```  
 USE master;  
@@ -110,16 +112,16 @@ GO
 ```  
   
 > [!NOTE]  
->  Para forçar os usuários atuais do banco de dados imediatamente ou dentro de um número especificado de segundos, também pode usar a opção ROLLBACK: ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+>  Para forçar os usuários atuais do banco de dados imediatamente ou dentro de um determinado número de segundos, use também a opção de reversão: ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="reattaching-a-database"></a>Reanexando um banco de dados  
  Os arquivos desanexados permanecem e podem ser anexados novamente com o uso de CREATE DATABASE (com a opção FOR ATTACH ou FOR ATTACH_REBUILD_LOG). Os arquivos podem ser movidos para outro servidor, onde podem ser anexados.  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação na **sysadmin** fixa função de servidor ou associação na **db_owner** função do banco de dados.  
+ Requer a associação à função de servidor fixa **sysadmin** ou à associação na função **db_owner** do banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir desanexa o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] do banco de dados com *skipchecks* definido como true.  
+ O exemplo a seguir desanexa o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados com *skipchecks* definido como true.  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  

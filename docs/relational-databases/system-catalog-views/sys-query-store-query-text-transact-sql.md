@@ -21,14 +21,14 @@ ms.assetid: f7032fa0-7c16-4492-bb82-685806c63a8c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6c07ebb861d5dd9c118b48e4a80b5771fbd52c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b90f6641724ed526a9f7b496b792bb6cf786105f
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067980"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000791"
 ---
-# <a name="sysquerystorequerytext-transact-sql"></a>sys.query_store_query_text (Transact-SQL)
+# <a name="sysquery_store_query_text-transact-sql"></a>sys.query_store_query_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contém o [!INCLUDE[tsql](../../includes/tsql-md.md)] texto e o identificador SQL da consulta.  
@@ -36,13 +36,13 @@ ms.locfileid: "68067980"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**query_text_id**|**bigint**|Chave primária.|  
-|**query_sql_text**|**nvarchar(max)**|Texto SQL da consulta, conforme fornecido pelo usuário. Inclui espaços em branco, dicas e comentários.|  
+|**query_sql_text**|**nvarchar(max)**|Texto SQL da consulta, conforme fornecido pelo usuário. Inclui espaços em branco, dicas e comentários. Comentários e espaços antes e depois o texto da consulta são ignorados. Comentários e espaços dentro do texto não são ignorados.|  
 |**statement_sql_handle**|**vabinary(64)**|Identificador SQL da consulta individual.|  
-|**is_part_of_encrypted_module**|**bit**|Texto da consulta é uma parte de um módulo criptografado.<br/>**Observação:** SQL Data Warehouse do Azure sempre retornará zero (0).|
-|**has_restricted_text**|**bit**|Texto da consulta contém uma senha ou outras palavras unmentionable.<br/>**Observação:** SQL Data Warehouse do Azure sempre retornará zero (0).|
+|**is_part_of_encrypted_module**|**bit**|O texto da consulta faz parte de um módulo criptografado.<br/>**Observação:** O SQL Data Warehouse do Azure sempre retornará zero (0).|
+|**has_restricted_text**|**bit**|O texto da consulta contém uma senha ou outras palavras não mencionadas.<br/>**Observação:** O SQL Data Warehouse do Azure sempre retornará zero (0).|
   
 ## <a name="permissions"></a>Permissões  
- Requer o **VIEW DATABASE STATE** permissão.  
+ Requer a permissão **View Database State** .  
   
 ## <a name="see-also"></a>Consulte também  
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
