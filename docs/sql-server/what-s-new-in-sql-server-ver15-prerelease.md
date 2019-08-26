@@ -1,6 +1,6 @@
 ---
 title: Arquivo de anúncios do SQL Server 2019 CTP | Microsoft Docs
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9f881367442cfa2e24921300ba7595bdbf28ce27
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 8c34126f84987f0255d815b972e87118f184d070
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028874"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653782"
 ---
 # <a name="sql-server-2019-ctp-announcement-archive"></a>Arquivo de anúncios do SQL Server 2019 CTP
 
@@ -25,6 +25,39 @@ Este artigo fornece um arquivo de anúncios de recursos de versões do [!INCLUDE
 Este artigo será removido quando o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] for liberado para produção.
 
 Para obter informações atuais, confira [Novidades no SQL Server 2019](what-s-new-in-sql-server-ver15.md).
+
+## <a name="ctp-32-july-2019"></a>CTP 3.2 de julho de 2019
+
+### <a name="new-in-big-data-clusters"></a>Novidades em clusters de Big Data
+
+|Novo recurso ou atualização | Detalhes |
+|:---|:---|
+|Versão prévia pública |Antes do CTP 3.2, o cluster de Big Data do SQL Server estava disponível para os usuários pioneiros registrados. Esta versão permite que qualquer pessoa experimente os recursos dos clusters de Big Data do SQL Server. <br/><br/> Confira [Introdução aos clusters de Big data do SQL Server](../big-data-cluster/deploy-get-started.md).|
+|`azdata` |O CTP 3.2 apresenta o `azdata` – um utilitário de linha de comando escrito em Python que permite aos administradores de cluster inicializar e gerenciar o cluster de Big Data por meio de APIs REST. O `azdata` substitui o `mssqlctl`. Confira [Instalar o `azdata`](../big-data-cluster/deploy-install-azdata.md). |
+|PolyBase |Os nomes de coluna da tabela externa agora são usados para consultar fontes de dados de SQL Server, Oracle, Teradata, MongoDB e ODBC. Nas versões CTP anteriores, as colunas eram vinculadas somente com base no ordinal no destino e os nomes de coluna na definição de tabela externa não eram usados.|
+|Atualização de camadas do HDFS |Introdução da funcionalidade de atualização de camadas do HDFS para que uma montagem existente possa ser atualizada para o instantâneo mais recente dos dados remotos. Confira [Camadas do HDFS](../big-data-cluster/hdfs-tiering.md) |
+|Solução de problemas baseada em notebook |O CTP 3.2 introduz notebooks Jupyter para auxiliar na [implantação](../big-data-cluster/deploy-notebooks.md) e [descoberta, diagnóstico e solução de problemas](../big-data-cluster/manage-notebooks.md) de componentes em um cluster de Big Data do SQL Server. |
+| &nbsp; | &nbsp; |
+
+### <a name="new-in-analysis-services"></a>Novidades do Analysis Services
+
+| Novo recurso ou atualização | Detalhes |
+|:---|:---| 
+| Configuração de governança para atualizações de cache do Power BI.  | O serviço do Power BI armazena em cache dados de bloco do dashboard e dados de relatório para carregamento inicial do relatório do Live Connect, fazendo com que um número excessivo de consultas de cache seja enviado ao SSAS e, em casos extremos, sobrecarregue o servidor. Esta versão introduz a propriedade **ClientCacheRefreshPolicy**. Essa propriedade permite que você substitua esse comportamento no nível do servidor. Para saber mais, confira [Propriedades gerais](https://docs.microsoft.com/analysis-services/server-properties/general-properties). |
+| Anexação online  | Esse recurso fornece a capacidade de anexar um modelo de tabela como uma operação online. A anexação online pode ser usada para sincronização de réplicas somente leitura em ambientes de expansão de consulta local. Para saber mais, confira [Anexação online](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32) em Detalhes. |
+| &nbsp; | &nbsp; |
+
+### <a name="new-in-language-extensions"></a>Novidades em extensões de linguagem
+
+|Novo recurso ou atualização | Detalhes |
+|:---|:---|
+| Novo Java Runtime padrão  | O SQL Server agora inclui suporte ao Zulu Embedded for Java da Azul System em todo o produto. Para obter mais informações, confira [Java com suporte gratuito no SQL Server 2019 agora está disponível](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/). |
+
+### <a name="new-in-sql-server-on-linux"></a>Novidades no SQL Server em Linux
+
+|Novo recurso ou atualização | Detalhes |
+|:---|:---|
+| Suporte ao CDC (captura de dados de alterações) | O CDC (captura de dados de alterações) agora é compatível no Linux para SQL Server 2019. |
 
 ## <a name="ctp-31-june-2019"></a>CTP 3.1 de junho de 2019
 
