@@ -18,12 +18,12 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae39d06d96232b27d58020d5f6e6184a57001e6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912089"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009402"
 ---
 # <a name="columnstore-indexes-overview"></a>Índices columnstore: Visão geral
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -152,7 +152,7 @@ Ao criar uma tabela com a instrução `CREATE TABLE`, você pode criar a tabela 
 |Excluir uma linha de um índice columnstore.|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Use [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) para excluir uma linha.<br /><br /> **linha columnstore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marca a linha como excluída logicamente, mas não recupera o armazenamento físico da linha até que o índice seja recriado.<br /><br /> **linha deltastore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exclui a linha lógica e fisicamente.|  
 |Atualizar uma linha no índice columnstore.|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|Use [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) para atualizar uma linha.<br /><br /> **linha columnstore**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marca a linha como excluída logicamente e insere a linha atualizada no deltastore.<br /><br /> **linha deltastore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atualiza a linha no deltastore.|  
 |Carregar dados em um índice columnstore.|[Carregamento de dados dos índices columnstore](~/relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)||  
-|Força todas as linhas no deltastore a ir para o columnstore.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... `REBUILD`<br /><br /> [Desfragmentação de índices columnstore](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)|`ALTER INDEX` com a opção `REBUILD` força todas as linhas a ir para o columnstore.|  
+|Força todas as linhas no deltastore a ir para o columnstore.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... `REBUILD`<br /><br /> [Reorganizar e recompilar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)|`ALTER INDEX` com a opção `REBUILD` força todas as linhas a ir para o columnstore.|  
 |Desfragmentar um índice columnstore.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|`ALTER INDEX ... REORGANIZE` desfragmenta os índices columnstore online.|  
 |Mescle tabelas com índices columnstore.|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)||  
   
