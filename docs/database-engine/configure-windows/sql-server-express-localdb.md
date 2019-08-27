@@ -93,7 +93,7 @@ Somente um administrador no computador pode criar uma instância compartilhada d
 A maneira mais fácil de usar o LocalDB é conectar-se à instância automática pertencente ao usuário atual usando a cadeia de conexão `Server=(localdb)\MSSQLLocalDB;Integrated Security=true`. Para se conectar a um banco de dados específico usando o nome do arquivo, conecte-se usando uma cadeia de conexão semelhante a `Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf`.
 
 >[!NOTE]
->A primeira vez que o usuário de um computador tenta conectar-se ao LocalDB, a instância automática deve ser criada e iniciada. A tempo adicional para a criação da instância pode causar a falha da tentativa de conexão com uma mensagem de tempo esgotado. Quando isso acontecer, espere alguns segundos para deixar o processo de criação terminar e conecte novamente.
+>A primeira vez que o usuário de um computador tenta conectar-se ao LocalDB, a instância automática deve ser criada e iniciada. O tempo adicional para a criação da instância pode causar falha durante a tentativa de conexão e exibir uma mensagem de tempo esgotado. Quando isso acontecer, espere alguns segundos para deixar o processo de criação terminar e conecte novamente.
 
 ### <a name="create-and-connect-to-a-named-instance"></a>Criar e conectar-se a uma instância nomeada
 

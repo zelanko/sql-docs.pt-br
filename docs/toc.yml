@@ -1415,7 +1415,7 @@
             - name: data warehouse
               href: relational-databases/indexes/columnstore-indexes-data-warehouse.md
             - name: Desfragmentar
-              href: relational-databases/indexes/columnstore-indexes-defragmentation.md
+              href: relational-databases/indexes/reorganize-and-rebuild-indexes.md
     - name: SQL Graph
       href: relational-databases/graphs/sql-graph-overview.md
       items:
@@ -2395,7 +2395,7 @@
         - name: Formatar resultados de consulta
           href: relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md
           items:
-            - name: Formatar saída aninhada com o modo PATH
+            - name: Formatar a saída aninhada com ode PATH
               href: relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md
             - name: Formatar com o modo AUTO
               href: relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md
@@ -4095,9 +4095,9 @@
           items:
             - name: Suplemento de privacidade
               href: sql-server/sql-server-privacy.md
-            - name: Configuração de dados de uso e diagnóstico do SQL Server
+            - name: Configurar dados de uso e diagnóstico do SQL Server
               href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
-            - name: Configuração de dados de uso e diagnóstico da ferramenta
+            - name: Configurar dados de uso e diagnóstico da ferramenta
               href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server-tools.md
             - name: Auditoria local para o SQL Server
               href: sql-server/usage-and-diagnostic-data-in-local-audit.md
@@ -5722,8 +5722,10 @@
       items:
         - name: Novidades
           href: dma/dma-whatsnew.md
-        - name: Avaliar
+        - name: Avaliar Banco de Dados SQL
           href: dma/dma-assesssqlonprem.md
+        - name: Avaliar SSIS (SQL Server Integration Services)
+          href: dma/dma-assess-ssis.md
         - name: Identificar o SKU correto do Banco de Dados SQL do Azure
           href: dma/dma-sku-recommend-sql-db.md
         - name: Atualizar o SQL Server para uma versão posterior
