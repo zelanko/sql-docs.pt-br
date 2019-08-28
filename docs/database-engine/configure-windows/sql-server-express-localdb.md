@@ -58,7 +58,7 @@ Para saber mais sobre a API LocalDB, confira [Referência de LocalDB do SQL Serv
 
 O utilitário `SqlLocalDb` pode criar novas instâncias do LocalDB, iniciar e interromper uma instância do LocalDB e inclui opções para ajudar você a gerenciar o LocalDB. Para saber mais sobre o utilitário `SqlLocalDb`, confira [Utilitário SqlLocalDB](../../tools/sqllocaldb-utility.md).
 
-O agrupamento de instâncias do LocalDB foi definido como `SQL_Latin1_General_CP1_CI_AS` e não pode ser alterado. Normalmente há suporte para ordenações nos níveis de banco de dados, de coluna e de expressão. Os bancos de dados independentes seguem os metadados e as regras de agrupamentos `tempdb` definidas por [Agrupamentos de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md).
+A ordenação de instâncias do LocalDB foi definida como `SQL_Latin1_General_CP1_CI_AS` e não pode ser alterada. Normalmente há suporte para ordenações nos níveis de banco de dados, de coluna e de expressão. Os bancos de dados independentes seguem os metadados e as regras de ordenações `tempdb` definidas por [Ordenações de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md).
 
 ### <a name="restrictions"></a>Restrictions
 

@@ -97,7 +97,7 @@ ms.locfileid: "68077240"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Ordenação</h3>
-                                                    <p>Os agrupamentos no SQL Server fornecem propriedades de regras de classificação, de diferenciação de maiúsculas e minúsculas e de diferenciação de acentos para seus dados. As ordenações utilizadas com tipos de dados de caractere, como char e varchar, determinam a página de código e os caracteres correspondentes que podem ser representados para o tipo de dados em questão. </p>
+                                                    <p>As ordenações no SQL Server fornecem propriedades de regras de classificação, de diferenciação de maiúsculas e minúsculas e de diferenciação de acentos para seus dados. As ordenações utilizadas com tipos de dados de caractere, como char e varchar, determinam a página de código e os caracteres correspondentes que podem ser representados para o tipo de dados em questão. </p>
                                                 </div>
                                             </div>
                                         </div>

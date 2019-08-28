@@ -317,11 +317,11 @@ JOIN sys.column_master_keys cmk
 ON cmk.column_master_key_id = cekv.column_master_key_id;
 ```
 
-## <a name="manage-collations"></a>Gerenciar agrupamentos
+## <a name="manage-collations"></a>Gerenciar ordenações
 
-Always Encrypted restringe agrupamentos. Não são permitidos agrupamentos não BIN2 em colunas de cadeia de caracteres criptografadas usando a criptografia determinística. Essa restrição também se aplica a colunas de cadeia de caracteres habilitadas para enclave.
+Always Encrypted restringe ordenações. Não são permitidas ordenações não BIN2 em colunas de cadeia de caracteres criptografadas usando a criptografia determinística. Essa restrição também se aplica a colunas de cadeia de caracteres habilitadas para enclave.
 
-O uso de agrupamentos não BIN2 é permitido para colunas de cadeia de caracteres criptografadas usando criptografia aleatória e chaves de criptografia de coluna habilitadas para enclave. No entanto, a única nova funcionalidade habilitada para essas colunas é a criptografia no local. Para habilitar cálculos avançados (correspondência de padrões, operações de comparação), a coluna criptografada exige a ordenação BIN2.
+O uso de ordenações não BIN2 é permitido para colunas de cadeia de caracteres criptografadas usando criptografia aleatória e chaves de criptografia de coluna habilitadas para enclave. No entanto, a única nova funcionalidade habilitada para essas colunas é a criptografia no local. Para habilitar cálculos avançados (correspondência de padrões, operações de comparação), a coluna criptografada exige a ordenação BIN2.
 
 A tabela a seguir resume a funcionalidade das colunas de cadeia de caracteres habilitadas para enclave dependendo do tipo de criptografia e da ordem de classificação da ordenação.
 
@@ -330,14 +330,14 @@ A tabela a seguir resume a funcionalidade das colunas de cadeia de caracteres ha
 | **Não BIN2**             | Sem suporte                | Criptografia no local                       |
 | **BIN2**                 | Comparação de igualdade          | Criptografia no local e cálculos avançados |
 
-### <a name="determining-and-changing-collations"></a>Determinando e alterando agrupamentos
+### <a name="determining-and-changing-collations"></a>Determinando e alterando ordenações
 
-No SQL Server, agrupamentos podem ser definidos no nível do servidor, do banco de dados ou da coluna. Para obter instruções gerais sobre como determinar a ordenação atual e alterar uma ordenação no nível de servidor, do banco de dados ou da coluna, consulte [Suporte a ordenações e a Unicode](../../collations/collation-and-unicode-support.md).
+No SQL Server, ordenações podem ser definidas no nível do servidor, do banco de dados ou da coluna. Para obter instruções gerais sobre como determinar a ordenação atual e alterar uma ordenação no nível de servidor, do banco de dados ou da coluna, consulte [Suporte a ordenações e a Unicode](../../collations/collation-and-unicode-support.md).
 
 ### <a name="special-considerations-for-non-unicode-string-columns"></a>Considerações especiais sobre colunas de cadeia de caracteres não UNICODE
 
 A seguinte restrição adicional, imposta por uma limitação em drivers cliente SQL (não relacionada ao Always Encrypted), se aplica a colunas de cadeia de caracteres não UNICODE (ASCII). Se você substituir a ordenação do banco de dados por uma coluna de cadeia de caracteres não UNICODE (char, varchar), é necessário garantir que a ordenação da coluna use a mesma página de código que a ordenação de banco de dados.
-Para listar todos os agrupamentos com seus identificadores de página de código, use a seguinte consulta:
+Para listar todas as ordenações com seus identificadores de página de código, use a seguinte consulta:
 
 ```sql
 SELECT [Name]
@@ -555,7 +555,7 @@ Para sua conveniência, um exemplo de script do PowerShell para girar uma chave 
 
 - Você provisionou uma nova chave mestra da coluna habilitada para enclave.
 - Você tem acesso à antiga e à nova chave mestra de coluna.
-- Todas as colunas de cadeia de caracteres protegidas pela chave mestra de coluna antiga usam agrupamentos BIN2.
+- Todas as colunas de cadeia de caracteres protegidas pela chave mestra de coluna antiga usam ordenações BIN2.
 
 > [!NOTE]
 > Como alternativa, você pode alterar a ordenação das colunas de cadeia de caracteres após girar a chave mestra de coluna.

@@ -333,7 +333,7 @@ Os gatilhos funcionam em transações (implícitas ou não) e, enquanto estivere
 
 Para liberar o gatilho para um comando que não altera nenhuma linha, empregue a variável de sistema [ROWCOUNT_BIG](../functions/rowcount-big-transact-sql.md). 
 
-O seguinte trecho de código T-SQL mostra como liberar o gatilho para um comando que não altera nenhuma linha. Esse código deverá estar presente no início de cada gatilho DML:
+O seguinte snippet de código T-SQL mostra como liberar o gatilho para um comando que não altera nenhuma linha. Esse código deverá estar presente no início de cada gatilho DML:
 
 ```sql
 IF (ROWCOUNT_BIG() = 0)

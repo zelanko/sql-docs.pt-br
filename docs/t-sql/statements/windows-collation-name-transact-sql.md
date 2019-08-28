@@ -49,7 +49,7 @@ CollationDesignator_<ComparisonStyle>
 ## <a name="arguments"></a>Argumentos
 
 *CollationDesignator*   
-Especifica as regras de agrupamento básicas usadas pelo agrupamento do Windows. As regras de ordenação básicas abrangem o seguinte:
+Especifica as regras de ordenação básicas usadas pela ordenação do Windows. As regras de ordenação básicas abrangem o seguinte:
 
 - As regras de classificação e comparação aplicadas quando a classificação do dicionário é especificada. As regras de classificação são baseadas no alfabeto ou no idioma.
 - A página de código usada para armazenar dados **varchar**.
@@ -237,7 +237,7 @@ A tabela a seguir lista todas as ordenações do Windows com suporte no [!INCLUD
 
 <sup>1</sup>Ordenações do Windows somente em Unicode podem ser aplicadas apenas a dados nos níveis de coluna ou de expressão. Eles não podem ser usados como ordenações de banco de dados ou de servidor.
 
-<sup>2</sup>Como o agrupamento de chinês (Taiwan), chinês (RAE de Macau) usa as regras de chinês simplificado; ao contrário do chinês (Taiwan), ele usa a página de código 950.
+<sup>2</sup>Como a ordenação de chinês (Taiwan), chinês (RAE de Macau) usa as regras de chinês simplificado; ao contrário do chinês (Taiwan), ele usa a página de código 950.
 
 ## <a name="see-also"></a>Consulte Também
 

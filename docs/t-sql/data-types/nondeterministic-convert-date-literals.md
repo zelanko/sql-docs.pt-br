@@ -119,7 +119,7 @@ YMD-Interpretation--?--NotGuaranteed
 
 No exemplo de código anterior, o exemplo final tem uma incompatibilidade entre o formato **amd** versus a cadeia de caracteres de entrada. O terceiro nó da cadeia de caracteres de entrada representa um valor numérico muito grande para ser um dia. A Microsoft não garante o valor de saída dessas incompatibilidades.
 
-#### <a name="convert-offers-explicit-codes-for-deterministic-control-of-date-formats"></a>CONVERT oferece códigos explícitos para controle _determinístico_ dos formatos de data
+#### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT oferece códigos explícitos para controle _determinístico_ dos formatos de data
 
 Nosso artigo de documentação CAST e CONVERT lista códigos explícitos que você pode usar com a função CONVERT para controlar de _modo determinístico_ conversões de data. A cada mês, o artigo tem uma de nossas contagens de exibições de página mais altas.
 
@@ -138,7 +138,7 @@ Começando com o SQL Server 2005 e seu nível de compatibilidade 90, conversões
 
 <!-- The next live sentence needs an explanatory example!  N'somethingHere?'.
 -->
-Conversão de dados de caractere não Unicode entre agrupamentos também é considerada não determinística.
+Conversão de dados de caractere não Unicode entre ordenações também é considerada não determinística.
 
 
 

@@ -515,7 +515,7 @@ Nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 
 Suporte completo para a amplamente utilizada codificação de caracteres UTF-8 como codificação de importação ou exportação, ou como ordenação em nível de banco de dados ou nível de coluna para dados de texto. A UTF-8 é permitida nos tipos de dados `CHAR` e `VARCHAR` e é habilitada quando você cria ou altera a ordenação de um objeto para uma ordenação com o sufixo `UTF8`. 
 
-Por exemplo, `LATIN1_GENERAL_100_CI_AS_SC` para `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. A UTF-8 só está disponível para agrupamentos do Windows com suporte para caracteres suplementares, conforme introduzido no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. `NCHAR` e `NVARCHAR` permitem somente a codificação UTF-16 e permanecem inalterados.
+Por exemplo, `LATIN1_GENERAL_100_CI_AS_SC` para `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. A UTF-8 só está disponível para ordenações do Windows com suporte para caracteres suplementares, conforme introduzida no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. `NCHAR` e `NVARCHAR` permitem somente a codificação UTF-16 e permanecem inalterados.
 
 Esse recurso pode fornecer economia de armazenamento significativa dependendo do conjunto de caracteres utilizado. Por exemplo, a alteração de um tipo de dados de coluna existente com cadeias de caracteres ASCII (Latinas) de `NCHAR(10)` para `CHAR(10)` usando uma ordenação habilitada para UTF-8 resulta em 50% de redução nos requisitos de armazenamento. Essa redução ocorre porque `NCHAR(10)` exige 20 bytes para armazenamento, enquanto `CHAR(10)` requer 10 bytes para a mesma cadeia de caracteres Unicode.
 
@@ -812,7 +812,7 @@ FROM sys.dm_exec_requests AS d
   - Novas APIs do notebook foram adicionadas. (CTP 2.3)
   - Adicionado o comando "Reinstalar dependências do notebook" para ajudá-lo com as atualizações de pacote do Python. (CTP 2.3)
   - Conecte-se e gerencie clusters de Big Data do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. (CTP 2.1)
-  - editar e executar consultas em um ambiente de desenvolvimento moderno com Intellisense extremamente rápido, trechos de código e integração de controle do código-fonte. (CTP 2.0) 
+  - editar e executar consultas em um ambiente de desenvolvimento moderno com Intellisense extremamente rápido, snippets de código e integração de controle do código-fonte. (CTP 2.0) 
   - visualizar rapidamente dados com gráficos internos de seus conjuntos de resultados. (CTP 2.0)
   - criar painéis personalizados para seus servidores e bancos de dados usando widgets personalizáveis. (CTP 2.0)  
   - gerenciar facilmente seu ambiente mais abrangente com o terminal interno. (CTP 2.0)

@@ -45,7 +45,7 @@ ms.locfileid: "62871510"
  Tabelas temporárias podem não recorrer a tipos definidos pelo usuário, coleções de esquemas XML ou funções definidas pelo usuário.  
   
 ## <a name="collation"></a>Ordenação  
- No modelo de banco de dados dependente, há três tipos separados de agrupamento: Agrupamento de banco de dados, agrupamento de instância e agrupamento de tempdb. Bancos de dados independentes usam apenas duas ordenações, ordenação de banco de dados e a nova ordenação de catálogo. Veja [Ordenações de banco de dados independentes](contained-database-collations.md) para obter mais detalhes sobre a ordenação de banco de dados independente.  
+ No modelo de banco de dados dependente, há três tipos de ordenação: Ordenação de banco de dados, ordenação de instância e ordenação de tempdb. Bancos de dados independentes usam apenas duas ordenações, ordenação de banco de dados e a nova ordenação de catálogo. Veja [Ordenações de banco de dados independentes](contained-database-collations.md) para obter mais detalhes sobre a ordenação de banco de dados independente.  
   
 ## <a name="user-options"></a>Opções de usuário  
  Ao habilitar bancos de dados independentes, é preciso definir a [Opção user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) como 0 para a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

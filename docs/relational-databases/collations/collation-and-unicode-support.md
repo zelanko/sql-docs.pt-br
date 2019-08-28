@@ -84,10 +84,10 @@ Os dados classificados de ordenações primárias na sequência de valores codif
 Existem dois tipos de ordenações primárias no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: as ordenações **BIN** mais antigas e as ordenações **BIN2** mais novas. Em uma ordenação **BIN2**, todos os caracteres são classificados de acordo com seus pontos de código. Em uma ordenação **BIN**, apenas o primeiro caractere é classificado de acordo com o ponto de código e os caracteres restantes são classificados de acordo com seus valores de byte. (Como a plataforma Intel é um arquitetura little endian, os caracteres de código Unicode são sempre trocados por bytes armazenados.)    
     
 #### <a name="sql-server-collations"></a>ordenações do SQL Server    
-Os agrupamentos (SQL_\*) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferecem compatibilidade de ordem de classificação com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As regras de classificação de dicionário para dados não Unicode são incompatíveis com rotinas de classificação fornecidas pelos sistemas operacionais Windows. No entanto, a classificação de dados Unicode é compatível com uma versão específica das regras de classificação do Windows. Como as ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam regras de comparação diferentes para dados não Unicode e Unicode, você vê resultados diferentes para comparações dos mesmos dados, dependendo do tipo de dados subjacente. Para obter mais informações, veja [Nome de ordenação do SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).    
+As ordenações (SQL_\*) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferecem compatibilidade de ordem de classificação com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As regras de classificação de dicionário para dados não Unicode são incompatíveis com rotinas de classificação fornecidas pelos sistemas operacionais Windows. No entanto, a classificação de dados Unicode é compatível com uma versão específica das regras de classificação do Windows. Como as ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam regras de comparação diferentes para dados não Unicode e Unicode, você vê resultados diferentes para comparações dos mesmos dados, dependendo do tipo de dados subjacente. Para obter mais informações, veja [Nome de ordenação do SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).    
     
 > [!NOTE]    
-> Quando você atualiza uma instância em português do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os agrupamentos (SQL_\*) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser especificados para compatibilidade com instâncias existentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como a ordenação padrão de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é definida durante a instalação, é importante especificar as configurações de ordenação com cuidado quando as seguintes afirmações forem verdadeiras:    
+> Quando você atualiza uma instância em português do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as ordenações (SQL_\*) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser especificadas para compatibilidade com instâncias existentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como a ordenação padrão de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é definida durante a instalação, é importante especificar as configurações de ordenação com cuidado quando as seguintes afirmações forem verdadeiras:    
 >     
 > -   Seu código de aplicativo depende do comportamento de ordenações anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
 > -   Você deve armazenar dados de caractere que refletem vários idiomas.    
@@ -146,18 +146,18 @@ Como alternativa, começando com o [!INCLUDE[sql-server-2019](../../includes/sss
        
 Para usar as ordenações UTF-16 disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) para melhorar a pesquisa e classificação de alguns caracteres Unicode (somente ordenações do Windows), selecione uma das ordenações dos caracteres suplementares (\_SC) ou uma das ordenações da versão 140.    
  
-Para usar os agrupamentos UTF-8 disponíveis no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] para aprimorar a pesquisa e a classificação de alguns caracteres Unicode (somente agrupamentos do Windows), você precisa selecionar agrupamentos habilitados para codificação UTF-8 (\_UTF8).
+Para usar as ordenações UTF-8 disponíveis no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] para aprimorar a pesquisa e a classificação de alguns caracteres Unicode (somente ordenações do Windows), você precisa selecionar ordenações habilitadas para codificação UTF-8 (\_UTF8).
  
 -   O sinalizador de UTF8 pode ser aplicado a:    
     -   Ordenações da versão 90 
         > [!NOTE]
-        > Somente quando caracteres suplementares (\_SC) ou agrupamentos com diferenciação de seletor de variação (\_VSS) já existem nesta versão.
+        > Somente quando caracteres suplementares (\_SC) ou ordenações com diferenciação de seletor de variação (\_VSS) já existem nesta versão.
     -   Ordenações da versão 100    
-    -   Agrupamentos da versão 140   
+    -   Ordenações da versão 140   
     -   Ordenação binária BIN2<sup>1</sup>
     
 -   O sinalizador de UTF8 não pode ser aplicado a:    
-    -   Agrupamentos da versão 90 sem suporte a caracteres suplementares (\_SC) ou a diferenciação de seletor de variação (\_VSS)    
+    -   Ordenações da versão 90 sem suporte a caracteres suplementares (\_SC) ou a diferenciação de seletor de variação (\_VSS)    
     -   As ordenações primárias BIN ou BIN2<sup>2</sup>    
     -   As ordenações do SQL\*  
     
@@ -237,7 +237,7 @@ Aplicativos de banco de dados que interagem com o [!INCLUDE[ssNoVersion](../../i
  
 A partir do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], há suporte para novas famílias de ordenação em japonês, com as permutações de várias opções (\_CS, \_AS, \_KS, \_WS, \_VSS). 
 
-Para listar esses agrupamentos, você pode consultar o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:      
+Para listar essas ordenações, você pode consultar o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:      
 
 ```sql 
 SELECT Name, Description FROM fn_helpcollations()  
@@ -253,7 +253,7 @@ Essas ordenações são compatíveis com índices, tabelas com otimização de m
 ## <a name="utf8"></a> Suporte para UTF-8
 O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] apresenta suporte completo para a codificação de caracteres UTF-8 amplamente utilizada como codificação de importação ou exportação e como ordenação em nível de coluna ou de banco de dados para dados de cadeia de caracteres. A UTF-8 é permitida nos tipos de dados **char** e **varchar** e é habilitada quando você cria ou altera a ordenação de um objeto para uma ordenação com o sufixo `UTF8`. Por exemplo, `LATIN1_GENERAL_100_CI_AS_SC` para `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. 
 
-A UTF-8 só está disponível para agrupamentos do Windows com suporte para caracteres suplementares, conforme introduzido no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Os tipos de dados **nchar** e **nvarchar** permitem apenas codificação UCS-2 e UTF-16 e permanecem inalterados.
+A UTF-8 só está disponível para ordenações do Windows com suporte para caracteres suplementares, conforme introduzida no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Os tipos de dados **nchar** e **nvarchar** permitem apenas codificação UCS-2 e UTF-16 e permanecem inalterados.
 
 ### <a name="storage_differences"></a> Diferenças de armazenamento entre UTF-8 e UTF-16
 O Unicode Consortium aloca um ponto de código exclusivo para cada caractere, que é um valor no intervalo de 000000 a 10FFFF. Com o [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], as codificações em UTF-8 e UTF-16 estão disponíveis para representar o intervalo completo:    

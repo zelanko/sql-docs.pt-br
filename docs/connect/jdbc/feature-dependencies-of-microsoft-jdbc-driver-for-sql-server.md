@@ -36,7 +36,7 @@ Este artigo lista as bibliotecas das quais o Microsoft JDBC Driver para SQL Serv
 
 Os projetos específicos que exigem qualquer um dos recursos anteriores precisam declarar explicitamente as respectivas dependências em seu arquivo POM.
 
-**Por exemplo:** quando estiver usando o recurso de Autenticação do Azure Active Directory, será necessário declarar novamente a dependência `adal4j` no arquivo POM do projeto. Veja o trecho de código a seguir:
+**Por exemplo:** quando estiver usando o recurso de Autenticação do Azure Active Directory, será necessário declarar novamente a dependência `adal4j` no arquivo POM do projeto. Veja o snippet a seguir:
 
 ```xml
 <dependency>
@@ -59,7 +59,7 @@ Os projetos específicos que exigem qualquer um dos recursos anteriores precisam
 </dependency>
 ```
 
-**Por exemplo:** quando estiver usando o recurso Azure Key Vault, será necessário declarar novamente a dependência `azure-keyvault` e a dependência `adal4j` no arquivo POM do projeto. Veja o trecho de código a seguir:
+**Por exemplo:** quando estiver usando o recurso Azure Key Vault, será necessário declarar novamente a dependência `azure-keyvault` e a dependência `adal4j` no arquivo POM do projeto. Veja o snippet a seguir:
 
 ```xml
 <dependency>

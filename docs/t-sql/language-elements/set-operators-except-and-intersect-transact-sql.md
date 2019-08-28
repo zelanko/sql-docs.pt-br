@@ -70,7 +70,7 @@ INTERSECT
 Retorna qualquer valor distinto retornado pela consulta à esquerda e à direita do operador INTERSECT.  
   
 ## <a name="remarks"></a>Remarks  
-Os tipos de dados de colunas comparáveis são retornados pelas consultas à esquerda e à direita dos operadores EXCEPT ou INTERSECT. Esses tipos de dados podem incluir tipos de dados de caractere com agrupamentos diferentes. Quando isso acontece, a comparação necessária é executada de acordo com as regras de [precedência de agrupamento](../../t-sql/statements/collation-precedence-transact-sql.md). Se você não puder executar essa conversão, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retornará um erro.  
+Os tipos de dados de colunas comparáveis são retornados pelas consultas à esquerda e à direita dos operadores EXCEPT ou INTERSECT. Esses tipos de dados podem incluir tipos de dados de caractere com ordenações diferentes. Quando isso acontece, a comparação necessária é executada de acordo com as regras de [precedência de ordenação](../../t-sql/statements/collation-precedence-transact-sql.md). Se você não puder executar essa conversão, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retornará um erro.  
   
 Ao comparar valores de colunas para determinar linhas DISTINTAS, dois valores NULL são considerados iguais.  
   
