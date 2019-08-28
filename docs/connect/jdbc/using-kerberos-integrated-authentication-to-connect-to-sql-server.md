@@ -1,7 +1,7 @@
 ---
 title: Como usar a autenticação integrada do Kerberos para se conectar ao SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 894da21c079b776524c07cab8b8f223bae769aee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2215e9f6b6c8cd0e19c220d16ebc7a1520550a42
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916229"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026191"
 ---
-# <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Usando a autenticação integrada Kerberos para conectar-se ao SQL Server
+# <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Como usar a autenticação integrada do Kerberos para se conectar ao SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -37,7 +37,7 @@ O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] define as seguin
 
 ## <a name="remarks"></a>Remarks
 
-Antes do [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], os aplicativos podiam especificar a autenticação integrada (usando Kerberos ou NTLM, dependendo do que está disponível) usando a propriedade de conexão **IntegratedSecurity** e referenciando **sqljdbc_auth. dll**, conforme descrito em [criando a URL](../../connect/jdbc/building-the-connection-url.md)de conexão.
+Antes do [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], os aplicativos podiam especificar a autenticação integrada (usando Kerberos ou NTLM, dependendo do que está disponível) usando a propriedade de conexão **IntegratedSecurity** e referenciando **sqljdbc_auth. dll, como** descrito em [criando a URL de conexão](../../connect/jdbc/building-the-connection-url.md).
 
 Começando com o [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], um aplicativo pode usar a propriedade de conexão **authenticationScheme** para indicar que deseja se conectar a um banco de dados usando a autenticação integrada Kerberos por meio da implementação Java Kerberos pura:
 
@@ -61,7 +61,7 @@ As seguintes diretrizes ajudarão você a configurar o Kerberos:
 > [!NOTE]  
 > O atributo de conexão serverSpn é compatível somente com os Microsoft JDBC Drivers 4.2 e superiores.
 
-## <a name="service-principal-names"></a>Nomes de Entidade de Serviço
+## <a name="service-principal-names"></a>Nomes de entidades de serviço
 
 Um SPN (nome da entidade de serviço) é o nome pelo qual um cliente identifica exclusivamente uma instância de um serviço.
 
@@ -192,7 +192,7 @@ jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationSc
 
 A propriedade username não requer REALm se o usuário pertencer ao conjunto default_realm no arquivo krb5. conf. Quando `userName` `integratedSecurity=true;` `authenticationScheme=JavaKerberos;` e `password` é definido juntamente com a propriedade e, a conexão é estabelecida com o valor de nome de usuário como entidade de segurança Kerberos junto com a senha fornecida.
 
-## <a name="using-kerberos-authentication-from-unix-machines-on-the-same-domain"></a>Usando a autenticação Kerberos de computadores UNIX no mesmo domínio
+## <a name="using-kerberos-authentication-from-unix-machines-on-the-same-domain"></a>Como usar a autenticação Kerberos de computadores UNIX no mesmo domínio
 
 Este guia pressupõe que já exista uma instalação Kerberos em funcionamento. Execute o código a seguir em um computador Windows com autenticação Kerberos em funcionamento para verificar se o mencionado acima é verdadeiro. O código imprimirá "esquema de autenticação: KERBEROS" no console, se for bem-sucedido. Não são necessários sinalizadores de tempo de execução adicionais, dependências ou configurações de driver fora daqueles fornecidos. O mesmo bloco de código pode ser executado no Linux para verificar conexões bem-sucedidas.
 
@@ -219,6 +219,6 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 5. Verifique as credenciais no tíquete por meio `klist` do e confirme se as credenciais são aquelas que você pretende usar para autenticação.
 6. Execute o código de exemplo acima e confirme se a autenticação Kerberos foi bem-sucedida.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Conectando ao SQL Server com o JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
