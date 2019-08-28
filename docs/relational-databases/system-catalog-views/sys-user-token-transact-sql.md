@@ -1,9 +1,9 @@
 ---
 title: sys.user_token (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 08/27/2019
 ms.prod: sql
-ms.prod_service: database-engine
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: be018103-5e57-43a4-9160-9bf420892aa7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 42214bc08d0d4eb24c3b51f3edd8010ba8bdb0e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e2f093083277d23bad91ea268da0026d6c4dc1a
+ms.sourcegitcommit: f517f1e2e7cac983fdb41229e60ca7ad019ecd48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095549"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70064043"
 ---
-# <a name="sysusertoken-transact-sql"></a>sys.user_token (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="sysuser_token-transact-sql"></a>sys.user_token (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Retorna uma linha para todo principal de banco de dados que faz parte do token de usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -40,8 +40,8 @@ ms.locfileid: "68095549"
 |**principal_id**|**int**|ID do principal. O valor é exclusivo no banco de dados.|  
 |**sid**|**varbinary(85)**|Identificador de segurança do principal se o principal for definido fora do banco de dados. Por exemplo, pode ser um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], logon do Windows, logon de grupo do Windows ou um logon mapeado para um certificado, caso contrário, esse valor será NULL.|  
 |**name**|**nvarchar (128)**|Nome do principal. O valor é exclusivo no banco de dados.|  
-|**type**|**nvarchar (128)**|Descrição do tipo de principal. Todos os tipos são mapeados para **sid**. O valor pode ser um dos seguintes:<br /><br /> SQL USER<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> ROLE<br /><br /> APPLICATION ROLE<br /><br /> DATABASE ROLE<br /><br /> USER MAPPED TO CERTIFICATE<br /><br /> USER MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
-|**Uso**|**nvarchar (128)**|Indica que o principal participa da avaliação de permissões GRANT ou DENY ou serve como um autenticador.<br /><br /> Este valor pode ser um dos seguintes:<br /><br /> GRANT OR DENY<br /><br /> DENY ONLY<br /><br /> AUTHENTICATOR|  
+|**type**|**nvarchar (128)**|Descrição do tipo de principal. Todos os tipos são mapeados para **Sid**. O valor pode ser um dos seguintes:<br /><br /> SQL USER<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> ROLE<br /><br /> APPLICATION ROLE<br /><br /> DATABASE ROLE<br /><br /> USER MAPPED TO CERTIFICATE<br /><br /> USER MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
+|**usos**|**nvarchar (128)**|Indica que o principal participa da avaliação de permissões GRANT ou DENY ou serve como um autenticador.<br /><br /> Este valor pode ser um dos seguintes:<br /><br /> GRANT OR DENY<br /><br /> DENY ONLY<br /><br /> AUTHENTICATOR|  
   
 ## <a name="see-also"></a>Consulte também  
  [sys.login_token &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-login-token-transact-sql.md)   
