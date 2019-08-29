@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 558923684f88688a4b364157341957cbce7b6013
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2eb827cbb971195a89a2cd5bdd26dad1bd9f196b
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006118"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621792"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Change Data Capture e outros recursos do SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "68006118"
   
 -   Se um banco de dados for desanexado e anexado ao mesmo servidor ou a outro servidor, a captura de dados de alteração permanecerá habilitada.  
   
--   Se um banco de dados for anexado ou restaurado com a opção **KEEP_CDC** para qualquer edição diferente da Enterprise, a operação será bloqueada, pois a captura de dados de alterações exige o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. A mensagem de erro 934 é exibida:  
+-   Se um banco de dados for anexado ou restaurado com a opção **KEEP_CDC** para qualquer edição diferente de Standard ou Enterprise, a operação será bloqueada, pois a captura de dados de alterações exige as edições Standard ou Enterprise do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A mensagem de erro 934 é exibida:  
   
      `SQL Server cannot load database '%.*ls' because Change Data Capture is enabled. The currently installed edition of SQL Server does not support Change Data Capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports Change Data Capture.`  
   

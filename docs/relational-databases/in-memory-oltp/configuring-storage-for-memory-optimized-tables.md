@@ -10,19 +10,24 @@ ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d4c7f50e791324d7e0a0a13164875c5095eb5d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: af9f37bb0cc3508d1a421c75de4297b3f015f6a7
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915282"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634574"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configuração do armazenamento para tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Você precisa configurar a capacidade de armazenamento e operações de entrada/saída por segundo (IOPS).  
   
 ## <a name="storage-capacity"></a>Capacidade de armazenamento  
- Use as informações em [Estimar requisitos de memória para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) para estimar o tamanho na memória das tabelas com otimização de memória duráveis do banco de dados. Como os índices não são mantidos para tabelas com otimização de memória, não incluem o tamanho dos índices. Depois de determinar o tamanho, você precisa fornecer espaço em disco que é quatro vezes o tamanho das tabelas duráveis na memória.  
+
+Use as informações em [Estimar requisitos de memória para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) para estimar o tamanho na memória das tabelas com otimização de memória duráveis do banco de dados. Como os índices não são mantidos para tabelas com otimização de memória, não inclua o tamanho dos índices. 
+ 
+Depois de determinar o tamanho, forneça espaço em disco suficiente para manter os arquivos de ponto de verificação, que são usados para armazenar dados recentemente alterados. Os dados armazenados contêm não apenas o conteúdo de novas linhas adicionadas às tabelas na memória, mas também novas versões de linhas existentes. Esse armazenamento aumenta quando as linhas são inseridas ou atualizadas. As versões de linha são mescladas e o armazenamento é recuperado quando ocorre um truncamento de log. Se o truncamento de log for atrasado por qualquer motivo, o armazenamento de OLTP in-memory aumentará.
+
+Um bom ponto de partida para dimensionar o armazenamento para essa área é reservar quatro vezes o tamanho das tabelas duráveis na memória. Monitore o uso do espaço e esteja preparado para expandir o armazenamento disponível para isso, se necessário.
   
 ## <a name="storage-iops"></a>IOPS de armazenamento  
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] pode aumentar significativamente a taxa de transferência da carga de trabalho. Portanto, é importante garantir que a E/A não seja um gargalo.  

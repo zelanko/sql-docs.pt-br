@@ -11,12 +11,12 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d632934b3b350077606d93ca162e8f859f0a533
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7644e38995d7afb7493ed3bfec20f2049beb9055
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912155"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009449"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Índices columnstore – Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67912155"
 -   Isolamento de instantâneo no nível de compatibilidade do banco de dados 130 e superior.  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>Melhora o desempenho combinando índices não clusterizado e columnstore  
- Do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]em diante, é possível definir índices não clusterizados em um índice columnstore clusterizado.   
+ A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], é possível definir índices não clusterizados em um índice columnstore clusterizado.   
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>Exemplo: melhorar a eficiência de buscas de tabelas com um índice não clusterizado  
  Para melhorar a eficiência das buscas de tabelas em um data warehouse, você pode criar um índice não clusterizado projetado para executar consultas que executam melhor com as buscas de tabelas. Por exemplo, as consultas que procuram valores correspondentes ou retornam um pequeno intervalo de valores terão um desempenho melhor em um índice de árvore B em vez de um índice columnstore. Elas não exigem uma verificação de tabela completa por meio do índice columnstore e retornarão o resultado correto com mais rapidez, fazendo uma pesquisa binária por meio de um índice de árvore B.  
@@ -131,6 +131,6 @@ END TRAN
  [Diretrizes de Carregamento de Dados de Índices columnstore](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Desempenho de consultas de Índices columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [Desfragmentação de índices columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
+ [Reorganizar e recompilar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    
  [Arquitetura de índices columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index) 
   

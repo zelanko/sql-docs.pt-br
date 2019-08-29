@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e7c6e170def3a51bc85c80e485370e3520d73d7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8be2e837ff71237cf6d39f8593e8b852cc08ed2e
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089858"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653370"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -1009,7 +1009,7 @@ Tabelas temporárias globais para o [!INCLUDE[ssSDSfull](../../includes/sssdsful
 > Este recurso está disponível no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 ### <a name="troubleshooting-global-temporary-tables-for-azure-sql-database"></a>Solucionando problemas de tabelas temporárias globais para o Banco de Dados SQL do Azure
-Para a solução de problemas de tempdb, veja [Solução de problemas de espaço em disco insuficiente em tempdb](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105)).
+Para solucionar problemas do tempdb, confira [Como monitorar o uso do tempdb](../../relational-databases/databases/tempdb-database.md#how-to-monitor-tempdb-use).
 
 > [!NOTE]
 > Somente um administrador de servidor pode acessar as DMVs de solução de problemas em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -1297,7 +1297,7 @@ CREATE TABLE UDTypeTable
     ( u utf8string, ustr AS u.ToString() PERSISTED ) ;
 ```
 
-### <a name="l-using-the-username-function-for-a-computed-column"></a>L. Usando uma função USER_NAME para uma coluna computada
+### <a name="l-using-the-user_name-function-for-a-computed-column"></a>L. Usando uma função USER_NAME para uma coluna computada
 O exemplo a seguir usa a função `USER_NAME()` na coluna `myuser_name`.
 
 ```sql

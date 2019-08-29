@@ -1,7 +1,7 @@
 ---
 title: Ajuda do Assistente de Instalação | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 08/16/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
-ms.openlocfilehash: edd2c17b106e536f1a2694fe0cb25e34b10d1138
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: b32ad209651c30f810f239b0c14689be497c4378
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894061"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69609293"
 ---
 # <a name="installation-wizard-help"></a>Ajuda do Assistente de Instalação
 
@@ -399,7 +399,7 @@ As seguintes recomendações se aplicam ao servidor de arquivos SMB:
   
 * A conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deverá ser uma conta de domínio se for usado um servidor de arquivos SMB.  
   
-* A conta usada para instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ter permissões NTFS Full Control na pasta de compartilhamento de arquivos SMB usada como o diretório de dados.  
+* A conta usada para instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisa ter permissões NTFS **Controle Total** na pasta de compartilhamento de arquivos SMB usada como o diretório de dados.  
   
 * A conta usada para instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ter privilégios SeSecurityPrivilege no servidor de arquivos SMB. Para conceder esse privilégio, use o console de Política de Segurança Local no servidor de arquivos para adicionar a conta de configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à política **Gerenciar o log de auditoria e segurança**. Essa configuração está na seção **Atribuições de Direitos do Usuário**, em **Políticas Locais**, no console Política de Segurança Local.  
   
@@ -417,11 +417,35 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="database-engine-configuration---maxdop-page"></a>Página Configuração do Mecanismo de Banco de Dados – MaxDOP
+## <a name="a-namemaxdopa-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/> Página Configuração do Mecanismo de Banco de Dados – MaxDOP
 
-O **MaxDOP (grau máximo de paralelismo)** determina o número máximo de processadores que uma única instrução pode utilizar. O SQL Server 2019 introduz a capacidade de configurar essa opção durante a instalação. O SQL Server 2019 também detecta automaticamente a configuração de MaxDOP recomendada para o servidor com base no número de núcleos. O valor máximo padrão é 8.  
+O **MaxDOP (grau máximo de paralelismo)** determina o número máximo de processadores que uma única instrução pode utilizar. O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduz a capacidade de configurar essa opção durante a instalação. O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] também detecta automaticamente a configuração de MaxDOP recomendada para o servidor com base no número de núcleos.  
 
-Você pode definir manualmente essa configuração nesta página e modificar essa configuração após a instalação. Para obter mais informações, confira [Grau máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+Se essa página for ignorada durante a instalação, o valor de MaxDOP padrão será o valor recomendado exibido nessa página, em vez do valor padrão [!INCLUDE[ssde_md](../../includes/ssde_md.md)] das versões anteriores (0). Você também pode definir manualmente essa configuração na página e modificar a configuração após a instalação. 
+
+### <a name="uielement-list"></a>Lista de elementos de interface do usuário
+
+* O **MaxDOP (grau máximo de paralelismo)** é o valor do número máximo de processadores a ser usado durante uma execução paralela de uma única instrução. O valor padrão será alinhado às diretrizes de grau máximo da opção de paralelismo especificadas em [Configurar a opção de configuração de servidor grau máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).
+
+## <a name="a-namememorya-database-engine-configuration---memory-page"></a><a name="memory"><a/> Página Configuração do Mecanismo de Banco de Dados – Memória
+
+A **memória mínima do servidor** determina o menor limite de memória que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usará para o pool de buffers e outros caches. Tanto o valor padrão quanto o valor recomendado são 0. Para obter mais informações sobre os efeitos de **memória mínima do servidor**, confira o [Guia de arquitetura de gerenciamento de memória](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory).
+
+A **memória máxima do servidor** determina o limite máximo de memória que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usará para o pool de buffers e outros caches. O valor padrão é 2.147.483.647 MB (megabytes), e os valores recomendados calculados serão alinhados com as diretrizes especificadas em [Opções de configuração de memória do servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually) para uma instância autônoma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], com base na memória do sistema existente. Para obter mais informações sobre os efeitos de **memória máxima do servidor**, confira o [Guia de arquitetura de gerenciamento de memória](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory).
+
+Se essa página for ignorada durante a instalação, o valor padrão de **memória máxima do servidor** usado será o valor padrão de [!INCLUDE[ssde_md](../../includes/ssde_md.md)] (2.147.483.647 megabytes). Você pode definir essas configurações manualmente nessa página depois de escolher o botão de opção **Recomendado** e pode modificá-las após a instalação. Para saber mais, veja [Opções de configuração de memória do servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
+
+### <a name="uielement-list"></a>Lista de elementos de interface do usuário
+  
+**Default**: esse botão de opção é selecionado por padrão e define as configurações **memória mínima do servidor** e **memória máxima do servidor** para os valores padrão de [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. 
+
+**Recomendado**: esse botão de opção precisa ser selecionado para aceitar os valores recomendados calculados ou a fim de alterar os valores calculados para valores configurados pelo usuário.  
+  
+**Memória Mínima do Servidor (MB)** : se estiver fazendo a alteração do valor recomendado calculado para um valor configurado pelo usuário, insira o valor de **memória mínima do servidor**.  
+  
+**Memória Máxima do Servidor**: se estiver fazendo a alteração do valor recomendado calculado para um valor configurado pelo usuário, insira o valor de **memória máxima do servidor**.  
+
+**Clique aqui para aceitar as configurações de memória recomendadas para o Mecanismo de Banco de Dados do SQL Server**: marque esta caixa de seleção para aceitar as configurações de memória recomendadas calculadas neste servidor. Se o botão de opção **Recomendado** tiver sido selecionado, a instalação não poderá continuar sem que essa caixa de seleção esteja selecionada.
 
 ::: moniker-end
 

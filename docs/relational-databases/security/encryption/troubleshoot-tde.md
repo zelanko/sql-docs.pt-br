@@ -10,35 +10,32 @@ ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
-ms.date: 04/26/2019
+ms.date: 08/20/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f67d1ed9bf809baaa4d934947e86d3fd1b7ed0b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f60f95f3fdd9ca31574e4e0052c83ae72bd8a9b4
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111530"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903617"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Erros comuns de Transparent Data Encryption com chaves gerenciadas pelo cliente no Azure Key Vault
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-Este artigo descreve os requisitos para usar a TDE (Transparent Data Encryption) com chaves gerenciadas pelo cliente no Azure Key Vault e como identificar e resolver erros comuns.
+Este artigo descreve como identificar e resolver os problemas de acesso de chave do Azure Key Vault que fizeram com que um banco de dados configurado para usar [TDE (Transparent Data Encryption) com chaves gerenciadas pelo cliente no Azure Key Vault](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql) se torne inacessível.
 
-## <a name="requirements"></a>Requisitos
+## <a name="introduction"></a>Introdução
+Quando o TDE está configurado para usar uma chave gerenciada pelo cliente no Azure Key Vault, o acesso contínuo a esse protetor de TDE é necessário para que o banco de dados permaneça online.  Se o SQL Server lógico perder o acesso ao protetor de TDE gerenciado pelo cliente no Azure Key Vault, um banco de dados negará todas as conexões e aparecerá inacessível no portal do Azure.
 
-Para solucionar a TDE com um protetor de TDE gerenciado pelo cliente no Key Vault, é necessário atender a esses requisitos:
+Durante as primeiras 48 horas, se o problema subjacente de acesso à chave do Azure Key Vault for resolvido, o banco de dados será reparado e colocado online automaticamente.  Isso significa que para todos os cenários de interrupção de rede intermitente e temporário não é necessária ação do usuário, e o banco de dados será colocado online automaticamente.  Na maioria dos casos, a ação do usuário é necessária para resolver o problema subjacente de acesso à chave do cofre de chaves. 
 
-- A instância lógica do SQL Server e o cofre de chaves devem estar localizados na mesma região.
-- A identidade da instância lógica do SQL Server fornecida pelo Azure AD (Azure Active Directory), a AppId no Azure Key Vault, deve ser de um locatário na assinatura original. Se o servidor for movido para uma assinatura diferente daquela onde foi criado, a identidade do servidor (AppId) deve ser recriada.
-- O cofre de chaves deve estar em execução. Para saber como verificar o status do cofre de chaves, confira o [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview). Para se inscrever para receber notificações, leia sobre os [grupos de ação](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups).
-- Em um cenário de recuperação de desastres geográficos, os dois cofres de chaves precisam conter o mesmo material de chave para que um failover funcione.
-- O servidor lógico deve ter uma identidade do Azure AD (uma AppId) para autenticar o cofre de chaves.
-- A AppId precisa ter acesso ao cofre de chaves e deve ter as permissões Obter, Encapsular e Desencapsular nas chaves selecionadas como Protetores de TDE.
+Se um banco de dados inacessível não for mais necessário, ele poderá ser excluído imediatamente para interromper os custos.  Todas as outras ações no banco de dados não são permitidas até que o acesso à chave de Azure Key Vault tenha sido restaurado e o banco de dados fique novamente online.   A alteração da opção TDE do cliente gerenciado para chaves de serviço gerenciadas no servidor também não tem suporte enquanto um banco de dados criptografado com chaves gerenciadas pelo cliente estiver inacessível. Isso é necessário para proteger os dados contra o acesso não autorizado, enquanto as permissões para o protetor de TDE foram revogadas. 
 
-Para saber mais, confira as [Diretrizes para configurar a TDE com o Azure Key Vault](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault).
+Depois que um banco de dados ficar inacessível por mais de 48 horas, ele não será mais reparado automaticamente.  Se o acesso necessário à chave do Azure Key Vault for restaurado, você deverá revalidar o acesso manualmente para colocar novamente o banco de dados online.  Colocar novamente o banco de dados online depois que ele ficar inacessível por mais de 48 horas pode demorar, dependendo do tamanho do banco de dados, e no momento precisa de um tíquete de suporte. Depois que o banco de dados estiver novamente online, as configurações definidas anteriormente, como o link geográfico, se o Geo-DR foi configurado, o histórico de PITR e as marcas serão perdidas.  Portanto, é recomendável implementar um sistema de notificação usando [Grupos de ação](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) que permitem tratar os problemas subjacentes do cofre de chaves dentro de 48 horas. 
 
-## <a name="common-misconfigurations"></a>Configurações incorretas comuns
+
+## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Erros comuns que fazem com que os bancos de dados se tornem inacessíveis
 
 A maioria dos problemas que ocorrem ao usar TDE com o Key Vault é causada por um dos erros de configuração a seguir:
 
@@ -46,10 +43,11 @@ A maioria dos problemas que ocorrem ao usar TDE com o Key Vault é causada por u
 
 - O cofre de chaves foi excluído por engano.
 - O firewall foi configurado para o Azure Key Vault, mas não permite o acesso aos serviços da Microsoft.
+- Um erro de rede intermitente faz com que o cofre de chaves fique indisponível.
 
 ### <a name="no-permissions-to-access-the-key-vault-or-the-key-doesnt-exist"></a>Sem permissão para acessar o cofre de chaves ou a chave não existe
 
-- A chave foi excluída por engano.
+- A chave foi excluída, desabilitada acidentalmente ou expirou.
 - A AppId da instância lógica do SQL Server foi excluída por engano.
 - A instância lógica do SQL Server foi movida para uma assinatura diferente. Uma nova AppId deve ser criada se o servidor lógico for movido para uma assinatura diferente.
 - As permissões concedidas à AppId para as chaves não são suficientes (não incluem Obter, Encapsular e Desencapsular).
@@ -89,7 +87,7 @@ No portal do Azure, vá até o cofre de chaves e depois às **Políticas de aces
 Para saber mais, confira [Atribuir uma identidade do Azure AD ao seu servidor](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).
 
 > [!IMPORTANT]
-> Se a instância lógica do SQL Server for movida para uma nova assinatura após a configuração inicial da TDE com o Key Vault, repita a etapa para configurar a identidade do Azure AD para criar a AppId. Em seguida, adicione a AppId ao cofre de chaves e atribua as permissões corretas para a chave. 
+> Se a instância lógica do SQL Server for movida para um novo locatário após a configuração inicial da TDE com o Key Vault, repita a etapa para configurar a identidade do Azure AD para criar uma AppId. Em seguida, adicione a AppId ao cofre de chaves e atribua as permissões corretas para a chave. 
 >
 
 ### <a name="missing-key-vault"></a>Cofre de chaves ausente
@@ -164,8 +162,82 @@ Confirme se a instância lógica do SQL Server tem permissões para o cofre de c
 - Se a AppId estiver presente, verifique se ela tem as seguintes permissões de chave: Obter, Encapsular e Desencapsular.
 - Se a AppId não estiver presente, adicione-a usando o botão **Adicionar Novo**. 
 
+## <a name="getting-tde-status-from-the-activity-log"></a>Obter o status de TDE do Log de atividades
+
+Para permitir o monitoramento do status do banco de dados devido aos problemas de acesso à chave do Azure Key Vault, os eventos a seguir serão registrados no [Log de atividades](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) para a ID de recurso com base na URL do Azure Resource Manager e Assinatura + Resourcegroup + ServerName + DatabseName: 
+
+**Evento quando o serviço perde o acesso à chave do Azure Key Vault**
+
+EventName: MakeDatabaseInaccessible 
+
+Status: Started (iniciado) 
+
+Descrição: O banco de dados perdeu o acesso à chave do Azure Key Vault e agora está inacessível: <error message>   
+
+ 
+
+**Evento quando o tempo de espera de 48 horas para a autorrecuperação começa** 
+
+EventName: MakeDatabaseInaccessible 
+
+Status: InProgress 
+
+Descrição: O banco de dados está aguardando o acesso à chave do Azure Key Vault ser restabelecido pelo usuário em até 48 horas.   
+
+ 
+
+**Evento quando o banco de dados volta a ficar online automaticamente**
+
+EventName: MakeDatabaseAccessible 
+
+Status: Teve êxito 
+
+Descrição: O acesso ao banco de dados para a chave do Azure Key Vault foi restabelecido e o banco de dados agora está online. 
+
+ 
+
+**Evento quando o problema não foi resolvido dentro de 48 horas e o acesso à chave do Azure Key Vault precisa ser validado manualmente** 
+
+EventName: MakeDatabaseInaccessible 
+
+Status: Teve êxito 
+
+Descrição: O banco de dados está inacessível e exige que o usuário resolva os erros do Azure Key Vault e restabeleça o acesso à chave do Azure Key Vault usando a chave de revalidação. 
+
+ 
+
+**Evento quando o BD ficar online após a revalidação da chave manual**
+
+EventName: MakeDatabaseAccessible 
+
+Status: Teve êxito 
+
+Descrição: O acesso ao banco de dados para a chave do Azure Key Vault foi restabelecido e o banco de dados agora está online. 
+
+ 
+
+**Evento quando a revalidação do acesso à chave de Azure Key Vault foi bem-sucedida e o banco de dados voltar a ficar online**
+
+EventName: MakeDatabaseAccessible 
+
+Status: Started (iniciado) 
+
+Descrição: A restauração do acesso ao banco de dados para a chave do Azure Key Vault foi iniciada. 
+
+ 
+
+**Evento ao revalidar o acesso à chave de Azure Key Vault falhou**
+
+EventName: MakeDatabaseAccessible 
+
+Status: Falhou 
+
+Descrição: A restauração do acesso ao banco de dados para a chave do Azure Key Vault falhou. 
+
+
 ## <a name="next-steps"></a>Próximas etapas
 
-- Confira as [Diretrizes para configurar a TDE com o Azure Key Vault](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault).
 - Saiba mais sobre o [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview).
-- Reveja como [atribuir uma identidade do Azure AD ao seu servidor](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).
+- Configure os [Grupos de ações](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) para receber notificações e alertas com base em suas preferências, por exemplo, email/SMS/Push/voz, aplicativo lógico, webhook, ITSM ou runbook de automação. 
+
+

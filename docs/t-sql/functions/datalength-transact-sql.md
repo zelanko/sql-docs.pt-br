@@ -1,7 +1,7 @@
 ---
 title: DATALENGTH (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2017
+ms.date: 08/20/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,26 +19,29 @@ helpviewer_keywords:
 - expressions [SQL Server], length
 - lengths [SQL Server], data
 ms.assetid: 00f377f1-cc3e-4eac-be47-b3e3f80267c9
-author: MikeRayMSFT
+author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a62aa2b5249384405372afe662a84a73055f4a67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cca069fe3bb0aa0f489c13c022aeeebbd08db053
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026210"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653798"
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Essa função retorna o número de bytes usado para representar qualquer expressão.
+
+> [!NOTE]
+> Para retornar o número de caracteres em uma expressão de cadeia de caracteres, use a função [LEN](../../t-sql/functions/len-transact-sql.md).
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
-```sql
+```
 DATALENGTH ( expression )   
 ```  
   
@@ -50,28 +53,28 @@ DATALENGTH ( expression )
 **bigint** se *expression* tiver um tipo de dados **nvarchar(max)** , **varbinary(max)** ou **varchar(max)** ; caso contrário, **int**.
   
 ## <a name="remarks"></a>Remarks  
-`DATALENGTH` torna-se muito útil quando usado com tipos de dados
-
+`DATALENGTH` torna-se muito útil quando usada com tipos de dados que podem armazenar dados de comprimento variável, como:
 - **imagem**
 - **ntext**
 - **nvarchar**
 - **text**
 - **varbinary**
 - **varchar**
-
-porque eles podem armazenar dados de comprimento variável.
   
 Para um valor NULL, `DATALENGTH` retorna NULL.
   
 > [!NOTE]  
->  Os níveis de compatibilidade podem afetar os valores de retorno. Veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) para obter mais informações sobre níveis de compatibilidade.  
-  
+> Os níveis de compatibilidade podem afetar os valores de retorno. Veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) para obter mais informações sobre níveis de compatibilidade.  
+
+> [!NOTE]
+> Use [LEN](../../t-sql/functions/len-transact-sql.md) para retornar o número de caracteres codificados em determinada expressão de cadeia de caracteres e [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) para retornar o tamanho em bytes de determinada expressão de cadeia de caracteres. Essas saídas podem ser diferentes dependendo do tipo de dados e do tipo de codificação usado na coluna. Para obter mais informações sobre as diferenças de armazenamento entre diferentes tipos de codificação, confira [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
+
 ## <a name="examples"></a>Exemplos  
 Este exemplo localiza o comprimento da coluna `Name` na tabela `Product`:
   
 ```sql
--- Uses AdventureWorks  
-  
+USE AdventureWorks2016  
+GO
 SELECT length = DATALENGTH(EnglishProductName), EnglishProductName  
 FROM dbo.DimProduct  
 ORDER BY EnglishProductName;  
@@ -83,6 +86,3 @@ GO
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Funções do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
-  
-  
-

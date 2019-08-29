@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 31bdddab8dce33d8bf0e59d3abf7384231a13e53
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 42bf8211f8b5907d21f98e12bd058eedb658bbe2
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028831"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621760"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Guia de navegação de documentos do SQL Server 
 
@@ -39,16 +39,15 @@ Se quiser criar um PDF, selecione o link **Baixar PDF** localizado na parte infe
 
 ## <a name="toc-navigation-hints"></a>Dicas de navegação no sumário
 
-As entradas no sumário que têm um `>` no final indicam que você será para fora de docs.microsoft.com. 
+Entradas no sumário que têm um `>` no final indicam que você será levado para a documentação técnica com um sumário diferente. 
 
 ![Carrots únicos no sumário](media/sql-server-docs-navigation-guide/single-carrots-in-sql-docs-toc.png)
 
-
-Entradas no sumário que têm um `>>` indicam que você será levado para a documentação técnica com um sumário diferente. 
+Entradas no sumário que têm um `>>` indicam que você será levado para fora de docs.microsoft.com. 
 
 ![Marcadores de navegação no sumário](media/sql-server-docs-navigation-guide/double-carrots-in-sql-docs-toc.png)
 
-Se navegar para uma dessas páginas, você poderá voltar para a página técnica principal do SQL Server e ao sumário selecionando a entrada "Bem-vindo ao SQL Server >>" encontrada na parte superior de cada um desses sumários. 
+Se navegar para uma dessas páginas, você poderá voltar para a página técnica principal do SQL Server e ao sumário selecionando a entrada "Bem-vindo ao SQL Server >" encontrada na parte superior de cada um desses sumários. 
 
 ![Navegar de volta para o sumário do SQL](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 
@@ -64,7 +63,7 @@ Você pode usar o [filtro de versão](versioning-system-monikers-ui-sql-server.m
 
 ![Filtro de versão dos documentos do SQL](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-Selecionar **Todo o SQL** \> **Não ocultar nada** faz todo o conteúdo ficar visível e nada ficar oculto pelo filtro de versão. A opção [**Não ocultar nada** não é recomendada para uso de rotina](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing).
+Selecionar **Todo o SQL** \> **Não ocultar nada** faz todo o conteúdo ficar visível e nada ficar oculto pelo filtro de versão. A opção **Não ocultar nada** pode revelar conteúdo relevante para várias versões diferentes do SQL Server no mesmo artigo, o que pode ser contraditório, incerto ou confuso. Sendo assim, a opção [**Não ocultar nada** não é recomendada para uso de rotina](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing). 
 
 ## <a name="breadcrumbs"></a>Trilhas de navegação
 

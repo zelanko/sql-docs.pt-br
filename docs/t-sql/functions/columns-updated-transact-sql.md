@@ -21,13 +21,13 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4af840298c0e17b61dd073c982e6dec440ec67d7
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 08/26/2019
 ms.locfileid: "68419594"
 ---
-# <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
+# <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Essa função retorna um padrão de bit **varbinary** que indica as colunas inseridas ou atualizadas de uma tabela ou exibição. Use [!INCLUDE[tsql](../../includes/tsql-md.md)] em qualquer lugar no corpo de um gatilho INSERT ou UPDATE do `COLUMNS_UPDATED` para testar se o gatilho deve executar determinadas ações.
@@ -74,7 +74,7 @@ Quando um conjunto de coluna é definido em uma tabela, a função `COLUMNS_UPDA
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-columnsupdated-to-test-the-first-eight-columns-of-a-table"></a>A. Usando COLUMNS_UPDATED para testar as primeiras oito colunas de uma tabela  
+### <a name="a-using-columns_updated-to-test-the-first-eight-columns-of-a-table"></a>A. Usando COLUMNS_UPDATED para testar as primeiras oito colunas de uma tabela  
 Este exemplo cria duas tabelas: `employeeData` e `auditEmployeeData`. A tabela `employeeData` contém informações de folha de pagamento confidenciais de funcionários, e membros do departamento de recursos humanos podem modificá-las. Se o SSN (número do seguro social), o salário anual ou o número da conta bancária de um funcionário for alterado, um registro de auditoria será gerado e inserido na tabela de auditoria `auditEmployeeData`.
   
 Com a função `COLUMNS_UPDATED()`, podemos rapidamente testar quaisquer alterações feitas a colunas contendo informações confidenciais de funcionários. Usar `COLUMNS_UPDATED()` dessa forma funcionará apenas quando você estiver tentando detectar alterações nas primeiras oito colunas da tabela.
@@ -183,7 +183,7 @@ SELECT * FROM dbo.auditEmployeeData;
 GO  
 ```  
   
-### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>B. Usando COLUMNS_UPDATED para testar mais de oito colunas  
+### <a name="b-using-columns_updated-to-test-more-than-eight-columns"></a>B. Usando COLUMNS_UPDATED para testar mais de oito colunas  
 Para testar atualizações que afetam outras colunas além das oito primeiras colunas da tabela, use a função `SUBSTRING` para testar o bit correto retornado por `COLUMNS_UPDATED`. Este exemplo testa as atualizações que afetam as colunas `3`, `5` e `9` na tabela `AdventureWorks2012.Person.Person`.
   
 ```sql

@@ -11,12 +11,12 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f3ce558bb9e5856e0cd5828f8facce28dc2c729
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f44e5c43a3abbf9338d74c04be98a9d5d8902034
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107079"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009498"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introdução ao Columnstore para análise operacional em tempo real
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -106,8 +106,6 @@ ms.locfileid: "68107079"
 -   [Minimizing impact of a nonclustered columnstore index maintenance by using compression delay - performance numbers (Minimizando o impacto da manutenção de um índice columnstore não clusterizado usando atraso de compactação — número de desempenho)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)  
   
 -   [Real time operational analytics with memory-optimized tables (Análise operacional em tempo real com tabelas com otimização de memória)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
-  
--   [Minimize index fragmentation in a columnstore indes (Minimizar fragmentação de índice em um índice columnstore)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/)  
   
 -   [Columnstore index and the merge policy for rowgroups (Índice columnstore e a política de mesclagem para rowgroups)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
@@ -204,7 +202,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 -   **Inserir/consultar a carga de trabalho:** se a carga de trabalho for basicamente inserir dados e consultá-los, o padrão COMPRESSION_DELAY de 0 será a opção recomendada. As linhas recentemente inseridas serão compactadas uma vez que 1 milhão de linhas foram inseridas em um único rowgroup delta.  
     Alguns exemplos de tal carga de trabalho são (a) carga de trabalho DW tradicional (b) análise de fluxo de clique quando você precisa analisar o padrão de clique em um aplicativo Web.  
   
--   **Carga de trabalho OLTP:** se a carga de trabalho for DML pesada (isto é, combinação pesada de Atualizar, Excluir e Inserir), você poderá ver a fragmentação do índice columnstore examinando o sys DMV. dm_db_column_store_row_group_physical_stats. Caso veja que mais de 10% das linhas são marcadas como excluídas em rowgroups recentemente compactados, você poderá usar a opção COMPRESSION_DELAY para adicionar atraso quando as linhas se tornarem qualificadas para compactação. Por exemplo, se para sua carga de trabalho, os dados recentemente inseridos permanecerem 'frequentes' (ou seja, forem atualizados várias vezes) digamos que por 60 minutos, você deverá escolher COMPRESSION_DELAY para ser 60.  
+-   **Carga de trabalho OLTP:** se a carga de trabalho for DML pesada (isto é, combinação pesada de Atualizar, Excluir e Inserir), você poderá ver a fragmentação do índice columnstore examinando o sys DMV. dm_db_column_store_row_group_physical_stats. Caso veja que mais de 10% das linhas são marcadas como excluídas em rowgroups recentemente compactados, você poderá usar a opção COMPRESSION_DELAY para adicionar atraso quando as linhas se tornarem qualificadas para compactação. Por exemplo, se para sua carga de trabalho, os dados recentemente inseridos permanecerem 'frequentes' (isso é, forem atualizados várias vezes) digamos que por 60 minutos, você deverá escolher COMPRESSION_DELAY para ser 60.  
   
  Esperamos que a maioria dos clientes não precise fazer nada. O valor padrão da opção COMPRESSION_DELAY deve funcionar para eles.  
 Para usuários avançados, é recomendável executar a consulta abaixo e coletar a % de linhas excluídas nos últimos 7 dias.  
@@ -226,6 +224,5 @@ ORDER BY created_time DESC
  [Carregamento de dados dos índices columnstore](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Desempenho de consultas de índices ColumnStore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Índices columnstore para Data Warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [Desfragmentação de índices columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
-  
+ [Reorganizar e recompilar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
   

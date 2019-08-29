@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14597122e586aca0290a4823f07dbb17e5cccda2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4004ba36ffbcaf5cf96a6e4d9c95761b054e9abc
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006527"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000827"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -356,7 +356,7 @@ veja [Exemplos](#Examples) mais no final deste tópico para muitos outros exempl
 ## <a name="best-practices"></a>Práticas recomendadas  
  Embora esta não seja uma lista completa de práticas recomendadas, estas sugestões podem melhorar o desempenho do procedimento.  
   
--   Use a instrução SET NOCOUNT ON como a primeira instrução no corpo do procedimento. Ou seja, coloque-a logo após a palavra-chave AS. Isso desativa as mensagens que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envia ao cliente após a execução de qualquer instrução SELECT, INSERT, UPDATE, MERGE e DELETE. O desempenho global do banco de dados e do aplicativo melhora ao eliminar essa sobrecarga de rede desnecessária. Para obter informações, veja [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md).  
+-   Use a instrução SET NOCOUNT ON como a primeira instrução no corpo do procedimento. Ou seja, coloque-a logo após a palavra-chave AS. Isso desativa as mensagens que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envia ao cliente após a execução de qualquer instrução SELECT, INSERT, UPDATE, MERGE e DELETE. Isso mantém a saída gerada a um mínimo para maior clareza. Não há nenhum benefício de desempenho mensurável no hardware de hoje. Para obter informações, veja [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md).  
   
 -   Use nomes de esquemas ao criar ou referenciar objetos de banco de dados no procedimento. Será necessário menos tempo de processamento para o [!INCLUDE[ssDE](../../includes/ssde-md.md)] resolver nomes de objetos se ele não precisar pesquisar vários esquemas. Além disso, evita problemas de acesso e permissão causados pelo esquema padrão de um usuário ser atribuído quando são criados objetos sem especificar o esquema.  
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a1421c43f050e438898289a34e86ec4b87185a13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcf14745af6da26cc625e928d75f510e0da9a2e8
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020873"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030358"
 ---
 # <a name="data-type-precedence-transact-sql"></a>Precedência de tipo de dados (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md.md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
 Quando um operador combinar duas expressões com tipos de dados diferentes, o tipo de dados com a precedência mais baixa será convertido no tipo de dados de maior precedência. Se a conversão não for uma conversão implícita com suporte, será retornado um erro. Para um operador combinando expressões de operando que tem o mesmo tipo de dados, o resultado da operação terá esse tipo de dados.
   

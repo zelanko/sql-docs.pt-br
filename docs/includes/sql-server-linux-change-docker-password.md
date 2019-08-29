@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 70c86c40f290c26db5bcbc3526d66466c20504d8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4803a99e0fb1435b545ec775b2a8abe063d9fd8d
+ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68214889"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890914"
 ---
-A conta **SA** é um administrador do sistema na instância do SQL Server que é criada durante a instalação. Depois de criar o contêiner do SQL Server, a variável de ambiente `MSSQL_SA_PASSWORD` especificada é detectável executando `echo $MSSQL_SA_PASSWORD` no contêiner. Para fins de segurança, altere sua senha SA.
+A conta **SA** é um administrador do sistema na instância do SQL Server que é criada durante a instalação. Depois de criar o contêiner do SQL Server, a variável de ambiente `MSSQL_SA_PASSWORD` especificada é detectável executando `echo $MSSQL_SA_PASSWORD` no contêiner. Para fins de segurança, altere sua senha SA:
 
 1. Escolha uma senha forte para usar no usuário de SA.
 
-1. Use `docker exec` para executar **sqlcmd** para alterar a senha usando o Transact-SQL. Substituir `<YourStrong!Passw0rd>` e `<YourNewStrong!Passw0rd>` com seus próprios valores de senha.
+1. Use `docker exec` para executar o utilitário **sqlcmd** para alterar a senha por meio de uma instrução Transact-SQL. Substituir `<YourStrong!Passw0rd>` e `<YourNewStrong!Passw0rd>` com seus próprios valores de senha:
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \

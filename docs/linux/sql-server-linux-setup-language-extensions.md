@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: de5ca4f46513999c1473eed77503b59cc94c3a22
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3f4f4bad8bbe72681b699af25b87eb4a533b7002
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476017"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653526"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Instalar as Extensões de linguagem (Java) do SQL Server 2019 no Linux
 
@@ -29,9 +29,9 @@ A localização do pacote das extensões Java está nos repositórios de origem 
 
 As extensões de linguagem também são compatíveis com contêineres do Linux. Não fornecemos contêineres pré-criados com as extensões de linguagem, mas você pode criar um com base nos contêineres de SQL Server usando [um modelo disponível no GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-## <a name="uninstall-previous-ctp"></a>Desinstalar o CTP anterior
+## <a name="uninstall-previous-ctp-version"></a>Desinstalar a versão anterior do CTP
 
-A lista de pacotes foi alterada nas últimas versões de CTP, resultando em menos pacotes. Recomendamos desinstalar o CTP 2.x para remover todos os pacotes anteriores antes de instalar o CTP 3.2. Não há suporte para a instalação lado a lado de várias versões.
+A lista de pacotes foi alterada nas últimas versões de CTP, resultando em menos pacotes. Recomendamos desinstalar a versão do CTP para remover todos os pacotes anteriores antes de instalar o RC 1. Não há suporte para a instalação lado a lado de várias versões.
 
 ### <a name="1-confirm-package-installation"></a>1. Confirmar instalação do pacote
 
@@ -41,7 +41,7 @@ Você pode verificar a existência de uma instalação anterior como uma primeir
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. Desinstalar pacotes CTP 2.x anteriores
+### <a name="2-uninstall-previous-ctp-packages"></a>2. Desinstalar pacotes anteriores do CTP
 
 Desinstale no nível mais baixo do pacote. Qualquer pacote upstream dependente de um pacote de nível inferior é desinstalado automaticamente.
 
@@ -55,7 +55,7 @@ Os comandos para remover os pacotes aparecem na tabela a seguir.
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-proceed-with-ctp-32-install"></a>3. Continuar com a instalação do CTP 3.2
+### <a name="3-install-release-candidate-1-rc-1"></a>3. Instalar versão Release Candidate 1 (RC 1)
 
 Instale no nível mais alto do pacote usando as instruções neste artigo relativas ao seu sistema operacional.
 
@@ -85,14 +85,14 @@ Em um dispositivo conectado à Internet, os pacotes são baixados e instalados i
 
 | Nome do pacote | Aplica-se a | Descrição |
 |--------------|----------|-------------|
-|mssql-server-extensibility  | Todos os idiomas | Estrutura de extensibilidade usada para executar o código Java. |
-|mssql-server-extensibility-java | Java | Extensão Java para carregar um ambiente de execução Java. Não há bibliotecas ou pacotes adicionais para Java. |
+|mssql-server-extensibility  | Todos os idiomas | Estrutura de extensibilidade usada para a extensão de linguagem Java |
+|mssql-server-extensibility-java | Java | Estrutura de extensibilidade usada para a extensão de linguagem Java, incluindo suporte a um tempo de execução Java |
 
 <a name="RHEL"></a>
 
 ## <a name="install-language-extensions"></a>Instalar extensões de linguagem
 
-Você pode instalar extensões de linguagem e Java no Linux instalando **mssql-server-extensibility-java**. Quando você instala o **mssql-server-extensibility-java**, o pacote instala automaticamente o JRE 8 se ainda não estiver instalado. Ele também adicionará o caminho da JVM a uma variável de ambiente chamada JRE_HOME.
+Você pode instalar extensões de linguagem e Java no Linux instalando **mssql-server-extensibility-java**. Quando você instala o **mssql-server-extensibility-java**, o pacote instala automaticamente o JRE 11 caso ainda não esteja instalado. Ele também adicionará o caminho da JVM a uma variável de ambiente chamada JRE_HOME.
 
 > [!Note]
 > Em um servidor conectado à Internet, as dependências de pacote são baixadas e instaladas como parte da instalação do pacote principal. Se o servidor não estiver conectado à Internet, confira mais detalhes na [instalação offline](#offline-install).
@@ -286,7 +286,7 @@ mssql-server-extensibility-15.0.1000
 mssql-server-extensibility-java-15.0.1000
 ```
 
-## <a name="limitations-in-ctp-releases"></a>Limitações nas versões de CTP
+## <a name="limitations-in-the-rc-1-release"></a>Limitações na versão RC 1
 
 As extensões de linguagem e a extensibilidade do Java no Linux ainda estão em desenvolvimento ativo. Os recursos a seguir ainda não estão habilitados na versão prévia.
 
@@ -295,7 +295,7 @@ As extensões de linguagem e a extensibilidade do Java no Linux ainda estão em 
 
 ### <a name="resource-governance"></a>Governança de recursos
 
-Há paridade entre o Linux e o Windows para [Governança de recursos](../t-sql/statements/create-external-resource-pool-transact-sql.md) para pools de recursos externos, mas as estatísticas para [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) atualmente têm unidades diferentes no Linux. As unidades serão alinhadas em uma CTP futura.
+Há paridade entre o Linux e o Windows para [Governança de recursos](../t-sql/statements/create-external-resource-pool-transact-sql.md) para pools de recursos externos, mas as estatísticas para [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) atualmente têm unidades diferentes no Linux. 
  
 | Nome da coluna   | Descrição | Valor no Linux | 
 |---------------|--------------|---------------|

@@ -11,12 +11,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1e2d8f01370978074a07eaa0e5f784927bef511
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2786ebcf87f5af0ed9abcb9adaf0a85253327fa
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024965"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009371"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Índices columnstore – desempenho de consultas
 
@@ -110,7 +110,7 @@ ms.locfileid: "68024965"
 |classificação superior||não|não|sim||    
 |agregações de janela||NA|NA|sim|Novo operador do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
-<sup>1</sup>Aplica-se ao [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], às camadas Premium do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], às camadas Standard – S3 e posterior, a todas as camadas do vCore e ao [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+<sup>1</sup> Aplica-se ao [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], às camadas Premium do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], às camadas Standard – S3 e posterior, a todas as camadas do vCore e ao [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
 ### <a name="aggregate-pushdown"></a>Aplicação de agregação    
  Um caminho de execução normal para a computação de agregação para buscar as linhas qualificadas do nó SCAN e agregar os valores no Modo de Lote. Embora isso ofereça bom desempenho, no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a operação de agregação pode ser enviada por push para o nó SCAN para melhorar o desempenho da computação de agregação em ordens de magnitude além da execução do Modo de Lote, desde que as seguintes condições sejam atendidas: 
@@ -166,7 +166,7 @@ Com a aplicação de predicado de cadeia de caracteres, a execução da consulta
  [Diretrizes de Carregamento de Dados de Índices columnstore](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
  [Índices columnstore para Data Warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [Desfragmentação de índices columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)    
+ [Reorganizar e recompilar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    
  [Arquitetura de índices columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)     

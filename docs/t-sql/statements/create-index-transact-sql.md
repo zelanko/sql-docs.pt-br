@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -51,15 +51,15 @@ helpviewer_keywords:
 - secondary indexes [SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-author: CarlRabeler
+author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fdc5ee7428aec65c96755eb9a1c0e013de80d01
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: a2e6a20ac4fb319119692ce41eeef80b1912de33
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809775"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009322"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -272,7 +272,8 @@ WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL
 
 Índices filtrados não se aplicam a índices XML e índices de texto completo. Para índices UNIQUE, somente as linhas selecionadas devem ter valores de índice exclusivo. Índices filtrados não permitem a opção IGNORE_DUP_KEY.
 
-ON *partition_scheme_name* **( _column_name_ )**       
+ON *partition_scheme_name* **( _column_name_ )**      
+
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Especifica o esquema de partição que define os grupos de arquivos nos quais as partições de um índice particionado serão mapeadas. O esquema de partição deve existir no banco de dados com a execução de [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) ou [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* especifica a coluna com relação à qual um índice particionado será particionado. Essa coluna precisa corresponder ao tipo de dados, ao comprimento e à precisão do argumento da função de partição que *partition_scheme_name* está usando. *column_name* não é restrito às colunas na definição de índice. Qualquer coluna da tabela base pode ser especificada, exceto que, ao particionar um índice UNIQUE, *column_name* deve ser escolhido entre aqueles usados como chave exclusiva. Essa restrição permite ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] verificar a exclusividade de valores de chave em uma única partição apenas.
@@ -288,11 +289,13 @@ Se _partition_scheme_name_ ou _filegroup_ não for especificado e a tabela estiv
 Para obter mais informações sobre particionamento de índices, consulte [Tabelas e índices particionados](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
 
 ON _filegroup_name_      
+
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Cria o índice especificado no grupo de arquivos especificado. Se nenhum local for especificado e a tabela ou exibição não for particionada, o índice usará o mesmo grupo de arquivos que a tabela ou exibição subjacente. O grupo de arquivos já deve existir.
 
-ON **"** default **"**       
+ON **"** default **"**      
+
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Cria o índice especificado no mesmo esquema de partição ou grupo de arquivos que a tabela ou a exibição.
@@ -303,6 +306,7 @@ Nesse contexto, default não é uma palavra-chave. É um identificador do grupo 
 > "default" não indica o grupo de arquivos padrão de banco de dados no contexto de CREATE INDEX. Isso é diferente de CREATE TABLE, em que "default" localiza a tabela no grupo de arquivos de banco de dados padrão.
 
 [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]      
+
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Especifica a colocação de dados FILESTREAM para a tabela quando um índice clusterizado é criado. A cláusula FILESTREAM_ON permite mover os dados FILESTREAM para outro grupo de arquivos ou esquema de partição FILESTREAM.
@@ -340,6 +344,7 @@ O [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] dá suporte ao formato d
 Especifica as opções a serem usadas ao criar o índice.
 
 PAD_INDEX = { ON | **OFF** }      
+
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Especifica o preenchimento do índice. O padrão é OFF.
@@ -355,6 +360,7 @@ A opção PAD_INDEX só é útil quando FILLFACTOR é especificado, porque PAD_I
 Na sintaxe compatível com versões anteriores, WITH PAD_INDEX é equivalente a WITH PAD_INDEX = ON.
 
 FILLFACTOR **=** _fillfactor_      
+
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Especifica uma porcentagem que indica quanto o [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve preencher o nível folha de cada página de índice durante a criação ou recriação do índice. *fillfactor* deve ser um valor inteiro de 1 a 100. Se *fillfactor* for 100, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] criará índices com páginas de folha preenchidas até a capacidade total.
@@ -367,6 +373,7 @@ A configuração FILLFACTOR se aplica somente quando o índice é criado ou recr
 Para obter mais informações, veja [Especificar fator de preenchimento para um índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).
 
 SORT_IN_TEMPDB = { ON | **OFF** }      
+
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Especifica se os resultados de classificação temporários devem ser armazenados no **tempdb**. O padrão é OFF.
@@ -412,7 +419,10 @@ Para restaurar a atualização automática de estatísticas, defina STATISTICS_N
 
 Na sintaxe compatível com versões anteriores, WITH STATISTICS_NORECOMPUTE é equivalente a WITH STATISTICS_NORECOMPUTE = ON.
 
-STATISTICS_INCREMENTAL = { ON | **OFF** }      
+STATISTICS_INCREMENTAL = { ON | **OFF** }     
+
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
 Quando estiver **ON**, as estatísticas serão criadas conforme as estatísticas de partição. Quando estiver **OFF**, a árvore de estatísticas será removida e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] calculará as estatísticas novamente. O padrão é **OFF**.
 
 Se as estatísticas por partição não tiverem suporte, a opção será ignorada e um aviso será gerado. As estatísticas incrementais não têm suporte para os seguintes tipos de estatísticas:
@@ -448,7 +458,7 @@ Na sintaxe compatível com versões anteriores, WITH DROP_EXISTING é equivalent
 ONLINE = { ON | **OFF** }      
 Especifica se as tabelas subjacentes e os índices associados estão disponíveis para consultas e modificação de dados durante a operação de índice. O padrão é OFF.
 
-> [!NOTE]
+> [!IMPORTANT]
 > As operações de índice online não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
 
 ON      
@@ -456,6 +466,18 @@ Bloqueios de tabela de longa duração não são mantidos durante a operação d
 
 OFF      
 Os bloqueios de tabela são aplicados enquanto durar a operação de índice. Uma operação de índice offline que cria, recria ou cancela um índice clusterizado ou recria ou cancela um índice não clusterizado, adquire um bloqueio de esquema de modificação (Sch-M) na tabela. Isso evita o acesso de todos os usuários à tabela subjacente enquanto durar a operação. Uma operação de índice offline que cria um índice não clusterizado adquire um bloqueio Compartilhado (S) na tabela. Isso impede atualizações na tabela subjacente, mas permite operações de leitura, como instruções SELECT.
+
+Para obter mais informações, consulte [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
+
+Índices, inclusive aqueles em tabelas temporárias globais, podem ser criados online exceto nos seguintes casos:
+
+- Índice XML
+- Índice em uma tabela temporária local
+- Índice clusterizado exclusivo inicial em uma exibição
+- Índices clusterizados desabilitados
+- Índices columnstore
+- Índice clusterizado se a tabela subjacente contiver tipos de dados LOB (**image**, **ntext**, **text**) e tipos de dados espaciais
+- As colunas **varchar(max)** e **varbinary(max)** não podem fazer parte de um índice. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], quando uma tabela contém as colunas **varchar(max)** ou **varbinary(max)** , um índice clusterizado contendo outras colunas pode ser criado ou recriado usando a opção **ONLINE**. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] não permite a opção **ONLINE** quando a tabela base contém as colunas **varchar(max)** ou **varbinary(max)**
 
 Para obter mais informações, consulte [Como funcionam as operações de índice online](../../relational-databases/indexes/how-online-index-operations-work.md).
 
@@ -471,25 +493,17 @@ A operação do índice é retomável.
  OFF      
 A operação do índice não é retomável.
 
-MAX_DURATION **=** *time* [**MINUTES**] usado com **RESUMABLE = ON** (exige **ONLINE = ON**)      
+MAX_DURATION **=** *time* [**MINUTES**] usado com **RESUMABLE = ON** (exige **ONLINE = ON**)   
 
 **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (versão prévia pública)
 
 Indica o tempo (um valor inteiro especificado em minutos) pelo qual um uma operação de índice online retomável é executada antes de ser colocada em pausa.
 
-> [!WARNING]
+> [!IMPORTANT]
 > Para obter mais informações sobre operações de índice que podem ser executadas online, consulte [Diretrizes para operações de índice online](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
 
- Índices, inclusive os índices em tabelas temporárias globais, podem ser criados online com as seguintes exceções:
-
-- Índice XML
-- Índice em uma tabela temporária local.
-- Índice clusterizado exclusivo inicial em uma exibição.
-- Índices clusterizados desabilitados.
-- Índice clusterizado se a tabela subjacente contiver tipos de dados LOB: **image**, **ntext**, **text** e tipos espaciais.
-- As colunas **varchar(max)** e **varbinary(max)** não podem fazer parte de um índice. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e em [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], quando uma tabela contém as colunas **varchar(max)** ou **varbinary(max)** , um índice clusterizado contendo outras colunas pode ser criado ou recriado usando a opção **ONLINE**. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] não permite a opção **ONLINE** quando a tabela base contém as colunas **varchar(max)** ou **varbinary(max)** .
-
-Para obter mais informações, consulte [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).
+> [!NOTE] 
+> Não há suporte para recompilações de índice online retomáveis em índices columnstore.
 
 ALLOW_ROW_LOCKS = { **ON** | OFF }      
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
@@ -513,18 +527,17 @@ Bloqueios de página são permitidos ao acessar o índice. O [!INCLUDE[ssDE](../
 OFF      
 Bloqueios de página não são usados.
 
-
 OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }      
 **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 Especifica se a contenção de inserção de última página será ou não otimizada. O padrão é OFF. Confira a seção sobre [Chaves sequenciais](#sequential-keys) para saber mais.
 
-MAXDOP = _max_degree_of_parallelism_      
+MAXDOP = *max_degree_of_parallelism*      
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Substitui a opção de configuração **max degree of parallelism** enquanto durar a operação do índice. Para obter mais informações, veja [Configurar a opção max degree of parallelism de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP para limitar o número de processadores usados em uma execução de plano paralelo. O máximo é de 64 processadores.
 
-_max_degree_of_parallelism_ pode ser:
+*max_degree_of_parallelism* pode ser:
 
 1      
 Suprime a geração de plano paralelo.
@@ -1127,6 +1140,7 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
 
 ## <a name="see-also"></a>Consulte Também
 [Guia de arquitetura e design de índices do SQL Server](../../relational-databases/sql-server-index-design-guide.md)     
+[Executar operações de índice online](../../relational-databases/indexes/perform-index-operations-online.md)  
 [Índices e ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)     
 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)     
 [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)     

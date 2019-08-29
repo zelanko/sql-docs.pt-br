@@ -17,12 +17,12 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 31e5f5e89a6421c72ecb381685f9450ac9ba9331
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: c349569d2f0973a3085337eb171a17d9cee21c82
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770556"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633398"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir a latência e validar as conexões para a replicação transacional
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -113,21 +113,21 @@ ms.locfileid: "68770556"
   
 2.  (Opcional) No Publicador do banco de dados de publicação, execute [sp_helpsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md). Verifique se a assinatura existe e se o status é ativo.  
   
-3.  No Publicador do banco de dados de publicação, execute [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md), especificando **@publication** . Observe o valor do parâmetro de saída **@tracer_token_id** .  
+3.  No Publicador do banco de dados de publicação, execute [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md), especificando **\@publication**. Observe o valor do parâmetro de saída **\@tracer_token_id**.  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Para determinar a latência e validar as conexões para uma publicação transacional  
   
 1.  Publique um token de rastreamento na publicação usando o procedimento anterior.  
   
-2.  No Publicador do banco de dados de publicação, execute [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), especificando **@publication** . Isso retorna uma lista de todos os tokens de rastreamento publicados na publicação. Observe o **tracer_id** desejado no conjunto de resultados.  
+2.  No Publicador do banco de dados de publicação, execute [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), especificando **\@publication**. Isso retorna uma lista de todos os tokens de rastreamento publicados na publicação. Observe o **tracer_id** desejado no conjunto de resultados.  
   
-3.  No Publicador do banco de dados de publicação, execute [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md), especificando **@publication** e a ID do token de rastreamento da etapa 2 para **@tracer_id** . Isso retorna informações de latência para o token de rastreamento selecionado.  
+3.  No Publicador do banco de dados de publicação, execute [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md), especificando **\@publication**, e a ID do token de rastreamento da etapa 2 para **\@tracer_id**. Isso retorna informações de latência para o token de rastreamento selecionado.  
   
 #### <a name="to-remove-tracer-tokens"></a>Para remover tokens de rastreamento  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), especificando **@publication** . Isso retorna uma lista de todos os tokens de rastreamento publicados na publicação. Observe o **tracer_id** a ser excluído pelo token de rastreamento no conjunto de resultados.  
+1.  No Publicador do banco de dados de publicação, execute [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), especificando **\@publication**. Isso retorna uma lista de todos os tokens de rastreamento publicados na publicação. Observe o **tracer_id** a ser excluído pelo token de rastreamento no conjunto de resultados.  
   
-2.  No Publicador do banco de dados de publicação, execute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), especificando **@publication** e a ID de rastreamento a ser excluída da etapa 2 para **@tracer_id** .  
+2.  No Publicador do banco de dados de publicação, execute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), especificando **\@publication** e a ID de rastreamento a ser excluída da etapa 2 para **@tracer_id** .  
   
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  Esse exemplo publica um registro dos tokens de rastreamento, e usa o ID retornado do token de rastreamento publicado, para exibir as informações da latência.  

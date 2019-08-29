@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7d0e379cf9d3bc6391e6c2c921824c7162b88def
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 985f5fb80f9879470f0f9a1740bd7a4b7bee2b2a
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025617"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69609636"
 ---
 # <a name="server-configuration-options-sql-server"></a>Opções de configuração do servidor (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Opções que exigem o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
   
 Algumas opções requerem a reinicialização do servidor antes que o novo valor da configuração entre em vigor. Se você definir um novo valor e executar sp_configure antes de reiniciar o servidor, o novo valor aparecerá na coluna **value** das opções de configuração e não na coluna **value_in_use** . Após reinicializar o servidor, o novo valor aparecerá na coluna **value_in_use** .  
   
-As opções de autoconfiguração são aquelas que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajusta de acordo com as necessidades do sistema. Na maioria dos casos, isso elimina a necessidade de definir os valores manualmente. Alguns exemplos são as opções **min server memory** e **max server memory** e a opção user connections.  
+As opções de autoconfiguração são aquelas que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajusta de acordo com as necessidades do sistema. Na maioria dos casos, isso elimina a necessidade de definir os valores manualmente. Exemplos incluem a opção **máximo de threads de trabalho** e a opção conexões do usuário.  
   
 ## <a name="configuration-options-table"></a>Tabela Opções de configuração  
  A tabela a seguir lista todas as opções de configuração disponíveis, o intervalo de possíveis configurações e os valores padrão. As opções de configuração são marcadas com códigos de letras como segue:  

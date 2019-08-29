@@ -1,5 +1,5 @@
 ---
-title: Executar os Serviços de Machine Learning do SQL Server em um Contêiner | Microsoft Docs
+title: Executar os Serviços de Machine Learning do SQL Server em um contêiner | Microsoft Docs
 description: Este tutorial como usar os Serviços de Machine Learning do SQL Server em um contêiner Linux em execução no Docker.
 author: uc-msft
 ms.author: umajay
@@ -9,65 +9,65 @@ ms.prod: sql
 ms.technology: linux
 ms.collection: linux-container
 moniker: '>= sql-server-linux-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: f3d3774adf4bee07269b25c3359b031ca24eb99e
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4fa470ce5b35cf8e78f919080988b5091af6e04e
+ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68300421"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890907"
 ---
-# <a name="run-sql-server-machine-learning-services-in-a-container"></a>Executar os Serviços de Machine Learning do SQL Server em um Contêiner
+# <a name="run-sql-server-machine-learning-services-in-a-container"></a>Executar os Serviços de Machine Learning do SQL Server em um contêiner
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este tutorial demonstra como criar um contêiner do Docker com os Serviços de Machine Learning do SQL Server e executar scripts de Machine Learning usando Transact-SQL.
+Este tutorial demonstra como criar um contêiner do Docker usando os Serviços de Machine Learning do SQL Server e como executar scripts de Machine Learning usando Transact-SQL. A cobertura inclui as seguintes tarefas:
 
 > [!div class="checklist"]
 > * Clonar o repositório mssql-docker.
-> * Criar a imagem de contêiner Linux do SQL Server com os Serviços de Machine Learning.
+> * Criar uma imagem de contêiner Linux do SQL Server com os Serviços de Machine Learning.
 > * Executar a imagem de contêiner Linux do SQL Server com os Serviços de Machine Learning.
 > * Executar scripts de R ou Python usando instruções Transact-SQL.
-> * Interromper e remover o contêiner Linux do SQL Server. 
+> * Interromper e remover o contêiner Linux do SQL Server.
 
 ## <a name="prerequisites"></a>Prerequisites
 
 * Interface de linha de comando Git.
 * O Docker Engine 1.8 ou superior em qualquer distribuição do Linux ou do Docker para Mac/Windows com suporte. Para obter mais informações, veja [Install Docker](https://docs.docker.com/engine/installation/) (Instalar o Docker).
-* Mínimo de 2 GB de espaço em disco.
+* Mínimo de 2 gigabytes (GB) de espaço em disco.
 * Mínimo de 2 GB de RAM.
 * [Requisitos do sistema do SQL Server no Linux](sql-server-linux-setup.md#system).
 
 ## <a name="clone-the-mssql-docker-repository"></a>Clonar o repositório mssql-docker
 
-1. Abra um terminal Bash no Linux/Mac ou um terminal WSL no Windows.
+1. Abra um terminal Bash no Linux ou Mac ou abra um terminal WSL no Windows.
 
-1. Crie um diretório local para conter uma cópia do repositório mssql-docker localmente.
-1. Execute o comando git clone para clonar o repositório mssql-docker.
+1. Crie um diretório local para conter uma cópia local do repositório mssql-docker.
+1. Execute o comando git clone para clonar o repositório mssql-docker:
 
     ```bash
     git clone https://github.com/microsoft/mssql-docker mssql-docker
     ```
 
-## <a name="build-sql-server-linux-container-image-with-machine-learning-services"></a>Criar a imagem de contêiner Linux do SQL Server com os Serviços de Machine Learning
+## <a name="build-a-sql-server-linux-container-image-with-machine-learning-services"></a>Criar uma imagem de contêiner Linux do SQL Server com os Serviços de Machine Learning
 
-1. Altere o diretório para mssql-mlservices.
+1. Altere o diretório para mssql-mlservices:
 
     ```bash
     cd mssql-docker/linux/preview/examples/mssql-mlservices
     ```
 
-1. Execute o script build.sh.
+1. Execute o script build.sh:
 
    ```bash
    ./build.sh
    ```
 
    > [!NOTE]
-   > A criação da imagem do docker requer a instalação de pacotes com vários GBs de tamanho. O script pode levar até 20 minutos para ser concluído dependendo da largura de banda da rede.
+   > Para compilar a imagem do Docker, você deve instalar pacotes com vários GBs de tamanho. O script pode levar até 20 minutos para ser terminar a execução dependendo da largura de banda da rede.
 
-## <a name="run-sql-server-linux-container-image-with-machine-learning-services"></a>Executar a imagem de contêiner Linux do SQL Server com os Serviços de Machine Learning
+## <a name="run-the-sql-server-linux-container-image-with-machine-learning-services"></a>Executar a imagem de contêiner Linux do SQL Server com os Serviços de Machine Learning
 
-1. Defina as variáveis de ambiente antes de executar o contêiner. Defina a variável de ambiente PATH_TO_MSSQL como um diretório de host.
+1. Defina suas variáveis de ambiente antes de executar o contêiner. Defina a variável de ambiente PATH_TO_MSSQL como um diretório de host:
 
    ```bash
     export MSSQL_PID='Developer'
@@ -76,18 +76,18 @@ Este tutorial demonstra como criar um contêiner do Docker com os Serviços de M
     export PATH_TO_MSSQL='/home/mssql/'
    ```
 
-1. Execute o script run.sh.
+1. Execute o script run.sh:
 
    ```bash
    ./run.sh
    ```
 
-   Este comando cria um contêiner do SQL Server com Serviços de Machine Learning com a edição de Desenvolvedor (padrão). A porta do SQL Server **1433** é exposta no host como a porta **1401**.
+   Este comando cria um contêiner do SQL Server com Serviços de Machine Learning usando a edição de Desenvolvedor (padrão). A porta do SQL Server **1433** é exposta no host como a porta **1401**.
 
    > [!NOTE]
    > O processo para executar edições de produção do SQL Server em contêineres é um pouco diferente. Para obter mais informações, confira [Configurar imagens de contêiner do SQL Server no Docker](sql-server-linux-configure-docker.md). Se você usar os mesmo nomes e portas de contêiner, o restante deste tutorial ainda funcionará com contêineres de produção.
 
-1. Para exibir seus contêineres do Docker, use o comando `docker ps`.
+1. Para exibir seus contêineres do Docker, execute o comando `docker ps`:
 
    ```bash
    sudo docker ps -a
@@ -112,7 +112,7 @@ Este tutorial demonstra como criar um contêiner do Docker com os Serviços de M
 
 ## <a name="execute-r--python-scripts-from-transact-sql"></a>Executar scripts de R / Python de Transact-SQL
 
-1. Conecte-se ao SQL Server no contêiner e habilite a opção de configuração de script externo executando a seguinte instrução T-SQL.
+1. Conecte-se ao SQL Server no contêiner e habilite a opção de configuração de script externo executando a seguinte instrução T-SQL:
 
     ```sql
     EXEC sp_configure  'external scripts enabled', 1
@@ -120,7 +120,7 @@ Este tutorial demonstra como criar um contêiner do Docker com os Serviços de M
     go
     ```
 
-1. Verifique se os Serviços de Machine Learning estão funcionando seguindo o script simples de R/Python sp_execute_external_script.
+1. Verifique se os Serviços de Machine Learning estão funcionando seguindo o script simples de R/Python sp_execute_external_script:
 
     ```sql
     execute sp_execute_external_script 
@@ -153,11 +153,11 @@ Este tutorial demonstra como criar um contêiner do Docker com os Serviços de M
 Neste tutorial, você aprendeu a fazer o seguinte:
 
 > [!div class="checklist"]
-> * Clonar o repositório mssql-docker.
-> * Criar a imagem de contêiner Linux do SQL Server com os Serviços de Machine Learning.
-> * Executar a imagem de contêiner Linux do SQL Server com os Serviços de Machine Learning.
-> * Executar scripts de R ou Python usando instruções Transact-SQL.
-> * Interromper e remover o contêiner Linux do SQL Server.
+> * Clonar o repositório mssql-docker
+> * Criar a imagem de contêiner Linux do SQL Server com os Serviços de Machine Learning
+> * Executar a imagem de contêiner Linux do SQL Server com os Serviços de Machine Learning
+> * Executar scripts de R ou Python usando instruções Transact-SQL
+> * Interromper e remover o contêiner Linux do SQL Server
 
 A seguir, examine outros cenários de configuração e solução de problemas do Docker:
 
