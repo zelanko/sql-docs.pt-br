@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ebdc7b55cde31198007e05de1603df7134ed3bfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a62445553364fc7756444986a5bd8cf57d576ecd
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020006"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123092"
 ---
-# <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
+# <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Deve ser usado somente em topologias de replicação que incluem servidores que executam versões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1. **sp_mergecleanupmetadata** permite que os administradores limpem metadados na **MSmerge_genhistory**, **MSmerge_contents** e **MSmerge_tombstone** tabelas do sistema. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
+  Deve ser usado somente em topologias de replicação que incluem servidores que [!INCLUDE[msCoName](../../includes/msconame-md.md)] executam [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores ao Service Pack 1. **o sp_mergecleanupmetadata** permite que os administradores limpem os metadados nas tabelas do sistema **MSmerge_genhistory**, **MSmerge_contents** e **MSmerge_tombstone** . Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,35 +38,35 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, com um padrão de **%** , que limpa metadados para todas as publicações. A publicação já deve existir se explicitamente especificada.  
+`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão **%** de, que limpa os metadados de todas as publicações. A publicação já deve existir se explicitamente especificada.  
   
-`[ @reinitialize_subscriber = ] 'subscriber'` Especifica se deve reinicializar o assinante. *assinante* está **nvarchar (5)** , pode ser **verdadeira** ou **FALSE**, com um padrão de **TRUE**. Se **verdadeira**, as assinaturas serão marcadas para reinicialização. Se **falsos**, as assinaturas não são marcadas para reinicialização.  
+`[ @reinitialize_subscriber = ] 'subscriber'`Especifica se o Assinante deve ser reinicializado. o assinante é **nvarchar (5)** , pode ser **true** ou **false**, com um padrão de **true**. Se **for true**, as assinaturas serão marcadas para reinicialização. Se **for false**, as assinaturas não serão marcadas para reinicialização.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_mergecleanupmetadata** deve ser usado somente em topologias de replicação que incluem servidores que executam versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1. Topologias que só incluem o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 ou versão posterior deveriam usar limpeza automática de metadados com base em retenção. Ao executar esse procedimento armazenado, tenha cuidado com o crescimento potencialmente grande e necessário do arquivo de log no computador em que o procedimento armazenado está sendo executado.  
+ **sp_mergecleanupmetadata** deve ser usado somente em topologias de replicação que incluem servidores que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executam [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] versões do anteriores ao Service Pack 1. Topologias que só incluem o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 ou versão posterior deveriam usar limpeza automática de metadados com base em retenção. Ao executar esse procedimento armazenado, tenha cuidado com o crescimento potencialmente grande e necessário do arquivo de log no computador em que o procedimento armazenado está sendo executado.  
   
 > [!CAUTION]
->  Após **sp_mergecleanupmetadata** é executado, por padrão, todas as assinaturas nos assinantes de publicações que têm metadados armazenados no **MSmerge_genhistory**, **MSmerge_contents**  e **MSmerge_tombstone** são marcadas para reinicialização, as alterações pendentes no assinante são perdidas, e o instantâneo atual está marcado como obsoleto.  
+>  Depois que **sp_mergecleanupmetadata** é executado, por padrão, todas as assinaturas nos assinantes de publicações que têm metadados armazenados em **MSmerge_genhistory**, **MSmerge_contents** e **MSmerge_tombstone** são marcadas para reinicialização, todas as alterações pendentes no Assinante são perdidas e o instantâneo atual é marcado como obsoleto.  
 > 
 > [!NOTE]
->  Se houver várias publicações em um banco de dados e uma dessas publicações usar um período de retenção de publicação infinito ( **@retention** =**0**), em execução  **sp_mergecleanupmetadata** não limpará a alteração de replicação de mesclagem metadados para o banco de dados de rastreamento. Por esse motivo, use a retenção de publicação infinita com precaução.  
+>  Se houver várias publicações em um banco de dados e qualquer uma dessas publicações usar um período de retenção de=publicação infinita ( **\@retenção** **0**), executar **sp_mergecleanupmetadata** não limpará o metadados de controle de alterações de replicação de mesclagem para o banco de dados. Por esse motivo, use a retenção de publicação infinita com precaução.  
   
- Ao executar esse procedimento armazenado, você pode optar por reiniciar os assinantes definindo o **@reinitialize_subscriber** parâmetro **verdadeira** (o padrão) ou **FALSE**. Se **sp_mergecleanupmetadata** é executada com o **@reinitialize_subscriber** parâmetro definido como **TRUE**, um instantâneo será reaplicado no assinante, mesmo se a assinatura foi criado sem um instantâneo (por exemplo, se os dados de instantâneo e esquema foram aplicadas manualmente ou já existiam no assinante) inicial. Definindo o parâmetro como **falsos** deve ser usada com cuidado, porque se a publicação não for reiniciada, você deve garantir que os dados no publicador e assinante são sincronizados.  
+ Ao executar esse procedimento armazenado, você pode escolher se deseja reinicializar os assinantes definindo  **\@** o parâmetro reinitialize_subscriber como **true** (o padrão) ou **false**. Se **sp_mergecleanupmetadata** for executado com o  **\@parâmetro reinitialize_subscriber** definido como **true**, um instantâneo será reaplicado no Assinante, mesmo que a assinatura tenha sido criada sem um instantâneo inicial (para exemplo, se os dados e o esquema do instantâneo foram aplicados manualmente ou já existiam no Assinante). Definir o parâmetro como **false** deve ser usado com cautela, porque se a publicação não for reinicializada, você deverá garantir que os dados no Publicador e no Assinante sejam sincronizados.  
   
- Independentemente do valor **@reinitialize_subscriber** , **sp_mergecleanupmetadata** processos que estão tentando carregar alterações para um publicador ou assinante de republicação em de mesclagem falhará se não houver em andamento a hora em que o procedimento armazenado é invocado.  
+ Independentemente do valor de  **\@reinitialize_subscriber**, **sp_mergecleanupmetadata** falhará se houver processos de mesclagem em andamento que estejam tentando carregar alterações em um Publicador ou em um assinante de republicação no momento em que o armazenamento procedimento é invocado.  
   
- **Executando sp_mergecleanupmetadata com @reinitialize_subscriber = TRUE:**  
+ **Executando sp_mergecleanupmetadata com \@reinitialize_subscriber = true:**  
   
 1.  É recomendado, mas não exigido, que você interrompa todas as atualizações nos bancos de dados de publicação e assinatura. Se a atualização continuar, qualquer atualização feita no Assinante desde a última mesclagem será perdida quando a publicação for reiniciada, mas a convergência dos dados será mantida.  
   
-2.  Execute uma mesclagem executando o Agente de Mesclagem. É recomendável que você use o **-validar** opção de linha de comando do agente em cada assinante ao executar o agente de mesclagem. Se você estiver executando mesclagens de modo contínuo, consulte *considerações especiais para mesclagens de modo contínuo* mais adiante nesta seção.  
+2.  Execute uma mesclagem executando o Agente de Mesclagem. Recomendamos que você use a opção de linha de comando **-Validate** Agent em cada assinante ao executar o agente de mesclagem. Se você estiver executando mesclagens de modo contínuo, consulte *considerações especiais para mesclagens de modo contínuo* mais adiante nesta seção.  
   
 3.  Depois que todas as mesclagens forem concluídas, execute **sp_mergecleanupmetadata**.  
   
-4.  Execute **sp_reinitmergepullsubscription** em todos os assinantes usando assinatura pull nomeada ou anônima para garantir a convergência dos dados.  
+4.  Execute **sp_reinitmergepullsubscription** em todos os assinantes usando a assinatura de pull nomeada ou anônima para garantir a convergência de dados.  
   
 5.  Se você estiver executando mesclagens de modo contínuo, consulte *considerações especiais para mesclagens de modo contínuo* mais adiante nesta seção.  
   
@@ -74,11 +74,11 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 7.  Faça um backup do banco de dados de publicação. Falha nesse procedimento pode causar uma falha de mesclagem depois da restauração de um banco de dados de publicação.  
   
- **Executando sp_mergecleanupmetadata com @reinitialize_subscriber = FALSE:**  
+ **Executando sp_mergecleanupmetadata com \@reinitialize_subscriber = false:**  
   
-1.  Interromper **todas as** atualizações para os bancos de dados de publicação e assinatura.  
+1.  Interrompa **todas** as atualizações para os bancos de dados de publicação e de assinatura.  
   
-2.  Execute uma mesclagem executando o Agente de Mesclagem. É recomendável que você use o **-validar** opção de linha de comando do agente em cada assinante ao executar o agente de mesclagem. Se você estiver executando mesclagens de modo contínuo, consulte *considerações especiais para mesclagens de modo contínuo* mais adiante nesta seção.  
+2.  Execute uma mesclagem executando o Agente de Mesclagem. Recomendamos que você use a opção de linha de comando **-Validate** Agent em cada assinante ao executar o agente de mesclagem. Se você estiver executando mesclagens de modo contínuo, consulte *considerações especiais para mesclagens de modo contínuo* mais adiante nesta seção.  
   
 3.  Depois que todas as mesclagens forem concluídas, execute **sp_mergecleanupmetadata**.  
   
@@ -94,17 +94,17 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
  Se você estiver executando mesclagens do modo contínuo, deverá:  
   
--   Pare o agente de mesclagem e, em seguida, executar outra mesclagem sem o **-contínua** parâmetro especificado.  
+-   Pare o Agente de Mesclagem e, em seguida, execute outra mesclagem sem o parâmetro **-Continuous** especificado.  
   
--   Desativar a publicação com **sp_changemergepublication** para garantir que qualquer mesclagens de modo contínuo que esteja sondando aquele status de publicação falhem.  
+-   Desative a publicação com **sp_changemergepublication** para garantir que as mesclagens de modo contínuo que são sondadas para o status da publicação falhem.  
   
     ```  
     EXEC central..sp_changemergepublication @publication = 'dynpart_pubn', @property = 'status', @value = 'inactive'  
     ```  
   
- Quando você tiver concluído a etapa 3 na execução **sp_mergecleanupmetadata**, retome as mesclagens de modo contínuo com base em como você as interrompeu. Ou:  
+ Quando você concluiu a etapa 3 da execução do **sp_mergecleanupmetadata**, retome as mesclagens do modo contínuo com base em como elas foram interrompidas. Ou:  
   
--   Adicione a **-contínua** parâmetro de volta para o agente de mesclagem.  
+-   Adicione o parâmetro **-Continuous** de volta para o agente de mesclagem.  
   
 -   Reative a publicação com **sp_changemergepublication.**  
   
@@ -113,9 +113,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
     ```  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_mergecleanupmetadata**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_mergecleanupmetadata**.  
   
- Para usar esse procedimento armazenado, o Publicador deve estar executando o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Os assinantes devem estar executando o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, Service Pack 2.  
+ Para usar esse procedimento armazenado, o Publicador deve estar executando o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Os assinantes devem estar executando [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o 7,0, Service Pack 2.  
   
 ## <a name="see-also"></a>Consulte também  
  [MSmerge_genhistory &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
