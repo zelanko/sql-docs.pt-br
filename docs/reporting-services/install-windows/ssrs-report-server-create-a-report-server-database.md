@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/15/2018
-ms.openlocfilehash: a05ef92709974b314ea5865362946c1f053c5343
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.date: 08/28/2019
+ms.openlocfilehash: d8bbc1436b3615259248598a9fa19346d4f2a43f
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262805"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123012"
 ---
 # <a name="create-a-report-server-database"></a>Criar um banco de dados do servidor de relatório 
 
@@ -24,10 +24,9 @@ O modo nativo do Servidor SQL [!INCLUDE[ssRSnoversion](../../includes/ssrsnovers
 
 Os bancos de dados são criados juntamente e associados por nome. Com uma instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] padrão, os bancos de dados são nomeados **reportserver** e **reportservertempdb**. Coletivamente, os dois bancos de dados são chamados de **banco de dados do servidor de relatório** ou **catálogo do servidor de relatório**.
 
-O **modo do SharePoint** do SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]inclui um terceiro banco de dados que é usado para metadados de alertas de dados. Os três bancos de dados são criados para cada aplicativo de serviço SSRS. Por padrão, os nomes de banco de dados incluem um GUID que representa o aplicativo de serviço. 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-> [!NOTE]
-> A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
+O **modo do SharePoint** do SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]inclui um terceiro banco de dados que é usado para metadados de alertas de dados. Os três bancos de dados são criados para cada aplicativo de serviço SSRS. Por padrão, os nomes de banco de dados incluem um GUID que representa o aplicativo de serviço. 
 
 A seguir são apresentados nomes de exemplo dos três bancos de dados do modo do SharePoint:
 
@@ -36,6 +35,8 @@ A seguir são apresentados nomes de exemplo dos três bancos de dados do modo do
 - ReportingService_90a9f37075544f22953c4a62e4a9f370TempDB  
   
 - ReportingService_90a9f37075544f22953c4a62e4a9f370_Alerting  
+
+::: moniker-end
   
 > [!IMPORTANT]  
 > Não grave aplicativos que executem consultas em relação ao banco de dados do servidor de relatório. O banco de dados do servidor de relatório não é um esquema público. A estrutura da tabela pode ser alterada de uma versão para a próxima. Se você gravar um aplicativo que requeira acesso ao banco de dados do servidor de relatório, sempre use as APIs do SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para acessar o banco de dados do servidor de relatório.  
@@ -65,7 +66,18 @@ A página **Opções de Instalação do Servidor de Relatório** tem apenas uma 
 ## <a name="database-server-version-requirements"></a>Requisitos de versão do servidor de banco de dados
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é usado para hospedar os bancos de dados de servidor de relatório. A instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pode ser local ou remota. As seguintes versões com suporte do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que podem hospedar os bancos de dados do servidor de relatório:  
-  
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+- Instância Gerenciada do SQL do Azure
+
+- SQL Server 2019
+
+::: moniker-end
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+
+- SQL Server 2017  
+::: moniker-end
+
 - [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
@@ -73,9 +85,7 @@ A página **Opções de Instalação do Servidor de Relatório** tem apenas uma 
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
 - [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
-  
-- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
-  
+
 Se você criar o banco de dados do servidor de relatório em um computador remoto, configure a conexão para usar uma conta de usuário de domínio ou uma conta de serviço que tenha acesso à rede. Se você usar uma instância remota do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], considere quais credenciais o servidor de relatório deve usar para se conectar à instância. Confira mais informações em [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 > [!IMPORTANT]  
