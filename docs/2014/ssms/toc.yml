@@ -249,7 +249,7 @@
       href: ../database-engine/connection-properties-dialog-box.md
     - name: Senha expirada
       href: ../database-engine/password-expired.md
-    - name: Conectar ao Windows Azure Storage
+    - name: Conectar-se a um Armazenamento do Azure
       href: ../database-engine/connect-to-windows-azure-storage.md
 - name: Visual Database Tools +
   href: visual-db-tools/visual-database-tools.md
