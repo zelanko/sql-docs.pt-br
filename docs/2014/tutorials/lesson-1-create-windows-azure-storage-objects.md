@@ -1,5 +1,5 @@
 ---
-title: 'Lição 1: Criar objetos de armazenamento do Azure do Windows | Microsoft Docs'
+title: 'Lição 1: Criar objetos de armazenamento do Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,28 +10,28 @@ ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 449f86b80b93055bb23fe4cd32ace10e15724dbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c43678851427d6498e57e8a2297449825adfb4f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68210999"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154349"
 ---
-# <a name="lesson-1-create-windows-azure-storage-objects"></a>Lição 1: Criar objetos do Armazenamento do Microsoft Azure
-  Para que você possa criar backups do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no armazenamento em nuvem, primeiro crie uma conta de armazenamento e, depois, um contêiner de blob. A lição 1 conduzirá você pelas etapas do registro em log no portal de gerenciamento do Windows Azure, criando uma conta de armazenamento e um contêiner de blob.  
+# <a name="lesson-1-create-azure-storage-objects"></a>Lição 1: Criar objetos de armazenamento do Azure
+  Para que você possa criar backups do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no armazenamento em nuvem, primeiro crie uma conta de armazenamento e, depois, um contêiner de blob. A lição 1 orienta você pelas etapas de fazer logon na Portal de Gerenciamento do Azure, criando uma conta de armazenamento e um contêiner de BLOB.  
   
 ## <a name="create-a-storage-account"></a>Criar uma conta de armazenamento  
- Para criar uma conta de armazenamento no portal de gerenciamento do Windows Azure, execute as seguintes etapas:  
+ Para criar uma conta de armazenamento do Portal de Gerenciamento do Azure, use as seguintes etapas:  
   
-1.  Entre ao portal de gerenciamento do Windows Azure usando sua conta. Se você não tiver uma conta do Windows Azure, [visite a avaliação gratuita de 3 meses do Windows Azure](https://go.microsoft.com/fwlink/?LinkId=271927).  
+1.  Faça logon no Azure Portal de Gerenciamento usando sua conta. Se você não tiver uma conta do Azure, [visite avaliação gratuita de 3 meses do Azure](https://go.microsoft.com/fwlink/?LinkId=271927).  
   
-     ![Tela de logon do Azure do Windows](../../2014/tutorials/media/windowazurelogin-backuptocloud.gif "tela de logon do Azure do Windows")  
+     ![Tela de logon do Azure](../../2014/tutorials/media/windowazurelogin-backuptocloud.gif "Tela de logon do Azure")  
   
-2.  Use as instruções passo a passo detalhadas [aqui](https://go.microsoft.com/fwlink/?LinkId=271926), para criar uma conta de armazenamento.  
+2.  Use as instruções passo a passo detalhadas [aqui](https://go.microsoft.com/fwlink/?LinkId=271926)para criar uma conta de armazenamento.  
   
-3.  Procure a conta de armazenamento que você criou na etapa anterior. Na parte inferior central da página da web, clique em **gerenciar chaves**. As informações da conta serão exibidas. Copie o nome da conta de armazenamento e as chaves de acesso. Essas informações são necessárias para criar credenciais armazenadas do SQL. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usará essas informações para acessar a conta de armazenamento e criar backups.  
+3.  Procure a conta de armazenamento que você criou na etapa anterior. Na parte inferior central da página da Web, clique em **gerenciar chaves**. As informações da conta serão exibidas. Copie o nome da conta de armazenamento e as chaves de acesso. Essas informações são necessárias para criar credenciais armazenadas do SQL. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usará essas informações para acessar a conta de armazenamento e criar backups.  
   
-     ![Captura de tela do Windows Azure Storage Account Keys](../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "captura de tela de chaves de conta de armazenamento do Windows Azure")  
+     ![Captura de tela de chaves de conta de armazenamento do Azure](../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "Captura de tela de chaves de conta de armazenamento do Azure")  
   
     > [!NOTE]  
     >  Você também pode criar uma conta de armazenamento de modo programático usando APIs REST. Para obter mais informações, consulte [criar conta de armazenamento](https://go.microsoft.com/fwlink/?LinkId=271928).  
@@ -41,15 +41,15 @@ ms.locfileid: "68210999"
   
  Para criar um contêiner, execute as seguintes etapas:  
   
-1.  Selecione a conta de armazenamento, clique no **RECIPIENTES** guia e clique em **adicionar CONTÊINER** na parte inferior da tela que abre uma caixa de diálogo.  
+1.  Selecione a conta de armazenamento, clique na guia contêineres e clique em **Adicionar contêiner** na parte inferior da tela que abre uma nova caixa de diálogo.  
   
-     ![Criar um contêiner no Portal de gerenciamento](../../2014/tutorials/media/backuptocloud.gif "criação de um contêiner no Portal de gerenciamento")  
+     ![Criando um contêiner no portal de gerenciamento](../../2014/tutorials/media/backuptocloud.gif "Criando um contêiner no portal de gerenciamento")  
   
 2.  Insira um nome do contêiner. Anote o nome de contêiner que você especificou. Essas informações são usadas na URL (caminho para o arquivo de backup) nas instruções T-SQL das lições 3 e 4.  
   
-3.  Selecione privado **tipo de acesso**. É recomendável criar contêiner privados para proteger os arquivos de backup.  
+3.  Selecione privado para **tipo de acesso**. É recomendável criar contêiner privados para proteger os arquivos de backup.  
   
-     ![Criando um novo contêiner de blob](../../2014/tutorials/media/backuptocloud-newblobcontainer.gif "criando um novo contêiner de blob")  
+     ![Criando um novo contêiner de BLOBs](../../2014/tutorials/media/backuptocloud-newblobcontainer.gif "Criando um novo contêiner de BLOBs")  
   
     > [!NOTE]  
     >  A autenticação na conta de armazenamento é necessária para o backup e a restauração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mesmo se você optar por criar um contêiner público.  
@@ -57,6 +57,6 @@ ms.locfileid: "68210999"
     >  Você também pode criar uma contêiner de modo programático usando APIs REST. Para obter mais informações, consulte [criar contêiner](https://go.microsoft.com/fwlink/?LinkId=271946).  
   
 ### <a name="next-lesson"></a>Próxima lição  
- [Lição 2: Criar uma credencial do SQL Server](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md).  
+ [Lição 2: Crie uma credencial](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md)de SQL Server.  
   
   

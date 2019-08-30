@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.date: 04/18/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e0f4fc55632b4effbe04776542b35aa54dcd9462
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08f70ff74c5743f202867ae2a57adc1c6b9d677d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960848"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153365"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System
 
@@ -23,7 +23,7 @@ O Microsoft APS (Analytics Platform System), uma plataforma de dados projetada p
 
 O Analytics Platform System hospeda o SQL Server PDW (Parallel Data Warehouse), que é o software que executa o data warehouse de MPP (processamento paralelo em massa).
 
-A tecnologia PolyBase combina dados relacionais do PDW e dados do Hadoop de várias origens, incluindo Hortonworks no Windows Server, Hortonworks no Linux, Cloudera no Linux e armazenamento de blobs do Microsoft Azure do HDInsight. Esses recursos de integração de dados avançados, juntamente com a integração profunda com ferramentas de Business Intelligence, permitem que o Analytics Platform System retorne a análise integrada que permite que os tomadores de decisão tomem decisões de negócios melhores e mais criteriosas.
+A tecnologia polybase combina dados de PDW relacionais com dados do Hadoop de várias fontes, incluindo Hortonworks no Windows Server, Hortonworks no Linux, Cloudera no armazenamento de BLOBs do Azure para Linux e HDInsight. Esses recursos de integração de dados avançados, juntamente com a integração profunda com ferramentas de Business Intelligence, permitem que o Analytics Platform System retorne a análise integrada que permite que os tomadores de decisão tomem decisões de negócios melhores e mais criteriosas.
 
 O Analytics Platform System é enviado ao seu data center como um dispositivo de hardware e software pré-instalados e pré-configurados para executar várias cargas de trabalho. Quando você adquire o Analytics Platform System, adquire nós de computação para PDW de acordo com seus requisitos de negócios.
 
@@ -38,13 +38,13 @@ Use o PDW como o componente de data warehouse relacional central de suas soluç�
 
 Além de alcançar o desempenho de consulta inovador, o PDW facilita:
 
-- Aumento do data warehouse para qualquer lugar de alguns terabytes até 6 petabytes de dados em um único dispositivo adicionando "unidades de escala" para seu sistema existente.
+- Aumente seu data warehouse para qualquer lugar de alguns terabytes a mais de 6 petabytes de dados em um único dispositivo adicionando "unidades de escala" ao seu sistema existente.
 
-- Confie que seus dados estarão disponíveis quando precisar devido à redundância interna de alta e alta disponibilidade.
+- Confie que seus dados estarão lá quando você precisar deles devido à alta disponibilidade e redundância interna.
 
-- Solucionar os desafios de dados modernos de carregamento e consolidação de dados.
+- Resolva os desafios de dados modernos de carregar e consolidar dados.
 
-- Integre dados do Hadoop com dados relacionais para análise rápida usando a tecnologia PolyBase altamente em paralelo do PDW.
+- Integre dados do Hadoop a dados relacionais para análise rápida usando a tecnologia polybase altamente paralelizada do PDW.
 
 - O uso de ferramentas de Business Intelligence para criar soluções de ponta a ponta abrangentes.
 

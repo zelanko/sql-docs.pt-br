@@ -1,5 +1,5 @@
 ---
-title: Usando o Database Mail | Microsoft Docs
+title: Usando Database Mail | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - Database Mail [SMO]
 - mail [SMO]
 ms.assetid: 7605390f-b485-48cc-8d97-e364a066067b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c1b91f8c1d8f032516a7b2e04a8533f4b792b3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3e29aaf45306c9ed5d8c8dd7c132dacd9af1e926
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030053"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148348"
 ---
 # <a name="using-database-mail"></a>Usando o Database Mail
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  No SMO, o subsistema Database Mail é representado pelo objeto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> que é referenciado pela propriedade <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A>. Através do objeto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> do SMO, você pode configurar o subsistema Database Mail e gerenciar perfis e contas de email. O SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> objeto pertence a **Server** objeto, isso significa que o escopo das contas de email está no nível do servidor.  
+  No SMO, o subsistema Database Mail é representado pelo objeto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> que é referenciado pela propriedade <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A>. Através do objeto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> do SMO, você pode configurar o subsistema Database Mail e gerenciar perfis e contas de email. O objeto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> Smo pertence ao objeto **Server** , o que significa que o escopo das contas de email está no nível do servidor.  
   
 ## <a name="examples"></a>Exemplos  
- Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto do SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto&#35; do Visual C Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
  Para programas que usam o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Mail, inclua a instrução **Imports** para qualificar o namespace do Mail. Insira a instrução após outras instruções **Imports** , antes de qualquer declaração no aplicativo, como:  
   

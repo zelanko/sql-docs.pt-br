@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQL Server Management Objects, exceptions
 - inner exceptions [SMO]
 ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b533291a9cc7a04efe0f3f2de0b39bc3fc544f83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4fdf4e03eeb839aad74588f3fb338d10fc949220
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098289"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148700"
 ---
 # <a name="handling-smo-exceptions"></a>Manipulando exceções SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,17 +36,17 @@ ms.locfileid: "68098289"
  As exceções podem ser gerais ou específicas. As exceções gerais contêm um conjunto de exceções específicas. Várias instruções **Catch** podem ser usadas para tratar erros antecipados e deixar os erros restantes sem solução no código geral de manipulação de exceção. Normalmente, as exceções ocorrem em uma sequência em cascata. Com frequência, a exceção do SMO é causada por uma exceção SQL. Para detectar isso, use a propriedade **InnerException** sucessivamente para determinar a exceção original que causou a exceção final de nível superior.  
   
 > [!NOTE]  
->  O **SQLException** exceção é declarada na **System.Data.SqlClient** namespace.  
+>  A exceção **SqlException** é declarada no namespace **System. Data. SqlClient** .  
   
- ![Um diagrama que mostra os níveis da qual uma exceção](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "um diagrama que mostra os níveis da qual uma exceção")  
+ ![Um diagrama que mostra os níveis dos quais um excp](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "Um diagrama que mostra os níveis dos quais um excp")  
   
  O diagrama mostra o fluxo de exceções pelas camadas do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto do SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).
+ Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto&#35; do Visual C Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Capturando uma exceção no Visual Basic  
- Este exemplo de código mostra como usar o **tente... Catch... Por fim** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] instrução para capturar uma exceção de SMO. Todas as exceções do SMO têm o tipo SmoException e estão listadas na referência de SMO. A sequência de exceções internas é exibida para mostrar a raiz do erro. Para obter mais informações, consulte a documentação do [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
+ Este exemplo de código mostra como usar o **bloco try... Capturar... Instrução Finally** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] para capturar uma exceção de Smo. Todas as exceções do SMO têm o tipo SmoException e estão listadas na referência de SMO. A sequência de exceções internas é exibida para mostrar a raiz do erro. Para obter mais informações, consulte a documentação do [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
 ```VBNET
 'This sample requires the Microsoft.SqlServer.Management.Smo.Agent namespace is included.
@@ -83,7 +83,7 @@ End Try
 ``` 
   
 ## <a name="catching-an-exception-in-visual-c"></a>Capturando uma exceção no Visual C#  
- Este exemplo de código mostra como usar o **tente... Catch... Por fim** Visual C# instrução para capturar uma exceção de SMO. Todas as exceções do SMO têm o tipo SmoException e estão listadas na referência de SMO. A sequência de exceções internas é exibida para mostrar a raiz do erro. Para obter mais informações, consulte a documentação do Visual C#.  
+ Este exemplo de código mostra como usar o **bloco try... Capturar... Por fim,** instrução Visual C# para capturar uma exceção de Smo. Todas as exceções do SMO têm o tipo SmoException e estão listadas na referência de SMO. A sequência de exceções internas é exibida para mostrar a raiz do erro. Para obter mais informações, consulte a documentação do Visual C#.  
   
 ```csharp  
 {   

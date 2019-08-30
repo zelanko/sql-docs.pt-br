@@ -10,15 +10,15 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3066700945d2d6dad33f04c6bc905720daab61c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e4550f64d815c40b4069c2e62e9eee7ffd0cf1d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876166"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154757"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>Excluindo arquivos de blob de backup com arrendamentos ativos
-  Ao fazer backup ou restauração no armazenamento do Windows Azure, o SQL Server adquirirá uma concessão infinita para bloquear o acesso exclusivo ao blob. Quando o processo de backup ou restauração for concluído com êxito, a concessão será liberada. Se um backup ou uma restauração falhar, o processo de backup tentará limpar qualquer blob inválido. Entretanto, se o backup falhar devido a uma falha de conectividade de rede prolongada ou contínua, o processo de backup pode não ser capaz de obter acesso ao blob e o blob pode permanecer órfão. Isso significa que o blob só poderá ser gravado ou excluído quando a concessão for liberada. Este tópico descreve como liberar a concessão e excluir o blob.  
+  Ao fazer backup ou restaurar do armazenamento do Azure, o SQL Server adquire uma concessão infinita para bloquear o acesso exclusivo ao blob. Quando o processo de backup ou restauração for concluído com êxito, a concessão será liberada. Se um backup ou uma restauração falhar, o processo de backup tentará limpar qualquer blob inválido. Entretanto, se o backup falhar devido a uma falha de conectividade de rede prolongada ou contínua, o processo de backup pode não ser capaz de obter acesso ao blob e o blob pode permanecer órfão. Isso significa que o blob só poderá ser gravado ou excluído quando a concessão for liberada. Este tópico descreve como liberar a concessão e excluir o blob.  
   
  Para obter mais informações sobre os tipos de arrendamentos, leia este [artigo](https://go.microsoft.com/fwlink/?LinkId=275664).  
   
@@ -29,17 +29,17 @@ ms.locfileid: "62876166"
 ## <a name="managing-orphaned-blobs"></a>Gerenciando blobs órfãos  
  As etapas a seguir descrevem como efetuar a limpeza após uma atividade de restauração ou backup com falha. Todas as etapas podem ser executadas por meio dos scripts do PowerShell. Um exemplo de código é fornecido na seção a seguir:  
   
-1.  **Identificando os blobs que têm arrendamentos:** Se houver um script ou um processo que execute os processos de backup, você poderá capturar a falha no script ou no processo e usá-la para limpar os blobs.   Você também pode usar as propriedades LeaseStats e LeastState para identificar os blobs que têm arrendamentos neles. Após identificar os blobs, recomendamos que você examine a lista e verifique a validade do arquivo de backup antes de excluir o blob.  
+1.  **Identificando BLOBs que têm concessões:** Se houver um script ou um processo que execute os processos de backup, você poderá capturar a falha no script ou no processo e usá-la para limpar os blobs.   Você também pode usar as propriedades LeaseStats e LeastState para identificar os blobs que têm arrendamentos neles. Após identificar os blobs, recomendamos que você examine a lista e verifique a validade do arquivo de backup antes de excluir o blob.  
   
-2.  **Interrupção da concessão:** Uma solicitação autorizada pode interromper a concessão sem fornecer uma ID de concessão. Consulte [aqui](https://go.microsoft.com/fwlink/?LinkID=275664) para obter mais informações.  
+2.  **Dividindo a concessão:** Uma solicitação autorizada pode interromper a concessão sem fornecer uma ID de concessão. Consulte [aqui](https://go.microsoft.com/fwlink/?LinkID=275664) para obter mais informações.  
   
     > [!TIP]  
     >  O SQL Server emite uma ID de concessão para estabelecer o acesso exclusivo durante a operação de restauração. A ID de concessão da restauração é BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
-3.  **Excluindo o Blob:** Para excluir um blob que tem uma concessão ativa, primeiro você deve interromper a concessão.  
+3.  **Excluindo o blob:** Para excluir um blob que tem uma concessão ativa, primeiro você deve interromper a concessão.  
   
 ###  <a name="Code_Example"></a> Exemplo de script do PowerShell  
- **\*\* Importante \* \***  se você estiver executando o PowerShell 2.0, você pode ter problemas ao carregar o assembly Microsoft WindowsAzure.Storage.dll. Recomendamos que você atualize o Powershell 3.0 para resolver o problema. Você também pode usar a seguinte solução para o PowerShell 2.0:  
+ **Importante sevocê\* estiver executando o PowerShell 2,0, poderá ter problemas ao carregar o assembly Microsoft WindowsAzure. Storage. dll. \* \* \*** Recomendamos que você atualize o Powershell 3.0 para resolver o problema. Você também pode usar a seguinte solução para o PowerShell 2.0:  
   
 -   Crie ou modifique o arquivo powershell.exe.config para carregar os assemblies do .NET 2.0 e do .NET 4.0 em tempo de execução com o seguinte:  
   
@@ -59,9 +59,9 @@ ms.locfileid: "62876166"
  Dicas para executar este script  
   
 > [!WARNING]  
->  Se um backup para o serviço de armazenamento de Blob do Windows Azure estiver sendo executado ao mesmo tempo que este script, o backup poderá falhar, uma vez que o script interromperá a concessão que o backup está tentando adquirir ao mesmo tempo. Recomendamos a execução deste script durante uma janela de manutenção ou quando não houver nenhum backup programado para execução.  
+>  Se um backup para o serviço de armazenamento de BLOBs do Azure estiver em execução ao mesmo tempo que esse script, o backup poderá falhar, pois esse script interromperá a concessão que o backup está tentando adquirir ao mesmo tempo. Recomendamos a execução deste script durante uma janela de manutenção ou quando não houver nenhum backup programado para execução.  
   
-1.  Ao executar este script, você será solicitado a fornecer valores da conta de armazenamento, da chave de armazenamento, do contêiner, e dos parâmetros de caminho e nome do assembly de armazenamento do Windows Azure. O caminho do armazenamento do assembly é o diretório de instalação da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O nome de arquivo do assembly de armazenamento é Microsoft.WindowsAzure.Storage.dll. O seguinte é um exemplo dos prompts e valores inseridos:  
+1.  Ao executar esse script, você será solicitado a fornecer valores para a conta de armazenamento, a chave de armazenamento, o contêiner e os parâmetros de caminho e nome do assembly de armazenamento do Azure. O caminho do armazenamento do assembly é o diretório de instalação da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O nome de arquivo do assembly de armazenamento é Microsoft.WindowsAzure.Storage.dll. O seguinte é um exemplo dos prompts e valores inseridos:  
   
     ```  
     cmdlet  at command pipeline position 1  

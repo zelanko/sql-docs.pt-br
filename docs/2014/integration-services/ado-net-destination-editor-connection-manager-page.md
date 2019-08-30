@@ -1,5 +1,5 @@
 ---
-title: Editor de destino do ADO NET (página Gerenciador de Conexão) | Microsoft Docs
+title: Editor de destino ADO NET (página Gerenciador de conexões) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ae5cc8303fa09eae7a4af6ef9ae6d589f43bcb2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: faeb72f875fd5427536ddd72db03ca71a25b293e
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061737"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154028"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>Editor de Destino ADO NET (Página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Destino ADO NET** para selecionar a conexão [!INCLUDE[vstecado](../includes/vstecado-md.md)] para o destino. Essa página também permite que você selecione uma tabela ou exibição a partir do banco de dados.  
@@ -66,7 +66,7 @@ ms.locfileid: "66061737"
 >  Para obter mais informações, consulte [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-identity-insert-transact-sql) e [IDENTITY &#40;Propriedade&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property).  
   
 ## <a name="external-resources"></a>Recursos externos  
- Artigo técnico sobre o [Loading data to Windows Azure SQL Database the fast way](https://go.microsoft.com/fwlink/?LinkId=244333)(Carregando dados no Banco de Dados SQL do Microsoft Azure), em sqlcat.com  
+ Artigo técnico, [carregamento de dados para o Azure SQL Database da maneira rápida](https://go.microsoft.com/fwlink/?LinkId=244333), em sqlcat.com  
   
 ## <a name="see-also"></a>Consulte também  
  [Editor de Destino ADO NET &#40;página Mapeamentos&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Serviço de armazenamento de BLOBs do SQL Server Backup e restauração para o Windows Azure | Microsoft Docs'
+title: 'Tutorial: Backup e restauração do SQL Server para o Serviço de Armazenamento de Blobs do Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,29 +10,29 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2216674bec52dd4d4800aa1b03aa4a2834667974
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a9cbb46b04491be3fe97cb707ad79c98990ff19
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62524046"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155327"
 ---
-# <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>Tutorial: Backup e restauração do SQL Server para o serviço de Armazenamento de Blobs do Microsoft Azure
-  Bem-vindo ao tutorial Introdução ao Backup e à restauração do SQL Server com o serviço de armazenamento de Blob do Windows Azure. Este tutorial ajuda a compreender como gravar backups e executar restaurações no serviço de armazenamento de Blob do Windows Azure.  
+# <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Tutorial: Backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure
+  Bem-vindo ao tutorial de Introdução com SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Azure. Este tutorial ajudará você a compreender como gravar backups e executar restaurações no serviço de Armazenamento de Blobs do Azure.  
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
  Este tutorial mostra como criar uma conta de armazenamento do Windows, um contêiner de blob, criando credenciais para acessar a conta de armazenamento, gravando um backup no serviço de blob e executando uma restauração simples. Este tutorial é dividido em quatro lições:  
   
- [Lição 1: Criar objetos de armazenamento do Azure do Windows](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
- Nesta lição, você criará uma conta de armazenamento do Windows Azure e um contêiner de blob.  
+ [Lição 1: Criar objetos de armazenamento do Azure](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
+ Nesta lição, você criará uma conta de armazenamento do Azure e um contêiner de BLOB.  
   
- [Lição 2: Criar uma credencial do SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)  
- Nesta lição, você criará uma credencial para armazenar as informações de segurança usadas para acessar a conta de armazenamento do Windows Azure.  
+ [Lição 2: Criar uma credencial de SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)  
+ Nesta lição, você criará uma credencial para armazenar as informações de segurança usadas para acessar a conta de armazenamento do Azure.  
   
- [Lição 3: Gravar um Backup de banco de dados completo para o serviço de armazenamento de BLOBs do Azure do Windows](../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)  
- Nesta lição, você emitirá uma instrução T-SQL para gravar um backup do banco de dados AdventureWorks2012 no serviço de armazenamento de Blob do Windows Azure.  
+ [Lição 3: Gravar um backup de banco de dados completo no serviço de armazenamento de BLOBs do Azure](../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)  
+ Nesta lição, você gerará uma instrução T-SQL para gravar um backup do banco de dados AdventureWorks2012 no serviço de Armazenamento de Blobs do Azure.  
   
- [Lição 4: Executar uma restauração de um Backup de banco de dados completo](../tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)  
+ [Lição 4: Executar uma restauração de um backup de banco de dados completo](../tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)  
  Nesta lição, você emitirá uma instrução T-SQL para fazer a restauração a partir do backup de banco de dados criado na lição anterior.  
   
 ### <a name="requirements"></a>Requisitos  
@@ -40,16 +40,16 @@ ms.locfileid: "62524046"
   
 -   Uma instância do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], e o banco de dados AdventureWorks2012 instalado.  
   
-     A instância do SQL Server pode ser no local ou em uma máquina virtual do Windows Azure.  
+     A instância de SQL Server pode ser local ou em uma máquina virtual do Azure.  
   
      Você pode usar um banco de dados de usuário no lugar do AdventureWorks2012 e modificar a sintaxe do tsql adequadamente.  
   
 -   A conta de usuário usada para emitir os comandos BACKUP ou RESTORE deve estar na função de banco de dados **operador db_backup** com as permissões **Alterar qualquer credencial** .  
   
 ### <a name="additional-reading"></a>Leitura adicional  
- Estas são algumas leituras que podem ajudar a compreender os conceitos e as práticas recomendadas no uso do serviço de armazenamento de Blob do Windows Azure para backups do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ Estas são algumas leituras que podem ajudar a compreender os conceitos e as práticas recomendadas ao usar o serviço de armazenamento de Blobs do Azure para backups do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-1.  [Backup e restauração do SQL Server com o serviço de armazenamento de Blob do Microsoft Azure](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
+1.  [SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Azure](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
 2.  [Práticas recomendadas e solução de problemas de backup do SQL Server para URL](backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   

@@ -12,12 +12,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3c5898910a5280e797080c99fde978bb3da1c3c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19ef3eacc2fc1dbe6408ea1b51c5135ba37740e5
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484211"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154468"
 ---
 # <a name="introduction-to-data-quality-services"></a>Introdução ao Data Quality Services
   A solução de qualidade de dados fornecida pelo [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) permite que um administrador de dados ou profissional de TI mantenha a qualidade de seus dados e assegure que os dados sejam adequados para uso comercial. O DQS é uma solução controlada por conhecimento que fornece maneiras assistidas por computador e interativas para gerenciar a integridade e a qualidade de suas fontes de dados. O DQS permite descobrir, compilar e gerenciar conhecimento sobre seus dados. Você pode usar esse conhecimento para executar a limpeza, a correspondência e a criação de perfil de dados. Você também pode aproveitar os serviços baseados em nuvem de provedores de dados de referência em um projeto de qualidade de dados do DQS.  
@@ -29,7 +29,7 @@ ms.locfileid: "65484211"
   
  O DQS permite que o usuário de uma empresa, um profissional da informação ou de TI, que não seja um especialista em banco de dados nem um programador, crie, mantenha e execute as operações de qualidade de dados de suas organizações com tempo mínimo de instalação e preparação.  
   
-##  <a name="Answer"></a> Atendendo à necessidade com o DQS  
+##  <a name="Answer"></a>Atendendo à necessidade com o DQS  
  A qualidade de dados não é definida em termos absolutos. Ela depende de os dados serem adequados ou não à sua finalidade. O DQS identifica dados possivelmente incorretos e fornece uma avaliação da probabilidade de os dados estarem de fato incorretos. O DQS fornece uma noção semântica dos dados para que você possa decidir sua adequação. O DQS permite resolver problemas que envolvem incompletude, falta de conformidade, inconsistência, imprecisão, invalidade e duplicação de dados.  
   
  O DQS fornece os recursos a seguir para resolver problemas de qualidade de dados.  
@@ -38,7 +38,7 @@ ms.locfileid: "65484211"
   
 -   **Correspondência:** a identificação de duplicatas semânticas em um processo baseado em regras que lhe permite determinar o que constitui uma correspondência e eliminar a duplicação. Para obter mais informações, consulte [Data Matching](../../2014/data-quality-services/data-matching.md).  
   
--   **Serviços de Dados de Referência :** verificação da qualidade de seus dados usando os serviços de um provedor de dados de referência. Você pode usar os serviços de dados de referência do Windows Azure Marketplace DataMarket para limpar, validar, corresponder e enriquecer dados facilmente. Para obter mais informações, consulte [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
+-   **Serviços de Dados de Referência :** verificação da qualidade de seus dados usando os serviços de um provedor de dados de referência. Você pode usar os serviços de dados de referência do Azure Marketplace DataMarket para limpar, validar, corresponder e enriquecer dados facilmente. Para obter mais informações, consulte [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
 -   **Criação de Perfil:** análise de uma fonte de dados para fornecer uma perspectiva da qualidade dos dados em todas as fases da descoberta de conhecimento, do gerenciamento de domínio, da correspondência e dos processos de limpeza de dados. Criação de Perfil é uma ferramenta avançada de uma solução de qualidade de dados do DQS. Você pode criar uma solução de qualidade de dados em que a criação de perfil seja tão importante quanto o gerenciamento de conhecimento, a correspondência ou a limpeza de dados. Para obter mais informações, consulte [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   

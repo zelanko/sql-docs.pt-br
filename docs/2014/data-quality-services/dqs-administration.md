@@ -14,12 +14,12 @@ ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cc8f84eb268fab041b65e4fc2faced7ee9b0103a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7f4ddc16bdfcc7e0d3acdfabe83e81f3d06c0b93
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480619"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154445"
 ---
 # <a name="dqs-administration"></a>administração do dqs
   O DQS ([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) permite administrar e gerenciar várias atividades de DQS executadas no [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], configurar propriedades do nível de servidor relacionadas a atividades de DQS, definir as configurações de Serviço de Dados de Referência e definir configurações de log de DQS. Estas coisas são feitas pelo recurso **Administração** no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Dependendo de seu acesso de segurança (função) no DQS, você recebe acesso ou tem o acesso negado a determinadas funcionalidades nesta área.  
@@ -32,7 +32,7 @@ ms.locfileid: "65480619"
   
 -   Permite que os administradores do DQS monitorem as atividades do DQS em um [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] de um [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]e *finalizem* uma atividade em execução ou *parem* um processo em execução dentro de uma atividade, se for preciso.  
   
--   Defina as configurações de serviço de dados de referência como configurar conectividade com o Windows Azure Marketplace e gerenciar provedores de serviços de dados de referências de terceiros.  
+-   Defina as configurações do serviço de dados de referência, como configurar a conectividade com o Azure Marketplace e gerenciar provedores de serviço de dados de referência de terceiros diretos.  
   
 -   Configure valores de limites para atividades de limpeza e correspondência.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "65480619"
 ### <a name="configuration"></a>Configuração  
  A tela **Configuração** no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] permite que o administrador do DQS faça o seguinte:  
   
--   **Dados de referência**: configurar provedores de serviço de dados de referência: Microsoft Azure Marketplace ou provedores diretos de serviço de dados de referência. Depois de configurar os provedores de serviço de dados de referência, você pode mapear um domínio ou domínio composto com os dados de referência durante a atividade de gerenciamento de domínio em uma base de dados de conhecimento e, em seguida, usar a mesma base de dados de conhecimento para a atividade de limpeza em um projeto de qualidade de dados. Isso também permite que você especifique as configurações de proxy para conectar-se à Internet para usar o Windows Azure Marketplace.  
+-   **Dados de referência**: configurar provedores de serviço de dados de referência: Provedores de serviço de dados de referência direta ou do Azure Marketplace. Depois de configurar os provedores de serviço de dados de referência, você pode mapear um domínio ou domínio composto com os dados de referência durante a atividade de gerenciamento de domínio em uma base de dados de conhecimento e, em seguida, usar a mesma base de dados de conhecimento para a atividade de limpeza em um projeto de qualidade de dados. Ele também permite que você especifique as configurações de proxy para se conectar à Internet para usar o Azure Marketplace.  
   
 -   **Configurações gerais**: especifique os valores de limite para limpeza e correspondência de dados e se é preciso habilitar notificações para criar perfil no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Estes valores de limite são usados pelo DQS durante a limpeza por computador e atividades correspondentes em um projeto de qualidade de dados.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "65480619"
   
  Para obter mais informações, consulte [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

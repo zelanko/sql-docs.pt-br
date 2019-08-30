@@ -13,29 +13,29 @@ helpviewer_keywords:
 - namespaces [SMO]
 - SQL Server Management Objects, namespaces
 ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e3787429a4652e1893f56e0a8a4f33d9e72ba84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e5b7f7ef0f36823eb59d4c821b2b8a8b24fc716c
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097962"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148595"
 ---
 # <a name="smo-object-model-namespaces"></a>Namespaces de modelos de objetos SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) tem vários namespaces. Os diversos namespaces representam áreas de funcionalidades diferentes no SMO.  
   
- No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], os assemblies SMO estão localizados na pasta C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\.  
+ No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], os assemblies do Smo estão localizados na pasta C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\  
   
 ## <a name="namespaces"></a>Namespaces  
  Os namespaces do SMO são os seguintes:  
   
 |Classe|Função|  
 |-----------|--------------|  
-|<xref:Microsoft.SqlServer.Management.Smo>|Contém classes de instância, classes de utilitário e enumerações que são usadas para manipular programaticamente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|<xref:Microsoft.SqlServer.Management.Smo>|Contém classes de instância, classes utilitárias e enumerações que são usadas para manipular [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]programaticamente.|  
 |<xref:Microsoft.SqlServer.Management.Common>|Contém as classes que são comuns ao RMO (Replication Management Objects) e ao SMO, como classes de conexão.|  
 |<xref:Microsoft.SqlServer.Management.Smo.Agent>|Contém classes que representam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
 |<xref:Microsoft.SqlServer.Management.Smo.Wmi>|Contém classes que representam o Provedor WMI.|  

@@ -1,5 +1,5 @@
 ---
-title: 'Lição 8: Restaurar um banco de dados para o armazenamento do Windows Azure | Microsoft Docs'
+title: 'Lição 8: Restaurar um banco de dados no armazenamento do Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,21 +10,21 @@ ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f7da373509d875057f4d1ff50884ec446feb6cd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f17384b979e960995a3522a81c4f0611287cb15
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090706"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153738"
 ---
-# <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>Lição 8: Restaurar um banco de dados para o Armazenamento do Windows Azure
-  Nesta lição, você aprenderá a criar localmente um arquivo de backup e restaurá-lo para o Armazenamento do Windows Azure. Observe que você pode ter o banco de dados no local ou em uma máquina virtual no Windows Azure. Para acompanhar esta lição, você não precisará concluir as lições 4, 5, 6 e 7.  
+# <a name="lesson-8-restore-a-database-to-azure-storage"></a>Lição 8: Restaurar um banco de dados no armazenamento do Azure
+  Nesta lição, você aprenderá a criar um arquivo de backup localmente e, em seguida, restaurá-lo no armazenamento do Azure. Observe que você pode ter seu banco de dados no local ou em uma máquina virtual no Azure. Para acompanhar esta lição, você não precisará concluir as lições 4, 5, 6 e 7.  
   
  Esta lição supõe que você já concluiu as seguintes etapas:  
   
--   Você tem uma conta de Armazenamento do Windows Azure.  
+-   Você tem uma conta de armazenamento do Azure.  
   
--   Você criou um contêiner na sua conta de Armazenamento do Windows Azure.  
+-   Você criou um contêiner em sua conta de armazenamento do Azure.  
   
 -   Você criou uma política em um contêiner com direitos de leitura, gravação e lista. Você também gerou uma chave de SAS.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66090706"
   
 -   Você criou um banco de dados no computador de origem.  
   
- Para restaurar um banco de dados para o Armazenamento do Windows Azure, siga estas etapas:  
+ Para restaurar um banco de dados no armazenamento do Azure, você pode seguir estas etapas:  
   
 1.  No computador de origem, inicie o SQL Server Management Studio.  
   
@@ -67,25 +67,25 @@ ms.locfileid: "66090706"
   
      No final dessa etapa, o contêiner listará os dados (.mdf) e os arquivos (.ldf) no Portal de Gerenciamento.  
   
- Para restaurar um banco de dados com os arquivos de dados e de log que apontam para o Armazenamento do Windows Azure usando a interface do usuário do SQL Server Management Studio, execute estas etapas:  
+ Para restaurar um banco de dados com arquivos de log e de logs apontando para o armazenamento do Azure usando SQL Server Management Studio interface do usuário, execute estas etapas:  
   
-1.  Na **Pesquisador de objetos**, clique no nome do servidor para expandir a árvore de servidor.  
+1.  No Pesquisador de **objetos**, clique no nome do servidor para expandir a árvore de servidores.  
   
-2.  Expandir **bancos de dados**e, selecione seu banco de dados.  
+2.  Expanda **bancos**de dados e, em seguida, selecione o seu Database.  
   
 3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**e clique em **Restaurar**.  
   
-4.  No **gerais** página, o **restaurar** seção de origem, clique em **origem** dispositivo.  
+4.  Na página **geral** , na seção **restaurar** origem, clique em dispositivo de **origem** .  
   
-5.  Clique no botão Procurar para o **fonte** caixa de texto do dispositivo, que abre o **Selecione dispositivos de Backup** caixa de diálogo.  
+5.  Clique no botão procurar da caixa de texto dispositivo de **origem** , que abre a caixa de diálogo **selecionar dispositivos de backup** .  
   
-6.  Na caixa de texto mídia de Backup, selecione **arquivo**e clique no **Add** botão para localizar o arquivo de backup (. bak). Clique em **OK**.  
+6.  Na caixa de texto mídia de backup, selecione **arquivo**e clique no botão **Adicionar** para localizar o arquivo de backup (. bak). Clique em **OK**.  
   
 7.  Clique em **arquivos** na primeira página.  
   
-8.  No **restaurar arquivos de banco de dados** como seção, no **restaurar como** , digite o seguinte:  
+8.  Na seção **restaurar arquivos de banco de dados** como, em campo **restaurar como** , digite o seguinte:  
   
-     Para o arquivo de dados, digite: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`. Para o arquivo de log, digite: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`.  
+     Para arquivo de dados, digite `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`:. Para arquivo de log, digite `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`:.  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   
@@ -97,6 +97,6 @@ ms.locfileid: "66090706"
   
  **Próxima lição:**  
   
- [Lição 9. Restaurar um banco de dados por meio do Armazenamento do Microsoft Azure](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
+ [Lição 9. Restaurar um banco de dados do armazenamento do Azure](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
   
   

@@ -12,12 +12,12 @@ ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1d3dd0bf00f9ca0917e94e2d942dcb929ef35055
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d12e45d2f2b7ee3d3f06cf8820495e40cf9fbd3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480738"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154482"
 ---
 # <a name="data-quality-client-home-screen"></a>Tela inicial do Cliente Data Quality
   Use esta tela para obter acesso às interfaces do usuário de cada um dos três grupos de tarefas do DQS ( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ): gerenciamento da base de dados de conhecimento, projetos de qualidade de dados e administração.  
@@ -57,7 +57,7 @@ ms.locfileid: "65480738"
  Exibe o status de todas as atividades (atuais e históricas) que estão relacionadas ao servidor do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]conectado. Os tipos de atividades monitoradas incluem Gerenciamento de Conhecimento, um Projeto de Qualidade de Dados e uma correção de dados baseada no SSIS.  
   
  **Configuração**  
- Exiba as propriedades de configuração para contas de serviço de dados de referência (pelo Windows Azure Marketplace e diretamente para serviços de dados de referência), configurações gerais (limpeza interativa, correspondência e criação de perfil) e configurações de severidade de log.  
+ Exibe as propriedades de configuração para contas de serviço de dados de referência (tanto por meio do Azure Marketplace quanto diretamente para serviços de dados de referência), configurações gerais (limpeza interativa, correspondência e criação de perfil) e configurações de severidade de log.  
   
 ## <a name="see-also"></a>Consulte também  
  [Bases de dados de conhecimento e domínios do DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)   

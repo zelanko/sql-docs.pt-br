@@ -1,5 +1,5 @@
 ---
-title: 'Lição 3: Gravar um Backup de banco de dados completo para o serviço de armazenamento de BLOBs do Azure do Windows | Microsoft Docs'
+title: 'Lição 3: Gravar um backup de banco de dados completo no serviço de armazenamento de BLOBs do Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ ms.assetid: 454c8296-64e9-46ed-b141-5ebfbc8a4fe2
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 242e32b08ec6346c39e149628e773b33554c95d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d5a749c61a3bc97de841e1149dd1539cbc990f2
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653674"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153471"
 ---
-# <a name="lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>Lição 3: Gravar um backup de banco de dados completo no serviço de Armazenamento de Blobs do Microsoft Azure
-  Esta lição demonstra o uso da instrução tsql para executar um backup completo de banco de dados no serviço de armazenamento de Blob do Windows Azure.  
+# <a name="lesson-3-write-a-full-database-backup-to-the-azure-blob-storage-service"></a>Lição 3: Gravar um backup de banco de dados completo no serviço de armazenamento de BLOBs do Azure
+  Esta lição demonstra o uso da instrução TSQL para executar um backup de banco de dados completo no serviço de armazenamento de BLOBs do Azure.  
   
-## <a name="perform-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>Execute um backup completo de banco de dados no serviço de armazenamento de Blob do Windows Azure  
+## <a name="perform-a-full-database-backup-to-the-azure-blob-storage-service"></a>Executar um backup de banco de dados completo para o serviço de armazenamento de BLOBs do Azure  
  Para criar um backup de banco de dados completo, execute as seguintes etapas:  
   
 1.  Conecte-se ao [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -44,6 +44,6 @@ ms.locfileid: "62653674"
 5.  No Pesquisador de Objetos, conecte-se ao armazenamento do Azure. Procurar o contêiner e os arquivos de backup recém-criados.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 4: Executar uma restauração de um Backup de banco de dados completo](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md).  
+ [Lição 4: Execute uma restauração de um backup](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)de banco de dados completo.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Lição 4: Executar uma restauração de um Backup de banco de dados completo | Microsoft Docs'
+title: 'Lição 4: Executar uma restauração de um backup completo de banco de dados | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 580f76e6-9802-4abc-9043-db6de592c733
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 077fb708f09db0182bc5f1510f0264b139beab13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de9a356589ac6bceb532ed4cecf509f957e3c337
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312067"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153397"
 ---
 # <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Lição 4: Executar uma restauração de um backup de banco de dados completo
   Esta lição demonstra o uso de uma instrução tsql para executar uma restauração a partir de um backup de banco de dados completo criado na lição anterior.  
@@ -40,9 +40,9 @@ ms.locfileid: "63312067"
   
     ```  
   
-5.  Verifique se a instrução T-SQL e clique em **Execute**  
+5.  Verifique a instrução T-SQL e clique em **executar**  
   
 ### <a name="return-to-tutorials-portal"></a>Retorne ao portal Tutoriais  
- [Tutorial: Serviço de armazenamento de BLOBs do SQL Server Backup e restauração para o Windows Azure](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
+ [Tutorial: SQL Server Backup e restauração para o serviço](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)de armazenamento de BLOBs do Azure.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Criação de aplicativos com o SQL Server Native Client | Microsoft Docs
+title: Criando aplicativos com SQL Server Native Client | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eac83c7dd853e2cff17198d37c47d54fc5919324
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2bee2a152b3d37f279bff2e7983a4dce7cf32fb4
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069359"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155791"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>Criando aplicativos com o SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,11 +53,11 @@ ms.locfileid: "68069359"
  [Políticas de suporte do SQL Server Native Client](../../../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md)  
  Aborda como vários componentes de acesso a dados podem ser usados com versões diferentes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- [Conectando a um banco de dados SQL do Microsoft Azure usando o SQL Server Native Client](../../../relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
+ [Conectando a um Banco de Dados SQL do Azure usando o SQL Server Native Client](../../../relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
  Discute como conectar-se a um [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] usando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="see-also"></a>Consulte também  
- [Programação do SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
+ [Programação de SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [Tópicos de instruções sobre ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Tópicos de instruções do OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   

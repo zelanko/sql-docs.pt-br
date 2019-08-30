@@ -1,5 +1,5 @@
 ---
-title: 'Lição 2: Criar uma credencial do SQL Server | Microsoft Docs'
+title: 'Lição 2: Criar uma credencial de SQL Server | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,22 +10,22 @@ ms.assetid: 64f8805c-1ddc-4c96-a47c-22917d12e1ab
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fbea11b0500c075105bff885cdb1cd8264b320d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: baa337d33173f292145d92b60d6192af2a716c5e
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62931630"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154334"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>Lição 2: Criar uma credencial do SQL Server
-  **Credencial:** Uma credencial do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é um objeto usado para armazenar as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server.  Aqui, os processos de backup e restauração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usam a credencial para autenticação no serviço de armazenamento de Blob do Windows Azure. A Credencial armazena o nome da conta de armazenamento e os valores de **access key** da conta de armazenamento. Depois que a credencial for criada, ela deverá ser especificada na opção WITH CREDENTIAL ao emitir instruções BACKUP/RESTORE. Para obter mais informações sobre como exibir, copiar ou gerar novamente as **access keys**da conta de armazenamento, consulte [Chaves de acesso da conta de armazenamento](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
+  **Credencial:** Uma credencial do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é um objeto usado para armazenar as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server.  Aqui, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] os processos de backup e restauração usam a credencial para autenticar o serviço de armazenamento de BLOBs do Azure. A Credencial armazena o nome da conta de armazenamento e os valores de **access key** da conta de armazenamento. Depois que a credencial for criada, ela deverá ser especificada na opção WITH CREDENTIAL ao emitir instruções BACKUP/RESTORE. Para obter mais informações sobre como exibir, copiar ou gerar novamente as **access keys**da conta de armazenamento, consulte [Chaves de acesso da conta de armazenamento](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
  Para obter informações gerais sobre credenciais, consulte [Credenciais](../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
  Para obter informações sobre outros exemplos em que as credenciais são usadas, consulte [Criar um proxy do SQL Server Agent](../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 > [!IMPORTANT]  
->  Os requisitos para a criação de uma credencial do SQL Server descritos abaixo são específicos para processos de backup do SQL Server ([SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md), e [Backup Gerenciado do SQL Server para Microsoft Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). O SQL Server, ao acessar o armazenamento do Azure para gravar ou ler backups, usa o nome da conta de armazenamento e as informações da tecla de acesso.  Para obter mais informações sobre como criar credenciais para armazenar arquivos de banco de dados no armazenamento do Azure, consulte [lição 3: Criar uma credencial do SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
+>  Os requisitos para criar uma credencial de SQL Server descrito abaixo são específicos para SQL Server processos de backup ([SQL Server Backup para URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)e [SQL Server Backup gerenciado para o Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). O SQL Server, ao acessar o armazenamento do Azure para gravar ou ler backups, usa o nome da conta de armazenamento e as informações da tecla de acesso.  Para obter mais informações sobre como criar credenciais para armazenar arquivos de banco de dados [no armazenamento do Azure, consulte a lição 3: Criar uma credencial de SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## <a name="create-a-sql-server-credential"></a>Criar uma credencial do SQL Server  
  Para criar uma credencial do SQL Server, execute as seguintes etapas:  
@@ -45,13 +45,13 @@ ms.locfileid: "62931630"
   
     ```  
   
-     ![mapeamento de conta de armazenamento para as credenciais do sql](../../2014/tutorials/media/backuptocloud-storage-credential-mapping.gif "mapeando a conta de armazenamento para as credenciais do sql")  
+     ![mapeando a conta de armazenamento para credenciais do SQL](../../2014/tutorials/media/backuptocloud-storage-credential-mapping.gif "mapeando a conta de armazenamento para credenciais do SQL")  
   
 5.  Verifique a instrução T-SQL e clique em **Executar**.  
   
- Para obter mais informações sobre o serviço de armazenamento de Blob do Windows Azure para requisitos e conceitos de backup, consulte [Backup e restauração do SQL Server com o serviço de armazenamento de Blob do Windows Azure](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Para obter mais informações sobre o serviço de armazenamento de BLOBs do Azure para conceitos e requisitos de backup, consulte [SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Azure](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ### <a name="next-lesson"></a>Próxima lição  
- [Lição 3: Gravar um Backup de banco de dados completo para o serviço de armazenamento de BLOBs do Azure Windows](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md).  
+ [Lição 3: Grave um backup de banco de dados completo no serviço](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)de armazenamento de BLOBs do Azure.  
   
   

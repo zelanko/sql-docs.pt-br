@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 30e96ad145abdb123e5bc5540f74f23251d1a69e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d8b34915371b164a4167058729d2720d9e60cdcd
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768886"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154604"
 ---
 # <a name="sp_copysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Copia a pasta de instantâneo da publicação especificada para a pasta listada no **@destination_folder** . Esse procedimento armazenado é executado no Publicador, no banco de dados publicador. Esse procedimento armazenado é útil para copiar um instantâneo em mídia removível, como CD-ROM.  
+  Copia a pasta de instantâneo da publicação especificada para a pasta listada no  **\@destination_folder**. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador. Esse procedimento armazenado é útil para copiar um instantâneo em mídia removível, como CD-ROM.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

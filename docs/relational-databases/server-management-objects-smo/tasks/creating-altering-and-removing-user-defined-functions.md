@@ -1,5 +1,5 @@
 ---
-title: Criando, alterando e Removendo funções definidas pelo usuário | Microsoft Docs
+title: Criando, alterando e removendo funções definidas pelo usuário | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: reference
 helpviewer_keywords:
 - user-defined functions [SMO]
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c33572469cfaa37673212d483cc05d15d3a1b828
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd6a7b8817e86207e9e8c8df2270344d5106ead3
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111545"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148486"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>Criando, alterando e removendo funções definidas pelo usuário
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
-  O <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> objeto fornece a funcionalidade que permite aos usuários gerenciar de forma programática funções definidas pelo usuário no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Funções definidas pelo usuário dão suporte a parâmetros de entrada e saída, e também a referências diretas a colunas de tabela.  
+  O <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> objeto fornece funcionalidade que permite que os usuários gerenciem funções definidas pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] usuário programaticamente no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Funções definidas pelo usuário dão suporte a parâmetros de entrada e saída, e também a referências diretas a colunas de tabela.  
   
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exige o registro de assemblies dentro de um banco de dados antes de sua utilização dentro de procedimentos armazenados, funções definidas pelo usuário, gatilhos e tipos de dados definidos pelo usuário. O SMO dá suporte a esse recurso com o objeto <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "68111545"
  Quando o objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> referenciar um assembly .NET, registre o assembly criando um objeto <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> e adicionando-o ao objeto <xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection>, que pertence ao objeto <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
 ## <a name="example"></a>Exemplo  
- Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto do SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto&#35; do Visual C Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-basic"></a>Criando uma função escalar definida pelo usuário no Visual Basic  
  Este exemplo de código mostra como criar e remover uma função escalar definida pelo usuário que possui um parâmetro do objeto <xref:System.DateTime> de entrada e um tipo de retorno inteiro no [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. A função definida pelo usuário é criada no banco de dados [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . O exemplo cria uma função definida pelo usuário, ISOweek, que usa um argumento de data e calcula o número da semana ISO. Para que essa função calcule corretamente, defina a opção DATEFIRST do banco de dados como 1 antes da função ser chamada.  

@@ -1,5 +1,5 @@
 ---
-title: Reporting Services Report Server | Microsoft Docs
+title: Reporting Services servidor de relatório | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2015
 ms.prod: sql-server-2014
@@ -24,49 +24,49 @@ ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f7a16507855e5f17674fc76f7238e3e6b32a6d16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7650f579a42453486a1d8483b9537496d454a036
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66102822"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155017"
 ---
 # <a name="reporting-services-report-server"></a>Servidor de Relatório do Reporting Services
   Este tópico é uma visão geral do servidor de relatório [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , o componente central da instalação de um [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Ele consiste em um par de mecanismos de processamento mais uma coleção de extensões de propósitos especiais que manipulam autenticação, processamento de dados, renderização e operações de entrega. Um servidor de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é executado em um destes dois modos de implantação: modo nativo ou modo do SharePoint. Consulte a seção [Comparação de recursos do SharePoint e do modo nativo](#bkmk_featuresupport) para obter uma comparação entre os recursos.  
   
- **Instalação:** Para obter informações sobre [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instalação, consulte o seguinte:  
+ **Instalação:** Para obter informações [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sobre a instalação, consulte o seguinte:  
   
 -   [Instalar o servidor de relatórios de modo nativo do Reporting Services](install-windows/install-reporting-services-native-mode-report-server.md)  
   
--   [Instalar recursos de BI do SQL Server com o SharePoint &#40;PowerPivot e Reporting Services&#41;](../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
+-   [Instalar SQL Server recursos do BI com &#40;o SharePoint PowerPivot e Reporting Services&#41;](../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
   
- **Windows Azure**: Para obter informações sobre como usar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] com máquinas de virtuais do Windows Azure, consulte o seguinte:  
+ **Azure**: Para obter informações sobre [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] como usar o com máquinas virtuais do Azure, consulte o seguinte:  
   
--   [SQL Server Business Intelligence em máquinas virtuais do Windows Azure](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx).  
+-   [SQL Server Business Intelligence em máquinas virtuais do Azure](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx).  
   
--   [Use o PowerShell para criar uma VM do Windows Azure com um servidor de relatório no modo nativo](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx).  
+-   [Use o PowerShell para criar uma VM do Azure com um servidor de relatório no modo nativo](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx).  
   
 ##  <a name="bkmk_top"></a> Neste tópico  
   
 -   [Visão geral dos modos de servidor de relatório](#bkmk_overview)  
   
--   [Comparação de recursos do SharePoint e modo nativo](#bkmk_featuresupport)  
+-   [Comparação de recursos do SharePoint e do modo nativo](#bkmk_featuresupport)  
   
 -   [Native Mode](#bkmk_nativemode)  
   
--   [Modo nativo com Web Parts do SharePoint](#bkmk_nativewithwebparts)  
+-   [Modo nativo com o SharePoint Web Parts](#bkmk_nativewithwebparts)  
   
 -   [Modo do SharePoint](#bkmk_sharepointmode)  
   
--   [Processo de relatório e o agendamento e o processo de entrega](#bkmk_reportprocessor)  
+-   [Processo de relatório e processo de agendamento e entrega](#bkmk_reportprocessor)  
   
 -   [Banco de dados do Servidor de Relatório](#bkmk_reportdatabase)  
   
--   [Autenticação, renderização, dados e extensões de entrega](#bkmk_authentication)  
+-   [Extensões de autenticação, renderização, dados e entrega](#bkmk_authentication)  
   
 -   [Tarefas relacionadas](#bkmk_relatedtasks)  
   
-##  <a name="bkmk_overview"></a> Visão geral dos modos de servidor de relatório  
+##  <a name="bkmk_overview"></a>Visão geral dos modos de servidor de relatório  
  Mecanismos de processamento (processadores) são o núcleo do servidor de relatório. Os processadores oferecem suporte à integridade do sistema de geração de relatórios e não podem ser modificados ou estendidos. Extensões também são processadores, mas elas executam funções muito específicas. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclui uma ou mais extensões padrão para todo tipo de extensão com suporte. É possível adicionar extensões personalizadas a um servidor de relatório. Isso permite estender um servidor de relatório para que ofereça suporte a recursos que não vêm com suporte de fábrica; exemplos da funcionalidade personalizada podem incluir suporte a tecnologias de logon único, saída de relatório em formatos de aplicativo que não estão prontos para serem manipulados pelas extensões de renderização padrão e entrega de relatório para uma impressora ou aplicativo.  
   
  Uma única instância de servidor de relatório é definida pela coleção inteira de processadores e extensões que fornecem processamento de ponta a ponta, desde a manipulação da solicitação inicial até a apresentação de um relatório concluído. Através de seus subcomponentes, o servidor de relatório processa as solicitações de relatório e torna os relatórios disponíveis para acesso sob demanda ou distribuição agendada.  
@@ -81,7 +81,7 @@ ms.locfileid: "66102822"
   
  No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , você não pode alternar o servidor de relatório de um modo para outro. Se você quiser alterar o tipo de servidor de relatório que seu ambiente usa, deve instalar o modo do servidor de relatório desejado e, em seguida, copiar ou mover os itens de relatório ou o banco de dados do servidor de relatório antigo para o novo. Esse processo geralmente é denominado 'migração'. As etapas necessárias para migrar dependem do modo que você está migrando e a versão da qual você está migrando. Para obter mais informações, consulte [Upgrade and Migrate Reporting Services](install-windows/upgrade-and-migrate-reporting-services.md).  
   
-##  <a name="bkmk_featuresupport"></a> Comparação de recursos do SharePoint e modo nativo  
+##  <a name="bkmk_featuresupport"></a>Comparação de recursos do SharePoint e do modo nativo  
   
 |Recurso ou componente|Modo nativo|SharePoint Mode|  
 |--------------------------|-----------------|---------------------|  
@@ -89,19 +89,19 @@ ms.locfileid: "66102822"
 |**Extensões de segurança personalizadas**|Sim|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] não podem ser implantadas nem usadas no servidor de relatório. O servidor de relatório inclui uma extensão de segurança para fins especiais que é usada sempre que você configura um servidor de relatório para ser executado no modo integrado do SharePoint. Essa extensão de segurança é um componente interno e é necessário para operações integradas.|  
 |**Configuration Manager**|Sim|**\*\* Importante \*\*** O Configuration Manager não pode ser usado para gerenciar servidor de relatório do modo do SharePoint. Em vez disso, use a administração central do SharePoint.|  
 |**Gerenciador de Relatórios**|Sim|O Gerenciador de Relatórios não pode ser usado para gerenciar o modo do SharePoint. Use as páginas do aplicativo do SharePoint. Para obter mais informações, consulte [Serviço SharePoint do Reporting Services e aplicativos de serviço](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).|  
-|**Relatórios vinculados**|Sim|Não.|  
-|**Meus Relatórios**|Sim|Não |  
-|**Minhas Assinaturas** e métodos de envio em lote.|Sim|Não |  
-|**Alertas de dados**|Não |Sim|  
-|**Power View**|Não |Sim<br /><br /> Exige o Silverlight no navegador do cliente. Para obter mais informações sobre requisitos de navegador, consulte [Planning for Reporting Services e o suporte a navegador Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**Relatórios vinculados**|Sim|Nº|  
+|**Meus Relatórios**|Sim|Não|  
+|**Minhas Assinaturas** e métodos de envio em lote.|Sim|Não|  
+|**Alertas de dados**|Não|Sim|  
+|**Power View**|Não|Sim<br /><br /> Exige o Silverlight no navegador do cliente. Para obter mais informações sobre os requisitos do navegador, consulte [planejamento para Reporting Services e &#40;suporte ao&#41; navegador Power View Reporting Services 2014](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
 |**Relatórios .RDL**|Sim|Sim<br /><br /> Relatórios .RDL podem ser executados em servidores de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo nativo ou no modo do SharePoint.|  
 |**Relatórios .RDLX**|Não|Sim<br /><br /> Relatórios .RDLX do Power View só podem ser executados em servidores de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint.|  
-|**Credenciais do token do usuário do SharePoint para a extensão de lista do SharePoint**|Não |Sim|  
-|**As zonas do AAM para implantações voltadas para a Internet**|Não |Sim|  
-|**Backup e recuperação do SharePoint**|Não |Sim|  
-|**Suporte de log ULS**|Não |Sim|  
+|**Credenciais do token do usuário do SharePoint para a extensão de lista do SharePoint**|Não|Sim|  
+|**As zonas do AAM para implantações voltadas para a Internet**|Não|Sim|  
+|**Backup e recuperação do SharePoint**|Não|Sim|  
+|**Suporte de log ULS**|Não|Sim|  
   
-##  <a name="bkmk_nativemode"></a> Modo nativo  
+##  <a name="bkmk_nativemode"></a>Modo nativo  
  No modo nativo, um servidor de relatório é um servidor de aplicativo autônomo que fornece todas as exibições, gerenciamento, processamento e entrega de relatórios e modelos de relatório. Este é o modo padrão para instâncias do servidor de relatório. Você pode instalar um servidor de relatório no modo nativo que seja configurado durante a instalação ou pode configurá-lo para operações do modo nativo quando a instalação for concluída.  
   
  O diagrama seguinte mostra a arquitetura de três camadas de uma implantação de modo Nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Ele mostra o banco de dados do servidor de relatório e as fontes de dados na camada de dados, os componentes do servidor do relatório na camada intermediária, os aplicativos cliente e as ferramentas internas ou personalizadas na camada de apresentação. Apresenta o fluxo de solicitações, os dados entre os componentes do servidor e quais componentes enviam e recuperam conteúdo a partir de um repositório de dados.  
@@ -112,8 +112,8 @@ ms.locfileid: "66102822"
   
  Desenvolvedores de terceiros podem criar extensões adicionais para substituir ou estender a capacidade de processamento do servidor de relatório. Para obter mais informações sobre as interfaces programáticas disponíveis para desenvolvedores de aplicativos, consulte a [Referência Técnica](../../2014/reporting-services/technical-reference-ssrs.md).  
   
-###  <a name="bkmk_nativewithwebparts"></a> Modo nativo com Web Parts do SharePoint  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece duas Web Parts que você pode instalar e registrar em uma instância de [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 ou posterior, ou o SharePoint Portal Server 2003 ou posterior. A partir de um site do SharePoint, você pode usar as Web Parts para localizar e exibir relatórios armazenados e processados em um servidor de relatório executado no modo nativo. Essas Web Parts foram introduzidas em versões anteriores do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+###  <a name="bkmk_nativewithwebparts"></a>Modo nativo com o SharePoint Web Parts  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]fornece dois Web Parts que você pode instalar e registrar em uma instância do [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2,0 ou posterior ou SharePoint Portal Server 2003 ou posterior. A partir de um site do SharePoint, você pode usar as Web Parts para localizar e exibir relatórios armazenados e processados em um servidor de relatório executado no modo nativo. Essas Web Parts foram introduzidas em versões anteriores do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 ##  <a name="bkmk_sharepointmode"></a> Modo do SharePoint  
  No modo do SharePoint, um servidor de relatório deve ser executado em um farm de servidores do SharePoint. Os recursos de processamento, renderização e gerenciamento do servidor de relatório são representados por um servidor de aplicativos do SharePoint que executa o serviço compartilhado SharePoint para [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e um ou mais aplicativos de serviço do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Um site do SharePoint fornece o acesso front-end ao conteúdo e às operações do servidor de relatório.  
@@ -139,13 +139,13 @@ ms.locfileid: "66102822"
 |**(5)**|Relatórios, fontes de dados e outros itens são armazenados nos bancos de dados de conteúdo do SharePoint.|  
 |**(6)**|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] criam três bancos de dados para servidor de relatório, temporário e recursos de alertas de dados. Os parâmetros de configuração que se aplicam a todos os aplicativos de serviço do SSRS são armazenadas no arquivo **RSReportserver.config** .|  
   
-##  <a name="bkmk_reportprocessor"></a> Processo de relatório e o agendamento e o processo de entrega  
+##  <a name="bkmk_reportprocessor"></a>Processo de relatório e processo de agendamento e entrega  
  O servidor de relatório inclui dois mecanismos de processamento que executam processamento de relatório preliminar e intermediário, além de operações agendadas e de entrega. O Processador de Relatório recupera a definição ou modelo de relatório, combina informações de layout com dados a partir da extensão de processamento de dados e as renderiza no formato solicitado. O Processo de Agendamento e Entrega processa relatórios disparados a partir de um agendamento e entrega os relatórios aos destinos pretendidos.  
   
-##  <a name="bkmk_reportdatabase"></a> Banco de dados de servidor de relatório  
+##  <a name="bkmk_reportdatabase"></a>Banco de dados do servidor de relatório  
  O servidor de relatório é um servidor sem monitoração de estado que armazena todas as propriedades, objetos e metadados em um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Os dados armazenados incluem relatórios publicados, relatórios compilados, modelos de relatório e a hierarquia de pastas que fornece o endereço para todos os itens gerenciados pelo servidor de relatório. Um banco de dados do servidor de relatório pode fornecer armazenamento interno para uma única instalação do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ou para vários servidores de relatório que façam parte de uma implantação de expansão. Se você configurar um servidor de relatório para ser executado em uma implantação maior do produto ou tecnologia do SharePoint, o servidor de relatório usará os bancos de dados do SharePoint além do banco de dados do servidor de relatório. Para obter mais informações sobre os repositórios de dados usados na instalação do Reporting Services, consulte [Banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](report-server/report-server-database-ssrs-native-mode.md).  
   
-##  <a name="bkmk_authentication"></a> Autenticação, renderização, dados e extensões de entrega  
+##  <a name="bkmk_authentication"></a>Extensões de autenticação, renderização, dados e entrega  
  O servidor de relatório oferece suporte aos seguintes tipos de extensões: autenticação, processamento de dados, processamento de relatórios, renderização e entrega. Um servidor de relatório requer pelo menos uma extensão de autenticação, de processamento de dados e de renderização. As extensões de processamento de relatório personalizado e de entrega são opcionais, mas necessárias se você quiser oferecer suporte aos controles de distribuição e personalização.  
   
  O Reporting Services fornece extensões padrão para que você possa usar todos os recursos de servidor sem ter de desenvolver componentes personalizados. A tabela a seguir descreve as extensões padrão que contribuem para uma instância de servidor de relatório completa que fornece funcionalidades prontas para uso:  
@@ -172,7 +172,7 @@ ms.locfileid: "66102822"
 |Explica como ajustar as configurações de memória para o serviço Web Servidor de Relatórios e serviço Windows.|[Configurar memória disponível para aplicativos do Servidor de Relatórios](report-server/configure-available-memory-for-report-server-applications.md)|  
 |Explica as etapas recomendadas para configurar o servidor de relatório para administração remota.|[Configurar um servidor de relatório para administração remota](report-server/configure-a-report-server-for-remote-administration.md)|  
 |Fornece instruções sobre como configurar a disponibilidade de **Meus Relatórios** em uma instância nativa de servidor de relatório.|[Habilitar e desabilitar Meus Relatórios](report-server/enable-and-disable-my-reports.md)|  
-|Fornece instruções para configurar o controle RSClientPrint que fornece a funcionalidade de impressão nos navegadores com suporte. Para obter mais informações sobre requisitos de navegador, consulte [Planning for Reporting Services e o suporte a navegador Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).|[Habilitar e desabilitar a impressão do lado do cliente para Reporting Services](report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
+|Fornece instruções para configurar o controle RSClientPrint que fornece a funcionalidade de impressão nos navegadores com suporte. Para obter mais informações sobre os requisitos do navegador, consulte [planejamento para Reporting Services e &#40;suporte ao&#41;navegador Power View Reporting Services 2014](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).|[Habilitar e desabilitar a impressão do lado do cliente para Reporting Services](report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
   
 ## <a name="see-also"></a>Consulte também  
  [Extensões do Reporting Services](extensions/reporting-services-extensions.md)   
@@ -182,6 +182,6 @@ ms.locfileid: "66102822"
  [Implementando uma extensão de segurança](extensions/security-extension/implementing-a-security-extension.md)   
  [Implementando uma extensão de processamento de dados](extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [Como administrar SSRS usando o PowerShell](https://sqlbelle.wordpress.com/2015/08/17/automate-ssrs-report-generation-using-powershell/)  
+ [Como administrar o SSRS usando o PowerShell](https://sqlbelle.wordpress.com/2015/08/17/automate-ssrs-report-generation-using-powershell/)  
   
   

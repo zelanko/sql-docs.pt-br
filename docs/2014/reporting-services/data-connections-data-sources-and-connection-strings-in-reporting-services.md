@@ -19,12 +19,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8147471dc662b651ac9c99cc9290a383cc235ee8
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: fc918b390cedbca9016e4d14f72dea8c9ce8d148
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891570"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154587"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   Para incluir dados em um relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , primeiro você deve criar *fontes de dados* e *conjuntos de dados*. Este tópico explica o tipo de fontes de dados, como criar fontes de dados e informações importantes relacionadas às credenciais de fontes de dados. Uma fonte de dados inclui o tipo da fonte de dados, informações da conexão e o tipo de credenciais a serem usadas. Há dois tipos de fontes de dados: inserida ou compartilhada. Um fonte de dados inserida é definida no relatório e usada apenas por esse relatório. Uma fonte de dados compartilhada é definida independentemente de um relatório e pode ser usada por vários relatórios. Para obter mais informações, consulte [Conexões de dados ou fontes de dados inseridas e compartilhadas &#40;Construtor de Relatórios e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) e [Conjuntos de dados inseridos e compartilhados &#40;Construtor de Relatórios e SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -130,7 +130,7 @@ ms.locfileid: "68891570"
 |Banco de dados do SQL Server no servidor local|`data source="(local)";initial catalog=AdventureWorks`|Defina o tipo da fonte de dados como `Microsoft SQL Server`.|  
 |Instância do SQL Server<br /><br /> database|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|Defina o tipo da fonte de dados como `Microsoft SQL Server`.|  
 |Banco de dados do SQL Server Express|`Data Source=localhost\MSSQL10_50.SQLEXPRESS; Initial Catalog=AdventureWorks`|Defina o tipo da fonte de dados como `Microsoft SQL Server`.|  
-|[!INCLUDE[ssSDS](../includes/sssds-md.md)]na nuvem|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Defina o tipo da fonte de dados como `Windows Azure SQL Database`. Para obter mais informações, consulte [Tipo de conexão do SQL Azure &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md).|  
+|[!INCLUDE[ssSDS](../includes/sssds-md.md)]na nuvem|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Defina o tipo da fonte de dados como `Azure SQL Database`. Para obter mais informações, consulte [Tipo de conexão do SQL Azure &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md).|  
 |SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Defina o tipo da fonte de dados como `Microsoft SQL Server Parallel Data Warehouse`. Para obter mais informações, consulte [Tipo de conexão do SQL Server Parallel Data Warehouse &#40;SSRS&#41;](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |Banco de dados do Analysis Services no servidor local|`data source=localhost;initial catalog=Adventure Works DW`|Defina o tipo da fonte de dados como `Microsoft SQL Server Analysis Services`. Para obter mais informações, consulte [Tipo de conexão do Analysis Services para MDX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md) ou [Tipo de conexão do Analysis Services para DMX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
 |Banco de dados modelo de tabela do Analysis Services com perspectiva de vendas|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Defina o tipo da fonte de dados como `Microsoft SQL Server Analysis Services`. Especifique o nome da perspectiva na configuração de cube=. Para obter mais informações, consulte [Perspectivas &#40;SSAS de Tabela&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular).|  

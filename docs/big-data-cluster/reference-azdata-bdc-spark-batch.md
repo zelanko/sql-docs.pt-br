@@ -5,22 +5,22 @@ description: Artigo de referência para comandos bdc spark batch de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6d1c8246d4df885aa0ce6859d55d8c979ba83411
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 4fecf9d6beca3f4a46e49451fee0f554027e2e19
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653504"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155205"
 ---
 # <a name="azdata-bdc-spark-batch"></a>bdc spark batch de azdata
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-O artigo a seguir fornece referência para os comandos **bdc spark batch** na ferramenta **azdata**. Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md)
+Este artigo é um artigo de referência para **azdata**. 
 
 ## <a name="commands"></a>Comandos
 |     |     |
@@ -53,7 +53,7 @@ azdata bdc spark batch create --file -f
 ### <a name="examples"></a>Exemplos
 Criar um novo lote do Spark.
 ```bash
-azdata bdc spark batch create --code "2+2"
+azdata spark batch create --code "2+2"
 ```
 ### <a name="required-parameters"></a>Parâmetros necessários
 #### `--file -f`
@@ -106,7 +106,7 @@ azdata bdc spark batch list
 ### <a name="examples"></a>Exemplos
 Listar todos os lotes ativos.
 ```bash
-azdata bdc spark batch list
+azdata spark batch list
 ```
 ### <a name="global-arguments"></a>Argumentos globais
 #### `--debug`
@@ -128,7 +128,7 @@ azdata bdc spark batch info --batch-id -i
 ### <a name="examples"></a>Exemplos
 Obter informações do lote com a ID 0.
 ```bash
-azdata bdc spark batch info --batch-id 0
+azdata spark batch info --batch-id 0
 ```
 ### <a name="required-parameters"></a>Parâmetros necessários
 #### `--batch-id -i`
@@ -153,7 +153,7 @@ azdata bdc spark batch log --batch-id -i
 ### <a name="examples"></a>Exemplos
 Obter o log do lote com a ID 0.
 ```bash
-azdata bdc spark batch log --batch-id 0
+azdata spark batch log --batch-id 0
 ```
 ### <a name="required-parameters"></a>Parâmetros necessários
 #### `--batch-id -i`
@@ -178,7 +178,7 @@ azdata bdc spark batch state --batch-id -i
 ### <a name="examples"></a>Exemplos
 Obter informações de estado do lote com a ID 0.
 ```bash
-azdata bdc spark batch state --batch-id 0
+azdata spark batch state --batch-id 0
 ```
 ### <a name="required-parameters"></a>Parâmetros necessários
 #### `--batch-id -i`
@@ -203,7 +203,7 @@ azdata bdc spark batch delete --batch-id -i
 ### <a name="examples"></a>Exemplos
 Excluir um lote.
 ```bash
-azdata bdc spark batch delete --batch-id 0
+azdata spark batch delete --batch-id 0
 ```
 ### <a name="required-parameters"></a>Parâmetros necessários
 #### `--batch-id -i`
@@ -222,4 +222,6 @@ Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md). Para obter mais informações sobre como instalar a ferramenta **azdata** , consulte [instalar o azdata para [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]gerenciar ](deploy-install-azdata.md).
+- Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md). 
+
+- Para obter mais informações sobre como instalar a ferramenta **azdata**, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](deploy-install-azdata.md).

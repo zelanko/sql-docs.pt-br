@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_on_demand (Transact-SQL) | Microsoft Docs
+title: managed_backup. sp_backup_on_demand (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 980fb3006819e5727033376beae1f8156d26e0fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e34cf20585ea7dcd3690d80ee415fc274bf852ca
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942057"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155397"
 ---
-# <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (Transact-SQL)
+# <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup.sp_backup_on_demand (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Solicita que o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] execute um backup do banco de dados especificado.  
   
- Use esse procedimento armazenado para executar backups ad hoc para um banco de dados configurado com o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Isso evita qualquer interrupção na cadeia de backup e os processos do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] estão cientes e o backup é armazenado no mesmo contêiner de armazenamento de Blob do Windows Azure.  
+ Use esse procedimento armazenado para executar backups ad hoc para um banco de dados configurado com o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Isso impede que qualquer interrupção na cadeia de backup [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] e processos esteja ciente e o backup seja armazenado no mesmo contêiner de armazenamento de BLOBs do Azure.  
   
  Após a conclusão bem-sucedida do backup, o caminho do arquivo de backup completo será retornado. Isso inclui o nome e o local do novo arquivo de backup decorrente da operação de backup.  
   
@@ -50,10 +50,10 @@ EXEC managed_backup.sp_backup_on_demand
   
 ##  <a name="Arguments"></a> Argumentos  
  @database_name  
- O nome do banco de dados em que o backup será executado. O @database_name está **SYSNAME**.  
+ O nome do banco de dados em que o backup será executado. O @database_name é **sysname**.  
   
  @type  
- O tipo de backup a ser executado:  Banco de dados ou Log. O @type parâmetro é **NVARCHAR(32)** .  
+ O tipo de backup a ser executado:  Banco de dados ou log. O @type parâmetro é **nvarchar (32)** .  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -64,7 +64,7 @@ EXEC managed_backup.sp_backup_on_demand
  Exige associação à função de banco de dados **db_backupoperator** , com permissões **ALTER ANY CREDENTIAL** e as permissões **EXECUTE** no procedimento armazenado **sp_delete_backuphistory**.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir faz uma solicitação de backup de banco de dados para o banco de dados 'TestDB'. Esse banco de dados tem [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] habilitado.  
+ O exemplo a seguir faz uma solicitação de backup de banco de dados para o banco de dados ' TestDB '. Esse banco de dados tem [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] habilitado.  
   
 ```  
 Use MSDB  

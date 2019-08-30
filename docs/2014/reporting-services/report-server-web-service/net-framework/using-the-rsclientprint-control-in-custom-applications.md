@@ -15,12 +15,12 @@ ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 28f4cdf562db1b3008db239a08b76097dc5d7e46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52b4bc564c9ea8d105809a4d5225056a231ad2e7
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62519116"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154999"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Usando o controle RSClientPrint em aplicativos personalizados
   O controle ActiveX [!INCLUDE[msCoName](../../../includes/msconame-md.md)], **RSPrintClient**, fornece impressão do lado do cliente para relatórios exibidos no Visualizador de HTML. Ele fornece uma caixa de diálogo **Imprimir** para que um usuário possa iniciar um trabalho de impressão, visualizar um relatório, especificar páginas a serem impressas e alterar as margens. Durante uma operação de impressão do lado cliente, o servidor de relatório renderiza o relatório na extensão de renderização Image (EMF) e usa os recursos de impressão do sistema operacional para criar o trabalho de impressão e para enviá-lo para uma impressora.  
@@ -42,7 +42,7 @@ ms.locfileid: "62519116"
 -   Examine os tópicos dos Manuais Online sobre a renderização de Image (EMF) para compreender como as páginas são renderizadas para a visualização de impressão e a saída.  
   
 ## <a name="rsprintclient-overview"></a>Visão geral de RSPrintClient  
- O controle exibe uma caixa de diálogo de impressão personalizada que fornece recursos de suporte comuns a outras caixas de diálogo de impressão, inclusive visualização de impressão, seleções de páginas para definir páginas e intervalos específicos, margens de páginas e orientação de página. O controle é empacotado como um arquivo CAB. O texto da caixa de diálogo **Imprimir** foi localizado para todos os idiomas com suporte no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O controle ActiveX **RSPrintClient** usa a extensão de renderização de Imagem (EMF) para imprimir o relatório. As informações de dispositivo EMF a seguir são usadas: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight, and PageWidth. Outras configurações de informações de dispositivo para renderização de imagens não são suportadas.  
+ O controle exibe uma caixa de diálogo de impressão personalizada que fornece recursos de suporte comuns a outras caixas de diálogo de impressão, inclusive visualização de impressão, seleções de páginas para definir páginas e intervalos específicos, margens de páginas e orientação de página. O controle é empacotado como um arquivo CAB. O texto da caixa de diálogo **Imprimir** foi localizado para todos os idiomas com suporte no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O controle ActiveX **RSPrintClient** usa a extensão de renderização de Imagem (EMF) para imprimir o relatório. As seguintes informações do dispositivo EMF são usadas: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight e PageWidth. Outras configurações de informações de dispositivo para renderização de imagens não são suportadas.  
   
 ### <a name="language-support"></a>Suporte ao idioma  
  O controle de impressão fornece texto de interface do usuário em idiomas diferentes e aceita valores de entrada calibrados para diferentes sistemas de medidas. O idioma e o sistema de medidas usados são determinados pelas propriedades **Culture** e **UICulture**. Ambas as propriedades aceitam valores LCID. Se você especificar um LCID para um idioma que seja uma variação de um idioma suportado, obterá o idioma correspondente mais próximo. Se você especificar um LCID que não seja suportado e para o qual não haja um LCID correspondente próximo, obterá o inglês (Estados Unidos).  
@@ -67,15 +67,15 @@ ms.locfileid: "62519116"
   
 |Propriedade|Tipo|RW|Padrão|Descrição|  
 |--------------|----------|--------|-------------|-----------------|  
-|MarginLeft|Double|RW|configuração de relatório|Obtém ou define a margem esquerda. O valor padrão, caso não seja definido pelo desenvolvedor ou especificado no relatório, é 12,2 milímetros.|  
-|MarginRight|Double|RW|configuração de relatório|Obtém ou define a margem direita. O valor padrão, caso não seja definido pelo desenvolvedor ou especificado no relatório, é 12,2 milímetros.|  
-|MarginTop|Double|RW|configuração de relatório|Obtém ou define a margem superior. O valor padrão, caso não seja definido pelo desenvolvedor ou especificado no relatório, é 12,2 milímetros.|  
-|MarginBottom|Double|RW|configuração de relatório|Obtém ou define a margem inferior. O valor padrão, caso não seja definido pelo desenvolvedor ou especificado no relatório, é 12,2 milímetros.|  
-|PageWidth|Double|RW|configuração de relatório|Obtém ou define a largura da página. O valor padrão, caso não seja definido pelo desenvolvedor ou pela definição de relatório, será 215,9 milímetros.|  
-|PageHeight|Double|RW|configuração de relatório|Obtém ou define a altura da página. O valor padrão, caso não seja definido pelo desenvolvedor ou pela definição de relatório, é 279,4 milímetros.|  
-|Cultura|Int32|RW|Localidade do navegador|Especifica o LCID (identificador de localidade). Este valor determina a unidade de medida para a entrada de usuário. Por exemplo, se um usuário digita `3`, o valor será medido em milímetros caso o idioma for o francês ou em polegadas se o idioma é inglês (Estados Unidos). Os valores válidos incluem: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|UICulture|Cadeia de caracteres|RW|Cultura do cliente|Especifica localização da cadeia de caracteres da caixa de diálogo. O texto na caixa de diálogo Imprimir está localizado para estes idiomas: Chinês simplificado, chinês tradicional, inglês, francês, alemão, italiano, japonês, coreano e espanhol. Os valores válidos incluem: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|Authenticate|Booliano|RW|Falso|Especifica se o controle emite um comando GET para o servidor de relatório para iniciar uma conexão de impressão fora de sessão.|  
+|MarginLeft|Duplo|RW|configuração de relatório|Obtém ou define a margem esquerda. O valor padrão, caso não seja definido pelo desenvolvedor ou especificado no relatório, é 12,2 milímetros.|  
+|MarginRight|Duplo|RW|configuração de relatório|Obtém ou define a margem direita. O valor padrão, caso não seja definido pelo desenvolvedor ou especificado no relatório, é 12,2 milímetros.|  
+|MarginTop|Duplo|RW|configuração de relatório|Obtém ou define a margem superior. O valor padrão, caso não seja definido pelo desenvolvedor ou especificado no relatório, é 12,2 milímetros.|  
+|MarginBottom|Duplo|RW|configuração de relatório|Obtém ou define a margem inferior. O valor padrão, caso não seja definido pelo desenvolvedor ou especificado no relatório, é 12,2 milímetros.|  
+|PageWidth|Duplo|RW|configuração de relatório|Obtém ou define a largura da página. O valor padrão, caso não seja definido pelo desenvolvedor ou pela definição de relatório, será 215,9 milímetros.|  
+|PageHeight|Duplo|RW|configuração de relatório|Obtém ou define a altura da página. O valor padrão, caso não seja definido pelo desenvolvedor ou pela definição de relatório, é 279,4 milímetros.|  
+|Cultura|Int32|RW|Localidade do navegador|Especifica o LCID (identificador de localidade). Este valor determina a unidade de medida para a entrada de usuário. Por exemplo, se um usuário digitar `3`, o valor será medido em milímetros se o idioma for francês ou polegadas se o idioma for inglês (Estados Unidos). Os valores válidos incluem: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|UICulture|Cadeia de caracteres|RW|Cultura do cliente|Especifica localização da cadeia de caracteres da caixa de diálogo. O texto na caixa de diálogo de impressão está localizado nesses idiomas: Chinês-simplificado, chinês tradicional, inglês, francês, alemão, italiano, japonês, coreano e espanhol. Os valores válidos incluem: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|Authenticate|Boolean|RW|False|Especifica se o controle emite um comando GET para o servidor de relatório para iniciar uma conexão de impressão fora de sessão.|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>Quando definir a propriedade Authenticate  
  Quando você imprimir de uma sessão do navegador, não precisará definir a propriedade `Authenticate`. No contexto de uma sessão ativa, todas as solicitações do controle de impressão para o servidor de relatório serão manipuladas por meio do navegador. O navegador define as variáveis de sessão necessárias para a comunicação com o servidor de relatório.  
@@ -93,7 +93,7 @@ ms.locfileid: "62519116"
   
 -   60677965-AB8B-464f-9B04-4BA871A2F17F  
   
- Quando você estiver executando o relatório em Relatórios SQL do Windows Azure, use os seguintes valores de CLSID.  
+ Quando você estiver executando o relatório nos relatórios SQL do Azure, use os valores de CLSID a seguir.  
   
 -   3DD32426-554D-48C0-A200-65D3BF880E38  
   
@@ -104,8 +104,8 @@ ms.locfileid: "62519116"
   
 |Argumento|E/S|Tipo|Descrição|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|Entrada|Cadeia de caracteres|Especifica o diretório virtual do servidor de relatório (por exemplo, https://adventure-works/reportserver).|  
-|ReportPathParameters|Entrada|Cadeia de caracteres|Especifica o nome completo para o relatório no namespace da pasta do servidor de relatório, incluindo os parâmetros. Os relatórios são recuperados por meio do acesso à URL. Por exemplo: "/ vendas do funcionário/relatórios de exemplo AdventureWorks Resumo & EmpID = 1234"|  
+|ServerPath|Entrada|Cadeia de caracteres|Especifica o diretório virtual do servidor de relatório (por https://adventure-works/reportserver) exemplo,.|  
+|ReportPathParameters|Entrada|Cadeia de caracteres|Especifica o nome completo para o relatório no namespace da pasta do servidor de relatório, incluindo os parâmetros. Os relatórios são recuperados por meio do acesso à URL. Por exemplo:: "/AdventureWorks Sample Reports/Resumo de Vendas do Funcionário&EmpID=1234"|  
 |ReportName|Entrada|Cadeia de caracteres|O nome curto do relatório (no exemplo anterior, o nome curto é Resumo de Vendas do Funcionário). Ele será exibido na caixa de diálogo Imprimir e na fila de impressão.|  
   
 ### <a name="example"></a>Exemplo  

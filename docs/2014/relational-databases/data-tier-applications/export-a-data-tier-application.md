@@ -24,12 +24,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ceac86445154648b946148d6267f6e8949af423
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4db43d34960de38343db3552cd83ea1147ffdf2
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918035"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154629"
 ---
 # <a name="export-a-data-tier-application"></a>Exportar um aplicativo da camada de dados
   A exportação de um aplicativo de camada de dados implantado (DAC) ou de um banco de dados cria um arquivo de exportação que contém as definições dos objetos no banco de dados e todos os dados contidos nas tabelas. O arquivo de exportação pode ser importado para outra instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], ou para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. As operações de importação-exportação podem ser combinadas para migrar um DAC entre instâncias, criar um backup lógico ou criar uma cópia no local de um banco de dados implantado no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -93,7 +93,7 @@ ms.locfileid: "62918035"
   
 -   **Salvar no disco local** – Cria um arquivo BACPAC em um diretório no computador local. Clique em **Procurar...** para navegar no computador local ou especifique o caminho no espaço fornecido. O nome do caminho deve incluir um nome de arquivo e a extensão .bacpac.  
   
--   **Salvar no Microsoft Azure** – Cria um arquivo BACPAC em um contêiner do Microsoft Azure. Você deve se conectar a um contêiner do Windows Azure para validar esta opção. Observe que esta opção também exige que você especifique um diretório local para o arquivo temporário. Observe que o arquivo temporário será criado no local especificado e permanecerá lá depois que a operação for concluída.  
+-   **Salvar no Azure** – cria um arquivo BACPAC em um contêiner do Azure. Você deve se conectar a um contêiner do Azure para validar essa opção. Observe que esta opção também exige que você especifique um diretório local para o arquivo temporário. Observe que o arquivo temporário será criado no local especificado e permanecerá lá depois que a operação for concluída.  
   
  Para especificar um subconjunto de tabelas a serem exportadas, use a opção **Avançado** .  
   

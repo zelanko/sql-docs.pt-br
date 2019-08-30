@@ -1,5 +1,5 @@
 ---
-title: Restaurar um Backup de banco de dados (SQL Server Management Studio) | Microsoft Docs
+title: Restaurar um backup de banco de dados (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,12 +19,12 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3d20276a90a64ca414b8bb6253b03df08908a1f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 521fc35b8ada4b1eb6c62e75fed4e1d9f99d21c4
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62921234"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154785"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>Restaurar um backup de banco de dados (SQL Server Management Studio)
   Este tópico explica como restaurar um backup de banco de dados completo.  
@@ -40,7 +40,7 @@ ms.locfileid: "62921234"
   
 2.  Expanda os **Bancos de dados**. Dependendo do banco de dados, selecione um banco de dados de usuário ou expanda os **Bancos de dados do sistema**e selecione um banco de dados do sistema.  
   
-3.  O banco de dados com o botão direito, aponte para **tarefas**, aponte para **restaurar**e, em seguida, clique em **banco de dados**, que abre o **restaurar banco de dados** caixa de diálogo.  
+3.  Clique com o botão direito do mouse no banco de dados, aponte para **tarefas**, aponte para **restaurar**e clique em **banco de dados**, que abre a caixa de diálogo **restaurar banco de dados** .  
   
 4.  Na página **Geral** , use a seção **Origem** para especificar a origem e o local dos conjuntos de backup a serem restaurados. Selecione uma das opções a seguir:  
   
@@ -63,27 +63,27 @@ ms.locfileid: "62921234"
         >  Essa lista estará disponível apenas quando **Dispositivo** for selecionado. Apenas os bancos de dados que têm backups no dispositivo selecionado estarão disponíveis.  
   
          **Mídia de backup**  
-         Selecione a mídia da operação de restauração: **Arquivo**, **fita**, **URL**ou **dispositivo de Backup**. A opção **Fita** só aparece se houver uma unidade de fita montada no computador, e a opção **Dispositivo de backup** só aparece se houver, no mínimo, um dispositivo de backup.  
+         Selecione o meio para a operação de restauração: **Arquivo**, **fita**, **URL**ou **dispositivo de backup**. A opção **Fita** só aparece se houver uma unidade de fita montada no computador, e a opção **Dispositivo de backup** só aparece se houver, no mínimo, um dispositivo de backup.  
   
-         **Local de backup**  
+         **Local do backup**  
          Exibir, adicionar ou remover mídia para a operação de restauração. A lista pode conter até 64 arquivos, fitas ou dispositivos de backup.  
   
          **Adicionar**  
-         Adiciona o local de um dispositivo de backup para o **local do Backup** lista. Dependendo do tipo de mídia selecionado no campo **Mídia do backup** , clicar **em Adicionar** abre uma das caixas de diálogo a seguir.  
+         Adiciona o local de um dispositivo de backup à lista **local de backup** . Dependendo do tipo de mídia selecionado no campo **Mídia do backup** , clicar **em Adicionar** abre uma das caixas de diálogo a seguir.  
   
         |Típo de mídia|Caixa de diálogo|Descrição|  
         |----------------|----------------|-----------------|  
-        |**File**|**Localizar o arquivo de backup**|Nessa caixa de diálogo, você pode selecionar um arquivo local da árvore ou pode especificar um arquivo remoto que use o seu nome totalmente qualificado da UNC (Convenção Universal de Nomenclatura). Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
+        |**Arquivo**|**Localizar o arquivo de backup**|Nessa caixa de diálogo, você pode selecionar um arquivo local da árvore ou pode especificar um arquivo remoto que use o seu nome totalmente qualificado da UNC (Convenção Universal de Nomenclatura). Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
         |**Dispositivo**|**Selecionar Dispositivo de Backup**|Nessa caixa de diálogo você pode selecionar em uma lista de dispositivos lógicos de backup, definida na instância de servidor.|  
         |**Fita**|**Selecionar fita de backup**|Nessa caixa de diálogo você pode selecionar em uma lista de unidades de fita conectadas fisicamente ao computador que executa a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-        |**URL**|Isso inicia duas caixas de diálogo na seguinte ordem:<br /><br /> 1) **se conectar ao Windows o armazenamento do Azure**<br /><br /> 2) **localizar o arquivo de Backup no Windows Azure**|Na caixa de diálogo **Conectar ao Armazenamento do Windows Azure**  , selecione uma Credencial do SQL existente que armazena o nome da conta de armazenamento do Windows Azure e informações de chave de acesso ou crie uma nova Credencial do SQL especificando informações de nome da conta de armazenamento e de chave de acesso de armazenamento. Para obter mais informações, consulte [conectar-se ao armazenamento do Windows Azure &#40;restaurar&#41;](connect-to-microsoft-azure-storage-restore.md).<br /><br /> Na caixa de diálogo de **Localizar Arquivo de Backup** , você pode selecionar um arquivo da lista de contêineres exibidos no quadro esquerdo.|  
+        |**URL**|Isso inicia duas caixas de diálogo na seguinte ordem:<br /><br /> 1) **conectar-se ao armazenamento do Azure**<br /><br /> 2) **localizar arquivo de backup no Azure**|Na caixa de diálogo **conectar ao armazenamento do Azure** , selecione uma credencial SQL existente que armazena o nome da conta de armazenamento do Azure e informações de chave de acesso, ou crie uma nova credencial do SQL especificando o nome da conta de armazenamento e informações de chave de acesso de armazenamento. Para obter mais informações, consulte [conectar-se &#40;à&#41;restauração do armazenamento do Azure](connect-to-microsoft-azure-storage-restore.md).<br /><br /> Na caixa de diálogo de **Localizar Arquivo de Backup** , você pode selecionar um arquivo da lista de contêineres exibidos no quadro esquerdo.|  
   
          Se a lista estiver cheia, o botão **Adicionar** ficará indisponível.  
   
-         **Remover**  
+         **Removerr**  
          Remove um ou mais arquivos, fitas ou dispositivos de backup lógicos selecionados.  
   
-         **Sumário**  
+         **Conteúdo**  
          Exibe o conteúdos da mídia de um arquivo, fita ou dispositivo de backup lógico selecionado.  
   
 5.  Na seção **Destino** , a caixa **Banco de Dados** é preenchida automaticamente com o nome do banco de dados a ser restaurado. Para alterar o nome do banco de dados, digite o novo nome na caixa **Banco de Dados** .  
@@ -112,7 +112,7 @@ ms.locfileid: "62921234"
   
         -   **RESTORE WITH STANDBY** deixa o banco de dados no modo somente leitura. Ele desfaz as transações não confirmadas, mas salva as ações de desfazer em um arquivo em espera para que os efeitos da recuperação possam ser revertidos.  
   
-    3.  **Fazer backup da parte final do log antes da restauração** será selecionada se for necessário para o momento determinado que você selecionou. Você não precisa modificar essa configuração, mas poderá escolher o backup da parte final do log até mesmo se não for necessário. nome de arquivo aqui? Se o primeiro conjunto de backup na página **Geral** estiver no Windows Azure, a parte final do log também será incluída no backup no mesmo contêiner de armazenamento.  
+    3.  **Fazer backup da parte final do log antes da restauração** será selecionada se for necessário para o momento determinado que você selecionou. Você não precisa modificar essa configuração, mas poderá escolher o backup da parte final do log até mesmo se não for necessário. nome de arquivo aqui? Se o primeiro conjunto de backup na página **geral** estiver no Azure, o backup do log final também será feito no mesmo contêiner de armazenamento.  
   
     4.  As operações de restauração poderão falhar se houver conexões ativas com o banco de dados. Marque a opção **Fechar conexões existentes** para assegurar que todas as conexões ativas entre o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e o banco de dados sejam fechadas. Essa caixa de seleção define o banco de dados no modo de usuário único antes de executar as operações de restauração e define o banco de dados no modo de vários usuários ao concluir.  
   

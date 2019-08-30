@@ -1,5 +1,5 @@
 ---
-title: 'Lição 7: Mover os arquivos de dados para o armazenamento do Windows Azure | Microsoft Docs'
+title: 'Lição 7: Mover seus arquivos de dados para o armazenamento do Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,29 +10,29 @@ ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c75b5b8ef384956ac05bab4e016ce37e691856da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85b3395420963e3052caa8eda7e760b9db60bd89
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090714"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154987"
 ---
-# <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>Lição 7: Mover seus arquivos de dados para o Armazenamento do Microsoft Azure
-  Nesta lição, você aprenderá a mover os arquivos de dados para o Armazenamento do Windows Azure (mas não a instância do SQL Server). Para acompanhar esta lição, você não precisará concluir as lições 4, 5 e 6.  
+# <a name="lesson-7-move-your-data-files-to-azure-storage"></a>Lição 7: Mover seus arquivos de dados para o armazenamento do Azure
+  Nesta lição, você aprenderá a mover seus arquivos de dados para o armazenamento do Azure (mas não sua instância de SQL Server). Para acompanhar esta lição, você não precisará concluir as lições 4, 5 e 6.  
   
- Para mover os arquivos de dados para o Armazenamento do Windows Azure, você pode usar a instrução `ALTER DATABASE`, pois ela ajuda a alterar o local dos arquivos de dados.  
+ Para mover seus arquivos de dados para o armazenamento do Azure, você `ALTER DATABASE` pode usar a instrução, pois ajuda a alterar o local dos arquivos de dados.  
   
  Esta lição supõe que você já concluiu as seguintes etapas:  
   
--   Você tem uma conta de Armazenamento do Windows Azure.  
+-   Você tem uma conta de armazenamento do Azure.  
   
--   Você criou um contêiner na sua conta de Armazenamento do Windows Azure.  
+-   Você criou um contêiner em sua conta de armazenamento do Azure.  
   
 -   Você criou uma política em um contêiner com direitos de leitura, gravação e lista. Você também gerou uma chave de SAS.  
   
 -   Você criou uma credencial do SQL Server no computador de origem.  
   
- Em seguida, use as etapas a seguir para mover os arquivos de dados para o Armazenamento do Windows Azure:  
+ Em seguida, use as seguintes etapas para mover seus arquivos de dados para o armazenamento do Azure:  
   
 1.  Primeiro, crie um banco de dados de teste no computador de origem e adicione alguns dados a ele.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66090714"
     ```sql  
   
     -- In the following statement, modify the path specified in FILENAME to   
-    -- the new location of the file in Windows Azure Storage container.   
+    -- the new location of the file in Azure Storage container.   
     ALTER DATABASE TestDB1Alter    
         MODIFY FILE ( NAME = TestDB1Alter,    
                     FILENAME = 'https://teststorageaccnt.blob.core.windows.net/testcontaineralter/TestDB1AlterData.mdf');   
@@ -63,7 +63,7 @@ ms.locfileid: "66090714"
   
     ```  
   
-3.  Quando você executar isso, você verá esta mensagem: "O arquivo"TestDB1Alter"foi modificado no catálogo do sistema. O novo caminho será usado na próxima vez que o banco de dados é iniciado."  
+3.  Ao executar isso, você verá esta mensagem: "O arquivo" TestDB1Alter "foi modificado no catálogo do sistema. O novo caminho será usado na próxima vez que o banco de dados for iniciado. "  
   
 4.  Em seguida, defina o banco de dados offline.  
   
@@ -74,9 +74,9 @@ ms.locfileid: "66090714"
   
     ```  
   
-5.  Agora, você precisa copiar os arquivos de dados para o armazenamento do Windows Azure usando um dos seguintes métodos: [Ferramenta AzCopy](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [referência de biblioteca de cliente de armazenamento](https://msdn.microsoft.com/library/azure/dn261237.aspx), ou uma ferramenta de Gerenciador de armazenamento de terceiros.  
+5.  Agora, você precisa copiar os arquivos de dados para o armazenamento do Azure usando um dos seguintes métodos: [Ferramenta AzCopy](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [referência de biblioteca de cliente de armazenamento](https://msdn.microsoft.com/library/azure/dn261237.aspx)ou uma ferramenta de Gerenciador de armazenamento de terceiros.  
   
-     **Importante:** Ao usar esse novo aprimoramento, sempre Certifique-se de que você crie um blob de página não é um blob de blocos.  
+     **Importante:** Ao usar esse novo aprimoramento, sempre certifique-se de criar um blob de páginas não um blob de blocos.  
   
 6.  Em seguida, defina o banco de dados online.  
   
@@ -89,6 +89,6 @@ ms.locfileid: "66090714"
   
  **Próxima lição:**  
   
- [Lição 8. Restaurar um banco de dados para o Armazenamento do Microsoft Azure](lesson-7-restore-a-database-to-a-point-in-time.md)  
+ [Lição 8. Restaurar um banco de dados no armazenamento do Azure](lesson-7-restore-a-database-to-a-point-in-time.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Criar uma fonte de dados (SSAS Multidimensional) | Microsoft Docs
+title: Criar uma fonte de dados (SSAS multidimensional) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,12 +18,12 @@ ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db9a94bf47071692b4ecf85e6bdb850132b8a417
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d224c58651601bd18baf8e4aa79ece34a653d8c4
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076515"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152894"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Criar uma fonte de dados (SSAS multidimensional)
   Em um modelo multidimensional do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , um objeto de fonte de dados representa uma conexão para a fonte de dados com base na qual você está processando (ou importando) os dados. Um modelo multidimensional deve conter pelo menos um objeto de fonte de dados, mas você pode adicionar mais para combinar dados de vários data warehouses. Use as instruções neste tópico para criar um objeto de fonte de dados para seu modelo. Para obter mais informações sobre como definir propriedades nesse objeto, consulte [Definir propriedades da fonte de dados &#40;SSAS multidimensional&#41;](set-data-source-properties-ssas-multidimensional.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "66076515"
  As conexões que usam autenticação do Windows são especificadas na guia **Informações sobre Representação** do Designer de Fonte de Dados. Use esta guia para escolher a opção de representação que especifica a conta sob a qual o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é executado ao conectar-se à fonte de dados externa. Nem todas as opções podem ser usadas em todos os cenários. Para obter mais informações sobre essas opções e quando usá-las, consulte [Definir opções de representação &#40;SSAS – Multidimensional&#41;](set-impersonation-options-ssas-multidimensional.md).  
   
 ### <a name="database-authentication"></a>Autenticação de banco de dados  
- Como uma alternativa para autenticação do Windows, você pode especificar uma conexão que usa um serviço de autenticação fornecido pelo sistema de gerenciamento de banco de dados. Em alguns casos, usar a autenticação de banco de dados é obrigatório. Cenários que pedem o uso da autenticação de banco de dados incluem o uso da autenticação do SQL Server para conectar-se a um Banco de dados SQL do Windows Azure ou o acesso a uma fonte de dados relacional que é executada em um sistema operacional diferente ou em um domínio não confiável.  
+ Como uma alternativa para autenticação do Windows, você pode especificar uma conexão que usa um serviço de autenticação fornecido pelo sistema de gerenciamento de banco de dados. Em alguns casos, usar a autenticação de banco de dados é obrigatório. Os cenários que chamam o uso de autenticação de banco de dados incluem o uso de SQL Server autenticação para se conectar a um banco de dado SQL do Azure ou acessar uma fonte de dados relacional que é executada em um sistema operacional diferente ou em um domínio não confiável.  
   
  Para uma fonte de dados que usa autenticação de banco de dados, o nome de usuário e a senha de um logon de banco de dados são especificados na cadeia de conexão. As credenciais são adicionadas à cadeia de conexão quando você insere um nome de usuário e senha no Gerenciador de Conexões ao configurar a conexão da fonte de dados em seu modelo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Lembre-se de especificar uma identidade de usuário que tenha permissões de leitura aos dados.  
   
@@ -76,19 +76,19 @@ ms.locfileid: "66076515"
   
 3.  Na página **Selecione como definir a conexão** , escolha **Criar uma fonte de dados com base em uma conexão já existente ou em uma nova conexão** e clique em **Novo** para abrir o **Gerenciador de Conexões**.  
   
-     Novas conexões são criadas no Gerenciador de Conexões. No Gerenciador de Conexões, você seleciona um provedor e especifica as propriedades da cadeia de conexão usada pelo provedor para se conectar com os dados subjacentes. As informações necessárias variam de acordo com o provedor selecionado, mas, geralmente, incluem uma instância de servidor ou serviço, informações de logon na instância de servidor ou serviço, um banco de dados ou nome de arquivo e outras configurações específicas do provedor. Para o restante deste procedimento, vamos supor que uma conexão de banco de dados do SQL Server.  
+     Novas conexões são criadas no Gerenciador de Conexões. No Gerenciador de Conexões, você seleciona um provedor e especifica as propriedades da cadeia de conexão usada pelo provedor para se conectar com os dados subjacentes. As informações necessárias variam de acordo com o provedor selecionado, mas, geralmente, incluem uma instância de servidor ou serviço, informações de logon na instância de servidor ou serviço, um banco de dados ou nome de arquivo e outras configurações específicas do provedor. Para o restante deste procedimento, vamos pressupor uma conexão de banco de dados SQL Server.  
   
 4.  Selecione o provedor de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework ou de OLE DB nativo a ser usado para a conexão.  
   
      O provedor padrão de uma nova conexão é o provedor OLE DB nativo\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Ele é usado para estabelecer a conexão com uma instância do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando OLE DB. Para conexões com um banco de dados relacional do SQL Server, com frequência, é mais rápido usar o Native OLE DB\SQL Server Native Client 11.0 do que usar provedores alternativos.  
   
-     Você pode escolher um provedor diferente para acessar outras fontes de dados. Para obter uma lista dos provedores e bancos de dados relacionais com suporte pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [fontes de dados com suporte &#40;Multidimensional do SSAS&#41;](supported-data-sources-ssas-multidimensional.md).  
+     Você pode escolher um provedor diferente para acessar outras fontes de dados. Para obter uma lista dos provedores e bancos de dados relacionais com suporte [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]no, consulte [fontes de &#40;dado com suporte para&#41;SSAS](supported-data-sources-ssas-multidimensional.md)multidimensional.  
   
 5.  Insira as informações solicitadas pelo provedor selecionado para se conectar à fonte de dados subjacente. Se o provedor **OLE DB Nativo\SQL Server Native Client** estiver selecionado, insira as seguintes informações:  
   
-    1.  **Nome do Servidor** é o nome de rede da instância do Mecanismo de Banco de Dados. É possível especificá-lo como o endereço IP, o nome NETBIOS do computador ou um nome de domínio totalmente qualificado. Se o servidor estiver instalado como uma instância nomeada, você deve incluir o nome da instância (por exemplo, \<computername >\\< instancename\>).  
+    1.  **Nome do Servidor** é o nome de rede da instância do Mecanismo de Banco de Dados. É possível especificá-lo como o endereço IP, o nome NETBIOS do computador ou um nome de domínio totalmente qualificado. Se o servidor estiver instalado como uma instância nomeada, você deverá incluir o nome da instância (por exemplo \<, ComputerName >\\< InstanceName\>).  
   
-    2.  **Fazer logon no servidor** especifica como a conexão será autenticada. **Usar Autenticação do Windows** usa a autenticação do Windows. **Usar Autenticação do SQL Server** especifica um logon de usuário de banco de dados para um banco de dados SQL do Microsoft Azure ou uma instância do SQL Server que dá suporte à autenticação no modo misto.  
+    2.  **Fazer logon no servidor** especifica como a conexão será autenticada. **Usar Autenticação do Windows** usa a autenticação do Windows. **Usar autenticação de SQL Server** especifica um logon de usuário de banco de dados para um ou SQL Server instância do Azure que dá suporte à autenticação de modo misto.  
   
         > [!IMPORTANT]  
         >  O Gerenciador de Conexões inclui uma caixa de seleção **Salvar minha senha** para conexões que usam a autenticação do SQL Server. Embora a caixa de seleção sempre esteja visível, nem sempre ela é usada.  
@@ -119,7 +119,7 @@ ms.locfileid: "66076515"
   
 8.  Clique em **Avançar**.  Em **Concluindo o Assistente**, insira um nome da fonte de dados ou use o nome padrão. O nome padrão é o nome do banco de dados especificado na conexão. O painel **Visualizar** exibe a cadeia de conexão dessa nova fonte de dados.  
   
-9. Clique em **Concluir**.  A nova fonte de dados aparece na pasta **Fontes de Dados** do Gerenciador de Soluções.  
+9. Clique em **Finalizar**.  A nova fonte de dados aparece na pasta **Fontes de Dados** do Gerenciador de Soluções.  
   
 ##  <a name="bkmk_connection"></a> Criar uma fonte de dados usando uma conexão existente  
  Quando você trabalha em um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , a fonte de dados pode se basear em uma fonte de dados existente na solução ou em um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . O Assistente de Fonte de Dados fornece várias opções para criar o objeto de fonte de dados, inclusive usar uma conexão existente no mesmo projeto.  
@@ -151,7 +151,7 @@ ms.locfileid: "66076515"
  Você pode criar mais de um objeto de fonte de dados para dar suporte a conexões com fontes de dados adicionais. Cada fonte de dados deve ter colunas que podem ser usadas para criar relações.  
   
 > [!NOTE]  
->  Se várias fontes de dados definidas e os dados são consultados de várias fontes em uma única consulta, por exemplo, para uma dimensão em floco de neve, você deve definir uma fonte de dados que dá suporte a consultas remotas usando `OpenRowset`. Normalmente, será uma fonte de dados do Microsoft SQL Server.  
+>  Se várias fontes de dados forem definidas e os dados forem consultados de várias fontes em uma única consulta, como para uma dimensão de flaked de neve, você deverá definir uma fonte de dados que ofereça `OpenRowset`suporte a consultas remotas usando o. Normalmente, será uma fonte de dados do Microsoft SQL Server.  
   
  Os requisitos para usar várias fontes de dados incluem o seguinte:  
   
@@ -172,7 +172,7 @@ ms.locfileid: "66076515"
 5.  Localize e selecione a tabela que você adicionou. Clique com o botão direito do mouse na tabela e selecione **Nova Relação**. Escolha as colunas de origem e destino que contêm dados de correspondência.  
   
 ## <a name="see-also"></a>Consulte também  
- [Fontes de dados com suporte no &#40;Multidimensional do SSAS&#41;](supported-data-sources-ssas-multidimensional.md)   
+ [Fontes de dados &#40;com suporte para SSAS multidimensional&#41;](supported-data-sources-ssas-multidimensional.md)   
  [Exibições de fontes de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)  
   
   

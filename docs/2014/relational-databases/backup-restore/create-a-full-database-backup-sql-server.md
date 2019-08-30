@@ -15,18 +15,18 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c43fbe12b8449fb231ee9a2f479ff17ac0281493
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec94f8387d7b833a80cd4df09f7d4208974d40a7
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922255"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154827"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Criar um backup completo de banco de dados (SQL Server)
   Este tópico descreve como criar um backup de banco de dados completo no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou PowerShell.  
   
 > [!NOTE]  
->  Para obter informações sobre o backup do SQL Server no serviço de armazenamento do Blob do Windows Azure, consulte [Backup e restauração do SQL Server com o serviço de armazenamento de Blob do Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>  Para obter informações sobre SQL Server Backup para o serviço de armazenamento de BLOBs do Azure, consulte [SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  **Neste tópico**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62922255"
   
      [Segurança](#Security)  
   
--   **Para criar um banco de dados completo de backup, usando:**  
+-   **Para criar um backup de banco de dados completo usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62922255"
   
 3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**e clique em **Backup**. Será exibida a caixa de diálogo **Backup de Banco de Dados** .  
   
-4.  No `Database` caixa de listagem, verifique se o nome do banco de dados. Você pode, como opção, selecionar um banco de dados diferente da lista.  
+4.  Na caixa de listagem, verifique o nome do banco de dados. `Database` Você pode, como opção, selecionar um banco de dados diferente da lista.  
   
 5.  Você pode executar um backup de banco de dados para qualquer modelo de recuperação (**FULL**, **BULK_LOGGED** ou **SIMPLE**).  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62922255"
     > [!NOTE]  
     >  Quando a opção **Diferencial** está selecionada, você não pode criar um backup somente cópia.  
   
-8.  Para **componente de Backup**, clique em `Database`.  
+8.  Para **componente de backup**, `Database`clique em.  
   
 9. Aceite o nome do conjunto de backup padrão sugerido na caixa de texto **Nome** ou digite um nome diferente para o conjunto de backup.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62922255"
          Para essa opção, digite um nome na caixa de texto **Nome do novo conjunto de mídias** e, opcionalmente, descreva o conjunto de mídias na caixa de texto **Descrição do novo conjunto de mídias** .  
   
         > [!IMPORTANT]  
-        >  Essa opção será desabilitada se a opção **URL** for selecionada na página **General** . Essas ações não têm suporte ao fazer backup para o armazenamento do Windows Azure.  
+        >  Essa opção será desabilitada se a opção **URL** for selecionada na página **General** . Não há suporte para essas ações durante o backup no armazenamento do Azure.  
   
 14. Na seção **Confiabilidade** , como opção, marque:  
   
@@ -184,15 +184,15 @@ ms.locfileid: "62922255"
   
      BACKUP DATABASE *database*  
   
-     TO *backup_device* [ **,**...*n* ]  
+     TO *backup_device* [ **,** ...*n* ]  
   
-     [ WITH *com_opções* [ **,**...*o* ] ] ;  
+     [ WITH *com_opções* [ **,** ...*o* ] ] ;  
   
     |Opção|Descrição|  
     |------------|-----------------|  
     |*database*|É o banco de dados do qual fazer backup.|  
-    |*backup_device* [ **,**...*n* ]|Especifica uma lista de 1 a 64 dispositivos de backup a serem usados para a operação de backup. Você pode especificar um dispositivo de backup físico ou pode especificar um dispositivo de backup lógico correspondente, se já definido. Para especificar um dispositivo de backup físico, use a opção DISK ou TAPE:<br /><br /> { DISK &#124; TAPE } **=**_physical_backup_device_name_<br /><br /> Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
-    |WITH *with_options* [ **,**...*o* ]|Opcionalmente, especifica uma ou mais opções adicionais, *o*. Para obter informações sobre os fundamentos de opções, consulte a etapa 2.|  
+    |*backup_device* [ **,** ...*n* ]|Especifica uma lista de 1 a 64 dispositivos de backup a serem usados para a operação de backup. Você pode especificar um dispositivo de backup físico ou pode especificar um dispositivo de backup lógico correspondente, se já definido. Para especificar um dispositivo de backup físico, use a opção DISK ou TAPE:<br /><br /> { DISK &#124; TAPE } **=** _physical_backup_device_name_<br /><br /> Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
+    |WITH *with_options* [ **,** ...*o* ]|Opcionalmente, especifica uma ou mais opções adicionais, *o*. Para obter informações sobre os fundamentos de opções, consulte a etapa 2.|  
   
 2.  Opcionalmente, especifique uma ou mais opções WITH. Algumas opções WITH básicas são descritas aqui. Para obter informações sobre todas as opções WITH, consulte [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
@@ -204,10 +204,10 @@ ms.locfileid: "62922255"
          ENCRYPTION (ALGORITHM, SERVER CERTIFICATE |ASYMMETRIC KEY)  
          No SQL Server 2014 ou em versões posteriores somente, especifique o algoritmo de criptografia a ser usado, e o certificado ou chave assimétrica usada para proteger a criptografia.  
   
-         DESCRIPTION **=** { **'*`text`*'** | **@**_text_variable_ }  
+         Descrição **=** { ***'`text`* '**  |  text_variable **}@**  
          Especifica o texto de forma livre que descreve o conjunto de backup. A cadeia de caracteres pode conter um máximo de 255 caracteres.  
   
-         NAME **=** { *backup_set_name* | **@**_backup_set_name_var_ }  
+         NAME **=** { *backup_set_name* |  **@** _backup_set_name_var_ }  
          Especifica o nome do conjunto de backup. Os nomes podem ter no máximo de 128 caracteres. Se NAME não estiver especificado, ele estará em branco.  
   
     -   Opções WITH do conjunto de backup básico:  
@@ -216,7 +216,7 @@ ms.locfileid: "62922255"
   
          Alternativamente, para formatar a mídia de backup, use a opção FORMAT:  
   
-         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@**_media_name_variable_ } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@**_text_variable_ } ]  
+         FORMAT [ **,** MEDIANAME **=** { *media_name* |  **@** _media_name_variable_ } ] [ **,** MEDIADESCRIPTION **=** { *text* |  **@** _text_variable_ } ]  
          Use a cláusula FORMAT quando estiver usando a mídia pela primeira vez ou quando quiser sobrescrever todos os dados existentes Opcionalmente, atribua à nova mídia um nome e uma descrição.  
   
         > [!IMPORTANT]  
@@ -272,7 +272,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
   
-1.  Use o cmdlet `Backup-SqlDatabase`. Para indicar explicitamente que este é um backup de banco de dados completo, especifique o **- BackupAction** parâmetro com valor padrão, `Database`. Esse parâmetro é opcional para backups completos de banco de dados.  
+1.  Use o cmdlet `Backup-SqlDatabase`. Para indicar explicitamente que se trata de um backup de banco de dados completo, especifique o parâmetro **-BackupAction** com `Database`seu valor padrão,. Esse parâmetro é opcional para backups completos de banco de dados.  
   
      O exemplo a seguir cria um backup de banco de dados completo do banco de dados `MyDB` para o local de backup padrão da instância de servidor `Computer\Instance`. Como opção, esse exemplo especifica `-BackupAction Database`.  
   
@@ -291,7 +291,7 @@ GO
   
 -   [Criar um backup diferencial de banco de dados &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
--   [Restaurar um Backup de banco de dados &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [Restaurar um backup &#40;de banco de dados SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [Restaurar um backup de banco de dados no modelo de recuperação simples &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   

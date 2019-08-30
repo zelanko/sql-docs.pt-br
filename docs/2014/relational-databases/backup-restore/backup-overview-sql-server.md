@@ -22,12 +22,12 @@ ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2b3b550ec7eb42597862c5b20e557aabdc909f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d159b6c0496d99956e17f1607f71cf7df86e4dea
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922117"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155009"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   Este tópico apresenta o componente de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O backup do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é essencial para proteger seus dados. Esta discussão abrange tipos de backup e restrições de backup. O tópico também apresenta dispositivos de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e mídia de backup.  
@@ -38,7 +38,7 @@ ms.locfileid: "62922117"
   
 -   [Compactação de backup](#BackupCompression)  
   
--   [Restrições em operações de Backup no SQL Server](#Restrictions)  
+-   [Restrições de operações de backup no SQL Server](#Restrictions)  
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
@@ -55,9 +55,9 @@ ms.locfileid: "62922117"
  [restaurar](restore-and-recovery-overview-sql-server.md)  
  Um processo multifase que copia todos os dados e páginas de log de um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um banco de dados especificado e, em seguida, efetua roll forward de todas as transações registradas no backup, aplicando as alterações registradas para avançar os dados no tempo.  
   
- **Tipos de Backups**  
+ **Tipos de backups**  
   
- [Backup somente cópia](copy-only-backups-sql-server.md)  
+ [backup somente cópia](copy-only-backups-sql-server.md)  
  Um backup de uso especial que é independente da sequência regular dos backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  backup de dados  
@@ -83,10 +83,10 @@ ms.locfileid: "62922117"
  [backup parcial](partial-backups-sql-server.md)  
  Contém dados apenas de alguns grupos de arquivos em um banco de dados, incluindo os dados no grupo de arquivos primário, em cada grupo de arquivos de leitura/gravação e em qualquer arquivo somente leitura especificado opcionalmente.  
   
- **Mídia de backup de termos e definições**  
+ **Termos e definições de mídia de backup**  
   
- [Dispositivo de backup](backup-devices-sql-server.md)  
- Um disco ou dispositivo de fita no qual são gravados backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nos quais eles podem ser restaurados. Os backups do SQL Server também podem ser gravados em um serviço de armazenamento do Blob do Microsoft Azure. O formato de **URL** é usado para especificar o destino e o nome do arquivo de backup. Para obter mais informações, consulte [Backup e restauração do SQL Server com o serviço de armazenamento de Blob do Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ [dispositivo de backup](backup-devices-sql-server.md)  
+ Um disco ou dispositivo de fita no qual são gravados backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nos quais eles podem ser restaurados. SQL Server backups também podem ser gravados em um serviço de armazenamento de BLOBs do Azure, e o formato de **URL** é usado para especificar o destino e o nome do arquivo de backup.. Para obter mais informações, consulte [SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  [mídia de backup](media-sets-media-families-and-backup-sets-sql-server.md)  
  Uma ou mais fitas ou arquivos de disco nos quais um ou mais backups foram gravados.  
@@ -103,10 +103,10 @@ ms.locfileid: "62922117"
  [conjunto de mídias espelhado](mirrored-backup-media-sets-sql-server.md)  
  Várias cópias (espelhos) de um conjunto de mídias.  
   
-##  <a name="BackupCompression"></a> Compactação de backup  
+##  <a name="BackupCompression"></a>Compactação de backup  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versões posteriores dão suporte à compactação de backups, e o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versões posteriores podem restaurar um backup compactado. Para obter mais informações, veja [Compactação de backup &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
-##  <a name="Restrictions"></a> Restrições em operações de Backup no SQL Server  
+##  <a name="Restrictions"></a>Restrições de operações de backup no SQL Server  
  O backup pode ser realizado com o banco de dados online e em uso. No entanto, existem as seguintes restrições.  
   
 ### <a name="offline-data-cannot-be-backed-up"></a>Não é possível fazer backup de dados offline  
@@ -156,7 +156,7 @@ ms.locfileid: "62922117"
   
 -   [Restaurar um backup de um dispositivo &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
--   [Tutorial: Backup e restauração do SQL Server para o serviço de Armazenamento de Blobs do Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server Backup e restauração para o serviço de armazenamento de BLOBs do Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **Para criar um backup**  
   
@@ -179,7 +179,7 @@ ms.locfileid: "62922117"
   
 -   [Usar o Resource Governor para limitar o uso de CPU por meio de compactação de backup &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Tutorial: Backup e restauração do SQL Server para o serviço de Armazenamento de Blobs do Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server Backup e restauração para o serviço de armazenamento de BLOBs do Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Fazer backup e restaurar bancos de dados do SQL Server](back-up-and-restore-of-sql-server-databases.md)   

@@ -5,22 +5,22 @@ description: Artigo de referência para comandos bdc debug de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d2cdb04cfc0bf98e2143b8e7b5ae67a7b0db9069
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 9e14528baf80d08841f6e9e17a0476dfa81fd48d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653362"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153193"
 ---
 # <a name="azdata-bdc-debug"></a>azdata bdc debug
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-O artigo a seguir fornece referência para os comandos **bdc debug** na ferramenta **azdata**. Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md).
+Este artigo é um artigo de referência para **azdata**. 
 
 ## <a name="commands"></a>Comandos
 |     |     |
@@ -28,7 +28,7 @@ O artigo a seguir fornece referência para os comandos **bdc debug** na ferramen
 [azdata bdc debug copy-logs](#azdata-bdc-debug-copy-logs) | Copiar logs.
 [azdata bdc debug dump](#azdata-bdc-debug-dump) | Gatilho de despejo de log.
 ## <a name="azdata-bdc-debug-copy-logs"></a>azdata bdc debug copy-logs
-Copiar os logs de depuração do cluster de Big Data – a configuração de kube é necessária em seu sistema.
+Copie os logs de depuração do cluster de Big data-a configuração do kubernetes é necessária no seu sistema.
 ```bash
 azdata bdc debug copy-logs --namespace -n 
                            [--container -c]  
@@ -60,7 +60,7 @@ Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http:/
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-debug-dump"></a>azdata bdc debug dump
-Disparar o despejo de log e copiá-lo do contêiner – a configuração de kube é necessária no seu sistema.
+Disparar despejo de log e copiá-lo do contêiner-a configuração kubernetes é necessária no seu sistema.
 ```bash
 azdata bdc debug dump --namespace -n 
                       --container -c  
@@ -88,4 +88,6 @@ Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md). Para obter mais informações sobre como instalar a ferramenta **azdata** , consulte [instalar o azdata para [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]gerenciar ](deploy-install-azdata.md).
+- Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md). 
+
+- Para obter mais informações sobre como instalar a ferramenta **azdata**, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](deploy-install-azdata.md).

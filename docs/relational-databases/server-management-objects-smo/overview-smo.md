@@ -8,26 +8,26 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44e7ca81fd276e8538e19c1a7670daf4da10dde6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7705aa50b488971b1c5aaf6e043ccf2dfd9103f6
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098000"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148651"
 ---
 # <a name="overview-smo"></a>Visão geral (SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) são objetos criados para o gerenciamento programático do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode usar os SMO para compilar aplicativos de gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizados. Embora o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] seja um aplicativo extenso e abrangente para o gerenciamento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pode haver vezes em que um aplicativo SMO funcione melhor.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O SMO (Management Objects) são objetos criados para o [!INCLUDE[msCoName](../../includes/msconame-md.md)]gerenciamento programático do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode usar os SMO para compilar aplicativos de gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizados. Embora o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] seja um aplicativo extenso e abrangente para o gerenciamento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pode haver vezes em que um aplicativo SMO funcione melhor.  
   
  Por exemplo, pode ser necessário simplificar os aplicativos de usuário que controlam as tarefas de gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atender as necessidades dos novos usuários e reduzir custos de treinamento. Pode ser necessário criar bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizados ou criar um aplicativo para criar e monitorar a eficiência de índices. Um aplicativo de SMO também pode ser usado para incluir hardware ou software de terceiros de modo homogêneo no aplicativo de gerenciamento de banco de dados.  
   
  Como o SMO é compatível com o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e com versões posteriores, você pode gerenciar facilmente um ambiente de várias versões.  
   
- Recursos do SMO incluem o seguinte:  
+ Os recursos do SMO incluem o seguinte:  
   
 -   Modelo de objeto armazenado em cache e criação de instância de objeto otimizada. Os objetos são carregados somente quando especificamente referenciados. As propriedades do objeto são parcialmente carregadas apenas quando o objeto é criado. Os objetos e propriedades restantes são carregados quando referenciados diretamente.  
   
@@ -49,13 +49,13 @@ ms.locfileid: "68098000"
   
 -   Isolamento de instantâneo e versão do nível de linha para aprimoramento de simultaneidade. Para obter mais informações, consulte [Working with Snapshot Isolation](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
--   A coleção do esquema XML, os índices XML e o tipo de dados XML fornecem validação e armazenamento dos dados de XML. Para obter mais informações, consulte [coleções de esquema XML &#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md) e [Using XML Schemas](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
+-   A coleção do esquema XML, os índices XML e o tipo de dados XML fornecem validação e armazenamento dos dados de XML. Para obter mais informações, consulte [coleções &#40;de esquema XML SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md) e [usando esquemas XML](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
   
 -   Bancos de dados de instantâneo para criar cópias somente leitura de bancos de dados.  
   
 -   Suporte do [!INCLUDE[ssSB](../../includes/sssb-md.md)] para comunicação baseada em mensagem. Para obter mais informações, consulte [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
   
--   Suporte de sinônimo para vários nomes de objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [sinônimos &#40;mecanismo de banco de dados&#41;](../../relational-databases/synonyms/synonyms-database-engine.md).  
+-   Suporte de sinônimo para vários nomes de objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [ &#40;sinônimos&#41;mecanismo de banco de dados](../../relational-databases/synonyms/synonyms-database-engine.md).  
   
 -   O gerenciamento de Banco de Dados de Email permite criar servidores de email, perfis de email e contas de email no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Database Mail](../../relational-databases/database-mail/database-mail.md).  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68098000"
   
 -   Gatilhos DDL para adicionar funcionalidade quando ocorrerem eventos de DDL. Para obter mais informações, consulte [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
- O namespace do SMO é <xref:Microsoft.SqlServer.Management.Smo>. O SMO é implementado como um assembly do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Isso significa que o Common Language Runtime do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versão 2.0 deve ser instalado antes da utilização dos objetos do SMO. Os assemblies do SMO são instalados por padrão no GAC (cache de assembly global) com o a opção SDK do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os assemblies estão localizados em C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. Para obter mais informações, consulte o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentação.  
+ O namespace do SMO é <xref:Microsoft.SqlServer.Management.Smo>. O SMO é implementado como um assembly do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Isso significa que o Common Language Runtime do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versão 2.0 deve ser instalado antes da utilização dos objetos do SMO. Os assemblies do SMO são instalados por padrão no GAC (cache de assembly global) com o a opção SDK do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os assemblies estão localizados em C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. Para obter mais informações, consulte [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentação.  
   
 ## <a name="smo-classes"></a>Classes do SMO  
  As classes do SMO incluem duas categorias: classes de instância e classes de utilitário.  
@@ -91,7 +91,7 @@ ms.locfileid: "68098000"
 ## <a name="smo-features"></a>Recursos do SMO  
  **Desempenho otimizado**  
   
- A arquitetura do SMO é eficiente em termos de memória porque objetos são somente parcialmente instanciados primeiro, e informações de propriedade mínimo são solicitadas do servidor. A instanciação total de objetos é atrasada até que o objeto seja explicitamente referenciado. Um objeto é totalmente instanciado quando uma propriedade é solicitada e não está no conjunto de propriedades recuperadas primeiramente ou quando um método é chamado exigindo tal propriedade. A transição entre objetos parcialmente e totalmente instanciados é transparente para o usuário. Além disso, algumas propriedades que usam muitos memória nunca são recuperadas, a menos que a propriedade seja explicitamente referenciada. Um exemplo disto é a propriedade <xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A> da propriedade do objeto <xref:Microsoft.SqlServer.Management.Smo.Database>. Porém, a instanciação parcial requer mais viagens de ida e volta de rede e não é a melhor opção de desempenho para o seu aplicativo.  
+ A arquitetura do SMO é eficiente em termos de memória porque os objetos são apenas parcialmente instanciados primeiro e as informações de propriedade mínimas são solicitadas no servidor. A instanciação total de objetos é atrasada até que o objeto seja explicitamente referenciado. Um objeto é totalmente instanciado quando uma propriedade é solicitada e não está no conjunto de propriedades recuperadas primeiramente ou quando um método é chamado exigindo tal propriedade. A transição entre objetos parcialmente e totalmente instanciados é transparente para o usuário. Além disso, algumas propriedades que usam muitos memória nunca são recuperadas, a menos que a propriedade seja explicitamente referenciada. Um exemplo disto é a propriedade <xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A> da propriedade do objeto <xref:Microsoft.SqlServer.Management.Smo.Database>. Porém, a instanciação parcial requer mais viagens de ida e volta de rede e não é a melhor opção de desempenho para o seu aplicativo.  
   
  Você pode controlar instanciação para que fique adequada ao ambiente do sistema. A dependência na instanciação adiada minimiza a quantidade de memória exigida pelo aplicativo, embora possa ativar muitas solicitações do servidor quando as propriedades forem referenciadas.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "68098000"
   
 -   Criação de script de 1 fase (cria o script em uma etapa)  
   
--   Avançada de script de 3 fases (cria o script em três etapas; descoberta de dependência, geração de lista, geração de script)  
+-   Script de 3 fases avançado (cria o script em três etapas; descoberta de dependência, geração de lista, geração de script)  
   
 -   Descoberta de dependência bidirecional (permite a descoberta de dependências ou dependentes)  
   
@@ -123,7 +123,7 @@ ms.locfileid: "68098000"
   
 -   Resposta para eventos Error  
   
- **Nomes de recurso exclusivos**  
+ **Nomes de recursos exclusivos**  
   
  Um conceito fundamental no uso da biblioteca de objetos do SMO é o URN (nome de recurso exclusivo). O URN usa uma sintaxe semelhante ao XPath. O XPath é um caminho de hierarquia usado para especificar um objeto no qual cada nível tem qualificadores e funções. No SMO, o URN tem dois elementos, o caminho e nomeação de atributo que limitaram funcionalidade. O caminho é usado para especificar o local do objeto, enquanto a nomeação do atributo permite um grau de filtragem.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "68098000"
   
  O URN de um objeto pode ser recuperado pela referência de sua propriedade de URN. O objeto Scripter também usa URNs como parâmetros que transmitem referências de objeto ao método do objeto **Scripter** . Além disso, é possível especificar um URN para o método **GetSmoObject** do objeto **Server** . Isto é usado para criar uma instância do objeto do SMO.  
   
-## <a name="sql-server-features-represented-in-smo"></a>Recursos do SQL Server representados no SMO  
+## <a name="sql-server-features-represented-in-smo"></a>SQL Server recursos representados no SMO  
  **Particionamento de tabela e índice**  
   
  O particionamento de tabela e índice permite gerenciar a expansão de dados em tabelas e índices por grupos de arquivos. Esse recurso novo é representado por objetos do SMO.  
@@ -144,15 +144,15 @@ ms.locfileid: "68098000"
   
  As solicitações de espelhamento de banco de dados e SOAP são manipuladas por pontos de extremidade que usam o objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint>.  
   
- **Versão do nível de linha/isolamento de instantâneo**  
+ **Isolamento de instantâneo/controle de versão de nível de linha**  
   
  O Isolamento de instantâneo (controle de versão no nível de linha) é representado através de novas propriedades de objeto do <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
- **Namespace de esquema XML, índices XML e o tipo de dados XML**  
+ **Namespace de esquema XML, índices XML e tipo de dados XML**  
   
  Namespaces de Esquema XML são representados no SMO por uma coleção de objetos. Os índices XML são representados no SMO por uma propriedade de objeto do **Index** .  
   
- **Aprimoramentos de pesquisa de texto completo**  
+ **Aprimoramentos da pesquisa de texto completo**  
   
  São fornecidos objetos novos no SMO representando os aprimoramentos da pesquisa de texto completo.  
   

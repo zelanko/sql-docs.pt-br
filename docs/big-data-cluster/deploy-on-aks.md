@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b33ef15bd6a47bcd2a475f608197a1566bb030b0
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: bc9879236fa50f19f443b2d6086980842ce0b3f1
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652382"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160699"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurar o Serviço de Kubernetes do Azure para implantações de cluster de Big Data do SQL Server
 
@@ -37,7 +37,7 @@ Este artigo descreve as etapas para implantar o Kubernetes no AKS usando a CLI d
    - **Extensão do SQL Server 2019**
    - **CLI do Azure**
 
-- Versão mínima de 1.10 para o servidor do Kubernetes. No AKS, você precisa usar o parâmetro `--kubernetes-version` para especificar uma versão diferente do padrão.
+- Versão mínima de 1,13 para o servidor kubernetes. No AKS, você precisa usar o parâmetro `--kubernetes-version` para especificar uma versão diferente do padrão.
 
 - Para obter uma experiência ideal ao validar cenários básicos no AKS, use:
    - 8 vCPUs em todos os nós

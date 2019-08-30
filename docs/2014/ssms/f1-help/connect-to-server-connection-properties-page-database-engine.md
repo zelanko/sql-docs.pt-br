@@ -12,23 +12,23 @@ ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ca69ca5ca402e06999e2817c24c11c6b52d75f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 30382bcb0c70fb985c88866602cb997988b88569
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245512"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153747"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Conectar ao Servidor (página Propriedades da Conexão) Mecanismo de Banco de Dados
   Use esta guia para exibir ou especificar opções ao se conectar a uma emstância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou registrar [!INCLUDE[ssDE](../../includes/ssde-md.md)] em **Servidores Registrados**. **Conectar** e **Opções** só são exibidas nesta caixa de diálogo ao conectar-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. **Testar** e **Salvar** só aparecem nesta caixa de diálogo durante o registro no [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="options"></a>Opções  
  **Conectar ao banco de dados**  
- Selecione um banco de dados com o qual deseja se conectar na lista. Se você selecionar  **\<padrão >** , você será conectado ao banco de dados padrão para o servidor. Se você selecionar  **\<Procurar servidor >** , você poderá procurar no servidor do banco de dados ao qual se conectar.  
+ Selecione um banco de dados com o qual deseja se conectar na lista. Se você selecionar  **\<> padrão**, você será conectado ao banco de dados padrão para o servidor. Se você selecionar  **\<procurar > de servidor**, poderá procurar o banco de dados ao qual se conectará o servidor.  
   
  Ao conectar-se a uma instância do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], você deve usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e especificar um banco de dados na caixa de diálogo **Conectar ao Servidor** , na guia **Propriedades da Conexão** . Verifique se você marcou a caixa de seleção **Criptografar conexão** .  
   
- Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conecta-se ao **mestre**. Se você especificar um banco de dados de usuário, consultará somente esse banco de dados e seus objetos no Pesquisador de Objetos. Se você se conectar ao **mestre**, poderá ver todos os bancos de dados. Para obter mais informações, consulte [Visão geral do banco de dados SQL do Microsoft Azure](/azure/sql-database/sql-database-technical-overview).  
+ Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conecta-se ao **mestre**. Se você especificar um banco de dados de usuário, consultará somente esse banco de dados e seus objetos no Pesquisador de Objetos. Se você se conectar ao **mestre**, poderá ver todos os bancos de dados. Para obter mais informações, consulte [visão geral do banco de dados SQL do Azure](/azure/sql-database/sql-database-technical-overview).  
   
  **Protocolo de rede**  
  Selecione um protocolo na lista. Os protocolos cliente disponíveis são aqueles que você configurou usando a Configuração de Rede Cliente no Gerenciamento do Computador.  

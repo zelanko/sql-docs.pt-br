@@ -13,12 +13,12 @@ ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 712ea68c3e0405399e3868e3f7fce375c351f4c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876813"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154834"
 ---
 # <a name="back-up-database-media-options-page"></a>Backup de Banco de Dados (página Opções de Mídia)
   Use a página  **Opções de Mídia** da caixa de diálogo **Fazer Backup de Banco de Dados** para exibir ou modificar opções de mídia de banco de dados.  
@@ -38,7 +38,7 @@ ms.locfileid: "62876813"
 ## <a name="options"></a>Opções  
   
 ### <a name="overwrite-media"></a>Substituir mídia  
- As opções do painel **Substituir mídia** controlam como o backup é gravado na mídia. Se você tiver selecionado a URL (Armazenamento do Windows Azure) como destino de backup na página Geral da caixa de diálogo Backup de Banco de Dados, as opções na seção Substituir mídia serão desabilitadas. Você pode substituir um backup usando a instrução Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Para saber mais, confira [SQL Server Backup to URL](sql-server-backup-to-url.md).  
+ As opções do painel **Substituir mídia** controlam como o backup é gravado na mídia. Se você selecionou URL (armazenamento do Azure) como o destino de backup na página Geral da caixa de diálogo backup de banco de dados, as opções na seção substituir mídia serão desabilitadas. Você pode substituir um backup usando a instrução Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Para saber mais, confira [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
  Há suporte somente para a opção **Fazer backup em um novo conjunto de mídias e apagar todos os conjuntos de backup existentes** nas opções de criptografia. Se você selecionar as opções na seção **Fazer backup na mídia existente**, as opções de criptografias na página **Opções de Backup** serão desabilitadas.  
   

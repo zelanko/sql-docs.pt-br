@@ -12,18 +12,18 @@ ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c24de94f948282772f6f08d8a4a6c62e1c952ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2fe246a1f8baf1ab9f60ab1fa73e21e81c052aa1
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245677"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153699"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>Conectar ao Servidor (página Logon) Mecanismo de Banco de Dados
   Use essa guia para exibir ou especificar opções ao se conectar ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 > [!NOTE]  
->  Para se conectar usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deverá ser configurado no modo de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows. Para obter mais informações sobre como determinar o modo de autenticação e para alterar o modo de autenticação, consulte [alterar o modo de autenticação de servidor](../../database-engine/configure-windows/change-server-authentication-mode.md).  
+>  Para se conectar usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deverá ser configurado no modo de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows. Para obter mais informações sobre como determinar o modo de autenticação e alterar o modo de autenticação, consulte [alterar o modo de autenticação do servidor](../../database-engine/configure-windows/change-server-authentication-mode.md).  
   
 ## <a name="options"></a>Opções  
  **Tipo de servidor**  
@@ -31,7 +31,7 @@ ms.locfileid: "63245677"
   
  Ao conectar-se a uma instância do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], você deve usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e especificar um banco de dados na caixa de diálogo **Conectar ao Servidor** , na guia **Propriedades da Conexão** . Verifique se você marcou a caixa de seleção **Criptografar conexão** .  
   
- Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conecta-se ao **mestre**. Se você especificar um banco de dados de usuário, consultará somente esse banco de dados e seus objetos no Pesquisador de Objetos. Se você se conectar ao **mestre**, poderá ver todos os bancos de dados. Para obter mais informações, consulte [Visão geral do banco de dados SQL do Microsoft Azure](/azure/sql-database/sql-database-technical-overview).  
+ Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conecta-se ao **mestre**. Se você especificar um banco de dados de usuário, consultará somente esse banco de dados e seus objetos no Pesquisador de Objetos. Se você se conectar ao **mestre**, poderá ver todos os bancos de dados. Para obter mais informações, consulte [visão geral do banco de dados SQL do Azure](/azure/sql-database/sql-database-technical-overview).  
   
  **Nome do servidor**  
  Selecione a instância do servidor com a qual se conectar. Por padrão, é exibida a instância de servidor usada na última conexão.  
@@ -41,7 +41,7 @@ ms.locfileid: "63245677"
   
  Ao conectar-se a uma instância do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], você deve usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e especificar um banco de dados na caixa de diálogo **Conectar ao Servidor** , na guia **Propriedades da Conexão** . Verifique se você marcou a caixa de seleção **Criptografar conexão** .  
   
- Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conecta-se ao **mestre**. Se você especificar um banco de dados de usuário, consultará somente esse banco de dados e seus objetos no Pesquisador de Objetos. Se você se conectar ao **mestre**, poderá ver todos os bancos de dados. Para obter mais informações, consulte [Visão geral do banco de dados SQL do Microsoft Azure](/azure/sql-database/sql-database-technical-overview).  
+ Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conecta-se ao **mestre**. Se você especificar um banco de dados de usuário, consultará somente esse banco de dados e seus objetos no Pesquisador de Objetos. Se você se conectar ao **mestre**, poderá ver todos os bancos de dados. Para obter mais informações, consulte [visão geral do banco de dados SQL do Azure](/azure/sql-database/sql-database-technical-overview).  
   
  **Modo de Autenticação do Windows (Autenticação do Windows)**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] O modo de Autenticação do Windows permite que um usuário se conecte por uma conta de usuário Windows.  

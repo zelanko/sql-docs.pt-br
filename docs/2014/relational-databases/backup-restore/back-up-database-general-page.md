@@ -12,12 +12,12 @@ ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3206052455ff1d1bd5db14f6c53507ec9f00a7eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc6680702fd32c670d2f3c3861c47bab96c52c47
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62877052"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155082"
 ---
 # <a name="back-up-database-general-page"></a>Backup do banco de dados (página Geral)
   Use a página **Geral** da caixa de diálogo **Backup de Banco de Dados** para exibir ou modificar as configurações de uma operação de backup de banco de dados.  
@@ -42,7 +42,7 @@ ms.locfileid: "62877052"
   
 ## <a name="options"></a>Opções  
   
-### <a name="source"></a>`Source`  
+### <a name="source"></a>Origem  
  As opções do painel **Origem** identificam o banco de dados e especificam o tipo de backup e o componente para a operação de backup.  
   
  **Backup de banco de dados**  
@@ -54,7 +54,7 @@ ms.locfileid: "62877052"
  **Tipo de backup**  
  Selecione o tipo de backup que você deseja executar no banco de dados especificado.  
   
-|Tipo de backup|Disponível para|Restrictions|  
+|Tipo de backup|Disponível para|Restrições|  
 |-----------------|-------------------|------------------|  
 |Completo|Bancos de dados, arquivos e grupos de arquivos|No banco de dados **mestre** , só backups completos são possíveis.<br /><br /> No Modelo de Recuperação Simples, backups de arquivos e grupos de arquivos estão disponíveis apenas para grupos de arquivos somente leitura.|  
 |Diferencial|Bancos de dados, arquivos e grupos de arquivos|No Modelo de Recuperação Simples, backups de arquivos e grupos de arquivos estão disponíveis apenas para grupos de arquivos somente leitura.|  
@@ -89,7 +89,7 @@ ms.locfileid: "62877052"
 |-|-|  
 |**Disco**|Faz o backup em disco. Pode ser um arquivo de sistema ou um dispositivo de backup lógico baseado em disco criado para o banco de dados. Os discos atualmente selecionados são exibidos na lista **Backup em** . Você pode selecionar até 64 dispositivos de disco para a operação de backup.|  
 |**Tape**|Faz o backup em fita. Pode ser uma unidade de fita local ou um dispositivo de backup lógico baseado em fita criado para o banco de dados. As fitas atualmente selecionadas são exibidas na lista **Backup em** . O número máximo é 64. Se não houver nenhum dispositivo de fita anexado ao servidor, essa opção será desativada. As fitas selecionadas são incluídas na lista **Backup em** .<br /><br /> Observação: O suporte a dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
-|**URL**|Faz backup no armazenamento de Blob do Windows Azure.|  
+|**URL**|Faz backup no armazenamento de BLOBs do Azure.|  
   
  O próximo conjunto de opções exibido depende do tipo de destino selecionado. Se você selecionar Disco ou Fita, as opções a seguir são exibidas.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62877052"
  **Remover**  
  Remove um ou mais dispositivos atualmente selecionados na lista **Fazer backup em** .  
   
- **Sumário**  
+ **Conteúdo**  
  Exibe o conteúdo da mídia do dispositivo selecionado.  
   
  Se você selecionar a URL como destino de backup, as seguintes opções serão exibidas:  
@@ -108,13 +108,13 @@ ms.locfileid: "62877052"
  Especifique o nome do arquivo de backup.  
   
  **Credencial do SQL**  
- Selecione uma Credencial do SQL usada para autenticar o Armazenamento do Microsoft Azure. Se você não tiver uma Credencial existente do SQL que possa usar, clique no botão **Criar** para criar uma nova Credencial do SQL.  
+ Selecione uma credencial do SQL usada para autenticar no armazenamento do Azure. Se você não tiver uma Credencial existente do SQL que possa usar, clique no botão **Criar** para criar uma nova Credencial do SQL.  
   
 > [!IMPORTANT]  
->  A caixa de diálogo que é aberta quando você clica em **Criar** exige um certificado de gerenciamento ou o perfil da publicação para a assinatura. Se você não tiver acesso ao certificado de gerenciamento ou perfil de publicação, poderá criar uma credencial de SQL especificando o nome da conta de armazenamento e as informações da chave de acesso usando Transact-SQL ou SQL Server Management Studio. Consulte o código de exemplo nas na [para criar uma credencial](../security/authentication-access/create-a-credential.md#Credential) tópico para criar uma credencial usando Transact-SQL. Como alternativa, usando o SQL Server Management Studio, na instância do mecanismo de banco de dados, clique com o botão direito do mouse em **Segurança**, selecione **Novo**e **Credencial**. Especifique o nome da conta de armazenamento para **Identidade** e a chave de acesso no campo **Senha** .  
+>  A caixa de diálogo que é aberta quando você clica em **Criar** exige um certificado de gerenciamento ou o perfil da publicação para a assinatura. Se você não tiver acesso ao certificado de gerenciamento ou perfil de publicação, poderá criar uma credencial de SQL especificando o nome da conta de armazenamento e as informações da chave de acesso usando Transact-SQL ou SQL Server Management Studio. Consulte o código de exemplo no no [para criar um](../security/authentication-access/create-a-credential.md#Credential) tópico de credencial para criar uma credencial usando o TRANSACT-SQL. Como alternativa, usando o SQL Server Management Studio, na instância do mecanismo de banco de dados, clique com o botão direito do mouse em **Segurança**, selecione **Novo**e **Credencial**. Especifique o nome da conta de armazenamento para **Identidade** e a chave de acesso no campo **Senha** .  
   
  **Contêiner de armazenamento do Azure**  
- Especifique o nome do contêiner de armazenamento do Windows Azure  
+ Especifique o nome do contêiner de armazenamento do Azure  
   
  **Prefixo da URL:**  
  Gerado automaticamente com base nas informações da conta de armazenamento armazenadas na Credencial do SQL e o nome do contêiner de armazenamento do Azure que você especificou. É recomendável não editar as informações neste campo, a menos que você esteja usando um domínio que use um formato diferente de **\<conta de armazenamento>.blob.core.windows.net**.  

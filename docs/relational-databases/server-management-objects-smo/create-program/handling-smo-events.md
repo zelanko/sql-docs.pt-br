@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SMO [SQL Server], events
 - events [SMO], about events
 ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55ec6dccc41e160d2b56df3e3c6e7f85804552cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 893fb08f2d32c7ae9d80321c1d849010660cc308
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126739"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148724"
 ---
 # <a name="handling-smo-events"></a>Manipulando eventos SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "68126739"
 ## <a name="event-subscription"></a>Assinatura do evento  
  Para manipular eventos, escreva uma classe de manipulador de evento, crie uma instância dela, atribua o manipulador de eventos ao objeto pai e faça a assinatura do evento.  
   
- Uma classe de manipulador de eventos deve ser escrita para manipular eventos. A classe do manipulador de eventos pode conter mais de uma função de manipulador de eventos e deve ser instalada para os eventos a serem manipulados. As funções de manipulador de eventos recebem informações sobre o evento a partir de *ServerEventNotificatificationArgs* parâmetro que pode ser usado para relatar informações sobre o evento.  
+ Uma classe de manipulador de eventos deve ser escrita para manipular eventos. A classe do manipulador de eventos pode conter mais de uma função de manipulador de eventos e deve ser instalada para os eventos a serem manipulados. As funções do manipulador de eventos recebem informações sobre o evento do parâmetro *ServerEventNotificatificationArgs* que pode ser usado para relatar informações sobre o evento.  
   
- Os tipos de eventos de banco de dados e servidor que podem ser manipulados são listados na <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> classe e o <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>classe.  
+ Os tipos de eventos de servidor e banco de dados que podem ser manipulados <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> são listados na <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>classe e na classe.  
   
 ## <a name="example"></a>Exemplo  
-Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto do SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto&#35; do Visual C Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="registering-event-handlers-and-subscribing-to-event-handling-in-visual-basic"></a>Registrando manipuladores de eventos e assinando a manipulação de eventos no Visual Basic  

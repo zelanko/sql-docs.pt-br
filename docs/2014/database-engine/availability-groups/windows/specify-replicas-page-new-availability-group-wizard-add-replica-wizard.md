@@ -14,17 +14,17 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be6ddc45dd2f37b5a4a29f0e3fee4a9c44f723ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 806c8ad1023c10c0176d1608841138a7380a8def
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62788331"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154460"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página Especificar réplicas (Assistente de novo grupo de disponibilidade: assistente para adicionar réplica)
   Este tópico descreve as opções da página **Especificar Réplicas** . Essa página aplica-se ao [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] e ao [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use a página **Especificar Réplicas** para especificar e configurar uma ou mais réplicas de disponibilidade para adicionar o grupo de disponibilidade. Essa página contém quatro guias que são apresentadas na tabela a seguir. Clique no nome de uma guia na tabela para ir para a seção correspondente, mais adiante neste tópico.  
   
-|Tab|Descrição breve|  
+|Tabulação|Descrição breve|  
 |---------|-----------------------|  
 |[Réplicas](#ReplicasTab)|Use esta guia para especificar cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedará ou que hospeda uma réplica secundária. Observe que a instância de servidor à qual você está conectado no momento deve hospedar a réplica primária.<br /><br /> Dica: Termine de especificar todas as réplicas na guia **Réplicas** antes de iniciar as outras guias.|  
 |[Pontos de extremidade](#EndpointsTab)|Use esta guia para verificar quaisquer pontos de extremidade de espelhamento de banco de dados existentes e também, se esse ponto de extremidade estiver ausente em uma instância de servidor cujas contas de serviço usam a Autenticação do Windows para criar o ponto de extremidade automaticamente.|  
@@ -35,7 +35,7 @@ ms.locfileid: "62788331"
  **Instância do Servidor**  
  Exibe o nome da instância de servidor que hospedará a réplica de disponibilidade.  
   
- Se uma instância de servidor que você usa para hospedar uma réplica secundária não estiver listada na grade **Réplicas de Disponibilidade** , clique no botão **Adicionar Réplica** . Se você estiver configurando um grupo de disponibilidade em um ambiente de TI híbrido (consulte [Alta disponibilidade e recuperação de desastre para SQL Server nas Máquinas Virtuais do Microsoft Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), clique no botão **Adicionar Réplica do Azure** para criar máquinas virtuais com réplicas secundárias no Microsoft Azure.  
+ Se uma instância de servidor que você usa para hospedar uma réplica secundária não estiver listada na grade **Réplicas de Disponibilidade** , clique no botão **Adicionar Réplica** . Se você estiver configurando um grupo de disponibilidade em um ambiente de ti híbrido (consulte [alta disponibilidade e recuperação de desastre para SQL Server em máquinas virtuais do Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), você pode clicar no botão **Adicionar réplica do Azure** para criar máquinas virtuais com o secundário réplicas no Azure.  
   
  **Função inicial**  
  Indica a função que a nova réplica executará inicialmente: **Primária** ou **secundária**.  
@@ -53,7 +53,7 @@ ms.locfileid: "62788331"
  **Função Secundária Legível**  
  Selecione um valor na lista suspensa **Secundária Legível** , da seguinte forma:  
   
- **Não**  
+ **No**  
  Nenhuma conexão direta é permitida para bancos de dados secundários desta réplica. Eles não estão disponíveis para acesso de leitura. Essa é a configuração padrão.  
   
  **Tentativa de leitura somente**  
@@ -66,7 +66,7 @@ ms.locfileid: "62788331"
  Clique para adicionar uma réplica secundária ao grupo de disponibilidade.  
   
  **Adicionar Réplica do Azure**  
- Clique para criar uma máquina virtual do Windows Azure que esteja executando uma réplica secundária no grupo de disponibilidade. Esta opção é aplicável apenas a um grupo de disponibilidade em TI híbrida que contenha réplicas locais. Para obter mais informações, consulte [Alta disponibilidade e recuperação de desastres para o SQL Server em máquinas virtuais do Windows Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
+ Clique para criar uma máquina virtual do Azure que esteja executando uma réplica secundária no grupo de disponibilidade. Esta opção é aplicável apenas a um grupo de disponibilidade em TI híbrida que contenha réplicas locais. Para obter mais informações, consulte [alta disponibilidade e recuperação de desastre para SQL Server em máquinas virtuais do Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
   
  **Remover Réplica**  
  Clique para remover a réplica secundária especificada do grupo de disponibilidade.  
@@ -122,7 +122,7 @@ ms.locfileid: "62788331"
  Especifica que você prefere que trabalhos de backup ignorem a função das réplicas de disponibilidade ao escolher a réplica para executar backups. Observe que os trabalhos de backup podem avaliar outros fatores, como prioridade de backup de cada réplica de disponibilidade em combinação com seu estado operacional e estado conectado.  
   
 > [!IMPORTANT]  
->  Não há nenhuma imposição da configuração de preferência de backup. A interpretação dessa preferência depende da lógica, se houver, que você usa para o script em trabalhos de backup para os bancos de dados em um determinado grupo de disponibilidade. Para obter mais informações, confira [Secundárias ativas: Backup em réplicas secundárias (grupos de disponibilidade AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Não há nenhuma imposição da configuração de preferência de backup. A interpretação dessa preferência depende da lógica, se houver, que você usa para o script em trabalhos de backup para os bancos de dados em um determinado grupo de disponibilidade. Para obter mais informações, confira [Secundárias ativas: Backup em réplicas secundárias (Grupos de Disponibilidade AlwaysOn](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)).  
   
 ### <a name="replica-backup-priorities-grid"></a>Grade Prioridades de backup de réplica  
  Use a grade **Prioridades de backup de réplica** para especificar suas prioridades de backup para cada uma das réplicas do grupo de disponibilidade. Essa grade contém as seguintes colunas:  
@@ -174,7 +174,7 @@ ms.locfileid: "62788331"
  **Adicionar**  
  Clique para adicionar uma sub-rede a este ouvinte. Essa ação abre a caixa de diálogo **Adicionar Endereço IP** . Para obter mais informações, consulte o tópico de ajuda [Caixa de diálogo Adicionar Endereço IP &#40;SQL Server Management Studio&#41;](add-ip-address-dialog-box-sql-server-management-studio.md).  
   
- **Remover**  
+ **Removerr**  
  Clique para remover a sub-rede que está selecionada atualmente na grade.  
   
  **DHCP**  
@@ -206,11 +206,11 @@ ms.locfileid: "62788331"
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
--   [Criar um ponto de extremidade de espelhamento para grupos de disponibilidade AlwaysOn do banco de dados &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Criar um ponto de extremidade de espelhamento &#40;de banco de dados para grupos de disponibilidade AlwaysOn SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Visão geral do &#40;grupos de disponibilidade AlwaysOn SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
- [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
+ [Pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

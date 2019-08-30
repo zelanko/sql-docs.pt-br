@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SMO [SQL Server], programming
 - SMO [SQL Server], tasks
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c2da3cb344573731c70839612381aeb07485850f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f23b7844bcff234594db87875e89a89f0f073be9
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030234"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148393"
 ---
 # <a name="programming-specific-tasks"></a>Tarefas específicas de programação
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -54,6 +54,6 @@ ms.locfileid: "68030234"
 |[Implementando a pesquisa de texto completo](../../../relational-databases/server-management-objects-smo/tasks/implementing-full-text-search.md)|Descreve como implementar catálogos de pesquisa de texto completo e índices no SMO.|  
 |[Implementando pontos de extremidade](../../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)|Descreve como criar pontos de extremidade para controlar as cargas de Monitoramento de Banco de Dados, de solicitações de protocolo SOAP e de Service Broker.|  
 |[Criando e atualizando estatísticas](../../../relational-databases/server-management-objects-smo/tasks/creating-and-updating-statistics.md)|Descreve como configurar e monitorar estatísticas em um banco de dados no SMO.|  
-|[Rastreando e reproduzindo eventos](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|Descreve como usar o **rastreamento** e **Replay** objetos no SMO para eventos de rastreamento e reprodução.|  
+|[Rastreando e reproduzindo eventos](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|Descreve como usar os objetos **trace** e **Replay** no Smo para rastrear e reproduzir eventos.|  
   
   

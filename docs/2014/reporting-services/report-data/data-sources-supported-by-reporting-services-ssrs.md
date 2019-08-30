@@ -20,12 +20,12 @@ ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 247dd2950365a1b75a3b911fe6dfda1a4dd044df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e569240f708d209fc965fa3c6e393859044f528
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107364"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155117"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Fontes de dados com suporte no Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera dados de relatório de fontes de dados por meio de uma camada de dados modular e extensível que usa extensões de processamento de dados. Para recuperar dados de relatório de uma fonte de dados, você deve selecionar uma extensão de processamento de dados que dá suporte ao tipo de fonte de dados, à versão do software em execução na fonte de dados e à plataforma da fonte de dados ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]de 32 bits ou 64 bits).  
@@ -34,11 +34,11 @@ ms.locfileid: "66107364"
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para MDX, DMX, [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerPivot e modelos de tabela  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]para modelos MDX, DMX [!INCLUDE[msCoName](../../includes/msconame-md.md)] , PowerPivot e tabular [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]data warehouse paralelos  
   
 -   Oracle  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66107364"
  Para obter mais informações sobre extensões de processamento de dados com suporte do Construtor de Relatórios, consulte [Data Connections, Data Sources, and Connection Strings in Report Builder](../data-connections-data-sources-and-connection-strings-in-report-builder.md) [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios] na [documentação do Construtor de Relatórios](https://go.microsoft.com/fwlink/?LinkId=154494) no msdn.microsoft.com.  
   
 ## <a name="platform-support-for-report-data-sources"></a>Suporte da plataforma a fontes de dados de relatório  
- As fontes de dados que você pode usar em uma implantação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] variam de acordo com a edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , com a versão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e com a plataforma. Para obter mais informações sobre recursos, consulte [recursos compatíveis com as edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Posteriormente neste tópico, uma tabela fornece informações sobre fontes de dados para as quais há suporte de acordo com a versão e a plataforma.  
+ As fontes de dados que você pode usar em uma implantação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] variam de acordo com a edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , com a versão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e com a plataforma. Para obter mais informações sobre os recursos [do, consulte recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Posteriormente neste tópico, uma tabela fornece informações sobre fontes de dados para as quais há suporte de acordo com a versão e a plataforma.  
   
  Considerações sobre plataforma em relação a fontes de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são feitas separadamente para o cliente de criação do relatório e o para o servidor de relatório.  
   
@@ -87,35 +87,35 @@ ms.locfileid: "66107364"
 ## <a name="supported-data-sources"></a>Fontes de dados com suporte  
  A seguinte tabela lista extensões de processamento e provedores de dados [!INCLUDE[msCoName](../../includes/msconame-md.md)] que você pode usar para recuperar dados referentes a conjuntos de dados e a modelos de relatório. Para obter mais informações sobre uma extensão ou provedor de dados, clique no link na segunda coluna. As colunas da tabela são descritas da seguinte forma:  
   
--   Fonte de dados de relatório: O tipo de dados que está sendo acessados; Por exemplo, banco de dados relacional, banco de dados multidimensional, arquivo simples ou XML. Esta coluna responde à pergunta: "Quais tipos de dados podem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usar para um relatório?"  
+-   Fonte de dados do relatório: O tipo de dados que está sendo acessado; por exemplo, banco de dados relacional, banco de dados multidimensional, arquivo simples ou XML. Esta coluna responde à pergunta: "Quais tipos de dados podem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ser usados para um relatório?"  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Tipo de fonte de dados: Um dos tipos de fonte de dados que você vê na lista suspensa quando você define uma fonte de dados [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. A lista é preenchida com DPEs instaladas e registradas, além de provedores de dados. Esta coluna responde à pergunta: "Tipo de fonte de quais dados devo selecionar na lista suspensa quando crio uma fonte de dados de relatório?"  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Tipo de fonte de dados: Um dos tipos de fonte de dados que você vê na lista suspensa quando define uma fonte de dados no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. A lista é preenchida com DPEs instaladas e registradas, além de provedores de dados. Esta coluna responde à pergunta: "Qual tipo de fonte de dados eu seleciono na lista suspensa quando crio uma fonte de dados de relatório?"  
   
--   Nome do provedor de dados/extensão de processamento de dados: O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] extensão de processamento de dados ou outro provedor de dados que corresponde ao [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tipo selecionado da fonte de dados. Esta coluna responde à pergunta: "Quando eu seleciono um tipo de fonte de dados, qual provedor de dados ou extensão de processamento de dados correspondente é usado?"  
+-   Nome da extensão de processamento de dados/Provedor de Dados: A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] extensão de processamento de dados ou outro provedor de dados que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] corresponde ao tipo de fonte de dados selecionado. Esta coluna responde à pergunta: "Quando seleciono um tipo de fonte de dados, qual extensão de processamento de dados ou provedor de dados correspondente é usado?"  
   
--   Versão do provedor de dados subjacente (opcional): Alguns tipos de fonte de dados oferecem suporte a mais de um provedor de dados. Essas versões poderiam ser diferentes do mesmo provedor ou implementações diferentes de terceiros em relação a um tipo de provedor de dados. O nome do provedor costuma ser exibido na cadeia de conexão após a configuração de uma fonte de dados. Esta coluna responde à pergunta: "Depois de selecionar o tipo de fonte de dados, qual provedor de dados devo selecionar na caixa de diálogo **Propriedades da Conexão**?"  
+-   Versão Provedor de Dados subjacente (opcional): Alguns tipos de fonte de dados dão suporte a mais de um provedor de dados. Essas versões poderiam ser diferentes do mesmo provedor ou implementações diferentes de terceiros em relação a um tipo de provedor de dados. O nome do provedor costuma ser exibido na cadeia de conexão após a configuração de uma fonte de dados. Esta coluna responde à pergunta: "Depois de selecionar o tipo de fonte de dados, qual provedor de dados devo selecionar na caixa de diálogo **Propriedades da Conexão**?"  
   
--   *\<Plataforma>* da fonte de dados: A plataforma de fonte de dados com suporte pelo provedor de dados ou extensão de processamento de dados para a fonte de dados de destino. Esta coluna responde à pergunta: "Pode esse provedor de dados ou extensão de processamento de dados recuperar dados de uma fonte de dados nesse tipo de plataforma?"  
+-   *\<Plataforma>* da fonte de dados: A plataforma de fonte de dados com suporte da extensão de processamento de dados ou provedor de dados para a fonte de dados de destino. Esta coluna responde à pergunta: "Esta extensão de processamento de dados ou provedor de dados pode recuperar dados de uma fonte de dados neste tipo de plataforma?"  
   
--   Versão da fonte de dados: A versão da fonte de dados de destino com suporte o DPE ou provedor de dados. Esta coluna responde à pergunta: "Pode esse provedor de dados ou extensão de processamento de dados recuperar dados dessa versão da fonte de dados?"  
+-   Versão da fonte de dados: A versão da fonte de dados de destino com suporte do DPE ou do provedor de dados. Esta coluna responde à pergunta: "Esta extensão de processamento de dados ou provedor de dados pode recuperar dados desta versão da fonte de dados?"  
   
--   *\<Plataforma>* do RS: As plataformas para o servidor de relatório e o cliente de criação de relatório em que você pode instalar uma DPE personalizada ou dados de provedor. As extensões de processamento de dados internas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] estão incluídas em todas as instalações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Uma extensão de processamento de dados personalizada ou um provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] deve ser compilado nativamente em relação a uma plataforma específica. Esta coluna responde à pergunta: "Pode esse provedor de dados ou extensão de processamento de dados ser instalado nesse tipo de plataforma?"  
+-   *\<Plataforma>* do RS: As plataformas para o servidor de relatório e o cliente de criação de relatórios, onde você pode instalar um DPE ou provedor de dados personalizado. As extensões de processamento de dados internas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] estão incluídas em todas as instalações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Uma extensão de processamento de dados personalizada ou um provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] deve ser compilado nativamente em relação a uma plataforma específica. Esta coluna responde à pergunta: "Esta extensão de processamento de dados ou o provedor de dados pode ser instalado nesse tipo de plataforma?"  
   
 ###  <a name="DataSourcesTable"></a> Tipos de fontes de dados  
   
-|Fonte de<br /><br /> dados de relatório|Tipo da fonte de dados do Reporting Services|Nome da extensão de processamento/provedor de dados|Versão do provedor de dados subjacente<br /><br /> (opcional)|Dados<br /><br /> `Source`<br /><br /> Plataforma x86|Dados<br /><br /> `Source`<br /><br /> Plataforma x64|Versão da fonte de dados|RS<br /><br /> Plataforma x86|RS<br /><br /> Plataforma x64|  
+|Fonte de<br /><br /> dados de relatório|Tipo da fonte de dados do Reporting Services|Nome da extensão de processamento/provedor de dados|Versão do provedor de dados subjacente<br /><br /> (opcional)|Dados<br /><br /> Origem<br /><br /> Plataforma x86|Dados<br /><br /> Origem<br /><br /> Plataforma x64|Versão da fonte de dados|RS<br /><br /> Plataforma x86|RS<br /><br /> Plataforma x64|  
 |-------------------------------|-----------------------------------------|------------------------------------------------------|-------------------------------------------------------|--------------------------------------|--------------------------------------|----------------------------|-------------------------|-------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados relacional|[Microsoft SQL Server](#MicrosoftSQLServer)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende System.Data.SqlClient|S|S|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e posterior.|S|S|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados relacional|[OLEDB](#OLEDBSQL)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende System.Data.OledbClient|S|S|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e posterior.|S|S|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados relacional|[ODBC](#ODBC)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende System.Data.OdbcClient|S|S|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e posterior.|S|S|  
-|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[Windows Azure SQL Database](#Azure)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende System.Data.SqlClient|N/D|N/D|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|S|S|  
+|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[Banco de Dados SQL do Azure](#Azure)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende System.Data.SqlClient|N/D|N/D|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|S|S|  
 |[!INCLUDE[ssDW](../../includes/ssdw-md.md)] dispositivo|[Microsoft Parallel Data Warehouse](#PWD)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|N/D|N/D|N/D|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|S|S|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados multidimensional|[Microsoft SQL Server Analysis Services](#AnalysisServices)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Usa ADOMD.NET|S|S|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e posterior<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e posterior|S|S|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados multidimensional|[Microsoft SQL Server Analysis Services](#AnalysisServices)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Usa ADOMD.NET|S|S|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e posterior<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]e posterior|S|S|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados multidimensional|[OLEDB](#OLEDBAS9)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende System.Data.OledbClient<br /><br /> Versão 10.0|S|S|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|S|S|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados multidimensional|[OLEDB](#OLEDBAS9)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende System.Data.OledbClient<br /><br /> Versão 9,0|S|S|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|S|S|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados multidimensional|OLEDB|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Estende System.Data.OledbClient<br /><br /> Versão 8.0|S|N|N/D|S|N|  
 |Listas do SharePoint|[Lista do Microsoft SharePoint](#SharePointList)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Obtém dados do Lists.asmx ou de interfaces API do modelo de objeto do SharePoint.<br /><br /> Consulte a [Observação](#SharePointList).|N|S|Produtos do SharePoint 2013<br /><br /> Produtos do SharePoint 2010|S|S|  
-|Listas do SharePoint|[Lista do Microsoft SharePoint](#SharePointList)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Obtém dados do Lists.asmx ou de interfaces API do modelo de objeto do SharePoint.<br /><br /> Consulte a [Observação](#SharePointList).|S|S|[!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 e [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007|S|S|  
+|Listas do SharePoint|[Lista do Microsoft SharePoint](#SharePointList)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Obtém dados do Lists.asmx ou de interfaces API do modelo de objeto do SharePoint.<br /><br /> Consulte a [Observação](#SharePointList).|S|S|[!INCLUDE[winSPServ](../../includes/winspserv-md.md)]3,0 e [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007|S|S|  
 |XML|[XML](#XML)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Fontes de dados XML não têm dependências de plataforma.|N/D|N/D|[!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)] ou documentos|S|S|  
 |Modelo do Servidor de Relatório|Modelo de Relatório|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para um arquivo SMDL publicado|Fontes de dados para um uso modelo das extensões de processamento de dados internas.<br /><br /> Modelos baseados em Oracle exigem componentes do cliente da Oracle.<br /><br /> Modelos baseados em Teradata exigem o Provedor de Dados .NET para Teradata da Teradata.<br /><br /> Consulte a documentação da Teradata para obter suporte à plataforma.|N/D|N/D|Os modelos podem ser criados no:[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e posterior.<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Oracle 9.2.0.3 ou versão posterior<br /><br /> Teradata V14, v13, v12 e v6.2|S|S|  
 |Banco de dados multidimensional SAP|[Sap BI NetWeaver](#SapBINetWeaver)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Consulte a documentação da SAP para obter suporte à plataforma.|N/D|N/D|SAP BI NetWeaver 3.5|S|N/D|  
@@ -126,7 +126,7 @@ ms.locfileid: "66107364"
 |Fonte de dados OLE DB genérica|[OLEDB](#OLEDBStandard)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Qualquer fonte de dados que ofereça suporte a OLE DB.<br /><br /> Consulte a documentação da fonte de dados para obter suporte à plataforma.|S|N/D|Qualquer fonte de dados que ofereça suporte a OLE DB. Consulte a [Observação](#OLEDBStandard).|S|N/D|  
 |Fonte de dados ODBC genérica|[ODBC](#ODBCGeneric)|Extensão de processamento de dados interna do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Qualquer fonte de dados que ofereça suporte a ODBC.<br /><br /> Consulte a documentação da fonte de dados para obter suporte à plataforma.|S|N/D|Qualquer fonte de dados que ofereça suporte a ODBC. Consulte a [Observação](#ODBCGeneric).|S|S|  
   
- Para obter informações sobre como usar uma fonte de dados tabulares, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+ Para obter informações sobre como usar uma fonte de dados tabular, consulte [conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
  Para obter informações sobre como usar fontes de dados externas, consulte [Adicionar dados de fontes de dados externas &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md).  
   
@@ -137,7 +137,7 @@ ms.locfileid: "66107364"
  [Retornar à tabela de fontes de dados](#DataSourcesTable)  
   
 ## <a name="reporting-services-data-processing-extensions"></a>Extensões de processamento de dados do Reporting Services  
- As seguintes extensões de processamento de dados são instaladas automaticamente com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]. Para obter mais informações e para verificar a instalação, consulte [arquivo de configuração RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md) e [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
+ As seguintes extensões de processamento de dados são instaladas automaticamente com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]. Para obter mais informações e verificar a instalação, consulte [arquivo de configuração RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md) e [arquivo de configuração RSReportServer](../report-server/rsreportserver-config-configuration-file.md).  
   
 > [!NOTE]  
 >  A extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não tem suporte no momento.  
@@ -155,12 +155,12 @@ ms.locfileid: "66107364"
   
  [Retornar à tabela de fontes de dados](#DataSourcesTable)  
   
-###  <a name="Azure"></a> Extensão de processamento de banco de dados SQL do Azure do Windows  
+###  <a name="Azure"></a>Extensão de processamento do banco de dados SQL do Azure  
  O tipo de fonte de dados **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** encapsula e estende o Provedor de Dados [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  No [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)], o designer de consultas gráficas associado a essa extensão de dados é a [Interface do usuário do designer de consultas relacionais](../relational-query-designer-user-interface.md), e não o [Designer do Visual Database Tool](../../ssms/visual-db-tools/visual-database-tool-designers.md) que você usa com o tipo de fonte de dados **Microsoft SQL Server**.  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] diferencia automaticamente entre **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** e **Microsoft SQL Server** tipos de fonte de dados e abre o designer de consultas gráficas associado com o tipo de fonte de dados.  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]diferencia automaticamente entre **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** e **Microsoft SQL Server** tipos de fonte de dados e abre o designer de consultas gráficas associado ao tipo de fonte de dados.  
   
  Caso você use o designer de consulta em modo gráfico, a consulta é analisada e, possivelmente, reescrita. Um designer de consulta com base em texto também está disponível para gravar consultas. Use o designer de consultas com base em texto quando quiser controlar a sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] exata usada em uma consulta. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas baseado em texto](../text-based-query-designer-user-interface.md).  
   
@@ -171,7 +171,7 @@ ms.locfileid: "66107364"
 ###  <a name="PWD"></a> Extensão de processamento do Microsoft SQL Server Parallel Data Warehouse  
  No [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)], o designer de consultas gráficas associado a essa extensão de dados é a [Interface do usuário do designer de consultas relacionais](../relational-query-designer-user-interface.md), e não o [Designer do Visual Database Tool](../../ssms/visual-db-tools/visual-database-tool-designers.md) que você usa com o tipo de fonte de dados **Microsoft SQL Server**.  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] diferencia automaticamente entre **SQL Server Parallel Data Warehouse** e **Microsoft SQL Server** tipos de fonte de dados e abre o designer de consultas gráficas associado com o tipo de fonte de dados.  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]o diferencia automaticamente entre **SQL Server Data Warehouse paralelas** e **Microsoft SQL Server** tipos de fonte de dados e abre o designer de consultas gráficas associado ao tipo de fonte de dados.  
   
  Caso você use o designer de consulta em modo gráfico, a consulta é analisada e, possivelmente, reescrita. Um designer de consulta com base em texto também está disponível para gravar consultas. Use o designer de consultas com base em texto quando quiser controlar a sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] exata usada em uma consulta. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas baseado em texto](../text-based-query-designer-user-interface.md).  
   
@@ -202,7 +202,7 @@ ms.locfileid: "66107364"
   
  [Retornar à tabela de fontes de dados](#DataSourcesTable)  
   
-####  <a name="OLEDBAS9"></a> OLE DB para Analysis Services 9.0  
+####  <a name="OLEDBAS9"></a>OLE DB para Analysis Services 9,0  
  Para se conectar ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], selecione Provedor [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 9.0, selecione Provedor the data source type **OLE DB**e o provedor de dados subjacente pelo nome. Essa combinação entre a extensão de processamento e o provedor de dados é compilada de maneira nativa e se destina à execução nas plataformas x86 e x64.  
   
 > [!NOTE]  
@@ -218,7 +218,7 @@ ms.locfileid: "66107364"
  [Retornar à tabela de fontes de dados](#DataSourcesTable)  
   
 ####  <a name="OracleOLEDB"></a> OLE DB para Oracle  
- A extensão de processamento de dados OLE DB para Oracle não oferece suporte para os seguintes tipos de dados Oracle: BLOB, CLOB, NCLOB, BFILE E UROWID.  
+ A extensão de processamento de dados OLE DB para Oracle não oferece suporte aos seguintes tipos de dados Oracle: BLOB, CLOB, NCLOB, BARQUIVO, UROWID.  
   
  Há suporte para parâmetros sem-nome que dependam da posição. Essa extensão não oferece suporte a parâmetros nomeados. Para parâmetros nomeados, use a extensão de processamento de dados [Oracle](#OracleClient) .  
   
@@ -251,7 +251,7 @@ ms.locfileid: "66107364"
  [Retornar à tabela de fontes de dados](#DataSourcesTable)  
   
 ###  <a name="OracleClient"></a> Extensão de processamento de dados Oracle  
- Ao selecionar o tipo de fonte de dados **Oracle**, você está selecionando uma extensão de processamento de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que estende o Provedor de Dados [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para Oracle. O **Oracle** fonte de dados encapsula e estende o <xref:System.Data.OracleClient> classes necessárias para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para recuperar dados de relatório de um banco de dados Oracle, o administrador deve instalar as ferramentas do cliente Oracle. Esse provedor de dados usa a OCI (Oracle Call Interface) do Oracle 8i versão 3 conforme fornecido pelo software Oracle Client. A versão do aplicativo do cliente deve ser 8.1.7 ou posterior. Essas ferramentas devem ser instaladas no cliente de criação do relatório para visualizar relatórios e, no servidor de relatório, exibir relatórios publicados.  
+ Ao selecionar o tipo de fonte de dados **Oracle**, você está selecionando uma extensão de processamento de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que estende o Provedor de Dados [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para Oracle. A fonte de dados **Oracle** encapsula e estende as <xref:System.Data.OracleClient> classes necessárias pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para recuperar dados de relatório de um banco de dados Oracle, o administrador deve instalar as ferramentas do cliente Oracle. Esse provedor de dados usa a OCI (Oracle Call Interface) do Oracle 8i versão 3 conforme fornecido pelo software Oracle Client. A versão do aplicativo do cliente deve ser 8.1.7 ou posterior. Essas ferramentas devem ser instaladas no cliente de criação do relatório para visualizar relatórios e, no servidor de relatório, exibir relatórios publicados.  
   
  Essa extensão dá suporte a parâmetros nomeados. Para o Oracle versão 9 ou posterior, há suporte para parâmetros de vários valores. Para parâmetros sem nome dependentes de posição, use a extensão de processamento de dados OLE DB com o Provedor [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB para Oracle. Para obter informações sobre como configurar uma fonte de dados Oracle, consulte [Como usar o Reporting Services para configurar e acessar uma fonte de dados Oracle](https://support.microsoft.com/kb/834305). Para obter mais informações sobre a configuração de permissões adicionais, consulte [How to add permissions for the NETWORK SERVICE security principal](https://support.microsoft.com/kb/870668) [Como adicionar permissões à entidade de segurança SERVIÇO DE REDE] na Base de Dados de Conhecimento [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -289,7 +289,7 @@ ms.locfileid: "66107364"
   
  Para obter mais informações, consulte [Tipo de conexão Teradata &#40;SSRS&#41;](teradata-connection-type-ssrs.md).  
   
- Também é possível criar modelos com base em um banco de dados Teradata. Para obter mais informações, consulte o seguinte white paper no site da Teradata: [Microsoft SQL Server 2012 Reporting Services e Teradata Corporation](http://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP).  
+ Também é possível criar modelos com base em um banco de dados Teradata. Para obter mais informações, consulte o seguinte white paper no site do Teradata: [Microsoft SQL Server 2012 Reporting Services e Teradata Corporation](http://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP).  
   
  [Retornar à tabela de fontes de dados](#DataSourcesTable)  
   
@@ -300,7 +300,7 @@ ms.locfileid: "66107364"
   
 -   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] e [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]  
   
--   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 e [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007  
+-   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]3,0 e [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007  
   
  Há três implementações do provedor de dados de Lista do SharePoint.  
   
@@ -317,7 +317,7 @@ ms.locfileid: "66107364"
   
  [Retornar à tabela de fontes de dados](#DataSourcesTable)  
   
-###  <a name="SapBINetWeaver"></a> Extensão de processamento de dados do SAP NetWeaver Business Intelligence  
+###  <a name="SapBINetWeaver"></a>Extensão de processamento de dados do SAP NetWeaver Business Intelligence  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui uma extensão de processamento de dados que permite a você usar dados de uma fonte do [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] em um relatório.  
   
  Para obter mais informações, consulte [Tipo de conexão SAP NetWeaver BI &#40;SSRS&#41;](sap-netweaver-bi-connection-type-ssrs.md). Para obter mais informações sobre o designer de consultas associado, consulte [Interface do usuário do designer de consultas do SAP NetWeaver BI](sap-netweaver-bi-query-designer-user-interface.md).  
@@ -336,7 +336,7 @@ ms.locfileid: "66107364"
  [Retornar à tabela de fontes de dados](#DataSourcesTable)  
   
 ## <a name="see-also"></a>Consulte também  
- [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-datasets-ssrs.md)  
+ [Conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Adicionar dados a um relatório &#40;Construtor de relatórios e SSRS&#41;](report-datasets-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Anexar um domínio ou domínio composto para dados de referência | Microsoft Docs
+title: Anexar um domínio ou domínio de composição aos dados de referência | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 153f4e25372a7cbb5e58f7fdc4d5a9134b60ed61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74554e305dbbeb736eba3d8379c7f6569e56d333
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65481110"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154508"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Anexar domínio ou domínio de composição a dados de referência
-  Este tópico descreve como anexar domínios/domínios compostos em uma base de dados de conhecimento de qualidade de dados para um serviço de dados de referência, no Windows Azure Marketplace, a fim de compilar o conhecimento com base nos dados de referência de alta qualidade. Cada serviço de dados de referência contém um esquema (colunas de dados). Após anexar um domínio ou um domínio composto a um serviço de dados de referência, mapeie o domínio anexado ou os domínios individuais no domínio composto anexado para as colunas apropriadas em um esquema de serviço de dados de referência. Ao anexar um domínio composto a um serviço de dados de referência, você pode anexar apenas um domínio a um serviço de dados de referência e, em seguida, mapear os domínios individuais no domínio composto para as colunas apropriadas no esquema de serviço de dados de referência.  
+  Este tópico descreve como anexar domínios/domínios compostos em uma base de conhecimento de qualidade de dados a um serviço de dados de referência no Azure Marketplace para criar conhecimento em relação aos dados de referência de alta qualidade. Cada serviço de dados de referência contém um esquema (colunas de dados). Após anexar um domínio ou um domínio composto a um serviço de dados de referência, mapeie o domínio anexado ou os domínios individuais no domínio composto anexado para as colunas apropriadas em um esquema de serviço de dados de referência. Ao anexar um domínio composto a um serviço de dados de referência, você pode anexar apenas um domínio a um serviço de dados de referência e, em seguida, mapear os domínios individuais no domínio composto para as colunas apropriadas no esquema de serviço de dados de referência.  
   
 > [!WARNING]  
 >  O domínio composto anexado a um serviço de dados de referência está disponível na lista suspensa dos domínios ao mapear domínios para colunas no esquema de serviço de dados de referência. Não mapeie o domínio composto para uma coluna no esquema do serviço de dados de referência; mapeie apenas domínios individuais em um domínio composto para as colunas apropriadas no esquema de serviço de dados de referência. Caso contrário, isso resultará em um erro.  
@@ -67,7 +67,7 @@ ms.locfileid: "65481110"
          ![Caixa de diálogo Catálogo de Provedores de Dados de Referência Online](../../2014/data-quality-services/media/dqs-onlinereferencedataproviderscatalog.gif "Caixa de diálogo Catálogo de Provedores de Dados de Referência Online")  
   
         > [!NOTE]  
-        >  -   Na caixa de diálogo **Catálogo de Provedores de Dados de Referência Online** , o nó **DataMarket Data Quality Services** exibe todos os provedores de serviço de dados de referência que você assinou no Windows Azure Marketplace. Se você tiver configurado provedores diretos de serviço de dados de referência online terceirizados no DQS, eles aparecerão em outro nó chamado **Provedores Online Diretos Terceirizados** (não disponível agora, pois nenhum provedor direto de serviço de dados de referência online terceirizado está configurado no DQS).  
+        >  -   Na caixa de diálogo **Catálogo de provedores de dados de referência online** , o nó **Data Quality Services** do DataMarket exibe todos os provedores de serviço de dados de referência que você assinou no Azure Marketplace. Se você tiver configurado provedores diretos de serviço de dados de referência online terceirizados no DQS, eles aparecerão em outro nó chamado **Provedores Online Diretos Terceirizados** (não disponível agora, pois nenhum provedor direto de serviço de dados de referência online terceirizado está configurado no DQS).  
   
 9. Você retornará à guia **Dados de Referência** . Na área **Configurações de Provedor**, altere os valores das seguintes caixas, se necessário:  
   
@@ -79,7 +79,7 @@ ms.locfileid: "65481110"
   
 10. Clique em **Concluir** para publicar a base de dados de conhecimento. Uma mensagem de confirmação aparece depois que a base de dados de conhecimento é publicada com êxito.  
   
- Você pode usar essa base de dados de conhecimento agora na atividade de limpeza de um projeto de qualidade de dados para padronizar e limpar os endereços americanos na fonte de dados com base no conhecimento fornecido por Melissa Data através do Windows Azure Marketplace.  
+ Agora você pode usar essa base de dados de conhecimento para a atividade de limpeza em um projeto de qualidade de dados para padronizar e limpar os endereços dos EUA em seus dados de origem com base no conhecimento fornecido por Melissa data por meio do Azure Marketplace.  
   
 ##  <a name="FollowUp"></a> Acompanhamento: Após mapear um domínio para os dados de referência  
  Crie um projeto de qualidade de dados e execute a atividade de limpeza na fonte de dados que contém endereços americanos, comparando-a com a base de dados de conhecimento criada neste tópico. Consulte [Limpar dados usando o conhecimento &#40;externo&#41; dos dados de referência](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  

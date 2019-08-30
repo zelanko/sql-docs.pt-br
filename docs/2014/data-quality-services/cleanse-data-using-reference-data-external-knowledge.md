@@ -10,12 +10,12 @@ ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7d7ab8fee8dfb9aabd32922d297f61ae493a5bd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d96dd4d1daadd829c89e142738008b93f4ec9b3b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480911"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154499"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Limpar dados usando o conhecimento (externo) dos dados de referência
   Este tópico descreve como limpar dados usando o conhecimento dos provedores de dados de referência. Embora todas as etapas de execução de uma atividade de limpeza permaneçam inalteradas para a limpeza dos dados usando o conhecimento dos provedores de dados de referência, conforme explicado em [Limpar dados usando o conhecimento &#40;interno&#41; do DQS](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md), este tópico fornece informações específicas à limpeza de dados usando o serviço de dados de referência no DQS ([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)]).  
@@ -33,7 +33,7 @@ ms.locfileid: "65480911"
 -   Com base nos valores de **Limite de Correção Automática** e **Confiança Mínima** especificados durante o mapeamento dos domínios com serviço de dados de referência, os valores do domínio serão corrigidos automaticamente ou sugeridos com base no nível de confiança.  
   
     > [!NOTE]  
-    >  Os valores de limite especificados durante o mapeamento de um domínio para um serviço de dados de referência são aplicados durante a limpeza dos dados através do conhecimento no serviço de dados de referência, e não os especificados na guia **Configurações Gerais** da seção **Configuração** . Para obter informações sobre como especificar valores de limite para limpeza de dados de referência, consulte a etapa 9 na [anexar um domínio ou domínio composto para dados de referência](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
+    >  Os valores de limite especificados durante o mapeamento de um domínio para um serviço de dados de referência são aplicados durante a limpeza dos dados através do conhecimento no serviço de dados de referência, e não os especificados na guia **Configurações Gerais** da seção **Configuração** . Para obter informações sobre como especificar valores de limite para a limpeza de dados de referência, consulte a etapa 9 em [anexar um domínio ou domínio de composição para dados de referência](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
 -   Os valores de domínio são categorizados da seguinte forma: **Sugerido**, **Novo**, **Inválido**, **Corrigido** ou **Correto**.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "65480911"
 ## <a name="before-you-begin"></a>Antes de começar  
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  
- Os domínios necessários de uma base de dados de conhecimento do DQS precisam ser mapeados para o serviço de dados de referência apropriado. Além disso, a base de dados de conhecimento deve conter conhecimento sobre o tipo de dados que você deseja limpar. Por exemplo, se você quiser limpar os dados de origem que contêm endereços americanos, mapeie os domínios para um provedor de serviço de dados de referência que fornece dados de alta qualidade sobre endereços americanos. Para obter mais informações, consulte [anexar um domínio ou domínio composto para dados de referência](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
+ Os domínios necessários de uma base de dados de conhecimento do DQS precisam ser mapeados para o serviço de dados de referência apropriado. Além disso, a base de dados de conhecimento deve conter conhecimento sobre o tipo de dados que você deseja limpar. Por exemplo, se você quiser limpar os dados de origem que contêm endereços americanos, mapeie os domínios para um provedor de serviço de dados de referência que fornece dados de alta qualidade sobre endereços americanos. Para obter mais informações, consulte [anexar um domínio ou domínio de composição aos dados de referência](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -50,7 +50,7 @@ ms.locfileid: "65480911"
  Você deve ter a função dqs_kb_editor ou dqs_kb_operator no banco de dados DQS_MAIN para executar a limpeza de dados.  
   
 ##  <a name="Cleanse"></a> Limpar os dados usando o conhecimento dos dados de referência  
- Continuaremos com o mesmo exemplo de uso dos domínios que Mapeamos no tópico anterior, [anexar um domínio ou domínio composto para dados de referência](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md), com o serviço Melissa Data no Windows Azure Marketplace. Agora, usaremos os mesmos domínios para limpar alguns endereços de exemplo americanos. As etapas para limpeza dos dados são as mesmas, conforme descrito em [Limpar dados usando o conhecimento &#40;interno&#41; do DQS](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md). No entanto, chamaremos sua atenção sempre que necessário durante o processo.  
+ Continuaremos com o mesmo exemplo de uso dos domínios que mapeamos no tópico anterior, anexamos [um domínio ou um domínio de composição aos dados de referência](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md), com o serviço de dados Melissa no Azure Marketplace. Agora, usaremos os mesmos domínios para limpar alguns endereços de exemplo americanos. As etapas para limpeza dos dados são as mesmas, conforme descrito em [Limpar dados usando o conhecimento &#40;interno&#41; do DQS](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md). No entanto, chamaremos sua atenção sempre que necessário durante o processo.  
   
 1.  Crie um projeto de qualidade de dados e selecione a atividade **Limpeza** . Consulte [Create a Data Quality Project](../../2014/data-quality-services/create-a-data-quality-project.md).  
   
@@ -71,13 +71,13 @@ ms.locfileid: "65480911"
   
      **Valor original:**  
   
-    |Linha de Endereço|Cidade|Estado|CEP|  
+    |Linha de Endereço|Cidade|State|CEP|  
     |------------------|----------|-----------|---------|  
     |1 msft way|Redmond||98052|  
   
      **Valores sugeridos:**  
   
-    |Linha de Endereço|Cidade|Estado|CEP|  
+    |Linha de Endereço|Cidade|State|CEP|  
     |------------------|----------|-----------|---------|  
     |1 Microsoft Way|Redmond|WA|98052|  
     |PO Box 1|Redmond|WA|98073|  

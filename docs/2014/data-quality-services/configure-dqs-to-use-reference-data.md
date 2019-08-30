@@ -14,15 +14,15 @@ ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b8ce22855cfbc3239f4ab2e8695400d92386b858
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cd3599ff68fadf6a55af1c57379e9cdd8cc4b5d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480930"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154490"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Configurar DQS para usar dados de referência
-  Este tópico descreve como configurar o [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) para usar dados de referência para limpar seus dados. Você pode usar dados de referência do Windows Azure Marketplace ou de provedores de dados de referência terceirizados online diretos.  
+  Este tópico descreve como configurar o [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) para usar dados de referência para limpar seus dados. Você pode usar dados de referência do Azure Marketplace ou de provedores de dados de referência terceirizados online diretos.  
   
 ## <a name="before-you-begin"></a>Antes de começar  
   
@@ -77,6 +77,6 @@ ms.locfileid: "65480930"
  Agora você está pronto para usar os serviços de dados de referência do provedor de serviço de dados de referência terceirizado online direto recém-configurado no DQS.  
   
 ##  <a name="FollowUp"></a> Acompanhamento: após configurar o DQS para usar dados de referência  
- Agora você deve mapear os domínios da base de conhecimento necessários para os dados de referência disponíveis nos provedores de dados que acabou de configurar. Para fazer isso, consulte [anexar um domínio ou domínio composto para dados de referência](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
+ Agora você deve mapear os domínios da base de conhecimento necessários para os dados de referência disponíveis nos provedores de dados que acabou de configurar. Para fazer isso, consulte [anexar um domínio ou domínio de composição aos dados de referência](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
   

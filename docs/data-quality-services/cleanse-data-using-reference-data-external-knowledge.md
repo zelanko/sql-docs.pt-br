@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5e2a949511eea455c20880e053b64659b8f9c15f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 76bb6ec47b0cfce0fb8e5f5e98f9e208f3b678b3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992353"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152728"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Limpar dados usando o conhecimento (externo) dos dados de referência
 
@@ -56,7 +56,7 @@ ms.locfileid: "67992353"
  Você deve ter a função dqs_kb_editor ou dqs_kb_operator no banco de dados DQS_MAIN para executar a limpeza de dados.  
   
 ##  <a name="Cleanse"></a> Limpar os dados usando o conhecimento dos dados de referência  
- Continuaremos com o mesmo exemplo de uso dos domínios que mapeamos no tópico anterior, [Anexar um domínio ou um domínio de composição aos dados de referência](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md), com o Serviço de dados Melissa no Microsoft Azure Marketplace. Agora, usaremos os mesmos domínios para limpar alguns endereços de exemplo americanos. As etapas para limpeza dos dados são as mesmas, conforme descrito em [Limpar dados usando o conhecimento &#40;interno&#41; do DQS](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md). No entanto, chamaremos sua atenção sempre que necessário durante o processo.  
+ Continuaremos com o mesmo exemplo de uso dos domínios que mapeamos no tópico anterior, anexamos [domínio ou domínio composto a dados de referência](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md), com o serviço de dados Melissa no Azure Marketplace. Agora, usaremos os mesmos domínios para limpar alguns endereços de exemplo americanos. As etapas para limpeza dos dados são as mesmas, conforme descrito em [Limpar dados usando o conhecimento &#40;interno&#41; do DQS](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md). No entanto, chamaremos sua atenção sempre que necessário durante o processo.  
   
 1.  Crie um projeto de qualidade de dados e selecione a atividade **Limpeza** . Consulte [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md).  
   
@@ -77,13 +77,13 @@ ms.locfileid: "67992353"
   
      **Valor original:**  
   
-    |Linha de Endereço|Cidade|Estado|CEP|  
+    |Linha de Endereço|Cidade|State|CEP|  
     |------------------|----------|-----------|---------|  
     |1 msft way|Redmond||98052|  
   
      **Valores sugeridos:**  
   
-    |Linha de Endereço|Cidade|Estado|CEP|  
+    |Linha de Endereço|Cidade|State|CEP|  
     |------------------|----------|-----------|---------|  
     |1 Microsoft Way|Redmond|WA|98052|  
     |PO Box 1|Redmond|WA|98073|  

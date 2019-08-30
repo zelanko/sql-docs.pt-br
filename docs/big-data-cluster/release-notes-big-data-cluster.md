@@ -5,27 +5,39 @@ description: Este artigo descreve as atualizações mais recentes e problemas co
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 66a317fb68dff2dc4914b80f2e70655e1bba2773
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 63caee60bc96c5ff8579471ae0a98322e4fc99b7
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653432"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160689"
 ---
-# <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notas sobre a versão para clusters de Big Data no SQL Server
+# <a name="release-notes-for-sql-server-big-data-clusters"></a>Notas de versão para SQL Server clusters de Big data
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Este artigo lista as atualizações e os problemas conhecidos para as versões mais recentes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]do.
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+## <a id="rc"></a>Release Candidate (agosto)
 
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
+As seções a seguir descrevem os novos recursos e problemas conhecidos para clusters de Big Data no SQL Server Release Candidate 2019.
+
+### <a name="whats-new"></a>O Que Há de Novo
+
+|Novo recurso ou atualização | Detalhes |
+|:---|:---|
+|SQL Server Always On grupo de disponibilidade |Ao implantar um SQL Server Cluster de Big data, você pode configurar a implantação para criar um grupo de disponibilidade para fornecer:<br/><br/>-Alta disponibilidade <br/><br/>-Leitura-escalar horizontalmente <br/><br/>– Inserção de dados de expansão no pool de dados<br/><br>Consulte [implantar com alta disponibilidade](../big-data-cluster/deployment-high-availability.md). |
+|`azdata` |Instalação simplificada para a ferramenta com o [Gerenciador de instalação](./deploy-install-azdata-linux-package.md)<br/><br/>[`azdata notebook`linha](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status`linha](./reference-azdata-bdc-status.md) |
+|Azure Data Studio|[Baixe a versão Release Candidate do Azure Data Studio](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc).<br/><br/>Adicionado os notebooks de solução de problemas por meio do SQL Server guia Jupyter 2019 book.<br/><br/>Experiência de logon do controlador adicionada.<br/><br/>Painel do controlador adicionado para exibir pontos de extremidade de serviço, exibir o status de integridade do cluster e acessar os notebooks de solução de problemas.<br/><br/>Desempenho de edição/saída de célula de notebook aprimorado.|
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Problemas conhecidos
+
+SQL Server o número de Build de atualização candidato da versão de clusters de Big data do 2019 é `15.0.1900.47`.
 
 ## <a id="ctp32"></a> CTP 3.2 (julho)
 
@@ -48,13 +60,13 @@ As seções a seguir descrevem os problemas conhecidos e as limitações dessa v
 
 #### <a name="polybase"></a>PolyBase
 
-- O push-down da cláusula TOP quando a contagem é superior a 1000 não é compatível com esta versão. Todas as linhas serão lidas da fonte de dados remota nesses casos.
+- O push-down da cláusula TOP quando a contagem é superior a 1000 não é compatível com esta versão. Todas as linhas serão lidas da fonte de dados remota nesses casos. (Corrigido na versão Release Candidate)
 
 - O push-down de junções colocalizadas para fontes de dados externas não é compatível com esta versão. Por exemplo, o push-down de duas tabelas de pool de dados do tipo de distribuição ROUND_ROBIN fará com que os dados sejam movidos para a instância mestre do SQL ou a instância do pool de computação a fim de realizar a operação de junção.
 
 #### <a name="compute-pool"></a>Pool de computação
 
-- A implantação de cluster de Big Data só dá suporte ao pool de computação com uma instância.
+- A implantação de cluster de Big Data só dá suporte ao pool de computação com uma instância. (Corrigido na versão Release Candidate)
 
 #### <a name="storage-pool"></a>Pool de armazenamento
 

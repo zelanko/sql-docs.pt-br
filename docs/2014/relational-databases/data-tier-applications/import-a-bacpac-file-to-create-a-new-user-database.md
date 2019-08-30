@@ -26,12 +26,12 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12e5d699615018c2d9e20a8fd49953931850a106
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 140f3da91af4179302a17604eb6c85b533dcfc2b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918176"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154644"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar um arquivo BACPAC para criar um novo banco de dados de usuário
   Importar um arquivo DAC (aplicativo da camada de dados) – um arquivo .bacpac – para criar uma cópia do banco de dados original, com os dados, em uma nova instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. As operações de importação-exportação podem ser combinadas para migrar um DAC ou banco de dados entre instâncias ou para criar um backup lógico, como criar uma cópia no local de um banco de dados implantado no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -55,7 +55,7 @@ ms.locfileid: "62918176"
 ## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Um DAC pode ser importado para o [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que executa o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior. Se você exportar um DAC de uma versão superior, o DAC poderá conter objetos sem suporte do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Você não pode implantar esses DACs nas instâncias do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Recomendamos que você não importe um arquivo de exportação do DAC de fontes desconhecidas ou não confiáveis. Esses arquivos podem conter código mal-intencionado que possivelmente executarão códigos Transact-SQL inesperados ou provocarão erros ao modificar o esquema. Antes de usar um arquivo de exportação de uma fonte desconhecida ou não confiável, desempacote o DAC e examine o código, como procedimentos armazenados e outro código definido pelo usuário. Para obter mais informações sobre como executar essas verificações, consulte [Validar um pacote de DAC](validate-a-dac-package.md).  
   
 ## <a name="security"></a>Segurança  
@@ -101,9 +101,9 @@ ms.locfileid: "62918176"
   
 -   **Importar do disco local** – clique em **Procurar...** para navegar no computador local ou especifique o caminho no espaço fornecido. O nome do caminho deve incluir um nome de arquivo e a extensão .bacpac.  
   
--   **Importar do Windows Azure** -importa um arquivo BACPAC de um contêiner do Windows Azure. Você deve se conectar a um contêiner do Windows Azure para validar esta opção. Observe que esta opção também exige que você especifique um diretório local para o arquivo temporário. O arquivo temporário será criado no local especificado e permanecerá lá após a conclusão da operação.  
+-   **Importar do Azure** – importa um arquivo BACPAC de um contêiner do Azure. Você deve se conectar a um contêiner do Azure para validar essa opção. Observe que esta opção também exige que você especifique um diretório local para o arquivo temporário. O arquivo temporário será criado no local especificado e permanecerá lá após a conclusão da operação.  
   
-     Ao procurar o Windows Azure, você poderá alternar entre contêineres dentro de uma única conta. Você deve especificar um único arquivo .bacpac para continuar a operação de importação. Observe que você pode classificar colunas por **Nome**, **Tamanho**ou **Data da Modificação**.  
+     Ao procurar o Azure, você poderá mudar entre contêineres em uma única conta. Você deve especificar um único arquivo .bacpac para continuar a operação de importação. Observe que você pode classificar colunas por **Nome**, **Tamanho**ou **Data da Modificação**.  
   
      Para continuar, especifique o arquivo .bacpac a ser importado e clique em **Abrir**.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "62918176"
   
 -   **Edição do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  -especificar [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Para obter mais informações sobre edições do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte este site do [Banco de dados SQL](http://www.windowsazure.com/home/tour/database/) .  
   
--   **Tamanho máximo do banco de dados (GB)** -Use o menu suspenso para especificar o tamanho máximo do banco de dados.  
+-   **Tamanho máximo do banco de dados (GB)** – use o menu suspenso para especificar o tamanho máximo do seu banco de dados.  
   
  Para continuar, clique em **Avançar**.  
   

@@ -14,18 +14,18 @@ f1_keywords:
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: eb4fec833e8782b3d7d017bbae7b5fc9c2995bda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c7ac06c040e7ea852d9925a70ff2c38016ca383a
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992343"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152623"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Configurar DQS para usar dados de referência
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Este tópico descreve como configurar o [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) para usar dados de referência para limpar seus dados. Você pode usar dados de referência do Windows Azure Marketplace ou de provedores de dados de referência terceirizados online diretos.  
+  Este tópico descreve como configurar o [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) para usar dados de referência para limpar seus dados. Você pode usar dados de referência do Azure Marketplace ou de provedores de dados de referência terceirizados online diretos.  
 
 > [!IMPORTANT]
 > Este artigo menciona serviços de dados de referência de terceiros que estavam anteriormente disponíveis do Azure DataMarket. DataMarket e Serviços de Dados – incluindo dados de endereço de Melissa, por exemplo – foram descontinuados em 31/12/2016. Como resultado, você não pode executar os exemplos neste artigo com os serviços especificados por meio do DataMarket. Você ainda pode usar os serviços de dados de referência que estão disponíveis online diretamente de provedores de dados de referência de terceiros.

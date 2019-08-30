@@ -10,27 +10,27 @@ ms.topic: reference
 helpviewer_keywords:
 - foreign keys [SMO]
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 787c0786719b1daa7f77495b8ce144f95796df79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4894535c0c9e7fc6908dd4e6a7129f874f16d4b5
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001359"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148506"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Criando, alterando e removendo chaves estrangeiras
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), chaves estrangeiras são representadas pelo objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>.  
   
- Para criar uma chave estrangeira no SMO, especifique a tabela na qual a chave estrangeira é definida no construtor do objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. Na tabela, selecione pelo menos uma coluna como chave estrangeira. Para fazer isso, crie uma variável de objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> e especifique o nome da coluna que é a chave estrangeira. Em seguida, especifique a tabela e a coluna referenciadas. Use o <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> método para adicionar a coluna para o **colunas** propriedade de objeto.  
+ Para criar uma chave estrangeira no SMO, especifique a tabela na qual a chave estrangeira é definida no construtor do objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. Na tabela, selecione pelo menos uma coluna como chave estrangeira. Para fazer isso, crie uma variável de objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> e especifique o nome da coluna que é a chave estrangeira. Em seguida, especifique a tabela e a coluna referenciadas. Use o <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> método para adicionar a coluna à propriedade de objeto **Columns** .  
   
- As colunas que representam a chave estrangeira são listadas na **colunas** propriedade de objeto a <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> objeto. A chave primária referenciada pela chave estrangeira é representada pela propriedade <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> que está na tabela especificada na propriedade <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>.  
+ As colunas que representam a chave estrangeira são listadas na propriedade de objeto **Columns** do <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> objeto. A chave primária referenciada pela chave estrangeira é representada pela propriedade <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> que está na tabela especificada na propriedade <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>.  
   
 ## <a name="example"></a>Exemplo  
- Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto do SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto&#35; do Visual C Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>Criando, alterando e removendo uma chave estrangeira no Visual Basic  
  Este exemplo de código mostra como criar um relacionamento de chave estrangeira entre uma ou mais colunas em uma tabela com uma coluna de chave primária em outra tabela.  
@@ -120,7 +120,7 @@ $fk.ReferencedTableSchema = "HumanResources"
 $fk.Create()  
 ```  
   
-## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Amostra: Chaves estrangeiras, chaves primárias e colunas de restrição exclusiva  
+## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Amostra: Chaves estrangeiras, chaves primárias e colunas de restrição exclusivas  
  Este exemplo demonstra:  
   
 -   Como localizar uma chave estrangeira em um objeto existente.  

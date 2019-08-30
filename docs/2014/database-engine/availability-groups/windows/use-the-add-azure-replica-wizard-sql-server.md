@@ -12,15 +12,15 @@ ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2b925540844a45d94fb2ee823a8ac5e9bc7ef2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85f5dc758a6f9243fc553f597687552fdb22a481
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62788124"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154399"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Use o Assistente para Adicionar Réplica do Azure (SQL Server)
-  Use o Assistente para Adicionar Réplica do Azure para ajudá-lo a criar a nova máquina virtual do Windows Azure em TI híbrida e a configurá-la como uma réplica secundária para um novo ou grupo de disponibilidade AlwaysOn existente.  
+  Use o assistente para adicionar réplica do Azure para ajudá-lo a criar uma nova VM do Azure em ti híbrida e configurá-la como uma réplica secundária para um grupo de disponibilidade AlwaysOn novo ou existente.  
   
 -   **Antes de começar:**  
   
@@ -28,20 +28,20 @@ ms.locfileid: "62788124"
   
      [Segurança](#Security)  
   
--   **Para adicionar uma réplica usando:**  [Adicionar Assistente de réplica do Azure (SQL Server Management Studio)](#SSMSProcedure)  
+-   **Para adicionar uma réplica usando:**  [Assistente para adicionar réplica do Azure (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
- Se você nunca adicionou uma réplica de disponibilidade para um grupo de disponibilidade, consulte "Instâncias de servidor" e "grupos de disponibilidade e réplicas" seções [pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+ Se você nunca adicionou uma réplica de disponibilidade a um grupo de disponibilidade, consulte as seções "instâncias de servidor" e "grupos de disponibilidade e réplicas" em [pré-requisitos, restrições e &#40;recomendações para grupos de disponibilidade AlwaysOn SQL Servidor&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  
   
 -   Você deve estar conectado à instância do servidor que hospeda a réplica primária atual.  
   
--   Você deve ter um ambiente de TI híbrido onde sua sub-rede local tenha um VPN de site a site com o Windows Azure. Para obter mais informações, veja [Configurar um VPN de site a site no Portal de Gerenciamento](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create).  
+-   Você deve ter um ambiente de ti híbrido em que sua sub-rede local tenha uma VPN site a site com o Azure. Para obter mais informações, veja [Configurar um VPN de site a site no Portal de Gerenciamento](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create).  
   
 -   Seu grupo de disponibilidade deve conter réplicas de disponibilidade locais.  
   
--   Os clientes para o ouvinte do grupo de disponibilidade devem ter conectividade com a Internet se quiserem manter a conectividade com o ouvinte quando o grupo de disponibilidade tiver feito o failover em uma réplica do Windows Azure.  
+-   Os clientes para o ouvinte do grupo de disponibilidade devem ter conectividade com a Internet se quiserem manter a conectividade com o ouvinte quando o grupo de disponibilidade passar por failover para uma réplica do Azure.  
   
 -   **Pré-requisitos para usar sincronização de dados inicial total** Você precisará especificar um compartilhamento de rede para que o assistente crie e acesse backups. Para a réplica primária, a conta usada para iniciar o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] deve ter permissões de leitura e gravação no sistema de arquivos em um compartilhamento de rede. Para réplicas secundárias, a conta deve ter permissão de leitura no compartilhamento de rede.  
   
@@ -61,57 +61,57 @@ ms.locfileid: "62788124"
   
  Quando você tiver iniciado o Assistente para Adicionar Réplica do Azure, siga as etapas abaixo:  
   
-1.  Primeiro, baixe o certificado de gerenciamento para a sua assinatura do Windows Azure. Clique em **Download** para abrir a página de entrada.  
+1.  Primeiro, baixe um certificado de gerenciamento para sua assinatura do Azure. Clique em **Download** para abrir a página de entrada.  
   
-2.  Na página de entrada, entre com a sua assinatura do Windows Azure. Quando você estiver conectado, o assistente instalará um certificado de gerenciamento no computador local. Esse certificado de gerenciamento é carregado automaticamente quando você usa esse assistente novamente. Se você baixou vários certificados de gerenciamento, poderá clicar no botão **...** para selecionar o que deseja usar.  
+2.  Na página de entrada, entre na sua assinatura do Azure. Quando você estiver conectado, o assistente instalará um certificado de gerenciamento no computador local. Esse certificado de gerenciamento é carregado automaticamente quando você usa esse assistente novamente. Se você baixou vários certificados de gerenciamento, poderá clicar no botão **...** para selecionar o que deseja usar.  
   
-3.  Em seguida, conecte-se à sua assinatura clicando em **Conectar**. Quando você estiver conectado, as listas suspensas serão populadas com seus parâmetros do Microsoft Azure, como **Rede Virtual** e **Sub-Rede de Rede Virtual**.  
+3.  Em seguida, conecte-se à sua assinatura clicando em **Conectar**. Quando você estiver conectado, as listas suspensas serão preenchidas com os parâmetros do Azure, como **rede virtual** e **sub-rede de rede virtual**.  
   
-4.  Especifique as configurações para a máquina virtual do Windows Azure que hospedará a nova réplica secundária:  
+4.  Especifique as configurações para a VM do Azure que hospedará a nova réplica secundária:  
   
      Image  
-     O nome da imagem do SQL Server a ser usada para a máquina virtual do Windows Azure  
+     O nome da imagem de SQL Server a ser usada para a VM do Azure  
   
      Tamanho da máquina virtual  
-     O tamanho da máquina virtual do Windows Azure  
+     O tamanho da VM do Azure  
   
      Nome da máquina virtual  
-     O nome DNS da máquina virtual do Windows Azure  
+     O nome DNS da VM do Azure  
   
      Nome de usuário da máquina virtual  
-     O nome de usuário do administrador padrão para a máquina virtual do Windows Azure  
+     O nome de usuário do administrador padrão para a VM do Azure  
   
      Senha do administrador da máquina virtual (e confirmar senha)  
-     A senha para o administrador padrão para a máquina virtual do Windows Azure  
+     A senha para o administrador padrão da VM do Azure  
   
      Rede Virtual  
-     A rede virtual na qual colocar a máquina virtual do Windows Azure  
+     A rede virtual na qual posicionar a VM do Azure  
   
      Sub-Rede de Rede Virtual  
-     A sub-rede da rede virtual na qual colocar a máquina virtual do Windows Azure  
+     A sub-rede da rede virtual na qual posicionar a VM do Azure  
   
      Domínio  
-     O domínio do Active Directory (AD) para adicionar a máquina virtual do Windows Azure  
+     O domínio do Active Directory (AD) para ingressar na VM do Azure  
   
      Nome de usuário de domínio  
-     O nome de usuário do AD usado para adicionar a máquina virtual do Windows Azure ao domínio  
+     O nome de usuário do AD usado para unir a VM do Azure ao domínio  
   
      Senha  
-     A senha usada para adicionar a máquina virtual do Windows Azure ao domínio  
+     A senha usada para unir a VM do Azure ao domínio  
   
 5.  Clique em **OK** para confirmar as configurações e sair do Assistente para Adicionar Réplica do Azure.  
   
 6.  Continue com o restante das etapas de configuração para a [Página Especificar Réplicas](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md) da mesma maneira que faria para qualquer nova réplica.  
   
-     Depois que você tiver terminado com o Assistente de Grupo de Disponibilidade ou o Assistente para Adicionar Réplica a Grupo de Disponibilidade, o processo de configuração executará todas as operações no Windows Azure para criar a nova máquina virtual, adicioná-la ao domínio do AD, adicioná-la ao cluster do Windows, habilitar a alta disponibilidade AlwaysOn e adicionar a nova réplica ao grupo de disponibilidade.  
+     Depois de concluir o assistente de grupo de disponibilidade ou o assistente para adicionar réplica ao grupo de disponibilidade, o processo de configuração executará todas as operações no Azure para criar a nova VM, associá-la ao domínio do AD, adicioná-la ao cluster do Windows, habilitar o AlwaysOn alto Disponibilidade e adicione a nova réplica ao grupo de disponibilidade.  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Adicionar uma réplica secundária a um grupo de disponibilidade &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Visão geral do &#40;grupos de disponibilidade AlwaysOn SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Adicionar uma réplica secundária a um grupo de disponibilidade &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   

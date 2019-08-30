@@ -10,12 +10,12 @@ ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 13fa1ce6411f2ce4de1526e847bc5a6191d698c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e007dfaf2e14b488fb538f6b0c0ad958988a4c0
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922167"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154841"
 ---
 # <a name="backup-encryption"></a>Criptografia de backup
   Este tópico fornece uma visão geral das opções de criptografia para backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ele inclui detalhes do uso, benefícios e práticas recomendadas para criptografia durante o backup.  
@@ -26,20 +26,20 @@ ms.locfileid: "62922167"
   
  Para realizar a criptografia durante o backup, você deve especificar um algoritmo de criptografia, e um criptografador para proteger a chave de criptografia. Estas são as opções de criptografia com suporte:  
   
--   **Algoritmo de criptografia:** Os algoritmos de criptografia com suporte são: AES 128, AES 192, AES 256 e DES triplo  
+-   **Algoritmo de criptografia:** os algoritmos de criptografia com suporte são: AES 128, AES 192, AES 256 e Triple DES  
   
--   **Criptografador:** Um certificado ou chave assimétrica  
+-   **Criptografador:** um certificado ou chave assimétrica  
   
 > [!CAUTION]  
 >  É muito importante fazer backup do certificado ou da chave assimétrica e, preferencialmente, em um local diferente do arquivo de backup usado para criptografar. Sem o certificado ou a chave assimétrica, você não pode restaurar o backup, tornando o arquivo de backup inutilizável.  
   
- **Restaurando o backup criptografado:** Restauração do SQL Server não requer nenhum parâmetro de criptografia a ser especificado durante as restaurações. Requer que o certificado ou a chave assimétrica usada para criptografar o arquivo de backup esteja disponível na instância em que você está fazendo a restauração. A conta de usuário que executa a restauração deve ter as permissões `VIEW DEFINITION` no certificado ou na chave. Se você estiver restaurando o backup criptografado para uma instância diferente, verifique se o certificado está disponível nessa instância.  
+ **Restaurar o backup criptografado:** a restauração do SQL Server não requer que nenhum parâmetro de criptografia seja especificado durante as restaurações. Requer que o certificado ou a chave assimétrica usada para criptografar o arquivo de backup esteja disponível na instância em que você está fazendo a restauração. A conta de usuário que executa a restauração deve ter as permissões `VIEW DEFINITION` no certificado ou na chave. Se você estiver restaurando o backup criptografado para uma instância diferente, verifique se o certificado está disponível nessa instância.  
   
  Se você estiver restaurando um backup de um banco de dados criptografado TDE, o certificado TDE deverá estar disponível na instância para a qual você estiver restaurando.  
   
 ##  <a name="Benefits"></a> Benefícios  
   
-1.  Criptografar os backups de banco de dados ajuda a proteger os dados: SQL Server fornece a opção de criptografar os dados de backup ao criar um backup.  
+1.  Criptografar os backups de banco de dados ajuda a proteger os dados: o SQL Server fornece a opção de criptografar os dados de backup ao criar um backup.  
   
 2.  A criptografia também pode ser usada para bancos de dados criptografados usando a TDE.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62922167"
 ##  <a name="Prerequisites"></a> Pré-requisitos  
  Estes são os pré-requisitos para criptografar um backup:  
   
-1.  **Crie uma chave mestra de banco de dados para o banco de dados mestre:** A chave mestra de banco de dados é uma chave simétrica usada para proteger as chaves privadas dos certificados e as chaves assimétricas presentes no banco de dados. Para obter mais informações, consulte [Chaves de criptografia do SQL Server e banco de dados &#40;Mecanismo de Banco de Dados&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
+1.  **Criar uma chave mestra do banco de dados para o banco de dados mestre:** A chave mestra de banco de dados é uma chave simétrica usada para proteger as chaves privadas dos certificados e as chaves assimétricas presentes no banco de dados. Para obter mais informações, consulte [Chaves de criptografia do SQL Server e banco de dados &#40;Mecanismo de Banco de Dados&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
   
 2.  Crie um certificado ou uma chave assimétrica a ser usada na criptografia de backup. Para obter mais informações sobre a criação de um certificado, consulte [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql). Para obter mais informações sobre a criação de uma chave assimétrica, consulte [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql).  
   
@@ -135,7 +135,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
 |Tópico/tarefa|Descrição|  
 |-----------------|-----------------|  
 |[Criar um backup criptografado](create-an-encrypted-backup.md)|Descreve as etapas básicas necessárias para criar um backup criptografado|  
-|[Backup gerenciado do SQL Server no Microsoft Azure – Configurações de retenção e armazenamento](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|Descreve as etapas básicas necessárias para configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] com as opções de criptografia especificadas.|  
+|[SQL Server Backup gerenciado para o Azure – configurações de retenção e armazenamento](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|Descreve as etapas básicas necessárias para configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] com as opções de criptografia especificadas.|  
 |[Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure &#40;SQL Server&#41;](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Fornece um exemplo de como criar um backup criptografado protegido por chaves no Azure Key Vault.|  
   
 ## <a name="see-also"></a>Consulte também  

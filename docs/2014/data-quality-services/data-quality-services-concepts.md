@@ -10,12 +10,12 @@ ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ad52c1f1d431e1ded8f63728bf17c951196c406d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f1cba6a6a20fc804d29aeb0dbf43d7bebfbb225
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480695"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154451"
 ---
 # <a name="data-quality-services-concepts"></a>Conceitos do Data Quality Services
   Este tópico fornece um resumo breve de conceitos do [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) em gerenciamento de conhecimento, projetos de qualidade de dados e administração de qualidade de dados.  
@@ -37,7 +37,7 @@ ms.locfileid: "65480695"
   
  **Serviços de Dados de Referência**  
   
- Você pode usar dados de referência para validar, corrigir e enriquecer seus dados, aproveitando os serviços de empresas que garantem a qualidade dos seus dados de referência. Você pode usar os serviços do Windows Azure Marketplace para se conectar a provedores de dados de referência ou pode usar uma conexão direta a um provedor. Para obter mais informações, consulte [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
+ Você pode usar dados de referência para validar, corrigir e enriquecer seus dados, aproveitando os serviços de empresas que garantem a qualidade dos seus dados de referência. Você pode usar os serviços do Azure Marketplace para se conectar a provedores de dados de referência ou pode usar uma conexão direta com um provedor. Para obter mais informações, consulte [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
  Para obter mais informações sobre o gerenciamento de conhecimento no DQS, consulte [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   

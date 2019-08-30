@@ -18,17 +18,17 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bc6c150f8c8f4f4e6f68b275a901ab8f1f5e8e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 296163b64d565ae3a65a16f1dbbf002bfc464bee
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832477"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153965"
 ---
 # <a name="ado-net-source"></a>Origem do ADO NET
   A origem do ADO NET recebe dados de um provedor de .NET e os disponibiliza para o fluxo de dados.  
   
- Você pode usar a fonte ADO.NET para se conectar ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Não há suporte para a conexão ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)] com o uso do OLE DB. Para obter mais informações sobre o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte [Diretrizes gerais e limitações (Banco de dados SQL do Microsoft Azure)](https://go.microsoft.com/fwlink/?LinkId=248228).  
+ Você pode usar a fonte ADO.NET para se conectar ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Não há suporte para a conexão ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)] com o uso do OLE DB. Para obter mais informações [!INCLUDE[ssSDS](../../includes/sssds-md.md)]sobre o, consulte [diretrizes gerais e limitações (banco de dados SQL do Azure)](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="data-type-support"></a>Suporte do tipo de dados  
  A fonte converte qualquer tipo de dados que não é mapeado para um tipo de dados específico do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em um tipo de dados DT_NTEXT do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Essa conversão ocorre mesmo que o tipo de dados seja `System.Object`.  

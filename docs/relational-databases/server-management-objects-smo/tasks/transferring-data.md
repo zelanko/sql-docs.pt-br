@@ -1,5 +1,5 @@
 ---
-title: Transferência de dados | Microsoft Docs
+title: Transferindo dados | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - data transfers [SMO]
 - transferring data
 ms.assetid: eea255c3-8251-40f0-973b-fe4ef6cb5261
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c91153496c7a48c8b9958e4e8793ea6eb3ed97dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5395c06f28cb0a3b76d84f3873940076e1de6565
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030154"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148365"
 ---
 # <a name="transferring-data"></a>Transferindo dados
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -28,12 +28,12 @@ ms.locfileid: "68030154"
   
  Os objetos de um esquema de banco de dados são transferidos pela execução de um script gerado no servidor de destino. Os dados do <xref:Microsoft.SqlServer.Management.Smo.Table> são transferidos com um pacote DTS criado dinamicamente.  
   
- O <xref:Microsoft.SqlServer.Management.Smo.Transfer> objeto usa o [SQLBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy.aspx) API para transferir dados. Além disso, os métodos e propriedades usados para executar transferências de dados residem no objeto <xref:Microsoft.SqlServer.Management.Smo.Transfer> em vez de no objeto <xref:Microsoft.SqlServer.Management.Smo.Database>. A movimentação da funcionalidade de classes da instância para classes de utilitário é consistente com um modelo de objeto mais leve, pois o código para tarefas específicas só é carregado quando necessário.  
+ O <xref:Microsoft.SqlServer.Management.Smo.Transfer> objeto usa a API [SQLBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy.aspx) para transferir dados. Além disso, os métodos e propriedades usados para executar transferências de dados residem no objeto <xref:Microsoft.SqlServer.Management.Smo.Transfer> em vez de no objeto <xref:Microsoft.SqlServer.Management.Smo.Database>. A movimentação da funcionalidade de classes da instância para classes de utilitário é consistente com um modelo de objeto mais leve, pois o código para tarefas específicas só é carregado quando necessário.  
   
  O objeto <xref:Microsoft.SqlServer.Management.Smo.Transfer> não dá suporte a transferências de dados para um banco de dados de destino que tenha um <xref:Microsoft.SqlServer.Management.Smo.Database.CompatibilityLevel%2A> inferior à versão da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Exemplo  
-Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto do SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto&#35; do Visual C Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
  
   
 ## <a name="transferring-schema-and-data-from-one-database-to-another-in-visual-basic"></a>Transferindo esquema e dados de um banco de dados para outro no Visual Basic  

@@ -14,25 +14,25 @@ helpviewer_keywords:
 - SMO [SQL Server], versions
 - versions [SMO]
 ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7936eaf327f9df3cb0f3d8545d7bf557ef1471ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7a7d7e7dd9bf7e6d5ad6dfa5776d76892f96ad05
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098045"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148663"
 ---
 # <a name="files-and-version-numbers"></a>Arquivos e números de versão
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Todos os necessários componentes do SQL Server Management Object (SMO) estão incluídos no pacote Microsoft.SqlServer.SqlManagementObjects NuGet. SMO é implementado em vários assemblies gerenciados. Você pode desenvolver aplicativos SMO em um cliente ou um servidor.  
+  Todos os componentes do SMO (objeto de gerenciamento de SQL Server) necessários estão incluídos no pacote NuGet Microsoft. SqlServer. SqlManagementObjects. SMO é implementado em vários assemblies gerenciados. Você pode desenvolver aplicativos SMO em um cliente ou um servidor.  
 
 > > [!Important]
-> > A versão dos assemblies SMO é exibida como principal. **0**. Build.Revision. Mas a versão do assembly inserido é o principal. **100**. Build.Revision. Isso é feito para manter a versão do SMO usado em cada aplicativo separado para que as atualizações para um não afetam todos os outros.
+> > A versão do arquivo dos assemblies do SMO é exibida como principal. **0**. Build. Revision. Mas a versão de assembly inserida é a principal. **100**. Build. Revision. Isso é feito para manter a versão do SMO usada em cada aplicativo separadamente, de modo que as atualizações para uma não afetem as outras.
 > > 
-> > Por isso você deve **não** instalar essas versões de assemblies ao Cache de Assembly Global (GAC). Isso poderia fazer com que outros aplicativos, tais como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, a fim de interromper. 
+> > Por isso, você **não** deve instalar essas versões dos ASSEMBLIES no GAC (cache de assembly global). Isso pode fazer com que outros aplicativos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como Management Studio, sejam interrompidos. 
   
 |Arquivo|Descrição|  
 |-----------|-----------------|  

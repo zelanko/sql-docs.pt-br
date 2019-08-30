@@ -5,16 +5,16 @@ description: Saiba como executar uma implantação offline de um cluster de Big 
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 061e3c39f3cbcfd7e15367bbe9b37f8fc0aebb31
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 243771141bbd255e045ef0a1667235f1c414777b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652363"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155264"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Executar uma implantação offline de um cluster de Big Data do SQL Server
 
@@ -33,7 +33,7 @@ As etapas a seguir descrevem como efetuar pull das imagens de contêiner de clus
 > [!TIP]
 > As etapas a seguir explicam o processo. No entanto, para simplificar a tarefa, você pode usar o [script automatizado](#automated) em vez de executar esses comandos manualmente.
 
-1. Efetue pull das imagens de contêiner de cluster de Big Data repetindo o comando a seguir. Substitua `<SOURCE_IMAGE_NAME>` por cada [nome de imagem](#images). Substitua `<SOURCE_DOCKER_TAG>` pela tag da versão do cluster de Big Data, como **2019-CTP3.2-ubuntu**.  
+1. Efetue pull das imagens de contêiner de cluster de Big Data repetindo o comando a seguir. Substitua `<SOURCE_IMAGE_NAME>` por cada [nome de imagem](#images). Substitua `<SOURCE_DOCKER_TAG>` pela marca da versão do cluster Big data, como **2019-RC1-Ubuntu**.  
 
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/bdc/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -60,27 +60,31 @@ As etapas a seguir descrevem como efetuar pull das imagens de contêiner de clus
 ### <a id="images"></a> Imagens de contêiner de cluster de Big Data
 
 As seguintes imagens de contêiner de cluster de Big Data são necessárias para uma instalação offline:
+- **mssql-app-service-proxy**
+- **MSSQL-Control-Watchdog**
+- **mssql-controller**
+- **MSSQL-DNS**
+- **mssql-hadoop**
+- **mssql-mleap-serving-runtime**
+- **mssql-mlserver-py-runtime**
+- **mssql-mlserver-r-runtime**
+- **mssql-monitor-collectd**
+- **mssql-monitor-elasticsearch**
+- **mssql-monitor-fluentbit**
+- **mssql-monitor-grafana**
+- **mssql-monitor-influxdb**
+- **mssql-monitor-kibana**
+- **mssql-monitor-telegraf**
+- **MSSQL-Security-domainctl**
+- **mssql-security-knox**
+- **mssql-security-support**
+- **mssql-server**
+- **mssql-server-controller**
+- **mssql-server-data**
+- **MSSQL-Server-ha**
+- **mssql-service-proxy**
+- **mssql-ssis-app-runtime**
 
- - **mssql-appdeploy-init**
- - **mssql-monitor-fluentbit**
- - **mssql-monitor-collectd**
- - **mssql-server-data**
- - **mssql-hadoop**
- - **mssql-monitor-elasticsearch**
- - **mssql-monitor-influxdb**
- - **mssql-security-knox**
- - **mssql-mlserver-r-runtime**
- - **mssql-mlserver-py-runtime**
- - **mssql-controller**
- - **mssql-server-controller**
- - **mssql-monitor-grafana**
- - **mssql-monitor-kibana**
- - **mssql-service-proxy**
- - **mssql-app-service-proxy**
- - **mssql-ssis-app-runtime**
- - **mssql-monitor-telegraf**
- - **mssql-mleap-serving-runtime**
- - **mssql-security-support**
 
 ## <a id="automated"></a> Script automatizado
 
@@ -113,7 +117,7 @@ Use um script automatizado do Python que efetuará pull automaticamente de todas
 
 ## <a name="install-tools-offline"></a>Instalar ferramentas offline
 
-As implantações de cluster de Big Data exigem várias ferramentas, incluindo **Python**, **azdata** e **kubectl**. Use as etapas a seguir para instalar essas ferramentas em um servidor offline.
+As implantações de cluster de Big data exigem várias ferramentas `azdata`, incluindo **Python**, e **kubectl**. Use as etapas a seguir para instalar essas ferramentas em um servidor offline.
 
 ### <a id="python"></a> Instalar o Python offline
 
@@ -135,13 +139,13 @@ As implantações de cluster de Big Data exigem várias ferramentas, incluindo *
 
 ### <a id="azdata"></a> Instalar o azdata offline
 
-1. Em um computador com acesso à Internet e o [Python](https://wiki.python.org/moin/BeginnersGuide/Download), execute o comando a seguir para baixar todos os pacotes do **azdata** na pasta atual.
+1. Em um computador com acesso à Internet e [Python](https://wiki.python.org/moin/BeginnersGuide/Download), execute o comando a seguir para baixar todos `azdata` os pacotes para a pasta atual.
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
    ```
 
-1. Copie os pacotes baixados e o arquivo **requirements.txt** para o computador de destino.
+1. Copie os pacotes baixados e `requirements.txt` o arquivo para o computador de destino.
 
 1. Execute o comando a seguir no computador de destino, especificando a pasta na qual você copiou os arquivos anteriores.
 
@@ -159,7 +163,7 @@ Para instalar o **kubectl** em um computador offline, use as etapas a seguir.
 
 ## <a name="deploy-from-private-repository"></a>Implantação por meio do repositório privado
 
-Para executar a implantação por meio do repositório privado, use as etapas descritas no [guia de implantação](deployment-guidance.md), mas use um arquivo de configuração de implantação personalizado que especifique as informações do repositório privado do Docker. Os seguintes comandos do **azdata** demonstram como alterar as configurações do Docker em um arquivo de configuração de implantação personalizado chamado **control.json**:
+Para executar a implantação por meio do repositório privado, use as etapas descritas no [guia de implantação](deployment-guidance.md), mas use um arquivo de configuração de implantação personalizado que especifique as informações do repositório privado do Docker. Os comandos `azdata` a seguir demonstram como alterar as configurações do Docker em um arquivo de configuração `control.json`de implantação personalizada chamado:
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"
@@ -167,7 +171,7 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
-A implantação solicita o nome de usuário e a senha do Docker ou você pode especificá-los nas variáveis de ambiente **DOCKER_USERNAME** e **DOCKER_PASSWORD**.
+A implantação solicita o nome de usuário e a senha do Docker, ou você pode especificá- `DOCKER_USERNAME` los `DOCKER_PASSWORD` nas variáveis de ambiente e.
 
 ## <a name="next-steps"></a>Próximas etapas
 

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SQL Server Management Objects, programming
 - SMO [SQL Server], programming
 ms.assetid: 7d2f0bcf-f1ae-45b8-bc3f-7aea4fae7e45
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 379bd1ea6acffd1f91af860239c50995636c2a56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b55c30746542a09a84f4b8eacde8e78f3dae8ed
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126723"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148743"
 ---
 # <a name="creating-smo-programs"></a>Criando programas SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68126723"
 |-----------|-----------------|  
 |[Conectando-se a uma instância do SQL Server](../../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)|O programa SMO mais básico que estabelece uma conexão com uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Demonstra a Autenticação do Windows e a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Também inclui exemplos que mostram a conexão com um local e uma instância remota do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |[Desconectando de uma instância do SQL Server](../../../relational-databases/server-management-objects-smo/create-program/disconnecting-from-an-instance-of-sql-server.md)|Um programa que demonstra como se desconectar da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|[Chamando métodos](../../../relational-databases/server-management-objects-smo/create-program/calling-methods.md)|Esta seção descreve a abordagem geral de chamada de métodos. Mostra o uso de parâmetros e como tratar tabelas de dados retornadas em um objeto <xref:System.Data.DataTable>. Também inclui um exemplo de como chamar um construtor de objeto e como chamar o **Clone** método.|  
+|[Chamando métodos](../../../relational-databases/server-management-objects-smo/create-program/calling-methods.md)|Esta seção descreve a abordagem geral de chamada de métodos. Mostra o uso de parâmetros e como tratar tabelas de dados retornadas em um objeto <xref:System.Data.DataTable>. Também inclui um exemplo de como chamar um construtor de objeto e como chamar o método **clone** .|  
 |[Configurando propriedades – SMO](../../../relational-databases/server-management-objects-smo/create-program/setting-properties-smo.md)|Esta seção descreve como definir diferentes tipos de propriedades. Mostra como definir e obter propriedades de objetos. Também inclui exemplos que definem propriedades de objetos quando o objeto é criado e como iterar por todas as propriedades de um objeto.|  
 |[Usando coleções](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md)|Vários programas que discutem as técnicas usadas com coleções de objetos. Mostra como referenciar um objeto usando coleções. Também inclui um exemplo de como iterar pelos membros de uma coleção.|  
 |[Manipulando eventos SMO](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-events.md)|Esta seção descreve como configurar e tratar eventos no SMO. Inclui um exemplo de como configurar um manipulador de eventos e como configurar uma assinatura de evento.|  

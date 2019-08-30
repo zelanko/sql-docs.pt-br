@@ -15,17 +15,17 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 52dde5231a3b08bd92cf3b1d88ebfd56ce4d9c6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6126a352377e988c08a11211d12bb8bc77e93f7
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832480"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153970"
 ---
 # <a name="ado-net-destination"></a>Destino do ADO NET
   O destino ADO NET carrega dados em uma variedade de bancos de dados compatíveis com o [!INCLUDE[vstecado](../../includes/vstecado-md.md)]que utilizam uma tabela ou exibição de banco de dados. Você tem a opção de carregar esses dados em uma tabela ou exibição existente ou de criar uma nova tabela e carregar os dados nessa tabela.  
   
- Você pode usar o destino do ADO NET para conectar-se ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Não há suporte para a conexão ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)] com o uso do OLE DB. Para obter mais informações sobre o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte [Diretrizes gerais e limitações (Banco de dados SQL do Microsoft Azure)](https://go.microsoft.com/fwlink/?LinkId=248228).  
+ Você pode usar o destino do ADO NET para conectar-se ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Não há suporte para a conexão ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)] com o uso do OLE DB. Para obter mais informações [!INCLUDE[ssSDS](../../includes/sssds-md.md)]sobre o, consulte [diretrizes gerais e limitações (banco de dados SQL do Azure)](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="troubleshooting-the-ado-net-destination"></a>Solucionando problemas do destino ADO NET  
  Você pode registrar as chamadas que o destino ADO NET faz para provedores de dados externos. É possível usar essa capacidade de registro para solucionar o problema de salvar os dados em fontes de dados externas que o destino ADO NET executa. Para registrar as chamadas que o destino ADO NET faz aos provedores de dados externos, habilite o registro de pacotes e selecione o evento **Diagnóstico** no nível de pacotes. Para obter mais informações, consulte [Solucionando problemas de ferramentas para execução de pacotes](../troubleshooting/troubleshooting-tools-for-package-execution.md).  

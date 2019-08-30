@@ -14,12 +14,12 @@ ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 366a09bce079023f59f38682b51a7a5858671fcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917072"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154579"
 ---
 # <a name="databases"></a>Bancos de dados
   Um banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é composto de uma coleção de tabelas que armazena um conjunto específico de dados estruturados. Uma tabela contém uma coleção de linhas, também chamadas de registros ou tuplas, e colunas, também chamadas de atributos. Cada coluna da tabela é projetada para armazenar um determinado tipo de informação, por exemplo, datas, nomes, valores em dinheiro e números.  
@@ -42,7 +42,7 @@ ms.locfileid: "62917072"
 |-|-|  
 |[Bancos de dados do sistema](system-databases.md)|[Excluir arquivos de dados ou de log de um banco de dados](delete-data-or-log-files-from-a-database.md)|  
 |[Bancos de dados independentes](contained-databases.md)|[Exibir dados e informações de espaço de log para um banco de dados](display-data-and-log-space-information-for-a-database.md)|  
-|[Arquivos de dados do SQL Server no Microsoft Azure](sql-server-data-files-in-microsoft-azure.md)|[Aumentar o tamanho de um banco de dados](increase-the-size-of-a-database.md)|  
+|[SQL Server arquivos de dados no Azure](sql-server-data-files-in-microsoft-azure.md)|[Aumentar o tamanho de um banco de dados](increase-the-size-of-a-database.md)|  
 |[Arquivos e grupos de arquivos do banco de dados](database-files-and-filegroups.md)|[Renomear um banco de dados](rename-a-database.md)|  
 |[Estados de banco de dados](database-states.md)|[Definir um banco de dados como modo de usuário único](set-a-database-to-single-user-mode.md)|  
 |[Estados de arquivo](file-states.md)|[Reduzir um banco de dados](shrink-a-database.md)|  

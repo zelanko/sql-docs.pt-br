@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0aeb3d94bf1b67674b59f756f330e1d460f0cde7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 92d0b6390e630e3dea33c603bab11e8649444ab1
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771118"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160711"
 ---
-# <a name="sprestoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
+# <a name="sp_restoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Remove configurações de replicação na restauração de um banco de dados para servidor, banco de dados ou sistema que não é de origem, que de outra modo não seriam capazes de executar processos de replicação. Ao restaurar um banco de dados replicado para um servidor ou banco de dados diferente daquele de onde o backup foi feito, as configurações de replicação não podem ser preservadas. Na restauração, o servidor chama **sp_restoredbreplication** diretamente para remover automaticamente os metadados de replicação do banco de dados restaurado.  
@@ -40,13 +40,17 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @srv_orig = ] 'original_server_name'`O nome do servidor onde o backup foi criado. *original_server_name* é **sysname**, sem padrão.  
+`[ @srv_orig = ] 'original_server_name'`  
+ O nome do servidor onde o backup foi criado. *original_server_name* é **sysname**, sem padrão.  
   
-`[ @db_orig = ] 'original_database_name'`O nome do banco de dados do qual foi feito backup. *original_database_name* é **sysname**, sem padrão.  
+`[ @db_orig = ] 'original_database_name'`  
+ O nome do banco de dados cujo backup foi efetuado. *original_database_name* é **sysname**, sem padrão.  
   
-`[ @keep_replication = ] keep_replication` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @keep_replication = ] keep_replication`  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @perform_upgrade = ] perform_upgrade` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @perform_upgrade = ] perform_upgrade`  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

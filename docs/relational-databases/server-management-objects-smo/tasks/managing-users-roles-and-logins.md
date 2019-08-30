@@ -1,5 +1,5 @@
 ---
-title: Gerenciar usuários, funções e logons | Microsoft Docs
+title: Gerenciando usuários, funções e logons | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - roles [SMO]
 - users [SMO]
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae6c07026bbbc12fc526eca1b5079bcc9cf36782
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fda8d8345b48853285db8c5d09754ed161420767
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030259"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148405"
 ---
 # <a name="managing-users-roles-and-logins"></a>Gerenciando usuários, funções e logons
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68030259"
  Bancos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] também têm funções que especificam um conjunto de privilégios em nível de banco de dados que permitem a um usuário executar tarefas específicas. Diferente das funções de servidor, as funções de banco de dados não são fixas. Elas podem ser criadas, modificadas e removidas. Privilégios e usuários podem ser designados a uma função de banco de dados para administração em massa.  
   
 ## <a name="example"></a>Exemplo  
- Para os exemplos de código a seguir, selecione o ambiente de programação, o modelo de programação e a linguagem de programação para criar seu aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto do SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para os exemplos de código a seguir, selecione o ambiente de programação, o modelo de programação e a linguagem de programação para criar seu aplicativo. Para obter mais informações, consulte [criar um projeto&#35; do Visual C Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>Enumerando logons e usuários associados no Visual C#  
  Cada usuário em um banco de dados é associado a um logon. O logon pode ser associado a usuários em mais de um banco de dados. O exemplo de código mostra como chamar o método <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Login> para listar todos os usuários de banco de dados associados ao logon. O exemplo cria um logon e um usuário no banco de dados [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] para garantir a existência de informações de mapeamento a serem enumeradas.  

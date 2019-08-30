@@ -22,19 +22,19 @@ ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 586a1315c2d8e73d5010964864560db0fc0012fd
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3854b9b49435cf9db453527deaa9d427b04e6f74
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890814"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155087"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Fazer backup e restaurar bancos de dados do SQL Server
   Este tópico descreve os benefícios do backup dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bancos de dados, as condições de backup e restauração básicas, apresenta estratégias de backup e restauração para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e considerações de segurança sobre backup e restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  O componente de backup e restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece uma proteção essencial para dados críticos armazenados em bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para minimizar o risco de perda de dados catastrófica, você precisa fazer backup dos bancos de dados para preservar as modificações feitas nos dados regularmente. Uma estratégia de backup e restauração bem-planejada ajuda a proteger bancos de dados contra perda de dados causada por várias falhas. Teste sua estratégia restaurando um conjunto de backups e recuperando depois seu banco de dados para se preparar para responder com eficiência a um desastre.  
   
- Além do armazenamento local para guardar os backups, o SQL Server também oferece suporte ao backup e à restauração no serviço de armazenamento de Blob do Windows Azure. Para obter mais informações, consulte [Backup e restauração do SQL Server com o serviço de armazenamento de Blob do Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Além do armazenamento local para armazenar os backups, SQL Server também dá suporte a backup e restauração a partir do serviço de armazenamento de BLOBs do Azure. Para obter mais informações, consulte [SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 
   
@@ -53,7 +53,7 @@ ms.locfileid: "68890814"
   
     -   Por exemplo, problemas de hardware, uma unidade de disco danificada ou perda permanente de um servidor.  
   
-    -   Desastres naturais. Ao usar o Backup do SQL Server para serviço de armazenamento de Blob do Windows Azure, é possível criar um backup externo em uma região diferente daquela do seu local, para usar no caso de um desastre natural afetar seu local.  
+    -   Desastres naturais. Ao usar SQL Server Backup para o serviço de armazenamento de BLOBs do Azure, você pode criar um backup fora do local em uma região diferente da sua localização local, para usar no caso de um desastre natural que afete sua localização no local.  
   
 -   Além disso, os backups de um banco de dados são úteis para fins administrativos rotineiros, como copiar um banco de dados de um servidor para outro, configurar o espelhamento do banco de dados ou [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] e fazer arquivamento.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68890814"
  Uma cópia dos dados que podem ser usados para restaurar e recuperar os dados após uma falha. Os backups de um banco de dados também podem ser usados para restaurar uma cópia do banco de dados em um novo local.  
   
  dispositivo de backup  
- Um disco ou dispositivo de fita no qual os backups do SQL Server serão gravados e nos quais eles poderão ser restaurados. Os backups do SQL Server também podem ser gravados em um serviço de armazenamento do Blob do Windows Azure. O formato de **URL** é usado para especificar o destino e o nome do arquivo de backup. Para obter mais informações, consulte [Backup e restauração do SQL Server com o serviço de armazenamento de Blob do Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Um disco ou dispositivo de fita no qual os backups do SQL Server serão gravados e nos quais eles poderão ser restaurados. SQL Server backups também podem ser gravados em um serviço de armazenamento de BLOBs do Azure, e o formato de **URL** é usado para especificar o destino e o nome do arquivo de backup.. Para obter mais informações, consulte [SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  mídia de backup  
  Uma ou mais fitas ou arquivos de disco nos quais um ou mais backups foram gravados.  

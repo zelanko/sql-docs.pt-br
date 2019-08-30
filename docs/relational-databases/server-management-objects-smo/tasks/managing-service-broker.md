@@ -1,5 +1,5 @@
 ---
-title: Gerenciando o Service Broker | Microsoft Docs
+title: Gerenciando Service Broker | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - Service Broker [SMO]
 ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2832e4cf0578599d63c449bec4c97b24172b6446
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1759ec9e89f53a224abd73a742d4c7dbaaeffe61
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111401"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148424"
 ---
 # <a name="managing-service-broker"></a>Gerenciando o Service Broker
 

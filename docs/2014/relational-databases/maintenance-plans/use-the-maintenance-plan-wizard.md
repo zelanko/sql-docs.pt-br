@@ -34,12 +34,12 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 81e6b5b53f2cf12489ae199051ef837ae75d3875
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 105e8022775642d915cbcedf180ed9e07f8bc958
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806398"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153820"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Usar o Assistente de Plano de Manutenção
   Este tópico descreve como criar um plano de manutenção de um único servidor ou multisservidor usando o Assistente de Plano de Manutenção no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O Assistente de Plano de Manutenção cria um plano de manutenção que pode ser executado regularmente pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Isso permite executar várias tarefas de administração de banco de dados, incluindo backups, verificações de integridade de banco de dados ou atualizações de estatísticas de banco de dados em intervalos especificados.  
@@ -52,7 +52,7 @@ ms.locfileid: "62806398"
   
      [Segurança](#Security)  
   
--   [Criando um plano de manutenção usando o Assistente de plano de manutenção no SQL Server Management Studio](#SSMSProcedure)  
+-   [Criando um plano de manutenção usando o assistente de plano de manutenção no SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62806398"
 ####  <a name="Permissions"></a> Permissões  
  Para criar ou gerenciar planos de manutenção, é necessário ser membro da função de servidor fixa **sysadmin** . O Pesquisador de Objetos só exibe o nó **Planos de Manutenção** para usuários que são membros da função de servidor fixa **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Usando o Assistente de plano de manutenção  
+##  <a name="SSMSProcedure"></a>Usando o assistente de plano de manutenção  
   
 #### <a name="to-start-the-maintenance-plan-wizard"></a>Para iniciar o Assistente de Plano de Manutenção  
   
@@ -254,7 +254,7 @@ ms.locfileid: "62806398"
      Usa a opção `SORT_IN_TEMPDB` , que determina onde são armazenados temporariamente os resultados intermediários de classificação, gerados durante a criação do índice. Se uma operação de classificação não for necessária, ou se a classificação puder ser executada na memória, a opção `SORT_IN_TEMPDB` será ignorada.  
   
      Caixa de seleção**Manter o índice online enquanto estiver reindexando**  
-     Usa a opção `ONLINE` , que permite o acesso dos usuários aos dados de índice clusterizado ou da tabela subjacente e todos os índices não clusterizados associados durante as operações de índice. Esta opção ativa opções adicionais para a recriação de índices que não permitem recriações online: **Não recompilar índices** e **recompilar índices offline**.  
+     Usa a opção `ONLINE` , que permite o acesso dos usuários aos dados de índice clusterizado ou da tabela subjacente e todos os índices não clusterizados associados durante as operações de índice. A seleção dessa opção ativa opções adicionais para a recompilação de índices que não permitem recompilações online: **Não recompilar índices** e **Recompilar índices offline**.  
   
     > [!NOTE]  
     >  As operações de índice online não estão disponíveis em todas as edições do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações, consulte [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -364,13 +364,13 @@ ms.locfileid: "62806398"
      Especifique a pasta para os arquivos de banco de dados automaticamente criados. Essa opção será desabilitada se a opção URL for selecionada como o destino de backup.  
   
      **CREDENCIAL DO SQL**  
-     Selecione uma Credencial do SQL usada para autenticar o Armazenamento do Windows Azure. Se você não tiver uma Credencial existente do SQL que possa usar, clique no botão **Criar** para criar uma nova Credencial do SQL.  
+     Selecione uma credencial do SQL usada para autenticar no armazenamento do Azure. Se você não tiver uma Credencial existente do SQL que possa usar, clique no botão **Criar** para criar uma nova Credencial do SQL.  
   
     > [!IMPORTANT]  
-    >  A caixa de diálogo que é aberta quando você clica em **Criar** exige um certificado de gerenciamento ou o perfil da publicação para a assinatura. Se você não tiver acesso ao certificado de gerenciamento ou perfil de publicação, poderá criar uma credencial de SQL especificando o nome da conta de armazenamento e as informações da chave de acesso usando Transact-SQL ou SQL Server Management Studio. Consulte o código de exemplo a [para criar uma credencial](../security/authentication-access/create-a-credential.md#Credential) tópico para criar uma credencial usando Transact-SQL. Como alternativa, usando o SQL Server Management Studio, na instância do mecanismo de banco de dados, clique com o botão direito do mouse em **Segurança**, selecione **Novo**e **Credencial**. Especifique o nome da conta de armazenamento para **Identidade** e a chave de acesso no campo **Senha** .  
+    >  A caixa de diálogo que é aberta quando você clica em **Criar** exige um certificado de gerenciamento ou o perfil da publicação para a assinatura. Se você não tiver acesso ao certificado de gerenciamento ou perfil de publicação, poderá criar uma credencial de SQL especificando o nome da conta de armazenamento e as informações da chave de acesso usando Transact-SQL ou SQL Server Management Studio. Consulte o código de exemplo no [para criar um](../security/authentication-access/create-a-credential.md#Credential) tópico de credencial para criar uma credencial usando o TRANSACT-SQL. Como alternativa, usando o SQL Server Management Studio, na instância do mecanismo de banco de dados, clique com o botão direito do mouse em **Segurança**, selecione **Novo**e **Credencial**. Especifique o nome da conta de armazenamento para **Identidade** e a chave de acesso no campo **Senha** .  
   
      **Contêiner de armazenamento do Azure**  
-     Especifique o nome do contêiner de armazenamento do Windows Azure  
+     Especifique o nome do contêiner de armazenamento do Azure  
   
      **Prefixo da URL:**  
      Gerado automaticamente com base nas informações da conta de armazenamento armazenadas na Credencial do SQL e o nome do contêiner de armazenamento do Azure que você especificou. É recomendável não editar as informações neste campo, a menos que você esteja usando um domínio que use um formato diferente de **\<conta de armazenamento>.blob.core.windows.net**.  
@@ -491,7 +491,7 @@ ms.locfileid: "62806398"
      **Status**  
      Indica se a ação do assistente retornou como um todo o valor de **Êxito** ou de **Falha**.  
   
-     **Mensagem**  
+     **Message**  
      Fornece qualquer mensagem de aviso ou erro retornada pelo processo.  
   
      **Relatório**  
