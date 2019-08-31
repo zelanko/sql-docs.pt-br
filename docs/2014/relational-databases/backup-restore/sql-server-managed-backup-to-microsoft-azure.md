@@ -10,12 +10,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5ec5e3eeb9158363e34f708d1f36355ffcb06c6c
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: ab44323dfabd389113351e413751b7a230c176e6
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154659"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175760"
 ---
 # <a name="sql-server-managed--backup-to-azure"></a>SQL Server Backup gerenciado para o Azure
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]gerencia e automatiza backups de SQL Server para o serviço de armazenamento de BLOBs do Azure. A estratégia de backup usada pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] baseia-se no período de retenção e na carga de trabalho da transação no banco de dados. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] oferece suporte para restauração pontual durante o período de retenção especificado.   

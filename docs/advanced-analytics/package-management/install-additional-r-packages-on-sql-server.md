@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 579f4c4e236fcc9ee22067522c47a8286b869d51
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: 2c6fd8a9339756c6c22870e4eca6203064dc27f4
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000783"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190361"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Instalar novos pacotes de R com sqlmlutils
 
@@ -64,13 +64,13 @@ Se o computador cliente tiver acesso à Internet, você poderá baixar e instala
 Se o computador cliente não tiver uma conexão com a Internet, você precisará baixar os pacotes **sqlmlutils** e **RODBCext** com antecedência usando um computador que tenha acesso à Internet. Em seguida, você pode copiar os arquivos para uma pasta no computador cliente e instalar os pacotes offline.
 
 O pacote **RODBCext** tem vários pacotes dependentes, e a identificação de todas as dependências de um pacote é complicada. Recomendamos que você use [**miniCRAN**](https://andrie.github.io/miniCRAN/) para criar uma pasta de repositório local para o pacote que inclui todos os pacotes dependentes.
-Para obter mais informações, consulte [criar um repositório de pacote R local usando miniCRAN](../r/create-a-local-package-repository-using-minicran.md).
+Para obter mais informações, consulte [criar um repositório de pacote R local usando miniCRAN](create-a-local-package-repository-using-minicran.md).
 
 O pacote **sqlmlutils** consiste em um único arquivo zip que você pode copiar para o computador cliente e instalar o.
 
 Em um computador com acesso à Internet:
 
-1. Instale o **miniCRAN**. Consulte [instalar miniCRAN](../r/create-a-local-package-repository-using-minicran.md#install-minicran) para obter detalhes.
+1. Instale o **miniCRAN**. Consulte [instalar miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) para obter detalhes.
 
 1. No RStudio, execute o script R a seguir para criar um repositório local do pacote **RODBCext**. Este exemplo cria o repositório na pasta `c:\downloads\rodbcext`.
 
@@ -147,7 +147,7 @@ Se o computador cliente que você usa para se conectar ao SQL Server tiver acess
 ### <a name="add-the-package-offline"></a>Adicionar o pacote offline
 
 Se o computador cliente não tiver uma conexão com a Internet, você poderá usar o **miniCRAN** para baixar o pacote de **colagem** usando um computador que tenha acesso à Internet. Em seguida, copie o pacote para o computador cliente onde você pode instalar o pacote offline.
-Consulte [instalar o miniCRAN](../r/create-a-local-package-repository-using-minicran.md#install-minicran) para obter informações sobre como instalar o **miniCRAN**.
+Consulte [instalar o miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) para obter informações sobre como instalar o **miniCRAN**.
 
 Em um computador com acesso à Internet:
 
@@ -249,6 +249,6 @@ sql_remove.packages(connectionString = connection, pkgs = "glue", scope = "PUBLI
 ## <a name="next-steps"></a>Próximas etapas
 
 - Para obter informações sobre pacotes R instalados, consulte [obter informações de pacote de r](r-package-information.md)
-- Para obter ajuda para trabalhar com pacotes de R, consulte [dicas para usar pacotes de r](../r/packages-installed-in-user-libraries.md)
+- Para obter ajuda para trabalhar com pacotes de R, consulte [dicas para usar pacotes de r](tips-for-using-r-packages.md)
 - Para obter informações sobre como instalar pacotes do Python, consulte [instalar pacotes do Python com Pip](install-additional-python-packages-on-sql-server.md)
 - Para obter mais informações sobre SQL Server Serviços de Machine Learning, consulte [o que é SQL Server serviços de Machine Learning (Python e R)?](../what-is-sql-server-machine-learning.md)

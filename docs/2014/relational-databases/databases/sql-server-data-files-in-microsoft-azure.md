@@ -10,12 +10,12 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 55f0ab0cf2f1d4a29c0fca252c45f9e92740851c
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 445a43d54dc4578f8e93a18d4a13d31912b8494c
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154546"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175700"
 ---
 # <a name="sql-server-data-files-in-azure"></a>SQL Server arquivos de dados no Azure
   SQL Server arquivos de dados no Azure habilita o suporte nativo para SQL Server arquivos de banco de dados armazenados como BLOBs do Azure. Ele permite que você crie um banco de dados no SQL Server em execução no local ou em uma máquina virtual no Azure com um local de armazenamento dedicado para seus dados no armazenamento de BLOBs do Azure. Esse aprimoramento simplifica especialmente a movimentação de bancos de dados entre computadores usando operações de anexação e desanexação. Além disso, ele fornece um local de armazenamento alternativo para os arquivos de backup do banco de dados, permitindo que você restaure de ou para o armazenamento do Azure. Em virtude disso, ele permite várias soluções híbridas ao fornecer vários benefícios para virtualização de dados, movimentação de dados, segurança e disponibilidade, baixo custo e facilidade de manutenção, o que proporciona alta disponibilidade e dimensionamento elástico.  
@@ -93,7 +93,7 @@ ON
   
 -   **SQL Server local:** SQL Server versão 2014 inclui esse recurso. Para saber como baixar o SQL Server 2014, consulte [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
--   SQL Server em execução em uma máquina virtual do Azure: Se você estiver instalando o SQL Server em uma máquina virtual do Azure, instale o SQL Server 2014 ou atualize sua instância existente. Da mesma forma, você também pode criar uma nova máquina virtual no Azure usando a imagem da plataforma SQL Server 2014. Para saber como baixar o SQL Server 2014, consulte [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
+-   Execução do SQL Server em uma máquina virtual do Azure: Se você estiver instalando o SQL Server em uma máquina virtual do Azure, instale o SQL Server 2014 ou atualize sua instância existente. Da mesma forma, você também pode criar uma nova máquina virtual no Azure usando a imagem da plataforma SQL Server 2014. Para saber como baixar o SQL Server 2014, consulte [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
 ###  <a name="bkmk_Limitations"></a> Limitações  
   

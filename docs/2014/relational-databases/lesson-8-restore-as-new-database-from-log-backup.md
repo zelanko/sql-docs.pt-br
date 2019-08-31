@@ -10,12 +10,12 @@ ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c1a58b7c233c3b49cf85ba34bedcd74121047564
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 464961600f69f14a2b66515a75906c0fd4af3f82
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154982"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175361"
 ---
 # <a name="lesson-9-restore-a-database-from-azure-storage"></a>Lição 9: Restaurar um banco de dados do armazenamento do Azure
   Nesta lição, você aprenderá a restaurar um arquivo de backup de banco de dados do armazenamento do Azure para um banco de dados, que reside no local ou em uma máquina virtual no Azure. Para acompanhar esta lição, você não precisará concluir as lições 4, 5, 6, 7 e 8.  

@@ -18,12 +18,12 @@ ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d224c58651601bd18baf8e4aa79ece34a653d8c4
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: d78f2523e539d72f506d074d102507fca1d0a986
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152894"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175921"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Criar uma fonte de dados (SSAS multidimensional)
   Em um modelo multidimensional do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , um objeto de fonte de dados representa uma conexão para a fonte de dados com base na qual você está processando (ou importando) os dados. Um modelo multidimensional deve conter pelo menos um objeto de fonte de dados, mas você pode adicionar mais para combinar dados de vários data warehouses. Use as instruções neste tópico para criar um objeto de fonte de dados para seu modelo. Para obter mais informações sobre como definir propriedades nesse objeto, consulte [Definir propriedades da fonte de dados &#40;SSAS multidimensional&#41;](set-data-source-properties-ssas-multidimensional.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "70152894"
  As conexões que usam autenticação do Windows são especificadas na guia **Informações sobre Representação** do Designer de Fonte de Dados. Use esta guia para escolher a opção de representação que especifica a conta sob a qual o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é executado ao conectar-se à fonte de dados externa. Nem todas as opções podem ser usadas em todos os cenários. Para obter mais informações sobre essas opções e quando usá-las, consulte [Definir opções de representação &#40;SSAS – Multidimensional&#41;](set-impersonation-options-ssas-multidimensional.md).  
   
 ### <a name="database-authentication"></a>Autenticação de banco de dados  
- Como uma alternativa para autenticação do Windows, você pode especificar uma conexão que usa um serviço de autenticação fornecido pelo sistema de gerenciamento de banco de dados. Em alguns casos, usar a autenticação de banco de dados é obrigatório. Os cenários que chamam o uso de autenticação de banco de dados incluem o uso de SQL Server autenticação para se conectar a um banco de dado SQL do Azure ou acessar uma fonte de dados relacional que é executada em um sistema operacional diferente ou em um domínio não confiável.  
+ Como uma alternativa para autenticação do Windows, você pode especificar uma conexão que usa um serviço de autenticação fornecido pelo sistema de gerenciamento de banco de dados. Em alguns casos, usar a autenticação de banco de dados é obrigatório. Os cenários que chamam o uso da autenticação de banco de dados incluem o uso de SQL Server autenticação para se conectar a um banco de dado SQL do Azure ou acessar uma fonte de dados relacional que é executada em um sistema operacional diferente ou em um domínio não confiável.  
   
  Para uma fonte de dados que usa autenticação de banco de dados, o nome de usuário e a senha de um logon de banco de dados são especificados na cadeia de conexão. As credenciais são adicionadas à cadeia de conexão quando você insere um nome de usuário e senha no Gerenciador de Conexões ao configurar a conexão da fonte de dados em seu modelo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Lembre-se de especificar uma identidade de usuário que tenha permissões de leitura aos dados.  
   

@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e3d9346d301357fff052566cf66b7ce133b5e4ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c1fc5dd3dd59ccde2a1d95ab0940cfdadde7198
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985288"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176298"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Instalação e configuração do Master Data Services
 
@@ -45,8 +45,8 @@ Para obter links para vídeos e outros recursos de treinamento para ajudá-lo a 
 - Quando você instala o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] em um computador com Windows Server 2012, pode ser necessário configurar a Segurança Melhorada do Internet Explorer para permitir script para o site do aplicativo Web. Caso contrário, haverá falha ao navegar até o site de no computador de servidor.
 - Para trabalhar no aplicativo Web, o Silverlight 5 deve estar instalado no computador cliente. Se você não tiver a versão exigida do Silverlight, será solicitado a instalá-la quando navegar até uma área do aplicativo Web que a exige. Você pode instalar o Silverlight 5 por **[aqui](https://www.microsoft.com/silverlight/)** .
 
-## <a name="includessmdsshortmdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] em uma máquina virtual do Azure
-Por padrão, quando você cria uma máquina virtual do Azure com [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] já instalado, o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] também é instalado. 
+## <a name="includessmdsshort_mdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] em uma máquina virtual do Azure
+Por padrão, quando você cria uma máquina virtual do Azure com [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] o já instalado [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] , o também é instalado. 
 
 A próxima etapa é instalar o IIS (Serviços de Informações da Internet). Consulte a seção [Instalando e configurando o IIS](#InstallIIS). 
 
@@ -127,18 +127,18 @@ Se você estiver interessado em fazer alterações na instalação do [!INCLUDE[
   
 2.  Clique em **Criar Banco de Dados**e em **Avançar** no **Assistente para Criar Banco de Dados**.  
   
-3.  Sobre o **servidor de banco de dados** , especifique a instância do SQL Server. 
+3.  Na página **servidor de banco de dados** , especifique a instância de SQL Server. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] Adiciona suporte para a instância gerenciada do SQL Server. Defina o valor de **instância do SQL Server** instância gerenciada para o host de um banco de dados do SQL Azure. Por exemplo, `xxxxxx.xxxxxx.database.windows.net`.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Adiciona suporte para SQL Server Instância Gerenciada. Defina o valor de **SQL Server instância** como o host de uma instância gerenciada do banco de dados SQL do Azure. Por exemplo, `xxxxxx.xxxxxx.database.windows.net`.
 
-4. Selecione o **tipo de autenticação** e, em seguida, clique em **Conexão de teste** para confirmar que você pode se conectar ao banco de dados usando as credenciais para o tipo de autenticação que você selecionou. Clique em **Avançar**.
+4. Selecione o **tipo de autenticação** e clique em **testar conexão** para confirmar que você pode se conectar ao banco de dados usando as credenciais para o tipo de autenticação selecionado. Clique em **Avançar**.
 
-    >Para [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], para se conectar ao banco de dados SQL de instância gerenciada, use um dos seguintes tipos de autenticação:
+    >Para [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], para se conectar à instância gerenciada do banco de dados SQL do Azure, use um dos seguintes tipos de autenticação:
     >
-    >- Autenticação integrada do Active Directory do Azure: **Usuário atual – integrada ao Active Directory**
-    >- Autenticação do SQL Server: **Conta do SQL Server**.
+    >- Azure Active Directory autenticação integrada: **Usuário atual – Active Directory integrado**
+    >- Autenticação SQL Server: **SQL Server conta**.
     >
-    >Na instância gerenciada do banco de dados SQL, o usuário deve ser um membro do `sysadmin` função de servidor fixa.
+    >Na instância gerenciada do banco de dados SQL do Azure, o usuário deve `sysadmin` ser um membro da função de servidor fixa.
 
     > [!NOTE]  
     >  Quando você seleciona **Usuário Atual – Segurança Integrada** como o tipo de autenticação, a caixa **Nome de usuário** é somente leitura e exibe o nome da conta de usuário do Windows que está conectado ao computador. Se você estiver executando o [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] em uma VM (máquina Virtual) do Azure, a caixa **Nome de usuário** exibe o nome da VM e o nome de usuário para a conta de administrador local na VM. 

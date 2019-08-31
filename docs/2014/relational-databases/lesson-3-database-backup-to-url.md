@@ -10,12 +10,12 @@ ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 45cce2278e17fcb95f11920c2426caf580385518
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: ee331966984a12d309e71a7040edac6343e296c6
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153759"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175633"
 ---
 # <a name="lesson-4-create-a-database-in-azure-storage"></a>Lição 4: Criar um banco de dados no armazenamento do Azure
   Nesta lição, você aprenderá a criar um banco de dados usando o recurso arquivos de SQL Server Data no Azure. Observe que antes desta lição, você deverá concluir as lições 1, 2 e 3. A lição 3 é uma etapa muito importante, pois você precisa armazenar as informações sobre seu contêiner de armazenamento do Azure e seu nome de política associado e a chave SAS no repositório de credenciais de SQL Server antes da lição 4.  

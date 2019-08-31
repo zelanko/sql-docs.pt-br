@@ -10,14 +10,14 @@ ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8df1db964dc62e416260589b45dec2d85254550a
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: f154e32b5a7782a083db73de1deef327f44e3ee2
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152858"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175403"
 ---
-# <a name="connecting-to-a-azure-sql-database-using-sql-server-native-client"></a>Conectando a um Banco de Dados SQL do Azure usando o SQL Server Native Client
+# <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>Conectando-se a um banco de dados SQL do Azure usando SQL Server Native Client
   Para obter um exemplo que mostra como se conectar a [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando um cliente nativo [, consulte Desenvolvimento: Tópicos de instruções (banco de dados SQL do](https://msdn.microsoft.com/library/ee621787.aspx)Azure).  
   
 ## <a name="known-issues-when-connecting-to-a-sql-database"></a>Problemas conhecidos ao conectar a um banco de dados SQL  

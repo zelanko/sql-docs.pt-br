@@ -10,12 +10,12 @@ ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 85b3395420963e3052caa8eda7e760b9db60bd89
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 25ae3cee8e08292297449914bfb6e40dfc1b4b3a
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154987"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175458"
 ---
 # <a name="lesson-7-move-your-data-files-to-azure-storage"></a>Lição 7: Mover seus arquivos de dados para o armazenamento do Azure
   Nesta lição, você aprenderá a mover seus arquivos de dados para o armazenamento do Azure (mas não sua instância de SQL Server). Para acompanhar esta lição, você não precisará concluir as lições 4, 5 e 6.  

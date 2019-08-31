@@ -10,12 +10,12 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8a9cbb46b04491be3fe97cb707ad79c98990ff19
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: b166930b5d077e7294fcdbc13449d40cab309425
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155327"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176119"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Tutorial: Backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure
   Bem-vindo ao tutorial de Introdução com SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Azure. Este tutorial ajudará você a compreender como gravar backups e executar restaurações no serviço de Armazenamento de Blobs do Azure.  
@@ -24,7 +24,7 @@ ms.locfileid: "70155327"
  Este tutorial mostra como criar uma conta de armazenamento do Windows, um contêiner de blob, criando credenciais para acessar a conta de armazenamento, gravando um backup no serviço de blob e executando uma restauração simples. Este tutorial é dividido em quatro lições:  
   
  [Lição 1: Criar objetos de armazenamento do Azure](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
- Nesta lição, você criará uma conta de armazenamento do Azure e um contêiner de BLOB.  
+ Nesta lição, você criará uma conta de armazenamento do Azure e um contêiner de blobs.  
   
  [Lição 2: Criar uma credencial de SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)  
  Nesta lição, você criará uma credencial para armazenar as informações de segurança usadas para acessar a conta de armazenamento do Azure.  
@@ -40,7 +40,7 @@ ms.locfileid: "70155327"
   
 -   Uma instância do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], e o banco de dados AdventureWorks2012 instalado.  
   
-     A instância de SQL Server pode ser local ou em uma máquina virtual do Azure.  
+     A instância do SQL Server pode ser local ou em uma máquina virtual do Azure.  
   
      Você pode usar um banco de dados de usuário no lugar do AdventureWorks2012 e modificar a sintaxe do tsql adequadamente.  
   
