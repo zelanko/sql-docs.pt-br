@@ -43,12 +43,12 @@ ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05d3dab8585dd62716a9846ab591c7d70479e1c3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0671a283261a6c0867e4349f8cd0f2baadf0cbd7
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265495"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123006"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistente para Gerar e Publicar Scripts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -154,7 +154,7 @@ Confira mais detalhes sobre como usar o assistente para Gerar e Publicar Scripts
   
 -   **Acrescentar ao arquivo** – Se for **True**, este script será adicionado à parte inferior de um script existente, especificado na página **Definir Opções de Script** . Se for **False**, o novo script substituirá um script anterior. O padrão é **False**.  
   
--   **Continuar o script se houver erro** – Quando for **True**, o script será interrompido quando ocorrer um erro. Se for **False**, o script continuará. O padrão é **False**.  
+-   **Continuar o script se houver erro** – Quando for **False**, o script será interrompido quando ocorrer um erro. Se for **True**, o script continuará. O padrão é **False**.  
   
 -   **Converter UDDTs em tipos de base** – Se for **True**, os UDDT (tipos de dados definidos pelo usuário) serão convertidos nos tipos de dados base subjacentes que foram usados para criá-los. Use **True** quando o UDDT não existir no banco de dados em que o script será executado. Se for **False**, serão usados UDDTs. O padrão é **False**.  
   

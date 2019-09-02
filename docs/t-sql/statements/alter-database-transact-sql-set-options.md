@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: ecd914603883f83d5434327c5528688936aee420
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: 1a1e8fe19b952f2cc4a72f651dfea53c2177e6c1
+ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495457"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110281"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL)
 
@@ -379,14 +379,14 @@ Para obter mais informações, veja a seção “Usando as opções de estatíst
 
 <a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }         
 ON         
-Especifica que as atualizações de estatísticas para a opção AUTO_UPDATE_STATISTICS são assíncronas. O otimizador de consulta não aguarda a conclusão das atualizações de estatísticas para compilar consultas.
+Especifica que atualizações de estatísticas para a opção AUTO_UPDATE_STATISTICS são assíncronas. O otimizador de consulta não aguarda a conclusão das atualizações de estatísticas para compilar consultas.
 
 Definir essa opção como ON não tem nenhum efeito, a menos que AUTO_UPDATE_STATISTICS seja definida como ON.
 
 Por padrão, a opção AUTO_UPDATE_STATISTICS_ASYNC é definida como OFF e o otimizador de consulta atualiza estatísticas de forma síncrona.
 
 OFF         
-Especifica que as atualizações de estatísticas para a opção AUTO_UPDATE_STATISTICS são síncronas. O otimizador de consulta aguarda a conclusão das atualizações de estatísticas para compilar consultas.
+Especifica que atualizações de estatísticas para a opção AUTO_UPDATE_STATISTICS são síncronas. O otimizador de consulta aguarda a conclusão das atualizações de estatísticas para compilar consultas.
 
 Definir essa opção como OFF não tem nenhum efeito, a menos que AUTO_UPDATE_STATISTICS seja definida como ON.
 
@@ -1777,14 +1777,14 @@ SIMPLE
 As consultas são parametrizadas com base no comportamento padrão do banco de dados.
 
 FORCED         
-O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parametriza todas as consultas no banco de dados.
+O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parametriza todas as consultas feitas no banco de dados.
 
 A configuração atual desta opção pode ser determinada por meio do exame da coluna `is_parameterization_forced` na exibição do catálogo `sys.databases`.
 
 **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]         
-Controla se o repositório de consultas está habilitado nesse banco de dados, além de controlar a remoção do conteúdo do repositório de consultas.
+Controla se o repositório de consultas está habilitado neste banco de dados, além de controlar a remoção de conteúdo do repositório de consultas.
 
 ON         
 Habilita o repositório de consultas.
@@ -2034,7 +2034,7 @@ Especifica a frequência de pontos de verificação indiretos por banco de dados
 
 TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }         
 *target_recovery_time*         
-Especifica o limite máximo no tempo para recuperar o banco de dados especificado no caso de uma falha.
+Especifica o salto máximo no tempo para recuperar o banco de dados especificado no caso de uma falha.
 
 SECONDS         
 Indica que *target_recovery_time* é expresso como o número de segundos.
@@ -2517,7 +2517,7 @@ A configuração atual dessa opção pode ser determinada examinando-se a coluna
 **\<query_store_options> ::=**         
 
 ON | OFF | CLEAR [ ALL ]         
-Controla se o repositório de consultas está habilitado nesse banco de dados, além de controlar a remoção do conteúdo do repositório de consultas.
+Controla se o repositório de consultas está habilitado neste banco de dados, além de controlar a remoção de conteúdo do repositório de consultas.
 
 ON         
 Habilita o repositório de consultas.
@@ -2767,7 +2767,7 @@ Especifica a frequência de pontos de verificação indiretos por banco de dados
 
 TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }         
 *target_recovery_time*         
-Especifica o limite máximo no tempo para recuperar o banco de dados especificado no caso de uma falha.
+Especifica o salto máximo no tempo para recuperar o banco de dados especificado no caso de uma falha.
 
 SECONDS         
 Indica que *target_recovery_time* é expresso como o número de segundos.
@@ -2912,6 +2912,7 @@ SET
 <option_spec>::=
 {
 <RESULT_SET_CACHING>
+|<snapshot_option>
 }
 ;
 
@@ -2919,6 +2920,12 @@ SET
 {
 RESULT_SET_CACHING {ON | OFF}
 }
+
+<snapshot_option>::=
+{
+READ_COMMITTED_SNAPSHOT {ON | OFF }
+}
+
 
 ```
 
@@ -2929,7 +2936,7 @@ RESULT_SET_CACHING {ON | OFF}
 É o nome do banco de dados a ser modificado.
 
 <a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
-Aplica-se a ao SQL Data Warehouse do Azure (versão prévia)
+**Aplica-se ao** SQL Data Warehouse do Azure (versão prévia)
 
 Este comando deve ser executado enquanto estiver conectado ao banco de dados `master`.  A alteração dessa configuração de banco de dados entra em vigor imediatamente.  Os custos de armazenamento são incorridos pelo armazenamento em cache dos conjuntos de resultados da consulta. Depois de desabilitar o armazenamento em cache de resultados de um banco de dados, o cache de resultados anteriormente persistente será excluído imediatamente do armazenamento do SQL Data Warehouse do Azure. Uma nova coluna chamada is_result_set_caching_on é introduzida no `sys.databases` para mostrar a configuração de armazenamento em cache de resultados de um banco de dados.  
 
@@ -2947,6 +2954,21 @@ Especifica que os conjuntos de resultados de consulta retornados desse banco de 
 command|Como|%DWResultCacheDb%|
 | | |
 
+
+<a name="snapshot_option"></a> READ_COMMITTED_SNAPSHOT  { ON | OFF }   
+**Aplica-se ao** SQL Data Warehouse do Azure (versão prévia)
+
+ON Habilita a opção READ_COMMITTED_SNAPSHOT no nível do banco de dados.
+
+OFF Desativa a opção READ_COMMITTED_SNAPSHOT no nível do banco de dados.
+
+Ativar ou desativar READ_COMMITTED_SNAPSHOT para um banco de dados eliminará todas as conexões abertas com esse banco de dados.  Talvez convenha fazer essa alteração durante a janela de manutenção do banco de dados ou aguardar até que não haja nenhuma conexão ativa com o banco de dados, exceto a conexão que executa o comando ALTER DATABSE.  O banco de dados não precisa estar no modo do usuário único.  Não há suporte para a alteração da configuração READ_COMMITTED_SNAPSHOT no nível da sessão.  Para verificar essa configuração para um banco de dados, marque a coluna is_read_committed_snapshot_on em sys.databases.
+
+Em um banco de dados com READ_COMMITTED_SNAPSHOT habilitado, as consultas poderão apresentar desempenho mais lento devido à verificação de versões se várias versões de dados estiverem presentes. Transações abertas demoradas também poderão causar um aumento no tamanho do banco de dados se houver alterações nos dados por essas transações que bloqueiam a limpeza de versões.  
+
+
+
+
 ## <a name="remarks"></a>Remarks
 
 O conjunto de resultados armazenado em cache será reutilizado em uma consulta se todos os requisitos a seguir forem atendidos:
@@ -2959,12 +2981,9 @@ Quando o armazenamento em cache do conjunto de resultados estiver ATIVADO para u
 
 ## <a name="permissions"></a>Permissões
 
-Requer estas permissões:
+Para definir a opção RESULT_SET_CACHING, um usuário precisa do logon da entidade de segurança no nível do servidor (a criada pelo processo de provisionamento) ou ser um membro da função de banco de dados `dbmanager`.  
 
-- Logon da entidade de segurança no nível do servidor (aquele criado pelo processo de provisionamento), ou
-- Membro da função de banco de dados `dbmanager`.
-
-O proprietário do banco de dados não pode alterar o banco de dados, a menos que ele seja membro da função dbmanager.
+Para definir a opção READ_COMMITTED_SNAPSHOT, um usuário precisa da permissão ALTER no banco de dados.
 
 ## <a name="examples"></a>Exemplos
 
@@ -3027,6 +3046,12 @@ SELECT 0 as is_cache_hit;
 SELECT *  
 FROM sys.dm_pdw_request_steps  
 WHERE command like '%DWResultCacheDb%' and step_index = 0;
+```
+
+### <a name="enable-read_committed_snapshot-option-for-a-database"></a>Habilite a opção Read_Committed_Snapshot para um banco de dados
+```sql
+ALTER DATABASE MyDatabase  
+SET READ_COMMITTED_SNAPSHOT ON
 ```
 
 ## <a name="see-also"></a>Confira também

@@ -14,27 +14,33 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: facdfe832b9bd7889d699f8c17f6397ba5d3dd4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cff2727815c5cd6cada3d2111e0aada4e722f800
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934830"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122958"
 ---
 # <a name="upgrade-database-engine"></a>Atualizar o Mecanismo de Banco de Dados
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
   Os artigos nesta seção ajudarão você a atualizar o mecanismo de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma versão anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a versão [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-1.  [Escolha um Método de Atualização do Mecanismo de Banco de Dados](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) Antes de iniciar uma atualização, você precisa entender os vários métodos de atualização. Este artigo aborda os métodos de atualização e as etapas envolvidas em cada método de atualização.  
+1.  [Escolher um método de atualização do Mecanismo de Banco de Dados](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md). Antes de iniciar uma atualização, você precisa entender os vários métodos de atualização. Este artigo aborda os métodos de atualização e as etapas envolvidas em cada método de atualização.  
   
-2.  [Planejar e testar o plano de atualização do Mecanismo de Banco de Dados](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) Depois de examinar os métodos de atualização, você estará pronto para desenvolver o método de atualização apropriado para seu ambiente e, em seguida, testar o método de atualização antes de atualizar o ambiente existente. Este artigo discute o desenvolvimento de um plano de atualização e como testá-lo.  
+2.  [Planejar e testar o plano de atualização do Mecanismo de Banco de Dados](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md). Depois de examinar os métodos de atualização, você estará pronto para desenvolver o método de atualização apropriado para seu ambiente e, em seguida, testar o método de atualização antes de atualizar o ambiente existente. Este artigo discute o desenvolvimento de um plano de atualização e como testá-lo.  
   
-3.  [Concluir a Atualização do Mecanismo de Banco de Dados](../../database-engine/install-windows/complete-the-database-engine-upgrade.md) Depois que seus bancos de dados tiverem sido atualizados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], haverá etapas adicionais necessárias, incluindo um novo backup, habilitar recursos e repopular os catálogos de texto completo. Este artigo discute essas etapas.  
+3.  [Concluir a atualização do Mecanismo de Banco de Dados](../../database-engine/install-windows/complete-the-database-engine-upgrade.md). Depois que seu mecanismo de banco de dados tiver sido atualizado para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e os bancos de dados estiverem online, haverá etapas adicionais que precisarão ser seguidas, incluindo realizar um novo backup, atualizar a funcionalidade de bancos de dados para habilitar novos recursos e repopular catálogos de texto completo. Este artigo discute essas etapas.  
   
-4.  [Alterar o modo de compatibilidade do banco de dados e usar o repositório de consultas](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) Uma das etapas a serem seguidas após a atualização de seus bancos de dados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é habilitar novos recursos alterando o modo de compatibilidade do banco de dados e usar o repositório de consultas para monitorar o desempenho. Este artigo aborda este processo e fornece um fluxo de trabalho recomendado.  
-  
-5.  [Aproveitar os novos recursos do SQL Server](https://www.microsoft.com/sql-server/sql-server-2017) Por fim, depois de concluir as etapas anteriores, você estará pronto para explorar, aproveitando as vantagens de novas melhorias específicas do mecanismo de banco de dados. Este artigo sugere alguns desses aperfeiçoamentos e fornece links para mais informações.  
+4.  Atualize o [Nível de compatibilidade do banco de dados](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) (**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Uma das etapas a ser seguida depois que seus bancos de dados estiverem online na nova versão de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] pode ser atualizar o modo de funcionalidade dos bancos de dados para habilitar novos recursos, por meio da alteração do nível de compatibilidade do banco de dados. Isso pode ser feito manualmente ou por meio do Assistente de Ajuste de Consulta. 
+
+    - [Altere o modo de compatibilidade do banco de dados e use o Repositório de Consultas](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). Após alterar manualmente o nível de compatibilidade do banco de dados, use o Repositório de Consultas para monitorar o desempenho e identificar possíveis regressões. Este artigo aborda o processo recomendado e fornece um fluxo de trabalho recomendado.  
+
+    - [Altere o modo de compatibilidade do banco de dados com o Assistente de Ajuste de Consulta](../../relational-databases/performance/upgrade-dbcompat-using-qta.md). Como alternativa a uma alteração manual, use o **QTA (Assistente de Ajuste de Consulta)** para ser guiado no processo recomendado de alteração do nível de compatibilidade do banco de dados. Este artigo aborda esse processo e fornece instruções sobre o fluxo de trabalho do QTA.  
+
+    Para saber mais sobre novos recursos e melhores comportamentos disponíveis após alterar um nível de compatibilidade do banco de dados, confira [Diferenças entre níveis de compatibilidade](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-stored-procedures).
+
+5.  [Aproveite os Novos Recursos do SQL Server](https://www.microsoft.com/sql-server/sql-server-2017). Por fim, depois de concluir as etapas anteriores, você estará pronto para explorar, aproveitando as vantagens de novos aprimoramentos específicos do mecanismo de banco de dados. Este artigo sugere alguns desses aperfeiçoamentos e fornece links para mais informações.  
   
   

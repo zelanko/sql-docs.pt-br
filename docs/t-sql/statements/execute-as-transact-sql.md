@@ -1,9 +1,9 @@
 ---
 title: EXECUTE AS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 08/27/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -20,17 +20,19 @@ helpviewer_keywords:
 - execution context [SQL Server]
 - switching execution context
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
-author: VanMSFT
-ms.author: vanto
-ms.openlocfilehash: 1908228b12db7256351945b474016a707db56b3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
+ms.openlocfilehash: d9ec87979d0f91653d5f287749ccfb5b7f806dc4
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084439"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70161334"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Define o contexto de execução de uma sessão.  
   
@@ -59,7 +61,7 @@ ms.locfileid: "68084439"
  Especifica que o contexto de execução a ser representado é um logon. O escopo de representação é em nível de servidor.  
   
 > [!NOTE]  
->  Essa opção não está disponível em um banco de dados independente nem no banco de dados SQL.  
+>  Essa opção não está disponível em um banco de dados independente nem no Banco de Dados SQL nem no SQL Data Warehouse.  
   
  Usuário  
  Especifica que o contexto a ser representado é um usuário no banco de dados atual. O escopo de representação é restrito ao banco de dados atual. Uma opção de contexto para um usuário de banco de dados não herda as permissões em nível de servidor desse usuário.  
@@ -67,7 +69,7 @@ ms.locfileid: "68084439"
 > [!IMPORTANT]  
 >  Enquanto a opção de contexto para o usuário do banco de dados estiver ativa, qualquer tentativa de acessar os recursos fora do banco de dados provocará falha na instrução. Isso inclui instruções USE *database*, consultas distribuídas e consultas que fazem menção a outro banco de dados que usa identificadores em três ou quatro partes.  
   
- **'** _name_ **'**  
+ **'** *name* **'**  
  É um usuário ou nome de logon válido. *name* deve ser membro da função de servidor fixa **sysadmin** ou existir como uma entidade de segurança em [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) ou [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md), respectivamente.  
   
  *name* pode ser especificado como uma variável local.  
@@ -77,22 +79,23 @@ ms.locfileid: "68084439"
  Para obter mais informações, consulte [Especificando um nome de logon ou usuário](#_user) mais adiante neste tópico.  
   
  NO REVERT  
- Especifica que a alternância de contexto não pode ser revertida para o contexto anterior. A opção **NO REVERT** pode ser usada apenas no nível ad hoc.
+ Especifica que a alternância de contexto não pode ser revertida para o contexto anterior. A opção **NO REVERT** pode ser usada apenas no nível ad hoc.  
   
  Para obter mais informações sobre como reverter para o contexto anterior, veja [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md).  
   
- COOKIE INTO **@** _varbinary_variable_  
- Especifica que o contexto de execução só pode ser revertido para o contexto anterior se a instrução de chamada REVERT WITH COOKIE tiver o valor **@** _varbinary_variable_correto. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] passa o cookie para **@** _varbinary_variable_. A opção **COOKIE INTO** pode ser usada apenas no nível ad hoc.  
+ COOKIE INTO * *@***varbinary_variable*  
+ Especifica que o contexto de execução só pode ser revertido para o contexto anterior se a instrução de chamada REVERT WITH COOKIE contém o valor * *@***varbinary_variable* correto. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] passa o cookie para * *@***varbinary_variable*. A opção **COOKIE INTO** pode ser usada apenas no nível ad hoc.  
   
- **@** _varbinary_variable_ é **varbinary (8000)** .  
+ **@** *varbinary_variable* é **varbinary (8000)** .  
   
 > [!NOTE]  
 >  O parâmetro **OUTPUT** de cookie está documentado atualmente como **varbinary(8000)** , que tem o tamanho máximo correto. No entanto, a implementação atual retorna **varbinary(100)** . Os aplicativos devem reservar **varbinary(8000)** para que o aplicativo continue a operar corretamente se o tamanho de retorno do cookie aumentar em uma versão futura.  
   
  CALLER  
- Quando usado em um módulo, especifica que as instruções dentro dele são executadas no contexto do chamador do módulo.  
-  
- Quando usado fora de um módulo, a instrução não tem nenhuma ação.  
+ Quando usado em um módulo, especifica que as instruções dentro dele são executadas no contexto do chamador do módulo.
+Quando usado fora de um módulo, a instrução não tem nenhuma ação.
+ > [!NOTE]  
+>  Essa opção não está disponível no SQL DataWarehouse.  
   
 ## <a name="remarks"></a>Remarks  
  A alteração no contexto de execução permanece em vigor até que uma das seguintes situações ocorra:  
@@ -125,11 +128,9 @@ Se o usuário ficou órfão (o logon associado não existe mais) e ele não foi 
 >  A instrução EXECUTE AS pode ser bem-sucedida, desde que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] possa resolver o nome. Se existir um usuário de domínio, o Windows poderá resolver o usuário para o [!INCLUDE[ssDE](../../includes/ssde-md.md)], embora o usuário Windows não tenha acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isso pode levar a uma condição em que um logon sem acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pareça estar conectado, embora o logon representado só tenha as permissões concedidas a público ou convidado.  
   
 ## <a name="using-with-no-revert"></a>Usando WITH NO REVERT  
- Quando a instrução EXECUTE AS inclui a cláusula opcional WITH NO REVERT, o contexto de execução de uma sessão não pode ser redefinido usando REVERT ou executando outra instrução EXECUTE AS. O contexto definido pela instrução permanece até que a sessão seja descartada.   Observe que, se o pool de conexões estiver habilitado, `sp_reset_connection` falhará e a conexão será removida.  A mensagem de erro no log de eventos será:
- 
-> "A conexão foi descartada porque o principal que a iniciou assumiu posteriormente um novo contexto de segurança e, em seguida, tentou redefinir a conexão em seu contexto de segurança representado." Não há suporte para esse cenário. Consulte "Visão geral de representação" nos Manuais Online.
+ Quando a instrução EXECUTE AS inclui a cláusula opcional WITH NO REVERT, o contexto de execução de uma sessão não pode ser redefinido usando REVERT ou executando outra instrução EXECUTE AS. O contexto definido pela instrução permanece até que a sessão seja descartada.  
   
- Quando a cláusula WITH NO REVERT COOKIE = @*varbinary_variabl*e for especificada, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passa o valor do cookie para @*varbinary_variable*. O contexto de execução definido por essa instrução poderá ser revertido somente para o contexto anterior se a instrução de chamada REVERT WITH COOKIE = @*varbinary_variable* tiver o mesmo valor *@varbinary_variable* .  
+ Quando a cláusula WITH NO REVERT COOKIE = @*varbinary_variabl*e for especificada, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passa o valor do cookie para @*varbinary_variabl*e. O contexto de execução definido por essa instrução poderá ser revertido somente para o contexto anterior se a instrução de chamada REVERT WITH COOKIE = @*varbinary_variable* tiver o mesmo valor *@varbinary_variable* .  
   
  Essa opção é útil em um ambiente no qual um pool de conexão é usado. O pool de conexão é a manutenção de um grupo de conexões de banco de dados para reutilização por aplicativos em um servidor de aplicativos. Como o valor passado para *@varbinary_variable* é conhecido apenas pelo chamador da instrução EXECUTE AS (no caso, o aplicativo), o chamador pode garantir que o contexto de execução estabelecido não possa ser alterado por mais ninguém.  
   
@@ -186,7 +187,7 @@ GO
 ```  
   
 ### <a name="b-using-the-with-cookie-clause"></a>B. Usando a cláusula WITH COOKIE  
- O exemplo a seguir define o contexto de execução de uma sessão para determinado usuário e especifica a cláusula WITH NO REVERT COOKIE = @*varbinary_variable*. A instrução `REVERT` deve especificar o valor passado para a variável `@cookie` na instrução `EXECUTE AS` para reverter com êxito o contexto de volta para o chamador. Para executar este exemplo, o logon `login1` e o usuário `user1` criados no exemplo A devem existir.  
+ O exemplo a seguir define o contexto de execução de uma sessão para determinado usuário e especifica a cláusula WITH NO REVERT COOKIE = @*varbinary_variabl*e. A instrução `REVERT` deve especificar o valor passado para a variável `@cookie` na instrução `EXECUTE AS` para reverter com êxito o contexto de volta para o chamador. Para executar este exemplo, o logon `login1` e o usuário `user1` criados no exemplo A devem existir.  
   
 ```  
 DECLARE @cookie varbinary(8000);  

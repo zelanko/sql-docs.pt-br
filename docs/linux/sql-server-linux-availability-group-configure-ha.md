@@ -5,17 +5,17 @@ description: Saiba mais sobre como criar um AG (grupo de disponibilidade) Always
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 02/14/2018
+ms.date: 08/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e97708fc227cbbcadfeb6fe961fce2ad9ee41765
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 364ed5298c83319ab0915ffc04a393c9a9097bf0
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027248"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030303"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurar o grupo de disponibilidade Always On do SQL Server para alta disponibilidade no Linux
 
@@ -135,7 +135,7 @@ Execute **apenas** um dos scripts a seguir:
 - Criar AG com duas réplicas síncronas e uma réplica de configuração:
 
    >[!IMPORTANT]
-   >Essa arquitetura permite que qualquer edição do SQL Server hospede a terceira réplica. Por exemplo, a terceira réplica pode ser hospedada no SQL Server Enterprise Edition. Na Edição Enterprise, o único tipo de ponto de extremidade válido é `WITNESS`. 
+   >Essa arquitetura permite que qualquer edição do SQL Server hospede a terceira réplica. Por exemplo, a terceira réplica pode ser hospedada no SQL Server Express Edition. Na Edição Express, o único tipo de ponto de extremidade válido é `WITNESS`. 
 
    ```SQL
    CREATE AVAILABILITY GROUP [ag1] 
@@ -193,16 +193,16 @@ Você também pode configurar um AG com `CLUSTER_TYPE=EXTERNAL` usando o SQL Ser
 
 ### <a name="join-secondary-replicas-to-the-ag"></a>Una réplicas secundárias ao AG
 
-O usuário do pacemaker requer as permissões `ALTER`, `CONTROL` e `VIEW DEFINITION` no grupo de disponibilidade em todas as réplicas. Para conceder as permissões, execute o seguinte script Transact-SQL depois que o grupo de disponibilidade for criado na réplica primária e em cada réplica secundária imediatamente depois que elas forem adicionadas ao grupo de disponibilidade. Antes de executar o script, substitua `<pacemakerLogin>` pelo nome da conta de usuário do pacemaker.
+O usuário do pacemaker requer as permissões `ALTER`, `CONTROL` e `VIEW DEFINITION` no grupo de disponibilidade em todas as réplicas. Para conceder as permissões, execute o seguinte script Transact-SQL depois que o grupo de disponibilidade for criado na réplica primária e em cada réplica secundária imediatamente depois que elas forem adicionadas ao grupo de disponibilidade. Antes de executar o script, substitua `<pacemakerLogin>` pelo nome da conta de usuário do pacemaker. Se você não tiver um logon do pacemaker, [crie um logon do sql server para pacemaker](sql-server-linux-availability-group-cluster-ubuntu.md#create-a-sql-server-login-for-pacemaker).
 
-```Transact-SQL
+```sql
 GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
 GRANT VIEW SERVER STATE TO <pacemakerLogin>
 ```
 
 O script Transact-SQL a seguir une uma instância do SQL Server a um AG chamado `ag1`. Atualize o script para o seu ambiente. Em cada instância do SQL Server que hospeda uma réplica secundária, execute o script Transact-SQL a seguir para unir ao AG.
 
-```Transact-SQL
+```sql
 ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
          
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 20c6b4a4235e384f9a5c32ee6cef28d0f136f106
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5a2475de5c318a937c1290d9f235f074909a7954
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768689"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030325"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurar o banco de dados de distribuição de replicação no grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +54,13 @@ Depois que um banco de dados de distribuição no AG for configurado com base na
 
 ## <a name="limitations-or-exclusions"></a>Limitações e exclusões
 
-- Não há suporte para o distribuidor local. Por exemplo, o publicador e o distribuidor devem ser instâncias diferentes do SQL Server. Um publicador que usa a si mesmo como distribuidor (também conhecido como distribuidor local) não pode dar suporte a bancos de dados de distribuição em um AG.
+- Não há suporte para o distribuidor local. Por exemplo, o publicador e o distribuidor devem ser instâncias diferentes do SQL Server. Essas instâncias podem ser hospedadas nos mesmos conjuntos dos nós.  Um publicador que usa a si mesmo como distribuidor (também conhecido como distribuidor local) não pode dar suporte a bancos de dados de distribuição em um AG.
 - Não há suporte para o publicador Oracle.
 - Não há suporte para replicação de mesclagem.
 - Não há suporte para replicação transacional com assinante de atualização imediata ou em fila.
 - Não há suporte para a replicação ponto a ponto.
-- Todas as instâncias do SQL Server que hospedam réplicas de banco de dados de distribuição devem ter a Atualização Cumulativa 6 do SQL Server 2017 ou posterior. 
+- Todas as instâncias do SQL Server 2017 que hospedam réplicas de banco de dados de distribuição devem ter a Atualização Cumulativa 6 do SQL Server 2017 ou posterior. 
+- Todas as instâncias do SQL Server 2016 que hospedam réplicas de banco de dados de distribuição devem ter a Atualização Cumulativa 3 do SQL Server 2016 SP2 ou posterior.
 - Todas as instâncias do SQL Server que hospedam réplicas de banco de dados de distribuição devem ter a mesma versão, exceto durante o período curto da atualização.
 - O banco de dados de distribuição deve estar no modo de recuperação completa.
 - Para a recuperação e para permitir o truncamento do log de transações, configure backups completos e de log de transações.

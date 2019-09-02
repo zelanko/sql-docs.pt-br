@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 275ef0ef83c073726cebf80b63e1d8f9640eca81
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 6464f83c8783c6fa82f397b7a30ed068f695e66b
+ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903637"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70026238"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novidades no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -91,7 +91,7 @@ Para obter mais detalhes, confira [O que são SQL Server [!INCLUDE[big-data-clus
 
 |Novo recurso ou atualização | Detalhes |
 |:---|:---|
-|Suporte para codificação de caracteres UTF-8 |Suporte para caractere UTF-8 para importação e exportação de codificação, e como agrupamento de nível de banco de dados ou de nível de coluna para dados de cadeia de caracteres. Isso dá suporte a aplicativos que se estendem para uma escala global, em que o requisito de fornecer aplicativos e serviços de banco de dados multilíngues globais é essencial para atender às demandas dos clientes e às regulamentações específicas do mercado. Confira [Suporte a agrupamentos e a Unicode](../relational-databases/collations/collation-and-unicode-support.md)<br/><br/>[a versão Release Candidate [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] habilita o suporte a UTF-8 para tabelas externas do Polybase e para Always Encrypted.|
+|Suporte para codificação de caracteres UTF-8 |Suporte para caractere UTF-8 para importação e exportação de codificação, e como agrupamento de nível de banco de dados ou de nível de coluna para dados de cadeia de caracteres. Isso dá suporte a aplicativos que se estendem para uma escala global, em que o requisito de fornecer aplicativos e serviços de banco de dados multilíngues globais é essencial para atender às demandas dos clientes e às regulamentações específicas do mercado. Confira [Suporte a agrupamentos e a Unicode](../relational-databases/collations/collation-and-unicode-support.md)<br/><br/> A versão Release Candidate [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] habilita o suporte a UTF-8 para tabelas externas do Polybase e para Always Encrypted.|
 | &nbsp; | &nbsp; |
 
 ### <a name="polybase"></a>PolyBase
@@ -99,7 +99,7 @@ Para obter mais detalhes, confira [O que são SQL Server [!INCLUDE[big-data-clus
 |Novo recurso ou atualização | Detalhes |
 |:---|:---|
 |Consultar tabelas externas |Os nomes de coluna da tabela externa agora são usados para consultar fontes de dados de SQL Server, Oracle, Teradata, MongoDB e ODBC. Confira [O que é o PolyBase](../relational-databases/polybase/polybase-guide.md).|
-|Suporte para codificação de caracteres UTF-8|Suporte a caracteres UTF-8 com tabelas externas. Confira [Suporte a agrupamentos e a Unicode](../relational-databases/collations/collation-and-unicode-support.md)|
+|Suporte para codificação de caracteres UTF-8|Suporte a caracteres UTF-8 com tabelas externas. Confira [Suporte a agrupamentos e a Unicode](../relational-databases/collations/collation-and-unicode-support.md).|
 | &nbsp; | &nbsp; |
 
 ### <a name="server-settings"></a>Configurações do servidor
@@ -147,6 +147,7 @@ Para obter mais detalhes, confira [O que são SQL Server [!INCLUDE[big-data-clus
 |:---|:---|
 |Recuperação de banco de dados acelerada | Habilitar a recuperação de banco de dados acelerada por banco de dados. Confira [Recuperação acelerada de banco de dados](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).|
 |Forçar cursores estáticos e de avanço rápido | Suporte à imposição de plano de Repositório de Consultas para cursores fast forward e static. Confira [Planejar forçar suporte para cursores estáticos e de avanço rápido](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23).|
+|Governança de recursos| O valor configurável para a opção `REQUEST_MAX_MEMORY_GRANT_PERCENT` de `CREATE WORKLOAD GROUP` e `ALTER WORKLOAD GROUP` foi alterado de um inteiro para um tipo de dados float, para permitir um controle mais granular dos limites de memória. Confira [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) e [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md).|
 |Recompilações reduzidas para cargas de trabalho| Melhora o uso de tabelas temporárias entre vários escopos. Confira [Recompilações reduzidas para cargas de trabalho](../relational-databases/tables/tables.md#ctp23) |
 |Escalabilidade de ponto de verificação indireto |Confira [Escalabilidade de ponto de verificação indireto aprimorada](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
 |Metadados `tempdb` com otimização de memória| O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] apresenta um novo recurso que faz parte da família de recursos do [Banco de Dados em Memória](../relational-databases/in-memory-database.md), os metadados do `tempdb` com otimização de memória, que efetivamente remove esse gargalo e possibilita um novo nível de escalabilidade para cargas de trabalho com uso intenso do `tempdb`. No [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], as tabelas do sistema envolvidas no gerenciamento dos metadados da tabela temporária podem ser movidas para tabelas com otimização de memória não duráveis e livres de travas. Confira [Metadados com otimização de memória `tempdb`](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
@@ -155,7 +156,7 @@ Para obter mais detalhes, confira [O que são SQL Server [!INCLUDE[big-data-clus
 |Compilação adiada de variável da tabela|Melhora a qualidade do plano e o desempenho geral para consultas que fazem referência a variáveis de tabela. Durante a otimização e compilação inicial, esse recurso propaga estimativas de cardinalidade com base nas contagens reais de linha de variável de tabela. Essas informações de contagem de linha precisas otimizam as operações de plano de downstream. Confira [Compilação adiada de variável da tabela](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |
 |`APPROX_COUNT_DISTINCT `|Para cenários em que a precisão absoluta não é importante, mas a capacidade de resposta é essencial, `APPROX_COUNT_DISTINCT` agrega grandes conjuntos de dados usando menos recursos do que `COUNT(DISTINCT())` para uma simultaneidade superior. Confira [Processamento de consulta aproximada](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing).|
 |Modo de Lote no Rowstore|O modo de lote em rowstore permite que a execução em modo de lote sem a necessidade de índices columnstore. A execução do modo em lote usa a CPU com mais eficiência durante cargas de trabalho analíticas, mas até [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] ela era usada apenas quando uma consulta incluía operações com índices columnstore. No entanto, alguns aplicativos podem usar recursos sem suporte dos índices columnstore e, portanto, não poderiam aproveitar o modo de lote. A partir do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], o modo de lote é habilitado em cargas de trabalho analíticas qualificadas cujas consultas incluem operações com qualquer tipo de índice (rowstore ou columnstore). Confira [Modo de lote em rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore). |
-|Embutimento de UDF escalar|Transforma automaticamente UDFs escalares em expressões relacionais e as insere na consulta SQL chamada. Essa transformação melhora o desempenho de cargas de trabalho que aproveitam as UDFs escalares. [Inlining de UDF escalar](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).|
+|Embutimento de UDF escalar|Transforma automaticamente UDFs escalares em expressões relacionais e as insere na consulta SQL chamada. Essa transformação melhora o desempenho de cargas de trabalho que aproveitam as UDFs escalares. Confira [Inlining de UDF escalar](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).|
 | &nbsp; | &nbsp; |
 
 ### <a name="availability-groups"></a>Grupos de disponibilidade
@@ -193,14 +194,6 @@ Para obter mais detalhes, confira [O que são SQL Server [!INCLUDE[big-data-clus
 |Aprimoramentos `tempdb` | Por padrão, uma nova instalação do SQL Server em Linux cria vários arquivos de dados `tempdb` com base no número de núcleos lógicos (com até 8 arquivos de dados). Isso não é aplicável a upgrades de versões principais ou secundárias no local. Cada arquivo do `tempdb` tem 8 MB com um aumento automático de 64 MB. Esse comportamento é semelhante à instalação padrão do SQL Server no Windows. |
 | PolyBase em Linux | [Instalar o PolyBase](../relational-databases/polybase/polybase-linux-setup.md) no Linux para conectores não Hadoop.<br/><br/>[Mapeamento de tipo do PolyBase](../relational-databases/polybase/polybase-type-mapping.md). |
 | Suporte ao CDC (captura de dados de alterações) | O CDC (captura de dados de alterações) agora é compatível no Linux para SQL Server 2019. |
-| &nbsp; | &nbsp; |
-
-### <a name="setup"></a>Instalação
-
-|Novo recurso ou atualização | Detalhes |
-|:---|:---|
-|Novas opções de configuração de memória | Define durante a instalação as configurações de servidor de *memória mínima do servidor (MB)* e *memória máxima do servidor (MB)* . Para obter mais informações, confira os parâmetros `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` e `SQLMAXMEMORY` em [Instalar SQL Server no prompt de comando](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). O valor proposto será alinhado com as diretrizes de configuração de memória nas [Opções de configuração de memória do servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).|
-|Novas opções de configuração de paralelismo | Define o *grau máximo de configuração de* servidor de paralelismo durante a instalação. Para obter mais informações, confira o parâmetro `SQLMAXDOP` em [Instalar SQL Server no prompt de comando](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). O valor padrão será alinhado às diretrizes de grau máximo da opção de paralelismo especificadas em [Configurar a opção de configuração de servidor grau máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).|
 | &nbsp; | &nbsp; |
 
 ## <a id="ml"></a> Serviços de Machine Learning do SQL Server
@@ -247,7 +240,7 @@ Além disso, os recursos a seguir foram adicionados ou aprimorados para o [!INCL
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]Notas sobre a versão](sql-server-ver15-release-notes.md).
+- [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Notas sobre a versão] (sql-server-ver15-release-notes.md).
 
 - [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: White paper técnico](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Publicado em setembro de 2018. Aplica-se ao Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 para contêineres do Windows, Linux e Docker.
 

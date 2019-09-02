@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 08/15/2019
-ms.openlocfilehash: cad91dc5b48a60746b4f8ef1f4831a1aa9dc2c40
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: fd10408eb976dd40383c058489a971b557a2acd4
+ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553111"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70059260"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas sobre a versão relacionadas ao Azure Data Studio
 
@@ -33,7 +33,7 @@ ms.locfileid: "69553111"
 | Melhorias ao Notebook | &bull; &nbsp; Adicionar código ou célula de texto na linha <br/>&bull; &nbsp; Adicionada a possibilidade de clicar com o botão direito do mouse na grade de resultados SQL para salvar o resultado como CSV, JSON etc. <br/> &bull; &nbsp; Melhoria realizada no desempenho de carregamento de notebook, para um carregamento de JSON mais rápido <br/> &bull; &nbsp; Veja a lista completa de melhorias [aqui](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed) |
 | Suporte ao SQL Server 2019 |  Esta versão inclui suporte para recursos adicionais de Cluster de Big Data do SQL Server 2019, incluindo: <br/> &bull; &nbsp; Redução do tempo necessário para carregar as informações da coluna e da tabela na página de mapeamento de objeto. <br/> &bull; &nbsp; Correção de um bug com o carregamento de credenciais de banco de dados com escopo na página de detalhes de conexão. <br/> &bull; &nbsp; Aumento no tamanho da amostra padrão usada para análise PROSE. | 
 | A extensão Dacpac agora dá suporte a AAD | 
-| Mesclagem na versão de maio do Visual Studio Code 1.37 | Os aprimoramentos mais recentes podem ser encontrados [aqui](https://code.visualstudio.com/updates/v1_37). |
+| Mesclagem na versão de julho do Visual Studio Code 1.37 | Os aprimoramentos mais recentes podem ser encontrados [aqui](https://code.visualstudio.com/updates/v1_37). |
 | Bugs e problemas resolvidos | Para obter uma lista completa das correções, confira [Bugs e problemas, no GitHub](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -69,7 +69,7 @@ ms.locfileid: "69553111"
 | Melhorias na Comparação de Esquemas | &bull; &nbsp; Adição de opções Excluir/Incluir <br/>&bull; &nbsp; Geração de Script abre o script após ser gerado <br/>&bull; &nbsp; Barras de rolagem duplas removidas  <br/>&bull; &nbsp; Aprimoramentos de formatação e layout <br/>&bull; &nbsp; As alterações completas podem ser encontradas [aqui](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
 | Seção Mensagens movida para a própria guia | Quando os usuários executavam consultas SQL, os resultados e as mensagens ficavam em painéis empilhados. Agora eles estão em guias separadas em um painel como no SSMS. |
 | Melhorias do Notebook do SQL | &bull; &nbsp; Agora os usuários podem decidir usar suas próprias instalações do Python 3 ou do Anaconda em notebooks <br/>&bull; &nbsp; Várias correções de estabilidade e de ajuste/término <br/> &bull; &nbsp; Veja a lista completa de melhorias [aqui](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
-| Mesclagem na versão de maio do Visual Studio Code 1.34 | Os aprimoramentos mais recentes podem ser encontrados [aqui](https://code.visualstudio.com/updates/v1_34) |
+| Mesclagem na versão de abril do Visual Studio Code 1.34 | Os aprimoramentos mais recentes podem ser encontrados [aqui](https://code.visualstudio.com/updates/v1_34) |
 | Bugs e problemas resolvidos. | Confira [Bugs e problemas, no GitHub](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1). |
 | &nbsp; | &nbsp; |
 

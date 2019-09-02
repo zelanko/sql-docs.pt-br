@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f1f8f4937efa5db9de76d6e111d5a0abf0223d23
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: b6448718ce9e9cea380c352a57c3e824709de848
+ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715290"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70059283"
 ---
 # <a name="overview-and-usage-scenarios"></a>Visão geral e cenários de uso
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ O repositório de amostras do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 
 - [A Quorum dobra a carga de trabalho principal do banco de dados, reduzindo a utilização em 70%, aproveitando o OLTP in-memory no Banco de Dados SQL do Azure](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
 - A EdgeNet melhorou o desempenho do carregamento de dados em lote e eliminou a necessidade de manter um cache de camada intermediária, com o OLTP in-memory no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Empresa de serviços de dados ganha acesso em tempo real a dados de produto com a tecnologia in-memory](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
-- O Beth Israel Deaconess Medical Center conseguiu melhorar de forma significativa a taxa de ingestão de dados de controladores de domínio e lidar com picos na carga de trabalho, com o OLTP In-Memory no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for ]
+- O Beth Israel Deaconess Medical Center conseguiu melhorar de forma significativa a taxa de ingestão de dados de controladores de domínio e lidar com picos na carga de trabalho, com o OLTP In-Memory no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for
 
 ### <a name="caching-and-session-state"></a>Estado de sessão e cache
 
