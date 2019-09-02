@@ -1,10 +1,10 @@
 - name: Fazer backup e restaurar bancos de dados do SQL Server
   href: back-up-and-restore-of-sql-server-databases.md
   items:
-    - name: Backup e restauração do SQL Server com o serviço de armazenamento de Blob do Windows Azure
+    - name: Backup e restauração do SQL Server no serviço de Armazenamento de Blobs
       href: sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
       items:
-        - name: Usar o PowerShell para fazer backup de vários bancos de dados no serviço de armazenamento de Blob do Windows Azure
+        - name: Usar o PowerShell para fazer backup de vários bancos de dados no serviço de Armazenamento de Blobs
           href: back-up-multiple-databases-to-azure-blob-storage-powershell.md
     - name: Backup do SQL Server para URL
       href: sql-server-backup-to-url.md
@@ -13,24 +13,24 @@
           href: sql-server-backup-to-url-best-practices-and-troubleshooting.md
     - name: Excluindo arquivos de blob de backup com arrendamentos ativos
       href: deleting-backup-blob-files-with-active-leases.md
-- name: Backup Gerenciado do SQL Server para Windows Azure
+- name: Backup gerenciado do SQL Server para Azure
   href: sql-server-managed-backup-to-microsoft-azure.md
   items:
-    - name: Configurando o Backup Gerenciado do SQL Server para Windows Azure
+    - name: Configurar o backup gerenciado do SQL Server para Azure
       href: enable-sql-server-managed-backup-to-microsoft-azure.md
-    - name: 'Backup Gerenciado do SQL Server para Microsoft Azure: Interoperabilidade e coexistência'
+    - name: 'Backup gerenciado do SQL Server para Azure: Interoperabilidade e coexistência'
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md
-    - name: Backup gerenciado do SQL Server no Windows Azure - Configurações de retenção e armazenamento
+    - name: Backup gerenciado do SQL Server para Azure – Configurações de retenção e armazenamento
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md
-    - name: Configurando o Backup Gerenciado do SQL Server para Windows Azure para Grupos de Disponibilidade
+    - name: Configurar o backup gerenciado do SQL Server para Azure para grupos de disponibilidade
       href: ../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md
-    - name: Monitorar o Backup Gerenciado do SQL Server para Windows Azure
+    - name: Monitorar o backup gerenciado do SQL Server para Azure
       href: ../../database-engine/monitor-sql-server-managed-backup-to-windows-azure.md
-    - name: Solucionar problemas de Backup Gerenciado do SQL Server para Microsoft Azure
+    - name: Solucionar problemas de backup gerenciado do SQL Server para Azure
       href: ../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md
     - name: Configurar o Backup Gerenciado (SQL Server Management Studio)
       href: ../../database-engine/configure-managed-backup-sql-server-management-studio.md
-    - name: Restaurando de backups armazenados no Windows Azure
+    - name: Restaurar de backups armazenados no Azure
       href: restoring-from-backups-stored-in-microsoft-azure.md
 - name: Modelos de recuperação
   href: recovery-models-sql-server.md
@@ -160,7 +160,7 @@
       href: dbengine-continue-with-restore.md
     - name: Selecionar Dispositivo de Backup
       href: select-backup-device.md
-    - name: Conectar ao Windows Azure Storage (Restaurar)
+    - name: Conectar a um Armazenamento do Microsoft Azure (restaurar)
       href: connect-to-microsoft-azure-storage-restore.md
     - name: Restaurar um banco de dados em um novo local
       href: restore-a-database-to-a-new-location-sql-server.md

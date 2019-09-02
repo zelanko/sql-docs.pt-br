@@ -23,12 +23,12 @@ ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66d10ee997949d8415ebe3ed582f63b1994840cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 699d7779c3409a69d4389a96b93feab1cae3f9e0
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086758"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148836"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,9 +43,9 @@ Define a data combinada com uma hora de um dia que possui reconhecimento de fuso
 |Uso|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
 |Formatos de literal de cadeia de caracteres padrão (usados para cliente de nível inferior)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> Para obter mais informações, consulte a seção Compatibilidade com versões anteriores a seguir.|  
 |Intervalo de datas|0001-01-01 a 9999-12-31<br /><br /> 1 de janeiro de 1 CE até 31 de dezembro de 9999 CE|  
-|Intervalo de horas|00:00:00 a 23:59:59.9999999 (não há suporte para segundos fracionários no Informatica)|  
-|Intervalo de deslocamento de fuso horário|-14h00 a +14h00 (o deslocamento de fuso horário é ignorado no Informatica)|  
-|Intervalos de elementos|AAAA são quatro dígitos, variando de 0001 a 9999, que representam um ano.<br /><br /> MM são dois dígitos, variando de 01 a 12, que representam um mês do ano especificado.<br /><br /> DD são dois dígitos, variando de 01 a 31, dependendo do mês, que representam um dia do mês especificado.<br /><br /> hh são dois dígitos, variando de 00 a 23, que representam a hora.<br /><br /> mm são dois dígitos, variando de 00 a 59, que representam o minuto.<br /><br /> ss são dois dígitos, variando de 00 a 59, que representam o segundo.<br /><br /> n* é de zero a sete dígitos, variando de 0 a 9999999, que representa as frações de segundo. Não há suporte para segundos fracionários no Informatica.<br /><br /> hh são dois dígitos que abrangem de -14 a +14. O deslocamento de fuso horário é ignorado no Informatica.<br /><br /> mm são dois dígitos que abrangem de 00 a 59. O deslocamento de fuso horário é ignorado no Informatica.|  
+|Intervalo de horas|00:00:00 a 23:59:59.9999999|  
+|Intervalo de deslocamento de fuso horário|-14:00 a +14:00|  
+|Intervalos de elementos|AAAA são quatro dígitos, variando de 0001 a 9999, que representam um ano.<br /><br /> MM são dois dígitos, variando de 01 a 12, que representam um mês do ano especificado.<br /><br /> DD são dois dígitos, variando de 01 a 31, dependendo do mês, que representam um dia do mês especificado.<br /><br /> hh são dois dígitos, variando de 00 a 23, que representam a hora.<br /><br /> mm são dois dígitos, variando de 00 a 59, que representam o minuto.<br /><br /> ss são dois dígitos, variando de 00 a 59, que representam o segundo.<br /><br /> n* é de zero a sete dígitos, variando de 0 a 9999999, que representa as frações de segundo.<br /><br /> hh são dois dígitos que abrangem de -14 a +14. <br /><br /> mm são dois dígitos que abrangem de 00 a 59.|  
 |Comprimento de caracteres|Mínimo de 26 posições (YYYY-MM-DD hh:mm:ss {+&#124;-}hh:mm) até um máximo de 34 (YYYY-MM-DD hh:mm:ss.nnnnnnn {+&#124;-}hh:mm)|  
 |Precisão, escala|Veja a tabela abaixo.|  
 |Tamanho de armazenamento|10 bytes, fixos, é o padrão com o padrão de precisão de segundos fracionários de 100ns.|  

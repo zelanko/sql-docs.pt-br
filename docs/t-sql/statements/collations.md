@@ -1,7 +1,7 @@
 ---
 title: COLLATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 08/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77b3b6a7987e4d02640bc1daadfd4cffe77b3354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fbf588e3c9922f9b76363db64e9d4afade040b7f
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141139"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190393"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
@@ -97,8 +97,6 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] só pode aceitar pá
 - Ao restaurar ou anexar um banco de dados, a ordenação padrão do banco de dados e a ordenação de qualquer coluna ou parâmetro **char**, **varchar** e **text** no banco de dados devem ser compatíveis com o sistema operacional.
 
 > [!NOTE]
-> A ordenação do servidor da instância gerenciada do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] é **SQL_Latin1_General_CP1_CI_AS** e não pode ser alterada.
->
 > Há suporte para conversões de página de código em tipos de dados **char** e **varchar**, mas não no tipo de dados **text**. A perda de dados durante traduções de página de código não é informada.
 >
 > Se a ordenação especificada ou a ordenação usada pelo objeto referenciado usar uma página de código não compatível com o Windows, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibirá um erro.

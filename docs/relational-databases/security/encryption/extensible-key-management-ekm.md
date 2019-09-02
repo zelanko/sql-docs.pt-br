@@ -1,7 +1,7 @@
 ---
 title: EKM (Gerenciamento extensível de chaves) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: aliceku
 ms.author: aliceku
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16daf2968b80b5ca93ba117e850999a89411fb59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1526a23955a5e39f3f70ebe9a457560514e164fb
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049878"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148798"
 ---
 # <a name="extensible-key-management-ekm"></a>Gerenciamento extensível de chaves (EKM)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece funcionalidades de criptografia de dados com o *EKM* (Gerenciador Extensível de Chaves), usando o provedor *Microsoft Cryptographic API* (MSCAPI) para criptografia e geração de chave. As chaves de criptografia de dados e a criptografia da chave são criadas em contêineres chaves e devem ser exportadas por um provedor antes de serem armazenadas no banco de dados. Essa abordagem habilita o gerenciamento de chave, que inclui uma hierarquia de chave de criptografia e backup da chave, para ser tratado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Com a crescente demanda de conformidade reguladora e referente à privacidade dos dados, as organizações estão tirando vantagem da criptografia como meio de oferecer uma solução de "defesa aprofundada". Essa abordagem geralmente não é muito prática se usar só as ferramentas de gerenciamento de criptografia do banco de dados. Os fornecedores de hardware fornecem produtos que corrigem o gerenciamento de chave empresarial, usando o *HSM* (módulos de segurança do hardware). Os dispositivos HSM armazenam chaves de criptografia em módulos de software ou hardware. É uma solução mais segura porque as chaves de criptografia não estão com dados de criptografia.  

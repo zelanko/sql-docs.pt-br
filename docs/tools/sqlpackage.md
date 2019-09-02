@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 52d3a6f14042a5208803c84557d6b3b7e4e4f37e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 89f6139861b971eb6c1f5771bd4ee77cf379f56f
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986225"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190379"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -219,7 +219,8 @@ Uma operação de publicação SqlPackage.exe atualiza o esquema de um banco de 
 |**/p:**|ScriptNewConstraintValidation=(BOOLEAN 'True')|No final da publicação, todas as restrições serão verificadas como um conjunto, evitando erros de dados causados por uma restrição check ou Foreign Key no meio de Publish. Se definido como False, as restrições serão publicadas sem verificar os dados correspondentes.|
 |**/p:**|ScriptRefreshModule=(BOOLEAN 'True')|Inclua instruções de atualização no fim do script de publicação.|
 |**/p:**|Storage=({File&#124;Memory})|Especifica como os elementos são armazenados ao criar o modelo de banco de dados. Por razões de desempenho, o padrão é InMemory. Para bancos de dados grandes, é necessário realizar armazenamento de backup de arquivos.|
-|**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|Especifica se os erros encontrados durante a verificação de publicação devem ser tratados como avisos. A verificação é executada em relação ao plano de implantação gerado antes de o plano ser executado em relação ao banco de dados de destino. A verificação do plano detecta problemas, como a perda de objetos apenas de destino (por exemplo, índices), que devem ser cancelados para fazer uma alteração. A verificação também detectará situações em que existem dependências (como tabelas ou exibições) devido a uma referência a um projeto composto, mas não existem no banco de dados de destino. Você pode optar por fazer isso para obter uma lista completa de todos os problemas, em vez de fazer com que a ação de publicação seja interrompida no primeiro erro.|**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|Especifica se devem ser gerados avisos quando diferenças forem localizadas em objetos que não podem ser modificados, por exemplo, se o tamanho ou os caminhos de arquivo forem diferentes para um arquivo.|
+|**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|Especifica se os erros encontrados durante a verificação de publicação devem ser tratados como avisos. A verificação é executada em relação ao plano de implantação gerado antes de o plano ser executado em relação ao banco de dados de destino. A verificação do plano detecta problemas, como a perda de objetos apenas de destino (por exemplo, índices), que devem ser cancelados para fazer uma alteração. A verificação também detectará situações em que existem dependências (como tabelas ou exibições) devido a uma referência a um projeto composto, mas não existem no banco de dados de destino. Você pode optar por fazer isso para obter uma lista completa de todos os problemas, em vez de fazer com que a ação de publicação seja interrompida no primeiro erro.
+|**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|Especifica se devem ser gerados avisos quando diferenças forem localizadas em objetos que não podem ser modificados, por exemplo, se o tamanho ou os caminhos de arquivo forem diferentes para um arquivo.|
 |**/p:**|VerifyCollationCompatibility = (BOOLIANo ' true ')|Especifica se a compatibilidade de ordenação é verificada.|
 |**/p:**|VerifyDeployment=(BOOLEAN 'True')|Especifica se devem ser executadas verificações antes da publicação, o que interromperá a ação de publicação se houver problemas que possam bloquear uma publicação bem-sucedida. Por exemplo, sua ação de publicação poderá ser interrompida se você tiver chaves estrangeiras no banco de dados de destino que não existem no projeto de banco de dados, o que causará erros ao publicar.|
 |

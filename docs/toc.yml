@@ -64,7 +64,11 @@
             - name: Instalar ferramentas de Big Data
               href: big-data-cluster/deploy-big-data-tools.md
             - name: Instalar o azdata
-              href: big-data-cluster/deploy-install-azdata.md
+              items:
+                - name: Com o gerenciador de pacotes do Linux
+                  href: big-data-cluster/deploy-install-azdata-linux-package.md
+                - name: Com pip
+                  href: big-data-cluster/deploy-install-azdata.md
         - name: Implantar
           items:
             - name: Diretrizes de implantação
@@ -77,6 +81,8 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: Implantações offline
               href: big-data-cluster/deploy-offline.md
+            - name: Implantar com alta disponibilidade
+              href: big-data-cluster/deployment-high-availability.md
             - name: Clusters do Kubernetes
               items:
                 - name: Serviço de Kubernetes do Azure
@@ -169,6 +175,8 @@
               href: big-data-cluster/cluster-troubleshooting-commands.md
             - name: Gerenciar com o notebook
               href: big-data-cluster/manage-notebooks.md
+            - name: Gerenciar com o painel do controlador
+              href: big-data-cluster/manage-with-controller-dashboard.md
         - name: Notebooks
           items:
             - name: Visão geral de notebooks
@@ -196,7 +204,15 @@
         - name: referência do azdata
           items:
             - name: azdata
-              href: big-data-cluster/reference-azdata.md
+              items:
+                - name: azdata
+                  href: big-data-cluster/reference-azdata.md
+                - name: controle
+                  href: big-data-cluster/reference-azdata-control.md
+                - name: notebook
+                  href: big-data-cluster/reference-azdata-notebook.md
+                - name: sql
+                  href: big-data-cluster/reference-azdata-sql.md
             - name: Implantação de aplicativo
               items:
                 - name: app
@@ -207,6 +223,10 @@
               items:
                 - name: bdc
                   href: big-data-cluster/reference-azdata-bdc.md
+                - name: bdc app
+                  href: big-data-cluster/reference-azdata-bdc-app.md
+                - name: bdc app status
+                  href: big-data-cluster/reference-azdata-bdc-app-status.md
                 - name: bdc config
                   href: big-data-cluster/reference-azdata-bdc-config.md
                 - name: bdc control
@@ -217,10 +237,16 @@
                   href: big-data-cluster/reference-azdata-bdc-debug.md
                 - name: bdc endpoint
                   href: big-data-cluster/reference-azdata-bdc-endpoint.md
+                - name: bdc gateway
+                  href: big-data-cluster/reference-azdata-bdc-gateway.md
+                - name: bdc gateway status
+                  href: big-data-cluster/reference-azdata-bdc-gateway-status.md
                 - name: HDFS do BDC
                   href: big-data-cluster/reference-azdata-bdc-hdfs.md
                 - name: montagem de HDFS do BDC
                   href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
+                - name: bdc hdfs status
+                  href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
                 - name: bdc pool
                   href: big-data-cluster/reference-azdata-bdc-pool.md
                 - name: bdc pool status
@@ -233,6 +259,10 @@
                   href: big-data-cluster/reference-azdata-bdc-spark-session.md
                 - name: instrução do Spark do BDC
                   href: big-data-cluster/reference-azdata-bdc-spark-statement.md
+                - name: bdc spark status
+                  href: big-data-cluster/reference-azdata-bdc-spark-status.md
+                - name: bdc sql
+                  href: big-data-cluster/reference-azdata-bdc-sql.md
                 - name: bdc status
                   href: big-data-cluster/reference-azdata-bdc-status.md
 - name: Continuidade de negócios
@@ -2510,7 +2540,7 @@
           items:
             - name: Componentes
               href: relational-databases/native-client/applications/components-of-sql-server-native-client.md
-            - name: Conectando-se a um Microsoft Azure
+            - name: Conectar-se ao SQL do Azure usando o cliente nativo
               href: relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
             - name: Função ConnectionValidSharedMemory na memória compartilhada dbmslpcn.dll
               href: relational-databases/native-client/applications/connectionvalidsharedmemory-function-in-dbmslpcn-dll-shared-memory.md
