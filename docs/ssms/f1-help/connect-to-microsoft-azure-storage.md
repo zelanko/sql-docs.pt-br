@@ -13,19 +13,19 @@ f1_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e7f3a8d7168e9e1b9e321a83e7e1d7143b5bcf1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8f4b05cc0ebd3c3d230b5f42bb46b74885e8e1e6
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265085"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155678"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Conectar ao Armazenamento do Microsoft Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Use a caixa de diálogo **Conexão de Armazenamento do Windows Azure** para especificar uma conta de armazenamento e validar sua conexão com o Windows Azure.  
+Use a caixa de diálogo **Conexão de Armazenamento do Microsoft Azure** para especificar uma conta de armazenamento e validar sua conexão com o Azure.  
   
 ## <a name="options"></a>Opções  
-Especifique as informações a seguir sobre sua conta do Windows Azure e clique em **Avançar** para continuar.  
+Especifique as informações a seguir sobre sua conta do Azure e clique em **Avançar** para continuar.  
   
 1.  **Conta de Armazenamento** – Especifique o nome da conta de armazenamento.
 

@@ -23,12 +23,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 367815ef719b9a44462afc41f62e69d3c1f6fb26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4fafacc6dc11415ed691fdf64b494daebc8cc64
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134797"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176350"
 ---
 # <a name="export-a-data-tier-application"></a>Exportar um aplicativo da camada de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ No Banco de Dados SQL do Azure, é necessário conceder a permissão VIEW DEFINI
   
 -   **Salvar no disco local** – Cria um arquivo BACPAC em um diretório no computador local. Clique em **Procurar...** para navegar no computador local ou especifique o caminho no espaço fornecido. O nome do caminho deve incluir um nome de arquivo e a extensão .bacpac.  
   
--   **Salvar no Microsoft Azure** – Cria um arquivo BACPAC em um contêiner do Microsoft Azure. Você deve se conectar a um contêiner do Windows Azure para validar esta opção. Observe que esta opção também exige que você especifique um diretório local para o arquivo temporário. Observe que o arquivo temporário será criado no local especificado e permanecerá lá depois que a operação for concluída.  
+-   **Salvar no Azure**: cria um arquivo BACPAC em um contêiner do Azure. Você precisa se conectar a um contêiner do Azure para validar essa opção. Observe que esta opção também exige que você especifique um diretório local para o arquivo temporário. Observe que o arquivo temporário será criado no local especificado e permanecerá lá depois que a operação for concluída.  
   
  Para especificar um subconjunto de tabelas a serem exportadas, use a opção **Avançado** .  
   

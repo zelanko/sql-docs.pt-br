@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4ba9c414aa28455b15ef46fb9d334f40ee4a6b6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 050fb8ed2364066dfe0a6a41e41ec295590d7895
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944790"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155518"
 ---
 # <a name="restore-database-general-page"></a>Restaurar banco de dados (página Geral)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "67944790"
 |Termo|Definição|  
 |----------|----------------|  
 |**Backup de banco de dados**|Selecione o banco de dados a ser restaurado na lista suspensa. A lista contém apenas os bancos de dados dos quais foi feito um backup de acordo com o histórico de backup do **msdb** .|  
-|**Dispositivo**|Selecione os dispositivos lógicos ou físicos de backup (fitas, URLs ou arquivos) que contêm o backup ou os backups a serem restaurados. Isso será necessário se o backup de banco de dados foi feito em uma instância diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Para selecionar um ou mais dispositivos de backup lógicos ou físicos, clique no botão Procurar que abre a caixa de diálogo **Selecione dispositivos de backup** . Nessa caixa de diálogo você poderá selecionar até 64 dispositivos que pertencem a um único conjunto de mídias. Os dispositivos de fita devem ser conectados fisicamente ao computador que executa a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um arquivo de backup pode estar em um dispositivo de disco local ou remoto. Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md). Você também pode selecionar **URL** como o tipo de dispositivo para os arquivos de backup incluídos no armazenamento do Windows Azure.<br /><br /> Quando você fechar a caixa de diálogo **Selecione dispositivos de backup** , o dispositivo selecionado aparecerá como valores somente leitura na lista **Dispositivo** .|  
+|**Dispositivo**|Selecione os dispositivos lógicos ou físicos de backup (fitas, URLs ou arquivos) que contêm o backup ou os backups a serem restaurados. Isso será necessário se o backup de banco de dados foi feito em uma instância diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Para selecionar um ou mais dispositivos de backup lógicos ou físicos, clique no botão Procurar que abre a caixa de diálogo **Selecione dispositivos de backup** . Nessa caixa de diálogo você poderá selecionar até 64 dispositivos que pertencem a um único conjunto de mídias. Os dispositivos de fita devem ser conectados fisicamente ao computador que executa a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um arquivo de backup pode estar em um dispositivo de disco local ou remoto. Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md). Você também pode selecionar **URL** como o tipo de dispositivo para os arquivos de backup incluídos no armazenamento do Azure.<br /><br /> Quando você fechar a caixa de diálogo **Selecione dispositivos de backup** , o dispositivo selecionado aparecerá como valores somente leitura na lista **Dispositivo** .|  
 |**Backup de banco de dados**|Selecione o nome do banco de dados a partir do qual os backups deverão ser restaurados na lista suspensa.<br /><br /> Observação: Essa lista estará disponível apenas quando **Dispositivo** for selecionado. Apenas os bancos de dados que têm backups nos dispositivos selecionados estarão disponíveis.|  
   
 ### <a name="destination"></a>Destino  

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a793ddb2f1b16c8b2f7596c348966e24d2785345
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 190ff2f2f7fe510722f73c03bdc4beba18273d2b
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013994"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176212"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página Especificar réplicas (Assistente de novo grupo de disponibilidade: assistente para adicionar réplica)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68013994"
  **Instância do Servidor**  
  Exibe o nome da instância de servidor que hospedará a réplica de disponibilidade.  
   
- Se uma instância de servidor que você pretende usar para hospedar uma réplica secundária não estiver listada na grade **Réplicas de Disponibilidade**, clique no botão **Adicionar Réplica**. Se você estiver configurando um grupo de disponibilidade em um ambiente de TI híbrido (consulte [Alta disponibilidade e recuperação de desastre para SQL Server nas Máquinas Virtuais do Microsoft Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), clique no botão **Adicionar Réplica do Azure** para criar máquinas virtuais com réplicas secundárias no Microsoft Azure.  
+ Se uma instância de servidor que você pretende usar para hospedar uma réplica secundária não estiver listada na grade **Réplicas de Disponibilidade**, clique no botão **Adicionar Réplica**. Para configurar um grupo de disponibilidade em um ambiente de TI híbrido (confira [Alta disponibilidade e recuperação de desastre para SQL Server nas Máquinas Virtuais do Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), clique no botão **Adicionar Réplica do Azure** para criar máquinas virtuais com réplicas secundárias no Azure.  
   
  **Função inicial**  
  Indica a função que a nova réplica executará inicialmente: **Primária** ou **secundária**.  
@@ -66,7 +66,7 @@ ms.locfileid: "68013994"
  Clique para adicionar uma réplica secundária ao grupo de disponibilidade.  
   
  **Adicionar Réplica do Azure**  
- Clique para criar uma máquina virtual do Windows Azure que esteja executando uma réplica secundária no grupo de disponibilidade. Esta opção é aplicável apenas a um grupo de disponibilidade em TI híbrida que contenha réplicas locais. Para obter mais informações, consulte [Alta disponibilidade e recuperação de desastres para o SQL Server em máquinas virtuais do Windows Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
+ Clique para criar uma máquina virtual do Azure que esteja executando uma réplica secundária no grupo de disponibilidade. Esta opção é aplicável apenas a um grupo de disponibilidade em TI híbrida que contenha réplicas locais. Para obter mais informações, confira [Alta disponibilidade e recuperação de desastres para o SQL Server em Máquinas Virtuais do Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
   
  **Remover Réplica**  
  Clique para remover a réplica secundária especificada do grupo de disponibilidade.  

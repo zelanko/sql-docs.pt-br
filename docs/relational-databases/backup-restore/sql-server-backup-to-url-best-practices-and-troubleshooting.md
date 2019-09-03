@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c4c93f36ca78bbd6cdeedf8d88314f7374f34a9a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2d5ca430aa06e3f8a0072bff474e67e6f9defc74
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041384"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176368"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Práticas recomendadas e solução de problemas de backup do SQL Server para URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Este tópico inclui práticas recomendadas e dicas de solução de problemas para backup e restaurações do SQL Server no serviço de Blob do Windows Azure.  
+  Este tópico inclui melhores práticas e dicas de solução de problemas para backup e restaurações do SQL Server no serviço de Blobs do Azure.  
   
- Para obter mais informações sobre como usar o serviço de armazenamento de Blob do Windows Azure para operações de backup ou restauração do SQL Server, consulte:  
+ Para obter mais informações sobre como usar o serviço de Armazenamento de Blobs do Azure para operações de backup ou restauração do SQL Server, confira:  
   
 -   [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Tutorial: Backup e restauração do SQL Server para o serviço de Armazenamento de Blobs do Azure](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: Backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>Gerenciando backups  
  A lista a seguir inclui recomendações gerais para gerenciar backups:  
@@ -35,7 +35,7 @@ ms.locfileid: "68041384"
   
 -   Ao criar um contêiner, é recomendável definir o nível de acesso para **privado**, de forma que apenas os usuários ou as contas que podem fornecer as informações sobre autenticação necessárias possam ler ou gravar os blobs no contêiner.  
   
--   Para os bancos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em execução em uma Máquina Virtual do Microsoft Azure, use uma conta de armazenamento na mesma região que a máquina virtual para evitar custos com transferência de dados entre regiões. O uso da mesma região também assegura o desempenho ideal para operações de backup e restauração.  
+-   Para os bancos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em execução em uma máquina virtual do Azure, use uma conta de armazenamento na mesma região que a máquina virtual para evitar custos com transferência de dados entre regiões. O uso da mesma região também assegura o desempenho ideal para operações de backup e restauração.  
   
 -   A atividade de backup com falha pode resultar em um arquivo de backup inválido. Recomendamos a identificação periódica de backup com falha e exclusão dos arquivos de blob. Para obter mais informações, consulte [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md).  
   
@@ -45,18 +45,18 @@ ms.locfileid: "68041384"
   
 ## <a name="handling-large-files"></a>Tratando arquivos grandes  
   
--   A operação de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa vários threads para otimizar a transferência de dados para os serviços de armazenamento de Blob do Windows Azure.  No entanto, o desempenho depende de vários fatores, como largura de banda do ISV e tamanho do banco de dados. Se você pretende fazer backup de bancos de dados ou grupos de arquivos grandes em um banco de dados do SQL Server no local, é recomendável que você teste a taxa de transferência primeiro. O [SLA para armazenamento](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) do Azure tem tempos de processamento máximos para blobs que você pode levar em consideração.  
+-   A operação de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa vários threads a fim de otimizar a transferência de dados para os serviços de Armazenamento de Blobs do Azure.  No entanto, o desempenho depende de vários fatores, como largura de banda do ISV e tamanho do banco de dados. Se você pretende fazer backup de bancos de dados ou grupos de arquivos grandes em um banco de dados do SQL Server no local, é recomendável que você teste a taxa de transferência primeiro. O [SLA para armazenamento](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) do Azure tem tempos de processamento máximos para blobs que você pode levar em consideração.  
   
 -   O uso da opção `WITH COMPRESSION`, como recomendado na seção [Gerenciando o backup](##managing-backups), é muito importante ao fazer backup de arquivos grandes.  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>Solução de problemas de backup para ou restauração de URL  
- Estas são algumas maneiras rápidas de solucionar problemas de erros ao fazer backup ou restauração do serviço de armazenamento de Blob do Windows Azure.  
+ Veja a seguir algumas maneiras rápidas de solucionar problemas de erros ao fazer backup ou restauração do serviço de Armazenamento de Blobs do Azure.  
   
  Para evitar erros devido às opções sem suporte ou às limitações, examine a lista de limitações e as informações de suporte aos comandos BACKUP e RESTORE no artigo [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) .  
   
  **Erros de autenticação:**  
   
--   A `WITH CREDENTIAL` é uma opção nova e necessária para fazer backup ou restauração no serviço de Armazenamento de Blobs do Microsoft Azure. As falhas relacionadas à credencial podem ser as seguintes:  
+-   `WITH CREDENTIAL` é uma opção nova e obrigatória para fazer backup ou restauração no serviço de Armazenamento de Blobs do Azure. As falhas relacionadas à credencial podem ser as seguintes:  
   
      A credencial especificada no comando **BACKUP** ou **RESTORE** não existe. Para evitar esse problema, inclua instruções T-SQL para criar a credencial caso não exista nenhuma na instrução de backup. Este é um exemplo que você pode usar:  
   
@@ -70,7 +70,7 @@ ms.locfileid: "68041384"
   
 -   A credencial existem, mas a conta de logon usada para executar o comando de backup não tem permissões para acessar as credenciais. Use uma conta de logon na função **db_backupoperator** com permissões ***Alterar qualquer credencial*** .  
   
--   Verifique o nome da conta de armazenamento e os valores de chave. As informações armazenadas na credencial devem corresponder aos valores de propriedade da conta de armazenamento do Windows Azure que você está usando nas operações de backup e restauração.  
+-   Verifique o nome da conta de armazenamento e os valores de chave. As informações armazenadas na credencial devem corresponder aos valores de propriedade da conta de armazenamento do Azure que você está usando nas operações de backup e restauração.  
   
  **Erros/falhas de backup:**  
   

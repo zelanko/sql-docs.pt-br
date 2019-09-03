@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 97c28b53a15f1123acd8c22480743b64741229b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 78dd9533a33d3b28f4fffcb2bb0ff4cd6604713f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117079"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155819"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
  *object_name*  
  É o nome do objeto base que o sinônimo referencia.  
   
- O Banco de Dados SQL do Windows Azure oferece suporte ao formato de nome de três partes database_name.[schema_name].object_name quando o database_name é o banco de dados atual ou o database_name é tempdb e o object_name começa com #.  
+ O Banco de Dados SQL do Azure oferece suporte ao formato de nome de três partes database_name.[schema_name].object_name quando o database_name é o banco de dados atual ou o database_name é tempdb e o object_name começa com #.  
   
 ## <a name="remarks"></a>Remarks  
  O objeto base não precisa existir no momento da criação do sinônimo. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica a existência do objeto base em tempo de execução.  

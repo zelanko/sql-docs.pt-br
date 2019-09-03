@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 81df6387bf6744e436922c5b031d01fb86bc50dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bfda79efac4e64fbb735e424cad4b8bb9ba93851
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081437"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176269"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "68081437"
 ## <a name="backup-media-terms-and-definitions"></a>Termos e definições de mídia de backup  
   
  **[dispositivo de backup](../../relational-databases/backup-restore/backup-devices-sql-server.md)**  
- Um disco ou dispositivo de fita no qual são gravados backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nos quais eles podem ser restaurados. Os backups do SQL Server também podem ser gravados em um serviço de armazenamento do Blob do Microsoft Azure. O formato de **URL** é usado para especificar o destino e o nome do arquivo de backup. Para obter mais informações, veja [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Um disco ou dispositivo de fita no qual são gravados backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nos quais eles podem ser restaurados. Os backups do SQL Server também podem ser gravados em um serviço de Armazenamento de Blobs do Azure. O formato de **URL** é usado para especificar o destino e o nome do arquivo de backup. Para obter mais informações, veja [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  **[mídia de backup](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)**  
  Uma ou mais fitas ou arquivos de disco nos quais um ou mais backups foram gravados.  
@@ -149,7 +149,7 @@ ms.locfileid: "68081437"
   
 -   [Restaurar um backup de um dispositivo &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
--   [Tutorial: Backup e restauração do SQL Server para o serviço de Armazenamento de Blobs do Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: Backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **Criar um backup**  
   
@@ -172,7 +172,7 @@ ms.locfileid: "68081437"
   
 -   [Usar o Resource Governor para limitar o uso de CPU por meio de compactação de backup &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Tutorial: Backup e restauração do SQL Server para o serviço de Armazenamento de Blobs do Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: Backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="and-more"></a>E muito mais. 
  [Fazer backup e restaurar bancos de dados do SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   

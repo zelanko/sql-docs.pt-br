@@ -10,12 +10,12 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 1fb7e3e0a261c0cf518dda93610b721af14a3472
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136488"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155685"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -190,7 +190,7 @@ Em particular, se uma consulta contiver os predicados de igualdade que envolvem 
   
 **Solução alternativa:** Se estiver usando índices de hash, inspecione as consultas e os planos de consulta para determinar se as consultas poderão se beneficiar de operações de Busca de Índice em um subconjunto da chave de índice ou de operações de Busca de Índice em predicados de desigualdade. Se você precisar buscar em um subconjunto de chave de índice, use um índice não clusterizado, ou use um índice de HASH exatamente nas colunas em que você precisa buscar. Se você precisar buscar em um predicado de desigualdade, use um índice não clusterizado em vez de HASH.  
   
-#### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>Ocorrerá uma falha ao usar uma tabela com otimização de memória e uma variável de tabela com otimização de memória na mesma consulta, se a opção READ_COMMITTED_SNAPSHOT do banco de dados for definida como ON  
+#### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-read_committed_snapshot-is-set-to-on"></a>Ocorrerá uma falha ao usar uma tabela com otimização de memória e uma variável de tabela com otimização de memória na mesma consulta, se a opção READ_COMMITTED_SNAPSHOT do banco de dados for definida como ON  
 **Problema:** Se a opção de banco de dados READ_COMMITTED_SNAPSHOT estiver definida como ON e você acessar uma tabela com otimização de memória e uma variável de tabela com otimização de memória na mesma instrução fora do contexto de uma transação de usuário, esta mensagem de erro poderá ser exibida:  
   
 ```  
@@ -213,7 +213,7 @@ SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
   
 **Solução alternativa:** Nenhum. Não confie no worker_time relatado nos DMVs das estatísticas de execução para consultas de curta duração em procedimentos armazenados compilados de forma nativa.  
   
-#### <a name="error-with-showplanxml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>Erro com SHOWPLAN_XML para os procedimentos armazenados compilados de forma nativa que contêm expressões longas  
+#### <a name="error-with-showplan_xml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>Erro com SHOWPLAN_XML para os procedimentos armazenados compilados de forma nativa que contêm expressões longas  
 **Problema:** Se um procedimento armazenado nativamente compilado contiver uma expressão longa, obtendo SHOWPLAN_XML para o procedimento, usando a opção T-SQL SET SHOWPLAN_XML ON ou "Exibir Plano de Execução Estimado" no Management Studio, o seguinte erro poderá ocorrer:  
   
 ```  
@@ -334,10 +334,10 @@ Para obter mais informações, consulte [Dicas, truques e soluções de problema
   
 Para obter mais informações, consulte [Dicas, truques e soluções de problemas do SQL Server 2014 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=391254)  
   
-### <a name="AzureVM"></a>SQL Server 2014 RTM em máquinas virtuais do Microsoft Azure  
+### <a name="AzureVM"></a>SQL Server 2014 RTM em máquinas virtuais do Azure  
   
-#### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-windows-azure"></a>O assistente para adicionar réplica do Azure retorna um erro ao configurar um ouvinte do grupo de disponibilidade no Microsoft Azure  
-**Problema:** Se um Grupo de Disponibilidade tiver um Ouvinte, o Assistente para Adicionar Réplica do Azure retornará um erro quando você tentar configurar o Ouvinte no Microsoft Azure.  
+#### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-azure"></a>O Assistente para Adicionar Réplica do Azure retorna um erro ao configurar um Ouvinte do Grupo de Disponibilidade no Azure  
+**Problema:** Se um Grupo de Disponibilidade tiver um Ouvinte, o Assistente para Adicionar Réplica do Azure retornará um erro quando você tentar configurar o Ouvinte no Azure.  
   
 Esse problema se deve ao fato dos ouvintes do grupo de disponibilidade exigirem a atribuição de um endereço IP em cada sub-rede que hospeda réplicas do grupo de disponibilidade, inclusive a sub-rede do Azure.  
   
@@ -345,9 +345,9 @@ Esse problema se deve ao fato dos ouvintes do grupo de disponibilidade exigirem 
   
 1.  Na página do ouvinte, atribua um endereço IP estático livre na sub-rede do Azure que hospedará a réplica do grupo de disponibilidade para o ouvinte do grupo de disponibilidade.  
   
-    Essa solução alternativa permitirá que o Assistente conclua a adição da réplica no Microsoft Azure.  
+    Essa solução alternativa permitirá que o Assistente conclua a adição da réplica no Azure.  
   
-2.  Ao concluir o assistente, você precisará concluir a configuração de ouvinte no Windows Azure conforme descrito em [Configuração de ouvinte para grupos de disponibilidade AlwaysOn no Windows Azure](https://msdn.microsoft.com/library/dn376546.aspx)  
+2.  Ao concluir o assistente, você precisará concluir a configuração de Ouvinte no Azure conforme descrito em [Configuração de ouvinte para grupos de disponibilidade Always On no Azure](https://msdn.microsoft.com/library/dn376546.aspx)  
   
 ### <a name="SSAS"></a>Analysis Services (RTM)
   

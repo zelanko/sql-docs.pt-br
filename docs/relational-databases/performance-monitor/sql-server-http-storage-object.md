@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: dbfcc5df16b1801154f9be9af46c7bad07925f3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ce8040b37ec08c82b11c9ff572c13125064523b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093486"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155777"
 ---
 # <a name="sql-server-http-storage"></a>SQL Server, Armazenamento HTTP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  O objeto de desempenho **SQLServer:HTTP Storage** consiste nos contadores de desempenho que monitoram a conta de Armazenamento do Microsoft Azure. Com o recurso [Arquivos de dados do SQL Server no Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) , você pode armazenar arquivos de banco de dados nos Blobs de Armazenamento do Microsoft Azure. Esse objeto de desempenho trata cada conta de Armazenamento do Windows Azure como uma unidade diferente.  
+  O objeto de desempenho **SQLServer:HTTP Storage** consiste nos contadores de desempenho que monitoram a conta de Armazenamento do Microsoft Azure. Com o recurso [Arquivos de dados do SQL Server no Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md), você pode armazenar arquivos de banco de dados nos Blobs de Armazenamento do Microsoft Azure. Esse objeto de desempenho trata cada conta de Armazenamento do Microsoft Azure como uma unidade diferente.  
   
 |Nome do contador|Descrição|  
 |------------------|-----------------|  

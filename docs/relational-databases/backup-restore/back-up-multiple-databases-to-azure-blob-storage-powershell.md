@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8d5fa3b8a91147789dfafad6a69ac6210dfd8119
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a8ee23c8eb8a51328ccc9808207f04823e9b980
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940880"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176310"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Fazer backup de vários bancos de dados para o Armazenamento de Blobs do Azure – PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Este tópico fornece scripts de exemplo que podem ser usados para automatizar backups no serviço do armazenamento do Blob do Windows Azure usando os cmdlets do PowerShell.  
+  Este tópico fornece scripts de exemplo que podem ser usados para automatizar backups no serviço do Armazenamento do Blobs do Azure usando os cmdlets do PowerShell.  
   
 ## <a name="overview-of-powershell-cmdlets-for-backup-and-restore"></a>Visão geral de cmdlets do PowerShell para backup e restauração  
- **Backup-SqlDatabase** e **Restore-SqlDatabase** são os dois cmdlets principais disponíveis para fazer operações de backup e restauração. Além disso, há outros cmdlets que podem ser necessários para automatizar backups no armazenamento do Blob do Windows Azure, como o conjunto de cmdlets **SqlCredential** . A seguir, é apresentada uma lista de cmdlets do PowerShell disponíveis no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que são usados em operações de backup e restauração:  
+ **Backup-SqlDatabase** e **Restore-SqlDatabase** são os dois cmdlets principais disponíveis para fazer operações de backup e restauração. Além disso, há outros cmdlets que podem ser necessários para automatizar backups no armazenamento de Blobs do Windows Azure, como o conjunto de cmdlets **SqlCredential**. A seguir, é apresentada uma lista de cmdlets do PowerShell disponíveis no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que são usados em operações de backup e restauração:  
   
  Backup-SqlDatabase  
  Este cmdlet é usado para criar um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -32,7 +32,7 @@ ms.locfileid: "67940880"
  Usado para restaurar um banco de dados.  
   
  New-SqlCredential  
- Este cmdlet é usado para criar uma Credencial SQL a ser usada para o backup do SQL Server no armazenamento do Windows Azure. Para obter mais informações sobre credenciais e seu uso no backup e na restauração do SQL Server, veja [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Este cmdlet é usado para criar uma Credencial SQL a ser usada para o backup do SQL Server no Armazenamento do Microsoft Azure. Para obter mais informações sobre credenciais e seu uso no backup e na restauração do SQL Server, veja [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  Get-SqlCredential  
  Este cmdlet é usado para recuperar o objeto Credential e suas propriedades.  
@@ -44,7 +44,7 @@ ms.locfileid: "67940880"
  Este cmdlet é usado para alterar ou definir as propriedades do objeto SQL Credential.  
   
 > [!TIP]  
->  Os cmdlets Credential são usados no backup e na restauração para cenários de armazenamento de Blob do Windows Azure.  
+>  Os cmdlets de Credencial são usados no backup e na restauração para cenários de Armazenamento de Blobs do Azure.  
   
 ### <a name="powershell-for-multi-database-multi-instance-backup-operations"></a>PowerShell para operações de backup com várias instâncias e bancos de dados  
  As seções a seguir incluem scripts para várias operações, como a criação de uma Credencial SQL em várias instâncias do SQL Server, fazendo backup de todos os bancos de dados de usuário em uma instância do SQL Server etc. Você pode usar esses scripts para automatizar ou agendar operações de backup de acordo com os requisitos do seu ambiente. Os scripts fornecidos aqui são exemplos, e podem ser modificados ou estendidos para seu ambiente.  
@@ -59,7 +59,7 @@ ms.locfileid: "67940880"
   
      Para obter mais informações, consulte [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md).  
   
-3.  Embora cada exemplo de código possa ser testado independentemente com a alteração dos valores de variáveis, a criação de uma conta de armazenamento do Windows Azure e de uma Credencial SQL são pré-requisitos e, portanto, necessária a todas as operações de backup e restauração no serviço de armazenamento de Blob do Windows Azure.  
+3.  Embora cada exemplo de código possa ser testado independentemente com a alteração dos valores de variáveis, criar uma conta de armazenamento do Microsoft Azure e de uma Credencial SQL é um pré-requisito e, portanto, necessário em todas as operações de backup e restauração no serviço de Armazenamento de Blobs do Azure.  
   
 ### <a name="create-a-sql-credential-on-all-the-instances-of-sql-server"></a>Criar uma Credencial SQL em todas as instâncias do SQL Server  
  Há dois scripts de exemplo e ambos criam uma Credencial SQL “mybackupToURL” em todas as instâncias do SQL Server em um computador. O primeiro exemplo é simples, e cria as credenciais e não intercepta exceções.  Por exemplo, se já houvesse uma credencial existente com o mesmo nome em uma das instâncias do computador, o script apresentaria falha. O segundo exemplo intercepta erros e permite que o script continue.  

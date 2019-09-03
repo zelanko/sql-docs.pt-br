@@ -125,7 +125,7 @@ Quando uma assinatura em uma publicação de mesclagem é sincronizada, a replic
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Se você alterar o nível de controle depois de inicializadas as assinaturas, essas assinaturas deverão ser reinicializadas. Para obter mais informações sobre os efeitos das alterações de propriedades, consulte [Alterar propriedades da publicação e do artigo](../publish/change-publication-and-article-properties.md).    
--   Com controle em nível de linha e de coluna, a resolução de conflito é sempre feita em nível de linha: a linha vencedora substitui a perdedora. A replicação de mesclagem também permite especificar que os conflitos sejam rastreados e resolvidos em nível de registro lógico, mas essas opções não estão disponíveis no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Para obter informações sobre como definir estas opções de procedimentos armazenados de replicação, consulte [Define a Logical Record Relationship Between Merge Table Articles](../publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
+-   Com controle em nível de linha e de coluna, a resolução de conflito é sempre feita em nível de linha: a linha vencedora substitui a perdedora. A replicação de mesclagem também permite especificar que os conflitos sejam rastreados e resolvidos em nível de registro lógico, mas essas opções não estão disponíveis no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Para obter informações sobre como definir estas opções de procedimentos armazenados de replicação, consulte [Definir uma relação de registro lógico entre artigos da tabela de mesclagem](../publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
 ###  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Especifique o nível de linha ou coluna de rastreamento para mesclar artigos na guia **Propriedades** da caixa de diálogo **Propriedades do artigo**, que está disponível no Assistente para Nova Publicação e a caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma publicação](create-a-publication.md) e [Exibir e modificar as propriedades da publicação](../publish/view-and-modify-publication-properties.md).  
@@ -212,7 +212,7 @@ Quando uma assinatura em uma publicação de mesclagem é sincronizada, a replic
 ## <a name="see-also"></a>Consulte também  
  [Otimizar o desempenho da replicação de mesclagem com o controle de exclusão condicional](../merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
  [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
- [Define a Logical Record Relationship Between Merge Table Articles](define-a-logical-record-relationship-between-merge-table-articles.md)   
+ [Definir uma relação de registro lógico entre artigos da tabela de mesclagem](define-a-logical-record-relationship-between-merge-table-articles.md)   
  [Detectar e resolver conflitos de replicação de mesclagem](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Otimizar o desempenho da replicação de mesclagem com artigos de somente download](../merge/optimize-merge-replication-performance-with-download-only-articles.md)   
  [Define an Article](define-an-article.md)   

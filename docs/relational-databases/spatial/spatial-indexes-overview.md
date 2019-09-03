@@ -12,12 +12,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9094f5335fc3978ba2e5018873dc2cdd8b455347
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a19d934fcc8b6d190b762b170117722fe4e29b6e
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048471"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190416"
 ---
 # <a name="spatial-indexes-overview"></a>Visão geral de índices espaciais
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -123,10 +123,10 @@ ms.locfileid: "68048471"
 >  A configuração **tessellation_scheme** de um índice espacial é visível na exibição de catálogo [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) .  
   
 #### <a name="geometry-grid-tessellation-scheme"></a>Esquema de mosaico de grade geométrica  
- O mosaico GEOMETRY_AUTO_GRID é o esquema de mosaico padrão para o tipo de dados **geometry** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e versões posteriores.  O mosaico GEOMETRY_GRID é o único esquema de mosaico disponível para tipos de dados geometry no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta seção discute aspectos do mosaico de grade geométrica que são relevantes para trabalhar com índices espaciais: métodos com suporte e caixas delimitadoras.  
+ O mosaico GEOMETRY_AUTO_GRID é o esquema de mosaico padrão para o tipo de dados **geometry** no [!INCLUDE[ssNoVersion](../../includes/sssql11-md.md)] e versões posteriores.  O mosaico GEOMETRY_GRID é o único esquema de mosaico disponível para tipos de dados geometry no [!INCLUDE[ssNoVersion](../../includes/sskatmai-md.md)]. Esta seção discute aspectos do mosaico de grade geométrica que são relevantes para trabalhar com índices espaciais: métodos com suporte e caixas delimitadoras.  
   
 > [!NOTE]  
->  É possível especificar explicitamente esse esquema de mosaico usando a cláusula USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) da instrução [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+>  É possível especificar explicitamente esse esquema de mosaico usando a cláusula USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) da instrução [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ##### <a name="the-bounding-box"></a>A caixa delimitadora  
  Dados geométricos ocupam um plano que pode ser infinito. Porém, no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um índice espacial requer um espaço finito. Para estabelecer um espaço finito para decomposição, o esquema de mosaico de grade geométrica requer uma *caixa delimitadora*retangular. A caixa delimitadora é definida por quatro coordenadas, **(** _x-min_ **,** _y-min_ **)** e **(** _x-max_ **,** _y-max_ **)** que são armazenadas como propriedades do índice espacial. Essas coordenadas representam o seguinte:  

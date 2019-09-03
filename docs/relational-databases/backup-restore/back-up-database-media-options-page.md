@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4c515da38e0218d1026019b718411a0b56d61c07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: efbd8b811b9dda44a4cc4609704291b9469edec3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940918"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155559"
 ---
 # <a name="back-up-database-media-options-page"></a>Backup de Banco de Dados (página Opções de Mídia)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67940918"
 ## <a name="options"></a>Opções  
   
 ### <a name="overwrite-media"></a>Substituir mídia  
- As opções do painel **Substituir mídia** controlam como o backup é gravado na mídia. Se você tiver selecionado a URL (Armazenamento do Windows Azure) como destino de backup na página Geral da caixa de diálogo Backup de Banco de Dados, as opções na seção Substituir mídia serão desabilitadas. É possível substituir um backup usando a instrução Transact-SQL **BACKUP TO URL. WITH FORMAT**. Para saber mais, confira [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+ As opções do painel **Substituir mídia** controlam como o backup é gravado na mídia. SE você selecionou a URL (Armazenamento do Microsoft Azure) como destino de backup na página Geral da caixa de diálogo Backup de Banco de Dados, as opções na seção Substituir mídia serão desabilitadas. É possível substituir um backup usando a instrução Transact-SQL **BACKUP TO URL. WITH FORMAT**. Para saber mais, confira [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
 
  A opção **Substituir mídia** será desabilitada se você selecionou **URL** como destino de backup na página **Geral**.
   

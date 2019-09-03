@@ -13,12 +13,12 @@ ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f41eb44b026c78a3d99814b231f52b518c18a177
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e64a097fb4d2eed917155fb3881d233231c413bc
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136577"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148301"
 ---
 # <a name="stored-procedures-database-engine"></a>Procedimento armazenados (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,18 +59,19 @@ ms.locfileid: "68136577"
  Se houver alterações significantes nas tabelas ou dados referenciados pelo procedimento, o plano pré-compilado poderá, na verdade, fazer com que o procedimento execute mais lentamente. Neste caso, recompilar o procedimento e forçar um novo plano de execução podem melhorar desempenho.  
   
 ## <a name="types-of-stored-procedures"></a>Tipos de procedimentos armazenados  
- Definido pelo usuário  
+
+ **Definido pelo usuário**  
  Um procedimento definido pelo usuário pode ser criado em um banco de dados definido pelo usuário ou em todos os bancos de dados do sistema, exceto no banco de dados **Resource** . O procedimento pode ser desenvolvido em [!INCLUDE[tsql](../../includes/tsql-md.md)] ou como referência para um método CLR da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
- Temporário  
+ **Temporário**  
  Procedimentos temporários são uma forma de procedimentos definidos pelo usuário. Os procedimentos armazenados são como um procedimento permanente, exceto que os procedimentos temporários são armazenados em **tempdb**. Há dois tipos de procedimentos temporários: local e global. Elas diferem uma da outra pelo nome, visibilidade e disponibilidade. Os procedimentos temporários locais têm um único sinal numérico (#) como primeiro caractere no nome; eles são visíveis somente na conexão atual do usuário e são excluídas quando a conexão é fechada. Os procedimentos temporários globais têm dois sinais numéricos (##) como os dois primeiros caracteres de seus nomes; ficam visíveis para qualquer usuário depois de criados e são excluído no final da última sessão do procedimento.  
   
- Sistema  
+ **Sistema**  
  Os procedimentos do sistema são fornecidos com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eles são fisicamente armazenados no banco de dados **Resource** interno oculto, e logicamente aparecem no esquema **sys** de cada banco de dados definido pelo sistema e pelo usuário. Além disso, o banco de dados **msdb** também pode conter procedimentos armazenados do sistema no esquema **dbo** que são usados para agendar alertas e trabalhos. Como os procedimentos do sistema começam com o prefixo **sp_** , recomendamos que você não use esse perfil quando for nomear procedimentos definidos pelo usuário. Para obter uma lista completa de procedimentos do sistema, veja [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md).  
   
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte aos procedimentos do sistema que fornecem uma interface no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a programas externos para várias atividades de manutenção. Esses procedimentos estendidos usam o prefixo xp_. Para obter uma lista completa de procedimentos estendidos, veja [Procedimentos armazenados estendidos gerais &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md).  
   
- Extensões definidas pelo usuário  
+ **Extensões definidas pelo usuário**  
  Os procedimentos estendidos permitem criar rotinas externas em uma linguagem de programação como C. Esses procedimentos são DLLs que uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode carregar e executar dinamicamente.  
   
 > [!NOTE]  
@@ -94,6 +95,6 @@ ms.locfileid: "68136577"
 |Descreve como os parâmetros são usados em um procedimento armazenado.|[Parâmetros](../../relational-databases/stored-procedures/parameters.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Procedimentos armazenados CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
-  
+ [Procedimentos armazenados CLR](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/clr-stored-procedures)  
+ [Resolução de nome adiada](../../t-sql/statements/create-trigger-transact-sql.md#deferred-name-resolution)
   

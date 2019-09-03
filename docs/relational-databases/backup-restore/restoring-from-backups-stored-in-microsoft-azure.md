@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 51e1ce454a2b6d0309a33d155cc0e069b5a17a29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cda4fd3fa0bbb66e95d61ec87ff66dee809e2962
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041457"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155449"
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>Restaurando de backups armazenados no Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Este tópico descreve o que você deve considerar ao restaurar um banco de dados usando um backup armazenado no serviço de armazenamento de Blob do Windows Azure. Isso se aplica aos backups criados através do Backup do SQL Server para URL ou pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+  Este tópico descreve o que você precisa considerar ao restaurar um banco de dados usando um backup armazenado no serviço de Armazenamento de Blobs do Azure. Isso se aplica aos backups criados através do Backup do SQL Server para URL ou pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
- É recomendável analisar este tópico se você tiver backups armazenados no serviço de armazenamento de Blob do Windows Azure que pretende restaurar e, em seguida, analisar os tópicos que descrevem as etapas de restauração de um banco de dados, que é o mesmo para backups locais e do Windows Azure.  
+ É recomendável analisar este tópico se você tiver backups armazenados no serviço de Armazenamento de Blobs do Azure que pretende restaurar e, em seguida, analisar os tópicos que descrevem as etapas de restauração de um banco de dados, que são as mesmas para backups locais e do Azure.  
   
 ## <a name="overview"></a>Visão geral  
- As ferramentas e os métodos que são usados para restaurar um banco de dados de um backup local se aplicam à restauração de um banco de dados de um backup na nuvem.  As seções a seguir descrevem essas considerações e todas as diferenças que você deve saber quando usa os backups armazenados no serviço de armazenamento de Blob do Windows Azure.  
+ As ferramentas e os métodos que são usados para restaurar um banco de dados de um backup local se aplicam à restauração de um banco de dados de um backup na nuvem.  As seções a seguir descrevem essas considerações e todas as diferenças que você precisa saber ao usar os backups armazenados no serviço de Armazenamento de Blobs do Azure.  
   
 ### <a name="using-transact-sql"></a>Usando Transact-SQL  
   
@@ -34,14 +34,14 @@ ms.locfileid: "68041457"
   
 ### <a name="using-sql-server-management-studio"></a>Usando o SQL Server Management Studio  
   
--   A tarefa de restauração é usada restaurar um banco de dados usando o SQL Server Management Studio. A página da mídia de backup agora inclui a opção **URL** para mostrar os arquivos de backup armazenados no serviço de armazenamento de Blob do Windows Azure. Você também deve fornecer a Credencial do SQL usada para autenticação para a conta de armazenamento. A grade **Conjuntos de backup a serem restaurados** é populada com os backups disponíveis no armazenamento de Blob do Windows Azure. Para obter mais informações, consulte [Restoring from Windows Azure storage Using SQL Server Management Studio](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
+-   A tarefa de restauração é usada restaurar um banco de dados usando o SQL Server Management Studio. A página da mídia de backup agora inclui a opção **URL** para mostrar os arquivos de backup armazenados no serviço de Armazenamento de Blobs do Azure. Você também deve fornecer a Credencial do SQL usada para autenticação para a conta de armazenamento. A grade **Conjuntos de backup a serem restaurados** é preenchida com os backups disponíveis no Armazenamento de Blobs do Azure. Para obter mais informações, confira [Restaurar por meio do Armazenamento do Microsoft Azure usando o SQL Server Management Studio](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
   
 ### <a name="optimizing-restores"></a>Otimizando restaurações  
  Para reduzir o tempo de gravação da restauração, adicione o direito de usuário **Executar tarefas de manutenção de volume** à conta de usuário do SQL Server. Para obter mais informações, consulte [Inicialização de arquivos de bancos de dados](https://go.microsoft.com/fwlink/?LinkId=271622). Se a restauração ainda estiver lenta com a inicialização instantânea de arquivo ativada, examine o tamanho do arquivo de log na instância onde foi feito o backup do banco de dados. Se o log é muito grande em tamanho (vários GBs), espera-se que a restauração seja lenta. Durante a restauração, o arquivo de log deve ser zerado, o que leva uma quantidade significativa de tempo.  
   
  Para reduzir o tempo de restauração, recomendamos o uso de backups compactados.  Para os tamanhos de backup superiores a 25 GB, use o [utilitário AzCopy](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) para baixar à unidade local e execute a restauração. Para outras práticas recomendadas de backup e recomendações, consulte [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
   
- Você também pode ativar o sinalizador de rastreamento 3051 ao fazer a restauração para gerar um log detalhado. Este arquivo de log é colocado no diretório de log e nomeado usando o formato: BackupToUrl-\<instancename>-\<dbname>-action-\<PID>.log. O arquivo de log inclui informações sobre cada viagem de ida e volta para o armazenamento do Windows Azure, inclusive o controle de tempo que pode ser útil para diagnosticar o problema.  
+ Você também pode ativar o sinalizador de rastreamento 3051 ao fazer a restauração para gerar um log detalhado. Este arquivo de log é colocado no diretório de log e nomeado usando o formato: BackupToUrl-\<instancename>-\<dbname>-action-\<PID>.log. O arquivo de log inclui informações sobre cada viagem de ida e volta para o Armazenamento do Microsoft Azure, inclusive o controle de tempo, que pode ser útil para diagnosticar o problema.  
   
 ### <a name="topics-on-performing-restore-operations"></a>Tópicos sobre a execução de operações de restauração  
   

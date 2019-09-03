@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 402c417de43637f810366423fb4e66b9cb3c507c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115710"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155564"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Usar o Assistente de Plano de Manutenção
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -366,12 +366,12 @@ Caixa de seleção**Incluir índices**
      Especifique a pasta para os arquivos de banco de dados automaticamente criados. Essa opção será desabilitada se a opção URL for selecionada como o destino de backup.  
   
      **CREDENCIAL DO SQL**  
-     Selecione uma Credencial do SQL usada para autenticar o Armazenamento do Windows Azure. Se você não tiver uma Credencial existente do SQL que possa usar, clique no botão **Criar** para criar uma nova Credencial do SQL.  
+     Selecione uma Credencial do SQL usada para autenticar o Armazenamento do Microsoft Azure. Se você não tiver uma Credencial existente do SQL que possa usar, clique no botão **Criar** para criar uma nova Credencial do SQL.  
   
     > **IMPORTANTE:** A caixa de diálogo que é aberta quando você clica em **Criar** exige um certificado de gerenciamento ou o perfil da publicação para a assinatura. Se você não tiver acesso ao certificado de gerenciamento ou perfil de publicação, poderá criar uma credencial de SQL especificando o nome da conta de armazenamento e as informações da chave de acesso usando Transact-SQL ou SQL Server Management Studio. Consulte o código de exemplo no tópico [Criar uma credencial](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) para criar uma credencial usando Transact-SQL. Como alternativa, usando o SQL Server Management Studio, na instância do mecanismo de banco de dados, clique com o botão direito do mouse em **Segurança**, selecione **Novo**e **Credencial**. Especifique o nome da conta de armazenamento para **Identidade** e a chave de acesso no campo **Senha** .  
   
      **Contêiner de armazenamento do Azure**  
-     Especifique o nome do contêiner de armazenamento do Windows Azure  
+     Especifique o nome do contêiner de Armazenamento do Microsoft Azure  
   
      **Prefixo da URL:**  
      Gerado automaticamente com base nas informações da conta de armazenamento armazenadas na Credencial do SQL e o nome do contêiner de armazenamento do Azure que você especificou. É recomendável não editar as informações neste campo, a menos que você esteja usando um domínio que use um formato diferente de **\<conta de armazenamento>.blob.core.windows.net**.  

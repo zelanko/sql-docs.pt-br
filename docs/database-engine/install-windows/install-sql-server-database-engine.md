@@ -1,7 +1,7 @@
 ---
 title: Instalar o Mecanismo de Banco de Dados do SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -12,12 +12,12 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 787c6b96d9f4bad7372a559a1282fa1252e5e97a
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: e50fd6037b10008029d5373348605d11726b6199
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419363"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148042"
 ---
 # <a name="install-sql-server-database-engine"></a>Instalar o Mecanismo de Banco de Dados do SQL Server
 
@@ -39,11 +39,15 @@ Os seguintes recursos são instalados quando você seleciona o **Mecanismo de Ba
 -   [Replicação do SQL Server](../../relational-databases/replication/sql-server-replication.md) – é um componente opcional  
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
--   [Serviços de Machine Learning (no banco de dados) com R, Python e Java](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) – é um componente opcional
+-   [Serviços de Machine Learning](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) (R e Python) e [Extensões de Idioma](../..//language-extensions/install/install-sql-server-language-extensions-on-windows.md) (Java) – componente opcional
 ::: moniker-end
 
-::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
--   [Serviços de Machine Learning (no banco de dados) com R e Python](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) – é um componente opcional
+::: monikerRange=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+-   [Serviços de Machine Learning (no banco de dados)](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md)(R e Python) – componente opcional
+::: moniker-end
+
+::: monikerRange=">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
+-   [Serviços R (no banco de dados) ](../../advanced-analytics/install/sql-r-services-windows-install.md) – componente opcional
 ::: moniker-end
 
 -   Pesquisa de Texto Completo - é um componente opcional  

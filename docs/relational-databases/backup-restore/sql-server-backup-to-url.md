@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6be8d736294df50a5ca3d288b77e4b0daac556b8
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 534907b49e5139f57f8b008742cf76346f7838ec
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941122"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176356"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup do SQL Server para URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,22 +41,22 @@ ms.locfileid: "68941122"
   
 -   [Backup do SQL Server para a URL usando o Assistente de Plano de Manutenção](../../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)  
   
--   [Restaurando a partir do armazenamento do Windows Azure por meio do SQL Server Management Studio](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)  
+-   [Restaurar a partir do armazenamento do Azure por meio do SQL Server Management Studio](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)  
   
 ###  <a name="security"></a> Segurança  
  Estes são os requisitos e as considerações de segurança para backup e restauração dos serviços Armazenamento de Blobs do Microsoft Azure.  
   
--   Ao criar um contêiner para o serviço de Armazenamento de Blobs do Microsoft Azure, recomendamos que você defina o acesso como **privado**. A definição do acesso como privado restringe o acesso a usuários ou contas capazes de fornecer as informações necessárias para realizar a autenticação na conta do Windows Azure.  
+-   Ao criar um contêiner para o serviço de Armazenamento de Blobs do Microsoft Azure, recomendamos que você defina o acesso como **privado**. A definição do acesso como privado restringe o acesso a usuários ou contas capazes de fornecer as informações necessárias para realizar a autenticação na conta do Azure.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exige o armazenamento de um nome de conta e autenticação de chave de acesso do Windows Azure ou de uma Assinatura de Acesso Compartilhado e token de acesso em uma Credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essas informações são usadas para realizar a autenticação na conta do Windows Azure durante a execução de operações de backup ou restauração.  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exige o armazenamento de um nome de conta e autenticação de chave de acesso do Azure ou de uma Assinatura de Acesso Compartilhado e token de acesso em uma Credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essas informações são usadas para realizar a autenticação na conta do Azure durante a execução de operações de backup ou restauração.  
   
 -   A conta de usuário usada para emitir os comandos BACKUP ou RESTORE deve estar na função de banco de dados **operador db_backup** com as permissões **Alterar qualquer credencial** .  
   
 ###  <a name="intorkeyconcepts"></a> Introdução aos principais componentes e conceitos  
  As duas seções a seguir apresentam o serviço de Armazenamento de Blobs do Microsoft Azure e os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usados durante o backup ou a restauração do serviço de Armazenamento de Blobs do Microsoft Azure. É importante entender os componentes e a interação entre eles para fazer um backup ou uma restauração no serviço de Armazenamento de Blobs do Microsoft Azure.  
   
- Criar uma conta de Armazenamento do Windows Azure dentro de sua assinatura do Azure é a primeira etapa nesse processo. Essa conta de armazenamento é uma conta administrativa que tem permissões administrativas completas em todos os contêineres e objetos criados com a conta. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar o nome da conta de armazenamento do Windows Azure e seu valor de chave de acesso para autenticar, gravar e ler blobs do serviço de Armazenamento de Blobs do Microsoft Azure, ou usar um token de Assinatura de Acesso Compartilhado gerado em contêineres específicos, concedendo direitos de leitura e gravação. Para saber mais sobre a Conta de Armazenamento do Azure, confira [Sobre as contas de armazenamento do Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/) e para saber mais sobre as Assinaturas de Acesso Compartilhado, confira [Assinaturas de Acesso Compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). A credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena essas informações de autenticação e é usada durante as operações de backup ou restauração.  
+ Criar uma conta de Armazenamento do Microsoft Azure dentro de sua assinatura do Azure é a primeira etapa nesse processo. Essa conta de armazenamento é uma conta administrativa que tem permissões administrativas completas em todos os contêineres e objetos criados com a conta. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar o nome da conta de armazenamento do Microsoft Azure e seu valor de chave de acesso para autenticar, gravar e ler blobs do serviço de Armazenamento de Blobs do Microsoft Azure, ou usar um token de Assinatura de Acesso Compartilhado gerado em contêineres específicos, concedendo direitos de leitura e gravação. Para saber mais sobre a Conta de Armazenamento do Azure, confira [Sobre as contas de armazenamento do Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/) e para saber mais sobre as Assinaturas de Acesso Compartilhado, confira [Assinaturas de Acesso Compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). A credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena essas informações de autenticação e é usada durante as operações de backup ou restauração.  
   
 ###  <a name="blockbloborpageblob"></a> Backup no blob de blocos versus no blob de páginas 
  Há dois tipos de blobs que podem ser armazenados no serviço de Armazenamento de Blobs do Microsoft Azure: blobs de blocos e de páginas. O backup do SQL Server pode usar qualquer tipo de blob, dependendo da sintaxe Transact-SQL usada: Se a chave de armazenamento for usada na credencial, o blob de páginas será usado; se a Assinatura de Acesso Compartilhado for usada, o blob de blocos será usado.
@@ -71,7 +71,7 @@ Quando você faz backup no blob de blocos, o tamanho máximo de bloco que você 
 - faça backup em vários blobs de blocos
 
 ###  <a name="Blob"></a> Serviço de Armazenamento de Blobs do Microsoft Azure  
- **Conta de armazenamento:** A conta de armazenamento é o ponto de partida de todos os serviços de armazenamento. Para acessar o serviço de Armazenamento de Blobs do Microsoft Azure, primeiro crie uma conta de armazenamento do Windows Azure. Para saber mais, confira [Criar uma conta de armazenamento](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
+ **Conta de armazenamento:** A conta de armazenamento é o ponto de partida de todos os serviços de armazenamento. Para acessar o serviço de Armazenamento de Blobs do Microsoft Azure, primeiro crie uma conta de armazenamento do Azure. Para saber mais, confira [Criar uma conta de armazenamento](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
   
  **Contêiner:** Um contêiner fornece o agrupamento de um conjunto de blobs e pode armazenar um número ilimitado de blobs. Para gravar um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no serviço de Armazenamento de Blobs do Microsoft Azure, pelo menos o contêiner raiz deve ter sido criado. Você pode gerar um token de Assinatura de Acesso Compartilhado em um contêiner e conceder acesso a objetos apenas em um contêiner específico.  
   
@@ -211,7 +211,7 @@ Você pode fazer o backup de um banco de dados para a URL por meio da tarefa de 
 > [!NOTE]  
 >  Para criar um backup de instantâneo de arquivo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] substituir um conjunto de mídias existente, é necessário usar o Transact-SQL, Powershell ou C# em vez da tarefa de Backup no SQL Server Management Studio.  
   
- As etapas a seguir descrevem as alterações feitas na tarefa de Backup de Banco de Dados no SQL Server Management Studio para permitir o backup para o armazenamento do Microsoft Azure:  
+ As etapas a seguir descrevem as alterações feitas na tarefa de Backup de Banco de Dados no SQL Server Management Studio para permitir o backup para o armazenamento do Azure:  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
 
@@ -242,7 +242,7 @@ Quando você selecionar **URL** como destino, determinadas opções na página *
  [Criar credencial - autenticar no Armazenamento do Azure](../../relational-databases/backup-restore/create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> Backup do SQL Server para a URL usando o Assistente de Plano de Manutenção  
- Assim como a tarefa de backup descrita anteriormente, o Assistente de Plano de Manutenção no SQL Server Management Studio inclui a **URL** como uma das opções de destino, e outros objetos de suporte necessários ao backup no armazenamento do Windows Azure, como a Credencial SQL. Para saber mais, confira a seção **Definir tarefas de Backup** em [Using Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
+ Assim como a tarefa de backup descrita anteriormente, o Assistente de Plano de Manutenção no SQL Server Management Studio inclui a **URL** como uma das opções de destino e outros objetos de suporte necessários ao backup no armazenamento do Azure, como a Credencial SQL. Para saber mais, confira a seção **Definir tarefas de Backup** em [Using Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
   
 > [!NOTE]  
 >  Para criar um conjunto de backups distribuído, um backup de instantâneo de arquivo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou uma credencial do SQL usando o token de Acesso Compartilhado, é necessário usar Transact-SQL, Powershell ou C# em vez da tarefa de Backup no Assistente de Plano de Manutenção.  

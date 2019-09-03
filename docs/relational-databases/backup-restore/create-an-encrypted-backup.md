@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 90dd03d9db824204bc4904e90af4e74055f6fa79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19556dc84e916598e63f6df7b101f4f495ac3855
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076032"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155393"
 ---
 # <a name="create-an-encrypted-backup"></a>Criar um backup criptografado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,12 +74,12 @@ ms.locfileid: "68076032"
   
  Para obter um exemplo de como criptografar um backup protegido por uma EKM, veja [Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
-### <a name="backup-to-windows-azure-storage-with-encryption"></a>Backup no armazenamento do Windows Azure com criptografia  
- Se você estiver criando um backup no armazenamento do Windows Azure usando a opção de **Backup do SQL Server para URL** , as etapas de criptografia serão as mesmas, mas você deve usar a URL como destino e uma Credencial SQL a ser autenticada no armazenamento do Windows Azure. Se você quiser configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] com opções de criptografia, veja [Habilitar o backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
+### <a name="backup-to-azure-storage-with-encryption"></a>Backup no Armazenamento do Microsoft Azure com criptografia  
+ Se você estiver criando um backup no armazenamento do Azure usando a opção de **Backup do SQL Server para URL**, as etapas de criptografia serão as mesmas, mas você deve usar a URL como destino e uma Credencial SQL a ser autenticada no armazenamento do Azure. Se você quiser configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] com opções de criptografia, veja [Habilitar o backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
  **Pré-requisitos:**  
   
--   Uma conta de armazenamento do Windows e um contêiner. Para obter mais informações, consulte: [Lição 1: Criar objetos do Armazenamento do Windows Azure](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
+-   Uma conta de armazenamento do Windows e um contêiner. Para obter mais informações, consulte: [Lição 1: Criar objetos de Armazenamento do Azure](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
   
 -   Uma Chave Mestra do Banco de Dados para o banco de dados mestre, e um certificado ou uma chave assimétrica na instância do SQL Server. Para requisitos e permissões de criptografia, consulte [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md).  
   

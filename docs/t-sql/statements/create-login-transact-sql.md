@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 818bb9690153d862211739bcd134ba9fbdf11ae1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b28cde8935c3a2c4b25f20ef727358b918e6680
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912649"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155662"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -308,7 +308,7 @@ As regras do SQL Server permitem criar um logon de autenticação do SQL Server 
 
 No Banco de Dados SQL, os dados de logon necessários para autenticar uma conexão e as regras de firewall no nível de servidor são armazenados em cache temporariamente em cada banco de dados. Esse cache é atualizado periodicamente. Para forçar uma atualização do cache de autenticação e garantir que um banco de dados tenha a versão mais recente da tabela de logons, execute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
-Para obter mais informações sobre logons do Banco de Dados SQL, consulte [Managing Databases and Logins in Windows Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins) (Gerenciando bancos de dados e logons no Banco de Dados SQL do Microsoft Azure).
+Para obter mais informações sobre logons do Banco de Dados SQL, confira [Gerenciar bancos de dados e logons no Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 ## <a name="permissions"></a>Permissões
 
@@ -607,7 +607,7 @@ As regras do SQL Server permitem criar um logon de autenticação do SQL Server 
 
 No SQL Data Warehouse, os dados de logon necessários para autenticar uma conexão e as regras de firewall no nível de servidor são armazenados em cache temporariamente em cada banco de dados. Esse cache é atualizado periodicamente. Para forçar uma atualização do cache de autenticação e garantir que um banco de dados tenha a versão mais recente da tabela de logons, execute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
-Para obter mais informações sobre logons do SQL Data Warehouse, consulte [Managing Databases and Logins in Windows Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins) (Gerenciando bancos de dados e logons no Banco de Dados SQL do Microsoft Azure).
+Para obter mais informações sobre logons do SQL Data Warehouse, confira [Gerenciar bancos de dados e logons no Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 ## <a name="permissions"></a>Permissões
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 249fb623945c1e086a677268d857f3bb16362a2e
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 110348981ad756b489afcbdb5c098a4c0f290c30
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811190"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154652"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Edições e recursos compatíveis do SQL Server 2017 no Linux
 
@@ -110,7 +110,7 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
 |Backups espelhados|Sim|Não|Não|Não|
 |Adição de memória a quente e CPU|Sim|Não|Não|Não|
 |Backup criptografado|Sim|Sim|Não|Não|
-|Backup híbrido para o Microsoft Azure (backup para URL)|Sim|Sim|Não|Não|
+|Backup híbrido para o Azure (backup para URL)|Sim|Sim|Não|Não|
   
 <sup>1</sup> Na Enterprise Edition, o número de nós é o máximo do sistema operacional. Na Standard Edition, há suporte para dois nós. 
 

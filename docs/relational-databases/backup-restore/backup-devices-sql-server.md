@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5a44b8b9c4ae4c70ec41a7c699572ecf4adcc224
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f7ae7d1cddf05ce05c71c6a95f64266eae835aff
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68103771"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152130"
 ---
 # <a name="backup-devices-sql-server"></a>Dispositivos de backup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68103771"
  dispositivo de backup físico  
  Uma unidade de fita ou um arquivo de disco é fornecido pelo sistema operacional. Um backup pode ser gravado em 1 a 64 dispositivos de backup. Se um backup exigir vários dispositivos de backup, todos os dispositivos deverão corresponder a um único tipo de dispositivo (disco ou fita).  
   
- Os backups do SQL Server podem ser gravados no serviço de armazenamento Blob do Windows Azure, bem como em disco ou fita.  
+ Os backups do SQL Server podem ser gravados no serviço de Armazenamento Blobs do Azure, bem como em disco ou fita.  
  
   
 ##  <a name="DiskBackups"></a> Usando dispositivos de backup em disco  
@@ -181,8 +181,8 @@ GO
  Se uma fita for deixada aberta acidentalmente, a maneira mais rápida de liberá-la será usar o seguinte comando: RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Para obter mais informações, consulte [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
   
   
-## <a name="using-the-windows-azure-blob-storage-service"></a>Usando o serviço de Armazenamento de Blobs do Microsoft Azure  
- Os backups do SQL Server podem ser gravados no serviço de armazenamento de Blob do Windows Azure.  Para obter mais informações sobre como usar o serviço de armazenamento de Blob do Microsoft Azure para seus backups, consulte [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+## <a name="using-the-azure-blob-storage-service"></a>Usar o serviço de Armazenamento de Blobs do Azure  
+ Os backups do SQL Server podem ser gravados no serviço de Armazenamento de Blobs do Azure.  Para obter mais informações sobre como usar o serviço de Armazenamento de Blobs do Azure para seus backups, confira [Backup e restauração do SQL Server com o serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ##  <a name="LogicalBackupDevice"></a> Usar um dispositivo de backup lógico  
  Um *dispositivo de backup lógico* é um nome opcional definido pelo usuário que aponta para um dispositivo de backup físico específico (um arquivo de disco ou uma unidade de fita). Um dispositivo de backup lógico permite que você use nomes indiretos ao fazer referência ao dispositivo de backup físico correspondente.  
@@ -218,7 +218,7 @@ GO
   
   
 ##  <a name="Archiving"></a> Arquivar backups do SQL Server  
- Recomendamos que você use um utilitário de backup do sistema de arquivos para arquivar os backups de disco e que armazene os arquivos externamente. Usar um disco tem a vantagem de usar a rede para gravar os backups arquivados em um disco externo. O serviço de armazenamento de Blob do Windows Azure pode ser usado como a opção de arquivamento fora do site.  Você pode carregar seus backups em disco ou gravar diretamente os backups no serviço de armazenamento de BLOB do Windows Azure.  
+ Recomendamos que você use um utilitário de backup do sistema de arquivos para arquivar os backups de disco e que armazene os arquivos externamente. Usar um disco tem a vantagem de usar a rede para gravar os backups arquivados em um disco externo. O serviço de Armazenamento de Blobs do Azure pode ser usado como a opção de arquivamento fora do site.  Você pode carregar seus backups em disco ou gravar diretamente os backups no serviço de Armazenamento de Blobs do Azure.  
   
  Outra abordagem de arquivamento comum é gravar os backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um disco de backup local, arquivá-los em uma fita e, em seguida, armazenar as fitas externamente.  
 

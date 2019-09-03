@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2c423f3df3f2dce99caa8ec085ab12f5eac8060c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a658c990296de88ebdf8f9d3fb6373ea6a9a2c18
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127157"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153100"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Arquivos de dados do SQL Server no Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68127157"
 ## <a name="concepts-and-requirements"></a>Conceitos e requisitos  
   
 ### <a name="azure-storage-concepts"></a>Conceitos de Armazenamento do Azure  
- Ao usar o recurso de arquivos de dados do SQL Server no Windows Azure, você precisará criar uma conta de armazenamento e um contêiner no Windows Azure. Em seguida, você precisará criar uma credencial do SQL Server, que inclui as informações sobre a política do contêiner, assim como uma assinatura de acesso compartilhado que é necessária para acessar o contêiner.  
+ Ao usar o recurso de arquivos de dados do SQL Server no Azure, você precisará criar um contêiner e uma conta de armazenamento no Azure. Em seguida, você precisará criar uma credencial do SQL Server, que inclui as informações sobre a política do contêiner, assim como uma assinatura de acesso compartilhado que é necessária para acessar o contêiner.  
   
  No [Microsoft Azure](https://azure.microsoft.com), uma conta de [armazenamento do Azure](https://azure.microsoft.com/services/storage/) representa o nível mais alto do namespace para acesso aos Blobs. Uma conta de armazenamento pode conter um número ilimitado de contêineres, contanto que o seu tamanho total esteja abaixo dos limites de armazenamento. Para obter as informações mais recentes sobre os limites de armazenamento, consulte [Assinatura e limites de serviço, cotas e restrições do Azure](https://docs.microsoft.com/azure/azure-subscription-service-limits). Um contêiner fornece um agrupamento de um conjunto de [Blobs](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage). Todos os blobs devem estar em um contêiner. Uma conta pode conter um número ilimitado de contêineres. Da mesma maneira, um contêiner também pode armazenar um número ilimitado de blobs. Há dois tipos de blobs que podem ser armazenados no Armazenamento do Azure: blobs de blocos e de páginas. Esse novo recurso usa blobs de página, que são mais eficientes quando os intervalos de bytes em um arquivo, são alterados com frequência. Você pode acessar blobs usando o seguinte formato de URL: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   

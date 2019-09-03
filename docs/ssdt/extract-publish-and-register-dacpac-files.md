@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2e113ccb9b94c6bae953cb330072c8a6f7bfea9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2aee0f145c2ef2b82b929a8f6358a764a10050f5
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912799"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154798"
 ---
 # <a name="extract-publish-and-register-dacpac-files"></a>Extrair, publicar e registrar arquivos .dacpac
 Este tópico descreve quatro procedimentos que você pode realizar clicando com o botão direito do mouse em um banco de dados conectado no Pesquisador de Objetos do SQL Server:  
@@ -50,7 +50,7 @@ Quando marcada, a caixa de seleção **Registrar como um Aplicativo da Camada de
 A configuração de publicação adicional está disponível na caixa de diálogo **Configurações de Publicação Avançadas**, que você pode acessar clicando no botão **Avançado**.  
   
 ## <a name="extract-data-tier-application"></a>Extrair aplicativo da camada de dados  
-Você pode extrair um .dacpac de um banco de dados. A extração cria um arquivo de instantâneo de banco de dados (.dacpac) de um banco de dados dinâmico do SQL Server ou um Banco de dados SQL do Windows Azure que possa conter dados de tabelas de usuários, além do esquema de banco de dados.  
+Você pode extrair um .dacpac de um banco de dados. A extração cria um arquivo de instantâneo de banco de dados (.dacpac) de um banco de dados dinâmico do SQL Server ou um Banco de dados SQL do Azure que pode conter dados de tabelas de usuários, além do esquema de banco de dados.  
   
 Especifique o arquivo .dacpac para ser criado. O botão **Propriedades do DAC** exibe a caixa de diálogo **Propriedades do AC**, que permite especificar as propriedades do arquivo .dacpac.  
   

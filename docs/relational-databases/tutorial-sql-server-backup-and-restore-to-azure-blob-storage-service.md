@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3ded19a91aba627a9d69d711a1d1640dc042a56
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ae4d9cd9333e8dd42582f972a0d19260b2c9a3ee
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893625"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155706"
 ---
 # <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Início Rápido: Backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ GO
 
 
 ## <a name="create-a-sql-server-credential"></a>Criar uma credencial do SQL Server
-Uma credencial do SQL Server é um objeto usado para armazenar as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server. Aqui, os processos de backup e restauração do SQL Server usam credenciais para autenticação no serviço de armazenamento de Blob do Windows Azure. A Credencial armazena o nome da conta de armazenamento e os valores de **access key** da conta de armazenamento. Depois que a credencial for criada, ela deverá ser especificada na opção WITH CREDENTIAL ao emitir instruções BACKUP/RESTORE. Para obter mais informações sobre credenciais, consulte [Credenciais](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine). 
+Uma credencial do SQL Server é um objeto usado para armazenar as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server. Aqui, os processos de backup e restauração do SQL Server usam credenciais para autenticação no serviço de Armazenamento de Blobs do Azure. A Credencial armazena o nome da conta de armazenamento e os valores de **access key** da conta de armazenamento. Depois que a credencial for criada, ela deverá ser especificada na opção WITH CREDENTIAL ao emitir instruções BACKUP/RESTORE. Para obter mais informações sobre credenciais, consulte [Credenciais](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine). 
 
   > [!IMPORTANT]
   > Os requisitos para criar uma credencial do SQL Server descritos abaixo são específicos dos processos do backup do SQL Server ([Backup do SQL Server para URL](backup-restore/sql-server-backup-to-url.md)e [Backup gerenciado do SQL Server no Microsoft Azure](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). O SQL Server usa o nome da conta de armazenamento e as informações da chave de acesso ao acessar o armazenamento do Azure para gravar ou ler backups.
@@ -119,8 +119,8 @@ Usando a chave de acesso que você salvou, crie a credencial do SQL Server segui
 
 1. Execute a instrução para criar a credencial. 
 
-## <a name="back-up-database-to-the-windows-azure-blob-storage-service"></a>Fazer backup do banco de dados no Serviço de Armazenamento de Blobs do Microsoft Azure
-Nesta seção, você usará uma instrução T-SQL para executar um backup completo de banco de dados no serviço de Armazenamento de Blobs do Windows Azure. 
+## <a name="back-up-database-to-the-azure-blob-storage-service"></a>Fazer backup do banco de dados no serviço de Armazenamento de Blobs do Azure
+Nesta seção, você usará uma instrução T-SQL para executar um backup completo de banco de dados no serviço de Armazenamento de Blobs do Azure. 
 
 1. Conecte-se ao seu SQL Server usando o SQL Server Management Studio. 
 1. Selecione o banco de dados **SQLTestDB** e abra uma janela **Nova Consulta**. 
@@ -138,7 +138,7 @@ Nesta seção, você usará uma instrução T-SQL para executar um backup comple
 1. Execute a instrução para fazer backup do banco de dados SQLTestDB na URL. 
 
  
-## <a name="restore-database-from-windows-azure-blob-storage-service"></a>Restaurar banco de dados do Serviço de Armazenamento de Blobs do Windows Azure
+## <a name="restore-database-from-azure-blob-storage-service"></a>Restaurar banco de dados do serviço de Armazenamento de Blobs do Azure
 Nesta seção, você usará uma instrução T-SQL para restaurar o backup do banco de dados completo. 
 
 1. Conecte-se ao seu SQL Server usando o SQL Server Management Studio. 

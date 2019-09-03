@@ -12,26 +12,26 @@ f1_keywords:
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 84dfb4e9f5027650ae3a35146b13f70fd0f84a2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94860f25b8cb53ab3c273da2e020d0d6a506ad0b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076161"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155614"
 ---
 # <a name="connect-to-microsoft-azure-storage-restore"></a>Conectar ao Armazenamento do Microsoft Azure (Restaurar)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  A caixa de diálogo permite que você especifique a conexão com as informações da conta de armazenamento do Windows Azure para recuperar o armazenamento de arquivos da conta de armazenamento do Windows Azure. Depois de especificar as informações necessárias, clique em **Conectar** para estabelecer a conexão com o armazenamento do Windows Azure.  
+  A caixa de diálogo permite que você especifique as informações da conexão com a conta de armazenamento do Azure a fim de recuperar o armazenamento de arquivos nessa conta de armazenamento do Azure. Depois de especificar as informações necessárias, clique em **Conectar** para estabelecer a conexão com o Armazenamento do Azure.  
   
-## <a name="windows-azure-storage-account"></a>Conta de armazenamento do Windows Azure Storage  
+## <a name="azure-storage-account"></a>Conta de Armazenamento do Azure  
  **Conta de armazenamento**  
- Selecione, digite ou cole o nome da conta de armazenamento do Windows Azure que você deseja usar. A caixa suspensa lista as contas usadas anteriormente.  
+ Selecione, digite ou cole o nome da conta de armazenamento do Azure que você deseja usar. A caixa suspensa lista as contas usadas anteriormente.  
   
  **Chave de conta**  
- Especifique a chave de acesso da conta de armazenamento do Windows Azure.  
+ Especifique a chave de acesso da conta de armazenamento do Azure.  
   
  Caixa de seleção**Usar pontos de extremidade seguros (HTTPS)**  
- Selecione esta opção para estabelecer uma conexão segura com o armazenamento do Microsoft Azure – recomendado.  
+ Selecione esta opção para estabelecer uma conexão segura com o Armazenamento do Azure – recomendado.  
   
  Caixa de seleção**Salvar chave de conta**  
  Marque esta caixa de seleção se desejar que o SQL Server se lembre da chave de acesso para essa conta de armazenamento.  

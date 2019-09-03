@@ -1,7 +1,7 @@
 ---
 title: Manutenção e solução de problemas &amp; do Conector do SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 04/05/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: f06a2fd1b8734701fe261cba42d66ca1652e06fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d24f4e86f59e91537886480b26248c683665850a
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140700"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148782"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Manutenção &amp; solução de problemas do Conector do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -138,11 +138,12 @@ Se você estiver usando a Versão 1.0.0.440 ou mais antiga, siga estas etapas pa
 8.  Depois de validar que a atualização funciona, você poderá excluir a antiga pasta do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (se você optar por renomeá-la em vez de desinstalá-la na Etapa 3).  
   
 ### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>Revertendo a Entidade de Serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa entidades de serviço criadas no Azure Active Directory como credenciais para acessar o Cofre de Chaves.  A entidade de serviço tem uma ID do Cliente e uma Chave de Autenticação.  Uma credencial do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é configurada com o **VaultName**, a **ID do cliente**e a **Chave de Autenticação**.  A **Chave de Autenticação** é válida por um determinado período de tempo (1 ou 2 anos).   Antes do período de tempo expirar, uma nova chave deve ser gerada no Azure AD para a Entidade de Serviço.  Em seguida, a credencial deve ser alterada no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] mantém um cache de credencial na sessão atual, portanto, quando uma credencial é alterada, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] deve ser reiniciado.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa entidades de serviço criadas no Azure Active Directory como credenciais para acessar o Cofre de Chaves.  A entidade de serviço tem uma ID do Cliente e uma Chave de Autenticação.  Uma credencial do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é configurada com o **VaultName**, a **ID do cliente**e a **Chave de Autenticação**.  A **Chave de Autenticação** é válida por determinado período (um ou dois anos).   Antes do período de tempo expirar, uma nova chave deve ser gerada no Azure AD para a Entidade de Serviço.  Em seguida, a credencial deve ser alterada no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] mantém um cache de credencial na sessão atual, portanto, quando uma credencial é alterada, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] deve ser reiniciado.  
   
 ### <a name="key-backup-and-recovery"></a>Backup e Recuperação de Chaves  
 O backup do cofre de chaves deve ser feito regularmente. Se uma chave assimétrica no cofre for perdida, ela poderá ser restaurada do backup. A chave deve ser restaurada usando o mesmo nome de antes, o que o comando Restore PowerShell fará (consulte etapas abaixo).  
-Se o cofre tiver sido perdido, você precisará recriar um cofre e restaurar a chave assimétrica no cofre usando o mesmo nome de antes. O nome do cofre pode ser diferente (ou o mesmo de antes). Você também deve definir as permissões de acesso no novo cofre para conceder à entidade de serviço do SQL Server o acesso necessário para os cenários de criptografia do SQL Server e, em seguida, ajustar a credencial do SQL Server para que o nome do novo cofre seja refletido.  
+Se o cofre tiver sido perdido, você precisará recriar um cofre e restaurar a chave assimétrica no cofre usando o mesmo nome de antes. O nome do cofre pode ser diferente (ou o mesmo de antes). Você também deve definir as permissões de acesso no novo cofre para conceder à entidade de serviço do SQL Server o acesso necessário para os cenários de criptografia do SQL Server e, em seguida, ajustar a credencial do SQL Server para que o nome do novo cofre seja refletido.
+
 Resumindo, estas são as etapas:  
   
 * Fazer backup do cofre de chaves (usando o cmdlet do PowerShell Backup-AzureKeyVaultKey).  
@@ -191,7 +192,7 @@ Os backups de chaves podem ser restaurados em todas as regiões do Azure, contan
 3. Selecione a assinatura do Azure que você está usando e clique em **Editar Diretório** nos comandos da parte inferior da tela.
 4. Na janela pop-up, use a lista suspensa **Diretório** para selecionar o Active Directory que você deseja usar. Isso tornará o Diretório padrão.
 5. Verifique se você é o administrador global do Active Directory recém-selecionado. Se você não for o administrador global, poderá perder permissões de gerenciamento, pois você mudou de diretório.
-6. Depois que a janela pop-up for fechada, se nenhuma de suas assinaturas estiver visível, talvez seja necessário atualizar o filtro **Filtrar por Diretório** no filtro **Assinaturas** do menu superior direito da tela para ver as assinaturas que usam o Active Directory recém-atualizado.
+6. Depois que a janela pop-up é fechada, se nenhuma de suas assinaturas estiver visível, talvez seja necessário atualizar o filtro **Filtrar por Diretório** no filtro **Assinaturas** do menu superior direito da tela para ver as assinaturas que usam o Active Directory recém-atualizado.
 
     > [!NOTE] 
     > Talvez você não tenha permissões para realmente alterar o diretório padrão na assinatura do Azure. Nesse caso, crie a entidade de serviço do AAD no diretório padrão para que ela esteja no mesmo diretório que o Cofre de Chaves do Azure que será usado mais tarde.
@@ -212,7 +213,7 @@ Código do erro  |Símbolo  |Descrição
 6 | scp_err_InvalidArgument | O argumento fornecido é inválido.    
 7 | scp_err_ProviderError | Há um erro não especificado ocorrendo no provedor EKM detectado pelo mecanismo SQL.    
 2049 | scp_err_KeyNameDoesNotFitThumbprint | O nome da chave é muito longo para caber na impressão digital do mecanismo do SQL. O nome da chave não deve exceder 26 caracteres.    
-2050 | scp_err_PasswordTooShort | A cadeia de caracteres secreta que é a concatenação da ID de cliente do AAD e o segredo é menor que 32 caracteres.    
+2050 | scp_err_PasswordTooShort | A cadeia de caracteres secreta que é a concatenação de ID e do segredo do cliente do AAD é menor que 32 caracteres.    
 2051 | scp_err_OutOfMemory | A memória do mecanismo SQL acabou e não foi possível alocar memória para o provedor EKM.    
 2052 | scp_err_ConvertKeyNameToThumbprint | Falha ao converter o nome da chave para impressão digital.    
 2053 | scp_err_ConvertThumbprintToKeyName|  Falha ao converter a impressão digital para o nome da chave.    
@@ -292,9 +293,9 @@ Versão do SQL Server  |Link de instalação redistribuível
   
 -   Referência dos [Cmdlets do Cofre de Chaves do Azure](/powershell/module/azurerm.keyvault/) do PowerShell  
   
-## <a name="see-also"></a>Consulte Também  
- [Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Use SQL Server Connector with SQL Encryption Features (Usar o Conector do SQL Server com recursos de criptografia do SQL)](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
- [Opção de configuração de servidor EKM provider enabled](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
- [Setup Steps for Extensible Key Management Using the Azure Key Vault (Etapas de instalação para o gerenciamento extensível de chaves usando o Cofre de Chaves do Azure)](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
-  
-  
+## <a name="see-also"></a>Consulte Também
+
+ [Gerenciamento extensível de chaves usando o Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Usar o Conector do SQL Server com recursos de criptografia do SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)  
+ [Opção de configuração de servidor EKM provider enabled](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
+ [Setup Steps for Extensible Key Management Using the Azure Key Vault (Etapas de instalação para o gerenciamento extensível de chaves usando o Cofre de Chaves do Azure)](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)
