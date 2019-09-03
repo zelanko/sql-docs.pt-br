@@ -1,6 +1,6 @@
 ---
 title: Novidades no SQL Server 2019 | Microsoft Docs
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6464f83c8783c6fa82f397b7a30ed068f695e66b
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.openlocfilehash: 718f0c6c5fa6b517f2b60bbca0f06f58310c6d22
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70026238"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155475"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novidades no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -40,15 +40,12 @@ As seções a seguir fornecem uma visão geral desses recursos.
 
 | Novo recurso ou atualização | Detalhes |
 |:---|:---|
-| Solução de Big Data escalonável | [Implantar clusters escalonáveis](../big-data-cluster/deploy-get-started.md) de contêineres do SQL Server, do Spark e do HDFS em execução no Kubernetes <br/><br/> Ler, gravar e processar Big Data do Transact-SQL ou do Spark<br/><br/> Combine e analise facilmente dados relacionais de valor elevado com Big Data de volume grande<br/><br/>Consultar fontes de dados externas<br/><br/>Armazenar Big Data no HDFS gerenciado por SQL Server<br/><br/>Consultar dados de várias fontes de dados externas por meio do cluster<br/><br/> Usar os dados para IA, aprendizado de máquina e outras tarefas de análise<br/><br/> Implantar e executar aplicativos em [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] <br/>|
+| Solução de Big Data escalonável | [Implantar clusters escalonáveis](../big-data-cluster/deploy-get-started.md) de contêineres do SQL Server, do Spark e do HDFS em execução no Kubernetes <br/><br/> Ler, gravar e processar Big Data do Transact-SQL ou do Spark<br/><br/> Combine e analise facilmente dados relacionais de valor elevado com Big Data de volume grande<br/><br/>Consultar fontes de dados externas<br/><br/>Armazenar Big Data no HDFS gerenciado por SQL Server<br/><br/>Consultar dados de várias fontes de dados externas por meio do cluster<br/><br/> Usar os dados para IA, aprendizado de máquina e outras tarefas de análise<br/><br/> Implantar e executar aplicativos em [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] <br/><br/> Os bancos de dados de instâncias mestre do SQL Server usam Grupos de Disponibilidade Always On<br/>|
 | &nbsp; | &nbsp; |
 
 Para obter mais detalhes, confira [O que são SQL Server [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]](../big-data-cluster/big-data-cluster-overview.md).
 
 [O arquivo de anúncios do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (CTP)](what-s-new-in-sql-server-ver15-prerelease.md) contém uma lista de recursos anunciados e alterados para todas as versões CTP anteriores desse recurso.
-
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 ## <a name="database-engine"></a>Mecanismo de banco de dados
 

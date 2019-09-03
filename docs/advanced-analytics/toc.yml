@@ -81,6 +81,16 @@
           href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
         - name: Criar um modelo Python usando revoscalepy
           href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
+        - name: 'Customer clustering (K-Means) (Clustering de clientes [K-Means])'
+          items:
+            - name: 1 – Introdução
+              href: ../advanced-analytics/tutorials/tutorial-python-clustering-model.md
+            - name: 2 - Prepare the data (Preparar os dados)
+              href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-prepare-data.md
+            - name: 3 - Create the model (Criar o modelo)
+              href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-build.md
+            - name: 4 - Deploy the model (Implantar o modelo)
+              href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-deploy.md
         - name: Python para desenvolvedores do SQL
           items:
             - name: 1 – Introdução
