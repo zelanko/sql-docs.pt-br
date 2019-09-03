@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e83ffa37af2a6e33cad2645105b0df034f59d9f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7dbbbf92c751093d2a7333b7ac1f76888d41d345
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67926186"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212334"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>Instanciação de evento ADO: ADO e WFC
-ADO para Windows Foundation Classes (ADO/WFC) se baseia no modelo de evento ADO e apresenta uma interface de programação de aplicativos simplificado. Em geral, o ADO/WFC intercepta eventos ADO, consolida os parâmetros de evento em uma classe de evento único e, em seguida, chama o manipulador de eventos.  
+O ADO para Windows Foundation classes (ADO/WFC) se baseia no modelo de evento ADO e apresenta uma interface de programação de aplicativo simplificada. Em geral, o ADO/WFC intercepta eventos ADO, consolida os parâmetros de evento em uma única classe de evento e, em seguida, chama o manipulador de eventos.  
   
-### <a name="to-use-ado-events-in-adowfc"></a>Usar eventos ADO no ADO/WFC  
+### <a name="to-use-ado-events-in-adowfc"></a>Para usar eventos ADO no ADO/WFC  
   
-1.  Defina seu próprio manipulador de eventos para processar um evento. Por exemplo, se você quiser processar os **eventos ConnectComplete** evento na **ConnectionEvent** família, você pode usar este código:  
+1.  Defina seu próprio manipulador de eventos para processar um evento. Por exemplo, se você quisesse processar o evento **ConnectComplete** na família **ConnectionEvent** , você pode usar este código:  
   
     ```  
     public void onConnectComplete(Object sender,ConnectionEvent e)  
@@ -31,38 +31,38 @@ ADO para Windows Foundation Classes (ADO/WFC) se baseia no modelo de evento ADO 
     }  
     ```  
   
-2.  Defina um objeto de manipulador para representar seu manipulador de eventos. O objeto de manipulador deve ser do tipo de dados **ConnectEventHandler** para um evento do tipo **ConnectionEvent**, ou o tipo de dados **RecordsetEventHandler** para um evento do tipo  **RecordsetEvent**. Por exemplo, código a seguir para seu **eventos ConnectComplete** manipulador de eventos:  
+2.  Defina um objeto de manipulador para representar seu manipulador de eventos. O objeto Handler deve ser do tipo de dados **ConnectEventHandler** para um evento do tipo **ConnectionEvent**ou tipo de dados **RecordsetEventHandler** para um evento do tipo **RecordsetEvent**. Por exemplo, codifique o seguinte para o manipulador de eventos **ConnectComplete** :  
   
     ```  
     ConnectionEventHandler handler =   
         new ConnectionEventHandler(this, "onConnectComplete");  
     ```  
   
-     O primeiro argumento do **ConnectionEventHandler** construtor é uma referência à classe que contém o manipulador de eventos chamado no segundo argumento.  
+     O primeiro argumento do construtor **ConnectionEventHandler** é uma referência à classe que contém o manipulador de eventos chamado no segundo argumento.  
   
-3.  Adicione o manipulador de eventos para uma lista de manipuladores designado para processar um determinado tipo de evento. Use o método com um nome, como **addOn** *EventName*(*manipulador*).  
+3.  Adicione seu manipulador de eventos a uma lista de manipuladores designados para processar um determinado tipo de evento. Use o método com um nome como EventName (*manipulador*) de **addOn**.  
   
-4.  Internamente, o ADO/WFC implementa todos os manipuladores de evento ADO. Portanto, um evento é causado por uma **Conexão** ou **Recordset** operação é interceptada por um manipulador de eventos ADO/WFC.  
+4.  O ADO/WFC implementa internamente todos os manipuladores de eventos do ADO. Portanto, um evento causado por uma **conexão** ou operação de **conjunto de registros** é interceptado por um manipulador de eventos ADO/wfc.  
   
-     O manipulador de eventos ADO/WFC passa ADO **ConnectionEvent** parâmetros em uma instância do ADO/WFC **ConnectionEvent** classe ou ADO **RecordsetEvent** parâmetros em um instância do ADO/WFC **RecordsetEvent** classe. Essas classes de ADO/WFC consolidam os parâmetros de evento ADO; ou seja, cada classe de ADO/WFC contém um membro de dados para cada parâmetro exclusivo em todos os ADO **ConnectionEvent** ou **RecordsetEvent** métodos.  
+     O manipulador de eventos ADO/WFC passa parâmetros ADO **ConnectionEvent** em uma instância da classe ADO/WFC **CONNECTIONEVENT** ou parâmetros ADO **RecordsetEvent** em uma instância da classe ADO/WFC **RecordsetEvent** . Essas classes ADO/WFC consolidam os parâmetros do evento ADO; ou seja, cada classe ADO/WFC contém um membro de dados para cada parâmetro exclusivo em todos os métodos **ConnectionEvent** ou **RecordsetEvent** do ADO.  
   
-5.  ADO/WFC, em seguida, chama o manipulador de eventos com o objeto de evento ADO/WFC. Por exemplo, sua **onConnectComplete** manipulador tem uma assinatura como esta:  
+5.  Em seguida, o ADO/WFC chama o manipulador de eventos com o objeto de evento ADO/WFC. Por exemplo, o manipulador **onConnectComplete** tem uma assinatura como esta:  
   
     ```  
     public void onConnectComplete(Object sender,ConnectionEvent e)  
     ```  
   
-     O primeiro argumento é o tipo de objeto que enviou o evento ([Conexão](../../../ado/reference/ado-api/connection-object-ado.md) ou [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)), e o segundo argumento é o objeto de evento ADO/WFC (**ConnectionEvent** ou **RecordsetEvent**).  
+     O primeiro argumento é o tipo de objeto que enviou o evento ([conexão](../../../ado/reference/ado-api/connection-object-ado.md) ou [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)) e o segundo argumento é o objeto de evento ADO/wfc (**ConnectionEvent** ou **RecordsetEvent**).  
   
-     A assinatura do seu manipulador de eventos é mais simples do que um evento do ADO. No entanto, ainda é necessário entender o modelo de evento ADO saber quais parâmetros se aplicam a um evento e como responder.  
+     A assinatura do manipulador de eventos é mais simples do que um evento ADO. No entanto, você ainda deve entender o modelo de evento ADO para saber quais parâmetros se aplicam a um evento e como responder.  
   
-6.  Retornar do seu manipulador de eventos para o manipulador de ADO/WFC para o evento do ADO. ADO/WFC copia os membros de dados de evento ADO/WFC pertinentes para os parâmetros de evento ADO e, em seguida, o manipulador de eventos ADO retorna.  
+6.  Retornar do manipulador de eventos para o manipulador ADO/WFC do evento ADO. O ADO/WFC copia os membros de dados do evento ADO/WFC pertinentes de volta para os parâmetros do evento ADO e, em seguida, o manipulador de eventos do ADO retorna.  
   
-7.  Quando tiver terminado de processamento, remover o manipulador da lista de manipuladores de eventos ADO/WFC. Use o método com um nome, como **removeOn** *EventName*(*manipulador*).  
+7.  Quando você terminar de processar, remova seu manipulador da lista de manipuladores de eventos ADO/WFC. Use o método com um nome como **remover**_EventName_(*manipulador*).  
   
 ## <a name="see-also"></a>Consulte também  
- [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO – índice de sintaxe WFC](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
- [Parâmetros de evento](../../../ado/guide/data/event-parameters.md)   
+ [Resumo do manipulador de eventos do ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
+ [Índice de sintaxe ADO-WFC](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
+ [Parâmetros do evento](../../../ado/guide/data/event-parameters.md)   
  [Como os manipuladores de eventos funcionam juntos](../../../ado/guide/data/how-event-handlers-work-together.md)   
  [Tipos de eventos](../../../ado/guide/data/types-of-events.md)

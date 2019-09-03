@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f70661db4dbd34475a5708b8ae9ca3691c94e689
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a4bd7f90688d61f9ecee487d553393e38bed82e3
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017801"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211274"
 ---
-# <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysmail_add_profile_sp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Cria um novo perfil do Database Mail.  
   
@@ -41,26 +41,29 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_name = ] 'profile\_name'` O nome para o novo perfil. *profile_name* está **sysname**, sem padrão.  
+`[ @profile_name = ] 'profile\_name'`O nome do novo perfil. o profile_name é **sysname**, sem padrão.  
+ 
+   > [!NOTE]
+   > O nome do perfil que usa o Azure SQL Instância Gerenciada SQL Agent deve ser chamado **AzureManagedInstance_dbmail_profile**
   
-`[ @description = ] 'description'` A descrição opcional para o novo perfil. *Descrição* está **nvarchar(256)** , sem padrão.  
+`[ @description = ] 'description'`A descrição opcional para o novo perfil. a *Descrição* é **nvarchar (256)** , sem padrão.  
   
-`[ @profile_id = ] _new\_profile\_idOUTPUT` Retorna a ID para o novo perfil. *new_profile_id* está **int**, com um padrão NULL.  
+`[ @profile_id = ] _new\_profile\_id OUTPUT`Retorna a ID do novo perfil. *new_profile_id* é **int**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- Um perfil Database Mail contém qualquer número de contas do Database Mail. Os procedimentos armazenados do Database Mail podem se referir a um perfil por meio do nome do perfil ou da identificação do perfil gerada por este procedimento. Para obter mais informações sobre como adicionar uma conta a um perfil, consulte [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md).  
+ Um perfil Database Mail contém qualquer número de contas do Database Mail. Os procedimentos armazenados do Database Mail podem se referir a um perfil por meio do nome do perfil ou da identificação do perfil gerada por este procedimento. Para obter mais informações sobre como adicionar uma conta a um perfil, consulte [Transact &#40;-&#41;SQL sysmail_add_profileaccount_sp](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md).  
   
- O nome do perfil e a descrição podem ser alterados com o procedimento armazenado **sysmail_update_profile_sp**, enquanto a id do perfil permanece constante durante a vida útil do perfil.  
+ O nome do perfil e a descrição podem ser alterados com o procedimento armazenado **sysmail_update_profile_sp**, enquanto a ID do perfil permanece constante durante a vida útil do perfil.  
   
  O nome de perfil deve ser exclusivo para o Microsoft [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], caso contrário o procedimento armazenado retornará um erro.  
   
- O procedimento armazenado **sysmail_add_profile_sp** está no **msdb** banco de dados e é de propriedade de **dbo** esquema. O procedimento deve ser executado com um nome de três partes se o banco de dados atual não for **msdb**.  
+ O procedimento armazenado **sysmail_add_profile_sp** está no banco de dados **msdb** e pertence ao esquema **dbo** . O procedimento deve ser executado com um nome de três partes se o banco de dados atual não for **msdb**.  
   
 ## <a name="permissions"></a>Permissões  
- Permissões de execução para esse procedimento usam como padrão os membros de **sysadmin** função de servidor fixa.  
+ As permissões de execução para este procedimento assumem como padrão os membros da função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
  **A. Criando um novo perfil**  
@@ -73,7 +76,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
        @description = 'Profile used for administrative mail.' ;  
 ```  
   
- **B. Criando um novo perfil, salvando a identificação do perfil em uma variável**  
+ **B. Criando um novo perfil, salvando a ID do perfil em uma variável**  
   
  O exemplo a seguir cria um novo perfil do Database Mail chamado `AdventureWorks Administrator`. O exemplo armazena o número da identificação do perfil na variável `@profileId` e retorna um conjunto de resultados contendo o número de identificação do perfil para o novo perfil.  
   
@@ -90,8 +93,8 @@ SELECT @profileId ;
   
 ## <a name="see-also"></a>Consulte também  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Criar uma conta do Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Objetos de configuração do Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Procedimentos armazenados do Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Criar uma conta de Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Database Mail objetos de configuração](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Database Mail procedimentos &#40;armazenados TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   
