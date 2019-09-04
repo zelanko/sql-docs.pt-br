@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 5d2587a6150807841edc9773478f1b798ee60d84
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: a22cf1c2da261805309c8ac223a8535afbcd34d1
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742807"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152737"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Notas sobre a versão para Microsoft ODBC Driver para SQL Server em Linux e macOS
 
@@ -35,7 +35,7 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
-## <a name="174-august-2019"></a>17,4, agosto de 2019
+## <a name="174-august-2019"></a>17.4, agosto de 2019
 
 | Recurso adicionado | Detalhes |
 | :------------ | :------ |
@@ -133,6 +133,6 @@ O driver ODBC no SUSE Linux (visualização) oferece suporte para o SUSE Linux E
 
 O driver ODBC no Linux é compatível com [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Para obter mais informações, veja [ODBC Driver no suporte do Linux para alta disponibilidade, recuperação de desastres](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
 
-O driver ODBC no Linux oferece suporte para conexões com o Banco de Dados SQL do Microsoft Azure. Para obter mais informações, consulte [How to: Connect to Windows Azure SQL Database Using ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
+O driver ODBC no Linux oferece suporte para conexões com o Banco de Dados SQL do Microsoft Azure. Saiba mais em [Como conectar o Banco de Dados SQL do Azure usando ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
 
 A opção `-l` (tempo limite de logon) foi adicionada ao `bcp`. Para obter mais informações, veja [Como conectar-se com **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).

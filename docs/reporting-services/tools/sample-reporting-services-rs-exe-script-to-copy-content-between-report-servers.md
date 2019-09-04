@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 716768027c855b86a0cffdee4bf64c5d1c66badd
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 18d10f94696f901efd4f3938bf9b5e06d1c7078d
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67686700"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176290"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Script rs.exe do Reporting Services de exemplo para copiar conteúdo entre Servidores de Relatório
 
@@ -253,26 +253,26 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_to_native_Azure_vm"></a> Modo nativo para o modo nativo – máquina virtual do Microsoft Azure  
+###  <a name="bkmk_native_to_native_Azure_vm"></a> Modo nativo para modo nativo – máquina virtual do Azure  
  O exemplo a seguir migra conteúdo:  
   
 -   De um servidor de relatório do modo nativo **SourceServer**.  
   
--   Para um servidor de relatório nativo **TargetServer** em execução em uma máquina virtual do Microsoft Azure. O **TargetServer** não é ingressado ao domínio de **SourceServer**, e **User2** é um administrador na máquina virtual do Microsoft Azure **TargetServer**.  
+-   Para um servidor de relatório do modo nativo **TargetServer** em execução em uma máquina virtual do Azure. O **TargetServer** não está associado ao domínio de **SourceServer**, e **User2** é um administrador na máquina virtual do Azure **TargetServer**.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\user1 -p Password -v ts="https://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Password2"  
 ```  
   
 > [!TIP]  
-> Para obter informações sobre como usar o Windows PowerShell para criar servidores de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nas máquinas virtuais do Microsoft Azure virtual, consulte [Usar PowerShell para criar uma máquina virtual do Microsoft Azure com um servidor de relatório do modo nativo](https://docs.microsoft.com/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-report).  
+> Saiba mais sobre como usar o Windows PowerShell para criar servidores de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nas máquinas virtuais do Azure em [Usar o PowerShell para criar uma máquina virtual do Azure com um servidor de relatório do modo nativo](https://docs.microsoft.com/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-report).  
   
-##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> Modo do SharePoint – conjunto de sites 'bi' para o servidor de modo nativo na máquina virtual do Microsoft Azure. 
+##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> Modo do SharePoint – conjunto de sites "bi" para o servidor de modo nativo na máquina virtual do Azure. 
  O exemplo a seguir migra conteúdo:  
   
 -   De um servidor de relatório do modo do SharePoint **SourceServer** que contém um conjunto de sites "sites/bi" e uma biblioteca de documentos compartilhados.  
   
--   Para um servidor de relatório nativo **TargetServer** em execução em uma máquina virtual do Microsoft Azure. O **TargetServer** não é ingressado ao domínio de **SourceServer**, e **User2** é um administrador na máquina virtual do Microsoft Azure **TargetServer**.  
+-   Para um servidor de relatório do modo nativo **TargetServer** em execução em uma máquina virtual do Azure. O **TargetServer** não está associado ao domínio de **SourceServer**, e **User2** é um administrador na máquina virtual do Azure **TargetServer**.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="https://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  
