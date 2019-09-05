@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6fceea54c6ea7d5c904cc27c87033c4a40cff59f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 2ce02ef0b212070b4a52944e055404137c78c98b
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158211"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304730"
 ---
 # <a name="azdata-control"></a>controle azdata
 
@@ -47,7 +47,7 @@ Nome do plano de controle, usado para namespaces kubernetes.
 #### `--config-profile -c`
 Perfil de configuração de cluster, usado para implantar o cluster: [' AKs-dev-Test ', ' kubeadm-prod ', ' minikube-dev-Test ', ' kubeadm-dev-Test ']
 #### `--accept-eula -a`
-Você aceita os termos de licença? [sim/não]. Se não quiser usar esse argumento, você poderá definir a variável de ambiente ACCEPT_EULA como 'sim'. Os termos de licença desse produto podem ser exibidos em https://aka.ms/azdata-eula.
+Você aceita os termos de licença? [sim/não]. Se não quiser usar esse argumento, você poderá definir a variável de ambiente ACCEPT_EULA como 'sim'. 
 #### `--node-label -l`
 Rótulo do nó, usado para designar em quais nós implantar.
 #### `--force -f`

@@ -9,18 +9,18 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 230ec2300bff55cefbb176c69d677b4e04d6ad30
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: a0da84d60a9513b0ca81a0256218928372882e72
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155316"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304824"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Definir configurações de implantação para recursos e serviços de cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-A partir de um conjunto predefinido de perfis de configuração que são internos na ferramenta de gerenciamento de azdata, você pode facilmente modificar as configurações padrão para atender melhor aos seus requisitos de carga de trabalho do BDC. A partir da versão Release Candidate, a estrutura dos arquivos de configuração foi atualizada para permitir que você atualize de maneira granular as configurações por cada serviço do recurso. 
+A partir de um conjunto predefinido de perfis de configuração que são criados na ferramenta de gerenciamento do azdata, você pode facilmente modificar as configurações padrão para atender melhor aos seus requisitos de carga de trabalho do BDC. A partir da versão Release Candidate, a estrutura dos arquivos de configuração foi atualizada para permitir que você atualize de maneira granular as configurações por cada serviço do recurso. 
 
 Você também pode definir configurações de nível de recurso ou atualizar as configurações de todos os serviços em um recurso. Aqui está um resumo da estrutura para o **BDC. JSON**:
 
@@ -99,7 +99,7 @@ Para atualizar configurações de nível de recurso, como instâncias em um pool
 }
 ``` 
 
-Da mesma forma, para alterar as configurações de um serviço único em um recurso específico. Por exemplo, se você quiser alterar as configurações de memória do Spark somente para o componente Spark no pool de armazenamento, você irá atualização o recurso de **armazenamento-0** com uma seção de **configurações** para o serviço **Spark** no arquivo de configuração **BDC. JSON** .
+Da mesma forma, para alterar as configurações de um único serviço em um recurso específico. Por exemplo, se você quiser alterar as configurações de memória do Spark apenas para o componente do Spark no pool de armazenamento, atualizará o recurso de **armazenamento-0** com uma seção de **configurações** para o serviço do **Spark** no arquivo de configuração do **BDC. JSON** .
 ```json
 "resources":{
     ...
@@ -243,7 +243,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
 
 ## <a id="storage"></a> Configurar o armazenamento
 
-Você também pode alterar a classe de armazenamento e as características que são usadas para cada pool. O exemplo a seguir atribui uma classe de armazenamento personalizada ao pool de armazenamento e atualiza o tamanho da declaração de volume persistente para armazenar dados até 100 Gb. Primeiro, crie um arquivo patch.json, como mostrado abaixo, que inclui a nova seção de *armazenamento*, além *tipo* e *réplicas*
+Você também pode alterar a classe de armazenamento e as características que são usadas para cada pool. O exemplo a seguir atribui uma classe de armazenamento personalizada ao armazenamento e aos pools de dados e atualiza o tamanho da declaração de volume persistente para armazenar dados em 500 GB para HDFS (pool de armazenamento) e 100 GB para o pool de dados. Primeiro, crie um arquivo patch.json, como mostrado abaixo, que inclui a nova seção de *armazenamento*, além *tipo* e *réplicas*
 
 ```json
 {
@@ -256,13 +256,33 @@ Você também pode alterar a classe de armazenamento e as características que s
         "replicas": 2,
         "storage": {
           "data": {
-            "size": "100Gi",
-            "className": "myStorageClass",
+            "size": "500Gi",
+            "className": "myHDFSStorageClass",
             "accessMode": "ReadWriteOnce"
           },
           "logs": {
             "size": "32Gi",
-            "className": "myStorageClass",
+            "className": "myHDFSStorageClass",
+            "accessMode": "ReadWriteOnce"
+          }
+        }
+      }
+    },
+    {
+      "op": "replace",
+      "path": "spec.resources.data-0.spec",
+      "value": {
+        "type": "Data",
+        "replicas": 2,
+        "storage": {
+          "data": {
+            "size": "100Gi",
+            "className": "myDataStorageClass",
+            "accessMode": "ReadWriteOnce"
+          },
+          "logs": {
+            "size": "32Gi",
+            "className": "myDataStorageClass",
             "accessMode": "ReadWriteOnce"
           }
         }
@@ -297,7 +317,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
 
 Você pode controlar o posicionamento do pod em nós do Kubernetes que têm recursos específicos para acomodar vários tipos de requisitos de carga de trabalho. Por exemplo, talvez você queira garantir que os pods de recursos do pool de armazenamento sejam colocados em nós com mais armazenamento, ou SQL Server instâncias mestre sejam colocadas em nós que tenham recursos de CPU e memória maiores. Nesse caso, primeiro você criará um cluster do Kubernetes heterogêneo com diferentes tipos de hardware e, em seguida, [atribuirá os rótulos de nó](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) de acordo. No momento da implantação do cluster de Big Data, você pode especificar os mesmos rótulos no nível de pool no arquivo de configuração de implantação de cluster. Em seguida, o Kubernetes cuidará do ajuste dos pods em nós que correspondem aos rótulos especificados. A chave de rótulo específica que precisa ser adicionada aos nós no cluster kubernetes é **MSSQL-cluster-Wide**. O valor desse rótulo pode ser qualquer cadeia de caracteres que você escolher.
 
-O exemplo a seguir mostra como editar um arquivo de configuração personalizado para incluir uma configuração de rótulo de nó para a instância mestra de SQL Server, pool de computação, pool de dados & pool de armazenamento. Observe que não há nenhuma chave *nodeLabel* nas configurações internas, portanto, será necessário editar um arquivo de configuração personalizado manualmente ou criar um arquivo de patch e aplicá-lo ao arquivo de configuração personalizado. O Pod da instância mestra de SQL Server será implantado em um nó que contém um rótulo **MSSQL-cluster-Wide** com o valor **BDC-Master**. O pool de computação e os pods do pool de dados serão implantados em nós que contêm um rótulo **MSSQL-cluster-Wide** com o valor **BDC-SQL**. O pods do pool de armazenamento será implantado em nós que contêm um rótulo **MSSQL-cluster-Wide** com valor **BDC-Storage**.
+O exemplo a seguir mostra como editar um arquivo de configuração personalizado para incluir uma configuração de rótulo de nó para a instância mestra de SQL Server, pool de computação, pool de dados & pool de armazenamento. Não há nenhuma chave *nodeLabel* nas configurações internas, portanto, será necessário editar um arquivo de configuração personalizado manualmente ou criar um arquivo de patch e aplicá-lo ao arquivo de configuração personalizado. O Pod da instância mestra de SQL Server será implantado em um nó que contém um rótulo **MSSQL-cluster-Wide** com o valor **BDC-Master**. O pool de computação e os pods do pool de dados serão implantados em nós que contêm um rótulo **MSSQL-cluster-Wide** com o valor **BDC-SQL**. O pods do pool de armazenamento será implantado em nós que contêm um rótulo **MSSQL-cluster-Wide** com valor **BDC-Storage**.
 
 Crie um arquivo chamado **patch.json** no diretório atual com o conteúdo a seguir:
 
