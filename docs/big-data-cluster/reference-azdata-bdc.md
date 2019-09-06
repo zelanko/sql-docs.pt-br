@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 408b3c2d55d5e2515a2df979cd54b380a0d54704
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 689b01b7798a5a1f4ec282343bfea0a1781e3437
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155137"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304732"
 ---
 # <a name="azdata-bdc"></a>bdc de azdata
 
@@ -71,7 +71,7 @@ Nome do cluster de Big Data, usado para namespaces do Kubernetes.
 #### `--config-profile -c`
 Perfil de configuração de cluster de Big data, usado para implantar o cluster: [' AKs-dev-Test ', ' kubeadm-prod ', ' minikube-dev-Test ', ' kubeadm-dev-Test ']
 #### `--accept-eula -a`
-Você aceita os termos de licença? [sim/não]. Se não quiser usar esse argumento, você poderá definir a variável de ambiente ACCEPT_EULA como 'sim'. Os termos de licença desse produto podem ser exibidos em https://aka.ms/azdata-eula e https://go.microsoft.com/fwlink/?LinkId=2002534.
+Você aceita os termos de licença? [sim/não]. Se não quiser usar esse argumento, você poderá definir a variável de ambiente ACCEPT_EULA como 'sim'. Os termos de licença desse produto podem ser exibidos em https://go.microsoft.com/fwlink/?LinkId=2002534.
 #### `--node-label -l`
 Rótulo do nó de cluster de Big Data, usado para designar em quais nós implantar.
 #### `--force -f`
