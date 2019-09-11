@@ -94,7 +94,7 @@ ms.locfileid: "70175968"
 -   Ao fazer a restauração em um backup compactado, você verá o seguinte erro:  
   
     -   Ocorreu a **SqlException 3284. Severity 16 Estados: 5**  
-        **A marca de mensagem do dispositivo https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak ' ' não está alinhada. Emita novamente a instrução RESTORE com o mesmo tamanho de bloco usado para criar o conjunto de backup: ' 65536 ' é semelhante a um valor possível.**  
+        **A marca de mensagem do dispositivo'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak ' não está alinhada. Emita novamente a instrução RESTORE com o mesmo tamanho de bloco usado para criar o conjunto de backup: ' 65536 ' é semelhante a um valor possível.**  
   
          Para corrigir esse erro, emita novamente a instrução `BACKUP` com `BLOCKSIZE = 65536` especificada.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "70175968"
   
  Os servidores proxy podem ter configurações que limitam o número de conexões por minuto. O processo de Backup para URL é multi-threaded e, portanto, pode ir além desse limite. Se isso acontecer, o servidor proxy elimina a conexão. Para resolver esse problema, altere as configurações de proxy para que o SQL Server não use o proxy.   A seguir estão alguns exemplos dos tipos ou mensagens de erro que você pode ver no log de erros:  
   
--   Falha ao gravar http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak em "": O backup para a URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: Não é possível ler os dados da conexão de transporte: A conexão foi fechada.  
+-   Falha ao gravar'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 'em: O backup para a URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: Não é possível ler os dados da conexão de transporte: A conexão foi fechada.  
   
 -   Ocorreu um erro de E/S não recuperável no arquivo “http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: ” Não foi possível coletar o erro do ponto de extremidade remoto.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "70175968"
   
      BACKUP DATABASE está sendo encerrado de forma anormal.  
   
--   BackupIoRequest:: ReportIoError: falha de gravação no dispositivo de http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak backup ' '. Erro de sistema operacional: a opção Backup para URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: Não é possível ler os dados da conexão de transporte: A conexão foi fechada.  
+-   BackupIoRequest:: ReportIoError: falha de gravação no dispositivo de'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 'backup. Erro de sistema operacional: a opção Backup para URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: Não é possível ler os dados da conexão de transporte: A conexão foi fechada.  
   
  Se você ativar o log detalhado usando o sinalizador de rastreamento 3051, também poderá ver a seguinte mensagem nos logs:  
   
