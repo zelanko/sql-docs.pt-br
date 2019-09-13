@@ -268,7 +268,7 @@ ms.locfileid: "68890275"
   
      Abra o navegador para o site do SharePoint desejado. Por exemplo, http://\<servername>/sites/bi  
   
-2.  Clique em **configurações**configurações![do SharePoint]configurações(https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "do SharePoint").  
+2.  Clique em **configurações**configurações![do SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "do SharePoint").  
   
 3.  Clique em **Configurações de site**.  
   
