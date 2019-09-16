@@ -39,7 +39,7 @@ ms.locfileid: "70176090"
  **[Lição 4: Criar um banco de dados no armazenamento do Azure](../relational-databases/lesson-3-database-backup-to-url.md)**  
  Nesta lição, você criará um banco de dados no armazenamento do Azure usando a opção criar nome de arquivo do banco de dados.  
   
- **Lição 5. &#40;Criptografar opcionalmente&#41; seu banco de dados usando TDE**  
+ **[Lição 5. &#40;Criptografar opcionalmente&#41; seu banco de dados usando TDE](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)**  
  Nesta lição, você criptografará o banco de dados usando uma criptografia de dados transparente (TDE) e um certificado de servidor.  
   
  **[Lição 6: Migrar um banco de dados de um computador de origem local para um computador de destino no Azure](lesson-5-backup-database-using-file-snapshot-backup.md)**  
