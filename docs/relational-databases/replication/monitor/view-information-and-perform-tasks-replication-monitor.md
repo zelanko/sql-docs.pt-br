@@ -52,7 +52,7 @@ O Replication Monitor fornece as seguintes guias que incluem informações sobre
 3.  Para exibir informações sobre assinaturas, selecione a guia **Todas as Assinaturas**, clique com o botão direito do mouse na assinatura e selecione **Propriedades**. Também é possível acessar informações mais detalhadas e executar tarefas nessa guia. 
 4.  Para exibir informações sobre agentes, selecione a guia **Agentes**. Também é possível acessar informações mais detalhadas e executar tarefas nessa guia. 
 5.  Para exibir informações sobre advertências de agente e limites, selecione a guia **Avisos**. Para obter mais informações, consulte [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
-6.  Para exibir informações sobre tokens de rastreamento, selecione a guia **Tokens de Rastreamento**. Para obter mais informações sobre como usar tokens de rastreamento, consulte [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
+6.  Para exibir informações sobre tokens de rastreamento, selecione a guia **Tokens de Rastreamento**. Para obter mais informações sobre como usar tokens de rastreamento, consulte [Medir a latência e validar as conexões para a replicação transacional](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## <a name="for-a-publisher"></a>Para um Editor 
 

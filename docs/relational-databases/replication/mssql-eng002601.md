@@ -20,7 +20,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68770506"
 ---
-# <a name="mssqleng002601"></a>MSSQL_ENG002601
+# <a name="mssql_eng002601"></a>MSSQL_ENG002601
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>Detalhes da mensagem  
@@ -62,7 +62,7 @@ ms.locfileid: "68770506"
   
 -   O erro ocorre durante uma inserção na tabela do sistema **MSmerge_contents**.  
   
-     O erro pode ocorrer devido a um valor incorreto para a propriedade de filtro de junção **join_unique_key**. Essa propriedade só deverá ser definida como TRUE se a coluna associada na tabela pai for exclusiva. Se a propriedade for definida como TRUE, mas a coluna não for exclusiva, esse erro será gerado. Para obter mais informações sobre como definir essa propriedade, consulte [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+     O erro pode ocorrer devido a um valor incorreto para a propriedade de filtro de junção **join_unique_key**. Essa propriedade só deverá ser definida como TRUE se a coluna associada na tabela pai for exclusiva. Se a propriedade for definida como TRUE, mas a coluna não for exclusiva, esse erro será gerado. Para obter mais informações sobre como definir essa propriedade, consulte [Definir e modificar um filtro de junção entre artigos de mesclagem](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de erros e eventos &#40;Replicação&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
