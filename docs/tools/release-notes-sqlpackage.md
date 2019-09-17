@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 590ca8048d45d9832ff53775512f991268843872
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
-ms.translationtype: MTE75
+ms.openlocfilehash: 7fb220f8a5a33d33e2ee9177efd9fe2f713b7439
+ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809456"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70774173"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Notas sobre a versão do SqlPackage.exe
 
@@ -35,10 +35,49 @@ I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
 
+## <a name="183-sqlpackage"></a>sqlpackage 18.3
+
+|Plataforma|Download|Data de liberação|Versão|Compilação
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2102893)|6 de setembro de 2019|18,3|15.0.4532.1|
+|.NET Core para macOS (versão prévia)|[arquivo zip](https://go.microsoft.com/fwlink/?linkid=2102894)|6 de setembro de 2019| 18,3|15.0.4532.1|
+|.NET Core para Linux (versão prévia)|[arquivo zip](https://go.microsoft.com/fwlink/?linkid=2102978)|6 de setembro de 2019| 18,3|15.0.4532.1|
+|Windows .NET Core (versão prévia)|[arquivo zip](https://go.microsoft.com/fwlink/?linkid=2102979)|6 de setembro de 2019| 18,3|15.0.4532.1|
+
+### <a name="features"></a>Recursos
+
+| Recurso | Detalhes |
+| :------ | :------ |
+| Azure SQL Data Warehouse (versão prévia) | Adicione suporte para implantar no Azure SQL Data Warehouse. | 
+| Implantação | Adicione o parâmetro/p: DatabaseLockTimeout = (INT32 ' 60 ') ao SqlPackage. | 
+| Implantação | Adicione o parâmetro/p: LongRunningCommandTimeout = (INT32) ao SqlPackage. |
+| Exportar/extrair | Adicione o parâmetro/p: TempDirectoryForTableData = (cadeia de caracteres) ao SqlPackage. |
+| Implantação | Permitir que os colaboradores de implantação sejam carregados de locais adicionais. Os colaboradores de implantação serão carregados do mesmo diretório que o Target. dacpac que está sendo implantado, o diretório de extensões relativo ao binário SqlPackage. exe e o parâmetro/p: AdditionalDeploymentContributorPaths = (STRING) adicionado ao SqlPackage onde locais de diretório adicionais podem ser especificados. |
+| Implantação | Adicione suporte para OPTIMIZE_FOR_SEQUENTIAL_KEY. |
+| &nbsp; | &nbsp; |
+
+### <a name="fixes"></a>Correções
+
+| Fix | Detalhes |
+| :-- | :------ |
+| Implantação | Corrija para ignorar índices automáticos para que eles não sejam descartados na implantação. | 
+| Always Encrypted | Correção para manipulação de Always Encrypted colunas varchar. | 
+| Compilação/implantação | Corrija para resolver o método Nodes () para conjuntos de colunas XML.| 
+| ScriptDom | Corrigir casos adicionais em que a cadeia de caracteres ' URL ' foi interpretada como um token de nível superior. | 
+| Gráfico | Corrigir o TSQL gerado para referências de pseudo coluna em restrições.  | 
+| Exportar | Gerar senhas aleatórias que atendam aos requisitos de complexidade. | 
+| Implantação | Correção para honrar os tempos limite de comando ao recuperar restrições. | 
+| .NET Core (versão prévia) | Corrija o log de diagnóstico em um arquivo. | 
+| .NET Core (versão prévia) | Use o streaming para exportar dados de tabela para dar suporte a tabelas grandes. | 
+| &nbsp; | &nbsp; |
+
 ## <a name="182-sqlpackage"></a>sqlpackage 18.2
 
-Data do lançamento: &nbsp; 15 de abril de 2019  
-Build: &nbsp; 15.0.4384.2 
+|Plataforma|Download|Data de liberação|Versão|Compilação
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2087429)|15 de abril de 2019|18.2|15.0.4384.2|
+|.NET Core para macOS (versão prévia)|[arquivo zip](https://go.microsoft.com/fwlink/?linkid=2087247)|15 de abril de 2019 | 18.2 |15.0.4384.2|
+|.NET Core para Linux (versão prévia)|[arquivo zip](https://go.microsoft.com/fwlink/?linkid=2087431)|15 de abril de 2019 | 18.2 |15.0.4384.2|
 
 ### <a name="features"></a>Recursos
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5da6c0f567e86a5d9ba979f01cb82ec382834651
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: dd5d5003970f87d39148a058ca02befaf006775c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027301"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874634"
 ---
 # <a name="understanding-ssl-support"></a>Noções básicas do suporte a SSL
 
@@ -28,7 +28,7 @@ Se o aplicativo não solicitar criptografia, o [!INCLUDE[jdbcNoVersion](../../in
 > [!NOTE]  
 > Verifique se o valor passado para **serverName** corresponde exatamente ao CN (Nome Comum) ou ao nome DNS na rede SAN (Nome Alternativo da Entidade) no certificado do servidor para que uma conexão SSL tenha êxito.  
 >
-> Para obter mais informações sobre como configurar o SSL para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja o tópico Criptografando Conexões para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> Para obter mais informações sobre como configurar o SSL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para o, consulte [habilitar conexões criptografadas com o mecanismo de banco de dados](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ## <a name="remarks"></a>Remarks
 
