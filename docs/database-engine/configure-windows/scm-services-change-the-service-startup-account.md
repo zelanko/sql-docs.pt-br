@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ecc222a9f2c57aa92535d6f2e0c85586a6714108
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b0b681ffb0b045ab5ba59c1a9fd28b3b295431f
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024697"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212314"
 ---
 # <a name="scm-services---change-the-service-startup-account"></a>Serviços SCM – alterar a conta de inicialização do serviço
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "68024697"
   
 3.  No painel de detalhes clique com o botão direito do mouse no nome da instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que deseja alterar a conta de inicialização do serviço e em seguida clique em **Propriedades**.  
   
-4.  Na caixa de diálogo **Propriedades de \<***instancename***> do SQL Server**, clique na guia **Logon** e selecione um tipo de conta **Fazer logon como**.  
+4.  Na caixa de diálogo **Propriedades de \<** _instancename_ **> do SQL Server**, clique na guia **Logon** e selecione um tipo de conta **Fazer logon como**.  
   
 5.  Após selecionar a nova conta de inicialização do serviço, clique em **OK**.  
   

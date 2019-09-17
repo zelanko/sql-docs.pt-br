@@ -16,12 +16,12 @@ ms.assetid: a1fd71bf-5bf9-4ce2-9a1d-032576a4a6e9
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: de2e60339c05c9c6b7c98a5ee4c767c17df9809b
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 696527b77cba555ad5c70a8ee65c8409295d18e4
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553059"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846802"
 ---
 # <a name="create-an-alert-using-severity-level"></a>Create an Alert Using Severity Level
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ Este tópico descreve como criar um alerta do [!INCLUDE[msCoName](../../includes
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece um modo gráfico e fácil para gerenciar o sistema de alertas inteiro e é recomendado para configurar uma infraestrutura de alerta.  
   
--   Eventos gerados com **xp_logevent** ocorrem no banco de dados mestre. Portanto, **xp_logevent** não dispara um alerta a menos que o **@database_name** para o alerta seja **'mestre'** ou NULL.  
+-   Eventos gerados com **xp_logevent** ocorrem no banco de dados mestre. Portanto, **xp_logevent** não dispara um alerta a menos que o **\@database_name** para o alerta seja **'mestre'** ou NULL.  
   
 -   Níveis de severidade de 19 a 25 enviam uma mensagem do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao log de aplicativos do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows e disparam um alerta. Eventos com níveis de severidade inferiores a 19 vão disparar alertas apenas se você tiver usado **sp_altermessage**, RAISERROR WITH LOG ou **xp_logevent** para obrigá-los a serem gravados no log de aplicativos do Windows.  
   

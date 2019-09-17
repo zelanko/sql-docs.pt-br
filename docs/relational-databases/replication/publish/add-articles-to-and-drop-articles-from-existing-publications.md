@@ -20,12 +20,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b47a6c5822cb52e29c7d6f486b75aa2d6be4a63a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: c81a1c6c99a9756cfeb7c52bdef89aa907150e1b
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764768"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846619"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Adicionar e remover artigos de publicações existentes
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68764768"
  Adicionar um artigo envolve: adicionar o artigo à publicação; criar um novo instantâneo para a publicação; sincronizar a assinatura para aplicar o esquema e os dados para o novo artigo.  
   
 > [!NOTE]
->  Se você adicionar um artigo a uma publicação de mesclagem e o artigo existente depender do artigo novo, será preciso especificar uma ordem de processamento para ambos os artigos usando o parâmetro **@processing_order** de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Considere o seguinte cenário: uma tabela é publicada, mas não é publicada a função que é referenciada pela tabela. Se a função não for publicada, a tabela não poderá ser criada no Assinante. Ao adicionar a função à publicação: especifique o valor **1** para o parâmetro **@processing_order** de **sp_addmergearticle**e especifique o valor **2** para o parâmetro **@processing_order** de **sp_changemergearticle**, especificando o nome da tabela para o parâmetro **@article** . Essa ordem de processamento garante a criação da função no Assinante antes da tabela que depende disso. É possível usar números diferentes para cada artigo, desde que o número para a função seja menor que o número para a tabela.  
+>  Se você adicionar um artigo a uma publicação de mesclagem e o artigo existente depender do artigo novo, será preciso especificar uma ordem de processamento para ambos os artigos usando o parâmetro **\@processing_order** de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Considere o seguinte cenário: uma tabela é publicada, mas não é publicada a função que é referenciada pela tabela. Se a função não for publicada, a tabela não poderá ser criada no Assinante. Ao adicionar a função à publicação: especifique o valor **1** para o parâmetro **\@processing_order** de **sp_addmergearticle** e especifique o valor **2** para o parâmetro **\@processing_order** de **sp_changemergearticle**, especificando o nome da tabela para o parâmetro **\@article**. Essa ordem de processamento garante a criação da função no Assinante antes da tabela que depende disso. É possível usar números diferentes para cada artigo, desde que o número para a função seja menor que o número para a tabela.  
   
 1.  Adicione um ou mais artigos com um dos métodos seguintes:  
   

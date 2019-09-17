@@ -16,12 +16,12 @@ ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: aliceku
 ms.author: aliceku
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a32cacd0c4539625b1f0b65335793d32d81c9fcf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11f30f1f2d4d3435c66792a462ba277fd00350f7
+ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049915"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383530"
 ---
 # <a name="encrypt-a-column-of-data"></a>Criptografar uma coluna de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ Sempre faça backup da sua chave mestra de banco de dados. Para obter mais infor
   
     -- Create a column in which to store the encrypted data.  
     ALTER TABLE Sales.CreditCard   
-        ADD CardNumber_Encrypted varbinary(128);   
+        ADD CardNumber_Encrypted varbinary(160);   
     GO  
   
     -- Open the symmetric key with which to encrypt the data.  

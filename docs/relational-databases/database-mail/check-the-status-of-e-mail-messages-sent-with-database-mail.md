@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: be85bc9434e5a64c1aa4e5e28f6b0a4a772d9690
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11b8160bd47061d226ecd6da01353da718b53dea
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134592"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228439"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>Verificar o status de mensagens de email enviadas por Database Mail
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Este tópico descreve como verificar o status da mensagem de email enviada usando o Database no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] com [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   **Antes de começar:**  

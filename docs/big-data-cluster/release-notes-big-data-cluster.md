@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 63caee60bc96c5ff8579471ae0a98322e4fc99b7
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: bcbc3537a6ba26dc907bf348c565939ff869ea43
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70160689"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988101"
 ---
 # <a name="release-notes-for-sql-server-big-data-clusters"></a>Notas de versão para SQL Server clusters de Big data
 
@@ -37,7 +37,9 @@ As seções a seguir descrevem os novos recursos e problemas conhecidos para clu
 
 ### <a name="known-issues"></a>Problemas conhecidos
 
-SQL Server o número de Build de atualização candidato da versão de clusters de Big data do 2019 é `15.0.1900.47`.
+* SQL Server o número de Build de atualização candidato da versão de clusters de Big data do 2019 é `15.0.1900.47`.
+
+* Não há suporte para o perfil de implantação "kubeadm-Prod" na versão Release Candidate de clusters de Big data do SQL Server 2019 com o número de Build acima. Em vez disso, use o perfil "kubeadm-dev-Test" para implantações de Kubeadm.
 
 ## <a id="ctp32"></a> CTP 3.2 (julho)
 
@@ -167,7 +169,7 @@ As seções a seguir descrevem os problemas conhecidos e as limitações dessa v
 
 #### <a name="kibana-logs-dashboards"></a>Painéis de logs do Kibana
 
-- Entre o CTP 3.0 e o 3.1, a versão do Kibana foi atualizada de 6.3.1 para 7.0.1.  Isso tornou o navegador Edge incompatível com o Kibana. Os usuários verão uma página em branco ao carregar a versão atual dos painéis do Kibana no Edge. Confira [aqui]( https://www.elastic.co/support/matrix#matrix_browse) os navegadores compatíveis com o Kibana.rs 
+- Entre o CTP 3.0 e o 3.1, a versão do Kibana foi atualizada de 6.3.1 para 7.0.1.  Isso fez com que o navegador Microsoft Edge seja incompatível com o Kibana. Os usuários verão uma página em branco ao carregar a versão atual dos painéis do Kibana no Microsoft Edge. Confira [aqui]( https://www.elastic.co/support/matrix#matrix_browse) os navegadores compatíveis com o Kibana.rs 
 
 
 ## <a id="ctp30"></a> CTP 3.0 (maio)
@@ -368,7 +370,7 @@ As seções a seguir descrevem os novos recursos e problemas conhecidos de clust
 | Diretrizes de suporte de GPU para execução de aprendizado profundo com o TensorFlow no Spark. | [Implantar um cluster de Big Data com suporte GPU e executar o TensorFlow](spark-gpu-tensorflow.md). |
 | As fontes de dados **SqlDataPool** e **SqlStoragePool** não são mais criadas por padrão. | Crie-os manualmente, se necessário. Veja os [problemas conhecidos](#externaltablesctp24). |
 | Suporte a `INSERT INTO SELECT` para o pool de dados. | Para um exemplo, veja [Tutorial: Ingerir dados em um pool de dados do SQL Server com Transact-SQL](tutorial-data-pool-ingest-sql.md). |
-| Opções `FORCE SCALEOUTEXECUTION` e `DISABLE SCALEOUTEXECUTION`. | Força ou desabilita o uso do pool de computação para consultas em tabelas externas. Por exemplo, `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
+| Opções `FORCE SCALEOUTEXECUTION` e `DISABLE SCALEOUTEXECUTION`. | Força ou desabilita o uso do pool de computação para consultas em tabelas externas. Por exemplo: `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
 | Recomendações atualizadas de implantação do AKS. | Ao avaliar a clusters de Big Data no AKS, agora recomendamos usar um único nó de tamanho **Standard_L8s**. |
 | Atualização de tempo de execução do Spark para o Spark 2.4. | |
 

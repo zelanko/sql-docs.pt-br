@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 9a637e6b12c674102bd09239739a137e1d442e12
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68065087"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874759"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Instalar a pesquisa de texto completo do SQL Server no Linux
 
@@ -92,7 +92,7 @@ A Pesquisa de Texto Completo usa [separadores de palavras](../relational-databas
 | Árabe | 1025 |
 | Bengali (India) | 1093 |
 | Bokmål | 1044 |
-| Brasileiro | 1046 |
+| Português (Brasil) | 1046 |
 | British English | 2057 |
 | Búlgaro | 1026 |
 | Catalão | 1027 |

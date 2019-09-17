@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 022e1228a9796dadddc4d9adfd20b4faeda35515
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.openlocfilehash: 99572edbc477999a1ccc8f6c1fff89b5e04521d6
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68307643"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70910837"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68307643"
   
 -   A tabela não está sendo reproduzida.  
   
--   O bloqueio da tabela é especificado (usando TABLOCK). Para a tabela com um índice columnstore clusterizado, o TABLOCK não é necessário para o log mínimo.  Além disso, somente os dados carregados nos grupos de linhas compactados são minimamente registrados, exigindo um tamanho de lote de 102400 ou superior.  
+-   O bloqueio da tabela é especificado (usando TABLOCK). 
   
     > [!NOTE]  
     >  Embora as inserções de dados não sejam registradas no log de transações durante uma operação da importação com log em massa, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] ainda faz o log de alocações de extensão cada vez que uma nova extensão é alocada à tabela.  

@@ -1,10 +1,7 @@
 ---
 title: Gerenciador de modelos | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -19,14 +16,18 @@ helpviewer_keywords:
 ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff1ca6ab0c454dd56c93413aca2252e9452c4c4b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 01/19/2017
+ms.openlocfilehash: 67a1ba1d5f94703004a4a90d380cf7dd7c795a79
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266749"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988083"
 ---
 # <a name="template-explorer"></a>Explorador de Modelos
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma variedade de modelos. Modelos são arquivos boilerplate que contêm scripts SQL que ajudam você a criar objetos em um banco de dados. Na primeira vez em que o gerenciador de modelos é aberto, uma cópia dos modelos é colocada na pasta do usuário C:\Users, em AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates.  
   

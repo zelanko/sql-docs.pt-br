@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 81a832b4372dc2b35893c329d0b7ca909224fb9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 31f28bf80d03516051206f6e88de6f32de614bed
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041512"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278753"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>Restaurar arquivos e grupos de arquivos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -140,21 +140,21 @@ ms.locfileid: "68041512"
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-     **Leave the database ready for use by rolling back the uncommitted transactions. Additional transaction logs cannot be restored. (RESTORE WITH RECOVERY)**  
-     Recovers the database. This is the default behavior. Choose this option only if you are restoring all of the necessary backups now. This option is equivalent to specifying WITH RECOVERY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+  **Deixar o banco de dados pronto para uso revertendo as transações não confirmadas. Os logs de transações adicionais não podem ser restaurados. (RESTORE WITH RECOVERY)**  
+  Recupera o banco de dados. Esse é o comportamento padrão. Escolha essa opção somente se estiver restaurando todos os backups necessários agora. Esta opção equivale à especificação WITH RECOVERY em uma declaração RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-     **Leave the database non-operational, and don't roll back the uncommitted transactions. Additional transaction logs can be restored. (RESTORE WITH NORECOVERY)**  
-     Leaves the database in the restoring state. To recover the database, you will need to perform another restore using the preceding RESTORE WITH RECOVERY option (see above). This option is equivalent to specifying WITH NORECOVERY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+  **Deixe o banco de dados não operacional e não reverta as transações não confirmadas. Os logs de transações adicionais podem ser restaurados. (RESTORE WITH NORECOVERY)**  
+  Deixa o banco de dados no estado de restauração. Para recuperar o banco de dados, será necessário realizar outra restauração usando a opção RESTORE WITH RECOVERY (veja acima). Esta opção equivale à especificação WITH NORECOVERY em uma declaração RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-     If you select this option, the **Preserve replication settings** option is unavailable.  
+  Se selecionar esta opção, a opção **Preservar parâmetros de replicação** não estará disponível.  
   
-     **Leave the database in read-only mode. Roll back the uncommitted transactions, but save the rollback operation in a file so the recovery effects can be undone. (RESTORE WITH STANDBY)**  
-     Leaves the database in a standby state. This option is equivalent to specifying WITH STANDBY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+  **Deixar o banco de dados no modo somente leitura. Reverter as transações não confirmadas, mas salvar a operação de reversão em um arquivo para que os efeitos da recuperação possam ser desfeitos. (RESTORE WITH STANDBY)**  
+  Deixa o banco de dados no estado de espera. Esta opção equivale à especificação WITH STANDBY em uma declaração RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-     Choosing this option requires that you specify a standby file.  
+  A escolha desta opção requer que você especifique um arquivo de espera.  
   
-     **Rollback undo file**  
-     Specify a standby file name in the **Rollback undo file** text box. This option is required if you leave the database in read-only mode (RESTORE WITH STANDBY).  
+  **Reverter de arquivo de desfazer**  
+  Especifique o nome do arquivo de espera na caixa de texto **Reverter arquivo de desfazer** . Esta opção será necessária se o banco de dados estiver no modo somente leitura (RESTORE WITH STANDBY).  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

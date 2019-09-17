@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b5363ab8fe37e67b7efa1aa193e269585064f07e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8412a87703577595f0408de3b9cf26520160fdf
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137442"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228457"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>Enviar um email de teste com o Database Mail  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 Use a caixa de diálogo Enviar Email de Teste para testar a possibilidade de enviar emails usando um perfil específico.
 

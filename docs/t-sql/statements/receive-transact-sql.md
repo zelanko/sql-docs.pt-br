@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fe629bc5d165489f733d0250b0f60bea8a3a677a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e555a51cc4ab7c628dc75469aa1cfe4d7c01edcc
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141284"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211435"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Recupera uma ou mais mensagens de uma fila. Dependendo da configuração de retenção da fila, essa instrução remove as mensagens da fila ou atualiza o status da mensagem na fila.  
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6be64ffc819157b95729f855bb81a5e12c78a7f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 789d56e63572f6744055bb78e819e69e2e15c824
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134484"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211247"
 ---
 # <a name="create-a-database-mail-profile"></a>Criar um perfil do Database Mail
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Use o **Assistente para Configuração do Database Mail** ou o [!INCLUDE[tsql](../../includes/tsql-md.md)] para criar perfis públicos e privados do Database Mail. Para obter mais informações sobre perfis de email, consulte [Perfil do Database Mail](database-mail-configuration-objects.md).
   
 -   **Antes de começar:** [Pré-requisitos](#Prerequisites), [Segurança](#Security)  

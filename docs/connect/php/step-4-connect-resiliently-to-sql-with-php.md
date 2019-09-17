@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b32bbb0df1c5977e814eecca7a1e6d1ddee5eca4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 002c27145360e0877d4e1bff816c25070247ddd8
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992633"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874371"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>Etapa 4: Conectar-se de forma resiliente ao SQL com PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -61,7 +61,7 @@ A função [sqlsrv_query ()](../../connect/php/sqlsrv-query.md) pode ser usada p
                 sqlsrv_close( $conn); 
                 break;  
             } else {    
-                // [A.4] Check whether the error code is on the whitelist of transients.  
+                // [A.4] Check whether the error code is on the list of allowed transients.  
                 $isTransientError = false;  
                 $errorCode = '';
                 if (($errors = sqlsrv_errors()) != null) {

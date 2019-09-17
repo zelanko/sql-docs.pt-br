@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7031157b993fbe1605e7ee2aee7d479a848f21bd
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 679260f7c8a7f50eb9a3f638f3547c82ac488cef
+ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903594"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70238746"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Como criar uma tabela temporal com controle da versão do sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -34,18 +34,17 @@ ms.locfileid: "69903594"
   
 ```  
 CREATE TABLE Department   
-(    
-     DeptID int NOT NULL PRIMARY KEY CLUSTERED  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL  
-   , SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL  
-   , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)     
+(
+    DeptID INT NOT NULL PRIMARY KEY CLUSTERED  
+  , DeptName VARCHAR(50) NOT NULL  
+  , ManagerID INT NULL  
+  , ParentDeptID INT NULL  
+  , SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL  
+  , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL  
+  , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)     
 )    
-WITH (SYSTEM_VERSIONING = ON)   
-;  
-```  
+WITH (SYSTEM_VERSIONING = ON);
+```
   
 ### <a name="important-remarks"></a>Observações importantes  
   
@@ -68,22 +67,18 @@ WITH (SYSTEM_VERSIONING = ON)
 ## <a name="creating-a-temporal-table-with-a-default-history-table"></a>Criação de uma tabela temporal com uma tabela de histórico padrão  
  A criação de uma tabela temporal com uma tabela de histórico padrão é uma opção conveniente quando você deseja controlar a nomenclatura e ainda depende do sistema para criar a tabela de histórico com a configuração padrão. No exemplo a seguir, uma nova tabela é criada com o controle de versão do sistema habilitado, com o nome da tabela de histórico definido explicitamente.  
   
-```  
+```
 CREATE TABLE Department   
-(    
-     DeptID int NOT NULL PRIMARY KEY CLUSTERED  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL  
-   , SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL  
-   , PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)     
-)   
-WITH    
-   (   
-      SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory)   
-   )   
-;  
+(
+    DeptID INT NOT NULL PRIMARY KEY CLUSTERED
+  , DeptName VARCHAR(50) NOT NULL
+  , ManagerID INT NULL
+  , ParentDeptID INT NULL
+  , SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL
+  , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL
+  , PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
+)
+WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
 ```  
   
 ### <a name="important-remarks"></a>Observações importantes  
@@ -99,34 +94,35 @@ WITH
  A criação de uma tabela temporal com tabela de histórico definido pelo usuário é uma opção conveniente quando o usuário deseja especificar a tabela de histórico com opções de armazenamento específicas e índices adicionais. No exemplo a seguir, uma tabela de histórico definido pelo usuário é criada com um esquema alinhado à tabela temporal que será criada. Um índice columnstore clusterizado e um índice rowstore não clusterizado adicional (árvore B) são criado para essa tabela de histórico definido pelo usuário com a função de pesquisas de ponto. Após a criação dessa tabela de histórico definido pelo usuário, a tabela temporal com controle da versão do sistema é criada especificando a tabela de histórico definido pelo usuário como a tabela de histórico padrão.  
   
 ```  
-CREATE TABLE DepartmentHistory   
-(    
-     DeptID int NOT NULL  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 NOT NULL  
-   , SysEndTime datetime2 NOT NULL   
-);   
-GO   
-CREATE CLUSTERED COLUMNSTORE INDEX IX_DepartmentHistory   
-   ON DepartmentHistory;   
-CREATE NONCLUSTERED INDEX IX_DepartmentHistory_ID_PERIOD_COLUMNS   
-   ON DepartmentHistory (SysEndTime, SysStartTime, DeptID);   
-GO   
+CREATE TABLE DepartmentHistory
+(
+    DeptID INT NOT NULL
+  , DeptName VARCHAR(50) NOT NULL
+  , ManagerID INT NULL
+  , ParentDeptID INT NULL
+  , SysStartTime DATETIME2 NOT NULL
+  , SysEndTime DATETIME2 NOT NULL
+);
+GO
+
+CREATE CLUSTERED COLUMNSTORE INDEX IX_DepartmentHistory
+    ON DepartmentHistory;
+CREATE NONCLUSTERED INDEX IX_DepartmentHistory_ID_PERIOD_COLUMNS
+    ON DepartmentHistory (SysEndTime, SysStartTime, DeptID);
+GO
+
 CREATE TABLE Department   
-(    
+(
     DeptID int NOT NULL PRIMARY KEY CLUSTERED  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL  
-   , SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL     
-   , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)      
-)    
-WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))   
-;  
-```  
+  , DeptName VARCHAR(50) NOT NULL  
+  , ManagerID INT NULL  
+  , ParentDeptID INT NULL  
+  , SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL  
+  , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL     
+  , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)      
+)
+WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
+```
   
 ### <a name="important-remarks"></a>Observações importantes  
   
@@ -155,18 +151,19 @@ Por exemplo, você pode ter um conjunto de tabelas nas quais o controle de vers�
   
 ```  
 CREATE SCHEMA History;   
-GO   
+GO
+
+ALTER TABLE InsurancePolicy
+    ADD   
+        SysStartTime DATETIME2(0) GENERATED ALWAYS AS ROW START HIDDEN
+            CONSTRAINT DF_SysStart DEFAULT SYSUTCDATETIME()
+      , SysEndTime DATETIME2(0) GENERATED ALWAYS AS ROW END HIDDEN
+            CONSTRAINT DF_SysEnd DEFAULT CONVERT(DATETIME2 (0), '9999-12-31 23:59:59'),
+        PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime);
+GO
+
 ALTER TABLE InsurancePolicy   
-   ADD   
-      SysStartTime datetime2(0) GENERATED ALWAYS AS ROW START HIDDEN    
-           CONSTRAINT DF_SysStart DEFAULT SYSUTCDATETIME()  
-      , SysEndTime datetime2(0) GENERATED ALWAYS AS ROW END HIDDEN    
-           CONSTRAINT DF_SysEnd DEFAULT CONVERT(datetime2 (0), '9999-12-31 23:59:59'),   
-      PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime);   
-GO   
-ALTER TABLE InsurancePolicy   
-   SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = History.InsurancePolicy))   
-;  
+    SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = History.InsurancePolicy));
 ```  
   
 #### <a name="important-remarks"></a>Observações importantes  
@@ -195,10 +192,9 @@ ALTER TABLE ProjectTaskCurrent ALTER COLUMN [ValidTo] datetime2 NOT NULL;
 ALTER TABLE ProjectTaskHistory ALTER COLUMN [ValidFrom] datetime2 NOT NULL;   
 ALTER TABLE ProjectTaskHistory ALTER COLUMN [ValidTo] datetime2 NOT NULL;   
 ALTER TABLE ProjectTaskCurrent   
-   ADD PERIOD FOR SYSTEM_TIME ([ValidFrom], [ValidTo])   
+    ADD PERIOD FOR SYSTEM_TIME ([ValidFrom], [ValidTo])   
 ALTER TABLE ProjectTaskCurrent   
-   SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSISTENCY_CHECK = ON))   
-;  
+    SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSISTENCY_CHECK = ON));
 ```  
   
 #### <a name="important-remarks"></a>Observações importantes  
@@ -222,5 +218,3 @@ ALTER TABLE ProjectTaskCurrent
  [Consultando dados em uma tabela temporal com controle da versão do sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)   
  [Alterando o esquema de uma tabela temporal com versão do sistema](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)   
  [Parando o controle de versão do sistema de uma tabela temporal com versão do sistema](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
-  
-  

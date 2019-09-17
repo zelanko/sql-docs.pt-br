@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5807b8ae9c3b074068d0422a91b1dc1711c4067a
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 1bda35d5c393eaa1e4503cb487ed19b281686364
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68471043"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908411"
 ---
 # <a name="collation-and-unicode-support"></a>Suporte a ordenações e a Unicode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,7 +105,11 @@ Quando um banco de dados é criado ou modificado, você pode usar a cláusula CO
 Você não pode alterar a ordenação de bancos de dados do sistema, exceto alterando a ordenação para o servidor.    
     
 A ordenação de banco de dados é usada para todos os metadados no banco de dados e é a padrão para todas as colunas de cadeia de caracteres, objetos temporários, nomes de variável e quaisquer outras cadeias de caracteres usadas no banco de dados. Quando você altera a ordenação de um banco de dados de usuário, pode haver conflitos de ordenação quando consultas no banco de dados acessam tabelas temporárias. Sempre são armazenadas tabelas temporárias no banco de dados do sistema **tempdb** que usa a ordenação para a instância. Consultas que comparam dados de caractere entre o banco de dados de usuário e **tempdb** poderão falhar se as ordenações causarem um conflito ao avaliar os dados de caractere. Você pode resolver isso especificando a cláusula COLLATE na consulta. Para obter mais informações, veja [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).    
-    
+
+> [!NOTE]
+> A ordenação não poderá ser alterada depois que o banco de dados tiver sido criado em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
+
 #### <a name="column-level-collations"></a>Ordenações em nível de coluna    
 Quando você cria ou altera uma tabela, pode especificar ordenações para cada coluna de cadeia de caracteres usando a cláusula COLLATE. Se nenhuma ordenação for especificada, a ordenação padrão do banco de dados será atribuída à coluna.    
     

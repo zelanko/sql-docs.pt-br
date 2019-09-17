@@ -12,14 +12,15 @@ ms.assetid: 4ba90025-5a09-4f0a-836a-54c886324530
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac718603c639fcbc8af7cb168b2aa131840c75ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 508a50443e039fa77f1190c5a00b6ffdbf93379a
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909385"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70910818"
 ---
 # <a name="how-for-json-escapes-special-characters-and-control-characters-sql-server"></a>Como o FOR JSON ignora os caracteres especiais e os caracteres de controle (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Este tópico descreve como a cláusula **FOR JSON** de uma instrução **SELECT** do SQL Server ignora os caracteres especiais e representa os caracteres de controle na saída JSON.  
@@ -33,7 +34,7 @@ Se os dados de origem contiverem caracteres especiais, a cláusula **FOR JSON** 
 |**Caractere especial**|**Saída de escape**|  
 |---------------------------|--------------------------|  
 |Aspas (")|\\"|  
-|Barra invertida (\\)|\\\|  
+|Barra invertida (\\)|\\\\|  
 |Barra (/)|\\/|  
 |Backspace|\b|  
 |Avanço de formulário|\f|  

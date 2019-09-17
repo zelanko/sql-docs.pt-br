@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5a051787cbd112a1f267d5812a2ebb38ea4d6ee1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8eb132920a6b51303e5725ecdb770dd742972f42
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134368"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70809941"
 ---
 # <a name="database-mail-messaging-objects"></a>Objetos do sistema de mensagens do Database Mail
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   O banco de dados **msdb** é o host de Database Mail. Este banco de dados contém os procedimentos armazenados e objetos de mensagens para o Database Mail. O Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] contém o Assistente para Configuração do Database Mail, que permite habilitar o Database Mail, criar e gerenciar perfis e contas e configurar opções do Database Mail.  
   
 ##  <a name="ComponentsAndConcepts"></a> Objetos no banco de dados **msdb**  

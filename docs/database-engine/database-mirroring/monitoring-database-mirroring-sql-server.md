@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b29c55f0618d095840a7f56e5618231935b6fe4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcc63d87bc71fa2497e1282364f87272438bbf97
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996547"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212292"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Monitorando o espelhamento de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,8 +130,8 @@ ms.locfileid: "67996547"
   
      Administradores do sistema podem usar o procedimento armazenado do sistema **sp_dbmmonitorresults** para exibir e, opcionalmente, atualizar a tabela de status, caso não tenha sido atualizada nos 15 segundos anteriores. Esse procedimento chama o procedimento **sp_dbmmonitorupdate** e retorna uma ou mais linhas do histórico, dependendo da quantidade solicitada na chamada de procedimento. Para obter informações sobre o status em seu conjunto de resultados, veja [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md).  
   
-#### <a name="monitoring-database-mirroring-status-by-dbmmonitor-members"></a>Monitorando o status de espelhamento de banco de dados (por membros dbm_monitor)  
- Conforme mencionado, na primeira vez que **sp_dbmmonitorupdate** é executado, ele cria a função de banco de dados fixa **dbm_monitor** no banco de dados **msdb** . Membros da função de banco de dados fixa **dbm_monitor** podem exibir o status de espelhamento existente usando o Monitor de Espelhamento de Banco de Dados ou o procedimento armazenado **sp_dbmmonitorresults** . Esses usuários, porém, não podem atualizar a tabela de status. Para saber a idade do status exibido, um usuário pode examinar os horários nos rótulos **Log principal (***\<time>***)** e **Log espelhado (***\<time>***)** na página **Status**.  
+#### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>Monitorando o status de espelhamento de banco de dados (por membros dbm_monitor)  
+ Conforme mencionado, na primeira vez que **sp_dbmmonitorupdate** é executado, ele cria a função de banco de dados fixa **dbm_monitor** no banco de dados **msdb** . Membros da função de banco de dados fixa **dbm_monitor** podem exibir o status de espelhamento existente usando o Monitor de Espelhamento de Banco de Dados ou o procedimento armazenado **sp_dbmmonitorresults** . Esses usuários, porém, não podem atualizar a tabela de status. Para saber a idade do status exibido, um usuário pode examinar os horários nos rótulos **Log principal (** _\<time>_ **)** e **Log espelhado (** _\<time>_ **)** na página **Status**.  
   
  Membros da função de banco de dados fixa **dbm_monitor** dependem do **Trabalho de Monitor de Espelhamento de Banco de Dados** para atualizar a tabela de status em intervalos regulares. Se o trabalho não existir ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for interrompido, o status se tornará cada vez mais obsoleto e poderá deixar de refletir a configuração da sessão de espelhamento. Por exemplo, depois de um failover, poderá parecer que os parceiros compartilham a mesma função, principal ou espelhada ou o servidor principal atual poderá ser mostrado como o espelho e o servidor espelhado atual como o principal.  
   

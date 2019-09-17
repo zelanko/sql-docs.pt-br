@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 58d70878051df627e8dc788e414dc2ab1e88e839
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42844a8783f5d1e1066667ed828906c0549f84c2
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68221388"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874916"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>O portal da Web de um servidor de relatório (modo nativo do SSRS)
 
@@ -51,7 +51,7 @@ Alguns recursos do portal da Web só estão disponíveis em edições específic
 Em uma nova instalação, somente os administradores locais têm permissões suficientes para trabalhar com o conteúdo e as configurações. Para conceder permissões a outros usuários, o administrador local deve criar atribuições de função que fornecem acesso ao servidor de relatório. As páginas de aplicativo e as tarefas que um usuário pode acessar posteriormente dependem das atribuições de função do usuário em questão. Para obter mais informações, consulte [Conceder acesso ao usuário a um servidor de relatório](security/grant-user-access-to-a-report-server-report-manager.md)
 
 > [!NOTE]
-> Se você estiver navegando para o portal da Web no computador local em que o servidor está em execução, será exibida uma mensagem indicando que você não tem permissão para exibir essa pasta. Isso se deve ao UAC (Controle de Acesso Universal) e ao fato de que você não está executando o navegador como um administrador. Não é possível executar o Edge como um administrador. Você precisará usar o Internet Explorer. É possível navegar até o servidor remotamente ou iniciar o Internet Explorer como administrador e navegar até o portal da Web. Se quiser usar o portal da Web remotamente, você precisará conceder direitos de pasta ao gerenciador de conteúdo da sua conta.  
+> Se você estiver navegando para o portal da Web no computador local em que o servidor está em execução, será exibida uma mensagem indicando que você não tem permissão para exibir essa pasta. Isso se deve ao UAC (Controle de Acesso Universal) e ao fato de que você não está executando o navegador como um administrador. Você não pode executar o Microsoft Edge como administrador. Você precisará usar o Internet Explorer. É possível navegar até o servidor remotamente ou iniciar o Internet Explorer como administrador e navegar até o portal da Web. Se quiser usar o portal da Web remotamente, você precisará conceder direitos de pasta ao gerenciador de conteúdo da sua conta.  
 
 ## <a name="start-and-use-the-web-portal"></a>Iniciar e usar o portal da Web
 

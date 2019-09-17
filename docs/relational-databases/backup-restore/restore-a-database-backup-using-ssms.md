@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fc461f1653c0d135df49384c0ad8706082fdff8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7cd893c9556b1dd45e2206ce73740e253af98ed3
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937620"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278764"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,27 +108,27 @@ Para obter informações sobre a restauração do serviço de armazenamento de B
     
 8. Para exibir ou selecionar as opções avançadas, na página **Opções** , no painel **Opções de restauração** , você pode selecionar qualquer uma das seguintes opções, de acordo com sua situação:    
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    1.  Opções**WITH** (não necessárias):    
+   1. Opções**WITH** (não necessárias):    
     
-        -   **Substituir o banco de dados existente (WITH REPLACE)**    
+     - **Substituir o banco de dados existente (WITH REPLACE)**    
     
-        -   **Preservar as configurações de replicação (WITH KEEP_REPLICATION)**    
+     - **Preservar as configurações de replicação (WITH KEEP_REPLICATION)**    
     
-        -   **Acesso restrito ao banco de dados restaurado (WITH RESTRICTED_USER)**    
+     - **Acesso restrito ao banco de dados restaurado (WITH RESTRICTED_USER)**    
     
-    2.  Selecione uma opção para a caixa **Estado de recuperação** . Essa caixa determina o estado do banco de dados após a operação de restauração.    
+   2. Selecione uma opção para a caixa **Estado de recuperação** . Essa caixa determina o estado do banco de dados após a operação de restauração.    
     
-        -   **RESTORE WITH RECOVERY** é o comportamento padrão que deixa o banco de dados pronto para uso revertendo as transações não confirmadas. Os logs de transações adicionais não podem ser restaurados. Selecione essa opção se você estiver restaurando todos os backups necessários agora.    
+     - **RESTORE WITH RECOVERY** é o comportamento padrão que deixa o banco de dados pronto para uso revertendo as transações não confirmadas. Os logs de transações adicionais não podem ser restaurados. Selecione essa opção se você estiver restaurando todos os backups necessários agora.    
     
-        -   **RESTORE WITH NORECOVERY** deixa o banco de dados não operacional e não reverte as transações não confirmadas. Os logs de transações adicionais podem ser restaurados. Só é possível usar o banco de dados depois que ele é recuperado.    
+     - **RESTORE WITH NORECOVERY** deixa o banco de dados não operacional e não reverte as transações não confirmadas. Os logs de transações adicionais podem ser restaurados. Só é possível usar o banco de dados depois que ele é recuperado.    
     
-        -   **RESTORE WITH STANDBY** deixa o banco de dados no modo somente leitura. Ele desfaz as transações não confirmadas, mas salva as ações de desfazer em um arquivo em espera para que os efeitos da recuperação possam ser revertidos.    
+     - **RESTORE WITH STANDBY** deixa o banco de dados no modo somente leitura. Ele desfaz as transações não confirmadas, mas salva as ações de desfazer em um arquivo em espera para que os efeitos da recuperação possam ser revertidos.    
     
-    3.  **Faça backup da parte final do log antes da restauração.** Nem todos os cenários de restauração exigem um backup da parte final do log.  Para obter mais informações, veja **Cenários que exigem um backup da parte final do log** de [Backups da parte final do log (SQL Server).](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)
-    4.  As operações de restauração poderão falhar se houver conexões ativas com o banco de dados. Marque a opção **Fechar conexões existentes** para assegurar que todas as conexões ativas entre o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e o banco de dados sejam fechadas. Essa caixa de seleção define o banco de dados no modo de usuário único antes de executar as operações de restauração e define o banco de dados no modo de vários usuários ao concluir.    
-    5.  Selecione **Perguntar antes de restaurar cada backup** para que você seja solicitado entre cada operação de restauração. Isso normalmente só é necessário quando o banco de dados é grande e você deseja monitorar o status da operação de restauração.    
+   3. **Faça backup da parte final do log antes da restauração.** Nem todos os cenários de restauração exigem um backup da parte final do log.  Para obter mais informações, veja **Cenários que exigem um backup da parte final do log** de [Backups da parte final do log (SQL Server).](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)
+  
+   4. As operações de restauração poderão falhar se houver conexões ativas com o banco de dados. Marque a opção **Fechar conexões existentes** para assegurar que todas as conexões ativas entre o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e o banco de dados sejam fechadas. Essa caixa de seleção define o banco de dados no modo de usuário único antes de executar as operações de restauração e define o banco de dados no modo de vários usuários ao concluir.    
+  
+   5. Selecione **Perguntar antes de restaurar cada backup** para que você seja solicitado entre cada operação de restauração. Isso normalmente só é necessário quando o banco de dados é grande e você deseja monitorar o status da operação de restauração.    
     
 Para obter mais informações sobre essas opções de restauração, veja [Restaurar banco de dados &#40;Página Opções&#41;](../../relational-databases/backup-restore/restore-database-options-page.md).    
     
@@ -212,29 +212,29 @@ Os dois exemplos a seguir executam uma restauração de `Sales` de um backup loc
 
 #### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>E1.   Restaure um backup distribuído em um banco de dados e em uma assinatura de acesso compartilhado existentes.
 Uma política de acesso armazenado foi criada com direitos de leitura, gravação, exclusão e lista.  Uma assinatura de acesso compartilhado associada à política de acesso armazenado foi criada para o contêiner `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.  Basicamente, as etapas são as mesmas que seriam usadas se já existisse uma credencial do SQL Server.  Atualmente, o banco de dados `Sales` existe no servidor.  Os arquivos de backup são `Sales_stripe1of2_20160601.bak` e `Sales_stripe2of2_20160601.bak`.  
-*  
-7.  Selecione `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` na lista suspensa **Contêiner de armazenamento do Azure:** se já existir uma credencial do SQL Server; caso contrário, insira manualmente o nome do contêiner, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`. 
-8.  Insira a assinatura de acesso compartilhado na caixa RTF **Assinatura de acesso compartilhado:** .
-9.  Clique em **OK** e a caixa de diálogo **Localizar Arquivo de Backup no Microsoft Azure** será aberta.
-10. Expanda **Contêineres** e navegue até `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
-11. Mantenha pressionada a tecla CTRL e selecione os arquivos `Sales_stripe1of2_20160601.bak` e `Sales_stripe2of2_20160601.bak`.
-12. Clique em **OK**.
-13. Clique em **OK** para retornar à página **Geral** .
-14. Clique em **Opções** no painel **Selecionar uma página** .
-15. Na seção Opções de **restauração** , marque a opção **Substituir o banco de dados existente (WITH REPLACE)** .
-16. Na seção **Backup da parte final do log** , desmarque a opção **Fazer backup da parte final do log antes da restauração**.
-17. Na seção **Conexões de servidor** , marque a opção **Fechar conexões existentes com o banco de dados de destino**.
-18. Clique em **OK**.
+
+1.  Selecione `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` na lista suspensa **Contêiner de armazenamento do Azure:** se já existir uma credencial do SQL Server; caso contrário, insira manualmente o nome do contêiner, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`. 
+1. Insira a assinatura de acesso compartilhado na caixa RTF **Assinatura de acesso compartilhado:** .
+1. Clique em **OK** e a caixa de diálogo **Localizar Arquivo de Backup no Microsoft Azure** será aberta.
+1. Expanda **Contêineres** e navegue até `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+1. Mantenha pressionada a tecla CTRL e selecione os arquivos `Sales_stripe1of2_20160601.bak` e `Sales_stripe2of2_20160601.bak`.
+1. Clique em **OK**.
+1. Clique em **OK** para retornar à página **Geral** .
+1. Clique em **Opções** no painel **Selecionar uma página** .
+1. Na seção Opções de **restauração** , marque a opção **Substituir o banco de dados existente (WITH REPLACE)** .
+1. Na seção **Backup da parte final do log** , desmarque a opção **Fazer backup da parte final do log antes da restauração**.
+1. Na seção **Conexões de servidor** , marque a opção **Fechar conexões existentes com o banco de dados de destino**.
+1. Clique em **OK**.
 
 #### <a name="e2---a-shared-access-signature-does-not-exist"></a>E2.   Não há uma assinatura de acesso compartilhado
 Neste exemplo, atualmente, o banco de dados `Sales` não existe no servidor.
-7.  Clique em **Adicionar** e a caixa de diálogo **Conectar-se a uma Assinatura da Microsoft** será aberta.  
-8.  Conclua a caixa de diálogo **Conectar-se a uma Assinatura da Microsoft** e clique em **OK** para retornar à caixa de diálogo **Selecionar um local de arquivo de backup** .  Veja [Conectar-se a uma assinatura do Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) para obter mais informações.
-9.  Clique em **OK** na caixa de diálogo **Selecionar um local de arquivo de backup** e a caixa de diálogo **Localizar arquivo de backup no Microsoft Azure** será aberta.
-10. Expanda **Contêineres** e navegue até `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
-11. Selecione o arquivo de backup e clique em **OK**.
-12. Clique em **OK** para retornar à página **Geral** .
-13. Clique em **OK**.
+1. Clique em **Adicionar** e a caixa de diálogo **Conectar-se a uma Assinatura da Microsoft** será aberta.  
+1. Conclua a caixa de diálogo **Conectar-se a uma Assinatura da Microsoft** e clique em **OK** para retornar à caixa de diálogo **Selecionar um local de arquivo de backup** .  Veja [Conectar-se a uma assinatura do Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) para obter mais informações.
+1. Clique em **OK** na caixa de diálogo **Selecionar um local de arquivo de backup** e a caixa de diálogo **Localizar arquivo de backup no Microsoft Azure** será aberta.
+1. Expanda **Contêineres** e navegue até `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+1. Selecione o arquivo de backup e clique em **OK**.
+1. Clique em **OK** para retornar à página **Geral** .
+1. Clique em **OK**.
 
 #### <a name="f-restore-local-backup-to-microsoft-azure-storage-url"></a>F. Restaurar o backup local no armazenamento do Microsoft Azure (URL)
 O banco de dados `Sales` será restaurado para o contêiner de armazenamento do Microsoft Azure `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` de um backup localizado em `E:\MSSQL\BAK`.  A credencial do SQL Server para o contêiner do Azure já foi criada.  Uma credencial do SQL Server para o contêiner de destino já deve existir, pois não pode ser criada por meio da tarefa **Restaurar** .  Atualmente, o banco de dados `Sales` não existe no servidor.

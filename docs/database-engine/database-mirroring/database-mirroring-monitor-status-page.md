@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 449633953c0561191471733fa3a3dcba0fb24b83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 293b58adde0ccbfe6394cd3917d2671f23f3b290
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006399"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212355"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Monitor de Espelhamento de Banco de Dados (página Status)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "68006399"
 -   **Alta segurança com failover automático (síncrono)**  
   
 ## <a name="remarks"></a>Remarks  
- Membros da função de banco de dados fixa **dbm_monitor** podem exibir o status de espelhamento existente usando o Monitor de Espelhamento de Banco de Dados ou o procedimento armazenado **sp_dbmmonitorresults** . Esses usuários, porém, não podem atualizar a tabela de status. Eles dependem do **Trabalho do Monitor de Espelhamento de Banco de Dados**para atualizar a tabela de status em intervalos regulares. Para saber a idade do status exibido, um usuário pode examinar os horários nos rótulos **Log principal (***\<time>***)** e **Log espelhado (***\<time>***)** .  
+ Membros da função de banco de dados fixa **dbm_monitor** podem exibir o status de espelhamento existente usando o Monitor de Espelhamento de Banco de Dados ou o procedimento armazenado **sp_dbmmonitorresults** . Esses usuários, porém, não podem atualizar a tabela de status. Eles dependem do **Trabalho do Monitor de Espelhamento de Banco de Dados**para atualizar a tabela de status em intervalos regulares. Para saber a idade do status exibido, um usuário pode examinar os horários nos rótulos **Log principal (** _\<time>_ **)** e **Log espelhado (** _\<time>_ **)** .  
   
  Se esse trabalho não existir ou se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent estiver parado, o status se tornará cada vez mais obsoleto e poderá deixar de refletir a configuração da sessão espelhada. Por exemplo, depois de um failover, poderá parecer que os parceiros compartilham a mesma função, principal ou espelhada ou o servidor principal atual poderá ser mostrado como o espelho e o servidor espelhado atual como o principal.  
   

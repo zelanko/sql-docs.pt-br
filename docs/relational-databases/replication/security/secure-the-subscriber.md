@@ -15,12 +15,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f07a80d5667a91376c9e5936be2474c826d6569a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 2ab65d61abb497c1930b94868f0a8b3433b44c95
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769607"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212301"
 ---
 # <a name="secure-the-subscriber"></a>Proteger o Assinante
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "68769607"
  Para obter mais informações, consulte [Criar uma assinatura atualizável em uma publicação transacional](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md) e [Exibir e modificar as configurações de segurança de replicação](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 > [!IMPORTANT]  
->  A conta especificada para a conexão só deve receber permissão para inserir, atualizar e excluir dados nas exibições criadas pela replicação no banco de dados de publicação; nenhuma permissão adicional será dada. Conceda permissões para exibições no banco de dados de publicação que são nomeadas no formato **syncobj_***\<HexadecimalNumber>* para a conta configurada em cada Assinante.  
+>  A conta especificada para a conexão só deve receber permissão para inserir, atualizar e excluir dados nas exibições criadas pela replicação no banco de dados de publicação; nenhuma permissão adicional será dada. Conceda permissões para exibições no banco de dados de publicação que são nomeadas no formato **syncobj_** _\<HexadecimalNumber>_ para a conta configurada em cada Assinante.  
   
 ## <a name="queued-updating-subscriptions"></a>Assinaturas de atualização em fila  
  Quando você configurar assinatura de atualização em fila, há duas áreas a considerar relacionadas a segurança:  

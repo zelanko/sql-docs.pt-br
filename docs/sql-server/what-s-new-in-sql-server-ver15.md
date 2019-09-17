@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 718f0c6c5fa6b517f2b60bbca0f06f58310c6d22
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 8fe83d73c0c7413715122d849141ea5378c24c47
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155475"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228467"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novidades no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -88,7 +88,7 @@ Para obter mais detalhes, confira [O que são SQL Server [!INCLUDE[big-data-clus
 
 |Novo recurso ou atualização | Detalhes |
 |:---|:---|
-|Suporte para codificação de caracteres UTF-8 |Suporte para caractere UTF-8 para importação e exportação de codificação, e como agrupamento de nível de banco de dados ou de nível de coluna para dados de cadeia de caracteres. Isso dá suporte a aplicativos que se estendem para uma escala global, em que o requisito de fornecer aplicativos e serviços de banco de dados multilíngues globais é essencial para atender às demandas dos clientes e às regulamentações específicas do mercado. Confira [Suporte a agrupamentos e a Unicode](../relational-databases/collations/collation-and-unicode-support.md)<br/><br/> A versão Release Candidate [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] habilita o suporte a UTF-8 para tabelas externas do Polybase e para Always Encrypted.|
+|Suporte para codificação de caracteres UTF-8 |Suporte para caractere UTF-8 para importação e exportação de codificação, e como agrupamento de nível de banco de dados ou de nível de coluna para dados de cadeia de caracteres. Isso dá suporte a aplicativos que se estendem para uma escala global, em que o requisito de fornecer aplicativos e serviços de banco de dados multilíngues globais é essencial para atender às demandas dos clientes e às regulamentações específicas do mercado. Confira [Suporte a agrupamentos e a Unicode](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> A versão Release Candidate [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] habilita o suporte a UTF-8 para tabelas externas do Polybase e para Always Encrypted.|
 | &nbsp; | &nbsp; |
 
 ### <a name="polybase"></a>PolyBase
