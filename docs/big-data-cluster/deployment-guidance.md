@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9a1953ecb17dba3894afe15e88690fbb150fb5a3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 1655525fd9ec8acba80637a86936484859f85df2
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153444"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878721"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Como implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] o no kubernetes
 
@@ -120,7 +120,7 @@ Também é possível personalizar seu próprio perfil de configuração de impla
 1. Para personalizar as configurações em seu perfil de configuração de implantação, você pode editar o arquivo de configuração de implantação em uma ferramenta que é boa para editar arquivos JSON, como o VS Code. Para automação com script, você também pode editar o perfil de implantação personalizado usando o comando **azdata bdc config**. Por exemplo, o comando a seguir altera um perfil de implantação personalizado para alterar o nome do cluster implantado do padrão (**mssql-cluster**) para **test-cluster**:  
 
    ```bash
-   azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
+   azdata bdc config replace --config-file custom/bdc.json --json-values "metadata.name=test-cluster"
    ```
    
    > [!TIP]
@@ -147,7 +147,7 @@ As variáveis de ambiente a seguir são usadas para configurações de seguranç
 | **CONTROLLER_USERNAME** | Obrigatório |O nome de usuário do administrador do cluster. |
 | **CONTROLLER_PASSWORD** | Obrigatório |A senha do administrador do cluster. |
 | **MSSQL_SA_PASSWORD** | Obrigatório |A senha do usuário SA para a instância mestre do SQL. |
-| **KNOX_PASSWORD** | Obrigatório |A senha do usuário Knox. |
+| **KNOX_PASSWORD** | Obrigatório |A senha para o usuário **raiz** do Knox. Observação do que em uma configuração de autenticação básica, somente o usuário com suporte para o Knox é a **raiz**.|
 | **ACCEPT_EULA**| Necessário para o primeiro uso de `azdata`| Não requer valor. Quando definido como uma variável de ambiente, ele aplica o EULA ao SQL Server e ao `azdata`. Se não estiver definido como variável de ambiente, você poderá incluir `--accept-eula` no primeiro uso do comando `azdata`.|
 | **DOCKER_USERNAME** | Opcional | O nome de usuário para acessar as imagens de contêiner caso elas sejam armazenadas em um repositório privado. Confira o tópico [Implantações offline](deploy-offline.md) para obter mais detalhes sobre como usar um repositório privado do Docker para implantação de cluster de Big Data.|
 | **DOCKER_PASSWORD** | Opcional |A senha para acessar o repositório privado acima. |
@@ -169,6 +169,10 @@ SET CONTROLLER_PASSWORD=<password>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
 ```
+
+> [!NOTE]
+> Você deve usar o usuário **raiz** para o gateway do Knox com a senha acima. **root** é o único usuário com suporte para essa configuração básica de autenticação (nome de usuário/senha). Para SQL Server mestre, o nome de usuário provisionado para ser usado com a senha acima é **SA**.
+
 
 Depois de definir as variáveis de ambiente, você deve executar `azdata bdc create` para disparar a implantação. Este exemplo usa o perfil de configuração de cluster criado acima:
 

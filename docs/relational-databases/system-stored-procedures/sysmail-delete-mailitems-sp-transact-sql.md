@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: df7ae090efbcd448dc5df3df5355273c891da4fe
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: ad69cc6933b4f3d51d3b9ec11fad4edd6d555abe
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941176"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846642"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @sent_before = ] 'sent_before'`Exclui emails até a data e a hora fornecidas como o argumento *sent_before* . *sent_before* é **DateTime** com NULL como padrão. NULL indica todas as datas.  
+`[ \@sent_before = ] 'sent_before'`Exclui emails até a data e a hora fornecidas como o argumento *sent_before* . *sent_before* é **DateTime** com NULL como padrão. NULL indica todas as datas.  
   
-`[ @sent_status = ] 'sent_status'`Exclui emails do tipo especificado por *sent_status*. *sent_status* é **varchar (8)** sem padrão. As entradas válidas são **enviadas**, não **enviadas**, **repetidas**e **com falha**. NULL indica todos os status.  
+`[ \@sent_status = ] 'sent_status'`Exclui emails do tipo especificado por *sent_status*. *sent_status* é **varchar (8)** sem padrão. As entradas válidas são **enviadas**, não **enviadas**, **repetidas**e **com falha**. NULL indica todos os status.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

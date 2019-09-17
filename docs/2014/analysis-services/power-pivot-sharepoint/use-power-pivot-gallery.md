@@ -1,5 +1,5 @@
 ---
-title: Usar a Galeria PowerPivot | Microsoft Docs
+title: Usar a galeria do PowerPivot | Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a36ad34a7f8636d5d13c8d914f8b90965ead65c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e4dd52a33fbfb84f65658db6c645a5317b39c44
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66070879"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874479"
 ---
 # <a name="use-powerpivot-gallery"></a>Usar a Galeria PowerPivot
   A Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é uma biblioteca de documentos do SharePoint, com finalidade especial, que fornece visualização avançada e gerenciamento de documentos das pastas de trabalho do Excel publicadas e relatórios dos Reporting Services que contêm dados PowerPivot.  
@@ -25,7 +25,7 @@ ms.locfileid: "66070879"
   
 ##  <a name="bkmk_top"></a> Neste tópico  
   
--   [Ícones na Galeria do PowerPivot](#icons)  
+-   [Ícones na Galeria PowerPivot](#icons)  
   
 -   [Salvar uma pasta de trabalho do Excel na Galeria PowerPivot](#add)  
   
@@ -33,9 +33,9 @@ ms.locfileid: "66070879"
   
 -   [Abrir uma pasta de trabalho ou relatório no modo de página inteira](#view)  
   
--   [Agendar atualização de dados para pastas de trabalho PowerPivot na Galeria do PowerPivot](#newdr)  
+-   [Agendar atualização de dados para pastas de trabalho PowerPivot na Galeria PowerPivot](#newdr)  
   
--   [Excluir uma pasta de trabalho ou relatório na Galeria do PowerPivot](#delete)  
+-   [Excluir uma pasta de trabalho ou relatório na Galeria PowerPivot](#delete)  
   
 -   [Atualizar uma imagem em miniatura](#image)  
   
@@ -47,13 +47,13 @@ ms.locfileid: "66070879"
   
 > [!NOTE]  
 >  A Galeria do PowerPivot requer o Microsoft Silverlight.  O navegador Microsoft Edge não dá suporte ao Silverlight.   
-> Para exibir o conteúdo da biblioteca no Microsoft Edge, clique na guia **Biblioteca** , na galeria do PowerPivot e, em seguida, altere a exibição da biblioteca de documentos para **Todos os documentos**.    
+> Para exibir o conteúdo da biblioteca no Microsoft Edge, clique na guia **biblioteca** na Galeria Power pivot e altere a exibição da biblioteca de documentos para **todos os documentos**.    
 > Para alterar a exibição padrão, clique na guia **Biblioteca** e depois clique em Modificar exibição. Clique em "Fazer desta a exibição padrão" e, em seguida, clique em OK para salvar a exibição padrão.  
->  Para obter mais informações sobre quais Edge dá suporte, consulte o blog do Windows, [uma ruptura com o passado, parte 2: Adeus ao ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  Para obter mais informações sobre o que o Microsoft Edge dá suporte, consulte [o blog do Windows, um intervalo do passado, parte 2: Dizendo adeus ao ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
- Para obter uma lista completa dos pré-requisitos, consulte [criar e personalizar a Galeria PowerPivot](create-and-customize-power-pivot-gallery.md).  
+ Para obter uma lista completa de pré-requisitos, consulte [criar e personalizar a Galeria PowerPivot](create-and-customize-power-pivot-gallery.md).  
   
-##  <a name="icons"></a> Ícones na Galeria do PowerPivot  
+##  <a name="icons"></a>Ícones na Galeria PowerPivot  
  Os ícones fornecem um indicativo visual quanto à disponibilidade do conteúdo e ao status.  
   
 |Ícone|Descrição|  
@@ -64,18 +64,18 @@ ms.locfileid: "66070879"
 |![GMNI_PowerPivotGalleryIcon_badtype](../media/gmni-powerpivotgalleryicon-badtype.gif "GMNI_PowerPivotGalleryIcon_badtype")|O ícone de conteúdo indisponível é exibido quando o documento carregado não pode ser renderizado na Galeria PowerPivot. Os tipos de documento suportados incluem pastas de trabalho PowerPivot e relatórios criados no Construtor de Relatórios do Reporting Services do SQL Server 2008 R2.<br /><br /> Esse ícone também aparecerá se você reciclar um documento da Lixeira.<br /><br /> Se você estiver obtendo esse ícone para um documento que apresentou previamente uma imagem de visualização válida, você poderá atualizar a imagem editando uma propriedade de documento e salvando suas alterações.|  
 |![GMNI_PowerPivotGalleryIcon_Locked](../media/gmni-powerpivotgalleryicon-locked.gif "GMNI_PowerPivotGalleryIcon_Locked")|O ícone de conteúdo bloqueado é exibido quando as imagens em miniatura são desabilitadas propositalmente para esse documento. A Galeria PowerPivot não gera imagens em miniatura para pastas de trabalho do Excel que contêm dados PowerPivot, ou para pastas de trabalho PowerPivot ou relatórios do Reporting Services que não atendem aos requisitos de geração de instantâneos. Para obter mais informações, consulte a seção Pré-requisitos neste tópico.|  
   
-##  <a name="add"></a> Salvar uma pasta de trabalho do Excel na Galeria PowerPivot  
+##  <a name="add"></a>Salvar uma pasta de trabalho do Excel na Galeria PowerPivot  
  É possível publicar pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] na biblioteca usando todas as técnicas de compartilhamento fornecidas pelo Excel 2010. Por exemplo, no Excel 2010, é possível usar a opção Salvar Como para especificar um caminho total ou parcial do SharePoint para uma biblioteca.  
   
 1.  Salve o arquivo.  
   
-2.  1.  **Excel 2010:** No menu Arquivo, clique em **salvar e enviar**.  
+2.  1.  **Excel 2010:** No menu arquivo, clique em **salvar & enviar**.  
   
     2.  Clique em **Salvar no SharePoint**.  
   
     3.  Clique em **Opções de Publicação** se desejar usar Opções de Serviços do Excel para selecionar folhas ou parâmetros individuais a serem publicados. Por exemplo, a guia Parâmetros em Opções de Serviços do Excel permite escolher quais slicers aparecem na pasta de trabalho publicada.  
   
-    1.  **Excel 2013:**  No menu Arquivo, clique em **salvar**.  
+    1.  **Excel 2013:**  No menu arquivo, clique em **salvar**.  
   
     2.  Clique em **Opções de Exibição do Navegador** se desejar usar Opções de Serviços do Excel para selecionar folhas ou parâmetros individuais a serem publicados. Por exemplo, a guia Parâmetros em Opções de Serviços do Excel permite escolher quais slicers aparecem na pasta de trabalho publicada.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66070879"
   
 3.  Em **Carregar Documento**, selecione uma opção de carregamento e insira o nome e o local do arquivo que você deseja carregar. As configurações da biblioteca determinam onde o documento aparece. Talvez seja necessário atualizar a janela do navegador para exibir a adição mais recente.  
   
-##  <a name="newdocs"></a> Criar novos relatórios ou pastas de trabalho com base em uma pasta de trabalho PowerPivot publicada  
+##  <a name="newdocs"></a>Criar novos relatórios ou pastas de trabalho com base em uma pasta de trabalho PowerPivot publicada  
  Para pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que você publica na Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , somente é possível criar pastas de trabalho adicionais ou relatórios do Reporting Services que usam a pasta de trabalho publicada como uma fonte de dados conectada.  
   
 |||  
@@ -118,14 +118,14 @@ ms.locfileid: "66070879"
   
  Um método alternativo para exibir a pasta de trabalho em um navegador é abri-lo no Excel em uma estação de trabalho cliente. Você deve ter o Excel 2013 ou Excel 2010 e o suplemento [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] para exibir o arquivo. Você pode usar o Excel 2007 para abrir o arquivo, mas não pode usá-lo para dinamizar os dados. Por isso, o Excel 2013 ou Excel 2010 são recomendados para exibição e criação de dados PowerPivot. Se você não tiver os aplicativos necessários, use um navegador para exibir a pasta de trabalho do SharePoint.  
   
-##  <a name="newdr"></a> Agendar atualização de dados para pastas de trabalho PowerPivot na Galeria do PowerPivot  
+##  <a name="newdr"></a>Agendar atualização de dados para pastas de trabalho PowerPivot na Galeria PowerPivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em uma pasta de trabalho do Excel publicada podem ser atualizados em intervalos agendados.  
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Clique no botão Gerenciar Atualização de Dados para criar ou exibir uma agenda que recupera dados atualizados de fontes de dados conectadas. Para obter instruções sobre como criar uma agenda, consulte [agendar uma atualização de dados &#40;PowerPivot para SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
+|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Clique no botão Gerenciar Atualização de Dados para criar ou exibir uma agenda que recupera dados atualizados de fontes de dados conectadas. Para obter instruções sobre como criar uma agenda, consulte [agendar uma atualização &#40;de&#41;dados PowerPivot para SharePoint](../schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
   
-##  <a name="delete"></a> Excluir uma pasta de trabalho ou relatório na Galeria do PowerPivot  
+##  <a name="delete"></a>Excluir uma pasta de trabalho ou relatório na Galeria PowerPivot  
  Para excluir um documento da biblioteca, primeiro alterne para a exibição Todos os Documentos.  
   
 1.  Em um site do SharePoint, abra a Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -154,16 +154,16 @@ ms.locfileid: "66070879"
 ### <a name="document-type-is-not-supported"></a>Não há suporte ao tipo de documento  
  O tipo de conteúdo **Documento de Galeria PowerPivot** não tem suporte. Se você habilitar o tipo de conteúdo **Documento de Galeria PowerPivot** para uma biblioteca de documentos e tentar criar um novo documento desse tipo, verá uma mensagem de erro semelhante a uma destas:  
   
--   'Novo documento' exige um navegador de aplicativo e da web compatível com o Microsoft Sharepoint Foundation. Para adicionar um documento à biblioteca de documentos, clique no botão 'Carregar documento'.  
+-   ' Novo documento ' requer um aplicativo compatível com o Microsoft SharePoint Foundation e um navegador da Web. Para adicionar um documento a esta biblioteca de documentos, clique no botão ' carregar documento '.  
   
--   "O endereço de Internet ' nome http://[server] / Reportgallery/Gallery/ReportGallery/Forms/Template.xlsx ' não é válido." " O Microsoft Excel não pode acessar o arquivo ' nome http://[server] / Reportgallery/Gallery/ReportGallery/Forms/Template.xlsx '. Há várias razões possíveis:  
+-   "O endereço de Internet ' http://[nome do servidor]/TestSite/PowerPivot Gallery Gallery/ReportGallery/Forms/template. xlsx ' não é válido." " O Microsoft Excel não pode acessar o arquivo ' http://[nome do servidor]/TestSite/PowerPivot Gallery Gallery/ReportGallery/Forms/template. xlsx '. Há várias razões possíveis:  
   
  O tipo de conteúdo do **Documento de Galeria PowerPivot** não é adicionado automaticamente nas bibliotecas de documentos. Você não encontrará esse problema, a menos que habilite manualmente o tipo de conteúdo sem suporte.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar um local confiável para sites do PowerPivot na Administração Central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Excluir Galeria do PowerPivot](delete-power-pivot-gallery.md)   
- [Criar e personalizar a Galeria PowerPivot](create-and-customize-power-pivot-gallery.md)   
- [Agendar uma atualização de dados &#40;PowerPivot para SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
+ [Criar um local confiável para sites do PowerPivot na administração central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [Excluir Galeria PowerPivot](delete-power-pivot-gallery.md)   
+ [Criar e personalizar a galeria do PowerPivot](create-and-customize-power-pivot-gallery.md)   
+ [Agendar uma atualização &#40;de dados PowerPivot para SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
   
   

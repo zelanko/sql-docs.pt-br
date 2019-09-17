@@ -1,5 +1,5 @@
 ---
-title: Armazenamento de cadeia e agrupamento em modelos de tabela | Microsoft Docs
+title: Armazenamento de cadeia de caracteres e agrupamento em modelos de tabela | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 18601e43e8aea80350e297336174cce0b4ef7bc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1eb30dbddac82db8fb0f6047985ce6fb743042cb
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066432"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874494"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Ordenação e armazenamento de cadeia de caracteres em modelos tabulares
   Cadeias de caracteres (valores de texto) são armazenadas em um formato altamente compactado em modelos de tabela; por causa desta compactação, você pode obter resultados inesperados ao recuperar cadeias de caracteres inteiras ou parciais. Além disso, como a localidade e a ordenação são herdadas hierarquicamente do objeto pai mais próximo, se o idioma da cadeia de caracteres não for definido explicitamente, a localidade e a ordenação do pai poderão afetar como cada cadeia de caracteres é armazenada e se ela é exclusiva ou combinada com cadeias de caracteres semelhantes, conforme definido pela ordenação pai.  
@@ -47,14 +47,14 @@ ms.locfileid: "66066432"
   
  Talvez os dados sejam de origens diferentes e, portanto, o uso de maiúsculas/minúsculas e acentos era inconsistente, e o banco de dados relacional armazenou essas diferenças como tal. Mas, em geral, os valores são **Plant** ou **Tree**, apenas com diferença em maiúsculas/minúsculas.  
   
- Quando estes valores são carregados em um modelo de tabela que usa a ordenação padrão e a ordem de classificação para inglês americano, maiúsculas/minúsculas não é importante; portanto, apenas dois valores seriam armazenados para a coluna inteira:  
+ Quando esses valores são carregados em um modelo tabular que usa o agrupamento padrão e a ordem de classificação para inglês (Estados Unidos), Case não é importante, portanto, apenas dois valores seriam armazenados para toda a coluna:  
   
 |Classificação - em inglês|  
 |-------------------------------|  
 |trEE|  
 |PlAnT|  
   
- Se você usar a coluna **classificação - em inglês**, em seu modelo, onde quer que você exiba a classificação de planta verá não os valores originais, com os vários seu uso de maiusculas e minúsculas, mas somente a primeira instância. A razão é que todas as variantes de maiúsculas e minúsculas de **tree** são consideradas equivalentes nesta ordenação e localidade; portanto, apenas uma cadeia de caracteres foi preservada e a primeira instância dessa cadeia de caracteres que é encontrada pelo sistema é salva.  
+ Se você usar a coluna, **classificação-inglês**, em seu modelo, onde quer que você exiba a classificação de planta, você verá não os valores originais, com seus vários usos de maiúsculas e minúsculas, mas apenas a primeira instância. A razão é que todas as variantes de maiúsculas e minúsculas de **tree** são consideradas equivalentes nesta ordenação e localidade; portanto, apenas uma cadeia de caracteres foi preservada e a primeira instância dessa cadeia de caracteres que é encontrada pelo sistema é salva.  
   
 > [!WARNING]  
 >  Você pode optar por definir a cadeia de caracteres que será a primeira a armazenar, de acordo com o que considere correto, mas isso pode ser difícil. Não existe uma maneira simples de determinar previamente a linha que deve ser processada primeiro pelo mecanismo, pois todos os valores são considerados equivalentes. Se você precisar definir o valor padrão, limpe todas as cadeias de caracteres antes de carregar o modelo.  

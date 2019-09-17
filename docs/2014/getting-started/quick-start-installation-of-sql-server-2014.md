@@ -15,10 +15,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ec876262387ba4470bf225d53320ad62b4b2101
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/11/2019
 ms.locfileid: "68890125"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>Instalação de início rápido do SQL Server 2014
@@ -83,9 +83,9 @@ ms.locfileid: "68890125"
   
 -   Execute a Instalação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para atualizar uma versão existente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obter mais informações, consulte [Atualizando para o SQL Server 2014](#BKMK_Upgrading).  
   
--   Execute a Instalação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para instalar uma nova instância do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obter mais informações, consulte Instalando o [SQL Server 2014](#BKMK_Install).  
+-   Execute a Instalação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para instalar uma nova instância do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obter mais informações, consulte [instalando o SQL Server 2014](#BKMK_Install).  
   
--   Depois de concluir a instalação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a próxima etapa principal é configurar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e seus componentes. Use os utilitários do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para configurar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, consulte Configurando [SQL Server 2014](#BKMK_Configure).  
+-   Depois de concluir a instalação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a próxima etapa principal é configurar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e seus componentes. Use os utilitários do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para configurar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Configurando SQL Server 2014](#BKMK_Configure).  
   
  Você pode localizar explicações detalhadas sobre essas tarefas na próxima seção.  
   

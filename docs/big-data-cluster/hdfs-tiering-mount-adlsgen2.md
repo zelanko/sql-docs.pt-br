@@ -5,16 +5,16 @@ description: Este artigo explica como configurar a camada do HDFS para montar um
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 822c10ad41232d213302e4bb5e328449d9f5f764
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 679fbd63d77e21a84db315cf05adf112d122ad63
+ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652314"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70774212"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Como montar o ADLS Gen2 para a camada do HDFS em um cluster de Big Data
 
@@ -33,33 +33,35 @@ A seção a seguir descreve como configurar o Azure Data Lake Storage Gen2 para 
 
 1. [Crie uma conta de armazenamento com funcionalidades do Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
-1. [Crie um contêiner de blob](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal) nesta conta de armazenamento para seus dados externos.
+1. [Crie um contêiner de blob/sistema de arquivos](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal) nesta conta de armazenamento para seus dados externos.
 
 1. Faça upload de um arquivo CSV ou Parquet no contêiner. Estes são os dados do HDFS externos que serão montados no HDFS no cluster de Big Data.
 
 ## <a name="credentials-for-mounting"></a>Credenciais para montagem
 
-## <a name="use-oauth-credentials-to-mount"></a>Usar credenciais do OAuth para montagem
+### <a name="use-oauth-credentials-to-mount"></a>Usar credenciais do OAuth para montagem
 
 Para usar as credenciais do OAuth para montagem, é necessário seguir as etapas abaixo:
 
 1. Acesse o [portal do Azure](https://portal.azure.com)
-1. Acesse "serviços" no painel de navegação à esquerda e clique em "Azure Active Directory"
-1. Usando “Registros de Aplicativo” no menu, crie um “Aplicativo Web” e siga o assistente. **Lembre-se do nome que você criar aqui**. Você precisará adicionar esse nome à sua conta do ADLS como um usuário autorizado.
-1. Depois que o aplicativo Web for criado, acesse “chaves” em “configurações” no aplicativo.
-1. Selecione uma duração de chave e clique em Salvar. **Salve a chave gerada.**
-1.  Volte à página Registros de Aplicativo e clique no botão “Pontos de Extremidade” na parte superior. **Anote a URL do “Ponto de Extremidade do Token”**
+1. Navegue até "Azure Active Directory". Você deve ver esse serviço na barra de navegação à esquerda.
+1. Na barra de navegação à direita, selecione "Registros de aplicativo" e crie um novo registro
+1. Crie um "aplicativo Web e siga o assistente. **Lembre-se do nome do aplicativo que você criar aqui**. Você precisará adicionar esse nome à sua conta do ADLS como um usuário autorizado. Observe também a ID do cliente do aplicativo na visão geral quando você seleciona o aplicativo.
+1. Depois que o aplicativo Web for criado, vá para "certificados & segredos" e crie um **novo segredo do cliente** e selecione uma duração de chave. **Adicione** o segredo.
+1.  Volte para a página de registros do aplicativo e clique em "pontos de extremidade" na parte superior. **Anote o "ponto de extremidade do token OAuth (v2)** URL
 1. Agora você deverá ter os seguintes itens anotados para o OAuth:
 
-    - A “ID do Aplicativo” do Aplicativo Web criado acima na etapa 3
-    - A chave recém-gerada na etapa 5
-    - O ponto de extremidade do token da etapa 6
+    - A "ID do cliente do aplicativo" do aplicativo Web
+    - O segredo do cliente
+    - O ponto de extremidade do token
 
 ### <a name="adding-the-service-principal-to-your-adls-account"></a>Como adicionar a entidade de serviço à sua conta do ADLS
 
-1. Acesse o portal novamente, abra sua conta do ADLS e selecione Controle de acesso (IAM) no menu à esquerda.
-1. Selecione "Adicionar uma atribuição de função" e procure o nome criado na Etapa 3 acima (observe que ele não aparece na lista, mas será encontrado se você pesquisar o nome completo).
-1. Agora, adicione a função “Colaborador de Dados do Storage Blob (Versão Prévia)”.
+1. Acesse o portal novamente e navegue até o sistema de arquivos da conta de armazenamento ADLS e selecione controle de acesso (IAM) no menu à esquerda.
+1. Selecione "adicionar uma atribuição de função" 
+1. Selecione a função "colaborador de dados de blob de armazenamento"
+1. Pesquise o nome que você criou acima (Observe que ele não aparece na lista, mas será encontrado se você pesquisar o nome completo).
+1. Salve a função.
 
 Aguarde 5 a 10 minutos para usar as credenciais para montagem
 
@@ -70,9 +72,9 @@ Abra um prompt de comando em um computador cliente que possa acessar o cluster d
    ```text
     set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
     fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
-    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above],
-    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above],
-    fs.azure.account.oauth2.client.secret=[<key> from step5 above]
+    fs.azure.account.oauth2.client.endpoint=[token endpoint],
+    fs.azure.account.oauth2.client.id=[Application client ID],
+    fs.azure.account.oauth2.client.secret=[client secret]
    ```
 
 ## <a name="use-access-keys-to-mount"></a>Usar chaves de acesso para montagem
@@ -137,7 +139,7 @@ azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 
 ## <a name="refresh-a-mount"></a>Atualizar uma montagem
 
-O exemplo a seguir atualiza a montagem.
+O exemplo a seguir atualiza a montagem. Essa atualização também limpará o cache de montagem.
 
 ```bash
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>

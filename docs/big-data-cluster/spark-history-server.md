@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9df4f83d319c7d37dd438bcc6a787b4939757e47
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: f5c237910c087131a10660c4793954c850b7791b
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653672"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878693"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Depurar e diagnosticar aplicativos Spark [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no servidor de histórico do Spark
 
@@ -27,7 +27,7 @@ Este artigo fornece orientações sobre como usar o Servidor de Histórico do Sp
 A experiência do usuário com o servidor de histórico do Spark de software livre é aprimorada com informações, que incluem dados específicos do trabalho e a visualização interativa de grafos de trabalho e fluxos de dados do cluster de Big Data. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Abrir a interface do usuário da Web do Servidor de Histórico do Spark usando uma URL
-Abra o Servidor de Histórico do Spark navegando até a URL a seguir, substitua `<Ipaddress>` e `<Port>` por informações específicas do cluster de Big Data. É possível encontrar mais informações em: [Implantar cluster de Big Data do SQL Server](quickstart-big-data-cluster-deploy.md)
+Abra o Servidor de Histórico do Spark navegando até a URL a seguir, substitua `<Ipaddress>` e `<Port>` por informações específicas do cluster de Big Data. Observe que, em uma autenticação básica (nome de usuário/senha) Big Data configuração de cluster, você deve fornecer a **raiz** do usuário quando solicitado a fazer logon nos pontos de extremidade do gateway (Knox). É possível encontrar mais informações em: [Implantar cluster de Big Data do SQL Server](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory

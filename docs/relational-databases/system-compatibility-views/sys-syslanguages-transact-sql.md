@@ -21,12 +21,12 @@ ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 131cabc90680a9d1069802f4549c7c3754a78dec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053396"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874873"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68053396"
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|ID exclusiva de idioma.|  
 |dateformat|**nchar(3)**|Ordem de data, por exemplo, DMA.|  
-|datefirst|**tinyint**|Primeiro dia da semana: 1 para segunda-feira, 2 para terça-feira, e assim por diante, até 7 para domingo.|  
+|datefirst|**tinyint**|Primeiro dia da semana: 1 para segunda-feira, 2 para terça-feira e assim por diante até 7 para domingo.|  
 |upgrade|**int**|Reservado para uso do sistema.|  
 |name|**sysname**|Nome oficial do idioma, por exemplo, francês.|  
 |alias|**sysname**|Nome de idioma alternativo, por exemplo, francês.|  
@@ -86,7 +86,7 @@ ms.locfileid: "68053396"
 |Tailandês|1054|1054|  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições de compatibilidade &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [Mapeando tabelas do sistema para exibições do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [Exibições &#40;de compatibilidade TRANSACT-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [Mapeando tabelas do sistema para &#40;exibições do sistema TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

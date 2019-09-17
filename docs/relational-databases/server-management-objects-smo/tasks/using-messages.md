@@ -10,25 +10,25 @@ ms.topic: reference
 helpviewer_keywords:
 - messages [SMO]
 ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d30b267a0a821c015990ff54ac47eb91e925e982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73dbbb93c226c145dc16f5148f903900b602760e
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030000"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911222"
 ---
 # <a name="using-messages"></a>Usando mensagens
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  No SMO, mensagens de sistema são representadas pelo <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> objeto ao qual pertence o **Server** objeto. Como as mensagens do sistema não podem ser modificadas, as propriedades do objeto **SystemMessage** são somente leitura.  
+  No SMO, as mensagens do sistema são representadas pelo <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> objeto que pertence ao objeto **Server** . Como as mensagens do sistema não podem ser modificadas, as propriedades do objeto **SystemMessage** são somente leitura.  
   
  Mensagens definidas pelo usuário são representadas programaticamente no SMO pelo objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection>. Mensagens existentes, definidas pelo usuário, podem ser descobertas através da iteração pela coleção. Para gerar novas mensagens definidas pelo usuário, você pode criar uma instância de um novo objeto **UserDefinedMessage** e definir as propriedades adequadas.  
   
 ## <a name="examples"></a>Exemplos  
- Para os exemplos de código a seguir, selecione o ambiente de programação, o modelo de programação e a linguagem de programação para criar seu aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto do SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para os exemplos de código a seguir, selecione o ambiente de programação, o modelo de programação e a linguagem de programação para criar seu aplicativo. Para obter mais informações, consulte [criar um projeto&#35; do Visual C Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="finding-a-particular-system-message-in-visual-basic"></a>Localizando uma mensagem de sistema específica no Visual Basic .NET  
  O exemplo de código mostra como identificar uma mensagem de sistema através do número de identificação e como exibir a mensagem.  

@@ -19,14 +19,14 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f151d62a03cebf931c58f37b1e126a7331cefae9
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 0c39d57e84e27f7449ebc8464691d2d8ad887848
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68418873"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70911103"
 ---
-# <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Banco de Dados SQL do Azure)
+# <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Retorna os dados de armazenamento e de utilização da CPU para um Banco de Dados SQL do Azure. Os dados são coletados e agregados em intervalos de cinco minutos. Para cada banco de dados de usuário, há uma linha para cada janela de relatório de cinco minutos, na qual há uma alteração no consumo de recursos. Os dados retornados incluem uso de CPU, alteração de tamanho de armazenamento e modificação de SKU de banco de dados. Bancos de dados ociosos sem alterações podem não ter linhas para cada intervalo de cinco minutos. Os dados históricos são retidos por aproximadamente 14 dias.  
@@ -47,7 +47,12 @@ ms.locfileid: "68418873"
 |avg_log_write_percent|**decimal(5,2)**|Utilização média do recurso de gravação, em porcentagem, do limite da camada de serviço.|  
 |max_worker_percent|**decimal(5,2)**|Máximo de trabalhos simultâneos (solicitações) em porcentagem com base no limite da camada de serviço do banco de dados.<br /><br /> No momento, o máximo é calculado para o intervalo de cinco minutos com base nas amostras de 15 segundos de contagens de trabalho simultâneas.|  
 |max_session_percent|**decimal(5,2)**|Máximo de sessões simultâneas em porcentagem com base no limite da camada de serviço do banco de dados.<br /><br /> No momento, o máximo é calculado para o intervalo de cinco minutos com base nas amostras de 15 segundos de contagens de sessão simultâneas.|  
-|dtu_limit|**int**|Configuração de DTU máxima do banco de dados atual para este banco de dados durante esse intervalo. |   
+|dtu_limit|**int**|Configuração de DTU máxima do banco de dados atual para este banco de dados durante esse intervalo. |
+|xtp_storage_percent|**decimal (5,2)**|Utilização de armazenamento para OLTP na memória em porcentagem do limite da camada de serviço (no final do intervalo de relatórios). Isso inclui a memória usada para o armazenamento dos seguintes objetos OLTP na memória: tabelas com otimização de memória, índices e variáveis de tabela. Ele também inclui a memória usada para processar operações ALTER TABLE.<br /><br /> Retornará 0 se o OLTP na memória não for usado no banco de dados.|
+|avg_login_rate_percent|**decimal (5,2)**|Identificado apenas para fins informativos. Não compatível. A compatibilidade futura não está garantida.|
+|avg_instance_cpu_percent|**decimal (5,2)**|Uso médio de CPU do banco de dados como uma porcentagem do processo do BD SQL.|
+|avg_instance_memory_percent|**decimal (5,2)**|Uso médio de memória do banco de dados como uma porcentagem do processo do BD SQL.|
+|cpu_limit|**decimal (5,2)**|Número de vCores para este banco de dados durante esse intervalo. Para bancos de dados que usam o modelo baseado em DTU, essa coluna é nula.|
 |allocated_storage_in_megabytes|**float**|A quantidade de espaço de arquivo formatado em MB disponibilizada para armazenar dados de banco de dados. O espaço de arquivo formatado também é conhecido como espaço de dados alocado.  Para obter mais informações, consulte: [Gerenciamento de espaço de arquivo no banco de BD SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  

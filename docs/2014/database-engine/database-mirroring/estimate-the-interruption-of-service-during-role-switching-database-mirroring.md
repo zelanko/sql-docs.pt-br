@@ -1,5 +1,5 @@
 ---
-title: Estime a interrupção do serviço durante troca de função (espelhamento de banco de dados) | Microsoft Docs
+title: Estimar a interrupção do serviço durante a troca de função (espelhamento de banco de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4104fd32688abaf379db30a6ecf604a35c557778
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9830334843fd2c350091f7dc2af5493141bcfb1
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806836"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874438"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Estime a interrupção do serviço durante troca de função (Espelhamento de Banco de Dados)
   Durante uma troca de função, a quantidade de tempo que o espelhamento de banco de dados fica fora de serviço depende do tipo de função trocada e da causa da troca de função.  
@@ -37,7 +37,7 @@ ms.locfileid: "62806836"
 -   Para um failover manual, apenas o tempo exigido do failover do banco de dados após o comando de failover é emitido.  
   
 ## <a name="error-detection"></a>Detecção de erro  
- O tempo para o sistema perceber um erro depende do tipo de erro; por exemplo, um erro de rede é observado quase imediatamente, enquanto um travamento de servidor, por padrão, leva 10 segundos para ser percebido, que é o período de tempo limite padrão.  
+ O tempo para o sistema observar um erro depende do tipo de erro; por exemplo, um erro de rede é notado quase instantaneamente, enquanto percebe um servidor que não está respondendo leva 10 segundos (com o tempo limite padrão).  
   
  Para obter informações sobre erros que podem causar uma falha durante uma sessão de espelhamento de banco de dados e detecção de tempo limite em modo de segurança alta com failover automático, consulte [Possíveis falhas durante o Espelhamento de Banco de Dados](possible-failures-during-database-mirroring.md)).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62806836"
  O tempo de failover consiste principalmente no tempo necessário para o servidor espelho anterior efetuar o roll-forward de qualquer log restante na fila de restauração, mais um pequeno tempo adicional (para obter mais informações sobre como o servidor espelho processa registros de log, consulte [Espelhamento de Banco de Dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)). Para obter informações sobre como calcular o tempo de failover, consulte Estimando sua taxa do failover a ser refeito, posteriormente neste tópico.  
   
 > [!IMPORTANT]  
->  Se o failover ocorrer durante uma transação na qual um índice ou uma tabela for criada e, depois, for alterada, o failover pode demorar mais tempo que o habitual.  Por exemplo, o failover durante a seguinte série de operações pode aumentar o tempo de failover:  BEGIN TRANSACTION, CREATE INDEX em uma tabela e SELECT INTO tabela. A possibilidade de aumento do tempo de failover durante tal transação permanece até que ele seja concluído com uma instrução COMMIT TRANSACTION ou ROLLBACK TRANSACTION.  
+>  Se o failover ocorrer durante uma transação na qual um índice ou uma tabela for criada e, depois, for alterada, o failover pode demorar mais tempo que o habitual.  Por exemplo, realizar failover durante a seguinte série de operações pode aumentar o tempo de failover:  BEGIN TRANSACTION, CREATE INDEX em uma tabela e SELECT INTO na tabela. A possibilidade de aumento do tempo de failover durante tal transação permanece até que ele seja concluído com uma instrução COMMIT TRANSACTION ou ROLLBACK TRANSACTION.  
   
 ### <a name="the-redo-queue"></a>A Fila de Restauração  
  O avanço do banco de dados envolve a aplicação de quaisquer registros de log que estiverem atualmente na fila de restauração no servidor espelho. A opção *fila de restauração* consiste nos registros de log gravados no disco do servidor espelho, mas que ainda não avançaram para o banco de dados espelho.  

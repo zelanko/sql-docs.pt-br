@@ -1,5 +1,5 @@
 ---
-title: Assistente de migração do SQL Server | Microsoft Docs
+title: Assistente de Migração do SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 01/04/2019
 ms.prod: sql
@@ -9,44 +9,44 @@ ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: b6c0f5d54f8a6d3ac1dd35c7d02b05e1b5900278
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 823e6a71b5385674ef20504d6ec0450140395a60
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083559"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874751"
 ---
 # <a name="sql-server-migration-assistant"></a>Assistente de Migração do SQL Server
-Microsoft SQL Server SSMA (Migration Assistant) é uma ferramenta projetada para automatizar a migração de banco de dados para o SQL Server do Microsoft Access, DB2, MySQL, Oracle e SAP ASE.  
+O SSMA (Assistente de Migração do Microsoft SQL Server) é uma ferramenta projetada para automatizar a migração de banco de dados para SQL Server do Microsoft Access, DB2, MySQL, Oracle e SAP ASE.  
   
 ## <a name="migration-sources"></a>Fontes de migração  
   
--   [Assistente de migração do SQL Server para Access](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
+-   [Assistente de Migração do SQL Server para acesso](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
   
--   [Assistente de migração do SQL Server para DB2](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
+-   [Assistente de Migração do SQL Server para DB2](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
   
--   [Assistente de migração do SQL Server para MySQL](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
+-   [Assistente de Migração do SQL Server para MySQL](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
   
--   [Assistente de migração do SQL Server para Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
+-   [Assistente de Migração do SQL Server para Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
--   [Assistente de migração do SQL Server para SAP ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
+-   [Assistente de Migração do SQL Server para SAP ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
-## <a name="supported-sources-and-target-versions"></a>Fontes com suporte e as versões de destino
-Para fontes com suporte, revise as informações no Centro de Download para o download do SSMA.
+## <a name="supported-sources-and-target-versions"></a>Fontes com suporte e versões de destino
+Para obter as fontes com suporte, examine as informações no centro de download para o download do SSMA.
 
-As seguintes versões de destino têm suporte para o SSMA.
+As versões de destino a seguir têm suporte para o SSMA.
 
 - SQL Server 2008
 - SQL Server 2008 R2
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- SQL Server 2017 no Windows e Linux
-- No Windows e Linux do SQL Server de 2019
+- SQL Server 2017 no Windows e no Linux
+- SQL Server 2019 no Windows e no Linux
 - Banco de dados SQL do Azure
-- Azure SQL Data Warehouse * *
+- SQL Data Warehouse do Azure * *
 
-\* * Este destino é compatível apenas com o SSMA para Oracle.
+\* * Esse destino tem suporte apenas pelo SSMA para Oracle.
  
 ## <a name="downloads"></a>Downloads
 - [SSMA para Access](https://aka.ms/ssmaforaccess)
@@ -55,22 +55,22 @@ As seguintes versões de destino têm suporte para o SSMA.
 - [SSMA para Oracle](https://aka.ms/ssmafororacle)
 - [SSMA para SAP ASE](https://aka.ms/ssmaforsybase)
  
-## <a name="getting-ssma-support"></a>Como obter suporte do SSMA  
-**Ajuda e suporte para Microsoft SQL Server SSMA (Migration Assistant):**  
+## <a name="getting-ssma-support"></a>Obtendo suporte ao SSMA  
+**Ajuda e suporte para o Assistente de Migração do Microsoft SQL Server (SSMA):**  
   
--   **Ajuda do produto** - para acessar o suporte do produto, inicie o SSMA e selecione o menu Ajuda ou pressione a tecla F1.  
+-   **Ajuda do produto** -para acessar o suporte ao produto, inicie o SSMA e selecione o menu ajuda ou pressione a tecla F1.  
   
--   **Fóruns da comunidade do SQL Server** -faça uma pergunta na comunidade do SQL Server  
+-   **SQL Server fóruns da Comunidade** – faça uma pergunta na comunidade de SQL Server  
   
-    -   [Comunidade do SQL Server](https://go.microsoft.com/fwlink/?LinkId=42455) -grupos de notícias e fóruns monitorados pela comunidade do SQL Server. O site também lista fontes de informações da comunidade, como blogs e sites.  
+    -   [SQL Server comunidade](https://go.microsoft.com/fwlink/?LinkId=42455) de grupos de notícias e fóruns que são monitorados pela comunidade de SQL Server. O site também lista fontes de informações da comunidade, como blogs e sites.  
   
-    -   [Comunidade do SQL Server Developer Center](https://go.microsoft.com/fwlink/?LinkId=42456) -grupos de notícias, fóruns e outros recursos da comunidade que são úteis para desenvolvedores do SQL Server  
+    -   [Comunidade do SQL Server Developer Center](https://go.microsoft.com/fwlink/?LinkId=42456) – grupos de notícias, fóruns e outros recursos da Comunidade que são úteis para SQL Server desenvolvedores  
   
--   Suporte - acesse assistido [ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts) e procure por 'SQL Server Migration Assistant'.  Selecione sua versão e, em seguida, selecione "Iniciar solicitação".  Suporte assistido é incluído com a ferramenta de Assistente de migração do SQL Server.  
+-   Suporte assistido – vá [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) para e procure ' Assistente de migração do SQL Server '.  Selecione sua versão e, em seguida, selecione "Iniciar solicitação".  O suporte assistido está incluído na ferramenta de Assistente de Migração do SQL Server.  
   
--   Suporte Premier - se você tiver um contrato Premier, você pode obter Premier suporte sobre o [portal Premier Online](https://premier.microsoft.com/).  
+-   Suporte Premier – se você tiver um contrato Premier, poderá obter o suporte Premier no [portal Premier Online](https://premier.microsoft.com/).  
   
--   Serviços de consultoria - para parceiro assistido por migrações, acesse o [Portal de parceiros](https://www.platformmodernization.org/Pages/default.aspx).  
+-   Serviços de consultoria-para migrações assistidas por parceiros, acesse o [Guia de migração de banco de dados do Azure](https://datamigration.microsoft.com/).
   
 ## <a name="legal-notice-ssma"></a>Aviso legal (SSMA)  
 Esta documentação, incluindo os aplicativos de exemplo nela mencionados, é fornecida apenas em caráter informativo e não estipula garantias expressas ou tácitas. As informações contidas nesta documentação, incluindo URLs e outras referências a sites da Internet, estão sujeitas a alterações sem aviso prévio. Todo o risco associado ao uso ou aos resultados do uso desta documentação é de responsabilidade do usuário.  
@@ -90,10 +90,10 @@ SAP NetWeaver é marca registrada da SAP AG na Alemanha e em vários outros paí
 Todas as outras marcas comerciais pertencem a seus respectivos proprietários.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Política de documentação para suporte e atualização do SQL Server  
-O conteúdo que aparece na documentação do SQL Server somente é publicado depois de ser testado o suficiente. Documentação do produto - Manuais Online do SQL Server, arquivos Leiame, documentos de problemas conhecidos e artigos da Base de dados de Conhecimento - tem conteúdo sobre recursos do SQL Server e funcionalidade que é robusta o suficiente para ser usado por todos os clientes com segurança. Essa política se aplica a toda a documentação do SQL Server, incluindo arquivos Leiame de versões e service packs; um arquivo Leiame é considerado extensão dos Manuais Online.  
+O conteúdo que aparece na documentação do SQL Server somente é publicado depois de ser testado o suficiente. Documentação do produto-Manuais Online do SQL Server, arquivos leiame, documentos de problemas conhecidos e artigos da base de dados de conhecimento-contém conteúdo sobre SQL Server recursos e funcionalidades que são robustos o suficiente para serem seguros para uso geral por todos os clientes. Essa política se aplica a toda a documentação do SQL Server, incluindo arquivos Leiame de versões e service packs; um arquivo Leiame é considerado extensão dos Manuais Online.  
   
 Em alguns casos, determinado recurso pode não ser algo que os clientes devam usar diretamente; nesse caso, ele não está documentado. A menos que um recurso também seja abordado na documentação do SQL Server publicada pela Microsoft, o conteúdo de manuais ou sites de terceiros não tem suporte do atendimento ao cliente da Microsoft e não deve ser usado em aplicativos ou bancos de dados de produção.  
   
-Os clientes não devem usar APIs não documentadas, incluindo, dentre outras, procedimentos armazenados, procedimentos armazenados estendidos, funções, exibições, tabelas, colunas, propriedades ou metadados. Suporte ao cliente Microsoft não oferece suporte a bancos de dados ou aplicativos que aproveitem ou usem pontos de entrada não documentados.  
+Os clientes não devem usar APIs não documentadas, incluindo, dentre outras, procedimentos armazenados, procedimentos armazenados estendidos, funções, exibições, tabelas, colunas, propriedades ou metadados. O atendimento ao cliente da Microsoft não oferece suporte a bancos de dados ou aplicativos que aproveitam ou usam pontos de entrada não documentados.  
   
 As atualizações de servidor e de banco de dados para versões futuras do SQL Server não estão garantidas para aplicativos e bancos de dados que aproveitem e usem pontos de entrada não documentados. O uso de recursos e funcionalidades do SQL Server deve ser limitado àqueles que estão incluídos na documentação do Microsoft SQL Server. Se um recurso não está descrito na documentação do Microsoft SQL Server, ele não tem suporte do SQL Server.  

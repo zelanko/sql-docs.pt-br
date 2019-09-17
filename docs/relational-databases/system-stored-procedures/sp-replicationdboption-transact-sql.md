@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac51409db23f4b8eefb3616d5daf5ca43b3ab0f6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b45da78b0a79130cbbbd6c39bee07f237de2ef89
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771248"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878731"
 ---
-# <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
+# <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Define uma opção de banco de dados de replicação para o banco de dados especificado. Esse procedimento armazenado é executado no Publicador ou no Assinante, em qualquer banco de dados.  
@@ -52,9 +52,9 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |**publicação de mesclagem**|O banco de dados pode ser usado para publicações de mesclagem.|  
 |**publicou**|O banco de dados pode ser usado para outros tipos de publicação.|  
 |**Faça**|O banco de dados é um banco de dados de assinatura.|  
-|**sincronizar com backup**|O banco de dados está habilitado para backup coordenado. Para obter mais informações, consulte [habilitar backups coordenados para programação &#40;&#41;Transact-SQL de replicação de replicação](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)transacional.|  
+|**sincronizar com backup**|O banco de dados está habilitado para backup coordenado. Para obter mais informações, consulte [habilitar backups coordenados para programação &#40;&#41;Transact-SQL de replicação de replicação transacional](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
-`[ @value = ] 'value'`É habilitar ou desabilitar a opção de banco de dados de replicação fornecida. o *valor* é **sysname**e pode ser **true** ou **false**. Quando esse valor é **false** e *OptName* é **publicação**de mesclagem, as assinaturas para o banco de dados publicado de mesclagem também são descartadas.  
+`[ @value = ] 'value'`É habilitar ou desabilitar a opção de banco de dados de replicação fornecida. o *valor* é **sysname**e pode ser **true** ou **false**. Quando esse valor é **false** e *OptName* é **publicação de mesclagem**, as assinaturas para o banco de dados publicado de mesclagem também são descartadas.  
   
 `[ @ignore_distributor = ] ignore_distributor`Indica se este procedimento armazenado é executado sem se conectar ao distribuidor. *ignore_distributor* é **bit**, com um padrão de **0**, o que significa que o distribuidor deve estar conectado e atualizado com o novo status do banco de dados de publicação. O valor **1** deve ser especificado somente se o distribuidor estiver inacessível e **sp_replicationdboption** estiver sendo usado para desabilitar a publicação.  
   
@@ -66,7 +66,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## <a name="remarks"></a>Comentários  
  **sp_replicationdboption** é usado na replicação de instantâneo, na replicação transacional e na replicação de mesclagem.  
   
- Esse procedimento cria ou descarta tabelas do sistema de replicação específicas, contas de segurança, e assim por diante, que depende das opções fornecidas. Define o bit de categoria correspondente na tabela do sistema **Master. sysdatabases** e cria as tabelas de sistema necessárias.  
+ Esse procedimento cria ou descarta tabelas do sistema de replicação específicas, contas de segurança, e assim por diante, que depende das opções fornecidas. Define o **is_published** (replicação de transacational ou instantâneo) correspondente, o **is_merge_published** (replicação de mesclagem) ou os bits de **is_distributor** na tabela **mestre. bancos de dados** do sistema e cria o sistema necessário tabelas.  
   
  Para desabilitar a publicação, o banco de dados de publicação deve estar online. Se um instantâneo do banco de dados existir para o banco de dados de publicação, deverá ser descartado antes de desabilitar a publicação. O instantâneo do banco de dados é uma cópia offline somente leitura de um banco de dados e não está relacionado a um instantâneo de replicação. Para obter mais informações, consulte [Instantâneos de banco de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
@@ -78,7 +78,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Excluir uma publicação](../../relational-databases/replication/publish/delete-a-publication.md)   
  [Desabilitar a publicação e a distribuição](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

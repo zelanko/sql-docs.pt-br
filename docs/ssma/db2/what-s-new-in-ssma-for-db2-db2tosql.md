@@ -2,23 +2,30 @@
 title: O que há de novo no SSMA para DB2 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 09/06/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: e41cd9e244a39f5ec2e84d6f3512a709319acb24
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 118cb0430a7db1afc2a7537fb19c24b22dc6dd1f
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811459"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745374"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>O que há de novo no SSMA para DB2 (DB2ToSQL)
 
 Este artigo lista Assistente de Migração do SQL Server (SSMA) para as alterações do DB2 em cada versão.
+
+## <a name="ssma-v84"></a>SSMA v 8.4
+
+A versão v 8.4 do SSMA para DB2 foi aprimorada com correções direcionadas que foram projetadas para resolver problemas de acessibilidade e corrigir um bug relacionado a colunas de índice máximo (para permitir 32 em vez de 16) para SQL Server 2016 e versões posteriores.
+
+> [!IMPORTANT]
+> Com o SSMA v 7.4 e versões posteriores, o .NET 4.5.2 é um pré-requisito de instalação.
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -36,9 +43,6 @@ A versão v 8.3 do SSMA para DB2 foi aprimorada com correções direcionadas que
 * Resolver um problema com a conversão de cursor com a cláusula RETURN TO ausente
 * Adicionar suporte para rótulos e ir para
 
-> [!IMPORTANT]
-> Com o SSMA v 7.4 e versões posteriores, o .NET 4.5.2 é um pré-requisito de instalação.
-
 ## <a name="ssma-v82"></a>SSMA v8.2
 
 A versão v 8.2 do SSMA para DB2 é aprimorada com o para resolver problemas com conexões com o banco de dados SQL do Azure da ferramenta do console do SSMA e a coluna COUNT_BIG ausente na declaração views durante a conversão. Além disso, essa versão inclui um conjunto direcionado de correções projetadas para melhorar a qualidade e a conversão de métricas, bem como correções para:
@@ -49,9 +53,6 @@ A versão v 8.2 do SSMA para DB2 é aprimorada com o para resolver problemas com
 
 > [!NOTE]
 > Um problema conhecido com a atualização automática pode causar a falha de uma atualização do SSMA v 8.1 para v 8.2. Se você encontrar esse erro, baixe a nova versão e instale-a manualmente.
-
-> [!IMPORTANT]
-> Com o SSMA v 7.4 e versões posteriores, o .NET 4.5.2 é um pré-requisito de instalação.
 
 ## <a name="ssma-v81"></a>SSMA v8.1
 
@@ -139,7 +140,7 @@ A versão v 7.3 do SSMA para DB2 contém as seguintes alterações:
       ![Comando Save as SSDT Project](../media/export-schema-scripts_red.png)
   * Bibliotecas que podem ser consumidas pelo SSMA para executar conversões personalizadas.
     * Agora você pode construir código que pode manipular conversões e conversões de sintaxe personalizadas que não eram previamente tratadas pelo SSMA.
-      * As instruções sobre como construir um conversor personalizado estão disponíveis nesta postagem de blog, estendendo os [recursos de conversão de assistente de migração do SQL Server](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
+      * As instruções sobre como construir um conversor personalizado estão disponíveis nesta postagem de blog, [estendendo os recursos de conversão de assistente de migração do SQL Server](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
       * Baixe um projeto de exemplo para conversão desta [postagem de blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
 ## <a name="ssma-v72"></a>SSMA v7.2

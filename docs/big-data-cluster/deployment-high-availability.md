@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2c0e5f5a5f194045b5d1b48a383f9d4dfd282649
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 307697f43fc1c2615f212ae5f433485814dd62d0
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158161"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874698"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Implantar SQL Server Cluster de Big data com alta disponibilidade
 
@@ -31,6 +31,7 @@ Aqui estão alguns dos recursos que os grupos de disponibilidade habilitam:
 1. Um ponto de extremidade externo é provisionado automaticamente para se conectar aos bancos de dados AG. Esse ponto `master-svc-external` de extremidade desempenha a função do ouvinte AG.
 1. Um segundo ponto de extremidade externo é provisionado para conexões somente leitura para as réplicas secundárias. 
 
+
 # <a name="deploy"></a>Implantar
 
 Para implantar SQL Server mestre em um grupo de disponibilidade:
@@ -39,9 +40,9 @@ Para implantar SQL Server mestre em um grupo de disponibilidade:
 1. Especifique o número de réplicas para o AG (o mínimo é 3)
 1. Configurar os detalhes do segundo ponto de extremidade externo criado para conexões com as réplicas secundárias somente leitura
 
-As etapas a seguir mostram como criar um arquivo de patch que inclui essas configurações e como aplicá-lo a `aks-dev-test` um `kubeadm-dev-test` ou mais perfis de configuração. Estas etapas percorrem um exemplo de como corrigir o `aks-dev-test` perfil para adicionar os atributos de alta disponibilidade.
+As etapas a seguir mostram como criar um arquivo de patch que inclui essas configurações e como aplicá-lo a `aks-dev-test` um `kubeadm-dev-test` ou mais perfis de configuração. Estas etapas percorrem um exemplo de como corrigir o `aks-dev-test` perfil para adicionar os atributos de alta disponibilidade. Para uma implantação em um cluster kubeadm, um patch semelhante seria aplicável, mas verifique se você está usando *NodePort* para o **ServiceType** na seção **pontos de extremidade** .
 
-1. Criar um `ha-patch.json` arquivo
+1. Criar um `patch.json` arquivo
 
     ```json
     {
@@ -78,7 +79,7 @@ As etapas a seguir mostram como criar um arquivo de patch que inclui essas confi
 1. Clonar seu perfil de destino
 
     ```bash
-    azdata config init --source aks-dev-test --target custom-aks
+    azdata bdc config init --source aks-dev-test --target custom-aks
     ```
 
 1. Aplicar o arquivo de patch ao seu perfil personalizado
@@ -102,6 +103,10 @@ azdata bdc endpoint list -e sql-server-master -o table
 `Description                           Endpoint             Name               Protocol`
 `------------------------------------  -------------------  -----------------  ----------`
 `SQL Server Master Instance Front-End  13.64.235.192,31433  sql-server-master  tds`
+
+> [!NOTE]
+> Eventos de failover podem ocorrer durante uma execução de consulta distribuída que está acessando dados de fontes de dados remotas, como HDFS ou pool de dados. Como prática recomendada, os aplicativos devem ser projetados para ter lógica de repetição de conexão em caso de desconexões causadas por failover.  
+>
 
 ### <a name="connect-to-databases-on-the-secondary-replicas"></a>Conectar-se a bancos de dados nas réplicas secundárias
 

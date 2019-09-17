@@ -2,23 +2,30 @@
 title: O que há de novo no SSMA para MySQL (MySQLToSql) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 09/06/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: d02b002dd5f974fa7fd989026172b70a049d0e5f
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 900ea1a83e8f06916bf48a003d99584113a8304b
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811486"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745504"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Novidades no SSMA para MySQL (MySQLToSql)
 
 Este artigo lista Assistente de Migração do SQL Server (SSMA) para MySQL alterações em cada versão.
+
+## <a name="ssma-v84"></a>SSMA v 8.4
+
+A versão v 8.4 do SSMA para MySQL foi aprimorada com correções direcionadas que foram projetadas para resolver problemas de acessibilidade e corrigir um bug relacionado a colunas de índice máximo (para permitir 32 em vez de 16) para SQL Server 2016 e versões posteriores.
+
+> [!IMPORTANT]
+> Com o SSMA v 7.4 e versões posteriores, o .NET 4.5.2 é um pré-requisito de instalação.
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -26,9 +33,6 @@ A versão v 8.3 do SSMA para MySQL foi aprimorada com correções direcionadas q
 
 * Solucionar problemas de acessibilidade
 * Adicionar suporte básico para o tipo ' hierarchyid ' no SQL Server
-
-> [!IMPORTANT]
-> Com o SSMA v 7.4 e versões posteriores, o .NET 4.5.2 é um pré-requisito de instalação.
 
 ## <a name="ssma-v82"></a>SSMA v8.2
 
@@ -40,9 +44,6 @@ A versão v 8.2 do SSMA para MySQL foi aprimorada com um conjunto direcionado de
 
 > [!NOTE]
 > Um problema conhecido com a atualização automática pode causar a falha de uma atualização do SSMA v 8.1 para v 8.2. Se você encontrar esse erro, baixe a nova versão e instale-a manualmente.
-
-> [!IMPORTANT]
-> Com o SSMA v 7.4 e versões posteriores, o .NET 4.5.2 é um pré-requisito de instalação.
 
 ## <a name="ssma-v81"></a>SSMA v8.1
 
@@ -131,7 +132,7 @@ A versão v 7.3 do SSMA para MySQL contém as seguintes alterações:
       ![Comando Save as SSDT Project](../media/export-schema-scripts_red.png)
   * Bibliotecas que podem ser consumidas pelo SSMA para executar conversões personalizadas.
     * Agora você pode construir código que pode manipular conversões e conversões de sintaxe personalizadas que não eram previamente tratadas pelo SSMA.
-      * As instruções sobre como construir um conversor personalizado estão disponíveis nesta postagem de blog, estendendo os [recursos de conversão de assistente de migração do SQL Server](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
+      * As instruções sobre como construir um conversor personalizado estão disponíveis nesta postagem de blog, [estendendo os recursos de conversão de assistente de migração do SQL Server](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
       * Baixe um projeto de exemplo para conversão desta [postagem de blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
 ## <a name="ssma-v72"></a>SSMA v7.2

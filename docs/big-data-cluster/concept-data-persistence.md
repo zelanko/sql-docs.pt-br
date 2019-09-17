@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7a12afd88f0eb83de7d5c5bd4a3735e71e037138
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: bb6d87803c0a3839afd8dbd1333b52c3abcc4518
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155346"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878741"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistência de dados com o cluster de Big Data do SQL Server no Kubernetes
 
@@ -28,7 +28,7 @@ A forma como um cluster de Big Data do SQL Server consume esses volumes persiste
 
 ## <a name="configure-big-data-cluster-storage-settings"></a>Definir configurações de armazenamento de cluster de Big Data
 
-Semelhante a outras personalizações, você pode especificar as configurações de armazenamento nos arquivos de configuração de cluster no momento da implantação para cada pool e o plano de controle. Se não houver definições de configuração de armazenamento nas especificações do pool, as configurações de armazenamento do plano de controle serão usadas. Este é um exemplo da seção de configuração de armazenamento que você pode incluir na especificação:
+Semelhante a outras personalizações, você pode especificar as configurações de armazenamento nos arquivos de configuração de cluster no momento da implantação para cada pool no arquivo de configuração do **BDC. JSON** e para os serviços de controle no arquivo **Control. JSON** . Se não houver definições de configuração de armazenamento nas especificações do pool, as configurações de armazenamento de controle serão usadas **para todos os outros componentes**, incluindo SQL Server mestre (recurso**mestre** ), HDFS (recurso**de armazenamento-0** ) ou dados pool. Este é um exemplo da seção de configuração de armazenamento que você pode incluir na especificação:
 
 ```json
     "storage": 

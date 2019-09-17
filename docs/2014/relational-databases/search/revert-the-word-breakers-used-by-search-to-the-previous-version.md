@@ -10,12 +10,12 @@ ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3e8b4442d8d7f6e8838d9c5bb56e4c545b6f931c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e0eadbbc2d126a001057cf5f9d0e17211c0a93e
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011085"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874724"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Reverter os separadores de palavras usados por pesquisa à versão anterior
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala e habilita uma versão dos separadores de palavras e lematizadores para todos os idiomas com suporte de Pesquisa de Texto Completo com a exceção de coreano. Este tópico descreve como alternar deste nova versão desses componentes para a versão anterior, ou alternar da versão anterior para a nova versão.  
@@ -79,8 +79,8 @@ ms.locfileid: "66011085"
 |Neutro|Neutro|0000|  
 |Norueguês (Bokmål)|e|1044|  
 |Punjabi|pan|1094|  
-|Português (Brasil)|ptb|1046|  
 |Português|ptg|2070|  
+|Português (Brasil) |ptb|1046|  
 |Romeno|rom|1048|  
 |Eslovaco|sky|1051|  
 |Esloveno|slv|1060|  
@@ -164,7 +164,7 @@ ms.locfileid: "66011085"
   
     4.  Se o idioma selecionado usar um lematizador, atualize os dados (Padrão) desse valor de chave para o nome de arquivo do lematizador anterior da tabela.  
   
-7.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** . *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
+7.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< InstanceRoot\>\MSSearch\Language\\< language_key >** . *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
   
 8.  Atualize o valor de chave **WBreakerClass** para o valor da tabela para o separador de palavras atual.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "66011085"
   
     4.  Se o idioma selecionado usar um lematizador, atualize os dados (Padrão) desse valor de chave para o nome de arquivo do lematizador atual da tabela.  
   
-5.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** . *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
+5.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< InstanceRoot\>\MSSearch\Language\\< language_key >** . *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
   
 6.  Atualize o valor de chave **WBreakerClass** para o valor da tabela para o separador de palavras anterior.  
   
@@ -212,8 +212,8 @@ ms.locfileid: "66011085"
 |---------------|------------------|-------------|  
 |CLSID anterior|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |Nome de arquivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|CLSID atual|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|None|  
-|Nome do arquivo atual|MSWB7.dll|None|  
+|CLSID atual|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|Nenhum|  
+|Nome do arquivo atual|MSWB7.dll|Nenhum|  
   
  **Alemão (deu), LCID 1031**  
   
@@ -230,8 +230,8 @@ ms.locfileid: "66011085"
 |---------------|------------------|-------------|  
 |CLSID anterior|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |Nome de arquivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|CLSID atual|04096682-6ece-4e9e-90c1-52d81f0422ed|None|  
-|Nome do arquivo atual|MsWb70011.dll|None|  
+|CLSID atual|04096682-6ece-4e9e-90c1-52d81f0422ed|Nenhum|  
+|Nome do arquivo atual|MsWb70011.dll|Nenhum|  
   
  **Holandês (nld), LCID 1043**  
   
@@ -285,7 +285,7 @@ ms.locfileid: "66011085"
   
     4.  Se o idioma selecionado usar um lematizador, atualize os dados (Padrão) desse valor de chave para o nome de arquivo do lematizador anterior da tabela.  
   
-4.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** . *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
+4.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< InstanceRoot\>\MSSearch\Language\\< language_key >** . *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
   
 5.  Atualize o valor de chave **WBreakerClass** para o valor da tabela para o separador de palavras atual.  
   
@@ -309,7 +309,7 @@ ms.locfileid: "66011085"
   
     4.  Se o idioma selecionado usar um lematizador, atualize os dados (Padrão) desse valor de chave para o nome de arquivo do lematizador atual da tabela.  
   
-4.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** . *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
+4.  No Registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< InstanceRoot\>\MSSearch\Language\\< language_key >** . *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
   
 5.  Atualize o valor de chave **WBreakerClass** para o valor da tabela para o separador de palavras anterior.  
   
@@ -346,8 +346,8 @@ ms.locfileid: "66011085"
 |---------------|------------------|-------------|  
 |CLSID anterior|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |Nome de arquivo anterior|Thawbrkr.dll|Thawbrkr.dll|  
-|CLSID atual|F70C0935-6E9F-4ef1-9F06-7876536DB900|None|  
-|Nome do arquivo atual|MsWb7001e.dll|None|  
+|CLSID atual|F70C0935-6E9F-4ef1-9F06-7876536DB900|Nenhum|  
+|Nome do arquivo atual|MsWb7001e.dll|Nenhum|  
   
  **Chinês tradicional (zh-hk), LCID 3076**  
   

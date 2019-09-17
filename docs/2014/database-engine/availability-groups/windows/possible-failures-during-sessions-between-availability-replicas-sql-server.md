@@ -14,12 +14,12 @@ ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9583ae760a53e3d3ab68f69b21317b370df726b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b614a2e405501e2c41cae1add9e8e6b47d372dae
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62789173"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874476"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Possíveis falhas durante sessões entre réplicas de disponibilidade (SQL Server)
   Problemas físicos, do sistema operacional ou do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem provocar uma falha em uma sessão entre duas réplicas de disponibilidade. Uma réplica de disponibilidade não verifica regularmente os componentes dos quais o Sqlservr.exe depende para verificar se estão funcionando corretamente ou se houve falha. Porém, para alguns tipos de falhas, o componente afetado informa um erro ao Sqlservr.exe. Um erro informado por outro componente é chamado um *erro de hardware*. Para detectar outras falhas, que de outra forma passariam despercebidas, o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implementa seu próprio mecanismo de tempo limite de sessão. Especifica o tempo limite da sessão, em segundos. Esse tempo limite é o tempo máximo que uma instância de servidor espera para receber uma mensagem PING de outra instância antes de considerá-la desconectada. Quando um tempo limite de sessão ocorre entre duas réplicas de disponibilidade, as réplicas de disponibilidade pressupõem que ocorreu uma falha e declaram um *erro de software*.  
@@ -75,14 +75,14 @@ ms.locfileid: "62789173"
   
 -   Erros de rede, como tempos-limite de link de TCP, pacotes descartados ou corrompidos ou pacotes que estão em ordem incorreta.  
   
--   Um sistema operacional pendente, servidor ou estado de banco de dados.  
+-   Um sistema operacional, servidor ou banco de dados que não está respondendo.  
   
 -   Um servidor Windows que atingiu o tempo limite.  
   
 -   Recursos computacionais insuficientes, tais como sobrecarga de uma CPU ou disco, filling up do log de transações ou o sistema está sendo executado sem memória ou threads. Nesses casos, é preciso aumentar o período de tempo limite, reduzir a carga de trabalho ou alterar o hardware para controlar a carga de trabalho.  
   
 ### <a name="the-session-timeout-mechanism"></a>O mecanismo de tempo-limite de sessão  
- Como erros recuperáveis não são detectáveis diretamente por uma instância de servidor, esse tipo de erro pode fazer com que uma réplica de disponibilidade espere indefinidamente uma resposta da outra réplica de disponibilidade em uma sessão. Para evitar isso, o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implementa um mecanismo de tempo limite de sessão com base nas réplicas de disponibilidade conectadas, enviando um ping em cada conexão aberta em um intervalo fixo. A recepção de um ping durante o período de tempo-limite indica que a conexão ainda está aberta e que as instâncias do servidor estão se comunicando por ela. Ao receber um ping, uma réplica reajusta seu contador de tempo limite naquela conexão. Para obter informações sobre a relação de tempos limite de sessão e modo de disponibilidade, consulte [modos de disponibilidade (grupos de disponibilidade AlwaysOn)](availability-modes-always-on-availability-groups.md).  
+ Como erros recuperáveis não são detectáveis diretamente por uma instância de servidor, esse tipo de erro pode fazer com que uma réplica de disponibilidade espere indefinidamente uma resposta da outra réplica de disponibilidade em uma sessão. Para evitar isso, o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implementa um mecanismo de tempo limite de sessão com base nas réplicas de disponibilidade conectadas, enviando um ping em cada conexão aberta em um intervalo fixo. A recepção de um ping durante o período de tempo-limite indica que a conexão ainda está aberta e que as instâncias do servidor estão se comunicando por ela. Ao receber um ping, uma réplica reajusta seu contador de tempo limite naquela conexão. Para obter informações sobre a relação entre o modo de disponibilidade e o tempo limite da sessão, consulte [modos de disponibilidade (grupos de disponibilidade AlwaysOn)](availability-modes-always-on-availability-groups.md).  
   
  As réplicas primárias e secundárias executam ping uma da outra para sinalizar que ainda estão ativas e um tempo limite de sessão impede que as réplicas esperem indefinidamente para receber um ping da outra réplica. O tempo limite de sessão é uma propriedade de réplica configurável pelo usuário com um valor padrão de 10 segundos. A recepção de um ping durante o período de tempo-limite indica que a conexão ainda está aberta e que as instâncias do servidor estão se comunicando por ela. Durante o recebimento de um ping, uma réplica de disponibilidade redefine seu contador de tempo limite nessa conexão.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62789173"
 ## <a name="responding-to-an-error"></a>Respondendo a um erro  
  Independentemente do tipo de erro, uma instância do servidor que detecta um erro responde adequadamente com base na função da instância, no modo de disponibilidade da sessão e no estado de qualquer outra conexão na sessão. Para obter informações sobre o que ocorre na perda de um parceiro, consulte [modos de disponibilidade (grupos de disponibilidade AlwaysOn)](availability-modes-always-on-availability-groups.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  **Para alterar o valor de tempo limite (apenas no modo de disponibilidade de confirmação síncrona)**  
   
 -   [Alterar o período de tempo limite da sessão de uma réplica de disponibilidade &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
@@ -101,6 +101,6 @@ ms.locfileid: "62789173"
 -   Consulte **session_timeout** em [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql).  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [Visão geral do &#40;grupos de disponibilidade AlwaysOn SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

@@ -5,16 +5,16 @@ description: Use um notebook do Azure Data Studio para gerenciar e solucionar pr
 author: yualan
 ms.author: alanyu
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7adc5c3d07b47b5310d8a45d00747d6dd6de9952
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: cb2fcaf7431b5d79698af009b533ee49254777fe
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028580"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846653"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-with-azure-data-studio-notebooks"></a>Gerenciar clusters de Big Data do SQL Server com os notebooks do Azure Data Studio
 
@@ -32,7 +32,7 @@ Além dos notebooks, os usuários podem exibir uma coleção de blocos de anota�
 
 Os pré-requisitos a seguir são necessários para poder iniciar o notebook:
 
-* Versão mais recente do [build do Azure Data Studio Insiders](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master)
+* Versão mais recente do [build do Azure Data Studio Insiders](https://aka.ms/azuredatastudio-rc)
 * Extensão do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] instalada no Azure Data Studio
 
 Além disso, a implantação do cluster de Big Data do SQL Server 2019 também requer:
@@ -42,16 +42,32 @@ Além disso, a implantação do cluster de Big Data do SQL Server 2019 também r
 * [CLI do Azure](/cli/azure/install-azure-cli)
 
 ## <a name="accessing-troubleshooting-notebooks"></a>Acesso aos notebooks de solução de problemas
+Há três maneiras de acessar os notebooks de solução de problemas.
 
+### <a name="command-palette"></a>Paleta de Comandos
+1. Clique em **Exibir** e na **paleta de comandos**
+2. Digite "Jupyter Books: Guia do SQL Server 2019 "
+3. Isso abrirá os livros do Jupyter Viewlet com o livro Jupyter que contém os TSG relacionados a SQL Server clusters de Big Data.
+
+### <a name="sql-master-dashboard"></a>Painel mestre do SQL
 1. Depois de instalar o Azure Data Studio Insiders, conecte-se a uma instância de cluster de Big Data do SQL Server.
 2. Depois de se conectar com êxito, clique com o botão direito do mouse no nome do servidor nas Conexões viewlet e clique em **Gerenciar**.
 3. No painel, clique em **Cluster de Big Data do SQL Server**. Clique no **guia do SQL Server 2019** para abrir o Jupyter Book com os notebooks necessários.
     ![botão](media/manage-notebooks/jupyter-book-button.png)
 
-1. Na janela do seletor de pasta, escolha uma localização para salvar seu Jupyter Book.
-2. Clique em **Recarregar** para recarregar o Azure Data Studio e ver seu Jupyter Book. Clique em **Abrir nova instância** para abrir uma nova instância do Azure Data Studio com o Jupyter Book.
-3. No modo de exibição do Explorer, você deve ver uma seção chamada **Livros**. Se não estiver expandida, clique nela para exibir os notebooks.
+1. Isso abrirá os livros do Jupyter Viewlet com o catálogo Jupyter do TSG já aberto.
 4. Clique no notebook da tarefa que você precisa concluir.
+
+### <a name="controller-dashboard"></a>Painel do controlador
+1. No modo de exibição **conexões** , expanda **SQL Server clusters de Big Data.**
+2. Adicionar detalhes do ponto de extremidade do controlador.
+3. Após a conexão bem-sucedida com o controlador, clique com o botão direito do mouse no ponto de extremidade e clique em **gerenciar.**
+4. Após o carregamento do painel, clique em solucionar problemas para iniciar o Jupyter do catálogo do TSG.
+
+## <a name="how-to-use-troubleshooting-notebooks"></a>Como usar os notebooks de solução de problemas
+1. Examine o Sumário do livro de Jupyter existente até encontrar o TSG que você precisa.
+1. Todos os blocos de anotações são otimizados onde o usuário só precisa clicar em **células de execução.** Isso executará cada célula no bloco de anotações individualmente até que seja concluída.
+1. Se você encontrar um erro, o livro Jupyter sugere um bloco de anotações que você pode executar para corrigir o erro. Siga as etapas e execute novamente o bloco de anotações.
 
 ## <a name="next-steps"></a>Próximas etapas
 Para obter mais informações sobre notebooks no Azure Data Studio, confira [Como usar notebooks na versão prévia do SQL Server 2019](notebooks-guidance.md).

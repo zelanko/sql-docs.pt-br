@@ -1,5 +1,5 @@
 ---
-title: Compartilhado do SQL Server Management Objects (SMO) - termos de licença | Microsoft Docs
+title: SMO (Shared Management Objects) SQL Server-termos de licença | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2018
 ms.prod: sql
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4f7fe6f3662cc1d82cf72b2f5d8036d0284e48c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64834ed8f35186032a3abe8f82733e4a437fffdf
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097991"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911174"
 ---
-# <a name="sql-server-shared-management-objects-smo-license-terms"></a>Termos de licença do Management Objects (SMO) compartilhado do SQL Server
+# <a name="sql-server-shared-management-objects-smo-license-terms"></a>Termos de licença do SMO (Shared Management Objects) SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 ## <a name="microsoft-software-license-terms"></a>TERMOS DE LICENÇA PARA SOFTWARE MICROSOFT
@@ -46,12 +46,12 @@ da Microsoft referentes a este software, salvo quando outros termos acompanharem
 &nbsp;&nbsp;**a.    Código Distribuível.**
 
 &nbsp;&nbsp;&nbsp;&nbsp;**i.    Direito de Uso e Distribuição. Se você concordar com os termos abaixo:**
-*   Você pode copiar e distribuir a forma de código de objeto do software ("Código distribuível") nos programas que você desenvolve; e
+*   Você pode copiar e distribuir a forma do código-objeto do software ("código distribuível") nos programas que você desenvolve; e
 *   Você poderá permitir que os distribuidores dos seus programas copiem e distribuam o Código Distribuível como parte desses programas.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**ii.   Requisitos para Distribuição. Para qualquer Código Distribuível que você distribuir, será necessário**
 * adicionar funcionalidades primárias significativas ao Código Distribuível em seus programas;
-* para qualquer código distribuível que tenha uma extensão de nome de arquivo de. dll, distribua somente os resultados da execução como Código distribuível por meio de um vinculador com seu programa;
+* para qualquer código distribuível com uma extensão de nome de arquivo. dll, distribua apenas os resultados da execução desse código distribuível por meio de um vinculador com seu programa;
 * requerer que os distribuidores e usuários finais externos aceitem termos que protejam o código, pelo menos tanto quanto este contrato; 
 * exibir o seu aviso de direitos autorais válido em seus programas e
 * indenizar, isentar de responsabilidades e defender a Microsoft de quaisquer reivindicações, incluindo honorários advocatícios, decorrentes do uso ou da distribuição de seus programas.
@@ -65,12 +65,12 @@ da Microsoft referentes a este software, salvo quando outros termos acompanharem
   * outras pessoas tenham o direito de modificá-lo.
 
 
-**3. ESCOPO DA LICENÇA.** O software é licenciado, não vendido. A menos que a legislação aplicável lhe dê mais direitos, a Microsoft se reserva todos os outros direitos não expressamente concedidos neste contrato, seja por implicação, embargo ou de outra forma. Você pode usar o software somente da forma expressamente permitida neste contrato. Dessa forma, você deve concordar com as limitações técnicas no software que somente permitirão o seu uso de algumas formas. Você pode fazer qualquer uma das seguintes:
+**3. ESCOPO DA LICENÇA.** O software é licenciado, não vendido. A menos que a legislação aplicável lhe dê mais direitos, a Microsoft se reserva todos os outros direitos não expressamente concedidos neste contrato, seja por implicação, embargo ou de outra forma. Você pode usar o software somente da forma expressamente permitida neste contrato. Dessa forma, você deve concordar com as limitações técnicas no software que somente permitirão o seu uso de algumas formas. Você não pode fazer nenhum dos seguintes:
 
-- Contornar quaisquer limitações técnicas no software.
-- Fazer engenharia reversa, descompilar ou desmontar o software, exceto e somente na medida em que lei aplicável permitir expressamente, apesar dessa limitação.
-- Fazer mais cópias do software do que está especificado neste contrato ou permitido pela legislação aplicável, apesar desta limitação.
-- Compartilhar, publicar, alugar ou o software de concessão ou fornecer o software como uma solução autônoma hospedada para outros usuários.
+- Contornar qualquer limitação técnica no software.
+- Fazer engenharia reversa, descompilar ou desmontar o software, exceto e somente na medida em que a lei aplicável permitir expressamente, apesar dessa limitação.
+- Faça mais cópias do software do que as especificadas neste contrato ou permitidas pela lei aplicável apesar dessa limitação.
+- Compartilhar, publicar, alugar ou arrendar o software ou fornecer o software como uma solução hospedada autônoma para outras pessoas usarem.
 
 **4.    NOTIFICAÇÕES DE TERCEIROS.** O software pode incluir componentes de terceiros com avisos legais separados ou regidos por outros contratos, conforme pode ser descrito no arquivo ThirdPartyNotices que acompanha o software.  Mesmo se tais componentes forem regidos por outros contratos, os avisos de isenção e as limitações e exclusões de danos abaixo também se aplicam.
 
@@ -82,7 +82,7 @@ da Microsoft referentes a este software, salvo quando outros termos acompanharem
 
 **8.    SERVIÇOS DE SUPORTE.** Como este software é fornecido “no estado em que se encontra”, a Microsoft poderá não prestar serviços de suporte para ele.
 
-**9.    CONTRATO COMPLETO**. Este contrato e os termos dos suplementos, das atualizações, dos serviços baseados na Internet e dos serviços de suporte por você usados constituem o acordo integral para o software e os serviços de suporte.
+**9.    CONTRATO**COMPLETO. Este contrato e os termos dos suplementos, das atualizações, dos serviços baseados na Internet e dos serviços de suporte por você usados constituem o acordo integral para o software e os serviços de suporte.
 
 **10.   LEI APLICÁVEL.**
 
@@ -104,5 +104,5 @@ Essa limitação se aplica a
 Ela também se aplica mesmo que a Microsoft soubesse ou devesse saber sobre a possibilidade de danos. A limitação ou exclusão acima poderá não ser aplicar a você, pois seu país pode não permitir a exclusão ou limitação por danos incidentais, consequencias ou outros.
 
 > [!NOTE]
-> Seção 3 foi atualizado em 8 de agosto de 2018.
+> A seção 3 foi atualizada em 8 de agosto de 2018.
 
