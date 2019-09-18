@@ -289,9 +289,9 @@
               items:
                 - name: Backup para a URL
                   href: relational-databases/backup-restore/sql-server-backup-to-url.md
-                - name: Backup para o Armazenamento de Blobs do Azure (PowerShell)
+                - name: Fazer backup no Armazenamento de Blobs do Azure
                   href: relational-databases/backup-restore/back-up-multiple-databases-to-azure-blob-storage-powershell.md
-                - name: Excluir arquivos de backup de blog
+                - name: Excluir arquivos de log de backup
                   href: relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md
                 - name: Restaurar
                   href: relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md
@@ -525,6 +525,66 @@
                       href: relational-databases/backup-restore/select-backup-device.md
                     - name: Conectar-se a um Armazenamento do Azure
                       href: relational-databases/backup-restore/connect-to-microsoft-azure-storage-restore.md
+            - name: Referência de VDI
+              items:
+                - name: Visão geral de VDI
+                  href: relational-databases/backup-restore/vdi-reference/reference-virtual-device-interface.md
+                - name: IClientVirtualDevice
+                  items:
+                    - name: CompleteCommand
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdevice-completecommand.md
+                    - name: GetCommand
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdevice-getcommand.md
+                - name: IClientVirtualDeviceSet2
+                  items:
+                    - name: Fechar
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-close.md
+                    - name: CreateEx
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-createex.md
+                    - name: GetBufferHandle
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-getbufferhandle.md
+                    - name: GetConfiguration
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-getconfiguration.md
+                    - name: MapBufferHandle
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-mapbufferhandle.md
+                    - name: OpenDevice
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-opendevice.md
+                    - name: OpenInSecondaryEx
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-openinsecondaryex.md
+                    - name: SignalAbort
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-signalabort.md
+                - name: IServerVirtualDevice
+                  items:
+                    - name: CloseDevice
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdevice-closedevice.md
+                    - name: SendCommand
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdevice-sendcommand.md
+                - name: IServerVirtualDeviceSet2
+                  items:
+                    - name: AllocateBuffer
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-allocatebuffer.md
+                    - name: BeginConfiguration
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-beginconfiguration.md
+                    - name: Fechar
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-close.md
+                    - name: EndConfiguration
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-endconfiguration.md
+                    - name: ExecuteCompletionAgent
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-executecompletionagent.md
+                    - name: FreeBuffer
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-freebuffer.md
+                    - name: GetConfiguration
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-getconfiguration.md
+                    - name: IsSharedBuffer
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-issharedbuffer.md
+                    - name: Abrir
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-open.md
+                    - name: OpenDevice
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-opendevice.md
+                    - name: RequestBuffers
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-requestbuffers.md
+                    - name: SignalAbort
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-signalabort.md
     - name: Grupos de disponibilidade AlwaysOn
       href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
       items:
@@ -8143,8 +8203,6 @@
               href: relational-databases/security/row-level-security.md
             - name: Máscara de Dados Dinâmicos
               href: relational-databases/security/dynamic-data-masking.md
-            - name: Máscara de Dados Estáticos
-              href: relational-databases/security/static-data-masking.md
             - name: Certificados e chaves assimétricas
               href: relational-databases/security/sql-server-certificates-and-asymmetric-keys.md
         - name: Acesso por autenticação
