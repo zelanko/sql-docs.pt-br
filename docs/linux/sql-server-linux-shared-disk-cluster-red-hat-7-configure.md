@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: dd320079291199b512bb9d9e8334e7ec8c2803a7
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: b76797d6b6bc9b9d2c9f666039595446f975a3aa
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810984"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70809782"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurar o cluster de disco compartilhado do Red Hat Enterprise Linux para o SQL Server
 
@@ -308,6 +308,10 @@ Neste ponto, ambas as instâncias do SQL Server são configuradas para serem exe
    sudo yum install mssql-server-ha
    ```
 
+## <a name="configure-fencing-agent"></a>Configurar um agente de isolamento
+
+Um dispositivo STONITH fornece um agente de isolamento. [Como configurar o Pacemaker no Red Hat Enterprise Linux no Azure](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker/#1-create-the-stonith-devices) fornece um exemplo de como criar um dispositivo STONITH para esse cluster no Azure. Modifique as instruções de seu ambiente.
+
 ## <a name="create-the-cluster"></a>Criar o cluster 
 
 1. Em um dos nós, crie o cluster.
@@ -316,15 +320,6 @@ Neste ponto, ambas as instâncias do SQL Server são configuradas para serem exe
    sudo pcs cluster auth <nodeName1 nodeName2 ...> -u hacluster
    sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 ...>
    sudo pcs cluster start --all
-   ```
-
-   > O complemento de HA do RHEL tem agentes de isolamento para VMware e o KVM. O isolamento precisa ser desabilitado em todos os outros hipervisores. Não é recomendável desabilitar os agentes de isolamento em ambientes de produção. No momento, não há agentes de isolamento para os ambientes do Hyper-V ou de nuvem. Se você estiver executando uma dessas configurações, precisará desabilitar o isolamento. \**Isso NÃO é recomendado em um sistema de produção.* *
-
-   O comando a seguir desabilita os agentes de isolamento.
-
-   ```bash
-   sudo pcs property set stonith-enabled=false
-   sudo pcs property set start-failure-is-fatal=false
    ```
 
 2. Configure os recursos de cluster para o SQL Server, o sistema de arquivos e os recursos de IP virtual e envie a configuração por push para o cluster. Você precisará das seguintes informações:

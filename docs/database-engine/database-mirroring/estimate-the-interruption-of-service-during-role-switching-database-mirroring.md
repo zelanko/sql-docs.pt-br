@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e90fcec386868a87ccca9faaf349dcb1a4064aff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44f6a8966ef2da55ffd43830677f52398b356399
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997853"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874183"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Estime a interrupção do serviço durante troca de função (Espelhamento de Banco de Dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67997853"
 -   Para um failover manual, apenas o tempo exigido do failover do banco de dados após o comando de failover é emitido.  
   
 ## <a name="error-detection"></a>Detecção de erro  
- O tempo para o sistema perceber um erro depende do tipo de erro; por exemplo, um erro de rede é observado quase imediatamente, enquanto um travamento de servidor, por padrão, leva 10 segundos para ser percebido, que é o período de tempo limite padrão.  
+ O tempo para o sistema perceber um erro depende do tipo de erro; por exemplo, um erro de rede é percebido quase instantaneamente, enquanto que perceber que um servidor não está respondendo demora 10 segundos (com o tempo limite padrão).  
   
  Para obter informações sobre erros que podem causar uma falha durante uma sessão de espelhamento de banco de dados e detecção de tempo limite em modo de segurança alta com failover automático, consulte [Possíveis falhas durante o Espelhamento de Banco de Dados](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)).  
   

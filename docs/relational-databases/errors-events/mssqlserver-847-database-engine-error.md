@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 67208b7c-bd8d-48a1-9f70-a6488e0f5f9b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3bcd29d124982d5735be8838a0ff054a6a2150bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fc78c62c83530a0e5b7d5ee280addfd67e593fb6
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101530"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874737"
 ---
-# <a name="mssqlserver847"></a>MSSQLSERVER_847
+# <a name="mssqlserver_847"></a>MSSQLSERVER_847
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
@@ -33,7 +33,7 @@ ms.locfileid: "68101530"
 |Texto da mensagem|Tempo limite esgotado ao aguardar a trava: classe '%ls', id %p, tipo %d, Tarefa 0x%p : %d, tempo de espera %d, sinalizadores 0x%I64x, tarefa proprietária 0x%p. Continuando espera.|  
   
 ## <a name="explanation"></a>Explicação  
-Um computador pode parar de responder (desligar), ou o fim do tempo limite pode ser alcançado ou outra interrupção das operações regulares pode acontecer ao mesmo tempo em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] grava erros de fechamento de buffer no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Um computador pode parar de responder ou o fim do tempo limite pode ser alcançado ou outra interrupção das operações regulares pode acontecer ao mesmo tempo em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] grava erros de fechamento de buffer no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 Se o campo stat na mensagem tiver o valor de 0x04, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está esperando por uma operação de E/S. Você também pode receber a mensagem [MSSQLSERVER_833](~/relational-databases/errors-events/mssqlserver-833-database-engine-error.md) no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

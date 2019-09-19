@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 65d0b89dfc2862c63d9fbb8f81d4145aba9d391f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 7b55822e011b03044d9fafad4ff2b30884ea5ec2
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768639"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846714"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Criar e aplicar o instantâneo inicial
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -90,13 +90,13 @@ Instantâneos iniciais podem ser criados de forma programada criando e executand
 
 1.  Crie uma publicação de instantâneo, transacional ou de mesclagem. Para obter mais informações, consulte [Criar uma assinatura](../../relational-databases/replication/publish/create-a-publication.md).  
   
-2.  Execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Especifique **@publication** e os seguintes parâmetros:  
+2.  Execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Especifique **\@publication** e os seguintes parâmetros:  
   
-    -   **O @job_login, que especifica** as credenciais de Autenticação do Windows com as quais o Snapshot Agent é executado no Distribuidor.  
+    -   **O \@job_login, que especifica** as credenciais da Autenticação do Windows com as quais o Agente de Instantâneo é executado no Distribuidor.  
   
-    -   **O @job_password** , que é a senha para as credenciais fornecidas pelo Windows.  
+    -   **O \@job_password**, que é a senha para as credenciais do Windows fornecidas.  
   
-    -   (Opcional) Um valor **0** para **@publisher_security_mode** se o agente usar Autenticação do SQL Server ao se conectar ao Publicador. Nesse caso, deve-se especificar também a informação de logon da Autenticação do SQL Server para **@publisher_login** e **@publisher_password** .  
+    -   (Opcional) Um valor igual a **0** em **\@publisher_security_mode** se o agente pretender usar a Autenticação do SQL Server ao se conectar ao Publicador. Nesse caso, você também precisa especificar a informação de logon da Autenticação do SQL Server em **\@publisher_login** e **\@publisher_password**.  
   
     -   (Opcional) Uma agenda de sincronização para o trabalho do Snapshot Agent. Para obter mais informações, consulte [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
@@ -105,7 +105,7 @@ Instantâneos iniciais podem ser criados de forma programada criando e executand
   
 3.  Adicione artigos à publicação. Para obter mais informações, consulte [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-4.  No Publicador do banco de dados de publicação, execute [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md), especificando o valor de **@publication** da etapa 1.  
+4.  No Publicador do banco de dados de publicação, execute [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md) especificando o valor de **\@publication** da etapa 1.  
   
 ## <a name="apply-a-snapshot"></a>Aplicar um instantâneo  
 

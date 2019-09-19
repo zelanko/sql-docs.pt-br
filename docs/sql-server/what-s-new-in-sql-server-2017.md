@@ -10,12 +10,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c2950e677537ee6a6bc35d930e124f285bc24df
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 87537979ab3459727f07aec460118a74e15561f9
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494306"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874820"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novidades no SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ O SQL Server 2017 é uma etapa importante para transformar o SQL Server em uma p
 ## <a name="sql-server-2017-database-engine"></a>Mecanismo de Banco de Dados do SQL Server 2017
 
 O SQL Server 2017 inclui vários novos recursos, aprimoramentos e melhorias de desempenho no Mecanismo de Banco de Dados. 
-- **Os assemblies CLR** agora são adicionados a uma lista de permissões como uma solução alternativa para o recurso `clr strict security`, descrito no CTP 2.0. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) e [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) são adicionados para dar suporte à lista de permissões de assemblies confiáveis (RC1).  
+- **Os assemblies CLR** agora podem ser adicionados a uma lista de assemblies confiáveis como uma solução alternativa para o recurso `clr strict security` descrito no CTP 2.0. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) e [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) são adicionados para dar suporte à lista de assemblies confiáveis (RC1).  
 - A **Recompilação de índice online retomável** retoma uma operação de recompilação de índice online de onde ela parou após uma falha, como o failover de uma réplica ou espaço em disco insuficiente ou pausa e posteriormente retoma uma operação de recompilação de índice online. Veja [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) e [Diretrizes para operações de índice online](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
 - A opção **IDENTITY_CACHE** da ALTER DATABASE SCOPED CONFIGURATION permite evitar lacunas nos valores de colunas de identidade caso um servidor reinicie inesperadamente ou faça failover para um servidor secundário. Veja [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). (CTP 2.0)
 - Uma nova geração de melhorias do processo de consulta que adaptará estratégias de otimização para as condições de tempo de execução da carga de trabalho do aplicativo. Para a primeira versão da família de recursos de **processamento de consulta adaptável**, temos três novas melhorias: **junções adaptáveis de modo de lote**, **comentários de concessão de memória de modo de lote** e **execução intercalada** para funções com valor de tabela de várias instruções.  Confira [Processamento de consulta inteligente em bancos de dados SQL](../relational-databases/performance/intelligent-query-processing.md).

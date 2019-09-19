@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a5e737f230ce7462aa59c0bfbcbfe19be55b66a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b989d4958da67a0959c0d3686a1d207c4353e302
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044573"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846663"
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>Espelhamento de Banco de Dados – usar certificados para conexões de saída
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68044573"
   
 ## <a name="procedure"></a>Procedimento  
   
-#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-hosta"></a>Para configurar as instâncias de servidor para espelhamento de conexões de saída (No HOST_A)  
+#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-host_a"></a>Para configurar as instâncias de servidor para espelhamento de conexões de saída (No HOST_A)  
   
 1.  No banco de dados **mestre** , crie o banco de dados chave mestre, se nenhum existir. Para exibir as chaves existentes para um banco de dados, use a exibição do catálogo [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) .  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68044573"
      Por exemplo, para criar um certificado para o sistema HOST_A.  
   
     > [!IMPORTANT]  
-    >  Se você pretende usar o certificado por mais de um ano, especifique a data de expiração em hora UTC usando a opção EXPIRY_DATE em sua instrução CREATE CERTIFICATE. Além disso, é recomendável que você use o SQL Server Management Studio para criar uma regra de gerenciamento baseado em políticas para alertá-lo quando seus certificados estiverem expirando. Usando a caixa de diálogo **Criar Nova Condição** do Gerenciamento de Política, crie essa regra no campo **@ExpirationDate** da faceta **Certificado** . Para obter mais informações, veja [Administrar servidores usando o gerenciamento baseado em políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) e [Protegendo o SQL Server](../../relational-databases/security/securing-sql-server.md).  
+    >  Se você pretende usar o certificado por mais de um ano, especifique a data de expiração em hora UTC usando a opção EXPIRY_DATE em sua instrução CREATE CERTIFICATE. Além disso, é recomendável que você use o SQL Server Management Studio para criar uma regra de gerenciamento baseado em políticas para alertá-lo quando seus certificados estiverem expirando. Usando a caixa de diálogo **Criar Condição** do Gerenciamento de Política, crie essa regra no campo **\@ExpirationDate** da faceta **Certificado**. Para obter mais informações, veja [Administrar servidores usando o gerenciamento baseado em políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) e [Protegendo o SQL Server](../../relational-databases/security/securing-sql-server.md).  
   
     ```  
     USE master;  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a13f9f3da00889323f3d971ffd801f1fa7d09890
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e887c718c76563a7fcd8388c46a3e9e684faf6d5
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027224"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304847"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Failover do grupo de disponibilidade Always On no Linux
 
@@ -43,7 +43,7 @@ Faça failover manualmente em duas etapas.
 
    Segundo, [remover a restrição de localização](#removeLocConstraint).
 
-#### <a name="a-namemanualmovestep-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove">Etapa 1. Fazer failover manualmente movendo o recurso do grupo de disponibilidade
+#### <a name="manualMove"></a> Etapa 1. Fazer failover manualmente movendo o recurso do grupo de disponibilidade
 
 Para fazer failover manual de um recurso do AG denominado *ag_cluster* para o nó de cluster denominado *nodeName2*, execute o comando apropriado para a sua distribuição:
 
@@ -62,7 +62,7 @@ Para fazer failover manual de um recurso do AG denominado *ag_cluster* para o n�
 >[!IMPORTANT]
 >Depois que você fizer failover manualmente de um recurso, você precisará remover a restrição de localização adicionada automaticamente.
 
-#### <a name="a-nameremovelocconstraint-step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> Etapa 2. Remover a restrição de local
+#### <a name="removeLocConstraint"> </a> Etapa 2. Remover a restrição de local
 
 Durante um failover manual, o comando `move` do `pcs` ou o comando `migrate` do `crm` adiciona uma restrição de localização ao recurso a ser colocado no novo nó de destino. Para ver a nova restrição, execute o comando a seguir depois de mover manualmente o recurso:
 

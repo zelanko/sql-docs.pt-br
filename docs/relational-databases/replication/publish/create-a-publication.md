@@ -16,12 +16,12 @@ ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7e4676ec5360a235b1a5ec9f1bece8566f63625c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: dc432ca82662d098b970b2dbeab6a43243e2ead6
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769940"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846633"
 ---
 # <a name="create-a-publication"></a>Create a Publication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -110,16 +110,16 @@ ms.locfileid: "68769940"
   
     -   Se você não estiver seguro quanto à existência de um trabalho do Agente do Leitor de Log para um banco de dados publicado, execute [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) no Publicador do banco de dados de publicação.  
   
-    -   Se o conjunto de resultados estiver vazio, crie um trabalho do Log Reader Agent. No Publicador, execute [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Especifique as credenciais do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows com as quais o agente é executado para **@job_name** e **@password** . Se o agente usar autenticação do SQL Server ao se conectar ao Publicador, será necessário especificar também um valor **0** para **@publisher_security_mode** e as informações de logon do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** e **@publisher_password** . Passe para a etapa 3.  
+    -   Se o conjunto de resultados estiver vazio, crie um trabalho do Log Reader Agent. No Publicador, execute [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Especifique as credenciais do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows com as quais o agente é executado em **\@job_name** e **\@password**. Se o agente pretender usar a Autenticação do SQL Server ao se conectar ao Publicador, você também precisará especificar um valor igual a **0** em **\@publisher_security_mode** e as informações de logon do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em **\@publisher_login** e **\@publisher_password**. Passe para a etapa 3.  
   
-3.  No Publicador, execute [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Especifique um nome de publicação para **@publication** , e, para o parâmetro **@repl_freq** , especifique um valor de **snapshot** para uma publicação de instantâneo ou um valor de **continuous** para uma publicação transacional. Especifique quaisquer outras opções de publicação. Isso define a publicação.  
+3.  No Publicador, execute [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Especifique um nome da publicação em **\@publication** e, no parâmetro **\@repl_freq**, especifique um valor igual a **snapshot** para uma publicação de instantâneo ou um valor igual a **continuous** para uma publicação transacional. Especifique quaisquer outras opções de publicação. Isso define a publicação.  
   
     > [!NOTE]  
     >  Os nomes de publicação não podem incluir nenhum dos caracteres a seguir:  
     >   
     >  % * [ ] | : " ? \ / < >  
   
-4.  No Publicador, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Especifique o nome de publicação usado na etapa 3 para **@publication** e as credenciais do Windows com as quais o Snapshot Agent será executado para **@snapshot_job_name** e **@password** . Se o agente usar autenticação do SQL Server ao se conectar ao Publicador, será necessário especificar também um valor **0** para **@publisher_security_mode** e as informações de logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** e **@publisher_password** . Isso cria um trabalho do Agente de Instantâneo para a publicação.  
+4.  No Publicador, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Especifique o nome da publicação usado na etapa 3 em **\@publication** e as credenciais do Windows com as quais o Agente de Instantâneo é executado em **\@snapshot_job_name** e **\@password**. Se o agente pretender usar a Autenticação do SQL Server ao se conectar ao Publicador, você também precisará especificar um valor igual a **0** em **\@publisher_security_mode** e as informações de logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em **\@publisher_login** e **\@publisher_password**. Isso cria um trabalho do Agente de Instantâneo para a publicação.  
   
     > [!IMPORTANT]  
     >  Quando um Publicador é configurado com um Distribuidor remoto, os valores fornecidos para todos os parâmetros, inclusive *job_login* e *job_password*, são enviados ao Distribuidor como texto sem-formatação. Você deve criptografar a conexão entre o Publicador e seu Distribuidor remoto antes de executar esse procedimento armazenado. Para obter mais informações, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -132,14 +132,14 @@ ms.locfileid: "68769940"
   
 1.  No Publicador, execute [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) para habilitar a publicação do banco de dados atual usando a replicação de mesclagem.  
   
-2.  No Publicador do banco de dados de publicação, execute [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Especifique o nome da publicação para **@publication** e quaisquer outras opções de publicação. Isso define a publicação.  
+2.  No Publicador do banco de dados de publicação, execute [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Especifique o nome da publicação em **\@publication** e as outras opções de publicação. Isso define a publicação.  
   
     > [!NOTE]  
     >  Os nomes de publicação não podem incluir nenhum dos caracteres a seguir:  
     >   
     >  % * [ ] | : " ? \ / < >  
   
-3.  No Publicador, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Especifique o nome da publicação usado na etapa 2 para **@publication** e as credenciais do Windows com as quais o Snapshot Agent será executado para **@snapshot_job_name** e **@password** . Se o agente usar autenticação do SQL Server ao se conectar ao Publicador, será necessário especificar também um valor **0** para **@publisher_security_mode** e as informações de logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** e **@publisher_password** . Isso cria um trabalho do Agente de Instantâneo para a publicação.  
+3.  No Publicador, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Especifique o nome da publicação usado na etapa 2 em **\@publication** e as credenciais do Windows com as quais o Agente de Instantâneo é executado em **\@snapshot_job_name** e **\@password**. Se o agente pretender usar a Autenticação do SQL Server ao se conectar ao Publicador, você também precisará especificar um valor igual a **0** em **\@publisher_security_mode** e as informações de logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em **\@publisher_login** e **\@publisher_password**. Isso cria um trabalho do Agente de Instantâneo para a publicação.  
   
     > [!IMPORTANT]  
     >  Quando um Publicador é configurado com um Distribuidor remoto, os valores fornecidos para todos os parâmetros, inclusive *job_login* e *job_password*, são enviados ao Distribuidor como texto sem-formatação. Você deve criptografar a conexão entre o Publicador e seu Distribuidor remoto antes de executar esse procedimento armazenado. Para obter mais informações, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  

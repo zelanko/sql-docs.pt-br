@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1a1e8fe19b952f2cc4a72f651dfea53c2177e6c1
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.openlocfilehash: 6e1291537495f6c59295d607203ff4c8a450008b
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70110281"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304803"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL)
 
@@ -732,9 +732,6 @@ Desabilita o repositório de consultas. OFF é o valor padrão.
 
 CLEAR         
 Remove o conteúdo do repositório de consultas.
-
-> [!NOTE]
-> Para o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], é necessário executar `ALTER DATABASE SET QUERY_STORE` no banco de dados de usuário. Não há suporte para a execução da instrução de outra instância do depósito de dados.
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }         
 Descreve o modo de operação do repositório de consultas. 
@@ -2911,20 +2908,43 @@ SET
 
 <option_spec>::=
 {
-<RESULT_SET_CACHING>
-|<snapshot_option>
+    <auto_option>
+  | <db_encryption_option>
+  | <query_store_options>
+  | <result_set_caching>
+  | <snapshot_option>
 }
 ;
 
-<RESULT_SET_CACHING>::=
+<auto_option> ::=
 {
-RESULT_SET_CACHING {ON | OFF}
+    AUTO_CREATE_STATISTICS { OFF | ON }
 }
 
-<snapshot_option>::=
+<db_encryption_option> ::=
 {
-READ_COMMITTED_SNAPSHOT {ON | OFF }
+    ENCRYPTION { ON | OFF }
 }
+
+<query_store_option> ::=
+{
+    QUERY_STORE
+    {
+          = OFF
+        | = ON
+    }
+}
+
+<result_set_caching_option> ::=
+{
+    RESULT_SET_CACHING { ON | OFF }
+}
+
+<snapshot_option> ::=
+{
+    READ_COMMITTED_SNAPSHOT {ON | OFF }
+}
+
 
 
 ```
@@ -2935,8 +2955,47 @@ READ_COMMITTED_SNAPSHOT {ON | OFF }
 
 É o nome do banco de dados a ser modificado.
 
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
-**Aplica-se ao** SQL Data Warehouse do Azure (versão prévia)
+**<auto_option>::=**
+
+Controla opções automáticas.
+
+AUTO_CREATE_STATISTICS { ON | OFF } ON O otimizador de consulta cria estatísticas em colunas únicas em predicados de consulta, conforme necessário, para melhorar planos e desempenho de consulta. Estas estatísticas de coluna única são criadas quando o otimizador de consulta compila consultas. As estatísticas de coluna única só são criadas em colunas que ainda não são a primeira de um objeto de estatísticas existente.
+
+O padrão é ON. Nós recomendamos que você use a configuração padrão para a maioria dos bancos de dados.
+
+OFF O otimizador de consulta não cria estatísticas em colunas únicas em predicados de consulta quando está compilando consultas. Definir essa opção como OFF pode acarretar planos de consulta de qualidade inferior e menor desempenho de consulta.
+Você pode determinar o status dessa opção examinando a coluna is_create_stats_on na exibição do catálogo sys.databases. Você também pode determinar o status examinando a propriedade IsAutoCreateStatistics da função DATABASEPROPERTYEX.
+Para obter mais informações, confira a seção "Usando as opções de estatísticas em todo o banco de dados" em Estatísticas.
+
+**<db_encryption_option>::=**
+
+Controla o estado de criptografia do banco de dados.
+
+ENCRYPTION { ON | OFF } ON Define o banco de dados a ser criptografado.
+
+OFF Define o banco de dados a não ser criptografado.
+
+Para obter mais informações sobre a criptografia de banco de dados, confira Transparent Data Encryption e Transparent Data Encryption com o Banco de Dados SQL do Azure.
+
+Quando a criptografia estiver habilitada no nível de banco de dados, todos os grupos de arquivos serão criptografados. Qualquer novo grupo de arquivos herdará a propriedade criptografada. Se um grupo de arquivos do banco de dados for definido como READ ONLY, haverá falha na operação de criptografia do banco de dados.
+É possível ver o estado da criptografia do banco de dados, bem como o estado do exame de criptografia usando a exibição de gerenciamento dinâmico sys.dm_database_encryption_keys.
+
+**\<query_store_option>::=**
+
+ON | OFF   
+Controla se o Repositório de Consultas está habilitado neste data warehouse.     
+
+ON         
+Habilita o repositório de consultas.
+
+OFF         
+Desabilita o repositório de consultas. OFF é o valor padrão.
+
+> [!NOTE]
+> Para o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], é necessário executar `ALTER DATABASE SET QUERY_STORE` no banco de dados de usuário. Não há suporte para a execução da instrução de outra instância do depósito de dados.
+
+**\<result_set_caching_option>::=**    
+**Aplica-se ao**: SQL Data Warehouse do Azure (versão prévia)
 
 Este comando deve ser executado enquanto estiver conectado ao banco de dados `master`.  A alteração dessa configuração de banco de dados entra em vigor imediatamente.  Os custos de armazenamento são incorridos pelo armazenamento em cache dos conjuntos de resultados da consulta. Depois de desabilitar o armazenamento em cache de resultados de um banco de dados, o cache de resultados anteriormente persistente será excluído imediatamente do armazenamento do SQL Data Warehouse do Azure. Uma nova coluna chamada is_result_set_caching_on é introduzida no `sys.databases` para mostrar a configuração de armazenamento em cache de resultados de um banco de dados.  
 
@@ -2954,22 +3013,7 @@ Especifica que os conjuntos de resultados de consulta retornados desse banco de 
 command|Como|%DWResultCacheDb%|
 | | |
 
-
-<a name="snapshot_option"></a> READ_COMMITTED_SNAPSHOT  { ON | OFF }   
-**Aplica-se ao** SQL Data Warehouse do Azure (versão prévia)
-
-ON Habilita a opção READ_COMMITTED_SNAPSHOT no nível do banco de dados.
-
-OFF Desativa a opção READ_COMMITTED_SNAPSHOT no nível do banco de dados.
-
-Ativar ou desativar READ_COMMITTED_SNAPSHOT para um banco de dados eliminará todas as conexões abertas com esse banco de dados.  Talvez convenha fazer essa alteração durante a janela de manutenção do banco de dados ou aguardar até que não haja nenhuma conexão ativa com o banco de dados, exceto a conexão que executa o comando ALTER DATABSE.  O banco de dados não precisa estar no modo do usuário único.  Não há suporte para a alteração da configuração READ_COMMITTED_SNAPSHOT no nível da sessão.  Para verificar essa configuração para um banco de dados, marque a coluna is_read_committed_snapshot_on em sys.databases.
-
-Em um banco de dados com READ_COMMITTED_SNAPSHOT habilitado, as consultas poderão apresentar desempenho mais lento devido à verificação de versões se várias versões de dados estiverem presentes. Transações abertas demoradas também poderão causar um aumento no tamanho do banco de dados se houver alterações nos dados por essas transações que bloqueiam a limpeza de versões.  
-
-
-
-
-## <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Remarks
 
 O conjunto de resultados armazenado em cache será reutilizado em uma consulta se todos os requisitos a seguir forem atendidos:
 
@@ -2979,6 +3023,21 @@ O conjunto de resultados armazenado em cache será reutilizado em uma consulta s
 
 Quando o armazenamento em cache do conjunto de resultados estiver ATIVADO para um banco de dados, os resultados serão armazenados em cache para todas as consultas até o cache ficar cheio, exceto as consultas com funções não determinísticas como DateTime.Now().   Consultas com conjuntos de resultados grandes (por exemplo, > 1 milhão de linhas) podem ter um desempenho mais lento durante a primeira execução durante a criação do cache de resultados.
 
+**<snapshot_option>::=**
+
+Calcula o nível de isolamento da transação.
+
+READ_COMMITTED_SNAPSHOT { ON | OFF }   
+**Aplica-se ao**: SQL Data Warehouse do Azure (versão prévia)
+
+ON Habilita a opção READ_COMMITTED_SNAPSHOT no nível do banco de dados.
+
+OFF Desativa a opção READ_COMMITTED_SNAPSHOT no nível do banco de dados.
+
+Ativar ou desativar READ_COMMITTED_SNAPSHOT para um banco de dados eliminará todas as conexões abertas com esse banco de dados.  Talvez convenha fazer essa alteração durante a janela de manutenção do banco de dados ou aguardar até que não haja nenhuma conexão ativa com o banco de dados, exceto a conexão que executa o comando ALTER DATABSE.  O banco de dados não precisa estar no modo do usuário único.  Não há suporte para a alteração da configuração READ_COMMITTED_SNAPSHOT no nível da sessão.  Para verificar essa configuração para um banco de dados, marque a coluna is_read_committed_snapshot_on em sys.databases.
+
+Em um banco de dados com READ_COMMITTED_SNAPSHOT habilitado, as consultas poderão apresentar desempenho mais lento devido à verificação de versões se várias versões de dados estiverem presentes. Transações abertas demoradas também poderão causar um aumento no tamanho do banco de dados se houver alterações nos dados por essas transações que bloqueiam a limpeza de versões.  
+
 ## <a name="permissions"></a>Permissões
 
 Para definir a opção RESULT_SET_CACHING, um usuário precisa do logon da entidade de segurança no nível do servidor (a criada pelo processo de provisionamento) ou ser um membro da função de banco de dados `dbmanager`.  
@@ -2987,28 +3046,90 @@ Para definir a opção READ_COMMITTED_SNAPSHOT, um usuário precisa da permissã
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="enable-result-set-caching-for-a-database"></a>Habilitar o armazenamento em cache do conjunto de resultados de um banco de dados
+### <a name="a-enabling-the-query-store"></a>A. Habilitando o repositório de consultas
+
+O exemplo a seguir habilita o repositório de consultas e configura os parâmetros do repositório de consultas.
 
 ```sql
-ALTER DATABASE myTestDW  
+ALTER DATABASE AdventureWorksDW
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### <a name="b-enabling-the-query-store-with-wait-statistics"></a>B. Como habilitar o repositório de consultas com estatísticas de espera
+
+O exemplo a seguir habilita o repositório de consultas e configura os parâmetros do repositório de consultas.
+
+```sql
+ALTER DATABASE AdventureWorksDW
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="c-enabling-the-query-store-with-custom-capture-policy-options"></a>C. Como habilitar o repositório de consultas com opções de política de captura personalizadas
+
+O exemplo a seguir habilita o repositório de consultas e configura os parâmetros do repositório de consultas.
+
+```sql
+ALTER DATABASE AdventureWorksDW 
+SET QUERY_STORE = ON 
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100 
+      )
+    );
+```
+
+### <a name="d-enable-result-set-caching-for-a-database"></a>D. Habilitar o armazenamento em cache do conjunto de resultados de um banco de dados
+
+```sql
+ALTER DATABASE AdventureWorksDW  
 SET RESULT_SET_CACHING ON;
 ```
 
-### <a name="disable-result-set-caching-for-a-database"></a>Desabilitar o armazenamento em cache do conjunto de resultados de um banco de dados
+### <a name="d-disable-result-set-caching-for-a-database"></a>D. Desabilitar o armazenamento em cache do conjunto de resultados de um banco de dados
 
 ```sql
-ALTER DATABASE myTestDW  
+ALTER DATABASE AdventureWorksDW  
 SET RESULT_SET_CACHING OFF;
 ```
 
-### <a name="check-result-set-caching-setting-for-a-database"></a>Verificar a configuração do armazenamento em cache do conjunto de resultados para um banco de dados
+### <a name="d-check-result-set-caching-setting-for-a-database"></a>D. Verificar a configuração do armazenamento em cache do conjunto de resultados para um banco de dados
 
 ```sql
 SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### <a name="check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>Verificar o número de consultas com acerto e erro de cache do conjunto de resultados
+### <a name="d-check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>D. Verificar o número de consultas com acerto e erro de cache do conjunto de resultados
 
 ```sql
 SELECT  
@@ -3028,7 +3149,7 @@ s.request_id else null end)
      ON s.request_id = r.request_id) A;
 ```
 
-### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>Verificar se há acerto ou erro de cache do conjunto de resultados para uma consulta
+### <a name="d-check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>D. Verificar se há acerto ou erro de cache do conjunto de resultados para uma consulta
 
 ```sql
 If
@@ -3040,7 +3161,7 @@ ELSE
 SELECT 0 as is_cache_hit;
 ```
 
-### <a name="check-for-all-queries-with-result-set-cache-hits"></a>Verificar todas as consultas com acertos de cache do conjunto de resultados
+### <a name="d-check-for-all-queries-with-result-set-cache-hits"></a>D. Verificar todas as consultas com acertos de cache do conjunto de resultados
 
 ```sql
 SELECT *  
@@ -3049,6 +3170,7 @@ WHERE command like '%DWResultCacheDb%' and step_index = 0;
 ```
 
 ### <a name="enable-read_committed_snapshot-option-for-a-database"></a>Habilite a opção Read_Committed_Snapshot para um banco de dados
+
 ```sql
 ALTER DATABASE MyDatabase  
 SET READ_COMMITTED_SNAPSHOT ON
@@ -3064,3 +3186,4 @@ SET READ_COMMITTED_SNAPSHOT ON
 - [Elementos de linguagem do SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end
+

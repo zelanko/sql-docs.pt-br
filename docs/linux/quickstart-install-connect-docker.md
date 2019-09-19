@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: cc4eeb8c4e3d462d6df3aa76d972404ffe3120c1
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+ms.openlocfilehash: 9f68a633252b8d822fa91a2f88deb35c02788f6f
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608395"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929732"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Início Rápido: Executar imagens de contêiner do SQL Server com o Docker
 
@@ -102,7 +102,7 @@ Antes de iniciar as etapas a seguir, verifique se você selecionou o shell de su
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
@@ -110,7 +110,7 @@ Antes de iniciar as etapas a seguir, verifique se você selecionou o shell de su
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
@@ -126,11 +126,11 @@ Antes de iniciar as etapas a seguir, verifique se você selecionou o shell de su
 
    | Parâmetro | Descrição |
    |-----|-----|
-   | **-e 'ACCEPT_EULA=Y'** |  Defina a variável **ACCEPT_EULA** com qualquer valor para confirmar sua aceitação dos [Termos de Licença](https://go.microsoft.com/fwlink/?LinkId=746388). Configuração exigida para a imagem do SQL Server. |
-   | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | Especifique sua própria senha forte que tenha pelo menos 8 caracteres e atenda aos [Requisitos de senha do SQL Server](../relational-databases/security/password-policy.md). Configuração exigida para a imagem do SQL Server. |
+   | **-e "ACCEPT_EULA=Y"** |  Defina a variável **ACCEPT_EULA** com qualquer valor para confirmar sua aceitação dos [Termos de Licença](https://go.microsoft.com/fwlink/?LinkId=746388). Configuração exigida para a imagem do SQL Server. |
+   | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Especifique sua própria senha forte que tenha pelo menos 8 caracteres e atenda aos [Requisitos de senha do SQL Server](../relational-databases/security/password-policy.md). Configuração exigida para a imagem do SQL Server. |
    | **-p 1433:1433** | Mapeie uma porta TCP no ambiente do host (primeiro valor) para uma porta TCP no contêiner (segundo valor). Neste exemplo, o SQL Server está escutando na TCP 1433 no contêiner e isso é exposto para a porta 1433 no host. |
    | **--name sql1** | Especifique um nome personalizado para o contêiner em vez de um nome gerado aleatoriamente. Se você executar mais de um contêiner, não será possível reutilizar esse mesmo nome. |
-   | **mcr.microsoft.com/mssql/server:2017-latest** | A imagem de contêiner do SQL Server 2017 do Linux. |
+   | **-d mcr.microsoft.com/mssql/server:2017-latest** | A imagem de contêiner do SQL Server 2017 do Linux. |
 
 3. Para exibir seus contêineres do Docker, use o comando `docker ps`.
 
@@ -213,7 +213,7 @@ Antes de iniciar as etapas a seguir, verifique se você selecionou o shell de su
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" \
+   sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
       -p 1433:1433 --name sql1 \
       -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
@@ -221,7 +221,7 @@ Antes de iniciar as etapas a seguir, verifique se você selecionou o shell de su
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
       -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
@@ -229,7 +229,7 @@ Antes de iniciar as etapas a seguir, verifique se você selecionou o shell de su
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
       -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
@@ -245,8 +245,8 @@ Antes de iniciar as etapas a seguir, verifique se você selecionou o shell de su
 
    | Parâmetro | Descrição |
    |-----|-----|
-   | **-e 'ACCEPT_EULA=Y'** |  Defina a variável **ACCEPT_EULA** com qualquer valor para confirmar sua aceitação dos [Termos de Licença](https://go.microsoft.com/fwlink/?LinkId=746388). Configuração exigida para a imagem do SQL Server. |
-   | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | Especifique sua própria senha forte que tenha pelo menos 8 caracteres e atenda aos [Requisitos de senha do SQL Server](../relational-databases/security/password-policy.md). Configuração exigida para a imagem do SQL Server. |
+   | **-e "ACCEPT_EULA=Y"** |  Defina a variável **ACCEPT_EULA** com qualquer valor para confirmar sua aceitação dos [Termos de Licença](https://go.microsoft.com/fwlink/?LinkId=746388). Configuração exigida para a imagem do SQL Server. |
+   | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Especifique sua própria senha forte que tenha pelo menos 8 caracteres e atenda aos [Requisitos de senha do SQL Server](../relational-databases/security/password-policy.md). Configuração exigida para a imagem do SQL Server. |
    | **-p 1433:1433** | Mapeie uma porta TCP no ambiente do host (primeiro valor) para uma porta TCP no contêiner (segundo valor). Neste exemplo, o SQL Server está escutando na TCP 1433 no contêiner e isso é exposto para a porta 1433 no host. |
    | **--name sql1** | Especifique um nome personalizado para o contêiner em vez de um nome gerado aleatoriamente. Se você executar mais de um contêiner, não será possível reutilizar esse mesmo nome. |
    | **mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu** | A imagem de contêiner do CTP3.2 do SQL Server 2019 do Linux. |
@@ -304,16 +304,16 @@ A conta **SA** é um administrador do sistema na instância do SQL Server que é
    ::: zone pivot="cs1-bash"
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
-      -S localhost -U SA -P "<YourStrong!Passw0rd>" \
-      -Q 'ALTER LOGIN SA WITH PASSWORD="<YourNewStrong!Passw0rd>"'
+      -S localhost -U SA -P "<YourStrong@Passw0rd>" \
+      -Q 'ALTER LOGIN SA WITH PASSWORD="<YourNewStrong@Passw0rd>"'
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
-      -S localhost -U SA -P "<YourStrong!Passw0rd>" `
-      -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong!Passw0rd>'"
+      -S localhost -U SA -P "<YourStrong@Passw0rd>" `
+      -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong@Passw0rd>'"
    ```
    ::: zone-end
 
@@ -321,7 +321,7 @@ A conta **SA** é um administrador do sistema na instância do SQL Server que é
    ```cmd
    docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
       -S localhost -U SA -P "<YourStrong!Passw0rd>" `
-      -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong!Passw0rd>'"
+      -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong@Passw0rd>'"
    ```
    ::: zone-end
 
@@ -352,7 +352,7 @@ As etapas a seguir usam a ferramenta de linha de comando do SQL Server, a **sqlc
 2. Quando estiver dentro do contêiner, conecte-se localmente com a sqlcmd. A sqlcmd não está no caminho por padrão, portanto, você precisará especificar o caminho completo.
 
    ```bash
-   /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "<YourNewStrong!Passw0rd>"
+   /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "<YourNewStrong@Passw0rd>"
    ```
 
    > [!TIP]
@@ -454,19 +454,19 @@ As etapas a seguir usam a **sqlcmd** fora do contêiner para conectar-se ao SQL 
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sqlcmd -S <ip_address>,1433 -U SA -P "<YourNewStrong!Passw0rd>"
+   sqlcmd -S <ip_address>,1433 -U SA -P "<YourNewStrong@Passw0rd>"
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   sqlcmd -S <ip_address>,1433 -U SA -P "<YourNewStrong!Passw0rd>"
+   sqlcmd -S <ip_address>,1433 -U SA -P "<YourNewStrong@Passw0rd>"
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   sqlcmd -S <ip_address>,1433 -U SA -P "<YourNewStrong!Passw0rd>"
+   sqlcmd -S <ip_address>,1433 -U SA -P "<YourNewStrong@Passw0rd>"
    ```
    ::: zone-end
 

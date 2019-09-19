@@ -16,12 +16,12 @@ ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 90c09b0d6c2d4c8e2a3c4fa7288d7a2ef2451ce0
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: ede5586c8ea7fab69360c12394834fa681eb113c
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769857"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846562"
 ---
 # <a name="delete-a-publication"></a>Excluir uma publicação
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,10 +60,10 @@ ms.locfileid: "68769857"
   
     -   Para excluir uma única publicação, execute [sp_droppublication](../../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md) no Publicador do banco de dados de publicação.  
   
-    -   Para excluir todas as publicações e remover todos os objetos de replicação de um banco de dados publicado, execute [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) no Publicador. Especifique um valor de **tran** para **@type** . (Opcional) Se o Distribuidor não puder ser acessado ou se o status do banco de dados estiver suspeito ou offline, especifique um valor **1** para **@force** . (Opcional) Especifique o nome do banco de dados para **@dbname** se [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) não for executado no banco de dados de publicação.  
+    -   Para excluir todas as publicações e remover todos os objetos de replicação de um banco de dados publicado, execute [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) no Publicador. Especifique um valor igual a **tran** em **\@type**. (Opcional) Se o Distribuidor não puder ser acessado ou se o status do banco de dados for suspeito ou estiver offline, especifique um valor igual a **1** em **\@force**. (Opcional) Especifique o nome do banco de dados em **\@dbname** se [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) não for executado no banco de dados de publicação.  
   
         > [!NOTE]  
-        >  Especificar um valor **1** para **@force** pode deixar objetos de publicação relacionados a replicação no banco de dados.  
+        >  A especificação de um valor igual a **1** em **\@force** pode manter objetos de publicação relacionados à replicação no banco de dados.  
   
 2.  (Opcional) Se esse banco de dados não tiver outras publicações, execute [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) para desabilitar a publicação do banco de dados atual usando replicação de instantâneo ou transacional.  
   
@@ -75,10 +75,10 @@ ms.locfileid: "68769857"
   
     -   Para excluir uma única publicação, execute [sp_dropmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md) no Publicador do banco de dados de publicação.  
   
-    -   Para excluir todas as publicações e remover todos os objetos de replicação de um banco de dados publicado, execute [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) no Publicador. Especifique um valor de **merge** para **@type** . (Opcional) Se o Distribuidor não puder ser acessado ou se o status do banco de dados estiver suspeito ou offline, especifique um valor **1** para **@force** . (Opcional) Especifique o nome do banco de dados para **@dbname** se [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) não for executado no banco de dados de publicação.  
+    -   Para excluir todas as publicações e remover todos os objetos de replicação de um banco de dados publicado, execute [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) no Publicador. Especifique um valor igual a **merge** em **\@type**. (Opcional) Se o Distribuidor não puder ser acessado ou se o status do banco de dados for suspeito ou estiver offline, especifique um valor igual a **1** em **\@force**. (Opcional) Especifique o nome do banco de dados em **\@dbname** se [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) não for executado no banco de dados de publicação.  
   
         > [!NOTE]  
-        >  Especificar um valor **1** para **@force** pode deixar objetos de publicação relacionados a replicação no banco de dados.  
+        >  A especificação de um valor igual a **1** em **\@force** pode manter objetos de publicação relacionados à replicação no banco de dados.  
   
 2.  (Opcional) Se esse banco de dados não tiver outras publicações, execute [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) para desabilitar a publicação do banco de dados atual usando replicação de mesclagem.  
   

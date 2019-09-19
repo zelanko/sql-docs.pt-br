@@ -1,7 +1,7 @@
 ---
 title: Índices para tabelas com otimização de memória | Microsoft Docs
 ms.custom: ''
-ms.date: 06/02/2019
+ms.date: 09/16/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,18 +11,18 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f283868f180764f5b3276cce9678de075f3d0483
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050208"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929694"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Índices em tabelas com otimização de memória
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Todas as tabelas com otimização de memória devem ter, pelo menos, um índice, porque são os índices que conectam as linhas. Em uma tabela com otimização de memória, cada índice também tem otimização de memória. Existem várias diferenças entre um índice em um índice com otimização de memória e um índice tradicional em uma tabela baseada em disco:  
+Todas as tabelas com otimização de memória devem ter, pelo menos, um índice, porque são os índices que conectam as linhas. Em uma tabela com otimização de memória, cada índice também tem otimização de memória. Existem várias diferenças entre um índice em uma tabela com otimização de memória e um índice tradicional em uma tabela baseada em disco:  
 
 - As linhas de dados não são armazenadas em páginas e, portanto, não há nenhuma coleção de páginas ou extensões, nenhuma partição ou unidade de alocação que pode ser referenciada para obter todas as páginas de uma tabela. Há o conceito de páginas de índice para um dos tipos de índices disponíveis, mas elas são armazenadas de modo diferente dos índices para tabelas baseadas em disco. Eles não acumulam o tipo tradicional de fragmentação em uma página e, portanto, não têm nenhum fator de preenchimento.
 - As alterações feitas nos índices em tabelas com otimização de memória durante a manipulação de dados nunca são gravadas em disco. Apenas as linhas de dados e as alterações nos dados são gravadas no log de transações. 
@@ -59,6 +59,7 @@ Para ser declarada com a DURABILITY = SCHEMA\_AND_DATA padrão, a tabela com oti
             MEMORY_OPTIMIZED = ON,  
             DURABILITY = SCHEMA_AND_DATA);  
     ```
+
 > [!NOTE]  
 > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] têm um limite de 8 índices por tabela com otimização de memória ou tipo de tabela. A partir do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], não há mais um limite no número de índices específicos para as tabelas com otimização de memória e os tipos de tabela.
   

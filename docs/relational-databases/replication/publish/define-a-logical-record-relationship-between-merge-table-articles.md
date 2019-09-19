@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9cff330e7dc69f4d99ffdbf3df82e2ff0b154ab5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 74d9d0bec559dbc618e5487fea647461bc967db3
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907834"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846606"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definir uma relação de registro lógico entre artigos da tabela de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "67907834"
   
     -   Se o valor for **1**, partições pré-computadas já estarão sendo usadas.  
   
-    -   Se o valor for **0**, execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) ao Publicador do banco de dados de publicação. Especifique um valor de **use_partition_groups** para **@property** e um valor de **true** para **@value** .  
+    -   Se o valor for **0**, execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) ao Publicador do banco de dados de publicação. Especifique um valor igual a **use_partition_groups** em **\@property** e um valor igual a **true** em **\@value**.  
   
         > [!NOTE]  
         >  Se a publicação não oferecer suporte a partições pré-computadas, os registros lógicos não poderão ser usados. Para obter mais informações, consulte Requisitos para usar partições pré-computadas no tópico [Otimizar o desempenho de filtro parametrizado com partições pré-computadas](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
@@ -101,13 +101,13 @@ ms.locfileid: "67907834"
   
 2.  Se os artigos que integrarem o registro lógico não existirem, execute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) no Publicador do banco de dados de publicação. Especifique uma das opções de detecção e resolução de conflitos para o registro lógico:  
   
-    -   Para detectar e resolver conflitos que ocorrem dentro das linhas relacionadas no registro lógico, especifique um valor de **true** para **@logical_record_level_conflict_detection** e **@logical_record_level_conflict_resolution** .  
+    -   Para detectar e resolver conflitos que ocorrem dentro das linhas relacionadas no registro lógico, especifique um valor igual a **true** em **\@logical_record_level_conflict_detection** e **\@logical_record_level_conflict_resolution**.  
   
-    -   Para usar a detecção e resolução de conflitos padrão de linha ou coluna, especifique o valor de **false** para **@logical_record_level_conflict_detection** e **@logical_record_level_conflict_resolution** , que é o padrão.  
+    -   Para usar a detecção e a resolução de conflitos padrão de linha ou coluna, especifique um valor igual a **false** em **\@logical_record_level_conflict_detection** e **\@logical_record_level_conflict_resolution**, que é o padrão.  
   
 3.  Repita a Etapa 2 para cada artigo que integrará o registro lógico. É preciso usar a mesma opção de detecção e resolução de conflitos para cada artigo no registro lógico. Para obter mais informações, consulte [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
-4.  No Publicador do banco de dados de publicação, execute [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Especifique **@publication** ; o nome do artigo na relação para **@article** ; o nome do segundo artigo para **@join_articlename** ; o nome da relação para **@filtername** ; a cláusula que define a relação entre os dois artigos para **@join_filterclause** ; o tipo de junção para **@join_unique_key** e um dos valores a seguir para **@filter_type** :  
+4.  No Publicador do banco de dados de publicação, execute [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Especifique **\@publication**, o nome de um artigo na relação em **\@article**, o nome do segundo artigo em **\@join_articlename**, o nome da relação em **\@filtername**, uma cláusula que define a relação entre os dois artigos em **\@join_filterclause**, o tipo de junção em **\@join_unique_key** e um dos seguintes valores em **\@filter_type**:  
   
     -   **2** - Define uma relação lógica.  
   
@@ -122,15 +122,15 @@ ms.locfileid: "67907834"
   
 1.  Para detectar e resolver conflitos que ocorrem dentro de linhas relacionadas no registro lógico:  
   
-    -   No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor de **logical_record_level_conflict_detection** para **@property** e um valor de **true** para **@value** . Especifique um valor de **1** para **@force_invalidate_snapshot** e **@force_reinit_subscription** .  
+    -   No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor igual a **logical_record_level_conflict_detection** em **\@property** e um valor igual a **true** em **\@value**. Especifique um valor igual a **1** em **\@force_invalidate_snapshot** e **\@force_reinit_subscription**.  
   
-    -   No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor de **logical_record_level_conflict_resolution** para **@property** e um valor de **true** para **@value** . Especifique um valor de **1** para **@force_invalidate_snapshot** e **@force_reinit_subscription** .  
+    -   No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor igual a **logical_record_level_conflict_resolution** em **\@property** e um valor igual a **true** em **\@value**. Especifique um valor igual a **1** em **\@force_invalidate_snapshot** e **\@force_reinit_subscription**.  
   
 2.  Para usar a detecção e resolução de conflitos padrão em nível de linha ou coluna:  
   
-    -   No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor de **logical_record_level_conflict_detection** para **@property** e um valor de **false** para **@value** . Especifique um valor de **1** para **@force_invalidate_snapshot** e **@force_reinit_subscription** .  
+    -   No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor igual a **logical_record_level_conflict_detection** em **\@property** e um valor igual a **false** em **\@value**. Especifique um valor igual a **1** em **\@force_invalidate_snapshot** e **\@force_reinit_subscription**.  
   
-    -   No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor de **logical_record_level_conflict_resolution** para **@property** e um valor de **false** para **@value** . Especifique um valor de **1** para **@force_invalidate_snapshot** e **@force_reinit_subscription** .  
+    -   No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor igual a **logical_record_level_conflict_resolution** em **\@property** e um valor igual a **false** em **\@value**. Especifique um valor igual a **1** em **\@force_invalidate_snapshot** e **\@force_reinit_subscription**.  
   
 #### <a name="to-remove-a-logical-record-relationship"></a>Para remover uma relação de registro lógico.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "67907834"
     > [!NOTE]  
     >  Essa consulta retorna as mesmas informações de [sp_helpmergefilter](../../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md); no entanto, esse procedimento armazenado de sistema retorna apenas informações sobre relações de registro lógico que são também filtros de junção.  
   
-2.  No Publicador do banco de dados de publicação, execute [sp_dropmergefilter](../../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md). Especifique **@publication** , o nome de um dos artigos da relação para **@article** , e o nome da relação da Etapa 1 para **@filtername** .  
+2.  No Publicador do banco de dados de publicação, execute [sp_dropmergefilter](../../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md). Especifique **\@publication**, o nome de um dos artigos da relação em **\@article** e o nome da relação da etapa 1 em **\@filtername**.  
   
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  Esse exemplo habilita partições pré-computadas em uma publicação existente e cria um registro lógico que inclui os dois novos artigos para as tabelas `SalesOrderHeader` e `SalesOrderDetail` .  

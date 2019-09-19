@@ -16,12 +16,12 @@ ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e9da7e08751fc7c8bc72b85d174678e783cb79a3
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 761c6b6bd1c92e7dd22cc231e46417b4b971a614
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769886"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846603"
 ---
 # <a name="define-and-modify-a-column-filter"></a>Definir e modificar um filtro de colunas
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -76,17 +76,17 @@ ms.locfileid: "68769886"
   
 2.  No Publicador do banco de dados de publicação, execute [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). Isto define as colunas a serem incluídas ou removidas do artigo.  
   
-    -   Se publicar apenas algumas colunas de uma tabela com várias colunas, execute [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) uma vez para cada coluna sendo adicionada. Especifique o nome de coluna para **@column** e um valor de **adicionar** para **@operation** .  
+    -   Se publicar apenas algumas colunas de uma tabela com várias colunas, execute [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) uma vez para cada coluna sendo adicionada. Especifique o nome de coluna em **\@column** e um valor igual a **add** em **\@operation**.  
   
-    -   Se publicar a maioria das colunas em uma tabela com várias colunas, execute [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), especificando um valor de **nulo** para **@column** e um valor de **adicionar** para **@operation** para adicionar todas as colunas. Em seguida, execute [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), uma vez para cada coluna sendo excluída, especificando o valor de **descartar** para **@operation** e o nome da coluna excluída para **@column** .  
+    -   Se estiver publicando a maioria das colunas em uma tabela com muitas colunas, execute [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) especificando um valor igual a **null** em **\@column** e um valor igual a **add** em **\@operation** para adicionar todas as colunas. Em seguida, execute [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) uma vez para cada coluna que estiver sendo excluída, especificando um valor igual a **drop** em **\@operation** e o nome da coluna excluída em **\@column**.  
   
-3.  No Publicador do banco de dados de publicação, execute [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Especifique o nome da publicação para **@publication** e o nome do artigo filtrado para **@article** . Isto cria os objetos de sincronização para o artigo filtrado.  
+3.  No Publicador do banco de dados de publicação, execute [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Especifique o nome da publicação em **\@publication** e o nome do artigo filtrado em **\@article**. Isto cria os objetos de sincronização para o artigo filtrado.  
   
 #### <a name="to-change-a-column-filter-to-include-additional-columns-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>Para alterar um filtro de coluna para incluir colunas adicionais no artigo publicado em um instantâneo ou em uma publicação transacional  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) uma vez para cada coluna sendo adicionada. Especifique o nome de coluna para **@column** e um valor de **adicionar** para **@operation** .  
+1.  No Publicador do banco de dados de publicação, execute [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) uma vez para cada coluna sendo adicionada. Especifique o nome de coluna em **\@column** e um valor igual a **add** em **\@operation**.  
   
-2.  No Publicador do banco de dados de publicação, execute [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Especifique o nome da publicação para **@publication** e o nome do artigo filtrado para **@article** . Se a publicação tiver assinaturas existentes, especifique um valor de **1** para **@change_active** . Isto cria novamente os objetos de sincronização para o artigo filtrado.  
+2.  No Publicador do banco de dados de publicação, execute [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Especifique o nome da publicação em **\@publication** e o nome do artigo filtrado em **\@article**. Se a publicação tiver assinaturas existentes, especifique um valor igual a **1** em **\@change_active**. Isto cria novamente os objetos de sincronização para o artigo filtrado.  
   
 3.  Execute novamente o Snapshot Agent da publicação para gerar um instantâneo atualizado.  
   
@@ -94,9 +94,9 @@ ms.locfileid: "68769886"
   
 #### <a name="to-change-a-column-filter-to-remove-columns-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>Para alterar um filtro de coluna para remover colunas de um artigo publicado em um instantâneo ou em uma publicação transacional  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) uma vez para cada coluna sendo removida. Especifique o nome de coluna para **@column** e um valor de **descartar** para **@operation** .  
+1.  No Publicador do banco de dados de publicação, execute [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) uma vez para cada coluna sendo removida. Especifique o nome da coluna em **\@column** e um valor igual a **drop** em **\@operation**.  
   
-2.  No Publicador do banco de dados de publicação, execute [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Especifique o nome da publicação para **@publication** e o nome do artigo filtrado para **@article** . Se a publicação tiver assinaturas existentes, especifique um valor de **1** para **@change_active** . Isto cria novamente os objetos de sincronização para o artigo filtrado.  
+2.  No Publicador do banco de dados de publicação, execute [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Especifique o nome da publicação em **\@publication** e o nome do artigo filtrado em **\@article**. Se a publicação tiver assinaturas existentes, especifique um valor igual a **1** em **\@change_active**. Isto cria novamente os objetos de sincronização para o artigo filtrado.  
   
 3.  Execute novamente o Snapshot Agent da publicação para gerar um instantâneo atualizado.  
   
@@ -108,13 +108,13 @@ ms.locfileid: "68769886"
   
 2.  No Publicador do banco de dados de publicação, execute [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md). Isto define as colunas a serem incluídas ou removidas do artigo.  
   
-    -   Se publicar apenas algumas colunas de uma tabela com várias colunas, execute [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) uma vez para cada coluna sendo adicionada. Especifique o nome de coluna para **@column** e um valor de **adicionar** para **@operation** .  
+    -   Se publicar apenas algumas colunas de uma tabela com várias colunas, execute [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) uma vez para cada coluna sendo adicionada. Especifique o nome de coluna em **\@column** e um valor igual a **add** em **\@operation**.  
   
-    -   Se publicar a maioria das colunas em uma tabela com várias colunas, execute [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md), especificando um valor de **nulo** para **@column** e um valor de **adicionar** para **@operation** para adicionar todas as colunas. Em seguida, execute [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md), uma vez para cada coluna sendo excluída, especificando o valor de **descartar** para **@operation** e o nome da coluna excluída para **@column** .  
+    -   Se estiver publicando a maioria das colunas em uma tabela com muitas colunas, execute [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) especificando um valor igual a **null** em **\@column** e um valor igual a **add** em **\@operation** em adicionar todas as colunas. Em seguida, execute [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) uma vez para cada coluna que estiver sendo excluída, especificando um valor igual a **drop** em **\@operation** e o nome da coluna excluída em **\@column**.  
   
 #### <a name="to-change-a-column-filter-to-include-additional-columns-for-an-article-published-in-a-merge-publication"></a>Para alterar um filtro de coluna para incluir colunas adicionais no artigo publicado em uma publicação de mesclagem  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) uma vez para cada coluna sendo adicionada. Especifique o nome de coluna para **@column** , um valor de **adicionar** para **@operation** e um valor de **1** para ambos, **@force_invalidate_snapshot** e **@force_reinit_subscription** .  
+1.  No Publicador do banco de dados de publicação, execute [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) uma vez para cada coluna sendo adicionada. Especifique o nome da coluna em **\@column**, um valor igual a **add** em **\@operation** e um valor igual a **1** em **\@force_invalidate_snapshot** e **\@force_reinit_subscription**.  
   
 2.  Execute novamente o Snapshot Agent da publicação para gerar um instantâneo atualizado.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "68769886"
   
 #### <a name="to-change-a-column-filter-to-remove-columns-for-an-article-published-in-a-merge-publication"></a>Para alterar um filtro de coluna para remover colunas de um artigo publicado em uma publicação de mesclagem  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) uma vez para cada coluna sendo removida. Especifique o nome de coluna para **@column** , um valor de **descartar** para **@operation** e um valor de **1** para ambos, **@force_invalidate_snapshot** e **@force_reinit_subscription** .  
+1.  No Publicador do banco de dados de publicação, execute [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) uma vez para cada coluna sendo removida. Especifique o nome da coluna em **\@column**, um valor igual a **drop** em **\@operation** e um valor igual a **1** em **\@force_invalidate_snapshot** e **\@force_reinit_subscription**.  
   
 2.  Execute novamente o Snapshot Agent da publicação para gerar um instantâneo atualizado.  
   

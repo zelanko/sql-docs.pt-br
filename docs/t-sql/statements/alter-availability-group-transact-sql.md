@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bcec50b2ddda2b8ddaef8135aee52cf54c1ae07b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d3caeed2e7c57dfd4a3e993872034b066f56737
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066031"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874524"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -209,7 +209,7 @@ ALTER AVAILABILITY GROUP group_name
  Os valores FAILURE_CONDITION_LEVEL e HEALTH_CHECK_TIMEOUT definem uma *política de failover flexível* para determinado grupo. Essa política de failover flexível permite a você um controle granular sobre quais condições devem causar um failover automático. Para obter mais informações, consulte [Política de failover flexível para failover automático de um grupo de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
  HEALTH_CHECK_TIMEOUT **=** *milissegundos*  
- Especifica o tempo de espera (em milissegundos) para o procedimento armazenado do sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) retornar informações de integridade do servidor antes que o cluster WSFC assuma que a instância do servidor está lenta ou suspensa. HEALTH_CHECK_TIMEOUT é definido no nível do grupo, mas é apenas relevante em réplicas de disponibilidade configuradas para o modo de disponibilidade de confirmação síncrona com failover automático (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT).  Além disso, o tempo limite da verificação de integridade apenas poderá disparar um failover automático se as réplicas primárias e secundárias estiverem configuradas para o modo de failover automático (FAILOVER_MODE **=** AUTOMATIC) e a réplica secundária estiver sincronizada com a réplica primária no momento.  
+ Especifica o tempo de espera (em milissegundos) para o procedimento armazenado do sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) retornar informações de integridade do servidor antes que o cluster WSFC assuma que a instância do servidor está lenta ou não está respondendo. HEALTH_CHECK_TIMEOUT é definido no nível do grupo, mas é apenas relevante em réplicas de disponibilidade configuradas para o modo de disponibilidade de confirmação síncrona com failover automático (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT).  Além disso, o tempo limite da verificação de integridade apenas poderá disparar um failover automático se as réplicas primárias e secundárias estiverem configuradas para o modo de failover automático (FAILOVER_MODE **=** AUTOMATIC) e a réplica secundária estiver sincronizada com a réplica primária no momento.  
   
  O valor HEALTH_CHECK_TIMEOUT padrão é 30.000 milissegundos (30 segundos). O valor mínimo é 15000 milissegundos (15 segundos) e o máximo é 4294967295 milissegundos.  
   

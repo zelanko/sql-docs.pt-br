@@ -16,12 +16,12 @@ ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 558a2217f833c2c9016de2cde051baab3620bad7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 9f7948fa600f68b23f5279de8a286044c8f6b245
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769767"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846547"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Definir o período de validade da assinatura
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -65,11 +65,11 @@ ms.locfileid: "68769767"
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Para definir o período de validade de uma assinatura de um instantâneo ou publicação transacional  
   
-1.  No Publicador, execute [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Especifique o período de validade de assinatura desejado, em horas, para **@retention** . O período de validade padrão é de 336 horas. Para obter mais informações, consulte [Criar uma assinatura](../../../relational-databases/replication/publish/create-a-publication.md).  
+1.  No Publicador, execute [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Especifique o período de validade de assinatura desejado, em horas, em **\@retention**. O período de validade padrão é de 336 horas. Para obter mais informações, consulte [Criar uma assinatura](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>Para definir o período de validade para uma assinatura de uma publicação de mesclagem  
   
-1.  No Publicador, execute [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Especifique o valor desejado para o período de validade da assinatura como **@retention** . Especifique as unidades nas quais o período de validade é expressado para **@retention_period_unit** , que pode ser um dos seguintes:  
+1.  No Publicador, execute [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Especifique o valor desejado para o período de validade da assinatura em **\@retention**. Especifique as unidades nas quais o período de validade é expresso em **\@retention_period_unit**, que pode ser um dos seguintes:  
   
     -   **1** = semana  
   
@@ -81,11 +81,11 @@ ms.locfileid: "68769767"
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Para alterar o período de validade de uma assinatura de um instantâneo ou publicação transacional  
   
-1.  No Publicador, execute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Especifique a **retenção** para **@property** e o novo período de validade da assinatura, em horas, para **@value** .  
+1.  No Publicador, execute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Especifique **retention** em **\@property** e o novo período de validade da assinatura, em horas, em **\@value**.  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>Para alterar o período de validade para uma assinatura de uma publicação de mesclagem  
   
-1.  No Publicador, execute [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), especificando **@publication** e **@publisher** . Observe o valor de **retention_period_unit** no conjunto de resultados que pode ser um dos seguintes:  
+1.  No Publicador, execute [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) especificando **\@publication** e **\@publisher**. Observe o valor de **retention_period_unit** no conjunto de resultados que pode ser um dos seguintes:  
   
     -   **0** = dia|  
   
@@ -95,9 +95,9 @@ ms.locfileid: "68769767"
   
     -   **3** = ano  
   
-2.  No Publicador, execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique a **retenção** para **@property** e o novo período de validade da assinatura, com base no texto sobre unidade de período de retenção da etapa 1, para **@value** .  
+2.  No Publicador, execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique **retention** em **\@property** e o novo período de validade da assinatura, como texto com base na unidade de período de retenção da etapa 1, em **\@value**.  
   
-3.  (Opcional) No Editor, execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique a **retention_period_unit** para **@property** e uma nova unidade para o período de validade da assinatura para **@value** .  
+3.  (Opcional) No Editor, execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique **retention_period_unit** em **\@property** e uma nova unidade para o período de validade da assinatura em **\@value**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   

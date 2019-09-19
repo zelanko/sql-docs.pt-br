@@ -13,12 +13,12 @@ ms.assetid: 6b6c7673-d818-4fa9-8708-b4ed79cb1b41
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48edab2025adda718021f6e63815fc691540753c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 337a1b694023bfba9376c461255979d944330c5f
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074199"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70908328"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>Validar, consultar e alterar dados JSON com funções internas (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,62 +34,151 @@ O suporte interno para JSON inclui as funções internas a seguir, descritas bre
 -   [JSON_MODIFY](#MODIFY) atualiza o valor de uma propriedade em uma cadeia de caracteres JSON e retorna a cadeia de caracteres JSON atualizada.  
  
 ## <a name="json-text-for-the-examples-on-this-page"></a>Texto JSON para os exemplos nesta página
-O exemplos nesta página usam o texto JSON a seguir, que contém um elemento complexo.
 
-```sql 
-DECLARE @jsonInfo NVARCHAR(MAX)
+Os exemplos nesta página usam o texto JSON semelhante ao conteúdo mostrado no exemplo a seguir:
 
-SET @jsonInfo=N'{  
-     "info":{    
-       "type":1,  
-       "address":{    
-         "town":"Bristol",  
-         "county":"Avon",  
-         "country":"England"  
-       },  
-       "tags":["Sport", "Water polo"]  
-    },  
-    "type":"Basic"  
- }' 
+```json
+{
+  "id": "WakefieldFamily",
+  "parents": [
+      { "familyName": "Wakefield", "givenName": "Robin" },
+      { "familyName": "Miller", "givenName": "Ben" }
+  ],
+  "children": [
+      {
+        "familyName": "Merriam",
+        "givenName": "Jesse",
+        "gender": "female",
+        "grade": 1,
+        "pets": [
+            { "givenName": "Goofy" },
+            { "givenName": "Shadow" }
+        ]
+      },
+      { 
+        "familyName": "Miller",
+         "givenName": "Lisa",
+         "gender": "female",
+         "grade": 8 }
+  ],
+  "address": { "state": "NY", "county": "Manhattan", "city": "NY" },
+  "creationDate": 1431620462,
+  "isRegistered": false
+}
+```
+
+Esse documento JSON, que contém elementos complexos aninhados, é armazenado na seguinte tabela de exemplo:
+
+```sql
+CREATE TABLE Families (
+   id int identity constraint PK_JSON_ID primary key,
+   doc nvarchar(max)
+)
 ``` 
 
 ##  <a name="ISJSON"></a> Validar texto JSON por meio da função ISJSON  
  A função **ISJSON** testa se uma cadeia de caracteres contém JSON válido.  
   
-O exemplo a seguir retorna linhas em que a coluna `json_col` contém um JSON válido.  
+O exemplo a seguir retorna linhas nas quais a coluna JSON contém um texto JSON válido. Observe que, sem a restrição JSON explícita, é possível inserir qualquer texto na coluna NVARCHAR:  
   
 ```sql  
-SELECT id, json_col
-FROM tab1
-WHERE ISJSON(json_col) > 0 
+SELECT *
+FROM Families
+WHERE ISJSON(doc) > 0 
 ```  
 
 Para obter mais informações, veja [ISJSON &#40;Transact-SQL&#41;](../../t-sql/functions/isjson-transact-sql.md).  
   
 ##  <a name="VALUE"></a> Extrair um valor de texto JSON por meio da função JSON_VALUE  
-A função **JSON_VALUE** extrai um valor escalar de uma cadeia de caracteres JSON.  
-  
-O exemplo a seguir extrai o valor de uma propriedade JSON aninhada `town` para uma variável local.  
-  
+A função **JSON_VALUE** extrai um valor escalar de uma cadeia de caracteres JSON. A seguinte consulta retornará os documentos em que o campo JSON `id` corresponde ao valor `AndersenFamily`, ordenado pelos campos JSON `city` e `state`:
+
 ```sql  
-SET @town = JSON_VALUE(@jsonInfo, '$.info.address.town')  
+SELECT JSON_VALUE(f.doc, '$.id')  AS Name, 
+       JSON_VALUE(f.doc, '$.address.city') AS City,
+       JSON_VALUE(f.doc, '$.address.county') AS County
+FROM Families f 
+WHERE JSON_VALUE(f.doc, '$.id') = N'AndersenFamily'
+ORDER BY JSON_VALUE(f.doc, '$.address.city') DESC, JSON_VALUE(f.doc, '$.address.state') ASC
 ```  
-  
+
+Os resultados dessa consulta são mostrados na seguinte tabela:
+
+| Nome | Cidade | Região |
+| --- | --- | --- |
+| AndersenFamily | NY | Manhattan |
+
 Para obter mais informações, veja [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md).  
   
 ##  <a name="QUERY"></a> Extrair um objeto ou uma matriz de texto JSON por meio da função JSON_QUERY  
-A função **JSON_QUERY** extrai um objeto ou uma matriz de uma cadeia de caracteres JSON.  
- 
-O exemplo a seguir mostra como retornar um fragmento JSON nos resultados da consulta.  
+
+A função **JSON_QUERY** extrai um objeto ou uma matriz de uma cadeia de caracteres JSON. O exemplo a seguir mostra como retornar um fragmento JSON nos resultados da consulta.  
   
-```sql  
-SELECT FirstName, LastName, JSON_QUERY(jsonInfo,'$.info.address') AS Address
-FROM Person.Person
-ORDER BY LastName
+```sql
+SELECT JSON_QUERY(f.doc, '$.address') AS Address,
+       JSON_QUERY(f.doc, '$.parents') AS Parents,
+       JSON_QUERY(f.doc, '$.parents[0]') AS Parent0
+FROM Families f 
+WHERE JSON_VALUE(f.doc, '$.id') = N'AndersenFamily'
 ```  
-  
+Os resultados dessa consulta são mostrados na seguinte tabela:
+
+| Endereço | Pais | Parent0 |
+| --- | --- | --- |
+| { "state": "NY", "county": "Manhattan", "city": "NY" } | [{ "familyName": "Wakefield", "givenName": "Robin" }, {"familyName": "Miller", "givenName": "Ben" } ]| { "familyName": "Wakefield", "givenName": "Robin" } |
+
 Para obter mais informações, veja [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md).  
-  
+
+## <a name="parse-nested-json-collections"></a>Analisar coleção JSON aninhadas
+
+A função `OPENJSON` permite transformar a submatriz JSON no conjunto de linhas e, em seguida, associá-la ao elemento pai. Como um exemplo, é possível retornar todos os documentos da família e “ingressá-los” com seus objetos `children` armazenados como uma matriz JSON interna:
+
+```sql
+SELECT JSON_VALUE(f.doc, '$.id')  AS Name, 
+       JSON_VALUE(f.doc, '$.address.city') AS City,
+       c.givenName, c.grade
+FROM Families f
+        CROSS APPLY OPENJSON(f.doc, '$.children')
+            WITH(grade int, givenName nvarchar(100))  c
+```
+
+Os resultados dessa consulta são mostrados na seguinte tabela:
+
+| Nome | Cidade | givenName | grade |
+| --- | --- | --- | --- |
+| AndersenFamily | NY | Jesse | 1 |
+| AndersenFamily | NY | Lisa | 8 |
+
+Estamos obtendo duas linhas como um resultado, porque uma linha pai é ingressada com duas linhas filho produzidas analisando dois elementos da submatriz filho. A função `OPENJSON` analisa o fragmento `children` da coluna `doc` e retorna `grade` e `givenName` de cada elemento como um conjunto de linhas. Esse conjunto de linhas pode ser ingressado com o documento pai.
+ 
+## <a name="query-nested-hierarchical-json-sub-arrays"></a>Consultar submatrizes JSON hierárquicas aninhadas
+
+É possível aplicar várias chamadas `CROSS APPLY OPENJSON` para consultar estruturas JSON aninhadas. O documento JSON usado neste exemplo tem uma matriz aninhada chamada `children`, em que cada filho tem uma matriz aninhada de `pets`. A consulta a seguir analisará os filhos de cada documento, retornará cada objeto de matriz como linha e, em seguida, analisará a matriz `pets`:
+
+```sql
+SELECT  familyName,
+    c.givenName AS childGivenName,
+    c.firstName AS childFirstName,
+    p.givenName AS petName 
+FROM Families f 
+    CROSS APPLY OPENJSON(f.doc) 
+        WITH (familyName nvarchar(100), children nvarchar(max) AS JSON)
+        CROSS APPLY OPENJSON(children) 
+        WITH (givenName nvarchar(100), firstName nvarchar(100), pets nvarchar(max) AS JSON) as c
+            OUTER APPLY OPENJSON (pets)
+            WITH (givenName nvarchar(100))  as p
+```
+
+A primeira chamada `OPENJSON` retornará o fragmento da matriz `children` que usa a cláusula AS JSON. Esse fragmento de matriz será fornecido à segunda função `OPENJSON` que retornará `givenName`, `firstName` de cada filho, além da matriz de `pets`. A matriz de `pets` será fornecida à terceira função `OPENJSON` que retornará o `givenName` do animal de estimação.
+Os resultados dessa consulta são mostrados na seguinte tabela:
+
+| familyName | childGivenName | childFirstName | petName |
+| --- | --- | --- | --- |
+| AndersenFamily | Jesse | Merriam | Goofy |
+| AndersenFamily | Jesse | Merriam | Shadow |
+| AndersenFamily | Lisa | Miller| `NULL` |
+
+O documento raiz é ingressado com duas linhas `children` retornadas pela primeira chamada `OPENJSON(children)` que cria duas linhas (ou tuplas). Em seguida, cada linha será ingressada com as novas linhas geradas por `OPENJSON(pets)` usando o operador `OUTER APPLY`. Jesse tem dois animais de estimação, então `(AndersenFamily, Jesse, Merriam)` é ingressado com duas linhas geradas para Goofy e Shadow. Lisa não tem animais de estimação, portanto não há linhas retornadas por `OPENJSON(pets)` para essa tupla. No entanto, como estamos usando `OUTER APPLY`, estamos obtendo `NULL` na coluna. Se colocássemos `CROSS APPLY` em vez de `OUTER APPLY`, Lisa não seria retornada no resultado, porque não há linhas de animais que pudessem ser ingressadas com essa tupla.
+
 ##  <a name="JSONCompare"></a> Comparar JSON_VALUE e JSON_QUERY  
 A principal diferença entre **JSON_VALUE** e **JSON_QUERY** é que **JSON_VALUE** retorna um valor escalar, enquanto **JSON_QUERY** retorna um objeto ou uma matriz.  
   
@@ -113,7 +202,7 @@ Neste texto JSON de exemplo, membros de dados "a" e "c" são valores de cadeia d
 |**$.b[0]**|1|NULL ou erro|  
 |**$.c**|hi|NULL ou erro|  
   
-## <a name="test-jsonvalue-and-jsonquery-with-the-adventureworks-sample-database"></a>Teste JSON_VALUE e JSON_QUERY com o banco de dados de exemplo AdventureWorks  
+## <a name="test-json_value-and-json_query-with-the-adventureworks-sample-database"></a>Teste JSON_VALUE e JSON_QUERY com o banco de dados de exemplo AdventureWorks  
 Teste as funções internas descritas neste tópico executando os exemplos a seguir com o banco de dados de exemplo AdventureWorks. Para obter informações sobre onde obter o AdventureWorks e sobre como adicionar dados JSON para o teste executando um script, consulte [Fazer um test drive do suporte interno a JSON](json-data-sql-server.md#test-drive-built-in-json-support-with-the-adventureworks-sample-database).
   
 Nos exemplos a seguir, a coluna `Info` na tabela `SalesOrder_json` contém texto JSON.  

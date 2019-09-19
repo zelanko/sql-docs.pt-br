@@ -20,12 +20,12 @@ ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7d41bc68aadd9dc2c2ee471a9b14a5dea2ad53d6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 6cd32a9e88d53296eb2d4a94b0eb71757afbdf63
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764216"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846522"
 ---
 # <a name="delete-an-article"></a>Excluir um artigo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68764216"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>Para excluir um artigo de um instantâneo ou publicação transacional  
   
-1.  Execute [sp_droparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) para excluir um artigo, especificado por **@article** , de uma publicação, especificado por **@publication** . Especifique um valor de **1** para **@force_invalidate_snapshot** .  
+1.  Execute [sp_droparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) para excluir um artigo, especificado por **\@article**, de uma publicação, especificado por **\@publication**. Especifique um valor igual a **1** em **\@force_invalidate_snapshot**.  
   
 2.  (Opcional) Para remover inteiramente o objeto publicado de um banco de dados, execute o comando `DROP <objectname>` no Publicador do banco de dados de publicação.  
 
@@ -52,12 +52,12 @@ ms.locfileid: "68764216"
 
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>Para excluir um artigo de uma publicação de mesclagem  
   
-1.  Execute [sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) para excluir um artigo, especificado por **@article** , de uma publicação, especificado por **@publication** . Se necessário, especifique um valor de **1** para **@force_invalidate_snapshot** e um valor de **1** para **@force_reinit_subscription** .  
+1.  Execute [sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) para excluir um artigo, especificado por **\@article**, de uma publicação, especificado por **\@publication**. Se necessário, especifique um valor igual a **1** em **\@force_invalidate_snapshot** e um valor igual a **1** em **\@force_reinit_subscription**.  
   
 2.  (Opcional) Para remover inteiramente o objeto publicado de um banco de dados, execute o comando `DROP <objectname>` no Publicador do banco de dados de publicação.  
   
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
- O exemplo a seguir exclui um artigo da publicação transacional. Como essa alteração invalida o instantâneo existente, um valor de **1** é especificado para o parâmetro **@force_invalidate_snapshot** .  
+ O exemplo a seguir exclui um artigo da publicação transacional. Como essa alteração invalida o instantâneo existente, um valor igual a **1** é especificado no parâmetro **\@force_invalidate_snapshot**.  
   
 ```  
 DECLARE @publication AS sysname;  
@@ -74,7 +74,7 @@ EXEC sp_droparticle
 GO  
 ```  
   
- O exemplo a seguir exclui dois artigos de uma publicação de mesclagem. Como essas alterações invalidam o instantâneo existente, um valor de **1** é especificado para o parâmetro **@force_invalidate_snapshot** .  
+ O exemplo a seguir exclui dois artigos de uma publicação de mesclagem. Como essas alterações invalidam o instantâneo existente, um valor igual a **1** é especificado no parâmetro **\@force_invalidate_snapshot**.  
   
 ```  
 DECLARE @publication AS sysname;  

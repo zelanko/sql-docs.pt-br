@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 27de402dfe659be7c6adc28504f4d17ddc1e4620
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085949"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846741"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -179,7 +179,7 @@ replmerg [-?]
   
  **-ExchangeType** [ **1**| **2**| **3**]  
 > [!WARNING]
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Para restringir o carregamento, use o **@subscriber_upload_options** de **sp_addmergearticle** .  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Para restringir o upload, use o **\@subscriber_upload_options** de **sp_addmergearticle**.  
   
  Especifica o tipo de troca de dados durante a sincronização, que pode ser um dos seguintes:  
   
@@ -320,7 +320,7 @@ replmerg [-?]
  Especifica o número de threads de origem que o Merge Agent usa para enumerar alterações da origem. A origem é o Publicador durante o carregamento e o Assinante durante o download. O padrão é **3**.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- É o número máximo de segundos que o Merge Agent aguarda quando o número de processos de mesclagem simultâneos em execução está no limite definido pela propriedade **@max_concurrent_merge** de **sp_addmergepublication**. Se o número máximo de segundos for alcançado e o Merge Agent ainda estiver esperando, será fechado. Um valor de 0 significa que o agente espera indefinidamente, embora possa ser cancelado.  
+ É o número máximo de segundos que o Agente de Mesclagem aguarda quando o número de processos de mesclagem simultâneos em execução está no limite definido pela propriedade **\@max_concurrent_merge** de **sp_addmergepublication**. Se o número máximo de segundos for alcançado e o Merge Agent ainda estiver esperando, será fechado. Um valor de 0 significa que o agente espera indefinidamente, embora possa ser cancelado.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  É o caminho para o banco de dados Jet (arquivo .mdb) se **SubscriberType** for **2** (permite uma conexão com o banco de dados Jet sem o DSN (Nome da Fonte de Dados) ODBC).  

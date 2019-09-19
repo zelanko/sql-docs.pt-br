@@ -16,12 +16,12 @@ ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2229119fd5f6b8b2482c8bb201ac8bade8366596
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 74183916a438ea19536a7cac1abeb8d6cf7cc18a
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768119"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846693"
 ---
 # <a name="delete-a-pull-subscription"></a>Excluir uma assinatura pull
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,15 +67,15 @@ ms.locfileid: "68768119"
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Para excluir uma assinatura pull em uma publicação de instantâneo ou transacional  
   
-1.  No Assinante no banco de dados de assinatura, execute [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md). Especifique **@publication** , o **@publisher** , e **@publisher_db** .  
+1.  No Assinante no banco de dados de assinatura, execute [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md). Especifique **\@publication**, **\@publisher** e **\@publisher_db**.  
   
-2.  No Publicador do banco de dados de publicação, execute [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md). Especifique **@publication** e **@subscriber** . Especifique um valor de **all** para **@article** . (Opcional) Se o Distribuidor não puder ser acessado, especifique um valor de **1** para **@ignore_distributor** para excluir a assinatura sem remover objetos relacionados no Distribuidor.  
+2.  No Publicador do banco de dados de publicação, execute [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md). Especifique **\@publication** e **\@subscriber**. Especifique um valor igual a **all** em **\@article**. (Opcional) Se o Distribuidor não puder ser acessado, especifique um valor igual a **1** em **\@ignore_distributor** para excluir a assinatura sem remover objetos relacionados no Distribuidor.  
   
 #### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>Para excluir uma assinatura pull em uma publicação de mesclagem.  
   
-1.  No Assinante no banco de dados de assinatura, execute [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md). Especifique **@publication** , **@publisher** e **@publisher_db** .  
+1.  No Assinante no banco de dados de assinatura, execute [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md). Especifique **\@publication**, **\@publisher** e **\@publisher_db**.  
   
-2.  No Publicador no banco de dados de publicação, execute [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md). Especifique **@publication** , o **@subscriber** , e **@subscriber_db** . Especifique um valor de **pull** para **@subscription_type** . (Opcional) Se o Distribuidor não puder ser acessado, especifique um valor de **1** para **@ignore_distributor** para excluir a assinatura sem remover objetos relacionados no Distribuidor.  
+2.  No Publicador no banco de dados de publicação, execute [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md). Especifique **\@publication**, **\@subscriber** e **\@subscriber_db**. Especifique um valor de **pull** para **\@subscription_type**. (Opcional) Se o Distribuidor não puder ser acessado, especifique um valor igual a **1** em **\@ignore_distributor** para excluir a assinatura sem remover objetos relacionados no Distribuidor.  
   
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  O exemplo a seguir exclui uma nova assinatura pull para uma publicação transacional. O primeiro lote é executado no Assinante e o segundo no Publicador.  

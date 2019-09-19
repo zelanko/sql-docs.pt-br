@@ -14,12 +14,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ade7deb2fd86f5dfd0f89aa1f13d5352e6e5fc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1da717e212e03fce4550e7af1a8810980f1b8321
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127289"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70810130"
 ---
 # <a name="rename-a-database"></a>Renomear um banco de dados
 
@@ -63,6 +63,7 @@ Requer a permissão ALTER no banco de dados.
 ## <a name="rename-a-database-using-sql-server-management-studio"></a>Renomear um banco de dados usando o SQL Server Management Studio
 
 Use as etapas a seguir para renomear um SQL Server ou Banco de Dados SQL do Azure usando o SQL Server Management Studio.
+
   
 1. No **Pesquisador de Objetos**, conecte-se à instância do SQL.  
   
@@ -71,6 +72,8 @@ Use as etapas a seguir para renomear um SQL Server ou Banco de Dados SQL do Azur
 3. No Pesquisador de Objetos, expanda **Bancos de Dados**, clique com o botão direito do mouse no banco de dados a renomear e, em seguida, clique em **Renomear**.  
   
 4. Digite o novo nome do banco de dados e, depois, clique em **OK**.  
+  
+5. Opcionalmente, se o banco de dados for o banco de dados padrão, confira [Redefinir o banco de dados padrão após a renomeação](#reset-your-default-database-after-rename).
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -95,6 +98,8 @@ Use as etapas a seguir para renomear um banco de dados do SQL Server usando o T-
    GO
    ```  
 
+4. Opcionalmente, se o banco de dados for o banco de dados padrão, confira [Redefinir o banco de dados padrão após a renomeação](#reset-your-default-database-after-rename).
+
 ### <a name="to-rename-an-azure-sql-database-database"></a>Para renomear um banco de dados do Banco de Dados SQL do Azure
 
 Use as etapas a seguir para renomear um Banco de Dados SQL do Azure usando o T-SQL no SQL Server Management Studio.
@@ -112,6 +117,19 @@ Use as etapas a seguir para renomear um Banco de Dados SQL do Azure usando o T-S
 
 Depois de renomear um banco de dados no SQL Server, faça backup do banco de dados `master`. No Banco de Dados SQL do Azure isso não é necessário, pois os backups ocorrem automaticamente.  
   
+## <a name="reset-your-default-database-after-rename"></a>Redefinir o banco de dados padrão após a renomeação
+
+Se o banco de dados que você está renomeando tiver sido definido como o banco de dados padrão, use o seguinte comando para redefinir o padrão para o banco de dados renomeado:
+
+
+```sql
+USE [master]
+GO
+ALTER LOGIN [your-login] WITH DEFAULT_DATABASE=[new-database-name]
+GO
+```
+
+
 ## <a name="see-also"></a>Consulte Também
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)

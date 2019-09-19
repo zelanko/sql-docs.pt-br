@@ -1,7 +1,7 @@
 ---
 title: Dicas de consulta (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 09/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6e319fb56760f78df56105873f26a9bbec004dd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15135461eaad00ad38238b450c045dd8d4903535
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902009"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228404"
 ---
 # <a name="hints-transact-sql---query"></a>Dicas (Transact-SQL) – consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -216,19 +216,19 @@ Para obter mais informações, confira [WITH common_table_expression &#40;Transa
 NO_PERFORMANCE_SPOOL    
  **Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-Impede que um operador de spool seja adicionado aos planos de consulta (exceto para os planos em que o spool é necessário para assegurar uma semântica de atualização válida). O operador de spool pode reduzir o desempenho em alguns cenários. Por exemplo, o spool usa o tempdb e a contenção do tempdb pode ocorrer se houver várias consultas simultâneas em execução com as operações de spool.  
+Impede que um operador de spool seja adicionado aos planos de consulta (exceto para os planos em que o spool é necessário para assegurar uma semântica de atualização válida). O operador de spool pode reduzir o desempenho em alguns cenários. Por exemplo, o spool usa o tempdb e a contenção do tempdb pode ocorrer se há várias consultas simultâneas em execução com as operações de spool.  
   
-OPTIMIZE FOR ( _@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
+OPTIMIZE FOR ( _\@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
 Instrui o otimizador de consulta a usar um valor específico para uma variável local quando a consulta é compilada e otimizada. O valor é usado somente durante a otimização da consulta e não durante sua execução.  
   
-_@variable\_name_  
+_\@variable\_name_  
 É o nome de uma variável local usada em uma consulta para a qual um valor pode ser atribuído para uso com a dica de consulta OPTIMIZE FOR.  
   
 _UNKNOWN_  
 Especifica que o otimizador de consulta usa dados estatísticos em vez do valor inicial para determinar o valor de uma variável local durante a otimização da consulta.  
   
 _literal\_constant_  
-É um valor constante literal a receber _@variable\_name_ para uso com a dica de consulta OPTIMIZE FOR. _literal\_constant_ é usado somente durante a otimização de consulta, e não como o valor de _@variable\_name_ durante a execução da consulta. _literal\_constant_ pode ser de um dos tipos de dados de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pode ser expresso como uma constante literal. O tipo de dados de _literal\_constant_ precisa ser implicitamente conversível no tipo de dados que _@variable\_name_ faz referências na consulta.  
+É um valor constante literal que receberá _\@variable\_name_ para uso com a dica de consulta OPTIMIZE FOR. _literal\_constant_ é usado somente durante a otimização da consulta e não como o valor de _\@variable\_name_ durante a execução da consulta. _literal\_constant_ pode ser de um dos tipos de dados de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pode ser expresso como uma constante literal. O tipo de dados de _literal\_constant_ precisa ser implicitamente conversível no tipo de dados que _\@variable\_name_ referencia na consulta.  
   
 OPTIMIZE FOR pode anular o comportamento de detecção de parâmetro padrão do otimizador. Use OPTIMIZE FOR também quando criar guias de plano. Para obter mais informações, confira [Recompilar um procedimento armazenado](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md).  
   
@@ -327,7 +327,7 @@ A lista de todos os nomes de USE HINT compatíveis pode ser consultada usando a 
 > [!IMPORTANT] 
 > Algumas dicas USE HINT podem entrar em conflito com os sinalizadores de rastreamento habilitados no nível global ou no nível da sessão, ou com as definições de configurações de escopo do banco de dados. Nesse caso, a dica no nível da consulta (USE HINT) sempre terá precedência. Se um USE HINT estiver em conflito com outra dica de consulta ou com um sinalizador de rastreamento habilitado no nível da consulta (como por QUERYTRACEON), o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará um erro ao tentar executar a consulta. 
 
- USE PLAN N **'** _xml\_plan_ **'**      
+USE PLAN N'_xml\_plan_'  
  Força o otimizador de consulta a usar um plano de consulta existente para uma consulta especificada por **'** _xml\_plan_ **'** . USE PLAN não pode ser especificado com instruções INSERT, UPDATE, MERGE ou DELETE.  
   
 TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** Aplica a dica de tabela especificada à tabela ou à exibição que corresponde ao _exposed\_object\_name_. É recomendável usar uma dica de tabela como uma dica de consulta apenas no contexto de um [guia de plano](../../relational-databases/performance/plan-guides.md).  
@@ -366,7 +366,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
   
 Você pode especificar as dicas de tabela INDEX, FORCESCAN e FORCESEEK como dicas de consulta para uma consulta que não tenha dicas de tabela. Você também pode usá-las para substituir as dicas existente INDEX, FORCESCAN ou FORCESEEK na consulta, respectivamente. 
 
-Dicas de tabela diferentes de INDEX, FORCESCAN e FORCESEEK não são permitidas como dicas de consulta, a não ser que a consulta possua uma cláusula WITH que especifique a dica de tabela. Nesse caso, uma dica correspondente também deve ser especificada como uma dica de consulta. Especifique a dica correspondente como uma dica de consulta usando TABLE HINT na cláusula OPTION. Essa especificação preserva a semântica da consulta. Por exemplo, se a consulta contiver a dica de tabela NOLOCK, a cláusula OPTION no parâmetro **@hints** do guia de plano também precisará conter a dica NOLOCK. Consulte o exemplo K. 
+Dicas de tabela diferentes de INDEX, FORCESCAN e FORCESEEK não são permitidas como dicas de consulta, a não ser que a consulta possua uma cláusula WITH que especifique a dica de tabela. Nesse caso, uma dica correspondente também deve ser especificada como uma dica de consulta. Especifique a dica correspondente como uma dica de consulta usando TABLE HINT na cláusula OPTION. Essa especificação preserva a semântica da consulta. Por exemplo, se a consulta contiver a dica de tabela NOLOCK, a cláusula OPTION no parâmetro **\@hints** do guia de plano também precisará conter a dica NOLOCK. Consulte o exemplo K. 
 
 O Erro 8072 ocorre em alguns cenários. Um deles é quando você especifica uma dica de tabela diferente de INDEX, FORCESCAN ou FORCESEEK usando TABLE HINT na cláusula OPTION sem uma dica de consulta correspondente. O segundo cenário é o oposto. Esse erro indica que a cláusula OPTION pode modificar a semântica da consulta, e a consulta falhará.  
   

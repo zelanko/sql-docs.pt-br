@@ -16,12 +16,12 @@ ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c55e8bbd7001fb28b7661d31ced79e9bcb919894
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: e5ece02e70639ce91aeec72827838c9ad8d7ab8d
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768187"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846697"
 ---
 # <a name="delete-a-push-subscription"></a>Excluir uma assinatura push
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,15 +69,15 @@ ms.locfileid: "68768187"
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Para excluir uma assinatura push de um instantâneo ou publicação transacional  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md). Especifique **@publication** e **@subscriber** . Especifique um valor de **all** para **@article** . (Opcional) Se o Distribuidor não puder ser acessado, especifique um valor de **1** para **@ignore_distributor** para excluir a assinatura sem remover objetos relacionados no Distribuidor.  
+1.  No Publicador do banco de dados de publicação, execute [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md). Especifique **\@publication** e **\@subscriber**. Especifique um valor igual a **all** em **\@article**. (Opcional) Se o Distribuidor não puder ser acessado, especifique um valor igual a **1** em **\@ignore_distributor** para excluir a assinatura sem remover objetos relacionados no Distribuidor.  
   
 2.  No Assinante no banco de dados de assinatura, execute [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md) para remover metadados de replicação no banco de dados de assinatura.  
   
 #### <a name="to-delete-a-push-subscription-to-a-merge-publication"></a>Para excluir uma assinatura push para uma publicação de mesclagem.  
   
-1.  No Publicador, execute [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md), especificando **@publication** , **@subscriber** e **@subscriber_db** . (Opcional) Se o Distribuidor não puder ser acessado, especifique um valor de **1** para **@ignore_distributor** para excluir a assinatura sem remover objetos relacionados no Distribuidor.  
+1.  No Publicador, execute [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md) especificando **\@publication**, **\@subscriber** e **\@subscriber_db**. (Opcional) Se o Distribuidor não puder ser acessado, especifique um valor igual a **1** em **\@ignore_distributor** para excluir a assinatura sem remover objetos relacionados no Distribuidor.  
   
-2.  No Assinante no banco de dados de assinatura, execute [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md). Especifique **@publisher** , o **@publisher_db** , e **@publication** . Isso remove metadados de mesclagem do banco de dados de assinatura.  
+2.  No Assinante no banco de dados de assinatura, execute [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md). Especifique **\@publisher**, **\@publisher_db** e **\@publication**. Isso remove metadados de mesclagem do banco de dados de assinatura.  
   
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  Esse exemplo exclui uma assinatura push para uma publicação transacional.  

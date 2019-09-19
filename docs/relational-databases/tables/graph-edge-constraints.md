@@ -1,7 +1,7 @@
 ---
 title: Restrições de borda de grafo | Microsoft Docs
 ms.custom: ''
-ms.date: 06/21/2019
+ms.date: 09/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: 5c0f7ea57a36c4d264bec5c70e745b36a319bbc8
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731057"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70873886"
 ---
 # <a name="edge-constraints"></a>Restrições do Microsoft Edge
 
@@ -48,6 +48,14 @@ Considere que você tem os nós `Product` e `Customer` em seu gráfico e você u
 ### <a name="indexes-on-edge-constraints"></a>Índices em restrições de borda
 
 Criar uma restrição de borda não cria automaticamente um índice correspondente nas colunas `$from_id` e `$to_id` da tabela de borda. Criar manualmente um índice em um par `$from_id`, `$to_id` é recomendado se você tem consultas de pesquisa de ponto ou carga de trabalho de OLTP.
+
+### <a name="on-delete-referential-actions-on-edge-constraints"></a>Ações referenciais ON DELETE em restrições de borda
+As ações em cascata em uma restrição de borda permite que os usuários definam as ações que o mecanismo de banco de dados usa quando um usuário exclui os nós, que a borda especificada conecta. As ações referenciais a seguir podem ser definidas:  
+*NO ACTION*   
+O mecanismo de banco de dados gera um erro quando você tenta excluir um nó que tem bordas de conexão.  
+
+*CASCADE*   
+Quando um nó é excluído do banco de dados, as bordas de conexão são excluídas.  
 
 ## <a name="working-with-edge-constraints"></a>Trabalhando com restrições de borda
 
@@ -80,7 +88,35 @@ GO
 CREATE TABLE bought
    (
       PurchaseCount INT
-         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product)
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE NO ACTION
+   )
+   AS EDGE;
+   ```
+
+#### <a name="defining-referential-actions-on-a-new-edge-table"></a>Definir ações referenciais em uma nova tabela de borda 
+
+O exemplo a seguir cria uma restrição de borda na tabela de borda **bought** e define a ação referencial ON DELETE CASCADE. 
+
+```sql
+-- CREATE node and edge tables
+CREATE TABLE Customer
+   (
+      ID INTEGER PRIMARY KEY
+      ,CustomerName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE Product
+   (
+      ID INTEGER PRIMARY KEY
+      ,ProductName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE bought
+   (
+      PurchaseCount INT
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE CASCADE
    )
    AS EDGE;
    ```
@@ -248,6 +284,7 @@ DROP CONSTRAINT EC_BOUGHT;
 
 Para modificar uma restrição de borda usando o Transact-SQL, exclua primeiramente a restrição de borda existente e, em seguida, recrie-a com a nova definição.
 
+
 ### <a name="view-edge-constraints"></a>Exibir restrições de borda
 
 [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
@@ -302,4 +339,8 @@ WHERE EC.parent_object_id = object_id('bought');
 
 ## <a name="related-tasks"></a>Tarefas relacionadas
 
+[CREATE TABLE (Grafo do SQL)](../../t-sql/statements/create-table-sql-graph.md)  
+[ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)  
+
 Para saber mais sobre a tecnologia de grafo no SQL Server, confira [Processamento de grafo com o SQL Server e Banco de Dados SQL do Azure](../graphs/sql-graph-overview.md?view=sql-server-2017).
+

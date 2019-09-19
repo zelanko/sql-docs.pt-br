@@ -1,5 +1,5 @@
 ---
-title: Habilitar o backup gerenciado do SQL Server no Microsoft Azure | Microsoft Docs
+title: Habilitar o Backup Gerenciado do SQL Server no Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -10,74 +10,103 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 281f1144fc9698fcb39d974167d02ce36602b4fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b778c458852adc2c26d62eb9d7ef8066b9fbb89
+ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089826"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70238731"
 ---
-# <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Habilitar o backup gerenciado do SQL Server no Microsoft Azure
+# <a name="enable-sql-server-managed-backup-to-azure"></a>Habilitar o Backup Gerenciado do SQL Server no Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve como habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] com as configurações padrão nos níveis de instância e de banco de dados. Também descreve como habilitar as notificações por email e como monitorar a atividade de backup.  
   
  Este tutorial usa o Azure PowerShell. Antes de iniciar o tutorial, [baixe e instale o Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
   
 > [!IMPORTANT]  
->  Se você também quiser habilitar opções avançadas ou usar uma agenda personalizada, defina essas configurações antes de habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Para saber mais, confira [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
+>  Se você também quiser habilitar opções avançadas ou usar uma agenda personalizada, defina essas configurações antes de habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Para obter mais informações, confira [Configurar opções avançadas do Backup Gerenciado do SQL Server no Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
   
-## <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-with-default-settings"></a>Habilitar e configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] com as configurações padrão  
-  
-#### <a name="create-the-azure-blob-container"></a>Criar o contêiner de blob do Azure  
-  
-1.  **Inscrever-se no Azure:** Se você já tiver uma assinatura do Azure, vá para a próxima etapa. Caso contrário, você pode começar com uma [avaliação gratuita](https://azure.microsoft.com/pricing/free-trial/) ou explorar as [opções de compra](https://azure.microsoft.com/pricing/purchase-options/).  
-  
-2.  **Criar uma conta de armazenamento do Azure:** Se você já tiver uma conta de armazenamento, vá para a próxima etapa. Caso contrário, você pode usar o [Portal de Gerenciamento do Azure](https://manage.windowsazure.com/) ou o Azure PowerShell para criar a conta de armazenamento. O comando `New-AzureStorageAccount` a seguir cria uma conta de armazenamento chamada `managedbackupstorage` na região Leste dos EUA.  
-  
-    ```powershell  
-    New-AzureStorageAccount -StorageAccountName "managedbackupstorage" -Location "EAST US"  
-    ```  
-  
-     Para saber mais sobre contas de armazenamento, confira [Sobre as contas de armazenamento do Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
-  
-3.  **Criar um contêiner de blobs para os arquivos de backup:** Crie um contêiner de blobs no Portal de Gerenciamento do Azure ou com o Azure PowerShell. O comando `New-AzureStorageContainer` a seguir cria um contêiner de blob chamado `backupcontainer` na conta de armazenamento `managedbackupstorage` .  
-  
-    ```powershell  
-    $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary  
-    New-AzureStorageContainer -Name backupcontainer -Context $context  
-    ```  
-  
-4.  **Gerar uma SAS (Assinatura de Acesso Compartilhado):** Para acessar o contêiner, é necessário criar uma SAS. Isso pode ser feito em algumas ferramentas, código e no Azure PowerShell. O comando `New-AzureStorageContainerSASToken` a seguir cria um token SAS para o contêiner de blob `backupcontainer` que expira em um ano.  
-  
-  ```powershell  
-  $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
-  New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
-  ```  
+## <a name="create-the-azure-blob-container"></a>Criar o contêiner de blob do Azure
 
-Para o Azure, use o seguinte comando:
-  ```powershell
-  Connect-AzAccount
-  Set-AzContext -SubscriptionId "YOURSUBSCRIPTIONID"
-  $StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
-  $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
-  New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
-  ```  
+O processo exige uma conta do Azure. Caso já tenha uma conta, vá para a próxima etapa. Caso contrário, você pode começar com uma [avaliação gratuita](https://azure.microsoft.com/pricing/free-trial/) ou explorar as [opções de compra](https://azure.microsoft.com/pricing/purchase-options/).
+
+Para saber mais sobre contas de armazenamento, confira [Sobre as contas de armazenamento do Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/). 
+
+#### <a name="azure-clitabazure-cli"></a>[CLI do Azure](#tab/azure-cli)
+
+1. Entre em sua conta do Azure.
+
+    ```azurecli-interactive
+    az login
+    ```
   
-A saída desse comando conterá a URL para o contêiner e o token SAS. A seguir, é mostrado um exemplo:  
+1. Crie uma conta de armazenamento do Azure. Se você já tiver uma conta de armazenamento, vá para a próxima etapa. O comando a seguir cria uma conta de armazenamento chamada `<backupStorage>` na região Leste dos EUA.  
+  
+    ```azurecli-interactive
+    az storage account create -n <backupStorage> -l "eastus" --resource-group <resourceGroup>
+    ```  
+    
+1. Crie um contêiner de blob chamado `<backupContainer>` para os arquivos de backup.
+  
+    ```azurecli-interactive
+    $keys = az storage account keys list --account-name <backupStorage> --resource-group <resourceGroup> | ConvertFrom-Json
+    az storage container create --name <backupContainer> --account-name <backupStorage> --account-key $keys[0].value 
+    ```  
+  
+1. Gere uma SAS (Assinatura de Acesso Compartilhado) para acessar o contêiner. O comando a seguir cria um token SAS para o contêiner de blob `<backupContainer>` que expira em um ano.  
+  
+    ```azurecli-interactive 
+    az storage container generate-sas --name <backupContainer> --account-name <backupStorage> --account-key $keys[0].value
+    ```
+
+#### <a name="powershelltabazure-powershell"></a>[PowerShell](#tab/azure-powershell)
+
+1. O comando a seguir conecta você à sua conta do Azure.
+
+    ```azurepowershell-interactive
+    Connect-AzAccount
+    Set-AzContext -SubscriptionId "<subscriptionId>"
+    ```
+  
+1. Crie uma conta de armazenamento do Azure. Se você já tiver uma conta de armazenamento, vá para a próxima etapa. O comando a seguir cria uma conta de armazenamento chamada `<backupStorage>` na região Leste dos EUA.  
+  
+    ```azurepowershell-interactive
+    New-AzStorageAccount -StorageAccountName <backupStorage> -Location "EAST US" -ResourceGroupName <resourceGroup> -SkuName Standard_GRS
+    ```   
+  
+1. Crie um contêiner de blob chamado `<backupContainer>` para os arquivos de backup.  
+  
+    ```azurepowershell-interactive
+    $context = New-AzStorageContext -StorageAccountName <backupStorage> -StorageAccountKey (Get-AzStorageAccountKey -Name <backupStorage> -ResourceGroupName <resourceGroup>).Value[0]  
+    New-AzStorageContainer -Name <backupContainer> -Context $context  
+    ```  
+  
+1. Gere uma SAS (Assinatura de Acesso Compartilhado) para acessar o contêiner. O comando a seguir cria um token SAS para o contêiner de blob `<backupContainer>` que expira em um ano.
+  
+    ```azurepowershell-interactive 
+    New-AzStorageContainerSASToken -Name <backupContainer> -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context 
+    ```
+
+* * *
+
+> [!NOTE]
+> Essas etapas também podem ser realizadas usando o [portal do Azure](https://portal.azure.com/).
+
+A saída conterá a URL para o contêiner e/ou o token SAS. A seguir, é mostrado um exemplo:  
   
   `https://managedbackupstorage.blob.core.windows.net/backupcontainer?sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl`
   
-No exemplo anterior, separe a URL do contêiner do token SAS no ponto de interrogação (não inclua o ponto de interrogação). Por exemplo, a saída anterior resultaria nos dois valores a seguir.  
+Se a URL for incluída, separe-a do token SAS no ponto de interrogação (não inclua o ponto de interrogação). Por exemplo, a saída anterior resultaria nos dois valores a seguir.  
   
 |||  
 |-|-|  
-|**URL do Contêiner:**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
-|**Token SAS:**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
+|**URL do Contêiner**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
+|**Token SAS**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
 |||
   
 Registre a URL do contêiner e a SAS para uso na criação de uma CREDENCIAL DO SQL. Para obter mais informações sobre a SAS, confira [Assinaturas de Acesso Compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
   
-#### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>Habilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+## <a name="enable-managed-backup-to-azure"></a>Habilitar o Backup Gerenciado no Azure
   
 1.  **Criar uma Credencial do SQL para a URL SAS:** Use o token SAS para criar uma Credencial do SQL para a URL do contêiner de blobs. No SQL Server Management Studio, use a seguinte consulta Transact-SQL a fim de criar a credencial para a URL de seu contêiner de blob, com base no exemplo a seguir:  
   
@@ -97,7 +126,7 @@ Registre a URL do contêiner e a SAS para uso na criação de uma CREDENCIAL DO 
     >  Para habilitar o backup gerenciado no nível da instância, especifique `NULL` ou para o parâmetro `database_name` .  
   
     ```sql  
-    Use msdb;  
+    USE msdb;  
     GO  
     EXEC msdb.managed_backup.sp_backup_config_basic   
      @enable_backup = 1,   
@@ -111,7 +140,7 @@ Registre a URL do contêiner e a SAS para uso na criação de uma CREDENCIAL DO 
   
 5.  **Examinar a Configuração Padrão do Evento Estendido:** examine as configurações do Evento Estendido executando a instrução transact-SQL a seguir.  
   
-    ```  
+    ```sql
     SELECT * FROM msdb.managed_backup.fn_get_current_xevent_settings()  
     ```  
   
@@ -125,21 +154,20 @@ Registre a URL do contêiner e a SAS para uso na criação de uma CREDENCIAL DO 
   
     3.  **Habilitar notificações por email para receber avisos e erros de backup:** Na janela de consulta, execute as seguintes instruções Transact-SQL:  
   
-        ```  
+        ```sql
         EXEC msdb.managed_backup.sp_set_parameter  
         @parameter_name = 'SSMBackup2WANotificationEmailIds',  
         @parameter_value = '<email1;email2>'  
-  
         ```  
   
-7.  **Exibir arquivos de backup na Conta de Armazenamento do Microsoft Azure:** Conecte-se à conta de armazenamento do SQL Server Management Studio ou do Portal de Gerenciamento do Azure. Você verá os arquivos de backup no contêiner especificado. Observe que você poderá ver um banco de dados e um backup de log após 5 minutos da habilitação do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para o banco de dados.  
+7.  **Exibir arquivos de backup na conta de armazenamento do Azure:** Conecte-se à conta de armazenamento no SQL Server Management Studio ou no portal do Azure. Você verá os arquivos de backup no contêiner especificado. Observe que você poderá ver um banco de dados e um backup de log após 5 minutos da habilitação do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para o banco de dados.  
   
 8.  **Monitorar o Status de Integridade:**  Realize o monitoramento por meio das notificações por email configuradas anteriormente ou monitore de forma ativa os eventos registrados em log. Estes são alguns exemplos de instruções Transact-SQL usados para exibir os eventos:  
   
     ```sql  
     --  view all admin events  
-    Use msdb;  
-    Go  
+    USE msdb;  
+    GO  
     DECLARE @startofweek datetime  
     DECLARE @endofweek datetime  
     SET @startofweek = DATEADD(Day, 1-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)   
@@ -157,21 +185,19 @@ Registre a URL do contêiner e a SAS para uso na criação de uma CREDENCIAL DO 
   
     SELECT * from @eventresult  
     WHERE event_type LIKE '%admin%'  
-  
     ```  
   
     ```sql  
     -- to enable debug events  
-    Use msdb;  
-    Go  
-             EXEC managed_backup.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
-  
+    USE msdb;  
+    GO  
+    EXEC managed_backup.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
     ```  
   
     ```sql  
     --  View all events in the current week  
-    Use msdb;  
-    Go  
+    USE msdb;  
+    GO  
     DECLARE @startofweek datetime  
     DECLARE @endofweek datetime  
     SET @startofweek = DATEADD(Day, 1-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)   
@@ -180,7 +206,7 @@ Registre a URL do contêiner e a SAS para uso na criação de uma CREDENCIAL DO 
     EXEC managed_backup.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;  
     ```
   
- As etapas descritas nesta seção destinam-se especificamente à configuração do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pela primeira vez no banco de dados. Você pode modificar as configurações existentes usando o mesmo procedimento armazenado do sistema e fornecer os novos valores.  
+As etapas descritas nesta seção destinam-se especificamente à configuração do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pela primeira vez no banco de dados. Você pode modificar as configurações existentes usando o mesmo procedimento armazenado do sistema e fornecer os novos valores.  
   
-## <a name="see-also"></a>Consulte Também  
- [Backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+## <a name="see-also"></a>Confira também  
+ [Backup Gerenciado do SQL Server no Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  

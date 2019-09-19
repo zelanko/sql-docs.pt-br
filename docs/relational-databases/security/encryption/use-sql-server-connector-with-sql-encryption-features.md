@@ -1,7 +1,7 @@
 ---
 title: Usar o Conector do SQL Server com recursos de criptografia do SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2019
+ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 965980bcfe765f291b232a48af946db5f8f4f230
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: 76b3d714f1522cfecd5c61eb028b59f3bbeaa09d
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329259"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929742"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Use SQL Server Connector with SQL Encryption Features (Usar o Conector do SQL Server com recursos de criptografia do SQL)
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,8 +34,10 @@ ms.locfileid: "68329259"
 > [!NOTE]  
 >  Versões 1.0.0.440 e anteriores foram substituídas e não têm mais suporte em ambientes de produção. Atualize para a versão 1.0.1.0 ou posterior visitando o [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) e usando as instruções da página [Manutenção e solução de problemas do Conector do SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) em "Atualização do Conector do SQL Server".  
   
-## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Transparent Data Encryption usando uma chave assimétrica do Cofre de Chaves do Azure  
- Depois de concluir as Partes I a IV do tópico Setup Steps for Extensible Key Management Using the Azure Key Vault (Etapas de instalação para o gerenciamento extensível de chaves usando o Cofre de Chaves do Azure), use a chave de Cofre de Chaves do Azure para criptografar a chave de criptografia do banco de dados usando TDE.  
+## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Transparent Data Encryption usando uma chave assimétrica do Cofre de Chaves do Azure
+
+Depois de concluir as Partes I a IV do tópico Setup Steps for Extensible Key Management Using the Azure Key Vault (Etapas de instalação para o gerenciamento extensível de chaves usando o Cofre de Chaves do Azure), use a chave de Cofre de Chaves do Azure para criptografar a chave de criptografia do banco de dados usando TDE. Para obter mais informações sobre a rotação de chaves usando o PowerShell, confira [Girar o protetor de TDE (Transparent Data Encryption) usando PowerShell](/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation).
+ 
 Você precisará criar uma credencial e um logon e criar uma chave de criptografia do banco de dados que fará criptografia dos dados e logs no banco de dados. Para criptografar um banco de dados a permissão **CONTROL** é exigida no banco de dados. O gráfico a seguir mostra a hierarquia da chave de criptografia ao usar o Cofre de Chaves do Azure.  
   
  ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  

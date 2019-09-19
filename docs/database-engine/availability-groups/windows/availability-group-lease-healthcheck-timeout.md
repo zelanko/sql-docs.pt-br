@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 51a683d7566fb9a4e7d25da4c89e7ef3ceb1b007
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd476cbcf375b4c54f7831908e43ea5872da8dcb
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991465"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874364"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Mecânica e diretrizes para os tempos limite de verificação da concessão, do cluster e da integridade em Grupos de Disponibilidade AlwaysOn 
 
@@ -45,7 +45,7 @@ Ao contrário de outros mecanismos de failover, a instância do SQL Server desem
 
 O mecanismo de concessão impõe a sincronização entre o SQL Server e o Cluster de Failover do Windows Server. Quando um comando de failover é emitido, o serviço de cluster faz uma chamada offline para a DLL de recurso da réplica primária atual. A DLL de recurso tenta primeiro colocar o grupo de disponibilidade offline usando um procedimento armazenado. Se esse procedimento armazenado falhar ou atingir o tempo limite, a falha será relatada de volta para o serviço de cluster, que emitirá um comando de encerramento. O encerramento tenta novamente executar o mesmo procedimento armazenado, mas, desta vez, o cluster não aguarda a DLL de recurso relatar êxito ou falha antes de colocar o grupo de disponibilidade online em uma nova réplica. Se a segunda chamada de procedimento falhar, então o host do recurso precisará contar com o mecanismo de concessão para colocar a instância offline. Quando a DLL de recurso for chamada para colocar o grupo de disponibilidade offline, a DLL de recurso sinalizará o evento de interrupção da concessão, ativando o thread de trabalho de concessão do SQL Server para colocar o grupo de disponibilidade offline. Mesmo se esse evento de interrupção não for sinalizado, a concessão expirará e a réplica fará a transição para o estado de resolução. 
 
-A concessão é sobretudo um mecanismo de sincronização entre a instância primária e o cluster, mas também pode criar condições de falha onde não houve necessidade de fazer failover. Por exemplo, alta utilização da CPU, condições de memória insuficiente (memória virtual baixa, paginação de processo), falha de resposta do processo SQL ao gerar um despejo de memória, travamento de todo o sistema, cluster (WSFC) offline (por exemplo, por perda de quorum) podem impedir a renovação da concessão da instância do SQL e provocar uma reinicialização ou um failover. 
+A concessão é sobretudo um mecanismo de sincronização entre a instância primária e o cluster, mas também pode criar condições de falha onde não houve necessidade de fazer failover. Por exemplo, alta utilização da CPU, condições de memória insuficiente (memória virtual baixa, paginação de processo), falta de resposta do processo SQL ao gerar um despejo de memória, falta de resposta do sistema, cluster (WSFC) offline (por exemplo, por perda de quorum) podem impedir a renovação da concessão da instância do SQL e provocar uma reinicialização ou um failover. 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>Diretrizes para valores de tempo limite de cluster 
 
@@ -155,9 +155,9 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
   
  | Configuração de tempo limite | Finalidade | Entre | Usos | IsAlive e LooksAlive | Causas | Resultado 
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
- | Tempo limite de concessão </br> **Padrão: 20000** | Evitar splitbrain | Primária para o Cluster </br> (HADR) | [Objetos de evento do Windows](/windows/desktop/Sync/event-objects)| Usado em ambos | Travamento do sistema operacional, memória virtual insuficiente, paginação de conjunto de trabalho, geração de despejo de memória, CPU vinculada, cluster WSFC inoperante (perda de quorum) | Recurso do grupo de disponibilidade offline-online, failover |  
- | Tempo limite da sessão </br> **Padrão: 10000** | Informar sobre o problema de comunicação entre a primária e a secundária | Secundária para primária </br> (HADR) | [Soquetes TCP (mensagens enviadas por meio do ponto de extremidade DBM)](/windows/desktop/WinSock/windows-sockets-start-page-2) | Usado em nenhum dos dois | Comunicação de rede, </br> Problemas na secundária – inoperante, travamento do sistema operacional, contenção de recursos | Secundária – desconectada | 
- |Tempo limite de HealthCheck  </br> **Padrão: 30000** | Indique o tempo limite ao tentar determinar a integridade da réplica primária | Cluster para primária </br> (FCI e HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | Usado em ambos | Condições de falha atendidas, travamento do sistema operacional, memória virtual insuficiente, corte do conjunto de trabalho, geração de despejo, WSFC (perda de quorum), problemas no agendador (agendadores com deadlock)| Recursos do grupo de disponibilidade Offline-online ou Failover, reinicialização/failover de FCI |  
+ | Tempo limite de concessão </br> **Padrão: 20000** | Evitar splitbrain | Primária para o Cluster </br> (HADR) | [Objetos de evento do Windows](/windows/desktop/Sync/event-objects)| Usado em ambos | Falta de resposta do sistema operacional, memória virtual insuficiente, paginação de conjunto de trabalho, geração de despejo de memória, CPU vinculada, cluster WSFC inoperante (perda de quorum) | Recurso do grupo de disponibilidade offline-online, failover |  
+ | Tempo limite da sessão </br> **Padrão: 10000** | Informar sobre o problema de comunicação entre a primária e a secundária | Secundária para primária </br> (HADR) | [Soquetes TCP (mensagens enviadas por meio do ponto de extremidade DBM)](/windows/desktop/WinSock/windows-sockets-start-page-2) | Usado em nenhum dos dois | Comunicação de rede, </br> Problemas na secundária – inoperante, falta de resposta do sistema operacional, contenção de recursos | Secundária – desconectada | 
+ |Tempo limite de HealthCheck  </br> **Padrão: 30000** | Indique o tempo limite ao tentar determinar a integridade da réplica primária | Cluster para primária </br> (FCI e HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | Usado em ambos | Condições de falha atendidas, falta de resposta do sistema operacional, memória virtual insuficiente, corte do conjunto de trabalho, geração de despejo, WSFC (perda de quorum), problemas no agendador (agendadores com deadlock)| Recursos do grupo de disponibilidade Offline-online ou Failover, reinicialização/failover de FCI |  
   | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>Consulte Também    

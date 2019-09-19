@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 063adf4f1f180138150484e4ac9fc397ef886f5d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a14ad2d77b21dba2fd14ea7856aa7199bc081bbe
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68003564"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70809822"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurar o cluster do SLES para o Grupo de Disponibilidade do SQL Server
 
@@ -187,7 +187,7 @@ Depois de adicionar todos os nós, verifique se você precisa ajustar a no-quoru
 
 ## <a name="set-cluster-property-cluster-recheck-interval"></a>Definir a propriedade de cluster cluster-recheck-interval
 
-`cluster-recheck-interval` indica o intervalo de sondagem segundo o qual o cluster verifica se há alterações nos parâmetros de recurso, restrições ou outras opções de cluster. Se uma réplica ficar inativa, o cluster tentará reiniciar a réplica em um intervalo associado ao valor `failure-timeout` e ao valor `cluster-recheck-interval`. Por exemplo, se `failure-timeout` for definido como 60 segundos e `cluster-recheck-interval` for definido como 120 segundos, será realizada uma tentativa de reinicialização em um intervalo superior a 60 segundos, mas inferior a 120 segundos. Recomendamos que você defina failure-timeout como 60 segundos e cluster-recheck-interval com um valor superior a 60 segundos. Não é recomendável definir cluster-recheck-interval com um valor pequeno.
+`cluster-recheck-interval` indica o intervalo de sondagem segundo o qual o cluster verifica se há alterações nos parâmetros de recurso, restrições ou outras opções de cluster. Se uma réplica ficar inativa, o cluster tentará reiniciar a réplica em um intervalo associado ao valor `failure-timeout` e ao valor `cluster-recheck-interval`. Por exemplo, se `failure-timeout` for definido como 60 segundos e `cluster-recheck-interval` for definido como 120 segundos, será realizada uma tentativa de reinicialização em um intervalo superior a 60 segundos, mas inferior a 120 segundos. Recomendamos que você defina failure-timeout como 60 segundos e cluster-recheck-interval com um valor superior a 60 segundos. Não é recomendável definir cluster-recheck-interval como um valor pequeno.
 
 Para atualizar o valor da propriedade para `2 minutes`, execute:
 
@@ -196,7 +196,7 @@ crm configure property cluster-recheck-interval=2min
 ```
 
 > [!IMPORTANT] 
-> Se você já tiver um recurso de grupo de disponibilidade gerenciado por um cluster do Pacemaker, observe que todas as distribuições que usam o pacote mais recente disponível do Pacemaker 1.1.18-11.el7 introduzem uma alteração de comportamento para a configuração de cluster start-failure-is-fatal quando seu valor é falso. Essa alteração afeta o fluxo de trabalho de failover. Se uma réplica primária apresentar uma interrupção, o cluster deverá fazer failover para uma das réplicas secundárias disponíveis. Em vez disso, os usuários observarão que o cluster continua tentando iniciar a réplica primária com falha. Se a primária nunca ficar online (devido a uma interrupção permanente), o cluster nunca fará failover para outra réplica secundária disponível. Devido a essa alteração, a configuração recomendada anteriormente para definir start-failure-is-fatal não é mais válida e a configuração precisa ser revertida para seu valor padrão `true`. Além disso, o recurso do AG precisa ser atualizado para incluir a propriedade `failover-timeout`. 
+> Se você já tiver um recurso de grupo de disponibilidade gerenciado por um cluster do Pacemaker, observe que todas as distribuições que usam o pacote mais recente disponível do Pacemaker 1.1.18-11.el7 introduzem uma alteração de comportamento para a configuração de cluster start-failure-is-fatal quando seu valor é falso. Essa alteração afeta o fluxo de trabalho de failover. Se uma réplica primária apresentar uma interrupção, o cluster deverá fazer failover para uma das réplicas secundárias disponíveis. Em vez disso, os usuários observarão que o cluster continua tentando iniciar a réplica primária com falha. Se a primária nunca ficar online (devido a uma interrupção permanente), o cluster nunca fará failover para outra réplica secundária disponível. Devido a essa alteração, a configuração recomendada anteriormente para definir start-failure-is-fatal não é mais válida e a configuração precisa ser revertida de volta para seu valor padrão `true`. Além disso, o recurso do AG precisa ser atualizado para incluir a propriedade `failover-timeout`. 
 >
 >Para atualizar o valor da propriedade para `true`, execute:
 >
@@ -220,7 +220,11 @@ O isolamento no nível do recurso garante principalmente que não haja dados cor
 
 O isolamento no nível do nó garante que um nó não execute nenhum recurso. Isso é feito pela redefinição do nó e pela implementação do Pacemaker do que é chamado STONITH (que significa "acertar a cabeça do outro nó"). O Pacemaker dá suporte a uma grande variedade de dispositivos de isolamento, como no-break ou adaptadores de rede de gerenciamento para servidores.
 
-Para obter mais informações, confira [Clusters do Pacemaker do zero](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/), [Isolamento e STONITH](https://clusterlabs.org/doc/crm_fencing.html) de [Documentação sobre HA do SUSE: Isolamento e STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+Para obter mais informações, consulte:
+
+- [Clusters do Pacemaker do zero](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)
+- [Isolamento e STONITH](https://clusterlabs.org/doc/crm_fencing.html)
+- [Documentação sobre HA do SUSE: Isolamento e STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)
 
 No momento da inicialização do cluster, o STONITH será desabilitado se nenhuma configuração for detectada. Ele poderá ser habilitado mais tarde pela execução do seguinte comando:
 
@@ -230,7 +234,6 @@ sudo crm configure property stonith-enabled=true
   
 >[!IMPORTANT]
 >A desabilitação do STONITH destina-se apenas a fins de teste. Se pretender usar o Pacemaker em um ambiente de produção, você deverá planejar uma implementação do STONITH dependendo do ambiente e mantê-lo habilitado. O SUSE não fornece agentes de isolamento para nenhum ambiente de nuvem (incluindo o Azure) ou o Hyper-V. Consequentemente, o fornecedor do cluster não dá suporte para a execução de clusters de produção nesses ambientes. Estamos trabalhando em uma solução para essa lacuna que estará disponível em versões futuras.
-
 
 ## <a name="configure-the-cluster-resources-for-sql-server"></a>Configurar os recursos de cluster para o SQL Server
 
@@ -313,7 +316,7 @@ A restrição de colocalização tem uma restrição de ordenação implícita. 
 4. O mestre do grupo de disponibilidade no nó 1 é rebaixado a servidor subordinado.
 5. O servidor subordinado do grupo de disponibilidade no nó 2 é promovido a mestre. 
 
-Para impedir que o endereço IP aponte temporariamente para o nó com o secundário de pré-failover, adicione uma restrição de ordenação. Para adicionar uma restrição de ordenação, execute o seguinte comando em um nó: 
+Para impedir que o endereço IP aponte temporariamente para o nó com o secundário de pré-failover, adicione uma restrição de ordenação. Para adicionar uma restrição de ordenação, execute o comando a seguir em um nó: 
 
 ```bash
 crm crm configure \
@@ -336,4 +339,4 @@ Para obter mais informações, consulte:
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Operar o grupo de disponibilidade HA](sql-server-linux-availability-group-failover-ha.md)
+[Operar grupo de disponibilidade de HA](sql-server-linux-availability-group-failover-ha.md)

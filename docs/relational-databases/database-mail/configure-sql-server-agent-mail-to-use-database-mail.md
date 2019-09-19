@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 81dbaedcb67b7e641e00c37ebb27e35fb2fceca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e174785891c30b7a4c6df240f446fe630a21e0c
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134570"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211253"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurar o SQL Server Agent Mail para usar o Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +36,16 @@ ms.locfileid: "68134570"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
+  > [!NOTE]
+  > O SQL Agent na Instância Gerenciada sempre é configurado para usar o Database Mail, portanto, esse conteúdo não é aplicável na Instância Gerenciada. Na Instância Gerenciada, você precisa ter um perfil que precisa ser chamado **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** para associar o SQL Agent ao Database Mail. 
+  
 ###  <a name="Prerequisites"></a> Pré-requisitos  
   
 -   [Habilite o Database Mail](../../relational-databases/database-mail/configure-database-mail.md).  
   
 -    [Crie uma conta do Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md) para a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a ser usada.  
   
--   [Crie um perfil do Database Mail](../../relational-databases/database-mail/create-a-database-mail-profile.md) para a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a ser usada e adicione o usuário a **DatabaseMailUserRole** no banco de dados **msdb** .  
+-   [Crie um perfil do Database Mail](../../relational-databases/database-mail/create-a-database-mail-profile.md) para a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a ser usada e adicione o usuário a **DatabaseMailUserRole** no banco de dados **msdb** .
   
 -   Defina o perfil como o perfil padrão para o banco de dados **msdb** .  
   
@@ -64,7 +67,7 @@ ms.locfileid: "68134570"
   
 -   Na lista **Sistema de email** , selecione **Database Mail**.  
   
--   Na lista **Perfil de email**, selecione um perfil de email para o Database Mail.  
+-   Na lista **Perfil de email**, selecione um perfil de email para o Database Mail. 
   
 -   Reinicie o SQL Server Agent.  
   

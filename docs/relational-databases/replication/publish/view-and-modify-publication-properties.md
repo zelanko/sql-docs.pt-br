@@ -19,12 +19,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c636db57a13cc242fb152f8dd670eb247f962247
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 76f5014ec7a7c06496c3850354da528da89e67b2
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764088"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846593"
 ---
 # <a name="view-and-modify-publication-properties"></a>Visualizar e modificar as propriedades da publicação
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -106,29 +106,29 @@ ms.locfileid: "68764088"
   
 #### <a name="to-view-the-properties-of-a-snapshot-or-transactional-publication"></a>Para visualizar as propriedades de uma publicação de instantâneo ou transacional  
   
-1.  Execute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md), especificando o nome da publicação para o parâmetro **@publication** . Se você não especificar esse parâmetro, as informações sobre todas as publicações no Publicador serão retornadas.  
+1.  Execute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) especificando o nome da publicação no parâmetro **\@publication**. Se você não especificar esse parâmetro, as informações sobre todas as publicações no Publicador serão retornadas.  
   
 #### <a name="to-change-the-properties-of-a-snapshot-or-transactional-publication"></a>Para alterar as propriedades de uma publicação de instantâneo ou transacional  
   
-1.  Execute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), especificando a propriedade de publicação a ser alterada no parâmetro **@property** e o novo valor dessa propriedade no parâmetro **@value** .  
+1.  Execute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) especificando a propriedade de publicação a ser alterada no parâmetro **\@property** e o novo valor dessa propriedade no parâmetro **\@value**.  
   
     > [!NOTE]  
-    >  Se a alteração exigir a geração de um novo instantâneo, deve-se também especificar um valor de **1** para **@force_invalidate_snapshot** , e se a alteração exigir que os Assinantes sejam reinicializados, deve-se especificar um valor de **1** para **@force_reinit_subscription** . Para obter mais informações sobre as propriedades que, quando alteradas, exigem um novo instantâneo ou uma nova reinicialização, consulte [Alterar propriedades da publicação e do artigo](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  Se a alteração exigir a geração de um instantâneo, você também precisará especificar um valor igual a **1** em **\@force_invalidate_snapshot**, e se a alteração exigir que os Assinantes sejam reinicializados, você precisará especificar um valor igual a **1** em **\@force_reinit_subscription**. Para obter mais informações sobre as propriedades que, quando alteradas, exigem um novo instantâneo ou uma nova reinicialização, consulte [Alterar propriedades da publicação e do artigo](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>Para visualizar as propriedades de uma publicação de mesclagem  
   
-1.  Execute [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), especificando o nome da publicação para o parâmetro **@publication** . Se você não especificar esse parâmetro, as informações sobre todas as publicações no Publicador serão retornadas.  
+1.  Execute [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) especificando o nome da publicação no parâmetro **\@publication**. Se você não especificar esse parâmetro, as informações sobre todas as publicações no Publicador serão retornadas.  
   
 #### <a name="to-change-the-properties-of-a-merge-publication"></a>Para alterar as propriedades de uma publicação de mesclagem  
   
-1.  Execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md),  especificando a propriedade de publicação que está sendo alterada no parâmetro **@property** e o novo valor dessa propriedade no parâmetro **@value** .  
+1.  Execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) especificando a propriedade de publicação que está sendo alterada no parâmetro **\@property** e o novo valor dessa propriedade no parâmetro **\@value**.  
   
     > [!NOTE]  
-    >  Se a alteração exigir a geração de um novo instantâneo, deve-se também especificar um valor de **1** para **@force_invalidate_snapshot** e se a alteração exigir que os Assinantes sejam reinicializados, deve-se especificar um valor de **1** para **@force_reinit_subscription** . Para obter mais informações sobre as propriedades que, quando alteradas, exigem um instantâneo novo ou reinicialização, consulte [Alterar propriedades da publicação e do artigo](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  Se a alteração exigir a geração de um instantâneo, você também precisará especificar um valor igual a **1** em **\@force_invalidate_snapshot**, e se a alteração exigir que os Assinantes sejam reinicializados, você precisará especificar um valor igual a **1** em **\@force_reinit_subscription**. Para obter mais informações sobre as propriedades que, quando alteradas, exigem um novo instantâneo ou uma reinicialização, confira [Alterar as propriedades da publicação e do artigo](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>Para visualizar as propriedades de um instantâneo  
   
-1.  Execute [sp_helppublication_snapsho](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md), especificando o nome da publicação para o parâmetro **@publication** .  
+1.  Execute [sp_helppublication_snapsho](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md) especificando o nome da publicação no parâmetro **\@publication**.  
   
 #### <a name="to-change-the-properties-of-a-snapshot"></a>Para alterar as propriedades de um instantâneo  
   

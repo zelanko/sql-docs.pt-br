@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ae61bdd59202db73b404bf2c639c2f1cee98e81f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08379ce20bfc58c0d6c17256ff8810421334cf1c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058110"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874864"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Replicação de mesclagem avançada – detecção e resolução de conflito
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,8 @@ ms.locfileid: "68058110"
 ## <a name="conflict-resolution"></a>Resolução de conflitos  
  Após a detecção de um conflito, o Agente de Mesclagem inicia o resolvedor do conflito selecionado e usa o resolvedor para determinar o vencedor do conflito. A linha vencedora é aplicada ao Publicador e ao Assinante, e os dados da linha perdedora são gravados em uma tabela de conflitos. Os conflitos estão resolvidos imediatamente após a execução do resolvedor, a menor que se opte por resolver conflitos de forma interativa.  
 
-Resolver conflitos de replicação de mesclagem [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Resolver conflitos de replicação de mesclagem  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
   Quando o Publicador e o Assinante estão conectados e ocorre a sincronização, o Agente de Mesclagem detecta se há algum conflito. Se houver conflitos detectados, o Agente de Mesclagem utiliza um resolvedor de conflitos para determinar quais dados serão aceitos e propagados para outros sites.  
   
 > [!NOTE]  

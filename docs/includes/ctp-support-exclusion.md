@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ffd608faf64818a7acd9e38d9c502f575be6716a
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: ccc96ecf7dccede236616e4680243116b8492d6b
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653050"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70309851"
 ---
 ## <a name="enabled-deployment-scenarios"></a>Cenários de implantação habilitados
 
@@ -13,7 +13,7 @@ O SQL Server 2019 versão Release Candidate (RC) habilita os seguintes cenários
 - Instalação lado a lado. Instale instâncias do SQL Server 2019 RC com instâncias do SQL Server 2012 por meio do SQL Server 2017 ou outras instâncias do SQL Server 2019 3.0 CTP 3.0 ou superior.
    >[!NOTE]
    >Embora o lado a lado não seja bloqueado com o SQL Server 2008 e 2008 R2, não há versões do sistema operacional Windows com suporte comum entre eles e o SQL Server 2019.
-- Atualização in-loco. Atualize instâncias do SQL Server 2019 RC de instâncias do SQL Server 2012 até o SQL Server 2017 e SQL Server CTP 3.0. A atualização de um SQL Server CTP 2019 abaixo do 3.0 não tem suporte, uma nova instalação deve ser executada.
+- Atualização in-loco. Faça a atualização para o SQL Server 2019 RC das instâncias do SQL Server 2012 ao SQL Server 2017 e do SQL Server CTP 3.0. A atualização de um SQL Server CTP 2019 abaixo do 3.0 não tem suporte, uma nova instalação deve ser executada.
    >[!NOTE]
    >Embora a atualização in-loco do SQL Server 2008 e 2008 R2 não esteja bloqueada, não há versões do sistema operacional Windows com suporte comum entre eles e o SQL Server 2019.
 

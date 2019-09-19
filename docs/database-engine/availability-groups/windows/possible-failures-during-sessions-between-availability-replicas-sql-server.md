@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eab23cafc4e73efd16dd2feb096db12495d8f354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8fe226c5d419d7214fe20968525ec64ce44bbee6
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014535"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874537"
 ---
 # <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>"Determinar o possível motivo de falhas de conectividade entre réplicas de disponibilidade"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ Problemas físicos, do sistema operacional ou do [!INCLUDE[ssNoVersion](../../..
   
 -   Erros de rede, como tempos-limite de link de TCP, pacotes descartados ou corrompidos ou pacotes que estão em ordem incorreta.  
   
--   Um sistema operacional pendente, servidor ou estado de banco de dados.  
+-   Um sistema operacional, servidor ou banco de dados que não está respondendo.  
   
 -   Um servidor Windows que atingiu o tempo limite.  
   

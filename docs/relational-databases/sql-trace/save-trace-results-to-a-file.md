@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4d0c3b205b457b35d39e8e2648661c1de5e494fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1506c13655187ad29d27f96f5fa1b73d01f67620
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132203"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846822"
 ---
 # <a name="save-trace-results-to-a-file"></a>Salvar resultados de rastreamento em um arquivo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68132203"
   
 -   Efetuar otimização de consultas  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] salva os resultados em um arquivo quando são especificados um caminho e o nome de arquivo para o argumento **@tracefile** do procedimento armazenado **sp_trace_create**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] salva os resultados de rastreamento em um arquivo quando são especificados um caminho e um nome de arquivo para o argumento **\@tracefile** do procedimento armazenado **sp_trace_create**.  
   
 > [!NOTE]  
 >  Se for especificado um caminho para que o procedimento armazenado **sp_trace_create** para salvar o arquivo de rastreamento, o diretório deverá estar acessível ao servidor. Esteja ciente, ainda, de que, se for especificado um diretório local para **sp_trace_create**, terá de ser um diretório local no computador do servidor.  

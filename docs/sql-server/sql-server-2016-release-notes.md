@@ -13,12 +13,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4a0bc3d50808c25999f1791a752e069bc02bed0d
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 51ee5e3eb1298c2f33aeecdb104be14245107e7c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811565"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874918"
 ---
 # <a name="sql-server-2016-release-notes"></a>Notas de Versão do SQL Server 2016.
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -218,7 +218,7 @@ Além disso, execute os seguintes procedimentos armazenados do Repositório de C
 
  **Ajuda F1:** por design, quando você pressiona F1 no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], a versão online do artigo da Ajuda F1 é exibida no navegador. O problema está na ajuda baseada em navegador, mesmo quando você configurou e instalou a Ajuda local.
 
-**Atualização do conteúdo:** No SQL Server Management Studio e no Visual Studio, o aplicativo Help Viewer poderá congelar (parar de responder) durante o processo de adição da documentação. Para resolver esse problema, conclua as etapas a seguir. Para obter mais informações sobre esse problema, confira [O Visual Studio Help Viewer congela](https://msdn.microsoft.com/library/mt654096.aspx).
+**Atualização do conteúdo:** No SQL Server Management Studio e no Visual Studio, o aplicativo Visualizador da Ajuda poderá parar de responder durante o processo de adição da documentação. Para resolver esse problema, conclua as etapas a seguir. Para obter mais informações sobre esse problema, confira [O Visual Studio Help Viewer congela](https://msdn.microsoft.com/library/mt654096.aspx).
 
 * Abra o arquivo %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings no Bloco de Notas e altere a data no código a seguir para alguma data no futuro.
 

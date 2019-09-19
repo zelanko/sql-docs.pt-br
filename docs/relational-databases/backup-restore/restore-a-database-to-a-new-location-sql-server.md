@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bef38ae0b93eb43d508192c6f748a36320143689
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 42cd70465f890e1da1f40076da5e41f0b4b40884
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937533"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278919"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurar um banco de dados em um novo local (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,64 +107,64 @@ ms.locfileid: "67937533"
   
 2.  Use a instrução [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) para restaurar o backup completo do banco de dados. Por padrão, os arquivos de dados e de log são restaurados em seus locais originais. Para realocar um banco de dados, use a opção MOVE para realocar cada um dos arquivos do banco de dados e para evitar colisões com arquivos existentes.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for restoring the database to a new location and a new name is:  
+  A sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] básica para restaurar o banco de dados em um novo local e com um novo nome é:  
   
-     RESTORE DATABASE *new_database_name*  
+  RESTORE DATABASE *new_database_name*  
   
-     FROM *backup_device* [ ,...*n* ]  
+  FROM *backup_device* [ ,...*n* ]  
   
-     [ WITH  
+  [ WITH  
   
-     {  
+  {  
   
-     [ **RECOVERY** | NORECOVERY ]  
+  [ **RECOVERY** | NORECOVERY ]  
   
-     [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
+  [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
   
-     [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
+  [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
   
-     }  
+  }  
   
-     ;  
+  ;  
   
-    > **NOTE!** When preparing to relocate a database on a different disk, you should verify that sufficient space is available and identify any potential collisions with existing files. This involves using a [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) statement that specifies the same MOVE parameters that you plan to use in your RESTORE DATABASE statement.  
+  > [!NOTE] 
+  > Ao se preparar para realocar um banco de dados em um disco diferente, você deve verificar se espaço suficiente está disponível e identificar todas as colisões potenciais com arquivos existentes. Isso envolve o uso de uma instrução [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) que especifica os mesmos parâmetros MOVE que você planeja usar em sua instrução RESTORE DATABASE.  
   
-     The following table describes arguments of this RESTORE statement in terms of restoring a database to a new location. For more information about these arguments, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
+  A tabela a seguir descreve os argumentos dessa instrução RESTORE em termos de restauração de um banco de dados em um novo local. Para obter mais informações sobre esses argumentos, consulte [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
-     *new_database_name*  
-     The new name for the database.  
+  *new_database_name*  
+  O novo nome do banco de dados.  
   
-    >**NOTE:** If you are restoring the database to a different server instance, you can use the original database name instead of a new name.  
+  > [!NOTE]
+  > Se você estiver restaurando o banco de dados em uma instância de servidor diferente, poderá usar o nome do banco de dados original em vez de um novo nome.  
   
-     *backup_device* [ **,**...*n* ]  
-     Specifies a comma-separated list of from 1 to 64 backup devices from which the database backup is to be restored. You can specify a physical backup device, or you can specify a corresponding logical backup device, if defined. To specify a physical backup device, use the DISK or TAPE option:  
+  *backup_device* [ **,** ...*n* ]  
+  Especifica uma lista separada por vírgulas de 1 a 64 dispositivos de backup nos quais o backup de banco de dados precisa ser restaurado. Você pode especificar um dispositivo de backup físico ou especificar um dispositivo de backup lógico correspondente, se definido. Para especificar um dispositivo de backup físico, use a opção DISK ou TAPE:  
   
-     { DISK | TAPE } **=**_physical_backup_device_name_  
+  { DISK | TAPE } **=** _physical_backup_device_name_  
   
-     For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+  Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
-     { **RECOVERY** | NORECOVERY }  
-     If the database uses the full recovery model, you might need to apply transaction log backups after you restore the database. In this case, specify the NORECOVERY option.  
+  { **RECOVERY** | NORECOVERY }  
+  Se o banco de dados usar o modelo de recuperação completa, você poderá precisar aplicar backups de log de transações depois de restaurar o banco de dados. Nesse caso, especifique a opção NORECOVERY.  
   
-     Otherwise, use the RECOVERY option, which is the default.  
+  Caso contrário, use a opção de RECOVERY que é a padrão.  
   
-     FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
-     Identifies the backup set to be restored. For example, a *backup_set_file_number* of **1** indicates the first backup set on the backup medium and a *backup_set_file_number* of **2** indicates the second backup set. You can obtain the *backup_set_file_number* of a backup set by using the [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) statement.  
+  FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
+  Identifica o conjunto de backup a ser restaurado. Por exemplo, um *backup_set_file_number* de **1** indica o primeiro conjunto de backup na mídia de backup e um *backup_set_file_number* de **2** indica o segundo conjunto de backup. Você pode obter o *backup_set_file_number* de um backup definido usando a instrução [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) .  
   
-     When this option is not specified, the default is to use the first backup set on the backup device.  
+  Quando esta opção não está especificada, o padrão é usar o primeiro conjunto de backup no dispositivo de backup.  
   
-     For more information, see "Specifying a Backup Set," in [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+  Para obter mais informações, consulte "Especificando um conjunto de backup", em [Argumentos RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
-     MOVE **'**_logical_file_name_in_backup_**'** TO **'**_operating_system_file_name_**'** [ **,**...*n* ]  
-     Specifies that the data or log file specified by *logical_file_name_in_backup* is to be restored to the location specified by *operating_system_file_name*. Specify a MOVE statement for every logical file you want to restore from the backup set to a new location.  
+  MOVE **'** _logical_file_name_in_backup_ **'** TO **'** _operating_system_file_name_ **'** [ **,** ...*n* ]  
+  Especifica que o arquivo de log ou de dados especificado pelo *logical_file_name_in_backup* deve ser restaurado no local especificado pelo *operating_system_file_name*. Especifique uma instrução MOVE para cada arquivo lógico que você deseja restaurar do conjunto de backup para um novo local.  
   
-    |Opção|Descrição|  
-    |------------|-----------------|  
-    |*logical_file_name_in_backup*|Especifica o nome lógico de um arquivo de log ou de dados no conjunto de backup. O nome do arquivo lógico de um arquivo de log ou de dados em um conjunto de backup corresponde ao seu nome lógico no banco de dados quando o conjunto de backup foi criado.<br /><br /> <br /><br /> Observação: Para obter uma lista dos arquivos lógicos do conjunto de backup, use [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).|  
-    |*operating_system_file_name*|Especifica um novo local para o arquivo especificado por *logical_file_name_in_backup*. O arquivo será restaurado neste local.<br /><br /> Opcionalmente, *operating_system_file_name* especifica um novo nome de arquivo para o arquivo restaurado. Isso será necessário se você estiver criando uma cópia de um banco de dados existente na mesma instância de servidor.|  
-    |*n*|É um espaço reservado que indica que você pode especificar instruções MOVE adicionais.|  
+  |Opção|Descrição|  
+  |------------|-----------------|  
+  |*logical_file_name_in_backup*|Especifica o nome lógico de um arquivo de log ou de dados no conjunto de backup. O nome do arquivo lógico de um arquivo de log ou de dados em um conjunto de backup corresponde ao seu nome lógico no banco de dados quando o conjunto de backup foi criado.<br /><br /> <br /><br /> Observação: Para obter uma lista dos arquivos lógicos do conjunto de backup, use [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).|  
+  |*operating_system_file_name*|Especifica um novo local para o arquivo especificado por *logical_file_name_in_backup*. O arquivo será restaurado neste local.<br /><br /> Opcionalmente, *operating_system_file_name* especifica um novo nome de arquivo para o arquivo restaurado. Isso será necessário se você estiver criando uma cópia de um banco de dados existente na mesma instância de servidor.|  
+  |*n*|É um espaço reservado que indica que você pode especificar instruções MOVE adicionais.|  
   
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  Este exemplo cria um novo banco de dados denominado `MyAdvWorks` por meio da restauração de um backup do banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] que inclui dois arquivos: [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data e [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log. Esse banco de dados usa o modelo de recuperação simples. O banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] já existe na instância do servidor, portanto, os arquivos no backup devem ser restaurados em um novo local. A instrução RESTORE FILELISTONLY é usada para determinar o número e os nomes dos arquivos no banco de dados que está sendo restaurado. O backup do banco de dados é o primeiro conjunto de backup no dispositivo de backup.  

@@ -11,12 +11,12 @@ ms.assetid: 12be8011-b76c-45c1-8f55-7f46e0e374e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0db885db7e3138b4a863dc93a022950a8a30a5ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 14f1d7712973c2c51812a8606b1fc4c1ba15264d
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915323"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846792"
 ---
 # <a name="create-and-access-tables-in-tempdb-from-stored-procedures"></a>Criar e acessar tabelas no TempDB de procedimentos armazenados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "67915323"
 
 Para saber detalhes sobre a otimização de memória da tabela temporária e os cenários de variável de tabela, confira: [Tabela temporária e variável de tabela mais rápidas usando a otimização de memória](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
   
-  O exemplo a seguir mostra como o uso de uma tabela temporária com três colunas (id, ProductID, Quantity) pode ser substituído usando uma variável de tabela **@OrderQuantityByProduct** do tipo **dbo.OrderQuantityByProduct**:  
+  O seguinte exemplo mostra como o uso de uma tabela temporária com três colunas (id, ProductID e Quantity) pode ser substituído usando uma variável de tabela **\@OrderQuantityByProduct** do tipo **dbo.OrderQuantityByProduct**:  
   
 ```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   

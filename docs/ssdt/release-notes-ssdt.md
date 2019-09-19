@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9af4c8c43dfa3e7153b6ecb9e42301677247845d
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: 9f4fa51ff0ba9a5ce3e2960ab07e3e1994ddb881
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69531032"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874894"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Notas sobre a versão para o SSDT (SQL Server Data Tools)
 
@@ -304,7 +304,7 @@ _SSDT para Visual Studio 2017._
 
 O Visual Studio 2017 (15.5.1) é a mesma versão da versão 15.5.0, com exceção das seguintes correções de bug no instalador:
 
-1.  Correção de um problema no qual o instalador trava na pós-instalação do SQL Server Integration Services.
+1.  Correção de um problema no qual o instalador para de responder na pós-instalação do SQL Server Integration Services.
 2.  Correção de um problema em que a instalação falha com a seguinte mensagem de erro: "Não há suporte para a operação de metarquivo solicitada (0x800707D3)".
 
 Além dessas duas correções de bug, os seguintes detalhes do 15.5.0 ainda se aplicam ao 15.5.1
@@ -844,7 +844,7 @@ O SSDT Tabular agora inclui uma instância do SSAS interna, que o SSDT Tabular i
 * Foi corrigido um problema na caixa de diálogo de Propriedades do Projeto do SSDT AS para que seja corretamente ancorada ao ser redimensionada com o dimensionamento com alto DPI.
 * Foi corrigido um problema em projetos do SSDT AS que pode ter causado um erro ao atualizar determinados modelos com tabelas coladas.
 * Foi corrigido um problema no SSDT AS em que colar linhas de folha inteira do Excel era lento e criava muitas colunas indesejadas.
-* Foi corrigido um problema no SSDT AS em que a análise e o realce de grandes expressões DataTable estáticas eram lentos ou pareciam travar.
+* Foi corrigido um problema no SSDT AS em que a análise e o realce de grandes expressões DataTable estáticas eram lentos ou pareciam parar de responder.
 * Foi corrigido um problema no SSDT AS para adicionar medidas e valores de KPI à perspectiva atual selecionada no editor.
 * Foi corrigido um problema no SSDT em que importar dados do SQL Azure para o projeto AS não dava suporte a tipos de esquema que não eram "dbo".
 

@@ -3,19 +3,19 @@ title: Extensão do SQL Server 2019 (versão prévia)
 titleSuffix: Azure Data Studio
 description: Extensão da Versão Prévia do SQL Server 2019 para Azure Data Studio
 ms.custom: seodec18
-ms.date: 08/15/2019
+ms.date: 09/11/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 5def1291480b4b2dbe1eca289f02e5c9cfd6b8d7
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 3d47ea0bc1c905516504c25e3a1f05ca5b74c28d
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494038"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878618"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extensão do SQL Server 2019 (versão prévia)
 
@@ -29,9 +29,9 @@ Para instalar a extensão do SQL Server 2019 (versão prévia), baixe e instale 
 
    |Plataforma|Download|Data de liberação|Versão
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101241)|15 de agosto de 2019 |0.15.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101240)|15 de agosto de 2019 |0.15.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101239)|15 de agosto de 2019 |0.15.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103613)|11 de setembro de 2019 |0.16.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|11 de setembro de 2019 |0.16.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|11 de setembro de 2019 |0.16.0
 
 1. No Azure Data Studio, escolha **Instalar extensão do pacote VSIX** no menu **Arquivo** e selecione o arquivo .vsix baixado.
 
@@ -42,6 +42,10 @@ Para instalar a extensão do SQL Server 2019 (versão prévia), baixe e instale 
 1. Após o recarregamento, a extensão instalará as dependências. Você pode ver o andamento na janela de Saída. O processo pode levar vários minutos.
 
 1. Após as dependências serem instaladas, feche e reabra Azure Data Studio. O tipo de conexão **Cluster de Big Data do SQL Server** ficará disponível somente após você reiniciar o Azure Data Studio.
+
+## <a name="changes-in-release-016"></a>Alterações na versão 0.16
+* Assistente Criar Tabela Externa:
+  * Melhoria no tratamento de erro ao carregar tabelas e exibições na página de mapeamento de objetos.
 
 ## <a name="changes-in-release-015"></a>Alterações na versão 0.15
 * Assistente Criar Tabela Externa:
@@ -96,7 +100,7 @@ Outras melhorias e correções incluem:
 
 #### <a name="known-issues"></a>Problemas conhecidos
 * Ao abrir um Notebook, a caixa de diálogo Instalar Python será exibida. Cancelar essa instalação fará com que as listas suspensas Kernels e Anexar ao não exibam os valores esperados. A solução alternativa é concluir a instalação do Python.
-* Quando um notebook é aberto com um kernel sem suporte, as listas suspensas Kernels e _Anexar ao_ farão com que o Azure Data Studio trave. Você precisará fechar o Azure Data Studio e usar um kernel com suporte (Python3, Spark | R, Spark | Scala, PySpark, PySpark3)
+* Quando um notebook é aberto com um kernel sem suporte, as listas suspensas Kernels e _Anexar ao_ farão com que o Azure Data Studio pare de responder. Você precisará fechar o Azure Data Studio e usar um kernel com suporte (Python3, Spark | R, Spark | Scala, PySpark, PySpark3)
 * O link da interface do usuário do Spark falha ao usar o PySpark3 ou outros kernels do Spark no ponto de extremidade do SQL Server. Como solução alternativa, clique na interface do usuário do Spark no painel ou conecte-se usando o tipo de conexão de cluster de Big Data do SQL Server, pois ele terá o hiperlink correto da interface do usuário do Spark
 
 ### <a name="extensibility-improvements"></a>Melhorias de extensibilidade

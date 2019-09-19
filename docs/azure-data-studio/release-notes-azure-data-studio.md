@@ -9,17 +9,37 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 08/15/2019
-ms.openlocfilehash: fd10408eb976dd40383c058489a971b557a2acd4
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.date: 09/11/2019
+ms.openlocfilehash: d505fcdbffe52245a64548d476cbee2193823fdb
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70059260"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878629"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas sobre a versão relacionadas ao Azure Data Studio
 
 **[Baixe e instale a versão mais recente!](download.md)**
+
+## <a name="september-2019"></a>Setembro de 2019
+
+10 de setembro de 2019 versão &nbsp; / &nbsp;: 1.11.0 
+
+&nbsp;
+
+| Alterar | Detalhes |
+| :----- | :------ |
+| Habilitar modo SQLCMD | Agora o editor de consultas dá suporte à alternância do modo SQLCMD para gravar e editar consultas como scripts SQLCMD |
+| Extensão da Comunidade: Query Editor Boost | O Query Editor Boost é uma extensão de software livre com foco em aprimorar o editor de consultas do Azure Data Studio para usuários que estão frequentemente gravando consultas. &bull; &nbsp; Salvar a consulta atual como um snippet <br/>&bull; &nbsp; Alternar bancos de dados usando Ctrl+U <br/> &bull; &nbsp; Nova consulta com base em modelo <br/> &bull; &nbsp; Veja a lista completa de melhorias [aqui](https://github.com/dzsquared/query-editor-boost) |
+| Melhorias ao Notebook | &bull; &nbsp; Melhorias de desempenho para dar suporte a arquivos de notebook maiores <br/> &bull; &nbsp; Veja a lista completa de melhorias [aqui](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2019+Release%22+label%3A%22Area%3A+Notebooks%22+is%3Aclosed) |
+| Mesclagem na versão de agosto do Visual Studio Code 1.38 | Os aprimoramentos mais recentes podem ser encontrados [aqui](https://code.visualstudio.com/updates/v1_38). |
+| Bugs e problemas resolvidos | Para obter uma lista completa das correções, confira [Bugs e problemas, no GitHub](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Problemas conhecidos
+- Notebooks
+    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Caso raros em que o notebook é serializado incorretamente
+
 
 ## <a name="august-2019"></a>Agosto de 2019
 

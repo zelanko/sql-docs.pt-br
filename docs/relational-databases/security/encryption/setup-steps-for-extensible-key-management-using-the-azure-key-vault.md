@@ -1,7 +1,7 @@
 ---
 title: Gerenciamento extensível de chaves do TDE do SQL Server usando o Azure Key Vault – Etapas de Configuração | Microsoft Docs
 ms.custom: ''
-ms.date: 08/24/2018
+ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 3d9b28b1723b5c984446be09336b24ff5e2d2bb0
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 5d767f8257395368cf3ceeba45b9b9d7cadcfa80
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316646"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929718"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Gerenciamento extensível de chaves do TDE do SQL Server usando o Azure Key Vault – Etapas de Configuração
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -342,7 +342,7 @@ Versão do SQL Server  |Link de instalação redistribuível
   
 5.  **Abra sua chave do Cofre de Chaves do Azure em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
-     Se você importou uma chave assimétrica, conforme descrito anteriormente na Parte II, abra a chave fornecendo o nome da chave no seguinte script [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
+     Se você criou uma nova chave ou importou uma chave assimétrica conforme descrito na parte II, precisará abrir a chave. Abra a chave fornecendo o nome da chave no script [!INCLUDE[tsql](../../../includes/tsql-md.md)] a seguir.  
   
     -   Substitua `CONTOSO_KEY` com o nome que deseja que a chave tenha em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

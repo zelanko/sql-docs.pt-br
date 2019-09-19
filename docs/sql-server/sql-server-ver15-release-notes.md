@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: d9d6f1f0bdf1a0e38bf26fdc18bc91c5825ca412
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 65438f911246038cee272763e19be12b5860b463
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653030"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70911194"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Notas sobre a versão a versão prévia do SQL Server 2019
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -43,6 +43,10 @@ Os detalhes completos sobre o suporte e o licenciamento para as versões de soft
 - **Problema e impacto para o cliente**: a documentação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode ser filtrada por versão. Use o controle na parte superior esquerda de cada página de documentação para filtrar os requisitos.
 
 - **Problema e impacto sobre o cliente**: Nenhum conteúdo offline está disponível para o SQL Server 2019 (15.x).
+
+## <a name="build-number"></a>Número de build
+
+O número de build do SQL Server 2019 RC no Windows, Linux e contêineres é `15.0.1900.25`.  O número de build do SQL Server 2019 RC usado em clusters de Big Data é `15.0.1900.47`.
 
 ## <a name="hardware-and-software-requirements"></a>Requisitos de hardware e software
 
@@ -83,9 +87,9 @@ Os detalhes completos sobre o suporte e o licenciamento para as versões de soft
 
 - **Aplica-se ao**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0
 
-## <a name="utf-8-collations"></a>Agrupamentos UTF-8
+## <a name="utf-8-collations"></a>Ordenações UTF-8
 
-- **Problema e impacto sobre o cliente**: Os agrupamentos UTF-8 habilitados não poderão ser usados com alguns dos outros recursos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O UTF-8 não é compatível quando os recursos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a seguir são usados:
+- **Problema e impacto sobre o cliente**: As ordenações UTF-8 habilitadas não poderão ser usadas com alguns dos outros recursos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O UTF-8 não é compatível quando os recursos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a seguir são usados:
 
   - OLTP in-memory
   - Tabela externa para PolyBase ([!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RC 1)
@@ -93,7 +97,7 @@ Os detalhes completos sobre o suporte e o licenciamento para as versões de soft
   - Servidores vinculados (até [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2)
 
   > [!Note]
-  > No momento, não há nenhuma interface do usuário compatível para escolher os agrupamentos UTF-8 habilitados no Azure Data Studio ou SSDT (SQL Server Data Tools). A versão 18 do SSMS ([!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]) mais recente dá suporte à seleção de ordenações habilitadas para UTF-8 na interface do usuário.
+  > No momento, não há nenhuma interface do usuário compatível para escolher as ordenações UTF-8 habilitadas no Azure Data Studio ou SSDT (SQL Server Data Tools). A versão 18 do SSMS ([!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]) mais recente dá suporte à seleção de ordenações habilitadas para UTF-8 na interface do usuário.
  
 - **Solução alternativa**: Não há solução alternativa para CTPs do [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
@@ -129,6 +133,16 @@ Os detalhes completos sobre o suporte e o licenciamento para as versões de soft
 - **Solução alternativa**: None
 
 - **Aplica-se ao**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] versão release candidate
+
+## <a name="master-data-service-notification-email-contains-broken-link"></a>O email de notificações do Master Data Services contém um link desfeito
+
+- **Problema e impacto sobre o cliente**: O email de notificação do MDS (Master Data Services) contém um link desfeito. O link navega até uma página que retorna um erro como a seguinte mensagem:
+
+   `The view 'Index' or its master was not found or no view engine supports the searched locations.`
+
+- **Solução alternativa**: Abra o portal do MDS e acesse o recurso manualmente.
+
+- **Aplica-se ao**: Versão Release Candidate do SQL Server 2019.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

@@ -18,24 +18,25 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4eb6cf7d397bc8fdc8ab37d17e830ad2b373882e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4cbc237ad0df16dbb854fb5bd062d7d37375294f
+ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140823"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913554"
 ---
 # <a name="write-international-transact-sql-statements"></a>Gravar instruções Transact-SQL internacionais
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Os bancos de dados e aplicativos de bancos de dados que usam instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] serão mais portáteis de um idioma para outro, ou darão suporte a vários idiomas, se as diretrizes a seguir forem cumpridas.  
 
--   A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], use:
-    -   Os tipos de dados **char**, **varchar** e **varchar (max)** com uma ordenação habilitada para [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8).
-    -   Os tipos de dados **nchar**, **nvarchar** e **nvarchar (max)** com uma ordenação habilitada para [caractere suplementar](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters).      
+-   Começando no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], use:
+    -   Os tipos de dados **char**, **varchar** e **varchar (max)** com uma ordenação habilitada para [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) e os dados são codificados usando o UTF-8.
+    -   Os tipos de dados **nchar**, **nvarchar** e **nvarchar(max)** com a ordenação habilitada para [SC (caractere suplementar)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) e os dados são codificados usando UTF-16. O uso de uma ordenação não SC resulta na codificação de dados usando o UCS-2.      
 
     Isso evita problemas de conversão de página de código. Para acessar outras considerações, confira [Diferenças de armazenamento entre UTF-8 e UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).  
 
--   Até [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], substitua todos os usos dos tipos de dados **char**, **varchar** e **varchar (max)** por **nchar**, **nvarchar** e **nvarchar (max)** . Isso evita problemas de conversão de página de código. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md). 
+-   Até [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], substitua todos os usos dos tipos de dados **char**, **varchar** e **varchar (max)** por **nchar**, **nvarchar** e **nvarchar (max)** . Se você estiver usando uma ordenação habilitada para [SC (caractere suplementar)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), os dados serão codificados usando UTF-16. O uso de uma ordenação não SC resulta na codificação de dados usando o UCS-2. Isso evita problemas de conversão de página de código. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md). 
+
     > [!IMPORTANT]
     > O tipo de dados **texto** foi preterido e não deve ser usado em novos trabalhos de desenvolvimento. Planeje converter dados de **texto** em **varchar(max)** .
   

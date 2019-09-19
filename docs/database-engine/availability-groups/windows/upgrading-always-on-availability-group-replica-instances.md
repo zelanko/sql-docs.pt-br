@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7f57ec339ffd1deed54fb780361792bee46d9126
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 990d79e60a0be87588604d76786980c2520d6f53
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013654"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70910781"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Atualizar instâncias de réplica do Grupo de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ Observe as diretrizes a seguir ao realizar atualizações de servidor para minim
   
 -   Sempre faça failover do AG em uma instância da réplica secundária de confirmação síncrona. Se você fizer failover para uma instância de réplica secundária de confirmação assíncrona, os bancos de dados estarão vulneráveis a perda de dados e a movimentação de dados será automaticamente suspensa até que você a retome manualmente.  
   
--   Não atualize a instância da réplica primária antes de atualizar qualquer outra instância da réplica secundária. Uma réplica primária atualizada não pode mais enviar logs para nenhuma réplica secundária cuja instância do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ainda não tenha sido atualizada para a mesma versão. Quando a movimentação dos dados para uma réplica secundária for suspensa, nenhum failover automático poderá ocorrer nessa réplica, e os bancos de dados de disponibilidade ficarão vulneráveis à perda de dados.  
+-   Não atualize a instância da réplica primária antes de atualizar qualquer outra instância da réplica secundária. Uma réplica primária atualizada não pode mais enviar logs para nenhuma réplica secundária cuja instância do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ainda não tenha sido atualizada para a mesma versão. Quando a movimentação dos dados para uma réplica secundária for suspensa, nenhum failover automático poderá ocorrer nessa réplica, e os bancos de dados de disponibilidade ficarão vulneráveis à perda de dados. Isso também se aplica durante uma atualização sem interrupção, em que você faz failover manual de um primário antigo para um novo. Assim, depois de atualizar o primário antigo, talvez seja necessário retomar a sincronização.
   
 -   Antes de fazer failover em um GA, verifique se o estado da sincronização do destino do failover é SINCRONIZADO.  
 

@@ -12,12 +12,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a19d934fcc8b6d190b762b170117722fe4e29b6e
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 7d1425b23b98ac0a81aaa0e6e848b405f06cc086
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190416"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929817"
 ---
 # <a name="spatial-indexes-overview"></a>Visão geral de índices espaciais
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -172,7 +172,7 @@ ms.locfileid: "70190416"
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
- A ilustração a seguir mostra uma exibição esquemática do processo de decomposição de três etapas. Nas pirâmides, as linhas pontilhadas representam os limites das quatro facetas de cada pirâmide. As etapas 1 e 2 ilustram o elipsoide geodésico usando uma linha horizontal verde para representar a longitude equatorial e uma série de linhas verticais verdes para representar várias linhas longitudinais. A etapa 1 mostra as pirâmides sendo projetadas sobre os dois hemisférios. A etapa 2 mostra as pirâmides sendo achatadas. A etapa 3 ilustra as pirâmides achatadas após terem sido combinadas para formar um plano mostrando várias linhas longitudinais projetadas. Observe que essas linhas projetadas se tornam retas e variam em comprimento, dependendo de sua localização nas pirâmides.  
+ A ilustração a seguir mostra uma exibição esquemática do processo de decomposição de três etapas. Nas pirâmides, as linhas pontilhadas representam os limites das quatro facetas de cada pirâmide. As etapas 1 e 2 ilustram o elipsoide geodésico usando uma linha horizontal verde para representar a linha de latitude equatorial e uma série de linhas verticais verdes para representar várias linhas de longitude. A etapa 1 mostra as pirâmides sendo projetadas sobre os dois hemisférios. A etapa 2 mostra as pirâmides sendo achatadas. A etapa 3 ilustra as pirâmides achatadas após terem sido combinadas para formar um plano mostrando várias linhas longitudinais projetadas. Observe que essas linhas projetadas se tornam retas e variam em comprimento, dependendo de sua localização nas pirâmides.  
   
  ![Projeção do elipsoide em um plano](../../relational-databases/spatial/media/spndx-geodetic-projection.gif "Projeção do elipsoide em um plano")  
   

@@ -9,13 +9,13 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 ms.custom: ''
-ms.date: 07/31/2019
-ms.openlocfilehash: 3ed3f08232b3811ad57ae37d8be6ed93af3572de
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.date: 09/04/2019
+ms.openlocfilehash: 7f9195b2ec4cfd80d16f37884ce27e920580463c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122990"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874555"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notas sobre a versão do SQL Server Management Studio (SSMS)
 
@@ -107,9 +107,13 @@ A versão 18.2 é uma atualização da 18.1, com os seguintes itens novos e corr
 
 - Problemas do SSMS 18.0 em redesenhar ao alternar entre várias janelas de consulta. Confira [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042). Uma solução alternativa para esse problema é desabilitar a aceleração de hardware em **Ferramentas** > **Opões**.
 
-- Há uma limitação quanto ao tamanho dos dados que você vê nos resultados do SSMS mostrados na grade, no texto ou no arquivo.
+- Há uma limitação sobre o tamanho dos dados que você vê dos resultados do SSMS mostrados na grade, no texto ou no arquivo.
 
-Você pode consultar [UserVoice](https://feedback.azure.com/forums/908035-sql-server) para conferir outros problemas conhecidos e fornecer comentários à equipe do produto. 
+- Há um problema com o recebimento de um erro ao excluir um Banco de Dados SQL do Azure no Pesquisador de Objetos, mas, na verdade, ele é bem-sucedido. A tarefa mostra uma mensagem de erro imprecisa.
+
+- O idioma padrão para logons do SQL pode ser exibido como árabe na caixa de diálogo Propriedades de Logon, independentemente do idioma padrão real definido para o logon. Para exibir o idioma padrão real de um determinado logon, use o T-SQL para selecionar **default_language_name** do logon de **master.sys.server_principles**.
+
+Você pode consultar [UserVoice](https://feedback.azure.com/forums/908035-sql-server) para conferir outros problemas conhecidos e fornecer comentários à equipe do produto.
 
 ## <a name="previous-ssms-releases"></a>Versões anteriores do SSMS
 

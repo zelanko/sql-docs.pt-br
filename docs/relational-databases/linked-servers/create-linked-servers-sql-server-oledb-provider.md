@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pmasl
 ms.author: pelopes
 manager: rothj
-ms.openlocfilehash: 577de413c318f1f1e442ad86009a0237671e9104
-ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
+ms.openlocfilehash: 166b55c70cc9b7d1337128b12b78a8ec1f4a1032
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68301352"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929649"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Consultas distribuídas do Microsoft SQL Server: Conectividade do OLE DB
 
@@ -479,7 +479,7 @@ Veja a seguir as etapas de nível superior no provedor no cenário de consulta r
 
 1. O SQL Server cria um objeto `Command` com base no objeto `Session` usando `IDBCreateCommand::CreateCommand`.
 
-9. Se a opção de configuração de servidor `Remote Query Timeout` for definida com um valor > 0, o SQL Server definirá a propriedade DBPROP_COMMANDTIMEOUT no objeto `` 0, SQL Server sets the DBPROP_COMMANDTIMEOUT property on the `Command` object to the same value by using `` com o mesmo valor usando `ICommandProperties::SetProperties`; `ICommand::SetCommandText` precisará ser chamado para definir o texto de comando para a cadeia de caracteres Transact-SQL gerada.
+9. Se a opção de configuração de servidor `Remote Query Timeout` for definida com um valor > 0, o SQL Server definirá a propriedade `DBPROP_COMMANDTIMEOUT` no objeto `Command` com o mesmo valor usando `ICommandProperties::SetProperties`. `ICommand::SetCommandText` deve ser chamado para definir o texto de comando para a cadeia de caracteres Transact-SQL gerada.
 
 10. O SQL Server chama `ICommandPrepare::Prepare` para preparar o comando. Se o provedor não der suporte a essa interface, o SQL Server continuará com a etapa 4.
 
@@ -744,7 +744,7 @@ comparison-operator ::= `< \| >` \| `<= \| >`= \| = \| `<>`
 
 `ORDER BY clause`
 
-order-by-clause ::= ORDER BY sort-specification \[, sort-specification\]\...
+order-by-clause ::= ORDER BY sort-specification \[, sort-specification\]\..
 
 sort-specification ::= { \| column-name } \[ASC \| DESC\]
 
@@ -786,7 +786,7 @@ base-table-identifier ::= user-defined-name
 
 column-identifier ::= user-defined-name
 
-user-defined-name ::= letter\[digit \| letter \| _\]\...
+user-defined-name ::= letter\[digit \| letter \| _\]\..
 
 unsigned-integer ::= {digit}...
 

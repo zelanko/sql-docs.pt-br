@@ -16,12 +16,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 439294b36c03d36a2747c17ab53b630d39c8caea
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 46fb32fcd6f3aa0d78f748f1ef1e8ec419084f46
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742881"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878688"
 ---
 # <a name="sql-server-audit-database-engine"></a>Auditoria do SQL Server (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -144,13 +144,18 @@ ms.locfileid: "68742881"
 ### <a name="data-definition-language-statements"></a>Instruções de linguagem de definição de dados  
  É possível usar as seguintes instruções DDL para criar, alterar e remover especificações de auditoria:  
   
-|||  
+|Instruções DDL|Descrição| 
 |-|-|  
-|[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|[CREATE SERVER AUDIT](../../../t-sql/statements/create-server-audit-transact-sql.md)|  
-|[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|[CREATE SERVER AUDIT SPECIFICATION](../../../t-sql/statements/create-server-audit-specification-transact-sql.md)|  
-|[ALTER SERVER AUDIT](../../../t-sql/statements/alter-server-audit-transact-sql.md)|[DROP DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/drop-database-audit-specification-transact-sql.md)|  
-|[ALTER SERVER AUDIT SPECIFICATION](../../../t-sql/statements/alter-server-audit-specification-transact-sql.md)|[DROP SERVER AUDIT](../../../t-sql/statements/drop-server-audit-transact-sql.md)|  
-|[CREATE DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/create-database-audit-specification-transact-sql.md)|[DROP SERVER AUDIT SPECIFICATION](../../../t-sql/statements/drop-server-audit-specification-transact-sql.md)|  
+|[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|Altera a propriedade de um protegível.|  
+|[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|Altera o objeto de especificação de auditoria do banco de dados usando o recurso Auditoria do SQL Server.|  
+|[ALTER SERVER AUDIT](../../../t-sql/statements/alter-server-audit-transact-sql.md)|Altera um objeto de auditoria do servidor usando o recurso Auditoria do SQL Server.|  
+|[ALTER SERVER AUDIT SPECIFICATION](../../../t-sql/statements/alter-server-audit-specification-transact-sql.md)|Altera o objeto de especificação de auditoria do servidor usando o recurso Auditoria do SQL Server.|  
+|[CREATE DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/create-database-audit-specification-transact-sql.md)|Cria um objeto de especificação de auditoria do banco de dados usando o recurso de auditoria do SQL Server.|  
+|[CREATE SERVER AUDIT](../../../t-sql/statements/create-server-audit-transact-sql.md)|Cria um objeto de auditoria do servidor usando a Auditoria do SQL Server.|  
+|[CREATE SERVER AUDIT SPECIFICATION](../../../t-sql/statements/create-server-audit-specification-transact-sql.md)|Cria um objeto de especificação de auditoria do servidor usando o recurso Auditoria do SQL Server.|  
+|[DROP DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/drop-database-audit-specification-transact-sql.md)|Descarta o objeto de especificação de auditoria do banco de dados usando o recurso Auditoria do SQL Server.|  
+|[DROP SERVER AUDIT](../../../t-sql/statements/drop-server-audit-transact-sql.md)|Descarta um objeto de auditoria de servidor usando o recurso SQL Server Audit.|  
+|[DROP SERVER AUDIT SPECIFICATION](../../../t-sql/statements/drop-server-audit-specification-transact-sql.md)|Descarta um objeto de especificação de auditoria do servidor usando o recurso Auditoria do SQL Server.|  
   
 ### <a name="dynamic-views-and-functions"></a>Exibições e funções dinâmicas  
  A tabela a seguir lista as exibições e funções dinâmicas que podem ser usadas na auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

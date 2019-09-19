@@ -10,12 +10,12 @@ ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
 author: rothja
 ms.author: jroth
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bc752d5653c4483552312c45139996e8a84c39e4
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 6c0889349631a543e970b11eff9bb24a6f2da208
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811277"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874456"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Novidades no mecanismo de banco de dados – SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

@@ -18,12 +18,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80c777fad7bbe9e6680b8baa826bc5acdf65730a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051435"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874459"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nome de ordenação do Windows (Transact-SQL)
 
@@ -139,9 +139,9 @@ A tabela a seguir lista todas as ordenações do Windows com suporte no [!INCLUD
 |Amárico (Etiópia)|Latin1_General_100_|Não disponível|
 |Armênio (Armênia)|Cyrillic_General_100_|Não disponível|
 |Assamês (Índia)|Assamese_100_ <sup>1</sup>|Não disponível|
+|Bangla (Bangladesh)|Bengali_100_<sup>1</sup>|Não disponível|
 |Bashkir (Rússia)|Bashkir_100_|Não disponível|
 |Basco (Basco)|Latin1_General_100_|Não disponível|
-|Bengali (Bangladesh)|Bengali_100_<sup>1</sup>|Não disponível|
 |Bengali (India)|Bengali_100_<sup>1</sup>|Não disponível|
 |Bósnio (Bósnia e Herzegovina, Cirílico)|Bosnian_Cyrillic_100_|Não disponível|
 |Bósnio (Bósnia e Herzegovina, Latino)|Bosnian_Latin_100_|Não disponível|
@@ -226,7 +226,7 @@ A tabela a seguir lista todas as ordenações do Windows com suporte no [!INCLUD
 |Galês (Reino Unido)|Welsh_100_|Não disponível|
 |uolofe (Senegal)|French_100_|Não disponível|
 |Xhosa/isiXhosa (África do Sul)|Latin1_General_100_|Não disponível|
-|Yakut (Rússia)|Yakut_100_|Não disponível|
+|Sakha (Rússia)|Yakut_100_|Não disponível|
 |Yi (RPC)|Latin1_General_100_|Não disponível|
 |Ioruba (Nigéria)|Latin1_General_100_|Não disponível|
 |Zulu/isiZulu (África do Sul)|Latin1_General_100_|Não disponível|
@@ -235,9 +235,9 @@ A tabela a seguir lista todas as ordenações do Windows com suporte no [!INCLUD
 |Preterido, não disponível no nível do servidor no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] nem em versões mais recentes|Lithuanian_Classic|Lithuanian_Classic|
 |Preterido, não disponível no nível do servidor no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] nem em versões mais recentes|Macedônio|Macedônio|
 
-<sup>1</sup>Ordenações do Windows somente em Unicode podem ser aplicadas apenas a dados nos níveis de coluna ou de expressão. Eles não podem ser usados como ordenações de banco de dados ou de servidor.
+<sup>1</sup> Ordenações do Windows somente em Unicode podem ser aplicadas apenas a dados nos níveis de coluna ou de expressão. Eles não podem ser usados como ordenações de banco de dados ou de servidor.
 
-<sup>2</sup>Como a ordenação de chinês (Taiwan), chinês (RAE de Macau) usa as regras de chinês simplificado; ao contrário do chinês (Taiwan), ele usa a página de código 950.
+<sup>2</sup> Como a ordenação de chinês (Taiwan), chinês (Macau) usa as regras de chinês simplificado; ao contrário do chinês (Taiwan), ele usa a página de código 950.
 
 ## <a name="see-also"></a>Consulte Também
 
