@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f147e2b4ec785c3723d09cac6eb3548511946780
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 97b8cbae68e16dbdde6e9662b18e37f222a1af80
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158231"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118160"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
@@ -61,6 +61,10 @@ Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http:/
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-notebook-run"></a>azdata notebook run
 Esse comando cria um diretório temporário e executa o notebook fornecido nele como o diretório de trabalho.
+
+>[!NOTE]
+>Verificado em relação ao azdata v 15.0.1900: comando de execução com suporte somente para blocos de anotações do Python 3.
+
 ```bash
 azdata notebook run --path -p 
                     [--output-path]  
@@ -81,7 +85,7 @@ O caminho de arquivo para o notebook a ser executado.
 #### `--output-path`
 Caminho do diretório a ser usado para a saída do notebook.  O notebook com os dados de saída e todos os arquivos gerados pelo notebook são gerados em relação a esse diretório.
 #### `--output-html`
-Sinalizador opcional indicando se o notebook de saída deve ser convertido adicionalmente no formato HTML.  Cria um segundo arquivo de saída.
+Sinalizador opcional que indica se o bloco de anotações de saída deve ser convertido no formato HTML.  Cria um segundo arquivo de saída.
 #### `--arguments -a`
 Lista opcional de argumentos de bloco de anotações para injetar na execução do bloco de anotações.  Codificado como um dicionário JSON.  Exemplo: ' {"Name": "value", "nome2": "value2"} '
 #### `--interactive -i`
@@ -96,7 +100,7 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 
