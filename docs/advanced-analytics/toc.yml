@@ -59,20 +59,14 @@
           href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
     - name: R
       items:
-        - name: Verificar se o R existe no SQL Server
-          href: ../advanced-analytics/tutorials/quickstart-r-verify.md
-        - name: 'Olá, Mundo em R e SQL'
-          href: ../advanced-analytics/tutorials/quickstart-r-run-using-tsql.md
-        - name: Lidar com entradas e saídas
-          href: ../advanced-analytics/tutorials/quickstart-r-inputs-and-outputs.md
+        - name: Criar scripts R
+          href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
+        - name: Treinar e pontuar um modelo
+          href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
         - name: Lidar com tipos de dados e objetos
           href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
-        - name: Usando funções de R
+        - name: Gravar funções do R
           href: ../advanced-analytics/tutorials/quickstart-r-functions.md
-        - name: Criar um modelo preditivo
-          href: ../advanced-analytics/tutorials/quickstart-r-create-predictive-model.md
-        - name: Prever com base no modelo
-          href: ../advanced-analytics/tutorials/quickstart-r-predict-from-model.md
 - name: Tutoriais
   items:
     - name: Python

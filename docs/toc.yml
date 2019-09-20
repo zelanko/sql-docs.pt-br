@@ -4183,8 +4183,12 @@
           href: sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
         - name: Coleta de dados de diagnóstico e de uso
           items:
-            - name: Suplemento de privacidade
-              href: sql-server/sql-server-privacy.md
+            - name: Suplemento de privacidade do SQL Server
+              items:
+                - name: SQL Server 2017 e anterior
+                  href: sql-server/sql-server-privacy.md
+                - name: SQL Server 2019
+                  href: sql-server/sql-server-privacy-ver15.md
             - name: Configurar dados de uso e diagnóstico do SQL Server
               href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
             - name: Configurar dados de uso e diagnóstico da ferramenta
@@ -6495,6 +6499,12 @@
   items:
     - name: Gerenciar
       items:
+        - name: Recuperação acelerada de banco de dados
+          items:
+            - name: Visão geral
+              href: relational-databases/accelerated-database-recovery-concepts.md
+            - name: Gerenciamento
+              href: relational-databases/accelerated-database-recovery-management.md
         - name: Servidores de Gerenciamento Central
           href: relational-databases/administer-multiple-servers-using-central-management-servers.md
         - name: Configuration Manager
