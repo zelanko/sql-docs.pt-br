@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d60445d52a8a78fb7924d82338162e4719f45681
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 634f9f62a3ff1de70be84fd5a7721d8efed891bf
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70276672"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149934"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>O que é SQL Server Serviços de Machine Learning (Python e R)?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,8 +95,8 @@ Para obter mais informações sobre quais pacotes são instalados com Serviços 
 
 1. Escreva seu primeiro script Python ou R
 
-    + Início Rápido: Executar um script "Olá, mundo" [em Python](tutorials/quickstart-python-run-using-t-sql.md) ou [em R](tutorials/quickstart-r-run-using-tsql.md)
-    + Início Rápido: Criar um modelo de previsão [em Python](tutorials/quickstart-python-train-score-in-tsql.md) ou [em R](tutorials/quickstart-r-create-predictive-model.md)
+    + Início Rápido: [Criar e executar scripts R simples no SQL](tutorials/quickstart-r-create-script.md)
+    + Início Rápido: [Criar e treinar um modelo de previsão em R](tutorials/quickstart-r-train-score-model.md)
     + Tutorial: [Usar o Python no T-SQL](tutorials/sqldev-in-database-python-for-sql-developers.md): Explorar dados, executar a engenharia de recursos, treinar e implantar modelos e fazer previsões (série de cinco partes)
     + Tutorial: [Use o R no T-SQL](tutorials/sqldev-in-database-r-for-sql-developers.md): Explorar dados, executar a engenharia de recursos, treinar e implantar modelos e fazer previsões (série de cinco partes)
     + Tutorial: [Use serviços de Machine Learning em ferramentas de R](tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Explorar dados, criar gráficos e plotagens, executar a engenharia de recursos, treinar e implantar modelos e fazer previsões (série de seis partes)
