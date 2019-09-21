@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1655525fd9ec8acba80637a86936484859f85df2
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: da0adf179cb85368d78a06688cc34cfa28b232e1
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878721"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174273"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Como implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] o no kubernetes
 
@@ -148,7 +148,7 @@ As variáveis de ambiente a seguir são usadas para configurações de seguranç
 | **CONTROLLER_PASSWORD** | Obrigatório |A senha do administrador do cluster. |
 | **MSSQL_SA_PASSWORD** | Obrigatório |A senha do usuário SA para a instância mestre do SQL. |
 | **KNOX_PASSWORD** | Obrigatório |A senha para o usuário **raiz** do Knox. Observação do que em uma configuração de autenticação básica, somente o usuário com suporte para o Knox é a **raiz**.|
-| **ACCEPT_EULA**| Necessário para o primeiro uso de `azdata`| Não requer valor. Quando definido como uma variável de ambiente, ele aplica o EULA ao SQL Server e ao `azdata`. Se não estiver definido como variável de ambiente, você poderá incluir `--accept-eula` no primeiro uso do comando `azdata`.|
+| **ACCEPT_EULA**| Necessário para o primeiro uso de `azdata`| Defina como "Sim". Quando definido como uma variável de ambiente, ele aplica o EULA ao SQL Server e ao `azdata`. Se não estiver definido como variável de ambiente, você poderá incluir `--accept-eula=yes` no primeiro uso do comando `azdata`.|
 | **DOCKER_USERNAME** | Opcional | O nome de usuário para acessar as imagens de contêiner caso elas sejam armazenadas em um repositório privado. Confira o tópico [Implantações offline](deploy-offline.md) para obter mais detalhes sobre como usar um repositório privado do Docker para implantação de cluster de Big Data.|
 | **DOCKER_PASSWORD** | Opcional |A senha para acessar o repositório privado acima. |
 
@@ -161,6 +161,7 @@ export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
+export ACCEPT_EULA=yes
 ```
 
 ```PowerShell
