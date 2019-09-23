@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 309d97c52130eeb3477952cb70446c20787351cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4f0af105de85eded29b7cf4bd58d6c392a7dbd4
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929809"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096933"
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -728,7 +728,7 @@ Valores de parâmetro são detectados durante a compilação ou recompilação p
 -  Consultas enviadas por meio de sp_executesql 
 -  Consultas preparadas
 
-Para obter mais informações sobre como solucionar problemas de detecção de parâmetro incorreto, veja [Solucionar problemas de consultas com problemas de plano de execução de consulta sensível a parâmetro](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-issues).
+Para obter mais informações sobre como solucionar problemas de detecção de parâmetro incorreto, veja [Solucionar problemas de consultas com problemas de plano de execução de consulta sensível a parâmetro](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-problems).
 
 > [!NOTE]
 > Para consultas que utilizam a dica `RECOMPILE`, tanto os valores de parâmetros quanto os valores atuais das variáveis locais são detectados. Os valores detectados (de parâmetros e de variáveis locais) são aqueles que existem no local no lote antes da instrução com a dica `RECOMPILE`. Especificamente para parâmetros, os valores que acompanha a chamada de invocação de lote não são detectados.
