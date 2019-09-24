@@ -1,7 +1,7 @@
 ---
 title: Subchave de fontes de dados ODBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 09/23/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,26 +14,28 @@ helpviewer_keywords:
 ms.assetid: 0a8ccb80-c573-4418-84e5-f04a2b0e2ac1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2a1d0c506c4a4b33d7138378032947821d4e9f3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d6d54d1fc7c7742bf94e91d7370f356e28b5624
+ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093987"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71207692"
 ---
 # <a name="odbc-data-sources-subkey"></a>Subchave de fontes de dados ODBC
-Os valores sob a subchave de fontes de dados ODBC listam as fontes de dados. O formato desses valores é conforme mostrado na tabela a seguir.  
-  
-|Nome|Tipo de dados|Data|  
-|----------|---------------|----------|  
-|*data-source-name*|REG_SZ|*driver-description*|  
-  
- O *nome da fonte de dados* valor é definido pelo programa de administração (que normalmente solicita ao usuário para ele), e *descrição do driver* é definido pelo desenvolvedor de driver (geralmente é o nome das DBMS associado com o driver).  
-  
- Por exemplo, suponha que três fontes foram definidas de dados: Inventário, que usa o SQL Server; Folha de pagamento, que usa dBASE; e pessoal, que usa formatadas em arquivos de texto. Os valores sob a subchave de fontes de dados ODBC podem ser da seguinte maneira:  
-  
-```  
-Inventory : REG_SZ : SQL Server  
-Payroll : REG_SZ : dBASE  
-Personnel : REG_SZ : Text  
+
+Os valores na `ODBC Data Sources` subchave listam as fontes de dados. O formato desses valores é mostrado na tabela a seguir.
+
+| Nome | Tipo de dados | Dados |
+| :--- | :-------- | :--- |
+| *data-source-name* | REG_SZ | *driver-description* |
+| &nbsp; | &nbsp; | &nbsp; |
+
+O valor *Data-Source-Name* é definido pelo programa de administração (que geralmente solicita o usuário) e a *Descrição do driver* é definida pelo desenvolvedor do driver (geralmente é o nome do DBMS associado ao driver).
+
+Por exemplo, suponha que três fontes de dados tenham sido definidas: Inventário, que usa SQL Server; Folha de pagamento, que usa o dBASE; e pessoal, que usa arquivos de texto formatados. Os valores na `ODBC Data Sources` subchave podem ser os seguintes:
+
+```console
+Inventory : REG_SZ : SQL Server
+Payroll : REG_SZ : dBASE
+Personnel : REG_SZ : Text
 ```
