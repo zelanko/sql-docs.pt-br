@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_database_replica_states dynamic management view
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 64380b71f9830292acb5c24d5a8d1578216da2de
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 373700d04bb7c3d7cc28a72f881714cef9913923
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68418951"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199448"
 ---
-# <a name="sysdmdatabasereplicastates-azure-sql-database"></a>sys.dm_database_replica_states (Banco de Dados SQL do Azure)
+# <a name="sysdm_database_replica_states-azure-sql-database"></a>sys.dm_database_replica_states (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Retorna uma linha para o banco de dados, expondo o estado da réplica local.  
@@ -67,12 +67,12 @@ ms.locfileid: "68418951"
 |**redo_rate**|**bigint**|Taxa média em que os registros de log estão sendo refeitos em um determinado banco de dados secundário, em kilobytes (KB)/Second.|  
 |**filestream_send_rate**|**bigint**|A taxa na qual os arquivos FILESTREAM são enviados à réplica secundária, em KB/segundo.|  
 |**end_of_log_lsn**|**numeric(25,0)**|O fim do log do LSN local. O LSN real que corresponde ao último registro de log no cache de log nos bancos de dados primário e secundário. Na réplica primária, as linhas secundárias refletem o fim do log do LSN das mensagens de progresso mais recentes que as réplicas secundárias enviaram à réplica primária.<br /><br /> **end_of_log_lsn** reflete uma ID de bloco de log preenchida com zeros. Não é um número de sequência de log real.|  
-|**last_commit_lsn**|**Numeric(25,0)**|O número de sequência de log real que corresponde ao último registro de confirmação no log de transações.<br /><br /> No banco de dados primário, corresponde ao último registro de confirmação processado. As linhas para bancos de dados secundários mostram o número de sequência de log que a réplica secundária enviou para a primária.<br /><br /> Na réplica secundária, é o último registro de confirmação refeito.|  
+|**last_commit_lsn**|**numeric(25,0)**|O número de sequência de log real que corresponde ao último registro de confirmação no log de transações.<br /><br /> No banco de dados primário, corresponde ao último registro de confirmação processado. As linhas para bancos de dados secundários mostram o número de sequência de log que a réplica secundária enviou para a primária.<br /><br /> Na réplica secundária, é o último registro de confirmação refeito.|  
 |**last_commit_time**|**datetime**|A hora correspondente ao último registro de confirmação.<br /><br /> No banco de dados secundário, essa hora é a mesma do banco de dados primário.<br /><br /> Na réplica primária, cada linha de banco de dados secundário exibe a hora em que a réplica secundária que hospeda aquele banco de dados secundário relatou de volta para a réplica primária. A diferença no tempo entre a linha do banco de dados primário e uma determinada linha de banco de dados secundário representa aproximadamente o RPO (objetivo de ponto de recuperação), supondo que o processo de refazer seja atualizado e que o progresso tenha sido relatado de volta para a réplica primária pela réplica secundária.|  
 |**low_water_mark_for_ghosts**|**bigint**|Um número aumentado de maneira constante para o banco de dados, que indica uma marca d'água inferior usada pela limpeza de fantasma no banco de dados primário. Se esse número não estiver aumentando ao longo do tempo, isso indicará que a limpeza fantasma talvez não esteja ocorrendo. Para decidir quais linhas fantasmas devem ser limpas, a réplica primária usa o valor mínimo dessa coluna para este banco de dados em todas as réplicas de disponibilidade (inclusive a réplica primária).|  
 |**secondary_lag_seconds**|**bigint**|O número de segundos que a réplica secundária está atrás da réplica primária durante a sincronização.<br /><br />**Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**quorum_commit_lsn**|**Numeric(25,0)**|Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.|
-|**quorum_commit_time**|**datetime**|Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.|
+|**quorum_commit_lsn**|**numeric(25,0)**|Identificado apenas para fins informativos. Não compatível. A compatibilidade futura não está garantida.|
+|**quorum_commit_time**|**datetime**|Identificado apenas para fins informativos. Não compatível. A compatibilidade futura não está garantida.|
 
 
 ## <a name="permissions"></a>Permissões

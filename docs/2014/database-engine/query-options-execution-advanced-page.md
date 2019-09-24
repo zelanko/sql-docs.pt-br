@@ -12,12 +12,12 @@ manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
-ms.openlocfilehash: 4530d07ceb284f6f7c5a795836b979e846562f40
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118111"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199329"
 ---
 # <a name="query-options-execution-advanced-page"></a>Execução de opções de consulta (Página Avançado)
 
@@ -58,11 +58,11 @@ ms.locfileid: "71118111"
 
 **Mostrar hora de conclusão** Permite imprimir a hora em que a execução da consulta foi concluída depois dos resultados da consulta ou na guia mensagens.
 
-**Protocolo de atestado para vbs enclaves para Always Encrypted** Permite que você defina um protocolo de atestado para enclaves de segurança baseada em virtualização (VBS) usado pelo Always Encrypted com Secure enclaves. 
+**Protocolo de atestado para vbs enclaves para Always Encrypted** Permite que você defina um protocolo de atestado para enclaves de segurança baseada em virtualização (VBS) usado pelo Always Encrypted com Secure enclaves.
 
-  Os protocolos de atestado com suporte atuais são:
+Os protocolos de atestado com suporte atuais são:
 
-  * Serviço guardião de host – um protocolo de atestado usando o serviço guardião de host do Windows (HGS).
+* Serviço guardião de host – um protocolo de atestado usando o serviço guardião de host do Windows (HGS).
 
 Para obter mais informações, consulte [Always Encrypted com Secure enclaves](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions) e [Secure enclave atestation](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation).
 
