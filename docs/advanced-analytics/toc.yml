@@ -47,26 +47,22 @@
   items:
     - name: Python
       items:
-        - name: Verificar se o Python existe no SQL Server
-          href: ../advanced-analytics/tutorials/quickstart-python-verify.md
-        - name: 'Olá, Mundo em Python e SQL'
-          href: ../advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md
-        - name: Lidar com entradas e saídas
-          href: ../advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md
-        - name: Estruturas de dados do Python e SQL
+        - name: Criar scripts do Python
+          href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
+        - name: Lidar com tipos de dados e objetos
           href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-        - name: Treinar e usar seu primeiro modelo
-          href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
+        - name: Treinar e pontuar um modelo
+          href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
     - name: R
       items:
         - name: Criar scripts R
           href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
-        - name: Treinar e pontuar um modelo
-          href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
         - name: Lidar com tipos de dados e objetos
           href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
         - name: Gravar funções do R
           href: ../advanced-analytics/tutorials/quickstart-r-functions.md
+        - name: Treinar e pontuar um modelo
+          href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
 - name: Tutoriais
   items:
     - name: Python
