@@ -10,12 +10,12 @@ metadata:
   author: dphansen
   ms.author: davidph
   ms.date: 09/12/2019
-  ms.openlocfilehash: e8725cad09bd59d30f5094d59386b666fdf7c3a4
-  ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+  ms.openlocfilehash: d46abc3b6e02f81db733df584ea95fbdc73777c0
+  ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 09/20/2019
-  ms.locfileid: "71149949"
+  ms.lasthandoff: 09/23/2019
+  ms.locfileid: "71199396"
 landingContent:
 - title: Sobre Serviços de Machine Learning
   linkLists:
@@ -36,13 +36,13 @@ landingContent:
   - linkListType: quickstart
     links:
     - text: Executar um script do Python "Olá, mundo" em SQL Server
-      url: tutorials/quickstart-python-run-using-t-sql.md
+      url: tutorials/quickstart-python-create-script.md
     - text: Lidar com entradas e saídas
-      url: tutorials/quickstart-python-inputs-and-outputs.md
+      url: tutorials/quickstart-python-create-script.md#use-inputs-and-outputs
     - text: Usar estruturas de dados do Python no SQL Server
       url: tutorials/quickstart-python-data-structures.md
     - text: Treinar e usar seu primeiro modelo
-      url: tutorials/quickstart-python-train-score-in-tsql.md
+      url: tutorials/quickstart-python-train-score-model.md
   - linkListType: tutorial
     links:
     - text: Prever aluguel de esqui com regressão linear
