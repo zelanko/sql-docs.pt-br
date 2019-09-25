@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 77c095ac35d9b3068882be81d0ddf6293904f8bb
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 9a12e327f9537ea25d84ec0db3e1d76381eb5f03
+ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810329"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127365"
 ---
 # <a name="database-engine-errors"></a>Erros do Mecanismo de Banco de Dados
 
@@ -4999,7 +4999,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   11297   |   16  |   Não  |   Mensagem corrompida recebida. O deslocamento do segmento de dados da variável particular está incorreto.   |
 |   11298   |   16  |   Não  |   Mensagem corrompida recebida. O deslocamento do segmento de dados da variável pública está incorreto.    |
 |   11299   |   10  |   Não  |   Mensagem corrompida recebida. Uma mensagem fora de sequência tinha um número de sequência diferente de zero. Isso ocorreu na mensagem com ID de conversa '%.*ls', Iniciador: %d e Número de sequência de mensagem: %I64d. |
-|   11300   |   10  |   Sim |   Erro ao confirmar um XDES somente leitura ou TEMPDB; desligando o servidor.    |
+|   11300   |   10  |   Sim |   Erro ao confirmar um XDES somente leitura ou TEMPDB; desligando o servidor.   |
 |   11301   |   10  |   Sim |   Erro ao executar notificação de transação para objeto %p evento %d. |
 |   11302   |   10  |   Sim |   Erro durante a reversão. Desligando banco de dados (localização: %d).   |
 |   11303   |   10  |   Sim |   Erro ao liberar espaço para log reservado: %d espaço %I64d, código %d, estado %d. |
