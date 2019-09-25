@@ -1,5 +1,5 @@
 ---
-title: index_resumable_operations (Transact-SQL) | Microsoft Docs
+title: sys. index_resumable_operations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/14/2019
 ms.prod: sql
@@ -19,34 +19,34 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c934c2fe8357cb4d37484984998edfcb7219c649
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4f79da2af2630fa54a06dc26b32cf22287f7c1d
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122661"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227193"
 ---
-# <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (Transact-SQL)
+# <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
-**index_resumable_operations** é uma exibição de sistema que monitora e verifica o status de execução atual para recompilação de índice retomável.  
-**Aplica-se ao**: SQL Server 2017 e o Azure SQL Database
+**Sys. index_resumable_operations** é uma exibição do sistema que monitora e verifica o status de execução atual para recompilação de índice retomável.  
+**Aplica-se ao**: SQL Server 2017 e banco de dados SQL do Azure
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID do objeto ao qual este índice pertence (não permite valor nulo).|  
 |**index_id**|**int**|ID do índice (não permite valor nulo). **index_id** é exclusivo somente dentro do objeto.|
-|**name**|**sysname**|Nome do índice. **nome** só é exclusivo dentro do objeto.|  
-|**sql_text**|**nvarchar(max)**|Texto da instrução DDL T-SQL|
-|**last_max_dop**|**smallint**|Último MAX_DOP usada (padrão = 0)|
-|**partition_number**|**int**|Número de partição no índice ou heap de propriedade. Para índices e tabelas não particionadas ou caso todas as partições estão sendo recompilação o valor desta coluna é NULL.|
-|**state**|**tinyint**|Estado operacional para o índice retomável:<br /><br />0 = em execução<br /><br />1 = pausa|
-|**state_desc**|**nvarchar(60)**|Descrição do estado operacional (em execução ou em pausa) de índice retomável|  
-|**start_time**|**datetime**|Hora de início de operação de índice (não permite valor nulo)|
-|**last_pause_time**|**datatime**| Hora da última pausa (anulável) da operação de índice. NULL se a operação está em execução e nunca em pausa.|
-|**total_execution_time**|**int**|Tempo de execução total da hora de início em minutos (não permite valor nulas)|
-|**percent_complete**|**real**|Conclusão de progresso da operação de índice em % (não permite valor nulo).|
-|**page_count**|**bigint**|Número total de páginas de índice alocadas pela operação de compilação de índice para o novo e índices de mapeamento (não permite valor nulas).
+|**name**|**sysname**|Nome do índice. o **nome** é exclusivo somente dentro do objeto.|  
+|**sql_text**|**nvarchar(max)**|Texto da instrução T-SQL DDL|
+|**last_max_dop**|**smallint**|Última MAX_DOP usada (padrão = 0)|
+|**partition_number**|**int**|Número da partição dentro do índice ou heap de propriedade. Para tabelas e índices não particionados ou, caso todas as partições estejam sendo recriadas, o valor dessa coluna é NULL.|
+|**state**|**tinyint**|Estado operacional do índice retomável:<br /><br />0 = em execução<br /><br />1 = pausar|
+|**state_desc**|**nvarchar(60)**|Descrição do estado operacional do índice retomável (em execução ou em pausa)|  
+|**start_time**|**datetime**|Hora de início da operação de índice (não permite valor nulo)|
+|**last_pause_time**|**DataTime**| Tempo da última pausa da operação de índice (anulável). NULL se a operação estiver em execução e nunca for pausada.|
+|**total_execution_time**|**int**|Tempo de execução total de tempo de início em minutos (não permite valor nulo)|
+|**percent_complete**|**real**|Conclusão do andamento da operação de índice em% (não permite valor nulo).|
+|**page_count**|**bigint**|Número total de páginas de índice alocadas pela operação de compilação de índice para os índices novos e de mapeamento (não permite valor nulo).
 
 ## <a name="permissions"></a>Permissões
 
@@ -54,7 +54,7 @@ ms.locfileid: "68122661"
 
 ## <a name="example"></a>Exemplo
 
- Liste todas as operações de recompilação de índice retomável que estão no estado de pausa.
+ Lista todas as operações de recompilação de índice retomáveis que estão no estado de pausa.
 
 ```sql
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  
@@ -65,7 +65,7 @@ SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
 - [Exibições do catálogo](catalog-views-transact-sql.md)
-- [Exibições de catálogo](object-catalog-views-transact-sql.md)
+- [Exibições do catálogo de objetos](object-catalog-views-transact-sql.md)
 - [sys.indexes](sys-xml-indexes-transact-sql.md)
 - [sys.index_columns](sys-index-columns-transact-sql.md)
 - [sys.xml_indexes](sys-xml-indexes-transact-sql.md)
