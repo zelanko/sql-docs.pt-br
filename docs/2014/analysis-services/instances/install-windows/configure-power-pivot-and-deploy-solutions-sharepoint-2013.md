@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d835269f77e563b94c89c3a68c5c82844edc773
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493976"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Configurar o PowerPivot e implantar soluções (SharePoint 2013)
@@ -28,7 +28,7 @@ ms.locfileid: "69493976"
   
  Para obter informações sobre como instalar a ferramenta de configuração do PowerPivot para SharePoint 2013, consulte [instalar ou desinstalar o &#40;suplemento PowerPivot para SharePoint&#41; SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)  
   
- Esse tópico contém as seguintes seções:  
+ Este tópico contém as seguintes seções:  
   
  [Executar configuração do PowerPivot para SharePoint 2013](#bkmk_run_configuration_tool)  
   
@@ -134,7 +134,7 @@ ms.locfileid: "69493976"
   
 5.  Clique em **OK**.  
   
- Para obter mais informações sobre a atualização de dados de solução de problemas, consulte solução https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) de problemas de atualização de [dados PowerPivot](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (.  
+ Para obter mais informações sobre a atualização de dados de solução de problemas, consulte soluçãohttps://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)de problemas de atualização de [dados PowerPivot](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (.  
   
  Para obter mais informações sobre a ferramenta de configuração, consulte [PowerPivot Configuration Tools](../../power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   

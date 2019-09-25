@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b945aa26f0cd9137763a3a8d84b0f74c7d2311bc
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68889606"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Visão geral da arquitetura lógica (Analysis Services – Dados Multidimensionais)
   O Analysis Services funciona em um modo de implantação de servidor que determina a arquitetura de memória e o ambiente de tempo de execução usados pelos diferentes tipos de modelos do Analysis Services. O modo de servidor é determinado durante a instalação. O **modo multidimensional e de mineração de dados** dá suporte a OLAP e Data Mining tradicionais. O **modo de tabela** dá suporte a modelos de tabela. O **modo integrado do SharePoint** refere-se a uma instância do Analysis Services que foi instalado como PowerPivot para SharePoint, usado para carregar e consultar modelos de dados do Excel ou PowerPivot dentro de uma pasta de trabalho.  
   
- Este tópico explica a arquitetura básica do Analysis Services no modo Multidimensional e de Mineração de Dados. Para obter mais informações sobre outros modos, consulte tabular [ &#40;SSAS&#41; tabular](../../tabular-models/tabular-models-ssas.md) e comparando as [soluções &#40;tabulares e multidimensionais SSAS&#41;](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas).  
+ Este tópico explica a arquitetura básica do Analysis Services no modo Multidimensional e de Mineração de Dados. Para obter mais informações sobre outros modos, consulte tabular [ &#40;SSAS&#41; tabular](../../tabular-models/tabular-models-ssas.md) e [comparando as soluções &#40;tabulares e multidimensionais SSAS&#41;](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas).  
   
 ## <a name="basic-architecture"></a>Arquitetura básica  
  Uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] pode conter vários bancos de dados, e um banco de dados pode ter objetos OLAP e objetos de mineração de dados simultaneamente. Os aplicativos se conectam a uma instância específica do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e a um banco de dados específico. Um computador servidor pode servir de host de várias instâncias do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. As instâncias [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] do são nomeadas\<como "\\ServerName\>> < InstanceName". A ilustração a seguir mostra todas as relações [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] mencionadas entre objetos.  
@@ -94,7 +94,7 @@ ms.locfileid: "68889606"
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>Mapeando medidas, atributos e hierarquias  
  As medidas, atributos e hierarquias no cubo de exemplo são derivados das seguintes colunas nas tabelas de fatos e dimensões do cubo.  
   
-|Medida ou atributo (nível)|Members|Tabela de origem|Coluna de origem|Valor da coluna de exemplo|  
+|Medida ou atributo (nível)|Membros|Tabela de origem|Coluna de origem|Valor da coluna de exemplo|  
 |------------------------------------|-------------|------------------|-------------------|-------------------------|  
 |Medida de pacotes|Não aplicável|ImportsFactTable|Packages|12|  
 |Última medida|Não aplicável|ImportsFactTable|Last|03-mai-99|  
@@ -119,7 +119,7 @@ ms.locfileid: "68889606"
   
  Na tabela anterior, cada linha tem os mesmos valores para as colunas **RouteKey**, **SourceKey**e **TimeKey** , indicando que essas linhas contribuem para a mesma célula do cubo.  
   
- O exemplo mostrado aqui representa um cubo muito simples, que tem um único grupo de medidas e no qual todas as tabelas de dimensões são unidas à tabela de fatos em um esquema em estrela. Outro esquema comum é um esquema floco de neve no qual uma ou mais tabelas de dimensão unem-se a outra tabela de dimensão, em vez de unirem-se diretamente à tabela de fatos. **Tópico relacionado:** [Dimensões &#40;Analysis Services-&#41;dados](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)multidimensionais.  
+ O exemplo mostrado aqui representa um cubo muito simples, que tem um único grupo de medidas e no qual todas as tabelas de dimensões são unidas à tabela de fatos em um esquema em estrela. Outro esquema comum é um esquema floco de neve no qual uma ou mais tabelas de dimensão unem-se a outra tabela de dimensão, em vez de unirem-se diretamente à tabela de fatos. **Tópico relacionado:** [Dimensões &#40;Analysis Services-dados&#41;multidimensionais](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   
  O exemplo mostrado aqui contém uma única tabela de fatos. Quando um cubo tem várias tabelas de fatos, as medidas de cada tabela de fatos são organizadas em grupos de medidas e um grupo de medidas está relacionado à um conjunto específico de dimensões por relações de dimensões definidas. Essas relações são definidas pela especificação das tabelas participantes na exibição de fonte de dados e granularidade da relação. **Tópico relacionado:** [Relações de dimensão](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   

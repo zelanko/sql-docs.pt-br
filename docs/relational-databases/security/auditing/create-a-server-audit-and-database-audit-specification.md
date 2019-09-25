@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5199849b0f3dced34ced0ec7a102f03cb054d789
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da064aa2e8cd8c32a96f52ad06ef29ed4e835997
+ms.sourcegitcommit: 5a03dc2bba481c2e2f03d67f6ee9486fc9f8ba95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095204"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71066889"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Criar uma especificação de auditoria de banco de dados e de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "68095204"
      O nome da especificação de auditoria de banco de dados. Esse nome é gerado automaticamente quando você cria uma nova especificação de auditoria de servidor, mas é editável.  
   
      **Auditoria**  
-     O nome de uma auditoria de banco de dados existente. Digite o nome da auditoria ou selecione-o na lista.  
+     O nome de um objeto de auditoria de servidor existente. Digite o nome da auditoria ou selecione-o na lista.  
   
      **Tipo de Ação de Auditoria**  
      Especifica os grupos de ação de auditoria no nível de banco de dados e as ações de auditoria a capturar. Para obter a lista de grupos de ação de auditoria no nível de banco de dados, ações de auditoria e uma descrição dos eventos que eles contêm, veja [Ações e grupos de ações de auditoria do SQL Server](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  

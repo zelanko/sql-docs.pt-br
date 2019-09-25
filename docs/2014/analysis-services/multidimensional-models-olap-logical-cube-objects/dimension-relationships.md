@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e1fe1521f2eebaa4413b49c315f17a6b1b6a5914
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68887934"
 ---
 # <a name="dimension-relationships"></a>Relações de dimensão
@@ -40,13 +40,13 @@ ms.locfileid: "68887934"
   
  ![Diagrama lógico, relação de dimensão referenciada](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdimension1.gif "Diagrama lógico, relação de dimensão referenciada")  
   
- Uma relação de dimensão de referência representa a relação entre tabelas de dimensão e uma tabela de fatos em um projeto de esquema de floco de neve. Quando tabelas de dimensões estão conectadas em um esquema de floco de neve, você pode definir uma única dimensão usando colunas de várias tabelas ou pode definir dimensões separadas com base em tabelas de dimensões separadas e, então, definir um link entre elas usando a configuração de relação de dimensão de referência. A figura a seguir mostra uma tabela de fatos denominada **InternetSales**e duas tabelas de dimensão chamadas **Customer** e geography, em um esquema floco de neve.  
+ Uma relação de dimensão de referência representa a relação entre tabelas de dimensão e uma tabela de fatos em um projeto de esquema de floco de neve. Quando tabelas de dimensões estão conectadas em um esquema de floco de neve, você pode definir uma única dimensão usando colunas de várias tabelas ou pode definir dimensões separadas com base em tabelas de dimensões separadas e, então, definir um link entre elas usando a configuração de relação de dimensão de referência. A figura a seguir mostra uma tabela de fatos denominada **InternetSales**e duas tabelas de dimensão chamadas **Customer** e **geography**, em um esquema floco de neve.  
   
  ![Esquema lógico, relação de dimensão referenciada](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdim-schema1.gif "Esquema lógico, relação de dimensão referenciada")  
   
- Você pode criar uma dimensão com a tabela **Customer** como a tabela principal de dimensão e a tabela geography incluída como uma tabela relacionada. Uma relação regular é, então, definida entre a dimensão e o grupo de medidas VendasInternet.  
+ Você pode criar uma dimensão com a tabela **Customer** como a tabela principal de dimensão e a tabela **geography** incluída como uma tabela relacionada. Uma relação regular é, então, definida entre a dimensão e o grupo de medidas VendasInternet.  
   
- Como alternativa, você pode criar duas dimensões relacionadas ao grupo de medidas InternetSales: uma dimensão baseada na tabela **Customer** e uma dimensão baseada na tabela geography. Você pode então relacionar a dimensão Geografia com o grupo de medidas VendasInternet, usando uma relação de dimensão de referência usando a dimensão Cliente. Nesse caso, quando os fatos no grupo de medidas VendasInternet forem dimensionados pela dimensão Geografia, os fatos serão dimensionados por cliente e por geografia. Se o cubo contiver um segundo grupo de medidas chamado Vendas do Revendedor, você não poderá dimensionar os fatos no grupo de medidas Vendas do Revendedor por Geografia, pois não há relação entre Vendas do Revendedor e Geografia.  
+ Como alternativa, você pode criar duas dimensões relacionadas ao grupo de medidas InternetSales: uma dimensão baseada na tabela **Customer** e uma dimensão baseada na tabela **geography** . Você pode então relacionar a dimensão Geografia com o grupo de medidas VendasInternet, usando uma relação de dimensão de referência usando a dimensão Cliente. Nesse caso, quando os fatos no grupo de medidas VendasInternet forem dimensionados pela dimensão Geografia, os fatos serão dimensionados por cliente e por geografia. Se o cubo contiver um segundo grupo de medidas chamado Vendas do Revendedor, você não poderá dimensionar os fatos no grupo de medidas Vendas do Revendedor por Geografia, pois não há relação entre Vendas do Revendedor e Geografia.  
   
  Não há limite para o número de dimensões de referência que podem ser conectadas juntas, conforme mostrado na ilustração a seguir.  
   

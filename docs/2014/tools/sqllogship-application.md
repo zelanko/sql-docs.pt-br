@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "63035049"
 ---
 # <a name="sqllogship-application"></a>Aplicativo sqllogship
   O aplicativo **sqllogship** realiza uma operação de backup, cópia ou restauração e as tarefas de limpeza associadas de uma configuração de envio de logs. A operação é realizada em uma instância específica do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para um banco de dados específico.  
   
- ![Ícone de link do tópico](../../2014/database-engine/media/topic-link.gif "ícone de link do tópico") para obter as convenções de sintaxe, consulte [referência de utilitários de Prompt de comando &#40;o mecanismo de banco de dados&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
+ ![Ícone de link do tópico](../../2014/database-engine/media/topic-link.gif "Ícone de link do tópico") Para obter as convenções de sintaxe, consulte [referência &#40;do utilitário&#41;de prompt de comando mecanismo de banco de dados](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -74,7 +74,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  O histórico do envio de logs criado por **sqllogship** é intercalado com o histórico criado pelos trabalhos de backup, cópia e restauração do envio de logs. Se você pretende usar **sqllogship** repetidamente para realizar as operações de backup, cópia ou restauração de uma configuração de envio de logs, considere desabilitar o(s) trabalho(s) de envio de logs correspondente(s). Para obter mais informações, consulte [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  
   
- O **sqllogship** aplicativo, SqlLogShip.exe, está instalado no diretório x:\Program Files\Microsoft SQL Server\120\Tools\Binn.  
+ O aplicativo **sqllogship** , sqllogship. exe, é instalado no diretório X:\Arquivos de Programas\microsoft SQL Server\120\Tools\Binn.  
   
 ## <a name="permissions"></a>Permissões  
  **sqllogship** usa a Autenticação do Windows. A conta Autenticação do Windows onde o comando é executado requer acesso ao diretório e às permissões [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] do Windows O requisito depende de qual opção é especificada pelo comando **sqllogship** : **-backup**, **-copy**ou **-restore** .  

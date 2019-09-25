@@ -1,7 +1,7 @@
 ---
 title: Tabelas | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 09/18/2019
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2cf1a6cbb774640099a7465180fc879dcc75c77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2c705c60504dd6de0b143fd129d6660db9457b48
+ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016256"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127371"
 ---
 # <a name="tables"></a>Tabelas
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -46,7 +46,7 @@ As tabelas temporárias são armazenadas em **tempdb**. Há dois tipos de tabela
 
 #### <a name="ctp23"></a> Recompilações reduzidas para cargas de trabalho usando tabelas temporárias em vários escopos
 
-[!INCLUDE[ss2019](../../includes/sssqlv15-md.md) reduz recompilações para cargas de trabalho usando tabelas temporárias em vários escopos. Antes desse recurso, ao fazer referência a uma tabela temporária com uma instrução DML (linguagem de manipulação de dados) (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), se a tabela temporária tivesse sido criada por um lote de escopo externo, isso resultaria em uma recompilação da instrução DML cada vez que ela fosse executada. Com essa melhoria, o SQL Server executa verificações adicionais leves para evitar recompilações desnecessárias:
+[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] reduz as recompilações para cargas de trabalho usando tabelas temporárias em vários escopos. Antes desse recurso, ao fazer referência a uma tabela temporária com uma instrução DML (linguagem de manipulação de dados) (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), se a tabela temporária tivesse sido criada por um lote de escopo externo, isso resultaria em uma recompilação da instrução DML cada vez que ela fosse executada. Com essa melhoria, o SQL Server executa verificações adicionais leves para evitar recompilações desnecessárias:
 
 - Verifique se o módulo de escopo externo usado para criar a tabela temporária em tempo de compilação é a mesma usada para execuções consecutivas. 
 - Controle quaisquer alterações de DDL (linguagem de definição de dados) feitas na compilação inicial e compare-as com as operações de DDL para execuções consecutivas.

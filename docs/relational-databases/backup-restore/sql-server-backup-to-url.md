@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 534907b49e5139f57f8b008742cf76346f7838ec
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 86ef1638fc37fd70d8438c173b5972fa2fc8f551
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176356"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118182"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup do SQL Server para URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,8 +66,10 @@ ms.locfileid: "70176356"
 - Você pode fazer backup em vários blobs de blocos para ter um melhor desempenho de backup e restauração, bem como para dar suporte ao backup de bancos de dados maiores.
 - O [blob de blocos](https://azure.microsoft.com/pricing/details/storage/blobs/) é mais barato que o [blob de páginas](https://azure.microsoft.com/pricing/details/storage/page-blobs/). 
 
-Quando você faz backup no blob de blocos, o tamanho máximo de bloco que você pode especificar é de 4 MB. O tamanho máximo de um único arquivo de blob de blocos é 4 MB * 50000 = 195 GB. Se seu banco de dados tiver mais de 195 GB, recomendamos que você:
-- use a compactação de backup
+O backup de um banco de dados grande para o armazenamento de blobs está sujeito às limitações listadas em [Diferenças de T-SQL de instância gerenciada, limitações e problemas conhecidos](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
+
+ Se o banco de dados for muito grande, escolha uma das seguintes soluções:
+- use a compactação de backup ou
 - faça backup em vários blobs de blocos
 
 ###  <a name="Blob"></a> Serviço de Armazenamento de Blobs do Microsoft Azure  
@@ -114,7 +116,7 @@ Quando você faz backup no blob de blocos, o tamanho máximo de bloco que você 
   
 -   Não há suporte para a especificação de opções de backupset - **RETAINDAYS** e **EXPIREDATE** .  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem um limite máximo de 259 caracteres em um nome de dispositivo de backup. O BACKUP TO URL consome 36 caracteres para os elementos necessários usados para especificar a URL – 'https://.blob.core.windows.net//.bak ', deixando 223 caracteres para os nomes da conta, do contêiner e do blob juntos.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem um limite máximo de 259 caracteres em um nome de dispositivo de backup. O BACKUP TO URL consome 36 caracteres para os elementos necessários usados para especificar a URL – 'https://.blob.core.windows.net//.bak', deixando 223 caracteres para os nomes da conta, do contêiner e do blob juntos.  
   
 ###  <a name="Support"></a> Suporte a instruções de backup/restauração  
   
@@ -215,7 +217,7 @@ Você pode fazer o backup de um banco de dados para a URL por meio da tarefa de 
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
 
-2.  Expanda **Bancos de Dados**, clique com o botão direito do mouse no banco de dados desejado, aponte para **Tarefas**e clique em **Fazer backup...** .
+2.  Expanda **Bancos de Dados**, clique com o botão direito do mouse no banco de dados desejado, aponte para **Tarefas**e clique em **Fazer backup...**.
   
 3.  Na página **Geral** , na seção **Destino** , a opção **URL** está disponível na lista suspensa **Fazer backup em:** .  A opção **URL** é usada para criar um backup no armazenamento do Microsoft Azure. Clique em **Adicionar** e a caixa de diálogo **Selecionar Destino do Backup** será aberta:
     1.  **Contêiner de armazenamento do Azure:** O nome do contêiner de armazenamento do Microsoft Azure no qual os arquivos de backup serão armazenados.  Selecione um contêiner existente na lista suspensa ou digite manualmente o contêiner. 
@@ -250,7 +252,7 @@ Quando você selecionar **URL** como destino, determinadas opções na página *
 ##  <a name="RestoreSSMS"></a> Restaurando por meio do armazenamento do Microsoft Azure usando o SQL Server Management Studio  
 A tarefa Restaurar Banco de Dados inclui **URL** como um dispositivo do qual restaurar.  As etapas a seguir descrevem como usar a tarefa Restaurar para restaurar do serviço de Armazenamento de Blobs do Microsoft Azure: 
   
-1.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...** . 
+1.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**. 
   
 2.  Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
   

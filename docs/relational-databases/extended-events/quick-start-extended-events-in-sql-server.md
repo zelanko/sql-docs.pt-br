@@ -11,12 +11,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a378daeb4307b9f99e055edafd5cb21d95c30977
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18a70b5ec95c382bc37d4bec894f9953389a664a
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009412"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016850"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Início Rápido: Eventos estendidos no SQL Server
 
@@ -109,18 +109,18 @@ O texto e as capturas de tela de suporte podem não ser exatas quando a interfac
 
     ![Nova Sessão > Eventos > Configurar > Filtro (Predicado) > Campo](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
-7. Clique na guia **Filtro (Predicado)** . Em seguida, clique em **Clique aqui para adicionar uma cláusula**para capturar todas as instruções SQL SELECT que têm uma cláusula HAVING.
+7. Clique na guia **Filtro (Predicado)**. Em seguida, clique em **Clique aqui para adicionar uma cláusula**para capturar todas as instruções SQL SELECT que têm uma cláusula HAVING.
 
 8. No lista suspensa **Campo** , escolha **sqlserver.sql_text**.
    - Em **Operador** , escolha um operador LIKE.
-   - Em **Valor** , digite **%SELECT%HAVING%** .
+   - Em **Valor** , digite **%SELECT%HAVING%**.
 
     > [!NOTE]
     > Neste nome de duas partes, *sqlserver* é o nome do pacote e *sql_text* é o nome do campo. O evento anterior que escolhemos, *sql_statement_completed* , deve estar no mesmo pacote que o campo escolhido.
 
 9. No canto superior esquerdo, clique na página **Armazenamento de Dados** .
 
-10. Na área **Destinos** , clique em **Clique aqui para um destino**.
+10. Na área **Destinos**, clique em **Clique aqui para adicionar um destino**.
     - Na lista suspensa **Tipo** , escolha **event_file**.
     - Isso significa que os dados de evento serão armazenados em um arquivo que pode ser exibido.
 
@@ -410,7 +410,7 @@ No **Pesquisador de Objetos**do SSMS, é possível clicar com o botão direito d
 Há inúmeros cenários para o uso efetivo dos eventos estendidos. Os artigos a seguir fornecem exemplos de cenários que envolvem os bloqueios usados durante as consultas.
 
 
-Cenários específicos de sessões de evento destinadas à avaliação de bloqueios são descritos nos artigos a seguir. Os artigos também mostram algumas técnicas avançadas, como o uso de **@dbid** e de `EXECUTE (@YourSqlString)`dinâmico:
+Cenários específicos de sessões de evento destinadas à avaliação de bloqueios são descritos nos artigos a seguir. Os artigos também mostram algumas técnicas avançadas, como o uso de **@dbid**e de `EXECUTE (@YourSqlString)`dinâmico:
 
 - [Localizar os objetos que detêm a maioria dos bloqueios](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - Esse cenário usa o destino package0.histogram, que processa os dados brutos de evento antes de exibi-los para você.
@@ -623,7 +623,7 @@ SELECT
 ```
 
 
-#### <a name="haspermsbyname-function"></a>função HAS_PERMS_BY_NAME
+#### <a name="has_perms_by_name-function"></a>função HAS_PERMS_BY_NAME
 
 
 A instrução SELECT a seguir relata as permissões. Ela utiliza a função interna [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md).

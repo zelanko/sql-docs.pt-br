@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b7b091c6e963af043533bfe362a801d7d4c91f2
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493872"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Definindo uma relação muitos para muitos
@@ -35,7 +35,7 @@ ms.locfileid: "69493872"
   
 1.  Abra o Designer de Exibição da Fonte de Dados para a exibição da fonte de dados do **Adventure Works DW 2012**  
   
-2.  Clique com o botão direito do mouse em qualquer lugar no painel Organizador de diagramas `Internet Sales Order Reasons` , clique em **novo diagrama**e especifique como o nome para esse novo diagrama.  
+2.  Clique com o botão direito do mouse em qualquer lugar no painel **organizador de diagramas** , clique em **novo diagrama**e especifique `Internet Sales Order Reasons` como o nome para esse novo diagrama.  
   
 3.  Arraste a tabela **InternetSales** do painel **Tabelas** para o painel **Diagrama** .  
   
@@ -47,7 +47,7 @@ ms.locfileid: "69493872"
   
 6.  No menu **Formatar** , aponte para **Layout Automático**e, em seguida, clique em **Diagrama**.  
   
-7.  No janela Propriedades, altere a propriedade **FriendlyName** da tabela **DimSalesReason** para `SalesReason`e altere a propriedade FriendlyName da tabela **FactInternetSalesReason** para `InternetSalesReason`.  
+7.  No janela Propriedades, altere a propriedade **FriendlyName** da tabela **DimSalesReason** para `SalesReason`e altere a propriedade **FriendlyName** da tabela **FactInternetSalesReason** para `InternetSalesReason`.  
   
 8.  No painel **Tabelas** , expanda **InternetSalesReason (dbo.FactInternetSalesReason)** , clique em **SalesOrderNumber**e examine a propriedade **DataType** desta coluna de dados na janela Propriedades.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "69493872"
   
 10. Na página **Concluindo o Assistente** , clique em **Concluir** para criar a dimensão Motivo de Vendas.  
   
-11. No menu **Arquivo**, clique em **Salvar tudo**.  
+11. No menu **Arquivo** , clique em **Salvar Tudo**.  
   
 12. No painel **atributos** do designer de dimensão da dimensão **motivo de vendas** , selecione chave de **motivo de vendas**e altere a propriedade **nome** no janela Propriedades para`Sales Reason.`  
   
@@ -125,7 +125,7 @@ ms.locfileid: "69493872"
   
 17. Na caixa de diálogo **Adicionar Dimensão do Cubo** , selecione **Motivo de Vendas** e então clique em **OK**.  
   
-18. No menu **Arquivo**, clique em **Salvar tudo**.  
+18. No menu **Arquivo** , clique em **Salvar Tudo**.  
   
 ## <a name="defining-the-many-to-many-relationship"></a>Definindo a relação muitos para muitos  
   

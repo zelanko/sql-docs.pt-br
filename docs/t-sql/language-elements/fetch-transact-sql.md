@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d8c31adb0dff16b84e4c606dc3b5479a43a1092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aa0ec88e64c317c2106a4a6a2a4d204e7192f114
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075208"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174287"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,11 +64,11 @@ FETCH
  LAST  
  Retorna a última linha no cursor e a torna a linha atual.  
   
- ABSOLUTE { *n*| @*nvar*}  
- Se *n* ou @*nvar* é positivo, retorna a linha que está *n* linhas do início do cursor e torna a linha retornada a nova linha atual. Se *n* ou @*nvar* é negativo, retorna a linha que está *n* linhas antes do final do cursor e torna a linha retornada a nova linha atual. Se *n* ou @*nvar* é 0, nenhuma linha é retornada. *n* deve ser uma constante de inteiro e @*nvar* deve ser **smallint**, **tinyint** ou **int**.  
+ ABSOLUTE { *n*| \@*nvar*}  
+ Se *n* ou \@*nvar* for positivo, retornará a linha que está *n* linhas da frente do cursor e tornará a linha retornada a nova linha atual. Se *n* ou \@*nvar* for negativo, retornará a linha que está *n* linhas antes do final do cursor e tornará a linha retornada a nova linha atual. Se *n* ou \@*nvar* for 0, nenhuma linha será retornada. *n* precisa ser uma constante de inteiro e \@*nvar* precisa ser **smallint**, **tinyint** ou **int**.  
   
- RELATIVE { *n*| @*nvar*}  
- Se *n* ou @*nvar* é positivo, retorna a linha que está *n* linhas após a linha atual e torna a linha retornada a nova linha atual. Se *n* ou @*nvar* é negativo, retorna a linha que está *n* linhas antes da linha atual e torna a linha retornada a nova linha atual. Se *n* ou @*nvar* é 0, retorna a linha atual. Se `FETCH RELATIVE` é especificado com *n* ou @*nvar* definido como números negativos ou 0 na primeira busca feita em um cursor, nenhuma linha é retornada. *n* deve ser uma constante de inteiro e @*nvar* deve ser **smallint**, **tinyint** ou **int**.  
+ RELATIVE { *n*| \@*nvar*}  
+ Se *n* ou \@*nvar* for positivo, retornará a linha que está *n* linhas após a linha atual e tornará a linha retornada a nova linha atual. Se *n* ou \@*nvar* for negativo, retornará a linha que está *n* linhas antes da linha atual e tornará a linha retornada a nova linha atual. Se *n* ou \@*nvar* for 0, retornará a linha atual. Se `FETCH RELATIVE` for especificado com *n* ou \@*nvar* definido como números negativos ou 0 no primeiro fetch feito em um cursor, nenhuma linha será retornada. *n* precisa ser uma constante de inteiro e \@*nvar* precisa ser **smallint**, **tinyint** ou **int**.  
   
  GLOBAL  
  Especifica que *cursor_name* se refere a um cursor global.  

@@ -10,12 +10,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 309ef92b105ae022cfc543ce0e73107af6870331
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae6962d52c40053256117f2e20227f39ed1fd4f8
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054237"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149984"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Escolher um método de upgrade do mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +26,7 @@ Há várias abordagens a serem consideradas quando você está planejando fazer 
   
  **Download**  
   
--   Para baixar o [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], acesse o  **[Centro de Avaliação](https://www.microsoft.com/evalcenter/evaluate-sql-server)** .  
+-   Para baixar o [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], acesse o  **[Centro de Avaliação](https://www.microsoft.com/evalcenter/evaluate-sql-server)**.  
   
 -   Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** para criar uma Máquina Virtual com o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition já instalado.  
   
@@ -102,7 +102,7 @@ As etapas necessárias para a atualização de uma nova instalação variam um p
      ![Método de upgrade de nova instalação usando desanexar e anexar para o armazenamento da rede SAN](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "Método de upgrade de nova instalação usando desanexar e anexar para o armazenamento da rede SAN")  
   
 ## <a name="rolling-upgrade"></a>Atualização sem interrupção  
- É necessária uma atualização sem interrupção em ambientes de solução do SQL Server que envolvem várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que devam ser atualizadas em uma determinada ordem para maximizar o tempo de atividade, minimizar os riscos e preservar a funcionalidade. Uma atualização sem interrupção é, em essência, a atualização de várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma ordem específica, com a atualização in-loco de cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou com a atualização de uma nova instalação para facilitar a atualização de hardware e/ou do sistema operacional como parte do projeto de atualização. Há várias situações em que a abordagem de atualização sem interrupção é necessária. Essas situações são documentadas nos seguintes artigos:  
+ É necessária uma atualização sem interrupção em ambientes de solução do SQL Server que envolvem várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que devam ser atualizadas em uma determinada ordem para maximizar o tempo de atividade, minimizar os riscos e preservar a funcionalidade. Uma atualização sem interrupção é, em essência, a atualização de várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma ordem específica, com a atualização in-loco de cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou com a atualização de uma nova instalação para facilitar a atualização de hardware e/ou do sistema operacional como parte do projeto de atualização. Há várias situações em que a abordagem de atualização sem interrupção é necessária. Essas situações são documentadas nos seguintes artigos:  
   
 -   Grupos de Disponibilidade Always On: para obter etapas detalhadas para executar uma atualização sem interrupção nesse ambiente, confira [Atualizar instâncias de réplica do Grupo de Disponibilidade Always On](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).    
 -   Instâncias de cluster de failover: para obter etapas detalhadas para executar uma atualização sem interrupção nesse ambiente, confira [Atualizar uma instância de cluster de failover do SQL Server](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)    

@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fe83d73c0c7413715122d849141ea5378c24c47
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: d65ca67e43c35f0997b3d0784c97e501606bd05b
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228467"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096885"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novidades no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -53,7 +53,7 @@ Para obter mais detalhes, confira [O que são SQL Server [!INCLUDE[big-data-clus
 
 |Novo recurso ou atualização | Detalhes |
 |:---|:---|
-|Indexar colunas criptografadas|Criar índices em colunas criptografadas usando criptografia aleatória e chaves habilitada para enclave, a fim de melhorar o desempenho de consultas avançadas (usando `LIKE` e operadores de comparação). Veja [Always Encrypted com enclaves seguros](../relational-databases/security/encryption/always-encrypted-enclaves.md).
+|Always Encrypted com enclaves seguros|Expande sobre Always Encrypted com criptografia in-loco e computações avançadas, habilitando cálculos em dados de texto sem formatação dentro de um enclave seguro no lado do servidor. A criptografia in-loco melhora o desempenho e a confiabilidade das operações de criptografia (criptografia de colunas, chaves de criptografia de colunas giratórias, etc.), pois evita a movimentação de dados para fora do banco. O suporte para computações avançadas (correspondência de padrões e operações de comparação) desbloqueia o Always Encrypted a um conjunto muito mais amplo de cenários e aplicativos que demandam proteção de dados confidenciais, além de exigir uma funcionalidade mais rica em consultas Transact-SQL. Veja [Always Encrypted com enclaves seguros](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
 |Suspender e retomar a verificação inicial para TDE (Transparent Data Encryption)|Confira [Verificação de TDE (Transparent Data Encryption) – suspender e retomar](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume).|
 |Gerenciamento de certificados no SQL Server Configuration Manager|Confira [Gerenciamento de certificado (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md).|
 | &nbsp; | &nbsp; |
@@ -168,7 +168,7 @@ Para obter mais detalhes, confira [O que são SQL Server [!INCLUDE[big-data-clus
 
 |Novo recurso ou atualização | Detalhes | 
 |:---|:---| 
-|Novas opções de configuração de memória | Define durante a instalação as configurações de servidor de *memória mínima do servidor (MB)* e *memória máxima do servidor (MB)* . Para obter mais informações, confira a [página Configuração do mecanismo de banco de dados – memória](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory) e os parâmetros `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` e `SQLMAXMEMORY` em [Instalar o SQL Server do prompt de comando](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). O valor proposto será alinhado com as diretrizes de configuração de memória nas [Opções de configuração de memória do servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).| 
+|Novas opções de configuração de memória | Define durante a instalação as configurações de servidor de *memória mínima do servidor (MB)* e *memória máxima do servidor (MB)*. Para obter mais informações, confira a [página Configuração do mecanismo de banco de dados – memória](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory) e os parâmetros `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` e `SQLMAXMEMORY` em [Instalar o SQL Server do prompt de comando](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). O valor proposto será alinhado com as diretrizes de configuração de memória nas [Opções de configuração de memória do servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).| 
 |Novas opções de configuração de paralelismo | Define o *grau máximo de configuração de* servidor de paralelismo durante a instalação. Para obter mais informações, confira a [página Configuração do mecanismo de banco de dados – MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) e o parâmetro `SQLMAXDOP` em [Instalar SQL Server no prompt de comando](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). O valor padrão será alinhado às diretrizes de grau máximo da opção de paralelismo especificadas em [Configurar a opção de configuração de servidor grau máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
 | &nbsp; | &nbsp; |
 

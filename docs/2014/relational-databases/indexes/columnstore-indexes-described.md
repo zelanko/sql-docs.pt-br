@@ -17,10 +17,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 87d19bc837219b5573dd237310b11dab9f146406
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68811042"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
@@ -29,7 +29,7 @@ ms.locfileid: "68811042"
 > [!NOTE]  
 >  Exibimos o índice columnstore clusterizado como o padrão para armazenar grandes tabelas de fatos de data warehouse e esperamos que ele seja usado na maioria dos cenários de data warehouse. Uma vez que o índice columnstore clusterizado é atualizável, a carga de trabalho pode executar um grande número de operações de inserção, atualização e exclusão.  
   
-## <a name="contents"></a>Conteúdo  
+## <a name="contents"></a>Sumário  
   
 -   [Noções básicas](#basics)  
   
@@ -114,7 +114,7 @@ ms.locfileid: "68811042"
  Para altas taxas de desempenho e compactação, o índice columnstore fatia a tabela em grupos de linhas e depois compacta cada um desses grupos com um método com reconhecimento de coluna. O número de linhas no grupo de linhas deve ser grande o suficiente para melhorar as taxas de compactação e pequeno o suficiente para se beneficiar com as operações na memória.  
   
  grupo de linhas  
- Um rowgroup é um grupo de linhas que são compactadas no formato columnstore ao mesmo tempo.  
+ Um *rowgroup é um* grupo de linhas que são compactadas no formato columnstore ao mesmo tempo.  
   
  segmento de coluna  
  Um *segmento de coluna* é uma coluna de dados do grupo de linhas.  
@@ -128,11 +128,11 @@ ms.locfileid: "68811042"
  ![Column segment](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
   
  índice columnstore não clusterizado  
- Um *índice columnstore* não clusterizado é um índice somente leitura criado em um índice clusterizado ou tabela de heap existente. Contém uma cópia de um subconjunto de colunas, até e incluindo todas as colunas na tabela. A tabela é somente leitura enquanto contém um índice columnstore não clusterizado.  
+ Um *índice columnstore não clusterizado* é um índice somente leitura criado em um índice clusterizado ou tabela de heap existente. Contém uma cópia de um subconjunto de colunas, até e incluindo todas as colunas na tabela. A tabela é somente leitura enquanto contém um índice columnstore não clusterizado.  
   
  Um índice columnstore não clusterizado fornece uma maneira de ter um índice columnstore para execução de consultas de análise e, ao mesmo tempo, executar operações somente leitura na tabela original.  
   
- ![Índice columnstore] não clusterizado (../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "Índice columnstore") não clusterizado  
+ ![Índice columnstore não clusterizado](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "Índice columnstore não clusterizado")  
   
  índice columnstore clusterizado  
  Um *índice columnstore clusterizado* é o armazenamento físico para a tabela inteira e é o único índice para a tabela. O índice clusterizado é atualizável. Você pode executar operações de inserção, exclusão e atualização no índice e pode carregar dados em massa no índice.  

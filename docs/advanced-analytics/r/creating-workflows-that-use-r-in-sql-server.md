@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2b8d55e95991437e4d76911fd26afb5b1bc9c550
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68715169"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Criar fluxos de trabalho do SSIS e do SSRS com R no SQL Server

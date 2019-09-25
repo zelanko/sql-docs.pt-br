@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0d97b7fea9557e1ce462fcc540e51a1ee4b0228
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493926"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>Definindo o membro desconhecido e as propriedades de processamento nulo
@@ -49,7 +49,7 @@ ms.locfileid: "69493926"
   
      A imagem a seguir mostra as configurações de propriedade da coleção de propriedades **ErrorConfiguration** .  
   
-     ![Coleção de propriedades ErrorConfiguration](../../2014/tutorials/media/l4-productdimensionerrorconfig-1.gif "Coleção de propriedades ErrorConfiguration")  
+     ![Coleção de propriedades ErrorConfiguration] (../../2014/tutorials/media/l4-productdimensionerrorconfig-1.gif "Coleção de propriedades ErrorConfiguration")  
   
 5.  Clique na guia **navegador** , verifique se **linhas de modelo de produto** está selecionada na lista **hierarquia** e, em `All Products`seguida, expanda.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "69493926"
   
      Esse nível contém os componentes do assembly que são usados para criar outros componentes, começando com o produto **Corrida Ajustável** , como mostra a imagem a seguir.  
   
-     ![Componentes de assembly usados para criar outros componentes](../../2014/tutorials/media/l4-productdimensionerrorconfig-2.gif "Componentes de assembly usados para criar outros componentes")  
+     ![Componentes de assembly usados para criar outros componentes] (../../2014/tutorials/media/l4-productdimensionerrorconfig-2.gif "Componentes de assembly usados para criar outros componentes")  
   
 ## <a name="defining-attributes-from-snowflaked-tables-and-a-product-category-user-defined-hierarchy"></a>Definindo atributos das tabelas floco de neve e uma hierarquia definida pelo usuário Categoria do Produto  
   
@@ -89,7 +89,7 @@ ms.locfileid: "69493926"
   
 9. No painel **atributos** , altere o nome desse novo atributo para `Category`.  
   
-10. No janela Propriedades, clique no campo de propriedade **NameColumn** e, em seguida, clique no botão procurar ( **...** ) para abrir a caixa de diálogo **coluna de nome** .  
+10. No janela Propriedades, clique no campo de propriedade **NameColumn** e, em seguida, clique no botão procurar (**...**) para abrir a caixa de diálogo **coluna de nome** .  
   
 11. Selecione **EnglishProductCategoryName** na lista **Coluna de origem** e clique em **OK**.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "69493926"
   
      Observe que uma cláusula WHERE foi adicionada à cláusula SELECT DISTINCT que remove os produtos que não têm nenhum valor na coluna ProductSubcategoryKey, como mostra a imagem a seguir:  
   
-     ![Selecione a cláusula DISTINCT mostrando a cláusula WHERE](../../2014/tutorials/media/l4-productnametraceline-1.gif "Selecione a cláusula DISTINCT mostrando a cláusula WHERE")  
+     ![Selecione a cláusula DISTINCT mostrando a cláusula WHERE] (../../2014/tutorials/media/l4-productnametraceline-1.gif "Selecione a cláusula DISTINCT mostrando a cláusula WHERE")  
   
 5.  Clique em **Fechar** três vezes para fechar todas as caixas de diálogo em processamento.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "69493926"
   
      Observe que todos os componentes do assembly agora são exibidos no nível **Nome do Produto** , como mostra a imagem a seguir.  
   
-     ![Nível de nome do produto mostrando componentes de assembly](../../2014/tutorials/media/l4-assemblycomponents-1.gif "Nível de nome do produto mostrando componentes de assembly")  
+     ![Nível de nome do produto mostrando componentes de assembly] (../../2014/tutorials/media/l4-assemblycomponents-1.gif "Nível de nome do produto mostrando componentes de assembly")  
   
 ## <a name="next-lesson"></a>Próxima lição  
  [Lição 5: Definindo relações entre dimensões e grupos de medidas](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  

@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: baa337d33173f292145d92b60d6192af2a716c5e
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70154334"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>Lição 2: Criar uma credencial do SQL Server
@@ -45,7 +45,7 @@ ms.locfileid: "70154334"
   
     ```  
   
-     ![mapeando a conta de armazenamento para credenciais do SQL](../../2014/tutorials/media/backuptocloud-storage-credential-mapping.gif "mapeando a conta de armazenamento para credenciais do SQL")  
+     ![mapeando a conta de armazenamento para credenciais do SQL] (../../2014/tutorials/media/backuptocloud-storage-credential-mapping.gif "mapeando a conta de armazenamento para credenciais do SQL")  
   
 5.  Verifique a instrução T-SQL e clique em **Executar**.  
   

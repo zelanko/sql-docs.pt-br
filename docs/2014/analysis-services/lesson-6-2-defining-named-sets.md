@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff1b386d0f85f1073b533921d690462c9ed25dc0
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493891"
 ---
 # <a name="defining-named-sets"></a>Definindo conjuntos nomeados
@@ -47,7 +47,7 @@ ms.locfileid: "69493891"
   
 ## <a name="defining-a-large-resellers-named-set"></a>Definindo um conjunto nomeado chamado Grandes Revendedores  
   
-1.  Clique `[Core Products]` com o botão direito do mouse no painel Organizador de **script** e clique em **novo conjunto nomeado**.  
+1.  Clique `[Core Products]` com o botão direito do mouse no painel **organizador de script** e clique em **novo conjunto nomeado**.  
   
 2.  Na caixa **nome** , altere o nome desse conjunto nomeado para `[Large Resellers]`.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "69493891"
   
      Agora que você definiu o primeiro conjunto para a expressão de conjunto Exists, você está pronto para adicionar o segundo conjunto – o conjunto de membros da dimensão Revendedor que contém o maior número de funcionários.  
   
-7.  Na guia **metadados** do painel **ferramentas de cálculo** , expanda o **número de funcionários** na dimensão Revendedor, `Members`expanda e expanda **todos os**revendedores.  
+7.  Na guia **metadados** do painel **ferramentas de cálculo** , expanda o **número de funcionários** na dimensão Revendedor, `Members`expanda e expanda **todos os revendedores**.  
   
      Observe que os membros dessa hierarquia de atributo não estão agrupados.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "69493891"
   
 11. Quando a implantação for concluída com êxito, alterne para o Designer de Cubo do cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e, em seguida, na barra de ferramentas da guia **Cálculos** , clique em **Reconectar** .  
   
-12. Na guia **metadados** do painel **ferramentas de cálculo** , expanda o **número de funcionários** na dimensão Revendedor, `Members`expanda e expanda **todos os**revendedores.  
+12. Na guia **metadados** do painel **ferramentas de cálculo** , expanda o **número de funcionários** na dimensão **revendedor** , `Members`expanda e expanda **todos os revendedores**.  
   
      Observe que agora os membros dessa hierarquia de atributo estão contidos em cinco grupos, numerados de 0 a 4. Para visualizar o número de um grupo, posicione o ponteiro do mouse sobre o grupo desejado para exibir uma InfoDica. Para o intervalo `2 -17`, o InfoTip deve conter `[Reseller].[Number of Employees].&[0]`.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493891"
   
      A imagem a seguir mostra o painel **expressões** de cálculo `[Large Resellers]` para o conjunto nomeado.  
   
-     ![Painel de expressões de cálculo para [grandes revendedores]](../../2014/tutorials/media/l6-named-set-02.gif "Painel de expressões de cálculo para [grandes revendedores]")  
+     ![Painel de expressões de cálculo para [grandes revendedores]] (../../2014/tutorials/media/l6-named-set-02.gif "Painel de expressões de cálculo para [grandes revendedores]")  
   
 14. Na barra de ferramentas da guia **Cálculos** , clique em **Exibição de Script**e verifique os dois conjuntos nomeados que foram adicionados ao script de cálculo.  
   
@@ -117,19 +117,19 @@ ms.locfileid: "69493891"
   
 5.  Expanda a dimensão Produto e adicione Categoria e Subcategoria à área de linha, conforme mostrado na imagem a seguir.  
   
-     ![Membros do atributo subcategoria](../../2014/tutorials/media/l6-named-set-03.gif "Membros do atributo subcategoria")  
+     ![Membros do atributo subcategoria] (../../2014/tutorials/media/l6-named-set-03.gif "Membros do atributo subcategoria")  
   
 6.  No painel **Metadados** , na dimensão **Produto** , arraste **Produtos Principais** para a área de filtro.  
   
      Observe que apenas o membro **Bicicleta** do atributo **Categoria** e os membros das subcategorias de **Bicicleta** permanecem no cubo. Isto ocorre porque o conjunto nomeado **Produtos de Núcleo** é usado para definir um subcubo. Esse subcubo limita os membros do atributo **Categoria** na dimensão **Produto** dentro do subcubo aos membros do conjunto nomeado **Produtos Principais** , como mostra a imagem a seguir.  
   
-     ![Membros do conjunto nomeado do produto principal](../../2014/tutorials/media/l6-named-set-04.gif "Membros do conjunto nomeado do produto principal")  
+     ![Membros do conjunto nomeado do produto principal] (../../2014/tutorials/media/l6-named-set-04.gif "Membros do conjunto nomeado do produto principal")  
   
 7.  No painel **Metadados** , expanda **Revendedor**, adicione **Grandes Revendedores** à área de filtro.  
   
      Observe que a medida Valor das Vendas do Revendedor no painel Dados exibe apenas o valor das vendas de bicicletas dos grandes revendedores. Observe também que agora o painel Filtro exibe os dois conjuntos nomeados que são usados para definir esse subcubo específico, como mostra a imagem a seguir.  
   
-     ![Painel de filtro contendo dois conjuntos nomeados](../../2014/tutorials/media/l6-named-set-05.gif "Painel de filtro contendo dois conjuntos nomeados")  
+     ![Painel de filtro contendo dois conjuntos nomeados] (../../2014/tutorials/media/l6-named-set-05.gif "Painel de filtro contendo dois conjuntos nomeados")  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Lição 7: Definindo KPIs de indicadores &#40;chave de desempenho&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  

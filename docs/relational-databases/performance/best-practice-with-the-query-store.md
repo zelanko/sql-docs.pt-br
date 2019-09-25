@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: julieMSFT
+author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc407a8b76665b39837b5c278f2ce5942be45e51
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 4627118daa91305dc905eb5f306e6bd2fcc1b91c
+ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903610"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163896"
 ---
 # <a name="best-practice-with-the-query-store"></a>Melhor prática com o Repositório de Consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -229,11 +229,13 @@ Navegue até a subpasta do Repositório de Consultas sob o nó do banco de dados
 
 > [!NOTE]
 > O gráfico acima pode conter formas diferentes para planos de consulta específicos, com os seguintes significados para cada status possível:<br />  
+> 
 > |Forma|Significado|  
 > |-------------------|-------------|
 > |Circle|Consulta Concluída (Execução Regular concluída com êxito)|
 > |Square|Cancelado (Execução iniciada pelo cliente anulada)|
 > |Triangle|Falha (Execução anulada pela exceção)|
+> 
 > Além disso, o tamanho da forma reflete a contagem de execução de consulta dentro do intervalo de tempo especificado, aumentando de tamanho com um número maior de execuções.  
 
 -   Você pode concluir que há um índice ausente na consulta, impedindo a execução ideal. Essas informações são expostas no plano de execução de consulta. Crie o índice ausente e verifique o desempenho da consulta usando o Repositório de Consultas.  
@@ -306,9 +308,9 @@ FROM sys.database_query_store_options;
   
  Se o problema persistir, isso indicará corrupção dos dados do Repositório de Consultas que estão persistidos no disco.
  
- No [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e versões posteriores, é possível recuperar o Repositório de Consultas executando o procedimento armazenado **sp_query_store_consistency_check** no banco de dados afetado. Para o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você precisará limpar os dados do Repositório de Consultas, conforme mostrado abaixo.
+ No [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e versões posteriores, é possível recuperar o Repositório de Consultas executando o procedimento armazenado **sp_query_store_consistency_check** no banco de dados afetado. O Repositório de Consultas deve ser desabilitado antes de se tentar a operação de recuperação. Para o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você precisará limpar os dados do Repositório de Consultas, conforme mostrado abaixo.
  
- Se isso não ajudar, você poderá tentar limpar o Repositório de Consultas antes de solicitar o modo de leitura/gravação.  
+ Se a recuperação não tiver sido bem-sucedida, você poderá tentar limpar a Repositório de Consultas antes de configurar o modo de leitura/gravação.  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB]   
@@ -337,7 +339,7 @@ FROM sys.database_query_store_options;
 |Personalizar|O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduz um modo de captura CUSTOM no comando `ALTER DATABASE SET QUERY_STORE`. Quando habilitadas, as configurações adicionais do Repositório de Consultas ficam disponíveis em uma nova configuração da Política de Captura do Repositório de Consultas, a fim de ajustar a coleta de dados em um servidor específico.<br /><br />As novas configurações personalizadas definem o que acontece durante o limite de tempo da política de captura interna: um limite de tempo durante o qual as condições configuráveis são avaliadas e, se alguma é verdadeira, a consulta é qualificada para ser capturada pelo Repositório de Consultas. Para obter mais informações, veja [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 
 > [!NOTE]
-> Cursores, consultas dentro de procedimentos armazenados e consultas compiladas nativamente são sempre capturados quando o modo de captura de consulta é definido como All, Auto ou Custom.
+> Cursores, consultas dentro de procedimentos armazenados e consultas compiladas nativamente são sempre capturados quando o modo de captura de consulta é definido como Tudo, Automático ou Personalizado. Para capturar consultas compiladas nativamente, habilite a coleta de estatísticas por consulta usando [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md). 
 
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>Manter os dados mais relevantes no Repositório de Consultas  
  Configure o Repositório de Consultas para conter somente os dados relevantes e ele será executado continuamente, fornecendo uma ótima experiência de solução de problemas com um impacto mínimo sobre a sua carga de trabalho regular.  

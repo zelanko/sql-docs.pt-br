@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4408e9b884e2cb5a0b47d9e6f95a16dec2bd20f6
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493860"
 ---
 # <a name="defining-a-fact-relationship"></a>Definindo uma relação de fatos
@@ -61,11 +61,11 @@ ms.locfileid: "69493860"
   
 12. Na página **Concluindo o Assistente** , altere o nome para **Detalhes do Pedido de Vendas pela Internet** e clique em **Concluir** para concluir o assistente.  
   
-13. No menu **Arquivo**, clique em **Salvar tudo**.  
+13. No menu **Arquivo** , clique em **Salvar Tudo**.  
   
 14. No painel **atributos** do designer de dimensão da dimensão **detalhes do pedido de vendas pela Internet** , selecione **número do pedido de vendas**e altere a propriedade **nome** no janela Propriedades para`Item Description.`  
   
-15. Na célula da propriedade **NameColumn** , clique no botão procurar **(...)** . Na caixa de diálogo **Coluna de Nome** , selecione **Produto** na lista **Tabela de origem** , selecione **EnglishProductName** na **Coluna de origem**e clique em **OK**.  
+15. Na célula da propriedade **NameColumn** , clique no botão procurar **(...)**. Na caixa de diálogo **Coluna de Nome** , selecione **Produto** na lista **Tabela de origem** , selecione **EnglishProductName** na **Coluna de origem**e clique em **OK**.  
   
 16. Adicione o atributo **Número do Pedido de Vendas** à dimensão arrastando a coluna **SalesOrderNumber** da tabela **InternetSales** no painel **Exibição da Fonte de Dados** até o painel **Atributos** .  
   
@@ -87,13 +87,13 @@ ms.locfileid: "69493860"
   
      Observe que a dimensão de cubo **Detalhes do Pedido de Vendas pela Internet** é configurada automaticamente como tendo uma relação de fatos, como mostra o ícone exclusivo.  
   
-2.  Clique no botão procurar ( **...** ) na célula **Descrição do item** , na interseção do grupo de medidas **vendas pela Internet** e na dimensão **detalhes do pedido de vendas pela Internet** , para examinar as propriedades da relação de fatos.  
+2.  Clique no botão procurar (**...**) na célula **Descrição do item** , na interseção do grupo de medidas **vendas pela Internet** e na dimensão **detalhes do pedido de vendas pela Internet** , para examinar as propriedades da relação de fatos.  
   
      A caixa de diálogo **Definir Relação** é aberta. Observe que nenhuma das propriedades pode ser configurada.  
   
      A imagem a seguir mostra as propriedades da relação de fatos na caixa de diálogo **Definir Relação** .  
   
-     ![Caixa de diálogo Definir relação](../../2014/tutorials/media/l5-factrelationship-2.gif "Caixa de diálogo Definir relação")  
+     ![Caixa de diálogo Definir relação] (../../2014/tutorials/media/l5-factrelationship-2.gif "Caixa de diálogo Definir relação")  
   
 3.  Clique em **Cancelar**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "69493860"
   
      A imagem a seguir mostra o resultado das etapas anteriores.  
   
-     ![Dimensão de vendas pela Internet-valor das vendas](../../2014/tutorials/media/l5-factrelationship-3.gif "Dimensão de vendas pela Internet-valor das vendas")  
+     ![Dimensão de vendas pela Internet-valor das vendas] (../../2014/tutorials/media/l5-factrelationship-3.gif "Dimensão de vendas pela Internet-valor das vendas")  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Definindo uma relação muitos para muitos](lesson-5-3-defining-a-many-to-many-relationship.md)  

@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 09/04/2019
-ms.openlocfilehash: 7f9195b2ec4cfd80d16f37884ce27e920580463c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 10f5290275a921e923ca49492eab78e4fb019475
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874555"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149876"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notas sobre a versão do SQL Server Management Studio (SSMS)
 
@@ -156,7 +156,7 @@ A versão 18.1 é uma pequena atualização da versão 18.0 com as seguintes ite
 | SSMS geral | Corrigido um problema em que o SSMS não respeitava as configurações de *Ferramentas/Opções* do Intellisense na janela do editor do SQL. |
 | SSMS geral | Corrigido um problema em que o SSMS não respeitava as configurações de Ajuda (online x offline). |
 | DPI alto | Corrigido o layout dos controles nas caixas de diálogo de erro de opções de consulta incompatíveis. |
-| DPI alto | Corrigido o layout dos controles na página *Novo Grupo de Disponibilidade* em algumas versões localizadas do SSMS. |
+| DPI alto | Corrigido o layout dos controles na página *Novo Grupo de Disponibilidade* que está em alguma versão localizada do SSMS. |
 | DPI alto | Corrigido o layout da página *Nova Agenda de Trabalho*. Confira [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37632094) para obter mais detalhes. |
 | Importar arquivo simples | Corrigido um problema em que as linhas poderiam ser perdidas silenciosamente durante a importação.|
 | IntelliSense/editor | Redução do tráfego de consultas baseado em SMO para os bancos de dados SQL do Azure para IntelliSense. |

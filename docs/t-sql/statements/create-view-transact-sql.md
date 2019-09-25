@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c94d94a572f1bc3c8ac0fe7507bc251537d38f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 80f97354c60d26cff6a10c29712b23bc1f6dfd84
+ms.sourcegitcommit: 059da40428ee9766b6f9b16b66c689b788c41df1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938888"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71038871"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -165,7 +165,7 @@ OR ALTER
   
  Se uma exibição depender de uma tabela ou exibição descartada, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] produzirá uma mensagem de erro quando alguém tentar usá-la. Se uma nova tabela ou exibição for criada e a estrutura da tabela não for alterada na tabela base anterior para substituir a descartada, a exibição se tornará utilizável novamente. Se a nova tabela ou estrutura de exibição for alterada, a exibição deverá ser descartada e recriada.  
   
- Se uma exibição não for criada com a cláusula SCHEMABINDING, [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) deverá ser executado quando forem feitas alterações aos objetos subjacentes à exibição que afetam a definição desta. Caso contrário, a exibição poderá gerar resultados inesperados quando consultada.  
+ Se uma exibição não for criada com a cláusula SCHEMABINDING, execute [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) quando forem feitas alterações aos objetos subjacentes à exibição que afetem a definição desta. Caso contrário, a exibição poderá gerar resultados inesperados quando consultada.  
   
  Quando uma exibição é criada, as informações sobre ela são armazenadas nas seguintes exibições do catálogo: [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md), [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) e [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md). O texto da instrução CREATE VIEW é armazenado na exibição do catálogo [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
   
@@ -245,9 +245,9 @@ FROM Tn;
   
 1.  A `list` de seleção  
   
-    -   Todas as colunas nas tabelas membro devem ser selecionadas na lista de colunas da definição de exibição.  
+    -   Na lista de colunas da definição de exibição, selecione todas as colunas nas tabelas membro.  
   
-    -   As colunas na mesma posição ordinal de cada `select list` devem ser do mesmo tipo, incluindo ordenações. Não é suficiente para as colunas serem tipos conversíveis implicitamente, como em geral é o caso de UNION.  
+    -   Assegure que as colunas na mesma posição ordinal de cada `select list` sejam do mesmo tipo, incluindo ordenações. Não é suficiente para as colunas serem tipos conversíveis implicitamente, como em geral é o caso de UNION.  
   
          Além disso, pelo menos uma coluna (por exemplo, `<col>`) deve aparecer em todas as listas de seleção na mesma posição ordinal. Esse `<col>` deve ser definido de uma forma que as tabelas membro `T1, ..., Tn` tenham restrições CHECK `C1, ..., Cn` definidas em `<col>`, respectivamente.  
   
@@ -294,16 +294,16 @@ FROM Tn;
   
     -   As tabelas membro não podem ter índices criados em qualquer coluna computada na tabela.  
   
-    -   As tabelas membro devem ter todas as restrições PRIMARY KEY no mesmo número de colunas.  
+    -   As tabelas membro têm todas as restrições PRIMARY KEY no mesmo número de colunas.  
   
-    -   Todas as tabelas de membro na exibição devem ter a mesma configuração de preenchimento ANSI. Isso pode ser definido usando a opção **user options** em **sp_configure** ou a instrução SET.  
+    -   Todas as tabelas de membro na exibição têm a mesma configuração de preenchimento ANSI. Isso pode ser definido usando a opção **user options** em **sp_configure** ou a instrução SET.  
   
 ## <a name="conditions-for-modifying-data-in-partitioned-views"></a>Condições para modificar dados em exibições particionadas  
  As seguintes restrições se aplicam a instruções que modificam dados nas exibições particionadas:  
   
--   A instrução INSERT deve fornecer valores para todas as colunas na exibição, mesmo que as tabelas membro subjacentes tenham uma restrição DEFAULT para essas colunas ou que permitam valores nulos. Para essas colunas de tabela membro com definições DEFAULT, as instruções não podem usar a palavra-chave DEFAULT explicitamente.  
+-   A instrução INSERT fornece valores para todas as colunas na exibição, mesmo que as tabelas membro subjacentes tenham uma restrição DEFAULT para essas colunas ou que permitam valores nulos. Para essas colunas de tabela membro com definições DEFAULT, as instruções não podem usar a palavra-chave DEFAULT explicitamente.  
   
--   O valor a ser inserido na coluna de particionamento deve satisfazer pelo menos uma das restrições subjacentes; caso contrário, a ação de inserção falhará com uma violação de restrição.  
+-   O valor a ser inserido na coluna de particionamento deverá satisfazer pelo menos uma das restrições subjacentes; caso contrário, a ação de inserção falhará com uma violação de restrição.  
   
 -   As instruções UPDATE não podem especificar a palavra-chave DEFAULT como valor na cláusula SET, mesmo que a coluna tenha um valor DEFAULT definido na tabela membro correspondente.  
   
@@ -325,7 +325,7 @@ FROM Tn;
   
 -   Uma transação distribuída será iniciada para garantir a atomicidade em todos os nós afetados pela atualização.  
   
--   Para funcionar, a opção XACT_ABORT SET deve ser definida como instruções ON para INSERT, UPDATE ou DELETE.  
+-   Defina a opção XACT_ABORT SET para ON para que as instruções INSERT, UPDATE ou DELETE funcionem.  
   
 -   Qualquer coluna nas tabelas remotas do tipo **smallmoney** referenciadas em uma exibição particionada são mapeadas como **money**. Portanto, as colunas correspondentes (na mesma posição ordinal na lista de seleção) nas tabelas locais também devem ser do tipo **money**.  
   
@@ -340,7 +340,7 @@ FROM Tn;
 ## <a name="considerations-for-replication"></a>Considerações sobre replicação  
  Para criar exibições particionadas em tabelas membro envolvidas em replicação, as seguintes considerações são aplicáveis:  
   
--   Se as tabelas subjacentes estiverem envolvidas em replicação de mesclagem ou replicação transacional com assinaturas de atualização, a coluna **uniqueidentifier** também deverá ser incluída na lista de seleção.  
+-   Se as tabelas subjacentes estiverem envolvidas em replicação de mesclagem ou replicação transacional com assinaturas de atualização, verifique se a coluna **uniqueidentifier** também está incluída na lista de seleção. 
   
      Toda ação INSERT na exibição particionada deve fornecer um valor NEWID() para a coluna **uniqueidentifier**. As ações UPDATE na coluna **uniqueidentifier** devem fornecer NEWID() como o valor, pois a palavra-chave DEFAULT não pode ser usada.  
   

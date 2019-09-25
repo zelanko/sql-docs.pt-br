@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6dc768188f25640a3685c8526bfceb3874154f40
-ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69890831"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Agrupando membros de atributo automaticamente
@@ -48,7 +48,7 @@ ms.locfileid: "69890831"
   
      A imagem a seguir mostra as propriedades modificadas para **Renda Anual**.  
   
-     ![Propriedades modificadas para renda anual](../../2014/tutorials/media/l4-discretizationmethod-1.gif "Propriedades modificadas para renda anual")  
+     ![Propriedades modificadas para renda anual] (../../2014/tutorials/media/l4-discretizationmethod-1.gif "Propriedades modificadas para renda anual")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Agrupando membros da hierarquia de atributo na dimensão Funcionário  
   
@@ -62,7 +62,7 @@ ms.locfileid: "69890831"
   
 4.  No painel **Atributos** , selecione **Horas de Dispensa Médica**.  
   
-5.  No janela Propriedades, altere o valor da propriedade **DiscretizationMethod** para clusters e altere o valor para a propriedade **DiscretizationBucketCount** para `5`.  
+5.  No janela Propriedades, altere o valor da propriedade **DiscretizationMethod** para **clusters** e altere o valor para a propriedade **DiscretizationBucketCount** para `5`.  
   
 6.  No painel **Atributos** , selecione **Horas de Férias**.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "69890831"
   
      A imagem a seguir mostra as vendas dimensionadas pelas horas de dispensa médica dos funcionários:  
   
-     ![Vendas dimensionadas por horas de licença de doença do funcionário](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Vendas dimensionadas por horas de licença de doença do funcionário")  
+     ![Vendas dimensionadas por horas de licença de doença do funcionário] (../../2014/tutorials/media/l4-discretizationmethod-2.gif "Vendas dimensionadas por horas de licença de doença do funcionário")  
   
 10. Remova a hierarquia **Horas de Dispensa Médica** da área de coluna do painel **Dados** .  
   

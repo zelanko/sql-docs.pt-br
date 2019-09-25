@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493790"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definindo e procurando KPIs
@@ -67,7 +67,7 @@ ms.locfileid: "69493790"
   
      ![Modelo de KPI em branco no painel de exibição](../../2014/tutorials/media/l7-kpi-2.gif "Modelo de KPI em branco no painel de exibição")  
   
-3.  Na caixa **nome** , digite `Reseller Revenue`e, em seguida, selecione **vendas** do revendedor na lista **grupo de medidas associado** .  
+3.  Na caixa **nome** , digite `Reseller Revenue`e, em seguida, selecione **vendas do revendedor** na lista grupo de **medidas associado** .  
   
 4.  Na guia **Metadados** do painel **Ferramentas de Cálculo** , expanda **Medidas**e **Vendas do Revendedor**e arraste a medida **Vendas do Revendedor-Valor de Vendas** até a caixa **Expressão de Valor** .  
   

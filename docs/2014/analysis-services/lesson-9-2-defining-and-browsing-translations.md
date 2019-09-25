@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493785"
 ---
 # <a name="defining-and-browsing-translations"></a>Definindo e procurando traduções
-  Uma tradução é uma representação dos nomes de objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em uma linguagem específica. Os objetos incluem grupos de medidas, medidas, dimensões, atributos, hierarquias, KPIs, ações e membros calculados. As traduções oferecem suporte de servidor a aplicativos cliente que podem oferecer suporte para vários idiomas. Como cliente, basta passar o identificador de localidade (LCID) para a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], que usa o LCID para determinar qual conjunto de traduções deverá ser usado quando ele fornecer metadados para os objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Se um objeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não tiver uma tradução para o idioma ou para um objeto específico, o idioma padrão será usado para retornar o metadados do objeto ao cliente. Por exemplo, se um usuário empresarial na França acessar um cubo a partir de uma estação de trabalho que tenha uma configuração local francesa, esse usuário poderá visualizar as legendas de membro e os valores de propriedade de membro na França, caso haja uma tradução francesa. Entretanto, se um usuário empresarial na Alemanha acessar o mesmo cubo a partir de uma estação de trabalho que tenha uma configuração local alemã, esse usuário poderá visualizar os nomes de membro e os valores de propriedade de membro em alemão. Para obter mais informações, consulte traduções de [dimensões](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), conversões de [cubo](multidimensional-models-olap-logical-cube-objects/cube-translations.md), [traduções &#40;&#41;Analysis Services](translations-analysis-services.md).  
+  Uma tradução é uma representação dos nomes de objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em uma linguagem específica. Os objetos incluem grupos de medidas, medidas, dimensões, atributos, hierarquias, KPIs, ações e membros calculados. As traduções oferecem suporte de servidor a aplicativos cliente que podem oferecer suporte para vários idiomas. Como cliente, basta passar o identificador de localidade (LCID) para a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], que usa o LCID para determinar qual conjunto de traduções deverá ser usado quando ele fornecer metadados para os objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Se um objeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não tiver uma tradução para o idioma ou para um objeto específico, o idioma padrão será usado para retornar o metadados do objeto ao cliente. Por exemplo, se um usuário empresarial na França acessar um cubo a partir de uma estação de trabalho que tenha uma configuração local francesa, esse usuário poderá visualizar as legendas de membro e os valores de propriedade de membro na França, caso haja uma tradução francesa. Entretanto, se um usuário empresarial na Alemanha acessar o mesmo cubo a partir de uma estação de trabalho que tenha uma configuração local alemã, esse usuário poderá visualizar os nomes de membro e os valores de propriedade de membro em alemão. Para obter mais informações, consulte traduções de [dimensões](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), conversões de [cubo](multidimensional-models-olap-logical-cube-objects/cube-translations.md), [traduções &#40;Analysis Services&#41;](translations-analysis-services.md).  
   
  Nas tarefas deste tópico, você define as traduções de metadados para um conjunto limitado de objetos de dimensões na dimensão Data e objetos de cubo no cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Em seguida, será possível navegar pelas dimensões e objetos de cubo para examinar as traduções de metadados.  
   
@@ -44,17 +44,17 @@ ms.locfileid: "69493785"
   
 6.  Na linha do objeto de **legenda** do atributo **nome do mês** `Mes del Año` , digite a coluna de tradução para **espanhol (Espanha)** e `Mois d'Année` na coluna de tradução **francês (França)** .  
   
-     Observe que quando você insere essas traduções, uma reticências ( **...** ) é exibida. Ao clicar nas reticências, você pode especificar uma coluna na tabela subjacente que fornece as traduções para cada membro da hierarquia do atributo.  
+     Observe que quando você insere essas traduções, uma reticências (**...**) é exibida. Ao clicar nas reticências, você pode especificar uma coluna na tabela subjacente que fornece as traduções para cada membro da hierarquia do atributo.  
   
-7.  Clique nas reticências ( **...** ) para a tradução **espanhola (Espanha)** do atributo **nome do mês** .  
+7.  Clique nas reticências (**...**) para a tradução **espanhola (Espanha)** do atributo **nome do mês** .  
   
      A caixa de diálogo **Tradução de Dados de Atributo** é exibida.  
   
 8.  Na lista **Colunas de tradução** , selecione **SpanishMonthName**, conforme mostrado na imagem a seguir.  
   
-     ![Caixa de diálogo conversão de dados de atributo](../../2014/tutorials/media/l9-translations-4.gif "Caixa de diálogo conversão de dados de atributo")  
+     ![Caixa de diálogo conversão de dados de atributo] (../../2014/tutorials/media/l9-translations-4.gif "Caixa de diálogo conversão de dados de atributo")  
   
-9. Clique em **OK**e, em seguida, clique nas reticências ( **...** ) da tradução **francês (França)** do atributo **nome do mês** .  
+9. Clique em **OK**e, em seguida, clique nas reticências (**...**) da tradução **francês (França)** do atributo **nome do mês** .  
   
 10. Na lista **Colunas de tradução** , selecione **FrenchMonthName**e clique em **OK**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69493785"
   
      O metadados no idioma padrão de cada objeto de cubo é exibido, como mostra a imagem a seguir. O idioma padrão no cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] é o inglês.  
   
-     ![Idioma padrão na guia Traduções](../../2014/tutorials/media/l9-translations-5.gif "Idioma padrão na guia Traduções")  
+     ![Idioma padrão na guia Traduções] (../../2014/tutorials/media/l9-translations-5.gif "Idioma padrão na guia Traduções")  
   
 2.  Na barra de ferramentas da guia **Traduções** , clique no botão **Nova Tradução** .  
   
@@ -104,7 +104,7 @@ ms.locfileid: "69493785"
   
      Observe que os itens no painel de metadados são preenchidos novamente. Após o preenchimento dos itens, observe que a medida Quantidade de Vendas pela Internet não aparece mais na pasta de exibição Vendas pela Internet. Em vez disso, ele aparece em espanhol em uma nova pasta `Ventas del lnternet`de exibição chamada, conforme mostrado na imagem a seguir.  
   
-     ![Painel de metadados] repreenchidos (../../2014/tutorials/media/l9-translations-6.gif "Painel de metadados") repreenchidos  
+     ![Painel de metadados repreenchidos] (../../2014/tutorials/media/l9-translations-6.gif "Painel de metadados repreenchidos")  
   
 6.  No painel metadados, clique com o botão `Cantidad de las Ventas del Internet` direito do mouse em e selecione **Adicionar à consulta**.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "69493785"
   
      Observe que os nomes de mês são exibidos em espanhol, como mostra a imagem a seguir.  
   
-     ![Nomes de mês em espanhol no painel de dados](../../2014/tutorials/media/l9-translations-7.gif "Nomes de mês em espanhol no painel de dados")  
+     ![Nomes de mês em espanhol no painel de dados] (../../2014/tutorials/media/l9-translations-7.gif "Nomes de mês em espanhol no painel de dados")  
   
 10. Na barra de ferramentas, selecione **Francês (França)** na lista **Idioma** .  
   

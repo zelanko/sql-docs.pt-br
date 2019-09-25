@@ -26,10 +26,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e1192deaa556dd8546d0d9fbf17d5ff79335173a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68887822"
 ---
 # <a name="user-hierarchies"></a>Hierarquias do usuário
@@ -80,9 +80,9 @@ ms.locfileid: "68887822"
  O nível Província é populado com membros associados a outros membros no nível PaísRegião e os membros no nível Cidade são associados a seus membros correspondentes no nível Província. Entretanto, como o membro Cidade do Vaticano no nível PaísRegião não possui membros associados no nível Província, os membros devem ser associados do nível Cidade diretamente ao membro Cidade do Vaticano no nível PaísRegião. Devido às alterações, a hierarquia da dimensão está agora imperfeita. O pai de Cidade do Vaticano é a região/país Cidade do Vaticano, que não está imediatamente no nível acima do membro Cidade do Vaticano no nível Cidade. Para obter mais informações, consulte [Hierarquias desbalanceadas](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md).  
   
 ### <a name="parent-child-hierarchies"></a>Hierarquias pai-filho  
- As hierarquias pai-filho de dimensões são definidas usando um atributo especial, chamado de atributo pai, para determinar como os membros relacionam-se entre si. Um atributo pai descreve uma *relação de autorreferência*, ou *autojunção*, em uma tabela principal da dimensão. As hierarquias filho são construídas a partir de um único atributo pai. Somente um nível é atribuído a uma hierarquia pai-filho, pois os níveis existentes na hierarquia são extraídos das relações pai-filho entre os membros associados ao atributo pai. O esquema de dimensão de uma hierarquia pai-filho depende de uma relação de autorreferência existente na tabela principal da dimensão. Por exemplo, o diagrama a seguir ilustra a tabela principal de dimensões de dimorganização no banco de dados de [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exemplo.  
+ As hierarquias pai-filho de dimensões são definidas usando um atributo especial, chamado de atributo pai, para determinar como os membros relacionam-se entre si. Um atributo pai descreve uma *relação de autorreferência*, ou *autojunção*, em uma tabela principal da dimensão. As hierarquias filho são construídas a partir de um único atributo pai. Somente um nível é atribuído a uma hierarquia pai-filho, pois os níveis existentes na hierarquia são extraídos das relações pai-filho entre os membros associados ao atributo pai. O esquema de dimensão de uma hierarquia pai-filho depende de uma relação de autorreferência existente na tabela principal da dimensão. Por exemplo, o diagrama a seguir ilustra a tabela principal de dimensões de **dimorganização** no banco de dados de [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exemplo.  
   
- ![Junção de referência automática na tabela de] dimorganização (https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/dimorganization.gif "Junção de referência automática na tabela de") dimorganização  
+ ![Junção de referência automática na tabela de Dimorganização](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/dimorganization.gif "Junção de referência automática na tabela de Dimorganização")  
   
  Nessa tabela de dimensão, a coluna **ParentOrganizationKey** possui uma relação de chave estrangeira com a coluna da chave primária **OrganizationKey** . Em outras palavras, cada registro dessa tabela pode ser relacionado por meio de uma relação pai-filho com outro registro da tabela. Geralmente, esse tipo de autojunção é usado para representar os dados de uma empresa, como a estrutura de gerenciamento dos funcionários de um departamento.  
   

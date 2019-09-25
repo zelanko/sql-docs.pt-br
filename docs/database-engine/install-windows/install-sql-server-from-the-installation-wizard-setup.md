@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bb521f3c71dc1f72a6225cb10a375c91f476b07d
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 16d90e031f6892a132a2a64ad52aedfc34d39a08
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009379"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149977"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Instalar o SQL Server por meio do Assistente de Instalação (Instalação)
 
@@ -132,7 +132,11 @@ Isso não se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]
     > [!NOTE]
     > Do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] em diante, marque a caixa de seleção **Conceder Realizar Tarefa de Manutenção de Volume para o Serviço do Mecanismo de Banco de Dados do SQL Server** para permitir que a conta de serviço do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] use a [Inicialização Instantânea de Arquivo de Banco de Dados](../../relational-databases/databases/database-instant-file-initialization.md).
   
-     Use a página **Configuração do Servidor – Ordenação** para especificar ordenações não padrão para o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para saber mais, confira [Suporte para ordenações e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+1. Use a página **Configuração do Servidor – Ordenação** para especificar ordenações não padrão para o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].    
+
+   A configuração de instalação padrão é determinada pela localidade do SO (sistema operacional). A ordenação no nível de servidor pode ser alterada durante a instalação ou por meio da alteração da localidade do SO antes da instalação. A ordenação padrão é definida como a versão disponível mais antiga associada a cada localidade específica. Isso ocorre por motivos de compatibilidade com versões anteriores. Por isso, essa nem sempre é a ordenação recomendada. Para aproveitar ao máximo os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], altere as configurações de instalação padrão para usar ordenações do Windows. Por exemplo, para a localidade do SO **Inglês (Estados Unidos)** (página de código 1252), a ordenação padrão durante a instalação é **SQL_Latin1_General_CP1_CI_AS** e pode ser alterado para sua ordenação equivalente do Windows mais próxima, **Latin1_General_100_CI_AS_SC**.
+
+   Para saber mais, confira [Suporte para ordenações e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 1. Use a página **Configuração do Mecanismo de Banco de Dados – Configuração do Servidor** para especificar as seguintes opções:  
   
