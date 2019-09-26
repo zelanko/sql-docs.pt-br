@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e1e74c9d14c93cf44a7da5db4795a1524d238be
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f60aa3684778a7347b1ffd613a924c3bf0b7b94a
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715268"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271944"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Instalar SQL Server componentes de R e Python do Machine Learning na linha de comando
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,7 +54,7 @@ Quando você instala pelo prompt de comando, o [!INCLUDE[ssNoVersion](../../incl
 | /IACCEPTROPENLICENSETERMS  | Indica que você aceitou os termos de licença para usar os componentes de software livre do R. |
 | /IACCEPTPYTHONLICENSETERMS | Indica que você aceitou os termos de licença para usar os componentes do Python. |
 | /IACCEPTSQLSERVERLICENSETERMS | Indica que você aceitou os termos de licença para usar SQL Server.|
-| /MRCACHEDIRECTORY | Para a instalação offline, define a pasta que contém os arquivos CAB do componente do R. |
+| MRCACHEDIRECTORY | Para a instalação offline, define a pasta que contém os arquivos CAB do componente do R. |
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -68,8 +68,8 @@ Quando você instala pelo prompt de comando, o [!INCLUDE[ssNoVersion](../../incl
 | /IACCEPTROPENLICENSETERMS  | Indica que você aceitou os termos de licença para usar os componentes de software livre do R. |
 | /IACCEPTPYTHONLICENSETERMS | Indica que você aceitou os termos de licença para usar os componentes do Python. |
 | /IACCEPTSQLSERVERLICENSETERMS | Indica que você aceitou os termos de licença para usar SQL Server.|
-| /MRCACHEDIRECTORY | Para a instalação offline, define a pasta que contém os arquivos CAB do componente do R. |
-| /MPYCACHEDIRECTORY | Reservado para uso futuro. Use% TEMP% para armazenar arquivos CAB do componente do Python para instalação em computadores que não têm uma conexão com a Internet. |
+| MRCACHEDIRECTORY | Para a instalação offline, define a pasta que contém os arquivos CAB do componente do R. |
+| MPYCACHEDIRECTORY | Reservado para uso futuro. Use% TEMP% para armazenar arquivos CAB do componente do Python para instalação em computadores que não têm uma conexão com a Internet. |
 ::: moniker-end
 
 ## <a name="indb"></a>Instalações da instância no banco de dados
@@ -201,14 +201,14 @@ Para verificar o status da instalação da instância e corrigir problemas comun
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Os desenvolvedores de R podem começar com alguns exemplos simples e aprender as noções básicas de como o R funciona com o SQL Server. Para a próxima etapa, consulte os links a seguir:
+Os desenvolvedores do R podem começar com alguns exemplos simples e aprender os fundamentos de como o R funciona com o SQL Server. Para a próxima etapa, confira os links a seguir:
 
-+ [Tutorial: Executar R no T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Tutorial: Análise no banco de dados para desenvolvedores de R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Executar o R no T-SQL](../tutorials/quickstart-r-create-script.md)
++ [Tutorial: Análise interna no banco de dados para desenvolvedores de R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-Os desenvolvedores de Python podem aprender a usar o Python com SQL Server seguindo estes tutoriais:
+Os desenvolvedores do Python podem aprender a usar o Python com o SQL Server seguindo estes tutoriais:
 
 + [Tutorial: Executar o Python no T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Tutorial: Análise no banco de dados para desenvolvedores de Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Tutorial: Análise interna no banco de dados para desenvolvedores de Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-Para exibir exemplos de aprendizado de máquina que se baseiam em cenários do mundo real, consulte [tutoriais do Machine Learning](../tutorials/machine-learning-services-tutorials.md).
+Para exibir exemplos de aprendizado de máquina que se baseiam em cenários do mundo real, confira [Tutoriais de aprendizado de máquina](../tutorials/machine-learning-services-tutorials.md).

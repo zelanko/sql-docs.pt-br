@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d01be0f7d7a18091b965ad73b9bf035558b34864
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 14ccd4beb2186213cb3d94b10031ac732224f4d9
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715691"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271900"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Como gerar previsões e previsão usando modelos de aprendizado de máquina no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ Para usar um modelo com uma das opções de Pontuação rápida, salve o modelo 
 
 **Usando o SQL**
 
-No código SQL, você pode treinar o modelo usando [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)e inserir diretamente os modelos treinados em uma tabela, em uma coluna do tipo **varbinary (max)** . Para obter um exemplo simples, consulte [criar um modelo preditive em R](../tutorials/rtsql-create-a-predictive-model-r.md)
+No código SQL, você pode treinar o modelo usando [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)e inserir diretamente os modelos treinados em uma tabela, em uma coluna do tipo **varbinary (max)** . Para obter um exemplo simples, consulte [criar um modelo preditive em R](../tutorials/quickstart-r-train-score-model.md)
 
 **Usando o R**
 

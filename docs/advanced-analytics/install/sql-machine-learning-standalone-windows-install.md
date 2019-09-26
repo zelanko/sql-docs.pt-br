@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 94ca7b3646b9005e11b3ee4968cbfaaa65d42264
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f9835bae00aab15ee902dfe77dcf211eb412bc96
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715842"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271949"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Instalar Machine Learning Server (autônomo) ou R Server (autônomo) usando a instalação do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -153,7 +153,7 @@ Para o desenvolvimento de R e Python, é comum ter várias versões no mesmo com
 
 A tabela a seguir lista os caminhos para distribuições de R e Python criadas por instaladores da Microsoft. Para fins de integridade, a tabela inclui caminhos gerados pela instalação do SQL Server, bem como o instalador autônomo para Microsoft Machine Learning Server.
 
-|Version| Método de instalação | Pasta padrão|
+|Versão| Método de instalação | Pasta padrão|
 |----|----|----|
 |SQL Server 2017 Machine Learning Server (autônomo) |  Assistente de instalação do SQL Server 2017 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Microsoft Machine Learning Server (autônomo) |  Instalador autônomo do Windows |`C:\Program Files\Microsoft\ML Server\R_SERVER`<br/>`C:\Program Files\Microsoft\ML Server\PYTHON_SERVER`|
@@ -214,16 +214,16 @@ Um IDE de desenvolvimento não é instalado como parte da instalação do. Para 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Os desenvolvedores de R podem começar com alguns exemplos simples e aprender as noções básicas de como o R funciona com o SQL Server. Para a próxima etapa, consulte os links a seguir:
+Os desenvolvedores do R podem começar com alguns exemplos simples e aprender os fundamentos de como o R funciona com o SQL Server. Para a próxima etapa, confira os links a seguir:
 
-+ [Tutorial: Executar R no T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Tutorial: Análise no banco de dados para desenvolvedores de R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Executar o R no T-SQL](../tutorials/quickstart-r-create-script.md)
++ [Tutorial: Análise interna no banco de dados para desenvolvedores de R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-Os desenvolvedores de Python podem aprender a usar o Python com SQL Server seguindo estes tutoriais:
+Os desenvolvedores do Python podem aprender a usar o Python com o SQL Server seguindo estes tutoriais:
 
 + [Tutorial: Executar o Python no T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Tutorial: Análise no banco de dados para desenvolvedores de Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Tutorial: Análise interna no banco de dados para desenvolvedores de Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 ::: moniker-end
 
-Para exibir exemplos de aprendizado de máquina que se baseiam em cenários do mundo real, consulte [tutoriais do Machine Learning](../tutorials/machine-learning-services-tutorials.md).
+Para exibir exemplos de aprendizado de máquina que se baseiam em cenários do mundo real, confira [Tutoriais de aprendizado de máquina](../tutorials/machine-learning-services-tutorials.md).
