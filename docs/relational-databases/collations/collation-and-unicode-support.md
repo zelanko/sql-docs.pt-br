@@ -1,7 +1,7 @@
 ---
 title: Suporte a ordenações e a Unicode | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 09/18/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - UCS2
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-author: stevestein
+author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bda35d5c393eaa1e4503cb487ed19b281686364
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: 1cd488c24da5e937bde1d7dd3e3bb2bd193bb3bb
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908411"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149916"
 ---
 # <a name="collation-and-unicode-support"></a>Suporte a ordenações e a Unicode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,11 @@ Para usar o suporte a ordenações do [!INCLUDE[ssNoVersion](../../includes/ssno
     
 ##  <a name="Terms"></a> Condições da ordenação    
     
--   [Ordenação](#Collation_Defn)    
+-   [Ordenação](#Collation_Defn) 
+
+    - [Conjuntos de ordenações](#Collation_sets)
+    
+    - [Níveis de ordenação](#Collation_levels)
     
 -   [Localidade](#Locale_Defn)    
     
@@ -62,7 +66,7 @@ Uma ordenação especifica os padrões de bit que representam cada caractere em 
     
 Os resultados da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] podem variar quando a instrução for executada no contexto de diferentes bancos de dados que tenham configurações de ordenação diferentes. Se possível, use uma ordenação padronizada para sua organização. Deste modo, não será preciso especificar a ordenação explicitamente em todo caractere ou expressão Unicode. Se você deve trabalhar com objetos que tenham configurações de ordenação e página de códigos diferentes, codifique suas consultas para considerar as regras da precedência de ordenação. Para obter mais informações, consulte [Precedência de ordenação (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
     
-As opções associadas a uma ordenação fazem distinção de maiúsculas e minúsculas, de acentos, de caracteres Kana, de largura e de seletor de variação. O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduz uma opção adicional para codificação [UTF-8](https://www.wikipedia.org/wiki/UTF-8). Estas opções são especificadas através de sua anexação ao nome de ordenação. Por exemplo, esta ordenação `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` tem diferenciação de maiúsculas e minúsculas, de acentos, de caracteres Kana e de largura e é codificado em UTF-8. Como outro exemplo, essa ordenação `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` não diferencia maiúsculas de minúsculas, não diferencia acentos, mas faz distinção de caracteres Kana, de largura e de seletor de variação e usa codificação não Unicode. A tabela a seguir descreve o comportamento associado com estas diversas opções.    
+As opções associadas a uma ordenação fazem distinção de maiúsculas e minúsculas, de acentos, de caracteres Kana, de largura e de seletor de variação. O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduz uma opção adicional para codificação [UTF-8](https://www.wikipedia.org/wiki/UTF-8). Estas opções são especificadas através de sua anexação ao nome de ordenação. Por exemplo, esta ordenação `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` tem diferenciação de maiúsculas e minúsculas, de acentos, de caracteres kana e de largura e é codificado em UTF-8. Como outro exemplo, essa ordenação `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` não diferencia maiúsculas de minúsculas, não diferencia acentos, mas faz distinção de caracteres Kana, de largura e de seletor de variação e usa codificação não Unicode. A tabela a seguir descreve o comportamento associado com estas diversas opções.    
     
 |Opção|Descrição|    
 |------------|-----------------|    
@@ -70,21 +74,67 @@ As opções associadas a uma ordenação fazem distinção de maiúsculas e min�
 |Diferenciar acentos (\_AS)|Faz distinção entre caracteres acentuados e não acentuados. Por exemplo, 'a' não é igual a 'ã'. Se esta opção não for selecionada, a ordenação não fará diferenciação de acentos. Ou seja, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera as versões com e sem acentos como idênticas para fins de classificação. Você pode selecionar explicitamente a não diferenciação de acentos, especificando \_AI.|    
 |Diferenciar caracteres Kana (\_KS)|Distingue entre os dois tipos de caracteres kana japoneses: hiragana e katakana. Se esta opção não for selecionada, a ordenação não fará diferenciação de Kana. Ou seja, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera que caracteres hiragana e katakana são iguais para fins de classificação. A omissão desta opção é o único método de especificar a não diferenciação de Kana.|    
 |Diferenciar largura (\_WS)|Faz distinção entre caracteres de largura inteira e de meia largura. Se esta opção não for selecionada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considerará as representações de largura inteira e de meia largura do mesmo caractere como iguais para fins de classificação. A omissão desta opção é o único método de especificar a não diferenciação de largura.|    
-|Distinção de seletor de variação (\_VSS) | Distingue entre vários seletores de variação ideográficos em ordenações em japonês Japanese_Bushu_Kakusu_140 e Japanese_XJIS_140 introduzido primeiro em [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Uma sequência de variação consiste em um caractere base e um seletor de variação adicional. Se essa opção \_VSS não for selecionada, a ordenação não fará distinção de seletor de variação e o seletor de variação não será considerado na comparação. Ou seja, o SQL Server considera caracteres criados sobre o mesmo caractere base com diferenciação de seletores de variação para serem idênticos com a finalidade de classificação. Consulte também  [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/)(Banco de dados de variação ideográfica Unicode). <br/><br/> Não há suporte para ordenações de Diferenciação do seletor de variação (\_VSS) em índices de pesquisa de Texto Completo. Índices de pesquisa de texto completo dão suporte apenas às opções Diferenciação de Acentos (\_AS), Diferenciação de caracteres Kana (\_KS) e Diferenciação de largura (\_WS). Os mecanismos de XML e CLR do SQL Server não dão suporte a Seletores de variação (\_VSS).
-|UTF-8 (\_UTF8)|Permite que dados codificados em UTF-8 sejam armazenados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se essa opção não for selecionada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará o formato de codificação não Unicode padrão para os tipos de dados aplicáveis.| 
+|Distinção de seletor de variação (\_VSS)|Distingue entre vários seletores de variação ideográficos em ordenações em japonês **Japanese_Bushu_Kakusu_140** e **Japanese_XJIS_140** introduzido primeiro em [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Uma sequência de variação consiste em um caractere base e um seletor de variação adicional. Se essa opção \_VSS não for selecionada, a ordenação não fará distinção de seletor de variação e o seletor de variação não será considerado na comparação. Ou seja, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera caracteres criados sobre o mesmo caractere base com diferenciação de seletores de variação para serem idênticos com a finalidade de classificação. Consulte também [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/) (Banco de dados de variação ideográfica Unicode).<br/><br/> Não há suporte para ordenações de Diferenciação do seletor de variação (\_VSS) em índices de pesquisa de Texto Completo. Índices de pesquisa de texto completo dão suporte apenas às opções Diferenciação de Acentos (\_AS), Diferenciação de caracteres Kana (\_KS) e Diferenciação de largura (\_WS). Os mecanismos de XML e CLR do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não dão suporte a Seletores de variação (\_VSS).|      
+|Binário (\_BIN) <sup>1</sup>|Classifica e compara dados em tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com base nos padrões de bit definidos para cada caractere. A ordem de classificação binária faz distinção entre maiúsculas e minúsculas e acentuação. Binário é também a ordem de classificação mais rápida. Para obter mais informações, consulte a seção de [Ordenações primárias](#Binary-collations) nesta página.|      
+|Ponto de código binário (\_BIN2) <sup>1</sup> | Classifica e compara dados em tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com base em pontos de código Unicode para dados Unicode. Para dados não Unicode, o ponto de código binário usará comparações idênticas às classificações binárias.<br/><br/> A vantagem de usar uma ordem de classificação ponto de código binário é que nenhuma reclassificação de dados será necessária em aplicativos que comparam dados classificados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como resultado, uma ordem de classificação de ponto de código binário fornece desenvolvimento de aplicativos mais simples e possíveis aumentos de desempenho. Para obter mais informações, consulte a seção de [Ordenações primárias](#Binary-collations) nesta página.|
+|UTF-8 (\_UTF8)|Permite que dados codificados em UTF-8 sejam armazenados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se essa opção não for selecionada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará o formato de codificação não Unicode padrão para os tipos de dados aplicáveis. Para obter mais informações, consulte a seção de [Suporte a UTF-8](#utf8) nesta página.| 
+
+<sup>1</sup> Se a opção Binário ou Ponto de código binário for selecionada, as opções Diferenciar maiúsculas de minúsculas (\_CS), Distinguir acentos (\_AS), Distinguir caracteres Kana (\_KS) e Distinguir largura (\_WS) não estarão disponíveis.      
+
+#### <a name="examples-of-collation-options"></a>Exemplos de opções de ordenação
+Cada ordenação é combinada como uma série de sufixos para definir a distinção de maiúsculas e minúsculas, acentuação, largura ou kana. Os exemplos a seguir descrevem o comportamento da ordem de classificação para várias combinações de sufixos.
+
+|Sufixo de ordenação do Windows|Descrição da ordem de classificação|
+|------------|-----------------| 
+|\_BIN <sup>1</sup>|Classificação binária.|
+|\_BIN2 <sup>1</sup> <sup>2</sup>|Ordem de classificação de ponto de código binário.|
+|\_CI_AI <sup>2</sup>|Não distingue maiúsculas e minúsculas, não distingue acentuação, não distingue caracteres kana, não distingue largura.|
+|\_CI_AI_KS <sup>2</sup>|Não distingue maiúsculas e minúsculas, não distingue acentuação, distingue caracteres kana, não distingue largura|
+|\_CI_AI_KS_WS <sup>2</sup>|Não distingue maiúsculas e minúsculas, não distingue acentuação, distingue caracteres kana, distingue largura|
+|\_CI_AI_WS <sup>2</sup>|Não distingue maiúsculas e minúsculas, não distingue acentuação, não distingue caracteres kana, distingue largura|
+|\_CI_AS <sup>2</sup>|Não distingue maiúsculas e minúsculas, distingue acentuação, não distingue caracteres kana, não distingue largura|
+|\_CI_AS_KS <sup>2</sup>|Não distingue maiúsculas e minúsculas, distingue acentuação, distingue caracteres kana, não distingue largura|
+|\_CI_AS_KS_WS <sup>2</sup>|Não distingue maiúsculas e minúsculas, distingue acentuação, distingue caracteres kana, distingue largura|
+|\_CI_AS_WS <sup>2</sup>|Não distingue maiúsculas e minúsculas, distingue acentuação, não distingue caracteres kana, distingue largura|
+|\_CS_AI <sup>2</sup>|Distingue maiúsculas e minúsculas, não distingue acentuação, não distingue caracteres kana, não distingue largura|
+|\_CS_AI_KS <sup>2</sup>|Distingue maiúsculas e minúsculas, não distingue acentuação, distingue caracteres kana, não distingue largura|
+|\_CS_AI_KS_WS <sup>2</sup>|Distingue maiúsculas e minúsculas, não distingue acentuação, distingue caracteres kana, distingue largura|
+|\_CS_AI_WS <sup>2</sup>|Distingue maiúsculas e minúsculas, não distingue acentuação, não distingue caracteres kana, distingue largura|
+|\_CS_AS <sup>2</sup>|Distingue maiúsculas e minúsculas, distingue acentuação, não distingue caracteres kana, não distingue largura|
+|\_CS_AS_KS <sup>2</sup>|Distingue maiúsculas e minúsculas, distingue acentuação, distingue caracteres kana, não distingue largura|
+|\_CS_AS_KS_WS <sup>2</sup>|Distingue maiúsculas e minúsculas, distingue acentuação, distingue caracteres kana, distingue largura|
+|\_CS_AS_WS <sup>2</sup>|Distingue maiúsculas e minúsculas, distingue acentuação, não distingue caracteres kana, distingue largura|
+
+<sup>1</sup> Se a opção Binário ou Ponto de código binário foi selecionada, as opções Diferenciar maiúsculas de minúsculas (\_CS), Distinguir acentos (\_AS), Distinguir caracteres Kana (\_KS) e Distinguir largura (\_WS) não estarão disponíveis.    
+
+<sup>2</sup> A adição da opção UTF-8 (\_UTF8) permite a codificação de dados Unicode usando UTF-8. Para obter mais informações, consulte a seção de [Suporte a UTF-8](#utf8) nesta página. 
+
+### <a name="Collation_sets"></a> Conjuntos de ordenações
+
+O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte aos seguintes conjuntos de ordenação:    
+
+-  [Ordenações do Windows](#Windows-collations)
+
+-  [Ordenações primárias](#Binary-collations)
+
+-  [Ordenações do SQL Server](#SQL-collations)
     
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte aos seguintes conjuntos de ordenação:    
-    
-#### <a name="windows-collations"></a>ordenações do Windows    
+#### <a name="Windows-collations"></a> Ordenações do Windows    
 As ordenações do Windows definem regras para o armazenamento de dados de caractere baseadas em uma localidade de sistema do Windows associada. No caso de uma ordenação do Windows, a comparação de dados não Unicode é implementada usando o mesmo algoritmo que os dados Unicode. As regras de base de ordenações do Windows especificam qual alfabeto ou idioma será usado quando a classificação de dicionário for aplicada, bem como a página de código usada para armazenar dados de caracteres não Unicode. As classificações Unicode e não Unicode são compatíveis com comparações de cadeias de caracteres em uma versão específica do Windows. Isso proporciona consistência entre os tipos de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e também permite que os desenvolvedores classifiquem as cadeias de caracteres nos aplicativos usando as mesmas regras utilizadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Nome de ordenação do Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md).    
     
-#### <a name="binary-collations"></a>Ordenações primárias    
-Os dados classificados de ordenações primárias na sequência de valores codificados definidos pelo tipo de localidade e dados. Eles fazem diferenciação de maiúsculas e minúsculas. Uma ordenação primária no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define a localidade e a página de código ANSI que são usadas. Isso impõe uma ordem de classificação binária. Como são relativamente simples, as ordenações primárias ajudam melhorar o desempenho de aplicativo. Para tipos de dados não Unicode, as comparações de dados têm como base os pontos de código definidos na página de código ANSI. Para tipos de dados Unicode, as comparações de dados têm como base os pontos de código Unicode. Para ordenações primárias em tipos de dados Unicode, a localidade não é considerada em classificações de dados. Por exemplo, Latin_1_General_BIN e Japanese_BIN geram resultados de classificação idênticos quando usados em dados Unicode.    
+#### <a name="Binary-collations"></a> Ordenações primárias    
+Os dados classificados de ordenações primárias na sequência de valores codificados definidos pelo tipo de localidade e dados. Eles fazem diferenciação de maiúsculas e minúsculas. Uma ordenação primária no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define a localidade e a página de código ANSI que são usadas. Isso impõe uma ordem de classificação binária. Como são relativamente simples, as ordenações primárias ajudam melhorar o desempenho de aplicativo. Para tipos de dados não Unicode, as comparações de dados têm como base os pontos de código definidos na página de código ANSI. Para tipos de dados Unicode, as comparações de dados têm como base os pontos de código Unicode. Para ordenações primárias em tipos de dados Unicode, a localidade não é considerada em classificações de dados. Por exemplo, **Latin_1_General_BIN** e **Japanese_BIN** geram resultados de classificação idênticos quando usados em dados Unicode. Para obter mais informações, veja [Nome de ordenação do Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md).   
     
-Existem dois tipos de ordenações primárias no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: as ordenações **BIN** mais antigas e as ordenações **BIN2** mais novas. Em uma ordenação **BIN2**, todos os caracteres são classificados de acordo com seus pontos de código. Em uma ordenação **BIN**, apenas o primeiro caractere é classificado de acordo com o ponto de código e os caracteres restantes são classificados de acordo com seus valores de byte. (Como a plataforma Intel é um arquitetura little endian, os caracteres de código Unicode são sempre trocados por bytes armazenados.)    
+Há dois tipos de agrupamentos binários no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
+
+-  As ordenações **BIN** herdadas, que executavam uma comparação de ponto de código para ponto de código incompleta para dados Unicode. Essas ordenações primárias herdadas comparavam o primeiro caractere como WCHAR, seguido por uma comparação byte por byte. Em uma ordenação **BIN**, apenas o primeiro caractere é classificado de acordo com o ponto de código e os caracteres restantes são classificados de acordo com seus valores de byte.
+
+-  Os agrupamentos **BIN2** mais recentes, que implementam a comparação de ponto de código pura. Em uma ordenação **BIN2**, todos os caracteres são classificados de acordo com seus pontos de código. Já que a plataforma Intel é um arquitetura little endian, os caracteres de código Unicode são sempre trocados por bytes armazenados.     
     
-#### <a name="sql-server-collations"></a>ordenações do SQL Server    
-As ordenações (SQL_\*) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferecem compatibilidade de ordem de classificação com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As regras de classificação de dicionário para dados não Unicode são incompatíveis com rotinas de classificação fornecidas pelos sistemas operacionais Windows. No entanto, a classificação de dados Unicode é compatível com uma versão específica das regras de classificação do Windows. Como as ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam regras de comparação diferentes para dados não Unicode e Unicode, você vê resultados diferentes para comparações dos mesmos dados, dependendo do tipo de dados subjacente. Para obter mais informações, veja [Nome de ordenação do SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).    
+#### <a name="SQL-collations"></a> Ordenações do SQL Server    
+As ordenações (SQL_\*) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferecem compatibilidade de ordem de classificação com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As regras de classificação de dicionário para dados não Unicode são incompatíveis com rotinas de classificação fornecidas pelos sistemas operacionais Windows. No entanto, a classificação de dados Unicode é compatível com uma versão específica das regras de classificação do Windows. Como as ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam regras de comparação diferentes para dados não Unicode e Unicode, você vê resultados diferentes para comparações dos mesmos dados, dependendo do tipo de dados subjacente. Para obter mais informações, veja [Nome de ordenação do SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md). 
+
+Durante a instalação de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a instalação de ordenação padrão é determinada pela localidade do SO (sistema operacional). A ordenação no nível de servidor pode ser alterada durante a instalação ou por meio da alteração da localidade do SO antes da instalação. A ordenação padrão é definida como a versão disponível mais antiga associada a cada localidade específica. Isso ocorre por motivos de compatibilidade com versões anteriores. Por isso, essa nem sempre é a ordenação recomendada. Para aproveitar ao máximo os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], altere as configurações de instalação padrão para usar ordenações do Windows. Por exemplo, para a localidade do SO **Inglês (Estados Unidos)** (página de código 1252), a ordenação padrão durante a instalação é **SQL_Latin1_General_CP1_CI_AS** e pode ser alterado para sua ordenação equivalente do Windows mais próxima, **Latin1_General_100_CI_AS_SC**.
     
 > [!NOTE]    
 > Quando você atualiza uma instância em português do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as ordenações (SQL_\*) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser especificadas para compatibilidade com instâncias existentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como a ordenação padrão de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é definida durante a instalação, é importante especificar as configurações de ordenação com cuidado quando as seguintes afirmações forem verdadeiras:    
@@ -92,14 +142,257 @@ As ordenações (SQL_\*) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 > -   Seu código de aplicativo depende do comportamento de ordenações anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
 > -   Você deve armazenar dados de caractere que refletem vários idiomas.    
     
- Há suporte para configurar ordenações nos seguintes níveis de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:    
-    
-#### <a name="server-level-collations"></a>Ordenações no nível do servidor   
-A ordenação do servidor padrão é definida durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e também se torna a ordenação padrão dos bancos de dados do sistema e de todos os bancos de dados de usuário. Observe que as ordenações somente Unicode não podem ser selecionadas durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pois elas não são suportadas como ordenações no nível de servidor.    
+### <a name="Collation_levels"></a> Níveis de ordenação
+Há suporte para configurar ordenações nos seguintes níveis de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:    
+
+-  [Ordenações no nível do servidor](#Server-level-collations)
+
+-  [Ordenações do nível do banco de dados](#Database-level-collations)
+
+-  [Ordenações em nível de coluna](#Column-level-collations)
+
+-  [Ordenações no nível da expressão](#Expression-level-collations)
+
+#### <a name="Server-level-collations"></a> Ordenações no nível do servidor   
+A ordenação do servidor padrão é determinada durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e também se torna a ordenação padrão dos bancos de dados do sistema e de todos os bancos de dados de usuário. 
+
+A tabela a seguir mostra as designações de ordenação padrão determinadas pela localidade do SO (sistema operacional), incluindo os respectivos LCIDs (identificadores de código de linguagem) do Windows e do SQL:
+
+|Localidade do Windows|LCID do Windows|LCID do SQL|Ordenação padrão|
+|---------------|---------|---------|---------------|
+|Africâner (África do Sul)|0x0436|0x0409|Latin1_General_CI_AS|
+|Albanês (Albânia)|0x041c|0x041c|Albanian_CI_AS|
+|Alsaciano (França)|0x0484|0x0409|Latin1_General_CI_AS|
+|Amárico (Etiópia)|0x045e|0x0409|Latin1_General_CI_AS|
+|Árabe (Argélia)|0x1401|0x0401|Arabic_CI_AS|
+|Árabe (Bahrein)|0x3c01|0x0401|Arabic_CI_AS|
+|Árabe (Egito)|0x0c01|0x0401|Arabic_CI_AS|
+|Árabe (Iraque)|0x0801|0x0401|Arabic_CI_AS|
+|Árabe (Jordânia)|0x2c01|0x0401|Arabic_CI_AS|
+|Árabe (Kuwait)|0x3401|0x0401|Arabic_CI_AS|
+|Árabe (Líbano)|0x3001|0x0401|Arabic_CI_AS|
+|Árabe (Líbia)|0x1001|0x0401|Arabic_CI_AS|
+|Árabe (Marrocos)|0x1801|0x0401|Arabic_CI_AS|
+|Árabe (Omã)|0x2001|0x0401|Arabic_CI_AS|
+|Árabe (Catar)|0x4001|0x0401|Arabic_CI_AS|
+|Árabe (Arábia Saudita)|0x0401|0x0401|Arabic_CI_AS|
+|Árabe (Síria)|0x2801|0x0401|Arabic_CI_AS|
+|Árabe (Tunísia)|0x1c01|0x0401|Arabic_CI_AS|
+|Árabe (EAU)|0x3801|0x0401|Arabic_CI_AS|
+|Árabe (Iêmen)|0x2401|0x0401|Arabic_CI_AS|
+|Armênio (Armênia)|0x042b|0x0419|Latin1_General_CI_AS|
+|Assamês (Índia)|0x044d|0x044d|Indisponível no nível do servidor|
+|Azeri (Azerbaijão, cirílico)|0x082c|0x082c|Preterido, não disponível no nível do servidor|
+|Azeri (Azerbaijão, latino)|0x042c|0x042c|Preterido, não disponível no nível do servidor|
+|Bashkir (Rússia)|0x046d|0x046d|Latin1_General_CI_AI|
+|Basco (País Basco)|0x042d|0x0409|Latin1_General_CI_AS|
+|Bielorrusso (Belarus)|0x0423|0x0419|Cyrillic_General_CI_AS|
+|Bengali (Bangladesh)|0x0845|0x0445|Indisponível no nível do servidor|
+|Bengali (India)|0x0445|0x0439|Indisponível no nível do servidor|
+|Bósnio (Bósnia e Herzegovina, Cirílico)|0x201a|0x201a|Latin1_General_CI_AI|
+|Bósnio (Bósnia e Herzegovina, Latino)|0x141a|0x141a|Latin1_General_CI_AI|
+|Bretão (França)|0x047e|0x047e|Latin1_General_CI_AI|
+|Búlgaro (Bulgária)|0x0402|0x0419|Cyrillic_General_CI_AS|
+|Catalão (Catalunha)|0x0403|0x0409|Latin1_General_CI_AS|
+|Chinês (RAE de Hong Kong, RPC)|0x0c04|0x0404|Chinese_Taiwan_Stroke_CI_AS|
+|Chinese (Macao SAR)|0x1404|0x1404|Latin1_General_CI_AI|
+|Chinês (Macau)|0x21404|0x21404|Latin1_General_CI_AI|
+|Chinês (China)|0x0804|0x0804|Chinese_PRC_CI_AS|
+|Chinês (China)|0x20804|0x20804|Chinese_PRC_Stroke_CI_AS|
+|Chinês (Singapura)|0x1004|0x0804|Chinese_PRC_CI_AS|
+|Chinês (Singapura)|0x21004|0x20804|Chinese_PRC_Stroke_CI_AS|
+|Chinês (Taiwan)|0x30404|0x30404|Chinese_Taiwan_Bopomofo_CI_AS|
+|Chinês (Taiwan)|0x0404|0x0404|Chinese_Taiwan_Stroke_CI_AS|
+|Corso (França)|0x0483|0x0483|Latin1_General_CI_AI|
+|Croata (Bósnia e Herzegovina, Latino)|0x101a|0x041a|Croatian_CI_AS|
+|Croata (Croácia)|0x041a|0x041a|Croatian_CI_AS|
+|Tcheco (República Tcheca)|0x0405|0x0405|Czech_CI_AS|
+|Dinamarquês (Dinamarca)|0x0406|0x0406|Danish_Norwegian_CI_AS|
+|Dari (Afeganistão)|0x048c|0x048c|Latin1_General_CI_AI|
+|Divehi (Maldivas)|0x0465|0x0465|Indisponível no nível do servidor|
+|Holandês (Bélgica)|0x0813|0x0409|Latin1_General_CI_AS|
+|Holandês (Países Baixos)|0x0413|0x0409|Latin1_General_CI_AS|
+|Inglês (Austrália)|0x0c09|0x0409|Latin1_General_CI_AS|
+|Inglês (Belize)|0x2809|0x0409|Latin1_General_CI_AS|
+|Inglês (Canadá)|0x1009|0x0409|Latin1_General_CI_AS|
+|Inglês (Caribe)|0x2409|0x0409|Latin1_General_CI_AS|
+|Inglês (Índia)|0x4009|0x0409|Latin1_General_CI_AS|
+|Inglês (Irlanda)|0x1809|0x0409|Latin1_General_CI_AS|
+|Inglês (Jamaica)|0x2009|0x0409|Latin1_General_CI_AS|
+|Inglês (Malásia)|0x4409|0x0409|Latin1_General_CI_AS|
+|Inglês (Nova Zelândia)|0x1409|0x0409|Latin1_General_CI_AS|
+|Inglês (Filipinas)|0x3409|0x0409|Latin1_General_CI_AS|
+|Inglês (Singapura)|0x4809|0x0409|Latin1_General_CI_AS|
+|Inglês (África do Sul)|0x1c09|0x0409|Latin1_General_CI_AS|
+|Inglês (Trinidad e Tobago)|0x2c09|0x0409|Latin1_General_CI_AS|
+|Inglês (Reino Unido)|0x0809|0x0409|Latin1_General_CI_AS|
+|Inglês (Estados Unidos)|0x0409|0x0409|SQL_Latin1_General_CP1_CI_AS|
+|Inglês (Zimbábue)|0x3009|0x0409|Latin1_General_CI_AS|
+|Estoniano (Estônia)|0x0425|0x0425|Estonian_CI_AS|
+|Feroês (Ilhas Faroe)|0x0438|0x0409|Latin1_General_CI_AS|
+|Filipino (Filipinas)|0x0464|0x0409|Latin1_General_CI_AS|
+|Finlandês (Finlândia)|0x040b|0x040b|Finnish_Swedish_CI_AS|
+|Francês (Bélgica)|0x080c|0x040c|French_CI_AS|
+|Francês (Canadá)|0x0c0c|0x040c|French_CI_AS|
+|Francês (França)|0x040c|0x040c|French_CI_AS|
+|Francês (Luxemburgo)|0x140c|0x040c|French_CI_AS|
+|Francês (Mônaco)|0x180c|0x040c|French_CI_AS|
+|Francês (Suíça)|0x100c|0x040c|French_CI_AS|
+|Frisão (Holanda)|0x0462|0x0462|Latin1_General_CI_AI|
+|Galego (Espanha)|0x0456|0x0409|Latin1_General_CI_AS|
+|Georgiano (Geórgia)|0x10437|0x10437|Georgian_Modern_Sort_CI_AS|
+|Georgiano (Geórgia)|0x0437|0x0419|Latin1_General_CI_AS|
+|Alemão – classificação do catálogo telefônico (DIN)|0x10407|0x10407|German_PhoneBook_CI_AS|
+|Alemão (Áustria)|0x0c07|0x0409|Latin1_General_CI_AS|
+|Alemão (Alemanha)|0x0407|0x0409|Latin1_General_CI_AS|
+|Alemão (Liechtenstein)|0x1407|0x0409|Latin1_General_CI_AS|
+|Alemão (Luxemburgo)|0x1007|0x0409|Latin1_General_CI_AS|
+|Alemão (Suíça)|0x0807|0x0409|Latin1_General_CI_AS|
+|Grego (Grécia)|0x0408|0x0408|Greek_CI_AS|
+|Groenlandês (Groenlândia)|0x046f|0x0406|Danish_Norwegian_CI_AS|
+|Gujarati (Índia)|0x0447|0x0439|Indisponível no nível do servidor|
+|hauçá (Nigéria, Latino)|0x0468|0x0409|Latin1_General_CI_AS|
+|Hebraico (Israel)|0x040d|0x040d|Hebrew_CI_AS|
+|Híndi (Índia)|0x0439|0x0439|Indisponível no nível do servidor|
+|Húngaro (Hungria)|0x040e|0x040e|Hungarian_CI_AS|
+|Classificação Técnica Húngara|0x1040e|0x1040e|Hungarian_Technical_CI_AS|
+|Islandês (Islândia)|0x040f|0x040f|Icelandic_CI_AS|
+|Igbo (Nigéria)|0x0470|0x0409|Latin1_General_CI_AS|
+|Indonésio (Indonésia)|0x0421|0x0409|Latin1_General_CI_AS|
+|Inuktitut (Canadá, latino)|0x085d|0x0409|Latin1_General_CI_AS|
+|Inuktitut (silábico) Canadá|0x045d|0x045d|Latin1_General_CI_AI|
+|Irlandês (Irlanda)|0x083c|0x0409|Latin1_General_CI_AS|
+|Italiano (Itália)|0x0410|0x0409|Latin1_General_CI_AS|
+|Italiano (Suíça)|0x0810|0x0409|Latin1_General_CI_AS|
+|Japonês (Japão XJIS)|0x0411|0x0411|Japanese_CI_AS|
+|Japonês (Japão)|0x040411|0x40411|Latin1_General_CI_AI|
+|canarim (Índia)|0x044b|0x0439|Indisponível no nível do servidor|
+|Cazaque (Cazaquistão)|0x043f|0x043f|Kazakh_90_CI_AS|
+|Khmer (Camboja)|0x0453|0x0453|Indisponível no nível do servidor|
+|Quiché (Guatemala)|0x0486|0x0c0a|Modern_Spanish_CI_AS|
+|Quiniaruanda (Ruanda)|0x0487|0x0409|Latin1_General_CI_AS|
+|Konkani (Índia)|0x0457|0x0439|Indisponível no nível do servidor|
+|Coreano (classificação de dicionário coreano)|0x0412|0x0412|Korean_Wansung_CI_AS|
+|Quirguiz (Quirguistão)|0x0440|0x0419|Cyrillic_General_CI_AS|
+|Laosiano (RDP do Laos)|0x0454|0x0454|Indisponível no nível do servidor|
+|Letão (Letônia)|0x0426|0x0426|Latvian_CI_AS|
+|Lituano (Lituânia)|0x0427|0x0427|Lithuanian_CI_AS|
+|Sorábio baixo (Alemanha)|0x082e|0x0409|Latin1_General_CI_AS|
+|Luxemburguês (Luxemburgo)|0x046e|0x0409|Latin1_General_CI_AS|
+|Macedônio (Macedônia, Antiga República Iugoslava da Macedônia)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|Malaio (Brunei Darussalam)|0x083e|0x0409|Latin1_General_CI_AS|
+|Malaio (Malásia)|0x043e|0x0409|Latin1_General_CI_AS|
+|Malaiala (Índia)|0x044c|0x0439|Indisponível no nível do servidor|
+|Maltês (Malta)|0x043a|0x043a|Latin1_General_CI_AI|
+|Maori (Nova Zelândia)|0x0481|0x0481|Latin1_General_CI_AI|
+|Mapudungun (Chile)|0x047a|0x047a|Latin1_General_CI_AI|
+|Marati (Índia)|0x044e|0x0439|Indisponível no nível do servidor|
+|moicano (Canadá)|0x047c|0x047c|Latin1_General_CI_AI|
+|Mongol (Mongólia)|0x0450|0x0419|Cyrillic_General_CI_AS|
+|Mongol (RPC)|0x0850|0x0419|Cyrillic_General_CI_AS|
+|Nepalês (Nepal)|0x0461|0x0461|Indisponível no nível do servidor|
+|Norueguês, (Bokmål, Noruega)|0x0414|0x0414|Latin1_General_CI_AI|
+|Norueguês (Nynorsk, Noruega)|0x0814|0x0414|Latin1_General_CI_AI|
+|occitânico (França)|0x0482|0x040c|French_CI_AS|
+|Oriá (Índia)|0x0448|0x0439|Indisponível no nível do servidor|
+|Pashto (Afeganistão)|0x0463|0x0463|Indisponível no nível do servidor|
+|Persa (Irã)|0x0429|0x0429|Latin1_General_CI_AI|
+|Polonês (Polônia)|0x0415|0x0415|Polish_CI_AS|
+|Português (Brasil)|0x0416|0x0409|Latin1_General_CI_AS|
+|Português (Portugal)|0x0816|0x0409|Latin1_General_CI_AS|
+|panjabi (Índia)|0x0446|0x0439|Indisponível no nível do servidor|
+|Quíchua (Bolívia)|0x046b|0x0409|Latin1_General_CI_AS|
+|Quíchua (Equador)|0x086b|0x0409|Latin1_General_CI_AS|
+|Quíchua (Peru)|0x0c6b|0x0409|Latin1_General_CI_AS|
+|Romeno (Romênia)|0x0418|0x0418|Romanian_CI_AS|
+|Romanche (Suíça)|0x0417|0x0417|Latin1_General_CI_AI|
+|Russo (Rússia)|0x0419|0x0419|Cyrillic_General_CI_AS|
+|Sami (Inari, Finlândia)|0x243b|0x083b|Latin1_General_CI_AI|
+|Sami (Lule, Noruega)|0x103b|0x043b|Latin1_General_CI_AI|
+|Sami (Lule, Suécia)|0x143b|0x083b|Latin1_General_CI_AI|
+|Sami (Norte, Finlândia)|0x0c3b|0x083b|Latin1_General_CI_AI|
+|Sami (Norte, Noruega)|0x043b|0x043b|Latin1_General_CI_AI|
+|Sami (Norte, Suécia)|0x083b|0x083b|Latin1_General_CI_AI|
+|Sami (Skolt, Finlândia)|0x203b|0x083b|Latin1_General_CI_AI|
+|Sami (Sul, Noruega)|0x183b|0x043b|Latin1_General_CI_AI|
+|Sami (Sul, Suécia)|0x1c3b|0x083b|Latin1_General_CI_AI|
+|Sânscrito (Índia)|0x044f|0x0439|Indisponível no nível do servidor|
+|Sérvio (Bósnia e Herzegovina, cirílico)|0x1c1a|0x0c1a|Latin1_General_CI_AI|
+|Sérvio (Bósnia e Herzegovina, latino)|0x181a|0x081a|Latin1_General_CI_AI|
+|Sérvio (Sérvia, cirílico)|0x0c1a|0x0c1a|Latin1_General_CI_AI|
+|Sérvio (Sérvia, latino)|0x081a|0x081a|Latin1_General_CI_AI|
+|soto setentrional (África do Sul)|0x046c|0x0409|Latin1_General_CI_AS|
+|Setswana/Tswana (África do Sul)|0x0432|0x0409|Latin1_General_CI_AS|
+|Cingalês (Sri Lanka)|0x045b|0x0439|Indisponível no nível do servidor|
+|Eslovaco (Eslováquia)|0x041b|0x041b|Slovak_CI_AS|
+|Esloveno (Eslovênia)|0x0424|0x0424|Slovenian_CI_AS|
+|Espanhol (Argentina)|0x2c0a|0x0c0a|Modern_Spanish_CI_AS|
+|Espanhol (Bolívia)|0x400a|0x0c0a|Modern_Spanish_CI_AS|
+|Espanhol (Chile)|0x340a|0x0c0a|Modern_Spanish_CI_AS|
+|Espanhol (Colômbia)|0x240a|0x0c0a|Modern_Spanish_CI_AS|
+|Espanhol (Costa Rica)|0x140a|0x0c0a|Modern_Spanish_CI_AS|
+|Espanhol (República Dominicana)|0x1c0a|0x0c0a|Modern_Spanish_CI_AS|
+|Espanhol (Equador)|0x300a|0x0c0a|Modern_Spanish_CI_AS|
+|Espanhol (El Salvador)|0x440a|0x0c0a|Modern_Spanish_CI_AS|
+|Espanhol (Guatemala)|0x100a|0x0c0a|Modern_Spanish_CI_AS|
+|Espanhol (Honduras)|0x480a|0x0c0a|Modern_Spanish_CI_AS|
+|Espanhol (México)|0x080a|0x0c0a|Modern_Spanish_CI_AS|
+|Espanhol (Nicarágua)|0x4c0a|0x0c0a|Modern_Spanish_CI_AS|
+|Espanhol (Panamá)|0x180a|0x0c0a|Modern_Spanish_CI_AS|
+|Espanhol (Paraguai)|0x3c0a|0x0c0a|Modern_Spanish_CI_AS|
+|Espanhol (Peru)|0x280a|0x0c0a|Modern_Spanish_CI_AS|
+|Espanhol (Porto Rico)|0x500a|0x0c0a|Modern_Spanish_CI_AS|
+|Espanhol (Espanha)|0x0c0a|0x0c0a|Modern_Spanish_CI_AS|
+|Espanhol (Espanha, classificação tradicional)|0x040a|0x040a|Traditional_Spanish_CI_AS|
+|Espanhol (Estados Unidos)|0x540a|0x0409|Latin1_General_CI_AS|
+|Espanhol (Uruguai)|0x380a|0x0c0a|Modern_Spanish_CI_AS|
+|Espanhol (Venezuela)|0x200a|0x0c0a|Modern_Spanish_CI_AS|
+|Suaíle (Quênia)|0x0441|0x0409|Latin1_General_CI_AS|
+|Sueco (Finlândia)|0x081d|0x040b|Finnish_Swedish_CI_AS|
+|Sueco (Suécia)|0x041d|0x040b|Finnish_Swedish_CI_AS|
+|Siríaco (Síria)|0x045a|0x045a|Indisponível no nível do servidor|
+|Tadjique (Tadjiquistão)|0x0428|0x0419|Cyrillic_General_CI_AS|
+|Tamazirte (Argélia, latino)|0x085f|0x085f|Latin1_General_CI_AI|
+|Tâmil (Índia)|0x0449|0x0439|Indisponível no nível do servidor|
+|Tatárico (Rússia)|0x0444|0x0444|Cyrillic_General_CI_AS|
+|Télugo (Índia)|0x044a|0x0439|Indisponível no nível do servidor|
+|Tailandês (Tailândia)|0x041e|0x041e|Thai_CI_AS|
+|Tibetano (RPC)|0x0451|0x0451|Indisponível no nível do servidor|
+|Turco (Turquia)|0x041f|0x041f|Turkish_CI_AS|
+|Turcomeno (Turcomenistão)|0x0442|0x0442|Latin1_General_CI_AI|
+|Uighur (RPC)|0x0480|0x0480|Latin1_General_CI_AI|
+|Ucraniano (Ucrânia)|0x0422|0x0422|Ukrainian_CI_AS|
+|Sorábio Alto (Alemanha)|0x042e|0x042e|Latin1_General_CI_AI|
+|Urdu (Paquistão)|0x0420|0x0420|Latin1_General_CI_AI|
+|Uzbeque (Uzbequistão, cirílico)|0x0843|0x0419|Cyrillic_General_CI_AS|
+|Uzbeque (Uzbequistão, latino)|0x0443|0x0443|Uzbek_Latin_90_CI_AS|
+|Vietnamita (Vietnã)|0x042a|0x042a|Vietnamese_CI_AS|
+|Galês (Reino Unido)|0x0452|0x0452|Latin1_General_CI_AI|
+|uolofe (Senegal)|0x0488|0x040c|French_CI_AS|
+|Xhosa/isiXhosa (África do Sul)|0x0434|0x0409|Latin1_General_CI_AS|
+|Yakut (Rússia)|0x0485|0x0485|Latin1_General_CI_AI|
+|Yi (RPC)|0x0478|0x0409|Latin1_General_CI_AS|
+|Ioruba (Nigéria)|0x046a|0x0409|Latin1_General_CI_AS|
+|Zulu/isiZulu (África do Sul)|0x0435|0x0409|Latin1_General_CI_AS|
+
+> [!NOTE]
+> Observe que as ordenações somente Unicode não podem ser selecionadas durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pois elas não são compatíveis como ordenações no nível de servidor.    
     
 Depois que uma ordenação for atribuída ao servidor, você não poderá alterar a ordenação, exceto exportando todos os objetos de banco de dados e dados, recriando o banco de dados **master** e importando todos os objetos de banco de dados e dados. Em vez de alterar a ordenação padrão de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode especificar a ordenação desejada no momento da criação de um novo banco de dados ou coluna de banco de dados.    
+
+Para consultar a ordenação do servidor para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use a função `SERVERPROPERTY`:
+
+```sql
+SELECT CONVERT(varchar, SERVERPROPERTY('collation'));
+```
+
+Para consultar o servidor por todas as ordenações disponíveis, use a seguinte função interna `fn_helpcollations()`:
+
+```sql
+SELECT * FROM sys.fn_helpcollations();
+```
     
-#### <a name="database-level-collations"></a>Ordenações do nível do banco de dados    
+#### <a name="Database-level-collations"></a> Ordenações do nível do banco de dados    
 Quando um banco de dados é criado ou modificado, você pode usar a cláusula COLLATE da instrução CREATE DATABASE ou ALTER DATABASE para especificar a ordenação de banco de dados padrão. Se nenhuma ordenação for especificada, o banco de dados receberá a ordenação do servidor.    
     
 Você não pode alterar a ordenação de bancos de dados do sistema, exceto alterando a ordenação para o servidor.    
@@ -109,11 +402,31 @@ A ordenação de banco de dados é usada para todos os metadados no banco de dad
 > [!NOTE]
 > A ordenação não poderá ser alterada depois que o banco de dados tiver sido criado em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
+A ordenação de um banco de dados do usuário pode ser alterada usando uma instrução `ALTER DATABASE` semelhante à seguinte:
 
-#### <a name="column-level-collations"></a>Ordenações em nível de coluna    
+```sql
+ALTER DATABASE myDB COLLATE Greek_CS_AI;
+```
+
+> [!IMPORTANT]
+> A alteração da ordenação no nível de banco de dados não afeta as ordenações no nível de coluna ou de expressão.
+
+A ordenação atual de um banco de dados pode ser recuperada usando-se uma instrução semelhante à seguinte:
+
+```sql
+SELECT CONVERT (VARCHAR(50), DATABASEPROPERTYEX('database_name','collation'));
+```
+
+#### <a name="Column-level-collations"></a> Ordenações em nível de coluna    
 Quando você cria ou altera uma tabela, pode especificar ordenações para cada coluna de cadeia de caracteres usando a cláusula COLLATE. Se nenhuma ordenação for especificada, a ordenação padrão do banco de dados será atribuída à coluna.    
+
+A ordenação de uma coluna pode ser alterada usando uma instrução `ALTER TABLE` semelhante à seguinte:
+
+```sql
+ALTER TABLE myTable ALTER COLUMN mycol NVARCHAR(10) COLLATE Greek_CS_AI;
+```
     
-#### <a name="expression-level-collations"></a>Ordenações no nível da expressão    
+#### <a name="Expression-level-collations"></a> Ordenações no nível da expressão    
 As ordenações no nível de expressão são definidas quando uma instrução é executada e afetam o modo como um conjunto de resultados é retornado. Isso permite que os resultados da classificação ORDER BY sejam específicos de localidade. Use uma cláusula COLLATE como a seguinte para implementar ordenações no nível da expressão:    
     
 ```sql    
@@ -130,24 +443,40 @@ Uma localidade é um conjunto de informações associadas a um local ou a uma cu
  A ordem de classificação especifica como os valores de dados são classificados. Isso afeta os resultados da comparação de dados. Os dados são classificados com o uso de ordenações e podem ser otimizados com o uso de índices.    
     
 ##  <a name="Unicode_Defn"></a> Suporte de Unicode    
-O Unicode é um padrão para mapear pontos de código para caracteres. Como é projetado para abranger todos os caracteres de todos os idiomas do mundo, não necessita de páginas de código diferentes para lidar com os diferentes conjuntos de caracteres. 
-   
-As páginas de código usadas por um cliente são determinadas pelas configurações do sistema operacional. Para definir páginas de código de cliente no sistema operacional Windows, use **Configurações Regionais** no Painel de Controle.    
+O Unicode é um padrão para mapear pontos de código para caracteres. Como é projetado para abranger todos os caracteres de todos os idiomas do mundo, não necessita de páginas de código diferentes para lidar com os diferentes conjuntos de caracteres.
 
-Limitações consideráveis estão associadas a tipos de dados não Unicode. Isso ocorre porque um computador não Unicode fica limitado a usar uma única página de código. Você pode experimentar ganho de desempenho com o uso de Unicode, porque menos conversões de página de código são necessárias. As ordenações Unicode devem ser selecionadas individualmente no nível de banco de dados, coluna ou expressão porque não têm suporte no nível de servidor.    
-   
-Quando você move dados de um servidor para um cliente, a ordenação do servidor pode não ser reconhecida por drivers de cliente mais antigos. Isso pode ocorrer quando você move dados de um servidor Unicode para um cliente não Unicode. A melhor opção pode ser atualizar o sistema operacional do cliente para que as ordenações de sistema subjacentes sejam atualizadas. Se houver um software de cliente de banco de dados instalado no cliente, você deverá considerar a possibilidade de aplicar uma atualização de serviço a esse software.    
-    
-> [!TIP]
-> Você também pode tentar usar uma ordenação diferente para os dados no servidor. Escolha uma ordenação que mapeia para uma página de código no cliente.    
+### <a name="unicode-basics"></a>Noções básicas de Unicode
+O armazenamento de dados em vários idiomas em um banco de dados é difícil de administrar quando você usa apenas dados de caracteres e páginas de código. Também é difícil encontrar uma página de código para o banco de dados que possa armazenar todos os caracteres necessários específicos a um idioma. Além disso, é difícil garantir a tradução correta de caracteres especiais, quando forem lidos ou atualizados por diferentes clientes executando várias páginas de código. Bancos de dados que oferecem suporte a clientes internacionais sempre deveriam usar tipos de dados Unicode em vez de tipos de dados não Unicode.
 
+Por exemplo, considere um banco de dados de clientes na América do Norte que deve lidar com três idiomas principais:
+
+-  Nomes e endereços em espanhol para o México
+-  Nomes e endereços em francês para Quebec
+-  Nomes e endereços em inglês para o resto do Canadá e dos Estados Unidos
+
+Ao usar apenas colunas de caracteres e páginas de códigos, você deve tomar cuidado para ter certeza de que o banco de dados está instalado com uma página de código que lida com os caracteres dos três idiomas. Você deve também cuidar para garantir a tradução correta de caracteres especiais de um dos idiomas, quando forem lidos ou atualizados por clientes executando uma página de código para outro idioma.
+   
+> [!NOTE]
+> As páginas de código usadas por um cliente são determinadas pelas configurações do SO (sistema operacional). Para definir páginas de código de cliente no sistema operacional Windows, use **Configurações Regionais** no Painel de Controle.    
+
+A seleção de uma página de código para tipos de dados de caractere que ofereça suporte a todos os caracteres solicitados por um público mundial seria difícil.
+A maneira mais fácil de gerenciar dados de caractere em bancos de dados internacionais é sempre usar um tipo de dados com suporte a Unicode. 
+
+### <a name="unicode-data-types"></a>Tipos de dados Unicode
 Se você armazenar dados de caracteres que refletem vários idiomas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), use tipos de dados Unicode (**nchar**, **nvarchar** e **ntext**) em vez de tipos de dados não Unicode (**char**, **varchar** e **text**). 
 
 > [!NOTE]
 > No caso dos tipos de dados Unicode, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] poderá representar até 65.535 caracteres usando o UCS-2 ou o intervalo completo de Unicode (1.114.111 caracteres) se caracteres suplementares forem usados. Para saber mais sobre como habilitar caracteres suplementares, confira o tópico [Caracteres Suplementares](#Supplementary_Characters).
 
 Como alternativa, começando com o [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], se uma ordenação habilitada para UTF-8 (\_UTF8) for usada, tipos de dados que eram não Unicode (**char** e **varchar**) se tornarão tipos de dados Unicode (UTF-8). O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] não altera o comportamento de tipos de dados Unicode existentes anteriormente (UTF-16) (**nchar**, **nvarchar** e **ntext**). Para ver mais detalhes, confira [Diferenças de armazenamento entre UTF-8 e UTF-16](#storage_differences).
-       
+
+### <a name="unicode-considerations"></a>Considerações sobre Unicode
+Limitações consideráveis estão associadas a tipos de dados não Unicode. Isso ocorre porque um computador não Unicode fica limitado a usar uma única página de código. Você pode experimentar ganho de desempenho com o uso de Unicode, porque menos conversões de página de código são necessárias. As ordenações Unicode devem ser selecionadas individualmente no nível de banco de dados, coluna ou expressão porque não têm suporte no nível de servidor.    
+
+Quando você move dados de um servidor para um cliente, a ordenação do servidor pode não ser reconhecida por drivers de cliente mais antigos. Isso pode ocorrer quando você move dados de um servidor Unicode para um cliente não Unicode. A melhor opção pode ser atualizar o sistema operacional do cliente para que as ordenações de sistema subjacentes sejam atualizadas. Se houver um software de cliente de banco de dados instalado no cliente, você deverá considerar a possibilidade de aplicar uma atualização de serviço a esse software.    
+    
+> [!TIP]
+> Você também pode tentar usar uma ordenação diferente para os dados no servidor. Escolha uma ordenação que mapeia para uma página de código no cliente.    
 Para usar as ordenações UTF-16 disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) para melhorar a pesquisa e classificação de alguns caracteres Unicode (somente ordenações do Windows), selecione uma das ordenações dos caracteres suplementares (\_SC) ou uma das ordenações da versão 140.    
  
 Para usar as ordenações UTF-8 disponíveis no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] para aprimorar a pesquisa e a classificação de alguns caracteres Unicode (somente ordenações do Windows), você precisa selecionar ordenações habilitadas para codificação UTF-8 (\_UTF8).
@@ -162,11 +491,11 @@ Para usar as ordenações UTF-8 disponíveis no [!INCLUDE[sql-server-2019](../..
     
 -   O sinalizador de UTF8 não pode ser aplicado a:    
     -   Ordenações da versão 90 sem suporte a caracteres suplementares (\_SC) ou a diferenciação de seletor de variação (\_VSS)    
-    -   As ordenações primárias BIN ou BIN2<sup>2</sup>    
-    -   As ordenações do SQL\*  
+    -   As ordenações primárias BIN ou BIN2 <sup>2</sup>    
+    -   As ordenações do SQL\_*  
     
-<sup>1</sup> No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 em diante. O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 substituiu a ordenação UTF8_BIN2 pela Latin1_General_100_BIN2_UTF8.     
-<sup>2</sup> Até com o [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. 
+<sup>1</sup> No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 em diante. O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 substituiu a ordenação **UTF8_BIN2** pela **Latin1_General_100_BIN2_UTF8**.        
+<sup>2</sup> Até com o [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3.    
     
 Para avaliar os problemas relacionados ao uso de tipos de dados Unicode ou não Unicode, teste seu cenário para medir as diferenças de desempenho em seu ambiente. Uma boa prática é padronizar a ordenação usada nos sistemas de sua organização e implantar servidores e clientes Unicode sempre que possível.    
     
@@ -226,7 +555,12 @@ A seguinte tabela compara o comportamento de alguns operadores e funções de ca
 |[Corresponder a um caractere curinga](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [Curinga – caracter(es) para não corresponder](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|Há suporte para caracteres suplementares para todas as operações de curingas.|Não há suporte para caracteres suplementares para estas operações de curingas. Há suporte para outros operadores curinga.|    
     
 ## <a name="GB18030"></a> Suporte a GB18030    
-GB18030 é um padrão separado usado na República Popular da China para codificar caracteres chineses. Em GB18030, caracteres podem ter 1, 2 ou 4 bytes em comprimento. O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a caracteres GB18030 codificados, reconhecendo-os quando eles entram no servidor, provenientes de um aplicativo cliente, convertendo-os e armazenando-os nativamente como caracteres Unicode. Após serem armazenados no servidor, são tratados como caracteres Unicode em todas as operações subsequentes. Você pode usar qualquer ordenação em chinês, preferivelmente a mais recente versão 100. Todas as ordenações de nível _100 dão suporte à classificação linguística com caracteres GB18030. Se os dados incluírem caracteres suplementares (pares alternativos), você poderá usar as ordenações de SC disponíveis no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para aprimorar a pesquisa e a classificação.    
+GB18030 é um padrão separado usado na República Popular da China para codificar caracteres chineses. Em GB18030, caracteres podem ter 1, 2 ou 4 bytes em comprimento. O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a caracteres GB18030 codificados, reconhecendo-os quando eles entram no servidor, provenientes de um aplicativo cliente, convertendo-os e armazenando-os nativamente como caracteres Unicode. Após serem armazenados no servidor, são tratados como caracteres Unicode em todas as operações subsequentes. 
+
+Você pode usar qualquer ordenação em chinês, preferivelmente a mais recente versão 100. Todas as ordenações de nível \_100 dão suporte à classificação linguística com caracteres GB18030. Se os dados incluírem caracteres suplementares (pares alternativos), você poderá usar as ordenações de SC disponíveis no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para aprimorar a pesquisa e a classificação.    
+
+> [!NOTE]
+> Verifique se suas ferramentas de cliente, tais como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], usam a fonte Dengxian para exibir corretamente cadeias de caracteres que contenham um caractere codificado em GB18030.
     
 ## <a name="Complex_script"></a> Suporte a script complexo    
 O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte à inserção, armazenamento, alteração e exibição de scripts complexos. Scripts complexos incluem os seguintes tipos:    
@@ -255,7 +589,7 @@ Essas ordenações são compatíveis com índices, tabelas com otimização de m
 <a name="ctp23"></a>
 
 ## <a name="utf8"></a> Suporte para UTF-8
-O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] apresenta suporte completo para a codificação de caracteres UTF-8 amplamente utilizada como codificação de importação ou exportação e como ordenação em nível de coluna ou de banco de dados para dados de cadeia de caracteres. A UTF-8 é permitida nos tipos de dados **char** e **varchar** e é habilitada quando você cria ou altera a ordenação de um objeto para uma ordenação com o sufixo `UTF8`. Por exemplo, `LATIN1_GENERAL_100_CI_AS_SC` para `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. 
+O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] apresenta suporte completo para a codificação de caracteres UTF-8 amplamente utilizada como codificação de importação ou exportação e como ordenação em nível de coluna ou de banco de dados para dados de cadeia de caracteres. A UTF-8 é permitida nos tipos de dados **char** e **varchar** e é habilitada quando você cria ou altera a ordenação de um objeto para uma ordenação com o sufixo `UTF8`. Por exemplo, **LATIN1_GENERAL_100_CI_AS_SC** para **LATIN1_GENERAL_100_CI_AS_SC_UTF8**. 
 
 A UTF-8 só está disponível para ordenações do Windows com suporte para caracteres suplementares, conforme introduzida no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Os tipos de dados **nchar** e **nvarchar** permitem apenas codificação UCS-2 e UTF-16 e permanecem inalterados.
 
@@ -309,7 +643,9 @@ Para ver outras considerações, confira o artigo [Gravar instruções Transact-
 ["Práticas recomendadas para migração para Unicode no SQL Server"](https://go.microsoft.com/fwlink/?LinkId=113890) – deixou de receber manutenção   
 [Site do Unicode Consortium](https://go.microsoft.com/fwlink/?LinkId=48619)   
 [Padrão Unicode](http://www.unicode.org/standard/standard.html)     
-[Suporte ao UTF-8 no OLE DB Driver for SQL Server](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+[Suporte a UTF-8 no Driver do OLE DB para SQL Server](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)      
+[Nome de ordenação do SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)        
+[Nome de ordenação do Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)     
 Blog [Apresentação do suporte a UTF-8 para SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928)       
     
 ## <a name="see-also"></a>Consulte Também    
