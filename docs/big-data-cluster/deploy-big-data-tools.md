@@ -1,7 +1,7 @@
 ---
 title: Instalar ferramentas de Big Data
 titleSuffix: SQL Server big data clusters
-description: Saiba como instalar ferramentas usadas com [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] o (Preview).
+description: Saiba como instalar ferramentas usadas com [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versão prévia).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afd036dfe33ab538d3d845e73f45e804052a9903
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
+ms.openlocfilehash: cbb34d5cd209281a5c97d819c7741503d234ad2d
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70238697"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342016"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Instalar as ferramentas de Big Data do SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este artigo descreve as ferramentas de cliente que devem ser instaladas para criar, gerenciar e [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] usar o (Preview). A seção a seguir fornece uma lista de ferramentas e links para instruções de instalação. Antes de implantar um cluster de Big Data, configure as ferramentas marcadas como necessárias no Windows ou no Linux.
+Este artigo descreve as ferramentas de cliente que devem ser instaladas para criar, gerenciar e usar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versão prévia). A seção a seguir fornece uma lista de ferramentas e links para instruções de instalação. Antes de implantar um cluster de Big Data, configure as ferramentas marcadas como necessárias no Windows ou no Linux.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -32,7 +32,7 @@ A seguinte tabela lista as ferramentas comuns de cluster de Big Data e como inst
 |---|---|---|---|
 | **python** | Sim | O Python é uma linguagem de programação de alto nível interpretada e orientada a objeto com semântica dinâmica. Muitas partes dos clusters de Big Data do SQL Server usam o Python. | [Instalar o Python](#python)|
 | **azdata** | Sim | Ferramenta de linha de comando para instalar e gerenciar um cluster de Big Data. | [Instalar](deploy-install-azdata.md) |
-| **kubectl**<sup>1</sup> | Sim | Ferramenta de linha de comando para monitorar o cluster do Kubernetes subjacente ([mais informações](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
+| **kubectl**<sup>1</sup> | Sim | Ferramenta de linha de comando para monitorar o cluster do Kubernetes subjacente ([mais informações](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
 | **Azure Data Studio-SQL Server Release Candidate 2019 (RC)** | Sim | Ferramenta gráfica de plataforma cruzada para consultar SQL Server. | [Instalar](#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc) |
 | **Extensão do SQL Server 2019** | Sim | Extensão do Azure Data Studio que dá suporte à conexão com o cluster de Big Data. Também fornece um assistente de Virtualização de Dados. | [Instalar](../azure-data-studio/sql-server-2019-extension.md) |
 | **CLI do Azure**<sup>2</sup> | Para o AKS | Interface de linha de comando moderna para gerenciar serviços do Azure. Usada com implantações de cluster de Big Data do AKS ([mais informações](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Instalar](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |

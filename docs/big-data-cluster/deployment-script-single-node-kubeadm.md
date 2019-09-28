@@ -1,7 +1,7 @@
 ---
 title: Implantar com um script de Bash em um cluster kubeadm de nó único
 titleSuffix: SQL Server big data clusters
-description: Use um script de implantação bash para implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] um em um cluster kubeadm de nó único.
+description: Use um script de implantação bash para implantar um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] em um cluster kubeadm de nó único.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f6b6581eacad2fa9a65f64fdc29d6dfcde53852a
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 2379f96e3b5288fc33f5c925613bf9fd5d35612d
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652341"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341842"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>Implantar com um script de Bash em um cluster kubeadm de nó único
 
@@ -34,7 +34,7 @@ Neste tutorial, você usa um script de implantação de Bash de exemplo para imp
 - Atualize os pacotes existentes usando os comandos abaixo para garantir que a imagem do sistema operacional esteja atualizada.
 
    ``` bash
-   sudo apt update&&apt upgrade -y
+   sudo apt update && sudo apt upgrade -y
    sudo systemctl reboot
    ```
 
@@ -85,4 +85,4 @@ O script [Cleanup-BDC.sh](https://raw.githubusercontent.com/microsoft/sql-server
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para começar a usar clusters Big data, consulte [tutorial: Carregue dados de exemplo em um cluster](tutorial-load-sample-data.md)SQL Server Big Data.
+Para começar a usar clusters Big Data, consulte [Tutorial: Carregue dados de exemplo em um cluster SQL Server Big Data @ no__t-0.
