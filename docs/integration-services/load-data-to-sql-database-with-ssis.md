@@ -8,14 +8,14 @@ ms.technology: integration-services
 ms.topic: conceptual
 ms.custom: loading
 ms.date: 08/20/2018
-ms.author: janinez
-author: janinezhang
-ms.openlocfilehash: d57c9f725ec8f7c2a26a110a6d317bd5ec1de118
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.author: chugu
+author: chugugrace
+ms.openlocfilehash: 43e8e235a00465b2f2bd6f30769ac173f620dcf5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054513"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295891"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Carregar dados no SQL Server ou no Banco de Dados SQL do Azure com o SSIS (SQL Server Integration Services)
 
