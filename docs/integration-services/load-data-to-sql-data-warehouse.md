@@ -8,14 +8,14 @@ ms.technology: integration-services
 ms.topic: conceptual
 ms.custom: loading
 ms.date: 08/09/2018
-ms.author: janinez
-author: janinezhang
-ms.openlocfilehash: 29668550dc64d4c782101f2690058bb465764c90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.author: chugu
+author: chugugrace
+ms.openlocfilehash: 3609de02157637ec30f7e21ad4426c5001f31a6e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908630"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71282654"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Carregar dados no SQL Data Warehouse do Azure com o SSIS (SQL Server Integration Services)
 

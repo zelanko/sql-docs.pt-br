@@ -16,14 +16,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], OLE DB
 - connections [Integration Services], OLE DB
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a1a7c3d0e1648bb2c05e20c78ed293e33a34fe47
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ffc7da76c7291bbf8e0d4dd6003c572cd9610e92
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155170"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294381"
 ---
 # <a name="ole-db-connection-manager"></a>Gerenciador de conexões OLE DB
 
@@ -118,7 +118,7 @@ Para usar a autenticação de identidade gerenciada para o Banco de Dados SQL do
     ALTER ROLE [role name] ADD MEMBER [your AAD group name];
     ```
 
-Para usar a autenticação de identidade gerenciada para a Instância Gerenciada do Banco de Dados SQL do Azure, siga estas etapas para configurar seu banco de dados:
+Para usar a autenticação de identidade gerenciada para a instância gerenciada do Banco de Dados SQL do Azure, siga estas etapas a fim de configurar seu banco de dados:
     
 1. [Provisione um administrador do Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) para a instância gerenciada no portal do Azure, caso ainda não tenha feito isso. O administrador do Azure AD pode ser um usuário ou um grupo do Azure AD. Se você conceder uma função de administrador ao grupo com a identidade gerenciada, ignore as etapas 2 a 5. O administrador terá acesso completo ao banco de dados.
 
@@ -131,7 +131,7 @@ Para usar a autenticação de identidade gerenciada para a Instância Gerenciada
     select CAST(@applicationId AS varbinary)
     ```
 
-1. Adicione a identidade gerenciada do data factory como um usuário à Instância Gerenciada do Banco de Dados SQL do Azure. Execute o seguinte T-SQL no banco de dados **mestre**:
+1. Adicione a identidade gerenciada do data factory como um usuário à instância gerenciada do Banco de Dados SQL do Azure. Execute o seguinte T-SQL no banco de dados **mestre**:
     
     ```sql
     CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E

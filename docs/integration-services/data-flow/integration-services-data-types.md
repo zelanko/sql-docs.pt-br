@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eab2401dc3cb85dfeaedc22b406f1da73c112127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941465"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292412"
 ---
 # <a name="integration-services-data-types"></a>Tipos de dados do Integration Services
 
@@ -109,7 +109,7 @@ ms.locfileid: "67941465"
 ### <a name="converting-datetime-data-types"></a>Convertendo tipos de dados de data e hora  
  Você pode alterar o tipo de dados em uma coluna com dados de data e hora para extrair a parte de data ou hora dos dados. As tabelas seguintes listam os resultados da alteração de um tipo de dados de data e hora para outro tipo de dados de data e hora.  
   
-#### <a name="converting-from-dtfiletime"></a>Convertendo a partir de DT_FILETIME  
+#### <a name="converting-from-dt_filetime"></a>Convertendo a partir de DT_FILETIME  
   
 |Converter DT_FILETIME para|Resultado|  
 |-----------------------------|------------|  
@@ -122,7 +122,7 @@ ms.locfileid: "67941465"
 |DT_DBTIMESTAMP2|Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_DBTIMESTAMP2 pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Define o campo de fuso horário no tipo de dados DT_DBTIMESTAMPOFFSET como zero.<br /><br /> Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_DBTIMESTAMPOFFSET pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdate"></a>Convertendo a partir de DT_DATE  
+#### <a name="converting-from-dt_date"></a>Convertendo a partir de DT_DATE  
   
 |Converter DT_DATE em|Resultado|  
 |-------------------------|------------|  
@@ -135,7 +135,7 @@ ms.locfileid: "67941465"
 |DT_DBTIMESTAMP2|Converte o tipo de dados.|  
 |DT_DBTIMESTAMPOFFSET|Define o campo de fuso horário no tipo de dados DT_DBTIMESTAMPOFFSET como zero.|  
   
-#### <a name="converting-from-dtdbdate"></a>Convertendo a partir de DT_DBDATE  
+#### <a name="converting-from-dt_dbdate"></a>Convertendo a partir de DT_DBDATE  
   
 |Converter DT_DBDATE para|Resultado|  
 |---------------------------|------------|  
@@ -148,7 +148,7 @@ ms.locfileid: "67941465"
 |DT_DBTIMESTAMP2|Define os campos de hora no tipo de dados DT_DBTIMESTAMP como zero.|  
 |DT_DBTIMESTAMPOFFSET|Define os campos de hora e fuso horário no tipo de dados DT_DBTIMESTAMPOFFSET como zero.|  
   
-#### <a name="converting-from-dtdbtime"></a>Convertendo a partir de DT_DBTIME  
+#### <a name="converting-from-dt_dbtime"></a>Convertendo a partir de DT_DBTIME  
   
 |Converter DT_DBTIME para|Resultado|  
 |---------------------------|------------|  
@@ -161,7 +161,7 @@ ms.locfileid: "67941465"
 |DT_DBTIMESTAMP2|Define o campo de data no tipo de dados DT_DBTIMESTAMP2 como a data atual.|  
 |DT_DBTIMESTAMPOFFSET|Define os campos de data e fuso horário no tipo de dados DT_DBTIMESTAMPOFFSET como a data atual e como zero, respectivamente.|  
   
-#### <a name="converting-from-dtdbtime2"></a>Convertendo a partir de DT_DBTIME2  
+#### <a name="converting-from-dt_dbtime2"></a>Convertendo a partir de DT_DBTIME2  
   
 |Converter DT_DBTIME2 para|Resultado|  
 |----------------------------|------------|  
@@ -174,7 +174,7 @@ ms.locfileid: "67941465"
 |DT_DBTIMESTAMP2|Define o campo de data no tipo de dados DT_DBTIMESTAMP2 como a data atual.<br /><br /> Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_DBTIMESTAMP2 pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Define os campos de data e fuso horário no tipo de dados DT_DBTIMESTAMPOFFSET como a data atual e como zero, respectivamente.<br /><br /> Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_DBTIMESTAMPOFFSET pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestamp"></a>Convertendo a partir de DT_DBTIMESTAMP  
+#### <a name="converting-from-dt_dbtimestamp"></a>Convertendo a partir de DT_DBTIMESTAMP  
   
 |Converter DT_DBTIMESTAMP para|Resultado|  
 |--------------------------------|------------|  
@@ -187,7 +187,7 @@ ms.locfileid: "67941465"
 |DT_DBTIMESTAMP2|Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_DBTIMESTAMP2 pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Define o campo de fuso horário no tipo de dados DT_DBTIMESTAMPOFFSET como zero.<br /><br /> Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_DBTIMESTAMPOFFSET pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestamp2"></a>Convertendo a partir de DT_DBTIMESTAMP2  
+#### <a name="converting-from-dt_dbtimestamp2"></a>Convertendo a partir de DT_DBTIMESTAMP2  
   
 |Converter DT_DBTIMESTAMP2 para|Resultado|  
 |---------------------------------|------------|  
@@ -200,7 +200,7 @@ ms.locfileid: "67941465"
 |DT_DBTIMESTAMP2|Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_DBTIMESTAMP2 de destino pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Define o campo de fuso horário no tipo de dados DT_DBTIMESTAMPOFFSET como zero.<br /><br /> Remove o valor de segundo fracionário quando sua escala é maior que o número de dígitos de segundos fracionários que o tipo de dados DT_DBTIMESTAMPOFFSET pode conter. Após a remoção do valor de segundo fracionário, gera um relatório sobre esse truncamento de dados. Para obter mais informações, consulte [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestampoffset"></a>Convertendo a partir de DT_DBTIMESTAMPOFFSET  
+#### <a name="converting-from-dt_dbtimestampoffset"></a>Convertendo a partir de DT_DBTIMESTAMPOFFSET  
   
 |Converter DT_DBTIMESTAMPOFFSET para|Resultado|  
 |--------------------------------------|------------|  

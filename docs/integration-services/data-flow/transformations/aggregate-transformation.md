@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 53008c12ead3f9450edd6fbe26c08728a0b47558
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aa922a5a850a6cee9b782d894994835d8e1d9a1c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070151"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291767"
 ---
 # <a name="aggregate-transformation"></a>Transformação Agregação
 
@@ -157,8 +157,8 @@ ms.locfileid: "68070151"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |Não Especificado|A propriedade Chave de Escala não é usada.|  
-|Baixa|A agregação pode gravar aproximadamente 500.000 chaves.|  
-|Média|A agregação pode gravar aproximadamente 5.000.000 de chaves.|  
+|Baixo|A agregação pode gravar aproximadamente 500.000 chaves.|  
+|Médio|A agregação pode gravar aproximadamente 5.000.000 de chaves.|  
 |Alta|A agregação pode gravar mais de 25.000.000 de chaves.|  
   
  **Chaves**  
@@ -195,7 +195,7 @@ ms.locfileid: "68070151"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |Não Especificado|A propriedade **CountDistinctScale** não é usada.|  
-|Baixa|A agregação pode gravar aproximadamente 500.000 valores de distinção.|  
+|Baixo|A agregação pode gravar aproximadamente 500.000 valores de distinção.|  
 |Média|A agregação pode gravar aproximadamente 5.000.000 valores distintos.|  
 |Alta|A agregação pode gravar mais de 25.000.000 de valores de distinção.|  
   
@@ -217,8 +217,8 @@ ms.locfileid: "68070151"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |Não Especificado|A propriedade **Escala de chave** não é usada.|  
-|Baixa|A agregação pode gravar aproximadamente 500.000 chaves.|  
-|Média|A agregação pode gravar aproximadamente 5.000.000 de chaves.|  
+|Baixo|A agregação pode gravar aproximadamente 500.000 chaves.|  
+|Médio|A agregação pode gravar aproximadamente 5.000.000 de chaves.|  
 |Alta|A agregação pode gravar mais de 25.000.000 de chaves.|  
   
  **Número de chaves**  
@@ -230,7 +230,7 @@ ms.locfileid: "68070151"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |Não Especificado|A propriedade Escala de Distinção de Contagem não é usada.|  
-|Baixa|A agregação pode gravar aproximadamente 500.000 valores de distinção.|  
+|Baixo|A agregação pode gravar aproximadamente 500.000 valores de distinção.|  
 |Média|A agregação pode gravar aproximadamente 5.000.000 valores distintos.|  
 |Alta|A agregação pode gravar mais de 25.000.000 de valores de distinção.|  
   

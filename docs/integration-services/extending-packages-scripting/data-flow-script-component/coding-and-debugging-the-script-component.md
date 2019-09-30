@@ -19,14 +19,14 @@ helpviewer_keywords:
 - SSIS Script component, coding
 - VSTA
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6b1392368eeceb391d99321326c7a7ec19b87c70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c4b3337be486123545a187337949da1c160343ad
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074597"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71286541"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codificando e depurando o componente Script
 

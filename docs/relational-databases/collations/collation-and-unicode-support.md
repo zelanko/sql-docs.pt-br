@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cd488c24da5e937bde1d7dd3e3bb2bd193bb3bb
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 515e0501e86d81a34cd9e0f14d720ba3024b241c
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149916"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251085"
 ---
 # <a name="collation-and-unicode-support"></a>Suporte a ordenações e a Unicode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ As opções associadas a uma ordenação fazem distinção de maiúsculas e min�
 |Ponto de código binário (\_BIN2) <sup>1</sup> | Classifica e compara dados em tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com base em pontos de código Unicode para dados Unicode. Para dados não Unicode, o ponto de código binário usará comparações idênticas às classificações binárias.<br/><br/> A vantagem de usar uma ordem de classificação ponto de código binário é que nenhuma reclassificação de dados será necessária em aplicativos que comparam dados classificados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como resultado, uma ordem de classificação de ponto de código binário fornece desenvolvimento de aplicativos mais simples e possíveis aumentos de desempenho. Para obter mais informações, consulte a seção de [Ordenações primárias](#Binary-collations) nesta página.|
 |UTF-8 (\_UTF8)|Permite que dados codificados em UTF-8 sejam armazenados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se essa opção não for selecionada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará o formato de codificação não Unicode padrão para os tipos de dados aplicáveis. Para obter mais informações, consulte a seção de [Suporte a UTF-8](#utf8) nesta página.| 
 
-<sup>1</sup> Se a opção Binário ou Ponto de código binário for selecionada, as opções Diferenciar maiúsculas de minúsculas (\_CS), Distinguir acentos (\_AS), Distinguir caracteres Kana (\_KS) e Distinguir largura (\_WS) não estarão disponíveis.      
+<sup>1</sup> Se a opção Binário ou Ponto de código binário foi selecionada, as opções Diferenciar maiúsculas de minúsculas (\_CS), Distinguir acentos (\_AS), Distinguir caracteres Kana (\_KS) e Distinguir largura (\_WS) não estarão disponíveis.      
 
 #### <a name="examples-of-collation-options"></a>Exemplos de opções de ordenação
 Cada ordenação é combinada como uma série de sufixos para definir a distinção de maiúsculas e minúsculas, acentuação, largura ou kana. Os exemplos a seguir descrevem o comportamento da ordem de classificação para várias combinações de sufixos.
