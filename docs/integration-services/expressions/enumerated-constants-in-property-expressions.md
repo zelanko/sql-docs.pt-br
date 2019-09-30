@@ -15,14 +15,14 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 826f96ab6dec92053bc60b58044a21e1377f551c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 38ba2374821505dc3541ea05e76fd8aaecdcb5fc
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081050"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297638"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes enumeradas em expressões de propriedade
 
@@ -268,7 +268,7 @@ ms.locfileid: "68081050"
 |-----------------------------------|-------------------|  
 |Alta|1|  
 |Normal|3|  
-|Baixa|5|  
+|Baixo|5|  
   
 ### <a name="transfer-database-task"></a>Tarefa Transferir Banco de Dados  
  Propriedade **Action** – definida usando valores da enumeração **TransferAction**.  

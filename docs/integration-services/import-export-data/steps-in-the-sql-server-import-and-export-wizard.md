@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ea71b8970119a5c88f38bb31e4a728addc0954fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0a6fb370c80af6221812b88d3694a230dc206f7b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023625"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296202"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>Etapas no Assistente de Importação e Exportação do SQL Server
 
