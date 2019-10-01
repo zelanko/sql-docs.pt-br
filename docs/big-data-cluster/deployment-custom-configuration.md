@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0b76b6645e6be35f04b1a83670a99e529dcb84d6
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 699e4260368d3467e68df9ba6b86e961959a8192
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745450"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682034"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Definir configurações de implantação para recursos e serviços de cluster
 
@@ -576,7 +576,7 @@ Para desabilitar o contêiner que executa o ElasticSearch para ser executado no 
 }
 ```
 
-Você pode manualmente editar o **Control. JSON** e adicionar a seção acima à **especificação**, ou pode criar um arquivo de patch **elasticsearch-patch. JSON** como abaixo e usar a CLI do **azdata** para corrigir o arquivo **config. JSON** :
+Você pode manualmente editar o **Control. JSON** e adicionar a seção acima à **especificação**, ou pode criar um arquivo de patch **elasticsearch-patch. JSON** como abaixo e usar a CLI do **azdata** para corrigir o arquivo **Control. JSON** :
 
 ```json
 {
