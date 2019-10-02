@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a90f9b303fa285c5fc826aab232abe3e07166992
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 8b9e1151d5a757f42420c90519c79c3793cfef16
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354607"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250962"
 ---
-# <a name="configure-a-distributed-always-on-availability-group"></a>Configurar um grupo de disponibilidade Always On distribuído  
+# <a name="configure-an-always-on-distributed-availability-group"></a>Configurar um grupo de disponibilidade Always On distribuído  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Para criar um grupo de disponibilidade distribuído, você precisa criar dois grupos de disponibilidade, cada um com seu próprio ouvinte. Em seguida, você combina esses grupos de disponibilidade em um grupo de disponibilidade distribuída. As etapas a seguir fornecem um exemplo básico em Transact-SQL. Este exemplo não abrange todos os detalhes da criação de grupos de disponibilidade e ouvintes, focando apenas nos requisitos básicos.
@@ -178,6 +178,19 @@ GO
   
 > [!NOTE]  
 >  O **LISTENER_URL** especifica o ouvinte para cada grupo de disponibilidade, juntamente com o ponto de extremidade de espelhamento de banco de dados do grupo de disponibilidade. Neste exemplo, esse ponto de extremidade é a porta `5022` (não a porta `60173` usada para criar o ouvinte). Se você estiver usando um balanceador de carga, por exemplo, no Azure, [adicione uma regra de balanceamento de carga à porta do grupo de disponibilidade distribuído](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Adicione a regra à porta do ouvinte, além da porta da instância do SQL Server. 
+
+### <a name="cancel-automatic-seeding-to-forwarder"></a>Cancelar a propagação automática para o encaminhador
+Se for necessário cancelar a inicialização do encaminhador antes de os dois grupos de disponibilidade serem sincronizados, altere o grupo de disponibilidade distribuído definindo o parâmetro SEEDING_MODE do encaminhador como MANUAL e cancele imediatamente a propagação. Execute o comando no primário global: 
+
+```sql
+-- Cancel automatic seeding.  Connect to global primary but specify DAG AG2
+ALTER AVAILABILITY GROUP [distributedag]   
+   MODIFY  
+   AVAILABILITY GROUP ON  
+   'ag2' WITH  
+   (  SEEDING_MODE = MANUAL  );   
+```
+
   
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>Ingressar o grupo de disponibilidade distribuído no segundo cluster  
  Em seguida, una o grupo de disponibilidade distribuída no segundo WSFC.  
@@ -218,7 +231,7 @@ No momento, apenas o failover manual é permitido. Para fazer failover manual de
 1. Aguarde até que o grupo de disponibilidade distribuído esteja sincronizado.
 1. Na réplica primária global, defina a função do grupo de disponibilidade distribuído como `SECONDARY`.
 1. Teste a prontidão de failover.
-1. Execute o failover do grupo de disponibilidade primário.
+1. Faça failover do grupo de disponibilidade para o site primário.
 
 Os exemplos de Transact-SQL a seguir demonstram as etapas detalhadas para fazer failover do grupo de disponibilidade distribuído denominado `distributedag`:
 

@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d65ca67e43c35f0997b3d0784c97e501606bd05b
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: 4ef11893ca08e32c7aed177f53ea63305add4d14
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096885"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326184"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novidades no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -77,11 +77,12 @@ Para obter mais detalhes, confira [O que são SQL Server [!INCLUDE[big-data-clus
 |Compilar o índice de rowstore online retomável | Confira [Executar operações de índice online](../relational-databases/indexes/perform-index-operations-online.md). |
 | &nbsp; | &nbsp; |
 
-### <a name="in-memory-databases"></a>Bancos de dados na memória
+### <a name="in-memory-database"></a>Banco de dados em memória
 
 |Novo recurso ou atualização | Detalhes |
 |:---|:---|
-|Controle DDL para pool de buffers híbrido |Com o [pool de buffers híbrido](../database-engine/configure-windows/hybrid-buffer-pool.md), as páginas de banco de dados que residem em arquivos de banco de dados colocados em um dispositivo PMEM (memória persistente) serão acessadas diretamente quando necessário.|
+|Pool de buffers híbrido| Novo recurso do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], em que as páginas de banco de dados que residem em arquivos de banco de dados colocados em um dispositivo PMEM (memória persistente) serão acessadas diretamente quando necessário. Confira [Pool de buffers híbrido](../database-engine/configure-windows/hybrid-buffer-pool.md).|
+|Metadados `tempdb` com otimização de memória| O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] apresenta um novo recurso que faz parte da família de recursos do [Banco de Dados em Memória](../relational-databases/in-memory-database.md), os metadados do `tempdb` com otimização de memória, que efetivamente remove esse gargalo e possibilita um novo nível de escalabilidade para cargas de trabalho com uso intenso do `tempdb`. No [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], as tabelas do sistema envolvidas no gerenciamento dos metadados da tabela temporária podem ser movidas para tabelas com otimização de memória não duráveis e livres de travas. Confira [Metadados com otimização de memória `tempdb`](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 | &nbsp; | &nbsp; |
 
 ### <a name="unicode-support"></a>Suporte de Unicode
@@ -99,13 +100,6 @@ Para obter mais detalhes, confira [O que são SQL Server [!INCLUDE[big-data-clus
 |Suporte para codificação de caracteres UTF-8|Suporte a caracteres UTF-8 com tabelas externas. Confira [Suporte a agrupamentos e a Unicode](../relational-databases/collations/collation-and-unicode-support.md).|
 | &nbsp; | &nbsp; |
 
-### <a name="server-settings"></a>Configurações do servidor
-
-|Novo recurso ou atualização | Detalhes |
-|:---|:---|
-|Pool de buffers híbrido| Novo recurso do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], em que as páginas de banco de dados que residem em arquivos de banco de dados colocados em um dispositivo PMEM (memória persistente) serão acessadas diretamente quando necessário. Confira [Pool de buffers híbrido](../database-engine/configure-windows/hybrid-buffer-pool.md).|
-| &nbsp; | &nbsp; |
-
 ### <a name="performance-monitoring"></a>Monitoramento de desempenho
 
 |Novo recurso ou atualização | Detalhes |
@@ -117,6 +111,7 @@ Para obter mais detalhes, confira [O que são SQL Server [!INCLUDE[big-data-clus
 |`sys.dm_exec_query_plan_stats` |O novo DMF retorna o equivalente do último plano de execução real conhecido para a maioria das consultas. Confira [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).|
 |`LAST_QUERY_PLAN_STATS` | Nova configuração no escopo do banco de dados para habilitar o `sys.dm_exec_query_plan_stats`. Veja [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 |`query_post_execution_plan_profile` | O evento estendido coleta o equivalente a um plano de execução real com base em criação de perfil leve, ao contrário de `query_post_execution_showplan`, que usa a criação de perfil padrão. Confira [Infraestrutura de criação de perfil de consulta](../relational-databases/performance/query-profiling-infrastructure.md).|
+|`sys.dm_db_page_info(database_id, file_id, page_id, mode)` | O novo DMF retorna informações sobre uma página em um banco de dados. Confira [sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md).|
 | &nbsp; | &nbsp; |
 
 ### <a name="language-extensions"></a>Extensões de linguagem
@@ -147,7 +142,6 @@ Para obter mais detalhes, confira [O que são SQL Server [!INCLUDE[big-data-clus
 |Governança de recursos| O valor configurável para a opção `REQUEST_MAX_MEMORY_GRANT_PERCENT` de `CREATE WORKLOAD GROUP` e `ALTER WORKLOAD GROUP` foi alterado de um inteiro para um tipo de dados float, para permitir um controle mais granular dos limites de memória. Confira [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) e [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md).|
 |Recompilações reduzidas para cargas de trabalho| Melhora o uso de tabelas temporárias entre vários escopos. Confira [Recompilações reduzidas para cargas de trabalho](../relational-databases/tables/tables.md#ctp23) |
 |Escalabilidade de ponto de verificação indireto |Confira [Escalabilidade de ponto de verificação indireto aprimorada](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
-|Metadados `tempdb` com otimização de memória| O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] apresenta um novo recurso que faz parte da família de recursos do [Banco de Dados em Memória](../relational-databases/in-memory-database.md), os metadados do `tempdb` com otimização de memória, que efetivamente remove esse gargalo e possibilita um novo nível de escalabilidade para cargas de trabalho com uso intenso do `tempdb`. No [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], as tabelas do sistema envolvidas no gerenciamento dos metadados da tabela temporária podem ser movidas para tabelas com otimização de memória não duráveis e livres de travas. Confira [Metadados com otimização de memória `tempdb`](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 |Atualizações de PFS simultâneas|As [páginas PFS](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) são páginas especiais dentro de um arquivo de banco de dados que o SQL Server usa para ajudar a localizar espaço livre ao alocar espaço para um objeto. A contenção de trava de página em páginas PFS é algo que normalmente está associado com [`tempdb`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d), mas também pode ocorrer em bancos de dados de usuário quando há muitos threads de alocação de objeto simultâneos. Essa melhoria altera a maneira como a simultaneidade é gerenciada com atualizações de PFS para que elas possam ser atualizadas em uma trava compartilhada, em vez de uma trava exclusiva. Esse comportamento é ativado por padrão em todos os bancos de dados (incluindo `tempdb`) a partir do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].|
 |Comentários de concessão de memória do modo de linha |Expande o recurso de comentários de concessão de memória do modo de lote, ajustando os tamanhos de concessão de memória para operadores de modo de lote e de linha. Isso pode corrigir automaticamente concessões excessivas que resultam em desperdício de memória e redução da simultaneidade e corrigir concessões de memória insuficientes que causam despejos dispendiosos no disco. Confira [Comentários de concessão de memória do modo de linha](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). |
 |Compilação adiada de variável da tabela|Melhora a qualidade do plano e o desempenho geral para consultas que fazem referência a variáveis de tabela. Durante a otimização e compilação inicial, esse recurso propaga estimativas de cardinalidade com base nas contagens reais de linha de variável de tabela. Essas informações de contagem de linha precisas otimizam as operações de plano de downstream. Confira [Compilação adiada de variável da tabela](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |
@@ -168,7 +162,7 @@ Para obter mais detalhes, confira [O que são SQL Server [!INCLUDE[big-data-clus
 
 |Novo recurso ou atualização | Detalhes | 
 |:---|:---| 
-|Novas opções de configuração de memória | Define durante a instalação as configurações de servidor de *memória mínima do servidor (MB)* e *memória máxima do servidor (MB)*. Para obter mais informações, confira a [página Configuração do mecanismo de banco de dados – memória](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory) e os parâmetros `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` e `SQLMAXMEMORY` em [Instalar o SQL Server do prompt de comando](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). O valor proposto será alinhado com as diretrizes de configuração de memória nas [Opções de configuração de memória do servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).| 
+|Novas opções de configuração de memória | Define durante a instalação as configurações de servidor de *memória mínima do servidor (MB)* e *memória máxima do servidor (MB)* . Para obter mais informações, confira a [página Configuração do mecanismo de banco de dados – memória](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory) e os parâmetros `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` e `SQLMAXMEMORY` em [Instalar o SQL Server do prompt de comando](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). O valor proposto será alinhado com as diretrizes de configuração de memória nas [Opções de configuração de memória do servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).| 
 |Novas opções de configuração de paralelismo | Define o *grau máximo de configuração de* servidor de paralelismo durante a instalação. Para obter mais informações, confira a [página Configuração do mecanismo de banco de dados – MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) e o parâmetro `SQLMAXDOP` em [Instalar SQL Server no prompt de comando](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). O valor padrão será alinhado às diretrizes de grau máximo da opção de paralelismo especificadas em [Configurar a opção de configuração de servidor grau máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
 | &nbsp; | &nbsp; |
 

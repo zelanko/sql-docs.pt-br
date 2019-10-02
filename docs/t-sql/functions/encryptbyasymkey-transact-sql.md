@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a9c0128fab05a83720bd7f4eedd8d2e200c62450
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1de142260dc0724656ca4cfdf286370d16def4b5
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135888"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314599"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,8 +58,8 @@ ou em
  
 tipo de dados.  
   
-**@plaintext**  
-Uma variável que contém um valor que `ENCRYPTBYASYMKEY` criptografará com a chave assimétrica. **@plaintext** pode ter um
+**\@plaintext**  
+Uma variável que contém um valor que `ENCRYPTBYASYMKEY` criptografará com a chave assimétrica. **\@plaintext** pode ter um
   
 + **binary**
 + **char**

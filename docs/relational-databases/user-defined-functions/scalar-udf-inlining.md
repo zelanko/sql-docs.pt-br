@@ -2,7 +2,7 @@
 title: Embutimento de UDF escalar em bancos de dados Microsoft SQL | Microsoft Docs
 description: Recurso de embutimento de UDF escalar para melhorar o desempenho de consultas que invocam UDFs escalares no SQL Server (2018 e posteriores) e no Banco de Dados SQL do Azure.
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 09/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: e73a03eae61601f28578b23ac2f2afc1a80f5f76
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 6492c08242e927ac7f5356f96f4da02465ece547
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030331"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299135"
 ---
 # <a name="scalar-udf-inlining"></a>Embutimento de UDF escalar
 
@@ -154,7 +154,8 @@ Uma UDF T-SQL escalar poderá ser embutida se todas as seguintes condições for
 - A UDF usa a cláusula `EXECUTE AS CALLER` (o comportamento padrão se a cláusula `EXECUTE AS` não for especificada).
 - A UDF não faz referência a variáveis de tabela nem parâmetros com valor de tabela.
 - A consulta que invoca uma UDF escalar não faz referência a uma chamada UDF escalar em sua cláusula `GROUP BY`.
-- A consulta que invoca um UDF escalar em sua lista de seleção com a cláusula `DISTINCT` não faz referência a uma chamada UDF escalar em sua cláusula `ORDER BY`.
+- A consulta que invoca um UDF escalar em sua lista de seleção com a cláusula `DISTINCT` não tem a cláusula `ORDER BY`.
+- O UDF não é usado na cláusula `ORDER BY`.
 - A UDF não é compilada nativamente (há suporte para interoperabilidade).
 - A UDF não é usada em uma coluna computada nem em uma definição de restrição de verificação.
 - A UDF não faz referência a tipos definidos pelo usuário.

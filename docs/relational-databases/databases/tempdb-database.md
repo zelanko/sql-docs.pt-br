@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8197b243bc0789da9acb0e94069585d8619d5fa0
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 76fb1dcfaab16e560b67f92d7bc3a6203f93037b
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653778"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326114"
 ---
 # <a name="tempdb-database"></a>Banco de dados tempdb
 
@@ -47,7 +47,9 @@ O banco de dados do sistema **tempdb** é um recurso global disponível para tod
   - As versões de linhas geradas por meio de transações de modificação de dados para recursos como: operações de índice on-line, vários conjuntos de resultados ativos (MARS) e gatilhos AFTER.  
   
 As operações no **tempdb** são registradas minimamente em log, para que as transações possam ser revertidas. **tempdb** é recriado cada vez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado, de modo que o sistema sempre começa com uma cópia limpa do banco de dados. As tabelas temporárias e procedimentos armazenados são descartados automaticamente ou desconectados e nenhuma conexão fica ativa quando o sistema é desligado. Portanto, nunca há nada em **tempdb** a ser gravado de uma sessão de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para outra. As operações de backup e restauração não são permitidas em **tempdb**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>Propriedades físicas do tempdb no SQL Server
 
 A tabela a seguir lista os valores de configuração iniciais dos arquivos de dados e de log do **tempdb** no SQL Server, que se baseiam nos padrões do Modelo de banco de dados. Os tamanhos desses arquivos podem variar um pouco em diferentes edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -242,9 +244,7 @@ Existem algumas limitações nessa implementação que são importantes a serem 
     COMMIT TRAN
     ```
 3. As consultas nas tabelas com otimização de memória não dão suporte a dicas de bloqueio e isolamento; portanto, as consultas nas exibições de catálogo do TempDB com otimização de memória não respeitarão as dicas de bloqueio e isolamento. Como ocorre com outras exibições de catálogo do sistema no SQL Server, todas as transações nas exibições do sistema serão feitas no isolamento READ COMMITTED (ou, neste caso, READ COMMITTED SNAPSHOT).
-4. Poderá haver alguns problemas com índices columnstore em tabelas temporárias quando os metadados do tempdb com otimização de memória forem habilitados. Para esta versão prévia, é melhor evitar índices columnstore em tabelas temporárias ao usar metadados do tempdb com otimização de memória.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+4. [Índices columnstore](../indexes/columnstore-indexes-overview.md) não poderão ser criados em tabelas temporárias quando os metadados do tempdb com otimização de memória forem habilitados.
 
 > [!NOTE] 
 > Essas limitações se aplicam somente ao referenciar as exibições do sistema do TempDB; você poderá criar uma tabela temporária na mesma transação ao acessar uma tabela com otimização de memória em um banco de dados de usuário, se desejado.
@@ -253,6 +253,8 @@ Você pode verificar se o TempDB tem otimização de memória ou não usando o s
 ```
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 ```
+
+Se o servidor não conseguir iniciar por qualquer motivo depois de habilitar os metadados de TempDB com otimização de memória, você poderá ignorar o recurso iniciando o SQL Server com a [configuração mínima](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) usando a opção de inicialização **-f**. Isso permitirá que você desabilite o recurso e, em seguida, reinicie o SQL Server no modo normal.
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>Planejamento da capacidade para o tempdb no SQL Server
 

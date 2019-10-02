@@ -2,7 +2,7 @@
 title: Baixar o SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: sstein
+ms.reviewer: sstein, maghan
 ms.technology: ssms
 ms.topic: conceptual
 keywords:
@@ -22,13 +22,13 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 ms.custom: ''
-ms.date: 07/26/2019
-ms.openlocfilehash: 46174db6dc0008dbeb9490cc96cf41cdef1bc3ed
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.date: 09/24/2019
+ms.openlocfilehash: 21678d69305cbe01e1fed3b254da627e00eb60f1
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123100"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342051"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Baixar o SQL Server Management Studio (SSMS)
 
@@ -40,19 +40,19 @@ Use o SSMS para consultar, criar e gerenciar seus bancos de dados e data warehou
 
 O SSMS é gratuito!
 
-## <a name="download-ssms-182"></a>Baixar o SSMS 18.2
+## <a name="download-ssms-183"></a>Baixar o SSMS 18.3
 
-**O SSMS 18.2 já está disponível e é a última versão de GA (disponibilidade geral) do *SQL Server Management Studio* compatível com o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
+**O SSMS 18.3 já está disponível e é a última versão de GA (disponibilidade geral) do *SQL Server Management Studio* compatível com o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-**[![download](../ssdt/media/download.png) Baixar o SQL Server Management Studio 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)**
+**[![download](../ssdt/media/download.png) Baixar o SQL Server Management Studio 18.3](https://go.microsoft.com/fwlink/?linkid=2104251)**
 
-O SSMS 18.2 é a versão mais recente de GA (disponibilidade geral) do SSMS. Se você tiver uma versão de GA anterior do SSMS 18 instalada, a instalação do SSMS 18.2 atualizará o produto para a versão 18.2. Se você tiver uma *versão prévia* anterior do SSMS 18.x instalada, desinstale-a antes de instalar o SSMS 18.2.
+O SSMS 18.3 é a versão mais recente de GA (disponibilidade geral) do SSMS. Se você tiver uma versão de GA anterior do SSMS 18 instalada, a instalação do SSMS 18.3 atualizará o produto para a versão 18.3. Se você tiver uma *versão prévia* anterior do SSMS 18.x instalada, desinstale-a antes de instalar o SSMS 18.3.
 
 **Informações da versão**
 
-- Número da versão: 18.2  
-- Número de build: 15.0.18142.0  
-- Data de lançamento: 25 de julho de 2019  
+- Número da versão: 18.3  
+- Número de build: 15.0.18178.0  
+- Data de lançamento: 23 de setembro de 2019  
 
 Se você tem sugestões ou comentários ou deseja relatar problemas, a melhor maneira de entrar em contato com a equipe do SSMS é usando o [UserVoice](https://aka.ms/sqlfeedback).
 
@@ -60,39 +60,35 @@ A instalação do SSMS 18.x não atualiza nem substitui versões do SSMS 17.x ou
 
 Se um computador contiver instalações lado a lado do SSMS, verifique se você iniciou a versão correta para suas necessidades específicas. A versão mais recente é rotulada **Microsoft SQL Server Management Studio 18**
 
-## <a name="available-languages-ssms-182"></a>Idiomas disponíveis (SSMS 18.2)
+## <a name="available-languages-ssms-183"></a>Idiomas disponíveis (SSMS 18.3)
 
 Esta versão do SSMS pode ser instalada nos seguintes idiomas:
 
 SQL Server Management Studio 18.2:  
-[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40a)
+[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x40a)
 
 > [!NOTE]
 > O módulo do SQL Server PowerShell é uma instalação separada por meio da Galeria do PowerShell. Para obter mais informações, consulte [Baixar o Módulo SQL Server PowerShell](download-sql-server-ps-module.md).
 
-## <a name="new-in-this-release-ssms-182"></a>Novidades desta versão (SSMS 18.2)
+## <a name="new-in-this-release-ssms-183"></a>Novidades desta versão (SSMS 18.3)
 
-|  Novo item  |  Detalhes  |
-|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Always Encrypted | O provedor de enclave foi atualizado para dar suporte ao Atestado do Azure. |
-| IntelliSense/editor | Suporte adicionado para classificação de dados  |
-| OPTIMIZE_FOR_SEQUENTIAL_KEY | Caixa de diálogo Índice do SSMS – a nova opção de índice OPTIMIZE_FOR_SEQUENTIAL_KEY foi adicionada |
-| OPTIMIZE_FOR_SEQUENTIAL_KEY | Adicionado suporte ao IntelliSense |
-| Execução ou resultados de consulta | Adicionado um "tempo para conclusão" nas mensagens para acompanhar quando uma determinada consulta foi concluída. |
-| Execução ou resultados de consulta  | Permitem que mais dados sejam exibidos (resultado para texto) e armazenados em células (resultado para grade). O SSMS agora permite até 2 milhões de caracteres para esses formatos (limite que antigamente era de 256 mil e 64 mil, respectivamente). Isso também resolveu o problema dos usuários que não conseguiam obter mais de 43.680 caracteres das células da grade. |
-| Plano de Execução | Adicionado um novo atributo no QueryPlan quando o recurso de UDF escalar embutido está habilitado (ContainsInlineScalarTsqlUdfs). |
-| Integration Services (SSIS) | Otimização de desempenho para o agendador de pacotes SSIS no Azure |
-|  |  |
+| Novo item | Detalhes |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Classificação de dados | Adicionar informações de classificação de dados à interface do usuário de propriedades da coluna (*Tipo da Informação*, *ID do Tipo da Informação*, *Rótulo de Confidencialidade*, *ID do Rótulo de Confidencialidade* não são expostos na interface do usuário do SSMS). |
+| IntelliSense/editor | Suporte atualizado para recursos adicionados recentemente ao SQL Server 2019 (por exemplo, "ALTERAR A CONFIGURAÇÃO DO SERVIDOR"). |
+| Integration Services | Adicione um novo item de menu de seleção `Tools > Migrate to Azure > Configure Azure-enabled DTExec` que invocará as execuções de pacote SSIS no Azure-SSIS Integration Runtime como atividades de Executar Pacote SSIS em pipelines do ADF. |
+| SMO/script | Adicionado suporte para script de suporte da restrição exclusiva do SQL Data Warehouse do Azure. |
+| SMO/script | Classificação de dados – suporte adicionado para o SQL versão 10 (SQL 2008) e posteriores.  – adicionado novo atributo de confidencialidade 'rank' para SQL versão 15 (SQL 2019) e posteriores e Banco de Dados SQL do Azure. |
 
 Para obter detalhes sobre as novidades desta versão, confira [notas sobre a versão do SSMS](release-notes-ssms.md).
 
-## <a name="supported-sql-offerings-ssms-182"></a>Ofertas de SQL compatíveis (SSMS 18.2)
+## <a name="supported-sql-offerings-ssms-183"></a>Ofertas de SQL compatíveis (SSMS 18.3)
 
-* Esta versão do SSMS funciona com todas as [versões com suporte do SQL Server 2008 – [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) e fornece o maior nível de suporte para trabalhar com os recursos de nuvem mais recentes no Banco de Dados SQL do Azure e SQL Data Warehouse do Azure.
-* Além disso, o SSMS 18.x pode ser instalado lado a lado com o SSMS 17.x, o SSMS 16.x ou o SSMS do SQL Server 2014 e anteriores.
-* SSIS (SQL Server Integration Services) – a versão SSMS 17.x ou posterior não dá suporte à conexão com o serviço herdado do SQL Server Integration Services. Para conectar-se a uma versão anterior do Integration Services herdado, use a versão do SSMS alinhada com a versão do SQL Server. Por exemplo, use o SSMS 16.x para conectar ao serviço herdado do SQL Server Integration Services 2016. O SSMS 17.x e o 16.x podem ser instalados lado a lado no mesmo computador. Desde o lançamento do SQL Server 2012, o banco de dados de catálogo do SSIS, o SSISDB, é a maneira recomendada para armazenar, gerenciar, executar e monitorar os pacotes do Integration Services. Para obter detalhes, veja o [Catálogo do SSIS](../integration-services/catalog/ssis-catalog.md).
+- Esta versão do SSMS funciona com todas as [versões com suporte do SQL Server 2008 – [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) e fornece o maior nível de suporte para trabalhar com os recursos de nuvem mais recentes no Banco de Dados SQL do Azure e SQL Data Warehouse do Azure.
+- Além disso, o SSMS 18.x pode ser instalado lado a lado com o SSMS 17.x, o SSMS 16.x ou o SSMS do SQL Server 2014 e anteriores.
+- SSIS (SQL Server Integration Services) – a versão SSMS 17.x ou posterior não dá suporte à conexão com o serviço herdado do SQL Server Integration Services. Para conectar-se a uma versão anterior do Integration Services herdado, use a versão do SSMS alinhada com a versão do SQL Server. Por exemplo, use o SSMS 16.x para conectar ao serviço herdado do SQL Server Integration Services 2016. O SSMS 17.x e o 16.x podem ser instalados lado a lado no mesmo computador. Desde o lançamento do SQL Server 2012, o banco de dados de catálogo do SSIS, o SSISDB, é a maneira recomendada para armazenar, gerenciar, executar e monitorar os pacotes do Integration Services. Para obter detalhes, veja o [Catálogo do SSIS](../integration-services/catalog/ssis-catalog.md).
 
-## <a name="supported-operating-systems-ssms-182"></a>Sistemas operacionais compatíveis (SSMS 18.2)
+## <a name="supported-operating-systems-ssms-183"></a>Sistemas operacionais compatíveis (SSMS 18.3)
 
 Esta versão do SSMS é compatível com as seguintes plataformas de 64 bits quando usada com o service pack mais recente disponível:
 
@@ -109,9 +105,9 @@ Esta versão do SSMS é compatível com as seguintes plataformas de 64 bits quan
 > [!NOTE]
 > O SSMS é executado somente no Windows. Se você precisar de uma ferramenta que seja executada em plataformas diferentes do Windows, confira o Azure Data Studio. O Azure Data Studio é uma nova ferramenta multiplataforma executada no macOS, no Linux e no Windows. Para obter detalhes, veja [Azure Data Studio](../azure-data-studio/what-is.md).
 
-## <a name="release-notes-ssms-182"></a>Notas sobre a versão (SSMS 18.2)
+## <a name="release-notes-ssms-183"></a>Notas sobre a versão (SSMS 18.3)
 
-Há alguns [problemas conhecidos](release-notes-ssms.md#known-issues-181) nesta versão.
+Há alguns [problemas conhecidos](release-notes-ssms.md#known-issues-183) nesta versão.
 
 Para saber detalhes sobre esta versão, confira [as notas sobre a versão do SSMS](release-notes-ssms.md).
 

@@ -14,12 +14,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efc1a13d0ed05560558e0386ea051d3a9aaa85f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140373"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326135"
 ---
 # <a name="use-column-sets"></a>Usar conjuntos de colunas
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68140373"
   
  Considere o uso de conjuntos de colunas quando o número de colunas em uma tabela for grande e trabalhar nelas individualmente for difícil. Os aplicativos devem observar alguma melhoria no desempenho quando selecionam e inserem dados usando conjuntos de colunas em tabelas com muitas colunas. Entretanto, o desempenho de conjuntos de colunas pode ser reduzido quando muitos índices são definidos nas colunas das tabelas. Isso porque a quantidade de memória necessária para um plano de execução aumenta.  
   
- Para definir um conjunto de colunas, use as palavras-chave *<column_set_name>* FOR ALL_SPARSE_COLUMNS nas instruções [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) ou [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+ Para definir um conjunto de colunas, use as palavras-chave *<nome_do_conjunto_de_colunas>* FOR ALL_SPARSE_COLUMNS nas instruções [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) ou [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## <a name="guidelines-for-using-column-sets"></a>Diretrizes para usar conjuntos de colunas  
  Ao usar conjuntos de colunas, considere as seguintes diretrizes:  
@@ -91,14 +91,14 @@ ms.locfileid: "68140373"
 -   Colunas esparsas que contêm valores nulos são omitidas da representação XML do conjunto de colunas.  
   
 > [!WARNING]  
->  A adição de um conjunto de colunas altera o comportamento de consultas SELECT *. A consulta retornará o conjunto de colunas como uma coluna XML e não retornará as colunas esparsas individuais. Designers de esquema e desenvolvedores de software devem ter cuidado para não violar aplicativos existentes.  
+>  A adição de um conjunto de colunas altera o comportamento de consultas `SELECT *`. A consulta retornará o conjunto de colunas como uma coluna XML e não retornará as colunas esparsas individuais. Designers de esquema e desenvolvedores de software devem ter cuidado para não violar aplicativos existentes.  
   
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>Inserindo ou modificando dados em um conjunto de colunas  
  A manipulação de dados de uma coluna esparsa pode ser executada usando o nome de colunas individuais ou referenciando o nome do conjunto de colunas e especificando seus valores usando o formato XML do conjunto de colunas. As colunas esparsas podem ser exibidas em qualquer ordem na coluna XML.  
   
  Quando os valores de colunas esparsas são inseridos ou atualizados usando o conjunto de colunas XML, os valores inseridos nas colunas esparsas subjacentes são implicitamente convertidos do tipo de dados **xml** . No caso de colunas numéricas, um valor em branco no XML para a coluna numérica é convertido em uma cadeia de caracteres vazia. Isso faz com que um zero seja inserido na coluna numérica, como mostrado no exemplo a seguir.  
   
-```  
+```sql  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  
 GO  
 INSERT t(cs) VALUES ('<i/>');  
@@ -109,7 +109,7 @@ GO
   
  Nesse exemplo, nenhum valor foi especificado para a coluna `i`, mas o valor `0` foi inserido.  
   
-## <a name="using-the-sqlvariant-data-type"></a>Usando o tipo de dados sql_variant  
+## <a name="using-the-sql_variant-data-type"></a>Usando o tipo de dados sql_variant  
  O tipo de dados **sql_variant** pode armazenar vários tipos de dados diferentes, como **int**, **char**e **data**. Os conjuntos de colunas geram informações de tipo de dados como escala, precisão e informações de localidade que são associadas a um valor **sql_variant** como atributo na coluna XML gerada. Se você tentar fornecer esses atributos em uma instrução XML personalizada como uma entrada para uma operação de inserção ou atualização em um conjunto de colunas, alguns desses atributos serão exigidos e a outros será atribuído um valor padrão. A tabela a seguir lista os tipos de dados e os valores padrão que o servidor gera quando o valor não é fornecido.  
   
 |Tipo de dados|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Comprimento máximo|Precisão|Escala|  
@@ -148,7 +148,7 @@ GO
 > [!NOTE]  
 >  Essa tabela tem somente cinco colunas para facilitar a exibição e a leitura.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -166,7 +166,7 @@ GO
 ### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>B. Inserindo dados em uma tabela usando os nomes das colunas esparsas  
  Os exemplos a seguir inserem duas linhas na tabela criada no exemplo A. Os exemplos usam os nomes das colunas esparsas e não referenciam o conjunto de colunas.  
   
-```  
+```sql  
 INSERT DocumentStoreWithColumnSet (DocID, Title, ProductionSpecification, ProductionLocation)  
 VALUES (1, 'Tire Spec 1', 'AXZZ217', 27);  
 GO  
@@ -179,7 +179,7 @@ GO
 ### <a name="c-inserting-data-to-a-table-by-using-the-name-of-the-column-set"></a>C. Inserindo dados em uma tabela usando o nome do conjunto de colunas  
  O exemplo a seguir insere uma terceira linha na tabela criada no exemplo A. Dessa vez, os nomes das colunas esparsas não são usados. Em vez disso, o nome do conjunto de colunas é usado e a inserção fornece os valores para duas das colunas esparsas no formato XML.  
   
-```  
+```sql  
 INSERT DocumentStoreWithColumnSet (DocID, Title, SpecialPurposeColumns)  
 VALUES (3, 'Tire Spec 2', '<ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>');  
 GO  
@@ -188,24 +188,23 @@ GO
 ### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>D. Observando os resultados de um conjunto de colunas quando SELECT * é usado  
  O exemplo a seguir seleciona todas as colunas da tabela que contém um conjunto de colunas. Retorna uma coluna XML com os valores combinados das colunas esparsas. Não retorna as colunas esparsas individualmente.  
   
-```  
+```sql  
 SELECT DocID, Title, SpecialPurposeColumns FROM DocumentStoreWithColumnSet ;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        SpecialPurposeColumns`  
-  
- `1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>`  
-  
- `2      Survey 2142  <MarketingSurveyGroup>Men 25 - 35</MarketingSurveyGroup>`  
-  
- `3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
+ ```
+ DocID  Title        SpecialPurposeColumns  
+ 1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
+ 2      Survey 2142  <MarketingSurveyGroup>Men 25 - 35</MarketingSurveyGroup>  
+ 3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation> 
+ ```
   
 ### <a name="e-observing-the-results-of-selecting-the-column-set-by-name"></a>E. Observando os resultados da seleção do conjunto de colunas por nome  
  Como o departamento de Produção não está interessado nos dados de marketing, este exemplo adiciona uma cláusula `WHERE` para restringir a saída. O exemplo usa o nome do conjunto de colunas.  
   
-```  
+```sql  
 SELECT DocID, Title, SpecialPurposeColumns  
 FROM DocumentStoreWithColumnSet  
 WHERE ProductionSpecification IS NOT NULL ;  
@@ -213,16 +212,16 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        SpecialPurposeColumns`  
-  
- `1     Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>`  
-  
- `3     Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
-  
+ ```
+ DocID  Title        SpecialPurposeColumns  
+ 1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
+ 3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>  
+ ```
+ 
 ### <a name="f-observing-the-results-of-selecting-sparse-columns-by-name"></a>F. Observando os resultados da seleção de colunas esparsas por nome  
  Quando uma tabela contém um conjunto de colunas, você ainda pode consultar a tabela usando nomes de colunas individuais, como mostrado no exemplo a seguir.  
   
-```  
+```sql  
 SELECT DocID, Title, ProductionSpecification, ProductionLocation   
 FROM DocumentStoreWithColumnSet  
 WHERE ProductionSpecification IS NOT NULL ;  
@@ -230,16 +229,16 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        ProductionSpecification ProductionLocation`  
-  
- `1     Tire Spec 1  AXZZ217                 27`  
-  
- `3     Tire Spec 2  AXW9R411                38`  
-  
+ ```
+ DocID  Title        ProductionSpecification ProductionLocation`  
+ 1      Tire Spec 1  AXZZ217                 27`  
+ 3      Tire Spec 2  AXW9R411                38`  
+ ```
+ 
 ### <a name="g-updating-a-table-by-using-a-column-set"></a>G. Atualizando uma tabela usando um conjunto de colunas  
  O exemplo a seguir atualiza o terceiro registro com os novos valores para as colunas esparsas usadas por aquela linha.  
   
-```  
+```sql  
 UPDATE DocumentStoreWithColumnSet  
 SET SpecialPurposeColumns = '<ProductionSpecification>ZZ285W</ProductionSpecification><ProductionLocation>38</ProductionLocation>'  
 WHERE DocID = 3 ;  
@@ -251,7 +250,7 @@ GO
   
  O exemplo a seguir atualiza o terceiro registro, mas só especifica o valor de uma das duas colunas populadas. A segunda coluna `ProductionLocation` não é incluída na instrução `UPDATE` e é atualizada como NULL.  
   
-```  
+```sql  
 UPDATE DocumentStoreWithColumnSet  
 SET SpecialPurposeColumns = '<ProductionSpecification>ZZ285W</ProductionSpecification>'  
 WHERE DocID = 3 ;  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4d24a636e47c6e969b339350caba0f8609a86d9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9791a9672965757f5b86cbae60241ef7528ae565
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079934"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314518"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,19 +64,19 @@ contendo a frase secreta usada para gerar a chave de descriptografia.
 A cadeia de caracteres de dados criptografados com a chave. *ciphertext* tem um tipo de dados **varbinary**.  
  
 @ciphertext  
-Uma variável do tipo **varbinary** que contém dados criptografados com a chave. A variável *@ciphertext* tem um tamanho máximo de 8.000 bytes.  
+Uma variável do tipo **varbinary** que contém dados criptografados com a chave. A variável *\@ciphertext* tem um tamanho máximo de 8.000 bytes.  
   
 *add_authenticator*  
 Indica se o processo de criptografia original incluía, e criptografava, um autenticador junto com o texto não criptografado. *add_authenticator* teria um valor de 1, se o processo de criptografia usasse um autenticador. *add_authenticator* tem um tipo de dados **int**.  
   
 @add_authenticator  
-Uma variável que indica se o processo de criptografia original incluía, e criptografava, um autenticador junto com o texto não criptografado. *@add_authenticator* teria um valor de 1, se o processo de criptografia usasse um autenticador. *@add_authenticator* tem um tipo de dados **int**.  
+Uma variável que indica se o processo de criptografia original incluía, e criptografava, um autenticador junto com o texto não criptografado. *\@add_authenticator* teria um valor de 1, se o processo de criptografia usasse um autenticador. *\@add_authenticator* tem um tipo de dados **int**.  
 
 *authenticator*  
 Os dados usados como base para a geração do autenticador. *authenticator* tem um tipo de dados **sysname**.  
   
 @authenticator  
-Uma variável contendo dados usados como a base para a geração dos autenticadores. *@authenticator* tem um tipo de dados **sysname**.  
+Uma variável contendo dados usados como a base para a geração dos autenticadores. *\@authenticator* tem um tipo de dados **sysname**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
 **varbinary**, com um tamanho máximo de 8.000 bytes.  
