@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_setcolfmt function
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f3666c6951fcacea031c5d86dc9d17381a2f963
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9615e455bee033af9f071bbb4a13ef3d98c81bf4
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099434"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707518"
 ---
-# <a name="bcpsetcolfmt"></a>bcp_setcolfmt
+# <a name="bcp_setcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -54,12 +54,12 @@ RETCODE bcp_setcolfmt (
  *field*  
  É o número de coluna ordinal para o qual a propriedade está sendo definida.  
   
- *propriedade*  
+ *property*  
  É um das constantes de propriedade. As constantes de propriedade são definidas nesta tabela.  
   
 |propriedade|Valor|Descrição|  
 |--------------|-----------|-----------------|  
-|BCP_FMT_TYPE|BYTE|É o tipo de dados desta coluna no arquivo de usuário. Se for diferente do tipo de dados da coluna correspondente na tabela do banco de dados, a cópia em massa converterá os dados se possível.<br /><br /> O parâmetro BCP_FMT_TYPE é enumerado pelos tokens de tipo de dados do SQL Server em sqlncli.h, e não nos enumeradores de tipo de dados ODBC C. Por exemplo, você pode especificar uma cadeia de caracteres, o tipo ODBC SQL_C_CHAR, usando o tipo SQLCHARACTER específico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Para especificar a representação de dados padrão do tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , defina esse parâmetro como 0.<br /><br /> Para obter uma cópia em massa fora do SQL Server em um arquivo, quando BCP_FMT_TYPE for SQLDECIMAL ou SQLNUMERIC, se a coluna de origem não for **decimais** ou **numérico**, a precisão e escala padrão são usados. Caso contrário, se a coluna de origem estiver **decimais** ou **numérico**, a precisão e escala da coluna de origem são usados.|  
+|BCP_FMT_TYPE|BYTE|É o tipo de dados desta coluna no arquivo de usuário. Se for diferente do tipo de dados da coluna correspondente na tabela do banco de dados, a cópia em massa converterá os dados se possível.<br /><br /> O parâmetro BCP_FMT_TYPE é enumerado pelos tokens de tipo de dados do SQL Server em sqlncli.h, e não nos enumeradores de tipo de dados ODBC C. Por exemplo, você pode especificar uma cadeia de caracteres, o tipo ODBC SQL_C_CHAR, usando o tipo SQLCHARACTER específico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Para especificar a representação de dados padrão do tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , defina esse parâmetro como 0.<br /><br /> Para uma cópia em massa de SQL Server em um arquivo, quando BCP_FMT_TYPE for SQLDECIMAL ou SQLNUMERIC, se a coluna de origem não for **decimal** ou **numeric**, a precisão e a escala padrão serão usadas. Caso contrário, se a coluna de origem for **decimal** ou **numeric**, a precisão e a escala da coluna de origem serão usadas.|  
 |BCP_FMT_INDICATOR_LEN|INT|É o comprimento em bytes do indicador (prefixo).<br /><br /> É o comprimento, em bytes, de um indicador de comprimento/nulo nos dados de coluna. Os valores de comprimento de indicador válidos são 0 (quando nenhum indicador é usado), 1, 2 ou 4.<br /><br /> Para especificar o uso do indicador de cópia em massa padrão, defina esse parâmetro como SQL_VARLEN_DATA.<br /><br /> Os indicadores aparecem na memória diretamente antes de quaisquer dados, e no arquivo de dados diretamente antes dos dados aos quais se aplicam.<br /><br /> Se for usada mais de uma maneira de especificar um comprimento de coluna de arquivo de dados (como um indicador e um comprimento de coluna máximo ou um indicador e uma sequência de terminador), a cópia em massa escolherá aquela que resultar na menor quantidade de dados sendo copiados.<br /><br /> Os arquivos de dados gerados pela cópia em massa quando nenhuma intervenção de usuário ajusta o formato dos dados contêm indicadores quando os dados de coluna podem variar em comprimento ou a coluna pode aceitar NULL como valor.|  
 |BCP_FMT_DATA_LEN|DBINT|É o comprimento em bytes dos dados (comprimento da coluna).<br /><br /> É o comprimento máximo, em bytes, dos dados dessa coluna no arquivo de usuário, sem incluir o comprimento de qualquer indicador de comprimento ou terminador.<br /><br /> A definição de BCP_FMT_DATA_LEN como SQL_NULL_DATA indica que todos os valores na coluna de arquivo de dados são, ou deveriam ser, definidos como NULL.<br /><br /> A definição de BCP_FMT_DATA_LEN como SQL_VARLEN_DATA indica que o sistema deveria determinar o comprimento dos dados em cada coluna. Para algumas colunas, isso poderia significar que um indicador de comprimento/nulo é gerado para anteceder os dados em uma cópia do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou que o indicador é esperado nos dados copiados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Para tipos de dados binários e de caractere do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , BCP_FMT_DATA_LEN pode ser SQL_VARLEN_DATA, SQL_NULL_DATA, 0 ou algum valor positivo. Se BCP_FMT_DATA_LEN for SQL_VARLEN_DATA, o sistema usará o indicador de comprimento, se estiver presente, ou uma sequência de terminador para determinar o comprimento dos dados. Se forem fornecidos um indicador de comprimento e uma sequência de terminador, a cópia em massa usará aquele que resultar na menor quantidade de dados sendo copiados. Se BCP_FMT_DATA_LEN for SQL_VARLEN_DATA, o tipo de dados for um tipo binário ou de caractere do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nem um indicador de comprimento nem uma sequência de terminador for especificado, o sistema retornará uma mensagem de erro.<br /><br /> Se BCP_FMT_DATA_LEN for 0 ou um valor positivo, o sistema usará BCP_FMT_DATA_LEN como o comprimento de dados máximo. Entretanto, se, além de um BCP_FMT_DATA_LEN positivo, for fornecido um indicador de comprimento ou uma sequência de terminador, o sistema determinará o comprimento dos dados usando o método que resultar na menor quantidade de dados sendo copiados.<br /><br /> O valor BCP_FMT_DATA_LEN representa a contagem de bytes dos dados. Se os dados de caractere forem representados por caracteres que abranjam Unicode, um valor de parâmetro BCP_FMT_DATA_LEN positivo representará a quantidade de caracteres multiplicada pelo tamanho, em bytes, de cada caractere.|  
 |BCP_FMT_TERMINATOR|LPCBYTE|Ponteiro para a sequência de terminador (ANSI ou Unicode, conforme apropriado) a ser usado para esta coluna. Este parâmetro é útil principalmente para tipos de dados character porque todos os outros tipos têm comprimento fixo ou, no caso de dados binary, exigem um indicador de comprimento que permite registrar com precisão o número de bytes presentes.<br /><br /> Para evitar encerrar os dados extraídos ou indicar que os dados em um arquivo de usuário não foram encerrados, defina este parâmetro como NULL.<br /><br /> Se for usada mais de uma maneira de especificar um comprimento de coluna de arquivo de usuário (como um terminador e um indicador de comprimento ou um terminador e um comprimento de coluna máximo), a cópia em massa escolherá aquela que resultar na menor quantidade de dados sendo copiados.<br /><br /> A API de cópia em massa executa a conversão de caracteres Unicode em MBCS conforme necessário. É necessário tomar cuidado para garantir que tanto a cadeia de caracteres de bytes do terminador quanto o comprimento da cadeia de caracteres de bytes estejam definidos corretamente.|  
@@ -108,10 +108,10 @@ RETCODE bcp_setcolfmt (
   
  A função [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) pode ser usada para persistir a especificação de formato.  
   
-## <a name="bcpsetcolfmt-support-for-enhanced-date-and-time-features"></a>Suporte do bcp_setcolfmt a recursos aprimorados de data e hora  
- Os tipos usados com a propriedade BCP_FMT_TYPE para tipos de data/hora são como especificado na [alterações de cópia em massa para tipos aprimorada de data e hora &#40;OLE DB e ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+## <a name="bcp_setcolfmt-support-for-enhanced-date-and-time-features"></a>Suporte do bcp_setcolfmt a recursos aprimorados de data e hora  
+ Os tipos usados com a propriedade BCP_FMT_TYPE para tipos de data/hora são conforme especificado em [alterações de cópia em massa para tipos &#40;de data e hora&#41;aprimorados OLE DB e ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Para obter mais informações, consulte [aprimoramentos de data e hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obter mais informações, consulte [melhorias &#40;de data e&#41;hora em ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções de cópia em massa](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

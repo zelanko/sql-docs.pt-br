@@ -3,17 +3,17 @@ title: Monitorar a execução de script do Python e do R usando DMVs
 description: Use DMVs (exibições de gerenciamento dinâmico) para monitorar a execução de script externo do Python e do R no SQL Server Serviços de Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/13/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e541e1d0eb2a8bb1ac512276fa395f8d8c6379f
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 8333da0bd3b5b4ad4f0b377edec110e30565c273
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70978405"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713186"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Monitorar SQL Server Serviços de Machine Learning usando DMVs (exibições de gerenciamento dinâmico)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Para obter mais informações gerais sobre DMVs, consulte exibições de [gerenc
 
 As exibições de gerenciamento dinâmico a seguir podem ser usadas ao monitorar cargas de trabalho de Machine Learning no SQL Server. Para consultar as DMVs, você precisa `VIEW SERVER STATE` de permissão na instância.
 
-| Exibição de gerenciamento dinâmico | Tipo | Descrição |
+| Exibição de gerenciamento dinâmico | type | Descrição |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Execução | Retorna uma linha para cada conta de trabalho ativa que executa um script externo. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Execução | Retorna uma linha para cada tipo de solicitação de script externo. |
@@ -200,7 +200,7 @@ A consulta retorna as seguintes colunas:
 
 ## <a name="memory-configuration"></a>Configuração de memória
 
-Exiba informações sobre a configuração de memória máxima em porcentagem de SQL Server e pools de recursos externos. Se SQL Server estiver sendo executado com o valor padrão `max server memory (MB)`de, ele será considerado como 100% da memória do sistema operacional.
+Exiba informações sobre a configuração de memória máxima em porcentagem de SQL Server e pools de recursos externos. Se SQL Server estiver sendo executado com o valor padrão de `max server memory (MB)`, ele será considerado como 100% da memória do sistema operacional.
 
 ![Saída da consulta de configuração de memória](media/dmv-memory-configuration.png "Saída da consulta de configuração de memória")
 

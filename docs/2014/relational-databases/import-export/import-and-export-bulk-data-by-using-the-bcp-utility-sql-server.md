@@ -1,9 +1,6 @@
 ---
 title: Importar e exportar dados em massa usando o utilitário bcp (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 06/14/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +8,22 @@ helpviewer_keywords:
 - bulk importing [SQL Server], bcp utility
 - bcp utility [SQL Server], about bcp utility
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b291b24d18420005cdda4e5b079eb08abee27b8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/14/2017
+ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011928"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708218"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>Importar e exportar dados em massa usando o utilitário bcp (SQL Server)
-  Este tópico oferece uma visão geral de como usar o [utilitário bcp](../../tools/bcp-utility.md) para exportar dados de qualquer lugar para um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , em que uma instrução SELECT atua, incluindo exibições particionadas.  
+
+Este tópico oferece uma visão geral de como usar o [utilitário bcp](../../tools/bcp-utility.md) para exportar dados de qualquer lugar para um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , em que uma instrução SELECT atua, incluindo exibições particionadas.  
   
  O utilitário bcp (Bcp.exe) é uma ferramenta de linha de comandos que usa a API do BCP (Programa de cópia em massa). O utilitário bcp executa as seguintes tarefas:  
   
@@ -45,7 +46,8 @@ ms.locfileid: "66011928"
   
  Para obter uma descrição da sintaxe do comando **bcp**, veja [Utilitário bcp](../../tools/bcp-utility.md).  
   
-## <a name="examples"></a>Exemplos  
+## <a name="examples"></a>Exemplos
+
  Para obter exemplos do **bcp**, veja:  
   
 -   [Utilitário bcp](../../tools/bcp-utility.md)  
@@ -69,15 +71,11 @@ ms.locfileid: "66011928"
 -   [Usar o formato de caractere Unicode para importar ou exportar dados &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Usar o formato nativo Unicode para importar ou exportar dados &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+
+## <a name="see-also"></a>Consulte também
+
+[Inserir &#40;&#41;](/sql/t-sql/statements/insert-transact-sql)o @no__t[utilitário bcp](../../tools/bcp-utility.md)[Transact-SQL @no__t &#40;-&#41;](/sql/t-sql/queries/select-clause-transact-sql)7 do Transact-SQL 
   
-## <a name="see-also"></a>Consulte também  
- [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
- [Cláusula SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
- [bcp Utility](../../tools/bcp-utility.md)   
- [Preparar para importar dados em massa &#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [Importação e exportação em massa de dados &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
- [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [Criar um arquivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
-  
-  
+[Prepare-se para importar &#40;dados&#41;em massa SQL Server](prepare-to-bulk-import-data-sql-server.md)
+ BULK INSERT[ &#40;&#41;](bulk-import-and-export-of-data-sql-server.md)[ &#40;&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)importação e exportação em massa do Transact-SQL 
+ para importar e exportar dados SQL Server 1[OPENROWSET &#40; Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)5[criar um arquivo &#40;de formato&#41; SQL Server](create-a-format-file-sql-server.md)
