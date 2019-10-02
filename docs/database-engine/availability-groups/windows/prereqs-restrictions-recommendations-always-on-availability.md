@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 47ab25b42800eaf668f2b258cf51608e6d66e580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15f8ca09a12e90db4c9493b9283793f6e9677934
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014482"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250981"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -268,7 +268,7 @@ ms.locfileid: "68014482"
   
 -   **Número máximo de grupos de disponibilidade e bancos de dados de disponibilidade por computador:** o número real de bancos de dados e grupos de disponibilidade que você pode colocar em um computador (VM ou físico) depende do hardware e da carga de trabalho, mas nenhum limite é imposto. A Microsoft testou até 10 grupos de disponibilidade e 100 bancos de dados por computador físico, mas isso não é um limite de associação. Dependendo da especificação de hardware no servidor e da carga de trabalho, é possível colocar um número maior de bancos de dados e grupos de disponibilidade em uma instância do SQL Server. Os sinais de sistemas sobrecarregados podem incluir, entre outros, esgotamento de thread de trabalho, tempos de resposta lentos para exibições de sistema dos grupos de disponibilidade AlwaysOn e DMVs e/ou despejos de sistema do dispatcher parados. Não se esqueça de testar completamente seu ambiente com uma carga de trabalho semelhante à de produção para assegurar que ele possa manipular a capacidade da carga de trabalho de pico nos SLAs do seu aplicativo. Ao considerar SLAs, não se esqueça de considerar a carga sob condições de falha, bem como os tempos de resposta esperados.  
   
--   **Não use o Gerenciador de Cluster de Failover para manipular grupos de disponibilidade:**  
+-   **Não use o Gerenciador de Cluster de Failover para manipular grupos de disponibilidade**. O estado de uma FCI (instância de cluster de failover) do SQL Server é compartilhado entre o SQL Server e o WSFC (cluster de failover do Windows), com o SQL Server mantendo informações de estado mais detalhadas sobre as instâncias com as quais o cluster se preocupa. O modelo de gerenciamento é que o SQL Server deve orientar as transações e é responsável por manter a exibição do estado do cluster em sincronia com a exibição do estado do SQL Server. Se o estado do cluster for alterado fora do SQL Server, é possível que o estado saia da sincronização entre o WSFC e o SQL Server, o que poderá levar a um comportamento imprevisível.
   
      Por exemplo:  
   

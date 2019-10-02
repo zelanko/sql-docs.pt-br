@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 3d47ea0bc1c905516504c25e3a1f05ca5b74c28d
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: 9ee5564479e1c4334466db7f5b1ce45a6913d68f
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878618"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326026"
 ---
-# <a name="sql-server-2019-extension-preview"></a>Extensão do SQL Server 2019 (versão prévia)
+# <a name="sql-server-2019-extension-for-azure-data-studio-preview"></a>Extensão do SQL Server 2019 para Azure Data Studio (versão prévia)
 
-A extensão do SQL Server 2019 (versão prévia) dá suporte em versão prévia a novos recursos e ferramentas fornecidos em suporte do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Isso inclui suporte em versão prévia a [clusters de Big Data do SQL Server 2019](../big-data-cluster/big-data-cluster-overview.md), uma [experiência de notebook](../big-data-cluster/notebooks-guidance.md) integrada e um assistente [Criar Tabela Externa](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json) do PolyBase.
+A extensão do SQL Server 2019 para o Azure Data Studio (versão prévia) dá suporte em versão prévia a novos recursos e ferramentas fornecidos em suporte do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Isso inclui suporte em versão prévia a [clusters de Big Data do SQL Server 2019](../big-data-cluster/big-data-cluster-overview.md), uma [experiência de notebook](../big-data-cluster/notebooks-guidance.md) integrada e um assistente [Criar Tabela Externa](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json) do PolyBase.
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>Instalar a extensão do SQL Server 2019 (versão prévia)
 
@@ -143,58 +143,3 @@ Nesta versão, foram adicionadas várias melhorias que ajudam os extensores
 * Bloquear o uso do assistente Criar Dados Externos se o PolyBase não estiver habilitado ou em execução no servidor de destino.
 * Correção de ortografia e nomenclatura relacionadas ao SQL Server 2019 e ao assistente Criar Dados Externos.
 * Remoção de um grande número de erros do console de depuração do Azure Data Studio.
-
-##  <a name="sql-server-2019-big-data-cluster-support"></a>Suporte para Cluster de Big Data do SQL Server 2019
-
-* Clique em **Adicionar Conexão** no *Pesquisador de Objetos* e escolha **Cluster de Big Data do SQL Server** como tipo de conexão.
-
-   > [!TIP]
-   > Se não vir o tipo de conexão **Cluster de Big Data do SQL Server**, reinicie o Azure Data Studio.
-
-* Insira o nome do host ou o endereço IP do ponto de extremidade do cluster mais o nome de usuário e a senha usados para se conectar.
-* Opcionalmente, inclua um nome de exibição amigável no campo **Nome**.
-* Clique em **Conectar** e você poderá iniciar tarefas comuns no painel, navegar no **HDFS** no Pesquisador de Objetos e executar tarefas em contexto nele.
-* Para enviar um trabalho do Spark ao cluster, clique com o botão direito do mouse no nó de servidor no *Pesquisador de Objetos* e escolha **Enviar Trabalho do Spark** para abrir a caixa de diálogo de envio.
-* Para abrir um Notebook, confira a próxima seção.
-
-Para obter detalhes, confira [Clusters de Big Data](../big-data-cluster/big-data-cluster-overview.md).
-
-
-## <a name="azure-data-studio-notebooks"></a>Notebooks do Azure Data Studio
-
-* Abra um notebook de um dos seguintes modos:
-  * Abra um novo notebook na *Paleta de Comandos*.
-  * Abra a árvore do Pesquisador de Objetos do HDFS para um cluster de Big Data do SQL Server 2019 e:
-    * Clique com o botão direito do mouse no nó de servidor e escolha **Novo Jupyter Notebook**.
-    * Clique com o botão direito do mouse em um arquivo CSV e escolha **Analisar no Notebook**.
-  * Abra um arquivo .ipynb existente no menu **Arquivo** ou no Explorador de Arquivos *(arquivos .ipynb devem ser atualizados para a versão 4 ou superior para serem carregados corretamente)*
-* Escolha um kernel. Para execução local do notebook, escolha Python 3. Para execução remota, escolha PySpark ou Spark | Scala.
-* Escolha um ponto de extremidade do cluster de Big Data do SQL Server para se conectar se estiver executando remotamente (isso não é necessário para o desenvolvimento local com Python 3).
-* Adicione células de código ou de Markdown usando os botões no cabeçalho do notebook. Remova as células com o ícone de lixeira à esquerda de cada célula.
-* Execute as células usando o botão reproduzir para células de código e alterne entre a exibição de edição e de versão prévia de Markdown usando o ícone de olho
-
-## <a name="polybase-create-external-table-wizard"></a>Assistente Criar Tabela Externa do PolyBase
-
-* Em uma instância do SQL Server 2019, o *Assistente Criar Tabela Externa* pode ser aberto de três maneiras:
-  * Clique com o botão direito do mouse em um servidor, escolha **Gerenciar**, clique na guia do SQL Server 2019 (versão prévia) e escolha **Criar Tabela Externa**.
-  * Com uma instância do SQL Server 2019 selecionada no *Pesquisador de Objetos*, exiba o *Assistente Criar Externo* usando a *Paleta de Comandos*.
-  * Clique com o botão direito do mouse em um banco de dados do SQL Server 2019 no *Pesquisador de Objetos* e escolha **Criar Tabela Externa**.
-* Nesta versão da extensão, tabelas externas podem ser criadas para acessar tabelas remotas do SQL Server e do Oracle.
-
-  > [!NOTE]
-  > Embora a funcionalidade de Tabela Externa seja um recurso do SQL 2019, o SQL Server remoto pode estar executando uma versão anterior do SQL Server.
-
-* Escolha se você está acessando o SQL Server ou o Oracle na primeira página do assistente e continue.
-* Será solicitado que você crie uma Chave Mestra do Banco de Dados se uma ainda não tiver sido criada (senhas com complexidade insuficiente serão bloqueadas).
-* Crie uma conexão de fonte de dados e uma credencial nomeada para o servidor remoto.
-* Escolha quais objetos você deseja mapear para sua nova tabela externa.
-* Escolha **Gerar Script** ou **Criar** para concluir o assistente.
-* Após a criação da tabela externa, ela aparecerá imediatamente na árvore de objetos do banco de dados em que foi criada.
-
-
-## <a name="known-issues"></a>Problemas conhecidos
-
-* Se a senha não for salva durante a criação de uma conexão, algumas ações, como enviar o trabalho do Spark, poderão não ter sucesso.
-* Notebooks .ipynb existentes devem ser atualizados para a versão 4 ou superior para carregar conteúdo no visualizador.
-* Executar o comando **Reinstalar Dependências do Notebook** pode mostrar duas tarefas no modo de exibição de tarefas, uma das quais falha. Isso não causa a falha da instalação
-* Escolher **Adicionar Nova Conexão** em um Notebook e clicar em cancelar fará com que **Selecionar Conexão** seja exibido, mesmo que você já esteja conectado.
