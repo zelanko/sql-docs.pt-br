@@ -3,17 +3,17 @@ title: Gerenciar cargas de trabalho do Python e do R com o Resource Governor
 description: Saiba como usar Resource Governor para gerenciar a alocação de CPU, e/s física e recursos de memória para cargas de trabalho de Python e R em SQL Server Serviços de Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: eec3d2762366252fbc170c2a6c4176fe0283edce
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 9000ab8bb15e8f9910b8b780aa38d134fa984032
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71714310"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823541"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>Gerenciar cargas de trabalho do Python e do R com o Resource Governor no SQL Server Serviços de Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,11 +31,11 @@ Para obter mais informações gerais, consulte [resource governor](../../relatio
 
 Por padrão, os tempos de execução de script externo para Machine Learning são limitados a não mais do que 20% da memória total do computador. Depende do seu sistema, mas, em geral, você pode achar esse limite inadequado para tarefas de aprendizado de máquina sérias, como treinar um modelo ou prever muitas linhas de dados. 
 
-## <a name="use-resource-governor-to-control-resourcing"></a>Usar Resource Governor para controlar a insourcing
+## <a name="manage-resources-with-resource-governor"></a>Gerenciar recursos com Resource Governor
  
 Por padrão, os processos externos usam até 20% da memória total do host no servidor local. Você pode modificar o pool de recursos padrão para fazer alterações em todo o servidor, com processos de R e Python utilizando qualquer capacidade que você disponibilizar para processos externos.
 
-Como alternativa, você pode construir pools de *recursos externos*personalizados, com classificadores e grupos de carga de trabalho associados, para determinar a alocação de recursos para solicitações provenientes de programas, hosts ou outros critérios específicos que você fornecer. Um pool de recursos externos é um tipo de pool de recursos [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] introduzido no para ajudar a gerenciar os processos de R e Python externos ao mecanismo de banco de dados.
+Como alternativa, você pode criar **pools de recursos externos**personalizados, com classificadores e grupos de carga de trabalho associados, para determinar a alocação de recursos para solicitações provenientes de programas, hosts ou outros critérios específicos que você fornecer. Um pool de recursos externos é um tipo de pool de recursos [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] introduzido no para ajudar a gerenciar os processos de R e Python externos ao mecanismo de banco de dados.
 
 1. [Habilitar governança de recursos](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) (está desativado por padrão).
 

@@ -9,27 +9,26 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 66b5d00e8f920aca9435fca7f05037184f75f130
-ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
+ms.openlocfilehash: e12a6a19ae076a42bef345a05076adab0d9ea471
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70391946"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816657"
 ---
 # <a name="azdata"></a>azdata
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Commands
 |     |     |
 | --- | --- |
 |[azdata notebook](reference-azdata-notebook.md) | Comandos para exibir, executar e gerenciar notebooks de um terminal. |
 |[azdata sql](reference-azdata-sql.md) | A CLI do banco de dados SQL permite que o usuário interaja com o SQL Server por meio de T-SQL. |
 |[azdata app](reference-azdata-app.md) | Criar, excluir, executar e gerenciar aplicativos. |
 |[azdata bdc](reference-azdata-bdc.md) | Selecionar, gerenciar e operar clusters de Big Data do SQL Server. |
-|[controle azdata](reference-azdata-control.md) | Criar, excluir e gerenciar planos de controle. |
-[azdata login](#azdata-login) | Fazer logon no ponto de extremidade do controlador do cluster.
-[azdata logout](#azdata-logout) | Fazer logoff do cluster.
+|[azdata login](#azdata-login) | Fazer logon no ponto de extremidade do controlador do cluster.
+|[azdata logout](#azdata-logout) | Fazer logoff do cluster.
 ## <a name="azdata-login"></a>azdata login
 Quando o cluster for implantado, ele listará o ponto de extremidade do controlador durante a implantação, que você deverá usar para fazer logon.  Se você não conhecer o ponto de extremidade do controlador, você poderá fazer logon colocando a configuração de kube do seu cluster na localização padrão <user home>/.kube/config ou usando a variável de ambiente KUBECONFIG, ou seja, exportar KUBECONFIG=path/to/.kube/config.
 ```bash
@@ -68,7 +67,7 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-logout"></a>azdata logout

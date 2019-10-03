@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 307697f43fc1c2615f212ae5f433485814dd62d0
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 4053ac15309b821a9cf50cf067ad459256369418
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874698"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823584"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Implantar SQL Server Cluster de Big data com alta disponibilidade
 
@@ -86,6 +86,11 @@ As etapas a seguir mostram como criar um arquivo de patch que inclui essas confi
 
     ```bash
     azdata bdc config patch -c custom-aks/bdc.json --patch-file patch.json
+    ```
+1. Iniciar a implantação de cluster usando o perfil de configuração de cluster criado acima
+
+    ```bash
+    azdata bdc create --config-profile custom-aks --accept-eula yes
     ```
 
 ## <a name="connect-to-sql-server-databases"></a>Conectar-se a bancos de dados SQL Server
