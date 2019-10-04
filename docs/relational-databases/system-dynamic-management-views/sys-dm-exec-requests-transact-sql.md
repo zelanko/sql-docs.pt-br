@@ -1,10 +1,10 @@
 ---
 title: sys.dm_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/03/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: sstein
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_exec_requests dynamic management view
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
-ms.author: sstein
+ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fbd23a685507b62529477d6ef92dbbbd1980c5c1
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: 17dea47b6659122e02b092f5825d5c05497f28a3
+ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326162"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923773"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -47,7 +47,7 @@ Retorna informações sobre cada solicitação sendo executada no [!INCLUDE[ssNo
 |database_id|**smallint**|ID do banco de dados no qual a solicitação está em execução. Não permite valor nulo.|  
 |user_id|**int**|ID do usuário que enviou a solicitação. Não permite valor nulo.|  
 |connection_id|**uniqueidentifier**|ID da conexão em que a solicitação chegou. Permite valor nulo.|  
-|blocking_session_id|**smallint**|ID da sessão que está bloqueando a solicitação. Se esta coluna for NULL, a solicitação não estará bloqueada ou as informações da sessão de bloqueio não estarão disponíveis (ou não podem ser identificadas).<br /><br /> -2 = O recurso de bloqueio pertence a uma transação distribuída órfã.<br /><br /> -3 = O recurso de bloqueio pertence a uma transação de recuperação adiada.<br /><br /> -4 = A ID da sessão do proprietário da trava de bloqueio não pôde ser determinada neste momento devido a transições internas de estado da trava.|  
+|blocking_session_id|**smallint**|ID da sessão que está bloqueando a solicitação. Se esta coluna for nula ou igual a 0, a solicitação não será bloqueada ou as informações da sessão da sessão de bloqueio não estarão disponíveis (ou não poderão ser identificadas).<br /><br /> -2 = O recurso de bloqueio pertence a uma transação distribuída órfã.<br /><br /> -3 = O recurso de bloqueio pertence a uma transação de recuperação adiada.<br /><br /> -4 = A ID da sessão do proprietário da trava de bloqueio não pôde ser determinada neste momento devido a transições internas de estado da trava.|  
 |wait_type|**nvarchar(60)**|Se a solicitação estiver bloqueada, esta coluna retornará o tipo de espera. Permite valor nulo.<br /><br /> Para obter informações sobre os tipos de esperas, consulte [Sys. &#40;DM _OS_WAIT_STATS Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |wait_time|**int**|Se a solicitação estiver bloqueada, esta coluna retornará a duração, em milissegundos, da espera atual. Não permite valor nulo.|  
 |last_wait_type|**nvarchar(60)**|Se esta solicitação tiver sido previamente bloqueada, esta coluna retornará o tipo da última espera. Não permite valor nulo.|  
@@ -77,7 +77,7 @@ Retorna informações sobre cada solicitação sendo executada no [!INCLUDE[ssNo
 |ansi_padding|**bit**|1 = configuração ANSI_PADDING é ON para a solicitação.<br /><br /> Caso contrário, é 0.<br /><br /> Não permite valor nulo.|  
 |ansi_nulls|**bit**|1 = configuração ANSI_NULLS é ON para a solicitação. Caso contrário, é 0.<br /><br /> Não permite valor nulo.|  
 |concat_null_yields_null|**bit**|1 = configuração CONCAT_NULL_YIELDS_NULL é ON para a solicitação. Caso contrário, é 0.<br /><br /> Não permite valor nulo.|  
-|transaction_isolation_level|**smallint**|Nível de isolamento com que a transação desta solicitação é criada. Não permite valor nulo.<br /><br /> 0 = Não Especificado<br /><br /> 1 = Leitura Não Confirmada<br /><br /> 2 = Leitura Confirmada<br /><br /> 3 = Repetível<br /><br /> 4 = Serializável<br /><br /> 5 = Instantâneo|  
+|transaction_isolation_level|**smallint**|Nível de isolamento com que a transação desta solicitação é criada. Não permite valor nulo.<br /> 0 = Não Especificado<br /> 1 = Leitura Não Confirmada<br /> 2 = Leitura Confirmada<br /> 3 = Repetível<br /> 4 = Serializável<br /> 5 = Instantâneo|  
 |lock_timeout|**int**|Tempo limite de bloqueio em milissegundos desta solicitação. Não permite valor nulo.|  
 |deadlock_priority|**int**|Configuração DEADLOCK_PRIORITY da solicitação. Não permite valor nulo.|  
 |row_count|**bigint**|Número de linhas que foram retornadas ao cliente por esta solicitação. Não permite valor nulo.|  
@@ -96,6 +96,7 @@ Retorna informações sobre cada solicitação sendo executada no [!INCLUDE[ssNo
 |is_resumable |**bit** |**Aplica-se a**: do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica se a solicitação é uma operação de índice retomável. |  
 |page_resource |**binary(8)** |**Aplica-se ao**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Uma representação hexadecimal de 8 bytes do recurso de página se a `wait_resource` coluna contiver uma página. Para obter mais informações, consulte [Sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
 |page_server_reads|**bigint**|**Aplica-se ao**: Hiperescala do banco de dados SQL do Azure<br /><br /> Número de leituras de servidor de página executadas por essa solicitação. Não permite valor nulo.|  
+| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>Comentários 
 Para executar código fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, procedimentos armazenados estendidos e consultas distribuídas), um thread deve ser executado fora do controle de um agendador não preventivo. Para fazer isso, um trabalhador muda para o modo preventivo. Os valores de tempo retornados por essa exibição de gerenciamento dinâmico não incluem o tempo gasto no modo preventivo.
@@ -125,14 +126,14 @@ GO
 
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. Localizando todos os bloqueios que estão sendo mantidos por um lote em execução
 
-O exemplo a seguir consulta **Sys. dm _exec_requests** para localizar o lote interessante e copiar `transaction_id` seu da saída.
+O exemplo a seguir consulta **Sys. dm _exec_requests** para localizar o lote interessante e copiar seu `transaction_id` da saída.
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-Em seguida, para localizar informações de bloqueio, use `transaction_id` o copiado com a função de sistema **Sys. dm _tran_locks**.  
+Em seguida, para localizar informações de bloqueio, use o `transaction_id` copiado com a função de sistema **Sys. dm _tran_locks**.  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks

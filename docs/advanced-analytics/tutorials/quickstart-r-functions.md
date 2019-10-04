@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: Neste guia de início rápido, saiba como escrever uma função de R para computação estatística avançada com SQL Server Serviços de Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/03/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cebd4ea6a356af6802a0e26f778667b2acc4b80c
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 55849cec8b3362b3a5f2786e007f08f0c376b8a5
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149905"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71951860"
 ---
 # <a name="quickstart-write-advanced-r-functions-with-sql-server-machine-learning-services"></a>Início Rápido: Escrever funções de R avançadas com SQL Server Serviços de Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ as.data.frame(rnorm(100, mean = 50, sd = 3));
 Para chamar essa linha de r do T-SQL, adicione a função r no parâmetro de script r de `sp_execute_external_script`, desta forma:
 
 ```sql
-EXEC sp_execute_external_script
+EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
          OutputDataSet <- as.data.frame(rnorm(100, mean = 50, sd =3));'
@@ -62,7 +62,7 @@ CREATE PROCEDURE MyRNorm (
     , @param3 INT
     )
 AS
-EXEC sp_execute_external_script @language = N'R'
+EXECUTE sp_execute_external_script @language = N'R'
     , @script = N'
          OutputDataSet <- as.data.frame(rnorm(mynumbers, mymean, mysd));'
     , @input_data_1 = N'   ;'
@@ -82,7 +82,7 @@ WITH RESULT SETS(([Density] FLOAT NOT NULL));
 Agora que você encapsulou a função R em um procedimento armazenado, pode facilmente chamar a função e passar valores diferentes, como este:
 
 ```sql
-EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
+EXECUTE MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 ```
 
 ## <a name="use-r-utility-functions-for-troubleshooting"></a>Usar funções de utilitário de R para solução de problemas
@@ -103,9 +103,7 @@ WITH RESULT SETS (([Col1] int not null));
 ```
 
 > [!TIP]
-> Muitos usuários gostam de usar as funções de tempo do sistema em R, `system.time` como `proc.time`e, para capturar o tempo usado pelos processos do r e analisar problemas de desempenho.
-
-Para obter um exemplo, consulte este tutorial: [Criar recursos de dados](../tutorials/walkthrough-create-data-features.md). Neste tutorial, as funções de tempo do R são inseridas na solução para comparar o desempenho das funções do R vs. Funções T-SQL para criar recursos de dados.
+> Muitos usuários gostam de usar as funções de tempo do sistema em R, `system.time` como `proc.time`e, para capturar o tempo usado pelos processos do r e analisar problemas de desempenho. Para obter um exemplo, consulte o tutorial [criar recursos de dados](../tutorials/walkthrough-create-data-features.md) nos quais as funções de tempo do R são inseridas na solução.
 
 ## <a name="next-steps"></a>Próximas etapas
 
