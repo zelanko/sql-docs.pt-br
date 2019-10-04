@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4677413e517812bf18bc41f59374367b6e27276a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 8b8460927baa185233234baa2f6401fa600f3fff
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890177"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952128"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Instalar o PowerPivot pelo prompt de comando
   É possível executar a Instalação na linha de comando para instalar o SQL Server PowerPivot para SharePoint. Você deve incluir o parâmetro `/ROLE` no comando e excluir o parâmetro `/FEATURES`.  
@@ -41,7 +41,7 @@ ms.locfileid: "68890177"
  Em comparação com as versões anteriores, todas as tarefas de configuração de servidor são executadas como tarefas pós-instalação. Se você estiver automatizando as etapas de instalação e configuração, poderá usar o PowerShell para configurar o servidor. Para obter mais informações, consulte [configuração do PowerPivot usando o Windows PowerShell](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell).  
   
 ## <a name="example-commands"></a>Comandos de exemplo  
- Os exemplos a seguir ilustram o uso de cada opção. O exemplo 1 `SPI_AS_ExistingFarm`mostra.  
+ Os exemplos a seguir ilustram o uso de cada opção. O exemplo 1 mostra `SPI_AS_ExistingFarm`.  
   
 ```  
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
@@ -82,9 +82,9 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
     ```  
   
-3.  Substitua os espaços reservados para \<o domínio \ \<nomedousuário > e senha forte > com contas de usuário e senhas válidas.  
+3.  Substitua os espaços reservados para \<domain \ username > e \<StrongPassword > por contas de usuário e senhas válidas.  
   
-     Os `/assvaccount` parâmetros e **/assvcpassword** são usados para configurar a [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instância no servidor de aplicativos. Substitua esses espaços reservados pelas informações de conta válidas.  
+     Os parâmetros `/assvaccount` e **/assvcpassword** são usados para configurar a instância de [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] no servidor de aplicativos. Substitua esses espaços reservados pelas informações de conta válidas.  
   
      O parâmetro **/assysadminaccounts** deve ser definido como a identidade do usuário que está executando SQL Server configuração. Você deve especificar pelo menos um administrador de sistema. Observe que a Instalação do SQL Server deixou de conceder permissões sysadmin para membros do grupo Administradores interno.  
   

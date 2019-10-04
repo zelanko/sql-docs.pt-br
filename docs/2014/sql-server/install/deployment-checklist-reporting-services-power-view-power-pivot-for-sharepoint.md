@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 9a2575c8-06fc-4ef4-9f24-c19e52b1bbcf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: be1c0b23afa8110fcf32b969e93fae7d9bf7f324
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: f1eb0f6892192e5ed328386e6730ec3b1c41f05b
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890600"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952548"
 ---
 # <a name="deployment-checklist-reporting-services-power-view-and-powerpivot-for-sharepoint"></a>Lista de verificação de implantação: Reporting Services, Power View e PowerPivot para SharePoint
   Use a seguinte lista de verificação para instalar esses recursos de BI no mesmo farm do SharePoint: PowerPivot para SharePoint, Construtor de Relatórios e [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Embora essa lista de verificação recomende uma ordem de instalação específica, na prática você pode instalar esses recursos em praticamente qualquer ordem. Essa lista de verificação presume a instalação dos seguintes produtos ou recursos:  
   
 1.  SharePoint Server 2010 com Service Pack 1 (SP1)  
   
-2.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Mecanismo de Banco de Dados  
+2.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Mecanismo de Banco de Dados  
   
 3.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services e suplemento Reporting Services  
   
@@ -66,10 +66,10 @@ ms.locfileid: "68890600"
 |Etapa|Link|  
 |----------|----------|  
 |Execute a ferramenta de preparação dos produtos do SharePoint 2010.|Você deve ter a mídia de instalação do SharePoint 2010. A ferramenta de preparação é o PrerequisiteInstaller.exe na mídia de instalação.|  
-|Instale o SharePoint Server 2010 enterprise ou a edição enterprise evaluation.|Ao instalar o SharePoint, se você decidir configurar o farm posteriormente, não execute o Assistente de Configuração de Produtos do SharePoint 2010 depois que a Instalação for concluída. Aguardar para configurar o farm permitirá que você use [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] uma instância de mecanismo de banco de dados, que é instalada em uma etapa posterior, como o servidor de banco de dados do farm. Para configurar o farm, você usará a Ferramenta de Configuração do PowerPivot. Ela inclui ações para provisionar o farm se ele ainda não estiver configurado.|  
-|Instale o SharePoint Server 2010 SP1.|Baixe o SP1 [https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697)de.|  
+|Instale o SharePoint Server 2010 enterprise ou a edição enterprise evaluation.|Ao instalar o SharePoint, se você decidir configurar o farm posteriormente, não execute o Assistente de Configuração de Produtos do SharePoint 2010 depois que a Instalação for concluída. Aguardar para configurar o farm permitirá que você use uma instância [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Mecanismo de Banco de Dados, que é instalada em uma etapa posterior, como o servidor de banco de dados do farm. Para configurar o farm, você usará a Ferramenta de Configuração do PowerPivot. Ela inclui ações para provisionar o farm se ele ainda não estiver configurado.|  
+|Instale o SharePoint Server 2010 SP1.|Baixe o SP1 do [https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697).|  
 |Execute a instalação do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para instalar o Mecanismo de Banco de Dados e o PowerPivot para SharePoint.|[Instalar o PowerPivot para SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)<br /><br /> A etapa 1 explica como instalar o PowerPivot para SharePoint. Nessa etapa, clique na caixa de seleção na página Função de Instalação que adiciona o Mecanismo de Banco de Dados à função. Isso adiciona o Mecanismo de Banco de Dados à sua instalação para que você possa usá-lo como o servidor de banco de dados do farm ao configurar o farm na próxima etapa. No entanto, se o farm já estiver configurado, essa etapa poderá ser ignorada.<br /><br /> A etapa 2 pede que você configure o servidor. Para essa etapa, escolha a ferramenta de Configuração do PowerPivot. Embora diversas abordagens estejam disponíveis, usar a ferramenta de configuração é a mais eficiente para uma instalação autônoma.<br /><br /> Se o SharePoint 2010 estiver instalado, mas não configurado, a ferramenta pré-selecionará ações que criarão o farm, um aplicativo Web padrão e uma coleção de sites raiz. Deixe essas opções selecionadas para que o farm seja criado. Se você já tiver configurado o farm, a ferramenta omitirá essas ações, e oferecerá apenas as ações necessárias para configurar o PowerPivot para SharePoint.<br /><br /> A etapa 3 pede que você instale a versão do SQL Server 2008 R2 do Provedor OLE DB do Analysis Services. Essa etapa é importante para dar suporte a versões de uma pasta de trabalho que foi criada na versão 2008 R2 do PowerPivot para Excel.|  
-|Verifique se o farm está funcionando.|Primeiro, inicie a Administração Central e confirme se está disponível. Em seguida, abra o site de equipe http://localhost digitando.  Você verá um site de equipe do SharePoint.|  
+|Verifique se o farm está funcionando.|Primeiro, inicie a Administração Central e confirme se está disponível. Em seguida, abra o site de equipe digitando http://localhost.  Você verá um site de equipe do SharePoint.|  
 |Verifique se o PowerPivot para SharePoint está funcionando.|[Verificar uma instalação do PowerPivot para SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation)<br /><br /> Essa tarefa confirma o acesso a dados PowerPivot usando a pasta de trabalho que você carregou.|  
 |Execute a Instalação do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para instalar e configurar o Reporting Services e o Suplemento Reporting Services.|[Instalar o Reporting Services no modo do SharePoint para SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)<br /><br /> Como opção, enquanto estiver instalando o Reporting Services, você pode adicionar outra instância do Analysis Services à árvore de recursos de instalação se desejar um segundo recurso para hospedar dados tabulares. A instância adicional do Analysis Services será usada para hospedar bancos de dados modelo tabulares que você cria no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Bancos de dados tabulares são uma fonte de dados válida para relatórios do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].<br /><br /> [Instalar o Analysis Services em modo Tabular](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)|  
 |Verifique se o Reporting Services está funcionando.|[Verificar uma instalação do Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)|  

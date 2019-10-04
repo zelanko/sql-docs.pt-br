@@ -1,5 +1,5 @@
 ---
-title: Alterações em limites de CPU e memória para o SQL Server Standard e Enterprise (Supervisor de atualização) | Microsoft Docs
+title: Alterações nos limites de memória e CPU para SQL Server Standard e Enterprise (Supervisor de atualização) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 348c45b9-2e3f-4a51-acde-5fc7e27f94a5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4b58d7b9d449a6fe9ab3e5de8a7e369d57d13d70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6564a507b01e45e9808f2efbce79c4b3d07b0680
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095945"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952570"
 ---
 # <a name="changes-to-cpu-and-memory-limits-for-sql-server-standard-and-enterprise-upgrade-advisor"></a>Alterações nos limites de CPU e de memória para o SQL Server Standard e Enterprise (Supervisor de Atualização)
   O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] edição Standard e Enterprise oferece suporte a no máximo 64 gigabytes de memória do sistema.  
@@ -40,6 +40,6 @@ ms.locfileid: "66095945"
 -   [Computar limites de capacidade por edição do SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Problemas de atualização do Reporting Services &#40;Supervisor de atualização&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [Supervisor de atualização &#40;de problemas de atualização do Reporting Services&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

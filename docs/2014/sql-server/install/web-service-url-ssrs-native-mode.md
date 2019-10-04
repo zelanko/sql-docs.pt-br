@@ -1,5 +1,5 @@
 ---
-title: URL do serviço (modo nativo do SSRS) Web | Microsoft Docs
+title: URL do serviço Web (modo nativo do SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ f1_keywords:
 helpviewer_keywords:
 - Reporting Services, Web service
 ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2ab81c33b3aea946fe85c94139acc891aa05a083
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01e5393ae638ddcecd04211a0a7e01e8116346a9
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090986"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952361"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>URL do serviço Web (modo nativo do SSRS)
-  Use a página URL do Serviço Web para configurar ou modificar a URL usada para acessar o servidor de relatório. Uma *reserva de URL* será criada com base na URL que você especificar. A reserva de URL define a sintaxe e as regras para todas as URLs que podem ser subsequentemente usadas para acessar o serviço Web Servidor de Relatório. Ela especifica o prefixo, o host, a porta e o diretório virtual do serviço Web Servidor de Relatório. Dependendo de como você especifica o host, várias URLs poderiam ser possíveis para uma única reserva. O valor padrão do host especifica um curinga forte. Um curinga forte permite especificar em uma URL qualquer nome de host que possa ser resolvido para o computador que hospeda o servidor de relatório. Para obter mais informações sobre reservas e a configuração de URL, consulte [configurar uma URL &#40;Configuration Manager do SSRS&#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) e [configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41; ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
+  Use a página URL do Serviço Web para configurar ou modificar a URL usada para acessar o servidor de relatório. Uma *reserva de URL* será criada com base na URL que você especificar. A reserva de URL define a sintaxe e as regras para todas as URLs que podem ser subsequentemente usadas para acessar o serviço Web Servidor de Relatório. Ela especifica o prefixo, o host, a porta e o diretório virtual do serviço Web Servidor de Relatório. Dependendo de como você especifica o host, várias URLs poderiam ser possíveis para uma única reserva. O valor padrão do host especifica um curinga forte. Um curinga forte permite especificar em uma URL qualquer nome de host que possa ser resolvido para o computador que hospeda o servidor de relatório. Para obter mais informações sobre a configuração de URL e reservas, consulte [Configurar &#40;uma&#41; URL SSRS Configuration Manager](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) e [Configurar &#40;URLs do&#41;servidor de relatório SSRS Configuration Manager](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66090986"
   
 -   **127.0.0.1** é usado para acessar localhost. Ele dá suporte à administração local no computador do servidor de relatório. Se você selecionar apenas esse valor, somente os usuários que fizerem logon localmente no computador do servidor de relatório terão acesso ao aplicativo.  
   
--   *Nnn.nnn.nnn.nnn* é o endereço IPv4 de uma placa de adaptador de rede em seu computador. Se sua rede usar endereçamento IPv6, o endereço IP será um valor de 128 bits de 8 campos de 4 bytes semelhante ao seguinte formato: \<cabeçalho >:*nnnn:nnnn:nnnn:nnnn*  
+-   *Nnn.nnn.nnn.nnn* é o endereço IPv4 de uma placa de adaptador de rede em seu computador. Se sua rede usar endereçamento IPv6, o endereço IP será um valor de 128 bits de campos de 8 4 bytes semelhante ao seguinte formato: \<header >:*nnnn: nnnn: nnnn: nnnn*  
   
      Se você tiver várias placas, verá um endereço IP para cada uma. Se você selecionar apenas esse valor, isso limitará o acesso do aplicativo somente ao endereço IP (e qualquer nome de host que um servidor de nome de domínio mapear para esse endereço). Você não pode usar localhost para acessar um servidor de relatório e não pode usar os endereços IP de outras placas de adaptador de rede que estejam instaladas no computador do servidor de relatório.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66090986"
  Especifica a porta que o servidor de relatório monitora para solicitações HTTP de URLs que incluam o nome do diretório virtual do servidor de relatório.  
   
  **Certificado SSL**  
- Associa um certificado ao endereço IP que você especificou. O certificado deve estar instalado e configurado no computador. O Reporting Services não fornece recursos para o gerenciamento de certificados. O certificado deve ser emitido para um nome de host ou um nome de computador que seja resolvido para o endereço IP. Por exemplo, para usar um certificado que foi emitido para http://salesreports, o endereço IP especificado deve ser resolvido para um servidor denominado "salesreports".  
+ Associa um certificado ao endereço IP que você especificou. O certificado deve estar instalado e configurado no computador. O Reporting Services não fornece recursos para o gerenciamento de certificados. O certificado deve ser emitido para um nome de host ou um nome de computador que seja resolvido para o endereço IP. Por exemplo, para usar um certificado que foi emitido para http://salesreports, o endereço IP que você especificou deve ser resolvido para um servidor chamado "salesreports".  
   
  Se você usar um certificado, deverá modificar o parâmetro de configuração `UrlRoot` no arquivo RSReportServer.config para que ele especifique o nome totalmente qualificado do computador para o qual o certificado está registrado. Para obter mais informações, veja [Configurar conexões SSL em um Servidor de Relatórios do Modo Nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66090986"
 >  Para corrigir o problema, exclua todas as associações e crie novas associações com configurações exclusivas ou configure os registros de URL do Reporting Services com curingas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tópicos de Ajuda F1 do Configuration Manager do Reporting Services &#40;modo nativo do SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Gerenciador de configurações do Reporting Services F1 tópicos &#40;de ajuda sobre o&#41;modo nativo do SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

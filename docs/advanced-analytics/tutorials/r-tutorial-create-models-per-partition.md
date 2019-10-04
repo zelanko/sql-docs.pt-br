@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 04393e7a43ef240fb8a48de49352b183d79a9208
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 3395b237e08a10033819eeed74057cc7319d7f11
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714740"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952018"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutorial: Criar modelos baseados em partição no R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -167,14 +167,12 @@ GO
 
 ### <a name="parallel-execution"></a>Execução paralela
 
-Observe que as entradas [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) incluem  **@parallel= 1**, usadas para habilitar o processamento paralelo. Em contraste com as versões anteriores, no SQL Server 2019, a configuração  **@parallel= 1** fornece uma dica mais forte ao otimizador de consulta, tornando a execução paralela um resultado muito mais provável.
+Observe que as entradas [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) incluem `@parallel=1`, usadas para habilitar o processamento paralelo. Em contraste com as versões anteriores, no SQL Server 2019, a configuração de `@parallel=1` fornece uma dica mais forte ao otimizador de consulta, tornando a execução paralela um resultado muito mais provável.
 
-Por padrão, o otimizador de consulta tende a operar sob  **@parallel= 1** em tabelas com mais de 256 linhas, mas se você puder tratar  **@parallel** isso explicitamente definindo = 1, conforme mostrado neste script.
+Por padrão, o otimizador de consulta tende a operar em `@parallel=1` em tabelas com mais de 256 linhas, mas se você puder tratar isso explicitamente definindo `@parallel=1`, conforme mostrado neste script.
 
 > [!Tip]
-> Para treinar o workoads, você pode **@parallel** usar com qualquer script de treinamento arbitrário, mesmo aqueles que usam algoritmos não Microsoft-RX. Normalmente, somente os algoritmos RevoScaleR (com o prefixo RX) oferecem paralelismo em cenários de treinamento no SQL Server. Mas com o novo parâmetro, você pode paralelizar um script que chama funções, incluindo funções de R de software livre, não especificamente projetada com esse recurso. Isso funciona porque as partições têm afinidade com threads específicos, portanto, todas as operações chamadas em um script são executadas em uma base por partição, no thread determinado.
-
-<a name="training-step"></a>
+> Para treinar o workoads, você pode usar `@parallel` com qualquer script de treinamento arbitrário, mesmo aqueles que usam algoritmos não Microsoft-RX. Normalmente, somente os algoritmos RevoScaleR (com o prefixo RX) oferecem paralelismo em cenários de treinamento no SQL Server. Mas com o novo parâmetro, você pode paralelizar um script que chama funções, incluindo funções de R de software livre, não especificamente projetada com esse recurso. Isso funciona porque as partições têm afinidade com threads específicos, portanto, todas as operações chamadas em um script são executadas em uma base por partição, em atribuir @ no__t-0<a name="training-step"></a>
 
 ## <a name="run-the-procedure-and-train-the-model"></a>Executar o procedimento e treinar o modelo
 

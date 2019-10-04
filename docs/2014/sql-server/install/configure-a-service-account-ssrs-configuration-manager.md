@@ -1,5 +1,5 @@
 ---
-title: Configurar uma conta de serviço (Gerenciador de configuração do SSRS) | Microsoft Docs
+title: Configurar uma conta de serviço (SSRS Configuration Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - Report Server Windows service, accounts
 - Web service [Reporting Services], report server
 ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 84f6f2bdb4c5c512cb75dfea554b5ae28e3c3f02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04dff943d1227f84ff514e593f65c2ce4d7a918f
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096102"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952579"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>Configurar uma conta de serviço (Gerenciador de configurações do SSRS)
   Em uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o serviço Web Servidor de Relatório, o Gerenciador de Relatórios e o aplicativo de processamento em segundo plano são executados em um único serviço. A conta em que o serviço é executado é definida durante a Instalação quando você especifica a conta na página Identidade do Serviço, mas é possível usar a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se desejar usar uma conta diferente ou atualizar a senha.  
   
- Se você tiver um servidor de relatório está configurado para usar o modo integrado do SharePoint e você alterar a conta de serviço usando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ferramenta de configuração, você também deve abrir a Administração Central do SharePoint e usar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Conceder acesso ao banco de dados** página para reaplicar as configurações de servidor e instância de relatório. Essa etapa concederá à nova serviço conta acesso aos bancos de dados do SharePoint, que é necessária para integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
+ Se você tiver um servidor de relatório está configurado para usar o modo integrado do SharePoint e você alterar a conta de serviço usando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ferramenta de configuração, você também deve abrir a Administração Central do SharePoint e usar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Conceder acesso ao banco de dados** página para reaplicar as configurações de servidor e instância de relatório. Esta etapa concederá a nova conta de serviço acesso aos bancos de dados do SharePoint, o que é necessário para integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
   
  Sempre use a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para atualizar a conta de serviço, de forma que outras configurações que dependam da identidade de serviço possam ser atualizadas simultaneamente.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66096102"
   
 1.  Inicie o gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e conecte-se ao servidor de relatório.  
   
-2.  Na página Conta de Serviço, selecione a opção que descreve o tipo de conta que você deseja usar. Para obter recomendações sobre qual tipo de conta para especificar, consulte [configurar a conta de serviço do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
+2.  Na página Conta de Serviço, selecione a opção que descreve o tipo de conta que você deseja usar. Para obter recomendações sobre qual tipo de conta especificar, consulte [Configurar a conta &#40;de serviço do servidor&#41;de relatório SSRS Configuration Manager](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
 3.  Se você tiver selecionado uma conta de usuário do Windows, especifique a nova conta e a senha. A conta não pode ter mais do que 20 caracteres.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66096102"
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Conta de serviço &#40;modo nativo do SSRS&#41;](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
+ [Modo&#41;nativo &#40;do SSRS de conta de serviço](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
  [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

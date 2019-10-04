@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 33bbaf46bb4dee5e0e7b58f6dc179ae5647ee3e7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ed0cd8bad3a99c7f1f59b5121aafb06ccdee63b2
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890735"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952239"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Lista de verificação de implantação: Instalação multisservidor do PowerPivot para SharePoint 2010
-  Esta lista de verificação orienta você pelas etapas para adicionar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o para SharePoint a um farm do SharePoint 2010 de três camadas que você cria desde o início. Um farm em três níveis contém os níveis de banco de dados, aplicativo e Web. A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] adição a essa topologia requer que você execute SQL Server instalação para [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instalar na camada de aplicativo. Os arquivos de programa do PowerPivot são adicionados à camada da Web, mas somente como uma tarefa de pós-instalação quando você implanta a solução de aplicativo Web. Embora haja etapas de instalação, não é necessário executar nenhuma etapa de instalação separada na camada da Web nem na camada de dados. A única etapa de instalação que você precisa executar é a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instalação nos servidores de aplicativos.  
+  Esta lista de verificação orienta você pelas etapas para adicionar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para o SharePoint a um farm do SharePoint 2010 de três camadas que você cria desde o início. Um farm em três níveis contém os níveis de banco de dados, aplicativo e Web. Adicionar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a essa topologia requer que você execute SQL Server instalação para instalar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] na camada de aplicativo. Os arquivos de programa do PowerPivot são adicionados à camada da Web, mas somente como uma tarefa de pós-instalação quando você implanta a solução de aplicativo Web. Embora haja etapas de instalação, não é necessário executar nenhuma etapa de instalação separada na camada da Web nem na camada de dados. A única etapa de instalação que você precisa executar é instalar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] nos servidores de aplicativos.  
   
 ||  
 |-|  
@@ -148,7 +148,7 @@ ms.locfileid: "68890735"
   
  Sempre instale o PowerPivot para SharePoint em um servidor de aplicativos. Embora os servidores Web de front-end também executem os componentes de servidor do PowerPivot para SharePoint, os componentes executados no front-end da Web serão instalados durante a etapa de configuração do PowerPivot para SharePoint, quando você implantar soluções no farm. Para obter mais informações sobre a instalação, consulte [instalar PowerPivot para SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md).  
   
- Se a topologia de implantação exigir duas instâncias do PowerPivot para SharePoint, execute a Instalação do SQL Server em cada servidor de aplicativo. Você pode ter apenas uma instância do PowerPivot para SharePoint em um único computador. Se você precisar de várias instâncias, use servidores adicionais. Para obter mais informações sobre como adicionar vários servidores PowerPivot para SharePoint ao mesmo farm, [consulte lista de verificação de implantação: Escale horizontalmente adicionando servidores PowerPivot a um farm](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)do SharePoint 2010.  
+ Se a topologia de implantação exigir duas instâncias do PowerPivot para SharePoint, execute a Instalação do SQL Server em cada servidor de aplicativo. Você pode ter apenas uma instância do PowerPivot para SharePoint em um único computador. Se você precisar de várias instâncias, use servidores adicionais. Para obter mais informações sobre como adicionar vários servidores PowerPivot para SharePoint ao mesmo farm, consulte lista de verificação de [Deployment: Escale horizontalmente adicionando servidores PowerPivot a um farm do SharePoint 2010 @ no__t-0.  
   
 ##  <a name="installclientlib"></a>Instalar Analysis Services bibliotecas de cliente em servidores de aplicativos do SharePoint que não têm uma instalação do PowerPivot para SharePoint  
  Uma topologia de farm, que inclui um servidor de aplicativo ou servidor de front-end da Web que executa os aplicativos a seguir sem uma instalação do PowerPivot para SharePoint no mesmo computador, exigirá software adicional para dar suporte a recursos e acesso a dados PowerPivot:  
@@ -189,13 +189,13 @@ ms.locfileid: "68890735"
   
  Para verificar a integração do PowerPivot com um site do SharePoint, faça o seguinte:  
   
-1.  Em um navegador, abra o aplicativo Web criado. Se você usou valores padrão, você pode especificar http://\<o nome do seu computador > no endereço da URL.  
+1.  Em um navegador, abra o aplicativo Web criado. Se você tiver usado valores padrão, poderá especificar http://\<your nome do computador > no endereço da URL.  
   
 2.  Verifique se os recursos de acesso aos dados e de processamento do PowerPivot estão disponíveis no aplicativo. É possível fazer isso verificando a presença de modelos de biblioteca fornecidos pelo PowerPivot:  
   
     1.  Em ações do site, clique em **mais opções..** .  
   
-    2.  Em bibliotecas, você deve ver **biblioteca** de feeds de dados e **Galeria PowerPivot**. Esses modelos de biblioteca são fornecidos pelo recurso do PowerPivot, estando visíveis na lista Bibliotecas apenas se o recurso estiver integrado corretamente.  
+    2.  Em bibliotecas, você deve ver **biblioteca de feeds de dados** e **Galeria PowerPivot**. Esses modelos de biblioteca são fornecidos pelo recurso do PowerPivot, estando visíveis na lista Bibliotecas apenas se o recurso estiver integrado corretamente.  
   
  Para verificar o acesso a dados PowerPivot no servidor, faça o seguinte:  
   
@@ -211,7 +211,7 @@ ms.locfileid: "68890735"
   
 6.  Em Tipo de Servidor, selecione **Analysis Services**.  
   
-7.  Em nome do servidor, digite  **\<Server-Name > \powerpivot**, em que  **\<Server-Name >** é o nome do computador que tem a instalação do PowerPivot para SharePoint.  
+7.  Em nome do servidor, digite **\<server-nome > \powerpivot**, em que **\<server-Name >** é o nome do computador que tem a instalação do PowerPivot para SharePoint.  
   
 8.  Clique em **Conectar**.  
   
@@ -265,7 +265,7 @@ ms.locfileid: "68890735"
   
 ## <a name="see-also"></a>Consulte também  
  [Recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
- [Instalar o PowerPivot para SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)   
- [Lista de verificação de implantação: Escalar horizontalmente adicionando servidores PowerPivot a um farm do SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)  
+ [Instalar PowerPivot para SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)   
+ Lista de verificação de [Deployment: Escalar horizontalmente adicionando servidores PowerPivot a um farm do SharePoint 2010 @ no__t-0  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Extensões obsoletas detectadas no computador do servidor de relatório (Supervisor de atualização) | Microsoft Docs
+title: Extensões obsoletas foram detectadas no computador do servidor de relatório (Supervisor de atualização) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], upgrade issues
 ms.assetid: 40d245a2-0631-470e-81b3-1feb47e028cb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 93a971b82fa4bafd1d8fb51a148b7e488c7d6d20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18f90bd6c551a6240a49eed9a0ec39723851bce1
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66093812"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952075"
 ---
 # <a name="obsolete-extensions-were-detected-on-the-report-server-computer-upgrade-advisor"></a>Extensões obsoletas detectadas no computador do servidor de relatório (Supervisor de Atualização)
   O Supervisor de Atualização detectou uma ou mais extensões de renderização que não estão mais disponíveis na versão atual.  
@@ -32,9 +32,9 @@ ms.locfileid: "66093812"
 ## <a name="description"></a>Descrição  
  O servidor de relatório está configurado para usar uma ou mais extensões que foram descontinuadas nesta versão. As extensões descontinuadas incluem:  
   
--   Extensão de renderização HTML OWC  
+-   Extensão de renderização do OWC HTML  
   
--   Extensão de renderização 3,2 HTML  
+-   Extensão de renderização HTML 3,2  
   
  A atualização pode continuar, mas a funcionalidade sem suporte não estará mais disponível no servidor de relatório atualizado.  
   
@@ -44,6 +44,6 @@ ms.locfileid: "66093812"
  Avalie o conjunto atual de recursos incluídos no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para determinar se a funcionalidade suportada satisfaz suas necessidades.  
   
 ## <a name="see-also"></a>Consulte também  
- [Problemas de atualização do Reporting Services &#40;Supervisor de atualização&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [Supervisor de atualização &#40;de problemas de atualização do Reporting Services&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

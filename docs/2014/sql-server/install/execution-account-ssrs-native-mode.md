@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.executionaccount.F1
 ms.assetid: 440b5a09-5fd4-4c3a-b510-f3c33cbf1c82
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 17bbc891c54d28f5eedbebc1d51edf11d0ae405b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0eff6dca788744b93d2d6d4a0a7175764e263f71
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095335"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952541"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>Conta de execução (modo nativo do SSRS)
   Use esta página para configurar uma conta a ser usada para processamento autônomo. Essa conta é usada em circunstâncias especiais, quando outras fontes de credenciais não estiverem disponíveis:  
@@ -44,7 +44,7 @@ ms.locfileid: "66095335"
  Selecione para especificar uma conta.  
   
  **Conta**  
- Insira uma conta de usuário de domínio do Windows. Use este formato: *\<domain>\\<user account\>*.  
+ Insira uma conta de usuário de domínio do Windows. Use este formato: *\<domain>\\<user account\>* .  
   
  **Senha**  
  Digite a senha.  
@@ -53,7 +53,7 @@ ms.locfileid: "66095335"
  Redigite a senha.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tópicos de Ajuda F1 do Configuration Manager do Reporting Services &#40;modo nativo do SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Gerenciador de configurações do Reporting Services F1 tópicos &#40;de ajuda sobre o&#41;modo nativo do SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Armazenar dados criptografados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Configurar a conta de execução autônoma &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
   

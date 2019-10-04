@@ -1,5 +1,5 @@
 ---
-title: Reporting Services tópicos de ajuda de F1 do Gerenciador de configuração (modo nativo do SSRS) | Microsoft Docs
+title: Tópicos de ajuda do Gerenciador de Configurações do Reporting Services F1 (modo nativo do SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 95d18bdc96a8215f5050c3b8ecd68ec2b133e28f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092673"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952039"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Tópicos de Ajuda F1 do Gerenciador de Configurações do Reporting Services (modo nativo do SSRS).
   Esta seção fornece ajuda de F1 para o Gerenciador de Configurações do Reporting Services.  
@@ -34,15 +34,15 @@ ms.locfileid: "66092673"
   
 -   [URL do serviço Web](../../../2014/sql-server/install/web-service-url-ssrs-native-mode.md)  
   
--   [Configuração avançada de vários sites da Web](../../../2014/sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md)  
+-   [Configuração avançada de vários sites](../../../2014/sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md)  
   
 -   [Backup de banco de dados](../../../2014/sql-server/install/database-ssrs-native-mode.md)  
   
--   [Assistente de banco de dados de alteração](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)  
+-   [Assistente para alterar banco de dados](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)  
   
--   [Assistente alterar credenciais](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)  
+-   [Assistente de alteração de credenciais](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)  
   
--   [URL do Gerenciador de relatórios](../../../2014/sql-server/install/report-manager-url-ssrs-native-mode.md)  
+-   [URL de Report Manager](../../../2014/sql-server/install/report-manager-url-ssrs-native-mode.md)  
   
 -   [Configurações de email](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
@@ -54,9 +54,9 @@ ms.locfileid: "66092673"
   
 -   [Restaurar chave de criptografia](../../../2014/sql-server/install/restore-encryption-key-ssrs-native-mode.md)  
   
--   [Implantação escalável](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
+-   [Implantação em expansão](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciador de configuração do Reporting Services &#40;/DEL&#41;](reporting-services-configuration-manager-native-mode.md)  
+ [Gerenciador de Configurações do Reporting Services &#40;del&#41;](reporting-services-configuration-manager-native-mode.md)  
   
   

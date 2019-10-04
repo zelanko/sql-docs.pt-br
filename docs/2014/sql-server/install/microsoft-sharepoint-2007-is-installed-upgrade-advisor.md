@@ -7,35 +7,35 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 6f1da295-d9b7-4948-99d3-ebd3587337c6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3487d84f95b559c115f9be6310b07dd4d0429fea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 84672ddf6a9b2912f3d53eef8d40727369376ba5
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094025"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952088"
 ---
 # <a name="microsoft-sharepoint-2007-is-installed-upgrade-advisor"></a>O Microsoft SharePoint 2007 está instalado (Supervisor de Atualização)
   O Supervisor de Atualização detectou uma versão sem suporte de um produto ou uma tecnologia do SharePoint.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo do SharePoint.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo do SharePoint.|  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Descrição  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não atualizar ou instalar o SharePoint 2007. A atualização está bloqueada.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não será atualizado ou instalado no SharePoint 2007. A atualização está bloqueada.  
   
 ## <a name="corrective-action"></a>Ação corretiva  
  Para continuar com a atualização, você deve desinstalar o SharePoint 2007 ou atualizar o SharePoint 2007 para um produto do SharePoint 2010. Depois de atualizar sua instalação do SharePoint, execute novamente o Supervisor de Atualização para confirmar se não há outros problemas de atualização.  
   
- Não é possível atualizar diretamente do SharePoint 2007 para o SharePoint 2013. mas você pode fazer o que é conhecido para como um banco de dados de "salto duplo" anexar para atualizar o Office SharePoint Server 2007 para o SharePoint Server 2010 e do SharePoint Server 2010 para o SharePoint Server 2013.  
+ Não é possível atualizar diretamente do SharePoint 2007 para o SharePoint 2013. Mas você pode fazer o que é conhecido como um anexo de banco de dados "salto duplo" para atualizar do Office SharePoint Server 2007 para o SharePoint Server 2010 e, em seguida, do SharePoint Server 2010 para o SharePoint Server 2013.  
   
 ## <a name="see-also"></a>Consulte também  
- [Problemas de atualização do Reporting Services &#40;Supervisor de atualização&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [Supervisor de atualização &#40;de problemas de atualização do Reporting Services&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

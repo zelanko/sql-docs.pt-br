@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 797405386e8a6c0b9e62328699f3a73a6d845313
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: f70af740fb3fe8310a5306368c1bf48c6f357419
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892439"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71951999"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>Solução de problemas da instalação do PowerPivot para SharePoint
   Se você obtiver erros em vez das páginas e recursos que você esperava, faça o seguinte.  
@@ -31,7 +31,7 @@ ms.locfileid: "68892439"
 ### <a name="powerpivot-gallery-thumbnail-images-show-as-a-red-x"></a>As imagens em miniatura para Galeria PowerPivot são exibidas como um X vermelho  
  Uma causa possível é que a **Integração de recursos do PowerPivot para coleções de sites** não está ativa. Preencha o seguinte:  
   
-1.  Na biblioteca da galeria do PowerPivot, clique ![](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "") em **configurações do site** no ícone de engrenagem configurações do SharePoint configurações ou na lista **inicial** .  
+1.  Na biblioteca da galeria do PowerPivot, clique em **configurações do site** no ícone de engrenagem configurações ![do SharePoint configurações](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "ou na") lista **inicial** .  
   
 2.  Na seção **Administração do Conjunto de Sites** , clique em **Recursos do Conjunto de Sites**.  
   

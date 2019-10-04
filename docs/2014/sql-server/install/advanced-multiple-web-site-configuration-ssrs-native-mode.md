@@ -1,5 +1,5 @@
 ---
-title: Configuração avançada de vários sites da Web (modo nativo do SSRS) | Microsoft Docs
+title: Configuração avançada de vários sites (modo nativo do SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.advancedmultiplewebsiteconfig.F1
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 01ed7ed806cc064b05180347fa41905b57c4c98e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b331015abd90fbff4c3810118666dbc9b356369b
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096824"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952675"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Configuração avançada de vários sites (modo nativo do SSRS)
   Use esta caixa de diálogo para criar e gerenciar as URLs usadas para acessar um servidor de relatório ou um Gerenciador de Relatórios. A caixa de diálogo **Configuração Avançada de Vários Sites** é usada para criar URLs adicionais, URLs personalizadas que incluem um nome de cabeçalho de host ou para especificar um endereço IP no formato IPv4 ou IPv6.  
@@ -40,12 +40,12 @@ ms.locfileid: "66096824"
   
 -   **127.0.0.1** é usado para acessar localhost. Ele dá suporte à administração local no computador do servidor de relatório. Se você selecionar apenas esse valor, somente os usuários que fizerem logon localmente no computador do servidor de relatório terão acesso ao aplicativo.  
   
--   *Nnn.nnn.nnn.nnn* é o endereço IPv4 de uma placa de adaptador de rede em seu computador. Se sua rede usar endereçamento IPv6, o endereço IP será um valor de 128 bits de 8 campos de 4 bytes semelhante ao seguinte formato: \<cabeçalho >:*nnnn:nnnn:nnnn:nnnn*.  
+-   *Nnn.nnn.nnn.nnn* é o endereço IPv4 de uma placa de adaptador de rede em seu computador. Se sua rede usar endereçamento IPv6, o endereço IP será um valor de 128 bits de campos de 8 4 bytes semelhante ao seguinte formato: \<header >:*nnnn: nnnn: nnnn: nnnn*.  
   
      Se você tiver várias placas, verá um endereço IP para cada uma. Se você selecionar apenas esse valor, isso limitará o acesso do aplicativo somente ao endereço IP (e qualquer nome de host que um servidor de nome de domínio mapear para esse endereço). Você não pode usar localhost para acessar um servidor de relatório e não pode usar os endereços IP de outras placas de adaptador de rede que estejam instaladas no computador do servidor de relatório.  
   
  **Porta**  
- Especifica a porta que o servidor de relatório monitora por solicitações. A porta 80 é a padrão. Se você usar a porta 80, não precisará incluí-la na URL. Se você usar qualquer outro número de porta, você sempre deve incluí-lo na URL (por exemplo, http://localhost:8181/reports).  
+ Especifica a porta que o servidor de relatório monitora por solicitações. A porta 80 é a padrão. Se você usar a porta 80, não precisará incluí-la na URL. Se você usar qualquer outro número de porta, sempre deverá incluí-lo na URL (por exemplo, http://localhost:8181/reports).  
   
  **Cabeçalho de Host**  
  Se você já tiver um cabeçalho de host definido em um servidor de nome de domínio que seja resolvido para seu computador, poderá especificar esse cabeçalho de host em uma URL que você configure para acesso ao servidor de relatório.  
