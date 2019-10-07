@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: caf70d087a7df27248457df40f6ceb4d3ab9e3d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 099f8e4bfb71dbf3d9dda385d6981985197756e2
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909724"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816691"
 ---
 # <a name="index-disk-space-example"></a>Exemplo de espaço em disco de índice
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,9 +72,7 @@ ms.locfileid: "67909724"
   
 3.  Determine o espaço em disco temporário para classificação.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     Space requirements are shown for sorting in **tempdb** (with SORT_IN_TEMPDB set to ON) and sorting in the target location (with SORT_IN_TEMPDB set to OFF).  
+     Os requisitos de espaço são exibidos para classificação em **tempdb** (com SORT_IN_TEMPDB definido como ON) e a classificação no local de destino (com SORT_IN_TEMPDB definido como OFF).  
   
     1.  Quando SORT_IN_TEMPDB estiver definido como ON, **tempdb** deverá ter espaço em disco suficiente para manter o maior índice (1 milhão * 200 bytes ~ 200 MB). O fator de preenchimento não é considerado na operação de classificação.  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ca1ff898841b946c0823b71b065f360a59e69696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d3d470a42d21e5c9946cd3b90dbd488bde515b8
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071700"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816768"
 ---
 # <a name="attach-a-database"></a>Anexar um banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,35 +56,33 @@ Requer permissão `CREATE DATABASE`, `CREATE ANY DATABASE` ou `ALTER ANY DATABAS
   
 2.  Clique com o botão direito do mouse em **Bancos de dados** e clique em **Anexar**.  
   
-3.  Na caixa de diálogo **Anexar Banco de Dados** , para especificar o banco de dados a ser anexado, clique em **Adicionar**. Na caixa de diálogo **Localizar Arquivos de Banco de Dados** , selecione a unidade de disco onde o banco de dados reside e expanda a árvore de diretório para localizar e selecionar o arquivo .mdf do banco de dados, por exemplo:  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+3.  Na caixa de diálogo **Anexar Banco de Dados** , para especificar o banco de dados a ser anexado, clique em **Adicionar**. Na caixa de diálogo **Localizar Arquivos de Banco de Dados** , selecione a unidade de disco onde o banco de dados reside e expanda a árvore de diretório para localizar e selecionar o arquivo .mdf do banco de dados, por exemplo:
 
      `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\AdventureWorks2012_Data.mdf`  
   
     > [!IMPORTANT]  
-    > Trying to select a database that is already attached generates an error.  
+    > Tentar selecionar um banco de dados já anexado gera erro.  
   
-     **Databases to attach**  
-     Displays information about the selected databases.  
+     **Bancos de dados a serem anexados**  
+     Exibe informações sobre os bancos de dados selecionados.  
   
      \<no column header>  
-     Displays an icon indicating the status of the attach operation. The possible icons are described in the **Status** description, below).  
+     Exibe um ícone que indica o status da operação de anexação. Os possíveis ícones são descritos em **Status** , abaixo).  
   
-     **MDF File Location**  
-     Displays the path and file name of the selected MDF file.  
+     **Local do Arquivo MDF**  
+     Exibe o caminho e o nome de arquivo do arquivo MDF selecionado.  
   
      **Database Name**  
-     Displays the name of the database.  
+     Exibe o nome do banco de dados.  
   
-     **Attach As**  
-     Optionally, specifies a different name for the database to attach as.  
+     **Anexar como**  
+     Opcionalmente, especifique um nome diferente para o banco de dados anexar como.  
   
-     **Owner**  
-     Provides a drop-down list of possible database owners from which you can optionally select a different owner.  
+     **Proprietário**  
+     Fornece uma lista suspensa de possíveis proprietários de banco de dados dos quais você pode selecionar um proprietário diferente opcionalmente.  
   
      **Status**  
-     Displays the status of the database according to the following table.  
+     Exibe o status do banco de dados de acordo com a seguinte tabela.  
   
     |Ícone|Texto de status|Descrição|  
     |----------|-----------------|-----------------|  
@@ -95,32 +93,32 @@ Requer permissão `CREATE DATABASE`, `CREATE ANY DATABASE` ou `ALTER ANY DATABAS
     |Círculo que contém dois quadrantes pretos (à esquerda e à direita) e dois quadrantes brancos (em cima e em baixo)|Stopped (parado)|A operação de anexação não foi completada com êxito porque o usuário interrompeu a operação.|  
     |Círculo que contém uma seta curvada que aponta para o sentido anti-horário|Revertida|A operação de anexação teve êxito, mas foi revertida devido a um erro ao se anexar outro objeto.|  
   
-     **Message**  
-     Displays either a blank message or a "File not found" hyperlink.  
+     **Mensagem**  
+     Exibe uma mensagem em branco ou um hiperlink "Arquivo não encontrado"  
   
-     **Add**  
-     Find the necessary main database files. When the user selects an .mdf file, applicable information is automatically filled in the respective fields of the **Databases to attach** grid.  
+     **Adicionar**  
+     Encontrar os arquivos de banco de dados principais necessários. Quando o usuário selecionar um arquivo .mdf , os respectivos campos são automaticamente preenchidos com informações aplicáveis da grade **Bancos de dados a serem anexados** .  
   
-     **Remove**  
-     Removes the selected file from the **Databases to attach** grid.  
+     **Remover**  
+     Remove o arquivo selecionado da grade **Bancos de dados a serem anexados** .  
   
-     **"** *<database_name>* **" database details**  
-     Displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (**...**).  
+     **"** *<database_name>* **" detalhes do banco de dados**  
+     Exibe os nomes dos arquivos a serem anexados. Para verificar ou alterar o nome do caminho de um arquivo, clique no botão **Procurar** ( **...** ).  
   
     > [!NOTE]  
-    > If a file does not exist, the **Message** column displays "Not found." If a log file is not found, it exists in another directory or has been deleted. You need to either update the file path in the **database details** grid to point to the correct location or remove the log file from the grid. If an .ndf data file is not found, you need to update its path in the grid to point to the correct location.  
+    > Se um arquivo não existir, a coluna **Mensagem** exibe "Não encontrado." Se um arquivo de log não for encontrado, ele existe em outro diretório ou foi excluído. Você precisa atualizar o caminho do arquivo na grade **detalhes do banco de dados** para indicar o local correto ou remover o arquivo de log da grade. Se um arquivo de dados .ndf não for encontrado, você precisará atualizar seu caminho na grade a fim de indicar o local correto.  
   
-     **Original File Name**  
-     Displays the name of the attached file belonging to the database.  
+     **Nome do arquivo original**  
+     Exibe o nome do arquivo anexado que pertence ao banco de dados.  
   
-     **File Type**  
-     Indicates the type of file, **Data** or **Log**.  
+     **Tipo de arquivo**  
+     Indica o tipo de arquivo, **Dados** ou **Log**.  
   
-     **Current File Path**  
-     Displays the path to the selected database file. The path can be edited manually.  
+     **Caminho do arquivo atual**  
+     Exibe o caminho para o arquivo de banco de dados selecionado. O caminho pode ser editado manualmente.  
   
-     **Message**  
-     Displays either a blank message or a "**File not found**" hyperlink.  
+     **Mensagem**  
+     Exibe uma mensagem em branco ou um hiperlink “**Arquivo não encontrado**”.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

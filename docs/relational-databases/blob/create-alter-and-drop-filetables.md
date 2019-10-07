@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 03fa6e342eab136bbeb90e06d6a6ef4d5325b1d5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 7ed2d476be0ba9a22b42e5c7e60789a4059ea73c
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811180"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816732"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Criar, alterar e remover FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,8 +56,6 @@ ms.locfileid: "68811180"
     2.  Se você não fornecer um valor para **FILETABLE_COLLATE_FILENAME** ou se você especificar **database_default**, a coluna herdará a ordenação do banco de dados atual. Se a ordenação do banco de dados atual diferenciar maiúsculas de minúsculas, será gerado um erro e a operação **CREATE TABLE** falhará.  
   
 3.  Você também pode especificar os nomes a serem usados para as 3 restrições de chave primária e exclusivas que são criadas automaticamente. Se você não fornecer nomes, o sistema gerará nomes conforme descrito posteriormente neste tópico.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   **FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME**  
   

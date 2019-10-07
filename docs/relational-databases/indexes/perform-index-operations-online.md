@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac1c10bfefd80a121e858cc0175f08b6ee68ab6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 914d2a3bfd73c76fc89b1ca6ed0302f32e0a4d32
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909598"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680789"
 ---
 # <a name="perform-index-operations-online"></a>Executar operações de índice online
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -96,12 +96,11 @@ ms.locfileid: "67909598"
 ### <a name="to-create-rebuild-or-drop-an-index-online"></a>Para criar, recriar ou descartar um índice online  
   
 O exemplo a seguir recria um índice online existente no banco de dados AdventureWorks.
-  
- ```sql  
- ALTER INDEX AK_Employee_NationalIDNumber
-   ON HumanResources.Employee  
-   REBUILD WITH (ONLINE = ON)
-;
+
+```sql
+ALTER INDEX AK_Employee_NationalIDNumber
+    ON HumanResources.Employee
+    REBUILD WITH (ONLINE = ON);
 ```  
   
 O exemplo a seguir exclui um índice clusterizado online e move a tabela resultante (heap) para o grupo de arquivos `NewGroup` usando a cláusula `MOVE TO` . As exibições do catálogo `sys.indexes`, `sys.tables`e `sys.filegroups` são consultadas para verificar o posicionamento do índice e da tabela nos grupos de arquivos antes e depois da movimentação.  

@@ -17,12 +17,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c9e96d5ebbe71273204b39ed5d387ecab598654a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 4c4338893ea7cd38743967df8b3523def58df9fd
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764357"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710964"
 ---
 # <a name="change-publication-and-article-properties"></a>Alterar propriedades da publicação e do artigo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "68764357"
 |Descrição|Procedimento armazenado|Propriedades|Requisitos|  
 |-----------------|----------------------|----------------|------------------|  
 |Descartar um artigo|**sp_droparticle**|Todos os parâmetros.|Os artigos podem ser descartados antes que as assinaturas sejam criadas. Com os procedimentos armazenados, é possível descartar uma assinatura de um artigo, usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], a assinatura inteira deve ser descartada, recriada e sincronizada. Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).|  
-|Alterar um filtro de coluna.|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
+|Alterar um filtro de coluna.|**sp_articlecolumn**|`@column`<br /><br /> `@operation`|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Adicionar um filtro de linha.|**sp_articlefilter**|Todos os parâmetros.|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
-|Descartar um filtro de linha.|**sp_articlefilter**|**@article**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
-|Alterar um filtro de linha.|**sp_articlefilter**|**@filter_clause**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
+|Descartar um filtro de linha.|**sp_articlefilter**|`@article`|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
+|Alterar um filtro de linha.|**sp_articlefilter**|`@filter_clause`|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Alterar um filtro de linha.|**sp_changearticle**|**filtro**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Alterar opções de esquema.|**sp_changearticle**|**schema_option**|Novo instantâneo.|  
 |Alterar como as tabelas são controladas no Assinante antes de aplicar o instantâneo.|**sp_changearticle**|**pre_creation_cmd**|Novo instantâneo.|  
@@ -58,7 +58,7 @@ ms.locfileid: "68764357"
 |Alterar os comandos INSERT, UPDATE ou DELETE.|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Alterar o nome da tabela de destino|**sp_changearticle**|**dest_table**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Alterar o proprietário da tabela de destino (esquema).|**sp_changearticle**|**destination_owner**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
-|Alterar os mapeamentos de tipo de dados (aplica-se somente à edição com o Oracle).|**sp_changearticlecolumndatatype**|**@type**<br /><br /> **@length**<br /><br /> **@precision**<br /><br /> **@scale**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
+|Alterar os mapeamentos de tipo de dados (aplica-se somente à edição com o Oracle).|**sp_changearticlecolumndatatype**|`@type` <br /><br /> `@length` <br /><br /> `@precision`<br /><br /> `@scale`|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
   
 ## <a name="publication-properties-for-merge-replication"></a>Propriedades de publicação para a replicação de mesclagem  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68764357"
 |Alterar scripts pré ou pós-instantâneo.|**sp_changemergepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|Novo instantâneo (também é necessário se você alterar os conteúdos de script).<br /><br /> A reinicialização é necessária para aplicar o script novo ao Assinante.|  
 |Adicionar um filtro de junção ou um registro lógico.|**sp_addmergefilter**|Todos os parâmetros.|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Descartar um filtro de junção ou um registro lógico.|**sp_dropmergefilter**|Todos os parâmetros.|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
-|Alterar um filtro de junção ou registro lógico.|**sp_changemergefilter**|**@property**<br /><br /> **@value**|Novo instantâneo<br /><br /> Reinicialize as assinaturas.|  
+|Alterar um filtro de junção ou registro lógico.|**sp_changemergefilter**|`@property`<br /><br /> `@value`|Novo instantâneo<br /><br /> Reinicialize as assinaturas.|  
 |Desabilitar o uso de filtros com parâmetros (habilitar os filtros com parâmetros não requer nenhuma ação especial).|**sp_changemergepublication**|Um valor **false** para **dynamic_filters**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Ativar ou desabilitar o uso de partições pré-computadas.|**sp_changemergepublication**|**use_partition_groups**|Novo instantâneo.|  
 |Habilitar ou desabilitar a otimização de partição do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)].|**sp_changemergepublication**|**keep_partition_changes**|Reinicialize as assinaturas.|  
@@ -86,7 +86,7 @@ ms.locfileid: "68764357"
 |Descartar um artigo, quando o artigo tem o último filtro com parâmetros na publicação.|**sp_dropmergearticle**|Todos os parâmetros|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Descartar um artigo, quando é um artigo pai em um filtro de junção ou em um registro lógico (isso tem como efeito colateral o descarte da junção).|**sp_dropmergearticle**|Todos os parâmetros|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Descartar um artigo, todas as outras circunstâncias.|**sp_dropmergearticle**|Todos os parâmetros|Novo instantâneo.|  
-|Incluir um filtro de coluna que não foi publicado anteriormente.|**sp_mergearticlecolumn**|**@column**<br /><br /> **@operation**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
+|Incluir um filtro de coluna que não foi publicado anteriormente.|**sp_mergearticlecolumn**|`@column`<br /><br /> `@operation`|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Adicionar, descartar ou alterar um filtro de linha.|**sp_changemergearticle**|**subset_filterclause**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.<br /><br /> Se você adicionar, descartar ou alterar um filtro com parâmetros, as alterações pendentes no Assinante não poderão ser carregadas no Publicador durante a reinicialização. Para carregar alterações pendentes, sincronize todas as assinaturas antes de alterar o filtro.<br /><br /> Se um artigo não estiver envolvido em um filtro de junção, você poderá descartar o artigo e adicioná-lo novamente, com um filtro de linha diferente, não é necessário reinicializar a assinatura inteira. Para obter mais informações sobre como adicionar e remover artigos, consulte [Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).|  
 |Alterar opções de esquema.|**sp_changemergearticle**|**schema_option**|Novo instantâneo.|  
 |Controlar as alterações do nível de coluna para o nível de linha (alterar o controle do nível de linha para controle do nível de coluna não requer nenhuma ação especial).|**sp_changemergearticle**|Um valor **false** para **column_tracking**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  

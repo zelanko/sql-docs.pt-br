@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0b7ea891c0c4ee5dfbcd8301cff4e364dcd5cae7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f621bf9839e5f0e36051461f144a4070ff715489
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909233"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710397"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>Alternar entre modos de atualização para uma assinatura transacional atualizável
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "67909233"
   
 1.  Verifique se a assinatura oferece suporte para failover executando [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) para uma assinatura pull ou [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) para uma assinatura push. Se o valor do **modo de atualização** no conjunto de resultados for **3** ou **4**, há suporte para failover.  
   
-2.  No Assinante, no banco de dados da assinatura, execute [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md). Especifique **@publisher** , **@publisher_db** , **@publication** , e um dos seguintes valores para **@failover_mode** :  
+2.  No Assinante, no banco de dados da assinatura, execute [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md). Especifique `@publisher`, `@publisher_db`, `@publication`e um dos valores a seguir para `@failover_mode`:  
   
     -   **em fila** - failover para atualização em fila quando a conectividade for perdida temporariamente.  
   

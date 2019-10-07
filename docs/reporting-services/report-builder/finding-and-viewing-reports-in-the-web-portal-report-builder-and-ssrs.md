@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8f0dae8999d22773a1a76440c439d4682785f684
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
+ms.openlocfilehash: 2f98607ce8544a913ace04bbc70aa578d1090557
+ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492846"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923794"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Localizando e exibindo relatórios no Portal da Web (Construtor de Relatórios e SSRS)
   O Gerenciador de Relatórios é uma ferramenta com base na Web que inclui recursos para exibir e gerenciar relatórios. Faz parte de uma instalação do servidor de relatórios. Para abrir o Gerenciador de Relatórios, digite uma URL do Gerenciador de Relatórios em uma janela do navegador. Para obter mais informações sobre os requisitos de navegador, veja [Suporte ao navegador para Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md). Para obter mais informações sobre como uma URL do Gerenciador de Relatórios deve ser configurada no servidor de relatório, contate o administrador de sistema. Para obter mais informações, consulte [Configurar o Gerenciador de Relatórios &#40;Modo Nativo&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md).  

@@ -8,13 +8,13 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.collection: linux-container
-moniker: '>= sql-server-linux-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 4fa470ce5b35cf8e78f919080988b5091af6e04e
-ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
+monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
+ms.openlocfilehash: 28bdf20b51769e15a887b4f9ec227f7aaf6afc95
+ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69890907"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923819"
 ---
 # <a name="run-sql-server-machine-learning-services-in-a-container"></a>Executar os Serviços de Machine Learning do SQL Server em um contêiner
 

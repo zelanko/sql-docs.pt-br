@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a0acec2dd2e4e7e9d08d979febf85cf98f883e77
-ms.sourcegitcommit: 5a03dc2bba481c2e2f03d67f6ee9486fc9f8ba95
+ms.openlocfilehash: 652ef86f26f92068465668cadeccf8e193db1f90
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71066872"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708283"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Criar um instantâneo do banco de dados (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,8 +99,6 @@ AdventureWorks_snapshot_evening
   
 2.  Emita uma instrução CREATE DATABASE nos arquivos usando a cláusula AS SNAPSHOT OF. Criar um instantâneo requer especificar o nome lógico de cada arquivo de banco de dados do banco de dados de origem. A sintaxe é a seguinte:  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
      CREATE DATABASE *database_snapshot_name*  
   
      ON  
@@ -117,10 +115,10 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     Where *source_**database_name* is the source database, *logical_file_name i*s the logical name used in SQL Server when referencing the file, *os_file_name* is the path and file name used by the operating system when you create the file, and *database_snapshot_name* is the name of the snapshot to which you want to revert the database. For a full description of this syntax, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+     Quando *source_**database_name* é o banco de dados de origem, *logical_file_name* é o nome lógico usado no SQL Server ao referenciar o arquivo, *os_file_name* é o caminho e o nome do arquivo usado pelo sistema operacional quando você cria o arquivo e *database_snapshot_name* é o nome do instantâneo para o qual você deseja reverter o banco de dados. Para obter uma descrição completa dessa sintaxe, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
     > [!NOTE]  
-    >  When you create a database snapshot, log files, offline files, restoring files, and defunct files are not allowed in the CREATE DATABASE statement.  
+    >  Quando você cria um instantâneo do banco de dados, arquivos de log, arquivos offline, arquivos de restauração e arquivos excluídos não são permitidos na instrução CREATE DATABASE.  
   
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
   

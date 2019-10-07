@@ -11,12 +11,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2786ebcf87f5af0ed9abcb9adaf0a85253327fa
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009371"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816711"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Índices columnstore – desempenho de consultas
 
@@ -154,8 +154,6 @@ A aplicação de predicado de cadeia de caracteres aproveita o dicionário prim�
 Com a aplicação de predicado de cadeia de caracteres, a execução da consulta calcula o predicado em relação aos valores no dicionário e se ela se qualificar, todas as linhas se referindo ao valor do dicionário são qualificadas automaticamente. Isso melhora o desempenho de duas maneiras:
 1.  Apenas as linhas qualificadas são retornadas, reduzindo o número de linhas que precisam fluir para fora do nó SCAN. 
 2.  O número de comparações de cadeias de caracteres é significativamente reduzido. Neste exemplo, apenas 100 comparações de cadeias de caracteres são necessárias, em vez de 1 milhão de comparações. Existem algumas limitações, conforme descrito abaixo:    
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   Nenhuma aplicação de predicado da cadeia de caracteres para rowgroups delta. Não há nenhum dicionário para colunas em rowgroups delta.    
     -   Não há nenhuma aplicação de predicado de cadeia de caracteres se o dicionário excede 64 KB de entradas.    

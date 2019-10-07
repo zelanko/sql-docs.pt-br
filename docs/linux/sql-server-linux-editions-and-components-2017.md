@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 110348981ad756b489afcbdb5c098a4c0f290c30
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 927b3366c609eae4d98787ead646e8b613bfdcba
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154652"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71687385"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Edições e recursos compatíveis do SQL Server 2017 no Linux
 
@@ -161,15 +161,15 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
   
 |Recurso|Enterprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
-|Conexão dedicada de administrador|Sim|Sim|Sim|Sim, com o sinalizador de rastreamento|Sim, com o sinalizador de rastreamento|   
+|Conexão dedicada de administrador|Sim|Sim|Sim|Sim, com o sinalizador de rastreamento|   
 |Suporte de scripts PowerShell|Sim|Sim|Sim|Sim| 
 |Suporte para operações de componente do aplicativo da camada de dados – extrair, implantar, atualizar, excluir|Sim|Sim|Sim|Sim| 
-|Automação de política (verificação de agenda e alterações)|Sim|Sim|Sim|Não|Não|   
-|Coletor de dados de desempenho|Sim|Sim|Sim|Não|Não| 
-|Relatórios de desempenho padrão|Sim|Sim|Sim|Não|Não| 
-|Guias de plano e planejar congelamento para guias de plano|Sim|Sim|Sim|Não|Não|   
+|Automação de política (verificação de agenda e alterações)|Sim|Sim|Sim|Não|  
+|Coletor de dados de desempenho|Sim|Sim|Sim|Não|
+|Relatórios de desempenho padrão|Sim|Sim|Sim|Não|
+|Guias de plano e planejar congelamento para guias de plano|Sim|Sim|Sim|Não| 
 |Direcione a consulta de exibições indexadas (usando a dica de NOEXPAND)|Sim|Sim|Sim|Sim| 
-|Manutenção automática de exibições indexadas|Sim|Sim|Sim|Não|Não| 
+|Manutenção automática de exibições indexadas|Sim|Sim|Sim|Não|
 |Exibições particionadas distribuídas|Sim|Não|Não|Não| 
 |Operações indexadas paralelas|Sim|Não|Não|Não|  
 |Uso automático da exibição indexada através do otimizador de consulta|Sim|Não|Não|Não| 
@@ -188,10 +188,10 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
 |Funcionalidades MERGE e UPSERT|Sim|Sim|Sim|Sim|   
 |Tipos de dados de Data e Hora|Sim|Sim|Sim|Sim|  
 |Suporte à internacionalização|Sim|Sim|Sim|Sim| 
-|Pesquisa semântica e de texto completo|Sim|Sim|Sim|Sim|Não| 
-|Especificação de idioma em consulta|Sim|Sim|Sim|Sim|Não|   
-|Service Broker (mensagens)|Sim|Sim|Não (Somente cliente)|Não (Somente cliente)|Não (Somente cliente)|   
-|pontos de extremidade Transact-SQL|Sim|Sim|Sim|Não|Não| 
+|Pesquisa semântica e de texto completo|Sim|Sim|Sim|Sim|
+|Especificação de idioma em consulta|Sim|Sim|Sim|Sim|
+|Service Broker (mensagens)|Sim|Sim|Não (Somente cliente)|Não (Somente cliente)|
+|pontos de extremidade Transact-SQL|Sim|Sim|Sim|Não|
 |Gráfico|Sim|Sim|Sim|Sim|  
 
 
