@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 06540305d84ea16b76363ebb21cea0a246fd9ed8
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
-ms.translationtype: HT
+ms.openlocfilehash: c09c9ad4625520054f2d3f103ec055c37764aed2
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006063"
+ms.locfileid: "72008434"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>Início Rápido: Manipular tipos de dados e objetos usando Python no SQL Server Serviços de Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +31,9 @@ Conceitos para conhecer o front include:
 - Um único valor de um quadro de dados é chamado de uma célula e é acessado pelo índice.
 
 Como você exporia o único resultado de um cálculo como um quadro de dados, se um data. frame exigir uma estrutura de tabela? Uma resposta é representar o valor escalar único como uma série, que é facilmente convertida em um quadro de dados. 
+
+> [!NOTE]
+> Ao retornar datas, o Python no SQL usa DATETIME que tem um intervalo de datas restrito de 1753-01-01 (-53690) a 9999-12-31 (2958463). 
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
