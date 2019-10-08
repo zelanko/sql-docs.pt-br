@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: e944a3b8e2f7b46f22ff0a349e061b03072407b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bdfeab5754a2397c01ace2bb9f822fa168eeef6b
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123854"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005859"
 ---
-# <a name="spgrantlogintoproxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
+# <a name="sp_grant_login_to_proxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
@@ -44,24 +44,24 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @login_name = ] 'login_name'` O nome de logon para conceder acesso a. O *login_name* é **nvarchar(256)** , com um padrão NULL. Um dos **@login_name** , **@fixed_server_role** , ou **@msdb_role** deve ser especificado, ou o procedimento armazenado falhará.  
+`[ @login_name = ] 'login_name'` o nome de logon ao qual conceder acesso. O *login_name* é **nvarchar (256)** , com um padrão de NULL. Um dos **\@login_name**, **\@fixed_server_role**ou **\@msdb_role** deve ser especificado ou o procedimento armazenado falha.  
   
-`[ @fixed_server_role = ] 'fixed_server_role'` A função de servidor fixa para conceder acesso a. O *fixed_server_role* é **nvarchar(256)** , com um padrão NULL. Um dos **@login_name** , **@fixed_server_role** , ou **@msdb_role** deve ser especificado, ou o procedimento armazenado falhará.  
+`[ @fixed_server_role = ] 'fixed_server_role'` a função de servidor fixa à qual conceder acesso. O *fixed_server_role* é **nvarchar (256)** , com um padrão de NULL. Um dos **\@login_name**, **\@fixed_server_role**ou **\@msdb_role** deve ser especificado ou o procedimento armazenado falha.  
   
-`[ @msdb_role = ] 'msdb_role'` A função de banco de dados na **msdb** banco de dados para conceder acesso a. O *msdb_role* é **nvarchar(256)** , com um padrão NULL. Um dos **@login_name** , **@fixed_server_role** , ou **@msdb_role** deve ser especificado, ou o procedimento armazenado falhará.  
+`[ @msdb_role = ] 'msdb_role'` a função de banco de dados no banco de dados **msdb** para conceder acesso. O *msdb_role* é **nvarchar (256)** , com um padrão de NULL. Um dos **\@login_name**, **\@fixed_server_role**ou **\@msdb_role** deve ser especificado ou o procedimento armazenado falha.  
   
-`[ @proxy_id = ] id` O identificador para o proxy conceder acesso. O *identificação* é **int**, com um padrão NULL. Um dos **@proxy_id** ou **@proxy_name** deve ser especificado, ou o procedimento armazenado falhará.  
+`[ @proxy_id = ] id` o identificador do proxy para o qual conceder acesso. A *ID* é **int**, com um padrão de NULL. Um dos **\@proxy_id** ou **\@proxy_name** deve ser especificado ou o procedimento armazenado falha.  
   
-`[ @proxy_name = ] 'proxy_name'` O nome do proxy para conceder acesso. O *proxy_name* é **nvarchar(256)** , com um padrão NULL. Um dos **@proxy_id** ou **@proxy_name** deve ser especificado, ou o procedimento armazenado falhará.  
+`[ @proxy_name = ] 'proxy_name'` o nome do proxy para o qual conceder acesso. O *proxy_name* é **nvarchar (256)** , com um padrão de NULL. Um dos **\@proxy_id** ou **\@proxy_name** deve ser especificado ou o procedimento armazenado falha.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_grant_login_to_proxy** deve ser executado a partir de **msdb** banco de dados.  
+ **sp_grant_login_to_proxy** deve ser executado do banco de dados **msdb** .  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** pode ser executada a função de servidor fixa **sp_grant_login_to_proxy**.  
+ Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_grant_login_to_proxy**.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir permite que o logon `adventure-works\terrid` use o proxy `Catalog application proxy`.  

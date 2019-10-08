@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: Crie um modelo de previsão simples no Python usando SQL Server Serviços de Machine Learning e, em seguida, preveja um resultado usando novos dados.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ad067e81bdb132d7958451d711e49ca57e308bac
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: 504b37002bedf0e73cfefe0aeb36faf2cca45bfe
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71204283"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006021"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Início Rápido: Criar e pontuar um modelo de previsão em Python com SQL Server Serviços de Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,9 +27,9 @@ Você criará e executará dois procedimentos armazenados em execução no SQL. 
 Ao concluir este guia de início rápido, você aprenderá:
 
 > [!div class="checklist"]
-> * Como inserir código Python em um procedimento armazenado
-> * Como passar entradas para seu código por meio de entradas no procedimento armazenado
-> * Como os procedimentos armazenados são usados para colocar os modelos em operação
+> - Como inserir código Python em um procedimento armazenado
+> - Como passar entradas para seu código por meio de entradas no procedimento armazenado
+> - Como os procedimentos armazenados são usados para colocar os modelos em operação
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -89,7 +89,7 @@ Nesta etapa, você executa o procedimento para executar o código inserido, cria
 
 Os modelos que são armazenados para reutilização em SQL Server são serializados como um fluxo de bytes e armazenados em uma coluna VARBINARY (MAX) em uma tabela de banco de dados. Depois que o modelo é criado, treinado, serializado e salvo em um banco de dados, ele pode ser chamado por outros procedimentos ou pela função de [previsão do T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) nas cargas de trabalho de pontuação.
 
-1. Execute o script a seguir para executar o procedimento. A instrução específica para executar um procedimento armazenado está `EXECUTE` na quarta linha.
+1. Execute o script a seguir para executar o procedimento. A instrução específica para executar um procedimento armazenado é `EXECUTE` na quarta linha.
 
    Esse script específico exclui um modelo existente de mesmo nome ("Naive Bayes") para liberar espaço para os novos criados executando novamente o mesmo procedimento. Sem a exclusão do modelo, ocorre um erro informando que o objeto já existe. O modelo é armazenado em uma tabela chamada **iris_models**, provisionado quando você criou o banco de dados **irissql** .
 
@@ -119,7 +119,7 @@ Os modelos que são armazenados para reutilização em SQL Server são serializa
 
 Agora que você criou, treinau e salvou um modelo, passe para a próxima etapa: Criando um procedimento armazenado que gera previsões. Você fará isso chamando `sp_execute_external_script` para executar um script Python que carrega o modelo serializado e fornece novas entradas de dados a serem pontuadas.
 
-1. Execute o código a seguir para criar o procedimento armazenado que executa a pontuação. Em tempo de execução, esse procedimento carregará um modelo binário, usará as colunas `[1,2,3,4]` como entradas e especificará as colunas `[0,5,6]` como saída.
+1. Execute o código a seguir para criar o procedimento armazenado que executa a pontuação. Em tempo de execução, esse procedimento carregará um modelo binário, usará colunas `[1,2,3,4]` como entradas e especificar colunas `[0,5,6]` como saída.
 
    ```sql
    CREATE PROCEDURE predict_species (@model VARCHAR(100))
@@ -166,11 +166,11 @@ Agora que você criou, treinau e salvou um modelo, passe para a próxima etapa: 
 
    Os resultados são 150 previsões sobre espécies usando características floral como entradas. Para a maioria das observações, as espécies previstas correspondem à espécie real.
 
-   Este exemplo foi simplificado com o uso do conjunto de pontos do Python íris para treinamento e pontuação. Uma abordagem mais comum envolveria a execução de uma consulta SQL para obter os novos dados e passá-lo para `InputDataSet`o Python como.
+   Este exemplo foi simplificado com o uso do conjunto de pontos do Python íris para treinamento e pontuação. Uma abordagem mais comum envolveria a execução de uma consulta SQL para obter os novos dados e passá-lo para o Python como `InputDataSet`.
 
 ## <a name="conclusion"></a>Conclusão
 
-Neste exercício, você aprendeu a criar procedimentos armazenados dedicados a tarefas diferentes, em que cada procedimento armazenado usou o procedimento `sp_execute_external_script` armazenado do sistema para iniciar um processo do Python. As entradas para o processo Python são passadas para `sp_execute_external` os parâmetros as. O próprio script do Python e as variáveis de dados em um banco SQL Server dados são passados como entradas.
+Neste exercício, você aprendeu a criar procedimentos armazenados dedicados a tarefas diferentes, em que cada procedimento armazenado usou o procedimento armazenado do sistema `sp_execute_external_script` para iniciar um processo do Python. As entradas para o processo do Python são passadas para `sp_execute_external` como parâmetros. O próprio script do Python e as variáveis de dados em um banco SQL Server dados são passados como entradas.
 
 Em geral, você deve planejar apenas o uso do SSMS com código Python elegante ou um código Python simples que retorna a saída baseada em linha. Como uma ferramenta, o SSMS dá suporte a linguagens de consulta como T-SQL e retorna conjuntos de linhas mescladas. Se o código gerar uma saída Visual como um dispersão ou histograma, você precisará de uma ferramenta ou aplicativo de usuário final que possa renderizar a imagem.
 
@@ -181,11 +181,6 @@ Da mesma forma, você também pode aproveitar os recursos de origem do SQL Serve
 Um benefício final é que os processos podem ser modificados usando parâmetros. Neste exercício, o código Python que criou o modelo (chamado "Naive Bayes" neste exemplo) foi passado como uma entrada para um segundo procedimento armazenado que chama o modelo em um processo de pontuação. Este exercício usa apenas um modelo, mas você pode imaginar como a parametrização do modelo em uma tarefa de Pontuação tornaria esse script mais útil.
 
 ## <a name="next-steps"></a>Próximas etapas
-
-Para saber mais sobre como lidar com tipos de dados do Python no SQL Server, siga este guia de início rápido:
-
-> [!div class="nextstepaction"]
-> [Manipular tipos de dados e objetos usando Python no SQL Server Serviços de Machine Learning](quickstart-python-data-structures.md)
 
 Para obter mais informações sobre SQL Server Serviços de Machine Learning, consulte:
 

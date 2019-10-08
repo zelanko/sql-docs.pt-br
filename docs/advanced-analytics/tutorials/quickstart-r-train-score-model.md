@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: Crie um modelo de previsão simples em R usando SQL Server Serviços de Machine Learning e, em seguida, preveja um resultado usando novos dados.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5aad027f84bc1116aa57c6b0bc0d7b0893519c36
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: fc968c9364f23826b366721590f72ac1b0af0391
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71150329"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005982"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Início Rápido: Criar e pontuar um modelo de previsão em R com SQL Server Serviços de Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Para criar o modelo, você criará dados de origem para treinamento, criará o m
    );
    ```
 
-1. Insira os dados a partir do DataSet `mtcars`interno.
+1. Insira os dados do DataSet interno `mtcars`.
 
    ```SQL
    INSERT INTO dbo.MTCars
@@ -72,11 +72,11 @@ Para criar o modelo, você criará dados de origem para treinamento, criará o m
    ```
 
    > [!TIP]
-   > Vários conjuntos de dados, pequenos e grandes, estão incluídos com o tempo de execução de R. Para obter uma lista de conjuntos de valores instalados com o r `library(help="datasets")` , digite a partir de um prompt de comando do r.
+   > Vários conjuntos de dados, pequenos e grandes, estão incluídos com o tempo de execução de R. Para obter uma lista de conjuntos de itens instalados com o R, digite `library(help="datasets")` em um prompt de comando do R.
 
 ### <a name="create-and-train-the-model"></a>Criar e treinar o modelo
 
-Os dados de velocidade do carro contêm duas colunas, tanto numérica:`hp`potência () quanto`wt`peso (). A partir desses dados, você criará um modelo linear generalizado (GLM) que estima a probabilidade de um veículo ter sido ajustado com uma transmissão manual.
+Os dados de velocidade do carro contêm duas colunas, tanto numeric: potência (`hp`) quanto peso (`wt`). A partir desses dados, você criará um modelo linear generalizado (GLM) que estima a probabilidade de um veículo ter sido ajustado com uma transmissão manual.
 
 Para criar o modelo, você define a fórmula dentro do código R e passa os dados como um parâmetro de entrada.
 
@@ -98,7 +98,7 @@ END;
 GO
 ```
 
-- O primeiro argumento para `glm` é o parâmetro de *fórmula* , que `am` `hp + wt`define como dependente.
+- O primeiro argumento para `glm` é o parâmetro de *fórmula* , que define `am` como dependente de `hp + wt`.
 - Os dados de entrada são armazenados na variável `MTCarsData`, preenchido pela consulta SQL. Se você não atribuir um nome específico aos seus dados de entrada, o nome da variável padrão seria _InputDataSet_.
 
 ### <a name="store-the-model-in-the-sql-database"></a>Armazenar o modelo no banco de dados SQL
@@ -170,7 +170,7 @@ Para obter previsões com base em seu modelo, escreva um script SQL que faça o 
 1. Obtém os novos dados de entrada
 1. Chama uma função de previsão de R que é compatível com o modelo
 
-Com o tempo, a tabela pode conter vários modelos de R, todos criados usando parâmetros ou algoritmos diferentes ou treinados em diferentes subconjuntos de dados. Neste exemplo, vamos usar o modelo chamado `default model`.
+Com o tempo, a tabela pode conter vários modelos de R, todos criados usando parâmetros ou algoritmos diferentes ou treinados em diferentes subconjuntos de dados. Neste exemplo, usaremos o modelo chamado `default model`.
 
 ```sql
 DECLARE @glmmodel varbinary(max) = 
@@ -201,7 +201,7 @@ O script acima executa as seguintes etapas:
 - Aplicar a função `predict` com os argumentos apropriados para o modelo e fornecer os novos dados de entrada.
 
 > [!NOTE]
-> No exemplo, a `str` função é adicionada durante a fase de teste para verificar o esquema de dados que está sendo retornado do R. Você pode remover a instrução mais tarde.
+> No exemplo, a função `str` é adicionada durante a fase de teste para verificar o esquema de dados que está sendo retornado do R. Você pode remover a instrução mais tarde.
 >
 > Os nomes de coluna usados no script R não são necessariamente passados para a saída do procedimento armazenado. Aqui, a cláusula WITH RESULTs é usada para definir alguns novos nomes de coluna.
 
@@ -213,12 +213,6 @@ Também é possível usar a instrução [Predict (Transact-SQL)](../../t-sql/que
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber mais sobre como lidar com tipos de dados do R no SQL Server, siga este guia de início rápido:
+Para obter mais informações sobre SQL Server Serviços de Machine Learning, consulte:
 
-> [!div class="nextstepaction"]
-> [Manipular tipos de dados e objetos usando R no SQL Server Serviços de Machine Learning](quickstart-r-data-types-and-objects.md)
-
-Para obter mais informações sobre SQL Server Serviços de Machine Learning, consulte os artigos a seguir.
-
-- [Escrever funções de R avançadas com SQL Server Serviços de Machine Learning](quickstart-r-functions.md)
 - [O que é SQL Server Serviços de Machine Learning (Python e R)?](../what-is-sql-server-machine-learning.md)

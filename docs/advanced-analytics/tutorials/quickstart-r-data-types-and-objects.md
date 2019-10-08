@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: Neste guia de início rápido, saiba como trabalhar com tipos de dados e objetos de dados em R e SQL Server com SQL Server Serviços de Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 85bfe26826e6e8ed04579526462babe2b5dcf009
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 0e490821194e909643e5307e833f093363cb9558
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149958"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006004"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Início Rápido: Manipular tipos de dados e objetos usando R no SQL Server Serviços de Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ Como você pode ver, uma pequena alteração na sintaxe de R teve um grande efei
 Por enquanto, apenas esteja ciente de que você precisa verificar os resultados esperados ao moldar objetos R em quadros de dados.
 
 > [!TIP]
-> Você também pode usar funções de identidade de R, `is.matrix`como `is.vector`,, para retornar informações sobre a estrutura de dados interna.
+> Você também pode usar funções de identidade de R, como `is.matrix`, `is.vector`, para retornar informações sobre a estrutura de dados interna.
 
 ## <a name="implicit-conversion-of-data-objects"></a>Conversão implícita de objetos de dados
 
@@ -164,7 +164,7 @@ Nos bastidores, a coluna de três valores é convertida em uma matriz de coluna 
 |120|130|140|150|
 |1200|1300|1400|1500|
 
-No entanto, observe o que acontece quando você altera o tamanho `y`da matriz.
+No entanto, observe o que acontece quando você altera o tamanho da matriz `y`.
 
 ```sql
 execute sp_execute_external_script
@@ -197,7 +197,7 @@ Por quê? Nesse caso, como os dois argumentos podem ser tratados como vetores do
 
 O R fornece excelente flexibilidade para trabalhar com vetores de tamanhos diferentes e para combinar essas estruturas de coluna em quadros de dados. Listas de vetores podem se parecer com uma tabela, mas elas não seguem as regras que regem as tabelas de banco de dados.
 
-Por exemplo, o script a seguir define uma matriz numérica de tamanho 6 e a armazena na variável `df1` de R. Em seguida, a matriz numérica é combinada com os inteiros da tabela RTestData, que contém três (3) valores, para criar um novo quadro de dados `df2`,.
+Por exemplo, o script a seguir define uma matriz numérica de tamanho 6 e a armazena na variável `df1` de R. Em seguida, a matriz numérica é combinada com os inteiros da tabela RTestData, que contém três (3) valores, para criar um novo quadro de dados, `df2`.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -305,6 +305,7 @@ Para saber mais sobre como escrever funções avançadas do R no SQL Server, sig
 > [!div class="nextstepaction"]
 > [Escrever funções de R avançadas com SQL Server Serviços de Machine Learning](quickstart-r-functions.md)
 
-Para obter mais informações sobre SQL Server Serviços de Machine Learning, consulte:
+Para obter mais informações sobre como usar o R no SQL Server Serviços de Machine Learning, consulte os seguintes artigos:
 
+- [Criar e pontuar um modelo de previsão em R com SQL Server Serviços de Machine Learning](quickstart-r-train-score-model.md)
 - [O que é SQL Server Serviços de Machine Learning (Python e R)?](../what-is-sql-server-machine-learning.md)

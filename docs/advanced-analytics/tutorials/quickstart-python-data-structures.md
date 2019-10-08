@@ -4,31 +4,31 @@ titleSuffix: SQL Server Machine Learning Services
 description: Neste guia de início rápido, saiba como trabalhar com tipos de dados e objetos de dados no Python e SQL Server com SQL Server Serviços de Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e3606072fefa9b74adcfdb914d02e4e82c11e0eb
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
-ms.translationtype: MT
+ms.openlocfilehash: 06540305d84ea16b76363ebb21cea0a246fd9ed8
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199438"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006063"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>Início Rápido: Manipular tipos de dados e objetos usando Python no SQL Server Serviços de Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Este guia de início rápido mostra como usar estruturas de dados ao usar o Python no SQL Server Serviços de Machine Learning.
 
-SQL Server se baseia no pacote do Python pandas, que é ótimo para trabalhar com dados tabulares. No entanto, você não pode passar um escalar do Python para SQL Server e esperar que ele "simplesmente funcione". Neste guia de início rápido, você examinará algumas definições básicas de tipo de dados, para prepará-lo para problemas adicionais que você possa encontrar ao passar dados tabulares entre Python e SQL Server.
+SQL Server se baseia no pacote do Python **pandas** , que é ótimo para trabalhar com dados tabulares. No entanto, você não pode passar um escalar do Python para SQL Server e esperar que ele "simplesmente funcione". Neste guia de início rápido, você examinará algumas definições básicas de tipo de dados, para prepará-lo para problemas adicionais que você possa encontrar ao passar dados tabulares entre Python e SQL Server.
 
 Conceitos para conhecer o front include:
 
-+ Um quadro de dados é uma tabela com _várias_ colunas.
-+ Uma única coluna de um quadro de dados é um objeto como uma lista chamado série.
-+ Um único valor de um quadro de dados é chamado de uma célula e é acessado pelo índice.
+- Um quadro de dados é uma tabela com _várias_ colunas.
+- Uma única coluna de um quadro de dados é um objeto como uma lista chamado série.
+- Um único valor de um quadro de dados é chamado de uma célula e é acessado pelo índice.
 
 Como você exporia o único resultado de um cálculo como um quadro de dados, se um data. frame exigir uma estrutura de tabela? Uma resposta é representar o valor escalar único como uma série, que é facilmente convertida em um quadro de dados. 
 
@@ -203,11 +203,12 @@ Agora, você produzirá valores específicos de duas séries de resultados matem
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Em seguida, você criará um modelo de previsão usando Python em SQL Server.
+Para saber mais sobre como escrever funções avançadas do Python no SQL Server, siga este guia de início rápido:
 
 > [!div class="nextstepaction"]
-> [Criar e pontuar um modelo de previsão no Python](quickstart-python-train-score-model.md)
+> [Escrever funções avançadas do Python com o SQL Server Serviços de Machine Learning](quickstart-python-functions.md)
 
-Para obter mais informações sobre SQL Server Serviços de Machine Learning, consulte:
+Para obter mais informações sobre como usar o Python no SQL Server Serviços de Machine Learning, consulte os seguintes artigos:
 
+- [Criar e pontuar um modelo de previsão no Python](quickstart-python-train-score-model.md)
 - [O que é SQL Server Serviços de Machine Learning (Python e R)?](../what-is-sql-server-machine-learning.md)
