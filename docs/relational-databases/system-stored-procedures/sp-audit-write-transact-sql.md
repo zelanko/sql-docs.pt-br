@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 60dbabcadaf5108572eaba6361fab28eaf0f49b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bef63c267bdf5b7d0c2603ed7a93af329d1992c
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046144"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251975"
 ---
-# <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
+# <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Adiciona um evento de auditoria definido pelo usuário para o **USER_DEFINED_AUDIT_GROUP**. Se **USER_DEFINED_AUDIT_GROUP** não estiver habilitado, **sp_audit_write** será ignorado.  
+  Adiciona um evento de auditoria definido pelo usuário ao **USER_DEFINED_AUDIT_GROUP**. Se **USER_DEFINED_AUDIT_GROUP** não estiver habilitado, **sp_audit_write** será ignorado.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,13 +42,13 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>Argumentos  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- Um parâmetro definido pelo usuário e registrado na **user_defined_event_id** coluna do log de auditoria. *@user_defined_event_id* é o tipo **smallint**.  
+ Um parâmetro definido pelo usuário e registrado na coluna **user_defined_event_id** do log de auditoria. *\@user_defined_event_id* é do tipo **smallint**.  
   
  `[ @succeeded = ] succeeded`  
- Um parâmetro passado por usuário para indicar se o evento teve êxito ou não. Isso aparece na coluna Êxito do log de auditoria. `@succeeded` está **bit**.  
+ Um parâmetro passado por usuário para indicar se o evento teve êxito ou não. Isso aparece na coluna Êxito do log de auditoria. `@succeeded` é **bit**.  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
- É o texto definido pelo usuário e registrado na coluna user_defined_event_id do log de auditoria. `@user_defined_information` está **nvarchar (4000)** .  
+ É o texto definido pelo usuário e registrado na coluna user_defined_event_id do log de auditoria. `@user_defined_information` é **nvarchar (4000)** .  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -56,10 +56,10 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
  As falhas são provocadas por parâmetros de entrada incorretos ou erros de gravação no log de auditoria de destino.  
   
 ## <a name="remarks"></a>Comentários  
- Quando o **USER_DEFINED_AUDIT_GROUP** é adicionado a uma especificação de auditoria de servidor ou uma especificação de auditoria de banco de dados, o evento acionado por **sp_audit_write** serão incluídos no log de auditoria.  
+ Quando o **USER_DEFINED_AUDIT_GROUP** é adicionado a uma especificação de auditoria de servidor ou uma especificação de auditoria de banco de dados, o evento disparado pelo **sp_audit_write** será incluído no log de auditoria.  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação na **pública** função de banco de dados.  
+ Requer associação na função de banco de dados **pública** .  
   
 ## <a name="examples"></a>Exemplos  
   

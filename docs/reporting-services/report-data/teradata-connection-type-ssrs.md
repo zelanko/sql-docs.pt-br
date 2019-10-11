@@ -8,20 +8,20 @@ ms.topic: conceptual
 ms.assetid: b02779c2-a6b9-453c-815f-adad53353952
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4c50b757f6866307b52106055fd5affbf46789c0
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 0c631b873ad32082dabe2fb268b7c4254b6d7551
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500128"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680887"
 ---
 # <a name="teradata-connection-type-ssrs"></a>Tipo de conexão Teradata (SSRS)
-  Para incluir dados de um banco de dados relacional Teradata no seu relatório, é necessário ter um conjunto de dados baseado na fonte de dados do relatório do tipo Teradata. Esse tipo de fonte de dados interna é baseado na extensão de processamento de dados do Provedor Gerenciados do .NET para Teradata.  
+  Para incluir dados de um cubo do Teradata no seu relatório, é necessário ter um conjunto de dados baseado na fonte de dados do relatório do tipo Teradata. Esse tipo de fonte de dados interna é baseado na extensão de processamento de dados do Provedor Gerenciados do .NET para Teradata.  
   
  Use as informações deste tópico para criar uma fonte de dados. Para obter instruções passo a passo, consulte [Adicionar e verificar uma conexão de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Cadeia de Conexão  
- Contate o administrador do banco de dados para obter informações sobre a conexão e as credenciais que devem ser usadas para se conectar à fonte de dados. O exemplo de cadeia de conexão seguinte define um banco de dados Teradata no servidor especificado com um endereço IP:  
+ Contate o administrador do banco de dados para obter informações sobre a conexão e as credenciais que devem ser usadas para se conectar à fonte de dados. O exemplo de cadeia de conexão seguinte define uma fonte de dados Teradata no servidor especificado com um endereço IP:  
   
 ```  
 data source=<IP Address>  
@@ -34,13 +34,13 @@ data source=<IP Address>
   
  Após a publicação do relatório, talvez seja necessário alterar as credenciais da fonte de dados para que, quando o relatório for executado no servidor de relatório, as permissões recuperadas sejam válidas.  
   
- Para obter mais informações, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão &#40;construtor de relatórios e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [especificar credenciais e informações de Conexão para fontes de dados de relatório](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Para obter mais informações, consulte [conexões de dados, fontes de dados e &#40;cadeias de&#41; conexão Construtor de relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [especificar credenciais e informações de conexão para fontes de dados de relatório](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Remarks"></a> Comentários  
- Para que você possa se conectar a uma fonte de dados Teradata, o administrador do sistema deve ter instalado a versão do Provedor de Dados .NET para Teradata que dá suporte à recuperação de dados do banco de dados Teradata. O provedor de dados deve ser instalado no mesmo computador que o Construtor de Relatórios e também no servidor de relatório.  
+ Para que você possa se conectar a uma fonte de dados Teradata, o administrador do sistema deve ter instalado a versão do Provedor de Dados .NET para Teradata que dá suporte à recuperação de dados do Teradata. O provedor de dados deve ser instalado no mesmo computador que o Construtor de Relatórios e também no servidor de relatório.  
   
- Nem todos os modos de entrega de relatório são suportados por esse provedor de dados. Não há suporte para a entrega de relatórios através de assinaturas controladas por dados para essa extensão de processamento de dados. Para obter mais informações, consulte [Usar uma fonte de dados externa para obter dados de assinante &#40;Assinatura controlada por dados&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](https://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Nem todos os modos de entrega de relatório são suportados por esse provedor de dados. Não há suporte para a entrega de relatórios através de assinaturas controladas por dados para essa extensão de processamento de dados. Para obter mais informações, consulte [Usar uma fonte de dados externa para obter dados de assinante &#40;Assinatura controlada por dados&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
   
 ##  <a name="Models"></a> Modelos de relatório  
@@ -62,12 +62,8 @@ data source=<IP Address>
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Fornece informações sobre a coleção de campos gerada pela consulta do conjunto de dados.  
   
- [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](https://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
- Fornece informações detalhadas sobre suporte à plataforma e à versão para cada extensão de dados.  
-  
- [Usando o SQL Server 2008 Reporting Services com o Provedor de Dados do .NET Framework para Teradata](https://go.microsoft.com/fwlink/?LinkID=130848)  
- Fornece informações detalhadas sobre como trabalhar com esta extensão de dados.  
-  
+ [Fontes de dados com suporte &#40;pelo&#41; Reporting Services SSRS](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) Fornece informações detalhadas sobre o suporte de plataforma e versão para cada extensão de dados.  
+ 
   
 ## <a name="see-also"></a>Consulte Também  
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

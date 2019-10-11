@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4155bdd03dfc809eee26e505cb842404524cbe59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d695ccd9545c6bc839edcc1b0644c1f1a4d84ab8
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907803"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710902"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Definir e modificar um filtro de junção entre artigos de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ ms.locfileid: "67907803"
   
 2.  No Publicador no banco de dados de publicação, execute [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) para definir um ou mais artigos relacionados, que também são conhecidos como artigos filho, para a publicação. Para obter mais informações, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-3.  No Publicador no banco de dados de publicação, execute [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Especifique **@publication** , um nome exclusivo para esse filtro para **@filtername** , o nome do artigo filho criado na etapa 2 para **@article** ; o nome do artigo pai ao qual é feita a junção para **@join_articlename** e um dos valores a seguir para **@join_unique_key** :  
+3.  No Publicador no banco de dados de publicação, execute [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Especifique `@publication`, um nome exclusivo para esse filtro para `@filtername`, o nome do artigo filho criado na etapa 2 para `@article`, o nome do artigo pai ao qual é feita a junção para `@join_articlename` e um dos valores a seguir para `@join_unique_key`:  
   
     -   **0** - indica uma junção muitos para um ou muitos para muitos entre os artigos pai e filho.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "67907803"
      Isso define um filtro de junção entre os dois artigos.  
   
     > [!CAUTION]  
-    >  Somente defina **@join_unique_key** como **1** se você tiver uma restrição na coluna de junção na tabela subjacente para o artigo pai que garanta exclusividade. Se **@join_unique_key** for definido incorretamente como **1** , poderá ocorrer não convergência de dados.  
+    >  Somente defina `@join_unique_key` como **1** se você tiver uma restrição na coluna de junção na tabela subjacente para o artigo pai que garanta exclusividade. Se `@join_unique_key` for definido incorretamente como **1**, poderá ocorrer não convergência de dados.  
   
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  Este exemplo define um artigo para uma publicação de mesclagem em que o artigo da tabela `SalesOrderDetail` é filtrado em relação à tabela `SalesOrderHeader` que, por sua vez, é filtrada usando um filtro de linha estático. Para obter mais informações, consulte [Definir e modificar um filtro de linha estático](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  

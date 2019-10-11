@@ -1,5 +1,5 @@
 ---
-title: O Designer de consulta relacional (SSAS) | Microsoft Docs
+title: Designer de consulta relacional (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8063df9c748ca6838cd21b0a5daa249fdc49134c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9d3ea17d614a9c5cff48c35ae1864f1672bf8bc
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66070458"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251211"
 ---
 # <a name="relational-query-designer-ssas"></a>Designer de consulta relacional (SSAS)
   O designer de consulta relacional ajuda a criar uma consulta que especifica os dados a serem recuperados de bancos de dados relacionais do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] e do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]. Use o designer de consultas gráficas para explorar os metadados, criar a consulta interativamente e exibir os dados da consulta.  Use o designer de consulta baseado em texto para exibir a consulta que foi criada pelo designer de consultas gráficas ou modificar uma consulta. Também é possível importar uma consulta existente de um arquivo ou relatório.  
@@ -203,7 +203,7 @@ ms.locfileid: "66070458"
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas. Nem todos os tipos de fonte de dados dão suporte aos designers de consultas gráficas.|  
 |**Importar**|Importa uma consulta existente de um arquivo ou relatório. Apenas os tipos de arquivo .sql e .rdl têm suporte.|  
 |![Executar a consulta](media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta e exibe o conjunto de resultados no painel Resultado.|  
-|**Tipo de Comando**|Selecione **Text**, **StoredProcedure**ou **TableDirect**. Se um procedimento armazenado tiver parâmetros, a caixa de diálogo **Definir Parâmetros de Consulta** será aberta quando você clicar em **Executar** na barra de ferramentas e os valores poderão ser preenchidos conforme necessário.<br /><br /> Observe que, se um procedimento armazenado retornar mais de um conjunto de resultados, somente o primeiro conjunto de resultados é usado para preencher o conjunto de dados. Observe também que <br />                      **TableDirect** só está disponível para o tipo de fonte de dados OLE DB.|  
+|**Tipo de Comando**|Selecione **Text**, **StoredProcedure**ou **TableDirect**. Se um procedimento armazenado tiver parâmetros, a caixa de diálogo **Definir Parâmetros de Consulta** será aberta quando você clicar em **Executar** na barra de ferramentas e os valores poderão ser preenchidos conforme necessário.<br /><br /> Observe que, se um procedimento armazenado retornar mais de um conjunto de resultados, somente o primeiro conjunto de resultados será usado para popular o conjunto de informações. Observe também que <br />                      **TableDirect** está disponível somente para o tipo de fonte de dados OLE DB.|  
   
 #### <a name="command-type-text"></a>Tipo de comando Text  
  Quando você cria um conjunto de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , o designer de consulta relacional é aberto por padrão. Para mudar para o designer de consulta baseado em texto, clique no botão de alternância **Editar como Texto** na barra de ferramentas. O designer de consulta baseado em texto apresenta dois painéis: Consulta e Resultado. A imagem a seguir define cada painel.  
@@ -247,12 +247,12 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- Clique no botão **Executar** ( **!** ). A tabela a seguir fornece um exemplo de `uspGetWhereUsedProductID` para os quais você fornece valores de parâmetros a **definir parâmetro de consulta** caixa de diálogo.  
+ Clique no botão **Executar** ( **!** ). A tabela a seguir fornece um exemplo de parâmetros `uspGetWhereUsedProductID` para os quais você fornece valores na caixa de diálogo **definir parâmetro de consulta** .  
   
 |||  
 |-|-|  
-|*@StartProductID*|820|  
-|*@CheckDate*|20010115|  
+|*\@StartProductID*|820|  
+|*\@CheckDate*|20010115|  
   
 #### <a name="command-type-tabledirect"></a>Tipo de comando TableDirect  
  Quando você seleciona o **Comando typeTableDirect**, o designer de consulta baseado em texto apresenta dois painéis: Consulta e Resultado. Se você inserir uma tabela e clicar no botão **Executar** , todas as colunas dessa tabela serão retornadas.  

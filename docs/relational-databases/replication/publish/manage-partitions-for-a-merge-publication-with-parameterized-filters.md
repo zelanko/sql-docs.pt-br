@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e454850de56674a594b23585aaf1f5af1f3549a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1171d30f7b21b99a3d4a396937b1e94c58787859
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002687"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710891"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Gerenciar partições para uma publicação de mesclagem com filtros com parâmetros
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,25 +103,25 @@ ms.locfileid: "68002687"
   
 #### <a name="to-view-information-on-existing-partitions"></a>Para exibir informações sobre partições existentes  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_helpmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md). Especifique o nome da publicação para **@publication** . (Opcional) Especifique **@suser_sname** ou **@host_name** para retornar somente informações baseadas em um único critério de filtragem.  
+1.  No Publicador do banco de dados de publicação, execute [sp_helpmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md). Especifique o nome da publicação para `@publication`. (Opcional) Especifique `@suser_sname` ou `@host_name` para retornar somente informações baseadas em um único critério de filtragem.  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>Para definir uma partição nova e gerar um instantâneo particionado novo  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_addmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md). Especifique o nome da publicação para **@publication** e o valor com parâmetros que define a partição para um dos seguintes:  
+1.  No Publicador do banco de dados de publicação, execute [sp_addmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md). Especifique o nome da publicação para `@publication` e o valor com parâmetros que define a partição para um dos seguintes:  
   
-    -   **@suser_sname** – quando o filtro com parâmetros estiver definido pelo valor retornado por [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md).  
+    -   `@suser_sname` – quando o filtro com parâmetros estiver definido pelo valor retornado por [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md).  
   
-    -   **@host_name** – quando o filtro com parâmetros estiver definido pelo valor retornado por [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md).  
+    -   `@host_name` – quando o filtro com parâmetros estiver definido pelo valor retornado por [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md).  
   
 2.  Crie e inicialize o instantâneo com parâmetros para esta partição nova. Para obter mais informações, consulte [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 #### <a name="to-delete-a-partition"></a>Para excluir uma partição  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_dropmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md). Especifique o nome da publicação para **@publication** e o valor com parâmetros que define a partição para um dos seguintes:  
+1.  No Publicador do banco de dados de publicação, execute [sp_dropmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md). Especifique o nome da publicação para `@publication` e o valor com parâmetros que define a partição para um dos seguintes:  
   
-    -   **@suser_sname** – quando o filtro com parâmetros estiver definido pelo valor retornado por [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md).  
+    -   `@suser_sname` – quando o filtro com parâmetros estiver definido pelo valor retornado por [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md).  
   
-    -   **@host_name** – quando o filtro com parâmetros estiver definido pelo valor retornado por [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md).  
+    -   `@host_name` – quando o filtro com parâmetros estiver definido pelo valor retornado por [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md).  
   
      Isso também remove o trabalho de instantâneo e qualquer arquivo de instantâneo para a partição.  
   
@@ -165,5 +165,6 @@ ms.locfileid: "68002687"
 ## <a name="see-also"></a>Consulte Também  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
+  
   
   

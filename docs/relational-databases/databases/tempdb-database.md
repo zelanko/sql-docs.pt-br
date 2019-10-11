@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76fb1dcfaab16e560b67f92d7bc3a6203f93037b
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: f75bbb285ea99eba41accc76851db997c54d1027
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326114"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708253"
 ---
 # <a name="tempdb-database"></a>Banco de dados tempdb
 
@@ -219,7 +219,7 @@ Para obter mais informações sobre as melhorias no desempenho em tempdb, veja o
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Metadados do TempDB com otimização de memória
 
-Historicamente, a contenção de metadados do TempDB tem sido um gargalo para a escalabilidade em muitas cargas de trabalho em execução no SQL Server. O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] apresenta um novo recurso que faz parte da família de recursos do [Banco de Dados em Memória](../in-memory-database.md), os metadados do tempdb com otimização de memória, que efetivamente remove esse gargalo e possibilita um novo nível de escalabilidade para cargas de trabalho com uso intenso do tempdb. No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], as tabelas do sistema envolvidas no gerenciamento dos metadados da tabela temporária podem ser movidas para tabelas com otimização de memória não duráveis e livres de travas.  O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] apresenta um novo recurso que faz parte da família de recursos do [Banco de Dados em Memória](../in-memory-database.md), os metadados do tempdb com otimização de memória, que efetivamente remove esse gargalo e possibilita um novo nível de escalabilidade para cargas de trabalho com uso intenso do tempdb. No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], as tabelas do sistema envolvidas no gerenciamento dos metadados da tabela temporária podem ser movidas para tabelas com otimização de memória não duráveis e livres de travas. Para aceitar esse novo recurso, use o seguinte script:
+Historicamente, a contenção de metadados do TempDB tem sido um gargalo para a escalabilidade em muitas cargas de trabalho em execução no SQL Server. O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] apresenta um novo recurso que faz parte da família de recursos do [Banco de Dados em Memória](../in-memory-database.md), os metadados do tempdb com otimização de memória, que efetivamente remove esse gargalo e possibilita um novo nível de escalabilidade para cargas de trabalho com uso intenso do tempdb. No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], as tabelas do sistema envolvidas no gerenciamento dos metadados da tabela temporária podem ser movidas para tabelas com otimização de memória não duráveis e livres de travas. Para aceitar esse novo recurso, use o seguinte script:
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
@@ -244,7 +244,8 @@ Existem algumas limitações nessa implementação que são importantes a serem 
     COMMIT TRAN
     ```
 3. As consultas nas tabelas com otimização de memória não dão suporte a dicas de bloqueio e isolamento; portanto, as consultas nas exibições de catálogo do TempDB com otimização de memória não respeitarão as dicas de bloqueio e isolamento. Como ocorre com outras exibições de catálogo do sistema no SQL Server, todas as transações nas exibições do sistema serão feitas no isolamento READ COMMITTED (ou, neste caso, READ COMMITTED SNAPSHOT).
-4. [Índices columnstore](../indexes/columnstore-indexes-overview.md) não poderão ser criados em tabelas temporárias quando os metadados do tempdb com otimização de memória forem habilitados.
+4. Os [índices columnstore](../indexes/columnstore-indexes-overview.md) não poderão ser criados em tabelas temporárias quando os metadados do TempDB com otimização de memória forem habilitados.
+5. Devido à limitação em índices columnstore, não há suporte para o uso do procedimento armazenado do sistema sp_estimate_data_compression_savings com o parâmetro de compactação de dados COLUMNSTORE ou COLUMNSTORE_ARCHIVE quando os metadados do TempDB com otimização de memória estão habilitados.
 
 > [!NOTE] 
 > Essas limitações se aplicam somente ao referenciar as exibições do sistema do TempDB; você poderá criar uma tabela temporária na mesma transação ao acessar uma tabela com otimização de memória em um banco de dados de usuário, se desejado.

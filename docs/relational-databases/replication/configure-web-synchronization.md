@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25357798ed5a0340b46e787ad041ae6d9f19d7ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b987fef5bfb36fc84f55f5058f956a691f446a2c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903099"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710308"
 ---
 # <a name="configure-web-synchronization"></a>Configurar Sincronização da Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "67903099"
   
      Para obter mais informações sobre permissões requeridas pelos agentes, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
--   Especifique a mesma conta de domínio que o Agente de Mesclagem usa quando a conta e a senha são especificadas na página **Informações do Servidor Web** do Assistente para Nova Assinatura ou quando se especificam valores para os parâmetros **@internet_url** e **@internet_login** de [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Essa conta deve ter permissões de leitura para o compartilhamento de instantâneo.  
+-   Especifique a mesma conta de domínio usada pelo Agente de Mesclagem quando você especifica uma conta e a senha na página **Informações do Servidor Web** do Assistente para Nova Assinatura ou quando você especifica valores para os parâmetros `@internet_url` e `@internet_login` de [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Essa conta deve ter permissões de leitura para o compartilhamento de instantâneo.  
   
 -   Cada publicação deve usar um diretório virtual separado para o IIS.  
   

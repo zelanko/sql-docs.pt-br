@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fbea16ef-f2cc-4734-9149-ec2598fd3cca
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f97fdcba1cfed8ca28c39afdec92275aa6ba5d7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c25550ed5e985f643f81b0b41e749f007eef0df3
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68125954"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682071"
 ---
 # <a name="cursor-transact-sql"></a>cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ Um tipo de dados para parâmetros OUTPUT de variáveis ou procedimento armazenad
   
 ## <a name="remarks"></a>Remarks  
 As operações que podem fazer referência a variáveis e parâmetros que têm o tipo de dados **cursor** são:
--   As instruções DECLARE *@local_variable* e SET *@local_variable* .  
+-   As instruções DECLARE *\@variável_local* e SET *\@variável_local*.  
 -   As instruções de cursor OPEN, FETCH, CLOSE e DEALLOCATE.  
 -   Parâmetros de saída de procedimento armazenado.  
 -   A função CURSOR_STATUS.  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bfc88ea17f78aaad42d585490a4776db65824d92
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 702b0423e54258f8afe49f5c7a39734d5570f8df
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742927"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974385"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Visão geral de Grupos de Disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "68742927"
   
  Existem três formulários de failover: automático, manual e forçado (com possível perda de dados). O formulário ou formulários de failover com suporte de uma determinada réplica secundária dependem de seu modo de disponibilidade, e, para o modo de confirmação síncrona, no modo de failover na réplica primária e na réplica secundária de destino, da seguinte forma.  
   
--   Quando a réplica secundária de destino está sincronizada com o avt1, o modo de confirmação síncrona permite duas formas de failover: o *failover manual planejado* e o *failover automático*. O suporte para esses formulários de failover depende da configuração da *propriedade de modo de failover* nos parceiros de failover. Se o modo de failover for definido como "manual" na réplica primária ou secundária, apenas o failover manual terá suporte para aquela réplica secundária. Se o modo de failover for definido como "automático" nas réplicas primária e secundária, failover automático e manual terão suporte naquela réplica secundária.  
+-   Se a réplica secundária de destino estiver sincronizada com a réplica primária, o modo de confirmação síncrona será compatível com duas formas de failover: o *failover manual planejado* e o *failover automático*. O suporte para esses formulários de failover depende da configuração da *propriedade de modo de failover* nos parceiros de failover. Se o modo de failover for definido como "manual" na réplica primária ou secundária, apenas o failover manual terá suporte para aquela réplica secundária. Se o modo de failover for definido como "automático" nas réplicas primária e secundária, failover automático e manual terão suporte naquela réplica secundária.  
   
     -   **Failover manual planejado** (sem perda de dados)  
   

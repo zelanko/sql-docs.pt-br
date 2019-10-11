@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 159a2f0b75371aa24661d3e33f3e2108dc93432b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2bf159b42298a2b1fc031383dffe7218f55aabd
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901091"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710933"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Considerações de design e limitações para Publicadores Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ ms.locfileid: "67901091"
   
 -   Publicações transacionais padrão oferecem suporte para tabelas de até 1000 colunas. Publicações transacionais Oracle oferecem suporte para 995 colunas (a replicação adiciona cinco colunas a cada tabela publicada).  
   
--   Cláusulas de agrupamento são adicionadas às instruções CREATE TABLE para habilitar comparações que diferenciam maiúscula de minúscula, o que é importante para chaves primárias e restrições exclusivas. Este comportamento é controlado com a opção de esquema 0x1000, especificada com o parâmetro **@schema_option** de [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
+-   Cláusulas de agrupamento são adicionadas às instruções CREATE TABLE para habilitar comparações que diferenciam maiúscula de minúscula, o que é importante para chaves primárias e restrições exclusivas. Este comportamento é controlado com a opção de esquema 0x1000, especificada com o parâmetro `@schema_option` de [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
 -   Se você usar procedimentos armazenados para configurar ou manter um Editor Oracle, não coloque os procedimentos dentro de uma transação explícita. Isso não oferece suporte sobre o servidor vinculado usado para conexão com o Editor Oracle.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "67901091"
   
 -   A conta sob a qual o Snapshot Agent e o Log Reader Agent fazem conexões do Distribuidor para o Processador é especificada por um dos seguintes métodos:  
   
-    -   O parâmetro **@security_mode** do [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) (você também especifica valores para **@login** e **@password** se for usada a autenticação do Oracle)  
+    -   O parâmetro `@security_mode` do [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) (você também especificará valores para `@login` e `@password` se for usada a autenticação do Oracle)  
   
     -   Na caixa de diálogo **Conectar ao Servidor** no SQL Server Management Studio, que você usa ao configurar o Editor Oracle no Distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -158,11 +158,11 @@ ms.locfileid: "67901091"
   
 -   A conta sob a qual o Snapshot Agent e o Agente de Leitor de Log fazem conexões não pode ser alterada com [sp_changedistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) ou por uma folha de propriedades, mas a senha pode ser alterada.  
   
--   Se você especificar um valor de 1 (Autenticação Integrada do Windows) para o parâmetro **@security_mode** de [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md):  
+-   Se você especificar um valor de 1 (Autenticação Integrada do Windows) para o parâmetro `@security_mode` de [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md):  
   
-    -   A conta e a senha de processo usadas para o Snapshot Agent e o Agente de Leitor de Log (os parâmetros **@job_login** e **@job_password** de [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) e [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)) devem ser as mesmas que a conta e a senha usadas para a conexão com o Publicador Oracle.  
+    -   A conta e a senha de processo usadas para o Agente de Instantâneo e o Agente de Leitor de Log (os parâmetros `@job_login` e `@job_password` de [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) e [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)) devem ser as mesmas que a conta e a senha usadas para a conexão com o Publicador Oracle.  
   
-    -   Você não pode alterar o parâmetro **@job_login** por meio de [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) ou [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), mas a senha pode ser alterada.  
+    -   Você não pode alterar o parâmetro `@job_login` por meio de [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) ou [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), mas a senha pode ser alterada.  
   
  Para obter mais informações sobre a segurança de replicação, confira [Exibir e modificar configurações de segurança de replicação](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   

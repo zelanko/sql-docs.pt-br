@@ -1,5 +1,5 @@
 ---
-title: Nome de caminho (Transact-SQL) | Microsoft Docs
+title: Nome do caminho (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f79f9f94d56c900d879fce06646b401f735e0bd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140575"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251955"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna o caminho de um objeto binário grande FILESTREAM (BLOB). A API OpenSqlFilestream usa esse caminho para retornar um identificador que um aplicativo pode usar para trabalhar com os dados de BLOB usando as APIs do Win32. PathName é somente leitura.  
+  Retorna o caminho de um objeto binário grande FILESTREAM (BLOB). A API OpenSqlFilestream usa esse caminho para retornar um identificador que um aplicativo pode usar para trabalhar com os dados de BLOB usando APIs do Win32. PathName é somente leitura.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,12 +40,12 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
 ## <a name="arguments"></a>Argumentos  
  *column_name*  
- É o nome da coluna de uma **varbinary (max)** coluna FILESTREAM. *column_name* deve ser um nome de coluna. Não pode ser uma expressão nem o resultado de uma instrução CAST ou CONVERT.  
+ É o nome da coluna de uma coluna **varbinary (max)** FileStream. *column_name* deve ser um nome de coluna. Não pode ser uma expressão nem o resultado de uma instrução CAST ou CONVERT.  
   
- Solicitação de PathName para uma coluna de qualquer outro tipo de dados ou para um **varbinary (max)** columnthat não tem o será de atributo de armazenamento FILESTREAM causará um erro de tempo de compilação de consulta.  
+ Solicitar o nome do caminho para uma coluna de qualquer outro tipo de dados ou para um columnthat **varbinary (max)** não tem o atributo de armazenamento FileStream causará um erro de tempo de compilação de consulta.  
   
- *@option*  
- Um inteiro [expressão](../../t-sql/language-elements/expressions-transact-sql.md) que define como o componente de servidor do caminho deve ser formatado. *@option* pode ser um dos valores a seguir. O padrão é 0.  
+ *\@option*  
+ Uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de inteiro que define como o componente de servidor do caminho deve ser formatado. *\@option* pode ser um dos valores a seguir. O padrão é 0.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -56,9 +56,9 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *use_replica_computer_name*  
  Um valor de bit que define como o nome do servidor deve ser retornado em um grupo de disponibilidade Always On.  
   
- Quando o banco de dados não pertence a um grupo de disponibilidade Always On, o valor desse argumento será ignorado. O nome do computador sempre é usado no caminho.  
+ Quando o banco de dados não pertence a um grupo de disponibilidade Always On, o valor desse argumento é ignorado. O nome do computador sempre é usado no caminho.  
   
- Quando o banco de dados pertence a um de disponibilidade Always On do grupo, em seguida, o valor de *use_replica_computer_name* tem o seguinte efeito na saída da **PathName** função:  
+ Quando o banco de dados pertence a um grupo de disponibilidade Always On, o valor de *use_replica_computer_name* tem o seguinte efeito na saída da função de **nome de caminho** :  
   
 |Valor|Descrição|  
 |-----------|-----------------|  

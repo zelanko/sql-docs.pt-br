@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3ac7c2a6cd6b1f714e4dd1aad2c04ef32854c4f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28d7a01ce3c11ce332de7e7af70ff0c57746e840
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998066"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682097"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>Ocultar uma instância do Mecanismo de Banco de Dados do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,10 @@ ms.locfileid: "67998066"
   Para obter mais informações, veja [Configurar um servidor para escuta em uma porta TCP específica &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 ### <a name="clustering"></a>Clustering  
- Se você ocultar uma instância nomeada clusterizada, o serviço de cluster poderá não se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isso fará com que a verificação da instância de cluster **IsAlive** falhe e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ficará offline. É recomendável que você crie um alias em todos os nós da instância clusterizada para refletir a porta estática configurada para a instância.  
+ Se você ocultar o nome de uma instância clusterizada ou de um grupo de disponibilidade, o serviço de cluster poderá não conseguir se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isso causará uma falha na verificação **IsAlive** da instância de cluster e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ficará offline. 
+ 
+Para evitar isso, crie um alias em todos os nós da instância clusterizada ou em todas as instâncias que hospedam réplicas do grupo de disponibilidade para refletir a porta estática que você configurou para a instância.  Por exemplo, em um grupo de disponibilidade com duas réplicas, no nó um, crie um alias para a instância do nó dois, como `node-two\instancename`. No nó dois, crie um alias chamado `node-one\instancename`. Os aliases são necessários para um failover com êxito. 
+ 
  Para obter mais informações, consulte [Criar ou excluir um alias de servidor para ser usado por um cliente &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md).  
   
  Se você ocultar uma instância nomeada clusterizada, o serviço de cluster poderá não se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se a chave do Registro **LastConnect** (**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI11.0\LastConnect**) tiver uma porta diferente da porta de escuta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o serviço de cluster não puder fazer uma conexão com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você poderá ver um erro semelhante ao seguinte:  

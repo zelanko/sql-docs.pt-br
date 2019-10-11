@@ -1,7 +1,7 @@
 ---
 title: Dados hierárquicos (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/03/2017
+ms.date: 10/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 018866c81a84455bd3480a523dbdc2fffaa538c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36fea2a22bddcf130725e6092314e00fbb0b6a8f
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035851"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974248"
 ---
 # <a name="hierarchical-data-sql-server"></a>Dados hierárquicos (SQL Server)
 
@@ -325,7 +325,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>Exemplo utilizando uma transação serializável  
- O tipo de dados **Org_BreadthFirst** assegura que a determinação de **@last_child** use uma busca de intervalo. Além de outros casos de erro que um aplicativo tente verificar, uma violação da chave duplicada depois da inserção indica uma tentativa de adicionar vários funcionários com a mesma ID e, portanto, **@last_child** deve ser novamente computado. O código a seguir usa uma transação serializável e um índice de primeira amplitude para computar o valor do novo nó:  
+ O tipo de dados **Org_BreadthFirst** assegura que a determinação de **@last_child** use uma busca de intervalo. Além de outros casos de erro que um aplicativo tente verificar, uma violação da chave duplicada depois da inserção indica uma tentativa de adicionar vários funcionários com a mesma ID e, portanto, **@last_child** deve ser novamente computado. O código a seguir computa o novo valor de nó dentro de uma transação serializável:  
   
 ```sql
 CREATE TABLE Org_T2  
@@ -343,9 +343,12 @@ DECLARE @last_child hierarchyid
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  
 BEGIN TRANSACTION   
   
-UPDATE Org_T2   
-SET @last_child = LastChild = EmployeeId.GetDescendant(LastChild,NULL)  
-WHERE EmployeeId = @mgrid  
+SELECT @last_child  =  EmployeeId.GetDescendant(LastChild,NULL)
+FROM Org_T2
+WHERE EmployeeId = @mgrid
+
+UPDATE Org_T2 SET LastChild = @last_child  WHERE EmployeeId = @mgrid
+
 INSERT Org_T2 (EmployeeId, EmployeeName)   
     VALUES(@last_child, @EmpName)  
 COMMIT  

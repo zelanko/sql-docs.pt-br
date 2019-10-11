@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dca1dfc281ac4ea63c2c28b35dc93805f2c19b2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0f6caf3862d42d4245e4b2657448b2d5beb22667
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021403"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710792"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication"></a>Informações sobre o Publicador, Lista de inspeção de Assinaturas (publicação de mesclagem)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "68021403"
  O nome de cada assinatura no formato:*SubscriberName: SubscriptionDatabaseName*.  
   
  **Nome amigável**  
- A descrição de cada assinatura. A descrição é inserida na caixa de diálogo **Propriedades da assinatura** ou especificada com o parâmetro **@description** de [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) ou [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Os usuários geralmente usam a descrição como um "nome amigável" ou apelido para a assinatura.  
+ A descrição de cada assinatura. A descrição é inserida na caixa de diálogo **Propriedades da assinatura** ou especificada com o parâmetro `@description` de [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) ou [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Os usuários geralmente usam a descrição como um "nome amigável" ou apelido para a assinatura.  
   
  **Publicação**  
  O nome da publicação com a qual uma assinatura é sincronizada, no formato: *PublicationDatabaseName: PublicationName*.  

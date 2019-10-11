@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9b88baea-b7c6-4e5d-88f9-93d6a0ff0368
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c41452c3303dff2225528f2c894c3104fa7fb794
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 972e250e97e8f94b3de3a453137c21cc9fc099c2
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939368"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710440"
 ---
 # <a name="clean-up-merge-metadata-replication-transact-sql-programming"></a>Limpar metadados de mesclagem (Programação Transact-SQL de replicação)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67939368"
   
 1.  No Publicador do banco de dados de publicação, execute [sp_mergemetadataretentioncleanup](../../../relational-databases/system-stored-procedures/sp-mergemetadataretentioncleanup-transact-sql.md).  
   
-2.  (Opcional) Observe o número de linhas removidas na etapa 1 do [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md)e nas tabelas do sistema [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) , retornadas respectivamente nos parâmetros de saída **@num_genhistory_rows** , **@num_contents_rows** e nas tabelas do sistema **@num_tombstone_rows** .  
+2.  (Opcional) Observe o número de linhas removidas na etapa 1 das tabelas do sistema [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md) e [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md), retornadas respectivamente nos parâmetros de saída `@num_genhistory_rows`, `@num_contents_rows` e `@num_tombstone_rows`.  
   
 3.  Repita as etapas 1 e 2 no Assinante para limpar os metadados no banco de dados de assinatura.  
   

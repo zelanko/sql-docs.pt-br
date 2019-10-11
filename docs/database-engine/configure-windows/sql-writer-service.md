@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bb5b16d81ce78b6dbd587b74730b84a6139f53e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79b0ba2bad207b92e0227ed5c8d3999dab335df6
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037205"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816673"
 ---
 # <a name="sql-writer-service"></a>Serviço do gravador do SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68037205"
 > Ao usar o VSS para fazer backup de uma máquina virtual que esteja hospedando um Grupo de Disponibilidade Básico, se a máquina virtual estiver hospedando bancos de dados em um estado secundário, a partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9 *não* será feito o backup desses bancos de dados com a máquina virtual.  Isso ocorre porque os Grupos de Disponibilidade Básicos não oferecem suporte para backup de bancos de dados na réplica secundária.  Antes dessas versões de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o backup falhará apresentando um erro.
   
 ## <a name="virtual-backup-device-interface-vdi"></a>VDI (Virtual Backup Device Interface)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece uma API chamada VDI que permite que fornecedores de software independente integrem o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em seus produtos para dar suporte a operações de backup e restauração. Essas APIs são criadas para prover confiabilidade e desempenho máximos, e dão suporte a todas as funcionalidades de backup e de restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , inclusive todas as capacidades de backup hot e instantâneo.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece uma API chamada VDI que permite que fornecedores de software independente integrem o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em seus produtos para dar suporte a operações de backup e restauração. Essas APIs são criadas para prover confiabilidade e desempenho máximos, e dão suporte a todas as funcionalidades de backup e de restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , inclusive todas as capacidades de backup hot e instantâneo. Se um aplicativo de fornecedor de terceiros solicitar um backup (VSS) de instantâneo, o Serviço Gravador do SQL chamará as funções de API do VDI para executar os backups propriamente ditos. Observe que a API do VDI é independente do VSS e é frequentemente usada em soluções de software que não empregam APIs do VSS.
   
 ## <a name="permissions"></a>Permissões  
  O Serviço Gravador do SQL deve ser executado na conta **Sistema Local** . O Serviço Gravador do SQL usa o logon **NT Service\SQLWriter** para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O uso do logon **NT Service\SQLWriter** permite que o processo do Gravador do SQL seja executado no nível mais baixo de privilégio em uma conta designada como **nenhum logon**, que limita a vulnerabilidade. Se o serviço do Gravador do SQL estiver desabilitado, qualquer utilitário que confie em instantâneos do VSS, como o System Center Data Protection Manager, bem como em outros produtos de terceiros, será interrompido, ou pior, correrá o risco de obter backups de bancos de dados que não estavam consistentes. Se nem o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o sistema em que é executado, nem o sistema host (no caso de uma máquina virtual), precisarem usar qualquer coisa além do backup de [!INCLUDE[tsql](../../includes/tsql-md.md)] , o serviço do Gravador do SQL poderá seguramente ser desabilitado e o logon será removido.  Observe que o serviço do Gravador do SQL pode ser chamado por um backup em nível de sistema ou de volume, seja o backup diretamente baseado em instantâneo ou não. Alguns produtos de backup de sistema usam o VSS para evitar serem bloqueados por arquivos abertos ou bloqueados. O Serviço Gravador do SQL precisa de permissões elevadas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pois, no decorrer de suas atividades, ele congelará brevemente qualquer E/S para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

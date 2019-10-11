@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0f3689bdad636d7df4281975167984425a8049aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 65154f6e4ffd67a207db9a3b6c5044710249c1eb
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000629"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682051"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>Precisão, escala e comprimento (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +35,11 @@ A precisão é o número de dígitos em um número. A escala é o número de dí
   
 Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a precisão máxima padrão dos tipos de dados **numeric** e **decimal** é 38. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o máximo padrão é 28.
   
-O comprimento de um tipo de dados numérico é o número de bytes usado para armazenar o número. Comprimento de uma cadeia de caracteres ou tipo de dados de Unicode é o número de caracteres. O comprimento para os tipos de dados **binary**, **varbinary** e **image** é o número de bytes. Por exemplo, um tipo de dados **int** pode conter 10 dígitos, é armazenado em 4 bytes e não aceita casas decimais. O tipo de dados **int** tem uma precisão de 10, um comprimento de 4 e uma escala de 0.
+O comprimento de um tipo de dados numérico é o número de bytes usado para armazenar o número. Para varchar e char, o tamanho de uma cadeia de caracteres é o número de bytes. Para nvarchar e nchar, o tamanho da cadeia de caracteres é o número de pares de bytes. O comprimento para os tipos de dados **binary**, **varbinary** e **image** é o número de bytes. Por exemplo, um tipo de dados **int** pode conter 10 dígitos, é armazenado em 4 bytes e não aceita casas decimais. O tipo de dados **int** tem uma precisão de 10, um comprimento de 4 e uma escala de 0.
   
-Ao concatenar duas expressões **char**, **varchar**, **binary** ou **varbinary**, o comprimento da expressão resultante é a soma dos comprimentos das duas expressões de origem, até 8 mil caracteres.
+Ao concatenar duas expressões **char**, **varchar**, **binary** ou **varbinary**, o tamanho da expressão resultante é a soma dos tamanhos das duas expressões de origem, até 8 mil bytes.
   
-Ao concatenar duas expressões **nchar** ou **nvarchar**, o comprimento da expressão resultante é a soma dos comprimentos das duas expressões de origem, até 4 mil caracteres.
+Ao concatenar duas expressões **nchar** ou **nvarchar**, o tamanho da expressão resultante é a soma dos tamanhos das duas expressões de origem, até 4 mil pares de bytes.
   
 Ao comparar duas expressões do mesmo tipo de dados, mas diferentes comprimentos usando UNION, EXCEPT ou INTERSECT, o comprimento resultante é o mais longo das duas expressões.
   

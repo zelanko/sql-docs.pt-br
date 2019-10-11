@@ -1,7 +1,7 @@
 ---
 title: float e real (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/22/2017
+ms.date: 09/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9811fdb3f7199e3a4cf10053f0f8c2f850a57845
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7f31e3894448e5d6a044af75c7e86b704b993aa6
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086751"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682018"
 ---
 # <a name="float-and-real-transact-sql"></a>flutuante e real (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ Os valores de **float** são truncados quando são convertidos em qualquer tipo 
   
 Quando desejar fazer a conversão de **float** ou **real** em dados de caractere, normalmente, é mais útil usar a função de cadeia de caracteres STR do que CAST( ). Isso porque STR habilita mais controle nas formatações. Para obter mais informações, consulte [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md) e [Funções &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md).
   
-A conversão de valores **float** que usam notação científica para **decimal** ou **numeric** é restrita a valores de precisão de 17 dígitos apenas. Qualquer valor < 5E-18 é arredondado para 0.
+Antes do [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)], a conversão de valores **float** para **decimal** ou **numeric** era restrita somente a valores com precisão de 17 dígitos. Qualquer valor **float** menor que 5E-18 (quando definido usando a notação científica de 5E-18 ou a notação decimal de 0,0000000000000000050000000000000005) é arredondado para 0. Essa não é mais uma restrição no [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] em diante.
   
 ## <a name="see-also"></a>Confira também
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  

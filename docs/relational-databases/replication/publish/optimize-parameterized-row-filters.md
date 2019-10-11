@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: df643e5881a4c53ee2a55c2cda53cdc3b3279ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08bc847d6b3bffe57df7fc0c70be622365f156d0
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059445"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710863"
 ---
 # <a name="optimize-parameterized-row-filters"></a>Otimizar filtros de linha com parâmetros
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,34 +112,34 @@ ms.locfileid: "68059445"
   
 #### <a name="to-set-optimize-synchronization"></a>Para definir o Otimizar Sincronização  
   
-1.  Na página **Opções de Assinatura** da caixa de diálogo **Propriedades da Publicação – \<Publicação>** , selecione o valor **True** para a opção **Otimizar Sincronização**.  
+1.  Na página **Opções de Assinatura** da caixa de diálogo **Propriedades da Publicação – \<Publicação>** , selecione o valor `True` para a opção **Otimizar Sincronização**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
- Para definições sobre as opções de filtragem de **@keep_partition_changes** e **@use_partition_groups** , consulte [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  
+ Para definições sobre as opções de filtragem de `@keep_partition_changes` e `@use_partition_groups`, consulte [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  
   
 #### <a name="to-specify-merge-filter-optimizations-when-creating-a-new-publication"></a>Para especificar otimizações de filtro de mesclagem ao criar uma nova publicação  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Especifique **@publication** e um valor de **true** para um dos seguintes parâmetros:  
+1.  No Publicador do banco de dados de publicação, execute [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Especifique `@publication` e um valor de `true` para um dos seguintes parâmetros:  
   
-    -   **@use_partition_groups** : - a otimização de desempenho mais alta, contanto que os artigos estejam em conformidade com os requisitos para partições pré-calculadas. Para obter mais informações, consulte [Optimize Parameterized Filter Performance with Precomputed Partitions](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md) (Otimizar o desempenho do filtro parametrizado com partições pré-computadas).  
+    -   `@use_partition_groups`: – a otimização de desempenho mais alta, contanto que os artigos estejam em conformidade com os requisitos para partições pré-calculadas. Para obter mais informações, consulte [Optimize Parameterized Filter Performance with Precomputed Partitions](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md) (Otimizar o desempenho do filtro parametrizado com partições pré-computadas).  
   
-    -   **@keep_partition_changes** - use essa otimização se as partições pré-calculadas não podem ser usadas.  
+    -   `@keep_partition_changes` – use essa otimização se as partições pré-calculadas não puderem ser usadas.  
   
 2.  Adicione um trabalho de instantâneo para a publicação. Para obter mais informações, consulte [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 3.  No Publicador do banco de dados de publicação, execute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), especificando os seguintes parâmetros:  
   
-    -   **@publication** - o nome da publicação da etapa 1.  
+    -   `@publication` – o nome da publicação da etapa 1.  
   
-    -   **@article** - um nome para o artigo  
+    -   `@article` – um nome para o artigo  
   
-    -   **@source_object** - o nome do banco de dados sendo publicado.  
+    -   `@source_object` – o objeto de banco de dados sendo publicado.  
   
-    -   **@subset_filterclause** - a cláusula de filtro com parâmetros opcional usada para filtrar o artigo horizontalmente.  
+    -   `@subset_filterclause` – a cláusula de filtro com parâmetros opcional usada para filtrar o artigo horizontalmente.  
   
-    -   **@partition_options** - as opções de partição para o artigo filtrado.  
+    -   `@partition_options` – as opções de partição para o artigo filtrado.  
   
 4.  Repita a etapa 3 para cada artigo na publicação.  
   
@@ -147,16 +147,16 @@ ms.locfileid: "68059445"
   
 #### <a name="to-view-and-modify-merge-filter-behaviors-for-an-existing-publication"></a>Para visualizar e modificar comportamentos de filtro de mesclagem para uma publicação existente  
   
-1.  (Opcional) No Assinante do banco de dados de publicação, execute [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), especificando **@publication** . Observe o valor de **keep_partition_changes** e **use_partition_groups** no conjunto de resultados.  
+1.  (Opcional) No Assinante do banco de dados de publicação, execute [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), especificando `@publication`. Observe o valor de `keep_partition_changes` e `use_partition_groups` no conjunto de resultados.  
   
-2.  (Opcional) No Publicador do banco de dados de publicação, execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique um valor de **use_partition_groups** para **@property** e **true** ou o **false** para **@value** .  
+2.  (Opcional) No Publicador do banco de dados de publicação, execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique um valor de `use_partition_groups` para `@property` e `true` ou `false` para `@value`.  
   
-3.  (Opcional) No Publicador do banco de dados de publicação, execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique um valor de **keep_partition_changes** para **@property** e **true** ou o **false** para **@value** .  
+3.  (Opcional) No Publicador do banco de dados de publicação, execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique um valor de `keep_partition_changes` para `@property` e `true` ou `false` para `@value`.  
   
     > [!NOTE]  
-    >  Ao habilitar **keep_partition_changes**, é necessário, primeiro, desabilitar **use_partition_groups** e especificar um valor de **1** para **@force_reinit_subscription** .  
+    >  Ao habilitar `keep_partition_changes`, primeiro você deve desabilitar `use_partition_groups` e especificar um valor de `1` para `@force_reinit_subscription`.  
   
-4.  (Opcional) No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor de **partition_options** para **@property** e o valor apropriado para **@value** . Consulte [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) para definições destas opções de filtragem.  
+4.  (Opcional) No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor de `partition_options` para `@property` e o valor apropriado para *@value`. Consulte [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) para definições destas opções de filtragem.  
   
 5.  (Opcional) Iniciar o Snapshot Agent para regenerar o instantâneo se necessário. Para obter informações sobre quais alterações exigem a criação de um novo instantâneo, consulte [Alterar as propriedades da publicação e do artigo](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: 8bbc7670f3a4d6d8a017e7284c5a661d38594f08
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: d03c66219330df3cca892bd005d1e9a456959c83
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251053"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823567"
 ---
 # <a name="hybrid-buffer-pool"></a>Pool de Buffers Híbrido
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,10 +76,8 @@ Por padrão, o pool de buffers híbrido é definido como habilitado no escopo do
 O exemplo a seguir retorna o status atual da configuração do sistema do pool de buffers híbrido para uma instância do SQL Server.
 
 ```sql
-SELECT *
-FROM sys.configurations
-WHERE
-    name = 'hybrid_buffer_pool';
+SELECT * FROM
+sys.server_memory_optimized_hybrid_buffer_pool_configuration;
 ```
 
 O seguinte exemplo retorna duas tabelas:
@@ -95,9 +93,9 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## <a name="best-practices-for-hybrid-buffer-pool"></a>Melhores práticas para o pool de buffers híbrido
 
-Não é recomendável habilitar o pool de buffers híbrido em instâncias com menos de 16 GB de RAM.
-
 Ao formatar seu dispositivo PMEM no Windows, use o maior tamanho de unidade de alocação disponível para NTFS (2 MB no Windows Server 2019) e verifique se o dispositivo foi formatado para o DAX (Direct Access).
+
+Para obter um desempenho ideal, habilite [Páginas Bloqueadas na Memória](./enable-the-lock-pages-in-memory-option-windows.md) no Windows.
 
 Os tamanhos de arquivos devem ser um múltiplo de 2 MB (2 MB de módulo deve igual a zero).
 

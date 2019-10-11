@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24ed9dad8c45206f405c4bc0cb2d948c98d8b5ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 058e46441b22f5be5b0d63cf8e9a61dd6c75ef27
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018716"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711040"
 ---
 # <a name="specify-merge-replication-properties"></a>Especificar propriedades de Replicação de Mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,20 +52,20 @@ Na página **Artigos** do Assistente para Nova Publicação, selecione uma tabel
   
 #### <a name="new-article"></a>Novo artigo  
   
-1.  Execute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), enquanto especificando um valor de **1** ou **2** para o parâmetro **@subscriber_upload_options** . Os números correspondem ao seguinte comportamento:  
+1.  Execute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), enquanto especificando um valor de **1** ou **2** para o parâmetro `@subscriber_upload_options`. Os números correspondem ao seguinte comportamento:  
   
     -   **0** - Nenhuma restrição (padrão). As alterações feitas no Assinante são carregadas no Publicador.    
     -   **1** - As alterações são permitidas no Assinante, mas não são carregadas no Publicador.    
     -   **2** - As alterações não são permitidas no Assinante.  
   
-        > [!NOTE]  
-        >  Se a tabela de origem para um artigo já estiver publicada em outra publicação, o valor de **@subscriber_upload_options** deve ser o mesmo para os dois artigos.  
+       > [!NOTE]  
+       > Se a tabela de origem para um artigo já estiver publicada em outra publicação, o valor de `@subscriber_upload_options` deverá ser o mesmo para os dois artigos.  
   
 #### <a name="existing-article"></a>Artigo existente
   
 1.  Para determinar se um artigo é somente para download, execute [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) e verifique o valor de **upload_options** para o artigo no conjunto de resultados. 
   
-2.  Se o valor retornado na etapa 1 for **0**, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), enquanto especificando um valor de **subscriber_upload_options** para **@property** , um valor de **1** para **@force_invalidate_snapshot** e **@force_reinit_subscription** , e um valor de **1** ou **2** para **@value** , o que corresponde ao seguinte comportamento.:  
+2.  Se o valor retornado na etapa 1 for **0**, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), enquanto especificando um valor de **subscriber_upload_options** para `@property`, um valor de **1** para `@force_invalidate_snapshot` e `@force_reinit_subscription`, e um valor de **1** ou **2** para `@value`, o que corresponde ao seguinte comportamento:  
   
     -   **1** - As alterações são permitidas no Assinante, mas não são carregadas no Publicador.    
     -   **2** - As alterações não são permitidas no Assinante.  
@@ -103,20 +103,20 @@ Na página **Artigos** do Assistente para Nova Publicação, selecione uma tabel
   
 #### <a name="create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>Criar uma assinatura pull de mesclagem que usa o Resolvedor Interativo  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), especificando **@publication** . Anote o valor de **allow_interactive_resolver** para cada artigo no conjunto de resultados para o qual o Resolvedor Interativo será usado.   
+1.  No Publicador do banco de dados de publicação, execute [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), especificando `@publication`. Anote o valor de **allow_interactive_resolver** para cada artigo no conjunto de resultados para o qual o Resolvedor Interativo será usado.   
     -   Se este valor for **1**, o Resolver Interativo será usado.    
-    -   Se este valor for **0**, você deverá primeiro habilitar o Resolvedor Interativo de cada artigo. Para tanto, execute o [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), especificando **@publication** , **@article** , um valor de **allow_interactive_resolver** para **@property** , e um valor de **true** para **@value** .    
+    -   Se este valor for **0**, você deverá primeiro habilitar o Resolvedor Interativo de cada artigo. Para tanto, execute o [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), especificando `@publication`, `@article`, um valor de **allow_interactive_resolver** para `@property`, e um valor de **true** para `@value`.    
 2.  No Assinante, no banco de dados de assinatura, execute o [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Para obter mais informações, consulte [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).    
 3.  No Publicador do banco de dados de assinatura, execute o [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md), especificando os seguintes parâmetros:    
-    -   **@publisher** , **@publisher_db** (o banco de dados publicado), e **@publication** .    
-    -   Um valor de **true** para **@enabled_for_syncmgr** .    
-    -   Um valor de **true** para **@use_interactive_resolver** .    
+    -   `@publisher`, `@publisher_db` (o banco de dados publicado) e `@publication`.    
+    -   Um valor de **true** para `@enabled_for_syncmgr`.    
+    -   Um valor de **true** para `@use_interactive_resolver`.    
     -   As informações da conta de segurança requerida pelo Merge Agent. Para obter mais informações, confira [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).    
 4.  No Publicador, no banco de dados da publicação, execute [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md).  
   
 #### <a name="define-an-article-that-supports-the-interactive-resolver"></a>Definir um artigo que tem suporte para o Resolvedor Interativo  
   
-1.  No Publicador do banco de dados de publicação, execute o [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Especifique o nome da publicação à qual o artigo pertence, para **@publication** ; um nome para o artigo para **@article** , um objeto de banco de dados sendo publicado para **@source_object** , e um valor de **true** para **@allow_interactive_resolver** . Para obter mais informações, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  No Publicador do banco de dados de publicação, execute o [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Especifique o nome da publicação à qual o artigo pertence, para `@publication`; um nome para o artigo para `@article`, um objeto de banco de dados sendo publicado para `@source_object`, e um valor de **true** para `@allow_interactive_resolver`. Para obter mais informações, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
  
 ## <a name="conflict-tracking-and-resolution-level-for-merge-articles"></a>Nível de resolução e acompanhamento de conflitos para artigos de mesclagem
 Este tópico descreve como especificar o nível de rastreamento e resolução de conflitos para artigos de mesclagem no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -142,7 +142,7 @@ Este tópico descreve como especificar o nível de rastreamento e resolução de
   
 #### <a name="to-specify-conflict-tracking-options-for-a-new-merge-article"></a>Para especificar as opções de controle de conflito para um novo artigo de mesclagem  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e especifique um dos seguintes valores para **@column_tracking** :  
+1.  No Publicador do banco de dados de publicação, execute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e especifique um dos seguintes valores para `@column_tracking`:  
   
     -   **true** - Use controle no nível da coluna para o artigo.    
     -   **false** - Use controle no nível da linha, que é o padrão.  
@@ -150,12 +150,12 @@ Este tópico descreve como especificar o nível de rastreamento e resolução de
 #### <a name="change-conflict-tracking-options-for-a-merge-article"></a>Alterar as opções de acompanhamento de conflito para um novo artigo de mesclagem  
   
 1.  Para determinar as opções de rastreamento de conflito para um artigo de mesclagem, execute [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Observe o valor da opção **column_tracking** no conjunto de resultados do artigo. Um valor de **1** significa que o controle no nível da coluna está em uso, e o valor de **0** significa que o controle no nível da linha está em uso.    
-2.  No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor de **column_tracking** para **@property** e um dos valores a seguir para **@value** :  
+2.  No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor de **column_tracking** para `@property` e um dos valores a seguir para `@value`:  
   
     -   **true** - Use controle no nível da coluna para o artigo.    
     -   **false** - Use controle no nível da linha, que é o padrão.  
   
-     Especifique um valor de **1** para ambos **@force_invalidate_snapshot** e **@force_reinit_subscription** . 
+     Especifique um valor de **1** para `@force_invalidate_snapshot` e `@force_reinit_subscription`. 
 
 ## <a name="manage-tracking--deletes"></a>Gerenciar exclusões de acompanhamento
     
@@ -169,7 +169,7 @@ Este tópico descreve como especificar o nível de rastreamento e resolução de
   
 ### <a name="specify-that-deletes-be-ignored-for-a-new-merge-article"></a>Especificar que as exclusões sejam ignoradas para um novo artigo de mesclagem  
   
-No Publicador no banco de dados de publicação, execute o [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Especifique um valor de **false** para **@delete_tracking** . Para obter mais informações, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).
+No Publicador no banco de dados de publicação, execute o [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Especifique um valor de **false** para `@delete_tracking`. Para obter mais informações, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).
   
     > [!NOTE]  
     >  If the source table for an article is already published in another publication, the value of **delete_tracking** must be the same for both articles.  
@@ -178,7 +178,7 @@ No Publicador no banco de dados de publicação, execute o [sp_addmergearticle &
   
 1.  Para determinar se a compensação de erro está habilitada para um artigo, execute [sp_helpmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) e observe o valor de **delete_tracking** no conjunto de resultados. Se este valor for **0**, as exclusões já estão sendo ignoradas.  
   
-2.  Se o valor da etapa 1 for **1**, execute [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) no Publicador do banco de dados de publicação. Especifique um valor de **delete_tracking** para **@property** , e um valor de **false** para **@value** .  
+2.  Se o valor da etapa 1 for **1**, execute [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) no Publicador do banco de dados de publicação. Especifique um valor de `delete_tracking` para `@property`, e um valor de **false** para `@value`.  
   
     > [!NOTE]  
     >  Se a tabela de fonte de um artigo já estiver publicada em outra publicação, o valor de **delete_tracking** deverá ser o mesmo de ambos os artigos.  
@@ -198,15 +198,15 @@ No Publicador no banco de dados de publicação, execute o [sp_addmergearticle &
   
 ### <a name="new-article"></a>Novo artigo
   
-1.  No Publicador no banco de dados de publicação, execute o [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Especifique um valor inteiro que representa a ordem de processamento do artigo para **@processing_order** . Para obter mais informações, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  No Publicador no banco de dados de publicação, execute o [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Especifique um valor inteiro que representa a ordem de processamento do artigo para `@processing_order`. Para obter mais informações, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
     > [!NOTE]  
-    >  Ao criar artigos ordenados, você deverá deixar intervalos entre os valores de ordem de artigo. Isto facilitará a definição de novos valores no futuro. Por exemplo, se você tiver três artigos para os quais terá que especificar uma ordem de processamento fixa, defina o valor do **@processing_order** como 10, 20 e 30 em vez de 1, 2 e 3, respectivamente.  
+    >  Ao criar artigos ordenados, você deverá deixar intervalos entre os valores de ordem de artigo. Isto facilitará a definição de novos valores no futuro. Por exemplo, se você tiver três artigos para os quais precisa que especificar uma ordem de processamento fixa, defina o valor do `@processing_order` como 10, 20 e 30 em vez de 1, 2 e 3, respectivamente.  
   
 ### <a name="existing-article"></a>Artigo existente
   
 1.  Para determinar a ordem de processamento de um artigo, execute [sp_helpmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) e observe o valor de **processing_order** no conjunto de resultados.   
-2.  No Publicador no banco de dados de publicação, execute [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor de **processing_order** para **@property** e um valor inteiro que representa a ordem de processamento para **@value** .  
+2.  No Publicador no banco de dados de publicação, execute [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique um valor de **processing_order** para `@property` e um valor inteiro que representa a ordem de processamento para `@value`.  
 
 
 ## <a name="see-also"></a>Consulte Também  

@@ -12,12 +12,12 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ddbb104690c4ded69b1c15628e2f509644c11cb3
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 000ba97314d3d2c7efaf75a42e91b4843e69733d
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809875"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682061"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql-preview"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL) (versão prévia)
 
@@ -44,15 +44,17 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_nam
 
 ## <a name="remarks"></a>Remarks
 
-Conforme as tabelas subjacentes na definição de uma exibição materializada são modificadas, todas as alterações incrementais nas tabelas base são mantidas para a exibição materializada.  A seleção de uma exibição materializada inclui a verificação da estrutura columnstore clusterizada para a exibição materializada e a aplicação dessas alterações incrementais.   Se o número de alterações incrementais mantidas for alto, o desempenho selecionado poderá se degradar.  Os usuários podem recompilar a exibição materializada para recriar a estrutura de columnstore clusterizada e consolidar todas as alterações incrementais nas tabelas de base.
-  
+Para manter as exibições materializadas atualizadas com as alterações de dados nas tabelas base, o mecanismo do data warehouse adiciona linhas de acompanhamento a cada exibição afetada para refletir as alterações. A seleção de uma exibição materializada inclui a verificação do índice columnstore clusterizado da exibição e a aplicação de alterações incrementais.  As linhas de acompanhamento (TOTAL_ROWS – BASE_VIEW_ROWS) não são eliminadas enquanto os usuários não RECOMPILAREM a exibição materializada.  
+
+A overhead_ratio é calculada como TOTAL_ROWS/MAX(1, BASE_VIEW_ROWS).  Se ela for alta, o desempenho de SELECT será prejudicado.  Os usuários podem recompilar a exibição materializada para reduzir a taxa de sobrecarga.
+
 ## <a name="permissions"></a>Permissões  
   
 Requer a permissão VIEW DATABASE STATE.  
 
-## <a name="example"></a>Exemplo  
+## <a name="examples"></a>Exemplos  
 
-Este exemplo retorna o espaço de delta usado em uma exibição materializada.
+### <a name="a-this-example-returns-the-overhead-ratio-of-a-materialized-view"></a>A. Este exemplo retorna a taxa de sobrecarga de uma exibição materializada.
 
 ```sql
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( "dbo.MyIndexedView" )
@@ -66,15 +68,82 @@ Saída:
 
 </br>
 
-|OBJECT_ID |BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
-|--------|--------|--------|--------|
-|4567|0|0|0,0|
+### <a name="b-this-example-shows-how-the-materialized-view-overhead-increases-as-data-changes-in-base-tables"></a>B. Este exemplo mostra como a sobrecarga da exibição materializada aumenta conforme os dados são alterados nas tabelas base
 
-</br>
+Criar uma tabela
+```sql
+CREATE TABLE t1 (c1 int NOT NULL, c2 int not null, c3 int not null)
+```
+Inserir cinco linhas em t1
+```sql
+INSERT INTO t1 VALUES (1, 1, 1)
+INSERT INTO t1 VALUES (2, 2, 2) 
+INSERT INTO t1 VALUES (3, 3, 3) 
+INSERT INTO t1 VALUES (4, 4, 4) 
+INSERT INTO t1 VALUES (5, 5, 5) 
+```
+Criar exibições materializadas MV1
+```sql
+CREATE materialized view MV1 
+WITH (DISTRIBUTION = HASH(c1))  
+AS
+SELECT c1, count(*) total_number 
+FROM dbo.t1 where c1 < 3
+GROUP BY c1  
+```
+A seleção na exibição materializada retorna duas linhas.
+
+|c1|total_number|
+|--------|--------| 
+|1|1| 
+|2|1|
+
+Verifique a sobrecarga da exibição materializada antes de qualquer alteração de dados na tabela base.
+```sql
+DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
+```
+Saída:
 
 |OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
-|--------|--------|--------|--------|
-|789|0|2|2.0|
+|--------|--------|--------|--------|  
+|587149137|2|2 |1,00000000000000000 |
+
+Atualize a tabela base.  Essa consulta atualiza a mesma coluna na mesma linha 100 vezes para o mesmo valor.  O conteúdo da exibição materializada não é alterado.
+```sql
+DECLARE @p int
+SELECT @p = 1
+WHILE (@p < 101)
+BEGIN
+UPDATE t1 SET c1 = 1 WHERE c1 = 1
+SELECT @p = @p+1
+END  
+```
+
+A seleção na exibição materializada retorna o mesmo resultado de antes.  
+
+|c1|total_number|
+|--------|--------| 
+|1|1| 
+|2|1|
+
+Veja abaixo a saída de DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1").  100 linhas são adicionadas à exibição materializada (total_row – base_view_rows) e a overhead_ratio é aumentada. 
+
+|OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
+|--------|--------|--------|--------|  
+|587149137|2|102 |51,00000000000000000 |
+
+Depois de recriar a exibição materializada, todas as linhas de acompanhamento para alterações de dados incrementais são eliminadas e a taxa de sobrecarga de exibição é reduzida.  
+
+```sql
+ALTER MATERIALIZED VIEW dbo.MV1 REBUILD
+go
+DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
+```
+Saída
+
+|OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
+|--------|--------|--------|--------|  
+|587149137|2|2 |1,00000000000000000 |
 
 ## <a name="see-also"></a>Confira também
 

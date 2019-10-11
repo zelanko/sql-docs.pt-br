@@ -17,12 +17,12 @@ ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2e3abb6dfb8556f4e598e55e8ae3d645e117a8b5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769287"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710764"
 ---
 # <a name="validate-replicated-data"></a>Validar os dados replicados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
 
 #### <a name="all-articles"></a>Todos os artigos 
   
-1.  No Publicador do banco de dados de publicação, execute [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md). Especifique **@publication** e um dos valores seguintes para **@rowcount_only** :  
+1.  No Publicador do banco de dados de publicação, execute [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md). Especifique `@publication` e um dos valores seguintes para `@rowcount_only`:  
   
     -   **1** - apenas verifica número de linhas (o padrão)    
     -   **2** - número de linhas e soma de verificação binária.  
@@ -120,7 +120,7 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
   
 #### <a name="single-article"></a>Artigo único  
   
-1.  No Publicador no banco de dados de publicação, execute [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Especifique **@publication** , o nome do artigo como **@article** e um dos valores seguintes como **@rowcount_only** :  
+1.  No Publicador no banco de dados de publicação, execute [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Especifique `@publication`, o nome do artigo para `@article` e um dos valores seguintes como `@rowcount_only`:  
   
     -   **1** - apenas verifica número de linhas (o padrão)    
     -   **2** - número de linhas e soma de verificação binária.  
@@ -134,9 +134,9 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
 #### <a name="single-subscriber"></a>Assinante único 
   
 1.  No Publicador do banco de dados de publicação, abra uma transação explícita usando [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md).    
-2.  No Publicador no banco de dados de publicação, execute [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md). Especifique a publicação como **@publication** , o nome do Assinante como **@subscriber** , e o nome do banco de dados da assinatura como **@destination_db** .    
+2.  No Publicador no banco de dados de publicação, execute [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md). Especifique a publicação para `@publication`, o nome do Assinante para `@subscriber` e o nome do banco de dados de assinatura para `@destination_db`.    
 3.  (Opcional) Repita a etapa 2 para cada assinatura que é validada.    
-4.  No Publicador no banco de dados de publicação, execute [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Especifique **@publication** , o nome do artigo como **@article** e um dos valores seguintes como **@rowcount_only** :    
+4.  No Publicador no banco de dados de publicação, execute [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Especifique `@publication`, o nome do artigo para `@article` e um dos valores seguintes como `@rowcount_only`:    
     -   **1** - apenas verifica número de linhas (o padrão)    
     -   **2** - número de linhas e soma de verificação binária.  
   
@@ -214,7 +214,7 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
     3.  Exiba informações na guia **Histórico de Sincronização** na área de texto **Última mensagem da sessão selecionada** .  
 
 ### <a name="using-transact-sql"></a>Usando Transact-SQL
-1.  No Publicador no banco de dados de publicação, execute [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md). Especifique **@publication** , o nome do Assinante como **@subscriber** , o nome do banco de dados de assinatura como **@subscriber_db** e um dos valores seguintes como **@level** :   
+1.  No Publicador no banco de dados de publicação, execute [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md). Especifique `@publication`, o nome do Assinante para `@subscriber`, o nome do banco de dados de assinatura para `@subscriber_db` e um dos valores seguintes para `@level`:   
     -   **1** - apenas validação de número de linhas.    
     -   **3** - validação de soma de verificação binária de número de linhas.  
   
@@ -241,7 +241,7 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
     3.  Exiba informações na guia **Histórico de Sincronização** na área de texto **Última mensagem da sessão selecionada** . 
   
 ### <a name="using-transact-sql"></a>Usando Transact-SQL
-1.  No Publicador do banco de dados de publicação, execute [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md). Especifique **@publication** e um dos valores seguintes para **@level** :    
+1.  No Publicador do banco de dados de publicação, execute [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md). Especifique `@publication` e um dos valores seguintes para `@level`:    
     -   **1** - apenas validação de número de linhas.   
     -   **3** - validação de soma de verificação binária de número de linhas.  
   

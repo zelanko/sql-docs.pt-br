@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/18/2019
+ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63f1b415471e8793e66bd3e90acc6f6be987904e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7683610745cf63ff67eeda6296684a6d2737a5b8
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889815"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823620"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -473,6 +473,9 @@ Ao usar o Always Encrypted com enclaves seguros, você poderá alterar qualquer 
 *column_name*  
 O nome da coluna a ser alterada, adicionada ou removida. O máximo para *nome_da_coluna* é 128 caracteres. Para novas colunas, é possível omitir *nome_da_coluna* para colunas criadas com um tipo de dados **timestamp**. O nome **timestamp** será usado se nenhum *nome_da_coluna* for especificado para uma coluna de tipo de dados **timestamp**.
 
+> [!NOTE]
+> Novas colunas são adicionadas após todas as colunas existentes na tabela sendo alterada.
+
 [ _type\_schema\_name_ **.** ] _type\_name_  
 O novo tipo de dados da coluna alterada ou o tipo de dados da coluna adicionada. Não é possível especificar *type_name* para colunas de tabelas particionadas existentes. *type_name* pode ser qualquer um dos seguintes tipos:
 
@@ -614,6 +617,9 @@ A sintaxe ALTER TABLE... ADD/DROP/ALTER INDEX só tem suporte para tabelas com o
 
 ADD  
 Especifica que uma ou mais definições de coluna, definições de coluna computada ou restrições de tabela são adicionadas. Ou as colunas que o sistema usa para controle de versão do sistema são adicionadas. Para tabelas com otimização de memória, é possível adicionar um índice.
+
+> [!NOTE]
+> Novas colunas são adicionadas após todas as colunas existentes na tabela sendo alterada.
 
 > [!IMPORTANT]
 > Sem o uso de uma instrução ALTER TABLE, não há suporte para as instruções [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md) e [PAD_INDEX](alter-table-index-option-transact-sql.md) para índices em tabelas com otimização de memória.

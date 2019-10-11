@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e913f7c09327be46ab7e4b67ec903fc60e30975
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 5b9c22a366ad6757821783ba2cf077d251193d55
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419605"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961787"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (SQL Data Warehouse do Azure)
 
@@ -51,7 +51,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
 <table_option> ::=
     {
-        <cci_option> --default for Azure SQL Data Warehouse
+       CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+      | CLUSTERED COLUMNSTORE INDEX ORDER (column [,...n])  
       | HEAP --default for Parallel Data Warehouse
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
@@ -63,8 +64,6 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
         FOR VALUES ( [ boundary_value [,...n] ] ) )
 
-<cci_option> ::= [CLUSTERED COLUMNSTORE INDEX] [ORDER (column [,…n])]
-  
 <data type> ::=
       datetimeoffset [ ( n ) ]  
     | datetime2 [ ( n ) ]  
@@ -165,7 +164,7 @@ Cria uma ou mais partições da tabela. Essas partições são fatias horizontai
 
 ### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>Opção de índice columnstore clusterizado ordenado (versão prévia do SQL Data Warehouse do Azure)
 
-O índice columnstore clusterizado é o padrão para a criação de tabelas no SQL Data Warehouse do Azure.  A especificação ORDER é padronizada para as teclas COMPOUND.  A classificação será sempre em ordem crescente. Se nenhuma cláusula ORDER for especificada, a columnstore não será classificada. Devido ao processo de ordenação, uma tabela com índice columnstore clusterizado e ordenado pode ter tempos de carregamento de dados maiores que os índices columnstore clusterizados e não ordenados. Se você precisar de mais espaço de tempdb ao carregar dados, poderá diminuir a quantidade de dados por inserção.
+O CCI (índice columnstore clusterizado) é o padrão para a criação de tabelas no SQL Data Warehouse do Azure.  Os dados em CCI não são classificados antes de serem compactados em segmentos columnstore.  Ao criar um CCI com ORDER, os dados são classificados antes de serem adicionados a segmentos de índice e o desempenho da consulta pode ser melhorado. Confira [Ajuste de desempenho com índice columnstore clusterizado ordenado](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci) para obter detalhes.  
 
 Os usuários podem consultar a coluna column_store_order_ordinal em sys.index_columns para obter as colunas nas quais uma tabela é ordenada e qual é a sequência na ordenação.  
 
@@ -379,17 +378,6 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 ;  
 ```
 
-### <a name="OrderedClusteredColumnstoreIndex"></a> C. Criar um índice columnstore clusterizado ordenado
-
-O exemplo a seguir mostra como criar um índice columnstore clusterizado ordenado. O índice é ordenado em SHIPDATE.
-
-```sql
-CREATE TABLE Lineitem  
-WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
-AS  
-SELECT * FROM ext_Lineitem
-```
-
 <a name="ExamplesTemporaryTables"></a> 
 ## <a name="examples-for-temporary-tables"></a>Exemplos de tabelas temporárias
 
@@ -432,11 +420,22 @@ WITH
   )  
 ;  
 ```  
- 
+
+### <a name="OrderedClusteredColumnstoreIndex"></a> E. Criar um índice columnstore clusterizado ordenado
+
+O exemplo a seguir mostra como criar um índice columnstore clusterizado ordenado. O índice é ordenado em SHIPDATE.
+
+```sql
+CREATE TABLE Lineitem  
+WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
+AS  
+SELECT * FROM ext_Lineitem
+```
+
 <a name="ExTableDistribution"></a> 
 ## <a name="examples-for-table-distribution"></a>Exemplos de distribuição da tabela
 
-### <a name="RoundRobin"></a> E. Criar uma tabela ROUND_ROBIN  
+### <a name="RoundRobin"></a> F. Criar uma tabela ROUND_ROBIN  
  O exemplo a seguir cria uma tabela ROUND_ROBIN com três colunas e sem partições. Os dados são difundidos entre todas as distribuições. A tabela é criada com um ÍNDICE COLUMNSTORE CLUSTERIZADO, que fornece melhor desempenho e melhor compactação de dados do que um índice clusterizado rowstore ou de heap.  
   
 ```sql
@@ -449,7 +448,7 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> F. Criar uma tabela distribuída por hash
+### <a name="HashDistributed"></a> G. Criar uma tabela distribuída por hash
 
  O exemplo a seguir cria a mesma tabela que o exemplo anterior. No entanto, para essa tabela, as linhas são distribuídas (na coluna `id`) em vez de serem difundidas aleatoriamente como em uma tabela ROUND_ROBIN. A tabela é criada com um ÍNDICE COLUMNSTORE CLUSTERIZADO, que fornece melhor desempenho e melhor compactação de dados do que um índice clusterizado rowstore ou de heap.  
   
@@ -467,7 +466,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a> G. Criar uma tabela replicada  
+### <a name="Replicated"></a> H. Criar uma tabela replicada  
  O exemplo a seguir cria uma tabela replicada semelhante à dos exemplos anteriores. As tabelas replicadas são copiadas por completo para cada nó de computação. Com essa cópia em cada nó de computação, a movimentação de dados é reduzida para as consultas. Este exemplo é criado com um ÍNDICE CLUSTERIZADO, que fornece melhor compactação de dados que um heap. Um heap pode não conter linhas suficientes para obter uma boa compactação de ÍNDICE COLUMNSTORE CLUSTERIZADO.  
   
 ```sql
@@ -487,7 +486,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>Exemplos de partições de tabela
 
-###  <a name="PartitionedTable"></a> H. Criar uma tabela particionada
+###  <a name="PartitionedTable"></a> I. Criar uma tabela particionada
 
  O exemplo a seguir cria a mesma tabela, conforme é mostrado no exemplo A, com a adição do particionamento RANGE LEFT na coluna `id`. Ele especifica quatro valores de limite de partição, o que resulta em cinco partições.  
   
@@ -522,7 +521,7 @@ WITH
 - Partição 4: 30 <= col < 40
 - Partição 5: 40 <= col  
   
-### <a name="OnePartition"></a> I. Criar uma tabela particionada com uma partição
+### <a name="OnePartition"></a> J. Criar uma tabela particionada com uma partição
 
  O exemplo a seguir cria uma tabela particionada com uma partição. Ele não especifica nenhum valor de limite, o que resulta em uma partição.  
   
@@ -539,7 +538,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a> J. Criar uma tabela com particionamento de data
+### <a name="DatePartition"></a> K. Criar uma tabela com particionamento de data
 
  O exemplo a seguir cria uma nova tabela nomeada `myTable`, com o particionamento em uma coluna `date`. Usando datas e RANGE RIGHT para os valores de limite, ele coloca um mês de dados em cada partição.  
   

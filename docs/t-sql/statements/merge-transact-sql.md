@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6585b6a50701ac4583bdbb02d9bd2529ee08f01
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 0a49bef9dc75beea0e098908362f198b60a8b92c
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653352"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680830"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -223,8 +223,8 @@ Especifica que todas as linhas de *target_table, que correspondem às linhas ret
 A instrução MERGE pode ter, no máximo, duas cláusulas WHEN MATCHED. Se duas cláusulas forem especificadas, a primeira deverá ser acompanhada de uma cláusula AND \<search_condition>. Para qualquer linha especificada, a segunda cláusula WHEN MATCHED será aplicada somente se a primeira não for. Se houver duas cláusulas WHEN MATCHED, uma delas deverá especificar uma ação UPDATE e a outra, uma ação DELETE. Quando UPDATE for especificada na cláusula \<merge_matched> e mais de uma linha de \<table_source> corresponder a uma linha em *target_table* com base em \<merge_search_condition>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro. A instrução MERGE não pode atualizar a mesma linha mais de uma vez, nem atualizar e excluir a mesma linha.  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
-Especifica que uma linha é inserida em *target_table* para cada linha retornada por \<table_source> ON \<merge_search_condition> que não corresponde a uma linha em *target_table*, mas atende a um condição de pesquisa adicional, se houver. Os valores a serem inseridos são especificados pela cláusula \<merge_not_matched>. A instrução MERGE pode ter apenas uma cláusula WHEN NOT MATCHED.  
-  
+Especifica que uma linha é inserida em *target_table* para cada linha retornada por \<table_source> ON \<merge_search_condition> que não corresponde a uma linha em *target_table*, mas atende a um condição de pesquisa adicional, se houver. Os valores a serem inseridos são especificados pela cláusula \<merge_not_matched>. A instrução MERGE só pode ter uma cláusula WHEN NOT MATCHED [ BY TARGET ].
+
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
 Especifica que todas as linhas de *target_table que não correspondem às linhas retornadas por \<table_source> ON \<merge_search_condition> e atendem a qualquer condição de pesquisa adicional são atualizadas ou excluídas de acordo com a cláusula \<merge_matched>.  
   

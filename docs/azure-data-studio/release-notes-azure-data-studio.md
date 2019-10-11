@@ -9,17 +9,35 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 09/11/2019
-ms.openlocfilehash: d505fcdbffe52245a64548d476cbee2193823fdb
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.date: 10/03/2019
+ms.openlocfilehash: 58efc144832fb97a3a32c764299c3ee83373976b
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878629"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816641"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas sobre a versão relacionadas ao Azure Data Studio
 
 **[Baixe e instale a versão mais recente!](download.md)**
+
+## <a name="october-2019"></a>Outubro de 2019
+
+02 de outubro de 2019 &nbsp; / &nbsp; versão: 1.12.0
+
+&nbsp;
+
+| Alterar | Detalhes |
+| :----- | :------ |
+| Versão da extensão do histórico de consulta | A extensão do histórico do SQL salva todas as consultas passadas executadas em uma sessão de Azure Data Studio e as lista na ordem de execução. Os usuários podem ver e abrir a consulta, executá-la, excluí-la, pausar o histórico de consultas ou excluir todas as entradas desse histórico. |
+| Novos Copiar/Colar Resultados | Adicionamos outras maneiras de copiar/colar resultados da grade de resultados. |
+| Atualizar para extensão do PowerShell |  |
+| Bugs e problemas resolvidos | Para obter uma lista completa das correções, confira [Bugs e problemas, no GitHub](https://github.com/microsoft/azuredatastudio/milestone/42?closed=1). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Problemas conhecidos
+- Notebooks
+    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Caso raros em que o notebook é serializado incorretamente
 
 ## <a name="september-2019"></a>Setembro de 2019
 

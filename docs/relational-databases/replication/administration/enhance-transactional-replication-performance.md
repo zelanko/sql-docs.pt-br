@@ -22,12 +22,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2db87395b7170315e14e10db075a4d6ca5721ab3
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: f50978c19295f5973e787bdaab46efea6367308a
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768795"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710385"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aprimorar o desempenho da replicação transacional
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ O parâmetro **–MaxCmdsInTran** especifica o número máximo de instruções a
   
 O parâmetro **–SubscriptionStreams** pode melhorar significativamente a taxa de transferência da replicação de agregação. Ele permite várias conexões a um Assinante para aplicar lotes de alterações em paralelo, mantendo presentes, ao mesmo tempo, várias características transacionais, quando for usar um thread único. Se uma das conexões falhar na execução ou na confirmação, todas as conexões abortarão o lote atual, e o agente usará um fluxo único para repetir os lotes com falha. Antes de concluir a fase de repetição pode haver inconsistências transacionais temporárias no Assinante. Depois que os lotes com falha são confirmados com êxito, o Assinante é levado de volta a um estado de consistência transacional.  
   
-Um valor para esse parâmetro de agente pode ser especificado usando o **@subscriptionstreams** de [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).  
+Um valor para esse parâmetro de agente pode ser especificado usando o `@subscriptionstreams` de [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).  
 
 Para saber mais sobre como implementar fluxos de assinatura, confira [Navegando pela configuração subscriptionStream de replicação do SQL](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting).
   

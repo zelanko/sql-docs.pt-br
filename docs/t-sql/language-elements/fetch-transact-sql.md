@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa0ec88e64c317c2106a4a6a2a4d204e7192f114
-ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
+ms.openlocfilehash: 8fd770d8f1af098d4328df12a11cdcff609f2328
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71174287"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974401"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,10 +76,10 @@ FETCH
  *cursor_name*  
  É o nome do cursor aberto a partir do qual a busca deve ser feita. Se um cursor global e um cursor local existirem com *cursor_name* como seu nome, *cursor_name* se referirá ao cursor global, caso GLOBAL seja especificado, e ao cursor local, caso GLOBAL não seja especificado.  
   
- @*cursor_variable_name*  
+ \@*cursor_variable_name*  
  É o nome de uma variável de cursor que faz referência ao cursor aberto a partir do qual a busca deve ser feita.  
   
- INTO @*variable_name*[ ,...*n*]  
+ INTO \@*variable_name*[ ,...*n*]  
  Permite que os dados das colunas de uma busca sejam colocados em variáveis locais. Cada variável na lista, da esquerda para a direita, está associada à coluna correspondente no conjunto de resultados do cursor. O tipo de dados de cada variável deve corresponder ou ser uma conversão implícita com suporte do tipo de dados da coluna do conjunto de resultados correspondente. O número de variáveis deve corresponder ao número de colunas na lista de seleção do cursor.  
   
 ## <a name="remarks"></a>Remarks  

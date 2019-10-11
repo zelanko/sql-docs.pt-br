@@ -18,12 +18,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3429a9c1e99277c9113e1773e99c8bd58a1cc01a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 841c5d3a40d74cbf0d24f7da0c3899882f820176
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769833"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710871"
 ---
 # <a name="replicate-identity-columns"></a>Replicar colunas de identidade
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,16 +74,16 @@ ms.locfileid: "68769833"
 ### <a name="merge-replication"></a>Replicação de mesclagem  
  Os intervalos de identidade são gerenciados pelo Publicador e propagados para os Assinantes pelo Merge Agent (em uma hierarquia de republicação, os intervalos são gerenciados pelo Publicador raiz e pelos republicadores). Os valores de identidade são atribuídos em um pool do Publicador. Ao adicionar um artigo com uma coluna de identidade a uma publicação no Assistente para Nova Publicação ou ao usar [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), especifique valores para:  
   
--   O parâmetro **@identity_range** , que controla o tamanho do intervalo da identidade inicialmente alocado tanto para o Publicador como para Assinantes com assinaturas de cliente.  
+-   O parâmetro `@identity_range`, que controla o tamanho do intervalo da identidade inicialmente alocado tanto para o Publicador como para Assinantes com assinaturas de cliente.  
   
     > [!NOTE]  
-    >  Com relação aos Assinantes que executam versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], esse parâmetro (em vez do parâmetro **@pub_identity_range** ) também controla o tamanho do intervalo da identidade nos Assinantes de republicação.  
+    >  Com relação aos Assinantes que executam versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], esse parâmetro (em vez do parâmetro `@pub_identity_range`) também controla o tamanho do intervalo da identidade nos Assinantes de republicação.  
   
--   O parâmetro **@pub_identity_range** , que controla o tamanho do intervalo da identidade para republicação, alocado para Assinantes com assinaturas de servidor (necessárias aos dados de republicação). Todos os Assinantes com assinaturas de servidor recebem um intervalo para republicar, mesmo se eles de fato não republiquem dados.  
+-   O parâmetro `@pub_identity_range`, que controla o tamanho do intervalo da identidade para republicação, alocado para Assinantes com assinaturas de servidor (necessárias aos dados de republicação). Todos os Assinantes com assinaturas de servidor recebem um intervalo para republicar, mesmo se eles de fato não republiquem dados.  
   
--   O parâmetro **@threshold** , usado para determinar quando um novo intervalo de identidades é exigido para uma assinatura do [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ou para versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   O parâmetro `@threshold`, usado para determinar quando um novo intervalo de identidades é exigido para uma assinatura do [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ou para versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Por exemplo, você poderia especificar 10.000 para **@identity_range** e 500.000 para **@pub_identity_range** . Um intervalo primário de 10.000 é atribuído ao Publicador e a todos os Assinantes que executam o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou uma versão posterior, inclusive ao Assinante com a assinatura do servidor. Ao Assinante com a assinatura do servidor também se atribui um intervalo primário de 500.000, que pode ser usado pelos Assinantes que se sincronizam com o Assinante de republicação (é preciso também especificar **@identity_range** , **@pub_identity_range** e **@threshold** para os artigos da publicação do Assinante de republicação).  
+ Por exemplo, você poderia especificar 10.000 para `@identity_range` e 500.000 para `@pub_identity_range`. Um intervalo primário de 10.000 é atribuído ao Publicador e a todos os Assinantes que executam o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou uma versão posterior, inclusive ao Assinante com a assinatura do servidor. Ao Assinante com a assinatura do servidor também se atribui um intervalo primário de 500.000, que pode ser usado pelos Assinantes que se sincronizam com o Assinante de republicação (é preciso também especificar `@identity_range`, `@pub_identity_range` e `@threshold` para os artigos na publicação no Assinante de republicação).  
   
  Todo Assinante que executa o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou uma versão posterior também recebe um intervalo de identidade secundário. O intervalo secundário é igual em tamanho ao intervalo primário. Quando o intervalo primário se esgota, o intervalo secundário é usado, e o Merge Agent atribui um novo intervalo ao Assinante. O novo intervalo passa a ser o intervalo secundário, e o processo continua à medida que o Assinante utiliza valores de identidade.  
   
@@ -91,13 +91,13 @@ ms.locfileid: "68769833"
 ### <a name="transactional-replication-with-queued-updating-subscriptions"></a>Replicação transacional com assinaturas de atualização enfileirada  
  Os intervalos de identidade são gerenciados pelo Distribuidor e propagados para os Assinantes pelo Distribution Agent. Os valores de identidade são atribuídos em um pool do Distribuidor. O tamanho do pool baseia-se no tamanho dos tipos de dados e no incremento usado para a coluna de identidade. Ao adicionar um artigo com uma coluna de identidade a uma publicação no Assistente para Nova Publicação ou ao usar [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), especifique valores para:  
   
--   O parâmetro **@identity_range** , que controla o tamanho de intervalo de identidade inicialmente alocado a todos os Assinantes.  
+-   O parâmetro `@identity_range`, que controla o tamanho de intervalo de identidade inicialmente alocado a todos os Assinantes.  
   
--   O parâmetro **@pub_identity_range** , que controla o tamanho de intervalo de identidade alocado a todos os Publicadores.  
+-   O parâmetro `@pub_identity_range`, que controla o tamanho de intervalo de identidade alocado a todos os Publicadores.  
   
--   O parâmetro **@threshold** , que é usado para determinar quando um novo intervalo de identidades é necessário à assinatura.  
+-   O parâmetro `@threshold`, que é usado para determinar quando um novo intervalo de identidades é necessário à assinatura.  
   
- Por exemplo, você poderia especificar 10.000 para **@pub_identity_range** ; 1.000 para **@identity_range** (assumindo menos atualizações no Assinante), e 80 por cento de **@threshold** . Após 800 inserções em um Assinante (80 por cento de 1.000), um Assinante é atribuído a um novo intervalo. Depois de 8.000 inserções em um Publicador, um novo intervalo é atribuído ao Publicador. Quando o novo intervalo é atribuído, há uma lacuna nos valores de intervalo de identidade da tabela. Especificar um limite superior resulta em lacunas menores, mas o sistema torna-se menos tolerante a falhas. Se o Merge Agent não puder ser executado por algum motivo, um Assinante poderá ficar mais facilmente sem identidades.  
+ Por exemplo, você poderia especificar 10.000 para `@pub_identity_range`; 1.000 para `@identity_range` (assumindo menos atualizações no Assinante), e 80% para `@threshold`. Após 800 inserções em um Assinante (80 por cento de 1.000), um Assinante é atribuído a um novo intervalo. Depois de 8.000 inserções em um Publicador, um novo intervalo é atribuído ao Publicador. Quando o novo intervalo é atribuído, há uma lacuna nos valores de intervalo de identidade da tabela. Especificar um limite superior resulta em lacunas menores, mas o sistema torna-se menos tolerante a falhas. Se o Merge Agent não puder ser executado por algum motivo, um Assinante poderá ficar mais facilmente sem identidades.  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>Atribuindo intervalos para o gerenciamento manual de intervalo de identidade  
  Caso o gerenciamento manual de identidade seja especificado, será preciso assegurar que o Publicador e cada um dos Assinantes usem intervalos de identidade diferentes. Por exemplo, considere uma tabela do Publicador com coluna de identidade definida como `IDENTITY(1,1)`: a coluna de identidade começa com 1 e é incrementada em 1 toda vez que uma linha é inserida. Se a tabela do Publicador tiver 5.000 linhas, e houver expectativa de algum aumento da tabela durante a vida útil do aplicativo, o Publicador poderá usar o intervalo de 1 a 10.000. Considerando-se dois Assinantes, o Assinante A poderá usar de 10.001 a 20.000 e o Assinante B poderá usar de 20.001 a 30.000.  

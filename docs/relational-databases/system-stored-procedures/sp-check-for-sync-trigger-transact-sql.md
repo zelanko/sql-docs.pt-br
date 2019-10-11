@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7af80b51c651bd98fd2ac143ac0631901828b6fb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: fe8cf327ff3db175c57382201ca3918a86770433
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771278"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251248"
 ---
-# <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
+# <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Determina se um gatilho definido pelo usuário ou procedimento armazenado está sendo chamado no contexto de um gatilho de replicação usado para assinaturas de atualização imediata. Esse procedimento armazenado é executado no Publicador do banco de dados de publicação ou no Assinante no banco de dados de assinatura.  
@@ -42,7 +42,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
  [ **@tabid =** ] '*tabid*'  
  É a ID de objeto da tabela onde gatilhos de atualização imediata estão sendo verificados. *tabid* é **int** sem padrão.  
   
- **[@trigger_op =** ] '*trigger_output_parameters*' saída  
+ [ **@trigger_op =** ] saída de '*trigger_output_parameters*'  
  Especifica se o parâmetro de saída deve retornar o tipo de gatilho de onde ele está sendo chamado. *trigger_output_parameters* é **Char (10)** e pode ser um desses valores.  
   
 |Valor|Descrição|  
@@ -52,10 +52,10 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 |**Del**|Gatilho DELETE|  
 |NULL (padrão)||  
   
-`[ @fonpublisher = ] fonpublisher`Especifica o local em que o procedimento armazenado é executado. *fonpublisher* é **bit**, com um valor padrão de 0. Se for 0 a execução será no Assinante e se for 1 a execução será no Editor.  
+`[ @fonpublisher = ] fonpublisher` especifica o local em que o procedimento armazenado é executado. *fonpublisher* é **bit**, com um valor padrão de 0. Se for 0 a execução será no Assinante e se for 1 a execução será no Editor.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- 0 indica que o procedimento armazenado não está sendo chamado dentro do contexto de um gatilho da atualização imediata. 1 indica que ele está sendo chamado dentro do contexto de um gatilho de atualização imediata e é o tipo de gatilho que está sendo *@trigger_op* retornado.  
+ 0 indica que o procedimento armazenado não está sendo chamado dentro do contexto de um gatilho da atualização imediata. 1 indica que ele está sendo chamado dentro do contexto de um gatilho de atualização imediata e é o tipo de gatilho que está sendo retornado em *\@trigger_op*.  
   
 ## <a name="remarks"></a>Comentários  
  **sp_check_for_sync_trigger** é usado na replicação de instantâneo e na replicação transacional.  

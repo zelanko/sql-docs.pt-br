@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dcf95ea2aaab71771f90bc861265bb19e2f9d0ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcb11ef0f2c6216b26957f732e5ed34fb233cc05
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073563"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710888"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>Definir o nível de compatibilidade para publicações de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,13 +52,13 @@ ms.locfileid: "68073563"
   
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>Para definir o nível de compatibilidade para uma publicação de mesclagem  
   
-1.  No Publicador, execute [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), especificando um valor para **@publication_compatibility_level** para tornar a publicação compatível com versões antigas de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Criar uma assinatura](../../../relational-databases/replication/publish/create-a-publication.md).  
+1.  No Publicador, execute [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), especificando um valor para `@publication_compatibility_level` para tornar a publicação compatível com versões antigas de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Criar uma assinatura](../../../relational-databases/replication/publish/create-a-publication.md).  
 
 [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-change-the-publication-compatibility-level-of-a-merge-publication"></a>Para definir o nível de compatibilidade da publicação de uma publicação de mesclagem  
   
-1.  Execute [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), especificando **publication_compatibility_level** para **@property** e o nível de compatibilidade da publicação adequada para **@value** .  
+1.  Execute [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), especificando **publication_compatibility_level** para `@property` e o nível de compatibilidade da publicação adequado para `@value`.  
   
 #### <a name="to-determine-the-publication-compatibility-level-of-a-merge-publication"></a>Para determinar o nível de compatibilidade da publicação de uma publicação de mesclagem  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68073563"
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  Esse exemplo cria uma publicação de mesclagem e define o nível de compatibilidade da publicação.  
   
-```  
+```sql  
 -- To avoid storing the login and password in the script file, the values   
 -- are passed into SQLCMD as scripting variables. For information about   
 -- how to use scripting variables on the command line and in SQL Server  
@@ -106,7 +106,7 @@ GO
 > [!NOTE]  
 >  Alterar o nível de compatibilidade da publicação pode não ser permitido se a publicação usar qualquer recurso que necessite de um nível de compatibilidade específico. Para obter mais informações, consulte [Compatibilidade com versões anteriores de replicação](../../../relational-databases/replication/replication-backward-compatibility.md).  
   
-```  
+```sql  
 DECLARE @publication AS sysname;  
 SET @publication = N'AdvWorksSalesOrdersMerge' ;  
   
@@ -122,7 +122,7 @@ GO
   
  Esse exemplo retorna o nível de compatibilidade da publicação atual para a publicação de mesclagem.  
   
-```  
+```sql  
 DECLARE @publication AS sysname;  
 SET @publication = N'AdvWorksSalesOrdersMerge' ;  
 EXEC sp_helpmergepublication   

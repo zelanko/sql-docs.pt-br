@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6776cea91288d22ed6765e8c4651266c0bcffa7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bdb3585647e64ad1a175900263628b607eb0041
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943702"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710365"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Logon para Assinaturas Atualizáveis
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "67943702"
   
 -   Um servidor vinculado que a replicação cria; a conexão é feita com as credenciais do usuário que faz a alteração no Assinante.  
   
- As duas primeiras opções podem ser especificadas nesse assistente. A última opção só pode ser especificada com o uso de [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md); especifique um valor igual a **1** para o parâmetro **@security_mode** .  
+ As duas primeiras opções podem ser especificadas nesse assistente. A última opção só pode ser especificada com o uso de [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md); especifique um valor igual a **1** para o parâmetro `@security_mode`.  
   
 ## <a name="options"></a>Opções  
  **Criar um servidor vinculado que conecta usando o seguinte logon de Autenticação do SQL Server:**  

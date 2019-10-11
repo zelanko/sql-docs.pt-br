@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 86f2d59e142458e68fe3946f7d6f56956b6562e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8a85b419ff9b129fe4f4baace0c49ca46fb5304d
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120406"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710918"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>Informações da Publicação, Todas as Assinaturas (publicação de mesclagem)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "68120406"
  O nome de cada assinatura no formato:*SubscriberName: SubscriptionDatabaseName*.  
   
  **Nome amigável**  
- Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. A descrição de cada assinatura. A descrição é inserida na caixa de diálogo **Propriedades da assinatura** ou especificada com o parâmetro **@description** de [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) ou [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Os usuários geralmente usam a descrição como um "nome amigável" ou apelido para a assinatura.  
+ Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. A descrição de cada assinatura. A descrição é inserida na caixa de diálogo **Propriedades da assinatura** ou especificada com o parâmetro `@description` de [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) ou [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Os usuários geralmente usam a descrição como um "nome amigável" ou apelido para a assinatura.  
   
  **Desempenho**  
  Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. A classificação de desempenho de cada assinatura, com base nas medidas mais recentes de taxa de entrega calculadas pelo Replication Monitor. A classificação é determinada comparando o desempenho de uma assinatura individual com o desempenho histórico médio de assinaturas com a publicação que tem o mesmo tipo de conexão (discada ou LAN). O Replication Monitor exibe um valor após a ocorrência de cinco sincronizações com 50 ou mais alterações cada, no mesmo tipo de conexão. Se houver menos de cinco sincronizações com 50 ou mais alterações ou se a sincronização mais recente tiver menos de 50 alterações, essa coluna ficará em branco.  

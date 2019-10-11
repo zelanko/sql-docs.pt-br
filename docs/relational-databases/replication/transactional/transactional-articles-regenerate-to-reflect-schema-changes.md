@@ -15,12 +15,12 @@ ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ef3e6d3daae23e48feae3e1723326c990e427075
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: ff1a4e5c9c185e97f3dd31c8c2ec96d10bceda42
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769321"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710703"
 ---
 # <a name="transactional-articles---regenerate-to-reflect-schema-changes"></a>Artigos transacionais – Gerar novamente para refletir as alterações de esquema
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,17 +30,17 @@ ms.locfileid: "68769321"
   
 -   A primeira opção é usar um procedimento de script personalizado para substituir os padrões usados pela replicação:  
   
-    1.  Ao executar [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), verifique se o bit **@schema_option** 0x02 é **true**.  
+    1.  Ao executar [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), verifique se o bit 0x02 de `@schema_option` é **true**.  
   
-    2.  Execute [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) e especifique um valor de “insert”, “update” ou “delete” para o parâmetro **@type** e o nome do procedimento de script personalizado para o parâmetro **@value** .  
+    2.  Execute [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) e especifique um valor igual a 'insert', 'update' ou 'delete' para o parâmetro `@type` e o nome do procedimento de script personalizado para o parâmetro `@value`.  
   
      Na próxima alteração de esquema, a replicação chamará esse procedimento armazenado para substituir a definição pelo novo procedimento armazenado personalizado definido pelo usuário e depois propagará o procedimento para cada Assinante.  
   
 -   A segunda opção é usar um script que contenha uma nova definição de procedimento personalizada:  
   
-    1.  Ao executar [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), defina o bit **@schema_option** 0x02 como **false** para que a replicação não gere automaticamente procedimentos personalizados no Assinante.  
+    1.  Ao executar [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), defina o bit 0x02 de `@schema_option` como **false**, de modo que a replicação não gere automaticamente procedimentos personalizados no Assinante.  
   
-    2.  Antes de cada alteração de esquema, crie um novo arquivo de script e registre o script com replicação executando [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md). Especifique o valor de 'custom_script' para o parâmetro **@type** e o caminho para o script no Publicador para o parâmetro **@value** .  
+    2.  Antes de cada alteração de esquema, crie um novo arquivo de script e registre o script com replicação executando [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md). Especifique um valor igual a 'custom_script' para o parâmetro `@type` e o caminho para o script no Publicador para o parâmetro `@value`.  
   
      Na próxima vez em que for feita uma alteração de esquema relevante, esse script será executado em cada Assinante dentro da mesma transação como o comando DDL. Após concluir a alteração de esquema, o registro do script será removido. Você deve registrar de novo o script para que ele seja executado depois de uma alteração de esquema subsequente.  
   

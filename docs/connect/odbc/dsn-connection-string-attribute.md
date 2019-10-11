@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: 7350fd7556040cded7f84db3ab9112ddfe7f816d
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: c06f6e9f95af02ba6240f9f71ac6a92c25bec755
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "68702791"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712926"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Atributos e palavras-chave da cadeia de conexão e DSN
 
@@ -45,7 +45,7 @@ A tabela a seguir lista as palavras-chave e os atributos disponíveis para cada 
 | [Failover_Partner](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssfailoverpartner) | L |
 | [FailoverPartnerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | L |
 | [FileDSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v 17.4 +, somente DSN)| | LMW |
+| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (somente v 17.4 +, DSN)| | LMW |
 | [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v 17.4 +, somente DSN) | | LMW |
 | [KeystoreAuthentication](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystorePrincipalId](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
@@ -116,6 +116,8 @@ A tabela a seguir lista as palavras-chave e os atributos disponíveis para cada 
 | | [SQL_COPT_SS_TXN_ISOLATION](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstxnisolation) | LMW |
 | | [SQL_COPT_SS_USER_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssuserdata) | LMW |
 | | [SQL_COPT_SS_WARN_ON_CP_ERROR](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsswarnoncperror) | LMW |
+| [ClientCertificate](../../connect/odbc/dsn-connection-string-attribute.md#clientcertificate) | | LMW | 
+| [Clientkey vazio](../../connect/odbc/dsn-connection-string-attribute.md#clientkey) | | LMW | 
 
 
 Aqui estão algumas palavras-chave de cadeia de conexão e os atributos de conexão que não estão documentados em [Usando palavras-chave de cadeia de conexão com SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md), [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) e [Função SQLSetConnectAttr](../../odbc/reference/syntax/sqlsetconnectattr-function.md).
@@ -190,6 +192,31 @@ Controla o uso de SET FMTONLY para metadados quando está se conectando ao SQL S
 |-|-|
 |Não|(Padrão) Use sp_describe_first_result_set para metadados, se disponível. |
 |Sim| Use SET FMTONLY para metadados. |
+
+
+## <a name="clientcertificate"></a>ClientCertificate
+
+Especifica o certificado a ser usado para autenticação. As opções são: 
+
+| Valor de Opção | Descrição |
+|-|-|
+| sha1:`<hash_value>` | O driver ODBC usa hash SHA1 para localizar um certificado no repositório de certificados do Windows |
+| assunto:`<subject>` | O driver ODBC usa o assunto para localizar um certificado no repositório de certificados do Windows |
+| arquivo: `<file_location>` [, senha: `<password>`] | O driver ODBC usa um arquivo de certificado. |
+
+Caso o certificado esteja no formato PFX e a chave privada dentro do certificado PFX seja protegida por senha, a palavra-chave password será necessária. Para certificados em formatos PEM e DER, o atributo Clientkey vazio é necessário
+
+
+## <a name="clientkey"></a>Clientkey vazio
+
+Especifica um local de arquivo da chave privada para certificados PEM ou DER especificados pelo atributo ClientCertificate. Formato: 
+
+| Valor de Opção | Descrição |
+|-|-|
+| arquivo: `<file_location>` [, senha: `<password>`] | Especifica o local do arquivo de chave privada. |
+
+Caso o arquivo de chave privada seja protegido por senha, a palavra-chave password será necessária. Se a senha contiver caracteres ",", um caractere "," extra será adicionado imediatamente após cada um. Por exemplo, se a senha for "a, b, c", a senha de escape presente na cadeia de conexão será "a,, b,, c". 
+    
 
 ### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d8baf8700afde2b6534a173a5d81912dbe61a13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08097b4aac0d14a3da21443a4903df90797b9316
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045638"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71687367"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificações de capacidade máxima do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +61,12 @@ ms.locfileid: "68045638"
 |Colunas em GROUP BY, ORDER BY||Limitado somente pelo número de bytes||  
 |Colunas ou expressões em uma instrução GROUP BY WITH CUBE ou WITH ROLLUP||10||  
 |Colunas por chave de índice||32|Se a tabela contiver um ou mais índices XML, a chave de clustering da tabela do usuário será limitada a 31 colunas porque a coluna XML é adicionada à chave de clustering do índice XML primário. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], você pode incluir colunas não chave em um índice não clusterizado para evitar a limitação de um máximo de 32 colunas de chave. Para obter mais informações, consulte [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md).|  
-|Colunas por chave estrangeira||32||  
-|Colunas por chave primária||32||  
-|Colunas por tabela não larga||1,024||  
-|Colunas por tabela larga||30,000||  
-|Colunas por instrução SELECT||4,096||  
-|Colunas por instrução INSERT||4,096||  
+|Colunas por chave estrangeira ou chave primária||32||  
+|Colunas por instrução `INSERT`||4,096||  
+|Colunas por instrução `SELECT`||4,096||  
+|Colunas por tabela||1,024|As tabelas que incluem conjuntos de colunas esparsas incluem até 30.000 colunas. Confira [Conjuntos de colunas esparsas](../relational-databases/tables/use-column-sets.md).|  
+|Colunas por instrução `UPDATE`||4,096|Diferentes limites se aplicam aos [conjuntos de colunas esparsas](../relational-databases/tables/use-column-sets.md).|  
+|Colunas por exibição||1,024||  
 |Conexões por cliente||Valor máximo de conexões configuradas||  
 |Tamanho do banco de dados||524.272 terabytes||  
 |Bancos de dados por instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
@@ -99,7 +99,6 @@ ms.locfileid: "68045638"
 |Estatísticas em colunas não indexadas||30,000|| 
 |Tabelas por instrução SELECT||Limitado apenas pelos recursos disponíveis||  
 |Gatilhos por tabela||Limitado pelo número de objetos em um banco de dados|Os objetos de banco de dados incluem objetos como tabelas, exibições, procedimentos armazenados, funções definidas pelo usuário, gatilhos, regras, padrões e restrições. A soma do número de todos os objetos em um banco de dados não pode exceder 2.147.483.647.|  
-|Colunas por instrução UPDATE (Tabelas Largas)||4096||  
 |Conexões de usuário||32,767||  
 |índices XML||249||  
   

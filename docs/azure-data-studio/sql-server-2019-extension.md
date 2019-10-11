@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 9ee5564479e1c4334466db7f5b1ce45a6913d68f
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: fffd79a18ca839816105242c054e74031828274f
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326026"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961957"
 ---
 # <a name="sql-server-2019-extension-for-azure-data-studio-preview"></a>Extensão do SQL Server 2019 para Azure Data Studio (versão prévia)
 
-A extensão do SQL Server 2019 para o Azure Data Studio (versão prévia) dá suporte em versão prévia a novos recursos e ferramentas fornecidos em suporte do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Isso inclui suporte em versão prévia a [clusters de Big Data do SQL Server 2019](../big-data-cluster/big-data-cluster-overview.md), uma [experiência de notebook](../big-data-cluster/notebooks-guidance.md) integrada e um assistente [Criar Tabela Externa](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json) do PolyBase.
+A extensão do SQL Server 2019 para o Azure Data Studio (versão prévia) dá suporte em versão prévia a novos recursos e ferramentas fornecidos em suporte do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. O suporte inclui suporte em versão prévia a [clusters de Big Data do SQL Server 2019](../big-data-cluster/big-data-cluster-overview.md), uma [experiência de notebook](../big-data-cluster/notebooks-guidance.md) integrada e um [assistente Criar Tabela Externa](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json) do PolyBase.
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>Instalar a extensão do SQL Server 2019 (versão prévia)
 
@@ -82,15 +82,15 @@ Para instalar a extensão do SQL Server 2019 (versão prévia), baixe e instale 
 
 ## <a name="release-notes-v0102"></a>Notas sobre a versão (v0.10.2)
 ### <a name="sql-server-2019-support"></a>Suporte ao SQL Server 2019
-O suporte para o SQL Server 2019 foi atualizado. Ao se conectar a uma instância do Cluster de Big Data do SQL Server, uma nova pasta _Serviços de Dados_ será exibida na árvore do Explorer. Ela tem pontos de inicialização para ações como abrir um novo Notebook para a conexão, enviar trabalhos do Spark e trabalhar com o HDFS. Observe que, para algumas ações como _Criar Dados Externos_ em um arquivo/pasta do HDFS, a extensão de _Versão Prévia do SQL Server 2019_ precisa estar instalada.
+O suporte para o SQL Server 2019 foi atualizado. Após se conectar a uma instância do Cluster de Big Data do SQL Server, uma nova pasta _Serviços de Dados_ é exibida na árvore do Explorer. Essa pasta tem pontos de inicialização para ações como abrir um novo notebook para a conexão, enviar trabalhos do Spark e trabalhar com o HDFS. Para algumas ações como _Criar Dados Externos_ em um arquivo/pasta do HDFS, a extensão de _Versão Prévia do SQL Server 2019_ precisa estar instalada.
 
 ### <a name="notebook-support"></a>Suporte para Notebook
 Fizemos atualizações significativas na interface do usuário do Notebook nesta versão. Nosso foco foi facilitar a leitura de Notebooks compartilhados com você. Isso significava remover todas as caixas de contorno em torno das células, a menos que estivessem selecionadas ou focalizadas, adicionar suporte de foco para facilitar ações no nível da célula sem precisar selecionar a célula e esclarecer o estado da execução adicionando uma contagem de execução, um botão animado _parar execução_, entre outros. Também adicionamos atalhos de teclado para _Novo Notebook_ (`Ctrl+Shift+N`), _Executar Célula_ (`F5`), _Nova Célula de Código_ (`Ctrl+Shift+C`), _Nova Célula de Texto_ (`Ctrl+Shift+T`). Futuramente, faremos com que todas as ações importantes sejam iniciadas por atalho, sendo assim, diga-nos de quais ações você sente falta!
 
 Outras melhorias e correções incluem:
-* Agora, a extensão de _Versão Prévia do SQL Server 2019_ solicita que os usuários escolham um diretório de instalação para as dependências de Python. Além disso, ela não inclui mais o Python no `.vsix file`, reduzindo o tamanho geral da extensão. As dependências do Python são necessárias para dar suporte a kernels do Spark e do Python3, portanto, é necessário instalar essa extensão para usá-las.
+* Agora, a extensão de _Versão Prévia do SQL Server 2019_ solicita que os usuários escolham um diretório de instalação para as dependências de Python. Além disso, ela não inclui mais o Python no `.vsix file`, reduzindo o tamanho geral da extensão. As dependências do Python dão suporte a kernels Spark e Python3.
 * Foi adicionado suporte para iniciar um novo notebook na linha de comando. A inicialização com os argumentos `--command=notebook.command.new --server=myservername` deve abrir um novo notebook e conectar a este servidor.
-* Correções de desempenho para notebooks com código de tamanho grande nas células. Se tiverem mais de 250 linhas, as células de código terão uma barra de rolagem adicionada.
+* Correções de desempenho para notebooks com código de tamanho grande nas células. Se as células de código tiverem mais de 250 linhas, uma barra de rolagem será adicionada.
 * Melhoria do suporte para arquivos .ipynb. Agora, a versão 3 ou superior tem suporte. Observe que, ao salvar os arquivos, será feita a atualização para a versão 4 ou superior.
 * A configuração do usuário `notebook.enabled` foi removida agora que o visualizador interno do Notebook é estável
 * Agora, o tema Alto Contraste tem suporte, com diversas correções no layout do objeto neste caso.

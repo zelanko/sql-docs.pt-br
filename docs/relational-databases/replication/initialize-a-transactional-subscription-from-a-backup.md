@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 466598ca9e7846b3b5ffbeef17987cd61233ec7a
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 7a0282d1b9f2aa63e89d5246d37210a2b088ad35
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251100"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710298"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>Inicializar uma assinatura transacional de um backup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "71251100"
   
     -   Se o valor for **1**, a publicação oferece suporte a essa funcionalidade.  
   
-    -   Se o valor for **0**, execute [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) no Publicador do banco de dados de publicação. Especifique um valor de **allow_initialize_from_backup** para **@property** e um valor de **true** para **@value** .  
+    -   Se o valor for **0**, execute [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) no Publicador do banco de dados de publicação. Especifique um valor igual a **allow_initialize_from_backup** para `@property` e um valor igual a **true** para `@value`.  
   
 2.  Para uma nova publicação, execute [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) no Publicador do banco de dados de publicação. Especifique um valor de **true** para **allow_initialize_from_backup**. Para obter mais informações, consulte [Criar uma assinatura](../../relational-databases/replication/publish/create-a-publication.md).  
   
@@ -48,23 +48,23 @@ ms.locfileid: "71251100"
   
 5.  No Publicador no banco de dados de publicação, execute o procedimento armazenado [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Especifique os seguintes parâmetros:  
   
-    -   **@sync_type** - valor para **inicializar com backup**.  
+    -   `@sync_type` – valor igual a **inicializar com backup**.  
   
-    -   **@backupdevicetype** - o tipo de dispositivo de backup: **lógico** (padrão), **disco**ou **fita**.  
+    -   `@backupdevicetype` – o tipo de dispositivo de backup: **lógico** (padrão), **disco** ou **fita**.  
   
-    -   **@backupdevicename** - o dispositivo de backup lógico ou físico a usar para a restauração.  
+    -   `@backupdevicename` – o dispositivo de backup lógico ou físico a ser usado para a restauração.  
   
          Para um dispositivo lógico, especifique o nome do dispositivo de backup especificado quando **sp_addumpdevice** foi usado para criar o dispositivo.  
   
          Para um dispositivo físico, especifique um caminho completo e nome de arquivo, como `DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\BACKUP\Mybackup.dat'` ou `TAPE = '\\.\TAPE0'`.  
   
-    -   (Opcional) **@password** - uma senha fornecida na criação do conjunto de backup.  
+    -   (Opcional) `@password` – uma senha fornecida durante a criação do conjunto de backup.  
   
-    -   (Opcional) **@mediapassword** - uma senha fornecida na formatação do conjunto de mídias.  
+    -   (Opcional) `@mediapassword` – uma senha fornecida durante a formatação do conjunto de mídias.  
   
-    -   (Opcional) **@fileidhint** - identificador para o conjunto de backup a ser restaurado. Por exemplo, especificar **1** indica o primeiro conjunto de backup na mídia de backup e **2** indica o segundo conjunto de backup.  
+    -   (Opcional) `@fileidhint` – identificador do conjunto de backup a ser restaurado. Por exemplo, especificar **1** indica o primeiro conjunto de backup na mídia de backup e **2** indica o segundo conjunto de backup.  
   
-    -   (Opcional para dispositivos de fita) **@unload** - especifica um valor de **1** (padrão) se a fita deve ser descarregada da unidade depois de concluir a restauração e **0** se não deve ser descarregada.  
+    -   (Opcional para dispositivos de fita) `@unload` – especifique um valor igual a **1** (padrão) se a fita deve ser descarregada da unidade após a conclusão da restauração e **0** se ela não deve ser descarregada.  
   
 6.  (Opcional) Para uma assinatura pull, execute [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md) e [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) no Assinante no banco de dados de assinatura. Para obter mais informações, consulte [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
   

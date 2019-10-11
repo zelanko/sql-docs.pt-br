@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 275ac725c0bde283fa45feccd4479c95cc71126b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b707b2b31c15c565353f0ff581ca1f4d7308a25b
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296393"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71951940"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Escolher uma fonte de dados (Assistente de Importação e Exportação do SQL Server)
 
@@ -28,7 +28,7 @@ ms.locfileid: "71296393"
 Para obter informações sobre as fontes de dados que você pode usar, consulte [Quais fontes de dados e destinos posso usar?](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
 > [!NOTE]
-> O Assistente de Importação e Exportação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza o SQL Server Integration Services (SSIS). Portanto, as mesmas limitações que se aplicam ao SSIS também se aplicam ao assistente.  Por exemplo, as colunas ErrorCode e ErrorColumn, que são adicionadas por padrão, conforme descrito em [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).
+> O Assistente de Importação e Exportação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza o SSIS (SQL Server Integration Services). Portanto, as mesmas limitações que se aplicam ao SSIS também se aplicam ao assistente.  Por exemplo, as colunas ErrorCode e ErrorColumn, que são adicionadas por padrão, conforme descrito em [Tratamento de erros em dados](../../integration-services/data-flow/error-handling-in-data.md).
 
 ## <a name="screen-shot-of-the-choose-a-data-source-page"></a>Captura de tela da página Escolher uma Fonte de Dados 
 A imagem a seguir mostra a primeira parte da página **Escolher uma Fonte de Dados** do assistente. O restante da página tem um número variável de opções que dependem da fonte de dados que você escolhe aqui.

@@ -31,12 +31,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22748ad9b34292811c5c133dd02da9a4d734657c
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: ad327f07e37778a7a3369f8fa3a7ecaa1504e6f2
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68122176"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816827"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -17,12 +17,12 @@ ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9750e85aefab0db07978cbba6a98a845888cec3d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b12d35d27fd4c90603cce6d798d8011ad1e65b81
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769795"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710831"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Replicar tabelas e índices particionados
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,9 +72,9 @@ ms.locfileid: "68769795"
 ### <a name="enabling-partition-switching"></a>Habilitando a alternância de partição  
  As propriedades a seguir para publicações transacionais permitem que os usuários controlem o comportamento da alternância de partição em um ambiente replicado:  
   
--   **@allow_partition_switch** , quando definido como **true**, SWITCH PARTITION pode ser executado no banco de dados de publicação.  
+-   `@allow_partition_switch`, quando definido como `true`, SWITCH PARTITION pode ser executado no banco de dados de publicação.  
   
--   **@replicate_partition_switch** determina se a instrução SWITCH PARTITION DDL deve ser replicada para Assinantes. Esta opção só é válida quando **@allow_partition_switch** é definido como **true**.  
+-   `@replicate_partition_switch` determina se a instrução SWITCH PARTITION DDL deve ser replicada para Assinantes. Esta opção só é válida quando `@allow_partition_switch` é definido como `true`.  
   
  Você pode definir essas propriedades usando [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) quando a publicação é criada ou usando [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) depois da criação da publicação. Como observado anteriormente, a replicação de mesclagem não dá suporte à alternância de partição. Para executar SWITCH PARTITION em uma tabela que é habilitada para replicação de mesclagem, remova a tabela da publicação.  
   

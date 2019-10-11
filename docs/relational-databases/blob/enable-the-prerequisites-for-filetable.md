@@ -11,12 +11,12 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 4f339b343da4adc12b7b5cf692d217c5fb0419c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dab00f633a72df1a0c799a2d074befee73cf561e
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085367"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974307"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Habilitar os pré-requisitos para FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,31 +56,31 @@ ms.locfileid: "68085367"
   
 ###  <a name="HowToCheckAccess"></a> Como Verificar se o acesso não transacional está habilitado em bancos de dados  
  Consulte a exibição de catálogo [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) e verifique as colunas **non_transacted_access** e **non_transacted_access_desc**.  
-  
-```sql  
+
+```sql
 SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc  
     FROM sys.database_filestream_options;  
 GO  
-```  
-  
+```
+
 ###  <a name="HowToNTAccess"></a> Como Habilitar o acesso não transacional no nível de banco de dados  
  Os níveis disponíveis de acesso não transacional são FULL, READ_ONLY e OFF.  
   
  **Especificar o nível de acesso não transacional usando Transact-SQL**  
- -   Quando você **criar um novo banco de dados**, chame a instrução [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) com a opção **NON_TRANSACTED_ACCESS** de FILESTREAM.  
-  
-    ```sql  
-    CREATE DATABASE database_name  
-        WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
-    ```  
-  
--   Ao **alterar um banco de dados existente**, chame a instrução [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) com a opção FILESTREAM **NON_TRANSACTED_ACCESS**.  
-  
-    ```sql  
-    ALTER DATABASE database_name  
-        SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
-    ```  
-  
+ - Quando você **criar um novo banco de dados**, chame a instrução [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) com a opção **NON_TRANSACTED_ACCESS** de FILESTREAM.
+
+   ```sql
+   CREATE DATABASE database_name  
+     WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
+   ```
+
+- Ao **alterar um banco de dados existente**, chame a instrução [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) com a opção FILESTREAM **NON_TRANSACTED_ACCESS**.
+
+   ```sql
+   ALTER DATABASE database_name  
+     SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
+   ```
+
  **Especificar o nível de acesso não transacional usando o SQL Server Management Studio**  
  Você pode especificar o nível de acesso não transacional no campo **Acesso Não Transacionado a FILESTREAM** da página **Opções** da caixa de diálogo **Propriedades do Banco de dados** . Para obter mais informações sobre essa caixa de diálogo, veja [Propriedades de banco de dados &#40;Página Opções&#41;](../../relational-databases/databases/database-properties-options-page.md).  
   
@@ -92,15 +92,15 @@ GO
 ###  <a name="HowToDirectory"></a> Como Especifique um diretório para FileTables no nível de banco de dados  
  O nome que você especifica deve estar exclusivo na instância para diretórios em nível de banco de dados.  
   
- **Especificar um diretório para FileTables usando Transact-SQL**  
- -   Quando você **criar um novo banco de dados**, chame a instrução [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) com a opção **DIRECTORY_NAME** de FILESTREAM.  
-  
-    ```sql  
-    CREATE DATABASE database_name  
-        WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
-    GO  
-    ```  
-  
+**Especificar um diretório para FileTables usando Transact-SQL**  
+- Quando você **criar um novo banco de dados**, chame a instrução [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) com a opção **DIRECTORY_NAME** de FILESTREAM.
+
+   ```sql
+   CREATE DATABASE database_name  
+     WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
+   GO  
+   ```
+
 -   Ao **alterar um banco de dados existente**, chame a instrução [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) com a opção FILESTREAM **DIRECTORY_NAME**. Quando você usa estas opções para alterar o nome do diretório, o banco de dados deve ser bloqueado de forma exclusiva, sem identificadores de arquivos abertos.  
   
     ```sql  

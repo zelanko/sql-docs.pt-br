@@ -15,12 +15,12 @@ ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 25aa20472daec1e20113627b4cbd778dfa142002
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 93377a86d55086f2f3af501a962c6973f0d66234
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769331"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710730"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Publicando execução de procedimento armazenado em replicação transacional
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio: [Publicar a execução de um procedimento armazenado em uma publicação transacional &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   Programação Transact-SQL de replicação: execute [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) e especifique o valor “serializable proc exec” (recomendado) ou “proc exec” para o parâmetro **@type** . Para obter mais informações sobre como definir artigos, consulte [Definir um artigo](../../../relational-databases/replication/publish/define-an-article.md).  
+-   Programação Transact-SQL de replicação: execute [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) e especifique um valor 'serializable proc exec' (recomendado) ou 'proc exec' para o parâmetro `@type`. Para obter mais informações sobre como definir artigos, consulte [Definir um artigo](../../../relational-databases/replication/publish/define-an-article.md).  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>Modificando o procedimento no Assinante  
  Por padrão, a definição de procedimento armazenado no Publicador é propagada para todos os Assinantes. Porém, é igualmente possível modificar o procedimento armazenado no Assinante. Isso será útil para executar lógicas diferentes no Publicador e no Assinante. Por exemplo, considere **sp_big_delete**, um procedimento armazenado do Publicador que tem duas funções: exclui 1.000.000 linhas da tabela replicada **big_table1** e atualiza a tabela não replicada **big_table2**. Para reduzir a demanda por recursos de rede, propague a exclusão de 1 milhão de linhas como procedimento armazenado publicando **sp_big_delete**. No Assinante, modifique **sp_big_delete** para excluir apenas o 1 milhão de linhas e não realizar a atualização subsequente em **big_table2**.  
@@ -90,7 +90,7 @@ COMMIT TRANSACTION T2
   
  Os bloqueios serão mantidos por mais tempo quando esse procedimento for executado em uma transação serializável e poderá resultar em redução de simultaneidade.  
   
-## <a name="the-xactabort-setting"></a>A configuração XACT_ABORT  
+## <a name="the-xact_abort-setting"></a>A configuração XACT_ABORT  
  Ao replicar a execução de procedimento armazenado, a configuração da sessão que executa o procedimento armazenado deve especificar XACT_ABORT ON. Se XACT_ABORT estiver definida como OFF e ocorrer um erro na execução do procedimento, no Publicador, o mesmo erro ocorrerá no Assinante, causando falha do Agente de Distribuição. Especificar XACT_ABORT ON assegura que nenhum erro encontrado durante a execução, no Publicador, cause a reversão total da execução, evitando falha do Agente de Distribuição. Para obter mais informações sobre como configurar XACT_ABORT, consulte [SET XACT_ABORT &#40;Transact-SQL&#41;](../../../t-sql/statements/set-xact-abort-transact-sql.md).  
   
  Se a configuração de XACT_ABORT OFF for necessária, especifique o parâmetro **-SkipErrors** do Agente de Distribuição. Isto permitirá que o agente continue a aplicar alterações no Assinante, ainda que um erro seja encontrado.  

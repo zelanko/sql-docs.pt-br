@@ -17,12 +17,12 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c349569d2f0973a3085337eb171a17d9cee21c82
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: eef53dd48e960ac15e68e28e0be7265a8f25ba74
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69633398"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711019"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir a latência e validar as conexões para a replicação transacional
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ ms.locfileid: "69633398"
   
 1.  No Publicador do banco de dados de publicação, execute [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), especificando **\@publication**. Isso retorna uma lista de todos os tokens de rastreamento publicados na publicação. Observe o **tracer_id** a ser excluído pelo token de rastreamento no conjunto de resultados.  
   
-2.  No Publicador do banco de dados de publicação, execute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), especificando **\@publication** e a ID de rastreamento a ser excluída da etapa 2 para **@tracer_id** .  
+2.  No Publicador do banco de dados de publicação, execute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), especificando **\@publication** e a ID de rastreamento a ser excluída da etapa 2 para `@tracer_id`.  
   
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  Esse exemplo publica um registro dos tokens de rastreamento, e usa o ID retornado do token de rastreamento publicado, para exibir as informações da latência.  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 79edaf5c5940caf00cb03de98d532de400a553a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 520637f8bcbe8ae1fcd4fee0ebf3fa33fe3b3650
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062024"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710498"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>Monitorar e solucionar problemas do PolyBase
 
@@ -221,7 +221,7 @@ Solução alternativa: use o nome DNS para redirecionar conexões para o Nó de 
 
 ## <a name="error-messages-and-possible-solutions"></a>Mensagens de erro e possíveis soluções
 
-Para solucionar erros de tabela externa, consulte o blog de Murshed Zaman [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "Erros de instalação do PolyBase e possíveis soluções").
+Para solucionar problemas de erros de tabela externa, confira o blog de Murshed Zaman [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "Erros de instalação do PolyBase e possíveis soluções").
 
 ## <a name="see-also"></a>Confira também
 

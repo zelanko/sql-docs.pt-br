@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4f79bab916e955dfced1fc5bd01df65f98473c54
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: e777b49ab8c27abff81f54fef52f2a2a7c4dec31
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768268"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710349"
 ---
 # <a name="replication-snapshot-agent"></a>Replication Snapshot Agent
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ snapshot [ -?]
  Se exclusões irrelevantes forem enviadas ao Assinante. Exclusões irrelevantes são comandos DELETE enviados aos Assinantes por linhas que não pertencem à partição do Assinante. Exclusões irrelevantes não afetam a integridade ou convergência dos dados, mas podem resultar em tráfego de rede desnecessário. O valor padrão de **MaxNetworkOptimization** é **0**. Definindo **MaxNetworkOptimization** como **1** minimiza as chances de exclusões irrelevantes, reduzindo o tráfego de rede e maximizando a otimização da rede. A definição desse parâmetro como **1** também aumenta o armazenamento de metadados e causa degradação de desempenho no Publicador se vários níveis de filtro de junção e filtros de subconjuntos complexos estiverem presentes. Você deve avaliar com cuidado a topologia da replicação e definir **MaxNetworkOptimization** como **1** somente se o tráfego de rede de exclusões irrelevantes estiver inaceitavelmente alto.  
   
 > [!NOTE]
->  A configuração desse parâmetro como **1** é útil somente quando a opção de otimização de sincronização da publicação de mesclagem é definida como **true** (o parâmetro **@keep_partition_changes** de [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)).  
+>  A configuração desse parâmetro como **1** só é útil quando a opção de otimização de sincronização da publicação de mesclagem é definida como **true** (o parâmetro `@keep_partition_changes**` de [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)).  
   
  **-Output** _output_path_and_file_name_  
  É o caminho do arquivo de saída do agente. Se o nome de arquivo não for fornecido, a saída será enviada ao console. Se o nome do arquivo especificado existir, a saída será anexada ao arquivo.  
@@ -250,7 +250,7 @@ snapshot [ -?]
  É o caractere ou cadeia de caracteres que marca o fim de uma linha no arquivo de dados de cópia em massa no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O padrão é \n\<,@g>\n.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- É o número máximo de segundos que o Snapshot Agent aguarda quando o número de processos de instantâneo dinâmico simultâneos em execução está no limite definido pela propriedade **@max_concurrent_dynamic_snapshots** de [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Se o número máximo de segundos for alcançado e o Snapshot Agent ainda estiver esperando, será fechado. Um valor de 0 significa que o agente espera indefinidamente, embora possa ser cancelado.  
+ É o número máximo de segundos que o Agente de Instantâneo aguarda quando o número de processos simultâneos de instantâneo dinâmico em execução está no limite definido pela propriedade `@max_concurrent_dynamic_snapshots` de [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Se o número máximo de segundos for alcançado e o Snapshot Agent ainda estiver esperando, será fechado. Um valor de 0 significa que o agente espera indefinidamente, embora possa ser cancelado.  
   
  \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  Esse parâmetro foi preterido e só tem suporte para compatibilidade com versões anteriores.  

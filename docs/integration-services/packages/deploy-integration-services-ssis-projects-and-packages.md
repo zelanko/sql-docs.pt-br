@@ -1,10 +1,10 @@
 ---
 title: Implantar projetos e pacotes do SSIS (Integration Services) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 09/26/2019
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -18,31 +18,31 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f35fb523d95b47b64e10feab8d4caa2370b79b5f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71282641"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680959"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implantar projetos e pacotes do Integration Services (SSIS)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dá suporte a dois modelos de implantação, o modelo de implantação de projeto e o modelo de implantação de pacote herdado. O modelo de implantação de projeto permite que você implante seus projetos no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 Para obter mais informações sobre o modelo de implantação de pacote herdado, consulte [Implantação de pacote herdado &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  O modelo de implantação do projeto foi introduzido no [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Com esse modelo de implantação, não era possível implantar um ou mais pacotes sem implantar todo o projeto. O [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introduziu o recurso de Implantação Incremental de Pacotes, que permite implantar um ou mais pacotes, sem implantar o projeto inteiro.  
+>  O modelo de implantação do projeto foi introduzido no [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Com esse modelo de implantação, não era possível implantar um ou mais pacotes sem implantar todo o projeto. O [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introduziu o recurso de Implantação Incremental de Pacotes, que permite implantar um ou mais pacotes, sem implantar o projeto inteiro.
 
 > [!NOTE]
 > Este artigo descreve como implantar pacotes do SSIS em geral e como implantar pacotes localmente. Também é possível implantar pacotes do SSIS para as seguintes plataformas:
 > - **A nuvem do Microsoft Azure**. Para obter mais informações, consulte [Migrar cargas de trabalho do SQL Server Integration Services por lift-and-shift para a nuvem](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 > - **Linux**. Para obter mais informações, consulte [Extrair, transformar e carregar dados no Linux com o SSIS](../../linux/sql-server-linux-migrate-ssis.md).
 
-## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>Compare o modelo de implantação de projeto e o modelo de implantação de pacote herdado  
+## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>Compare o modelo de implantação de projeto e o modelo de implantação de pacote herdado
+
  O tipo de modelo de implantação que você escolhe para um projeto determina quais opções de desenvolvimento e administrativas estão disponíveis para aquele projeto. A tabela a seguir mostra as diferenças e as semelhanças entre o uso do modelo de implantação de projeto e o uso do modelo de implantação de pacote.  
   
 |Ao usar o modelo de implantação de projeto|Quando usar o modelo de implantação de pacote herdado|  
@@ -58,9 +58,8 @@ Para obter mais informações sobre o modelo de implantação de pacote herdado,
 |Durante a execução, os eventos produzidos pelo pacote são capturados automaticamente e salvos no catálogo. Você pode consultar esses eventos com exibições Transact-SQL.|Durante a execução, os eventos produzidos por um pacote não são capturados automaticamente. Um provedor de log deve ser adicionado ao pacote para capturar eventos.|  
 |Os pacotes são executados em um processo separado do Windows.|Os pacotes são executados em um processo separado do Windows.|  
 |O SQL Server Agent é usado para agendar a execução do pacote.|O SQL Server Agent é usado para agendar a execução do pacote.|  
-  
- O modelo de implantação do projeto foi introduzido no [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Ao usar esse modelo, você não conseguia implantar um ou mais pacotes sem implantar o projeto inteiro. O [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introduziu o recurso de Implantação Incremental de Pacotes que permite implantar um ou mais pacotes, sem implantar o projeto inteiro.   
-  
+
+
 ## <a name="features-of-project-deployment-model"></a>Recursos do modelo de implantação de projeto  
  A tabela a seguir lista os recursos que estão disponíveis para projetos desenvolvidos apenas para o modelo de implantação de projeto.  
   
@@ -79,9 +78,10 @@ Para obter mais informações sobre o modelo de implantação de pacote herdado,
 
 Se você alterar a conta de serviço do SSIS do padrão, precisará conceder permissões adicionais para a conta de serviço não padrão antes de implantar pacotes com êxito. Se a conta de serviço não padrão não tiver as permissões necessárias, você poderá ver a mensagem de erro a seguir.
 
-*Ocorreu um erro do .NET Framework durante a execução da agregação ou da rotina definida pelo usuário "deploy_project_internal": System.ComponentModel.Win32Exception: O cliente não tem um privilégio obrigatório.*
+`A .NET Framework error occurred during execution of user-defined routine or aggregate "deploy_project_internal":
+System.ComponentModel.Win32Exception: A required privilege is not held by the client.`
 
-Esse erro normalmente é o resultado de permissões DCOM ausentes. Para corrigir o erro, execute as etapas a seguir.
+Esse erro normalmente é o resultado de permissões DCOM ausentes. Para corrigir o erro, faça o seguinte:
 
 1.  Abra o console **Serviços de Componentes** (ou execute Dcomcnfg.exe).
 2.  No console **Serviços de Componentes**, expanda **Serviços de Componentes** > **Computadores** > **Meu Computador** > **Configuração do DCOM**.
@@ -92,8 +92,9 @@ Esse erro normalmente é o resultado de permissões DCOM ausentes. Para corrigir
 7.  Na caixa de diálogo **Permissão**, adicione a conta de serviço não padrão e conceda permissões **Permitir**, conforme necessário. Normalmente, uma conta tem as permissões **Inicialização Local** e **Ativação Local**.
 8.  Clique em **OK** duas vezes e, em seguida, feche o console **Serviços de Componentes**.
 
-Para obter mais informações sobre o erro descrito nesta seção e sobre as permissões necessárias para a conta de serviço do SSIS, consulte a postagem no blog a seguir.  
-[System.ComponentModel.Win32Exception: O cliente não tem um privilégio obrigatório durante a Implantação de Projeto do SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+Para obter mais informações sobre o erro descrito nesta seção e sobre as permissões necessárias para a conta de serviço do SSIS, confira a seguinte postagem no blog:
+ 
+- [System.ComponentModel.Win32Exception: O cliente não tem um privilégio obrigatório durante a Implantação de Projeto do SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Implantar projetos no servidor do Integration Services
   Na versão atual do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode implantar seus projetos no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite gerenciar pacotes, executar pacotes, e configura valores de tempo de execução para pacotes por meio de ambientes.  
@@ -105,7 +106,7 @@ Para obter mais informações sobre o erro descrito nesta seção e sobre as per
   
 1.  Criar um catálogo do SSISDB se ainda não tiver criado. Para obter mais informações, consulte [Catálogo do SSIS](../../integration-services/catalog/ssis-catalog.md).  
   
-2.  Converta o projeto no modelo de implantação de projeto executando o **Assistente de Conversão de Projeto do Integration Services** . Para obter mais informações, confira as instruções abaixo: [Para converter um projeto no modelo de implantação de projeto](#convert)  
+2.  Converta o projeto no modelo de implantação de projeto executando o **Assistente de Conversão de Projeto do Integration Services**. Para obter mais informações, confira as seguintes instruções: [Para converter um projeto no modelo de implantação de projeto](#convert)  
   
     -   Se você criou o projeto no [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] ou posterior, por padrão, o projeto usa o modelo de implantação de projeto.  
   
@@ -144,17 +145,17 @@ Para obter mais informações sobre o erro descrito nesta seção e sobre as per
   
 1.  Abra o projeto no [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]e, em seguida, no menu **Projeto** , selecione **Implantar** para implantar o **Assistente de Implantação do Integration Services**.  
   
-     -ou-  
+     ou em  
   
      No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o nó [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > **SSISDB** no Pesquisador de Objetos e localize a pasta Projetos do projeto que você deseja implantar. Clique com o botão direito do mouse na pasta **Projetos** e clique em **Implantar Projeto**.  
   
-     -ou-  
+     ou em  
   
      No prompt de comando, execute **isdeploymentwizard.exe** de **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn**. Em computadores de 64 bits, há também uma versão de 32 bits da ferramenta em **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**.  
   
 2.  Na página **Selecionar Origem** , clique em **Arquivo de implantação de projeto** para selecionar o arquivo de implantação do projeto.  
   
-     -ou-  
+     ou em  
   
      Clique em **Catálogo do Integration Services** para selecionar um projeto que já foi implantado no catálogo do SSISDB.  
   
@@ -167,7 +168,7 @@ Para obter mais informações sobre o erro descrito nesta seção e sobre as per
   
 1.  No prompt de comando, execute **isdeploymentwizard.exe** de **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn**. Em computadores de 64 bits, há também uma versão de 32 bits da ferramenta em **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**.  
   
-2.  Na página **Selecionar fonte** , mude para **Modelo de implantação do pacote**. Em seguida, selecione a pasta que contém pacotes de código-fonte e configure os pacotes.  
+2.  Na página **Selecionar fonte** , mude para **Modelo de implantação do pacote**. Em seguida, selecione a pasta que contém pacotes de origem e configure os pacotes.  
   
 3.  Conclua o assistente. Siga as etapas restantes descritas em [Modelo de Implantação do Pacote](#PackageModel).  
   
@@ -179,7 +180,7 @@ Para obter mais informações sobre o erro descrito nesta seção e sobre as per
   
 3.  Se você vir a página **Introdução** clique em **Avançar** para continuar.  
   
-4.  Na página **Selecionar fonte** , mude para **Modelo de implantação do pacote**. Em seguida, selecione a pasta que contém pacotes de código-fonte e configure os pacotes.  
+4.  Na página **Selecionar fonte** , mude para **Modelo de implantação do pacote**. Em seguida, selecione a pasta que contém pacotes de origem e configure os pacotes.  
   
 5.  Conclua o assistente. Siga as etapas restantes descritas em [Modelo de Implantação do Pacote](#PackageModel).  
   
@@ -266,8 +267,7 @@ static void Main()
 
 ## <a name="convert-to-package-deployment-model-dialog-box"></a>Caixa de diálogo Converter em Modelo de Implantação de Pacote
   A caixa de diálogo **Converter em Modelo de Implantação de Pacote** permite converter um pacote para o modelo de implantação de pacote depois de verificar se o projeto e cada pacote do projeto são compatíveis com esse modelo. Se um pacote usar recursos exclusivos para o modelo de implantação de projeto, como parâmetros, o pacote não poderá ser convertido.  
-  
-### <a name="task-list"></a>Lista de Tarefas  
+
  Converter um pacote para o modelo de implantação de pacote exige duas etapas.  
   
 1.  Quando você seleciona o comando **Converter em Modelo de Implantação de Pacote** no menu **Project** , o projeto e cada pacote do projeto terão a compatibilidade verificada com esse modelo. Os resultados são exibidos na tabela **Resultados** .  
@@ -276,7 +276,8 @@ static void Main()
   
 2.  Se o projeto e todos os pacotes passarem no teste de compatibilidade, clique em **OK** para converter o pacote.  
   
-> **OBSERVAÇÃO:** Para converter um projeto no modelo de implantação de projeto, use o **Assistente de Conversão de Projeto do Integration Services**. Para obter mais informações, consulte [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md).  
+> [!NOTE]
+> Para converter um projeto no modelo de implantação de projeto, use o **Assistente de Conversão de Projeto do Integration Services**. Para obter mais informações, consulte [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md).  
 
 ## <a name="integration-services-deployment-wizard"></a>Assistente de Implantação do Integration Services
   O **Assistente de Implantação do Integration Services** dá suporte a dois modelos de implantação:
@@ -287,14 +288,15 @@ static void Main()
  
  O **modelo de Implantação do Pacote** permite implantar pacotes que você atualizou no Catálogo do SSIS sem precisar implantar o projeto todo. 
  
- > **OBSERVAÇÃO:** A implantação padrão do Assistente é o modelo de Implantação do Projeto.  
+ > [!NOTE]
+ > A implantação padrão do Assistente é o modelo de Implantação do Projeto.  
   
 ### <a name="launch-the-wizard"></a>Iniciar o assistente
 Inicie o assistente:
 
  - Digitando **“Assistente de Implantação do SQL Server”** no Windows Search 
 
-**OR**
+ ou em
 
  - Pesquise o arquivo executável **ISDeploymentWizard.exe** na pasta de instalação do SQL Server; por exemplo: "C:\Arquivos de Programas (x86)\Microsoft SQL Server\130\DTS\Binn". 
  
@@ -304,61 +306,70 @@ Inicie o assistente:
   
 ###  <a name="ProjectModel"></a> Project Deployment Model  
   
-#### <a name="select-source"></a>Selecionar Fonte  
+#### <a name="select-source"></a>Selecionar Fonte
+
  Para implantar um arquivo de implantação do projeto que você criou, selecione **Arquivo de implantação do projeto** e insira o caminho para o arquivo .ispac. Para implantar um projeto residente no catálogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , selecione **Catálogo do Integration Services**e insira o nome do servidor e o caminho para o projeto no catálogo. Clique em **Avançar** para ver a página **Selecionar Destino** .  
   
-#### <a name="select-destination"></a>Selecionar Destino  
+#### <a name="select-destination"></a>Selecionar Destino
+
  Para selecionar a pasta de destino para o projeto no catálogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , insira a instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou clique em **Procurar** para selecionar de uma lista de servidores. Digite o caminho do projeto no SSISDB ou clique em **Procurar** para selecioná-lo. Clique em **Avançar** para ver a página **Revisar** .  
   
-#### <a name="review-and-deploy"></a>Revisar (e implantar)  
+#### <a name="review-and-deploy"></a>Revisar (e implantar)
+
  A página permite revisar as configurações que você selecionou. Você pode alterar suas seleções clicando em **Anterior**ou clicando em qualquer uma das etapas no painel esquerdo. Clique em **Implantar** para começar o processo de implantação.  
   
-#### <a name="results"></a>Resultados  
+#### <a name="results"></a>Resultados
+
  Depois que o processo de implantação estiver concluído, você deverá ver a página **Resultados** . Essa página exibe o êxito ou a falha de cada ação. Se a ação falhar, clique em **Com falha** na coluna **Resultado** para exibir uma explicação do erro. Clique em **Salvar Relatório...** para salvar os resultados em um arquivo XML ou clique em **Fechar** para sair do assistente.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
-#### <a name="select-source"></a>Selecionar Fonte  
+#### <a name="select-source"></a>Selecionar Fonte
+
  A página **Selecionar Origem** no **Assistente de Implantação do Integration Services** mostra configurações específicas ao modelo de implantação do pacote quando você selecionou a opção **Implantação do Pacote** para o **modelo de implantação**.  
   
  Para selecionar os pacotes de origem, clique no botão **Procurar…** para selecionar a **pasta** que contém os pacotes ou digite o caminho da pasta na caixa de texto **Caminho da pasta de pacotes** e clique no botão **Atualizar** na parte inferior da página. Agora, você deve ver todos os pacotes na pasta especificada na caixa de listagem. Por padrão, todos os pacotes são selecionados. Clique na **caixa de seleção** na primeira coluna para escolher quais pacotes você quer que sejam implantados no servidor.  
   
- Consulte as colunas **Status** e **Mensagem** para verificar o status do pacote. Se o status estiver definido como **Pronto** ou **Aviso**, o assistente de implantação não bloqueará o processo de implantação. Ao passo que, se o status estiver definido como **Erro**, o assistente não continuará implantando os pacotes selecionados. Para exibir as mensagens de Aviso/Erro, clique no link na coluna **Mensagem** .  
+ Consulte as colunas **Status** e **Mensagem** para verificar o status do pacote. Se o status estiver definido como **Pronto** ou **Aviso**, o assistente de implantação não bloqueará o processo de implantação. Se o status for definido como **Erro**, o assistente não prosseguirá para implantar os pacotes selecionados. Para exibir as mensagens de Aviso ou Erro detalhadas, clique no link da coluna **Mensagem**.  
   
- Se os dados confidenciais ou dados de pacote forem criptografados com uma senha, digite-a na coluna **Senha** e clique no botão **Atualizar** para verificar se ela é aceita. Se a senha estiver correta, o status mudará para **Pronto** e a mensagem de aviso desaparecerá. Se houver vários pacotes com a mesma senha, selecione os pacotes com a mesma senha de criptografia, digite a senha na caixa de texto **Senha** e clique no botão **Aplicar** . A senha deve ser aplicada aos pacotes selecionados.  
+ Se os dados confidenciais ou dados de pacote forem criptografados com uma senha, digite-a na coluna **Senha** e clique no botão **Atualizar** para verificar se ela é aceita. Se a senha estiver correta, o status mudará para **Pronto** e a mensagem de aviso desaparecerá. Se houver vários pacotes com a mesma senha, selecione os pacotes com a mesma senha de criptografia, digite a senha na caixa de texto **Senha** e selecione o botão **Aplicar**. A senha deve ser aplicada aos pacotes selecionados.  
   
  Se o status de todos os pacotes selecionados não estiver definido como **Erro**, o botão **Avançar** será habilitado para que você possa continuar com o processo de implantação do pacote.  
   
-#### <a name="select-destination"></a>Selecionar Destino  
- Após seleção das origens do pacote, clique no botão **Avançar** para acessar a página **Selecionar Destino** . Os pacotes devem ser implantados em um projeto no Catálogo do SSIS (SSISDB). Portanto, antes de implantar pacotes, verifique se o projeto de destino já existe no Catálogo do SSIS. Caso contrário, crie um projeto vazio. Na página **Selecionar Destino**, digite o nome do servidor na caixa de texto **Nome do Servidor** ou clique no botão **Procurar...** para selecionar uma instância do servidor. Em seguida, clique no botão **Procurar...** ao lado da caixa de texto **Caminho** para especificar o projeto de destino. Se o projeto não existir, clique em **Novo projeto...** para criar um projeto vazio como o projeto de destino. O projeto **DEVE** ser criado em uma pasta.  
+#### <a name="select-destination"></a>Selecionar Destino
+
+ Após a seleção das origens do pacote, clique no botão **Avançar** para alternar para a página **Selecionar Destino**. Os pacotes devem ser implantados em um projeto no Catálogo do SSIS (SSISDB). Antes de implantar pacotes, verifique se o projeto de destino já existe no Catálogo do SSIS. Crie um projeto vazio se não houver um projeto. Na página **Selecionar Destino**, digite o nome do servidor na caixa de texto **Nome do Servidor** ou clique no botão **Procurar...** para selecionar uma instância de servidor. Em seguida, clique no botão **Procurar...** ao lado da caixa de texto **Caminho** para especificar o projeto de destino. Se o projeto não existir, clique no botão **Novo projeto...** para criar um projeto vazio como o projeto de destino. O projeto precisa ser criado em uma pasta.  
   
-#### <a name="review-and-deploy"></a>Revisar e implantar  
- Clique em **Avançar** na página **Selecionar Destino** para acessar a página **Revisar** no **Assistente de Implantação do Integration Services**. Na página de revisão, revise o relatório de resumo sobre a ação de implantação. Depois da verificação, clique no botão **Implantar** para executar a ação de implantação.  
+#### <a name="review-and-deploy"></a>Revisar e implantar
+
+ Clique em **Avançar** na página **Selecionar Destino** para acessar a página **Revisar** no **Assistente de Implantação do Integration Services**. Na página de revisão, revise o relatório de resumo sobre a ação de implantação. Após a verificação, clique no botão **Implantar** para executar a ação de implantação.  
   
-#### <a name="results"></a>Resultados  
- Depois que a implantação estiver concluída, você deverá ver a página **Resultados** . Na página **Resultados** , revise os resultados de cada etapa no processo de implantação. Na página **Resultados** , clique em **Salvar Relatório** para salvar o relatório de implantação ou em **Fechar** para fechar o assistente.  
+#### <a name="results"></a>Resultados
+
+ Depois que a implantação estiver concluída, você deverá ver a página **Resultados** . Na página **Resultados**, examine os resultados de cada etapa no processo de implantação. Clique em **Salvar Relatório** para salvar o relatório de implantação ou em **Fechar** para fechar o assistente.  
 
 ## <a name="create-and-map-a-server-environment"></a>Criar e mapear um ambiente de servidor
+
   Você cria um ambiente de servidor para especificar valores de tempo de execução para pacotes contidos em um projeto que você implantou no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Você pode mapear as variáveis de ambiente para parâmetros, para um pacote específico, para pacotes de ponto de entrada ou para todos os pacotes em um projeto específico. Um pacote de ponto de entrada é geralmente um pacote pai que executa um pacote filho.  
   
 > [!IMPORTANT]  
 >  Para uma execução específica, um pacote pode ser executado somente com os valores contidos em um único ambiente de servidor.  
   
- Você pode consultar as exibições para uma lista de ambientes de servidor, referências de ambiente e variáveis de ambiente. Você também pode chamar procedimentos armazenados para adicionar, excluir, alterar e modificar ambientes, referências de ambiente e variáveis de ambiente. Para obter mais informações, consulte a seção **Ambientes de servidor, variáveis de servidor e referências de ambiente de servidor** em [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
+ Você pode consultar as exibições para uma lista de ambientes de servidor, referências de ambiente e variáveis de ambiente. Você também pode chamar procedimentos armazenados para adicionar, excluir, alterar e modificar ambientes, referências de ambiente e variáveis de ambiente. Para obter mais informações, confira a seção **Ambientes de servidor, variáveis de servidor e referências de ambiente de servidor** no [Catálogo do SSIS](../../integration-services/catalog/ssis-catalog.md).  
   
 ### <a name="to-create-and-use-a-server-environment"></a>Para criar e usar um ambiente de servidor  
   
-1.  No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expanda o nó [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Catálogos> **SSISDB** no Pesquisador de Objetos e localize a pasta **Ambientes** do projeto por meio do qual você quer criar um ambiente.  
+1.  No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expanda o nó [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Catálogos **SSISDB** no Pesquisador de Objetos e localize a pasta **Ambientes** do projeto por meio do qual deseja criar um ambiente.  
   
 2.  Clique com o botão direito do mouse na pasta **Ambientes** e clique em **Criar Ambiente**.  
   
-3.  Digite um nome para o ambiente e uma descrição (opcional) e clique em **OK**.  
+3.  Digite um nome para o ambiente e, opcionalmente, adicione uma descrição. Clique em **OK**.  
   
 4.  Clique com o botão direito do mouse no novo ambiente e clique em **Propriedades**.  
   
 5.  Na página **Variáveis** , faça o seguinte para adicionar uma variável.  
   
-    1.  Selecione o **Tipo** da variável. O nome da variável **não** precisa corresponder ao nome do parâmetro do projeto que você mapeará para a variável.  
+    1.  Selecione o **Tipo** da variável. O nome da variável não precisa corresponder ao nome do parâmetro do projeto que você mapeará para a variável.  
   
     2.  Digite uma **Descrição** opcional para a variável.  
   
@@ -378,7 +389,7 @@ Inicie o assistente:
   
     2.  Na área **Logons ou funções** , selecione o usuário ou função ao qual você quer conceder ou negar permissões.  
   
-    3.  Na área **Explícita** , clique em **Conceder** ou **Negar** ao lado de cada permissão.  
+    3.  Na área **Explícita**, selecione **Conceder** ou **Negar** ao lado de cada permissão.  
   
 7.  Para criar o script do ambiente, clique em **Script**. Por padrão, o script é exibido em uma nova janela do Editor de Consultas.  
   
@@ -393,7 +404,7 @@ Inicie o assistente:
   
 11. Clique novamente com o botão direito do mouse no projeto e clique em **Configurar**.  
   
-12. Para mapear a variável de ambiente para um parâmetro adicionado ao pacote em tempo de criação ou para um parâmetro gerado quando você converteu o projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no modelo de implantação de projeto, siga os procedimentos a seguir.  
+12. Para mapear a variável de ambiente para um parâmetro adicionado ao pacote em tempo de design ou para um parâmetro gerado quando você converteu o projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no modelo de implantação de projeto, faça o seguinte:
   
     1.  Na guia **Parâmetros** na página **Parâmetros** , clique no botão Procurar ao lado do campo **Valor** .  
   
@@ -401,19 +412,20 @@ Inicie o assistente:
   
 13. Para mapear a variável de ambiente para uma propriedade de gerenciador de conexões, siga os procedimentos a seguir. Os parâmetros são gerados automaticamente no servidor do SSIS para as propriedades do gerenciador de conexões.  
   
-    1.  Na guia **Gerenciadores de Conexões** na página **Parâmetros** , clique no botão Procurar ao lado do campo **Valor** .  
+    1.  Na guia **Gerenciadores de Conexões** na página **Parâmetros**, clique no botão **Procurar** ao lado do campo **Valor**.  
   
     2.  Clique em **Usar variável de ambiente**e selecione a variável de ambiente que você criou.  
   
 14. Clique em **OK** duas vezes para salvar as alterações.  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Implantar e executar pacotes SSIS usando procedimentos armazenados
-  Quando configura um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para usar o modelo de implantação de projeto, você pode usar procedimentos armazenados no catálogo do [!INCLUDE[ssIS](../../includes/ssis-md.md)] para implantar o projeto e executar os pacotes. Para obter informações sobre o modelo de implantação de projeto, consulte [Implantação de projetos e pacotes](https://msdn.microsoft.com/library/hh213290.aspx).  
+
+  Quando configura um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para usar o modelo de implantação de projeto, você pode usar procedimentos armazenados no catálogo do [!INCLUDE[ssIS](../../includes/ssis-md.md)] para implantar o projeto e executar os pacotes. Para obter informações sobre o modelo de implantação de projeto, consulte [Implantação de projetos e pacotes](deploy-integration-services-ssis-projects-and-packages.md#compare-project-deployment-model-and-legacy-package-deployment-model).  
   
  Você também pode usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para implantar o projeto e executar os pacotes. Para obter mais informações, consulte os tópicos na seção **Consulte também** .  
   
 > [!TIP]
->  Você pode facilmente gerar as instruções Transact-SQL para os procedimentos armazenados listados no procedimento abaixo, com exceção de catalog.deploy_project, fazendo o seguinte:  
+>  Você pode facilmente gerar as instruções Transact-SQL para os procedimentos armazenados listados no procedimento abaixo, com exceção de catalog.deploy_project, fazendo o seguinte:
 > 
 >  1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o nó **Catálogos do Integration Services** no Pesquisador de Objetos e navegue até o pacote que deseja executar.  
 > 2.  Clique com o botão direito do mouse no pacote e clique em **Executar**.  
@@ -426,9 +438,9 @@ Inicie o assistente:
   
 1.  Chame [catalog.deploy_project &#40;Banco de Dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md) para implantar o projeto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém o pacote para o servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-     Para recuperar o conteúdo binário do arquivo de implantação do projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , para o parâmetro *@project_stream* , use uma instrução SELECT com a função OPENROWSET e o provedor de conjunto de linhas BULK. O conjuntos de linhas BULK permite a você ler dados de um arquivo. O argumento SINGLE_BLOB do provedor de conjuntos de linhas BULK retorna o conteúdo do arquivo de dados como uma única linha, um conjunto de linhas de coluna única do tipo varbinary(max). Para obter mais informações, consulte [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
+     Para recuperar o conteúdo binário do arquivo de implantação do projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], para o parâmetro _\@project_stream_, use uma instrução SELECT com a função OPENROWSET e o provedor de conjunto de linhas BULK. O conjuntos de linhas BULK permite a você ler dados de um arquivo. O argumento SINGLE_BLOB do provedor de conjuntos de linhas BULK retorna o conteúdo do arquivo de dados como uma única linha, um conjunto de linhas de coluna única do tipo varbinary(max). Para obter mais informações, consulte [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
-     No exemplo a seguir, o projeto SSISPackages_ProjectDeployment é implantado na pasta Pacotes SSIS no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Os dados binários são lidos no arquivo de projeto (SSISPackage_ProjectDeployment.ispac) e armazenados no parâmetro *@ProjectBinary* do tipo varbinary(max). O valor do parâmetro *@ProjectBinary* é atribuído ao parâmetro *@project_stream* .  
+     No exemplo a seguir, o projeto SSISPackages_ProjectDeployment é implantado na pasta Pacotes SSIS no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Os dados binários são lidos no arquivo de projeto (SSISPackage_ProjectDeployment.ispac) e armazenados no parâmetro _\@ProjectBinary do tipo varbinary(max). O valor do parâmetro _\@ProjectBinary_ é atribuído ao parâmetro _\@project_stream_.  
   
     ```sql
     DECLARE @ProjectBinary as varbinary(max)  
@@ -480,7 +492,8 @@ Inicie o assistente:
   
     ```  
   
-### <a name="to-deploy-a-project-from-server-to-server-using-stored-procedures"></a>Para implantar um projeto de servidor para servidor usando procedimentos armazenados  
+### <a name="to-deploy-a-project-from-server-to-server-using-stored-procedures"></a>Para implantar um projeto de servidor para servidor usando procedimentos armazenados
+
  Você pode implantar um projeto de servidor para servidor usando os procedimentos armazenados [catalog.get_project &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md) e [catalog.deploy_project &#40;Banco de dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md).  
   
  Você precisa fazer o seguinte antes de executar os procedimentos armazenados:  
@@ -547,7 +560,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 -   Abra o projeto no [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]e, no Gerenciador de Soluções, clique com o botão direito do mouse no projeto e clique em **Converter em Modelo de Implantação de Projeto**.  
   
--   No Pesquisador de Objetos, no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], clique com o botão direito do mouse no nó **Projetos** e selecione **Importar Pacotes**.  
+-   Por meio do Pesquisador de Objetos no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], clique com o botão direito do mouse no nó **Projetos** no **Catálogo do Integration Services** e selecione **Importar Pacotes**.  
   
  Dependendo em se você executa o **Assistente de Conversão de Projeto do Integration Services** no [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o assistente executa tarefas de conversão diferentes.   
   

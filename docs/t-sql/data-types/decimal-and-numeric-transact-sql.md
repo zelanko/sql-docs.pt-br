@@ -1,7 +1,7 @@
 ---
 title: decimal e numeric (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2017
+ms.date: 09/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48080db61a91a13cd04d436784ce74a7e45e3135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c2836dc2d57ef5844463c303c6432698bf05a4d1
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086745"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682108"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal e numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ Converter de **decimal** ou **numeric** para **float** ou **real** pode causar p
   
 Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa arredondamento ao converter um número em um valor **decimal** ou **numeric** com precisão e escala inferiores. Por outro lado, se a opção SET ARITHABORT for ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] irá gerar um erro quando acontecer o estouro. Apenas a perda de precisão e escala não é suficiente para gerar um erro.
   
-Ao converter valores reais ou flutuantes em valores decimais ou numéricos, o valor decimal nunca terá mais de 17 decimais. Qualquer valor flutuante < 5E-18 será sempre convertido em 0.
+Antes do [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)], a conversão de valores **float** para **decimal** ou **numeric** era restrita somente a valores com precisão de 17 dígitos. Qualquer valor **float** menor que 5E-18 (quando definido usando a notação científica de 5E-18 ou a notação decimal de 0,0000000000000000050000000000000005) é arredondado para 0. Essa não é mais uma restrição no [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] em diante.
   
 ## <a name="examples"></a>Exemplos  
 O exemplo a seguir cria uma tabela usando os tipos de dados **decimal** e **numérico**.  Os valores são inseridos em cada coluna. Os resultados são retornados usando uma instrução SELECT.

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ba3e69e44ec02240ef36eee3563becf03165a5fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 06237e28f9ba75e798da1af57964cc8b251d0b26
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070265"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974414"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +140,8 @@ Especifica o nó NUMA ou o intervalo de nós NUMA.
   
 **\<diagnostic_log> ::=**  
   
-**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).  
+
   
 DIAGNOSTICS LOG  
 Inicia ou interrompe o log de dados de diagnóstico que o procedimento sp_server_diagnostics captura. Este argumento também define parâmetros de configuração de log SQLDIAG, como a contagem de substituições de arquivo de log, o tamanho do arquivo de log e o local do arquivo. Para obter mais informações, consulte [Exibir e ler o log de diagnóstico da instância do cluster de failover](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md).  
@@ -162,7 +163,7 @@ Número máximo de arquivos de log de diagnóstico que podem ser armazenados no 
   
 **\<failover_cluster_property> ::=**  
   
-**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).    
   
 FAILOVER CLUSTER PROPERTY  
 Modifica as propriedades do cluster de failover privado de recursos do SQL Server.  
@@ -193,7 +194,7 @@ O valor do tempo limite de quanto tempo a DLL de recursos do Mecanismo de Banco 
   
 **\<hadr_cluster_context> ::=**  
   
-**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).   
   
 HADR CLUSTER CONTEXT **=** { **'** _remote\_windows\_cluster_ **'** | LOCAL }  
 Alterna o contexto do cluster HADR da instância de servidor para o cluster especificado do Windows Server Failover Cluster (WSFC). O *contexto do cluster HADR* determina qual cluster WSFC gerencia os metadados das réplicas de disponibilidade hospedadas pela instância de servidor. Use a opção SET HADR CLUSTER CONTEXT somente durante uma migração entre clusters de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] para uma instância do [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou versão posterior em um novo WSFC.  
@@ -217,7 +218,7 @@ Para obter mais informações, veja [Alterar contexto do cluster HADR da instân
   
 **\<buffer_pool_extension>::=**  
   
-**Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
 ON  
 Habilita a opção de extensão do pool de buffers. Essa opção estende o tamanho do pool de buffers usando o armazenamento não volátil. O armazenamento não volátil, como unidades de estado sólido (SSD), mantém páginas de dados limpas no pool. Para saber mais sobre esse recurso, confira [Extensão do pool de buffers](../../database-engine/configure-windows/buffer-pool-extension.md). A extensão do pool de buffers não está disponível em todas as edições do SQL Server. Para obter mais informações, consulte [Edições e recursos compatíveis com o SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -238,7 +239,7 @@ Desabilita a opção de extensão do pool de buffers. Desabilite a opção de ex
   
 **\<soft_numa>**  
 
-**Aplica-se a**: do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]).  
   
 ON  
 Permite que o particionamento automático divida nós de hardware NUMA grandes em nós NUMA menores. Alterar o valor de execução requer a reinicialização do mecanismo de banco de dados.  
@@ -257,7 +258,7 @@ Desabilita o particionamento automático de software de nós de hardware NUMA gr
 
 **\<memory_optimized> ::=**
 
-**Aplica-se a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e posterior
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 ON <br>
 Habilita todos os recursos no nível da instância que fazem parte da família de recursos do [Banco de Dados em Memória](../../relational-databases/in-memory-database.md). Atualmente, isso inclui os [metadados do tempdb com otimização de memória](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) e o [pool de buffers híbrido](../../database-engine/configure-windows/hybrid-buffer-pool.md). Exige uma reinicialização para entrar em vigor.
@@ -312,7 +313,7 @@ Os exemplos desta seção mostram como definir a afinidade do processo para CPUs
 #### <a name="a-setting-affinity-to-all-cpus-in-groups-0-and-2"></a>A. Configurando a afinidade para todas as CPUs nos grupos 0 e 2  
 O exemplo a seguir define afinidade para todas as CPUs nos grupos 0 e 2.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION   
 SET PROCESS AFFINITY CPU=0 TO 63, 128 TO 191;  
 ```  
@@ -320,7 +321,7 @@ SET PROCESS AFFINITY CPU=0 TO 63, 128 TO 191;
 #### <a name="b-setting-affinity-to-all-cpus-in-numa-nodes-0-and-7"></a>B. Configurando a afinidade para todas as CPUs nos nós NUMA 0 e 7  
 O exemplo a seguir define a afinidade de CPU para nós `0` e `7`.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION   
 SET PROCESS AFFINITY NUMANODE=0, 7;  
 ```  
@@ -328,7 +329,7 @@ SET PROCESS AFFINITY NUMANODE=0, 7;
 #### <a name="c-setting-affinity-to-cpus-60-through-200"></a>C. Definindo a afinidade para as CPUs 60 a 200  
 O exemplo a seguir define a afinidade para as CPUs 60 a 200.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION   
 SET PROCESS AFFINITY CPU=60 TO 200;  
 ```  
@@ -350,28 +351,28 @@ SET PROCESS AFFINITY CPU=AUTO;
   
 ###  <a name="Diagnostic"></a> Setting diagnostic log options  
   
-**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).    
   
 Os exemplos desta seção mostram como definir os valores para a opção de log de diagnóstico.  
   
 #### <a name="a-starting-diagnostic-logging"></a>A. Iniciando o log de diagnóstico  
 O exemplo a seguir inicia o log de dados de diagnóstico.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG ON;  
 ```  
   
 #### <a name="b-stopping-diagnostic-logging"></a>B. Interrompendo o log de diagnóstico  
 O exemplo a seguir interrompe o log de dados de diagnóstico.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG OFF;  
 ```  
   
 #### <a name="c-specifying-the-location-of-the-diagnostic-logs"></a>C. Especificando o local dos logs de diagnóstico  
 O exemplo a seguir define o local dos logs de diagnóstico como o caminho do arquivo especificado.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION  
 SET DIAGNOSTICS LOG PATH = 'C:\logs';  
 ```  
@@ -379,21 +380,21 @@ SET DIAGNOSTICS LOG PATH = 'C:\logs';
 #### <a name="d-specifying-the-maximum-size-of-each-diagnostic-log"></a>D. Especificando o tamanho máximo de cada log de diagnóstico  
 O exemplo a seguir define o tamanho máximo de cada log de diagnóstico como 10 megabytes.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION   
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
 ###  <a name="Failover"></a> Configurando as propriedades do cluster de failover  
   
-**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).   
   
 O exemplo a seguir ilustra a configuração dos valores das propriedades do recurso de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 #### <a name="a-specifying-the-value-for-the-healthchecktimeout-property"></a>A. Especificando o valor da propriedade HealthCheckTimeout  
 O exemplo a seguir define a opção `HealthCheckTimeout` como 15.000 milissegundos (15 segundos).  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION   
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
@@ -401,7 +402,7 @@ SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;
 ###  <a name="ChangeClusterContextExample"></a> B. Como alterar o contexto do cluster de uma réplica de disponibilidade  
 O exemplo a seguir altera o contexto do cluster HADR da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para especificar o cluster WSFC de destino, `clus01`, o exemplo especifica o nome de objeto completo do cluster, `clus01.xyz.com`.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';  
 ```  
   
@@ -409,11 +410,11 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
   
 ####  <a name="BufferPoolExtension"></a> A. Definindo a opção de extensão do pool de buffers  
   
-**Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
 O exemplo a seguir habilita a opção de extensão do pool de buffers, e especifica um nome e um tamanho de arquivo.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION   
 SET BUFFER POOL EXTENSION ON  
     (FILENAME = 'F:\SSDCACHE\Example.BPE', SIZE = 50 GB);  
@@ -422,7 +423,7 @@ SET BUFFER POOL EXTENSION ON
 #### <a name="b-modifying-buffer-pool-extension-parameters"></a>B. Modificando parâmetros da extensão do pool de buffers  
 O exemplo a seguir modifica o tamanho de um arquivo de extensão do pool de buffers. A opção de extensão do pool de buffers deve ser desabilitada antes que qualquer parâmetro seja modificado.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION   
 SET BUFFER POOL EXTENSION OFF;  
 GO  
@@ -433,39 +434,40 @@ GO
 ALTER SERVER CONFIGURATION  
 SET BUFFER POOL EXTENSION ON  
     (FILENAME = 'F:\SSDCACHE\Example.BPE', SIZE = 60 GB);  
-GO  
-  
+GO   
 ```  
 
 ### <a name="MemoryOptimized"></a> Como definir opções do Banco de Dados em Memória
 
-**Aplica-se a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e posterior
+**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 
 #### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>A. Habilitar todos os recursos do Banco de Dados em Memória com as opções padrão
 
-```
+```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED ON;
 GO
 ```
 
 #### <a name="b-enable-memory-optimized-tempdb-metadata-using-the-default-resource-pool"></a>B. Habilitar os metadados do tempdb com otimização de memória usando o pool de recursos padrão
-```
+
+```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON;
 GO
 ```
 
 #### <a name="c-enable-memory-optimized-tempdb-metadata-with-a-user-defined-resource-pool"></a>C. Habilitar os metadados do tempdb com otimização de memória com um pool de recursos definido pelo usuário
-```
+
+```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = 'pool_name');
 GO
 ```
 
 #### <a name="d-enable-hybrid-buffer-pool"></a>D. Habilitar o pool de buffers híbrido
-```
+
+```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = ON;
 GO
 ```
-
 
 ## <a name="see-also"></a>Consulte Também  
 [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)   

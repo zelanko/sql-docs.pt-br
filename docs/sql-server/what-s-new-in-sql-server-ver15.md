@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ef11893ca08e32c7aed177f53ea63305add4d14
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: e85461ef0a6395904b0f80590a01f035eb51dc3a
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326184"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952758"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novidades no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -36,46 +36,33 @@ Para obter mais informações e ver os problemas conhecidos, consulte as [Notas 
 
 As seções a seguir fornecem uma visão geral desses recursos.
 
-## [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
+## <a name="data-virtualization-and-includebig-data-clusters-2019includesssbigdataclusters-ver15md"></a>Virtualização de dados e [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
+
+Hoje em dia, as empresas costumam gerenciar grandes acervos de dados, que consistem em uma ampla gama de conjuntos de dados cada vez maiores, hospedados em fontes de dados em silos e presentes em toda a empresa. Obter informações quase em tempo real de todos os seus dados com [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], que fornecem um ambiente completo para trabalhar com grandes conjuntos de dados, incluindo Machine Learning e funcionalidades de inteligência artificial.
 
 | Novo recurso ou atualização | Detalhes |
 |:---|:---|
-| Solução de Big Data escalonável | [Implantar clusters escalonáveis](../big-data-cluster/deploy-get-started.md) de contêineres do SQL Server, do Spark e do HDFS em execução no Kubernetes <br/><br/> Ler, gravar e processar Big Data do Transact-SQL ou do Spark<br/><br/> Combine e analise facilmente dados relacionais de valor elevado com Big Data de volume grande<br/><br/>Consultar fontes de dados externas<br/><br/>Armazenar Big Data no HDFS gerenciado por SQL Server<br/><br/>Consultar dados de várias fontes de dados externas por meio do cluster<br/><br/> Usar os dados para IA, aprendizado de máquina e outras tarefas de análise<br/><br/> Implantar e executar aplicativos em [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] <br/><br/> Os bancos de dados de instâncias mestre do SQL Server usam Grupos de Disponibilidade Always On<br/>|
+| Solução de Big Data escalonável | [Implantar clusters escalonáveis](../big-data-cluster/deploy-get-started.md) de contêineres do SQL Server, do Spark e do HDFS em execução no Kubernetes <br/><br/> Ler, gravar e processar Big Data do Transact-SQL ou do Spark<br/><br/> Combine e analise facilmente dados relacionais de valor elevado com Big Data de volume grande<br/><br/>Consultar fontes de dados externas<br/><br/>Armazenar Big Data no HDFS gerenciado por SQL Server<br/><br/>Consultar dados de várias fontes de dados externas por meio do cluster<br/><br/> Usar os dados para IA, aprendizado de máquina e outras tarefas de análise<br/><br/> [Implantar e executar aplicativos](../big-data-cluster/concept-application-deployment.md) em [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] <br/><br/> A instância mestra do SQL Server fornece alta disponibilidade e recuperação de desastre para todos os bancos de dados usando a tecnologia de grupo de disponibilidade Always On<br/>|
+|Virtualização de dados com Polybase | Consulte dados de SQL Server externos, Oracle, Teradata, MongoDB e fontes de dados ODBC com tabelas externas, agora com [suporte à codificação UTF-8](../relational-databases/collations/collation-and-unicode-support.md). Confira [O que é PolyBase](../relational-databases/polybase/polybase-guide.md) para obter mais detalhes.|
 | &nbsp; | &nbsp; |
 
 Para obter mais detalhes, confira [O que são SQL Server [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]](../big-data-cluster/big-data-cluster-overview.md).
 
 [O arquivo de anúncios do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (CTP)](what-s-new-in-sql-server-ver15-prerelease.md) contém uma lista de recursos anunciados e alterados para todas as versões CTP anteriores desse recurso.
 
-## <a name="database-engine"></a>Mecanismo de banco de dados
+## <a name="intelligent-database"></a>Banco de dados inteligente
 
-### <a name="security"></a>Segurança
-
-|Novo recurso ou atualização | Detalhes |
-|:---|:---|
-|Always Encrypted com enclaves seguros|Expande sobre Always Encrypted com criptografia in-loco e computações avançadas, habilitando cálculos em dados de texto sem formatação dentro de um enclave seguro no lado do servidor. A criptografia in-loco melhora o desempenho e a confiabilidade das operações de criptografia (criptografia de colunas, chaves de criptografia de colunas giratórias, etc.), pois evita a movimentação de dados para fora do banco. O suporte para computações avançadas (correspondência de padrões e operações de comparação) desbloqueia o Always Encrypted a um conjunto muito mais amplo de cenários e aplicativos que demandam proteção de dados confidenciais, além de exigir uma funcionalidade mais rica em consultas Transact-SQL. Veja [Always Encrypted com enclaves seguros](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
-|Suspender e retomar a verificação inicial para TDE (Transparent Data Encryption)|Confira [Verificação de TDE (Transparent Data Encryption) – suspender e retomar](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume).|
-|Gerenciamento de certificados no SQL Server Configuration Manager|Confira [Gerenciamento de certificado (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md).|
-| &nbsp; | &nbsp; |
-
-### <a name="graph"></a>Gráfico
+### <a name="intelligent-query-processing"></a>Processamento de consulta inteligente
 
 |Novo recurso ou atualização | Detalhes |
 |:---|:---|
-|Ações de exclusão em cascata de restrição de borda |Defina as ações de exclusão em cascata em uma restrição de borda em um banco de dados de grafo. Confira [Restrições de borda](../relational-databases/tables/graph-edge-constraints.md). |
-|Nova função do grafo – `SHORTEST_PATH` | Use `SHORTEST_PATH` dentro de `MATCH` para localizar o caminho mais curto entre quaisquer dois nós em um grafo ou para executar passagens de comprimento arbitrário.|
-|Índices e tabelas de partição| Os dados de tabelas e índices particionados são divididos em unidades que podem ser difundidas por mais de um grupo de arquivos em um banco de dados de grafo. |
-|Usar aliases de exibição ou tabela derivada em consulta de correspondência de grafo |Confira [Consulta de correspondência de grafo](../t-sql/queries/match-sql-graph.md). |
+|Comentários de concessão de memória do modo de linha |Expande o recurso de comentários de concessão de memória do modo de lote, ajustando os tamanhos de concessão de memória para operadores de modo de lote e de linha. Isso pode corrigir automaticamente concessões excessivas que resultam em desperdício de memória e redução da simultaneidade e corrigir concessões de memória insuficientes que causam despejos dispendiosos no disco. Confira [Comentários de concessão de memória do modo de linha](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). |
+|Compilação adiada de variável da tabela|Melhora a qualidade do plano e o desempenho geral para consultas que fazem referência a variáveis de tabela. Durante a otimização e compilação inicial, esse recurso propaga estimativas de cardinalidade com base nas contagens reais de linha de variável de tabela. Essas informações de contagem de linha precisas otimizam as operações de plano de downstream. Confira [Compilação adiada de variável da tabela](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |
+|Processamento de consulta aproximada com `APPROX_COUNT_DISTINCT `|Para cenários em que a precisão absoluta não é importante, mas a capacidade de resposta é essencial, `APPROX_COUNT_DISTINCT` agrega grandes conjuntos de dados usando menos recursos do que `COUNT(DISTINCT())` para uma simultaneidade superior. Confira [Processamento de consulta aproximada](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing).|
+|Modo de Lote no Rowstore|O modo de lote em rowstore permite que a execução em modo de lote sem a necessidade de índices columnstore. A execução do modo em lote usa a CPU com mais eficiência durante cargas de trabalho analíticas, mas até [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] ela era usada apenas quando uma consulta incluía operações com índices columnstore. No entanto, alguns aplicativos podem usar recursos sem suporte dos índices columnstore e, portanto, não poderiam aproveitar o modo de lote. A partir do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], o modo de lote é habilitado em cargas de trabalho analíticas qualificadas cujas consultas incluem operações com qualquer tipo de índice (rowstore ou columnstore). Confira [Modo de lote em rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore). |
+|Embutimento de UDF escalar|Transforma automaticamente UDFs escalares em expressões relacionais e as insere na consulta SQL chamada. Essa transformação melhora o desempenho de cargas de trabalho que aproveitam as UDFs escalares. Confira [Inlining de UDF escalar](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).|
 | &nbsp; | &nbsp; |
 
-### <a name="indexes"></a>Índices
-
-|Novo recurso ou atualização | Detalhes |
-|:---|:---|
-|`OPTIMIZE_FOR_SEQUENTIAL_KEY`|Ativa uma otimização no [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que ajuda a melhorar a taxa de transferência para inserções de alta simultaneidade em um índice. Essa opção destina-se a índices que estão sujeitos a contenção de inserção de última página, geralmente vista com os índices que têm uma chave sequencial, tal como uma coluna de identidade, uma sequência ou uma coluna de data/hora. Para obter mais informações, veja [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys).|
-|Compilar e recompilar o índice de columnstore em cluster online | Confira [Executar operações de índice online](../relational-databases/indexes/perform-index-operations-online.md). |
-|Compilar o índice de rowstore online retomável | Confira [Executar operações de índice online](../relational-databases/indexes/perform-index-operations-online.md). |
-| &nbsp; | &nbsp; |
 
 ### <a name="in-memory-database"></a>Banco de dados em memória
 
@@ -83,24 +70,22 @@ Para obter mais detalhes, confira [O que são SQL Server [!INCLUDE[big-data-clus
 |:---|:---|
 |Pool de buffers híbrido| Novo recurso do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], em que as páginas de banco de dados que residem em arquivos de banco de dados colocados em um dispositivo PMEM (memória persistente) serão acessadas diretamente quando necessário. Confira [Pool de buffers híbrido](../database-engine/configure-windows/hybrid-buffer-pool.md).|
 |Metadados `tempdb` com otimização de memória| O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] apresenta um novo recurso que faz parte da família de recursos do [Banco de Dados em Memória](../relational-databases/in-memory-database.md), os metadados do `tempdb` com otimização de memória, que efetivamente remove esse gargalo e possibilita um novo nível de escalabilidade para cargas de trabalho com uso intenso do `tempdb`. No [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], as tabelas do sistema envolvidas no gerenciamento dos metadados da tabela temporária podem ser movidas para tabelas com otimização de memória não duráveis e livres de travas. Confira [Metadados com otimização de memória `tempdb`](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
+| Suporte a OLTP in-memory para instantâneos de banco de dados | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] apresenta suporte para a criação de [instantâneos do banco de dados](../relational-databases/databases/database-snapshots-sql-server.md) de bancos de dados que incluem grupos de arquivos com otimização de memória. |
 | &nbsp; | &nbsp; |
 
-### <a name="unicode-support"></a>Suporte de Unicode
+### <a name="intelligent-performance"></a>Desempenho inteligente
 
 |Novo recurso ou atualização | Detalhes |
 |:---|:---|
-|Suporte para codificação de caracteres UTF-8 |Suporte para caractere UTF-8 para importação e exportação de codificação, e como agrupamento de nível de banco de dados ou de nível de coluna para dados de cadeia de caracteres. Isso dá suporte a aplicativos que se estendem para uma escala global, em que o requisito de fornecer aplicativos e serviços de banco de dados multilíngues globais é essencial para atender às demandas dos clientes e às regulamentações específicas do mercado. Confira [Suporte a agrupamentos e a Unicode](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> A versão Release Candidate [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] habilita o suporte a UTF-8 para tabelas externas do Polybase e para Always Encrypted.|
+|`OPTIMIZE_FOR_SEQUENTIAL_KEY`|Ativa uma otimização no [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que ajuda a melhorar a taxa de transferência para inserções de alta simultaneidade em um índice. Essa opção destina-se a índices que estão sujeitos a contenção de inserção de última página, geralmente vista com os índices que têm uma chave sequencial, tal como uma coluna de identidade, uma sequência ou uma coluna de data/hora. Para obter mais informações, veja [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys).|
+|Forçar cursores estáticos e de avanço rápido | Suporte à imposição de plano de Repositório de Consultas para cursores fast forward e static. Confira [Planejar forçar suporte para cursores estáticos e de avanço rápido](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23).|
+|Governança de recursos| O valor configurável para a opção `REQUEST_MAX_MEMORY_GRANT_PERCENT` de `CREATE WORKLOAD GROUP` e `ALTER WORKLOAD GROUP` foi alterado de um inteiro para um tipo de dados float, para permitir um controle mais granular dos limites de memória. Confira [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) e [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md).|
+|Recompilações reduzidas para cargas de trabalho| Melhora o uso de tabelas temporárias entre vários escopos. Confira [Recompilações reduzidas para cargas de trabalho](../relational-databases/tables/tables.md#ctp23) |
+|Escalabilidade de ponto de verificação indireto |Confira [Escalabilidade de ponto de verificação indireto aprimorada](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
+|Atualizações de PFS simultâneas|As [páginas PFS](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) são páginas especiais dentro de um arquivo de banco de dados que o SQL Server usa para ajudar a localizar espaço livre ao alocar espaço para um objeto. A contenção de trava de página em páginas PFS é algo que normalmente está associado com [`tempdb`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d), mas também pode ocorrer em bancos de dados de usuário quando há muitos threads de alocação de objeto simultâneos. Essa melhoria altera a maneira como a simultaneidade é gerenciada com atualizações de PFS para que elas possam ser atualizadas em uma trava compartilhada, em vez de uma trava exclusiva. Esse comportamento é ativado por padrão em todos os bancos de dados (incluindo `tempdb`) a partir do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].|
 | &nbsp; | &nbsp; |
 
-### <a name="polybase"></a>PolyBase
-
-|Novo recurso ou atualização | Detalhes |
-|:---|:---|
-|Consultar tabelas externas |Os nomes de coluna da tabela externa agora são usados para consultar fontes de dados de SQL Server, Oracle, Teradata, MongoDB e ODBC. Confira [O que é o PolyBase](../relational-databases/polybase/polybase-guide.md).|
-|Suporte para codificação de caracteres UTF-8|Suporte a caracteres UTF-8 com tabelas externas. Confira [Suporte a agrupamentos e a Unicode](../relational-databases/collations/collation-and-unicode-support.md).|
-| &nbsp; | &nbsp; |
-
-### <a name="performance-monitoring"></a>Monitoramento de desempenho
+### <a name="monitoring"></a>Monitoramento
 
 |Novo recurso ou atualização | Detalhes |
 |:---|:---|
@@ -112,6 +97,25 @@ Para obter mais detalhes, confira [O que são SQL Server [!INCLUDE[big-data-clus
 |`LAST_QUERY_PLAN_STATS` | Nova configuração no escopo do banco de dados para habilitar o `sys.dm_exec_query_plan_stats`. Veja [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 |`query_post_execution_plan_profile` | O evento estendido coleta o equivalente a um plano de execução real com base em criação de perfil leve, ao contrário de `query_post_execution_showplan`, que usa a criação de perfil padrão. Confira [Infraestrutura de criação de perfil de consulta](../relational-databases/performance/query-profiling-infrastructure.md).|
 |`sys.dm_db_page_info(database_id, file_id, page_id, mode)` | O novo DMF retorna informações sobre uma página em um banco de dados. Confira [sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md).|
+| &nbsp; | &nbsp; |
+
+## <a name="developer-experience"></a>Experiência do desenvolvedor
+
+### <a name="graph"></a>Gráfico
+
+|Novo recurso ou atualização | Detalhes |
+|:---|:---|
+|Ações de exclusão em cascata de restrição de borda |Defina as ações de exclusão em cascata em uma restrição de borda em um banco de dados de grafo. Confira [Restrições de borda](../relational-databases/tables/graph-edge-constraints.md). |
+|Nova função do grafo – `SHORTEST_PATH` | Use `SHORTEST_PATH` dentro de `MATCH` para localizar o caminho mais curto entre quaisquer dois nós em um grafo ou para executar passagens de comprimento arbitrário.|
+|Índices e tabelas de partição| Os dados de tabelas e índices particionados são divididos em unidades que podem ser difundidas por mais de um grupo de arquivos em um banco de dados de grafo. |
+|Usar aliases de exibição ou tabela derivada em consulta de correspondência de grafo |Confira [Consulta de correspondência de grafo](../t-sql/queries/match-sql-graph.md). |
+| &nbsp; | &nbsp; |
+
+### <a name="unicode-support"></a>Suporte de Unicode
+
+|Novo recurso ou atualização | Detalhes |
+|:---|:---|
+|Suporte para codificação de caracteres UTF-8 |Suporte para caractere UTF-8 para importação e exportação de codificação, e como agrupamento de nível de banco de dados ou de nível de coluna para dados de cadeia de caracteres. Isso dá suporte a aplicativos que se estendem para uma escala global, em que o requisito de fornecer aplicativos e serviços de banco de dados multilíngues globais é essencial para atender às demandas dos clientes e às regulamentações específicas do mercado. Confira [Suporte a agrupamentos e a Unicode](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> A versão Release Candidate [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] habilita o suporte a UTF-8 para tabelas externas do Polybase e para Always Encrypted.|
 | &nbsp; | &nbsp; |
 
 ### <a name="language-extensions"></a>Extensões de linguagem
@@ -133,39 +137,6 @@ Para obter mais detalhes, confira [O que são SQL Server [!INCLUDE[big-data-clus
 | Novos SRIDs (identificadores de referência espacial) |[GDA2020 australiano](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) fornece uma referência mais robusta e precisa, que está alinhada mais estreitamente a sistemas de posicionamento global. Os novos SRIDs são:<br/><br/> – 7843 para 2D geográfico<br/> – 7844 para 3D geográfico <br/><br/>A exibição [spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) contém as definições de SRIDs novos. |
 | &nbsp; | &nbsp; |
 
-### <a name="performance"></a>Desempenho
-
-|Novo recurso ou atualização | Detalhes |
-|:---|:---|
-|Recuperação de banco de dados acelerada | Habilitar a recuperação de banco de dados acelerada por banco de dados. Confira [Recuperação acelerada de banco de dados](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).|
-|Forçar cursores estáticos e de avanço rápido | Suporte à imposição de plano de Repositório de Consultas para cursores fast forward e static. Confira [Planejar forçar suporte para cursores estáticos e de avanço rápido](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23).|
-|Governança de recursos| O valor configurável para a opção `REQUEST_MAX_MEMORY_GRANT_PERCENT` de `CREATE WORKLOAD GROUP` e `ALTER WORKLOAD GROUP` foi alterado de um inteiro para um tipo de dados float, para permitir um controle mais granular dos limites de memória. Confira [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) e [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md).|
-|Recompilações reduzidas para cargas de trabalho| Melhora o uso de tabelas temporárias entre vários escopos. Confira [Recompilações reduzidas para cargas de trabalho](../relational-databases/tables/tables.md#ctp23) |
-|Escalabilidade de ponto de verificação indireto |Confira [Escalabilidade de ponto de verificação indireto aprimorada](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
-|Atualizações de PFS simultâneas|As [páginas PFS](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) são páginas especiais dentro de um arquivo de banco de dados que o SQL Server usa para ajudar a localizar espaço livre ao alocar espaço para um objeto. A contenção de trava de página em páginas PFS é algo que normalmente está associado com [`tempdb`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d), mas também pode ocorrer em bancos de dados de usuário quando há muitos threads de alocação de objeto simultâneos. Essa melhoria altera a maneira como a simultaneidade é gerenciada com atualizações de PFS para que elas possam ser atualizadas em uma trava compartilhada, em vez de uma trava exclusiva. Esse comportamento é ativado por padrão em todos os bancos de dados (incluindo `tempdb`) a partir do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].|
-|Comentários de concessão de memória do modo de linha |Expande o recurso de comentários de concessão de memória do modo de lote, ajustando os tamanhos de concessão de memória para operadores de modo de lote e de linha. Isso pode corrigir automaticamente concessões excessivas que resultam em desperdício de memória e redução da simultaneidade e corrigir concessões de memória insuficientes que causam despejos dispendiosos no disco. Confira [Comentários de concessão de memória do modo de linha](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). |
-|Compilação adiada de variável da tabela|Melhora a qualidade do plano e o desempenho geral para consultas que fazem referência a variáveis de tabela. Durante a otimização e compilação inicial, esse recurso propaga estimativas de cardinalidade com base nas contagens reais de linha de variável de tabela. Essas informações de contagem de linha precisas otimizam as operações de plano de downstream. Confira [Compilação adiada de variável da tabela](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |
-|`APPROX_COUNT_DISTINCT `|Para cenários em que a precisão absoluta não é importante, mas a capacidade de resposta é essencial, `APPROX_COUNT_DISTINCT` agrega grandes conjuntos de dados usando menos recursos do que `COUNT(DISTINCT())` para uma simultaneidade superior. Confira [Processamento de consulta aproximada](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing).|
-|Modo de Lote no Rowstore|O modo de lote em rowstore permite que a execução em modo de lote sem a necessidade de índices columnstore. A execução do modo em lote usa a CPU com mais eficiência durante cargas de trabalho analíticas, mas até [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] ela era usada apenas quando uma consulta incluía operações com índices columnstore. No entanto, alguns aplicativos podem usar recursos sem suporte dos índices columnstore e, portanto, não poderiam aproveitar o modo de lote. A partir do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], o modo de lote é habilitado em cargas de trabalho analíticas qualificadas cujas consultas incluem operações com qualquer tipo de índice (rowstore ou columnstore). Confira [Modo de lote em rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore). |
-|Embutimento de UDF escalar|Transforma automaticamente UDFs escalares em expressões relacionais e as insere na consulta SQL chamada. Essa transformação melhora o desempenho de cargas de trabalho que aproveitam as UDFs escalares. Confira [Inlining de UDF escalar](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).|
-| &nbsp; | &nbsp; |
-
-### <a name="availability-groups"></a>Grupos de disponibilidade
-
-|Novo recurso ou atualização | Detalhes |
-|:---|:---|
-|Até cinco réplicas síncronas|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] aumenta o número máximo de réplicas síncronas para 5, um aumento com relação às 3 no [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Você pode configurar esse grupo de cinco réplicas para ter failover automático dentro do grupo. Há uma réplica primária, além de quatro réplicas secundárias síncronas.|
-|Redirecionamento de conexão de réplica secundária para primária| Permite que conexões do aplicativo cliente sejam direcionadas para a réplica primária, independentemente do servidor de destino especificado na cadeia de conexão. Para conhecer os detalhes, consulte [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md) (Redirecionamento de conexão de leitura/gravação de réplica secundária para primária [Grupos de Disponibilidade Always On]).|
-| &nbsp; | &nbsp; |
-
-### <a name="setup"></a>Instalação 
-
-|Novo recurso ou atualização | Detalhes | 
-|:---|:---| 
-|Novas opções de configuração de memória | Define durante a instalação as configurações de servidor de *memória mínima do servidor (MB)* e *memória máxima do servidor (MB)* . Para obter mais informações, confira a [página Configuração do mecanismo de banco de dados – memória](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory) e os parâmetros `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` e `SQLMAXMEMORY` em [Instalar o SQL Server do prompt de comando](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). O valor proposto será alinhado com as diretrizes de configuração de memória nas [Opções de configuração de memória do servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).| 
-|Novas opções de configuração de paralelismo | Define o *grau máximo de configuração de* servidor de paralelismo durante a instalação. Para obter mais informações, confira a [página Configuração do mecanismo de banco de dados – MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) e o parâmetro `SQLMAXDOP` em [Instalar SQL Server no prompt de comando](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). O valor padrão será alinhado às diretrizes de grau máximo da opção de paralelismo especificadas em [Configurar a opção de configuração de servidor grau máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
-| &nbsp; | &nbsp; |
-
 ### <a name="error-messages"></a>Mensagens de erro
 
 |Novo recurso ou atualização | Detalhes |
@@ -173,7 +144,51 @@ Para obter mais detalhes, confira [O que são SQL Server [!INCLUDE[big-data-clus
 |Avisos de truncamento detalhados | A mensagem de erro de truncamento inclui por padrão nomes de tabela e coluna, bem como o valor truncado. Confira [VERBOSE_TRUNCATION_WARNINGS](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation).|
 | &nbsp; | &nbsp; |
 
-## <a name="sql-server-on-linux"></a>SQL Server no Linux
+## <a name="mission-critical-security"></a>Segurança crítica
+
+|Novo recurso ou atualização | Detalhes |
+|:---|:---|
+|Always Encrypted com enclaves seguros|Expande sobre Always Encrypted com criptografia in-loco e computações avançadas, habilitando cálculos em dados de texto sem formatação dentro de um enclave seguro no lado do servidor. A criptografia in-loco melhora o desempenho e a confiabilidade das operações de criptografia (criptografia de colunas, chaves de criptografia de colunas giratórias, etc.), pois evita a movimentação de dados para fora do banco. O suporte para computações avançadas (correspondência de padrões e operações de comparação) desbloqueia o Always Encrypted a um conjunto muito mais amplo de cenários e aplicativos que demandam proteção de dados confidenciais, além de exigir uma funcionalidade mais rica em consultas Transact-SQL. Veja [Always Encrypted com enclaves seguros](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
+|Gerenciamento de certificados no SQL Server Configuration Manager|Confira [Gerenciamento de certificado (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md).|
+| &nbsp; | &nbsp; |
+
+## <a name="high-availability"></a>Alta disponibilidade
+
+### <a name="availability-groups"></a>Grupos de Disponibilidade
+
+|Novo recurso ou atualização | Detalhes |
+|:---|:---|
+|Até cinco réplicas síncronas|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] aumenta o número máximo de réplicas síncronas para 5, um aumento com relação às 3 no [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Você pode configurar esse grupo de cinco réplicas para ter failover automático dentro do grupo. Há uma réplica primária, além de quatro réplicas secundárias síncronas.|
+|Redirecionamento de conexão de réplica secundária para primária| Permite que conexões do aplicativo cliente sejam direcionadas para a réplica primária, independentemente do servidor de destino especificado na cadeia de conexão. Para conhecer os detalhes, consulte [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md) (Redirecionamento de conexão de leitura/gravação de réplica secundária para primária [Grupos de Disponibilidade Always On]).|
+| &nbsp; | &nbsp; |
+
+### <a name="recovery"></a>Recuperação
+
+|Novo recurso ou atualização | Detalhes |
+|:---|:---|
+|Recuperação de banco de dados acelerada | Habilitar a recuperação de banco de dados acelerada por banco de dados. Confira [Recuperação acelerada de banco de dados](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).|
+| &nbsp; | &nbsp; |
+
+### <a name="resumable-operations"></a>Operações retomáveis
+
+|Novo recurso ou atualização | Detalhes |
+|:---|:---|
+|Compilar e recompilar o índice de columnstore em cluster online | Confira [Executar operações de índice online](../relational-databases/indexes/perform-index-operations-online.md). |
+|Compilar o índice de rowstore online retomável | Confira [Executar operações de índice online](../relational-databases/indexes/perform-index-operations-online.md). |
+|Suspender e retomar a verificação inicial para TDE (Transparent Data Encryption)|Confira [Verificação de TDE (Transparent Data Encryption) – suspender e retomar](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume).|
+| &nbsp; | &nbsp; |
+
+## <a name="setup"></a>Instalação 
+
+|Novo recurso ou atualização | Detalhes | 
+|:---|:---| 
+|Novas opções de configuração de memória | Define durante a instalação as configurações de servidor de *memória mínima do servidor (MB)* e *memória máxima do servidor (MB)* . Para obter mais informações, confira a [página Configuração do mecanismo de banco de dados – memória](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory) e os parâmetros `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` e `SQLMAXMEMORY` em [Instalar o SQL Server do prompt de comando](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). O valor proposto será alinhado com as diretrizes de configuração de memória nas [Opções de configuração de memória do servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).| 
+|Novas opções de configuração de paralelismo | Define o *grau máximo de configuração de* servidor de paralelismo durante a instalação. Para obter mais informações, confira a [página Configuração do mecanismo de banco de dados – MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) e o parâmetro `SQLMAXDOP` em [Instalar SQL Server no prompt de comando](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). O valor padrão será alinhado às diretrizes de grau máximo da opção de paralelismo especificadas em [Configurar a opção de configuração de servidor grau máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
+| &nbsp; | &nbsp; |
+
+## <a name="platform-choice"></a>Opção de plataforma
+
+### <a id="sql-server-on-linux"></a>Linux
 
 | Novo recurso ou atualização | Detalhes |
 |:-----|:-----|
@@ -185,6 +200,14 @@ Para obter mais detalhes, confira [O que são SQL Server [!INCLUDE[big-data-clus
 |Aprimoramentos `tempdb` | Por padrão, uma nova instalação do SQL Server em Linux cria vários arquivos de dados `tempdb` com base no número de núcleos lógicos (com até 8 arquivos de dados). Isso não é aplicável a upgrades de versões principais ou secundárias no local. Cada arquivo do `tempdb` tem 8 MB com um aumento automático de 64 MB. Esse comportamento é semelhante à instalação padrão do SQL Server no Windows. |
 | PolyBase em Linux | [Instalar o PolyBase](../relational-databases/polybase/polybase-linux-setup.md) no Linux para conectores não Hadoop.<br/><br/>[Mapeamento de tipo do PolyBase](../relational-databases/polybase/polybase-type-mapping.md). |
 | Suporte ao CDC (captura de dados de alterações) | O CDC (captura de dados de alterações) agora é compatível no Linux para SQL Server 2019. |
+| &nbsp; | &nbsp; |
+
+### <a name="containers"></a>Contêineres
+
+|Novo recurso ou atualização | Detalhes |
+|:---|:---|
+| Registro de Contêiner da Microsoft | O [Registro de Contêiner da Microsoft](https://www.ntweekly.com/2019/09/23/microsoft-container-registry-to-replace-docker-hub-for-new-images/) agora substitui o Docker Hub para novas imagens oficiais de contêiner da Microsoft, incluindo [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
+| Contêineres não raiz | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduz a capacidade de criar contêineres mais seguros, iniciando o processo [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] como um usuário não raiz por padrão. Confira [criar e executar contêineres do SQL Server como um usuário não raiz](../linux/sql-server-linux-configure-docker.md#buildnonrootcontainer) para obter mais detalhes. |
 | &nbsp; | &nbsp; |
 
 ## <a id="ml"></a> Serviços de Machine Learning do SQL Server
@@ -203,7 +226,7 @@ Para obter mais detalhes, confira [O que são SQL Server [!INCLUDE[big-data-clus
 |Novos controles HTML| Os controles HTML substituem todos os componentes do Silverlight anteriores. Dependência do Silverlight removida.|
 | &nbsp; | &nbsp; |
 
-## <a name="analysis-services"></a>Analysis Services
+## <a name="sql-server-analysis-services"></a>SQL Server Analysis Services
 
 | Novo recurso ou atualização | Detalhes |
 |:---|:---|

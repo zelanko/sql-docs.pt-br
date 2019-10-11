@@ -1,5 +1,5 @@
 ---
-title: os_tasks (Transact-SQL) | Microsoft Docs
+title: sys. dm _os_tasks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -20,47 +20,46 @@ ms.assetid: 180a3c41-e71b-4670-819d-85ea7ef98bac
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e71af56ba845cc2b011196fadce6d7c1a3684b15
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 69fb7b1e0d9f98ec7d00441613a8887a81c4567c
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265654"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72260430"
 ---
-# <a name="sysdmostasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
+# <a name="sysdm_os_tasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retorna uma linha para cada tarefa que está ativa na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Retorna uma linha para cada tarefa que está ativa na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre tarefas, consulte o [Guia de arquitetura de threads e tarefas](../../relational-databases/thread-and-task-architecture-guide.md).
   
 > [!NOTE]  
->  Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_tasks**.  
+> Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **Sys. dm _pdw_nodes_os_tasks**.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary(8)**|Endereço de memória do objeto.|  
-|**task_state**|**nvarchar(60)**|O estado da tarefa. Pode ser um dos seguintes:<br /><br /> PENDENTE: Esperando por um thread de trabalho.<br /><br /> EXECUTÁVEL: Executável, mas esperando receber um quantum.<br /><br /> EXECUTANDO: Atualmente em execução no agendador.<br /><br /> SUSPENSO: Tem um trabalhador, mas está aguardando um evento.<br /><br /> FEITO: Concluído.<br /><br /> SPINLOOP: Preso em um spinlock.|  
+|**task_state**|**nvarchar(60)**|O estado da tarefa. Pode ser um dos seguintes:<br /><br /> PENDENTE Esperando por um thread de trabalho.<br /><br /> XTERM Executável, mas aguardando para receber um Quantum.<br /><br /> EXECUTADO Atualmente em execução no agendador.<br /><br /> SUSPENSO Tem um trabalho, mas está aguardando um evento.<br /><br /> TRABALHADO Conclusão.<br /><br /> SPINLOOP: Preso em um SpinLock.|  
 |**context_switches_count**|**int**|Número de alternâncias de contexto de agendador que esta tarefa completou.|  
 |**pending_io_count**|**int**|Número de E/Ss físicas executadas por esta tarefa.|  
 |**pending_io_byte_count**|**bigint**|Contagem total de bytes de E/Ss que são executadas por esta tarefa.|  
 |**pending_io_byte_average**|**int**|Contagem média de bytes de E/Ss que são executadas por esta tarefa.|  
-|**scheduler_id**|**int**|ID do agendador pai. Este é um identificador das informações de agendador para esta tarefa. Para obter mais informações, consulte [DM os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
+|**scheduler_id**|**int**|ID do agendador pai. Este é um identificador das informações de agendador para esta tarefa. Para obter mais informações, consulte [Sys. dm &#40;_OS_SCHEDULERS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
 |**session_id**|**smallint**|ID da sessão que está associado à tarefa.|  
 |**exec_context_id**|**int**|ID do contexto de execução que está associado à tarefa.|  
-|**request_id**|**int**|ID da solicitação da tarefa. Para obter mais informações, consulte [. DM exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|**worker_address**|**varbinary(8)**|Endereço de memória do trabalhador que está executando a tarefa.<br /><br /> NULL = A tarefa está esperando que um trabalhador possa ser executado ou a execução da tarefa foi recém-concluída.<br /><br /> Para obter mais informações, consulte [DM os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|**host_address**|**varbinary(8)**|Endereço de memória do host.<br /><br /> 0 = A hospedagem não foi usada para criar a tarefa. Isto ajuda a identificar o host que foi usado para criar esta tarefa.<br /><br /> Para obter mais informações, consulte [sys.dm_os_hosts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md).|  
+|**request_id**|**int**|ID da solicitação da tarefa. Para obter mais informações, consulte [Sys. dm &#40;_EXEC_REQUESTS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|**worker_address**|**varbinary(8)**|Endereço de memória do trabalhador que está executando a tarefa.<br /><br /> NULL = A tarefa está esperando que um trabalhador possa ser executado ou a execução da tarefa foi recém-concluída.<br /><br /> Para obter mais informações, consulte [Sys. dm &#40;_OS_WORKERS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|**host_address**|**varbinary(8)**|Endereço de memória do host.<br /><br /> 0 = A hospedagem não foi usada para criar a tarefa. Isto ajuda a identificar o host que foi usado para criar esta tarefa.<br /><br /> Para obter mais informações, consulte [Sys. dm &#40;_OS_HOSTS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md).|  
 |**parent_task_address**|**varbinary(8)**|Endereço de memória da tarefa que é pai do objeto.|  
-|**pdw_node_id**|**int**|**Aplica-se ao**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="permissions"></a>Permissões
-
-Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `VIEW DATABASE STATE` permissão no banco de dados. Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e básica, requer a **administrador de servidor** ou uma **administrador do Active Directory do Azure** conta.   
+No [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer a permissão `VIEW SERVER STATE`.   
+Nas camadas Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], o requer a permissão `VIEW DATABASE STATE` no banco de dados. Nas camadas Standard e Basic [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
 
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-monitoring-parallel-requests"></a>A. Monitorando solicitações paralelas  
- Para solicitações que são executadas em paralelo, você verá várias linhas para a mesma combinação de (\<**session_id**>, \< **request_id**>). Use a seguinte consulta para localizar o [configurar o grau máximo de paralelismo a opção de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) para todas as solicitações ativas.  
+ Para solicitações executadas em paralelo, você verá várias linhas para a mesma combinação de (\<**session_id**>, \<**request_id**>). Use a consulta a seguir para localizar a [opção de configuração de servidor definir o grau máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) para todas as solicitações ativas.  
   
 > [!NOTE]  
 >  Um **request_id** é exclusivo dentro de uma sessão.  
@@ -97,8 +96,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
-  [Sistema operacional SQL Server relacionados exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
-  
+[SQL Server exibições &#40;&#41;de gerenciamento dinâmico relacionadas ao sistema operacional](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
+[Guia de arquitetura de thread e tarefa](../../relational-databases/thread-and-task-architecture-guide.md)     
   
 
 

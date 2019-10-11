@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 17c69ca2ecb09f734f5d2018baea299d282917ed
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 3a67d7593ca63a2271fc94fc7203e9bb55d6efcc
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71283814"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680968"
 ---
 # <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>Lição 1-8: Anotar e formatar o pacote da Lição 1 
 
@@ -55,7 +55,7 @@ Nesta tarefa, você usa os recursos de formatação nas ferramentas de dados do 
   
     Para encapsular o texto na caixa de anotação, posicione o cursor no local em que deseja começar uma nova linha e pressione **Enter**.  
   
-    Se você não adicionar texto à caixa de anotação, essa caixa desaparecerá quando você clicar fora dela.  
+    Se você não adicionar texto à caixa de anotação, essa caixa desaparecerá quando você clicar fora dela.  Devido a esse comportamento, caso você deseje colar o texto na caixa de anotação, copie o texto para a área de transferência antes de selecionar Adicionar Anotação. 
   
 ## <a name="go-to-next-task"></a>Ir para a próxima tarefa
 [Etapa 9: Testar o pacote da Lição 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  

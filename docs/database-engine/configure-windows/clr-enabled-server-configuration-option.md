@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fcd8ece516934b5f245465d5256a451ff4e41aed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 71392e537cb034976b3c47d819897356e3bb58cb
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012956"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682085"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>Opção clr enabled de configuração de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ Somente WOW64. Reinicie os servidores WOW64 para fazer com que as alterações d
 
 Ao executar RECONFIGURE e o valor de execução da opção clr enabled é alterado de 1 para 0, todos os domínios de aplicativo que contêm assemblies de usuário são descarregados imediatamente.  
   
->  **Não há suporte à execução de CLR (Common Language Runtime) com lightweight pooling** Desabilite uma das duas opções: "clr enabled" ou "lightweight pooling". Alguns dos recursos que dependem de CLR e não funcionam corretamente no modo fibra incluem o tipo de dados de **hierarquia** , a replicação e Gerenciamento Baseado em Políticas.  
+>  **Não há suporte à execução de CLR (Common Language Runtime) com lightweight pooling** Desabilite uma das duas opções: "clr enabled" ou "lightweight pooling". Os recursos que dependem do CLR e que não funcionam corretamente no modo fibra incluem o tipo de dados **hierarchyid**, a função `FORMAT`, a replicação e o gerenciamento baseado em políticas.  
 > 
 > [!WARNING]
 >  O CLR usa o CAS (Segurança de Acesso do Código) no .NET Framework, para o qual não há mais suporte como um limite de segurança. Um assembly CLR criado com o `PERMISSION_SET = SAFE` pode conseguir acessar recursos externos do sistema, chamar um código não gerenciado e adquirir privilégios sysadmin. A partir do [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)], uma opção `sp_configure` chamada `clr strict security` é introduzida, a fim de aumentar a segurança de assemblies CLR. A `clr strict security` está habilitada por padrão e trata assemblies `SAFE` e `EXTERNAL_ACCESS` como se eles fossem marcados como `UNSAFE`. A opção `clr strict security` pode ser desabilitada para compatibilidade com versões anteriores, mas isso não é recomendado. A Microsoft recomenda que todos os assemblies sejam assinados por um certificado ou uma chave assimétrica com um logon correspondente que recebeu a permissão `UNSAFE ASSEMBLY` no banco de dados mestre. Os administradores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também podem adicionar assemblies a uma lista de assemblies, na qual o Mecanismo de Banco de Dados deve confiar. Para obter mais informações, consulte [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md).

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a5502814-b281-42dd-b885-5c9368025ae6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2a84a40c5d35335e4fbd73aaa65291ddabe303ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3e7338e9068c1b8c58623cf744022a165ce90eda
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072910"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952708"
 ---
 # <a name="delete-a-trace-transact-sql"></a>Excluir um rastreamento (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "68072910"
   
 ### <a name="to-delete-a-trace"></a>Para excluir um rastreamento  
   
-1.  Execute **sp_trace_setstatus** especificando **@status = 0** para interromper o rastreamento.  
+1.  Execute **sp_trace_setstatus** especificando `@status = 0` para interromper o rastreamento.  
   
-2.  Execute **sp_trace_setstatus** especificando **@status = 2** para encerrar o rastreamento e excluir suas informações do servidor.  
+2.  Execute **sp_trace_setstatus** especificando `@status = 2` para encerrar o rastreamento e excluir suas informações do servidor.  
   
 > [!NOTE]  
 >  Um rastreamento deve ser interrompido primeiro antes de ser encerrado.  

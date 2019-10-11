@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 20469bf6d6d7050c79346afea0f96e4167708f08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4dcb5f8bd05b5cd1b5b68927abfef49576d6b072
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121332"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710728"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Ponto a ponto – Replicação transacional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,19 +139,19 @@ ms.locfileid: "68121332"
   
 -   O parâmetro Distribution Agent **-SubscriptionStreams** e o parâmetro Log Reader Agent **-MaxCmdsInTran**.  
   
--   As propriedades de artigo **@destination_owner** e **@destination_table** .
+-   As propriedades de artigo `@destination_owner` e `@destination_table`.
 
 -   A replicação transacional ponto a ponto não dá suporte à criação de uma assinatura transacional unidirecional em uma publicação ponto a ponto   
   
  As propriedades a seguir têm considerações especiais:  
   
--   A propriedade de publicação **@allow_initialize_from_backup** requer um valor de **true**.  
+-   A propriedade de publicação `@allow_initialize_from_backup` exige um valor igual a **true**.  
   
--   A propriedade de artigo **@replicate_ddl** requer um valor de **true**; **@identityrangemanagementoption** requer um valor de **manual**; e **@status** requer que a opção **24** esteja definida.  
+-   A propriedade de artigo `@replicate_ddl` exige um valor igual a **true**; `@identityrangemanagementoption` exige um valor igual a **manual**; e `@status` exige que a opção **24** esteja definida.  
   
--   O valor para as propriedades de artigo **@ins_cmd** , **@del_cmd** e **@upd_cmd** não podem ser definidas como **SQL**.  
+-   O valor das propriedades de artigo `@ins_cmd`, `@del_cmd` e `@upd_cmd` não pode ser definido como **SQL**.  
   
--   A propriedade de assinatura **@sync_type** requer um valor de **none** ou **automatic**.  
+-   A propriedade de assinatura `@sync_type` exige um valor igual a **none** ou **automatic**.  
   
 ### <a name="maintenance-considerations"></a>Considerações sobre manutenção  
  Algumas ações exigem que o sistema esteja inativo. Isso significa parar as atividades em tabelas publicadas em todos os nós e assegurar que todos os nós tenham recebido todas as alterações de todos os outros nós.  

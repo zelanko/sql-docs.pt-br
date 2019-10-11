@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d8135706b5fa220fa4e62bbcaf9ad677681fe029
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.openlocfilehash: 3572c6f9476fb450e0090e88019412c03af145ac
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314496"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708518"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Habilitar conexões criptografadas com o Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ Para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carregar um cer
 
 - O certificado deve ser criado usando a opção **KeySpec** de **AT_KEYEXCHANGE**. Normalmente, a propriedade de uso de chave do certificado (**KEY_USAGE**) também incluirá a codificação de chaves (**CERT_KEY_ENCIPHERMENT_KEY_USAGE**).
 
-- A propriedade **Assunto** do certificado deve indicar que o nome comum (CN) é igual ao nome do host ou ao nome de domínio totalmente qualificado (FQDN) do computador servidor. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver em execução em um cluster de failover, o nome comum deverá corresponder ao nome do host ou ao FQDN do servidor virtual e os certificados deverão ser fornecidos em todos os nós no cluster de failover.
+- A propriedade **Assunto** do certificado deve indicar que o nome comum (CN) é igual ao nome do host ou ao nome de domínio totalmente qualificado (FQDN) do computador servidor. Ao usar o nome do host, o sufixo DNS precisa ser especificado no certificado. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver em execução em um cluster de failover, o nome comum deverá corresponder ao nome do host ou ao FQDN do servidor virtual e os certificados deverão ser fornecidos em todos os nós no cluster de failover.
 
 - O [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e o [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SNAC (Cliente Nativo) dão suporte a certificados curinga. O SNAC foram preteridos desde então e substituídos pelo [Driver do Microsoft OLE DB para SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) e [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). Outros clientes podem não dar suporte a certificados curinga. Para obter mais informações, confira a documentação do cliente e o [KB 258858](http://support.microsoft.com/kb/258858).       
   O certificado curinga não pode ser selecionado usando o SQL Server Configuration Manager. Para usar um certificado curinga, é necessário editar a chave do Registro `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` e inserir a impressão digital do certificado, sem espaços, no valor **Certificado**.  
