@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 195da55ed9d4d76298e3a5cbbd44ed562f69da06
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000803"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278185"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,16 +45,16 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'database_name'`É o nome do banco de dados a ser desanexado. *database_name* é um valor **sysname** , com um valor padrão de NULL.  
+`[ @dbname = ] 'database_name'` é o nome do banco de dados a ser desanexado. *database_name* é um valor **sysname** , com um valor padrão de NULL.  
   
-`[ @skipchecks = ] 'skipchecks'`Especifica se a estatística de atualização deve ser ignorada ou executada. *skipchecks* é um valor **nvarchar (10)** , com um valor padrão de NULL. Para ignorar as estatísticas de atualização, especifique **true**. Para executar explicitamente UPDATE STATISTICs, especifique **false**.  
+`[ @skipchecks = ] 'skipchecks'` especifica se a estatística de atualização deve ser ignorada ou executada. *skipchecks* é um valor **nvarchar (10)** , com um valor padrão de NULL. Para ignorar as estatísticas de atualização, especifique **true**. Para executar explicitamente UPDATE STATISTICs, especifique **false**.  
   
  Por padrão, UPDATE STATISTICS é executado para atualizar as informações sobre os dados nas tabelas e os índices. A execução de UPDATE STATISTICS é útil para bancos de dados que serão movidos para mídias somente leitura.  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`Especifica que o arquivo de índice de texto completo associado ao banco de dados que está sendo desanexado não será removido durante a operação de desanexação do banco de dados. *Keepfulltextindexfile* é um valor **nvarchar (10)** com um padrão de **true**. Se *keepfulltextindexfile* for **false**, todos os arquivos de índice de texto completo associados ao banco de dados e os metadados do índice de texto completo serão descartados, a menos que o banco de dados seja somente leitura. Se for NULL ou **true**, os metadados relacionados a texto completo serão mantidos.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` especifica que o arquivo de índice de texto completo associado ao banco de dados que está sendo desanexado não será removido durante a operação de desanexação do banco de dados. *Keepfulltextindexfile* é um valor **nvarchar (10)** com um padrão de **true**. Se *keepfulltextindexfile* for **false**, todos os arquivos de índice de texto completo associados ao banco de dados e os metadados do índice de texto completo serão descartados, a menos que o banco de dados seja somente leitura. Se for NULL ou **true**, os metadados relacionados a texto completo serão mantidos.  
   
 > [!IMPORTANT]
->  O **@keepfulltextindexfile** parâmetro será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não use esse parâmetro em desenvolvimentos novos e modifique, assim que possível, os aplicativos que atualmente o usam.  
+>  O parâmetro **\@keepfulltextindexfile** será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não use esse parâmetro em desenvolvimentos novos e modifique, assim que possível, os aplicativos que atualmente o usam.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -102,7 +102,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 
  Antes de definir o banco de dados como SINGLE_USER, verifique se a opção AUTO_UPDATE_STATISTICS_ASYNC está definida como OFF. Quando esta opção está definida como ON, o thread em segundo plano usado para a atualização de estatísticas estabelece uma conexão com o banco de dados e não será possível acessar o banco de dados em modo de usuário único. Para obter mais informações, consulte [definir um banco de dados para o modo de usuário único](../databases/set-a-database-to-single-user-mode.md).
 
- Por exemplo, a instrução `ALTER DATABASE` a seguir obtém acesso exclusivo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ao banco de dados depois que todos os usuários atuais se desconectam do banco de dados.  
+ Por exemplo, a instrução `ALTER DATABASE` a seguir obtém acesso exclusivo ao banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] depois que todos os usuários atuais se desconectam do banco de dados.  
   
 ```  
 USE master;  
@@ -121,7 +121,7 @@ GO
  Requer a associação à função de servidor fixa **sysadmin** ou à associação na função **db_owner** do banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir desanexa o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados com *skipchecks* definido como true.  
+ O exemplo a seguir desanexa o banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] com *skipchecks* definido como true.  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  

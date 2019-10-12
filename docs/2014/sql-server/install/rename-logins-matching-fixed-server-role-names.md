@@ -1,5 +1,5 @@
 ---
-title: Renomear logons que coincidem com nomes de função de servidor fixa | Microsoft Docs
+title: Renomear logons que correspondem a nomes de função de servidor fixa | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d983f514f7cc0185021de40f153d78fd6e4dd112
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092875"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278211"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>Renomear logons que coincidem com nomes de funções fixas do servidor
   O Supervisor de Atualização detectou um ou mais nomes de logon definidos pelo usuário que coincidem com nomes de funções fixas do servidor. Os nomes de funções de servidor fixas são exclusivos. Renomeie o logon antes de atualizar.  
@@ -60,10 +60,10 @@ ms.locfileid: "66092875"
   
 2.  Descarte os logons.  
   
-3.  Use o **sp_addlogin** procedimento do sistema para criar novos logons. Especifique o SID retornado na etapa 1 na **@sid** parâmetro para cada logon correspondente.  
+3.  Use o procedimento do sistema **sp_addlogin** para criar novos logons. Especifique o SID retornado na etapa 1 no parâmetro **\@sid** para cada logon correspondente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problemas de atualização do Mecanismo de Banco de Dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Novo supervisor &#91;de atualização do SQL Server 2014&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

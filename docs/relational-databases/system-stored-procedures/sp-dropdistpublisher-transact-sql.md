@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8558c8d9caffd27d7a87743c88e1d62c430640fd
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: a15162774d3814e574735d8e1d5fd5e6b769327f
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768909"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278119"
 ---
 # <a name="sp_dropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,19 +39,19 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o Publicador a ser solto. o Publicador é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` é o Publicador a ser solto. o *Publicador* é **sysname**, sem padrão.  
   
-`[ @no_checks = ] no_checks`Especifica se o **sp_dropdistpublisher** verifica se o Publicador desinstalou o servidor como o distribuidor. *no_checks* é **bit**, com um padrão de **0**.  
+`[ @no_checks = ] no_checks` especifica se o **sp_dropdistpublisher** verifica se o Publicador desinstalou o servidor como o distribuidor. *no_checks* é **bit**, com um padrão de **0**.  
   
  Se **0**, a replicação verifica se o Publicador remoto desinstalou o servidor local como o distribuidor. Se o Publicador for local, a replicação verificará se não há objetos de publicação ou distribuição restantes no servidor local.  
   
- Se **1**, todos os objetos de replicação associados ao Publicador de distribuição serão removidos mesmo que um Publicador remoto não possa ser acessado. Depois de fazer isso, o Publicador remoto deve desinstalar a replicação usando o [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) com **@ignore_distributor**  =  **1**.  
+ Se **1**, todos os objetos de replicação associados ao Publicador de distribuição serão removidos mesmo que um Publicador remoto não possa ser acessado. Depois de fazer isso, o Publicador remoto deve desinstalar a replicação usando o [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) com o **\@ignore_distributor** = **1**.  
   
-`[ @ignore_distributor = ] ignore_distributor`Especifica se os objetos de distribuição são deixados no distribuidor quando o Publicador é removido. *ignore_distributor* é **bit** e pode ser um destes valores:  
+`[ @ignore_distributor = ] ignore_distributor` especifica se os objetos de distribuição são deixados no distribuidor quando o Publicador é removido. *ignore_distributor* é **bit** e pode ser um destes valores:  
   
- **1** = os objetos de distribuição que pertencem ao Publicador permanecem no distribuidor.  
+ **1** = os objetos de distribuição que pertencem ao *Publicador* permanecem no distribuidor.  
   
- **0** = os objetos de distribuição para o Publicador são limpos no distribuidor.  
+ **0** = os objetos de distribuição para o *Publicador* são limpos no distribuidor.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

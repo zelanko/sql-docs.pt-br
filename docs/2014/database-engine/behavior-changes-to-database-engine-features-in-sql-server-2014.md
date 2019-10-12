@@ -1,5 +1,5 @@
 ---
-title: Recursos no SQL Server 2014 do mecanismo de banco de dados de alterações de comportamento | Microsoft Docs
+title: Alterações de comportamento para Mecanismo de Banco de Dados recursos no SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,28 +14,28 @@ ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be2957778e30af73abfafa210dee4746ffd869c9
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: bfaaea1b07c17fbf5c47bbcccf20a3ca55862123
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463461"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278203"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>Alterações no comportamento de recursos do Mecanismo de Banco de Dados no SQL Server 2014
   Este tópico descreve as alterações no comportamento no [!INCLUDE[ssDE](../includes/ssde-md.md)]. Essas alterações afetam a maneira como os recursos funcionam ou interagem no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] em comparação com as versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="SQL14"></a> Alterações de comportamento no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="SQL14"></a>Alterações de comportamento no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], as consultas em um documento XML que contém cadeias de caracteres em um determinado comprimento (mais de 4020 caracteres) podem retornar resultados incorretos. No [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], tais consultas retornam os resultados corretos.  
   
-## <a name="Denali"></a> Alterações de comportamento no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="Denali"></a>Alterações de comportamento no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>Descoberta de metadados  
- Melhorias na [!INCLUDE[ssDE](../includes/ssde-md.md)] começando com [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] permitir SQLDescribeCol Obtenha descrições mais precisas dos resultados esperados que os retornados por SQLDescribeCol nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Descoberta de metadados](../relational-databases/native-client/features/metadata-discovery.md).  
+ Os aprimoramentos no [!INCLUDE[ssDE](../includes/ssde-md.md)] começando com [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] permitem que o SQLDescribeCol obtenha descrições mais precisas dos resultados esperados do que os retornados pelo SQLDescribeCol nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Descoberta de metadados](../relational-databases/native-client/features/metadata-discovery.md).  
   
- O [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) opção para determinar o formato de uma resposta sem realmente executar a consulta é substituído pelo [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [DM exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), e [sys exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql).  
+ A opção [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) para determinar o formato de uma resposta sem realmente executar a consulta é substituída [por &#40;sp_describe_first_result_set Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), [sp_describe_undeclared_parameters &#40; Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [Sys. dm _exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)e [Sys. dm _exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql).  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>Alterações de comportamento ao gerar scripts de uma tarefa do SQL Server Agent  
- No [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], se você criar um novo trabalho copiando o script de um trabalho existente, o novo trabalho poderá afetar inadvertidamente o trabalho existente. Para criar um novo trabalho usando o script de um trabalho existente, exclua manualmente o parâmetro *@schedule_uid* que geralmente é o último parâmetro da seção que cria a agenda de trabalho no trabalho existente. Isso criará uma nova agenda independente para o novo trabalho sem afetar os trabalhos existentes.  
+ No [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], se você criar um novo trabalho copiando o script de um trabalho existente, o novo trabalho poderá afetar inadvertidamente o trabalho existente. Para criar um novo trabalho usando o script de um trabalho existente, exclua manualmente o parâmetro *\@schedule_uid* , que geralmente é o último parâmetro da seção que cria a agenda de trabalho no trabalho existente. Isso criará uma nova agenda independente para o novo trabalho sem afetar os trabalhos existentes.  
   
 ### <a name="constant-folding-for-clr-user-defined-functions-and-methods"></a>Dobra constante para funções e métodos de CLR definidos pelo usuário  
  No [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], os objetos CLR definidos pelo usuário a seguir agora são dobráveis:  
@@ -71,10 +71,10 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
 -- returns GEOMETRYCOLLECTION EMPTY  
 ```  
   
- Para determinar se um objeto espacial é vazio, chame o [STIsEmpty &#40;tipo de dados geometry&#41; ](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type) método.  
+ Para determinar se um objeto espacial está vazio, chame o método de [tipo &#40;&#41; de dados geometry STIsEmpty](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type) .  
   
 ### <a name="log-function-has-new-optional-parameter"></a>A função LOG tem novo parâmetro opcional  
- O `LOG` função agora tem um recurso opcional *base* parâmetro. Para obter mais informações, consulte [LOG &#40;Transact-SQL&#41;](/sql/t-sql/functions/log-transact-sql).  
+ A função `LOG` agora tem um parâmetro *base* opcional. Para obter mais informações, [consulte &#40;log Transact-&#41;SQL](/sql/t-sql/functions/log-transact-sql).  
   
 ### <a name="statistics-computation-during-partitioned-index-operations-has-changed"></a>A computação de estatísticas durante operações de índice particionado mudou  
  No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], as estatísticas não são criadas por meio do exame de todas as linhas da tabela quando um índice particionado é criado ou reconstruído. Em vez disso, o otimizador de consultas usa o algoritmo de amostragem padrão para gerar estatísticas. Depois de atualizar um banco de dados com índices particionados, você pode notar uma diferença nos dados de histograma destes índices. Esta alteração no comportamento pode não afetar o desempenho de consulta. Para obter estatísticas em índices particionados por meio do exame de todas as linhas da tabela, use CREATE STATISTICS ou UPDATE STATISTICS com a cláusula FULLSCAN.  
@@ -84,9 +84,9 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
   
 |Tipo de dados de origem XS|Tipo de dados de destino do SQL Server|  
 |-------------------------|--------------------------------------|  
-|byte<br /><br /> short<br /><br /> INT<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|TINYINT<br /><br /> SMALLINT<br /><br /> INT<br /><br /> BIGINT<br /><br /> Decimal<br /><br /> numeric|  
-|Decimal|Decimal<br /><br /> numeric|  
-|float|REAL|  
+|byte<br /><br /> short<br /><br /> int<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|tinyint<br /><br /> smallint<br /><br /> int<br /><br /> bigint<br /><br /> decimal<br /><br /> numeric|  
+|decimal|decimal<br /><br /> numeric|  
+|float|real|  
 |double|float|  
   
  O novo comportamento melhora o desempenho quando a conversão intermediária pode ser ignorada. Porém, quando as conversões de tipo de dados falharem, você verá mensagens de erro diferentes daquelas geradas na conversão do valor xs:string intermediário. Por exemplo, se o método de valor não convertesse o valor `int` 100000 em `smallint`, a mensagem de erro anterior seria:  
@@ -98,15 +98,15 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  `Arithmetic overflow error converting expression to data type smallint.`  
   
 ### <a name="sqlcmdexe-behavior-change-in-xml-mode"></a>Alteração de comportamento de sqlcmd.exe no modo XML  
- Há alterações de comportamento, se você usar sqlcmd.exe com modo XML (: comando XML ON) ao executar SELECT * de T FOR XML...  
+ Há alterações de comportamento se você usar o sqlcmd. exe com o modo XML (: XML ON Command) ao executar um SELECT * de T FOR XML....  
   
 ### <a name="dbcc-checkident-revised-message"></a>Mensagem DBCC CHECKIDENT revisada  
- Na [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], a mensagem retornada pelo comando DBCC CHECKIDENT mudou somente quando ele é usado com RESEED *new_reseed_value* para alterar o valor de identidade atual. A nova mensagem é "Verificando informações de identidade: valor de identidade atual '\<valor de identidade atual >'. A execução do DBCC foi concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema".  
+ No [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], a mensagem retornada pelo comando DBCC CHECKIDENT só mudou quando é usada com *new_reseed_value* de repropagação para alterar o valor de identidade atual. A nova mensagem é "verificando informações de identidade: valor de identidade atual ' \<current valor de identidade > '. A execução do DBCC foi concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema".  
   
- Em versões anteriores, a mensagem é "Verificando informações de identidade: valor de identidade atual '\<valor de identidade atual >', valor de coluna atual '\<valor atual da coluna >'. A execução do DBCC foi concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema". A mensagem não muda quando DBCC CHECKIDENT é especificado com NORESEED, sem um segundo parâmetro ou sem um valor reseed. Para obter mais informações, veja [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
+ Em versões anteriores, a mensagem é "verificando informações de identidade: valor de identidade atual ' \<current valor de identidade > ', valor da coluna atual ' @no__t-valor da coluna de 1current > '. A execução do DBCC foi concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema". A mensagem não muda quando DBCC CHECKIDENT é especificado com NORESEED, sem um segundo parâmetro ou sem um valor reseed. Para obter mais informações, veja [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
   
 ### <a name="behavior-of-exist-function-on-xml-datatype-has-changed"></a>O comportamento da função exist() no tipo de dados XML mudou  
- O comportamento do **exist ()** função mudou em comparação a um tipo de dados XML com um valor nulo para 0 (zero). Considere o exemplo a seguir:  
+ O comportamento da função **exist ()** foi alterado ao comparar um tipo de dados XML com um valor nulo como 0 (zero). Considere o exemplo a seguir:  
   
 ```xml  
 DECLARE @test XML;  
@@ -126,9 +126,9 @@ SELECT COUNT(1) WHERE @test.exist('/dogs') IS NULL; -- 1 expected, 1 returned
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Alterações recentes em recursos do mecanismo de banco de dados no SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md)   
- [Recursos do mecanismo de banco de dados preteridos no SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)   
- [Funcionalidade do mecanismo de banco de dados descontinuada no SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [Alterações recentes em mecanismo de banco de dados recursos no SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md)   
+ [Recursos Preteridos mecanismo de banco de dados no SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)   
+ [Mecanismo de banco de dados funcionalidade descontinuada no SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   
   
