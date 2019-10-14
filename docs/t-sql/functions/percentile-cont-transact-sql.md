@@ -19,14 +19,14 @@ ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f14ab522a9ead9054868096841a5dc1840c95fb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c5c52b80601f7b1e8e73cffe0a6cad255d91ff82
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914371"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172978"
 ---
-# <a name="percentilecont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
+# <a name="percentile_cont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Calcula um percentil baseado em uma distribuição contínua do valor da coluna em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O resultado é interpolado e talvez não seja igual a qualquer um dos valores específicos da coluna.  
@@ -93,9 +93,7 @@ Engineering            34.375       32.6923
 Executive              54.32695     48.5577
 Human Resources        17.427850    16.5865
 ```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
+
 ### <a name="b-basic-syntax-example"></a>B. Exemplo de sintaxe básica  
  O exemplo a seguir usa PERCENTILE_CONT e PERCENTILE_DISC para localizar o salário médio dos funcionários de cada departamento. Essas funções podem não retornar o mesmo valor. PERCENTILE_CONT interpola o valor apropriado, quer ele exista ou não no conjunto de dados, enquanto PERCENTILE_DISC sempre retorna um valor real do conjunto.  
   

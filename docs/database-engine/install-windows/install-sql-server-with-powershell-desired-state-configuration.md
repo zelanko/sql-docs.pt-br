@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 560e752e5559b0e79a4f123443d200ca70532ef5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3966d681b9001b2bded09c6c92aa665eec7a2d9
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63221972"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041063"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>Instalar o SQL Server com a Desired State Configuration do PowerShell
 
@@ -28,7 +28,7 @@ Você já passou pela interface de instalação do SQL Server apenas selecionado
 
 E o pior é que agora a confiança de toda a instalação fica abalada. "O que mais eu esqueci?" você pode se perguntar.
 
-Leia sobre a [DSC (Desired State Configuration) do PowerShell](https://docs.microsoft.com/powershell/dsc/overview). Usando a DSC, você cria um modelo de configuração que pode ser reutilizado em centenas de milhares de servidores. Dependendo do build, você talvez precise ajustar alguns dos parâmetros de configuração. Porém, isso não é um problema significativo, pois você pode manter todas as configurações padrão em vigor. Isso elimina a possibilidade de você esquecer-se de inserir um parâmetro importante.
+Leia sobre a [DSC (Desired State Configuration) do PowerShell](/powershell/scripting/dsc/overview/overview). Usando a DSC, você cria um modelo de configuração que pode ser reutilizado em centenas de milhares de servidores. Dependendo do build, você talvez precise ajustar alguns dos parâmetros de configuração. Porém, isso não é um problema significativo, pois você pode manter todas as configurações padrão em vigor. Isso elimina a possibilidade de você esquecer-se de inserir um parâmetro importante.
 
 Este artigo explora a configuração inicial de uma instância autônoma do SQL Server 2017 no Windows Server 2016 usando o recurso de DSC **SqlServerDsc**. Algum conhecimento prévio de DSC é útil, pois não exploramos como funciona a DSC.
 
@@ -187,7 +187,7 @@ PS C:\> Test-DscConfiguration
 True
 ```
 
-### <a name="services"></a>Services
+### <a name="services"></a>Serviços
 
 A lista de serviços agora retorna os serviços do SQL Server:
 
@@ -213,7 +213,7 @@ PS C:\> & sqlcmd -S $env:COMPUTERNAME
 
 ## <a name="see-also"></a>Confira também
 
-[Visão geral da Desired State Configuration do Windows PowerShell](https://docs.microsoft.com/powershell/dsc/overview)
+[Visão geral da Desired State Configuration do Windows PowerShell](/powershell/scripting/dsc/overview/overview)
 
 [Instalar o SQL Server do prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
 

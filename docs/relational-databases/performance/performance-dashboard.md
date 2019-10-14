@@ -14,12 +14,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 4b5e2a9dbb6963b63d6dfac8d76d9c01e839a8fe
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 1d3a404aecf987be2fa0c2638fa3abb8c6f3ea0c
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559482"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041173"
 ---
 # <a name="performance-dashboard"></a>Painel de Desempenho
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ O relatório **Esperas** filtra todas as esperas ociosas e suspensas. Para obter
 Os relatórios de **Consultas Dispendiosas** são redefinidos quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é reiniciado, pois os dados nas DMVs subjacentes são desmarcados. Do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] em diante, informações detalhadas sobre consultas dispendiosas podem ser encontradas no Repositório de Consultas. 
 
 > [!NOTE]
-> O Painel de Desempenho foi inicialmente lançado como um download autônomo para [SQL Server 2005](http://www.microsoft.com/download/details.aspx?id=22602) e depois atualizado para [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
+> O Painel de Desempenho foi inicialmente lançado como um download autônomo para [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415) e depois atualizado para [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
 
 ## <a name="permissions"></a>Permissões  
 Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requer permissões `VIEW SERVER STATE` e `ALTER TRACE`. Em [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], requer a permissão `VIEW DATABASE STATE` no banco de dados.

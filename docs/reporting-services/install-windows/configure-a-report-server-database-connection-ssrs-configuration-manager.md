@@ -7,13 +7,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: seodec18
-ms.date: 04/26/2019
-ms.openlocfilehash: 86f3d1834212ff17125abc9a124eb10d3f7e9be5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.date: 10/09/2019
+ms.openlocfilehash: 7c781721ff9dcd2ec82844e8e0604aca83a186e4
+ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264981"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72239375"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>Configurar uma conexão de banco de dados do servidor de relatório (Gerenciador de configurações do SSRS)
 
@@ -105,6 +105,13 @@ Você pode especificar uma conta de usuário do Windows para a conexão do servi
 #### <a name="using-a-sql-server-login"></a>Usando um logon do SQL Server
 
 Você pode especificar um único logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para se conectar ao banco de dados do servidor de relatório. Se você usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o banco de dados do servidor de relatório estiver em um computador remoto, use IPSec para ajudar a proteger a transmissão de dados entre os servidores. Se você usar um logon do banco de dados, deverá atualizar a conexão do banco de dados do servidor de relatório sempre que alterar a senha ou a conta.  
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> Ao usar um Instância Gerenciada do Azure SQL para hospedar bancos de dados do Reporting Services 2019, o suporte é limitado ao uso de credenciais de logon SQL Server para a conexão.
+
+::: moniker-end
 
 ### <a name="database-permissions"></a>Permissões de banco de dados
 
