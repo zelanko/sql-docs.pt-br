@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0722bbc713804af6b2b97b5651df5b564d17a136
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4949307cdaf2cc712e56525e872381c2af8256fd
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117799"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304798"
 ---
-# <a name="spaltermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
+# <a name="sp_altermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Altera o estado de mensagens definidas pelo usuário ou do sistema em uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Mensagens definidas pelo usuário podem ser exibidas usando o **sys. messages** exibição do catálogo.  
+  Altera o estado de mensagens definidas pelo usuário ou do sistema em uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. As mensagens definidas pelo usuário podem ser exibidas usando a exibição do catálogo **Sys. messages** .  
 
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -42,14 +42,14 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
   
 ## <a name="arguments"></a>Argumentos  
  [ **@message_id =** ] *message_number*  
- É o número de erro da mensagem a ser alterada de **sys. messages**. *message_number* está **int** sem nenhum valor padrão.  
+ É o número do erro da mensagem a ser alterado de **Sys. messages**. *message_number* é **int** sem valor padrão.  
   
-`[ @parameter = ] 'write\_to\_log_'` É usado com **@parameter_value** para indicar que a mensagem deve ser escrito para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] log de aplicativo do Windows. *write_to_log* está **sysname** sem nenhum valor padrão. *write_to_log* deve ser definido como WITH_LOG ou NULL. Se *write_to_log* é definido como WITH_LOG ou NULL e o valor de **@parameter_value** é **true**, a mensagem é gravada no log de aplicativo do Windows. Se *write_to_log* é definido como WITH_LOG ou NULL e o valor de **@parameter_value** é **false**, a mensagem não é sempre gravada no log de aplicativo do Windows, mas pode ser gravada dependendo de como o erro foi gerado. Se *write_to_log* for especificado, o valor para **@parameter_value** também deve ser especificado.  
+`[ @parameter = ] 'write\_to\_log_'` é usado com **\@parameter_value** para indicar que a mensagem deve ser gravada no log de aplicativos do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)]. *write_to_log* é **sysname** sem valor padrão. *write_to_log* deve ser definido como WITH_LOG ou NULL. Se *write_to_log* for definido como WITH_LOG ou NULL e o valor de **\@parameter_value** for **true**, a mensagem será gravada no log de aplicativos do Windows. Se *write_to_log* for definido como WITH_LOG ou NULL e o valor de **\@parameter_value** for **false**, a mensagem nem sempre será gravada no log de aplicativos do Windows, mas poderá ser gravada dependendo de como o erro foi gerado. Se *write_to_log* for especificado, o valor de **\@parameter_value** também deverá ser especificado.  
   
 > [!NOTE]  
 >  Se uma mensagem for gravada no log do aplicativo do Windows, ela também será gravada no arquivo de log de erros do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-`[ @parameter_value = ]'value_'` É usado com **@parameter** para indicar que o erro deve ser escrito para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] log de aplicativo do Windows. *valor* está **varchar(5)** , sem nenhum valor padrão. Se **verdadeira**, o erro sempre será gravado no log de aplicativo do Windows. Se **falsos**, o erro não são sempre gravado no log de aplicativo do Windows, mas pode ser gravado dependendo de como o erro foi gerado. Se *valor* for especificado, *write_to_log* para **@parameter** também deve ser especificado.  
+`[ @parameter_value = ]'value_'` é usado com **\@parameter** para indicar que o erro deve ser gravado no log do aplicativo do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)]. o *valor* é **varchar (5)** , sem valor padrão. Se **for true**, o erro será sempre gravado no log de aplicativos do Windows. Se **for false**, o erro nem sempre será gravado no log de aplicativos do Windows, mas poderá ser gravado dependendo de como o erro foi gerado. Se *Value* for especificado, *write_to_log* para **\@parameter** também deverá ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -58,12 +58,12 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
  Nenhum  
   
 ## <a name="remarks"></a>Comentários  
- O efeito **sp_altermessage** com o WITH_LOG opção é semelhante do parâmetro RAISERROR WITH LOG, exceto que **sp_altermessage** altera o comportamento do log de uma mensagem existente. Se uma mensagem foi alterada para ser WITH_LOG, ela sempre será gravada no log de aplicativos do Windows, independentemente de como um usuário invocar o erro. Até mesmo se RAISERROR for executado sem a opção WITH_LOG, o erro será gravado no log de aplicativos do Windows.  
+ O efeito de **sp_altermessage** com a opção with_log é semelhante ao do parâmetro RAISERROR with log, exceto que **sp_altermessage** altera o comportamento de log de uma mensagem existente. Se uma mensagem foi alterada para ser WITH_LOG, ela sempre será gravada no log de aplicativos do Windows, independentemente de como um usuário invocar o erro. Até mesmo se RAISERROR for executado sem a opção WITH_LOG, o erro será gravado no log de aplicativos do Windows.  
   
- As mensagens do sistema podem ser modificadas por meio **sp_altermessage**.  
+ As mensagens do sistema podem ser modificadas usando **sp_altermessage**.  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação na **serveradmin** função de servidor fixa.  
+ Requer a associação na função de servidor fixa **ServerAdmin** .  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir faz com que a mensagem `55001` existente seja registrada no log de aplicativos do Windows.  

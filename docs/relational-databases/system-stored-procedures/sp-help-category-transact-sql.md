@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c297578fabca3c20781c6227307f25dbece1bbfd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055235"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304810"
 ---
-# <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
+# <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fornece informações sobre as classes especificadas de trabalhos, alertas ou operadores.  
@@ -42,7 +42,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @class = ] 'class'` A classe sobre quais informações são solicitadas. *classe* está **varchar(8)** , com um valor padrão de **trabalho**. *classe* pode ser um destes valores.  
+`[ @class = ] 'class'` a classe sobre a qual as informações são solicitadas. a *classe* é **varchar (8)** , com um valor padrão de **trabalho**. a *classe* pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -50,23 +50,23 @@ sp_help_category [ [ @class = ] 'class' ]
 |**ALERTA**|Fornece informações sobre uma categoria de alerta.|  
 |**OPERADOR**|Fornece informações sobre uma categoria de operador.|  
   
-`[ @type = ] 'type'` O tipo de categoria para a qual as informações são solicitadas. *tipo de* está **varchar(12)** , com um padrão de NULL, e pode ser um destes valores.  
+`[ @type = ] 'type'` o tipo de categoria para o qual as informações são solicitadas. o *tipo* é **varchar (12)** , com um padrão de NULL e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**LOCAL**|Categoria de trabalho local.|  
-|**MULTI-SERVER**|Categoria de trabalho multisservidor.|  
-|**NONE**|Categoria de uma classe diferente de **trabalho**.|  
+|**VÁRIOS SERVIDORES**|Categoria de trabalho multisservidor.|  
+|**NONE**|Categoria para uma classe que não seja **trabalho**.|  
   
-`[ @name = ] 'name'` O nome da categoria para a qual as informações são solicitadas. *nome da* está **sysname**, com um padrão NULL.  
+`[ @name = ] 'name'` o nome da categoria para a qual as informações são solicitadas. o *nome* é **sysname**, com um padrão de NULL.  
   
-`[ @suffix = ] suffix` Especifica se o **category_type** coluna no conjunto de resultados é uma ID ou um nome. *sufixo* está **bit**, com um padrão de **0**. **1** mostra a **category_type** como um nome, e **0** mostra como uma ID.  
+`[ @suffix = ] suffix` especifica se a coluna **category_type** no conjunto de resultados é uma ID ou um nome. o *sufixo* é **bit**, com um padrão de **0**. **1** mostra o **category_type** como um nome e **0** o mostra como uma ID.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Quando **@suffix** é **0**, **sp_help_category** retorna o conjunto de resultados a seguir:  
+ Quando **\@suffix** for **0**, **sp_help_category** retornará o seguinte conjunto de resultados:  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -74,16 +74,16 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|Tipo de categoria:<br /><br /> **1** = Local<br /><br /> **2** = multisservidor<br /><br /> **3** = nenhum|  
 |**name**|**sysname**|Nome da categoria|  
   
- Quando **@suffix** é **1**, **sp_help_category** retorna o conjunto de resultados a seguir:  
+ Quando **\@suffix** é **1**, **sp_help_category** retorna o seguinte conjunto de resultados:  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|ID da categoria|  
-|**category_type**|**sysname**|Tipo de categoria. Um dos **LOCAL**, **MULTISSERVIDOR**, ou **NONE**|  
+|**category_type**|**sysname**|Tipo de categoria. Um dos **locais**, **vários servidores**ou **nenhum**|  
 |**name**|**sysname**|Nome da categoria|  
   
 ## <a name="remarks"></a>Comentários  
- **sp_help_category** deve ser executado a partir de **msdb** banco de dados.  
+ **sp_help_category** deve ser executado do banco de dados **msdb** .  
   
  Se nenhum parâmetro for especificado, o conjunto de resultados fornecerá informações sobre todas as categorias de trabalho.  
   

@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 337697ec5a0ce842d3ade808db885a671b6adcc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3807a53921572bbe20b4c459bff34958cbb42001
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010703"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305000"
 ---
-# <a name="spsyscollectorruncollectionset-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
+# <a name="sp_syscollector_run_collection_set-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Inicia um conjunto de coleta se o coletor já estiver habilitado e o conjunto de coleta estiver configurado para o modo de coleta sem armazenamento em cache.  
@@ -46,22 +46,22 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @collection_set_id = ] collection_set_id` É o identificador local exclusivo para o conjunto de coleta. *collection_set_id* está **int** e deve ter um valor se *nome* é NULL.  
+`[ @collection_set_id = ] collection_set_id` é o identificador local exclusivo para o conjunto de coleta. *collection_set_id* é **int** e deve ter um valor se *Name* for NULL.  
   
-`[ @name = ] 'name'` É o nome do conjunto de coleta. *nome da* está **sysname** e deve ter um valor se *collection_set_id* é NULL.  
+`[ @name = ] 'name'` é o nome do conjunto de coleta. o *nome* é **sysname** e deve ter um valor se *collection_set_id* for nulo.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- Qualquer um dos *collection_set_id* ou *nome* deve ter um valor, ambos não podem ser NULL.  
+ O *collection_set_id* ou o *nome* deve ter um valor, ambos não podem ser nulos.  
   
- Esse procedimento iniciará a coleta e carregará os trabalhos para a coleção especificada definida e iniciará imediatamente o trabalho de agente de coleta se o conjunto de coleta tem seu **@collection_mode** definido como não armazenado em cache (1). Para obter mais informações, consulte [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ Este procedimento iniciará a coleta e carregará trabalhos para o conjunto de coleta especificado e iniciará imediatamente o trabalho do agente de coleta se o conjunto de coleta tiver seu **\@collection_mode** definido como não armazenado em cache (1). Para obter mais informações, [consulte &#40;SP_SYSCOLLECTOR_CREATE_COLLECTION_SET Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
  sp_sycollector_run_collection_set também pode ser usado para executar um conjunto de coleta que não tenha uma agenda.  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação na **dc_operator** (com permissão EXECUTE) a função de banco de dados fixa para executar esse procedimento.  
+ Requer associação na função de banco de dados fixa **dc_operator** (com permissão de execução) para executar este procedimento.  
   
 ## <a name="example"></a>Exemplo  
  Inicia um conjunto de coleta usando seu identificador.  

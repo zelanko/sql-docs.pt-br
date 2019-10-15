@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 823cd652537cbba486ffd4e432f9413b43f05b12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e7eb2e007191088a0259360924b2f5f931dec0a
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085100"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304893"
 ---
-# <a name="sphelpspatialgeometryindexxml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
+# <a name="sp_help_spatial_geometry_index_xml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retorna os nomes e valores para um conjunto especificado de propriedades sobre um **geometria** índice espacial. Você pode escolher retornar um conjunto principal de propriedades ou todas as propriedades do índice.  
+  Retorna os nomes e valores de um conjunto especificado de propriedades sobre um índice espacial de **Geometry** . Você pode escolher retornar um conjunto principal de propriedades ou todas as propriedades do índice.  
   
  Os resultados são retornados em um fragmento de XML que exibe o nome e valor das propriedades selecionadas.  
   
@@ -45,21 +45,21 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Ver [procedimentos armazenados de argumentos e propriedades de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ Consulte [argumentos e propriedades de procedimentos armazenados de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
-## <a name="properties"></a>Propriedades  
- Ver [procedimentos armazenados de argumentos e propriedades de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+## <a name="properties"></a>Properties  
+ Consulte [argumentos e propriedades de procedimentos armazenados de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="permissions"></a>Permissões  
- Usuário deve ser um membro do **pública** função. Requer permissão READ ACCESS no servidor e no objeto.  
+ O usuário deve ser um membro da função **pública** . Requer permissão READ ACCESS no servidor e no objeto.  
   
 ## <a name="remarks"></a>Comentários  
  As propriedades que contêm valores NULL não são incluídas no conjunto de retorno de XML.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa `sp_help_spatial_geometry_index_xml` para investigar o índice espacial **SIndx_SpatialTable_geometry_col2** definida na tabela **geometry_col** para determinado exemplo de consulta em **@qs** . Este exemplo retorna as propriedades principais do índice especificado em um fragmento XML que exibe o nome e valor das propriedades selecionadas.  
+ O exemplo a seguir usa `sp_help_spatial_geometry_index_xml` para investigar o índice espacial **SIndx_SpatialTable_geometry_col2** definido na tabela **geometry_col** para o exemplo de consulta fornecido em **\@qs**. Este exemplo retorna as propriedades principais do índice especificado em um fragmento XML que exibe o nome e valor das propriedades selecionadas.  
   
- Uma [XQuery](../../xquery/xquery-basics.md) é executado no conjunto de resultados, retornando uma propriedade específica.  
+ Em seguida, um [XQuery](../../xquery/xquery-basics.md) é executado no conjunto de resultados, retornando uma propriedade específica.  
   
 ```  
 DECLARE @qs geometry  
@@ -74,12 +74,12 @@ SELECT @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
 ## <a name="requirements"></a>Requisitos  
   
 ## <a name="see-also"></a>Consulte também  
- [Procedimentos armazenados de índice de argumentos e propriedades de espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)   
+ [Argumentos e propriedades de procedimentos armazenados de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)   
  [Procedimentos armazenados de índice espacial](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Dados espaciais &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
- [Fundamentos de XQuery](../../xquery/xquery-basics.md)   
+ [Noções básicas do XQuery](../../xquery/xquery-basics.md)   
  [Referência de linguagem do XQuery](../../xquery/xquery-language-reference-sql-server.md)  
   
   

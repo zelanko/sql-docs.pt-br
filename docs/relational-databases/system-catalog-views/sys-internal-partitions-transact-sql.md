@@ -13,45 +13,45 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca65e1a4e7af69bc1259b856a76c729b5210cc4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f0d1e6e4fa9c88fc67b15a076a6c96a742fd7fdc
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122638"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304814"
 ---
-# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (Transact-SQL)
+# <a name="sysinternal_partitions-transact-sql"></a>sys.internal_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Retorna uma linha para cada conjunto de linhas que rastreia dados internos para índices columnstore em tabelas baseadas em disco. Esses conjuntos de linhas são internos para índices columnstore e delta, mapeamentos de grupo de linhas e linhas de faixa excluída armazenam rowgroups. Controle os dados para cada um para cada partição de tabela; cada tabela tem pelo menos uma partição. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recria os conjuntos de linhas de cada vez que ela recria o índice columnstore.   
+  Retorna uma linha para cada conjunto de linhas que rastreia dados internos para índices columnstore em tabelas baseadas em disco. Esses conjuntos de linhas são internos a índices columnstore e rastreiam linhas excluídas, mapeamentos de rowgroup e grupos de itens de loja Delta. Eles controlam os dados para cada partição de tabela; cada tabela tem pelo menos uma partição. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recria os conjuntos de linhas a cada vez que recria o índice columnstore.   
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|partition_id|**bigint**|ID de partição para essa partição. É exclusiva em um banco de dados.|  
-|object_id|**int**|ID de objeto para a tabela que contém a partição.|  
+|partition_id|**bigint**|ID da partição para esta partição. É exclusiva em um banco de dados.|  
+|object_id|**int**|ID de objeto da tabela que contém a partição.|  
 |index_id|**int**|ID de índice para o índice columnstore definido na tabela.<br /><br /> 1 = índice columnstore clusterizado<br /><br /> 2 = índice columnstore não clusterizado|  
-|partition_number|**int**|O número da partição.<br /><br /> 1 = a primeira partição de uma tabela particionada, ou a única partição de uma tabela não particionada.<br /><br /> 2 = segunda partição e assim por diante.|  
-|internal_object_type|**tinyint**|Objetos de conjunto de linhas que acompanham os dados internos para o índice columnstore.<br /><br /> 2 = COLUMN_STORE_DELETE_BITMAP<br /><br /> 3 = COLUMN_STORE_DELTA_STORE<br /><br /> 4 = COLUMN_STORE_DELETE_BUFFER<br /><br /> 5 = COLUMN_STORE_MAPPING_INDEX|  
-|internal_object_type_desc|**nvarchar(60)**|COLUMN_STORE_DELETE_BITMAP - este índice de bitmap controla linhas que são marcadas como excluídas do columnstore. O bitmap é para cada grupo de linhas, pois as partições podem ter linhas em múltiplos rowgroups. As linhas são que ainda estão fisicamente presentes e ocupando espaço no columnstore.<br /><br /> COLUMN_STORE_DELTA_STORE - grupos de armazenamentos de linhas, chamados de rowgroups, que não foi compactado para o armazenamento Colunar. Cada partição de tabela pode ter zero ou mais rowgroups do deltastore.<br /><br /> COLUMN_STORE_DELETE_BUFFER - para manter as exclusões para os índices columnstore não clusterizados atualizáveis. Quando uma consulta exclui uma linha da tabela rowstore base, o buffer de exclusão rastreia a exclusão do columnstore. Quando o número de linhas excluídas exceder 1048576, eles são mesclados novamente no bitmap delete por Tuple Mover thread em segundo plano ou por um comando Reorganize explícito.  Em qualquer ponto no tempo, a união entre o bitmap de exclusão e o buffer de exclusão representa linhas excluídas tudo.<br /><br /> COLUMN_STORE_MAPPING_INDEX - usado somente quando o índice columnstore clusterizado tem um índice não clusterizado secundário. Isso mapeia chaves de índice não clusterizado para o rowgroup correto e a ID de linha no columnstore. Ele apenas armazena as chaves de linhas que se movem para um grupo de linhas diferente; Isso ocorre quando um rowgroup delta é compactado no columnstore, e quando uma operação de mesclagem mescla linhas de dois rowgroups diferentes.|  
-|Row_group_id|**int**|ID do rowgroup deltastore. Cada partição de tabela pode ter zero ou mais rowgroups do deltastore.|  
-|hobt_id|**bigint**|ID do objeto interno do conjunto de linhas. Isso é uma boa chave para unir com outros DMVs para obter mais informações sobre as características físicas do conjunto de linhas interno.|  
+|partition_number|**int**|O número da partição.<br /><br /> 1 = primeira partição de uma tabela particionada ou a partição única de uma tabela não particionada.<br /><br /> 2 = segunda partição e assim por diante.|  
+|internal_object_type|**tinyint**|Objetos de conjunto de linhas que rastreiam dados internos para o índice columnstore.<br /><br /> 2 = COLUMN_STORE_DELETE_BITMAP<br /><br /> 3 = COLUMN_STORE_DELTA_STORE<br /><br /> 4 = COLUMN_STORE_DELETE_BUFFER<br /><br /> 5 = COLUMN_STORE_MAPPING_INDEX|  
+|internal_object_type_desc|**nvarchar(60)**|COLUMN_STORE_DELETE_BITMAP-esse índice de bitmap rastreia as linhas marcadas como excluídas do columnstore. O bitmap é para cada rowgroup, já que as partições podem ter linhas em várias RowGroups. As linhas ainda estão fisicamente presentes e ocupando espaço no columnstore.<br /><br /> COLUMN_STORE_DELTA_STORE – armazena grupos de linhas, chamados de RowGroups, que não foram compactados no armazenamento de coluna. Cada partição de tabela pode ter zero ou mais grupos de deltastore.<br /><br /> COLUMN_STORE_DELETE_BUFFER-para manter as exclusões para índices columnstore não clusterizados atualizáveis. Quando uma consulta exclui uma linha da tabela de armazenamento de linhas subjacente, o buffer de exclusão rastreia a exclusão do columnstore. Quando o número de linhas excluídas excede 1048576, elas são mescladas de volta ao thread de exclusão de bitmap por segundo plano do motor de tupla ou por um comando de reorganização explícito.  Em qualquer momento determinado, a União do bitmap de exclusão e do buffer de exclusão representa todas as linhas excluídas.<br /><br /> COLUMN_STORE_MAPPING_INDEX-usado somente quando o índice columnstore clusterizado tem um índice não clusterizado secundário. Isso mapeia chaves de índice não clusterizado para o rowgroup e a ID de linha corretos no columnstore. Ele armazena apenas as chaves para linhas que se movem para um rowgroup diferente; Isso ocorre quando um rowgroup Delta é compactado no columnstore e quando uma operação de mesclagem mescla linhas de dois RowGroups diferentes.|  
+|Row_group_id|**int**|ID para o rowgroup deltastore. Cada partição de tabela pode ter zero ou mais grupos de deltastore.|  
+|hobt_id|**bigint**|ID do objeto de conjunto de linhas interno (HoBT). Essa é uma boa chave para ingressar com outras DMVs para obter mais informações sobre as características físicas do conjunto de linhas interno.|  
 |rows|**bigint**|Número aproximado de linhas nesta partição.|  
 |data_compression|**tinyint**|O estado de compactação para o conjunto de linhas:<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE|  
 |data_compression_desc|**nvarchar(60)**|O estado de compactação para cada partição. Os valores possível para as tabelas rowstore são NONE, ROW e PAGE. Os valores possível para as tabelas columnstor são COLUMNSTORE e COLUMNSTORE_ARCHIVE.|  
-|optimize_for_sequential_key|**bit**|1 = partição tiver a otimização de inserção de última página habilitada.<br><br>0 = valor padrão. Partição tiver a otimização da última página insert desabilitada.|
+|optimize_for_sequential_key|**bit**|1 = a partição tem a otimização de inserção da última página habilitada.<br><br>0 = valor padrão. A otimização de inserção da última página foi desabilitada na partição.|
   
 ## <a name="permissions"></a>Permissões  
- Requer associação à função **pública** . Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Requer associação na função `public`. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="general-remarks"></a>Comentários gerais  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria novos índices de columnstore interno novamente cada vez que ele cria ou recria um índice columnstore.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recria os novos índices internos columnstore cada vez que cria ou recria um índice columnstore.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-view-all-of-the-internal-rowsets-for-a-table"></a>A. Exibir todos os conjuntos de linhas internos para uma tabela  
- Este exemplo retorna todos os conjuntos de linhas columnstore interno para uma tabela. Você também pode usar o hobt_id para obter mais informações sobre o conjunto de linhas específica.  
+### <a name="a-view-all-of-the-internal-rowsets-for-a-table"></a>A. Exibir todos os conjuntos de linhas internos de uma tabela  
+ Este exemplo retorna todos os conjuntos de linhas columnstore internos para uma tabela. Você também pode usar o hobt_id para encontrar mais informações sobre o conjunto de linhas específico.  
   
-```  
+```sql  
 SELECT i.object_id, i.index_id, i.name, p.hobt_id, p.internal_object_type_id, p.internal_object_type_desc  
 FROM sys.internal_partitions AS p  
 JOIN sys.indexes AS i  

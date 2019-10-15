@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e0c38af1089a1d59c9964e39aecca6b1773a8e22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bfe3cd91150d1990acc410cb4a61af9485c61f4b
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124889"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304941"
 ---
-# <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
+# <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Altera algumas propriedades do filtro de mesclagem. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
@@ -43,15 +43,15 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` é o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @article = ] 'article'` É o nome do artigo. *artigo* está **sysname**, sem padrão.  
+`[ @article = ] 'article'` é o nome do artigo. o *artigo* é **sysname**, sem padrão.  
   
-`[ @filtername = ] 'filtername'` É o nome atual do filtro. *FilterName* está **sysname**, sem padrão.  
+`[ @filtername = ] 'filtername'` é o nome atual do filtro. *FilterName* é **sysname**, sem padrão.  
   
-`[ @property = ] 'property'` É o nome da propriedade a ser alterada. *propriedade* está **sysname**, sem padrão.  
+`[ @property = ] 'property'` é o nome da propriedade a ser alterada. a *Propriedade* é **sysname**, sem padrão.  
   
-`[ @value = ] 'value'` É o novo valor para a propriedade especificada. *valor*está **nvarchar (1000)** , sem padrão.  
+`[ @value = ] 'value'` é o novo valor para a propriedade especificada. o *valor*é **nvarchar (1000)** , sem padrão.  
   
  Essa tabela descreve as propriedades de artigos e os valores dessas propriedades.  
   
@@ -60,36 +60,36 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**filter_type**|**1**|Filtro de junção.<br /><br /> Essa opção é requerida para suporte a Assinantes [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 ||**2**|Relação de registro lógico.|  
 ||**3**|Filtro de junção é também uma relação de registro lógico.|  
-|**FilterName**||Nome do filtro.|  
+|**Filter**||Nome do filtro.|  
 |**join_articlename**||Nome do artigo de junção.|  
 |**join_filterclause**||Cláusula de filtro.|  
 |**join_unique_key**|**true**|A junção está em uma chave exclusiva|  
 ||**false**|A junção não está em uma chave exclusiva.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
+o `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` reconhece que a ação executada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
   
- **0** Especifica que as alterações no artigo de mesclagem fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
+ **0** especifica que as alterações no artigo de mesclagem não fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
   
- **1** significa que as alterações no artigo de mesclagem podem invalidar o instantâneo ser inválida e se houver assinaturas existentes que exigem um novo instantâneo, dará permissão para o instantâneo existente seja marcado como obsoleto e um novo instantâneo seja gerado.  
+ **1** significa que as alterações no artigo de mesclagem podem fazer com que o instantâneo seja inválido e, se houver assinaturas existentes que exijam um novo instantâneo, dará permissão para que o instantâneo existente seja marcado como obsoleto e um novo instantâneo gerado.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` Reconhece que a ação tomada por esse procedimento armazenado pode requerer que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit** com um padrão de **0**.  
+o `[ @force_reinit_subscription = ] force_reinit_subscription` reconhece que a ação executada por esse procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit** com um padrão de **0**.  
   
- **0** Especifica que as alterações no artigo de mesclagem fazem com que a assinatura seja reiniciada. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas existentes para ser reiniciada, ocorrerá um erro e nenhuma alteração será feita.  
+ **0** especifica que as alterações no artigo de mesclagem não fazem com que a assinatura seja reinicializada. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas existentes para ser reiniciada, ocorrerá um erro e nenhuma alteração será feita.  
   
- **1** significa que as alterações no artigo de mesclagem fará com que as assinaturas existentes sejam reinicializadas e dá permissão para que ocorra a reinicialização da assinatura.  
+ **1** significa que as alterações no artigo de mesclagem farão com que as assinaturas existentes sejam reinicializadas e concede a permissão para que a reinicialização da assinatura ocorra.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_changemergefilter** é usado em replicação de mesclagem.  
+ **sp_changemergefilter** é usado na replicação de mesclagem.  
   
- A alteração do filtro em um artigo de mesclagem requer que o instantâneo, se existir, seja recriado. Isso é feito definindo a **@force_invalidate_snapshot** à **1**. Além disso, se houver assinaturas para este artigo, elas deverão ser reiniciadas. Isso é feito definindo a **@force_reinit_subscription** à **1**.  
+ A alteração do filtro em um artigo de mesclagem requer que o instantâneo, se existir, seja recriado. Isso é executado definindo o **\@force_invalidate_snapshot** como **1**. Além disso, se houver assinaturas para este artigo, elas deverão ser reiniciadas. Isso é feito definindo o **\@force_reinit_subscription** como **1**.  
   
  Para usar registros lógicos, a publicação e os artigos devem atender a vários requisitos. Para obter mais informações, consulte [Agrupar alterações a linhas relacionadas com registros lógicos](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_changemergefilter**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_changemergefilter**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Alterar propriedades da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   

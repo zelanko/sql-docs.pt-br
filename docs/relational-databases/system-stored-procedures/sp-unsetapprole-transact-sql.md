@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 65fe8e1496fba4e622d63f1ce560aba4c1acfb83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9cf190198859bb3202dc2bcc62b066e5995d8fed
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022245"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305161"
 ---
-# <a name="spunsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
+# <a name="sp_unsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Desativa uma função de aplicativo e reverte para o contexto de segurança anterior.  
@@ -39,22 +39,22 @@ sp_unsetapprole @cookie
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **@cookie**  
- Especifica o cookie criado quando a função de aplicativo foi ativada. O cookie é criado pelo [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary(8000)** .  
+ **\@cookie**  
+ Especifica o cookie criado quando a função de aplicativo foi ativada. O cookie é criado pelo [Transact &#40;-SQL&#41;sp_setapprole](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary (8000)** .  
   
 > [!NOTE]  
->  O parâmetro **OUTPUT** de cookie para **sp_setapprole** está documentado atualmente como **varbinary(8000)** , que tem o tamanho máximo correto. No entanto, a implementação atual retorna **varbinary(50)** . Aplicativos devem continuar a reservar **varbinary(8000)** para que o aplicativo continue a operar corretamente se o cookie retornar aumentos de tamanho em uma versão futura.  
+>  O parâmetro **OUTPUT** de cookie para **sp_setapprole** está documentado atualmente como **varbinary(8000)** , que tem o tamanho máximo correto. No entanto, a implementação atual retorna **varbinary(50)** . Os aplicativos devem continuar a reservar **varbinary (8000)** para que o aplicativo continue a funcionar corretamente se o tamanho de retorno do cookie aumentar em uma versão futura.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) e 1 (falha)  
   
 ## <a name="remarks"></a>Comentários  
- Depois de um aplicativo de função for ativada por meio **sp_setapprole**, a função permanece ativa até que o usuário se desconecta do servidor ou executa **sp_unsetapprole**.  
+ Depois que uma função de aplicativo é ativada usando **sp_setapprole**, a função permanece ativa até que o usuário seja desconectado do servidor ou execute **sp_unsetapprole**.  
   
  Para obter uma visão geral das funções de aplicativo, consulte [funções de aplicativo](../../relational-databases/security/authentication-access/application-roles.md).  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação na **pública** e conhecimento do cookie salvo quando a função de aplicativo foi ativada.  
+ Requer associação em **público** e conhecimento do cookie salvo quando a função de aplicativo foi ativada.  
   
 ## <a name="examples"></a>Exemplos  
   

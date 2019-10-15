@@ -19,14 +19,14 @@ ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e92b9ec98ee08579164c403fe1be6ff6ef47816
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2fd136eddc1aba4dc5a927d6ca027c17dfb38485
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104502"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304768"
 ---
-# <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
+# <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   Retorna um intervalo de valores de sequência de um objeto de sequência. O objeto de sequência gera e emite o número de valores solicitado e fornece o aplicativo com metadados relacionados ao intervalo.  
@@ -51,27 +51,27 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @sequence_name = ] N'sequence'` O nome do objeto de sequência. O esquema é opcional. *sequence_name* está **nvarchar(776)** .  
+`[ @sequence_name = ] N'sequence'` o nome do objeto de sequência. O esquema é opcional. *sequence_name* é **nvarchar (776)** .  
   
-`[ @range_size = ] range_size` O número de valores a ser buscado da sequência. **@range_size** está **bigint**.  
+`[ @range_size = ] range_size` o número de valores a serem buscados da sequência. **\@range_size** é **bigint**.  
   
-`[ @range_first_value = ] range_first_value` Parâmetro de saída retorna o primeiro valor (mínimo ou máximo) o objeto de sequência usado para calcular o intervalo solicitado. **@range_first_value** está **sql_variant** com o mesmo tipo base que o objeto de sequência usado na solicitação.  
+o parâmetro de saída `[ @range_first_value = ] range_first_value` retorna o primeiro valor (mínimo ou máximo) do objeto de sequência usado para calcular o intervalo solicitado. **\@range_first_value** é **sql_variant** com o mesmo tipo base do objeto de sequência usado na solicitação.  
   
-`[ @range_last_value = ] range_last_value` Parâmetro de saída opcional retorna o último valor do intervalo solicitado. **@range_last_value** está **sql_variant** com o mesmo tipo base que o objeto de sequência usado na solicitação.  
+`[ @range_last_value = ] range_last_value` o parâmetro de saída opcional retorna o último valor do intervalo solicitado. **\@range_last_value** é **sql_variant** com o mesmo tipo base do objeto de sequência usado na solicitação.  
   
-`[ @range_cycle_count = ] range_cycle_count` Parâmetro de saída opcional retorna o número de vezes que o objeto de sequência alternado para retornar o intervalo solicitado. **@range_cycle_count** está **int**.  
+`[ @range_cycle_count = ] range_cycle_count` o parâmetro de saída opcional retorna o número de vezes que o objeto de sequência foi reciclado para retornar o intervalo solicitado. **\@range_cycle_count** é **int**.  
   
-`[ @sequence_increment = ] sequence_increment` Parâmetro de saída opcional retorna o incremento do objeto de sequência usado para calcular o intervalo solicitado. **@sequence_increment** está **sql_variant** com o mesmo tipo base que o objeto de sequência usado na solicitação.  
+`[ @sequence_increment = ] sequence_increment` o parâmetro output opcional retorna o incremento do objeto Sequence usado para calcular o intervalo solicitado. **\@sequence_increment** é **sql_variant** com o mesmo tipo base do objeto de sequência usado na solicitação.  
   
-`[ @sequence_min_value = ] sequence_min_value` Parâmetro de saída opcional retorna o valor mínimo do objeto de sequência. **@sequence_min_value** está **sql_variant** com o mesmo tipo base que o objeto de sequência usado na solicitação.  
+`[ @sequence_min_value = ] sequence_min_value` o parâmetro de saída opcional retorna o valor mínimo do objeto de sequência. **\@sequence_min_value** é **sql_variant** com o mesmo tipo base do objeto de sequência usado na solicitação.  
   
-`[ @sequence_max_value = ] sequence_max_value` Parâmetro de saída opcional retorna o valor máximo do objeto de sequência. **@sequence_max_value** está **sql_variant** com o mesmo tipo base que o objeto de sequência usado na solicitação.  
+`[ @sequence_max_value = ] sequence_max_value` o parâmetro de saída opcional retorna o valor máximo do objeto de sequência. **\@sequence_max_value** é **sql_variant** com o mesmo tipo base do objeto de sequência usado na solicitação.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="remarks"></a>Comentários  
- sp_sequence_get_rangeis no sys. esquema e pode ser referenciado como sys.sp_sequence_get_range.  
+ sp_sequence_get_rangeis no sys. Schema e pode ser referenciado como sys. sp_sequence_get_range.  
   
 ### <a name="cycling-sequences"></a>Sequências de ciclo  
  Se preciso for, o objeto de sequência vai realizar um ciclo do número apropriado de vezes para atender ao intervalo solicitado. O número de vezes em que o ciclo é retornado para o chamador pelo parâmetro `@range_cycle_count`.  
@@ -88,7 +88,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
  Requer permissão UPDATE no objeto de sequência ou o esquema do objeto de sequência.  
   
 ## <a name="examples"></a>Exemplos  
- Os exemplos seguintes usam um objeto de sequência chamado Test.RangeSeq. Use a seguinte instrução para criar a sequência de Test.RangeSeq.  
+ Os exemplos a seguir usam um objeto Sequence chamado Test. RangeSeq. Use a instrução a seguir para criar a sequência test. RangeSeq.  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -106,7 +106,7 @@ CREATE SEQUENCE Test.RangeSeq
 ```  
   
 ### <a name="a-retrieving-a-range-of-sequence-values"></a>A. Recuperando um intervalo de valores de sequência  
- A instrução a seguir obtém quatro números de sequência do objeto de sequência Test.RangeSeq e retorna o primeiro número ao usuário.  
+ A instrução a seguir obtém quatro números de sequência do objeto de sequência test. RangeSeq e retorna o primeiro dos números para o usuário.  
   
 ```  
 DECLARE @range_first_value sql_variant ,   
@@ -157,7 +157,7 @@ SELECT
  Alterar o argumento `@range_size` para um número grande como 75 fará o objeto de sequência realizar um ciclo. Verifique o argumento `@range_cycle_count` para determinar se e quantas vezes o objeto de sequência realizou o ciclo.  
   
 ### <a name="c-example-using-adonet"></a>C. Exemplo: usando ADO.NET  
- O exemplo a seguir obtém um intervalo da Test.RangeSeq usando o ADO.NET.  
+ O exemplo a seguir obtém um intervalo do Test. RangeSeq usando ADO.NET.  
   
 ```  
 SqlCommand cmd = new SqlCommand();  

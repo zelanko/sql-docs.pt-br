@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fecd704d5f6b6f0384ecb17787bd8423852356ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc4d3bca563079c7e1dd7f3ee93e5947f65700b5
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078199"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305239"
 ---
-# <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
+# <a name="sp_add_jobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Tem como destino o trabalho especificado no servidor especificado.  
@@ -40,14 +40,14 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` O número de identificação do trabalho. *job_id* está **uniqueidentifier**, com um padrão NULL.  
+`[ @job_id = ] job_id` o número de identificação do trabalho. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
   
-`[ @job_name = ] 'job_name'` O nome do trabalho. *job_name* está **sysname**, com um padrão NULL.  
+`[ @job_name = ] 'job_name'` o nome do trabalho. *job_name* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
+>  *Job_id* ou *job_name* devem ser especificados, mas ambos não podem ser especificados.  
   
-`[ @server_name = ] 'server'` O nome do servidor no qual o trabalho de destino. *servidor* está **nvarchar (30)** , com um padrão n' (local) '. *servidor* pode ser **(LOCAL)** para um servidor local ou o nome de um servidor de destino existente.  
+`[ @server_name = ] 'server'` o nome do servidor no qual o trabalho será direcionado. o *servidor* é **nvarchar (30)** , com um padrão de N ' (local) '. o *servidor* pode ser **(local)** para um servidor local ou o nome de um servidor de destino existente.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -56,7 +56,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  Nenhum  
   
 ## <a name="remarks"></a>Comentários  
- **@automatic_post** existe no **sp_add_jobserver**, mas não está listado em argumentos. **@automatic_post** é reservado para uso interno.  
+ **\@automatic_post** existe em **sp_add_jobserver**, mas não está listado em argumentos. **\@automatic_post** é reservado para uso interno.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] gerencia trabalhos de forma fácil e com representação gráfica. Além disso, ele é recomendado para criar e gerenciar a infraestrutura de trabalhos.  
   
@@ -71,7 +71,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_add_jobserver** para trabalhos que envolvam vários servidores.  
+ Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_add_jobserver** para trabalhos que envolvem vários servidores.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -79,7 +79,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  O exemplo a seguir atribui o trabalho `NightlyBackups` para ser executado no servidor local.  
   
 > [!NOTE]  
->  Este exemplo supõe que o `NightlyBackups` trabalho já existe.  
+>  Este exemplo supõe que o trabalho `NightlyBackups` já existe.  
   
 ```  
 USE msdb ;  

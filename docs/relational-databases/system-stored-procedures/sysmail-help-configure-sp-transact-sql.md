@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f55025f8eec24925aec8661c46b81a1a40ed2aa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4b0d4fb1f3c233ad8e7eedf91802da35fbbb1d2
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909069"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304742"
 ---
-# <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
+# <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Exibe definições de configuração do Database Mail.  
@@ -40,13 +40,13 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
   
 ## <a name="arguments"></a>Argumentos  
  [ **@parameter_name** =] **'***parameter_name***'**  
- O nome da definição de configuração a ser recuperado. Quando especificado, o valor da configuração é retornado na **@parameter_value** parâmetro de saída. Quando nenhum **@parameter_name** for especificado, esse procedimento armazenado retorna um conjunto de resultados contendo todas as definições de configuração do Database Mail na instância.  
+ O nome da definição de configuração a ser recuperado. Quando especificado, o valor da definição de configuração é retornado no parâmetro de saída **\@parameter_value** . Quando nenhum **\@parameter_name** for especificado, esse procedimento armazenado retornará um conjunto de resultados que contém todas as definições de configuração de Database Mail na instância.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Quando nenhum **@parameter_name** for especificado, retorna um conjunto de resultados com as colunas a seguir.  
+ Quando nenhum **\@parameter_name** for especificado, o retornará um conjunto de resultados com as colunas a seguir.  
   
 ||||  
 |-|-|-|  
@@ -56,14 +56,14 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 |**description**|**nvarchar(256)**|A descrição do parâmetro de configuração.|  
   
 ## <a name="remarks"></a>Comentários  
- O procedimento armazenado **sysmail_help_configure_sp** lista as definições de configuração do Database Mail atuais para a instância.  
+ O procedimento armazenado **sysmail_help_configure_sp** lista as definições de configuração de Database Mail atuais para a instância do.  
   
- Quando um **@parameter_name** for especificado, mas nenhum parâmetro de saída é fornecido para **@parameter_value** , esse procedimento armazenado não produz nenhuma saída.  
+ Quando um **\@parameter_name** é especificado, mas nenhum parâmetro de saída é fornecido para **\@parameter_value**, esse procedimento armazenado não produz nenhuma saída.  
   
- O procedimento armazenado **sysmail_help_configure_sp** está no **msdb** banco de dados e é de propriedade de **dbo** esquema. O procedimento deve ser invocado com um nome de três partes se o banco de dados atual não for **msdb**.  
+ O procedimento armazenado **sysmail_help_configure_sp** está no banco de dados **msdb** e pertence ao esquema **dbo** . O procedimento deve ser chamado com um nome de três partes se o banco de dados atual não for **msdb**.  
   
 ## <a name="permissions"></a>Permissões  
- Permissões de execução para esse procedimento usam como padrão os membros de **sysadmin** função de servidor fixa.  
+ As permissões de execução para este procedimento assumem como padrão os membros da função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra a listagem das definições de configuração do Database Mail para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -89,6 +89,6 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ## <a name="see-also"></a>Consulte também  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Procedimentos armazenados do Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail procedimentos &#40;armazenados TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

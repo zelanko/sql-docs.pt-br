@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 44e7b670ef5f16b6df861e939f9b8b2d9ace8dd5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de85505295ceff98f404b2ba4c1effe3946fdbe5
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104420"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304968"
 ---
-# <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
+# <a name="sp_setapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
@@ -45,27 +45,27 @@ sp_setapprole [ @rolename = ] 'role',
 
 ## <a name="arguments"></a>Argumentos
 
-`[ @rolename = ] 'role'` É o nome da função de aplicativo definido no banco de dados atual. *função* está **sysname**, sem padrão. *função* deve existir no banco de dados atual.  
+`[ @rolename = ] 'role'` é o nome da função de aplicativo definida no banco de dados atual. *role* é **sysname**, sem padrão. a *função* deve existir no banco de dados atual.  
   
-`[ @password = ] { encrypt N'password' }` É a senha necessária para ativar a função de aplicativo. *senha* está **sysname**, sem padrão. *senha* pode ser ofuscado usando o ODBC **criptografar** função. Quando você usa o **criptografar** função, a senha deve ser convertida em uma cadeia de caracteres Unicode colocando **N** antes da primeira marca de aspas simples.  
+`[ @password = ] { encrypt N'password' }` é a senha necessária para ativar a função de aplicativo. a *senha* é **sysname**, sem padrão. a *senha* pode ser ofuscada usando a função ODBC **Encrypt** . Quando você usa a função **Encrypt** , a senha deve ser convertida em uma cadeia de caracteres Unicode, colocando **N** antes da primeira aspa.  
   
- Não há suporte para a opção de criptografia em conexões que usam **SqlClient**.  
+ Não há suporte para a opção Encrypt em conexões que estão usando o **SqlClient**.  
   
 > [!IMPORTANT]  
-> O ODBC **criptografar** função não fornece criptografia. Você não deve confiar nessa função para proteger senhas que são transmitidas pela rede. Se essas informações forem transmitidas por uma rede, use SSL ou IPSec.
+> A função ODBC **Encrypt** não fornece criptografia. Você não deve confiar nessa função para proteger senhas que são transmitidas pela rede. Se essas informações forem transmitidas por uma rede, use SSL ou IPSec.
   
  **@encrypt = 'none'**  
  Especifica que nenhuma ofuscação deve ser usada. A senha é transmitida para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como texto sem-formatação. Esse é o padrão.  
   
- **@encrypt= 'odbc'**  
- Especifica que o ODBC será ofuscado pela senha usando o ODBC **criptografar** função antes de enviar a senha para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Isso pode ser especificado somente quando um cliente ODBC ou o provedor OLE DB para SQL Server for utilizado.  
+ **@encrypt = ' ODBC '**  
+ Especifica que o ODBC ofusca a senha usando a função ODBC **Encrypt** antes de enviar a senha para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Isso pode ser especificado somente quando um cliente ODBC ou o provedor OLE DB para SQL Server for utilizado.  
   
-`[ @fCreateCookie = ] true | false` Especifica se um cookie deve ser criado. **True** é implicitamente convertido em 1. **False** é implicitamente convertido em 0.  
+`[ @fCreateCookie = ] true | false` especifica se um cookie deve ser criado. **true** é convertido implicitamente em 1. **false** é convertido implicitamente em 0.  
   
-`[ @cookie = ] @cookie OUTPUT` Especifica um parâmetro de saída para conter o cookie. O cookie é gerado apenas se o valor de **@fCreateCookie** é **true**. **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` especifica um parâmetro de saída para conter o cookie. O cookie será gerado somente se o valor de **\@fCreateCookie** for **true**. **varbinary(8000)**  
   
 > [!NOTE]  
-> O parâmetro **OUTPUT** de cookie para **sp_setapprole** está documentado atualmente como **varbinary(8000)** , que tem o tamanho máximo correto. No entanto, a implementação atual retorna **varbinary(50)** . Aplicativos devem continuar a reservar **varbinary(8000)** para que o aplicativo continue a operar corretamente se o cookie retornar aumentos de tamanho em uma versão futura.
+> O parâmetro **OUTPUT** de cookie para **sp_setapprole** está documentado atualmente como **varbinary(8000)** , que tem o tamanho máximo correto. No entanto, a implementação atual retorna **varbinary(50)** . Os aplicativos devem continuar a reservar **varbinary (8000)** para que o aplicativo continue a funcionar corretamente se o tamanho de retorno do cookie aumentar em uma versão futura.
   
 ## <a name="return-code-values"></a>Valores do código de retorno
 
@@ -73,17 +73,17 @@ sp_setapprole [ @rolename = ] 'role',
   
 ## <a name="remarks"></a>Comentários
 
- Depois de um aplicativo de função for ativada por meio **sp_setapprole**, a função permanece ativa até que o usuário se desconecta do servidor ou executa **sp_unsetapprole**. **sp_setapprole** pode ser executado somente por direct [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções. **sp_setapprole** não pode ser executado em outro procedimento armazenado ou uma transação definida pelo usuário.  
+ Depois que uma função de aplicativo é ativada usando **sp_setapprole**, a função permanece ativa até que o usuário seja desconectado do servidor ou execute **sp_unsetapprole**. **sp_setapprole** pode ser executado somente por instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] diretas. **sp_setapprole** não pode ser executado em outro procedimento armazenado ou em uma transação definida pelo usuário.  
   
  Para obter uma visão geral das funções de aplicativo, consulte [funções de aplicativo](../../relational-databases/security/authentication-access/application-roles.md).  
   
 > [!IMPORTANT]  
-> Para proteger a senha da função de aplicativo quando ele é transmitido em uma rede, você sempre deve usar uma conexão criptografada ao habilitar uma função de aplicativo.
-> O [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC **criptografar** opção não é suportada pelo **SqlClient**. Se for necessário armazenar credenciais, criptografe-as com as funções da API de criptografia. O parâmetro *senha* é armazenado como um hash unidirecional. Para preservar a compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], política de complexidade de senha não é imposta pelo **sp_addapprole**. Para impor a política de complexidade de senha, use [CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md).  
+> Para proteger a senha da função de aplicativo quando ela é transmitida por uma rede, você sempre deve usar uma conexão criptografada ao habilitar uma função de aplicativo.
+> A opção de **criptografia** ODBC [!INCLUDE[msCoName](../../includes/msconame-md.md)] não é suportada por **SqlClient**. Se for necessário armazenar credenciais, criptografe-as com as funções da API de criptografia. A *senha* do parâmetro é armazenada como um hash unidirecional. Para preservar a compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a política de complexidade de senha não é imposta pelo **sp_addapprole**. Para impor a política de complexidade de senha, use [criar função de aplicativo](../../t-sql/statements/create-application-role-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões
 
-Requer associação na **pública** e conhecimento da senha para a função.  
+Requer associação em **público** e conhecimento da senha para a função.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -118,4 +118,4 @@ GO
 
 ## <a name="see-also"></a>Consulte também
 
- [Procedimentos armazenados do sistema &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) [procedimentos armazenados de segurança &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md) [CREATE APPLICATION ROLE &#40;Transact-SQL&#41; ](../../t-sql/statements/create-application-role-transact-sql.md) [DROP APPLICATION ROLE &#40;Transact-SQL&#41; ](../../t-sql/statements/drop-application-role-transact-sql.md) [sp_unsetapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)
+ [Procedimentos &#40;&#41; ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) armazenados do sistema procedimentos [armazenados &#40;de&#41; segurança](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md) do Transact-SQL [criar função &#40;de aplicativo&#41; ](../../t-sql/statements/create-application-role-transact-sql.md) Transact-SQL [remover função &#40; de aplicativo Sp_unsetapprole Transact-&#41; SQL](../../t-sql/statements/drop-application-role-transact-sql.md) Transact [-SQL&#41; &#40;](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)

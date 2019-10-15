@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 94b77b30d96b5361967398a35335f6aa96587f1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fc733ca2b56ef9fa96be5ab2adf6486419e0e250
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085336"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306275"
 ---
-# <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
+# <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Exclui um trabalho.  
@@ -42,20 +42,20 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` É o número de identificação do trabalho a ser excluído. *job_id* está **uniqueidentifier**, com um padrão NULL.  
+`[ @job_id = ] job_id` é o número de identificação do trabalho a ser excluído. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
   
-`[ @job_name = ] 'job_name'` É o nome do trabalho a ser excluído. *job_name* está **sysname**, com um padrão NULL.  
+`[ @job_name = ] 'job_name'` é o nome do trabalho a ser excluído. *job_name* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  Qualquer um dos *job_id* ou *job_name*deve ser especificado; não podem ser especificados.  
+>  *Job_id* ou *job_name*devem ser especificados; Não é possível especificar ambos.  
   
-`[ @originating_server = ] 'server'` Para uso interno.  
+`[ @originating_server = ] 'server'` para uso interno.  
   
-`[ @delete_history = ] delete_history` Especifica se deve excluir o histórico do trabalho. *delete_history* está **bit**, com um padrão de **1**. Quando *delete_history* é **1**, o histórico de trabalho para o trabalho é excluído. Quando *delete_history* é **0**, o histórico do trabalho não será excluído.  
+`[ @delete_history = ] delete_history` especifica se o histórico do trabalho deve ser excluído. *delete_history* é **bit**, com um padrão de **1**. Quando *delete_history* é **1**, o histórico de trabalho do trabalho é excluído. Quando *delete_history* é **0**, o histórico do trabalho não é excluído.  
   
- Observe que, quando um trabalho é excluído e o histórico não é excluído, as informações de histórico para o trabalho não serão exibido na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] histórico de trabalhos de interface de usuário gráfica Agent, mas as informações ainda residirão no **sysjobhistory**na tabela de **msdb** banco de dados.  
+ Observe que, quando um trabalho é excluído e o histórico não é excluído, as informações históricas do trabalho não são exibidas no histórico do trabalho da interface gráfica do usuário do agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas as informações ainda residirão na tabela **no sysjobhistory** no **msdb** banco de dados.  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` Especifica se a excluir as agendas anexadas a esse trabalho se eles não estão conectados a qualquer outro trabalho. *delete_unused_schedule* está **bit**, com um padrão de **1**. Quando *delete_unused_schedule* é **1**, agendas anexadas a esse trabalho são excluídas se nenhum outro trabalho referenciar a agenda. Quando *delete_unused_schedule* é **0**, as agendas não são excluídas.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` especifica se as agendas anexadas a esse trabalho serão excluídas se não estiverem anexadas a nenhum outro trabalho. *delete_unused_schedule* é **bit**, com um padrão de **1**. Quando *delete_unused_schedule* for **1**, os agendamentos anexados a esse trabalho serão excluídos se nenhum outro trabalho fizer referência à agenda. Quando *delete_unused_schedule* é **0**, os agendamentos não são excluídos.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -64,9 +64,9 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  Nenhum  
   
 ## <a name="remarks"></a>Comentários  
- O **@originating_server** argumento é reservado para uso interno.  
+ O argumento **\@originating_server** é reservado para uso interno.  
   
- O **@delete_unused_schedule** argumento oferece compatibilidade com versões anteriores do SQL Server removendo automaticamente agendas que não estão conectadas a qualquer trabalho. Observe que esse parâmetro padroniza o comportamento de compatibilidade com versões anteriores. Para manter as agendas que não estão associadas a um trabalho, você deve fornecer o valor **0** como o **@delete_unused_schedule** argumento.  
+ O argumento **\@delete_unused_schedule** fornece compatibilidade com versões anteriores do SQL Server removendo automaticamente os agendamentos que não estão anexados a nenhum trabalho. Observe que esse parâmetro padroniza o comportamento de compatibilidade com versões anteriores. Para manter os agendamentos que não estão anexados a um trabalho, você deve fornecer o valor **0** como o argumento **\@delete_unused_schedule** .  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] gerencia trabalhos de forma fácil e com representação gráfica. Além disso, ele é recomendado para criar e gerenciar a infraestrutura de trabalhos.  
   

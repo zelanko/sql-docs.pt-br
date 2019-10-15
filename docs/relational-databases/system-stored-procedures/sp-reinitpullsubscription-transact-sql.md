@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 078cb7f1607e6af94756d43efc2e6d21fbada52c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 6f9021ec9b71694fc6567db5edf79965e09fd3c0
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68762344"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304916"
 ---
 # <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,11 +39,11 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o Publicador é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` é o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` é o nome do banco de dados do Publicador. *publisher_db* é **sysname**, sem padrão.  
   
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão de todos, que marca todas as assinaturas para reinicialização.  
+`[ @publication = ] 'publication'` é o nome da publicação. a *publicação* é **sysname**, com um padrão de todos, que marca todas as assinaturas para reinicialização.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -55,7 +55,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
  **sp_reinitpullsubscription** pode ser chamado do assinante para reinicializar a assinatura, durante a próxima execução do agente de distribuição.  
   
- As assinaturas para publicações criadas com um valor de **false** para **@immediate_sync** não podem ser reinicializadas do Assinante.  
+ As assinaturas para publicações criadas com um valor de **false** para **\@immediate_sync** não podem ser reinicializadas a partir do Assinante.  
   
  Você pode reinicializar uma assinatura pull executando **sp_reinitpullsubscription** no Assinante ou **sp_reinitsubscription** no Publicador.  
   

@@ -18,14 +18,14 @@ ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 949d22b0acdd4cc6d1e9d865f4f65e847d87aa46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98e360887d63db59e1e61bf5c52928e9626b0f39
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055051"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304887"
 ---
-# <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
+# <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
   Retorna informações para os separadores de palavras, filtro e manipuladores de protocolos. **sp_help_fulltext_system_components** também retorna uma lista de identificadores de bancos de dados e catálogos de texto completo que usaram o componente especificado.  
@@ -45,7 +45,7 @@ sp_help_fulltext_system_components
  'all'  
  Retorna informações de todos os componentes de texto completo.  
   
-`[ @component_type = ] component_type` Especifica o tipo de componente. *component_type* pode ser uma das seguintes opções:  
+`[ @component_type = ] component_type` especifica o tipo de componente. *component_type* pode ser um dos seguintes:  
   
 -   **wordbreaker**  
   
@@ -57,7 +57,7 @@ sp_help_fulltext_system_components
   
  Se um caminho completo for especificado, *param* também deverá ser especificado com o caminho completo para a DLL do componente, ou uma mensagem de erro será retornada.  
   
-`[ @param = ] param` Dependendo do tipo de componente, essa é uma das seguintes opções: um identificador de localidade (LCID), a extensão de arquivo com "." de prefixo, o nome completo do componente do manipulador de protocolo ou o caminho completo para a DLL do componente.  
+`[ @param = ] param` dependendo do tipo de componente, este é um dos seguintes: um LCID (identificador de localidade), a extensão de arquivo com o prefixo ".", o nome completo do componente do manipulador de protocolo ou o caminho completo para a DLL do componente.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou (1) falha  
@@ -70,11 +70,11 @@ sp_help_fulltext_system_components
 |**componenttype**|**sysname**|Tipo de componente. Um dos seguintes:<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
 |**componentname**|**sysname**|O nome do componente.|  
 |**clsid**|**uniqueidentifier**|Identificador de classe do componente.|  
-|**fullpath**|**nvarchar(256)**|Caminho até a localização do componente.<br /><br /> NULL = o chamador não é membro de **serveradmin** função de servidor fixa.|  
+|**fullpath**|**nvarchar(256)**|Caminho até a localização do componente.<br /><br /> NULL = o chamador não é um membro da função de servidor fixa **ServerAdmin** .|  
 |**version**|**nvarchar(30)**|A versão do componente.|  
 |**manufacturer**|**sysname**|Nome do fabricante do componente.|  
   
- O seguinte conjunto de resultados é retornado somente se um ou mais de um catálogo de texto completo existirem e usarem *component_type*.  
+ O conjunto de resultados a seguir será retornado somente se existir um ou mais de um catálogo de texto completo que use *component_type*.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -82,7 +82,7 @@ sp_help_fulltext_system_components
 |**ftcatid**|**int**|Identificação do catálogo de texto completo.|  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação na **pública** função; no entanto, os usuários podem ver apenas informações sobre os catálogos de texto completo para os quais têm permissão VIEW DEFINITION. Somente os membros da função fixa **serveradmin** podem ver os valores na coluna **fullpath** .  
+ Requer associação na função **pública** ; no entanto, os usuários só podem ver informações sobre os catálogos de texto completo para os quais têm permissão VIEW DEFINITION. Somente os membros da função fixa **serveradmin** podem ver os valores na coluna **fullpath** .  
   
 ## <a name="remarks"></a>Comentários  
  Este método é importante na preparação para uma atualização. Execute o procedimento armazenado em um determinado banco de dados e use a saída para determinar se um catálogo específico será afetado pela atualização.  
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. Determinando se um separador de palavras específico está registrado  
- O exemplo a seguir listará o separador de palavras do idioma turco (LCID = 1055) se este tiver sido instalado no sistema e registrado na instância do serviço. Este exemplo especifica os nomes de parâmetro **@component_type** e **@param** .  
+ O exemplo a seguir listará o separador de palavras do idioma turco (LCID = 1055) se este tiver sido instalado no sistema e registrado na instância do serviço. Este exemplo especifica os nomes de parâmetro, **\@component_type** e **\@param**.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -136,9 +136,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibir ou alterar filtros registrados e separadores de palavras](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
+ [Exibir ou alterar filtros registrados e](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)separadores de palavras    
  [Configurar e gerenciar separadores de palavras e lematizadores de pesquisa](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurar e gerenciar filtros para pesquisa](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
- [Procedimentos armazenados de pesquisa de texto completo e pesquisa semântica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [Pesquisa de texto completo e procedimentos &#40;armazenados de pesquisa semântica TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   
