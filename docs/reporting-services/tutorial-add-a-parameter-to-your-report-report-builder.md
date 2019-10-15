@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63041679"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252133"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Adicionar um parâmetro ao relatório (Construtor de Relatórios)
 Neste tutorial, você adiciona um parâmetro a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] para que os leitores do relatório possam filtrar um ou mais valores nos dados do relatório. 
@@ -142,9 +142,9 @@ Quando você adicionar um parâmetro de consulta a uma consulta, o Construtor de
     WHERE StoreID = (@StoreID)  
     ```  
   
-    A caixa de diálogo **WHERE** limita os dados recuperados ao identificador de loja especificado pelo parâmetro de consulta *@StoreID* .  
+    A cláusula **WHERE** limita os dados recuperados ao identificador de loja especificado pelo parâmetro de consulta *\@StoreID*.  
   
-4.  Na barra de ferramentas do designer de consultas, clique em **Executar** ( **!** ). A caixa de diálogo **Definir Parâmetros de Consulta** é aberta e solicita um valor para o parâmetro de consulta *@StoreID* .  
+4.  Na barra de ferramentas do designer de consultas, clique em **Executar** ( **!** ). A caixa de diálogo **Definir Parâmetros de Consulta** é aberta e solicita um valor para o parâmetro de consulta *\@StoreID*.  
   
 5.  Em **Valor do Parâmetro**, digite **200**.  
   
@@ -156,7 +156,7 @@ Quando você adicionar um parâmetro de consulta a uma consulta, o Construtor de
   
 8.  No painel Dados do Relatório, expanda a pasta **Parâmetros** .  
   
-Observe que agora há um parâmetro de relatório chamado *@StoreID* e um painel Parâmetros, em que você pode dispor os parâmetros do relatório.   
+Observe que agora há um parâmetro de relatório chamado *\@StoreID* e um painel Parâmetros, em que você pode dispor os parâmetros do relatório.   
   
 ![ssRB_ParamPane](../reporting-services/media/ssrb-parampane.png)  
   
@@ -169,7 +169,7 @@ Depois de criar um parâmetro, você poderá ajustar os valores padrão das prop
   
 Por padrão, o parâmetro criado tem o tipo de dados **Texto**. Como o identificador de loja é um inteiro, você pode alterar o tipo de dados para Inteiro.  
   
-1.  No painel Dados do Relatório, no nó **Parâmetros** , clique com o botão direito do mouse em *@StoreID* e em **Propriedades do Parâmetro**.  
+1.  No painel Dados do Relatório, no nó **Parâmetros**, clique com o botão direito do mouse em *\@StoreID* e em **Propriedades do Parâmetro**.  
   
 2.  Em **Prompt**, digite **Identificador de loja?** Este texto aparece na barra de ferramentas do visualizador de relatórios quando você executa o relatório.  
   
@@ -179,7 +179,7 @@ Por padrão, o parâmetro criado tem o tipo de dados **Texto**. Como o identific
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Clique em **Executar** para visualizar o relatório. O visualizador de relatórios exibe o prompt **Store Identifier?** para *@StoreID* .  
+6.  Clique em **Executar** para visualizar o relatório. O visualizador de relatórios exibe o prompt **Identificador de Loja?** para *\@StoreID*.  
   
 7.  Na barra de ferramentas do visualizador de relatórios, ao lado de ID da Loja, digite **200**e clique em **Exibir Relatório**.  
   
@@ -220,7 +220,7 @@ Depois de criar um conjunto de dados para fornecer os valores disponíveis, alte
   
 ### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Para fornecer valores disponíveis para um parâmetro a partir de um conjunto de dados  
   
-1.  No painel Dados do Relatório, clique com o botão direito do mouse no parâmetro *@StoreID* e em **Propriedades do Parâmetro**.  
+1.  No painel Dados do Relatório, clique com o botão direito do mouse no parâmetro *\@StoreID* e clique em **Propriedades do Parâmetro**.  
   
 2.  Clique em **Valores Disponíveis**e em **Obter valores de uma consulta**.  
   
@@ -253,7 +253,7 @@ Você pode especificar um valor padrão para cada parâmetro, de forma que o rel
   
 1.  Alterne para o modo Design.  
   
-2.  No painel Dados do Relatório, clique com o botão direito do mouse em *@StoreID* e em **Propriedades do Parâmetro**.  
+2.  No painel Dados do Relatório, clique com o botão direito do mouse em *\@StoreID* e clique em **Propriedades do Parâmetro**.  
   
 3.  Clique em **Valores Padrão**e em **Obter valores de uma consulta**.  
   
@@ -265,13 +265,13 @@ Você pode especificar um valor padrão para cada parâmetro, de forma que o rel
   
 7.  Visualize o relatório.  
   
-For *@StoreID* , o visualizador de relatórios exibe o valor “Loja Online da Contoso na América do Norte” porque ele é o primeiro valor do conjunto de resultados do conjunto de dados **Lojas**. O relatório exibe a quantidade vendida de Câmeras Digitais do identificador de loja **199**.  
+Em *\@StoreID*, o visualizador de relatórios exibe o valor “Loja Online da Contoso na América do Norte” porque ele é o primeiro valor do conjunto de resultados do conjunto de dados **Lojas**. O relatório exibe a quantidade vendida de Câmeras Digitais do identificador de loja **199**.  
   
 ### <a name="to-specify-a-custom-default-value"></a>Para especificar um valor padrão personalizado  
   
 1.  Alterne para o modo Design.  
   
-2.  No painel Dados do Relatório, clique com o botão direito do mouse em *@StoreID* e clique em **Propriedades do Parâmetro**.  
+2.  No painel Dados do Relatório, clique com o botão direito do mouse em *\@StoreID* e clique em **Propriedades do Parâmetro**.  
   
 3.  Clique em **Valores Padrão** > **Especificar valores** > **Adicionar**. Uma nova linha de valor é adicionada.  
   
@@ -281,7 +281,7 @@ For *@StoreID* , o visualizador de relatórios exibe o valor “Loja Online da C
   
 6.  Visualize o relatório.  
   
-For *@StoreID* , o visualizador de relatórios exibe “Loja de Catálogos Contoso” porque ele é o nome de exibição do identificador de loja **200**. O relatório exibe a quantidade vendida de Acessórios, Filmadoras e Câmeras Digitais SLR para o identificador de repositório **200**.  
+Em *\@StoreID*, o visualizador de relatórios exibe “Loja de Catálogos Contoso” porque ele é o nome de exibição do identificador de loja **200**. O relatório exibe a quantidade vendida de Acessórios, Filmadoras e Câmeras Digitais SLR para o identificador de repositório **200**.  
   
 ## <a name="NameValue"></a>4d. Pesquisar um par nome/valor  
 Um conjunto de dados pode conter o identificador e o campo de nome correspondente. Quando você só tiver um identificador, poderá pesquisar o nome correspondente em um conjunto de dados criado por você, incluindo pares de nome/valor.  
@@ -323,7 +323,7 @@ Quando os leitores do relatório tem dúvidas sobre um relatório, é útil sabe
   
 2.  Clique com o botão direito do mouse no rodapé da página > **Inserir** > **Caixa de Texto**. Arraste a caixa de texto para junto da caixa de texto com o carimbo de data/hora. Arraste a alça lateral da caixa de texto para expandir sua largura.  
   
-3.  No painel Dados do Relatório, arraste o parâmetro *@StoreID* até a caixa de texto. A caixa de texto exibe `[@StoreID]`.  
+3.  No painel Dados do Relatório, arraste o parâmetro *\@StoreID* até a caixa de texto. A caixa de texto exibe `[@StoreID]`.  
   
 4.  Para exibir o rótulo de parâmetro, clique na caixa de texto até aparecer o cursor de inserção depois da expressão existente, digite um espaço e arraste outra cópia do parâmetro do painel de dados do relatório para a caixa de texto. A caixa de texto exibe `[@StoreID] [@StoreID]`.  
   
@@ -371,7 +371,7 @@ Para alterar um parâmetro de valor único para vários valores, você deve alte
   
 1.  Alterne para o modo Design.  
   
-2.  No painel Dados do Relatório, clique com o botão direito do mouse em *@StoreID* e clique em **Propriedades do Parâmetro**.  
+2.  No painel Dados do Relatório, clique com o botão direito do mouse em *\@StoreID* e clique em **Propriedades do Parâmetro**.  
   
 3.  Selecione **Permitir vários valores**.  
   

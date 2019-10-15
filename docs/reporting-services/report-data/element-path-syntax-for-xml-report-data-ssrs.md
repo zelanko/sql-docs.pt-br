@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc3d4122d276053a12cfcb98f58a3374634f4e5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bdff469a4a96fb7fe5111c619ad1895bcc200c25
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573165"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173832"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintaxe do caminho do elemento para dados de relatório XML (SSRS)
   No Designer de Relatórios, você especifica os dados para uso em um relatório de uma fonte de dados XML definindo um caminho do elemento que faz distinção entre maiúsculas e minúsculas. Um caminho de elemento indica como transpor os nós hierárquicos XML e seus atributos na fonte de dados XML. Para usar o caminho do elemento padrão, deixe a consulta do conjunto de dados ou o **ElementPath** XML da **Consulta** XML vazio. Quando os dados são recuperados da fonte de dados XML, os nós do elemento que possuem valores de texto e os atributos do nó do elemento se tornam colunas no conjunto de resultados. Os valores dos nós e atributos tornam-se os dados da linha quando a consulta é executada. As colunas são exibidas como a coleção de campos do conjunto de dados no painel de dados do relatório. Este tópico descreve a sintaxe do caminho do elemento.  
@@ -78,7 +78,7 @@ XMLLocalName :: =
 |**Codificação**|Indica que o **Value** deste elemento é XML codificado e precisa ser decodificado e incluído como um subelemento desse elemento.|  
 |**FieldList**|Define o conjunto de elementos e atributos a serem usados para recuperar dados.<br /><br /> Se não estiverem especificados, todos os atributos e subelementos serão usados como campos. Se a lista de campos vazia for especificada ( **{}** ), nenhum campo deste nó será usado.<br /><br /> Um **FieldList** pode não conter um **Value** nem um **Element** ou **ElementNode**.|  
 |**Campo**|Especifica os dados recuperados como um campo do conjunto de dados.|  
-|**Atributo**|Um par de nome-valor dentro do **ElementNode**. Por exemplo, no nó do elemento \<ID do Cliente="1">, **ID** é um atributo e **@ID(Integer)** retorna "1" com um tipo inteiro na **ID** do campo de dados correspondente.|  
+|**Atributo**|Um par de nome-valor dentro do **ElementNode**. Por exemplo, no nó do elemento \<ID do Cliente="1">, **ID** é um atributo e **\@ID(Integer)** retorna "1" com um tipo inteiro na **ID** do campo de dados correspondente.|  
 |**Value**|O valor do elemento. **Value** pode ser usado apenas no último **ElementNode** no caminho do elemento. Por exemplo, como \<Return> é um nó folha, se ele for incluído no final de um caminho do elemento, o valor de **Return {@}** será **Chair**.|  
 |**Element**|O valor do subelemento nomeado. Por exemplo, Clientes {}/Cliente {}/Sobrenome recupera valores apenas para o elemento Sobrenome.|  
 |**Tipo**|O tipo de dados opcional a ser usado para o campo criado desse elemento.|  

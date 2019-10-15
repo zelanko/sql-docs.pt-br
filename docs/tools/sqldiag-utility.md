@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5df0001449d5ec1d2fded885fb932436a313bbfe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7eadacbf0e3137cf22c9a870783da41a046c86fb
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986300"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251362"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag Utility
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,10 +112,10 @@ sqldiag
 > [!NOTE]  
 >  O**SQLdiag** não anexa a saída à pasta de saída atual quando é iniciado. Ele pode apenas substituir a pasta de saída padrão (opção 1) ou renomear a pasta (opção 2) e, em seguida, gravar a saída na nova pasta de saída padrão SQLDIAG.  
   
- **/M** _machine1_ [ *machine2* *machineN*] | *@machinelistfile*  
+ **/M** _computador1_ [ *computador2* *computadorN*] | *\@arquivodelistadecomputadores*  
  Substitui as máquinas especificadas no arquivo de configuração. Por padrão, o arquivo de configuração é SQLDiag.Xml ou é definido com o parâmetro **/I** . Ao especificar mais de uma máquina, separe cada nome de máquina com um espaço.  
   
- Usar o *@machinelistfile* especifica um nome de arquivo de lista de máquina a ser armazenado no arquivo de configuração.  
+ Usar o *\@arquivodelistadecomputadores* especifica um nome de arquivo de lista de máquina a ser armazenado no arquivo de configuração.  
   
  **/C** _file_compression_type_  
  Define o tipo de compactação de arquivo usado nos arquivos da pasta de saída do **SQLdiag** . Opções disponíveis:  
