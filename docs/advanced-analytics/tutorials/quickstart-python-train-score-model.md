@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: Crie um modelo de previsão simples no Python usando SQL Server Serviços de Machine Learning e, em seguida, preveja um resultado usando novos dados.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 10/14/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 504b37002bedf0e73cfefe0aeb36faf2cca45bfe
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.openlocfilehash: cb564d7dc8564b31a90a09f53aedaba953519f76
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006021"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313670"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Início Rápido: Criar e pontuar um modelo de previsão em Python com SQL Server Serviços de Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ Nesta etapa, você criará um procedimento armazenado que gera um modelo para pr
     import pickle
     from sklearn.naive_bayes import GaussianNB
     GNB = GaussianNB()
-    trained_model = pickle.dumps(GNB.fit(iris_data[[0,1,2,3]], iris_data[[4]].values.ravel()))
+    trained_model = pickle.dumps(GNB.fit(iris_data[["Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width"]], iris_data[["SpeciesId"]].values.ravel()))
     '
             , @input_data_1 = N'select "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "SpeciesId" from iris_data'
             , @input_data_1_name = N'iris_data'
@@ -135,9 +135,9 @@ Agora que você criou, treinau e salvou um modelo, passe para a próxima etapa: 
            , @script = N'
    import pickle
    irismodel = pickle.loads(nb_model)
-   species_pred = irismodel.predict(iris_data[[1,2,3,4]])
+   species_pred = irismodel.predict(iris_data[["Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width"]])
    iris_data["PredictedSpecies"] = species_pred
-   OutputDataSet = iris_data[[0,5,6]] 
+   OutputDataSet = iris_data[["id","SpeciesId","PredictedSpecies"]] 
    print(OutputDataSet)
    '
            , @input_data_1 = N'select id, "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "SpeciesId" from iris_data'
