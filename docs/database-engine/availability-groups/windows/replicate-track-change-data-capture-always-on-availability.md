@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8eef8241d5c8413f3722f11854074d415399165b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2faa46529ea44ce348c382877d39d780cb22572b
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014343"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251967"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replicação, controle de alterações e Change Data Capture – grupos de disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ ms.locfileid: "68014343"
     ```  
   
     > [!NOTE]  
-    >  Você deve criar os trabalhos em todos os destinos de failover possíveis antes do failover e marcá-los como desabilitados até que a réplica de disponibilidade em um host se torne a nova réplica primária. Os trabalhos de CDC em execução no banco de dados primário antigo também devem ser desabilitados quando o banco de dados local se torna um banco de dados secundário. Para desabilitar e habilitar trabalhos, use a opção *@enabled* de [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md). Para obter mais informações sobre como criar trabalhos de CDC, consulte [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
+    >  Você deve criar os trabalhos em todos os destinos de failover possíveis antes do failover e marcá-los como desabilitados até que a réplica de disponibilidade em um host se torne a nova réplica primária. Os trabalhos de CDC em execução no banco de dados primário antigo também devem ser desabilitados quando o banco de dados local se torna um banco de dados secundário. Para desabilitar e habilitar trabalhos, use a opção *\@enabled* de [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md). Para obter mais informações sobre como criar trabalhos de CDC, consulte [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
   
 -   **Adicionando funções de CDC a uma réplica de banco de dados primário AlwaysOn**  
   
@@ -155,7 +155,7 @@ ms.locfileid: "68014343"
   
      O nome do ouvinte do grupo de disponibilidade ou o nome de nó explícito pode ser usado para localizar a réplica secundária. Se o nome do ouvinte do grupo de disponibilidade for usado, o acesso será direcionado a qualquer réplica secundária adequada.  
   
-     Quando **sp_addlinkedserver** é usado para criar um servidor vinculado para acessar o secundário, o parâmetro *@datasrc* é usado para o nome do ouvinte do grupo de disponibilidade ou o nome do servidor explícito e o parâmetro *@provstr* é usado para especificar intenção somente leitura.  
+     Quando **sp_addlinkedserver** é usado para criar um servidor vinculado para acessar o secundário, o parâmetro *\@datasrc* é usado para o nome do ouvinte do grupo de disponibilidade ou o nome de servidor explícito e o parâmetro *\@provstr* é usado para especificar intenção somente leitura.  
   
     ```sql  
     EXEC sp_addlinkedserver   

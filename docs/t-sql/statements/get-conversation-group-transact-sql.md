@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c6cb2cf4bae18604d77c8644f18efd32702b8197
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.openlocfilehash: d0ede71391f31096191255c5a8fee2051ad6f696
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211300"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252191"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "70211300"
  WAITFOR  
  Especifica que a instrução GET CONVERSATION GROUP aguarde a chegada de uma mensagem na fila se nenhuma mensagem estiver presente.  
   
- *@conversation_group_id*  
+ *\@conversation_group_id*  
  É uma variável usada para armazenar a ID de grupo de conversa retornada pela instrução GET CONVERSATION GROUP. A variável precisa ser do tipo **uniqueidentifier**. Se não houver grupos de conversa disponíveis, a variável será definida como NULL.  
   
  FROM  
@@ -72,7 +72,7 @@ ms.locfileid: "70211300"
  É o nome da fila na qual o grupo de conversa deve ser obtido.  
   
  TIMEOUT *timeout*  
- Especifica o intervalo de tempo, em milissegundos, que o Service Broker aguarda a chegada de uma mensagem na fila. Essa cláusula só pode ser usada com a cláusula WAITFOR. Se uma instrução que usa WAITFOR não incluir essa cláusula ou se *timeout* for -1, o tempo de espera será ilimitado. Se o tempo limite expirar, GET CONVERSATION GROUP definirá a variável *@conversation_group_id* como NULL.  
+ Especifica o intervalo de tempo, em milissegundos, que o Service Broker aguarda a chegada de uma mensagem na fila. Essa cláusula só pode ser usada com a cláusula WAITFOR. Se uma instrução que usa WAITFOR não incluir essa cláusula ou se *timeout* for -1, o tempo de espera será ilimitado. Se o intervalo expirar, GET CONVERSATION GROUP definirá a variável *\@conversation_group_id* como NULL.  
   
 ## <a name="remarks"></a>Remarks  
   

@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7553b584a37685fd7fb9455423e55c27c8343e72
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 7ff8009136f95247bc13c213d9b656abfab28ae0
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710387"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041202"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Perguntas frequentes para os administradores de replicação
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -116,14 +116,14 @@ ms.locfileid: "71710387"
 ## <a name="logins-and-object-ownership"></a>Propriedade de logons e de objetos  
   
 ### <a name="are-logins-and-passwords-replicated"></a>Os logons e as senhas são replicados?  
- Nenhum. Você pode criar um pacote DTS para transferir os logons e as senhas do Publicador para um ou mais Assinantes.  
+ Nenhum. Você pode criar um pacote SSIS para transferir os logons e as senhas do Publicador para um ou mais Assinantes.  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>O que são os esquemas e como eles são replicados?  
  A começar pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *esquema* tem dois significados:  
   
--   A definição de um objeto, como uma instrução CREATE TABLE. Por padrão, a replicação copia as definições de todos os objetos replicados para o Assinante.  
+-   A definição de um objeto, como uma instrução `CREATE TABLE`. Por padrão, a replicação copia as definições de todos os objetos replicados para o Assinante.  
   
--   O namespace no qual um objeto é criado: \<Banco de Dados>.\<Esquema>.\<Objeto>. Os esquemas são definidos usando a instrução CREATE SCHEMA.  
+-   O namespace no qual um objeto é criado: \<Banco de Dados>.\<Esquema>.\<Objeto>. Os esquemas são definidos usando a instrução `CREATE SCHEMA`.  
   
 -   A replicação tem o seguinte comportamento padrão no Assistente para Nova Publicação em relação à propriedade de esquemas e objetos:  
   
@@ -178,7 +178,7 @@ ms.locfileid: "71710387"
  Há vários mecanismos para reconstruir índices. Todos podem ser usados sem considerações especiais para a replicação, exceto pelo seguinte: as chaves primárias são necessárias para as tabelas em publicações transacionais, portanto você não pode cancelar e recriar chaves primárias nessas tabelas.  
   
 ### <a name="how-do-i-add-or-change-indexes-on-publication-and-subscription-databases"></a>Como posso adicionar ou alterar índices em bancos de dados de publicação e de assinatura?  
- Índices podem ser adicionados no Publicador ou nos Assinantes sem considerações especiais para a replicação (lembre-se de que os índices podem afetar o desempenho). CREATE INDEX e ALTER INDEX não são replicados, portanto, ao adicionar ou alterar um índice no Publicador, por exemplo, deve-se fazer a mesma adição ou alteração no Assinante para que ele esteja refletido lá.  
+ Índices podem ser adicionados no Publicador ou nos Assinantes sem considerações especiais para a replicação (lembre-se de que os índices podem afetar o desempenho). `CREATE INDEX` e `ALTER INDEX` não são replicados, portanto, ao adicionar ou alterar um índice no Publicador, por exemplo, deve-se fazer a mesma adição ou alteração no Assinante para que ele esteja refletido lá.  
   
 ### <a name="how-do-i-move-or-rename-files-for-databases-involved-in-replication"></a>Como posso mover ou renomear arquivos para bancos de dados envolvidos em replicação?  
  Em versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], para mover ou renomear arquivos de banco de dados era necessário desanexar e tornar a anexar o banco de dados. Como um banco de dados replicado não pode ser desanexado, a replicação devia ser removida antes que os bancos de dados. A partir do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], é possível mover ou renomear arquivos sem desanexar e anexar novamente o banco de dados, e não produzir efeito sobre a replicação. Para mais informações sobre as operações de renomeação e movimentação, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md).  
@@ -187,7 +187,7 @@ ms.locfileid: "71710387"
  Primeiro, remova o artigo da publicação usando [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) ou a caixa de diálogo **Propriedades de Publicação – \<Publicação>** , em seguida, remova-o do banco de dados usando `DROP <Object>`. Não é possível descartar artigos de publicações transacionais ou de instantâneos após as assinaturas terem sido adicionadas; antes é preciso descartar as assinaturas. Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>Como posso adicionar ou descartar colunas em uma tabela publicada?  
- O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a uma grande variedade de alterações de esquema em objetos publicados, inclusive a adição e o descarte de colunas. Por exemplo, execute ALTER TABLE... DROP COLUMN no Publicador e a instrução será replicada para os Assinantes, em seguida, será executada para descartar a coluna. Os Assinantes executando versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] possuem suporte para a adição e descarte de colunas por meio dos procedimentos armazenados [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) e [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  
+ O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a uma grande variedade de alterações de esquema em objetos publicados, inclusive a adição e o descarte de colunas. Por exemplo, execute `ALTER TABLE … DROP COLUMN` no Publicador e a instrução será replicada para os Assinantes, em seguida, será executada para descartar a coluna. Os Assinantes executando versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] possuem suporte para a adição e descarte de colunas por meio dos procedimentos armazenados [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) e [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  
   
 ## <a name="replication-maintenance"></a>Manutenção da Replicação  
   

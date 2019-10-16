@@ -1,6 +1,6 @@
 ---
 title: Especificações de capacidade máxima do SQL Server | Microsoft Docs
-ms.date: 11/06/2017
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 08097b4aac0d14a3da21443a4903df90797b9316
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
+ms.openlocfilehash: 0fae5c47de0b8017d3f374afe18e926eea9818cc
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71687367"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008442"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificações de capacidade máxima do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,8 @@ ms.locfileid: "71687367"
 |Bloqueios por conexão||Máximo de bloqueios por servidor||  
 |Bloqueios por instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Limitado somente por memória|Esse valor é para alocação de bloqueio estático. Os bloqueios dinâmicos são limitados somente por memória.|  
 |Níveis aninhados de procedimento armazenado||32|Se um procedimento armazenado acessar mais de 64 bancos de dados ou mais de 2 bancos de dados em intercalação, você receberá um erro.|  
-|Subconsultas aninhadas||32||  
+|Subconsultas aninhadas||32||    
+|Transações aninhadas||4\.294.967.296||     
 |Níveis aninhados de gatilho||32||  
 |Índices não clusterizados por tabela||999||  
 |Número de expressões distintas na cláusula GROUP BY quando qualquer um dos seguintes estiver presente: CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP||32||  

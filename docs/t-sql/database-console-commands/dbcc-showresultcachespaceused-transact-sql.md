@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ffd0ad4ddcdae91071811e57cdb8c5f6aaaea656
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c2dd0389f4ec3287fbe23875458ab5d34ef269f7
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476313"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72174654"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -42,7 +42,12 @@ O tamanho máximo do cache de conjunto de resultados é de 1 TB por banco de dad
 - a cada 48 horas, se o conjunto de resultados não foi usado.
 - Quando o cache do conjunto de resultados se aproxima do tamanho máximo.
 
-Os usuários podem esvaziar manualmente o cache do conjunto de resultados de um banco de dados ao desativar o recurso de cache de conjunto de resultados ou usando o comando `DBCC DROPRESULTSETCACHE`.   Pausar um banco de dados não esvazia o cache de conjunto de resultados.  
+Para esvaziar manualmente o cache do conjunto de resultados de um banco de dados, os usuários podem usar uma destas opções:
+
+- DESATIVAR o recurso de cache do conjunto de resultados do banco de dados
+- Executar `DBCC DROPRESULTSETCACHE` enquanto estiver conectado ao banco de dados 
+
+Pausar um banco de dados não esvazia o cache de conjunto de resultados.  
 
 ## <a name="permissions"></a>Permissões
 

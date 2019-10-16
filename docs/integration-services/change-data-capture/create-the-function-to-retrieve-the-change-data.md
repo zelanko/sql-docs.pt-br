@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae7aa810e58cf7e21a4045e0c408c76e8754a620
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 43809c2be4dca62d150be31f62b833b08a2569b7
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298822"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251978"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Criar a função para recuperar os dados de alteração
 
@@ -80,7 +80,7 @@ ms.locfileid: "71298822"
 > [!NOTE]  
 >  Para obter mais informações sobre a sintaxe desse procedimento armazenado e seus parâmetros, consulte [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md).  
   
- O procedimento armazenado sempre gera uma função de invólucro para retornar todas as alterações de cada instância de captura. Se o parâmetro *@supports_net_changes* foi definido quando a instância de captura foi criada, o procedimento armazenado também gerará uma função de wrapper para retornar alterações globais de cada instância de captura de aplicativo.  
+ O procedimento armazenado sempre gera uma função de invólucro para retornar todas as alterações de cada instância de captura. Se o parâmetro *\@supports_net_changes* for definido quando a instância de captura for criada, o procedimento armazenado também gerará uma função de wrapper para retornar alterações globais de cada instância de captura de aplicativo.  
   
  O procedimento armazenado retorna um conjunto de resultados com duas colunas:  
   
@@ -112,7 +112,7 @@ deallocate #hfunctions
 ```  
   
 ### <a name="understanding-and-using-the-functions-created-by-the-stored-procedure"></a>Entendendo e usando as funções criadas pelo procedimento armazenado  
- Para percorrer sistematicamente a linha de tempo dos dados de alteração capturados, as funções de wrapper geradas esperam que o parâmetro *@end_time* de um intervalo seja o parâmetro *@start_time* do intervalo subsequente. Quando essa convenção é seguida, as funções de invólucro geradas podem executar as seguintes tarefas:  
+ Para percorrer sistematicamente a linha do tempo dos dados de alteração capturados, as funções de wrapper geradas esperam que o parâmetro *\@end_time* de um intervalo seja o parâmetro *\@start_time* do intervalo subsequente. Quando essa convenção é seguida, as funções de invólucro geradas podem executar as seguintes tarefas:  
   
 -   Mapear os valores de data/hora para os valores LSN usados interiormente.  
   
@@ -130,7 +130,7 @@ deallocate #hfunctions
   
 -   O valor de data/hora inicial e o valor de data/hora final do intervalo. Enquanto as funções de invólucro usam valores de data/hora como os pontos finais do intervalo de consulta, as funções de captura de dados de alteração usam dois valores LSN como os pontos finais.  
   
--   O filtro de linha. Para as funções de wrapper e as funções de captura de dados de alteração, o parâmetro *@row_filter_option* é o mesmo. Para obter mais informações, consulte [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) e [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
+-   O filtro de linha. Para as funções de wrapper e as funções de captura de dados de alteração, o parâmetro *\@row_filter_option* é o mesmo. Para obter mais informações, consulte [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) e [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
  O conjunto de resultados retornado pelas funções de invólucro inclui os seguintes dados:  
   
@@ -138,7 +138,7 @@ deallocate #hfunctions
   
 -   Uma coluna denominada __CDC_OPERATION que usa um campo de um ou dois caracteres para identificar a operação associada à linha. Os valores válidos para esse campo são os seguintes: “I” de inserir, “D” de excluir, “UO” de atualizar valores antigos e “UN” de atualizar valores novos.  
   
--   Os sinalizadores de atualização, quando você os solicita, aparecem como colunas de bit após o código da operação e na ordem especificada no parâmetro *@update_flag_list* . Essas colunas são denominadas com a anexação de '_uflag' ao nome de coluna associado.  
+-   Os sinalizadores de atualização, quando você os solicita, aparecem como colunas de bit após o código da operação e na ordem especificada no parâmetro *\@update_flag_list*. Essas colunas são denominadas com a anexação de '_uflag' ao nome de coluna associado.  
   
  Se o pacote chamar uma função de wrapper que consulte todas as alterações, essa função também retornará as colunas __CDC_STARTLSN e \__CDC_SEQVAL. Essas duas colunas se tornam a primeira e a segunda colunas, respectivamente, do conjunto de resultados. A função de invólucro também classifica o conjunto de resultados com base nessas duas colunas.  
   

@@ -14,12 +14,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 246f450a1782a6f00e32ce725c244915dc95054c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e40e69691834faffa2a112d81d9006e8cc602845
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138363"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041215"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Usar o serviço de Armazenamento de Blobs do Azure com o SQL Server 2016
 
@@ -73,12 +73,12 @@ Para criar uma política no contêiner e gerar uma chave SAS (Assinatura de Aces
   
 1.  Abra a janela do Windows PowerShell ou o ISE do Windows PowerShell (consulte os requisitos de versão acima).  
   
-2.  Edite e execute o script b:  
+2.  Edite e execute o script abaixo:  
   
     ```powershell
     # Define global variables for the script  
     $prefixName = '<a prefix name>'  # used as the prefix for the name for various objects  
-    $subscriptionID=='<your subscription ID>'   # the ID  of subscription name you will use  
+    $subscriptionID = '<your subscription ID>'   # the ID  of subscription name you will use  
     $locationName = '<a data center location>'  # the data center region you will use  
     $storageAccountName= $prefixName + 'storage' # the storage account name you will create or use  
     $containerName= $prefixName + 'container'  # the storage container name to which you will attach the SAS policy with its SAS token  

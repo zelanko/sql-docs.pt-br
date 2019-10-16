@@ -1,7 +1,7 @@
 ---
 title: Point (tipo de dados geography) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2017
+ms.date: 10/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3d1859da2743171bd3d3e314455918b361c4f50b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 665497328238fbaa88d666fb214af336531e93c7
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025674"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72260165"
 ---
 # <a name="point-geography-data-type"></a>Point (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Point ( Lat, Long, SRID )
  É uma expressão **float** que representa a coordenada Y do **Point** gerado. Para obter mais informações sobre os valores válidos de longitude e latitude, confira [Point](../../relational-databases/spatial/point.md).  
   
  *SRID*  
- É uma expressão **int** que representa a SRID da instância de **geography** que você deseja retornar.  
+ É uma expressão **int** que representa a [ID de referência espacial](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids) da instância de **geography** que você deseja retornar.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  

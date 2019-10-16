@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a73d1f7109e31daa34f5fd25381f011905833be8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2105b03f64ecc2e0357e5a06f0d7cb2c18fb69b0
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082405"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252178"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ REVERT
   
 ## <a name="arguments"></a>Argumentos  
  WITH COOKIE = @*varbinary_variable*  
- Especifica o cookie que foi criado em uma instrução autônoma [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) correspondente. *@varbinary_variable* é **varbinary(100)** .  
+ Especifica o cookie que foi criado em uma instrução autônoma [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) correspondente. *\@varbinary_variable* é **varbinary(100)** .  
   
 ## <a name="remarks"></a>Remarks  
  REVERT pode ser especificado dentro de um módulo como um procedimento armazenado ou uma função definida pelo usuário ou como uma instrução autônoma. Quando especificado dentro de um módulo, REVERT só é aplicável às instruções EXECUTE AS definidas no módulo. Por exemplo, o procedimento armazenado a seguir emite uma instrução `EXECUTE AS` seguida por uma instrução `REVERT`.  
@@ -77,9 +77,9 @@ EXECUTE dbo.usp_myproc;
  Quando especificado como uma instrução autônoma, REVERT se aplica às instruções EXECUTE AS definidas dentro de um lote ou de uma sessão. REVERT não tem nenhum efeito se a instrução EXECUTE AS correspondente tiver uma cláusula WITH NO REVERT. Nesse caso, o contexto de execução permanece em efeito até que a sessão seja descartada.  
   
 ## <a name="using-revert-with-cookie"></a>Usando REVERT WITH COOKIE  
- A instrução EXECUTE AS usada para definir o contexto de execução de uma sessão pode incluir a cláusula opcional WITH NO REVERT COOKIE = @*varbinary_variable*. Quando essa instrução é executada, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] passa o cookie para @*varbinary_variable*. O contexto de execução definido por essa instrução poderá ser revertido somente para o contexto anterior se a instrução de chamada REVERT WITH COOKIE = @*varbinary_variable* tiver o valor *@varbinary_variable* correto.  
+ A instrução EXECUTE AS usada para definir o contexto de execução de uma sessão pode incluir a cláusula opcional WITH NO REVERT COOKIE = @*varbinary_variable*. Quando essa instrução é executada, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] passa o cookie para @*varbinary_variable*. O contexto de execução definido por essa instrução poderá ser revertido para o contexto anterior somente se a instrução de chamada REVERT WITH COOKIE = @*varbinary_variable* tiver o valor *\@varbinary_variable* correto.  
   
- Esse mecanismo é útil em um ambiente no qual um pool de conexão é usado. O pool de conexão é a manutenção de um grupo de conexões de banco de dados para reutilização por aplicativos por vários usuários finais. Como o valor passado para *@varbinary_variable* é conhecido apenas pelo chamador da instrução EXECUTE AS (nesse caso, o aplicativo), o chamador pode garantir que o contexto de execução estabelecido não possa ser alterado pelo usuário final que invocar o aplicativo. Depois que o contexto de execução é revertido, o aplicativo pode alterná-lo para outra entidade.  
+ Esse mecanismo é útil em um ambiente no qual um pool de conexão é usado. O pool de conexão é a manutenção de um grupo de conexões de banco de dados para reutilização por aplicativos por vários usuários finais. Como o valor passado para *\@varbinary_variable* é conhecido apenas pelo chamador da instrução EXECUTE AS (nesse caso, o aplicativo), o chamador pode garantir que o contexto de execução estabelecido não possa ser alterado pelo usuário final que invocar o aplicativo. Depois que o contexto de execução é revertido, o aplicativo pode alterná-lo para outra entidade.  
   
 ## <a name="permissions"></a>Permissões  
  Nenhuma permissão é necessária.  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea6501c4bfd516b99d53f9ac7e90a2cd0d59ba8c
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.openlocfilehash: e78ab71081c991b5e42726ed4dd594e016f324f0
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70026220"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72260324"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -96,7 +96,8 @@ REQUEST_MAX_CPU_TIME_SEC = *value*
 Especifica o tempo máximo de CPU, em segundos, que uma solicitação pode usar. *value* precisa ser 0 ou um inteiro positivo. A configuração padrão de *value* é 0, o que significa ilimitado.
 
 > [!NOTE]
-> Por padrão, o Resource Governor não impedirá a continuação de uma solicitação se o tempo máximo for excedido. Porém, um evento será gerado. Para obter mais informações, consulte [Classe de evento CPU Threshold Exceeded](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).
+> Por padrão, o Resource Governor não impedirá a continuação de uma solicitação se o tempo máximo for excedido. Porém, um evento será gerado. Para obter mais informações, consulte [Classe de evento CPU Threshold Exceeded](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).     
+
 > [!IMPORTANT]
 > Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e usando o [sinalizador de rastreamento 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), o Resource Governor anulará uma solicitação quando o tempo máximo for excedido.
 
@@ -107,13 +108,17 @@ Especifica o tempo máximo, em segundos, que uma consulta pode esperar pela disp
 > Nem sempre uma consulta falha quando o tempo limite de concessão de memória é atingido. A consulta falhará somente se houver muitas consultas simultâneas em execução. Caso contrário, a consulta poderá obter apenas a concessão de memória mínima, resultando em uma queda no desempenho de consulta.
 
 MAX_DOP = *value*     
-Especifica o DOP (grau máximo de paralelismo) para solicitações paralelas. *value* precisa ser 0 ou um inteiro positivo. O intervalo permitido para *value* é de 0 a 64. A configuração padrão para *value*, 0, usa a configuração global. MAX_DOP é tratado como segue:
+Especifica o **grau máximo de paralelismo (MAXDOP)** para execução de consulta paralela. *value* precisa ser 0 ou um inteiro positivo. O intervalo permitido para *value* é de 0 a 64. A configuração padrão para *value*, 0, usa a configuração global. MAX_DOP é tratado como segue:
 
-- MAX_DOP como dica de consulta é válido, contanto que não exceda o grupo de carga de trabalho MAX_DOP. Se o valor de dica de consulta MAXDOP exceder o valor que está configurado usando o Administrador de Recursos, o Mecanismo de Banco de Dados usará o valor MAXDOP do Administrador de Recursos.
-- MAX_DOP como uma dica de consulta sempre substitui o 'grau máximo de paralelismo' sp_configure.
-- O grupo de carga de trabalho MAX_DOP substitui o 'grau máximo de paralelismo' sp_configure.
-- Se a consulta for marcada como serial em tempo de compilação, ela não poderá ser revertida a paralela em tempo de execução, independentemente do grupo de carga de trabalho ou da configuração sp_configure.
-- Depois de ser configurado, o DOP só pode ser reduzido sob pressão de concessão de memória. A reconfiguração do grupo de carga de trabalho não é visível durante a espera na fila de concessão de memória.
+> [!NOTE]
+> O grupo de cargas de trabalho do MAX_DOP substitui a [configuração de servidor para o grau máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) e a [configuração no escopo do banco de dados](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) do **MAXDOP**.
+
+> [!TIP]
+> Para fazer isso no nível da consulta, use a [dica de consulta](../../t-sql/queries/hints-transact-sql-query.md) do **MAXDOP**. Definir o grau máximo de paralelismo como uma dica de consulta funciona, desde que não exceda o grupo de carga de trabalho do MAX_DOP. Se o valor de dica de consulta do MAXDOP ultrapassar o valor configurado no Resource Governor, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usará o valor `MAX_DOP` do Resource Governor. A [dica de consulta](../../t-sql/queries/hints-transact-sql-query.md) do MAXDOP sempre substitui a [configuração de servidor para o grau máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).      
+>   
+> Para fazer isso no nível do banco de dados, use a [configuração com escopo no banco de dados](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) do **MAXDOP**.      
+>   
+> Para fazer isso no nível do servidor, use o **MAXDOP (grau máximo de paralelismo)** na [opção de configuração do servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).     
 
 GROUP_MAX_REQUESTS = *value*     
 Especifica o número máximo de solicitações simultâneas permitido para execução no grupo de carga de trabalho. *value* precisa ser 0 ou um inteiro positivo. A configuração padrão de *valor* é 0 e permite solicitações ilimitadas. Quando as solicitações simultâneas máximas são alcançadas, um usuário nesse grupo pode fazer logon, mas é colocado em um estado de espera até que as solicitações simultâneas sejam ignoradas abaixo do valor especificado.
@@ -137,19 +142,20 @@ O grupo de carga de trabalho pode especificar um pool de recursos externo. Você
 ## <a name="remarks"></a>Remarks
 Quando `REQUEST_MEMORY_GRANT_PERCENT` é usado, a criação de índice tem permissão para usar mais memória do workspace do que a concedida inicialmente, para melhorar o desempenho. Esse tratamento especial tem o suporte do Administrador de Recursos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Porém, a concessão inicial e qualquer concessão de memória adicional estão limitadas pelas configurações de pool de recursos e de grupo de carga de trabalho.
 
+O limite de `MAX_DOP` é definido por [tarefa](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Não é um limite por [solicitação](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) ou por consulta. Isso significa que, durante uma execução de consulta paralela, uma solicitação única pode gerar várias tarefas que são atribuídas a um [agendador](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Para saber mais, confira o [Guia de arquitetura de threads e tarefas](../../relational-databases/thread-and-task-architecture-guide.md).
+
+Quando `MAX_DOP` for usado e uma consulta for marcada como serial em tempo de compilação, ela não poderá ser revertida a paralela em tempo de execução, independentemente do grupo de carga de trabalho ou da definição de configuração do servidor. Depois de configurar o `MAX_DOP`, ele só poderá ser reduzido devido à pressão de memória. A reconfiguração do grupo de carga de trabalho não é visível durante a espera na fila de concessão de memória.
+
 ### <a name="index-creation-on-a-partitioned-table"></a>Criação de índice em uma tabela particionada
 
 A memória consumida pela criação de índice na tabela particionada não alinhada é proporcional ao número de partições envolvidas. Se a memória total necessária exceder o limite por consulta `REQUEST_MAX_MEMORY_GRANT_PERCENT` imposto pela configuração de grupo de cargas de trabalho do Resource Governor, poderá ocorrer uma falha na criação do índice. Como o grupo de carga de trabalho *"padrão"* permite que uma consulta exceda o limite por consulta com o mínimo de memória necessária, o usuário talvez possa executar a mesma criação de índice no grupo de carga de trabalho *"padrão"* caso o pool de recursos *"padrão"* tenha memória total suficiente configurada para executar tal consulta.
 
 ## <a name="permissions"></a>Permissões
-
 Requer a permissão `CONTROL SERVER`.
 
 ## <a name="example"></a>Exemplo
 
-- Criar um grupo de carga de trabalho denominado newReports
-
-Ele usa as configurações padrão do Administrador de Recursos e está no pool padrão desse Administrador. O exemplo especifica o pool `default`, mas isso não é necessário.
+Crie um grupo de carga de trabalho chamado `newReports`, que usa as configurações padrão do Resource Governor e está no pool padrão desse Resource Governor. O exemplo especifica o pool `default`, mas isso não é necessário.
 
 ```sql
 CREATE WORKLOAD GROUP newReports

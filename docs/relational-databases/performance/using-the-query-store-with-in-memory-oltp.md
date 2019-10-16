@@ -13,12 +13,12 @@ ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fa2f5a4694b8f8f9f59a5663d996777d0c78df9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db274ccde27abf92617e0eadf95b1971e740705a
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986661"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251299"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Como usar o Repositório de Consultas com OLTP in-memory
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ No entanto, há alguns aspectos específicos dos quais os usuários devem estar 
   
 -   Quando o Repositório de Consultas é habilitado, as estatísticas de consultas, planos e tempo de compilação são coletadas por padrão. No entanto, a coleta de estatísticas de tempo de execução não é ativada, a menos que você a habilite com [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  
   
--   Quando você define *@new_collection_value* como 0, o Repositório de Consultas deixa de coletar estatísticas de tempo de execução do procedimento afetado ou para toda a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Quando você define *\@new_collection_value* como 0, o Repositório de Consultas deixa de coletar estatísticas de tempo de execução do procedimento afetado ou para toda a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   O valor configurado com [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) não é persistente. Verifique e configure novamente a coleta de estatísticas após a reinicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

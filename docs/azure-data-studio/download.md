@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.custom: seodec18
-ms.date: 10/03/2019
+ms.date: 10/08/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: 8151b3853da3a19785de8dcaf8d31c2d6768c558
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: d56bf097bc38670fb7bad83933a1a48800172d5b
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816626"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173149"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Baixar e instalar o Azure Data Studio
 
@@ -29,9 +29,9 @@ Baixe e instale a versão mais recente, a *Versão de outubro*:
 
 |Plataforma|Download|Data de liberação| Versão |
 |:---|:---|:---|:---|
-|Windows|[Instalador do usuário (recomendado)](https://go.microsoft.com/fwlink/?linkid=2105135)<br>[Instalador do sistema](https://go.microsoft.com/fwlink/?linkid=2105134)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2104938)|02 de outubro de 2019 |1.12.0|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2105133)|02 de outubro de 2019 |1.12.0|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2103004)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2105131)|02 de outubro de 2019 |1.12.0|
+|Windows|[Instalador do usuário (recomendado)](https://go.microsoft.com/fwlink/?linkid=2105135)<br>[Instalador do sistema](https://go.microsoft.com/fwlink/?linkid=2105134)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2104938)|8 de outubro de 2019 |1.12.1|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2105133)|8 de outubro de 2019 |1.12.1|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2105131)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)<br>[.tar.gz](https://azuredatastudiobuilds.blob.core.windows.net/releases/1.12.1/azuredatastudio-linux-1.12.1.tar.gz)|8 de outubro de 2019 |1.12.1|
 
 Para obter detalhes sobre a versão mais recente, confira as [notas sobre a versão](release-notes.md).
 

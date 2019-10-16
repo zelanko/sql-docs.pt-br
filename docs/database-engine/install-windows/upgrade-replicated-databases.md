@@ -16,12 +16,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5426210ad558e776dd2ad92246bc526ebf37c2d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934761"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008460"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>Atualizar ou aplicar patches a bancos de dados replicados
 
@@ -104,7 +104,7 @@ Essas etapas descrevem a ordem na qual os servidores em uma topologia de replica
 
 
 ## <a name="steps-for-side-by-side-migration-of-the-distributor-to-windows-server-2012-r2"></a>Etapas para a migração lado a lado do distribuidor para o Windows Server 2012 R2
-Se estiver planejando atualizar a instância do SQL Server para o SQL 2016 (ou superior) e seu sistema operacional atual for o Windows 2008 (ou 2008 R2), será necessário realizar uma atualização lado a lado do sistema operacional para o Windows Server 2012 R2 ou posterior. O motivo dessa atualização intermediária do sistema operacional é que o SQL Server 2016 não pode ser instalado em um Windows Server 2008/2008 R2 e o Windows Server 2008/20008 R2 não permite atualizações in-loco para Clusters de failover. As etapas a seguir podem ser executadas de uma instância autônoma do SQL Server ou em uma dentro de uma FCI (Instância do Cluster de Failover) Always On.
+Se estiver planejando atualizar a instância do SQL Server para o SQL Server 2016 (ou superior) e seu sistema operacional atual for o Windows 2008 (ou 2008 R2), será necessário realizar uma atualização lado a lado do sistema operacional para o Windows Server R2 ou superior. O motivo dessa atualização intermediária do sistema operacional é que o SQL Server 2016 não pode ser instalado em um Windows Server 2008/2008 R2 e o Windows Server 2008/20008 R2 não permite atualizações in-loco diretamente para Windows Server 2016. Embora seja possível executar uma atualização in-loco do Windows Server 2008/2008 R2 para o Windows Server 2012 e, em seguida, para o Windows Server 2016, isso geralmente não é recomendado devido ao tempo de inatividade e à complexidade adicional, impedindo um caminho de reversão fácil. Um upgrade lado a lado é o único caminho de atualização disponível para instâncias do SQL Server que participam de um cluster de failover.  As etapas a seguir podem ser executadas de uma instância autônoma do SQL Server ou em uma dentro de uma FCI (Instância do Cluster de Failover) Always On.
 
 1. Configure uma nova instância do SQL Server (autônoma ou Cluster de Failover Always On), uma edição e uma versão como seu distribuidor no Windows Server 2012 R2/2016 com um cluster do Windows diferente um nome do FCI do SQL Server ou nome do host autônomo. Será necessário manter a mesma estrutura de diretório que a do distribuidor antigo para garantir que os executáveis dos agentes de replicação, pastas de replicação e caminhos do arquivo de banco de dados sejam encontrados no mesmo caminho no novo ambiente. Isso reduzirá quaisquer etapas de pós-migração/atualização necessárias.
 1. Certifique-se de que sua replicação está sincronizada e, em seguida, desligue todos os agentes de replicação. 

@@ -18,16 +18,16 @@ ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 0b7a932f58fe791b6609b999f4495a42af88422d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b300d1fbc144f25b3f725f34e49d961953c434c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68219447"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289330"
 ---
 # <a name="compare-and-analyze-execution-plans"></a>Comparar e Analisar Planos de Execução
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Esta seção explica como comparar e analisar planos de execução usando o Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+Esta seção explica como comparar e analisar planos de execução usando o Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Este recurso está disponível a partir do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v17.4.  
   
 Os planos de execução exibem graficamente os métodos de recuperação de dados escolhidos pelo Otimizador de Consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os planos de execução representam o custo de execução de instruções e consultas específicas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando ícones em vez da representação tabular produzida pelas instruções [SET SHOWPLAN_ALL](../../t-sql/statements/set-showplan-all-transact-sql.md) ou [SET SHOWPLAN_TEXT](../../t-sql/statements/set-showplan-text-transact-sql.md). Essa abordagem gráfica é muito útil para entender as características de desempenho de uma consulta. 
 
@@ -36,9 +36,6 @@ Os planos de execução exibem graficamente os métodos de recuperação de dado
 Para obter mais informações sobre planos de execução de consulta, confira [plano de execução estimado](../../relational-databases/performance/display-the-estimated-execution-plan.md), [plano de execução real](../../relational-databases/performance/display-an-actual-execution-plan.md) e [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md).
   
 ## <a name="in-this-section"></a>Nesta seção  
-  
--   [Comparar planos de execução](../../relational-databases/performance/display-the-estimated-execution-plan.md)  
-  
--   [Analisar um plano de execução real](../../relational-databases/performance/display-an-actual-execution-plan.md)  
-  
+[Comparar planos de execução](../../relational-databases/performance/display-the-estimated-execution-plan.md)     
+[Analisar um plano de execução real](../../relational-databases/performance/display-an-actual-execution-plan.md)      
   

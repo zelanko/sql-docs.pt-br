@@ -9,17 +9,28 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 10/03/2019
-ms.openlocfilehash: 58efc144832fb97a3a32c764299c3ee83373976b
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.date: 10/08/2019
+ms.openlocfilehash: 991bc20600936ac61ab291db68d9e5f7728b96b5
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816641"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041124"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas sobre a versão relacionadas ao Azure Data Studio
 
 **[Baixe e instale a versão mais recente!](download.md)**
+
+## <a name="october-2019-hotfix"></a>Outubro de 2019 (hotfix)
+
+08 de outubro de 2019 &nbsp; / &nbsp; versão: 1.12.1
+
+&nbsp;
+
+| Alterar | Detalhes |
+| :----- | :------ |
+| Correção do problema de aspas e barras invertidas em blocos de anotações para escape correto. |  |
+| &nbsp; | &nbsp; |
 
 ## <a name="october-2019"></a>Outubro de 2019
 

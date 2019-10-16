@@ -1,7 +1,7 @@
 ---
 title: STLineFromText (tipo de dados geometry) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/03/2017
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9c3dfad17abfe2113807bf8eb9a1570ed0a2f7a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0a912e4ab228617537e9c28e9a5cecc4a0278fe
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129459"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278133"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,17 +51,38 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
  Tipo OGC: **LineString**  
   
 ## <a name="remarks"></a>Remarks  
- Esse método gerará uma **FormatException** se a entrada não for bem formatada.  
+Esse método gerará uma **FormatException** se a entrada não estiver bem formatada. Não há suporte para a notação de WKT de geometria calculada e de três dimensões dos recursos simples do OGC (Open Geospatial Consortium) para a Especificação do SQL versão 1.2.1. Veja exemplos da representação de valores Z (elevação) e M (medida) com suporte.
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir usa `STLineFromText()` para criar uma instância `geometry`.  
-  
+ O exemplo a seguir usa `STLineFromText()` para criar uma instância `geometry`.
+
+### <a name="example-1-two-dimension-geometry-wkt"></a>Exemplo 1: WKT de geometria bidimensional
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::STLineFromText('LINESTRING (100 100, 200 200)', 0);  
 SELECT @g.ToString();  
 ```  
   
+### <a name="example-2-three-dimension-geometry-wkt"></a>Exemplo 2: WKT de geometria tridimensional
+```  
+DECLARE @g geometry;  
+SET @g = geometry::STLineFromText('LINESTRING (100 100 100, 200 200 200)', 0);  
+SELECT @g.ToString();  
+``` 
+
+### <a name="example-3-two-dimension-measured-geometry-wkt"></a>Exemplo 3: WKT de geometria bidimensional calculada
+```  
+DECLARE @g geometry;  
+SET @g = geometry::STLineFromText('LINESTRING (100 100 NULL 100, 200 200 NULL 200)', 0);  
+SELECT @g.ToString();  
+``` 
+
+### <a name="example-4-three-dimension-measured-geometry-wkt"></a>Exemplo 4: WKT de geometria tridimensional calculada
+```  
+DECLARE @g geometry;  
+SET @g = geometry::STLineFromText('LINESTRING (100 100 100 100, 200 200 200 200)', 0);  
+SELECT @g.ToString();  
+``` 
 ## <a name="see-also"></a>Consulte Também  
  [Métodos geometry estáticos OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   

@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: d9ec87979d0f91653d5f287749ccfb5b7f806dc4
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: 9d174dab31e6a3f508d3d3858b87844854f6ee7e
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70161334"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252219"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -69,8 +69,7 @@ ms.locfileid: "70161334"
 > [!IMPORTANT]  
 >  Enquanto a opção de contexto para o usuário do banco de dados estiver ativa, qualquer tentativa de acessar os recursos fora do banco de dados provocará falha na instrução. Isso inclui instruções USE *database*, consultas distribuídas e consultas que fazem menção a outro banco de dados que usa identificadores em três ou quatro partes.  
   
- **'** *name* **'**  
- É um usuário ou nome de logon válido. *name* deve ser membro da função de servidor fixa **sysadmin** ou existir como uma entidade de segurança em [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) ou [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md), respectivamente.  
+ “*name*” é um nome de logon ou usuário válido. *name* deve ser membro da função de servidor fixa **sysadmin** ou existir como uma entidade de segurança em [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) ou [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md), respectivamente.  
   
  *name* pode ser especificado como uma variável local.  
   
@@ -83,10 +82,10 @@ ms.locfileid: "70161334"
   
  Para obter mais informações sobre como reverter para o contexto anterior, veja [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md).  
   
- COOKIE INTO * *@***varbinary_variable*  
- Especifica que o contexto de execução só pode ser revertido para o contexto anterior se a instrução de chamada REVERT WITH COOKIE contém o valor * *@***varbinary_variable* correto. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] passa o cookie para * *@***varbinary_variable*. A opção **COOKIE INTO** pode ser usada apenas no nível ad hoc.  
+ COOKIE INTO @*varbinary_variable*  
+ Especifica que o contexto de execução só poderá ser revertido para o contexto anterior se a instrução de chamada REVERT WITH COOKIE tiver o valor @*varbinary_variable* correto. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] passa o cookie para @*varbinary_variable*. A opção **COOKIE INTO** pode ser usada apenas no nível ad hoc.  
   
- **@** *varbinary_variable* é **varbinary (8000)** .  
+ @*varbinary_variable* é **varbinary(8000)** .  
   
 > [!NOTE]  
 >  O parâmetro **OUTPUT** de cookie está documentado atualmente como **varbinary(8000)** , que tem o tamanho máximo correto. No entanto, a implementação atual retorna **varbinary(100)** . Os aplicativos devem reservar **varbinary(8000)** para que o aplicativo continue a operar corretamente se o tamanho de retorno do cookie aumentar em uma versão futura.  
@@ -95,7 +94,7 @@ ms.locfileid: "70161334"
  Quando usado em um módulo, especifica que as instruções dentro dele são executadas no contexto do chamador do módulo.
 Quando usado fora de um módulo, a instrução não tem nenhuma ação.
  > [!NOTE]  
->  Essa opção não está disponível no SQL DataWarehouse.  
+>  Essa opção não está disponível no SQL Data Warehouse.  
   
 ## <a name="remarks"></a>Remarks  
  A alteração no contexto de execução permanece em vigor até que uma das seguintes situações ocorra:  

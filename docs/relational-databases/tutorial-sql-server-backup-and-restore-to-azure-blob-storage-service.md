@@ -1,69 +1,71 @@
 ---
-title: 'Início Rápido: Backup e restauração do SQL Server para o Serviço de Armazenamento de Blobs do Azure | Microsoft Docs'
+title: 'Início Rápido: Backup e restauração do SQL para o serviço de armazenamento de Blob do Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/09/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: performance
-ms.topic: conceptual
+ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae4d9cd9333e8dd42582f972a0d19260b2c9a3ee
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 7d04c2fb2fd405a582cb6c94b59bdca83ba3dbb5
+ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155706"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72239415"
 ---
-# <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Início Rápido: Backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Este início rápido ajuda você a compreender como gravar backups e fazer restaurações no Serviço de Armazenamento de Blobs do Azure.  Este início rápido explica como criar um Contêiner de Blob do Azure, credenciais para acessar a conta de armazenamento, gravar um backup do serviço Blob e executar uma restauração simples.
+# <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Início Rápido: Backup e restauração do SQL no serviço de armazenamento de Blob do Azure
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+Este início rápido ajuda você a compreender como gravar backups e fazer restaurações no Serviço de Armazenamento de Blobs do Azure.  O artigo explica como criar um Contêiner de Blob do Azure, gravar um backup no serviço blob e, em seguida, executar uma restauração.
   
-### <a name="prerequisites"></a>Prerequisites  
-Para concluir este início rápido, você deve estar familiarizado com os conceitos de backup e restauração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e a sintaxe do T-SQL. Para usar este início rápido, você precisará de uma conta de armazenamento do Azure, do SSMS (SQL Server Management Studio), de acesso a um servidor que executa o SQL Server e de um banco de dados do AdventureWorks. Além disso, a conta de usuário usada para emitir os comandos BACKUP e RESTORE deve estar na função de banco de dados **db_backupoperator** com as permissões **Alterar qualquer credencial**. 
+## <a name="prerequisites"></a>Prerequisites  
+Para concluir este início rápido, você deve estar familiarizado com os conceitos de backup e restauração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e a sintaxe do T-SQL.  Você precisa de uma conta de armazenamento do Azure, SSMS (SQL Server Management Studio) e acesso a um servidor que esteja executando o SQL Server ou uma instância gerenciada do Banco de Dados SQL do Azure. Além disso, a conta de usuário usada para emitir os comandos BACKUP e RESTORE deve estar na função de banco de dados **db_backupoperator** com as permissões **Alterar qualquer credencial**. 
 
 - Obtenha uma [conta do Azure](https://azure.microsoft.com/offers/ms-azr-0044p/) gratuita.
 - Crie uma [conta de armazenamento do Azure](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
 - Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-- Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Instale o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) ou implante uma [instância gerenciada](/azure/sql-database/sql-database-managed-instance-get-started) com conectividade estabelecida por meio de uma [máquina virtual SQL do Azure](/azure/sql-database/sql-database-managed-instance-configure-vm) ou [ponto a site](/azure/sql-database/sql-database-managed-instance-configure-p2s).
 - Atribua a conta de usuário à função [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) e conceda permissões para [Alterar qualquer credencial](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
 
-
-## <a name="create-azure-blob-container"></a>Criar o Contêiner de Blob do Azure
-Um contêiner fornece um agrupamento de conjunto de blobs. Todos os blobs devem estar em um contêiner. Uma conta pode conter um número ilimitado de contêineres, mas deve ter pelo menos um contêiner. Um contêiner pode armazenar um número ilimitado de blobs. 
-
 [!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+
+## <a name="create-azure-blob-container"></a>Criar o contêiner de Blob do Azure
+Um contêiner fornece um agrupamento de conjunto de blobs. Todos os blobs devem estar em um contêiner. Uma conta de armazenamento pode conter um número ilimitado de contêineres, mas deve ter pelo menos um contêiner. Um contêiner pode armazenar um número ilimitado de blobs. 
 
 Para criar um Contêiner, siga estas etapas:
 
 1. Abra o portal do Azure. 
 1. Navegue até sua Conta de Armazenamento. 
 1. Selecione a conta de armazenamento e role para baixo até **Serviços de Blob**.
-1. Selecione **Blobs** e, em seguida, selecione +**Contêiner** para adicionar um novo contêiner. 
+1. Selecione **Blobs** e, em seguida, selecione **+ Contêiner** para adicionar um novo contêiner. 
 1. Insira o nome do contêiner e anote o nome especificado. Essas informações são usadas na URL (caminho para o arquivo de backup) nas instruções T-SQL mais adiante neste início rápido. 
 1. Escolha **OK**. 
     
     ![Novo contêiner](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
-
   > [!NOTE]
   > A autenticação na conta de armazenamento é necessária para o backup e a restauração do SQL Server, mesmo se você optar por criar um contêiner público. Você também pode criar uma contêiner de modo programático usando APIs REST. Para obter mais informações, consulte [Criar contêiner](https://docs.microsoft.com/rest/api/storageservices/Create-Container)
 
 ## <a name="create-a-test-database"></a>Criar um banco de dados de teste 
+Nesta etapa, crie um banco de dados de teste usando o SSMS (SQL Server Management Studio). 
 
 1. Inicie o [SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md) e conecte-se à instância do SQL Server.
 1. Abra uma janela **Nova Consulta**. 
-1. Execute o seguinte código T-SQL (Transact-SQL) para criar o banco de dados de teste. Atualize o nó **Bancos de Dados** no **Pesquisador de Objetos** para ver o novo banco de dados. 
+1. Execute o seguinte código T-SQL (Transact-SQL) para criar o banco de dados de teste. Atualize o nó **Bancos de Dados** no **Pesquisador de Objetos** para ver o novo banco de dados. Os bancos de dados criados recentemente em uma instância gerenciada do Banco de Dados SQL do Azure têm o TDE habilitado automaticamente, portanto, você precisará desabilitá-lo para continuar. 
 
 ```sql
 USE [master]
 GO
 
+-- Create database
 CREATE DATABASE [SQLTestDB]
 GO
 
+-- Create table in database
 USE [SQLTestDB]
 GO
 CREATE TABLE SQLTest (
@@ -73,7 +75,7 @@ CREATE TABLE SQLTest (
 )
 GO
 
-
+-- Populate table 
 USE [SQLTestDB]
 GO
 
@@ -86,72 +88,149 @@ GO
 
 SELECT * FROM SQLTest
 GO
+
+-- Disable TDE for newly-created databases on a managed instance 
+USE [SQLTestDB];
+GO
+ALTER DATABASE [SQLTestDB] SET ENCRYPTION OFF;
+GO
 ```
 
+## <a name="create-credential"></a>Criar credencial
 
-## <a name="create-a-sql-server-credential"></a>Criar uma credencial do SQL Server
-Uma credencial do SQL Server é um objeto usado para armazenar as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server. Aqui, os processos de backup e restauração do SQL Server usam credenciais para autenticação no serviço de Armazenamento de Blobs do Azure. A Credencial armazena o nome da conta de armazenamento e os valores de **access key** da conta de armazenamento. Depois que a credencial for criada, ela deverá ser especificada na opção WITH CREDENTIAL ao emitir instruções BACKUP/RESTORE. Para obter mais informações sobre credenciais, consulte [Credenciais](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine). 
+Use a GUI no SQL Server Management Studio para criar a credencial seguindo as etapas abaixo. Como alternativa, você também pode criar a credencial [programaticamente](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature). 
 
-  > [!IMPORTANT]
-  > Os requisitos para criar uma credencial do SQL Server descritos abaixo são específicos dos processos do backup do SQL Server ([Backup do SQL Server para URL](backup-restore/sql-server-backup-to-url.md)e [Backup gerenciado do SQL Server no Microsoft Azure](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). O SQL Server usa o nome da conta de armazenamento e as informações da chave de acesso ao acessar o armazenamento do Azure para gravar ou ler backups.
+1. Expanda o nó **Banco de dados** no **Pesquisador de Objetos** do [SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md).
+1. Clique com o botão direito do mouse no novo banco de dados `SQLTestDB`, focalize **Tarefas** e, em seguida, selecione **Fazer backup...** para iniciar o assistente de **Backup do Banco de Dados**. 
+1. Selecione **URL** na lista suspensa de destino **Backup até** e, em seguida, selecione **Adicionar** para iniciar a caixa de diálogo **Selecionar destino de backup**. 
 
-### <a name="access-keys"></a>Chaves de acesso
-Você precisará das chaves de acesso para a conta de armazenamento para criar a credencial. 
+   ![Fazer backup na URL](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
 
-1. Navegue até a **Conta de Armazenamento** no portal do Azure. 
-1. Selecione **Chaves de Acesso** em **Configurações**. 
-1. Salve a chave e a cadeia de conexão para usar mais adiante neste início rápido. 
+1. Selecione o **Novo contêiner** na caixa de diálogo **Selecionar destino do backup** para iniciar a janela **Conectar-se a uma Assinatura da Microsoft**. 
 
-   ![Chaves de acesso](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/access-keys.png)
+   ![Destino do backup](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-backup-destination.png)
 
-### <a name="create-a-sql-server-credential"></a>Criar uma credencial do SQL Server
-Usando a chave de acesso que você salvou, crie a credencial do SQL Server seguindo as etapas a seguir. 
+1. Entre no portal do Azure selecionando **Entrar...** e, em seguida, prossiga com o processo de entrada. 
+1. Selecione sua **assinatura** na lista suspensa. 
+1. Selecione sua **conta de armazenamento** na lista suspensa. 
+1. Selecione o contêiner que você criou anteriormente na lista suspensa. 
+1. Selecione **Criar credencial** para gerar sua *SAS (assinatura de acesso compartilhado)* .  **Salve esse valor, pois você precisará dele para a restauração.**
 
-1. Conecte-se ao seu SQL Server usando o SQL Server Management Studio. 
-1. Selecione o banco de dados **SQLTestDB** e abra uma janela **Nova Consulta**. 
-1. Copie, cole e execute o exemplo a seguir na janela de consulta, modificando conforme necessário: 
+   ![Criar credencial](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/create-credential.png)
 
-   ```sql
-   CREATE CREDENTIAL mycredential   
-   WITH IDENTITY= 'msftutorialstorage', -- this is the name of the storage account you specified when creating a storage account   
-   SECRET = '<storage account access key>' -- this should be either the Primary or Secondary Access Key for the storage account 
-   ```
+1. Selecione **OK** para fechar a janela **Conectar-se a uma Assinatura da Microsoft**. Isso preenche o valor do *contêiner de armazenamento do Azure* na caixa de diálogo **Selecionar destino do backup**. Selecione **OK** para escolher o contêiner de armazenamento selecionado e feche a caixa de diálogo. 
+1. Neste ponto, você pode pular para a etapa 4 na próxima seção para fazer o backup do banco de dados ou pode fechar o assistente de **Backup do banco de dados**, caso deseje continuar usando o Transact-SQL para fazer backup do banco de dados. 
 
-1. Execute a instrução para criar a credencial. 
 
-## <a name="back-up-database-to-the-azure-blob-storage-service"></a>Fazer backup do banco de dados no serviço de Armazenamento de Blobs do Azure
-Nesta seção, você usará uma instrução T-SQL para executar um backup completo de banco de dados no serviço de Armazenamento de Blobs do Azure. 
+## <a name="back-up-database"></a>Backup do banco de dados
+Nesta etapa, faça o backup do banco de dados `SQLTestDB` em sua conta de armazenamento de Blob do Azure usando a GUI do SQL Server Management Studio ou o T-SQL (Transact-SQL). 
 
-1. Conecte-se ao seu SQL Server usando o SQL Server Management Studio. 
-1. Selecione o banco de dados **SQLTestDB** e abra uma janela **Nova Consulta**. 
-1. Copie e cole o exemplo a seguir na janela de consulta, modificando conforme necessário: 
+# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
 
-     ```sql
-     BACKUP DATABASE [SQLTestDB] 
-     TO URL = 'https://msftutorialstorage.blob.core.windows.net/sql-backup/SQLTestDB.bak' 
-     /* URL includes the endpoint for the BLOB service, followed by the container name, and the name of the backup file*/ 
-     WITH CREDENTIAL = 'mycredential';
-     /* name of the credential you created in the previous step */ 
-     GO
-     ```
+1. Se o assistente de **Backup do banco de dados** ainda não estiver aberto, expanda o nó **Banco de dados** no **Pesquisador de Objetos** do [SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md).
+1. Clique com o botão direito do mouse no novo banco de dados `SQLTestDB`, focalize **Tarefas** e, em seguida, selecione **Fazer backup...** para iniciar o assistente de **Backup do Banco de Dados**. 
+1. Selecione **URL** na lista suspensa de **Backup até** e, em seguida, selecione **Adicionar** para iniciar a caixa de diálogo **Selecionar destino de backup**. 
 
-1. Execute a instrução para fazer backup do banco de dados SQLTestDB na URL. 
+   ![Fazer backup na URL](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
 
- 
-## <a name="restore-database-from-azure-blob-storage-service"></a>Restaurar banco de dados do serviço de Armazenamento de Blobs do Azure
-Nesta seção, você usará uma instrução T-SQL para restaurar o backup do banco de dados completo. 
+1. Selecione o contêiner que você criou na etapa anterior na lista suspensa do **Contêiner de armazenamento do Azure**. 
 
-1. Conecte-se ao seu SQL Server usando o SQL Server Management Studio. 
-1. Abra uma janela **Nova Consulta**. 
-1. Copie e cole o exemplo a seguir na janela de consulta, modificando conforme necessário: 
+   ![Contêiner de armazenamento do Azure](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/azure-storage-container.png)
 
- ```sql
- RESTORE DATABASE [SQLTestDB] 
- FROM URL = 'https://msftutorialstorage.blob.core.windows.net/sql-backup/SQLTestDB.bak' 
- WITH CREDENTIAL = 'mycredential',
- STATS = 5 -- use this to see monitor the progress
- GO
- ``` 
+1. Selecione **OK** no assistente de **Backup do banco de dados** para fazer backup do seu banco de dados. 
+1. Selecione **OK** depois que o backup do banco de dados for concluído com êxito para fechar todas as janelas relacionadas ao backup. 
+
+   > [!TIP]
+   > Você pode gerar o script do Transact-SQL por trás desse comando selecionando **Script** na parte superior do assistente de **Backup do banco de dados**: ![Comando de script](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
+
+
+# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+
+Faça backup do banco de dados usando o Transact-SQL executando o seguinte comando: 
+
+
+```sql
+USE [master]
+
+BACKUP DATABASE [SQLTestDB] 
+TO  URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_backup_2020_01_01_000001.bak' 
+WITH  COPY_ONLY, CHECKSUM
+GO
+```
+
+---
+
+## <a name="delete-database"></a>Excluir banco de dados
+Nesta etapa, exclua o banco de dados antes de executar a restauração. Esta etapa é necessária apenas para fins deste tutorial, mas é improvável que seja usada em procedimentos normais de gerenciamento de banco de dados. Você pode ignorar esta etapa, mas precisará alterar o nome do banco de dados durante a restauração em uma instância gerenciada ou executar o comando restore `WITH REPLACE` para restaurar com sucesso o banco de dados no local. 
+
+# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+
+1. Expanda o nó **Banco de dados** no **Pesquisador de Objetos**, clique com o botão direito do mouse no banco de dados `SQLTestDB` e selecione excluir para iniciar o assistente **Excluir objeto**. 
+1. Em uma instância gerenciada, selecione **OK** para excluir o banco de dados. No local, marque a caixa de seleção ao lado de **Fechar conexões existentes** e, em seguida, selecione **OK** para excluir o banco de dados. 
+
+# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+
+Exclua o banco de dados executando o seguinte comando Transact-SQL:
+
+```sql
+USE [master]
+GO
+DROP DATABASE [SQLTestDB]
+GO
+
+-- If connections currently exist on-premises, you'll need to set the database into single user mode first
+USE [master]
+GO
+ALTER DATABASE [SQLTestDB] SET  SINGLE_USER WITH ROLLBACK IMMEDIATE
+GO
+USE [master]
+GO
+DROP DATABASE [SQLTestDB]
+GO
+```
+
+---
+
+
+## <a name="restore-database"></a>Restaurar Banco de Dados 
+Nesta etapa, restaure o banco de dados usando a GUI no SQL Server Management Studio ou o Transact-SQL. 
+
+# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+
+1. Clique com o botão direito do mouse no nó **Banco de dados** no **Pesquisador de Objetos** do SQL Server Management Studio e selecione **Restaurar o banco de dados**. 
+1. Selecione **Dispositivo** e, em seguida, selecione as reticências (...) para escolher o dispositivo. 
+
+   ![Selecionar o dispositivo de restauração](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-restore-device.png)
+
+1. Selecione a **URL** na lista suspensa **Tipo de mídia de backup** e selecione **Adicionar** para adicionar seu dispositivo. 
+
+   ![Adicionar o dispositivo de backup](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/add-backup-device.png)
+
+1. Selecione o contêiner na lista suspensa e cole a SAS (Assinatura de Acesso Compartilhado) que você salvou ao criar a credencial. 
+
+   ![Destino do backup](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/restore-from-container.png)
+
+1. Selecione **OK** para selecionar o local do arquivo de backup. 
+1. Expanda **Containers** e selecione o contêiner no qual o arquivo de backup existe. 
+1. Selecione o arquivo de backup que deseja restaurar e, em seguida, selecione **OK**. Se não houver nenhum arquivo visível, pode ser que você esteja usando a chave SAS incorreta. Você pode gerar novamente a chave SAS seguindo as mesmas etapas de antes para adicionar o contêiner. 
+
+   ![Selecionar o arquivo de restauração](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-restore-file.png)
+
+1. Clique em **OK** para fechar a caixa de diálogo **Selecionar dispositivos de backup**. 
+1. Selecione **OK** para restaurar o banco de dados. 
+
+# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+
+Para restaurar seu banco de dados local do armazenamento de Blob do Azure, modifique o comando Transact-SQL a seguir para usar sua própria conta de armazenamento e, em seguida, execute-o em uma nova janela de consulta. 
+
+```sql
+USE [master]
+RESTORE DATABASE [SQLTestDB] FROM 
+URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_backup_2020_01_01_000001.bak'
+```
+
+---
+
 
 ## <a name="see-also"></a>Confira também 
 Estas são algumas leituras que podem ajudar a compreender os conceitos e as práticas recomendadas ao usar o serviço de armazenamento de Blobs do Azure para backups do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: a2b4899d3485af4a499c5018a8889a6ec37bbbbb
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.openlocfilehash: eaad7e6f3e66bb39ec43f402c531b7f89bdcf980
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211390"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251387"
 ---
 # <a name="dbcc-help-transact-sql"></a>DBCC HELP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *dbcc_statement* |  *@dbcc_statement_var*  
+ *dbcc_statement* |  *\@dbcc_statement_var*  
  É o nome do comando DBCC para o qual receber informações de sintaxe. Forneça somente a parte do comando DBCC que segue DBCC, por exemplo, CHECKDB em vez de DBCC CHECKDB.  
   
  ?  

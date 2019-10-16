@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fd8f7ff879e3e5a6ec2729abce4c294f69ad2c83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d79c212b1bc960f46e816ad6d99ee4ee24722eac
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087105"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251286"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lição 1: Criar e aplicar uma política desativada por padrão
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ Para concluir este tutorial, é necessário ter o SQL Server Management Studio e
   
 2.  Na caixa de diálogo **Criar Nova Condição** , na caixa **Nome** , digite **Correspondência Desativada**.   
     1. Na caixa **Faceta** , confirme se a faceta **Configuração da Área da Superfície** está selecionada.
-    1. Na caixa de diálogo **Expressão** , na caixa **Campo** , selecione **@DatabaseMailEnabled** , na caixa **Operador** , selecione **=** e, em **Valor** , selecione **False**.  
+    1. Na área **Expressão**, na caixa **Campo**, selecione **\@DatabaseMailEnabled**, na caixa **Operador**, selecione **=** e, em **Valor**, selecione **False**.  
     1. Na página **Descrição** , digite uma descrição da condição e clique em **OK** para criar a condição.  
 
     ![Condição de correio desativado](Media/lesson-1-create-and-apply-an-off-by-default-policy/mail-off-condition.png) 

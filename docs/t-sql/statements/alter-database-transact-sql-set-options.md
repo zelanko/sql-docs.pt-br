@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 9f1aefd6b05e5bace4bfc296c14c881645030f5e
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 330fa479beb3dc86ba290d36baa54870e8e61d6e
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952750"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251360"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL)
 
@@ -3029,18 +3029,36 @@ ON
 Especifica que os conjuntos de resultados de consulta retornados desse banco de dados serão armazenados em cache no armazenamento do SQL Data Warehouse do Azure.
 
 OFF        
-Especifica que os conjuntos de resultados de consulta retornados desse banco de dados não serão armazenados em cache no armazenamento do SQL Data Warehouse do Azure. Os usuários podem determinar se uma consulta foi executada com um acerto ou erro do cache de resultados, consultando sys.pdw_request_steps com um request_id específico.   Se houver um acerto de cache, o resultado da consulta terá uma única etapa com os seguintes detalhes:
-
-|**Nome da coluna** |**Operador** |**Value** |
-|----|----|----|
-| operation_type|=|ReturnOperation|
-|step_index|=|0|
-|location_type|=|Control|
-command|Como|%DWResultCacheDb%|
-| | |
+Especifica que os conjuntos de resultados de consulta retornados desse banco de dados não serão armazenados em cache no armazenamento do SQL Data Warehouse do Azure. 
 
 ### <a name="remarks"></a>Remarks
-Este comando deve ser executado enquanto estiver conectado ao banco de dados `master`.  A alteração dessa configuração de banco de dados entra em vigor imediatamente.  Os custos de armazenamento são incorridos pelo armazenamento em cache dos conjuntos de resultados da consulta. Depois de desabilitar o armazenamento em cache de resultados de um banco de dados, o cache de resultados anteriormente persistente será excluído imediatamente do armazenamento do SQL Data Warehouse do Azure. Uma nova coluna, is_result_set_caching_on, foi introduzida em [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) para mostrar a configuração de cache de resultados para um banco de dados.  
+Este comando deve ser executado enquanto estiver conectado ao banco de dados `master`.  A alteração dessa configuração de banco de dados entra em vigor imediatamente.  Os custos de armazenamento são incorridos pelo armazenamento em cache dos conjuntos de resultados da consulta. Depois de desabilitar o armazenamento em cache de resultados de um banco de dados, o cache de resultados anteriormente persistente será excluído imediatamente do armazenamento do SQL Data Warehouse do Azure. 
+
+Execute este comando para verificar a configuração de cache do conjunto de resultados de um banco de dados.  Se o cache do conjunto de resultados estiver ATIVADO, is_result_set_caching_on retornará 1.
+
+```sql
+
+SELECT name, is_result_set_caching_on FROM sys.databases 
+WHERE name = <'Your_Database_Name'>
+
+```
+
+Execute esse comando para verificar se uma consulta foi executada com uma perda ou ocorrência no cache de resultado.  Se houver uma ocorrência no cache, o result_cache_hit retornará 1. 
+
+```sql
+
+SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests 
+WHERE request_id = <'Your_Query_Request_ID'>
+
+```
+
+Quando o armazenamento em cache do conjunto de resultados estiver ATIVADO para um banco de dados, os resultados serão armazenados em cache para todas as consultas até o cache ficar cheio, exceto para estas consultas:
+
+- Consultas que usam funções não determinísticas, como DateTime.Now() 
+- Consultas que usam funções definidas pelo usuário
+- Consultas que retornam dados com tamanho de linha maior que 64 KB   
+
+Consultas com conjuntos de resultados grandes (por exemplo, > 1 milhão de linhas) podem ter um desempenho mais lento durante a primeira execução durante a criação do cache de resultados.
 
 O conjunto de resultados armazenado em cache será reutilizado em uma consulta se todos os requisitos a seguir forem atendidos:
 
@@ -3048,9 +3066,6 @@ O conjunto de resultados armazenado em cache será reutilizado em uma consulta s
 1. Há uma correspondência exata entre a nova consulta e a anterior que gerou o armazenamento em cache do conjunto de resultados.
 1. Não há alterações de dados ou esquemas nas tabelas em que o conjunto de resultados armazenado em cache foi gerado.  
 
-Quando o armazenamento em cache do conjunto de resultados estiver ATIVADO para um banco de dados, os resultados serão armazenados em cache para todas as consultas até o cache ficar cheio, exceto as consultas que usam funções não determinísticas como DateTime.Now() e as consultas que retornam dados com tamanho de linha superior a 64 KB.   
-
-Consultas com conjuntos de resultados grandes (por exemplo, > 1 milhão de linhas) podem ter um desempenho mais lento durante a primeira execução durante a criação do cache de resultados.
 
 **<snapshot_option> ::=**         
 **Aplica-se ao**: Azure SQL Data Warehouse (versão prévia)

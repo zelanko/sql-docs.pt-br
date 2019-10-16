@@ -1,6 +1,6 @@
 ---
 title: Notas sobre a versão do SQL Server 2019 | Microsoft Docs
-ms.date: 08/21/2019
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: c7efb49870e148b6a854547d39d4a01139829a89
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: 9b6895abfa0b09459911eba03b52837379f2d162
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326123"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041192"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Notas sobre a versão a versão prévia do SQL Server 2019
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -59,6 +59,22 @@ O número de build do SQL Server 2019 RC no Windows, Linux e contêineres é `15
     - Windows Server 2016 ou posterior. Para ver os requisitos adicionais, consulte [Requisitos para instalação do SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
     - Microsoft .NET Framework 4.6.2. Disponível no [Centro de Download](https://www.microsoft.com/download/details.aspx?id=53344).
     - Para Linux, consulte [Linux – plataformas compatíveis](../linux/sql-server-linux-setup.md#supportedplatforms)
+
+## <a name="sql-server-installation-may-fail-if-ssms-18x-is-installed"></a>A instalação do SQL Server poderá falhar se o SSMS 18.x estiver instalado
+
+- **Problema e impacto no cliente**: a instalação do [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] falhará quando as seguintes instalações ocorrerem nesta ordem:
+  1. SSMS (SQL Server Management Studio) versão 18.0, 18.1, 18.2 ou 18.3 está instalado no servidor.
+  1. a instalação de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] é tentada a partir da mídia removível. Por exemplo, a mídia de instalação é um DVD.
+
+- **Solução alternativa**:
+  1. Desinstale todas as versões do SSMS mais antigas que o SSMS 18.3.1.
+  1. Instale uma versão mais recente do SSMS (18.3.1 ou posterior). Para obter a versão mais recente, confira [Baixar o SSMS](../ssms/download-sql-server-management-studio-ssms.md).
+  1. Instale o [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] normalmente.
+
+  >[!NOTE]
+  >A desinstalação é necessária.
+
+- **Aplica-se a**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] versão release candidate.
 
 ## <a name="updated-compiler"></a>Compilador atualizado
 
@@ -111,7 +127,7 @@ O número de build do SQL Server 2019 RC no Windows, Linux e contêineres é `15
 - **Solução alternativa**:  Instale o VC Runtime 2013 mais recente (x86):
 
   - [Verbose](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
-  - [Direto](https://support.microsoft.com/en-us/help/4032938/update-for-visual-c-2013-redistributable-package)
+  - [Direto](https://support.microsoft.com/help/4032938/update-for-visual-c-2013-redistributable-package)
 
 - **Aplica-se ao**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1, CTP 3.0, CTP 2.5.
 
@@ -132,6 +148,10 @@ O número de build do SQL Server 2019 RC no Windows, Linux e contêineres é `15
 - **Solução alternativa**: Abra o portal do MDS e acesse o recurso manualmente.
 
 - **Aplica-se ao**: Versão Release Candidate do SQL Server 2019.
+
+## <a name="machine-learning-services"></a>Serviços de Machine Learning
+
+Para problemas nos Serviços de Machine Learning do SQL Server, confira [Problemas conhecidos nos Serviços de Machine Learning do SQL Server](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md).
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 
