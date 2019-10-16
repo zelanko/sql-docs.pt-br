@@ -1,7 +1,7 @@
 ---
 title: Definir ou alterar a ordenação de banco de dados | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/11/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -13,19 +13,19 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3411477bbb183c7b9585f0cb93afde0b2bfebc6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5fe614dc28c434a068378d256a6e1c7aaa59e6d6
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140853"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289348"
 ---
 # <a name="set-or-change-the-database-collation"></a>Definir ou alterar a ordenação de banco de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Este tópico descreve como definir e alterar a ordenação de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se nenhuma ordenação for especificada, será usada a ordenação do servidor.  
  
 > [!NOTE]
-> A ordenação não poderá ser alterada depois que o banco de dados tiver sido criado em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> A ordenação não poderá ser alterada usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] depois que o banco de dados tiver sido criado em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Ela só pode ser alterada por meio de [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
  **Neste tópico**  
   
@@ -51,30 +51,28 @@ ms.locfileid: "68140853"
   
 -   Se a ordenação especificada ou a ordenação usada pelo objeto referenciado usar uma página de código sem suporte no Windows, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] exibirá um erro.  
 
--   A ordenação não poderá ser alterada depois que o banco de dados tiver sido criado em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+-   A ordenação não poderá ser alterada usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] depois que o banco de dados tiver sido criado em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Ela só pode ser alterada por meio de [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   Você pode encontrar os nomes de ordenação com suporte no [Windows Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [SQL Server Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md) ou pode usar a função do sistema [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) .  
+Você pode encontrar os nomes de ordenação com suporte no [Windows Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [SQL Server Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md) ou pode usar a função do sistema [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) .  
   
--   Ao alterar a ordenação de banco de dados, você altera o seguinte:  
+Ao alterar a ordenação de banco de dados, você altera o seguinte:  
   
-    -   Qualquer coluna **char**, **varchar**, **text**, **nchar**, **nvarchar** ou **ntext** nas tabelas do sistema são alteradas para a nova ordenação.  
+-   Qualquer coluna **char**, **varchar**, **text**, **nchar**, **nvarchar** ou **ntext** nas tabelas do sistema são alteradas para a nova ordenação.  
   
-    -   Todos os parâmetros **char**, **varchar**, **text**, **nchar**, **nvarchar** ou **ntext** e valores de retorno escalar para procedimentos armazenados e funções definidas pelo usuário existentes são alterados para a nova ordenação.  
+-   Todos os parâmetros **char**, **varchar**, **text**, **nchar**, **nvarchar** ou **ntext** e valores de retorno escalar para procedimentos armazenados e funções definidas pelo usuário existentes são alterados para a nova ordenação.  
   
-    -   Os tipos de dados do sistema **char**, **varchar**, **text**, **nchar**, **nvarchar** ou **ntext** e todos os tipos de dados definidos pelo usuário com base nesses tipos de dados do sistema são alterados para a nova ordenação padrão.  
+-   Os tipos de dados do sistema **char**, **varchar**, **text**, **nchar**, **nvarchar** ou **ntext** e todos os tipos de dados definidos pelo usuário com base nesses tipos de dados do sistema são alterados para a nova ordenação padrão.  
   
--   Você pode alterar a ordenação de qualquer novo objeto que seja criado em um banco de dados de usuário, usando a cláusula COLLATE da instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Essa instrução não altera a ordenação das colunas em nenhuma tabela existente definida pelo usuário. Essas podem ser alteradas usando-se a cláusula COLLATE de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+Você pode alterar a ordenação de qualquer novo objeto que seja criado em um banco de dados de usuário usando a cláusula `COLLATE` da instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Essa instrução **não altera** a ordenação das colunas em nenhuma tabela existente definida pelo usuário. Isso pode ser alterado usando a cláusula `COLLATE` de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- CREATE DATABASE  
- Requer a permissão CREATE DATABASE no banco de dados **mestre** ou requer a permissão CREATE ANY DATABASE ou ALTER ANY DATABASE.  
+ A criação de um novo banco de dados requer a permissão `CREATE DATABASE` no banco de dados **mestre** ou as permissões `CREATE ANY DATABASE` ou `ALTER ANY DATABASE`.  
   
- ALTER DATABASE  
- Requer a permissão ALTER no banco de dados.  
+ A alteração da ordenação de um banco de dados existente requer a permissão `ALTER` no banco de dados.  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
@@ -113,7 +111,6 @@ SELECT name, collation_name
 FROM sys.databases  
 WHERE name = N'MyOptionsTest';  
 GO  
-  
 ```  
   
 #### <a name="to-change-the-database-collation"></a>Para alterar a ordenação de banco de dados  
@@ -136,7 +133,6 @@ SELECT name, collation_name
 FROM sys.databases  
 WHERE name = N'MyOptionsTest';  
 GO  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte Também  

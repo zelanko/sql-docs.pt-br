@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1d510ad8d52aedb46cf591712467c22c0929c42e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8eb8570d260b1e30d3c0ecafa0f3bfd15065983
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051264"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278165"
 ---
 # <a name="query-method-xml-data-type"></a>Método consulta() (Tipo de dados xml)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ XQuery
 Esta seção fornece exemplos de uso do método query() do tipo de dados **xml**.  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. Usando o método query() em relação a uma variável de tipo xml  
-O exemplo a seguir declara uma variável **@myDoc** do tipo **xml** e atribui uma instância XML a ela. O método **query()** é, em seguida, usado para especificar uma consulta XQuery no documento.  
+O exemplo a seguir declara uma variável **\@myDoc** do tipo **xml** e atribui uma instância XML a essa variável. O método **query()** é, em seguida, usado para especificar uma consulta XQuery no documento.  
   
 A consulta recupera o elemento filho <`Features`> do elemento <`ProductDescription`>:  
   

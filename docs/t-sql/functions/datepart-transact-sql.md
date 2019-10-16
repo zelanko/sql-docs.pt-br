@@ -27,12 +27,12 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b9443f1c33a89dd5eb51c143f23e65c2a12e3d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cfb568170a549fe7c952807e7aa7dda6b7fca854
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119140"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278198"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +95,7 @@ Cada *datepart* retorna o mesmo valor das abreviações dela.
   
 O valor retornado depende do ambiente de idioma definido por meio da instrução [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) e por [Configurar a opção de configuração do servidor de idioma padrão](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) do logon. O valor retornado depende de [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) se *date* é uma literal de cadeia de caracteres de alguns formatos. SET DATEFORMAT não altera o valor retornado quando a data é uma expressão de coluna de um tipo de dados de data ou de hora.
   
-Esta tabela lista todos os argumentos *datepart* com valores retornados correspondentes para a instrução `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')`. O argumento *date* tem um tipo de dados **datetimeoffset(7)** . As duas últimas posições do valor retornado **nanosecond** *datepart* são sempre `00` e esse valor tem uma escala de 9:
+Esta tabela lista todos os argumentos *datepart* com valores retornados correspondentes para a instrução `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')`. O argumento *date* tem um tipo de dados **datetimeoffset(7)**. As duas últimas posições do valor retornado **nanosecond** *datepart* são sempre `00` e esse valor tem uma escala de 9:
 
 **.123456700**
   
@@ -150,7 +150,7 @@ funciona como o padrão. Depois de definir DATEFIRST, use essa instrução SQL s
 ## <a name="year-month-and-day-datepart-arguments"></a>Argumentos year, month e day de datepart  
 Os valores retornados para DATEPART (**year**, *date*), DATEPART (**month**, *date*) e DATEPART (**day**, *date*) são iguais aos retornados pelas funções [YEAR](../../t-sql/functions/year-transact-sql.md), [MONTH](../../t-sql/functions/month-transact-sql.md) e [DAY](../../t-sql/functions/day-transact-sql.md), respectivamente.
   
-## <a name="isoweek-datepart"></a>Datepart ISO_WEEK  
+## <a name="iso_week-datepart"></a>Datepart ISO_WEEK  
 O ISO 8601 inclui o sistema de data de semana ISO, um sistema de numeração para semanas. Cada semana está associada ao ano em que ocorre a quinta-feira. Por exemplo, a semana 1 de 2004 (2004W01) vai da segunda-feira 29 de dezembro de 2003 ao sábado 4 de janeiro de 2004. Países/regiões da Europa normalmente usam esse estilo de numeração. Países/regiões não europeus normalmente não o usam.
 
 Observação: o maior número de semana em um ano pode ser 52 ou 53.
@@ -194,7 +194,7 @@ SELECT DATEPART(year, '12:10:30.123')
     ,DATEPART(weekday, '12:10:30.123');  
 ```  
   
-Se *date* é especificada como uma variável ou coluna de tabela e o tipo de dados dessa variável ou coluna não tem a *datepart* especificada, `DATEPART` retorna o erro 9810. Neste exemplo, a variável *@t* tem um tipo de dados **time**. O exemplo falha porque o ano da parte de data é inválido para o tipo de dados **time**:
+Se *date* é especificada como uma variável ou coluna de tabela e o tipo de dados dessa variável ou coluna não tem a *datepart* especificada, `DATEPART` retorna o erro 9810. Neste exemplo, a variável *\@t* tem um tipo de dados **time**. O exemplo falha porque o ano da parte de data é inválido para o tipo de dados **time**:
   
 ```sql
 DECLARE @t time = '12:10:30.123';   

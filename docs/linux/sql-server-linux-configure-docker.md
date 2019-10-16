@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: c70ba17073030f4fbbe4851fffb84a4c4a30fbbc
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 817367c20c2495f29e5d889cc64e5c13a43e9b1e
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988137"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278256"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurar imagens de contêiner do SQL Server no Docker
 
@@ -25,6 +25,9 @@ Este artigo explica como configurar e usar a [imagem de contêiner mssql-server-
 
 > [!NOTE]
 > Este artigo concentra-se especificamente no uso da imagem mssql-server-linux. A imagem do Windows não é abordada, mas há mais informações sobre ela na [página do Docker Hub do mssql-server-windows](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
+
+> [!IMPORTANT]
+> Antes de escolher executar um contêiner de SQL Server para casos de uso de produção, examine nossa [política de suporte para Contêineres do SQL Server](https://support.microsoft.com/en-us/help/4047326/support-policy-for-microsoft-sql-server) para certificar-se de que você está executando uma configuração com suporte.
 
 ## <a name="pull-and-run-the-container-image"></a>Efetuar pull e executar a imagem de contêiner
 
@@ -536,7 +539,7 @@ No Windows, verifique se você está iniciando o PowerShell ou o prompt de coman
 
 Se a execução do contêiner do SQL Server falhar, tente os seguintes testes:
 
-- Se você receber um erro como '**falha ao criar o ponto de extremidade CONTAINER_NAME na ponte de rede. Erro ao iniciar o proxy: listen tcp 0.0.0.0:1433 bind: address já está em uso.'** , você está tentando mapear a porta 1433 do contêiner para uma porta que já está em uso. Isso poderá acontecer se você estiver executando o SQL Server localmente no computador host. Isso também poderá acontecer se você iniciar dois contêineres de SQL Server e tentar mapeá-los para a mesma porta de host. Se isso acontecer, use o parâmetro `-p` para mapear a porta de contêiner 1433 para uma porta de host diferente. Por exemplo: 
+- Se você receber um erro como '**falha ao criar o ponto de extremidade CONTAINER_NAME na ponte de rede. Erro ao iniciar o proxy: listen tcp 0.0.0.0:1433 bind: address já está em uso.'**, você está tentando mapear a porta 1433 do contêiner para uma porta que já está em uso. Isso poderá acontecer se você estiver executando o SQL Server localmente no computador host. Isso também poderá acontecer se você iniciar dois contêineres de SQL Server e tentar mapeá-los para a mesma porta de host. Se isso acontecer, use o parâmetro `-p` para mapear a porta de contêiner 1433 para uma porta de host diferente. Por exemplo: 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

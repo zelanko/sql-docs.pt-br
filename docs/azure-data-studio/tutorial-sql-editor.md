@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: b4778d54fe3853f2560159a83dae42c4fd8e55e2
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 06554c42bb7f98263fe48aa43f2366059ad5541f
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959019"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278240"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: Usar o editor de Transact-SQL para criar objetos de banco de dados – [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -54,7 +54,7 @@ Este tutorial requer o SQL Server ou o *TutorialDB* do Banco de Dados SQL do Azu
 
    ![widget de pesquisa rápida](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. Edite a coluna **Email** na primeira linha, digite *orlando0@adventure-works.com* e pressione **Enter** para salvar a alteração.
+1. Edite a coluna **Email** na primeira linha, digite *orlando0\@adventure-works.com* e pressione **Enter** para salvar a alteração.
 
    ![editar dados](./media/tutorial-sql-editor/edit-data.png)
 
@@ -182,7 +182,7 @@ O procedimento armazenado é criado e o painel **RESULTADOS** exibe o cliente re
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Use Salvar resultados da consulta como JSON para testar o procedimento armazenado setCustomer
 
-O procedimento armazenado *setCustomer* criado na seção anterior requer que dados JSON sejam passados para o parâmetro *@json_val* . Esta seção mostra como obter um trecho de JSON formatado corretamente para passar para o parâmetro para que você possa testar o procedimento armazenado.
+O procedimento armazenado *setCustomer* criado na seção anterior requer que dados JSON sejam passados para o parâmetro *\@json_val*. Esta seção mostra como obter um trecho de JSON formatado corretamente para passar para o parâmetro para que você possa testar o procedimento armazenado.
 
 1. Na barra lateral **SERVIDORES**, clique com o botão direito do mouse na tabela *dbo.Customers* e clique em **Selecionar 1000 Linhas Superiores**.
 

@@ -1,7 +1,7 @@
 ---
 title: Analisar um plano de execução real | Microsoft Docs
 ms.custom: ''
-ms.date: 08/21/2017
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,16 +15,18 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e0f23ceb75856db921e4c6303a8013d351f364e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c94d2d60bf851742aca68d5b7bc25ea4d8afd9c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68219585"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289327"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>Analisar um plano de execução real
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Este tópico descreve como analisar planos de execução gráficos reais usando o recurso de Análise de Plano [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
+
+Este tópico descreve como você pode analisar planos de execução gráficos reais usando o recurso de Análise de Plano [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Este recurso está disponível a partir do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v17.4. Geralmente, recomendamos que você [instale a versão mais recente do SSMS](../../ssms/download-sql-server-management-studio-ssms.md).
 
 > [!NOTE]
 > Os planos de execução reais são gerados depois que as consultas ou lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] são executados. Por isso, um plano de execução real contém informações de tempo de execução, como número real de linhas, métricas de uso de recursos e avisos de tempo de execução (se houver). Para obter mais informações, confira [Exibir um plano de execução real](../../relational-databases/performance/display-an-actual-execution-plan.md).

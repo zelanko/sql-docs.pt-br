@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bf4f3d11eeb9975bb399fc58a0fd52d0d56dc5a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9621d6be1c309930f6104d2193d6127a3167cd7a
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051308"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278150"
 ---
 # <a name="exist-method-xml-data-type"></a>Método exista() (Tipo de dados xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ exist (XQuery)
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]  
->  O método **exist()** retorna 1 para a expressão XQuery que retorna um resultado não vazio. Se você especificar as funções **true()** ou **false()** no método **exist()** , o método **exist()** retornará 1, porque as funções **true()** e **false()** retornam Boolean True e False, respectivamente. Quer dizer, elas retornam um resultado nonempty. Portanto, **exist()** retornará 1 (True), conforme mostrado no seguinte exemplo:  
+>  O método **exist()** retorna 1 para a expressão XQuery que retorna um resultado não vazio. Se você especificar as funções **true()** ou **false()** no método **exist()**, o método **exist()** retornará 1, porque as funções **true()** e **false()** retornam Boolean True e False, respectivamente. Quer dizer, elas retornam um resultado nonempty. Portanto, **exist()** retornará 1 (True), conforme mostrado no seguinte exemplo:  
   
 ```  
 declare @x xml;  
@@ -55,10 +55,10 @@ select @x.exist('true()');
 ```  
   
 ## <a name="examples"></a>Exemplos  
- Os exemplos a seguir mostram como especificar o método **exist()** .  
+ Os exemplos a seguir mostram como especificar o método **exist()**.  
   
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>Exemplo: Especificando o método exist() em uma variável de tipo xml  
- No exemplo a seguir, @xé uma variável de tipo **xml** (xml não tipado) e @f é uma variável de tipo inteiro que armazena o valor retornado pelo método **exist()** . O método **exist()** retorna True (1) se o valor de data armazenado na instância de XML é `2002-01-01`.  
+ No exemplo a seguir, @xé uma variável de tipo **xml** (xml não tipado) e @f é uma variável de tipo inteiro que armazena o valor retornado pelo método **exist()**. O método **exist()** retorna True (1) se o valor de data armazenado na instância de XML é `2002-01-01`.  
   
 ```  
 declare @x xml;  
@@ -68,13 +68,13 @@ set @f = @x.exist('/root[(@Somedate cast as xs:date?) eq xs:date("2002-01-01Z")]
 select @f;  
 ```  
   
- Comparando as datas no método **exist()** , observe o seguinte:  
+ Comparando as datas no método **exist()**, observe o seguinte:  
   
 -   O código `cast as xs:date?` é usado para converter o valor no tipo **xs:date** para fins de comparação.  
   
--   O valor do atributo **@Somedate** é não tipado. Comparando esse valor, ele é implicitamente convertido no tipo do lado direito da comparação, o tipo **xs:date**.  
+-   O valor do atributo **\@Somedate** é não tipado. Comparando esse valor, ele é implicitamente convertido no tipo do lado direito da comparação, o tipo **xs:date**.  
   
--   Em vez de **cast as xs:date()** , use a função de construtor **xs:date()** . Para obter mais informações, consulte [Funções de construtor &#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md).  
+-   Em vez de **cast as xs:date()**, use a função de construtor **xs:date()**. Para obter mais informações, consulte [Funções de construtor &#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md).  
   
  O exemplo a seguir é semelhante ao anterior, com a exceção de que tem um elemento <`Somedate`>.  
   
