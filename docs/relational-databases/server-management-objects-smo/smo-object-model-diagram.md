@@ -14,16 +14,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 004746516545278470515753361b31a1ac38ef47
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "70911273"
 ---
 # <a name="smo-object-model-diagram"></a>Diagrama de modelos de objetos SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Este diagrama mostra a hierarquia de objetos SMO e as relações entre os tipos de objetos. O objeto <xref:Microsoft.SqlServer.Management.Smo.Server> é o objeto de nível superior.  
+  Este diagrama mostra a hierarquia de objetos do SMO e as relações entre os tipos de objeto. O objeto <xref:Microsoft.SqlServer.Management.Smo.Server> é o objeto de nível superior.  
   
  ![Diagrama que mostra as relações hierárquicas](../../relational-databases/server-management-objects-smo/media/object-diagram.gif "Diagrama que mostra as relações hierárquicas")  
   

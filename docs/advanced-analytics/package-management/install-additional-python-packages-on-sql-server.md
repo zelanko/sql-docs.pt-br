@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 90bc0d33b00f77f942dd736ff1e1904f5d2e7396
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 2e3452a6aad04d0d524e4eb0e6bd473fd39a2bf7
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70276459"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542153"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Instalar pacotes do Python com o sqlmlutils
 
@@ -25,7 +25,7 @@ Este artigo descreve como usar funções no pacote [**sqlmlutils**](https://gith
 Para obter mais informações sobre o local do pacote e caminhos de instalação, consulte [obter informações do pacote do Python](../package-management/python-package-information.md).
 
 > [!NOTE]
-> O comando Python `pip install` padrão não é recomendado para adicionar pacotes do Python em SQL Server. Em vez disso, use **sqlmlutils** conforme descrito neste artigo.
+> O comando padrão Python `pip install` não é recomendado para adicionar pacotes do Python no SQL Server. Em vez disso, use **sqlmlutils** conforme descrito neste artigo.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -58,9 +58,9 @@ Para obter mais informações sobre o local do pacote e caminhos de instalação
 
 Para usar o **sqlmlutils**, primeiro você precisa instalá-lo no computador cliente que você usa para se conectar ao SQL Server.
 
-1. Baixe o arquivo zip **sqlmlutils** mais recente https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist do no computador cliente. Não Descompacte o arquivo.
+1. Baixe o arquivo zip **sqlmlutils** mais recente de https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist para o computador cliente. Não Descompacte o arquivo.
 
-1. Abra um **prompt de comando** e execute o comando a seguir para instalar o pacote **sqlmlutils** . Substitua o caminho completo para o arquivo zip **sqlmlutils** que você baixou-este exemplo supõe que o `c:\temp\sqlmlutils_0.6.0.zip`arquivo baixado é.
+1. Abra um **prompt de comando** e execute o comando a seguir para instalar o pacote **sqlmlutils** . Substitua o caminho completo para o arquivo zip **sqlmlutils** que você baixou-este exemplo supõe que o arquivo baixado está `c:\temp\sqlmlutils_0.6.0.zip`.
 
    ```console
    pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.6.0.zip
@@ -76,11 +76,11 @@ Se o computador cliente que você usa para se conectar ao SQL Server tiver acess
 
 1. No computador cliente, abra o **Python** ou um ambiente Python.
 
-1. Use os comandos a seguir para instalar o pacote de **ferramentas de texto** . Substitua suas próprias informações de conexão de banco de dados SQL Server.
+1. Use os comandos a seguir para instalar o pacote de **ferramentas de texto** . Substitua suas próprias informações de conexão de banco de dados SQL Server (se você não usar a autenticação do Windows, adicione parâmetros `uid` e `pwd`).
 
    ```python
    import sqlmlutils
-   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="yoursqluser", pwd="yoursqlpassword")
+   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
    sqlmlutils.SQLPackageManager(connection).install("text-tools")
    ```
 
@@ -96,19 +96,19 @@ Se o computador cliente que você usa para se conectar ao SQL Server não tiver 
    pip download text-tools -d c:\temp\text-tools
    ```
 
-1. Copie a `text-tools` pasta no computador cliente. O exemplo a seguir pressupõe que você o `c:\temp\packages\text-tools`copiou para.
+1. Copie a pasta `text-tools` para o computador cliente. O exemplo a seguir pressupõe que você o copiou para `c:\temp\packages\text-tools`.
 
 #### <a name="on-the-client-computer"></a>No computador cliente
 
 Use **sqlmlutils** para instalar cada pacote (arquivo WHL) encontrado na pasta local que o **Pip** criou. Não importa em que ordem os pacotes são instalados.
 
-Neste exemplo, **Text-Tools** não tem dependências, portanto, há apenas um arquivo da `text-tools` pasta a ser instalada. Por outro lado, um pacote como **scikit** tem 11 dependências, portanto, você encontraria 12 arquivos na pasta (o pacote **scikit** e os 11 pacotes dependentes) e instalaria cada um deles.
+Neste exemplo, **Text-Tools** não tem dependências, portanto, há apenas um arquivo da pasta `text-tools` para instalação. Por outro lado, um pacote como **scikit** tem 11 dependências, portanto, você encontraria 12 arquivos na pasta (o pacote **scikit** e os 11 pacotes dependentes) e instalaria cada um deles.
 
-Execute o script Python a seguir. Substitua suas próprias informações de conexão de banco de dados SQL Server e o caminho de arquivo real e o nome do pacote. Repita a `sqlmlutils.SQLPackageManager` instrução para cada arquivo de pacote na pasta.
+Execute o script Python a seguir. Substitua o caminho de arquivo real e o nome do pacote e suas próprias informações de conexão de banco de dados SQL Server (se você não usar a autenticação do Windows, adicione `uid` e `pwd` parâmetros). Repita a instrução de `sqlmlutils.SQLPackageManager` para cada arquivo de pacote na pasta.
 
 ```python
 import sqlmlutils
-connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="yoursqluser", pwd="yoursqlpassword")
+connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
 sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/text_tools-1.0.0-py3-none-any.whl")
 ```
 
@@ -136,7 +136,7 @@ Se você quiser remover o pacote de **ferramentas de texto** , use o comando do 
 sqlmlutils.SQLPackageManager(connection).uninstall("text-tools")
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 + Para exibir informações sobre os pacotes do Python instalados no SQL Server Serviços de Machine Learning, consulte [obter informações do pacote do Python](../package-management/python-package-information.md).
 

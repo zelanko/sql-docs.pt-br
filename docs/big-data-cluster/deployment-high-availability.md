@@ -1,7 +1,7 @@
 ---
 title: Implantar SQL Server Cluster de Big data com alta disponibilidade
 titleSuffix: Deploy SQL Server Big Data Cluster with high availability
-description: Saiba como implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versão prévia) no com alta disponibilidade.
+description: Saiba como implantar SQL Server Cluster de Big data com alta disponibilidade.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4053ac15309b821a9cf50cf067ad459256369418
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+ms.openlocfilehash: 43d651c46282d7de0ffdd60f326740e7821b9bbe
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71823584"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542164"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Implantar SQL Server Cluster de Big data com alta disponibilidade
 
@@ -26,23 +26,23 @@ Além disso, outras tarefas de administração, como a configuração de pontos 
 
 Aqui estão alguns dos recursos que os grupos de disponibilidade habilitam:
 
-1. Se as configurações de alta disponibilidade forem especificadas no arquivo de configuração de implantação, um único grupo `containedag` de disponibilidade chamado será criado. Por padrão, `containedag` o tem três réplicas, incluindo a primária. Todas as operações CRUD para o grupo de disponibilidade são gerenciadas internamente.
-1. Todos os bancos de dados são adicionados automaticamente ao grupo de disponibilidade, `master` incluindo `msdb`e. Bancos de dados de configuração do polybase não são incluídos no grupo de disponibilidade porque incluem metadados de nível de instância específicos para cada réplica.
-1. Um ponto de extremidade externo é provisionado automaticamente para se conectar aos bancos de dados AG. Esse ponto `master-svc-external` de extremidade desempenha a função do ouvinte AG.
+1. Se as configurações de alta disponibilidade forem especificadas no arquivo de configuração de implantação, um único grupo de disponibilidade chamado `containedag` será criado. Por padrão, `containedag` tem três réplicas, incluindo a primária. Todas as operações CRUD para o grupo de disponibilidade são gerenciadas internamente.
+1. Todos os bancos de dados são adicionados automaticamente ao grupo de disponibilidade, incluindo `master` e `msdb`. Bancos de dados de configuração do polybase não são incluídos no grupo de disponibilidade porque incluem metadados de nível de instância específicos para cada réplica.
+1. Um ponto de extremidade externo é provisionado automaticamente para se conectar aos bancos de dados AG. Esse ponto de extremidade `master-svc-external` desempenha a função do ouvinte AG.
 1. Um segundo ponto de extremidade externo é provisionado para conexões somente leitura para as réplicas secundárias. 
 
 
-# <a name="deploy"></a>Implantar
+## <a name="deploy"></a>Instalação
 
 Para implantar SQL Server mestre em um grupo de disponibilidade:
 
-1. Habilitar o `hadr` recurso
+1. Habilitar o recurso de `hadr`
 1. Especifique o número de réplicas para o AG (o mínimo é 3)
 1. Configurar os detalhes do segundo ponto de extremidade externo criado para conexões com as réplicas secundárias somente leitura
 
-As etapas a seguir mostram como criar um arquivo de patch que inclui essas configurações e como aplicá-lo a `aks-dev-test` um `kubeadm-dev-test` ou mais perfis de configuração. Estas etapas percorrem um exemplo de como corrigir o `aks-dev-test` perfil para adicionar os atributos de alta disponibilidade. Para uma implantação em um cluster kubeadm, um patch semelhante seria aplicável, mas verifique se você está usando *NodePort* para o **ServiceType** na seção **pontos de extremidade** .
+As etapas a seguir mostram como criar um arquivo de patch que inclui essas configurações e como aplicá-lo a `aks-dev-test` ou `kubeadm-dev-test` perfis de configuração. Estas etapas percorrem um exemplo de como corrigir o perfil de `aks-dev-test` para adicionar os atributos de alta disponibilidade. Para uma implantação em um cluster kubeadm, um patch semelhante seria aplicável, mas verifique se você está usando *NodePort* para o **ServiceType** na seção **pontos de extremidade** .
 
-1. Criar um `patch.json` arquivo
+1. Criar um arquivo de `patch.json`
 
     ```json
     {
@@ -99,7 +99,7 @@ Dependendo do tipo de carga de trabalho que você deseja executar em SQL Server 
 
 ### <a name="connect-to-databases-on-the-primary-replica"></a>Conectar-se a bancos de dados na réplica primária
 
-Para conexões com a réplica primária, use `sql-server-master` o ponto de extremidade. Esse ponto de extremidade também é o ouvinte para o AG. Todas as conexões estão no contexto do grupo de disponibilidade. Por exemplo, uma conexão padrão usando esse ponto de extremidade resultará na conexão `master` com o banco de dados no AG, não `master` no banco de dados de SQL Server instância.
+Para conexões com a réplica primária, use `sql-server-master` ponto de extremidade. Esse ponto de extremidade também é o ouvinte para o AG. Todas as conexões estão no contexto do grupo de disponibilidade. Por exemplo, uma conexão padrão usando esse ponto de extremidade resultará na conexão com o banco de dados `master` no AG, não na instância de SQL Server `master` banco de dados.
 
 ```bash
 azdata bdc endpoint list -e sql-server-master -o table
@@ -115,7 +115,7 @@ azdata bdc endpoint list -e sql-server-master -o table
 
 ### <a name="connect-to-databases-on-the-secondary-replicas"></a>Conectar-se a bancos de dados nas réplicas secundárias
 
-Para conexões somente leitura para bancos de dados em réplicas secundárias, use o `sql-server-master-readonly` ponto de extremidade. Esse ponto de extremidade funciona como um balanceador de carga em todas as réplicas secundárias. Forneça o contexto do banco de dados do usuário na cadeia de conexão.
+Para conexões somente leitura para bancos de dados em réplicas secundárias, use o ponto de extremidade `sql-server-master-readonly`. Esse ponto de extremidade funciona como um balanceador de carga em todas as réplicas secundárias. Forneça o contexto do banco de dados do usuário na cadeia de conexão.
 
 ```bash
 azdata bdc endpoint list -e sql-server-master-readonly -o table
@@ -129,7 +129,7 @@ azdata bdc endpoint list -e sql-server-master-readonly -o table
 
 Para determinadas operações, como definir configurações de nível de servidor ou adicionar manualmente um banco de dados ao grupo de disponibilidade (caso o banco de dados tenha sido criado com um fluxo de trabalho de restauração), você precisa de uma conexão com a instância. Para fornecer essa conexão, expor um ponto de extremidade externo. Aqui está um exemplo que mostra como expor esse ponto de extremidade e, em seguida, adicionar o banco de dados que foi criado com um fluxo de trabalho de restauração ao grupo de disponibilidade.
 
-- Determine o Pod que hospeda a réplica primária conectando-se `sql-server-master` ao ponto de extremidade e execute:
+- Determine o Pod que hospeda a réplica primária conectando-se ao ponto de extremidade `sql-server-master` e execute:
 
     ```sql
     SELECT @@SERVERNAME
@@ -137,7 +137,7 @@ Para determinadas operações, como definir configurações de nível de servido
 
 - Expor o ponto de extremidade externo criando um novo serviço kubernetes
 
-    Para um cluster kubeadm, execute o comando abaixo. Substitua `podName` pelo nome do servidor retornado na etapa anterior, `serviceName` com o nome preferencial para o serviço kubernetes criado e `namespaceName`* com o nome do seu cluster BDC.
+    Para um cluster kubeadm, execute o comando abaixo. Substitua `podName` pelo nome do servidor retornado na etapa anterior, `serviceName` com o nome preferencial para o serviço kubernetes criado e `namespaceName` * pelo nome do seu cluster BDC.
 
     ```bash
     kubectl -n <namespaceName> expose pod <podName> --port=1533  --name=<serviceName> --type=NodePort
@@ -168,7 +168,7 @@ Para determinadas operações, como definir configurações de nível de servido
 >kubectl delete svc master-sql-0 -n mssql-cluster
 >```
 
-- Adicione um banco de dados ao grupo de disponibilidade.
+- Adicione o banco de dados ao grupo de disponibilidade.
 
     Para que o banco de dados seja adicionado ao AG, ele precisa ser executado no modo de recuperação completa e um backup de log deve ser feito. Use o IP do serviço kubernetes criado acima e conecte-se à instância de SQL Server, em seguida, execute as instruções TSQL, conforme mostrado abaixo.
 
@@ -178,7 +178,7 @@ Para determinadas operações, como definir configurações de nível de servido
     ALTER AVAILABILITY GROUP containedag ADD DATABASE <databaseName>
     ```
 
-    O exemplo a seguir adiciona um banco `sales` de dados chamado que foi restaurado na instância:
+    O exemplo a seguir adiciona um banco de dados chamado `sales` que foi restaurado na instância:
 
     ```sql
     ALTER DATABASE sales SET RECOVERY FULL;
@@ -190,11 +190,11 @@ Para determinadas operações, como definir configurações de nível de servido
 
 Estes são os problemas conhecidos e as limitações com grupos de disponibilidade para SQL Server mestre no cluster Big Data:
 
-- Os bancos de dados criados como resultado de fluxos de trabalho `CREATE DATABASE` diferentes `RESTORE`de `CREATE DATABASE FROM SNAPSHOT` like não são adicionados automaticamente ao grupo de disponibilidade. [Conecte-se à instância](#instance-connect) e adicione o banco de dados ao grupo de disponibilidade manualmente.
-- Determinadas operações, como a `sp_configure` execução de definições de configuração do servidor, exigem uma conexão com a instância mestra. Você não pode usar o ponto de extremidade primário correspondente. Siga [as instruções](#instance-connect) para se conectar à instância de SQL Server e `sp_configure`executar.
+- Os bancos de dados criados como resultado de fluxos de trabalho diferentes de `CREATE DATABASE` como `RESTORE`, `CREATE DATABASE FROM SNAPSHOT` não são adicionados automaticamente ao grupo de disponibilidade. [Conecte-se à instância](#instance-connect) e adicione o banco de dados ao grupo de disponibilidade manualmente.
+- Determinadas operações, como a execução de definições de configuração do servidor com `sp_configure` exigem uma conexão com a instância mestra. Você não pode usar o ponto de extremidade primário correspondente. Siga [as instruções](#instance-connect) para se conectar à instância de SQL Server e executar `sp_configure`.
 - A configuração de alta disponibilidade deve ser criada quando o BDC é implantado. Não é possível habilitar a configuração de alta disponibilidade com grupos de disponibilidade após a implantação.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- Para obter mais informações sobre como usar arquivos de configuração no Big data implantações de cluster, consulte [como implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] em kubernetes](deployment-guidance.md#configfile).
+- Para obter mais informações sobre como usar arquivos de configuração no Big Data implantações de cluster, consulte [como implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] em kubernetes](deployment-guidance.md#configfile).
 - Para obter mais informações sobre o recurso de grupos de disponibilidade para SQL Server, consulte [visão geral de Always on grupos de disponibilidade (SQL Server)](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2017).

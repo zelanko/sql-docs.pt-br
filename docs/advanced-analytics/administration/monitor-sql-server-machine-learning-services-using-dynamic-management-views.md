@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 8333da0bd3b5b4ad4f0b377edec110e30565c273
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "71713186"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Monitorar SQL Server Serviços de Machine Learning usando DMVs (exibições de gerenciamento dinâmico)
@@ -31,24 +31,24 @@ Neste artigo, você encontrará as DMVs específicas para SQL Server Serviços d
 + Resource Governor pools de recursos, incluindo pools de recursos externos
 + Pacotes instalados para Python e R
 
-Para obter mais informações gerais sobre DMVs, consulte exibições de [gerenciamento dinâmico do sistema](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).
+Para obter mais informações gerais sobre DMVs, consulte [exibições de gerenciamento dinâmico do sistema](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).
 
 > [!TIP]
 > Você também pode usar os relatórios personalizados para monitorar SQL Server Serviços de Machine Learning. Para obter mais informações, consulte [monitorar o Machine Learning usando relatórios personalizados no Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
 ## <a name="dynamic-management-views"></a>Exibições de gerenciamento dinâmico
 
-As exibições de gerenciamento dinâmico a seguir podem ser usadas ao monitorar cargas de trabalho de Machine Learning no SQL Server. Para consultar as DMVs, você precisa `VIEW SERVER STATE` de permissão na instância.
+As exibições de gerenciamento dinâmico a seguir podem ser usadas ao monitorar cargas de trabalho de Machine Learning no SQL Server. Para consultar as DMVs, você precisará de `VIEW SERVER STATE` permissão na instância.
 
-| Exibição de gerenciamento dinâmico | type | Descrição |
+| Exibição de gerenciamento dinâmico | Escreva | Description |
 |-------------------------|------|-------------|
-| [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Execução | Retorna uma linha para cada conta de trabalho ativa que executa um script externo. |
-| [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Execução | Retorna uma linha para cada tipo de solicitação de script externo. |
-| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | Execução | Retorna uma linha por contador de desempenho mantido pelo servidor. Se você usar o critério `WHERE object_name LIKE '%External Scripts%'`de pesquisa, poderá usar essas informações para ver quantos scripts foram executados, quais scripts foram executado usando qual modo de autenticação ou quantas chamadas de R ou Python foram emitidas na instância em geral. |
-| [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) | Administrador de Recursos | Retorna informações sobre o estado atual do pool de recursos externos no Resource Governor, a configuração atual de pools de recursos e as estatísticas do pool de recursos. |
-| [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | Administrador de Recursos | Retorna informações de afinidade de CPU sobre a configuração atual do pool de recursos externos no Resource Governor. Retorna uma linha por agendador no [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], onde cada agendador é mapeado para um processador individual. Use esta exibição para monitorar a condição de um agendador ou para identificar tarefas sem controle. |
+| [sys. dm _external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Chão | Retorna uma linha para cada conta de trabalho ativa que está executando um script externo. |
+| [sys. dm _external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Chão | Retorna uma linha para cada tipo de solicitação de script externo. |
+| [sys. dm _os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | Chão | Retorna uma linha por contador de desempenho mantida pelo servidor. Se você usar o critério de pesquisa `WHERE object_name LIKE '%External Scripts%'`, poderá usar essas informações para ver quantos scripts foram executados, quais scripts foram executado usando o modo de autenticação ou quantas chamadas de R ou Python foram emitidas na instância em geral. |
+| [sys. dm _resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) | Administrador de Recursos | Retorna informações sobre o estado atual do pool de recursos externos no Resource Governor, a configuração atual de pools de recursos e as estatísticas do pool de recursos. |
+| [sys. dm _resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | Administrador de Recursos | Retorna informações de afinidade de CPU sobre a configuração atual do pool de recursos externos no Resource Governor. Retorna uma linha por Agendador em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] onde cada Agendador é mapeado para um processador individual. Use esta exibição para monitorar a condição de um Agendador ou para identificar tarefas de fuga. |
 
-Para obter informações sobre [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] como monitorar instâncias, consulte exibições de [Catálogo](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) e [resource governor exibições de gerenciamento dinâmico relacionadas](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).
+Para obter informações sobre como monitorar instâncias de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], consulte [exibições de catálogo](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) e [resource governor exibições de gerenciamento dinâmico relacionadas](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).
 
 ## <a name="settings-and-configuration"></a>Configurações e configuração
 
@@ -78,7 +78,7 @@ WHERE name = 'external scripts enabled';
 
 A consulta retorna as seguintes colunas:
 
-| coluna | Descrição |
+| Pilha | Description |
 |--------|-------------|
 | IsMLServicesInstalled | Retornará 1 se SQL Server Serviços de Machine Learning for instalado para a instância. Caso contrário, retornará 0. |
 | ExternalScriptsEnabled | Retornará 1 se scripts externos estiverem habilitados para a instância. Caso contrário, retornará 0. |
@@ -106,24 +106,24 @@ ON s.session_id = r.session_id;
 
 A consulta retorna as seguintes colunas:
 
-| coluna | Descrição |
+| Pilha | Description |
 |--------|-------------|
 | session_id | Identifica a sessão associada a cada conexão primária ativa. |
-| blocking_session_id | ID da sessão que está bloqueando a solicitação. Se esta coluna for NULL, a solicitação não estará bloqueada ou as informações da sessão de bloqueio não estarão disponíveis (ou não podem ser identificadas). |
-| status | Status da solicitação. |
+| blocking_session_id | ID da sessão que está bloqueando a solicitação. Se esta coluna for nula, a solicitação não será bloqueada ou as informações de sessão da sessão de bloqueio não estarão disponíveis (ou não poderão ser identificadas). |
+| Estado | Status da solicitação. |
 | database_name | Nome do banco de dados atual para cada sessão. |
 | login_name | SQL Server nome de logon sob o qual a sessão está em execução no momento. |
-| wait_time | Se a solicitação estiver bloqueada, esta coluna retornará a duração, em milissegundos, da espera atual. Não permite valor nulo. |
-| wait_type | Se a solicitação estiver bloqueada, esta coluna retornará o tipo de espera. Para obter informações sobre os tipos de esperas, consulte [Sys. dm _os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). |
-| last_wait_type | Se esta solicitação tiver sido previamente bloqueada, esta coluna retornará o tipo da última espera. |
-| total_elapsed_time | Tempo total decorrido em milissegundos desde que a solicitação chegou. |
-| cpu_time | Tempo da CPU, em milissegundos, usado pela solicitação. |
-| reads | Número de leituras executadas por esta solicitação. |
-| logical_reads | Número de leituras lógicas executadas pela solicitação. |
-| writes | Número de gravações executadas por esta solicitação. |
-| language | Palavra-chave que representa uma linguagem de script com suporte. |
-| degree_of_parallelism | Número que indica o número de processos paralelos que foram criados. Esse valor pode ser diferente do número de processos paralelos solicitados. |
-| external_user_name | A conta de trabalho do Windows na qual o script foi executado. |
+| wait_time | Se a solicitação estiver bloqueada no momento, essa coluna retornará a duração em milissegundos da espera atual. Não permite valor nulo. |
+| wait_type | Se a solicitação estiver bloqueada no momento, essa coluna retornará o tipo de espera. Para obter informações sobre os tipos de esperas, consulte [Sys. dm _os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). |
+| last_wait_type | Se essa solicitação tiver sido bloqueada anteriormente, essa coluna retornará o tipo da última espera. |
+| total_elapsed_time | Tempo total decorrido em milissegundos desde a chegada da solicitação. |
+| cpu_time | Tempo de CPU em milissegundos que é usado pela solicitação. |
+| pareça | Número de leituras executadas por essa solicitação. |
+| logical_reads | Número de leituras lógicas que foram executadas pela solicitação. |
+| registra | Número de gravações executadas por essa solicitação. |
+| idioma | Palavra-chave que representa uma linguagem de script com suporte. |
+| degree_of_parallelism | Número que indica o número de processos paralelos que foram criados. Esse valor pode ser diferente do número de processos paralelos que foram solicitados. |
+| external_user_name | A conta de trabalho do Windows sob a qual o script foi executado. |
 
 ## <a name="execution-statistics"></a>Estatísticas de execução
 
@@ -142,11 +142,11 @@ ORDER BY language, counter_name;
 
 A consulta retorna as seguintes colunas:
 
-| coluna | Descrição |
+| Pilha | Description |
 |--------|-------------|
-| language | Nome da linguagem de script externo registrada. |
+| idioma | Nome da linguagem de script externo registrada. |
 | counter_name | Nome de uma função de script externo registrada. |
-| counter_value | Número total de instâncias nas quais a função de script externo registrada foi chamada no servidor. Esse valor é cumulativo, começando com a hora em que o recurso foi instalado na instância, e não pode ser redefinido. |
+| counter_value | Número total de instâncias em que a função de script externo registrada foi chamada no servidor. Esse valor é cumulativo, começando com a hora em que o recurso foi instalado na instância do e não pode ser redefinido. |
 
 ## <a name="performance-counters"></a>Contadores de desempenho
 
@@ -164,15 +164,15 @@ WHERE object_name LIKE '%External Scripts%'
 
 **Sys. dm _os_performance_counters** gera os seguintes contadores de desempenho para scripts externos:
 
-| Contador | Descrição |
+| Neutraliza | Description |
 |---------|-------------|
-| Total de Execuções | Número de processos externos iniciados por chamadas locais ou remotas. |
-| Execuções paralelas | Número de vezes que um script incluiu  _\@_ a especificação paralela e [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] que foi capaz de gerar e usar um plano de consulta paralelo. |
+| Total de execuções | Número de processos externos iniciados por chamadas locais ou remotas. |
+| Execuções paralelas | Número de vezes que um script incluiu a especificação de _\@parallel_ e que [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] foi capaz de gerar e usar um plano de consulta paralelo. |
 | Execuções de streaming | Número de vezes que o recurso de streaming foi invocado. |
-| Execuções de CC do SQL | Número de scripts externos executados onde a chamada foi instanciada remotamente e SQL Server foi usada como o contexto de computação. |
-| Autenticação Implícita. Logons | Número de vezes que uma chamada de loopback ODBC foi feita usando a autenticação implícita; ou seja, o [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] executou a chamada em nome do usuário que está enviando a solicitação de script. |
-| Tempo total de execução (ms) | Tempo decorrido entre a chamada e a conclusão da chamada. |
-| Erros de Execução | Número de vezes que os scripts relataram erros. Essa contagem não inclui erros de R ou Python. |
+| Execuções de SQL CC | Número de scripts externos executados onde a chamada foi instanciada remotamente e SQL Server foi usada como o contexto de computação. |
+| Autorizações implícitas. logons | Número de vezes que uma chamada de loopback ODBC foi feita usando a autenticação implícita; ou seja, a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] executou a chamada em nome do usuário que está enviando a solicitação de script. |
+| Tempo total de execução (MS) | Tempo decorrido entre a chamada e a conclusão da chamada. |
+| Erros de execução | Número de vezes que os scripts relataram erros. Essa contagem não inclui erros de R ou Python. |
 
 ## <a name="memory-usage"></a>Uso de memória
 
@@ -192,10 +192,10 @@ FROM sys.dm_os_sys_info;
 
 A consulta retorna as seguintes colunas:
 
-| coluna | Descrição |
+| Pilha | Description |
 |--------|-------------|
 | physical_memory_kb | A quantidade total de memória física no computador. |
-| committed_kb | A memória confirmada em kilobytes (KB) no Gerenciador de memória. Não inclui a memória reservada no gerenciador de memória. |
+| committed_kb | A memória confirmada em kilobytes (KB) no Gerenciador de memória. Não inclui memória reservada no Gerenciador de memória. |
 | external_pool_peak_memory_kb | A soma da quantidade máxima de memória usada, em quilobytes, para todos os pools de recursos externos. |
 
 ## <a name="memory-configuration"></a>Configuração de memória
@@ -221,9 +221,9 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 A consulta retorna as seguintes colunas:
 
-| coluna | Descrição |
+| Pilha | Description |
 |--------|-------------|
-| name | Nome do pool de recursos externo ou SQL Server. |
+| Nomes | Nome do pool de recursos externo ou SQL Server. |
 | max_memory_percent | A memória máxima que SQL Server ou o pool de recursos externos pode usar. |
 
 ## <a name="resource-pools"></a>Pools de recursos
@@ -246,12 +246,12 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 A consulta retorna as seguintes colunas:
 
-| coluna | Descrição |
+| Pilha | Description |
 |--------|-------------|
-| pool_name | Nome do pool de recursos. SQL Server pools de recursos são prefixados com `SQL Server` e os pools de recursos externos são prefixados com. `External Pool`
+| pool_name | Nome do pool de recursos. SQL Server pools de recursos são prefixados com `SQL Server` e os pools de recursos externos são prefixados com `External Pool`.
 | total_cpu_usage_hours | O uso de CPU cumulativo em milissegundos desde que as estatísticas de administrador de recursos foram redefinidas. |
-| read_io_completed_total | O total de E/S lidas concluídas desde que as estatísticas do Administrador de Recursos foram redefinidas. |
-| write_io_completed_total | O total de E/Ss de gravação concluídas desde que as estatísticas do Administrador de Recursos foram redefinidas. |
+| read_io_completed_total | O total de leitura do IOs foi concluído desde que as estatísticas de administrador de recurso foram redefinidas. |
+| write_io_completed_total | O IOs de gravação total foi concluído desde que as estatísticas de administrador de recurso foram redefinidas. |
 
 ## <a name="installed-packages"></a>Pacotes instalados
 
@@ -275,12 +275,12 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 As colunas retornadas são:
 
-| coluna | Descrição |
+| Pilha | Description |
 |--------|-------------|
-| Pacote | Nome do pacote instalado. |
+| Agrupa | Nome do pacote instalado. |
 | Versão | Versão do pacote. |
-| Depende | Lista os pacotes dos quais o pacote instalado depende. |
-| Licença | Licença para o pacote instalado. |
+| Dependem | Lista os pacotes dos quais o pacote instalado depende. |
+| carteira | Licença para o pacote instalado. |
 | LibPath | Diretório onde você pode encontrar o pacote. |
 
 ### <a name="installed-packages-for-python"></a>Pacotes instalados para Python
@@ -301,11 +301,11 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 
 As colunas retornadas são:
 
-| coluna | Descrição |
+| Pilha | Description |
 |--------|-------------|
-| Pacote | Nome do pacote instalado. |
+| Agrupa | Nome do pacote instalado. |
 | Versão | Versão do pacote. |
-| Location | Diretório onde você pode encontrar o pacote. |
+| Local | Diretório onde você pode encontrar o pacote. |
 
 ## <a name="next-steps"></a>Próximas etapas
 

@@ -10,19 +10,19 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb564d7dc8564b31a90a09f53aedaba953519f76
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: cfaf672abd7c68e396b5049ced2d812a43d27d48
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313670"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542134"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Início Rápido: Criar e pontuar um modelo de previsão em Python com SQL Server Serviços de Machine Learning
+# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Início rápido: criar e pontuar um modelo de previsão em Python com SQL Server Serviços de Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Neste guia de início rápido, você criará e treinará um modelo de previsão usando o Python, salvará o modelo em uma tabela em sua instância de SQL Server e, em seguida, usará o modelo para prever valores de novos dados usando [SQL Server serviços de Machine Learning](../what-is-sql-server-machine-learning.md).
 
-Você criará e executará dois procedimentos armazenados em execução no SQL. A primeira usa o conjunto de dados de flor de íris clássico e gera um modelo de Bayes simples para prever uma espécie de íris com base nas características da flor. O segundo procedimento é para Pontuação-ele chama o modelo gerado no primeiro procedimento para gerar um conjunto de previsões com base em novos dados. Ao colocar o código em um procedimento armazenado, as operações são contidas, reutilizáveis e podem ser chamadas por outros procedimentos armazenados e aplicativos cliente.
+Você criará e executará dois procedimentos armazenados em execução no SQL. A primeira usa o conjunto de dados de flor de íris clássico e gera um modelo de Bayes simples para prever uma espécie de íris com base nas características da flor. O segundo procedimento é para Pontuação-ele chama o modelo gerado no primeiro procedimento para gerar um conjunto de previsões com base em novos dados. Ao colocar o código Python em um procedimento armazenado do SQL, as operações são contidas no SQL, são reutilizáveis e podem ser chamadas por outros procedimentos armazenados e aplicativos cliente.
 
 Ao concluir este guia de início rápido, você aprenderá:
 
@@ -43,7 +43,9 @@ Ao concluir este guia de início rápido, você aprenderá:
 
 Nesta etapa, você criará um procedimento armazenado que gera um modelo para prever resultados.
 
-1. Abra uma nova janela de consulta no SSMS conectado ao banco de dados **irissql** . 
+1. Abra o SSMS, conecte-se à sua instância do SQL Server e abra uma nova janela de consulta.
+
+1. Conecte-se ao banco de dados irissql.
 
     ```sql
     USE irissql
@@ -109,9 +111,9 @@ Os modelos que são armazenados para reutilização em SQL Server são serializa
     SELECT * FROM dbo.iris_models
     ```
 
-    **Resultados**
+    **Da**
 
-    | model_name  | modelo |
+    | model_name  | deprecia |
     |---|-----------------|
     | Naive Bayes | 0x800363736B6C6561726E2E6E616976655F62617965730A... | 
 
@@ -119,7 +121,7 @@ Os modelos que são armazenados para reutilização em SQL Server são serializa
 
 Agora que você criou, treinau e salvou um modelo, passe para a próxima etapa: Criando um procedimento armazenado que gera previsões. Você fará isso chamando `sp_execute_external_script` para executar um script Python que carrega o modelo serializado e fornece novas entradas de dados a serem pontuadas.
 
-1. Execute o código a seguir para criar o procedimento armazenado que executa a pontuação. Em tempo de execução, esse procedimento carregará um modelo binário, usará colunas `[1,2,3,4]` como entradas e especificar colunas `[0,5,6]` como saída.
+1. Execute o código a seguir para criar o procedimento armazenado que executa a pontuação. Em tempo de execução, esse procedimento carregará um modelo binário, usará colunas `[1,2,3,4]` como entradas e especificará colunas `[0,5,6]` como saída.
 
    ```sql
    CREATE PROCEDURE predict_species (@model VARCHAR(100))
@@ -168,7 +170,7 @@ Agora que você criou, treinau e salvou um modelo, passe para a próxima etapa: 
 
    Este exemplo foi simplificado com o uso do conjunto de pontos do Python íris para treinamento e pontuação. Uma abordagem mais comum envolveria a execução de uma consulta SQL para obter os novos dados e passá-lo para o Python como `InputDataSet`.
 
-## <a name="conclusion"></a>Conclusão
+## <a name="conclusion"></a>Final
 
 Neste exercício, você aprendeu a criar procedimentos armazenados dedicados a tarefas diferentes, em que cada procedimento armazenado usou o procedimento armazenado do sistema `sp_execute_external_script` para iniciar um processo do Python. As entradas para o processo do Python são passadas para `sp_execute_external` como parâmetros. O próprio script do Python e as variáveis de dados em um banco SQL Server dados são passados como entradas.
 

@@ -10,22 +10,29 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fc968c9364f23826b366721590f72ac1b0af0391
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.openlocfilehash: 9acfe1e546c332801e9a5c1a7d97758053d9a0f4
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005982"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542118"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Início Rápido: Criar e pontuar um modelo de previsão em R com SQL Server Serviços de Machine Learning
+# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Início rápido: criar e pontuar um modelo de previsão em R com SQL Server Serviços de Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Neste guia de início rápido, você criará e treinará um modelo de previsão usando o R, salvará o modelo em uma tabela em sua instância de SQL Server e, em seguida, usará o modelo para prever valores de novos dados usando [SQL Server serviços de Machine Learning](../what-is-sql-server-machine-learning.md).
 
-O modelo que você usará neste guia de início rápido é um modelo linear mais simples (GLM) que prevê a probabilidade de um veículo ter sido ajustado com uma transmissão manual. Você usará o conjunto de **mtcars** DataSet incluído com o R.
+Você criará e executará dois procedimentos armazenados em execução no SQL. A primeira usa o conjunto de **mtcars** incluído no R e gera um GLM (modelo linear simples) que prevê a probabilidade de um veículo ter sido ajustado com uma transmissão manual. O segundo procedimento é para Pontuação-ele chama o modelo gerado no primeiro procedimento para gerar um conjunto de previsões com base em novos dados. Ao colocar o código R em um procedimento armazenado do SQL, as operações são contidas em SQL, são reutilizáveis e podem ser chamadas por outros procedimentos armazenados e aplicativos cliente.
 
 > [!TIP]
-> Se você precisar de um atualizador em modelos lineares, experimente este tutorial que descreve o processo de ajuste de um modelo usando o rxLinMod:  [Modelos lineares de ajuste](/machine-learning-server/r/how-to-revoscaler-linear-model)
+> Se você precisar de um atualizador em modelos lineares, experimente este tutorial que descreve o processo de ajuste de um modelo usando [modelos lineares](/machine-learning-server/r/how-to-revoscaler-linear-model) RxLinMod: ajuste
+
+Ao concluir este guia de início rápido, você aprenderá:
+
+> [!div class="checklist"]
+> - Como inserir código R em um procedimento armazenado
+> - Como passar entradas para seu código por meio de entradas no procedimento armazenado
+> - Como os procedimentos armazenados são usados para colocar os modelos em operação
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -41,7 +48,7 @@ Para criar o modelo, você criará dados de origem para treinamento, criará o m
 
 ### <a name="create-the-source-data"></a>Criar os dados de origem
 
-1. Abra **SQL Server Management Studio** e conecte-se à sua instância do SQL Server.
+1. Abra o SSMS, conecte-se à sua instância do SQL Server e abra uma nova janela de consulta.
 
 1. Crie uma tabela para salvar os dados de treinamento.
 
@@ -61,7 +68,7 @@ Para criar o modelo, você criará dados de origem para treinamento, criará o m
    );
    ```
 
-1. Insira os dados do DataSet interno `mtcars`.
+1. Insira os dados do `mtcars` do DataSet interno.
 
    ```SQL
    INSERT INTO dbo.MTCars
@@ -72,7 +79,7 @@ Para criar o modelo, você criará dados de origem para treinamento, criará o m
    ```
 
    > [!TIP]
-   > Vários conjuntos de dados, pequenos e grandes, estão incluídos com o tempo de execução de R. Para obter uma lista de conjuntos de itens instalados com o R, digite `library(help="datasets")` em um prompt de comando do R.
+   > Muitos conjuntos de valores, pequenos e grandes, estão incluídos no tempo de execução de R. Para obter uma lista de conjuntos de itens instalados com o R, digite `library(help="datasets")` em um prompt de comando do R.
 
 ### <a name="create-and-train-the-model"></a>Criar e treinar o modelo
 
@@ -99,7 +106,7 @@ GO
 ```
 
 - O primeiro argumento para `glm` é o parâmetro de *fórmula* , que define `am` como dependente de `hp + wt`.
-- Os dados de entrada são armazenados na variável `MTCarsData`, preenchido pela consulta SQL. Se você não atribuir um nome específico aos seus dados de entrada, o nome da variável padrão seria _InputDataSet_.
+- Os dados de entrada são armazenados na variável `MTCarsData`, que é populada pela consulta SQL. Se você não atribuir um nome específico aos dados de entrada, o nome da variável padrão será _InputDataSet_.
 
 ### <a name="store-the-model-in-the-sql-database"></a>Armazenar o modelo no banco de dados SQL
 
@@ -124,7 +131,7 @@ Em seguida, armazene o modelo em um banco de dados SQL para que você possa usá
    ```
 
    > [!TIP]
-   > Se você executar esse código uma segunda vez, receberá esse erro: "Violação da restrição PRIMARY KEY... Não é possível inserir a chave duplicada no objeto dbo. stopping_distance_models ". Uma opção para evitar esse erro é atualizar o nome de cada novo modelo. Por exemplo, seria possível alterar o nome para algo mais descritivo e incluir o tipo de modelo, o dia da criação e assim por diante.
+   > Se você executar esse código uma segunda vez, receberá este erro: "violação da restrição de chave primária... Não é possível inserir a chave duplicada no objeto dbo. stopping_distance_models ". Uma opção para evitar esse erro é atualizar o nome de cada novo modelo. Por exemplo, você pode alterar o nome para algo mais descritivo e incluir o tipo de modelo, o dia em que você o criou e assim por diante.
 
      ```sql
      UPDATE GLM_models
@@ -168,9 +175,9 @@ Para obter previsões com base em seu modelo, escreva um script SQL que faça o 
 
 1. Obtém o modelo desejado
 1. Obtém os novos dados de entrada
-1. Chama uma função de previsão de R que é compatível com o modelo
+1. Chama uma função de previsão de R que é compatível com esse modelo
 
-Com o tempo, a tabela pode conter vários modelos de R, todos criados usando parâmetros ou algoritmos diferentes ou treinados em diferentes subconjuntos de dados. Neste exemplo, usaremos o modelo chamado `default model`.
+Com o tempo, a tabela pode conter vários modelos de R, todos criados usando parâmetros ou algoritmos diferentes ou treinados em diferentes subconjuntos de dados. Neste exemplo, vamos usar o modelo chamado `default model`.
 
 ```sql
 DECLARE @glmmodel varbinary(max) = 
@@ -194,18 +201,18 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 O script acima executa as seguintes etapas:
 
-- Use uma instrução SELECT para obter um único modelo de tabela e passe-o como um parâmetro de entrada.
+- Use uma instrução SELECT para obter um único modelo da tabela e passá-lo como um parâmetro de entrada.
 
 - Depois de recuperar o modelo da tabela, chame a função `unserialize` no modelo.
 
-- Aplicar a função `predict` com os argumentos apropriados para o modelo e fornecer os novos dados de entrada.
+- Aplique a função `predict` com os argumentos apropriados ao modelo e forneça os novos dados de entrada.
 
 > [!NOTE]
 > No exemplo, a função `str` é adicionada durante a fase de teste para verificar o esquema de dados que está sendo retornado do R. Você pode remover a instrução mais tarde.
 >
 > Os nomes de coluna usados no script R não são necessariamente passados para a saída do procedimento armazenado. Aqui, a cláusula WITH RESULTs é usada para definir alguns novos nomes de coluna.
 
-**Resultados**
+**Da**
 
 ![Conjunto de resultados para prever properbility de transmissão manual](./media/r-predict-am-resultset.png)
 
