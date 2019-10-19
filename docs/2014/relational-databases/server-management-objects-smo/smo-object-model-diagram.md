@@ -1,5 +1,5 @@
 ---
-title: Diagrama de modelo de objeto do SMO | Microsoft Docs
+title: Diagrama de modelo de objeto SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 716ade5265c2bb3325ad08005c98a1e67c474419
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "63130636"
 ---
 # <a name="smo-object-model-diagram"></a>Diagrama de modelos de objetos SMO
-  Este diagrama mostra a hierarquia de objetos SMO e as relações entre os tipos de objetos. O objeto <xref:Microsoft.SqlServer.Management.Smo.Server> é o objeto de nível superior.  
+  Este diagrama mostra a hierarquia de objetos do SMO e as relações entre os tipos de objeto. O objeto <xref:Microsoft.SqlServer.Management.Smo.Server> é o objeto de nível superior.  
   
- ![Diagrama que mostra as relações hierárquicas](../../../2014/database-engine/dev-guide/media/object-diagram.gif "diagrama que mostra as relações hierárquicas")  
+ ![Diagrama que mostra as relações hierárquicas](../../../2014/database-engine/dev-guide/media/object-diagram.gif "Diagrama que mostra as relações hierárquicas")  
   
- ![Modelo de objeto, mostrando a hierarquia de exibição de árvore](../../../2014/database-engine/dev-guide/media/object-diagram-02.gif "modelo de objeto, mostrando a hierarquia de exibição de árvore")  
+ ![Modelo de objeto, exibição de árvore mostrando a hierarquia](../../../2014/database-engine/dev-guide/media/object-diagram-02.gif "Modelo de objeto, exibição de árvore mostrando a hierarquia")  
   
- ![Modelo de objeto, mostrando a hierarquia de exibição de árvore](../../../2014/database-engine/dev-guide/media/object-diagram-03.gif "modelo de objeto, mostrando a hierarquia de exibição de árvore")  
+ ![Modelo de objeto, exibição de árvore mostrando a hierarquia](../../../2014/database-engine/dev-guide/media/object-diagram-03.gif "Modelo de objeto, exibição de árvore mostrando a hierarquia")  
   
- ![Modelo de objeto, mostrando a hierarquia de exibição de árvore](../../../2014/database-engine/dev-guide/media/object-diagram-04.gif "modelo de objeto, mostrando a hierarquia de exibição de árvore")  
+ ![Modelo de objeto, exibição de árvore mostrando a hierarquia](../../../2014/database-engine/dev-guide/media/object-diagram-04.gif "Modelo de objeto, exibição de árvore mostrando a hierarquia")  
   
   
