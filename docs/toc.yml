@@ -6,7 +6,7 @@
   href: toc/previous-versions-sql-server.md
 - name: Visão geral
   items:
-    - name: Novo no SQL Server
+    - name: What's New
       items:
         - name: SQL Server 2019
           href: sql-server/what-s-new-in-sql-server-ver15.md
@@ -23,6 +23,8 @@
           href: database-engine/whats-new-in-sql-server-2016.md
     - name: Edições e recursos
       items:
+        - name: SQL Server 2019
+          href: sql-server/editions-and-components-of-sql-server-version-15.md
         - name: SQL Server 2017
           href: sql-server/editions-and-components-of-sql-server-2017.md
         - name: SQL Server 2016
@@ -89,8 +91,6 @@
                   href: big-data-cluster/deploy-on-aks.md
                 - name: Kubeadm
                   href: big-data-cluster/deploy-with-kubeadm.md
-                - name: Minikube
-                  href: big-data-cluster/deploy-on-minikube.md
             - name: Scripts de implantação
               items:
                 - name: Script em Python do AKS
@@ -8348,27 +8348,27 @@
         - name: Extensões
           href: azure-data-studio/extensions.md
           items:
-            - name: Extensão do PostgreSQL (versão prévia)
+            - name: Extensão do PostgreSQL
               href: azure-data-studio/postgres-extension.md
-            - name: SQL Server 2019 (versão prévia)
+            - name: SQL Server 2019
               href: azure-data-studio/sql-server-2019-extension.md
-            - name: SQL Server Agent (versão prévia)
+            - name: SQL Server Agent
               href: azure-data-studio/sql-server-agent-extension.md
-            - name: Extensão de Servidores de Gerenciamento Central do SQL Server (versão prévia)
+            - name: Extensão de Servidores de Gerenciamento Central do SQL Server
               href: azure-data-studio/sql-server-cms-extension.md
-            - name: Extensão de dacpac do SQL Server (versão prévia)
+            - name: Extensão dacpac do SQL Server
               href: azure-data-studio/sql-server-dacpac-extension.md
-            - name: SQL Server Import (versão prévia)
+            - name: Importação do SQL Server
               href: azure-data-studio/sql-server-import-extension.md
-            - name: SQL Server Profiler (versão prévia)
+            - name: SQL Server Profiler
               href: azure-data-studio/sql-server-profiler-extension.md
-            - name: Extensão de Comparação de Esquema (versão prévia)
+            - name: Extensão de Comparação de Esquema
               href: azure-data-studio/schema-compare-extension.md
             - name: Extensão do PowerShell
               href: azure-data-studio/powershell-extension.md
-            - name: Extensão da Instância Gerenciada (versão prévia)
+            - name: Extensão da instância gerenciada
               href: azure-data-studio/azure-sql-managed-instance-extension.md
-            - name: Extensão do SandDance (versão prévia)
+            - name: Extensão do SandDance
               href: azure-data-studio/sanddance-extension.md
         - name: Criação de extensão
           items:
@@ -10293,7 +10293,7 @@
           items:
             - name: SQL Server 2017
               href: linux/sql-server-linux-release-notes.md
-            - name: Versão prévia do SQL Server 2019
+            - name: SQL Server 2019
               href: linux/sql-server-linux-release-notes-2019.md
         - name: Novidades
           href: linux/sql-server-linux-whats-new.md
