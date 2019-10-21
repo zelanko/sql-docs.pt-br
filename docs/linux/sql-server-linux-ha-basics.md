@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 339473439fe1afa20ab618fe49d53f213e1b1a6f
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 2f5f14134c0932e44160076a36f5de72cbde5a04
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809958"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586752"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Noções básicas de disponibilidade do SQL Server para implantações do Linux
 
@@ -76,7 +76,7 @@ Samba, que é a variante do Linux do protocolo SMB, também pode ser usado para 
 
 Os compartilhamentos SMB baseados no Windows também podem ser usados; os compartilhamentos SMB não precisam ser baseados no Linux, desde que a parte do cliente do Samba esteja configurada corretamente no servidor Linux que hospeda [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] e o compartilhamento tenha o acesso certo. Para aqueles em um ambiente misto, essa seria uma maneira de aproveitar a infraestrutura existente para implantações do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] baseadas no Linux.
 
-Um aspecto importante é que a versão do Samba implantada deve estar em conformidade com SMB 3.0. Quando o suporte a SMB foi adicionado no [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], ele exigia que todos os compartilhamentos fossem compatíveis com o SMB 3.0. Se estiver usando o Samba para o compartilhamento, e não para o Windows Server, o compartilhamento baseado no Samba deverá usar o Samba 4.0 ou posterior e, idealmente, 4.3 ou posterior, que é compatível com o SMB 3.1.1. Uma boa fonte de informações sobre SMB e Linux é [SMB3 in Samba](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
+Um aspecto importante é que a versão do Samba implantada deve estar em conformidade com SMB 3.0. Quando o suporte a SMB foi adicionado no [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], ele exigia que todos os compartilhamentos fossem compatíveis com o SMB 3.0. Se estiver usando o Samba para o compartilhamento, e não para o Windows Server, o compartilhamento baseado no Samba deverá usar o Samba 4.0 ou posterior e, idealmente, 4.3 ou posterior, que é compatível com o SMB 3.1.1. Uma boa fonte de informações sobre SMB e Linux é [SMB3 in Samba](https://events.static.linuxfound.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
 
 Por fim, o uso de um compartilhamento NFS (Network File System) é uma opção. Usar o NFS não é uma opção em implantações do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] baseadas no Windows e só pode ser usado para implantações baseadas no Linux.
 

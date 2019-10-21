@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 23201d2c05e9bdb5196319fba49955bb67afd29a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7dcb81e48ddd4861e3f89547280b372df4c56ec3
+ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134818"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72359543"
 ---
 # <a name="deploy-a-data-tier-application"></a>Implantar um aplicativo da camada de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ Mais informações sobre algumas das páginas de assistente abaixo:
  **Salvar Relatório** – Selecione este botão para salvar o relatório de implantação em um arquivo HTML. O arquivo relata o status de cada ação, inclusive todos os erros gerados por qualquer uma das ações. A pasta padrão é SQL Server Management Studio\pacotes de DAC na pasta Documentos da conta do Windows.  
   
   
-##  <a name="deploy-a-dac-using-powershell"></a>Implantar um DAC usando o PowerShell  
+##  <a name="using-powershell"></a>Usando o PowerShell  
   
 1.  Crie um objeto de servidor SMO e defina-o como a instância na qual o DAC é implantado.  
   
@@ -144,19 +144,18 @@ Mais informações sobre algumas das páginas de assistente abaixo:
 6.  Use o método **DacStore.Install** para implantar o DAC.  
   
 7.  Feche o fluxo de arquivos usado para ler o arquivo de pacote de DAC.  
+
+O exemplo a seguir implanta um DAC nomeado MyApplication em uma instância padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)], usando uma definição de DAC de um pacote de MyApplication.dacpac.  
   
-## <a name="powershell-examples"></a>Exemplos do PowerShell  
- O exemplo a seguir implanta um DAC nomeado MyApplication em uma instância padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)], usando uma definição de DAC de um pacote de MyApplication.dacpac.  
-  
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$server = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
-$serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
-$serverconnection.Connect()  
-$dacstore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverconnection)  
+$serverConnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($server.ConnectionContext.SqlConnectionObject)  
+$serverConnection.Connect()  
+$dacStore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverConnection)  
   
 ## Load the DAC package file.  
 $dacpacPath = "C:\MyDACs\MyApplication.dacpac"  
@@ -164,14 +163,14 @@ $fileStream = [System.IO.File]::Open($dacpacPath,[System.IO.FileMode]::OpenOrCre
 $dacType = [Microsoft.SqlServer.Management.Dac.DacType]::Load($fileStream)  
   
 ## Subscribe to the DAC deployment events.  
-$dacstore.add_DacActionStarted({Write-Host `n`nStarting at $(get-date) :: $_.Description})  
-$dacstore.add_DacActionFinished({Write-Host Completed at $(get-date) :: $_.Description})  
+$dacStore.add_DacActionStarted({Write-Host `n`nStarting at $(Get-Date) :: $_.Description})  
+$dacStore.add_DacActionFinished({Write-Host Completed at $(Get-Date) :: $_.Description})  
   
 ## Deploy the DAC and create the database.  
 $dacName  = "MyApplication"  
 $evaluateTSPolicy = $true  
-$deployProperties = New-Object Microsoft.SqlServer.Management.Dac.DatabaseDeploymentProperties($serverconnection,$dacName)  
-$dacstore.Install($dacType, $deployProperties, $evaluateTSPolicy)  
+$deployProperties = New-Object Microsoft.SqlServer.Management.Dac.DatabaseDeploymentProperties($serverConnection,$dacName)  
+$dacStore.Install($dacType, $deployProperties, $evaluateTSPolicy)  
 $fileStream.Close()  
 ```  
   

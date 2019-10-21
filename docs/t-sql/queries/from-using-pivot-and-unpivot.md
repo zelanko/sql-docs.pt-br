@@ -1,7 +1,7 @@
 ---
 title: Usando PIVOT e UNPIVOT | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 10/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e4ec1c90f49de20707690825f9e5ba802965278
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 10ab5b2359d272eb53c7cad3d9c1fc5936c8c71a
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559418"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305172"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM – usando PIVOT e UNPIVOT
 
@@ -153,7 +153,7 @@ SELECT PurchaseOrderID, EmployeeID, VendorID
 FROM PurchaseOrderHeader;  
 ```  
   
-Os valores exclusivos retornados pela coluna `EmployeeID` tornam-se campos no conjunto de resultados final. Assim, há uma coluna para cada número de `EmployeeID` especificado na cláusula pivot: neste caso, os funcionários `164`, `198`, `223`, `231` e `233`. A coluna `PurchaseOrderID` serve como a coluna de valor, contra a qual as colunas retornadas na saída final, que são chamadas de colunas de agrupamento, são agrupadas. Neste caso, as colunas de agrupamento são agregadas pela função `COUNT`. Observe que surge uma mensagem de aviso indicando que nenhum valor nulo que apareça na coluna `PurchaseOrderID` foi considerado ao computar a `COUNT` para cada funcionário.  
+Os valores exclusivos retornados pela coluna `EmployeeID` tornam-se campos no conjunto de resultados final. Assim, há uma coluna para cada número de `EmployeeID` especificado na cláusula pivot: neste caso, os funcionários `250`, `251`, `256`, `257` e `260`. A coluna `PurchaseOrderID` serve como a coluna de valor, contra a qual as colunas retornadas na saída final, que são chamadas de colunas de agrupamento, são agrupadas. Neste caso, as colunas de agrupamento são agregadas pela função `COUNT`. Observe que surge uma mensagem de aviso indicando que nenhum valor nulo que apareça na coluna `PurchaseOrderID` foi considerado ao computar a `COUNT` para cada funcionário.  
   
 > [!IMPORTANT]  
 >  Quando as funções de agregação são usadas com `PIVOT`, a presença de algum valor nulo na coluna de valor não é considerada ao computar uma agregação.  

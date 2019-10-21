@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a8cdb93274b8db61d62194b412543cccca79e155
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1276b80c4a668173f5a0b7055e789ab3f521dd9e
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914805"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313742"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Executa a consulta passagem especificada no servidor vinculado especificado. Esse servidor é uma fonte de dados OLE DB. OPENQUERY pode ser referenciada na cláusula FROM de uma consulta como se fosse um nome de tabela. OPENQUERY também pode ser referenciada como a tabela de destino de uma instrução INSERT, UPDATE ou DELETE. Isso dependerá dos recursos do provedor OLE DB. Embora a consulta possa retornar vários conjuntos de resultados, OPENQUERY retorna somente o primeiro deles.  
   

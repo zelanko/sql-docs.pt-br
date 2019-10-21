@@ -15,16 +15,16 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 6492c08242e927ac7f5356f96f4da02465ece547
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: cfc56126ae84cc8674e7316b45e855584fdabde7
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71299135"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72518004"
 ---
 # <a name="scalar-udf-inlining"></a>Embutimento de UDF escalar
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Este artigo apresenta o embutimento de UDF escalar, um recurso sob o conjunto de recursos de processamento de consulta inteligente. Esse recurso melhora o desempenho das consultas que invocam UDFs escalares em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
