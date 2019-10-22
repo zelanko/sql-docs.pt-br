@@ -1,7 +1,7 @@
 ---
-title: Usar o Microsoft Distributed Transaction Coordinator (ODBC) | Microsoft Docs
+title: Usar o Microsoft Coordenador de Transações Distribuídas (ODBC) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: native-client
@@ -12,37 +12,37 @@ ms.assetid: 12a275e1-8c7e-436d-8a4e-b7bee853b35c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 739d87c7a590489a2dd263535356b0b520a4a9b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 425f9fc0b7637aab1869130a2830c2f3c134fe7d
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200222"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688698"
 ---
-# <a name="use-microsoft-distributed-transaction-coordinator-odbc"></a>Usar o Coordenador de Transações Distribuídas da Microsoft (ODBC)
+# <a name="use-microsoft-distributed-transaction-coordinator-odbc"></a>Usar o Microsoft Coordenador de Transações Distribuídas (ODBC)
     
-### <a name="to-update-two-or-more-sql-servers-by-using-ms-dtc"></a>Para atualizar dois ou mais SQL Servers usando MS DTC  
+### <a name="to-update-two-or-more-sql-servers-by-using-ms-dtc"></a>Para atualizar dois ou mais SQL Servers usando o MS DTC  
   
-1.  Conecte-se a MS DTC usando a função DtcGetTransactionManager MS DTC OLE. Para obter informações sobre o MS DTC, consulte Coordenador de transações distribuídas da Microsoft.  
+1.  Conecte-se ao MS DTC usando a função OLE DtcGetTransactionManager do MS DTC. Para obter informações sobre o MS DTC, consulte Microsoft Coordenador de Transações Distribuídas.  
   
-2.  Chame SQL DriverConnect uma vez para cada Microsoft?? SQL Server??? conexão que você deseja estabelecer.  
+2.  Chame o SQL DriverConnect uma vez para cada conexão de Microsoft SQL Server que você deseja estabelecer.  
   
-3.  Chame a função ITransactionDispenser::BeginTransaction MS DTC OLE para começar uma transação MS DTC e obter um objeto de transação que a represente.  
+3.  Chame a função OLE ITransactionDispenser:: BeginTransaction do MS DTC para iniciar uma transação do MS DTC e obter um objeto de transação que representa a transação.  
   
-4.  Chame [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) uma ou mais vezes para cada conexão ODBC que você deseja listar na transação MS DTC. O segundo parâmetro [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) deve ser SQL_ATTR_ENLIST_IN_DTC e o terceiro, o objeto de transação (obtido na Etapa 3).  
+4.  Chame [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) uma ou mais vezes para cada conexão ODBC que você deseja inscrever na transação do MS DTC. O segundo parâmetro [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) deve ser SQL_ATTR_ENLIST_IN_DTC e o terceiro parâmetro deve ser o objeto Transaction (obtido na etapa 3).  
   
 5.  Chame [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) uma vez para cada SQL Server que você deseja atualizar.  
   
-6.  Chame a função ITransaction::Commit MS DTC OLE para confirmar a transação MS DTC. O objeto de transação não é mais válido.  
+6.  Chame a função OLE ITransaction:: Commit do MS DTC para confirmar a transação do MS DTC. O objeto de transação não é mais válido.  
   
- Para executar uma série de MS DTC transações, repita as etapas de 3 a 6.  
+ Para executar uma série de transações do MS DTC, repita as etapas 3 a 6.  
   
- Para liberar a referência para o objeto de transação, chame a função ITransaction::Return MS DTC OLE.  
+ Para liberar a referência ao objeto de transação, chame a função MS DTC OLE ITransaction:: Return.  
   
- Para usar uma conexão ODBC com uma transação MS DTC e usar a mesma conexão com uma transação do SQL Server local, chame [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) com SQL_DTC_DONE.  
+ Para usar uma conexão ODBC com uma transação do MS DTC e, em seguida, usar a mesma conexão com uma transação de SQL Server local, chame [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) com SQL_DTC_DONE.  
   
 > [!NOTE]  
->  Você também pode chamar [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) e [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) para cada SQL Server, em vez de chamá-lo conforme sugerido nas etapas 4 e 5.  
+>  Você também pode chamar [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) e [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) por vez para cada SQL Server em vez de chamá-los como sugerido anteriormente nas etapas 4 e 5.  
   
 ## <a name="see-also"></a>Consulte também  
  [Executando transações &#40;ODBC&#41;](../../database-engine/dev-guide/performing-transactions-odbc.md)  
