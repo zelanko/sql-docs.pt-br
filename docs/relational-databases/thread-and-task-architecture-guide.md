@@ -14,12 +14,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08efd7847fba1ad0b4df10d3a761475c735ceca8
+ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
 ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289376"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305192"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guia de arquitetura de threads e tarefas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ Os threads permitem aplicativos complexos para utilizar com mais eficácia uma C
 ## <a name="sql-server-task-scheduling"></a>Agendamento de tarefas SQL Server
 No escopo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], uma **solicitação** é a representação lógica de uma consulta ou lote. Uma solicitação também representa operações exigidas por threads do sistema, como ponto de verificação ou gravador de log. As solicitações existem em vários Estados durante seu tempo de vida e podem acumular esperas quando os recursos necessários para executar a solicitação não estão disponíveis, como [bloqueios](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md#locks) ou [travas](../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md#latches). Para saber mais sobre os estados de solicitação, confira [sys.dm_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).
 
-Uma **tarefa** representa a unidade de trabalho que precisa ser concluída para atender à solicitação. Uma ou mais tarefas podem ser atribuídas a uma única solicitação. As solicitações paralelas terão várias tarefas ativas que são executadas simultaneamente em vez de em série. Uma solicitação que é executada em série terá apenas uma tarefa ativa em um determinado momento. Existem tarefas em vários estados durante seu tempo de vida. Para saber mais sobre os estados de tarefas, confira [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). O termo Tarefas indica um estado SUSPENSO que está aguardando os recursos necessários para executar a tarefa a ser disponibilizada. Para saber mais sobre a tarefa de espera, confira [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md).
+Uma **tarefa** representa a unidade de trabalho que precisa ser concluída para atender à solicitação. Uma ou mais tarefas podem ser atribuídas a uma única solicitação. As solicitações paralelas terão várias tarefas ativas que são executadas simultaneamente em vez de em série. Uma solicitação que é executada em série terá apenas uma tarefa ativa em um determinado momento. Existem tarefas em vários estados durante seu tempo de vida. Para saber mais sobre os estados de tarefas, confira [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Tarefas em um estado SUSPENSO estão aguardando os recursos necessários para executar a tarefa a ser disponibilizada. Para saber mais sobre a tarefa de espera, confira [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md).
 
 Um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **thread de trabalho**, também conhecido como trabalho ou thread, é uma representação lógica de um thread do sistema operacional. Ao executar solicitações em série, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] gera um trabalho para executar a tarefa ativa. Ao executar solicitações paralelas no [modo linha](../relational-databases/query-processing-architecture-guide.md#execution-modes), [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] atribui um trabalho para coordenar os trabalhos secundários responsáveis por concluir tarefas atribuídas a eles. O número de threads de trabalho gerados para cada tarefa depende:
 -   Se a solicitação foi qualificada para paralelismo, conforme determinado pelo Otimizador de Consulta.

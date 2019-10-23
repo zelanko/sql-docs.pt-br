@@ -17,12 +17,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f54ff6306e3a4b2066a05ded891f4b8e6e98f99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad8e6a73ee20a98f9dd97d8220a592c8c1600b2e
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016222"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305009"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -75,9 +75,8 @@ ms.locfileid: "68016222"
  AUTO  
  Essa opção permite que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] selecione a granularidade do escalonamento de bloqueios apropriado ao esquema da tabela.  
   
--   Se a tabela estiver particionada, o escalonamento de bloqueios será permitido para a granularidade HoBT (pilha ou árvore B). Depois de ser escalonado para o nível de HoBT, o bloqueio não será escalonado posteriormente para a granularidade TABLE.  
-  
--   Se a tabela não estiver particionada, o escalonamento de bloqueios será feito para a granularidade TABLE.  
+- Se a tabela estiver particionada, o escalonamento de bloqueios será permitido para a granularidade HoBT (pilha ou árvore B). Em outras palavras, o escalonamento será permitido no nível da partição. Depois de ser escalonado para o nível de HoBT, o bloqueio não será escalonado posteriormente para a granularidade TABLE.
+- Se a tabela não estiver particionada, o escalonamento de bloqueios será feito para a granularidade TABLE. 
   
  TABLE  
  O escalonamento de bloqueios será feito na granularidade em nível de tabela independentemente de a tabela estar particionada ou não. TABLE é o valor padrão.  

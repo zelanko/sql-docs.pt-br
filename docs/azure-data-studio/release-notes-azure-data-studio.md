@@ -9,17 +9,28 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 10/08/2019
-ms.openlocfilehash: 991bc20600936ac61ab291db68d9e5f7728b96b5
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.date: 10/11/2019
+ms.openlocfilehash: c77d22b01b824906e4d5c32311bfe20258fa3c61
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041124"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313617"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas sobre a versão relacionadas ao Azure Data Studio
 
 **[Baixe e instale a versão mais recente!](download.md)**
+
+## <a name="october-2019-hotfix-2"></a>Outubro de 2019 (hotfix 2)
+
+11 de outubro de 2019 &nbsp; / &nbsp; versão: 1.12.2
+
+&nbsp;
+
+| Alterar | Detalhes |
+| :----- | :------ |
+| Desabilitar o início automático do EH no modo de inspeção |  |
+| &nbsp; | &nbsp; |
 
 ## <a name="october-2019-hotfix"></a>Outubro de 2019 (hotfix)
 

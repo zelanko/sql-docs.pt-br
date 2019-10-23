@@ -20,12 +20,12 @@ ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4e806d8fe064023f0de54849bfaf9494f4a7feb2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9ae6f9aae067208eedd0ffe6218f703d55e3696f
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259633"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304930"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Funções de banco de dados fixas do SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ A tabela a seguir resume as permissões de **SQLAgentReaderRole** em objetos do 
 ### <a name="sqlagentoperatorrole-permissions"></a>Permissões de SQLAgentOperatorRole  
 A função**SQLAgentOperatorRole** é a mais privilegiada das funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Ela inclui todas as permissões de **SQLAgentUserRole** e **SQLAgentReaderRole**. Os membros desta função também podem exibir propriedades de operadores e proxies, bem como enumerar os proxies e alertas disponíveis no servidor.  
   
-Membros de**SQLAgentOperatorRole** têm permissões adicionais em trabalhos locais e agendas. Podem executar, interromper ou iniciar todos os trabalhos locais, bem como excluir o histórico de trabalhos de qualquer trabalho local no servidor. Também podem habilitar ou desabilitar todos os trabalhos locais e agendas no servidor. Para habilitar ou desabilitar trabalhos locais ou agendas, os membros desta função devem usar os procedimentos armazenados **sp_update_job** e **sp_update_schedule**. Apenas os parâmetros que especificam o nome do trabalho ou da agenda ou o identificador e o parâmetro **@enabled** podem ser especificados por membros de **SQLAgentOperatorRole**. Se especificarem algum outro parâmetro, a execução desses procedimentos armazenados falhará. Membros de**SQLAgentOperatorRole** não podem alterar a propriedade do trabalho para ganhar acesso a trabalhos que ainda não possuem.  
+Membros de**SQLAgentOperatorRole** têm permissões adicionais em trabalhos locais e agendas. Podem executar, interromper ou iniciar todos os trabalhos locais, bem como excluir o histórico de trabalhos de qualquer trabalho local no servidor. Também podem habilitar ou desabilitar todos os trabalhos locais e agendas no servidor. Para habilitar ou desabilitar trabalhos locais ou agendas, os membros desta função devem usar os procedimentos armazenados **sp_update_job** e **sp_update_schedule**. Apenas os parâmetros que especificam o nome do trabalho ou da agenda ou o identificador e o parâmetro **\@enabled** podem ser especificados por membros de **SQLAgentOperatorRole**. Se especificarem algum outro parâmetro, a execução desses procedimentos armazenados falhará. Membros de**SQLAgentOperatorRole** não podem alterar a propriedade do trabalho para ganhar acesso a trabalhos que ainda não possuem.  
   
 Os nós **Trabalhos**, **Alertas**, **Operadores**e **Proxies** no Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] são visíveis a membros de **SQLAgentOperatorRole**. Somente o nó **Logs de Erros** não é visível a membros desta função.  
   
@@ -101,7 +101,7 @@ A tabela a seguir resume as permissões de **SQLAgentOperatorRole** em objetos d
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
 |Criar/modificar/excluir|Não|Não|Sim (apenas trabalhos possuídos)<br /><br />Não pode alterar a propriedade do trabalho.|Não|Sim (somente agendas possuídas)|Não|  
 |Exibir lista (enumerar)|Sim|Sim<br /><br />Pode obter lista de operadores disponíveis para uso em **sp_notify_operator** e na caixa de diálogo **Propriedades do trabalho** do Management Studio.|Sim|Sim|Sim|Sim|  
-|Habilitar/desabilitar|Não|Não|Sim<br /><br />**SQLAgentOperatorRole** podem habilitar ou desabilitar trabalhos locais que não possuem, por meio do procedimento armazenado **sp_update_job** e especificando valores para os parâmetros **@enabled** e **@job_id** (ou **@job_name** ). Se um membro desta função especificar algum outro parâmetro para esse procedimento armazenado, a execução do procedimento falhará.|Não|Sim<br /><br />**SQLAgentOperatorRole** podem habilitar ou desabilitar agendas que não possuem, por meio do procedimento armazenado **sp_update_schedule** e especificando valores para os parâmetros **@enabled** e **@schedule_id** (ou **@name** ). Se um membro desta função especificar algum outro parâmetro para esse procedimento armazenado, a execução do procedimento falhará.|Não aplicável|  
+|Habilitar/desabilitar|Não|Não|Sim<br /><br />Membros de **SQLAgentOperatorRole** podem habilitar ou desabilitar trabalhos locais que não são de sua propriedade, por meio do procedimento armazenado **sp_update_job** e especificando valores para os parâmetros **\@enabled** e o **\@job_id** (ou **\@job_name**). Se um membro desta função especificar algum outro parâmetro para esse procedimento armazenado, a execução do procedimento falhará.|Não|Sim<br /><br />Membros de **SQLAgentOperatorRole** podem habilitar ou desabilitar agendas que não são de sua propriedade usando o procedimento armazenado **sp_update_schedule** e especificando valores para os parâmetros **\@enabled** e o **\@schedule_id** (ou **\@name**). Se um membro desta função especificar algum outro parâmetro para esse procedimento armazenado, a execução do procedimento falhará.|Não aplicável|  
 |Exibir propriedades|Sim|Sim|Sim|Sim|Sim|Sim|  
 |Editar propriedades|Não|Não|Sim (apenas trabalhos possuídos)|Não|Sim (somente agendas possuídas)|Não|  
 |Executar/interromper/iniciar|Não aplicável|Não aplicável|Sim|Não|Não aplicável|Não aplicável|  

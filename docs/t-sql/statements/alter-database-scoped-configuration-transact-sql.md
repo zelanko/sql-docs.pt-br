@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0637a5f421dd1301314f4da3b3d899bfcf0cab93
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.openlocfilehash: 6ef351fc564f4d097cf4ae28c4ba890cb082eac0
+ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72261018"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589989"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -51,7 +51,7 @@ Essa instrução permite várias definições de configuração de banco de dado
 - Habilitar ou desabilitar a nova mensagem de erro `String or binary data would be truncated`.
 - Habilitar ou desabilitar a coleta do último plano de execução real em [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 
-![Ícone de link](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![ícone de link](../../database-engine/configure-windows/media/topic-link.gif "ícone de link") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -114,7 +114,7 @@ Especifique um identificador de plano de consulta para limpar um único plano de
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
-Especifica a configuração **MAXDOP (grau máximo de paralelismo)** padrão que deve ser usada nas instruções. 0 é o valor padrão e indica que a configuração do servidor será usada. O MAXDOP no escopo do banco de dados (a menos que esteja definido como 0) substitui o **max degree of parallelism** definido no nível do servidor por sp_configure. As dicas de consulta ainda podem substituir o MAXDOP no escopo do banco de dados para ajustar consultas específicas que precisem de uma configuração diferente. Todas essas configurações são limitadas pelo MAXDOP definido para o [Grupo de carga de trabalho]().
+Especifica a configuração **MAXDOP (grau máximo de paralelismo)** padrão que deve ser usada nas instruções. 0 é o valor padrão e indica que a configuração do servidor será usada. O MAXDOP no escopo do banco de dados (a menos que esteja definido como 0) substitui o **max degree of parallelism** definido no nível do servidor por sp_configure. As dicas de consulta ainda podem substituir o MAXDOP no escopo do banco de dados para ajustar consultas específicas que precisem de uma configuração diferente. Todas essas configurações são limitadas pelo MAXDOP definido para o [Grupo de carga de trabalho](create-workload-group-transact-sql.md).
 
 É possível usar a opção MAXDOP para limitar o número de processadores a serem usados na execução paralela do plano. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera os planos de execução paralela para consultas, operações DDL (linguagem de definição de dados), inserção paralela, alteração online de coluna, coleta de estatísticas paralela e população de cursor estático e controlado por conjunto de chaves.
 

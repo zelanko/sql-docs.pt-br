@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: cd83fa81-ac37-4eda-a3c3-17610b051de2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 95ca1cbd0929607b45c8f9cc429d4224a60b555c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68829d55be0b080e9b4beb9d7b284e3f57a46581
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068262"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305914"
 ---
-# <a name="mssqlserver10507"></a>MSSQLSERVER_10507
+# <a name="mssqlserver_10507"></a>MSSQLSERVER_10507
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
@@ -30,7 +30,7 @@ ms.locfileid: "68068262"
 |Origem do evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|PG_STMT_DOES_NOT_MATCH|  
-|Texto da mensagem|Não é possível criar o guia de plano '%.\*ls' porque a instrução especificada por **@stmt** e **@module_or_batch** ou por **@plan_handle** e **@statement_start_offset** , não corresponde a nenhuma instrução no módulo ou no lote especificado. Modifique os valores para que correspondam a uma instrução no módulo ou lote.|  
+|Texto da mensagem|Não é possível criar o guia de plano '%.\*ls' porque a instrução especificada por **\@stmt** e **\@module_or_batch** ou por **\@plan_handle** e **\@statement_start_offset** não corresponde a nenhuma instrução no módulo ou lote especificado. Modifique os valores para que correspondam a uma instrução no módulo ou lote.|  
   
 ## <a name="explanation"></a>Explicação  
 Uma instrução no módulo ou lote especificado não correspondeu à instrução especificada ou ao valor de deslocamento da instrução.  

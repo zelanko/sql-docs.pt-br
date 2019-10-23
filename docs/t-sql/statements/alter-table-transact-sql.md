@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7683610745cf63ff67eeda6296684a6d2737a5b8
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+ms.openlocfilehash: 44c5a4c9a39f60616574a479637d3ab97230784c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71823620"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304843"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -806,7 +806,7 @@ Especifica os métodos permitidos de escalonamento de bloqueios para uma tabela.
 AUTO  
 Essa opção permite que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] selecione a granularidade do escalonamento de bloqueios apropriado para o esquema da tabela.
 
-- Se a tabela não estiver particionada, o escalonamento de bloqueios será permitido para particionar. Depois de ser escalonado para o nível de partição, o bloqueio não será escalonado posteriormente para a granularidade TABLE.
+- Se a tabela estiver particionada, o escalonamento de bloqueios será permitido para a granularidade HoBT (pilha ou árvore B). Em outras palavras, o escalonamento será permitido no nível da partição. Depois de ser escalonado para o nível de HoBT, o bloqueio não será escalonado posteriormente para a granularidade TABLE.
 - Se a tabela não estiver particionada, o escalonamento de bloqueios será feito para a granularidade TABLE.
 
 TABLE  

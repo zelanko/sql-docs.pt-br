@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d5cd6356f4bc691518f11e1e6fb00add527cc595
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 90a2bcdac4fd1870adc4eeaa888b906857ef9854
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027345"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305282"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Ingressar o SQL Server em um host Linux em um domínio do Active Directory
 
@@ -197,9 +197,9 @@ Use as etapas a seguir para ingressar um host SQL Server em um domínio do Activ
    ```
 
    > [!NOTE]
-   > - Se **id user@contoso.com** retornar `No such user`, verifique se o serviço SSSD foi iniciado com êxito executando o comando `sudo systemctl status sssd`. Se o serviço estiver em execução e você ainda vir o erro, tente habilitar o log detalhado para SSSD. Para saber mais, confira a documentação do Red Hat para [Solucionar problemas de SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
+   > - Se **id user\@contoso.com** retornar `No such user`, verifique se o serviço SSSD foi iniciado com êxito executando o comando `sudo systemctl status sssd`. Se o serviço estiver em execução e você ainda vir o erro, tente habilitar o log detalhado para SSSD. Para saber mais, confira a documentação do Red Hat para [Solucionar problemas de SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
    >
-   > - Se **kinit user@CONTOSO.COM** retornar `KDC reply did not match expectations while getting initial credentials`, verifique se você especificou o realm em letras maiúsculas.
+   > - Se **kinit user\@CONTOSO.COM** retornar `KDC reply did not match expectations while getting initial credentials`, verifique se você especificou o realm em letras maiúsculas.
 
 Para saber mais, confira a documentação do Red Hat para [Descobrir e ingressar domínios de identidade](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html).
 

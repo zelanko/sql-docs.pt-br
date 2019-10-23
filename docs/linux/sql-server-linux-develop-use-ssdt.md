@@ -8,22 +8,22 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: b98980837f6dce2ebd9f39be142b816f37f16cd8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c6d5789092ea2bbfc6fd9a8bb20cc7d078eaf6de
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077400"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545048"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Use o Visual Studio para criar bancos de dados para SQL Server em Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-O SSDT (SQL Server Data Tools) transforma o Visual Studio em um avançado ambiente de desenvolvimento e DLM (gerenciamento de ciclo de vida de banco de dados) para SQL Server em Linux. Você pode desenvolver, compilar, testar e publicar seu banco de dados de um projeto de origem controlada da mesma forma que desenvolve o código do aplicativo.
+O SSDT (SQL Server Data Tools) transforma o Visual Studio em um avançado ambiente de desenvolvimento e DLM (gerenciamento de ciclo de vida de banco de dados) para SQL Server em Linux. Você pode desenvolver, criar, testar e publicar seu banco de dados de um projeto de origem controlada. Como você desenvolve seu código de aplicativo.
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Instalar o Visual Studio e o SQL Server Data Tools
 
-1. Se você ainda não instalou o Visual Studio em seu computador Windows, [Baixar e instalar o Visual Studio]. Se você não tiver uma licença do Visual Studio, o Visual Studio Community Edition é um IDE gratuito e completo para estudantes, desenvolvedores individuais e open-source.
+1. Se você ainda não instalou o Visual Studio em seu computador Windows, [Baixe e instale o Visual Studio](https://visualstudio.microsoft.com/downloads/). Se você não tem uma licença do Visual Studio, o Visual Studio Community Edition é um IDE gratuito e completo para alunos, desenvolvedores individuais e de software livre.
 
 2. Durante a instalação do Visual Studio, selecione **Personalizado** para a opção **Escolher o tipo de instalação**. Clique em **Avançar**.
 
@@ -101,16 +101,16 @@ O SQL Server em Linux é compatível com o SSDT versão 17.0 RC ou posterior.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
-Você criou com êxito um novo banco de dados na instância do SQL Server em Linux e aprendeu as noções básicas de desenvolver de um banco de dados com um projeto de banco de dados controlado por fonte.
+Você criou com êxito um banco de dados na instância do SQL Server em Linux e aprendeu as noções básicas de como desenvolver um banco de dados com um projeto de banco de dados com controle do código-fonte.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Se você for novo no T-SQL, confira o [Tutorial: Gravando instruções Transact-SQL] e a [referência do Transact-SQL (Mecanismo de Banco de Dados)].
+Se você for novo no T-SQL, confira o [Tutorial: Escrevendo instruções Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
-Para obter mais informações sobre como desenvolver um banco de dados com SQL Data Tools, confira [Documentos do MSDN do SSDT]
+Para obter mais informações sobre como desenvolver um banco de dados com SQL Data Tools, confira os artigos abaixo.
 
-[Baixar e instalar o Visual Studio]: https://www.visualstudio.com/downloads/
-[Download and Install SSDT]:https://aka.ms/ssdt-download
-[Documentos do MSDN do SSDT]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[Tutorial: Gravando instruções Transact-SQL]: https://msdn.microsoft.com/library/ms365303.aspx
-[Referência do Transact-SQL (Mecanismo de Banco de Dados)]: https://msdn.microsoft.com/library/bb510741.aspx
+* [Baixar e instalar o Visual Studio](https://www.visualstudio.com/downloads/)
+* [Baixar e instalar o SSDT](https://aka.ms/ssdt-download)
+* [Documentos do MSDN do SSDT](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)
+* [Tutorial: Gravando instruções Transact-SQL](https://msdn.microsoft.com/library/ms365303.aspx)
+* [Referência do Transact-SQL (Mecanismo de Banco de Dados)](https://msdn.microsoft.com/library/bb510741.aspx)

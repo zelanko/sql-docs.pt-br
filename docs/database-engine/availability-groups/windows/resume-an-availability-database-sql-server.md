@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c2a266c6cedcec3e11a57fcb08f152789a74097a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 55fdc5242b43e3aa2f25b601edc1439cbbec3ece
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014257"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517952"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Retomar um banco de dados de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,8 +69,8 @@ ms.locfileid: "68014257"
 1.  Conecte-se à instância do servidor que hospeda a réplica secundária, cujo banco de dados você deseja retomar.  
   
 2.  Retome o banco de dados secundário usando a seguinte instrução [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md):  
-  
-     ALTER DATABASE *database_name* SET HADR RESUME  
+
+     ALTER DATABASE *database_name* SET HADR RESUME;
   
 ##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
  **Para retomar um banco de dados secundário**  

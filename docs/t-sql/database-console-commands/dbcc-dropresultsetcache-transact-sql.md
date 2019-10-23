@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: a46f94c1a6c490e157dfb0b90b2b5297afb6526f
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.openlocfilehash: 86320f3c3f8288d92234356d43b1a7e8559a4929
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72174866"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72452854"
 ---
 # <a name="dbcc-dropresultsetcache--transact-sql"></a>DBCC DROPRESULTSETCACHE (Transact-SQL)
 
@@ -25,7 +25,7 @@ ms.locfileid: "72174866"
 
 Remove todas as entradas do cache do conjunto de resultados de um banco de dados [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] do Azure.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,14 +40,15 @@ Requer associação à função de servidor fixa DB_OWNER.
 
 ## <a name="remarks"></a>Remarks
 
-Esse comando esvazia o cache do conjunto de resultados para todas as consultas.  
+- Esse comando esvazia o cache do conjunto de resultados para todas as consultas.  
 
-DESATIVAR o recurso de cache do conjunto de resultados para um banco de dados também exclui todos os resultados armazenados em cache.  
+- DESATIVAR o recurso de cache do conjunto de resultados para um banco de dados também exclui todos os resultados armazenados em cache.  
 
-Pausar um banco de dados habilitado com o cache do conjunto de resultados não excluirá os resultados armazenados em cache.  
+- Pausar um banco de dados habilitado com o cache do conjunto de resultados não excluirá os resultados armazenados em cache.  
 
 ## <a name="see-also"></a>Confira também
 
+[Ajuste de desempenho com armazenamento em cache do conjunto de resultados](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

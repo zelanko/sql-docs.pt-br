@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
-ms.date: 05/14/2019
-ms.openlocfilehash: a7fbde0a4dab0becdaa9fb7b59221e57fd81c59e
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.date: 10/15/2019
+ms.openlocfilehash: 9a82168afd82d4670521e1a84f87ae1bea57281e
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68822618"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545058"
 ---
 # <a name="what-is-azure-data-studio"></a>O que é o Azure Data Studio?
 
@@ -68,6 +68,7 @@ Para saber mais sobre a criação de extensões, confira [Criação de extensõe
 - Pode executar a maioria das tarefas administrativas por meio do terminal integrado usando o sqlcmd ou o PowerShell
 - Tem necessidade mínima de experiências com assistente
 - Não precisa fazer uma configuração administrativa profunda
+- Desejo 
 
 **Use o SQL Server Management Studio se você:**
 - Passa a maior parte do tempo em tarefas de administração de banco de dados
@@ -117,6 +118,8 @@ Para saber mais sobre a criação de extensões, confira [Criação de extensõe
 |Resultados em Texto||Sim|
 |Visualizador Espacial||Sim|
 |SQLCMD||Sim|
+|Notebooks|Sim||
+|Salvar Consulta como snippet|Sim||
 
 ### <a name="operating-system-support"></a>Suporte do sistema operacional
 
@@ -139,6 +142,7 @@ Para saber mais sobre a criação de extensões, confira [Criação de extensõe
 |Recurso|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Backup/Restauração|Sim|Sim|
+|Suporte de cluster de Big Data|Sim||
 |Importação de Arquivo Simples|Visualização|Sim|
 |SQL Agent|Visualização|Sim|
 |SQL Profiler|Visualização|Sim|
@@ -160,6 +164,7 @@ Para saber mais sobre a criação de extensões, confira [Criação de extensõe
 |Explorador de Modelos||Sim|
 |Avaliação de Vulnerabilidade||Sim|
 |Gerenciamento de XEvent||Sim|
+|Integração da API de Avaliação do SQL||Sim|
 
 ## <a name="next-steps"></a>Próximas etapas
 

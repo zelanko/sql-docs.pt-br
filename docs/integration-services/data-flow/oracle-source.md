@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7444c5710663eb601aa3c8ce2287869a8083f814
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 4898a61b0f64f79b32a9efc81f0a41a025e6d2ad
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553204"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545063"
 ---
 # <a name="oracle-source"></a>Oracle Source
 
@@ -54,7 +54,7 @@ As propriedades personalizadas da origem do Oracle estão abaixo. Todas as propr
 |AccessMode|Inteiro (enumeração)|O modo usado para acessar o banco de dados. Os valores possíveis são **Nome da Tabela** e **Comando SQL**. O padrão é **Nome da Tabela**.|
 |BatchSize|Integer|O tamanho do lote para carregamento em massa. Esse é o número de registros extraído como uma matriz. <br>Esta propriedade é definida somente pelo **Editor Avançado**|
 |DefaultCodePage|Integer|A página de código a ser usada quando a fonte de dados não tiver informações da página de código. <br>Esta propriedade é definida somente pelo **Editor Avançado**.|
-|PreFetchCount|Integer|O número de linhas de pré-busca (veja a seguir). <br>Esta propriedade é definida somente pelo **Editor Avançado**.|
+|PreFetchCount|Integer|O número de linhas de pré-busca. <br>Esta propriedade é definida somente pelo **Editor Avançado**.|
 |SqlCommand|Cadeia de caracteres|O comando SQL a ser executado quando AccessMode é definido como Comando SQL.|
 |TableName|Cadeia de caracteres|O nome da tabela com os dados a serem usados quando AccessMode for definido como Nome da Tabela.|
 

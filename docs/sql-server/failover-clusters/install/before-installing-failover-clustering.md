@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e30bc0e3dd0402d4b62ac55a897268c021507560
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063989"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517936"
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar o cluster de failover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Antes de instalar um cluster de failover do SQL Server, você deve selecionar o hardware e o sistema operacional nos quais o SQL Server será executado. Você também deve configurar o WSFC (Clustering de Failover do Windows Server) e examinar a rede, a segurança e as considerações sobre outros softwares que serão executados no cluster de failover.  
   
- Se um cluster do Windows tiver uma unidade de disco local e a mesma letra de unidade também for usada em um ou mais nós de cluster como uma unidade compartilhada, você não poderá instalar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nessa unidade.  
+ Se um cluster do Windows tiver uma unidade de disco local e a mesma letra de unidade também for usada em um ou mais nós de cluster como uma unidade compartilhada, você não poderá instalar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nessa unidade. Essa restrição se aplica às instâncias de cluster de failover do SQL Server e instâncias autônomas em um servidor que faz parte de uma Instância do Cluster de Failover do Windows.
   
  Talvez você queira também examinar os tópicos a seguir para saber mais sobre conceitos de clustering de failover, recursos e tarefas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   

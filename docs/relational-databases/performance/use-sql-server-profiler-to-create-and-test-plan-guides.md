@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3137bffef524faf061322224e92941687bb16046
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 271e84ccefd43f2ce379a64435a9eb105553f606
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987277"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305082"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Usar o SQL Server Profiler para criar e testar guias de plano
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  Abra o arquivo de texto em lote no Bloco de Notas e copie o texto no buffer copiar e colar.  
   
-8.  Crie o guia de plano e cole o texto copiado dentro das aspas ( **''** ) especificadas para o argumento **@stmt** . Você deve escapar todas as aspas únicas no argumento **@stmt** , precedendo-as com outra aspa única. Tenha cuidado para não adicionar ou remover nenhum outro caractere quando você inserir essas aspas individuais. Por exemplo, a literal de data **'** 20000101 **'** deve ser delimitada como **20000101**" **.**  
+8.  Crie o guia de plano e cole o texto copiado dentro das aspas ( **''** ) especificadas para o argumento **\@stmt**. Você deve escapar todas as aspas únicas no argumento **\@stmt**, precedendo-as com outra aspa única. Tenha cuidado para não adicionar ou remover nenhum outro caractere quando você inserir essas aspas individuais. Por exemplo, a literal de data **'** 20000101 **'** deve ser delimitada como **20000101**" **.**  
   
  Aqui está o guia de plano:  
   
