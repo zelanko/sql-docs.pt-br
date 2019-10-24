@@ -15,12 +15,12 @@ ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 73a106a4e17ea770517c7662dfecd98fe58e36b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 936f037852f39f24690e1cb9af3f63a2cfa2a613
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270741"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72781827"
 ---
 # <a name="using-table-and-index-partitioning"></a>Usando o particionamento de tabela e índice
   É possível armazenar dados usando os algoritmos de armazenamento fornecidos por [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). O particionamento pode tornar as tabelas e os índices grandes mais gerenciáveis e escalonáveis.  
@@ -33,7 +33,7 @@ ms.locfileid: "63270741"
  Cada objeto <xref:Microsoft.SqlServer.Management.Smo.Table> e <xref:Microsoft.SqlServer.Management.Smo.Index> especifica o esquema de partição usado na propriedade <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> e especifica as colunas no <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection>.  
   
 ## <a name="example"></a>Exemplo  
- Para o exemplo de código a seguir, selecione o ambiente de programação, o modelo de programação e a linguagem de programação para criar seu aplicativo. Para obter mais informações, consulte [criar um projeto do Visual Basic SMO no Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) e [criar um Visual C&#35; projeto de SMO no Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para o exemplo de código a seguir, selecione o ambiente de programação, o modelo de programação e a linguagem de programação para criar seu aplicativo. Para obter mais informações, consulte [criar um projeto Visual Basic Smo no Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) e [criar um projeto&#35; do Visual C Smo no Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-basic"></a>Configurando um esquema de partição para uma tabela no Visual Basic  
  O exemplo de código mostra como criar uma função de partição e um esquema de partição para a tabela `TransactionHistory` no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . As partições são divididas por data com a intenção de separar registros antigos na tabela `TransactionHistoryArchive` .  
@@ -43,7 +43,7 @@ ms.locfileid: "63270741"
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>Configurando um esquema de partição para uma tabela no Visual C#  
  O exemplo de código mostra como criar uma função de partição e um esquema de partição para a tabela `TransactionHistory` no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . As partições são divididas por data com a intenção de separar registros antigos na tabela `TransactionHistoryArchive` .  
   
-```  
+```csharp
 {   
 //Connect to the local, default instance of SQL Server.   
 Server srv;   
@@ -112,7 +112,7 @@ $T.GetType()
 #Add a partition function parameter that specifies the function uses a DateTime range type.  
 $pfp =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.PartitionFunctionParameter -argumentlist $pf, $T  
   
-#Specify the three dates that divide the data into four partitions.   
+#Specify the three dates that divide the data into four partitions.
 #Create an array of type object to hold the partition data  
 $val = "1/1/2003"."1/1/2004","1/1/2005"  
 $pf.RangeValues = $val  
@@ -124,7 +124,7 @@ $pf.Create()
 $ps = New-Object -TypeName Microsoft.SqlServer.Management.SMO.PartitionScheme -argumentlist $db, "TransHistPS"  
 $ps.PartitionFunction = "TransHistPF"  
   
-#add the filegroups to the scheme   
+#add the filegroups to the scheme
 $ps.FileGroups.Add("PRIMARY")  
 $ps.FileGroups.Add("Second")  
 $ps.FileGroups.Add("Third")  
@@ -134,7 +134,5 @@ $ps.FileGroups.Add("Fourth")
 $ps.Create()  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Tabelas e índices particionados](../../partitions/partitioned-tables-and-indexes.md)  
-  
-  
+## <a name="see-also"></a>Consulte Também  
+ [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)  

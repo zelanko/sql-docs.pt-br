@@ -16,12 +16,12 @@ ms.assetid: 67dcdad0-57b2-431c-b77f-4ffc926af93d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e777fc76a49e7d4ec645133808787e25a702348f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d9df271c457cb0f05f9fdfe70952b6d02224963
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62523520"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783254"
 ---
 # <a name="delete-one-or-more-jobs"></a>Excluir um ou mais trabalhos
   Este tópico descreve como excluir trabalhos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o SQL Server Management Objects.  
@@ -59,7 +59,7 @@ ms.locfileid: "62523520"
   
 
   
-##  <a name="TSQL"></a> Usando o Transact-SQL  
+##  <a name="TSQL"></a> Usando Transact-SQL  
   
 #### <a name="to-delete-a-job"></a>Para excluir um trabalho  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62523520"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
   
@@ -78,15 +78,10 @@ ms.locfileid: "62523520"
     GO  
     ```  
   
- Para obter mais informações, consulte [sp_delete_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-job-transact-sql).  
-  
+ Para obter mais informações, [consulte &#40;Transact-SQL&#41;sp_delete_job](/sql/relational-databases/system-stored-procedures/sp-delete-job-transact-sql).  
 
-  
-##  <a name="SMO"></a> Usando o SQL Server Management Objects  
- **Para excluir vários trabalhos**  
+##  <a name="SMO"></a>Usando SQL Server Management Objects  
+
+### <a name="to-delete-multiple-jobs"></a>Para excluir vários trabalhos
   
  Use a classe `JobCollection` usando uma linguagem de programação da sua escolha, como o Visual Basic, o Visual C# ou o PowerShell. Para obter mais informações, veja [SMO (SQL Server Management Objects)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-
-  
-  

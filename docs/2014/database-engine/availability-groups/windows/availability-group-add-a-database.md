@@ -14,12 +14,12 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 69d148f9ef780e28300a6d3e233f2b680f0d37d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dda5ac5b2f569c8438439ec77da33fde3a385fa0
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62791937"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782895"
 ---
 # <a name="add-a-database-to-an-availability-group-sql-server"></a>Adicionar um banco de dados a um grupo de disponibilidade (SQL Server)
   Este tópico descreve como adicionar um banco de dados a um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -72,7 +72,7 @@ ms.locfileid: "62791937"
   
          Depois que você usar a caixa de diálogo **Propriedades do Grupo de Disponibilidade** para adicionar um banco de dados a um grupo de disponibilidade, configure o banco de dados secundário correspondente em cada instância de servidor que hospeda uma réplica secundária. Para obter mais informações, consulte [Iniciar movimentação de dados em um banco de dados secundário AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  **Para adicionar um banco de dados a um grupo de disponibilidade**  
   
 1.  Conecte-se à instância de servidor que hospeda a instância do servidor que hospeda a réplica primária.  
@@ -103,11 +103,10 @@ ms.locfileid: "62791937"
   
      Por exemplo, o comando a seguir adiciona o banco de dados secundário `MyDd` ao grupo de disponibilidade `MyAG` , cuja réplica primária é hospedada por `PrimaryServer\InstanceName`.  
   
-    ```  
-  
+    ```powershell
     Add-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAG `   
-    -Database "MyDb"  
+     -Path SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAG `   
+     -Database "MyDb"  
     ```  
   
     > [!NOTE]  
@@ -115,18 +114,13 @@ ms.locfileid: "62791937"
   
 3.  Depois que você adicionar um banco de dados a um grupo de disponibilidade, configure o banco de dados secundário correspondente em cada instância de servidor que hospeda uma réplica secundária. Para obter mais informações, consulte [Iniciar movimentação de dados em um banco de dados secundário AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
- **Para configurar e usar o provedor do SQL Server PowerShell**  
-  
--   [Provedor do SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
-  
- Para obter um exemplo completo, consulte [Exemplo (PowerShell)](#PSExample), abaixo.  
-  
-###  <a name="PSExample"></a> Exemplo (PowerShell)  
+ Para configurar e usar o provedor de SQL Server PowerShell, consulte [provedor de SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md).
+
  O exemplo a seguir mostra o processo completo para preparar um banco de dados secundário de um banco de dados na instância de servidor que hospeda a réplica primária de um grupo de disponibilidade, adicionando o banco de dados a um grupo de disponibilidade (como um banco de dados primário) e unindo o banco de dados secundário ao grupo de disponibilidade. Primeiro, o exemplo faz backup do banco de dados e de seu log de transação. Em seguida, o exemplo restaura os backups de banco de dados e log para as instâncias de servidor que hospedam uma réplica secundária.  
   
  O exemplo chama `Add-SqlAvailabilityDatabase` duas vezes: primeiro na réplica primária para adicionar o banco de dados ao grupo de disponibilidade e, em seguida, na réplica secundária para unir o banco de dados secundário nessa réplica para o grupo de disponibilidade. Se você tiver mais de uma réplica secundária, restaure e junção una o banco de dados secundário em cada um deles.  
   
-```  
+```powershell
 $DatabaseBackupFile = "\\share\backups\MyDatabase.bak"  
 $LogBackupFile = "\\share\backups\MyDatabase.trn"  
 $MyAgPrimaryPath = "SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAg"  
@@ -139,14 +133,11 @@ Restore-SqlDatabase -Database "MyDatabase" -BackupFile $DatabaseBackupFile -Serv
 Restore-SqlDatabase -Database "MyDatabase" -BackupFile $LogBackupFile -ServerInstance "SecondaryServer\InstanceName" -RestoreAction 'Log' -NoRecovery  
   
 Add-SqlAvailabilityDatabase -Path $MyAgPrimaryPath -Database "MyDatabase"  
-Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"  
-  
+Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Visão geral do &#40;grupos de disponibilidade AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
  [Criação e configuração de grupos de disponibilidade &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [Use o painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [Use o painel &#40;AlwaysOn SQL Server Management Studio&#41; ](use-the-always-on-dashboard-sql-server-management-studio.md)    
  [Monitorar grupos de disponibilidade &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
-  
-  
