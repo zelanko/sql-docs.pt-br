@@ -16,12 +16,12 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f3d98314bf142340d97d218b93670a14c9f56e3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c686e5eb9bb44517aa1636dc28c972f6782f8bfe
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62923006"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782745"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Fazer backup de arquivos e de grupos de arquivos (SQL Server)
   Este tópico descreve como fazer backup de arquivos e grupos de arquivos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou PowerShell. Quando o tamanho de banco de dados e exigências de desempenho tornarem um backup de banco de dados completo impraticável, então você poderá criar um backup de arquivo. Um *backup de arquivo* contém todos os dados em um ou mais arquivos (ou grupos de arquivos). Para obter mais informações sobre backups de arquivos, veja [Backups completos de arquivos &#40;SQL Server&#41;](full-file-backups-sql-server.md) e [Backups diferenciais &#40;SQL Server&#41;](differential-backups-sql-server.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "62923006"
   
      [Segurança](#Security)  
   
--   **Para fazer backup de arquivos e grupos de arquivos, usando:**  
+-   **Para fazer backup de arquivos e grupos de arquivo, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62923006"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   A instrução BACKUP não é permitida em uma transação explícita ou implícita.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62923006"
   
 #### <a name="to-back-up-database-files-and-filegroups"></a>Para fazer backup de arquivos de banco de dados e grupos de arquivos  
   
-1.  Depois de conectar-se à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objeto, clique no nome do servidor para expandir a árvore do servidor.  
+1.  Depois de conectar-se à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
   
 2.  Expanda **Bancos de Dados**e, dependendo do banco de dados, selecione um banco de dados de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco de dados do sistema.  
   
@@ -129,13 +129,13 @@ ms.locfileid: "62923006"
     > [!NOTE]  
     >  As opções na seção **Log de transações** estarão inativos exceto se o backup estiver sendo feito em um log de transações (como especificado na seção **Tipo de backup** da página **Geral** ).  
   
-16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versões posteriores dão suporte à [compactação de backup](backup-compression-sql-server.md). Por padrão, a compactação de um backup depende do valor da opção de configuração de servidor **padrão de compactação de backup**. Porém, independentemente do padrão atual do nível do servidor, é possível compactar um backup, marcando a opção **Compactar backup**e evitar a compactação marcando **Não compactar o backup**.  
+16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versões posteriores dão suporte à [compactação de backup](backup-compression-sql-server.md). Por padrão, a compactação de um backup depende do valor da opção de configuração de servidor **padrão de compactação de backup** . Porém, independentemente do padrão atual do nível do servidor, é possível compactar um backup, marcando a opção **Compactar backup**e evitar a compactação marcando **Não compactar o backup**.  
   
      **Para exibir o padrão de compactação de backup atual**  
   
     -   [Exibir ou configurar a opção de configuração de servidor backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-back-up-files-and-filegroups"></a>Para efetuar backup de arquivos e grupos de arquivos  
   
@@ -157,19 +157,19 @@ ms.locfileid: "62923006"
   
      [ WITH *com_opções* [ **,** ...*o* ] ] ;  
   
-    |Opção|Descrição|  
+    |Opção|Description|  
     |------------|-----------------|  
-    |*database*|É o banco de dados do qual é feito o backup do log de transações, do banco de dados parcial ou do banco de dados completo.|  
+    |*banco de dados*|É o banco de dados do qual é feito o backup do log de transações, do banco de dados parcial ou do banco de dados completo.|  
     |FILE **=** _logical_file_name_|Especifica o nome lógico de um arquivo a ser incluído no backup de arquivos.|  
     |FILEGROUP **=** _logical_filegroup_name_|Especifica o nome lógico de um grupo de arquivos que será incluído no backup de arquivos. No modelo de recuperação simples, um backup de grupo de arquivos é permitido apenas para grupos de arquivos somente leitura.|  
     |[ **,** ...*f* ]|É um espaço reservado que indica que vários arquivos e grupos de arquivos podem ser especificados. O número de arquivos ou grupos de arquivos é ilimitado.|  
-    |*backup_device* [ **,** ...*n* ]|Especifica uma lista de 1 a 64 dispositivos de backup a serem usados para a operação de backup. Você pode especificar um dispositivo de backup físico ou pode especificar um dispositivo de backup lógico correspondente, se já definido. Para especificar um dispositivo de backup físico, use a opção DISK ou TAPE:<br /><br /> { DISK &#124; TAPE } **=** _physical_backup_device_name_<br /><br /> Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
+    |*backup_device* [ **,** ...*n* ]|Especifica uma lista de 1 a 64 dispositivos de backup a serem usados para a operação de backup. Você pode especificar um dispositivo de backup físico ou pode especificar um dispositivo de backup lógico correspondente, se já definido. Para especificar um dispositivo de backup físico, use a opção DISK ou TAPE:<br /><br /> { DISK &#124; TAPE } **=** _physical_backup_device_name_<br /><br /> Para obter mais informações, consulte [Backup Devices &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
     |WITH *with_options* [ **,** ...*o* ]|Opcionalmente, especifica uma ou mais opções adicionais, como DIFFERENTIAL.<br /><br /> Observação: um backup de arquivo diferencial exige um backup de arquivo completo como base. Para obter mais informações, veja [Criar um backup diferencial de banco de dados &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md).|  
   
-2.  No modelo de recuperação completa, você deverá também efetuar backup do log de transações. Para usar um conjunto inteiro de backups de arquivo completos para restaurar um banco de dados, você deverá também ter suficientes backups de log para abranger todos os backups de arquivo, desde o início do primeiro backup de arquivo. Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md).  
+2.  No modelo de recuperação completa, você deverá também efetuar backup do log de transações. Para usar um conjunto inteiro de backups de arquivo completos para restaurar um banco de dados, você deverá também ter suficientes backups de log para abranger todos os backups de arquivo, desde o início do primeiro backup de arquivo. Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)).  
   
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
- Os exemplos seguintes fazem backup de um ou mais arquivos dos grupos de arquivos secundários do banco de dados `Sales` . Esse banco de dados usa o modelo de recuperação completa e contém os seguintes grupos de arquivos secundários:  
+ Os exemplos seguintes fazem backup de um ou mais arquivos dos grupos de arquivos secundários do banco de dados `Sales`. Esse banco de dados usa o modelo de recuperação completa e contém os seguintes grupos de arquivos secundários:  
   
 -   Um grupo de arquivo nomeado `SalesGroup1` que tem os arquivos `SGrp1Fi1` e `SGrp1Fi2`.  
   
@@ -187,7 +187,7 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-#### <a name="b-creating-a-full-file-backup-of-the-secondary-filegroups"></a>B. Criando um backup completo de arquivos dos grupos de arquivos secundários  
+#### <a name="b-creating-a-full-file-backup-of-the-secondary-filegroups"></a>b. Criando um backup completo de arquivos dos grupos de arquivos secundários  
  O exemplo a seguir cria um backup de arquivo completo de todos os arquivos dos dois grupos de arquivos secundários.  
   
 ```sql  
@@ -215,24 +215,21 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
   
-1.  Use o cmdlet `Backup-SqlDatabase` e especifique `Files` para o valor do parâmetro `-BackupAction`. Além disso, especifique um dos seguintes parâmetros:  
+Use o cmdlet `Backup-SqlDatabase` e especifique `Files` para o valor do parâmetro `-BackupAction`. Além disso, especifique um dos seguintes parâmetros:  
   
-    -   Para fazer backup de um arquivo específico, especifique o `-DatabaseFile` *cadeia de caracteres* parâmetro, onde *cadeia de caracteres* é um ou mais arquivos de banco de dados de backup.  
+    -   Para fazer backup de um arquivo específico, especifique o parâmetro de*cadeia de caracteres* `-DatabaseFile`, em que *cadeia de caracteres* é um ou mais arquivos de banco de dados para backup.  
   
-    -   Para fazer backup de todos os arquivos de um determinado grupo de arquivos, especifique o `-DatabaseFileGroup` *cadeia de caracteres* parâmetro, onde *cadeia de caracteres* é um ou mais grupos de arquivos de banco de dados de backup.  
+    -   Para fazer backup de todos os arquivos em um determinado grupo de arquivos, especifique o parâmetro de*cadeia de caracteres* `-DatabaseFileGroup`, em que *cadeia de caracteres* é um ou mais grupos de arquivo de banco de dados cujo backup será feito.  
   
      O exemplo a seguir cria um backup de arquivo completo de todos os arquivos dos grupos de arquivos secundários 'FileGroup1' e 'FileGroup2' no banco de dados `MyDB` . Os backups são criados no local de backup padrão da instância do servidor `Computer\Instance`.  
   
-    ```  
-    --Enter this command at the PowerShell command prompt, C:\PS>  
+    ```powershell
     Backup-SqlDatabase -ServerInstance Computer\Instance -Database MyDB -BackupAction Files -DatabaseFileGroup "FileGroup1","FileGroup2"  
     ```  
   
- **Para configurar e usar o provedor do SQL Server PowerShell**  
+Para configurar e usar o provedor de SQL Server PowerShell, consulte [provedor de SQL Server PowerShell](../../powershell/sql-server-powershell-provider.md).
   
--   [Provedor do SQL Server PowerShell](../../powershell/sql-server-powershell-provider.md)  
-  
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral do backup &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   

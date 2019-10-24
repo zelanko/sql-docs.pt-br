@@ -20,24 +20,24 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ed991d65858d40b96013659caa2d83c479ca1d3
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918058"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782717"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar um banco de dados como um DAC
-  Use o **registrar Data-tier Application Wizard** ou um Windows script do PowerShell para compilar uma definição de DAC (aplicativo) de camada de dados que descreve os objetos no banco de dados existente e registre a definição do DAC na `msdb` banco de dados do sistema (**mestre** em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
+  Use o **Assistente para registrar o aplicativo da camada de dados** ou um script do Windows PowerShell para criar uma definição de DAC (aplicativo da camada de dados) que descreva os objetos em um banco de dado existente e registre a definição de DAC no banco de dados do sistema `msdb` ( **mestre** em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
   
--   **Antes de começar:**  [Limitações e Restrições](#LimitationsRestrictions), [Permissões](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Para atualizar um DAC, usando:**  [O Assistente de Aplicativo da Camada de Dados de Registro](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  O processo de registro cria uma definição do DAC que define os objetos no banco de dados. A combinação da definição do DAC e do banco de dados forma uma instância do DAC. Se você registrar um banco de dados como um DAC em uma instância gerenciada do Mecanismo de Banco de Dados, o DAC registrado será incorporado ao Utilitário do SQL Server na próxima vez que o conjunto de coleta do utilitário for enviado da instância para o Ponto de Controle do Utilitário. O DAC estará presente no nó **Aplicativos da Camada de Dados Implantados** do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicativos da Camada de Dados Implantados** details page.  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
  O registro do DAC só pode ser executado em um banco de dados no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior. O registro do DAC não poderá ser executado se um DAC já estiver registrado para o banco de dados. Por exemplo, se o banco de dados foi criado através da implantação de um DAC, você não poderá executar o **Assistente para Registrar o Aplicativo da Camada de Dados**.  
   
  Você não poderá registrar um DAC se o banco de dados tiver objetos que não tenham suporte em um DAC ou usuários contidos. Para obter mais informações sobre os tipos de objetos com suporte em um DAC, consulte [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "62918058"
 ##  <a name="Introduction"></a> Página de Introdução  
  Essa página descreve as etapas do registro de um aplicativo da camada de dados.  
   
- **Não mostrar esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página no futuro.  
+ **Não exibir esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página no futuro.  
   
  **Avançar >** - Continua na página **Definir Propriedades**.  
   
@@ -78,11 +78,11 @@ ms.locfileid: "62918058"
   
  **Nome do aplicativo.** – Uma cadeia de caracteres que especifica o nome usado para identificar a definição do DAC, o campo foi populado com o nome do banco de dados.  
   
- **Versão.** - Um valor numérico que identifica a versão do DAC. A versão do DAC é usada no Visual Studio para identificar a versão do DAC em que os desenvolvedores estão trabalhando. Ao implantar um DAC, a versão é armazenada na `msdb` do banco de dados e pode ser exibida posteriormente na **aplicativos da camada de dados** nó no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ **Versão.** - Um valor numérico que identifica a versão do DAC. A versão do DAC é usada no Visual Studio para identificar a versão do DAC em que os desenvolvedores estão trabalhando. Ao implantar um DAC, a versão é armazenada no banco de dados do `msdb` e, posteriormente, pode ser exibida no nó **aplicativos da camada data** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- **Descrição.** - Opcional. Texto que explica a finalidade do DAC. Ao implantar um DAC, a descrição é armazenada na `msdb` do banco de dados e pode ser exibida posteriormente na **aplicativos da camada de dados** nó no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+ **Descrição.** - Opcional. Texto que explica a finalidade do DAC. Ao implantar um DAC, a descrição é armazenada no banco de dados do `msdb` e, posteriormente, pode ser exibida no nó **aplicativos da camada data** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- **\< Anterior** -retorna para o **Introdução** página.  
+ **\< anterior** – retorna para a página **introdução** .  
   
  **Avançar >** - Verifica se um DAC pode ser compilado por meio dos objetos do banco de dados e exibe os resultados na página de **Validação e Resumo**.  
   
@@ -94,16 +94,16 @@ ms.locfileid: "62918058"
 ### <a name="retrieving-objects"></a>Recuperando objetos  
  **Recuperando os objetos de banco de dados e de servidor.** - Exibe uma barra de progresso enquanto o assistente recupera todos os objetos necessários do banco de dados e da instância do Mecanismo de Banco de Dados.  
   
- **\< Anterior** -retorna para o **propriedades do conjunto de** página para alterar suas entradas.  
+ **\< anterior** – retorna para a página **definir propriedades** para alterar suas entradas.  
   
  **Avançar >** - Registra o DAC e exibe os resultados na página **Registrar o DAC**.  
   
  **Cancelar** - Finaliza o assistente sem registrar o DAC.  
   
 ### <a name="validating-objects"></a>Validando objetos  
- **Checking**  _SchemaName_ **.** _ObjectName_ **.** - Exibe uma barra de progresso enquanto o assistente verifica as dependências dos objetos recuperados e se todos eles são objetos válidos para um DAC. _SchemaName_ **.** _ObjectName_ identifica qual objeto está sendo verificado no momento.  
+ **Verificando**  _SchemaName_ **.** _ObjectName_ **.** - Exibe uma barra de progresso enquanto o assistente verifica as dependências dos objetos recuperados e se todos eles são objetos válidos para um DAC. _SchemaName_ **.** _ObjectName_ identifica qual objeto está sendo verificado no momento.  
   
- **\< Anterior** -retorna para o **propriedades do conjunto de** página para alterar suas entradas.  
+ **\< anterior** – retorna para a página **definir propriedades** para alterar suas entradas.  
   
  **Avançar >** - Registra o DAC e exibe os resultados na página **Registrar o DAC**.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "62918058"
   
  **Salvar Relatório** - Selecione esse botão para salvar uma cópia do relatório de validação em um arquivo HTML. A pasta padrão é **SQL Server Gerenciamento Studio\DAC Packages** na pasta Documentos da conta do Windows.  
   
- **\< Anterior** -retorna para o **propriedades do conjunto de** página para alterar suas entradas.  
+ **\< anterior** – retorna para a página **definir propriedades** para alterar suas entradas.  
   
  **Avançar >** - Registra o DAC e exibe os resultados na página **Registrar o DAC**.  
   
@@ -143,10 +143,10 @@ ms.locfileid: "62918058"
 ### <a name="example-powershell"></a>Exemplo (PowerShell)  
  O exemplo a seguir registra um banco de dados chamado MyDB como um DAC.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Specify the database to register as a DAC.  
 $dbname = "MyDB"  
@@ -162,7 +162,5 @@ $registerunit.Description = $description
 $registerunit.Register()  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Aplicativos da camada de dados](data-tier-applications.md)  
-  
-  
+## <a name="see-also"></a>Consulte Também  
+ [Aplicativos da Camada de Dados](data-tier-applications.md)  

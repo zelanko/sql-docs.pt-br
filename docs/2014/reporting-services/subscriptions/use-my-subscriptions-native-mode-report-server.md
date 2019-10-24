@@ -13,25 +13,25 @@ ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ddd8eba477d0426fc0bf8eaeac9dcd2c1ec60b78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 650fe0fe02841c55caf0cfba864eb739386ca48a
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66100615"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783153"
 ---
 # <a name="use-my-subscriptions"></a>Usar Minhas Assinaturas
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Gerenciador de relatórios inclui um **Minhas assinaturas** página que organiza todas as suas assinaturas em um só lugar. É possível usar Minhas Assinaturas para exibir, modificar e excluir assinaturas existentes. Entretanto, você não pode usar Minhas Assinaturas para criar assinaturas.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Report Manager inclui uma página **minhas assinaturas** que organiza todas as suas assinaturas em um único local. É possível usar Minhas Assinaturas para exibir, modificar e excluir assinaturas existentes. Entretanto, você não pode usar Minhas Assinaturas para criar assinaturas.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modo nativo|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode|  
   
  Em Minhas Assinaturas, você pode classificar assinaturas por pasta, relatório, descrição, gatilho, data da última execução ou status. Todos os valores são classificados por ordem alfabética, exceto Data da Última Execução, que está em ordem cronológica.  
   
  Minhas Assinaturas exibe somente as assinaturas criadas pelo usuário. Minhas Assinaturas não relaciona assinaturas de propriedade de outros usuários, ainda que você tenha sido adicionado como assinante dessas assinaturas, tampouco exibe assinaturas controladas por dados.  
   
- Não é possível procurar assinaturas por nome, nem procurar uma assinatura com base em informações de gatilho, informações de status, etc. Para obter mais informações, consulte [criar, modificar e excluir assinaturas padrão &#40;Reporting Services no modo nativo&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md).  
+ Não é possível procurar assinaturas por nome, nem procurar uma assinatura com base em informações de gatilho, informações de status, etc. Para obter mais informações, consulte [criar, modificar e excluir assinaturas padrão &#40;Reporting Services no modo&#41;nativo](create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
 ## <a name="how-to-use-my-subscriptions"></a>Como usar Minhas Assinaturas  
  Minhas Assinaturas está disponível através do Gerenciador de Relatórios. Para acessar Minhas Assinaturas, clique em **Minhas Assinaturas** na barra de ferramentas global do Gerenciador de Relatórios.  
@@ -41,7 +41,7 @@ ms.locfileid: "66100615"
   
  O seguinte script do PowerShell retornará a lista de assinaturas e as propriedades de assinatura do usuário atual. Para obter mais informações, consulte [Método ReportingService2010.ListMySubscriptions](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listmysubscriptions.aspx).  
   
-```  
+```powershell
 #server -  all subscriptions of the current user at the given server or site  
 $server="[server name]/reportserver"  
 $rs2010 = New-WebServiceProxy -Uri "http://$server/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential ;  
@@ -49,13 +49,10 @@ $rs2010 = New-WebServiceProxy -Uri "http://$server/ReportService2010.asmx" -Name
 $subscriptions=ListMySubscriptions(ItemPathOrSiteURL)  
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status  
 #uncomment the following to list all the subscription properties  
-#$subscriptions  
-  
+#$subscriptions
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Assinaturas controladas por dados](data-driven-subscriptions.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Criar e gerenciar assinaturas de servidores de relatório no modo Nativo](../create-manage-subscriptions-native-mode-report-servers.md)  
-  
-  

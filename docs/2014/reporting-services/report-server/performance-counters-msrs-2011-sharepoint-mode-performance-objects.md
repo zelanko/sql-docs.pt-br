@@ -1,5 +1,5 @@
 ---
-title: Contadores de desempenho para o modo do SharePoint do MSRS 2014 Web Service e o MSRS 2014 Windows Service objetos de desempenho (modo SharePoint) | Microsoft Docs
+title: Contadores de desempenho para o modo do SharePoint do serviço Web do MSRS 2014 e objetos de desempenho do modo do SharePoint do serviço Windows MSRS 2014 (modo do SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d994fa563870f01f4a9ca8824b5372587eca804b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23dd102c0144761d3c84d0735357318f27666706
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66103702"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782842"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-sharepoint-mode-and-msrs-2014-windows-service-sharepoint-mode-performance-objects-sharepoint-mode"></a>Contadores de desempenho para os objetos de desempenho do serviço Windows MSRS 2014 e do serviço Web MSRS 2014 (modo do SharePoint)
   Este tópico descreve os contadores de desempenho dos objetos de desempenho `MSRS 2014 Web Service SharePoint Mode` e `MSRS 2014 Windows Service SharePoint Mode` que fazem parte de uma implantação do modo do SharePoint do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].  
@@ -36,18 +36,18 @@ ms.locfileid: "66103702"
   
  **Neste tópico:**  
   
--   [Contadores de desempenho do MSRS 2014 Web Service do SharePoint modo](#bkmk_webservice)  
+-   [Contadores de desempenho do modo do SharePoint do serviço Web MSRS 2014](#bkmk_webservice)  
   
--   [Contadores de desempenho do MSRS 2014 Windows Service SharePoint modo](#bkmk_windowsservice)  
+-   [Contadores de desempenho do modo SharePoint do serviço Windows MSRS 2014](#bkmk_windowsservice)  
   
 -   [Use cmdlets do PowerShell para retornar listas](#bkmk_powershell)  
   
-##  <a name="bkmk_webservice"></a> Contadores de desempenho do MSRS 2014 Web Service do SharePoint modo  
+##  <a name="bkmk_webservice"></a>Contadores de desempenho do modo do SharePoint do serviço Web MSRS 2014  
  O objeto de desempenho `MSRS 2014 Web Service SharePoint Mode` monitora o desempenho do servidor de relatório. Esse objeto de desempenho inclui uma coleção de contadores usados para controlar o processamento do servidor de relatório iniciado normalmente por operações interativas de exibição de relatórios. Quando você configura este contador, pode aplicá-lo a todas as instâncias de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ou selecionar instâncias específicas. Esses contadores são redefinidos sempre que o [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] interrompe o serviço Web Servidor de Relatórios.  
   
  A tabela a seguir lista os contadores que são incluídos com o objeto de desempenho do `MSRS 2014 Web Service SharePoint Mode`.  
   
-|Contador|Descrição|  
+|Contador|Description|  
 |-------------|-----------------|  
 |`Active Sessions`|Número de sessões ativas. Este contador fornece uma contagem cumulativa de todas as sessões de navegador geradas a partir de execuções de relatórios, independentemente de estarem ativas ou não.<br /><br /> O contador é reduzido à medida que os registros de sessão são removidos. Por padrão, as sessões são removidas após dez minutos de inatividade.|  
 |`Cache Hits/Sec`|Número de solicitações por segundo para relatórios armazenados em cache. Essas são solicitações para relatórios re-renderizados e não solicitações para relatórios processados diretamente do cache. (Consulte `Total Cache Hits` mais adiante neste tópico.)|  
@@ -72,12 +72,12 @@ ms.locfileid: "66103702"
 |`Total Reports Executed`|Número total de relatórios que foram executados com êxito depois que o serviço foi iniciado. Este contador é zerado sempre que [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] para o serviço Web Servidor de Relatórios.|  
 |`Total Requests`|Número total de todas as solicitações feitas ao servidor de relatório depois que o serviço foi iniciado. Este contador é zerado sempre que [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] para o serviço Web Servidor de Relatórios.|  
   
-##  <a name="bkmk_windowsservice"></a> Contadores de desempenho do MSRS 2014 Windows Service SharePoint modo  
+##  <a name="bkmk_windowsservice"></a>Contadores de desempenho do modo SharePoint do serviço Windows MSRS 2014  
  O objeto de desempenho do `MSRS 2014 Windows Service SharePoint Mode` é usado para monitorar o serviço Windows do Servidor de Relatório. Este objeto de desempenho inclui uma coleção de contadores usados para controlar o processamento de relatórios que é iniciado por operações agendadas. As operações agendadas podem incluir assinatura e entrega, instantâneos de execução de relatório e histórico de relatórios. Quando você configura este contador, pode aplicá-lo a todas as instâncias de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ou selecionar instâncias específicas.  
   
  A tabela a seguir lista os contadores incluídos no objeto de desempenho `MSRS 2014 Windows Service SharePoint mode`.  
   
-|Contador|Descrição|  
+|Contador|Description|  
 |-------------|-----------------|  
 |`Active Sessions`|Número de sessões ativas armazenadas no banco de dados do servidor de relatório. Esse contador fornece uma contagem cumulativa de todas as sessões de navegador utilizáveis geradas a partir de assinaturas de relatórios, independentemente de estarem ativas ou não.|  
 |`Alerting: event queue length`||  
@@ -120,23 +120,25 @@ ms.locfileid: "66103702"
 |`Total Snapshot Updates`|Número total de atualizações de instantâneo de execução de relatório.|  
   
 ##  <a name="bkmk_powershell"></a> Use cmdlets do PowerShell para retornar listas  
- ![Conteúdo relacionado ao PowerShell](../media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell")O script do Windows PowerShell a seguir retornará os conjuntos de contadores cujo CounterSetName começa com "msr"  
+ ![Conteúdo relacionado ao PowerShell](../media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell") O script do Windows PowerShell a seguir retornará os conjuntos de contadores em que o CounterSetName começa com "MSR"  
   
-```  
-get-counter -listset msr*  
-Returns a list with the following information  
+```powershell
+Get-Counter -ListSet msr*
+```
+
+Retorna uma lista com as seguintes informações:
+
+```
 CounterSetName     : MSRS 2014 Windows Service SharePoint Mode  
 CounterSetName     : MSRS 2014 Web Service SharePoint Mode  
 ```  
   
- O seguinte script do Windows PowerShell retornará a lista de contadores de desempenho para o CounterSetName "Modo de SharePoint do MSRS 2014 Windows Service".  
+ O script do Windows PowerShell a seguir retornará a lista de contadores de desempenho para o CounterSetName "MSRS 2014 o modo do SharePoint do serviço Windows".  
   
-```  
-(get-counter -listset "MSRS 2014 Windows Service SharePoint Mode").paths  
+```powershell
+(Get-Counter -ListSet "MSRS 2014 Windows Service SharePoint Mode").Paths  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorando o desempenho do servidor de relatório](monitoring-report-server-performance.md)   
- [Contadores de desempenho para o MSRS 2014 Web Service e objetos de desempenho do MSRS 2014 Windows Service &#40;modo nativo&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
-  
-  
+ [Contadores de desempenho para o serviço Web MSRS 2014 e o modo nativo dos objetos &#40;de desempenho do serviço Windows MSRS 2014&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  

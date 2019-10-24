@@ -1,8 +1,8 @@
 ---
-title: Migrar logons do SQL Server com o Assistente de migração de dados | Microsoft Docs
-description: Saiba como migrar logons do SQL Server com o Assistente de migração de dados
+title: Migrar logons SQL Server com Assistente de Migração de Dados | Microsoft Docs
+description: Saiba como migrar logons do SQL Server com Assistente de Migração de Dados
 ms.custom: ''
-ms.date: 03/12/2019
+ms.date: 10/22/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -13,44 +13,47 @@ helpviewer_keywords:
 - Data Migration Assistant, login migration
 ms.assetid: ''
 author: HJToland3
-ms.author: rajpo
-ms.openlocfilehash: 84740f9787a7244228ef16af139a9e0b18ffb3a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.author: jtoland
+ms.openlocfilehash: 265ab37c47956400baa759b73838c7f2e66cc83e
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054697"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783269"
 ---
-# <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Migrar logons do SQL Server com o Assistente de migração de dados
+# <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Migrar logons SQL Server com Assistente de Migração de Dados
 
-Este artigo fornece uma visão geral da migração logons do SQL Server usando o Assistente de migração de dados. 
+Este artigo fornece uma visão geral da migração de logons SQL Server usando o Assistente de Migração de Dados.
 
-## <a name="which-logins-are-migrated"></a>Quais logons são migradas
+> [!IMPORTANT]
+> Este tópico se aplica a cenários que envolvem atualizações de SQL Server para versões posteriores do produto local ou para SQL Server em máquinas virtuais do Azure.
 
-- Você pode migrar os logons com base em uma entidade de segurança do Windows (como um usuário de domínio ou um grupo de domínio do Windows). Também é possível migrar logons criados com base na autenticação do SQL, também chamada de logons do SQL Server.
+## <a name="which-logins-are-migrated"></a>Quais logons são migrados
 
-- Assistente de migração de dados atualmente não dá suporte os logons associados com um certificado de segurança autônomo (logons mapeados para certificado), uma chave assimétrica autônoma (logons mapeados para chave assimétrica) e logons mapeados para as credenciais.
+- Você pode migrar os logons com base em uma entidade de segurança do Windows (como um usuário de domínio ou um grupo de domínio do Windows). Você também pode migrar logons criados com base na autenticação do SQL, também chamados de logons do SQL Server.
 
-- Assistente de migração de dados não move os **sa** princípios de logon e o servidor com nomes entre duas marcas hash (\#\#), que são somente para uso interno.
+- Atualmente, Assistente de Migração de Dados não dá suporte aos logons associados a um certificado de segurança autônomo (logons mapeados para o certificado), uma chave assimétrica autônoma (logons mapeados para a chave assimétrica) e logons mapeados para credenciais.
 
-- Por padrão, o Assistente de migração de dados seleciona todos os logons qualificados para migrar. Opcionalmente, você pode selecionar logons específicos para migrar. Quando o Assistente de migração de dados migra todos os logons qualificados, o mapeamento de logon do usuário permanece intacto nos bancos de dados que são migrados. 
+- Assistente de Migração de Dados não move o logon **SA** e os princípios de servidor com nomes entre marcas de hash duplos (\# \#), que são apenas para uso interno.
 
-  Se você planeja migrar logons específicos, certifique-se de selecionar os logons que são mapeados para um ou mais usuários em bancos de dados selecionados para migração.
+- Por padrão, Assistente de Migração de Dados seleciona todos os logons qualificados para migrar. Opcionalmente, você pode selecionar logons específicos para migrar. Quando Assistente de Migração de Dados migra todos os logons qualificados, o mapeamento de usuário de logon permanece intacto nos bancos de dados que são migrados.
 
-- Como parte da migração de logon, Assistente de migração de dados também move as funções definidas pelo usuário e adiciona permissões em nível de servidor às funções de servidor definidas pelo usuário. O proprietário da função será definido como **sa** principal.
+  Se você planeja migrar logons específicos, certifique-se de selecionar os logons que são mapeados para um ou mais usuários nos bancos de dados selecionados para migração.
+
+- Como parte da migração de logon, Assistente de Migração de Dados também move funções de servidor definidas pelo usuário e adiciona permissões de nível de servidor às funções de servidor definidas pelo usuário. O proprietário da função será definido como entidade **SA** .
 
 ## <a name="during-and-after-migration"></a>Durante e após a migração
 
-- Como parte da migração de logon, Assistente de migração de dados atribui as permissões para protegíveis no SQL Server de destino como eles existem no SQL Server de origem. 
+- Como parte da migração de logon, Assistente de Migração de Dados atribui as permissões aos protegíveis no SQL Server de destino como existem no SQL Server de origem.
 
-  Se o logon já existe no destino do SQL Server, o Assistente de migração de dados migra apenas as permissões atribuídas a protegíveis e não recrie o logon todo.
+  Se o logon já existir no SQL Server de destino, Assistente de Migração de Dados migrará apenas as permissões atribuídas a protegíveis e não criará novamente o logon inteiro.
 
-- Assistente de migração de dados torna o melhor esforço para mapear o logon para usuários de banco de dados se o logon já existe no servidor de destino.
+- Assistente de Migração de Dados torna o melhor esforço para mapear o logon para usuários de banco de dados se o logon já existir no servidor de destino.
 
-- É recomendável que você examine os resultados da migração para entender o status geral de migração de logon e todas as ações recomendadas após a migração.
+- É recomendável que você revise os resultados da migração para entender o status geral da migração de logon e as ações de pós-atualização recomendadas.
 
 ## <a name="resources"></a>Recursos
 
-[Assistente de migração de dados (DMA)](../dma/dma-overview.md)
+[Assistente de Migração de Dados (DMA)](../dma/dma-overview.md)
 
-[Assistente de migração de dados: Definições de configuração](../dma/dma-configurationsettings.md)
+[Assistente de Migração de Dados: definições de configuração](../dma/dma-configurationsettings.md)
