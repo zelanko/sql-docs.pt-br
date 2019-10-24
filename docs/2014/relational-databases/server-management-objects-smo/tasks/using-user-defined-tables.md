@@ -12,17 +12,17 @@ ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04bc89c22ab2c49b047ed00b20b37f8abecf97c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b780dfd75d998a9e3f6e382890b8318b958688d
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270723"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72781817"
 ---
 # <a name="using-user-defined-tables"></a>Usando tabelas definidas pelo usuário
   Tabelas definidas pelo usuário representam informações tabulares. Elas são usadas como parâmetros quando você transmite dados tabulares em procedimentos armazenados ou em funções definidas pelo usuário. Tabelas definidas pelo usuário não podem ser usadas para representar colunas em uma tabela de banco de dados.  
   
- O objeto <xref:Microsoft.SqlServer.Management.Smo.Database> tem uma propriedade <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> que referencia um objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Cada <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> do objeto nessa coleção tem um **colunas** que se refere a uma coleção de propriedade <xref:Microsoft.SqlServer.Management.Smo.Column> objetos que lista as colunas na tabela definida pelo usuário. Use o método Adicionar para adicionar colunas à tabela definida pelo usuário.  
+ O objeto <xref:Microsoft.SqlServer.Management.Smo.Database> tem uma propriedade <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> que referencia um objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Cada objeto de <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> nessa coleção tem uma propriedade **Columns** que se refere a uma coleção de objetos <xref:Microsoft.SqlServer.Management.Smo.Column> que listam as colunas na tabela definida pelo usuário. Use o método Adicionar para adicionar colunas à tabela definida pelo usuário.  
   
  Quando você definir uma nova tabela definida pelo usuário através do objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>, forneça colunas e uma chave primária com base em uma das colunas.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "63270723"
   
  O exemplo demonstra como criar uma tabela definida pelo usuário e, depois, como usá-la como um parâmetro em uma função definida pelo usuário.  
   
-```  
+```vb
 'Connect to the local, default instance of SQL Server  
         Dim srv As Server  
         srv = New Server  
@@ -104,7 +104,7 @@ ms.locfileid: "63270723"
   
  O exemplo mostra como criar uma tabela definida pelo usuário e como usá-la como um parâmetro em uma função definida pelo usuário.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server   
                Server srv = new Server();  
@@ -174,85 +174,72 @@ ms.locfileid: "63270723"
   
  O exemplo mostra como criar uma tabela definida pelo usuário e como usá-la como um parâmetro em uma função definida pelo usuário.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
 #Define a UserDefinedTableType object variable by supplying the  
-#database and name in the constructor.   
-$udtt = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedTableType `  
--argumentlist $db, "My_User_Defined_Table"  
+#database and name in the constructor.
+$udtt = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedTableType -ArgumentList $db, "My_User_Defined_Table"  
   
 #Add three columns of different types to the UserDefinedTableType object.  
   
 $type = [Microsoft.SqlServer.Management.SMO.DataType]::Int  
-$col = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column `  
--argumentlist $udtt, "col1",$type  
+$col = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -ArgumentList $udtt, "col1", $type  
 $udtt.Columns.Add($col)  
   
 $type = [Microsoft.SqlServer.Management.SMO.DataType]::VarCharMax  
-$col = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column `  
--argumentlist $udtt, "col2",$type  
+$col = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -ArgumentList $udtt, "col2", $type  
 $udtt.Columns.Add($col)  
   
  $type = [Microsoft.SqlServer.Management.SMO.DataType]::Money  
-$col = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column `  
--argumentlist $udtt, "col3",$type  
-$udtt.Columns.Add($col)          
+$col = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -ArgumentList $udtt, "col3", $type  
+$udtt.Columns.Add($col)
   
-#Define an Index object variable by supplying the user-defined   
-#table variable and name in the constructor.   
+#Define an Index object variable by supplying the user-defined table variable and name in the constructor.
 $idx = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Index `  
 -argumentlist $udtt, "PK_UddtTable"  
   
-#Add the first column in the user-defined table as   
-#the indexed column.   
+#Add the first column in the user-defined table as the indexed column.
 $idxcol = New-Object -TypeName Microsoft.SqlServer.Management.SMO.IndexedColumn `  
 -argumentlist $idx, "Col1"  
 $idx.IndexedColumns.Add($idxcol)  
   
-#Specify that the index is a clustered, unique, primary key.   
+#Specify that the index is a clustered, unique, primary key.
 $idx.IsClustered = $true  
 $idx.IsUnique = $true  
 $idx.IndexKeyType = [Microsoft.SqlServer.Management.SMO.IndexKeyType]::DriPrimaryKey;  
   
-#Add the index and create the user-defined table.   
+#Add the index and create the user-defined table.
 $udtt.Indexes.Add($idx)  
 $udtt.Create();  
   
-# Display the Transact-SQL creation script for the   
-# user-defined table.   
+# Display the Transact-SQL creation script for the user-defined table.
 $sc = $udtt.Script()  
 $sc  
   
-# Define a new user-defined function with a single parameter.   
-$udf = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedFunction `  
--argumentlist $db, "My_User_Defined_Function"  
+# Define a new user-defined function with a single parameter.
+$udf = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedFunction -ArgumentList $db, "My_User_Defined_Function"  
 $udf.TextMode = $false  
 $udf.FunctionType = [Microsoft.SqlServer.Management.SMO.UserDefinedFunctionType]::Scalar  
 $udf.ImplementationType = [Microsoft.SqlServer.Management.SMO.ImplementationType]::TransactSql  
 $udf.DataType = [Microsoft.SqlServer.Management.SMO.DataType]::DateTime  
   
 # Specify the parameter as a UserDefinedTableTable object.  
-$udfp = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedFunctionParameter `  
--argumentlist $udf, "@param"  
-$type    =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.DataType `  
--argumentlist $udtt  
+$udfp = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedFunctionParameter -ArgumentList $udf, "@param"  
+$type = New-Object -TypeName Microsoft.SqlServer.Management.SMO.DataType -ArgumentList $udtt  
 $udfp.DataType = $type  
 $udfp.IsReadOnly = $true  
 $udf.Parameters.Add($udfp)  
   
-# Specify the TextBody property to the Transact-SQL definition of the   
-# user-defined function.   
+# Specify the TextBody property to the Transact-SQL definition of the user-defined function.   
 $udf.TextBody = "BEGIN RETURN (GETDATE());end"  
   
-# Create the user-defined function.   
-$udf.Create()           
+# Create the user-defined function.
+$udf.Create()
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
  [Arquivos e grupos de arquivos do banco de dados](../../databases/database-files-and-filegroups.md)  
-  
-  

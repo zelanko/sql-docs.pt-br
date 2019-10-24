@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f21a974ee9beeeba8b50914092704f1879c5f501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575563"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305050"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Entrega de email no Reporting Services
   O SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui uma extensão de entrega de email que fornece um modo de enviar um relatório por email a usuários individuais ou a grupos. Para distribuir um relatório por email, 1) configure o servidor de relatório para entrega de email e 2) defina uma assinatura padrão ou uma assinatura controlada por dados. Uma única assinatura não pode entregar vários relatórios em uma única mensagem de email. No entanto, você pode criar várias assinaturas.  
@@ -41,9 +41,9 @@ ms.locfileid: "65575563"
   
 -   Enviando uma notificação na linha Assunto: de uma mensagem de email. Por padrão, a linha Assunto: na definição de assinatura inclui as seguintes variáveis que são substituídas por informações específicas do relatório quando a assinatura é processada:  
   
-     **@ReportName** especifica o nome do relatório.  
+     **\@ReportName** especifica o nome do relatório.  
   
-     **@ExecutionTime** especifica quando o relatório foi executado.  
+     **\@ExecutionTime** especifica quando o relatório foi executado.  
   
      Você pode combinar essas variáveis com texto estático ou pode modificar o texto na linha Assunto: para cada assinatura.  
   

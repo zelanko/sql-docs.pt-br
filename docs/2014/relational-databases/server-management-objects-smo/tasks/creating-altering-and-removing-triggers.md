@@ -12,15 +12,15 @@ ms.assetid: 8ddbe23b-6e31-4f8e-8a70-17bd5072413e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4f6cf3b1e988d12a39096d46275058d080a23c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 31430674d88d8aa5b820823a16dc18d110b9dd9a
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211895"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782308"
 ---
 # <a name="creating-altering-and-removing-triggers"></a>Criando, alterando e removendo gatilhos
-  No SMO, gatilhos são representados por meio do uso do objeto <xref:Microsoft.SqlServer.Management.Smo.Trigger>. O [!INCLUDE[tsql](../../../includes/tsql-md.md)] código executado quando o gatilho acionado é definido pelo <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> propriedade do objeto de gatilho. O tipo de gatilho é definido através de outras propriedades do objeto <xref:Microsoft.SqlServer.Management.Smo.Trigger>, como, por exemplo, a propriedade <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A>. Essa é uma propriedade booliana que especifica se o gatilho é acionado por um `UPDATE` de registros na tabela pai.  
+  No SMO, gatilhos são representados por meio do uso do objeto <xref:Microsoft.SqlServer.Management.Smo.Trigger>. O código de [!INCLUDE[tsql](../../../includes/tsql-md.md)] que é executado quando o gatilho é acionado é definido pela propriedade <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> do objeto de gatilho. O tipo de gatilho é definido através de outras propriedades do objeto <xref:Microsoft.SqlServer.Management.Smo.Trigger>, como, por exemplo, a propriedade <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A>. Essa é uma propriedade booliana que especifica se o gatilho é acionado por um `UPDATE` de registros na tabela pai.  
   
  O objeto <xref:Microsoft.SqlServer.Management.Smo.Trigger> representa gatilhos tradicionais da DML (linguagem de manipulação de dados). No [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] e em versões posteriores, também há suporte a gatilhos da DDL (linguagem de definição de dados). Os gatilhos da DDL são representados pelos objetos <xref:Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger> e <xref:Microsoft.SqlServer.Management.Smo.ServerDdlTrigger>.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68211895"
 ## <a name="creating-altering-and-removing-a-trigger-in-visual-c"></a>Criando, alterando e removendo um gatilho no Visual C#  
  Este exemplo de código mostra como criar e inserir um gatilho de atualização em uma tabela existente, chamada `Sales`, no banco de dados [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . O gatilho envia uma mensagem de lembrete quando a tabela é atualizada ou um novo registro é inserido.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             Server mysrv;  
@@ -68,19 +68,18 @@ ms.locfileid: "68211895"
 ## <a name="creating-altering-and-removing-a-trigger-in-powershell"></a>Criando, alterando e removendo um gatilho no PowerShell  
  Este exemplo de código mostra como criar e inserir um gatilho de atualização em uma tabela existente, chamada `Sales`, no banco de dados [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . O gatilho envia uma mensagem de lembrete quando a tabela é atualizada ou um novo registro é inserido.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and to the  
 #database tables in Adventureworks2012  
 CD \sql\localhost\default\databases\AdventureWorks2012\Tables\  
   
 #Get reference to the trigger's target table  
-$mytab = get-item Sales.Customer  
+$mytab = Get-Item Sales.Customer  
   
 # Define a Trigger object variable by supplying the parent table, schema ,and name in the constructor.  
-$tr  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Trigger `  
--argumentlist $mytab, "Sales"  
+$tr = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Trigger -argumentlist $mytab, "Sales"  
   
-# Set TextMode property to False, then set other properties to define the trigger.   
+# Set TextMode property to False, then set other properties to define the trigger.
 $tr.TextMode = $false  
 $tr.Insert = $true  
 $tr.Update = $true  
@@ -88,11 +87,9 @@ $tr.InsertOrder = [Microsoft.SqlServer.Management.SMO.Agent.ActivationOrder]::Fi
 $tr.TextBody = " RAISERROR('Notify Customer Relations',16,10) "  
 $tr.ImplementationType = [Microsoft.SqlServer.Management.SMO.ImplementationType]::TransactSql  
   
-# Create the trigger on the instance of SQL Server.   
+# Create the trigger on the instance of SQL Server.
 $tr.Create()  
   
-#Remove the trigger.   
+#Remove the trigger.
 $tr.Drop()  
 ```  
-  
-  

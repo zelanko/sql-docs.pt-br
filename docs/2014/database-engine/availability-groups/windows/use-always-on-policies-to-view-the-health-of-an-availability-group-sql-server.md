@@ -1,5 +1,5 @@
 ---
-title: Use as políticas AlwaysOn para exibir a integridade de um grupo de disponibilidade (SQL Server) | Microsoft Docs
+title: Usar políticas AlwaysOn para exibir a integridade de um grupo de disponibilidade (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12a183718ee13915fd6236caf943fea03819e723
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66f898dbe10a9a7e17c1908a5bf25e86f5a57c7e
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62812968"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782846"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Use as políticas AlwaysOn para exibir a integridade de um grupo de disponibilidade (SQL Server)
-  Este tópico descreve como determinar a integridade operacional de um grupo de disponibilidade AlwaysOn usando a política AlwaysOn no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Para obter informações sobre o gerenciamento de baseado em políticas AlwaysOn, consulte [políticas AlwaysOn para problemas operacionais com grupos de disponibilidade AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
+  Este tópico descreve como determinar a integridade operacional de um grupo de disponibilidade AlwaysOn usando a política AlwaysOn no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Para obter informações sobre o gerenciamento baseado em políticas AlwaysOn, consulte [políticas AlwaysOn para problemas operacionais com o grupos de disponibilidade AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
 > [!IMPORTANT]  
 >  Para políticas de AlwaysOn, os nomes das categorias são usados como IDs. A alteração do nome de uma categoria AlwaysOn interrompe sua funcionalidade de avaliação de integridade. Portanto, os nomes das categorias AlwaysOn nunca devem ser modificados.  
@@ -34,7 +34,7 @@ ms.locfileid: "62812968"
 ####  <a name="Permissions"></a> Permissões  
  Requer as permissões CONNECT, VIEW SERVER STATE e VIEW ANY DEFINITION.  
   
-##  <a name="SSMSProcedure"></a> Usando o painel AlwaysOn  
+##  <a name="SSMSProcedure"></a>Usando o painel AlwaysOn  
  **Para abrir o painel AlwaysOn**  
   
 1.  No Pesquisador de Objetos, conecte-se à instância do servidor que hospeda uma das réplicas de disponibilidade. Para exibir informações sobre todas as réplicas de disponibilidade em um grupo de disponibilidade, use a instância do servidor que hospeda a réplica primária.  
@@ -50,7 +50,7 @@ ms.locfileid: "62812968"
  Para obter informações sobre como usar o Painel AlwaysOn, consulte [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md).  
   
 ##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
- **Use as políticas AlwaysOn para exibir a integridade de um grupo de disponibilidade**  
+ **Usar políticas AlwaysOn para exibir a integridade de um grupo de disponibilidade**  
   
 1.  Defina o padrão (`cd`) como uma instância de servidor que hospeda uma das réplicas de disponibilidade. Para exibir informações sobre todas as réplicas de disponibilidade em um grupo de disponibilidade, use a instância do servidor que hospeda a réplica primária.  
   
@@ -73,8 +73,7 @@ ms.locfileid: "62812968"
      Por exemplo, o comando a seguir avalia a integridade da réplica de disponibilidade denominada `MyReplica` no grupo de disponibilidade `MyAg` e gera um breve resumo.  
   
     ```powershell
-    Test-SqlAvailabilityReplica `   
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
+    Test-SqlAvailabilityReplica -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
     ```  
   
      `Test-SqlDatabaseReplicaState`  
@@ -89,7 +88,7 @@ ms.locfileid: "62812968"
   
      Esses cmdlets aceitam as seguintes opções:  
   
-    |Opção|Descrição|  
+    |Opção|Description|  
     |------------|-----------------|  
     |`AllowUserPolicies`|Executa as políticas de usuário localizadas nas categorias de políticas AlwaysOn.|  
     |`InputObject`|Uma coleção de objetos que representam grupos de disponibilidade, réplicas de disponibilidade ou estados de bancos de dados de disponibilidade (dependendo de qual cmdlet que você está usando). O cmdlet computará a integridade dos objetos especificados.|  
@@ -100,9 +99,7 @@ ms.locfileid: "62812968"
      Por exemplo, o comando `Test-SqlAvailabilityGroup` a seguir especifica o parâmetro `-ShowPolicyDetails` para mostrar o resultado de cada avaliação de política executada por esse cmdlet para cada política de gerenciamento baseada em políticas (PBM) que foi executada no grupo de disponibilidade denominado `MyAg`.  
   
     ```powershell
-    Test-SqlAvailabilityGroup `   
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\AgName `  
-    -ShowPolicyDetails  
+    Test-SqlAvailabilityGroup -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\AgName -ShowPolicyDetails  
     ```  
   
     > [!NOTE]  
@@ -112,23 +109,21 @@ ms.locfileid: "62812968"
   
 -   [Provedor do SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
+-   [Obter Ajuda do SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
- **Blogs de monitoramento de integridade de AlwaysOn com o PowerShell de equipe do AlwaysOn do SQL Server:**  
+ **SQL Server Blogs da equipe AlwaysOn – monitorando a integridade do AlwaysOn com o PowerShell:**  
   
--   [Parte 1: Basic cmdlet overview](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx) (Monitoramento de integridade do Always On com o PowerShell, parte 1: visão geral básica de cmdlet)  
+-   [Parte 1: Visão geral básica de cmdlet](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
   
--   [Parte 2: Advanced cmdlet usage](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx) (Monitoramento de integridade do Always On com o PowerShell, parte 2: uso avançado de cmdlet)  
+-   [Parte 2: Uso avançado de cmdlet](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
   
--   [Parte 3: A simple monitoring application](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx) (Monitoramento de integridade do Always On com o PowerShell, parte 3: um aplicativo de monitoramento simples)  
+-   [Parte 3: Um simples aplicativo de monitoramento](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
   
--   [Parte 4: Integration with SQL Server Agent](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx) (Monitoramento de integridade do Always On com o PowerShell, parte 4: integração ao SQL Server Agent)  
+-   [Parte 4: Integração com o SQL Server Agent](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Visão geral do &#40;grupos de disponibilidade AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
  [Administração de um grupo de disponibilidade &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
  [Monitoramento de grupos de disponibilidade &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
- [Políticas AlwaysOn para problemas operacionais com grupos de disponibilidade AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md) 
-  
-  
+ [Políticas AlwaysOn para problemas operacionais com Grupos de Disponibilidade AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md) 

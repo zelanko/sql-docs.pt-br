@@ -1,5 +1,5 @@
 ---
-title: 'Lista de verificação: Usar o PowerShell para verificar o PowerPivot para SharePoint | Microsoft Docs'
+title: 'Lista de verificação: Use o PowerShell para verificar PowerPivot para SharePoint | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,29 +10,29 @@ ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 058a3318f98d294d7c6c7ba2cf69becdf218b48f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f45f698c30b293c4d70f45efca32af5f5b5aae98
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079967"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782795"
 ---
-# <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>Lista de verificação: Usar o PowerShell para verificar o PowerPivot para SharePoint
+# <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>Lista de verificação: use o PowerShell para verificar o PowerPivot para SharePoint
   Nenhuma instalação do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] ou operação de recuperação será completa sem um teste de verificação rigoroso que confirme o funcionamento correto dos serviços e dos dados. Neste artigo, mostramos como executar essas etapas usando o Windows PowerShell. Colocamos cada etapa em sua própria seção para que você possa ir diretamente para as tarefas específicas. Por exemplo, execute o script na seção [Bancos de dados](#bkmk_databases) deste tópico para verificar o nome dos bancos de dados de conteúdo e aplicativo de serviço se quiser agendá-los para manutenção ou backup.  
   
 |||  
 |-|-|  
-|![Conteúdo relacionado ao PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell")|Um script completo do PowerShell é incluído na parte final do tópico. Use o script completo como ponto de partida para criar um script personalizado para fazer a auditoria da implantação completa do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)].|  
+|![Conteúdo relacionado ao PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell")|Um script completo do PowerShell é incluído na parte final do tópico. Use o script completo como ponto de partida para criar um script personalizado para fazer a auditoria da implantação completa do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] .|  
   
 ||  
 |-|  
 |**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- **Neste tópico**: Os itens indicados após o Sumário correspondem às áreas do diagrama. O diagrama ilustra os  
+ **Neste tópico**: os itens indicados após o sumário correspondem às áreas do diagrama. O diagrama ilustra os  
   
 |||  
 |-|-|  
-|[Preparar o ambiente do PowerShell](#bkmk_prerequisites)<br /><br /> [Sintomas e ações recomendadas](#bkmk_symptoms)<br /><br /> **(A)** [Serviço Windows do Analysis Services](#bkmk_windows_service)<br /><br /> **(B) ** [PowerPivotSystemService e PowerPivotEngineService](#bkmk_engine_and_system_service)<br /><br /> **(C)** [Aplicativos de serviço e proxies do PowerPivot](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [Bancos de dados](#bkmk_databases)<br /><br /> [Recursos do SharePoint](#bkmk_features)<br /><br /> [Trabalhos de timer](#bkmk_timer_jobs)<br /><br /> [Regras de integridade](#bkmk_health_rules)<br /><br /> **(E)** [Logs do Windows e do ULS](#bkmk_logs)<br /><br /> [Provedor MSOLAP](#bkmk_msolap)<br /><br /> [Biblioteca de cliente ADOMD.Net](#bkmk_adomd)<br /><br /> [Regras de coleta de dados de integridade](#bkmk_health_collection)<br /><br /> [Soluções](#bkmk_solutions)<br /><br /> [Etapas de verificação manual](#bkmk_manual)<br /><br /> [Mais recursos](#bkmk_more_resources)<br /><br /> [Script completo do PowerShell](#bkmk_full_script)|![verificação de PowerShell do powerpivot](../../../sql-server/install/media/ssas-powershell-component-verification.png "verificação de powershell do powerpivot")|  
+|[Preparar o ambiente do PowerShell](#bkmk_prerequisites)<br /><br /> [Sintomas e ações recomendadas](#bkmk_symptoms)<br /><br /> **(A)** [Serviço Windows do Analysis Services](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService e PowerPivotEngineService](#bkmk_engine_and_system_service)<br /><br /> **(C)** [Aplicativos de serviço e proxies do PowerPivot](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [Bancos de dados](#bkmk_databases)<br /><br /> [Recursos do SharePoint](#bkmk_features)<br /><br /> [Trabalhos de timer](#bkmk_timer_jobs)<br /><br /> [Regras de integridade](#bkmk_health_rules)<br /><br /> **(E)** [Logs do Windows e do ULS](#bkmk_logs)<br /><br /> [Provedor MSOLAP](#bkmk_msolap)<br /><br /> [Biblioteca de cliente ADOMD.Net](#bkmk_adomd)<br /><br /> [Regras de coleta de dados de integridade](#bkmk_health_collection)<br /><br /> [Soluções](#bkmk_solutions)<br /><br /> [Etapas de verificação manual](#bkmk_manual)<br /><br /> [Mais recursos](#bkmk_more_resources)<br /><br /> [Script completo do PowerShell](#bkmk_full_script)|![verificação do PowerShell do PowerPivot](../../../sql-server/install/media/ssas-powershell-component-verification.png "verificação do PowerShell do PowerPivot")|  
   
 ##  <a name="bkmk_prerequisites"></a> Preparar o ambiente do PowerShell  
  As etapas desta seção preparam o ambiente do PowerShell. As etapas podem não ser necessárias, dependendo de como o ambiente de script está configurado no momento.  
@@ -41,7 +41,7 @@ ms.locfileid: "66079967"
   
  Abra uma janela do PowerShell ou o ISE (Ambiente de Script Integrado) do PowerShell com **privilégios administrativos**. Se você não tiver privilégios administrativos ao executar comandos, receberá uma mensagem de erro semelhante à seguinte:  
   
- Get-SPLogEvent : Você precisa ter **privilégios de administrador** para executar este cmdlet.  
+ Get-SPLogEvent: você precisa ter **privilégios de administrador** no computador para executar este cmdlet.  
   
  **Módulo do SharePoint e do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]**  
   
@@ -59,7 +59,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
   
 |||  
 |-|-|  
-|![PowerPivot no sharepoint gerais do aplicativo conjunto](../../../sql-server/install/media/ssas-powerpivot-logo.png "powerpivot no conjunto de aplicativos em geral do sharepoint")|Se desejar, você pode verificar a maioria dos componentes na Administração Central, usando o painel de gerenciamento do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Para abrir o painel na Administração Central, clique em **Configurações Gerais do Aplicativo**e clique em **Painel de Gerenciamento** no **PowerPivot**. Para obter mais informações sobre o painel, consulte [PowerPivot Management Dashboard and Usage Data](../../power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|  
+|![conjunto de aplicativos gerais do PowerPivot no SharePoint](../../../sql-server/install/media/ssas-powerpivot-logo.png "conjunto de aplicativos gerais do PowerPivot no SharePoint")|Se desejar, você pode verificar a maioria dos componentes na Administração Central, usando o painel de gerenciamento do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Para abrir o painel na Administração Central, clique em **Configurações Gerais do Aplicativo**e clique em **Painel de Gerenciamento** no **PowerPivot**. Para obter mais informações sobre o painel, consulte [PowerPivot Management Dashboard and Usage Data](../../power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|  
   
 ##  <a name="bkmk_symptoms"></a> Sintomas e ações recomendadas  
  A tabela a seguir é uma lista de sintomas ou problemas e a ação sugerida deste tópico para ajudar você a resolver o problema.  
@@ -74,32 +74,28 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
 ##  <a name="bkmk_windows_service"></a> Serviço Windows do Analysis Services  
  O script nesta seção verifica a instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo do SharePoint. Verifique se o serviço está **em execução**.  
   
-```  
-get-service | select name, displayname, status | where {$_.Name -eq "msolap`$powerpivot"} | format-table -property * -autosize | out-default  
-```  
+```powershell
+Get-Service | Select name, displayname, status | Where {$_.Name -eq "msolap`$powerpivot"} | Format-Table -Property * -AutoSize | Out-Default  
+```
   
- **Exemplo de saída**  
-  
-```  
+```Output
 Name              DisplayName                                Status  
 ----              -----------                                ------  
 MSOLAP$POWERPIVOT SQL Server Analysis Services (POWERPIVOT) Running  
 ```  
   
-##  <a name="bkmk_engine_and_system_service"></a> PowerPivotSystemService e PowerPivotEngineService  
+##  <a name="bkmk_engine_and_system_service"></a>PowerPivotSystemService e PowerPivotEngineService  
  Os scripts desta seção verificam os serviços de sistema do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] . Há um serviço de sistema para uma implantação do SharePoint 2013 e dois serviços para uma implantação do SharePoint 2010.  
   
  **PowerPivotSystemService**  
   
  Verifique se o status é **Online**.  
   
-```  
-Get-PowerPivotSystemService | select typename, status, applications, farm | format-table -property * -autosize | out-default  
-```  
+```powershell
+Get-PowerPivotSystemService | Select typename, status, applications, farm | Format-Table -Property * -AutoSize | Out-Default  
+```
   
- **Exemplo de saída**  
-  
-```  
+```Output
 TypeName                                  Status Applications                             Farm  
 --------                                  ------ ------------                             ----  
 SQL Server PowerPivot Service Application Online {Default PowerPivot Service Application} SPFarm Name=SharePoint_Config_77d8ab0744a34e8aa27c806a2b8c760c  
@@ -114,13 +110,11 @@ SQL Server PowerPivot Service Application Online {Default PowerPivot Service App
   
  Em uma implantação do SharePoint 2010, verifique se o status é **Online**.  
   
-```  
-Get-PowerPivotEngineService | select typename, status, name, instances, farm | format-table -property * -autosize | out-default   
-```  
+```powershell
+Get-PowerPivotEngineService | Select typename, status, name, instances, farm | Format-Table -Property * -AutoSize | Out-Default
+```
   
- **Exemplo de saída**  
-  
-```  
+```Output  
 TypeName  : SQL Server Analysis Services  
 Status    : Online  
 Name      : MSOLAP$POWERPIVOT  
@@ -128,21 +122,19 @@ Instances : {POWERPIVOT}
 Farm      : SPFarm Name=SharePoint_Config  
 ```  
   
-##  <a name="bkmk_powerpivot_service_application"></a> Aplicativos de serviço PowerPivot e proxies  
+##  <a name="bkmk_powerpivot_service_application"></a>Aplicativos de serviço PowerPivot e proxies  
  Verifique se o status é **Online**. O aplicativo de Serviços do Excel não usa uma banco de dados de aplicativo de serviço e, portanto, o cmdlet não retorna um nome de banco de dados. Observe o banco de dados usado pelo aplicativo de serviço do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , para que você possa verificar se o banco de dados está online na seção de banco de dados mais adiante neste tópico.  
   
- **O PowerPivot e aplicativos de serviço do Excel**  
+ **Aplicativo (s) de serviço do Excel e PowerPivot**  
   
  Em uma implantação do SharePoint 2010, verifique se o status é **Online**.  
   
-```  
-Get-PowerPivotServiceApplication | select typename,name, status, unattendedaccount, applicationpool, farm, database  
-Get-SPExcelServiceApplication | select typename, DisplayName, status  
-```  
+```powershell
+Get-PowerPivotServiceApplication | Select typename,name, status, unattendedaccount, applicationpool, farm, database  
+Get-SPExcelServiceApplication | Select typename, DisplayName, status  
+```
   
- **Exemplo de saída**  
-  
-```  
+```Output  
 TypeName          : PowerPivot Service Application  
 Name              : PowerPivotServiceApplication1  
 Status            : Online  
@@ -161,37 +153,34 @@ Status      : Online
 > [!NOTE]  
 >  O exemplo de código a seguir retorna primeiro a propriedade applicationpool do aplicativo de serviço padrão do [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] . O nome é analisado na cadeia de caracteres e usado para obter o status do objeto do pool de aplicativos.  
 >   
->  Verifique se o status é **Online**. Se o status não está Online ou se você vir "Erro de http" quando você procura o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] do site, verifique se as credenciais de identidade nos pools de aplicativos IIS ainda estão corretas. O nome do pool do IIS é o valor da propriedade ID retornada pelo comando Get-SPServiceApplicationPool.  
+>  Verifique se o status é **Online**. Se o status não estiver online ou você vir "erro http" ao navegar pelo site [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)], verifique se as credenciais de identidade nos pools de aplicativos do IIS ainda estão corretas. O nome do pool do IIS é o valor da propriedade ID retornada pelo comando Get-SPServiceApplicationPool.  
   
-```  
-$poolname=[string](Get-PowerPivotServiceApplication | select -property applicationpool)  
-$position=$poolname.lastindexof("=")  
-$poolname=$poolname.substring($position+1)  
-$poolname=$poolname.substring(0,$poolname.length-1)  
-Get-SPServiceApplicationPool | select name, status, processaccountname, id | where {$_.Name -eq $poolname} | format-table -property * -autosize | out-default  
-```  
+```powershell
+$poolname = [string](Get-PowerPivotServiceApplication | Select -Property applicationpool)  
+$position = $poolname.lastindexof("=")  
+$poolname = $poolname.substring($position+1)  
+$poolname = $poolname.substring(0,$poolname.length-1)
+
+Get-SPServiceApplicationPool | Select name, status, processaccountname, id | Where {$_.Name -eq $poolname} | Format-Table -Property * -AutoSize | Out-Default  
+```
   
- **Exemplo de saída**  
-  
-```  
+```Output
 Name                           Status ProcessAccountName Id  
 ----                           ------ ------------------ -------   
 SharePoint Web Services System Online DOMAIN\account     89b50ec3-49e3-4de7-881a-2cec4b8b73ea  
 ```  
   
- ![Observação](../../../reporting-services/media/rs-fyinote.png "Observação")o pool de aplicativos também pode ser verificado na página de Administração Central **gerenciar aplicativos de serviço**. Clique no nome do aplicativo de serviço e, em seguida, clique em **propriedades** na faixa de opções.  
+ ![Observação](../../../reporting-services/media/rs-fyinote.png "Anotações") O pool de aplicativos também pode ser verificado na página Administração Central **gerenciar aplicativos de serviço**. Clique no nome do aplicativo de serviço e, em seguida, clique em **propriedades** na faixa de opções.  
   
- **Proxies do PowerPivot e serviços do Excel**  
+ **Proxies de aplicativo de serviço do Excel e do PowerPivot**  
   
  Verifique se o status é **Online**.  
   
-```  
-Get-SPServiceApplicationProxy |  select typename, status, unattendedaccount, displayname | where {$_.TypeName -like "*powerpivot*" -or $_.TypeName -like "*excel services*"} | format-table -property * -autosize | out-default  
-```  
+```powershell
+Get-SPServiceApplicationProxy | Select typename, status, unattendedaccount, displayname | Where {$_.TypeName -Like "*powerpivot*" -Or $_.TypeName -Like "*excel services*"} | Format-Table -Property * -AutoSize | Out-Default  
+```
   
- **Exemplo de saída**  
-  
-```  
+```Output
 TypeName                                                 Status UnattendedAccount           DisplayName  
 --------                                                 ------ -----------------           -----------  
 PowerPivot Service Application Proxy                     Online PowerPivotUnattendedAccount PowerPivotServiceApplication1  
@@ -201,31 +190,26 @@ Excel Services Application Web Service Application Proxy Online                 
 ##  <a name="bkmk_databases"></a> Bancos de dados  
  O script a seguir retorna o status dos bancos de dados de aplicativo de serviço e de todos os bancos de dados de conteúdo. Verifique se o status é **Online**.  
   
-```  
-Get-SPDatabase | select name, status, server, typename | where {$_.TypeName -eq "content database" -or $_.TypeName -like "*Gemini*"} | format-table -property * -autosize | out-default  
-```  
+```powershell
+Get-SPDatabase | Select name, status, server, typename | Where {$_.TypeName -eq "content database" -Or $_.TypeName -Like "*Gemini*"} | Format-Table -Property * -AutoSize | Out-Default  
+```
   
- **Exemplo de saída**  
-  
-```  
+```Output
 Name                                                                       Status Server                  TypeName   
 ----                                                                       ------ ------                  --------   
 DefaultPowerPivotServiceApplicationDB-38422181-2b68-4ab2-b2bb-9c00c39e5a5e Online SPServer Name=TESTSERVER Microsoft.AnalysisServices.SPAddin.GeminiServiceDatabase  
 DefaultWebApplicationDB-f0db1a8e-4c22-408c-b9b9-153bd74b0312               Online TESTSERVER\POWERPIVOT    Content Database   
 SharePoint_Admin_3cadf0b098bf49e0bb15abd487f5c684                          Online TESTSERVER\POWERPIVOT    Content Database  
-  
 ```  
   
 ##  <a name="bkmk_features"></a> Recursos do SharePoint  
  Verifique se o site e os recursos do farm estão online.  
   
-```  
-Get-SPFeature | select displayname, status, scope, farm | where {$_.displayName -like "*powerpivot*"} | format-table -property * -autosize | out-default  
-```  
+```powershell
+Get-SPFeature | Select displayname, status, scope, farm | Where {$_.displayName -Like "*powerpivot*"} | Format-Table -Property * -AutoSize | Out-Default  
+```
   
- **Exemplo de saída**  
-  
-```  
+```Output
 DisplayName     Status Scope Farm                           
 -----------     ------ ----- ----                           
 PowerPivotSite  Online  Site SPFarm Name=SharePoint_Config  
@@ -236,14 +220,11 @@ PowerPivot      Online  Farm SPFarm Name=SharePoint_Config
 ##  <a name="bkmk_timer_jobs"></a> Trabalhos de timer  
  Verifique se os trabalhos de timer estão **Online**. O EngineService do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] não está instalado no SharePoint 2013, portanto, o script não listará os trabalhos de timer do EngineService em uma implantação do SharePoint 2013.  
   
-```  
-Get-SPTimerJob | where {$_.service -like "*power*" -or $_.service -like "*mid*"} | select status, displayname, LastRunTime, service | format-table -property * -autosize | out-default  
-```  
+```powershell
+Get-SPTimerJob | Where {$_.service -Like "*power*" -Or $_.service -Like "*mid*"} | Select status, displayname, LastRunTime, service | Format-Table -Property * -AutoSize | Out-Default  
+```
   
- **Exemplo de saída**  
-  
-```  
-  
+```Output
       Status DisplayName                                                                          LastRunTime          Service                               
 ------ -----------                                                                          -----------          -------                               
 Online Health Analysis Job (Daily, SQL Server Analysis Services, All Servers)               4/9/2014 12:00:01 AM EngineService Name=MSOLAP$POWERPIVOT  
@@ -260,15 +241,13 @@ Online PowerPivot Setup Extension Timer Job                                     
 ```  
   
 ##  <a name="bkmk_health_rules"></a> Regras de integridade  
- Há menos regras em uma implantação do SharePoint 2013. Para obter uma lista completa de regras para cada ambiente do SharePoint e uma explicação de como usar as regras, consulte [regras de integridade do PowerPivot - configurar](../../power-pivot-sharepoint/configure-power-pivot-health-rules.md).  
+ Há menos regras em uma implantação do SharePoint 2013. Para obter uma lista completa de regras para cada ambiente do SharePoint e uma explicação de como usar as regras, consulte [regras de integridade do PowerPivot – configurar](../../power-pivot-sharepoint/configure-power-pivot-health-rules.md).  
   
-```  
-Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like "*power*"}  | format-table -property * -autosize | out-default  
-```  
+```powershell
+Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -Like "*power*"}  | Format-Table -Property * -AutoSize | Out-Default  
+```
   
- **Exemplo de saída**  
-  
-```  
+```Output
 Name                          Enabled Summary  
 ----                          ------- -------           
 SecondaryLogonHealthRule         True PowerPivot:  Secondary Logon service (seclogon) is disabled  
@@ -283,19 +262,17 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
 ##  <a name="bkmk_logs"></a> Logs do Windows e do ULS  
  **Log de eventos do Windows**  
   
- O comando a seguir pesquisará o log de eventos do Windows em busca dos eventos relacionados à instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo do SharePoint. Para obter informações sobre como desabilitar eventos ou alterar o nível do evento, consulte [configurar e exibir arquivos de Log do SharePoint e log de diagnóstico &#40;PowerPivot para SharePoint&#41;](../../power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
+ O comando a seguir pesquisará o log de eventos do Windows em busca dos eventos relacionados à instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo do SharePoint. Para obter informações sobre como desabilitar eventos ou alterar o nível de evento, consulte [configurar e exibir arquivos de log do &#40;SharePoint&#41;e log de diagnóstico PowerPivot para SharePoint](../../power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
  **Nome do serviço:** MSOLAP$POWERPIVOT  
   
- **Nome de exibição nos serviços do Windows:** SQL Server Analysis Services (POWERPIVOT)  
+ **Nome de exibição nos Serviços Windows:** SQL Server Analysis Services (POWERPIVOT)  
   
-```  
-Get-EventLog "application" | Where-Object {$_.source -like "msolap`$powerpivot*"}  |select timegenerated, entrytype , source, message | format-table -property * -autosize | out-default  
-```  
+```powershell
+Get-EventLog "application" | Where-Object {$_.source -Like "msolap`$powerpivot*"}  | Select timegenerated, entrytype , source, message | Format-Table -property * -AutoSize | Out-Default  
+```
   
- **Exemplo de saída**  
-  
-```  
+```Output
 TimeGenerated           EntryType Source            Message  
 -------------           --------- ------            -------  
 4/16/2014 1:45:19 PM  Information MSOLAP$POWERPIVOT Software usage metrics are disabled.  
@@ -308,19 +285,17 @@ TimeGenerated           EntryType Source            Message
   
  O comando a seguir retornará as mensagens do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] do log do ULS que foram criadas nas últimas 48 horas. Ajuste o parâmetro addhours de acordo com as suas necessidades.  
   
-```  
-Get-SPLogEvent -starttime(get-date).addhours(-48) | Where-Object {$_.Area -eq "powerpivot service" -and $_.level -eq "high"} | select timestamp, area, category, eventid,level, message| format-table -property * -autosize | out-default  
+```powershell
+Get-SPLogEvent -StartTime(Get-Date).AddHours(-48) | Where-Object {$_.Area -eq "powerpivot service" -and $_.level -eq "high"} | Select timestamp, area, category, eventid,level, message | Format-Table -Property * -AutoSize | Out-Default  
 ```  
   
  A seguinte variação do comando retorna apenas eventos de log da categoria **atualização de dados** :  
   
-```  
-Get-SPLogEvent -starttime(get-date).addhours(-48) | Where-Object {$_.category -eq "data refresh" -and $_.level -eq "high"} | select timestamp, area, category, eventid, level, correlation, message  
-```  
+```powershell
+Get-SPLogEvent -starttime(Get-Date).addhours(-48) | Where-Object {$_.category -eq "data refresh" -and $_.level -eq "high"} | Select timestamp, area, category, eventid, level, correlation, message  
+```
   
- **Exemplo de saída**  
-  
-```  
+```Output
 Timestamp   : 4/14/2014 7:15:01 PM  
 Area        : PowerPivot Service  
 Category    : Data Refresh  
@@ -346,14 +321,12 @@ Message     : EXCEPTION: System.TimeoutException: The request channel timed out 
 ##  <a name="bkmk_msolap"></a> Provedor MSOLAP  
  Verifique o provedor MSOLAP. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] e [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] requerem o MSOLAP.5.  
   
-```  
-$excelApp=Get-SPExcelServiceApplication  
-get-spexceldataprovider -ExcelServiceApplication $excelApp |select providerid,providertype,description | where {$_.providerid -like "msolap*" } | format-table -property * -autosize | out-default  
-```  
+```powershell
+$excelApp = Get-SPExcelServiceApplication  
+Get-SPExcelDataProvider -ExcelServiceApplication $excelApp | Select providerid, providertype, description | Where {$_.providerid -like "msolap*" } | Format-Table -Property * -AutoSize | Out-Default  
+```
   
- **Exemplo de saída**  
-  
-```  
+```Output
 ProviderId ProviderType Description  
 ---------- ------------ -----------  
 MSOLAP     Oledb        Microsoft OLE DB Provider for OLAP Services       
@@ -366,13 +339,11 @@ MSOLAP.5   Oledb        Microsoft OLE DB Provider for OLAP Services 11.0
   
 ##  <a name="bkmk_adomd"></a> Biblioteca de cliente ADOMD.Net  
   
-```  
-get-wmiobject -class win32_product | Where-Object {$_.name -like "*ado*"} | select name, version, vendor | format-table -property * -autosize | out-default  
-```  
+```powershell
+Get-WMIObject -Class win32_product | Where-Object {$_.name -Like "*ado*"} | Select name, version, vendor | Format-Table -Property * -AutoSize | out-default  
+```
   
- **Exemplo de saída**  
-  
-```  
+```Output
 name                                                  version      vendor  
 ----                                                  -------      ------  
 Microsoft SQL Server 2008 Analysis Services ADOMD.NET 10.1.2531.0  Microsoft Corporation  
@@ -384,13 +355,11 @@ Microsoft SQL Server 2005 Analysis Services ADOMD.NET 9.00.1399.06 Microsoft Cor
 ##  <a name="bkmk_health_collection"></a> Regras de coleta de dados de integridade  
  Verifique se o **Status** é Online e se **Habilitado** está definido como True.  
   
-```  
-get-spusagedefinition | select name, status, enabled, tablename, DaysToKeepDetailedData | where {$_.name -like "powerpivot*"} | format-table -property * -autosize | out-default  
-```  
+```powershell
+Get-SPUsageDefinition | Select name, status, enabled, tablename, DaysToKeepDetailedData | Where {$_.name -Like "powerpivot*"} | Format-Table -Property * -AutoSize | Out-Default  
+```
   
- **Exemplo de saída**  
-  
-```  
+```Output
 Name                         Status Enabled TableName                   DaysToKeepDetailedData  
 ----                         ------ ------- ---------                   ----------------------  
 PowerPivot Connections       OnlineTrue AnalysisServicesConnections  14  
@@ -404,13 +373,13 @@ PowerPivot Unload Data Usage Online    True AnalysisServicesUnloads             
 ##  <a name="bkmk_solutions"></a> Soluções  
  Se os outros componentes estiverem online, você poderá ignorar a verificação das soluções. Se, no entanto, as regras de integridade estiverem ausentes, verifique se as duas soluções existem e mostravam Verifique se as duas soluções do PowerPivot estão **Online** e **Implantadas**.  
   
-```  
-get-spsolution | select name, status, deployed, DeploymentState, DeployedServers | where {$_.Name -like "*powerpivot*"} | format-table -property * -autosize | out-default  
+```powershell
+Get-SPSolution | Select name, status, deployed, DeploymentState, DeployedServers | Where {$_.Name -Like "*powerpivot*"} | Format-Table -Property * -AutoSize | Out-Default  
 ```  
   
- **Exemplo de saída do SharePoint 2013**  
+SharePoint 2013:
   
-```  
+```Output
 Name                                 Status Deployed        DeploymentState DeployedServers  
 ----                                 ------ --------        --------------- ---------------  
 powerpivotfarm14solution.wsp         Online     True         GlobalDeployed {UETESTA00}  
@@ -418,9 +387,9 @@ powerpivotfarmsolution.wsp           Online     True         GlobalDeployed {UET
 powerpivotwebapplicationsolution.wsp Online     True WebApplicationDeployed {UETESTA00}  
 ```  
   
- **Exemplo de saída do SharePoint 2010**  
+SharePoint 2010:
   
-```  
+```Output
 Name                 Status Deployed        DeploymentState DeployedServers   
 ----                 ------ --------        --------------- ---------------   
 powerpivotfarm.wsp   Online     True         GlobalDeployed {uesql11spoint2}  
@@ -432,7 +401,7 @@ powerpivotwebapp.wsp Online     True WebApplicationDeployed {uesql11spoint2}
 ##  <a name="bkmk_manual"></a> Etapas de verificação manual  
  Esta seção descreve as etapas de verificação que não podem ser concluídas com os cmdlets do PowerShell.  
   
- **Atualização de dados agendada:** Configure o agendamento de atualização de uma pasta de trabalho **também atualizar o mais rápido possível**.  Para obter mais informações, consulte a seção "Verificar atualização de dados" [agendamento de atualização de dados e dados de fontes que fazer não suporte Windows autenticação &#40;PowerPivot para SharePoint&#41;](../../power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md).  
+ **Atualização de dados agendada:** configure a agenda de atualização para uma pasta de trabalho para **Também atualizar o mais rápido possível**.  Para obter mais informações, consulte a seção "verificar atualização de dados" de [agendar atualização de dados e fontes de dados que &#40;não&#41;dão suporte à autenticação do Windows PowerPivot para SharePoint](../../power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md).  
   
 ##  <a name="bkmk_more_resources"></a> Mais recursos  
  [Cmdlets de administração do servidor Web (IIS) no Windows PowerShell](https://technet.microsoft.com/library/ee790599.aspx).  
@@ -452,127 +421,113 @@ powerpivotwebapp.wsp Online     True WebApplicationDeployed {uesql11spoint2}
 ##  <a name="bkmk_full_script"></a> Script completo do PowerShell  
  O script a seguir contém todos os comandos das seções anteriores. O script executa os comandos na mesma ordem em que são apresentados neste tópico. O script contém algumas variações opcionais dos comandos observados neste tópico caso você precise de filtragem adicional. As variações são desabilitadas com um caractere de comentário (#). O script também inclui algumas instruções para verificar o modo [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint. As instruções [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] são desabilitadas com um caractere de comentário (#).  
   
-```  
+```powershell
 # This script audits services related to PowerPivot for SharePoint  
-$starttime=Get-Date  
-write-host -foregroundcolor DarkGray StartTime $starttime   
+$starttime = Get-Date  
+write-host -foregroundcolor DarkGray StartTime $starttime
   
 Write-Host  "Import the SharePoint PowerShell snappin"  
 Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0  
   
-#Write-Host ""  
 Write-Host -ForegroundColor Green "Analysis Services Windows Service"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
-get-service | select name, displayname, status | where {$_.Name -eq "msolap`$powerpivot"} | format-table -property * -autosize | out-default  
+Get-Service | Select name, displayname, status | Where {$_.Name -eq "msolap`$powerpivot"} | Format-Table -Property * -AutoSize | Out-Default  
   
-#Write-Host ""  
 Write-Host -ForegroundColor Green "PowerPivotEngineService and PowerPivotSystemService"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
   
-Get-PowerPivotSystemService | select typename, status, applications, farm | format-table -property * -autosize | out-default  
+Get-PowerPivotSystemService | Select typename, status, applications, farm | Format-Table -property * -AutoSize | Out-Default  
 # If needed, you can run the following to compare job definitions specific to the service against the results of the timer job definition section  
 #Get-PowerPivotSystemService | select -ExpandProperty jobdefinitions | select displayname, schedule, service | format-table -property * -autosize | out-default  
   
-Get-PowerPivotEngineService | select typename, status, name, instances, farm | format-table -property * -autosize | out-default  
+Get-PowerPivotEngineService | Select typename, status, name, instances, farm | Format-Table -property * -AutoSize | Out-Default  
 # If needed, you can run the following to compare job definitions specific to the service against the results of the timer job definition section  
 #Get-PowerPivotEngineService | select -ExpandProperty jobdefinitions | select displayname, schedule, service | format-table -property * -autosize | out-default  
-  
-#Write-Host ""  
+
 #Write-Host -ForegroundColor Green "Service Instances - optional if you want to associate services with the server"  
 #Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
 #Get-SPServiceInstance | select typename, status, server, service, instance | where {$_.TypeName -like "*powerpivot*" -or $_.TypeName -like "*excel*" -or $_.TypeName -like "*Analysis Services*"} | format-table -property * -autosize | out-default  
 #Get-PowerPivotEngineServiceInstance  | select typename, ASServername, status, server, service, instance  
 #Get-PowerPivotSystemServiceInstance  | select typename, ASSServerName, status, server, service, instance  
-  
-#Write-Host ""  
+
 Write-Host -ForegroundColor Green "PowerPivot And Excel Service Applications"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
-Get-PowerPivotServiceApplication | select typename,name, status, unattendedaccount, applicationpool, farm, database   
-Get-SPExcelServiceApplication | select typename,  DisplayName, status   
+Get-PowerPivotServiceApplication | Select typename,name, status, unattendedaccount, applicationpool, farm, database
+Get-SPExcelServiceApplication | Select typename,  DisplayName, status
   
 #Write-Host ""  
 Write-Host -ForegroundColor Green "PowerPivot Service Application pool"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
 # the following assumes there is only 1 PowerPivot Service Application, and returns that applicaitons pool name.  if you have more than one, use the 2nd version  
-$poolname=[string](Get-PowerPivotServiceApplication | select -property applicationpool)  
-$position=$poolname.lastindexof("=")  
-$poolname=$poolname.substring($position+1)  
-$poolname=$poolname.substring(0,$poolname.length-1)  
-Get-SPServiceApplicationPool | select name, status, processaccountname, id | where {$_.Name -eq $poolname} | format-table -property * -autosize | out-default  
+$poolname = [string](Get-PowerPivotServiceApplication | Select -Property applicationpool)  
+$position = $poolname.lastindexof("=")  
+$poolname = $poolname.substring($position+1)  
+$poolname = $poolname.substring(0,$poolname.length-1)  
+Get-SPServiceApplicationPool | Select name, status, processaccountname, id | Where {$_.Name -eq $poolname} | Format-Table -Property * -AutoSize | Out-Default  
   
 #Write-Host ""  
 Write-Host -ForegroundColor Green "PowerPivot and Excel Service Application Proxy"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
-Get-SPServiceApplicationProxy |  select typename, status, unattendedaccount, displayname | where {$_.TypeName -like "*powerpivot*" -or $_.TypeName -like "*excel services*"} | format-table -property * -autosize | out-default  
+Get-SPServiceApplicationProxy |  Select typename, status, unattendedaccount, displayname | Where {$_.TypeName -like "*powerpivot*" -or $_.TypeName -like "*excel services*"} | Format-Table -Property * -AutoSize | Out-Default  
 #Get-SPServiceApplicationProxy |  select typename, status, unattendedaccount, displayname | where {$_.TypeName -like "*powerpivot*" -or $_.TypeName -like "*Reporting Services*" -or $_.TypeName -like "*excel services*"} | format-table -property * -autosize | out-default  
-  
-#Write-Host ""  
+
 Write-Host -ForegroundColor Green "DATABASES"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
-Get-SPDatabase | select name, status, server, typename | where {$_.TypeName -eq "content database" -or $_.TypeName -like "*Gemini*"} | format-table -property * -autosize | out-default  
-#Get-SPDatabase | select name, status, server, typename | where {$_.TypeName -eq "content database" -or $_.TypeName -like "*Gemini*" -or $_.TypeName -like "*ReportingServices*"}   
-  
-#Write-Host ""  
+Get-SPDatabase | Select name, status, server, typename | Where {$_.TypeName -eq "content database" -or $_.TypeName -like "*Gemini*"} | Format-Table -Property * -AutoSize | Out-Default  
+#Get-SPDatabase | select name, status, server, typename | where {$_.TypeName -eq "content database" -or $_.TypeName -like "*Gemini*" -or $_.TypeName -like "*ReportingServices*"}
+
 Write-Host -ForegroundColor Green "features"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
-Get-SPFeature | select displayname, status, scope, farm| where {$_.displayName -like "*powerpivot*"} | format-table -property * -autosize | out-default  
+Get-SPFeature | Select displayname, status, scope, farm | Where {$_.displayName -like "*powerpivot*"} | Format-Table -Property * -AutoSize | Out-Default  
 #Get-SPFeature | select displayname, status, scope, farm | where {$_.displayName -like "*powerpivot*" -or $_.displayName -like "*ReportServer*"}  | format-table -property * -autosize | out-default  
-  
-#Write-Host ""  
+
 Write-Host -ForegroundColor Green "Timer Jobs (Job Definitions) -- list is the same as seen in the 'Review timer job definitions' section of the management dashboard"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
-Get-SPTimerJob | where {$_.service -like "*power*" -or $_.service -like "*mid*"} | select status, displayname, LastRunTime, service | format-table -property * -autosize | out-default  
-  
-#Write-Host ""  
+Get-SPTimerJob | Where {$_.service -like "*power*" -or $_.service -like "*mid*"} | Select status, displayname, LastRunTime, service | Format-Table -Property * -AutoSize | Out-Default  
+
 Write-Host -ForegroundColor Green "health rules"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
-Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like "*power*"}  | format-table -property * -autosize | out-default  
+Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -Like "*power*"}  | Format-Table -Property * -AutoSize | Out-Default  
   
-$time=Get-Date  
-write-host -foregroundcolor DarkGray StartTime $starttime   
-write-host -foregroundcolor DarkGray EndTime $time  
-  
-#Write-Host ""  
+$time = Get-Date  
+Write-Host -ForegroundColor DarkGray StartTime $starttime
+Write-Host -ForegroundColor DarkGray EndTime $time  
+
 Write-Host -ForegroundColor Green "Windows Event Log data MSSQL$POWERPIVOT and "  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
-Get-EventLog "application" | Where-Object {$_.source -like "msolap`$powerpivot*"}  |select timegenerated, entrytype , source, message | format-table -property * -autosize | out-default  
+Get-EventLog "application" | Where-Object {$_.source -like "msolap`$powerpivot*"}  | Select timegenerated, entrytype , source, message | Format-Table -Property * -autosize | Out-Default  
 #The following is the same command but with the Inforamtion events filtered out.  
 #Get-EventLog "application" | Where-Object {$_.source -like "msolap`$powerpivot*" -and ($_.entrytype -match "error" -or $_.entrytype -match "critical" -or $_.entrytype -match "warning")}  |select timegenerated, entrytype , source, message | format-table -property * -autosize | out-default  
   
 #Write-Host ""  
 Write-Host -ForegroundColor Green "ULS Log data"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
-Get-SPLogEvent -starttime(get-date).addhours(-48) | Where-Object {$_.Area -eq "powerpivot service" -and $_.level -eq "high"} | select timestamp, area, category, eventid,level, correlation, message| format-table -property * -autosize | out-default  
+Get-SPLogEvent -StartTime(Get-Date).AddHours(-48) | Where-Object {$_.Area -eq "powerpivot service" -and $_.level -eq "high"} | Select timestamp, area, category, eventid, level, correlation, message | Format-Table -Property * -AutoSize | Out-Default  
 #the following example filters for the category 'data refresh'  
 #Get-SPLogEvent -starttime(get-date).addhours(-48) | Where-Object {$_.category -eq "data refresh" -and $_.level -eq "high"} | select timestamp, area, category, eventid, level, correlation, message  
   
-$time=Get-Date  
-write-host -foregroundcolor DarkGray StartTime $starttime   
-write-host -foregroundcolor DarkGray EndTime $time  
-  
-#Write-Host ""  
+$time = Get-Date  
+Write-Host -ForegroundColor DarkGray StartTime $starttime
+Write-Host -ForegroundColor DarkGray EndTime $time  
+
 Write-Host -ForegroundColor Green "MSOLAP data provider for Excel Servivces, service application"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
-$excelApp=Get-SPExcelServiceApplication  
-get-spexceldataprovider -ExcelServiceApplication $excelApp |select providerid,providertype,description | where {$_.providerid -like "msolap*" } | format-table -property * -autosize | out-default  
+$excelApp = Get-SPExcelServiceApplication  
+Get-SPExcelDataProvider -ExcelServiceApplication $excelApp | Select providerid, providertype, description | Where {$_.providerid -like "msolap*" } | Format-Table -Property * -AutoSize | Out-Default  
   
 Write-Host -ForegroundColor Green "ADOMD.net client library"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
-get-wmiobject -class win32_product | Where-Object {$_.name -like "*ado*"} | select name, version, vendor | format-table -property * -autosize | out-default  
+Get-WMIObject -Class win32_product | Where-Object {$_.name -like "*ado*"} | Select name, version, vendor | Format-Table -Property * -AutoSize | Out-Default  
   
-#Write-Host ""  
 Write-Host -ForegroundColor Green "Usage Data Rules"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
-get-spusagedefinition | select name, status, enabled, tablename, DaysToKeepDetailedData | where {$_.name -like "powerpivot*"} | format-table -property * -autosize | out-default  
+Get-SPUsageDefinition | Select name, status, enabled, tablename, DaysToKeepDetailedData | Where {$_.name -like "powerpivot*"} | Format-Table -Property * -AutoSize | Out-Default  
   
 Write-Host -ForegroundColor Green "Solutions"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
-get-spsolution | select name, status, deployed, DeploymentState, DeployedServers | where {$_.Name -like "*powerpivot*"} | format-table -property * -autosize | out-default  
+Get-SPSolution | Select name, status, deployed, DeploymentState, DeployedServers | Where {$_.Name -like "*powerpivot*"} | Format-Table -Property * -AutoSize | Out-Default  
   
-$time=Get-Date  
-write-host -foregroundcolor DarkGray StartTime $starttime   
-write-host -foregroundcolor DarkGray EndTime $time  
-  
-```  
-  
-  
+$time = Get-Date  
+Write-Host -ForegroundColor DarkGray StartTime $starttime
+Write-Host -ForegroundColor DarkGray EndTime $time
+```
