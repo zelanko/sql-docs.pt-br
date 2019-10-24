@@ -16,12 +16,12 @@ ms.assetid: 34b9398a-c409-4040-8ea1-0deceb18f961
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c9bc55a6a5af15d6d21c4d3e7d74e2dc8296e84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6d4943bf3884933cd60e1c0ef51a54771ee00af
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211484"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782773"
 ---
 # <a name="clear-the-job-history-log"></a>Clear the Job History Log
   Este tópico descreve como excluir o conteúdo do log do histórico de trabalhos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o SQL Server Management Objects.  
@@ -63,7 +63,7 @@ ms.locfileid: "68211484"
   
 5.  Clique em **Excluir**.  
   
-##  <a name="TSQL"></a> Usando o Transact-SQL  
+##  <a name="TSQL"></a> Usando Transact-SQL  
   
 #### <a name="to-clear-the-job-history-log"></a>Para limpar o log de histórico do trabalho  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68211484"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
-    ```  
+    ```sql
     -- example removes the history for a job named NightlyBackups.  
     USE msdb ;  
     GO  
@@ -83,7 +83,7 @@ ms.locfileid: "68211484"
     GO  
     ```  
   
-##  <a name="SMO"></a> Usando o SQL Server Management Objects  
+##  <a name="SMO"></a>Usando SQL Server Management Objects  
  **Para limpar o log de histórico do trabalho**  
   
  Use o método `PurgeJobHistory` da classe `JobServer` usando uma linguagem de programação que você escolher, como o Visual Basic, Visual C# ou PowerShell. Para obter mais informações, veja [SMO (SQL Server Management Objects)](https://msdn.microsoft.com/library/ms162169.aspx).  

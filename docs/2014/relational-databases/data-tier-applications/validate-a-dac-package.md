@@ -17,21 +17,21 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5560379c07e3f6a5ff21ca2db19dbe0e8a420a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56655f7d75635668d266b44853fc29969fd741ed
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917848"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782665"
 ---
 # <a name="validate-a-dac-package"></a>Validar um pacote de DAC
   Esta é uma prática recomendada para revisar o conteúdo de um pacote de DAC antes de implantá-lo em produção e também para validar as ações de atualização antes de atualizar um DAC existente. Isso é especialmente válido durante a implantação de pacotes que não foram desenvolvidos em sua organização.  
   
-1.  **Antes de começar:**  [Pré-requisitos](#Prerequisites)  
+1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
   
 2.  **Para atualizar um DAC, usando:**  [Exibir o Conteúdo de um DAC](#ViewDACContents), [Exibir Alterações no Banco de Dados](#ViewDBChanges), [Exibir Ações de Atualização](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
   
-##  <a name="Prerequisites"></a> Pré-requisitos  
+##  <a name="Prerequisites"></a> Prerequisites  
  Recomendamos não implantar um pacote de DAC de origens desconhecidas ou não confiáveis. Como os DACs podem conter código mal-intencionado que pode executar código [!INCLUDE[tsql](../../includes/tsql-md.md)] sem finalidade ou provocar erros modificando o esquema. Antes de usar um DAC de uma origem desconhecida ou não confiável, implante-o em uma instância de teste isolada do [!INCLUDE[ssDE](../../includes/ssde-md.md)], execute [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) no banco de dados. Além disso, examine o código, como procedimentos armazenados ou outro código definido pelo usuário, no banco de dados.  
   
 ##  <a name="ViewDACContents"></a> Exibir o Conteúdo de um DAC  
@@ -74,7 +74,7 @@ ms.locfileid: "62917848"
   
 4.  Para obter mais informações sobre como usar o assistente, veja [Atualizar um aplicativo da camada de dados](upgrade-a-data-tier-application.md).  
   
- **Exibir alterações do banco de dados usando o PowerShell**  
+### <a name="view-database-changes-by-using-powershell"></a>Exibir alterações do banco de dados usando o PowerShell
   
 1.  Crie um objeto de servidor SMO e defina-o como a instância que contém o DAC a ser exibido.  
   
@@ -84,15 +84,14 @@ ms.locfileid: "62917848"
   
 4.  Use o método `GetDatabaseChanges()` para recuperar um objeto `ChangeResults` e redirecione o objeto para um arquivo de texto para gerar um relatório simples de objetos novos, excluídos e alterados.  
   
-### <a name="view-database-changes-example-powershell"></a>Exibir exemplo de alterações do banco de dados (PowerShell)  
- **Exibir exemplo de alterações do banco de dados (PowerShell)**  
+### <a name="view-database-changes-example-powershell"></a>Exibir exemplo de alterações do banco de dados (PowerShell)
   
  O exemplo a seguir relata alterações de banco de dados realizadas em um DAC implantado denominado MyApplicaiton.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -133,15 +132,14 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 6.  Feche o fluxo de arquivos usado para ler o arquivo de pacote de DAC.  
   
-### <a name="view-upgrade-actions-example-powershell"></a>Exibir o exemplo de ações de atualização (PowerShell)  
- **Exibir o exemplo de ações de atualização (PowerShell)**  
+### <a name="view-upgrade-actions-example-powershell"></a>Exibir o exemplo de ações de atualização (PowerShell)
   
  O exemplo a seguir relata as instruções Transact-SQL que seriam executadas para atualizar um DAC denominado MyApplicaiton para o esquema definido em um arquivo MyApplicationVNext.dacpac.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -170,9 +168,7 @@ $fileStream.Close()
   
  Outra alternativa é desempacotar os DACs em pastas separadas. Você pode usar uma ferramenta de diferenças, como o utilitário WinDiff, para analisar as diferenças.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Aplicativos da Camada de Dados](data-tier-applications.md)   
  [Implantar um aplicativo da camada de dados](deploy-a-data-tier-application.md)   
  [Atualizar um aplicativo da camada de dados](upgrade-a-data-tier-application.md)  
-  
-  

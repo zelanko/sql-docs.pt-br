@@ -15,12 +15,12 @@ ms.assetid: d2241a3f-dbcf-433c-b7bc-f96bdf0eac8c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a732ccf71e0b52b83ae1fabdef88235595d4c194
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50ed3ac0703429f7848a7eb7b4fc9413a0f3e5cf
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68188754"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783375"
 ---
 # <a name="view-a-job"></a>View a Job
   Este tópico descreve como exibir um trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -52,9 +52,9 @@ ms.locfileid: "68188754"
   
 2.  Expanda o **SQL Server Agent**e, em seguida, **Trabalhos**.  
   
-3.  Clique com o botão direito do mouse em um trabalho e clique em **Propriedades**.  
+3.  Clique com o botão direito do mouse em um trabalho e, em seguida, clique em **Propriedades**.  
   
-##  <a name="TSQL"></a> Usando o Transact-SQL  
+##  <a name="TSQL"></a> Usando Transact-SQL  
   
 #### <a name="to-view-a-job"></a>Para exibir um trabalho  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68188754"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
-    ```  
+    ```sql
     -- lists all aspects of the information for the job NightlyBackups.  
     USE msdb ;  
     GO  
@@ -75,9 +75,7 @@ ms.locfileid: "68188754"
     GO  
     ```  
   
-##  <a name="SMO"></a> Usando o SQL Server Management Objects  
+##  <a name="SMO"></a>Usando SQL Server Management Objects  
  **Para exibir um trabalho**  
   
  Use a classe `Job` usando uma linguagem de programação da sua escolha, como o Visual Basic, o Visual C# ou o PowerShell. Para obter mais informações, veja [SMO (SQL Server Management Objects)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

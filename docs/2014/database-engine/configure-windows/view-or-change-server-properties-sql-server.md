@@ -15,12 +15,12 @@ ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2597a2e8f1f97635ed52bf639d57f8de3c26fcd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c5ff985b62e39287b696e96f10142daf90ae0a3
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62756878"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783133"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Exibir ou alterar propriedades de servidor (SQL Server)
   Este tópico descreve como exibir ou alterar as propriedades de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou SQL Server Configuration Manager.  
@@ -45,7 +45,7 @@ ms.locfileid: "62756878"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   Ao usar sp_configure, você deve executar RECONFIGURE ou RECONFIGURE WITH OVERRIDE depois de definir uma opção de configuração. A instrução RECONFIGURE WITH OVERRIDE normalmente é reservada para opções de configuração que devem ser usadas com extrema cautela. Entretanto, RECONFIGURE WITH OVERRIDE funciona com todas as opções de configuração e você pode usá-la em vez de RECONFIGURE.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62756878"
 ####  <a name="Permissions"></a> Permissões  
  Para obter mais informações, veja [Funções de nível de servidor](../../relational-databases/security/authentication-access/server-level-roles.md).  
   
- Permissões de execução `sp_configure` sem parâmetros ou com somente o primeiro parâmetro são concedidas a todos os usuários por padrão. Para executar `sp_configure` com ambos os parâmetros para alterar uma opção de configuração ou para executar a instrução RECONFIGURE, um usuário deve ter a permissão ALTER SETTINGS de nível de servidor. A permissão ALTER SETTINGS é implicitamente mantida pelas funções de servidor fixas **sysadmin** e **serveradmin** .  
+ Permissões de execução em `sp_configure` sem parâmetros ou com apenas o primeiro parâmetro são concedidas a todos os usuários por padrão. Para executar `sp_configure` com ambos os parâmetros para alterar uma opção de configuração ou para executar a instrução RECONFIGURE, um usuário deve receber a permissão de nível de servidor ALTER SETTINGS. A permissão ALTER SETTINGS é implicitamente mantida pelas funções de servidor fixas **sysadmin** e **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62756878"
   
 2.  Na caixa de diálogo **Propriedades do Servidor** , clique em uma página para exibir ou alterar informações de servidor sobre ela. Algumas propriedades são somente leitura.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>Para exibir propriedades de servidor usando a função interna SERVERPROPERTY  
   
@@ -97,8 +97,7 @@ ms.locfileid: "62756878"
     GO  
     SELECT name, server_id, provider  
     FROM sys.servers ;   
-    GO  
-  
+    GO
     ```  
   
 #### <a name="to-view-server-properties-by-using-the-sysconfigurations-catalog-view"></a>Para exibir propriedades de servidor usando a exibição do catálogo sys.configurations  
@@ -109,16 +108,15 @@ ms.locfileid: "62756878"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo consulta a exibição do catálogo [sys.configurations](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) para retornar informações sobre cada opção de configuração de servidor no servidor atual. O exemplo retorna o nome (`name`) e a descrição (`description`) da opção e se a opção é uma opção avançada (`is_advanced`).  
   
-    ```wmimof  
-    USE AdventureWorks2012;   
+    ```sql
+    USE AdventureWorks2012;
     GO  
     SELECT name, description, is_advanced  
-    FROM sys.configurations ;   
-    GO  
-  
+    FROM sys.configurations ;
+    GO
     ```  
   
-#### <a name="to-change-a-server-property-by-using-spconfigure"></a>Para alterar uma propriedade de servidor usando sp_configure  
+#### <a name="to-change-a-server-property-by-using-sp_configure"></a>Para alterar uma propriedade de servidor usando sp_configure  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -152,21 +150,19 @@ GO
   
 3.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server (\<***instancename***>)** e, depois, clique em **Propriedades**.  
   
-4.  Na caixa de diálogo **Propriedades do SQL Server (\<***instancename***>)**, altere as propriedades do servidor na guia **Serviço** ou na guia **Avançado** e, depois, clique em **OK**.  
+4.  Na caixa de diálogo **Propriedades do SQL Server (\<***instancename***>)** , altere as propriedades do servidor na guia **Serviço** ou na guia **Avançado** e, depois, clique em **OK**.  
   
 ##  <a name="FollowUp"></a> Acompanhamento: depois que você altera as propriedades de servidor  
  Para algumas propriedades, o servidor terá que ser reiniciado antes de a alteração entrar em vigor.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [Instruções SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statements-transact-sql)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
- [Configurar o WMI para mostrar o status do servidor nas Ferramentas do SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)   
+ [Configurar o WMI para mostrar o status do servidor nas ferramentas do SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)   
  [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)   
  [Funções de configuração &#40;Transact-SQL&#41;](/sql/t-sql/functions/configuration-functions-transact-sql)   
- [Exibições e funções de gerenciamento dinâmico relacionadas ao servidor &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql)  
-  
-  
+ [Funções e exibições de gerenciamento dinâmico relacionadas ao servidor &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql)  

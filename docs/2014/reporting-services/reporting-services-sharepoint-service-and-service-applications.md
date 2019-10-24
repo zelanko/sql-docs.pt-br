@@ -1,5 +1,5 @@
 ---
-title: Serviço do Reporting Services SharePoint e aplicativos de serviço | Microsoft Docs
+title: Serviços do Reporting Services SharePoint e aplicativos de serviço | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 035cc8b8de493761b79ac391f2f543f96c941507
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93a8092dc9ed731349a1948a74e3950eb32f4f47
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66102866"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783156"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Serviço SharePoint do Reporting Services e aplicativos de serviço
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint foi arquitetado com base na arquitetura do serviço do SharePoint e utiliza um serviço do SharePoint e aplicativos de serviço um para muitos. Criar um aplicativo de serviço torna o serviço disponível e gera o banco de dados de aplicativo de serviço. Você pode criar vários aplicativos de serviço Reporting Services, mas um aplicativo de serviço é suficiente para a maioria dos cenários de implantação.  
@@ -62,27 +62,25 @@ ms.locfileid: "66102866"
   
 1.  Adicione o objeto do pool de aplicativos do nome do pool de aplicativos a uma variável que será passada para a ação Novo.  
   
-    ```  
-    $appPoolName = get-spserviceapplicationpool "<application pool name>"  
+    ```powershell
+    $appPoolName = Get-SPServiceApplicationPool "<application pool name>"  
     ```  
   
 2.  Crie o aplicativo de serviço com um nome e um nome de pool de aplicativos fornecidos.  
   
-    ```  
+    ```powershell
     New-SPRSServiceApplication -Name 'MyServiceApplication' -ApplicationPool $appPoolName -DatabaseName 'MyServiceApplicationDatabase' -DatabaseServer '<Server Name>'  
     ```  
   
 3.  Obtenha o novo objeto do aplicativo de serviço e redirecione o objeto para o Pipe do novo cmdlet de proxy.  
   
-    ```  
+    ```powershell
     Get-SPRSServiceApplication -name MyServiceApplication | New-SPRSServiceApplicationProxy "MyServiceApplicationProxy"  
     ```  
   
-##  <a name="bkmk_related"></a> Tarefas relacionadas  
+##  <a name="bkmk_related"></a> Tarefas Relacionadas  
   
 |Tarefa|Link|  
 |----------|----------|  
 |Gerenciar as configurações de seu aplicativo de serviço.|[Gerenciar um aplicativo de serviço SharePoint do Reporting Services](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)|  
-|Faça backup e restaure o aplicativo de serviço e os componentes relacionados, como chaves de criptografia e proxy.|[Backup and Restore Reporting Services SharePoint Service Applications](../../2014/reporting-services/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
-  
-  
+|Faça backup e restaure o aplicativo de serviço e os componentes relacionados, como chaves de criptografia e proxy.|[Aplicativos de serviço SharePoint de backup e restauração do Reporting Services](../../2014/reporting-services/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  

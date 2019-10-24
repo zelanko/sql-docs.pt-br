@@ -17,12 +17,12 @@ ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b85a2b6e7d574c1752eba84d1bfc2bce8dbafc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e6a5792c7e18013dba5cc4c0963dc6d045410f0
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62788713"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782917"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Retomar um banco de dados de disponibilidade (SQL Server)
   Você pode retomar um banco de dados de disponibilidade suspenso no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. A retomada de um banco de dados suspenso coloca o banco de dados no estado SYNCHRONIZING. A retomada do banco de dados primário também retoma todos os bancos de dados secundários que foram suspensos devido à suspensão do banco de dados primário. Se um banco de dados secundário foi suspenso localmente, na instância de servidor que hospeda a réplica secundária, o banco de dados secundário deverá ser retomado localmente. Quando um determinado banco de dados secundário e o banco de dados primário correspondente estiverem no estado SYNCHRONIZING, a sincronização de dados é retomada no banco de dados secundário.  
@@ -50,10 +50,10 @@ ms.locfileid: "62788713"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
  O comando RESUME retorna assim que é aceito pela réplica que hospeda o banco de dados de destino, mas, na verdade, a retomada do banco de dados ocorre de forma assíncrona.  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="Prerequisites"></a> Prerequisites  
   
 -   Você deve estar conectado à instância de servidor que hospeda o banco de dados a ser retomado.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62788713"
 > [!NOTE]  
 >  Para retomar bancos de dados adicionais neste local de réplica, repita as etapas 4 e 5 para cada banco de dados.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  **Para retomar um banco de dados secundário que foi suspenso localmente**  
   
 1.  Conecte-se à instância do servidor que hospeda a réplica secundária, cujo banco de dados você deseja retomar.  
@@ -94,7 +94,8 @@ ms.locfileid: "62788713"
      ALTER DATABASE *database_name* SET HADR RESUME  
   
 ##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
- **Para retomar um banco de dados secundário**  
+
+### <a name="to-resume-a-secondary-database"></a>Para retomar um banco de dados secundário
   
 1.  Altere o diretório (`cd`) para a instância do servidor que hospeda a réplica cujo banco de dados você deseja retomar. Para obter mais informações, consulte [Pré-requisitos](#Prerequisites)anteriormente neste tópico.  
   
@@ -102,9 +103,8 @@ ms.locfileid: "62788713"
   
      Por exemplo, o comando a seguir retoma a sincronização dos dados para o banco de dados de disponibilidade `MyDb3` no grupo de disponibilidade `MyAg`.  
   
-    ```  
-    Resume-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
+    ```powershell
+    Resume-SqlAvailabilityDatabase -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
     ```  
   
     > [!NOTE]  
@@ -114,11 +114,9 @@ ms.locfileid: "62788713"
   
 -   [Provedor do SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="RelatedTasks"></a> Tarefas Relacionadas  
   
 -   [Suspender um banco de dados de disponibilidade &#40;SQL Server&#41;](suspend-an-availability-database-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
-  
-  
+## <a name="see-also"></a>Consulte Também  
+ [Visão geral do &#40;grupos de disponibilidade AlwaysOn SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  

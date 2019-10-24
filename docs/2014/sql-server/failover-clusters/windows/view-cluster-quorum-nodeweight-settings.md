@@ -13,29 +13,29 @@ ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bab64e8a33baae2c87e8068a1e4d23799742b55c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12d68b8494fee4400c0a8e9ec043f0972ba2de5c
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049372"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783357"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>Exibir configurações de NodeWeight de quorum de cluster
   Este tópico descreve como exibir configurações de NodeWeight para cada nó de membro em um cluster WSFC (Windows Server Failover Clustering). As configurações de NodeWeight são usadas durante a votação de quorum para dar suporte à recuperação de desastre e a cenários com várias sub-redes para instâncias de cluster de failover do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Antes de iniciar:**  [Pré-requisitos](#Prerequisites), [Segurança](#Security)  
+-   **Antes de começar:**  [Pré-requisitos](#Prerequisites), [Segurança](#Security)  
   
--   **Para exibir as configurações de NodeWeight de quorum usando:** [Usando o Transact-SQL](#TsqlProcedure), [Usando o PowerShell](#PowerShellProcedure), [Usando Cluster.exe](#CommandPromptProcedure)  
+-   **To view quorum NodeWeight settings using:** [Using Transact-SQL](#TsqlProcedure), [Using Powershell](#PowerShellProcedure), [Using Cluster.exe](#CommandPromptProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de iniciar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="Prerequisites"></a> Prerequisites  
  Esse recurso somente tem suporte no [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ou em versões posteriores.  
   
 > [!IMPORTANT]  
 >  Para usar configurações de NodeWeight, é necessário aplicar o seguinte hotfix para todos os servidores no cluster WSFC:  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036): Um hotfix está disponível para permitir que você configure um nó de cluster que não tem votos de quorum em [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] e, em [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): há um hotfix disponível para permitir que você configure um nó de cluster que não tenha votos de quorum em [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] e em [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 > [!TIP]  
 >  Se esse hotfix não for instalado, os exemplos neste tópico retornarão valores vazios ou NULL para NodeWeight.  
@@ -43,7 +43,7 @@ ms.locfileid: "63049372"
 ###  <a name="Security"></a> Segurança  
  O usuário deve ser uma conta de domínio que seja membro do grupo Administradores local em cada nó do cluster WSFC.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 ##### <a name="to-view-nodeweight-settings"></a>Para exibir configurações de NodeWeight  
   
@@ -61,7 +61,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
   
 ##  <a name="PowerShellProcedure"></a> Usando o Powershell  
   
-##### <a name="to-view-nodeweight-settings"></a>Para exibir configurações de NodeWeight  
+### <a name="to-view-nodeweight-settings"></a>Para exibir configurações de NodeWeight
   
 1.  Inicie um Windows PowerShell elevado via **Executar como Administrador**.  
   
@@ -80,7 +80,7 @@ Import-Module FailoverClusters
 $cluster = "Cluster001"  
 $nodes = Get-ClusterNode -Cluster $cluster  
   
-$nodes | Format-Table -property NodeName, State, NodeWeight  
+$nodes | Format-Table -Property NodeName, State, NodeWeight  
 ```  
   
 ##  <a name="CommandPromptProcedure"></a> Usando Cluster.exe  
@@ -97,14 +97,12 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 ### <a name="example-clusterexe"></a>Exemplo (Cluster.exe)  
  O exemplo a seguir gera algumas das propriedades de nó para o cluster chamado "Cluster001".  
   
-```ms-dos  
+```cmd
 cluster.exe Cluster001 node /status /properties  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configuração de modos de quorum WSFC e votação &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [Definir configurações de NodeWeight de quorum de cluster](configure-cluster-quorum-nodeweight-settings.md)   
  [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)   
  [Cmdlets de cluster de failover no Windows PowerShell listados por foco de tarefa](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
-  
-  

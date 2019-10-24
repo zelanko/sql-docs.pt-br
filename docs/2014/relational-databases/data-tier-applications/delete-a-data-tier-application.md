@@ -20,19 +20,19 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b8b6b1d5975ff94fda98784449330571cc93cec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: efbd01499940490fd85dfaf1e0786d26b722749c
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872715"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782741"
 ---
 # <a name="delete-a-data-tier-application"></a>Excluir um Aplicativo da Camada de Dados
   Você poderá excluir um aplicativo da camada de dados usando o Assistente para Excluir Aplicativo da Camada de Dados ou um script do Windows PowerShell. É possível especificar se o banco de dados associado será retido, desanexado ou removido.  
   
--   **Antes de começar:**  [Limitações e Restrições](#LimitationsRestrictions), [Permissões](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Para atualizar um DAC, usando:**  [O Assistente de Aplicativo da Camada de Dados de Registro](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
+-   **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  Ao excluir uma instância de DAC (aplicativo da camada de dados), você escolhe uma das três opções que especificam o que será feito com o banco de dados associado ao aplicativo da camada de dados. Todas as três opções excluem os metadados da definição do DAC. As opções diferem no que fazem com o banco de dados associado ao aplicativo da camada de dados. O assistente não exclui nenhum dos objetos do nível de instância associados ao DAC ou banco de dados, como logons.  
@@ -43,7 +43,7 @@ ms.locfileid: "62872715"
 |Desanexar banco de dados|O banco de dados associado é desanexado. A instância do Mecanismo de Banco de Dados não pode fazer referência ao banco de dados, mas os dados e os arquivos de log estão intatos.|  
 |Excluir banco de dados|O banco de dados associado é removido. Os dados e os arquivos de log são excluídos.|  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
  Não há nenhum mecanismo automático para restaurar os metadados da definição do DAC ou o banco de dados depois que um DAC é excluído. A maneira como a instância do DAC pode ser recriada manualmente depende da opção de exclusão.  
   
 |Opção|Como recriar a instância do DAC|  
@@ -82,7 +82,7 @@ ms.locfileid: "62872715"
 ##  <a name="Introduction"></a> Página de Introdução  
  Esta página descreve as etapas para excluir um aplicativo da camada de dados.  
   
- **Não mostrar esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página no futuro.  
+ **Não exibir esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página no futuro.  
   
  **Avançar >** : continua para a página **Escolher Método**.  
   
@@ -149,10 +149,10 @@ ms.locfileid: "62872715"
 ### <a name="example-deleting-the-dac-but-leaving-the-database-powershell"></a>Exemplo Excluindo o DAC mas deixando o banco de dados (PowerShell)  
  O exemplo a seguir exclui um DAC chamado MyApplication usando o método `Unmanage()` para excluir o DAC, mas deixar o banco de dados intacto.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -173,7 +173,7 @@ $dacstore.Unmanage($dacName)
 ### <a name="example-deleting-the-dac-and-detaching-the-database-powershell"></a>Exemplo Excluindo o DAC e desanexando o banco de dados (PowerShell)  
  O exemplo a seguir exclui um DAC chamado MyApplication usando o método `Uninstall()` para excluir o DAC e desanexar o banco de dados.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
 $srv = get-item .  
@@ -197,10 +197,10 @@ $dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMo
 ### <a name="example-deleting-the-dac-and-dropping-the-database-powershell"></a>Exemplo Excluindo o DAC e removendo o banco de dados (PowerShell)  
  O exemplo a seguir exclui um DAC chamado MyApplication usando o método `Uninstall()` para excluir o DAC e remover o banco de dados.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -218,12 +218,10 @@ $dacName  = "MyApplication"
 ## $dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DropDatabase)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Aplicativos da Camada de Dados](data-tier-applications.md)   
  [Aplicativos da Camada de Dados](data-tier-applications.md)   
  [Implantar um aplicativo da camada de dados](deploy-a-data-tier-application.md)   
  [Registrar um banco de dados como um DAC](register-a-database-as-a-dac.md)   
  [Fazer backup e restaurar bancos de dados do SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)  
-  
-  
+ [Database Detach and Attach &#40;SQL Server&#41; [Anexar e desanexar banco de dados (SQL Server)]](../databases/database-detach-and-attach-sql-server.md)  
