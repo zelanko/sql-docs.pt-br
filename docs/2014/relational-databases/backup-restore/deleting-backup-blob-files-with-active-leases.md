@@ -10,12 +10,12 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9e4550f64d815c40b4069c2e62e9eee7ffd0cf1d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 663bab775aff9a04a4a9d93f2bcbd0e193b18f37
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154757"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783063"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>Excluindo arquivos de blob de backup com arrendamentos ativos
   Ao fazer backup ou restaurar do armazenamento do Azure, o SQL Server adquire uma concessão infinita para bloquear o acesso exclusivo ao blob. Quando o processo de backup ou restauração for concluído com êxito, a concessão será liberada. Se um backup ou uma restauração falhar, o processo de backup tentará limpar qualquer blob inválido. Entretanto, se o backup falhar devido a uma falha de conectividade de rede prolongada ou contínua, o processo de backup pode não ser capaz de obter acesso ao blob e o blob pode permanecer órfão. Isso significa que o blob só poderá ser gravado ou excluído quando a concessão for liberada. Este tópico descreve como liberar a concessão e excluir o blob.  
@@ -29,29 +29,28 @@ ms.locfileid: "70154757"
 ## <a name="managing-orphaned-blobs"></a>Gerenciando blobs órfãos  
  As etapas a seguir descrevem como efetuar a limpeza após uma atividade de restauração ou backup com falha. Todas as etapas podem ser executadas por meio dos scripts do PowerShell. Um exemplo de código é fornecido na seção a seguir:  
   
-1.  **Identificando BLOBs que têm concessões:** Se houver um script ou um processo que execute os processos de backup, você poderá capturar a falha no script ou no processo e usá-la para limpar os blobs.   Você também pode usar as propriedades LeaseStats e LeastState para identificar os blobs que têm arrendamentos neles. Após identificar os blobs, recomendamos que você examine a lista e verifique a validade do arquivo de backup antes de excluir o blob.  
+1.  **Identificando os blobs que têm arrendamentos:** Se você tiver um script ou processo que executa os processos de backup, talvez possa capturar a falha no script ou processo e usá-la para limpar os blobs.   Você também pode usar as propriedades LeaseStats e LeastState para identificar os blobs que têm arrendamentos neles. Após identificar os blobs, recomendamos que você examine a lista e verifique a validade do arquivo de backup antes de excluir o blob.  
   
-2.  **Dividindo a concessão:** Uma solicitação autorizada pode interromper a concessão sem fornecer uma ID de concessão. Consulte [aqui](https://go.microsoft.com/fwlink/?LinkID=275664) para obter mais informações.  
+2.  **Interrompendo a concessão:** uma solicitação autorizada pode interromper a concessão sem fornecer uma ID de concessão. Consulte [aqui](https://go.microsoft.com/fwlink/?LinkID=275664) para obter mais informações.  
   
     > [!TIP]  
     >  O SQL Server emite uma ID de concessão para estabelecer o acesso exclusivo durante a operação de restauração. A ID de concessão da restauração é BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
-3.  **Excluindo o blob:** Para excluir um blob que tem uma concessão ativa, primeiro você deve interromper a concessão.  
+3.  **Excluindo o blob:** para excluir um blob que tem uma concessão ativa, primeiro você deve interromper a concessão.  
   
 ###  <a name="Code_Example"></a> Exemplo de script do PowerShell  
- **Importante sevocê\* estiver executando o PowerShell 2,0, poderá ter problemas ao carregar o assembly Microsoft WindowsAzure. Storage. dll. \* \* \*** Recomendamos que você atualize o Powershell 3.0 para resolver o problema. Você também pode usar a seguinte solução para o PowerShell 2.0:  
+ **\* \* \* importantes \*** Se você estiver executando o PowerShell 2,0, poderá ter problemas ao carregar o assembly Microsoft WindowsAzure. Storage. dll. Recomendamos que você atualize o Powershell 3.0 para resolver o problema. Você também pode usar a seguinte solução para o PowerShell 2.0:  
   
 -   Crie ou modifique o arquivo powershell.exe.config para carregar os assemblies do .NET 2.0 e do .NET 4.0 em tempo de execução com o seguinte:  
   
-    ```  
-    <?xml version="1.0"?>   
-    <configuration>   
-        <startup useLegacyV2RuntimeActivationPolicy="true">   
-            <supportedRuntime version="v4.0.30319"/>   
-            <supportedRuntime version="v2.0.50727"/>   
-        </startup>   
-    </configuration>  
-  
+    ```xml
+    <?xml version="1.0"?>
+    <configuration>
+        <startup useLegacyV2RuntimeActivationPolicy="true">
+            <supportedRuntime version="v4.0.30319"/>
+            <supportedRuntime version="v2.0.50727"/>
+        </startup>
+    </configuration>
     ```  
   
  O exemplo a seguir ilustra a identificação de blobs que têm arrendamentos ativos e sua interrupção. O exemplo também demonstra como filtrar IDs de concessão da versão.  
@@ -80,11 +79,11 @@ ms.locfileid: "70154757"
   
      **Interrompendo arrendamentos**  
   
-     **A concessão em \<URL do Blob> é uma concessão de restauração: Você verá essa mensagem somente se tiver um blob com uma concessão de restauração que ainda está ativa.**  
+     **A concessão na \<URL do Blob> é uma concessão de restauração: você verá esta mensagem apenas se tiver um blob com uma concessão de restauração que ainda está ativa.**  
   
      **A concessão na \<URL do Blob> não é uma concessão de restauração Interrompendo concessão na \<URL do Bob>.**  
   
-```  
+```powershell
 param(  
        [Parameter(Mandatory=$true)]  
        [string]$storageAccount,  
@@ -104,34 +103,32 @@ $bytes = [System.IO.File]::ReadAllBytes($storageAssemblyPath)
 [System.Reflection.Assembly]::Load($bytes)  
   
 $cred = New-Object 'Microsoft.WindowsAzure.Storage.Auth.StorageCredentials' $storageAccount, $storageKey  
-  
 $client = New-Object 'Microsoft.WindowsAzure.Storage.Blob.CloudBlobClient' "https://$storageAccount.blob.core.windows.net", $cred  
-  
 $container = $client.GetContainerReference($blobContainer)  
   
 #list all the blobs  
-$allBlobs = $container.ListBlobs()   
+$allBlobs = $container.ListBlobs()
   
 $lockedBlobs = @()  
 # filter blobs that are have Lease Status as "locked"  
 foreach($blob in $allBlobs)  
 {  
-    $blobProperties = $blob.Properties   
+    $blobProperties = $blob.Properties
     if($blobProperties.LeaseStatus -eq "Locked")  
     {  
         $lockedBlobs += $blob  
-  
     }  
 }  
   
 if ($lockedBlobs.Count -eq 0)  
-    {   
-        Write-Host " There are no blobs with locked lease status"  
-    }  
+{
+    Write-Host " There are no blobs with locked lease status"  
+}
+
 if($lockedBlobs.Count -gt 0)  
 {  
-    write-host "Breaking leases"  
-    foreach($blob in $lockedBlobs )   
+    Write-Host "Breaking leases"  
+    foreach($blob in $lockedBlobs )
     {  
         try  
         {  
@@ -149,11 +146,8 @@ if($lockedBlobs.Count -gt 0)
         Write-Host "Breaking lease on $($blob.Uri)"  
         $blob.BreakLease($(New-TimeSpan), $null, $null, $null) | Out-Null  
     }  
-}  
-  
+}
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Práticas recomendadas e solução de problemas de backup do SQL Server para URL](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
-  
-  
+## <a name="see-also"></a>Consulte Também  
+ [Melhores práticas e solução de problemas de backup do SQL Server para URL](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
