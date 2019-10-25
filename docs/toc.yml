@@ -1,8 +1,8 @@
-- name: Bem-vindo ao SQL Server
-  href: sql-server/sql-server-technical-documentation.md
-- name: Dicas de navegação dos documentos do SQL
+- name: SQL Server
+  href: sql-server/index.yml
+- name: Dicas de navegação de documentos
   href: sql-server/sql-docs-navigation-guide.md
-- name: Versões anteriores 2014-2005
+- name: Versões anteriores 2005-2014
   href: toc/previous-versions-sql-server.md
 - name: Visão geral
   items:
@@ -10376,18 +10376,18 @@
               href: linux/sql-server-linux-configure-mssql-conf.md
             - name: Variáveis de ambiente
               href: linux/sql-server-linux-configure-environment-variables.md
-            - name: Configurar contêineres do Docker
-              href: linux/sql-server-linux-configure-docker.md
-            - name: MSDTC
-              items:
-                - name: Configurar MSDTC
-                  href: linux/sql-server-linux-configure-msdtc.md
-                - name: Configurar Docker para MSDTC
-                  href: linux/sql-server-linux-configure-msdtc-docker.md
+            - name: Configurar MSDTC
+              href: linux/sql-server-linux-configure-msdtc.md
             - name: Configurar a memória persistente PMEM
               href: linux/sql-server-linux-configure-pmem.md
             - name: Configurar para enviar dados de uso e diagnóstico à Microsoft
               href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
+        - name: Contêineres
+          items:
+            - name: Configurar contêineres do Docker
+              href: linux/sql-server-linux-configure-docker.md
+            - name: Configurar Docker para MSDTC
+              href: linux/sql-server-linux-configure-msdtc-docker.md
         - name: Desenvolver
           href: linux/sql-server-linux-develop-overview.md
           items:
