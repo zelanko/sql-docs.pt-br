@@ -187,7 +187,7 @@ A tabela a seguir lista todas as ordenações do Windows com suporte no [!INCLUD
 |Norueguês, (Bokmål, Noruega)|Norwegian_100_|Não disponível|
 |Norueguês (Nynorsk, Noruega)|Norwegian_100_|Não disponível|
 |occitânico (França)|French_100_|Não disponível|
-|Odia (Índia)|Indic_General_100_<sup>1</sup>|Não disponível|
+|Oriá (Índia)|Indic_General_100_<sup>1</sup>|Não disponível|
 |Pashto (Afeganistão)|Pashto_100_<sup>1</sup>|Não disponível|
 |Persa (Irã)|Persian_100_|Não disponível|
 |panjabi (Índia)|Indic_General_100_<sup>1</sup>|Indic_General_90_|
