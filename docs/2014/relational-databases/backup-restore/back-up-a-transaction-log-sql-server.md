@@ -14,12 +14,12 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0479b16e7cc767b8e036a9632c0e9c80177c7837
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78472cf0a270ffbb83ddf744956e7d2c5a1a1f64
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62877326"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783117"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>Fazer backup de um log de transações (SQL Server)
   Este tópico descreve como fazer backup de um log de transações no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou PowerShell.  
@@ -34,7 +34,7 @@ ms.locfileid: "62877326"
   
      [Segurança](#Security)  
   
--   **Para fazer backup de um log de transações, usando:**  
+-   **Para fazer backup de um log de transações usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62877326"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
   
 -   A instrução BACKUP não é permitida em uma transação explícita ou implícita.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62877326"
   
 #### <a name="to-back-up-a-transaction-log"></a>Para fazer backup de um log de transações  
   
-1.  Depois de conectar-se à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objeto, clique no nome do servidor para expandir a árvore do servidor.  
+1.  Depois de conectar-se à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
   
 2.  Expanda **Bancos de Dados**e, dependendo do banco de dados, selecione um banco de dados de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco de dados do sistema.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62877326"
   
 6.  Na caixa de listagem **Tipo de Backup** , selecione **Log de Transações**.  
   
-7.  Opcionalmente, você pode selecionar **Copiar Somente Backup** para criar um backup somente cópia. Um *backup somente cópia* é um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não depende da sequência de backups convencionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Backups somente cópia &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
+7.  Opcionalmente, você pode selecionar **Copiar Somente Backup** para criar um backup somente cópia. Um *backup somente cópia* é um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não depende da sequência de backups convencionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Backups somente cópia &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
   
     > [!NOTE]  
     >  Quando a opção **Diferencial** está selecionada, você não pode criar um backup somente cópia.  
@@ -119,7 +119,7 @@ ms.locfileid: "62877326"
   
     -   **Fazer backup em um novo conjunto de mídias e apagar todos os conjuntos de backup existentes**  
   
-         Para essa opção, digite um nome na caixa de texto **Nome do novo conjunto de mídias** e, opcionalmente, descreva o conjunto de mídias na caixa de texto **Descrição do novo conjunto de mídias** . Para obter mais informações, consulte [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
+         Para essa opção, digite um nome na caixa de texto **Nome do novo conjunto de mídias** e, opcionalmente, descreva o conjunto de mídias na caixa de texto **Descrição do novo conjunto de mídias** . Para obter mais informações, veja [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
   
 14. Na seção **Confiabilidade** , como opção, marque:  
   
@@ -137,7 +137,7 @@ ms.locfileid: "62877326"
   
 16. Se o backup estiver sendo feito em uma unidade de fita (conforme especificado na seção **Destino** da página **Geral** ), a opção **Descarregar a fita após o backup** estará ativa. Clicar nessa opção ativa a opção **Rebobinar a fita antes de descarregar** .  
   
-17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e posteriores dão suporte para [compactação de backup](backup-compression-sql-server.md). Por padrão, a compactação de um backup depende do valor da opção de configuração de servidor **padrão de compactação de backup**. Porém, independentemente do padrão atual do nível do servidor, é possível compactar um backup, marcando a opção **Compactar backup**e evitar a compactação marcando **Não compactar o backup**.  
+17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e posteriores dão suporte para [compactação de backup](backup-compression-sql-server.md). Por padrão, a compactação de um backup depende do valor da opção de configuração de servidor **padrão de compactação de backup** . Porém, independentemente do padrão atual do nível do servidor, é possível compactar um backup, marcando a opção **Compactar backup**e evitar a compactação marcando **Não compactar o backup**.  
   
      **Para exibir o padrão de compactação de backup atual**  
   
@@ -155,7 +155,7 @@ ms.locfileid: "62877326"
   
 -   Triple DES  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-back-up-a-transaction-log"></a>Para fazer backup de um log de transações  
   
@@ -180,31 +180,26 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
   
-1.  Use o cmdlet `Backup-SqlDatabase` e especifique `Log` para o valor do parâmetro `-BackupAction`.  
+Use o cmdlet `Backup-SqlDatabase` e especifique `Log` para o valor do parâmetro `-BackupAction`.  
   
-     O exemplo a seguir cria um backup do log do banco de dados `MyDB` para o local de backup padrão da instância de servidor `Computer\Instance`.  
+O exemplo a seguir cria um backup do log do banco de dados `MyDB` para o local de backup padrão da instância de servidor `Computer\Instance`.  
   
-    ```  
-    --Enter this command at the PowerShell command prompt, C:\PS>  
+    ```powershell
     Backup-SqlDatabase -ServerInstance Computer\Instance -Database MyDB -BackupAction Log  
     ```  
   
- **Para configurar e usar o provedor do SQL Server PowerShell**  
+Para configurar e usar o provedor de SQL Server PowerShell, consulte [provedor de SQL Server PowerShell](../../powershell/sql-server-powershell-provider.md).
   
--   [Provedor do SQL Server PowerShell](../../powershell/sql-server-powershell-provider.md)  
-  
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="RelatedTasks"></a> Tarefas Relacionadas  
   
 -   [Restaurar um backup de log de transações &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
--   [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [Restaurar um banco de dados SQL Server em um ponto no tempo &#40;modelo de recuperação completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
--   [Solução de problemas de um log de transação completa &#40;Erro do SQL Server 9002&#41;](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+-   [Solução de problemas em um log de transação completa &#40;Erro do SQL Server 9002&#41;](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Aplicar backups de log de transações &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [Planos de manutenção](../maintenance-plans/maintenance-plans.md)   
  [Backups completos de arquivos &#40;SQL Server&#41;](full-file-backups-sql-server.md)  
-  
-  

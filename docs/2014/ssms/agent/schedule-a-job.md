@@ -14,12 +14,12 @@ ms.assetid: f626390a-a3df-4970-b7a7-a0529e4a109c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: abb84377c48778d0c7244c13620fe192b5421ad6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5037448a3ec3cb3590e6fd649d83878bb573f48c
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666754"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783175"
 ---
 # <a name="schedule-a-job"></a>Schedule a Job
   Este tópico descreve como agendar um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
@@ -81,7 +81,7 @@ ms.locfileid: "62666754"
   
 7.  Na caixa de diálogo **Propriedades do Trabalho** , clique em **OK**.  
   
-##  <a name="TSQL"></a> Usando o Transact-SQL  
+##  <a name="TSQL"></a> Usando Transact-SQL  
   
 #### <a name="to-schedule-a-job"></a>Para agendar um trabalho  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62666754"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
     -- creates a schedule named NightlyJobs.   
@@ -109,9 +109,7 @@ ms.locfileid: "62666754"
     GO  
     ```  
   
- Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql) e [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql).  
+ Para obter mais informações, [consulte &#40;Transact-SQL&#41; sp_add_schedule](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql) e [sp_attach_schedule &#40;Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql).  
   
-##  <a name="SMO"></a> Usando o SQL Server Management Objects  
+##  <a name="SMO"></a>Usando SQL Server Management Objects  
  Use a classe `JobSchedule` usando uma linguagem de programação da sua escolha, como o Visual Basic, o Visual C# ou o PowerShell. Para obter mais informações, consulte[SMO (SQL Server Management Objects)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  
