@@ -1,7 +1,7 @@
 ---
 title: SQL Server e ADO.NET
 description: Descreve como trabalhar com recursos e funcionalidades que são específicos do SQL Server
-ms.date: 09/26/2019
+ms.date: 10/15/2019
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 ms.reviewer: rothja
-ms.openlocfilehash: 232abf9c9f2d1af97288f8deae6b311bc92eb520
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
+ms.openlocfilehash: fa2e608851f3e66f0f6e77b4cf1ddf69c5537ee5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72453180"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907158"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server e ADO.NET
 
@@ -46,4 +46,4 @@ Descreve recursos do SQL Server que são úteis para desenvolvedores de aplicati
   
 Para ver a documentação completa do Mecanismo de Banco de Dados do SQL Server, consulte os Manuais Online do SQL Server para saber qual versão do SQL Server você está usando.  
   
-[Manuais Online do Microsoft SQL Server](../../../sql-server/sql-server-technical-documentation.md)  
+[Manuais Online do Microsoft SQL Server](../../../sql-server/index.yml)
