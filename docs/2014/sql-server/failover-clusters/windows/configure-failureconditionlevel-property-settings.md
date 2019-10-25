@@ -10,17 +10,17 @@ ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 705b1a8438e4d8d4d193c30d0237467ea977abda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87ed68cc3540075e0fd5d357182d709394f44455
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049490"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797503"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>Definir as configurações da propriedade FailureConditionLevel
   Use a propriedade FailureConditionLevel para definir as condições da FCI AlwaysOn para failover ou reinicialização. As alterações feitas nessa propriedade são aplicadas imediatamente, sem a necessidade de uma reinicialização do serviço WSFC (Windows Server Failover Cluster) ou do recurso FCI.  
   
--   **Antes de começar:**  [Configurações da propriedade FailureConditionLevel](#Restrictions), [segurança](#Security)  
+-   **Antes de começar:**  [Configurações da propriedade FailureConditionLevel](#Restrictions), [Segurança](#Security)  
   
 -   **To configure the FailureConditionLevel property settings using,** [PowerShell](#PowerShellProcedure), [Failover Cluster Manager](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
@@ -36,26 +36,24 @@ ms.locfileid: "63049490"
   
 ##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
   
-##### <a name="to-configure-failureconditionlevel-settings"></a>Para configurar a propriedade FailureConditionLevel  
+### <a name="to-configure-failureconditionlevel-settings"></a>Para configurar a propriedade FailureConditionLevel  
   
 1.  Inicie um Windows PowerShell elevado via **Executar como Administrador**.  
   
 2.  Importe o módulo `FailoverClusters` para habilitar cmdlets de cluster.  
   
-3.  Usar o `Get-ClusterResource` cmdlet para localizar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] recurso, em seguida, use `Set-ClusterParameter` cmdlet para definir a **FailureConditionLevel** propriedade para uma instância de Cluster de Failover.  
+3.  Use o cmdlet `Get-ClusterResource` para localizar o recurso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, em seguida, use `Set-ClusterParameter` cmdlet para definir a propriedade **FailureConditionLevel** para uma instância de cluster de failover.  
   
 > [!TIP]  
 >  Sempre que você abrir uma nova janela do PowerShell, deverá importar o módulo `FailoverClusters`.  
-  
-### <a name="example-powershell"></a>Exemplo (PowerShell)  
+
  O exemplo a seguir altera a configuração FailureConditionLevel no recurso " [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] " do`SQL Server (INST1)`para fazer failover ou reiniciar em erros de servidor críticos.  
   
 ```powershell  
 Import-Module FailoverClusters  
   
 $fci = "SQL Server (INST1)"  
-Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3  
-  
+Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
 ```  
   
 ### <a name="related-content-powershell"></a>Conteúdo relacionado (PowerShell)  
@@ -67,7 +65,8 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
 -   [Comandos de recursos de cluster e cmdlets equivalentes no Windows PowerShell](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
 ##  <a name="WSFC"></a> Usando o snap-in Gerenciador de Cluster de Failover  
- **Para definir as configurações da propriedade FailureConditionLevel:**  
+
+### <a name="to-configure-failureconditionlevel-property-settings"></a>Para definir as configurações da propriedade FailureConditionLevel
   
 1.  Abra o snap-in Gerenciador de Cluster de Failover.  
   
@@ -77,20 +76,19 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 4.  Selecione a guia **Propriedades** , insira o valor desejado para a propriedade **FaliureConditionLevel** propriedade e clique em **OK** para aplicar a alteração.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
- **Para definir as configurações da propriedade FailureConditionLevel:**  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+
+### <a name="to-configure-failureconditionlevel-property-settings"></a>Para definir as configurações da propriedade FailureConditionLevel
   
  Usando a instrução [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] , você pode especificar o valor da propriedade FailureConditionLevel.  
   
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  O exemplo a seguir define a propriedade FailureConditionLevel como 0, indicando que nenhum failover ou reinicialização será disparado automaticamente em nenhuma condição de falha.  
   
-```  
+```sql
 ALTER SERVER CONFIGURATION SET FAILOVER CLUSTER PROPERTY FailureConditionLevel = 0;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)   
  [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)  
-  
-  

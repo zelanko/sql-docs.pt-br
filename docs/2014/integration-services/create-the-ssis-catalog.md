@@ -10,14 +10,14 @@ ms.assetid: 6ed56d36-18d9-40c2-b51f-f2a4c71d1e73
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c9592898521aee296677c195d860dcb6b5e205a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8db507966f9b3323e415ca7f2abfe4a12601c1c
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060095"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798023"
 ---
-# <a name="create-the-ssis-catalog"></a>Criar o catálogo do SSIS
+# <a name="create-the-ssis-catalog"></a>Criar o catálogo SSIS
   Depois de criar e testar pacotes no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], você pode implantar os projetos que contêm os pacotes em um servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para poder implantar os projetos no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], o servidor deve conter o catálogo do `SSISDB`. O programa de instalação do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] não cria o catálogo automaticamente; você precisará criar o catálogo manualmente por meio das instruções a seguir.  
   
  Você pode criar o catálogo do SSISDB no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Você também pode criar o catálogo programaticamente usando o Windows PowerShell.  
@@ -40,13 +40,13 @@ ms.locfileid: "66060095"
   
 6.  Digite uma senha e clique em **Ok**.  
   
-     A senha protege a chave mestra do banco de dados que é usada para criptografar os dados do catálogo. Salve a senha em um local seguro. É recomendado que você também faça backup da chave mestra do banco de dados. Para obter mais informações, consulte [Back Up a Database Master Key](../relational-databases/security/encryption/back-up-a-database-master-key.md).  
+     A senha protege a chave mestra do banco de dados que é usada para criptografar os dados do catálogo. Salve a senha em um local seguro. É recomendado que você também faça backup da chave mestra do banco de dados. Para saber mais, confira [Back Up a Database Master Key](../relational-databases/security/encryption/back-up-a-database-master-key.md)(Fazer backup de uma chave mestra de banco de dados).  
   
 ### <a name="to-create-the-ssisdb-catalog-programmatically"></a>Para criar o catálogo do SSISDB programaticamente  
   
 1.  Execute o seguinte script do PowerShell:  
   
-    ```  
+    ```powershell
     # Load the IntegrationServices Assembly  
     [Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Management.IntegrationServices")  
   
@@ -64,14 +64,11 @@ ms.locfileid: "66060095"
   
     # Provision a new SSIS Catalog  
     $catalog = New-Object $ISNamespace".Catalog" ($integrationServices, "SSISDB", "P@assword1")  
-    $catalog.Create()  
-  
+    $catalog.Create()
     ```  
   
      Para obter mais exemplos de como usar o Windows PowerShell e o namespace <xref:Microsoft.SqlServer.Management.IntegrationServices>, confira a entrada de blog [SSIS e o PowerShell no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539) em blogs.msdn.com. Para obter uma visão geral do namespace e dos exemplos de códigos, consulte a entrada do blog [Prévia do modelo do objeto gerenciado do catálogo do SSIS](https://go.microsoft.com/fwlink/?LinkId=254267)em blogs.msdn.com.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Catálogo do SSIS](catalog/ssis-catalog.md)   
  [Fazer backup, restaurar e mover o catálogo do SSIS](../../2014/integration-services/backup-restore-and-move-the-ssis-catalog.md)  
-  
-  

@@ -13,117 +13,117 @@ ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b945aa26f0cd9137763a3a8d84b0f74c7d2311bc
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: b4eea3e75ed57dcf69c8d8c5bcaedf3aef1fa9f5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "68889606"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797639"
 ---
-# <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Visão geral da arquitetura lógica (Analysis Services-dados multidimensionais)
-  Analysis Services opera em um modo de implantação de servidor que determina a arquitetura de memória e o ambiente de tempo de execução usados por diferentes tipos de modelos de Analysis Services. O modo de servidor é determinado durante a instalação. O **modo multidimensional e de mineração de dados** dá suporte a OLAP e Data Mining tradicionais. O **modo de tabela** dá suporte a modelos de tabela. O **modo integrado do SharePoint** refere-se a uma instância do Analysis Services que foi instalado como PowerPivot para SharePoint, usado para carregar e consultar modelos de dados do Excel ou PowerPivot dentro de uma pasta de trabalho.  
+# <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Visão geral da arquitetura lógica (Analysis Services – Dados Multidimensionais)
+  O Analysis Services funciona em um modo de implantação de servidor que determina a arquitetura de memória e o ambiente de tempo de execução usados pelos diferentes tipos de modelos do Analysis Services. O modo de servidor é determinado durante a instalação. O **modo multidimensional e de mineração de dados** dá suporte a OLAP e Data Mining tradicionais. O **modo de tabela** dá suporte a modelos de tabela. O **modo integrado do SharePoint** refere-se a uma instância do Analysis Services que foi instalado como PowerPivot para SharePoint, usado para carregar e consultar modelos de dados do Excel ou PowerPivot dentro de uma pasta de trabalho.  
   
- Este tópico explica a arquitetura básica do Analysis Services ao operar em modo multidimensional e de mineração de dados. Para obter mais informações sobre outros modos, consulte tabular [ &#40;SSAS&#41; tabular](../../tabular-models/tabular-models-ssas.md) e [comparando as soluções &#40;tabulares e multidimensionais SSAS&#41;](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas).  
+ Este tópico explica a arquitetura básica do Analysis Services no modo Multidimensional e de Mineração de Dados. Para obter mais informações sobre outros modos, consulte tabular [ &#40;SSAS&#41; tabular](../../tabular-models/tabular-models-ssas.md) e [comparando as soluções &#40;tabulares e multidimensionais SSAS&#41;](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas).  
   
 ## <a name="basic-architecture"></a>Arquitetura básica  
- Uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] pode conter vários bancos de dados e um banco de dados pode ter objetos OLAP e objetos Data Mining ao mesmo tempo. Os aplicativos se conectam a uma instância especificada do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e um banco de dados especificado. Um computador servidor pode hospedar várias instâncias do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. As instâncias de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] são nomeadas como "\<ServerName > \\ < InstanceName \>". A ilustração a seguir mostra todas as relações mencionadas entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos.  
+ Uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] pode conter vários bancos de dados, e um banco de dados pode ter objetos OLAP e objetos de mineração de dados simultaneamente. Os aplicativos se conectam a uma instância específica do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e a um banco de dados específico. Um computador servidor pode servir de host de várias instâncias do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. As instâncias de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] são nomeadas como "\<ServerName >\\< InstanceName\>". A ilustração a seguir mostra todas as relações mencionadas entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos.  
   
- ![Relações do AMO em execução de objetos](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/amo-runningobjects.gif "Relações do AMO em execução de objetos")  
+ ![Relações do AMO em execução de objetos](../../dev-guide/media/amo-runningobjects.gif "Relações do AMO em execução de objetos")  
   
- As classes básicas são o conjunto mínimo de objetos que são necessários para criar um cubo. Esse conjunto mínimo de objetos é uma dimensão, um grupo de medidas e uma partição. Uma agregação é opcional.  
+ As classes básicas são o conjunto mínimo de objetos exigidos para criar um cubo. Esse conjunto mínimo de objetos é uma dimensão, um grupo de medidas e uma partição. Uma agregação é opcional.  
   
- As dimensões são criadas a partir de atributos e hierarquias. As hierarquias são formadas por um conjunto ordenado de atributos, onde cada atributo do conjunto corresponde a um nível na hierarquia.  
+ As dimensões são criadas a partir de atributos e hierarquias. As hierarquias são formadas por um conjunto ordenado de atributos, sendo que cada atributo do conjunto corresponde a um nível na hierarquia.  
   
- Os cubos são criados a partir de dimensões e grupos de medidas. As dimensões na coleção Dimensions de um cubo pertencem à coleção Dimensions do banco de dados. Grupos de medidas são coleções de medidas que têm a mesma exibição da fonte de dados e têm o mesmo subconjunto de dimensões do cubo. Um grupo de medidas tem uma ou mais partições para gerenciar os dados físicos. Um grupo de medidas pode ter um design de agregação padrão. O design de agregação padrão pode ser usado por todas as partições no grupo de medidas; Além disso, cada partição pode ter seu próprio design de agregação.  
+ Os cubos são criados a partir de dimensões e grupos de medidas. As dimensões na coleta de dimensões de um cubo pertencem à coleta de dimensões do banco de dados. Os grupos de medidas são coletas de medidas que têm a mesma exibição de fonte de dados e têm o mesmo subconjunto de dimensões do cubo. Um grupo de medidas tem uma ou mais partições para gerenciar os dados físicos. Um grupo de medidas pode ter um projeto de agregação padrão. O projeto de agregação padrão pode ser usado por todas as partições no grupo de medidas, além disso, cada partição pode ser seu próprio projeto de agregação.  
   
- Objetos de servidor  
- Cada instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] é vista como um objeto de servidor diferente no AMO; cada instância diferente é conectada a um objeto <xref:Microsoft.AnalysisServices.Server> por uma conexão diferente. Cada objeto de servidor contém uma ou mais fontes de dados, exibições de fonte de dados e objetos de banco de dados, bem como assemblies e funções de segurança.  
+ Objetos do servidor  
+ Cada instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] é vista como um objeto de servidor diferente no AMO; cada instância diferente está conectada a um objeto <xref:Microsoft.AnalysisServices.Server> por uma conexão diferente. Cada objeto de servidor contém uma ou mais fonte de dados, exibições de fonte de dados e objetos de banco de dados, bem como assemblies e funções de segurança.  
   
  Objetos de dimensão  
- Cada objeto de banco de dados contém vários objetos de dimensão. Cada objeto de dimensão contém um ou mais atributos, que são organizados em hierarquias.  
+ Cada objeto de banco de dados contém vários objetos de dimensão. Cada objeto de dimensão contém um ou mais atributos que são organizados em hierarquias.  
   
- Objetos de cubo  
- Cada objeto de banco de dados contém um ou mais objetos de cubo. Um cubo é definido por suas medidas e dimensões. As medidas e dimensões em um cubo são derivadas das tabelas e exibições na exibição da fonte de dados na qual o cubo se baseia, ou que é gerado a partir das definições de medida e dimensão.  
+ Objetos de Cubo  
+ Cada objeto de banco de dados contém um ou mais objetos de cubo. Um cubo é definido por suas medidas e dimensões. As medidas e dimensões em um cubo são derivadas de tabelas e exibições na exibição de fonte de dados, na qual o cubo teve base ou para a qual foi gerado a partir das definições de medida e dimensão.  
   
-## <a name="object-inheritance"></a>Herança de objeto  
- O modelo de objeto ASSL contém muitos grupos de elementos repetidos. Por exemplo, o grupo de elementos, "`Dimensions` conter `Hierarchies`", define a hierarquia de dimensão de um elemento. Tanto `Cubes` quanto `MeasureGroups` contêm o grupo de elementos, "`Dimensions` contêm `Hierarchies`".  
+## <a name="object-inheritance"></a>Herança de objetos  
+ O modelo de objeto ASSL contém muitos grupos de elementos repetidos. Por exemplo, o grupo de elementos, "`Dimensions` conter `Hierarchies`", define a hierarquia de dimensão de um elemento. Ambos `Cubes` e `MeasureGroups` contêm o grupo de elementos, “`Dimensions` contêm `Hierarchies`."  
   
- A menos que seja substituído explicitamente, um elemento herda os detalhes desses grupos de elementos repetidos do nível superior. Por exemplo, o `Translations` para um `CubeDimension` é o mesmo que o `Translations` para seu elemento ancestral, `Cube`.  
+ A menos que explicitamente substituído, um elemento herda os detalhes desses grupos de elementos repetidos do nível mais alto. Por exemplo, o `Translations` para um `CubeDimension` é igual ao `Translations` de seu elemento ancestral, `Cube`.  
   
- Para substituir explicitamente as propriedades herdadas de um objeto de nível superior, um objeto não precisa repetir explicitamente a estrutura inteira e as propriedades do objeto de nível superior. As únicas propriedades que um objeto precisa declarar explicitamente são as propriedades que o objeto deseja substituir. Por exemplo, um `CubeDimension` pode listar somente os `Hierarchies` que precisam ser desabilitados no `Cube`, ou para os quais a visibilidade precisa ser alterada, ou para os quais alguns detalhes de `Level` não foram fornecidos no nível de `Dimension`.  
+ Para substituir explicitamente as propriedades herdadas de um objeto de nível mais alto, um objeto não precisa repetir toda a estrutura e propriedades do objeto de nível mais alto. As únicas propriedades que um objeto precisa declarar explicitamente são aquelas que ele deseja substituir. Por exemplo, um `CubeDimension` pode listar apenas aquelas `Hierarchies` que precisam ser desabilitadas no `Cube` ou para o qual a visibilidade precisa ser alterada ou para a qual alguns detalhes do `Level` precisam ser fornecidos no nível da `Dimension`.  
   
- Algumas propriedades especificadas em um objeto fornecem valores padrão para a mesma propriedade em um objeto filho ou descendente. Por exemplo, `Cube.StorageMode` fornece o valor padrão para `Partition.StorageMode`. Para valores padrão herdados, o ASSL aplica essas regras para valores padrão herdados:  
+ Algumas propriedades especificadas em um objeto fornecem valores padrão para a mesma propriedade em um objeto filho ou descendente. Por exemplo, `Cube.StorageMode` fornece o valor padrão para `Partition.StorageMode`. No caso dos valores padrão herdados, o ASSL aplica essas regras aos valores padrão herdados:  
   
--   Quando a propriedade do objeto filho é nula no XML, o valor da propriedade usa como padrão o valor herdado. No entanto, se você consultar o valor do servidor, o servidor retornará o valor nulo do elemento XML.  
+-   Quando a propriedade do objeto filho for nula no XML, o valor da propriedade usará o valor herdado como padrão. No entanto, se você consultar o valor a partir do servidor, este retornará o valor nulo do elemento XML.  
   
--   Não é possível determinar programaticamente se a propriedade de um objeto filho foi definida diretamente no objeto filho ou herdada.  
+-   Não é possível determinar programaticamente se a propriedade ou objeto filho foi definida corretamente no objeto filho ou herdado.  
   
 ## <a name="example"></a>Exemplo  
- O cubo Imports contém duas medidas, pacotes e por último, e três dimensões, rota, origem e hora relacionadas.  
+ O cubo Importações contém duas medidas, Pacotes e Último, e três dimensões relacionadas, Rota, Origem e Horário.  
   
- ![Exemplo de cubo 1](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro1.gif "Exemplo de cubo 1")  
+ ![Exemplo de cubo 1](../../dev-guide/media/cubeintro1.gif "Exemplo de cubo 1")  
   
- Os valores alfanuméricos menores em relação ao cubo são os membros das dimensões. Os membros de exemplo são terra (membro da dimensão de rota), África (membro da dimensão de origem) e 1º trimestre (membro da dimensão de tempo).  
+ Os valores alfanuméricos menores ao redor do cubo são os membros das dimensões. Exemplos de membros são: terra (membro da dimensão Rota), África (membro da dimensão Origem) e 1º trimestre (membro da dimensão Horário).  
   
-### <a name="measures"></a>Determina  
- Os valores nas células do cubo representam as duas medidas, os pacotes e o último. A medida pacotes representa o número de pacotes importados e a função `Sum` é usada para agregar os fatos. A última medida representa a data de recebimento e a função `Max` é usada para agregar os fatos.  
+### <a name="measures"></a>medidas  
+ Os valores nas células do cubo representam as duas medidas, Pacotes e Último. A medida Pacotes representa o número de pacotes importados e a função `Sum` é usada para agregar os fatos. A medida Último representa a data de recebimento e a função `Max` é usada para agregar os fatos.  
   
-### <a name="dimensions"></a>As  
- A dimensão de rota representa o meio pelo qual as importações atingem seu destino. Os membros dessa dimensão incluem terra, não terrestre, ar, mar, estrada ou trilho. A dimensão de origem representa os locais em que as importações são produzidas, como a África ou a Ásia. A dimensão de tempo representa os trimestres e as metades de um único ano.  
+### <a name="dimensions"></a>Dimensions  
+ A dimensão Rota representa os meios pelos quais as importações alcançam seu destino. Os membros dessa dimensão incluem terra, não-terra, aérea, marítima, rodoviária ou ferroviária. A dimensão Origem representa os locais onde as importações são produzidas, como África ou Ásia. A dimensão Horário representa os trimestres e semestres de um mesmo ano.  
   
 ### <a name="aggregates"></a>Agregações  
- Os usuários empresariais de um cubo podem determinar o valor de qualquer medida para cada membro de cada dimensão, independentemente do nível do membro dentro da dimensão, porque [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] agrega valores em níveis superiores, conforme necessário. Por exemplo, os valores de medida na ilustração anterior podem ser agregados de acordo com uma hierarquia de calendário padrão usando a hierarquia de tempo de calendário na dimensão de tempo, conforme ilustrado no diagrama a seguir.  
+ Os usuários empresariais de um cubo podem determinar o valor de qualquer medida de cada membro de qualquer dimensão, independentemente do nível do membro na dimensão, pois o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] agrega valores em níveis superiores, conforme necessário. Por exemplo, os valores de medida na ilustração anterior podem ser agregados de acordo com uma hierarquia de calendário padrão usando a hierarquia de tempo de calendário na dimensão de tempo, conforme ilustrado no diagrama a seguir.  
   
- ![Diagrama de medidas organizadas ao longo da dimensão de tempo](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro2.gif "Diagrama de medidas organizadas ao longo da dimensão de tempo")  
+ ![Diagrama de medidas organizadas ao longo da dimensão de tempo](../../dev-guide/media/cubeintro2.gif "Diagrama de medidas organizadas ao longo da dimensão de tempo")  
   
- Além de agregar medidas usando uma única dimensão, você pode agregar medidas usando combinações de membros de dimensões diferentes. Isso permite que os usuários empresariais avaliem medidas em várias dimensões simultaneamente. Por exemplo, se um usuário empresarial quiser analisar importações trimestrais que chegaram pelo ar da hemisfério oriental e da hemisfério ocidental, o usuário comercial poderá emitir uma consulta no cubo para recuperar o conjunto de os seguintes.  
+ Além de agregar medidas usando uma única dimensão, você pode agregar medidas usando combinações de membros de diferentes dimensões. Isso permite que os usuários empresariais avaliem, simultaneamente, as medidas em várias dimensões. Por exemplo, se um usuário empresarial quiser analisar trimestralmente as importações que são recebidas por via aérea dos hemisférios ocidental e oriental, ele poderá emitir uma consulta ao cubo para recuperar o conjunto de dados a seguir.  
   
-||||Packages|||última|||  
+||||Packages|||Last|||  
 |-|-|-|--------------|-|-|----------|-|-|  
-||||Todas as fontes|Hemisfério oriental|Hemisfério Ocidental|Todas as fontes|Hemisfério oriental|Hemisfério Ocidental|  
-|Todo o tempo|||25110|6547|18563|Dec-29-99|Dec-22-99|Dec-29-99|  
-||1º semestre||11173|2977|8196|Jun-28-99|Jun-20-99|Jun-28-99|  
-|||1º trimestre|5108|1452|3656|Março de 30-99|Março de 19-99|Março de 30-99|  
-|||2º trimestre|6065|1525|4540|Jun-28-99|Jun-20-99|Jun-28-99|  
-||2ª metade||13937|3570|10367|Dec-29-99|Dec-22-99|Dec-29-99|  
-|||terceiro trimestre|6119|1444|4675|Setembro de 30-99|Setembro de 18-99|Setembro de 30-99|  
-|||4º trimestre|7818|2126|5692|Dec-29-99|Dec-22-99|Dec-29-99|  
+||||Todas as origens|Hemisfério oriental|Hemisfério ocidental|Todas as origens|Hemisfério oriental|Hemisfério ocidental|  
+|Todo o tempo|||25110|6547|18563|29-dez-99|22-dez-99|29-dez-99|  
+||1º semestre||11173|2977|8196|28-jun-99|20-jun-99|28-jun-99|  
+|||1º trimestre|5108|1452|3656|30-mar-99|19-mar-99|30-mar-99|  
+|||2º trimestre|6065|1525|4540|28-jun-99|20-jun-99|28-jun-99|  
+||2º semestre||13937|3570|10367|29-dez-99|22-dez-99|29-dez-99|  
+|||3º trimestre|6119|1444|4675|30-set-99|18-set-99|30-set-99|  
+|||4º trimestre|7818|2126|5692|29-dez-99|22-dez-99|29-dez-99|  
   
- Depois que um cubo é definido, você pode criar novas agregações ou pode alterar as agregações existentes para definir opções como, por exemplo, se as agregações são pré-calculados durante o processamento ou calculadas no momento da consulta. **Tópico relacionado:** [agregações e designs de agregação](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+ Depois que um cubo for definido, você pode criar novas agregações ou alterar as agregações existentes para definir opções como, se as agregações serão pré-calculadas durante o processamento ou calculadas durante a consulta. **Tópico relacionado:** [agregações e designs de agregação](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>Mapeando medidas, atributos e hierarquias  
- As medidas, os atributos e as hierarquias no cubo de exemplo são derivados das colunas a seguir nas tabelas de fatos e de dimensão do cubo.  
+ As medidas, atributos e hierarquias no cubo de exemplo são derivados das seguintes colunas nas tabelas de fatos e dimensões do cubo.  
   
 |Medida ou atributo (nível)|Membros|Tabela de origem|Coluna de origem|Valor da coluna de exemplo|  
 |------------------------------------|-------------|------------------|-------------------|-------------------------|  
 |Medida de pacotes|Não aplicável|ImportsFactTable|Packages|12|  
-|Última medida|Não aplicável|ImportsFactTable|última|Maio de 03-99|  
-|Nível de categoria de rota na dimensão de rota|aterramento, terra|RouteDimensionTable|Route_Category|Não terrestre|  
-|Atributo de rota na dimensão de rota|ar, mar, estrada, trilho|RouteDimensionTable|Rota|Sea|  
-|Atributo hemisfério na dimensão de origem|Hemisfério oriental, hemisfério ocidental|SourceDimensionTable|Hemisfério|Hemisfério oriental|  
-|Atributo continente na dimensão de origem|África, Ásia, AustraliaEurope, N. América, S. Estados|SourceDimensionTable|Continente|Européia|  
-|Meio atributo na dimensão de tempo|1º semestre, 2º semestre|Timedimensiontable|Centímetro|2ª metade|  
-|Atributo Quarter na dimensão de tempo|1º trimestre, 2º trimestre, 3º trimestre, 4º trimestre|Timedimensiontable|Distribuição|terceiro trimestre|  
+|Última medida|Não aplicável|ImportsFactTable|Last|03-mai-99|  
+|Nível Categoria da Rota na dimensão Rota|não-terra, terra|RouteDimensionTable|Route_Category|Não-terra|  
+|Atributo Rota na dimensão Rota|aérea,marítima,rodoviária,ferroviária|RouteDimensionTable|Rota|Marítima|  
+|Atributo Hemisfério na dimensão Origem|Hemisfério oriental,Hemisfério ocidental|SourceDimensionTable|Hemisphere|Hemisfério oriental|  
+|Atributo Continente na dimensão Origem|África,Ásia,Austrália,Europa,América do Norte, América do Sul|SourceDimensionTable|Continente|Europe|  
+|Atributo Semestre na dimensão Horário|1º semestre,2º semestre|TimeDimensionTable|Half|2º semestre|  
+|Atributo Trimestre na dimensão Horário|1º trimestre,2º trimestre,3º trimestre,4º trimestre|TimeDimensionTable|Quarter|3º trimestre|  
   
- Os dados em uma única célula de cubo geralmente são derivados de várias linhas na tabela de fatos. Por exemplo, a célula de cubo na interseção do membro aéreo, o membro da África e o membro 1º trimestre contêm um valor que é derivado pela agregação das linhas a seguir na tabela de fatos **ImportsFactTable** .  
+ Dados em uma única célula de cubo são normalmente derivados de várias linhas de uma tabela de fatos. Por exemplo, a célula de cubo na interseção do membro aéreo, o membro da África e o membro 1º trimestre contêm um valor que é derivado pela agregação das linhas a seguir na tabela de fatos **ImportsFactTable** .  
   
 |||||||  
 |-|-|-|-|-|-|  
-|Import_ReceiptKey|RouteKey|SourceKey|TimeKey|Packages|última|  
-|3516987|uma|6|uma|15|10-99 de janeiro|  
-|3554790|uma|6|uma|40|19-99 de janeiro|  
-|3572673|uma|6|uma|34|27-99 de janeiro|  
-|3600974|uma|6|uma|45|Fev-02-99|  
-|3645541|uma|6|uma|20|Fev-09-99|  
-|3674906|uma|6|uma|36|Fev-17-99|  
+|Import_ReceiptKey|RouteKey|SourceKey|TimeKey|Packages|Last|  
+|3516987|1|6|1|15|10-jan-99|  
+|3554790|1|6|1|40|19-jan-99|  
+|3572673|1|6|1|34|27-jan-99|  
+|3600974|1|6|1|45|02-fev-99|  
+|3645541|1|6|1|20|09-fev-99|  
+|3674906|1|6|1|36|17-fev-99|  
   
  Na tabela anterior, cada linha tem os mesmos valores para as colunas **RouteKey**, **SourceKey**e **TimeKey** , indicando que essas linhas contribuem para a mesma célula do cubo.  
   
- O exemplo mostrado aqui representa um cubo muito simples, no qual o cubo tem um único grupo de medidas, e todas as tabelas de dimensões são unidas à tabela de fatos em um esquema em estrela. Outro esquema comum é um esquema floco de neve, no qual uma ou mais tabelas de dimensão se unem a outra tabela de dimensão, em vez de ingressar diretamente na tabela de fatos. **Tópico relacionado:** [dimensões &#40;Analysis Services-dados&#41;multidimensionais](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
+ O exemplo mostrado aqui representa um cubo muito simples, que tem um único grupo de medidas e no qual todas as tabelas de dimensões são unidas à tabela de fatos em um esquema em estrela. Outro esquema comum é um esquema floco de neve no qual uma ou mais tabelas de dimensão unem-se a outra tabela de dimensão, em vez de unirem-se diretamente à tabela de fatos. **Tópico relacionado:** [dimensões &#40;Analysis Services-dados&#41;multidimensionais](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   
- O exemplo mostrado aqui contém apenas uma única tabela de fatos. Quando um cubo tem várias tabelas de fatos, as medidas de cada tabela de fatos são organizadas em grupos de medidas e um grupo de medidas está relacionado a um conjunto específico de dimensões por relações de dimensão definidas. Essas relações são definidas especificando as tabelas participantes na exibição da fonte de dados e a granularidade da relação. **Tópico relacionado:** [relações de dimensão](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
+ O exemplo mostrado aqui contém uma única tabela de fatos. Quando um cubo tem várias tabelas de fatos, as medidas de cada tabela de fatos são organizadas em grupos de medidas e um grupo de medidas está relacionado à um conjunto específico de dimensões por relações de dimensões definidas. Essas relações são definidas pela especificação das tabelas participantes na exibição de fonte de dados e granularidade da relação. **Tópico relacionado:** [relações de dimensão](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Bancos de dados de modelo multidimensional &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  
   
   

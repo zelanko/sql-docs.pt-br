@@ -15,12 +15,12 @@ ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4be66faa119b4e89c05ffae149bc7a518323055c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c64c70965d00967e0cac254cf4d26f6ce25ec5f
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226152"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796786"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Concedendo, revogando e negando permissões
   O objeto <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> é usado para atribuir um conjunto de permissões ou uma permissão de servidor individual ao objeto <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet>. Para permissões em nível de servidor, o usuário autorizado se refere a um logon. Logons autenticados pelo Windows são listados como nomes de usuários do Windows. Quando essa amostra de código é executada, ela revoga a permissão do usuário autorizado e verifica se ela foi removida com o método <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A>.  
@@ -28,12 +28,12 @@ ms.locfileid: "63226152"
  Permissões do banco de dados e permissões do objeto de banco de dados podem ser atribuídas similarmente usando os objetos <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> e <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet>.  
   
 ## <a name="example"></a>Exemplo  
- Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto do Visual Basic SMO no Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [criar um Visual C&#35; projeto de SMO no Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto Visual Basic Smo no Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [criar um projeto&#35; do Visual C Smo no Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>Concedendo permissões de servidor no Visual Basic  
  Este exemplo de código concede as permissões Criar Ponto de Extremidade e Alterar Qualquer Ponto de Extremidade ao logon especificado e, em seguida, enumera e exibe as permissões. Uma das permissões é revogada e, depois, as permissões são enumeradas novamente. Esse exemplo supõe que o logon especificado já tem as permissões especificadas.  
   
-```  
+```vb
 ' compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 ' /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 Imports Microsoft.SqlServer.Management.Smo  
@@ -112,7 +112,7 @@ End Class
 ## <a name="granting-server-permissions-in-visual-c"></a>Concedendo permissões de servidor no Visual C#  
  Este exemplo de código concede as permissões Criar Ponto de Extremidade e Alterar Qualquer Ponto de Extremidade ao logon especificado e, em seguida, enumera e exibe as permissões. Uma das permissões é revogada e, depois, as permissões são enumeradas novamente. Esse exemplo supõe que o logon especificado já tem as permissões especificadas.  
   
-```  
+```csharp
 // compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 // /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 using System;  
@@ -192,7 +192,7 @@ public class A {
 ## <a name="granting-server-permissions-in-powershell"></a>Concedendo permissões de servidor no PowerShell  
  Este exemplo de código concede as permissões Criar Ponto de Extremidade e Alterar Qualquer Ponto de Extremidade ao logon especificado e, em seguida, enumera e exibe as permissões. Uma das permissões é revogada e, depois, as permissões são enumeradas novamente. Esse exemplo supõe que o logon especificado já tem as permissões especificadas.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\  
 $srv = get-item default  
@@ -251,7 +251,5 @@ foreach ( $spi in $spis)
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Hierarquia de permissões &#40;Mecanismo de Banco de Dados&#41;](../../security/permissions-hierarchy-database-engine.md)  
-  
-  

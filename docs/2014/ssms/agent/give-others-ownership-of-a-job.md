@@ -14,17 +14,17 @@ ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f22d153d55674d5dd615ab50848e4a7fd85a6dcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20bd8904f8dfabd81f3f16ef7bed4c6bf1084c0d
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63075241"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798232"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
   Este tópico descreve como reatribuir a propriedade de trabalhos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a outro usuário.  
   
--   **Antes de começar:**  [Limitações e Restrições](#Restrictions), [Segurança](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
 -   **Para conceder a propriedade de um trabalho a outros usando:**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63075241"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a> Limitações e Restrições  
  Para criar um trabalho, o usuário deve ser membro de uma das funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou da função de servidor fixa **sysadmin** . Um trabalho só pode ser editado por seu proprietário ou por membros da função **sysadmin** . Para obter mais informações sobre as funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte [Funções de banco de dados fixas do SQL Server Agent](sql-server-agent-fixed-database-roles.md).  
   
  Você precisa ser um administrador do sistema para alterar o proprietário de um trabalho.  
@@ -63,16 +63,16 @@ ms.locfileid: "63075241"
   
      Atribuir um trabalho a outro logon não garante que o novo proprietário tenha permissões adequadas para executar o trabalho com êxito.  
   
-##  <a name="TsqlProc2"></a> Usando o Transact-SQL  
+##  <a name="TsqlProc2"></a> Usando Transact-SQL  
  **Para conceder a propriedade de um trabalho a outros**  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do Mecanismo de Banco de Dados e expanda-a.  
   
 2.  Na barra de ferramentas, clique em **Nova Consulta**.  
   
-3.  Na janela de consulta, insira as seguintes instruções que usam o [sp_manage_jobs_by_login &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) procedimento armazenado do sistema. O exemplo a seguir reatribui todos os trabalhos de `danw` para `fran??oisa`.  
+3.  Na janela de consulta, insira as instruções a seguir que usam o procedimento armazenado do sistema [Transact-SQL &#40;&#41; sp_manage_jobs_by_login](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) . O exemplo a seguir reatribui todos os trabalhos de `danw` para `fran??oisa`.  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
   
@@ -83,13 +83,12 @@ ms.locfileid: "63075241"
     GO  
     ```  
   
-##  <a name="SMOProc2"></a> Usando o SQL Server Management Objects  
- **Para conceder a propriedade de um trabalho a outros**  
+##  <a name="SMOProc2"></a>Usando SQL Server Management Objects  
+
+### <a name="to-give-others-ownership-of-a-job"></a>Para conceder a propriedade de um trabalho a outros
   
 1.  Chame a classe `Job` usando uma linguagem de programação que você escolher, como Visual Basic, Visual C# ou PowerShell. Para obter um código de exemplo, consulte [Agendamento de tarefas administrativas automáticas no SQL Server Agent](sql-server-agent.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implementar trabalhos](implement-jobs.md)   
  [Criar trabalhos](create-jobs.md)  
-  
-  

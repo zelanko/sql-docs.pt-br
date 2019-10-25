@@ -20,12 +20,12 @@ ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c027b6648da799be5a2b9381a0f19dc437563242
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db76db817561095b7b09b1a86e7c2ca10ec9174a
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806363"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798092"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Criar um ponto de controle do Utilitário do SQL Server (Utilitário do SQL Server)
   Uma empresa pode ter vários Utilitários do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e cada Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode gerenciar várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aplicativos da camada de dados. Cada Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem apenas um UCP (ponto de controle do utilitário). Você deve criar um novo UCP para cada Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e cada aplicativo da camada de dados é membro somente de um Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e é gerenciada por um único UCP.  
@@ -65,7 +65,7 @@ ms.locfileid: "62806363"
   
 -   Não há suporte para dados FILESTREAM para monitoramento do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Para obter mais informações, consulte [especificações de capacidade máxima para o SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) e [recursos compatíveis com as edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Para obter mais informações, consulte [especificações de capacidade máxima para SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) e [recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ### <a name="remove-previous-utility-control-points-before-installing-a-new-one"></a>Remover pontos de controle do utilitário anteriores antes de instalar um novo  
  Se estiver instalando um ponto de controle do utilitário (UCP) em uma instância do SQL Server que nunca foi configurada como um UCP, antes você deverá remover todas as instâncias gerenciadas do SQL Server e remover o UCP. Faça isso executando o procedimento armazenado **sp_sysutility_ucp_remove** .  
@@ -76,13 +76,13 @@ ms.locfileid: "62806363"
   
 -   Esse procedimento deve ser executado por um usuário com permissões de sysadmin, as mesmas permissões necessárias para criar um UCP.  
   
--   Todas as instâncias gerenciadas do SQL Server devem ser removidas do UCP. Observe que o UCP é uma instância gerenciada do SQL Server. Para obter mais informações, confira [Como Remover uma instância do SQL Server do utilitário do SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
+-   Todas as instâncias gerenciadas do SQL Server devem ser removidas do UCP. Observe que o UCP é uma instância gerenciada do SQL Server. Para obter mais informações, consulte [Como remover uma instância do SQL Server do Utilitário do SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
   
  Use este procedimento para remover um SQL Server UCP do Utilitário do SQL Server. Após a conclusão da operação, um UCP pode ser novamente criado na instância do SQL Server.  
   
  Use o SQL Server Management Studio para conectar-se ao UCP e, em seguida, execute este script:  
   
-```  
+```sql
 EXEC msdb.dbo.sp_sysutility_ucp_remove;  
 ```  
   
@@ -101,7 +101,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ## <a name="wizard-steps"></a>Etapas do Assistente  
  ![](../../database-engine/media/create-ucp.gif "Create_UCP")  
   
- As seções a seguir fornecem informações sobre cada página no fluxo de trabalho do assistente para criar um novo UCP do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para iniciar o assistente para criar um novo UCP, abra o painel Gerenciador do Utilitário no menu Exibir do SSMS e, em seguida, clique no botão ![](../../database-engine/media/create-ucp.gif "Create_UCP") **Criar UCP** na parte superior do painel Gerenciador do Utilitário.  
+ As seções a seguir fornecem informações sobre cada página no fluxo de trabalho do assistente para criar um novo UCP do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para iniciar o assistente para criar um novo UCP, abra o painel Gerenciador do utilitário no menu Exibir no SSMS e, em seguida, ![](../../database-engine/media/create-ucp.gif "Create_UCP") clique no botão **criar UCP** na parte superior do painel Gerenciador do utilitário.  
   
  Clique em um link na lista abaixo para navegar para os detalhes de uma página do assistente:  
   
@@ -124,14 +124,14 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Welcome"></a> Introdução ao Assistente para Criar UCP  
  Se você abrir o Gerenciador do Utilitário e não houver nenhum ponto de controle de utilitário conectado, deverá se conectar a um ou criar um novo.  
   
- **Conectar ao UCP existente** – se já houver um ponto de controle do utilitário na implantação, você poderá se conectar a ele clicando no botão  ![](../../database-engine/media/connect-to-utility.gif "Connect_to_Utility")**Conectar ao Utilitário** do na parte superior do painel Gerenciador do Utilitário. Para se conectar a um UCP existente, você deve ter credenciais de administrador ou ser membro da função Leitor do Utilitário. Observe que pode haver somente um UCP por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility e você pode ser conectado a um UCP somente de uma instância de SSMS.  
+ **Conectar-se ao UCP existente** – se já houver um ponto de controle do utilitário em sua implantação, você poderá se conectar a ![ ](../../database-engine/media/connect-to-utility.gif "Connect_to_Utility")ele clicando no botão **conectar ao utilitário** na parte superior do painel Gerenciador do utilitário. Para se conectar a um UCP existente, você deve ter credenciais de administrador ou ser membro da função Leitor do Utilitário. Observe que pode haver somente um UCP por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility e você pode ser conectado a um UCP somente de uma instância de SSMS.  
   
- **Criar um novo UCP** – Para criar um novo ponto de controle do utilitário, clique no botão ![](../../database-engine/media/create-ucp.gif "Create_UCP")**Criar UCP** na parte superior do painel Gerenciador do Utilitário. Para criar um novo UCP, especifique o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e forneça credenciais de administrador na caixa de diálogo de conexão. Observe que pode haver somente um UCP por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
+ **Criar um novo UCP** – para criar um novo ponto de controle do utilitário, ![ ](../../database-engine/media/create-ucp.gif "Create_UCP")clique no botão **criar UCP** na parte superior do painel Gerenciador do utilitário. Para criar um novo UCP, especifique o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e forneça credenciais de administrador na caixa de diálogo de conexão. Observe que pode haver somente um UCP por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
   
 ##  <a name="Instance_name"></a> Especificar Instância  
  Especifique as seguintes informações sobre o UCP que você está criando:  
   
--   **Nome da Instância** – para selecionar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na caixa de diálogo de conexão, clique em **Conectar...** . Forneça o nome do computador e o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no formato ComputerName\InstanceName.  
+-   **Nome da instância** – para selecionar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na caixa de diálogo de conexão, clique em **conectar...** . Forneça o nome do computador e o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no formato ComputerName\InstanceName.  
   
 -   **Nome do Utilitário** – Especifique um nome que será usado para identificar o Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na rede.  
   
@@ -219,14 +219,12 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="PowerShell_create_UCP"></a> Criar um novo ponto de controle de utilitário usando o PowerShell  
  Use o seguinte exemplo para criar um novo ponto de controle de utilitário:  
   
-```  
-> $UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
-> $SqlStoreConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
-> $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
+```powershell
+$UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
+$SqlStoreConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
+$Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Recursos e tarefas do Utilitário do SQL Server](sql-server-utility-features-and-tasks.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Recursos e tarefas do utilitário do SQL Server](sql-server-utility-features-and-tasks.md)   
  [Solucionar problemas do Utilitário do SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)  
-  
-  

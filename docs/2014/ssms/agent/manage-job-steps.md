@@ -24,12 +24,12 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 395b2ea5647560b141d93ef2ba4e1a26b81b042a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893129"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798224"
 ---
 # <a name="manage-job-steps"></a>Gerenciar etapas de trabalho
   Uma etapa de trabalho é uma ação que o trabalho realiza em um banco de dados ou servidor. Todo trabalho deve ter, pelo menos, uma etapa de trabalho. As etapas de trabalho podem ser:  
@@ -75,7 +75,7 @@ ms.locfileid: "68893129"
   
 -   O código de saída do processo retornado, se o comando teve êxito.  
   
--   O comando a ser executado. Para executar um comando de sistema operacional, trata-se do próprio comando. Para um programa externo, esse é o nome do programa e os argumentos para o programa, por exemplo: **C:\Arquivos de Programas\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
+-   O comando a ser executado. Para executar um comando de sistema operacional, trata-se do próprio comando. No caso de um programa externo, é o nome do programa e os argumentos para o programa; por exemplo: **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
   
     > [!NOTE]  
     >  É necessário fornecer o caminho completo para o executável, caso este não esteja localizado em um diretório especificado no caminho de sistema ou no caminho para o usuário em cujo nome a etapa de trabalho é executada.  
@@ -101,7 +101,7 @@ ms.locfileid: "68893129"
   
 -   Um arquivo de script PowerShell existente a ser aberto.  
   
- O subsistema PowerShell do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent abre uma sessão do PowerShell e carrega os snap-ins de PowerShell do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O script PowerShell usado como o comando de etapa de trabalho pode fazer referência ao provedor de PowerShell do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e cmdlets. Para obter mais informações sobre como escrever scripts PowerShell usando os snap-ins de PowerShell do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
+ O subsistema PowerShell do agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abre uma sessão do PowerShell e carrega os snap-ins do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. O script do PowerShell usado como o comando de etapa de trabalho pode fazer referência ao provedor e cmdlets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Para obter mais informações sobre como escrever scripts PowerShell usando os snap-ins de PowerShell do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
   
 ## <a name="activex-scripting-job-steps"></a>Etapas de trabalho de scripts ActiveX  
   
@@ -128,8 +128,7 @@ oServer.LoginSecure = True
 oServer.Connect "(local)"  
 'Disconnect and destroy the server object  
 oServer.DisConnect  
-Set oServer = nothing  
-  
+Set oServer = nothing
 ```  
   
 ## <a name="replication-job-steps"></a>Etapas de trabalho de replicação  
@@ -195,24 +194,22 @@ Set oServer = nothing
   
  Para obter mais informações sobre como criar etapas de trabalho que executam pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consulte [Trabalhos do SQL Server Agent para pacotes](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Descrição**|**Tópico**|  
+|**Description**|**Tópico**|  
 |Descreve como criar uma etapa de trabalho com um programa executável.|[Criar uma etapa de trabalho CmdExec](create-a-cmdexec-job-step.md)|  
 |Descreve como redefinir permissões no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Configurar um usuário para criar e gerenciar trabalhos do SQL Server Agent](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Descreve como criar uma etapa de trabalho do [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
-|Descreve como definir opções para etapas de trabalho Transact-SQL no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
+|Descreve como definir opções para etapas de trabalho Transact-SQL no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Definir opções de etapa de trabalho Transact-SQL](define-transact-sql-job-step-options.md)|  
 |Descreve como criar e executar uma etapa de trabalho do script ActiveX.|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
-|Descreve como criar e definir etapas de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que executem comandos e consultas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Create an Analysis Services Job Step](create-an-analysis-services-job-step.md)|  
+|Descreve como criar e definir etapas de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que executem comandos e consultas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Criar uma etapa de trabalho do Analysis Services](create-an-analysis-services-job-step.md)|  
 |Descreve qual ação o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve realizar se uma falha ocorrer durante a execução do trabalho.|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
-|Descreve como exibir detalhes de etapa de trabalho na caixa de diálogo Propriedades da Etapa de Trabalho.|[Exibir informações de etapas de trabalho](view-job-step-information.md)|  
-|Descreve como excluir um log de etapa de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Delete a Job Step Log](delete-a-job-step-log.md)|  
+|Descreve como exibir detalhes de etapa de trabalho na caixa de diálogo Propriedades da Etapa de Trabalho.|[Exibir informações de etapa de trabalho](view-job-step-information.md)|  
+|Descreve como excluir um log de etapa de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Excluir um log de etapa de trabalho](delete-a-job-step-log.md)|  
   
-## <a name="see-also"></a>Consulte também  
- [Transact-SQL &#40;de dbo. sysjobstepslogs&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+## <a name="see-also"></a>Consulte Também  
+  [de Transact &#40;-SQL&#41; de dbo. sysjobstepslogs](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)  
  [Criar trabalhos](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
-  
-  

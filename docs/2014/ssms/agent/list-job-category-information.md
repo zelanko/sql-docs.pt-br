@@ -10,22 +10,22 @@ ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac903ecb951e98e29dcd6521f8c9623f8cc62768
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dae8f1d98fb1758e9a9802883def1574bda68a78
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68189145"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798209"
 ---
 # <a name="list-job-category-information"></a>Listar informações de categoria de trabalho
-  Como listar informações de categoria de trabalho no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)] ou SQL Server Management Objects.  
+  Como listar informações de categoria de trabalho em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)] ou SQL Server Management Objects.  
 
   
 ##  <a name="Security"></a> Segurança  
  Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](implement-sql-server-agent-security.md).  
 
   
-##  <a name="TSQL"></a> Usando o Transact-SQL  
+##  <a name="TSQL"></a> Usando Transact-SQL  
   
 #### <a name="to-list-job-category-information"></a>Para listar informações de categoria de trabalho  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68189145"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
-    ```  
+    ```sql
     -- returns information about jobs that are administered locally  
     USE msdb ;  
     GO  
@@ -45,13 +45,10 @@ ms.locfileid: "68189145"
     GO  
     ```  
   
- Para obter mais informações, consulte [sp_help_category &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql).  
+ Para obter mais informações, [consulte &#40;Transact-SQL&#41;sp_help_category](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql).  
   
   
-##  <a name="SMO"></a> Usando o SQL Server Management Objects  
+##  <a name="SMO"></a>Usando SQL Server Management Objects  
  **Para listar informações de categoria de trabalho**  
   
- Use a classe `JobCategory` usando uma linguagem de programação que você possa escolher, como Visual Basic, Visual C# ou PowerShell. Para obter mais informações, consulte [SQL Server Management Objects &#40;SMO&#41; guia de programação](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  
-  
-  
-  
+ Use a classe `JobCategory` usando uma linguagem de programação que você possa escolher, como Visual Basic, Visual C# ou PowerShell. Para obter mais informações, [consulte &#40;SQL Server Management Objects&#41; o guia de programação do Smo](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  

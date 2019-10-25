@@ -18,18 +18,18 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2fd8058518d59e5eb3fcf8a8514425c69339dfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 927d0fd7b108718daffe86a6534ca40492429d34
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62792076"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797646"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Preparar um banco de dados secundário manualmente para um grupo de disponibilidade (SQL Server)
-  Este tópico descreve como preparar um banco de dados secundário para um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell. Preparar um banco de dados secundário exige duas etapas: (1) restaurar um backup recente do banco de dados do banco de dados primário e backups de log subsequentes em cada instância de servidor que hospeda a réplica secundária, usando RESTORE WITH NORECOVERY e (2) unir o banco de dados restaurado para o grupo de disponibilidade.  
+  Este tópico descreve como preparar um banco de dados secundário para um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell. A preparação de um banco de dados secundário exige duas etapas: (1) restaurar um backup recente do banco de dados primário e os backups de log subsequentes em cada instância do servidor que hospede a réplica secundária, usando RESTORE WITH NORECOVERY e (2) unir o banco de dados restaurado ao grupo de disponibilidade.  
   
 > [!TIP]  
->  Se você tiver uma configuração de envio de logs existente, poderá ser capaz de converter o banco de dados primários de envio de logs junto com um ou mais de seus bancos de dados secundários em um banco de dados primário AlwaysOn e um ou mais bancos de dados secundários AlwaysOn. Para obter mais informações, consulte [pré-requisitos para migrar de envio de logs para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
+>  Se você tiver uma configuração de envio de logs existente, poderá ser capaz de converter o banco de dados primários de envio de logs junto com um ou mais de seus bancos de dados secundários em um banco de dados primário AlwaysOn e um ou mais bancos de dados secundários AlwaysOn. Para obter mais informações, consulte [pré-requisitos para migrar do envio &#40;de&#41;logs para grupos de disponibilidade AlwaysOn SQL Server](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
   
 -   **Antes de começar:**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62792076"
   
 -   [Tarefas relacionadas a backup e restauração](#RelatedTasks)  
   
--   **Acompanhamento:** [Depois de preparar um banco de dados secundário](#FollowUp)  
+-   **Acompanhamento** [depois de preparar um banco de dados secundário](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62792076"
   
 3.  Na instância do servidor que hospeda a réplica secundária, restaure o backup completo do banco de dados primário (e opcionalmente um backup diferencial) seguido por quaisquer backups de log subsequentes.  
   
-     Na página **Opções de RESTORE DATABASE**, selecione **Deixar o banco de dados não operacional e não reverter as transações não confirmadas. Os logs de transações adicionais podem ser restaurados. (RESTAURAR COM NORECOVERY)** .  
+     Na página **Opções de RESTORE DATABASE** , selecione **Deixar o banco de dados não operacional e não reverter as transações não confirmadas. Os logs de transações adicionais podem ser restaurados. (RESTAURAR COM NORECOVERY)** .  
   
      Se os caminhos de arquivo dos bancos de dados primário e secundário forem diferentes, por exemplo, se o banco de dados primário estiver na unidade 'F:', mas a instância do servidor que hospeda a réplica secundária não tiver uma unidade F:, inclua a opção MOVE na cláusula WITH.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "62792076"
   
  **Para restaurar backups**  
   
--   [Restaurar um Backup de banco de dados &#40;SQL Server Management Studio&#41;](../../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [Restaurar um backup &#40;de banco de dados SQL Server Management Studio&#41;](../../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
 -   [Restaurar um backup de banco de dados diferencial &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)  
   
@@ -124,7 +124,7 @@ ms.locfileid: "62792076"
   
 -   [Restaurar um banco de dados em um novo local &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  **Para preparar um banco de dados secundário**  
   
 > [!NOTE]  
@@ -151,7 +151,7 @@ ms.locfileid: "62792076"
   
 1.  Para usar o banco de dados [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] , modifique-o para usar o modelo de recuperação completa:  
   
-    ```  
+    ```sql
     USE master;  
     GO  
     ALTER DATABASE MyDB1   
@@ -166,7 +166,7 @@ ms.locfileid: "62792076"
   
      Na instância do servidor que hospeda a réplica primária (`INSTANCE01`), crie um backup completo do banco de dados primário da seguinte maneira:  
   
-    ```  
+    ```sql
     BACKUP DATABASE MyDB1   
         TO DISK = 'C:\MyDB1.bak'   
         WITH FORMAT  
@@ -181,7 +181,7 @@ ms.locfileid: "62792076"
   
          No computador que hospeda a réplica secundária, restaure o backup completo da seguinte maneira:  
   
-        ```  
+        ```sql
         RESTORE DATABASE MyDB1   
             FROM DISK = 'C:\MyDB1.bak'   
             WITH NORECOVERY  
@@ -195,9 +195,9 @@ ms.locfileid: "62792076"
         > [!IMPORTANT]  
         >  Se os nomes dos caminhos dos bancos de dados primário e secundário forem diferentes, não será possível adicionar um arquivo. Isso acontece porque, ao receber o log para a operação de adição de arquivo, a instância do servidor da réplica secundária tenta colocar o novo arquivo no mesmo caminho usado pelo banco de dados primário.  
   
-         Por exemplo, o comando a seguir restaura um backup de um banco de dados primário que reside no diretório de dados da instância padrão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], C:\Arquivos de Programas\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA. Operação de restauração de banco de dados deve mover o banco de dados para o diretório de dados de uma instância remota do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] nomeado (*AlwaysOn1*), que hospeda a réplica secundária em outro nó do cluster. Lá, os arquivos de dados e de log são restaurados para o *C:\Program Files\Microsoft SQL Server\MSSQL12. ALWAYSON1\MSSQL\DATA* directory. O operação de restauração usa WITH NORECOVERY, para deixar o banco de dados secundário no banco de dados de restauração.  
+         Por exemplo, o comando a seguir restaura um backup de um banco de dados primário que reside no diretório de dados da instância padrão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], C:\Arquivos de Programas\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA. A operação Restore Database deve mover o banco de dados para o diretório data de uma instância remota do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] chamado (*AlwaysOn1*), que hospeda a réplica secundária em outro nó do cluster. Lá, os arquivos de dados e de log são restaurados para *c:\Arquivos de PROGRAMAS\MICROSOFT SQL Server\MSSQL12. Diretório ALWAYSON1\MSSQL\DATA* O operação de restauração usa WITH NORECOVERY, para deixar o banco de dados secundário no banco de dados de restauração.  
   
-        ```  
+        ```sql
         RESTORE DATABASE MyDB1  
           FROM DISK='C:\MyDB1.bak'  
          WITH NORECOVERY,   
@@ -210,7 +210,7 @@ ms.locfileid: "62792076"
   
 5.  Depois que você restaura o backup completo, será necessário criar um backup de log no banco de dados primário. Por exemplo, a seguinte instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] faz backup do log em um arquivo de backup chamado *E:\MyDB1_log.bak*:  
   
-    ```  
+    ```sql
     BACKUP LOG MyDB1   
       TO DISK = 'E:\MyDB1_log.bak'   
     GO  
@@ -220,7 +220,7 @@ ms.locfileid: "62792076"
   
      Por exemplo, a seguinte instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] restaura o primeiro log de *C:\MyDB1.bak*:  
   
-    ```  
+    ```sql
     RESTORE LOG MyDB1   
       FROM DISK = 'E:\MyDB1_log.bak'   
         WITH FILE=1, NORECOVERY  
@@ -231,7 +231,7 @@ ms.locfileid: "62792076"
   
      Por exemplo, a seguinte instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] restaura dois logs adicionais de *E:\MyDB1_log.bak*:  
   
-    ```  
+    ```sql
     RESTORE LOG MyDB1   
       FROM DISK = 'E:\MyDB1_log.bak'   
         WITH FILE=2, NORECOVERY  
@@ -265,26 +265,23 @@ ms.locfileid: "62792076"
 ###  <a name="ExamplePSscript"></a> Backup de exemplo, script e comando de restauração  
  Os comandos PowerShell a seguir fazem backup de um backup de banco de dados completo e do log de transações em um compartilhamento de rede e restaura esses backups a partir desse compartilhamento. Este exemplo supõe que o caminho do arquivo para o qual o banco de dados é restaurado é igual ao caminho do arquivo no qual foi feito o backup do banco de dados.  
   
-```  
+```powershell
 # Create database backup  
 Backup-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -ServerInstance "SourceMachine\Instance"  
 # Create log backup  
 Backup-SqlDatabase -Database "MyDB1" -BackupAction "Log" -BackupFile "\\share\backups\MyDB1.trn" -ServerInstance "SourceMachine\Instance"  
-# Restore database backup   
+# Restore database backup
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
-# Restore log backup   
-Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
-  
+# Restore log backup
+Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"
 ```  
   
-##  <a name="FollowUp"></a> Acompanhamento: Depois de preparar um banco de dados secundário  
+##  <a name="FollowUp"></a> Acompanhamento: depois de preparar um banco de dados secundário  
  Para concluir a configuração do banco de dados secundário, una o banco de dados recém-restaurado ao grupo de disponibilidade. Para obter mais informações, consulte [Unir um banco de dados secundário a um grupo de disponibilidade &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Visão geral do &#40;grupos de disponibilidade AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Argumentos de RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Solucionar problemas de uma operação de adição de arquivos com falha &#40;grupos de disponibilidade AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
-  
-  
+ [Solucionar problemas de uma operação &#40;de adição de arquivo com falha grupos de disponibilidade AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  

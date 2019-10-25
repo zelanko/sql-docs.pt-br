@@ -15,12 +15,12 @@ ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d16548f201f047ba83516469050e41380b7bc6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226207"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796633"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Gerenciando serviços e configurações de rede através do provedor do WMI
   O provedor do WMI é uma interface publicada que é usada pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC) para gerenciar os serviços e protocolos de rede do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . No SMO, o objeto <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> representa o Provedor do WMI.  
@@ -30,7 +30,7 @@ ms.locfileid: "63226207"
 ## <a name="example"></a>Exemplo  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- Para programas que usam o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor WMI, você deve incluir o `Imports` instrução para qualificar o namespace do WMI. Insira a instrução após outras instruções `Imports`, antes de qualquer declaração no aplicativo, como:  
+ Para programas que usam o provedor WMI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], você deve incluir a instrução `Imports` para qualificar o namespace WMI. Insira a instrução após outras instruções `Imports`, antes de qualquer declaração no aplicativo, como:  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63226207"
 ## <a name="enabling-a-server-protocol-using-a-urn-string-in-visual-basic"></a>Habilitando um protocolo de servidor usando uma cadeia de caracteres URN no Visual Basic  
  O exemplo de código mostra como identificar um protocolo de servidor usando um objeto URN e, em seguida, habilitar o protocolo.  
   
-```  
+```vb
 'This program must run with administrator privileges.  
         'Declare the ManagedComputer WMI interface.  
         Dim mc As New ManagedComputer()  
@@ -68,7 +68,7 @@ ms.locfileid: "63226207"
 ## <a name="enabling-a-server-protocol-using-a-urn-string-in-powershell"></a>Habilitando um protocolo de servidor usando uma cadeia de caracteres URN no PowerShell  
  O exemplo de código mostra como identificar um protocolo de servidor usando um objeto URN e, em seguida, habilitar o protocolo.  
   
-```  
+```powershell
 #This example shows how to identify a server protocol using a URN object, and then enable the protocol  
 #This program must run with administrator privileges.  
   
@@ -95,7 +95,7 @@ $sp.Alter()
 ## <a name="starting-and-stopping-a-service-in-visual-c"></a>Iniciando e interrompendo um serviço no Visual C#  
  O exemplo de código mostra como parar e iniciar uma instância do SQL Server.  
   
-```  
+```csharp
 {   
    //Declare and create an instance of the ManagedComputer   
    //object that represents the WMI Provider services.   
@@ -139,7 +139,7 @@ $sp.Alter()
 ## <a name="starting-and-stopping-a-service-in-powershell"></a>Iniciando e interrompendo um serviço no PowerShell  
  O exemplo de código mostra como parar e iniciar uma instância do SQL Server.  
   
-```  
+```powershell
 #Load the assembly containing the objects used in this example  
 [reflection.assembly]::LoadWithPartialName("Microsoft.SqlServer.SqlWmiManagement")  
   
@@ -172,11 +172,8 @@ $svc.Refresh()
 $svc.ServiceState  
 }  
 $svc.ServiceState  
-"Service" + $svc.Name + "is now started"  
-  
+"Service" + $svc.Name + "is now started"
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Provedor WMI para conceitos de gerenciamento de configuração](../../wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
-  
-  

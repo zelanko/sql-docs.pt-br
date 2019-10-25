@@ -10,12 +10,12 @@ ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 122bbd15f7b3332e917561f1ff9abe0119fafb2b
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 76e23a5a0656a1cf070ca1c8639c96fee50f1af6
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891495"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798102"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Solucionar um problema da instalação do Reporting Services
   Se você não puder instalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] devido a erros ocorridos durante a Instalação, use as instruções deste tópico para identificar as condições mais prováveis que causam erros de instalação.  
@@ -83,49 +83,49 @@ ms.locfileid: "68891495"
 -   [Você vê uma mensagem de erro informando que RS_SHP não tem suporte com o PREPAREIMAGE](#bkmk_RS_SHP_notsupported)  
   
 ###  <a name="bkmk_configmanager_notstart"></a> O Gerenciador de Configuração do Reporting Services não inicia  
- **Ndescrição** Esse problema é por design no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] agora é arquitetado para a arquitetura de serviço do SharePoint. O Gerenciador de Configuração não é mais necessário para configurar e administrar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo SharePoint.  
+ **Descrição:** esse problema ocorre por design no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] agora é arquitetado para a arquitetura de serviço do SharePoint. O Gerenciador de Configuração não é mais necessário para configurar e administrar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo SharePoint.  
   
  **Solução alternativa:** Use a Administração Central do SharePoint para configurar um servidor de relatório em modo SharePoint. Para obter mais informações, veja [Gerenciar um aplicativo de serviço SharePoint do Reporting Services](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
   
 ###  <a name="bkmk_no_ssrs_service"></a>Você não vê o serviço de SQL Server Reporting Services na administração central do SharePoint após a instalação do SQL Server 2012 SSRS no modo do SharePoint  
- **Ndescrição** Se depois [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com êxito o no modo do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SharePoint e o suplemento para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 2010, você não verá "SQL Server Reporting Services" nos dois menus a seguir, então [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o serviço terá Não foi registrado:  
+ **Descrição:** Se, depois de instalar com êxito [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo do SharePoint e o suplemento [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do SharePoint 2010, você não verá "SQL Server Reporting Services" nos dois menus a seguir, o serviço de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não foi registrado :  
   
 -   Administração Central do SharePoint 2010-> "gerenciamento de aplicativos" – > página "gerenciar serviços no servidor"  
   
 -   Administração Central do SharePoint 2010-> "gerenciamento de aplicativos"-> "gerenciar aplicativos de serviço"-> menu "novo"  
   
- **Solução alternativa:** Para registrar e iniciar os [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] serviços do SharePoint, conclua o seguinte:  
+ **Solução alternativa:** Para registrar e iniciar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Services, conclua o seguinte:  
   
 1.  No computador que executa a Administração Central do SharePoint 2010  
   
     1.  Abra o Shell de Gerenciamento do SharePoint 2010 com privilégios de administrador. Clique com o botão direito no ícone e clique em "Executar como administrador". Execute os três cmdlets a seguir do shell:  
   
-    2.  ```  
+    2.  ```powershell
         Install-SPRSService  
         ```  
   
-    3.  ```  
+    3.  ```powershell
         Install-SPRSServiceProxy  
         ```  
   
-    4.  ```  
+    4.  ```powershell
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  Verifique se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o serviço mostra o status como "**iniciado**" na página: Administração Central do SharePoint 2010-> "**Gerenciamento de aplicativos**"-> "**gerenciar serviços no servidor**"  
+2.  Verifique se o serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mostra o status como "**iniciado**" na página: administração central do SharePoint 2010-> "**Gerenciamento de aplicativos**"-> "**gerenciar serviços no servidor**"  
   
 ###  <a name="bkmk_cmdlets_not_recognized"></a> Os cmdlets do PowerShell do Reporting Services não estão disponíveis e os comandos não são reconhecidos  
- **Ndescrição** Ao tentar executar um [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] cmdlet do PowerShell, você verá uma mensagem de erro semelhante à seguinte:  
+ **Descrição:** ao tentar executar um cmdlet do PowerShell do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , você receberá uma mensagem de erro semelhante à seguinte:  
   
--   O termo 'Install-SPRSServiceInstall-SPRSService' **não é reconhecido** como nome de um cmdlet, função, arquivo de script ou programa operável. Verifique a ortografia do nome ou, se um caminho foi incluído, verifique se o caminho está correto e tente novamente. Na linha: 1 char: 39 + install-SPRSServiceInstall-SPRSService < < < < + CategoryInfo: ObjectNotFound (Install-SPRSServiceInstall-SPRSService: String) [], CommandNotFoundExcep  
+-   O termo 'Install-SPRSServiceInstall-SPRSService' **não é reconhecido** como nome de um cmdlet, função, arquivo de script ou programa operável. Verifique a ortografia do nome ou, se um caminho tiver sido incluído, verifique se ele está correto e tente novamente.At line:1 char:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          : ObjectNotFound: (Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
   
- **Solução alternativa:** Conclua um dos seguintes:  
+ **Solução alternativa:** Concluir um dos seguintes:  
   
 -   Execute o suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para produtos do SharePoint. **rssharepoint.msi**.  
   
 -   Instale o modo do SharePoint do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da mídia de instalação do SQL Server.  
   
- **Observação:** Se o **Shell de gerenciamento do SharePoint 2013** estiver aberto quando você concluir uma das soluções alternativas, feche e reabra o Shell de gerenciamento.  
+ **Observação:** Se **Shell de Gerenciamento do SharePoint 2013** estiver aberto quando você concluir uma das soluções alternativas, feche e reabra o shell de gerenciamento.  
   
  Para obter mais informações, consulte o seguinte:  
   
@@ -136,13 +136,13 @@ ms.locfileid: "68891495"
 -   [Instalar o Reporting Services modo do SharePoint para SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)  
   
 ###  <a name="bkmk_URL_not_configured"></a> Você vê uma mensagem de erro indicando que a URL não está configurada  
- **Ndescrição** Você vê e uma mensagem de erro semelhante à seguinte:  
+ **Descrição:** você vê uma mensagem de erro semelhante à seguinte:  
   
  Essa funcionalidade do SSRS (SQL Server Reporting Services) não tem suporte. Use a Administração Central para verificar e corrigir um ou mais dos seguintes problemas:•Uma URL do servidor de relatório não está configurada. Use a página Integração do SSRS para defini-lo.•O proxy do aplicativo de serviço SSRS não está configurado. Use as páginas do aplicativo de serviço do SSRS para configurar o proxy.•O aplicativo de serviço SSRS não está mapeado para esse aplicativo web. Use as páginas do aplicativo de serviço do SSRS para associar o proxy do aplicativo de serviço SSRS ao Grupo Proxy de Aplicativo para esse aplicativo web.  
   
- **Solução alternativa:** A mensagem de erro contém três etapas sugeridas para corrigir esse problema. A primeira sugestão na mensagem "uma URL do servidor de relatório não está configurada..." é relevante ao integrar a versão do servidor de relatório anterior para [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. A Configuração do SharePoint para as versões de servidor de relatório anteriores é concluída na página **Configurações Gerais do Aplicativo** , usando **SQL Server Reporting Services (2008 e 2008 R2)** .  
+ **Solução alternativa:** A mensagem de erro contém três etapas sugeridas para corrigir este problema. A primeira sugestão na mensagem "uma URL do servidor de relatório não está configurada..." é relevante ao integrar a versão do servidor de relatório anterior para [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. A Configuração do SharePoint para as versões de servidor de relatório anteriores é concluída na página **Configurações Gerais do Aplicativo** , usando **SQL Server Reporting Services (2008 e 2008 R2)** .  
   
- **Mais Informações:** Você verá essa mensagem de erro ao tentar usar qualquer uma das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] funcionalidades que exigem uma conexão com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] serviço. Isso inclui:  
+ **Mais informações:** Você verá esta mensagem de erro ao tentar usar qualquer funcionalidade do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que exige uma conexão com o serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Isso inclui:  
   
 -   Abrindo o Construtor de Relatórios do SQL Server de uma biblioteca de documentos do SharePoint.  
   
@@ -151,38 +151,38 @@ ms.locfileid: "68891495"
 -   Gerenciar um aplicativo de serviço.  
   
 ###  <a name="bkmk_sharepoint_not_confiugred"></a> A Instalação falha quando é realizada em um computador com o SharePoint instalado, mas não configurado  
- **Ndescrição** Se você optar por instalar Reporting Services o modo do SharePoint em um computador que tenha o SharePoint instalado, mas o SharePoint não estiver configurado, você verá uma mensagem semelhante à seguinte e a instalação será interrompida:  
+ **Descrição:** se você optar por instalar o modo do SharePoint do Reporting Services em um computador que tenha o SharePoint instalado, mas não configurado, verá uma mensagem semelhante à seguinte, e a instalação será interrompida:  
   
  A Instalação do SQL Server parou de funcionar  
   
- **Solução alternativa:** Configure o SharePoint e execute SQL Server instalação.  
+ **Solução alternativa:** Configure o SharePoint e execute a instalação do SQL Server.  
   
- **Mais Informações:** Ao instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o no e a instalação existente do SharePoint, a instalação tenta instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e iniciar o serviço do SharePoint. Se o SharePoint não estiver configurado, ocorrerá falha na instalação do serviço, e a instalação não será concluída.  
+ **Mais informações:** Ao instalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em uma instalação do SharePoint existente, a instalação tenta instalar e inicia o serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint. Se o SharePoint não estiver configurado, ocorrerá falha na instalação do serviço, e a instalação não será concluída.  
   
 ###  <a name="bkmk_central_admin_blank"></a> A página Administração Central do SharePoint está vazia  
- **Ndescrição** Você conseguiu instalar o SharePoint 2010 com êxito, sem erros de instalação. No entanto, quando você navega até a Administração Central, vê somente uma página em branco:  
+ **Descrição:** Você pôde instalar o SharePoint 2010 com êxito, sem erros de instalação. No entanto, quando você navega até a Administração Central, vê somente uma página em branco:  
   
- **Solução alternativa:** Esse problema não é específico [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do, mas está relacionado à configuração de permissões em sua instalação geral do SharePoint. Esta é uma lista de sugestões:  
+ **Solução alternativa:** Este problema não é específico do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , mas está relacionado com a configuração de permissões na instalação geral do SharePoint. Esta é uma lista de sugestões:  
   
 -   Examine o tópico do SharePoint sobre ambientes de desenvolvimento. [Configurando o ambiente de desenvolvimento para o SharePoint 2010 no Windows Vista, no Windows 7 e no Windows Server 2008](https://msdn.microsoft.com/library/ee554869\(office.14\).aspx)  
   
--   Examine a postagem no Fórum: [A administração central retorna uma página em branco após a instalação no Windows 7](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
+-   Examine a publicação do fórum: [Administração Central retorna página em branco depois da instalação no Windows 7](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
   
 -   A conta Serviço que você está usando para serviços do SharePoint como o Serviço de Administração Central do SharePoint 2010 deve ter privilégios administrativos no sistema operacional local.  
   
 ###  <a name="bkmk_reportbuilder_newreport_error"></a> Você vê uma mensagem de erro quando tenta criar um novo relatório do Construtor de Relatórios  
- **Ndescrição** Você verá uma mensagem de erro semelhante à seguinte quando tentar criar um relatório de Construtor de Relatórios dentro de uma biblioteca de documentos:  
+ **Descrição:** você vê uma mensagem de erro semelhante à seguinte quando tenta criar um relatório do Construtor de Relatórios dentro de uma biblioteca de documentos:  
   
  Essa funcionalidade não tem suporte porque o aplicativo de serviço do SQL Server Reporting Services não existe ou uma URL do servidor de relatórios não foi configurada na Administração Central.  
   
- **Solução alternativa:** Verifique se você tem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] um aplicativo de serviço e se ele está configurado corretamente. Para obter mais informações, consulte a seção ' criar um aplicativo de serviço de Reporting Services ' em [instalar Reporting Services modo do SharePoint para sharepoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
+ **Solução alternativa:** Verifique se você tem um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e se ele foi configurado corretamente. Para obter mais informações, consulte a seção ' criar um aplicativo de serviço de Reporting Services ' em [instalar Reporting Services modo do SharePoint para sharepoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
   
 ###  <a name="bkmk_RS_SHP_notsupported"></a> Você vê uma mensagem de erro informando que RS_SHP não tem suporte com o PREPAREIMAGE  
- **Ndescrição** Ao tentar executar o PREPAREIMAGE para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] você, você verá uma mensagem de erro semelhante à seguinte:  
+ **Descrição:** Ao tentar executar PREPAREIMAGE para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , você recebe uma mensagem de erro semelhante à seguinte:  
   
  "O recurso 'RS_SHP' especificado não tem suporte ao executar a ação PREPAREIMAGE, porque ele não dá suporte a SysPrep. Remova os recursos que não são compatíveis com SysPrep e execute a instalação novamente."  
   
- **Solução alternativa:** Não há nenhuma solução alternativa. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não dá suporte a SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native oferece suporte a SYSPREP.  
+ **Solução alternativa:** Não existe solução. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não dá suporte a SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native oferece suporte a SYSPREP.  
   
 ##  <a name="bkmk_tshoot_native"></a> Solucionar problemas com instalações do modo Nativo  
   
@@ -199,10 +199,10 @@ ms.locfileid: "68891495"
   
 2.  Abra uma janela de comando e digite o seguinte comando no prompt:  
   
-    -   **Execute\<** o *diretório do .NET 2,0 Framework* **> \<**  *diretório bin do servidor de relatório* \InstallUtil.exe **> \ReportingServicesLibrary.dll**  
+    -   **execute \<** *diretório do .net 2,0 Framework* **> \InstallUtil.exe \<** *diretório bin do servidor de relatório* **> \ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
-        >  Substitua \<o *diretório .NET 2,0 Framework*> pelo caminho físico dos arquivos .NET Framework 2,0 e substitua \<o *diretório bin do servidor de relatório*> pelo caminho físico dos arquivos bin do servidor de relatório.  
+        >  Substitua \<*diretório .net 2,0 Framework*> pelo caminho físico dos arquivos .NET Framework 2,0 e substitua \<*diretório bin do servidor de relatório*> pelo caminho físico dos arquivos bin do servidor de relatório.  
   
 3.  Reinicie o serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -220,7 +220,7 @@ ms.locfileid: "68891495"
   
 3.  Clique com o botão direito do mouse no nó **Desempenho** , aponte para **Novo**e clique em **Valor com Várias Cadeias de Caracteres**.  
   
-4.  Digite `Counter Names` e pressione Enter.  
+4.  Digite `Counter Names` e pressione ENTER.  
   
 5.  Repita para adicionar a chave de registro `Counter Types` nesse nó.  
   
@@ -228,17 +228,17 @@ ms.locfileid: "68891495"
   
 7.  Clique com o botão direito do mouse no nó **Desempenho** , aponte para **Novo**e clique em **Valor com Várias Cadeias de Caracteres**.  
   
-8.  Digite `Counter Names` e pressione Enter.  
+8.  Digite `Counter Names` e pressione ENTER.  
   
 9. Repita para adicionar a chave de registro `Counter Types` nesse nó.  
   
  Depois que reparar a instância de 64 bits ou adicionar as chaves de Registro manualmente de novo, você poderá usar o Monitor de Desempenho para configurar os objetos de desempenho do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que deseja monitorar.  
   
 ###  <a name="ConfigPropsMissing"></a> As propriedades de configuração ReportServerExternalURL e PassThroughCookies não são configuradas após uma atualização do SQL Server 2005  
- Quando você atualiza do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], as propriedades de configuração `ReportServerExternalURL` e `PassThroughCookies` não são configuradas pelo processo de atualização. `ReportServerExternalURL`é uma propriedade opcional e deve ser definida somente se você estiver usando o SharePoint 2,0 Web Parts e desejar que os usuários possam recuperar um relatório e abri-lo em uma nova janela do navegador. Para obter mais informações `ReportServerExternalURL`sobre o, consulte [URLs em &#40;arquivos de&#41;configuração Configuration Manager SSRS](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). `PassThroughCookies`é necessário somente ao usar o método de autenticação personalizado. Para obter mais informações `PassThroughCookies`sobre o, consulte [Configurar Report Manager para passar cookies de autenticação personalizados](../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
+ Quando você atualiza do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], as propriedades de configuração `ReportServerExternalURL` e `PassThroughCookies` não são configuradas pelo processo de atualização. `ReportServerExternalURL` é uma propriedade opcional e deve ser definida somente se você estiver usando o SharePoint 2,0 Web Parts e desejar que os usuários possam recuperar um relatório e abri-lo em uma nova janela do navegador. Para obter mais informações sobre `ReportServerExternalURL`, consulte [URLs em arquivos &#40;de configuração&#41;SSRS Configuration Manager](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). `PassThroughCookies` é necessário somente ao usar o método de autenticação personalizado. Para obter mais informações sobre `PassThroughCookies`, consulte [configurar Report Manager para passar cookies de autenticação personalizados](../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
   
 > [!NOTE]  
->  Quando você usar a autenticação Personalizada, será recomendável migrar a instalação, em vez de executar uma atualização. Para obter mais informações sobre como migrar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], veja [Migrar uma instalação do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
+>  Quando você usar a autenticação Personalizada, será recomendável migrar a instalação, em vez de executar uma atualização. Para obter mais informações sobre como migrar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Migrar uma instalação do Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
   
  Por padrão, essas propriedades não existem na configuração do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . Caso você tenha configurado essas propriedades no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e continuar exigindo a funcionalidade fornecida por elas, adicione-as manualmente ao arquivo **RSReportServer.config** após o processo de atualização. Para obter mais informações, consulte [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
@@ -268,15 +268,13 @@ ms.locfileid: "68891495"
  Para corrigir o problema, repare a instância de 64 bits. Embora seja recomendável usar o reparo, você pode adicionar outra vez as chaves do Registro manualmente usando o Editor do Registro.  
   
 > [!CAUTION]  
->  A edição incorreta do registro pode danificar gravemente o sistema. Antes de alterar o Registro, faça um backup dos dados importantes do computador.  
+>  A edição incorreta do Registro pode danificar seriamente o sistema. Antes de alterar o Registro, faça um backup dos dados importantes do computador.  
   
 ##  <a name="bkmk_additional"></a> Recursos adicionais  
  A seguir, veja os recursos adicionais que você pode examinar para auxiliá-lo com solução de problemas:  
   
--   TechNet Wiki: Tópicos [de solução de problemas para solucionar problemas SQL Server Reporting Services (SSRS) no modo integrado do SharePoint](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
+-   Wiki do TechNet: tópicos de solução de problemas [Solução de problemas do SSRS (SQL Server Reporting Services) no modo integrado do SharePoint](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
--   [Fóruns SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
+-   [Fórum: SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   
- ![Configurações do SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configurações do SharePoint") [Enviar comentários e informações de contato por meio do Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
-  
-  
+ ![As configurações do SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configurações do SharePoint") [enviam comentários e informações de contato por meio do Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
