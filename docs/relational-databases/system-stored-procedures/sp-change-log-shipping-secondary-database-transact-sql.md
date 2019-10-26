@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7cc47e0543139fde3bc43e0f3cc66641ba8f455d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d0bd62fe3462441d4eab9d3d89bce20cf1144131
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045815"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909561"
 ---
-# <a name="spchangelogshippingsecondarydatabase-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
+# <a name="sp_change_log_shipping_secondary_database-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Altera as configurações do banco de dados secundário.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,54 +51,52 @@ sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @restore_delay = ] 'restore_delay'` A quantidade de tempo, em minutos, em que o servidor secundário espera antes de restaurar um determinado arquivo de backup. *restore_delay* está **int** e não pode ser NULL. O valor padrão é 0.  
+`[ @restore_delay = ] 'restore_delay'` o período de tempo, em minutos, que o servidor secundário aguarda antes de restaurar um determinado arquivo de backup. *restore_delay* é **int** e não pode ser nulo. O valor padrão é 0.  
   
-`[ @restore_all = ] 'restore_all'` Se definido como 1, o servidor secundário restaura todos os backups de log de transações disponíveis quando o trabalho de restauração é executada. Caso contrário, ele será interrompido depois de um arquivo foi restaurado. *restore_all* está **bit** e não pode ser NULL.  
+`[ @restore_all = ] 'restore_all'` se definido como 1, o servidor secundário restaura todos os backups de log de transações disponíveis quando o trabalho de restauração é executado. Caso contrário, ele parará após a restauração de um arquivo. *restore_all* é **bit** e não pode ser nulo.  
   
-`[ @restore_mode = ] 'restore_mode'` O modo de restauração de banco de dados secundário.  
+`[ @restore_mode = ] 'restore_mode'` o modo de restauração para o banco de dados secundário.  
   
  0 = restaure o log NORECOVERY.  
   
  1 = restaure o log de restauração com STANDBY.  
   
- *Restaure* está **bit** e não pode ser NULL.  
+ *Restore* é **bit** e não pode ser nulo.  
   
-`[ @disconnect_users = ] 'disconnect_users'` Se definido como 1, os usuários estiver desconectado do banco de dados secundário quando uma operação de restauração é executada. Padrão = 0. *disconnect_users* está **bit** e não pode ser NULL.  
+`[ @disconnect_users = ] 'disconnect_users'` se definido como 1, os usuários serão desconectados do banco de dados secundário quando uma operação de restauração for executada. Padrão = 0. *disconnect_users* é **bit** e não pode ser nulo.  
   
-`[ @block_size = ] 'block_size'` O tamanho, em bytes, que é usado como o tamanho do bloco para o dispositivo de backup. *block_size* está **int** com um valor padrão de -1.  
+`[ @block_size = ] 'block_size'` o tamanho, em bytes, que é usado como o tamanho do bloco para o dispositivo de backup. *block_size* é **int** com um valor padrão de-1.  
   
-`[ @buffer_count = ] 'buffer_count'` O número total de buffers usados pela operação de backup ou restauração. *buffer_count* está **int** com um valor padrão de -1.  
+`[ @buffer_count = ] 'buffer_count'` o número total de buffers usados pela operação de backup ou restauração. *buffer_count* é **int** com um valor padrão de-1.  
   
-`[ @max_transfer_size = ] 'max_transfer_size'` O tamanho, em bytes, da entrada máximo ou solicitação de saída que é emitida por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o dispositivo de backup. *max_transfersize* está **int** e pode ser NULL.  
+`[ @max_transfer_size = ] 'max_transfer_size'` o tamanho, em bytes, da solicitação máxima de entrada ou saída emitida pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o dispositivo de backup. *max_transfersize* é **int** e pode ser NULL.  
   
-`[ @restore_threshold = ] 'restore_threshold'` O número de minutos permitidos a decorrer entre operações de restauração antes que um alerta seja gerado. *restore_threshold* está **int** e não pode ser NULL.  
+`[ @restore_threshold = ] 'restore_threshold'` o número de minutos permitido para decorrer entre as operações de restauração antes de um alerta ser gerado. *restore_threshold* é **int** e não pode ser nulo.  
   
-`[ @threshold_alert = ] 'threshold_alert'` É o alerta a ser emitido quando o limite de restauração é excedido. *alerta de limite* está **int**, com um padrão de 14.420.  
+`[ @threshold_alert = ] 'threshold_alert'` é o alerta a ser gerado quando o limite de restauração é excedido. *threshold_alert* é **int**, com um padrão de 14420.  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Especifica se um alerta será gerado quando *restore_threshold*for excedido. 1 = habilitado; 0 = desabilitado. *threshold_alert_enabled* está **bit** e não pode ser NULL.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` especifica se um alerta será gerado quando *restore_threshold*for excedido. 1 = habilitado; 0 = desabilitado. *threshold_alert_enabled* é **bit** e não pode ser nulo.  
   
-`[ @history_retention_period = ] 'history_retention_period'` É o período de tempo em minutos no qual o histórico será retido. *history_retention_period* está **int**. Um valor de 1440 será usado se nenhum for especificado.  
+`[ @history_retention_period = ] 'history_retention_period'` é o período em minutos em que o histórico será retido. *history_retention_period* é **int**. Um valor de 1440 será usado se nenhum for especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhum  
+ None  
   
-## <a name="remarks"></a>Comentários  
- **sp_change_log_shipping_secondary_database** deve ser executado a partir de **mestre** banco de dados no servidor secundário. Esse procedimento armazenado faz o seguinte:  
+## <a name="remarks"></a>Remarks  
+ **sp_change_log_shipping_secondary_database** deve ser executado a partir do banco de dados **mestre** no servidor secundário. Esse procedimento armazenado faz o seguinte:  
   
-1.  Altera as configurações na **log_shipping_secondary_database** registra conforme necessário.  
+1.  Altera as configurações nos registros **log_shipping_secondary_database** , conforme necessário.  
   
-2.  Altera o registro de monitor local na **log_shipping_monitor_secondary** no servidor secundário usando os argumentos fornecidos, se necessário.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+2.  Altera o registro de monitor local em **log_shipping_monitor_secondary** no servidor secundário usando argumentos fornecidos, se necessário.  
 
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa pode executar esse procedimento.  
+ Somente os membros da função de servidor fixa **sysadmin** podem executar esse procedimento.  
   
 ## <a name="examples"></a>Exemplos  
- Este exemplo ilustra o uso **sp_change_log_shipping_secondary_database** para atualizar os parâmetros de banco de dados secundário para o banco de dados **LogShipAdventureWorks**.  
+ Este exemplo ilustra o uso de **sp_change_log_shipping_secondary_database** para atualizar parâmetros de banco de dados secundário para o banco de dados **LogShipAdventureWorks**.  
   
 ```  
 EXEC master.dbo.sp_change_log_shipping_secondary_database   
@@ -112,7 +110,7 @@ EXEC master.dbo.sp_change_log_shipping_secondary_database
 ,  @history_retention_period = 14420;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

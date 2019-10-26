@@ -14,12 +14,12 @@ ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7235217173217b01b224e1772629dc3a7fc87ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b58abcebdc310a1a5979049495b610ffef37a7b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908259"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909517"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Executar o procedimento armazenado com RPC e a saída do processo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,17 +38,15 @@ ms.locfileid: "67908259"
   
 3.  Crie um conjunto de associações (um para cada criador de parâmetro) usando uma matriz de estruturas DBBINDING.  
   
-4.  Criar um acessador para os parâmetros definidos usando o **IAccessor:: CreateAccessor** método. **CreateAccessor** cria um acessador com base em um conjunto de associações.  
+4.  Crie um acessador para os parâmetros definidos usando o método **IAccessor:: Createaccesser** . **CreateAccessor** cria um acessador com base em um conjunto de associações.  
   
 5.  Preencha a estrutura DBPARAMS.  
   
 6.  Chame o comando **Execute** (neste caso, uma chamada a um procedimento armazenado).  
   
-7.  Processar o conjunto de linhas e liberá-lo usando o **IRowset:: Release** método.  
+7.  Processe o conjunto de linhas e libere-o usando o método **IRowset:: Release** .  
   
 8.  Processe os valores de código de retorno e de parâmetro de saída recebidos do procedimento armazenado.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>Exemplo  
  O exemplo mostra o processamento de um conjunto de linhas, de um código de retorno e de um parâmetro de saída. Conjuntos de resultados não são processados. Este exemplo não tem suporte em IA64.  
@@ -399,7 +397,7 @@ DROP PROCEDURE myProc
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções sobre o processamento de resultados &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

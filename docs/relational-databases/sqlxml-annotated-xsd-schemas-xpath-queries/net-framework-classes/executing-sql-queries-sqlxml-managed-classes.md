@@ -1,5 +1,5 @@
 ---
-title: Executando consultas SQL (Classes gerenciadas SQLXML) | Microsoft Docs
+title: Executando consultas SQL (classes gerenciadas SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08fc10138a8c0a6c6e55eb0c6f757f9abe0b5b9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ef6d18b4d302cd551db8e7e3e5ab7e96f077a20
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934278"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908472"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>Executando consultas SQL (classes gerenciadas SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Este exemplo demonstra como:  
   
--   Criando parâmetros (objetos de SqlXmlParameter).  
+-   Criando parâmetros (objetos SqlXmlParameter).  
   
--   Atribuir valores às propriedades (nome e valor) de objetos SqlXmlParameter.  
+-   Atribuindo valores às propriedades (nome e valor) dos objetos SqlXmlParameter.  
   
- Neste exemplo, uma consulta SQL simples é executada para recuperar o nome, o sobrenome e a data de nascimento do funcionário cujo valor de sobrenome é passado como parâmetro. Especificar o parâmetro (*LastName*), somente a propriedade Value é definida. A propriedade Name não é definida, porque nessa consulta, o parâmetro é posicional e nenhum nome é necessário.  
+ Neste exemplo, uma consulta SQL simples é executada para recuperar o nome, o sobrenome e a data de nascimento do funcionário cujo valor de sobrenome é passado como parâmetro. Ao especificar o parâmetro (*LastName*), somente a propriedade Value é definida. A propriedade Name não está definida, pois, nesta consulta, o parâmetro é posicional e nenhum nome é necessário.  
   
- A propriedade CommandType do objeto SqlXmlCommand por padrão é **Sql**. Portanto, a propriedade não é definida explicitamente.  
+ A propriedade CommandType do objeto SqlXmlCommand, por padrão, é **SQL**. Portanto, a propriedade não é definida explicitamente.  
   
 > [!NOTE]  
 >  No código, é necessário fornecer o nome da instância do Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na cadeia de conexão.  
@@ -99,11 +99,9 @@ public static int Main(String[] args)
   
 3.  No prompt de comando, execute DocSample.exe.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  Para testar este exemplo, é necessário ter o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework instalado no computador.  
   
- Em vez de especificar consultas SQL como o texto de comando, você pode especificar um modelo (conforme mostrado no fragmento de código a seguir) que executa um diagrama de atualização (que também é um modelo) para inserir um registro de cliente. Você pode especificar modelos e diagramas de atualização em arquivos e também executar arquivos. Para obter mais informações, consulte [executando os arquivos de modelo usando a propriedade CommandText](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md).  
+ Em vez de especificar consultas SQL como o texto de comando, você pode especificar um modelo (conforme mostrado no fragmento de código a seguir) que executa um diagrama de atualização (que também é um modelo) para inserir um registro de cliente. Você pode especificar modelos e diagramas de atualização em arquivos e também executar arquivos. Para obter mais informações, consulte [executando arquivos de modelo usando a propriedade CommandText](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md).  
   
 ```  
 SqlXmlCommand cmd = new SqlXmlCommand("Provider=SQLOLEDB;Data Source=SqlServerName;Initial Catalog=Database; Integrated Security=SSPI;");  
@@ -124,7 +122,7 @@ cmd = null;
 ```  
   
 ## <a name="using-executetostream"></a>Usando ExecuteToStream  
- Se você tiver um fluxo existente, você pode usar o método ExecuteToStream em vez de criar um objeto Stream e usando o método Execute. O código do exemplo anterior está revisado a seguir para usar o método ExecuteToStream:  
+ Se você tiver um fluxo existente, poderá usar o método ExecuteToStream em vez de criar um objeto de fluxo e usar o método execute. O código do exemplo anterior é revisado aqui para usar o método ExecuteToStream:  
   
 ```  
 using System;  
@@ -157,6 +155,6 @@ class Test
 ```  
   
 > [!NOTE]  
->  Você também pode usar o ExecuteXMLReadermethod que retorna um objeto de XmlReader. Para obter mais informações, consulte [executar consultas de SQL usando o método ExecuteXMLReader](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md).  
+>  Você também pode usar o ExecuteXMLReadermethod que retorna um objeto XmlReader. Para obter mais informações, consulte [executando consultas SQL usando o método ExecuteXMLReader](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md).  
   
   

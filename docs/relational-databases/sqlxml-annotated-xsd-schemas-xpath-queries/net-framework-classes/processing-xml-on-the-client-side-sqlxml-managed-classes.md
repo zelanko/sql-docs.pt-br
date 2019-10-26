@@ -1,5 +1,5 @@
 ---
-title: Processando XML no lado do cliente (Classes gerenciadas SQLXML) | Microsoft Docs
+title: Processando XML no lado do cliente (classes gerenciadas SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,18 +17,18 @@ ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 547e7df24fcf18b3183cd2d279c84e9b38977671
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6133cbedb01dce5cb4d868e79e52e236e773f4b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119593"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909164"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>Processando XML no cliente (classes gerenciadas SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Este exemplo ilustra o uso da propriedade ClientSideXml. O aplicativo executa um procedimento armazenado no servidor. O resultado do procedimento armazenado (um conjunto de linhas de duas colunas) é processado no cliente para gerar um documento XML.  
   
- GetContacts o seguinte procedimento armazenado retorna **FirstName** e **Sobrenome** dos funcionários na tabela Person. Contact no banco de dados AdventureWorks.  
+ O procedimento armazenado GetContacts a seguir retorna **FirstName** e **LastName** de employees na tabela Person. Contact no banco de dados AdventureWorks.  
   
 ```  
 USE AdventureWorks  
@@ -40,7 +40,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- Este aplicativo c# executa o procedimento armazenado e especifica a opção de FOR XML AUTO ao especificar o valor de CommandText. No aplicativo, a propriedade ClientSideXml do objeto SqlXmlCommand é definida como true. Isto permite executar procedimentos armazenados pré-existentes que retornam um conjunto de linhas e aplicam uma transformação XML a ele no cliente.  
+ Esse C# aplicativo executa o procedimento armazenado e especifica a opção for XML auto na especificação do valor CommandText. No aplicativo, a propriedade ClientSideXml do objeto SqlXmlCommand é definida como true. Isto permite executar procedimentos armazenados pré-existentes que retornam um conjunto de linhas e aplicam uma transformação XML a ele no cliente.  
   
 > [!NOTE]  
 >  No código, é necessário fornecer o nome da instância do Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na cadeia de conexão.  
@@ -96,6 +96,4 @@ public static int Main(String[] args)
      Isso cria um executável (DocSample.exe).  
   
 4.  No prompt de comando, execute DocSample.exe.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

@@ -17,16 +17,16 @@ ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca1cb0e0a39f0814051dbd5f2ce009526dd8558f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0992424ed4253bb783ad5713239e213cd2b86278
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934252"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909724"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Executando os arquivos de modelo usando a propriedade CommandText
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Este exemplo ilustra como os arquivos de modelo que consistem em consultas SQL ou XPath podem ser especificados usando o CommandTextproperty. Em vez de especificar a consulta SQL ou XPath como o valor de CommandText, você pode especificar um nome de arquivo como o valor. No exemplo a seguir, a propriedade CommandType é especificada como SqlXmlCommandType.TemplateFile.  
+  Este exemplo ilustra como os arquivos de modelo que consistem em consultas SQL ou XPath podem ser especificados usando o CommandTextproperty. Em vez de especificar a consulta SQL ou XPath como o valor de CommandText, você pode especificar um nome de arquivo como o valor. No exemplo a seguir, a propriedade CommandType é especificada como SqlXmlCommandType. TemplateFile.  
   
  O aplicativo de exemplo executa este modelo:  
   
@@ -93,9 +93,7 @@ class Test
   
 5.  No prompt de comando, execute DocSample.exe.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
- Se você passar um parâmetro para um modelo, o nome do parâmetro deve começar com sinal de arroba (@); Por exemplo, p.Name= "\@ContactID", onde p é um objeto SqlXmlParameter.  
+ Se você passar um parâmetro para um modelo, o nome do parâmetro deverá começar com arroba (@); por exemplo, p.Name = "\@ContactID", em que p é um objeto SqlXmlParameter.  
   
  Este é o modelo atualizado que utiliza um parâmetro.  
   

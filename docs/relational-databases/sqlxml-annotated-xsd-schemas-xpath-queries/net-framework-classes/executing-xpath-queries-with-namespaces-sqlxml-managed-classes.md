@@ -1,5 +1,5 @@
 ---
-title: Executando consultas XPath com Namespaces (Classes gerenciadas SQLXML) | Microsoft Docs
+title: Executando consultas XPath com namespaces (classes gerenciadas SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,26 +19,26 @@ ms.assetid: c6fc46d8-6b42-4992-a8f1-a8d4b8886e6e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc54797e5f423b277e1cd3ffc3fbb77e588cca11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 884ea584ec54425d6d0ed2d134e9181cd4d56678
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934154"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909216"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>Executando consultas XPath com namespaces (classes gerenciadas SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   As consultas XPath podem incluir namespaces. Se os elementos de esquema forem qualificados por namespace (use um namespace de destino), as consultas XPath no esquema deverão especificar o namespace.  
   
- Como o caractere curinga (*) não é suportado no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, você precisa especificar a consulta XPath usando um prefixo de namespace. Para resolver o prefixo, use a propriedade de namespaces para especificar a associação de namespace.  
+ Como o caractere curinga (*) não é suportado no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, você precisa especificar a consulta XPath usando um prefixo de namespace. Para resolver o prefixo, use a propriedade namespaces para especificar a associação de namespace.  
   
- No exemplo a seguir, a consulta XPath especifica namespaces usando o caractere curinga (\*) e as funções XPath example e namespace-uri(). Essa consulta XPath retorna todos os elementos em que é o nome local **funcionário** e o URI de namespace é **urn: myschema:Contacts**:  
+ No exemplo a seguir, a consulta XPath especifica namespaces usando o caractere curinga (\*) e as funções XPath de nome local () e namespace-URI (). Essa consulta XPath retorna todos os elementos em que o nome local é **Employee** e o URI do namespace é **urn: MySchema: Contacts**:  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- No SQLXML 4.0, especifique essa consulta XPath com um prefixo de namespace. Um exemplo é **x: entre em contato com**, onde **x** é o prefixo de namespace. Considere o esquema XSD a seguir:  
+ No SQLXML 4.0, especifique essa consulta XPath com um prefixo de namespace. Um exemplo é **x:contact**, em que **x** é o prefixo do namespace. Considere o esquema XSD a seguir:  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  
@@ -56,7 +56,7 @@ ms.locfileid: "67934154"
   
  Como esse esquema define o namespace de destino, uma consulta XPath (como "Employee") com relação a esse esquema precisa incluir o namespace.  
   
- O exemplo de aplicativo C# a seguir executa uma consulta XPath com relação ao esquema XSD anterior (MySchema.xml). Para resolver o prefixo, especifique a associação de namespace usando a propriedade de Namespaces do objeto SqlXmlCommand.  
+ O exemplo de aplicativo C# a seguir executa uma consulta XPath com relação ao esquema XSD anterior (MySchema.xml). Para resolver o prefixo, especifique a associação de namespace usando a propriedade namespaces do objeto SqlXmlCommand.  
   
 > [!NOTE]  
 >  No código, é necessário fornecer o nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na cadeia de conexão.  
@@ -109,6 +109,4 @@ class Test
      Isso cria um executável (DocSample.exe).  
   
 4.  No prompt de comando, execute DocSample.exe.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

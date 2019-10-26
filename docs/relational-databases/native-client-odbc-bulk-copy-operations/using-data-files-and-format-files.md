@@ -18,12 +18,12 @@ ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5110057262eb09acc40f3c546184f7ee75b784a8
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 6ddd9e8d0fb8b5c22dc73d0a11b6257583be07a8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707797"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907516"
 ---
 # <a name="using-data-files-and-format-files"></a>Usando arquivos de dados e de formato
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,8 +45,6 @@ ms.locfileid: "71707797"
   
 3.  Chame **bcp_exec** para executar a operação de cópia em massa.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  A instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] pode ser qualquer instrução que gera um conjunto de resultados. Será criado o arquivo de dados que contém o primeiro conjunto de resultados da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. A cópia em massa ignora qualquer conjunto de resultados após o primeiro se a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] gera vários conjuntos de resultados.  
   
  Para criar um arquivo de dados no qual os dados de coluna são armazenados em um formato diferente daquele na tabela, chame [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) para especificar quantas colunas serão alteradas e chame [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) para cada coluna cujo formato você deseja alterar. Isso é feito depois de chamar **bcp_init** , mas antes de chamar **bcp_exec**. **bcp_colfmt** especifica o formato no qual os dados da coluna são armazenados no arquivo de dados. Ele pode ser usado durante a cópia de entrada ou saída em massa. Você também pode usar **bcp_colfmt** para definir os terminadores de linha e coluna. Por exemplo, se seus dados não contiverem caracteres de tabulação, você poderá criar um arquivo delimitado por tabulação usando **bcp_colfmt** para definir o caractere de tabulação como o terminador para cada coluna.  
@@ -57,7 +55,7 @@ ms.locfileid: "71707797"
   
  A função **bcp_control** controla várias opções ao copiar em massa para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um arquivo de dados. **bcp_control** define opções, como o número máximo de erros antes do encerramento, a linha no arquivo no qual iniciar a cópia em massa, a linha a ser interrompida e o tamanho do lote.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Executando operações &#40;de cópia em massa ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

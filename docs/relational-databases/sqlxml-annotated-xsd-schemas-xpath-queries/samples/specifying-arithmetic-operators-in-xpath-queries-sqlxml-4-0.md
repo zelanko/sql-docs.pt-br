@@ -1,5 +1,5 @@
 ---
-title: Especificando operadores aritméticos em consultas XPath (SQLXML 4.0) | Microsoft Docs
+title: Especificando operadores aritméticos em consultas XPath (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,34 +16,34 @@ ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4594fadb7c12ac187219c16cf8505dd77fa0c479
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2fa1bf6dd7d5652e33eb5fa7c75a86268f31129a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119448"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907771"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Especificando operadores aritméticos em consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  O exemplo a seguir mostra como são especificados operadores aritméticos em consultas XPath. A consulta XPath deste exemplo é especificada com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre esse esquema de exemplo, consulte [anotado de exemplo de esquema XSD para exemplos de XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  O exemplo a seguir mostra como são especificados operadores aritméticos em consultas XPath. A consulta XPath deste exemplo é especificada com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre este esquema de exemplo, consulte [exemplo de esquema XSD anotado &#40;para exemplos&#41;de XPath 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. Especifique o operador aritmético *.  
- Essa consulta XPath retorna  **\<OrderDetail >** elementos que satisfazem o predicado especificado:  
+ Essa consulta XPath retorna **\<OrderDetail >** elementos que atendem ao predicado especificado:  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- Na consulta, `child` é o eixo e `OrderDetail` é o teste de nó (TRUE se **OrderDetail** é um  **\<nó de elemento >** , porque o  **\< elemento >** nó é o nó principal para o **filho** eixo). Para todos os  **\<OrderDetail >** nós de elemento, o teste no predicado é aplicado, e somente os nós que satisfazem a condição são retornados.  
+ Na consulta, `child` é o eixo e `OrderDetail` é o teste de nó (TRUE se **OrderDetail** é um **nó de elemento\<** , porque o **elemento\<** > nó é o nó primário para o eixo **filho** ). Para todos os **\<OrderDetail >** nós de elementos, o teste no predicado é aplicado e somente os nós que atendem à condição são retornados.  
   
 > [!NOTE]  
 >  Os números em XPath são números de pontos flutuantes de precisão dupla e a comparação de números de pontos flutuantes como no exemplo provoca arredondamento.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para testar a consulta XPath com relação ao esquema de mapeamento  
   
-1.  Cópia de [exemplos de código de esquema](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
+1.  Copie o [código do esquema de exemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
   
 2.  Crie o modelo a seguir (ArithmeticOperatorAe.xml) e salve-o no diretório em que SampleSchema1.xml foi salvo.  
   
@@ -63,9 +63,7 @@ ms.locfileid: "68119448"
   
 3.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ```  
 Here is the partial result set of the template execution:    

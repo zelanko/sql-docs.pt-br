@@ -1,5 +1,5 @@
 ---
-title: 'Buscar colunas usando IRow:: Getcolumns (OLE DB) | Microsoft Docs'
+title: 'Buscar colunas usando IRow:: GetColumns (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f30acc0027c2456ff0194280c28a0ef97c1383a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fec568cae05e791d3d1263fddabdf695fd879bcb
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110336"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907605"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Buscar colunas usando IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "68110336"
 3.  Execute IRow::GetColumns() para buscar uma ou mais colunas na linha resultante. Se você desejar localizar o tamanho de coluna real antes de buscar os dados, defina pData em DBCOLUMNACCESS como NULL. A chamada para IRow::GetColumns() retorna somente a largura da coluna. Outra chamada para IRow::GetColumns() buscará os dados.  
   
 4.  Execute IRow::GetColumns() até que todas as colunas necessárias sejam acessadas. As colunas precisam ser acessadas em sequência.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como usar a interface IRow para permitir acesso direto a colunas de uma única linha no conjunto de resultados. O exemplo mostra:  
@@ -522,7 +520,7 @@ if exists (select name from sysobjects where name = 'MyTable')
 go  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções do OLE DB](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

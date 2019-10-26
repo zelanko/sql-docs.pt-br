@@ -1,5 +1,5 @@
 ---
-title: Definir dados grandes | Microsoft Docs
+title: Definindo dados grandes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,18 +17,18 @@ ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac0d1d370951ea5daa2d1849d833dcc50abf83bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 57a5c840ac796cf0b30e71c70be72d7c3be5a4e0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128869"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909467"
 ---
 # <a name="setting-large-data"></a>Definindo dados grandes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client, você pode definir dados de BLOB, passando um ponteiro para um objeto de armazenamento do consumidor.  
+  Com o provedor de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, você pode definir dados de BLOB passando um ponteiro para um objeto de armazenamento do consumidor.  
   
  O consumidor cria um objeto de armazenamento que contém os dados e transmite um ponteiro a este objeto de armazenamento para o provedor. Em seguida, o provedor lê dados do objeto de armazenamento do consumidor e grava-os na coluna de BLOB.  
   
@@ -49,15 +49,13 @@ ms.locfileid: "68128869"
   
 2.  Defina as propriedades no grupo de propriedades DBPROPSET_ROWSET para que o conjunto de linhas seja atualizável.  
   
-3.  Crie um conjunto de associações (uma de cada coluna) usando uma matriz de estruturas DBBINDING. Defina o elemento *wType* na estrutura DBBINDING como DBTYPE_IUNKNOWN e o elemento *pObject* para apontar para a estrutura DBOBJECT que você criou.  
+3.  Crie um conjunto de associações (uma de cada coluna) usando uma matriz de estruturas DBBINDING. Defina o elemento *wType* na estrutura DBBINDING como DBTYPE_IUNKNOWN e o elemento *pObject* para que ele aponte para a estrutura DBOBJECT criada.  
   
 4.  Crie um acessador que usa as informações de associação na matriz de estruturas DBBINDINGS.  
   
 5.  Chame **GetNextRows** para buscar as linhas seguintes no conjunto de linhas. Chame **GetData** para ler os dados do conjunto de linhas.  
   
 6.  Crie um objeto de armazenamento que contém os dados (e também o indicador de tamanho) e, em seguida, chame **IRowsetChange::SetData** (ou **IRowsetChange::InsertRow**) com o acessador que associa a coluna BLOB para definir os dados.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como definir dados de BLOB. O exemplo cria uma tabela, adiciona um registro de exemplo, busca esse registro no conjunto de linhas e define o valor do campo de BLOB:  
@@ -723,7 +721,7 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BLOBs e objetos OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Usando tipos de valor grande](../../relational-databases/native-client/features/using-large-value-types.md)  
   

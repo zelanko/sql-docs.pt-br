@@ -1,5 +1,5 @@
 ---
-title: Modificar o serviço Avançado propriedades do SQL Server usando o VBScript | Microsoft Docs
+title: Modificar propriedades avançadas do serviço de SQL Server usando o VBScript | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 90632548114577475735a6dfca9244c84c09ab2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f46fa55f330274b6966f6181a022c3895dec4f9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139444"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909195"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>Acessar o provedor WMI para o gerenciamento de configuração usando o VBScript
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Esta seção descreve como criar um programa de VBScript que liste a versão das instâncias instaladas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estiver executando em um computador.  
+  Esta seção descreve como criar um programa VBScript que lista a versão das instâncias instaladas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão em execução em um computador.  
   
  O exemplo de código lista as instâncias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em execução no computador e sua versão.  
   
@@ -42,8 +42,6 @@ ms.locfileid: "68139444"
 5.  Salve o arquivo.  
   
 6.  Execute o script digitando **cscript Test. vbs** no prompt de comando.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>Exemplo  
   

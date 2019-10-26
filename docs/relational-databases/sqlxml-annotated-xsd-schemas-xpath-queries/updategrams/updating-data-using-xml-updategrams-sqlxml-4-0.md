@@ -1,5 +1,5 @@
 ---
-title: Atualização de dados usando diagramas de atualização XML (SQLXML 4.0) | Microsoft Docs
+title: Atualizando dados usando Updategrams XML (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -27,16 +27,16 @@ ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7da3eda9962feae31a07048f2ed1f14cd1a296f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ffaa1f91e117c6d2e244e5b677025c60649b6408
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018483"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907925"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Atualizando dados que usam diagramas de atualização XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Quando você atualiza os dados existentes, você deve especificar ambos os  **\<antes de >** e  **\<depois >** blocos. Os elementos especificados na  **\<antes de >** e  **\<depois >** blocos descrevem a alteração desejada. O diagrama usa o elemento (s) que é especificados na  **\<antes de >** bloco para identificar os registros existentes no banco de dados. O elemento (s) correspondente na  **\<depois >** bloco indicam como os registros devem aparecer depois de executar a operação de atualização. Com essas informações, o diagrama de atualização cria uma instrução SQL que corresponde a  **\<depois >** bloco. O diagrama de atualização usa esta instrução para atualizar o banco de dados.  
+  Ao atualizar os dados existentes, você deve especificar os **\<antes >** e **\<após** os blocos de >. Os elementos especificados na **\<antes >** e **\<após** os blocos de > descrevem a alteração desejada. O updategram usa os elementos especificados no bloco de **\<antes de >** para identificar os registros existentes no banco de dados. Os elementos correspondentes na **\<depois** do bloco de > indicam como os registros devem ser examinados após a execução da operação de atualização. A partir dessas informações, o updategram cria uma instrução SQL que corresponde ao **\<após >** bloco. O diagrama de atualização usa esta instrução para atualizar o banco de dados.  
   
  Este é o formato do diagrama de atualização para uma operação de atualização:  
   
@@ -55,41 +55,41 @@ ms.locfileid: "68018483"
 </ROOT>  
 ```  
   
- **\<updg:before>**  
- Os elementos na  **\<antes de >** bloco identificam os registros existentes nas tabelas de banco de dados.  
+ **\<updg: antes de >**  
+ Os elementos na **\<antes >** bloco identificam os registros existentes nas tabelas do banco de dados.  
   
- **\<updg:after>**  
- Os elementos na  **\<depois >** bloco descrevem como os registros especificados no  **\<antes >** bloco deve se parecer após as atualizações são aplicadas.  
+ **\<updg: After >**  
+ Os elementos na **\<depois** do bloco de > descrevem como os registros especificados no **\<antes de >** bloco devem ser aplicados depois que as atualizações são aplicadas.  
   
- O **esquema de mapeamento** atributo identifica o esquema de mapeamento a ser usado pelo diagrama de atualização. Se o diagrama Especifica um esquema de mapeamento, os nomes de elementos e atributos especificados nos  **\<antes de >** e  **\<depois >** blocos devem corresponder aos nomes no esquema. O esquema de mapeamento mapeia esses nomes de elemento ou atributo para os nomes de tabela de banco de dados e de coluna.  
+ O atributo **Mapping-Schema** identifica o esquema de mapeamento a ser usado pelo updategram. Se o updategram especificar um esquema de mapeamento, os nomes de elemento e atributo especificados na **\<antes >** e **\<após** os blocos de > devem corresponder aos nomes no esquema. O esquema de mapeamento mapeia esses nomes de elemento ou atributo para os nomes de tabela de banco de dados e de coluna.  
   
- Se um diagrama de atualização não especificar um esquema, o diagrama usará mapeamento padrão. No mapeamento padrão, o  **\<ElementName >** especificado no diagrama de atualização mapeará para a tabela de banco de dados e o mapa de elementos ou atributos filho para as colunas de banco de dados.  
+ Se um diagrama de atualização não especificar um esquema, o diagrama usará mapeamento padrão. No mapeamento padrão, o **\<ElementName >** especificado no updategram mapeia para a tabela de banco de dados e os elementos filho ou atributos são mapeados para as colunas do banco de dados.  
   
- Um elemento de  **\<antes de >** bloco deve corresponder com apenas uma linha de tabela no banco de dados. Se o elemento corresponde a várias linhas da tabela ou não corresponde a nenhuma linha de tabela, o diagrama de atualização retornará um erro e cancelará todo o  **\<sincronização >** bloco.  
+ Um elemento na **\<antes de >** bloco deve corresponder a apenas uma linha de tabela no banco de dados. Se o elemento corresponder a várias linhas de tabela ou não corresponder a nenhuma linha de tabela, o updategram retornará um erro e cancelará todo o bloco de **> de sincronização de\<** .  
   
- Um diagrama de atualização pode incluir vários  **\<sincronização >** blocos. Cada  **\<sincronização >** bloco é tratado como uma transação. Cada  **\<sincronização >** bloco pode ter vários  **\<antes >** e  **\<depois >** blocos. Por exemplo, se você estiver atualizando dois dos registros existentes, você pode especificar dois  **\<antes de >** e  **\<depois >** pares, um para cada registro que está sendo atualizado.  
+ Um updategram pode incluir vários blocos de **> de sincronização de\<** . Cada **\<** bloco de sincronização é tratado como uma transação. Cada **\<** bloco de sincronização pode ter vários **\<antes de >** e **\<após** os blocos de >. Por exemplo, se você estiver atualizando dois dos registros existentes, poderá especificar dois **\<antes >** e **\<após** os pares de >, um para cada registro que está sendo atualizado.  
   
 ## <a name="using-the-updgid-attribute"></a>Usando o atributo updg:id  
- Quando forem especificados vários elementos na  **\<antes de >** e  **\<depois >** blocos, use o **updg: ID** atributo para marcar linhas no  **\<antes de >** e  **\<depois >** blocos. A lógica de processamento usa essas informações para determinar qual registro na  **\<antes de >** bloquear combina com qual registro no  **\<depois >** bloco.  
+ Quando vários elementos são especificados no **\<antes >** e **\<depois** de blocos de >, use o atributo **updg: id** para marcar linhas na **\<antes >** e **\<após** os blocos de >. A lógica de processamento usa essas informações para determinar qual registro na **\<antes de >** pares de blocos com o registro no **\<depois de >** bloco.  
   
- O **updg: ID** atributo não é necessário (embora recomendado) se qualquer um dos seguintes existir:  
+ O atributo **updg: ID** não é necessário (embora recomendado) se uma das seguintes opções existir:  
   
--   Os elementos no esquema de mapeamento especificado tiverem o **SQL: Key-campos** atributo definido neles.  
+-   Os elementos no esquema de mapeamento especificado têm o atributo **SQL: key-fields** definido neles.  
   
 -   Há um ou mais valor específico fornecido para o campo chave no diagrama de atualização.  
   
- Se for o caso, tanto o diagrama usa as colunas de chave são especificadas na **SQL: Key-campos** para emparelhar os elementos a  **\<antes >** e  **\< Depois de >** blocos.  
+ Se for o caso, o updategram usará as colunas de chave especificadas nos **campos SQL: Key** para emparelhar os elementos na **\<antes >** e **\<após** os blocos de >.  
   
- Se o esquema de mapeamento não identificar colunas de chave (usando **SQL: Key-campos**) ou se o diagrama de atualização estiver atualizando um valor de coluna de chave, você deve especificar **updg: ID**.  
+ Se o esquema de mapeamento não identificar as colunas de chave (usando **SQL: key-fields**) ou se o updategram estiver atualizando um valor de coluna de chave, você deverá especificar **updg: ID**.  
   
- Os registros que são identificados na  **\<antes de >** e  **\<depois >** blocos é preciso estar na mesma ordem. O **updg: ID** atributo força a associação entre os elementos que são especificados na  **\<antes >** e  **\<depois >** blocos.  
+ Os registros identificados na **\<antes >** e **\<após** os blocos de > não precisam estar na mesma ordem. O atributo **updg: ID** força a associação entre os elementos especificados no **\<antes >** e **\<após** os blocos de >.  
   
- Se você especificar um elemento na  **\<antes de >** bloco e apenas um elemento correspondente no  **\<depois >** bloquear, usando **updg: ID** não é necessário. No entanto, é recomendável que você especifique **updg: ID** assim mesmo para evitar ambiguidade.  
+ Se você especificar um elemento na **\<antes de >** bloco e apenas um elemento correspondente no **\<depois** do bloco de >, o uso de **updg: ID** não será necessário. No entanto, é recomendável que você especifique **updg: ID** de qualquer forma para evitar ambigüidade.  
   
 ## <a name="examples"></a>Exemplos  
  Antes de você usar os exemplos do diagrama de atualização, observe o seguinte:  
   
--   A maioria dos exemplos usa mapeamento padrão (ou seja, nenhum esquema de mapeamento é especificado no diagrama de atualização). Para obter mais exemplos de diagramas de atualização que usam esquemas de mapeamento, consulte [especificando um esquema de mapeamento anotado em um diagrama de atualização &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   A maioria dos exemplos usa mapeamento padrão (ou seja, nenhum esquema de mapeamento é especificado no diagrama de atualização). Para obter mais exemplos de Updategrams que usam esquemas de mapeamento, consulte [especificando um esquema de mapeamento anotado em um &#40;SQLXML do&#41;updategram 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 -   A maioria dos exemplos usa o banco de dados de exemplo do AdventureWorks. Todas as atualizações são aplicadas às tabelas deste banco de dados. É possível restaurar o banco de dados AdventureWorks.  
   
@@ -109,9 +109,9 @@ ms.locfileid: "68018483"
 </ROOT>  
 ```  
   
- O registro descrito na  **\<antes de >** bloco representa o registro atual no banco de dados. O diagrama usa todos os valores de coluna especificados na  **\<antes de >** bloco para procurar o registro. Este diagrama de atualização, o  **\<antes de >** block fornece apenas a coluna ContactID; portanto, o diagrama de atualização usa apenas o valor para procurar o registro. Se você fosse acrescentar o valor LastName a esse bloco, o diagrama de atualização usaria os valores ContactID e LastName para pesquisar.  
+ O registro descrito na **\<antes >** bloco representa o registro atual no banco de dados. O updategram usa todos os valores de coluna especificados no bloco de **\<antes de >** para pesquisar o registro. Nesse updategram, o **\<antes >** bloco fornece apenas a coluna ContactID; Portanto, o updategram usa apenas o valor para pesquisar o registro. Se você fosse acrescentar o valor LastName a esse bloco, o diagrama de atualização usaria os valores ContactID e LastName para pesquisar.  
   
- Este diagrama de atualização, o  **\<depois >** block fornece apenas o valor da coluna LastName porque esse é o único valor que está sendo alterado.  
+ Nesse updategram, o **\<após >** bloco fornece apenas o valor da coluna LastName porque esse é o único valor que está sendo alterado.  
   
 ##### <a name="to-test-the-updategram"></a>Para testar o diagrama de atualização  
   
@@ -119,18 +119,16 @@ ms.locfileid: "68018483"
   
 2.  Crie e use o Script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o diagrama de atualização.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>B. Atualizando vários registros usando o atributo updg:id  
+### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>b. Atualizando vários registros usando o atributo updg:id  
  Neste exemplo, o diagrama de atualização executa duas atualizações na tabela HumanResources.Shift no banco de dados do AdventureWorks:  
   
 -   Ele altera o nome do turno do dia original que inicia às 7h00 do "Dia" até a "Madrugada".  
   
 -   Insere um novo turno denominado "Fim da Manhã" que inicia às 10h00.  
   
- No diagrama de atualização, o **updg: ID** atributo cria associações entre os elementos na  **\<antes >** e  **\<depois >** blocos.  
+ No updategram, o atributo **updg: ID** cria associações entre os elementos na **\<antes >** e **\<após** os blocos de >.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -149,7 +147,7 @@ ms.locfileid: "68018483"
 </ROOT>  
 ```  
   
- Observe como o **updg: ID** atributo combina a primeira instância da \<HumanResources. SHIFT > elemento no  **\<antes de >** bloco com a segunda instância das \< HumanResources. SHIFT > elemento na  **\<depois >** bloco.  
+ Observe como o atributo **updg: ID** emparelha a primeira instância do elemento \<HumanResources. Shift > no **\<antes de >** bloco com a segunda instância do elemento \<HumanResources. Shift > na **\<após >** bloco.  
   
 ##### <a name="to-test-the-updategram"></a>Para testar o diagrama de atualização  
   
@@ -157,15 +155,15 @@ ms.locfileid: "68018483"
   
 2.  Crie e use o Script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o diagrama de atualização.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. Especificando vários \<antes de > e \<depois > blocos  
- Para evitar ambiguidade, você pode escrever o diagrama de atualização do exemplo B por meio de várias  **\<antes de >** e  **\<depois >** pares de blocos. Especificando  **\<antes de >** e  **\<depois >** pares é uma maneira de especificar várias atualizações com um mínimo de confusão. Além disso, se cada do  **\<antes de >** e  **\<depois >** blocos especificam no máximo um elemento, você não precisa usar o **updg: ID** atributo .  
+### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. Especificando vários \<antes > e \<após blocos de >  
+ Para evitar ambigüidade, você pode escrever o updategram no exemplo B usando vários **\<antes >** e **\<após** os pares de blocos de >. Especificar **\<antes >** e **\<após** os pares de > é uma maneira de especificar várias atualizações com um mínimo de confusão. Além disso, se cada um dos **\<antes >** e **\<depois** que os blocos de > especificarem no máximo um elemento, você não precisará usar o atributo **updg: ID** .  
   
 > [!NOTE]  
->  Para formar um par, o  **\<depois >** marca deve vir logo após correspondente  **\<antes >** marca.  
+>  Para formar um par, a **\<após >** marca deve imediatamente seguir sua **\<correspondente antes de >** marca.  
   
- No diagrama a seguir, a primeira  **\<antes de >** e  **\<depois >** par atualiza o nome do turno para o turno do dia. O segundo par insere um novo registro de turno.  
+ No updategram a seguir, a primeira **\<antes >** e **\<depois** que o par de > atualiza o nome de deslocamento para o turno do dia. O segundo par insere um novo registro de turno.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -194,16 +192,16 @@ ms.locfileid: "68018483"
   
 2.  Crie e use o Script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o diagrama de atualização.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="d-specifying-multiple-sync-blocks"></a>D. Especificando vários \<sincronização > blocos  
- Você pode especificar vários  **\<sincronização >** blocos em um diagrama de atualização. Cada  **\<sincronização >** bloco especificado é uma transação independente.  
+### <a name="d-specifying-multiple-sync-blocks"></a>D. Especificando vários blocos de > de sincronização de \<  
+ Você pode especificar vários blocos de **> de sincronização de\<** em um updategram. Cada **\<** bloco de sincronização especificado é uma transação independente.  
   
- No diagrama a seguir, a primeira  **\<sincronização >** bloco atualiza um registro na tabela Sales. Customer. Por causa da simplicidade, o diagrama de atualização especifica só os valores de coluna exigidos; o valor de identidade (CustomerID) e o valor que está sendo atualizado (SalesPersonID).  
+ No updategram a seguir, o primeiro **\<a sincronização >** bloquear atualiza um registro na tabela Sales. Customer. Por causa da simplicidade, o diagrama de atualização especifica só os valores de coluna exigidos; o valor de identidade (CustomerID) e o valor que está sendo atualizado (SalesPersonID).  
   
- A segunda  **\<sincronização >** bloco adiciona dois registros à tabela Sales. SalesOrderHeader. Para esta tabela, SalesOrderID é uma coluna do IDENTITY. Portanto, o diagrama de atualização não especifica o valor de SalesOrderID em cada uma da \<Sales. SalesOrderHeader > elementos.  
+ A segunda **\<** bloco de > de sincronização adiciona dois registros à tabela Sales. SalesOrderHeader. Para esta tabela, SalesOrderID é uma coluna do IDENTITY. Portanto, o updategram não especifica o valor de SalesOrderID em cada um dos elementos de > \<Sales. SalesOrderHeader.  
   
- Especificando vários  **\<sincronização >** blocos é útil porque se a segunda  **\<sincronização >** bloco (uma transação) não adicionar registros à tabela Sales. SalesOrderHeader, o primeira  **\<sincronização >** bloco ainda poderá atualizar o registro do cliente na tabela Sales. Customer.  
+ A especificação de vários blocos de **> de sincronização de\<** é útil porque, se o segundo\<bloco de > de **sincronização** (uma transação) falhar ao adicionar registros à tabela Sales. SalesOrderHeader, o primeiro\<bloco **> de sincronização** ainda poderá atualizar o registro de cliente na tabela Sales. Customer.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -260,14 +258,14 @@ ms.locfileid: "68018483"
   
 2.  Crie e use o Script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o diagrama de atualização.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ### <a name="e-using-a-mapping-schema"></a>E. Usando um esquema de mapeamento  
- Neste exemplo, o diagrama Especifica um esquema de mapeamento usando o **esquema de mapeamento** atributo. (Não há um mapeamento padrão; isto é, o esquema de mapeamento fornece o mapeamento necessário de elementos e atributos no diagrama de atualização para as tabelas e colunas do banco de dados.)  
+ Neste exemplo, o updategram especifica um esquema de mapeamento usando o atributo **Mapping-Schema** . (Não há um mapeamento padrão; isto é, o esquema de mapeamento fornece o mapeamento necessário de elementos e atributos no diagrama de atualização para as tabelas e colunas do banco de dados.)  
   
  Os elementos e atributos especificados no diagrama de atualização referem-se aos elementos e atributos no esquema de mapeamento.  
   
- Tem o seguinte esquema de mapeamento XSD  **\<cliente >** ,  **\<Order >** , e  **\<OD >** elementos que mapeiam para o Tabelas Sales. Customer, Sales. SalesOrderHeader e SalesOrderDetail no banco de dados.  
+ O esquema de mapeamento XSD a seguir tem **\<> de cliente**, **\<> de pedido**e **\<OD >** elementos que são mapeados para as tabelas Sales. Customer, Sales. SalesOrderHeader e Sales. SalesOrderDetail no banco de dados.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -320,7 +318,7 @@ ms.locfileid: "68018483"
 </xsd:schema>  
 ```  
   
- Este esquema de mapeamento (UpdategramMappingSchema.xml) é especificado no diagrama de atualização a seguir. O diagrama de atualização adiciona um item de detalhe de ordem na tabela Sales.SalesOrderDetail para uma ordem específica. O diagrama de atualização inclui elementos aninhados: uma  **\<OD >** elemento aninhado dentro de uma  **\<Order >** elemento. A relação de chave primária/chave estrangeira entre estes dois elementos é especificada no esquema de mapeamento.  
+ Este esquema de mapeamento (UpdategramMappingSchema.xml) é especificado no diagrama de atualização a seguir. O diagrama de atualização adiciona um item de detalhe de ordem na tabela Sales.SalesOrderDetail para uma ordem específica. O updategram inclui elementos aninhados: um elemento **\<OD >** aninhado dentro de um elemento **\<Order >** . A relação de chave primária/chave estrangeira entre estes dois elementos é especificada no esquema de mapeamento.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -346,9 +344,9 @@ ms.locfileid: "68018483"
   
 3.  Crie e use o Script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o diagrama de atualização.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Para obter mais exemplos de diagramas de atualização que usam esquemas de mapeamento, consulte [especificando um esquema de mapeamento anotado em um diagrama de atualização &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Para obter mais exemplos de Updategrams que usam esquemas de mapeamento, consulte [especificando um esquema de mapeamento anotado em um &#40;SQLXML do&#41;updategram 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ### <a name="f-using-a-mapping-schema-with-idrefs-attributes"></a>F. Usando um esquema de mapeamento com atributos IDREFS  
  Este exemplo ilustra como os diagramas de atualização usam os atributos IDREFS no esquema de mapeamento para atualizar registros em várias tabelas. Para obter este exemplo, assuma que o banco de dados consiste nas seguintes tabelas:  
@@ -361,7 +359,7 @@ ms.locfileid: "68018483"
   
  Como um aluno pode se matricular em vários cursos e um curso pode ter muitos alunos, a terceira tabela, Enrollment, é necessária para representar esta relação M:N.  
   
- O esquema de mapeamento XSD a seguir fornece uma exibição XML das tabelas usando o  **\<Student >** ,  **\<curso >** , e  **\<registro >** elementos. O **IDREFS** atributos no esquema de mapeamento especificam a relação entre esses elementos. O **StudentIDList** atributo as  **\<curso >** elemento é um **IDREFS** atributo de tipo que se refere à coluna StudentID na tabela Enrollment. Da mesma forma, o **EnrolledIn** atributo as  **\<aluno >** elemento é um **IDREFS** atributo de tipo que se refere à coluna CourseID na inscrição tabela.  
+ O esquema de mapeamento XSD a seguir fornece uma exibição XML das tabelas usando o **\<Student**, **\<curso >** e\<> de **registro** . Os atributos **IDREFS** no esquema de mapeamento especificam a relação entre esses elementos. O atributo **StudentIDList** no elemento **> do curso de\<** é um atributo de tipo **IDREFS** que se refere à coluna StudentId na tabela de registro. Da mesma forma, o atributo **Enrollment** no elemento **\<Student >** é um atributo de tipo **IDREFS** que se refere à coluna cursoid na tabela de registro.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -458,7 +456,7 @@ ms.locfileid: "68018483"
   
 5.  Crie e use o Script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o diagrama de atualização.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 6.  Salve e execute o diagrama de atualização a seguir como descrito nas etapas anteriores. O diagrama de atualização adiciona o aluno com StudentID = "1" novamente ao curso CS102 adicionando um registro na tabela Enrollment.  
   
@@ -556,9 +554,9 @@ ms.locfileid: "68018483"
 </Schema>  
 ```  
   
- Para obter mais exemplos de diagramas de atualização que usam esquemas de mapeamento, consulte [especificando um esquema de mapeamento anotado em um diagrama de atualização &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Para obter mais exemplos de Updategrams que usam esquemas de mapeamento, consulte [especificando um esquema de mapeamento anotado em um &#40;SQLXML do&#41;updategram 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Considerações de segurança do diagrama de atualização &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Considerações &#40;de segurança do Updategram SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

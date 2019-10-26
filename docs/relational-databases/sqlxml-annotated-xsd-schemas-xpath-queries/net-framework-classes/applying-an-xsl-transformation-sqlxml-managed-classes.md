@@ -1,5 +1,5 @@
 ---
-title: Aplicando uma transformação XSL (Classes gerenciadas SQLXML) | Microsoft Docs
+title: Aplicando um XSL Transformation (classes gerenciadas SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3422f785cb57254695d0960b27d03604a4af6101
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 26a2cea817c7e1ca7855b48512f4bf645cf4dcc3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934308"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908497"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Aplicando uma transformação XSL (classes gerenciadas SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -110,8 +110,6 @@ class Test
      Isso cria um executável (DocSample.exe).  
   
 4.  No prompt de comando, execute DocSample.exe.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="applying-an-xsl-transformation-in-the-net-framework"></a>Aplicando uma transformação XSL no .NET Framework  
  Em vez de aplicar uma transformação XSL na camada intermediária, como descrito anteriormente, você pode aplicar uma transformação XSL do lado do cliente (no .NET Framework). O código C# revisado a seguir mostra como a transformação XSL é aplicada no .NET Framework.  

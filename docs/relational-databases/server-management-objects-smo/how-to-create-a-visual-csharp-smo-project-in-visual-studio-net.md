@@ -13,27 +13,27 @@ ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11fb5e8aec7f61c83ec2b3edecdb3aa027cf2693
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 3989c49d800a9f485c8562aed4406c57216eed77
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148642"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909793"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>Como criar um projeto SMO do Visual C# no Visual Studio .NET
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Esta seção descreve como criar um aplicativo de console SMO simples.  
   
- Este exemplo importa namespaces que permitem ao programa referenciar tipos SMO. A importação do namespace do **agente** é opcional. Use-a quando estiver gravando um programa que usa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. O namespace **comum** é necessário para estabelecer uma conexão segura com a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O namespace SqlClient é usado para processar erros de exceção do SQL.  
+ Este exemplo importa namespaces que permitem ao programa referenciar tipos SMO. A importação do namespace do **agente** é opcional. Use-a quando estiver gravando um programa que usa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. O namespace **comum** é necessário para estabelecer uma conexão segura com a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O namespace **SqlClient** é usado para processar erros de exceção do SQL.  
   
 ### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>Criando um projeto SMO do Visual C# no Visual Studio .NET  
   
 1. Iniciar o Visual Studio
   
-2. No menu **arquivo** , clique em **novo** e em **projeto**.  A caixa de diálogo **Novo Projeto** é exibida.   
+2. No menu **arquivo** , clique em **novo** e em **projeto**.  A caixa de diálogo **Novo Projeto** será exibida.   
   
-3. \\ **C#** No painel instalado, navegue até modelos Visual\\Windows e selecione aplicativo de console. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
+3. No painel [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **instalado** , navegue até **modelos**\\**Visual C#** \\**Windows** e selecione **aplicativo de console**.  
   
 4. Adicional Na caixa de texto **nome** , digite o nome do novo aplicativo.  
 
@@ -53,6 +53,4 @@ ms.locfileid: "70148642"
 15. O SMO tem vários namespaces em Microsoft.SqlServer.Management.Smo, como o Microsoft.SqlServer.Management.Smo.Agent. Adicione esses namespaces obrigatórios.  
   
 16. Agora você pode adicionar seu código SMO.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

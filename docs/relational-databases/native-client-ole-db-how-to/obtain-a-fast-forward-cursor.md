@@ -1,5 +1,5 @@
 ---
-title: Obter um Cursor FAST_FORWARD | Microsoft Docs
+title: Obter um cursor FAST_FORWARD | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75402ddc6c04ef9487f544fb070a143138cf66ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec168903543e42dff34d03086949bee79829f328
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110122"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909538"
 ---
-# <a name="obtain-a-fastforward-cursor"></a>Obter um cursor FAST_FORWARD
+# <a name="obtain-a-fast_forward-cursor"></a>Obter um cursor FAST_FORWARD
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -31,15 +31,13 @@ ms.locfileid: "68110122"
 > [!IMPORTANT]  
 >  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
   
-### <a name="to-obtain-fastforward-cursor"></a>Para obter o cursor FAST_FORWARD  
+### <a name="to-obtain-fast_forward-cursor"></a>Para obter o cursor FAST_FORWARD  
   
 1.  Estabeleça uma conexão com a fonte de dados.  
   
 2.  Defina as propriedades do conjunto de linhas DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT e DBPROP_OWNUPDATEDELETE como VARIANT_TRUE.  
   
 3.  Execute o comando.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como definir as propriedades de conjunto de linhas para obter um cursor de FAST_FORWARD. Após configurar as propriedades, uma instrução SELECT é executada para recuperar e exibir a coluna Name da tabela Purchasing.Vendor no banco de dados AdventureWorks. Este exemplo não tem suporte em IA64.  
