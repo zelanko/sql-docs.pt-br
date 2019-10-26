@@ -1,5 +1,5 @@
 ---
-title: Chamar um procedimento armazenado (OLE DB) | Microsoft Docs
+title: Chamando um procedimento armazenado (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4de0a6213f27f4feb88949dd6062321ad30c2866
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 969d4b7218ae7a6b1f04ee75ad95c8ee8ba54690
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031864"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907365"
 ---
 # <a name="stored-procedures---calling"></a>Procedimentos armazenados – Chamando
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Um procedimento armazenado pode ter zero ou mais parâmetros. Também pode retornar um valor. Ao usar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client, os parâmetros para um procedimento armazenado podem ser passados por:  
+  Um procedimento armazenado pode ter zero ou mais parâmetros. Também pode retornar um valor. Ao usar o provedor de OLE DB de cliente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nativo, os parâmetros para um procedimento armazenado podem ser passados por:  
   
 -   Hard-coding o valor de dados.  
   
@@ -79,10 +79,8 @@ ms.locfileid: "68031864"
   
 5.  Execute o comando usando **ICommand::Execute**.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="methods-of-calling-a-stored-procedure"></a>Métodos de chamar um procedimento armazenado  
- Ao executar um procedimento armazenado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte ao provedor de OLE DB do Native Client a:  
+ Ao executar um procedimento armazenado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o provedor de OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client oferece suporte ao:  
   
 -   Sequência de escape CALL do ODBC.  
   
@@ -97,7 +95,7 @@ ms.locfileid: "68031864"
   
  A sintaxe geral para chamar um procedimento usando a sequência de escape ODBC CALL é:  
   
- {[ **? =** ]**chamar**_procedure_name_[ **(** [*parâmetro*] [ **,** [*parâmetro*]]... **)** ]}  
+ {[ **? =** ]**chamar**_procedure_name_[ **(** [*parâmetro*] [ **,** [*Parameter*]]... **)** ]}  
   
  Por exemplo:  
   
@@ -110,7 +108,7 @@ ms.locfileid: "68031864"
   
  Quando a sequência de escape RPC é usada para executar um procedimento armazenado, o provedor não chama nenhuma função auxiliar para determinar as informações dos parâmetros (como ela faz no caso da sintaxe de ODBC CALL). A sintaxe de RPC é mais simples que a sintaxe de ODBC CALL, assim o comando é analisado mais rápido, melhorando o desempenho. Neste caso, você precisa fornecer as informações de parâmetro executando **ICommandWithParameters::SetParameterInfo**.  
   
- A sequência de escape RPC exige que você tenha um valor de retorno. Se o procedimento armazenado não retornar um valor, o servidor retornará um 0 por padrão. Além disso, você não pode abrir um cursor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no procedimento armazenado. O procedimento armazenado é implicitamente preparado e a chamada a **ICommandPrepare::Prepare** falhará. Devido à impossibilidade de preparar uma chamada RPC, você não pode consultar os metadados de coluna; Icolumnsinfo:: Getcolumninfo e IColumnsRowset:: Getcolumnsrowset retornarão DB_E_NOTPREPARED.  
+ A sequência de escape RPC exige que você tenha um valor de retorno. Se o procedimento armazenado não retornar um valor, o servidor retornará um 0 por padrão. Além disso, você não pode abrir um cursor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no procedimento armazenado. O procedimento armazenado é implicitamente preparado e a chamada a **ICommandPrepare::Prepare** falhará. Devido à incapacidade de preparar uma chamada RPC, você não pode consultar metadados de coluna; IColumnsInfo:: GetColumnInfo e IColumnsRowset:: GetColumnsRowset retornará DB_E_NOTPREPARED.  
   
  Se você souber todos os metadados de parâmetro, a sequência de escape RPC será o modo recomendado para executar procedimentos armazenados.  
   
@@ -120,10 +118,10 @@ ms.locfileid: "68031864"
 {rpc SalesByCategory}  
 ```  
   
- Para um aplicativo de exemplo que demonstra uma sequência de escape RPC, consulte [executar um procedimento armazenado &#40;usando a sintaxe de RPC&#41; e processar códigos de retorno e parâmetros de saída &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Para um aplicativo de exemplo que demonstra uma sequência de escape RPC, consulte [executar um &#40;procedimento armazenado usando&#41; a sintaxe RPC e processar códigos de &#40;retorno&#41;e parâmetros de saída OLE DB](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Instrução Transact-SQL EXECUTE  
- A sequência de escape ODBC CALL e a sequência de escape RPC são os métodos preferidos para chamar um procedimento armazenado no lugar da instrução [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client usa o mecanismo RPC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para otimizar o processamento do comando. Este protocolo de RPC aumenta o desempenho, eliminando grande parte do processamento de parâmetros e da análise da instrução feita no servidor.  
+ A sequência de escape ODBC CALL e a sequência de escape RPC são os métodos preferidos para chamar um procedimento armazenado no lugar da instrução [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). O provedor de OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nativo do cliente usa o mecanismo RPC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para otimizar o processamento de comandos. Este protocolo de RPC aumenta o desempenho, eliminando grande parte do processamento de parâmetros e da análise da instrução feita no servidor.  
   
  Este é um exemplo da instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE**:  
   
@@ -131,7 +129,7 @@ ms.locfileid: "68031864"
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

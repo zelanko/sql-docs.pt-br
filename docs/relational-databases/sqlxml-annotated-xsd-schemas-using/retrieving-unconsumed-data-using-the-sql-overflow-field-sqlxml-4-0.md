@@ -1,5 +1,5 @@
 ---
-title: 'Recuperando dados não consumidos usando SQL: overflow-field (SQLXML 4.0) | Microsoft Docs'
+title: 'Recuperando dados não consumidos usando o campo SQL: overflow-field (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,25 +18,25 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 292c07e1ab55313f0eedf7f4cb0c3f4a155aff30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6714940fe14e2f7a1182a24c37f0d7c58b4d3e72
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067011"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907165"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Recuperando dados não consumidos usando sql:overflow-field (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Quando forem inseridos registros em um banco de dados a partir de um documento XML usando a função OPENXML do [!INCLUDE[tsql](../../includes/tsql-md.md)], todos os dados não consumidos no documento XML de origem poderão ser armazenados em uma coluna. Quando você recupera dados de um banco de dados usando esquemas anotados, você pode especificar o **SQL: overflow-campo** atributo para identificar a coluna na tabela na qual os dados de estouro são armazenados. O **SQL: overflow-campo** atributo pode ser especificado em  **\<elemento >** .  
+  Quando forem inseridos registros em um banco de dados a partir de um documento XML usando a função OPENXML do [!INCLUDE[tsql](../../includes/tsql-md.md)], todos os dados não consumidos no documento XML de origem poderão ser armazenados em uma coluna. Ao recuperar dados de um banco de dado usando esquemas anotados, você pode especificar o atributo **SQL: overflow-field** para identificar a coluna na tabela na qual os dados de estouro são armazenados. O atributo **SQL: overflow-field** pode ser especificado no **elemento\<** .  
   
  Em seguida, esses dados são recuperados destas formas:  
   
--   Os atributos armazenados na coluna de estouro são adicionados ao elemento que contém o **SQL: overflow-campo** anotação.  
+-   Os atributos armazenados na coluna Overflow são adicionados ao elemento que contém a anotação **SQL: overflow-field** .  
   
 -   Os elementos filhos e seus descendentes, armazenados na coluna de estouro do banco de dados, são adicionados como elementos filhos, após o conteúdo que é especificado explicitamente no esquema. (Nenhuma ordem é preservada.)  
   
 ## <a name="examples"></a>Exemplos  
- Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [requisitos para executar exemplos do SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqloverflow-field-for-an-element"></a>A. Especificando sql:overflow-field para um elemento  
  Este exemplo presume que o seguinte script foi executado de forma que existe uma tabela chamada Customers2 no banco de dados tempdb:  
@@ -62,7 +62,7 @@ INSERT INTO Customers2 VALUES (
 GO  
 ```  
   
- Além disso, você deve criar um diretório virtual para o banco de dados do tempdb – e um nome virtual do modelo de **modelo** tipo chamado "template".  
+ Além disso, você deve criar um diretório virtual para o banco de dados tempdb-e um nome virtual de modelo do tipo de **modelo** chamado "modelo".  
   
  No exemplo a seguir, o esquema de mapeamento recupera os dados não consumidos que são armazenados na coluna AddressOverflow tabela Customers2:  
   
@@ -101,9 +101,7 @@ GO
   
 3.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4,0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Este é o conjunto de resultados:  
   

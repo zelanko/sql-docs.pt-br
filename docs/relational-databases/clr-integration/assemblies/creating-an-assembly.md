@@ -1,5 +1,5 @@
 ---
-title: Criando um Assembly | Microsoft Docs
+title: Criando um assembly | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87416b9cea3aee133493f93f97c9ccf11823cde7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9493567f33cf07dbfa9ae4f19d037a7db6157eda
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027931"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907397"
 ---
 # <a name="creating-an-assembly"></a>Criando um assembly
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Os objetos de banco de dados gerenciado, como os procedimentos armazenados ou gatilhos, são compilados e implantados em unidades chamadas de assembly. Assemblies DLL gerenciados devem ser registrados no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antes que a funcionalidade do assembly pode ser usada. Para registrar um assembly em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], use a instrução CREATE ASSEMBLY. Este tópico trata sobre como registrar um assembly em um banco de dados usando a instrução CREATE ASSEMBLY e como especificar as configurações de segurança do assembly.  
+  Os objetos de banco de dados gerenciado, como os procedimentos armazenados ou gatilhos, são compilados e implantados em unidades chamadas de assembly. Os assemblies DLL gerenciados devem ser registrados em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antes da funcionalidade que o assembly fornece pode ser usado. Para registrar um assembly em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], use a instrução CREATE ASSEMBLY. Este tópico trata sobre como registrar um assembly em um banco de dados usando a instrução CREATE ASSEMBLY e como especificar as configurações de segurança do assembly.  
   
 ## <a name="the-create-assembly-statement"></a>A instrução CREATE ASSEMBLY  
- A instrução CREATE ASSEMBLY é usada para criar um assembly em um banco de dados. Veja um exemplo:  
+ A instrução CREATE ASSEMBLY é usada para criar um assembly em um banco de dados. A seguir está um exemplo:  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -50,9 +50,9 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   O assembly chamado ou referenciado foi criado no mesmo banco de dados.  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>Especificando a segurança ao criar assemblies  
- Durante a criação de um assembly em um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] banco de dados, você pode especificar um dos três diferentes níveis de segurança no qual seu código pode executar: **SEGURO**, **EXTERNAL_ACCESS**, ou **UNSAFE**. Quando o **CREATE ASSEMBLY** instrução é executada, determinadas verificações são executadas no assembly de código que pode fazer com que o assembly a ser falhar ao se registrar no servidor. Para obter mais informações, consulte o exemplo representação no [CodePlex](https://msftengprodsamples.codeplex.com/).  
+ Ao criar um assembly em um banco de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], você pode especificar um dos três níveis diferentes de segurança em que seu código pode ser executado: **seguro**, **EXTERNAL_ACCESS**ou **não seguro**. Quando a instrução **Create assembly** é executada, determinadas verificações são executadas no assembly de código, o que pode fazer com que o assembly falhe ao se registrar no servidor. Para obter mais informações, consulte o exemplo de representação no [codeplex](https://msftengprodsamples.codeplex.com/).  
   
- **SEGURANÇA** é o conjunto de permissões padrão e funciona para a maioria dos cenários. Para especificar um determinado nível de segurança, modifique a sintaxe da instrução CREATE ASSEMBLY da seguinte maneira:  
+ **Safe** é o conjunto de permissões padrão e funciona para a maioria dos cenários. Para especificar um determinado nível de segurança, modifique a sintaxe da instrução CREATE ASSEMBLY da seguinte maneira:  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -60,33 +60,31 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = SAFE;  
 ```  
   
- Também é possível criar um assembly com o **seguro** permissão definida simplesmente omitindo a terceira linha de código acima:  
+ Também é possível criar um assembly com o conjunto de permissões **seguro** , simplesmente omitindo a terceira linha de código acima:  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
 FROM 'C:\MyDBApp\SQLCLRTest.dll';  
 ```  
   
- Quando o código em um assembly é executado sob a **seguro** permissão definido, ele só pode fazer cálculos e acessar dados no servidor por meio do provedor gerenciado em processo.  
+ Quando o código em um assembly é executado sob o conjunto de permissões **seguro** , ele só pode fazer computação e acesso a dados no servidor por meio do provedor gerenciado em processo.  
   
-### <a name="creating-externalaccess-and-unsafe-assemblies"></a>Criando assemblies EXTERNAL_ACCESS e UNSAFE  
- **EXTERNAL_ACCESS** aborda cenários em que o código precisa acessar recursos fora do servidor, como arquivos, rede, registro e variáveis de ambiente. Sempre que o servidor acessa um recurso externo, ele representa o contexto de segurança do usuário que chama o código gerenciado.  
+### <a name="creating-external_access-and-unsafe-assemblies"></a>Criando assemblies EXTERNAL_ACCESS e UNSAFE  
+ O **EXTERNAL_ACCESS** aborda cenários nos quais o código precisa acessar recursos fora do servidor, como arquivos, rede, registro e variáveis de ambiente. Sempre que o servidor acessa um recurso externo, ele representa o contexto de segurança do usuário que chama o código gerenciado.  
   
- **UNSAFE** permissão de código é para situações em que um assembly não é seguro de modo verificável ou exige acesso adicional a recursos restritos, como o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] API do Win32.  
+ A permissão de código **inseguro** é para essas situações em que um assembly não é verificamente seguro ou requer acesso adicional a recursos restritos, como o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] API do Win32.  
   
- Para criar uma **EXTERNAL_ACCESS** ou **UNSAFE** assembly no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], uma das duas seguintes condições deve ser atendida:  
+ Para criar um assembly **EXTERNAL_ACCESS** ou **não seguro** no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], uma das duas condições a seguir deve ser atendida:  
   
-1.  O assembly é assinado com nome forte ou com Authenticode usando um certificado. Esse nome forte (ou certificado) é criado dentro de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como uma chave assimétrica (ou certificado), e tem um logon correspondente com **EXTERNAL ACCESS ASSEMBLY** permissão (para assemblies de acesso externo) ou  **UNSAFE ASSEMBLY** permissão (para assemblies não seguros).  
+1.  O assembly é assinado com nome forte ou com Authenticode usando um certificado. Esse nome forte (ou certificado) é criado dentro de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como uma chave assimétrica (ou certificado) e tem um logon correspondente com permissão de **assembly de acesso externo** (para assemblies de acesso externo) ou permissão de **assembly não segura** (para assemblies não seguros).  
   
-2.  O proprietário do banco de dados (DBO) possui **EXTERNAL ACCESS ASSEMBLY** (para **acesso externo** assemblies) ou **UNSAFE ASSEMBLY** (para **UNSAFE** permissão de assemblies) e o banco de dados tem o [propriedade TRUSTWORTHY do banco de dados](../../../relational-databases/security/trustworthy-database-property.md) definido como **ON**.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+2.  O proprietário do banco de dados (DBO) tem o **assembly de acesso externo** (para ASSEMBLIES de **acesso externo** ) ou a permissão de **assembly não seguro** (para assemblies **não seguros** ) e o banco de dados tem a [propriedade de banco de dados TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md) definida como  **EM**.  
 
  As duas condições listadas acima também são verificadas na hora do carregamento do assembly (que inclui a execução). Pelo menos um das condições precisa ser cumprida para carregar o assembly.  
   
- É recomendável que o [propriedade TRUSTWORTHY do banco de dados](../../../relational-databases/security/trustworthy-database-property.md) em um banco de dados não seja definido como **ON** apenas para executar o common language runtime (CLR) de código no processo do servidor. Em vez disso, recomendamos que seja criada uma chave assimétrica do arquivo de assembly no banco de dados mestre. Um logon mapeado para essa chave assimétrica deve ser criado e o logon deve ser concedido **EXTERNAL ACCESS ASSEMBLY** ou **UNSAFE ASSEMBLY** permissão.  
+ Recomendamos que a [propriedade de banco](../../../relational-databases/security/trustworthy-database-property.md) de dados TRUSTWORTHY em um banco de dados não seja definida como **on** somente para executar o código Common Language Runtime (CLR) no processo do servidor. Em vez disso, recomendamos que seja criada uma chave assimétrica do arquivo de assembly no banco de dados mestre. Um logon mapeado para essa chave assimétrica deve ser criado, e o logon deve receber o **assembly de acesso externo** ou a permissão de **assembly não segura** .  
   
- O seguinte [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruções executam as etapas necessárias para criar uma chave assimétrica, mapear um logon para essa chave e, em seguida, conceder **EXTERNAL_ACCESS** permissão ao logon. Você deve executar as instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] a seguir antes de executar a instrução CREATE ASSEMBLY.  
+ As instruções de [!INCLUDE[tsql](../../../includes/tsql-md.md)] a seguir executam as etapas necessárias para criar uma chave assimétrica, mapear um logon para essa chave e conceder a permissão **EXTERNAL_ACCESS** ao logon. Você deve executar as instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] a seguir antes de executar a instrução CREATE ASSEMBLY.  
   
 ```  
 USE master;   
@@ -101,7 +99,7 @@ GO
 > [!NOTE]  
 >  Você deve criar um logon novo para associar com a chave assimétrica. Esse logon é usado somente para conceder permissões; não precisa estar associado a um usuário ou usado dentro do aplicativo.  
   
- Para criar uma **EXTERNAL ACCESS** assembly, o criador precisa ter **acesso externo** permissão. Isso é especificado ao criar o assembly:  
+ Para criar um assembly de **acesso externo** , o criador precisa ter permissão de **acesso externo** . Isso é especificado ao criar o assembly:  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -109,7 +107,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = EXTERNAL_ACCESS;  
 ```  
   
- O seguinte [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruções executam as etapas necessárias para criar uma chave assimétrica, mapear um logon para essa chave e, em seguida, conceder **UNSAFE** permissão ao logon. Você deve executar as instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] a seguir antes de executar a instrução CREATE ASSEMBLY.  
+ As instruções de [!INCLUDE[tsql](../../../includes/tsql-md.md)] a seguir executam as etapas necessárias para criar uma chave assimétrica, mapear um logon para essa chave e conceder permissão **não segura** para o logon. Você deve executar as instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] a seguir antes de executar a instrução CREATE ASSEMBLY.  
   
 ```  
 USE master;   
@@ -121,7 +119,7 @@ GRANT UNSAFE ASSEMBLY TO SQLCLRTestLogin ;
 GO  
 ```  
   
- Para especificar que um assembly é carregado com **UNSAFE** permissão, especifique a **UNSAFE** ao carregar o assembly no servidor de conjunto de permissões:  
+ Para especificar que um assembly é carregado com permissão **não segura** , você especifica o conjunto de permissões **não seguro** ao carregar o assembly no servidor:  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -131,12 +129,12 @@ WITH PERMISSION_SET = UNSAFE;
   
  Para obter mais detalhes sobre as permissões para cada uma das configurações, consulte [segurança da integração CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciando Assemblies de integração CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
- [Alterando um Assembly](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
- [Descarte de um Assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
- [Segurança de acesso do código de integração de CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
- [propriedade TRUSTWORTHY do banco de dados](../../../relational-databases/security/trustworthy-database-property.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciando assemblies de integração CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
+ [Alterando um  de assembly](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)  
+ [Descartando um Assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
+   de [segurança de acesso a código de integração CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
+ [Propriedade de banco de dados TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md)   
  [Permitindo chamadores parcialmente confiáveis](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   
   

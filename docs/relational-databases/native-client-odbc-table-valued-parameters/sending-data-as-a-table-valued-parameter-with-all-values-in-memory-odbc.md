@@ -13,18 +13,18 @@ ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf7d8b166a06d2b4c9973cf310b90f693ba1c6c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a95e676ff7d5d39358638727e317116aa05687f1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129127"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907358"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Enviando dados como um parâmetro com valor de tabela com todos os valores na memória (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Este tópico descreve como enviar dados a um procedimento armazenado como um parâmetro com valor de tabela quando todos os valores estão na memória. Para obter outro exemplo que demonstra parâmetros com valor de tabela, consulte [usar parâmetros &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+  Este tópico descreve como enviar dados a um procedimento armazenado como um parâmetro com valor de tabela quando todos os valores estão na memória. Para outro exemplo que demonstra parâmetros com valor de tabela, consulte [usar parâmetros &#40;com valor de&#41;tabela ODBC](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="prerequisite"></a>Pré-requisito  
  Esse procedimento supõe que o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] tenha sido executado no servidor:  
@@ -90,7 +90,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  O segundo estágio da associação de parâmetros é associar as colunas para o parâmetro com valor de tabela. O foco do parâmetro é definido primeiro para o ordinal do parâmetro com valor de tabela. Em seguida, colunas do valor de tabela são associadas usando SQLBindParameter da mesma forma como seriam se elas fossem parâmetros do procedimento armazenado, mas com ordinais de coluna para ParameterNumber. Se houvesse mais parâmetros com valor de tabela, nós definiríamos o foco para cada um deles sucessivamente e associaríamos suas colunas. Finalmente, o foco de parâmetro é redefinido para 0.  
+3.  O segundo estágio da associação de parâmetros é associar as colunas para o parâmetro com valor de tabela. O foco do parâmetro é definido primeiro para o ordinal do parâmetro com valor de tabela. Em seguida, as colunas do valor da tabela são associadas usando SQLBindParameter da mesma maneira como seriam se fossem parâmetros do procedimento armazenado, mas com ordinais de coluna para ParameterNumber. Se houvesse mais parâmetros com valor de tabela, nós definiríamos o foco para cada um deles sucessivamente e associaríamos suas colunas. Finalmente, o foco de parâmetro é redefinido para 0.  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  
@@ -124,14 +124,12 @@ from @Items
   
 5.  Chame o procedimento:  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     ```  
     // Call the procedure.  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplos de programação de parâmetros com valor de tabela (ODBC)](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
   
   

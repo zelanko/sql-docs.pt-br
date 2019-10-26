@@ -1,5 +1,5 @@
 ---
-title: 'Filtrando valores usando SQL: limit-campo e SQL: limit-value (SQLXML 4.0) | Microsoft Docs'
+title: 'Filtrando valores usando SQL: limit-field e SQL: limit-value (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,23 +19,23 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ac64cc0ff2f16b70000ff4bc33d0f5fd114f872
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 65c26209ed058e5d93663bae9587f8cf5d59abdf
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067112"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906097"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrando valores usando sql:limit-field e sql:limit-value (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Você pode limitar as linhas retornadas de uma consulta de banco de dados com base em algum valor limitador. O **SQL: limit-campo** e **SQL: limit-valor** anotações são usadas para identificar a coluna de banco de dados que contém os valores limitadores e especificar um valor limitador específico a ser usado para filtrar os dados retornado.  
+  Você pode limitar as linhas retornadas de uma consulta de banco de dados com base em algum valor limitador. As anotações **SQL: limit-field** e **SQL: limit-value** são usadas para identificar a coluna de banco de dados que contém valores de limitação e para especificar um valor de limitação específico a ser usado para filtrar os dados retornados.  
   
- O **SQL: limit-campo** anotação é usada para identificar uma coluna que contém um valor limitador; ela é permitida em cada elemento ou atributo mapeado.  
+ A anotação **SQL: limit-field** é usada para identificar uma coluna que contém um valor de limitação; Ele é permitido em cada elemento ou atributo mapeado.  
   
- O **SQL: limit-valor** anotação é usada para especificar o valor limitado na coluna especificada na **SQL: limit-campo** anotação. O **SQL: limit-valor** anotação é opcional. Se **SQL: limit-valor** não é especificado, um valor NULL será assumido.  
+ A anotação **SQL: limit-value** é usada para especificar o valor limitado na coluna especificada na anotação **SQL: limit-field** . A anotação **SQL: limit-value** é opcional. Se **SQL: limit-value** não for especificado, um valor NULL será assumido.  
   
 > [!NOTE]  
->  Ao trabalhar com um **SQL: limit-campo** onde a coluna SQL mapeada é do tipo **real**, o SQLXML 4.0 executa a conversão no **SQL: limit-valor** conforme especificado em esquemas XML como uma **nvarchar** valor especificado. Isso exige que os valores de limite decimal sejam especificados usando notação científica completa. Para obter mais informações, veja o Exemplo B a seguir.  
+>  Ao trabalhar com um **SQL: limit-field** em que a coluna SQL mapeada é do tipo **real**, o SQLXML 4,0 executa a conversão em **SQL: limite-Value** conforme especificado em esquemas XML como um valor **nvarchar** especificado. Isso exige que os valores de limite decimal sejam especificados usando notação científica completa. Para obter mais informações, veja o Exemplo B a seguir.  
   
 ## <a name="examples"></a>Exemplos  
  Para testar os exemplos a seguir, é necessário ter estes programas instalados:  
@@ -55,7 +55,7 @@ ms.locfileid: "68067112"
   
  Um cliente pode ter um endereço para cobrança e/ou um endereço para entrega. Os valores da coluna AddressType são Shipping e Billing.  
   
- Este é o esquema de mapeamento no qual o **ShipTo** atributo de esquema é mapeado para a coluna StreetAddress na relação Addresses. Os valores que são retornados para esse atributo são limitados a apenas endereços para entrega especificando as **SQL: limit-campo** e **SQL: limit-valor** anotações. Da mesma forma, o **BillTo** atributo de esquema retorna somente o endereço de cobrança de um cliente.  
+ Esse é o esquema de mapeamento no qual o atributo de esquema **NomeDoDestinatário** é mapeado para a coluna StreetAddress na relação de endereços. Os valores retornados para esse atributo são limitados somente aos endereços de envio, especificando as anotações **SQL: limit-field** e **SQL: limit-value** . Da mesma forma, o atributo de esquema **billTo** retorna apenas o endereço de cobrança de um cliente.  
   
  Este é o esquema:  
   
@@ -101,7 +101,7 @@ ms.locfileid: "68067112"
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para testar uma consulta XPath de exemplo com relação ao esquema  
   
-1.  Crie duas tabelas na **tempdb** banco de dados:  
+1.  Crie duas tabelas no banco de dados **tempdb** :  
   
     ```  
     USE tempdb  
@@ -148,11 +148,9 @@ ms.locfileid: "68067112"
   
 5.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
@@ -167,14 +165,14 @@ ms.locfileid: "68067112"
 </ROOT>  
 ```  
   
-### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>B. Limitar os resultados com base em um valor de desconto de dados de tipos reais  
+### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>b. Limitar os resultados com base em um valor de desconto de dados de tipos reais  
  Neste exemplo, um banco de dados contém duas tabelas:  
   
 -   Orders (OrderID)  
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- Este é o esquema de mapeamento no qual o **OrderID** atributo os detalhes do pedido é mapeado para a coluna OrderID na relação de pedidos. Os valores que são retornados para esse atributo são limitados somente àqueles que têm um valor de 2.0000000e-001 (0.2) conforme especificado para o **desconto** de atributo usando o **SQL: limit-campo** e **SQL: limit-valor** anotações.  
+ Esse é o esquema de mapeamento no qual o atributo **OrderID** nos detalhes da ordem é mapeado para a coluna OrderID na relação Orders. Os valores retornados para esse atributo são limitados apenas aos que têm um valor de 2.0000000 e-001 (0,2) conforme especificado para o atributo de **desconto** usando as anotações **SQL: limit-field** e **SQL: limit-value** .  
   
  Este é o esquema:  
   
@@ -220,7 +218,7 @@ ms.locfileid: "68067112"
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para testar uma consulta XPath de exemplo com relação ao esquema  
   
-1.  Crie duas tabelas na **tempdb** banco de dados:  
+1.  Crie duas tabelas no banco de dados **tempdb** :  
   
     ```  
     USE tempdb  
@@ -291,7 +289,7 @@ ms.locfileid: "68067112"
   
 5.  Execute o arquivo TestQuery.vbs clicando nele no Windows Explorer.  
   
-     Esse é o resultado:  
+     Este é o resultado:  
   
     ```  
     <root>  
@@ -308,10 +306,10 @@ ms.locfileid: "68067112"
     </root>  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [float e real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [nchar e nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+  de [Transact &#40;-SQL&#41; de nchar e nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
  [Instalando o SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [Usando anotados a esquemas XSD em consultas &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [Usando esquemas XSD anotados em consultas &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   
