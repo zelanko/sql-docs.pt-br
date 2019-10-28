@@ -22,24 +22,24 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00208b1c0f11faf8f392e47e275c7e239249d3d6
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918179"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783069"
 ---
 # <a name="deploy-a-data-tier-application"></a>Implantar um aplicativo da camada de dados
   Você pode implantar um DAC (aplicativo da camada de dados) de um pacote de DAC para uma instância existente do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] usando um assistente ou um script do PowerShell. O processo de implantação registra uma instância do DAC armazenando a definição do DAC no banco de dados do sistema **msdb** (**master** em [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), cria um banco de dados e o preenche com todos os objetos de banco de dados definidos no DAC.  
   
--   **Antes de começar:**  [Utilitário do SQL Server](#SQLUtility), [opções e configurações de banco de dados](#DBOptSettings), [limitações e restrições](#LimitationsRestrictions), [pré-requisitos](#Prerequisites), [segurança](#Security), [Permissões](#Permissions)  
+-   **Antes de começar:**  [Utilitário do SQL Server](#SQLUtility), [Opções de banco de dados e configurações](#DBOptSettings), [limitações e restrições](#LimitationsRestrictions), [pré-requisitos](#Prerequisites), [segurança](#Security), [permissões](#Permissions)  
   
--   **Para implantar um DAC, usando:**  [A implantar o Data-tier Application Wizard](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
+-   **Para implantar um DAC, usando:**  [O assistente para implantar aplicativo da camada de dados](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
   
 ##  <a name="BeforeBegin"></a> Antes de começar  
  O mesmo pacote de DAC pode ser implantado várias vezes em uma única instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , porém as implantações devem ser executadas uma de cada vez. O nome de instância do DAC especificado para cada implantação deve ser exclusivo dentro da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-###  <a name="SQLUtility"></a> Utilitário do SQL Server  
+###  <a name="SQLUtility"></a>Utilitário do SQL Server  
  Se você implantar um DAC para uma instância gerenciada do Mecanismo de Banco de Dados, o DAC implantado será incorporado no Utilitário do SQL Server na próxima vez que o conjunto de coleta do utilitário for enviado da instância para o ponto de controle de utilitário. O DAC estará presente no nó **Aplicativos da Camada de Dados Implantados** do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicativos da Camada de Dados Implantados** details page.  
   
 ###  <a name="DBOptSettings"></a> Opções e configurações de banco de dados  
@@ -63,7 +63,7 @@ ms.locfileid: "62918179"
 ####  <a name="Permissions"></a> Permissões  
  Um DAC só pode ser implantado pelos membros das funções de servidor fixas **sysadmin** ou **serveradmin** , ou por logons que estejam na função de servidor fixa **dbcreator** e tenham as permissões ALTER ANY LOGIN. A conta interna de administrador do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada **sa** também pode implantar um DAC. A implantação de um DAC com logons no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] exige associação nas funções loginmanager ou serveradmin. A implantação de um DAC sem logons no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] exige a associação nas funções dbmanager ou serveradmin.  
   
-##  <a name="UsingDeployDACWizard"></a> Usando a implantar o Data-tier Application Wizard  
+##  <a name="UsingDeployDACWizard"></a>Usando o assistente para implantar aplicativo da camada de dados  
  **Para implantar um DAC usando um assistente**  
   
 1.  No **Pesquisador de Objetos**, expanda o nó da instância na qual você deseja implantar o DAC.  
@@ -74,15 +74,15 @@ ms.locfileid: "62918179"
   
     -   [Página de Introdução](#Introduction)  
   
-    -   [Selecione a página do pacote DAC](#Select_dac_package)  
+    -   [Página Selecionar pacote de DAC](#Select_dac_package)  
   
     -   [Página Analisar Política](#Review_policy)  
   
-    -   [Página Atualizar configuração](#Update_configuration)  
+    -   [Atualizar página de configuração](#Update_configuration)  
   
     -   [Página de Resumo](#Summary)  
   
-    -   [Página implantar](#Deploy)  
+    -   [Implantar página](#Deploy)  
   
 ##  <a name="Introduction"></a> Página de Introdução  
  Esta página descreve as etapas para implantar um aplicativo da camada de dados.  
@@ -93,7 +93,7 @@ ms.locfileid: "62918179"
   
  **Cancelar** – Encerra o assistente sem implantar um DAC.  
   
-##  <a name="Select_dac_package"></a> Selecione a página do pacote DAC  
+##  <a name="Select_dac_package"></a>Página Selecionar pacote de DAC  
  Use esta página para especificar o pacote de DAC que contém o aplicativo da camada de dados a ser implantado. A página faz a transição por três estados.  
   
 ### <a name="select-the-dac-package"></a>Selecionar o pacote de DAC  
@@ -118,7 +118,7 @@ ms.locfileid: "62918179"
   
  **Validando o conteúdo do DAC** – A barra de progresso que relata o status atual do processo de validação.  
   
- **\< Anterior** -retorna para o estado inicial do **selecionar pacote** página.  
+ **\< anterior** – retorna para o estado inicial da página **selecionar pacote** .  
   
  **Avançar >** – Segue para a versão final da página **Selecionar Pacote**.  
   
@@ -133,13 +133,13 @@ ms.locfileid: "62918179"
   
  **Ignorar violações de política** – Use esta caixa de seleção para continuar a implantação se houver falha em uma ou mais condições de política. Somente selecione essa opção se você tiver certeza de que todas as condições que falharam não impedirão o funcionamento bem-sucedido do DAC.  
   
- **\< Anterior** -retorna para o **selecionar pacote** página.  
+ **\< anterior** – retorna para a página **selecionar pacote** .  
   
  **Avançar >** – Segue para a página **Atualizar Configuração**.  
   
  **Cancelar** – Encerra o assistente sem implantar o DAC.  
   
-##  <a name="Update_configuration"></a> Página Atualizar configuração  
+##  <a name="Update_configuration"></a>Atualizar página de configuração  
  Use esta página para especificar os nomes da instância do DAC implantada e do banco de dados criado pela implantação, e para definir opções de banco de dados.  
   
  **Nome do Banco de Dados:** – Especifique o nome do banco de dados a ser criado pela implantação. O padrão é o nome do banco de dados de origem a partir do qual o DAC foi extraído. O nome deve ser exclusivo dentro da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e está em conformidade com as regras para identificadores do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -158,7 +158,7 @@ ms.locfileid: "62918179"
   
  **Caminho e nome do arquivo de log:** – Especifique o caminho completo e o nome de arquivo para o arquivo de log. A caixa é populada com o caminho e o nome de arquivo padrão. Edite a cadeia de caracteres na caixa para alterar o padrão ou use o botão **Procurar** para navegar para a pasta em que o arquivo de log será colocado.  
   
- **\< Anterior** -retorna para o **selecionar pacote de DAC** página.  
+ **\< anterior** – retorna para a página **selecionar pacote de DAC** .  
   
  **Avançar >** : continua para a página **Resumo**.  
   
@@ -169,13 +169,13 @@ ms.locfileid: "62918179"
   
  **As configurações a seguir serão usadas para implantar o DAC.** - Examine as informações exibidas para assegurar que as ações executadas estarão corretas. A janela exibe o pacote de DAC selecionado e o nome selecionado para a instância de DAC escolhida. A janela também exibe as configurações que serão usadas durante a criação do banco de dados associado ao DAC.  
   
- **\< Anterior** -retorna para o **configuração de atualização** página para alterar suas seleções.  
+ **\< anterior** – retorna para a página de **configuração de atualização** para alterar suas seleções.  
   
  **Avançar >** – Implanta o DAC e exibe os resultados na página **Implantar DAC**.  
   
  **Cancelar** – Encerra o assistente sem implantar o DAC.  
   
-##  <a name="Deploy"></a> Página implantar  
+##  <a name="Deploy"></a>Implantar página  
  Esta página relata o êxito ou falha da operação de implantação.  
   
  **Implantando o DAC** – Relata o êxito ou falha de cada ação realizada para implantar o DAC. Analise as informações para determinar o êxito ou falha de cada ação. Todas as ações que encontrarem um erro terão um link na coluna **Resultado** . Selecione o link para exibir um relatório do erro para aquela ação.  
@@ -204,10 +204,10 @@ ms.locfileid: "62918179"
 ### <a name="example-powershell"></a>Exemplo (PowerShell)  
  O exemplo a seguir implanta um DAC nomeado MyApplication em uma instância padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)], usando uma definição de DAC de um pacote de MyApplication.dacpac.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -235,5 +235,3 @@ $fileStream.Close()
  [Aplicativos da Camada de Dados](data-tier-applications.md)   
  [Extrair um DAC de um banco de dados](extract-a-dac-from-a-database.md)   
  [Identificadores de banco de dados](../databases/database-identifiers.md)  
-  
-  
