@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: add1b0fc86c5e43bedd1e3ebbf7921fb1e9847c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f16d6cd8cbc27e675da9f8153555dcaf9c99749f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058063"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909923"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar e monitorar a captura de dados de alteração (SQL Server)
 
@@ -174,8 +174,6 @@ O coletor de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 3. No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Gerenciamento**e, em seguida, **Coleta de Dados**. Clique com o botão direito do mouse em **Coletor de Dados de Desempenho de CDA** e clique em **Iniciar Conjunto de Coleta de Dados**.  
   
 4. No data warehouse configurado na etapa 1, localize a tabela custom_snapshots.cdc_log_scan_data. Essa tabela fornece um instantâneo histórico dos dados das sessões de verificação de log. Esses dados podem ser usados para analisar a latência, a taxa de transferência e outras medidas de desempenho ao longo do tempo.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="ScriptUpgrade"></a> Modo de atualização de script
 

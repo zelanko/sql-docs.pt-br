@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ddf814a849dfd0272f87dec2e2d7650c557d0be
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: a79940fa5696a65ed580d8550984d090a48eebdf
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545086"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807449"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Baixar e instalar o SSDT (SQL Server Data Tools) para o Visual Studio
 
@@ -32,12 +32,12 @@ Com o Visual Studio de 2019, a funcionalidade necessária para habilitar os proj
 Se você já tiver uma licença do Visual Studio de 2019:
 
 - Para Projetos de Banco de Dados SQL, instalar a carga de trabalho de processamento e armazenamento de dados do Visual Studio
-- Para os projetos do Analysis Services, do Integration Services ou do Reporting Services, instalar as [extensões](https://docs.microsoft.com/en-us/==visualstudio/ide/finding-and-using-visual-studio-extensions) apropriadas do marketplace
+- Para os projetos do Analysis Services, do Integration Services ou do Reporting Services, instalar as [extensões](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) apropriadas do marketplace
 
 Se você não tiver uma licença do Visual Studio de 2019:
 
 - Instalar o [Visual Studio Community 2019](https://visualstudio.microsoft.com/downloads/)
-- Instalar as [extensões](https://docs.microsoft.com/en-us/==visualstudio/ide/finding-and-using-visual-studio-extensions) do Analysis Services, do Integration Services ou do Reporting Services, conforme apropriado
+- Instalar as [extensões](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) do Analysis Services, do Integration Services ou do Reporting Services, conforme apropriado
 
 ## <a name="changes-in-ssdt-for-visual-studio-2017"></a>Alterações no SSDT para Visual Studio 2017
 

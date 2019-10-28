@@ -13,12 +13,12 @@ ms.assetid: eccce0aa-591e-4a1d-bd10-373b022f8749
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67af7654f2148f3d4e6409eb49701e58a194fa4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 588531a01a12dcec1a4832241e29dab38841f944
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091402"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906316"
 ---
 # <a name="delete-statistics"></a>Excluir estatísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,8 +66,6 @@ ms.locfileid: "68091402"
 5.  Clique com o botão direito do mouse no objeto de estatísticas que deseja excluir e selecione **Excluir**.  
   
 6.  Na caixa de diálogo **Excluir Objeto** , verifique se a estatística correta foi selecionada e clique em **OK**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

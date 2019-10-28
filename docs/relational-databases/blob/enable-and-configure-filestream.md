@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9d0d82135fae0c05c4ad5b33868f66a74db847df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7abba927f12f4f6ae8b9c45dc4695eb64b7d5621
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085384"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908765"
 ---
 # <a name="enable-and-configure-filestream"></a>Habilitar e configurar o FILESTREAM
 
@@ -57,8 +57,6 @@ ms.locfileid: "68085384"
 12. Clique em **Executar**.  
   
 13. Reinicie o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="best"></a> Práticas recomendadas  
   

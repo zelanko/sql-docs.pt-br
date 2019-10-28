@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a44e97d97a98b1b3f10c77ca632a67437ca48ae9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c636db77ffdf8249cf03814abca031b0897fb4c9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127229"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909507"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Reverter um banco de dados a um instantâneo do banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,8 +117,6 @@ ms.locfileid: "68127229"
 5.  Inicie o banco de dados.  
   
 6.  Opcionalmente, faça backup do banco de dados revertido, especialmente se usar o modelo de recuperação completa (ou registrada em massa). Para fazer backup de um banco de dados, veja [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  Esta seção contém os seguintes exemplos de reversão de um banco de dados para um instantâneo do banco de dados:  

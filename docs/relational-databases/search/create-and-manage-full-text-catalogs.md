@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 085e17c420b1edad10b988bbba1a15a339977624
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed7e7f31da9cacaf4862c29ada9c98df9559f9c9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082966"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903857"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Criar e gerenciar catálogos de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,8 +51,6 @@ GO
     >  Os identificadores de catálogos de texto completo começam em 00005 e são incrementados em um para cada novo catálogo criado.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="props"></a> Obter as propriedades de um catálogo de texto completo  
 Use a função [!INCLUDE[tsql](../../includes/tsql-md.md)] **FULLTEXTCATALOGPROPERTY** para obter o valor de várias propriedades relacionadas a catálogos de texto completo. Para obter mais informações, consulte [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).

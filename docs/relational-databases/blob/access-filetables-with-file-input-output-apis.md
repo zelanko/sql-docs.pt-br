@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: de6b89d8c561df851b3cbc8696283f1ed95489f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1cdc6947c97052660dea3be9d6013a8e61a090d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041202"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908780"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Acessar FileTables com APIs de entrada e saída de arquivo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,8 +29,6 @@ ms.locfileid: "68041202"
 1.  O acesso à API de E/S de arquivos normalmente começa com a aquisição de um caminho UNC lógico para o arquivo ou diretório. Os aplicativos podem usar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] com a função [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) para obter o caminho lógico para o arquivo ou diretório. Para obter mais informações, consulte [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
 2.  Em seguida, o aplicativo usa esse caminho lógico para obter um identificador para o arquivo ou diretório e fazer algo com o objeto. O caminho pode ser transmitido para qualquer função de API do sistema de arquivos com suporte, como CreateFile() ou CreateDirectory(), para criar ou abrir um arquivo e obter um identificador. Em seguida, o identificador pode ser usado para transmitir dados, enumerar ou organizar diretórios, obter ou definir atributos de arquivos, excluir arquivos ou diretórios etc.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="create"></a> Criando arquivos e diretórios em uma FileTable  
  Você pode criar um arquivo ou um diretório em uma FileTable chamando APIs de E/S de arquivos, como CreateFile ou CreateDirectory.  

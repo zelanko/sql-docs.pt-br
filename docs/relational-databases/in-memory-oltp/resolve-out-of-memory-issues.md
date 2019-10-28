@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a2dd428c7f035cf73e679bbd6c47e78f1f745457
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111819"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908447"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memória insuficiente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,8 +77,6 @@ Se o servidor tiver memória física suficiente, mas você ainda estiver vendo e
   
 2.  [Realizar a ação corretiva](#bkmk_takeCorrectiveAction)  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ###  <a name="bkmk_openDAC"></a> Abrir uma DAC (Conexão de Administrador Dedicada)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma DAC (conexão de administrador dedicada). A DAC permite que um administrador acesse uma instância em execução do Mecanismo de Banco de Dados do SQL Server para solucionar problemas no servidor, mesmo quando o servidor não está respondendo às conexões de outro cliente. O DAC é disponibilizado pelo utilitário `sqlcmd` e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -101,7 +99,7 @@ Se o servidor tiver memória física suficiente, mas você ainda estiver vendo e
   
 #### <a name="increase-available-memory"></a>Aumentar a memória disponível  
   
-##### <a name="increase-value-of-maxmemorypercent-on-the-resource-pool"></a>Aumentar o valor de MAX_MEMORY_PERCENT no pool de recursos  
+##### <a name="increase-value-of-max_memory_percent-on-the-resource-pool"></a>Aumentar o valor de MAX_MEMORY_PERCENT no pool de recursos  
  Se você não criou um pool de recursos nomeado para as tabelas de memória, deverá fazer isso e associar seus bancos de dados do [!INCLUDE[hek_2](../../includes/hek-2-md.md)] a ele. Confira o tópico [Associar um banco de dados com tabelas com otimização de memória a um pool de recursos](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) para obter diretrizes sobre como criar e associar bancos de dados do [!INCLUDE[hek_2](../../includes/hek-2-md.md)] a um pool de recursos.  
   
  Se seu banco de dados do [!INCLUDE[hek_2](../../includes/hek-2-md.md)] estiver associado a um pool de recursos, você poderá aumentar a porcentagem de memória que o pool pode acessar. Confira o subtópico [Alterar MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT em um pool existente](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation) para obter diretrizes sobre como alterar o valor de MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT em um pool de recursos.  

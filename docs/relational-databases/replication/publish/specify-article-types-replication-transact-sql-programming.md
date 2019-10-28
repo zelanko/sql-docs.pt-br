@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fab59450a2403eadc080a5f246c0911b164eba3a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: cfa3710648e381dbd142c57180bf5395d9eee18f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710813"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904632"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>Especificar tipos de artigo (Programação Transact-SQL de replicação)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,8 +48,6 @@ ms.locfileid: "71710813"
 2.  Para artigos `logbased manualboth` e `logbased manualfilter`, execute [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) para gerar o procedimento armazenado de filtragem para um artigo filtrado horizontalmente. Para obter mais informações, consulte [Definir e modificar um filtro de linha estático](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
 3.  Para os artigos `logbased manualboth`, `logbased manualview` e `logbased manualfilter`, execute [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) para gerar a exibição que define o artigo filtrado verticalmente. Para obter mais informações, consulte [Definir e modificar um filtro de colunas](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="to-publish-a-view-or-indexed-view-article-in-a-transactional-or-snapshot-publication"></a>Para publicar uma exibição ou artigo de exibição indexada em uma publicação transacional ou de instantâneo  
   

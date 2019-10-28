@@ -14,12 +14,12 @@ ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3500552ae0dde03b7cd4b354560bc3d0857eebec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b6ccdce58ca96a26a607996943e6d48d9bac1d8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050904"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909736"
 ---
 # <a name="create-synonyms"></a>Criar sinônimos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,28 +54,26 @@ ms.locfileid: "68050904"
   
 3.  Na caixa de diálogo **Adicionar Sinônimo** , insira as informações a seguir.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     **Synonym name**  
-     Type the new name you will use for this object.  
+     **Nome de sinônimo**  
+     Digite o nome novo que você usará para esse objeto.  
   
-     **Synonym schema**  
-     Type the schema of the new name you will use for this object.  
+     **Esquema de sinônimo**  
+     Digite o esquema do nome novo que você usará para esse objeto.  
   
-     **Server name**  
-     Type the server instance to connect to.  
+     **Nome do servidor**  
+     Digite a instância do servidor para conectar.  
   
-     **Database name**  
-     Type or select the database containing the object.  
+     **Nome do banco de dados**  
+     Digite ou selecione o banco de dados que contém o objeto.  
   
-     **Schema**  
-     Type or select the schema that owns the object.  
+     **Esquema**  
+     Digite ou selecione o esquema que possui o objeto.  
   
-     **Object type**  
-     Select the type of object.  
+     **Tipo de objeto**  
+     Selecione o tipo de objeto.  
   
-     **Object name**  
-     Type the name of the object to which the synonym refers.  
+     **Nome do objeto**  
+     Digite o nome do objeto ao qual se refere o sinônimo.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

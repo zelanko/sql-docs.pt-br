@@ -16,14 +16,14 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: aliceku
 ms.author: aliceku
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ded5b442a6a61ba1a6cf2c0313834cce85f674f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ca2c6f4967368489e49014e7a97267cb64b9a235
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043194"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903167"
 ---
-# <a name="always-encrypted-database-engine"></a>Sempre criptografados (mecanismo de banco de dados)
+# <a name="always-encrypted-database-engine"></a>Always Encrypted (mecanismo de banco de dados)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
@@ -82,8 +82,6 @@ Para atualizar com êxito a coluna, faça o seguinte:
 
 1. SELECIONE os dados fora da coluna SSN e armazene-os como um conjunto de resultados no aplicativo. Isso permitirá que o aplicativo (*driver* do cliente) descriptografe a coluna.
 2. INSIRA os dados do conjunto de resultados no SQL Server. 
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  >[!IMPORTANT]
  > Nesse cenário, os dados serão descriptografados quando enviados de volta para o servidor porque a coluna de destino é um varchar regular que não aceita dados criptografados. 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1ae8e8c1394372347f9e26bb7163f0e1cf0bf47e
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: a803d848d12965f7e0c0b167bf3a2f20a235ecdc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846746"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907387"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,8 +65,6 @@ Quando são usados filtros de linha com parâmetros em publicações de mesclage
 1.  Criar uma publicação de mesclagem com o Assistente para Nova Publicação, e especificar um ou mais filtros de linha com parâmetros na página **Adicionar Filtro** do assistente. Para obter mais informações, consulte [Definir e modificar um filtro de linha com parâmetros para um artigo de mesclagem](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 2.  Gerar um instantâneo de esquema para a publicação. Por padrão, o instantâneo de esquema é gerado quando o Assistente para Nova Publicação é encerrado. Nesse momento é igualmente possível gerar um instantâneo de esquema no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-generate-a-schema-snapshot"></a>Para gerar um instantâneo de esquema  
   

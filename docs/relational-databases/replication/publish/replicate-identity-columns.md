@@ -18,12 +18,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 841c5d3a40d74cbf0d24f7da0c3899882f820176
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: a0e861a1619921081a81fa52f72ba6fc88e98668
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710871"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908344"
 ---
 # <a name="replicate-identity-columns"></a>Replicar colunas de identidade
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -112,8 +112,6 @@ ms.locfileid: "71710871"
 1.  Pare toda a atividade em todos os Assinantes.  
   
 2.  Para cada tabela publicada que inclua uma coluna de identidade:  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  No banco de dados de assinatura de cada Assinante, execute `IDENT_CURRENT('<TableName>')`.  
   

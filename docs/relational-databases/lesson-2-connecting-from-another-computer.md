@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0240c3e4f9f58bfb453e2537695631d8be3aa793
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d1bffd38e1c604d5002f00cae0bcda9e4becf21
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073709"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909707"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lição 2: conexão usando outro computador
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,8 +63,6 @@ Se você planejar conectar-se ao [!INCLUDE[ssDE](../includes/ssde-md.md)] de out
   
     > [!NOTE]  
     > E necessário reiniciar o serviço [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] após fazer alterações nos protocolos de rede. No entanto, isso é executado na próxima tarefa.  
-
-[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="port"></a>Configurando uma porta fixa  
 Para aprimorar a segurança, o Windows Server 2008, o [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]e o Windows 7 ativam o Firewall do Windows. Para se conectar à esta instância a partir de outro computador, abra uma porta de comunicação no firewall. A instância padrão do [!INCLUDE[ssDE](../includes/ssde-md.md)] escuta na porta 1433; portanto, não é preciso configurar uma porta fixa. No entanto, instâncias nomeadas incluindo [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] escutam em portas dinâmicas. Antes de abrir uma porta no firewall, você deve primeiro configurar o [!INCLUDE[ssDE](../includes/ssde-md.md)] para escutar em uma porta específica conhecida como fixa ou estática; caso contrário, o [!INCLUDE[ssDE](../includes/ssde-md.md)] poderia escutar em uma porta diferente toda vez que fosse iniciado. Para obter mais informações sobre firewalls, as configurações padrão do Firewall do Windows e uma descrição das portas TCP que afetam o Mecanismo de Banco de Dados, o Analysis Services, o Reporting Services e o Integration Services, veja [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  

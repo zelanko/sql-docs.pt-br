@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cf9e1f93298231ec05e645171ffe5b421075c8b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c904edf49ca2f07e2cb715821f9858ea25302311
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021444"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909811"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>Exibir ou modificar as propriedades de uma condição de gerenciamento baseado em políticas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,8 +48,6 @@ ms.locfileid: "68021444"
 5.  Clique com o botão direito do mouse na condição que você deseja exibir ou editar e selecione **Propriedades**. Para obter mais informações sobre as opções disponíveis na caixa de diálogo **Abrir Condição -** _nome_da_condição_, confira [Caixa de diálogo Criar Condição ou Abrir Condição, página Geral](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md), [Caixa de diálogo Abrir Condição, página Políticas Dependentes](../../relational-databases/policy-based-management/open-condition-dialog-box-dependent-policies-page.md), [Caixa de diálogo Criar Condição ou Abrir Condição, página Descrição](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-description-page.md) e [Caixa de diálogo Edição Avançada &#40;Condição&#41;](../../relational-databases/policy-based-management/advanced-edit-condition-dialog-box.md).  
   
 6.  Quando terminar, clique em **OK**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

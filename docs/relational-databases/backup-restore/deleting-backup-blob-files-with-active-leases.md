@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0213c99bb6f2e7898528fd557ad1f8aa42a1ad69
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: cdc58884e65fb243bbb75f257e19ccef3faa2b9f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383775"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908942"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Excluir arquivos de blob de backup com concessões ativas
 
@@ -41,8 +41,6 @@ As etapas a seguir descrevem como efetuar a limpeza após uma atividade de resta
     > O SQL Server emite uma ID de concessão para estabelecer o acesso exclusivo durante a operação de restauração. A ID de concessão da restauração é BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
 1. **Excluir o Blob:** Para excluir um blob com uma concessão ativa, primeiro, é necessário interromper a concessão.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="Code_Example"></a> Exemplo de script do PowerShell  
   

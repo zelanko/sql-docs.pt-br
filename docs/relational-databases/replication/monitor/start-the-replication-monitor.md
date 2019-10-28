@@ -13,12 +13,12 @@ ms.assetid: e037bd27-cc87-4ee9-9e5f-83f6d717cfa4
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ebf3dcfa2671fb2388cbe4a0ec1ddb0a9510445d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 843b2ac414ba8188067b85dc77a6e2970b0095cb
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770530"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909584"
 ---
 # <a name="start-the-replication-monitor"></a>Iniciar o Replication Monitor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,8 +29,6 @@ ms.locfileid: "68770530"
 1.  Conecte a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]e, então, expanda o nó do servidor.  
   
 2.  Clique com o botão direito em na pasta **Replicação** ou quaisquer de suas subpastas e então clique em **Iniciar o Replication Monitor**.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="to-start-replication-monitor-from-the-command-prompt"></a>Para iniciar o Replication Monitor no prompt de comando  
   

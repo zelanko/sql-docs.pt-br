@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d8412a87703577595f0408de3b9cf26520160fdf
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: ce8a48b7e8315a564eaa1338df35a04226e705d4
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228457"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906066"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>Enviar um email de teste com o Database Mail  
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,8 +48,6 @@ Você deve ser membro da função de servidor fixa sysadmin para usar a caixa de
     A coluna sent_status indica se a mensagem de email de teste foi enviada.
 
 1. Se ocorrerem erros, execute a seguinte instrução para exibir a mensagem de erro:
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql
     SELECT * FROM msdb.dbo.sysmail_event_log 

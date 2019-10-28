@@ -11,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 12fea405001214a3f380c204b27c9932b9e59470
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c50fb79383890a2e09cb465c89b459b3bea9a3ca
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009358"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907998"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinos de eventos estendidos no SQL Server
 
@@ -73,7 +73,7 @@ Você pode ver os parâmetros, os campos e as ações usadas no contexto de uma 
 
 <a name="h2_target_etw_classic_sync_target"></a>
 
-## <a name="etwclassicsynctarget-target"></a>destino etw_classic_sync_target
+## <a name="etw_classic_sync_target-target"></a>destino etw_classic_sync_target
 
 
 Os eventos estendidos do SQL Server podem interoperar com o ETW (Rastreamento de Eventos para Windows) para monitorar a atividade do sistema. Para obter mais informações, consulte:
@@ -91,7 +91,7 @@ Esse destino ETW processa os dados recebidos *de forma síncrona* , enquanto a m
 
 <a name="h2_target_event_counter"></a>
 
-## <a name="eventcounter-target"></a>destino event_counter
+## <a name="event_counter-target"></a>destino event_counter
 
 
 O destino event_counter apenas conta quantas vezes cada evento especificado ocorre.
@@ -107,7 +107,7 @@ Ao contrário da maioria dos outros destinos:
     - O mecanismo de banco de dados será desconectado de um destino que está muito lento e que, portanto, ameaça reduzir o desempenho do mecanismo de banco de dados. Esse é um dos motivos pelos quais a maioria dos destinos realiza um processo *assíncrono*.
 
 
-#### <a name="example-output-captured-by-eventcounter"></a>Saída de exemplo capturada por event_counter
+#### <a name="example-output-captured-by-event_counter"></a>Saída de exemplo capturada por event_counter
 
 
 ```
@@ -139,7 +139,7 @@ CREATE EVENT SESSION [event_counter_1]
 
 <a name="h2_target_event_file"></a>
 
-## <a name="eventfile-target"></a>destino event_file
+## <a name="event_file-target"></a>destino event_file
 
 
 O destino **event_file** grava a saída da sessão de evento do buffer em um arquivo de disco:
@@ -161,7 +161,7 @@ O destino **event_file** grava a saída da sessão de evento do buffer em um arq
 ::: moniker-end
 
 
-#### <a name="create-event-session-with-eventfile-target"></a>CREATE EVENT SESSION com o destino **event_file**
+#### <a name="create-event-session-with-event_file-target"></a>CREATE EVENT SESSION com o destino **event_file**
 
 
 Veja a seguir, CREATE EVENT SESSION, que usamos para o teste. Uma das cláusulas ADD TARGET especifica um event_file.
@@ -213,7 +213,7 @@ CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
 ```
 
 
-#### <a name="sysfnxefiletargetreadfile-function"></a>função sys.fn_xe_file_target_read_file
+#### <a name="sysfn_xe_file_target_read_file-function"></a>função sys.fn_xe_file_target_read_file
 
 
 O destino event_file armazena os dados recebidos em um formato binário que não é legível por humanos. O Transact-SQL pode relatar o conteúdo do arquivo .xel usando SELECT FROM na função [**sys.fn_xe_file_target_read_file**](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md) .
@@ -249,7 +249,7 @@ SELECT f.*
 Evidentemente, você também pode usar a interface do usuário do SSMS manualmente para ver os dados do .xel:
 
 
-#### <a name="data-stored-in-the-eventfile-target"></a>Dados armazenados no destino event_file
+#### <a name="data-stored-in-the-event_file-target"></a>Dados armazenados no destino event_file
 
 
 Veja a seguir o relatório de SELECT em **sys.fn_xe_file_target_read_file**, no SQL Server 2016.
@@ -412,7 +412,7 @@ sqlserver      checkpoint_end     database_id  NULL
 
 <a name="h2_target_pair_matching"></a>
 
-## <a name="pairmatching-target"></a>destino pair_matching
+## <a name="pair_matching-target"></a>destino pair_matching
 
 
 O destino pair_matching permite detectar eventos de início que ocorrem sem um evento de término correspondente. Por exemplo, isso poderá ser um problema quando ocorrer um evento lock_acquired, mas nenhum evento lock_released correspondente ocorrer a seguir de forma oportuna.
@@ -450,7 +450,7 @@ sqlserver   lock_acquired   resource_type            NULL
 ```
 
 
-### <a name="example-of-pairmatching"></a>Exemplo de pair_matching
+### <a name="example-of-pair_matching"></a>Exemplo de pair_matching
 
 
 A instrução CREATE EVENT SESSION a seguir especifica dois eventos e dois destinos. O destino pair_matching especifica dois conjuntos de campos para corresponder os eventos em pares. A sequência de campos delimitados por vírgula atribuída a **begin_matching_columns =** e **end_matching_columns =** deve ser a mesma. Não são permitidas guias nem novas linhas entre os campos mencionados no valor delimitado por vírgula, embora o uso de espaços seja permitido.
@@ -520,8 +520,6 @@ Para testar a sessão de evento, propositadamente impedimos a liberação dos bl
 3. Só emitimos uma instrução COMMIT TRANSACTION depois de examinarmos os destinos.
 4. Posteriormente, após os testes, emitimos uma instrução COMMIT TRANSACTION.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 O destino simples **event_counter** forneceu as linhas de saída a seguir. Como 52-50=2, o resultado informa que deveremos ver dois eventos lock_acquired não emparelhados ao examinarmos a saída do destino correspondente ao par.
 
 
@@ -549,7 +547,7 @@ As linhas dos eventos lock_acquired não emparelhados podem incluir o texto T-SQ
 
 <a name="h2_target_ring_buffer"></a>
 
-## <a name="ringbuffer-target"></a>destino ring_buffer
+## <a name="ring_buffer-target"></a>destino ring_buffer
 
 
 O destino ring_buffer é útil para testes de eventos rápidos e simples. Quando você interrompe a sessão de evento, a saída armazenada é descartada.
@@ -557,7 +555,7 @@ O destino ring_buffer é útil para testes de eventos rápidos e simples. Quando
 Nesta seção de ring_buffer, também vamos mostrar como é possível usar a implementação do Transact-SQL do XQuery para copiar o conteúdo XML do ring_buffer em um conjunto de linhas relacional mais legível.
 
 
-#### <a name="create-event-session-with-ringbuffer"></a>CREATE EVENT SESSION com ring_buffer
+#### <a name="create-event-session-with-ring_buffer"></a>CREATE EVENT SESSION com ring_buffer
 
 
 Não há nada de especial nessa instrução CREATE EVENT SESSION, que usa o destino ring_buffer.
@@ -591,7 +589,7 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
 ```
 
 
-### <a name="xml-output-received-for-lockacquired-by-ringbuffer"></a>Saída XML recebida para lock_acquired por ring_buffer
+### <a name="xml-output-received-for-lock_acquired-by-ring_buffer"></a>Saída XML recebida para lock_acquired por ring_buffer
 
 
 Quando é recuperado por uma instrução SELECT, o conteúdo está na forma de uma cadeia de caracteres XML. A cadeia de caracteres XML que foi armazenada pelo destino ring_buffer em nossos testes é mostrada a seguir. No entanto, para resumir a exibição XML a seguir, todos os elementos foram apagados, exceto dois elementos &#x3c;event&#x3e;. Além disso, em cada &#x3c;event&#x3e;, diversos elementos &#x3c;data&#x3e; estranhos foram excluídos.

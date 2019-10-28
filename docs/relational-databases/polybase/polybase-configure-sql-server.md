@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: e71fc7c603ad5ca975a3e55ee1bbd41601b85387
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: df3b8fb47e232b62bfd485c366f6b1e3acf7dcca
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816770"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907586"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurar o PolyBase para acessar dados externos no SQL Server
 
@@ -72,9 +72,6 @@ Os seguintes comandos Transact-SQL são usados nesta seção:
 
 >[!IMPORTANT] 
 >Depois de criar uma fonte de dados externa, você pode usar o comando [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) para criar uma tabela que possa ser consultada por essa fonte.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 
 ## <a name="sql-server-connector-compatible-types"></a>Tipos compatíveis com o conector do SQL Server
 

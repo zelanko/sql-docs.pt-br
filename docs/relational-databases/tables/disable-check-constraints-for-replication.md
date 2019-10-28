@@ -16,12 +16,12 @@ ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 07a6c2d115bb0100aa95fda9607c439af49031e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66be3c8c81127b107f730fb38b0be10064d72926
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016427"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909375"
 ---
 # <a name="disable-check-constraints-for-replication"></a>Desabilitar verificação de restrições para replicação
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -49,8 +49,6 @@ ms.locfileid: "68016427"
 3.  Na caixa de diálogo **Verificar Restrições** , em **Designer de Tabela**, selecione um valor de **Não** para **Impor para replicação**.  
   
 4.  Clique em **Fechar**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

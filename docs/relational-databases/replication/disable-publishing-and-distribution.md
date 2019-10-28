@@ -19,12 +19,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d5b1f22408ecffd2ec3250441239bb423e921b66
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 3fe1baf8676db54161c0c0fb7fccea171c3a3341
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710281"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908403"
 ---
 # <a name="disable-publishing-and-distribution"></a>Desabilitar publicação e distribuição
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,8 +68,6 @@ ms.locfileid: "71710281"
 2.  Clique com o botão direito do mouse na pasta **Replicação** e, então, clique em **Desabilitar Publicação e Distribuição**.  
   
 3.  Complete as etapas no Assistente para Desabilitar Publicação e Distribuição.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  A publicação e a distribuição podem ser desabilitadas programaticamente usando procedimentos armazenados de replicação.  

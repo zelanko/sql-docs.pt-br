@@ -14,12 +14,12 @@ ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9bef4e304b592a6be1c9d59c44d691e07829d70f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 3a3dfb5804c49ae3a5c2c78d985aa548f710dab2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768371"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907065"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Modificar as opções de inicialização de instantâneo para Replicação do SQL 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,8 +37,6 @@ Há várias opções disponíveis para especificar ao [inicializar uma assinatur
     >  É recomendável a seleção do formato nativo, a menos que essa publicação deva dar suporte a assinaturas de um banco de dados do SQL Server Compact ou um banco de dados não SQL Server.  
   
 2.  Escolha **OK**.   
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="snapshot-folder-locations"></a>Locais de pasta de instantâneo
 

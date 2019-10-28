@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d901c19587db97532be101ff66af69a1808463f3
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: a7a1f692abdb5f9ce1b9fd69c494f719b9027c22
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289307"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909545"
 ---
 # <a name="tempdb-database"></a>Banco de dados TempDB
 
@@ -47,8 +47,6 @@ O banco de dados do sistema **TempDB** é um recurso global disponível para tod
   - As versões de linhas geradas por meio de transações de modificação de dados para recursos como: operações de índice on-line, vários conjuntos de resultados ativos (MARS) e gatilhos AFTER.  
   
 As operações no **TempDB** são registradas minimamente em log para que as transações possam ser revertidas. **TempDB** é recriado a cada vez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado, de modo que o sistema sempre começa com uma cópia limpa do banco de dados. As tabelas temporárias e procedimentos armazenados são descartados automaticamente ou desconectados e nenhuma conexão fica ativa quando o sistema é desligado. Portanto, nunca há nada em **TempDB** a ser gravado de uma sessão de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para outra. As operações de backup e restauração não são permitidas em **TempDB**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>Propriedades físicas do TempDB no SQL Server
 

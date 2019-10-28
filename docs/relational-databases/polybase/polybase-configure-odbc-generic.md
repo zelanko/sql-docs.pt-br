@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 697de72ce644ffdce721745b33cde3372edfb2c8
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 735d43f224fcfb8438f8fed9bdc6c3b254071195
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710668"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907601"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurar o PolyBase para acessar dados externos no SQL Server
 
@@ -78,8 +78,6 @@ Os seguintes comandos Transact-SQL são usados nesta seção:
     ```
 
 1. **Opcional:** Crie estatísticas em uma tabela externa.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Para obter desempenho de consulta ideal, é recomendável criar estatísticas em colunas de tabelas externas, especialmente aquelas usadas para junções, filtros e agregações.
 

@@ -20,12 +20,12 @@ ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 6cd32a9e88d53296eb2d4a94b0eb71757afbdf63
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: df7163395127b1478762078a74c0552c60e2dd65
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846522"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907816"
 ---
 # <a name="delete-an-article"></a>Excluir um artigo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,8 +47,6 @@ ms.locfileid: "70846522"
 1.  Execute [sp_droparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) para excluir um artigo, especificado por **\@article**, de uma publicação, especificado por **\@publication**. Especifique um valor igual a **1** em **\@force_invalidate_snapshot**.  
   
 2.  (Opcional) Para remover inteiramente o objeto publicado de um banco de dados, execute o comando `DROP <objectname>` no Publicador do banco de dados de publicação.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>Para excluir um artigo de uma publicação de mesclagem  
   

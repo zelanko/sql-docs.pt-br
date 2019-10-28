@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 705bf95c2bcff4062962166249055ec940f00d5b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 7c9924d2062b3c4fa41c8731df17b49fe9a86b07
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769346"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907285"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Solução de problemas: localizar erros com replicação transacional do SQL Server 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,8 +27,6 @@ Esse processo cria a publicação e a coloca no estado *sincronizando*. A sincro
 1. As transações ocorrerem em objetos que são replicados e marcados como "para replicação" no log de transações. 
 2. O Agente de Leitor de Log examina o log de transações e procura por transações marcadas como "para replicação." Essas transações são então salvas no banco de dados de distribuição. 
 3. O Agente de Distribuição examina o banco de dados de distribuição usando o thread de leitura. Em seguida, usando o thread de gravação, esse agente se conecta ao assinante para aplicar essas alterações ao assinante.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Erros podem ocorrer em qualquer etapa desse processo. Localizar os erros pode ser o aspecto mais difícil da solução de problemas de sincronização. Felizmente, o uso do Replication Monitor facilita esse processo. 
 

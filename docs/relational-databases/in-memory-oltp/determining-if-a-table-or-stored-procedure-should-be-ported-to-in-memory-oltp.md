@@ -14,12 +14,12 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d25137348904fdf3eceb1cc0fceb2a147580f744
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a392904b378514bb22816a3c325535fbe94cbacf
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092296"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907856"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP na memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -122,8 +122,6 @@ As estatísticas de verificação e contenção no relatório de detalhes da tab
 3.  Clique em **Avançar** e confirme se a lista de tarefas corresponde às configurações na página **Configurar Opções de Geração de Lista de Verificação** .  
   
 4.  Clique em **Concluir**e confirme a geração da lista de verificação de migração somente para os objetos selecionados.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Você pode verificar a precisão dos relatórios comparando-os com os relatórios gerados pela ferramenta Orientador de otimização da memória e pela ferramenta Native Compilation Advisor. Para obter mais informações, consulte [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) e [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md).  
   

@@ -2,7 +2,7 @@
 title: O que são grupos de disponibilidade distribuídos
 description: Um grupo de disponibilidade distribuído é um tipo especial de grupo de disponibilidade que abrange dois grupos de disponibilidade separados. Os grupos de disponibilidade que fazem parte de um grupo de disponibilidade distribuído não precisam estar no mesmo local.
 ms.custom: seodec18
-ms.date: 07/31/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2670a5967c5bb3921cb23d79670eeefe859cb5a0
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: 93e95e52249a44c0ef7425d11f3400974e123f3f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702746"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907279"
 ---
 # <a name="distributed-availability-groups"></a>Grupos de disponibilidade distribuídos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Grupos de disponibilidade distribuídos são um novo recurso introduzido no SQL Server 2016, como uma variação do recurso existente grupos de disponibilidade AlwaysOn. Este artigo explica alguns aspectos dos grupos de disponibilidade distribuídos e complementa a [documentação existente do SQL Server](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation).
+Grupos de disponibilidade distribuídos são um novo recurso introduzido no SQL Server 2016, como uma variação do recurso existente grupos de disponibilidade AlwaysOn. Este artigo explica alguns aspectos dos grupos de disponibilidade distribuídos e complementa a [documentação existente do SQL Server](https://docs.microsoft.com/sql/sql-server/index.yml).
 
 > [!NOTE]
 > “DAG” não é a abreviação oficial de *grupo de disponibilidade distribuído*, pois a abreviação já é usada para o recurso Grupo de Disponibilidade de Banco de Dados do Exchange. Esse recurso do Exchange não tem nenhuma relação com os grupos de disponibilidade do SQL Server nem com os grupos de disponibilidade distribuídos.

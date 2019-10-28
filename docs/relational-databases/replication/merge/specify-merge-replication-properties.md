@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 058e46441b22f5be5b0d63cf8e9a61dd6c75ef27
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 8ae39654a19c73c71c602801b3aa5f594f7d0828
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711040"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908155"
 ---
 # <a name="specify-merge-replication-properties"></a>Especificar propriedades de Replicação de Mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,6 @@ Na página **Artigos** do Assistente para Nova Publicação, selecione uma tabel
     -   **Download para Assinante, proibir alterações do Assinante**    
     -   **Download para Assinante, permitir alterações do Assinante**    
 4.  Se você estiver na caixa de diálogo **Propriedades da Publicação – \<Publicação>** , clique em **OK** para salvar e fechar a caixa de diálogo.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="use-transact-sql"></a>Usar o Transact-SQL  
   

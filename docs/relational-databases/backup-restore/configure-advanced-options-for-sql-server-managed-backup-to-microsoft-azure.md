@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b9f63c9fed9be5a88c68c88938b77483a077df1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7487f89c6868555c6e3e27a217bce12123b16642
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081365"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908975"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurar opções avançadas de backup gerenciado do SQL Server para o Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +30,6 @@ ms.locfileid: "68081365"
   
 ## <a name="configure-encryption"></a>Configurar a criptografia  
  As etapas a seguir descrevem como especificar as configurações de criptografia usando o procedimento armazenado [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md).  
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 1.  **Determine o algoritmo de criptografia:** primeiro determine o nome do algoritmo de criptografia a ser usado. Selecione um dos seguintes algoritmos.  
   

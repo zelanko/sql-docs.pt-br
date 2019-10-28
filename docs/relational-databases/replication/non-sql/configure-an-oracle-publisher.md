@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a77c321f5ba63e7c6db3d1aac47b6ad4b0c2027a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6c0aa05f095907b39cacf39f65dfc3b09d9786e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020036"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907184"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurar um publicador Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +30,6 @@ ms.locfileid: "68020036"
 3.  Instale o software do cliente Oracle e o provedor OLE DV no Distribuidor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, em seguida, pare e reinicie a instância [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se o Distribuidor estiver executando em uma plataforma de 64 bits, você deverá usar a versão de 64 bits do provedor OLE DB do Oracle.  
   
 4.  Configure o banco de dados Oracle como um Publicador no Distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte aos seguintes cenários heterogêneos para replicação transacional e de instantâneo:  
   

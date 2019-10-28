@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e7ee336c9f81c8d4258e16cf09aa9ffec177e0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a97acba6af3cb960cf4d98d26d3f8da4805822da
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110948"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907983"
 ---
 # <a name="oracle-subscribers"></a>Assinantes Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,8 +50,6 @@ ms.locfileid: "68110948"
     |Especificar as informações de host para identificar o ouvinte de banco de dados|O host é o nome ou alias de DNS do computador no qual o ouvinte Oracle está executando, que costuma geralmente ser o mesmo computador no qual o banco de dados reside. Para alguns protocolos, você deve fornecer informações adicionais. Por exemplo, se você selecionar o TCP, deve fornecer a porta na qual o ouvinte está escutando as solicitações de conexão para o banco de dados de destino. A configuração do TCP padrão usa a porta 1521.|  
   
 3.  Crie um instantâneo ou uma publicação transacional, habilite-o para Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, em seguida, crie uma assinatura push para o Assinante. Para obter mais informações, consulte [Criar uma assinatura para um Assinante não SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="setting-directory-permissions"></a>Definindo permissões de diretório  
  A conta sob a qual o serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Distribuidor executa deve receber permissões de gravação e executar para o diretório (e todos os subdiretórios) onde o software de rede cliente Oracle está instalado.  

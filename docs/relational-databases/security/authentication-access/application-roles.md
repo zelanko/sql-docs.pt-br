@@ -21,12 +21,12 @@ ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b26765281f650a73e7c21e40ce63916eeb9fa21f
-ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
+ms.openlocfilehash: 15a37c87808b5b44d59a243b2bff57ce6db5de25
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68841587"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903785"
 ---
 # <a name="application-roles"></a>Funções de aplicativo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,8 +46,6 @@ ms.locfileid: "68841587"
 4.  Se o nome de função de aplicativo e a senha forem válidos, a função de aplicativo será habilitada.  
   
 5.  Nesse momento, a conexão perde as permissões de usuário e assume as permissões da função de aplicativo.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  As permissões adquiridas pela função de aplicativo permanecem em efeito durante a conexão.  
   

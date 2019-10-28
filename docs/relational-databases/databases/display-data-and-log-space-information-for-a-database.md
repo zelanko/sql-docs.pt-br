@@ -20,12 +20,12 @@ ms.assetid: c7b99463-4bab-4e9b-9217-fcb0898dc757
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9d067869ce73bc0d5c048b62b264cd0a4e28add
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 4b55ac532bcfa3a312c4203277b73de201eba718
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305294"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909064"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>Exibir dados e informações de espaço de log para um banco de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,8 +48,6 @@ ms.locfileid: "72305294"
 2.  Expanda os **Bancos de dados**.  
   
 3.  Clique com o botão direito do mouse em um banco de dados, aponte para **Relatórios**, aponte para **Relatórios Padrão**e clique em **Uso do Disco**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

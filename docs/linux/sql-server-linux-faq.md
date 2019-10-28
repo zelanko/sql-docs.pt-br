@@ -3,16 +3,16 @@ title: Perguntas frequentes sobre o SQL Server em Linux
 description: Este artigo fornece respostas para as perguntas frequentes sobre o SQL Server em execução no Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/10/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c6d9ea0eb36c212d3312522adafc50406c7a646d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4fe5ea36b2e60a3a0531e247acc303b70e0db801
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952638"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72929902"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Perguntas frequentes sobre o SQL Server em Linux
 
@@ -32,7 +32,7 @@ As seções a seguir fornecem perguntas e respostas comuns sobre o SQL Server em
 
 1. **O SQL Server em Linux é o mesmo que no Windows?**
 
-   O Mecanismo de Banco de Dados principal para o SQL Server é o mesmo no Linux e no Windows. No entanto, atualmente não há suporte para alguns recursos no Linux. Para obter uma lista de recursos que não têm suporte no Linux, confira os [Recursos e serviços sem suporte](sql-server-linux-release-notes.md#Unsupported). Leia também os [Problemas conhecidos](sql-server-linux-release-notes.md#known-issues). A menos que especificado nessas listas, outros recursos e serviços do SQL Server têm suporte no Linux.
+   O Mecanismo de Banco de Dados principal para o SQL Server é o mesmo no Linux e no Windows. No entanto, atualmente não há suporte para alguns recursos no Linux. Para obter uma lista de recursos que não têm suporte no Linux, confira os [Recursos e serviços sem suporte](sql-server-linux-editions-and-components-2019.md#Unsupported). Leia também os [Problemas conhecidos](sql-server-linux-release-notes.md#known-issues). A menos que especificado nessas listas, outros recursos e serviços do SQL Server têm suporte no Linux.
 
 1. **Qual é a política de suporte para o SQL Server?**
 

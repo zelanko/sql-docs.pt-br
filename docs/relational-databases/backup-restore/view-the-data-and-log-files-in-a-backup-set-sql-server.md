@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 69c88ccf053037e67312374cdeec615b31c8cb02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7b1fa3ed90caa1e7791aff61ca5394a77d72b384
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041261"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908794"
 ---
 # <a name="view-the-data-and-log-files-in-a-backup-set-sql-server"></a>Exibir os dados e arquivos de log em um conjunto de backup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,8 +62,6 @@ ms.locfileid: "68041261"
 4.  No painel **Selecionar uma Página** , clique em **Arquivos**.  
   
 5.  Procure na grade **Arquivos de banco de dados** para obter uma lista dos dados e arquivos de log e suas propriedades.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

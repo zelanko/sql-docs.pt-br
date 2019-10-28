@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cab94f3f628f1b3423af25467c12ba7b595ede77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: acea8d44048de35ecbc3214712f699217838e60d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021068"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905241"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Especificar caminhos e dicas de otimização para índices XML seletivos
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -235,8 +235,6 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
     -   Nó `b`, porque um predicado é aplicado ao nó`b` na expressão XQuery.  
   
 2.  **Princípio 2**: Para obter o melhor desempenho, indexe todos os nós necessários para avaliar determinada expressão XQuery. Se você indexar apenas alguns dos nós, o índice XML seletivo melhorará somente a avaliação de subexpressões que incluam nós indexados.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Para melhorar o desempenho da instrução SELECT mostrada acima, é possível criar o seguinte índice XML seletivo:  
   

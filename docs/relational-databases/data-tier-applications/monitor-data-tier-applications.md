@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f6a5bbb6b4315b0cdb6ed85bd592bb1d18c5c2eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abbd4cd516985dcebd28a5fd2fa28e9d83a413b2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134700"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907775"
 ---
 # <a name="monitor-data-tier-applications"></a>Monitorar aplicativos da camada de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "68134700"
 3.  Selecione o menu **Exibir/Detalhes do Gerenciador do Utilitário** .  
   
 4.  Selecione o nó **Aplicativos da Camada de Dados Implantados** no **Gerenciador do Utilitário**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  As informações na página de detalhes **Aplicativos da Camada de Dados Implantados** é resultado dos dados no data warehouse de gerenciamento do utilitário, cujo padrão é coletar dados a cada 15 minutos. O intervalo também pode ser personalizado usando a página de detalhes **Administração do Utilitário** .  
   

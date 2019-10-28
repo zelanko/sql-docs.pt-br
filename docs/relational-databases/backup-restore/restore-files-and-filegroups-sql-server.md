@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 31f28bf80d03516051206f6e88de6f32de614bed
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 5398b371ea4c969fedf54502d160ebd183cc2bdb
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278753"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908856"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>Restaurar arquivos e grupos de arquivos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -137,8 +137,6 @@ ms.locfileid: "70278753"
     |**Restaurar Como**|O caminho completo do arquivo de banco de dados a ser restaurado. Para especificar um novo arquivo de restauração, clique na caixa de texto e edite o caminho sugerido e o nome do arquivo. Alterar o caminho ou o nome do arquivo na coluna **Restaurar Como** é equivalente ao uso da opção MOVE em uma declaração RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
   
 11. O painel **Estado de recuperação** determina o estado do banco de dados após a operação de restauração.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   **Deixar o banco de dados pronto para uso revertendo as transações não confirmadas. Os logs de transações adicionais não podem ser restaurados. (RESTORE WITH RECOVERY)**  
   Recupera o banco de dados. Esse é o comportamento padrão. Escolha essa opção somente se estiver restaurando todos os backups necessários agora. Esta opção equivale à especificação WITH RECOVERY em uma declaração RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .  

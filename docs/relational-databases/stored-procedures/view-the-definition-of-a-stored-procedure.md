@@ -15,12 +15,12 @@ ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6feaa13db08a16e0171e1a8e3e8c44fa4ff70314
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de250fd158bdd02764e992e0ccbb69e072b4c6ab
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136574"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907341"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>Exibir a definição de um procedimento armazenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,8 +62,6 @@ ms.locfileid: "68136574"
 3.  Expanda **Procedimentos armazenados**, clique com o botão direito do mouse no procedimento, clique em **Gerar script de procedimento armazenado como** e clique em um dos itens a seguir: **Criar para**, **Alterar para** ou **Descartar e criar para**.  
   
 4.  Selecione **Janela do Editor de Nova Consulta**. Isso exibirá a definição de procedimento.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para exibir a definição de um procedimento no Editor de Consultas**  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9e3de9c6652de3ddd8d80bbc2d09b003acfe5220
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: db445d9c80c6a6e2552160dcff721c06d5c107e6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710684"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907784"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>Resolução de conflitos para replicação de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,8 +72,6 @@ ms.locfileid: "71710684"
     -   Selecione **Registrar os detalhes deste conflito** para registrar dados de conflito em um arquivo. Para especificar um local para o arquivo, aponte para o menu **Exibir** e então clique em **Opções**. Insira um valor ou clique no botão procurar ( **...** ) e então navegue até o arquivo apropriado. Clique em **OK** para sair da caixa de diálogo **Opções** .  
   
 6.  Feche o Visualizador de Conflitos de Replicação.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="view-conflict-information"></a>Exibir informações sobre conflitos
 Quando um conflito é resolvido em uma replicação de mesclagem, os dados da linha perdedora são gravados em uma tabela de conflitos. Os dados de conflito podem ser visualizados de forma programática, usando procedimentos armazenados de replicação. Para obter mais informações, consulte [Replicação de mesclagem avançada – detecção e resolução de conflito](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  

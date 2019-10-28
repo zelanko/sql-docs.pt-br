@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ef6b65623f5070f665a7d6bf3ea8973a34541eda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4a4a91c4703bd4634f471e3d6bc0b9b4baf2305
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944813"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908886"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurar um banco de dados do SQL Server até um ponto determinado (modelo de recuperação completa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,8 +124,6 @@ ms.locfileid: "67944813"
 13. As operações de restauração poderão falhar se houver conexões ativas com o banco de dados. Marque a opção **Fechar conexões existentes** para assegurar que todas as conexões ativas entre o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e o banco de dados sejam fechadas. Essa caixa de seleção define o banco de dados no modo de usuário único antes de executar as operações de restauração e define o banco de dados no modo de vários usuários ao concluir.  
   
 14. Selecione **Perguntar antes de restaurar cada backup** para que você seja solicitado entre cada operação de restauração. Isso normalmente só é necessário quando o banco de dados é grande e você deseja monitorar o status da operação de restauração.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Before you begin**  

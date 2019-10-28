@@ -18,12 +18,12 @@ ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 207bb036ad89e135a7bdcbeaba7e5fb29bd41571
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 980b179f39edc3e93e5cb0bc105b6b2f8d12bb58
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094985"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903753"
 ---
 # <a name="create-a-database-schema"></a>Criar um esquema de banco de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,8 +60,6 @@ ms.locfileid: "68094985"
 5.  Na caixa **Proprietário do esquema** , digite o nome de um usuário de banco de dados ou função para ser o proprietário da propriedade do esquema. Como alternativa, clique em **Pesquisar** para abrir a caixa de diálogo **Pesquisar Funções e Usuários** .  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]
 > Uma caixa de diálogo não aparecerá se você estiver criando um esquema usando o SSMS em relação a um **Banco de Dados SQL do Azure** ou um **SQL Data Warehouse do Azure**. Você precisará executar a Instrução T-SQL Criar Modelo de Esquema que é gerada.

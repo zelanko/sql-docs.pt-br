@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1ab78eab73526568736dea8c4aef1525b2607c93
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: b61761ff30a32d6781e61e988325fbfc40b5762e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72162561"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909756"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conexão ao mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,8 +58,6 @@ Os bancos de dados de exemplo e os exemplos não estão incluídos no [!INCLUDE[
 2.  Na caixa de diálogo **Conectar ao Servidor** , clique em **Cancelar**.  
 3.  Se Servidores Registrados não aparecer, no menu **Exibir** , clique em **Servidores Registrados**.
 4.  Com **Mecanismo de Banco de Dados** selecionado na barra de ferramentas Servidores Registrados, expanda **Mecanismo do Banco de Dados**, clique com o botão direito do mouse em **Grupos do Servidor Local**, aponte para **Tarefas**e clique em **Registrar Servidores Locais**. Expanda **Grupos de Servidores Locais** para ver todas as instâncias do [!INCLUDE[ssDE](../includes/ssde-md.md)] instaladas no computador exibido. A instância padrão é sem-nome e é mostrada como o nome do computador. Uma instância nomeada é exibida como o nome do computador seguido de uma barra invertida (\\) e do nome da instância. Para o [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], a instância é chamada *<computer_name>* \sqlexpress, exceto se o nome for alterado durante a instalação.  
-
-[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>Para verificar se o Mecanismo de Banco de Dados está sendo executado
 

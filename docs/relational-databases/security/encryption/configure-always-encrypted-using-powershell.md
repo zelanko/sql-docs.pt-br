@@ -10,12 +10,12 @@ ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 702bc2a5dd5578bff85d7e386e2abe3a4a0a658f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ad4a50d8aeca225ae0d00574a62cc428593ebb2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050083"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903013"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Configurar Always Encrypted usando o PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,8 +52,6 @@ Import-Module "SqlServer"
 Alguns dos cmdlets do Always Encrypted trabalham com dados ou metadados no banco de dados e requerem que você se conecte ao banco de dados primeiro. Há dois métodos recomendados para se conectar a um banco de dados ao configurar o Always Encrypted usando o módulo SqlServer: 
 1. Conectar-se usando o SQL Server PowerShell.
 2. Conectar-se usando o SMO (SQL Server Management Objects).
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="using-sql-server-powershell"></a>Usando o SQL Server PowerShell
 

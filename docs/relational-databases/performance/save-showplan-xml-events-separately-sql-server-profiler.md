@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cc0fcbe1a04e9b49f47c30e9eae40abbd1dccfd1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4a3530d3796cf65dd66dd509e3f168183d4b274a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113366"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908082"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Salvar eventos do Plano de Execução XML separadamente (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,8 +62,6 @@ ms.locfileid: "68113366"
 10. Selecione **Todos os lotes de Plano de Execução XML em um único arquivo** para salvar todos os eventos de **Plano de Execução XML** em um único arquivo XML. Ou selecione **Cada lote de Plano de Execução XML em um arquivo distinto** para criar um novo arquivo XML para cada evento de **Plano de Execução XML**.  
   
 11. Para exibir o arquivo do evento de **Plano de Execução XML** no SQL Server Management Studio, no menu **Arquivo**, aponte para **Abrir** e selecione **Arquivo**. Navegue até o diretório em que você salvou o arquivo (ou arquivos) de evento de **Plano de Execução XML** para selecionar um e abri-lo. Os arquivos de evento**Showplan XML** têm a extensão .SQLPlan.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>Confira também  
  [Analisar consultas com resultados do Plano de Execução no SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  

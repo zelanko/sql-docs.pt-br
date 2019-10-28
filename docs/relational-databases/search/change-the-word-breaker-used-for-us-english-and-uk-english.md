@@ -10,12 +10,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7142d63b70a6d70d64566eec2105c8b4fb90e323
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0d8299581c5394b5528e9c42a41a64445fae800
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093393"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903900"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Alterar o separador de palavras usado para inglês (EUA) e inglês (Reino Unido)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,8 +55,6 @@ ms.locfileid: "68093393"
 5.  Atualize o valor de chave **StemmerClass** para **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}** .  
   
 6.  Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>Para alternar da versão atual do separador de palavras em inglês do Reino Unido para a versão anterior  
   

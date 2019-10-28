@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7b55822e011b03044d9fafad4ff2b30884ea5ec2
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 11628e5b490c30ef64329f6b9d06aee1b6c10fa9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846714"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908288"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Criar e aplicar o instantâneo inicial
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -62,8 +62,6 @@ Para exibir ou modificar o local padrão de pasta de instantâneo, consulte
     >  O Snapshot Agent deve ter permissões de gravação para o diretório que você especificar, e o Distribution Agent ou Merge Agent devem ter permissões de leitura. Se as assinaturas pull forem usadas, será necessário especificar um diretório compartilhado como um caminho UNC, como \\\computername\snapshot. Para obter mais informações, consulte [Proteger a pasta de instantâneos](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="create-snapshot"></a>Criar instantâneo
 Por padrão, se o SQL Server Agent estiver sendo executado, um instantâneo será gerado imediatamente pelo Agente de Instantâneo depois que a publicação seja criada com o Assistente para Nova Publicação. Por padrão, isso é então aplicado pelo Distribution Agent (para replicações transacionais e instantâneas) ou o Merge Agent (para assinaturas de mesclagem) para todas as assinaturas. Um instantâneo também pode ser gerado usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e o Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  

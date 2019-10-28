@@ -10,12 +10,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: f937ba5ff6fe4d9c0837d861bf75253f24bbf33b
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+ms.openlocfilehash: 631cfbf59cedddc699d82f36d4ea42ff23b0119c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71823585"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909149"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solucionar problemas de conectividade do PolyBase Kerberos
 
@@ -34,8 +34,6 @@ Este artigo descreve o processo de depuração desses problemas por dessa ferram
 
 1. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU6/[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU3/[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ou superior com o PolyBase instalado
 1. Um cluster Hadoop (Cloudera ou Hortonworks) protegido por Kerberos (Active Directory ou MIT)
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="introduction"></a>Introdução
 Primeiramente, é necessário entender o protocolo Kerberos em um alto nível. Há três atores envolvidos:

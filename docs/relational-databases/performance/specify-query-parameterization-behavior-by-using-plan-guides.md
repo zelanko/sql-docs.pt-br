@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e3722a6860fea48f32fd2528435b9929cc3bd689
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 7a6cbd0829105c03dbb453de52d84455faeaef99
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278226"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907448"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>Especificar comportamento de parametrização de consulta usando guias de plano
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,8 +54,6 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 
     > [!IMPORTANT]  
     >  Como parte da parametrização de uma consulta, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui um tipo de dados aos parâmetros que substituem os valores literais, dependendo do valor e tamanho do literal. O mesmo processo ocorre para o valor das literais constantes transferido para o parâmetro de saída **\@stmt** de **sp_get_query_template**. Como o tipo de dados especificado no argumento **\@params** de **sp_create_plan_guide** deve corresponder ao da consulta, uma vez que ele é parametrizado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], poderá ser necessário criar mais de uma guia de plano para abranger o intervalo completo de valores de parâmetro possíveis para a consulta.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 O script a seguir pode ser usado para obter a consulta parametrizada e criar uma guia de plano para ela:  
   

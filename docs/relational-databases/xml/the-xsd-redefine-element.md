@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1b4a155e7f3c23508080a5fd55f15d05c5432c50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2f32e6952634e5bd4d376ac06d6c3f067fb75a0c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078120"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907554"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>O elemento &lt;xsd:redefine&gt;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +30,6 @@ ms.locfileid: "68078120"
 2.  Redefina o tipo de todos os tipos de dados **xml** (XML DT) que usam a coleção de esquema XML a serem redefinidos para usarem a nova coleção de esquema XML. Para isso, use a opção ALTER COLUMN do comando ALTER TABLE para redefinir o tipo das colunas ou altere as restrições da coleção de esquema XML sobre variáveis ou parâmetros.  
   
 3.  Descarte a versão antiga da coleção de esquema XML.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>Consulte Também  
  [Requisitos e limitações de uso de coleções de esquema XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 65cb5e39b8bda5d0f964a1586588c5f6e60bb89c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f260ee4737f1d493986e5cfa8e308d8882328140
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075919"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908953"
 ---
 # <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>Definir um dispositivo de backup lógico para uma unidade de fita (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,8 +74,6 @@ ms.locfileid: "68075919"
 5.  Para o destino, clique em **Fita** e selecione uma unidade de fita que ainda não esteja associada a outro dispositivo de backup. Se nenhuma das unidade de fita estiver disponível, a opção **Fita** estará inativa.  
   
 6.  Para definir o dispositivo novo, clique em **OK**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Para fazer backup neste novo dispositivo, adicione-o ao campo **Fazer backup em:** na caixa de diálogo **Backup de Banco de dados** (**Geral**). Para obter mais informações, veja [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   

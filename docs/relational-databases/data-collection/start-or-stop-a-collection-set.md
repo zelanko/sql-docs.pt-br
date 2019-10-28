@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 280fd8cd33893dc62afd129c2d3b55e75ec22b33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8c7429c9352ca7f488317547eb082532c3916eb
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133630"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909646"
 ---
 # <a name="start-or-stop-a-collection-set"></a>Iniciar ou interromper um conjunto de coleta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,9 +70,7 @@ ms.locfileid: "68133630"
   
 2.  Clique com o botão direito do mouse no conjunto de coleta que deseja iniciar e clique em **Iniciar Conjunto de Coleta de Dados**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     A message box displays the results of this action, and a green arrow on the icon for the collection set indicates that the collection set has started.  
+     Uma caixa de mensagem exibe os resultados desta ação e uma seta verde no ícone do conjunto de coleta indica que o conjunto de coleta foi iniciado.  
   
 #### <a name="to-stop-a-collection-set"></a>Para parar um conjunto de coleta  
   

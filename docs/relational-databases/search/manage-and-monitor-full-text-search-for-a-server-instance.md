@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68d1ea1ee1adc7c5126606bd0cf72ca8e54a725c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8926e74c96c6da9796466a39c1a9ea3cb2bd953d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132256"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903836"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gerenciar e monitorar a pesquisa de texto completo em uma instância do servidor
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,8 +38,6 @@ ms.locfileid: "68132256"
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse em um servidor e clique em **Propriedades**.  
   
 2.  Na caixa de diálogo **Propriedades do Servidor** , clique na página **Avançado** para exibir as informações do servidor sobre a pesquisa de texto completo. As propriedades de texto completo são:  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   **Idioma de Texto Completo Padrão**  
   

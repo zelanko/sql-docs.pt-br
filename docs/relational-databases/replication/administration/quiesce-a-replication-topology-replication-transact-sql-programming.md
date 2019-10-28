@@ -17,12 +17,12 @@ ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b226bb096a532aaeec77cc38bcecd0ef805c9d2f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8a8154986de367869c4d85d97b2dfa9119adacc6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768738"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909845"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>Confirmar uma topologia de replicação (Programação Transact-SQL de replicação)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,8 +37,6 @@ ms.locfileid: "68768738"
 3.  No Publicador do banco de dados de publicação, execute [sp_helptracertokenhistory](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md).  
   
 4.  Certifique-se de que cada Assinante tenha recebido o token de rastreamento.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="to-quiesce-a-transactional-replication-topology-with-updatable-subscriptions"></a>Para confirmar uma topologia de replicação transacional com assinaturas atualizáveis  
   

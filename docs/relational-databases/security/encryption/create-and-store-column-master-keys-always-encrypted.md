@@ -11,12 +11,12 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50e5fd4eaf56bebb430d2d2153038a7128d34398
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8f9dbfc7f75d853232e0074d52735e9e38d68d5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049985"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72902960"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Criar e armazenar chaves mestras de coluna (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,8 +108,6 @@ Para conceder a um usuário a permissão *Leitura* para um certificado armazenad
 7.  Na caixa de diálogo **Adicionar/Remover Snap-in**, clique em **OK**.
 8.  No snap-in de **Certificados**, localize o certificado na pasta **Certificados > Pessoal**, clique com o botão direito do mouse no Certificado, aponte para **Todas as Tarefas** e clique em **Gerenciar Chaves Privadas**.
 9.  Na caixa de diálogo **Segurança**, adicione permissões de leitura para uma conta de usuário, se necessário.
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>Criando chaves mestras de coluna no Cofre de Chaves do Azure
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 95a1761334328ed01c54ea03ff282cbec0bb6903
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 14327b3d8b06355445ae92edaa65464124faff8a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089809"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908945"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>Habilitar ou desabilitar as somas de verificação de backup durante backup ou restauração (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,6 @@ ms.locfileid: "68089809"
 1.  Siga as etapas para [criar um backup de banco de dados](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 2.  Na página **Opções** , na seção **Confiabilidade** , clique em **Executar soma de verificação antes de gravar na mídia**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

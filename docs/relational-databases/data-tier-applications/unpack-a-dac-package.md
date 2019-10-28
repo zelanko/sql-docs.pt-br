@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 159369a30ffe4f0b67f59f3970c241d9275f7a54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5e2be902c241403ec044b3d348f90dc85327b8ad
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134668"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909532"
 ---
 # <a name="unpack-a-dac-package"></a>Desempacotar um pacote de DAC
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,8 +27,6 @@ ms.locfileid: "68134668"
 1.  **Antes de começar:**  [Segurança](#Security)  
   
 2.  **Para desempacotar um DAC usando:**  [Caixa de Diálogo Desempacotar Aplicativo da Camada de Dados](#UnpackDACDial), [Examinar o Conteúdo de um Pacote de DAC](#ExamDACPack)  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="Security"></a> Segurança  
  Recomendamos não implantar um pacote de DAC de origens desconhecidas ou não confiáveis. Como os DACs podem conter código mal-intencionado que pode executar código [!INCLUDE[tsql](../../includes/tsql-md.md)] sem finalidade ou provocar erros modificando o esquema. Antes de usar um DAC de uma origem desconhecida ou não confiável, implante-o em uma instância de teste isolada do [!INCLUDE[ssDE](../../includes/ssde-md.md)], desempacote o DAC e examine o código, como procedimentos armazenados ou outro código definido pelo usuário.  

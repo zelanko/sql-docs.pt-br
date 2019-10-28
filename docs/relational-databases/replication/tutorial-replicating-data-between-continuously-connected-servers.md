@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 379a7fe83694307c9f4d981d000dc8b9457fa6c9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: f85dfc4a05b8affad4ef814c1871f504d619cdb8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769407"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907712"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Configurar a replicação entre dois servidores totalmente conectados (transacional)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,8 +115,6 @@ Nesta seção, você criará uma publicação transacional usando o [!INCLUDE[ss
     ![Página "Concluir o Assistente" com o nome da publicação](media/tutorial-replicating-data-between-continuously-connected-servers/advworksproducttrans.png)
   
 14. Depois que a publicação for criada, selecione **Fechar** para concluir o assistente. 
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Você poderá receber o erro a seguir se o SQL Server Agent não estiver em execução quando você tentar criar a publicação. Esse erro indica que a publicação foi criada com êxito, mas o Agente de Instantâneo não pôde ser iniciado. Se isso acontecer, você precisará iniciar o SQL Server Agent e, em seguida, iniciar o Agente de Instantâneo manualmente. A próxima seção fornece instruções. 
 

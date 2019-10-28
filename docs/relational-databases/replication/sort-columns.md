@@ -13,12 +13,12 @@ ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 0f7cca09018f9486c831e3803aedb5c969c422d1
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 7a1be23bebd3055c6c8e40664d37d666a4f09467
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769497"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908376"
 ---
 # <a name="sort-columns"></a>Classificar Colunas
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,8 +27,6 @@ ms.locfileid: "68769497"
 1.  Na primeira linha da grade, selecione **Status** na coluna **Nome da Coluna** e um valor na coluna **Ordem de Classificação**  
   
 2.  Na segunda linha da grade, selecione **Tipo de Conexão** na coluna **Nome da Coluna** e um valor na coluna **Ordem de Classificação**  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="options"></a>Opções  
  **Nome da Coluna**  

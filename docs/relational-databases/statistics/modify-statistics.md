@@ -13,12 +13,12 @@ ms.assetid: b06299ca-ed52-411a-b245-45eac4628c99
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 593a30631eed27db108c79dd70840d1fee3f6964
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6f34bf5db992f1d7062f9def1805996701eda5f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134007"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906205"
 ---
 # <a name="modify-statistics"></a>Modificar estatísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,8 +64,6 @@ ms.locfileid: "68134007"
 6.  Na caixa de diálogo **Propriedades de Estatísticas –** *statistics_name* , na página **Geral** , clique em **Adicionar**, **Remover**, **Mover para Cima**, **Mover para Baixo**, any combination, to alter the properties of the statistics. Lembre-se de que a localização de uma coluna na grade **Colunas de Estatísticas** pode afetar substancialmente a utilidade das estatísticas.  
   
 7.  Clique em **OK**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para modificar as estatísticas**  

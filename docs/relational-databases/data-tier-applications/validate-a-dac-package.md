@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1d6549eaa6a90a60666db5a1e957b66a94a08167
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7df5bb3b2ef677e597d12dad8b8d92ddbb22fcba
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134616"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908245"
 ---
 # <a name="validate-a-dac-package"></a>Validar um pacote de DAC
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,8 +29,6 @@ ms.locfileid: "68134616"
 1.  **Antes de começar:**  [Pré-requisitos](#Prerequisites)  
   
 2.  **Para atualizar um DAC, usando:**  [Exibir o Conteúdo de um DAC](#ViewDACContents), [Exibir Alterações no Banco de Dados](#ViewDBChanges), [Exibir Ações de Atualização](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="Prerequisites"></a> Pré-requisitos  
  Recomendamos não implantar um pacote de DAC de origens desconhecidas ou não confiáveis. Como os DACs podem conter código mal-intencionado que pode executar código [!INCLUDE[tsql](../../includes/tsql-md.md)] sem finalidade ou provocar erros modificando o esquema. Antes de usar um DAC de uma origem desconhecida ou não confiável, implante-o em uma instância de teste isolada do [!INCLUDE[ssDE](../../includes/ssde-md.md)], execute [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) no banco de dados. Além disso, examine o código, como procedimentos armazenados ou outro código definido pelo usuário, no banco de dados.  

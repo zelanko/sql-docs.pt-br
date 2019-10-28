@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 481a6a0a109683c94ef754ea679a801a92a8aabc
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: a160fe7fbf98a428c9cfacecd00305ce83ba0a5a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811363"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907036"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,6 @@ ms.locfileid: "68811363"
 5.  Desmarque a opção **Mostrar objetos existentes** na parte inferior da página com guias **Recomendações** . Com isso, a grade exibirá somente os objetos de banco de dados indicados na recomendação. Use a barra de rolagem inferior para exibir a coluna mais à direita na grade de recomendações e clique em um item na coluna **Definição** para exibir ou copiar o script [!INCLUDE[tsql](../../includes/tsql-md.md)] que cria aquele objeto em seu banco de dados.  
   
 6.  Para salvar todos os scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] que criam ou descartam todos os objetos de banco de dados nesta recomendação em um arquivo de script, clique em **Salvar Recomendações** , no menu **Ações** .  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>Para exibir o resumo e os relatórios de ajuste com a GUI do Orientador de Otimização do Mecanismo de Banco de Dados  
   

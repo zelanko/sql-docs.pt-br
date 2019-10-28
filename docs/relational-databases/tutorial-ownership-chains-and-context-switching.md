@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4795fd4ff2cc6c2c267e132062960ec492353cf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f010b08f4e9bb7687d45175a70f8d619758e561
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138386"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907002"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Cadeias de propriedade e comutação de contexto
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,6 @@ Para atender aos requisitos deste cenário, o exemplo é dividido em quatro part
 2.  Criando um procedimento armazenado para acessar dados por ordem de compra.   
 3.  Acessando os dados pelo procedimento armazenado.  
 4.  Redefinindo o ambiente.  
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Cada bloco de código neste exemplo é explicado em linha. Para copiar o exemplo completo, consulte [Exemplo completo](#CompleteExample) no fim deste tutorial.
 

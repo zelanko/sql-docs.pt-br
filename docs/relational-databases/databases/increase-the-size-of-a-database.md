@@ -16,12 +16,12 @@ ms.assetid: 14f4206d-3afa-4ba9-9849-23e81d63306d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 400d04da6865ca0bd8ebc6fc7d700dbeeedd378b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de8ba9cd3ea509ae2962d424fa36852f00c9cca5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934454"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909022"
 ---
 # <a name="increase-the-size-of-a-database"></a>Aumentar o tamanho de um banco de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,8 +67,6 @@ ms.locfileid: "67934454"
 5.  Para aumentar o tamanho do banco de dados adicionando um novo arquivo, clique em **Adicionar** e, depois, digite os valores para o novo arquivo. Para obter mais informações, consulte [adicionar dados ou arquivos de Log para um banco de dados](../../relational-databases/databases/add-data-or-log-files-to-a-database.md).  
   
 6.  Clique em **OK**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b14ea78ab74849befcf966edf0c50a7e6ba30fcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 785c056b50ed3594fe9886eb9c6a9ec79f7895c1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115342"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908653"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>Remover uma instância do SQL Server do Utilitário do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +33,6 @@ ms.locfileid: "68115342"
 3.  Especifique as credenciais com privilégios de administrador para a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Clique em **Conectar...** , verifique as informações na caixa de diálogo **Conectar ao Servidor** e clique em **Conectar**. Você verá as informações de logon na caixa de diálogo **Remover Instância Gerenciada** .  
   
 4.  Para confirmar a operação, clique em **OK**. Para encerrar a operação, clique em **Cancelar**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="manually-remove-a-managed-instance-of-sql-server-from-a-sql-server-utility"></a>Remover manualmente uma instância gerenciada do SQL Server do Utilitário do SQL Server  
  Este procedimento remove a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da exibição de lista do UCP e interrompe a coleta de dados do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não é desinstalada.  

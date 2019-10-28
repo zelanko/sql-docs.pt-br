@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d04c2fb2fd405a582cb6c94b59bdca83ba3dbb5
-ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
+ms.openlocfilehash: cedb601d9a16bc7562463e78f2d1a6296b687f3d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72239415"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906974"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Início Rápido: Backup e restauração do SQL no serviço de armazenamento de Blob do Azure
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -29,9 +29,6 @@ Para concluir este início rápido, você deve estar familiarizado com os concei
 - Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Instale o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) ou implante uma [instância gerenciada](/azure/sql-database/sql-database-managed-instance-get-started) com conectividade estabelecida por meio de uma [máquina virtual SQL do Azure](/azure/sql-database/sql-database-managed-instance-configure-vm) ou [ponto a site](/azure/sql-database/sql-database-managed-instance-configure-p2s).
 - Atribua a conta de usuário à função [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) e conceda permissões para [Alterar qualquer credencial](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 
 ## <a name="create-azure-blob-container"></a>Criar o contêiner de Blob do Azure
 Um contêiner fornece um agrupamento de conjunto de blobs. Todos os blobs devem estar em um contêiner. Uma conta de armazenamento pode conter um número ilimitado de contêineres, mas deve ter pelo menos um contêiner. Um contêiner pode armazenar um número ilimitado de blobs. 

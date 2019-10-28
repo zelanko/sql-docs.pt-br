@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f2589588a2caa0c8a4132954b7897a7c128110d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5e518050759aea98d249e93374a6335bddf30c75
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072897"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909491"
 ---
 # <a name="filter-a-trace"></a>Filtrar um rastreamento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "68072897"
 2.  Identifique os dados e colunas de dados que contêm as informações de que necessita.  
   
 3.  Identifique o subconjunto dos dados de que necessita e defina filtros de acordo com ele.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Por exemplo, talvez lhe interesse apenas eventos que tenham certa duração ou mais. Você pode criar um rastreamento que inclua eventos em que a coluna de dados **Duration** é maior que 300 milissegundos. Seu rastreamento não incluirá eventos que terminem em menos de 300 milissegundos.  
   

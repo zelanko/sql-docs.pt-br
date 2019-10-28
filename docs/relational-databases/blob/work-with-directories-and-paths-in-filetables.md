@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7690198e904ab22c463da5a9de90c48ad8b9e15f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2f31288df7d03bf527f1ee0a0bcd3b8ed84bba19
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118574"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908696"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Trabalhar com diretórios e caminhos em FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,8 +67,6 @@ GO
 2.  O **DIRECTORY_NAME** especificado no nível do banco de dados.  
   
 3.  O **FILETABLE_DIRECTORY** especificado no nível de FileTable.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  A hierarquia resultante será semelhante a esta:  
   

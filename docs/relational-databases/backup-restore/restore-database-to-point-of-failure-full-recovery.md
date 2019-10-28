@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ad5b91a85db47b500d8a48d0fa3384eb65ba2a19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5a028fc4ee35caf1b4b0900a4042691188a05fb8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041539"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908842"
 ---
 # <a name="restore-database-to-point-of-failure---full-recovery"></a>Restaurar o banco de dados para o ponto de falha – Recuperação completa
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,8 +57,6 @@ ms.locfileid: "68041539"
     ```  
   
 5.  Recupere o banco de dados executando a seguinte instrução RESTORE DATABASE:  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     RESTORE DATABASE <database_name>   

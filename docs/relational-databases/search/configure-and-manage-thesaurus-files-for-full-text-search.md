@@ -13,12 +13,12 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 792b605f4c85484a8cb6ab7987aeee2bd427c67a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cb88891354154ff987cedc31a56f56e4bf953532
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098270"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903886"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurar e gerenciar arquivos de dicionário de sinônimos para Pesquisa de texto completo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,8 +82,6 @@ Você pode alterar a localização e os nomes de um arquivo de dicionário de si
 Uma consulta ao dicionário de sinônimos usa um dicionário de sinônimos específico de um idioma e o dicionário de sinônimos global.
 1.  Primeiro, a consulta pesquisa pelo arquivo específico do idioma e depois o carrega para ser processado (a menos que já esteja carregado). A consulta é expandida para incluir os sinônimos específicos do idioma definidos pelos conjuntos de expansão e regras de substituição no arquivo do dicionário de sinônimos. 
 2.  Essas etapas são repetidas para o dicionário de sinônimos global. Entretanto, se um termo já tiver correspondências no arquivo de dicionário de sinônimos específico do idioma, ele não terá correspondentes no dicionário de sinônimos global.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="structure"></a> Estrutura de um arquivo de dicionário de sinônimos  
  Cada arquivo de dicionário de sinônimos define um contêiner XML cuja ID é `Microsoft Search Thesaurus`, além de um comentário, `<!--` ... `-->`, que contém um dicionário de sinônimos de exemplo. O dicionário de sinônimos é definido em um elemento `<thesaurus>` que contém exemplos dos elementos filho que definem a configuração de diacríticos, os conjuntos de expansão e os conjuntos de substituição.

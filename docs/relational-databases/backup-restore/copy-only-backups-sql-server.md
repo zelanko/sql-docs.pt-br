@@ -15,12 +15,12 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: eac98b2d0b5e7ac8c0cd8f765d172333f5ba0a30
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.openlocfilehash: 621d3d701e1e815bac4d5028c3d78b00240bc293
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71341862"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908991"
 ---
 # <a name="copy-only-backups"></a>Backups somente cópia
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,8 +49,6 @@ Um *backup somente cópia* é um backup do [!INCLUDE[ssNoVersion](../../includes
 ### <a name="examples"></a>Exemplos  
 ###  <a name="SSMSProcedure"></a> A. Usando o SQL Server Management Studio  
 Neste exemplo, será feito backup somente cópia do banco de dados `Sales` em disco no local de backup padrão.
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 1. No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
 

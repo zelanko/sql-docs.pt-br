@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 35bd9553376b7e8887271a0a51c023a0be95c4de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b626bb278025eb08cbbfdcc81724d8c82dd36ed
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986631"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907844"
 ---
 # <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>Exibir o log de erros do SQL Server (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,6 @@ O log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cont
     ![View_SQLServer_Log_SSMS](../../relational-databases/performance/media/view-sqlserver-log-ssms.png) 
  
 5. O **Visualizador do Arquivo de Log** será exibido (pode levar um minuto) com uma lista de logs a serem exibidos.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   ## <a name="see-also"></a>Confira também
   Para obter mais informações, consulte a postagem útil [Identify location of the SQL Server Error Log file](https://www.mssqltips.com/sqlservertip/2506/identify-location-of-the-sql-server-error-log-file/) (Identificar o local do arquivo de log de erro do SQL Server) de [MSSQLTips.com](https://www.mssqltips.com/).

@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 726b9c7ab8e5eddde8fe4b4ab7b545dda35cad1e
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: ef4222b866be7979410f6a3f97dce8a4fc24ecd7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710641"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909426"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Configuração e segurança do PolyBase para Hadoop
 
@@ -168,8 +168,6 @@ Para se conectar a um cluster Hadoop protegido por Kerberos usando MIT KDC:
    |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Localize a configuração do lado do Hadoop e copie a máquina do SQL Server. Por exemplo: yarn/_HOST@YOUR-REALM.COM|  
 
 4. Crie um objeto de credencial com escopo de banco de dados para especificar as informações de autenticação de cada usuário do Hadoop. Veja [Objetos T-SQL do PolyBase](../../relational-databases/polybase/polybase-t-sql-objects.md).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="next-steps"></a>Próximas etapas  
 

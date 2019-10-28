@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f7ae7d1cddf05ce05c71c6a95f64266eae835aff
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: b4b67ba15f7660c82da249eadec1f6d0da2f7fb3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152130"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909181"
 ---
 # <a name="backup-devices-sql-server"></a>Dispositivos de backup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -208,8 +208,6 @@ GO
 1.  Descartar o dispositivo de backup lógico original.  
   
 2.  Definir um novo dispositivo de backup lógico que usa o nome de dispositivo lógico original, mas mapeia em um dispositivo de backup físico diferente. Os dispositivos de backup lógicos são especialmente úteis para identificar dispositivos de backup em fita.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="MirroredMediaSets"></a> Conjuntos de mídias de backup espelhado  
  O espelhamento de conjuntos de mídias de backup reduz o efeito de maus funcionamentos do dispositivo de backup. Esses maus funcionamentos são especialmente sérios uma vez que os backups são a última linha de defesa contra a perda de dados. À medida que o tamanho dos bancos de dados cresce, aumenta a probabilidade de que uma falha de um dispositivo de backup ou mídia torne impossível a restauração de um backup. O espelhamento de mídias de backup aumenta a confiabilidade de backups fornecendo redundância para o dispositivo de backup físico. Para obter mais informações, veja [Conjuntos de mídias de backup espelhadas &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  

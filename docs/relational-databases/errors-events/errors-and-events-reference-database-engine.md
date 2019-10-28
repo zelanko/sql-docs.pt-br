@@ -1,7 +1,7 @@
 ---
 title: Referência de erros e eventos (Mecanismo de Banco de Dados) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/03/2016
+ms.date: 10/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4835e110d0feace4abaec408351351d863da7588
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: d9bf4de57b77e3f036cb842e53efe816de862559
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893149"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908686"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Referência de erros e eventos (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68893149"
 |Recurso|Descrição|  
 |--------------|-----------------|  
 |[SQL Server Community](https://go.microsoft.com/fwlink/?LinkId=42455)|Esse site contém links para grupos de notícias e fóruns monitorados pela comunidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Também lista fontes de informações da comunidade, como blogs e sites da Web. A comunidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é muito útil ao responder perguntas, embora não haja nenhuma garantia para as respostas dadas.|  
-|[SQL Server Developer Center Community](/sql/sql-server/sql-server-technical-documentation)|Esse site enfoca grupos de notícias, fóruns e outros recursos de comunidade que são úteis a desenvolvedores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[SQL Server Developer Center Community](/sql/sql-server/index.yml)|Esse site enfoca grupos de notícias, fóruns e outros recursos de comunidade que são úteis a desenvolvedores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Ajuda e Suporte da Microsoft](https://go.microsoft.com/fwlink/?linkid=16419)|Você pode usar esse site da Web para abrir um caso com um profissional de suporte do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
   
   

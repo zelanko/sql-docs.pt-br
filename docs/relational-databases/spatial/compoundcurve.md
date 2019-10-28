@@ -10,12 +10,12 @@ ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c840140008f56e492271d5792031e4e56233673
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a063a2a00ba67640b6a36a43abda2ea9eb45025d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048764"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909207"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,8 +29,6 @@ ms.locfileid: "68048764"
 1.  Deve conter, pelo menos, uma instância **CircularString** ou **LineString** .  
   
 2.  A sequência das instâncias **CircularString** ou **LineString** deve ser contínua.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Se uma **CompoundCurve** contiver uma sequência de várias instâncias **CircularString** e **LineString** , o ponto de extremidade final de cada instância, exceto a última, deverá ser o ponto de extremidade inicial da próxima instância na sequência. Isso significa que, se o ponto final de uma instância anterior na sequência for (4 3 7 2), o ponto inicial da próxima instância na sequência deverá ser (4 3 7 2). Observe que os valores Z (elevação) e M (medida) do ponto também devem ser iguais. Se houver uma diferença nos dois pontos, será lançada uma `System.FormatException` . Pontos em uma **CircularString** não precisam ter um valor Z ou M. Se não forem fornecidos valores Z ou M para o ponto final da instância anterior, o ponto inicial da próxima instância não poderá incluir valores Z ou M. Se o ponto final da sequência anterior for (4 3), o ponto inicial da próxima sequência deverá ser (4 3); ele não poderá ser (4 3 7 2). Todos os pontos em uma instância **CompoundCurve** não devem ter nenhum valor Z ou devem ter o mesmo valor Z.  
   

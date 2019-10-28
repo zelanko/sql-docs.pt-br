@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 ms.manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc4d31360e86fa0ec60c482034ce1678801cf5f3
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 132a9d08f41d29ef5b11404d7b662122abdc8516
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582329"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909383"
 ---
 # <a name="rename-views"></a>Renomear exibições
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,8 +64,6 @@ ms.locfileid: "67582329"
 2.  Clique com o botão direito do mouse na exibição que você deseja renomear e clique em **Renomear**.  
   
 3.  Digite o novo nome da exibição.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para renomear uma exibição**  

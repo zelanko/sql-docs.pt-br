@@ -12,12 +12,12 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 962ed44bad714125f78cac5adff5af42b0c76685
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98be5f404118ab217ae7700dbf6ec8f02012610f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138436"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907096"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Assistente Importar Arquivo Simples para SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,8 +43,6 @@ Para acessar o Assistente Importar Arquivo Simples, siga estas etapas:
 1. Abra o **SQL Server Management Studio**.
 2. Conecte-se a uma instância do Mecanismo de Banco de Dados do Microsoft SQL Server ou do localhost.
 3. Expanda **Bancos de Dados**, clique com o botão direito do mouse em um banco de dados ("test" no exemplo abaixo), aponte para **Tarefas** e clique em **Importar Arquivo Simples** acima de Importar Dados.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ![Menu do assistente](media/import-flat-file-wizard/importffmenu.png)
 

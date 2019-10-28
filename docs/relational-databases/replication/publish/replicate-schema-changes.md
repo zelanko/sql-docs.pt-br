@@ -14,12 +14,12 @@ ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9a2b5eda749329e405a1d5d2aff1af6a6e0bb3fe
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 7552bcf3396df2fcf9ed61ab1411c5b61c1e7e0f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710852"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905047"
 ---
 # <a name="replicate-schema-changes"></a>Replicar alterações de esquema
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -64,9 +64,7 @@ ms.locfileid: "71710852"
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     To propagate only specific schema changes, set the property to **True** before a schema change, and then set it to **False** after the change is made. Conversely, to propagate most schema changes, but not a given change, set the property to **False** before the schema change, and then set it to **True** after the change is made.  
+     Para propagar apenas alterações de esquema específicas, defina a propriedade como **True** antes de uma alteração de esquema e, então, defina-a como **False** depois que a alteração for feita. Por outro lado, para propagar a maioria das alterações de esquema, mas não uma determinada alteração, defina a propriedade como **False** antes da alteração de esquema e, então, defina-a como **True** depois que a alteração for feita.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Você pode usar procedimentos armazenados de replicação para especificar se estas alterações de esquema serão replicadas. O procedimento armazenado usado depende do tipo de publicação.  

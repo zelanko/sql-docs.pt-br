@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7ba9cba3a56a76fee51b6b21aec99f8019b59157
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79bfbeec5a22dd387b97977d12b95a0e232125aa
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033639"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908865"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Erros de mídia possíveis durante backup e restauração (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,8 +59,6 @@ ms.locfileid: "68033639"
 2.  Independentemente de somas de verificação de página estarem presentes, BACKUP gera uma soma de verificação de backup separada para os fluxos de backup. Operações de restauração podem usar opcionalmente a soma de verificação de backup para validar se o backup não está corrompido. A soma de verificação de backup é armazenada na mídia de backup, não nas páginas do banco de dados. A soma de verificação de backup pode ser usada opcionalmente na hora da restauração.  
   
 3.  O conjunto de backup é sinalizado como contendo somas de verificação de backup (na coluna **has_backup_checksums** de **msdb..backupset)** . Para obter mais informações, veja [conjunto de backup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Durante a operação de restauração, se as somas de verificação de backup estiverem presentes na mídia de backup, por padrão, ambas as instruções RESTORE e RESTORE VERIFYONLY verificarão as somas de verificação de backup e somas de verificação de página. Se não houver nenhuma soma de verificação de backup, cada operação de restauração prossegue sem qualquer verificação; porque sem uma soma de verificação de backup a restauração não pode verificar somas de verificação da página de modo confiável.  
   

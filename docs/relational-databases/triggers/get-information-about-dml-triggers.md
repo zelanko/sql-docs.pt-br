@@ -17,12 +17,12 @@ ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e1aefc7661b21f6fc6b93e74239820020796151
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64ad4f4ac71b88966f3ff9a963332619d7663917
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056072"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909288"
 ---
 # <a name="get-information-about-dml-triggers"></a>Obter informações sobre gatilhos DML
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,8 +63,6 @@ ms.locfileid: "68056072"
 2.  Expanda o banco de dados desejado, expanda **Tabelas**e expanda a tabela que contém o gatilho para o qual você quer exibir a definição.  
   
 3.  Expanda **Gatilhos**, clique com o botão direito do mouse no gatilho desejado e clique em **Modificar**. A definição do gatilho DML aparece na janela de consulta.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>Para exibir as dependências de um gatilho DML  
   

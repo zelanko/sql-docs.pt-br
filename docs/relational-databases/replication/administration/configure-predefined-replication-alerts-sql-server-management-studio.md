@@ -14,12 +14,12 @@ ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 04f082e8cee19c7416b21ee2abc88467a0ea707d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d5ff652d5817242ad5e77ed42b5839d97389056c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768835"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906818"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>Configurar alertas de replicação predefinidos (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -64,8 +64,6 @@ ms.locfileid: "68768835"
     -   Na página **Opções** , personalize o texto da resposta.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="to-configure-an-alert-for-a-threshold-in-replication-monitor"></a>Para configurar um alerta para um limite no Replication Monitor  
   

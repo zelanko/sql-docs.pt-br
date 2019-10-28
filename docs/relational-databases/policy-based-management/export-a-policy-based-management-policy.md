@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4203f082d093cae12dc546b083adc6e049d8799f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 241cd0e4ec225c6627bb47ff6a4312f42aba26d1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087395"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908626"
 ---
 # <a name="export-a-policy-based-management-policy"></a>Exportar uma política do Gerenciamento Baseado em Políticas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,6 +57,4 @@ ms.locfileid: "68087395"
 6.  Na caixa de diálogo **Exportar Política** , digite o caminho e o nome do arquivo na barra de endereços. Como alternativa, encontra o local apropriado para o arquivo no painel de navegação na caixa de diálogo e digite o nome do arquivo XML na caixa **Nome do Arquivo** .  
   
 7.  Ao concluir, clique em **Salvar**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

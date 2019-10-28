@@ -17,12 +17,12 @@ ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 570ddcb0ebe31f5aaf6a7648060a34cdf4061412
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98ab53220b995c0c94aa2eb25d509bd67f7090b5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898610"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908034"
 ---
 # <a name="create-nonclustered-indexes"></a>Criar índices não clusterizados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,8 +72,6 @@ ms.locfileid: "67898610"
 8.  Clique em **Fechar**.  
   
 9. No menu **Arquivo** , clique em **Salvar**_table_name_.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>Para criar um índice não clusterizado usando o Pesquisador de Objetos  
   

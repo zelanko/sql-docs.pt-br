@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d695ccd9545c6bc839edcc1b0644c1f1a4d84ab8
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 1c37ddcac8c12b6885c696bea77ef66e5eedd5d5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710902"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908575"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Definir e modificar um filtro de junção entre artigos de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,8 +89,6 @@ ms.locfileid: "71710902"
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 6.  Se você estiver na caixa de diálogo **Propriedades da Publicação – \<Publicação>** , clique em **OK** para salvar e fechar a caixa de diálogo.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-modify-a-join-filter"></a>Para modificar um filtro de junção  
   
