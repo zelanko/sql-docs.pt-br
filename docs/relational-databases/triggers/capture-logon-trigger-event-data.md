@@ -10,15 +10,15 @@ ms.assetid: e05b1ab4-c10b-402a-9591-f6ec1e3db8c0
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0e450fab2cf0971069568a5e21a5a185b59e4a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1566d1404b7be2af520d26c557550ffb1c3feca7
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075585"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689860"
 ---
 # <a name="capture-logon-trigger-event-data"></a>Capturar dados de eventos do gatilho de logon
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   Para capturar dados XML sobre eventos LOGON para uso nos gatilhos de logon, use a função [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md) . O evento LOGON retorna o seguinte esquema de dados de evento:  
   
  `<EVENT_INSTANCE>`  
