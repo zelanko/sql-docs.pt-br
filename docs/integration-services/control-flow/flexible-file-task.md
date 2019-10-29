@@ -12,12 +12,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3aaa746be1453f874a77af6bbfdf318da0731623
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 4ed8ba34e8e50d6414d68cae4aa386848f88b6d5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298280"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807416"
 ---
 # <a name="flexible-file-task"></a>Tarefa Arquivo Flexível
 
@@ -35,7 +35,9 @@ A Tarefa de Arquivo Flexível é um componente do [Feature Pack do SSIS (SQL Ser
 Para adicionar uma Tarefa de Arquivo Flexível a um pacote, arraste-a da Caixa de Ferramentas do SSIS para a tela do designer. Em seguida, clique duas vezes na tarefa ou clique com o botão direito do mouse na tarefa e selecione **Editar** para abrir a caixa de diálogo **Editor de Tarefa de Arquivo Flexível**.
 
 A propriedade **Operation** especifica a operação de arquivo a ser executada.
-Somente a operação **Copy** é compatível no momento.
+As operações com suporte atualmente são:
+- Operação **Copy**
+- Operação **Delete**
 
 Para a operação **Copy**, as seguintes propriedades estão disponíveis.
 
@@ -48,6 +50,12 @@ Para a operação **Copy**, as seguintes propriedades estão disponíveis.
 - **DestinationConnection:** especifica o gerenciador de conexões de destino.
 - **DestinationFolderPath:** especifica o caminho da pasta de destino.
 - **DestinationFileName:** especifica o nome do arquivo de destino.
+
+Para a operação **Delete**, as seguintes propriedades estão disponíveis.
+- **ConnectionType:** especifica o tipo do gerenciador de conexões.
+- **Connection:** especifica o gerenciador de conexões.
+- **FolderPath:** especifica o caminho da pasta.
+- **FileName:** especifica o nome do arquivo. Se deixada em branco, a pasta será excluída. No Armazenamento de Blobs do Azure, não há suporte para a exclusão de pastas.
 
 ***Observações sobre a configuração de permissão da entidade de serviço***
 

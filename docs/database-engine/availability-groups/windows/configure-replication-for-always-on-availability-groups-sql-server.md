@@ -14,12 +14,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c6481b7e94c2d9b8d7e1df99a4a38026a9d6edee
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 7975474859081eb5567c2ee12adf26f9e6501556
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251935"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689657"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Configurar a replicação com Grupos de Disponibilidade AlwaysOn
 
@@ -52,7 +52,7 @@ ms.locfileid: "72251935"
         @security_mode = 1;  
     ```  
   
-3.  Configurar o publicador remoto. Se procedimentos armazenados estiverem sendo usados para configurar o distribuidor, execute **sp_adddistpublisher**. O parâmetro *@security_mode* é usado para determinar como o procedimento armazenado de validação de publicador, que é executado dos agentes de replicação, se conecta à réplica primária atual. Se a autenticação do Windows definida como 1 for usada na conexão à primária atual. Se estiver definida como 0, a autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será usada com os valores *@login* e *@password* especificados. O logon e a senha especificada devem ser válidos em cada réplica secundária para o procedimento armazenado de validação se conectar com êxito a essa réplica.  
+3.  Configurar o publicador remoto. Se procedimentos armazenados estiverem sendo usados para configurar o distribuidor, execute **sp_adddistpublisher**. O parâmetro *\@security_mode* é usado para determinar como o procedimento armazenado de validação de publicador, que é executado a partir dos agentes de replicação, conecta-se à réplica primária atual. Se a autenticação do Windows definida como 1 for usada na conexão à primária atual. Se estiver definida como 0, a autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será usada com os valores *\@login* e *\@password* especificados. O logon e a senha especificada devem ser válidos em cada réplica secundária para o procedimento armazenado de validação se conectar com êxito a essa réplica.  
   
     > [!NOTE]  
     >  Se qualquer agente de replicação modificado for executado em um computador que não seja o distribuidor, o uso da autenticação do Windows para a conexão à réplica primária exigirá a configuração da autenticação Kerberos para a comunicação entre os computadores host da réplica. O uso de um logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para a conexão à réplica primária atual não requer a autenticação Kerberos.  
@@ -72,7 +72,7 @@ ms.locfileid: "72251935"
   
  **Configurar o publicador no publicador original**  
   
-1.  Configurar um distribuidor remoto. Se procedimentos armazenados estiverem sendo usados para configurar o publicador, execute **sp_adddistributor**. Especifique o mesmo valor para *@password* que o usado quando **sp_adddistrbutor** foi executado no distribuidor para configurar a distribuição.  
+1.  Configurar um distribuidor remoto. Se procedimentos armazenados estiverem sendo usados para configurar o publicador, execute **sp_adddistributor**. Especifique o mesmo valor para *\@password* que o usado quando **sp_adddistrbutor** foi executado no distribuidor para configurar a distribuição.  
   
     ```  
     exec sys.sp_adddistributor  
@@ -122,10 +122,10 @@ EXEC @installed = sys.sp_MS_replication_installed;
 SELECT @installed;  
 ```  
   
- Se *@installed* for 0, a replicação deverá ser adicionada à instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ Se *\@installed* for 0, a replicação deverá ser adicionada à instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ##  <a name="step4"></a> 4. Configurar os hosts de réplica secundária como publicadores de replicação  
- Uma réplica secundária não pode agir como um publicador de replicação ou republicador, mas a replicação deve ser configurada de forma que a secundária possa assumir o comando depois de um failover. No distribuidor, configure a distribuição para cada host de réplica secundária. Especifique o mesmo banco de dados de distribuição e diretório de trabalho que foram especificados quando o publicador original foi adicionado ao distribuidor. Se você estiver usando procedimentos armazenados para configurar a distribuição, use **sp_adddistpublisher** para associar os publicadores remotos ao distribuidor. Se *@login* e *@password* para o publicador original, especifique os mesmos valores para cada um quando adicionar os hosts de réplica secundária como publicadores.  
+ Uma réplica secundária não pode agir como um publicador de replicação ou republicador, mas a replicação deve ser configurada de forma que a secundária possa assumir o comando depois de um failover. No distribuidor, configure a distribuição para cada host de réplica secundária. Especifique o mesmo banco de dados de distribuição e diretório de trabalho que foram especificados quando o publicador original foi adicionado ao distribuidor. Se você estiver usando procedimentos armazenados para configurar a distribuição, use **sp_adddistpublisher** para associar os publicadores remotos ao distribuidor. Se foram usados *\@login* e *\@password* para o publicador original, especifique os mesmos valores para cada um quando adicionar os hosts de réplica secundária como publicadores.  
   
 ```  
 EXEC sys.sp_adddistpublisher  
@@ -136,7 +136,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- Em cada host de réplica secundária, configure a distribuição. Identifique o distribuidor do publicador original como o distribuidor remoto. Use a mesma senha que foi usada quando **sp_adddistributor** foi executado originalmente no distribuidor. Se procedimentos armazenados estiverem sendo usados para configurar a distribuição, o parâmetro *@password* de **sp_adddistributor** será usado para especificar a senha.  
+ Em cada host de réplica secundária, configure a distribuição. Identifique o distribuidor do publicador original como o distribuidor remoto. Use a mesma senha que foi usada quando **sp_adddistributor** foi executado originalmente no distribuidor. Se procedimentos armazenados estiverem sendo usados para configurar a distribuição, o parâmetro *\@password* de **sp_adddistributor** será usado para especificar a senha.  
   
 ```  
 EXEC sp_adddistributor   

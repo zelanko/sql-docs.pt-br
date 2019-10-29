@@ -11,12 +11,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a362e060eb9fc9d8e39459007e50a0c81fba393d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ceeaedd10d8c9e38664083365ee943422a2ca91
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069660"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907542"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Monitorar e solucionar problemas de uso da memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,8 +48,6 @@ ms.locfileid: "68069660"
 2.  Clicar em **Nova Consulta**.  
   
 3.  Colar este código na nova janela de consulta e executar cada seção.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     -- create a database to be used  
@@ -248,7 +246,7 @@ memory_object_address pages_ in_bytes bytes_used type
   
  Para obter mais informações, veja [sys.dm_os_memory_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
-#### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>Memória consumida pelo mecanismo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] na instância  
+#### <a name="memory-consumed-by-includehek_2includeshek-2-mdmd-engine-across-the-instance"></a>Memória consumida pelo mecanismo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] na instância  
  A memória alocada para o mecanismo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] e os objetos com otimização de memória são gerenciados da mesma maneira que qualquer outro consumidor de memória em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os administradores do tipo MEMORYCLERK_XTP respondem por toda a memória alocada para o mecanismo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] . Use a consulta a seguir para localizar toda a memória usada pelo mecanismo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
 ```sql  

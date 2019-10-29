@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2e0407382f1a0986add69a4b47e9cbb2eebc4d34
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 72ed98492db592ecd86d1c0490c652e604dcb589
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710748"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907977"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Exibir e modificar configurações de segurança de replicação
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,8 +71,6 @@ ms.locfileid: "71710748"
 4.  As caixas de diálogo **Propriedades do Distribuidor – \<Distribuidor>** e **Propriedades do Banco de Dados de Distribuição – \<Banco de Dados>** . Para obter mais informações sobre como acessar essas caixas de diálogo, consulte [Exibir e modificar as propriedades do Distribuidor e do Publicador](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
 5.  A caixa de diálogo **Propriedades do Publicador – \<Publisher>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de Publicador e Distribuidor](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>Para alterar a senha para uma conta usada por um ou mais agentes  
   
@@ -220,7 +218,7 @@ ms.locfileid: "71710748"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>Para alterar as configurações de segurança para uma assinatura pull de atualização imediata  
   
-1.  Na caixa de diálogo **Propriedades da Assinatura – \<Assinatura>** no Assinante, clique na linha **Conexão do Publicador** e depois clique no botão de propriedades ( **…** ) na linha.  
+1.  Na caixa de diálogo **Propriedades da Assinatura – \<Assinatura>** aberta em Assinante, selecione a linha **Conexão do Publicador** e clique no botão de propriedades ( **&#x2026;** ) na linha.  
   
 2.  Na caixa de diálogo **Inserir Informações de Conexão** , selecione uma das seguintes opções:  
   

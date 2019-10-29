@@ -12,12 +12,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d17a2d0f2abb6324d1cb990dcf673458fb5205dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81a3e6268b74c6aeb4a3fc7ea7c492133abf372d
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082761"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72930269"
 ---
 # <a name="full-text-search"></a>Pesquisa de Texto Completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ Um índice de texto completo inclui uma ou mais colunas baseadas em caractere em
     ```  
     SELECT candidate_name,SSN   
     FROM candidates   
-    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division =DBA;  
+    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division = 'DBA';  
     ```  
   
  Para obter mais informações, veja [Consulta com pesquisa de texto completo](../../relational-databases/search/query-with-full-text-search.md).  
@@ -92,7 +92,7 @@ Um índice de texto completo inclui uma ou mais colunas baseadas em caractere em
   
  Esses dois processos contêm os componentes da arquitetura de pesquisa de texto completo. Esses componentes e suas relações são resumidas na ilustração a seguir. Os componentes são descritos após a ilustração.  
   
- ![Arquitetura de pesquisa de texto completo](../../relational-databases/search/media/ifts-arch.gif "Arquitetura de pesquisa de texto completo")  
+ ![arquitetura da pesquisa de texto completo](../../relational-databases/search/media/ifts-arch.gif "arquitetura da pesquisa de texto completo")  
 
 ###  <a name="sqlprocess"></a> Processo do SQL Server  
  O processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa os seguintes componentes na pesquisa de texto completo:  
@@ -111,7 +111,7 @@ Um índice de texto completo inclui uma ou mais colunas baseadas em caractere em
 
     >[!NOTE]  
     >  No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e em versões posteriores, o Mecanismo de Texto Completo reside no processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e não em um serviço separado. A integração do Mecanismo de Texto Completo ao Mecanismo de Banco de Dados melhora a capacidade de gerenciamento de texto completo, a otimização de consultas mistas e o desempenho como um todo.  
- 
+
 -   **Gravador de índice (indexador).** O gravador de índice cria a estrutura usada para armazenar os tokens indexados.  
   
 -   **Gerenciador de daemon de filtro.** O gerenciador de daemon de filtro é responsável por monitorar o status do host do daemon de filtro do Mecanismo de Texto Completo.  

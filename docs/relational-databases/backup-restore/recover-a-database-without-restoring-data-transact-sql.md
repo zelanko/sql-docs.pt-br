@@ -1,7 +1,7 @@
 ---
 title: Recuperar um banco de dados sem restaurar os dados (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e87e806b8af58c74bf4406d697a99f42d7f67c4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68cf8bc2412ff715d42ad22b2000f832d86b1f63
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033601"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916046"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Recuperar um banco de dados sem restaurar dados (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,16 +40,16 @@ ms.locfileid: "68033601"
   
  A sintaxe [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) para a restauração de um banco de dados somente recuperação é a seguinte:  
   
- RESTORE DATABASE *database_name* WITH RECOVERY  
+ `RESTORE DATABASE *database_name* WITH RECOVERY`  
   
 > [!NOTE]  
->  A cláusula FFROM **=** \<*backup_device>* não é usada em restaurações somente recuperação porque nenhum backup é necessário.  
+> A cláusula FFROM **=** \<*backup_device>* não é usada em restaurações somente recuperação porque nenhum backup é necessário.  
   
  **Exemplo**  
   
  O exemplo a seguir recupera o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] de amostra em uma operação de restauração sem restaurar dados.  
   
-```  
+```sql  
 -- Restore database using WITH RECOVERY.  
 RESTORE DATABASE AdventureWorks2012  
    WITH RECOVERY  
@@ -60,17 +60,17 @@ RESTORE DATABASE AdventureWorks2012
   
  Um banco de dados é restaurado por etapas. Depois da conclusão da restauração do grupo de arquivos primário, um ou mais dos arquivos não restaurados estão consistentes com o novo estado do banco de dados, talvez porque tenham sido somente leitura por algum tempo. Esses arquivos só precisam ser recuperados; a cópia de dados é desnecessária.  
   
- Uma operação de restauração somente recuperação coloca os dados do grupo de arquivos offline online; nenhuma fase de cópia de dados, refazer ou desfazer acontece. Para obter informações sobre as fases de restauração, confira [Visão geral da restauração e recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
+ Uma operação de restauração somente recuperação coloca os dados do grupo de arquivos offline online; nenhuma fase de cópia de dados, refazer ou desfazer acontece. Para obter informações sobre as fases de restauração, confira [Visão geral da restauração e recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).  
   
  A sintaxe [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) para a restauração de um arquivo somente recuperação é:  
   
- RESTORE DATABASE *database_name* { FILE **=** _logical_file_name_ | FILEGROUP **=** _logical_filegroup_name_ }[ **,** ...*n* ] WITH RECOVERY  
+ `RESTORE DATABASE *database_name* { FILE **=**_logical_file_name_ | FILEGROUP **=**_logical_filegroup_name_ }[ **,**...*n* ] WITH RECOVERY`  
   
  **Exemplo**  
   
  O exemplo a seguir ilustra uma restauração de arquivos somente recuperação de um grupo de arquivos secundário, `SalesGroup2`, no banco de dados `Sales` . O grupo de arquivos primário já foi restaurado como a etapa inicial de uma restauração por etapas e `SalesGroup2` está consistente com o grupo de arquivos primário restaurado. Recuperar esse grupo de arquivos e colocá-lo online requer somente uma única instrução.  
   
-```  
+```sql  
 RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;  
 ```  
   
@@ -95,5 +95,5 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
  [Restaurações de arquivos &#40;Modelo de recuperação simples&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [Restaurações de arquivo &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
-  
+ [Visão geral da restauração e recuperação (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md) 
   

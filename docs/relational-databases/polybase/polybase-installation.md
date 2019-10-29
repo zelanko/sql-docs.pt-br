@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7823f9e76207802b7f05a21ccd11b5de1fa9d18d
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961967"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908666"
 ---
 # <a name="install-polybase-on-windows"></a>Instalar o PolyBase no Windows
 
@@ -69,7 +69,7 @@ Depois de instalar o PolyBase autônomo ou em um grupo de escala horizontal, voc
    
 3. Na página Seleção de Recursos, escolha **Serviço de Consulta do PolyBase para Dados Externos**.  
 
-   ![Serviços do PolyBase](../../relational-databases/polybase/media/install-wizard.png "Serviços do PolyBase")  
+   ![Serviços PolyBase](../../relational-databases/polybase/media/install-wizard.png "Serviços PolyBase")  
    
    >[!NOTE]
    >O PolyBase do SQL Server 2019 agora inclui uma opção adicional **Conector Java para fonte de dados HDFS**. Confira os [recursos da versão prévia do SQL Server](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/) para obter mais informações sobre esse recurso.
@@ -90,8 +90,6 @@ Depois de instalar o PolyBase autônomo ou em um grupo de escala horizontal, voc
      Esta opção também habilita conexões de firewall do MSDTC (Coordenador de Transações Distribuídas da Microsoft) e modifica as configurações de Registro do MSDTC.  
    
 6. Na página de Configuração do PolyBase, especifique um intervalo de portas com pelo menos seis portas. A instalação do SQL Server aloca as primeiras seis portas disponíveis do intervalo.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    >[!IMPORTANT]
    > Após a instalação, é necessário [habilitar o recurso do PolyBase](#enable).

@@ -15,12 +15,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 68c18f0be55716f668e47576b3abd041bfb1c076
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b8e9f5f6682b8d44785d9b2600f15013a2f615c
+ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990806"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72717224"
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>Upgrades de versão e edição com suporte do SQL Server 2017
 
@@ -42,7 +42,7 @@ ms.locfileid: "67990806"
   
 ## <a name="unsupported-scenarios"></a>Cenários com suporte  
   
--   Não há suporte a instâncias de várias versões do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]. Os números de versão dos componentes do [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] devem ser os mesmos em uma instância do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+-   Não há suporte a instâncias de várias versões do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]. Os números de versão dos componentes do [!INCLUDE[ssDE](../../includes/ssde-md.md)] devem ser os mesmos em uma instância do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
   
 -   O [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] está disponível apenas em plataformas de 64 bits. A atualização de plataforma cruzada não é suportada. Não é possível atualizar uma instância de 32 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uma nativa de 64 bits usando a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No entanto, será possível fazer backup de bancos de dados ou desanexá-los de uma instância de 32 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e, em seguida, restaurá-los ou anexá-los a uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de 64 bits), se os bancos de dados não forem publicados na replicação. Você deverá recriar logons e outros objetos de usuário nos bancos de dados do sistema master, msdb e model.  
   

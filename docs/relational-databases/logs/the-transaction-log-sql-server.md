@@ -1,7 +1,7 @@
 ---
 title: O log de transações (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fb0aef082375ebc3c278e982232b7a69fe41d187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b9f57b15f1a46aefad2387eb63b0d2cb14dbe38
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083946"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916028"
 ---
 # <a name="the-transaction-log-sql-server"></a>O log de transações (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,24 +39,24 @@ Para obter informações sobre a arquitetura do log de transações e as operaç
  O log de transações dá suporte às seguintes operações:  
   
 -   Recuperação de transações individuais.  
--   Recuperação de todas as transações incompletas quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado.  
+-   Recuperação de todas as transações incompletas quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado. 
 -   Rolando um banco de dados restaurado, arquivo, grupo de arquivo ou página até ao ponto de falha.  
 -   Dando suporte à replicação transacional.  
 -   Dando suporte a soluções de alta disponibilidade e recuperação de desastre: [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], espelhamento de banco de dados e envio de log.
 
 ### <a name="individual-transaction-recovery"></a>Recuperação de transações individuais
-Se um aplicativo emitir uma instrução `ROLLBACK` ou se o Mecanismo de Banco de Dados detectar um erro como a perda de comunicação com um cliente, os registros de log serão usados para reverter as modificações feitas por uma transação incompleta. 
+Se um aplicativo emitir uma instrução `ROLLBACK` ou se o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detectar um erro como a perda de comunicação com um cliente, os registros de log serão usados para reverter as modificações feitas por uma transação incompleta. 
 
 ### <a name="recovery-of-all-incomplete-transactions-when-includessnoversionincludesssnoversion-mdmd-is-started"></a>Recuperação de todas as transações incompletas quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado
-Se um servidor falhar, os bancos de dados poderão ser deixados em um estado em que algumas modificações nunca foram gravadas do cache de buffer para os arquivos de dados e poderá haver algumas modificações de transações incompletas nos arquivos de dados. Quando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciada, ele executa uma recuperação de cada banco de dados. Toda modificação registrada no log que não foi gravada nos arquivos de dados é efetuado roll forward. Toda transação incompleta encontrada no log de transações é revertida para assegurar que a integridade do banco de dados seja preservada. 
+Se um servidor falhar, os bancos de dados poderão ser deixados em um estado em que algumas modificações nunca foram gravadas do cache de buffer para os arquivos de dados e poderá haver algumas modificações de transações incompletas nos arquivos de dados. Quando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciada, ele executa uma recuperação de cada banco de dados. Em toda modificação registrada no log que não foi gravada nos arquivos de dados é efetuado roll forward. Toda transação incompleta encontrada no log de transações é revertida para assegurar que a integridade do banco de dados seja preservada. Para obter mais informações, confira [Visão geral de restauração e recuperação (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### <a name="rolling-a-restored-database-file-filegroup-or-page-forward-to-the-point-of-failure"></a>Efetuar roll forward em um banco de dados restaurado, um arquivo, grupo de arquivo ou em uma página até ao ponto de falha
 Depois de uma perda de hardware ou falha de disco que afeta os arquivos de banco de dados, você pode restaurar o banco de dados ao ponto de falha. Você primeiro restaura o último backup de banco de dados e o último backup de banco de dados diferencial e, depois, restaura a sequência subsequente dos backups de log de transações ao ponto de falha. 
 
-Ao restaurar cada backup de log, o Mecanismo de Banco de Dados reaplica todas as modificações registradas no log para efetuar roll forward todas as transações. Quando o último backup de log é restaurado, o Mecanismo de Banco de Dados usa as informações de log para reverter todas as transações que não estavam completas naquele ponto. 
+Ao restaurar cada backup de log, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reaplica todas as modificações registradas no log para efetuar roll forward de todas as transações. Quando o último backup de log é restaurado, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] usa as informações de log para reverter todas as transações que não estavam completas naquele ponto. Para obter mais informações, confira [Visão geral de restauração e recuperação (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### <a name="supporting-transactional-replication"></a>Dando suporte à replicação transacional
-O Agente de Leitor de Log monitora o log de transações de cada banco de dados configurado para replicação transacional e copia as transações marcadas para replicação do log de transações no banco de dados de distribuição. Para obter mais informações, veja [Como funciona a replicação transacional](https://msdn.microsoft.com/library/ms151706.aspx).
+O Agente de Leitor de Log monitora o log de transações de cada banco de dados configurado para replicação transacional e copia as transações marcadas para replicação do log de transações no banco de dados de distribuição. Para obter mais informações, veja [Como funciona a replicação transacional](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105)).
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>Suporte a soluções de recuperação de desastres e alta disponibilidade
 As soluções do servidor em espera, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], o espelhamento de banco de dados e o envio de logs dependem muito do log de transações. 
@@ -65,14 +65,16 @@ Em um **[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] cenário**, cada atualiz
 
 Em um **cenário de envio de logs**, o servidor primário envia o log de transações ativas do banco de dados primário para um ou mais destinos. Cada servidor secundário restaura o log a seu banco de dados secundário local. Para obter mais informações, consulte [Sobre o Envio de Logs](../../database-engine/log-shipping/about-log-shipping-sql-server.md). 
 
-Em um **cenário de espelhamento de banco de dados**, cada atualização de um banco de dados, o banco de dados principal, é imediatamente reproduzida em uma cópia completa e separada do banco de dados, o banco de dados espelho. A instância do servidor principal envia imediatamente cada registro de log para a instância do servidor espelho, a qual aplica os registros de log de entrada ao banco de dados espelho, rolando adiante continuamente. Para obter mais informações, veja [Espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-sql-server.md).
+Em um **cenário de espelhamento de banco de dados**, cada atualização de um banco de dados, o banco de dados principal, é imediatamente reproduzida em uma cópia completa e separada do banco de dados, o banco de dados espelho. A instância do servidor principal envia imediatamente cada registro de log para a instância do servidor espelho, a qual aplica os registros de log de entrada ao banco de dados espelho, efetuando roll forward de forma contínua. Para obter mais informações, veja [Espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-sql-server.md).
 
-##  <a name="Characteristics"></a>Transaction Log characteristics
-
+##  <a name="Characteristics"></a>Características de log de transações
 Características do log de transações [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]: 
 -  O log de transações é implementado como um arquivo separado ou conjunto de arquivos no banco de dados. O cache de log é gerenciado separadamente do cache de buffer para páginas de dados que resulta em código simples, rápido e forte dentro do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Para obter mais informações, consulte [Arquitetura física de log de transações](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).
+
 -  O formato de registros de log e páginas não está restrito ao formato de páginas de dados.
+
 -  O log de transações pode ser implementado em vários arquivos. Os arquivos podem ser definidos para serem expandidos automaticamente com a configuração do valor `FILEGROWTH` do log. Isso reduz a possibilidade de realizar a execução fora de espaço no log de transações, e ao mesmo tempo reduz a sobrecarga administrativa. Para obter mais informações, consulte [Opções de arquivo e grupo de arquivos de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+
 -  O mecanismo para reutilizar o espaço dentro dos arquivos de log é rápido e tem efeito mínimo em taxa de transferência de transações.
 
 Para obter informações sobre a arquitetura do log de transações e as operações internas, consulte o [Guia de arquitetura e gerenciamento do log de transações do SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
@@ -136,7 +138,7 @@ Quando a replicação transacional está habilitada, as operações `BULK INSERT
   
 -   Operações [SELECT INTO](../../t-sql/queries/select-into-clause-transact-sql.md).  
   
-Quando a replicação transacional está habilitada, as operações SELECT INTO são completamente registradas mesmo no modelo de recuperação bulk-logged.  
+Quando a replicação transacional está habilitada, as operações `SELECT INTO` são totalmente registradas em log mesmo no modelo de recuperação bulk-logged.  
   
 -   Atualizações parciais em tipos de dados de valor grande, usando a cláusula `.WRITE` na instrução [UPDATE](../../t-sql/queries/update-transact-sql.md) ao inserir ou acrescentar novos dados. Observe que o log mínimo não é usado quando valores existentes estão sendo atualizados. Para obter mais informações sobre tipos de dados de valor grandes, consulte [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
@@ -166,7 +168,9 @@ Quando a replicação transacional está habilitada, as operações SELECT INTO 
 **Fazendo backup do log de transações (Modelo de recuperação completa)**  
   
 -   [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
-  
+
+-   [Fazer backup do log de transações quando o banco de dados está danificado (SQL Server)](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)
+
 **Restaurando o log de transações (Modelo de recuperação completa)**  
   
 -   [Restaurar um backup de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
@@ -175,7 +179,8 @@ Quando a replicação transacional está habilitada, as operações SELECT INTO 
 [Guia de arquitetura e gerenciamento de log de transações do SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)   
 [Controlar a durabilidade da transação](../../relational-databases/logs/control-transaction-durability.md)   
 [Pré-requisitos para registro mínimo em log na importação em massa](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
-[Fazer backup e restaurar bancos de dados do SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+[Fazer backup e restaurar bancos de dados do SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
+[Visão geral da restauração e recuperação (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)      
 [Pontos de verificação de banco de dados &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
 [Exibir ou alterar as propriedades de um banco de dados](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)   
 [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  

@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e72ba4eed90fbd8218b9f0ed3942744fd75fcd90
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163907"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909304"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitorar o desempenho usando o Repositório de Consultas
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "71163907"
 2.  Na caixa de diálogo **Propriedades do Banco de Dados** , selecione a página **Repositório de Consultas** .  
   
 3.  Na caixa **Modo de Operação (Solicitado)** , selecione **Leitura Gravação**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="use-transact-sql-statements"></a>Usar Instruções Transact-SQL  
   
@@ -113,12 +111,12 @@ INNER JOIN sys.query_store_query_text AS Txt
 ##  <a name="Regressed"></a> Usar o recurso Consultas Regredidas  
 Depois de habilitar o Repositório de Consultas, atualize a parte do banco de dados do painel Pesquisador de Objetos para adicionar a seção **Repositório de Consultas**.  
   
-![Árvore de Repositório de Consultas do SQL Server 2016 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Árvore de Repositório de Consultas do SQL Server 2016 no Pesquisador de Objetos do SSMS") ![Árvore de Repositório de Consultas do SQL Server 2017 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "Árvore de Repositório de Consultas do SQL Server 2017 no Pesquisador de Objetos do SSMS") 
+![Árvore de Repositório de Consultas do SQL Server 2016 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Árvore de Repositório de Consultas do SQL Server 2016 no Pesquisador de Objetos do SSMS")![Árvore de Repositório de Consultas do SQL Server 2017 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "Árvore de Repositório de Consultas do SQL Server 2017 no Pesquisador de Objetos do SSMS") 
   
 Selecione **Consultas Regredidas** para abrir o painel **Consultas Regredidas** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. O painel Consultas Regredidas mostra consultas e planos no repositório de consultas. Use as caixas de listas suspensas na parte superior para filtrar consultas com base em vários critérios: **Duração (ms)** (Padrão), Tempo de CPU (ms), Leituras Lógicas, Gravações Lógicas (KB), Leituras Físicas (KB), Tempo CLR (ms), DOP, Consumo de Memória (KB), Contagem de Linhas, Memória de Log Usada (KB), Memória de BD Temporária Usada (KB) e Tempo de Espera (ms).  
 Selecione um plano para ver o plano de consulta gráfico. Há botões disponíveis para exibir a consulta de origem, para forçar e não forçar um plano de consulta, para alternar entre os formatos de grade e gráfico, para comparar os planos selecionados (se houver mais de um selecionado) e para atualizar a exibição.  
   
-![Consultas Regredidas do SQL Server 2016 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Consultas Regredidas do SQL Server 2016 no Pesquisador de Objetos do SSMS")  
+![Consultas Retornadas do SQL Server 2016 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Consultas Retornadas do SQL Server 2016 no Pesquisador de Objetos do SSMS")  
   
 Para impor um plano, selecione uma consulta e um plano e, em seguida, clique em **Impor Plano.** Você pode impor apenas planos que foram salvos pelo recurso de plano de consulta e ainda são mantidos no cache do plano de consulta.
 
@@ -129,11 +127,11 @@ No Repositório de Consultas, os tipos de espera são combinados em **categorias
 
 Selecione **Estatísticas de Espera da Consulta** para abrir o painel **Estatísticas de Espera da Consulta** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 ou superior. O painel Estatísticas de Espera da Consulta mostra a você um gráfico de barras que contém os principais categorias de espera no Repositório de Consultas. Use lista suspensa na parte superior para selecionar um critério de agregação para o tempo de espera: avg, max, min, std dev e **total** (padrão).
 
- ![Estatísticas de Espera da Consulta do SQL Server 2017 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/query-store-waits.PNG "Estatísticas de Espera da Consulta do SQL Server 2017 no Pesquisador de Objetos do SSMS")
+ ![Estatísticas de espera de consulta do SQL Server 2017 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/query-store-waits.PNG "Estatísticas de espera de consulta do SQL Server 2017 no Pesquisador de Objetos do SSMS")
 
 Selecione uma categoria de espera clicando na barra e uma exibição de detalhes é mostrada na categoria de espera selecionada. Esse novo gráfico de barras contém as consultas que contribuíram para essa categoria de espera. 
   
- ![Exibição de detalhes das Estatísticas de Espera da Consulta do SQL Server 2017 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/query-store-waits-detail.PNG "Exibição de detalhes das Estatísticas de Espera da Consulta do SQL Server 2017 no Pesquisador de Objetos do SSMS")
+ ![Exibição de detalhes das Estatísticas de espera de consulta do SQL Server 2017 no Pesquisador de Objetos do SSMS](../../relational-databases/performance/media/query-store-waits-detail.PNG "Exibição de detalhes das Estatísticas de espera de consulta do SQL Server 2017 no Pesquisador de Objetos do SSMS")
 
 Use a lista suspensa na parte superior para filtrar consultas com base em vários critérios de tempo de espera para a categoria de espera selecionada: avg, max, min, std dev e **total** (padrão). Selecione um plano para ver o plano de consulta gráfico. Botões estão disponíveis para exibir a consulta de origem, impor e cancelar a imposição de um plano de consulta e atualizar a exibição.  
 

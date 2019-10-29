@@ -11,12 +11,12 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f44e5c43a3abbf9338d74c04be98a9d5d8902034
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 2a242b02d14536036b53ee265413e28f5aeab231
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009498"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908032"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introdução ao Columnstore para análise operacional em tempo real
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,8 +84,6 @@ ms.locfileid: "70009498"
   
 3.  Isso é tudo o que você precisa fazer!  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  Agora você está pronto para executar análise operacional em tempo real sem fazer alterações no seu aplicativo.  As consultas analíticas serão executadas no índice columnstore e as operações OLTP continuarão sendo executadas nos índices btree OLTP. As cargas de trabalho OLTP continuarão sendo executadas, mas incorrerão em alguma sobrecarga adicional para manter o índice columnstore. Veja as otimizações de desempenho na próxima seção.  
   
 ## <a name="blog-posts"></a>Postagens de blog  
@@ -122,7 +120,7 @@ ms.locfileid: "70009498"
 ### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>Exemplo A: acessar dados ativos do índice btree, dados passivos do índice columnstore  
  Este exemplo usa uma condição filtrada (accountkey > 0) para estabelecer quais linhas estarão no índice columnstore. A meta é criar a condição filtrada e as consultas subsequentes para acessar dados "frequentes" que mudam frequentemente no índice btree e acessar os dados "passivos" mais estáveis no índice columnstore.  
   
- ![Índices combinados para dados ativos e passivos](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Índices combinados para dados ativos e passivos")  
+ ![Índices combinados para dados de acesso frequente e infrequente](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Índices combinados para dados de acesso frequente e infrequente")  
   
 > [!NOTE]  
 >  O otimizador de consulta vai considerar, mas nem sempre escolherá, o índice columnstore para o plano de consulta. Quando o otimizador de consulta escolher o índice columnstore filtrado, ele combinará de modo transparente as linhas do índice columnstore, bem como as linhas que não atendem à condição filtrada para permitir análise em tempo real. Isso é diferente de um índice filtrado não clusterizado regular, que pode ser usado apenas em consultas que restringem a si mesmas a linhas presentes no índice.  

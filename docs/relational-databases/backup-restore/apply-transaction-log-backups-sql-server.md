@@ -1,7 +1,7 @@
 ---
 title: Aplicar backups do log de transações (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/14/2016
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 0b59c6973c8b1662d61a0ec022eba830558d51cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 62d90931cdc1d7748f47edabb31e5f9404b1262d
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934544"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916195"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Aplicar backups de log de transações (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,6 @@ ms.locfileid: "67934544"
   
  Este tópico descreve a aplicação de backups de log de transações como parte da restauração de um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
  
-  
 ##  <a name="Requirements"></a> Requisitos para restaurar backups de log de transação  
  Para aplicar um backup de log de transações, devem ser atendidos os seguintes requisitos:  
   
@@ -39,14 +38,16 @@ ms.locfileid: "67934544"
   
 -   **Banco de dados ainda não recuperado:**  O banco de dados não poderá ser recuperado até que o log de transações final seja aplicado. Se você recuperar o banco de dados depois de restaurar um dos backups de log de transações intermediários antes do final da cadeia de logs, não poderá restaurar o banco de dados além desse ponto sem restaurar a sequência completa, começando com o backup de banco de dados completo.  
   
-    > **DICA!** Uma prática recomendada é restaurar todos os backups de log (RESTORE LOG *database_name* WITH NORECOVERY). Em seguida, depois de restaurar o último backup de log, recupere o banco de dados em uma operação separada (RESTORE DATABASE *database_name* WITH RECOVERY).  
+    > [!TIP]
+    > Uma prática recomendada é restaurar todos os backups de log (`RESTORE LOG *database_name* WITH NORECOVERY`). Depois de restaurar o último backup de log, recupere o banco de dados em uma operação separada (`RESTORE DATABASE *database_name* WITH RECOVERY`).  
   
 ##  <a name="RecoveryAndTlogs"></a> Recuperação e logs de transações  
- Ao concluir a operação de restauração e recuperar o banco de dados, a recuperação reverte todas as transações incompletas. Isso é conhecido como o *fase Desfazer*. A reversão é necessária para restaurar a integridade do banco de dados. Depois da reversão, o banco de dados fica online e mais nenhum backup de log de transações pode ser aplicado ao banco de dados.  
+ Depois de finalizar a operação de restauração e recuperar o banco de dados, o processo de recuperação será executado para garantir a integridade do banco de dados. Saiba mais sobre a recuperação de banco de dados em [Visão geral da restauração e recuperação (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
+ 
+ Após a conclusão do processo de recuperação, o banco de dados fica online e mais nenhum backup de log de transações pode ser aplicado ao banco de dados. Por exemplo, uma série de backups de log de transações contém uma transação de execução longa. O início da transação é registrado no primeiro backup de log de transações, mas o término da transação é registrado no segundo backup de log de transações. Não há registro de uma operação de confirmação ou reversão no primeiro backup de log de transações. Se uma operação de recuperação for executada quando o primeiro backup de log de transações for aplicado, a transação de longa execução será tratada como incompleta e as modificações de dados registradas no primeiro backup de log de transações serão revertidas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não permite que o segundo backup de log de transação seja aplicado depois deste ponto.  
   
- Por exemplo, uma série de backups de log de transações contém uma transação de execução longa. O início da transação é registrado no primeiro backup de log de transações, mas o término da transação é registrado no segundo backup de log de transações. Não há registro de uma operação de confirmação ou reversão no primeiro backup de log de transações. Se uma operação de recuperação for executada quando o primeiro backup de log de transações for aplicado, a transação de longa execução será tratada como incompleta e as modificações de dados registradas no primeiro backup de log de transações serão revertidas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não permite que o segundo backup de log de transação seja aplicado depois deste ponto.  
-  
-> **OBSERVAÇÃO:** Em algumas circunstâncias, você pode adicionar um arquivo explicitamente durante a restauração do log.  
+> [!NOTE]
+> Em algumas circunstâncias, você pode adicionar um arquivo explicitamente durante a restauração do log.  
   
 ##  <a name="PITrestore"></a> Usar backups de log para restaurar até o ponto de falha  
  Considere a seguinte sequência de eventos.  
@@ -63,8 +64,6 @@ ms.locfileid: "67934544"
 > Para obter uma explicação dessa sequência de exemplo de backups, veja [Backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
  Para restaurar o banco de dados a seu estado às 21h45 (o ponto de falha), um dos seguintes procedimentos alternativos pode ser usado.  
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  **Alternativa 1: restaurar o banco de dados usando o backup de banco de dados completo mais recente**  
   
@@ -106,6 +105,6 @@ ms.locfileid: "67934544"
 -   [Recuperar um banco de dados sem restaurar dados &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)  
   
 ## <a name="see-also"></a>Confira também  
- [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
-  
+ [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
+ [Guia de arquitetura e gerenciamento de log de transações do SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
   

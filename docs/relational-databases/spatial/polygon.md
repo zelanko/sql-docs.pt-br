@@ -13,12 +13,12 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a82789da3207fc42a820a18ff6d7da438f84cdd7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: bd7b379df56f94710a22684c9cc8d662cfb0a396
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69026143"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907204"
 ---
 # <a name="polygon"></a>Polygon
 
@@ -33,7 +33,7 @@ Os anéis exteriores e todos os anéis interiores de um **Polygon** definem seu 
   
 A ilustração a seguir mostra exemplos de instâncias **Polygon** .  
   
- ![Exemplos de instâncias geométricas Polygon](../../relational-databases/spatial/media/polygon.gif "Exemplos de instâncias geométricas Polygon")  
+ ![Exemplos das instâncias geométricas Polygon](../../relational-databases/spatial/media/polygon.gif "Exemplos das instâncias geométricas Polygon")  
   
 Conforme mostrado na ilustração:  
   
@@ -42,8 +42,6 @@ Conforme mostrado na ilustração:
 2.  A Figura 2 é uma instância **Polygon** cujo limite está definido por um anel exterior e dois anéis interiores. A área interna dos anéis interiores faz parte do exterior da instância **Polygon** .  
   
 3.  A Figura 3 é uma instância **Polygon** válida porque seus anéis interiores cruzam em um único ponto tangente.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="accepted-instances"></a>Instâncias aceitas  
  Instâncias **Polygon** aceitas são instâncias que podem ser armazenadas em uma variável **geometry** ou **geography** sem gerar uma exceção. As seguintes instâncias **Polygon** são aceitas:  

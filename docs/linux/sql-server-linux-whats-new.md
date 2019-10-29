@@ -3,28 +3,25 @@ title: Novidades do SQL Server 2017 em Linux
 description: Este artigo destaca as novidades do SQL Server 2017 em Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/23/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: 3f3f51716acf69368ae2554446c47d125b500e03
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 6874c34c70b562ef726bda5abbda2aebe615cc08
+ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032162"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890551"
 ---
-# <a name="whats-new-for-sql-server-on-linux"></a>Novidades do SQL Server em Linux
+# <a name="whats-new-for-sql-server-2017-on-linux"></a>Novidades do SQL Server 2017 em Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este artigo descreve os principais recursos e serviços disponíveis para o SQL Server 2017 em execução no Linux.
 
-A versão prévia do SQL Server 2019 foi lançada. Este artigo não abrange as versões prévias do SQL Server 2019. Para saber mais sobre a versão prévia do SQL Server 2019, confira [Novidades da versão prévia do SQL Server 2019 para Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux).
-
 > [!NOTE]
-> Além das funcionalidades descritas neste artigo, as atualizações cumulativas são lançadas em intervalos regulares após a versão GA. Essas atualizações cumulativas fornecem várias melhorias e correções. Para obter informações sobre a última versão CU, confira [https://aka.ms/sql2017cu](https://aka.ms/sql2017cu). Para saber mais sobre os downloads de pacotes e problemas conhecidos, confira as [Notas sobre a versão](sql-server-linux-release-notes.md).
+> Além das funcionalidades descritas neste artigo, as atualizações cumulativas são lançadas em intervalos regulares. Essas atualizações cumulativas fornecem várias melhorias e correções. Informações detalhadas sobre a última versão de CU estão disponíveis em [https://aka.ms/sql2017cu](https://aka.ms/sql2017cu). Para saber mais sobre os downloads de pacotes e problemas conhecidos, confira as [Notas sobre a versão](sql-server-linux-release-notes.md).
 
 ## <a name="sql-server-database-engine"></a>Mecanismo de Banco de Dados do SQL Server
 
@@ -66,9 +63,6 @@ Para instalar o SQL Server em Linux, use um dos seguintes tutoriais:
 - [Executar no Docker](quickstart-install-connect-docker.md)
 - [Provisionar uma VM SQL no Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
-Para ver outras melhorias introduzidas no SQL Server 2017, confira [Novidades do SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
-
-> [!TIP]
-> Para obter respostas a perguntas frequentes, confira as [Perguntas frequentes sobre o SQL Server em Linux](sql-server-linux-faq.md).
+Para obter respostas a perguntas frequentes, confira as [Perguntas frequentes sobre o SQL Server em Linux](sql-server-linux-faq.md). Para ver outras melhorias introduzidas no SQL Server 2017, confira [Novidades do SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

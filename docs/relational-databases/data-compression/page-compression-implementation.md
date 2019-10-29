@@ -14,12 +14,12 @@ ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ff36fb2d0a5ed84beae6a90f6058a7a66ab9f1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 43086213ec4c13e6849a40a4013a99ffc9df3903
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030493"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907084"
 ---
 # <a name="page-compression-implementation"></a>Implementação da compactação de página
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,8 +35,6 @@ ms.locfileid: "68030493"
 2.  Compactação de prefixo  
   
 3.  Compactação de dicionário  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Quando você usa a compactação de página, as páginas do nível não folha dos índices são compactadas usando apenas a compactação de linha. Para obter mais informações sobre compactação de linha, veja [Implementação da compactação de linha](../../relational-databases/data-compression/row-compression-implementation.md).  
   
@@ -55,14 +53,14 @@ ms.locfileid: "68030493"
   
  A ilustração a seguir mostra a mesma página após a compactação de prefixo. O prefixo é movido para o cabeçalho e os valores da coluna são alterados para referências ao prefixo.  
   
- ![Página após a compactação de prefixo](media/tblcompression2.gif "Página após a compactação de prefixo")  
+ ![Página após compactação de prefixo](media/tblcompression2.gif "Página após compactação de prefixo")  
   
  Na primeira coluna da primeira linha, o valor 4b indica que os primeiros quatro caracteres do prefixo (aaab) estão presentes para essa linha, além do caractere b. Isso gera o valor resultante aaabb, que é o valor original.  
   
 ## <a name="dictionary-compression"></a>Compactação de dicionário  
  Após a conclusão da compactação de prefixo, é aplicada a compactação de dicionário. A compactação de dicionário procura valores repetidos em qualquer lugar da página e os armazena na área de informações de compactação. Diferentemente da compactação de prefixo, a compactação de dicionário não é restrita a uma coluna. A compactação de dicionário pode substituir valores repetidos que ocorrem em qualquer lugar de uma página. A ilustração a seguir mostra a mesma página após a compactação de dicionário.  
   
- ![Página após a compactação de dicionário](media/tblcompression3.gif "Página após a compactação de dicionário")  
+ ![Página após compactação de dicionário](media/tblcompression3.gif "Página após compactação de dicionário")  
   
  Observe que o valor 4b foi referenciado a partir de colunas diferentes da página.  
   

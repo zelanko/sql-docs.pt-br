@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: fc0eb0e3e8cd6a095a6f30f44ee08c520db19e45
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: b0590a46fe9e5037f5bec1895aa6602bcd8c568a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289291"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907653"
 ---
 # <a name="compare-execution-plans"></a>Comparar planos de execução
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,22 +71,20 @@ Quando dois planos de execução são comparados, regiões do plano que **fazem 
 
 5.  Também é aberta uma janela Propriedades dupla à direita no escopo da seleção padrão. As propriedades que existem em ambos os operadores comparados, mas que apresentem diferenças, serão precedidas pelo sinal *não igual* (&ne;) para facilitar a identificação.
 
-    ![Janela Propriedades duplas](../../relational-databases/performance/media/plancomparison-properties.png "Janela Propriedades duplas")  
+    ![Janela de propriedades duplas](../../relational-databases/performance/media/plancomparison-properties.png "Janela de propriedades duplas")  
 
 6.  A janela de navegação de comparação **Análise de Plano de Execução** também abre na parte inferior. Há três guias disponíveis:
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  Na guia **Opções da Instrução**, a seleção padrão é *Realçar operações semelhantes* e o mesmo operador ou nó realçado em planos comparados compartilham o mesmo padrão de cor e linha. Navegue entre áreas semelhantes em planos comparados clicando em um padrão verde-limão. Você também pode optar por realçar as diferenças entre os planos, em vez das semelhanças, selecionando *Realçar operações que não correspondem aos segmentos semelhantes*. 
     
        > [!NOTE]
        > Por padrão, os nomes de banco de dados são ignorados durante a comparação de planos para permitir a comparação de planos capturados para bancos de dados que têm nomes diferentes, mas compartilham do mesmo esquema. Por exemplo, ao comparar os planos de bancos de dados *ProdDB* e *TestDB*. Esse comportamento pode ser alterado com a opção *Ignorar nome do banco de dados ao comparar operadores*.
 
-       ![Janela Análise de Plano de Execução](../../relational-databases/performance/media/plancomparison-analysis.png "Janela Análise de Plano de Execução") 
+       ![Janela de Análise de Plano de Execução](../../relational-databases/performance/media/plancomparison-analysis.png "Janela de Análise de Plano de Execução") 
 
     2.  A guia **Várias Instruções** é útil ao comparar planos com várias instruções, permitindo que o par de instruções certo seja comparado.
 
-        ![Várias instruções no plano comparado](../../relational-databases/performance/media/plancomparison-multiple.png "Várias instruções no plano comparado")  
+        ![Várias instruções em plano comparado](../../relational-databases/performance/media/plancomparison-multiple.png "Várias instruções em plano comparado")  
 
     3.  Na guia **Cenários**, você pode encontrar uma análise automatizada de alguns dos aspectos mais relevantes para analisar no sentido de como se relacionada a diferenças de [Estimativa de Cardinalidade](../../relational-databases/performance/cardinality-estimation-sql-server.md) em planos comparados. Para cada operador listado no painel esquerdo, o painel direito mostra detalhes sobre o cenário no link *Clique aqui para obter mais informações sobre esse cenário* e possíveis razões para explicar esse cenário são listadas. 
 
@@ -102,7 +100,7 @@ Quando dois planos de execução são comparados, regiões do plano que **fazem 
 
 2.  Use uma combinação da tecla SHIFT e do mouse para selecionar dois planos para a mesma consulta. 
 
-    ![Selecionar dois planos no Repositório de Consultas](../../relational-databases/performance/media/plancomparison-querystore.png "Selecionar dois planos no Repositório de Consultas")   
+    ![Selecione dois planos no Repositório de Consultas](../../relational-databases/performance/media/plancomparison-querystore.png "Selecione dois planos no Repositório de Consultas")   
 
 3.  Use o botão **Comparar planos para a consulta de seleção em uma janela separada** para iniciar a comparação de planos. Em seguida, as etapas 4 a 6 *Para comparar os planos de execução* são aplicáveis. 
 

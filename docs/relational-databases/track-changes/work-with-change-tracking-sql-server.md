@@ -21,12 +21,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8348f5d0f77006697abec72b084b36cb7b24e1b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0dee3fbbeced09ca66c42ab873ad2545655a1b72
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057938"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905545"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Trabalhar com o controle de alterações (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "68057938"
   
      A ilustração a seguir mostra como a função CHANGETABLE(CHANGES ...) é usada para obter alterações.  
   
-     ![Exemplo de saída da consulta de controle de alterações](../../relational-databases/track-changes/media/queryoutput.gif "Exemplo de saída da consulta de controle de alterações")  
+     ![Exemplo da saída de consulta de controle de alterações](../../relational-databases/track-changes/media/queryoutput.gif "Exemplo da saída de consulta de controle de alterações")  
   
  Função CHANGE_TRACKING_CURRENT_VERSION()  
  É usada para obter a versão atual que será usada na próxima vez ao consultar alterações. Essa versão representa a versão da última transação confirmada.  
@@ -207,8 +207,6 @@ ON
   
 4.  Obtenha as alterações da tabela SalesOrders usando CHANGETABLE(CHANGES ...).  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  Dois processos estão ocorrendo no banco de dados que podem afetar os resultados retornados pelas etapas anteriores:  
   
 -   O processo de limpeza é executado em segundo plano e remove as informações de controle de alterações anteriores ao período de retenção especificado.  
@@ -267,6 +265,10 @@ COMMIT TRAN
   
  Para obter mais informações sobre transações de instantâneos, veja [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
+#### <a name="cleanup-and-snapshot-isolation"></a>Limpeza e isolamento de instantâneo   
+Habilitar o isolamento de instantâneo e o controle de alterações no mesmo banco de dados ou em dois bancos de dados diferentes na mesma instância pode fazer com que o processo de limpeza deixe linhas expiradas no sys.syscommittab quando houver uma transação aberta no banco de dados com isolamento de instantâneo. Isso pode acontecer porque o processo de limpeza do controle de alterações leva em consideração uma marca-d'água baixa em toda a instância (que é a versão de limpeza segura) ao executar a limpeza. Isso é feito para garantir que o processo de limpeza automática do controle de alterações não remova nenhuma linha que possa ser exigida pela transação aberta no banco de dados com o isolamento de instantâneo habilitado. Mantenha as transações de isolamento de instantâneo de leitura confirmada e isolamento de instantâneo o mais curtas possível para garantir que as linhas expiradas do sys.syscommittab sejam limpas em tempo hábil. 
+
+
 #### <a name="alternatives-to-using-snapshot-isolation"></a>Alternativas para usar o isolamento de instantâneo  
  Existem alternativas para o uso do isolamento de instantâneo, mas elas exigem mais trabalho para certificar-se de que todos os requisitos do aplicativos sejam atendidos. Para verificar se *last_synchronization_version* é válido e se os dados não foram removidos pelo processo de limpeza antes de as alterações serem obtidas, siga estas etapas:  
   

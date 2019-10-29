@@ -15,12 +15,12 @@ ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9173073074957d448be8bd28cf92b16f18f4e2f3
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: c37a0b953177d0e3d978607982da54c613a3d2a2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710772"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908236"
 ---
 # <a name="republish-data"></a>Republicar dados
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,14 +40,12 @@ ms.locfileid: "71710772"
   
 6.  Inicialize as assinaturas.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > [!NOTE]  
 >  Se você usar replicação de mesclagem em uma topologia de republicação, todos os Assinantes de republicação deverão usar assinatura de servidor. Para obter mais informações sobre tipos de assinaturas, veja [Assinar Publicações](../../relational-databases/replication/subscribe-to-publications.md).  
   
  Na ilustração a seguir, o Publicador e o republicador estão agindo como os seus próprios Distribuidores locais. Se cada um fosse definido para usar um Distribuidor remoto, cada Distribuidor precisaria estar do mesmo lado do link de comunicações lento ou caro do seu Publicador. Os Publicadores devem ser conectados a Distribuidores remotos por links de comunicação confiáveis, de alta velocidade.  
   
- ![Republishing data](../../relational-databases/replication/media/repl-06a.gif "Republishing data")  
+ ![Republicar dados](../../relational-databases/replication/media/repl-06a.gif "Republicar dados")  
   
  Qualquer servidor pode agir como um Publicador e Assinante. Por exemplo, considere o diagrama a seguir em que uma publicação de uma tabela existe em Londres e deverá ser distribuída a quatro cidades diferentes nos Estados Unidos: Chicago, Nova York, San Diego e Seattle. O servidor em Nova Iorque é escolhido para assinar a tabela publicada originada em Londres, porque o site de Nova Iorque atende às seguintes condições:  
   
@@ -57,7 +55,7 @@ ms.locfileid: "71710772"
   
 -   Existem boas linhas de comunicações de rede de Nova Iorque para todos os outros sites de Assinante nos Estados Unidos.  
   
-     ![Republicando dados em locais dispersos](../../relational-databases/replication/media/repl-06.gif "Republicando dados em locais dispersos")  
+     ![Republicar dados em locais dispersos](../../relational-databases/replication/media/repl-06.gif "Republicar dados em locais dispersos")  
   
  A replicação fornece suporte aos cenários de republicação mostrados na tabela a seguir.  
   

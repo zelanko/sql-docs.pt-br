@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c43f8296c6bb4d25c58ba65516601c37381d7b4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e21af82bf762f8945c9d00232e63d9970054c31
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082462"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916171"
 ---
 # <a name="restore-statements-transact-sql"></a>Instruções RESTORE (Transact-SQL)
 
@@ -312,7 +312,6 @@ RESTORE LOG pode incluir uma lista de arquivos para permitir a criação de arqu
 > Para um banco de dados que usa o modelo de recuperação completa ou bulk-logged, na maioria dos casos é necessário fazer backup do final do log antes da restauração do banco de dados. Restaurar um banco de dados sem antes fazer backup do final do log resultará em um erro, a não ser que a instrução RESTORE DATABASE contenha a cláusula WITH REPLACE ou WITH STOPAT, que deve especificar um momento ou transação que ocorreu após o final do backup de dados. Para obter mais informações sobre backups da parte final do log, consulte [Backups da parte final do log – SQL Server](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).
 
 ### <a name="comparison-of-recovery-and-norecovery"></a>Comparação de RECOVERY e NORECOVERY
-
 A reversão é controlada pela instrução RESTORE nas opções [ RECOVERY | NORECOVERY ]:
 
 - NORECOVERY especifica que a reversão não ocorre. Isso permite que o roll forward continue com a próxima instrução na sequência.
@@ -321,10 +320,9 @@ A reversão é controlada pela instrução RESTORE nas opções [ RECOVERY | NOR
 
 - RECOVERY (o padrão) indica que a reversão deve ser executada após a conclusão do roll forward no backup atual.
 
-  A recuperação do banco de dados exige que todo o conjunto de dados que está sendo restaurado (o *conjunto de roll forward*) seja consistente com o banco de dados. Se o conjunto de roll forward não tiver ido longe o suficiente para ficar consistente com o banco de dados e RECOVERY estiver especificado, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] emitirá um erro.
+  A recuperação do banco de dados exige que todo o conjunto de dados que está sendo restaurado (o *conjunto de roll forward*) seja consistente com o banco de dados. Se o conjunto de roll forward não tiver ido longe o suficiente para ficar consistente com o banco de dados e RECOVERY estiver especificado, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] emitirá um erro. Para obter mais informações sobre a recuperação de banco de dados, confira [Visão geral da restauração e recuperação (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ## <a name="compatibility-support"></a>Suporte de compatibilidade
-
 Backups do **master**, **model** e **msdb** que foram criados em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não podem ser restaurados pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 > [!NOTE]
@@ -332,19 +330,16 @@ Backups do **master**, **model** e **msdb** que foram criados em uma versão ant
 
 Cada versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa um caminho padrão diferente das versões anteriores. Assim, para restaurar um banco de dados que foi criado no local padrão dos backups de versões anteriores, você deve usar a opção MOVE. Para obter informações sobre o novo caminho padrão, consulte [Locais de arquivos para instâncias padrão e nomeadas do SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
 
-Depois de você restaurar um banco de dados da versão anterior para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados será atualizado automaticamente. Normalmente, o banco de dados se torna disponível imediatamente. No entanto, se um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices, dependendo da configuração da propriedade de servidor **upgrade_option**. Se a opção de atualização for definida como importar (**upgrade_option** = 2) ou recriar (**upgrade_option** = 0), os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas, e a recriação pode ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida para importar, os índices de texto completo associados serão recriados se um catálogo de texto completo não estiver disponível. Para alterar a configuração da propriedade de servidor **upgrade_option** , use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).
+Depois de você restaurar um banco de dados da versão anterior para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados será atualizado automaticamente. Normalmente, o banco de dados se torna disponível imediatamente. No entanto, se um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices, dependendo da configuração da propriedade de servidor **upgrade_option**. Se a opção de atualização for definida como importar (**upgrade_option** = 2) ou recriar (**upgrade_option** = 0), os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas e a recriação pode ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida para importar, os índices de texto completo associados serão recriados se um catálogo de texto completo não estiver disponível. Para alterar a configuração da propriedade de servidor **upgrade_option** , use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).
 
 Quando um banco de dados é anexado ou restaurado pela primeira vez a uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma cópia da chave mestra de banco de dados (criptografada pela chave mestra de serviço) ainda não está armazenada no servidor. É necessário usar a instrução **OPEN MASTER KEY** para descriptografar a DMK (chave mestra do banco de dados). Após a descriptografia da DMK, você tem a opção de habilitar a descriptografia automática no futuro usando a instrução **ALTER MASTER KEY REGENERATE** para provisionar o servidor com uma cópia da DMK criptografada com a SMK (chave mestra de serviço). Quando um banco de dados for atualizado de uma versão anterior, a DMK deverá ser regenerada para usar o algoritmo AES mais recente. Para obter mais informações sobre como regenerar a DMK, consulte [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md). O tempo necessário para regenerar a chave DMK para atualizar o AES depende do número de objetos protegidos pela DMK. É necessário regenerar a chave DMK para atualizar o AES somente uma vez, isso não tem impacto sobre regenerações futuras como parte de uma estratégia de rotação de chave.
 
 ## <a name="general-remarks"></a>Comentários gerais
-
 Durante uma restauração offline, se o banco de dados especificado estiver em uso, RESTORE forçará a saída do usuário depois de um pequeno atraso. Para restauração online de um grupo de arquivos não primário, o banco de dados pode permanecer em uso, exceto quando o grupo de arquivos que está sendo restaurado for colocado offline. Todos os dados no banco de dados especificado são substituídos pelos dados restaurados.
-
-Para obter mais informações sobre a recuperação de banco de dados, consulte [Visão geral da restauração e recuperação](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
 
 As operações de restauração entre plataformas, mesmo entre tipos diferentes de processadores, podem ser executadas desde que a ordenação do banco de dados tenha suporte no sistema operacional.
 
-RESTORE pode ser reiniciado depois de um erro. Além disso, você pode instruir RESTORE a prosseguir, apesar dos erros, e ele restaura o máximo possível de dados (consulte a opção CONTINUE_AFTER_ERROR).
+RESTORE pode ser reiniciado depois de um erro. Além disso, você pode instruir RESTORE a prosseguir, apesar dos erros, e ele restaura o máximo possível de dados (confira a opção `CONTINUE_AFTER_ERROR`).
 
 RESTORE não é permitido em uma transação explícita ou implícita.
 
@@ -384,7 +379,6 @@ A instrução RESTORE também pode ser usada para executar restaurações em loc
 O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui tabelas de histórico de backup e restauração que controlam a atividade de backup e restauração de cada instância de servidor. Quando uma restauração é executada, as tabelas de histórico de backup também são modificadas. Para obter informações sobre essas tabelas, consulte [Histórico de backup e informações de cabeçalho](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md).
 
 ## <a name="REPLACEoption"></a> Impacto da opção REPLACE
-
 REPLACE raramente deve ser usado e só depois de cuidadosa consideração. Normalmente a restauração evita a substituição acidental de um banco de dados por um banco de dados diferente. Se o banco de dados especificado em uma instrução RESTORE já existir no servidor atual e a GUID de família do banco de dados especificado for diferente da GUID de família do banco de dados registrado no conjunto de backup, o banco de dados não será restaurado. Essa é uma proteção importante.
 
 A opção REPLACE substitui várias verificações de segurança importantes que a restauração geralmente executa. As verificações substituídas são as seguintes:
@@ -402,21 +396,18 @@ A opção REPLACE substitui várias verificações de segurança importantes que
   Por exemplo, um engano poderia permitir a substituição de arquivos do tipo errado, como arquivos .xls, ou que estivessem sendo usados por outro banco de dados que não estivesse online. A perda de dados arbitrária é possível se arquivos existentes forem substituídos, embora o banco de dados restaurado esteja completo.
 
 ## <a name="redoing-a-restore"></a>Refazendo uma restauração
-
-Não é possível desfazer os efeitos de uma restauração; no entanto, você pode recusar os efeitos de roll forward e de cópia dos dados reiniciando em uma base de um arquivo por vez. Para recomeçar, restaure o arquivo desejado e execute o roll forward novamente. Por exemplo, se você restaurou muitos backups de log acidentalmente e excedeu o ponto de parada pretendido, reinicie a sequência.
+Não é possível desfazer os efeitos de uma restauração; no entanto, você pode recusar os efeitos de roll forward e de cópia dos dados reiniciando um arquivo por vez. Para recomeçar, restaure o arquivo desejado e execute o roll forward novamente. Por exemplo, se você restaurou muitos backups de log acidentalmente e excedeu o ponto de parada pretendido, reinicie a sequência.
 
 Uma sequência de restauração pode ser anulada e reiniciada com a restauração de todo o conteúdo dos arquivos afetados.
 
 ## <a name="reverting-a-database-to-a-database-snapshot"></a>Revertendo um banco de dados para um instantâneo de banco de dados
-
-Uma *operação de reversão de banco de dados* (especificada com a opção DATABASE_SNAPSHOT) reverte um banco de dados de origem completo, revertendo-o para o momento de um instantâneo do banco de dados, ou seja, com a substituição do banco de dados de origem pelos dados do momento específico mantidos no instantâneo do banco de dados especificado. Só o instantâneo para o qual você está revertendo pode existir atualmente. A operação de reversão, então, reconstrói o log (portanto, você não poderá efetuar roll forward em um banco de dados revertido até o ponto do erro do usuário).
+Uma *operação de reversão de banco de dados* (especificada com a opção DATABASE_SNAPSHOT) reverte um banco de dados de origem completo, revertendo-o para o momento de um instantâneo do banco de dados, ou seja, com a substituição do banco de dados de origem pelos dados do momento específico mantidos no instantâneo do banco de dados especificado. Só o instantâneo para o qual você está revertendo pode existir atualmente. A operação de reversão reconstrói o log (portanto, você não poderá efetuar roll forward em um banco de dados revertido até o ponto do erro do usuário).
 
 A perda de dados é limitada às atualizações no banco de dados desde a criação do instantâneo. Os metadados de um banco de dados revertido são iguais aos metadados no momento da criação do instantâneo. No entanto, a reversão para um instantâneo descarta todos os catálogos de texto completo.
 
 A reversão a partir de um instantâneo do banco de dados não é destinada à recuperação de mídia. Ao contrário de um conjunto de backup regular, o instantâneo de banco de dados é uma cópia incompleta dos arquivos do banco de dados. Se o banco de dados ou o instantâneo do banco de dados está corrompido, é provável que a reversão a partir de um instantâneo seja impossível. Além disso, mesmo quando possível, é improvável que a reversão corrija o problema no caso de corrupção.
 
 ### <a name="restrictions-on-reverting"></a>Restrições na reversão
-
 Não há suporte para a reversão nas seguintes condições:
 
 - O banco de dados de origem contém algum grupo de arquivos somente leitura ou compactado.
@@ -426,19 +417,18 @@ Não há suporte para a reversão nas seguintes condições:
 Para obter mais informações, consulte [Reverter um banco de dados para um instantâneo do banco de dados](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md).
 
 ## <a name="security"></a>Segurança
-
 Uma operação de backup pode, opcionalmente, especificar senhas para um conjunto de mídias, um conjunto de backup ou ambos. Quando uma senha tiver sido definida em um conjunto de backup ou de mídias, será preciso especificar a senha ou as senhas corretas na instrução RESTORE. Essas senhas impedem operações de restauração não autorizadas e anexações não autorizadas de conjuntos de backup para mídia usando ferramentas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Porém, mídia protegida por senha pode ser substituída pela opção FORMAT da instrução BACKUP.
 
 > [!IMPORTANT]
 > A proteção fornecida por esta senha é fraca. Destina-se a evitar uma restauração incorreta com o uso de ferramentas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por usuários autorizados ou não autorizados. Não impede a leitura dos dados de backup por outros meios ou a substituição da senha. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]A melhor prática para proteger backups é armazenar as fitas de backup em um local seguro ou fazer backup em arquivos de disco protegidos por ACLs (listas de controle de acesso) adequadas. As ACLs devem ser definidas no diretório raiz em que os backups são criados.
+
 > [!NOTE]
 > Para obter informações específicas sobre o backup e a restauração do SQL Server com o Armazenamento de Blobs do Microsoft Azure, consulte [Backup e restauração do SQL Server com o serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
 ### <a name="permissions"></a>Permissões
+Se o banco de dados que está sendo restaurado não existir, o usuário deverá ter permissões `CREATE DATABASE` para poder executar o comando RESTORE. Se o banco de dados existir, as permissões RESTORE assumirão como padrão os membros das funções de servidor fixas `sysadmin` e `dbcreator` e o proprietário (`dbo`) do banco de dados (para a opção `FROM DATABASE_SNAPSHOT`, o banco de dados sempre existe).
 
-Se o banco de dados que está sendo restaurado não existir, o usuário deverá ter permissões CREATE DATABASE para poder executar o comando RESTORE. Se o banco de dados existir, as permissões RESTORE usarão como padrão os membros das funções de servidor fixas **sysadmin** e **dbcreator** e o proprietário (**dbo**) do banco de dados (para a opção FROM DATABASE_SNAPSHOT, o banco de dados sempre existe).
-
-As permissões RESTORE são concedidas a funções nas quais as informações de associação estão sempre disponíveis para o servidor. Como a associação da função de banco de dados fixa pode ser verificada apenas quando o banco de dados está acessível e não danificado, o que nem sempre é o caso quando RESTORE é executado, os membros da função de banco de dados fixa **db_owner** não têm permissões RESTORE.
+As permissões RESTORE são concedidas a funções nas quais as informações de associação estão sempre disponíveis para o servidor. Como a associação da função de banco de dados fixa pode ser verificada apenas quando o banco de dados está acessível e não danificado, o que nem sempre é o caso quando RESTORE é executado, os membros da função de banco de dados fixa `db_owner` não têm permissões RESTORE.
 
 ## <a name="examples"></a> Exemplos
 
@@ -625,7 +615,7 @@ O exemplo a seguir restaura um banco de dados nomeado `MyDatabase` que tem dois 
 O backup do banco de dados é o nono conjunto de backup no conjunto de mídias em um dispositivo de backup lógico nomeado `MyDatabaseBackups`. Depois, três backups de log, que estão nos próximos três conjuntos de backup (`10`, `11` e `12`) no dispositivo `MyDatabaseBackups`, são restaurados usando `WITH NORECOVERY`. Depois de restaurar o último backup de log, o banco de dados é recuperado.
 
 > [!NOTE]
-> A recuperação é executada como uma etapa separada para reduzir a possibilidade de recuperação antecipada, antes que todos os backups de log tenham sido restaurados.
+> A recuperação é executada como uma etapa separada para reduzir a possibilidade de recuperação antecipada, antes que todos os backups de log tenham sido restaurados. Para obter mais informações sobre a recuperação de banco de dados, confira [Visão geral da restauração e recuperação (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 No `RESTORE DATABASE`, observe que há dois tipos de opções de `FILE`. As opções `FILE` que precedem o nome do dispositivo de backup especificam os nomes de arquivos lógicos dos arquivos de banco de dados restaurados do conjunto de backup; por exemplo, `FILE = 'MyDatabase_data_1'`. Esse conjunto de backups não é o primeiro backup de banco de dados no conjunto de mídias; portanto, sua posição no conjunto de mídias é indicada com a opção `FILE` na cláusula `WITH`, `FILE=9`.
 
@@ -683,7 +673,8 @@ Para obter mais informações, consulte [Reverter um banco de dados para um inst
 
 Os três exemplos abaixo envolvem o uso do serviço de Armazenamento do Microsoft Azure. O nome da Conta de armazenamento é `mystorageaccount`. O contêiner para arquivos de dados é chamado `myfirstcontainer`. O contêiner para arquivos de backup é chamado `mysecondcontainer`. Uma política de acesso armazenada foi criada com direitos de leitura, gravação, exclusão e lista para cada contêiner. As credenciais do SQL Server foram criadas usando Assinaturas de Acesso Compartilhado que estão associadas às Políticas de Acesso Armazenado. Para obter informações específicas sobre o backup e a restauração do SQL Server com o Armazenamento de Blobs do Microsoft Azure, consulte [Backup e restauração do SQL Server com o serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
-**K1. Restaurar um backup de banco de dados completo do serviço de Armazenamento do Microsoft Azure** Um backup de banco de dados completo, localizado em `mysecondcontainer`, de `Sales` será restaurado para `myfirstcontainer`. Atualmente, o `Sales` não existe no servidor.
+**K1. Restaurar um backup de banco de dados completo do serviço de Armazenamento do Microsoft Azure**    
+Um backup de banco de dados completo, localizado em `mysecondcontainer`, de `Sales` será restaurado no `myfirstcontainer`. Atualmente, o `Sales` não existe no servidor.
 
 ```sql
 RESTORE DATABASE Sales
@@ -717,18 +708,19 @@ RESTORE DATABASE Sales
 
 ## <a name="more-information"></a>Mais informações
 
-- [Fazer backup e restaurar bancos de dados do SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
-- [Fazer backup e restaurar bancos de dados do sistema (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
-- [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
-- [Fazer backup e restaurar índices e catálogos de texto completo](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)
-- [Fazer backup e restaurar bancos de dados replicados](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)
-- [BACKUP](../../t-sql/statements/restore-statements-transact-sql.md)
-- [Conjuntos de mídias, famílias de mídia e conjuntos de backup](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)
-- [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)
-- [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
-- [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)
-- [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)
-- [Informações de histórico e cabeçalho de backup](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)
+[Visão geral da restauração e recuperação (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)     
+[Fazer backup e restaurar bancos de dados do SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)    
+[Fazer backup e restaurar bancos de dados do sistema (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)      
+[Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)     
+[Fazer backup e restaurar índices e catálogos de texto completo](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)      
+[Fazer backup e restaurar bancos de dados replicados](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)      
+[BACKUP](../../t-sql/statements/restore-statements-transact-sql.md)      
+[Conjuntos de mídias, famílias de mídia e conjuntos de backup](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)      
+[RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)     
+[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)     
+[RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)     
+[RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)     
+[Informações de histórico e cabeçalho de backup](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)       
 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
@@ -780,7 +772,7 @@ Especifica um ou mais dispositivos de backup colocados em URLs que serão usados
 
 ## <a name="general-remarks"></a>Comentários gerais
 
-Como pré-requisito, você precisa criar uma credencial com o nome que corresponda à URL da conta de armazenamento de blobs, e colocar a Assinatura de Acesso Compartilhado como secreta. O comando RESTORE pesquisará as credenciais usando a URL de armazenamento de blobs para localizar as informações necessárias para ler o dispositivo de backup.
+Como pré-requisito, você precisa criar uma credencial com o nome que corresponda à URL da conta de armazenamento de blobs, e colocar a Assinatura de Acesso Compartilhado como secreta. O comando RESTORE pesquisará as credenciais usando a URL de armazenamento de blobs a fim de localizar as informações necessárias para ler o dispositivo de backup.
 
 A operação RESTORE é assíncrona: a restauração continua mesmo se a conexão de cliente é interrompida. Se sua conexão for interrompida, será possível marcar a exibição [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) para o status de uma operação de restauração (bem como para o banco de dados CREATE e DROP).
 
@@ -806,19 +798,17 @@ Estas limitações se aplicam:
 Para saber mais, confira [instância gerenciada](/azure/sql-database/sql-database-managed-instance)
 
 ## <a name="restoring-an-encrypted-database"></a>Restaurando um banco de dados criptografado
-
 Para restaurar um banco de dados criptografado, é necessário ter acesso ao certificado ou à chave assimétrica usada para criptografar o banco de dados. Sem o certificado ou a chave assimétrica, o banco de dados não pode ser restaurado. Como resultado, o certificado usado para criptografar a chave de criptografia do banco de dados deverá ser retido enquanto o backup for necessário. Para obter mais informações, consulte [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).
 
 ## <a name="permissions"></a>Permissões
-
-O usuário deve ter permissões CREATE DATABASE para poder executar RESTORE.
+O usuário deve ter permissões `CREATE DATABASE` para poder executar RESTORE.
 
 ```sql
 CREATE LOGIN mylogin WITH PASSWORD = 'Very Strong Pwd123!';
 GRANT CREATE ANY DATABASE TO [mylogin];
 ```
 
-As permissões RESTORE são concedidas a funções nas quais as informações de associação estão sempre disponíveis para o servidor. Como a associação da função de banco de dados fixa pode ser verificada apenas quando o banco de dados está acessível e não danificado, o que nem sempre é o caso quando RESTORE é executado, os membros da função de banco de dados fixa **db_owner** não têm permissões RESTORE.
+As permissões RESTORE são concedidas a funções nas quais as informações de associação estão sempre disponíveis para o servidor. Como a associação da função de banco de dados fixa pode ser verificada apenas quando o banco de dados está acessível e não danificado, o que nem sempre é o caso quando RESTORE é executado, os membros da função de banco de dados fixa `db_owner` não têm permissões RESTORE.
 
 ## <a name="examples"></a> Exemplos
 
@@ -935,8 +925,7 @@ RESTORE HEADERONLY Especifica para retornar somente as informações de cabeçal
 Os resultados de RESTORE HEADERONLY seguem o mesmo padrão dos resultados de RESTORE HEADERONLY do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O resultado tem mais de 50 colunas, e nem todas são usadas pelo [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Para obter uma descrição das colunas nos resultados de RESTORE HEADERONLY do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).
 
 ## <a name="permissions"></a>Permissões
-
-Requer a permissão **CREATE ANY DATABASE**.
+Requer a permissão `CREATE ANY DATABASE`.
 
 Exige uma conta do Windows que tem permissão para acessar e ler por meio do diretório de backup. O nome de conta do Windows e a senha também precisam ser armazenados no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
@@ -963,7 +952,7 @@ O comando RESTORE DATABASE resulta em erros nas seguintes condições:
 
 Após uma restauração, o banco de dados de usuário terá o nível de compatibilidade 120 do banco de dados. Isso é verdadeiro para todos os bancos de dados, seja qual for seu nível de compatibilidade original.
 
-## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>Restaurando para um dispositivo com um número maior de nós de Computação
+## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>Restaurar para um dispositivo com um número maior de nós de computação
 
 Execute [DBCC SHRINKLOG (SQL Data Warehouse do Azure)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) depois de restaurar um banco de dados de um dispositivo menor até o maior, pois a redistribuição aumentará o log de transações.
 
@@ -973,7 +962,7 @@ Por exemplo, ao restaurar um banco de dados de 60 GB de um dispositivo de 2 nós
 
 Após a redistribuição, cada nó de Computação conterá menos dados reais e mais espaço livre do que cada nó de Computação no dispositivo de origem menor. Use o espaço adicional para adicionar mais dados ao banco de dados. Se o tamanho do banco de dados restaurado for maior do que o necessário, use [ALTER DATABASE - PDW](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7) para reduzir os tamanhos de arquivos de banco de dados.
 
-## <a name="limitations-and-restrictions"></a>Limitações e Restrições
+## <a name="limitations-and-restrictions"></a>Limitações e restrições
 
 Para essas limitações e restrições, o dispositivo de origem é o dispositivo por meio do qual o backup do banco de dados foi criado e o dispositivo de destino é o dispositivo no qual o banco de dados será restaurado.
 
@@ -983,14 +972,13 @@ Para essas limitações e restrições, o dispositivo de origem é o dispositivo
 - Não é possível restaurar um backup que foi criado em um dispositivo que tem o hardware do SQL Server 2012 PDW em um dispositivo que tem o hardware do SQL Server 2008 R2. Isso se aplica mesmo se o dispositivo foi adquirido originalmente com o hardware do SQL Server 2008 R2 PDW e agora executa o software do SQL Server 2012 PDW.
 
 ## <a name="locking"></a>Bloqueio
-
 Usa um bloqueio exclusivo no objeto DATABASE.
 
 ## <a name="examples"></a>Exemplos
 
 ### <a name="a-simple-restore-examples"></a>A. Exemplos simples de RESTORE
 
-O exemplo a seguir restaura um backup completo para o banco de dados do `SalesInvoices2013`. Os arquivos de backup são armazenados no diretório \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full. O banco de dados SalesInvoices2013 ainda não pode existir no dispositivo de destino ou esse comando falhará com um erro.
+O exemplo a seguir restaura um backup completo para o banco de dados do `SalesInvoices2013`. Os arquivos de backup são armazenados no diretório `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full`. O banco de dados SalesInvoices2013 ainda não pode existir no dispositivo de destino ou esse comando falhará com um erro.
 
 ```sql
 RESTORE DATABASE SalesInvoices2013
@@ -1001,7 +989,7 @@ FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
 
 O exemplo a seguir restaura um backup completo e, em seguida, um backup diferencial para o banco de dados SalesInvoices2013
 
-O backup completo do banco de dados é restaurado do backup completo que está armazenado no diretório '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'. Se a restauração for concluída com êxito, o backup diferencial será restaurado para o banco de dados SalesInvoices2013. O backup diferencial é armazenado no diretório '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff'.
+O backup completo do banco de dados é restaurado do backup completo que está armazenado no diretório `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full`. Se a restauração for concluída com êxito, o backup diferencial será restaurado no banco de dados SalesInvoices2013. O backup diferencial é armazenado no diretório `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff`.
 
 ```sql
 RESTORE DATABASE SalesInvoices2013
@@ -1013,7 +1001,7 @@ RESTORE DATABASE SalesInvoices2013
 
 ### <a name="c-restoring-the-backup-header"></a>C. Restaurando o cabeçalho do backup
 
-Este exemplo restaura as informações de cabeçalho para o backup de banco de dados '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'. Os resultados do comando em uma linha de informações para o backup de Invoices2013Full.
+Este exemplo restaura as informações de cabeçalho para o backup de banco de dados `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full`. Os resultados do comando em uma linha de informações para o backup de Invoices2013Full.
 
 ```sql
 RESTORE HEADERONLY
@@ -1024,7 +1012,6 @@ RESTORE HEADERONLY
 Use as informações de cabeçalho para verificar o conteúdo de um backup ou para garantir que o dispositivo de restauração de destino é compatível com o dispositivo de backup de origem antes de tentar restaurar o backup.
 
 ## <a name="see-also"></a>Consulte Também
-
-- [BACKUP DATABASE – Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)
+[BACKUP DATABASE – Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)     
 
 ::: moniker-end

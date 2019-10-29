@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 19a2aab72c1e820e6d07af770a89196662c6fdd1
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995878"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783399"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurar o SQL Server em Linux com a ferramenta mssql-conf
 
@@ -510,7 +510,7 @@ Há várias outras configurações de mssql-conf que você pode usar para monito
 | configuração mssql-conf | Descrição |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | Configurar chamadas RPC somente seguras para transações distribuídas |
-| distributedtransaction.fallbacktounsecurerpcifnecessary | Configurar chamadas RPC somente de segurança para transações distribuídas |transações
+| distributedtransaction.fallbacktounsecurerpcifnecessary | Configurar chamadas RPC somente de segurança para transações distribuídas |
 | distributedtransaction.maxlogsize | Tamanho do arquivo de log de transações do DTC em MB. O padrão é 64 MB |
 | distributedtransaction.memorybuffersize | Tamanho do buffer circular no qual os rastreamentos são armazenados. Esse tamanho é em MB e o padrão é 10 MB |
 | distributedtransaction.servertcpport | Porta do servidor RPC do MSDTC |

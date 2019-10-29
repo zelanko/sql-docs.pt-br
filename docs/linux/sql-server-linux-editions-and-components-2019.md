@@ -1,5 +1,5 @@
 ---
-title: Edições e recursos com suporte do SQL Server 2017 ~ Linux
+title: Edições e recursos com suporte do SQL Server 2019 – Linux
 ms.date: 10/23/2019
 ms.prod: sql
 ms.technology: linux
@@ -21,33 +21,33 @@ helpviewer_keywords:
 - installing SQL Server, editions
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: vanto
-ms.openlocfilehash: 661d74060d9bb6f7097a5fe50291bdde23e0a591
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: mikeray
+ms.openlocfilehash: 18ec5ca6700008bb2b1ebe3709db0c49123f4fec
 ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/25/2019
-ms.locfileid: "72928913"
+ms.locfileid: "72954988"
 ---
-# <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Edições e recursos compatíveis do SQL Server 2017 no Linux
+# <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Edições e recursos compatíveis do SQL Server 2019 no Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este artigo apresenta detalhes de recursos com suporte nas diferentes edições do SQL Server 2017 em Linux. Para edições e recursos compatíveis do SQL Server em Windows, confira [SQL Server 2017 – Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  
+Este artigo apresenta detalhes de recursos com suporte nas diferentes edições do SQL Server 2019 no Linux. Para edições e recursos compatíveis do SQL Server no Windows, confira [SQL Server 2019 – Windows](../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
 Os requisitos de instalação variam de acordo com as necessidades do aplicativo. As diferentes edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acomodam desempenho, tempo de execução e requisitos de preço exclusivos para organizações e indivíduos. Os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que você instala dependem também dos seus requisitos específicos. As seções a seguir ajudarão você a entender como fazer a melhor escolha entre as edições e os componentes disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 Para notas de versão mais recentes e informações sobre novidades, consulte o seguinte:
-- [Notas de versão do SQL Server 2017 no Linux](sql-server-linux-release-notes.md)
-- [Novidades no SQL Server 2017 no Linux](sql-server-linux-whats-new.md)
+- [Notas de versão do SQL Server 2019 no Linux](sql-server-linux-release-notes-2019.md)
+- [Novidades no SQL Server 2019 no Linux](sql-server-linux-whats-new-2019.md)
 
 Para obter uma lista dos recursos de SQL Server não disponíveis no Linux, confira [Recursos e serviços sem suporte](#Unsupported).
 
 ### <a name="try-sql-server"></a>Experimente o SQL Server.    
     
-[Baixar o SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017)
+[Baixe o SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)
 
 ## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Edições do[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]  
  A tabela a seguir descreve essas edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
@@ -55,7 +55,7 @@ Para obter uma lista dos recursos de SQL Server não disponíveis no Linux, conf
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edição|Definição|  
 |---------------------------------------|----------------|  
 |Enterprise|A oferta Premium, [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise Edition, oferece recursos abrangentes de datacenter de alto nível, com um desempenho muito rápido, permitindo altos níveis de serviço para cargas de trabalho críticas.|  
-|Standard|A edição [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard fornece gerenciamento de dados básico para departamentos e pequenas empresas executarem seus aplicativos e dá suporte a ferramentas de desenvolvimento comuns para rede local e em nuvem, permitindo o gerenciamento eficiente de bancos de dados com mínimos recursos de TI.|  
+|Standard|A edição Standard do [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] fornece gerenciamento de dados básico para departamentos e pequenas empresas executarem seus aplicativos e dá suporte a ferramentas de desenvolvimento comuns para rede local e em nuvem, permitindo o gerenciamento eficiente de bancos de dados com recursos mínimos de TI.|  
 |Web|A edição[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web é uma opção de baixo custo total de propriedade para hospedagem de sites e VAPs da Web que fornece recursos de escalabilidade, economia e capacidade de gerenciamento para propriedades da Web de pequeno a grande porte.|  
 |Desenvolvedor|A edição[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer permite que os desenvolvedores criem qualquer tipo de aplicativo com base no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ele inclui todas as funcionalidades da edição Enterprise, mas é licenciado para ser usado como um sistema de teste e desenvolvimento, e não como um servidor de produção. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer é uma opção ideal para pessoas que criam e testam aplicativos.|  
 |Express edition|A edição Express é o banco de dados gratuito de nível de entrada, ideal para conhecer e criar aplicativos de área de trabalho e aplicativos controlados por dados de pequenos servidores. É a melhor escolha para fornecedores de software independente, desenvolvedores e interessados que criam aplicativos cliente. Se precisar de recursos mais avançados de banco de dados, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express pode ser perfeitamente atualizado para versões mais sofisticadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
@@ -66,7 +66,7 @@ Você pode instalar apenas os componentes cliente do [!INCLUDE[ssNoVersion](../i
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>Componentes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
 
-O SQL Server 2017 no Linux é compatível com o mecanismo de banco de dados do SQL Server. A tabela a seguir descreve os recursos no mecanismo de banco de dados.   
+O SQL Server 2019 no Linux é compatível com o mecanismo de banco de dados do SQL Server. A tabela a seguir descreve os recursos no mecanismo de banco de dados.   
   
 |Componentes de servidor|Descrição|  
 |-----------------------|-----------------|  
@@ -75,7 +75,7 @@ O SQL Server 2017 no Linux é compatível com o mecanismo de banco de dados do S
 **Edições Developer, Enterprise Core e Evaluation**  
 Para saber quais os recursos com suporte nas edições Developer, Enterprise Core e Evaluation, veja os recursos listados para o SQL Server Enterprise Edition nas tabelas a seguir.
 
-A edição Developer continua a dar suporte a apenas um cliente para o [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
+A Developer Edition continua a dar suporte a apenas um cliente para o [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
 ##  <a name="Cross-BoxScaleLimits"></a> Limites de escala  
   
@@ -112,7 +112,7 @@ A edição Developer continua a dar suporte a apenas um cliente para o [SQL Serv
 |Backup criptografado|Sim|Sim|Não|Não|
 |Backup híbrido para o Azure (backup para URL)|Sim|Sim|Não|Não|
   
-<sup>1</sup> Na Enterprise Edition, o número de nós é o máximo do sistema operacional. Na Standard Edition, há suporte para dois nós. 
+<sup>1</sup> Na Enterprise Edition, o número de nós é o máximo do sistema operacional. Na Edição Standard, há suporte para dois nós. 
 
 <sup>2</sup> Na Enterprise Edition, há suporte para até oito réplicas secundárias, incluindo duas réplicas secundárias síncronas. 
 
@@ -209,17 +209,15 @@ Para obter informações sobre os recursos do SSIS (Integration Services) compat
 |Tipos de dados planares e geodésicos|Sim|Sim|Sim|Sim| 
 |Bibliotecas espaciais avançadas|Sim|Sim|Sim|Sim|   
 |Importação/exportação de formatos de dados espaciais padrão da indústria|Sim|Sim|Sim|Sim|   
+
 ## <a name="Unsupported"></a> Recursos e serviços sem suporte
 
-Os seguintes recursos e serviços não estão disponíveis no SQL Server 2017 no Linux. O suporte para esses recursos será habilitado gradativamente com o passar do tempo.
+Os seguintes recursos e serviços não estão disponíveis no SQL Server 2019 no Linux. O suporte para esses recursos será habilitado gradativamente com o passar do tempo.
 
 | Área | Recurso ou serviço sem suporte |
 |-----|-----|
-| **Mecanismo de banco de dados** | Replicação transacional |
-| &nbsp; | Replicação de mesclagem |
-| &nbsp; | Captura de dados de alterações (confira SQL Server Agent) |
+| **Mecanismo de banco de dados** | Replicação de mesclagem |
 | &nbsp; | Stretch DB |
-| &nbsp; | PolyBase |
 | &nbsp; | Consulta distribuída com conexões de terceiros |
 | &nbsp; | Servidores vinculados a fontes de dados diferentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  |
 | &nbsp; | Procedimentos armazenados estendidos do sistema (XP_CMDSHELL etc.) |
@@ -228,25 +226,28 @@ Os seguintes recursos e serviços não estão disponíveis no SQL Server 2017 no
 | &nbsp; | Buffer Pool Extension |
 | **SQL Server Agent** |  Subsistemas: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Alertas |
-| &nbsp; | Agente de Leitor de Log |
-| &nbsp; | Change Data Capture (CDC) |
 | &nbsp; | Backup Gerenciado |
 | **Alta disponibilidade** | Espelhamento de banco de dados  |
 | **Segurança** | Gerenciamento Extensível de Chaves |
 | &nbsp; | Autenticação do AD para servidores vinculados | 
 | &nbsp; | Autenticação do AD para AGs (grupos de disponibilidade) | 
 | **Serviços** | SQL Server Browser |
-| &nbsp; | Serviços de R para o SQL Server |
+| &nbsp; | SQL Server R services<sup>1</sup> |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
 | &nbsp; | Reporting Services |
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
+
+<sup>1</sup> O SQL Server R tem suporte no SQL Server, mas não há suporte para os serviços do SQL Server R como um pacote separado.
   
 ## <a name="next-steps"></a>Próximas etapas
+ [Edições e recursos com suporte do SQL Server 2017 – Linux](sql-server-linux-editions-and-components-2017.md)  
  [Edições e recursos compatíveis com o SQL Server 2019 – Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [Edições e recursos compatíveis com o SQL Server 2017 – Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [Edições e recursos compatíveis com o SQL Server 2016 – Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
  [Edições e recursos compatíveis com o SQL Server 2014 – Windows](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
  [Instalação do SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  [Especificações do produto para SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
+
+

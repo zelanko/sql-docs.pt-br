@@ -1,7 +1,7 @@
 ---
 title: Restaurações por etapas (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8dfdfc8ea7d34975046545688cca3f34ed324311
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d818eb992ae95527281de6f53a2e17007490b3b
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033660"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916004"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Restaurações por etapas (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,7 +144,7 @@ ms.locfileid: "68033660"
      Na edição Enterprise, qualquer grupo de arquivos secundário offline pode ser restaurado e recuperado enquanto o banco de dados permanecer online. Se um arquivo somente leitura específico não for danificado e for consistente com o banco de dados, o arquivo não terá de ser restaurado. Para obter mais informações, veja [Recuperar um banco de dados sem restaurar dados &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
 ### <a name="applying-log-backups"></a>Aplicando backups de log  
- Se um grupo de arquivos somente leitura era somente leitura desde antes de o backup de arquivo ser criado, aplicar backups de log ao grupo de arquivos será desnecessário e é ignorado pela restauração de arquivo. Se o grupo de arquivos for leitura/gravação, uma cadeia ininterrupta de backups de log deve ser aplicada à última restauração completa ou diferencial, para trazer o grupo de arquivos para o arquivo de log atual.  
+ Se um grupo de arquivos somente leitura era somente leitura desde antes de o backup de arquivo ser criado, aplicar backups de log ao grupo de arquivos será desnecessário e é ignorado pela restauração de arquivo. Se o grupo de arquivos for leitura/gravação, uma cadeia ininterrupta de backups de log deve ser aplicada à última restauração completa ou diferencial, para trazer o grupo de arquivos para o arquivo de log atual. Saiba mais sobre a recuperação de banco de dados em [Visão geral da restauração e recuperação (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
   
 ### <a name="examples"></a>Exemplos  
   
@@ -173,13 +173,11 @@ ms.locfileid: "68033660"
   
 4.  O backup diferencial seguido por quaisquer outros backups que foram restaurados pela sequência de restauração por etapas original, para restaurar os dados até o ponto de recuperação original.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="see-also"></a>Consulte Também  
  [Aplicar backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [Visão geral de restauração e recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [Planejar e executar sequências de restauração &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  
-  
+ [Planejar e executar sequências de restauração &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)    
+ [Visão geral da restauração e recuperação (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)     
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 1220ec831860baee2221004af19d9fd735c03cec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d7e56c5ceb23d2c42a973c7f8d56edbce5046a86
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081414"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908966"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Restaurações completas de banco de dados (modelo de recuperação completa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +42,6 @@ _Não_ é recomendável anexar ou restaurar bancos de dados de origem desconheci
 Para obter informações sobre suporte para backups de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja a seção “Suporte de compatibilidade” de [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).
   
 ##  <a name="PointOfFailure"></a> Restaurando um banco de dados até o ponto de falha  
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Normalmente, a recuperação de um banco de dados até o ponto da falha envolve as seguintes etapas básicas:  
   
@@ -66,7 +64,7 @@ Para obter informações sobre suporte para backups de versões anteriores do [!
   
  A ilustração a seguir mostra esta sequência de restauração. Depois de uma falha (1), um backup do final do log de final é criado (2). Em seguida, o banco de dados é restaurado ao ponto da falha. Isso envolve a restauração de um backup de banco de dados, de um backup diferencial subsequente e de todos os backups de log feitos depois do backup diferencial, inclusive o do backup do final do log.  
   
- ![Restauração completa de banco de dados para o momento da falha](../../relational-databases/backup-restore/media/bnrr-rmfull1-db-failure-pt.gif "Restauração completa de banco de dados para o momento da falha")  
+ ![Restauração de banco de dados completa no momento da falha](../../relational-databases/backup-restore/media/bnrr-rmfull1-db-failure-pt.gif "Restauração de banco de dados completa no momento da falha")  
   
 > [!NOTE]  
 >  Ao restaurar um backup de banco de dados em uma instância de servidor diferente, veja [Copiar bancos de dados com Backup e Restauração](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  

@@ -11,19 +11,19 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bad2f6cf7f36141b4f5a1d42f648c1631175d36
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: fe13d14db11b95812217725bb4207ee30b50d62b
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251538"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798433"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Início Rápido: Eventos estendidos no SQL Server
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-Este artigo visa ajudar o desenvolvedor SQL que não está familiarizado com eventos estendidos e que deseja criar uma sessão de evento em apenas alguns minutos. Usando os eventos estendidos, é possível ver detalhes sobre as operações internas do sistema SQL e de seu aplicativo. Quando você cria uma sessão de eventos estendidos, você informa o sistema:
+Os eventos estendidos são um sistema de monitoramento de desempenho leve que permite aos usuários coletar os dados necessários para monitorar e solucionar problemas no SQL Server. Confira [Visão geral dos eventos estendidos](extended-events.md) para saber mais sobre a arquitetura de eventos estendidos.  Este artigo visa ajudar o desenvolvedor SQL que não está familiarizado com eventos estendidos e que deseja criar uma sessão de evento em apenas alguns minutos. Usando os eventos estendidos, é possível ver detalhes sobre as operações internas do sistema SQL e de seu aplicativo. Quando você cria uma sessão de eventos estendidos, você informa o sistema:
 
 - Das ocorrências que lhe interessam.
 - Como você deseja que o sistema relate os dados para você.

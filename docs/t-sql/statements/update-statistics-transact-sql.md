@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41cc9d68ad0ad9c39795f156a17291ce6cdeb33f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd6ab74a1009862be44950bd77bd105acf76b6d5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099777"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798413"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ Atualiza estatísticas de otimização de consulta de uma tabela ou exibição i
   
 A atualização de estatísticas assegura que as consultas sejam compiladas com estatísticas atualizadas. Porém, a atualização de estatísticas faz com que as consultas sejam recompiladas. É recomendável não atualizar estatísticas com muita frequência porque existe uma compensação de desempenho entre o aprimoramento dos planos de consulta e o tempo necessário para recompilar consultas. As compensações específicas dependem do seu aplicativo. `UPDATE STATISTICS` pode usar tempdb para classificar o exemplo de linhas para compilação de estatísticas.  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -125,6 +125,9 @@ Quando for **ON**, as estatísticas reterão o percentual de amostragem definido
  > Se AUTO_UPDATE_STATISTICS for executado, ele usará o percentual de amostragem persistente, se disponível; caso contrário, ele usará o percentual de amostragem padrão.
  > O comportamento de RESAMPLE não é afetado por essa opção.
  
+ > [!NOTE]
+ > Se a tabela estiver truncada, todas as estatísticas criadas no HoBT truncado serão revertidas para usar a porcentagem de amostragem padrão.
+ 
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) e [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) expõem o valor de percentual de amostra persistente para a estatística selecionada.
  
@@ -190,7 +193,7 @@ MAXDOP = *max_degree_of_parallelism*
 * A opção `MAXDOP` não é compatível com as opções `STATS_STREAM`, `ROWCOUNT` e `PAGECOUNT`.
 * A opção `MAXDOP` é limitada pela configuração `MAX_DOP` de grupo de carga de trabalho de Resource Governor, se usada.
 
-### <a name="updating-all-statistics-with-spupdatestats"></a>Atualizando todas as estatísticas com sp_updatestats  
+### <a name="updating-all-statistics-with-sp_updatestats"></a>Atualizando todas as estatísticas com sp_updatestats  
 Para obter informações sobre como atualizar estatísticas de todas as tabelas definidas pelo usuário e internas no banco de dados, veja o procedimento armazenado [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). Por exemplo, o comando a seguir chama sp_updatestats para atualizar todas as estatísticas do banco de dados.  
   
 ```sql  

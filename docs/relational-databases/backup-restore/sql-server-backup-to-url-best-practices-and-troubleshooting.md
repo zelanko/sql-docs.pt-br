@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2d5ca430aa06e3f8a0072bff474e67e6f9defc74
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: a31d11a469411e13f357f87d1112d608c94f5aa4
+ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176368"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72717236"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Práticas recomendadas e solução de problemas de backup do SQL Server para URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "70176368"
   
 -   Os backups paralelos no mesmo Blob ocasionam a falha de um dos backups com o erro **Falha na inicialização** .  
   
--   Use os seguintes logs de erro para facilitar a solução de problemas de backup:  
+-   Se você estiver usando blobs de páginas, por exemplo, `BACKUP... TO URL... WITH CREDENTIAL`, use os seguintes logs de erro para facilitar a solução de problemas de backup:  
   
     -   Defina o sinalizador de rastreamento 3051 para ativar o registro em um log de erros específico com o seguinte formato:  
   

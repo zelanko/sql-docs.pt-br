@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ccaf0091472ed0b7c87dbb790228024d0224e91a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a93e00b590dfd6f9dc083f5443e6074894184afd
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991687"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807422"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>Descarregar backups com suporte nas réplicas secundárias de um grupo de disponibilidade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,9 @@ ms.locfileid: "67991687"
   
 -   **BACKUP DATABASE** dá suporte apenas a backups completos somente cópia de bancos de dados, arquivos ou grupos de arquivos quando executado nas réplicas secundárias. Observe que os backups somente cópia não afetam a cadeia de logs nem limpam o bitmap diferencial.  
   
--   Não há suporte para backups diferenciais em réplicas secundárias.  
+-   Não há suporte para backups diferenciais em réplicas secundárias.
+
+-   Atualmente, não há suporte para backups simultâneos, como a execução de um backup de log de transações na réplica primária, enquanto um backup de banco de dados completo está em execução na réplica secundária. 
   
 -   **BACKUP LOG** dá suporte apenas a backups de log regulares (não há suporte para a opção COPY_ONLY em backups de log nas réplicas secundárias).  
   

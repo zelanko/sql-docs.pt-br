@@ -1,0 +1,140 @@
+### YamlMime:Landing
+title: Documentação Técnica do SQL Server
+summary: Documentação técnica para ajudar você a começar a usar, administrar, desenvolver e trabalhar com o SQL Server e produtos associados.
+metadata:
+  title: Documentação Técnica do SQL Server
+  description: Escolha a área do SQL Server em que você tem interesse.
+  ms.prod: sql
+  ms.topic: landing-page
+  author: MashaMSFT
+  ms.author: mathoma
+  ms.date: 10/14/2019
+  ms.openlocfilehash: 0290fb90b15b0c8f3660db3c19e9850c4b0617ee
+  ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 10/25/2019
+  ms.locfileid: "72909933"
+landingContent:
+- title: SQL Server
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: SQL Server 2019
+      url: what-s-new-in-sql-server-ver15.md
+    - text: Azure Data Studio
+      url: ../azure-data-studio/what-is.md
+    - text: SQL Server no Linux
+      url: ../linux/sql-server-linux-overview.md
+  - linkListType: quickstart
+    links:
+    - text: Conexão e consulta (SSMS)
+      url: ../ssms/tutorials/connect-query-sql-server.md
+    - text: Conexão e consulta (Azure Data Studio)
+      url: ../azure-data-studio/quickstart-sql-server.md
+  - linkListType: download
+    links:
+    - text: SQL Server
+      url: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+    - text: SQL Server Management Studio
+      url: ../ssms/download-sql-server-management-studio-ssms.md
+    - text: Azure Data Studio
+      url: ../azure-data-studio/download.md
+  - linkListType: reference
+    links:
+    - text: Transact-SQL
+      url: ../t-sql/language-reference.md
+    - text: SQL PowerShell
+      url: ../powershell/sql-server-powershell.md
+    - text: Bancos de dados de exemplo
+      url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
+    - text: Guias de recursos internos e de arquitetura
+      url: https://aka.ms/sqlserverguides
+    - text: Versões anteriores 2005-2014
+      url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
+- title: SQL no Azure
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Banco de dados individual do Banco de Dados SQL do Azure
+      url: /azure/sql-database/sql-database-single-database
+    - text: Instância gerenciada do Banco de Dados SQL do Azure
+      url: /azure/sql-database/sql-database-managed-instance
+    - text: Azure SQL Data Warehouse
+      url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+    - text: SQL Server em uma VM do Windows
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+    - text: SQL Server em uma VM do Linux
+      url: ../linux/quickstart-install-connect-clouds.md
+- title: Administração
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Instalar o SQL Server
+      url: https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server
+    - text: Atualizar o SQL Server
+      url: ../database-engine/install-windows/upgrade-sql-server.md
+  - linkListType: overview
+    links:
+    - text: Segurança
+      url: https://docs.microsoft.com/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
+    - text: Monitorar e ajustar o desempenho
+      url: https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance
+    - text: Banco de dados em memória
+      url: ..//relational-databases/in-memory-database.md
+    - text: Ajuste automático
+      url: ../relational-databases/automatic-tuning/automatic-tuning.md
+    - text: Processamento de consulta inteligente
+      url: https://aka.ms/IQP
+  - linkListType: concept
+    links:
+    - text: Backup e restauração
+      url: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
+    - text: Grupos de disponibilidade AlwaysOn
+      url: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
+    - text: Instâncias de cluster de failover
+      url: failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
+    - text: Replicação do SQL Server
+      url: ../relational-databases/replication/sql-server-replication.md
+- title: Business Intelligence
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Server Reporting Services (SSRS)
+      url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+    - text: SSAS (SQL Server Analysis Services)
+      url: /analysis-services/analysis-services-overview
+    - text: SQL Server Integration Services (SSIS)
+      url: ../integration-services/sql-server-integration-services.md
+    - text: Azure Data Factory
+      url: https://docs.microsoft.com/azure/data-factory/
+- title: Migração
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Guia de migração de dados
+      url: https://datamigration.microsoft.com/
+    - text: Certificação de compatibilidade de banco de dados
+      url: https://aka.ms/dbcompat
+    - text: Serviço de Migração de Banco de Dados do Azure
+      url: https://docs.microsoft.com/azure/dms/dms-overview
+    - text: AMD (Assistente de Migração de Dados)
+      url: ../dma/dma-overview.md
+    - text: Assistente para Experimentos de Banco de Dados
+      url: ../dea/database-experimentation-assistant-overview.md
+    - text: SSMA (Assistente de Migração do SQL Server)
+      url: ../ssma/sql-server-migration-assistant.md
+- title: Big data aprendizado de máquina
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Clusters de Big Data do SQL Server
+      url: ../big-data-cluster/big-data-cluster-overview.md
+    - text: Sistema de plataforma de análise
+      url: https://www.microsoft.com/sql/analytics-platform-system/
+    - text: Aprendizado de máquina com SQL Server
+      url: https://docs.microsoft.com/sql/advanced-analytics/
+    - text: R Services
+      url: ../advanced-analytics/r/sql-server-r-services.md
+    - text: Virtualização de dados com Polybase
+      url: ../relational-databases/polybase/polybase-guide.md

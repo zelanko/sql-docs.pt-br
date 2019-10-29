@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 21cf6f634fd9caa40f3d5685372f24d09567ca2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006137"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909156"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Validação pós-migração e guia de otimização
 
@@ -107,8 +107,6 @@ Alguns exemplos de predicados não SARGable:
   -   Isso pode envolver a comparação de qualquer constructo de código definido pelo usuário que é armazenada no banco de dados (como procedimentos armazenados, funções definidas pelo usuário ou exibições) com tabelas do sistema que contém informações sobre os tipos de dados usados nas tabelas subjacentes (como [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md)).
 2. Se não for possível percorrer todo o código até o ponto anterior, para a mesma finalidade, altere o tipo de dados na tabela para corresponder a qualquer declaração de variável/parâmetro.
 3. Pondere a utilidade das construções a seguir:
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   -   Funções que estão sendo usadas como predicados;
   -   Pesquisas com curinga;

@@ -16,12 +16,12 @@ ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b47d53f088089ed348e01ae380e0f21dcca420fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140320"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796642"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Usar parâmetros com valor de tabela (Mecanismo de Banco de Dados)
 
@@ -57,6 +57,9 @@ Os parâmetros com valor de tabela oferecem mais flexibilidade e, em alguns caso
 - Possuem rigidez de tipo.
 - Permitem que o cliente especifique a ordem de classificação e as chaves exclusivas.
 - São armazenados em cache como uma tabela temporária quando usado em um procedimento armazenado. A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], os parâmetros com valor de tabela também são armazenados em cache para consultas parametrizadas.
+
+## <a name="Permissions"></a> Permissões
+Para criar uma instância de um Tipo de Tabela Definido pelo Usuário ou chamar um procedimento armazenado com um parâmetro com valor de tabela, o usuário deve ter a permissão EXECUTE no tipo, no esquema ou no banco de dados que contém o tipo.
 
 ## <a name="Restrictions"></a> Restrições
 

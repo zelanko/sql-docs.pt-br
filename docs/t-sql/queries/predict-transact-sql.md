@@ -1,11 +1,11 @@
 ---
 title: PREDICT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/03/2018
+ms.date: 10/24/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: machine-learning
 ms.topic: language-reference
 f1_keywords:
 - PREDICT
@@ -14,20 +14,20 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - PREDICT clause
-author: VanMSFT
-ms.author: vanto
+author: dphansen
+ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c50bdedab94a2bd9dd1c6da6556fbd882412fe45
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c97363e7f13c3b42cf447ecf69929171544f3a6b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141312"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907255"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Gera um valor previsto ou pontuações com base em um modelo armazenado.  
+Gera um valor previsto ou pontuações com base em um modelo armazenado. Para obter mais informações, confira [Pontuação nativa usando a função PREDICT T-SQL](../../advanced-analytics/sql-native-scoring.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -92,7 +92,7 @@ Não é possível exibir a estrutura interna do modelo usando `PREDICT`. Se voc�
 
 ## <a name="remarks"></a>Remarks
 
-A função `PREDICT` tem suporte em todas as edições do SQL Server 2017 ou posterior. Esse suporte inclui o SQL Server 2017 no Linux. O `PREDICT` também é compatível com o Banco de Dados Azure SQL na nuvem. Todos esses suportes estão ativos independentemente de outros recursos de aprendizado de máquina estarem habilitados.
+A função `PREDICT` tem suporte em todas as edições do SQL Server 2017 ou posterior, no Windows e no Linux. O `PREDICT` também é compatível com o Banco de Dados Azure SQL na nuvem. Todos esses suportes estão ativos independentemente de outros recursos de aprendizado de máquina estarem habilitados.
 
 Não é necessário que R, Python ou outra linguagem de aprendizado de máquina esteja instalada no servidor para usar a função `PREDICT`. Você pode treinar o modelo em outro ambiente e salvá-lo em uma tabela do SQL Server para ser usado com `PREDICT`, ou chamar o modelo de outra instância do SQL Server que tenha o modelo salvo.
 
@@ -179,3 +179,7 @@ FROM PREDICT( MODEL = @logitObj,  DATA = new_kyphosis_data AS d,
   computeStdErr = 1, interval = 'confidence')
 WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 ```
+
+## <a name="next-steps"></a>Próximas etapas
+
+- [Pontuação nativa usando a função PREDICT T-SQL](../../advanced-analytics/sql-native-scoring.md)

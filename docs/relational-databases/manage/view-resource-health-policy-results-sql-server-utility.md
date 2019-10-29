@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 80cb14fb-f4c6-4be2-ba17-eb4e4cddd35f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 42832ef91f33bbe4e66ad82bc3498106502e7ecb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3e10d2bcd280e1c353fb30613a6d65b715caf82e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024452"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907525"
 ---
 # <a name="view-resource-health-policy-results-sql-server-utility"></a>Exibir resultados da política de integridade de recursos (Utilitário do SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,8 +34,6 @@ ms.locfileid: "68024452"
 4.  Clique no nó **Instâncias Gerenciadas** para exibir dados de exibição de lista das instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (clique com o botão direito do mouse para atualizar). Dados de exibição de lista são exibidos no painel de conteúdo.  
   
 5.  Clique no nó **Aplicativos da Camada de Dados Implantados** para exibir dados da exibição de lista dos aplicativos da camada de dados (clique com o botão direito do mouse para atualizar). Dados de exibição de lista são exibidos no painel de conteúdo.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>Consulte Também  
  [Recursos e tarefas do Utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   

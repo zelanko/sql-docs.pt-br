@@ -13,12 +13,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3a33a45be38ad49b2ecef68fe64be21b94c08f85
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123217"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909818"
 ---
 # <a name="query-store-usage-scenarios"></a>Cenários de uso do Repositório de Consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -66,8 +66,6 @@ Ao identificar uma consulta com desempenho abaixo do ideal, sua ação depender�
 4.  Verifique se os índices usados pela consulta estão desfragmentados.  
   
 5.  Pense em reescrever a consulta dispendiosa. Por exemplo, aproveite a parametrização da consulta e reduza o uso do SQL dinâmico. Implemente a lógica ideal ao ler os dados (aplique a filtragem de dados no lado do banco de dados, não do aplicativo).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="ab-testing"></a>Fazer testes A/B  
  Use o Repositório de Consultas para comparar o desempenho da carga de trabalho antes e depois da alteração de aplicativo que você planeja introduzir. A lista a seguir contém vários exemplos em que é possível usar o Repositório de Consultas para avaliar o impacto do ambiente ou a alteração do aplicativo no desempenho da carga de trabalho:  

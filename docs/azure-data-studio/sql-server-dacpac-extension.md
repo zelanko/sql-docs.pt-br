@@ -3,45 +3,59 @@ title: Extensão dacpac do SQL Server
 titleSuffix: Azure Data Studio
 description: Instale e use a extensão dacpac do SQL Server (versão prévia) para o Azure Data Studio
 ms.custom: seodec18
-ms.date: 03/18/2019
+ms.date: 10/21/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: e40e377310b33034b4abecdc5e58eab17d39695d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 769e6157e7d84702716dfce79d0217efeee83076
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959193"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783315"
 ---
 # <a name="sql-server-dacpac-extension-preview"></a>Extensão de dacpac do SQL Server (versão prévia)
 
-O **Assistente de Aplicativo da Camada de Dados** proporciona uma experiência fácil de usar para implantar e extrair arquivos .dacpac e importar e exportar arquivos .bacpac.
+O **Assistente de Aplicativo da Camada de Dados** proporciona uma experiência fácil de usar para implantar e extrair arquivos dacpac e importar e exportar arquivos bacpac.
 
 Atualmente, essa experiência está na versão prévia inicial. Informe sobre problemas e solicite recursos [aqui](https://github.com/microsoft/azuredatastudio/issues).
 
-![ações de dados](media/sql-server-dacpac-extension/data-tier-application-actions.png)
 
- ### <a name="requirements"></a>Requisitos
- * Este assistente requer uma conexão ativa com uma instância do SQL Server para ser iniciado.
+## <a name="features"></a>Recursos
 
- ### <a name="how-do-i-start-the-data-tier-application-wizard"></a>Como fazer para iniciar o assistente do Aplicativo da Camada de Dados?
- * O ponto de entrada principal do assistente é clicar com o botão direito do mouse em um banco de dados no Pesquisador de Objetos e clicar em **Assistente de Aplicativo da Camada de Dados**.
- * Se um usuário estiver conectado a uma instância do SQL Server, ele também poderá iniciar o assistente na paleta de comandos (Ctrl + Shift + P) pesquisando por **Assistente de Aplicativo da Camada de Dados**.
+* Implantar um dacpac em uma Instância do SQL Server
+* Extrair uma Instância do SQL Server para um dacpac
+* Criar um banco de dados a partir de um bacpac
+* Exportar esquema e dados para um bacpac
 
- ### <a name="why-would-i-use-the-data-tier-application-wizard"></a>Por que usar o assistente do Aplicativo da Camada de Dados?
- Este assistente foi criado para adicionar a capacidade de extrair e implantar arquivos .dacpac e importar e exportar arquivos .bacpac no Azure Data Studio.
+![gif de demonstração da extensão dacpac](media/extensions/sql-server-dacpac-extension/dacpac-extension-demo.gif)
 
-## <a name="install-the-sql-server-dacpac-extension"></a>Instalar a extensão dacpac do SQL Server adicionada
 
-1. Para abrir o gerenciador de extensões e acessar as extensões disponíveis, selecione o ícone de extensões ou selecione **Extensões** no menu **Exibir**.
-2. Selecione a extensão dacpac do SQL Server e clique em **Instalar**.
-1. Selecione **Recarregar** para habilitar a extensão (necessário apenas na primeira vez que você instala uma extensão).
-2. Navegue até o painel de gerenciamento clicando com o botão direito do mouse no servidor ou no banco de dados e selecionando **Gerenciar**.
-3. As extensões instaladas aparecem como guias no painel de gerenciamento:
+## <a name="why-would-i-use-the-data-tier-application-wizard"></a>Por que usar o assistente do Aplicativo da Camada de Dados?
+
+O assistente facilita o gerenciamento de arquivos dacpac e bacpac, o que simplifica o desenvolvimento e a implantação de elementos da camada de dados que dão suporte ao seu aplicativo. Para saber mais sobre como usar os aplicativos da camada de dados, [confira nossa documentação.](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017)
+
+
+## <a name="install-the-extension"></a>Instalar a extensão
+
+1. Selecione o ícone de Extensões para exibir as extensões disponíveis.
+
+    ![ícone do gerenciador de extensões](media/extensions/extension-manager-icon.png)
+
+2. Pesquise a extensão **dacpac do SQL Server** e selecione-a para exibir seus detalhes. Clique em **Instalar** para adicionar a extensão.
+
+3. Após a instalação, clique em **Recarregar** para habilitar a extensão no Azure Data Studio (necessário somente ao instalar uma extensão pela primeira vez).
+
+
+## <a name="launch-the-data-tier-application-wizard"></a>Iniciar o Assistente de Aplicativo da Camada de Dados
+
+Para iniciar o assistente, clique com o botão direito do mouse na pasta Bancos de dados ou em um banco de dados específico no Pesquisador de Objetos. Em seguida, clique no **Assistente de Aplicativo da Camada de Dados**.
+
+![menu de inicialização da extensão dacpac](media/extensions/sql-server-dacpac-extension/dacpac-extension-launch.png)
+
 
 ## <a name="next-steps"></a>Próximas etapas
 

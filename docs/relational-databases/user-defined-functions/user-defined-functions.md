@@ -16,12 +16,12 @@ ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec08bd8459e51c3ace52fc4eea433aaa046050b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d4d63a03c2b5b40f7d57fa5c2de5f0abfab3f36
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123558"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783302"
 ---
 # <a name="user-defined-functions"></a>Funções definidas pelo usuário
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ Por que usar UDFs (funções definidas pelo usuário)?
   
 ##  <a name="FunctionTypes"></a> Tipos de funções  
 **Função escalar**  
- As funções escalares definidas pelo usuário retornam um valor único de dados do tipo definido na cláusula RETURNS. Para uma função escalar embutida, não há um corpo de função; o valor escalar é o resultado de uma única instrução. Para uma função escalar de várias instruções, o corpo da função, definido em um bloco BEGIN...END, contém uma série de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , que retornam o valor único. O tipo de retorno pode ser qualquer tipo de dados, exceto **text**, **ntext**, **image**, **cursor**e **timestamp**. 
+ As funções escalares definidas pelo usuário retornam um valor único de dados do tipo definido na cláusula RETURNS. Para uma função escalar embutida, o valor escalar retornado é o resultado de uma única instrução. Para uma função escalar de várias instruções, o corpo da função pode conter uma série de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], que retornam o valor único. O tipo de retorno pode ser qualquer tipo de dados, exceto **text**, **ntext**, **image**, **cursor**e **timestamp**. 
  **[Exemplos.](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
   
 **Funções com valor de tabela**  

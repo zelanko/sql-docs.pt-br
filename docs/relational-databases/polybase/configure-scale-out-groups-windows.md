@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 81bfb5f4e2a69b065d8995823ee87fe9b913d11b
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d686cbe2fb314a59085adee76b3bbad22fcea0fc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710621"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906887"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Configurar grupos de escala horizontal do PolyBase no Windows
 
@@ -41,8 +41,6 @@ As etapas a seguir resumem o processo de criação de um grupo de expansão do P
 
 5. Opcional. Remova um nó de computação usando [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="example-walk-through"></a>Exemplo detalhado
 
 Veja o passo a passo de como configurar um Grupo do PolyBase usando:  
@@ -67,7 +65,7 @@ Veja o passo a passo de como configurar um Grupo do PolyBase usando:
   
 5. Depois que a instalação estiver concluída, execute **services.msc**. Verifique se o SQL Server, o Mecanismo de PolyBase e o Serviço de Movimentação de Dados de PolyBase estão em execução.
   
-   ![Serviços do PolyBase](../../relational-databases/polybase/media/polybase-services.png "Serviços do PolyBase")  
+   ![Serviços PolyBase](../../relational-databases/polybase/media/polybase-services.png "Serviços PolyBase")  
   
 ## <a name="select-one-sql-server-as-head-node"></a>Selecione um SQL Server como nó de cabeçalho  
   

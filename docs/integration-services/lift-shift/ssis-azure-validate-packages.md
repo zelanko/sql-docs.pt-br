@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: e0d552c02131bd630c4ca828050278cd7f3105cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd6c55f439b9d95473c5e36ea88cc7c5e1fb555e
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122860"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72915989"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Validar pacotes SSIS (SQL Server Integration Services) implantados no Azure
 
@@ -35,7 +35,7 @@ Para obter mais informações sobre o Assistente de Implantação de Pacotes, co
 O assistente verifica se os seguintes problemas, que podem fazer a conexão falhar, ocorrem em determinados gerenciadores de conexão:
 - **Autenticação do Windows**. Se uma cadeia de conexão usar a autenticação do Windows, a validação emitirá um aviso. A autenticação do Windows exige etapas de configuração adicionais. Para obter mais informações, confira [Conectar-se a dados e a compartilhamentos de arquivos com a Autenticação do Windows](ssis-azure-connect-with-windows-auth.md).
 - **Caminho do arquivo**. Se uma cadeia de conexão contiver um caminho de arquivo local embutido em código como `C:\\...`, a validação emitirá um aviso. Os pacotes que contêm um caminho absoluto podem falhar.
-- **Caminho UNC**. Se uma cadeia de conexão contiver um caminho UNC, a validação emitirá um aviso. Os pacotes que contêm um caminho UNC poderão falhar, geralmente porque um caminho UNC exige a autenticação do Windows para obter acesso.
+- **Caminho UNC**. Se uma cadeia de conexão contiver um caminho UNC, a validação gerará um aviso. Os pacotes que contêm um caminho UNC poderão falhar, geralmente porque um caminho UNC exige a autenticação do Windows para obter acesso.
 - **Nome do host**. Se uma propriedade de servidor contiver o nome do host em vez do endereço IP, a validação emitirá um aviso. Os pacotes que contêm o nome do host podem falhar, geralmente porque a rede virtual do Azure exige a configuração correta do DNS para ser compatível com a resolução de nome DNS.
 - **Provedor ou driver**. Se um provedor ou driver não for compatível, a validação emitirá um aviso. Somente um pequeno número de drivers e provedores internos são compatíveis no momento.
 

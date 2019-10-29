@@ -14,12 +14,12 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f1e1c469b7864ed9a454cd8f18fa81903865be6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9acac3eca271c8bb8c20df7e429dd830d19bdd43
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024984"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909261"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Usar um arquivo de formato para ignorar uma coluna de tabela (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,8 +58,6 @@ Os exemplos neste artigo também usam um arquivo de dados de exemplo, `myTestSki
 1.   Use o utilitário de linha de comando **bcp** para criar um arquivo de formato padrão.
 
 2.   Modifique o arquivo de formato padrão em um editor de texto.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 O arquivo de formato modificado deve mapear cada campo existente para sua coluna correspondente na tabela de destino. Ele também deve indicar qual coluna ou colunas da tabela a serem ignoradas. 
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: f6e78603aee684a9db3dc89e94f331275d1cd0bf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 019878cd1dde4425ba69e0c69ce7a4a4a1d0dd62
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476222"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807470"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Definir configurações do SQL Server com variáveis de ambiente em Linux
 
@@ -94,7 +94,7 @@ Você pode usar diversas variáveis de ambiente diferentes para configurar o SQL
 Este exemplo executa o `mssql-conf setup` com variáveis de ambiente configuradas. As seguintes variáveis de ambiente são especificadas:
 
 - **ACCEPT_EULA** aceita o contrato de licença de usuário final.
-- **MSSSQL_PID** especifica a edição de desenvolvedor licenciada gratuitamente do SQL Server para uso de não produção.
+- **MSSQL_PID** especifica a Developer Edition licenciada gratuitamente do SQL Server para uso de não produção.
 - **MSSQL_SA_PASSWORD** define uma senha forte.
 - **MSSQL_TCP_PORT** define como 1234 a porta TCP em que o SQL Server escuta.
 
@@ -107,7 +107,7 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0
 Este comando do Docker de exemplo usa as seguintes variáveis de ambiente para criar um novo contêiner do SQL Server:
 
 - **ACCEPT_EULA** aceita o contrato de licença de usuário final.
-- **MSSSQL_PID** especifica a edição de desenvolvedor licenciada gratuitamente do SQL Server para uso de não produção.
+- **MSSQL_PID** especifica a Developer Edition licenciada gratuitamente do SQL Server para uso de não produção.
 - **MSSQL_SA_PASSWORD** define uma senha forte.
 - **MSSQL_TCP_PORT** define como 1234 a porta TCP em que o SQL Server escuta. Isso significa que, em vez de mapear a porta 1433 (padrão) para uma porta de host, a porta TCP personalizada deve ser mapeada com o comando `-p 1234:1234` neste exemplo.
 

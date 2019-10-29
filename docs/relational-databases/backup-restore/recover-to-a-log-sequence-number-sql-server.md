@@ -1,7 +1,7 @@
 ---
 title: Recuperar para um número de sequência de log (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5973311723ae336ba6c801bfbcf82da2ec0c3bfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46ab24ff86eb7a68e48f58e67f03a859d0c43aa7
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033563"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916042"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Recuperar para um número de sequência de log (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,17 +35,12 @@ ms.locfileid: "68033563"
  Você pode usar um LSN (número de sequência de log) para definir o ponto de recuperação para uma operação de restauração. No entanto, esse é um recurso especializado destinado a fornecedores de ferramentas e provavelmente não é de uso geral.  
   
 ##  <a name="LSNs"></a> Visão geral de números de sequência de log  
- Os LSNs são usados internamente durante uma sequência RESTORE para localizar o point-in-time para o qual os dados foram restaurados. Quando um backup é restaurado, os dados são restaurados ao LSN que corresponde ao point-in-time em que o backup foi realizado. O backup diferencial e o backup de log avançam o banco de dados restaurado para uma hora posterior que corresponde a um LSN mais alto.  
-  
- Cada registro do log de transações é identificado de forma exclusiva por um LSN (número da sequência de log). Os LSNs são ordenados de tal modo que se LSN2 for maior do que LSN1, a alteração descrita pelo registro de log mencionado por LSN2 ocorreu depois da alteração descrita pelo registro de log LSN.  
-  
- O LSN de um registro de log no qual ocorreu um evento significativo pode ser útil para construir sequências de restauração corretas. Como são ordenadas, as LSNs podem ser comparadas quanto à igualdade e desigualdade (isto é **\<** , **>** , **=** , **\<=** , **>=** ). Essas comparações são úteis ao construir sequências de restauração.  
+ Os LSNs são usados internamente durante uma sequência RESTORE para localizar o point-in-time para o qual os dados foram restaurados. Quando um backup é restaurado, os dados são restaurados ao LSN que corresponde ao point-in-time em que o backup foi realizado. O backup diferencial e o backup de log avançam o banco de dados restaurado para uma hora posterior que corresponde a um LSN mais alto. Saiba mais sobre LSNs no [Guia de arquitetura e gerenciamento de log de transações do SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).  
   
 > [!NOTE]  
->  Os LSNs são valores do tipo de dados **numérico**(25,0). Operações aritméticas (por exemplo, adição ou subtração) não são significativas e não devem ser usadas com LSNs.  
-  
-  
-## <a name="viewing-lsns-used-by-backup-and-restore"></a>Exibindo LSNs usados por Backup e Restauração  
+> Os LSNs são valores do tipo de dados **numérico (25,0)** . Operações aritméticas (por exemplo, adição ou subtração) não são significativas e não devem ser usadas com LSNs.  
+ 
+## <a name="viewing-lsns-used-by-backup-and-restore"></a>Exibir LSNs usados por Backup e Restauração  
  O LSN de um registro de log no qual um determinado evento de backup e restauração ocorrido pode ser exibido usando um ou mais do seguinte:  
   
 -   [backupset](../../relational-databases/system-tables/backupset-transact-sql.md)  
@@ -59,7 +54,7 @@ ms.locfileid: "68033563"
 -   [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
 > [!NOTE]  
->  Os LSNs também aparecem em alguns textos de mensagem.  
+>  Os LSNs também aparecem em algumas mensagens no log de erros.  
   
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Sintaxe de Transact-SQL para restaurar para um LSN  
  Usando uma instrução [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) é possível parar no LSN ou imediatamente antes, da seguinte maneira:  
@@ -77,7 +72,7 @@ ms.locfileid: "68033563"
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir assume que o banco de dados `AdventureWorks` foi alterado para usar o modelo de recuperação completa.  
   
-```  
+```sql  
 RESTORE LOG AdventureWorks FROM DISK = 'c:\adventureworks_log.bak'   
 WITH STOPATMARK = 'lsn:15000000040000037'  
 GO  
@@ -99,7 +94,8 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Aplicar backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
-  
+ [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)     
+ [Visão geral da restauração e recuperação (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)       
+ [Guia de arquitetura e gerenciamento de log de transações do SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
   

@@ -12,12 +12,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d1425b23b98ac0a81aaa0e6e848b405f06cc086
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: 95e9d1139619f64aa9ff1be53711019fdbdf6637
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929817"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909298"
 ---
 # <a name="spatial-indexes-overview"></a>Visão geral de índices espaciais
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "70929817"
   
  As células da hierarquia de grade são numeradas de maneira linear usando uma variação da curva de preenchimento de espaço de Hilbert. No entanto, para fins ilustrativos, esta discussão usa uma numeração baseada em linhas, em vez da numeração realmente produzida pela curva de Hilbert. Na ilustração a seguir, vários polígonos que representam prédios e linhas que representam ruas já foram colocados em uma grade 4x4 de nível 1. As células de nível 1 são numeradas de 1 a 16, a partir da célula superior esquerda.  
   
- ![Polígonos e linhas colocados em uma grade de 4 x 4 de nível 1](../../relational-databases/spatial/media/spndx-level-1-objects.gif "Polígonos e linhas colocados em uma grade de 4 x 4 de nível 1")  
+ ![Polígonos e linhas colocados em uma grade 4x4 de nível 1](../../relational-databases/spatial/media/spndx-level-1-objects.gif "Polígonos e linhas colocados em uma grade 4 x 4 de nível 1")  
   
 #### <a name="grid-density"></a>Densidade da grade  
  O número de células ao longo dos eixos de uma grade determina sua *densidade*: quanto maior o número, mais densa a grade. Por exemplo, uma grade de 8x8 (que produz 64 células) é mais densa do que uma grade de 4x4 (que produz 16 células). A densidade da grade é definida em uma base por nível.  
@@ -148,7 +148,7 @@ ms.locfileid: "70929817"
   
  A ilustração a seguir mostra os pontos definidos pelas coordenadas **(** _x-min_ **,** _y-min_ **)** e **(** _x-max_ **,** _y-max_ **)** da caixa delimitadora. O nível superior da hierarquia da grade é mostrado como uma grade de 4x4. Para fins ilustrativos, os níveis inferiores são omitidos. O espaço fora da caixa delimitadora é indicado por um zero (0). Observe que o objeto 'A' se estende parcialmente além da caixa e o objeto 'B' está completamente fora da caixa na célula 0.  
   
- ![Caixa delimitadora que mostra as coordenadas e a célula 0.](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "Caixa delimitadora que mostra as coordenadas e a célula 0.")  
+ ![Caixa delimitadora mostrando coordenadas e a célula 0.](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "Caixa delimitadora mostrando coordenadas e a célula 0.")  
   
  Uma caixa delimitadora corresponde a uma parte dos dados espaciais de um aplicativo. Se a caixa delimitadora do índice contém completamente os dados armazenados na coluna espacial ou apenas uma parte é responsabilidade do aplicativo. Apenas operações computadas em objetos que estão completamente dentro da caixa delimitadora se beneficiam do índice espacial. Portanto, para obter o máximo benefício de um índice espacial em uma coluna **geometry** , é necessário especificar uma caixa delimitadora que contenha todos ou a maior parte dos objetos.  
   
@@ -169,8 +169,6 @@ ms.locfileid: "70929817"
 2.  Achata as duas pirâmides.  
   
 3.  Une as pirâmides achatadas para formar um plano não euclidiano.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  A ilustração a seguir mostra uma exibição esquemática do processo de decomposição de três etapas. Nas pirâmides, as linhas pontilhadas representam os limites das quatro facetas de cada pirâmide. As etapas 1 e 2 ilustram o elipsoide geodésico usando uma linha horizontal verde para representar a linha de latitude equatorial e uma série de linhas verticais verdes para representar várias linhas de longitude. A etapa 1 mostra as pirâmides sendo projetadas sobre os dois hemisférios. A etapa 2 mostra as pirâmides sendo achatadas. A etapa 3 ilustra as pirâmides achatadas após terem sido combinadas para formar um plano mostrando várias linhas longitudinais projetadas. Observe que essas linhas projetadas se tornam retas e variam em comprimento, dependendo de sua localização nas pirâmides.  
   

@@ -11,12 +11,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e569d7676d363dc6526354ed6087a778fccce79d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9066f82c01dede49307cd38565f40f263d7ae76f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031632"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909563"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gerenciar a Retenção de Dados Históricos em Tabelas Temporais com Versão do Sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -72,23 +72,21 @@ ms.locfileid: "68031632"
   
 2.  Na janela **Selecionar tabelas** , marque a caixa de seleção da tabela de histórico temporal e clique em Avançar.  
   
-     ![Selecionando a tabela de histórico na página Selecionar tabelas](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Selecionando a tabela de histórico na página Selecionar tabelas")  
+     ![Selecionar a tabela de histórico na página Selecionar tabelas](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Selecionar a tabela de histórico na página Selecionar tabelas")  
   
 3.  Na janela **Configurar o Azure** , forneça suas credenciais de logon. Entre no Microsoft Azure ou se inscreva em uma conta. Selecione a assinatura a ser usada e escolha a região do Azure. Em seguida, crie um novo servidor ou escolha um servidor existente. Clique em **Avançar**.  
   
-     ![Criar novo servidor do Azure – Assistente do Stretch Database](../../relational-databases/tables/media/stretch-wizard-4.png "Criar novo servidor do Azure – Assistente do Stretch Database")  
+     ![Criar novo servidor do Azure – assistente de Stretch Database](../../relational-databases/tables/media/stretch-wizard-4.png "Criar novo servidor do Azure – assistente de Stretch Database")  
   
 4.  Na janela **Proteger credenciais** , forneça uma senha para a chave mestra de banco de dados para proteger suas credenciais de banco de dados SQL Server de origem e clique em Avançar.  
   
-     ![Página Proteger Credenciais do Assistente do Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Página Proteger Credenciais do Assistente do Stretch Database")  
+     ![Página Proteger credenciais do assistente de Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Página Proteger credenciais do assistente de Stretch Database")  
   
 5.  Na janela **Selecionar endereço IP** , forneça o intervalo de endereços IP do SQL Server para permitir que o servidor do Azure se comunique com o SQL Server (se você selecionar um servidor existente para o qual uma regra de firewall já exista, basta clicar em Avançar aqui para usar a regra de firewall existente). Clique em **Avançar** e em **Concluir** para habilitar o Stretch Database e transferir a tabela de histórico temporal.  
   
-     ![Página Selecionar endereço IP do Assistente do Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Página Selecionar endereço IP do Assistente do Stretch Database")  
+     ![Página Selecionar endereço IP do assistente Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Página Selecionar endereço IP do assistente Stretch Database")  
   
 6.  Após a conclusão do assistente, verifique se seu banco de dados foi habilitado com êxito para Stretch. Observe os ícones no Pesquisador de Objetos indicando que o banco de dados foi transferido  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > **OBSERVAÇÃO:** Se a opção Habilitar Banco de Dados para Stretch falhar, examine o log de erros. Um erro comum é a configuração incorreta da regra de firewall.  
   
@@ -181,7 +179,7 @@ COMMIT ;
   
  A figura a seguir mostra a configuração inicial de particionamento para manter 6 meses de dados.  
   
- ![Partitioning](../../relational-databases/tables/media/partitioning.png "Partitioning")  
+ ![Particionamento](../../relational-databases/tables/media/partitioning.png "Particionamento")  
   
 > **OBSERVAÇÃO:** Confira as considerações de desempenho com o particionamento de tabela abaixo para as implicações de desempenho do uso de RANGE LEFT versus RANGE RIGHT durante a configuração de particionamento.  
   
@@ -190,7 +188,7 @@ Com o passar do tempo, as novas linhas na tabela de histórico serão levadas pa
   
  A figura a seguir ilustra as tarefas de manutenção de partição recorrentes (confira as etapas detalhadas abaixo).  
   
- ![Partitioning2](../../relational-databases/tables/media/partitioning2.png "Partitioning2")  
+ ![Particionamento2](../../relational-databases/tables/media/partitioning2.png "Particionamento2")  
   
  As etapas detalhadas para as tarefas de manutenção de partição recorrentes são:  
   
@@ -336,7 +334,7 @@ COMMIT TRANSACTION
   
  Vamos primeiro explicar visualmente o significado das opções RANGE LEFT e RANGE RIGHT:  
   
- ![Partitioning3](../../relational-databases/tables/media/partitioning3.png "Partitioning3")  
+ ![Particionamento3](../../relational-databases/tables/media/partitioning3.png "Particionamento3")  
   
  Quando você define uma função de partição como RANGE LEFT, os valores especificados são os limites superiores das partições. Quando você usa RANGE RIGHT, os valores especificados são os limites inferiores das partições. Quando você usa a operação MERGE RANGE para remover um limite da definição de função da partição, a implementação subjacente também remove a partição que contém o limite. Se essa partição não estiver vazia, os dados serão movidos para a partição que é o resultado da operação MERGE RANGE.  
   

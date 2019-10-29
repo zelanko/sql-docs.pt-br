@@ -27,12 +27,12 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 034e4c9ed8df53c6600896b4a5877f1b48a3288d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 604a882daffeb2a9031aa9cc7e4d577e1e4e2663
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084086"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916017"
 ---
 # <a name="database-checkpoints-sql-server"></a>Pontos de verificação de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ Por razões de desempenho, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] executa
 > Transações não confirmadas de execução longa aumentam o tempo de recuperação para todos os tipos de pontos de verificação.   
   
 ##  <a name="InteractionBwnSettings"></a> Interação de TARGET_RECOVERY_TIME e opções 'recovery interval'  
- A tabela a seguir resume a interação entre a configuração do servidor **sp_configure'** recovery interval **'** de todo o servidor e a configuração ALTER DATABASE ... específica do banco de dados. TARGET_RECOVERY_TIME.  
+ A tabela a seguir resume a interação entre a configuração do servidor **sp_configure '** recovery interval **'** e a configuração `ALTER DATABASE ... TARGET_RECOVERY_TIME` específica do banco de dados.  
   
 |target_recovery_time|'recovery interval'|Tipo de ponto de verificação usado|  
 |----------------------------|-------------------------|-----------------------------|  
@@ -81,7 +81,7 @@ Depois de uma falha do sistema, o tempo necessário para recuperar determinado b
 ###  <a name="PerformanceImpact"></a> Impacto do intervalo de recuperação no desempenho de recuperação  
 Para um sistema de processamento de transações online usando transações curtas (OLTP), o **recovery interval** é o fator primário que determina o tempo da recuperação. No entanto, a opção **recovery interval** não afeta o tempo necessário para desfazer uma transação de longa duração. A recuperação de um banco de dados com uma transação de longa duração pode levar mais tempo do que o especificado na configuração **recovery interval**. 
  
-Por exemplo, se uma transação demorada levou duas horas para executar atualizações antes que a instância do servidor fosse desabilitada, a recuperação real levará um tempo consideravelmente mais longo do que o valor de **recovery interval** para recuperar a transação demorada. Para obter mais informações sobre o impacto de uma transação de longa duração em um tempo de recuperação, veja [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+Por exemplo, se uma transação demorada levou duas horas para executar atualizações antes que a instância do servidor fosse desabilitada, a recuperação real levará um tempo consideravelmente mais longo do que o valor de **recovery interval** para recuperar a transação demorada. Para obter mais informações sobre o impacto de uma transação de longa duração em um tempo de recuperação, veja [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md). Saiba mais sobre a recuperação de banco de dados em [Visão geral da restauração e recuperação (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
   
 Normalmente, os valores padrão fornecem um ótimo desempenho de recuperação. No entanto, a alteração do intervalo de recuperação pode melhorar o desempenho nas circunstâncias seguintes:  
   
@@ -92,7 +92,6 @@ Normalmente, os valores padrão fornecem um ótimo desempenho de recuperação. 
 Se você decidir aumentar a configuração **recovery interval** , recomendamos fazer isso gradativamente em pequenos incrementos e avaliar o efeito de cada aumento incremental no desempenho de recuperação. Esse método é importante porque, à medida que a configuração **recovery interval** aumenta, a recuperação de banco de dados demora mais tempo para ser concluída. Por exemplo, se você alterar **recovery interval** para 10 minutos, a recuperação levará aproximadamente 10 vezes mais tempo para ser concluída do que se **recovery interval** tivesse sido definido para 1 minuto.  
   
 ##  <a name="IndirectChkpt"></a> Pontos de verificação indiretos
-  
 Pontos de verificação indiretos, introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], fornecem uma alternativa de nível de banco de dados configurável para os pontos de verificação automáticos. Isso pode ser configurado especificando a opção de configuração de banco de dados **tempo de recuperação de destino**. Para obter mais informações, veja [Alterar o tempo de recuperação de destino de um banco de dados &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).
 No caso de uma falha de sistema, pontos de verificação indiretos fornecem um tempo de recuperação mais previsível potencialmente mais rápido do que os pontos de verificação automáticos. Os pontos de verificação indiretos oferecem as seguintes vantagens:  
   
@@ -111,7 +110,6 @@ No entanto, uma carga de trabalho transacional online em um banco de dados confi
 > Os bancos de dados atualizados no local ou restaurados com base em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usarão o comportamento de ponto de verificação automático anterior, a menos que tenham sido explicitamente alterados para usar o ponto de verificação indireto.       
 
 ### <a name="ctp23"></a> Escalabilidade de ponto de verificação indireto aprimorada
-
 Antes do [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)], você podia encontrar erros de agendador sem resposta quando há um banco de dados que gera um grande número de páginas sujas, assim como `tempdb`. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] apresenta melhor escalabilidade para o ponto de verificação indireto, que deve ajudar a evitar esses erros em bancos de dados que têm uma carga de trabalho de `UPDATE`/`INSERT` pesada.
   
 ##  <a name="EventsCausingChkpt"></a> Pontos de verificação internos  
@@ -129,7 +127,6 @@ Os pontos de verificação internos são gerados por vários componentes de serv
   
 -   Colocando uma FCI (instância de cluster de failover) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offline.      
   
-
 ##  <a name="RelatedTasks"></a> Related tasks  
  **Para alterar o intervalo de recuperação em uma instância de servidor**  
   
@@ -143,9 +140,7 @@ Os pontos de verificação internos são gerados por vários componentes de serv
   
 -   [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)  
 
-  
 ## <a name="see-also"></a>Confira também  
 [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)            
-[Arquitetura física do log de transações](https://technet.microsoft.com/library/ms179355.aspx) (dos [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Manuais Online, mas ainda aplicável)       
-  
-  
+[Guia de arquitetura e gerenciamento de log de transações do SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
+ 
