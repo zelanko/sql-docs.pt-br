@@ -16,36 +16,36 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 57b318ac8062203bd11a0717a4c8077bca9880d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 199a50885e9c01a7027d56f223c7f2248f087998
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62766939"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988218"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Carregando a saída de um pacote local
-  Aplicativos cliente podem ler a saída de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quando a saída é salva em destinos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ou quando a saída é salva em um destino de arquivo simples por meio das classes no namespace **System.IO**. Entretanto, um aplicativo cliente também consegue ler a saída de um pacote diretamente da memória, sem precisar de uma etapa intermediária para manter os dados. A chave para essa solução é o `Microsoft.SqlServer.Dts.DtsClient` namespace, que contém implementações especializadas da `IDbConnection`, `IDbCommand`, e **IDbDataParameter** interfaces do **deSystem.Data** namespace. O assembly Microsoft.SqlServer.Dts.DtsClient.dll é instalado por padrão em **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
+  Aplicativos cliente podem ler a saída de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quando a saída é salva em destinos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ou quando a saída é salva em um destino de arquivo simples por meio das classes no namespace **System.IO**. Entretanto, um aplicativo cliente também consegue ler a saída de um pacote diretamente da memória, sem precisar de uma etapa intermediária para manter os dados. A chave para essa solução é o namespace `Microsoft.SqlServer.Dts.DtsClient`, que contém implementações especializadas das interfaces `IDbConnection`, `IDbCommand`e **IDbDataParameter** do namespace **System. Data** . O assembly Microsoft.SqlServer.Dts.DtsClient.dll é instalado por padrão em **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
   
 > [!NOTE]  
 >  O procedimento descrito neste tópico exige que a propriedade DelayValidation da tarefa Fluxo de Dados e de qualquer objeto pai seja definida com seu valor padrão **False**.  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>Description  
  Esse procedimento demonstra como desenvolver um aplicativo cliente em código gerenciado que carrega a saída de um pacote com um destino do DataReader diretamente da memória. As etapas resumidas aqui são demonstradas no código de exemplo que segue.  
   
 #### <a name="to-load-data-package-output-into-a-client-application"></a>Para carregar a saída de pacote de dados em um aplicativo cliente  
   
 1.  No pacote, configure um destino do DataReader para receber a saída que você quer ler no aplicativo cliente. Dê ao destino do DataReader um nome descritivo, pois você usará esse nome em seu aplicativo cliente posteriormente. Anote o nome do destino do DataReader.  
   
-2.  No projeto de desenvolvimento, defina uma referência o `Microsoft.SqlServer.Dts.DtsClient` namespace, localizando o assembly **Microsoft.SqlServer.Dts.DtsClient.dll**. Por padrão, esse assembly é instalado em **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**. Importe o namespace em seu código usando o c# `Using` ou o [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports` instrução.  
+2.  No projeto de desenvolvimento, defina uma referência para o namespace `Microsoft.SqlServer.Dts.DtsClient` localizando o assembly **Microsoft. SqlServer. Dts. DtsClient. dll**. Por padrão, esse assembly é instalado em **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**. Importe o namespace para seu código usando o C#`Using`ou a instrução[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]`Imports`.  
   
-3.  No seu código, crie um objeto do tipo `DtsClient.DtsConnection` com uma cadeia de caracteres de conexão que contém os parâmetros de linha de comando necessários **dtexec.exe** para executar o pacote. Para saber mais, veja [dtexec Utility](../packages/dtexec-utility.md). Em seguida, abra a conexão com essa cadeia de conexão. Também use o utilitário **dtexecui** para criar a cadeia de conexão necessária visualmente.  
+3.  Em seu código, crie um objeto do tipo `DtsClient.DtsConnection` com uma cadeia de conexão que contenha os parâmetros de linha de comando exigidos por **dtexec. exe** para executar o pacote. Para obter mais informações, consulte [dtexec Utility](../packages/dtexec-utility.md). Em seguida, abra a conexão com essa cadeia de conexão. Também use o utilitário **dtexecui** para criar a cadeia de conexão necessária visualmente.  
   
     > [!NOTE]  
     >  O código de exemplo demonstra o carregamento do pacote do sistema de arquivos usando a sintaxe `/FILE <path and filename>`. Contudo, você também pode carregar o pacote do banco de dados MSDB usando a sintaxe `/SQL <package name>` ou do repositório de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usando a sintaxe `/DTS \<folder name>\<package name>`.  
   
 4.  Crie um objeto do tipo `DtsClient.DtsCommand` que use o `DtsConnection` criado anteriormente e defina sua propriedade `CommandText` com o nome de destino do DataReader no pacote. Em seguida, chame o método `ExecuteReader` do objeto de comando para carregar os resultados do pacote em um DataReader novo.  
   
-5.  Uma alternativa é parametrizar indiretamente a saída do pacote usando a coleção de objetos `DtsDataParameter` no objeto `DtsCommand` para passar valores para variáveis definidas no pacote. No pacote, você pode usar essas variáveis como parâmetros de consulta ou em expressões para afetar os resultados retornados para o destino do DataReader. Você deve definir essas variáveis no pacote na **DtsClient** namespace antes que você pode usá-los com o `DtsDataParameter` objeto de um aplicativo cliente. (Talvez você precise clicar no botão de barra de ferramentas **Escolher Colunas de Variáveis** na janela **Variáveis** para exibir a coluna **Namespace**.) No código do cliente, quando você adiciona uma `DtsDataParameter` para o `Parameters` coleção do `DtsCommand`, omita a referência ao namespace DtsClient do nome de variável. Por exemplo:  
+5.  Uma alternativa é parametrizar indiretamente a saída do pacote usando a coleção de objetos `DtsDataParameter` no objeto `DtsCommand` para passar valores para variáveis definidas no pacote. No pacote, você pode usar essas variáveis como parâmetros de consulta ou em expressões para afetar os resultados retornados para o destino do DataReader. Você deve definir essas variáveis no pacote no namespace **DtsClient** antes de poder usá-las com o objeto `DtsDataParameter` de um aplicativo cliente. (Talvez seja necessário clicar no botão da barra de ferramentas **escolher colunas variáveis** na janela **variáveis** para exibir a coluna **namespace** .) No código do cliente, quando você adiciona um `DtsDataParameter` à coleção `Parameters` do `DtsCommand`, omita a referência do namespace DtsClient do nome da variável. Por exemplo:  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  
@@ -63,7 +63,7 @@ ms.locfileid: "62766939"
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir executa um pacote que calcula um único valor de agregação, salva esse valor em um destino do DataReader e o lê do DataReader e o exibe em uma caixa de texto em um formulário do Windows.  
   
- O uso de parâmetros não é necessário ao carregar a saída de um pacote em um aplicativo cliente. Se você não quiser usar um parâmetro, você pode omitir o uso da variável na **DtsClient** namespace e omita o código que usa o `DtsDataParameter` objeto.  
+ O uso de parâmetros não é necessário ao carregar a saída de um pacote em um aplicativo cliente. Se você não quiser usar um parâmetro, poderá omitir o uso da variável no namespace **DtsClient** e omitir o código que usa o objeto `DtsDataParameter`.  
   
 #### <a name="to-create-the-test-package"></a>Para criar o pacote de teste  
   
@@ -81,9 +81,9 @@ ms.locfileid: "62766939"
     SELECT * FROM Sales.vIndividualCustomer WHERE CountryRegionName = ?  
     ```  
   
-6.  Clique em `Parameters` e, além de **definir parâmetros de consulta** caixa de diálogo caixa, mapeie o único parâmetro de entrada na consulta, Parameter0, para a variável dtsclient:: Country.  
+6.  Clique em `Parameters` e, na caixa de diálogo **definir parâmetros de consulta** , mapeie o parâmetro de entrada único na consulta, Parameter0, para a variável DtsClient:: Country.  
   
-7.  Acrescente uma transformação Agregação ao fluxo de dados e conecte a saída da origem de OLE DB à transformação. Abra o Editor de Transformação Agregação e configure-o para realizar uma operação “Contar todas” em todas as colunas de entrada (*) e gerar o valor agregado com o alias CustomerCount.  
+7.  Acrescente uma transformação Agregação ao fluxo de dados e conecte a saída da origem de OLE DB à transformação. Abra o editor de transformação agregação e configure-o para executar uma operação "contagem total" em todas as colunas de entrada (*) e para gerar o valor agregado com o alias CustomerCount.  
   
 8.  Acrescente um destino de DataReader ao fluxo de dados e conecte a saída da transformação Agregação a esse destino. O código de exemplo usa "DataReaderDest" como o nome do DataReader. Selecione a única coluna de entrada disponível, CustomerCount, para o destino.  
   
@@ -93,15 +93,15 @@ ms.locfileid: "62766939"
   
 1.  Crie um novo aplicativo Windows Forms.  
   
-2.  Adicione uma referência para o `Microsoft.SqlServer.Dts.DtsClient` namespace navegando até o assembly do mesmo nome no **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
+2.  Adicione uma referência ao namespace `Microsoft.SqlServer.Dts.DtsClient` navegando até o assembly do mesmo nome em **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
   
 3.  Copie e cole o código de exemplo seguinte no módulo de código para o formulário.  
   
-4.  Modificar o valor da `dtexecArgs` variável conforme necessário, de forma que ele contenha os parâmetros de linha de comando necessários **dtexec.exe** para executar o pacote. O código de exemplo carrega o pacote do sistema de arquivos.  
+4.  Modifique o valor da variável `dtexecArgs` conforme necessário para que ela contenha os parâmetros de linha de comando exigidos por **dtexec. exe** para executar o pacote. O código de exemplo carrega o pacote do sistema de arquivos.  
   
-5.  Modificar o valor da `dataReaderName` variável conforme necessário, de forma que ele contenha o nome do destino DataReader no pacote.  
+5.  Modifique o valor da variável `dataReaderName` conforme necessário para que ela contenha o nome do destino DataReader no pacote.  
   
-6.  Coloque um botão e uma caixa de texto no formulário. O código de exemplo usa `btnRun` como o nome do botão, e `txtResults` como o nome da caixa de texto.  
+6.  Coloque um botão e uma caixa de texto no formulário. O código de exemplo usa `btnRun` como o nome do botão e `txtResults` como o nome da caixa de texto.  
   
 7.  Execute o aplicativo e clique no botão. Após uma pequena pausa, enquanto o pacote é executado, você deverá ver o valor de agregação calculado pelo pacote (a contagem de clientes no Canadá) exibido na caixa de texto do formulário.  
   
@@ -293,9 +293,9 @@ namespace DtsClientWParamCS
 }  
 ```  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../media/dts-16.gif "Ícone de Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Compreender as diferenças entre execução local e remota](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Carregando e executando um pacote local de forma programática](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Carregar e executar um pacote remoto programaticamente](../run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  
