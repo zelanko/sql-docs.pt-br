@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ff5bd9978be59f6a512ce4173b851692b9506d96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b9c8322507c78458110f47f579ec333c3e5e7a7
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997560"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142840"
 ---
-# <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
+# <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Exibe o modo de failover atual de uma assinatura. Esse procedimento armazenado é executado no Assinante, em qualquer banco de dados. Para obter mais informações sobre modos de failover, consulte [assinaturas atualizáveis para replicação transacional](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,32 +41,32 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` É o nome do publicador que está participando da atualização desse assinante. *Publisher* está **sysname**, sem padrão. O Publicador já deve estar configurado para publicação.  
+`[ @publisher = ] 'publisher'` é o nome do Publicador que está participando da atualização deste assinante. o *Publicador* é **sysname**, sem padrão. O Publicador já deve estar configurado para publicação.  
   
-`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados de publicação. *publisher_db* está **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` é o nome do banco de dados de publicação. *publisher_db* é **sysname**, sem padrão.  
   
-`[ @publication = ] 'publication'` É o nome da publicação que está participando da atualização desse assinante. *publicação*está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` é o nome da publicação que está participando da atualização deste assinante. a *publicação*é **sysname**, sem padrão.  
   
-`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` Retorna o valor inteiro do modo de failover e é um **saída** parâmetro. *failover_mode_id* é um **tinyint** com um padrão de **0**. Ele retorna **0** para atualização imediata e **1** de atualização enfileirada.  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` retorna o valor inteiro do modo de failover e é um parâmetro de **saída** . *failover_mode_id* é um **tinyint** com um padrão de **0**. Ele retorna **0** para atualização imediata e **1** para atualização em fila.  
   
- [ **@failover_mode=** ] **'***failover_mode***' saída**  
- Retorna o modo no qual são feitas modificações de dados no Assinante. *failover_mode* é um **nvarchar (10)** com um padrão NULL. É um **saída** parâmetro.  
+ [ **\@failover_mode =** ] **saída de '***failover_mode***'**  
+ Retorna o modo no qual são feitas modificações de dados no Assinante. *failover_mode* é um **nvarchar (10)** com um padrão de NULL. É um parâmetro de **saída** .  
   
-|Valor|Descrição|  
+|Value|Description|  
 |-----------|-----------------|  
-|**Imediata**|Atualização imediata: as atualizações feitas no Assinante são imediatamente propagadas no Publicador, usando 2PC (protocolo de confirmação de duas fases).|  
-|**queued**|Atualização enfileirada: atualizações feitas no Assinante são armazenadas em uma fila.|  
+|**implantação**|Atualização imediata: as atualizações feitas no Assinante são imediatamente propagadas no Publicador, usando 2PC (protocolo de confirmação de duas fases).|  
+|**em fila**|Atualização enfileirada: atualizações feitas no Assinante são armazenadas em uma fila.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
- **sp_helpreplfailovermode** é usado em replicação de instantâneo ou replicação transacional para quais assinaturas são habilitadas para atualização imediata com atualização enfileirada como failover, em caso de falha.  
+## <a name="remarks"></a>Remarks  
+ **sp_helpreplfailovermode** é usado na replicação de instantâneo ou na replicação transacional para as quais as assinaturas estão habilitadas para atualização imediata com atualização em fila como failover, em caso de falha.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_helpreplfailovermode**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_helpreplfailovermode**.  
   
-## <a name="see-also"></a>Consulte também  
- [sp_setreplfailovermode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Transact &#40;-SQL sp_setreplfailovermode&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   

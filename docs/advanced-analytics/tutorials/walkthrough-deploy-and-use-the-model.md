@@ -10,7 +10,7 @@ ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: aba6990fbed5b24d63d4ab5c16e192718aeff305
 ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/01/2019
 ms.locfileid: "68714687"
@@ -73,7 +73,7 @@ Crie um procedimento armazenado, *PredictTipBatchMode*, que gera várias previs�
 
     + Você usa uma instrução SELECT para chamar o modelo armazenado de uma tabela SQL. O modelo é recuperado da tabela como dados **varbinary (max)** , armazenados na variável  _\@SQL lmodel2_e passado como o parâmetro *mod* para o procedimento armazenado do sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Os dados usados como entradas para pontuação são definidos como uma consulta SQL e armazenados como uma cadeia de caracteres na  _\@entrada_da variável SQL. À medida que os dados são recuperados do banco de dados, eles são armazenados em um data frame chamado *InputDataSet*, que é apenas o nome padrão dos dados de entrada para o procedimento [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ; Você pode definir outro nome de variável, se necessário, usando o parâmetro  *_\@input_data_1_name_* .
+    + Os dados usados como entradas para pontuação são definidos como uma consulta SQL e armazenados como uma cadeia de caracteres na  _\@entrada_da variável SQL. À medida que os dados são recuperados do banco de dados, eles são armazenados em um data frame chamado *InputDataSet*, que é apenas o nome padrão dos dados de entrada para o procedimento [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ; Você pode definir outro nome de variável, se necessário, usando o parâmetro *_\@input_data_1_name_* .
 
     + Para gerar as pontuações, o procedimento armazenado chama a função rxPredict da biblioteca **RevoScaleR** .
 
