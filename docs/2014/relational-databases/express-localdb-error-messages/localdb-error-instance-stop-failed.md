@@ -17,7 +17,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62990624"
 ---
-# <a name="localdberrorinstancestopfailed"></a>LOCALDB_ERROR_INSTANCE_STOP_FAILED
+# <a name="localdb_error_instance_stop_failed"></a>LOCALDB_ERROR_INSTANCE_STOP_FAILED
     
 ## <a name="details"></a>Detalhes  
   

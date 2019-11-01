@@ -16,7 +16,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68126983"
 ---
-# <a name="localdberrorxeventfailed"></a>LOCALDB_ERROR_XEVENT_FAILED
+# <a name="localdb_error_xevent_failed"></a>LOCALDB_ERROR_XEVENT_FAILED
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>Detalhes  

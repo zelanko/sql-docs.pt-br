@@ -27,7 +27,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68026825"
 ---
-# <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
+# <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Relata os consumidores de memória no nível de banco de dados no mecanismo de banco de dados [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. A exibição retorna uma linha para cada consumidor de memória que o mecanismo de banco de dados usa. Use essa DMV para ver como a memória é distribuída entre diferentes objetos internos.  

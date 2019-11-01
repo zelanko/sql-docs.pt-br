@@ -60,7 +60,7 @@ ms.locfileid: "68118524"
 |**SecurityPermission**|**Execução:** Permissão para executar código gerenciado.|  
 |**SqlClientPermission**|**Conexão de contexto = true**, **conexão de contexto = yes**: Apenas a conexão de contexto pode ser usado e a cadeia de caracteres de conexão só pode especificar um valor de "conexão de contexto = true" ou "conexão de contexto = yes".<br /><br /> **AllowBlankPassword = false:**  Senhas em branco não são permitidas.|  
   
-### <a name="externalaccess"></a>EXTERNAL_ACCESS  
+### <a name="external_access"></a>EXTERNAL_ACCESS  
  Assemblies EXTERNAL_ACCESS têm as mesmas permissões que **seguro** assemblies, com a habilidade adicional para acessar recursos externos do sistema como arquivos, redes, variáveis de ambiente e o registro.  
   
  **EXTERNAL_ACCESS** assemblies também têm as permissões e os valores a seguir:  

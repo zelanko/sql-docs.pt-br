@@ -17,7 +17,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63061924"
 ---
-# <a name="localdberroradminrightsrequired"></a>LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED
+# <a name="localdb_error_admin_rights_required"></a>LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED
     
 ## <a name="details"></a>Detalhes  
   

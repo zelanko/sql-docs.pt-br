@@ -16,7 +16,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68127017"
 ---
-# <a name="localdberrorunknownversion"></a>LOCALDB_ERROR_UNKNOWN_VERSION
+# <a name="localdb_error_unknown_version"></a>LOCALDB_ERROR_UNKNOWN_VERSION
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>Detalhes  

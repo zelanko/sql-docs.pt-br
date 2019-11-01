@@ -41,7 +41,7 @@ ms.locfileid: "62873813"
   
 -   Você está usando `CREATE ASSEMBLY FROM`  *\<bytes... >,* e todas as referências são especificadas por meio do espaço de bytes separados.  
   
-### <a name="externalaccess"></a>EXTERNAL_ACCESS  
+### <a name="external_access"></a>EXTERNAL_ACCESS  
  Todos os assemblies `EXTERNAL_ACCESS` devem atender aos seguintes critérios:  
   
 -   Não são usados campos estáticos para armazenar informações. São permitidos campos estáticos somente leitura.  
@@ -88,7 +88,7 @@ ms.locfileid: "62873813"
 ### <a name="unsafe"></a>UNSAFE  
  Carregar um assembly seja explicitamente chamando o `System.Reflection.Assembly.Load()` método de uma matriz de bytes ou implicitamente através do uso de `Reflection.Emit` namespace-não é permitida.  
   
-### <a name="externalaccess"></a>EXTERNAL_ACCESS  
+### <a name="external_access"></a>EXTERNAL_ACCESS  
  Todas as condições `UNSAFE` são verificadas.  
   
  São desaprovados todos os tipos e métodos anotados com os seguintes valores HPA (atributo de proteção de host) na lista de assemblies para a qual há suporte.  

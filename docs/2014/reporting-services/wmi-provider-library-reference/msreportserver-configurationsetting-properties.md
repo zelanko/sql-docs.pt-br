@@ -26,7 +26,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "66097325"
 ---
-# <a name="msreportserverconfigurationsetting-properties"></a>Propriedades MSReportServer_ConfigurationSetting
+# <a name="msreportserver_configurationsetting-properties"></a>Propriedades MSReportServer_ConfigurationSetting
   A classe MSReportServer_ConfigurationSetting representa os parâmetros de instalação e de tempo de execução de uma instância do servidor de relatório. Essas configurações são armazenadas no arquivo de configuração RSReportServer.config.  
   
 ## <a name="public-properties"></a>Propriedades públicas  

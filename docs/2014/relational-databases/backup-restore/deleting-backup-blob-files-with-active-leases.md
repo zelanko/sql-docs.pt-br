@@ -41,7 +41,7 @@ ms.locfileid: "72783063"
 ###  <a name="Code_Example"></a> Exemplo de script do PowerShell  
  **\* \* \* importantes \*** Se você estiver executando o PowerShell 2,0, poderá ter problemas ao carregar o assembly Microsoft WindowsAzure. Storage. dll. Recomendamos que você atualize o Powershell 3.0 para resolver o problema. Você também pode usar a seguinte solução para o PowerShell 2.0:  
   
--   Crie ou modifique o arquivo powershell.exe.config para carregar os assemblies do .NET 2.0 e do .NET 4.0 em tempo de execução com o seguinte:  
+-   Crie ou modifique o arquivo powershell.exe.config para carregar os assemblies do .NET 2.0 e do .NET 4.0 em runtime com o seguinte:  
   
     ```xml
     <?xml version="1.0"?>

@@ -17,7 +17,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63066444"
 ---
-# <a name="localdberrorsharednametaken"></a>LOCALDB_ERROR_SHARED_NAME_TAKEN
+# <a name="localdb_error_shared_name_taken"></a>LOCALDB_ERROR_SHARED_NAME_TAKEN
     
 ## <a name="details"></a>Detalhes  
   

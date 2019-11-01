@@ -17,7 +17,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63065774"
 ---
-# <a name="localdberrornotinstalled"></a>LOCALDB_ERROR_NOT_INSTALLED
+# <a name="localdb_error_not_installed"></a>LOCALDB_ERROR_NOT_INSTALLED
     
 ## <a name="details"></a>Detalhes  
   

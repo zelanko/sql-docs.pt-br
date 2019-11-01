@@ -24,7 +24,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68771316"
 ---
-# <a name="spadddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
+# <a name="sp_adddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Cria uma entrada na tabela [Sys. sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) (se não houver uma), marca a entrada do servidor como um distribuidor e armazena informações de propriedade. Esse procedimento armazenado é executado no Distribuidor, no banco de dados mestre, para registrar e marcar o servidor como Distribuidor. No caso de um Distribuidor remoto, é também executado no Publicador do banco de dados mestre para registrar o distribuidor remoto.  

@@ -17,7 +17,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62519494"
 ---
-# <a name="localdberrorcannotgetuserprofilefolder"></a>LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER
+# <a name="localdb_error_cannot_get_user_profile_folder"></a>LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER
     
 ## <a name="details"></a>Detalhes  
   

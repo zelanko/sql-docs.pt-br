@@ -17,7 +17,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63071674"
 ---
-# <a name="localdberrorunknowninstance"></a>LOCALDB_ERROR_UNKNOWN_INSTANCE
+# <a name="localdb_error_unknown_instance"></a>LOCALDB_ERROR_UNKNOWN_INSTANCE
     
 ## <a name="details"></a>Detalhes  
   

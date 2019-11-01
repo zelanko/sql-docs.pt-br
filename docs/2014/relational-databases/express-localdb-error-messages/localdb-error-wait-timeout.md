@@ -17,7 +17,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127772"
 ---
-# <a name="localdberrorwaittimeout"></a>LOCALDB_ERROR_WAIT_TIMEOUT
+# <a name="localdb_error_wait_timeout"></a>LOCALDB_ERROR_WAIT_TIMEOUT
     
 ## <a name="details"></a>Detalhes  
   

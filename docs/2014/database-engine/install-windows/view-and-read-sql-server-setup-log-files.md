@@ -82,7 +82,7 @@ ms.locfileid: "62774318"
   
  Para localizar erros no arquivo de texto resumido, pesquise o arquivo usando as palavras-chave "error" ou "failed".  
   
-## <a name="summaryengine-baseyyyymmddhhmmsstxt"></a>Summary_engine-base_YYYYMMDD_HHMMss.txt  
+## <a name="summary_engine-base_yyyymmdd_hhmmsstxt"></a>Summary_engine-base_YYYYMMDD_HHMMss.txt  
   
 ### <a name="overview"></a>Visão geral  
  O arquivo de base summary_engine é semelhante ao arquivo de resumo e é gerado durante o fluxo de trabalho principal.  
@@ -90,7 +90,7 @@ ms.locfileid: "62774318"
 ### <a name="location"></a>Location  
  Ele está localizado em % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< YYYYMMDD_HHMM >\\.  
   
-## <a name="summaryengine-baseyyyymmddhhmmsscomponentupdatetxt"></a>Summary_engine-base_YYYYMMDD_HHMMss_ComponentUpdate.txt  
+## <a name="summary_engine-base_yyyymmdd_hhmmss_componentupdatetxt"></a>Summary_engine-base_YYYYMMDD_HHMMss_ComponentUpdate.txt  
   
 ### <a name="overview"></a>Visão geral  
  O arquivo de log resumido de atualização do componente é semelhante ao arquivo de resumo e é gerado durante o fluxo de trabalho de atualização de componente.  
@@ -98,7 +98,7 @@ ms.locfileid: "62774318"
 ### <a name="location"></a>Location  
  Ele está localizado em % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< YYYYMMDD_HHMM >\\.  
   
-## <a name="summaryengine-baseversionnumbermmddhhmmssglobalrulestxt"></a>Summary_engine-base_\<VersionNumber>MMDD_HHMMss_GlobalRules.txt  
+## <a name="summary_engine-base_versionnumbermmdd_hhmmss_globalrulestxt"></a>Summary_engine-base_\<VersionNumber>MMDD_HHMMss_GlobalRules.txt  
   
 ### <a name="overview"></a>Visão geral  
  O arquivo de log resumido de regras globais é semelhante ao arquivo de resumo gerado durante o fluxo de trabalho de regras globais.  
@@ -118,7 +118,7 @@ ms.locfileid: "62774318"
   
  Se ocorrer um erro durante o processo de Instalação, a exceção ou o erro será registrado no final desse arquivo. Para localizar os erros nesse arquivo, primeiro examine o final do arquivo e depois efetue uma pesquisa do arquivo pelas palavras-chave "error" ou "exception".  
   
-## <a name="detailcomponentupdatetxt"></a>Detail_ComponentUpdate.txt  
+## <a name="detail_componentupdatetxt"></a>Detail_ComponentUpdate.txt  
   
 ### <a name="overview"></a>Visão geral  
  O arquivo Detail_ComponentUpdate.txt é gerado para o fluxo de trabalho de atualização de componente e é semelhante ao Detail.txt.  
@@ -126,7 +126,7 @@ ms.locfileid: "62774318"
 ### <a name="location"></a>Location  
  Ele está localizado em % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< YYYYMMDD_HHMM >\\.  
   
-## <a name="detailglobalrulestxt"></a>Detail_GlobalRules.txt  
+## <a name="detail_globalrulestxt"></a>Detail_GlobalRules.txt  
   
 ### <a name="overview"></a>Visão geral  
  O arquivo Detail_GlobalRules.txt é gerado para a execução de regras globais e é semelhante ao Detail.txt.  
@@ -160,7 +160,7 @@ ms.locfileid: "62774318"
 ### <a name="location"></a>Location  
  Ele está localizado em % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< YYYYMMDD_HHMM >\\.  
   
-## <a name="systemconfigurationcheckreporthtm"></a>SystemConfigurationCheck_Report.htm  
+## <a name="systemconfigurationcheck_reporthtm"></a>SystemConfigurationCheck_Report.htm  
   
 ### <a name="overview"></a>Visão geral  
  O relatório de verificação da configuração do sistema contém uma breve descrição de cada regra executada, bem como o status de execução.  

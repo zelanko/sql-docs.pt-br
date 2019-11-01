@@ -16,7 +16,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67995853"
 ---
-# <a name="localdberrorinstancebusy"></a>LOCALDB_ERROR_INSTANCE_BUSY
+# <a name="localdb_error_instance_busy"></a>LOCALDB_ERROR_INSTANCE_BUSY
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>Detalhes  

@@ -16,7 +16,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68127012"
 ---
-# <a name="localdberrorversionrequestednotinstalled"></a>LOCALDB_ERROR_VERSION_REQUESTED_NOT_INSTALLED
+# <a name="localdb_error_version_requested_not_installed"></a>LOCALDB_ERROR_VERSION_REQUESTED_NOT_INSTALLED
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>Detalhes  

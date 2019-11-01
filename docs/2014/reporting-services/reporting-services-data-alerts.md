@@ -24,7 +24,7 @@ ms.locfileid: "66102983"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../includes/applies-md.md)]**  |  
+|**[!INCLUDE[applies](../includes/applies-md.md)]**|  
   
 ##  <a name="AlertingWF"></a> Arquitetura de alertas de dados e fluxo de trabalho  
  A seguir é apresentado um resumo das áreas principais dos alertas de dados do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :  

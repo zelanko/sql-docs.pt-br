@@ -17,7 +17,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62990395"
 ---
-# <a name="localdberrorinternalerror"></a>LOCALDB_ERROR_INTERNAL_ERROR
+# <a name="localdb_error_internal_error"></a>LOCALDB_ERROR_INTERNAL_ERROR
     
 ## <a name="details"></a>Detalhes  
   

@@ -17,7 +17,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62519270"
 ---
-# <a name="localdberrorinstanceconfigurationcorrupt"></a>LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT
+# <a name="localdb_error_instance_configuration_corrupt"></a>LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT
     
 ## <a name="details"></a>Detalhes  
   

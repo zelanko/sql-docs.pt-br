@@ -22,7 +22,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68768967"
 ---
-# <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
+# <a name="sp_attachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Anexa um banco de dados de assinatura existente a qualquer Assinante. Esse procedimento armazenado é executado no novo Assinante, no banco de dados mestre.  

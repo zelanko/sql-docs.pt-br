@@ -86,9 +86,9 @@ Get-SPDiagnosticConfig
   
 1.  **Produto: SQL Server Reporting Services**  
   
-2.  **Categoria:** Eventos relacionados ao servidor terão os caracteres "Servidor de Relatório" no início do nome. Por exemplo "Tempo de Execução de Alerta do Servidor de Relatório". Esses eventos também são registrados em log para os arquivos de log do servidor de relatório.  
+2.  **Categoria:** Eventos relacionados ao servidor terão os caracteres "Servidor de Relatório" no início do nome. Por exemplo "Runtime de Alerta do Servidor de Relatório". Esses eventos também são registrados em log para os arquivos de log do servidor de relatório.  
   
-3.  **Categoria:** eventos relacionados ou comunicados de um componente front-end da Web não contêm "Servidor de Relatório". Por exemplo "Proxy de Aplicativo de Serviço" Tempo de Execução de Alerta do Servidor de Relatório". As entradas de WFE contêm um CorrelationID, mas as entradas de servidor não.  
+3.  **Categoria:** eventos relacionados ou comunicados de um componente front-end da Web não contêm "Servidor de Relatório". Por exemplo "Proxy de Aplicativo de Serviço" Runtime de Alerta do Servidor de Relatório". As entradas de WFE contêm um CorrelationID, mas as entradas de servidor não.  
   
 ##  <a name="bkmk_list"></a> Lista de eventos do SQL Server Reporting Services  
  Esta tabela é uma lista dos eventos na categoria SQL Server Reporting Services:  
@@ -102,7 +102,7 @@ Get-SPDiagnosticConfig
 |Proxy de Cliente SOAP||  
 |Páginas de UI||  
 |Power View|Entradas de log que foram gravadas na API **LogClientTraceEvents** . Essas entradas derivam de aplicativos cliente, inclusive o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], um recurso do Suplemento [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para o [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> Todas as entradas de log da API LogClientTraceEvents serão registradas na **Categoria** de "SQL Server Reporting Services" e na **Área** de "Power View".<br /><br /> O conteúdo de entradas registradas com a área de "Power View" é determinado pelo aplicativo cliente.|  
-|Tempo de execução de alerta do servidor de relatório||  
+|Runtime de alerta do servidor de relatório||  
 |Gerenciador de domínio do aplicativo do servidor de relatório||  
 |Resposta em buffer do servidor de relatório||  
 |Cache do servidor de relatório||  
@@ -117,7 +117,7 @@ Get-SPDiagnosticConfig
 |Extensão de email do servidor de relatório||  
 |Processador Excel do servidor de relatório||  
 |Fábrica de extensão do servidor de relatório||  
-|Tempo de execução HTTP do servidor de relatório||  
+|Runtime HTTP do servidor de relatório||  
 |Processador de imagens do servidor de relatório||  
 |Monitoramento de memória do servidor de relatório||  
 |Notificação do servidor de relatório||  
@@ -133,7 +133,7 @@ Get-SPDiagnosticConfig
 |Controlador de serviço do servidor de relatório||  
 |Sessão do servidor de relatório||  
 |Assinatura do servidor de relatório||  
-|Tempo de execução WCF do servidor de relatório||  
+|Runtime WCF do servidor de relatório||  
 |Servidor Web do servidor de relatório||  
 |Proxy de aplicativo de serviço||  
 |Serviço compartilhado|Entradas de exemplo:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> Acesso de MediumGranting a bancos de dados de conteúdo.<br /><br /> Instâncias de MediumProvisioning para ReportingWebServiceApplication<br /><br /> Alteração de conta de serviço MediumProcessing para ReportingWebServiceApplication<br /><br /> Permissões de banco de dados MediumSetting|  

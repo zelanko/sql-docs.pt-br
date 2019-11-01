@@ -17,7 +17,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62736369"
 ---
-# <a name="localdberrorunknownversion"></a>LOCALDB_ERROR_UNKNOWN_VERSION
+# <a name="localdb_error_unknown_version"></a>LOCALDB_ERROR_UNKNOWN_VERSION
     
 ## <a name="details"></a>Detalhes  
   

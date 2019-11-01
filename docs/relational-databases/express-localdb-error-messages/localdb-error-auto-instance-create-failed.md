@@ -16,7 +16,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67996055"
 ---
-# <a name="localdberrorautoinstancecreatefailed"></a>LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED
+# <a name="localdb_error_auto_instance_create_failed"></a>LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>Detalhes  

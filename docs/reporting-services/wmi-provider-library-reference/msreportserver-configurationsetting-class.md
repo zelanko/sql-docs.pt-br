@@ -23,7 +23,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "65569144"
 ---
-# <a name="msreportserverconfigurationsetting-class"></a>Classe MSReportServer_ConfigurationSetting
+# <a name="msreportserver_configurationsetting-class"></a>Classe MSReportServer_ConfigurationSetting
   Representa os parâmetros de instalação e de tempo de execução de uma instância de servidor de relatório. Esses parâmetros são armazenados no arquivo de configuração para o servidor de relatório.  
   
  Para obter uma lista de todos os membros desse tipo, consulte [Membros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md).  

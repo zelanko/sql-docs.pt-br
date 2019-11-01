@@ -426,7 +426,7 @@ EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;
 GO  
 ```  
   
-### <a name="c-using-execute-tsqlstring-with-a-variable"></a>C. Usando EXECUTE 'tsql_string' com uma variável  
+### <a name="c-using-execute-tsql_string-with-a-variable"></a>C. Usando EXECUTE 'tsql_string' com uma variável  
  O exemplo seguinte mostra como `EXECUTE` controla dinamicamente as cadeias de caracteres criadas que contêm variáveis. Esse exemplo cria o cursor `tables_cursor` para manter uma lista de todas as tabelas definidas pelo usuário no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e, depois, usa essa lista para criar novamente todos os índices nas tabelas.  
   
 ```  
@@ -511,7 +511,7 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
   
 ```  
   
-### <a name="g-using-execute-with-at-linkedservername"></a>G. Usando EXECUTE com AT linked_server_name  
+### <a name="g-using-execute-with-at-linked_server_name"></a>G. Usando EXECUTE com AT linked_server_name  
  O exemplo seguinte envia uma cadeia de caracteres de comando a um servidor remoto. Ele cria um servidor vinculado `SeattleSales` que aponta para outra instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e executa uma instrução DDL (`CREATE TABLE`) nesse servidor vinculado.  
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
@@ -586,7 +586,7 @@ AS USER = 'User1';
 GO  
 ```  
   
-### <a name="l-using-a-parameter-with-execute-and-at-linkedservername"></a>L. Usando um parâmetro com EXECUTE e AT linked_server_name  
+### <a name="l-using-a-parameter-with-execute-and-at-linked_server_name"></a>L. Usando um parâmetro com EXECUTE e AT linked_server_name  
  O exemplo a seguir envia uma cadeia de caracteres de comando a um servidor remoto usando um ponto de interrogação (`?`) como espaço reservado de um parâmetro. O exemplo cria um servidor vinculado `SeattleSales` que aponta para outra instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e executa uma instrução `SELECT` nesse servidor vinculado. A instrução `SELECT` usa o ponto de interrogação como um espaço reservado para o parâmetro `ProductID` (`952`), fornecido após a instrução.  
   
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]

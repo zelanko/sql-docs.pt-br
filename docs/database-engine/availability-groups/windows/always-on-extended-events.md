@@ -97,7 +97,7 @@ Para obter informações sobre alguns dos eventos cobertos pelo alwayson_health,
 |previous_state|availability_replica_state|A função da réplica antes da alteração.<br /><br /> **Os valores possíveis são:**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
 |current_state|availability_replica_state|A função da réplica após a alteração.<br /><br /> **Os valores possíveis são:**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Definição de sessão alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Definição de sessão alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -125,7 +125,7 @@ GO
 |availability_group_id|guid|A ID do grupo de disponibilidade.|  
 |availability_group_name|unicode_string|O nome do grupo de disponibilidade.|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Definição de sessão alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Definição de sessão alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -157,7 +157,7 @@ GO
 |joined_and_synchronized|validation_result_type|Se o valor for FALSE, o failover automático será invalidado nesta réplica de disponibilidade.<br /><br /> TRUE<br /><br /> FALSE|  
 |previous_primary_or_automatic_failover_target|validation_result_type|Se o valor for FALSE, o failover automático será invalidado nesta réplica de disponibilidade.<br /><br /> TRUE<br /><br /> FALSE|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Definição de sessão alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Definição de sessão alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -204,7 +204,7 @@ GO
 |28091|Não há suporte para o início do ponto de extremidade para %S_MSG sem autenticação.|  
 |33309|Não é possível iniciar o ponto de extremidade do cluster porque a configuração de ponto de extremidade padrão %S_MSG ainda não foi carregada.|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Definição de sessão alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Definição de sessão alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -261,7 +261,7 @@ GO
 |suspend_source|suspend_source_type|A origem da ação suspender ou retomar.|  
 |suspend_reason|unicode_string|O motivo da suspensão capturado no gerenciador de réplica de banco de dados.|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Definição de sessão alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Definição de sessão alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -299,7 +299,7 @@ GO
 |ddl_phase|ddl_opcode|Indica a fase da operação DDL: BEGIN, COMMIT ou ROLLBACK.|  
 |de|unicode_string|O texto da instrução que foi executada.|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Definição de sessão alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Definição de sessão alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -328,7 +328,7 @@ GO
 |----------|----------------|-----------------|  
 |current_state|manager_state|O estado atual do gerenciador de réplica de disponibilidade.<br /><br /> Online<br /><br /> Offline<br /><br /> WaitingForClusterCommunication|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Definição de sessão Alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Definição de sessão Alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -353,7 +353,7 @@ GO
 |Categoria|erros|  
 |Canal|Admin|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Definição de sessão alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Definição de sessão alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   

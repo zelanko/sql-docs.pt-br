@@ -16,7 +16,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68011113"
 ---
-# <a name="localdberrorsqlserverstartupfailed"></a>LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED
+# <a name="localdb_error_sql_server_startup_failed"></a>LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>Detalhes  

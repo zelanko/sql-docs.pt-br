@@ -17,7 +17,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63066284"
 ---
-# <a name="localdberrorsqlserverstartupfailed"></a>LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED
+# <a name="localdb_error_sql_server_startup_failed"></a>LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED
     
 ## <a name="details"></a>Detalhes  
   

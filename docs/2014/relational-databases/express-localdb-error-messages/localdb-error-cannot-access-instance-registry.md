@@ -17,7 +17,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62520196"
 ---
-# <a name="localdberrorcannotaccessinstanceregistry"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY
+# <a name="localdb_error_cannot_access_instance_registry"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY
     
 ## <a name="details"></a>Detalhes  
   

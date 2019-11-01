@@ -17,7 +17,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714993"
 ---
-# <a name="localdberrorxeventfailed"></a>LOCALDB_ERROR_XEVENT_FAILED
+# <a name="localdb_error_xevent_failed"></a>LOCALDB_ERROR_XEVENT_FAILED
     
 ## <a name="details"></a>Detalhes  
   

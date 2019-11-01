@@ -16,7 +16,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67995804"
 ---
-# <a name="localdberrorinstancestopfailed"></a>LOCALDB_ERROR_INSTANCE_STOP_FAILED
+# <a name="localdb_error_instance_stop_failed"></a>LOCALDB_ERROR_INSTANCE_STOP_FAILED
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>Detalhes  

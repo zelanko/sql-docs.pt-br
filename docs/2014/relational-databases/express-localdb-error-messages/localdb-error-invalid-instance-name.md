@@ -17,7 +17,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62990477"
 ---
-# <a name="localdberrorinvalidinstancename"></a>LOCALDB_ERROR_INVALID_INSTANCE_NAME
+# <a name="localdb_error_invalid_instance_name"></a>LOCALDB_ERROR_INVALID_INSTANCE_NAME
     
 ## <a name="details"></a>Detalhes  
   

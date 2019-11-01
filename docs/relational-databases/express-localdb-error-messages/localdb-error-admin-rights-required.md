@@ -16,7 +16,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67996070"
 ---
-# <a name="localdberroradminrightsrequired"></a>LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED
+# <a name="localdb_error_admin_rights_required"></a>LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>Detalhes  

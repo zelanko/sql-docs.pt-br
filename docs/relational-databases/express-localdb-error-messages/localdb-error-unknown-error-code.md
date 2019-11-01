@@ -16,7 +16,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68011004"
 ---
-# <a name="localdberrorunknownerrorcode"></a>LOCALDB_ERROR_UNKNOWN_ERROR_CODE
+# <a name="localdb_error_unknown_error_code"></a>LOCALDB_ERROR_UNKNOWN_ERROR_CODE
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>Detalhes  

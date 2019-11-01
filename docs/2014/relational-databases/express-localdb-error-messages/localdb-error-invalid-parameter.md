@@ -17,7 +17,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62990384"
 ---
-# <a name="localdberrorinvalidparameter"></a>LOCALDB_ERROR_INVALID_PARAMETER
+# <a name="localdb_error_invalid_parameter"></a>LOCALDB_ERROR_INVALID_PARAMETER
     
 ## <a name="details"></a>Detalhes  
   

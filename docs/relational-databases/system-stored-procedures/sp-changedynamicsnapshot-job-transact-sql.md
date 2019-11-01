@@ -22,7 +22,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68768954"
 ---
-# <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
+# <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Modifica o trabalho do agente que gera o instantâneo para uma assinatura de uma publicação com um filtro de linha com parâmetros. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  

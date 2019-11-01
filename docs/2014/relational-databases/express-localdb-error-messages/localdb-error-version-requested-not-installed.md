@@ -17,7 +17,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127224"
 ---
-# <a name="localdberrorversionrequestednotinstalled"></a>LOCALDB_ERROR_VERSION_REQUESTED_NOT_INSTALLED
+# <a name="localdb_error_version_requested_not_installed"></a>LOCALDB_ERROR_VERSION_REQUESTED_NOT_INSTALLED
     
 ## <a name="details"></a>Detalhes  
   

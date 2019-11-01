@@ -17,7 +17,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62519330"
 ---
-# <a name="localdberrorcannotmodifyinstanceregistry"></a>LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY
+# <a name="localdb_error_cannot_modify_instance_registry"></a>LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY
     
 ## <a name="details"></a>Detalhes  
   

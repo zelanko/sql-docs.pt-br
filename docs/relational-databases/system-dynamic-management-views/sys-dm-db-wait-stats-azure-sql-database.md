@@ -26,7 +26,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68090870"
 ---
-# <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats (Banco de Dados SQL do Azure)
+# <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Retorna informações sobre todas as esperas encontradas por threads executados durante a operação. É possível usar essa exibição agregada para diagnosticar problemas de desempenho com o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e também com consultas e lotes específicos.  

@@ -17,7 +17,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62519398"
 ---
-# <a name="localdberrorinstancebusy"></a>LOCALDB_ERROR_INSTANCE_BUSY
+# <a name="localdb_error_instance_busy"></a>LOCALDB_ERROR_INSTANCE_BUSY
     
 ## <a name="details"></a>Detalhes  
   

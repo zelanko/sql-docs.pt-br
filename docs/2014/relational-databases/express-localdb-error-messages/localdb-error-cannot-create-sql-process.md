@@ -17,7 +17,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62519397"
 ---
-# <a name="localdberrorcannotcreatesqlprocess"></a>LOCALDB_ERROR_CANNOT_CREATE_SQL_PROCESS
+# <a name="localdb_error_cannot_create_sql_process"></a>LOCALDB_ERROR_CANNOT_CREATE_SQL_PROCESS
     
 ## <a name="details"></a>Detalhes  
   

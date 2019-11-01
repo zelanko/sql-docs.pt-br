@@ -22,7 +22,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68769068"
 ---
-# <a name="spaddqreaderagent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
+# <a name="sp_addqreader_agent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Adiciona um Queue Reader Agent para um determinado Distribuidor. Esse procedimento armazenado é executado no Distribuidor, no banco de dados de distribuição, ou no Publicador, no banco de dados de publicação.  
