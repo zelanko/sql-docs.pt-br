@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fb5b270acac06411d5758f49ce8037311727d62b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4be5552c60a6a401d9333976402088c7fa199f52
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908011"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049922"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Ajuda offline do SQL Server e Help Viewer
 
@@ -171,7 +171,7 @@ A Ajuda online sempre mostra o conteúdo mais atualizado.
 
 **Para exibir a Ajuda online do SQL Server no SSMS 17.x**
 
-- Clique em **Exibir Ajuda** no menu **Ajuda**. A documentação mais recente do SQL Server 2016/2017 do [https://docs.microsoft.com/sql/sql-server/](https://docs.microsoft.com/sql/sql-server/index.yml) pode ser exibida em um navegador.
+- Clique em **Exibir Ajuda** no menu **Ajuda**. A documentação mais recente do SQL Server 2016/2017 do [https://docs.microsoft.com/sql/sql-server/](https://docs.microsoft.com/sql/sql-server/) pode ser exibida em um navegador.
 
    ![Exibir Ajuda](../sql-server/media/sql-server-help-installation/viewhelp.png)
 

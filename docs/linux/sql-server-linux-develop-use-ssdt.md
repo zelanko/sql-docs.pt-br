@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: c6d5789092ea2bbfc6fd9a8bb20cc7d078eaf6de
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: 0a7c16f508621297e39df5cd47bde891b7d8a140
+ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545048"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73033015"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Use o Visual Studio para criar bancos de dados para SQL Server em Linux
 
@@ -29,7 +29,7 @@ O SSDT (SQL Server Data Tools) transforma o Visual Studio em um avançado ambien
 
 3. Selecione **Microsoft SQL Server Data Tools**, **Git for Windows** e **Extensão do GitHub para Visual Studio** na lista seleção de recursos.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/ssdt-setup.png" alt="ssdt setup" style="width: 400px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/ssdt-setup.png" alt="ssdt setup" style="width: 400px;"/>
 
 4. Continue e conclua a instalação do Visual Studio. Pode levar alguns minutos.
 
@@ -47,15 +47,15 @@ O SQL Server em Linux é compatível com o SSDT versão 17.0 RC ou posterior.
 
 3. Clique em **Novo** na seção **Repositório Git Local** na página **Conectar**.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
 
-3. Clique em **Criar**. Depois que o repositório Git local for criado, clique duas vezes em **SSDTRepo**.
+4. Clique em **Criar**. Depois que o repositório Git local for criado, clique duas vezes em **SSDTRepo**.
 
-4. Clique em **Novo** na seção **Soluções**. Selecione **SQL Server** no nó **Outras Linguagens** na caixa de diálogo **Novo Projeto**.
+5. Clique em **Novo** na seção **Soluções**. Selecione **SQL Server** no nó **Outras Linguagens** na caixa de diálogo **Novo Projeto**.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="local repository" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="local repository" style="width: 480px;"/>
 
-5. Digite **TutorialDB** para o nome e clique em **OK** para criar um novo projeto de banco de dados.
+6. Digite **TutorialDB** para o nome e clique em **OK** para criar um novo projeto de banco de dados.
 
 ## <a name="create-a-new-table-in-the-database-project"></a>Criar uma nova tabela no projeto de banco de dados
 
@@ -65,11 +65,11 @@ O SQL Server em Linux é compatível com o SSDT versão 17.0 RC ou posterior.
 
 3. Selecione **Tabela** em **Adicionar**.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/create-table.png" alt="create table" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/create-table.png" alt="create table" style="width: 480px;"/>
 
 4. Usando o designer de tabela, adicione duas colunas, Nome `nvarchar(50)` e Localização `nvarchar(50)`, conforme mostrado na imagem. O SSDT gera o script `CREATE TABLE` à medida que você adiciona as colunas no designer.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="add columns" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="add columns" style="width: 480px;"/>
 
 5. Salve o arquivo **Table1.sql**.
 
@@ -77,7 +77,7 @@ O SQL Server em Linux é compatível com o SSDT versão 17.0 RC ou posterior.
 
 1. Abra o menu de projeto de banco de dados em **TutorialDB** e selecione **Compilar**. O SSDT compila arquivos de código-fonte .sql em seu projeto e cria um arquivo dacpac (pacote de Aplicativo da Camada de Dados). Isso pode ser usado para publicar um banco de dados em sua instância do SQL Server no Linux. 
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
 
 2. Verifique a mensagem sucesso do build na janela de **Saída** no Visual Studio. 
 
@@ -87,11 +87,11 @@ O SQL Server em Linux é compatível com o SSDT versão 17.0 RC ou posterior.
 
 2. Clique em **Editar** para selecionar sua instância de SQL Server no Linux.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/publish-dialog.png" alt="publish dialog" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/publish-dialog.png" alt="publish dialog" style="width: 480px;"/>
 
 3. Na caixa de diálogo de conexão, digite o endereço IP ou o nome do host de sua instância do SQL Server no Linux, nome de usuário e senha.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/connection-dialog.png" alt="connection dialog" style="width: 400px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/connection-dialog.png" alt="connection dialog" style="width: 400px;"/>
 
 4. Clique no botão **Publicar** na caixa de diálogo Publicar.
 
@@ -99,7 +99,7 @@ O SQL Server em Linux é compatível com o SSDT versão 17.0 RC ou posterior.
 
 6. Clique em **Exibir Resultados** ou **Exibir Script** para ver detalhes do resultado da publicação do banco de dados em seu SQL Server em Linux.
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
 Você criou com êxito um banco de dados na instância do SQL Server em Linux e aprendeu as noções básicas de como desenvolver um banco de dados com um projeto de banco de dados com controle do código-fonte.
 

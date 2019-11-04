@@ -29,12 +29,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cc065dc6f7b8e5b3d7ac5e84867029c9bd50f0f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 7c3afcf1c27d0b146e2f8762bd073853cc21ce2f
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155842"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049928"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "70155842"
 -   Usuário baseado em um certificado. Não pode fazer logon, mas pode receber permissões e assinar módulos. `CREATE USER TestProcess FOR CERTIFICATE CarnationProduction50;`  
 -   Usuário baseado em uma chave assimétrica. Não pode fazer logon, mas pode receber permissões e assinar módulos. `CREATE User TestProcess FROM ASYMMETRIC KEY PacificSales09;`   
  
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -468,7 +468,7 @@ WITH
 
  Para criar um usuário do Azure AD com base em um logon do Azure AD, use a sintaxe a seguir.
 
- Entre na instância gerenciada com um logon do Azure AD concedido com a função `sysadmin`. O exemplo a seguir cria um usuário do Azure AD, bob@contoso.com, com base no logon bob@contoso.com. Esse logon foi criado no exemplo [CREATE LOGIN](create-login-transact-sql.md#examples).
+ Entre na instância gerenciada com um logon do Azure AD concedido com a função `sysadmin`. O exemplo a seguir cria um usuário do Azure AD, bob@contoso.com, com base no logon bob@contoso.com. Esse logon foi criado no exemplo [CREATE LOGIN](create-login-transact-sql.md#examples-4).
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];

@@ -18,12 +18,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bc4ed369b51187a86e9436e6612522d6707a3d54
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: a133f41fb429a2cfe910020e1fefb768436888c4
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71682041"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142789"
 ---
 # <a name="compatibility-certification"></a>Certificação de compatibilidade
 
@@ -45,7 +45,7 @@ Usar a Certificação de Compatibilidade é uma abordagem valiosa à modernizaç
 
 A possibilidade de afetar negativamente a funcionalidade e o desempenho são os principais fatores de risco de qualquer atualização. A Certificação de Compatibilidade representa a tranquilidade em termos de gerenciamento destes riscos de atualização:
 
--  No que se refere ao comportamento do [!INCLUDE[tsql](../../includes/tsql-md.md)], qualquer alteração significa que um aplicativo precisa ser recertificado quanto à exatidão. No entanto, a configuração de [nível de compatibilidade do banco de dados](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) oferece compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] apenas para o banco de dados especificado, não para todo o servidor. Manter o nível de compatibilidade do banco de dados no estado em que se encontra faz as consultas de aplicativo existentes continuarem exibindo o mesmo comportamento antes e depois de uma atualização [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Para saber mais sobre o comportamento [!INCLUDE[tsql](../../includes/tsql-md.md)] e níveis de compatibilidade, confira [Usar níveis de compatibilidade para compatibilidade com versões anteriores](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#using-compatibility-level-for-backward-compatibility).
+-  No que se refere ao comportamento do [!INCLUDE[tsql](../../includes/tsql-md.md)], qualquer alteração significa que um aplicativo precisa ser recertificado quanto à exatidão. No entanto, a configuração de [nível de compatibilidade do banco de dados](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) oferece compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] apenas para o banco de dados especificado, não para todo o servidor. Manter o nível de compatibilidade do banco de dados no estado em que se encontra faz as consultas de aplicativo existentes continuarem exibindo o mesmo comportamento antes e depois de uma atualização [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Para saber mais sobre o comportamento [!INCLUDE[tsql](../../includes/tsql-md.md)] e níveis de compatibilidade, confira [Usar níveis de compatibilidade para compatibilidade com versões anteriores](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat).
 
 -  Em relação ao desempenho, como as melhorias no Otimizador de Consulta são introduzidas com cada versão, poderia ser esperado encontrar diferenças de plano de consulta entre diferentes versões do [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. As diferenças de plano de consulta no escopo de uma atualização geralmente se convertem em risco quando há potencial de que algumas alterações possam ser prejudiciais para uma determinada consulta ou carga de trabalho. Por sua vez, esse risco é uma motivação para a recertificação, que pode atrasar atualizações e gerar desafios de ciclo de vida e de suporte. 
    A mitigação de riscos de atualização é o motivo pelo qual os aprimoramentos do Otimizador de Consulta estão restritos ao nível de compatibilidade padrão de uma nova versão. A Certificação de Compatibilidade inclui a **proteção de forma do plano de consulta**: a noção de que manter um nível de compatibilidade do banco de dados no estado em que se encontra imediatamente após uma atualização do [!INCLUDE[ssde_md](../../includes/ssde_md.md)] significa que o modelo de otimização de consulta usado para criar planos de consulta na nova versão é o mesmo que era antes da atualização e que a forma do plano de consulta não deve ser alterado. 
@@ -53,7 +53,7 @@ A possibilidade de afetar negativamente a funcionalidade e o desempenho são os 
    > [!NOTE]
    > **Forma do plano de consulta** refere-se à representação visual dos vários operadores que compõem um plano de consulta. Isso inclui operadores como buscas, verificações, junções e classificações, bem como as conexões entre eles que indicam o fluxo de dados e a ordem das operações. A forma do plano de consulta é determinada pelo otimizador de consulta. Para obter mais informações, confira o [Guia da Arquitetura de Processamento de Consultas](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements).
    
-   Para obter mais informações, confira [Como usar níveis de compatibilidade para compatibilidade com versões anteriores](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#using-compatibility-level-for-backward-compatibility).
+   Para obter mais informações, confira [Como usar níveis de compatibilidade para compatibilidade com versões anteriores](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat).
    
 Desde que o aplicativo não precise aproveitar os aprimoramentos que estão disponíveis somente em níveis mais altos de compatibilidade do banco de dados, esta é uma abordagem válida para atualizar o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e manter o nível de compatibilidade do banco de dados anterior, sem a necessidade de recertificar um aplicativo. Para saber mais, confira [Níveis de compatibilidade e Atualizações do Mecanismo de Banco de Dados](#compatibility-levels-and-database-engine-upgrades) mais adiante neste artigo.
 

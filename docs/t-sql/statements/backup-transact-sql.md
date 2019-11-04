@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 867ad139d591827a2159e77bbcdd33dbb85c6b6d
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 5204e876de1517f794f654bbfbc545203cca4888
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028957"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142863"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -608,7 +608,7 @@ DISK='Y:\SQLServerBackups\AdventureWorks2.bak',
 DISK='Z:\SQLServerBackups\AdventureWorks3.bak'
 WITH FORMAT,
   MEDIANAME = 'AdventureWorksStripedSet0',
-  MEDIADESCRIPTION = 'Striped media set for AdventureWorks2012 database;
+  MEDIADESCRIPTION = 'Striped media set for AdventureWorks2012 database';
 GO
 ```
 
@@ -1205,6 +1205,8 @@ Erros de BACKUP DATABASE nas seguintes condições:
 - O compartilhamento de rede de destino não tem espaço suficiente para o backup. O comando BACKUP DATABASE não confirma a existência de espaço em disco suficiente antes de iniciar o backup, possibilitando a geração de um erro de falta de espaço em disco durante a execução de BACKUP DATABASE. Quando ocorrer falta de espaço em disco suficiente, o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] reverterá o comando BACKUP DATABASE. Para diminuir o tamanho do banco de dados, execute [DBCC SHRINKLOG (SQL Data Warehouse do Azure)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)
 - Tentativa de iniciar um backup em uma transação.
 
+::: moniker-end
+::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## <a name="general-remarks"></a>Comentários gerais
 
 Antes de executar um backup de banco de dados, use [DBCC SHRINKLOG (SQL Data Warehouse do Azure)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) para diminuir o tamanho do banco de dados.
@@ -1217,6 +1219,8 @@ Se você cancelar um comando BACKUP, o [!INCLUDE[ssPDW](../../includes/sspdw-md.
 
 Os backups completos e os backups diferenciais são armazenados em diretórios separados. Não são impostas convenções de nomenclatura para especificar que um backup completo e um backup diferencial se pertencem. Controle isso usando suas próprias convenções de nomenclatura. Como alternativa, você pode controlar isso usando a opção WITH DESCRIPTION para adicionar uma descrição e, em seguida, usando a instrução RESTORE HEADERONLY para recuperar a descrição.
 
+::: moniker-end
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 ## <a name="limitations-and-restrictions"></a>Limitações e Restrições
 
 Não é possível executar um backup diferencial do banco de dados mestre. Apenas os backups completos do banco de dados mestre são compatíveis.

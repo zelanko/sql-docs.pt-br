@@ -25,19 +25,19 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e9ff3121d9a961981b1a6933f3e1433999c72ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061150"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064682"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Define um nível de prioridade e o conjunto de critérios para determinar quais conversas do [!INCLUDE[ssSB](../../includes/sssb-md.md)] devem ser atribuídas ao nível de prioridade. O nível de prioridade é atribuído a qualquer ponto de extremidade de conversa que use a mesma combinação de contratos e serviços especificada na prioridade de conversa. As prioridades variam em valor, de 1 (baixa) a 10 (alta). O padrão é 5.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -220,7 +220,7 @@ CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/BasePriority]
 ### <a name="d-creating-three-priority-levels-for-a-target-service-by-using-services"></a>D. Criando três níveis de prioridade para um serviço de destino com o uso de serviços  
  Dá suporte a um sistema que fornece três níveis de desempenho: Ouro (alto), Prata (médio) e Bronze (baixo). Há um contrato, mas cada nível tem um serviço iniciador separado. Todos os serviços de iniciador se comunicam com um serviço de destino central.  
   
-```  
+```sql  
 CREATE BROKER PRIORITY GoldInitToTargetPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContract,  
@@ -262,7 +262,7 @@ CREATE BROKER PRIORITY BronzeTargetToInitPriority
 ### <a name="e-creating-three-priority-levels-for-multiple-services-using-contracts"></a>E. Criando três níveis de prioridade para vários serviços com o uso de contratos  
  Dá suporte a um sistema que fornece três níveis de desempenho: Ouro (alto), Prata (médio) e Bronze (baixo). Cada nível tem um contrato separado. Estas prioridades se aplicam a qualquer serviço mencionado por conversas que usam os contratos.  
   
-```  
+```sql  
 CREATE BROKER PRIORITY GoldPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = GoldContract,  
