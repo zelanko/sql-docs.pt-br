@@ -1,6 +1,6 @@
 ---
 title: Armazenar dados criptografados do servidor de relatório (Gerenciador de Configurações do SSRS) | Microsoft Docs
-ms.date: 05/31/2016
+ms.date: 10/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a83f5812347dfc827795de747f9c8119e3ba6245
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3277c1b96102ee6eb7145359c165c011a6724f1
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513288"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988429"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Chaves de criptografia do SSRS – Armazenar dados criptografados do servidor de relatório
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena valores criptografados no banco de dados do servidor de relatório e em arquivos de configuração. A maioria dos valores criptografados é credencial usada para acessar fontes de dados externas que fornecem dados a relatórios. Este tópico descreve quais valores são criptografados, a funcionalidade de criptografia usada no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], entre outros tipos de dados confidenciais armazenados sobre os quais é útil saber mais a respeito.  
@@ -50,7 +50,9 @@ ms.locfileid: "62513288"
   
  Dados no banco de dados do servidor de relatório são criptografados por meio de uma chave simétrica. Há uma única chave simétrica para cada banco de dados de servidor de relatório. Essa chave simétrica é criptografada usando a chave pública de um par de chaves assimétricas gerado pelo Windows. A chave privada é mantida pela conta do serviço Servidor de Relatório do Windows.  
   
- Em uma implantação em expansão do servidor de relatório, na qual várias instâncias do servidor de relatório compartilham o mesmo banco de dados de servidor de relatório, uma única chave simétrica é usada por todos os nós do servidor de relatório. É necessário que cada nó tenha uma cópia da chave simétrica compartilhada. Uma cópia da chave simétrica é criada automaticamente para cada nó quando a implantação de extensão é configurada. Cada nó criptografa a sua cópia da chave simétrica usando uma chave pública de um par de chaves específico para a sua conta do serviço do Windows. Para saber mais sobre como a chave simétrica é criada para implantações de expansão e de instância única, veja [Inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Em uma implantação em expansão do servidor de relatório, na qual várias instâncias do servidor de relatório compartilham o mesmo banco de dados de servidor de relatório, uma única chave simétrica é usada por todos os nós do servidor de relatório. É necessário que cada nó tenha uma cópia da chave simétrica compartilhada. Uma cópia da chave simétrica é criada automaticamente para cada nó quando a implantação de extensão é configurada. Cada nó criptografa a sua cópia da chave simétrica usando uma chave pública de um par de chaves específico para a sua conta do serviço do Windows. Para saber mais sobre como a chave simétrica é criada para implantações escaláveis e de instância única, consulte [Inicializar um servidor de relatório &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ 
+ Além disso, a partir do 2019, o banco de dados do servidor de relatório pode ser configurado com Transparent Data Encryption no SQL Server para fornecer proteção adicional para seus dados em repouso.
   
 > [!NOTE]  
 >  Ao alterar a conta do serviço Servidor de Relatório do Windows, as chaves assimétricas podem se tornar inválidas, o que interromperá operações do servidor. Para evitar esse problema, use sempre a ferramenta Configuração do Reporting Services para modificar configurações da conta do serviço. Ao usar a ferramenta de configuração, as chaves são atualizadas automaticamente. Para obter mais informações, veja [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  

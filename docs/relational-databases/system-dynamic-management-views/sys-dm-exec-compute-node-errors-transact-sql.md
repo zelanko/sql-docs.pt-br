@@ -1,7 +1,7 @@
 ---
-title: sys.dm_exec_compute_node_errors (Transact-SQL) | Microsoft Docs
+title: sys. dm _exec_compute_node_errors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,33 +22,35 @@ ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d47c6ae6d43b48b83be934a0bbfcce822e16fc42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b074da717a2c5deac9d576da938d1229dafeac77
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097881"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532785"
 ---
-# <a name="sysdmexeccomputenodeerrors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
+# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys. dm _exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Erros de retorna que ocorrem no PolyBase nós de computação.  
+  Retorna os erros que ocorrem em nós de computação do polybase.  
   
 |Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|error_id|**nvarchar(36)**|Id numérico exclusivo associado ao erro.|Exclusivo em todos os erros de consulta no sistema|  
-|source|**nvarchar(255)**|Descrição da fonte de thread ou processo||  
-|type|**nvarchar(255)**|Tipo de erro.||  
-|create_time|**datetime**|A hora da ocorrência do erro||  
-|compute_node_id|**int**|Identificador do nó de computação específico|Consulte compute_node_id dos [DM exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
-|rexecution_id|**nvarchar(36)**|Identificador da consulta do PolyBase, se houver.||  
-|spid|**int**|Identificador da sessão do SQL Server||  
-|thread_id|**int**|Identificador numérico do thread no qual ocorreu o erro.||  
-|details|nvarchar(4000)|Descrição completa dos detalhes do erro.||  
+|error_id|`nvarchar(36)`|ID numérica exclusiva associada ao erro.|Exclusivo em todos os erros de consulta no sistema|  
+|origem|`nvarchar(255)`|Descrição do thread ou processo de origem||  
+|tipo|`nvarchar(255)`|Tipo de erro.||  
+|create_time|`datetime`|A hora da ocorrência de erro||  
+|compute_node_id|`int`|Identificador do nó de computação específico|Confira compute_node_id de [Sys. dm &#40;_EXEC_COMPUTE_NODES Transact-&#41; SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
+|rexecution_id|`nvarchar(36)`|Identificador da consulta do polybase, se houver.||  
+|spid|`int`|Identificador da sessão de SQL Server||  
+|thread_id|`int`|Identificador numérico do thread no qual o erro ocorreu.||  
+|detalhes|nvarchar(4000)|Descrição completa dos detalhes do erro.||
+|compute_pool_id|`int`|Identificador exclusivo do pool.|
+
   
 ## <a name="see-also"></a>Consulte também  
- [Solução de problemas com exibições de gerenciamento dinâmico do PolyBase](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Solução de problemas do polybase com exibições de gerenciamento dinâmico](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Banco de dados relacionados a exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Exibições &#40;de gerenciamento dinâmico relacionadas ao banco de dados TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

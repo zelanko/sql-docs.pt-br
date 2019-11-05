@@ -1,7 +1,7 @@
 ---
-title: sys.dm_exec_dms_workers (Transact-SQL) | Microsoft Docs
+title: sys. dm _exec_dms_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,48 +22,49 @@ ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3728fddb26d45107b0e695453bef6eeb9fa5de63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fd005563251ba674449020c7af25ce20ea98b4a
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097768"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532938"
 ---
-# <a name="sysdmexecdmsworkers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
+# <a name="sysdm_exec_dms_workers-transact-sql"></a>sys. dm _exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Contém informações sobre todos os trabalhadores concluindo as etapas do DMS.  
+  Contém informações sobre todos os trabalhos concluindo as etapas de DMS.  
   
- Essa exibição mostra os dados para os últimos 1000 solicitações e solicitações ativas; solicitações ativas sempre têm os dados presentes nesta exibição.  
+ Esta exibição mostra os dados das últimas 1000 solicitações e solicitações ativas; as solicitações ativas sempre têm os dados presentes nessa exibição.  
   
 |Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|Consulta que este trabalhador DMS é parte of.request_id, step_index, e dms_step_index formam a chave para esta exibição.||  
-|step_index|**int**|Etapa que este trabalhador DMS faz parte de consulta.|Veja o índice da etapa na [DM exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
-|dms_step_index|**int**|Etapa no plano de DMS que este trabalhador está executando.|Consulte [sys.dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
-|compute_node_id|**int**|Nó que o trabalhador está sendo executado.|Ver [DM exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
-|distribution_id|**int**|||  
-|type|**nvarcha(32)**|||  
-|status|**nvarchar(32)**|Status desta etapa|'Pending', 'Running', 'Complete', 'Failed', 'UndoFailed', 'PendingCancel', 'Cancelled', 'Undone', 'Aborted'|  
-|bytes_per_sec|**bigint**|||  
-|bytes_processed|**bigint**|||  
-|rows_processed|**bigint**|||  
-|start_time|**datetime**|Hora em que a etapa começou execução|Menor ou igual à hora atual e maior ou igual a end_compile_time da consulta ao qual pertence essa etapa.|  
-|end_time|**datetime**|Hora em que esta etapa concluiu a execução, foi cancelada ou falhou.|Menor ou igual à hora atual e maior ou igual a start_time, definido como NULL para etapas atualmente em execução ou na fila.|  
-|total_elapsed_time|**int**|Quantidade total de tempo de que execução a etapa de consulta, em milissegundos|Entre 0 e a diferença entre end_time e start_time. 0 para etapas em fila.|  
-|cpu_time|**bigint**|||  
-|query_time|**int**|||  
-|buffers_available|**int**|||  
-|dms_cpid|**int**|||  
-|sql_spid|**int**|||  
-|error_id|**nvarchar(36)**|||  
-|source_info|**nvarchar(4000)**|||  
-|destination_info|**nvarchar(4000)**|||  
-|command|**nvarchar(4000)**|||  
-  
+|execution_id|`nvarchar(32)`|Consulte se esse trabalho DMS faz parte de. request_id, step_index e dms_step_index formam a chave para essa exibição.||  
+|step_index|`int`|Etapa de consulta para a qual este trabalho DMS faz parte.|Consulte índice de etapa em [Sys. dm &#40;_EXEC_DISTRIBUTED_REQUEST_STEPS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
+|dms_step_index|`int`|Etapa no plano DMS que esse trabalho está executando.|Consulte [Sys. dm _exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
+|compute_node_id|`int`|Nó no qual o trabalho está sendo executado.|Consulte [Sys. dm _exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|distribution_id|`int`|||  
+|tipo|`nvarcha(32)`|||  
+|status|`nvarchar(32)`|Status desta etapa|' Pendente ', ' em execução ', ' Concluído ', ' falha ', ' UndoFailed ', ' PendingCancel ', ' cancelado ', ' desfeito ', ' anulado '|  
+|bytes_per_sec|`bigint`|||  
+|bytes_processed|`bigint`|||  
+|rows_processed|`bigint`|||  
+|start_time|`datetime`|Hora em que a execução da etapa foi iniciada|Menor ou igual à hora atual e maior ou igual a end_compile_time da consulta à qual essa etapa pertence.|  
+|end_time|`datetime`|A hora em que esta etapa concluiu a execução, foi cancelada ou falhou.|Menor ou igual à hora atual e maior ou igual a start_time, definido como nulo para as etapas atualmente em execução ou na fila.|  
+|total_elapsed_time|`int`|Quantidade total de tempo que a etapa de consulta foi executada, em milissegundos|Entre 0 e a diferença entre end_time e start_time. 0 para etapas em fila.|  
+|cpu_time|`bigint`|||  
+|query_time|`int`|||  
+|buffers_available|`int`|||  
+|dms_cpid|`int`|||  
+|sql_spid|`int`|||  
+|error_id|`nvarchar(36)`|||  
+|source_info|`nvarchar(4000)`|||  
+|destination_info|`nvarchar(4000)`|||  
+|command|`nvarchar(4000)`|||
+|compute_pool_id|`int`|Identificador exclusivo do pool.|
+
 ## <a name="see-also"></a>Consulte também  
- [Solução de problemas com exibições de gerenciamento dinâmico do PolyBase](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Solução de problemas do polybase com exibições de gerenciamento dinâmico](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Banco de dados relacionados a exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Exibições &#40;de gerenciamento dinâmico relacionadas ao banco de dados TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   
