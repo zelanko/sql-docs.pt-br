@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 42cd70465f890e1da1f40076da5e41f0b4b40884
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 4e3c7cfdc24c55dde67e8abe5473b934fc6ac5f4
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278919"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72989557"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurar um banco de dados em um novo local (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,25 +108,25 @@ ms.locfileid: "70278919"
 2.  Use a instrução [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) para restaurar o backup completo do banco de dados. Por padrão, os arquivos de dados e de log são restaurados em seus locais originais. Para realocar um banco de dados, use a opção MOVE para realocar cada um dos arquivos do banco de dados e para evitar colisões com arquivos existentes.  
 
   A sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] básica para restaurar o banco de dados em um novo local e com um novo nome é:  
-  
+  ```sql
   RESTORE DATABASE *new_database_name*  
   
   FROM *backup_device* [ ,...*n* ]  
   
   [ WITH  
+ 
+   {  
   
-  {  
+      [ **RECOVERY** | NORECOVERY ]  
   
-  [ **RECOVERY** | NORECOVERY ]  
+      [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
   
-  [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
-  
-  [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
+      [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
   
   }  
   
   ;  
-  
+  ```
   > [!NOTE] 
   > Ao se preparar para realocar um banco de dados em um disco diferente, você deve verificar se espaço suficiente está disponível e identificar todas as colisões potenciais com arquivos existentes. Isso envolve o uso de uma instrução [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) que especifica os mesmos parâmetros MOVE que você planeja usar em sua instrução RESTORE DATABASE.  
   

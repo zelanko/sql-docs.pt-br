@@ -1,7 +1,7 @@
 ---
 title: Fazer upgrade do Mecanismo de Banco de Dados | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cff2727815c5cd6cada3d2111e0aada4e722f800
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 7dcf58da00887f396568367982da97b9c75e32ad
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122958"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531561"
 ---
 # <a name="upgrade-database-engine"></a>Atualizar o Mecanismo de Banco de Dados
 
@@ -41,6 +41,6 @@ ms.locfileid: "70122958"
 
     Para saber mais sobre novos recursos e melhores comportamentos disponíveis após alterar um nível de compatibilidade do banco de dados, confira [Diferenças entre níveis de compatibilidade](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-stored-procedures).
 
-5.  [Aproveite os Novos Recursos do SQL Server](https://www.microsoft.com/sql-server/sql-server-2017). Por fim, depois de concluir as etapas anteriores, você estará pronto para explorar, aproveitando as vantagens de novos aprimoramentos específicos do mecanismo de banco de dados. Este artigo sugere alguns desses aperfeiçoamentos e fornece links para mais informações.  
+5.  [Aproveite os Novos Recursos do SQL Server](https://www.microsoft.com/sql-server/sql-server-2019). Por fim, depois de concluir as etapas anteriores, você estará pronto para explorar, aproveitando as vantagens de novos aprimoramentos específicos do mecanismo de banco de dados. Este artigo sugere alguns desses aperfeiçoamentos e fornece links para mais informações.  
   
   

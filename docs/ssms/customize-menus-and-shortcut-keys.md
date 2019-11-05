@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,14 +19,16 @@ helpviewer_keywords:
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 528c9e96e8615224b6d081a4d953e95874fec766
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.reviewer: ''
+ms.openlocfilehash: 6492b85430ac29fe690de9c41cd7a1625e409b20
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266928"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532878"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizar menus e teclas de atalho
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Um acelerador de teclado permite selecionar um comando de menu ou botão pressionando ALT+ *\<letra única>* . Por exemplo, para abrir o menu **Editar** , pressione ALT+E. Você pode reorganizar e modificar os botões da barra de ferramentas, menus e comandos de menu usando a caixa de diálogo **Personalizar** . São fornecidas instruções para alterar as configurações usando o mouse e usando apenas o teclado.  
   
