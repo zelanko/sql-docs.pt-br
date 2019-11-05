@@ -193,7 +193,7 @@ ms.locfileid: "68769258"
  Este exemplo mostra como alterar a Distribuição e as propriedades do banco de dados de distribuição.  
   
 > [!IMPORTANT]  
->  Para evitar credenciais de armazenagem no código, a nova senha do Distribuidor é fornecida a tempo de execução.  
+>  Para evitar credenciais de armazenagem no código, a nova senha do Distribuidor é fornecida a runtime.  
   
  [!code-cs[HowTo#rmo_ChangeDistPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changedistpub)]  
   

@@ -238,13 +238,13 @@ ms.locfileid: "70846633"
 6.  Chame o método <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> para criar o trabalho do Agente de Instantâneo para a publicação.  
   
 ###  <a name="PShellExample"></a> Exemplos (RMO)  
- Esse exemplo ativa o banco de dados AdventureWorks para publicação transacional; define um trabalho do Agente de Leitor de Log e cria a publicação AdvWorksProductTran. É preciso definir um artigo para essa publicação. As credenciais da conta do Windows necessárias para criar o trabalho do Log Reader Agent e o do Snapshot Agent são passadas em tempo de execução. Para saber como usar RMO para definir artigos instantâneos e transacionais, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+ Esse exemplo ativa o banco de dados AdventureWorks para publicação transacional; define um trabalho do Agente de Leitor de Log e cria a publicação AdvWorksProductTran. É preciso definir um artigo para essa publicação. As credenciais da conta do Windows necessárias para criar o trabalho do Log Reader Agent e o do Snapshot Agent são passadas em runtime. Para saber como usar RMO para definir artigos instantâneos e transacionais, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
  [!code-cs[HowTo#rmo_CreateTranPub](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createtranpub)]  
   
  [!code-vb[HowTo#rmo_vb_CreateTranPub](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createtranpub)]  
   
- Esse exemplo ativa o banco de dados AdventureWorks para publicação de mesclagem e cria a publicação AdvWorksSalesOrdersMerge. Artigos ainda precisam ser definidos para essa publicação. As credenciais da conta do Windows, necessárias para criar o trabalho do Agente de Instantâneo, são passadas em tempo de execução. Para saber como usar RMO para definir artigos de mesclagem, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+ Esse exemplo ativa o banco de dados AdventureWorks para publicação de mesclagem e cria a publicação AdvWorksSalesOrdersMerge. Artigos ainda precisam ser definidos para essa publicação. As credenciais da conta do Windows, necessárias para criar o trabalho do Agente de Instantâneo, são passadas em runtime. Para saber como usar RMO para definir artigos de mesclagem, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
  [!code-cs[HowTo#rmo_CreateMergePub](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createmergepub)]  
   

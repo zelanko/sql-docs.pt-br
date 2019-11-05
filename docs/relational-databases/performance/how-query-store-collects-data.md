@@ -34,7 +34,7 @@ O Repositório de Consultas do SQL Server funciona como um gravador de dados de 
 |Exibição|Descrição|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|Apresenta os textos de consulta exclusivos executados no banco de dados. Comentários e espaços antes e depois o texto da consulta são ignorados. Comentários e espaços dentro do texto não são ignorados. Cada instrução no lote gera uma entrada de texto de consulta separada.|  
-|**sys.query_context_settings**|Apresenta as combinações exclusivas do plano que afetam as configurações em que as consultas são executadas. O mesmo texto de consulta executado com um plano diferente, afetando as configurações produz uma entrada de consulta separada no Repositório de Consultas porque `context_settings_id` faz parte da chave de consulta.|  
+|**sys.query_context_settings**|Apresenta as combinações exclusivas do plano que afetam as configurações em que as consultas são executadas. O mesmo texto de consulta, executado com configurações diferentes que afetam um plano, produz uma entrada de consulta separada no Repositório de Consultas porque `context_settings_id` faz parte da chave de consulta.|  
 |**sys.query_store_query**|Entradas de consulta que são controladas e forçadas separadamente no Repositório de Consultas. Um único texto de consulta poderá gerar várias entradas de consulta se elas forem executadas em configurações de contextos diferentes ou se forem executadas fora versus dentro de diferentes módulos do [!INCLUDE[tsql](../../includes/tsql-md.md)], como procedimentos armazenados e gatilhos.|  
 |**sys.query_store_plan**|Apresenta estimativa de plano para a consulta com as estatísticas de tempo de compilação. O plano armazenado é equivalente ao que você obtém usando o `SET SHOWPLAN_XML ON`.|  
 |**sys.query_store_runtime_stats_interval**|O Repositório de Consultas divide o tempo em janelas de tempo geradas automaticamente (intervalos) e armazena estatísticas agregadas no intervalo para cada plano executado. O tamanho do intervalo é controlado pela opção de configuração **Intervalo de Coleta de Estatísticas** (em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) ou `INTERVAL_LENGTH_MINUTES` usando [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
@@ -43,11 +43,11 @@ O Repositório de Consultas do SQL Server funciona como um gravador de dados de 
  Para obter mais informações sobre modos de exibição do Repositório de Consultas, confira a seção "Exibições, funções e procedimentos relacionados" de [Monitorando o desempenho com o repositório de consultas](monitoring-performance-by-using-the-query-store.md). 
   
 ## <a name="query-processing"></a>Processamento de consulta
- O Repositório de Consultas interage com o pipeline de processamento de consulta nos pontos-chave a seguir:
+ O Repositório de Consultas interage com o pipeline de processamento de consulta nos seguintes pontos-chave:
   
 1.  Quando uma consulta é compilada pela primeira vez, o texto de consulta e o plano inicial são enviados ao Repositório de Consultas.
   
-2.  Quando uma consulta é recompilada, isso significa que o plano é atualizado no Repositório de Consultas. Se for criado um novo plano, o Repositório de Consultas adicionará a nova entrada de plano para a consulta, mantendo as anteriores juntos com as respectivas estatísticas de execução.
+2.  Quando uma consulta é recompilada, o plano é atualizado no Repositório de Consultas. Se for criado um novo plano, o Repositório de Consultas adicionará a nova entrada de plano para a consulta, mantendo as anteriores juntos com as respectivas estatísticas de execução.
   
 3.  Após a execução da consulta, as estatísticas de runtime são enviadas para o Repositório de Consultas. O Repositório de Consultas mantém estatísticas agregadas precisas para cada plano que foi executado dentro do intervalo ativo no momento. 
   

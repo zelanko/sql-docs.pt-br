@@ -151,11 +151,11 @@ Crie uma assinatura push no Publicador ou Assinante, usando o Assistente para No
 > Quando você está criando uma assinatura push em um Publicador com um Distribuidor remoto, os valores especificados para todos os parâmetros, inclusive *job_login* e *job_password*, são enviados para o Distribuidor como texto sem formatação. Você deve criptografar a conexão entre o Publicador e seu Distribuidor remoto antes de executar esse procedimento armazenado. Para obter mais informações, confira [Habilitar conexões criptografadas no mecanismo de banco de dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
- O exemplo a seguir cria uma nova assinatura push para uma publicação transacional. Os valores de logon e senha são fornecidos em tempo de execução por meio de variáveis de script **sqlcmd**.  
+ O exemplo a seguir cria uma nova assinatura push para uma publicação transacional. Os valores de logon e senha são fornecidos em runtime por meio de variáveis de script **sqlcmd**.  
   
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/create-a-push-subscription_1.sql)]  
   
- O exemplo a seguir cria uma nova assinatura push para uma publicação de mesclagem. Os valores de logon e senha são fornecidos em tempo de execução por meio de variáveis de script **sqlcmd**.  
+ O exemplo a seguir cria uma nova assinatura push para uma publicação de mesclagem. Os valores de logon e senha são fornecidos em runtime por meio de variáveis de script **sqlcmd**.  
   
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/create-a-push-subscription_2.sql)]  
   
@@ -246,13 +246,13 @@ Crie uma assinatura push no Publicador ou Assinante, usando o Assistente para No
 > Ao criar uma assinatura push em um Publicador com um Distribuidor remoto, os valores fornecidos para todas as propriedades, inclusive <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, são enviados para o Distribuidor como texto sem formatação. É necessário criptografar a conexão entre o Publicador e o respectivo Distribuidor remoto antes de chamar o método <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>. Para obter mais informações, confira [Habilitar conexões criptografadas no mecanismo de banco de dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ###  <a name="PShellExample"></a> Exemplos (RMO)  
- Esse exemplo cria uma nova assinatura push para uma publicação transacional. As credenciais da conta do Windows usadas para executar o trabalho do Agente de Distribuição são passadas em tempo de execução.  
+ Esse exemplo cria uma nova assinatura push para uma publicação transacional. As credenciais da conta do Windows usadas para executar o trabalho do Agente de Distribuição são passadas em runtime.  
   
  [!code-cs[HowTo#rmo_CreateTranPushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createtranpushsub)]  
   
  [!code-vb[HowTo#rmo_vb_CreateTranPushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createtranpushsub)]  
   
- Esse exemplo cria uma nova assinatura push para uma publicação de mesclagem. As credenciais da conta do Windows usadas para executar o trabalho do Agente de Mesclagem são passadas em tempo de execução.  
+ Esse exemplo cria uma nova assinatura push para uma publicação de mesclagem. As credenciais da conta do Windows usadas para executar o trabalho do Agente de Mesclagem são passadas em runtime.  
   
  [!code-cs[HowTo#rmo_CreateMergePushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createmergepushsub)]  
   

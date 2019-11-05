@@ -246,7 +246,7 @@ ms.locfileid: "72907977"
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 > [!IMPORTANT]  
->  Em todos os procedimentos a seguir, quando possível, solicite aos usuários que digitem as credenciais de segurança em tempo de execução. Se armazenar credenciais em um arquivo de script, proteja o arquivo para evitar acesso não autorizado.  
+>  Em todos os procedimentos a seguir, quando possível, solicite aos usuários que digitem as credenciais de segurança em runtime. Se armazenar credenciais em um arquivo de script, proteja o arquivo para evitar acesso não autorizado.  
   
 #### <a name="to-change-all-instances-of-a-stored-password-at-a-replication-server"></a>Para alterar todas as instâncias de uma senha armazenada em um servidor de replicação  
   
