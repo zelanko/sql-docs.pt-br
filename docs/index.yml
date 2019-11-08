@@ -6,17 +6,17 @@ metadata:
   title: Documentação do Microsoft SQL | Microsoft Docs
   description: Saiba como usar o Microsoft SQL Server para gerencias suas necessidades de banco de dados, no local e na nuvem.
   ms.topic: hub-page
-  ms.openlocfilehash: dfacfdd1d8df0c90705a1d77a9a98937ea5ac692
-  ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+  ms.openlocfilehash: b1e77857e3b4a9b5159a20c10eec5fdb5a403f85
+  ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/04/2019
-  ms.locfileid: "73595461"
+  ms.lasthandoff: 11/07/2019
+  ms.locfileid: "73757215"
 highlightedContent:
   items:
-  - title: Experimente o SQL Server 2019 (versão prévia)
+  - title: Experimente o SQL Server 2019
     itemType: download
-    url: https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp
+    url: https://www.microsoft.com/evalcenter/evaluate-sql-server-2019
   - title: Obter uma VM do Azure com o SQL Server
     itemType: overview
     url: https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm
