@@ -1,5 +1,5 @@
 ---
-title: Resultado do exemplo de conjunto de | Microsoft Docs
+title: Exemplo de conjunto de resultados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: a0590ba6-3856-4731-bb29-87b0a1c1b795
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dd5cec5623cfca499fcd4d1eb1ce93faec1dd36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f562a49ceb0bcc455c99aad1053af93209717f00
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62782139"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637635"
 ---
 # <a name="result-set-sample"></a>Exemplo de conjunto de resultados
   Às vezes, é útil poder executar comandos e, ao mesmo tempo, ler os resultados de uma consulta sem abrir uma nova conexão e sem ler todos os resultados na memória. O recurso MARS (Multiple Active Result Set) no ADO.NET 2.0 é uma tecnologia que pode ajudar a conseguir isso. Atualmente, MARS não é implementado para o provedor em processo usado para programação de servidor. Para solucionar essa limitação, você pode usar cursores de servidor. Este exemplo demonstra como usar cursores de servidor para solucionar a falta de suporte a MARS para programação de servidor.  
@@ -25,10 +25,10 @@ ms.locfileid: "62782139"
   
  A API dessa classe é semelhante a um leitor de dados, exceto pelo fato de que você pode avançar ou recuar no conjunto de resultados e de que outros comandos podem ser emitidos na conexão enquanto o conjunto de resultados está aberto. Esta implementação é altamente simplificada para facilitar a compreensão do exemplo. Uma implementação mais eficiente buscaria várias linhas para evitar um retorno do banco de dados por linha buscada. O uso dessa classe pode ter um volume de memória significativamente menor do que preencher um conjunto de dados com todos os resultados de uma consulta, o que é muito importante para programação do servidor. Esse exemplo também demonstra como usar o atributo "Permitir chamadores parcialmente confiáveis" para indicar que o assembly de conjunto de resultados é uma biblioteca que pode ser chamada com segurança de outros assemblies. Essa abordagem é um pouco mais complexa, mas muito mais segura do que registrar o assembly de chamada por meio de permissão não segura. É mais segura porque, com o registro do assembly de chamada como seguro, o assembly de chamada limita o impacto nos recursos do servidor e evita danos à integridade do servidor.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para criar e executar este projeto, o software a seguir deve estar instalado:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
   
 -   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](https://go.microsoft.com/fwlink/?linkid=62796)Developer  
   

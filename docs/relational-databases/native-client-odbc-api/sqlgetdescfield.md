@@ -14,40 +14,39 @@ ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d88ec567d1afe3286df9e25535837178f9719f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08d6a42d7b078fce5e50c16712dfb97897148e23
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67910819"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786530"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client expõe campos de descritor específicos de driver apenas para o IRD (descritor de linhas de implementação). No IRD, a referência aos campos de descritor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é feita com atributos de coluna específicos de driver. Para obter uma lista completa dos campos de descritor específicos de driver disponíveis, consulte [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md).  
   
  Os campos de descritor que contêm cadeias de caracteres de identificador de coluna são, em geral, cadeias de comprimento zero. Todos os valores de campos de descritor específicos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]são somente leitura.  
   
- Como os atributos recuperados com SQLColAttribute, campos de descritor que os atributos de nível de linha do relatório (como SQL_CA_SS_COMPUTE_ID) são relatados para todas as colunas no conjunto de resultados.  
+ Como os atributos recuperados com SQLColAttribute, os campos de descritor que relatam atributos de nível de linha (como SQL_CA_SS_COMPUTE_ID) são relatados para todas as colunas no conjunto de resultados.  
   
 ## <a name="sqlgetdescfield-and-table-valued-parameters"></a>SQLGetDescField e parâmetros com valor de tabela  
- SQLGetDescField pode ser usado para obter valores de atributos estendidos de parâmetros com valor de tabela e colunas de parâmetro com valor de tabela. Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros com valor de tabela &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ SQLGetDescField pode ser usado para obter valores para atributos estendidos de parâmetros com valor de tabela e colunas de parâmetro com valor de tabela. Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros &#40;com valor&#41;de tabela ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlgetdescfield-support-for-enhanced-date-and-time-features"></a>Suporte do SQLGetDescField a recursos avançados de data e hora  
  Para obter informações sobre os campos de descritor disponíveis com os novos tipos de data/hora, consulte [Parameter and Result Metadata](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- Para obter mais informações, consulte [aprimoramentos de data e hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obter mais informações, consulte [melhorias &#40;de data e&#41;hora em ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
- A partir [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], pode retornar a SQLGetDescField **SQL_C_SS_TIME2** (para **tempo** tipos) ou **SQL_C_SS_TIMESTAMPOFFSET** (para  **DateTimeOffset**) em vez de **SQL_C_BINARY**, se seu aplicativo usar o ODBC 3.8.  
+ A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], SQLGetDescField pode retornar **SQL_C_SS_TIME2** (para tipos de **tempo** ) ou **SQL_C_SS_TIMESTAMPOFFSET** (para **DateTimeOffset**) em vez de **SQL_C_BINARY**, se seu aplicativo usar o ODBC 3,8.  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>Suporte do SQLGetDescField a UDTs de CLR grandes  
- O**SQLGetDescField** dá suporte a UDTs (tipos definidos pelo usuário) de CLR grandes. Para obter mais informações, consulte [Large CLR User-Defined tipos &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ O**SQLGetDescField** dá suporte a UDTs (tipos definidos pelo usuário) de CLR grandes. Para obter mais informações, consulte [ &#40;ODBC&#41;grandes tipos de CLR definidos pelo usuário](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>Suporte do SQLGetDescField a colunas esparsas  
- SQLGetDescField pode ser usado para consultar o novo campo IRD SQL_CA_SS_IS_COLUMN_SET para determinar se uma coluna é uma **column_set** coluna.  
+ SQLGetDescField pode ser usado para consultar o novo campo IRD SQL_CA_SS_IS_COLUMN_SET para determinar se uma coluna é uma coluna de **column_set** .  
   
- Para obter mais informações, consulte [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
+ Para obter mais informações, consulte [colunas esparsas &#40;dão suporte a ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="example"></a>Exemplo  
   

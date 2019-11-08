@@ -1,5 +1,5 @@
 ---
-title: Método SetStringValue (classe SqlServiceAdvancedProperty) | Microsoft Docs
+title: Método SetStringValue (classe SqlServiceAdvancedProperty)
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68eaccce3d82ddb0085a73c6fbbce751b69e245a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da797051ba3ce9c8a0d818388c999e89c7300e9f
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139535"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659498"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>Método SetStringValue (classe SqlServiceAdvancedProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ object.SetStringValue(StrValue)
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|*strValue*|Um valor da cadeia de caracteres que especifica o valor da propriedade avançada.|  
+|*StrValue*|Um valor da cadeia de caracteres que especifica o valor da propriedade avançada.|  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor **uint32** , que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  
   
 ## <a name="remarks"></a>Comentários  
- O tipo de valor de propriedade deve ser **cadeia de caracteres** ser capaz de definir a propriedade como um valor de cadeia de caracteres.  
+ O tipo de valor da propriedade deve ser uma **cadeia de caracteres** para poder definir a propriedade como um valor de cadeia de caracteres.  
   
 ## <a name="see-also"></a>Consulte também  
  [Iniciando e parando serviços](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

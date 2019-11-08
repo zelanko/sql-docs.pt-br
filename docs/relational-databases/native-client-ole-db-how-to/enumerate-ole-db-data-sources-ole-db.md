@@ -1,5 +1,5 @@
 ---
-title: Enumerar fontes de dados OLE DB (OLE DB) | Microsoft Docs
+title: Enumerar OLE DB fontes de dados (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e9d649077a5fe754840463a3902ef4a32080be5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 803e3de97115bea9c467044d59a1a5a305836fa3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110339"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790102"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Enumerar fontes de dados OLE DB (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Este exemplo mostra como usar o objeto enumerador para listar as fontes de dados disponíveis.  
   

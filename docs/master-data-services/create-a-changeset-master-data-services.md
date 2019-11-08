@@ -1,5 +1,5 @@
 ---
-title: Criar um conjunto de alterações (Master Data Services) | Microsoft Docs
+title: Criar um Conjunto de Alterações
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e3e15590e2d8f8e3317c8d116ebbeac7049fb1ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 859eb2c829b7d6f35aa39cb2301a4a380c0d039e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079747"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729630"
 ---
 # <a name="create-a-changeset-master-data-services"></a>Criar um Conjunto de Alterações (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Um conjunto de alterações é uma coleção das alterações pendentes nos dados mestre. Se a entidade requer aprovação para alterações, as alterações pendentes devem ser salvas em um conjunto de alterações e, em seguida, enviadas para aprovação do administrador.  
+  Um conjunto de alterações é uma coleção de alterações pendentes nos dados mestre. Se a entidade requer aprovação para alterações, as alterações pendentes devem ser salvas em um conjunto de alterações e, em seguida, enviadas para aprovação do administrador.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
   

@@ -1,5 +1,5 @@
 ---
-title: Atributos (Master Data Services) | Microsoft Docs
+title: Atributos
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4634ae8941b9acd0667b69974b3192109b81fff2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19cbf51a9ac022674e9dfec7b287a38d16af00cf
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047583"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728755"
 ---
 # <a name="attributes-master-data-services"></a>Atributos (Master Data Services)
 
@@ -33,9 +33,9 @@ ms.locfileid: "68047583"
 ## <a name="how-attributes-relate-to-other-model-objects"></a>Como os atributos se relacionam com outros objetos modelo  
  Você pode pensar em um atributo como uma coluna em uma tabela de entidade. Um valor de atributo é o valor usado para descrever um membro específico.  
   
- ![Entidade do Master Data Services representada como tabela](../master-data-services/media/mds-conc-entity-table.gif "Entidade do Master Data Services representada como tabela")  
+ ![Master Data Services entidade representada como tabela](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services entidade representada como tabela")  
   
- Ao criar uma entidade que contém muitos atributos, você pode organizar os atributos em grupos de atributos. Para obter mais informações, consulte [Grupos de atributos &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md).  
+ Ao criar uma entidade que contém muitos atributos, você pode organizar os atributos em grupos de atributos. Para obter mais informações, consulte [Attribute Groups &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md).  
   
 ## <a name="required-attributes"></a>Atributos necessários.  
  Quando você cria uma entidade, os atributos Name e Code são criados automaticamente. Code requer um valor e precisa ser exclusivo dentro da entidade. Não é possível remover os atributos Name e Code.  
@@ -45,7 +45,7 @@ ms.locfileid: "68047583"
   
 -   Atributos de forma livre que permitem entrada de forma livre para texto, números, datas ou links.  
   
--   Atributos baseados em domínio que são populados por entidades. Para obter mais informações, consulte [Atributos baseados em domínio &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
+-   Atributos baseados em domínio que são populados por entidades. Para obter mais informações, consulte [Domain-Based Attributes &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
   
 -   Atributos de arquivo, que são usados para armazenar arquivos, documentos ou imagens. A finalidade dos atributos de arquivo é ajudar na consistência dos seus dados ao exigir que os arquivos tenham uma extensão específica. Os atributos de arquivo não impedem que um usuário mal-intencionado carregue um arquivo de um tipo diferente.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "68047583"
 -   Um valor poderá não fazer uma *viagem de ida e volta* se um número de ponto flutuante estiver envolvido. Diz-se que um valor faz uma viagem de ida e volta quando uma operação converte um número de ponto flutuante original para outra forma, uma operação inversa transforma a forma convertida de volta para um número de ponto flutuante e o número de ponto flutuante final é igual ao número de ponto flutuante original. A viagem de ida e volta pode falhar porque um ou mais dígitos menos significantes são perdidos ou alterados na conversão.  
   
 ## <a name="attribute-examples"></a>Exemplos de atributos  
- No seguinte exemplo, a entidade tem os atributos: Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto. Esses atributos descrevem os membros, Cada membro é representado por uma única linha de valores de atributo.  
+ No exemplo a seguir, a entidade tem os atributos: Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto. Esses atributos descrevem os membros, Cada membro é representado por uma única linha de valores de atributo.  
   
- ![Tabela de entidade de produto de bicicleta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabela de entidade de produto de bicicleta")  
+ ![Tabela de entidades de produto de bicicleta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabela de entidades de produto de bicicleta")  
   
  No exemplo a seguir, a entidade Product contém:  
   
@@ -75,7 +75,7 @@ ms.locfileid: "68047583"
   
  Subcategory é uma entidade usada como atributo com base em domínio da entidade Product. Category é uma entidade usada como atributo com base em domínio de Subcategory. Assim como a entidade Product, as entidades Category e Subcategory contêm os atributos padrão Name e Code.  
   
- ![Estrutura de árvore de entidade de produto](../master-data-services/media/mds-conc-entity-ui.gif "Estrutura de árvore de entidade de produto")  
+ ![Estrutura de árvore de entidade do produto](../master-data-services/media/mds-conc-entity-ui.gif "Estrutura de árvore de entidade do produto")  
   
 ## <a name="related-tasks"></a>Tarefas relacionadas  
   

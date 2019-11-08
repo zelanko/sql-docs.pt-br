@@ -1,5 +1,5 @@
 ---
-title: Criar um fluxo de trabalho personalizado (Master Data Services) | Microsoft Docs
+title: Criar um fluxo de trabalho personalizado
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 87090611cd294e1af72484c4b0c03fcec1fe4f04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03e4c5c55610a0a6ac76b1183ae3cc43e72d028e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033949"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729325"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Criar um fluxo de trabalho personalizado (Master Data Services)
 
@@ -37,7 +37,7 @@ ms.locfileid: "68033949"
 5.  O Serviço de Integração de Fluxo de Trabalho MDS do SQL Server encaminha os dados para seu assembly de manipulador de fluxo de trabalho.  
   
 > [!NOTE]  
->  Observação: Serviço de integração de fluxo de trabalho MDS do SQL Server deve disparar processos simples. Se seu código personalizado exigir processamento complexo, conclua seu processamento em um thread separado ou fora do processo de fluxo de trabalho.  
+>  Observação: o Serviço de Integração de Fluxo de Trabalho do MDS do SQL Server deve disparar processos simples. Se seu código personalizado exigir processamento complexo, conclua seu processamento em um thread separado ou fora do processo de fluxo de trabalho.  
   
 ## <a name="configure-master-data-services-for-custom-workflows"></a>Configurar Master Data Services para fluxos de trabalho personalizados  
  A criação de um fluxo de trabalho personalizado requer gravação de um código personalizado e configuração do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para transmitir dados de fluxo de trabalho a seu manipulador de fluxo de trabalho. Siga estas etapas para habilitar o processamento de fluxo de trabalho personalizado:  
@@ -63,9 +63,9 @@ ms.locfileid: "68033949"
   
 3.  Adicione 'using Microsoft.MasterDataServices.Core.Workflow;' ao seu arquivo de código C#.  
   
-4.  Herde de <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> em sua declaração de classe. A declaração de classe deve ser semelhante a: ' public class WorkflowTester: IWorkflowTypeExtender'.  
+4.  Herde de <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> em sua declaração de classe. A declaração de classe deve ser semelhante a: 'public class WorkflowTester : IWorkflowTypeExtender'.  
   
-5.  Implementar a interface <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. O método <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> é chamado pelo Serviço de Integração de Fluxo de Trabalho MDS SQL Server para iniciar o fluxo de trabalho.  
+5.  Implemente a interface <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. O método <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> é chamado pelo Serviço de Integração de Fluxo de Trabalho MDS SQL Server para iniciar o fluxo de trabalho.  
   
 6.  Copie seu assembly no local do executável do Serviço de Integração de Fluxo de trabalho MDS do SQL Server, denominado Microsoft.MasterDataServices.Workflow.exe, em \<Sua pasta de instalação>\Master Data Services\WebApplication\bin.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "68033949"
   
 1.  Use o snap-in Serviços para parar o serviço.  
   
-2.  Abra um prompt de comando, navegue até o local do serviço e execute o serviço no modo de console inserindo: Microsoft.MasterDataServices.Workflow.exe-console.  
+2.  Abra um prompt de comando, navegue para local do serviço e execute o serviço no modo de console inserindo: Microsoft.MasterDataServices.Workflow.exe - console.  
   
 3.  No [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], atualize seu membro e aplique regras de negócios novamente. Logs detalhados são exibidos na janela do console.  
   

@@ -10,16 +10,15 @@ ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb6edcb8855bdcc5deb6ff5943f89263f4d8c4be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 380d76fe0740a6c43584a68f9353d85539867fe3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987411"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761403"
 ---
 # <a name="metadata-discovery"></a>Descoberta de metadados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   A melhoria na descoberta de metadados no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] permite que aplicativos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client assegurem que os metadados de colunas ou parâmetros retornados da execução de uma consulta sejam idênticos ou compatíveis com o formato de metadados especificado antes da execução da consulta. Você receberá um erro se os metadados retornados depois da execução da consulta não forem compatíveis com o formato de metadados especificado antes da execução da consulta.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "67987411"
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   ICommandWithParameters:: Getparameterinfo (consulte [ICommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md) para obter mais informações)  
+-   ICommandWithParameters:: GetParameterInfo (consulte [ICommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md) para obter mais informações)  
   
  Você também verá uma melhoria no desempenho ao especificar o formato de metadados usando IBCPSession::BCPSetBulkMode  
   

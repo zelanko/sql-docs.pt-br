@@ -1,5 +1,5 @@
 ---
-title: Data e hora conversões de tipo de dados (ODBC) | Microsoft Docs
+title: conversões de tipo de dados DateTime (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,16 +15,15 @@ ms.assetid: 66b9d282-c88d-40e5-93c2-fd5499a74458
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d16221a47f2cee588d0c5ef38aaa179b61bdf8f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8c5d601f53492b72efbcf730200fbd431f2649b1
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030394"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783914"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>Conversões do tipo de dados datetime (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   As conversões a seguir já estão definidas pelo ODBC ou são uma extensão consistente do ODBC. As conversões fornecidas por cada provedor são determinadas pela comunidade atendida pelo provedor e, com frequência, existem inconsistências entre os resultados. Os valores entre colchetes são opcionais.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "68030394"
   
 -   O formato de cadeias de caracteres de data é 'aaaa-mm-dd'  
   
- As conversões de cadeias de caracteres permitem uma flexibilidade nos espaços em branco e na largura dos campos. Para obter mais informações, consulte o "formatos de dados: Seção cadeias de caracteres e literais"de [suporte de tipo de dados para ODBC aprimoramentos de data e hora](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md).  
+ As conversões de cadeias de caracteres permitem uma flexibilidade nos espaços em branco e na largura dos campos. Para obter mais informações, consulte a seção "formatos de dados: cadeias de caracteres e literais" do [suporte de tipo de dados para aprimoramentos de data e hora ODBC](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md).  
   
  Seguem as regras de conversão gerais:  
   
@@ -62,6 +61,6 @@ ms.locfileid: "68030394"
  Lista os problemas a serem considerados ao converter tipos de data/hora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em tipos do C.  
   
 ## <a name="see-also"></a>Consulte também  
- [Aprimoramentos de data e hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Aprimoramentos &#40;de data e hora do ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

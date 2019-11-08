@@ -1,5 +1,5 @@
 ---
-title: Anotar uma transação (Master Data Services) | Microsoft Docs
+title: Anotar uma transação
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e12ef7cf4be0259029b6214bd821bf85f89df73b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17474c603e437dd0cb2dcfbedf5e444ba50ba3ae
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047782"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728794"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>Anotar uma transação (Master Data Services)
 

@@ -1,5 +1,5 @@
 ---
-title: Classe SqlErrorLogFile | Microsoft Docs
+title: Classe SqlErrorLogFile
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 849a487cefc5ec0be58eabcc2e312b7dd047aa4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0dd923f17fe0267edf40d07da982d0856ec4ba06
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052474"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659050"
 ---
 # <a name="sqlerrorlogfile-class"></a>Classe SqlErrorLogFile
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,14 +37,14 @@ class SQLErrorLogFile
 ```  
   
 ## <a name="properties"></a>Propriedades  
- A classe SQLErrorLogFile define as propriedades a seguir.  
+ A classe sqllogsfile define as propriedades a seguir.  
   
 |||  
 |-|-|  
-|ArchiveNumber|Tipo de dados: **uint32**<br /><br /> Tipo de acesso: Somente leitura<br /><br /> <br /><br /> O número do arquivo morto do arquivo de log.|  
+|ArchiveNumber|Tipo de dados: **UInt32**<br /><br /> Tipo de acesso: Somente leitura<br /><br /> <br /><br /> O número do arquivo morto do arquivo de log.|  
 |InstanceName|Tipo de dados: **cadeia de caracteres**<br /><br /> Tipo de acesso: Somente leitura<br /><br /> Qualificadores: Chave<br /><br /> <br /><br /> O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] onde o arquivo de log reside.|  
-|LastModified|Tipo de dados: **datetime**<br /><br /> Tipo de acesso: Somente leitura<br /><br /> <br /><br /> A data da última modificação do arquivo de log.|  
-|LogFileSize|Tipo de dados: **uint32**<br /><br /> Tipo de acesso: Somente leitura<br /><br /> <br /><br /> O tamanho do arquivo de log, em bytes.|  
+|lastModified|Tipo de dados: **DateTime**<br /><br /> Tipo de acesso: Somente leitura<br /><br /> <br /><br /> A data da última modificação do arquivo de log.|  
+|LogFileSize|Tipo de dados: **UInt32**<br /><br /> Tipo de acesso: Somente leitura<br /><br /> <br /><br /> O tamanho do arquivo de log, em bytes.|  
 |Nome|Tipo de dados: **cadeia de caracteres**<br /><br /> Tipo de acesso: Somente leitura<br /><br /> Qualificadores: Chave<br /><br /> <br /><br /> O nome do arquivo de log.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -56,7 +56,7 @@ class SQLErrorLogFile
 |Namespace|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir recupera informações sobre todos os arquivos de log do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para executar o exemplo, substitua \< *Instance_Name*> com o nome da instância, por exemplo, 'instância1'.  
+ O exemplo a seguir recupera informações sobre todos os arquivos de log do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para executar o exemplo, substitua \<*Instance_Name*> pelo nome da instância, por exemplo, ' instance1 '.  
   
 ```  
 on error resume next  
@@ -83,21 +83,21 @@ Next
 ```  
   
 ## <a name="security"></a>Segurança  
- Para se conectar a um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo de log por meio do WMI, você deve ter as seguintes permissões em ambos os computadores locais e remotos:  
+ Para se conectar a um arquivo de log [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do WMI, você deve ter as seguintes permissões nos computadores locais e remotos:  
   
--   Acesso de leitura para o **Root\Microsoft\SqlServer\ComputerManagement10** namespace WMI. Por padrão, todos usuários têm acesso de leitura por meio da permissão Habilitar Conta.  
+-   Acesso de leitura ao namespace WMI do **Root\Microsoft\SqlServer\ComputerManagement10** . Por padrão, todos usuários têm acesso de leitura por meio da permissão Habilitar Conta.  
   
     > [!NOTE]  
-    >  Para obter informações sobre como verificar permissões de WMI, consulte a seção de segurança do tópico [arquivos de Log Offline exibição](../../relational-databases/logs/view-offline-log-files.md).  
+    >  Para obter informações sobre como verificar as permissões de WMI, consulte a seção segurança do tópico [Exibir arquivos de log offline](../../relational-databases/logs/view-offline-log-files.md).  
   
--   Permissão de leitura para a pasta que contém os logs de erros. Por padrão, o erro logs estão localizados no caminho a seguir (onde \< *unidade >* representa a unidade onde você instalou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \< *InstanceName*> é o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   Permissão de leitura para a pasta que contém os logs de erros. Por padrão, os logs de erros estão localizados no caminho a seguir (em que \<*unidade >* representa a unidade em que você instalou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \<*InstanceName*> é o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
   
-     **\<Unidade >: \Program Files\Microsoft SQL Server\MSSQL11** **.\< InstanceName > \mssql\log.**  
+     **\<Drive >: \Program Files\Microsoft SQL Server\MSSQL11** **.\<InstanceName > \MSSQL\Log**  
   
- Se você se conectar através de um firewall, verifique se uma exceção está definida no firewall para WMI em computadores de destino remotos. Para obter mais informações, consulte [conectar-se ao WMI iniciando remotamente com o Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
+ Se você se conectar através de um firewall, verifique se uma exceção está definida no firewall para WMI em computadores de destino remotos. Para obter mais informações, consulte [conectando-se ao WMI remotamente a partir do Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
   
 ## <a name="see-also"></a>Consulte também  
- [Classe SqlErrorLogEvent](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)   
+   [classe SqlErrorLogEvent](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)  
  [Exibir arquivos de log offline](../../relational-databases/logs/view-offline-log-files.md)  
   
   

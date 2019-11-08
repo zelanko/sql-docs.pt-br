@@ -1,5 +1,5 @@
 ---
-title: Exemplo de manipulação de cadeia de caracteres de reconhecimento de suplementares | Microsoft Docs
+title: Exemplo de manipulação de cadeia de caracteres com reconhecimento suplementar | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,20 +10,20 @@ ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 48017f32b5c010498dc089982900b60f03371830
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dbbcb468a4de093b6664c71e20716ea62e2b1fc3
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780486"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637713"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Exemplo de manipulação de cadeias de caracteres com reconhecimento de suplementares
-  O exemplo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] demonstra o processamento de cadeia de caracteres com reconhecimento de caracteres suplementares. Este exemplo mostra a implementação de cinco funções da cadeia de caracteres do Transact-SQL que fornecem as mesmas funções de manipulação de cadeia de caracteres, como as funções internas, porém com capacidade de reconhecimento de caracteres suplementares adicionais para tratar cadeias de caracteres suplementares e Unicode. As cinco funções são lens, `lefts(), rights(), subs()` e `replace_s()` que são equivalentes às funções internas `LEN(), LEFT(), RIGHT(), SUBSTRING()` e `REPLACE()` funções de cadeia de caracteres.  
+  O exemplo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] demonstra o processamento de cadeia de caracteres com reconhecimento de caracteres suplementares. Este exemplo mostra a implementação de cinco funções da cadeia de caracteres do Transact-SQL que fornecem as mesmas funções de manipulação de cadeia de caracteres, como as funções internas, porém com capacidade de reconhecimento de caracteres suplementares adicionais para tratar cadeias de caracteres suplementares e Unicode. As cinco funções são lentes (), `lefts(), rights(), subs()` e `replace_s()` que são equivalentes às funções internas `LEN(), LEFT(), RIGHT(), SUBSTRING()` e `REPLACE()` funções de cadeia de caracteres.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para criar e executar este projeto, o software a seguir deve estar instalado:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
   
 -   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](https://go.microsoft.com/fwlink/?linkid=62796)Developer  
   

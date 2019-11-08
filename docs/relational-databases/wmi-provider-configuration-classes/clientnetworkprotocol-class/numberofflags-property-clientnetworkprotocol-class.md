@@ -1,6 +1,6 @@
 ---
-title: Propriedade NumberOfFlags (classe ClientNetworkProtocol) | Microsoft Docs
-ms.custom: ''
+title: Propriedade NumberOfFlags (ClientNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 7a656644-2154-419f-9787-99877f597770
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 38ee03d14250e49da21ae5be8526ae52f96ac380
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48f81c86a823d75d501187ef953930ec92083d27
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041194"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659123"
 ---
 # <a name="numberofflags-property-clientnetworkprotocol-class"></a>Propriedade NumberOfFlags (classe ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Obtém o número de opções de sinalizador exigido pelo protocolo de rede do cliente especificado pelo [método SetOrderValue (classe ClientNetworkProtocol)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md).  
+  Obtém o número de opções de sinalizador exigidas pelo protocolo de rede do cliente especificado pelo [Método SetOrderValue (classe ClientNetworkProtocol)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,8 +39,8 @@ object.NumberofFlags [= value]
  *object*  
  Um objeto da [classe ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) que representa o protocolo de rede usado pelo cliente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
- Um **Uint32** que especifica o número de opções de sinalizador exigido pelo protocolo de rede do cliente referenciado pelo valor de **OrderValue** propriedade.  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
+ Um valor **UInt32** que especifica o número de opções de sinalizador exigidas pelo protocolo de rede de cliente referenciado pela propriedade **OrderValue** .  
   
 ## <a name="remarks"></a>Comentários  
   

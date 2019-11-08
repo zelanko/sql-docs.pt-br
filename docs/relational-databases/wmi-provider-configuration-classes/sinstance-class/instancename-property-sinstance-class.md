@@ -1,6 +1,6 @@
 ---
-title: Propriedade InstanceName (classe SInstance) | Microsoft Docs
-ms.custom: ''
+title: Propriedade InstanceName (SInstance)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e6472fae-870d-4fb3-84d0-0c8f6599d1d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 925badfe82659e0effa34f585cf9e5d43a99df00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c80c41a6ef0a9bd9b057effc0cae950584a3dfd6
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052635"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659146"
 ---
 # <a name="instancename-property-sinstance-class"></a>Propriedade InstanceName (classe SInstance)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,14 +37,14 @@ object.InstanceName [= value]
   
 ## <a name="parts"></a>Partes  
  *object*  
- Uma [classe SInstance](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) objeto que representa uma instância de servidor.  
+ Um objeto de [classe SInstance](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) que representa uma instância de servidor.  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor da cadeia de caracteres que especifica o nome da instância do cliente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurando protocolos de rede do servidor e bibliotecas de rede](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurando protocolos de rede do servidor e bibliotecas net](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

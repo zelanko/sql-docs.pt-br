@@ -19,16 +19,15 @@ ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 969d4b7218ae7a6b1f04ee75ad95c8ee8ba54690
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: c30e6ca03f1d1d4c794d01bd594efd88306410e3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907365"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73759036"
 ---
 # <a name="stored-procedures---calling"></a>Procedimentos armazenados – Chamando
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Um procedimento armazenado pode ter zero ou mais parâmetros. Também pode retornar um valor. Ao usar o provedor de OLE DB de cliente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nativo, os parâmetros para um procedimento armazenado podem ser passados por:  
   
@@ -129,7 +128,7 @@ ms.locfileid: "72907365"
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

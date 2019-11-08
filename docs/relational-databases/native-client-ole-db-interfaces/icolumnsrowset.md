@@ -11,16 +11,15 @@ ms.assetid: e35d37ed-dd9b-4a34-a76a-bc9251f06c4f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f9eb3adc3d864d3970a68776ebb4cf912649cf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b3314e1db238b5320a611e980f4b6cfbc718171b
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091440"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73763198"
 ---
 # <a name="icolumnsrowset"></a>IColumnsRowset
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client acrescenta a coluna DBCOLUMN_BASETABLEINSTANCE a IColumnsRowset::GetColumnRowset. Essa coluna retorna DBTYPE_I2 e é reservada para uso pela Microsoft. As informações nessa coluna estão sujeitas à alteração em versões futuras.  
   

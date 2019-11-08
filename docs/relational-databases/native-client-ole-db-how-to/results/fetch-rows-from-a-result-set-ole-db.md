@@ -1,5 +1,5 @@
 ---
-title: Buscar linhas em um conjunto de resultados (OLE DB) | Microsoft Docs
+title: Buscar linhas de um conjunto de resultados (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: 8e9916a5-61e1-468e-8a5c-1ab8b5110737
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 880f98a73d384361113068c822da715da12f12cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22257604ca0aefcb58ea543df999adb506074f87
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908197"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789902"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>Buscar linhas em um conjunto de resultados (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Este exemplo mostra como buscar linhas em um conjunto de resultados. Este exemplo não tem suporte em IA64.  
   

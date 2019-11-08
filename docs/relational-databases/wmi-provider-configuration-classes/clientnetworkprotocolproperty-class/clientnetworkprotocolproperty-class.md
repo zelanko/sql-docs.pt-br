@@ -1,5 +1,5 @@
 ---
-title: Classe ClientNetworkProtocolProperty | Microsoft Docs
+title: Classe ClientNetworkProtocolProperty
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 910a3c48b4fa2aa42797bdb9b60cd6d0f19ff302
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd96072358100583689cd00b218d578180940de3
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040795"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660199"
 ---
 # <a name="clientnetworkprotocolproperty-class"></a>Classe ClientNetworkProtocolProperty
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

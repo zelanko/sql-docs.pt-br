@@ -1,6 +1,6 @@
 ---
-title: Método SetNumValue (classe SqlServiceAdvancedProperty) | Microsoft Docs
-ms.custom: ''
+title: Método SetNumValue (SqlServiceAdvancedProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5e1056b-0b75-4ad6-99c1-89246010d815
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 25e22196d73335219fc376cf5a89422521fcf4ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 037ba2877b8bbcd3de1378de7e39d1f007a95c52
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139593"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659491"
 ---
 # <a name="setnumvalue-method-sqlserviceadvancedproperty-class"></a>Método SetNumValue (classe SqlServiceAdvancedProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ object.SetNumValue(NumValue)
 |---------------|-----------------|  
 |*NumValue*|Um valor **uint32** que especifica o valor da propriedade avançada.|  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor **uint32** , que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  
   
 ## <a name="remarks"></a>Comentários  

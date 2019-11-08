@@ -11,28 +11,28 @@ helpviewer_keywords:
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 8828a439e9685529068ab160a44d5a38a5e8555e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3e7e854b532040c9a0d9468ad98a7e08048569de
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002455"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632670"
 ---
 # <a name="new-project-ssma-accesstosql"></a>Novo projeto (SSMA) (AccessToSQL)
-Use o **novo projeto** caixa de diálogo para criar um novo projeto SSMA. Para acessar o **novo projeto** caixa de diálogo do **arquivo** menu, clique em **novo projeto**.  
+Use a caixa de diálogo **novo projeto** para criar um novo projeto do SSMA. Para acessar a caixa de diálogo **novo projeto** , no menu **arquivo** , clique em **novo projeto**.  
   
 ## <a name="options"></a>Opções  
-**Name**  
+**Nome**  
   
 Insira o nome do projeto. O SSMA acrescentará a extensão de arquivo.  
   
 **Local**  
   
-Digite ou navegue até a pasta ou o local de rede para salvar o projeto.  
+Insira ou navegue até o local da pasta ou da rede para salvar o projeto.  
   
-**MigrateTo**  
+**Migrar para**  
   
-Selecione uma da versão do banco de dados de destino abaixo da lista  
+Selecione uma das versões de banco de dados de destino na lista abaixo  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
@@ -47,6 +47,6 @@ Selecione uma da versão do banco de dados de destino abaixo da lista
 -   SQL Azure  
   
 > [!IMPORTANT]  
-> Requer um novo projeto do tipo 'SQL Azure ', o SQL Server Native Client (SNAC) versão 10.5 ou acima para acesso de vincular tabelas ao banco de dados do SQL Azure.   
-> Você pode obter a versão mais recente do SNAC partir [Microsoft® SQL Server® 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=196940).  
+> Um novo projeto do tipo ' SQL Azure ' requer, SQL Server Native Client (SNAC) versão 10,5 ou superior para vincular as tabelas de acesso ao banco de dados SQL Azure.   
+> Você pode obter a versão mais recente do SNAC do [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978).  
   

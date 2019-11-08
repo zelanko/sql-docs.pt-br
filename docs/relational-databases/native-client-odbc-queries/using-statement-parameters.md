@@ -19,16 +19,15 @@ ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1168c81d8eeb6a25b84f473858bc924f529a572
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e5cec08809ffbd0d51ce017bbd5ff09f45410f4
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058670"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73779544"
 ---
 # <a name="using-statement-parameters"></a>Usando parâmetros de instrução
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Um parâmetro é uma variável em uma instrução SQL que pode permitir a aplicativo ODBC:  
   
@@ -36,9 +35,9 @@ ms.locfileid: "68058670"
   
 -   Aprimorar a interação do usuário na construção dos critérios de consulta.  
   
--   Gerencie **texto**, **ntext**, e **imagem** dados e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-tipos de dados C específicos.  
+-   Gerencie dados **Text**, **ntext**e **Image** e tipos de dados C específicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Por exemplo, uma **partes** tabela tem colunas nomeadas **PartID**, **descrição**, e **preço**. Adicionar uma parte sem parâmetros exige a criação de uma instrução SQL como, por exemplo:  
+ Por exemplo, uma tabela de **peças** tem colunas denominadas **partid**, **Descrição**e **preço**. Adicionar uma parte sem parâmetros exige a criação de uma instrução SQL como, por exemplo:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  

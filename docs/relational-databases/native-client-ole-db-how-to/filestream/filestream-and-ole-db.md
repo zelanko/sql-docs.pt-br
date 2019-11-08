@@ -11,16 +11,15 @@ ms.assetid: 8801f091-2241-4085-87b7-33e031328c9c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da4b01d6e691b2964d2dbb0381d405aaf68d5ba5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b9c42cabb34d78086e31f9b59096ac4c78558f5
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110209"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73768179"
 ---
 # <a name="filestream-and-ole-db"></a>Filestream e BD OLE
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Esta seção contém quatro exemplos que mostram como usar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB com o recurso filestream:  
   

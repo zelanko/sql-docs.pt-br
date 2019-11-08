@@ -16,22 +16,21 @@ ms.assetid: 4b24139f-788b-45a6-86dc-ae835435d737
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 905bb0458cd2793887814fbffed5132d9c421493
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: b8ad5561de57c88e052d09741444c1608ea77086
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708071"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73785311"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>Gerenciando tamanhos de lote para cópia em massa
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   A principal finalidade de um lote em operações de cópia em massa é definir o escopo de uma transação. Se o tamanho de um lote não for definido, as funções de cópia em massa irão considerar uma cópia em massa inteira como uma única transação. Se o tamanho do lote for definido, cada lote constituirá uma transação que será confirmada quando o lote terminar.  
   
  Se uma cópia em massa for executada sem tamanho de lote especificado e um erro for retornado, a cópia em massa inteira será revertida. A recuperação de uma cópia em massa longa pode levar muito tempo. Quando um tamanho de lote é definido, a cópia em massa considera cada lote uma transação e confirma cada lote. Se um erro for encontrado, apenas o último lote pendente precisará ser revertido.  
   
- O tamanho do lote também pode afetar a sobrecarga de bloqueios. Ao executar uma cópia em massa em relação a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a dica TABLOCK pode ser especificada usando [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) para adquirir um bloqueio de tabela em vez de bloqueios de linha. É possível manter um bloqueio de tabela com sobrecarga mínima para uma operação de cópia em massa inteira. Se TABLOCK não for especificada, os bloqueios serão mantidos em filas individuais e a sobrecarga da manutenção de todos os bloqueios durante a cópia em massa poderá prejudicar o desempenho. Pelo fato de os bloqueios só serem mantidos durante o tempo de uma transação, a especificação do tamanho de um lote trata esse problema gerando periodicamente uma confirmação que libera os bloqueios mantidos.  
+ O tamanho do lote também pode afetar a sobrecarga de bloqueios. Ao executar uma cópia em massa no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a dica TABLOCK pode ser especificada usando [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) para adquirir um bloqueio de tabela em vez de bloqueios de linha. É possível manter um bloqueio de tabela com sobrecarga mínima para uma operação de cópia em massa inteira. Se TABLOCK não for especificada, os bloqueios serão mantidos em filas individuais e a sobrecarga da manutenção de todos os bloqueios durante a cópia em massa poderá prejudicar o desempenho. Pelo fato de os bloqueios só serem mantidos durante o tempo de uma transação, a especificação do tamanho de um lote trata esse problema gerando periodicamente uma confirmação que libera os bloqueios mantidos.  
   
  O número de linhas que compõem um lote pode ter efeitos significativos no desempenho quando a operação de cópia em massa é feita em um grande número de linhas. As recomendações de tamanho de lote dependem do tipo de cópia em massa que está sendo executada.  
   
@@ -41,9 +40,9 @@ ms.locfileid: "71708071"
   
  Ao copiar em massa de um arquivo de dados, o tamanho do lote é especificado chamando **bcp_control** com a opção BCPBATCH antes de chamar [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md). Ao copiar em massa de variáveis de programa usando [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) e [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), o tamanho do lote é controlado chamando [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) depois de chamar [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) *x* vezes, em que *x* é o número de linhas em um lote.  
   
- Além de especificar o tamanho de uma transação, os lotes também controlam quando serão enviadas linhas ao servidor através da rede. As funções de cópia em massa normalmente armazenam em cache as linhas de **bcp_sendrow** até que um pacote de rede seja preenchido e, em seguida, envie o pacote completo para o servidor. No entanto, quando um aplicativo chama **bcp_batch**, o pacote atual é enviado ao servidor, independentemente de ele ter sido preenchido. O uso de um tamanho de lote muito baixo pode prejudicar o desempenho se resultar no envio de muitos pacotes parcialmente preenchidos para o servidor. Por exemplo, chamar **bcp_batch** depois de cada **bcp_sendrow** faz com que cada linha seja enviada em um pacote separado e, a menos que as linhas sejam muito grandes, desperdiça espaço em cada pacote. O tamanho padrão dos pacotes de rede para SQL Server é de 4 KB, embora um aplicativo possa alterar o tamanho chamando [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) especificando o atributo SQL_ATTR_PACKET_SIZE.  
+ Além de especificar o tamanho de uma transação, os lotes também controlam quando serão enviadas linhas ao servidor através da rede. As funções de cópia em massa normalmente armazenam em cache as linhas de **bcp_sendrow** até que um pacote de rede seja preenchido e, em seguida, envie o pacote completo para o servidor. Quando um aplicativo chama **bcp_batch**, no entanto, o pacote atual é enviado ao servidor, independentemente de ele ter sido preenchido. O uso de um tamanho de lote muito baixo pode prejudicar o desempenho se resultar no envio de muitos pacotes parcialmente preenchidos para o servidor. Por exemplo, chamar **bcp_batch** depois de cada **bcp_sendrow** faz com que cada linha seja enviada em um pacote separado e, a menos que as linhas sejam muito grandes, desperdiça espaço em cada pacote. O tamanho padrão dos pacotes de rede para SQL Server é de 4 KB, embora um aplicativo possa alterar o tamanho chamando [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) especificando o atributo SQL_ATTR_PACKET_SIZE.  
   
- Outro efeito colateral dos lotes é que cada lote é considerado um conjunto de resultados pendentes até que seja concluído com **bcp_batch**. Se qualquer outra operação for tentada em um identificador de conexão enquanto um lote estiver pendente, o driver ODBC do cliente nativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emitirá um erro com SQLState = "HY000" e uma cadeia de caracteres de mensagem de erro:  
+ Outro efeito colateral dos lotes é que cada lote é considerado um conjunto de resultados pendentes até que seja concluído com **bcp_batch**. Se qualquer outra operação for tentada em um identificador de conexão enquanto um lote estiver pendente, o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client emitirá um erro com SQLState = "HY000" e uma cadeia de caracteres de mensagem de erro:  
   
 ```  
 "[Microsoft][SQL Server Native Client] Connection is busy with  
@@ -51,7 +50,7 @@ results for another hstmt."
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Executando operações &#40;de cópia em&#41;massa ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
+ [Executando operações &#40;de cópia em&#41; massa  ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
  [Importação e exportação em massa de dados &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)  
   
   

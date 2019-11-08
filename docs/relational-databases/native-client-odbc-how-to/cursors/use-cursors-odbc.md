@@ -13,16 +13,15 @@ ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e5ac9edd01981b7f9c483b2e8002a2f741b4502
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 16124d582d5651462e0ba0fda657fe66097b9a63
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939541"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781620"
 ---
 # <a name="use-cursors-odbc"></a>Usar cursores (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
     
 ### <a name="to-use-cursors"></a>Para usar cursores  
@@ -47,7 +46,7 @@ ms.locfileid: "67939541"
   
      Use a associação por coluna.  
   
-     \- ou -  
+     \- ou –  
   
      Use a associação por linha.  
   
@@ -76,6 +75,6 @@ ms.locfileid: "67939541"
      Você pode controlar o tipo de cursor usado definindo SQL_ATTR_CURSOR_TYPE e SQL_ATTR_CONCURRENCY ou definindo SQL_ATTR_CURSOR_SENSITIVITY e SQL_ATTR_CURSOR_SCROLLABLE. Você não deve misturar os dois métodos de especificação de comportamento de cursor.  
   
 ## <a name="see-also"></a>Consulte também  
- [Usando cursores tópicos de instruções &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
+ [Tópicos &#40;de instruções sobre o uso de cursores ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Editar uma entidade (Master Data Services) | Microsoft Docs
+title: Editar uma entidade
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 88a4850c80404ebeb002c5d17af69b0f10dc5bf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4329f618b812bb566d974c5434ef0362b1383f2d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086485"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729293"
 ---
 # <a name="edit-an-entity-master-data-services"></a>Editar uma entidade (Master Data Services)
 
@@ -54,22 +54,22 @@ ms.locfileid: "68086485"
   
      Para obter mais informações, consulte [Criação automática de código &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)  
   
-9. Marque ou desmarque a caixa de seleção **Habilitar a compactação de dados** . Por padrão, a compactação de linha está ativada.  
+9. Marque ou desmarque a caixa de seleção **Habilitar a compactação de dados** . A compactação de linha é ativada por padrão.  
   
      Para obter mais informações, consulte [Data Compression](../relational-databases/data-compression/data-compression.md).  
   
 ## <a name="status"></a>Status  
  A coluna de status na grade mostra o status da operação na entidade. Quando você clica em **Salvar entidade**, a imagem a seguir é exibida, indicando que a entidade está atualizando.  
   
- ![Ícone para o status de atualização](../master-data-services/media/mds-statusicon-updating.png "Ícone para o status de atualização")  
+ ![Ícone para atualizar o status](../master-data-services/media/mds-statusicon-updating.png "Ícone para atualizar o status")  
   
  Se houver erros ao criar ou editar uma entidade, a imagem a seguir será exibida.  
   
- ![Ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Ícone para o status de erro")  
+ ![Ícone para status de erro](../master-data-services/media/mds-statusicon-error.png "Ícone para status de erro")  
   
  Quando o status for OK, a imagem a seguir será exibida.  
   
- ![Ícone para o status OK](../master-data-services/media/mds-statusicon-ok.png "Ícone para o status OK")  
+ ![Ícone para status OK](../master-data-services/media/mds-statusicon-ok.png "Ícone para status OK")  
   
 ## <a name="see-also"></a>Consulte também  
  [Hierarquias explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   

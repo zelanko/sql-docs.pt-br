@@ -1,6 +1,6 @@
 ---
-title: Propriedade InstanceName (classe ServerNetworkProtocolIPAddress) | Microsoft Docs
-ms.custom: ''
+title: Propriedade InstanceName (ServerNetworkProtocolIPAddress)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e23e2b64-2a74-474f-a425-39ca439ac37a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c9c169f8077664a7579a767cbb1a48eab6368638
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 414ff1ab9c5b9ba717af4010520dadcacc50fdd8
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911940"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660643"
 ---
 # <a name="instancename-property-servernetworkprotocolipaddress-class"></a>Propriedade InstanceName (Classe ServerNetworkProtocolIPAddress)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,12 +39,12 @@ object.InstanceName [= value]
  *object*  
  Um objeto da [classe ServerNetworkProtocolIPAdress Classe](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) .  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor da cadeia de caracteres que especifica o nome da instância do cliente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurando protocolos de rede do servidor e bibliotecas de rede](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurando protocolos de rede do servidor e bibliotecas net](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

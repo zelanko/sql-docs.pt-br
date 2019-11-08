@@ -1,5 +1,5 @@
 ---
-title: Área funcional Administração do Sistema (Master Data Manager) | Microsoft Docs
+title: Área funcional Administração do Sistema
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 340d4736754ab4e2ffd23043d8178d7ce4fdbe0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e128ba2b53383c83bc58ba66526e9768355e140b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102616"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727867"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>Área funcional Administração do Sistema (Master Data Manager)
 

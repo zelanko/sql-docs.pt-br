@@ -1,6 +1,6 @@
 ---
-title: Propriedade PropertyNumValue (classe SqlServiceAdvancedProperty) | Microsoft Docs
-ms.custom: ''
+title: Propriedade PropertyNumValue (SqlServiceAdvancedProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2c740dee-8911-443c-981f-7f224598ad21
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9fb91b20d8d106f18dda1a6b799a1af13ef60453
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 724d5b531f15d94a686c91f71e8cfee5ef83e239
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116586"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659532"
 ---
 # <a name="propertynumvalue-property-sqlserviceadvancedproperty-class"></a>Propriedade PropertyNumValue (classe SqlServiceAdvancedProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68116586"
 object.PropertyNumValue [= value]  
 ```  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor uint32 que especifica o valor numérico da propriedade avançada.  
   
 ## <a name="remarks"></a>Comentários  

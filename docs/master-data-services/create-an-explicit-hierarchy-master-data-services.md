@@ -1,5 +1,5 @@
 ---
-title: Criar uma hierarquia explícita (Master Data Services) | Microsoft Docs
+title: Criar uma hierarquia explícita
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5279284c905384ea93c90ab10522a3998c906029
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b366c29412a3a698e793d3153784a8d1450bc81
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896911"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729512"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>Criar uma hierarquia explícita (Master Data Services)
 
@@ -51,7 +51,7 @@ ms.locfileid: "67896911"
   
 6.  Na caixa **Nome** , digite um nome para a hierarquia.  
   
-7.  Opcionalmente, desmarque a caixa de seleção **Hierarquia obrigatória** para criar a hierarquia como não obrigatória. Para obter mais informações sobre tipos de hierarquia, consulte [Hierarquias explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md).  
+7.  Opcionalmente, desmarque a caixa de seleção **Hierarquia obrigatória** para criar a hierarquia como não obrigatória. Para obter mais informações sobre tipos de hierarquia, consulte [Explicit Hierarchies &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md).  
   
 8.  Clique em **Salvar**.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67896911"
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|Status|O status da entidade. Quando você clica em **Salvar** , a imagem a seguir é exibida, indicando que a entidade está atualizando.<br /><br /> ![Ícone para o status de atualização](../master-data-services/media/mds-statusicon-updating.png "Ícone para o status de atualização")<br /><br /> Se houver erros ao criar ou editar uma entidade, a imagem a seguir será exibida.<br /><br /> ![Ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Ícone para o status de erro")<br /><br /> Se o status for OK, a imagem a seguir será exibida.<br /><br /> ![Ícone para o status OK](../master-data-services/media/mds-statusicon-ok.png "Ícone para o status OK")|  
+|Status|O status da entidade. Quando você clica em **Salvar** , a imagem a seguir é exibida, indicando que a entidade está atualizando.<br /><br /> ![Ícone para atualizar o status](../master-data-services/media/mds-statusicon-updating.png "Icon para atualizar o status ")<br /><br /> Se houver erros ao criar ou editar uma entidade, a imagem a seguir será exibida.<br /><br /> ![Ícone para status de erro](../master-data-services/media/mds-statusicon-error.png "Icon para status de erro ")<br /><br /> Se o status for OK, a imagem a seguir será exibida.<br /><br /> ![Ícone para status OK](../master-data-services/media/mds-statusicon-ok.png "Icon status OK ")|  
 |Nome|O nome da hierarquia explícita.|  
 |É Obrigatório|Especifica se a hierarquia explícita é obrigatória.|  
 |Criado por|O nome do usuário que criou a hierarquia explícita.|  

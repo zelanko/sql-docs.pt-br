@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 14e53b3820e784916484cbe6a15ba82cd2ed5c8e
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: 84b498cbaf7a2f3d1118894157c17b8270259afa
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70001368"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632875"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Executar uma avaliação de migração do serviço de integração SQL Server com Assistente de Migração de Dados
 
@@ -37,18 +37,22 @@ As instruções passo a passo a seguir ajudam a executar sua primeira avaliaçã
 
     ![criar avaliação](media/dma-assess-ssis/dma-assess-ssis-create.png)
 
-## <a name="add-sources-to-assess"></a>Adicionar fontes para avaliar
+## <a name="connect-to-a-server"></a>Conectar a um servidor
 
 1. Siga a opção padrão e clique em **Avançar** em direção à **seleção de fontes**.
-
 1. Insira o nome da instância do SQL Server, escolha o tipo de autenticação, defina as propriedades de conexão corretas.
-1. Insira um caminho de pasta que contenha pacotes SSIS
-1. Insira a senha de criptografia do pacote, se aplicável, e **Conecte-** se.
-1. Selecione o sistema de arquivos para avaliar e, em seguida, selecione **Adicionar**.
-  ![Adicionar origem](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
+1. Adicional Insira um caminho de pasta que contenha pacotes SSIS.
+1. Adicional Insira a senha de criptografia do pacote, se aplicável.
+1. Clique em **conectar-se** ao SQL Server de origem.
+  ![adicionar](media/dma-assess-ssis/dma-assess-ssis-addsource.png) de origem
+
+## <a name="add-sources-to-assess"></a>Adicionar fontes para avaliar
+
+1. Selecione os tipos de armazenamento de pacote SSIS para avaliar e, em seguida, selecione **Adicionar**.
+![adicionar](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png) de origem
 1. Selecione **adicionar fontes** para abrir o menu de atalho de conexão, se precisar avaliar várias pastas.
 1. Clique em **Iniciar avaliação**.
-  ![Iniciar avaliação](media/dma-assess-ssis/dma-assess-ssis-assess.png)
+  ![iniciar a avaliação](media/dma-assess-ssis/dma-assess-ssis-assess.png)
 
 ## <a name="view-results"></a>Exibir os resultados
 
@@ -58,5 +62,6 @@ A categoria de problemas de compatibilidade fornece recursos com suporte parcial
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Migrar pacotes SQL Server Integration Services para uma instância gerenciada do banco de dados SQL do Azure](https://docs.microsoft.com/en-us/azure/dms/how-to-migrate-ssis-packages-managed-instance)
-- [Reimplantar pacotes SQL Server Integration Services no banco de dados SQL do Azure](https://docs.microsoft.com/en-us/azure/dms/how-to-migrate-ssis-packages)
+- [Migrar cargas de trabalho do SSIS locais para o SSIS em visão geral do ADF](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
+- [Migrar pacotes SQL Server Integration Services para uma instância gerenciada do banco de dados SQL do Azure](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [Reimplantar pacotes SQL Server Integration Services no banco de dados SQL do Azure](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)

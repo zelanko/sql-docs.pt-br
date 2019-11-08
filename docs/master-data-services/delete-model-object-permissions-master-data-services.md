@@ -1,5 +1,5 @@
 ---
-title: Excluir permissões de objeto modelo (Master Data Services) | Microsoft Docs
+title: Excluir permissões de objeto modelo
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fcf00249c322b754fef545ce03a730f127ed79fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ff59241067ad08e0acf738a34d59c59f837abfe
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906286"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728317"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>Excluir permissões de objeto modelo (Master Data Services)
 

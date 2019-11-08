@@ -14,16 +14,15 @@ ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0944145ae740b7448a19a2607122c8ad07fd33ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d82fa15999c56824f31fb4172969cdbc744a7bc8
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908268"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789870"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Executar o procedimento armazenado com ODBC CALL e a saída do processo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem ter códigos de retorno e parâmetros de saída inteiros. Os códigos de retorno e os parâmetros de saída são enviados no último pacote do servidor e, portanto, não estão disponíveis para o aplicativo enquanto o conjunto de linhas não é completamente liberado. Se o comando retornar vários resultados, os dados dos parâmetros de saída ficarão disponíveis quando **IMultipleResults::GetResult** retornar DB_S_NORESULT ou a interface **IMultipleResults** for completamente liberada, o que ocorrer primeiro.  
   
@@ -36,13 +35,13 @@ ms.locfileid: "67908268"
   
 2.  Crie um conjunto de associações (um para cada criador de parâmetro) usando uma matriz de estrutura DBBINDING.  
   
-3.  Criar um acessador para os parâmetros definidos usando o **IAccessor:: CreateAccessor** método. **CreateAccessor** cria um acessador com base em um conjunto de associações.  
+3.  Crie um acessador para os parâmetros definidos usando o método **IAccessor:: Createaccesser** . **CreateAccessor** cria um acessador com base em um conjunto de associações.  
   
 4.  Preencha a estrutura DBPARAMS.  
   
 5.  Chame o comando **Execute** (neste caso, uma chamada a um procedimento armazenado).  
   
-6.  Processar o conjunto de linhas e liberá-lo usando o **IRowset:: Release** método.  
+6.  Processe o conjunto de linhas e libere-o usando o método **IRowset:: Release** .  
   
 7.  Processe os valores de código de retorno e de parâmetro de saída recebidos do procedimento armazenado.  
   

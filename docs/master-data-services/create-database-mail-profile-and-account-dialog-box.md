@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo Criar perfil e conta do Database Mail | Microsoft Docs
+title: Caixa de diálogo Criar perfil e conta do Database Mail
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 995d39887aa6357519ce0cbf4771ae796b1ece69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b08dcb47303d6198bb30d4415d2c00110fd7ab04
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094497"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729543"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>Caixa de diálogo Criar perfil e conta do Database Mail
 

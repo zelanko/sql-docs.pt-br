@@ -1,5 +1,5 @@
 ---
-title: Função de conversão e o tipo de moeda | Microsoft Docs
+title: Tipo de moeda e função de conversão | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a3a6a9c08672e489bd5b4939bd0899f2ebe46d5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53faaae001e177f1d48d394e06961e89c563d124
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62753234"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637645"
 ---
 # <a name="currency-type-and-conversion-function"></a>Função de conversão e tipo de moeda
   Esse exemplo apresenta um tipo de dados de moeda definido pelo usuário usando C#. Esse tipo de dados definido pelo usuário encapsula um valor e uma cultura que ajudam a determinar o modo correto de renderizar o valor como um valor de moeda nessa cultura. Esse exemplo também fornece uma função de conversão de moeda que retorna uma instância do tipo de dados de moeda definido pelo usuário. Se o banco de dados AdventureWorks tiver uma taxa de conversão de USD (dólares americanos) para a moeda associada à cultura especificada, a função de conversão retornará um tipo de dados de moeda definido pelo usuário com a taxa convertida e a cultura correspondente à cultura solicitada. Caso contrário, um tipo de dados de moeda definido pelo usuário será retornado com o valor original, que deve ser em USD, e com a cultura `en-us`. O exemplo também demonstra como cancelar o registro e registrar métodos e assemblies CLR (Common Language Runtime) usando Transact-SQL.  
@@ -23,10 +23,10 @@ ms.locfileid: "62753234"
 > [!CAUTION]  
 >  As taxas de câmbio usadas neste exemplo são fictícias e não devem ser usadas para transações financeiras reais.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para criar e executar este projeto, o software a seguir deve estar instalado:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
   
 -   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](https://go.microsoft.com/fwlink/?linkid=62796)Developer  
   

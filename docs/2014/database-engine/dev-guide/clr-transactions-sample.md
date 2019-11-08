@@ -10,20 +10,20 @@ ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 13d23977aeeb6f7643fc039c23b02267d47c106f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00a5db60a0bccdd3deec1d1ac845e926b6af5fb9
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62754064"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637755"
 ---
 # <a name="clr-transactions-sample"></a>Exemplo de transações CLR
   Este exemplo demonstra como controlar transações usando as APIs gerenciadas localizadas no namespace `System.Transactions` . Especificamente, a classe `System.Transactions.TransactionScope` é usada para estabelecer um limite para a transação a fim de garantir que os números de estoque não sejam ajustados, a menos que haja estoque suficiente para atender à solicitação e, se houver estoque suficiente, que a transferência do estoque de um local para outro ocorra de forma atômica. O registro automático em uma transação distribuída é demonstrado pelo log de alterações no estoque em um banco de dados de auditoria armazenado em uma instância separada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para criar e executar este projeto, o software a seguir deve estar instalado:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
   
 -   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](https://go.microsoft.com/fwlink/?linkid=62796)Developer  
   

@@ -1,6 +1,6 @@
 ---
-title: Propriedade Properties (classe ServerNetworkProtocolIPAddress) | Microsoft Docs
-ms.custom: ''
+title: Propriedade Properties (ServerNetworkProtocolIPAddress)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7de217be-50fe-463e-af44-fdd6b79a7045
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3cd63aec01b221077932d083f8800b57b39a21be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b94874dafa2528d3fbcf8debe7d50677fb2f0ce3
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911906"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660570"
 ---
 # <a name="properties-property-servernetworkprotocolipaddress-class"></a>Propriedade Properties (classe ServerNetworkProtocolIPAddress)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,12 +39,12 @@ object.Properties [= value]
  *object*  
  Um objeto da [classe ServerNetworkProtocolIPAdress](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) que representa um endereço IP para o protocolo de rede em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Uma matriz de objetos que representam as propriedades com suporte do endereço IP.  
   
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurando protocolos de rede do servidor e bibliotecas de rede](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurando protocolos de rede do servidor e bibliotecas net](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Classe ServerNetworkProtocolProperty | Microsoft Docs
+title: Classe ServerNetworkProtocolProperty
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72e124ad-a610-405a-8749-b2508068b348
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8107cca40a4d307295bbbd35a1727048f919a217
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1a4414c944edd6518d3971e12d06be7b59e65598
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927790"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659338"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>Classe ServerNetworkProtocolProperty
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,6 +41,6 @@ ms.locfileid: "67927790"
 -   Definir os sinalizadores para a propriedade atual.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurando protocolos de rede do servidor e bibliotecas de rede](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurando protocolos de rede do servidor e bibliotecas net](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

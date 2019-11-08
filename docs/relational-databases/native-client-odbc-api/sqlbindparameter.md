@@ -14,16 +14,15 @@ ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67fb8dafdabb4a9a9df60c4592f206c9106224ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aec817b4ea5ada840ce7fe843a42f636b7494219
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115251"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73787769"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   O**SQLBindParameter** pode eliminar o peso da conversão de dados quando usado para fornecer dados para o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, o que resulta em ganhos de desempenho significativos para os componentes de cliente e servidor dos aplicativos. Entre os outros benefícios está a menor perda de precisão ao inserir ou atualizar tipos de dados numéricos aproximados.  
   
@@ -42,24 +41,24 @@ ms.locfileid: "68115251"
  Por exemplo, se o tipo de dados SQL for **SQL_WVARCHAR**, *ColumnSize* não deverá ser maior que 4000. Se o comprimento de dados real for maior que 4000, *ColumnSize* deverá ser definido como **SQL_SS_LENGTH_UNLIMITED** , de modo que **nvarchar(max)** será usado pelo driver.  
   
 ## <a name="sqlbindparameter-and-table-valued-parameters"></a>SQLBindParameter e parâmetros com valor de tabela  
- Como outros tipos de parâmetro, os parâmetros com valor de tabela são associados por SQLBindParameter.  
+ Assim como outros tipos de parâmetro, os parâmetros com valor de tabela são associados por SQLBindParameter.  
   
  Depois que um parâmetro com valor de tabela é associado, suas colunas também são associadas. Para associar as colunas, chame [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) para definir SQL_SOPT_SS_PARAM_FOCUS como o ordinal do parâmetro com valor de tabela. Em seguida, chame SQLBindParameter para cada coluna no parâmetro com valor de tabela. Para voltar às associações de parâmetro de nível superior, defina SQL_SOPT_SS_PARAM_FOCUS como 0.  
   
- Para obter informações sobre como mapear parâmetros para campos de descritor para parâmetros com valor de tabela, consulte [associação e Data Transfer of Table-Valued parâmetros e valores de coluna](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
+ Para obter informações sobre como mapear parâmetros para campos de descritor para parâmetros com valor de tabela, consulte [Binding and transferência de dados of table-valued Parameters and Column Values](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
   
- Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros com valor de tabela &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros &#40;com valor&#41;de tabela ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlbindparameter-support-for-enhanced-date-and-time-features"></a>Suporte de SQLBindParameter a recursos aprimorados de data e hora  
- Valores de parâmetros dos tipos de data/hora são convertidos conforme descrito em [conversões do C para SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md). Observe que parâmetros de tipo **time** e **datetimeoffset** precisam ter *ValueType* especificado como **SQL_C_DEFAULT** ou **SQL_C_BINARY** quando são usadas suas estruturas correspondentes (**SQL_SS_TIME2_STRUCT** e **SQL_SS_TIMESTAMPOFFSET_STRUCT**).  
+ Os valores de parâmetro dos tipos de data/hora são convertidos conforme descrito em [conversões de C para SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md). Observe que parâmetros de tipo **time** e **datetimeoffset** precisam ter *ValueType* especificado como **SQL_C_DEFAULT** ou **SQL_C_BINARY** quando são usadas suas estruturas correspondentes (**SQL_SS_TIME2_STRUCT** e **SQL_SS_TIMESTAMPOFFSET_STRUCT**).  
   
- Para obter mais informações, consulte [aprimoramentos de data e hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obter mais informações, consulte [melhorias &#40;de data e&#41;hora em ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlbindparameter-support-for-large-clr-udts"></a>Suporte de SQLBindParameter a UDTs CLR grandes  
- O**SQLBindParameter** suporta UDTs (tipos de dados definidos pelo usuário) CLR grandes. Para obter mais informações, consulte [Large CLR User-Defined tipos &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ O**SQLBindParameter** suporta UDTs (tipos de dados definidos pelo usuário) CLR grandes. Para obter mais informações, consulte [ &#40;ODBC&#41;grandes tipos de CLR definidos pelo usuário](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Detalhes de implementação de API do ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
+ [Detalhes de implementação da API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [Função SQLBindParameter](https://go.microsoft.com/fwlink/?LinkId=59328)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Excluir uma exibição de assinatura (Master Data Services) | Microsoft Docs
+title: Excluir uma exibição de assinatura
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0e37b2b4f4f6dc101f553fe4a399e428d1580b42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2805e1c9faafa24b78b64a2fcc6082010099429f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094361"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729383"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>Excluir uma exibição de assinatura (Master Data Services)
 

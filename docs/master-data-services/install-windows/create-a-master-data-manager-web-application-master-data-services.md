@@ -1,5 +1,5 @@
 ---
-title: Criar um aplicativo Web do Master Data Manager (Master Data Services) | Microsoft Docs
+title: Criar um aplicativo Web Master Data Manager
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3fa6834a853a82067418a2ea5270e59ebdaa7dc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 384cf7989f41dce541afcfdd44b2831c79fde31e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945033"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729452"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>Criar um aplicativo Web do Master Data Manager (Master Data Services)
 
@@ -47,7 +47,7 @@ ms.locfileid: "67945033"
   
 #### <a name="to-create-a-master-data-manager-web-application-in-a-new-website"></a>Para criar um aplicativo Web do Master Data Manager em um novo site  
   
-1.  Abra [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+1.  Abra o [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
 2.  No painel esquerdo, clique em **Configuração da Web**.  
   

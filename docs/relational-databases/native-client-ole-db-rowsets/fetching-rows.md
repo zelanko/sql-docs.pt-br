@@ -17,16 +17,15 @@ ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcdb6fed061cb9f3783985d3cdf934e2d11df151
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ab6242348f3020b5b9719c41c7cb7563b0c30729
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115210"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761705"
 ---
 # <a name="fetching-rows"></a>Buscando linhas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   A interface **IRowset** é a interface de conjunto de linhas base. A interface **IRowset** fornece métodos para buscar linhas em sequência, obter os dados dessas linhas e gerenciar linhas. Os consumidores usam os métodos em **IRowset** para todas as operações básicas de conjunto de linhas. Elas incluem a busca e a liberação de linhas e a obtenção de valores de coluna.  
   

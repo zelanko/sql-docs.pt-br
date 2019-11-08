@@ -1,5 +1,5 @@
 ---
-title: Classe SqlServerAlias | Microsoft Docs
+title: Classe SqlServerAlias
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cdcbd34978738d64d52b3c70a280507b6cb0c391
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6cbcb2ab05c30f667e6e5b95d8223ab4e152137e
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052368"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659191"
 ---
 # <a name="sqlserveralias-class"></a>Classe SqlServerAlias
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68052368"
   
 -   A instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para o qual o cliente é conectado escuta em um pipe nomeado alternativo.  
   
- **Observação:** O [classe SqlServerAlias](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) herda o **colocar** método da classe Provider. Porém, ela não retorna nenhum resultado como indicado pelo método **Provider::Put** . Para obter mais informações, consulte a documentação do WMI.  
+ **Observação:** A [classe SqlServerAlias](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) herda o método **Put** da classe Provider. Porém, ela não retorna nenhum resultado como indicado pelo método **Provider::Put** . Para obter mais informações, consulte a documentação do WMI.  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  

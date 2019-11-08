@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_materialized_view_mappings (Transact-SQL) | Microsoft Docs
+title: sys. pdw_materialized_view_mappings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -12,14 +12,14 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 919b55fe869a77bf27acd8a14820c63dd82eb968
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: d548291653b589d973c9c21813690a61a0fdb7ba
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811496"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729830"
 ---
-# <a name="syspdw_materialized_view_mappings-transact-sql-preview"></a>sys.pdw_materialized_view_mappings (Transact-SQL) (preview)
+# <a name="syspdw_materialized_view_mappings-transact-sql"></a>sys. pdw_materialized_view_mappings (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -29,15 +29,16 @@ As colunas physical_name e object_id formam a chave para essa exibição de cat�
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|physical_name |**nvarchar(36)**|O nome físico da exibição materializada.|  
+|physical_name |**nvarchar (36)**|O nome físico da exibição materializada.|  
 |object_id  |**int**|A ID de objeto para a exibição materializada. Consulte [Sys. Objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest).| 
 
 ## <a name="permissions"></a>Permissões
 
 Requer a permissão VIEW DATABASE STATE.
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
+[Ajuste de desempenho com exibição materializada](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

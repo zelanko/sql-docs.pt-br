@@ -1,5 +1,5 @@
 ---
-title: Extensão das regras de negócio (Master Data Services) | Microsoft Docs
+title: Extensão das Regras de Negócio
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5f490bd51ac31046e6daf3c1e90420b4efb84e03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 24df0fcbece66a86786550e81f3e385d6454f4b5
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047415"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728681"
 ---
 # <a name="business-rules-extension-master-data-services"></a>Extensão das Regras de Negócio (Master Data Services)
 
@@ -91,7 +91,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 5.  Na lista suspensa **Tipo de Membro** , selecione um tipo de membro para aplicar a regra de negócio.  
   
-6.  Clique em **Adicionar** .  
+6.  Clique em **Adicionar**.  
   
 7.  Faça o seguinte para criar um script definido pelo usuário como uma condição.  
   

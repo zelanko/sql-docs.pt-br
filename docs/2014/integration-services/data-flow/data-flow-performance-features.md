@@ -23,14 +23,14 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 030318d65d469546f946679e9c9173bfdb1a3f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62828047"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637827"
 ---
-# <a name="data-flow-performance-features"></a>Recursos de desempenho de fluxo de dados
+# <a name="data-flow-performance-features"></a>Data Flow Performance Features
   Este tópico fornece sugestões sobre como projetar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para evitar problemas comuns de desempenho. Este tópico também provê informações sobre recursos e ferramentas que podem ser usados para diagnosticar o desempenho de pacotes.  
   
 ## <a name="configuring-the-data-flow"></a>Configurando o Fluxo de Dados  
@@ -125,17 +125,17 @@ ms.locfileid: "62828047"
  Nesta seção, use as sugestões para melhorar o desempenho das transformações Agregação, Pesquisa Difusa, Agrupamento Difuso, Pesquisa, Mesclar Junção e Dimensão de Alteração Lenta.  
   
 #### <a name="aggregate-transformation"></a>Transformação Agregação  
- A transformação Agregação inclui as propriedades `Keys`, `KeysScale`, `CountDistinctKeys` e `CountDistinctScale`. Essas propriedades melhoram o desempenho permitindo que transformação pré-aloque a quantidade de memória necessária para os dados armazenados em cache pela transformação. Se você souber o número exato ou aproximado de grupos que são esperados como resultado de uma **Group by** operação, defina as `Keys` e `KeysScale` propriedades, respectivamente. Se você souber o número exato ou aproximado de valores distintos que são esperados como resultado de uma **contagem distinta** operação, defina as `CountDistinctKeys` e `CountDistinctScale` propriedades, respectivamente.  
+ A transformação Agregação inclui as propriedades `Keys`, `KeysScale`, `CountDistinctKeys` e `CountDistinctScale`. Essas propriedades melhoram o desempenho permitindo que transformação pré-aloque a quantidade de memória necessária para os dados armazenados em cache pela transformação. Se você souber o número exato ou aproximado de grupos que devem resultar de uma operação **Agrupar por** , defina as propriedades `Keys` e `KeysScale`, respectivamente. Se você souber o número exato ou aproximado de valores distintos que devem resultar de uma operação de **contagem distinta** , defina as propriedades `CountDistinctKeys` e `CountDistinctScale`, respectivamente.  
   
  Se tiver criado várias agregações em um fluxo de dados, considere a criação de várias agregações que usam uma transformação Agregação em vez de criar várias transformações. Esse procedimento melhora o desempenho quando uma agregação for um subconjunto de outra agregação porque a transformação pode otimizar o armazenamento interno e analisar os dados de entrada apenas uma vez. Por exemplo, se uma agregação usa uma cláusula GROUP BY e uma agregação AVG, combiná-las em uma transformação pode melhorar o desempenho. Entretanto, executar várias agregações dentro de uma transformação Agregação serializa as operações de agregação e pode não melhorar o desempenho quando várias agregações devem ser computadas de forma independente.  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Transformações Pesquisa Difusa e Agrupamento Difuso  
  Para obter informações mais detalhadas sobre as transformações Pesquisa Difusa e Agrupamento Difuso, consulte a documentação [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(em inglês).  
   
-#### <a name="lookup-transformation"></a>transformação Pesquisa  
+#### <a name="lookup-transformation"></a>Transformação Pesquisa  
  Minimize o tamanho dos dados de referência na memória usando uma instrução SELECT que seja capaz de pesquisar somente as colunas necessárias. Esta é uma opção melhor do que selecionar uma tabela ou exibição inteira, que retorna uma quantidade grande de dados desnecessários.  
   
-#### <a name="merge-join-transformation"></a>Merge Join Transformation  
+#### <a name="merge-join-transformation"></a>Transformação Junção de Mesclagem  
  Não é mais preciso configurar o valor da propriedade `MaxBuffersPerInput`, pois a Microsoft fez alterações que reduzem o risco de a transformação Junção de Mesclagem consumir memória excessiva. Esse problema algumas vezes ocorria quando as várias entradas da Junção de Mesclagem geravam dados a taxas irregulares.  
   
 #### <a name="slowly-changing-dimension-transformation"></a>transformação Dimensão de Alteração Lenta  
@@ -143,12 +143,12 @@ ms.locfileid: "62828047"
   
  Normalmente, os componentes mais lentos na transformação Dimensão Alteração Lenta são as transformações Comando de OLE DB que executam UPDATEs (atualizações) em apenas uma linha por vez. Portanto, a forma mais eficaz de melhorar o desempenho da transformação Dimensão Alteração Lenta é substituir as transformações Comando de OLE DB. Essas transformações podem ser substituídas por componentes de destino que salvam todas as linhas que serão atualizadas para uma tabela de preparação. Por isso, é possível adicionar uma tarefa Executar SQL que desenvolva uma única instrução UPDATE Transact-SQL com base no conjunto em todas as linhas ao mesmo tempo.  
   
- Usuários avançados podem criar um fluxo de dados personalizado para alterar o processamento da dimensão que é otimizada lentamente em dimensões maiores. Para ver uma discussão e um exemplo desta abordagem, confira a seção "Cenário de dimensão exclusivo", no white paper, [Projeto REAL: Práticas de design ETL de Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=96602).  
+ Usuários avançados podem criar um fluxo de dados personalizado para alterar o processamento da dimensão que é otimizada lentamente em dimensões maiores. Para obter exemplos e informações a respeito desse procedimento, consulte a seção "Cenário de dimensão exclusiva" no white paper [Projeto REAL: Práticas recomendadas ETL de criação no Business Intelligence](https://www.microsoft.com/download/details.aspx?id=14582).  
   
 ### <a name="destinations"></a>Destinos  
  Para atingir um melhor desempenho com destinos, considere o uso de um destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e teste o desempenho do destino.  
   
-#### <a name="sql-server-destination"></a>destino do SQL Server  
+#### <a name="sql-server-destination"></a>Destino do SQL Server  
  Quando um pacote carregar dados para uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no mesmo computador, use um destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este destino é otimizado para carregamento em massa de alta velocidade.  
   
 #### <a name="testing-the-performance-of-destinations"></a>Testando o desempenho de destinos  
@@ -159,16 +159,16 @@ ms.locfileid: "62828047"
   
  Para habilitar ou desabilitar a exibição de mensagens na guia **Progresso** , marque ou desmarque a opção **Depurar Relatório do Progresso** no menu **SSIS** . Desabilitar o relatório do progresso pode ajudar a melhorar o desempenho durante a execução de um pacote complexo no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
   
 -   [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  **Artigos e postagens de blog**  
   
--   Artigo técnico, [SQL Server 2005 Integration Services: A Strategy for Performance](https://go.microsoft.com/fwlink/?LinkId=98899), no technet.microsoft.com  
+-   Artigo técnico sobre [SQL Server 2005 Integration Services: uma estratégia para o desempenho](https://go.microsoft.com/fwlink/?LinkId=98899)no site technet.microsoft.com  
   
--   Artigo técnico, [Integration Services: Performance Tuning Techniques](https://go.microsoft.com/fwlink/?LinkId=98900), no technet.microsoft.com  
+-   Artigo técnico, [Integration Services: técnicas de ajuste de desempenho](https://go.microsoft.com/fwlink/?LinkId=98900), em technet.microsoft.com  
   
 -   Artigo técnico sobre como [aumentar o rendimento dos pipelines dividindo transformações síncronas em várias tarefas](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx), em sqlcat.com  
   

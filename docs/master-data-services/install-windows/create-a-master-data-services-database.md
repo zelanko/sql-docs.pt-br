@@ -1,5 +1,5 @@
 ---
-title: Criar um banco de dados do Master Data Services | Microsoft Docs
+title: Criar um banco de dados do Master Data Services
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b94e7e34bb53d15bbb7466a5ff3e32df634e0f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0bef34cdd61393e8aaf8ad312428e51affba892c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945048"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728122"
 ---
 # <a name="create-a-master-data-services-database"></a>Criar um banco de dados do Master Data Services
 
@@ -29,7 +29,7 @@ ms.locfileid: "67945048"
   
 ### <a name="to-create-a-master-data-services-database"></a>Para criar um banco de dados do Master Data Services  
   
-1.  Abra [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+1.  Abra o [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
 2.  No painel esquerdo, clique em **Configuração do Banco de Dados**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Criar um atributo numérico (Master Data Services) | Microsoft Docs
+title: Criar um atributo numérico
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4c759b196c250f4f3f868fba81a45f161dd75f67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 608bdd69396f63fdd0389b43e27bacbab0e763f6
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906646"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729590"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>Criar um atributo numérico (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "67906646"
 > [!NOTE]  
 >  Os atributos numéricos têm limitações. Para obter mais informações, consulte [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
@@ -41,9 +41,9 @@ ms.locfileid: "67906646"
 ## <a name="attribute-information"></a>Informações de Atributo  
  Para cada atributo criado, uma linha com sete colunas é adicionada à grade. A tabela a seguir descreve as colunas.  
   
-|coluna|Descrição|  
+|Coluna|Descrição|  
 |------------|-----------------|  
-|Status|O status do atributo.<br /><br /> Quando você clica em Salvar, a imagem ![Ícone para o status de atualização](../master-data-services/media/mds-statusicon-updating.png "Ícone para o status de atualização") é exibida, indicando que o atributo está sendo atualizado.<br /><br /> Se houver erros ao criar ou editar um atributo, a imagem ![Ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Ícone para o status de erro") será exibida.<br /><br /> Caso contrário, o status será OK e a imagem ![Ícone para o status OK](../master-data-services/media/mds-statusicon-ok.png "Ícone para o status OK") será exibida.|  
+|Status|O status do atributo.<br /><br /> Quando você clica em salvar, o ![ícone para atualizar a imagem de status](../master-data-services/media/mds-statusicon-updating.png "Icon para atualizar o status ") é exibido, indicando que o atributo está sendo atualizado.<br /><br /> Se houver erros ao criar ou editar um atributo, a imagem ![ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Icon para status de erro ") será exibida.<br /><br /> Caso contrário, o status é OK e o ![ícone para a imagem de status OK](../master-data-services/media/mds-statusicon-ok.png "Icon status OK ") é exibido.|  
 |Nome|O nome do atributo.|  
 |Nome de Exibição|O nome de exibição do atributo.|  
 |Descrição|A descrição do atributo.|  
@@ -53,13 +53,13 @@ ms.locfileid: "67906646"
   
  Quando você clica em um atributo, as seguintes informações são exibidas.  
   
--   **Criado por**: O nome do usuário que criou o atributo.  
+-   **Criado Por**: o nome do usuário que criou o atributo.  
   
--   **Em**: A data e a hora em que o atributo foi criado.  
+-   **Em**: a data e hora em que o atributo foi criado.  
   
 -   **Atualizado Por**: o nome do usuário que atualizou o atributo pela última vez.  
   
--   **Em**: A data e a hora em que o atributo foi atualizado pela última vez.  
+-   **Em**: a data e hora em que o atributo foi atualizado pela última vez.  
   
 ### <a name="to-create-a-numeric-attribute"></a>Para criar um atributo numérico  
   

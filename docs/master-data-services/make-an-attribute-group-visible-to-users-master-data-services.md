@@ -1,5 +1,5 @@
 ---
-title: Tornar um grupo de atributos visível para os usuários (Master Data Services) | Microsoft Docs
+title: Tornar um grupo de atributos visível para os usuários
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ce8d0490625780459ecafd8e9d346af0fc9bd1f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 26ad0e3d481b5d09a3105645af5705a3bd99cdbf
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054532"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729073"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>Tornar um grupo de atributos visível para os usuários (Master Data Services)
 
@@ -32,13 +32,13 @@ ms.locfileid: "68054532"
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
--   Pelo menos um grupo de atributos deve existir. Para obter mais informações, veja [Criar um grupo de atributos &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md).  
+-   Pelo menos um grupo de atributos deve existir. Para obter mais informações, veja [Create an Attribute Group &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md).  
   
 ### <a name="to-make-an-attribute-group-visible-to-users"></a>Para tornar um grupo de atributos visível para usuários  
   
 1.  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], clique em **Administração do Sistema**.  
   
-2.  Na página **Gerenciar Modelo** , escolha um modelo na grade e clique em **Entidades**.  
+2.  Na página **Gerenciar Modelo** , selecione um modelo na grade e clique em **Entidades**.  
   
 3.  Na página **Gerenciar Entidade** , na grade, selecione a linha para a entidade que você deseja editar o grupo de atributos.  
   

@@ -1,5 +1,5 @@
 ---
-title: Descrição XML do fluxo de trabalho personalizado (Master Data Services) | Microsoft Docs
+title: Descrição do XML do fluxo de trabalho personalizado
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cd291d1615920c3b576386b3f026a4b4d7f29dd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb5beeb5115c3a68ab34313ea9125c65a4f4e185
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901672"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729307"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>Criar um fluxo de trabalho personalizado – Descrição XML
 

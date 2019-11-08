@@ -10,20 +10,20 @@ ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cfd005746302bef4b8e03b520babfdef41768083
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f13445faaef35ad0005666ac1b2fc2b8f95df425
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780207"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637724"
 ---
 # <a name="udt-utilities"></a>Utilitários UDT
   O exemplo Utilitários UDT contém várias funções de utilitário. Elas incluem funções para expor metadados de assembly para Transact-SQL, funções com valor de tabela de fluxo de exemplo para retornar os tipos em um assembly como uma tabela e funções para retornar campos, métodos e propriedades em um tipo de dados definido pelo usuário. As tecnologias demonstradas incluem funções com valor de tabela de fluxo, APIs de reflexão do .NET Framework e invocação de funções com valor de tabela do Transact-SQL.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para criar e executar este projeto, o software a seguir deve estar instalado:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
   
 -   O banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] que está disponível no [site do Codeplex](https://go.microsoft.com/fwlink/?linkid=62796)  
   

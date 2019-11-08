@@ -16,18 +16,17 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6035e493a2ad08b80ed225c25332d86681787c94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0922ed161eb691386b1870f03a8597b6a4872f74
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128875"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73775511"
 ---
 # <a name="getting-large-data"></a>Obtendo dados grandes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Em geral, os consumidores devem isolar o código que cria uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto de armazenamento do provedor OLE DB do Native Client de outro código que lida com os dados não referenciados por meio de um **ISequentialStream** ponteiro de interface.  
+  Em geral, os consumidores devem isolar o código que cria um objeto de armazenamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provedor de outro código que manipula dados não referenciados por meio de um ponteiro de interface **ISequentialStream** .  
   
  Este tópico aborda a funcionalidade disponível nas funções a seguir:  
   
@@ -37,9 +36,9 @@ ms.locfileid: "68128875"
   
 -   ICommand::Execute  
   
- Se a propriedade DBPROP_ACCESSORDER (no grupo de propriedades de conjunto de linhas) é definida como qualquer um dos valores DBPROPVAL_AO_SEQUENTIAL ou DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, o consumidor deverá buscar somente uma única linha de dados em uma chamada para o **GetNextRows**  método porque não é armazenada em buffer dados de BLOB. Se o valor de DBPROP_ACCESSORDER for definido como DBPROPVAL_AO_RANDOM, o consumidor poderá buscar várias linhas de dados em **GetNextRows**.  
+ Se a propriedade DBPROP_ACCESSORDER (no grupo de propriedades conjunto de linhas) for definida como um dos valores DBPROPVAL_AO_SEQUENTIAL ou DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, o consumidor deverá buscar apenas uma única linha de dados em uma chamada para o método **GetNextRows** Porque os dados de BLOB não são armazenados em buffer. Se o valor de DBPROP_ACCESSORDER for definido como DBPROPVAL_AO_RANDOM, o consumidor poderá buscar várias linhas de dados em **GetNextRows**.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client não recupera dados grandes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] até que o solicitado pelo consumidor. O consumidor deve associar todos os dados curtos em um acessador e usar um ou mais acessadores temporários para recuperar valores de dados grandes conforme necessário.  
+ O provedor de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativo do cliente não recupera dados grandes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] até que ele seja solicitado pelo consumidor. O consumidor deve associar todos os dados curtos em um acessador e usar um ou mais acessadores temporários para recuperar valores de dados grandes conforme necessário.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo recupera um valor de dados grandes de uma única coluna:  

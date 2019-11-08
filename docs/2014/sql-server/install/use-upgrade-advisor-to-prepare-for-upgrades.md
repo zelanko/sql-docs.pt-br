@@ -1,5 +1,5 @@
 ---
-title: Use o Supervisor de atualização para preparar para atualizações | Microsoft Docs
+title: Usar o supervisor de atualização para se preparar para atualizações | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce60db3b720b046c44d7507d3164c2f2e6c9173f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66091260"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632733"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Usar o Supervisor de Atualização para preparar para atualizações
   O Supervisor de Atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajuda você a se preparar para atualizações do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O Supervisor de Atualização analisa os componentes instalados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e gera um relatório que identifica os problemas a serem corrigidos antes ou depois da atualização.  
   
 ## <a name="how-upgrade-advisor-works"></a>Como o Supervisor de Atualização funciona  
- Quando você executar o Supervisor de atualização, a página inicial do Supervisor de atualização é exibida. Na página inicial, você pode executar as seguintes ferramentas:  
+ Quando você executa o supervisor de atualização, a home page do supervisor de atualização é exibida. Na página inicial, você pode executar as seguintes ferramentas:  
   
 -   Assistente para Análise do Supervisor de Atualização  
   
@@ -60,21 +60,21 @@ ms.locfileid: "66091260"
   
  O Supervisor de Atualização está disponível em um pacote de recursos.  
   
- Pré-requisitos para instalar e executar o Supervisor de atualização são da seguinte maneira:  
+ Os pré-requisitos para instalar e executar o supervisor de atualização são os seguintes:  
   
 -   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1 e [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
   
--   Windows Installer desde a versão 4.5. Você pode instalar o Windows Installer a partir de [site da Web do Windows Installer](https://go.microsoft.com/fwlink/?LinkId=49112).  
+-   Windows Installer desde a versão 4.5. Você pode instalar o Windows Installer do [site do Windows Installer](https://www.microsoft.com/download/details.aspx?id=8483).  
   
--   Microsoft .NET Framework 4. .NET framework 4 está disponível na [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mídia do produto e para o [página de download do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895).  
+-   Microsoft .NET Framework 4. .NET Framework 4 está disponível na mídia do produto [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e na página de [download do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895).  
   
     -   Para instalar o .NET Framework 4 a partir da mídia do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], localize a raiz da unidade de disco. Clique duas vezes nas pastas \redist e DotNetFrameworks; execute o dotNetFx40_Full_x86_x64.exe (para sistemas operacionais de 32 ou 64 bits).  
   
- Para instalar o Supervisor de Atualização a partir da Web, clique no botão de download na página de download. Você poderá executar a instalação imediatamente ou salvar o arquivo SQLUA.msi para execução posterior. Se você estiver instalando de disco do produto, execute sqlua. msi diretamente no disco do produto.  
+ Para instalar o Supervisor de Atualização a partir da Web, clique no botão de download na página de download. Você poderá executar a instalação imediatamente ou salvar o arquivo SQLUA.msi para execução posterior. Se você estiver instalando do disco do produto, execute o SQLUA. msi diretamente do disco do produto.  
   
- Depois de instalar o Supervisor de atualização, você poderá abri-lo partir o **iniciar** menu:  
+ Depois de instalar o supervisor de atualização, você pode abri-lo no menu **Iniciar** :  
   
--   Clique em **inicie**, aponte para **todos os programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]e, em seguida, clique em  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Supervisor de atualização**.  
+-   Clique em **Iniciar**, aponte para **todos os programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]e clique em **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supervisor de atualização**.  
   
  Para obter mais informações, consulte a documentação do Supervisor de Atualização incluída no download do Supervisor de Atualização e nas Notas de Versão do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

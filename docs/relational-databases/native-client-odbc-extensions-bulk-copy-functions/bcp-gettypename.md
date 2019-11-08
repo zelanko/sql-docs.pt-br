@@ -18,16 +18,15 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e80c1703ece500e849a8c107d858222eea45f6f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707462"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782658"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Retorna o nome do tipo SQL para um token do tipo BCP especificado.  
   
@@ -65,7 +64,7 @@ RETCODE bcp_gettypename (
 |**SQLMONEY**|Qualquer|**money**|  
 |**SQLFLT8**|Qualquer|**float**|  
 |**SQLDATETIME**|Qualquer|**datetime**|  
-|**SQLBITN**|Qualquer|**bit-null**|  
+|**SQLBITN**|Qualquer|**bit-nulo**|  
 |**SQLBIT**|Qualquer|**bit**|  
 |**SQLBIGCHAR**|Não|**char**|  
 |**SQLCHARACTER**|Não|**char**|  
@@ -76,20 +75,20 @@ RETCODE bcp_gettypename (
 |**SQLBINARY**|Não|**Binary**|  
 |**SQLBIGVARBINARY**|Não|**Varbinary**|  
 |**SQLVARBINARY**|Não|**Varbinary**|  
-|**SQLIMAGE**|Qualquer|**Image**|  
-|**SQLINTN**|Qualquer|**int-null**|  
-|**SQLDATETIMN**|Qualquer|**datetime-null**|  
-|**SQLMONEYN**|Qualquer|**money-null**|  
-|**SQLFLTN**|Qualquer|**float-null**|  
-|**SQLAOPSUM**|Qualquer|**Sum**|  
+|**SQLIMAGE**|Qualquer|**Imagem**|  
+|**SQLINTN**|Qualquer|**int-nulo**|  
+|**SQLDATETIMN**|Qualquer|**DateTime-nulo**|  
+|**Loadmoneyn**|Qualquer|**dinheiro-nulo**|  
+|**SQLFLTN**|Qualquer|**float-nulo**|  
+|**SQLAOPSUM**|Qualquer|**Soma**|  
 |**SQLAOPAVG**|Qualquer|**Avg**|  
 |**SQLAOPCNT**|Qualquer|**Count**|  
-|**SQLAOPMIN**|Qualquer|**Min**|  
+|**SQLAOPMIN**|Qualquer|**Mín**|  
 |**SQLAOPMAX**|Qualquer|**Max**|  
 |**SQLDATETIM4**|Qualquer|**smalldatetime**|  
 |**SQLMONEY4**|Qualquer|**Smallmoney**|  
 |**SQLFLT4**|Qualquer|**Foto**|  
-|**SQLUNIQUEID**|Qualquer|**uniqueidentifier**|  
+|**Sqluniqueid**|Qualquer|**uniqueidentifier**|  
 |**SQLNCHAR**|Não|**Nchar**|  
 |**SQLNVARCHAR**|Não|**Nvarchar**|  
 |**SQLNTEXT**|Qualquer|**Ntext**|  
@@ -106,7 +105,7 @@ RETCODE bcp_gettypename (
 |**SQLNCHAR**|Sim|**nvarchar(max)**|  
 |**SQLNVARCHAR**|Sim|**nvarchar(max)**|  
 |**SQLXML**|Sim|**Xml**|  
-|**SQLUDT**|Qualquer|**Udt**|  
+|**SQLUDT**|Qualquer|**UDT**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>Suporte de bcp_gettypename a recursos aprimorados de data e hora  
  Os valores de parâmetro de token para tipos de data/hora são descritos na coluna "Type in sqlncli. h" da tabela em [alterações de cópia em massa para tipos &#40;de data e hora&#41;aprimorados OLE DB e ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). O valor retornado está na linha correspondente da coluna "Tipo de armazenamento de arquivo" coluna.  

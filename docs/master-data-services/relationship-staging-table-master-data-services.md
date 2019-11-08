@@ -1,5 +1,5 @@
 ---
-title: Tabela de preparo de relações (Master Data Services) | Microsoft Docs
+title: Tabela de preparo da relação
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 77d4bd0bfab8b2c1a7337cae1f5d96300b7f3625
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dff1ab73713aed3bfb635c0399028f0c9a1a8c86
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909999"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727912"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>Tabela de preparo de relações (Master Data Services)
 
@@ -29,16 +29,16 @@ ms.locfileid: "67909999"
 ##  <a name="TableColumns"></a> Colunas da tabela  
  A tabela a seguir explica para o que cada um dos campos da tabela de preparo Relação é usado.  
   
-|Nome da coluna|Descrição|Valor|  
+|Nome da coluna|Descrição|Value|  
 |-----------------|-----------------|-----------|  
 |**ID**|Um identificador atribuído automaticamente.|Não insira um valor nesse campo. Se o lote não tiver sido processado, esse campo estará em branco.|  
-|**RelationshipType**|Obrigatório<br /><br /> O tipo de relação que está sendo definido.|Os valores possíveis são:<br /><br /> **1**: pai<br /><br /> **2**: Irmão (no mesmo nível)|  
-|**ImportStatus_ID**|Obrigatório<br /><br /> O status do processo de importação.|Os valores possíveis são:<br /><br /> **0**, que você especifica para indicar que o registro está pronto para preparação.<br /><br /> **1**, que é atribuído automaticamente e indica que o processo de preparação do registro teve êxito.<br /><br /> **2**, que é atribuído automaticamente e indica que ocorreu uma falha no processo de preparação do registro.|  
+|**RelationshipType**|Required<br /><br /> O tipo de relação que está sendo definido.|Os valores possíveis são:<br /><br /> **1**: pai<br /><br /> **2**: irmão (no mesmo nível)|  
+|**ImportStatus_ID**|Required<br /><br /> O status do processo de importação.|Os valores possíveis são:<br /><br /> **0**, que você especifica para indicar que o registro está pronto para preparação.<br /><br /> **1**, que é atribuído automaticamente e indica que o processo de preparação do registro teve êxito.<br /><br /> **2**, que é atribuído automaticamente e indica que ocorreu uma falha no processo de preparação do registro.|  
 |**Batch_ID**|Necessário apenas pelo serviço Web<br /><br /> Um identificador atribuído automaticamente que agrupa registros para preparo.<br /><br /> Se o lote não tiver sido processado, esse campo estará em branco.|Todos os membros do lote recebem esse identificador, que é exibido na interface do usuário do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , na coluna **ID** .|  
 |**BatchTag**|Necessário, exceto pelo serviço Web<br /><br /> Um nome exclusivo para o lote, de até 50 caracteres.||  
-|**HierarchyName**|Obrigatório<br /><br /> O nome da hierarquia explícita. Cada membro consolidado pode pertencer a apenas uma hierarquia.||  
-|**ParentCode**|Obrigatório<br /><br /> Para relações pai-filho, o código do membro consolidado que será o pai da folha filho ou do membro consolidado.<br /><br /> Para relações de irmão, o código de um dos irmãos.||  
-|**ChildCode**|Obrigatório<br /><br /> Para relações pai-filho, o código do membro consolidado ou folha que será o filho.<br /><br /> Para relações de irmão, o código de um dos irmãos.||  
+|**HierarchyName**|Required<br /><br /> O nome da hierarquia explícita. Cada membro consolidado pode pertencer a apenas uma hierarquia.||  
+|**ParentCode**|Required<br /><br /> Para relações pai-filho, o código do membro consolidado que será o pai da folha filho ou do membro consolidado.<br /><br /> Para relações de irmão, o código de um dos irmãos.||  
+|**ChildCode**|Required<br /><br /> Para relações pai-filho, o código do membro consolidado ou folha que será o filho.<br /><br /> Para relações de irmão, o código de um dos irmãos.||  
 |**Sort Order**|Opcional<br /><br /> Um inteiro que indica a ordem do membro em relação aos outros membros sob o pai. Cada membro filho deve ter um identificador exclusivo.||  
 |**ErrorCode**|Exibe um código de erro. Para todos os registros com um **ImportStatus_ID** de **2**, consulte [Erros de processo de preparo &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md).||  
   

@@ -1,5 +1,5 @@
 ---
-title: Permissões de folha (Master Data Services) | Microsoft Docs
+title: Permissões de folha
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 72ac77fd62bd0dd0f315bd214f94fe759923ffda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e01c6773ce28694e95f992f1af49a7cce19e969
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007195"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728081"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Permissões de folha (Serviços de Dados Mestre)
 
@@ -42,7 +42,7 @@ ms.locfileid: "68007195"
 |**Leitura**|O usuário pode ler membros folha e atributos.|  
 |**Criar**|O usuário pode criar membros folha e atribuir valores de atributo durante a criação.|  
 |**Update (atualizar)**|O usuário pode atualizar membros folha e atributos.|  
-|**Excluir**|O usuário pode excluir membros folha.|  
+|**Delete (excluir)**|O usuário pode excluir membros folha.|  
 |**Deny**|Nega todo o acesso aos membros folha.|  
   
  As permissões Ler, Criar, Atualizar e Excluir podem ser combinadas. Ao atribuir Criar, Atualizar e Excluir, a permissão de leitura é atribuída automaticamente.  
@@ -55,16 +55,16 @@ ms.locfileid: "68007195"
 |**Leitura**|O usuário pode ler atributos.|  
 |**Criar**|O usuário pode atribuir valores ao criar membros.|  
 |**Update (atualizar)**|O usuário pode atualizar atributos.|  
-|**Excluir**|Nenhum efeito.|  
-|**Deny**|O atributo não é exibido.<br /><br /> Observação: Você não pode negar acesso explicitamente para atributos Name e Code.|  
+|**Delete (excluir)**|Nenhum efeito.|  
+|**Deny**|O atributo não é exibido.<br /><br /> Observação: você não pode negar acesso explicitamente para os atributos Name e Code.|  
   
 ### <a name="example"></a>Exemplo  
  Para a entidade Product, atribua a permissão **Atualizar** ao atributo Subcategory. Negue permissão a todos os demais atributos.  
   
 |Nome|Código|Subcategory (atualizar)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} Mountain Bikes|  
-|Mountain-100|BK-M201|{5} Mountain Bikes|  
+|Mountain-100|BK-M101|Bicicletas de Mountain {5}|  
+|Mountain-100|BK-M201|Bicicletas de Mountain {5}|  
   
  No **Gerenciador**, você pode atualizar qualquer valor de atributo na coluna Subcategory. Se você não tiver permissão a um atributo, ele não será exibido.  
   

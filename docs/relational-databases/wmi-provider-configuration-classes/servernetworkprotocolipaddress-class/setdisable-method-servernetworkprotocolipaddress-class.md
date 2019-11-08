@@ -1,6 +1,6 @@
 ---
-title: Método SetDisable (classe ServerNetworkProtocolIPAddress) | Microsoft Docs
-ms.custom: ''
+title: Método SetDisable (ServerNetworkProtocolIPAddress)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a7cc8cc-9fb8-4bf5-b483-2150d633ee10
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 19bd72dc7ee010fcf0570b50b72fc855d2da9996
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8baa8048d4abb367032482a1c9ed55eeeaa342e5
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933621"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659385"
 ---
 # <a name="setdisable-method-servernetworkprotocolipaddress-class"></a>Método SetDisable (classe ServerNetworkProtocolIPAddress)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,12 +39,12 @@ object.SetDisable()
  *object*  
  Um objeto da [classe ServerNetworkProtocolIPAdress](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) que representa um endereço IP para o protocolo de rede em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor uint32, que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  
   
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurando protocolos de rede do servidor e bibliotecas de rede](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurando protocolos de rede do servidor e bibliotecas net](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

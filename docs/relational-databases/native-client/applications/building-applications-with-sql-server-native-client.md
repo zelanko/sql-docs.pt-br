@@ -15,16 +15,15 @@ ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea5f54676f82940d48b941e078ab2b6f4ef13a2b
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 83174627f4178e73484741f7bf8ec6cc7c8cdee3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176336"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761560"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>Criando aplicativos com o SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Durante o desenvolvimento de um aplicativo que usa a biblioteca do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, surgem vários problemas. Os tópicos desta seção abordam muitos desses problemas, inclusive a atualização do MDAC para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, o uso dos arquivos de cabeçalho e biblioteca do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, além de uma visão geral das várias cadeias de caracteres de conexão que podem ser usadas com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "70176336"
  Discute como conectar-se a um [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] usando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="see-also"></a>Consulte também  
- [Programação de SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
+   de [programação de SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
  [Tópicos de instruções sobre ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Tópicos de instruções do OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   

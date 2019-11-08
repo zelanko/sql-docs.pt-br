@@ -1,5 +1,5 @@
 ---
-title: Exemplo de UDT de reconhecimento de calendário data e hora | Microsoft Docs
+title: Exemplo de UDT de data e hora com reconhecimento de calendário | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,20 +10,20 @@ ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 41115e764099540a5b4548986c7c4c912d562f5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6bf2f4fd41ab67a0631fe5169a7904b571c842cc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62753778"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637665"
 ---
-# <a name="calendar-aware-date-and-time-udt-sample"></a>Exemplo de UDT de reconhecimento de calendário data e hora
+# <a name="calendar-aware-date-and-time-udt-sample"></a>Exemplo de UDT de data e hora com reconhecimento de calendário
   Armazenar datas como cadeias de caracteres pode ser confuso, pois as datas não fazem sentido quando não se entende qual sistema de calendário está sendo usado. O exemplo `CADatetime` define dois tipos de dados definidos pelo usuário, `CADatetime` e `CADate`, que fornecem manipulação de datas e horas com base no calendário.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para criar e executar este projeto, o software a seguir deve estar instalado:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
   
 -   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](https://go.microsoft.com/fwlink/?linkid=62796)Developer  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5b9c8322507c78458110f47f579ec333c3e5e7a7
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: b998a11acd71175e8868b669d9491822f60d2b33
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142840"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632759"
 ---
 # <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,9 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` retorna o valor inteiro do modo de failover e é um parâmetro de **saída** . *failover_mode_id* é um **tinyint** com um padrão de **0**. Ele retorna **0** para atualização imediata e **1** para atualização em fila.  
   
- [ **\@failover_mode =** ] **saída de '***failover_mode***'**  
- Retorna o modo no qual são feitas modificações de dados no Assinante. *failover_mode* é um **nvarchar (10)** com um padrão de NULL. É um parâmetro de **saída** .  
+`[ @failover_mode = ] 'failover_mode' OUTPUT` retorna o modo no qual as modificações de dados são feitas no Assinante. *failover_mode* é um **nvarchar (10)** com um padrão de NULL. É um parâmetro de **saída** .  
   
-|Value|Description|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |**implantação**|Atualização imediata: as atualizações feitas no Assinante são imediatamente propagadas no Publicador, usando 2PC (protocolo de confirmação de duas fases).|  
 |**em fila**|Atualização enfileirada: atualizações feitas no Assinante são armazenadas em uma fila.|  
@@ -60,13 +59,13 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_helpreplfailovermode** é usado na replicação de instantâneo ou na replicação transacional para as quais as assinaturas estão habilitadas para atualização imediata com atualização em fila como failover, em caso de falha.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_helpreplfailovermode**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou a função de banco de dados fixa **db_owner** podem ser executados **sp_helpreplfailovermode**.  
   
-## <a name="see-also"></a>Consulte Também  
- [Transact &#40;-SQL sp_setreplfailovermode&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+## <a name="see-also"></a>Consulte também  
+ [sp_setreplfailovermode &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   

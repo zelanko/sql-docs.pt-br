@@ -1,5 +1,5 @@
 ---
-title: Criar um membro consolidado (Master Data Services) | Microsoft Docs
+title: Criar um membro consolidado
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 45c7b5568028a74c806ff4fe39b6b8c48070d41c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcca8ec5850b7f787fa4fcb99f2c009a77b56b48
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079718"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729607"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Criar um membro consolidado (Master Data Services)
 
@@ -36,7 +36,7 @@ ms.locfileid: "68079718"
   
 ### <a name="to-create-a-consolidated-member"></a>Para criar um membro consolidado  
   
-1.  Na home page do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , na lista **Modelo** , selecione um modelo.  
+1.  Na página inicial do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , na lista **Modelo** , selecione um modelo.  
   
 2.  Na lista **Versão** , selecione uma versão.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68079718"
   
 6.  No painel esquerdo, selecione um nó raiz ou um membro consolidado sob a qual você deseja criar um membro consolidado.  
   
-7.  Clique em **Adicionar** .  
+7.  Clique em **Adicionar**.  
   
 8.  No painel à direita, preencha os campos.  
   

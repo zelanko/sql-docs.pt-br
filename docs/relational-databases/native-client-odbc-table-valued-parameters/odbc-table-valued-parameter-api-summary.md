@@ -1,5 +1,5 @@
 ---
-title: Resumo de APIs de parâmetro com valor de tabela ODBC | Microsoft Docs
+title: Resumo da API de parâmetro com valor de tabela ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,16 +14,15 @@ ms.assetid: b035fb9d-b5c1-4ce3-beac-f2f8ff736c7c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea20dbe9d4c2f08fa0bfd2b25cde351bb0f92f94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e29f25b0e830efd784a4448531d0036dc2b91623
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129183"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790881"
 ---
 # <a name="odbc-table-valued-parameter-api-summary"></a>Resumo de APIs de parâmetros com valor de tabela ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Este tópico lista as funções ODBC que foram aprimoradas para suportar parâmetros com valor de tabela.  
   
@@ -64,6 +63,6 @@ ms.locfileid: "68129183"
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Parâmetros com valor de tabela &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [Parâmetros &#40;com valor de tabela ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

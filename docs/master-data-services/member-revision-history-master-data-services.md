@@ -1,5 +1,5 @@
 ---
-title: Histórico de revisão de membro (Master Data Services) | Microsoft Docs
+title: Histórico de revisão de membro
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0ee2921a8e7178385651dc52c48b7bf82866dc49
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4bc3d2a084f7f1ec3abcf9e3d3bbcaf82e4749e8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092584"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729114"
 ---
 # <a name="member-revision-history-master-data-services"></a>Histórico de revisão de membro (Master Data Services)
 

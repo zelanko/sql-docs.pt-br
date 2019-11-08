@@ -13,16 +13,15 @@ ms.assetid: 5e24b3a0-0658-44fc-b653-f4c52f9eb328
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a46abd03ac5c8bb60c03531d78c705bdbf35c3d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f0059533e9f0fb5d0722f940c9687f9404b0ef80
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074215"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789424"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Este tópico aborda o comportamento OLE DB que é específico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   

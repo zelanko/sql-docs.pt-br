@@ -1,5 +1,5 @@
 ---
-title: Classe SecurityCertificate | Microsoft Docs
+title: Classe SecurityCertificate
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 202e91d9fee69ddc74edbd352a7d018151f70a14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc6bad2dc55c611d45b728de4a23cf60c4b151cc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058559"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660454"
 ---
 # <a name="securitycertificate-class"></a>Classe SecurityCertificate
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

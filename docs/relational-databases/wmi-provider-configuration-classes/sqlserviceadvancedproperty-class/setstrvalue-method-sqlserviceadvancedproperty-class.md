@@ -1,6 +1,6 @@
 ---
-title: Método SetStrValue (classe SqlServiceAdvancedProperty) | Microsoft Docs
-ms.custom: ''
+title: Método SetStrValue (SqlServiceAdvancedProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a58248999ae44ef71d454bef5e0fbdc9802494c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 02e0e825b52263acb819c4fedaa73efc6944741b
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139508"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659510"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>Método SetStrValue (classe SqlServiceAdvancedProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ object.SetStrValue(StrValue)
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|*strValue*|Um valor da cadeia de caracteres que especifica o valor da propriedade avançada.|  
+|*StrValue*|Um valor da cadeia de caracteres que especifica o valor da propriedade avançada.|  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor uint32, que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  
   
 ## <a name="remarks"></a>Comentários  

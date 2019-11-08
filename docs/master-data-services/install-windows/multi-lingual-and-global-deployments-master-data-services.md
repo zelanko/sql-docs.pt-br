@@ -1,5 +1,5 @@
 ---
-title: Implantações multilíngues e globais (Master Data Services) | Microsoft Docs
+title: Implantações multilíngues e globais
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c3d485f8-867c-4aa2-a90d-f38fda192534
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 30635148aa0110a4110398ecc8334e56a3634ebd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79a18eca1f222a4b128847a9367c46cfbe4cf891
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944923"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728103"
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>Implantações multilíngues e globais (Master Data Services)
 

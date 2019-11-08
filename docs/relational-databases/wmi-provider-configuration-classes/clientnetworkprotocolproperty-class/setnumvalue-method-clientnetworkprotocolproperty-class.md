@@ -1,6 +1,6 @@
 ---
-title: Método SetNumValue (classe ClientNetworkProtocolProperty) | Microsoft Docs
-ms.custom: ''
+title: Método SetNumValue (ClientNetworkProtocolProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c292e2ae-6d0a-44ad-ba54-5b0bd705ef37
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 49501a09ebc85544df5c704b0f97edefe2e4b043
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e359dddea783e1ff3e553e6454d97184ea3694f
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072570"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658812"
 ---
 # <a name="setnumvalue-method-clientnetworkprotocolproperty-class"></a>Método SetNumValue (classe ClientNetworkProtocolProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ object.SetNumValue [= value]
 |---------------|-----------------|  
 |*value*|Um valor **uint32** que especifica o valor numérico da propriedade referenciada.|  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor **uint32** , que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  
   
 ## <a name="remarks"></a>Comentários  

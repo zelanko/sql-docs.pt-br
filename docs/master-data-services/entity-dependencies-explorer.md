@@ -1,5 +1,5 @@
 ---
-title: Gerenciador de dependências de entidade | Microsoft Docs
+title: Gerenciador de dependências de entidade
 ms.custom: ''
 ms.date: 04/06/2016
 ms.prod: sql
@@ -12,12 +12,12 @@ keywords:
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6572f8a72dbbd4b4c197db82819ad7a372cedf78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 86b9a2ed9738790cf9747fbad104074393fd33d1
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052053"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729278"
 ---
 # <a name="entity-dependencies-explorer"></a>Gerenciador de dependências de entidade
 
