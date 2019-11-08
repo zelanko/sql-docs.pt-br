@@ -1,5 +1,5 @@
 ---
-title: Requisitos do banco de dados (Master Data Services) | Microsoft Docs
+title: Requisitos do banco de dados
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b4a59bc73be89222fef49aa9e779232cd3548e8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a06d5b8ebc22e5456e8f2989766f2f829d637cd0
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945012"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728140"
 ---
 # <a name="database-requirements-master-data-services"></a>Requisitos do banco de dados (Master Data Services)
 
@@ -62,9 +62,9 @@ ms.locfileid: "67945012"
   
 ### <a name="accounts-and-permissions"></a>Contas e permissões  
   
-|type|Descrição|  
+|Tipo|Descrição|  
 |----------|-----------------|  
-|Conta de usuário|No [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], você pode usar uma conta do Windows ou uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para se conectar à instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para hospedar o banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . A conta de usuário deve pertencer à função de servidor **sysadmin** na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para obter mais informações sobre a função **sysadmin** , veja [Funções de nível de servidor](../../relational-databases/security/authentication-access/server-level-roles.md).|  
+|Conta de usuário|No [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], você pode usar uma conta do Windows ou uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para se conectar à instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para hospedar o banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . A conta de usuário deve pertencer à função de servidor **sysadmin** na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para obter mais informações sobre a função **sysadmin** , consulte [Server-Level Roles](../../relational-databases/security/authentication-access/server-level-roles.md).|  
 |[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] conta de administrador|Ao criar um banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , você deve especificar uma conta de usuário de domínio para ser o administrador do sistema [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . Para todos os aplicativos Web do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] associados a este banco de dados, este usuário pode atualizar todos os modelos e todos os dados em todas as áreas funcionais. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md).|  
   
 ### <a name="database-backup"></a>Backup do banco de dados  
@@ -73,7 +73,7 @@ ms.locfileid: "67945012"
 ## <a name="see-also"></a>Consulte também  
  [Instalar o Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
  [Criar um banco de dados do Master Data Services](../../master-data-services/install-windows/create-a-master-data-services-database.md)   
- [Banco de dados do Master Data Services](../../master-data-services/master-data-services-database.md)   
+ [Banco de dados dos Master Data Services](../../master-data-services/master-data-services-database.md)   
  [Caixa de diálogo Conectar-se a um Banco de Dados do Master Data Services](../../master-data-services/connect-to-a-master-data-services-database-dialog-box.md)   
  [Assistente para Criar Banco de Dados &#40;Gerenciador de Configuração do Master Data Services&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: Propriedade PropertyValType (classe ClientNetworkProtocolProperty) | Microsoft Docs
-ms.custom: ''
+title: Propriedade PropertyValType (ClientNetworkProtocolProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -8,7 +8,7 @@ ms.reviewer: ''
 ms.technology: wmi
 ms.topic: reference
 apiname:
-- PropertyValType Property (ClientNetworkProtocolProperty Class)
+- PropertyValType Property (ClientNetworkProtocolProperty
 apilocation:
 - sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 624b9bdd-ed93-4140-bd4e-00d714a2558c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c1b503ea721aa83f9e9954a2181b1b252b211474
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5a4c6441cd2e6210575cfd30d28bf2cc2f385c18
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016143"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660771"
 ---
 # <a name="propertyvaltype-property-clientnetworkprotocolproperty-class"></a>Propriedade PropertyValType (classe ClientNetworkProtocolProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Obtém o tipo de dados do valor armazenado na propriedade referenciada pela [PropertyIdx Property (classe ClientNetworkProtocolProperty)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) valor.  
+  Obtém o tipo de dados do valor armazenado na propriedade referenciada pelo valor da [propriedade valor PropertyIdx Property (classe ClientNetworkProtocolProperty)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,8 +39,8 @@ object.PropertyValType [= value]
  *object*  
  A [classe ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) que representa um atributo do protocolo de rede usado pelo cliente do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
- Um **uint32** valor que especifica o tipo de dados do valor da propriedade.  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
+ Um valor **UInt32** que especifica o tipo de dados do valor da propriedade.  
   
 ## <a name="remarks"></a>Comentários  
   

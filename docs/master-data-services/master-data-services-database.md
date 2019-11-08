@@ -1,5 +1,5 @@
 ---
-title: Banco de dados do Master Data Services | Microsoft Docs
+title: Banco de dados do Master Data Services
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 159ab8c79be2cd27dba4db060b43a0e6b95290d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 897435f83591df84ec9a9b0a21d3eb4a2a9634a0
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062737"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729041"
 ---
 # <a name="master-data-services-database"></a>Banco de dados do Master Data Services
 

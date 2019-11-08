@@ -1,5 +1,5 @@
 ---
-title: Excluir um grupo de atributos (Master Data Services) | Microsoft Docs
+title: Excluir um grupo de atributos
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c86497b0a7231027d8b586147b372767f88b9605
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 78ba8b955fe0702a5b1737c1de24426d586f9ffa
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906410"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729368"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Excluir um grupo de atributos (Master Data Services)
 

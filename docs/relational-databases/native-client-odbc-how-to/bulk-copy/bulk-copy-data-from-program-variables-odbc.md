@@ -14,16 +14,15 @@ ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2ce54f4ad05abb25b0b8c40a359a072a2c60ae6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2617a25d2e038db365f369fe498d2196c0900142
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908256"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781909"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Copiar dados em massa de variáveis de programa (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Este exemplo mostra como usar funções de cópia em massa para copiar dados em massa de variáveis de programa para SQL Server usando **bcp_bind** e **bcp_sendrow**. (O código de verificação de erro foi removido para simplificar o exemplo.)  
   
@@ -57,7 +56,7 @@ ms.locfileid: "72908256"
   
 8.  Depois que todas as linhas tiverem sido enviadas, chame [bcp_done](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) para concluir a operação.  
 
- Você pode variar o local e o comprimento das variáveis do programa durante uma operação de cópia em massa chamando [bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) e [bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md). Use [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) para definir várias opções de cópia em massa. Use [bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) para enviar dados **Text**, **ntext**e **Image** em segmentos para o servidor.  
+ Você pode variar o local e o comprimento das variáveis do programa durante uma operação de cópia em massa chamando [bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) e [bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md). Use [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) para definir várias opções de cópia em massa. Use [bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) para enviar dados de **Text**, **ntext**e **Image** em segmentos para o servidor.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo não tem suporte em IA64.  
@@ -304,8 +303,8 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPTarget')
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [ &#40;Tópicos&#41; de instruções de cópia em massa com o SQL Server ODBC Driver](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)    
+## <a name="see-also"></a>Consulte também  
+ [ &#40;Tópicos&#41; de instruções de cópia em massa com o SQL Server ODBC Driver](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Cópia em massa de variáveis do programa](../../../relational-databases/native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   
   

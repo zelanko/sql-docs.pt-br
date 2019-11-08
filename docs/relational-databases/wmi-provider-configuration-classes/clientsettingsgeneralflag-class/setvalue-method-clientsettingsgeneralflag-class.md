@@ -1,6 +1,6 @@
 ---
-title: Método SetValue (classe ClientSettingsGeneralFlag) | Microsoft Docs
-ms.custom: ''
+title: Método SetValue (ClientSettingsGeneralFlag)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ea41844f5492174b67fedba6b9a2326af9a44eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a3f5fce9c795591ca7f8af41762fc9e9438aba2b
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089134"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660106"
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>Método SetValue (classe ClientSettingsGeneralFlag)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ object.SetValue(Value)
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|*Valor*|Um valor booliano que especifica o valor do sinalizador.|  
+|*Value*|Um valor booliano que especifica o valor do sinalizador.|  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor **uint32** , que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  
   
 ## <a name="remarks"></a>Comentários  

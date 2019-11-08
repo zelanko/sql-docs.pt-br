@@ -1,6 +1,6 @@
 ---
-title: Método ResumeService (classe SqlService) | Microsoft Docs
-ms.custom: ''
+title: Método ResumeService (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d483cdd91ca349010c6b59b9003155d4166fb63b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 40c0822bc8b881153909f77ec50b0c9de9883dec
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119993"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660940"
 ---
 # <a name="resumeservice-method-sqlservice-class"></a>Método ResumeService (classe SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,8 @@ object.ResumeService()
  *object*  
  Um objeto da [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) que representa o serviço.  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
- Um valor uint32, que é 0 se o **ResumeService** solicitação foi aceita, 1 se não há suporte para a solicitação e qualquer outro número para indicar um erro.  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
+ Um valor UInt32, que será 0 se a solicitação **ResumeService** tiver sido aceita, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  
   
 ## <a name="remarks"></a>Comentários  
   

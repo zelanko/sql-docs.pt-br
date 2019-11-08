@@ -11,23 +11,22 @@ ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29002e403b028f9f879782241588961a04007b65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 463044bbc0a4b930403ab5ba481bf54ffa05c8ee
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110097"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789917"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Enviar dados para FILESTREAM – ISequentialStream associado a ICommandText
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Este exemplo usa uma interface de ISequentialStream associada a um parâmetro de ICommandText para enviar de 4 MB a 4 GB de dados a uma coluna de filestream.  
   
- Para obter mais informações sobre o recurso filestream, consulte [suporte a FILESTREAM &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
+ Para obter mais informações sobre o recurso FileStream, consulte [suporte &#40;a&#41;FileStream OLE DB](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Exemplo  
- Antes de compilar e executar esse exemplo, habilitar o suporte a FILESTREAM ([habilitar e configurar FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ Antes de compilar e executar este exemplo, habilite o suporte a FILESTREAM ([habilitar e configurar FileStream](../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
   

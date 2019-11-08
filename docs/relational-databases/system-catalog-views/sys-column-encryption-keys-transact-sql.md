@@ -1,7 +1,7 @@
 ---
-title: sys.column_encryption_keys  (Transact-SQL) | Microsoft Docs
+title: sys. column_encryption_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2015
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: ''
@@ -17,30 +17,30 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_encryption_keys catalog view
 ms.assetid: 43980dd8-b9b1-4869-a304-2c183ae8977d
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8fd9177ad646a8086e00f9494e7e73488aace53d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4cd6b4a4cb8eeed0dd0a2a78adc2d39c6a2e895d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140102"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593724"
 ---
-# <a name="syscolumnencryptionkeys--transact-sql"></a>sys.column_encryption_keys  (Transact-SQL)
+# <a name="syscolumn_encryption_keys--transact-sql"></a>sys. column_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-xxx-md.md)]
 
-  Retorna informações sobre chaves de criptografia de coluna (CEKs) criado com o [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) instrução. Cada linha representa uma CEK.  
+  Retorna informações sobre CEKs (chaves de criptografia de coluna) criadas com a instrução [Create Column Encryption Key](../../t-sql/statements/create-column-encryption-key-transact-sql.md) . Cada linha representa um CEK.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|O nome da CMK.|  
-|**column_encryption_key_id**|**int**|ID da CEK.|  
-|**create_date**|**datetime**|Data em que a CEK foi criada.|  
-|**modify_date**|**datetime**|Data em que a CEK foi modificado pela última vez.|  
+|**name**|**sysname**|O nome do CMK.|  
+|**column_encryption_key_id**|**int**|ID do CEK.|  
+|**create_date**|**datetime**|Data em que o CEK foi criado.|  
+|**modify_date**|**datetime**|Data em que a CEK foi modificada pela última vez.|  
   
 ## <a name="permissions"></a>Permissões  
- Requer o **VIEW ANY COLUMN ENCRYPTION KEY** permissão.  
+ Requer a permissão **exibir qualquer chave de criptografia de coluna** .  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -50,7 +50,11 @@ ms.locfileid: "68140102"
  [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [Exibições de catálogo de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Always Encrypted &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Always Encrypted com o Secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+ [Visão geral do gerenciamento de chaves para Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [Gerenciar chaves para Always Encrypted com o Secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)    
+
   
   

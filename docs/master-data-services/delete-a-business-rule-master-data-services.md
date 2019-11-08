@@ -1,5 +1,5 @@
 ---
-title: Excluir uma regra de negócios (Master Data Services) | Microsoft Docs
+title: Excluir uma regra de negócio
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec560acba23c5423c295f569745da1f8d6bc86e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6af3aac4ac8e2a1a4026162eb6ab5f6038b5eed
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094405"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729409"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>Excluir uma regra de negócio (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "68094405"
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], exclua uma regra de negócio quando ela não for mais necessária.  
   
 > [!NOTE]  
->  Você pode evitar a validação de dados em relação a uma regra de negócio excluindo-a. Para obter mais informações, consulte [Excluir uma regra de negócio &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md).  
+>  Você pode evitar a validação de dados em relação a uma regra de negócio excluindo-a. Para obter mais informações, consulte [Exclude a Business Rule &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md).  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
@@ -46,7 +46,7 @@ ms.locfileid: "68094405"
   
 4.  Na lista suspensa **Entidade** , escolha uma entidade.  
   
-5.  Na lista suspensa **Tipos de Membro** , selecione um tipo de membro ao qual a regra de negócio será aplicada.  
+5.  Na lista suspensa **Tipo de Membro** , selecione um tipo de membro para aplicar a regra de negócio.  
   
 6.  Na grade, clique na linha da regra de negócios que você deseja excluir.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68094405"
   
 ## <a name="see-also"></a>Consulte também  
  [Excluir uma regra de negócio &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)   
- [Criar e publicar uma regra de negócios &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
+ [Criar e publicar uma regra de negócio &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
  [Regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

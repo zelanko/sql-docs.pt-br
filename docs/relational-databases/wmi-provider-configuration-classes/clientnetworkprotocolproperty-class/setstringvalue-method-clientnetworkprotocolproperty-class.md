@@ -1,6 +1,6 @@
 ---
-title: Método SetStringValue (classe ClientNetworkProtocolProperty) | Microsoft Docs
-ms.custom: ''
+title: Método SetStringValue (ClientNetworkProtocolProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 88d67b22-0eea-48c9-ab73-e0b4907953df
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 38925e2bd1355b9061de9c1ad5b68a61026cfff5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ce23fbc14501e07eaf116a1e0e7edb32c2f8abc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072557"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660697"
 ---
 # <a name="setstringvalue-method-clientnetworkprotocolproperty-class"></a>Método SetStringValue (classe ClientNetworkProtocolProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ object.SetStringValue(StrValue)
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|*strValue*|Um valor da cadeia de caracteres que especifica o novo valor da propriedade atual.|  
+|*StrValue*|Um valor da cadeia de caracteres que especifica o novo valor da propriedade atual.|  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor **uint32** , que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  
   
 ## <a name="remarks"></a>Comentários  

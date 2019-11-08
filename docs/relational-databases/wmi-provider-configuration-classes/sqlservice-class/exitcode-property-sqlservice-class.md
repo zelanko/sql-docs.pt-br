@@ -1,6 +1,6 @@
 ---
-title: Propriedade ExitCode (classe SqlService) | Microsoft Docs
-ms.custom: ''
+title: Propriedade ExitCode (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e6b8bff2-946f-4abe-bd50-1f7bb11fdddf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c0d85f3906991b698c2d2c5a70e7c5e95f7421d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 392fc529b10e79d96a83ccd896733d14d0b8b4dc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68221762"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659679"
 ---
 # <a name="exitcode-property-sqlservice-class"></a>Propriedade ExitCode (classe SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ object.ExitCode [= value]
  *object*  
  Um objeto da [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) que representa o serviço.  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor **uint32** que especifica o código de saída.  
   
 ## <a name="remarks"></a>Comentários  

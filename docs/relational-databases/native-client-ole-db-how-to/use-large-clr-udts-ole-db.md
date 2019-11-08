@@ -11,18 +11,17 @@ ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3d2ed3b506b6df25ed0559944230822f8886a24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b228a27169a506c1a1b292ee670bd08e4633201f
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109910"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73766354"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Usar UDTs grandes do CLR (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Este exemplo mostra como buscar linhas com tipos grandes definidos pelo usuário em um conjunto de resultados. Para obter mais informações, consulte [Large CLR User-Defined tipos &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). Este exemplo funciona apenas no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior.  
+  Este exemplo mostra como buscar linhas com tipos grandes definidos pelo usuário em um conjunto de resultados. Para obter mais informações, consulte [tipos &#40;CLR grandes definidos pelo usuário&#41;OLE DB](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). Este exemplo funciona apenas no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo contém dois projetos. Um projeto cria um assembly (DLL) de código-fonte C#. Este assembly contém o tipo CLR. Uma tabela será adicionada ao banco de dados. Uma coluna na tabela será de um tipo definido no assembly, por padrão, este exemplo usará o banco de dados mestre. O segundo projeto é um aplicativo nativo C que lê dados da tabela.  
