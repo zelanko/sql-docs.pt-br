@@ -25,16 +25,15 @@ ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdfea2ddff8b1e907cf3496595971a4c93efba53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d147e5c6fa257a6397635014d868d75e7c8833dd
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895823"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783475"
 ---
 # <a name="processing-statements-that-generate-messages"></a>Processando instruções que geram mensagens
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   As opções STATISTICS TIME e STATISTICS IO da instrução SET do [!INCLUDE[tsql](../../includes/tsql-md.md)] são usadas para obter informações que auxiliem a diagnosticar consultas de longa execução. As versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também dão suporte à opção SHOWPLAN para analisar planos de consulta. Um aplicativo ODBC pode definir essas opções executando as seguintes instruções:  
   
@@ -45,7 +44,7 @@ SQLExecDirect(hstmt, "SET STATISTICS TIME ON", SQL_NTS90
 SQLExecDirect(hstmt, "SET STATISTICS IO ON", SQL_NTS);  
 ```  
   
- Quando SET STATISTICS TIME ou SET SHOWPLAN forem ON, **SQLExecute** e **SQLExecDirect** retornar SQL_SUCCESS_WITH_INFO e, nesse ponto, o aplicativo pode recuperar a saída de plano de execução ou estatísticas de tempo chamando **SQLGetDiagRec** até ele retornar SQL_NO_DATA. Cada linha de dados de SHOWPLAN volta no formato:  
+ Quando SET STATISTICs TIME ou SET SHOWPLAN são ON, **SQLExecute** e **SQLExecDirect** retornam SQL_SUCCESS_WITH_INFO e, nesse ponto, o aplicativo pode recuperar o SHOWPLAN ou a saída de tempo de estatísticas chamando **SQLGetDiagRec** até que ele Retorna SQL_NO_DATA. Cada linha de dados de SHOWPLAN volta no formato:  
   
 ```  
 szSqlState="01000", *pfNativeError=6223,  
@@ -63,7 +62,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
    SQL Server Parse and Compile Time: cpu time = 0 ms."  
 ```  
   
- A saída de SET STATISTICS IO não está disponível até o final de um conjunto de resultados. Para obter estatísticas de e/s de saída, o aplicativo chama **SQLGetDiagRec** no momento **SQLFetch** ou [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) retorne SQL_NO_DATA. A saída de STATISTICS IO volta no formato:  
+ A saída de SET STATISTICS IO não está disponível até o final de um conjunto de resultados. Para obter estatísticas de saída de e/s, o aplicativo chama **SQLGetDiagRec** no momento em que **SQLFetch** ou [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) retorna SQL_NO_DATA. A saída de STATISTICS IO volta no formato:  
   
 ```  
 szSqlState="01000", *pfNativeError= 3615,  
@@ -73,7 +72,7 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 ```  
   
 ## <a name="using-dbcc-statements"></a>Usando instruções DBCC  
- As instruções DBCC retornam seus dados como mensagens, não como conjuntos de resultados. **SQLExecDirect** ou **SQLExecute** retornar SQL_SUCCESS_WITH_INFO e o aplicativo recupera a saída chamando **SQLGetDiagRec** até ele retornar SQL_NO_DATA.  
+ As instruções DBCC retornam seus dados como mensagens, não como conjuntos de resultados. **SQLExecDirect** ou **SQLExecute** retornam SQL_SUCCESS_WITH_INFO e o aplicativo recupera a saída chamando **SQLGetDiagRec** até que ela retorne SQL_NO_DATA.  
   
  Por exemplo, a instrução a seguir retorna SQL_SUCCESS_WITH_INFO:  
   
@@ -81,7 +80,7 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 SQLExecDirect(hstmt, "DBCC CHECKTABLE(Authors)", SQL_NTS);  
 ```  
   
- Chamadas para **SQLGetDiagRec** retornar:  
+ Chamadas para retorno de **SQLGetDiagRec** :  
   
 ```  
 szSqlState = "01000", *pfNativeError = 2536,  
@@ -100,13 +99,13 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 ```  
   
 ## <a name="using-print-and-raiserror-statements"></a>Usando as instruções PRINT e RAISERROR  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] Instruções PRINT e RAISERROR também retornam dados chamando **SQLGetDiagRec**. Instruções PRINT fazem a execução da instrução SQL retornar SQL_SUCCESS_WITH_INFO e uma chamada subsequente para **SQLGetDiagRec** retorna um *SQLState* igual a 01000. Um RAISERROR com uma severidade de dez ou menor se comporta da mesma forma que PRINT. Um RAISERROR com severidade de 11 ou maior faz com que a execução retornar SQL_ERROR e uma chamada subsequente para **SQLGetDiagRec** retorna *SQLState* 42000. Por exemplo, a instrução a seguir retorna SQL_SUCCESS_WITH_INFO:  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções PRINT e RAISERROR também retornam dados chamando **SQLGetDiagRec**. As instruções PRINT fazem com que a execução da instrução SQL retorne SQL_SUCCESS_WITH_INFO, e uma chamada subsequente para **SQLGetDiagRec** retorna um *SQLSTATE* de 01000. Um RAISERROR com uma severidade de dez ou menor se comporta da mesma forma que PRINT. Um RAISERROR com uma severidade de 11 ou superior faz com que a execução seja retornada SQL_ERROR, e uma chamada subsequente para **SQLGetDiagRec** retorna *SQLSTATE* 42000. Por exemplo, a instrução a seguir retorna SQL_SUCCESS_WITH_INFO:  
   
 ```  
 SQLExecDirect (hstmt, "PRINT  'Some message' ", SQL_NTS);  
 ```  
   
- Chamando **SQLGetDiagRec** retorna:  
+ Chamar **SQLGetDiagRec** retorna:  
   
 ```  
 szSQLState = "01000", *pfNative Error = 0,  
@@ -121,7 +120,7 @@ SQLExecDirect (hstmt, "RAISERROR ('Sample error 1.', 10, -1)",
    SQL_NTS)  
 ```  
   
- Chamando **SQLGetDiagRec** retorna:  
+ Chamar **SQLGetDiagRec** retorna:  
   
 ```  
 szSQLState = "01000", *pfNative Error = 50000,  
@@ -135,7 +134,7 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
 SQLExecDirect (hstmt, "RAISERROR ('Sample error 2.', 11, -1)", SQL_NTS)  
 ```  
   
- Chamando **SQLGetDiagRec** retorna:  
+ Chamar **SQLGetDiagRec** retorna:  
   
 ```  
 szSQLState = "42000", *pfNative Error = 50000,  
@@ -143,11 +142,11 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
    Sample error 2."  
 ```  
   
- O tempo da chamada **SQLGetDiagRec** é essencial quando a saída de instruções PRINT ou RAISERROR está incluída em um conjunto de resultados. A chamada para **SQLGetDiagRec** para recuperar o PRINT ou RAISERROR saída deve ser feita imediatamente após a instrução que recebe SQL_ERROR ou SQL_SUCCESS_WITH_INFO. Isto é direto quando apenas uma única instrução SQL é executada, como nos exemplos acima. Nesses casos, a chamada para **SQLExecDirect** ou **SQLExecute** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO e **SQLGetDiagRec** , em seguida, pode ser chamado. Isso é menos direto quando ao codificar loops para tratar a saída de um lote de instruções SQL ou ao executar procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ O tempo de chamar **SQLGetDiagRec** é crítico quando a saída de instruções PRINT ou RAISERROR é incluída em um conjunto de resultados. A chamada para **SQLGetDiagRec** para recuperar a saída de impressão ou RAISERROR deve ser feita imediatamente após a instrução que recebe SQL_ERROR ou SQL_SUCCESS_WITH_INFO. Isto é direto quando apenas uma única instrução SQL é executada, como nos exemplos acima. Nesses casos, a chamada para **SQLExecDirect** ou **SQLExecute** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO e o **SQLGetDiagRec** , em seguida, pode ser chamado. Isso é menos direto quando ao codificar loops para tratar a saída de um lote de instruções SQL ou ao executar procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Neste caso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna um conjunto de resultados para cada instrução SELECT executada em um lote ou um procedimento armazenado. Se o lote ou o procedimento contiver instruções PRINT ou RAISERROR, sua saída será intercalada com os conjuntos de resultados da instrução SELECT. Se a primeira instrução no lote ou procedimento for PRINT ou RAISERROR, a **SQLExecute** ou **SQLExecDirect** retorna SQL_SUCCESS_WITH_INFO ou SQL_ERROR e o aplicativo precisa chamar **SQLGetDiagRec** até ele retornar SQL_NO_DATA para recuperar as informações de PRINT ou RAISERROR.  
+ Neste caso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna um conjunto de resultados para cada instrução SELECT executada em um lote ou um procedimento armazenado. Se o lote ou o procedimento contiver instruções PRINT ou RAISERROR, sua saída será intercalada com os conjuntos de resultados da instrução SELECT. Se a primeira instrução no lote ou procedimento for uma impressão ou um RAISERROR, **SQLExecute** ou **SQLExecDirect** retornará SQL_SUCCESS_WITH_INFO ou SQL_ERROR, e o aplicativo precisará chamar **SQLGetDiagRec** até que ele retorne SQL_NO_DATA para recupere as informações de impressão ou RAISERROR.  
   
- Se a instrução PRINT ou RAISERROR vier depois de uma instrução SQL (por exemplo, uma instrução SELECT) e, em seguida, as informações de PRINT ou RAISERROR são retornadas quando [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)posições no resultado definida que contém o erro. **SQLMoreResults** retorna SQL_SUCCESS_WITH_INFO ou SQL_ERROR, dependendo da severidade da mensagem. As mensagens são recuperadas chamando **SQLGetDiagRec** até ele retornar SQL_NO_DATA.  
+ Se a instrução PRINT ou RAISERROR vier após uma instrução SQL (como uma instrução SELECT), as informações PRINT ou RAISERROR serão retornadas quando [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)Positions no conjunto de resultados que contém o erro. **SQLMoreResults** retorna SQL_SUCCESS_WITH_INFO ou SQL_ERROR dependendo da severidade da mensagem. As mensagens são recuperadas chamando **SQLGetDiagRec** até que ela retorne SQL_NO_DATA.  
   
 ## <a name="see-also"></a>Consulte também  
  [Tratando de erros e mensagens](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

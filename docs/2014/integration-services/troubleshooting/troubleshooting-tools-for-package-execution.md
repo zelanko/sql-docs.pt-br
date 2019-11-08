@@ -16,12 +16,12 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7f2c5a0f655a258492866d934d20bd8573f38757
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd39b7315903335fe2370ae148579f3fe9d07abc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62766220"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637801"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Solucionando problemas de ferramentas para execução de pacotes
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui recursos e ferramentas que podem ser usados para solucionar problemas de pacotes quando eles são executados depois de concluídos e implantados.  
@@ -38,7 +38,7 @@ ms.locfileid: "62766220"
   
 -   **Ajudar a garantir a integridade dos dados usando as transações**. Para obter mais informações, consulte [Transações do Integration Services](../integration-services-transactions.md).  
   
--   **Reiniciar os pacotes a partir do ponto de falha usando os pontos de verificação**. Para saber mais, confira [Reiniciar pacotes por meio de pontos de verificação](../packages/restart-packages-by-using-checkpoints.md).  
+-   **Reiniciar os pacotes a partir do ponto de falha usando os pontos de verificação**. Para obter mais informações, consulte [Reiniciar pacotes por meio de pontos de verificação](../packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Capturar e manipular os erros de pacotes com os manipuladores de eventos  
  Você pode responder a muitos eventos gerados pelo pacote e os objetos no pacote usando os manipuladores de eventos.  
@@ -52,21 +52,21 @@ ms.locfileid: "62766220"
   
 -   **Adicionar informações amigáveis às saídas de erro**. A análise da saída de erro pode tornar-se uma tarefa mais fácil se você adicionar outras informações descritivas além dos dois identificadores numéricos que são fornecidos pela saída de erro.  
   
-     **Adicionar a descrição do erro**. É fácil procurar pela descrição do erro usando um componente Script. Para obter mais informações, consulte [aprimorando uma saída de erro para o componente Script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
+     **Adicione a descrição do erro**. É fácil procurar pela descrição do erro usando um componente Script. Para obter mais informações, consulte [aprimorando uma saída de erro para o componente Script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
-     **Adicione o nome da coluna de erro**. A pesquisa pelo nome de coluna que corresponde à ID da coluna salva pela saída de erro não pode ser feita facilmente no componente Script e requer etapas adicionais. Cada ID de coluna em um fluxo de dados é exclusivo dentro da tarefa Fluxo de Dados e persiste no pacote no momento da criação. A abordagem a seguir é uma sugestão para adicionar o nome de coluna à saída do erro. Para obter um exemplo de como usar essa abordagem, consulte [adicionando o nome de coluna de erro para uma saída de erro](https://go.microsoft.com/fwlink/?LinkId=261546) em dougbert.com.  
+     **Adicione o nome da coluna de erro**. A pesquisa pelo nome de coluna que corresponde à ID da coluna salva pela saída de erro não pode ser feita facilmente no componente Script e requer etapas adicionais. Cada ID de coluna em um fluxo de dados é exclusivo dentro da tarefa Fluxo de Dados e persiste no pacote no momento da criação. A abordagem a seguir é uma sugestão para adicionar o nome de coluna à saída do erro. Para obter um exemplo de como usar essa abordagem, consulte [adicionando o nome da coluna de erro a uma saída de erro](https://go.microsoft.com/fwlink/?LinkId=261546) em dougbert.com.  
   
-    1.  **Criar uma tabela de pesquisa de nomes de coluna**. Crie outro aplicativo separado que use a API do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para iterar com cada pacote salvo, cada fluxo do pacote, cada objeto do fluxo de dados, e cada entrada e saída do objeto de fluxo de dados. O aplicativo deve persistir a ID de coluna e o nome de cada coluna a uma tabela de pesquisa, com a ID da tarefa Fluxo de Dados pai e a ID do pacote.  
+    1.  **Crie uma tabela de pesquisa de nomes de coluna**. Crie outro aplicativo separado que use a API do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para iterar com cada pacote salvo, cada fluxo do pacote, cada objeto do fluxo de dados, e cada entrada e saída do objeto de fluxo de dados. O aplicativo deve persistir a ID de coluna e o nome de cada coluna a uma tabela de pesquisa, com a ID da tarefa Fluxo de Dados pai e a ID do pacote.  
   
-    2.  **Adicionar o nome da coluna à saída**. Adicione uma transformação Pesquisa à saída de erro que pesquise pelo nome da coluna na tabela de pesquisa criada na etapa anterior. A pesquisa pode usar a ID da coluna na saída de erro, a ID do pacote (disponível na variável System::PackageID do sistema) e a ID da tarefa Fluxo de Dados (disponível na variável System::TaskID do sistema).  
+    2.  **Adicione o nome da coluna à saída**. Adicione uma transformação Pesquisa à saída de erro que pesquise pelo nome da coluna na tabela de pesquisa criada na etapa anterior. A pesquisa pode usar a ID da coluna na saída de erro, a ID do pacote (disponível na variável System::PackageID do sistema) e a ID da tarefa Fluxo de Dados (disponível na variável System::TaskID do sistema).  
   
 ## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>Solucionar problemas de execução de pacotes por meio relatórios de operações  
- Os relatórios de operações padrão estão disponíveis no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para ajudar você a monitorar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que foram implantados no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Esses relatórios de pacote ajudam a exibir o status e o histórico do pacote e, se necessário, a identificar a causa de falhas de execução.  
+ Os relatórios de operações padrão estão disponíveis no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para ajudar você a monitorar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que foram implantados no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Esses relatórios de pacote ajudam a exibir o status e o histórico do pacote e, se necessário, a identificar a causa de falhas de execução.  
   
  Para obter mais informações, consulte [Solucionando problemas de relatórios para execução de pacotes](troubleshooting-reports-for-package-execution.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-ssisdb-views"></a>Solucionar problemas de execução de pacotes usando exibições SSISDB  
- Várias exibições de banco de dados SSISDB estão disponíveis para você consultar e monitorar a execução de pacotes e outras informações de operações. Para obter mais informações, consulte [monitoramento para execuções de pacote e outras operações](../performance/monitor-running-packages-and-other-operations.md).  
+ Várias exibições de banco de dados SSISDB estão disponíveis para você consultar e monitorar a execução de pacotes e outras informações de operações. Para obter mais informações, consulte [monitorando execuções de pacote e outras operações](../performance/monitor-running-packages-and-other-operations.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Solucionar problemas de execução de pacotes por meio dos logs  
  Você pode controlar muitas ocorrências em seus pacotes de execução ativando os logs. Os provedores de logs capturam as informações sobre os eventos especificados para análise posterior e salvam essas informações em uma tabela de banco de dados, um arquivo simples, um arquivo XML ou outro formato de saída suportado.  
@@ -79,13 +79,13 @@ ms.locfileid: "62766220"
   
      A abordagem a seguir é uma sugestão para aprimorar a saída de log padrão e facilitar a geração de relatórios:  
   
-    1.  **Criar uma tabela pai que registra todas as execuções de um pacote**. Essa tabela pai tem apenas uma linha para cada execução do pacote e usa o ExecutionID para estabelecer um vínculo com os registros filho na tabela de log [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Você pode usar uma tarefa Executar SQL no início de cada pacote para criar essa nova linha e para registrar a hora de início. Em seguida, poderá usar outra tarefa Executar SQL no final do pacote para atualizar a linha com a hora de término, a duração e o status.  
+    1.  **Criar uma tabela pai que registra todas as execuções de um pacote**. Essa tabela pai tem apenas uma linha para cada execução do pacote e usa o ExecutionID para estabelecer um vínculo com os registros filho na tabela de log [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Você pode usar uma tarefa Executar SQL no início de cada pacote para criar essa nova linha e para registrar a hora de início. Em seguida, poderá usar outra tarefa Executar SQL no final do pacote para atualizar a linha com a hora de término, a duração e o status.  
   
     2.  **Adicionar informações de auditoria ao fluxo de dados**. Você pode usar a transformação Auditoria para adicionar informações às linhas no fluxo de dados sobre a execução do pacote que criou ou modificou cada linha. A transformação Auditoria disponibiliza nove partes de informações, incluindo PackageName e ExecutionInstanceGUID. Para obter mais informações, consulte [Audit Transformation](../data-flow/transformations/audit-transformation.md). Se você tiver informações personalizadas que gostaria de incluir nas linhas para fins de auditoria, poderá adicioná-las às linhas no fluxo de dados usando uma transformação Coluna Derivada. Para obter mais informações, consulte [Derived Column Transformation](../data-flow/transformations/derived-column-transformation.md).  
   
     3.  **Considerar a captura de dados de contagem de linhas**. Considere a criação de tabelas separadas para as informações de contagem de linhas, onde cada instância de execução de pacote possa ser identificada por ExecutionID. Use a transformação Contagem de Linhas para salvar a contagem de linhas em uma série de variáveis em pontos críticos no fluxo de dados. Após o término do fluxo de dados, use uma tarefa Executar SQL para inserir as séries de valores em uma linha na tabela para análise e geração de relatório posterior.  
   
-     Para obter mais informações sobre essa abordagem, consulte a seção "ETL Auditing and Logging" no white paper da [!INCLUDE[msCoName](../../includes/msconame-md.md)] intitulado [Projeto REAL: práticas de design ETL de Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=96602).  
+     Para obter mais informações sobre essa abordagem, consulte a seção "ETL Auditing and Logging" no white paper da [!INCLUDE[msCoName](../../includes/msconame-md.md)] intitulado [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582)(Projeto REAL: práticas de design ETL de Business Intelligence).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Solucionar problemas de execução de pacotes por meio de arquivos de despejo de depuração  
  No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode criar arquivos de despejo de depuração que fornecem informações sobre a execução de um pacote. Para obter mais informações, consulte [Generating Dump Files for Package Execution](generating-dump-files-for-package-execution.md).  
@@ -109,7 +109,7 @@ ms.locfileid: "62766220"
 ## <a name="troubleshoot-errors-without-a-description"></a>Solucionar problemas de erros sem uma descrição  
  Se você encontrar um erro do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que não seja acompanhado de uma descrição, localize a descrição no [Referência de mensagens e erros do Integration Services](../integration-services-error-and-message-reference.md) e procure o erro pelo número. No momento, a lista não inclui informações para solução de problemas.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tarefas relacionadas  
  [Configurar uma saída de erro em um componente de fluxo de dados](../configure-an-error-output-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  

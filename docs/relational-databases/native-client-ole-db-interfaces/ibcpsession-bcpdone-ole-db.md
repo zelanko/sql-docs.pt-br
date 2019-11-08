@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) | Microsoft Docs
+title: 'IBCPSession:: BCPDone (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cec04c6cd1fac02dd2ef128fe556fe4e011e2b0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eac36b2aaaa5cd3b28d5476c760bab3152c460f2
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091066"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789617"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Confirma as linhas restantes a serem enviadas ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -37,7 +36,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Nenhuma outra operação pode ser chamada na interface [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) após a chamada ao método **BCPDone**. A única possibilidade é chamar o método [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) para iniciar uma nova operação de cópia em massa. Isso é semelhante a chamar o método [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) .  
+ Nenhuma outra operação pode ser chamada na interface [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) depois de chamar o método **BCPDone** . A única possibilidade é chamar o método [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) para iniciar uma nova operação de cópia em massa. Isso é semelhante a chamar o método [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) .  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  S_OK  
@@ -465,7 +464,7 @@ void wmain() {
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Executando operações de cópia em massa](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

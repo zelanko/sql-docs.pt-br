@@ -12,16 +12,15 @@ ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0690c5ed27f2dd7a0b4bfae55af06e8ac5f0c2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ffe65b15ef18618058ea9ccc385dd12cd0482d96
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987595"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781701"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Chamar SQLColumns em uma tabela com colunas esparsas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Este exemplo mostra como chamar SQLColumns em uma tabela com colunas esparsas que foram definidas usando o ODBC no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "67987595"
   
  Compile com /EHsc /D, "UNICODE" e odbc32.lib.  
   
- A segunda ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listagem de código exclui a tabela criada por este exemplo.  
+ A segunda listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) exclui a tabela criada por este exemplo.  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

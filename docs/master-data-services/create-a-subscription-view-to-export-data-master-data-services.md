@@ -1,5 +1,5 @@
 ---
-title: Criar uma exibição de assinatura para exportar dados (Master Data Services) | Microsoft Docs
+title: Criar uma exibição de assinatura para exportar dados
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 755e9c6baa708033f166f7026164590c2119e44d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 524ff4934adf2317daceff64f70ce4ae0afb7424
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896915"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728474"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Criar uma exibição de assinatura para exportar dados (Master Data Services)
 
@@ -65,28 +65,28 @@ ms.locfileid: "67896915"
 ## <a name="view-information"></a>Informações de Exibição  
  Para cada exibição criada, uma linha com dez colunas é adicionada à grade. A tabela a seguir descreve as colunas.  
   
-|coluna|Descrição|  
+|Coluna|Descrição|  
 |------------|-----------------|  
-|Status|O status da exibição.<br /><br /> Quando você clica em **Salvar**, a imagem ![Ícone para o status de atualização](../master-data-services/media/mds-statusicon-updating.png "Ícone para o status de atualização") é exibida, indicando que a exibição está sendo atualizada.<br /><br /> Se houver erros ao criar ou editar uma exibição, a imagem ![Ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Ícone para o status de erro") será exibida.<br /><br /> Caso contrário, o status será OK e a imagem ![Ícone para o status OK](../master-data-services/media/mds-statusicon-ok.png "Ícone para o status OK") será exibida.|  
-|Name|O nome da exibição de assinatura.|  
+|Status|O status da exibição.<br /><br /> Quando você clica em **salvar**, o ![ícone para atualizar a imagem de status](../master-data-services/media/mds-statusicon-updating.png "Icon para atualizar o status ") é exibido, indicando que a exibição está sendo atualizada.<br /><br /> Se houver erros ao criar ou editar um modo de exibição, a imagem ![ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Icon para status de erro ") será exibida.<br /><br /> Caso contrário, o status é OK e o ![ícone para a imagem de status OK](../master-data-services/media/mds-statusicon-ok.png "Icon status OK ") é exibido.|  
+|Nome|O nome da exibição de assinatura.|  
 |Modelo|O nome do modelo.|  
-|Version|O nome da versão.|  
+|Versão|O nome da versão.|  
 |Sinalizador de Versão|O nome do sinalizador de versão.|  
 |Hierarquia derivada|O nome da hierarquia derivada.|  
 |Entidade|O nome da entidade.|  
-|Formatar|Especifica o tipo dos dados na exibição.|  
+|Formato|Especifica o tipo dos dados na exibição.|  
 |Nível|Especifica o número de níveis na exibição, que é usado apenas para os formatos de Nível explícito ou Nível derivado|  
 |Incluir membros excluídos|Indica se membros excluídos de forma reversível são incluídos na exibição.|  
   
  Quando você clica em uma exibição, as informações a seguir são exibidas.  
   
--   **Criado por**: O nome do usuário que criou a exibição.  
+-   **Criada Por**: o nome do usuário que criou a exibição.  
   
--   **Em**: A data e a hora em que a exibição foi criada.  
+-   **Em**: obtém a data e a hora em que a exibição foi criada.  
   
--   **Atualizado por**: O nome do usuário que atualizou a exibição pela última vez.  
+-   **Atualizada Por**: o nome do usuário que atualizou a exibição pela última vez.  
   
--   **Em**: A data e a hora em que a exibição foi atualizada pela última vez.  
+-   **Em**: obtém a data e a hora em que a exibição foi atualizada pela última vez.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral: Exportando dados &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   

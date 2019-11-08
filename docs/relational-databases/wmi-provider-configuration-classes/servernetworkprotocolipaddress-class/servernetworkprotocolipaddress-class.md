@@ -1,5 +1,5 @@
 ---
-title: Classe ServerNetworkProtocolIPAddress | Microsoft Docs
+title: Classe ServerNetworkProtocolIPAddress
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5b2b36f48a81dad4b56bf845dcf5e82932dd4c23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 502fde4cb50dda4588ee71486d938070101e80f2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933652"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660430"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>Classe ServerNetworkProtocolIPAddress
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,6 @@ ms.locfileid: "67933652"
 -   Habilitar e desabilitar o endereço IP.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurando protocolos de rede do servidor e bibliotecas de rede](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurando protocolos de rede do servidor e bibliotecas net](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

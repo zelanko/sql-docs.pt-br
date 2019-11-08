@@ -1,5 +1,5 @@
 ---
-title: Configurar regras de negócio para enviar notificações (Master Data Services) | Microsoft Docs
+title: Configurar regras de negócio para enviar notificações
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fe7bdd3ab79987f4f45a4a50d818ce454914e608
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4645b9faca312eb5bee12eef1130893785c327d5
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941109"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728559"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>Configurar regras de negócio para enviar notificações (Master Data Services)
 

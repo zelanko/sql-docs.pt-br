@@ -1,5 +1,5 @@
 ---
-title: Aprovar ou rejeitar um conjunto de alterações (Master Data Services) | Microsoft Docs
+title: Aprovar ou Rejeitar um Conjunto de Alterações
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5c45d59fbdeaeeb8a2fe37800d81a63051770924
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 401983aa2e5094560f7bcc852c839986ffe4234d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047728"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728766"
 ---
 # <a name="approve-or-reject-a-changeset-master-data-services"></a>Aprovar ou rejeitar um conjunto de alterações (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Um conjunto de alterações é uma coleção das alterações pendentes nos dados mestre. Se as alterações de entidade exigirem aprovação do administrador e se um conjunto de alterações for enviado para aprovação, você poderá examinar e então aprovar ou rejeitar o conjunto de alterações.  
+  Um conjunto de alterações é uma coleção de alterações pendentes nos dados mestre. Se as alterações de entidade exigirem aprovação do administrador e se um conjunto de alterações for enviado para aprovação, você poderá examinar e então aprovar ou rejeitar o conjunto de alterações.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
   

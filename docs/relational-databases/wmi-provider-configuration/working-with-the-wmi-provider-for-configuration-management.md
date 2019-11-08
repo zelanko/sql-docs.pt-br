@@ -1,6 +1,6 @@
 ---
-title: Trabalhando com o provedor WMI para gerenciamento de configuração | Microsoft Docs
-ms.custom: ''
+title: Usar o provedor WMI para o gerenciamento de configuração
+ms.custom: seo-lt-2019
 ms.date: 04/12/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e6736c73f7cda435d91e3ec9c9f523bdc08f1b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d76cc006e2f8638de9b6d3c21660806239022ec0
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139275"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73657370"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Trabalhando com o provedor WMI para o Gerenciamento de configuração
 
@@ -37,15 +37,15 @@ Este artigo fornece orientação sobre como programar com o provedor WMI para ge
   
 ## <a name="specifying-a-connection-string"></a>Especificando uma cadeia de caracteres de conexão
 
-Os aplicativos direcionam o provedor WMI para gerenciamento de configuração para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conectando a um namespace WMI definido pelo provedor. O serviço Windows WMI mapeia esse namespace para a DLL do provedor e carrega a DLL na memória. Todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são representadas com um único namespace WMI.
+Os aplicativos direcionam o provedor WMI para gerenciamento de configuração para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conectando a um namespace WMI definido pelo provedor. O serviço WMI do Windows mapeia esse namespace para a DLL do provedor e carrega a DLL na memória. Todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são representadas com um único namespace WMI.
 
-O namespace padrão é o formato a seguir. O formato, `VV` é o número de versão principal do SQL Server. O número é detectável executando `SELECT @@VERSION;`.
+O namespace usa como padrão o formato a seguir. No formato, `VV` é o número de versão principal do SQL Server. O número é detectável por meio da execução de `SELECT @@VERSION;`.
 
 ```console
 \\.\root\Microsoft\SqlServer\ComputerManagementVV
 ```
 
-Quando você se conectar usando o PowerShell, o entrelinhamento `\\.\` devem ser removidos. Por exemplo, o código do PowerShell a seguir lista todas as classes WMI do SQL Server 2016, que é a versão principal 13.
+Quando você se conecta usando o PowerShell, o `\\.\` à esquerda deve ser removido. Por exemplo, o código do PowerShell a seguir lista todas as classes WMI para um SQL Server 2016, que é a versão principal 13.
 
 ```powershell
 Get-WmiObject -Namespace 'root\Microsoft\SqlServer\ComputerManagement13' -List
@@ -63,13 +63,13 @@ Thus from here I (GeneMi = MightyPen) removed the following text about 'instance
 where `instance_name` defaults to `MSSQLSERVER` in a default installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 -->
 
-Você pode usar o seguinte código do PowerShell para consultar todos os namespaces WMI ComputerManagement disponíveis.
+Você pode usar o código do PowerShell a seguir para consultar todos os namespaces do WMI ComputerManagement disponíveis.
 
 ```powershell
 gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerManagement' } | select name
 ```
 
- **Observação:** Se você estiver se conectando através do Firewall do Windows, você precisará certificar-se de que seus computadores estejam configurados adequadamente. Consulte o artigo "Conectando através do Windows Firewall" na documentação da instrumentação de gerenciamento do Windows no [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [site da Web](https://go.microsoft.com/fwlink/?linkid=15426).  
+ **Observação:** Se você estiver se conectando por meio do firewall do Windows, precisará verificar se os computadores estão configurados corretamente. Consulte o artigo "conectando por meio do firewall do Windows" na documentação do Instrumentação de Gerenciamento do Windows no [site](https://go.microsoft.com/fwlink/?linkid=15426)[!INCLUDE[msCoName](../../includes/msconame-md.md)] msdn.  
   
 ## <a name="permissions-and-server-authentication"></a>Permissões e autenticação do servidor  
  Para acessar o provedor WMI para gerenciamento de configuração, o script de gerenciamento WMI do cliente deve estar sendo executado no contexto de um administrador no computador de destino. Você precisa ser membro do grupo local de administradores do Windows no computador que deseja gerenciar.  

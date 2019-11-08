@@ -14,16 +14,15 @@ ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a892e91685e90867f8825dbe46d7dd336cb8fdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4085375ac361bb7ae40e0d69bea919a1ac431dc
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987645"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781713"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Criar um arquivo de formato de cópia em massa (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Este exemplo mostra como usar funções de cópia em massa para criar um arquivo de dados e um arquivo de formato. Esse exemplo foi desenvolvido para o ODBC versão 3.0 ou posterior.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "67987645"
   
 5.  Chame [bcp_columns](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) para definir o número de colunas.  
   
-6.  Chame [bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) para cada coluna definir suas características no arquivo de dados.  
+6.  Chame [bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) para cada coluna para definir suas características no arquivo de dados.  
   
 7.  Chame [bcp_writefmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) para criar um arquivo de formato que descreve o arquivo de dados a ser criado pela operação de cópia em massa.  
   
@@ -59,15 +58,15 @@ ms.locfileid: "67987645"
  Uma operação de cópia em massa executada dessa forma cria um arquivo de dados que contém os dados copiados e um arquivo de formato que descreve o layout do arquivo de dados.  
   
 ## <a name="example"></a>Exemplo  
- Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks na página inicial de [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (em inglês)). Essa fonte de dados deve ser baseada no driver ODBC que é fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
+ Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks do [Microsoft SQL Server exemplos e projetos da comunidade](https://go.microsoft.com/fwlink/?LinkID=85384) Home Page.) Essa fonte de dados deve ser baseada no driver ODBC fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   
- Execute a primeira ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) listagem para criar a tabela que usará o exemplo de código.  
+ Execute a primeira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para criar a tabela que será usada pelo exemplo.  
   
  Compile a segunda listagem de código (C++) com odbc32.lib e odbcbcp.lib.  
   
- Execute a terceira ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) listagem para excluir a tabela usadas pelo exemplo de código.  
+ Execute a terceira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para excluir a tabela usada pelo exemplo.  
   
 ```  
 use AdventureWorks  
@@ -216,7 +215,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Cópia em massa com os SQL Server ODBC Driver tópicos de instruções &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [ &#40;Tópicos&#41; de instruções de cópia em massa com o SQL Server ODBC Driver](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Usando arquivos de dados e de formato](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

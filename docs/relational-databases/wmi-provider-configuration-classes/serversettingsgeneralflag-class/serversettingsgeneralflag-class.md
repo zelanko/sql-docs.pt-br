@@ -1,5 +1,5 @@
 ---
-title: Classe ServerSettingsGeneralFlag | Microsoft Docs
+title: Classe ServerSettingsGeneralFlag
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5676030b-bb84-4ac0-b68b-edb345a3a152
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1276e1411757dfc31d9fb874a8a78472591a0bbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dcc69f5dedb481f8e86d229740e39a7843c87765
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052704"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659759"
 ---
 # <a name="serversettingsgeneralflag-class"></a>Classe ServerSettingsGeneralFlag
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,6 +35,6 @@ ms.locfileid: "68052704"
 -   Exibir e modificar o valor de sinalizador.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurando protocolos de rede do servidor e bibliotecas de rede](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurando protocolos de rede do servidor e bibliotecas net](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

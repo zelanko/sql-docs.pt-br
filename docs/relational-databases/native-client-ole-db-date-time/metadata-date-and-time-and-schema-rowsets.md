@@ -1,5 +1,5 @@
 ---
-title: Data e hora e conjuntos de linhas de esquema | Microsoft Docs
+title: Conjuntos de linhas de data e hora e esquema | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21f72a13f8f5f7ac93b0f31716632c9280df5fb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c7290c9e7a55e27a829a943157e1b0bea00f42d2
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107012"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73773508"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>Metadados – conjuntos de linhas de esquema e data e hora
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Este tópico fornece informações sobre os conjuntos de linhas de COLUMNS e de PROCEDURE_PARAMETERS. Essas informações referem-se aos aprimoramentos de data e hora do OLE DB introduzidos no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
@@ -31,10 +30,10 @@ ms.locfileid: "68107012"
   
 |Tipo de coluna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|date|DBTYPE_DBDATE|Clear|0|  
+|date|DBTYPE_DBDATE|Liberada|0|  
 |time|DBTYPE_DBTIME2|Defina|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
-|datetime|DBTYPE_DBTIMESTAMP|Clear|3|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Liberada|0|  
+|datetime|DBTYPE_DBTIMESTAMP|Liberada|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|Defina|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Defina|0..7|  
   
@@ -60,15 +59,15 @@ ms.locfileid: "68107012"
   
  DBCOLUMNFLAGS_SS_ISVARIABLESCALE só é válido quando conectado a um servidor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior. DBCOLUMNFLAGS_SS_ISFIXEDSCALE é indefinido quando conectado a servidores de nível inferior.  
   
-## <a name="procedureparameters-rowset"></a>Conjunto de linhas de PROCEDURE_PARAMETERS  
+## <a name="procedure_parameters-rowset"></a>Conjunto de linhas de PROCEDURE_PARAMETERS  
  DATA_TYPE contém os mesmos valores que o conjunto de linhas de esquema de COLUMNS e TYPE_NAME contém o tipo de servidor.  
   
  Uma nova coluna, SS_DATETIME_PRECISION, foi adicionada para retornar a precisão do tipo como na coluna DATETIME_PRECISION, semelhante ao conjunto de linhas de COLUMNS.  
   
-## <a name="providertypes-rowset"></a>Conjunto de linhas de PROVIDER_TYPES  
+## <a name="provider_types-rowset"></a>Conjunto de linhas de PROVIDER_TYPES  
  As linhas a seguir são retornadas para tipos de data/hora:  
   
-|Tipo -><br /><br /> coluna|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Tipo -><br /><br /> Coluna|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
@@ -95,6 +94,6 @@ ms.locfileid: "68107012"
  O OLE DB apenas define MINIMUM_SCALE e MAXIMUM_SCALE para tipos decimais e numéricos, portanto, o uso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client destas colunas para time, datetime2 e datetimeoffset é não padrão.  
   
 ## <a name="see-also"></a>Consulte também  
- [Metadados &#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
+ [OLE DB &#40;de metadados&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

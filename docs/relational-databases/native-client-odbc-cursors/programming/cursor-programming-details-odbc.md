@@ -1,5 +1,5 @@
 ---
-title: Detalhes de programação de cursor (ODBC) | Microsoft Docs
+title: Detalhes de programação do cursor (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,28 +16,27 @@ ms.assetid: 6bae29c4-7f49-419c-8712-90db734f992e
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb462ac3b2b60e405fc8c2753d9fc1395f6d1ecd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ddeee2e1c979a22f45aea8f4ba7279447c733df3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092906"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784456"
 ---
 # <a name="cursor-programming-details-odbc"></a>Detalhes da programação de cursor (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   A escolha do tipo de cursor correto pode melhorar o desempenho do aplicativo. Em determinadas condições, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode converter um tipo de cursor implicitamente quando você executa uma instrução SQL para a qual o tipo de cursos solicitado não dá suporte.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Conversões implícitas de Cursor &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/implicit-cursor-conversions-odbc.md)  
+-   [&#40;ODBC de conversões de cursor implícito&#41;](../../../relational-databases/native-client-odbc-cursors/programming/implicit-cursor-conversions-odbc.md)  
   
 -   [Usando a opção Autofetch com cursores ODBC](../../../relational-databases/native-client-odbc-cursors/programming/using-autofetch-with-odbc-cursors.md)  
   
 -   [Cursores de somente avanço rápido &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/fast-forward-only-cursors-odbc.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Uso de cursores &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [Usando cursores &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

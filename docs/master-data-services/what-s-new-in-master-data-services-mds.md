@@ -1,5 +1,5 @@
 ---
-title: Novidades no MDS (Master Data Services) | Microsoft Docs
+title: Novidades&#39;
 ms.custom: ''
 ms.date: 07/08/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c6b68e5643686d71e24726d44ece35e284f40c3a
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: edf04dad0ce7f0a86bd651a2699d01f9dbea029c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810505"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727784"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Novidades no MDS (Master Data Services)
 
@@ -31,13 +31,13 @@ ms.locfileid: "68810505"
   
 -   Para baixar o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], acesse o  **[Centro de Avaliação](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** .  
   
--   Tem uma conta do Azure?  Então, acesse **[aqui](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** para executar uma máquina virtual com o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] já instalado.  
+-   Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** para criar uma Máquina Virtual com o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] já instalado.  
   
 ##  <a name="improved-performance"></a>Desempenho aprimorado  
   
  As melhorias de desempenho permitem a você criar modelos mais amplos, carregar dados com mais eficiência e obter melhor desempenho geral. Isso inclui melhoria de desempenho do suplemento para o Microsoft Excel com o intuito de diminuir os tempos de carregamento e habilitar o suplemento para lidar com entidades maiores.  
   
- Para saber mais sobre o suplemento do Microsoft Excel, confira [Suplemento do Master Data Services para Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
+ Para saber mais sobre o suplemento do Microsoft Excel, confira [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
  Veja a seguir as melhorias de recurso incluídas.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68810505"
   
  Agora um usuário pode receber explicitamente a permissão Administrador no nível de modelo. Isso significa que se, mais tarde, o usuário receber permissões na subárvore do modelo, como no nível de entidade, ele não perderá essa permissão Administrador.  
   
- Nesta versão do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], estamos fornecendo mais níveis de permissões, apresentando as seguintes novas permissões: Ler, Criar, Atualizar e Excluir. Por exemplo, um usuário que tenha somente a permissão Atualizar agora pode atualizar os dados mestre sem criar ou excluir os dados. Quando você concede a um usuário a permissão Criar, Atualizar ou Excluir, o usuário recebe automaticamente a permissão Ler. Você também pode combinar as permissões Ler, Criar, Atualizar e Excluir.  
+ Nesta versão do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], estamos fornecendo mais níveis de permissões, apresentando estas novas permissões: Ler, Criar, Atualizar e Excluir. Por exemplo, um usuário que tenha somente a permissão Atualizar agora pode atualizar os dados mestre sem criar ou excluir os dados. Quando você concede a um usuário a permissão Criar, Atualizar ou Excluir, o usuário recebe automaticamente a permissão Ler. Você também pode combinar as permissões Ler, Criar, Atualizar e Excluir.  
   
  Quando você atualiza para [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], as permissões antigas são convertidas em novas permissões, conforme mostrado na tabela a seguir.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "68810505"
 |O usuário que instala originalmente o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] tem a permissão Administrador do Servidor.|O usuário tem a permissão da função Superusuário|  
 |O usuário tem permissões Atualizar no nível de modelo e nenhuma permissão na subárvore do modelo e, portanto, é implicitamente um administrador de modelo.|O usuário tem permissões Administrador explícitas no nível de modelo.|  
 |O usuário tem permissões Somente leitura.|O usuário tem permissões Acesso de leitura.|  
-|O usuário tem permissões Atualizar.|O usuário tem todas as quatro permissões de acesso: Criar, Atualizar, Excluir e Ler.|  
+|O usuário tem permissões Atualizar.|O usuário tem as quatro permissões de acesso: Criar, Atualizar, Excluir e Ler.|  
 |O usuário tem permissões Negar.|O usuário tem permissões Negar.|  
   
  Para saber mais sobre permissões, veja [Segurança &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md).  
@@ -225,7 +225,7 @@ ms.locfileid: "68810505"
    
  **Exemplo de pacotes de implantação de modelo atualizado**  
   
- Os pacotes de exemplo foram atualizados para compatibilidade com novos cenários. Para obter mais informações, confira [Amostras do SQL Server: MDS (Pacotes de Implantação de Modelo)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+ Os pacotes de exemplo foram atualizados para compatibilidade com novos cenários. Para saber mais, veja [Exemplos de SQL Server: Pacotes de implantação de modelo (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

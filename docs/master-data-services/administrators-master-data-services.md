@@ -1,5 +1,5 @@
 ---
-title: Administradores (Master Data Services) | Microsoft Docs
+title: Administradores
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7b70c5182ec177b8867d2afab7d39dc5ac5955a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 056975a05f697851d1fc0eac773c917c1f22b738
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047814"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729797"
 ---
 # <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "68047814"
   Este artigo descreve os tipos de administradores no [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]: administradores de modelo, administradores de entidade e superusuário.  
   
 ## <a name="model-administrators"></a>Administradores de modelo  
- No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], um administrador de modelo é um usuário que tem a permissão **Administrador** atribuída ao objeto de modelo de nível superior na guia **Objetos de Modelo** . Quando um usuário tem permissão de administrador em um modelo específico, todas as outras permissões nos objetos filho do modelo (tanto permissões de objeto modelo quanto de membro) são superadas pela permissão **Administrador** do modelo e efetivamente ignoradas.  
+ No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], um administrador de modelo é um usuário que tem permissão de **administrador** atribuída ao objeto de modelo de nível superior na guia **objetos de modelo** . Quando um usuário tem permissão de administrador em um modelo específico, todas as outras permissões nos objetos filho do modelo (permissões de objeto de modelo e de membro) são superadas pela permissão de **administrador** de modelo e efetivamente ignoradas.  
   
 -   Se o usuário tiver acesso à área funcional **Gerenciador** , ele poderá adicionar, excluir e atualizar todos os dados mestre nessa área.  
   
@@ -36,10 +36,10 @@ ms.locfileid: "68047814"
   
  Cada modelo pode ter vários administradores. Cada usuário pode ser um administrador de modelo para um, vários ou todos os modelos na implantação do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
- Um usuário ou pode ser configurado como um administrador de modelo no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ou programaticamente. Para obter mais informações, consulte [Criar um administrador de modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
+ Um usuário ou pode ser configurado como um administrador de modelo no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ou programaticamente. Para obter mais informações, consulte [Create a Model Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
   
 ## <a name="entity-administrators"></a>Administradores de entidade  
- No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], um administrador de entidade é um usuário que tem permissões de administrador atribuídas ao objeto de entidade na guia Objetos de Modelo. Quando um usuário tem permissões de administrador para uma entidade, quaisquer outras permissões nos objetos filho da entidade (tanto permissões de membro quanto de objeto modelo) são substituídas pelas permissões de administrador e são ignoradas.  
+ No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], um administrador de entidade é um usuário que tem permissões de administrador atribuídas ao objeto de entidade na guia objetos de modelo. Quando um usuário tem permissões de administrador para uma entidade, todas as outras permissões nos objetos filho da entidade (permissões de objeto de modelo e de membro) são substituídas pelas permissões de administrador e são ignoradas.  
   
 -   Se o usuário tiver acesso à área funcional **Gerenciador** , ele poderá adicionar, excluir e atualizar todos os dados mestre nessa área.  
   

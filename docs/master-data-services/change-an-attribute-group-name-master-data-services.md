@@ -1,5 +1,5 @@
 ---
-title: Alterar o nome de um grupo de atributos (Master Data Services) | Microsoft Docs
+title: Alterar o nome de um grupo de atributos
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d9f6905ea87c08460fe9faba22095a9ecaf0b308
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 115cb0011be22e482e6d8d8e032d8db21246bbd9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052101"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729702"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>Alterar o nome de um grupo de atributos (Master Data Services)
 
@@ -36,7 +36,7 @@ ms.locfileid: "68052101"
   
 1.  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], clique em **Administração do Sistema**.  
   
-2.  Na página **Gerenciar Modelo** , escolha um modelo na grade e clique em **Entidades**.  
+2.  Na página **Gerenciar Modelo** , selecione um modelo na grade e clique em **Entidades**.  
   
 3.  Na página **Gerenciar Entidade** , na grade, selecione a linha para a entidade que você deseja editar o grupo de atributos.  
   

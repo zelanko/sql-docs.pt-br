@@ -1,5 +1,5 @@
 ---
-title: Adicionar um usuário (Master Data Services) | Microsoft Docs
+title: Adicionar um usuário
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cc478b6325e89801837828dbd90af1a7b6950665
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fe6ec485c1d0e4bc6b30b1fa40f1be03f8b7f67
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047945"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729812"
 ---
 # <a name="add-a-user-master-data-services"></a>Adicionar um usuário (Master Data Services)
 

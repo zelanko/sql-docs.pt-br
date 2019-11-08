@@ -1,5 +1,5 @@
 ---
-title: Alterar o nome de uma hierarquia derivada (Master Data Services) | Microsoft Docs
+title: Alterar o nome de uma hierarquia derivada
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec27caad2ee9241701d23795d57a89af9809ffa1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac272f3087d970c22d30fd3d4b9f105855d783f9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047357"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728657"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>Alterar o nome de uma hierarquia derivada (Master Data Services)
 

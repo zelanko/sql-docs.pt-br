@@ -1,6 +1,6 @@
 ---
-title: Alta disponibilidade e recuperação de desastres para Master Data Services | Microsoft Docs
-ms.custom: ''
+title: Alta disponibilidade e recuperação de desastres
+ms.custom: seo-lt-2019
 ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 517438d6ffe1b2c69969a0f149cfa4a0a9481a8d
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: ad7041700d2ded9b20eb79b648d170333961745f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874768"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728097"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidade e recuperação de desastres para Master Data Services
 
@@ -68,7 +68,7 @@ A Figura 1 mostra uma configuração típica usada principalmente em um AG. No d
 
 No Data Center de Recuperação de Desastres, há uma réplica secundária com uma relação de confirmação assíncrona com a primária. Esse data center geralmente está em uma região geográfica diferente do data center primário. A réplica secundária não tem o privilégio VOTE.
 
-Essa configuração é usada para atingir a recuperação no caso de o data center primário estar em um desastre, como um incêndio, terremoto etc. A configuração atinge a HA e a recuperação de desastres com um custo relativamente baixo.
+Essa configuração é usada para atingir a recuperação caso a data center primária esteja em um desastre, como um incêndio, terremoto etc. A configuração atinge a HA e a recuperação de desastre com custo relativamente baixo.
 
 ![Configuração típica para um grupo de disponibilidade Always On](media/Fig1_TypicalConfig.png)
 
@@ -179,11 +179,11 @@ Depois que o recurso de WSFC é instalado em todas as instâncias, você pode co
 
    Se você precisar adicionar um nó posteriormente, clique na ação **Adicionar Nó** no painel direito no **Gerenciador de Cluster de Failover**.
 
-Notas:
+Observações:
 
 - O recurso WSFC pode não estar disponível em todas as edições do Windows Server. Certifique-se de que sua edição tenha esse recurso.
 
-- Certifique-se de que você tenha as permissões adequadas para configurar o WSFC no active directory. Se houver algum problema, confira o [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx) (Guia passo a passo de cluster de failover: configurar contas no Active Directory).
+- Certifique-se de que você tenha as permissões adequadas para configurar o WSFC no active directory. Se houver qualquer problema, consulte [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx) (Guia passo a passo do cluster de failover: configurar contas no Active Directory).
 
 Para obter mais informações sobre o WSFC, consulte [Clusters de failover](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx).
 
@@ -298,13 +298,13 @@ O AG pode ser criado apenas em bancos de dados existentes. Portanto, você cria 
 
    Para cada réplica, defina as seguintes configurações **Confirmação Síncrona**, **Failover Automático** e **Secundária Legível**. Consulte a Figura 17.
 
-**Confirmação síncrona**: garante que se uma transação for confirmada na réplica primária de um banco de dados, ela também seja confirmada em todas as outras réplicas síncronas. A confirmação assíncrona não garante isso e pode atrasar a réplica primária.
+**Confirmação Síncrona**: isso garante que se uma transação for confirmada na réplica primária de um banco de dados, a transação também será confirmada em todas as outras réplicas síncronas. A confirmação assíncrona não garante isso e pode atrasar a réplica primária.
 
 Normalmente, você deve habilitar confirmação síncrona apenas quando os dois nós estão no mesmo data center. Se eles estiverem em data centers diferentes, a confirmação síncrona poderá prejudicar o desempenho de banco de dados. Se essa caixa de seleção não estiver marcada, a confirmação assíncrona será usada.
 
-**Failover automático:** quando a réplica primária estiver inativa, o AG fará failover automaticamente para sua réplica secundária quando o failover automático estiver selecionado. Isso só pode ser habilitado nas réplicas com confirmação síncrona.
+**Failover Automático:** quando a réplica primária estiver inativa, o AG realizará o failover automaticamente para sua réplica secundária quando o failover automático for selecionado. Isso só pode ser habilitado nas réplicas com confirmação síncrona.
 
-**Secundária legível:** por padrão, os usuários não podem se conectar a nenhuma réplica secundária. Isso permitirá que os usuários se conectem à réplica secundária com acesso somente leitura.
+**Secundária Legível:** por padrão, os usuários não podem se conectar a nenhuma réplica secundária. Isso permitirá que os usuários se conectem à réplica secundária com acesso somente leitura.
 
 8. Na página **Especificar Réplicas**, clique na guia **Ouvinte** e faça o seguinte. Consulte a Figura 18.
 
@@ -323,7 +323,7 @@ Normalmente, você deve habilitar confirmação síncrona apenas quando os dois 
 
    Figura 18
 
-9. Na página **Selecionar Sincronização de Dados**, clique em **Completa** e especifique um compartilhamento de rede que todos os nós podem acessar. Clique em **Próximo** para continuar. Consulte a Figura 19.
+9. Na página **Selecionar Sincronização de Dados**, clique em **Completa** e especifique um compartilhamento de rede que todos os nós podem acessar. Clique em **Avançar** para continuar. Consulte a Figura 19.
 
    Esse compartilhamento de rede será usado para armazenar o backup do banco de dados para criar réplicas secundárias. Se isso não estiver disponível para sua organização, escolha outra preferência de sincronização de dados. Consulte [SQL Server o grupo de disponibilidade Always On 2016](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) sobre como usar outras opções para criar réplicas secundárias. A Figura 17 também lista outras opções.
 
@@ -331,7 +331,7 @@ Normalmente, você deve habilitar confirmação síncrona apenas quando os dois 
 
    Figura 19 
 
-10. Na página **Validação**, certifique-se de que todas as validações sejam aprovadas com êxito e corrija os erros. Clique em **Próximo** para continuar.
+10. Na página **Validação**, certifique-se de que todas as validações sejam aprovadas com êxito e corrija os erros. Clique em **Avançar** para continuar.
 
 11. Na página **Resumo**, examine todas as configurações e clique em **Concluir**. Isso criará o grupo de disponibilidade e o configurará.
 

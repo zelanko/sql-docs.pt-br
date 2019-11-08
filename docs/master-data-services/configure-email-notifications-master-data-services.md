@@ -1,5 +1,5 @@
 ---
-title: Configurar notificações por email (Master Data Services) | Microsoft Docs
+title: Configurar notificações por email
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4241a6ab-7465-471b-9890-57c6b572037e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2826041b1385966f9ac4f76358588b4af6d414f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b49a2a9b52df3cf5364f0e4f86b4181439ff61b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941065"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729646"
 ---
 # <a name="configure-email-notifications-master-data-services"></a>Configurar notificações por email (Master Data Services)
 
@@ -45,7 +45,7 @@ ms.locfileid: "67941065"
   
 ## <a name="see-also"></a>Consulte também  
  [Notificações &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)   
- [Solucionando problemas de notificações por email (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)   
+ [Solução de problemas de notificações por email (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)   
  [Configurar regras de negócio para enviar notificações &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Importar status (Master Data Services) | Microsoft Docs
+title: Importar status
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fb8193dd3e345ab8290239e0f01cbea82221a64c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fc49b96bbf9b1388c162b87c76ba31b1696991a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945098"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728188"
 ---
 # <a name="import-statuses-master-data-services"></a>Importar status (Master Data Services)
 

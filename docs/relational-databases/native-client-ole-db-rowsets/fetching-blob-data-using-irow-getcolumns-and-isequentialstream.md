@@ -16,16 +16,15 @@ ms.assetid: b57decda-b0c1-4ef6-8c81-491956de2890
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6369adf4dafa0087d29e9250d1e315ccf1b58180
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a4a2713082a01744ab2594909a82f6db353afc7c
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064006"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73788973"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>Buscando dados BLOB usando IRow::GetColumns e ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   A seguinte função usa **IRow::GetColumns** e **ISequentialStream** para buscar dados grandes:  
   

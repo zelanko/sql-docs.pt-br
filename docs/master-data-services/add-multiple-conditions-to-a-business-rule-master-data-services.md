@@ -1,6 +1,6 @@
 ---
-title: Adicionar várias condições a uma regra de negócios (Master Data Services) | Microsoft Docs
-ms.custom: ''
+title: Adicionar condições a uma regra de negócio
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bc678925ca35260131b318a1c3f674f5157a1fe5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b85846202ef1cd8a30012dddb2c88803c901d16
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047844"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728803"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Adicionar várias condições a uma regra de negócio (Master Data Services)
 
@@ -55,7 +55,7 @@ ms.locfileid: "68047844"
   
 8.  No bloco **If** , no lado esquerdo da lista suspensa do operador lógico, selecione **AND/OR/ NOT**.  
   
-9. Clique em **Adicionar** . Um painel será exibido.  
+9. Clique em **Adicionar**. Um painel será exibido.  
   
 10. Na lista suspensa **Atributo** , selecione um atributo.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "68047844"
   
 ## <a name="see-also"></a>Consulte também  
  [Regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Alterar o nome de uma regra de negócios &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
+ [Alterar o nome de uma regra de negócio &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [Configurar regras de negócio para enviar notificações &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

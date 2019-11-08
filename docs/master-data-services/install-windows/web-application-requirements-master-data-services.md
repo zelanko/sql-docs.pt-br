@@ -1,5 +1,5 @@
 ---
-title: Requisitos do aplicativo Web (Master Data Services) | Microsoft Docs
+title: Requisitos do aplicativo Web
 ms.custom: ''
 ms.date: 02/13/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ keywords:
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 763695a4fe00b2bb5f50113b5c9c2ba65ddd9417
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 851452cd5170abb6328210ecb35bd95b2bb951a3
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944883"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728087"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Requisitos do aplicativo Web (Master Data Service)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] é um aplicativo Web hospedado pelo IIS (Serviços de Informações da Internet). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] funciona apenas no Internet Explorer (IE) 9 ou posterior. Não há suporte para o IE 8 e versões anteriores, para o Microsoft Edge e o Chrome.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] é um aplicativo Web hospedado pelo IIS (Serviços de Informações da Internet). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] funciona apenas no IE (Internet Explorer) 9 ou posterior. Não há suporte para o IE 8 e versões anteriores, para o Microsoft Edge e o Chrome.  
 
 **Para obter instruções sobre como instalar e configurar o IIS**, consulte [Instalando e configurando o IIS](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS).
   
@@ -51,14 +51,14 @@ ms.locfileid: "67944883"
   
 ||  
 |-|  
-|Serviços de Informações da Internet<br /><br /> Ferramentas de gerenciamento da Web<br /><br /> Console de Gerenciamento IIS<br /><br /> Serviços da World Wide Web<br /><br /> Desenvolvimento de aplicativo<br /><br /> .NET Extensibility 3.5<br /><br /> Extensibilidade do .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Extensões ISAPI<br /><br /> Filtros ISAPI<br /><br /> Recursos comuns de HTTP<br /><br /> Documento padrão<br /><br /> Navegação de diretório<br /><br /> Erros de HTTP<br /><br /> Conteúdo Estático<br /><br /> [Observação: Não instale a publicação WebDAV]<br /><br /> Integridade e diagnóstico<br /><br /> Log de HTTP<br /><br /> Monitor de solicitação<br /><br /> Desempenho<br /><br /> Compactação de conteúdo estático<br /><br /> Segurança<br /><br /> Filtragem de solicitação<br /><br /> Autenticação do Windows|  
+|Serviços de Informações da Internet<br /><br /> Ferramentas de gerenciamento da Web<br /><br /> Console de Gerenciamento IIS<br /><br /> Serviços da World Wide Web<br /><br /> Desenvolvimento de aplicativo<br /><br /> .NET Extensibility 3.5<br /><br /> Extensibilidade do .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Extensões ISAPI<br /><br /> Filtros ISAPI<br /><br /> Recursos comuns de HTTP<br /><br /> Documento padrão<br /><br /> Navegação de diretório<br /><br /> Erros de HTTP<br /><br /> Conteúdo estático<br /><br /> [Observação: não instale a Publicação WebDAV]<br /><br /> Integridade e diagnóstico<br /><br /> Log de HTTP<br /><br /> Monitor de solicitação<br /><br /> Desempenho<br /><br /> Compactação de conteúdo estático<br /><br /> Segurança<br /><br /> Filtragem de solicitação<br /><br /> Autenticação do Windows|  
   
 ### <a name="features"></a>Recursos 
  No Windows Server 2012 ou no Windows Server 2012 R2, você pode usar o **Gerenciador do Servidor** para instalar os recursos necessários a seguir.  
   
 ||  
 |-|  
-|.NET Framework 3.5 (inclui o .NET 2.0 e 3.0)<br /><br /> Serviços avançados do .NET Framework 4.5<br /><br /> ASP.NET 4.5<br /><br /> Serviços WCF<br /><br /> Ativação HTTP [Observação: Isso é necessário.]<br /><br /> Compartilhamento de porta TCP<br /><br /> Serviço de Ativação de Processos do Windows<br /><br /> Modelo de processo<br /><br /> Ambiente .NET<br /><br /> APIs de configuração<br/><br/>Compactação de Conteúdo Dinâmico|  
+|.NET Framework 3.5 (inclui o .NET 2.0 e 3.0)<br /><br /> Serviços avançados do .NET Framework 4.5<br /><br /> ASP.NET 4.5<br /><br /> Serviços WCF<br /><br /> Ativação de HTTP [Observação: isso é necessário.]<br /><br /> Compartilhamento de porta TCP<br /><br /> Serviço de Ativação de Processos do Windows<br /><br /> Modelo de processo<br /><br /> Ambiente .NET<br /><br /> APIs de configuração<br/><br/>Compactação de Conteúdo Dinâmico|  
   
  Veja a seguir um exemplo de script do PowerShell para adicionar os recursos e funções do servidor de pré-requisito. Os recursos e as funções de servidor de pré-requisito variam conforme o ambiente.  
   
@@ -72,7 +72,7 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
   
 ### <a name="accounts-and-permissions"></a>Contas e permissões  
   
-|type|Descrição|  
+|Tipo|Descrição|  
 |----------|-----------------|  
 |Conta do Windows|Você deve fazer logon no computador do servidor Web com uma conta do Windows que tenha permissão para configurar funções, serviços de função e recursos do Windows e para criar e gerenciar pools de aplicativos, sites e aplicativos Web no IIS no computador local.|  
 |Conta de serviço|Quando você criar o aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] no [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], especifique uma identidade para o pool de aplicativos em que o aplicativo é executado. Esta conta pode ser diferente da conta de serviço especificada quando o banco de dados [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] foi criado.<br /><br /> Essa identidade deve ser uma conta de usuário de domínio e é acrescentada à função de banco de dados mds_exec no banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para acesso ao banco de dados. Para obter mais informações, veja [Logons, usuários e funções de banco de dados](../../master-data-services/database-logins-users-and-roles-master-data-services.md). Essa conta também é adicionada a um grupo do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] no Windows, **MDS_ServiceAccounts**, que recebe permissão para o diretório temporário de compilação, **MDSTempDir**, no sistema de arquivos. Para obter mais informações, veja [Permissões de pasta e arquivo &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  

@@ -1,5 +1,5 @@
 ---
-title: Permissões de pasta e arquivo (Master Data Services) | Microsoft Docs
+title: Permissões de pasta e arquivo
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8504dde4c5d86de50fd110d57675df269f659ce6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e125f1dc6b4cb9f30a69c7410c5c404b38d42ba
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945262"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728201"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Permissões de pasta e arquivo (Master Data Services)
 

@@ -1,5 +1,5 @@
 ---
-title: Excluir permissões de membro de hierarquia (Master Data Services) | Microsoft Docs
+title: Excluir permissões de membro de hierarquia
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bdb6a9b2c7e42406443b802803723fae4c60a7c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c441545bc88ef28031815cecb2c0f441fa1ea6a4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906292"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729359"
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>Excluir permissões de membro de hierarquia (Master Data Services)
 

@@ -1,5 +1,5 @@
 ---
-title: Exemplo Send DataSet | Microsoft Docs
+title: Enviar exemplo de conjunto de conjuntos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,20 +10,20 @@ ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1a75160826fad9df3e6a401e72cc85b5a8c8c6e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b622de076f9040fdedaa487baa8f1ec0f759c88
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780953"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637730"
 ---
 # <a name="send-dataset-sample"></a>Exemplo Send DataSet
-  O exemplo Send `DataSet` demonstra como retornar um `DataSet` baseado em ADO.NET em um procedimento armazenado de servidor baseado em CLR (common language runtime) como um conjunto de resultados para o cliente. Isso é útil, por exemplo, quando tal procedimento armazenado preenche um `DataSet` usando os resultados de uma consulta e, em seguida, manipula os dados contidos nesse `DataSet`. Alternativamente, isso será útil se o procedimento armazenado criar e popular um `DataSet` do zero. O exemplo é composto de duas classes, `DataSetUtilities` e `TestSendDataSet`. O método `SendDataSet` na classe `DataSetUtilities` implementa um modo geral de transmitir o conteúdo de uma instância `DataSet` ao cliente. O método `DoTest` definido na classe `TestSendDataSet` verifica se o método `SendDataSet` funciona criando um `DataSet` e preenchendo-o com os dados do procedimento armazenado Transact-SQL `uspGetTwoBOMTestData` . O `uspGetTwoBOMTestData` executa o procedimento armazenado Transact-SQL `uspGetBillOfMaterials` duas vezes para consultar repetidamente a lista de materiais dos dois produtos especificados como parâmetros para o procedimento armazenado `usp_GetTwoBOMTestData` . Em geral, depois de preencher o conjunto de dados, os dados seriam modificados antes de invocar `SendDataSet` para entregar os dados no conjunto de dados como um conjunto de resultados para o cliente. Para simplificar, esse exemplo retorna os dados sem modificação.  
+  O exemplo Send `DataSet` demonstra como retornar um `DataSet` baseado em ADO.NET em um procedimento armazenado de servidor baseado em CLR (common language runtime) como um conjunto de resultados para o cliente. Isso é útil, por exemplo, quando tal procedimento armazenado preenche um `DataSet` usando os resultados de uma consulta e, em seguida, manipula os dados contidos nesse `DataSet`. Alternativamente, isso será útil se o procedimento armazenado criar e popular um `DataSet` do zero. O exemplo é composto de duas classes, `DataSetUtilities` e `TestSendDataSet`. O método `SendDataSet` na classe `DataSetUtilities` implementa um modo geral de transmitir o conteúdo de uma instância `DataSet` ao cliente. O método `DoTest` definido na classe `TestSendDataSet` verifica se o método `SendDataSet` funciona criando um `DataSet` e preenchendo-o com os dados do procedimento armazenado Transact-SQL `uspGetTwoBOMTestData`. O `uspGetTwoBOMTestData` executa o procedimento armazenado Transact-SQL `uspGetBillOfMaterials` duas vezes para consultar repetidamente a lista de materiais dos dois produtos especificados como parâmetros para o procedimento armazenado `usp_GetTwoBOMTestData` . Em geral, depois de preencher o conjunto de dados, os dados seriam modificados antes de invocar `SendDataSet` para entregar os dados no conjunto de dados como um conjunto de resultados para o cliente. Para simplificar, esse exemplo retorna os dados sem modificação.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para criar e executar este projeto, o software a seguir deve estar instalado:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
   
 -   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](https://go.microsoft.com/fwlink/?linkid=62796)Developer  
   

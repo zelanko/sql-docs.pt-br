@@ -1,6 +1,6 @@
 ---
-title: Mostrar relações muitos para muitos em Hierarquias Derivadas (Master Data Services) | Microsoft Docs
-ms.custom: ''
+title: Mostrar relações muitos para muitos em Hierarquias Derivadas
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5d256603927a4c717b1f5d3203ea1ce3939771cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085650"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728953"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Mostrar relações muitos para muitos em Hierarquias Derivadas (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "68085650"
   
  Na captura de tela acima, observe que a entidade **Employee** aparece sob **Níveis Atuais** no meio como o único nível. A Hierarquia Derivada **Visualização** à direita simplesmente mostra uma lista de todos os membros da entidade **Employee** . A seção **Níveis Disponíveis** à esquerda mostra quais níveis podem ser adicionados no nível superior atual (**Funcionário**). A maioria deles são DBAs (atributos baseados em domínio) na entidade **Funcionário** , incluindo o DBA **Departamento** .  
   
- No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] em diante, há um novo tipo de nível que modela as relações M2M, por exemplo: **Classe (mapeada por meio de ClassRegistration.Student)** . O nome do nível é mais detalhado do que os outros de modo a refletir as informações extras necessárias para descrever inequivocamente a relação de mapeamento. Arraste e solte esse nível no nível **Employee** na seção **Níveis Atuais** :  
+ A partir do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], há um novo tipo de nível que modela as relações M2M, por exemplo: **Classe (mapeado por meio de ClassRegistration.Student)** . O nome do nível é mais detalhado do que os outros de modo a refletir as informações extras necessárias para descrever inequivocamente a relação de mapeamento. Arraste e solte esse nível no nível **Employee** na seção **Níveis Atuais** :  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
@@ -82,7 +82,7 @@ Como mostra a imagem a seguir, o nome do nível que modela essa relação é ![m
 Para obter instruções sobre como implantar o modelo de exemplo Cliente e outros modelos de exemplo incluídos no [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], consulte [Implantando dados e modelos de exemplo](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md).   
   
 ## <a name="one-many-relationship"></a>Relação um para muitos  
- Um membro de uma HD pode ser o pai de vários membros filho, mas, em geral, ele não pode ter mais de um pai (para ver as exceções, consulte [Segurança do membro](#bkmk_member_security)). Por exemplo, suponha que haja duas entidades: Employee e Department, em que cada funcionário pertence a um único departamento. Essa relação é modelada adicionando à entidade Employee um DBA (atributo baseado em domínio) que faz referência à entidade Department:  
+ Um membro de uma HD pode ser o pai de vários membros filho, mas, em geral, ele não pode ter mais de um pai (para ver as exceções, consulte [Segurança do membro](#bkmk_member_security)). Por exemplo, suponha que há duas entidades: Employee e Department, em que cada funcionário pertence a um único departamento. Essa relação é modelada adicionando à entidade Employee um DBA (atributo baseado em domínio) que faz referência à entidade Department:  
   
  ![mds_hierarchies_onetomany](../master-data-services/media/mds-hierarchies-onetomany.png "mds_hierarchies_onetomany")  
   

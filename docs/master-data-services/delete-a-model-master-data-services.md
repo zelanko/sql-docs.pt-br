@@ -1,5 +1,5 @@
 ---
-title: Excluir um modelo (Master Data Services) | Microsoft Docs
+title: Excluir um modelo
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 23c5697b863646bac824b196696345566c06a747
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 65164c1732aefe6555aa19325a158793d07631a6
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906449"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728362"
 ---
 # <a name="delete-a-model-master-data-services"></a>Excluir um modelo (Master Data Services)
 
@@ -50,7 +50,7 @@ ms.locfileid: "67906449"
   
 6.  Na caixa de diálogo de confirmação adicional, clique em **OK**.  
   
- A coluna **Status** na grade mostra o status da operação no modelo. Quando você clica no botão **Salvar modelo**, a imagem ![Atualizando](../master-data-services/media/mds-model-status-updating.png "Atualizando") é exibida, indicando que o modelo está sendo atualizando. Se houver erros ao criar ou editar um modelo, a imagem ![Erro](../master-data-services/media/mds-model-status-error.png "Erro") será exibida. Caso contrário, o status será OK e a imagem ![OK](../master-data-services/media/mds-model-status-ok.png "OK") será exibida.  
+ A coluna **Status** na grade mostra o status da operação no modelo. Quando você clica no botão **salvar modelo** , a imagem de ![atualização](../master-data-services/media/mds-model-status-updating.png "Atualizada") é exibida, o que indica que o modelo está sendo atualizado. Se houver erros ao criar ou editar um modelo, a imagem de ![erro](../master-data-services/media/mds-model-status-error.png "Erro") será exibida. Caso contrário, o status será OK e a imagem ![OK](../master-data-services/media/mds-model-status-ok.png "OK") será exibida.  
   
 ## <a name="see-also"></a>Consulte também  
  [Modelos &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   

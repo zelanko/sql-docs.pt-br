@@ -1,5 +1,5 @@
 ---
-title: Palavras reservadas (Master Data Services) | Microsoft Docs
+title: Palavras reservadas
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c33bf34a99addae8a94fb92222eb3265cc6a52a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 817e15d2fe7e91f63628826f58d6a86dd4edbcb3
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085688"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727921"
 ---
 # <a name="reserved-words-master-data-services"></a>Palavras reservadas (Master Data Services)
 
@@ -52,13 +52,13 @@ ms.locfileid: "68085688"
   
 -   **ID**  
   
--   **Code**  
+-   **Código**  
   
 -   **EnterUserName**  
   
 -   **LastChgUserName**  
   
--   **Name**  
+-   **Nome**  
   
 -   **EnterDTM**  
   

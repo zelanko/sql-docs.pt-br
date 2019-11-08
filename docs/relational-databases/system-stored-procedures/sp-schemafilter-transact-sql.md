@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: de92a64bb090a053d4cecb03cd9b812744f72fba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 231796d1678a19106eb89f3039cd755e8385082c
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126399"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73633013"
 ---
-# <a name="spschemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
+# <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifica e exibe informações sobre o esquema que é excluído ao listar tabelas Oracle qualificadas para publicação.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,19 +39,16 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** = ] **'***publisher***'**  
- É o nome de não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` é o nome do Publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não [!INCLUDE[msCoName](../../includes/msconame-md.md)]. o *Publicador* é **sysname**, sem padrão.  
   
- [ **@schema** =] **'***esquema***'**  
- É o nome do esquema. *esquema* está **sysname**, com um valor padrão de NULL.  
+`[ @schema = ] 'schema'` é o nome do esquema. o *esquema* é **sysname**, com um valor padrão de NULL.  
   
- [ **@operation** =] **'***operação***'**  
- É a ação a ser executada neste esquema. *operação* está **nvarchar(4)** , e pode ser um dos valores a seguir.  
+`[ @operation = ] 'operation'` é a ação a ser tomada neste esquema. a *operação* é **nvarchar (4)** e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
-|**add**|Adiciona o esquema especificado à lista de esquemas não qualificados para publicação.|  
-|**drop**|Descarta o esquema especificado na lista de esquemas não qualificados para publicação.|  
+|**agrega**|Adiciona o esquema especificado à lista de esquemas não qualificados para publicação.|  
+|**suspensa**|Descarta o esquema especificado na lista de esquemas não qualificados para publicação.|  
 |**Ajuda**|Retorna a lista de esquemas não qualificados para publicação.|  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
@@ -64,10 +61,10 @@ sp_schemafilter [ @publisher = ] 'publisher'
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_schemafilter** só deve ser usado para Publicadores heterogêneos.  
+ **sp_schemafilter** só deve ser usado para publicadores heterogêneos.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa no distribuidor pode executar **sp_schemafilter**.  
+ Somente os membros da função de servidor fixa **sysadmin** no distribuidor podem executar **sp_schemafilter**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

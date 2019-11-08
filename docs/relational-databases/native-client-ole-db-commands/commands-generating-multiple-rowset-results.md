@@ -18,25 +18,24 @@ ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a6dd7e55ec7474dae0936624a0bdf0cb6bae379
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19a6dafd921edf924a35e30c7770155986203f5f
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128736"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73758282"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Comandos que geram resultados de vários conjuntos de linhas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client pode retornar vários conjuntos de linhas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instruções. As instruções do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornam resultados de vários conjuntos de linhas nas seguintes condições:  
+  O provedor de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pode retornar vários conjuntos de linhas de instruções [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As instruções do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornam resultados de vários conjuntos de linhas nas seguintes condições:  
   
 -   Instruções SQL processadas em lotes são enviadas como um único comando.  
   
 -   Os procedimentos armazenados implementam um lote de instruções SQL.  
   
 ## <a name="batches"></a>Lotes  
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client reconhece o caractere de ponto e vírgula como um delimitador de lote para instruções SQL:  
+ O provedor de OLE DB de cliente nativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reconhece o caractere ponto e vírgula como um delimitador de lote para instruções SQL:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

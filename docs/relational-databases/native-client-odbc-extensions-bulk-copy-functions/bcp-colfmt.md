@@ -18,16 +18,15 @@ ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a08973bcfadb88750129fd440eeabb3f69bb2ddb
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 857022f04047178f9eaf2db2c59d2d99987afbaa
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707728"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783146"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Especifica o formato de origem ou de destino dos dados em um arquivo de usuário. Quando usado como formato de origem, **bcp_colfmt** especifica o formato de um arquivo de dados existente usado como a fonte de dados em uma cópia em massa para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando usado como formato de destino, o arquivo de dados é criado usando os formatos de coluna especificados com **bcp_colfmt**.  
   

@@ -15,16 +15,15 @@ ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c73b98d623490d9885188a5d71fd5caac02e4c4
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 3909c8d8b8df5b5bcdb17945eee547e81f73f004
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908093"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781995"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>Copiar em massa um conjunto de resultados de SELECT (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Este exemplo mostra como usar funções de cópia em massa para copiar em massa o conjunto de resultados de uma instrução SELECT. Esse exemplo foi desenvolvido para o ODBC versão 3.0 ou posterior.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "72908093"
   
     -   A direção da cópia: DB_OUT.  
   
-5.  Chame [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), defina EOPTION como BCPHINTS e coloque em iValue um ponteiro para uma matriz SQLTCHAR que contém a instrução SELECT.  
+5.  Chame [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), defina EOPTION como BCPHINTS e coloque em iValue um ponteiro para uma matriz SQLTCHAR que contenha a instrução SELECT.  
   
 6.  Chame [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) para executar a operação de cópia em massa.  
 
@@ -166,7 +165,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Cópia em massa com os tópicos &#40;de instruções do SQL Server driver ODBC ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

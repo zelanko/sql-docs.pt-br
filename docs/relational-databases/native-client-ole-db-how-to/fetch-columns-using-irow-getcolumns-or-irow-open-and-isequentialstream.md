@@ -15,16 +15,15 @@ ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8aeb097f2cabac01b0d4108dbcf07ed46f15f971
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c1592de2a70018f000c845e4008d41a95f35a312
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110259"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790107"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Buscar colunas usando IRow::GetColumns (ou IRow::Open) e ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Os dados grandes podem ser associados ou recuperados por meio da interface **ISequentialStream**. Para colunas associadas, o sinalizador de status DBSTATUS_S_TRUNCATED indica que os dados estão truncados.  
   
@@ -37,13 +36,13 @@ ms.locfileid: "68110259"
   
 2.  Execute o comando (neste exemplo, **ICommandExecute::Execute()** é chamado com IID_IRow).  
   
-3.  Buscar os dados de coluna usando **IRow::Open()** ou **IRow::GetColumns()** .  
+3.  Busque os dados da coluna usando **IRow:: Open ()** ou **IRow:: GetColumns ()** .  
   
-    -   **IRow::Open()** pode ser usado para abrir uma **ISequentialStream** na linha. Especifique DBGUID_STREAM para indicar que uma coluna contém um fluxo de dados binários (**IStream** ou **ISequentialStream** que pode então ser usada para ler os dados da coluna).  
+    -   **IRow:: Open ()** pode ser usado para abrir um **ISequentialStream** na linha. Especifique DBGUID_STREAM para indicar que uma coluna contém um fluxo de dados binários (**IStream** ou **ISequentialStream** que pode então ser usada para ler os dados da coluna).  
   
     -   Se **IRow::GetColumns()** for usado, o elemento **pData** da estrutura DBCOLUMNACCESS será definido de forma a apontar para um objeto de fluxo.  
   
-4.  Use **ISequentialStream::Read()** repetidamente para ler o número especificado de bytes no buffer de consumidor.  
+4.  Use **ISequentialStream:: Read ()** repetidamente para ler o número especificado de bytes no buffer do consumidor.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como buscar uma única linha por meio de IRow. Neste exemplo, uma coluna de cada vez é recuperada da linha. Este exemplo ilustra o uso de IRow::Open() e de IRow::GetColumns(). Para ler os dados da coluna, o exemplo usa ISequentialStream::Read.  

@@ -16,18 +16,17 @@ ms.assetid: d2d30505-a878-4aa9-b821-53d8118a45a5
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c477b2e7aa3f6c310fb7c985c611f737d2b3c6c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd994f7ec89f154f106df25190819b227495f290
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68103540"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73788727"
 ---
 # <a name="updating-data-in-rowsets---resynchronizing-rows"></a>Atualizar dados em conjuntos de linhas – ressincronizar linhas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte ao provedor de OLE DB do Native Client **IRowsetResynch** em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com suporte de cursor apenas conjuntos de linhas. **IRowsetResynch** não está disponível sob demanda. O consumidor deve solicitar a interface antes de abrir o conjunto de linhas.  
+  O provedor de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client dá suporte apenas a **IRowsetResynch** em conjuntos de linhas com suporte para o cursor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **IRowsetResynch** não está disponível sob demanda. O consumidor deve solicitar a interface antes de abrir o conjunto de linhas.  
   
 ## <a name="see-also"></a>Consulte também  
  [Atualizando dados em conjuntos de linhas](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md)  

@@ -1,5 +1,5 @@
 ---
-title: Gerar automaticamente valores de atributo de código (Master Data Services) | Microsoft Docs
+title: Gerar automaticamente valores de atributo de código
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 19b354ee-2906-4cc7-ba2f-32b4543bddcf
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d837d188dc28e0c06d3e66162d1ab12755ac809d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 85cfc3d3859712cdb53b7db58bb1729baca692b3
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047494"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729728"
 ---
 # <a name="automatically-generate-code-attribute-values-master-data-services"></a>Gerar automaticamente valores de atributo de código (Master Data Services)
 

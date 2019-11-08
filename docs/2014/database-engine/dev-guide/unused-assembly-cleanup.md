@@ -1,5 +1,5 @@
 ---
-title: Limpeza de Assembly não utilizados | Microsoft Docs
+title: Limpeza de assembly não usada | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,20 +10,20 @@ ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 490c8d5d3dc7c9b3dc083b61a904103092134636
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c7966d9d4a517902cf857856fd9bdeac7684de2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780173"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637693"
 ---
 # <a name="unused-assembly-cleanup"></a>Limpeza de assembly não usado
   O exemplo `AssemblyCleanup` contém um procedimento armazenado .NET que limpa os assemblies não usados do banco de dados atual consultando os catálogos de metadados. Seu único parâmetro, `visible_assemblies`, é usado para especificar se os assemblies visíveis não usados devem ser descartados. Um valor ''false'' significa, por padrão, que somente os assemblies invisíveis não usados serão descartados, caso contrário, todos os assemblies não usados serão descartados. O conjunto de assemblies não usados são aqueles que não têm pontos de entrada definidos (rotinas/tipos e agregações) e não há assemblies usados referenciando-os direta ou indiretamente.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para criar e executar este projeto, o software a seguir deve estar instalado:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
   
 -   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](https://go.microsoft.com/fwlink/?linkid=62796)Developer  
   

@@ -1,5 +1,5 @@
 ---
-title: Reservar uma transação (Master Data Services) | Microsoft Docs
+title: Inverter uma transação
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 44424916a27220713ab5b31639ba86bea365026f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 870341b6ae6a3ffbda345aa7a0abc4a2fe253ac5
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897805"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728933"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>Inverter uma transação (Master Data Services)
 
@@ -50,6 +50,6 @@ ms.locfileid: "67897805"
 ## <a name="see-also"></a>Consulte também  
  [Transações &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)   
  [Reativar um membro ou uma coleção &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
- [Reverter Histórico de Revisões do Membro](../master-data-services/rollback-member-revision-history-master-data-services.md)
+ [Reverter HISTÓRICO DE REVISÕES DO MEMBRO](../master-data-services/rollback-member-revision-history-master-data-services.md)
   
   

@@ -11,22 +11,21 @@ ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8713c25e4c1bf62e205db33e0b1b7c0bcf6a959f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0c7d2e5ff90ce8ca9fd8e6cef090b4de5e645be4
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898443"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782807"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Obter autenticação Kerberos mútua
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Este exemplo mostra como obter autenticação mútua do Kerberos usando o ODBC em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  Este exemplo não funcionará com nenhuma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Para obter mais informações, consulte [nome da entidade de serviço &#40;SPN&#41; suporte em conexões de cliente](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Para obter mais informações, consulte [ &#40;nome da entidade&#41; de serviço SPN suporte em conexões de cliente](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Exemplo  
  Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  

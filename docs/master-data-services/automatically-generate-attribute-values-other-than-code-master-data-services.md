@@ -1,6 +1,7 @@
 ---
-title: Gerar automaticamente valores de atributo diferentes de código (Master Data Services) | Microsoft Docs
-ms.custom: ''
+title: Gerar automaticamente valores de atributo
+titleSuffix: Master Data Services
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 29464dcb18f5b598b83217a85eb80ad2a38d3c7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dc4ee9fd4eead46df29538a85013949402b1920e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047561"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728734"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>Gerar automaticamente valores de atributo diferentes de código (Master Data Services)
 

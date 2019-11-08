@@ -10,18 +10,17 @@ ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49b7360fdb5cc5e36a9d21b4821a2bf1e176ad97
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 4aa573374b02b193e6b1dcf94f9ae86c1c232a00
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176321"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761568"
 ---
-# <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>Conectando-se a um banco de dados SQL do Azure usando SQL Server Native Client
+# <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>Connecting to an Azure SQL Database Using SQL Server Native Client (Conectando a um Banco de Dados SQL do Azure usando o SQL Server Native Client)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Para obter um exemplo que mostra como se conectar a [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando um cliente nativo [, consulte Desenvolvimento: Tópicos de instruções (banco de dados SQL do](https://msdn.microsoft.com/library/ee621787.aspx)Azure).  
+  Para obter um exemplo que mostra como se conectar a um [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] usando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente nativo, consulte [desenvolvimento: tópicos de instruções (banco de dados SQL do Azure)](https://msdn.microsoft.com/library/ee621787.aspx).  
   
 ## <a name="known-issues-when-connecting-to-a-sql-database"></a>Problemas conhecidos ao conectar a um banco de dados SQL  
  Estes são problemas conhecidos ao conectar a um [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] usando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  

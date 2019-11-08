@@ -1,6 +1,6 @@
 ---
-title: Criar um pacote de implantação de modelo usando o MDSModelDeploy | Microsoft Docs
-ms.custom: ''
+title: Criar um pacote de implantação de modelo (MDSModelDeploy)
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b080e704abb4a187ad975f6b1b7b94334648f92b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 47ae80a58f32aab4debb7cd4dde60a1ccf2cdb4a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906661"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728507"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Criar um pacote de implantação de modelo usando o MDSModelDeploy
 
@@ -62,7 +62,7 @@ ms.locfileid: "67906661"
   
 ### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Para criar um pacote de implantação de modelo usando o MDSModelDeploy  
   
-1.  Abra um Prompt de Comando de Administrador.  
+1.  Abra um Administrador: prompt de Comando.  
   
 2.  Navegue até o local de MDSModelDeploy.exe.  
   

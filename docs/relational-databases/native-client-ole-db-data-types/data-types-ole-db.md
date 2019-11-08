@@ -16,18 +16,17 @@ ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 620b285a0c21865ff5155377cb446b3267d328da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd73a7498914060757a9ce4e8137638440556ae3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128510"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73770757"
 ---
 # <a name="data-types-ole-db"></a>Tipos de dados (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Para executar [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções e processar os resultados usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB do Native Client, você deve saber como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapas de provedor do OLE DB do Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para tipos de dados OLE DB ao associar os tipos de dados parâmetros ou colunas em um conjunto de linhas, e quando ele usa o **ITableDefinition** interface para criar uma tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Para executar instruções de [!INCLUDE[tsql](../../includes/tsql-md.md)] e processar os resultados usando o provedor de OLE DB de cliente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native, você deve saber como o provedor de OLE DB de cliente nativo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapeia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados para OLE DB tipos de dados ao associar parâmetros ou colunas em um conjunto de linhas e quando ele usa a interface **ITableDefinition** para criar uma tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

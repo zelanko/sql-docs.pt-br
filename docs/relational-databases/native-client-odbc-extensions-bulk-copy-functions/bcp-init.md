@@ -19,16 +19,15 @@ ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d10c8d721b44fc372ee5a17a39c653797925dd46
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 9b8e40091f88c4e9fc739f125a2e44715e62c9ee
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707561"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782692"
 ---
 # <a name="bcp_init"></a>bcp_init
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
 Inicializa a operação de cópia em massa.  
 
@@ -56,7 +55,7 @@ Nomes Unicode e ANSI:
   
  Se *eDirection* for DB_OUT, *szTable* também poderá ser o nome de uma exibição de banco de dados.  
   
- Se *eDirection* for DB_OUT e uma instrução SELECT for especificada usando [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) antes de [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) for chamado, **bcp_init** *szTable* deverá ser definido como NULL.  
+ Se *eDirection* for DB_OUT e uma instrução SELECT for especificada usando [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) antes que [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) seja chamado, **bcp_init** *szTable* deverá ser definido como NULL.  
   
  *szDataFile*  
  É o nome do arquivo de usuário a ser copiado de ou para. Se os dados estiverem sendo copiados diretamente de variáveis usando [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), defina *szDataFile* como nulo.  
@@ -71,11 +70,11 @@ Nomes Unicode e ANSI:
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Comentários  
- Chame **bcp_init** antes de chamar qualquer outra função de cópia em massa. o **bcp_init** executa as inicializações necessárias para uma cópia em massa de dados entre a estação de trabalho e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Chame **bcp_init** antes de chamar qualquer outra função de cópia em massa. **bcp_init** executa as inicializações necessárias para uma cópia em massa de dados entre a estação de trabalho e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  A função **bcp_init** deve ser fornecida com um identificador de conexão ODBC habilitado para uso com funções de cópia em massa. Para habilitar o identificador, use [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) com SQL_COPT_SS_BCP definido como SQL_BCP_ON em um identificador de conexão alocado, mas não conectado. A tentativa de atribuir o atributo em um identificador conectado resulta em erro.  
   
- Quando um arquivo de dados é especificado, o **bcp_init** examina a estrutura da fonte de banco de dados ou tabela de destino, não o arquivo de dados. **bcp_init** especifica os valores de formato de dados para o arquivo de dados com base em cada coluna na tabela de banco de dado, no modo de exibição ou no conjunto de resultados selecionado. Essa especificação inclui o tipo de dados de cada coluna, a presença ou ausência de um indicador de comprimento ou nulo e cadeias de caracteres de bytes de terminador nos dados, além da largura de tipos de dados de comprimento fixo. **bcp_init** define esses valores da seguinte maneira:  
+ Quando um arquivo de dados é especificado, **bcp_init** examina a estrutura da fonte do banco de dados ou da tabela de destino, não o arquivo de dados. **bcp_init** especifica valores de formato de dados para o arquivo de dados com base em cada coluna na tabela de banco de dado, no modo de exibição ou no conjunto de resultados selecionado. Essa especificação inclui o tipo de dados de cada coluna, a presença ou ausência de um indicador de comprimento ou nulo e cadeias de caracteres de bytes de terminador nos dados, além da largura de tipos de dados de comprimento fixo. **bcp_init** define esses valores da seguinte maneira:  
   
 -   O tipo de dados especificado é o tipo de dados da coluna na tabela, exibição ou conjunto de resultados de SELECT do banco de dados. O tipo de dados é enumerado por tipos de dados nativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificados em sqlncli.h. Os dados são representados em seu próprio formato de computador. Ou seja, os dados de uma coluna de tipo de dados **Integer** são representados por uma sequência de quatro bytes que é Big-ou little-endian com base no computador que criou o arquivo de dados.  
   

@@ -18,16 +18,15 @@ ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbaf0029e5c2f7595591fb635c5eb43cc4b2a157
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: b3d09d1f577c9af59ea085eefbf51e9a70558a36
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707863"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782878"
 ---
 # <a name="bcp_control"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Altera as configurações padrão de vários parâmetros de controle para uma cópia em massa entre um arquivo e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -55,9 +54,9 @@ RETCODE bcp_control (
  É o número de linhas por lote. O padrão é 0, que indica todas as linhas de uma tabela, quando os dados estão sendo extraídos, ou todas as linhas no arquivo de dados do usuário, quando os dados estão sendo copiados para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um valor menor que 1 redefine BCPBATCH para o padrão.  
   
  BCPDELAYREADFMT  
- Um booliano, se definido como true, fará com que o [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) seja lido na execução. Se for false (o padrão), bcp_readfmt lerá imediatamente o arquivo de formato. Um erro de sequência ocorrerá se BCPDELAYREADFMT for true e você chamar bcp_columns ou bcp_setcolfmt.  
+ Um booliano, se definido como true, fará com que [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) seja lido na execução. Se for false (o padrão), bcp_readfmt lerá imediatamente o arquivo de formato. Ocorrerá um erro de sequência se BCPDELAYREADFMT for true e você chamar bcp_columns ou bcp_setcolfmt.  
   
- Um erro de sequência também ocorrerá se você chamar `bcp_control(hdbc,` BCPDELAYREADFMT @ no__t-1 após chamar `bcp_control(hdbc,` BCPDELAYREADFMT @ no__t-3 e bcp_writefmt.  
+ Um erro de sequência também ocorrerá se você chamar `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)` depois de chamar `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` e bcp_writefmt.  
   
  Para obter mais informações, veja [Descoberta de metadados](../../relational-databases/native-client/features/metadata-discovery.md).  
   
@@ -71,7 +70,7 @@ RETCODE bcp_control (
  BCPFILE_RAW: os dados do arquivo estão na página de código do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  BCPFILEFMT  
- O número de versão do formato de arquivo de dados. Isso pode ser 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) ou 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 é o padrão. Isso é útil para exportar e importar dados em formatos que tinham suporte em versões anteriores do servidor. Por exemplo, para importar dados que foram obtidos de uma coluna de texto em um servidor [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] em uma coluna **varchar (max)** em um servidor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior, você deve especificar 80. Da mesma forma, se você especificar 80 ao exportar dados de uma coluna **varchar (max)** , ele será salvo da mesma forma que as colunas de texto são salvas no formato [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] e pode ser importado para uma coluna de texto de um servidor [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
+ O número de versão do formato de arquivo de dados. Isso pode ser 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) ou 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 é o padrão. Isso é útil para exportar e importar dados em formatos que tinham suporte em versões anteriores do servidor. Por exemplo, para importar dados que foram obtidos de uma coluna de texto em um [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Server para uma coluna **varchar (max)** em um servidor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior, você deve especificar 80. Da mesma forma, se você especificar 80 ao exportar dados de uma coluna **varchar (max)** , ele será salvo da mesma forma que as colunas de texto são salvas no formato [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] e pode ser importado para uma coluna de texto de um servidor [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
   
  BCPFIRST  
  É a primeira linha de dados a ser copiada em um arquivo ou tabela. O padrão é 1; um valor menor que 1 redefine essa opção para seu valor padrão.  
@@ -95,7 +94,7 @@ RETCODE bcp_control (
  *iValue* contém um ponteiro de cadeia de caracteres SQLTCHAR. A cadeia de caracteres endereçada especifica dicas de processamento da cópia em massa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou uma instrução Transact-SQL que retorna um conjunto de resultados. Se uma instrução Transact-SQL especificada retornar mais de um conjunto de resultados, todos os conjuntos de resultados depois do primeiro serão ignorados. Para obter mais informações sobre dicas de processamento de cópia em massa, consulte [utilitário bcp](../../tools/bcp-utility.md).  
   
  BCPKEEPIDENTITY  
- Quando *iValue* é true, especifica que as funções de cópia em massa inserem valores de dados fornecidos para colunas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definidas com uma restrição de identidade. O arquivo de entrada deve fornecer valores para as colunas de identidade. Se essa opção não for definida, novos valores de identidade serão gerados para as linhas inseridas. Quaisquer dados contidos no arquivo para as colunas de identidade serão ignorados.  
+ Quando *iValue* é true, especifica que as funções de cópia em massa inserem valores de dados fornecidos para colunas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definidas com uma restrição de identidade. O arquivo de entrada deve fornecer valores para as colunas de identidade. Se essa opção não for definida, novos valores de identidade serão gerados para as linhas inseridas. Quaisquer dados contidos no arquivo para as colunas de identidade serão ignorados.  
   
  BCPKEEPNULLS  
  Especifica se valores de dados vazios no arquivo serão convertidos em valores NULL na tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando *iValue* for true, os valores vazios serão convertidos em NULL na tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O padrão será converter valores vazios em um valor padrão para a coluna na tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se houver um padrão.  
@@ -116,7 +115,7 @@ RETCODE bcp_control (
  BCPODBC  
  Quando TRUE, especifica que os valores **DateTime** e **smalldatetime** salvos no formato de caractere usarão o prefixo e o sufixo da sequência de saída do carimbo de data e hora do ODBC. A opção BCPODBC só se aplica a DB_OUT.  
   
- Quando FALSE, um valor **DateTime** que representa 1º de janeiro de 1997 é convertido para a cadeia de caracteres: 1997-01-01 00:00:00.000. Quando TRUE, o mesmo valor **DateTime** é representado como: {ts ' 1997-01-01 00:00:00.000 '}.  
+ Quando for falso, um valor **DateTime** que representa 1º de janeiro de 1997 será convertido para a cadeia de caracteres: 1997-01-01 00:00:00.000. Quando TRUE, o mesmo valor **DateTime** é representado como: {ts ' 1997-01-01 00:00:00.000 '}.  
   
  BCPROWCOUNT  
  Retorna o número de linhas afetadas pela operação BCP atual (ou última).  

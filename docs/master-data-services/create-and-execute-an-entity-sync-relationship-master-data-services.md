@@ -1,5 +1,5 @@
 ---
-title: Criar e executar um relacionamento de sincronização de entidade (Master Data Services) | Microsoft Docs
+title: Criar e executar um relacionamento de sincronização de entidade
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ee63fa1a3521af7d8fb0679df3b0521486e7b8cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1036d8b05bf3dfca825f88d562c89dbce7f6b538
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906529"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729527"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Criar e executar um relacionamento de sincronização de entidade (Master Data Services)
 
@@ -95,9 +95,9 @@ ms.locfileid: "67906529"
 ## <a name="sync-relationship-information"></a>Informações de relacionamento de sincronização  
  Para cada relacionamento de sincronização criado, uma linha com dez colunas é adicionada à grade. A tabela a seguir descreve as colunas.  
   
-|coluna|Descrição|  
+|Coluna|Descrição|  
 |------------|-----------------|  
-|Status|O status de relacionamento da sincronização.<br /><br /> Quando você clica em **Salvar** ou executa uma relação de sincronização, a imagem ![Ícone para o status de atualização](../master-data-services/media/mds-statusicon-updating.png "Ícone para o status de atualização") é exibida, indicando que a relação de sincronização está sendo atualizada.<br /><br /> Se houver erros ao criar, editar ou executar uma relação de sincronização, a imagem ![Ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Ícone para o status de erro") será exibida.<br /><br /> Caso contrário, o status será OK e a imagem ![Ícone para o status OK](../master-data-services/media/mds-statusicon-ok.png "Ícone para o status OK") será exibida.|  
+|Status|O status de relacionamento da sincronização.<br /><br /> Quando você clica em **salvar** ou executa uma relação de sincronização, o ![ícone para atualizar a imagem de status](../master-data-services/media/mds-statusicon-updating.png "Icon para atualizar o status ") é exibido, indicando que a relação de sincronização está sendo atualizada.<br /><br /> Se houver erros ao criar, editar ou executar uma relação de sincronização, a imagem ![ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Icon para status de erro ") será exibida.<br /><br /> Caso contrário, o status é OK e o ![ícone para a imagem de status OK](../master-data-services/media/mds-statusicon-ok.png "Icon status OK ") é exibido.|  
 |Modelo de origem|O nome do modelo de origem.|  
 |Versão de origem|O nome da versão de origem.|  
 |Entidade de origem|O nome da entidade de origem.|  
@@ -110,15 +110,15 @@ ms.locfileid: "67906529"
   
  Quando você clica em um índice, as informações a seguir são exibidas.  
   
--   **Erro da Última Tentativa**: Mostra as informações de erro sobre a última tentativa de sincronização.  
+-   **Erro da Última Tentativa**: mostra as informações de erro sobre a última tentativa de sincronização.  
   
--   **Criado por**: O nome do usuário que criou a sincronização.  
+-   **Criado Por**: o nome do usuário que criou a sincronização.  
   
--   **Em**: A data e a hora em que a sincronização foi criada.  
+-   **Em**: a data e a hora em que a sincronização foi criada.  
   
--   **Atualizado por**: O nome do usuário que atualizou a sincronização pela última vez.  
+-   **Atualizado Por**: o nome do usuário que atualizou a sincronização pela última vez.  
   
--   **Em**: A data e a hora em que a sincronização foi atualizada pela última vez.  
+-   **Em**: a data e a hora em que a sincronização foi atualizada pela última vez.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  [Editar e excluir uma relação de sincronização de entidade &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  

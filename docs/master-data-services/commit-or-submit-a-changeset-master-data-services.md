@@ -1,5 +1,5 @@
 ---
-title: Confirmar ou enviar um conjunto de alterações (Master Data Services) | Microsoft Docs
+title: Confirmar ou Enviar um Conjunto de Alterações
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: d323bbac-c8d4-4d2f-a7d2-a597e8b53e2d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3fdd5667d0125eca7fb774340fcdf163def9a59b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4f45d9ced6b22ec2b0cf7007eee4549e595ec697
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941073"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728570"
 ---
 # <a name="commit-or-submit-a-changeset-master-data-services"></a>Confirmar ou Enviar um Conjunto de Alterações (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Um conjunto de alterações é uma coleção das alterações pendentes nos dados mestre. Se as alterações da entidade não exigirem a aprovação do administrador, você poderá confirmar o conjunto de alterações. Se as alterações da entidade exigirem a aprovação do administrador, você poderá enviar o conjunto de alterações para a aprovação.  
+  Um conjunto de alterações é uma coleção de alterações pendentes nos dados mestre. Se as alterações da entidade não exigirem a aprovação do administrador, você poderá confirmar o conjunto de alterações. Se as alterações da entidade exigirem a aprovação do administrador, você poderá enviar o conjunto de alterações para a aprovação.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67941073"
 ## <a name="to-commit-a-local-changeset"></a>Para confirmar um conjunto de alterações local  
  A opção de confirmação só estará disponível para conjuntos de alterações locais em entidades em que o Administrador de Entidade não tiver habilitado a necessidade de aprovação.  
   
-1.  Na home page do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , escolha o modelo e a versão e, em seguida, clique em **Explorer**.  
+1.  Na home page do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , selecione o modelo e a versão e depois clique em **Explorer**.  
   
 2.  Clique em uma entidade no menu **Entidades** .  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67941073"
 ## <a name="to-submit-a-changeset"></a>Para enviar um conjunto de alterações  
  A opção de envio só estará disponível em conjuntos de alterações em entidades em que o Administrador de Entidade tiver habilitado a necessidade de aprovação.  
   
-1.  Na home page do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , escolha o modelo e a versão e, em seguida, clique em **Explorer**.  
+1.  Na home page do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , selecione o modelo e a versão e depois clique em **Explorer**.  
   
 2.  Clique em uma entidade no menu **Entidades** .  
   

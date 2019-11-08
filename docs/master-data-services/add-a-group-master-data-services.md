@@ -1,5 +1,5 @@
 ---
-title: Adicionar um grupo (Master Data Services) | Microsoft Docs
+title: Adicionar um grupo
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 725e43685f56c2a52c585acb7624064c85e01b4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef07ebbaf787852b3902af158f4f515293aae7ff
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047933"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728822"
 ---
 # <a name="add-a-group-master-data-services"></a>Adicionar um grupo (Master Data Services)
 

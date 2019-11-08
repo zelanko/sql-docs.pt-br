@@ -1,5 +1,5 @@
 ---
-title: Modelos (Master Data Services) | Microsoft Docs
+title: Modelos
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0376509a71196a8b674d6101f65b4845c660ac28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6bee1ab1716eac70d51006b8bb4315b204be67ab
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079610"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727951"
 ---
 # <a name="models-master-data-services"></a>Modelos (Master Data Services)
 
@@ -47,7 +47,7 @@ ms.locfileid: "68079610"
   
  Esta imagem mostra as relações entre os objetos em um modelo.  
   
- ![Objetos em um modelo do Master Data Services](../master-data-services/media/mds-conc-model-circles.gif "Objetos em um modelo do Master Data Services")  
+ ![Objetos em um modelo de Master Data Services](../master-data-services/media/mds-conc-model-circles.gif "Objetos em um modelo de Master Data Services")  
   
 > [!NOTE]  
 >  As hierarquias derivadas também são objetos de modelo, mas elas não são mostradas na imagem. As hierarquias derivadas são derivadas de relações de atributos baseados em domínio que existem entre entidades. Consulte [Hierarquias derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md) para obter mais informações.  
@@ -59,7 +59,7 @@ ms.locfileid: "68079610"
 ## <a name="model-example"></a>Exemplo de modelo  
  No exemplo a seguir, os objetos no modelo Product agrupam logicamente os dados relativos aos produtos.  
   
- ![Exemplo de dados mestre do modelo de produto](../master-data-services/media/mds-conc-model.gif "Exemplo de dados mestre do modelo de produto")  
+ ![Exemplo de dados mestres de modelo de produto](../master-data-services/media/mds-conc-model.gif "Exemplo de dados mestres de modelo de produto")  
   
  Outros modelos comuns são:  
   

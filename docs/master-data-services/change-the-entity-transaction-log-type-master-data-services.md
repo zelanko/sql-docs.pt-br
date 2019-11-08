@@ -1,5 +1,5 @@
 ---
-title: Alterar o Tipo de Log de Transações de Entidade (Master Data Services) | Microsoft Docs
+title: Alterar o tipo de log de transações da entidade.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 75250b32-3384-43c2-9b5c-1607cc3aa7b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9857a3c7d8d0f783c83e5bcb5b8fbe18aa7e7250
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fde8e314462846088c7c673524d6e6d8d29ee631
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052085"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729668"
 ---
 # <a name="change-the-entity-transaction-log-type-master-data-services"></a>Alterar o Tipo de Log de Transações de Entidade (Master Data Services)
 
@@ -25,9 +25,9 @@ ms.locfileid: "68052085"
   
 |Tipo de Log de transações|Descrição|  
 |--------------------------|-----------------|  
-|attribute|Os logs de alteração de entidades são salvos no nível do atributo.<br /><br /> O log de transações é salvo, assim como para o [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].|  
+|Atributo|Os logs de alteração de entidades são salvos no nível do atributo.<br /><br /> O log de transações é salvo, assim como para o [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].|  
 |Membro|Os logs de alteração de entidades são salvos no nível de linha.<br /><br /> Qualquer alteração de atributo dispara uma nova revisão de linha.<br /><br /> Ao usar o tipo de log de transações de linha, a entidade será armazenada como uma dimensão de alteração lenta do Tipo 4. A exibição de assinatura do Tipo 2 e a exibição de assinatura (histórico) do Tipo 4 têm suporte. Para obter mais informações, consulte [Formatos de exibição de assinatura &#40;Master Data Services&#41;](../master-data-services/subscription-view-formats-master-data-services.md)<br /><br /> Oferece um melhor desempenho.|  
-|Nenhum|Nenhum log de alteração é salvo.<br /><br /> Fornece o melhor desempenho.|  
+|Nenhuma|Nenhum log de alteração é salvo.<br /><br /> Fornece o melhor desempenho.|  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  

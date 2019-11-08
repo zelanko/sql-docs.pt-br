@@ -16,16 +16,15 @@ ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 473b86ad265c259426527fcd0cd67b8199a8350e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d66d37da3ba2de7f12cefb8f806c44d5dd967003
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051045"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73763171"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Cancela o conjunto de linhas atual, além de todos os comandos em lote associados ao comando atual.  
   
@@ -46,10 +45,10 @@ HRESULT Abort(void);
  Depois que **ISSAbort::Abort** retornar S_OK, a interface **IMultipleResults** associada entrará em um estado inutilizável e retornará DB_E_CANCELED para todas as chamadas de método (com exceção dos métodos definidos pela interface **IUnknown** ) até que seja liberada. Se um **IRowset** foi obtido de **IMultipleResults** antes de uma chamada para **Abort**, também entrará em um estado inutilizável e retornará DB_E_CANCELED para todas as chamadas de método (com exceção dos métodos definidos pela interface **IUnknown** e **IRowset::ReleaseRows**) até que seja liberado após uma chamada bem-sucedida para **ISSAbort::Abort**.  
   
 > [!NOTE]  
->  A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], se o estado XACT_ABORT do servidor estiver ON, a execução de **ISSAbort::Abort** encerrará e reverterá qualquer transação implícita ou explícita atual quando conectada ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não anularão a transação atual.  
+>  Do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] em diante, se o estado XACT_ABORT do servidor for ON, a execução de **ISSAbort::Abort** será encerrada e reverterá qualquer transação implícita ou explícita atual quando conectada ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não anularão a transação atual.  
   
 ## <a name="arguments"></a>Argumentos  
- nenhuma.  
+ Nenhum.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  S_OK  
@@ -71,6 +70,6 @@ HRESULT Abort(void);
  Erro de memória insuficiente.  
   
 ## <a name="see-also"></a>Consulte também  
- [ISSAbort &#40;OLE DB&#41;](https://msdn.microsoft.com/library/7c4df482-4a83-4da0-802b-3637b507693a)  
+ [OLE DB &#40;ISSAbort&#41;](https://msdn.microsoft.com/library/7c4df482-4a83-4da0-802b-3637b507693a)  
   
   

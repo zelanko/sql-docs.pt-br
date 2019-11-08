@@ -1,5 +1,5 @@
 ---
-title: Permissões de área funcional (Master Data Services) | Microsoft Docs
+title: Permissões de área funcional
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b40f4053633c7ef50d14004f2f5f045c23cae4cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f2d15e2a98f04d7481200dfea17cfe5ca852a84
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945258"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729203"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Permissões de área funcional (Master Data Services)
 

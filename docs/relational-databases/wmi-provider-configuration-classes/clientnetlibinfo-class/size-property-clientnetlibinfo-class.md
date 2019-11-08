@@ -1,6 +1,6 @@
 ---
-title: Propriedade (classe ClientNetLibInfo) size | Microsoft Docs
-ms.custom: ''
+title: Propriedade Size (ClientNetLibInfo)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f3d6827bd88172cb24e42cf3b3b63ae6f7ba2317
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eda80b5efcee562050539bf9d50f46cc507f280e
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995429"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659149"
 ---
 # <a name="size-property-clientnetlibinfo-class"></a>Propriedade Size (classe ClientNetLibInfo)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ object.Size [= value]
  *object*  
  Um objeto da [classe ClientNetLibInfo](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) que representa informações sobre a biblioteca de rede de cliente.  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor uint32 que especifica o tamanho da biblioteca de rede de cliente em KB.  
   
 ## <a name="remarks"></a>Comentários  

@@ -1,5 +1,5 @@
 ---
-title: Atribuir um sinalizador a uma versão (Master Data Services) | Microsoft Docs
+title: Atribuir um sinalizador a uma versão
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 553df37cf728b3c48c91d0bf7edc50ac924b1106
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e8f69d473ff15be3105c8dcef5f51edf30f4302
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047746"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729784"
 ---
 # <a name="assign-a-flag-to-a-version-master-data-services"></a>Atribuir um sinalizador a uma versão (Master Data Services)
 
@@ -36,7 +36,7 @@ ms.locfileid: "68047746"
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
--   Você deveria ter criado um sinalizador de versão para atribuir. Para obter mais informações, veja [Criar um sinalizador de versão &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md).  
+-   Você deveria ter criado um sinalizador de versão para atribuir. Para obter mais informações, veja [Create a Version Flag &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md).  
   
 -   Você deve ter permissão para acessar a área funcional Gerenciamento de Versões. Para obter mais informações, consulte [Permissões de área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   

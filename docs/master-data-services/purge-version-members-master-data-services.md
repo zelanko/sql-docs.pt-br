@@ -1,5 +1,5 @@
 ---
-title: Limpar Membros de Versão (Master Data Services) | Microsoft Docs
+title: Limpar Membros de Versão
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 571ac34ad836bf25ad98f973f9fc33c9de499ba9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94543ada58c5af829da6a7650e21f5f4e2deb9bb
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024656"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729013"
 ---
 # <a name="purge-version-members-master-data-services"></a>Limpar Membros de Versão (Master Data Services)
 

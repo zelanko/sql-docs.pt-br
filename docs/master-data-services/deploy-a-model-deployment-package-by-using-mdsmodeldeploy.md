@@ -1,5 +1,5 @@
 ---
-title: Implantar um pacote de implantação de modelo usando o MDSModelDeploy | Microsoft Docs
+title: Implantar um pacote de implantação de modelo (MDSModelDeploy)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7d2041effbc1e5bebb94a730d90c19e28e0a02be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ae40a50eb9866b452efb8d387df62f8bed8fa24
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906218"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728310"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Implantar um pacote de implantação de modelo usando MDSModelDeploy
 
@@ -47,7 +47,7 @@ ms.locfileid: "67906218"
   
 1.  Determine se você está implantando um novo modelo, um clone de um modelo ou atualizando um modelo clonado previamente. Para obter mais informações, consulte [Opções de implantação de modelo &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md).  
   
-2.  Abra um Prompt de Comando de Administrador: e procure MDSModelDeploy.exe.  
+2.  Abra um Administrador: Prompt de comando e navegue para MDSModelDeploy.exe.  
   
     -   Se o MDS estiver instalado na local padrão, a ferramenta estará disponível em *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration  
   
@@ -96,7 +96,7 @@ ms.locfileid: "67906218"
   
  **Observações:**  
   
--   Se uma exibição de assinatura no pacote tiver o mesmo nome de uma exibição de assinatura em um modelo existente, este aviso será exibido: **Exibição da assinatura do implantador renomeada** e a exibição é criada como *modelname.subscriptionviewname*. Se esse nome já estiver em uso, a exibição de assinatura não será criada.  
+-   Se uma exibição de assinatura no pacote tiver o mesmo nome que uma exibição de assinatura em um modelo existente, este aviso será exibido: **Exibição da assinatura do implantador renomeada** e a exibição será criada como *modelname.subscriptionviewname*. Se esse nome já estiver em uso, a exibição de assinatura não será criada.  
   
 -   O processo de implantação tem quatro etapas:  
   

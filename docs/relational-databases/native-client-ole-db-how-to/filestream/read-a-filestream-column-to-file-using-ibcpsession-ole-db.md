@@ -11,20 +11,19 @@ ms.assetid: ab3ce02a-549d-4e01-87b9-d15281fba349
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b113dadd067ed5368ac5375e3fa1ebaf258c0985
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68c16521b787208a4c4653096e26224695b26dd2
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110275"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73767002"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Ler uma coluna FILESTREAM para o arquivo usando IBCPSession (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Este exemplo lê uma coluna filestream para um arquivo que usa a interface IBCPSession e grava um arquivo de formato.  
   
- Para obter mais informações sobre o recurso filestream, consulte [suporte a FILESTREAM &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
+ Para obter mais informações sobre o recurso FileStream, consulte [suporte &#40;a&#41;FileStream OLE DB](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Exemplo  
  Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  

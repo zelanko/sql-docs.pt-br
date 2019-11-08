@@ -1,5 +1,5 @@
 ---
-title: Documentação do desenvolvedor do Master Data Services | Microsoft Docs
+title: Documentação do desenvolvedor
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7544660fdcab3ef4caa8082d7096bbe343790fcb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 415e20eb08041780b8d20fb124151cc700cacbe6
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006315"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728262"
 ---
 # <a name="master-data-services-developer-documentation"></a>Documentação do desenvolvedor do Master Data Services
 

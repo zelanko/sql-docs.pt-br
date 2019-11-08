@@ -14,22 +14,21 @@ ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6af744a468c4853bf6fb3111b83c6480e175e321
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f7b166ae15e403e2a84bc3a7f3902350c805788
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913227"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73760595"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipos de dados CLR grandes definidos pelo usuário (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Este tópico aborda as alterações feitas ao ODBC no SQL Server Native Client para dar suporte aos UDTs (tipos definidos pelo usuário) de CLR (Common Language Runtime) grande.  
   
- Para obter um exemplo que mostra o suporte a ODBC para UDTs grandes do CLR, consulte [dar suporte a UDTs grandes](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md).  
+ Para obter um exemplo que mostra o suporte ODBC para UDTs CLR grandes, consulte [suporte para UDTs grandes](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md).  
   
- Para obter mais informações sobre o suporte para UDTs grandes do CLR no SQL Server Native Client, consulte [Large CLR User-Defined tipos](../../../relational-databases/native-client/features/large-clr-user-defined-types.md).  
+ Para obter mais informações sobre o suporte a UDTs CLR grandes no SQL Server Native Client, consulte [grandes tipos CLR definidos pelo usuário](../../../relational-databases/native-client/features/large-clr-user-defined-types.md).  
   
 ## <a name="data-format"></a>Formato de Dados  
  O SQL Server Native Client usa SQL_SS_LENGTH_UNLIMITED para indicar que o tamanho de uma coluna é maior que 8.000 bytes para tipos LOB. A partir do SQL Server 2008, o mesmo valor é usado para UDTs do CLR quando seu tamanho for maior que 8.000 bytes.  
@@ -38,15 +37,15 @@ ms.locfileid: "67913227"
   
  A seguinte tabela mostra o mapeamento de tipos de dados em parâmetros e conjuntos de resultados:  
   
-|Tipo de dados do SQL Server|Tipo de dados SQL|Valor|  
+|Tipo de dados do SQL Server|Tipo de dados SQL|Value|  
 |--------------------------|-------------------|-----------|  
 |CLR UDT|SQL_SS_UDT|-151 (sqlncli.h)|  
   
- A seguinte tabela discute a estrutura correspondente e o tipo do C do ODBC. Essencialmente, UDT do CLR é um **varbinary** tipo com metadados adicionais.  
+ A seguinte tabela discute a estrutura correspondente e o tipo do C do ODBC. Essencialmente, o CLR UDT é um tipo **varbinary** com metadados adicionais.  
   
 |Tipo de dados SQL|Layout de memória|Tipos de dados do C|Valor (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * (unsigned char \*)|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * (\*de caracteres não assinados)|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>Campos do descritor dos parâmetros  
  As informações são retornadas nos campos IPD são as seguintes:  
@@ -67,11 +66,11 @@ ms.locfileid: "67913227"
 |SQL_DESC_TYPE_NAME|"udt"|"udt"|  
 |SQL_DESC_UNSIGNED|SQL_TRUE|SQL_TRUE|  
 |SQL_CA_SS_UDT_CATALOG_NAME|O nome do catálogo que contém o UDT.|O nome do catálogo que contém o UDT.|  
-|SQL_CA_SS_UDT_SCHEMA_NAME|O nome do esquema que contém o UDT.|O nome do esquema de contém o UDT.|  
+|SQL_CA_SS_UDT_SCHEMA_NAME|O nome do esquema que contém o UDT.|O nome do esquema que contém o UDT.|  
 |SQL_CA_SS_UDT_TYPE_NAME|O nome do UDT.|O nome do UDT.|  
 |SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|O nome totalmente qualificado do assembly do UDT.|O nome totalmente qualificado do assembly do UDT.|  
   
- Para parâmetros de UDT, SQL_CA_SS_UDT_TYPE_NAME deve sempre ser definida **SQLSetDescField**. SQL_CA_SS_UDT_CATALOG_NAME e SQL_CA_SS_UDT_SCHEMA_NAME são opcionais.  
+ Para parâmetros UDT, SQL_CA_SS_UDT_TYPE_NAME sempre deve ser definido via **SQLSetDescField**. SQL_CA_SS_UDT_CATALOG_NAME e SQL_CA_SS_UDT_SCHEMA_NAME são opcionais.  
   
  Se o UDT for definido no mesmo banco de dados com um esquema diferente que a tabela, SQL_CA_SS_UDT_SCHEMA_NAME deve ser definido.  
   
@@ -124,32 +123,32 @@ ms.locfileid: "67913227"
 |SS_UDT_SCHEMA_NAME|O nome do esquema que contém o UDT.|O nome do esquema que contém o UDT.|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|O nome totalmente qualificado do assembly do UDT.|O nome totalmente qualificado do assembly do UDT.|  
   
- As últimas três colunas são específicas do driver. Elas são adicionadas depois de quaisquer colunas definidas pelo ODBC, mas antes de quaisquer colunas específicas de driver existentes do conjunto de resultados de SQLColumns ou SQLProcedureColumns.  
+ As últimas três colunas são específicas do driver. Elas são adicionadas após qualquer coluna definida pelo ODBC, mas antes de qualquer coluna específica do driver existente do conjunto de resultados de SQLColumns ou SQLProcedureColumns.  
   
- Nenhuma linha é retornada por SQLGetTypeInfo, para UDTs individuais ou para o tipo genérico "udt".  
+ Nenhuma linha é retornada por SQLGetTypeInfo, para UDTs individuais ou para o tipo genérico "UDT".  
   
 ## <a name="bindings-and-conversions"></a>Associações e conversões  
  As conversões de tipos de dados de C para SQL com suporte são as seguintes:  
   
 |Conversão para e de:|SQL_SS_UDT|  
 |-----------------------------|------------------|  
-|SQL_C_WCHAR|Suporte para *|  
+|SQL_C_WCHAR|Porta|  
 |SQL_C_BINARY|Tem suporte|  
-|SQL_C_CHAR|Suporte para *|  
+|SQL_C_CHAR|Porta|  
   
- \* Dados binários são convertidos em uma cadeia de caracteres hexadecimal.  
+ \* dados binários são convertidos em uma cadeia de caracteres hexadecimal.  
   
  As conversões com suporte dos tipos de dados do C para SQL são as seguintes:  
   
 |Conversão para e de:|SQL_SS_UDT|  
 |-----------------------------|------------------|  
-|SQL_C_WCHAR|Suporte para *|  
+|SQL_C_WCHAR|Porta|  
 |SQL_C_BINARY|Tem suporte|  
-|SQL_C_CHAR|Suporte para *|  
+|SQL_C_CHAR|Porta|  
   
- \* Ocorre a cadeia de caracteres hexadecimal para a conversão de dados binários.  
+ \* cadeia de caracteres hexadecimal para conversão de dados binários ocorre.  
   
-## <a name="sqlvariant-support-for-udts"></a>Suporte SQL_VARIANT para UDTs  
+## <a name="sql_variant-support-for-udts"></a>Suporte SQL_VARIANT para UDTs  
  Não há suporte para UDTs em colunas de SQL_VARIANT.  
   
 ## <a name="bcp-support-for-udts"></a>Suporte BCP para UDTs  
@@ -167,7 +166,7 @@ ms.locfileid: "67913227"
  Esta seção discute as alterações feitas nas funções ODBC do SQL Server Native Client para dar suporte a UDTs de CLR grande.  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- Valores de coluna de resultado UDT são convertidos de SQL para tipos de dados C conforme descrito na seção "Associações e conversões", neste tópico.  
+ Os valores de coluna de resultado UDT são convertidos de SQL para tipos de DataType, conforme descrito na seção "associações e conversões", anteriormente neste tópico.  
   
 ### <a name="sqlbindparameter"></a>SQLBindParameter  
  Os valores necessários para UDTs são os seguintes:  
@@ -181,7 +180,7 @@ ms.locfileid: "67913227"
  Os valores retornados para UDTs são os descritos na seção "Campos do descritor dos resultados", anteriormente neste tópico.  
   
 ### <a name="sqlcolumns"></a>SQLColumns  
- Os valores retornados para UDTs são conforme descrito na seção "Retornou de metadados de coluna por SQLColumns e SQLProcedureColumns (metadados de catálogo)", neste tópico.  
+ Os valores retornados para UDTs são conforme descrito na seção "metadados de coluna retornados por SQLColumns e SQLProcedureColumns (metadados de catálogo)", anteriormente neste tópico.  
   
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
  Os valores retornados para UDTs são os seguintes:  
@@ -200,13 +199,13 @@ ms.locfileid: "67913227"
 |SQL_SS_UDT<br /><br /> (comprimento maior que 8.000 bytes)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlfetch"></a>SQLFetch  
- Valores de coluna de resultado UDT são convertidos de SQL para tipos de dados C conforme descrito na seção "Associações e conversões", neste tópico.  
+ Os valores de coluna de resultado UDT são convertidos de SQL para tipos de DataType, conforme descrito na seção "associações e conversões", anteriormente neste tópico.  
   
 ### <a name="sqlfetchscroll"></a>SQLFetchScroll  
- Valores de coluna de resultado UDT são convertidos de SQL para tipos de dados C conforme descrito na seção "Associações e conversões", neste tópico.  
+ Os valores de coluna de resultado UDT são convertidos de SQL para tipos de DataType, conforme descrito na seção "associações e conversões", anteriormente neste tópico.  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- Valores de coluna de resultado UDT são convertidos de SQL para tipos de dados C conforme descrito na seção "Associações e conversões", neste tópico.  
+ Os valores de coluna de resultado UDT são convertidos de SQL para tipos de DataType, conforme descrito na seção "associações e conversões", anteriormente neste tópico.  
   
 ### <a name="sqlgetdescfield"></a>SQLGetDescField  
  Os campos de descritor disponíveis como os novos tipos são descritos nas seções "Campos do descritor dos parâmetros" e "Campos do descritor dos resultados", anteriormente neste tópico.  
@@ -214,7 +213,7 @@ ms.locfileid: "67913227"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  Os valores retornados para UDTs são os seguintes:  
   
-|Tipo de dados SQL|type|Subtipo|Comprimento|Precisão|Escala|  
+|Tipo de dados SQL|Tipo|Subtipo|Comprimento|Precisão|Escala|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (comprimento maior que 8.000 bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -226,15 +225,15 @@ ms.locfileid: "67913227"
  Os valores retornados para UDTs são os descritos na seção "Metadados de coluna retornados por SQLColumns e SQLProcedureColumns (metadados de catálogo)", anteriormente neste tópico.  
   
 ### <a name="sqlputdata"></a>SQLPutData  
- Valores de parâmetros UDT são convertidos de C para tipos de dados SQL conforme descrito na seção "Associações e conversões", neste tópico.  
+ Os valores de parâmetros UDT são convertidos de C para tipos de texto do SQL, conforme descrito na seção "associações e conversões", anteriormente neste tópico.  
   
 ### <a name="sqlsetdescfield"></a>SQLSetDescField  
- Campo de descritor disponível com os novos tipos são descritos nas seções "Campos do descritor dos resultados", neste tópico e "Campos de descritor para parâmetros".  
+ O campo de descritor disponível com os novos tipos é descrito nas seções "campos do descritor para parâmetros" e "campos do descritor para resultados", anteriormente neste tópico.  
   
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Os valores permitidos para UDTs são os seguintes:  
   
-|Tipo de dados SQL|type|Subtipo|Comprimento|Precisão|Escala|  
+|Tipo de dados SQL|Tipo|Subtipo|Comprimento|Precisão|Escala|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (comprimento maior que 8.000 bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

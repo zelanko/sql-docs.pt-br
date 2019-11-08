@@ -1,5 +1,5 @@
 ---
-title: Aprender sobre o SQL Server Master Data Services | Microsoft Docs
+title: Aprender sobre o SQL Server Master Data Services
 ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ keywords:
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 20920eb0a7a748b886444b44abef38708df0db46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4580db494d31a528a807cf4349e3ddc65b91aee
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007191"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729083"
 ---
 # <a name="learn-sql-server-master-data-services"></a>Aprender sobre o SQL Server Master Data Services
 
@@ -26,8 +26,8 @@ ms.locfileid: "68007191"
   
   
 ## <a name="training"></a>Treinamento  
-* Para explorar os novos recursos introduzidos no [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], experimente um [laboratório individualizado](https://www.microsoft.com/handsonlabs/selfpacedlabs) (entrar com sua conta da Microsoft é necessária).  
-* Para desenvolver uma [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] soluções para armazenar e gerenciar listas mestre dos dados geográficos usando o suplemento para Excel e o [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], experimente um [laboratório individualizado](https://www.microsoft.com/handsonlabs/selfpacedlabs). Você criará entidades e hierarquias e usará o [!INCLUDE[ssIS_md](../includes/ssis-md.md)] para preencher uma tabela de dimensões.  
+* Para explorar os novos recursos e funcionalidades introduzidos no [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], experimente um [laboratório individualizado](https://www.microsoft.com/handsonlabs/selfpacedlabs) (entre com seu conta Microsoft é necessário).  
+* Para desenvolver uma solução de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] para armazenar e gerenciar listas mestras de dados geográficos, usando o suplemento para Excel e o [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], experimente um [laboratório individualizado](https://www.microsoft.com/handsonlabs/selfpacedlabs). Você criará entidades e hierarquias e usará o [!INCLUDE[ssIS_md](../includes/ssis-md.md)] para preencher uma tabela de dimensões.  
   
 ## <a name="videos"></a>Vídeos  
 * Para saber mais sobre os novos recursos no [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] versão [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], [**assista a este vídeo**](https://www.youtube.com/watch?v=cKA72FpOVxI).  
@@ -35,7 +35,7 @@ ms.locfileid: "68007191"
 ## <a name="samples"></a>Exemplos  
 * Para saber mais sobre como é possível estruturar dados no [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] usando modelos, entidades e hierarquias, experimente os modelos de exemplo incluídos quando você instala o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Para obter instruções sobre como implantar as amostras, consulte [Implantar dados e modelos de exemplo](../master-data-services/master-data-services-installation-and-configuration.md#deploySample).   
   
-    Para obter informações sobre as atualizações do [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] nos modelos de exemplo, confira [Amostras do SQL Server: Pacotes de Implantação de Modelo](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+    Para obter informações sobre as atualizações do [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] aos modelos de exemplo, consulte [Amostras do SQL Server: Pacotes de implantação de modelo](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
 * Para ver uma demonstração de como personalizar a maneira que os usuários interagem com o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], experimente as amostras de aplicativos de console em C# do MDS incluídos nas amostras do SQL Server. Você pode baixar as amostras do SQL Server como um arquivo .zip neste [repositório GitHub](https://github.com/Microsoft/sql-server-samples).  
   

@@ -14,18 +14,17 @@ ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13d79325c37debce2a394734735c6e6cf6c430d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3a109f663ade5c1b52f9e6d6ca9cd83efac4b3ec
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031945"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73759356"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>Conjuntos de linhas do esquema – conjunto de linhas LINKEDSERVERS
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  O conjunto de linhas **LINKEDSERVERS** enumera fontes de dados da organização que podem participar de consultas distribuídas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  O conjunto de linhas **LINKEDSERVERS** enumera fontes de dados da organização que podem participar de consultas distribuídas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  O conjunto de linhas **LINKEDSERVERS** contém as seguintes colunas.  
   

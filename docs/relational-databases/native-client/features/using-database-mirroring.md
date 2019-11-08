@@ -18,22 +18,21 @@ ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae15f57418712ab4977d993e71a9528ee489fdfd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5c2db9621490f4dc718516e5829f6704b20ee0e9
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059521"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761327"
 ---
 # <a name="using-database-mirroring"></a>Usando o espelhamento de banco de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] Use o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
- O espelhamento de banco de dados, apresentado no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], é uma solução que visa aumentar a disponibilidade do banco de dados e a redundância de dados. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fornece suporte implícito para espelhamento de banco de dados, portanto, o desenvolvedor não precisa escrever nenhum código nem executar qualquer outra ação depois que ele foi configurado para o banco de dados.  
+ O espelhamento de banco de dados, apresentado no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], é uma solução que visa aumentar a disponibilidade do banco de dados e a redundância de dados. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fornece suporte implícito para espelhamento de banco de dados, portanto, o desenvolvedor não precisa escrever nenhum código ou executar qualquer outra ação depois de ter sido configurado para o banco de dados.  
   
  O espelhamento de banco de dados, que é implementado para cada banco de dados, mantém uma cópia de um banco de dados de produção do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um servidor em espera. Esse servidor é um servidor em espera ativa ou passiva, dependendo da configuração e do estado da sessão de espelhamento de banco de dados. Um servidor em espera ativa dá suporte ao failover rápido sem perda de transações confirmadas, e um servidor em espera passiva dá suporte ao serviço de imposição (com possível perda de dados).  
   
@@ -46,7 +45,7 @@ ms.locfileid: "68059521"
  É possível usar um alias ao especificar o nome de banco de dados espelho.  
   
 > [!NOTE]  
->  Para obter informações sobre tentativas de conexão inicial e tentativas de reconexão com um banco de dados espelhado, consulte [conectar clientes a uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+>  Para obter informações sobre tentativas de conexão iniciais e tentativas de reconexão a um banco de dados espelho, consulte [conectar clientes a uma &#40;sessão&#41;de espelhamento de banco de dados SQL Server](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ## <a name="programming-considerations"></a>Considerações sobre programação  
  Quando o servidor do banco de dados principal falhar, o aplicativo cliente receberá erros em resposta a chamadas API, o que indica que a conexão com o banco de dados foi interrompida. Quando isto acontece, todas as alterações não confirmadas do banco de dados são perdidas e a transação atual é revertida. Se isso ocorrer, o aplicativo deve fechar a conexão (ou liberar o objeto da fonte de dados) e abri-la novamente. A conexão é redirecionada de forma transparente para o banco de dados espelho, que agora atua como servidor principal.  
@@ -61,14 +60,14 @@ ms.locfileid: "68059521"
 >  Além disso, os nomes de servidor não diferenciam maiúsculas de minúsculas, mas os nomes de banco de dados o fazem. Portanto, certifique-se de usar as mesmas maiúsculas e minúsculas em DSNs e cadeias de conexões.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provedor OLE DB do SQL Server Native Client  
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client dá suporte ao espelhamento de banco de dados por meio de conexão e os atributos de cadeia de caracteres de conexão. A propriedade SSPROP_INIT_FAILOVERPARTNER foi adicionada ao conjunto de propriedades DBPROPSET_SQLSERVERDBINIT e a palavra-chave **FailoverPartner** é um novo atributo de cadeia de conexão para DBPROP_INIT_PROVIDERSTRING. Para obter mais informações, consulte [usando Conexão String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ O provedor de OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nativo oferece suporte ao espelhamento de banco de dados por meio de atributos de cadeia de conexão e conexão. A propriedade SSPROP_INIT_FAILOVERPARTNER foi adicionada ao conjunto de propriedades DBPROPSET_SQLSERVERDBINIT e a palavra-chave **FailoverPartner** é um novo atributo de cadeia de conexão para DBPROP_INIT_PROVIDERSTRING. Para obter mais informações, consulte [usando palavras-chave da cadeia de conexão com SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- O cache de failover é mantido enquanto o provedor estiver carregado, ou seja, até **CoUninitialize** é chamado ou, desde que o aplicativo tem uma referência a algum objeto gerenciado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client, como um objeto de fonte de dados.  
+ O cache de failover é mantido, desde que o provedor seja carregado, o que é até que **CoUninitialize** seja chamado ou desde que o aplicativo tenha uma referência a algum objeto gerenciado pelo provedor de OLE DB de cliente nativo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], como um objeto de fonte de dados.  
   
- Para obter detalhes sobre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suporte do provedor OLE DB do Native Client para o espelhamento de banco de dados, consulte [propriedades de inicialização e autorização](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Para obter detalhes sobre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suporte nativo do provedor de OLE DB do cliente para espelhamento de banco de dados, consulte [Propriedades de inicialização e autorização](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Driver ODBC do SQL Server Native Client  
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte ao espelhamento de banco de dados por meio de conexão e os atributos de cadeia de caracteres de conexão. Especificamente, o atributo SQL_COPT_SS_FAILOVER_PARTNER foi adicionado para uso com o [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) e [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) funções; e o **Failover_Partner** palavra-chave foi adicionado como um novo atributo de cadeia de caracteres de conexão.  
+ O driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client dá suporte ao espelhamento de banco de dados por meio de atributos de cadeia de conexão e conexão. Especificamente, o atributo SQL_COPT_SS_FAILOVER_PARTNER foi adicionado para uso com as funções [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) e [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) ; e a palavra-chave **Failover_Partner** foi adicionada como um novo atributo de cadeia de conexão.  
   
  O cache de failover é mantido enquanto o aplicativo tem pelo menos um identificador de ambiente alocado. Por outro lado, ele é perdido quando o último identificador de ambiente for desalocado.  
   

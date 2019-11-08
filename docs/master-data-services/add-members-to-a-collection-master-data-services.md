@@ -1,5 +1,5 @@
 ---
-title: Adicionar membros a uma coleção (Master Data Services) | Microsoft Docs
+title: Adicionar membros a uma coleção
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0c750efb1570db2e8b1f6e2d521cdb24773f01da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aaedf62b9702d5cec44116cb906acdf9aa415c39
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047877"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729803"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>Adicionar membros a uma coleção (Master Data Services)
 
@@ -36,7 +36,7 @@ ms.locfileid: "68047877"
   
 ### <a name="to-add-members-to-a-collection"></a>Para adicionar membros a uma coleção  
   
-1.  Na home page do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , na lista **Modelo** , selecione um modelo.  
+1.  Na página inicial do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , na lista **Modelo** , selecione um modelo.  
   
 2.  Na lista **Versão** , selecione uma versão.  
   

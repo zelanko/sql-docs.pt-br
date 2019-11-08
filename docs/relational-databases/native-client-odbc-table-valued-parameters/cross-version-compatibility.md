@@ -13,26 +13,25 @@ ms.assetid: 5f14850b-b85c-41e2-8116-6f5b3f5e0856
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ce057a2ea0985243bc9c42e6384dfe805e56ff4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 196c99bebaf0255f095055bef6c9c6a64c41908b
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030277"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73776280"
 ---
 # <a name="cross-version-compatibility"></a>Compatibilidade entre versões
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Podem ocorrer conflitos entre versões quando instâncias do cliente e do servidor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] são esperadas para processar parâmetros com valor de tabela.  
   
- Em geral, a funcionalidade de parâmetros com valor de tabela estão disponíveis apenas em clientes [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (que utilizam o SQL Server Native Client 10.0) ou posteriores que estão conectados a servidores [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou posteriores). Colunas novas em conjuntos de resultados de funções de catálogo estarão presentes somente quando conectado a um [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou posterior) server.  
+ Em geral, a funcionalidade de parâmetros com valor de tabela estão disponíveis apenas em clientes [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (que utilizam o SQL Server Native Client 10.0) ou posteriores que estão conectados a servidores [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou posteriores). As novas colunas nos conjuntos de resultados da função de catálogo só estarão presentes quando conectadas a um servidor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou posterior).  
   
  Se um aplicativo cliente compilado com uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client executar instruções que esperam parâmetros com valor de tabela, o servidor detectará essa condição por meio de um erro de conversão de dados, e o ODBC retornará com SQLSTATE 07006 e a mensagem "Violação do atributo de tipo de dados restrito".  
   
- Se um aplicativo cliente que foi compilado com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 ou posterior tentar usar parâmetros com valor de tabela quando conectado a uma instância de servidor anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client irá detectar isso e SQLBindCol, Chamadas SQLBindParameter, SQLSetDescFields e SQLSetDescRec falhará com SQLSTATE 07006 e a mensagem "Violação do atributo de tipo de dados (a versão do SQL Server para esta conexão não oferece suporte a parâmetros com valor de tabela) de Restricted".  
+ Se um aplicativo cliente que foi compilado com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente nativo 10,0 ou posterior tentar usar parâmetros com valor de tabela quando conectado a uma instância de servidor anterior à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente nativo detectará isso e SQLBindCol, SQLBindParameter, As chamadas SQLSetDescFields e SQLSetDescRec falharão com SQLSTATE 07006 e a mensagem "violação de atributo de tipo de dados restritos (a versão do SQL Server para essa conexão não oferece suporte a parâmetros com valor de tabela)".  
   
 ## <a name="see-also"></a>Consulte também  
- [Parâmetros com valor de tabela &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [Parâmetros &#40;com valor de tabela ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

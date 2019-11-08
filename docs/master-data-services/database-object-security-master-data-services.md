@@ -1,5 +1,5 @@
 ---
-title: Segurança de objeto de banco de dados (Master Data Services) | Microsoft Docs
+title: Segurança de objeto de banco de dados
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 65aa1f12870d47e61a0fa634f0281f8bde9c9462
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd3ce4034a1e64c7c8ca6b1e54d989b129f177f4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906469"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728431"
 ---
 # <a name="database-object-security-master-data-services"></a>Segurança de objeto de banco de dados (Master Data Services)
 
@@ -43,42 +43,42 @@ ms.locfileid: "67906469"
 -   [Definição de configurações do sistema](#SysSettings)  
   
 ##  <a name="Staging"></a> Preparação de dados  
- Na tabela a seguir, cada protegível tem "name" como parte do nome. Isso indica o nome da tabela de preparo que é especificada quando uma entidade é criada. Para obter mais informações, confira [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+ Na tabela a seguir, cada protegível tem "name" como parte do nome. Isso indica o nome da tabela de preparo que é especificada quando uma entidade é criada. Para obter mais informações, consulte [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
-|Action|Protegíveis|Permissões|  
+|Ação|Protegíveis|Permissões|  
 |------------|----------------|-----------------|  
-|Criar, atualizar e excluir membros folha e seus atributos.|stg.name_Leaf|Obrigatório: INSERT<br /><br /> Opcional: SELECT e UPDATE|  
-|Carregar os dados da tabela de preparo de Folha nas tabelas adequadas do banco de dados do MDS.|stg.udp_name_Leaf|Execute|  
-|Criar, atualizar e excluir membros consolidados e seus atributos.|stg.name_Consolidated|Obrigatório: INSERT<br /><br /> Opcional: SELECT e UPDATE|  
-|Carregar os dados da tabela de preparo de Consolidados nas tabelas adequadas do banco de dados do MDS.|stg.udp_name_Consolidated|Execute|  
-|Mover membros em uma hierarquia explícita.|stg.name_Relationship|Obrigatório: INSERT<br /><br /> Opcional: SELECT e UPDATE|  
-|Carregar os dados da tabela de preparo Relação nas tabelas adequadas do banco de dados do MDS.|stg.udp_name_Relationship|Execute|  
+|Criar, atualizar e excluir membros folha e seus atributos.|stg.name_Leaf|Obrigatória: INSERT<br /><br /> Opcional: SELECT e UPDATE|  
+|Carregar os dados da tabela de preparo de Folha nas tabelas adequadas do banco de dados do MDS.|stg.udp_name_Leaf|EXECUTE|  
+|Criar, atualizar e excluir membros consolidados e seus atributos.|stg.name_Consolidated|Obrigatória: INSERT<br /><br /> Opcional: SELECT e UPDATE|  
+|Carregar os dados da tabela de preparo de Consolidados nas tabelas adequadas do banco de dados do MDS.|stg.udp_name_Consolidated|EXECUTE|  
+|Mover membros em uma hierarquia explícita.|stg.name_Relationship|Obrigatória: INSERT<br /><br /> Opcional: SELECT e UPDATE|  
+|Carregar os dados da tabela de preparo Relação nas tabelas adequadas do banco de dados do MDS.|stg.udp_name_Relationship|EXECUTE|  
 |Exibir erros ocorridos quando os dados das tabelas de preparo estavam sendo inseridos nas tabelas do banco de dados do MDS.|stg.udp_name_Relationship|SELECT|  
   
- Para obter mais informações, confira [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+ Para obter mais informações, consulte [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
 ##  <a name="rules"></a> Validando dados em relação a regras de negócio  
   
-|Action|Protegível|Permissões|  
+|Ação|Protegível|Permissões|  
 |------------|---------------|-----------------|  
-|Validar uma versão de dados em relação às regras de negócio|mdm.udpValidateModel|Execute|  
+|Validar uma versão de dados em relação às regras de negócio|mdm.udpValidateModel|EXECUTE|  
   
  Para obter mais informações, consulte [Procedimento armazenado de validação &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
 ##  <a name="Versions"></a> Exclusão de versões  
   
-|Action|Protegíveis|Permissões|  
+|Ação|Protegíveis|Permissões|  
 |------------|----------------|-----------------|  
 |Determinar a ID da versão que deseja excluir|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
-|Excluir uma versão de um modelo|mdm.udpVersionDelete|Execute|  
+|Excluir uma versão de um modelo|mdm.udpVersionDelete|EXECUTE|  
   
  Para obter mais informações, consulte [Excluir uma versão &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md).  
   
 ##  <a name="Hierarchy"></a> Aplicação imediata de permissões de membro de hierarquia  
   
-|Action|Protegíveis|Permissões|  
+|Ação|Protegíveis|Permissões|  
 |------------|----------------|-----------------|  
-|Aplicação imediata de permissões de membro|mdm.udpSecurityMemberProcessRebuildModel|Execute|  
+|Aplicação imediata de permissões de membro|mdm.udpSecurityMemberProcessRebuildModel|EXECUTE|  
   
  Para obter mais informações, consulte [Aplicar permissões de membros imediatamente &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   

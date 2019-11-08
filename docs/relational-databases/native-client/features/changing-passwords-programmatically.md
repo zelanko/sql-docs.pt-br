@@ -21,18 +21,17 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea773fbefdd2c79b984dd5e3e99564a701009508
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: def93c4860a7e1a29a4a721de3aa451f91fd1869
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987537"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761501"
 ---
 # <a name="changing-passwords-programmatically"></a>Alterando senhas programaticamente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Antes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], quando a senha de um usuário expirava, somente um administrador poderia redefini-la. Começando com [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suporta Native Client manipulando a expiração de senha programaticamente, por meio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client e por meio de alterações a **Logon do SQL Server** caixas de diálogo.  
+  Antes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], quando a senha de um usuário expirava, somente um administrador poderia redefini-la. A partir do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client dá suporte ao tratamento de expiração de senha programaticamente por meio do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo e do driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e por meio de alterações no **logon SQL Server** caixas de diálogo.  
   
 > [!NOTE]  
 >  Quando possível, solicite aos usuários que insiram suas credenciais em tempo de execução e que evitem armazená-las em um formato persistente. Caso precise persistir as credenciais, criptografe-as usando a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532). Para obter mais informações sobre o uso de senhas, confira [Senhas fortes](../../../relational-databases/security/strong-passwords.md).  
@@ -42,21 +41,21 @@ ms.locfileid: "67987537"
   
 |Código de erro do SQL Server|Mensagem de erro|  
 |---------------------------|-------------------|  
-|15113|Falha no logon do usuário ' %. *. motivo ls': Falha na validação de senha. A conta está bloqueada.|  
-|18463|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não pode ser usada neste momento.|  
-|18464|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos de política, pois é muito curta.|  
-|18465|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos de política, pois é muito longa.|  
-|18466|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos de política, pois não é complexa o bastante.|  
-|18467|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos da DLL de filtragem de senha.|  
-|18468|Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. Ocorreu um erro inesperado durante a validação da senha.|  
-|18487|Falha no logon do usuário '%.*ls'. Motivo: A senha da conta expirou.|  
-|18488|Falha no logon do usuário '%.*ls'. Motivo: A senha da conta deve ser alterada.|  
+|15113|Falha no logon do usuário '%.*ls'. Motivo: falha na validação da senha. A conta está bloqueada.|  
+|18463|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. A senha não pode ser usada neste momento.|  
+|18464|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. A senha não atende aos requisitos de política, pois é muito curta.|  
+|18465|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. A senha não atende aos requisitos de política, pois é muito longa.|  
+|18466|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. A senha não atende aos requisitos de política, pois não é complexa o bastante.|  
+|18467|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. A senha não atende aos requisitos da DLL de filtragem de senha.|  
+|18468|Falha no logon do usuário '%.*ls'. Motivo: falha na alteração da senha. Ocorreu um erro inesperado durante a validação da senha.|  
+|18487|Falha no logon do usuário '%.*ls'. Motivo: a senha da conta expirou.|  
+|18488|Falha no logon do usuário '%.*ls'. Motivo: a senha da conta deve ser alterada.|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provedor OLE DB do SQL Server Native Client  
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client dá suporte à expiração de senha mesmo uma interface do usuário e programaticamente.  
+ O provedor de OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nativo oferece suporte à expiração de senha por meio de uma interface do usuário e programaticamente.  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>Expiração de senha da interface do usuário OLE DB  
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client dá suporte à expiração de senha por meio de alterações feitas para o **logon do SQL Server** caixas de diálogo. Se o valor de DBPROP_INIT_PROMPT for definido como DBPROMPT_NOPROMPT, a tentativa de conexão inicial irá falhar, caso a senha tenha expirado.  
+ O provedor de OLE DB de cliente nativo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte à expiração de senha por meio de alterações feitas nas caixas de diálogo de **logon SQL Server** . Se o valor de DBPROP_INIT_PROMPT for definido como DBPROMPT_NOPROMPT, a tentativa de conexão inicial irá falhar, caso a senha tenha expirado.  
   
  Se DBPROP_INIT_PROMPT tiver sido definido com outro valor, o usuário verá a caixa de diálogo **Logon do SQL Server**, independentemente de a senha ter expirado ou não. O usuário pode clicar no botão **Opções** e marcar **Alterar Senha** para alterar a senha.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "67987537"
  Quando a tentativa de redefinição falha, a conexão é removida do pool e um erro é retornado.  
   
 ### <a name="ole-db-programmatic-password-expiration"></a>Expiração de senha programática do OLE DB  
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client dá suporte à expiração de senha por meio da adição da propriedade SSPROP_AUTH_OLD_PASSWORD (tipo VT_BSTR) que foi adicionada ao conjunto de propriedades DBPROPSET_SQLSERVERDBINIT.  
+ O provedor de OLE DB de cliente nativo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte à expiração de senha por meio da adição da propriedade SSPROP_AUTH_OLD_PASSWORD (tipo VT_BSTR) que foi adicionada ao conjunto de propriedades DBPROPSET_SQLSERVERDBINIT.  
   
  A propriedade "Password" existente referencia DBPROP_AUTH_PASSWORD e é usada para armazenar a nova senha.  
   
@@ -89,19 +88,19 @@ ms.locfileid: "67987537"
   
  Se uma tentativa de alterar a senha falhar inesperadamente, o servidor retornará o código de erro 18468. Um erro OLEDB padrão é retornado da tentativa de conexão.  
   
- Para obter mais informações sobre o conjunto de propriedades DBPROPSET_SQLSERVERDBINIT, consulte [propriedades de inicialização e autorização](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Para obter mais informações sobre o conjunto de propriedades DBPROPSET_SQLSERVERDBINIT, consulte [Propriedades de inicialização e autorização](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Driver ODBC do SQL Server Native Client  
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client dá suporte à expiração de senha mesmo uma interface do usuário e programaticamente.  
+ O provedor de OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nativo oferece suporte à expiração de senha por meio de uma interface do usuário e programaticamente.  
   
 ### <a name="odbc-user-interface-password-expiration"></a>Expiração de senha da interface do usuário ODBC  
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte à expiração de senha por meio de alterações feitas para o **logon do SQL Server** caixas de diálogo.  
+ O driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client dá suporte à expiração de senha por meio de alterações feitas nas caixas de diálogo de **logon do SQL Server** .  
   
- Se [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) é chamado e o valor de **DriverCompletion** é definido como SQL_DRIVER_NOPROMPT, a falha de tentativa de conexão inicial, se a senha expirou. O valor SQLSTATE 28000 e o valor do código de erro nativo 18487 são retornados por chamadas subsequentes a **SQLError** ou **SQLGetDiagRec**.  
+ Se [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) for chamado e o valor de **DriverCompletion** for definido como SQL_DRIVER_NOPROMPT, a tentativa de conexão inicial falhará se a senha tiver expirado. O valor SQLSTATE 28000 e o valor de código de erro nativo 18487 são retornados por chamadas subsequentes para **SqlError** ou **SQLGetDiagRec**.  
   
- Se **DriverCompletion** foi definida para qualquer outro valor, o usuário vê o **logon do SQL Server** caixa de diálogo, independentemente da senha expirou ou não. O usuário pode clicar no botão **Opções** e marcar **Alterar Senha** para alterar a senha.  
+ Se **DriverCompletion** tiver sido definido como qualquer outro valor, o usuário verá a caixa de diálogo **SQL Server logon** , independentemente de a senha ter expirado ou não. O usuário pode clicar no botão **Opções** e marcar **Alterar Senha** para alterar a senha.  
   
- Se o usuário clica em Okey e a senha expirou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prompts para digitar e confirmar uma nova senha usando o **alterar a senha do SQL Server** caixa de diálogo.  
+ Se o usuário clicar em OK e a senha tiver expirado, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] solicitará que você insira e confirme uma nova senha usando a caixa de diálogo **alterar SQL Server senha** .  
   
 #### <a name="odbc-prompt-behavior-and-locked-accounts"></a>Contas bloqueadas e comportamento do prompt do ODBC  
  As tentativas de conexão podem falhar devido ao bloqueio da conta. Se isso ocorrer após a exibição da caixa de diálogo **Logon do SQL Server**, a mensagem de erro do servidor será exibida para o usuário e a tentativa de conexão será anulada. Isso também poderá ocorrer após a exibição da caixa de diálogo **Alterar Senha do SQL Server** se o usuário inserir um valor incorreto para a senha antiga. Neste caso, a mesma mensagem de erro será exibida e a tentativa de conexão será anulada.  
@@ -112,11 +111,11 @@ ms.locfileid: "67987537"
  Quando a tentativa de redefinição falha, a conexão é removida do pool e um erro é retornado.  
   
 ### <a name="odbc-programmatic-password-expiration"></a>Expiração de senha programática do ODBC  
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte à expiração de senha por meio da adição do atributo SQL_COPT_SS_OLDPWD, que é definido antes de se conectar ao servidor usando o [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) função.  
+ O driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client dá suporte à expiração de senha por meio da adição do atributo SQL_COPT_SS_OLDPWD, que é definido antes da conexão com o servidor usando a função [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) .  
   
  O atributo SQL_COPT_SS_OLDPWD do identificador de conexão referencia a senha expirada. Não há nenhum atributo de cadeia de conexão para esse atributo, pois isto interferiria com o pool de conexão. Se o logon tiver êxito, o driver limpará esse atributo.  
   
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client retornará SQL_ERROR em quatro casos para esse recurso: expiração de senha, conflito de política de senha, bloqueio de conta, e quando a propriedade de senha antiga é definida ao usar a autenticação do Windows. O driver retorna as mensagens de erro apropriado para o usuário quando [SQLGetDiagField](../../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) é invocado.  
+ O driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client retorna SQL_ERROR em quatro casos para esse recurso: expiração de senha, conflito de política de senha, bloqueio de conta e quando a propriedade de senha antiga é definida ao usar a autenticação do Windows. O driver retorna as mensagens de erro apropriadas ao usuário quando [SQLGetDiagField](../../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) é invocado.  
   
 ## <a name="see-also"></a>Consulte também  
  [Recursos do SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

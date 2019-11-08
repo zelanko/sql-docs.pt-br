@@ -1,5 +1,5 @@
 ---
-title: Criar uma entidade (Master Data Services) | Microsoft Docs
+title: Criar uma entidade
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c47104459cfe9e764c857162be0baa7c84d74a24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b06d77f562864a1b18e492d1db70563b62d4647
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133651"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728467"
 ---
 # <a name="create-an-entity-master-data-services"></a>Criar uma entidade (Master Data Services)
 
@@ -52,11 +52,11 @@ ms.locfileid: "68133651"
      Se você não preencher este campo, será usado o nome da entidade.  
   
     > [!TIP]  
-    >  Use o nome do modelo como parte do nome da tabela de preparo, por exemplo, *Modelname_Entityname*. Isto facilita a localização das tabelas no banco de dados. Para obter mais informações sobre as tabelas de preparo, confira [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).
+    >  Use o nome do modelo como parte do nome da tabela de preparo, por exemplo, *Modelname_Entityname*. Isto facilita a localização das tabelas no banco de dados. Para obter mais informações sobre as tabelas de preparo, consulte [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).
     > [!TIP]
     > Se a nomenclatura padrão para tabelas de preparo for usada, o MDS acrescentará automaticamente identificadores (por exemplo, " 1", " 2") aos nomes de tabelas de preparo se existir uma entidade com o mesmo nome em outro modelo.
   
-7.  No campo **Tipo de Log de Transações** , escolha o tipo de log de transações na lista suspensa.  
+7.  No campo **Tipo de Log de Transações**, escolha o tipo de log de transações na lista suspensa.  
   
      Para obter mais informações, consulte [Alterar o tipo de log de transações da entidade &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   
@@ -71,13 +71,13 @@ ms.locfileid: "68133651"
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|Status|O status da entidade. Quando você clica em **Salvar** , a imagem a seguir é exibida, indicando que a entidade está atualizando.<br /><br /> ![Ícone para o status de atualização](../master-data-services/media/mds-statusicon-updating.png "Ícone para o status de atualização")<br /><br /> Se houver erros ao criar ou editar uma entidade, a imagem a seguir será exibida.<br /><br /> ![Ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Ícone para o status de erro")<br /><br /> Se o status for OK, a imagem a seguir será exibida.<br /><br /> ![Ícone para o status OK](../master-data-services/media/mds-statusicon-ok.png "Ícone para o status OK")|  
-|Name|O nome da entidade.|  
+|Status|O status da entidade. Quando você clica em **Salvar** , a imagem a seguir é exibida, indicando que a entidade está atualizando.<br /><br /> ![Ícone para atualizar o status](../master-data-services/media/mds-statusicon-updating.png "Icon para atualizar o status ")<br /><br /> Se houver erros ao criar ou editar uma entidade, a imagem a seguir será exibida.<br /><br /> ![Ícone para status de erro](../master-data-services/media/mds-statusicon-error.png "Icon para status de erro ")<br /><br /> Se o status for OK, a imagem a seguir será exibida.<br /><br /> ![Ícone para status OK](../master-data-services/media/mds-statusicon-ok.png "Icon status OK ")|  
+|Nome|O nome da entidade.|  
 |Descrição|A descrição da entidade.|  
 |Tabela de preparo|Nome do prefixo da tabela usado para armazenar dados.|  
-|Tipo de Log de Transações|O tipo de log de transações da entidade.|  
+|Tipo de Log de transações|O tipo de log de transações da entidade.|  
 |Criação automática de código|Especifica se a criação automática de código está habilitada.|  
-|Data Compression|Especifica se a compactação de dados está habilitada para a entidade.|  
+|Compactação de dados|Especifica se a compactação de dados está habilitada para a entidade.|  
 |É o Destino da Sincronização|Especifica se a entidade é o destino de uma relação de sincronização.|  
 |Hierarquia está Habilitada|Especifica se a entidade está habilitada para hierarquias explícitas. Essa coluna mostra Sim se existir pelo menos uma hierarquia explícita criada para a entidade.|  
 |Criado por|O nome do usuário que criou a entidade.|  

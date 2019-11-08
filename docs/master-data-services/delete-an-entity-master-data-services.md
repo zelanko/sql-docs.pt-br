@@ -1,5 +1,5 @@
 ---
-title: Excluir uma entidade (Master Data Services) | Microsoft Docs
+title: Excluir uma entidade
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2598634f239c738e0287caa9706aad497cb706a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1fa2f891c4f5fc0d582b341ce1000d407fef743b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906313"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729477"
 ---
 # <a name="delete-an-entity-master-data-services"></a>Excluir uma entidade (Master Data Services)
 

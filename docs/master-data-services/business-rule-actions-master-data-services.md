@@ -1,5 +1,5 @@
 ---
-title: Ações de regras de negócios (Master Data Services) | Microsoft Docs
+title: Ações de regras de negócio
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ac5ea6b5f4f2c863cc5f8352e4822ac00c207057
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3aa704289844143dc07f63a384269a1ff45f31b9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047488"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729738"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Ações de regras de negócio (Master Data Services)
 
@@ -53,7 +53,7 @@ ms.locfileid: "68047488"
 |**é necessário**|O atributo selecionado **é necessário**, o que significa que não pode ser nulo ou em branco.<br /><br /> Esta ação é válida para valores de texto, número, data e link.|  
 |**não é válido**|O atributo selecionado **não é válido**.<br /><br /> Esta ação é válida para valores de texto, número, data e link.|  
 |**deve conter o padrão**|O atributo selecionado **deve conter o padrão** que é especificado. Use expressões regulares do .NET Framework para especificar o padrão.<br /><br /> Para obter mais informações sobre expressões regulares, consulte [Elementos de linguagem das expressões regulares](https://go.microsoft.com/fwlink/?LinkId=164401) na Biblioteca MSDN.<br /><br /> Esta ação é válida para valores de texto e link.|  
-|**deve ser exclusivo**|O atributo selecionado **deve ser exclusivo** , independentemente ou em combinação com os atributos definidos.<br /><br /> **Melhor prática:** Combine esta ação com uma condição obrigatória para garantir a validade dos campos de índice em sistemas de assinatura.<br /><br /> Esta ação é válida para valores de texto, número, data e link.<br /><br /> **OBSERVAÇÃO**: Se o primeiro atributo for do tipo DateTime, ele não poderá ser usado em combinação com um atributo do tipo Numeric ou Text. Se o primeiro atributo for do tipo Numeric, ele não poderá ser usado em combinação com um atributo do tipo DateTime.|  
+|**deve ser exclusivo**|O atributo selecionado **deve ser exclusivo** , independentemente ou em combinação com os atributos definidos.<br /><br /> **Prática recomendada:** combine esta ação com uma condição obrigatória para assegurar a validade de campos de índice em sistemas de assinatura.<br /><br /> Esta ação é válida para valores de texto, número, data e link.<br /><br /> **OBSERVAÇÃO**: se o primeiro atributo for do tipo DateTime, ele não poderá ser usado em combinação com um atributo do tipo Numeric ou Text. Se o primeiro atributo for do tipo Numeric, ele não poderá ser usado em combinação com um atributo do tipo DateTime.|  
 |**deve ter um dos seguintes valores**|O atributo selecionado **deve ter um dos valores** especificados em uma lista.<br /><br /> Esta ação é válida para valores de texto.|  
 |**deve ser maior que**|O atributo selecionado **deve ser maior que** um atributo específico, um valor de atributo específico ou deve estar em branco.<br /><br /> Esta ação é válida para valores de texto, número e data.|  
 |**deve ser igual a**|O atributo selecionado **deve ser igual a** um valor de atributo definido, outro atributo ou espaço em branco.<br /><br /> Esta ação é válida para valores de texto, número, data e link.|  

@@ -1,6 +1,6 @@
 ---
-title: Propriedade ProtocolName (classe ClientNetLibInfo) | Microsoft Docs
-ms.custom: ''
+title: Propriedade ProtocolName (ClientNetLibInfo)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3af93df3-69df-4a55-82cd-294ad70cc0cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc5d6bce8e62b8c4b679aeaa0260d2b2597a7ee6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 693a62cd76e479dc5afa036b207bf486d09c7726
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995441"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659370"
 ---
 # <a name="protocolname-property-clientnetlibinfo-class"></a>Propriedade ProtocolName (classe ClientNetLibInfo)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ object.ProtocolName [= value]
  *object*  
  Um objeto da [classe ClientNetLibInfo](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) que representa informações sobre a biblioteca de rede de cliente.  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor da cadeia de caracteres que especifica o nome do protocolo associado com a biblioteca de rede de cliente.  
   
 ## <a name="remarks"></a>Comentários  

@@ -17,28 +17,27 @@ ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6f2a73f44d762a2d17eccc8cf82570b07933426
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4e284d2086684af232c17b59675b834b26f497b
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128888"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790633"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOBs e objetos OLE
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client expõe a **ISequentialStream** interface para dar suporte ao acesso do consumidor a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**, **texto**, **imagem**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , e os tipos de dados xml como binários BLOBs (objetos grandes ). O método **Read** em **ISequentialStream** permite que o consumidor recupere muitos dados em partes gerenciáveis.  
+  O provedor de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client expõe a interface **ISequentialStream** para dar suporte ao acesso do consumidor a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**, **Text**, **Image**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** e tipos de dados XML como BLOBs (objetos binários grandes). O método **Read** em **ISequentialStream** permite que o consumidor recupere muitos dados em partes gerenciáveis.  
   
- Para obter um exemplo que demonstra este recurso, consulte [do conjunto de dados grandes &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md).  
+ Para obter um exemplo que demonstra esse recurso, consulte [set Large &#40;data&#41;OLE DB](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md).  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client pode usar um consumidor implementado **IStorage** interface quando o consumidor fornece o ponteiro de interface em um acessador associado para modificação de dados.  
+ O provedor de OLE DB de cliente nativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar uma interface **IStorage** implementada pelo consumidor quando o consumidor fornece o ponteiro de interface em um acessador associado para modificação de dados.  
   
- Para tipos de dados de valor grande, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client verifica as suposições de tamanho de tipo no **IRowset** e interfaces DDL. Colunas com **varchar**, **nvarchar**, e **varbinary** tipos de dados com tamanho máximo definido como ilimitado serão representados como ISLONG por meio de conjuntos de linhas de esquema e interfaces retornando tipos de dados de coluna.  
+ Para tipos de dados de valor grande, o provedor de OLE DB do cliente nativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica se há suposições de tamanho de tipo em interfaces **IRowset** e DDL. Colunas com tipos de dados **varchar**, **nvarchar**e **varbinary** com tamanho máximo definido como ilimitado serão representadas como isduras por meio de conjuntos de linhas de esquema e interfaces que retornam tipos de dados de coluna.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client expõe a **varchar (max)** , **varbinary (max)** e **nvarchar (max)** tipos como DBTYPE_STR, DBTYPE_BYTES e DbType _ WSTR, respectivamente.  
+ O provedor de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client expõe os tipos **varchar (max)** , **varbinary (max)** e **nvarchar (max)** como DBTYPE_STR, DBTYPE_BYTES e DBTYPE_WSTR, respectivamente.  
   
- Para trabalhar com esses tipos de um aplicativo tem as seguintes opções:  
+ Para trabalhar com esses tipos, um aplicativo tem as seguintes opções:  
   
 -   Associar como o tipo (DBTYPE_STR, DBTYPE_BYTES, DBTYPE_WSTR). Se o buffer não for suficientemente grande, ocorrerá truncamento, exatamente como para esses tipos em versões anteriores (embora agora haja valores maiores disponíveis).  
   
@@ -46,17 +45,17 @@ ms.locfileid: "68128888"
   
 -   Associar como DBTYPE_IUNKNOWN e usar streaming.  
   
- Se associado a DBTYPE_IUNKNOWN, é usada a funcionalidade de fluxo ISequentialStream. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client dá suporte a parâmetros de saída de associação como DBTYPE_IUNKNOWN para tipos de dados de valor grande facilitar cenários em que um procedimento armazenado retorna esses dados de tipos como valores de retorno que será exposto como DBTYPE_IUNKNOWN para o cliente.  
+ Se associado a DBTYPE_IUNKNOWN, é usada a funcionalidade de fluxo ISequentialStream. O provedor de OLE DB de cliente nativo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à associação de parâmetros de saída como DBTYPE_IUNKNOWN para tipos de dados de valor grande para facilitar cenários em que um procedimento armazenado retorna esses tipos de dados como valores de retorno que serão expostos como DBTYPE_IUNKNOWN para o cliente.  
   
 ## <a name="storage-object-limitations"></a>Limitações de objetos de armazenamento  
   
--   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client pode dar suporte a apenas um objeto único armazenamento aberto. As tentativas de abrir mais de um objeto de armazenamento (para obter uma referência em mais de um ponteiro da interface **ISequentialStream**) retornam DBSTATUS_E_CANTCREATE.  
+-   O provedor de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pode dar suporte a apenas um único objeto de armazenamento aberto. As tentativas de abrir mais de um objeto de armazenamento (para obter uma referência em mais de um ponteiro da interface **ISequentialStream**) retornam DBSTATUS_E_CANTCREATE.  
   
--   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client, o valor padrão da propriedade somente leitura DBPROP_BLOCKINGSTORAGEOBJECTS é VARIANT_TRUE. Isso indica que se um objeto de armazenamento está ativo, alguns métodos (diferentes daqueles nos objetos de armazenamento) falharão com E_UNEXPECTED.  
+-   No provedor de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, o valor padrão da propriedade somente leitura DBPROP_BLOCKINGSTORAGEOBJECTS é VARIANT_TRUE. Isso indica que se um objeto de armazenamento está ativo, alguns métodos (diferentes daqueles nos objetos de armazenamento) falharão com E_UNEXPECTED.  
   
--   O comprimento dos dados apresentados por um objeto implementado pelo cliente de armazenamento deve ser feito conhecido para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client quando o acessador de linha que faz referência ao objeto de armazenamento é criado. O consumidor deve associar um indicador de comprimento na estrutura DBBINDING usada para a criação do acessador.  
+-   O comprimento dos dados apresentados por um objeto de armazenamento implementado pelo consumidor deve ser conhecido pelo provedor de OLE DB do cliente nativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando o acessador de linha que faz referência ao objeto de armazenamento é criado. O consumidor deve associar um indicador de comprimento na estrutura DBBINDING usada para a criação do acessador.  
   
--   Se uma linha contiver mais de um valor de dados grande e DBPROP_ACCESSORDER não for DBPROPVAL_AO_RANDOM, o consumidor deverá usar um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB do Native Client com suporte de cursor linhas para recuperar dados de linha ou processar dados de todos os grandes valores antes de Recuperando valores de outras linhas. Se DBPROP_ACCESSORDER for DBPROPVAL_AO_RANDOM, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client armazena em cache todos os tipos de dados xml como objetos binários grandes (BLOBs) para que ele possa ser acessado em qualquer ordem.  
+-   Se uma linha contiver mais de um único valor de dados grandes e DBPROP_ACCESSORDER não for DBPROPVAL_AO_RANDOM, o consumidor deverá usar um conjunto de linhas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente nativo OLE DB provedor-com suporte para recuperar dados de linha ou processar todos os valores de dados grandes antes Recuperando outros valores de linha. Se DBPROP_ACCESSORDER for DBPROPVAL_AO_RANDOM, o provedor de OLE DB do cliente nativo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazenará em cache todos os tipos de dados XML como BLOBs (objetos binários grandes) para que possam ser acessados em qualquer ordem.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -67,7 +66,7 @@ ms.locfileid: "68128888"
 -   [Suporte de streaming para parâmetros de saída BLOB](../../relational-databases/native-client-ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [SQL Server Native Client &#40;OLE DB&#41; ](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [Usando tipos de valor grande](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

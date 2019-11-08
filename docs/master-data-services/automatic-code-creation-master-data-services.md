@@ -1,5 +1,5 @@
 ---
-title: Criação automática de código (Master Data Services) | Microsoft Docs
+title: Criação automática de código
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7486928e85c05b5a87c16141db7fc42cffe8b135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abf900f8eea0e64ed8e541ee7cd94c63834fbb48
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047573"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729748"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>Criação automática de código (Master Data Services)
 

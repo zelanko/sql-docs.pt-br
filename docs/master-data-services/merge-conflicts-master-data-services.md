@@ -1,5 +1,5 @@
 ---
-title: Conflitos de mesclagem (Master Data Services) | Microsoft Docs
+title: Mesclar conflitos
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3b28c432ec05b1b26861073b2444d52caba7e5ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 028c1c20516d6f058e60dad6121aee0230d78817
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092576"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729032"
 ---
 # <a name="merge-conflicts-master-data-services"></a>Conflitos de mesclagem (Master Data Services)
 
@@ -36,7 +36,7 @@ ms.locfileid: "68092576"
   
 2.  Se o mesmo atributo de membro tiver sido alterado por outro usuário, o diálogo **Mesclar Conflitos** será exibido.  
   
-3.  No diálogo **Mesclar Conflitos** , você pode:  
+3.  Na caixa de diálogo **Mesclar Conflitos** , você pode:  
   
     -   Escolha **Mais recente** e clique em **Aplicar** para desfazer as alterações pendentes e recarregar a versão mais recente a partir do servidor.  
   

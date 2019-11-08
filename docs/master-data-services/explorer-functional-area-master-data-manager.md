@@ -1,5 +1,5 @@
 ---
-title: Área funcional Gerenciador (Master Data Manager) | Microsoft Docs
+title: Área funcional Gerenciador
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 19ffb4b29de5e343234bdf77b3c324a766e72ee7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7ea15c85d3591bf573945d06c49903ee2869aaa0
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915873"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729471"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>Área funcional Gerenciador (Master Data Manager)
 

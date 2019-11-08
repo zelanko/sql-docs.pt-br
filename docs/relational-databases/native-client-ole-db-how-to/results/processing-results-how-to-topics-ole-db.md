@@ -1,5 +1,5 @@
 ---
-title: Tópicos de instruções de resultados (OLE DB) de processamento | Microsoft Docs
+title: Tópicos de instruções sobre processamento de resultados (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b25dda01866157b66c5bdac62207e968ea6bb165
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0bc0494bc85111f2220f95f83850a625e817e891
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908180"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789849"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Tópicos de instrução sobre processamento de resultados (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   O processamento de resultados em um aplicativo OLE DB envolve primeiro a determinação das características do conjunto de resultados e depois a recuperação dos dados em variáveis do programa. Caso o comando execute um procedimento armazenado, você também deve saber como processar códigos de retorno e parâmetros de saída dos procedimentos armazenados.  
   

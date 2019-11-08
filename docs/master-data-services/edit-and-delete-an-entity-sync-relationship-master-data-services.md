@@ -1,5 +1,5 @@
 ---
-title: Editar e excluir um relacionamento de sincronização de entidade (Master Data Services) | Microsoft Docs
+title: Editar e excluir um relacionamento de sincronização de entidade
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 52ffe540d1afe9334533c2a5a8a631f342aed983
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d8f95671bebf3d67368a35ab61f3c24392186fa
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086460"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728240"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>Editar e excluir um relacionamento de sincronização de entidade (Master Data Services)
 

@@ -1,5 +1,5 @@
 ---
-title: Proteger um aplicativo Web Master Data Manager | Microsoft Docs
+title: Proteger um aplicativo Web Master Data Manager
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 30b1f8addacb1c4502a50ab5d00e507aa4ca63cc
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 0442f63413c3fd0213fb5b63151208fb10b55351
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028800"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729172"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Proteger um aplicativo Web Master Data Manager
 
@@ -40,7 +40,7 @@ ms.locfileid: "69028800"
   
 3.  No painel **Ações** , clique em **Associações**.  
   
-4.  Clique em **Adicionar** .  
+4.  Clique em **Adicionar**.  
   
 5.  Na lista, selecione **https**.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "69028800"
 
 12. Alterar `<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">` para `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">` para evitar problemas que podem aparecer no cliente do Silverlight.
 
-13. Salve e feche o arquivo. Se você receber um erro, pode ser porque o UAC está habilitado. Agora, os usuários devem ser capazes de usar HTTPS para acessar o site.  
+13. Salve o arquivo e feche-o. Se você receber um erro, pode ser porque o UAC está habilitado. Agora, os usuários devem ser capazes de usar HTTPS para acessar o site.  
 
   
 ## <a name="see-also"></a>Consulte também  

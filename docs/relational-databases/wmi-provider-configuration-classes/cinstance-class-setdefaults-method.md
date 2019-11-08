@@ -1,6 +1,6 @@
 ---
-title: Método SetDefaults (classe CInstance) | Microsoft Docs
-ms.custom: ''
+title: Método SetDefaults (CInstance)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b89f082105b0723e3e9b725d2f7941502e16d04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d75a202b368df339b97a4a9588ad3ac073429c6e
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044324"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659638"
 ---
 # <a name="cinstance-class---setdefaults-method"></a>Classe CInstance – Método SetDefaults
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ object.SetDefaults(OverwriteAll)
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|*OverwriteAll*|Um valor booliano que especifica se é necessário substituir os valores existentes na instância das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente: **verdadeira** para substituir dados existentes, ou **false** se os dados existentes não são substituído.|  
+|*OverwriteAll*|Um valor booliano que especifica se os valores existentes devem ser substituídos na instância do cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **true** para substituir os dados existentes ou **false** se os dados existentes não forem substituídos.|  
   
-## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor **uint32** , que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  
   
 ## <a name="remarks"></a>Comentários  

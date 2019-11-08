@@ -1,5 +1,5 @@
 ---
-title: Editar um pacote de implantação de modelo | Microsoft Docs
+title: Editar um pacote de implantação de modelo
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 651ddeeebe7cb6896c50486aed673e02bf47b0e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 12cacedc8f195a965b7632760976008ba4b422b0
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086468"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728223"
 ---
 # <a name="edit-a-model-deployment-package"></a>Editar um pacote de implantação de modelo
 
@@ -48,7 +48,7 @@ ms.locfileid: "68086468"
   
 6.  Clique em **Procurar**, vá para a pasta na qual você deseja salvar o pacote parcial e insira o nome de arquivo do pacote parcial (com uma extensão .pkg). Clique em **Salvar**.  
   
-7.  Clique em **Finalizar**.  
+7.  Clique em **Concluir**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
   

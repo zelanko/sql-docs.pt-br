@@ -1,8 +1,8 @@
 ---
-title: Visão geral da solução o Assistente de experimentação do banco de dados para o SQL Server é atualizado
-description: Visão geral do Assistente para experimentos de banco de dados
+title: Visão geral da solução de Assistente para Experimentos de Banco de Dados para atualizações de SQL Server
+description: Visão geral do Assistente para Experimentos de Banco de Dados
 ms.custom: ''
-ms.date: 01/08/2019
+ms.date: 11/05/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,101 +10,99 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: ajaykar
+ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 1183c6a443406f6031453b876f9165257db82c07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 656236be66ecb2b7127e45ab1ef361f1eb7703e6
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058905"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637937"
 ---
-# <a name="overview-of-database-experimentation-assistant"></a>Visão geral do Assistente para experimentos de banco de dados
+# <a name="overview-of-database-experimentation-assistant"></a>Visão geral do Assistente para Experimentos de Banco de Dados
 
-Assistente de experimentação de banco de dados (DEA) é uma solução de experimentação para atualizações do SQL Server. DEA pode ajudá-lo a avaliar uma versão de destino do SQL Server para uma carga de trabalho específica. Os clientes que estão atualizando de versões anteriores do SQL Server (começando com o 2005) para uma versão mais recente do SQL Server podem usar as métricas de análise que fornece a ferramenta. 
+O Assistente para Experimentos de Banco de Dados (DEA) é uma solução de experimentação para atualizações de SQL Server. O DEA pode ajudá-lo a avaliar uma versão de destino do SQL Server para uma carga de trabalho específica. Os clientes que estão atualizando de versões anteriores do SQL Server (a partir do 2005) para uma versão mais recente do SQL Server podem usar as métricas de análise que a ferramenta fornece.
 
-As métricas de análise DEA incluem:
+As métricas de análise de DEA incluem:
+
 - Consultas que têm erros de compatibilidade
-- Degradação de consultas e planos de consulta
+- Consultas degradadas e planos de consulta
 - Outros dados de comparação de carga de trabalho
 
-Dados de comparação podem resultar em maior confiança e uma experiência de atualização bem-sucedida.
-
-Para obter uma introdução 19 minutos DEA e uma demonstração, assista ao vídeo a seguir:
-
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]
+Os dados de comparação podem levar a uma maior confiança e uma experiência de atualização bem-sucedida.
 
 ## <a name="get-dea"></a>Obter DEA
 
-Para instalar DEA, [baixar](https://www.microsoft.com/download/details.aspx?id=54090) a versão mais recente da ferramenta. Em seguida, execute as **DatabaseExperimentationAssistant.exe** arquivo.
+Para instalar o DEA, [Baixe](https://www.microsoft.com/download/details.aspx?id=54090) a versão mais recente da ferramenta. Em seguida, execute o arquivo **DatabaseExperimentationAssistant. exe** .
 
-## <a name="solution-architecture-for-comparing-workloads"></a>Arquitetura da solução para comparar as cargas de trabalho
+## <a name="solution-architecture-for-comparing-workloads"></a>Arquitetura da solução para comparar cargas de trabalho
 
-O diagrama a seguir mostra a arquitetura da solução para obter uma comparação de carga de trabalho. A comparação de carga de trabalho usa DEA e Distributed Replay durante uma atualização do SQL Server 2008 para o SQL Server 2016.
+O diagrama a seguir mostra a arquitetura da solução para uma comparação de carga de trabalho. A comparação de carga de trabalho usa DEA e Distributed Replay durante uma atualização de SQL Server 2008 para SQL Server 2016.
 
-![Arquitetura de solução de comparação de carga de trabalho](./media/database-experimentation-assistant-overview/dea-overview-compare-solution-architecture.png)
+![Arquitetura da solução de comparação de carga de trabalho](./media/database-experimentation-assistant-overview/dea-overview-compare-solution-architecture.png)
 
-## <a name="dea-prerequisites"></a>Pré-requisitos DEA
+## <a name="dea-prerequisites"></a>Pré-requisitos do DEA
 
-A seguir estão alguns pré-requisitos para a execução DEA:
-- Requisitos mínimos de hardware: Uma máquina de núcleo único com 3,5 GB de RAM.
-- Requisito de hardware ideal: Uma CPU de oito núcleos (com 3,5 GB de RAM ou mais). Processadores que têm mais de oito núcleos não melhorar DEA tempos de execução.
-- Um adicional 33% do tamanho do rastreamento de desempenho é necessário para a loja A, B e bancos de dados de análise de relatório.
+A seguir, alguns pré-requisitos para executar o DEA:
 
-## <a name="configure-dea"></a>Configurar DEA
+- Requisito mínimo de hardware: uma máquina de núcleo único com 3,5 GB de RAM.
+- Requisito de hardware ideal: uma CPU de oito núcleos (com 3,5 GB de RAM ou mais). Os processadores com mais de oito núcleos não melhoram os tempos de execução do DEA.
+- Um adicional de 33% do tamanho do rastreamento de desempenho é necessário para armazenar os bancos de dados de análise A, B e Report.
 
-A arquitetura do ambiente de pré-requisitos, é recomendável que você instale DEA *no mesmo computador que o controlador do Distributed Replay*. Essa prática evita chamadas entre computadores e simplifica a configuração.
+## <a name="configure-dea"></a>Configurar o DEA
+
+Na arquitetura de ambiente de pré-requisito, recomendamos que você instale *o DEA no mesmo computador que o controlador de Distributed Replay*. Essa prática evita chamadas entre computadores e simplifica a configuração.
 
 ### <a name="required-configuration-for-workload-comparison-by-using-dea"></a>Configuração necessária para comparação de carga de trabalho usando DEA
 
-DEA conecta-se aos servidores de banco de dados usando a autenticação do Windows. Certifique-se de que um usuário executar DEA pode se conectar aos servidores de banco de dados (origem, destino e análise) por meio da autenticação do Windows.
+DEA conecta-se a servidores de banco de dados usando a autenticação do Windows. Certifique-se de que um usuário que executa o DEA possa se conectar a servidores de banco de dados (origem, destino e análise) usando a autenticação do Windows.
 
 **Requisitos de configuração de captura**:
 
-*   Usuário que está executando DEA pode se conectar ao servidor de banco de dados de origem usando a autenticação do Windows.
-*   Usuário que está executando DEA tem direitos de sysadmin no servidor de banco de dados de origem.
-*   Conta de serviço que executa o servidor de banco de dados de origem tem acesso de gravação ao caminho da pasta de rastreamento.
+- O usuário que está executando o DEA pode se conectar ao servidor de banco de dados de origem usando a autenticação do Windows.
+- O usuário que executa o DEA tem direitos de sysadmin no servidor de banco de dados de origem.
+- A conta de serviço que executa o servidor de banco de dados de origem tem acesso de gravação ao caminho da pasta de rastreamento.
 
-Para obter mais informações, consulte o [capturar as perguntas Frequentes](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture)
+Para obter mais informações, consulte as [perguntas frequentes sobre captura](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture)
 
 **Requisitos de configuração de reprodução**: 
 
-*   Usuário que está executando DEA pode se conectar ao servidor de banco de dados de destino usando a autenticação do Windows.
-*   Usuário que está executando DEA tem direitos de sysadmin no servidor de banco de dados de destino.
-*   Conta de serviço executando servidores de banco de dados de destino tem acesso de gravação ao caminho da pasta de rastreamento.
-*   Conta de serviço que está executando a clientes do Distributed Replay pode se conectar ao servidor de banco de dados de destino usando a autenticação do Windows.
-*   DEA se comunica com o controlador do Distributed Replay por meio de interfaces COM. Certifique-se de que as portas TCP estejam abertas para solicitações de entrada no controlador do Distributed Replay.
+- O usuário que está executando o DEA pode se conectar ao servidor de banco de dados de destino usando a autenticação do Windows.
+- O usuário que executa o DEA tem direitos sysadmin no servidor de banco de dados de destino.
+- A conta de serviço que executa os servidores de banco de dados de destino tem acesso de gravação ao caminho da pasta de rastreamento.
+- A conta de serviço que executa Distributed Replay clientes pode se conectar ao servidor de banco de dados de destino usando a autenticação do Windows.
+- O DEA se comunica com o controlador de Distributed Replay usando interfaces COM. Verifique se as portas TCP estão abertas para solicitações de entrada no controlador de Distributed Replay.
 
-Para obter mais informações, consulte o [perguntas Frequentes de reprodução](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay)
+Para obter mais informações, consulte as [perguntas frequentes sobre reprodução](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay)
 
-**Requisitos de configuração de análise**: 
+**Requisitos de configuração de análise**:
 
-*   Usuário que está executando DEA pode se conectar ao servidor de banco de dados de análise usando a autenticação do Windows.
-*   Usuário que está executando DEA tem direitos de sysadmin no servidor de banco de dados de origem.
+- O usuário que está executando o DEA pode se conectar ao servidor de banco de dados de análise usando a autenticação do Windows.
+- O usuário que executa o DEA tem direitos de sysadmin no servidor de banco de dados de origem.
 
-Para obter mais informações, consulte o [análise perguntas Frequentes](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)
+Para obter mais informações, consulte as [perguntas frequentes sobre análise](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)
 
-## <a name="set-up-telemetry"></a>Configurar a Telemetria
+## <a name="set-up-telemetry"></a>Configurar telemetria
 
-DEA tem um recurso habilitados para internet que pode enviar informações de telemetria à Microsoft. A Microsoft coleta a telemetria para aprimorar a experiência de produto. A telemetria é opcional. As informações coletadas também é salvo no seu computador para a auditoria local. Você sempre pode ver o que é coletado. Todos os arquivos de log de DEA são salvos na pasta % temp %\\pasta DEA.
+O DEA tem um recurso habilitado para Internet que pode enviar informações de telemetria à Microsoft. A Microsoft coleta a telemetria para aprimorar a experiência do produto. A telemetria é opcional. As informações coletadas também são salvas no computador para auditoria local. Você sempre pode ver o que é coletado. Todos os arquivos de log do DEA são salvos na pasta% Temp%\\DEA
 
-Você pode decidir quais eventos são coletados. Você também pode decidir se os eventos coletados são enviados à Microsoft. Há quatro tipos de eventos:
+Você pode decidir quais eventos são coletados. Você também decide se os eventos coletados são enviados à Microsoft. Há quatro tipos de eventos:
 
-*   **TraceEvent**: Eventos de uso para o aplicativo (por exemplo, "disparado parar a captura").
-*   **Exceção**: Exceção lançada durante o uso do aplicativo.
-*   **DiagnosticEvent**: Um log de eventos para ajudá-lo com o diagnóstico quando ocorrem problemas (*não* enviados à Microsoft).
-*   **FeedbackEvent**: Comentários do usuário que é enviado por meio do aplicativo.
+- **TraceEvent**: eventos de uso para o aplicativo (por exemplo, "disparado parar captura").
+- **Exceção**: exceção lançada durante o uso do aplicativo.
+- **DiagnosticEvent**: um log de eventos para auxiliar no diagnóstico quando ocorrem problemas (*não* enviados à Microsoft).
+- **FeedbackEvent**: comentários do usuário que são enviados por meio do aplicativo.
 
 Estas etapas mostram como escolher quais eventos são coletados e se os eventos são enviados à Microsoft:
 
-1.  Vá para o local onde DEA está instalado (por exemplo, c:\\arquivos de programas (x86)\\Microsoft Corporation\\Assistente de experimentação do banco de dados).
-2.  Abra os dois arquivos. config: DEA.exe.config (para o aplicativo) e DEACmd.exe.config (para a CLI).
-3.  Para interromper a coleta de um tipo de evento, defina o valor da *evento* (por exemplo, **TraceEvent**) para **false**. Para começar a coletar o evento novamente, defina o valor como **verdadeira**.
-4.  Para parar de salvar cópias locais dos eventos, defina o valor da **TraceLoggerEnabled** à **falso**. Para começar a salvar cópias locais novamente, defina o valor como **verdadeira**.
-5.  Para interromper o envio de eventos para a Microsoft, defina o valor da **AppInsightsLoggerEnabled** à **falso**. Para começar a enviar eventos para a Microsoft novamente, defina o valor como **verdadeira**.
+1. Vá para o local onde o DEA está instalado (por exemplo, C:\\arquivos de programas (x86)\\Microsoft Corporation\\Assistente para Experimentos de Banco de Dados).
+2. Abra os dois arquivos. config: DEA. exe. config (para o aplicativo) e DEACmd. exe. config (para a CLI).
+3. Para interromper a coleta de um tipo de evento, defina o valor de *Event* (por exemplo, **TraceEvent**) como **false**. Para começar a coletar o evento novamente, defina o valor como **true**.
+4. Para interromper o salvamento de cópias locais de eventos, defina o valor de **TraceLoggerEnabled** como **false**. Para começar a salvar cópias locais novamente, defina o valor como **true**.
+5. Para interromper o envio de eventos à Microsoft, defina o valor de **AppInsightsLoggerEnabled** como **false**. Para começar a enviar eventos para a Microsoft novamente, defina o valor como **true**.
 
-DEA é regido pela [declaração de privacidade do Microsoft](https://aka.ms/dea-privacy).
+O DEA é regido pela [política de privacidade da Microsoft](https://aka.ms/dea-privacy).
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Introdução ao](database-experimentation-assistant-get-started.md) orienta você pelas etapas necessárias para capturar, repetir e analisar um rastreamento.
+[Introdução](database-experimentation-assistant-get-started.md) orienta as etapas necessárias para capturar, reproduzir e analisar um rastreamento.

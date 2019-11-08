@@ -1,5 +1,5 @@
 ---
-title: Criar um índice (Master Data Services) | Microsoft Docs
+title: Criar um índice
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 68b0ac877b812d78e3eddf433a08a87b8f9d45f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a18de9c33def5b0603f4460f87e7c5589ead4521
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896869"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728426"
 ---
 # <a name="create-an-index-master-data-services"></a>Criar um índice (Master Data Services)
 
@@ -52,20 +52,20 @@ ms.locfileid: "67896869"
   
 |Nome da coluna|Descrição|  
 |-----------------|-----------------|  
-|Status|O status do índice.<br /><br /> Quando você clica em **Salvar**, a imagem ![Ícone para o status de atualização](../master-data-services/media/mds-statusicon-updating.png "Ícone para o status de atualização") é exibida, indicando que o índice está sendo atualizado.<br /><br /> Se houver erros ao criar ou editar um índice, a imagem ![Ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Ícone para o status de erro") será exibida.<br /><br /> Caso contrário, o status será OK e a imagem ![Ícone para o status OK](../master-data-services/media/mds-statusicon-ok.png "Ícone para o status OK") será exibida.|  
-|Name|O nome do índice.|  
+|Status|O status do índice.<br /><br /> Quando você clica em **salvar**, o ![ícone para atualizar a imagem de status](../master-data-services/media/mds-statusicon-updating.png "Icon para atualizar o status ") é exibido indicando que o índice está sendo atualizado.<br /><br /> Se houver erros ao criar ou editar um índice, a imagem ![ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Icon para status de erro ") será exibida.<br /><br /> Caso contrário, o status é OK e o ![ícone para a imagem de status OK](../master-data-services/media/mds-statusicon-ok.png "Icon status OK ") é exibido.|  
+|Nome|O nome do índice.|  
 |É Exclusivo|Especifica se o índice é exclusivo.|  
 |Sobre atributos|Mostra os nomes de exibição de atributos nos quais o índice é definido.|  
   
  Quando você clica em um índice, as informações a seguir são exibidas.  
   
--   **Criado por**: O nome do usuário que criou o índice.  
+-   **Criado por**: o nome do usuário que criou o índice.  
   
--   **Em**: A data e a hora em que o índice foi criado.  
+-   **Em**: a data e a hora em que o índice foi criado.  
   
--   **Atualizado por**: O nome do usuário que atualizou o índice pela última vez.  
+-   **Atualizado por**: o nome do usuário que atualizou o índice pela última vez.  
   
--   **Em**: A data e a hora em que o índice foi atualizado pela última vez.  
+-   **Em**: a data e a hora em que o índice foi atualizado pela última vez.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  [Editar e excluir um índice &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)  

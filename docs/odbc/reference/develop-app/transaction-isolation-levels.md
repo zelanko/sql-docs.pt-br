@@ -1,6 +1,6 @@
 ---
-title: Níveis de isolamento da transação | Microsoft Docs
-ms.custom: ''
+title: Níveis de isolamento de transação (ODBC) | Microsoft Docs
+ms.custom: seo-dt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
@@ -21,41 +21,41 @@ helpviewer_keywords:
 ms.assetid: 0d638d55-ffd0-48fb-834b-406f466214d4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 83197b1b487db6c52a8fe9b7a57dd6af55c33571
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e11a0d76fc4a2daece7b6f4f50761d40933792be
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985108"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637219"
 ---
-# <a name="transaction-isolation-levels"></a>Níveis de isolamento da transação
-*Níveis de isolamento da transação* são uma medida da extensão para qual transação de isolamento é bem-sucedida. Em particular, os níveis de isolamento da transação são definidos pela presença ou ausência de fenômenos a seguir:  
+# <a name="transaction-isolation-levels-odbc"></a>Níveis de isolamento da transação (ODBC)
+*Os níveis de isolamento da transação* são uma medida da extensão para a qual o isolamento da transação é executado com sucesso. Em particular, os níveis de isolamento da transação são definidos pela presença ou ausência dos seguintes fenômenos:  
   
--   **Leituras de sujos** um *leitura suja* ocorre quando uma transação lê os dados que ainda não foi confirmados. Por exemplo, suponha que a transação 1 Atualize uma linha. Transação 2 lê a linha atualizada antes do transação 1 confirma a atualização. Se a transação 1 reverte a alteração, transação 2 têm lerá dados que são considerados nunca ter existido.  
+-   **Leituras sujas** Uma *leitura suja* ocorre quando uma transação lê dados que ainda não foram confirmados. Por exemplo, suponha que a transação 1 atualize uma linha. A transação 2 lê a linha atualizada antes que a transação 1 confirme a atualização. Se a transação 1 reverter a alteração, a transação 2 terá dados de leitura que são considerados nunca existentes.  
   
--   **Leituras não repetíveis** um *leitura não repetível* ocorre quando uma transação lê a mesma linha duas vezes, mas obtém dados diferentes a cada vez. Por exemplo, suponha que as leituras de transação 1 uma linha. Transação 2 atualiza ou exclui essa linha e confirma a atualização ou exclusão. Se a transação 1 relê a linha, ele recupera os valores de linha diferente ou descobre que a linha foi excluída.  
+-   **Leituras não repetíveis** Uma *leitura não reproduzível* ocorre quando uma transação lê a mesma linha duas vezes, mas obtém dados diferentes a cada vez. Por exemplo, suponha que a transação 1 Leia uma linha. A transação 2 atualiza ou exclui essa linha e confirma a atualização ou exclusão. Se a transação 1 reler a linha, ela recuperará valores de linha diferentes ou descobrirá que a linha foi excluída.  
   
--   **Fantasmas** um *fantasma* é uma linha que corresponde aos critérios de pesquisa, mas não é vista inicialmente. Por exemplo, suponha que a transação 1 lê um conjunto de linhas que atendem a alguns critérios de pesquisa. Transação 2 gera uma nova linha (por meio de uma atualização ou uma instrução insert) que corresponde aos critérios de pesquisa para a transação 1. Se a transação 1 reexecutes a instrução que lê as linhas, ele obtém um conjunto diferente de linhas.  
+-   **Fantasmas** Um *fantasma* é uma linha que corresponde aos critérios de pesquisa, mas que não é visto inicialmente. Por exemplo, suponha que a transação 1 Leia um conjunto de linhas que atendam a alguns critérios de pesquisa. A transação 2 gera uma nova linha (por meio de uma atualização ou uma inserção) que corresponde aos critérios de pesquisa para a transação 1. Se a transação 1 executar novamente a instrução que lê as linhas, ela obterá um conjunto diferente de linhas.  
   
- Os níveis de isolamento de transação de quatro (conforme definido pelo SQL-92) são definidos em termos desses fenômenos. Na tabela a seguir, um "X" marca cada fenômeno que pode ocorrer.  
+ Os quatro níveis de isolamento da transação (conforme definido pelo SQL-92) são definidos em termos desses fenômenos. Na tabela a seguir, um "X" marca cada fenômeno que pode ocorrer.  
   
 |Nível de isolamento da transação|Leituras sujas|Leituras não repetíveis|Fantasmas|  
 |---------------------------------|-----------------|-------------------------|--------------|  
 |Leitura não confirmada|X|X|X|  
 |Leitura confirmada|--|X|X|  
 |Leitura repetida|--|--|X|  
-|Serializável|--|--|--|  
+|Serializable|--|--|--|  
   
- A tabela a seguir descreve as maneiras simples que um DBMS pode implementar os níveis de isolamento da transação.  
+ A tabela a seguir descreve maneiras simples de um DBMS implementar os níveis de isolamento da transação.  
   
 > [!IMPORTANT]  
->  DBMSs a maioria dos usam esquemas mais complexos que esses para aumentar a simultaneidade. Esses exemplos são fornecidos apenas para fins ilustrativos. Em particular, o ODBC não prescrevem DBMSs específico como isolar transações uns dos outros.  
+>  A maioria dos DBMSs usa esquemas mais complexos do que isso para aumentar a simultaneidade. Esses exemplos são fornecidos apenas para fins ilustrativos. Em particular, o ODBC não prescreve como DBMSs específicos isolam transações entre si.  
   
-|Isolamento de transação|Possível implementação|  
+|Isolamento de transação|Implementação possível|  
 |---------------------------|-----------------------------|  
-|Leitura não confirmada|As transações não são isoladas uns dos outros. Se o DBMS der suporte a outros níveis de isolamento da transação, ele ignora qualquer mecanismo que ele usa para implementar esses níveis. Para que elas não afetam negativamente outras transações, transações em execução no nível Read Uncommitted são normalmente somente leitura.|  
-|Leitura confirmada|A transação aguarda até que o bloqueio de gravação por outras transações de linhas sejam desbloqueadas; Isso impede que ele leia todos os dados "sujos".<br /><br /> As suspensões de transação que um bloqueio de leitura (se ele apenas lê a linha) ou de gravação de bloqueio (se ele atualiza ou exclui a linha) na linha atual para impedir que outras transações atualizem ou excluí-lo. A transação libera os bloqueios de leitura quando ele se move para fora da linha atual. Ele mantém o bloqueio de gravação até que ele é confirmado ou revertido.|  
-|Leitura repetida|A transação aguarda até que o bloqueio de gravação por outras transações de linhas sejam desbloqueadas; Isso impede que ele leia todos os dados "sujos".<br /><br /> A transação mantém bloqueios de leitura em todas as linhas que ele retorna para os aplicativo e gravação bloqueios em todas as linhas que ele inserções, atualizações ou exclui. Por exemplo, se a transação inclui a instrução SQL **selecionar \* pedidos de**, os bloqueios de leitura de transação linhas como o aplicativo busca-los. Se a transação incluir a instrução SQL **excluir de pedidos onde Status = 'Fechado'** , os bloqueios de gravação de transação linhas como ele exclui-los.<br /><br /> Porque outras transações não podem atualizar ou excluir essas linhas, a transação atual evita qualquer leituras não repetíveis. A transação libera seus bloqueios quando ele for confirmado ou revertido.|  
-|Serializável|A transação aguarda até que o bloqueio de gravação por outras transações de linhas sejam desbloqueadas; Isso impede que ele leia todos os dados "sujos".<br /><br /> A transação mantém um bloqueio de leitura (se ele apenas lê linhas) ou bloqueio de gravação (se ele pode atualizar ou excluir linhas) no intervalo de linhas que ele afeta. Por exemplo, se a transação inclui a instrução SQL **selecionar \* pedidos de**, o intervalo é de toda a tabela Orders; os bloqueios de leitura transação de tabela e não não permitir que novas linhas a serem inseridos nele. Se a transação incluir a instrução SQL **excluir de pedidos onde Status = 'Fechado'** , o intervalo é de todas as linhas com um Status de "Fechado"; os bloqueios de gravação de transação todas as linhas as ordens de tabela com um Status de "CLOSED" e não não permitir que qualquer linhas sejam inseridos ou atualizados, de modo que a linha resultante tem um Status de "Fechado".<br /><br /> Porque outras transações não podem atualizar ou excluir as linhas no intervalo, a transação atual evita qualquer leituras não repetíveis. Porque outras transações não é possível inserir todas as linhas no intervalo, a transação atual evita qualquer fantasmas. A transação libera o bloqueio quando ele for confirmado ou revertido.|  
+|Leitura não confirmada|As transações não são isoladas umas das outras. Se o DBMS der suporte a outros níveis de isolamento de transação, ele ignorará qualquer mecanismo usado para implementar esses níveis. Para que eles não afetem negativamente outras transações, as transações em execução no nível de leitura não confirmada normalmente são somente leitura.|  
+|Leitura confirmada|A transação aguarda até que as linhas de gravação bloqueadas por outras transações sejam desbloqueadas; Isso impede que ele leia os dados "sujos".<br /><br /> A transação mantém um bloqueio de leitura (se ele lê apenas a linha) ou o bloqueio de gravação (se ele atualizar ou excluir a linha) na linha atual para impedir que outras transações sejam atualizadas ou excluídas. A transação libera bloqueios de leitura quando ele sai da linha atual. Ela mantém bloqueios de gravação até que seja confirmada ou revertida.|  
+|Leitura repetida|A transação aguarda até que as linhas de gravação bloqueadas por outras transações sejam desbloqueadas; Isso impede que ele leia os dados "sujos".<br /><br /> A transação mantém bloqueios de leitura em todas as linhas que ele retorna para o aplicativo e os bloqueios de gravação em todas as linhas que ele insere, atualiza ou exclui. Por exemplo, se a transação incluir a instrução SQL, **selecione \* de Orders**, a transação Read-Locks Rows enquanto o aplicativo as busca. Se a transação incluir a instrução SQL **delete de Orders, em que status = ' Closed '** , a transação Write-bloqueará as linhas à medida que excluí-las.<br /><br /> Como outras transações não podem atualizar ou excluir essas linhas, a transação atual evita quaisquer leituras não repetíveis. A transação libera seus bloqueios quando ela é confirmada ou revertida.|  
+|Serializable|A transação aguarda até que as linhas de gravação bloqueadas por outras transações sejam desbloqueadas; Isso impede que ele leia os dados "sujos".<br /><br /> A transação mantém um bloqueio de leitura (se apenas lê linhas) ou bloqueio de gravação (se puder atualizar ou excluir linhas) no intervalo de linhas que ele afeta. Por exemplo, se a transação incluir a instrução SQL, **selecione \* de pedidos**, o intervalo será a tabela de pedidos inteira; a transação de leitura-bloqueia a tabela e não permite que nenhuma nova linha seja inserida nela. Se a transação incluir a instrução SQL **delete de Orders, em que status = ' Closed '** , o intervalo será todas as linhas com o status "closed"; a transação Write-bloqueia todas as linhas na tabela Orders com o status "CLOSED" e não permite que nenhuma linha seja inserida ou atualizada, de modo que a linha resultante tenha o status "CLOSED".<br /><br /> Como outras transações não podem atualizar ou excluir as linhas no intervalo, a transação atual evita quaisquer leituras não repetíveis. Como outras transações não podem inserir nenhuma linha no intervalo, a transação atual evita quaisquer fantasmas. A transação libera seu bloqueio quando é confirmada ou revertida.|  
   
- É importante observar que o nível de isolamento da transação não afeta a capacidade de uma transação para ver suas próprias alterações; as transações sempre podem ver qualquer alteração feita. Por exemplo, uma transação pode consistir em duas **atualização** instruções, o primeiro deles gera o pagamento de todos os funcionários em 10 por cento e o segundo define o pagamento de todos os funcionários sobre algum valor máximo para essa quantidade. Isso é bem-sucedido como uma única transação apenas porque a segunda **atualização** instrução pode ver os resultados da primeira.
+ É importante observar que o nível de isolamento da transação não afeta a capacidade de uma transação de ver suas próprias alterações; as transações sempre podem ver quaisquer alterações feitas. Por exemplo, uma transação pode consistir em duas instruções **Update** , a primeira que eleva o pagamento de todos os funcionários em 10% e o segundo, que define o pagamento de qualquer funcionário em relação a um valor máximo para essa quantidade. Isso é bem sucedido como uma única transação somente porque a segunda instrução **Update** pode ver os resultados da primeira.

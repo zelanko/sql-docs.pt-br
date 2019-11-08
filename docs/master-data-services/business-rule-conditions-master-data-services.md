@@ -1,5 +1,5 @@
 ---
-title: Condições de regras de negócios (Master Data Services) | Microsoft Docs
+title: Condições de regras de negócio
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4f7c48db940a192f1506fb1c6c8e371e9d5a7958
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ab2b632307f966a0f8e37d290c3cc12d52cda064
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047474"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728723"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>Condições de regras de negócio (Master Data Services)
 

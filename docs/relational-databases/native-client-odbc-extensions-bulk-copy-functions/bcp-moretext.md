@@ -18,16 +18,15 @@ ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ea8cb10227ccebe10e350ce82b0887eb8a8bacf
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 05d7a6ca9f90439f803032087f4032765cba2f88
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707528"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782617"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Envia parte de um valor de tipo de dados longo, de tamanho variável, para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -55,15 +54,15 @@ RETCODE bcp_moretext (
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Comentários  
- Essa função pode ser usada em conjunto com [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) e [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) para copiar valores de dados longos e de comprimento variável para SQL Server em um número de partes menores. **bcp_moretext** pode ser usado com colunas que têm os seguintes SQL Server tipos de dados: **Text**, **ntext**, **Image**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , tipo definido pelo usuário (UDT) e XML. **bcp_moretext** não dá suporte a conversões de dados, os dados fornecidos devem corresponder ao tipo de dados da coluna de destino.  
+ Essa função pode ser usada em conjunto com [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) e [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) para copiar valores de dados longos e de comprimento variável para SQL Server em um número de partes menores. **bcp_moretext** pode ser usado com colunas que têm os seguintes tipos de dados de SQL Server: **Text**, **ntext**, **Image**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , tipo definido pelo usuário (UDT) e XML. **bcp_moretext** não oferece suporte a conversões de dados, os dados fornecidos devem corresponder ao tipo de dados da coluna de destino.  
   
- Se **bcp_bind** for chamado com um parâmetro *pData* não nulo para tipos de dados com suporte no **bcp_moretext**, **bcp_sendrow** enviará o valor de dados inteiro, independentemente do comprimento. No entanto, se **bcp_bind** tiver um parâmetro *pData* nulo para tipos de dados com suporte, **bcp_moretext** poderá ser usado para copiar dados imediatamente após um retorno bem-sucedido de **bcp_sendrow** indicando que todas as colunas associadas com os dados presentes foram processadas.  
+ Se **bcp_bind** for chamado com um parâmetro *pData* não nulo para tipos de dados com suporte pelo **bcp_moretext**, **bcp_sendrow** enviará o valor de dados inteiro, independentemente do comprimento. No entanto, se **bcp_bind** tiver um parâmetro *pData* nulo para tipos de dados com suporte, **bcp_moretext** poderá ser usado para copiar dados imediatamente após um retorno bem-sucedido de **bcp_sendrow** indicando que todas as colunas associadas com os dados presentes foram processadas.  
   
  Se você usar **bcp_moretext** para enviar uma coluna de tipo de dados com suporte em uma linha, você também deverá usá-la para enviar todas as outras colunas de tipo de dados com suporte na linha. Nenhuma coluna pode ser ignorada. Os tipos de dados para os quais há suporte são SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT e SQLXML. SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY e SQLVARBINARY também se encontram nessa categoria caso a coluna seja varchar(max), nvarchar(max) ou varbinary(max), respectivamente.  
   
- Chamar **bcp_bind** ou [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) define o tamanho total de todas as partes de dados a serem copiadas para a coluna SQL Server. Uma tentativa de enviar SQL Server mais bytes do que o especificado na chamada para **bcp_bind** ou **bcp_collen** gera um erro. Esse erro ocorreria, por exemplo, em um aplicativo que usava **bcp_collen** para definir o comprimento dos dados disponíveis para uma coluna de **texto** de SQL Server como 4500 e, em seguida, chamado **bcp_moretext** cinco vezes ao indicar em cada chamada que o buffer de dados comprimento era de 1000 bytes de comprimento.  
+ Chamar **bcp_bind** ou [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) define o tamanho total de todas as partes de dados a serem copiadas para a coluna SQL Server. Uma tentativa de enviar SQL Server mais bytes do que o especificado na chamada para **bcp_bind** ou **bcp_collen** gera um erro. Esse erro ocorreria, por exemplo, em um aplicativo que usava **bcp_collen** para definir o comprimento dos dados disponíveis para uma coluna de **texto** de SQL Server como 4500, depois chamado de **bcp_moretext** cinco vezes ao indicar em cada chamada que o buffer de dados comprimento era de 1000 bytes de comprimento.  
   
- Se uma linha copiada contiver mais de uma coluna de comprimento variável longa, o **bcp_moretext** primeiro enviará seus dados para a coluna numerada ordinal mais baixa, seguido pela próxima coluna numerada ordinal mais baixa e assim por diante. A configuração correta do comprimento total dos dados esperados é importante. Não há nenhuma forma de sinalizar, fora da configuração de comprimento, que todos os dados de uma coluna foram recebidos pela cópia em massa.  
+ Se uma linha copiada contiver mais de uma coluna de comprimento variável longa, **bcp_moretext** primeiro envia seus dados para a coluna numerada ordinal mais baixa, seguida pela próxima coluna numerada ordinal mais baixa e assim por diante. A configuração correta do comprimento total dos dados esperados é importante. Não há nenhuma forma de sinalizar, fora da configuração de comprimento, que todos os dados de uma coluna foram recebidos pela cópia em massa.  
   
  Quando os valores **var (max)** são enviados ao servidor usando bcp_sendrow e bcp_moretext, não é necessário chamar bcp_collen para definir o comprimento da coluna. Em vez disso, somente para esses tipos, o valor é encerrado chamando bcp_sendrow com um comprimento de zero.  
   

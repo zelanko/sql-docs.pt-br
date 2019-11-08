@@ -1,5 +1,5 @@
 ---
-title: Excluir uma hierarquia explícita (Master Data Services) | Microsoft Docs
+title: Excluir uma hierarquia explícita
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 92d655260b09869cd3c6c4fc33c346509eec5776
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 74a2b9a825b9e589cba9416eb932bcb824f00373
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906300"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728329"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>Excluir uma hierarquia explícita (Master Data Services)
 

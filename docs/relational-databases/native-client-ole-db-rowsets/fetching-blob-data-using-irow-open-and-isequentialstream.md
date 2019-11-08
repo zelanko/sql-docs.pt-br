@@ -16,16 +16,15 @@ ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29522484c0286c3febcae79ec1a4d423220f425f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c5c76342349a0bb1831903c7abe5ab43d52a0580
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967477"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761718"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Buscando dados de BLOB usando IRow::Open e ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   **IRow::Open** só dá suporte à abertura do tipo de objetos DBGUID_STREAM e DBGUID_NULL.  
   

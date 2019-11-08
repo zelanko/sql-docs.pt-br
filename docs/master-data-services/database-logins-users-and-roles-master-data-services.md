@@ -1,5 +1,5 @@
 ---
-title: Logons, usuários e funções de banco de dados (Master Data Services) | Microsoft Docs
+title: Logons, usuários e funções de banco de dados
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b12e077e337cedcdcdd3bb23b12e1fb8dc6f704e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7200d919975a644321e596f66349a2a8aae26f99
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094410"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729487"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Logons, usuários e funções de banco de dados (Master Data Services)
 
@@ -39,14 +39,14 @@ ms.locfileid: "68094410"
   
 ## <a name="msdb-users"></a>Usuários de msdb  
   
-|User|Descrição|  
+|Usuário|Descrição|  
 |----------|-----------------|  
 |**mds_clr_user**|Não usado. Mapeia para mds_dlp_login.|  
-|**mds_email_user**|Usado para notificações.<br /><br /> – Mapeado para mds_dlp_login.<br /><br /> \- É um membro da função: DatabaseMailUserRole.|  
+|**mds_email_user**|Usado para notificações.<br /><br /> – Mapeado para mds_dlp_login.<br /><br /> – É um membro da função DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Usuários de banco de dados do Master Data Services  
   
-|User|Descrição|  
+|Usuário|Descrição|  
 |----------|-----------------|  
 |**mds_email_user**|Usado para notificações.<br /><br /> – Tem permissão SELECT para o esquema de mdm.<br /><br /> – Tem permissão EXECUTE para o tipo de tabela definida pelo usuário mdm.MemberGetCriteria.<br /><br /> – Tem permissão EXECUTE para o procedimento armazenado mdm.udpNotificationQueueActivate.|  
 |**mds_schema_user**|É proprietário dos esquemas mdm e mdq. O esquema padrão é mdm.<br /><br /> Não está associado a um logon.|  
@@ -54,17 +54,17 @@ ms.locfileid: "68094410"
   
 ## <a name="master-data-services-database-role"></a>Função de banco de dados do Master Data Services  
   
-|Role|Descrição|Permissões|  
+|Função|Descrição|Permissões|  
 |----------|-----------------|-----------------|  
 |**mds_exec**|Esta função contém a conta designada no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] quando você cria um aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] e designa uma conta para o pool de aplicativos.|Permissão EXECUTE em todos os esquemas.<br /><br /> <br /><br /> Permissões ALTER, INSERT e SELECT nestas tabelas:<br /><br /> mdm.tblStgMember<br /><br /> mdm.tblStgMemberAttribute<br /><br /> mdm.tbleStgRelationship<br /><br /> <br /><br /> Permissão SELECT nestas tabelas:<br /><br /> mdm.tblUser<br /><br /> mdm.tblUserGroup<br /><br /> mdm.tblUserPreference<br /><br /> <br /><br /> Permissão SELECT nestas exibições:<br /><br /> mdm.viw_SYSTEM_SECURITY_NAVIGATION<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br /><br /> viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br /><br /> mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
   
 ## <a name="schemas"></a>Esquemas  
   
-|Role|Descrição|  
+|Função|Descrição|  
 |----------|-----------------|  
 |**mdm**|Contém todo o banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] e objetos do Service Broker diferentes das funções contidas no esquema mdq.|  
 |**mdq**|Contém funções de banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] relacionadas aos resultados da filtragem de membros com base nas expressões regulares ou similaridade e para formatação de emails de notificação.|  
-|**stg**|Contém tabelas de banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , procedimentos armazenados e exibições relacionadas ao processo de preparo. Não exclua nenhum destes objetos. Para obter mais informações sobre o processo de preparo, confira [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).|  
+|**stg**|Contém tabelas de banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , procedimentos armazenados e exibições relacionadas ao processo de preparo. Não exclua nenhum destes objetos. Para obter mais informações sobre o processo de preparo, consulte [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).|  
   
 ## <a name="see-also"></a>Consulte também  
  [Segurança de objeto de banco de dados &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  

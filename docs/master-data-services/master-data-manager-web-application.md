@@ -1,5 +1,5 @@
 ---
-title: Aplicativo Web Master Data Manager | Microsoft Docs
+title: Aplicativo Web Master Data Manager
 ms.custom: ''
 ms.date: 12/20/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: be12690eac91a8e9c7746e12bc01fd64f35ba7ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc881f7d3b232e8d2ae31041fd990e833acac901
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054496"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729092"
 ---
 # <a name="master-data-manager-web-application"></a>Aplicativo Web Master Data Manager
 

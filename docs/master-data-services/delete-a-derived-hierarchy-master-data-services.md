@@ -1,5 +1,5 @@
 ---
-title: Excluir uma hierarquia derivada (Master Data Services) | Microsoft Docs
+title: Excluir uma hierarquia derivada
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 437342af4f0aa188fb898bd951249629ee44be3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e9e36545c9d9e99f627cc8f4a1f0a92d50af5de
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906462"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728369"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>Excluir uma hierarquia derivada (Master Data Services)
 

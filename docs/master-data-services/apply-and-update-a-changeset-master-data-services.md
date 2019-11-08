@@ -1,5 +1,5 @@
 ---
-title: Aplicar e atualizar um conjunto de alterações (Master Data Services) | Microsoft Docs
+title: Aplicar e Atualizar um Conjunto de Alterações
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 3a6a3cf2-1e77-43d3-a64a-855ae51258e7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 386bdbd2e7361567030a7d2a97e270172bdd21c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0e937ff9222553c42eacefc173dfec90bb6ebc6
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047755"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728784"
 ---
 # <a name="apply-and-update-a-changeset-master-data-services"></a>Aplicar e atualizar um conjunto de alterações (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Um conjunto de alterações é uma coleção das alterações pendentes nos dados mestre. Você pode aplicar o conjunto de alterações localmente para exibir, adicionar, atualizar e excluir as alterações pendentes no conjunto de alterações.  
+  Um conjunto de alterações é uma coleção de alterações pendentes nos dados mestre. Você pode aplicar o conjunto de alterações localmente para exibir, adicionar, atualizar e excluir as alterações pendentes no conjunto de alterações.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
   

@@ -1,5 +1,5 @@
 ---
-title: Implantar um pacote de implantação de modelo usando o Assistente | Microsoft Docs
+title: Implantar um pacote de implantação de modelo (Assistente)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3c546fd0abb82b87cd3d992b5afd270156e84f1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e41af6f7b5f1d2a770400ab66191f7957937659
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906242"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729398"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>Implantar um pacote de implantação de modelo usando o Assistente
 
@@ -60,7 +60,7 @@ ms.locfileid: "67906242"
   
  **Observações:**  
   
--   Se uma exibição de assinatura no pacote tiver o mesmo nome de uma exibição de assinatura em um modelo existente, este aviso será exibido: **Exibição da assinatura do implantador renomeada**. Além disso, a exibição é criada como *modelname.subscriptionviewname*. Se esse nome já estiver em uso, a exibição de assinatura não será criada.  
+-   Se uma exibição de assinatura no pacote tiver o mesmo nome que uma exibição de assinatura em um modelo existente, este aviso será exibido: **Exibição da assinatura do implantador renomeada**. Além disso, a exibição é criada como *modelname.subscriptionviewname*. Se esse nome já estiver em uso, a exibição de assinatura não será criada.  
   
 -   O processo de implantação tem quatro etapas:  
   

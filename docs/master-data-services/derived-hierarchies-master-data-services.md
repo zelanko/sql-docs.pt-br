@@ -1,5 +1,5 @@
 ---
-title: Hierarquias derivadas (Master Data Services) | Microsoft Docs
+title: Hierarquias derivadas
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5e75b76eda87580063dfdaea081a1b4f0efaa518
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7440834e5f12cd18081687aa584a8dcfe3ce2e8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084209"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728278"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Hierarquias derivadas (Master Data Services)
 
@@ -58,16 +58,16 @@ ms.locfileid: "68084209"
   
  A estrutura de hierarquia mostra como os membros são agrupados. A entidade com a maioria dos membros está na parte inferior.  
   
- ![Hierarquia derivada da estrutura de modelo](../master-data-services/media/mds-conc-derived-hierarchy-structure.gif "Hierarquia derivada da estrutura de modelo")  
+ ![Hierarquia derivada da estrutura do modelo](../master-data-services/media/mds-conc-derived-hierarchy-structure.gif "Hierarquia derivada da estrutura do modelo")  
   
  Em uma hierarquia derivada, você pode realçar a relação entre Product e Subcategory, e depois entre Subcategory e Category. Quando você exibir os membros desta hierarquia, cada nível da árvore conterá membros da mesma entidade.  
   
- ![Exemplo de hierarquia derivada de Mountain Bike](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "Exemplo de hierarquia derivada de Mountain Bike")  
+ ![Exemplo de hierarquia derivada da bicicleta de Mountain Bike](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "Exemplo de hierarquia derivada da bicicleta de Mountain Bike")  
   
  Este tipo de hierarquia impede que você mova um membro para um nível que não é válido. Por exemplo, você pode mover a Road-650 bike de uma subcategoria, Road Bikes, para outra, Mountain Bikes. Você não pode mover Road-650 diretamente abaixo de uma categoria, como 1 {Bikes}. Cada vez que você move um membro na árvore hierárquica, o valor de atributo baseado em domínio do membro muda para refletir a mudança.  
   
 ## <a name="notes"></a>Observações  
- Todos os membros em uma árvore hierárquica derivada são classificados por ID. Você não pode alterar a ordem de classificação.  
+ Todos os membros em uma árvore de hierarquia derivada são classificados por ID. Você não pode alterar a ordem de classificação.  
   
  Se o atributo baseado em domínio de um membro estiver em branco e o atributo for usado para uma hierarquia derivada, o membro não será exibido na hierarquia. Crie regras de negócios para exigir o preenchimento de atributos. Para obter mais informações, consulte [Exigir valores de atributos &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md).  
   

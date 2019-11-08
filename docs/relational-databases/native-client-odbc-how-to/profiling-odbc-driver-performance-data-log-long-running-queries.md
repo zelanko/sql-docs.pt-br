@@ -13,16 +13,15 @@ ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbcb19a3f5ad2d281306eb1cd22f3018d7f9e1c2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 05a8d7a7777731ba23cba08c8f8ba48489231d48
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908181"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780927"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Criar perfil dos dados de desempenho do driver ODBC – Consultas de longa duração de log
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Este exemplo mostra as opções específicas do driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para registrar consultas de longa execução. Quando executado, esse exemplo cria o Odbcqry.log, que contém uma lista de consultas cuja execução excede um conjunto de intervalos pelo aplicativo. Este exemplo não tem suporte em IA64. Esse exemplo foi desenvolvido para o ODBC versão 3.0 ou posterior.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "72908181"
 
 ### <a name="to-log-long-running-queries-data-programmatically"></a>Para registrar dados de consultas de execução demorada via programação  
   
-1.  Chame [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) com SQL_COPT_SS_PERF_QUERY_LOG e o caminho completo e o nome de arquivo do arquivo de log de consulta de execução longa. Por exemplo:  
+1.  Chame [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) com SQL_COPT_SS_PERF_QUERY_LOG e o caminho completo e o nome de arquivo do arquivo de log de consulta de longa execução. Por exemplo:  
   
     ```  
     C:\\Odbcqry.log  
@@ -219,7 +218,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Tópicos &#40;de instruções de desempenho do driver ODBC de criação de perfil ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

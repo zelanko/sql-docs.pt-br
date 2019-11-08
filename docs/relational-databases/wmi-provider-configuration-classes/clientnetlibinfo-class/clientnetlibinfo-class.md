@@ -1,5 +1,5 @@
 ---
-title: Classe ClientNetLibInfo | Microsoft Docs
+title: Classe ClientNetLibInfo
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 29f7c88d-31a4-49fe-ba21-2642bd9f4d04
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f62325c39d2013c54011c4223cba2ccb7b7aaa64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3507079371ee02f7d73652989c5020110338d41
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044290"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659604"
 ---
 # <a name="clientnetlibinfo-class"></a>Classe ClientNetLibInfo
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

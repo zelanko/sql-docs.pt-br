@@ -18,24 +18,23 @@ ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c24e98f15793820df59bf372a73e42204814fb19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5dbbab122d5789f26d9fd5a6c853be4f5a354a96
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913075"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73760329"
 ---
 # <a name="using-catalog-functions"></a>Usando funções de catálogo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Todos os bancos de dados têm uma estrutura que contém os dados armazenados no banco de dados. Uma definição dessa estrutura, juntamente com outras informações, como permissões, é armazenada em um catálogo (implementado como um conjunto de tabelas do sistema), também conhecido como um dicionário de dados.  
   
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client permite que um aplicativo determinar a estrutura de banco de dados por meio de chamadas para funções de catálogo ODBC. As funções de catálogo retornam informações em conjuntos de resultados e são implementadas usando procedimentos armazenados de catálogo para consultar as tabelas do sistema no catálogo. Por exemplo, um aplicativo pode solicitar um conjunto de resultados que contém informações sobre todas as tabelas no sistema ou todas as colunas de uma tabela específica. As funções de catálogo ODBC padrão são usadas para obter informações de catálogo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o qual o aplicativo está conectado.  
+ O driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client permite que um aplicativo determine a estrutura do banco de dados por meio de chamadas para funções de catálogo ODBC. As funções de catálogo retornam informações em conjuntos de resultados e são implementadas usando procedimentos armazenados de catálogo para consultar as tabelas do sistema no catálogo. Por exemplo, um aplicativo pode solicitar um conjunto de resultados que contém informações sobre todas as tabelas no sistema ou todas as colunas de uma tabela específica. As funções de catálogo ODBC padrão são usadas para obter informações de catálogo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o qual o aplicativo está conectado.  
   
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a consultas distribuídas nas quais dados de várias fontes de dados OLE DB heterogêneas são acessadas em uma única consulta. Um dos métodos para acessar uma fonte de dados OLE DB remota é definir a fonte de dados como um servidor vinculado. Isso pode ser feito por meio [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Depois que o servidor vinculado foi definido, é possível referenciar objetos nesse servidor em instruções Transact-SQL usando um nome de quatro partes:  
+ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a consultas distribuídas nas quais dados de várias fontes de dados OLE DB heterogêneas são acessadas em uma única consulta. Um dos métodos para acessar uma fonte de dados OLE DB remota é definir a fonte de dados como um servidor vinculado. Isso pode ser feito usando [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Depois que o servidor vinculado foi definido, é possível referenciar objetos nesse servidor em instruções Transact-SQL usando um nome de quatro partes:  
   
- *linked_server_name.catalog.schema.object_name*.  
+ *linked_server_name. Catalog. Schema. object_name*.  
   
  O driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client dá suporte a duas funções específicas do driver que ajudam a obter informações de catálogo de servidores vinculados:  
   
@@ -47,7 +46,7 @@ ms.locfileid: "67913075"
   
      Retorna uma lista dos catálogos contidos em um servidor vinculado.  
   
- Depois de ter um nome de servidor vinculado e um nome de catálogo, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte à obtenção de informações do catálogo usando um nome de duas partes de _linked_server_name_ **.** _catálogo_ para *CatalogName* funções de catálogo ODBC a seguir:  
+ Depois que você tiver um nome de servidor vinculado e um nome de catálogo, o driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client dá suporte à obtenção de informações do catálogo usando um nome de duas partes de _linked_server_name_ **.** _Catálogo_ para *CatalogName* nas seguintes funções de catálogo ODBC:  
   
 -   **SQLColumnPrivileges**  
   
@@ -61,7 +60,7 @@ ms.locfileid: "67913075"
   
 -   **SQLTables**  
   
- As duas partes _linked_server_name_ **.** _catálogo_ também há suporte para *FKCatalogName* e *PKCatalogName* na [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
+ A _linked_server_name_de duas partes **.** o _Catálogo_ também tem suporte para *FKCatalogName* e *PKCatalogName* em [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
   
  O uso de SQLLinkedServers e SQLLinkedCatalogs exige os seguintes arquivos:  
   
@@ -78,12 +77,12 @@ ms.locfileid: "67913075"
      Deve estar presente no tempo de execução. O sqlncli11.dll é distribuído com o driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="see-also"></a>Consulte também  
- [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [SQLColumnPrivileges](../../../relational-databases/native-client-odbc-api/sqlcolumnprivileges.md)   
- [SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)   
- [SQLPrimaryKeys](../../../relational-databases/native-client-odbc-api/sqlprimarykeys.md)   
- [SQLTablePrivileges](../../../relational-databases/native-client-odbc-api/sqltableprivileges.md)   
- [SQLTables](../../../relational-databases/native-client-odbc-api/sqltables.md)   
+ [  &#40;SQL Server Native Client&#41; ODBC](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+   [SQLColumnPrivileges](../../../relational-databases/native-client-odbc-api/sqlcolumnprivileges.md)  
+ [Hipercolunas](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)   
+ [Sqlprimarykeys](../../../relational-databases/native-client-odbc-api/sqlprimarykeys.md)   
+   [SQLTablePrivileges](../../../relational-databases/native-client-odbc-api/sqltableprivileges.md)  
+   [SQLTables](../../../relational-databases/native-client-odbc-api/sqltables.md)  
  [SQLStatistics](../../../relational-databases/native-client-odbc-api/sqlstatistics.md)  
   
   

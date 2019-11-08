@@ -1,5 +1,5 @@
 ---
-title: Copiar uma versão (Master Data Services) | Microsoft Docs
+title: Copiar uma versão
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6e34aad020117fffe598d9134276c280a05f549f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcdf2ee38e3b45a6495c0d6b3dbc643ce2b6ea38
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079742"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728539"
 ---
 # <a name="copy-a-version-master-data-services"></a>Copiar uma versão (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "68079742"
 2.  Na página **Gerenciar Versões** , selecione a linha da versão que você deseja copiar.  
   
     > [!NOTE]  
-    >  Dependendo da configuração do [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], talvez você consiga copiar versões somente com o status **Confirmado**. Para obter mais informações, veja [Configurações do sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
+    >  Dependendo da configuração do [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], talvez você consiga copiar versões somente com o status **Confirmado** . Para obter mais informações, veja [Configurações do sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
 3.  Clique em **Copiar**.  
   

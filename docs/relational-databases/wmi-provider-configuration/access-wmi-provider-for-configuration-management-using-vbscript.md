@@ -1,6 +1,6 @@
 ---
-title: Modificar propriedades avançadas do serviço de SQL Server usando o VBScript | Microsoft Docs
-ms.custom: ''
+title: Acessar o provedor WMI com VBScript
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3f46fa55f330274b6966f6181a022c3895dec4f9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a5415e9d425087f42e3058328f061660ffbe8c1e
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909195"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658956"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>Acessar o provedor WMI para o gerenciamento de configuração usando o VBScript
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

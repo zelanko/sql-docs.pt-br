@@ -1,5 +1,5 @@
 ---
-title: Recursos do Master Data Services preteridos | Microsoft Docs
+title: Recursos preteridos do Master Data Services
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: b5212af4f19cdf26f6c332a83877880c80bc3741
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: e6e2247cd3648e78df0349ec8de2b63f29e52e94
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267030"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729349"
 ---
 # <a name="deprecated-master-data-services-features"></a>Recursos preteridos do Master Data Services
 
@@ -53,9 +53,9 @@ O tipo de log de transações da entidade “Atributo” foi preterido. Migre pa
 * [Histórico de revisão de membro](../master-data-services/member-revision-history-master-data-services.md)
   
 ## <a name="external-resources"></a>Recursos externos  
- Postagem no blog, [Preterido: Hierarquias e coleções explícitas](https://go.microsoft.com/fwlink/p/?LinkId=615373), no msdn.com.  
+ Postagem do blog, [Deprecated: Explicit Hierarchies and Collections](https://go.microsoft.com/fwlink/p/?LinkId=615373)(Preterido: hierarquias explícitas e coleções), no msdn.com.  
   
 ## <a name="see-also"></a>Consulte também  
- [Recursos descontinuados do Master Data Services](../master-data-services/discontinued-master-data-services-features.md)  
+ [Recursos do Master Data Services descontinuados](../master-data-services/discontinued-master-data-services-features.md)  
   
   

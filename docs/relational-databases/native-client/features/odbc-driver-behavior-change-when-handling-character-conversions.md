@@ -1,5 +1,5 @@
 ---
-title: Alteração de comportamento do Driver ODBC ao lidar com conversões de caractere | Microsoft Docs
+title: Alteração de comportamento do driver ODBC ao manipular conversões de caracteres | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7261034941efe60c2aa755cad75b43b70cbb129b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0cdef033028819fc5a7b79b3c70a21a6847936a
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987400"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761390"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>Alteração de comportamento do driver ODBC ao lidar com conversões de caracteres
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  O [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Driver de ODBC do Native Client (SQLNCLI11.dll) alterou como ele faz de SQL_WCHAR * (nchar e SQL_CHAR\* (narchar conversões. As funções ODBC, como SQLGetData, SQLBindCol, SQLBindParameter, retornam (-4) SQL_NO_TOTAL como o parâmetro de comprimento/indicador ao usar o driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client. As versões anteriores do driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client retornaram um valor de comprimento, que pode estar incorreto.  
+  O driver ODBC do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (SQLNCLI11. dll) alterou a maneira como ele faz de SQL_WCHAR * (NCHAR/NVARCHAR/NVARCHAR (MAX)) e SQL_CHAR\* (CHAR/VARCHAR/NARCHAR (MAX)) conversões. As funções ODBC, como SQLGetData, SQLBindCol, SQLBindParameter, retornam (-4) SQL_NO_TOTAL como o parâmetro de comprimento/indicador ao usar o driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client. As versões anteriores do driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client retornaram um valor de comprimento, que pode estar incorreto.  
   
 ## <a name="sqlgetdata-behavior"></a>Comportamento de SQLGetData  
  Muitas funções do Windows permitem especificar um tamanho do buffer de 0 e o comprimento retornado é o tamanho dos dados retornados. O seguinte padrão é comum para programadores do Windows:  
@@ -45,11 +44,11 @@ pBuffer = new WCHAR[(iSize/sizeof(WCHAR)) + 1];   // Allocate buffer
 SQLGetData(hstmt, SQL_W_CHAR, ...., (SQLPOINTER*)pBuffer, iSize, &iSize);   // Retrieve data  
 ```  
   
- **SQLGetData** só pode ser chamado para recuperar partes dos dados reais. Usando o **SQLGetData** obter o tamanho dos dados não é suportado.  
+ **SQLGetData** só pode ser chamado para recuperar partes de dados reais. Não há suporte para o uso de **SQLGetData** para obter o tamanho dos dados.  
   
- O exemplo a seguir mostra o impacto da alteração do driver quando você usa o padrão incorreto. Esse aplicativo consulta uma **varchar** coluna e uma associação como Unicode (SQL_UNICODE/SQL_WCHAR):  
+ O exemplo a seguir mostra o impacto da alteração do driver quando você usa o padrão incorreto. Este aplicativo consulta uma coluna **varchar** e associando como Unicode (SQL_UNICODE/SQL_WCHAR):  
   
- Consulta:  `select convert(varchar(36), '123')`  
+ Consulta: `select convert(varchar(36), '123')`  
   
 ```  
 SQLGetData(hstmt, SQL_WCHAR, ....., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempting to determine storage size needed  
@@ -58,7 +57,7 @@ SQLGetData(hstmt, SQL_WCHAR, ....., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempt
 |Versão do driver ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client|Comprimento ou resultado do indicador|Descrição|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client ou anterior|6|O driver presumiu incorretamente que a conversão de CHAR para WCHAR poderia ser realizada como o comprimento * 2.|  
-|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versão 11.0.2100.60) ou posterior|-4 (SQL_NO_TOTAL)|O driver não presume mais que a conversão de CHAR para WCHAR ou WCHAR para CHAR é um (multiplicação) \*2 ou (divisão) / 2 ação.<br /><br /> Chamando **SQLGetData** não retorna o comprimento da conversão esperada. O driver detecta a conversão para ou de CHAR e WCHAR e retorna (- 4) SQL_NO_TOTAL em vez do comportamento de *2 ou /2 que poderia estar incorreto.|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versão 11.0.2100.60) ou posterior|-4 (SQL_NO_TOTAL)|O driver não assume mais que a conversão de CHAR para WCHAR ou WCHAR em CHAR é uma ação (multiplicar) \*2 ou (dividir)/2.<br /><br /> Chamar **SQLGetData** não retorna mais o comprimento da conversão esperada. O driver detecta a conversão para ou de CHAR e WCHAR e retorna (- 4) SQL_NO_TOTAL em vez do comportamento de *2 ou /2 que poderia estar incorreto.|  
   
  Use **SQLGetData** para recuperar as partes dos dados. (Pseudocódigo mostrado:)  
   
@@ -78,7 +77,7 @@ while( (SQL_SUCCESS or SQL_SUCCESS_WITH_INFO) == SQLFetch(...) ) {
 ```  
   
 ## <a name="sqlbindcol-behavior"></a>Comportamento de SQLBindCol  
- Consulta:  `select convert(varchar(36), '1234567890')`  
+ Consulta: `select convert(varchar(36), '1234567890')`  
   
 ```  
 SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting String Data Right Truncation behavior  
@@ -86,11 +85,11 @@ SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting
   
 |Versão do driver ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client|Comprimento ou resultado do indicador|Descrição|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
-|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client ou anterior|20|**SQLFetch** relata que há um truncamento à direita dos dados.<br /><br /> O comprimento é o comprimento dos dados retornados, não o que foi armazenado (presume a conversão *2 CHAR para WCHAR, que pode ter as marcas incorretas).<br /><br /> Os dados armazenados em buffer são 123\0. O buffer é garantido para ser terminado em NULL.|  
-|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versão 11.0.2100.60) ou posterior|-4 (SQL_NO_TOTAL)|**SQLFetch** relata que há um truncamento à direita dos dados.<br /><br /> O comprimento indica -4 (SQL_NO_TOTAL) porque o restante dos dados não foi convertido.<br /><br /> Os dados armazenados no buffer são 123\0. - O buffer é garantido para ser terminado em NULL.|  
+|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client ou anterior|20|**SQLFetch** relata que há um truncamento no lado direito dos dados.<br /><br /> O comprimento é o comprimento dos dados retornados, não o que foi armazenado (presume a conversão *2 CHAR para WCHAR, que pode ter as marcas incorretas).<br /><br /> Os dados armazenados em buffer são 123\0. O buffer é garantido para ser terminado em NULL.|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versão 11.0.2100.60) ou posterior|-4 (SQL_NO_TOTAL)|**SQLFetch** relata que há um truncamento no lado direito dos dados.<br /><br /> O comprimento indica -4 (SQL_NO_TOTAL) porque o restante dos dados não foi convertido.<br /><br /> Os dados armazenados no buffer são 123\0. - O buffer é garantido para ser terminado em NULL.|  
   
 ## <a name="sqlbindparameter-output-parameter-behavior"></a>SQLBindParameter (comportamento de parâmetro OUTPUT)  
- Consulta:  `create procedure spTest @p1 varchar(max) OUTPUT`  
+ Consulta: `create procedure spTest @p1 varchar(max) OUTPUT`  
   
  `select @p1 = replicate('B', 1234)`  
   
@@ -104,11 +103,11 @@ SQLBindParameter(... SQL_W_CHAR, ...)   // Only bind up to first 64 characters
 |[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versão 11.0.2100.60) ou posterior|-4 (SQL_NO_TOTAL)|**SQLFetch** não retorna mais dados disponíveis.<br /><br /> **SQLMoreResults** não retorna mais dados disponíveis.<br /><br /> O comprimento indica (-4) SQL_NO_TOTAL porque o restante dos dados não foi convertido.<br /><br /> O buffer original contém 63 bytes e um terminador em NULL. O buffer é garantido para ser terminado em NULL.|  
   
 ## <a name="performing-char-and-wchar-conversions"></a>Execução de conversões CHAR e WCHAR  
- O driver ODBC do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client oferece várias maneiras de executar conversões CHAR e WCHAR. A lógica é semelhante a manipular blobs (varchar (max), nvarchar (max),...):  
+ O driver ODBC do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client oferece várias maneiras de executar conversões CHAR e WCHAR. A lógica é semelhante à manipulação de BLOBs (varchar (max), nvarchar (max),...):  
   
--   Dados são salvos ou truncados no buffer especificado durante a associação com **SQLBindCol** ou **SQLBindParameter**.  
+-   Os dados são salvos ou truncados no buffer especificado durante a associação com **SQLBindCol** ou **SQLBindParameter**.  
   
--   Se você não associar, você pode recuperar os dados em partes usando **SQLGetData** e **SQLParamData**.  
+-   Se você não associar, poderá recuperar os dados em partes usando **SQLGetData** e **SQLParamData**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Recursos do SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

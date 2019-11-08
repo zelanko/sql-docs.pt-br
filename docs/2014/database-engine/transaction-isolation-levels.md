@@ -1,6 +1,6 @@
 ---
-title: Níveis de isolamento da transação | Microsoft Docs
-ms.custom: ''
+title: Tabelas com otimização de memória de níveis de isolamento de transação | Microsoft Docs
+ms.custom: seo-dt-2019
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,14 +10,15 @@ ms.assetid: 8a6a82bf-273c-40ab-a101-46bd3615db8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eaac46d0fd741e53493903d6fe0bb4656e9499a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774111"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637783"
 ---
-# <a name="transaction-isolation-levels"></a>Níveis de isolamento da transação
+# <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>Níveis de isolamento da transação em tabelas com otimização de memória
+
   Os níveis de isolamento a seguir têm suporte para transações que acessam tabelas com otimização de memória.  
   
 -   SNAPSHOT  
@@ -30,15 +31,15 @@ ms.locfileid: "62774111"
   
  O nível de isolamento da transação pode ser especificado como parte do bloco atômico de um procedimento armazenado originalmente compilado. Para obter mais informações, consulte [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql). Ao acessar tabelas com otimização de memória do [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado, o nível de isolamento pode ser especificado usando as dicas no nível de tabela.  
   
- Você deve especificar o nível de isolamento da transação quando definir um procedimento armazenado compilado nativamente. Você deve especificar o nível de isolamento nas dicas de tabela ao acessar tabelas com otimização de memória de transações do usuário no [!INCLUDE[tsql](../includes/tsql-md.md)]interpretado. Para obter mais informações, consulte [diretrizes para níveis de isolamento da transação com tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Você deve especificar o nível de isolamento da transação quando definir um procedimento armazenado compilado nativamente. Você deve especificar o nível de isolamento nas dicas de tabela ao acessar tabelas com otimização de memória de transações do usuário no [!INCLUDE[tsql](../includes/tsql-md.md)]interpretado. Para obter mais informações, consulte [diretrizes para níveis de isolamento de transação com tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
- O nível de isolamento READ COMMITTED tem suporte em tabelas com otimização de memória com transações de confirmação automática. READ COMMITTED é inválido em transações de usuário ou em um bloco atômico. READ COMMITTED não tem suporte com transações de usuário implícitas ou explícitas. Há suporte para o nível de isolamento READ_COMMITTED_SNAPSHOT nas tabelas com otimização de memória com transações de confirmação automática e somente se a consulta não acessar nenhuma tabela baseada em disco. Além disso, as transações que são iniciadas usando o [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado com isolamento SNAPSHOT não podem acessar as tabelas com otimização de memória. As transações que usam o [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado, seja com o isolamento REPEATABLE READ ou SERIALIZABLE, devem acessar as tabelas com otimização de memória usando o isolamento SNAPSHOT. Para obter mais informações sobre esse cenário, consulte [transações entre contêineres](cross-container-transactions.md).  
+ O nível de isolamento READ COMMITTED tem suporte em tabelas com otimização de memória com transações de confirmação automática. READ COMMITTED é inválido em transações de usuário ou em um bloco atômico. READ COMMITTED não tem suporte com transações de usuário implícitas ou explícitas. Há suporte para o nível de isolamento READ_COMMITTED_SNAPSHOT nas tabelas com otimização de memória com transações de confirmação automática e somente se a consulta não acessar nenhuma tabela baseada em disco. Além disso, as transações que são iniciadas usando o [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado com isolamento SNAPSHOT não podem acessar as tabelas com otimização de memória. As transações que usam o [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado, seja com o isolamento REPEATABLE READ ou SERIALIZABLE, devem acessar as tabelas com otimização de memória usando o isolamento SNAPSHOT. Para obter mais informações sobre esse cenário, consulte [Transações de contêiner cruzado](cross-container-transactions.md).  
   
  READ COMMITTED é o nível de isolamento padrão no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando o nível de isolamento da sessão for READ COMMITTED (ou inferior), siga um destes procedimentos:  
   
 -   Use explicitamente uma dica de nível de isolamento mais alto para o acesso à tabela com otimização de memória (por exemplo, WITH (SNAPSHOT)).  
   
--   Especifique a opção set `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, que definirá o nível de isolamento de tabelas com otimização de memória para SNAPSHOT (como se você tivesse incluído dicas WITH(SNAPSHOT) em cada tabela com otimização de memória). Para obter mais informações sobre `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, consulte [opções ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+-   Especifique a opção set `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, que definirá o nível de isolamento de tabelas com otimização de memória para SNAPSHOT (como se você tivesse incluído dicas WITH(SNAPSHOT) em cada tabela com otimização de memória). Para obter mais informações sobre `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, consulte [opções &#40;ALTER DATABASE SET Transact-&#41;SQL](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  Como alternativa, se o nível de isolamento da sessão é READ COMMITTED, você pode usar transações de confirmação automática.  
   
@@ -81,7 +82,7 @@ ms.locfileid: "62774111"
   
 ## <a name="see-also"></a>Consulte também  
  [Noções básicas sobre transações em tabelas com otimização de memória](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Diretrizes para níveis de isolamento da transação com tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+ [Diretrizes para níveis de isolamento de transação com tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [Diretrizes para lógica de repetição das transações em tabelas com otimização de memória](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
   

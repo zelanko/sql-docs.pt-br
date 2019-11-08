@@ -1,5 +1,5 @@
 ---
-title: Membros (Master Data Services) | Microsoft Docs
+title: Membros
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 922ac93eed7235b560def2160b23da72a73a570b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6e663ef23c472b2a78ec71c58086824adae185e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092589"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728010"
 ---
 # <a name="members-master-data-services"></a>Membros (Master Data Services)
 
@@ -35,7 +35,7 @@ ms.locfileid: "68092589"
   
  Neste exemplo, a tabela representa uma entidade, as linhas da tabela representam membros e as colunas representam atributos. Cada célula representa um valor de atributo de um membro específico.  
   
- ![Entidade do Master Data Services representada como tabela](../master-data-services/media/mds-conc-entity-table.gif "Entidade do Master Data Services representada como tabela")  
+ ![Master Data Services entidade representada como tabela](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services entidade representada como tabela")  
   
 ## <a name="member-types"></a>Tipos de membro  
  Há três tipos de membros: membros folha, membros consolidados e membros de coleção.  
@@ -53,12 +53,12 @@ ms.locfileid: "68092589"
 -   Em hierarquias explícitas, membros consolidados podem ser os pais de outros membros dentro da hierarquia ou podem ser filhos.  
   
 ## <a name="use-hierarchies-and-collections-to-organize-members"></a>Usar hierarquias e coleções para organizar os membros  
- As hierarquias e as coleções podem ser usadas para agrupar membros para relatório ou análise. Para obter mais informações, consulte [Hierarquias &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md) e [Coleções &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md).  
+ As hierarquias e as coleções podem ser usadas para agrupar membros para relatório ou análise. Para obter mais informações, consulte [Hierarchies &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md) e [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md).  
   
 ## <a name="member-example"></a>Exemplo de membro  
  No exemplo a seguir, cada membro é composto de um valor dos atributos Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto.  
   
- ![Tabela de entidade de produto de bicicleta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabela de entidade de produto de bicicleta")  
+ ![Tabela de entidades de produto de bicicleta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabela de entidades de produto de bicicleta")  
   
 ## <a name="related-tasks"></a>Tarefas relacionadas  
   
