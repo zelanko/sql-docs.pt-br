@@ -1,47 +1,47 @@
 ---
-title: referência de status do HDFS do azdata BDC
+title: azdata bdc hdfs status reference
 titleSuffix: SQL Server big data clusters
-description: Artigo de referência para comandos de status do HDFS do azdata BDC.
+description: Artigo de referência para comandos azdata bdc hdfs status.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3853e23a0def787a65febf142de4c1d8d8216df7
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.openlocfilehash: f3548feb06b05699750ce5c088c05c4e3cc67d57
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158081"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531789"
 ---
-# <a name="azdata-bdc-hdfs-status"></a>status do HDFS do BDC azdata
+# <a name="azdata-bdc-hdfs-status"></a>azdata bdc hdfs status
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Este artigo é um artigo de referência para **azdata**. 
+O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Commands
 |     |     |
 | --- | --- |
-[exibição do status do HDFS do BDC azdata](#azdata-bdc-hdfs-status-show) | Status do serviço HDFS.
-## <a name="azdata-bdc-hdfs-status-show"></a>exibição do status do HDFS do BDC azdata
-Status do serviço HDFS.
+[azdata bdc hdfs status show](#azdata-bdc-hdfs-status-show) | Status do serviço hdfs.
+## <a name="azdata-bdc-hdfs-status-show"></a>azdata bdc hdfs status show
+Status do serviço hdfs.
 ```bash
 azdata bdc hdfs status show [--resource -r] 
                             [--all -a]
 ```
 ### <a name="examples"></a>Exemplos
-Obter o status do serviço HDFS.
+Obter o status do serviço hdfs.
 ```bash
 azdata bdc hdfs status show
 ```
-Obter o status do serviço HDFS com todas as instâncias.
+Obter o status do serviço hdfs com todas as instâncias.
 ```bash
 azdata bdc hdfs status show --all
 ```
-Obtenha o status do recurso de armazenamento no serviço HDFS.
+Obter o status do recurso de armazenamento no serviço hdfs.
 ```bash
 azdata bdc hdfs status show --resource storage-0
 ```
@@ -58,12 +58,10 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md). 
-
-- Para obter mais informações sobre como instalar a ferramenta **azdata**, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](deploy-install-azdata.md).
+Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md). Para obter mais informações sobre como instalar a ferramenta `azdata`, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](deploy-install-azdata.md).

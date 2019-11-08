@@ -5,22 +5,22 @@ description: Artigo de referência para comandos bdc spark batch de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7f37518ff2b53e80622c4a6faca477a08719c3dc
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
-ms.translationtype: MT
+ms.openlocfilehash: fc3dc5a987ae55ba410ca64c15a3a4b776465b54
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708631"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531758"
 ---
 # <a name="azdata-bdc-spark-batch"></a>bdc spark batch de azdata
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Este artigo é um artigo de referência para **azdata**. 
+O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
 
 ## <a name="commands"></a>Commands
 |     |     |
@@ -53,7 +53,7 @@ azdata bdc spark batch create --file -f
 ### <a name="examples"></a>Exemplos
 Criar um novo lote do Spark.
 ```bash
-azdata bdc spark batch create --code "2+2"
+azdata spark batch create --code "2+2"
 ```
 ### <a name="required-parameters"></a>Parâmetros necessários
 #### `--file -f`
@@ -95,7 +95,7 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-spark-batch-list"></a>azdata bdc spark batch list
@@ -106,7 +106,7 @@ azdata bdc spark batch list
 ### <a name="examples"></a>Exemplos
 Listar todos os lotes ativos.
 ```bash
-azdata bdc spark batch list
+azdata spark batch list
 ```
 ### <a name="global-arguments"></a>Argumentos globais
 #### `--debug`
@@ -116,19 +116,18 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-spark-batch-info"></a>azdata bdc spark batch info
 Isso obtém as informações de um lote do Spark com a ID fornecida.  A ID do lote é retornada de 'spark batch create'.
 ```bash
 azdata bdc spark batch info --batch-id -i 
-                            
-```
-### <a name="examples"></a>Exemplos
-Obter informações do lote com a ID 0.
+          ```
+### Examples
+Get batch info for batch with ID of 0.
 ```bash
-azdata bdc spark batch info --batch-id 0
+azdata spark batch info --batch-id 0
 ```
 ### <a name="required-parameters"></a>Parâmetros necessários
 #### `--batch-id -i`
@@ -141,19 +140,18 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-spark-batch-log"></a>azdata bdc spark batch log
 Isso obtém as entradas de log do lote para um lote do Spark com a ID fornecida.  A ID do lote é retornada de 'spark batch create'.
 ```bash
 azdata bdc spark batch log --batch-id -i 
-                           
-```
-### <a name="examples"></a>Exemplos
-Obter o log do lote com a ID 0.
+         ```
+### Examples
+Get batch log for batch with ID of 0.
 ```bash
-azdata bdc spark batch log --batch-id 0
+azdata spark batch log --batch-id 0
 ```
 ### <a name="required-parameters"></a>Parâmetros necessários
 #### `--batch-id -i`
@@ -166,19 +164,18 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-spark-batch-state"></a>azdata bdc spark batch state
 Isso obtém o estado do lote para um lote do Spark com a ID fornecida.  A ID do lote é retornada de 'spark batch create'.
 ```bash
 azdata bdc spark batch state --batch-id -i 
-                             
-```
-### <a name="examples"></a>Exemplos
-Obter informações de estado do lote com a ID 0.
+           ```
+### Examples
+Get batch state for batch with ID of 0.
 ```bash
-azdata bdc spark batch state --batch-id 0
+azdata spark batch state --batch-id 0
 ```
 ### <a name="required-parameters"></a>Parâmetros necessários
 #### `--batch-id -i`
@@ -191,19 +188,18 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-spark-batch-delete"></a>azdata bdc spark batch delete
 Isso exclui um lote do Spark. A ID do lote é retornada de 'spark batch create'.
 ```bash
 azdata bdc spark batch delete --batch-id -i 
-                              
-```
-### <a name="examples"></a>Exemplos
-Excluir um lote.
+            ```
+### Examples
+Delete a batch.
 ```bash
-azdata bdc spark batch delete --batch-id 0
+azdata spark batch delete --batch-id 0
 ```
 ### <a name="required-parameters"></a>Parâmetros necessários
 #### `--batch-id -i`
@@ -222,6 +218,4 @@ Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md). 
-
-- Para obter mais informações sobre como instalar a ferramenta **azdata**, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](deploy-install-azdata.md).
+Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md). Para obter mais informações sobre como instalar a ferramenta `azdata`, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](deploy-install-azdata.md).

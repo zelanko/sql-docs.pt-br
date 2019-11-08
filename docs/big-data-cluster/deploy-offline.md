@@ -5,26 +5,24 @@ description: Saiba como executar uma implantação offline de um cluster de Big 
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 243771141bbd255e045ef0a1667235f1c414777b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.openlocfilehash: 15af041e94ac0abfdae13635345de62262a4b086
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155264"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531980"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Executar uma implantação offline de um cluster de Big Data do SQL Server
 
 Este artigo descreve como executar uma implantação offline de um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Os clusters de Big Data precisam ter acesso a um repositório do Docker do qual será efetuado pull das imagens de contêiner. Uma instalação offline é aquela em que as imagens necessárias são colocadas em um repositório privado do Docker. Em seguida, esse repositório privado é usado como a origem da imagem para uma nova implantação.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - O Docker Engine 1.8 ou superior em qualquer distribuição do Linux ou do Docker para Mac/Windows com suporte. Para obter mais informações, veja [Install Docker](https://docs.docker.com/engine/installation/) (Instalar o Docker).
-
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## <a name="load-images-into-a-private-repository"></a>Carregar imagens em um repositório privado
 
@@ -33,7 +31,7 @@ As etapas a seguir descrevem como efetuar pull das imagens de contêiner de clus
 > [!TIP]
 > As etapas a seguir explicam o processo. No entanto, para simplificar a tarefa, você pode usar o [script automatizado](#automated) em vez de executar esses comandos manualmente.
 
-1. Efetue pull das imagens de contêiner de cluster de Big Data repetindo o comando a seguir. Substitua `<SOURCE_IMAGE_NAME>` por cada [nome de imagem](#images). Substitua `<SOURCE_DOCKER_TAG>` pela marca da versão do cluster Big data, como **2019-RC1-Ubuntu**.  
+1. Efetue pull das imagens de contêiner de cluster de Big Data repetindo o comando a seguir. Substitua `<SOURCE_IMAGE_NAME>` por cada [nome de imagem](#images). Substitua `<SOURCE_DOCKER_TAG>` pela tag da versão do cluster de Big Data, como **2019-GDR1-ubuntu-16.04**.  
 
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/bdc/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -61,9 +59,9 @@ As etapas a seguir descrevem como efetuar pull das imagens de contêiner de clus
 
 As seguintes imagens de contêiner de cluster de Big Data são necessárias para uma instalação offline:
 - **mssql-app-service-proxy**
-- **MSSQL-Control-Watchdog**
+- **mssql-control-watchdog**
 - **mssql-controller**
-- **MSSQL-DNS**
+- **mssql-dns**
 - **mssql-hadoop**
 - **mssql-mleap-serving-runtime**
 - **mssql-mlserver-py-runtime**
@@ -75,13 +73,14 @@ As seguintes imagens de contêiner de cluster de Big Data são necessárias para
 - **mssql-monitor-influxdb**
 - **mssql-monitor-kibana**
 - **mssql-monitor-telegraf**
-- **MSSQL-Security-domainctl**
+- **mssql-security-domainctl**
 - **mssql-security-knox**
 - **mssql-security-support**
 - **mssql-server**
 - **mssql-server-controller**
 - **mssql-server-data**
-- **MSSQL-Server-ha**
+- **mssql-ha-operator**
+- **mssql-ha-supervisor**
 - **mssql-service-proxy**
 - **mssql-ssis-app-runtime**
 
@@ -104,20 +103,22 @@ Use um script automatizado do Python que efetuará pull automaticamente de todas
    **Windows:**
 
    ```PowerShell
-   python deploy-sql-big-data-aks.py
+   python push-bdc-images-to-custom-private-repo.py
    ```
 
    **Linux:**
 
    ```bash
-   sudo python deploy-sql-big-data-aks.py
+   sudo python push-bdc-images-to-custom-private-repo.py
    ```
 
 1. Siga os prompts para inserir o repositório da Microsoft e suas informações de repositório privado. Após a conclusão do script, todas as imagens necessárias deverão estar localizadas no repositório privado.
 
+1. Siga as instruções [aqui](deployment-custom-configuration.md#docker) para saber como personalizar o arquivo de configuração de implantação do `control.json` para usar seu repositório e registro de contêiner. Observe que você deve definir as variáveis de ambiente `DOCKER_USERNAME` e `DOCKER_PASSWORD` antes da implantação para habilitar o acesso ao seu repositório privado.
+
 ## <a name="install-tools-offline"></a>Instalar ferramentas offline
 
-As implantações de cluster de Big data exigem várias ferramentas `azdata`, incluindo **Python**, e **kubectl**. Use as etapas a seguir para instalar essas ferramentas em um servidor offline.
+As implantações de cluster de Big Data exigem várias ferramentas, incluindo **Python**, `azdata` e **kubectl**. Use as etapas a seguir para instalar essas ferramentas em um servidor offline.
 
 ### <a id="python"></a> Instalar o Python offline
 
@@ -139,13 +140,13 @@ As implantações de cluster de Big data exigem várias ferramentas `azdata`, in
 
 ### <a id="azdata"></a> Instalar o azdata offline
 
-1. Em um computador com acesso à Internet e [Python](https://wiki.python.org/moin/BeginnersGuide/Download), execute o comando a seguir para baixar todos `azdata` os pacotes para a pasta atual.
+1. Em um computador com acesso à Internet e o [Python](https://wiki.python.org/moin/BeginnersGuide/Download), execute o comando a seguir para baixar todos os pacotes do `azdata` na pasta atual.
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
    ```
 
-1. Copie os pacotes baixados e `requirements.txt` o arquivo para o computador de destino.
+1. Copie os pacotes baixados e o arquivo `requirements.txt` para o computador de destino.
 
 1. Execute o comando a seguir no computador de destino, especificando a pasta na qual você copiou os arquivos anteriores.
 
@@ -163,7 +164,7 @@ Para instalar o **kubectl** em um computador offline, use as etapas a seguir.
 
 ## <a name="deploy-from-private-repository"></a>Implantação por meio do repositório privado
 
-Para executar a implantação por meio do repositório privado, use as etapas descritas no [guia de implantação](deployment-guidance.md), mas use um arquivo de configuração de implantação personalizado que especifique as informações do repositório privado do Docker. Os comandos `azdata` a seguir demonstram como alterar as configurações do Docker em um arquivo de configuração `control.json`de implantação personalizada chamado:
+Para executar a implantação por meio do repositório privado, use as etapas descritas no [guia de implantação](deployment-guidance.md), mas use um arquivo de configuração de implantação personalizado que especifique as informações do repositório privado do Docker. Os seguintes comandos `azdata` demonstram como alterar as configurações do Docker em um arquivo de configuração de implantação personalizado chamado `control.json`:
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"
@@ -171,8 +172,8 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
-A implantação solicita o nome de usuário e a senha do Docker, ou você pode especificá- `DOCKER_USERNAME` los `DOCKER_PASSWORD` nas variáveis de ambiente e.
+A implantação solicita o nome de usuário e a senha do Docker ou você pode especificá-los nas variáveis de ambiente `DOCKER_USERNAME` e `DOCKER_PASSWORD`.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre implantações de cluster Big data, consulte [como implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] em kubernetes](deployment-guidance.md).
+Para obter mais informações sobre implantações de clusters de Big Data, confira [Como implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no Kubernetes](deployment-guidance.md).

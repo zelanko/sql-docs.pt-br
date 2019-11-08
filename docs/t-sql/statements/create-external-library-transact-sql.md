@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) – SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -19,22 +19,22 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 090e854f59e1d2be7291c8c759ef89c8311fd0a0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: cb698f95037cb6ab39c5a98dbf725f9decc66cd0
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68471120"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536251"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Carrega os arquivos de pacotes do R, Python ou Java em um banco de dados do caminho de arquivo ou fluxo de bytes especificado. Essa instrução funciona como um mecanismo genérico para que o administrador de banco de dados carregue os artefatos necessários para novos tempos de execução de idiomas externos e plataformas de sistema operacional compatíveis com o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
+Carrega os arquivos de pacotes do R, Python ou Java em um banco de dados do caminho de arquivo ou fluxo de bytes especificado. Essa instrução funciona como um mecanismo genérico para que o administrador de banco de dados carregue os artefatos necessários para novos runtimes de idiomas externos e plataformas de sistema operacional compatíveis com o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 > [!NOTE]
-> No SQL Server 2017, há compatibilidade apenas com a linguagem R e a plataforma Windows. Há suporte para as linguagens R, Python e externas nas plataformas Windows e Linux no SQL Server 2019 CTP 2.4 e posterior.
+> No SQL Server 2017, há compatibilidade apenas com a linguagem R e a plataforma Windows. Há suporte para as linguagens R, Python e externas nas plataformas Windows e Linux no SQL Server 2019 e posterior.
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
@@ -148,7 +148,7 @@ Os nomes de biblioteca não podem ser atribuídos arbitrariamente; o nome da bib
 
 Especifica o nome do usuário ou da função que é a proprietária da biblioteca externa. Se não estiver especificada, a propriedade será dada ao usuário atual.
 
-As bibliotecas que pertencem ao proprietário do banco de dados são consideradas globais para o banco de dados e o tempo de execução. Em outras palavras, os proprietários do banco de dados podem criar bibliotecas que contêm um conjunto comum de bibliotecas ou pacotes que são compartilhados por muitos usuários. Quando uma biblioteca externa é criada por um usuário diferente do usuário `dbo`, a biblioteca externa é particular somente a esse usuário.
+As bibliotecas que pertencem ao proprietário do banco de dados são consideradas globais para o banco de dados e o runtime. Em outras palavras, os proprietários do banco de dados podem criar bibliotecas que contêm um conjunto comum de bibliotecas ou pacotes que são compartilhados por muitos usuários. Quando uma biblioteca externa é criada por um usuário diferente do usuário `dbo`, a biblioteca externa é particular somente a esse usuário.
 
 Quando o usuário **RUser1** executa um script externo, o valor de `libPath` pode conter vários caminhos. O primeiro caminho é sempre o caminho para a biblioteca compartilhada criado pelo proprietário do banco de dados. A segunda parte de `libPath` especifica o caminho que contém os pacotes carregados individualmente por **RUser1**.
 
@@ -161,7 +161,7 @@ O arquivo pode ser especificado no formato de um caminho local ou caminho de red
 
 Ao tentar acessar o arquivo especificado em **<client_library_specifier>** , o SQL Server representa o contexto de segurança do logon atual do Windows. Se **<client_library_specifier>** especificar um local de rede (caminho UNC), a representação do logon atual não será repassada ao local de rede devido a limitações de delegação. Nesse caso, o acesso é feito usando o contexto de segurança da conta de serviço do SQL Server. Para obter mais informações, consulte [Credenciais (Mecanismo de Banco de Dados)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
 
-Opcionalmente, uma plataforma de sistema operacional para o arquivo pode ser especificada. Somente um artefato ou conteúdo de arquivo é permitido para cada plataforma de sistema operacional em uma linguagem ou um tempo de execução específico.
+Opcionalmente, uma plataforma de sistema operacional para o arquivo pode ser especificada. Somente um artefato ou conteúdo de arquivo é permitido para cada plataforma de sistema operacional em uma linguagem ou um runtime específico.
 ::: moniker-end
 
 **library_bits**

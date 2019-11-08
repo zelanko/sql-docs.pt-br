@@ -5,24 +5,24 @@ description: Artigo de referência para comandos app de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ec7e461705138905713b803e2f0f96934044d971
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.openlocfilehash: 371321c8b91d3d7c56ac2721deb29a664209f004
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155301"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531914"
 ---
 # <a name="azdata-app"></a>azdata app
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Este artigo é um artigo de referência para **azdata**. 
+O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Commands
 |     |     |
 | --- | --- |
 [azdata app template](reference-azdata-app-template.md) | Modelos.
@@ -34,27 +34,45 @@ Este artigo é um artigo de referência para **azdata**.
 [azdata app run](#azdata-app-run) | Executar o aplicativo.
 [azdata app describe](#azdata-app-describe) | Descrever o aplicativo.
 ## <a name="azdata-app-init"></a>azdata app init
-Ajuda você a iniciar o esqueleto do novo aplicativo e/ou arquivos de especificação com base em ambientes de tempo de execução.
+Ajuda você a iniciar o esqueleto do novo aplicativo e/ou arquivos de especificação com base em ambientes de runtime.
 ```bash
-azdata app init 
+azdata app init [--spec -s] 
+                [--name -n]  
+                [--version -v]  
+                [--template -t]  
+                [--destination -d]  
+                [--url -u]
 ```
 ### <a name="examples"></a>Exemplos
 Efetuar scaffold apenas do `spec.yaml` de um novo aplicativo.
 ```bash
 azdata app init --spec
 ```
-Scaffold um novo esqueleto de aplicativo de aplicativo R com `r` base no modelo.
+Efetuar scaffold do esqueleto de um novo aplicativo R baseado no modelo `r`.
 ```bash
 azdata app init --name reduce --template r
 ```
-Scaffold um novo esqueleto de aplicativo de aplicativo Python baseado `python` no modelo.
+Efetuar scaffold do esqueleto de um novo aplicativo Python baseado no modelo `python`.
 ```bash
 azdata app init --name reduce --template python
 ```
-Scaffold um novo esqueleto de aplicativo do `ssis` aplicativo SSIS com base no modelo.
+Efetuar scaffold do esqueleto de um novo aplicativo SSIS baseado no modelo `ssis`.
 ```bash
 azdata app init --name reduce --template ssis            
 ```
+### <a name="optional-parameters"></a>Parâmetros opcionais
+#### `--spec -s`
+Gerar apenas o spec.yaml de um aplicativo.
+#### `--name -n`
+Nome do aplicativo.
+#### `--version -v`
+Versão do Aplicativo.
+#### `--template -t`
+Nome do modelo. Para obter uma lista completa de nomes de modelos com suporte, execute `azdata app template list`
+#### `--destination -d`
+Onde posicionar o esqueleto do aplicativo. Padrão: o diretório de trabalho atual.
+#### `--url -u`
+Especificar uma localização de repositório de modelos diferente. Padrão: https://github.com/Microsoft/SQLBDC-AppDeploy.git
 ### <a name="global-arguments"></a>Argumentos globais
 #### `--debug`
 Aumente o detalhamento do log para mostrar todos os logs de depuração.
@@ -63,19 +81,22 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-app-create"></a>azdata app create
 Criar um aplicativo.
 ```bash
-azdata app create 
+azdata app create --spec -s 
 ```
 ### <a name="examples"></a>Exemplos
 Criar um novo aplicativo usando um diretório contendo uma especificação de implantação spec.yaml válida.
 ```bash
 azdata app create --spec /path/to/dir/with/spec/yaml
 ```
+### <a name="required-parameters"></a>Parâmetros necessários
+#### `--spec -s`
+Caminho para um diretório com um arquivo de especificação YAML que descreve o aplicativo.
 ### <a name="global-arguments"></a>Argumentos globais
 #### `--debug`
 Aumente o detalhamento do log para mostrar todos os logs de depuração.
@@ -84,19 +105,25 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-app-update"></a>azdata app update
 Atualizar um aplicativo.
 ```bash
-azdata app update 
+azdata app update [--spec -s] 
+                  [--yes -y]
 ```
 ### <a name="examples"></a>Exemplos
 Atualizar um aplicativo existente usando um diretório contendo uma especificação de implantação spec.yaml válida.
 ```bash
 azdata app update --spec /path/to/dir/with/spec/yaml    
 ```
+### <a name="optional-parameters"></a>Parâmetros opcionais
+#### `--spec -s`
+Caminho para um diretório com um arquivo de especificação YAML que descreve o aplicativo.
+#### `--yes -y`
+Não solicite confirmação ao atualizar um aplicativo usando um arquivo spec.yaml do CWD.
 ### <a name="global-arguments"></a>Argumentos globais
 #### `--debug`
 Aumente o detalhamento do log para mostrar todos os logs de depuração.
@@ -105,13 +132,14 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-app-list"></a>azdata app list
 Listar um aplicativo.
 ```bash
-azdata app list 
+azdata app list [--name -n] 
+                [--version -v]
 ```
 ### <a name="examples"></a>Exemplos
 Listar o aplicativo por nome e versão.
@@ -126,6 +154,11 @@ Listar todas as versões do aplicativo por nome.
 ```bash
 azdata app list
 ```
+### <a name="optional-parameters"></a>Parâmetros opcionais
+#### `--name -n`
+Nome do aplicativo.
+#### `--version -v`
+Versão do Aplicativo.
 ### <a name="global-arguments"></a>Argumentos globais
 #### `--debug`
 Aumente o detalhamento do log para mostrar todos os logs de depuração.
@@ -134,19 +167,25 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-app-delete"></a>azdata app delete
 Excluir um aplicativo.
 ```bash
-azdata app delete 
+azdata app delete --name -n 
+                  --version -v
 ```
 ### <a name="examples"></a>Exemplos
 Excluir o aplicativo por nome e versão.
 ```bash
 azdata app delete --name reduce --version v1    
 ```
+### <a name="required-parameters"></a>Parâmetros necessários
+#### `--name -n`
+Nome do aplicativo.
+#### `--version -v`
+Versão do Aplicativo.
 ### <a name="global-arguments"></a>Argumentos globais
 #### `--debug`
 Aumente o detalhamento do log para mostrar todos os logs de depuração.
@@ -155,13 +194,15 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-app-run"></a>azdata app run
 Executar um aplicativo.
 ```bash
-azdata app run 
+azdata app run --name -n 
+               --version -v  
+               [--inputs]
 ```
 ### <a name="examples"></a>Exemplos
 Executar um aplicativo sem parâmetros de entrada.
@@ -176,6 +217,14 @@ Executar um aplicativo com vários parâmetros de entrada.
 ```bash
 azdata app run --name reduce --version v1 --inputs x=10,y5.6    
 ```
+### <a name="required-parameters"></a>Parâmetros necessários
+#### `--name -n`
+Nome do aplicativo.
+#### `--version -v`
+Versão do Aplicativo.
+### <a name="optional-parameters"></a>Parâmetros opcionais
+#### `--inputs`
+Parâmetros de entrada do aplicativo em um formato CSV `name=value`.
 ### <a name="global-arguments"></a>Argumentos globais
 #### `--debug`
 Aumente o detalhamento do log para mostrar todos os logs de depuração.
@@ -184,19 +233,28 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-app-describe"></a>azdata app describe
 Descrever um aplicativo.
 ```bash
-azdata app describe 
+azdata app describe [--spec -s] 
+                    [--name -n]  
+                    [--version -v]
 ```
 ### <a name="examples"></a>Exemplos
 Descrever o aplicativo.
 ```bash
 azdata app describe --name reduce --version v1    
 ```
+### <a name="optional-parameters"></a>Parâmetros opcionais
+#### `--spec -s`
+Caminho para um diretório com um arquivo de especificação YAML que descreve o aplicativo.
+#### `--name -n`
+Nome do aplicativo.
+#### `--version -v`
+Versão do Aplicativo.
 ### <a name="global-arguments"></a>Argumentos globais
 #### `--debug`
 Aumente o detalhamento do log para mostrar todos os logs de depuração.
@@ -205,12 +263,10 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md). 
-
-- Para obter mais informações sobre como instalar a ferramenta **azdata**, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](deploy-install-azdata.md).
+Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md). Para obter mais informações sobre como instalar a ferramenta `azdata`, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](deploy-install-azdata.md).

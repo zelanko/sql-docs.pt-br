@@ -4,29 +4,29 @@ description: Este artigo fornece um passo a passo para configurar o PMEM no Linu
 author: briancarrig
 ms.author: brcarrig
 ms.reviewer: vanto
-ms.date: 11/06/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6f9a5d8c6b2db65bd237f0a3a267638a8cc16b68
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
+ms.openlocfilehash: 6e1a935dcaa605caf9483fadd5707bafbfb6b83b
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923825"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531296"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Como configurar a PMEM (memória persistente) para SQL Server em Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este artigo descreve como configurar a PMEM (memória persistente) para SQL Server em Linux. O suporte a PMEM no Linux foi introduzido na versão prévia do SQL Server 2019.
+Este artigo descreve como configurar a PMEM (memória persistente) para SQL Server em Linux. O suporte a PMEM no Linux foi introduzido no SQL Server 2019.
 
 ## <a name="overview"></a>Visão geral
 
 O SQL Server 2016 introduziu o suporte para DIMMs não voláteis e uma otimização chamada [Parte final do cache de log no NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/). Essas otimizações reduziram o número de operações necessárias para proteger um buffer de log para o armazenamento persistente. Isso se beneficia do acesso direto do Windows Server a um dispositivo de memória persistente no modo DAX.
 
-A versão prévia do SQL Server 2019 estende o suporte para dispositivos PMEM (Memória Persistente) ao Linux, fornecendo capacitação completa de arquivos de log de transações e de dados colocados na PMEM. O esclarecimento refere-se ao método de acesso ao dispositivo de armazenamento usando operações `memcpy()` de espaço de usuário eficientes. Em vez de passar pelo sistema de arquivos e pela pilha de armazenamento, o SQL Server se beneficia do suporte a DAX no Linux para posicionar dados diretamente em dispositivos, o que reduz a latência.
+O SQL Server 2019 estende o suporte para dispositivos PMEM (Memória Persistente) ao Linux, fornecendo capacitação completa de arquivos de log de transações e de dados colocados na PMEM. O esclarecimento refere-se ao método de acesso ao dispositivo de armazenamento usando operações `memcpy()` de espaço de usuário eficientes. Em vez de passar pelo sistema de arquivos e pela pilha de armazenamento, o SQL Server se beneficia do suporte a DAX no Linux para posicionar dados diretamente em dispositivos, o que reduz a latência.
 
 ## <a name="enable-enlightenment-of-database-files"></a>Habilitar a capacitação dos arquivos de banco de dados
 Para habilitar o esclarecimento dos arquivos de banco de dados no SQL Server em Linux, siga as seguintes etapas:

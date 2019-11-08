@@ -5,60 +5,82 @@ description: Artigo de referência para comandos de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e12a6a19ae076a42bef345a05076adab0d9ea471
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: 4ef2ba9c68f3586e159c326863ef76ba231f01b9
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816657"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531645"
 ---
 # <a name="azdata"></a>azdata
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
+O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
+
 ## <a name="commands"></a>Commands
 |     |     |
 | --- | --- |
-|[azdata notebook](reference-azdata-notebook.md) | Comandos para exibir, executar e gerenciar notebooks de um terminal. |
-|[azdata sql](reference-azdata-sql.md) | A CLI do banco de dados SQL permite que o usuário interaja com o SQL Server por meio de T-SQL. |
-|[azdata app](reference-azdata-app.md) | Criar, excluir, executar e gerenciar aplicativos. |
 |[azdata bdc](reference-azdata-bdc.md) | Selecionar, gerenciar e operar clusters de Big Data do SQL Server. |
-|[azdata login](#azdata-login) | Fazer logon no ponto de extremidade do controlador do cluster.
-|[azdata logout](#azdata-logout) | Fazer logoff do cluster.
+|[azdata app](reference-azdata-app.md) | Criar, excluir, executar e gerenciar aplicativos. |
+[azdata login](#azdata-login) | Faça logon no ponto de extremidade do controlador do cluster e defina seu namespace como seu contexto ativo. Para usar uma senha no logon, defina a variável de ambiente AZDATA_PASSWORD.
+[azdata logout](#azdata-logout) | Fazer logoff do cluster.
+|[azdata context](reference-azdata-context.md) | Comandos de gerenciamento de contexto. |
+|[azdata control](reference-azdata-control.md) | Criar, excluir e gerenciar planos de controle. |
+|[azdata sql](reference-azdata-sql.md) | A CLI do banco de dados SQL permite que o usuário interaja com o SQL Server por meio de T-SQL. |
+|[azdata notebook](reference-azdata-notebook.md) | Comandos para exibir, executar e gerenciar notebooks de um terminal. |
 ## <a name="azdata-login"></a>azdata login
-Quando o cluster for implantado, ele listará o ponto de extremidade do controlador durante a implantação, que você deverá usar para fazer logon.  Se você não conhecer o ponto de extremidade do controlador, você poderá fazer logon colocando a configuração de kube do seu cluster na localização padrão <user home>/.kube/config ou usando a variável de ambiente KUBECONFIG, ou seja, exportar KUBECONFIG=path/to/.kube/config.
+Quando o cluster for implantado, ele listará o ponto de extremidade do controlador durante a implantação, que você deverá usar para fazer logon.  Se você não conhecer o ponto de extremidade do controlador, você poderá fazer logon colocando a configuração de kube do seu cluster na localização padrão <user home>/.kube/config ou usando a variável de ambiente KUBECONFIG, ou seja, exportar KUBECONFIG=path/to/.kube/config.  Quando você fizer logon, o namespace desse cluster será definido como seu contexto ativo.
 ```bash
-azdata login [--cluster-name -n] 
-             [--controller-username -u]  
-             [--controller-endpoint -e]  
-             [--accept-eula -a]
+azdata login [--auth] 
+             [--endpoint -e]  
+             [--accept-eula -a]  
+             [--namespace -n]  
+             [--username -u]  
+             [--principal -p]
 ```
 ### <a name="examples"></a>Exemplos
-Fazer logon interativamente. O nome do cluster será sempre solicitado se não for especificado como um argumento. Se você tiver as variáveis de env CONTROLLER_USERNAME, CONTROLLER_PASSWORD e ACCEPT_EULA definidas em seu sistema, elas não serão solicitadas. Se você tiver a configuração de kube em seu sistema ou estiver usando a variável de ambiente KUBECONFIG para especificar o caminho para a configuração, a experiência interativa primeiro tentará usar a configuração e, em seguida, a solicitará se a configuração falhar.
+Faça logon usando autenticação Básica.
+```bash
+azdata login --auth basic --username johndoe --endpoint https://<ip or domain name>:30080            
+```
+Faça logon usando o Active Directory.
+```bash
+azdata login --auth ad --endpoint https://<ip or domain name>:30080                
+```
+Faça logon usando o Active Directory com uma entidade de segurança explícita.
+```bash
+azdata login --auth ad --principal johndoe@COSTOSO.COM --endpoint https://<ip or domain name>:30080
+```
+Fazer logon interativamente. O nome do cluster será sempre solicitado se não for especificado como um argumento. Se você tiver as variáveis de env AZDATA_USERNAME, AZDATA_PASSWORD e ACCEPT_EULA definidas em seu sistema, elas não serão solicitadas. Se você tiver a configuração de kube em seu sistema ou estiver usando a variável de ambiente KUBECONFIG para especificar o caminho para a configuração, a experiência interativa primeiro tentará usar a configuração e, em seguida, a solicitará se a configuração falhar.
 ```bash
 azdata login
 ```
-Fazer logon (não interativamente). Fazer logon com o nome do cluster, o nome de usuário do controlador, o ponto de extremidade do controlador e o a aceitação do EULA definidos como argumentos. A variável de ambiente CONTROLLER_PASSWORD precisa ser definida.  Se você não quiser especificar o ponto de extremidade do controlador, coloque a configuração de kube em seu computador na localização padrão <user home>/.kube/config ou usando a variável de env KUBECONFIG, ou seja, exportar KUBECONFIG=path/to/.kube/config.
+Fazer logon (não interativamente). Fazer logon com o nome do cluster, o nome de usuário do controlador, o ponto de extremidade do controlador e o a aceitação do EULA definidos como argumentos. A variável de ambiente AZDATA_PASSWORD precisa ser definida.  Se você não quiser especificar o ponto de extremidade do controlador, coloque a configuração de kube em seu computador na localização padrão <user home>/.kube/config ou usando a variável de env KUBECONFIG, ou seja, exportar KUBECONFIG=path/to/.kube/config.
 ```bash
-azdata login --cluster-name ClusterName --controller-user johndoe@contoso.com  --controller-endpoint https://<ip>:30080 --accept-eula yes
+azdata login --namespace ClusterName --username johndoe@contoso.com  --endpoint https://<ip or domain name>:30080 --accept-eula yes
 ```
-Fazer logon com configuração de kube no computador e definir as variáveis de ambiente CONTROLLER_USERNAME, CONTROLLER_PASSWORD e ACCEPT_EULA.
+Fazer logon com configuração de kube no computador e definir as variáveis de ambiente AZDATA_USERNAME, AZDATA_PASSWORD e ACCEPT_EULA.
 ```bash
 azdata login -n ClusterName
 ```
 ### <a name="optional-parameters"></a>Parâmetros opcionais
-#### `--cluster-name -n`
-Nome do cluster.
-#### `--controller-username -u`
-Usuário da conta. Se não quiser usar esse argumento, você poderá definir a variável de ambiente CONTROLLER_USERNAME.
-#### `--controller-endpoint -e`
+#### `--auth`
+A estratégia de autenticação. Autenticação básica ou do Active Directory. O padrão é a autenticação "básica".
+#### `--endpoint -e`
 Ponto de extremidade do controlador de cluster "https://host:port". Se não quiser usar esse argumento, você poderá usar a configuração de kube em seu computador. Verifique se a configuração está localizada na localização padrão de <user home>/.kube/config ou use a variável de ambiente KUBECONFIG.
 #### `--accept-eula -a`
-Você aceita os termos de licença? [sim/não]. Se não quiser usar esse argumento, você poderá definir a variável de ambiente ACCEPT_EULA como 'sim'. 
+Você aceita os termos de licença? [sim/não]. Se não quiser usar esse argumento, você poderá definir a variável de ambiente ACCEPT_EULA como 'sim'. Os termos de licença desse produto podem ser exibidos em https://aka.ms/eula-azdata-en.
+#### `--namespace -n`
+Namespace do plano de controle do cluster.
+#### `--username -u`
+Usuário da conta. Se não quiser usar esse argumento, você poderá definir a variável de ambiente AZDATA_USERNAME.
+#### `--principal -p`
+Seu realm do Kerberos. Na maioria dos casos, o realm do Kerberos é seu nome de domínio em letras maiúsculas.
 ### <a name="global-arguments"></a>Argumentos globais
 #### `--debug`
 Aumente o detalhamento do log para mostrar todos os logs de depuração.
@@ -94,4 +116,4 @@ Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- Para obter mais informações sobre como instalar a ferramenta **azdata**, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](deploy-install-azdata.md).
+Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md). Para obter mais informações sobre como instalar a ferramenta `azdata`, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](deploy-install-azdata.md).

@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3f4f4bad8bbe72681b699af25b87eb4a533b7002
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 3e86da652231a06cd28318096ada3ae3aed7526e
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653526"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531230"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Instalar as Extensões de linguagem (Java) do SQL Server 2019 no Linux
 
@@ -29,9 +29,11 @@ A localização do pacote das extensões Java está nos repositórios de origem 
 
 As extensões de linguagem também são compatíveis com contêineres do Linux. Não fornecemos contêineres pré-criados com as extensões de linguagem, mas você pode criar um com base nos contêineres de SQL Server usando [um modelo disponível no GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-## <a name="uninstall-previous-ctp-version"></a>Desinstalar a versão anterior do CTP
+As Extensões de Linguagem e os [Serviços de Machine Learning](../advanced-analytics/index.yml) são instalados por padrão em Clusters de Big Data do SQL Server. Se você usar Clusters de Big Data, não precisará seguir as etapas neste artigo. Para obter mais informações, confira [Usar Serviços de Machine Learning (Python e R) em Clusters de Big Data](../big-data-cluster/machine-learning-services.md).
 
-A lista de pacotes foi alterada nas últimas versões de CTP, resultando em menos pacotes. Recomendamos desinstalar a versão do CTP para remover todos os pacotes anteriores antes de instalar o RC 1. Não há suporte para a instalação lado a lado de várias versões.
+## <a name="uninstall-preview-version"></a>Desinstalar a versão prévia
+
+Se você tiver instalado uma versão prévia (CTP [Community Technical Preview] ou RC [versão Release Candidate]), recomendamos desinstalar esta versão para remover todos os pacotes anteriores antes de instalar o SQL Server 2019. Não há suporte para a instalação lado a lado de várias versões e a lista de pacotes mudou nas últimas versões de versão prévia (CTP/RC).
 
 ### <a name="1-confirm-package-installation"></a>1. Confirmar instalação do pacote
 
@@ -41,7 +43,7 @@ Você pode verificar a existência de uma instalação anterior como uma primeir
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-packages"></a>2. Desinstalar pacotes anteriores do CTP
+### <a name="2-uninstall-previous-ctprc-packages"></a>2. Desinstalar pacotes anteriores do CTP/RC
 
 Desinstale no nível mais baixo do pacote. Qualquer pacote upstream dependente de um pacote de nível inferior é desinstalado automaticamente.
 
@@ -55,7 +57,7 @@ Os comandos para remover os pacotes aparecem na tabela a seguir.
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-install-release-candidate-1-rc-1"></a>3. Instalar versão Release Candidate 1 (RC 1)
+### <a name="3-install-sql-server-2019"></a>3. Instalar o SQL Server 2019
 
 Instale no nível mais alto do pacote usando as instruções neste artigo relativas ao seu sistema operacional.
 
@@ -86,7 +88,7 @@ Em um dispositivo conectado à Internet, os pacotes são baixados e instalados i
 | Nome do pacote | Aplica-se a | Descrição |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | Todos os idiomas | Estrutura de extensibilidade usada para a extensão de linguagem Java |
-|mssql-server-extensibility-java | Java | Estrutura de extensibilidade usada para a extensão de linguagem Java, incluindo suporte a um tempo de execução Java |
+|mssql-server-extensibility-java | Java | Estrutura de extensibilidade usada para a extensão de linguagem Java, incluindo suporte a um runtime Java |
 
 <a name="RHEL"></a>
 
@@ -286,12 +288,9 @@ mssql-server-extensibility-15.0.1000
 mssql-server-extensibility-java-15.0.1000
 ```
 
-## <a name="limitations-in-the-rc-1-release"></a>Limitações na versão RC 1
-
-As extensões de linguagem e a extensibilidade do Java no Linux ainda estão em desenvolvimento ativo. Os recursos a seguir ainda não estão habilitados na versão prévia.
+## <a name="limitations"></a>Limitações
 
 + A autenticação implícita não está disponível no Linux no momento, o que significa que você não pode se conectar de volta ao servidor de um Java em andamento para acessar dados ou outros recursos.
-
 
 ### <a name="resource-governance"></a>Governança de recursos
 

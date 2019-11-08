@@ -1,32 +1,32 @@
 ---
-title: referência de status do aplicativo BDC azdata
+title: azdata bdc app status reference
 titleSuffix: SQL Server big data clusters
-description: Artigo de referência para comandos de status do aplicativo BDC azdata.
+description: Artigo de referência para comandos azdata bdc app status.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7ebf442b3bf87960d081bfe4b0867cdd082ec22a
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.openlocfilehash: 4435a1683b42b48e83aa2902aaba59c4b7a2ab22
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158091"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531867"
 ---
-# <a name="azdata-bdc-app-status"></a>status do aplicativo BDC azdata
+# <a name="azdata-bdc-app-status"></a>azdata bdc app status
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Este artigo é um artigo de referência para **azdata**. 
+O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Commands
 |     |     |
 | --- | --- |
-[Mostrar status do aplicativo azdata BDC](#azdata-bdc-app-status-show) | Status do serviço de aplicativo.
-## <a name="azdata-bdc-app-status-show"></a>Mostrar status do aplicativo azdata BDC
+[azdata bdc app status show](#azdata-bdc-app-status-show) | Status do serviço de aplicativo.
+## <a name="azdata-bdc-app-status-show"></a>azdata bdc app status show
 Status do serviço de aplicativo.
 ```bash
 azdata bdc app status show [--resource -r] 
@@ -41,7 +41,7 @@ Obter o status do serviço de aplicativo com todas as instâncias.
 ```bash
 azdata bdc app status show --all
 ```
-Obtenha o status do recurso appproxy no serviço de aplicativo.
+Obter o status do recurso appproxy no serviço de aplicativo.
 ```bash
 azdata bdc app status show --resource appproxy
 ```
@@ -58,12 +58,10 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md). 
-
-- Para obter mais informações sobre como instalar a ferramenta **azdata**, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](deploy-install-azdata.md).
+Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md). Para obter mais informações sobre como instalar a ferramenta `azdata`, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](deploy-install-azdata.md).

@@ -27,12 +27,12 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfb568170a549fe7c952807e7aa7dda6b7fca854
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 7d3eda2a9f3f3756fd2fdc0095b999dcde189d83
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278198"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988438"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ Essa função retorna um inteiro que representa o *datepart* especificado do arg
   
 Consulte [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) para obter uma visão geral de todos os tipos de dados e funções de data e hora do [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -95,7 +95,7 @@ Cada *datepart* retorna o mesmo valor das abreviações dela.
   
 O valor retornado depende do ambiente de idioma definido por meio da instrução [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) e por [Configurar a opção de configuração do servidor de idioma padrão](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) do logon. O valor retornado depende de [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) se *date* é uma literal de cadeia de caracteres de alguns formatos. SET DATEFORMAT não altera o valor retornado quando a data é uma expressão de coluna de um tipo de dados de data ou de hora.
   
-Esta tabela lista todos os argumentos *datepart* com valores retornados correspondentes para a instrução `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')`. O argumento *date* tem um tipo de dados **datetimeoffset(7)**. As duas últimas posições do valor retornado **nanosecond** *datepart* são sempre `00` e esse valor tem uma escala de 9:
+Esta tabela lista todos os argumentos *datepart* com valores retornados correspondentes para a instrução `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')`. O argumento *date* tem um tipo de dados **datetimeoffset(7)** . As duas últimas posições do valor retornado **nanosecond** *datepart* são sempre `00` e esse valor tem uma escala de 9:
 
 **.123456700**
   
@@ -119,19 +119,15 @@ Esta tabela lista todos os argumentos *datepart* com valores retornados correspo
 ## <a name="week-and-weekday-datepart-arguments"></a>Argumentos week e weekday de datepart
 Quando *datepart* é **week** (**wk**, **ww**) ou **weekday** (**dw**), o valor retornado `DATEPART` depende do valor definido usando [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
   
-1º de janeiro de qualquer ano define o número inicial para o **week**_datepart_. Por exemplo:
+O dia 1º de janeiro de qualquer ano define o número inicial para o **week** _datepart_. Por exemplo:
 
 DATEPART (**wk**, 'Jan 1, *xxx*x') = 1
 
 em que *xxxx* é qualquer ano.
   
-Esta tabela mostra o valor retornado para **week** e **weekday** *datepart* para
+Esta tabela lista o valor retornado por **week** e **weekday** *datepart* para '2007-04-21' para cada argumento SET DATEFIRST. 1º de janeiro de 2007 cai em uma segunda-feira. 21 de abril de 2007 cai em um sábado. Para o Inglês (Estados Unidos),
 
-'2007-04-21 '
-
-para cada argumento SET DATEFIRST. 1º de janeiro de 2007 cai em uma segunda-feira. 21 de abril de 2007 cai em um sábado. Para o Inglês (Estados Unidos),
-
-SET DATEFIRST 7 -- ( Sunday )
+`SET DATEFIRST 7 -- ( Sunday )`
 
 funciona como o padrão. Depois de definir DATEFIRST, use essa instrução SQL sugerida para os valores da tabela datepart:
 

@@ -1,26 +1,26 @@
 ---
 title: Montagem ADLS Gen2 para camadas do HDFS
 titleSuffix: How to mount ADLS Gen2
-description: Este artigo explica como configurar a camada do HDFS para montar um sistema de arquivos de Azure Data Lake Storage externo no HDFS [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]em um.
+description: Este artigo explica como configurar a camada do HDFS para montar um sistema de arquivos externo do Azure Data Lake Storage no HDFS em um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 08/27/2019
+ms.date: 11/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f209d249fb0e289258aa20bbfafd8a715dc463d6
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
-ms.translationtype: MT
+ms.openlocfilehash: c2c2a6510688f8adf74e50ae76a626a00955019d
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118118"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531904"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Como montar o ADLS Gen2 para a camada do HDFS em um cluster de Big Data
 
 As seções a seguir fornecem um exemplo de como configurar a camada do HDFS com uma fonte de dados do Azure Data Lake Storage Gen2.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - [Cluster de Big Data implantado](deployment-guidance.md)
 - [Ferramentas de Big Data](deploy-big-data-tools.md)
@@ -44,38 +44,43 @@ A seção a seguir descreve como configurar o Azure Data Lake Storage Gen2 para 
 Para usar as credenciais do OAuth para montagem, é necessário seguir as etapas abaixo:
 
 1. Acesse o [portal do Azure](https://portal.azure.com)
-1. Navegue até "Azure Active Directory". Você deve ver esse serviço na barra de navegação à esquerda.
-1. Na barra de navegação à direita, selecione "Registros de aplicativo" e crie um novo registro
-1. Crie um "aplicativo Web e siga o assistente. **Lembre-se do nome do aplicativo que você criar aqui**. Você precisará adicionar esse nome à sua conta do ADLS como um usuário autorizado. Observe também a ID do cliente do aplicativo na visão geral quando você seleciona o aplicativo.
-1. Depois que o aplicativo Web for criado, vá para "certificados & segredos" e crie um **novo segredo do cliente** e selecione uma duração de chave. **Adicione** o segredo.
-1.  Volte para a página de registros do aplicativo e clique em "pontos de extremidade" na parte superior. **Anote o "ponto de extremidade do token OAuth (v2)** URL
+1. Navegue para o "Azure Active Directory". Você deve ver esse serviço na barra de navegação à esquerda.
+1. Na barra de navegação à direita, selecione "Registros de aplicativo" e crie um registro
+1. Crie um "Aplicativo Web e siga o assistente. **Lembre-se do nome do aplicativo que você cria aqui**. Você precisará adicionar esse nome à sua conta do ADLS como um usuário autorizado. Observe também a ID do cliente do aplicativo na visão geral ao selecionar o aplicativo.
+1. Depois que o aplicativo Web for criado, vá para "Certificados e segredos" e crie um **Novo segredo do cliente** e selecione uma duração de chave. **Adicione** o segredo.
+1.  Volte à página Registros de aplicativo e clique em "Pontos de Extremidade" na parte superior. **Anote a URL do "ponto de extremidade do token OAuth (v2)**
 1. Agora você deverá ter os seguintes itens anotados para o OAuth:
 
-    - A "ID do cliente do aplicativo" do aplicativo Web
+    - A "ID do Cliente do Aplicativo" do aplicativo Web
     - O segredo do cliente
     - O ponto de extremidade do token
 
 ### <a name="adding-the-service-principal-to-your-adls-account"></a>Como adicionar a entidade de serviço à sua conta do ADLS
 
-1. Acesse o portal novamente e navegue até o sistema de arquivos da conta de armazenamento ADLS e selecione controle de acesso (IAM) no menu à esquerda.
-1. Selecione "adicionar uma atribuição de função" 
-1. Selecione a função "colaborador de dados de blob de armazenamento"
-1. Pesquise o nome que você criou acima (Observe que ele não aparece na lista, mas será encontrado se você pesquisar o nome completo).
+1. Acesse o portal novamente e navegue até o sistema de arquivos da conta de armazenamento do ADLS e selecione controle de acesso (IAM) no menu à esquerda.
+1. Selecione "Adicionar uma atribuição de função" 
+1. Selecione a função "Colaborador de Dados de Blob de Armazenamento"
+1. Pesquise o nome criado acima (observe que ele não aparece na lista, mas será encontrado se você pesquisar o nome completo).
 1. Salve a função.
 
 Aguarde 5 a 10 minutos para usar as credenciais para montagem
 
 ### <a name="set-environment-variable-for-oauth-credentials"></a>Definir uma variável de ambiente para as credenciais do OAuth
 
-Abra um prompt de comando em um computador cliente que possa acessar o cluster de Big Data. Defina uma variável de ambiente usando o seguinte formato: Observe que as credenciais precisam estar em uma lista separada por vírgula. O comando 'set' é usado no Windows. Se estiver usando o Linux, use 'export'.
+Abra um prompt de comando em um computador cliente que possa acessar o cluster de Big Data. Defina uma variável de ambiente usando o formato a seguir. As credenciais precisam estar em uma lista separada por vírgula. O comando 'set' é usado no Windows. Se estiver usando o Linux, use 'export'.
+
+**Observe** que você precisa remover qualquer quebra de linha ou espaço entre as vírgulas "," ao fornecer as credenciais. A formatação abaixo é apenas para facilitar a leitura.
 
    ```text
     set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
     fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
     fs.azure.account.oauth2.client.endpoint=[token endpoint],
     fs.azure.account.oauth2.client.id=[Application client ID],
-    fs.azure.account.oauth2.client.secret=[client secret]
+    fs.azure.account.oauth2.client.secret=[client secret],
+    fs.abfs.impl.disable.cache=true
    ```
+   
+O comportamento padrão no driver ADLS é armazenar as credenciais em cache. Isso significa que as credenciais incorretas também serão armazenadas em cache e poderão resultar em problemas se, na primeira tentativa de montagem, você inserir as credenciais erradas. A última parte (fs.abfs.impl.disable.cache=true) da credencial acima desabilita esse cache.
 
 ## <a name="use-access-keys-to-mount"></a>Usar chaves de acesso para montagem
 
@@ -88,12 +93,17 @@ Você também pode fazer a montagem usando chaves de acesso que podem ser obtida
 
 1. Abra um prompt de comando em um computador cliente que possa acessar o cluster de Big Data.
 
-1. Abra um prompt de comando em um computador cliente que possa acessar o cluster de Big Data. Defina uma variável de ambiente usando o formato a seguir. Observe que as credenciais precisam estar em uma lista separada por vírgula. O comando 'set' é usado no Windows. Se estiver usando o Linux, use 'export'.
+1. Abra um prompt de comando em um computador cliente que possa acessar o cluster de Big Data. Defina uma variável de ambiente usando o formato a seguir. As credenciais precisam estar em uma lista separada por vírgula. O comando 'set' é usado no Windows. Se estiver usando o Linux, use 'export'.
+
+**Observe** que você precisa remover qualquer quebra de linha ou espaço entre as vírgulas "," ao fornecer as credenciais. A formatação abaixo é apenas para facilitar a leitura.
 
    ```text
    set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
-   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
+   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>,
+   fs.abfs.impl.disable.cache=true
    ```
+   
+O comportamento padrão no driver ADLS é armazenar as credenciais em cache. Isso significa que as credenciais incorretas também serão armazenadas em cache e poderão resultar em problemas se, na primeira tentativa de montagem, você inserir as credenciais erradas. A última parte (fs.abfs.impl.disable.cache=true) da credencial acima desabilita esse cache.
 
 ## <a id="mount"></a> Montar o armazenamento HDFS remoto
 
@@ -112,7 +122,7 @@ Agora que você definiu a variável de ambiente MOUNT_CREDENTIALS para chaves de
    ```
 1. Defina a variável de ambiente MOUNT_CREDENTIALS (role a página para acima para obter as instruções)
 
-1. Monte o armazenamento HDFS remoto no Azure usando a **criação de montagem do azdata BDC HDFS**. Substitua os valores de espaço reservado antes de executar o seguinte comando:
+1. Monte o armazenamento HDFS remoto no Azure usando **azdata bdc hdfs mount create**. Substitua os valores de espaço reservado antes de executar o seguinte comando:
 
    ```bash
    azdata bdc hdfs mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
@@ -147,7 +157,7 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 
 ## <a id="delete"></a> Excluir a montagem
 
-Para excluir a montagem, use o comando **azdata BDC HDFS Mount Delete** e especifique o caminho de montagem no HDFS:
+Para excluir a montagem, use o comando **azdata bdc hdfs mount delete** e especifique o caminho da montagem no HDFS:
 
 ```bash
 azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
@@ -155,4 +165,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]sobre o, consulte [o que são [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+Para obter mais informações sobre [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], confira [O que são [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

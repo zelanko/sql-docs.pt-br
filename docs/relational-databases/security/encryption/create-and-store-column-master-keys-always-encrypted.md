@@ -1,24 +1,24 @@
 ---
-title: Criar e armazenar chaves mestras de coluna (Always Encrypted) | Microsoft Docs
+title: Criar e armazenar chaves mestras de coluna para o Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 07/01/2016
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8f9dbfc7f75d853232e0074d52735e9e38d68d5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a090adbfbaae886ef11e848c1296d1d4e300521a
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72902960"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594433"
 ---
-# <a name="create-and-store-column-master-keys-always-encrypted"></a>Criar e armazenar chaves mestras de coluna (Always Encrypted)
+# <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Criar e armazenar chaves mestras de coluna para Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 *Chaves mestras de coluna* são chaves de proteção de chave usadas no Always Encrypted para criptografar chaves de criptografia de coluna. As chaves mestras de coluna devem ser armazenadas em um repositório de chaves confiável e precisam estar acessíveis aos aplicativos que precisam criptografar ou descriptografar dados e às ferramentas para a configuração do Sempre Criptografado e o gerenciamento de chaves Sempre Criptografado.
@@ -35,28 +35,20 @@ Há duas categorias de alto nível de repositórios de chaves a serem considerad
 
 * **Repositórios de Chaves Locais** – só podem ser usados por aplicativos em computadores que contêm o repositório de chaves local. Em outras palavras, você precisa replicar o repositório de chaves e a chave em cada computador que executa o aplicativo. Um exemplo de um repositório de chaves local é o Repositório de Certificados do Windows. Ao usar um repositório de chaves local, você precisa verificar se o repositório de chaves existe em todos os computadores que hospedam o aplicativo e se o computador contém as chaves mestras de coluna que o aplicativo precisa para acessar os dados protegidos usando o Sempre Criptografado. Quando você provisiona uma chave mestra de coluna pela primeira vez ou quando altera (gira) a chave, é necessário verificar se a chave é implantada em todos os computadores que hospedam o(s) aplicativo(s).
 
-* **Repositórios de Chaves Centralizados** – atende a aplicativos em vários computadores. Um exemplo de um repositório de chaves centralizado é o [Cofre de Chaves do Azure](https://azure.microsoft.com/services/key-vault/). Normalmente, um repositório de chaves centralizado facilita o gerenciamento de chaves, pois não é necessário manter várias cópias das chaves mestras de coluna em vários computadores. Você precisa garantir que os aplicativos estão configurados para se conectarem ao repositório de chaves centralizado.
+* **Repositórios de Chaves Centralizados** – atende a aplicativos em vários computadores. Um exemplo de um repositório de chaves centralizado é o [Cofre de Chaves do Azure](https://azure.microsoft.com/services/key-vault/). Normalmente, um repositório de chaves centralizado facilita o gerenciamento de chaves, pois não é necessário manter várias cópias das chaves mestras de coluna em vários computadores. Verifique se os aplicativos estão configurados para se conectarem ao repositório de chaves centralizado.
 
 ### <a name="which-key-stores-are-supported-in-always-encrypted-enabled-client-drivers"></a>Quais repositórios de chaves têm suporte em drivers de cliente habilitados para Sempre Criptografado?
 
-Drivers de cliente habilitados para Sempre Criptografado são drivers de cliente do SQL Server que têm suporte interno para incorporar o Sempre Criptografado nos aplicativos cliente. Os drivers habilitados para Sempre Criptografado incluem alguns provedores internos de repositórios de chaves populares. Observe que alguns drivers também permitem implementar e registrar um provedor personalizado de repositórios de chaves mestras de coluna, para que você possa usar qualquer repositório de chaves, mesmo se não houver nenhum provedor interno para ele. Ao decidir entre um provedor interno e um provedor personalizado, considere que o uso de um provedor interno, normalmente, significa menos alterações em seus aplicativos (em alguns casos, é necessária apenas a alteração de uma cadeia de conexão de banco de dados).
+Drivers de cliente habilitados para Sempre Criptografado são drivers de cliente do SQL Server que têm suporte interno para incorporar o Sempre Criptografado nos aplicativos cliente. Os drivers habilitados para Sempre Criptografado incluem alguns provedores internos de repositórios de chaves populares. Alguns drivers também permitem implementar e registrar um provedor personalizado de repositórios de chaves mestras de coluna, para que você possa usar qualquer repositório de chaves, mesmo se não houver nenhum provedor interno para ele. Ao decidir entre um provedor interno e um provedor personalizado, considere que o uso de um provedor interno, normalmente, significa menos alterações em seus aplicativos (em alguns casos, é necessária apenas a alteração de uma cadeia de conexão de banco de dados).
 
-Os provedores internos disponíveis dependem do driver, da versão do driver e do sistema operacional selecionados.  Confira a documentação do Sempre Criptografado de seu driver específico para determinar quais repositórios de chaves têm suporte pronto para uso e se o driver dá suporte a provedores personalizados de repositórios de chaves.
+Os provedores internos disponíveis dependem do driver, da versão do driver e do sistema operacional selecionados.  Confira a documentação do Always Encrypted de seu driver específico para determinar quais repositórios de chaves têm suporte pronto para uso e se o driver dá suporte a provedores personalizados de repositórios de chaves – [Desenvolver aplicativos usando o Always Encrypted](always-encrypted-client-development.md).
 
-- [Desenvolver aplicativos usando o Always Encrypted com o Provedor de Dados .NET Framework para SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-
-
-### <a name="supported-tools"></a>Ferramentas com suporte
-
-Você pode usar o [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) e o [módulo SqlServer do PowerShell](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) para configurar o Always Encrypted e gerenciar chaves dele. Para obter uma lista de quais repositórios de chaves essas ferramenta dão suporte, veja:
-
-- [Configurar o Always Encrypted usando o SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-- [Configurar o Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
-
+### <a name="which-key-stores-are-supported-in-sql-tools"></a>Quais repositórios de chaves têm suporte nas ferramentas SQL?
+O SQL Server Management Studio e o módulo do SqlServer do PowerShell dão suporte apenas a chaves mestras de coluna armazenadas no Azure Key Vault, no Repositório de Certificados do Windows e em repositórios de chaves que fornecem a API de CNG (Cryptography Next Generation) ou a CAPI (API de Criptografia). 
 
 ## <a name="creating-column-master-keys-in-windows-certificate-store"></a>Criando chaves mestras de coluna no Repositório de Certificados do Windows    
 
-Uma chave mestra de coluna pode ser um certificado armazenado no Repositório de Certificados do Windows. Observe que um driver habilitado para Sempre Criptografado não verifica uma data de validade nem uma cadeia de autoridade de certificado. Um certificado é usado apenas como um par de chaves consistindo em uma chave pública e uma chave privada.
+Uma chave mestra de coluna pode ser um certificado armazenado no Repositório de Certificados do Windows. Um driver habilitado para Always Encrypted não verifica uma data de validade nem uma cadeia de autoridade de certificado. Um certificado é usado apenas como um par de chaves consistindo em uma chave pública e uma chave privada.
 
 Para ser uma chave mestra de coluna válida, um certificado deve:
 * ser um certificado X.509.
@@ -82,7 +74,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 
 ### <a name="create-a-self-signed-certificate-using-sql-server-management-studio-ssms"></a>Criar um certificado autoassinado usando o SSMS (SQL Server Management Studio)
 
-Para obter detalhes, veja [Configure Always Encrypted using SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)(Configurar o Sempre Criptografado usando o SQL Server Management Studio).
+Para obter detalhes, confira [Provisionar chaves Always Encrypted usando o SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 Para obter um tutorial passo a passo que usa o SSMS e armazena as chaves do Always Encrypted no Repositório de Certificados do Windows, veja [Always Encrypted – Proteger dados confidenciais no Banco de Dados SQL com a criptografia de banco de dados e armazenar as chaves de criptografia no Repositório de Certificados do Windows](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).
 
 
@@ -113,7 +105,7 @@ Para conceder a um usuário a permissão *Leitura* para um certificado armazenad
 
 O Cofre de Chaves do Azure ajudará a proteger segredos e chaves de criptografia, sendo uma opção conveniente para armazenar chaves mestras de coluna do Sempre Criptografado, especialmente se seus aplicativos estiverem hospedados no Azure. Para criar uma chave no [Cofre de Chaves do Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), é necessário ter uma [assinatura do Azure](https://azure.microsoft.com/free/) e um Cofre de Chaves do Azure.
 
-#### <a name="using-powershell"></a>Usando o PowerShell
+### <a name="using-powershell"></a>Usando o PowerShell
 
 O exemplo a seguir cria um novo Cofre de Chaves do Azure e uma chave e, em seguida, concede permissões ao usuário desejado.
 
@@ -132,8 +124,9 @@ Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
 ```
 
-#### <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
+### <a name="using-sql-server-management-studio-ssms"></a>Usando o SSMS (SQL Server Management Studio)
 
+Para obter detalhes sobre como criar uma chave mestra de coluna no Azure Key Vault usando o SSMS, confira [Provisionar chaves Always Encrypted usando o SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 Para obter um tutorial passo a passo que usa o SSMS e armazena as chaves do Always Encrypted em um Cofre de Chaves do Azure, veja [Always Encrypted – Proteger dados confidenciais no Banco de Dados SQL com a criptografia de dados e armazenar as chaves de criptografia no Cofre de Chaves do Azure](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault).
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>Disponibilizando as chaves do Cofre de Chaves do Azure para aplicativos e usuários
@@ -195,8 +188,7 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 #### <a name="using-sql-server-management-studio"></a>Usando o SQL Server Management Studio
 
-Veja [Provisioning Column Master using SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt757096.aspx#Anchor_2)(Provisionando chaves mestras usando o SQL Server Management Studio [SSMS]).
-
+Confira [Provisionar chaves Always Encrypted usando o SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>Disponibilizando chaves do CNG para aplicativos e usuários
 
@@ -206,7 +198,10 @@ Confira a documentação do HSM e do KSP para saber como configurar o KSP em um 
 
 Uma chave mestra de coluna do Sempre Criptografado pode ser armazenada em um repositório de chaves que implementa a CAPI (Cryptography API). Normalmente, um repositório desse tipo é um HSM (módulo de segurança de hardware) – um dispositivo físico que protege e gerencia chaves digitais e fornece processamento de criptografia. Tradicionalmente, os HSMs são fornecidos na forma de um cartão plug-in ou um dispositivo externo que é anexado diretamente a um computador (HSMs locais) ou a um servidor de rede.
 
-Para disponibilizar um HSM para aplicativos em determinado computador, um CSP (Provedor de Serviços de Criptografia), que implementa a CAPI, deve ser instalado e configurado no computador. Um driver de cliente do Sempre Criptografado (um provedor de repositórios de chaves mestras de coluna no driver), usa o CSP para criptografar e descriptografar as chaves de criptografia de coluna, protegidas com a chave mestra de coluna armazenada no repositório de chaves. Observação: A CAPI é uma API herdada e preterida. Se um KSP estiver disponível para o HSM, será recomendável usá-lo, em vez de um CSP ou uma CAPI.
+Para disponibilizar um HSM para aplicativos em determinado computador, um CSP (Provedor de Serviços de Criptografia), que implementa a CAPI, deve ser instalado e configurado no computador. Um driver de cliente do Sempre Criptografado (um provedor de repositórios de chaves mestras de coluna no driver), usa o CSP para criptografar e descriptografar as chaves de criptografia de coluna, protegidas com a chave mestra de coluna armazenada no repositório de chaves. 
+
+> [!NOTE]
+> A CAPI é uma API herdada e preterida. Se um KSP estiver disponível para o HSM, será recomendável usá-lo, em vez de um CSP ou uma CAPI.
 
 Um CSP deve dar suporte ao algoritmo RSA para ser usado com o Sempre Criptografado.
 
@@ -220,25 +215,15 @@ Uma chave mestra de coluna deve ser uma chave assimétrica (um par de chaves pú
 Confira a documentação do HSM.
 
 #### <a name="using-sql-server-management-studio-ssms"></a>Usando o SSMS (SQL Server Management Studio)
-Veja a seção Provisionando chaves mestras de coluna em Configure Always Encrypted using SQL Server Management Studio (Configurar o Sempre Criptografado usando o SQL Server Management Studio).
+Confira [Provisionar chaves Always Encrypted usando o SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 
- 
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>Disponibilizando chaves do CNG para aplicativos e usuários
 Confira a documentação do HSM e do CSP para saber como configurar o CSP em um computador e conceder acesso ao HSM a aplicativos e usuários.
  
- 
 ## <a name="next-steps"></a>Next Steps  
+- [Provisionar chaves Always Encrypted usando o SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
+- [Provisionar chaves do Always Encrypted usando o PowerShell](configure-always-encrypted-keys-using-powershell.md)
   
-- [Configurar chaves do Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-- [Girar chaves Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [Configurar o Always Encrypted usando o SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-  
-## <a name="additional-resources"></a>Recursos adicionais  
-
-- [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [Always Encrypted (mecanismo de banco de dados)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Desenvolver aplicativos usando o Always Encrypted com o Provedor de Dados .NET Framework para SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [Blog do Always Encrypted](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
-    
-
+## <a name="see-also"></a>Consulte Também 
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Visão geral do gerenciamento de chaves do Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  

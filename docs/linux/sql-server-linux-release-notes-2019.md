@@ -3,17 +3,16 @@ title: Notas sobre a versão do SQL Server 2019 em Linux
 description: Este artigo contém as notas sobre a versão e os recursos com suporte do SQL Server 2019 em execução no Linux. As notas sobre a versão aqui incluídas são para a versão mais recente, bem como para diversas versões anteriores.
 author: VanMSFT
 ms.author: vanto
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: af3b6f82e3b76e2dd2b11403bccf4b3e0885912e
-ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
+ms.openlocfilehash: 8edcbf91c827ea2afafa0830aad5a26423102f17
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69890897"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594545"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Notas sobre a versão do SQL Server 2019 em Linux
 
@@ -29,7 +28,7 @@ As notas sobre a versão a seguir se aplicam ao SQL Server 2019 em execução no
 | Plataforma | Sistema de Arquivos | Guia de Instalação |
 |-----|-----|-----|
 | Red Hat Enterprise Linux 7.3, 7.4, 7.5 ou 7.6 Server | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2 | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-suse.md) |
+| SUSE Enterprise Linux Server v12 SP2, SP3 ou SP4 | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04 LTS | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-ubuntu.md) | 
 | Docker Engine 1.8+ no Windows, Mac ou Linux | N/A | [Guia de instalação](quickstart-install-connect-docker.md) | 
 
@@ -42,33 +41,39 @@ A maioria das ferramentas de cliente existentes que se destinam ao SQL Server po
 
 ## <a name="release-history"></a>Histórico de versões
 
-A tabela a seguir lista o histórico de lançamento da versão prévia do SQL Server 2019.
+A tabela a seguir lista o histórico de versões do SQL Server 2019.
 
 | Versão                   | Versão       | Data de liberação |
 |---------------------------|---------------|--------------|
-| [Versão Release Candidate](#rc)  | 15.0.1900.25  | 2019-8-21    |
-| [CTP 3.2](#CTP32)         | 15.0.1800.32  | 24/7/2019    |
-| [CTP 3.1](#CTP31)         | 15.0.1700.37  | 26/6/2019    |
-| [CTP 3.0](#CTP30)         | 15.0.1600.8   | 22/5/2019    |
-| [CTP 2.5](#CTP25)         | 15.0.1500.28  | 24/4/2019    |
-| [CTP 2.4](#CTP24)         | 15.0.1400.75  | 27/3/2019    |
-| [CTP 2.3](#CTP23)         | 15.0.1300.359 | 1/3/2019    |
-| [CTP 2.2](#CTP22)         | 15.0.1200.24  | 11/12/2018   |
-| [CTP 2.1](#CTP21)         | 15.0.1100.94  | 6/11/2018   |
-| [CTP 2.0](#CTP20)         | 15.0.1000.34  | 24/9/2018   |
+| [GA](#ga)                 | 15.0.2000.5  | 2019-11-04    |
+| [Versão Release Candidate](#rc)  | 15.0.1900.25  | 2019-08-21   |
 
 ## <a id="cuinstall"></a> Como instalar atualizações
 
-Se você configurou o repositório da versão prévia (**mssql-server-preview**), obterá os pacotes mais recentes de CTP do SQL Server ao executar novas instalações. Se você precisar de imagens de contêiner do Docker, vejas as imagens oficiais para [Microsoft SQL Server em Linux para Docker Engine](https://hub.docker.com/r/microsoft/mssql-server/). Para obter mais informações sobre a configuração do repositório, confira [Configurar repositórios para SQL Server em Linux](sql-server-linux-change-repo.md).
+Se tiver configurado o repositório da CU (mssql-server-2019), você obterá a CU mais recente dos pacotes do SQL Server quando executar novas instalações. Se você precisar de imagens de contêiner do Docker, vejas as imagens oficiais para [Microsoft SQL Server em Linux para Docker Engine](https://hub.docker.com/r/microsoft/mssql-server/). Para obter mais informações sobre a configuração do repositório, confira [Configurar repositórios para SQL Server em Linux](sql-server-linux-change-repo.md).
 
 Se você estiver atualizando pacotes de SQL Server existentes, execute o comando de atualização adequado para cada pacote a fim de obter a CU mais recente. Para obter instruções de atualização específicas para cada pacote, confira os seguintes guias de instalação:
 
 - [Instalar pacote do SQL Server](sql-server-linux-setup.md#upgrade)
 - [Instalar pacote de Pesquisa de texto completo](sql-server-linux-setup-full-text-search.md)
 - [Instalar o SQL Server Integration Services](sql-server-linux-setup-ssis.md)
-- [Instalar o suporte ao R e Python dos Serviços de Machine Learning da versão prévia do SQL Server 2019 no Linux](sql-server-linux-setup-machine-learning.md)
+- [Instalar o suporte ao R e Python dos Serviços de Machine Learning do SQL Server 2019 no Linux](sql-server-linux-setup-machine-learning.md)
 - [Instalar pacote do PolyBase](../relational-databases/polybase/polybase-linux-setup.md)
 - [Habilitar o SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a id="ga"></a> GA (Novembro de 2019)
+
+Esta é a versão de GA (disponibilidade geral) do SQL Server 2019 (15.x). Esta versão do Mecanismo de Banco de Dados do Microsoft SQL Server é a 15.0.2000.5.
+
+### <a name="package-details"></a>Detalhes do pacote
+
+Para instalações de pacotes manuais ou offline, você pode baixar os pacotes RPM e Debian com as informações na tabela a seguir:
+
+| Pacote | Versão do pacote | Downloads |
+|-----|-----|-----|
+| Pacote RPM do Red Hat | 15.0.2000.5-5 | [Pacote RPM do mecanismo](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-15.0.2000.5-5.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-ha-15.0.2000.5-5.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-fts-15.0.2000.5-5.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-extensibility-15.0.2000.5-5.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-extensibility-java-15.0.2000.5-5.x86_64.rpm)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-polybase-15.0.2000.5-5.x86_64.rpm)|
+| Pacote RPM do SLES | 15.0.2000.5-5 | [Pacote RPM do mecanismo mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.2000.5-5.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.2000.5-5.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.2000.5-5.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.2000.5-5.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.2000.5-5.x86_64.rpm)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.2000.5-5.x86_64.rpm)|
+| Pacote Debian do Ubuntu 16.04 | 15.0.2000.5-5 | [Pacote Debian do mecanismo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.2000.5-5_amd64.deb)</br>[Pacote Debian de alta disponibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.2000.5-5_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.2000.5-5_amd64.deb)</br>[Pacote Debian de extensibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.2000.5-5_amd64.deb)</br>[Pacote Debian de extensibilidade do Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.2000.5-5_amd64.deb)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.2000.5-5_amd64.deb)|
 
 ## <a id="rc"></a> Versão Release Candidate (agosto de 2019)
 
@@ -84,173 +89,142 @@ Para instalações de pacotes manuais ou offline, você pode baixar os pacotes R
 | Pacote RPM do SLES | 15.0.1900.25-1 | [Pacote RPM do mecanismo mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1900.25-1.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1900.25-1.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1900.25-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1900.25-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1900.25-1.x86_64.rpm)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1900.25-1.x86_64.rpm)|
 | Pacote Debian do Ubuntu 16.04 | 15.0.1900.25-1 | [Pacote Debian do mecanismo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1900.25-1_amd64.deb)</br>[Pacote Debian de alta disponibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1900.25-1_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1900.25-1_amd64.deb)</br>[Pacote Debian de extensibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1900.25-1_amd64.deb)</br>[Pacote Debian de extensibilidade do Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1900.25-1_amd64.deb)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1900.25-1_amd64.deb)|
 
-## <a id="CTP32"></a> CTP 3.2 (julho de 2019)
+## <a name="known-issues"></a>Problemas conhecidos
 
-As seções a seguir fornecem locais de pacote e problemas conhecidos para a versão de CTP 3.2. Para saber mais sobre os novos recursos para o Linux no SQL Server 2019, confira [Novidades no SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+As seções a seguir descrevem problemas conhecidos com a versão de GA (Disponibilidade geral) do SQL Server 2019 (15.x) no Linux.
 
-### <a name="package-details"></a>Detalhes do pacote
+#### <a name="general"></a>Geral
 
-Para instalações de pacotes manuais ou offline, você pode baixar os pacotes RPM e Debian com as informações na tabela a seguir:
+- O comprimento do nome do host em que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é instalado precisa ter 15 caracteres ou menos. 
 
-| Pacote | Versão do pacote | Downloads |
-|-----|-----|-----|
-| Pacote RPM do Red Hat | 15.0.1800.32-1 | [Pacote RPM do mecanismo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1800.32-1.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1800.32-1.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1800.32-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1800.32-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1800.32-1.x86_64.rpm)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1800.32-1.x86_64.rpm)|
-| Pacote RPM do SLES | 15.0.1800.32-1 | [Pacote RPM do mecanismo mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1800.32-1.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1800.32-1.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1800.32-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1800.32-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1800.32-1.x86_64.rpm)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1800.32-1.x86_64.rpm)|
-| Pacote Debian do Ubuntu 16.04 | 15.0.1800.32-1 | [Pacote Debian do mecanismo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1800.32-1_amd64.deb)</br>[Pacote Debian de alta disponibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1800.32-1_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1800.32-1_amd64.deb)</br>[Pacote Debian de extensibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1800.32-1_amd64.deb)</br>[Pacote Debian de extensibilidade do Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1800.32-1_amd64.deb)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1800.32-1_amd64.deb)|
+    - **Resolução:** altere o nome em /etc/hostname para algo com 15 caracteres de comprimento ou menos.
 
-## <a id="CTP31"></a> CTP 3.1 (junho de 2019)
+- Definir manualmente a hora do sistema de maneira a voltar no tempo fará com que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pare de atualizar a hora do sistema interno dentro do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-As seções a seguir fornecem locais de pacote e problemas conhecidos para a versão de CTP 3.1. Para saber mais sobre os novos recursos para o Linux no SQL Server 2019, confira [Novidades no SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+    - **Resolução:** Reinicie o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-### <a name="package-details"></a>Detalhes do pacote
+- Há suporte apenas para instalações de instância única.
 
-Para instalações de pacotes manuais ou offline, você pode baixar os pacotes RPM e Debian com as informações na tabela a seguir:
+    - **Resolução:** Se quiser ter mais de uma instância em um determinado host, considere usar VMs ou contêineres do Docker. 
 
-| Pacote | Versão do pacote | Downloads |
-|-----|-----|-----|
-| Pacote RPM do Red Hat | 15.0.1700.37-2 | [Pacote RPM do mecanismo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1700.37-2.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1700.37-2.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1700.37-2.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1700.37-2.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1700.37-2.x86_64.rpm)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1700.37-2.x86_64.rpm)|
-| Pacote RPM do SLES | 15.0.1700.37-2 | [Pacote RPM do mecanismo mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1700.37-2.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1700.37-2.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1700.37-2.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1700.37-2.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1700.37-2.x86_64.rpm)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1700.37-2.x86_64.rpm)|
-| Pacote Debian do Ubuntu 16.04 | 15.0.1700.37-2 | [Pacote Debian do mecanismo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1700.37-2_amd64.deb)</br>[Pacote Debian de alta disponibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1700.37-2_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1700.37-2_amd64.deb)</br>[Pacote Debian de extensibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1700.37-2_amd64.deb)</br>[Pacote Debian de extensibilidade do Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1700.37-2_amd64.deb)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1700.37-2_amd64.deb)|
+- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] O Configuration Manager não pode se conectar ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em Linux.
 
-## <a id="CTP30"></a> CTP 3.0 (maio de 2019)
+- O idioma padrão do logon de **sa** é inglês.
 
-As seções a seguir fornecem locais de pacote e problemas conhecidos para a versão de CTP 3.0. Para saber mais sobre os novos recursos para o Linux no SQL Server 2019, confira [Novidades no SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+    - **Resolução:** Altere o idioma do logon do **sa** usando a instrução **ALTER LOGIN**.
 
-### <a name="package-details"></a>Detalhes do pacote
+#### <a name="databases"></a>Bancos de dados
 
-Para instalações de pacotes manuais ou offline, você pode baixar os pacotes RPM e Debian com as informações na tabela a seguir:
+- O banco de dados mestre não pode ser movido com o utilitário mssql-conf. Outros bancos de dados do sistema podem ser movidos usando mssql-conf.
 
-| Pacote | Versão do pacote | Downloads |
-|-----|-----|-----|
-| Pacote RPM do Red Hat | 15.0.1600.8-1 | [Pacote RPM do mecanismo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1600.8-1.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1600.8-1.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1600.8-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1600.8-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1600.8-1.x86_64.rpm)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1600.8-1.x86_64.rpm)|
-| Pacote RPM do SLES | 15.0.1600.8-1 | [Pacote RPM do mecanismo mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1600.8-1.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1600.8-1.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1600.8-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1600.8-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1600.8-1.x86_64.rpm)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1600.8-1.x86_64.rpm)|
-| Pacote Debian do Ubuntu 16.04 | 15.0.1600.8-1 | [Pacote Debian do mecanismo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1600.8-1_amd64.deb)</br>[Pacote Debian de alta disponibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1600.8-1_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1600.8-1_amd64.deb)</br>[Pacote Debian de extensibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1600.8-1_amd64.deb)</br>[Pacote Debian de extensibilidade do Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1600.8-1_amd64.deb)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1600.8-1_amd64.deb)|
+- Ao restaurar um banco de dados do qual foi feito backup no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em Windows, você deve usar a cláusula **WITH MOVE** na instrução Transact-SQL.
 
-### <a name="known-issues"></a>Problemas conhecidos
+- Determinados algoritmos (pacotes de criptografia) para o protocolo TLS não funcionam corretamente com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em Linux. Isso causa falhas de conexão ao tentar se conectar ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], bem como problemas de estabelecimento de conexões entre réplicas em grupos de alta disponibilidade.
 
-#### <a id="msdtc"></a> Coordenador de Transações Distribuídas da Microsoft
+   - **Resolução:** modifique o script de configuração **mssql.conf** para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no Linux para desabilitar pacotes de criptografia problemáticos, fazendo o seguinte:
 
-Atualmente, o MSDTC requer que as transações sejam não autenticadas. Por exemplo, se você estiver usando um servidor vinculado do SQL Server no Windows para SQL Server em Linux ou usar um aplicativo cliente do Windows para iniciar uma transação distribuída em relação ao SQL Server em Linux, o MSDTC no servidor/cliente Windows deverá usar a opção "Nenhuma Autenticação Necessária".
+      1. Adicione o seguinte a /var/opt/mssql/mssql.conf.
 
-## <a id="CTP25"></a> CTP 2.5 (abril de 2019)
+      ```
+      [network]
+      tlsciphers= AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!ECDHE-RSA-AES128-GCM-SHA256:!ECDHE-RSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES128-GCM-SHA256:!ECDHE-ECDSA-AES256-SHA384:!ECDHE-ECDSA-AES128-SHA256:!ECDHE-ECDSA-AES256-SHA:!ECDHE-ECDSA-AES128-SHA:!ECDHE-RSA-AES256-SHA384:!ECDHE-RSA-AES128-SHA256:!ECDHE-RSA-AES256-SHA:!ECDHE-RSA-AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA:!DHE-DSS-AES256-SHA256:!DHE-DSS-AES128-SHA256:!DHE-DSS-AES256-SHA:!DHE-DSS-AES128-SHA:!DHE-DSS-DES-CBC3-SHA:!NULL-SHA256:!NULL-SHA
+      ```
 
-As seções a seguir fornecem locais de pacote e problemas conhecidos para a versão de CTP 2.5. Para saber mais sobre os novos recursos para o Linux no SQL Server 2019, confira [Novidades no SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+         >[!NOTE]
+         >In the preceding code, `!` negates the expression. This tells OpenSSL to not use the following cipher suite.  
 
-### <a name="package-details"></a>Detalhes do pacote
+      1. Reinicie o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com o seguinte comando.
 
-Para instalações de pacotes manuais ou offline, você pode baixar os pacotes RPM e Debian com as informações na tabela a seguir:
+      ```bash
+      sudo systemctl restart mssql-server
+      ```
 
-| Pacote | Versão do pacote | Downloads |
-|-----|-----|-----|
-| Pacote RPM do Red Hat | 15.0.1500.28-1 | [Pacote RPM do mecanismo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1500.28-1.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1500.28-1.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1500.28-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1500.28-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1500.28-1.x86_64.rpm)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1500.28-1.x86_64.rpm)|
-| Pacote RPM do SLES | 15.0.1500.28-1 | [Pacote RPM do mecanismo mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1500.28-1.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1500.28-1.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1500.28-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1500.28-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1500.28-1.x86_64.rpm)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1500.28-1.x86_64.rpm)|
-| Pacote Debian do Ubuntu 16.04 | 15.0.1500.28-1 | [Pacote Debian do mecanismo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1500.28-1_amd64.deb)</br>[Pacote Debian de alta disponibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1500.28-1_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1500.28-1_amd64.deb)</br>[Pacote Debian de extensibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1500.28-1_amd64.deb)</br>[Pacote Debian de extensibilidade do Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1500.28-1_amd64.deb)</br>[Pacote RPM do PolyBase](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1500.28-1_amd64.deb)|
+- Bancos de dados do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] no Windows que usam OLTP in-memory não podem ser restaurados no SQL Server 2019 (15.x) no Linux. Para restaurar um banco de dados do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] que usa OLTP in-memory, primeiro atualize os bancos de dados para o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], o SQL Server 2017 ou o SQL Server 2019 no Windows antes de movê-los para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em Linux por meio de backup/restauração ou de desanexar/anexar.
 
-### <a name="known-issues"></a>Problemas conhecidos
+- A permissão de usuário **ADMINISTRAR OPERAÇÕES EM MASSA** não tem suporte no Linux no momento.
 
-#### <a id="msdtc"></a> Coordenador de Transações Distribuídas da Microsoft
+#### <a name="networking"></a>Rede
 
-Atualmente, o MSDTC requer que as transações sejam não autenticadas. Por exemplo, se você estiver usando um servidor vinculado do SQL Server no Windows para SQL Server em Linux ou usar um aplicativo cliente do Windows para iniciar uma transação distribuída em relação ao SQL Server em Linux, o MSDTC no servidor/cliente Windows deverá usar a opção "Nenhuma Autenticação Necessária".
+Recursos que envolvem conexões TCP de saída do processo sqlservr, como servidores vinculados ou Grupos de Disponibilidade, poderão não funcionar se ambas as condições a seguir forem atendidas:
 
-## <a id="CTP24"></a> CTP 2.4 (março de 2019)
+1. O servidor de destino é especificado como um nome de host e não como um endereço IP.
 
-As seções a seguir fornecem locais de pacote e problemas conhecidos para a versão de CTP 2.4. Para saber mais sobre os novos recursos para o Linux no SQL Server 2019, confira [Novidades no SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+1. A instância de origem tem IPv6 desabilitado no kernel. Para verificar se o sistema tem o IPv6 habilitado no kernel, todos os testes a seguir precisam ser aprovados:
 
-### <a name="package-details"></a>Detalhes do pacote
+   - `cat /proc/cmdline` imprimirá o cmdline de inicialização do kernel atual. A saída não deve conter `ipv6.disable=1`.
+   - O diretório /proc/sys/net/ipv6/ deve existir.
+   - Um programa em C que chama `socket(AF_INET6, SOCK_STREAM, IPPROTO_IP)` deve ter êxito – syscall deve retornar um fd != -1 e não falhar com EAFNOSUPPORT.
 
-Para instalações de pacotes manuais ou offline, você pode baixar os pacotes RPM e Debian com as informações na tabela a seguir:
+O erro exato depende do recurso. Para servidores vinculados, isso se manifesta como um erro de tempo limite de logon. Para grupos de disponibilidade, o DDL do `ALTER AVAILABILITY GROUP JOIN` no secundário falhará após 5 minutos com um erro de tempo limite de configuração de download.
 
-| Pacote | Versão do pacote | Downloads |
-|-----|-----|-----|
-| Pacote RPM do Red Hat | 15.0.1400.75-2 | [Pacote RPM do mecanismo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1400.75-2.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1400.75-2.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1400.75-2.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1400.75-2.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1400.75-2.x86_64.rpm)|
-| Pacote RPM do SLES | 15.0.1400.75-2 | [Pacote RPM do mecanismo mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1400.75-2.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1400.75-2.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1400.75-2.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1400.75-2.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1400.75-2.x86_64.rpm)|
-| Pacote Debian do Ubuntu 16.04 | 15.0.1400.75-2 | [Pacote Debian do mecanismo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1400.75-2_amd64.deb)</br>[Pacote Debian de alta disponibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1400.75-2_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1400.75-2_amd64.deb)</br>[Pacote Debian de extensibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1400.75-2_amd64.deb)</br>[Pacote Debian de extensibilidade do Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1400.75-2_amd64.deb)|
+Para contornar esse problema, adote uma das seguintes medidas:
 
-### <a name="known-issues"></a>Problemas conhecidos
+1. Use IPs em vez de nomes do host para especificar o destino da conexão TCP.
 
-#### <a id="msdtc"></a> Coordenador de Transações Distribuídas da Microsoft
+1. Habilite o IPv6 no kernel removendo `ipv6.disable=1` da inicialização de cmdline. A maneira de fazer isso depende da distribuição do Linux e do carregador de inicialização, como o grub. Se quiser que o IPv6 seja desabilitado, você ainda poderá desabilitá-lo configurando `net.ipv6.conf.all.disable_ipv6 = 1` na configuração de `sysctl` (por exemplo, `/etc/sysctl.conf`). Isso ainda impedirá que o adaptador de rede do sistema receba um endereço IPv6, mas permitirá que os recursos do sqlservr funcionem.
 
-Atualmente, o MSDTC requer que as transações sejam não autenticadas. Por exemplo, se você estiver usando um servidor vinculado do SQL Server no Windows para SQL Server em Linux ou usar um aplicativo cliente do Windows para iniciar uma transação distribuída em relação ao SQL Server em Linux, o MSDTC no servidor/cliente Windows deverá usar a opção "Nenhuma Autenticação Necessária".
+#### <a name="network-file-system-nfs"></a>NFS (sistema de arquivos de rede)
+Se você usar compartilhamentos remotos **NFS (Network File System)** em produção, observe os seguintes requisitos de suporte:
 
-## <a id="CTP23"></a> CTP 2.3 (fevereiro de 2019)
+- Use o NFS versão **4.2 ou superior**. As versões mais antigas do NFS não dão suporte aos recursos necessários, como fallocate e criação de arquivos esparsos, comuns aos sistemas de arquivos modernos.
+- Localize somente os diretórios **/var/opt/mssql** na montagem NFS. Não há suporte para outros arquivos, como os binários do sistema [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+- Verifique se os clientes NFS usam a opção 'nolock' ao montar o compartilhamento remoto.
 
-As seções a seguir fornecem locais de pacote e problemas conhecidos para a versão de CTP 2.3. Para saber mais sobre os novos recursos para o Linux no SQL Server 2019, confira [Novidades no SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+#### <a name="localization"></a>Localização
 
-### <a name="package-details"></a>Detalhes do pacote
+- Se a sua localidade não for inglês (en_us) durante a instalação, você precisará usar a codificação UTF-8 em sua sessão/terminal de Bash. Se usar a codificação ASCII, você poderá ver um erro semelhante ao seguinte:
 
-Para instalações de pacotes manuais ou offline, você pode baixar os pacotes RPM e Debian com as informações na tabela a seguir:
+   ```
+   UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 8: ordinal not in range(128)
+   ```
 
-| Pacote | Versão do pacote | Downloads |
-|-----|-----|-----|
-| Pacote RPM do Red Hat | 15.0.1300.359-1 | [Pacote RPM do mecanismo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1300.359-1.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1300.359-1.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1300.359-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1300.359-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1300.359-1.x86_64.rpm)|
-| Pacote RPM do SLES | 15.0.1300.359-1 | [Pacote RPM do mecanismo mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1300.359-1.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1300.359-1.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1300.359-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1300.359-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1300.359-1.x86_64.rpm)|
-| Pacote Debian do Ubuntu 16.04 | 15.0.1300.359-1 | [Pacote Debian do mecanismo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1300.359-1_amd64.deb)</br>[Pacote Debian de alta disponibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1300.359-1_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1300.359-1_amd64.deb)</br>[Pacote Debian de extensibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1300.359-1_amd64.deb)</br>[Pacote Debian de extensibilidade do Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1300.359-1_amd64.deb)|
+   Se você não puder usar a codificação UTF-8, execute a instalação usando a variável de ambiente MSSQL_LCID para especificar sua escolha de idioma.
 
-### <a name="known-issues"></a>Problemas conhecidos
+   ```bash
+   sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
+   ```
 
-#### <a id="msdtc"></a> Coordenador de Transações Distribuídas da Microsoft
+- Ao executar a instalação de mssql-conf e executar uma instalação de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com idioma diferente do inglês, caracteres estendidos incorretos são exibidos após o texto localizado, "Configurando o SQL Server...". Ou, para instalações não baseadas em latim, a frase pode estar completamente ausente. A frase ausente deve exibir a seguinte cadeia de caracteres localizada: "O PID de licenciamento foi processado com êxito. A nova edição é [\<Nome\> edição]". Essa cadeia de caracteres é fornecida apenas para fins informativos e a próxima Atualização Cumulativa do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] resolverá isso para todos os idiomas. Isso não afeta o êxito da instalação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de forma alguma. 
 
-Atualmente, o MSDTC requer que as transações sejam não autenticadas. Por exemplo, se você estiver usando um servidor vinculado do SQL Server no Windows para SQL Server em Linux ou usar um aplicativo cliente do Windows para iniciar uma transação distribuída em relação ao SQL Server em Linux, o MSDTC no servidor/cliente Windows deverá usar a opção "Nenhuma Autenticação Necessária".
+#### <a name="full-text-search"></a>Pesquisa de Texto Completo
 
-## <a id="CTP22"></a> CTP 2.2 (dezembro de 2018)
+- Nem todos os filtros estão disponíveis nesta versão, incluindo filtros para documentos do Office. Para obter uma lista de filtros com suporte, confira [Instalar a pesquisa de texto completo do SQL Server no Linux](sql-server-linux-setup-full-text-search.md#filters).
 
-As seções a seguir fornecem locais de pacote e problemas conhecidos para a versão de CTP 2.2. Para saber mais sobre os novos recursos para o Linux no SQL Server 2019, confira [Novidades no SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+#### <a id="ssis"></a> SQL Server Integration Services (SSIS)
 
-### <a name="package-details"></a>Detalhes do pacote
+- O pacote **mssql-server-is** não tem suporte no SUSE nesta versão. Atualmente, ele tem suporte no Ubuntu e no RHEL (Red Hat Enterprise Linux).
 
-Para instalações de pacotes manuais ou offline, você pode baixar os pacotes RPM e Debian com as informações na tabela a seguir:
+- Com o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] na Atualização CTP 2.1 do Linux e posterior, os pacotes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] podem usar conexões ODBC no Linux. Essa funcionalidade foi testada com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e os drivers ODBC do MySQL, mas também espera-se que ela funcione com qualquer driver ODBC Unicode que observa a especificação ODBC. Em tempo de design, é possível fornecer um DSN ou uma cadeia de conexão para conectar-se aos dados ODBC; também é possível usar a autenticação do Windows. Para saber mais, confira a [postagem no blog que anunciou o suporte do ODBC para Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
-| Pacote | Versão do pacote | Downloads |
-|-----|-----|-----|
-| Pacote RPM do Red Hat | 15.0.1200.24-2 | [Pacote RPM do mecanismo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1200.24-2.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1200.24-2.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1200.24-2.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1200.24-2.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1200.24-2.x86_64.rpm)|
-| Pacote RPM do SLES | 15.0.1200.24-2 | [Pacote RPM do mecanismo mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1200.24-2.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1200.24-2.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1200.24-2.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1200.24-2.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1200.24-2.x86_64.rpm)|
-| Pacote Debian do Ubuntu 16.04 | 15.0.1200.24-2 | [Pacote Debian do mecanismo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1200.24-2_amd64.deb)</br>[Pacote Debian de alta disponibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1200.24-2_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1200.24-2_amd64.deb)</br>[Pacote Debian de extensibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1200.24-2_amd64.deb)</br>[Pacote Debian de extensibilidade do Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1200.24-2_amd64.deb)|
+- Não há suporte para os seguintes recursos nesta versão quando você executa pacotes SSIS no Linux:
+  - [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Banco de dados de catálogo
+  - Execução de pacotes agendada pelo SQL Agent
+  - Autenticação do Windows
+  - Componentes de terceiros
+  - Change Data Capture (CDC)
+  - [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Scale Out
+  - Feature Pack do Azure para SSIS
+  - Suporte para Hadoop e HDFS
+  - Microsoft Connector for SAP BW
 
-### <a name="known-issues"></a>Problemas conhecidos
+Para obter uma lista de componentes internos do SSIS que não têm suporte no momento ou que têm suporte com limitações, confira [Limitações e problemas conhecidos do SSIS no Linux](sql-server-linux-ssis-known-issues.md#components).
 
-#### <a id="msdtc"></a> Coordenador de Transações Distribuídas da Microsoft
+Para saber mais sobre o SSIS no Linux, confira os seguintes artigos:
+-   [Postagem no blog anunciando o suporte do SSIS para Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/).
+-   [Instalar o SSIS (SQL Server Integration Services) no Linux](sql-server-linux-setup-ssis.md)
+-   [Extrair, transformar e carregar dados no Linux com o SSIS](sql-server-linux-migrate-ssis.md)
 
-Atualmente, o MSDTC requer que as transações sejam não autenticadas. Por exemplo, se você estiver usando um servidor vinculado do SQL Server no Windows para SQL Server em Linux ou usar um aplicativo cliente do Windows para iniciar uma transação distribuída em relação ao SQL Server em Linux, o MSDTC no servidor/cliente Windows deverá usar a opção "Nenhuma Autenticação Necessária".
+#### <a id="ssms"></a> SSMS (SQL Server Management Studio)
 
-## <a id="CTP21"></a> CTP 2.1 (novembro de 2018)
+As seguintes limitações se aplicam ao [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] no Windows conectado ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no Linux.
 
-As seções a seguir fornecem locais de pacote e problemas conhecidos para a versão de CTP 2.1. Para saber mais sobre os novos recursos para o Linux no SQL Server 2019, confira [Novidades no SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+- Não há suporte para planos de manutenção.
 
-### <a name="package-details"></a>Detalhes do pacote
+- Não há suporte para o MDW (Data Warehouse de Gerenciamento) e o coletor de dados no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. 
 
-Para instalações de pacotes manuais ou offline, você pode baixar os pacotes RPM e Debian com as informações na tabela a seguir:
+- Componentes da interface do usuário do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] que têm as opções de Autenticação do Windows ou log de eventos do Windows não funcionam com o Linux. Você ainda pode usar esses recursos com outras opções, como logons do SQL. 
 
-| Pacote | Versão do pacote | Downloads |
-|-----|-----|-----|
-| Pacote RPM do Red Hat | 15.0.1100.94-1 | [Pacote RPM do mecanismo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1100.94-1.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1100.94-1.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1100.94-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1100.94-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1100.94-1.x86_64.rpm)|
-| Pacote RPM do SLES | 15.0.1100.94-1 | [Pacote RPM do mecanismo mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1100.94-1.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1100.94-1.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1100.94-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1100.94-1.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1100.94-1.x86_64.rpm)|
-| Pacote Debian do Ubuntu 16.04 | 15.0.1100.94-1 | [Pacote Debian do mecanismo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1100.94-1_amd64.deb)</br>[Pacote Debian de alta disponibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1100.94-1_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1100.94-1_amd64.deb)</br>[Pacote Debian de extensibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1100.94-1_amd64.deb)</br>[Pacote Debian de extensibilidade do Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1100.94-1_amd64.deb)|
-
-### <a name="known-issues"></a>Problemas conhecidos
-
-#### <a name="microsoft-distributed-transaction-coordinator"></a>Coordenador de Transações Distribuídas da Microsoft
-
-Atualmente, o MSDTC requer que as transações sejam não autenticadas. Por exemplo, se você estiver usando um servidor vinculado do SQL Server no Windows para SQL Server em Linux ou usar um aplicativo cliente do Windows para iniciar uma transação distribuída em relação ao SQL Server em Linux, o MSDTC no servidor/cliente Windows deverá usar a opção "Nenhuma Autenticação Necessária".
-
-## <a id="CTP20"></a> CTP 2.0 (setembro de 2018)
-
-As seções a seguir fornecem locais de pacote e problemas conhecidos para a versão de CTP 2.0. Para saber mais sobre os novos recursos para o Linux no SQL Server 2019, confira [Novidades no SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
-
-### <a name="package-details"></a>Detalhes do pacote
-
-Para instalações de pacotes manuais ou offline, você pode baixar os pacotes RPM e Debian com as informações na tabela a seguir:
-
-| Pacote | Versão do pacote | Downloads |
-|-----|-----|-----|
-| Pacote RPM do Red Hat | 15.0.1000.34-2 | [Pacote RPM do mecanismo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1000.34-2.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1000.34-2.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1000.34-2.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1000.34-2.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1000.34-2.x86_64.rpm)|
-| Pacote RPM do SLES | 15.0.1000.34-2 | [Pacote RPM do mecanismo mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1000.34-2.x86_64.rpm)</br>[Pacote RPM de Alta Disponibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1000.34-2.x86_64.rpm)</br>[Pacote RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1000.34-2.x86_64.rpm)</br>[Pacote RPM de extensibilidade](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1000.34-2.x86_64.rpm)</br>[Pacote RPM de extensibilidade do Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1000.34-2.x86_64.rpm)|
-| Pacote Debian do Ubuntu 16.04 | 15.0.1000.34-2 | [Pacote Debian do mecanismo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1000.34-2_amd64.deb)</br>[Pacote Debian de alta disponibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1000.34-2_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1000.34-2_amd64.deb)</br>[Pacote Debian de extensibilidade](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1000.34-2_amd64.deb)</br>[Pacote Debian de extensibilidade do Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1000.34-2_amd64.deb)|
-
-### <a name="known-issues"></a>Problemas conhecidos
-
-#### <a name="microsoft-distributed-transaction-coordinator"></a>Coordenador de Transações Distribuídas da Microsoft
-
-Atualmente, o MSDTC requer que as transações sejam não autenticadas. Por exemplo, se você estiver usando um servidor vinculado do SQL Server no Windows para SQL Server em Linux ou usar um aplicativo cliente do Windows para iniciar uma transação distribuída em relação ao SQL Server em Linux, o MSDTC no servidor/cliente Windows deverá usar a opção "Nenhuma Autenticação Necessária".
+- O número de arquivos de log a serem retidos não pode ser modificado.
 
 ## <a name="next-steps"></a>Próximas etapas
 

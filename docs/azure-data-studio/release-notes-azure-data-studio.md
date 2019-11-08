@@ -9,17 +9,35 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 10/11/2019
-ms.openlocfilehash: c77d22b01b824906e4d5c32311bfe20258fa3c61
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.date: 11/04/2019
+ms.openlocfilehash: 16e2a7568bb88dbf36576cf5a6d64a1b268621fa
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313617"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532525"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas sobre a versão relacionadas ao Azure Data Studio
 
 **[Baixe e instale a versão mais recente!](download.md)**
+
+## <a name="november-2019"></a>Novembro de 2019
+
+4 de novembro de 2019 &nbsp; / &nbsp; versão: 1.13.0 
+
+&nbsp;
+
+| Alterar | Detalhes |
+| :----- | :------ |
+| Novo suporte do SQL Server 2019 | &bull; &nbsp; Implantar o cluster de Big Data do SQL Server 2019 com o assistente de Implantação do BDC <br/>&bull; &nbsp; Gerenciar a integridade do cluster com o painel do controlador <br/>&bull; &nbsp; Gerenciar listas de controle de acesso do HDFS usando a Caixa de Diálogo de ACLs de Segurança <br/> &bull; &nbsp; Adicionar montagens usando a Caixa de Diálogo de Camada do HDFS <br/> &bull; &nbsp; Solução de problemas usando o Jupyter Book interno, guia do SQL Server 2019 <br/> &bull; &nbsp; Renomeação da extensão do SQL vNext para extensão Virtualização de dados <br/> &bull; &nbsp; Adição de suporte ao Teradata e ao Mongo no Assistente de Tabela Externa|
+| Novos recursos de notebook | &bull; &nbsp; Comunicado sobre notebooks do PowerShell &bull; &nbsp; Comunicado sobre células de código recolhíveis <br/>&bull; &nbsp; Melhorias de desempenho em notebooks <br/> &bull; &nbsp; Veja a lista completa de melhorias [aqui](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22) |
+| Comunicado sobre o Jupyter Books  | O Jupyter Books é uma coleção de notebooks e arquivos Markdown organizados em um sumário. |
+| Novo assistente de Implantação do SQL Server  | Agora inclui suporte para implantação: <br/> &bull; &nbsp; SQL Server 2019 no Windows <br/> &bull; &nbsp; SQL Server 2017 no Windows <br/> &bull; &nbsp; SQL Server 2019 no Docker <br/> &bull; &nbsp; SQL Server 2017 no Docker |
+| Comunicado sobre o GA da extensão Comparação de Esquemas| &bull; &nbsp; Modo SQLCMD <br/> &bull; &nbsp; Suporte à localização <br/> &bull; &nbsp; Correções de acessibilidade <br/> &bull; &nbsp; Bugs de segurança  |
+| Comunicado sobre o GA da extensão DACPAC do SQL Server| <br/> &bull; &nbsp; Suporte à localização <br/> &bull; &nbsp; Correções de acessibilidade <br/> &bull; &nbsp; Bugs de segurança |
+| Comunicado sobre a extensão Visual Studio IntelliCode | O Visual Studio IntelliCode agora dá suporte ao SQL, que permite sugestões mais inteligentes de palavras-chave reservadas. |
+| Bugs e problemas resolvidos | Para obter uma lista completa das correções, confira [Bugs e problemas, no GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
 
 ## <a name="october-2019-hotfix-2"></a>Outubro de 2019 (hotfix 2)
 
@@ -228,7 +246,7 @@ ms.locfileid: "72313617"
 | Adicionado suporte de filtragem de evento estendido na extensão Profiler. | &nbsp; |
 | Adicionado o recurso Salvar como XML que pode salvar resultados de T-SQL como XML. | &nbsp; |
 | Aprimoramentos adicionados ao Assistente de Aplicativo da Camada de Dados. | &bull; &nbsp; Botão Gerar script adicionado<br/>&bull; &nbsp; Adicionada uma exibição para fornecer avisos de possível perda de dados durante a implantação. |
-| Atualizações à extensão do SQL Server 2019 Preview. | Confira [Extensão do SQL Server 2019 Preview](sql-server-2019-extension.md?view=sql-server-ver15). |
+| Atualizações à extensão do SQL Server 2019 Preview. | Confira [Extensão Virtualização de Dados](data-virtualization-extension.md?view=sql-server-ver15). |
 | Streaming de resultados habilitado por padrão para consultas de execução prolongada. | &nbsp; |
 | Bugs e problemas resolvidos. | Confira [Bugs e problemas, no GitHub](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1). |
 | &nbsp; | &nbsp; |
@@ -256,7 +274,7 @@ ms.locfileid: "72313617"
 | Suporte adicionado para Autenticação do Azure Active Directory. | &nbsp; |
 | Anunciando Idera SQL DM Performance Insights (Versão prévia). | &nbsp; |
 | Suporte do Assistente de Aplicativo da Camada de Dados na extensão de Importação do SQL Server. | &nbsp; |
-| Atualização à extensão do SQL Server 2019 Preview. | Confira [Extensão do SQL Server 2019 Preview](sql-server-2019-extension.md?view=sql-server-ver15). |
+| Atualização à extensão do SQL Server 2019 Preview. | Confira [Extensão Virtualização de Dados](data-virtualization-extension.md?view=sql-server-ver15). |
 | Aprimoramentos ao SQL Server Profiler. | &nbsp; |
 | Streaming de resultados para consultas grandes (versão prévia). | &nbsp; |
 | Extensões da comunidade: sp_executesql para sql e Novo Banco de Dados. | &nbsp; |
@@ -271,7 +289,7 @@ ms.locfileid: "72313617"
 
 | Alterar | Detalhes |
 | :----- | :------ |
-| Atualização à extensão do SQL Server 2019 Preview. | Confira [Extensão do SQL Server 2019 Preview](sql-server-2019-extension.md?view=sql-server-ver15). |
+| Atualização à extensão do SQL Server 2019 Preview. | Confira [Extensão Virtualização de Dados](data-virtualization-extension.md?view=sql-server-ver15). |
 | Apresentando a extensão Colar o Plano. | &nbsp; |
 | Introdução à extensão de consultas High Color, incluindo o tema do editor do SSMS. | &nbsp; |
 | Correções no SQL Server Agent, no Profiler e nas extensões de Importação. | &nbsp; |
@@ -301,7 +319,7 @@ ms.locfileid: "72313617"
 | Apresentando o Azure Resource Explorer para navegar em Bancos de Dados SQL do Azure. | &nbsp; |
 | Melhoria na robustez da conectividade do Pesquisador de Objetos e do Editor de Consultas. | &nbsp; |
 | Melhorias nas extensões do SQL Agent. | &nbsp; |
-| Atualização à extensão do SQL Server 2019 Preview. | Confira [Extensão do SQL Server 2019 Preview](sql-server-2019-extension.md?view=sql-server-ver15). |
+| Atualização à extensão do SQL Server 2019 Preview. | Confira [Extensão Virtualização de Dados](data-virtualization-extension.md?view=sql-server-ver15). |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-october-2018"></a>Correções de bugs, outubro de 2018

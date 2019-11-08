@@ -1,7 +1,7 @@
 ---
-title: 'Tutorial: Como criar e usar índices em colunas habilitadas para enclave com criptografia aleatória | Microsoft Docs'
+title: 'Tutorial: Criar e usar índices em colunas habilitadas para enclave com criptografia aleatória | Microsoft Docs'
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,15 +12,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9865be1d006e10271295ae4dda731eb33331dbda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ae44a28c5a4c426ffe225d8d80a545f6722c4c1
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126803"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592318"
 ---
-# <a name="tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Tutorial: Como criar e usar índices em colunas habilitadas para enclave com criptografia aleatória
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Tutorial: Criar e usar índices em colunas habilitadas para enclave com criptografia aleatória
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 Este tutorial ensina como criar e usar índices em colunas habilitadas para enclave usando a criptografia aleatória com suporte em [Always Encrypted com enclaves seguros](encryption/always-encrypted-enclaves.md). Ela mostrará a você:
 
@@ -172,5 +172,7 @@ Nesta etapa, você criará um índice em uma coluna criptografada, fingindo ser 
    1. Na guia **Estatísticas de consulta dinâmica** (na parte inferior da janela de consulta), observe se a consulta usa o índice.
 
 ## <a name="next-steps"></a>Próximas etapas
+- [Tutorial: Desenvolver um aplicativo .NET Framework usando o Always Encrypted com enclaves seguros](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
-- Confira [Configurar o Always Encrypted com enclaves seguros](encryption/configure-always-encrypted-enclaves.md) para obter informações sobre outros casos de uso do Always Encrypted com enclaves seguros.
+## <a name="see-also"></a>Confira também
+- [Criar e usar índices em colunas usando o Always Encrypted com enclaves seguros](encryption/always-encrypted-enclaves-create-use-indexes.md)

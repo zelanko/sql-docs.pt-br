@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LANGUAGE (Transact-SQL) – SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: dphansen
 ms.technology: language-extensions
@@ -10,12 +10,12 @@ author: nelgson
 ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a503c77b49b8e57139ded0b29873fc18cd2b342
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 1b831047e4c2b8bad166e5ddf5ce3bdc7f8b6165
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893732"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532855"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -96,11 +96,11 @@ Nome do arquivo de extensão .dll ou .so. Isso é necessário para identificar o
 
 **external_lang_parameters**
 
-Isso fornece uma possibilidade de fornecer um conjunto de parâmetros para o tempo de execução de linguagem externa. Os valores de parâmetro são fornecidos para o tempo de execução externo após o início do processo externo. No entanto, as variáveis de ambiente são acessíveis para a extensão de linguagem antes da inicialização do processo externo.
+Isso fornece uma possibilidade de fornecer um conjunto de parâmetros para o runtime de linguagem externa. Os valores de parâmetro são fornecidos para o runtime externo após o início do processo externo. No entanto, as variáveis de ambiente são acessíveis para a extensão de linguagem antes da inicialização do processo externo.
 
 **external_lang_env_variables**
 
-Isso permite uma possibilidade de fornecer um conjunto de variáveis de ambiente ao tempo de execução da linguagem externa antes da inicialização do processo externo. Um exemplo de uma variável de ambiente é, por exemplo, o diretório base do próprio tempo de execução. Por exemplo: JRE_HOME.
+Isso permite uma possibilidade de fornecer um conjunto de variáveis de ambiente ao runtime da linguagem externa antes da inicialização do processo externo. Um exemplo de uma variável de ambiente é, por exemplo, o diretório base do próprio runtime. Por exemplo: JRE_HOME.
 
 **platform**
 
@@ -108,7 +108,7 @@ Esse parâmetro é necessário para cenários de sistema operacional híbrido. E
 
 ## <a name="remarks"></a>Remarks
 
-No CTP 3.0, não há suporte para **PARAMETERS** e **ENVIRONMENT_VARIABLES**.
+Atualmente, não há suporte para **PARAMETERS** e **ENVIRONMENT_VARIABLES**.
 
 ## <a name="permissions"></a>Permissões
 

@@ -1,7 +1,7 @@
 ---
 title: RESTORE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e21af82bf762f8945c9d00232e63d9970054c31
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72916171"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73530922"
 ---
 # <a name="restore-statements-transact-sql"></a>Instruções RESTORE (Transact-SQL)
 
@@ -345,7 +345,7 @@ RESTORE não é permitido em uma transação explícita ou implícita.
 
 A restauração de um banco de dados **mestre** danificado é executada por meio de um procedimento especial. Para obter mais informações, consulte [Fazer backup e restaurar bancos de dados do sistema](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).
 
-A restauração de um banco de dados limpa o cache de planos da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrências de liberação de armazenamento em cache para o armazenamento em cache '%s' (parte do cache de planos) devido a operações de reconfiguração ou manutenção do banco de dados". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.
+Restaurar um banco de dados limpa o cache de planos para o banco de dados que está sendo restaurado. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. 
 
 Para restaurar um banco de dados de disponibilidade, primeiro restaure o banco de dados à instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], em seguida, adicione o banco de dados ao grupo de disponibilidade.
 
@@ -373,6 +373,10 @@ A instrução RESTORE também pode ser usada para executar restaurações em loc
 
 > [!NOTE]
 > Catálogos de texto completo importados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ainda são tratados como arquivos de banco de dados. Nesse caso, o procedimento usado pelo [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para fazer backup de catálogos de texto completo ainda se aplica, exceto pelo fato de que não é mais necessário pausar e retomar a operação de backup. Para obter mais informações, consulte [Fazendo backup e restaurando catálogos de texto completo](https://go.microsoft.com/fwlink/?LinkId=107381).
+
+### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
+
+[!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
 
 ## <a name="metadata"></a>Metadados
 

@@ -4,18 +4,18 @@ titleSuffix: SQL Server
 description: Este início rápido mostra como instalar o SQL Server 2017 ou o SQL Server 2019 no Ubuntu e criar e consultar um banco de dados com sqlcmd.
 author: VanMSFT
 ms.author: vanto
-ms.date: 05/28/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: e21761c221ec83770be7c9aa19f8a4ec971617e2
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 17f73e7529fb8e74e9ff83de8d7e0ebd61783909
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030312"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531346"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Início Rápido: Instalar o SQL Server e criar um banco de dados no Ubuntu
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -24,13 +24,13 @@ ms.locfileid: "70030312"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-Neste início rápido, você instalará o SQL Server 2017 ou a versão prévia do SQL Server 2019 no Ubuntu 16.04. Em seguida, você se conecta ao **sqlcmd** parar criar seu primeiro banco de dados e executar consultas.
+Neste início rápido, você instalará o SQL Server 2017 ou o SQL Server 2019 no Ubuntu 16.04. Em seguida, você se conecta ao **sqlcmd** parar criar seu primeiro banco de dados e executar consultas.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Neste início rápido, você instalará a versão prévia do SQL Server 2019 no Ubuntu 16.04. Em seguida, você se conecta ao **sqlcmd** parar criar seu primeiro banco de dados e executar consultas.
+Neste início rápido, você instalará o SQL Server 2019 no Ubuntu 16.04. Em seguida, você se conecta ao **sqlcmd** parar criar seu primeiro banco de dados e executar consultas.
 
 ::: moniker-end
 
@@ -71,10 +71,10 @@ Para configurar o SQL Server no Ubuntu, execute os seguintes comandos em um term
    ```
 
    > [!TIP]
-   > Se você quiser experimentar o SQL Server 2019, deverá registrar o repositório **Versão prévia (2019)** . Use o seguinte comando para a instalações do SQL Server 2019:
+   > Se quiser instalar o SQL Server 2019, você precisará registrar o repositório do SQL Server 2019. Use o seguinte comando para a instalações do SQL Server 2019:
    >
    > ```bash
-   > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
+   > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
    > ```
 
 3. Execute os comandos a seguir para instalar o SQL Server:
@@ -120,10 +120,10 @@ Para configurar o SQL Server no Ubuntu, execute os seguintes comandos em um term
    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-2. Registre o repositório do Ubuntu do Microsoft SQL Server para a versão prévia do SQL Server 2019:
+2. Registre o repositório do Ubuntu do Microsoft SQL Server para o SQL Server 2019:
 
    ```bash
-   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
    ```
 
 3. Execute os comandos a seguir para instalar o SQL Server:
@@ -150,7 +150,7 @@ Para configurar o SQL Server no Ubuntu, execute os seguintes comandos em um term
 
 6. Se planeja se conectar remotamente, talvez seja preciso abrir a porta TCP do SQL Server (padrão 1433) em seu firewall.
 
-Neste momento, a versão prévia do SQL Server 2019 está em execução em seu computador Ubuntu e está pronta para uso!
+Neste momento, o SQL Server 2019 está em execução no seu computador Ubuntu e está pronto para uso!
 
 ::: moniker-end
 

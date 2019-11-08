@@ -5,24 +5,24 @@ description: Artigo de referência para comandos notebook de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 97b8cbae68e16dbdde6e9662b18e37f222a1af80
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
-ms.translationtype: MT
+ms.openlocfilehash: 3d9b5538170e57b09a1cf8bc4360a68187595ac2
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118160"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531669"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Este artigo é um artigo de referência para **azdata**. 
+O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Commands
 |     |     |
 | --- | --- |
 [azdata notebook view](#azdata-notebook-view) | Exibir um notebook.  Opção para parar no primeiro erro de execução de célula.
@@ -56,22 +56,19 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-notebook-run"></a>azdata notebook run
 Esse comando cria um diretório temporário e executa o notebook fornecido nele como o diretório de trabalho.
-
->[!NOTE]
->Verificado em relação ao azdata v 15.0.1900: comando de execução com suporte somente para blocos de anotações do Python 3.
-
 ```bash
 azdata notebook run --path -p 
                     [--output-path]  
                     [--output-html]  
                     [--arguments -a]  
                     [--interactive -i]  
-                    [--clear -c]
+                    [--clear -c]  
+                    [--timeout -t]
 ```
 ### <a name="examples"></a>Exemplos
 Executar notebook.
@@ -85,13 +82,16 @@ O caminho de arquivo para o notebook a ser executado.
 #### `--output-path`
 Caminho do diretório a ser usado para a saída do notebook.  O notebook com os dados de saída e todos os arquivos gerados pelo notebook são gerados em relação a esse diretório.
 #### `--output-html`
-Sinalizador opcional que indica se o bloco de anotações de saída deve ser convertido no formato HTML.  Cria um segundo arquivo de saída.
+Sinalizador opcional indicando se o notebook de saída deve ser convertido adicionalmente no formato HTML.  Cria um segundo arquivo de saída.
 #### `--arguments -a`
-Lista opcional de argumentos de bloco de anotações para injetar na execução do bloco de anotações.  Codificado como um dicionário JSON.  Exemplo: ' {"Name": "value", "nome2": "value2"} '
+Lista opcional de argumentos do notebook para injetar na execução do notebook.  Codificado como um dicionário JSON.  Exemplo: '{"name":"value", "name2":"value2"}'
 #### `--interactive -i`
-Execute um bloco de anotações em um modo interativo.
+Execute um notebook em um modo interativo.
 #### `--clear -c`
-Em modo interativo, limpe o console antes de renderizar uma célula.
+No modo interativo, limpe o console antes de renderizar uma célula.
+#### `--timeout -t`
+Segundos a aguardar a conclusão da execução. O valor -1 indica espera para sempre.
+`600`
 ### <a name="global-arguments"></a>Argumentos globais
 #### `--debug`
 Aumente o detalhamento do log para mostrar todos os logs de depuração.
@@ -106,6 +106,4 @@ Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md). 
-
-- Para obter mais informações sobre como instalar a ferramenta **azdata**, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](deploy-install-azdata.md).
+Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md). Para obter mais informações sobre como instalar a ferramenta `azdata`, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](deploy-install-azdata.md).

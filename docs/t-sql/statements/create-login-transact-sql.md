@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b28cde8935c3a2c4b25f20ef727358b918e6680
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 6b67218c4b2d48b3a99ad896105a2069f5d8bcde
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155662"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594482"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -397,9 +397,6 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
     | DEFAULT_LANGUAGE = language
 ```
 
-> [!IMPORTANT]
-> Os logons do Azure AD para a instância gerenciada do Banco de Dados SQL estão em **versão prévia pública**. Isso é apresentado com a sintaxe **FROM EXTERNAL PROVIDER**.
-
 ## <a name="arguments"></a>Argumentos
 
 *login_name* Quando usado com a cláusula **FROM EXTERNAL PROVIDER**, o logon especifica a Entidade de Segurança do Azure AD (Active Directory), que é um usuário, um grupo ou um aplicativo do Azure AD. Caso contrário, o logon representa o nome do logon SQL que foi criado.
@@ -423,12 +420,6 @@ SID **=** *sid* Usado para recriar um logon. Aplica-se apenas a logons de autent
     - UserPrincipalName do objeto do Azure Active Directory para usuários do Azure Active Directory.
     - DisplayName do objeto do Azure Active Directory para Grupos e Aplicativos do Azure AD.
   - A opção **PASSWORD** não pode ser usada.
-  - Atualmente, o primeiro logon do Azure AD deve ser criado pela conta do SQL Server (não Azure AD) padrão que é um `sysadmin` usando a sintaxe acima.
-  - Ao criar um logon do Azure AD usando um administrador do Azure AD para a instância gerenciada do Banco de Dados SQL, ocorre o seguinte erro:</br>
-      `Msg 15247, Level 16, State 1, Line 1
-      User does not have permission to perform this action.`
-  - Essa é uma limitação conhecida para a **versão prévia pública** e será corrigida posteriormente.
-  - Depois de criar o primeiro logon do Azure AD, esse logon pode criar outros logons do Azure AD depois que receber as permissões necessárias.
 - Por padrão, quando a cláusula **FROM EXTERNAL PROVIDER** é omitida, um logon SQL regular é criado.
 - Logons do Azure AD são visíveis em sys.server_principals, com valor de coluna de tipo definido como **E** e type_desc definido como **EXTERNAL_LOGIN** para logons mapeados para os usuários do Azure AD ou o valor de coluna de tipo definido como **X** e o valor type_desc definido como **EXTERNAL_GROUP** para logons mapeados para grupos do Azure AD.
 - Para um script transferir logons, consulte [Como transferir os logons e senhas entre instâncias do SQL Server 2005 e SQL Server 2008](https://support.microsoft.com/kb/918992).
@@ -463,6 +454,7 @@ Depois de criar um logon, ele poderá se conectar a uma instância gerenciada do
 - Somente entidades de segurança no nível do SQL Server (logons) que fazem parte do `sysadmin` podem executar as seguintes operações direcionadas a entidades de segurança do Azure AD:
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
+- Usuários externos (convidados) importados de outro diretório do Azure AD não podem ser configurados diretamente como um administrador do Azure AD para a instância gerenciada. Em vez disso, ingresse o usuário externo em um grupo habilitado para segurança do Azure AD e configure o grupo como o administrador da instância.
 
 ## <a name="examples"></a>Exemplos
 

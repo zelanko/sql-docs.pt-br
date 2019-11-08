@@ -3,17 +3,17 @@ title: Restaurar um banco de dados do SQL Server no Docker
 description: Este tutorial mostra como restaurar um backup de banco de dados do SQL Server em um novo contêiner do Docker em Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/02/2017
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 0a91e3fd121cf5e49aca3bbe079d41416aca805a
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 28c2bbd60b5a1565e2920968e40bb1dc4e75db22
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476207"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531193"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurar um banco de dados SQL Server em um contêiner do Docker em Linux
 
@@ -28,7 +28,7 @@ Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Serve
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Server para uma imagem de contêiner do SQL Server 2019 (versão prévia) em Linux em execução no Docker.
+Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Server para uma imagem de contêiner do SQL Server 2019 em Linux em execução no Docker.
 
 ::: moniker-end
 
@@ -112,14 +112,14 @@ Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Serve
 
 1. Abra um terminal Bash no Linux/Mac ou em uma sessão do PowerShell com privilégios elevados no Windows.
 
-1. Efetue pull da imagem de contêiner do SQL Server 2019 (versão prévia) em Linux por meio do Docker Hub.
+1. Efetue pull da imagem de contêiner do SQL Server 2019 do Linux por meio do Docker Hub.
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
    ```
 
    > [!TIP]
@@ -131,17 +131,17 @@ Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Serve
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
       --name 'sql1' -p 1401:1433 \
       -v sql1data:/var/opt/mssql \
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
       --name "sql1" -p 1401:1433 `
       -v sql1data:/var/opt/mssql `
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
    ```
 
-   Este comando cria um contêiner SQL Server 2019 (versão prévia) com a Developer Edition (padrão). A porta do SQL Server **1433** é exposta no host como a porta **1401**. O parâmetro `-v sql1data:/var/opt/mssql` opcional cria um contêiner de volume de dados chamado **sql1ddata**. Isso é usado para persistir os dados criados pelo SQL Server.
+   Esse comando cria um contêiner do SQL Server 2019 com a Developer Edition (padrão). A porta do SQL Server **1433** é exposta no host como a porta **1401**. O parâmetro `-v sql1data:/var/opt/mssql` opcional cria um contêiner de volume de dados chamado **sql1ddata**. Isso é usado para persistir os dados criados pelo SQL Server.
 
 1. Para exibir seus contêineres do Docker, use o comando `docker ps`.
 
@@ -492,13 +492,13 @@ Além de usar os backups de banco de dados para proteger seus dados, você tamb�
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
        --name 'sql2' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
        --name "sql2" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
     ```
 
 1. O banco de dados de Importadores Mundiais agora está no novo contêiner. Execute uma consulta para verificar a alteração anterior feita.
@@ -531,7 +531,7 @@ Neste tutorial, você aprendeu a fazer backup de um banco de dados em Windows e 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Neste tutorial, você aprendeu a fazer backup de um banco de dados em Windows e movê-lo para um servidor Linux que executa o SQL Server 2019 (versão prévia). Você aprendeu a:
+Neste tutorial, você aprendeu a fazer backup de um banco de dados em Windows e movê-lo para um servidor Linux que executa o SQL Server 2019. Você aprendeu a:
 
 ::: moniker-end
 

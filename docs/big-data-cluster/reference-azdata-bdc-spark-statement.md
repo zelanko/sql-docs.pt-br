@@ -5,22 +5,22 @@ description: Artigo de referência para comandos bdc spark statement de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 31368eab4f3cdd10c6d54456823120bcd1637c5a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
-ms.translationtype: MT
+ms.openlocfilehash: f8fcfb09201e9995b9c86f47adeab54fc037b866
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708456"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531768"
 ---
 # <a name="azdata-bdc-spark-statement"></a>azdata bdc spark statement
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Este artigo é um artigo de referência para **azdata**. 
+O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
 
 ## <a name="commands"></a>Commands
 |     |     |
@@ -33,12 +33,11 @@ Este artigo é um artigo de referência para **azdata**.
 Listar todas as instruções na sessão do Spark fornecida.
 ```bash
 azdata bdc spark statement list --session-id -i 
-                                
-```
-### <a name="examples"></a>Exemplos
-Listar todas as instruções da sessão.
+              ```
+### Examples
+List all the session statements.
 ```bash
-azdata bdc spark statement list --session-id 0
+azdata spark statement list --session-id 0
 ```
 ### <a name="required-parameters"></a>Parâmetros necessários
 #### `--session-id -i`
@@ -51,7 +50,7 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-spark-statement-create"></a>azdata bdc spark statement create
@@ -63,7 +62,7 @@ azdata bdc spark statement create --session-id -i
 ### <a name="examples"></a>Exemplos
 Executar uma instrução.
 ```bash
-azdata bdc spark statement create --session-id 0 --code "2+2"
+azdata spark statement create --session-id 0 --code "2+2"
 ```
 ### <a name="required-parameters"></a>Parâmetros necessários
 #### `--session-id -i`
@@ -78,7 +77,7 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-spark-statement-info"></a>azdata bdc spark statement info
@@ -90,7 +89,7 @@ azdata bdc spark statement info --session-id -i
 ### <a name="examples"></a>Exemplos
 Obter informações de instrução para a sessão com a ID 0 e a ID de instrução 0.
 ```bash
-azdata bdc spark statement info --session-id 0 --statement-id 0
+azdata spark statement info --session-id 0 --statement-id 0
 ```
 ### <a name="required-parameters"></a>Parâmetros necessários
 #### `--session-id -i`
@@ -105,7 +104,7 @@ Mostrar esta mensagem de ajuda e sair.
 #### `--output -o`
 Formato de saída.  Valores permitidos: json, jsonc, table, tsv.  Padrão: json.
 #### `--query -q`
-Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/]) para obter mais informações e exemplos.
+Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http://jmespath.org/) para obter mais informações e exemplos.
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-spark-statement-cancel"></a>azdata bdc spark statement cancel
@@ -117,7 +116,7 @@ azdata bdc spark statement cancel --session-id -i
 ### <a name="examples"></a>Exemplos
 Cancelar uma instrução.
 ```bash
-azdata bdc spark statement cancel --session-id 0 --statement-id 0
+azdata spark statement cancel --session-id 0 --statement-id 0
 ```
 ### <a name="required-parameters"></a>Parâmetros necessários
 #### `--session-id -i`
@@ -138,6 +137,4 @@ Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md). 
-
-- Para obter mais informações sobre como instalar a ferramenta **azdata**, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](deploy-install-azdata.md).
+Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md). Para obter mais informações sobre como instalar a ferramenta `azdata`, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](deploy-install-azdata.md).

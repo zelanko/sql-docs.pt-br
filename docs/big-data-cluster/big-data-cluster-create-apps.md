@@ -5,38 +5,38 @@ description: Implante um script Python ou R como um aplicativo no [!INCLUDE[big-
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 93c94b8ca5688bd5c67369849094e20d1dae697e
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
-ms.translationtype: MT
+ms.openlocfilehash: 863b569014bf35ef4e6aab01ba966edb34812bd1
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929722"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532518"
 ---
-# <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Como implantar um aplicativo em[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Como implantar um aplicativo no [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este artigo descreve como implantar e gerenciar o script R e Python como um aplicativo dentro de um cluster SQL Server 2019 Big Data.
+Este artigo descreve como implantar e gerenciar o script R e Python como um aplicativo em um cluster de Big Data do SQL Server 2019.
 
 ## <a name="whats-new-and-improved"></a>Novidades e melhorias
 
 - Um único utilitário de linha de comando para gerenciar o cluster e o aplicativo.
 - Implantação de aplicativos simplificada, fornecendo controle granular por meio de arquivos de especificação.
-- Suporte à Hospedagem de tipos de aplicativos adicionais-SSIS e MLeap (novidade no CTP 2,3).
-- [Visual Studio Code extensão](app-deployment-extension.md) para gerenciar a implantação de aplicativos.
+- Suporte à hospedagem de tipos de aplicativos adicionais – SSIS e MLeap (novidade no CTP 2.3).
+- [Extensão do Visual Studio Code](app-deployment-extension.md) para gerenciar a implantação de aplicativos.
 
-Os aplicativos são implantados e gerenciados por meio do utilitário de linha de comando `azdata`. Este artigo fornece exemplos de como implantar aplicativos por meio da linha de comando. Para saber como usá-lo em Visual Studio Code consulte [Visual Studio Code extensão](app-deployment-extension.md).
+Os aplicativos são implantados e gerenciados por meio do utilitário de linha de comando `azdata`. Este artigo fornece exemplos de como implantar aplicativos por meio da linha de comando. Para saber como usar isso no Visual Studio Code, veja a [Extensão do Visual Studio Code](app-deployment-extension.md).
 
 Há suporte para os seguintes tipos de aplicativos:
-- Aplicativos R e Python (funções, modelos e aplicativos)
+- Aplicativos do R e do Python (funções, modelos e aplicativos)
 - MLeap Serving
 - SQL Server Integration Services (SSIS)
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - [Cluster de Big Data do SQL Server 2019](deployment-guidance.md)
 - [Utilitário de linha de comando azdata](deploy-install-azdata.md)
@@ -81,9 +81,9 @@ Caso você esteja usando o AKS, execute o seguinte comando a seguir para obter o
 kubectl get svc controller-svc-external -n <name of your big data cluster>
 ```
 
-## <a name="kubeadm-or-minikube"></a>Kubeadm ou Minikube
+## <a name="kubernetes-clusters-created-with-kubeadm"></a>Clusters do Kubernetes criados com o kubeadm
 
-Se você estiver usando Kubeadm ou Minikube, execute o seguinte comando para obter o endereço IP para entrar no cluster
+Execute o comando a seguir para obter o endereço IP e entrar no cluster
 
 ```bash
 kubectl get node --selector='node-role.kubernetes.io/master'
@@ -105,7 +105,7 @@ O seguinte comando mostra um exemplo da aparência desse comando:
 azdata app create --spec ./addpy
 ```
 
-Isso pressupõe que o aplicativo esteja armazenado na pasta `addpy`. Essa pasta também deverá conter um arquivo de especificação para o aplicativo, chamado `spec.yaml`. Consulte [a página de implantação do aplicativo](concept-application-deployment.md) para obter mais `spec.yaml` informações sobre o arquivo.
+Isso pressupõe que o aplicativo esteja armazenado na pasta `addpy`. Essa pasta também deverá conter um arquivo de especificação para o aplicativo, chamado `spec.yaml`. Confira [a página Implantação de Aplicativos](concept-application-deployment.md) para obter mais informações sobre o arquivo `spec.yaml`.
 
 Para implantar esse aplicativo de exemplo de aplicativo, crie os seguintes arquivos em um diretório chamado `addpy`:
 
@@ -218,7 +218,7 @@ O seguinte comando de exemplo demonstra o comando de execução:
 azdata app run --name add-app --version v1 --inputs x=1,y=2
 ```
 
-Se a execução for bem-sucedida, você deverá ver a saída especificada quando o aplicativo foi criado. Confira o exemplo abaixo.
+Se a execução for bem-sucedida, você deverá ver a saída especificada quando o aplicativo foi criado. A seguir, é mostrado um exemplo.
 
 ```json
 {
@@ -241,7 +241,7 @@ O comando init fornece um scaffold com os artefatos relevantes que são necessá
 azdata app init --name hello --version v1 --template python
 ```
 
-Isso criará uma pasta chamada hello.  Você pode executar `cd` no diretório e inspecionar os arquivos gerados na pasta. spec. YAML define o aplicativo, como nome, versão e código-fonte. Você pode editar a especificação para alterar o nome, a versão, a entrada e as saídas.
+Isso criará uma pasta chamada hello.  Você pode executar `cd` no diretório e inspecionar os arquivos gerados na pasta. spec.yaml define o aplicativo, como nome, versão e código-fonte. Edite a especificação para alterar o nome, a versão, a entrada e as saídas.
 
 Esta é uma saída de exemplo do comando init que você verá na pasta
 
@@ -293,6 +293,6 @@ azdata app delete --name add-app --version v1
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Explore como integrar aplicativos implantados [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] em seus próprios aplicativos em [aplicativos de consumo em Big data clusters](big-data-cluster-consume-apps.md) para obter mais informações. Confira também mais amostras em [Amostras de implantação de aplicativo](https://aka.ms/sql-app-deploy).
+Explore como integrar os aplicativos implantados no [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] em seus próprios aplicativos em [Consumir aplicativos em clusters de Big Data](big-data-cluster-consume-apps.md) para obter mais informações. Confira também mais amostras em [Amostras de implantação de aplicativo](https://aka.ms/sql-app-deploy).
 
-Para obter mais informações [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]sobre o, consulte [o que são [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+Para obter mais informações sobre [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], confira [O que são [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

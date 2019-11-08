@@ -1,7 +1,7 @@
 ---
-title: Always Encrypted com enclaves seguros (Mecanismo de Banco de Dados) | Microsoft Docs
+title: Always Encrypted com enclaves seguros | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -10,22 +10,21 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 998594a4c0c649a0ad73d36e858cf733fc364aae
-ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
+ms.openlocfilehash: 7d04dcc5aeeafcdc78dcc6dd401afc476fbf6555
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68841574"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594048"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted com enclaves seguros
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
-
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
  
 O Always Encrypted com enclaves seguros fornece funcionalidade adicional para o recurso [Always Encrypted](always-encrypted-database-engine.md).
 
-Introduzido no SQL Server 2016, o Always Encrypted protege a confidencialidade dos dados confidenciais contra malwares e usuários com altos privilégios *não autorizados* do SQL Server. Usuários com altos privilégios não autorizados são DBAs, administradores de computador, administradores de nuvem ou qualquer outra pessoa que tenha acesso legítimo a instâncias do servidor, hardware, etc., mas que não poderia ter acesso à parte ou todos os dados reais. 
+Introduzido no SQL Server 2016, o Always Encrypted protege a confidencialidade dos dados confidenciais contra malwares e usuários com altos privilégios *não autorizados* do SQL Server. Usuários com altos privilégios não autorizados são DBAs, administradores de computador, administradores de nuvem ou qualquer outra pessoa que tenha acesso legítimo a instâncias do servidor, hardware, etc., mas que não poderia ter acesso à parte ou todos os dados reais.  
 
-Até agora, o Always Encrypted protegia os dados criptografando-os no lado do cliente e nunca permitindo que os dados ou as chaves de criptografia correspondentes aparecessem em texto não criptografado dentro do Mecanismo do SQL Server. Como resultado, a funcionalidade em colunas criptografadas dentro do banco de dados ficava rigorosamente restrita. As únicas operações que o SQL Server podia executar nos dados criptografados eram as comparações de igualdade (que só estavam disponíveis com a criptografia determinística). Todas as outras operações, incluindo operações criptográficas (criptografia de dados inicial ou rotação de chave) ou cálculos avançados (por exemplo, correspondência de padrões) não eram compatíveis com o interior do banco de dados. Os usuários precisavam mover os dados para fora do banco de dados para executar essas operações no lado do cliente.
+Sem os aprimoramentos discutidos neste artigo, o Always Encrypted protege os dados criptografando-os no lado do cliente e nunca permitindo que os dados ou as chaves de criptografia correspondentes aparecessem em texto não criptografado dentro do Mecanismo do SQL Server. Como resultado, a funcionalidade em colunas criptografadas dentro do banco de dados fica muito restrita. As únicas operações que o SQL Server pode executar em dados criptografados são comparações de igualdade (disponíveis somente com criptografia determinística). Todas as outras operações, incluindo operações criptográficas (criptografia de dados inicial ou rotação de chave) e/ou cálculos avançados (por exemplo, correspondência de padrões) não eram compatíveis com o interior do banco de dados. Os usuários precisam mover os dados para fora do banco de dados para executar essas operações no lado do cliente.
 
 O Always Encrypted *com enclaves seguros* soluciona essas limitações, permitindo realizar cálculos em dados de texto não criptografado em um enclave seguro no lado do servidor. Um enclave seguro é uma região protegida de memória dentro do processo do SQL Server e atua como um ambiente de execução confiável para o processamento de dados confidenciais dentro do mecanismo do SQL Server. Um enclave seguro é exibido como uma caixa preta para o restante do SQL Server e outros processos no computador de hospedagem. Não há nenhuma maneira de exibir os dados ou o código dentro do enclave de fora, mesmo com um depurador.  
 
@@ -43,6 +42,8 @@ Durante a análise de uma consulta do aplicativo, o Mecanismo do SQL Server dete
 
 Durante o processamento de consulta, os dados ou as chaves de criptografia de coluna não são expostos em texto não criptografado no Mecanismo do SQL Server fora do enclave seguro. O Mecanismo do SQL Server delega operações criptográficas e cálculos em colunas criptografadas para o enclave seguro. Se necessário, o enclave seguro descriptografa os parâmetros de consulta e/ou os dados armazenados em colunas criptografadas e executa as operações solicitadas.
 
+Em [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], o Always Encrypted com enclaves seguros usa enclaves de memória seguros com [VBS (Segurança baseada em Virtualização)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) (também conhecido como enclaves VSM ou Modo Seguro Virtual) no Windows.
+
 ## <a name="why-use-always-encrypted-with-secure-enclaves"></a>Por que usar o Always Encrypted com enclaves seguros?
 
 Com enclaves seguros, o Always Encrypted protege a confidencialidade dos dados confidenciais, fornecendo os seguintes benefícios:
@@ -51,22 +52,17 @@ Com enclaves seguros, o Always Encrypted protege a confidencialidade dos dados c
 
 - **Cálculos avançados (versão prévia)** – operações em colunas criptografadas, incluindo a correspondência de padrões (o predicado LIKE) e comparações de intervalo são compatíveis dentro do enclave seguro, que desbloqueia o Always Encrypted para uma ampla gama de aplicativos e cenários que exigem que esses cálculos sejam executados dentro do sistema de banco de dados.
 
-> [!IMPORTANT]
-> No [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], cálculos avançados aguardam várias otimizações de desempenho e melhorias de tratamento de erros e, atualmente, estão desabilitados por padrão. Para habilitar cálculos avançados, consulte [Habilitar cálculos avançados](configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
-
-Em [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], o Always Encrypted com enclaves seguros usa enclaves de memória seguros com [VBS (Segurança baseada em Virtualização)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) (também conhecido como enclaves VSM ou Modo Seguro Virtual) no Windows.
-
 ## <a name="secure-enclave-attestation"></a>Atestado de enclave seguro
 
 O enclave seguro dentro do Mecanismo do SQL Server pode acessar dados confidenciais armazenados em colunas de banco de dados criptografado e as chaves de criptografia de coluna correspondentes em texto não criptografado. Antes de enviar uma consulta que envolve cálculos de enclave para o SQL Server, o driver do cliente dentro do aplicativo precisa confirmar se o enclave seguro é um enclave genuíno com base em determinada tecnologia (por exemplo, VBS) e o código em execução dentro do enclave foi assinado para execução dentro do enclave. 
 
-O processo de verificação do enclave é chamado de **atestado de enclave**, e geralmente requer que um driver de cliente dentro do aplicativo e do SQL Server contate um serviço de atestado externo. As especificidades do processo de atestado dependem da tecnologia de enclave e do serviço de atestado.
+O processo de verificação do enclave é chamado de **atestado de enclave** e requer que um driver de cliente dentro do aplicativo e do SQL Server contate um serviço de atestado externo. As especificidades do processo de atestado dependem da tecnologia de enclave e do serviço de atestado.
 
-O processo de atestado do SQL Server é compatível com enclaves seguros de VBS em [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] é o atestado de tempo de execução de do Windows Defender System Guard, que usa o HGS (Serviço Guardião de Host) como um serviço de atestado. Você precisa configurar o HGS no seu ambiente e registrar o computador que hospeda a instância do SQL Server no HGS. Você também precisa configurar seus aplicativos cliente ou ferramentas (por exemplo, o SQL Server Management Studio) com um atestado de HGS.
+O processo de atestado do SQL Server é compatível com enclaves seguros de VBS em [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] é o atestado de runtime de do Windows Defender System Guard, que usa o HGS (Serviço Guardião de Host) como um serviço de atestado. Você precisa configurar o HGS no seu ambiente e registrar o computador que hospeda a instância do SQL Server no HGS. Você também precisa configurar seus aplicativos cliente ou ferramentas (por exemplo, o SQL Server Management Studio) com um atestado de HGS.
 
-## <a name="secure-enclave-providers"></a>Provedores de enclave seguro
+## <a name="supported-client-drivers"></a>Drivers de cliente com suporte
 
-Para usar o Always Encrypted com enclaves seguros, um aplicativo precisa usar um driver de cliente compatível com esse recurso. No [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], seus aplicativos precisam usar o .NET Framework 4.7.2 e o Provedor de Dados do .NET Framework para SQL Server. Além disso, os aplicativos .NET precisam ser configurados com um **provedor de enclave seguro** específico para o tipo de enclave (por exemplo, VBS) e o serviço de atestado (por exemplo, HGS) que você está usando. Os provedores de enclave compatíveis são fornecidos separadamente em um pacote NuGet, que você precisa integrar ao seu aplicativo. Um provedor de enclave implementa a lógica do lado do cliente para o protocolo de atestado e estabelece um canal seguro com um enclave seguro de um tipo determinado.
+Para usar o Always Encrypted com enclaves seguros, um aplicativo precisa usar um driver de cliente compatível com esse recurso. Você precisa configurar o aplicativo e o driver do cliente para habilitar computações enclave e atestado de enclave. Para obter detalhes, incluindo a lista de drivers de cliente com suporte, confira [Always Encrypted com enclaves seguros](always-encrypted-enclaves.md).
 
 ## <a name="enclave-enabled-keys"></a>Chaves habilitadas para enclave
 
@@ -76,6 +72,8 @@ O Always Encrypted com enclaves seguros apresenta o conceito de chaves habilitad
 - **Chave de criptografia de coluna habilitada para enclave** – uma chave de criptografia de coluna que é criptografada com uma chave mestra de coluna habilitada para enclave.
 
 Quando o Mecanismo do SQL Server determina as operações que, especificadas em uma consulta, precisam ser executadas dentro do enclave seguro, o Mecanismo do SQL Server solicita que o driver do cliente compartilhe as chaves de criptografia de coluna que são necessários para os cálculos com o enclave seguro. O driver de cliente compartilha as chaves de criptografia de coluna apenas quando as chaves estão habilitadas para enclave (ou seja, criptografadas com chaves mestras de coluna habilitada para enclave) e quando estão devidamente assinadas. Caso contrário, a consulta falhará.
+
+Para obter mais informações, confira [Gerenciar chaves para Always Encrypted com enclaves seguros](always-encrypted-enclaves-manage-keys.md).
 
 ## <a name="enclave-enabled-columns"></a>Colunas habilitadas para enclave
 
@@ -113,20 +111,11 @@ Para que a criptografia in-loco seja possível, a chave (ou chaves) de criptogra
 - Descriptografia: a chave de criptografia de coluna atual da coluna precisa ser habilitada para enclave.
 
 ### <a name="indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Índices em colunas habilitadas para enclave com criptografia aleatória
-É possível criar índices não clusterizados em colunas habilitadas para enclave usando criptografia aleatória para que as consultas avançadas sejam executadas com mais rapidez. Para garantir que um índice em uma coluna criptografada com criptografia aleatória não vaze dados confidenciais e, ao mesmo tempo, que seja útil para processamento de consultas dentro do enclave, os valores da chave na árvore B (estrutura de dados do índice) são criptografados e classificados com base nos respectivos valores de texto não criptografado. Quando o executor de consultas usa um índice em uma coluna criptografada para cálculos dentro do enclave no Mecanismo do SQL Server, ele pesquisa o índice para localizar valores específicos armazenados na coluna. Cada pesquisa pode envolver várias comparações. O executor de consultas delega cada comparação ao enclave que descriptografa um valor armazenado na coluna e o valor da chave criptografada do índice a ser comparado, realiza a comparação em texto não criptografado e retorna o resultado da comparação ao executor. Para obter informações gerais, não específicas do recurso Always Encrypted, sobre como a indexação funciona no SQL Server, confira [Descrição de índices clusterizados e não clusterizados](../../indexes/clustered-and-nonclustered-indexes-described.md).
-
-Como um índice em uma coluna habilitada para enclave com criptografia aleatória armazena os valores de chave de índice criptografados enquanto os valores são classificados com base em texto não criptografado, o Mecanismo do SQL Server tem que usar o enclave para todas as operações que envolvam a criação ou atualização de um índice, por exemplo:
-- Criar ou recriar um índice.
-- Inserir, atualizar ou excluir uma linha na tabela (contendo uma coluna indexada ou criptografada), que aciona a inserção e/ou remoção de uma chave de índice de/para o índice.
-- Executar comandos DBCC que envolvam a verificação da integridade dos índices, por exemplo, [DBCC CHECKDB (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ou [DBCC CHECKTABLE (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
-- Recuperação de banco de dados (por exemplo, quando o SQL Server falha e é reiniciado), caso o SQL Server precise desfazer qualquer alteração no índice (veja mais detalhes abaixo).
-
-Todas as operações descritas acima exigem que o enclave tenha a chave de criptografia de coluna para a coluna indexada, para que ela possa descriptografar as chaves de índice. Em geral, o enclave pode obter uma chave de criptografia de coluna de duas maneiras:
-
-- **Diretamente do aplicativo cliente** que invocou a operação no índice, conforme descrito na introdução acima. Esse método exige que o aplicativo ou usuário tenha acesso à chave mestra da coluna e à chave de criptografia da coluna, que protegem a coluna indexada. O aplicativo precisa se conectar ao banco de dados com o Always Encrypted habilitado para a conexão.
-- **No cache das chaves de criptografia de coluna.** O enclave armazena as chaves usadas em consultas anteriores, no cache que está localizado dentro do enclave e, portanto, inacessível externamente. Quando um aplicativo aciona uma operação em um índice sem fornecer diretamente a chave de criptografia de coluna necessária, o enclave procura a chave no cache. Se encontrar a chave no cache, o enclave a usará na operação. Esse método permite aos administradores de banco de dados gerenciar índices e realizar determinadas operações de limpeza de dados (por exemplo, remoção de linhas de uma tabela que contém um índice em uma coluna criptografada), sem ter acesso às chaves criptográficas ou aos dados do texto não criptografado. Esse método exige que o aplicativo se conecte ao banco de dados sem que o Always Encrypted esteja habilitado para a conexão.
+É possível criar índices não clusterizados em colunas habilitadas para enclave usando criptografia aleatória para que as consultas avançadas sejam executadas com mais rapidez. Para garantir que um índice em uma coluna criptografada com criptografia aleatória não vaze dados confidenciais e, ao mesmo tempo, que seja útil para processamento de consultas dentro do enclave, os valores da chave na árvore B (estrutura de dados do índice) são criptografados e classificados com base nos respectivos valores de texto não criptografado. Quando o executor de consultas usa um índice em uma coluna criptografada para cálculos dentro do enclave no Mecanismo do SQL Server, ele pesquisa o índice para localizar valores específicos armazenados na coluna. Cada pesquisa pode envolver várias comparações. O executor de consultas delega cada comparação ao enclave que descriptografa um valor armazenado na coluna e o valor da chave criptografada do índice a ser comparado, realiza a comparação em texto não criptografado e retorna o resultado da comparação ao executor. 
 
 Ainda não há suporte para criação de índices em colunas que usam criptografia aleatória e que não são habilitadas para enclave.
+
+Para obter mais informações, confira [Criar e usar índices em colunas usando o Always Encrypted com enclaves seguros](always-encrypted-enclaves-create-use-indexes.md). Para obter informações gerais, não específicas do recurso Always Encrypted, sobre como a indexação funciona no SQL Server, confira [Descrição de índices clusterizados e não clusterizados](../../indexes/clustered-and-nonclustered-indexes-described.md).
 
 #### <a name="database-recovery"></a>Recuperação de banco de dados
 
@@ -160,8 +149,7 @@ Caso seu banco de dados inclua índices em colunas habilitadas para enclave com 
 Quando migrar um banco de dados usando um arquivo bacpac, descarte todas as colunas de índices habilitadas para enclave com criptografia aleatória antes de criar o arquivo bacpac.
 
 ## <a name="known-limitations"></a>Limitações conhecidas
-
-Enclaves seguros aprimoram a funcionalidade do Always Encrypted. Agora, as seguintes funcionalidades **são compatíveis com colunas habilitadas para enclave**:
+O Always Encrypted com enclaves seguros soluciona algumas limitações do Always Encrypted habilitando as seguintes operações:
 
 - Operações criptográficas in-loco.
 - Correspondência de padrões (LIKE) e operadores de comparação em colunas criptografadas com criptografia aleatória.
@@ -169,32 +157,34 @@ Enclaves seguros aprimoram a funcionalidade do Always Encrypted. Agora, as segui
     > As operações acima são compatíveis com colunas de cadeia de caracteres que usam ordenações com classificação binário2 (ordenações BIN2). Colunas de cadeia de caracteres que usam ordenações não BIN2 podem ser criptografadas com criptografia aleatória e chaves de criptografia de coluna habilitadas para enclave. No entanto, a única nova funcionalidade habilitada para essas colunas é a criptografia no local.
 - Criação de índices não clusterizados em colunas usando criptografia aleatória.
 
-Todas as outras limitações (não solucionadas pelos aprimoramentos acima) descritas sobre o Always Encrypted (sem enclaves seguros), em [Detalhes do Recurso](always-encrypted-database-engine.md#feature-details), também se aplicam a esse recurso com enclaves seguros.
+Todas as outras limitações do Always Encrypted listadas em [Detalhes do Recurso](always-encrypted-database-engine.md#feature-details) também se aplicam ao Always Encrypted com enclaves seguro.
 
 As seguintes limitações são específicas do Always Encrypted com enclaves seguros:
 
 - Não é possível criar índices clusterizados em colunas habilitadas para enclave com criptografia aleatória.
 - Colunas habilitadas para enclave com criptografia aleatória não podem ser colunas de chave primária e não podem ser referenciadas por restrições de chaves estrangeiras nem por restrições de chaves exclusivas.
-- Não há suporte para junções hash e junções mescladas em colunas habilitadas para enclave com criptografia aleatória. Há suporte apenas para junções de loops aninhados (com índices, quando disponíveis).
-- Consultas com o operador LIKE ou um operador de comparação que inclui um parâmetro de consulta com um dos seguintes tipos de dados (que se tornam objetos grandes após a criptografia) ignoram índices e executam verificações de tabela.
-    - nchar[n] e nvarchar[n], se n for maior do que 3967.
-    - char[n], varchar[n], binary[n], varbinary[n], se n for maior do que 7935.
-- Operações criptográficas in-loco não podem ser combinadas com outras alterações de metadados de coluna, exceto as alterações de ordenação, na mesma página de código e nulidade. Por exemplo, não é possível criptografar, recriptografar ou descriptografar uma coluna E alterar um tipo de dados da coluna em uma única instrução Transact-SQL ALTER TABLE ou ALTER COLUMN. É necessário usar duas instruções separadas.
+- Somente junções de loop aninhadas (usando índices, se disponíveis) têm suporte em colunas habilitadas para enclave usando criptografia aleatória. Não há suporte para junções hash nem para junções mescladas. 
+- Operações criptográficas in-loco não podem ser combinadas com outras alterações de metadados de coluna, exceto as alterações de ordenação, na mesma página de código e nulidade. Por exemplo, não é possível criptografar, recriptografar ou descriptografar uma coluna E alterar um tipo de dados da coluna em uma única instrução `ALTER TABLE`/`ALTER COLUMN` do Transact-SQL. É necessário usar duas instruções separadas.
 - Não há suporte para o uso de chaves habilitadas para enclave para colunas em tabelas na memória.
 - Expressões que definem colunas computadas não podem executar cálculos em colunas habilitadas para enclave usando criptografia aleatória (mesmo que as computações forem comparações LIKE e de intervalo).
-- Os únicos repositórios de chaves compatíveis com o armazenamento de chaves mestras de coluna habilitadas para enclave são o Repositório de Certificados do Windows e o Azure Key Vault.
-
-As seguintes limitações se aplicam ao [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], mas estão no roteiro para serem solucionadas:
-
-- Não há suporte para criação de estatísticas sobre colunas habilitadas para enclave com criptografia aleatória.
-- O único driver de cliente compatível com Always Encrypted com enclaves seguros é o Provedor de Dados do .NET Framework para SQL Server (ADO.NET) no .NET Framework 4.7.2. Não há suporte para ODBC/JDBC.
-- A compatibilidade de ferramentas com o Always Encrypted com enclaves seguros está incompleta no momento. Especialmente:
-  - Não há suporte para a importação/exportação de bancos de dados que contém chaves habilitadas para enclave.
-  - Para disparar uma operação criptográfica in-loco por meio de uma instrução Transact-SQL ALTER TABLE, é necessário emitir a instrução usando uma janela de consulta no SSMS ou então, você pode escrever seu próprio programa que emite a instrução. O cmdlet Set-SqlColumnEncryption no módulo SqlServer PowerShell e o assistente de Always Encrypted no SQL Server Management Studio ainda não são compatíveis com a criptografia in-loco – atualmente, ambas as ferramentas movem os dados para fora do banco de dados para operações criptográficas, mesmo se as chaves de criptografia de coluna usadas para as operações forem habilitadas para enclave.
-- Não há suporte para comandos DBCC que verificam a integridade ou que atualizam índices.
-- Criação de índices em colunas criptografadas, no momento da criação da tabela (por meio do recurso CREATE TABLE). Crie um índice separadamente em uma coluna criptografada, por meio do recurso CREATE INDEX.
+- Não há suporte para caracteres de escape em parâmetros do operador LIKE em colunas habilitadas para enclave usando criptografia aleatória.
+- Consultas com o operador LIKE ou um operador de comparação que inclui um parâmetro de consulta com um dos seguintes tipos de dados (que se tornam objetos grandes após a criptografia) ignoram índices e executam verificações de tabela.
+    - `nchar[n]` e `nvarchar[n]`, se n for maior que 3967.
+    - `char[n]`, `varchar[n]`, `binary[n]`, `varbinary[n]`, se n for maior que 7935.
+- Limitações de ferramentas:
+  - Os únicos repositórios de chaves compatíveis com o armazenamento de chaves mestras de coluna habilitadas para enclave são o Repositório de Certificados do Windows e o Azure Key Vault.
+  - Não há suporte para importar/exportar bancos de dados que contêm chaves habilitadas para enclave.
+  - Para disparar uma operação criptográfica in-loco por meio de uma instrução `ALTER TABLE`/`ALTER COLUMN` do Transact-SQL, é necessário emitir a instrução usando uma janela de consulta no SSMS ou então, você pode escrever seu próprio programa que emite a instrução. No momento, o cmdlet Set-SqlColumnEncryption no módulo SqlServer PowerShell e o assistente de Always Encrypted no SQL Server Management Studio ainda não são compatíveis com a criptografia in-loco – eles movem os dados para fora do banco de dados para operações criptográficas, mesmo se as chaves de criptografia de coluna usadas para as operações estão habilitadas para enclave.
 
 ## <a name="next-steps"></a>Próximas etapas
+- [Tutorial: Introdução ao Always Encrypted com enclaves seguros usando o SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Configurar e usar o Always Encrypted com enclaves seguros](configure-always-encrypted-enclaves.md)
 
-- Configure o ambiente de teste e experimente a funcionalidade do Always Encrypted com enclaves seguras no SSMS – confira [Tutorial: Introdução ao Always Encrypted com enclaves seguros usando o SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
-- Para ver detalhes sobre como usar o Always Encrypted com enclaves seguros, confira o tópico [Configurar o Always Encrypted com enclaves seguros](configure-always-encrypted-enclaves.md).
+## <a name="see-also"></a>Confira também
+- [Gerenciar chaves para Always Encrypted com enclaves seguros](always-encrypted-enclaves-manage-keys.md)
+- [Configurar a criptografia de coluna in-loco usando o Always Encrypted com enclaves seguros](always-encrypted-enclaves-configure-encryption.md)
+- [Consultar colunas usando o Always Encrypted com enclaves seguros](always-encrypted-enclaves-query-columns.md)
+- [Habilitar o Always Encrypted com enclaves seguros para as colunas criptografadas existentes](always-encrypted-enclaves-enable-for-encrypted-columns.md)
+- [Criar e usar índices em colunas usando o Always Encrypted com enclaves seguros](always-encrypted-enclaves-create-use-indexes.md)
+
+

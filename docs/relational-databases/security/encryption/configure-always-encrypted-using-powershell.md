@@ -1,32 +1,34 @@
 ---
 title: Configurar o Always Encrypted usando o PowerShell | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ad4a50d8aeca225ae0d00574a62cc428593ebb2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5c90ea22849dd1d0437cdf058f639bbe546ccab9
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903013"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594410"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Configurar Always Encrypted usando o PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-O módulo do SqlServer PowerShell fornece cmdlets para configurar o [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) no Banco de Dados SQL do Azure e no SQL Server 2016.
+O módulo do SqlServer PowerShell fornece cmdlets para configurar o [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) no [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] ou no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
-Always Encrypted cmdlets no módulo SqlServer trabalhar com chaves ou dados confidenciais, portanto, é importante que você execute os cmdlets em um computador seguro. Ao gerenciar o Always Encrypted, execute os cmdlets de um computador diferente do computador que hospeda a instância do SQL Server.
+## <a name="security-considerations-when-using-powershell-to-configure-always-encrypted"></a>Considerações de segurança ao usar o PowerShell para configurar o Always Encrypted
 
 Como a meta principal do Always Encrypted é garantir que os dados confidenciais criptografados estejam seguros mesmo se o sistema do banco de dados for comprometido, executar um script do PowerShell que processa chaves ou dados confidenciais no computador do SQL Server pode reduzir ou anular os benefícios do recurso. Para obter recomendações adicionais relacionadas à segurança, consulte [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)(Considerações de segurança para o Gerenciamento de Chaves).
 
-Links para os artigos individuais de cmdlet estão na parte [inferior dessa página](#aecmdletreference).
+Você pode usar o PowerShell para gerenciar chaves Always Encrypted com e sem separação de funções, oferecendo controle sobre quem tem acesso à criptografia de chaves real no repositório de chaves e quem tem acesso ao banco de dados.
+
+ Para obter recomendações adicionais, consulte [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)(Considerações de segurança para o Gerenciamento de Chaves).
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -50,14 +52,43 @@ Import-Module "SqlServer"
 ## <a name="connectingtodatabase"></a> Conectando a um banco de dados
 
 Alguns dos cmdlets do Always Encrypted trabalham com dados ou metadados no banco de dados e requerem que você se conecte ao banco de dados primeiro. Há dois métodos recomendados para se conectar a um banco de dados ao configurar o Always Encrypted usando o módulo SqlServer: 
-1. Conectar-se usando o SQL Server PowerShell.
-2. Conectar-se usando o SMO (SQL Server Management Objects).
+1. Conectar-se usando o cmdlet **Get-SqlDatabase**.
+2. Conectar-se usando o Provedor do SQL Server PowerShell.
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+### <a name="using-get-sqldatabase"></a>Usando Get-SqlDatabase
+O cmdlet **Get-SqlDatabase** permite que você se conecte a um banco de dados no SQL Server ou no Banco de Dados SQL do Azure. Ele retorna um objeto de banco de dados, que você pode transmitir usando o parâmetro **InputObject** de um cmdlet que se conecta ao banco de dados. 
 
 ### <a name="using-sql-server-powershell"></a>Usando o SQL Server PowerShell
 
-Esse método funciona apenas para o SQL Server (não há suporte no Banco de Dados SQL do Azure).
+```
+# Import the SqlServer module
+Import-Module "SqlServer"  
 
-Com o SQL Server PowerShell, você pode navegar nos caminhos usando aliases do Windows PowerShell semelhantes aos comandos normalmente usados para navegar em caminhos do sistema de arquivos. Depois de navegar para a instância de destino e para o banco de dados, os cmdlets subsequentes terão como destino esse banco de dados, como mostrado no exemplo a seguir:
+# Connect to your database
+# Set the valid server name, database name and authentication keywords in the connection string
+$serverName = "<Azure SQL server name>.database.windows.net"
+$databaseName = "<database name>"
+$connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Authentication = Active Directory Integrated"
+$database = Get-SqlDatabase -ConnectionString $connStr
+
+# List column master keys for the specified database.
+Get-SqlColumnMasterKey -InputObject $database
+```
+
+Como alternativa, você pode usar a barra vertical:
+
+
+```
+$database | Get-SqlColumnMasterKey
+```
+
+### <a name="using-sql-server-powershell-provider"></a>Usando o Provedor do SQL Server PowerShell
+O [Provedor do SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md) expõe a hierarquia de objetos do SQL Server em caminhos semelhantes aos caminhos do sistema de arquivos. Com o SQL Server PowerShell, você pode navegar nos caminhos usando aliases do Windows PowerShell semelhantes aos comandos normalmente usados para navegar em caminhos do sistema de arquivos. Depois de navegar para a instância de destino e para o banco de dados, os cmdlets seguintes terão como destino esse banco de dados, como mostrado no exemplo a seguir. 
+
+> [!NOTE]
+> Esse método de conexão com o banco de dados funciona apenas para o SQL Server (não há suporte no Banco de Dados SQL do Azure).
 
 ```
 # Import the SqlServer module.
@@ -79,43 +110,11 @@ Import-Module "SqlServer"
 Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\yourdatabase
 ```
  
-### <a name="using-smo"></a>Usando o SMO
-
-Este método funciona para o Banco de Dados SQL do Azure e para o SQL Server.
-Com o SMO, você pode criar um objeto da [Classe Database](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.database.aspx), e, em seguida, passar o objeto usando o parâmetro **InputObject** de um cmdlet que se conecta ao banco de dados.
-
-
-```
-# Import the SqlServer module
-Import-Module "SqlServer"  
-
-# Connect to your database (Azure SQL database).
-$serverName = "<Azure SQL server name>.database.windows.net"
-$databaseName = "<database name>"
-$connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Authentication = Active Directory Integrated"
-$connection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection
-$connection.ConnectionString = $connStr
-$connection.Connect()
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server($connection)
-$database = $server.Databases[$databaseName] 
-
-# List column master keys for the specified database.
-Get-SqlColumnMasterKey -InputObject $database
-```
-
-
-Como alternativa, você pode usar a barra vertical:
-
-
-```
-$database | Get-SqlColumnMasterKey
-```
-
 ## <a name="always-encrypted-tasks-using-powershell"></a>Tarefas do Always Encrypted usando o PowerShell
 
-- [Configurar chaves do Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md) 
+- [Provisionar chaves do Always Encrypted usando o PowerShell](configure-always-encrypted-keys-using-powershell.md)
 - [Girar chaves Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [Configurar a criptografia de coluna usando o PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md)
+- [Criptografar, criptografar novamente ou descriptografar colunas com Always Encrypted usando o PowerShell](configure-column-encryption-using-powershell.md)
 
 
 ##  <a name="aecmdletreference"></a> Referência de cmdlet do Always Encrypted
@@ -145,11 +144,9 @@ Os cmdlets do PowerShell a seguir estão disponíveis para o Always Encrypted:
 
 
 
-## <a name="additional-resources"></a>Recursos adicionais
+## <a name="see-also"></a>Consulte Também
 
-- [Always Encrypted (mecanismo de banco de dados)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Visão geral do gerenciamento de chaves do Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [Usando o Always Encrypted com o Provedor de Dados .NET Framework para SQL Server](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [Configurar o Always Encrypted usando o SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-
+- [Desenvolver aplicativos usando o Always Encrypted](always-encrypted-client-development.md)

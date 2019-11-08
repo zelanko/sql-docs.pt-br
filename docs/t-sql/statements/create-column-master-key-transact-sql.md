@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,19 +24,19 @@ helpviewer_keywords:
 - CREATE COLUMN MASTER KEY statement
 - Always Encrypted, create column master key
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9b0c03e6d4c7d938336d1287bd190433f7588ff2
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: cd6148499c6e9d906d0077632001d3fe32ce9cc3
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73064559"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593890"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Cria um objeto de metadados de chave mestra de coluna em um banco de dados. Uma entrada de metadados de chave mestra de coluna representa uma chave, armazenada em um repositório de chave externa. A chave protege (criptografa) as chaves de criptografia de coluna ao usar o recurso [&#40;Mecanismo de Banco de Dados&#41; Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Múltiplas chaves mestras de coluna permitem a rotação periódica de chaves para aumentar a segurança. Crie uma chave mestra de coluna em um repositório de chaves e seu objeto de metadados relacionado no banco de dados usando o Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou no PowerShell. Para obter detalhes, veja [Visão geral do gerenciamento de chaves para Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
+Cria um objeto de metadados de chave mestra de coluna em um banco de dados. Uma entrada de metadados de chave mestra de coluna representa uma chave, armazenada em um repositório de chave externa. A chave protege (criptografa) chaves de criptografia de coluna quando você está usando [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) ou [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Múltiplas chaves mestras de coluna permitem a rotação periódica de chaves para aumentar a segurança. Crie uma chave mestra de coluna em um repositório de chaves e seu objeto de metadados relacionado no banco de dados usando o Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou no PowerShell. Para obter detalhes, veja [Visão geral do gerenciamento de chaves para Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
@@ -46,7 +46,7 @@ Cria um objeto de metadados de chave mestra de coluna em um banco de dados. Uma 
 
 ## <a name="syntax"></a>Sintaxe  
 
-```  
+``` sql 
 CREATE COLUMN MASTER KEY key_name   
     WITH (  
         KEY_STORE_PROVIDER_NAME = 'key_store_provider_name',  
@@ -72,9 +72,7 @@ Em seguida, o driver usa o provedor para descriptografar chaves de criptografia 
   
 Bibliotecas de drivers de cliente habilitadas para Always Encrypted incluem provedores de repositório de chaves para repositórios de chaves populares.   
   
-Um conjunto de provedores disponíveis depende do tipo e da versão do driver do cliente. Veja a documentação do Always Encrypted para drivers específicos:
-
-[Desenvolver aplicativos usando o Always Encrypted com o Provedor do .NET Framework para SQL Server](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
+Um conjunto de provedores disponíveis depende do tipo e da versão do driver do cliente. Veja a documentação do Always Encrypted para drivers específicos: [Desenvolver aplicativos usando o Always Encrypted](../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
 
 A tabela a seguir mostra os nomes de provedores de sistema:  
@@ -84,7 +82,8 @@ A tabela a seguir mostra os nomes de provedores de sistema:
     |'MSSQL_CERTIFICATE_STORE'|Repositório de Certificados do Windows| 
     |'MSSQL_CSP_PROVIDER'|Um repositório, como um HSM (módulo de segurança de hardware) compatível com o Microsoft CryptoAPI.|
     |'MSSQL_CNG_STORE'|Um repositório, como um HSM (módulo de segurança de hardware), compatível com a API Cryptography Next Generation.|  
-    |'Azure_Key_Vault'|Veja [Introdução ao Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
+    |'AZURE_KEY_VAULT'|Veja [Introdução ao Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
+    |'MSSQL_JAVA_KEYSTORE'| Repositório de chaves Java.}
   
 
 No seu driver cliente habilitado para Always Encrypted, é possível configurar um provedor de repositório de chaves personalizado para armazenar chaves mestras de coluna para as quais não há nenhum provedor de repositório de chaves interno. Os nomes de provedores de repositório de chaves personalizado não podem começar com 'MSSQL_', que é um prefixo reservado para provedores de repositório de chaves [!INCLUDE[msCoName](../../includes/msconame-md.md)]. 
@@ -172,6 +171,7 @@ Um literal binário que é um resultado de assinar digitalmente o *caminho da ch
 
 Crie uma entrada de metadados de chave mestra de coluna antes de uma entrada de metadados de chave de criptografia de coluna ser criada no banco de dados e antes de qualquer coluna no banco de dados poder ser criptografada usando Always Encrypted. Uma entrada de chave mestra de coluna nos metadados não contém a chave mestra de coluna real. A chave mestra de coluna deve ser armazenada em um repositório de chaves de coluna externo (fora do SQL Server). O nome do provedor de repositório de chaves e o caminho da chave mestra de coluna nos metadados devem ser válidos para um aplicativo cliente. O aplicativo cliente precisa usar a chave mestra de coluna para descriptografar uma chave de criptografia de coluna. A chave de criptografia de coluna é criptografada com a chave mestra de coluna. O aplicativo cliente também precisa consultar colunas criptografadas.
 
+É recomendável usar ferramentas, como o SSMS (SQL Server Management Studio) ou o PowerShell para gerenciar chaves mestras de coluna. Essas ferramentas geram assinaturas (se você estiver usando Always Encrypted com enclaves seguros) e emitem automaticamente instruções `CREATE COLUMN MASTER KEY` para criar objetos de metadados de chave de criptografia de coluna. Confira [Provisionar chaves Always Encrypted usando o SQL Server Management Studio](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md) e [Provisionar chaves Always Encrypted usando o PowerShell](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md). 
 
   
 ## <a name="permissions"></a>Permissões  
@@ -182,7 +182,7 @@ Requer a permissão **ALTER ANY COLUMN MASTER KEY**.
 ### <a name="a-creating-a-column-master-key"></a>A. Criando uma chave mestra de coluna  
 O exemplo a seguir cria uma entrada de metadados de chave mestra de coluna para uma chave mestra de coluna. A chave mestra de coluna é armazenada no Repositório de Certificados para aplicativos cliente que usam o provedor MSSQL_CERTIFICATE_STORE para acessar a chave mestra de coluna:  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
@@ -247,6 +247,8 @@ WITH (
 * [DROP COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
 * [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)
 * [sys.column_master_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
-* [Always Encrypted &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
-* [Visão geral do gerenciamento de chaves do Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+* [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+* [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+* [Visão geral do gerenciamento de chaves do Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+* [Gerenciar chaves para Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   

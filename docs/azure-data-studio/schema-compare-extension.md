@@ -1,31 +1,29 @@
 ---
 title: Extensão de Comparação de Esquema
 titleSuffix: Azure Data Studio
-description: Instale e use a extensão de Comparação de Esquema (versão prévia) para o Azure Data Studio
+description: Instalar e usar a extensão Comparação de Esquemas para o Azure Data Studio
 ms.custom: seodec18
-ms.date: 10/03/2019
+ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 031bdc19762213ff2c85e6fe4612ded294fcaaa9
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
+ms.openlocfilehash: f93711983eb32a979e47941883e968b52e03459c
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381799"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532538"
 ---
-# <a name="schema-compare-extension-preview"></a>Extensão de Comparação de Esquema (versão prévia)
+# <a name="schema-compare-extension"></a>Extensão de Comparação de Esquema
 A extensão Comparação de Esquemas oferece uma experiência fácil de usar para comparar duas definições de banco de dados e aplicar as diferenças da origem no destino.
-
-Atualmente, essa experiência está na versão prévia inicial. Informe problemas e solicite recursos [aqui](https://github.com/microsoft/azuredatastudio/issues).
 
 
 ## <a name="features"></a>Recursos
 
-* Comparar esquemas para dois arquivos .dacpac ou bancos de dados
+* Comparar esquemas de dois arquivos ou bancos de dados DACPAC
 * Exibir resultados como um conjunto de ações que devem ser executadas em relação ao destino para corresponderem à origem
 * Excluir seletivamente ações listadas em resultados
 * Definir opções que controlam o escopo da comparação
@@ -72,3 +70,4 @@ Pode ser entediante gerenciar e sincronizar manualmente diferentes versões do b
 ## <a name="next-steps"></a>Próximas etapas
 
 Para saber mais sobre a Comparação de Esquema, [confira nossa documentação](https://docs.microsoft.com/sql/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions).
+Informe problemas e solicite recursos [aqui](https://github.com/microsoft/azuredatastudio/issues).

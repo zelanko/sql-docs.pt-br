@@ -1,28 +1,28 @@
 ---
 title: Visão geral do gerenciamento de chaves do Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 872c752355c12074ed90b525940fa3889726e662
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111638"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594105"
 ---
-# <a name="overview-of-key-management-for-always-encrypted"></a>Overview of Key Management for Always Encrypted
+# <a name="overview-of-key-management-for-always-encrypted"></a>Visão geral do gerenciamento de chaves do Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-[Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) usa dois tipos de chaves de criptografia para proteger seus dados, uma chave para criptografar os dados e outra para criptografar a chave que criptografa os dados. A chave de criptografia de coluna criptografa os dados, a chave mestra de coluna criptografa a chave de criptografia de coluna. Este artigo fornece uma visão geral detalhada para gerenciar essas chaves de criptografia.
+[Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) usa dois tipos de chaves de criptografia para proteger seus dados, uma chave para criptografar os dados e outra para criptografar a chave que criptografa os dados. A chave de criptografia de coluna criptografa os dados, a chave mestra de coluna criptografa a chave de criptografia de coluna. Este artigo fornece uma visão geral detalhada para gerenciar essas chaves de criptografia.  
 
 Ao discutir chaves Always Encrypted e o gerenciamento de chaves, é importante compreender a diferença entre as chaves de criptografia reais e os objetos de metadados que *descrevem* as chaves. Usamos os termos **chave de criptografia de coluna** e **chave mestra de coluna** para referir-se às chaves de criptografia reais e usamos os **metadados de chave de criptografia de coluna** e **metadados de chave mestra de coluna** para referir-se às *descrições* da chave Always Encrypted no banco de dados.
 
@@ -33,7 +33,7 @@ Ao discutir chaves Always Encrypted e o gerenciamento de chaves, é importante c
 
 É importante observar que os metadados de chave no sistema de banco de dados não contém chaves mestras de coluna de texto não criptografado ou chaves de criptografia de coluna de texto não criptografado. O banco de dados contém apenas informações sobre o tipo e o local das chaves mestras de coluna e valores criptografados das chaves de criptografia de coluna. Isso significa que chaves com texto não criptografado nunca são expostas no sistema de banco de dados, garantindo que os dados protegidos que usam o Always Encrypted estejam seguros, mesmo se o sistema de banco de dados for comprometido. Para garantir que o sistema de banco de dados não possa obter acesso às chaves de texto não criptografado, execute as ferramentas de gerenciamento de chaves em um computador diferente daquele que hospeda seu banco de dados. Leia a seção [Considerações de segurança para gerenciamento de chaves](#security-considerations-for-key-management) abaixo para ver os detalhes.
 
-Como o banco de dados só contém dados criptografados (em colunas Always Encrypted protegidas) e não pode acessar as chaves de texto não criptografado, ele não pode descriptografar os dados. Isso significa que consultar colunas Always Encrypted simplesmente retornará valores criptografados, por isso aplicativos cliente que precisam criptografar ou descriptografar dados protegidos devem ser capazes de acessar a chave mestra de coluna e as chaves de criptografia de coluna relacionadas. Para ver os detalhes, consulte [Always Encrypted (desenvolvimento de cliente)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
+Como o banco de dados só contém dados criptografados (em colunas Always Encrypted protegidas) e não pode acessar as chaves de texto não criptografado, ele não pode descriptografar os dados. Isso significa que consultar colunas Always Encrypted simplesmente retornará valores criptografados, por isso aplicativos cliente que precisam criptografar ou descriptografar dados protegidos devem ser capazes de acessar a chave mestra de coluna e as chaves de criptografia de coluna relacionadas. Para obter detalhes, confira [Desenvolver aplicativos usando o Always Encrypted](always-encrypted-client-development.md).
 
 
 
@@ -70,15 +70,12 @@ Quando chaves Always Encrypted são gerenciadas sem a separação de funções, 
 Chaves Always Encrypted podem ser gerenciadas usando o [SSMS (SQL Server Management Studio)](https://msdn.microsoft.com/library/ms174173.aspx) e [PowerShell](../../scripting/sql-server-powershell.md):
 
 - **SSMS (SQL Server Management Studio)** – fornece caixas de diálogo e assistentes que combinam tarefas que envolvem o acesso ao repositório de chaves e ao banco de dados, por isso o SSMS não dá suporte à separação de funções, mas facilita a configuração de suas chaves. Para obter mais informações sobre gerenciamento de chaves usando o SSMS, consulte:
-    - [Provisionando chaves mestras de coluna](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)
-    - [Provisionando chaves de criptografia de coluna](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncek)
-    - [Rotação de chaves mestras de coluna](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecmk)
-    - [Girando chaves de criptografia de coluna](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecek)
-
+    - [Provisionar chaves Always Encrypted usando o SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
+    - [Girar chaves do Always Encrypted usando o SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
 
 - **SQL Server PowerShell** – inclui cmdlets para gerenciar chaves Always Encrypted com e sem separação de funções. Para obter mais informações, consulte:
     - [Configurar chaves do Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-    - [Girar chaves Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
+    - [Girar chaves do Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
 
 ## <a name="security-considerations-for-key-management"></a>Considerações de segurança para gerenciamento de chaves
@@ -96,16 +93,13 @@ Para garantir que Always Encrypted seja eficaz na prevenção desses tipos de at
 - Para garantir que o processo de gerenciamento de chaves não revele inadvertidamente as chaves mestras de coluna ou as chaves de criptografia de coluna, é essencial identificar os possíveis adversários e ameaças de segurança antes de definir e implementar um processo de gerenciamento de chaves. Por exemplo, se sua meta é garantir que os DBAs não tenham acesso a dados confidenciais, um DBA não pode ser o responsável por gerar as chaves. Um DBA, no entanto, *pode* gerenciar metadados de chave no banco de dados, pois os metadados não contêm as chaves de texto não criptografado.
 
 ## <a name="next-steps"></a>Next Steps
+- [Configurar a criptografia de coluna usando o Assistente do Always Encrypted](always-encrypted-wizard.md)
+- [Criar e armazenar chaves mestras de coluna para Always Encrypted](create-and-store-column-master-keys-always-encrypted.md)
+- [Provisionar chaves Always Encrypted usando o SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
+- [Provisionar chaves do Always Encrypted usando o PowerShell](configure-always-encrypted-keys-using-powershell.md)
 
-- [Criar e armazenar chaves mestras de coluna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
-- [Configurar chaves do Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-- [Girar chaves Always Encrypted usando o PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [Configurar o Always Encrypted usando o SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-## <a name="additional-resources"></a>Recursos adicionais
-
-- [Always Encrypted (mecanismo de banco de dados)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted (Client Development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
+## <a name="see-also"></a>Consulte Também
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Tutorial do assistente do Always Encrypted (Cofre de Chaves do Azure)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
 - [Tutorial do assistente do Always Encrypted (Repositório de Certificados do Windows)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

@@ -1,35 +1,33 @@
 ---
 title: Implantar com um script Python
 titleSuffix: SQL Server big data clusters
-description: Saiba como usar um script de implantação para implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versão prévia) no serviço kubernetes do Azure (AKs).
+description: Saiba como usar um script de implantação para implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versão prévia) no AKS (Serviço Kubernetes do Azure).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1bd3af32448bfce7dc584ac630d503e4cf63b286
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 3233ec8a266ea77fe0eb62f5cfcadde8f2949ff9
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653236"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531925"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Usar um script Python para implantar um cluster de Big Data do SQL Server no AKS (Serviço de Kubernetes do Azure)
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Neste tutorial, você usará um exemplo de script de implantação do [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Python para implantar no serviço de kubernetes do Azure (AKs).
+Neste tutorial, use um script de implantação Python de exemplo para implantar um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] no AKS (Serviço Kubernetes do Azure).
 
 > [!TIP]
-> O AKS é apenas uma opção para hospedar o Kubernetes para seu cluster de Big Data. Para saber mais sobre outras opções de implantação, bem como personalizar opções de implantação, consulte [como implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] em kubernetes](deployment-guidance.md).
+> O AKS é apenas uma opção para hospedar o Kubernetes para seu cluster de Big Data. Para saber mais sobre outras opções de implantação, bem como personalizar opções de implantação, confira [Como implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no Kubernetes](deployment-guidance.md).
 
 A implantação padrão de cluster de Big Data usada aqui consiste em uma instância do SQL mestre, uma instância do pool de computação, duas instâncias do pool de dados e duas instâncias do pool de armazenamento. Os dados são persistidos usando volumes persistentes do Kubernetes que usam as classes de armazenamento padrão do AKS. A configuração padrão usada neste tutorial é adequada para ambientes de desenvolvimento/teste.
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
-
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Uma assinatura do Azure.
 - [Ferramentas de Big Data](deploy-big-data-tools.md):
@@ -81,7 +79,7 @@ Use as etapas a seguir para executar o script de implantação. Esse script cria
    | **Nó de trabalho** | O número de nós de trabalho no cluster do AKS (**1** padrão). |
    | **Nome do cluster** | O nome do cluster do AKS e do cluster de Big Data. O nome do cluster de Big Data deve ter apenas caracteres alfanuméricos minúsculos e nenhum espaço. (**sqlbigdata** padrão). |
    | **Senha** | Senha para o controlador, o gateway HDFS/Spark e a instância mestre (**MySQLBigData2019** padrão). |
-   | **Usuário do controlador** | Nome de usuário do controlador (padrão: **admin**). |
+   | **Nome de usuário** | Nome de usuário do controlador (padrão: **admin**). |
 
 Os seguintes parâmetros foram necessários para os participantes no programa de usuários pioneiros do cluster de Big Data do SQL Server 2019: **Nome de usuário** e **senha** do Docker. Do CTP 3.2 em diante, eles não são mais necessários.
 
@@ -89,7 +87,7 @@ Os seguintes parâmetros foram necessários para os participantes no programa de
    > O tamanho padrão do computador **Standard_L8s** pode não estar disponível em todas as regiões do Azure. Se você selecionar um tamanho de computador diferente, verifique se o número total de discos que podem ser anexados entre os nós no cluster é maior ou igual a 24. Cada declaração de volume persistente no cluster requer um disco anexado. Atualmente, o cluster de Big Data requer 24 declarações de volume persistente. Por exemplo, o tamanho do computador [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) dá suporte a 32 discos anexados, portanto, você pode avaliar clusters de Big Data com um único nó desse tamanho de computador.
 
    > [!NOTE]
-   > A conta `sa` é um administrador do sistema na instância mestre do SQL Server que é criada durante a instalação. Depois de criar a implantação, a variável de ambiente `MSSQL_SA_PASSWORD` é detectável por meio da execução de `echo $MSSQL_SA_PASSWORD` no contêiner da instância mestre. Para fins de segurança, altere a senha `sa` na instância mestre após a implantação. Para obter mais informações, confira [Alterar a senha SA](../linux/quickstart-install-connect-docker.md#sapassword).
+   > A conta `sa` do SQL Server é desabilitada durante a implantação do cluster de Big Data. Um novo logon sysadmin é provisionado na instância mestra do SQL Server com o mesmo nome especificado para a entrada de **Nome de usuário** e a senha correspondente à entrada **Senha**. Os mesmos valores de **Nome de usuário** e **Senha** são usados para provisionar um usuário administrador do controlador. O único usuário com suporte para o gateway (Knox) é **raiz** e a senha é a mesma que a apresentada acima.
 
 1. O script será iniciado criando um cluster do AKS usando os parâmetros especificados. Esta etapa demora vários minutos.
 
@@ -113,7 +111,7 @@ Após 10 a 20 minutos, você deve ser notificado de que o pod do controlador est
 ```
 
 > [!IMPORTANT]
-> A implantação inteira pode ser muito demorada devido ao tempo necessário para baixar as imagens de contêiner para os componentes do cluster de Big Data. No entanto, não deve demorar várias horas. Se você estiver tendo problemas com sua implantação, consulte [monitoramento e solução [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]de problemas ](cluster-troubleshooting-commands.md).
+> A implantação inteira pode ser muito demorada devido ao tempo necessário para baixar as imagens de contêiner para os componentes do cluster de Big Data. No entanto, não deve demorar várias horas. Se estiver encontrando problemas em sua implantação, confira [Monitoramento e solução de problemas de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
 
 ## <a name="inspect-the-cluster"></a>Inspecionar o cluster
 
@@ -151,7 +149,7 @@ Abra uma nova janela Comando para usar **kubectl** durante o processo de implant
    ```
 
 > [!TIP]
-> Para obter mais detalhes sobre como monitorar e solucionar problemas de implantação, consulte [monitoramento [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]e solução de problemas ](cluster-troubleshooting-commands.md).
+> Para obter mais detalhes sobre como monitorar e solucionar problemas de implantação, confira [Monitoramento e solução de problemas de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
 
 ## <a name="connect-to-the-cluster"></a>Conectar-se ao cluster
 
@@ -166,7 +164,7 @@ O cluster de Big Data do SQL Server já está implantado no AKS. Agora você pod
 
 ## <a name="clean-up"></a>Limpar
 
-Se você estiver testando [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no Azure, deverá excluir o cluster AKs quando terminar para evitar encargos inesperados. Não remova o cluster se pretender continuar a usá-lo.
+Se você estiver testando [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no Azure, deverá excluir o cluster do AKS quando terminar para evitar encargos inesperados. Não remova o cluster se pretender continuar a usá-lo.
 
 > [!WARNING]
 > As etapas a seguir desmontam o cluster do AKS, que remove o cluster de Big Data do SQL Server também. Se você tiver bancos de dados ou dados do HDFS que deseja manter, faça backup desses dados antes de excluir o cluster.
@@ -179,7 +177,7 @@ az group delete -n <resource group name>
 
 ## <a name="next-steps"></a>Próximas etapas
 
-O script de implantação configurou o Serviço de Kubernetes do Azure e também implantou um cluster de Big Data do SQL Server 2019. Você também pode optar por personalizar implantações futuras por meio de instalações manuais. Para saber mais sobre como Big data clusters são implantados e como personalizar implantações, consulte [como implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] em kubernetes](deployment-guidance.md).
+O script de implantação configurou o Serviço de Kubernetes do Azure e também implantou um cluster de Big Data do SQL Server 2019. Você também pode optar por personalizar implantações futuras por meio de instalações manuais. Para saber mais sobre como os clusters de Big Data são implantados e como personalizar implantações, confira [Como implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no Kubernetes](deployment-guidance.md).
 
 Agora que o cluster de Big Data do SQL Server está implantado, você pode carregar dados de exemplo e explorar os tutoriais:
 

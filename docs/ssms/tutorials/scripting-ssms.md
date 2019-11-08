@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: d4bf028163905763ae87f04e03c0a95ddf4abcaf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 36d3b90a9ac1e49af564323c86421216216522a9
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263358"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988411"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>gerar script de objetos no SQL Server Management Studio
 
@@ -209,7 +209,7 @@ Esta seção aborda como gerar o script de [eventos estendidos](https://docs.mic
 
 4. Expanda o nó **Sessões**.
 
-5. Clique com o botão direito do mouse na sessão estendida de seu interesse em > **Criar script de sessão como** > **Nova janela de edição de consulta**:
+5. Clique com o botão direito do mouse na sessão estendida de seu interesse em > **Criar Script de Sessão como** > **CREATE To** > **Nova Janela do Editor de Consulta**:
 
     ![Sessão estendida da Janela do Editor de Nova Consulta](media/scripting-ssms/scriptxevents.png)
 

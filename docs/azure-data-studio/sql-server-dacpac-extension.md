@@ -1,27 +1,25 @@
 ---
 title: Extensão dacpac do SQL Server
 titleSuffix: Azure Data Studio
-description: Instale e use a extensão dacpac do SQL Server (versão prévia) para o Azure Data Studio
+description: Instalar e usar a extensão DACPAC do SQL Server para o Azure Data Studio
 ms.custom: seodec18
-ms.date: 10/21/2019
+ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 769e6157e7d84702716dfce79d0217efeee83076
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.openlocfilehash: d33f43f4232e7a9a62365c5bb438c91339f4fd47
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72783315"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532416"
 ---
-# <a name="sql-server-dacpac-extension-preview"></a>Extensão de dacpac do SQL Server (versão prévia)
+# <a name="sql-server-dacpac-extension"></a>Extensão dacpac do SQL Server
 
 O **Assistente de Aplicativo da Camada de Dados** proporciona uma experiência fácil de usar para implantar e extrair arquivos dacpac e importar e exportar arquivos bacpac.
-
-Atualmente, essa experiência está na versão prévia inicial. Informe sobre problemas e solicite recursos [aqui](https://github.com/microsoft/azuredatastudio/issues).
 
 
 ## <a name="features"></a>Recursos
@@ -60,3 +58,4 @@ Para iniciar o assistente, clique com o botão direito do mouse na pasta Bancos 
 ## <a name="next-steps"></a>Próximas etapas
 
 Para saber mais sobre dacpacs, [confira nossa documentação](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017).
+Informe sobre problemas e solicite recursos [aqui](https://github.com/microsoft/azuredatastudio/issues).

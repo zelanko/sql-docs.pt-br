@@ -1,7 +1,7 @@
 ---
 title: Criptografia Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/30/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Always Encrypted, cryptography system
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70a18e569b43066bd64fe56593c47980a6894b09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0fe0e861e8139416250ffc2677230dbc2aeab6d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043293"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594400"
 ---
 # <a name="always-encrypted-cryptography"></a>Criptografia Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68043293"
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Chaves, repositórios de chaves e algoritmos de criptografia de chave
  O Always Encrypted usa dois tipos de chaves: Chaves mestras de coluna e chaves de criptografia de coluna.  
   
- Uma CMK (chave mestra de coluna) é uma chave que criptografa uma chave (por exemplo, uma chave usada para criptografar outras chaves) que está sempre no controle do cliente e é armazenada em um repositório de chaves externas. Um driver de cliente habilitado para Always Encrypted interage com o repositório de chaves por meio de um provedor de repositório CMK, que pode fazer parte da biblioteca de drivers (um provedor do sistema/ [!INCLUDE[msCoName](../../../includes/msconame-md.md)]) ou parte do aplicativo cliente (um provedor personalizado). Atualmente, as bibliotecas de drivers de cliente incluem provedores de repositório de chaves [!INCLUDE[msCoName](../../../includes/msconame-md.md)] para [Repositório de Certificados do Windows](/windows/desktop/SecCrypto/using-certificate-stores) e HSMs (módulos de segurança de hardware).  (Para obter a lista atual de provedores, veja [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md).) Um desenvolvedor de aplicativos pode fornecer um provedor personalizado para um repositório arbitrário.  
+ Uma CMK (chave mestra de coluna) é uma chave de criptografia de chave (por exemplo, uma chave usada para criptografar outras chaves) que está sempre sob controle do cliente e é armazenada em um repositório de chaves externas. Um driver de cliente habilitado para Always Encrypted interage com o repositório de chaves por meio de um provedor de repositório CMK, que pode fazer parte da biblioteca de drivers (um provedor do sistema/ [!INCLUDE[msCoName](../../../includes/msconame-md.md)]) ou parte do aplicativo cliente (um provedor personalizado). Atualmente, as bibliotecas de drivers de cliente incluem provedores de repositório de chaves [!INCLUDE[msCoName](../../../includes/msconame-md.md)] para [Repositório de Certificados do Windows](/windows/desktop/SecCrypto/using-certificate-stores) e HSMs (módulos de segurança de hardware). Para obter a lista atual de provedores, veja [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md). Um desenvolvedor de aplicativos pode fornecer um provedor personalizado para um repositório arbitrário.  
   
  Uma CEK (chave de criptografia de coluna) é uma criptografia de conteúdo (por exemplo, uma chave usada para proteger dados) protegida por uma CMK.  
   
@@ -67,12 +67,12 @@ When using deterministic encryption: IV = HMAC-SHA-256( iv_key, cell_data ) trun
 iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_length)  
 ```  
   
- O truncamento do valor HMAC é executado para adequação de 1 bloco de dados conforme a necessidade do IV.
+ O truncamento do valor HMAC é executado para adequação de um bloco de dados conforme a necessidade do IV.
 Como resultado, a criptografia determinística sempre produz o mesmo texto cifrado para um determinado valor de texto não criptografado, o que permite inferir se dois valores de texto não criptografado são iguais comparando seus valores de texto cifrado correspondentes. Essa divulgação limitada de informações permite que o sistema de banco de dados ofereça suporte à comparação de igualdade em valores de coluna criptografados.  
   
  A criptografia determinística é mais eficaz em ocultar padrões, em comparação com as alternativas, como usar um valor predefinido de IV.  
   
-### <a name="step-2-computing-aes256cbc-ciphertext"></a>Etapa 2: Computando o texto cifrado AES_256_CBC  
+### <a name="step-2-computing-aes_256_cbc-ciphertext"></a>Etapa 2: Computando o texto cifrado AES_256_CBC  
  Depois de computar o IV, o texto cifrado **AES_256_CBC** é gerado:  
   
 ```  
@@ -175,10 +175,10 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**xml**|N/D (sem suporte)|  
   
 ## <a name="net-reference"></a>Referência do .NET  
- Para obter detalhes sobre os algoritmos abordados neste documento, confira os arquivos **SqlAeadAes256CbcHmac256Algorithm.cs** e **SqlColumnEncryptionCertificateStoreProvider.cs** na [Referência do .NET](https://referencesource.microsoft.com/).  
+ Para obter detalhes sobre os algoritmos abordados neste documento, confira os arquivos **SqlAeadAes256CbcHmac256Algorithm.cs**, **SqlColumnEncryptionCertificateStoreProvider.cs** e **SqlColumnEncryptionCertificateStoreProvider.cs** na [Referência do .NET](https://referencesource.microsoft.com/).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Always Encrypted &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [Always Encrypted &#40;desenvolvimento de cliente&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
+ - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ - [Desenvolver aplicativos usando o Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   
