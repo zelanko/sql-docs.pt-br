@@ -1,6 +1,7 @@
 ---
-title: sp_delete_firewall_rule (banco de dados SQL) | Microsoft Docs
-ms.custom: ''
+title: sp_delete_firewall_rule
+titleSuffix: Azure SQL Database
+ms.custom: seo-dt-2019
 ms.date: 07/27/2016
 ms.service: sql-database
 ms.reviewer: ''
@@ -18,14 +19,14 @@ ms.assetid: cf93eed1-ba97-4850-9fcc-b9c5a9317908
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 01bc61c37fcde1e23c1b1c962dae7a985d053c03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b012b118d16b2bf15194eb2fe515936abf6e6f80
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130664"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844392"
 ---
-# <a name="spdeletefirewallrule-azure-sql-database"></a>sp_delete_firewall_rule (Banco de Dados SQL do Azure)
+# <a name="sp_delete_firewall_rule-azure-sql-database"></a>sp_delete_firewall_rule (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
   Remove as configurações de firewall no nível do servidor do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Este procedimento armazenado só está disponível no banco de dados mestre para o logon principal do nível do servidor.  
@@ -41,8 +42,8 @@ sp_delete_firewall_rule [@name =] 'name'
 ## <a name="arguments"></a>Argumentos  
  O argumento do procedimento armazenado é:  
   
- [@name =] '*name*'  
- O nome da configuração de firewall de nível de servidor que será removida. *nome da* está **nvarchar (128)** sem nenhum padrão.  
+ [@name =] '*Name*'  
+ O nome da configuração de firewall de nível de servidor que será removida. *nome* é **nvarchar (128)** sem padrão.  
   
 ## <a name="remarks"></a>Comentários  
  Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)], dados de logon necessários para autenticar uma conexão e as regras de firewall no nível de servidor são armazenados em cache temporariamente em cada banco de dados. Esse cache é atualizado periodicamente. Para forçar uma atualização do cache de autenticação e garantir que um banco de dados tenha a versão mais recente da tabela de logons, execute [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
@@ -58,10 +59,10 @@ EXEC sp_delete_firewall_rule N'Example setting 1';
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Firewall de banco de dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [Como: Definir configurações de Firewall (banco de dados SQL do Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
- [sp_set_firewall_rule &#40;banco de dados SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
- [sys. firewall_rules &#40;banco de dados SQL&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)  
+ [Firewall do banco de dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
+ [Como: definir configurações de firewall (banco de dados SQL do Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [sp_set_firewall_rule &#40;banco de dados&#41; SQL do Azure](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
+ [sys. firewall_rules &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)  
   
   
 

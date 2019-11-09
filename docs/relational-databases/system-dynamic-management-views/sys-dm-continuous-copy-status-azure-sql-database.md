@@ -1,6 +1,6 @@
 ---
-title: sys.dm_continuous_copy_status (banco de dados SQL) | Microsoft Docs
-ms.custom: ''
+title: sys. dm_continuous_copy_status
+titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
 ms.service: sql-database
 ms.reviewer: ''
@@ -19,19 +19,20 @@ ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: cace39108f3f99d5c165f42b4337e837e1fb7c5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 6d0bda2d1851d7ec7900a23ad6203d4f85beb73f
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121033"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844497"
 ---
-# <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.dm_continuous_copy_status (Banco de Dados SQL do Azure)
+# <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Retorna uma linha para cada banco de dados do usuário (V11) atualmente envolvido em uma relação de cópia contínua replicação geográfica. Se mais de uma relação de cópia contínua for iniciada para um banco de dados primário, essa tabela conterá uma linha para cada banco de dados secundário ativo.  
+  Retorna uma linha para cada banco de dados de usuário (v11) que está atualmente envolvido em uma relação de cópia contínua de replicação geográfica. Se mais de uma relação de cópia contínua for iniciada para um banco de dados primário, essa tabela conterá uma linha para cada banco de dados secundário ativo.  
   
-Se você estiver usando a V12 do banco de dados SQL deve usar [DM geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (porque *sys.dm_continuous_copy_status* só se aplica a V11).
+Se você estiver usando o banco de dados SQL V12, deverá usar [Sys. dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (porque *Sys. dm_continuous_copy_status* só se aplica a v11).
 
   
 |Nome da coluna|Tipo de dados|Descrição|  
@@ -41,24 +42,24 @@ Se você estiver usando a V12 do banco de dados SQL deve usar [DM geo_replicatio
 |**partner_database**|**sysname**|Nome do banco de dados vinculado no servidor do Banco de Dados SQL.|  
 |**last_replication**|**datetimeoffset**|O carimbo de data/hora da última transação replicada aplicada.|  
 |**replication_lag_sec**|**int**|A diferença de tempo, em segundos, entre a hora atual e o carimbo de data/hora da última transação confirmada com êxito no banco de dados primário que não foi reconhecida pelo banco de dados secundário ativo.|  
-|**replication_state**|**tinyint**|O estado de replicação de cópia contínua deste banco de dados. A seguir estão os valores possíveis e suas descrições.<br /><br /> 1: A propagação. O destino de replicação está sendo propagado e está em um estado transicionalmente inconsistente. Até que a propagação seja concluída, você não pode se conectar ao banco de dados secundário ativo. <br />2: A captura. O banco de dados secundário ativo está realizando a captura do banco de dados primário e está em um estado transacionalmente consistente.<br />3: Nova propagação. O banco de dados secundário ativo está sendo repropagado automaticamente devido a uma falha de replicação irrecuperável.<br />4: Suspenso. Isso não é uma relação de cópia contínua ativa. Esse estado geralmente indica que a largura de banda disponível para o interlink é insuficiente para o nível de atividade da transação no banco de dados primário. No entanto, a relação de cópia contínua ainda permanece intacta.|  
+|**replication_state**|**tinyint**|O estado da replicação de cópia contínua para este banco de dados. A seguir estão os possíveis valores e suas descrições.<br /><br /> 1: propagação. O destino de replicação está sendo propagado e está em um estado transicionalmente inconsistente. Até que a propagação seja concluída, você não pode se conectar ao banco de dados secundário ativo. <br />2: capturando. O banco de dados secundário ativo está realizando a captura do banco de dados primário e está em um estado transacionalmente consistente.<br />3: refazer a propagação. O banco de dados secundário ativo está sendo repropagado automaticamente devido a uma falha de replicação irrecuperável.<br />4: suspenso. Essa não é uma relação de cópia contínua ativa. Esse estado geralmente indica que a largura de banda disponível para o interlink é insuficiente para o nível de atividade da transação no banco de dados primário. No entanto, a relação de cópia contínua ainda permanece intacta.|  
 |**replication_state_desc**|**nvarchar(256)**|Descrição do replication_state:<br /><br /> SEEDING<br /><br /> CATCH_UP<br /><br /> RE_SEEDING<br /><br /> SUSPENDED|  
 |**is_rpo_limit_reached**|**bit**|Isso sempre será definido como 0|  
 |**is_target_role**|**bit**|0 = Origem da relação de cópia<br /><br /> 1 = Destino da relação de cópia|  
 |**is_interlink_connected**|**bit**|1 = O interlink está conectado.<br /><br /> 0 = O interlink está desconectado.|  
   
 ## <a name="permissions"></a>Permissões  
- Para recuperar dados, requer associação na **db_owner** função de banco de dados. O usuário dbo, os membros de **dbmanager** função de banco de dados e o logon sa podem consultar essa exibição também.  
+ Para recuperar dados, o requer a associação na função de banco **db_owner** dados. O usuário dbo, os membros da função de banco de dados **DBManager** e o logon SA também podem consultar essa exibição.  
   
 ## <a name="remarks"></a>Comentários  
- O **sys.dm_continuous_copy_status** modo de exibição é criado na **recursos** de banco de dados e é visível em todos os bancos de dados, incluindo o mestre lógico. No entanto, a consulta dessa exibição no mestre lógico retorna um conjunto vazio.  
+ A exibição **Sys. dm_continuous_copy_status** é criada no banco de dados de **recursos** e fica visível em todos os bancos, incluindo o mestre lógico. No entanto, a consulta dessa exibição no mestre lógico retorna um conjunto vazio.  
   
- Se a relação de cópia contínua é encerrada em um banco de dados, a linha desse banco de dados na **sys.dm_continuous_copy_status** desaparece da exibição.  
+ Se a relação de cópia contínua for encerrada em um banco de dados, a linha desse banco de dados na exibição **Sys. dm_continuous_copy_status** desaparecerá.  
   
- Como o **DM database_copies** exibição, **sys.dm_continuous_copy_status** reflete o estado da relação de cópia contínua no qual o banco de dados é um primário ou ativo secundário banco de dados . Diferentemente **DM database_copies**, **sys.dm_continuous_copy_status** contém várias colunas que fornecem detalhes sobre as operações e desempenho. Essas colunas incluem **last_replication**, e **replication_lag_sec**...  
+ Assim como a exibição **Sys. dm_database_copies** , **Sys. dm_continuous_copy_status** reflete o estado da relação de cópia contínua na qual o banco de dados é um banco de dados primário ou secundário ativo. Ao contrário de **Sys. dm_database_copies**, **Sys. dm_continuous_copy_status** contém várias colunas que fornecem detalhes sobre operações e desempenho. Essas colunas incluem **last_replication**e **replication_lag_sec**..  
   
 ## <a name="see-also"></a>Consulte também  
- [DM database_copies &#40;banco de dados SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [Procedimentos armazenados de replicação geográfica ativa &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
+ [Sys. dm_database_copies &#40;banco de dados&#41; SQL do Azure](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
+ [Procedimentos &#40;armazenados de replicação geográfica ativa TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: DM xe_database_session_targets (banco de dados SQL) | Microsoft Docs
-ms.custom: ''
+title: sys. dm_xe_database_session_targets
+titleSuffix: Azure SQL Database
 ms.date: 06/10/2016
 ms.service: sql-database
 ms.prod_service: sql-database
@@ -10,25 +10,26 @@ ms.assetid: 7f353e2a-f8fc-4366-97e4-aa1c49eadaf4
 author: MightyPen
 ms.author: genemi
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 60d26d76f4d158799fe52e28be9927744ca98745
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 860faaa6c9e574feda8d5c28be17a265707fd72e
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68090413"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844430"
 ---
-# <a name="sysdmxedatabasesessiontargets-azure-sql-database"></a>sys.dm_xe_database_session_targets (Banco de Dados SQL do Azure)
+# <a name="sysdm_xe_database_session_targets-azure-sql-database"></a>sys.dm_xe_database_session_targets (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Retorna informações sobre os destinos de sessão.  
   
 ||  
 |-|  
-|**Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e versões posteriores.|  
+|**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e qualquer versão futura.|  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary(8)**|O endereço da memória da sessão de evento. Tem uma relação muitos-para-um com sys.dm_xe_database_sessions.address. Não permite valor nulo.|  
+|event_session_address|**varbinary(8)**|O endereço da memória da sessão de evento. Tem uma relação muitos para um com sys. dm_xe_database_sessions. Address. Não permite valor nulo.|  
 |target_name|**nvarchar(60)**|O nome do destino em uma sessão. Não permite valor nulo.|  
 |target_package_guid|**uniqueidentifier**|O GUID do pacote que contém o destino. Não permite valor nulo.|  
 |execution_count|**bigint**|O número de horas que o destino foi executado para a sessão. Não permite valor nulo.|  
@@ -42,6 +43,6 @@ ms.locfileid: "68090413"
   
 |De|Para|Relação|  
 |----------|--------|------------------|  
-|sys.dm_xe_database_session_targets.event_session_address|sys.dm_xe_database_sessions.address|Muitos para um|  
+|sys.dm_xe_database_session_targets.event_session_address|sys. dm_xe_database_sessions. Address|Muitos para um|  
   
   

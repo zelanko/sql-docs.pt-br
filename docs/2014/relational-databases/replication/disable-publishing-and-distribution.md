@@ -18,12 +18,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46cdf7ad91de4eacae513399dc7b0c88ad9831fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 682f015215218f362f0ca57557b9d6afb6edee08
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721453"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882372"
 ---
 # <a name="disable-publishing-and-distribution"></a>Desabilitar publicação e distribuição
   Este tópico descreve como desabilitar a publicação e a distribuição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o RMO (Replication Management Objects).  
@@ -67,7 +67,7 @@ ms.locfileid: "62721453"
   
 3.  Complete as etapas no Assistente para Desabilitar Publicação e Distribuição.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  A publicação e a distribuição podem ser desabilitadas programaticamente usando procedimentos armazenados de replicação.  
   
 #### <a name="to-disable-publishing-and-distribution"></a>Para desabilitar a publicação e a distribuição  
@@ -87,7 +87,7 @@ ms.locfileid: "62721453"
 7.  No Distribuidor, execute [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql) para remover a designação Distribuidor do servidor.  
   
     > [!NOTE]  
-    >  Se todos os objetos de publicação e distribuição não forem descartados antes que você execute [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) e [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql), estes procedimentos retornarão com um erro. Para descartar todos os objetos relacionados com replicação quando um Publicador ou um Distribuidor for descartado, o parâmetro **@no_checks** deverá ser definido como **1**. Se um Publicador ou Distribuidor estiver offline ou não acessível, o parâmetro **@ignore_distributor** poderá ser definido como **1** para que possa ser descartado; porém, qualquer objeto de publicação ou distribuição remanescente deverá ser removido manualmente.  
+    >  Se todos os objetos de publicação e distribuição não forem descartados antes que você execute [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) e [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql), estes procedimentos retornarão com um erro. Para descartar todos os objetos relacionados à replicação quando um Publicador ou distribuidor for descartado, o parâmetro **\@no_checks** deverá ser definido como **1**. Se um Publicador ou distribuidor estiver offline ou inacessível, o parâmetro **\@ignore_distributor** poderá ser definido como **1** para que eles possam ser descartados; no entanto, qualquer objeto de publicação e de distribuição deixado para trás deve ser removido manualmente.  
   
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  Este script de exemplo remove objetos de replicação do banco de dados de assinatura.  
@@ -112,11 +112,11 @@ ms.locfileid: "62721453"
   
 5.  (Opcional) Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto e para verificar se o Publicador existe. Se esse método retornar `false`, o nome do Publicador definido na etapa 4 estava incorreto ou o Publicador não está sendo usado pelo Distribuidor.  
   
-6.  Chame o método <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A>. Passe um valor de `true` para *forçar* se o publicador e o distribuidor estejam em servidores diferentes, e quando o publicador deve ser desinstalado no distribuidor sem verificar primeiro se não existem mais publicações no Publicador.  
+6.  Chame o método <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> . Passe um valor de `true` para *forçar* se o Publicador e o distribuidor estiverem em servidores diferentes e quando o Publicador deve ser desinstalado no distribuidor sem primeiro verificar se as publicações não existem mais no Publicador.  
   
 7.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 3.  
   
-8.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A>. Passe um valor de `true` para *forçar* para remover todos os objetos de replicação no distribuidor sem verificar primeiro se todos os bancos de dados de publicação locais foram desabilitados e bancos de dados de distribuição foram desinstalados.  
+8.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> . Passe um valor de `true` para *forçar* a remoção de todos os objetos de replicação no distribuidor sem primeiro verificar se todos os bancos de dados de publicação local foram desabilitados e se os bancos de dados de distribuição foram desinstalados.  
   
 ###  <a name="PShellExample"></a> Exemplos (RMO)  
  Esse exemplo remove o registro do Publicador no Distribuidor, descarta o banco de dados de distribuição e desinstala o Distribuidor.  
@@ -132,7 +132,7 @@ ms.locfileid: "62721453"
  [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [Conceitos dos procedimentos armazenados no sistema de replicação](concepts/replication-system-stored-procedures-concepts.md)  
+ [Conceitos de objetos de gerenciamento de replicação](concepts/replication-management-objects-concepts.md)   
+ [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)  
   
   
