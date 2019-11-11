@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, workload group create
 - workload groups [SQL Server], create
-ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5b43793d8d43ca56d8001b986ecdb02af4b463e1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 237ec09347ab139aabcc9f475f5e3b64aba0f054
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903962"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73633009"
 ---
 # <a name="create-a-workload-group"></a>Criar um grupo de carga de trabalho
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Você pode criar um grupo de cargas de trabalho usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -30,17 +30,20 @@ ms.locfileid: "72903962"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e restrições
+
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
   
  A memória consumida pela criação de índice na tabela particionada desalinhada é proporcional ao número de partições envolvidas. Se a memória total necessária exceder o limite por consulta (REQUEST_MAX_MEMORY_GRANT_PERCENT) imposto pela configuração de grupo de cargas de trabalho, poderá ocorrer uma falha na criação do índice. Como o grupo de cargas de trabalho padrão permite que uma consulta exceda o limite por consulta com o mínimo de memória requerida para iniciar, para compatibilidade com o SQL Server 2005, o usuário talvez possa executar a mesma criação de índice no grupo de cargas de trabalho padrão caso o pool de recursos padrão tenha memória total suficiente configurada para executar tal consulta.  
   
  A criação de índice pode usar mais workspace de memória do que aquela inicialmente concedida a fim de melhorar o desempenho. Esse tratamento especial tem suporte do Administrador de Recursos. No entanto, a concessão inicial e qualquer concessão de memória adicional estão limitadas pelas configurações de pool de recursos e de grupo de cargas de trabalho.  
   
-###  <a name="Permissions"></a> Permissões  
+###  <a name="Permissions"></a> Permissões
+
  Criar um grupo de cargas de trabalho exige permissão CONTROL SERVER.  
   
-##  <a name="CreRPProp"></a> Criar um grupo de cargas de trabalho usando o SQL Server Management Studio  
+##  <a name="CreRPProp"></a> Criar um grupo de cargas de trabalho usando o SQL Server Management Studio
+
  **Para criar um grupo de cargas de trabalho usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  No Pesquisador de Objetos, expanda recursivamente o nó **Gerenciamento** para baixo e incluindo o pool de recursos que contém o grupo de cargas de trabalho a ser modificado.  
@@ -64,10 +67,11 @@ ms.locfileid: "72903962"
   
 2.  Execute a instrução ALTER RESOURCE GOVERNOR RECONFIGURE.  
   
-### <a name="example-transact-sql"></a>Exemplo (Transact-SQL)  
+### <a name="example-transact-sql"></a>Exemplo (Transact-SQL)
+
  O exemplo a seguir cria um grupo de cargas de trabalho chamado `groupAdhoc` no pool de recursos chamado `poolAdhoc`.  
   
-```  
+```sql
 CREATE WORKLOAD GROUP groupAdhoc  
 USING poolAdhoc;  
 GO  
@@ -75,7 +79,8 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte Também
+
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Habilitar Administrador de Recursos](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Criar um pool de recursos](../../relational-databases/resource-governor/create-a-resource-pool.md)   

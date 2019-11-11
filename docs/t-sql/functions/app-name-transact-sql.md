@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e9ad22c9490c04906dafcccb74d9dd16f9496852
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 21b49eb9638b4651ff52c6515f6e5f62177fc504
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040374"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843437"
 ---
-# <a name="appname-transact-sql"></a>APP_NAME (Transact-SQL)
+# <a name="app_name-transact-sql"></a>APP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Esta função retornará o nome do aplicativo para a sessão atual, se o aplicativo definir esse valor de nome.
@@ -36,7 +36,7 @@ Esta função retornará o nome do aplicativo para a sessão atual, se o aplicat
 > [!IMPORTANT]  
 >  O cliente fornece o nome do aplicativo, e `APP_NAME`não é verifica o valor do nome do aplicativo de nenhuma forma. Não use `APP_NAME` como parte de uma verificação de segurança.  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -67,7 +67,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Confira também
-[Funções do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+[Funções do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
 [Funções](../../t-sql/functions/functions.md)
   
   

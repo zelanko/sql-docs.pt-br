@@ -24,19 +24,19 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6eed882fffc8d6752d4884f006450efc5b9257be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97043c1232dd3003ff5c7101403c53425d75bca5
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117600"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843593"
 ---
-# <a name="susersid-transact-sql"></a>SUSER_SID (Transact-SQL)
+# <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna o SID (número de identificação de segurança) para o nome de logon especificado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -70,14 +70,14 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-susersid"></a>A. Usando SUSER_SID  
+### <a name="a-using-suser_sid"></a>A. Usando SUSER_SID  
  O exemplo a seguir retorna o SID (número de identificação de segurança) para o contexto de segurança atual.  
   
 ```  
 SELECT SUSER_SID();  
 ```  
   
-### <a name="b-using-susersid-with-a-specific-login"></a>B. Usando SUSER_SID com um logon específico  
+### <a name="b-using-suser_sid-with-a-specific-login"></a>B. Usando SUSER_SID com um logon específico  
  O exemplo a seguir retorna o número de identificação de segurança para o logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa`.  
   
 **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
@@ -87,7 +87,7 @@ SELECT SUSER_SID('sa');
 GO  
 ```  
   
-### <a name="c-using-susersid-with-a-windows-user-name"></a>C. Usando SUSER_SID com um nome de usuário do Windows  
+### <a name="c-using-suser_sid-with-a-windows-user-name"></a>C. Usando SUSER_SID com um nome de usuário do Windows  
  O exemplo a seguir retorna o número de identificação de segurança para o usuário do Windows `London\Workstation1`.  
   
 **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
@@ -97,7 +97,7 @@ SELECT SUSER_SID('London\Workstation1');
 GO  
 ```  
   
-### <a name="d-using-susersid-as-a-default-constraint"></a>D. Usando SUSER_SID como uma restrição DEFAULT  
+### <a name="d-using-suser_sid-as-a-default-constraint"></a>D. Usando SUSER_SID como uma restrição DEFAULT  
  O exemplo a seguir usa `SUSER_SID` como uma restrição `DEFAULT` em uma instrução `CREATE TABLE`.  
   
 ```  
@@ -128,6 +128,6 @@ SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));
  [ORIGINAL_LOGIN &#40;Transact-SQL&#41;](../../t-sql/functions/original-login-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [binary e varbinary &#40;Transact-SQL&#41;](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)   
- [Funções do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Funções do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

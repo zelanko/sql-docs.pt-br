@@ -1,5 +1,5 @@
 ---
-title: Habilitar o Stretch Database para uma tabela | Microsoft Docs
+title: Habilitar o Stretch Database para uma tabela
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -10,12 +10,13 @@ helpviewer_keywords:
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bbc583ce5a5bc16d2a7dc30b827a4c5a0f9600e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 49d3f7fa266be69c767b0fb0450cc6898351f39b
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136194"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843813"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Habilitar o Stretch Database para uma tabela
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

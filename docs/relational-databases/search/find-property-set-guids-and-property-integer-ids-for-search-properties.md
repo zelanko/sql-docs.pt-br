@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f3784eb3a95b3da02dce2cdecc8c5db2faeaac8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94a7ad079b94d9bc34e5b0e7f7ad55393d8f5de5
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082808"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73638052"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "68082808"
   
  Você executa o **filtdump.exe** no prompt de comando e fornece um único argumento. Este argumento é o nome de um arquivo individual que tem um tipo de arquivo para o qual um IFilter é instalado. O utilitário exibe uma lista de todas as propriedades descobertas pelo IFilter no documento, com seus GUIDs de conjunto de propriedades, IDs de inteiro e informações adicionais.  
   
- Para obter informações sobre como instalar esse software, consulte [Microsoft Windows SDK para Windows 7 e .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=212980). Depois de baixar e instalar o SDK, examine as pastas a seguir para localizar o utilitário filtdump.exe.  
+ Para obter informações sobre como instalar esse software, consulte [Microsoft Windows SDK para Windows 7 e .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=8279). Depois de baixar e instalar o SDK, examine as pastas a seguir para localizar o utilitário filtdump.exe.  
   
 -   Para a versão de 64 bits, procure em `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`.  
   

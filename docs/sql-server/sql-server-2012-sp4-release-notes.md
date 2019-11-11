@@ -10,12 +10,12 @@ ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 67c7ab63fcc152778add51725e5962028651345b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 6fba15e73edf14b9bb794012c8fe56ec8264a5b2
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155703"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632958"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notas de versão do SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ Os services packs estão disponíveis somente online, não em uma mídia de inst
 
 ### <a name="download-pages"></a>Páginas de download
 
-- [Feature Pack do Server 2012 SP4](https://go.microsoft.com/fwlink/?linkid=846907)
-- [Instalação de Patch do SQL Server 2012 SP4](https://go.microsoft.com/fwlink/?linkid=846829)
-- [SQL Server 2012 SP4 Express](https://go.microsoft.com/fwlink/?linkid=846905)
+- [Feature Pack do Server 2012 SP4](https://www.microsoft.com/download/details.aspx?id=56041)
+- [Instalação de Patch do SQL Server 2012 SP4](https://www.microsoft.com/download/details.aspx?id=56040)
+- [SQL Server 2012 SP4 Express](https://www.microsoft.com/download/details.aspx?id=56042)
 
 
 ### <a name="performance-and-scale-improvements"></a>Melhorias de desempenho e escalabilidade

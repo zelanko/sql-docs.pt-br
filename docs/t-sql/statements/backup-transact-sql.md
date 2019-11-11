@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5204e876de1517f794f654bbfbc545203cca4888
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: e2eecd47141dd092fd30ee19abd47cdb7554a1c8
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142863"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659091"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -1021,8 +1021,6 @@ COPY_ONLY Especifica que o backup é um *backup somente cópia*, o que não afet
 
 O comportamento padrão é sem compactação de backup. No entanto, esse padrão pode ser alterado com a definição da opção [backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) de configuração do servidor. Para obter informações sobre como exibir o valor atual dessa opção, consulte [Exibir ou alterar propriedades do servidor](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).
 
-Para obter informações sobre como usar a compactação de backup com bancos de dados habilitados para [TDE (Transparent Data Encryption)](../../relational-databases/security/encryption/transparent-data-encryption.md), consulte a seção [Comentários](#general-remarks).
-
 COMPRESSION Habilita explicitamente a compactação de backup.
 
 NO_COMPRESSION Desabilita explicitamente a compactação de backup.
@@ -1050,7 +1048,6 @@ MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ }
 
 > [!NOTE]
 > Para bancos de dados habilitados para [TDE (Transparent Data Encryption)](../../relational-databases/security/encryption/transparent-data-encryption.md) com um único arquivo de dados, o `MAXTRANSFERSIZE` padrão é 65.536 (64 KB). Para bancos de dados não criptografados com TDE, o `MAXTRANSFERSIZE` padrão é 1048576 (1 MB) ao usar o backup em DISK e 65536 (64 KB) ao usar VDI ou TAPE.
-> Para obter mais informações sobre como usar a compactação de backup com bancos de dados criptografados com TDE, consulte a seção [Comentários](#general-remarks).
 
 **Opções de gerenciamento de erros**
 

@@ -20,12 +20,12 @@ ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cd604a4f25783e7621f348ea532677cda3da433
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 95fe64603a08d4531d43e45c0b6d76c191fe7d34
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940122"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843708"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Quais são as funções do banco de dados SQL?
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ Funcionam em um valor único e retornam um valor único. As funções escalares 
 |[Funções de metadados](metadata-functions-transact-sql.md)|Retornam informações sobre o banco de dados e objetos de banco de dados.|  
 |[Funções de segurança](security-functions-transact-sql.md)|Retornam informações sobre usuários e funções.|  
 |[Funções de cadeia de caracteres](string-functions-transact-sql.md)|Executam operações em um valor de entrada de cadeia de caracteres (**char** ou **varchar**) e retornam uma cadeia de caracteres ou um valor numérico.|  
-|[Funções do Sistema](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|Executam operações e informações de retorno sobre valores, objetos e configurações em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Funções do Sistema](../../relational-databases/system-functions/system-functions-category-transact-sql.md)|Executam operações e informações de retorno sobre valores, objetos e configurações em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Funções estatísticas do sistema](system-statistical-functions-transact-sql.md)|Retornam informações estatísticas sobre o sistema.|  
 |[Funções de texto e imagem](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Executam operações em valores de entrada de texto ou imagem ou colunas e retornam informações sobre o valor.|  
   
