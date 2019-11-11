@@ -9,12 +9,12 @@ ms.author: maggies
 reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
-ms.openlocfilehash: 3ec3fe9ba7641a7c60b3035ff6dc5e11cdfe3691
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 003348fc8ba74420909cb3f74026932a42f97a9b
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68251249"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593917"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Adicionar dados de fontes de dados externas (SSRS)
   Para recuperar dados de uma fonte de dados externa, use uma conexão de dados. As informações da conexão de dados normalmente são fornecidas pelo proprietário da fonte de dados externa que é responsável por conceder permissões e especificar os tipos de credenciais a serem usados. As informações de conexão de dados são salvas como uma fonte de dados de relatório. O tipo de fonte de dados especifica a extensão de processamento de dados a ser usada para recuperar a fonte de dados.  
@@ -100,8 +100,8 @@ ms.locfileid: "68251249"
 |[Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|Fornece informações sobre conexões de dados e fontes de dados.|  
 |[Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Fornece informações sobre conjuntos de dados inseridos e compartilhados.|  
 |[Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)|Fornece informações sobre a coleção de campos de conjuntos de dados gerada pela consulta.|  
-|[Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](https://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Fornece informações detalhadas sobre suporte à plataforma e à versão para cada extensão de dados.|  
-|[Visão geral das extensões de processamento de dados](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [do](https://go.microsoft.com/fwlink/?linkid=121312).|Fornece informações detalhadas para usuários avançados sobre extensões de dados.|  
+|[Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)|Fornece informações detalhadas sobre suporte à plataforma e à versão para cada extensão de dados.|  
+|[Visão geral das extensões de processamento de dados](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)|Fornece informações detalhadas para usuários avançados sobre extensões de dados.|  
   
   
 ## <a name="see-also"></a>Consulte Também  

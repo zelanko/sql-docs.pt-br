@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
-ms.openlocfilehash: de0ea61c93de1464ebde068ef47d85e89b8a1587
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3cf868f9fb89bf6daa20ae6977bf1111649d46c1
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261599"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594082"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurar a conta de serviço do servidor de relatório (Gerenciador de configurações SSRS)
 
@@ -36,7 +36,7 @@ ms.locfileid: "68261599"
   
 - Atualiza automaticamente as permissões de logon na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usada para hospedar o banco de dados do servidor de relatório. A nova conta é adicionada à **RSExecRole**.  
   
-     O log do banco de dados da conta antiga não é removido automaticamente. Lembre-se de remover contas que não estejam mais sendo usadas. Para obter mais informações, veja [Administrar um banco de dados de servidor de relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md) nos Manuais Online do SQL Server.  
+     O log do banco de dados da conta antiga não é removido automaticamente. Lembre-se de remover contas que não estejam mais sendo usadas. Para obter mais informações, consulte [administrar um banco de &#40;dados do servidor&#41;de relatório SSRS Native Mode](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md).  
   
      A concessão de permissões do banco de dados para a nova conta de serviço ocorrerá apenas se você tiver configurado a conexão de banco de dados do servidor de relatório para usar a conta de serviço. Se tiver configurado a conexão do banco de dados do servidor de relatório para usar uma conta de usuário do domínio ou um logon do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , as informações sobre a conexão não terão sido afetadas pela atualização da conta de serviço.  
   

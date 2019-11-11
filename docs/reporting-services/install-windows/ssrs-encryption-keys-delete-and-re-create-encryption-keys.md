@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2f2d3a496cbe2b8adda02b5d7425e49c09f44c77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bf83ea3eb7ed7f4ef28872b964449d2924aab48
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513308"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593530"
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>Chaves de criptografia do SSRS – Excluir e recriar chaves de criptografia
   A exclusão e a recriação de chaves de criptografia são atividades que estão fora da manutenção rotineira da chave de criptografia. Você executa essas tarefas em resposta a uma ameaça específica ao seu servidor de relatórios ou como um último recurso quando não mais puder acessar um banco de dados de servidor de relatórios.  
@@ -106,7 +106,7 @@ ms.locfileid: "62513308"
   
 1.  Para cada fonte de dados compartilhada, você deve digitar novamente a cadeia de caracteres de conexão.  
   
-2.  Para cada relatório e fonte de dados compartilhada que use credenciais armazenadas, você deve digitar novamente o nome do usuário e a senha e depois salvar. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+2.  Para cada relatório e fonte de dados compartilhada que use credenciais armazenadas, você deve digitar novamente o nome do usuário e a senha e depois salvar. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
 3.  Para cada assinatura controlada por dados, abra cada assinatura e digite novamente as credenciais do banco de dados de assinatura.  
   

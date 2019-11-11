@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c21af6661a3854db731cbab82a8623c6e3e19855
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb1a8021ca269cc5fde423ba9eb6903876f949fc
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500529"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593849"
 ---
 # <a name="security-report-builder"></a>Segurança (Construtor de Relatórios)
   O Construtor de Relatórios é um aplicativo cliente de criação de relatórios projetado para funcionar com um servidor de relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . O servidor de relatório pode ser configurado para funcionar em modo nativo como um servidor autônomo ou em modo integrado do SharePoint para oferecer suporte a relatórios em um site do SharePoint.  
@@ -43,7 +43,7 @@ ms.locfileid: "66500529"
   
      Para exibir ou publicar itens em um servidor de relatório, são organizados conjuntos de permissões, que se aplicam a itens relacionados a relatório, e operações em funções. Um administrador de servidor de relatório atribui você a uma ou mais funções. Por exemplo, o Navegador de função predefinido permite que você exiba relatórios, pastas, modelos e recursos.  
   
-     Se você não puder se conectar a ou navegar até um servidor de relatório, entre em contato com o administrador de servidor de relatório. Para obter mais informações, consulte [Segurança e proteção do Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](https://go.microsoft.com/fwlink/?linkid=121312).  
+     Se você não puder se conectar a ou navegar até um servidor de relatório, entre em contato com o administrador de servidor de relatório. Para obter mais informações, consulte [Segurança e proteção do Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md).  
   
 -   Servidor de relatório configurado no modo integrado do SharePoint  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66500529"
   
  Para permitir que outras pessoas naveguem e publiquem itens que você publicou para ser compartilhado, trabalhe com o administrador de servidor de relatório para configurar uma organização de pastas que forneça acesso a seus usuários. O acesso deve estar disponível para criar relatórios e executar relatórios publicados.  
   
- Para obter mais informações, consulte os seguintes tópicos da documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [do](https://go.microsoft.com/fwlink/?linkid=121312):  
+ Para obter mais informações, consulte os tópicos a seguir:  
   
 -   [Funções e permissões &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
@@ -88,11 +88,10 @@ ms.locfileid: "66500529"
   
  As credenciais não são salvas na definição de relatório. Elas são gerenciadas independentemente do relatório no servidor de relatório, ou site do SharePoint, e no cliente de criação de relatório.  
   
- No momento do design do relatório, as credenciais são usadas para executar consultas de conjunto de dados e visualizar o relatório. No momento do design, as credenciais são usadas para executar consultas de relatório e consultas de cache. Você também pode armazenar em cache os resultados de consulta de conjunto de dados compartilhados independentemente. O tempo de design e o tempo de execução de credenciais podem ser diferentes. Para obter mais informações, consulte [Especificar as credenciais no Construtor de Relatórios](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ No momento do design do relatório, as credenciais são usadas para executar consultas de conjunto de dados e visualizar o relatório. No momento do design, as credenciais são usadas para executar consultas de relatório e consultas de cache. Você também pode armazenar em cache os resultados de consulta de conjunto de dados compartilhados independentemente. O tempo de design e o tempo de execução de credenciais podem ser diferentes. Para obter mais informações, consulte [Especificar as credenciais no Construtor de Relatórios](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
- Para obter mais informações sobre dados de segurança, consulte os seguintes tópicos da documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Manuais Online](https://go.microsoft.com/fwlink/?linkid=121312):  
+ Para obter mais informações sobre como proteger dados, consulte [central de segurança para SQL Server mecanismo de banco de dados e banco de dados SQL do Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md). 
   
--   [Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
  Para obter mais informações sobre fontes de dados, consulte [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
@@ -108,9 +107,9 @@ ms.locfileid: "66500529"
   
 -   Não use parâmetros com base em parâmetros de consulta que são do tipo **Texto** , a menos que você forneça valores válidos. Uma lista de valores disponível ajuda um usuário a escolher apenas valores válidos. Sem uma lista de valores disponível, não é possível restringir quais valores um usuário pode inserir.  
   
--   Não use o [&UserID] global para proteger dados privados. Como um parâmetro de relatório, esse valor pode ser especificado em uma URL de relatório, usando a sintaxe de acesso da URL. O uso deste valor em uma expressão em um conjunto de dados compartilhado impede que o conjunto de dados seja armazenado em cache. Para obter mais informações, consulte [Referência do parâmetro de acesso à URL](../../reporting-services/url-access-parameter-reference.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](https://go.microsoft.com/fwlink/?linkid=121312).  
+-   Não use o [&UserID] global para proteger dados privados. Como um parâmetro de relatório, esse valor pode ser especificado em uma URL de relatório, usando a sintaxe de acesso da URL. O uso deste valor em uma expressão em um conjunto de dados compartilhado impede que o conjunto de dados seja armazenado em cache. Para obter mais informações, consulte [referência de parâmetro de acesso à URL](../../reporting-services/url-access-parameter-reference.md).  
   
- Depois que os itens são publicados em um servidor de relatório, o administrador de servidor de relatório pode ajudar a protegê-los, atribuindo segurança com base em função ou segurança no nível do item ou da pasta. Para obter mais informações, consulte [Proteger relatórios e recursos](../../reporting-services/security/secure-reports-and-resources.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](https://go.microsoft.com/fwlink/?linkid=121312).  
+ Depois que os itens são publicados em um servidor de relatório, o administrador de servidor de relatório pode ajudar a protegê-los, atribuindo segurança com base em função ou segurança no nível do item ou da pasta. Para obter mais informações, consulte [Proteger relatórios e recursos](../../reporting-services/security/secure-reports-and-resources.md).  
   
   
 ## <a name="see-also"></a>Consulte Também  

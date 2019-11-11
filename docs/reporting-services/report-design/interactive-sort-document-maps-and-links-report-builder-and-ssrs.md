@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 838214206101337a35245e3a9f6fee461a47933d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 098250b23287f64a0b52b61b87eb6998169ae7ee
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580180"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593732"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Classificação interativa, mapas de documentos e links (Construtor de Relatórios e SSRS)
   Em ambientes baseados na Web, você pode adicionar alguns recursos que permitem aos usuários interagir com relatórios. Seus usuários podem alterar a ordem de classificação de valores no relatório, mostrar ou ocultar itens no relatório ou clicar em links que vão para outros relatórios ou páginas da Web. Você também pode adicionar um índice ou um mapa do documento. Seus usuários de relatório podem clicar em itens do sumário ou do mapa do documento e ir diretamente para áreas de um relatório.  
@@ -27,7 +27,7 @@ ms.locfileid: "65580180"
 -   **Links para relatório detalhado** Direciona o usuário para outros relatórios no mesmo servidor de relatório. Para obter mais informações, consulte [Relatórios de detalhamento &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  Links associados a campos de conjuntos de dados podem ser vulneráveis à violação para fins mal-intencionados. Para obter mais informações, consulte [Proteger Relatórios e Recursos](../../reporting-services/security/secure-reports-and-resources.md) nos [Manuais Online](https://go.microsoft.com/fwlink/?LinkId=154888) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em msdn.microsoft.com.  
+>  Links associados a campos de conjuntos de dados podem ser vulneráveis à violação para fins mal-intencionados. Para obter mais informações, consulte [Proteger relatórios e recursos](../../reporting-services/security/secure-reports-and-resources.md).  
   
  Você também pode permitir que os usuários controlem a exibição do relatório e do conteúdo criando expressões que incluem referências de parâmetros para classificação, filtro e visibilidade. Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md), [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) e [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
   

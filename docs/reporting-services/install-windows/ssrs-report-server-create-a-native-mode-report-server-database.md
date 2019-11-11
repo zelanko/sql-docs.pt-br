@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 58ed98edccbf1f9ccf83aef7321ffb6a3bcb442d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b80a7e6ee0d68009ff21f01ba0c75b3f0a7fb33
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652334"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593551"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>Criar um banco de dados de servidor de relatório do modo nativo
 
@@ -67,7 +67,7 @@ Para criar um banco de dados de servidor de relatório ou alterar as credenciais
   
 6.  Reinicie o serviço.  
   
-7.  Abra seu software de firewall e abra a porta na qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta. Para a instância padrão, usa-se geralmente a porta 1433 para conexões TCP/IP. Para obter mais informações, veja [Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+7.  Abra seu software de firewall e abra a porta na qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta. Para a instância padrão, usa-se geralmente a porta 1433 para conexões TCP/IP. Para obter mais informações, veja [Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 ### <a name="to-create-a-local-report-server-database"></a>Para criar um banco de dados de servidor de relatório local  
   
@@ -111,7 +111,7 @@ Para criar um banco de dados de servidor de relatório ou alterar as credenciais
   
 7.  Examine as informações na página Resumo para verificar se as configurações estão corretas e selecione **Avançar**.  
   
-8.  Verifique a conexão selecionando uma URL na página URL do Servidor de Relatório. As URLs devem estar definidas para que esse teste funcione. Se a conexão de banco de dados do servidor de relatório for válida, você verá a hierarquia de pastas do servidor de relatório. Para obter mais informações, veja [Verificar uma instalação do Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+8.  Verifique a conexão selecionando uma URL na página URL do Servidor de Relatório. As URLs devem estar definidas para que esse teste funcione. Se a conexão de banco de dados do servidor de relatório for válida, você verá a hierarquia de pastas do servidor de relatório. Para obter mais informações, veja [Verificar uma instalação do Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  
 
 ## <a name="change-database-credentials"></a>Alterar credenciais de banco de dados
 
