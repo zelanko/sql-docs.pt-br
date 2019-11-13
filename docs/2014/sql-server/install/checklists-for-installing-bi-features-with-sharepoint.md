@@ -21,12 +21,12 @@ ms.locfileid: "71952612"
   Esta seção fornece listas de verificação para instalar os recursos de BI do SQL Server em combinações diferentes ou em topologias em expansão. Se você já souber como executar um programa de Instalação para instalar um recurso de BI, uma lista de verificação será a próxima etapa para entender a ordem de instalação recomendada e se alterações de configuração adicionais serão necessárias para habilitar cenários de integração de recursos.  
   
 ## <a name="checklists-in-this-section"></a>Listas de verificação nesta seção  
- Lista de verificação de [Deployment: Reporting Services, Power View e PowerPivot para SharePoint @ no__t-0  
+ [Lista de verificação de implantação: Reporting Services, Power View e PowerPivot para SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)  
   
- Lista de verificação de [Deployment: Escalar horizontalmente adicionando servidores PowerPivot a um farm do SharePoint 2010 @ no__t-0  
+ [Lista de verificação de implantação: expansão adicionando servidores PowerPivot a um farm do SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)  
   
- Lista de verificação de [Deployment: Instalação de vários servidores do PowerPivot para SharePoint 2010 @ no__t-0  
+ [Lista de verificação de implantação: instalação de vários servidores do PowerPivot para SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md)  
   
- Lista de verificação de [Deployment: Instalar Reporting Services em um farm existente do SharePoint @ no__t-0  
+ [Lista de verificação de implantação: instalar o Reporting Services em um farm existente do SharePoint](../../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
   
   

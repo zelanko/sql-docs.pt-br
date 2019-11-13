@@ -29,7 +29,7 @@ ms.locfileid: "71952048"
   
  Para instalar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], use a mídia de instalação do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- Para obter instruções sobre cenários de implantação avançada, consulte a lista de verificação de [Deployment: Reporting Services, Power View e PowerPivot para SharePoint lista de verificação @ no__t-0 e [Deployment: Escale horizontalmente adicionando servidores PowerPivot a um farm do SharePoint 2010 @ no__t-0.  
+ Para obter instruções sobre cenários de implantação avançada, consulte [lista de verificação de implantação: Reporting Services, Power View e PowerPivot para SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) e lista de verificação de [implantação: expansão adicionando servidores PowerPivot a um farm do SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Instalar o PowerPivot para SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  
