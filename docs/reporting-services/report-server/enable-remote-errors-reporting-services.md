@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b2e193f4ebbcca98fd27657618ef2e1a7f7ef92
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 3b26db3656ee548e08f9e5d4737033bb3393a969
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500183"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593879"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Habilitar erros remotos (Reporting Services)
-  É possível configurar propriedades do servidor de relatório em um [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para retornar informações adicionais sobre as condições de erro que ocorrem em servidores remotos. Se uma mensagem de erro contiver o texto "Para obter mais informações sobre este erro, navegue até o servidor de relatório na máquina de servidor local ou habilite erros remotos", você poderá configurar a propriedade **EnableRemoteErrors** para acessar informações adicionais que podem ajudá-lo a resolver o problema. Para obter mais informações, consulte [Propriedades de sistema do servidor de relatório](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  É possível configurar propriedades do servidor de relatório em um [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para retornar informações adicionais sobre as condições de erro que ocorrem em servidores remotos. Se uma mensagem de erro contiver o texto "Para obter mais informações sobre este erro, navegue até o servidor de relatório na máquina de servidor local ou habilite erros remotos", você poderá configurar a propriedade **EnableRemoteErrors** para acessar informações adicionais que podem ajudá-lo a resolver o problema. Para obter mais informações, consulte [Propriedades de sistema do servidor de relatório](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
   
  Neste tópico:  
   
@@ -62,13 +62,13 @@ ms.locfileid: "67500183"
   
 ##  <a name="bkmk_mgtStudio"></a> Habilitar erros remotos com o SQL Server Management Studio (modo nativo)  
   
-1.  Inicie o Management Studio e conecte-se a uma instância de servidor de relatório. Para obter mais informações, consulte [Conectar-se a um servidor de relatório no Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+1.  Inicie o Management Studio e conecte-se a uma instância de servidor de relatório. Para obter mais informações, consulte [Conectar-se a um servidor de relatório no Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   
 2.  Clique com o botão direito do mouse no nó do servidor de relatório e selecione **Propriedades**.  
   
-3.  Clique em **Avançado** para abrir a página de propriedades. Para obter mais informações, consulte [Propriedades do Servidor &#40;página Avançado&#41; – Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Clique em **Avançado** para abrir a página de propriedades. Para obter mais informações, consulte as [Propriedades do Servidor &#40;página Avançado&#41; – Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md).  
   
-4.  No **segurança** seção, na **EnableRemoteErrors**, selecione **verdadeiro**.  
+4.  Na seção **segurança**, em **EnableRemoteErrors**, selecione **true**.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

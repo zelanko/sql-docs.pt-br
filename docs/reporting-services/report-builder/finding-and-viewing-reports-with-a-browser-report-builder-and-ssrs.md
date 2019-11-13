@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 43e2ae683bdd9dd22bdf3aac1e9c6e15cc7fed59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf30cee34e988f552a36fac1f7b9eb9ed14d83ef
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580749"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594003"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Localizando e exibindo relatórios com um navegador (Construtor de Relatórios e SSRS)
   Você pode usar qualquer navegador da Web com suporte para exibir um relatório por meio de uma conexão direta com um servidor de relatório. Cada relatório tem um endereço URL em um servidor de relatórios. Você pode digitar o endereço da Web de um relatório para abri-lo em uma janela do navegador independentemente de um aplicativo da Web. O relatório é aberto no formato HTML e inclui a barra de ferramentas do relatório para que você possa navegar em páginas ou procurar valores de dados no relatório. Você pode definir parâmetros na URL para ocultar a barra de ferramentas ou selecionar o formato de saída do relatório.  
@@ -28,7 +28,7 @@ Pastas em um navegador
 > [!NOTE]  
 >  Se você estiver acessando um relatório a partir de um dispositivo portátil, deverá usar um navegador para abri-lo. O Gerenciador de Relatórios não é redimensionado para dispositivos portáteis.  
   
- Para obter mais informações sobre os tipos de navegadores que você pode usar, consulte “Tipos de navegadores com suporte pelo Reporting Services” na [documentação do Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
+ Para obter mais informações sobre navegadores, veja [Suporte ao navegador para Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -53,6 +53,6 @@ Pastas em um navegador
   
  O limite máximo para uma URL no Internet Explorer é de 2.083 caracteres. Para obter mais informações, consulte [Comprimento máximo da URL no Internet Explorer](https://support.microsoft.com/kb/208427).  
   
- Para obter mais informações sobre como acessar um relatório usando uma URL, incluindo informações sobre como a URL é construída, consulte “Acesso à URL” na [documentação do Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
+ Para obter mais informações sobre como acessar um relatório por uma URL, incluindo informações sobre como uma URL é construída, consulte [Acesso por URL](../../reporting-services/url-access-ssrs.md).  
   
   

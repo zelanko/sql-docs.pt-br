@@ -1,20 +1,20 @@
 ---
-title: Propriedades do servidor (página Avançado) – Reporting Services | Microsoft Docs
+title: Página Avançado das Propriedades do servidor – Reporting Services | Microsoft Docs
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 01/15/2019
-ms.openlocfilehash: 079565c813e0b66f09881039ea3d6509bdf6cf54
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.date: 11/05/2019
+ms.openlocfilehash: defadad0d3a2545ba3d794d5d9c38c5734d3e9af
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908258"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73638023"
 ---
-# <a name="server-properties-advanced-page---reporting-services"></a>Propriedades do Servidor (página Avançado) - Reporting Services
+# <a name="server-properties-advanced-page---reporting-services"></a>Página Avançado das Propriedades do servidor – Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -93,9 +93,9 @@ Indica se a resposta à solicitação do cliente pode ser exposta quando o sinal
 
 **AccessControlMaxAge** Especifica o número de segundos durante os quais os resultados da solicitação de simulação podem ser armazenados em cache. O valor padrão é 600 (10 minutos).
 
-**AllowedResourceExtensionsForUpload (somente Servidor de Relatórios do Power BI e Reporting Services 2017 e posterior)** Defina extensões de recursos que podem ser carregados para o servidor de relatórios. Extensões para tipos de arquivo internos, como &ast;.rdl e &ast;.pbix não precisam ser incluídos. O padrão é "&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx".
+**AllowedResourceExtensionsForUpload** (somente Servidor de Relatórios do Power BI e Reporting Services 2017 e posterior) Define extensões de recursos que podem ser carregados no servidor de relatórios. Extensões para tipos de arquivo internos, como &ast;.rdl e &ast;.pbix não precisam ser incluídos. O padrão é "&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx".
 
-**RestrictedResourceMimeTypeForUpload** Conjunto de tipos MIME dos quais os usuários não têm permissão para carregar conteúdo. Todos os recursos que já estão armazenados com um tipo MIME restrito só podem ser baixados como um aplicativo/octeto-Stream, em vez de serem abertos/executados pelo navegador.  Por padrão, não há itens restritos nesta lista, mas recomendamos que as organizações preencham isso para fornecer a experiência mais segura.
+**RestrictedResourceMimeTypeForUpload** conjunto de tipos MIME dos quais os usuários não têm permissão para carregar conteúdo. Todos os recursos que já estão armazenados com um tipo MIME restrito só podem ser baixados como um aplicativo/octeto-Stream, em vez de serem abertos/executados pelo navegador.  Por padrão, não há itens restritos nesta lista, mas recomendamos que as organizações preencham isso para fornecer a experiência mais segura.
 
 **EditSessionCacheLimit**  
 Especifica o número de entradas de cache de dados que podem estar ativas em uma sessão de edição de relatório. O número padrão é 5.  

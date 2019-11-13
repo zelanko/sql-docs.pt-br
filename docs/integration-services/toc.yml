@@ -477,7 +477,7 @@
           items:
             - name: 'Tutorial: Usando o OData Source'
               href: ../integration-services/data-flow/tutorial-using-the-odata-source.md
-            - name: Fornecer uma consulta de OData Source em tempo de execução
+            - name: Fornecer uma consulta de OData Source em runtime
               href: ../integration-services/data-flow/modify-odata-source-query-at-runtime.md
             - name: Propriedades da origem do OData
               href: ../integration-services/data-flow/odata-source-properties.md
@@ -1466,7 +1466,7 @@
     - name: Gerenciador de Conexões do Oracle
       href: ../integration-services/data-flow/oracle-connection-manager.md
     - name: Origem do Oracle
-      ref: ../integration-services/data-flow/oracle-source.md
+      href: ../integration-services/data-flow/oracle-source.md
     - name: Destino Oracle
       href: ../integration-services/data-flow/oracle-destination.md
     - name: Suporte do tipo de dados

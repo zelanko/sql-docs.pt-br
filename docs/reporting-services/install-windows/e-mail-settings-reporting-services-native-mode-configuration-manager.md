@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c371558070ee6ef41afe167e3be2ed4adbd80cc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 872c7e4d501017627fcc64eca7ed48204c9d3533
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513598"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593814"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Configurações de email - Modo Nativo do Reporting Services (Gerenciador de Configurações)
 O Reporting Services inclui uma extensão de entrega de email, para que você possa distribuir relatórios por email. Dependendo de como você definir a assinatura de email, uma entrega pode consistir em uma notificação, um link, um anexo ou um relatório inserido. A extensão de entrega de email funciona com sua tecnologia de servidor de email existente. O servidor de email deve ser um encaminhador ou servidor SMTP. O servidor de relatório se conecta a um servidor SMTP por meio de bibliotecas (cdosys.dll) de CDO (Collaboration Data Objects) que são fornecidas pelo sistema operacional.
@@ -41,7 +41,7 @@ Para configurar um servidor de relatório para entrega de email, faça o seguint
 
 - Use o Gerenciador de Configurações do Reporting Services se estiver especificando somente um servidor SMTP e uma conta de usuário que tenha permissão para enviar email. Essas são as configurações mínimas necessárias para a configuração da extensão de entrega de email do Servidor de Relatório.
 
-- (Opcionalmente) Use um editor de texto para especificar configurações adicionais no arquivo RSreportserver.config. Esse arquivo contém todos os parâmetros de configuração para a entrega de email do Servidor de Relatório. Será necessário especificar configurações adicionais nesses arquivos se você estiver usando um servidor SMTP local ou se estiver restringindo a entrega de email para hosts específicos. Para obter mais informações sobre como encontrar e modificar arquivos de configuração, veja [Modificar um arquivo de configuração do Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) nos Manuais Online do SQL Server.
+- (Opcionalmente) Use um editor de texto para especificar configurações adicionais no arquivo RSreportserver.config. Esse arquivo contém todos os parâmetros de configuração para a entrega de email do Servidor de Relatório. Será necessário especificar configurações adicionais nesses arquivos se você estiver usando um servidor SMTP local ou se estiver restringindo a entrega de email para hosts específicos. Para obter mais informações sobre como encontrar e modificar arquivos de configuração, consulte [Modificar um arquivo de configuração do Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).
 
 > [!NOTE] 
 > As configurações de email do servidor de relatório têm como base o CDO. Para obter mais detalhes sobre configurações específicas, você pode consultar a documentação de produção do CDO.
@@ -77,7 +77,7 @@ Para configurar um servidor de relatório para entrega de email, faça o seguint
 6. Opcionalmente, você pode ajustar os campos adicionais, para a configuração de email, em rsreportserver.config.
 
 ## <a name="example-report-server-e-mail-configuration"></a>Exemplo de configuração de email do servidor de relatório
-O exemplo a seguir ilustra as configurações no arquivo RSreportserver.config para um servidor SMTP remoto. Para ler sobre as descrições da configuração e os valores válidos, veja [Arquivo de configuração rsreportserver.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) nos Manuais Online do SQL Server.
+O exemplo a seguir ilustra as configurações no arquivo RSreportserver.config para um servidor SMTP remoto. Para ler sobre as descrições da configuração e os valores válidos, consulte [Arquivo de configuração rsreportserver.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).
 
 ```
 <RSEmailDPConfiguration>

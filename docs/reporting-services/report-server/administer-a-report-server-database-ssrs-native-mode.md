@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c24b7fa919b1a9abead4e6204b8d9eae001d0446
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7822cadea8dbe051c0e7dbc11417987dd5e5c543
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575496"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593760"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Administrar um banco de dados de servidor de relatório (modo nativo do SSRS)
   Uma implantação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa dois bancos de dados relacionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenamento interno. Por padrão, os bancos de dados são nomeados como ReportServer e ReportServerTempdb. O ReportServerTempdb é criado com o banco de dados primário do servidor de relatórios e é usado para armazenar dados temporários, informações de sessão e relatórios em cache.  
@@ -29,7 +29,7 @@ ms.locfileid: "65575496"
   
  Para administrar os bancos de dados do servidor de relatório, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma variedade de ferramentas.  
   
--   Para fazer backup e restaurar, mover ou recuperar um banco de dados do servidor de relatório, use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], os comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] ou os utilitários de prompt de comando de banco de dados. Para obter instruções, consulte [Movendo os bancos de dados do servidor de relatório para outro computador &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) nos Manuais Online do SQL Server.  
+-   Para fazer backup e restaurar, mover ou recuperar um banco de dados do servidor de relatório, use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], os comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] ou os utilitários de prompt de comando de banco de dados. Para obter instruções, consulte [Movendo os bancos de dados do servidor de relatório para outro computador &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
 -   Para copiar o conteúdo do banco de dados existente em outro banco de dados do servidor de relatórios, anexe uma cópia de um banco de dados do servidor de relatórios e use-a com uma instância diferente do servidor de relatórios. Se preferir, crie e execute um script que usa chamadas SOAP para recriar o conteúdo do servidor de relatórios em um novo banco de dados. Você pode usar o utilitário **rs** para executar o script.  
   

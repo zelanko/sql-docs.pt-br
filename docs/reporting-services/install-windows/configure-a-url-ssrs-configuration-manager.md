@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: afd535a09578ae4e6141a87e486f77a26dd54818
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 616d04205fdf079435bf7810a3c6957f0cf8b32f
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447338"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594113"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar uma URL (Gerenciador de Configurações do SSRS)
   Antes de poder usar o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] ou o serviço Web Servidor de Relatório, é necessário configurar, pelo menos, uma URL para cada aplicativo. A configuração das URLs será obrigatória se você instalou o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo “somente arquivos” (ou seja, selecionando a opção **Instalar, mas não configurar o servidor** na página Opções de Instalação do Servidor de Relatório do Assistente de Instalação). Se você instalou o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na configuração padrão, as URLs já estarão configuradas para cada aplicativo.  
@@ -31,7 +31,7 @@ ms.locfileid: "62447338"
   
 -   Configurar propriedades avançadas de URL para definir URLs adicionais.  
   
- Para obter mais informações sobre como as URLs são armazenadas e mantidas ou sobre problemas de interoperabilidade, veja [Sobre reservas e registro de URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) e [Instalar o Reporting Services e os Serviços de Informações da Internet lado a lado &#40;Modo Nativo do SSRS&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para revisar exemplos de URLs usadas frequentemente em uma instalação do Reporting Services, consulte [Exemplos de URLs](#URLExamples) neste tópico.  
+ Para obter mais informações sobre como as URLs são armazenadas e mantidas ou sobre problemas de interoperabilidade, consulte [Sobre reservas e registro de URL &#40;Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) e [Instalar o Reporting Services e os Serviços de Informações da Internet lado a lado &#40;modo nativo do SSRS&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). Para revisar exemplos de URLs usadas frequentemente em uma instalação do Reporting Services, consulte [Exemplos de URLs](#URLExamples) neste tópico.  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Antes de criar ou modificar uma URL, lembre-se dos seguintes pontos:  
@@ -143,7 +143,7 @@ ms.locfileid: "62447338"
   
  Especifica o nome do computador totalmente qualificado para o qual o certificado está registrado. O nome que você especificar deve ser idêntico ao nome para o qual o certificado está registrado.  
   
- Você deve ter um certificado instalado para que possa usar essa opção. Você também deve modificar o parâmetro de configuração UrlRoot no arquivo RSReportServer.config para que ele especifique o nome totalmente qualificado do computador para o qual o certificado está registrado. Para obter mais informações, veja [Configurar conexões SSL em um Servidor de Relatórios do Modo Nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Você deve ter um certificado instalado para que possa usar essa opção. Você também deve modificar o parâmetro de configuração UrlRoot no arquivo RSReportServer.config para que ele especifique o nome totalmente qualificado do computador para o qual o certificado está registrado. Para obter mais informações, veja [Configurar conexões SSL em um Servidor de Relatórios do Modo Nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ### <a name="to-set-advanced-properties-on-a-url"></a>Para definir propriedades avançadas em uma URL  
   

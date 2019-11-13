@@ -18,12 +18,12 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e2b3e519a55d23b524582bef8bb7a677023e704
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca1a0b760f89e581a4e5209960caa76d89cd1350
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581620"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593798"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Gráficos (Construtor de Relatórios e SSRS)
 Leia mais sobre como usar regiões de dados do gráfico para ajudar os leitores de seus relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] a entender grandes volumes de dados agregados em uma visão rápida.  
@@ -48,7 +48,7 @@ Quanto mais tempo você passa preparando cuidadosamente e entendendo seus dados 
 ##  <a name="SimilarMatrix"></a> Como um gráfico é semelhante a uma matriz  
  Uma maneira de entender como os gráficos trabalham é compará-los a matrizes.  
   
- ![Nova Matriz adicionada por meio da Caixa de Ferramentas, selecionada](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nova Matriz adicionada por meio da Caixa de Ferramentas, selecionada")  
+ ![Nova Matriz adicionada da Caixa de Ferramentas, selecionada](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nova Matriz adicionada da Caixa de Ferramentas, selecionada")  
   
  Conceitualmente, a organização deles é idêntica:  
   
@@ -80,7 +80,7 @@ Quanto mais tempo você passa preparando cuidadosamente e entendendo seus dados 
 ##  <a name="DatasetConsiderations"></a> Considerações sobre o conjunto de dados antes de criar um gráfico  
  Os gráficos fornecem uma exibição resumida dos dados. No entanto, com grandes conjuntos de dados, as informações em um gráfico podem se tornar obscurecidas ou ilegíveis. Pontos de dados ausentes ou nulos, tipos de dados inadequados ao tipo de gráfico e aplicativos avançados, como combinação de gráficos com tabelas, podem afetar a legibilidade de um gráfico. Antes de criar um gráfico, prepare e entenda cuidadosamente os dados para criar os gráficos de maneira rápida e eficiente.  
   
- Você pode ter tantos gráficos quantos desejar em seu relatório. Um gráfico, como qualquer outra região de dados, como uma matriz ou tabela, está associado a um único conjunto de dados. Se desejar exibir vários conjuntos de dados no mesmo gráfico, poderá criar um conjunto de dados adicional que use uma instrução JOIN ou UNION na consulta SQL antes de adicionar dados ao gráfico. Para obter mais informações sobre a instrução JOIN e UNION, consulte os Manuais Online ou outra referência de SQL.  
+ Você pode ter tantos gráficos quantos desejar em seu relatório. Um gráfico, como qualquer outra região de dados, como uma matriz ou tabela, está associado a um único conjunto de dados. Se desejar exibir vários conjuntos de dados no mesmo gráfico, poderá criar um conjunto de dados adicional que use uma instrução JOIN ou UNION na consulta SQL antes de adicionar dados ao gráfico.  
   
  Considere a pré-agregação de dados na consulta do conjunto de dados caso dados detalhados não sejam necessários ou úteis. Para exibir cada ponto de dados mais claramente, reduza o número de categorias no conjunto de dados. É possível filtrar o conjunto de dados ou adicionar uma condição à consulta que reduza o número de linhas retornadas. 
   

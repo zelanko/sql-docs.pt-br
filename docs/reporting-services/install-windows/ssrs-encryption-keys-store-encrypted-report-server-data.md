@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3277c1b96102ee6eb7145359c165c011a6724f1
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: ca402d8170c9954f8a85e3b439e14d1d3644d9bb
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72988429"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593474"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Chaves de criptografia do SSRS – Armazenar dados criptografados do servidor de relatório
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena valores criptografados no banco de dados do servidor de relatório e em arquivos de configuração. A maioria dos valores criptografados é credencial usada para acessar fontes de dados externas que fornecem dados a relatórios. Este tópico descreve quais valores são criptografados, a funcionalidade de criptografia usada no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], entre outros tipos de dados confidenciais armazenados sobre os quais é útil saber mais a respeito.  
@@ -33,7 +33,7 @@ ms.locfileid: "72988429"
   
 -   Credenciais armazenadas usadas por um servidor de relatório para conexão com fontes de dados externas que fornecem dados a um relatório.  
   
-     Esses valores são definidos ao configurar informações de fonte de dados para um relatório e, em seguida, são armazenados como valores criptografados em um banco de dados de servidor de relatório. O servidor de relatório usa uma chave simétrica para criptografar e decifrar esses dados. Para obter mais informações sobre credenciais armazenadas, confira [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+     Esses valores são definidos ao configurar informações de fonte de dados para um relatório e, em seguida, são armazenados como valores criptografados em um banco de dados de servidor de relatório. O servidor de relatório usa uma chave simétrica para criptografar e decifrar esses dados. Para obter mais informações sobre credenciais armazenadas, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
 -   Uma conta de usuário autônoma usada pelo servidor de relatório para conexão com outros computadores para recuperar arquivos de imagem externos ou dados externos usados em um relatório.  
   

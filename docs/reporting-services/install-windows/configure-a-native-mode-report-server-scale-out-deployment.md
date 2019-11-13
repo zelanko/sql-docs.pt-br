@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65182936a6ea686b7b0089827ce1fb2f26e86b98
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 9822af554536d9168c2ee3dd690c641865e66574
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500577"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593863"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurar uma implantação em expansão do servidor de relatório em modo nativo.
 
@@ -93,9 +93,9 @@ O problema será intermitente, ou seja, apenas o servidor que criou a tarefa do 
   
 2.  Inicie a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-3.  Configure a URL do serviço Web Servidor de Relatórios, a URL do portal da Web e o banco de dados do servidor de relatório. Para obter mais informações, consulte [Configurar um servidor de relatório &#40;modo nativo do Reporting Services&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Configure a URL do serviço Web Servidor de Relatórios, a URL do portal da Web e o banco de dados do servidor de relatório. Para obter mais informações, consulte [Configurar um servidor de relatório &#40;modo nativo do Reporting Services&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md)
   
-4.  Verifique se o servidor de relatório está operacional. Para obter mais informações, veja [Verificar uma instalação do Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+4.  Verifique se o servidor de relatório está operacional. Para obter mais informações, consulte [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  
   
 ## <a name="to-install-and-configure-the-second-report-server-instance"></a>Para instalar e configurar a segunda instância do servidor de relatório  
   
@@ -131,7 +131,7 @@ O problema será intermitente, ou seja, apenas o servidor que criou a tarefa do 
   
 2.  Clique em **Implantação em Expansão** para abrir a página Implantação em Expansão. Você deve ver duas entradas, um para cada instância do servidor de relatório que está conectada ao banco de dados do servidor de relatório. A primeira instância do servidor de relatório deve estar associada. O segundo servidor de relatório deve estar "Aguardando para unir". Se não vir entradas semelhantes para a sua implantação, verifique se você está conectado ao primeiro servidor de relatório que já está configurado e inicializado para usar o banco de dados do servidor de relatório.  
   
-     ![Captura de tela parcial da página Implantação Escalável](../../reporting-services/install-windows/media/scaloutscreen.gif "Captura de tela parcial da página Implantação Escalável")  
+     ![Captura de tela parcial da página Implantação em Expansão](../../reporting-services/install-windows/media/scaloutscreen.gif "Captura de tela parcial da página Implantação em Expansão")  
   
 3.  Na página Implantação em Expansão, selecione a instância do servidor de relatório que está aguardando para se unir à implantação e selecione **Adicionar Servidor**.  
   

@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cdaf6447080a82d5b58932e7e4987720a97963b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4326c38c84ad7af8fb23a5dde035720a1a7024d4
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502944"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593310"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar a conta de execução autônoma (Gerenciador de configurações do SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece uma conta especial que é usada para o processamento autônomo de relatórios e para enviar solicitações de conexão pela rede. A conta é usada das seguintes maneiras:  
   
--   Enviar solicitações de conexão pela rede para relatórios que usam autenticação do banco de dados ou conexão a fontes de dados de relatórios externos que não requeiram ou utilizem autenticação. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para Fontes de Dados de Relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) nos Manuais Online do SQL Server.  
-  
+-   Enviar solicitações de conexão pela rede para relatórios que usam autenticação do banco de dados ou conexão a fontes de dados de relatórios externos que não requeiram ou utilizem autenticação. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).
+
 -   Recuperar arquivos de imagem externos usados no relatório. Se desejar usar um arquivo de imagem e ele não puder ser acessado com acesso Anônimo, você poderá configurar a conta de processamento autônomo de relatórios e conceder à conta a permissão para acessar o arquivo.  
   
  O termo processamento autônomo de relatórios se refere a qualquer processo de execução de relatório que seja disparado por um evento (um evento controlado por agenda ou um evento de atualização de dados) e não a uma solicitação de usuário. O servidor de relatório usa a conta de processamento autônomo de relatórios para fazer logon no computador que hospeda a fonte de dados externa. Essa conta é necessária porque as credenciais da conta de serviço do Servidor de Relatório nunca são usadas para conectar a outros computadores.  
@@ -56,8 +56,8 @@ ms.locfileid: "65502944"
   
      **rsconfig -e -u\<domain/username> -p\<password>**  
   
- **rsconfig -e** dá suporte a argumentos adicionais. Para obter mais informações sobre a sintaxe e exibir exemplos de comandos, consulte [Utilitário rsconfig &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) nos Manuais Online do SQL Server.  
-  
+ **rsconfig -e** dá suporte a argumentos adicionais. Para obter mais informações sobre a sintaxe e como exibir exemplos de comandos, consulte [Utilitário rsconfig &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md).
+ 
 ### <a name="how-account-information-is-stored"></a>Como as informações de conta são armazenadas  
  Quando você define a conta, as seguintes configurações são especificadas como valores criptografados no arquivo RSreportserver.config na instância local ou remota do servidor de relatório.  
   
@@ -104,6 +104,6 @@ ms.locfileid: "65502944"
  As informações da conta serão removidas do arquivo RSReportServer.config.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Gerenciador de Configurações do Reporting Services (modo nativo do SSRS).](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
+ [Gerenciador de Configurações do Reporting Services (modo nativo do SSRS).](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

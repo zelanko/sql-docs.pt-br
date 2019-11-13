@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65d4566a7337d25a16f23eb8411e4338dabf7af0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbfbc1b1d26f53e5ee8d3e04fc506048d76b3d28
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581566"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593673"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Criar um mapa de documentos (Construtor de Relatórios e SSRS)
 
@@ -108,9 +108,9 @@ O mapa do documento fornece um conjunto de links de navegação aos itens de rel
 4.  Cole a URL no portal da Web e pressione ENTER. O relatório será executado e o mapa do documento será ocultado.  
   
 > [!NOTE]  
->  Para obter mais informações sobre como baixar relatórios de exemplo, consulte os [(Relatórios de exemplo do Construtor de relatórios e Designer de relatórios) do](https://go.microsoft.com/fwlink/?LinkId=198283).  
+>  Para obter mais informações sobre como baixar relatórios de exemplo, consulte os [(Relatórios de exemplo do Construtor de relatórios e Designer de relatórios) do](https://social.technet.microsoft.com/wiki/contents/articles/1093.reporting-services-samples-on-codeplex-sql-server-reporting-services-ssrs.aspx).  
 >   
->  Para obter mais informações, consulte “Acesso à URL” na [documentação do Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
+  >  Para obter mais informações, consulte [Acesso por URL](../url-access-ssrs.md). 
 
 
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

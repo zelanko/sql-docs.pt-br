@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b4ac7074d89b0e187d18c6cee79840c2a6ab61e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 30a7e283fe7f4b16903dbf293c3db5c77a2409af
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499980"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593952"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Conexões de conexão de lista do SharePoint (SSRS)
 
@@ -90,7 +90,7 @@ Use as informações deste tópico para criar uma fonte de dados. Para obter ins
   
  Não há suporte para a seleção de campos de várias listas. Você pode criar um conjunto de dados para cada lista e selecionar os campos de cada conjunto de dados. Se as listas tiverem um campo comum, você poderá usar a função Lookup em uma região de dados tablix que está vinculada a um conjunto de dados para recuperar um valor do outro conjunto de dados que não está vinculado à região de dados. Para obter mais informações, consulte [Função de pesquisa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md).  
   
--   **Campos Selecionados**  Exibe os campos selecionados por você. Os nomes de campos nesse painel são nomes amigáveis especificados por um usuário do SharePoint. Quando fecha o designer de consulta, você visualiza esses nomes na coleção de campos do conjunto de dados no painel de dados do relatório. A relação entre nomes exclusivos e nomes amigáveis está disponível na página [Caixa de diálogo Propriedades do conjunto de dados, Campos &#40;Construtor de Relatórios&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42).  
+-   **Campos Selecionados**  Exibe os campos selecionados por você. Os nomes de campos nesse painel são nomes amigáveis especificados por um usuário do SharePoint. Quando fecha o designer de consulta, você visualiza esses nomes na coleção de campos do conjunto de dados no painel de dados do relatório. A relação entre nomes exclusivos e nomes amigáveis está disponível na página [Caixa de diálogo Propriedades do conjunto de dados, Campos &#40;Construtor de Relatórios&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
   
 -   **Filtros Aplicados**  Limita os dados retornados da lista do SharePoint, antes que esses dados sejam retornados ao relatório. Selecione o nome do campo, o operador e o valor a ser usado para limitar os dados recuperados na lista. Os operadores variam de acordo com o tipo de dados do valor selecionado.  
   
@@ -98,7 +98,7 @@ Use as informações deste tópico para criar uma fonte de dados. Para obter ins
   
 -   **Resultados da Consulta**  Exibe linhas de exemplo que são retornadas quando a consulta é executada. Se os valores da lista do SharePoint forem alterados com frequência no site do SharePoint, os valores que você visualiza no painel de resultados da consulta poderão ser diferentes dos valores exibidos no relatório.  
   
--   **Campos Selecionados**  Exibe os campos selecionados por você. Os nomes de campos nesse painel são nomes amigáveis especificados por um usuário do SharePoint. Quando fecha o designer de consulta, você visualiza esses nomes na coleção de campos do conjunto de dados no painel de dados do relatório. A relação entre nomes exclusivos e nomes amigáveis está disponível na página [Caixa de diálogo Propriedades do conjunto de dados, Campos &#40;Construtor de Relatórios&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42).  
+-   **Campos Selecionados**  Exibe os campos selecionados por você. Os nomes de campos nesse painel são nomes amigáveis especificados por um usuário do SharePoint. Quando fecha o designer de consulta, você visualiza esses nomes na coleção de campos do conjunto de dados no painel de dados do relatório. A relação entre nomes exclusivos e nomes amigáveis está disponível na página [Caixa de diálogo Propriedades do conjunto de dados, Campos &#40;Construtor de Relatórios&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
   
 -   **Filtros Aplicados**  Limita os dados retornados da lista do SharePoint, antes que esses dados sejam retornados ao relatório. Selecione o nome do campo, o operador e o valor a ser usado para limitar os dados recuperados na lista. Os operadores variam de acordo com o tipo de dados do valor selecionado.  
   
@@ -178,7 +178,7 @@ Use as informações deste tópico para criar uma fonte de dados. Para obter ins
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Fornece informações sobre a coleção de campos de conjuntos de dados gerada pela consulta.  
   
- [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online](https://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Fontes de dados compatíveis com o Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  Fornece informações detalhadas sobre suporte à plataforma e à versão para cada extensão de dados.  
 
 ## <a name="see-also"></a>Consulte Também
