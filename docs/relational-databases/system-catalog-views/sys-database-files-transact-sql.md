@@ -20,12 +20,12 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c314c00931e24049551e4a630c56001b14792ece
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: 41132cc875898b98a793e84a35b5c93eee2699e3
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313731"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983184"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "72313731"
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|ID do arquivo no banco de dados.|  
 |**file_guid**|**uniqueidentifier**|GUID do arquivo.<br /><br /> NULL = o banco de dados foi atualizado de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (válido para SQL Server 2005 e anterior).|  
-|**type**|**tinyint**|Tipo de arquivo:<br /><br /> 0 = Linhas (Inclui arquivos de catálogos de texto complexo atualizados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou criados nele.)<br /><br /> 1 = Log<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Texto completo (Os catálogos de texto completo anteriores ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]; os catálogos de texto completo atualizados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou criados nele relatarão um tipo de arquivo 0.)|  
-|**type_desc**|**nvarchar(60)**|Descrição do tipo de arquivo:<br /><br /> ROWS (Inclui arquivos de catálogos de texto completo atualizados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou criados nele.)<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (catálogos de texto completo anteriores ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].)|  
+|**tipo**|**tinyint**|Tipo de arquivo:<br/><br /> 0 = linhas<br /><br/> 1 = Log<br/><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = texto completo|  
+|**type_desc**|**nvarchar(60)**|Descrição do tipo de arquivo:<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|O valor pode ser 0 ou maior que 0. Um valor igual a 0 representa o arquivo de log do banco de dados, e um valor maior que 0 representa a ID do grupo de arquivos no qual os dados estão armazenados.|  
 |**name**|**sysname**|Nome lógico do arquivo no banco de dados.|  
-|**physical_name**|**nvarchar(260)**|Nome de arquivo do sistema operacional. Se o banco de dados for hospedado por uma [réplica secundária legível](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)do AlwaysOn, **physical_name** indicará o local do arquivo do banco de dados de réplica primária. Para o local de arquivo correto de um banco de dados secundário legível, consulte [Sys. sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
+|**physical_name**|**nvarchar(260)**|Nome de arquivo do sistema operacional. Se o banco de dados for hospedado por uma [réplica secundária legível](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)AlwaysOn, **physical_name** indicará o local do arquivo do banco de dados de réplica primária. Para o local de arquivo correto de um banco de dados secundário legível, consulte [Sys. sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
 |**state**|**tinyint**|Estado do arquivo:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|Descrição do estado do arquivo:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Para obter mais informações, consulte [Estados de arquivo](../../relational-databases/databases/file-states.md).|  
 |**size**|**int**|Tamanho atual do arquivo, em páginas de 8 KB.<br /><br /> 0 = Não aplicável<br /><br /> Para um instantâneo do banco de dados, tamanho reflete o espaço máximo que o instantâneo poderá usar para o arquivo.<br /><br /> Para contêineres de grupo de arquivos FILESTREAM, o tamanho reflete o tamanho atual usado do contêiner.|  
@@ -86,7 +86,7 @@ Para obter mais informações ao usar [!INCLUDE[ssSDS_md](../../includes/sssds-m
  [Estados de arquivo](../../relational-databases/databases/file-states.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
+ [Arquivos e grupos de arquivos do banco de dados](../../relational-databases/databases/database-files-and-filegroups.md)   
  [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
   

@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 87686f4200acf4e4db1666a59b562482c76d0960
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 51c21800dcddec471d6760c31c3cea12e6123b6e
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500286"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592308"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Conjuntos de dados inseridos e compartilhados de relatório (Construtor de Relatórios e SSRS)
   Um conjunto de dados especifica os dados que você pode usar a partir de uma conexão de dados. Um conjunto de dados é baseado em uma conexão de dados que foi salva no relatório como uma fonte de dados inserida ou uma referência a uma fonte de dados compartilhada em um servidor de relatório. O conjunto de dados inclui uma consulta que especifica um conjunto de campos. Ao arrastar esses campos para a superfície de design, você cria expressões que avaliam os dados reais quando o relatório é executado.  
@@ -73,7 +73,7 @@ ms.locfileid: "66500286"
   
 -   Um conjunto de resultados de qualquer provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] registrado e configurado.  
   
--   Dados de um modelo de relatório criado para uma fonte de dados específica, com entidades predefinidas, relações entre entidades e campos. Para obter mais informações, consulte "Usando modelos de relatório como fontes de dados" na [documentação do Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
+-   Dados de um modelo de relatório criado para uma fonte de dados específica, com entidades predefinidas, relações entre entidades e campos. Para obter mais informações, consulte "conjuntos de dados de relatório" na[de documentação do Reporting Services de ](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
  Quando o relatório é processado em tempo de execução, o conjunto de resultados real retornado para uma consulta pode ter zero ou mais linhas. Também é possível que as colunas definidas na consulta não sejam encontradas na fonte de dados. Valores nulos da fonte de dados são mapeados para o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] valor **System.DBNull.Value**.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "66500286"
 |Campos|Campos do comando query<br /><br /> Campos calculados não fazem parte da definição do conjunto de dados|Exiba os campos, mas não é possível alterá-los<br /><br /> A coleção de campos é estática com base na consulta no momento em que você adicionou o conjunto de dados compartilhado ao relatório. Para atualizar, clique em **Atualizar Campos** na caixa de diálogo **Propriedades do Conjunto de Dados** . A coleção de campos real é o que quer que seja retornado pela consulta atual na definição.<br /><br /> Adicionar campos calculados|  
 |Dataset|Opções de dados, como a diferenciação de maiúsculas e minúsculas|Substitua as opções de dados na instância|  
   
- Para obter mais informações sobre como criar conjuntos de dados, consulte [Criar um conjunto de dados compartilhado ou inserido &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) e [Ferramentas do Reporting Services](../../reporting-services/tools/reporting-services-tools.md) na [Documentação do Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
+ Para obter mais informações sobre como criar conjuntos de dados, consulte [Criar um conjunto de dados compartilhado ou inserido &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) e [Ferramentas do Reporting Services](../../reporting-services/tools/reporting-services-tools.md) na [Documentação do Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
 ##  <a name="SortGroupFilter"></a> Filtrando, classificando e agrupando dados em um conjunto de dados  
  Os dados em um conjunto de dados são obtidos quando um comando de consultas é executado em uma fonte de dados externa. A sintaxe do comando de consulta para uma extensão de dados determina se os dados podem ser classificados ou agrupados. Classificar e agrupar ocorre na consulta antes de os dados serem recuperados para um relatório. Filtrar ocorre após os dados serem recuperados para um relatório.  

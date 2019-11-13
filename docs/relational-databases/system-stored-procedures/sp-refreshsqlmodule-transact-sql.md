@@ -26,19 +26,19 @@ ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ed393edf79c3502bf3e054e23eb459d490ce998
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df5ff458c45a4ac804591a8a4d77d9367b8cb6c4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075800"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982768"
 ---
-# <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
+# <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Atualiza os metadados do procedimento armazenado não associado a esquema, da função definida pelo usuário, da exibição, do gatilho DML, do gatilho DDL de nível de banco de dados ou do gatilho DDL de nível de servidor especificado no banco de dados atual. Metadados persistentes desses objetos, como tipos de dados de parâmetros, podem ficar desatualizados devido a atualizações em seus objetos subjacentes.
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,27 +56,27 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'module\_name'` É o nome do procedimento armazenado, função definida pelo usuário, exibição, gatilho DML, gatilho DDL no nível de banco de dados ou gatilho DDL no nível do servidor. *module_name* não pode ser um common language runtime (CLR) procedimento armazenado ou uma função CLR. *module_name* não pode ser associada a esquema. *module_name* está **nvarchar**, sem padrão. *module_name* pode ser um identificador de várias partes, mas só pode se referir a objetos no banco de dados atual.  
+`[ @name = ] 'module\_name'` é o nome do procedimento armazenado, a função definida pelo usuário, a exibição, o gatilho DML, o gatilho DDL no nível do banco de dados ou o gatilho DDL no nível do servidor. *module_name* não pode ser um procedimento armazenado Common Language Runtime (CLR) ou uma função CLR. *module_name* não pode ser associado a esquema. *module_name* é **nvarchar**, sem padrão. *module_name* pode ser um identificador de várias partes, mas só pode fazer referência a objetos no banco de dados atual.  
   
-`[ , @namespace = ] ' \<class> '` É a classe do módulo especificado. Quando *module_name* é um gatilho DDL, \<classe > é necessária. *\<classe >* está **nvarchar**(20). As entradas válidas são:  
+`[ , @namespace = ] ' \<class> '` é a classe do módulo especificado. Quando *module_name* é um gatilho DDL, a classe \<> é necessária. *\<classe >* é **nvarchar**(20). As entradas válidas são:  
   
 |||  
 |-|-|  
 |DATABASE_DDL_TRIGGER||  
-|SERVER_DDL_TRIGGER|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|SERVER_DDL_TRIGGER|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número diferente de zero (falha)  
   
-## <a name="remarks"></a>Comentários  
- **sp_refreshsqlmodule** deve ser executado quando forem feitas alterações aos objetos subjacentes ao módulo que afeta sua definição. Caso contrário, o módulo pode produzir resultados inesperados quando consultado ou invocado. Para atualizar uma exibição, você pode usar **sp_refreshsqlmodule** ou **sp_refreshview** com os mesmos resultados.  
+## <a name="remarks"></a>Remarks  
+ **sp_refreshsqlmodule** deve ser executado quando forem feitas alterações nos objetos subjacentes ao módulo que afetam sua definição. Caso contrário, o módulo pode produzir resultados inesperados quando consultado ou invocado. Para atualizar uma exibição, você pode usar **sp_refreshsqlmodule** ou **sp_refreshview** com os mesmos resultados.  
   
- **sp_refreshsqlmodule** não afeta quaisquer permissões, propriedades estendidas ou definir opções que estão associadas com o objeto.  
+ **sp_refreshsqlmodule** não afeta nenhuma permissão, propriedades estendidas ou opções Set associadas ao objeto.  
   
  Para atualizar um gatilho DDL de nível de servidor, execute este procedimento armazenado a partir do contexto de qualquer banco de dados.  
   
 > [!NOTE]  
->  Todas as assinaturas que estão associadas com o objeto são descartadas quando você executa **sp_refreshsqlmodule**.  
+>  Todas as assinaturas associadas ao objeto são descartadas quando você executa **sp_refreshsqlmodule**.  
   
 ## <a name="permissions"></a>Permissões  
  Requer permissão ALTER no módulo e permissão REFERENCES em qualquer tipo CLR definido pelo usuário e coleções de esquemas XML referidas pelo objeto. Requer permissão ALTER ANY DATABASE DDL TRIGGER no banco de dados atual se o módulo especificado for um gatilho DDL de nível de banco de dados. Requer permissão CONTROL SERVER se o módulo especificado for um gatilho DDL de nível de servidor.  
@@ -143,7 +143,7 @@ SELECT dbo.to_upper('abcdefgh');
 GO  
 ```  
   
-### <a name="b-refreshing-a-database-level-ddl-trigger"></a>B. Atualizando um gatilho DDL de nível de banco de dados  
+### <a name="b-refreshing-a-database-level-ddl-trigger"></a>b. Atualizando um gatilho DDL de nível de banco de dados  
  O exemplo a seguir atualiza um gatilho DDL de nível de banco de dados.  
   
 ```  
@@ -158,7 +158,7 @@ GO
   
 ||  
 |-|  
-|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.|  
   
 ```  
 USE master;  
@@ -170,6 +170,6 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [Procedimentos armazenados do mecanismo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Mecanismo de Banco de Dados procedimentos &#40;armazenados TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

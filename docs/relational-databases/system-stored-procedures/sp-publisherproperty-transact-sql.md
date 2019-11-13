@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 185ad0ad33419b20fffae9bff3e5562761ea7b31
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 0d3ba6552861f162a8ba0755dc37e30bc965e2a4
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771169"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962384"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Exibe ou altera as propriedades do Publicador [!INCLUDE[msCoName](../../includes/msconame-md.md)] para não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. Esse procedimento armazenado é executado no Distribuidor.  
+  Exibe ou altera as propriedades do Publicador para Publicadores não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse procedimento armazenado é executado no Distribuidor.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,11 +39,9 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** = ] **'***publisher***'**  
- É o nome do Publicador heterogêneo. o Publicador é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` é o nome do Publicador heterogêneo. o *Publicador* é **sysname**, sem padrão.  
   
- [ **@propertyname** =] **'***PropertyName***'**  
- É o nome da propriedade que está sendo definida. *PropertyName* é **sysname**e pode ser um dos valores a seguir.  
+`[ @propertyname = ] 'propertyname'` é o nome da propriedade que está sendo definida. *PropertyName* é **sysname**e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -53,7 +51,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
  Quando *PropertyName* é omitido, todas as propriedades configurável são retornadas.  
   
- [ **@propertyvalue** =] **'***PropertyValue***'**  
+ `[ @propertyvalue = ] 'propertyvalue'`  
  É o novo valor da configuração da propriedade. *PropertyValue* é **sysname**, com um valor padrão de NULL. Quando *PropertyValue* é omitido, a configuração atual da propriedade é retornada.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
@@ -66,10 +64,10 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
- **sp_publisherproperty** é usado na replicação transacional para não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores.  
+## <a name="remarks"></a>Remarks  
+ **sp_publisherproperty** é usado na replicação transacional para Publicadores não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Quando apenas o Publicador é especificado, o conjunto de resultados inclui as configurações atuais para todas as propriedades que podem ser definidas.  
+ Quando apenas o *Publicador* é especificado, o conjunto de resultados inclui as configurações atuais para todas as propriedades que podem ser definidas.  
   
  Quando *PropertyName* é especificado, somente a propriedade nomeada aparece no conjunto de resultados.  
   

@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 30ea7fba212cc99b8d6d7e58397d29731048c6f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056303"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982112"
 ---
-# <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
+# <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Captura dados de diagnóstico e informações de integridade sobre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para detectar falhas potenciais. O procedimento é executado no modo de repetição e envia resultados periodicamente. Pode ser invocado a partir de uma conexão comum ou DAC.  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior).  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,9 +40,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @repeat_interval = ] 'repeat_interval_in_seconds'` Indica o intervalo de tempo em que o procedimento armazenado será executado repetidamente para enviar informações de integridade.  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'` indica o intervalo de tempo no qual o procedimento armazenado será executado repetidamente para enviar informações de integridade.  
   
- *repeat_interval_in_seconds* está **int** com o padrão de 0. Os valores de parâmetros válidos são 0 ou qualquer valor igual ou superior a 5. O procedimento armazenado deve ser executado por pelo menos 5 segundos para retornar dados completos. O valor mínimo de execução do procedimento armazenado no modo de repetição é de 5 segundos.  
+ *repeat_interval_in_seconds* é **int** com o padrão de 0. Os valores de parâmetros válidos são 0 ou qualquer valor igual ou superior a 5. O procedimento armazenado deve ser executado por pelo menos 5 segundos para retornar dados completos. O valor mínimo de execução do procedimento armazenado no modo de repetição é de 5 segundos.  
   
  Se esse parâmetro não for especificado ou se o valor especificado for 0, o procedimento armazenado retornará dados uma vez e depois será encerrado.  
   
@@ -56,38 +56,38 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>Conjuntos de resultados  
 **sp_server_diagnostics** retorna as informações a seguir  
   
-|coluna|Data type|Descrição|  
+|Column|Tipo de dados|Descrição|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indica o carimbo de data/hora de criação de linha. Cada linha em um único conjunto de linhas tem o mesmo carimbo de data/hora.|  
-|**component_type**|**sysname**|Indica se a linha contém informações para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nível de componente ou para um grupo de disponibilidade Always On da instância:<br /><br /> instância<br /><br /> AlwaysOn: AvailabilityGroup|  
-|**component_name**|**sysname**|Indica o nome de componente ou o nome do grupo de disponibilidade:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventos<br /><br /> *\<nome do grupo de disponibilidade >*|  
+|**component_type**|**sysname**|Indica se a linha contém informações para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente de nível de instância ou para um grupo de disponibilidade Always On:<br /><br /> instância<br /><br /> Always On: Availabilitygroup|  
+|**component_name**|**sysname**|Indica o nome de componente ou o nome do grupo de disponibilidade:<br /><br /> sistema<br /><br /> recurso<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventos<br /><br /> *\<nome do grupo de disponibilidade >*|  
 |**state**|**int**|Indica o status de integridade do componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|Descreve a coluna de estado. Descrições que correspondem aos valores na coluna de estado são:<br /><br /> 0: Unknown<br /><br /> 1: limpar<br /><br /> 2: aviso<br /><br /> 3: erro|  
+|**state_desc**|**sysname**|Descreve a coluna de estado. Descrições que correspondem aos valores na coluna de estado são:<br /><br /> 0: desconhecido<br /><br /> 1: limpar<br /><br /> 2: aviso<br /><br /> 3: erro|  
 |**data**|**varchar (max)**|Especifica dados que são específicos do componente.|  
   
  Aqui estão as descrições dos cinco componentes:  
   
--   **sistema**: Coleta dados de uma perspectiva do sistema em spinlocks, condições de processamento severas, tarefas não produzidas, falhas de página e uso da CPU. Essas informações produzem uma recomendação de estado de integridade geral.  
+-   **sistema**: coleta dados de uma perspectiva do sistema em spinlocks, condições de processamento graves, tarefas que não respondem, falhas de página e uso da CPU. Essas informações produzem uma recomendação de estado de integridade geral.  
   
--   **recurso**:  Coleta dados de uma perspectiva de recurso na memória física e virtual, pools de buffers, páginas, cache e outros objetos de memória. Essas informações produz uma recomendação de estado de integridade geral.  
+-   **recurso**: coleta dados de uma perspectiva de recurso em memória física e virtual, pools de buffer, páginas, cache e outros objetos de memória. Essas informações produzem uma recomendação geral do estado de integridade.  
   
--   **query_processing**: Coleta dados de uma perspectiva de processamento de consulta em threads de trabalho, tarefas, tipos de espera, sessões intensivas de CPU e tarefas de bloqueio. Essas informações produz uma recomendação de estado de integridade geral.  
+-   **query_processing**: coleta dados de uma perspectiva de processamento de consulta nos threads de trabalho, tarefas, tipos de espera, sessões com uso intensivo de CPU e tarefas de bloqueio. Essas informações produzem uma recomendação geral do estado de integridade.  
   
--   **io_subsystem**: Coleta dados sobre e/s. Além dos dados de diagnóstico, esse componente produz um estado de integridade limpo ou de integridade de aviso somente para um subsistema de IO.  
+-   **io_subsystem**: coleta dados na e/s. Além dos dados de diagnóstico, esse componente produz um estado de integridade limpo ou de integridade de aviso somente para um subsistema de IO.  
   
--   **Eventos**: Coleta de dados e superfícies por meio do procedimento armazenado nos erros e eventos interessantes registrados pelo servidor, incluindo detalhes sobre exceções de buffer de anel, eventos de buffer de anel sobre agente de memória, fora de memória, monitor do Agendador, pool de buffer, spinlocks, segurança e conectividade. Eventos sempre mostrarão 0 como o estado.  
+-   **eventos**: coleta dados e superfícies por meio do procedimento armazenado sobre erros e eventos de interesse registrados pelo servidor, incluindo detalhes sobre exceções de buffer de anel, eventos de buffer de anel sobre o agente de memória, memória insuficiente, monitor do Agendador, pool de buffers, spinlocks, segurança e conectividade. Eventos sempre mostrarão 0 como o estado.  
   
--   **\<nome do grupo de disponibilidade >** : Coleta dados para o grupo de disponibilidade especificado (se component_type = "sempre em: AvailabilityGroup").  
+-   **\<nome do grupo de disponibilidade >** : coleta dados para o grupo de disponibilidade especificado (se component_type = "Always on: availabilitygroup").  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 De uma perspectiva de falha, os componentes system, resource e query_processing serão aproveitados para detecção de falha, enquanto os componentes io_subsystem e eventos serão aproveitados apenas para fins de diagnóstico.  
   
 A tabela a seguir mapeia os componentes para seus estados de integridade associados.  
   
-|Componentes|Clean (1)|Warning (2)|Erro (3)|Unknowns (0)|  
+|Components|Clean (1)|Warning (2)|Erro (3)|Unknowns (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |sistema|x|x|x||  
-|resource|x|x|x||  
+|recurso|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
 |eventos||||x|  
@@ -95,7 +95,7 @@ A tabela a seguir mapeia os componentes para seus estados de integridade associa
 O (x) em cada linha representa estados de integridade válida para o componente. Por exemplo, io_subsystem mostrará como clean ou warning. Não mostrará os estados de erro.  
  
 > [!NOTE]
-> Execução do procedimento de sp_server_diagnostics interno é implementada em um thread preemptive com prioridade alta.
+> A execução de sp_server_diagnostics procedimento interno é implementada em um thread preventivo com prioridade alta.
   
 ## <a name="permissions"></a>Permissões  
 , é necessário ter permissão VIEW SERVER STATE no servidor.  
@@ -241,6 +241,6 @@ go
 ``` 
   
 ## <a name="see-also"></a>Consulte também  
- [Política de failover para instâncias de cluster de failover](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

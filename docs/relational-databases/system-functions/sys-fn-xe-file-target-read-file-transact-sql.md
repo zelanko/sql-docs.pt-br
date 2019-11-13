@@ -22,22 +22,22 @@ ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e6ee58a9c04c64c71ab63c3bbd639ae0c3357a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 126b05adab3a07099f6c9110e18e54910f5b2f25
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059100"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982988"
 ---
-# <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
+# <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Lê arquivos que são criados pelo destino de arquivos assíncronos do mecanismo de Eventos estendidos. É retornado um evento, em formato XML, por linha.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] aceitam resultados de rastreamento gerados no formato XEL e XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Suporte estendido de eventos somente resultados de rastreamento no formato XEL. É recomendável usar o SQL Server Management Studio para ler resultados de rastreamento no formato XEL.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] aceitar resultados de rastreamento gerados no formato XEL e XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eventos estendidos dão suporte apenas a resultados de rastreamento no formato XEL. É recomendável usar o SQL Server Management Studio para ler resultados de rastreamento no formato XEL.    
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,22 +48,22 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="arguments"></a>Argumentos  
  *path*  
- O caminho para os arquivos a serem lidos. *caminho* pode conter curingas e incluir o nome de um arquivo. *caminho* está **nvarchar (260)** . Não há nenhum padrão. No contexto do banco de dados SQL, esse valor é uma URL de HTTP para um arquivo no armazenamento do Azure.
+ O caminho para os arquivos a serem lidos. o *caminho* pode conter curingas e incluir o nome de um arquivo. o *caminho* é **nvarchar (260)** . Não há nenhum padrão. No contexto do banco de dados SQL do Azure, esse valor é uma URL HTTP para um arquivo no armazenamento do Azure.
   
  *mdpath*  
- O caminho para o arquivo de metadados que corresponde ao arquivo ou arquivos especificados pelo *caminho* argumento. *mdpath* está **nvarchar (260)** . Não há nenhum padrão. Começando com o SQL Server 2016, esse parâmetro pode ser fornecido como nulo.
+ O caminho para o arquivo de metadados que corresponde ao arquivo ou aos arquivos especificados pelo argumento *path* . *mdpath* é **nvarchar (260)** . Não há nenhum padrão. A partir do SQL Server 2016, esse parâmetro pode ser fornecido como nulo.
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] não requer o *mdpath* parâmetro. No entanto, é mantido para compatibilidade com versões anteriores para arquivos de log gerados nas versões anteriores do SQL Server.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] não requer o parâmetro *mdpath* . No entanto, é mantido para compatibilidade com versões anteriores para arquivos de log gerados nas versões anteriores do SQL Server.  
   
  *initial_file_name*  
- O primeiro arquivo leiam *caminho*. *initial_file_name* está **nvarchar (260)** . Não há nenhum padrão. Se **nulo** é especificado como o argumento de todos os arquivos encontrados na *caminho* são lidos.  
+ O primeiro arquivo a ser lido a partir do *caminho*. *initial_file_name* é **nvarchar (260)** . Não há nenhum padrão. Se **NULL** for especificado como o argumento, todos os arquivos encontrados no *caminho* serão lidos.  
   
 > [!NOTE]  
 >  *initial_file_name* e *initial_offset* são argumentos emparelhados. Se você especificar um valor um dos argumentos, deverá especificar um valor para o outro argumento.  
   
  *initial_offset*  
- Usado para especificar o último deslocamento lido anteriormente e o ignora todos os eventos até o deslocamento (inclusive). A enumeração de evento é iniciada após o deslocamento especificado. *initial_offset* está **bigint**. Se **nulo** é especificado como o argumento do arquivo inteiro será lido.  
+ Usado para especificar o último deslocamento lido anteriormente e o ignora todos os eventos até o deslocamento (inclusive). A enumeração de evento é iniciada após o deslocamento especificado. *initial_offset* é **bigint**. Se **NULL** for especificado como o argumento, o arquivo inteiro será lido.  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
@@ -75,11 +75,11 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|Os conteúdos de evento no formato XML. Não permite valor nulo.|  
 |file_name|**nvarchar(260)**|O nome do arquivo que contém o evento. Não permite valor nulo.|  
 |file_offset|**bigint**|O deslocamento do bloco no arquivo que contém o evento. Não permite valor nulo.|  
-|timestamp_utc|**datetime2**|**Aplica-se a**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />A data e hora (fuso horário UTC) do evento. Não permite valor nulo.|  
+|timestamp_utc|**datetime2**|**Aplica-se a**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />A data e hora (fuso horário UTC) do evento. Não permite valor nulo.|  
 
   
-## <a name="remarks"></a>Comentários  
- Ler resultados grandes define executando **sys. fn_xe_file_target_read_file** em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pode resultar em um erro. Use o **resultados em arquivo** modo (**Ctrl + Shift + F**) para exportar grandes conjuntos de resultados para um arquivo e ler o arquivo em outra ferramenta em vez disso.  
+## <a name="remarks"></a>Remarks  
+ Ler grandes conjuntos de resultados executando **Sys. fn_xe_file_target_read_file** em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pode resultar em um erro. Use os **resultados para** o modo de arquivo (**Ctrl + Shift + F**) para exportar grandes conjuntos de resultados para um arquivo e ler o arquivo com outra ferramenta em vez disso.  
   
 ## <a name="permissions"></a>Permissões  
  , é necessário ter permissão VIEW SERVER STATE no servidor.  

@@ -20,17 +20,17 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5bd5257e06b784418625616c71cfb7d3e5510a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd09706d1b3de9ebe4a5b333f79be9644c433e7c
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68090658"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982347"
 ---
-# <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
+# <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna uma linha para cada entidade do banco de dados atual que faz referência a outra entidade definida pelo usuário por nome. Uma dependência entre duas entidades é criada quando uma entidade, chamada a *entidade referenciada*, aparece por nome em uma expressão SQL persistente de outra entidade, chamada a *entidade de referência*. Por exemplo, se um UDT (tipo definido pelo usuário) for especificado como entidade referenciada, essa função retornará cada entidade definida pelo usuário que referencia aquele tipo pelo nome em sua definição. A função não retorna entidades em outros bancos de dados que podem fazer referência à entidade especificada. Essa função precisa ser executada no contexto do banco de dados mestre para retornar um gatilho DDL no nível do servidor como entidade de referência.  
+  Retorna uma linha para cada entidade do banco de dados atual que faz referência a outra entidade definida pelo usuário por nome. Uma dependência entre duas entidades é criada quando uma entidade, chamada de *entidade referenciada*, é exibida pelo nome em uma expressão SQL persistente de outra entidade, chamada de *entidade de referência*. Por exemplo, se um UDT (tipo definido pelo usuário) for especificado como entidade referenciada, essa função retornará cada entidade definida pelo usuário que referencia aquele tipo pelo nome em sua definição. A função não retorna entidades em outros bancos de dados que podem fazer referência à entidade especificada. Essa função precisa ser executada no contexto do banco de dados mestre para retornar um gatilho DDL no nível do servidor como entidade de referência.  
   
  Você pode usar essa função de gerenciamento dinâmico para relatar os seguintes tipos de entidades do banco de dados atual que fazem referência à entidade especificada:  
   
@@ -40,9 +40,9 @@ ms.locfileid: "68090658"
   
 -   Gatilhos DDL no nível do servidor  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior) [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -63,14 +63,14 @@ sys.dm_sql_referencing_entities (
  *schema_name.referenced*_*entity_name*  
  É o nome da entidade referenciada.  
   
- *schema_name* é necessária, exceto quando a classe referenciada é a PARTITION_FUNCTION.  
+ *schema_name* é necessário, exceto quando a classe referenciada é PARTITION_FUNCTION.  
   
- *schema_name.referenced_entity_name* está **nvarchar(517)** .  
+ *schema_name. referenced_entity_name* é **nvarchar (517)** .  
   
- *< Referenced_class >* :: = {objeto | TIPO | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
+ *< referenced_class >* :: = {Object | TIPO | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
  É a classe da entidade referenciada. Apenas uma classe pode ser especificada por instrução.  
   
- *< referenced_class >* está **nvarchar**(60).  
+ *< referenced_class >* é **nvarchar**(60).  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
@@ -96,7 +96,7 @@ sys.dm_sql_referencing_entities (
   
  Retorna um erro quando a entidade referenciada especificada é um procedimento armazenado numerado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A tabela a seguir lista os tipos de entidades para os quais as informações de dependência são criadas e mantidas. As informações de dependência não são criadas nem mantidas para regras, padrões, tabelas temporárias, procedimentos armazenados temporários ou objetos do sistema.  
   
 |Tipo de entidade|Entidade de referência|Entidade referenciada|  
@@ -116,9 +116,9 @@ sys.dm_sql_referencing_entities (
 |Sinônimo|Não|Sim|  
 |Tipo (tipo de alias e tipo de dados CLR definido pelo usuário)|Não|Sim|  
 |Coleção de esquemas XML|Não|Sim|  
-|Função Partition|Não|Sim|  
+|Função de partição|Não|Sim|  
   
- \* Uma tabela é controlada como entidade de referência somente quando ela faz referência a um [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido pelo usuário ou coleção de esquemas XML na definição de uma coluna computada, restrição CHECK ou restrição padrão.  
+ \* uma tabela é rastreada como uma entidade de referência somente quando faz referência a um módulo [!INCLUDE[tsql](../../includes/tsql-md.md)], tipo definido pelo usuário ou coleção de esquema XML na definição de uma coluna computada, restrição de verificação ou restrição padrão.  
   
  ** Os procedimentos armazenados numerados com um valor inteiro maior que 1 não são controlados como entidade que faz referência nem como entidade referenciada.  
   
@@ -128,7 +128,7 @@ sys.dm_sql_referencing_entities (
   
 -   Requer a permissão CONTROL no objeto referenciado. Quando a entidade referenciada é uma função de partição, a permissão CONTROL é exigida no banco de dados.  
   
--   Requer permissão SELECT na DM sql_referencing_entities. Por padrão, a permissão SELECT é concedida a público.  
+-   Requer a permissão SELECT em sys. dm_sql_referencing_entities. Por padrão, a permissão SELECT é concedida a público.  
   
 ### <a name="includesssql14includessssql14-mdmd---includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
@@ -153,8 +153,8 @@ FROM sys.dm_sql_referencing_entities ('Production.Product', 'OBJECT');
 GO  
 ```  
   
-### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. Retornando as entidades que fazem referência a um determinado tipo  
- O exemplo a seguir retorna as entidades que referenciam o tipo de alias `dbo.Flag`. O conjunto de resultados mostra que dois procedimentos armazenados usam esse tipo. O `dbo.Flag` tipo também é usado na definição de várias colunas de `HumanResources.Employee` tabela; no entanto, porque o tipo não for na definição de uma coluna computada, restrição CHECK ou restrição padrão na tabela, nenhuma linha será retornada para o `HumanResources.Employee`tabela.  
+### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>b. Retornando as entidades que fazem referência a um determinado tipo  
+ O exemplo a seguir retorna as entidades que referenciam o tipo de alias `dbo.Flag`. O conjunto de resultados mostra que dois procedimentos armazenados usam esse tipo. O tipo de `dbo.Flag` também é usado na definição de várias colunas na tabela `HumanResources.Employee`; no entanto, como o tipo não está na definição de uma coluna computada, restrição de verificação ou restrição padrão na tabela, nenhuma linha é retornada para a tabela de `HumanResources.Employee`.  
   
 ```sql  
 USE AdventureWorks2012;  

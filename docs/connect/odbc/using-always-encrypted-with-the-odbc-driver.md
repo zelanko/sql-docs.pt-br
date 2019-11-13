@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: MightyPen
-ms.openlocfilehash: cc6deae9a2ddcb11675586ffd8777644aff00672
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: bf15831517ebaa8646c1d6f3c080033c3a41405d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702700"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594373"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Como usar o recurso Always Encrypted com o ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -29,7 +29,7 @@ Este artigo fornece informações sobre como desenvolver aplicativos ODBC usando
 
 O Always Encrypted permite que os aplicativos cliente criptografem dados confidenciais e nunca revelem os dados nem as chaves de criptografia para o SQL Server ou o Banco de Dados SQL do Azure. Um driver habilitado para Always Encrypted, como o ODBC Driver for SQL Server, consegue fazer isso criptografando e descriptografando de modo transparente dados confidenciais no aplicativo cliente. O driver determina automaticamente quais parâmetros de consulta correspondem às colunas de banco de dados confidenciais (protegidas com o Always Encrypted) e criptografa os valores desses parâmetros antes de passar os dados para o SQL Server ou o Banco de Dados SQL do Azure. Da mesma forma, o driver descriptografa de modo transparente os dados recuperados das colunas de banco de dados criptografadas nos resultados da consulta. O Always Encrypted *com enclaves seguras* estende esse recurso para habilitar funcionalidades mais avançadas em dados confidenciais mantendo a confidencialidade desses dados.
 
-Para obter mais informações, consulte [Always Encrypted (mecanismo de banco de dados)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) e [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Para obter mais informações, consulte [Always Encrypted (Mecanismo de Banco de Dados)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) e [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ### <a name="prerequisites"></a>Prerequisites
 
@@ -59,7 +59,7 @@ Observe que habilitar o Always Encrypted não é suficiente para o êxito da cri
 
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>Como habilitar o Always Encrypted com enclaves seguros
 
-A partir da versão 17,4, o driver oferece suporte a Always Encrypted com enclaves seguros. Para habilitar o uso do enclave ao se conectar ao SQL Server 2019 ou posterior, defina `ColumnEncryption` o DSN, a cadeia de conexão ou o atributo de conexão com o nome do tipo enclave e o protocolo de atestado, e os dados de atestado associados, separados por uma vírgula. Na versão 17,4, somente o tipo de enclave de [segurança baseado em virtualização](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) e o protocolo de atestado do [serviço guardião de host](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) , indicados pelo `VBS-HGS`, têm suporte; para usá-lo, especifique a URL do servidor de atestado, por exemplo:
+A partir da versão 17.4, o driver é compatível com Always Encrypted com enclaves seguros. Para habilitar o uso do enclave ao se conectar ao SQL Server 2019 ou posterior, defina o DSN `ColumnEncryption`, a cadeia de conexão ou o atributo de conexão com o nome do tipo enclave e o protocolo de atestado, e os dados de atestado associados, separados por uma vírgula. Na versão 17,4, somente o [segurança baseada em virtualização](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) tipo enclave e [serviço guardião de host](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) protocolo de atestado, indicado por `VBS-HGS`, tem suporte; para usá-lo, especifique a URL do servidor de atestado, por exemplo:
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
@@ -161,7 +161,7 @@ O exemplo a seguir demonstra a filtragem de dados com base em valores criptograf
 - Todos os valores impressos pelo programa estarão em texto não criptografado, já que o driver descriptografará de modo transparente os dados recuperados das colunas SSN e BirthDate.
 
 > [!NOTE]
-> As consultas podem executar comparações de igualdade em colunas criptografadas somente se a criptografia for determinística ou se o enclave seguro estiver habilitado. Para obter mais informações, confira [Seleção de criptografia determinística ou aleatória](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
+> Observação: as consultas podem executar comparações de igualdade em colunas criptografadas somente se a criptografia for determinística. Para obter mais informações, confira [Seleção de criptografia determinística ou aleatória](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
 ```
 SQLCHAR SSN[12];
@@ -575,7 +575,7 @@ A tabela a seguir fornece um resumo das ações ao operar em uma coluna criptogr
 
 |`ColumnEncryption`|Direção BCP|Descrição|
 |----------------|-------------|-----------|
-|`Disabled`|OUT (para o cliente)|Recupera o texto cifrado. O tipo de dados observado é **varbinary(max)** .|
+|`Disabled`|OUT (para o cliente)|Recupera o texto cifrado. O tipo de dados observado é **varbinary(max)**.|
 |`Enabled`|OUT (para o cliente)|Recupera texto não criptografado. O driver descriptografará os dados da coluna.|
 |`Disabled`|IN (para servidor)|Insere o texto cifrado. Destina-se a mover os dados criptografados discretamente sem a necessidade de serem descriptografados. A operação falhará se a opção `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` não estiver definida no usuário ou se BCPMODIFYENCRYPTED não estiver definido no identificador de conexão. Veja a seguir para obter mais informações.|
 |`Enabled`|IN (para servidor)|Insere texto não criptografado. O driver descriptografará os dados da coluna.|
@@ -592,7 +592,7 @@ Veja [Migrar dados confidenciais protegidos por Always Encrypted](../../relation
 
 |Nome|Descrição|  
 |----------|-----------------|  
-|`ColumnEncryption`|Os valores aceitos são `Enabled`/`Disabled`.<br>`Enabled` -- habilita ou desabilita a funcionalidade Always Encrypted para a conexão.<br>`Disabled` -- desabilita a funcionalidade Always Encrypted para a conexão.<br>*Type*,*Data* --(versão 17,4 e posterior) habilita Always Encrypted com o *tipo*de protocolo de atestado e enclave seguro e *dados*de dados de atestado associados. <br><br>O padrão é `Disabled`.|
+|`ColumnEncryption`|Os valores aceitos são `Enabled`/`Disabled`.<br>`Enabled` -- habilita ou desabilita a funcionalidade Always Encrypted para a conexão.<br>`Disabled` -- desabilita a funcionalidade Always Encrypted para a conexão.<br>*o tipo*, *de dados*--(versão 17,4 e posterior) habilita Always Encrypted com o Secure enclave and atestado Protocol *Type*e dados de atestado associados *data*. <br><br>O padrão é `Disabled`.|
 |`KeyStoreAuthentication` | Valores válidos: `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | Quando `KeyStoreAuthentication` = `KeyVaultPassword`, defina este valor como um nome UPN válido do Azure Active Directory. <br>Quando `KeyStoreAuthetication` = `KeyVaultClientSecret`, defina este valor como uma ID de cliente válida do Azure Active Directory. |
 |`KeyStoreSecret` | Quando `KeyStoreAuthentication` = `KeyVaultPassword`, defina este valor como a senha para o nome de usuário correspondente. <br>Quando `KeyStoreAuthentication` = `KeyVaultClientSecret`, defina este valor como o segredo do aplicativo associado a uma ID do cliente do aplicativo válida do Azure Active Directory. |
@@ -602,7 +602,7 @@ Veja [Migrar dados confidenciais protegidos por Always Encrypted](../../relation
 
 |Nome|Tipo|Descrição|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|Antes de conectar-se|`SQL_COLUMN_ENCRYPTION_DISABLE` (0): desabilitar o Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1): habilitar o Always Encrypted<br> Ponteiro para *tipo*, Cadeia de*dados* --(versão 17,4 e posterior) habilitar com Secure enclave|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|Antes de conectar-se|`SQL_COLUMN_ENCRYPTION_DISABLE` (0): desabilitar o Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1): habilitar o Always Encrypted<br> Ponteiro para *tipo*,*dados* cadeia de caracteres--(versão 17,4 e posterior) habilitar com Secure enclave|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Após conectar-se|[Set] Tentativa de carregar CEKeystoreProvider<br>[Get] Retorna um nome de CEKeystoreProvider|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|Após conectar-se|[Set] Gravar dados em CEKeystoreProvider<br>[Set] Ler dados de CEKeystoreProvider|
 |`SQL_COPT_SS_CEKCACHETTL`|Após conectar-se|[Set] Definir o TTL do cache da CEK<br>[Get] Obter o TTL do cache da CEK atual|
@@ -631,4 +631,3 @@ Veja [Migrar dados confidenciais protegidos por Always Encrypted](../../relation
 - [Always Encrypted (mecanismo de banco de dados)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md)
 - [Blog do Always Encrypted](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
-

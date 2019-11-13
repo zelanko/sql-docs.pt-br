@@ -20,12 +20,12 @@ ms.assetid: 1c19e1b1-c925-4dad-a652-581692f4ab5e
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d56671fd3c1dbd38cc2ff4bc4d9f4331e5484b91
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 2531dde9237734d3c6eb4b3ea96ed2ac18e9d399
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305029"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982796"
 ---
 # <a name="syspartitions-transact-sql"></a>sys.partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "72305029"
 |partition_number|**int**|É um número de partição com base em um 1 no índice ou heap de propriedade. Para tabelas e índices não particionados, o valor desta coluna é 1.|  
 |hobt_id|**bigint**|Indica a ID do heap ou árvore B de dados (HoBT) que contém as linhas desta partição.|  
 |rows|**bigint**|Indica o número aproximado de linhas nessa partição.|  
-|filestream_filegroup_id|**smallint**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica a ID do grupo de arquivos FILESTREAM armazenado nesta partição.|  
-|data_compression|**tinyint**|Indica o estado da compactação de cada partição:<br /><br /> 0 = NONE <br />1 = ROW <br />2 = PAGE <br />3 = COLUMNSTORE: **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br />4 = COLUMNSTORE_ARCHIVE: **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> **Observação:** Os índices de texto completo serão compactados em qualquer edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|filestream_filegroup_id|**smallint**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> Indica a ID do grupo de arquivos FILESTREAM armazenado nesta partição.|  
+|data_compression|**tinyint**|Indica o estado da compactação de cada partição:<br /><br /> 0 = NONE <br />1 = ROW <br />2 = PAGE <br />3 = COLUMNSTORE: **aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior<br />4 = COLUMNSTORE_ARCHIVE: **aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior<br /><br /> **Observação:** Os índices de texto completo serão compactados em qualquer edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |data_compression_desc|**nvarchar(60)**|Indica o estado da compactação de cada partição. Os valores possível para as tabelas rowstore são NONE, ROW e PAGE. Os valores possível para as tabelas columnstor são COLUMNSTORE e COLUMNSTORE_ARCHIVE.|  
   
 ## <a name="permissions"></a>Permissões  

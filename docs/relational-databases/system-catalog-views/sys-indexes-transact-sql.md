@@ -20,12 +20,12 @@ ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0008599ad16db3c7200c824458f0bbae82580750
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 33c98b63ead78a4928b5e8dca762dee3f1a8dbaa
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68103409"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73980224"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,16 +35,16 @@ ms.locfileid: "68103409"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID do objeto ao qual este índice pertence.|  
-|**name**|**sysname**|Nome do índice. **nome** só é exclusivo dentro do objeto.<br /><br /> NULL = Heap|  
+|**name**|**sysname**|Nome do índice. o **nome** é exclusivo somente dentro do objeto.<br /><br /> NULL = Heap|  
 |**index_id**|**int**|ID do índice. **index_id** é exclusivo somente dentro do objeto.<br /><br /> 0 = Heap<br /><br /> 1 = Índice clusterizado<br /><br /> > 1 = índice não clusterizado|  
-|**type**|**tinyint**|Tipo de índice:<br /><br /> 0 = Heap<br /><br /> 1 = Clusterizado<br /><br /> 2 = Não clusterizado<br /><br /> 3 = XML<br /><br /> 4 = Espacial<br /><br /> 5 = índice columnstore clusterizado. **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 6 = índice columnstore não clusterizado. **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 7 = índice nonclustered hash. **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**type_desc**|**nvarchar(60)**|Descrição de tipo de índice:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> COLUMNSTORE CLUSTERIZADO - **aplica-se ao**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> COLUMNSTORE não CLUSTERIZADO - **aplica-se ao**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> HASH NÃO CLUSTERIZADOS: Os índices NONCLUSTERED HASH têm suporte apenas em tabelas com otimização de memória. A exibição sys.hash_indexes mostra os índices de hash atuais e as propriedades de hash. Para obter mais informações, consulte [hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**tipo**|**tinyint**|Tipo de índice:<br /><br /> 0 = Heap<br /><br /> 1 = Clusterizado<br /><br /> 2 = Não clusterizado<br /><br /> 3 = XML<br /><br /> 4 = Espacial<br /><br /> 5 = índice columnstore clusterizado. **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.<br /><br /> 6 = índice columnstore não clusterizado. **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> 7 = índice de hash não clusterizado. **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.|  
+|**type_desc**|**nvarchar(60)**|Descrição de tipo de índice:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> COLUMNSTORE CLUSTERIZAdo – **aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.<br /><br /> COLUMNSTORE não CLUSTERIZAdo – **aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> HASH não CLUSTERIZAdo: há suporte para índices de HASH não CLUSTERIZAdos somente em tabelas com otimização de memória. A exibição sys.hash_indexes mostra os índices de hash atuais e as propriedades de hash. Para obter mais informações, consulte [Sys. &#40;HASH_INDEXES Transact-&#41;SQL](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.|  
 |**is_unique**|**bit**|1 = O índice é exclusivo.<br /><br /> 0 = O índice não é exclusivo.<br /><br /> Sempre 0 para índices columnstore clusterizados.|  
 |**data_space_id**|**int**|A ID do espaço de dados deste índice. O espaço de dados é um grupo de arquivos ou um esquema de partição.<br /><br /> 0 = **object_id** é uma função com valor de tabela ou índice na memória.|  
 |**ignore_dup_key**|**bit**|1 = IGNORE_DUP_KEY está ON.<br /><br /> 0 = IGNORE_DUP_KEY está OFF.|  
 |**is_primary_key**|**bit**|1 = O índice faz parte de uma restrição PRIMARY KEY.<br /><br /> Sempre 0 para índices columnstore clusterizados.|  
 |**is_unique_constraint**|**bit**|1 = O índice faz parte de uma restrição UNIQUE.<br /><br /> Sempre 0 para índices columnstore clusterizados.|  
-|**fill_factor**|**tinyint**|> 0 = porcentagem de FILLFACTOR usada quando o índice foi criado ou reconstruído.<br /><br /> 0 = Valor padrão<br /><br /> Sempre 0 para índices columnstore clusterizados.|  
+|**fill_factor**|**tinyint**|> 0 = porcentagem FILLFACTOR usada quando o índice foi criado ou recriado.<br /><br /> 0 = Valor padrão<br /><br /> Sempre 0 para índices columnstore clusterizados.|  
 |**is_padded**|**bit**|1 = PADINDEX está ON.<br /><br /> 0 = PADINDEX está OFF.<br /><br /> Sempre 0 para índices columnstore clusterizados.|  
 |**is_disabled**|**bit**|1 = O índice está desabilitado.<br /><br /> 0 = O índice não está desabilitado.|  
 |**is_hypothetical**|**bit**|1 = O índice é hipotético e não pode ser usado diretamente como um caminho de acesso a dados. Índices hipotéticos mantêm estatísticas em nível de coluna.<br /><br /> 0 = O índice não é hipotético.|  
@@ -52,15 +52,15 @@ ms.locfileid: "68103409"
 |**allow_page_locks**|**bit**|1 = O índice permite bloqueios de página.<br /><br /> 0 = O índice não permite bloqueios de página.<br /><br /> Sempre 0 para índices columnstore clusterizados.|  
 |**has_filter**|**bit**|1 = O índice tem um filtro e só contém linhas que atendem à definição do filtro.<br /><br /> 0 = O índice não tem um filtro.|  
 |**filter_definition**|**nvarchar(max)**|Expressão do subconjunto de linhas incluído no índice filtrado.<br /><br /> NULL para índice heap ou não filtrado.|  
-|**auto_created**|**bit**|1 = o índice foi criado pelo ajuste automático.<br /><br />0 = índice foi criado pelo usuário.
-|**optimize_for_sequential_key**|**bit**|1 = o índice tem otimização de inserção de última página habilitada.<br><br>0 = valor padrão. Índice tem otimização de inserção de última página desabilitada.|
+|**auto_created**|**bit**|1 = o índice foi criado pelo ajuste automático.<br /><br />0 = o índice foi criado pelo usuário.
+|**optimize_for_sequential_key**|**bit**|1 = o índice tem a otimização de inserção da última página habilitada.<br><br>0 = valor padrão. O índice tem a otimização de inserção da última página desabilitada.|
 
   
 ## <a name="permissions"></a>Permissões  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir retorna todos os índices da tabela `Production.Product` no [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados.  
+ O exemplo a seguir retorna todos os índices para a tabela `Production.Product` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
   
@@ -94,7 +94,7 @@ GO
  [sys.key_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
  [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [sys.partition_schemes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
- [Consultando o catálogo de sistema do SQL Server perguntas Frequentes](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Consultando as perguntas frequentes sobre o catálogo do sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

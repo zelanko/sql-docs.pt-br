@@ -1,5 +1,5 @@
 ---
-title: change_tables (Transact-SQL) | Microsoft Docs
+title: CDC. change_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,18 +17,19 @@ helpviewer_keywords:
 ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4432d4c45bdecc6f5e1804427770d005adde0cd5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 52f7a58c854d7081c13cfad606f71044361a02ab
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081285"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962454"
 ---
-# <a name="cdcchangetables-transact-sql"></a>cdc.change_tables (Transact-SQL)
+# <a name="cdcchange_tables-transact-sql"></a>cdc.change_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna uma linha para cada tabela de alteração do banco de dados. Uma tabela de alteração é criada quando o Change Data Capture é habilitado em uma tabela de origem. É recomendável não consultar diretamente as tabelas do sistema. Em vez disso, execute as [sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) procedimento armazenado.  
-  |Nome da coluna|Tipo de dados|Descrição|  
+  Retorna uma linha para cada tabela de alteração do banco de dados. Uma tabela de alteração é criada quando o Change Data Capture é habilitado em uma tabela de origem. É recomendável não consultar diretamente as tabelas do sistema. Em vez disso, execute o procedimento armazenado [Sys. sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) .  
+
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID da tabela de alteração. É exclusivo em um banco de dados.|  
 |**version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Para o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], essa coluna sempre retorna 0.|  
@@ -39,12 +40,12 @@ ms.locfileid: "68081285"
 |**supports_net_changes**|**bit**|Suporte para consulta de alterações líquidas é habilitado na tabela de alterações.|  
 |**has_drop_pending**|**bit**|O processo de captura recebeu notificação que a tabela de origem foi descartada.|  
 |**role_name**|**sysname**|Nome da função de banco de dados usada como acesso aos dados de alteração.<br /><br /> NULL = uma função não é usada.|  
-|**index_name**|**sysname**|Nome do índice usado para identificar exclusivamente linhas na tabela de origem. **index_name** é o nome do índice de chave primária da tabela de origem ou o nome de um índice exclusivo especificado quando o change data capture foi habilitado na tabela de origem.<br /><br /> NULL = a tabela de origem não tinha uma chave primária quando o Change Data Capture foi habilitado e um índice exclusivo não foi especificado quando o Change Data Capture foi habilitado.<br /><br /> Observação: Se o change data capture estiver habilitado em uma tabela onde existe uma chave primária, o recurso change data capture usará o índice independentemente das alterações líquidas é habilitado ou não. Depois que o Change Data Capture estiver habilitado, nenhuma modificação será permitida na chave primária. Se não houver chave primária na tabela, você ainda poderá habilitar o Change Data Capture, mas somente com as alterações líquidas definidas como falsas. Quando o Change Data Capture estiver habilitado, você poderá criar uma chave primária. Você também poderá modificar a chave primária porque o Change Data Capture não usa a chave primária.|  
+|**index_name**|**sysname**|Nome do índice usado para identificar exclusivamente linhas na tabela de origem. **index_name** é o nome do índice de chave primária da tabela de origem ou o nome de um índice exclusivo especificado quando a captura de dados de alteração foi habilitada na tabela de origem.<br /><br /> NULL = a tabela de origem não tinha uma chave primária quando o Change Data Capture foi habilitado e um índice exclusivo não foi especificado quando o Change Data Capture foi habilitado.<br /><br /> Observação: se a captura de dados de alterações estiver habilitada em uma tabela onde existir uma chave primária, o recurso de captura de dados de alterações usará o índice, independentemente de as alterações líquidas estarem habilitadas ou não. Depois que o Change Data Capture estiver habilitado, nenhuma modificação será permitida na chave primária. Se não houver chave primária na tabela, você ainda poderá habilitar o Change Data Capture, mas somente com as alterações líquidas definidas como falsas. Quando o Change Data Capture estiver habilitado, você poderá criar uma chave primária. Você também poderá modificar a chave primária porque o Change Data Capture não usa a chave primária.|  
 |**filegroup_name**|**sysname**|Nome do grupo de arquivos no qual a tabela de alteração reside.<br /><br /> NULL = tabela de alteração no grupo de arquivos padrão do banco de dados|  
 |**create_date**|**datetime**|Data em que a tabela de origem foi habilitada.|  
-|**partition_switch**|**bit**|Indica se o **SWITCH PARTITION** comando do **ALTER TABLE** pode ser executado em uma tabela que está habilitada para change data capture. 0 indica que a alternância de partição está bloqueada. As tabelas não particionadas sempre retornam 1.|  
+|**partition_switch**|**bit**|Indica se o comando **switch Partition** de **ALTER TABLE** pode ser executado em uma tabela habilitada para a captura de dados de alterações. 0 indica que a alternância de partição está bloqueada. As tabelas não particionadas sempre retornam 1.|  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+ [sys. sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   
