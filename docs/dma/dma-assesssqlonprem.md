@@ -1,7 +1,8 @@
 ---
-title: Executar uma avaliação de migração de SQL Server (Assistente de Migração de Dados) | Microsoft Docs
+title: Executar uma avaliação de migração SQL Server
+titleSuffix: Data Migration Assistant
 description: Saiba como usar Assistente de Migração de Dados para avaliar um SQL Server local antes de migrar para outro SQL Server ou para o banco de dados SQL do Azure
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 08/08/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: e14fc009944f28adb793ef3f89bb93f716a9ac58
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: b2ec2f0f7030db2928a2a1e1c4f39ec62ed830ad
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892661"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056629"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Executar uma avaliação de migração SQL Server com Assistente de Migração de Dados
 
@@ -118,7 +119,7 @@ A duração da avaliação depende do número de bancos de dados adicionados e d
 
 2. Examine os problemas de compatibilidade em todos os níveis de compatibilidade com suporte na versão de SQL Server de destino que você selecionou na página **Opções** .
 
-Você pode examinar os problemas de compatibilidade analisando o objeto afetado, seus detalhes e potencialmente uma correção para cada problema identificado em **alterações significativas**, **alterações de comportamento**e recursos preteridos.
+Você pode examinar os problemas de compatibilidade analisando o objeto afetado, seus detalhes e potencialmente uma correção para cada problema identificado em **alterações significativas**, **alterações de comportamento**e **recursos preteridos**.
 
 ![Exibir resultados da avaliação](../dma/media/dma-assesssqlonprem/review-results.png)
 
@@ -140,7 +141,7 @@ Para o banco de dados SQL do Azure, as avaliações fornecem problemas de bloque
 
 ## <a name="assess-a-data-estate-for-target-readiness"></a>Avaliar um espaço de dados para prontidão de destino
 
-Se você quiser estender ainda mais essas avaliações para todo o espaço de dados e encontrar a preparação relativa de instâncias de SQL Server e bancos de dado para migração para o banco de dados SQL do Azure, carregue os resultados para o Hub migrações para Azure selecionando **carregar para migrações para Azure** .
+Se você quiser estender ainda mais essas avaliações para todo o espaço de dados e encontrar a preparação relativa de instâncias de SQL Server e bancos de dado para migração para o banco de dados SQL do Azure, carregue os resultados para o Hub migrações para Azure selecionando **carregar para migrações para Azure**.
 
 Isso permite que você exiba os resultados consolidados no projeto do hub de migrações para Azure.
 

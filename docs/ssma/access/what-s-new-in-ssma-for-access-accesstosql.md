@@ -2,19 +2,19 @@
 title: O que há de novo no SSMA for Access (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 09/06/2019
+ms.date: 11/13/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 608f7c8b2de7ae43bdd44e72da25f864f985efeb
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 6e49c85bec2494d6a524a17f96ae735b0ed053f8
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745433"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056168"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>O que há de novo no SSMA for Access (AccessToSQL)
 
@@ -56,7 +56,7 @@ A versão v 8.0 do SSMA para acesso é aprimorada com correções direcionadas p
 
   ![Projeto MI do BD SQL](../media/ssma-newproject-sqldbmi.png)
 
-* **Supervisor de correção**após a conversão. Saiba mais sobre isso [aqui](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
+* **Supervisor de correção**após a conversão. Saiba mais sobre isso [aqui](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733).
 
 * Seleção preliminar de banco de dados/esquema.
 
@@ -123,8 +123,7 @@ A versão v 7.3 do SSMA para Access contém as seguintes alterações:
         ![Comando Save as SSDT Project](../media/export-schema-scripts_red.png)
   * Bibliotecas que podem ser consumidas pelo SSMA para executar conversões personalizadas.
     * Agora você pode construir código que pode manipular conversões e conversões de sintaxe personalizadas que não eram previamente tratadas pelo SSMA.
-      * As instruções sobre como construir um conversor personalizado estão disponíveis nesta postagem de blog, [estendendo os recursos de conversão de assistente de migração do SQL Server](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
-      * Baixe um projeto de exemplo para conversão desta [postagem de blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
+      * As instruções sobre como construir um conversor personalizado, juntamente com um projeto de exemplo para conversão, estão disponíveis na postagem do blog que [estende os recursos de conversão do assistente de migração do SQL Server](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Extending-SQL-Server-Migration-Assistant-s-conversion/ba-p/1004181).
 
 ## <a name="ssma-v72"></a>SSMA v7.2
 
@@ -151,7 +150,7 @@ A versão de maio de 2016 do SSMA para Access contém as seguintes alterações:
 * Foi corrigido o comando "SecurePassword" para o console do SSMA.
 * Contagem fixa de objetos para carregamento inicial.
 * Carregamento de dados de tabelas fixas para guias de interface do usuário para acesso.
-* Corrigido o bug nas configurações globais. 
+* Corrigido o bug nas configurações globais.
 
 ## <a name="march-2016"></a>Março de 2016
 
@@ -204,12 +203,13 @@ A versão de julho de 2011 do SSMA para Access adiciona relatórios de erros apr
 
 A versão de abril de 2011 do SSMA para Access contém as seguintes alterações:  
   
-* Adicionada uma única instalação do "SSMA para Access", que dá suporte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 2005 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , 2008 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , "Denali" e Azure SQL.  
+* Adicionada uma única instalação de "SSMA para acesso", que dá suporte a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali" e Azure SQL.  
 * Adicionada a capacidade de conectar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali".  
 * Adicionado suporte à versão do console do SSMA para Access para compatibilidade com versões anteriores. Você pode abrir os projetos criados por versões anteriores ao SSMA v 5.0.
 * Foi adicionada a capacidade de instalar o produto SSMA v 5.0 lado a lado (SxS) com versões mais antigas do produto SSMA.  
   
-## <a name="july-2010"></a>Julho de 2010  
+## <a name="july-2010"></a>Julho de 2010
+
 A versão de julho de 2010 do SSMA para Access contém as seguintes alterações:  
   
 * Adicionado suporte para migrar para o SQL Server 2008 R2 e o SQL do Azure.
@@ -235,10 +235,10 @@ A versão de maio de 2007 do SSMA para Access contém as seguintes alterações:
 
 A versão de novembro de 2006 do SSMA para Access contém as seguintes alterações:  
   
-* Foi adicionado um novo assistente de migração de banco de dados que o orienta pela migração de um banco [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de dados individual do acesso ao.  
-* Adicionado um novo comando converter, carregar e migrar que converte bancos de dados do Access, carrega os objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]convertidos em e os migra para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todos em uma só etapa.  
+* Foi adicionado um novo assistente de migração de banco de dados que o orienta durante a migração de um único banco de dados do acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+* Adicionado um novo comando converter, carregar e migrar que converte os bancos de dados do Access, carrega os objetos convertidos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e migra-os para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tudo em uma única etapa.  
 * Migração de consulta aprimorada. A migração de consulta agora converte mais consultas SELECT em exibições. Para obter mais informações, consulte [convertendo objetos de banco de dados do Access](converting-access-database-objects-accesstosql.md).  
-* Adicionada a capacidade de editar propriedades de tabela e índice na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] guia **tabela** .  
+* Adicionada a capacidade de editar propriedades de tabela e índice na guia **tabela** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 * Novas configurações globais foram adicionadas:
   * Você pode optar por Mostrar números de linha nas janelas do editor.  
   * Você pode configurar o SSMA para solicitar a substituição de objetos duplicados ou sempre ou nunca substituir objetos duplicados durante a conversão do esquema.  

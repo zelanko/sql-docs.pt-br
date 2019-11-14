@@ -1,7 +1,6 @@
 ---
-title: Migrar logons SQL Server com Assistente de Migração de Dados | Microsoft Docs
+title: Migrar logons SQL Server com Assistente de Migração de Dados
 description: Saiba como migrar logons do SQL Server com Assistente de Migração de Dados
-ms.custom: ''
 ms.date: 10/22/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-ms.openlocfilehash: 265ab37c47956400baa759b73838c7f2e66cc83e
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 368372ab7324b11e9f7fdaa6af94d5ba2c0534ad
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72783269"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056480"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Migrar logons SQL Server com Assistente de Migração de Dados
 
@@ -34,7 +34,7 @@ Este artigo fornece uma visão geral da migração de logons SQL Server usando o
 
 - Atualmente, Assistente de Migração de Dados não dá suporte aos logons associados a um certificado de segurança autônomo (logons mapeados para o certificado), uma chave assimétrica autônoma (logons mapeados para a chave assimétrica) e logons mapeados para credenciais.
 
-- Assistente de Migração de Dados não move o logon **SA** e os princípios de servidor com nomes entre marcas de hash duplos (\# \#), que são apenas para uso interno.
+- Assistente de Migração de Dados não move o logon **SA** e os princípios de servidor com nomes entre marcas de hash duplos (\#\#), que são apenas para uso interno.
 
 - Por padrão, Assistente de Migração de Dados seleciona todos os logons qualificados para migrar. Opcionalmente, você pode selecionar logons específicos para migrar. Quando Assistente de Migração de Dados migra todos os logons qualificados, o mapeamento de usuário de logon permanece intacto nos bancos de dados que são migrados.
 

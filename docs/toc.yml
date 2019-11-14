@@ -745,8 +745,6 @@
                   href: database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md
                 - name: Failover e modos de failover
                   href: database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md
-                - name: Política de failover flexível para failover automático
-                  href: database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md
                 - name: Somente em escala de leitura
                   href: database-engine/availability-groups/windows/read-scale-availability-groups.md
                 - name: Redirecionamento de conexão de leitura/gravação
@@ -4157,14 +4155,16 @@
           href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
     - name: Notas de versão
       items:
-        - name: Compatibilidade com versões anteriores
-          href: database-engine/sql-server-database-engine-backward-compatibility.md
+        - name: Funcionalidade descontinuada no SQL Server
+          href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
+        - name: Preterido no SQL Server 2019
+          href: database-engine/deprecated-database-engine-features-in-sql-server-version-15.md
         - name: Preterido no SQL Server 2017
           href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
         - name: Preterido no SQL Server 2016
           href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
-        - name: Funcionalidade descontinuada no SQL Server
-          href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
+        - name: Alterações que causam falha no SQL Server 2019
+          href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md
         - name: Alterações que causam falha no SQL Server 2017
           href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
         - name: Alterações que causam falha no SQL Server 2016
@@ -4779,7 +4779,7 @@
         - name: Visão geral
           href: relational-databases/replication/sql-server-replication.md
           items:
-            - name: Backward Compatibility
+            - name: Compatibilidade com versões anteriores
               href: relational-databases/replication/replication-backward-compatibility.md
             - name: Recursos preteridos
               href: relational-databases/replication/deprecated-features-in-sql-server-replication.md

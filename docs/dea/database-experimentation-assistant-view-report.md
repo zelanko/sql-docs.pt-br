@@ -1,7 +1,7 @@
 ---
-title: Exibir relatórios de análise no Assistente de experimentação do banco de dados para atualizações do SQL Server
-description: Exibir relatórios de análise no Assistente de experimentação do banco de dados
-ms.custom: ''
+title: Exibir relatórios de análise para atualizações SQL Server
+description: Exibir relatórios de análise no Assistente para Experimentos de Banco de Dados
+ms.custom: seo-lt-2019
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -12,82 +12,82 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: 066297daff3393304b83b77238277f873e1c97fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fddc71bf7cdf7686154b4f9b5612cf671ca64fce
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050448"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056658"
 ---
-# <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Exibir relatórios de análise no Assistente de experimentação do banco de dados
+# <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Exibir relatórios de análise no Assistente para Experimentos de Banco de Dados
 
-Depois que você [criar seu relatório de análise](database-experimentation-assistant-create-report.md) no banco de dados experimentação Assistant (DEA), conclua as etapas descritas neste artigo para exibir o relatório e obter informações de desempenho fornecidas pelo seu A testes a / B.
+Depois de [criar o relatório de análise](database-experimentation-assistant-create-report.md) no Assistente para experimentos de banco de dados (DEA), conclua as etapas descritas neste artigo para exibir o relatório e obter informações de desempenho fornecidas pelo teste a/B.
 
-## <a name="select-a-server"></a>Selecione um servidor
+## <a name="select-a-server"></a>Selecionar um servidor
 
-No DEA, selecione o ícone de menu. No menu expandido, selecione **relatórios de análise de** ao lado do ícone de lista de verificação para abrir a janela de relatórios de análise.
+Em DEA, selecione o ícone de menu. No menu expandido, selecione **relatórios de análise** ao lado do ícone lista de verificação para abrir a janela relatórios de análise.
 
-Sob **relatórios de análise de**, insira o nome de um computador executando o SQL Server que tem um banco de dados de análise. Selecione **Conectar**. 
+Em **relatórios de análise**, insira o nome de um computador executando SQL Server que tenha um banco de dados de análise. Selecione **Conectar**. 
 
-![Conectar-se a um relatório existente](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
+![Conectar a um relatório existente](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
 
-Se você não tem quaisquer dependências, o **pré-requisitos** página solicita que você com links para instalá-los. Instale os pré-requisitos e, em seguida, selecione **tente novamente**.
+Se você não tiver nenhuma dependência, a página **pré-requisitos** solicitará os links para instalá-las. Instale os pré-requisitos e, em seguida, selecione **tentar novamente**.
 
 ![Página pré-requisitos](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
 
-## <a name="select-an-analysis-report-to-view"></a>Selecione para exibir um relatório de análise
+## <a name="select-an-analysis-report-to-view"></a>Selecione um relatório de análise para exibir
 
 Na lista de relatórios de análise, clique duas vezes em um relatório para abri-lo.
 
-![Exibir o relatório existente](./media/database-experimentation-assistant-view-report/dea-view-report-view-existing.png)
+![Exibir relatório existente](./media/database-experimentation-assistant-view-report/dea-view-report-view-existing.png)
 
-Você pode obter percepções sobre quão bem sua carga de trabalho é representada, conforme mostrado neste gráfico de exemplo:
+Você pode obter informações sobre o quão bem sua carga de trabalho é representada, conforme mostrado neste gráfico de exemplo:
 
-![Gráficos de representante da carga de trabalho](./media/database-experimentation-assistant-view-report/dea-view-report-workload-compare.png)
+![Gráficos do representante de carga de trabalho](./media/database-experimentation-assistant-view-report/dea-view-report-workload-compare.png)
 
-## <a name="view-and-understand-the-analysis-report"></a>Exibir e compreender o relatório de análise
+## <a name="view-and-understand-the-analysis-report"></a>Exibir e entender o relatório de análise
 
-Esta seção explica o relatório de análise.
+Esta seção orienta você pelo relatório de análise.
 
 ### <a name="query-categories"></a>Categorias de consulta
 
-Selecione diferentes fatias do gráfico de pizza à esquerda para mostrar apenas as consultas que se enquadram nessa categoria.
+Selecione fatias diferentes do gráfico de pizza à esquerda para mostrar apenas as consultas que se enquadram nessa categoria.
 
-![Relatório fatias da pizza](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
+![Fatias de pizza de relatório](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
 
-- **Degradado consultas**: Consultas que teve um melhor desempenho em r que em B.  
-- **Erros**: Consultas que mostram erros na instância B, mas não na instância do r.  
-- **Aprimorado de consultas**: Consultas que executou o melhor na instância de B na instância A.  
-- **Consultas indeterminadas**: Consultas que tiveram uma alteração de desempenho indeterminado.  
-- **Mesmo**: Consultas em que desempenho permaneceu igual entre as instâncias A e B.
+- **Consultas degradadas**: consultas que foram executadas melhor em um do que em B.  
+- **Erros**: consultas que mostram erros na instância B, mas não na instância A.  
+- **Consultas aprimoradas**: consultas que foram executadas melhor na instância B do que na instância A.  
+- **Consultas indeterminadas**: consultas que tiveram uma alteração de desempenho indeterminada.  
+- **Mesmo**: consultas em que o desempenho permanece o mesmo nas instâncias a e B.
 
-### <a name="individual-query-drill-down"></a>Consulta individual drill down
+### <a name="individual-query-drill-down"></a>Busca detalhada de consulta individual
 
 Você pode selecionar os links de modelo de consulta para ver informações mais detalhadas sobre consultas específicas.
 
-![Consulta drill-down](./media/database-experimentation-assistant-view-report/dea-view-report-drilldown.png)
+![Busca detalhada de consulta](./media/database-experimentation-assistant-view-report/dea-view-report-drilldown.png)
 
-Selecione uma consulta específica para abrir uma comparação de resumida para a consulta.
+Selecione uma consulta específica para abrir um resumo de comparação para a consulta.
 
 ![Resumo de comparação](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
 
-Você pode ver as instâncias A e B que a consulta foi executada em. Você também pode ver um modelo de como pode ser a consulta. Uma tabela exibe informações de consulta que são específicas para instâncias A e B.
+Você pode ver as instâncias a e B nas quais a consulta foi executada. Você também pode ver um modelo de como a consulta pode ser. Uma tabela exibe informações de consulta específicas para as instâncias A e B.
 
 ### <a name="error-queries"></a>Consultas de erro
 
-O relatório de resumo de comparação tem expansível **informações de erro** e **informações de plano de consulta** seções. As seções mostram os erros e informações para ambas as instâncias do plano.
+O relatório de Resumo de comparação tem **informações de erro** expansíveis e seções de **informações do plano de consulta** . As seções mostram os erros e as informações do plano para ambas as instâncias.
 
-Selecione a pizza para mostrar esses tipos de erros de erro (vermelho):
-- **Erros existentes**: Erros que estavam em r.
-- **Novos erros**: Erros que estavam em B.
-- **Resolver erros**: Erros que estavam em um, mas não em B.
+Selecione o erro (vermelho) pizza para mostrar estes tipos de erros:
+- **Erros existentes**: erros que estavam em um.
+- **Novos erros**: erros que estavam em B.
+- **Erros resolvidos**: erros que estavam em um, mas não em B.
 
-![Gráficos de erro](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
+![Gráficos de erros](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- Para saber como gerar um relatório de análise em um prompt de comando, consulte [executados no prompt de comando](database-experimentation-assistant-run-command-prompt.md).
+- Para saber como gerar um relatório de análise em um prompt de comando, consulte [executar no prompt de comando](database-experimentation-assistant-run-command-prompt.md).
 
-- Para obter uma introdução 19 minutos DEA e demonstração, assista ao vídeo a seguir:
+- Para uma introdução de 19 minutos ao DEA e à demonstração, Assista ao vídeo a seguir:
 
   > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

@@ -1,7 +1,6 @@
 ---
-title: Introdução ao Assistente para Experimentos de Banco de Dados para atualizações de SQL Server
-description: Introdução ao Assistente para Experimentos de Banco de Dados
-ms.custom: ''
+title: Introdução ao Assistente para Experimentos de Banco de Dados
+description: O Assistente para Experimentos de Banco de Dados (DEA) é uma solução de teste A/B para alterações em ambientes SQL Server, como atualizações ou novos índices.
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -12,14 +11,15 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: 9fe162b2a9bc0db4a2a49648eecb76c5802f57c0
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 43f8c6bff909716bdd85a798dfd4e5a7431e31af
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381770"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056708"
 ---
-# <a name="get-started-with-database-experimentation-assistant"></a>Introdução ao Assistente para Experimentos de Banco de Dados
+# <a name="get-started-with-database-experimentation-assistant-sql-server"></a>Introdução ao Assistente para Experimentos de Banco de Dados (SQL Server)
 
 O Assistente para Experimentos de Banco de Dados (DEA) é uma solução de teste A/B para alterações em ambientes SQL Server, como atualizações ou novos índices. O DEA ajuda a avaliar como a carga de trabalho no servidor de origem (no seu ambiente atual) será executada no seu novo ambiente. O DEA orienta você na execução de um teste A/B ao concluir três etapas: 
 
@@ -48,7 +48,7 @@ Para capturar um rastreamento no servidor de origem:
 
 1. Insira ou selecione as seguintes informações:
 
-   - **Nome do rastreamento**: o nome de arquivo para o novo arquivo de rastreamento que você está criando. Evite um nome de rastreamento que usa a Convenção de nomenclatura de arquivo de substituição, por exemplo, Capturename @ no__t-0NNN.
+   - **Nome do rastreamento**: o nome de arquivo para o novo arquivo de rastreamento que você está criando. Evite um nome de rastreamento que usa a Convenção de nomenclatura de arquivo de substituição, por exemplo, Capturename\_NNN.
    - **Duração**: a duração da captura.
    - **Nome da instância de SQL Server**: a instância de SQL Server da qual você deseja capturar um rastreamento.
    - **Nome do banco de dados**: o nome do banco de dados no computador que executa SQL Server que você deseja capturar um rastreamento. Se for deixado em branco, o rastreamento será capturado de todos os bancos de dados no servidor.

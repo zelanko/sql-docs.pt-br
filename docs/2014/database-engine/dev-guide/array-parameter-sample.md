@@ -1,5 +1,5 @@
 ---
-title: Exemplo parâmetro de matriz | Microsoft Docs
+title: Exemplo de parâmetro de matriz | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 24babe845d204f2938d86fc8fa70d747bbc92f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 822dc7f3d66afc44c187d199674a22f20977f535
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62753728"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055910"
 ---
 # <a name="array-parameter-sample"></a>Exemplo de parâmetro de matriz
   Às vezes, é útil para criar, atualizar ou excluir um conjunto de linhas em um banco de dados. Há várias abordagens que você pode usar para alcançar essa meta. Um delas é passar uma matriz de informações de um cliente para um procedimento armazenado de integração CLR (Common Language Runtime) no servidor usando um tipo de dados de integração CLR definido pelo usuário. A natureza desses tipos de dados definidos pelo usuário limita o tamanho dos dados fornecidos ao servidor a 8000 bytes. Portanto, essa abordagem não é satisfatória para dados grandes ou complexos. Se os dados que estão sendo manipulados forem pequenos e simples, essa abordagem poderá ser muito mais eficiente do que chamar um procedimento armazenado para cada linha. Ao passar uma matriz, a ordem dos dados é preservada para os aplicativos onde a ordem é significativa. Este exemplo contém o seguinte:  
@@ -29,9 +29,9 @@ ms.locfileid: "62753728"
 ## <a name="prerequisites"></a>Prerequisites  
  Para criar e executar este projeto, o software a seguir deve estar instalado:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://go.microsoft.com/fwlink/?LinkId=31046)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://www.microsoft.com/download/details.aspx?id=42299)Express  
   
--   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](https://go.microsoft.com/fwlink/?linkid=62796)Developer  
+-   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](https://archive.codeplex.com/?p=SqlServerSamples)Developer  
   
 -   .NET Framework SDK 2.0 ou posterior ou Microsoft Visual Studio 2005 ou posterior. Você pode obter o .NET Framework SDK gratuitamente.  
   

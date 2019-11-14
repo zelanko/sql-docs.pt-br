@@ -1,7 +1,8 @@
 ---
-title: Analisar relatórios consolidados de avaliação de Assistente de migração de dados com o Power BI (SQL Server) | Microsoft Docs
-description: Saiba como usar o Power BI para analisar os relatórios de avaliação de migração de dados que você já importou e consolidados no SQL Server
-ms.custom: ''
+title: Analisar relatórios de avaliação consolidados com o Power BI
+titleSuffix: Data Migration Assistant
+description: Saiba como usar Power BI para analisar relatórios de avaliação de migração de dados que você importou e consolidou em SQL Server
+ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,132 +15,132 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: b97ed315b8266c165a14a7f2b05912a7ae530b1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2385914fc97fa8e118d871ddac6e0cdc9d49247
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054678"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056500"
 ---
-# <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Analisar relatórios de avaliação consolidado criados pelo Assistente de migração de dados com o Power BI
+# <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Analisar relatórios de avaliação consolidados criados por Assistente de Migração de Dados com Power BI
 
-Este artigo descreve como criar um relatório do Power BI para analisar as avaliações de migração consolidado.
+Este artigo descreve como criar um relatório de Power BI para analisar avaliações de migração consolidada.
 
-Para obter informações sobre como consolidar avaliações de migração criadas pelo Assistente de migração de dados, consulte [consolidar relatórios de avaliação](../dma/dma-consolidatereports.md).
+Para obter informações sobre como consolidar avaliações de migração criadas pelo Assistente de Migração de Dados, consulte [consolidar relatórios de avaliação](../dma/dma-consolidatereports.md).
 
-## <a name="sample-power-bi-reports"></a>Exemplos de relatórios do Power BI
+## <a name="sample-power-bi-reports"></a>Relatórios de Power BI de exemplo
 
-Você pode baixar exemplos de relatórios do Power BI para avaliações consolidadas migração desta [repositório Github](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant).
+Você pode baixar exemplos de relatórios de Power BI para avaliações de migração consolidadas deste [repositório GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant).
 
 Os relatórios a seguir estão incluídos: 
 
-- [Painel de controle](#dashboard-report)
+- [Painéis](#dashboard-report)
 
-  Inclui estatísticas de instantâneo e um relatório de detalhamento.
+  Inclui estatísticas de instantâneo e um relatório de busca detalhada.
 
-- [Preparação de atualização no local](#on-premises-upgrade-readiness-report)
+- [Preparação para atualização local](#on-premises-upgrade-readiness-report)
 
-  A fonte de dados é o modo de exibição no banco de dados DMAReporting UpgradeSuccessRanking.  Este relatório mostra o sucesso de atualização de porcentagem para seus bancos de dados avaliados.
+  A fonte de dados é a exibição de UpgradeSuccessRanking no banco de dado DMAReporting.  Este relatório mostra o percentual de êxito de atualização para seus bancos de dados avaliados.
 
-- [Paridade de recursos locais](#on-premises-feature-parity-report)
+- [Paridade de recurso local](#on-premises-feature-parity-report)
 
-  Mostra as recomendações de recurso para a versão do SQL Server de destino.
+  Mostra as recomendações de recurso para a versão de SQL Server de destino.
 
-- [Preparação de atualização de banco de dados SQL do Azure](#azure-sql-db-upgrade-readiness-report)
+- [Preparação para atualização do BD SQL do Azure](#azure-sql-db-upgrade-readiness-report)
 
-  A fonte de dados é o modo de exibição no banco de dados DMAReporting UpgradeSuccessRanking.  Este relatório mostra o sucesso de atualização de porcentagem para bancos de dados avaliados para migrações de BD SQL do Azure.
+  A fonte de dados é a exibição de UpgradeSuccessRanking no banco de dado DMAReporting.  Este relatório mostra o percentual de êxito de atualização para bancos de dados avaliados para migrações de BD SQL do Azure.
 
-- [Recursos do banco de dados SQL sem suporte do Azure](#azure-sql-db-unsupported-features-report)
+- [Recursos sem suporte do banco de BD SQL do Azure](#azure-sql-db-unsupported-features-report)
 
-  Mostra os recursos em seus bancos de dados existentes que não têm suporte no banco de dados do SQL do Azure (V12).
+  Mostra recursos em seus bancos de dados existentes que não têm suporte no BD SQL do Azure (V12).
 
-Você pode modificar esses relatórios para trabalhar com seu ambiente, alterando a fonte de dados no Power BI. 
+Você pode modificar esses relatórios para trabalhar com seu ambiente alterando a fonte de dados em Power BI. 
 
-1. Selecione a seta para baixo ao lado **editar consultas**e selecione **configurações de fonte de dados**.
+1. Selecione a seta para baixo ao lado de **editar consultas**e selecione **configurações de fonte de dados**.
 
-   ![Editar menu de consultas, as configurações de fonte de dados](../dma/media/DataSourceSettings.png)
+   ![Menu editar consultas, configurações da fonte de dados](../dma/media/DataSourceSettings.png)
 
-1. Selecione **alterar fonte...** e insira os valores de servidor e banco de dados.
+1. Selecione **alterar origem...** e insira os valores do servidor e do banco de dados.
 
-   ![Alterar o código-fonte, servidor e banco de dados](../dma/media/ChangeSource.png)
+   ![Alterar origem, servidor e banco de dados](../dma/media/ChangeSource.png)
 
-1. Selecione **Okey**e, em seguida, selecione **fechar**.
+1. Selecione **OK**e, em seguida, selecione **fechar**.
 
 1. Atualize seus relatórios.
 
-   ![Atualizar relatório do Power BI](../dma/media/RefreshReport.png)
+   ![Atualizar Power BI relatório](../dma/media/RefreshReport.png)
 
-### <a name="dashboard-report"></a>Relatórios de painel
+### <a name="dashboard-report"></a>Relatório do painel
 
-![Relatórios de painel](../dma/media/DashboardReport.png)
+![Relatório do painel](../dma/media/DashboardReport.png)
 
-O painel mostra detalhes sobre todas as suas avaliações. Você pode usar as segmentações de dados no lado esquerdo para filtrar por instância ou banco de dados. Você pode usar o gráfico de barras para fazer uma busca detalhada em categorias específicas para ver onde estão os problemas.
+O painel mostra detalhes sobre todas as suas avaliações. Você pode usar as segmentações do lado esquerdo para filtrar por instância ou banco de dados. Você pode usar o gráfico de barras para fazer uma busca detalhada em categorias específicas para ver onde estão os problemas.
 
-Para fazer drill down, selecione o círculo com a seta para baixo no canto superior direito do gráfico de barras.
+Para fazer uma busca detalhada, selecione o círculo com a seta para baixo no canto superior direito do gráfico de barras.
 
 ![Busca detalhada de categoria](../dma/media/CategoryDrillDown.png)
 
-A sequência de busca detalhada é definida conforme mostrado na imagem a seguir (sob **eixo**). Para alterar a sequência, arraste colunas para a ordem desejada.
+A sequência de busca detalhada é definida conforme mostrado na imagem a seguir (em **eixo**). Para alterar a sequência, arraste as colunas para a ordem desejada.
 
-![Visualizações de eixo de gráfico de barras](../dma/media/VisualizationsAxis.png)
+![Visualizações, eixo do gráfico de barras](../dma/media/VisualizationsAxis.png)
 
-Este modo de exibição se torna ainda mais eficiente quando você filtrar pela primeira vez por um banco de dados específico e, em seguida, fazer drill down até os problemas de categoria específica. No exemplo a seguir, o banco de dados de RH é selecionado por exemplo **SQL01** para exibir todos os objetos que estão impedindo que as migrações (alterações recentes).
+Essa exibição se torna ainda mais potente quando você filtra pela primeira vez por um banco de dados específico e, em seguida, busca detalhadamente os problemas de categoria específicos. No exemplo a seguir, o banco de dados de RH é selecionado para a instância **SQL01** para exibir todos os objetos que estão impedindo migrações (alterações significativas).
 
-![Últimas alterações do banco de dados de RH](../dma/media/BreakingChanges.png)
+![Alterações recentes no banco de dados de RH](../dma/media/BreakingChanges.png)
 
-### <a name="on-premises-upgrade-readiness-report"></a>Relatório de preparação de atualização no local
+### <a name="on-premises-upgrade-readiness-report"></a>Relatório de preparação de atualização local
 
-![Relatório de preparação de atualização no local](../dma/media/OnPremisesUpgradeReadinessReport.png)
+![Relatório de preparação de atualização local](../dma/media/OnPremisesUpgradeReadinessReport.png)
 
-Este relatório mostra um instantâneo do são de seus bancos de dados como pronto para migrar para uma versão posterior do SQL Server. Os dados neste relatório vêm de dbo. UpgradeSuccessFactor\_OnPrem exibição no banco de dados DMAReporting.
+Este relatório mostra um instantâneo de como os bancos de dados são prontos para serem migrados para uma versão mais recente do SQL Server. Os dados neste relatório são provenientes do dbo. UpgradeSuccessFactor\_exibição local no banco de dados DMAReporting.
 
-Filtragem por instância e o nome do banco de dados e usando os cartões de pontuação na parte superior, você pode ver qual versão do banco de dados poderia ser migrado muito. Por exemplo, se você filtrar por banco de dados AdventureWorks 2012, você pode ver que o banco de dados está pronto para mover para todas as versões do SQL Server listadas no relatório. Isso é determinado, garantindo que não há nenhuma alteração significativa para esse nível de compatibilidade de banco de dados.
+Filtrando por instância e nome de banco de dados e usando os cartões de pontuação na parte superior, você pode ver qual versão o banco de dados também pode ser migrado. Por exemplo, se você filtrar pelo banco de dados AdventureWorks 2012, poderá ver que o banco de dados está pronto para ser movido para todas as versões de SQL Server listadas no relatório. Isso é determinado garantindo que não haja alterações significativas para esse banco de dados e nível de compatibilidade.
 
-![Atualizar o fator de sucesso para o banco de dados AdventureWorks](../dma/media/UpgradeSuccessFactor.png)
+![Fator de sucesso de atualização para o banco de dados AdventureWorks](../dma/media/UpgradeSuccessFactor.png)
 
-### <a name="on-premises-feature-parity-report"></a>Relatório de paridade de recursos locais
+### <a name="on-premises-feature-parity-report"></a>Relatório de paridade de recurso local
 
-![Relatório de paridade de recursos locais](../dma/media/OnPremisesFeatureParityReport.png)
+![Relatório de paridade de recurso local](../dma/media/OnPremisesFeatureParityReport.png)
 
-Use esse relatório para destacar os novos recursos que podem ser usados para o banco de dados na versão do SQL Server de destino.
+Use esse relatório para realçar os novos recursos que podem ser usados para o banco de dados na versão de SQL Server de destino.
 
-Quando você seleciona um recurso no gráfico de funil, os dados na parte inferior realça a quais objetos são afetados pelo recurso. No exemplo a seguir, o **banco de dados de ampliação para economia de armazenamento** está selecionado e uma tabela é listada que poderiam se beneficiar desse recurso.
+Quando você seleciona um recurso no gráfico de funil, os dados na parte inferior destacam quais objetos são afetados pelo recurso. No exemplo a seguir, o recurso **banco de dados de ampliação para economia de armazenamento** está selecionado e uma tabela listada pode se beneficiar desse recurso.
 
-![Recomendação de recurso para o Stretch Database](../dma/media/FeatureRecommend_StretchDatabase.png)
+![Recomendação de recurso para Stretch Database](../dma/media/FeatureRecommend_StretchDatabase.png)
 
-### <a name="azure-sql-db-upgrade-readiness-report"></a>Relatório de preparação para atualização de banco de dados SQL do Azure
+### <a name="azure-sql-db-upgrade-readiness-report"></a>Relatório de preparação de atualização do BD SQL do Azure
 
-![Relatório de preparação para atualização de banco de dados SQL do Azure](../dma/media/AzureSQLDBUpgradeReadinessReport.png)
+![Relatório de preparação de atualização do BD SQL do Azure](../dma/media/AzureSQLDBUpgradeReadinessReport.png)
 
-Este relatório mostra a preparação do banco de dados para migrar para o V12 de banco de dados SQL do Azure. Os dados desse relatório vêm de dbo. Modo de exibição UpgradeSuccessRanking no banco de dados DMAReporting.
+Este relatório mostra a prontidão do banco de dados para migrar para o banco de dados SQL do Azure V12. Os dados desse relatório são provenientes do dbo. UpgradeSuccessRanking exibição no banco de dados DMAReporting.
 
 ### <a name="azure-features-parity-report"></a>Relatório de paridade de recursos do Azure
 
 ![Relatório de paridade de recursos do Azure](../dma/media/AzureFeaturesParityReport.png)
 
-Use esse relatório para destacar as *recursos de nível de instância* que não são suportados pelo V12 de banco de dados SQL do Azure.
+Use este relatório para realçar os *recursos de nível de instância* que não têm suporte do banco de dados SQL do Azure V12.
 
-Quando você seleciona um recurso no gráfico de funil, os dados na parte inferior listam as instâncias e recursos de banco de dados que não têm suporte. No exemplo a seguir, esse recurso é selecionado: **Sempre na disponibilidade configuração do grupo não tem suporte no Azure SQL Database**.  
+Quando você seleciona um recurso no gráfico de funil, os dados na parte inferior listam as instâncias e os recursos de banco que não têm suporte. No exemplo a seguir, esse recurso está selecionado: a **configuração do grupo de disponibilidade AlwaysOn não tem suporte no banco de dados SQL do Azure**.  
 
-![O recurso de grupo de disponibilidade do AlwaysOn](../dma/media/Feature_AlwaysOnAvailability.png)
+![Recurso de grupo de disponibilidade Always on](../dma/media/Feature_AlwaysOnAvailability.png)
 
  
-### <a name="azure-sql-db-unsupported-features-report"></a>Relatório de recursos de banco de dados SQL sem suporte do Azure
+### <a name="azure-sql-db-unsupported-features-report"></a>Relatório de recursos sem suporte do BD SQL do Azure
 
-![Relatório de recursos de banco de dados SQL sem suporte do Azure](../dma/media/AzureSQLDBUnsupportedFeaturesReport.png)
+![Relatório de recursos sem suporte do BD SQL do Azure](../dma/media/AzureSQLDBUnsupportedFeaturesReport.png)
 
-Este relatório realça os recursos que não há suporte para um determinado **banco de dados** quando o destino é o banco de dados SQL (V12).
+Este relatório realça quais recursos não têm suporte para um determinado **banco de dados** quando o destino é o banco de dados SQL do Azure (V12).
 
-Filtrando pelo valor de nome e o recurso de banco de dados no gráfico de funil, você pode ver detalhes sobre o recurso sem suporte. Os detalhes incluem qual objeto foi afetado e recomendações para resolver o problema.
+Filtrando pelo nome do banco de dados e pelo valor do recurso no gráfico de funil, você pode ver detalhes sobre o recurso sem suporte. Os detalhes incluem qual objeto é afetado e recomendações para resolver o problema.
 
-Por exemplo, filtrar pelo banco de dados do DTC e **bancos de dados somente leitura não podem ser atualizados**, você pode ver uma lista de objetos que são afetados.
+Por exemplo, a filtragem pelo banco de dados DTC e bancos de dados **somente leitura não podem ser atualizadas**, você pode ver uma lista de objetos que são afetados.
 
-![Bancos de dados somente leitura não podem ser atualizado de problema](../dma/media/ReadOnlyDatabases.png)
+![O problema de bancos de dados somente leitura não pode ser atualizado](../dma/media/ReadOnlyDatabases.png)
 
 ## <a name="see-also"></a>Confira também
 
-[Visão geral do Assistente de migração de dados](../dma/dma-overview.md)
+[Visão geral do Assistente de Migração de Dados](../dma/dma-overview.md)
 
-[Download do Assistente de migração de dados](https://www.microsoft.com/download/details.aspx?id=53595)
+[Download de Assistente de Migração de Dados](https://www.microsoft.com/download/details.aspx?id=53595)
 
-[Download do Power BI](https://powerbi.microsoft.com/)
+[Download de Power BI](https://powerbi.microsoft.com/)

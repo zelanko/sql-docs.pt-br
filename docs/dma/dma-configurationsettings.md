@@ -1,7 +1,7 @@
 ---
-title: Definir configurações para Assistente de Migração de Dados (SQL Server) | Microsoft Docs
+title: Definir configurações para Assistente de Migração de Dados
 description: Saiba como definir as configurações para o Assistente de Migração de Dados atualizando valores no arquivo de configuração
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: e94760c23a0c8621ba1c50f34162466f21f833c0
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345242"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056537"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Definir configurações para Assistente de Migração de Dados
 
@@ -29,11 +29,11 @@ Você pode encontrar o arquivo DMA. exe. config para o aplicativo de área de tr
 
 - Aplicativo de desktop
 
-  % ProgramFiles\\%\\assistente de migração de dados da Microsoft DMA. exe. config
+  % ProgramFiles%\\Assistente de Migração de Dados da Microsoft\\DMA. exe. config
 
 - Utilitário de linha de comando
 
-  % ProgramFiles\\%\\assistente de migração de dados da Microsoft dmacmd. exe. config 
+  % ProgramFiles%\\Assistente de Migração de Dados da Microsoft\\dmacmd. exe. config 
 
 Lembre-se de salvar uma cópia do arquivo de configuração original antes de fazer qualquer modificação. Depois de fazer alterações, reinicie Assistente de Migração de Dados para que os novos valores de configuração entrem em vigor.
 
@@ -82,7 +82,7 @@ A partir do Assistente de Migração de Dados v 2.0, se você tiver esse problem
 Durante a avaliação, Assistente de Migração de Dados extrai o dacpac (aplicativo da camada de dados) para entender o esquema de banco de dado. Essa operação pode falhar com tempos limite para bancos de dados muito grandes ou se o servidor estiver sob carga. A partir da migração de dados v 1.0, você pode modificar os seguintes valores de configuração para evitar erros. 
 
 > [!NOTE]
-> A entrada &lt;dacfx&gt; inteira é comentada por padrão. Remova os comentários e, em seguida, modifique o valor conforme necessário.
+> A entrada inteira de&gt; de &lt;dacfx é comentada por padrão. Remova os comentários e, em seguida, modifique o valor conforme necessário.
 
 - commandTimeout
 
@@ -90,7 +90,7 @@ Durante a avaliação, Assistente de Migração de Dados extrai o dacpac (aplica
 
 - databaseLockTimeout
 
-   Esse parâmetro é equivalente a [definir o\_tempo limite\_de tempo](../t-sql/statements/set-lock-timeout-transact-sql.md) limite de bloqueio em *milissegundos*. (Default=5000)
+   Esse parâmetro é equivalente a [definir\_tempo limite de tempo limite\_período](../t-sql/statements/set-lock-timeout-transact-sql.md) em *milissegundos*. (Padrão = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
@@ -109,7 +109,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 </advisorGroup>
 ```
 
-## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: Limite de recomendação
+## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: limite de recomendação
 
 Com o [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database), você pode ampliar dinamicamente dados transacionais quentes e frios do Microsoft SQL Server 2016 para o Azure. Stretch Database se destina a bancos de dados transacionais com grandes quantidades de Cold Data. A recomendação de Stretch Database, sob recomendação de recurso de armazenamento, identifica primeiro as tabelas que ele acha que se beneficiarão desse recurso e identifica as alterações que precisam ser feitas para habilitar a tabela para esse recurso.
 

@@ -1,7 +1,7 @@
 ---
-title: Capturar um rastreamento no Assistente para Experimentos de Banco de Dados para atualizações de SQL Server
-description: Capturar um rastreamento no Assistente para Experimentos de Banco de Dados
-ms.custom: ''
+title: Capturar um rastreamento para atualizações de SQL Server
+description: Capturar um rastreamento no Assistente para Experimentos de Banco de Dados para atualizações de SQL Server
+ms.custom: seo-lt-2019
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: 3887daff7807d57244449d4f35d220bb47b8f10d
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 6c24632875d09125efcd043ae907e87a21847fe9
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653816"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056599"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capturar um rastreamento no Assistente para Experimentos de Banco de Dados
 
@@ -35,12 +35,12 @@ O cache de consulta no SQL Server pode afetar os resultados da avaliação. Reco
 
 1. Em **nova captura**, insira ou selecione as seguintes informações:
 
-    - **Nome da instância do SQL Server**: Insira um nome para o computador executando SQL Server no qual você deseja capturar um rastreamento de servidor.
+    - **Nome da instância do SQL Server**: Insira um nome para o computador que está executando SQL Server no qual você deseja capturar um rastreamento de servidor.
     - **Nome do banco de dados**: Insira um nome para um banco de dados no qual iniciar um rastreamento de banco de dados. Se você não especificar um banco de dados, o rastreamento será capturado em todos os bancos no servidor.
     - **Nome do arquivo de rastreamento**: Insira um nome para o arquivo de rastreamento para a captura.
-    - **Tamanho máximo do arquivo (MB)** : Selecione o tamanho da sobreposição dos arquivos. Um novo arquivo é criado conforme necessário no tamanho do arquivo selecionado. O tamanho de substituição recomendado é 200 MB.
-    - **Duração (em min)** : Selecione o período de tempo (em minutos) que você deseja que a captura de rastreamento seja executada.
-    - **Caminho para armazenar o arquivo de rastreamento de saída**: Selecione o caminho de destino para o arquivo de rastreamento. 
+    - **Tamanho máximo do arquivo (MB)** : selecione o tamanho da sobreposição dos arquivos. Um novo arquivo é criado conforme necessário no tamanho do arquivo selecionado. O tamanho de substituição recomendado é 200 MB.
+    - **Duração (em min)** : selecione o período de tempo (em minutos) que você deseja que a captura de rastreamento seja executada.
+    - **Caminho para armazenar o arquivo de rastreamento de saída**: selecione o caminho de destino para o arquivo de rastreamento. 
 
     > [!NOTE]
     > O caminho do arquivo para o arquivo de rastreamento deve estar no computador que está executando o SQL Server. Se o serviço de SQL Server não estiver definido para uma conta específica, o serviço poderá precisar de permissões de gravação para a pasta especificada para que o arquivo de rastreamento seja gravado.
@@ -125,7 +125,7 @@ Se você vir um erro ao executar uma captura de rastreamento, examine os seguint
 - Confirme se o nome do computador que executa o SQL Server é válido. Para confirmar, tente se conectar ao computador que executa o SQL Server usando o SQL Server Management Studio (SSMS).
 - Confirme se a configuração do firewall não bloqueia conexões com o computador que executa o SQL Server.
 - Confirme se o usuário tem as permissões listadas nas [perguntas frequentes sobre reprodução](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)de postagem de blog.
-- Confirme se o nome do rastreamento não segue a Convenção de substituição padrão\_(captura 1). Em vez disso, tente rastrear nomes\_como captura 1a ou Capture1.
+- Confirme se o nome do rastreamento não segue a Convenção de substituição padrão (captura\_1). Em vez disso, tente rastrear nomes como Capture\_1A ou Capture1.
 
 A seguir estão alguns erros possíveis que você pode ver e soluções para solucioná-los:
 

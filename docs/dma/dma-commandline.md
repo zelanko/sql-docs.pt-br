@@ -1,7 +1,7 @@
 ---
-title: Executar Assistente de Migração de Dados da linha de comando (SQL Server) | Microsoft Docs
+title: Executar Assistente de Migração de Dados da linha de comando
 description: Saiba como executar Assistente de Migração de Dados da linha de comando para avaliar SQL Server bancos de dados para migração
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 05/06/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: f98d96547a367dcf7853a5b0d7c14b2d79b7df63
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028711"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056622"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Executar Assistente de Migração de Dados da linha de comando
 
-Com a versão 2,1 e superior, quando você instala o assistente de migração de dados, ele também instalará o dmacmd. exe em *%\\ProgramFiles%\\assistente de migração de dados da Microsoft*. Use dmacmd. exe para avaliar seus bancos de dados em um modo autônomo e gerar o resultado para o arquivo JSON ou CSV. Esse método é especialmente útil ao avaliar vários bancos de dados ou bancos de dados enormes. 
+Com a versão 2,1 e superior, quando você instala o Assistente de Migração de Dados, ele também instalará o dmacmd. exe em *% ProgramFiles%\\Assistente de Migração de Dados da Microsoft\\* . Use dmacmd. exe para avaliar seus bancos de dados em um modo autônomo e gerar o resultado para o arquivo JSON ou CSV. Esse método é especialmente útil ao avaliar vários bancos de dados ou bancos de dados enormes. 
 
 > [!NOTE]
 > O Dmacmd. exe dá suporte apenas a avaliações de execução. No momento, não há suporte para migrações.
@@ -45,8 +45,8 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | Como usar o texto de ajuda do dmacmd. exe        | N
 |`/AssessmentName`     |   Nome do projeto de avaliação   | S
 |`/AssessmentDatabases`     | Lista delimitada por espaço de cadeias de conexão. O nome do banco de dados (catálogo inicial) diferencia maiúsculas de minúsculas. | S
-|`/AssessmentSourcePlatform`     | Plataforma de origem para a avaliação: <br>Valores com suporte para avaliação: SqlOnPrem, RdsSqlServer (padrão) <br>Valores com suporte para avaliação de preparação de destino: SqlOnPrem, RdsSqlServer (padrão), Cassandra (versão prévia)   | N
-|`/AssessmentTargetPlatform`     | Plataforma de destino para a avaliação:  <br> Valores com suporte para avaliação: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 e SqlServerWindows2017 (padrão)  <br> Valores com suporte para avaliação de preparação de destino: ManagedSqlServer (padrão), CosmosDB (versão prévia)   | N
+|`/AssessmentSourcePlatform`     | Plataforma de origem para a avaliação: <br>Valores com suporte para avaliação: SqlOnPrem, RdsSqlServer (padrão) <br>Valores com suporte para avaliação de prontidão de destino: SqlOnPrem, RdsSqlServer (padrão), Cassandra (versão prévia)   | N
+|`/AssessmentTargetPlatform`     | Plataforma de destino para a avaliação:  <br> Valores com suporte para avaliação: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 e SqlServerWindows2017 (padrão)  <br> Valores com suporte para avaliação de prontidão de destino: ManagedSqlServer (padrão), CosmosDB (versão prévia)   | N
 |`/AssessmentEvaluateFeatureParity`  | Execute regras de paridade de recurso. Se a plataforma de origem for RdsSqlServer, a avaliação de paridade de recurso não terá suporte para a plataforma de destino AzureSqlDatabase  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | Executar regras de compatibilidade  | S <br> (É necessário o AssessmentEvaluateCompatibilityIssues ou o AssessmentEvaluateRecommendations.)
 |`/AssessmentEvaluateRecommendations`     | Executar recomendações de recursos        | S <br> (É necessário o AssessmentEvaluateCompatibilityIssues ou o AssessmentEvaluateRecommendations)
@@ -260,7 +260,7 @@ Esses comandos dão suporte a recomendações para o banco de dados SQL do Azure
 |`/SkuRecommendationOfferName` | O nome da oferta (por exemplo, "MS-AZR-0003P"). Para obter mais informações, consulte a página [detalhes da oferta de Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) . | S <br> (Para obter os preços mais recentes)
 |`/SkuRecommendationRegionName` | O nome da região (por exemplo, "Westus") | S <br> (Para obter os preços mais recentes)
 |`/SkuRecommendationSubscriptionId` | A ID da assinatura. | S <br> (Para obter os preços mais recentes)
-|`/SkuRecommendationDatabasesToRecommend` | Lista de bancos de dados separados por espaços para recomendar (por exemplo, "Database1" "Database2" Database3 "). Os nomes diferenciam maiúsculas de minúsculas e devem estar entre aspas duplas. Se omitido, serão fornecidas recomendações para todos os bancos de dados. | N
+|`/SkuRecommendationDatabasesToRecommend` | Lista de bancos de dados separados por espaços para recomendar (por exemplo, "Database1" "Database2" "Database3"). Os nomes diferenciam maiúsculas de minúsculas e devem estar entre aspas duplas. Se omitido, serão fornecidas recomendações para todos os bancos de dados. | N
 |`/AzureAuthenticationTenantId` | O locatário de autenticação. | S <br> (Para obter os preços mais recentes)
 |`/AzureAuthenticationClientId` | A ID do cliente do aplicativo AAD usado para autenticação. | S <br> (Para obter os preços mais recentes)
 |`/AzureAuthenticationInteractiveAuthentication` | Defina como true para exibir a janela. | S <br> (Para obter os preços mais recentes) <br>(Escolha uma das 3 opções de autenticação-opção 1)

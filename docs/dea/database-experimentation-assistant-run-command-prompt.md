@@ -1,7 +1,7 @@
 ---
-title: Executar o Assistente de experimentação do banco de dados em um prompt de comando para atualizações do SQL Server
-description: Executar o Assistente de experimentação do banco de dados em um prompt de comando
-ms.custom: ''
+title: Executar Assistente para Experimentos de Banco de Dados em um prompt de comando
+description: Executar Assistente para Experimentos de Banco de Dados em um prompt de comando
+ms.custom: seo-lt-2019
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -12,18 +12,18 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: 475c3dc1366e69dbc164547bbf5dfc8c06515c56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c3b87eafa460cfef69666a3837f56626dab81d47
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050473"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056569"
 ---
-# <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Executar o Assistente de experimentação do banco de dados em um prompt de comando
+# <a name="run-database-experimentation-assistant-at-a-command-prompt-sql-server"></a>Executar Assistente para Experimentos de Banco de Dados em um prompt de comando (SQL Server)
 
-Este artigo descreve como usar a janela de Prompt de comando para capturar um rastreamento no banco de dados experimentação Assistant (DEA) e, em seguida, analise os resultados. 
+Este artigo descreve como usar a janela de prompt de comando para capturar um rastreamento no Assistente para Experimentos de Banco de Dados (DEA) e, em seguida, analisar os resultados. 
 
-## <a name="start-a-new-workload-capture-by-using-the-dea-command"></a>Iniciar uma nova carga de trabalho de captura usando o comando DEA
+## <a name="start-a-new-workload-capture-by-using-the-dea-command"></a>Iniciar uma nova captura de carga de trabalho usando o comando DEA
 
 Para iniciar uma nova captura de carga de trabalho, execute o seguinte comando:
 
@@ -35,38 +35,38 @@ Para iniciar uma nova captura de carga de trabalho, execute o seguinte comando:
 
 ## <a name="replay-a-workload"></a>Reproduzir uma carga de trabalho
 
-1.  Faça logon no computador do controlador de reprodução distribuída.
-2.  Converta o rastreamento de carga de trabalho que você capturou, usando o comando DEA para um arquivo IRF:
+1.  Faça logon no computador do controlador de Distributed Replay.
+2.  Converta o rastreamento de carga de trabalho que você capturou usando o comando DEA para um arquivo IRF:
 
     `DReplay preprocess -m "dreplaycontroller" -i "Path to first trace file" -d "<Folder path on controller>\IrfFolder"`
 
-3.  Inicie uma captura de rastreamento no computador de destino executando o SQL Server usando StartReplayCaptureTrace.sql.
+3.  Inicie uma captura de rastreamento no computador de destino que executa o SQL Server usando StartReplayCaptureTrace. Sql.
        
-    a.  No SQL Server Management Studio (SSMS), abra < Dea_InstallPath\>\Scripts\StartReplayCaptureTrace.sql.
+    A.  No SQL Server Management Studio (SSMS), abra < Dea_InstallPath\>\Scripts\StartReplayCaptureTrace.sql.
     
-    b.  Execute `Set @durationInMins=0` para que a captura de rastreamento não para automaticamente após um tempo especificado.
+    b.  Execute `Set @durationInMins=0` para que a captura de rastreamento não pare automaticamente após uma hora especificada.
     
-    c.  Para definir o tamanho máximo por arquivo de rastreamento, execute `Set @maxfilesize`. O tamanho recomendado é de 200 (em MB).
+    c.  Para definir o tamanho máximo do arquivo por arquivo de rastreamento, execute `Set @maxfilesize`. O tamanho recomendado é 200 (em MB).
     
-    d.  Editar `@Tracefile` para definir um nome exclusivo para seu arquivo de rastreamento.
+    d.  Edite `@Tracefile` para definir um nome exclusivo para o arquivo de rastreamento.
     
-    e.  Editar `@dbname` para especificar um nome de banco de dados se a carga de trabalho deve ser capturada somente em um banco de dados específico. Por padrão, a carga de trabalho em todo o servidor for capturada. 
-4.  Reproduzir o arquivo IRF na instância do SQL Server de destino:
+    e.  Edite `@dbname` para especificar um nome de banco de dados se a carga de trabalho deve ser capturada somente em um banco de dados específico. Por padrão, a carga de trabalho em todo o servidor é capturada. 
+4.  Reproduza o arquivo IRF em relação à instância de SQL Server de destino:
 
     `DReplay replay -m "dreplaycontroller" -d "<Folder Path on Dreplay Controller>\IrfFolder" -o -s "SQL2016Target" -w "dreplaychild1,dreplaychild2,dreplaycild3,dreplaychild4"`
         
-    a.  Para monitorar o status, abra uma janela de Prompt de comando e execute `DReplay status -f 1`.
+    A.  Para monitorar o status, abra uma janela de prompt de comando e execute `DReplay status -f 1`.
         
-    b.  Para interromper a reprodução, tal como se você ver que o % de passagem é menor que o esperado, abra uma janela de Prompt de comando e execute `DReplay cancel`.
+    b.  Para interromper a reprodução, como se você observar que a% Pass é menor do que o esperado, abra uma janela de prompt de comando e execute `DReplay cancel`.
 
-5.  Pare a captura de rastreamento na instância do SQL Server de destino.
+5.  Interrompa a captura de rastreamento na instância de SQL Server de destino.
 6.  No SSMS, abra `<Dea_InstallPath>\Scripts\StopCaptureTrace.sql`.
-7.  Editar `@Tracefile` para corresponder ao caminho do arquivo de rastreamento no computador de destino executando o SQL Server.
-8.  Execute o script no computador de destino executando o SQL Server.
+7.  Edite `@Tracefile` para corresponder ao caminho do arquivo de rastreamento no computador de destino que está executando SQL Server.
+8.  Execute o script no computador de destino que executa o SQL Server.
 
 ## <a name="analyze-traces-by-using-the-dea-command"></a>Analisar rastreamentos usando o comando DEA
 
-Para iniciar uma nova análise do rastreamento, execute o seguinte comando:
+Para iniciar uma nova análise de rastreamento, execute o seguinte comando:
 
 `Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -s <SQLserverInstance> -e <encryptconnection> -u <trustservercertificate>`
 
@@ -76,6 +76,6 @@ Para iniciar uma nova análise do rastreamento, execute o seguinte comando:
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter uma introdução 19 minutos DEA e demonstração, assista ao vídeo a seguir:
+Para uma introdução de 19 minutos ao DEA e à demonstração, Assista ao vídeo a seguir:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

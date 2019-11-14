@@ -1,7 +1,7 @@
 ---
-title: Visão geral da solução de Assistente para Experimentos de Banco de Dados para atualizações de SQL Server
+title: Visão geral do Assistente para Experimentos de Banco de Dados
 description: Visão geral do Assistente para Experimentos de Banco de Dados
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 11/05/2019
 ms.prod: sql
 ms.prod_service: dea
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 656236be66ecb2b7127e45ab1ef361f1eb7703e6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 7180656f8a4779c43f4c691f583aaaf5fcbf86d0
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637937"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056580"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Visão geral do Assistente para Experimentos de Banco de Dados
 

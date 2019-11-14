@@ -1,7 +1,7 @@
 ---
-title: Práticas recomendadas para o Assistente de migração de dados (SQL Server) | Microsoft Docs
-description: Conheça as práticas recomendadas para migrar bancos de dados do SQL Server com o Assistente de migração de dados
-ms.custom: ''
+title: Melhores práticas para o Assistente de Migração de Dados
+description: Conheça as práticas recomendadas para migrar bancos de dados SQL Server com Assistente de Migração de Dados
+ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,30 +14,30 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: 5a717c47163e03e6430272ca44d2120c7328289e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef953aa369e831e47d38db403b982919bd4bd830
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061780"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056553"
 ---
-# <a name="best-practices-for-running-data-migration-assistant"></a>Práticas recomendadas para executar o Assistente de migração de dados
-Este artigo fornece algumas informações de prática recomendadas para instalação, avaliação e migração.
+# <a name="best-practices-for-running-data-migration-assistant"></a>Práticas recomendadas para a execução de Assistente de Migração de Dados
+Este artigo fornece algumas informações de práticas recomendadas para instalação, avaliação e migração.
 
 ## <a name="installation"></a>Instalação
-Não instale e execute o Assistente de migração de dados diretamente no computador de host do SQL Server.
+Não instale e execute o Assistente de Migração de Dados diretamente na máquina host SQL Server.
 
-## <a name="assessment"></a>Avaliação
-- Execute avaliações em bancos de dados de produção durante horários de pico.
-- Executar o **problemas de compatibilidade** e **nova recomendação de recurso** avaliações separadamente para reduzir a duração de avaliação.
+## <a name="assessment"></a>Locação
+- Execute avaliações em bancos de dados de produção fora do horário de pico.
+- Execute os **problemas de compatibilidade** e as novas avaliações de **recomendações de recursos** separadamente para reduzir a duração da avaliação.
 
 ## <a name="migration"></a>Migração
 - Migre um servidor fora dos horários de pico.
 
-- Ao migrar um banco de dados, forneça um local único compartilhamento acessível pelo servidor de origem e o servidor de destino e evite uma operação de cópia, se possível. Uma operação de cópia pode introduzir um atraso de acordo com o tamanho do arquivo de backup. A operação de cópia também aumenta as chances de que a migração falhará devido a uma etapa extra. Quando um único local é fornecido, o Assistente de migração de dados ignora a operação de cópia.
+- Ao migrar um banco de dados, forneça um único local de compartilhamento acessível pelo servidor de origem e pelo servidor de destino e evite uma operação de cópia, se possível. Uma operação de cópia pode introduzir um atraso com base no tamanho do arquivo de backup. A operação de cópia também aumenta as chances de uma migração falhar devido a uma etapa extra. Quando um único local é fornecido, Assistente de Migração de Dados ignora a operação de cópia.
  
-    Além disso, certifique-se que, para fornecer as permissões corretas para a pasta compartilhada para evitar falhas de migração. As permissões corretas são especificadas na ferramenta. Se uma instância do SQL Server for executado com credenciais de serviço de rede, conceda as permissões corretas na pasta compartilhada para a conta do computador para a instância do SQL Server.
+    Além disso, certifique-se de fornecer as permissões corretas para a pasta compartilhada para evitar falhas de migração. As permissões corretas são especificadas na ferramenta. Se uma instância de SQL Server for executada em credenciais de serviço de rede, conceda as permissões corretas na pasta compartilhada à conta do computador para a instância de SQL Server.
 
-- Habilitar criptografar a conexão ao se conectar a servidores de origem e destino. Usando o SSL a criptografia aumenta a segurança dos dados transmitidos pelas redes entre o Assistente de migração de dados e a instância do SQL Server, que é útil especialmente ao migrar logons do SQL Server. Se a criptografia SSL não é usada e a rede estiver comprometida por um invasor, os logons do SQL que está sendo migrados poderia obter interceptados e/ou modificado em dinamicamente pelo invasor.
+- Habilite a conexão criptografada ao conectar-se aos servidores de origem e de destino. O uso da criptografia SSL aumenta a segurança dos dados transmitidos pelas redes entre Assistente de Migração de Dados e a instância de SQL Server, o que é benéfico especialmente ao migrar logons do SQL. Se a criptografia SSL não for usada e a rede estiver comprometida por um invasor, os logons do SQL que estão sendo migrados poderão ser interceptados e/ou modificados imediatamente pelo invasor.
 
-    No entanto, se todos os acessos envolverem uma configuração de intranet segura, a criptografia poderá não ser necessária. Habilitação da criptografia reduz o desempenho porque a sobrecarga extra que é necessária para criptografar e descriptografar os pacotes. Para obter mais informações, consulte [criptografando conexões com o SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
+    No entanto, se todos os acessos envolverem uma configuração de intranet segura, a criptografia poderá não ser necessária. A habilitação da criptografia reduz o desempenho porque a sobrecarga extra é necessária para criptografar e descriptografar pacotes. Para obter mais informações, consulte [Criptografando conexões com SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
