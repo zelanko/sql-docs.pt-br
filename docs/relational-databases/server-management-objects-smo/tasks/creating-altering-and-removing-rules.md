@@ -1,6 +1,6 @@
 ---
-title: Criando, alterando e removendo regras | Microsoft Docs
-ms.custom: ''
+title: Criando, alterando e removendo regras
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.assetid: 16981459-524e-4b39-a899-4370eaf763cc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1b96824bf3f79e2166a0198b0a56a60f8e7a3cf3
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: b2f918e611a4bc88c1a77ad7d539a9101f3f8dac
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70911132"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095524"
 ---
 # <a name="creating-altering-and-removing-rules"></a>Criando, alterando e removendo regras
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "70911132"
 ## <a name="creating-altering-and-removing-a-rule-in-visual-basic"></a>Criando, alterando e removendo uma regra no Visual Basic  
  Este exemplo de código mostra como criar uma regra, anexá-la a uma coluna, modificar propriedades do objeto <xref:Microsoft.SqlServer.Management.Smo.Rule>, desanexá-la da coluna e, em seguida, descartá-la.  
   
- A instrução **Dim** do <xref:Microsoft.SqlServer.Management.Smo.Rule> objeto é especificada com o caminho completo do assembly para evitar ambigüidade com um <xref:Microsoft.SqlServer.Management.Smo.Rule> objeto no assembly System. Data.  
+ A instrução **Dim** para o objeto <xref:Microsoft.SqlServer.Management.Smo.Rule> é especificada com o caminho completo do assembly para evitar ambigüidade com um objeto <xref:Microsoft.SqlServer.Management.Smo.Rule> no assembly System. Data.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -65,7 +65,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-visual-c"></a>Criando, alterando e removendo uma regra no Visual C#  
  Este exemplo de código mostra como criar uma regra, anexá-la a uma coluna, modificar propriedades do objeto <xref:Microsoft.SqlServer.Management.Smo.Rule>, desanexá-la da coluna e, em seguida, descartá-la.  
   
- A instrução **Dim** do <xref:Microsoft.SqlServer.Management.Smo.Rule> objeto é especificada com o caminho completo do assembly para evitar ambigüidade com um <xref:Microsoft.SqlServer.Management.Smo.Rule> objeto no assembly System. Data.  
+ A instrução **Dim** para o objeto <xref:Microsoft.SqlServer.Management.Smo.Rule> é especificada com o caminho completo do assembly para evitar ambigüidade com um objeto <xref:Microsoft.SqlServer.Management.Smo.Rule> no assembly System. Data.  
   
 ```csharp  
 {  
@@ -98,7 +98,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-powershell"></a>Criando, alterando e removendo uma regra no PowerShell  
  Este exemplo de código mostra como criar uma regra, anexá-la a uma coluna, modificar propriedades do objeto <xref:Microsoft.SqlServer.Management.Smo.Rule>, desanexá-la da coluna e, em seguida, descartá-la.  
   
- A instrução **Dim** do <xref:Microsoft.SqlServer.Management.Smo.Rule> objeto é especificada com o caminho completo do assembly para evitar ambigüidade com um <xref:Microsoft.SqlServer.Management.Smo.Rule> objeto no assembly System. Data.  
+ A instrução **Dim** para o objeto <xref:Microsoft.SqlServer.Management.Smo.Rule> é especificada com o caminho completo do assembly para evitar ambigüidade com um objeto <xref:Microsoft.SqlServer.Management.Smo.Rule> no assembly System. Data.  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

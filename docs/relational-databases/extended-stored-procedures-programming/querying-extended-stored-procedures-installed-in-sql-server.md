@@ -1,6 +1,5 @@
 ---
-title: Consultando estendidas a procedimentos armazenados no SQL Server | Microsoft Docs
-ms.custom: ''
+title: Consultando procedimentos armazenados estendidos
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +11,13 @@ helpviewer_keywords:
 ms.assetid: e02348e6-dba6-438a-98b6-684244bb034d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33c2e4d945f4db077df843bd5622d883c719fd85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 875d4f252058d442c91915eb69784507c39b2e94
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064319"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095942"
 ---
 # <a name="querying-extended-stored-procedures-installed-in-sql-server"></a>Consultando procedimentos armazenados estendidos no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,16 +25,16 @@ ms.locfileid: "68064319"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
   
- Um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usuário autenticado pode exibir definidos atualmente procedimentos armazenados estendidos e o nome da DLL que cada um pertence executando o **sp_helpextendedproc** procedimento do sistema. Por exemplo, o exemplo a seguir retorna a DLL à qual **xp_hello** pertence:  
+ Um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usuário autenticado pode exibir os procedimentos armazenados estendidos definidos no momento e o nome da DLL à qual cada um pertence executando o procedimento do sistema **sp_helpextendedproc** . Por exemplo, o exemplo a seguir retorna a DLL à qual **xp_hello** pertence:  
   
 ```  
 sp_helpextendedproc 'xp_hello'  
 ```  
   
- Se **sp_helpextendedproc** é executado sem especificar um procedimento armazenado estendido, todos os procedimentos armazenados estendidos e seus DLLs são exibidos.  
+ Se **sp_helpextendedproc** for executado sem especificar um procedimento armazenado estendido, todos os procedimentos armazenados estendidos e suas DLLs serão exibidos.  
   
 > [!IMPORTANT]  
->  Serão passadas informações de retorno apenas para os procedimentos armazenados estendidos de propriedade do usuário ou para os quais o usuário tenha permissão. Somente os membros dos **sysadmin** função de servidor fixa e a **db_owner**, **db_securityadmin**e o **db_ddladmin** banco de dados fixo as funções podem exibir informações de todos os procedimentos armazenados estendidos.  
+>  Serão passadas informações de retorno apenas para os procedimentos armazenados estendidos de propriedade do usuário ou para os quais o usuário tenha permissão. Somente os membros da função de servidor fixa **sysadmin** e o **db_owner**, **db_securityadmin**e as **db_ddladmin** funções de banco de dados fixas podem exibir informações de todos os procedimentos armazenados estendidos.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_helpextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   

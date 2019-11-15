@@ -1,7 +1,7 @@
 ---
 title: sys. databases (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 11/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 444be64a8e512011bb20ee103ad0ea459fc413ed
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c33f30366ef2d63f888684c9afedb2a949ecd589
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981850"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095864"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +34,7 @@ Contém uma linha por banco de dados na instância do [!INCLUDE[ssNoVersion](../
   
 Se um banco de dados não estiver `ONLINE`ou `AUTO_CLOSE` estiver definido como `ON` e o banco de dados estiver fechado, os valores de algumas colunas poderão ser `NULL`. Se um banco de dados for `OFFLINE`, a linha correspondente não será visível para usuários com poucos privilégios. Para ver a linha correspondente se o banco de dados for `OFFLINE`, um usuário deverá ter pelo menos a permissão de nível de servidor `ALTER ANY DATABASE` ou a permissão `CREATE DATABASE` no banco de dados `master`.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Data type|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do banco de dados, exclusivo em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou em um servidor do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**database_id**|**int**|ID do banco de dados, exclusivo em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou em um servidor do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
@@ -76,7 +76,7 @@ Se um banco de dados não estiver `ONLINE`ou `AUTO_CLOSE` estiver definido como 
 |**is_cursor_close_on_commit_on**|**bit**|1 = CURSOR_CLOSE_ON_COMMIT está ON<br /> 0 = CURSOR_CLOSE_ON_COMMIT está OFF|  
 |**is_local_cursor_default**|**bit**|1 = CURSOR_DEFAULT é local<br /> 0 = CURSOR_DEFAULT é global|  
 |**is_fulltext_enabled**|**bit**|1 = Texto completo habilitado para o banco de dados<br /> 0 = Texto completo desabilitado para o banco de dados|  
-|**is_trustworthy_on**|**bit**|1 = O banco de dados foi marcado como confiável<br /> 0 = O banco de dados não foi marcado como confiável|  
+|**is_trustworthy_on**|**bit**|1 = O banco de dados foi marcado como confiável<br /> 0 = O banco de dados não foi marcado como confiável<br /> Por padrão, bancos de dados restaurados ou anexados têm o agente desabilitado. A exceção é espelhamento de banco de dados onde o agente é habilitado após failover.|  
 |**is_db_chaining_on**|**bit**|1 = O encadeamento de propriedades de bancos de dados está ON<br /> 0 = O encadeamento de propriedades de bancos de dados está OFF|  
 |**is_parameterization_forced**|**bit**|1 = A parametrização é FORCED<br /> 0 = A parametrização é SIMPLE|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = O banco de dados tem uma chave mestra criptografada<br /> 0 = O banco de dados não tem uma chave mestra criptografada|  
@@ -93,7 +93,7 @@ Se um banco de dados não estiver `ONLINE`ou `AUTO_CLOSE` estiver definido como 
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION está ON<br /> 0 = DATE_CORRELATION_OPTIMIZATION está OFF|  
 |**is_cdc_enabled**|**bit**|1 = O banco de dados está habilitado para Change Data Capture. Para obter mais informações, consulte [Sys. &#40;SP_CDC_ENABLE_DB Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md).|  
 |**is_encrypted**|**bit**|Indica se o banco de dados está criptografado (reflete o estado definido pela última vez usando a cláusula `ALTER DATABASE SET ENCRYPTION`). Pode ser um dos seguintes valores:<br /> 1 = Criptografado<br /> 0 = Não criptografado<br /> Para obter mais informações sobre a criptografia do banco de dados, confira [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).<br /> Se o banco de dados estiver em processo de ser descriptografado, `is_encrypted` mostrará um valor de 0. Você pode ver o estado do processo de criptografia usando a exibição de gerenciamento dinâmico [Sys. dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) .|  
-|**is_honor_broker_priority_on**|**bit**|Indica se o banco de dados honra as prioridades de conversa (reflete o estado definido pela última vez usando a cláusula `ALTER DATABASE SET HONOR_BROKER_PRIORITY`). Pode ser um dos seguintes valores:<br /> 1 = HONOR_BROKER_PRIORITY está ON<br /> 0 = HONOR_BROKER_PRIORITY está OFF|  
+|**is_honor_broker_priority_on**|**bit**|Indica se o banco de dados honra as prioridades de conversa (reflete o estado definido pela última vez usando a cláusula `ALTER DATABASE SET HONOR_BROKER_PRIORITY`). Pode ser um dos seguintes valores:<br /> 1 = HONOR_BROKER_PRIORITY está ON<br /> 0 = HONOR_BROKER_PRIORITY está OFF<br /> Por padrão, bancos de dados restaurados ou anexados têm o agente desabilitado. A exceção é espelhamento de banco de dados onde o agente é habilitado após failover.|  
 |**replica_id**|**uniqueidentifier**|Identificador exclusivo da réplica de disponibilidade local do [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] do grupo de disponibilidade, se houver, no qual o banco de dados está participando.<br /> NULL = o banco de dados não faz parte de uma réplica de disponibilidade em um grupo de disponibilidade.<br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|Identificador exclusivo do banco de dados dentro de um grupo de disponibilidade Always On, se houver, no qual o banco de dados está participando. **group_database_id** é o mesmo para esse banco de dados na réplica primária e em todas as réplicas secundárias nas quais o banco de dados foi ingressado no grupo de disponibilidade.<br /> NULL = o banco de dados não faz parte de uma réplica de disponibilidade em nenhum grupo de disponibilidade.<br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|A ID do pool de recursos que é mapeado para esse banco de dados. Esse conjunto de recursos controla a memória total disponível para tabelas com otimização de memória nesse banco de dados.<br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior|  

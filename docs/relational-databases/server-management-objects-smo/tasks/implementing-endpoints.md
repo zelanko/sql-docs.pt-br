@@ -1,6 +1,6 @@
 ---
-title: Implementando pontos de extremidade | Microsoft Docs
-ms.custom: ''
+title: Implementando pontos de extremidade
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f63ee89bf2b338ec6d9145eb7ca36f04a27f8cf0
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: cb20b6bf7275dea4f44b21aa9deb0c3f0310bfea
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148446"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095192"
 ---
 # <a name="implementing-endpoints"></a>Implementando pontos de extremidade
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

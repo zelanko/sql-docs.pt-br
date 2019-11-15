@@ -1,6 +1,5 @@
 ---
-title: Características de execução de procedimentos armazenados estendidos | Microsoft Docs
-ms.custom: ''
+title: Características de execução de procedimentos armazenados estendidos
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26a5653610f0c950c2d73af603bd95ccfeda4b76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 74ecd20f28e58e133b5710d3cbd9d18b27ca7756
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064356"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095983"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Características de execução de procedimentos armazenados estendidos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68064356"
   
  A execução de um procedimento armazenado estendido tem as seguintes características:  
   
--   A função de procedimento armazenado estendido é executada no contexto de segurança de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   A função de procedimento armazenado estendido é executada no contexto de segurança do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   A função de procedimento armazenado estendido é executada no espaço de processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68064356"
   
 -  
   
- Depois que o procedimento armazenado estendido DLL é carregada, a DLL permanece carregada no espaço de endereço do servidor de até [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for interrompido ou o administrador a Descarregue explicitamente o DLL usando DBCC *DLL_name* (gratuito).  
+ Depois que a DLL de procedimento armazenado estendido é carregada, a DLL permanece carregada no espaço de endereço do servidor até que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja interrompida ou o administrador descarregue explicitamente a DLL usando DBCC *dll_name* (gratuito).  
   
  O procedimento armazenado estendido pode ser executado a partir do [!INCLUDE[tsql](../../includes/tsql-md.md)] como um procedimento armazenado usando a instrução EXECUTE:  
   
@@ -48,7 +48,7 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
- \@ *retval*  
+ *retval* \@  
  É um valor de retorno.  
   
  \@ *param1*  
@@ -61,7 +61,7 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 >  Os procedimentos armazenados estendidos oferecem aprimoramentos de desempenho e estendem a funcionalidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Porém, como a DLL do procedimento armazenado estendido e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compartilham o mesmo espaço de endereço, um procedimento problemático pode afetar adversamente o funcionamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Embora as exceções lançadas pela DLL do procedimento armazenado estendido sejam tratadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é possível danificar áreas de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como precaução de segurança, apenas os administradores do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem adicionar procedimentos armazenados estendidos ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esses procedimentos devem ser extensivamente testados antes ser instalados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Programando procedimentos armazenados estendidos](../../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)   
+ [Programação de procedimentos armazenados estendidos](../../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)   
  [Consulta de procedimentos armazenados estendidos no SQL Server](../../relational-databases/extended-stored-procedures-programming/querying-extended-stored-procedures-installed-in-sql-server.md)  
   
   
