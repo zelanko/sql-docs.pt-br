@@ -1,5 +1,5 @@
 ---
-title: Instalação com prompt de comando de componentes de R e Python
+title: Instalar por meio de um prompt de comando
 description: Execute a instalação da linha de comando do SQL Server para adicionar a linguagem R e a integração do Python a uma instância do mecanismo de banco de dados do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,13 +7,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c89d1a0fb08e61cd6d42ac66339ccc6aa5eeef5b
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 2bc231a064862c5e2a16f60d85a5166fd4765566
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594361"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727583"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Instale componentes de Python e R do aprendizado de máquina do SQL Server usando a linha de comando
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

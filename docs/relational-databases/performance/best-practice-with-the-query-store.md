@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0482182c9720054a85dfd21c264e0acde939b5b
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: d35637b9452500caac680439bd1ef09442d9ef11
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974304"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142778"
 ---
 # <a name="best-practices-with-query-store"></a>Melhores prática com o Repositório de Consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -70,7 +70,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
 
- **Intervalo de Limpeza de Dados (Minutos)** : Define a frequência em segundos para manter as estatísticas de runtime coletadas no disco. O padrão é de 900 segundos, que são 15 minutos. Considere usar um valor mais alto se a carga de trabalho não gerar um grande número de planos e consultas diferentes ou se você puder aguardar mais tempo para manter os dados antes do desligamento de um banco de dados.
+ **Intervalo de Limpeza de Dados (Minutos)** : define a frequência de manutenção das estatísticas de runtime coletadas no disco. É expresso em minutos na GUI (interface gráfica do usuário), mas em [!INCLUDE[tsql](../../includes/tsql-md.md)] é expresso em segundos. O padrão é 900 segundos, que são 15 minutos na interface gráfica do usuário. Considere usar um valor mais alto se a carga de trabalho não gerar um grande número de planos e consultas diferentes ou se você puder aguardar mais tempo para manter os dados antes do desligamento de um banco de dados.
  
 > [!NOTE]
 > O uso do sinalizador de rastreamento 7745 impede que os dados do Repositório de Consultas sejam gravados em disco em caso de um failover ou comando de desligamento. Para obter mais informações, confira a seção [Usar sinalizadores de rastreamento em servidores críticos para melhorar a recuperação de desastre](#Recovery).
@@ -82,14 +82,14 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
 ```  
 
- **Intervalo de Coleta de Estatísticas**: Define o nível de granularidade para a estatística de runtime coletada. O padrão é de 60 minutos. Considere usar um valor menor se você precisar de granularidade mais fina ou menos tempo para detectar e atenuar problemas. Lembre-se de que o valor afeta diretamente o tamanho dos dados do Repositório de Consultas. Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] para definir um valor diferente para o **Intervalo de Coleta de Estatísticas**:  
+ **Intervalo de Coleta de Estatísticas**: define o nível de granularidade para a estatística de runtime coletada, expressa em minutos. O padrão é de 60 minutos. Considere usar um valor menor se você precisar de granularidade mais fina ou menos tempo para detectar e atenuar problemas. Lembre-se de que o valor afeta diretamente o tamanho dos dados do Repositório de Consultas. Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] para definir um valor diferente para o **Intervalo de Coleta de Estatísticas**:  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB] 
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
- **Limite de Consulta Obsoleta (Dias):** política de limpeza com base em tempo que controla o período de retenção de estatísticas de tempo de execução persistentes e de consultas inativas. Por padrão, o Repositório de Consultas está configurado para manter os dados por 30 dias, o que pode ser longo demais para seu cenário.  
+ **Limite de Consulta Obsoleta (Dias):** política de limpeza baseada em tempo que controla o período de retenção de estatísticas de runtime persistidas e de consultas inativas, expressa em dias. Por padrão, o Repositório de Consultas está configurado para manter os dados por 30 dias, o que pode ser longo demais para seu cenário.  
   
  Evite manter dados históricos que você não planeja usar. Essa prática reduz as alterações ao status somente leitura. O tamanho dos dados do Repositório de Consultas e o tempo para detectar e reduzir o problema serão mais previsíveis. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou o script a seguir para configurar a política de limpeza com base em tempo:  
   
@@ -180,7 +180,7 @@ SET QUERY_STORE = ON
 ## <a name="start-with-query-performance-troubleshooting"></a>Começar a solução de problemas de desempenho de consulta  
  O fluxo de trabalho para solucionar problemas com o Repositório de Consultas é simples, como mostra o diagrama a seguir:  
   
- ![Solucionar problemas do Repositório de Consultas](../../relational-databases/performance/media/query-store-troubleshooting.png "query-store-troubleshooting")  
+ ![Solução de problemas do Repositório de Consultas](../../relational-databases/performance/media/query-store-troubleshooting.png "query-store-troubleshooting")  
   
  Habilite o Repositório de Consultas usando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] conforme descrito na seção anterior ou execute a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir:  
   
@@ -220,7 +220,7 @@ Leva algum tempo até o Repositório de Consultas coletar o conjunto de dados qu
   
 -   Se a consulta foi executada com vários planos e o último plano é consideravelmente pior que o anterior, é possível usar o mecanismo de imposição de plano para forçá-lo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta forçar o plano no otimizador. Se a imposição do plano falhar, um XEvent será acionado e o otimizador será instruído a otimizar normalmente.
   
-       ![Plano para forçar o Repositório de Consultas](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
+       ![Forçar plano do Repositório de Consultas](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
        > [!NOTE]
        > O gráfico anterior pode conter formas diferentes para planos de consulta específicos, com os seguintes significados para cada status possível:<br />  
@@ -235,7 +235,7 @@ Leva algum tempo até o Repositório de Consultas coletar o conjunto de dados qu
 
 -   Você pode concluir falta um índice na consulta para a execução ideal. Essas informações são expostas no plano de execução de consulta. Crie o índice ausente e verifique o desempenho da consulta usando o Repositório de Consultas.  
   
-       ![Plano de exibição do Repositório de Consultas](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")
+       ![Mostrar plano do Repositório de Consultas](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")
   
  Se você executar sua carga de trabalho em [!INCLUDE[ssSDS](../../includes/sssds-md.md)], inscreva-se no Index Advisor do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] para receber automaticamente as recomendações de índice.
   

@@ -1,6 +1,7 @@
 ---
-title: Novidades
-description: Comunicados sobre os novos recursos para cada versão do SQL Server 2016 R Services, do R Server e dos Serviços de Machine Learning do SQL Server.
+title: Novidades dos Serviços de Machine Learning do SQL Server
+titleSuffix: ''
+description: Comunicados de novos recursos para cada versão do Serviços de Machine Learning do SQL Server e Serviço de R do SQL Server 2016.
 ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
@@ -9,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 16c70e23df018a3bf403280fd6deb48b880c31ce
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3e21dfe719f40165e0e68e7bf6242c526c298eb4
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532568"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73707438"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novidades dos Serviços de Machine Learning do SQL Server
 

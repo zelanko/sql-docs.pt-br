@@ -1,22 +1,22 @@
 ---
-title: O que são Extensões de Linguagem?
-titleSuffix: SQL Server Language Extensions
-description: Saiba mais sobre as extensões de linguagem do SQL Server 2019 (versão prévia) que executam scripts externos no SQL Server.
+title: O que são Extensões de Linguagem do SQL Server?
+titleSuffix: ''
+description: As Extensões de Linguagem é um recurso do SQL Server usado para executar código externo. No SQL Server 2019, há suporte para Java. Os dados relacionais podem ser usados no código externo usando a estrutura de extensibilidade.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 15ff0339a487ecebdca23057bfce9053b5efca2e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 57755782f2907eff25db942600cebc63f09598e0
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589020"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658825"
 ---
-# <a name="what-is-sql-server-language-extensions-preview"></a>O que são Extensões de Linguagem do SQL Server (versão prévia)?
+# <a name="what-is-sql-server-language-extensions"></a>O que são Extensões de Linguagem do SQL Server?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 As Extensões de Linguagem é um recurso do SQL Server usado para executar código externo. Os dados relacionais podem ser usados no código externo usando a [estrutura de extensibilidade](concepts/extensibility-framework.md).

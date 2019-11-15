@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b0374e6e6fe620c4f43e26aa9bd4494746da36e4
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1f5627a5e35039420725795f53a7fc63d5582ab9
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532598"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706853"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Problemas conhecidos nos Serviços de Machine Learning do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Defina a variável de ambiente `'MKL_CBWR'=AUTO` para garantir a reprodutibilida
 3. Reinicie o R_SERVER. No SQL Server, você pode reiniciar o serviço SQL Server Launchpad.
 
 > [!NOTE]
-> Se você estiver executando o SQL Server 2019 Preview no Linux, edite ou crie o *.bash_profile* no diretório base do usuário, adicionando a linha `export MKL_CBWR="AUTO"`. Execute esse arquivo digitando `source .bash_profile` em um prompt de comando de Bash. Reinicie o R_SERVER digitando `Sys.getenv()` no prompt de comando do R.
+> Caso você esteja executando o SQL Server 2019 no Linux, edite ou crie o *.bash_profile* no diretório base do usuário adicionando a linha `export MKL_CBWR="AUTO"`. Execute esse arquivo digitando `source .bash_profile` em um prompt de comando de Bash. Reinicie o R_SERVER digitando `Sys.getenv()` no prompt de comando do R.
 
 ### <a name="2-r-script-runtime-error-sql-server-2017-cu5-cu7-regression"></a>2. Erro de runtime de script R (regressão CU5-CU7 do SQL Server 2017)
 

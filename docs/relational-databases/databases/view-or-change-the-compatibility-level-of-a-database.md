@@ -15,12 +15,12 @@ ms.assetid: 579867ec-57cb-4cb8-af35-9688c1e9e15d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8a613f8842cc6f067261e941bab39858d1727bb
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e86955f75593c27e18de12bbcaf5bb6b7cf88b6a
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909855"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843537"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>Exibir ou alterar o nível de compatibilidade de um banco de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "72909855"
   
      O nível de compatibilidade atual é exibido na caixa de listagem **Nível de compatibilidade** .  
   
-5.  Para alterar o nível de compatibilidade, selecione uma opção diferente da lista. As opções são **SQL Server 2008 (100)** , **SQL Server 2012 (110)** , **SQL Server 2014 (120)** , **SQL Server 2016 (130)** e **SQL Server 2017 (140)** .  
+5.  Para alterar o nível de compatibilidade, selecione uma opção diferente da lista. As opções disponíveis para as diferentes versões do [!INCLUDE[ssde_md](../../includes/ssde_md.md)] estão listadas na página [Nível de compatibilidade de ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats).  
 
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

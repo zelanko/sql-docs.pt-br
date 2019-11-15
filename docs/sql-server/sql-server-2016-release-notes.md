@@ -13,12 +13,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 51ee5e3eb1298c2f33aeecdb104be14245107e7c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 741aec40bf972ae6caedfc0301e7a3dcd080d593
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874918"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632915"
 ---
 # <a name="sql-server-2016-release-notes"></a>Notas de Versão do SQL Server 2016.
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "70874918"
 
 ![info_tip](../sql-server/media/info-tip.png) O SQL Server 2016 SP2 inclui todas as atualizações cumulativas liberadas após SP1 2016, até e incluindo CU8.
 
-- [![Centro de Download da Microsoft](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?linkid=869608) [Baixar SQL Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
+- [![Centro de Download da Microsoft](../includes/media/download2.png)](https://www.microsoft.com/download/details.aspx?id=56836) [Baixar SQL Server 2016 Service Pack 2 (SP2)](https://www.microsoft.com/download/details.aspx?id=56836)
 - Para obter uma lista completa de atualizações, veja [informações de versão do SQL Server 2016 Service Pack 2](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-2-release-information)
 
 A instalação do SQL Server 2016 SP2 pode exigir a reinicialização após a instalação. Como melhor prática, é recomendável planejar e executar uma reinicialização após a instalação do SQL Server 2016 SP2.
@@ -72,9 +72,9 @@ Melhorias de compatibilidade e diagnóstico no SQL Server 2016 SP2.
 |Mostrar as últimas informações conhecidas e bem-sucedidas de DBCC CHECKDB    |   Uma nova opção de banco de dados foi adicionada para retornar programaticamente a data da última execução bem-sucedida de DBCC CHECKDB. Agora, os usuários podem consultar DATABASEPROPERTYEX([database], 'lastgoodcheckdbtime') para obter um valor único que representa a data/hora da última execução bem-sucedida de DBCC CHECKDB no banco de dados especificado.  |       |
 |Melhorias na Execução XML| [Informações sobre quais estatísticas foram usadas para compilar o plano de consulta](https://blogs.msdn.microsoft.com/sql_server_team/sql-server-2017-showplan-enhancements/), incluindo o nome da estatística, o número de alterações, a percentagem de amostragem e quando a estatística foi atualizada pela última vez. Adicionado a modelos CE 120 e versões posteriores. Por exemplo, não é compatível com CE 70.| |
 | |Um novo atributo [EstimateRowsWithoutRowgoal](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-row-goal/) será adicionado à Execução XML se o Otimizador de Consulta usar a lógica "meta de linhas".| |
-| |Novos atributos de tempo de execução [UdfCpuTime e UdfElapsedTime](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-udfs/) na execução real do XML, para controlar o tempo gasto em UDFs (Funções Definidas pelo Usuário) escalares.| |
+| |Novos atributos de runtime [UdfCpuTime e UdfElapsedTime](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-udfs/) na execução real do XML, para controlar o tempo gasto em UDFs (Funções Definidas pelo Usuário) escalares.| |
 | |Adicionar o tipo de espera CXPACKET à [lista das 10 principais esperas possíveis](https://blogs.msdn.microsoft.com/sql_server_team/new-showplan-enhancements/) na execução real do XML – a execução paralela da consulta com frequência envolve esperas CXPACKET, mas esse tipo de espera não foi relatado na execução real do XML. |       |
-| |O aviso de despejo do tempo de execução foi estendido para relatar o número de páginas escritas para TempDB durante o despejo de um operador de paralelismo.| |
+| |O aviso de despejo do runtime foi estendido para relatar o número de páginas escritas para TempDB durante o despejo de um operador de paralelismo.| |
 |Compatibilidade da replicação com bancos de dados com ordenações de caracteres Suplementares  |   Agora, a replicação é compatível com bancos de dados que usam ordenações de caracteres Suplementares. |       |
 |Manipulação adequada do Service Broker com o failover do grupo de disponibilidade |   Na implementação atual, quando o Service Broker é habilitado em um banco de dados do grupo de disponibilidade, durante um failover do grupo de disponibilidade, todas as conexões do Service Broker originadas na Réplica Primária são deixadas abertas. A melhoria fecha todas essas conexões abertas durante um failover do grupo de disponibilidade. |       |
 |Melhoria na solução de problemas das esperas de paralelismo |   com a adição de uma nova espera [CXCONSUMER](https://blogs.msdn.microsoft.com/sql_server_team/making-parallelism-waits-actionable/).   |       |
@@ -142,7 +142,7 @@ A instalação do SQL Server 2016 SP1 pode exigir a reinicialização após a in
 -   [Documentação do produto (GA)](#bkmk_ga_docs)
 
 ### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA)
-**Problema e impacto ao cliente:** a Microsoft identificou um problema que afeta os binários do Tempo de Execução Microsoft VC++ 2013 que são instalados como um pré-requisito pelo SQL Server 2016. Uma atualização está disponível para correção deste problema. Se essa atualização para os binários do Tempo de Execução de VC não for instalada, o SQL Server 2016 poderá apresentar problemas de estabilidade em determinados cenários. Antes de instalar o SQL Server 2016, verifique se o computador precisa do patch descrito em [KB 3164398](https://support.microsoft.com/kb/3164398). O patch também é incluído no [CU1 (Pacote de Atualização Cumulativa 1) para o SQL Server 2016 RTM](https://www.microsoft.com/download/details.aspx?id=53338).
+**Problema e impacto ao cliente:** a Microsoft identificou um problema que afeta os binários do Runtime Microsoft VC++ 2013 que são instalados como um pré-requisito pelo SQL Server 2016. Uma atualização está disponível para correção deste problema. Se essa atualização para os binários do Runtime de VC não for instalada, o SQL Server 2016 poderá apresentar problemas de estabilidade em determinados cenários. Antes de instalar o SQL Server 2016, verifique se o computador precisa do patch descrito em [KB 3164398](https://support.microsoft.com/kb/3164398). O patch também é incluído no [CU1 (Pacote de Atualização Cumulativa 1) para o SQL Server 2016 RTM](https://www.microsoft.com/download/details.aspx?id=53338).
 
 **Resolução:** use uma das seguintes soluções:
 
@@ -196,7 +196,7 @@ Além disso, considere as opções de limpeza manual para impedir que o Reposit�
 
 ```ALTER DATABASE <database name> SET QUERY_STORE CLEAR```
 
-Além disso, execute os seguintes procedimentos armazenados do Repositório de Consultas periodicamente para limpar estatísticas de tempo de execução, consultas ou planos específicos:
+Além disso, execute os seguintes procedimentos armazenados do Repositório de Consultas periodicamente para limpar estatísticas de runtime, consultas ou planos específicos:
 
 - `sp_query_store_reset_exec_stats`
 
@@ -210,7 +210,7 @@ Além disso, execute os seguintes procedimentos armazenados do Repositório de C
 
  **Solução alternativa:** use uma das seguintes soluções alternativas:
 
- ![Gerenciar configurações da ajuda do SQL Server](../sql-server/media/docs-sql2016-managehelpsettings.png "Gerenciar configurações da ajuda do SQL Server")
+ ![Gerenciar Configurações de Ajuda para o SQL Server](../sql-server/media/docs-sql2016-managehelpsettings.png "Gerenciar Configurações de Ajuda para o SQL Server")
 
 -   Use a opção **Escolher ajuda online ou local** e configure a Ajuda para "Eu quero usar a ajuda online".
 

@@ -2,20 +2,20 @@
 title: Extensão de Virtualização de Dados
 titleSuffix: Azure Data Studio
 description: Extensão Virtualização de Dados para o Azure Data Studio
-ms.custom: seodec18
-ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
-ms.openlocfilehash: cb9fe5ddb9e6b84769c78b63cacffa50d270ecf6
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.custom: seodec18
+ms.date: 11/04/2019
+ms.openlocfilehash: 98a93895b8f552bf7506880a612ab2ae68c48afb
+ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532553"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801126"
 ---
 # <a name="data-virtualization-extension-for-azure-data-studio"></a>Extensão Virtualização de Dados para o Azure Data Studio
 
@@ -70,13 +70,13 @@ Para instalar a extensão Virtualização de Dados, abra o Azure Data Studio e b
 
 ## <a name="release-notes-v0102"></a>Notas sobre a versão (v0.10.2)
 ### <a name="sql-server-2019-support"></a>Suporte ao SQL Server 2019
-O suporte para o SQL Server 2019 foi atualizado. Após se conectar a uma instância do Cluster de Big Data do SQL Server, uma nova pasta _Serviços de Dados_ é exibida na árvore do Explorer. Essa pasta tem pontos de inicialização para ações como abrir um novo notebook para a conexão, enviar trabalhos do Spark e trabalhar com o HDFS. Para algumas ações como _Criar Dados Externos_ em um arquivo/pasta do HDFS, a extensão de _Versão Prévia do SQL Server 2019_ precisa estar instalada.
+O suporte para o SQL Server 2019 foi atualizado. Após se conectar a uma instância do Cluster de Big Data do SQL Server, uma nova pasta _Serviços de Dados_ é exibida na árvore do Explorer. Essa pasta tem pontos de inicialização para ações como abrir um novo notebook para a conexão, enviar trabalhos do Spark e trabalhar com o HDFS. Para algumas ações como _Criar Dados Externos_ em um arquivo/pasta do HDFS, a extensão do _SQL Server 2019_ precisa estar instalada.
 
 ### <a name="notebook-support"></a>Suporte para Notebook
 Fizemos atualizações significativas na interface do usuário do Notebook nesta versão. Nosso foco foi facilitar a leitura de Notebooks compartilhados com você. Isso significava remover todas as caixas de contorno em torno das células, a menos que estivessem selecionadas ou focalizadas, adicionar suporte de foco para facilitar ações no nível da célula sem precisar selecionar a célula e esclarecer o estado da execução adicionando uma contagem de execução, um botão animado _parar execução_, entre outros. Também adicionamos atalhos de teclado para _Novo Notebook_ (`Ctrl+Shift+N`), _Executar Célula_ (`F5`), _Nova Célula de Código_ (`Ctrl+Shift+C`), _Nova Célula de Texto_ (`Ctrl+Shift+T`). Futuramente, faremos com que todas as ações importantes sejam iniciadas por atalho, sendo assim, diga-nos de quais ações você sente falta!
 
 Outras melhorias e correções incluem:
-* Agora, a extensão de _Versão Prévia do SQL Server 2019_ solicita que os usuários escolham um diretório de instalação para as dependências de Python. Além disso, ela não inclui mais o Python no `.vsix file`, reduzindo o tamanho geral da extensão. As dependências do Python dão suporte a kernels Spark e Python3.
+* Agora, a extensão do _SQL Server 2019_ solicita que os usuários escolham um diretório de instalação para as dependências de Python. Além disso, ela não inclui mais o Python no `.vsix file`, reduzindo o tamanho geral da extensão. As dependências do Python dão suporte a kernels Spark e Python3.
 * Foi adicionado suporte para iniciar um novo notebook na linha de comando. A inicialização com os argumentos `--command=notebook.command.new --server=myservername` deve abrir um novo notebook e conectar a este servidor.
 * Correções de desempenho para notebooks com código de tamanho grande nas células. Se as células de código tiverem mais de 250 linhas, uma barra de rolagem será adicionada.
 * Melhoria do suporte para arquivos .ipynb. Agora, a versão 3 ou superior tem suporte. Observe que, ao salvar os arquivos, será feita a atualização para a versão 4 ou superior.

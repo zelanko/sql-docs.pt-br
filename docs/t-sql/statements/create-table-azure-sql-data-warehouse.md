@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b9c22a366ad6757821783ba2cf077d251193d55
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961787"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729869"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (SQL Data Warehouse do Azure)
 
@@ -29,7 +29,7 @@ Para entender as tabelas e como usá-las, confira [Tabelas no SQL Data Warehouse
 > [!NOTE]
 >  as discussões sobre o SQL Data Warehouse neste artigo aplicam-se ao SQL Data Warehouse e ao Parallel Data Warehouse, a menos que haja alguma indicação contrária.
 
- ![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe do Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 <a name="Syntax"></a>
 
@@ -162,11 +162,15 @@ Cria uma ou mais partições da tabela. Essas partições são fatias horizontai
 
  Confira [Criar uma tabela particionada](#PartitionedTable) na seção de exemplos.
 
-### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>Opção de índice columnstore clusterizado ordenado (versão prévia do SQL Data Warehouse do Azure)
+### <a name="ordered-clustered-columnstore-index-option"></a>Opção de índice columnstore clusterizado ordenado 
 
-O CCI (índice columnstore clusterizado) é o padrão para a criação de tabelas no SQL Data Warehouse do Azure.  Os dados em CCI não são classificados antes de serem compactados em segmentos columnstore.  Ao criar um CCI com ORDER, os dados são classificados antes de serem adicionados a segmentos de índice e o desempenho da consulta pode ser melhorado. Confira [Ajuste de desempenho com índice columnstore clusterizado ordenado](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci) para obter detalhes.  
+O CCI (índice columnstore clusterizado) é o padrão para a criação de tabelas no SQL Data Warehouse do Azure.  Os dados em CCI não são classificados antes de serem compactados em segmentos columnstore.  Ao criar um CCI com ORDER, os dados são classificados antes de serem adicionados a segmentos de índice e o desempenho da consulta pode ser melhorado. Veja [Ajuste de desempenho com índice columnstore clusterizado ordenado](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest) para obter detalhes.  
 
-Os usuários podem consultar a coluna column_store_order_ordinal em sys.index_columns para obter as colunas nas quais uma tabela é ordenada e qual é a sequência na ordenação.  
+Um CCI pode ser criado em colunas de qualquer tipo de dados com suporte no SQL Data Warehouse do Azure, exceto por colunas de cadeia de caracteres.  
+
+Os usuários podem consultar a coluna **column_store_order_ordinal** em **sys.index_columns** para obter as colunas nas quais uma tabela é ordenada e qual é a sequência na ordenação.  
+
+Confira [Ajuste de desempenho com índice columnstore clusterizado ordenado](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci) para obter detalhes.   
 
 ### <a name="DataTypes"></a> Tipo de dados
 

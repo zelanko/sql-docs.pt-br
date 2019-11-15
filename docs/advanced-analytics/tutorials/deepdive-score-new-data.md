@@ -1,26 +1,27 @@
 ---
-title: Pontuar novos dados usando RevoScaleR e rxPredict
-description: Tutorial explicativo sobre como pontuar dados usando a linguagem R em SQL Server.
+title: Pontuação de dados usando RevoScaleR
+description: Tutorial passo a passo sobre como pontuar dados usando a linguagem R no SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ff3782fb760e4d3dd1059103bc835b94d9c7581f
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: bf4198e4f8baa0c572f5da3d2b4cf457e695a4b7
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714830"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727178"
 ---
-# <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>Pontuar novos dados (tutorial de SQL Server e RevoScaleR)
+# <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>Pontuar dados novos (tutorial do SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Esta lição faz parte do [tutorial do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com SQL Server.
+Esta lição faz parte do [tutorial de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
-Nesta etapa, você usa o modelo de regressão logística que você criou na lição anterior para pontuar outro conjunto de dados que usa as mesmas variáveis independentes que as entradas.
+Nesta etapa, você usa o modelo de regressão logística que criou na lição anterior para pontuar outro conjunto de dados que usa as mesmas variáveis independentes como entradas.
 
 > [!div class="checklist"]
 > * Pontuar novos dados
@@ -41,7 +42,7 @@ Nesta etapa, você usa o modelo de regressão logística que você criou na liç
         rowsPerRead = sqlRowsPerRead)
     ```
   
-2. Para certificar-se de que você não perca os resultados, crie um novo objeto de fonte de dados. Em seguida, use o novo objeto Data Source para popular uma nova tabela no banco de dados RevoDeepDive.
+2. Para não perder os resultados, crie um novo objeto de fonte de dados. Em seguida, use o novo objeto de fonte de dados para popular uma nova tabela no banco de dados RevoDeepDive.
   
     ```R
     sqlServerOutDS <- RxSqlServerData(table = "ccScoreOutput",
@@ -50,13 +51,13 @@ Nesta etapa, você usa o modelo de regressão logística que você criou na liç
     ```
     Neste ponto, a tabela não foi criada. Essa instrução define apenas um contêiner para os dados.
      
-3. Verifique o contexto de computação atual usando **rxGetComputeContext ()** e defina o contexto de computação para o servidor, se necessário.
+3. Verifique o contexto de computação atual usando **rxGetComputeContext()** e defina o contexto de computação como o servidor, se necessário.
   
     ```R
     rxSetComputeContext(sqlCompute)
     ```
   
-4. Como precaução, verifique a existência da tabela de saída. Se já existir um com o mesmo nome, você receberá um erro ao tentar gravar a nova tabela.
+4. Como precaução, verifique a existência da tabela de saída. Se já existir uma com o mesmo nome, você obterá um erro ao tentar gravar na nova tabela.
   
     Para fazer isso, faça uma chamada para as funções [rxSqlServerTableExists](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) e [rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable), passando o nome da tabela como entrada.
   
@@ -64,8 +65,8 @@ Nesta etapa, você usa o modelo de regressão logística que você criou na liç
     if (rxSqlServerTableExists("ccScoreOutput"))     rxSqlServerDropTable("ccScoreOutput")
     ```
   
-    + **rxSqlServerTableExists** consulta o driver ODBC e retorna true se a tabela existir; caso contrário, false.
-    + **rxSqlServerDropTable** executa a DDL e retorna true se a tabela for descartada com êxito; caso contrário, retornará false.
+    + **rxSqlServerTableExists** consulta o driver ODBC e retorna TRUE se a tabela existir ou FALSE, caso contrário.
+    + **rxSqlServerDropTable** executa a DDL e retornará TRUE se a tabela for removida com êxito; se não, retornará FALSE.
 
 5. Execute [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) para criar as pontuações e salvá-las na nova tabela definida na fonte de dados sqlScoreDS.
   
@@ -79,13 +80,13 @@ Nesta etapa, você usa o modelo de regressão logística que você criou na liç
         overwrite = TRUE)
     ```
   
-    A função **rxPredict** é outra função que dá suporte à execução em contextos de computação remota. Você pode usar a função **rxPredict** para criar pontuações de modelos com base em [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod), [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)ou [rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm).
+    A função **rxPredict** é outra função que dá suporte à execução em contextos de computação remota. Você pode usar a função **rxPredict** para criar pontuações de modelos baseados em [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod), [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) ou [rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm).
   
     - O parâmetro *writeModelVars* é definido como **TRUE** aqui. Isso significa que as variáveis usadas para a estimativa serão incluídas na nova tabela.
   
-    - O parâmetro *predVarNames* especifica a variável em que os resultados serão armazenados. Aqui, você está passando uma nova variável `ccFraudLogitScore`,.
+    - O parâmetro *predVarNames* especifica a variável em que os resultados serão armazenados. Aqui você está passando uma nova variável, a `ccFraudLogitScore`.
   
-    - O parâmetro *type* de **rxPredict** define como você quer que as previsões sejam calculadas. Especifique a palavra-chave **Response** para gerar pontuações com base na escala da variável de resposta. Ou use o **link** de palavra-chave para gerar pontuações com base na função de link subjacente. nesse caso, as previsões são criadas usando uma escala logística.
+    - O parâmetro *type* de **rxPredict** define como você quer que as previsões sejam calculadas. Especifique a palavra-chave **response** para gerar pontuações com base na escala da variável de resposta. Ou use a palavra-chave **link** para gerar pontuações com base na função de link subjacente; nesse caso, as previsões serão criadas usando uma escala logística.
 
 6. Após alguns instantes, você pode atualizar a lista de tabelas no Management Studio para ver a nova tabela e seus dados.
 
@@ -104,9 +105,9 @@ Nesta etapa, você usa o modelo de regressão logística que você criou na liç
 
 ## <a name="display-scores-in-a-histogram"></a>Exibir pontuações em um histograma
 
-Depois que a nova tabela tiver sido criada, calcule e exiba um histograma das pontuações previstas 10.000. A computação será mais rápida se você especificar os valores baixos e altos, portanto, obtenha-os do banco de dados e adicione-os aos seus próprios seus dados de trabalho.
+Depois que a nova tabela foi criada, calcule e exiba um histograma das 10 mil pontuações previstas. Os cálculos serão mais rápidos se você especificar valores altos e baixos, portanto obtenha-os no banco de dados e os adicione aos dados de trabalho.
 
-1. Crie uma nova fonte de dados, sqlMinMax, que consulta o banco de dado para obter os valores baixos e altos.
+1. Crie uma nova fonte de dados, sqlMinMax, que consulta o banco de dados para obter valores altos e baixos.
   
     ```R
     sqlMinMax <- RxSqlServerData(

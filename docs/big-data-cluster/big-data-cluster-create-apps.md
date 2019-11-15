@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 863b569014bf35ef4e6aab01ba966edb34812bd1
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1253863bcd2e1da804480a3e1d0e628024b0798b
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532518"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706696"
 ---
 # <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Como implantar um aplicativo no [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -26,7 +26,7 @@ Este artigo descreve como implantar e gerenciar o script R e Python como um apli
 
 - Um único utilitário de linha de comando para gerenciar o cluster e o aplicativo.
 - Implantação de aplicativos simplificada, fornecendo controle granular por meio de arquivos de especificação.
-- Suporte à hospedagem de tipos de aplicativos adicionais – SSIS e MLeap (novidade no CTP 2.3).
+- Suporte à hospedagem de tipos de aplicativos adicionais – SSIS e MLeap.
 - [Extensão do Visual Studio Code](app-deployment-extension.md) para gerenciar a implantação de aplicativos.
 
 Os aplicativos são implantados e gerenciados por meio do utilitário de linha de comando `azdata`. Este artigo fornece exemplos de como implantar aplicativos por meio da linha de comando. Para saber como usar isso no Visual Studio Code, veja a [Extensão do Visual Studio Code](app-deployment-extension.md).
@@ -43,7 +43,7 @@ Há suporte para os seguintes tipos de aplicativos:
 
 ## <a name="capabilities"></a>Funcionalidades
 
-No SQL Server 2019 (versão prévia), você pode criar, excluir, descrever, inicializar, listar, executar e atualizar seu aplicativo. A tabela a seguir descreve os comandos de implantação de aplicativos que você pode usar com o **azdata**.
+No SQL Server 2019, você pode criar, excluir, descrever, inicializar, listar, executar e atualizar seu aplicativo. A tabela a seguir descreve os comandos de implantação de aplicativos que você pode usar com o **azdata**.
 
 |Comando |Descrição |
 |:---|:---|

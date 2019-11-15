@@ -1,40 +1,41 @@
 ---
-title: Transformar dados usando RevoScaleR rxDataStep
-description: Tutorial explicativo sobre como transformar dados usando a linguagem R no SQL Server.
+title: Transformar dados usando o RevoScaleR
+description: Tutorial passo a passo sobre como transformar dados usando a linguagem R no SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c76bdf56febd06ecba6f2d9d11f1710eefdc23e6
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 773607c7800ed1d507aa721ca7cf86a03857ab8b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715512"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727164"
 ---
-# <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>Transformar dados usando o R (tutorial de SQL Server e RevoScaleR)
+# <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>Transformar dados usando o R (tutorial do SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Esta lição faz parte do [tutorial do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com SQL Server.
+Esta lição faz parte do [tutorial de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
-Nesta lição, saiba mais sobre as funções **RevoScaleR** para transformar dados em vários estágios de sua análise.
+Nesta lição, aprenda sobre as funções do **RevoScaleR** para transformar os dados em vários estágios da análise.
 
 > [!div class="checklist"]
-> * Usar **rxDataStep** para criar e transformar um subconjunto de dados
-> * Usar o **rxImport** para transformar dados em trânsito de ou para um arquivo Xdf ou um quadro de dados na memória durante a importação
+> * Use **rxDataStep** para criar e transformar um subconjunto de dados
+> * Use **rxImport** para transformar dados em trânsito de ou para um arquivo XDF ou um quadro de dados na memória durante a importação
 
 Embora não sejam destinadas especificamente à movimentação de dados, as funções **rxSummary**, **rxCube**, **rxLinMod**e **rxLogit** dão suporte a transformações de dados.
 
-## <a name="use-rxdatastep-to-transform-variables"></a>Usar rxDataStep para transformar variáveis
+## <a name="use-rxdatastep-to-transform-variables"></a>Usar o rxDataStep para transformar variáveis
 
 A função [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) processa uma parte dos dados por vez, lendo de uma fonte de dados e gravando em outra. Você pode especificar as colunas a serem transformadas, bem como as transformações a serem carregadas, e assim por diante.
 
-Para tornar este exemplo interessante, vamos usar uma função de outro pacote do R para transformar os dados. O pacote **inicialização** é um dos pacotes “recomendados”, o que significa que **inicialização** é incluído com cada distribuição do R, mas não é carregado automaticamente na inicialização. Portanto, o pacote já deve estar disponível na instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurada para a integração do R.
+Para tornar este exemplo interessante, vamos usar uma função de outro pacote do R para transformar os dados. O pacote **inicialização** é um dos pacotes “recomendados”, o que significa que **inicialização** é incluído com cada distribuição do R, mas não é carregado automaticamente na inicialização. Portanto, o pacote já deve estar disponível na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurada para a integração do R.
 
-No pacote de **inicialização** , use a função **inv. Logit**, que computa o inverso de um logit. Ou seja, a função **inv.logit** converte um logit novamente para uma probabilidade na escala [0,1].
+No pacote **inicialização**, use a função **inv.logit**, que calcula o inverso de um logit. Ou seja, a função **inv.logit** converte um logit novamente para uma probabilidade na escala [0,1].
 
 > [!TIP] 
 > Outra maneira de fazer previsões nessa escala é definir o parâmetro *type* como **response** na chamada original à **rxPredict**.
@@ -51,7 +52,7 @@ No pacote de **inicialização** , use a função **inv. Logit**, que computa o 
     sqlOutScoreDS2 <- RxSqlServerData( table =  "ccScoreOutput2",  connectionString = sqlConnString, rowsPerRead = sqlRowsPerRead )
     ```
   
-    Na nova tabela, armazene todas as variáveis da tabela anterior `ccScoreOutput` , além da variável recém-criada.
+    Na nova tabela, armazene todas as variáveis da tabela `ccScoreOutput` anterior, além da variável recém-criada.
   
 3. Defina o contexto de computação como a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
@@ -59,7 +60,7 @@ No pacote de **inicialização** , use a função **inv. Logit**, que computa o 
     rxSetComputeContext(sqlCompute)
     ```
   
-4. Use a função **rxSqlServerTableExists** para verificar se a tabela `ccScoreOutput2` de saída já existe; e, nesse caso, use a função **rxSqlServerDropTable** para excluir a tabela.
+4. Use a função **rxSqlServerTableExists** para verificar se a tabela de saída `ccScoreOutput2` já existe e, nesse caso, use a função **rxSqlServerDropTable** para excluir a tabela.
   
     ```R
     if (rxSqlServerTableExists("ccScoreOutput2"))     rxSqlServerDropTable("ccScoreOutput2")
@@ -75,7 +76,7 @@ No pacote de **inicialização** , use a função **inv. Logit**, que computa o 
         overwrite = TRUE)
     ```
 
-    Quando define as transformações aplicadas a cada coluna, você também pode especificar todos os pacotes do R adicionais necessários para executar as transformações.  Para obter mais informações sobre os tipos de transformações que você pode executar, consulte [como transformar e subagrupar dados usando o RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform).
+    Quando define as transformações aplicadas a cada coluna, você também pode especificar todos os pacotes do R adicionais necessários para executar as transformações.  Para obter mais informações sobre os tipos de transformações que podem ser executadas, confira [Como transformar e fazer subconjuntos de dados usando o RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform).
   
 6. Chame **rxGetVarInfo** para exibir um resumo das variáveis no novo conjunto de dados.
   

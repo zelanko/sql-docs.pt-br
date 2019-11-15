@@ -1,7 +1,7 @@
 ---
-title: Trabalhar com objetos e tipos de dados do R e SQL
+title: 'Início Rápido: Tipos de dados do R'
 titleSuffix: SQL Server Machine Learning Services
-description: Neste guia de início rápido, saiba como trabalhar com tipos de dados e objetos de dados em R e SQL Server com SQL Server Serviços de Machine Learning.
+description: Neste guia de início rápido, saiba como trabalhar com tipos de dados e objetos de dados no R e no SQL Server com os Serviços de Machine Learning do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/04/2019
@@ -9,39 +9,40 @@ ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e490821194e909643e5307e833f093363cb9558
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
-ms.translationtype: MT
+ms.openlocfilehash: 4dab7cca8edcc01052ced81ec33a1f411da7ba9a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006004"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73726980"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Início Rápido: Manipular tipos de dados e objetos usando R no SQL Server Serviços de Machine Learning
+# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Início Rápido: Manipular tipos de dados e objetos usando o R nos Serviços de Machine Learning do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Neste guia de início rápido, você aprenderá sobre os problemas comuns que ocorrem ao mover dados entre R e SQL Server. A experiência obtida por meio deste exercício fornece um plano de fundo essencial ao trabalhar com dados em seu próprio script.
+Neste início rápido, você aprenderá sobre problemas comuns que ocorrem ao mover dados entre o R e o SQL Server. A experiência obtida por meio deste exercício fornece um contexto essencial ao trabalhar usando dados em seu próprio script.
 
-Problemas comuns para conhecer o front include:
+Os problemas comuns que se deve conhecer de antemão incluem:
 
-- Tipos de dados às vezes não correspondem
+- Os tipos de dados às vezes não correspondem
 - Conversões implícitas podem ocorrer
 - Às vezes, operações de conversão são necessárias
 - R e SQL usam objetos de dados diferentes
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
-- Este início rápido requer acesso a uma instância do SQL Server com [SQL Server serviços de Machine Learning](../install/sql-machine-learning-services-windows-install.md) com a linguagem R instalada.
+- Este início rápido requer acesso a uma instância do SQL Server que tenha os [Serviços de Machine Learning do SQL Server](../install/sql-machine-learning-services-windows-install.md) com a linguagem R instalada.
 
-  Sua instância de SQL Server pode estar em uma máquina virtual do Azure ou no local. Apenas esteja ciente de que o recurso de script externo está desabilitado por padrão, portanto, talvez seja necessário [habilitar o script externo](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) e verificar se **SQL Server Launchpad serviço** está em execução antes de iniciar.
+  A instância do SQL Server pode ser local ou em uma máquina virtual do Azure. Esteja ciente de que o recurso de script externo está desabilitado por padrão, portanto, talvez seja necessário [habilitar o script externo](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) e verificar se o **serviço SQL Server Launchpad** está em execução antes de você começar.
 
-- Você também precisa de uma ferramenta para executar consultas SQL que contenham scripts R. Você pode executar esses scripts usando qualquer ferramenta de consulta ou gerenciamento de banco de dados, desde que ele possa se conectar a uma instância de SQL Server e executar uma consulta T-SQL ou um procedimento armazenado. Este início rápido usa o [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- Você também precisa de uma ferramenta para executar consultas SQL que contenham scripts R. Você pode executar esses scripts usando qualquer ferramenta de consulta ou de gerenciamento de banco de dados, desde que ele possa se conectar a uma instância do SQL Server e executar uma consulta T-SQL ou um procedimento armazenado. Esse início rápido usa o [SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
-## <a name="always-return-a-data-frame"></a>Sempre retornar um quadro de dados
+## <a name="always-return-a-data-frame"></a>Sempre retornar uma estrutura de dados
 
-Quando o script retorna resultados de R para o SQL Server, ele deve retornar os dados como um **data.frame**. Qualquer outro tipo de objeto que você gerar em seu script-seja uma lista, fator, vetor ou dados binários-deve ser convertido em um quadro de dados se você quiser gerar a saída como parte dos resultados do procedimento armazenado. Felizmente, existem várias funções de R para dar suporte à conversão de outros objetos em um quadro de dados. Você pode até mesmo serializar um modelo binário e retorná-lo em um quadro de dados, que será feito posteriormente neste guia de início rápido.
+Quando o script retorna resultados de R para o SQL Server, ele deve retornar os dados como um **data.frame**. Qualquer outro tipo de objeto gerado no seu script, seja uma lista, fator, vetor ou dados binários, deverá ser convertido em uma estrutura de dados se você desejar enviá-lo como parte dos resultados do procedimento armazenado. Felizmente, existem várias funções de R para dar suporte à conversão de outros objetos em um quadro de dados. É possível até mesmo serializar um modelo binário e retorná-lo em uma estrutura de dados, o que faremos posteriormente neste início rápido.
 
-Primeiro, vamos experimentar alguns objetos r básicos de r – vetores, matrizes e listas – e ver como a conversão em um quadro de dados altera a saída passada para SQL Server.
+Primeiro, vamos experimentar alguns objetos básicos de R (vetores, matrizes e listas) e ver como a conversão em uma estrutura de dados muda a saída passada para o SQL Server.
 
 Compare esses dois scripts "Olá, Mundo" em R. Os scripts parecem quase idênticos, mas o primeiro retorna uma única coluna de três valores, enquanto o segundo retorna três colunas com um único valor cada.
 
@@ -114,12 +115,12 @@ $ X...      : Factor w/ 1 level " ": 1
 $ c..world..: Factor w/ 1 level "world": 1
 ```
 
-Como você pode ver, uma pequena alteração na sintaxe de R teve um grande efeito no esquema dos resultados. Não entraremos no porquê, mas as diferenças nos tipos de dados do R são explicadas em detalhes na seção *estruturas de dados* em ["R avançado" por Hadley Wickham](http://adv-r.had.co.nz).
+Como você pode ver, uma pequena alteração na sintaxe de R teve um grande efeito no esquema dos resultados. Não entraremos no porquê, mas as diferenças nos tipos de dados de R são explicadas mais detalhadamente na seção *Estruturas de Dados* no artigo ["Advanced R" (R Avançado) de Hadley Wickham](http://adv-r.had.co.nz).
 
 Por enquanto, apenas esteja ciente de que você precisa verificar os resultados esperados ao moldar objetos R em quadros de dados.
 
 > [!TIP]
-> Você também pode usar funções de identidade de R, como `is.matrix`, `is.vector`, para retornar informações sobre a estrutura de dados interna.
+> Você também pode usar funções de identidade do R, tais como `is.matrix` e `is.vector`, para retornar informações sobre a estrutura de dados interna.
 
 ## <a name="implicit-conversion-of-data-objects"></a>Conversão implícita de objetos de dados
 
@@ -141,7 +142,7 @@ VALUES (100);
 GO
 ```
 
-Por exemplo, suponha que você execute a instrução a seguir para executar a multiplicação de matriz usando o R. Você multiplica uma matriz de coluna única com os três valores por uma matriz com quatro valores e espera uma matriz 4x3 como resultado.
+Por exemplo, suponha que você execute a seguinte instrução para realizar uma multiplicação de matriz usando R. Multiplique uma matriz de coluna única com os três valores de uma matriz com quatro valores, esperando uma matriz de 4x3 como resultado.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -185,19 +186,19 @@ Agora, R retorna um único valor como resultado.
 |---|
 |1542|
 
-Por quê? Nesse caso, como os dois argumentos podem ser tratados como vetores do mesmo comprimento, R retorna o produto interno como uma matriz.  Esse é o comportamento esperado de acordo com as regras de álgebra linear; no entanto, isso pode causar problemas se seu aplicativo downstream espera que o esquema de saída nunca mude.
+Por quê? Nesse caso, como os dois argumentos podem ser tratados como vetores de mesmo tamanho, R retorna o produto interno como uma matriz.  Esse é o comportamento esperado de acordo com as regras de álgebra linear; no entanto, isso pode causar problemas se seu aplicativo downstream espera que o esquema de saída nunca mude.
 
 > [!TIP]
 > 
-> Obtendo erros? Verifique se você está executando o procedimento armazenado no contexto do banco de dados que contém a tabela, e não no **mestre** ou em outro banco de dados.
+> Encontrou erros? Verifique se você está executando o procedimento armazenado no contexto do banco de dados que contém a tabela, não no **mestre** nem em outro banco de dados.
 >
 > Além disso, sugerimos que você evite usar tabelas temporárias para esses exemplos. Alguns clientes do R encerrarão uma conexão entre os lotes, excluindo tabelas temporárias.
 
 ## <a name="merge-or-multiply-columns-of-different-length"></a>Mesclar ou multiplicar colunas de tamanhos diferentes
 
-O R fornece excelente flexibilidade para trabalhar com vetores de tamanhos diferentes e para combinar essas estruturas de coluna em quadros de dados. Listas de vetores podem se parecer com uma tabela, mas elas não seguem as regras que regem as tabelas de banco de dados.
+O R fornece uma ótima flexibilidade para trabalhar com vetores de tamanhos diferentes e combinar essas estruturas semelhantes a colunas em estruturas de dados. Listas de vetores podem se parecer com uma tabela, mas elas não seguem as regras que regem as tabelas de banco de dados.
 
-Por exemplo, o script a seguir define uma matriz numérica de tamanho 6 e a armazena na variável `df1` de R. Em seguida, a matriz numérica é combinada com os inteiros da tabela RTestData, que contém três (3) valores, para criar um novo quadro de dados, `df2`.
+Por exemplo, o script a seguir define uma matriz numérica de tamanho 6 e a armazena na variável `df1` de R. Em seguida, a matriz numérica é combinada com os inteiros da tabela RTestData, que contém três (3) valores, para criar uma estrutura de dados, `df2`.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -227,14 +228,14 @@ Lembre-se que um quadro de dados somente se parece com uma tabela e é, na verda
 
 ## <a name="cast-or-convert-sql-server-data"></a>Converter dados do SQL Server
 
-O R e o SQL Server não usam os mesmos tipos de dados, por isso quando você executa uma consulta no SQL Server para obter dados e passa-os para o tempo de execução de R, geralmente ocorre um certo tipo de conversão implícita. Outro conjunto de conversões ocorre quando você retorna dados de R para o SQL Server.
+O R e o SQL Server não usam os mesmos tipos de dados, por isso quando você executa uma consulta no SQL Server para obter dados e passa-os para o runtime de R, geralmente ocorre um certo tipo de conversão implícita. Outro conjunto de conversões ocorre quando você retorna dados de R para o SQL Server.
 
-- SQL Server envia os dados da consulta para o processo do R gerenciado pelo serviço Launchpad e os converte em uma representação interna para maior eficiência.
-- O tempo de execução do R carrega os dados em uma variável data.frame e executa suas próprias operações nos dados.
+- O SQL Server envia os dados da consulta para o processo do R gerenciado pelo serviço do Launchpad e converte-os em uma representação interna para maior eficiência.
+- O runtime do R carrega os dados em uma variável data.frame e executa suas próprias operações nos dados.
 - O mecanismo de banco de dados retorna os dados para o SQL Server usando uma conexão interna protegida e apresenta os dados em termos de tipos de dados do SQL Server.
 - Você obtém os dados conectando-se ao SQL Server usando uma biblioteca de cliente ou de rede que pode emitir consultas SQL e lidar com conjuntos de dados tabulares. Esse aplicativo cliente pode afetar os dados de outras maneiras.
 
-Para ver como isso funciona, execute uma consulta como esta no data warehouse [AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) . Essa exibição retorna dados de vendas usados na criação de previsões.
+Para ver como isso funciona, execute uma consulta como no data warehouse [AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Essa exibição retorna dados de vendas usados na criação de previsões.
 
 ```sql
 USE AdventureWorksDW
@@ -250,7 +251,7 @@ SELECT ReportingDate
 
 > [!NOTE]
 >
-> Você pode usar qualquer versão do AdventureWorks ou criar uma consulta diferente usando um banco de dados próprio. O ponto é tentar lidar com alguns dados que contenham texto, DateTime e valores numéricos.
+> Você pode usar qualquer versão do AdventureWorks ou criar uma consulta diferente usando um banco de dados próprio. O ponto aqui é tentar manipular alguns dados que contêm texto, data e hora e valores numéricos.
 
 Agora, tente colar essa consulta como a entrada para o procedimento armazenado.
 
@@ -287,25 +288,25 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 
 ### <a name="summary"></a>Resumo
 
-A partir de até mesmo esses pequenos exemplos, você pode ver a necessidade de verificar os efeitos da conversão de dados ao passar consultas SQL como entrada. Como alguns tipos de dados SQL Server não são suportados pelo R, considere estas maneiras de evitar erros:
+Com base até mesmo nesses pequenos exemplos, você pode ver a necessidade de verificar os efeitos da conversão de dados ao passar consultas SQL como entrada. Devido a alguns tipos de dados do SQL Server não serem compatíveis com o R, considere os seguintes modos de evitar erros:
 
-- Teste seus dados com antecedência e verifique as colunas ou valores em seu esquema que podem ser um problema quando passados para o código R.
+- Teste os dados com antecedência e verifique as colunas ou valores em seu esquema que poderiam ser um problema ao ser passados para o código R.
 - Especifique as colunas na fonte de dados de entrada individualmente, em vez de usar `SELECT *` e saiba como cada coluna será tratada.
 - Execute conversões explícitas conforme necessário durante a preparação dos dados de entrada, a fim de evitar surpresas.
 - Evite passar colunas de dados (como GUIDs ou RowGuids) que causam erros e não são úteis para modelagem.
 
-Para obter mais informações sobre tipos de dados com e sem suporte, consulte [bibliotecas e tipos de dados do R](../r/r-libraries-and-data-types.md).
+Para obter mais informações sobre os tipos de dados compatíveis e não compatíveis, confira [Tipos de dados e bibliotecas do R](../r/r-libraries-and-data-types.md).
 
-Para obter informações sobre o impacto no desempenho da conversão de cadeias de caracteres em tempo de execução para fatores numéricos, consulte [SQL Server R Services ajuste de desempenho](../r/sql-server-r-services-performance-tuning.md).
+Para obter informações sobre o impacto de desempenho da conversão no tempo de execução de cadeias de caracteres em fatores numéricos, confira [Ajuste de desempenho do SQL Server R Services](../r/sql-server-r-services-performance-tuning.md).
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber mais sobre como escrever funções avançadas do R no SQL Server, siga este guia de início rápido:
+Para saber mais sobre como escrever funções avançadas do R no SQL Server, siga este início rápido:
 
 > [!div class="nextstepaction"]
-> [Escrever funções de R avançadas com SQL Server Serviços de Machine Learning](quickstart-r-functions.md)
+> [Escrever funções avançadas do R com os Serviços de Machine Learning do SQL Server](quickstart-r-functions.md)
 
-Para obter mais informações sobre como usar o R no SQL Server Serviços de Machine Learning, consulte os seguintes artigos:
+Para obter mais informações sobre como usar o R nos Serviços de Machine Learning do SQL Server, confira os seguintes artigos:
 
-- [Criar e pontuar um modelo de previsão em R com SQL Server Serviços de Machine Learning](quickstart-r-train-score-model.md)
-- [O que é SQL Server Serviços de Machine Learning (Python e R)?](../what-is-sql-server-machine-learning.md)
+- [Criar e pontuar um modelo de previsão no R com os Serviços de Machine Learning do SQL Server](quickstart-r-train-score-model.md)
+- [O que são os Serviços de Machine Learning do SQL Server (Python e R)?](../what-is-sql-server-machine-learning.md)

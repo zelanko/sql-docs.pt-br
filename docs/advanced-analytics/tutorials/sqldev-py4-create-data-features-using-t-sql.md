@@ -1,26 +1,27 @@
 ---
-title: Criar recursos de dados usando funções T-SQL e Python
-description: Tutorial mostrando como adicionar cálculos a procedimentos armazenados para uso em modelos de aprendizado de máquina Python.
+title: 'Python + T-SQL: Recursos de dados'
+description: Tutorial mostrando como adicionar cálculos a procedimentos armazenados para uso em modelos de machine learning do Python.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3eafa7bf06739ba5802ea20caea61fbaaa2474ec
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 94d3160fe372fafb666ed451d207301b86d119d9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715488"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73725200"
 ---
 # <a name="create-data-features-using-t-sql"></a>Criar recursos de dados usando o T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Após a exploração de dados, você coletou algumas informações dos dados e está pronto para passar para a engenharia de *recursos*. Esse processo de criação de recursos dos dados brutos pode ser uma etapa crítica na modelagem de análise avançada.
+Após a exploração de dados, você reuniu algumas ideias sobre os dados e está pronto para passar para a *engenharia de recursos*. Esse processo de criação de recursos dos dados brutos pode ser uma etapa crítica na modelagem de análise avançada.
 
-Este artigo faz parte de um tutorial, [análise do Python no banco de dados para desenvolvedores do SQL](sqldev-in-database-python-for-sql-developers.md). 
+Este artigo faz parte de um tutorial, [Análise do Python no banco de dados para desenvolvedores do SQL](sqldev-in-database-python-for-sql-developers.md). 
 
 Nesta etapa, você aprenderá a criar recursos de dados brutos usando uma função [!INCLUDE[tsql](../../includes/tsql-md.md)] . Você chamará essa função por meio de um procedimento armazenado para criar uma tabela que contém os valores do recurso.
 
@@ -30,7 +31,7 @@ Os valores de distância relatados nos dados originais baseiam-se na distância 
 
 Você usará uma função personalizada do T-SQL, _fnCalculateDistance_, para calcular a distância usando a fórmula de Haversine e usará uma segunda função personalizada do T-SQL, _fnEngineerFeatures_, para criar uma tabela que contém todos os recursos.
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcular a distância de viagem usando fnCalculateDistance
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcular a distância da corrida usando fnCalculateDistance
 
 1.  A função _fnCalculateDistance_ deve ter sido baixada e registrada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parte da preparação para esse passo a passo. Reserve um minuto para examinar o código.
   
@@ -67,7 +68,7 @@ Você usará uma função personalizada do T-SQL, _fnCalculateDistance_, para ca
 
 Para adicionar o valor calculado a uma tabela que pode ser usada para treinar o modelo, você usará outra função, _fnEngineerFeatures_.
 
-### <a name="save-the-features-using-fnengineerfeatures"></a>Salve os recursos usando o _fnEngineerFeatures_
+### <a name="save-the-features-using-_fnengineerfeatures_"></a>Salvar os recursos usando _fnEngineerFeatures_
 
 1.  Reserve um minuto para examinar a função personalizada do T-SQL no o código, _fnEngineerFeatures_, que deve ter sido criada como parte da preparação para esse passo a passo.
   
@@ -107,13 +108,13 @@ Para adicionar o valor calculado a uma tabela que pode ser usada para treinar o 
         ORDER BY trip_time_in_secs DESC
     ```
   
-    Como você pode ver, a distância relatada pelo medidor nem sempre corresponde à distância geográfica. É por isso que a engenharia de recursos é importante.
+    Como você pode ver, a distância relatada pelo medidor nem sempre corresponde à distância geográfica. Por isso a engenharia de recursos é importante.
 
-Na próxima etapa, você aprenderá a usar esses recursos de dados para criar e treinar um modelo de aprendizado de máquina usando o Python.
+Na próxima etapa, você aprenderá a usar esses recursos de dados para criar e treinar um modelo de machine learning usando o Python.
 
 ## <a name="next-step"></a>Próxima etapa
 
-[Treinar e salvar um modelo Python usando o T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Treinar e salvar um modelo do Python usando o T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>Etapa anterior
 

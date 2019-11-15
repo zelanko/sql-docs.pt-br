@@ -1,20 +1,20 @@
 ---
-title: Tutorial sobre como criar, treinar e pontuar modelos baseados em partição no R
+title: Criar modelos em R baseados em partição
 description: Saiba como modelar, treinar e usar dados particionados que são criados dinamicamente ao usar as funcionalidades de modelagem baseada em partição do aprendizado de máquina do SQL Server.
-ms.custom: sqlseattle
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.date: 11/06/2019
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f73f45d2ac9830fed810746a5895554cded0691
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: ee5d6cbf9b1d5430e431cf04fb3b86ae7fb5743b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532583"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73726231"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutorial: Criar modelos baseados em partição no R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Para concluir este tutorial, é necessário ter o seguinte:
 
 + [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), que pode ser [baixado e restaurado](demo-data-nyctaxi-in-sql.md) na instância do mecanismo de banco de dados local. O tamanho do arquivo é aproximadamente 90 MB.
 
-+ Instância do mecanismo de banco de dados do SQL Server 2019 Preview, com integração entre os Serviços de Machine Learning e o R.
++ Instância do mecanismo de banco de dados do SQL Server 2019, com integração entre os Serviços de Machine Learning e o R.
 
 Verifique a versão executando **`SELECT @@Version`** como uma consulta T-SQL em uma ferramenta de consulta.
 

@@ -1,7 +1,7 @@
 ---
 title: Implantar o HDFS ou o Spark com alta disponibilidade
-titleSuffix: Deploy HDFS or Spark with high availability
-description: Saiba como implantar o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versão prévia) com alta disponibilidade.
+titleSuffix: SQL Server Big Data Clusters
+description: Saiba como implantar Clusters de Big Data do SQL Server com alta disponibilidade.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afd8aa5d124e7dc6c7d37bb44c9b64129f8fa564
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: fc93fbeb3cf02b205cadba92b6d528701ec53cbe
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532015"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706339"
 ---
 # <a name="deploy-hdfs-name-node-and-shared-spark-services-in-a-highly-available-configuration"></a>Implante o nó de nome do HDFS e serviços compartilhados do Spark em uma configuração altamente disponível
 

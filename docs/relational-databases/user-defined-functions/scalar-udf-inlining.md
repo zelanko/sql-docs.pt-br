@@ -1,6 +1,6 @@
 ---
 title: Embutimento de UDF escalar em bancos de dados Microsoft SQL | Microsoft Docs
-description: Recurso de embutimento de UDF escalar para melhorar o desempenho de consultas que invocam UDFs escalares no SQL Server (2018 e posteriores) e no Banco de Dados SQL do Azure.
+description: Recurso de embutimento de UDF escalar para melhorar o desempenho de consultas que invocam UDFs escalares no SQL Server (começando no SQL Server 2019) e no Banco de Dados SQL do Azure.
 ms.custom: ''
 ms.date: 09/13/2019
 ms.prod: sql
@@ -15,41 +15,40 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: c778894dbe532a64c4907c9e4281ecf076da70dc
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 7dad5124f08435532c1fd0cf299e54db66c5be05
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909318"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882422"
 ---
 # <a name="scalar-udf-inlining"></a>Embutimento de UDF escalar
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Este artigo apresenta o embutimento de UDF escalar, um recurso sob o conjunto de recursos de processamento de consulta inteligente. Esse recurso melhora o desempenho das consultas que invocam UDFs escalares em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+Este artigo apresenta o embutimento de UDF escalar, um recurso sob o conjunto de recursos de [Processamento de Consulta Inteligente](../../relational-databases/performance/intelligent-query-processing.md). Esse recurso melhora o desempenho das consultas que invocam UDFs escalares em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>Funções escalares definidas pelo usuário T-SQL
-
-Funções Definidas pelo Usuário implementadas no Transact-SQL e que retornam um valor de dados único são chamadas de Funções Definidas pelo Usuário Escalares T-SQL. UDFs do T-SQL são uma maneira elegante de obter reutilização e modularidade de código em consultas SQL. Alguns cálculos (como regras de negócios complexas) são mais fáceis de expressar no formulário de UDF imperativa. UDFs ajudam na criação de uma lógica complexa sem exigir experiência em escrever consultas SQL complexas.
+UDFs (funções definidas pelo usuário) implementadas no [!INCLUDE[tsql](../../includes/tsql-md.md)] e que retornam um valor de dados único são chamadas de Funções Definidas pelo Usuário Escalares T-SQL. UDFs do T-SQL são uma maneira elegante de obter reutilização e modularidade de código em consultas [!INCLUDE[tsql](../../includes/tsql-md.md)]. Alguns cálculos (como regras de negócios complexas) são mais fáceis de expressar no formulário de UDF imperativa. UDFs ajudam na criação de uma lógica complexa sem exigir experiência em escrever consultas SQL complexas.
 
 ## <a name="performance-of-scalar-udfs"></a>Desempenho de UDFs escalares
+Normalmente, UDFs escalares acabam tendo um desempenho ruim devido aos seguintes motivos:
 
-Normalmente, UDFs escalares acabam tendo um desempenho ruim devido aos seguintes motivos.
+- **Invocação iterativa:** UDFs são invocados de maneira iterativa, uma vez a cada tupla qualificada. Isso resulta em custos adicionais repetido de comutação de contexto repetida devido à invocação de função. Especialmente UDFs que executam consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] em sua definição são gravemente afetadas.
 
-- **Invocação iterativa:** UDFs são invocados de maneira iterativa, uma vez a cada tupla qualificada. Isso resulta em custos adicionais repetido de comutação de contexto repetida devido à invocação de função. Especialmente, UDFs que executam consultas SQL em sua definição são gravemente afetadas.
 - **Falta de custos:** Durante a otimização, somente operadores relacionais terão o custo calculado, enquanto os operadores escalares não terão. Antes da introdução de UDFs escalares, outros operadores escalares geralmente eram baratos e não exigiam avaliação de custo. Um pequeno custo de CPU adicionado para uma operação de escalar foi suficiente. Há cenários em que o custo real é significativo e ainda assim permanece sub-representado.
+
 - **Execução interpretada:** UDFs são avaliados como um lote de instruções, executados instrução a instrução. Cada instrução em si é compilada e o plano compilado é armazenado em cache. Embora essa estratégia de armazenamento em cache economize algum tempo, pois evita recompilações, cada instrução é executada em isolamento. Nenhuma otimização entre instruções é executada.
-- **Execução serial:** O SQL Server não permite paralelismo dentro da consulta em consultas que invocam UDFs. 
+
+- **Execução serial:** o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não permite paralelismo dentro da consulta em consultas que invocam UDFs. 
 
 ## <a name="automatic-inlining-of-scalar-udfs"></a>Embutimento automático de UDFs escalares
-
 A meta do recurso de embutimento de UDF escalar é melhorar o desempenho de consultas que invocam UDFs escalares do T-SQL, em que a execução da UDF é o principal gargalo.
 
 Com esse novo recurso, os UDFs escalares são automaticamente transformados em expressões escalares ou subconsultas escalares substituídas na consulta responsável pela chamada, em vez do operador UDF. Essas expressões e subconsultas então são otimizadas. Como resultado, o plano de consulta não terá mais um operador de função definido pelo usuário, mas seus efeitos serão observados no plano, como modos de exibição ou TVFs embutidos.
 
 ### <a name="example-1---single-statement-scalar-udf"></a>Exemplo 1: UDF estado de instrução única
-
-Considere a consulta a seguir
+Considere a consulta a seguir.
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (L_EXTENDEDPRICE *(1 - L_DISCOUNT)) 
@@ -67,7 +66,6 @@ RETURNS DECIMAL (12,2) AS
 BEGIN
   RETURN @price * (1 - @discount);
 END
-
 ```
 
 Agora, a consulta pode ser modificada para invocar essa UDF.
@@ -89,8 +87,7 @@ Devido a motivos descritos anteriormente, a consulta com a UDF tem um mau desemp
 Esses números são baseados em um banco de dados CCI de 10 GB (usando o esquema do TPC-H), em execução em um computador com processador duplo (12 núcleos), 96 GB de RAM, apoiado por SSD. Os números incluem a compilação e o tempo de execução com um pool de buffers e cache de procedimento frio. A configuração padrão foi usada e nenhum outro índice foi criado.
 
 ### <a name="example-2---multi-statement-scalar-udf"></a>Exemplo 2: UDF escalar de várias instruções
-
-UDFs escalares implementadas usando várias instruções T-SQL, como atribuições de variáveis e ramificação condicional, também podem ser embutidos. Considere a seguinte UDF escalar que, dada uma chave de cliente, determina a categoria de serviço para esse cliente. Ele chega na categoria computando primeiro o preço total de todos os pedidos feitos pelo cliente usando uma consulta SQL. Então, ela usa uma lógica `IF-ELSE` para decidir a categoria com base no preço total.
+UDFs escalares implementadas usando várias instruções T-SQL, como atribuições de variáveis e ramificação condicional, também podem ser embutidos. Considere a seguinte UDF escalar que, dada uma chave de cliente, determina a categoria de serviço para esse cliente. Ele chega na categoria computando primeiro o preço total de todos os pedidos feitos pelo cliente usando uma consulta SQL. Então, ela usa uma lógica `IF (...) ELSE` para decidir a categoria com base no preço total.
 
 ```sql
 CREATE OR ALTER FUNCTION dbo.customer_category(@ckey INT) 
@@ -110,7 +107,6 @@ BEGIN
 
   RETURN @category;
 END
-
 ```
 
 Agora, considere uma consulta que invoque essa UDF.
@@ -119,11 +115,11 @@ Agora, considere uma consulta que invoque essa UDF.
 SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 ```
 
-O plano de execução para essa consulta no SQL Server 2017 (nível de compatibilidade 140 e anterior) é o seguinte:
+O plano de execução para essa consulta no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] (nível de compatibilidade 140 e anterior) é o seguinte:
 
 ![Plano de consulta sem embutimento](./media/query-plan-without-udf-inlining.png)
 
-Como mostra o plano, o SQL Server adota uma estratégia simples aqui: para cada tupla na tabela `CUSTOMER`, invoca a UDF e produz os resultados. Essa estratégia é ingênua e ineficiente. Com embutimento, essas UDFs são transformadas em subconsultas escalares equivalentes, que são substituídas na consulta responsável pela chamada no lugar da UDF.
+Como mostra o plano, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adota uma estratégia simples aqui: para cada tupla na tabela `CUSTOMER`, invoca a UDF e produz os resultados. Essa estratégia é ingênua e ineficiente. Com embutimento, essas UDFs são transformadas em subconsultas escalares equivalentes, que são substituídas na consulta responsável pela chamada no lugar da UDF.
 
 Para a mesma consulta, o plano com a UDF embutida se parece com o abaixo.
 
@@ -131,14 +127,13 @@ Para a mesma consulta, o plano com a UDF embutida se parece com o abaixo.
 
 Como mencionado anteriormente, o plano de consulta não tem mais um operador de função definida pelo usuário, mas seus efeitos agora são observáveis no plano, como modos de exibição ou TVFs embutidos. Aqui estão algumas observações importantes do plano de acima:
 
-1. O SQL Server inferiu a junção implícita entre `CUSTOMER` e `ORDERS` e tornou isso explícito por meio de um operador de junção.
-2. O SQL Server também inferiu o `GROUP BY O_CUSTKEY on ORDERS` implícito e usou IndexSpool + StreamAggregate implementá-lo.
-3. O SQL Server agora está usando o paralelismo em todos os operadores.
+-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inferiu a junção implícita entre `CUSTOMER` e `ORDERS` e tornou isso explícito por meio de um operador de junção.
+-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também inferiu o `GROUP BY O_CUSTKEY on ORDERS` implícito e usou IndexSpool + StreamAggregate para implementá-lo.
+-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agora está usando o paralelismo em todos os operadores.
 
 Dependendo da complexidade da lógica na UDF, o plano de consulta resultante também poderá ficar maior e mais complexo. Como podemos ver, as operações dentro da UDF agora não são mais uma caixa preta e, portanto, o otimizador de consulta é capaz de calcular o custo e otimizar essas operações. Além disso, uma vez que a UDF não está mais no plano, invocação da UDF iterativa é substituída por um plano que evita completamente a sobrecarga de chamada de função.
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>Requisitos de UDFs escalares que podem ser embutidas
-
 Uma UDF T-SQL escalar poderá ser embutida se todas as seguintes condições forem verdadeiras:
 
 - A UDF é escrita usando as seguintes construções:
@@ -167,22 +162,33 @@ Uma UDF T-SQL escalar poderá ser embutida se todas as seguintes condições for
 <sup>3</sup> Funções intrínsecas cujos resultados dependem da hora do sistema atual são dependente de hora. Uma função intrínseca que pode atualizar algum estado global interno é um exemplo de uma função com efeitos colaterais. Essas funções retornam resultados diferentes cada vez que são chamadas, com base no estado interno.
 
 ### <a name="checking-whether-or-not-a-udf-can-be-inlined"></a>Verificar se uma UDF pode ser embutida ou não
+Para cada UDF escalar do T-SQL, a exibição de catálogo [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) inclui uma propriedade chamada `is_inlineable`, que indica se uma UDF pode ser embutida ou não. 
 
-Para cada UDF escalar do T-SQL, a exibição de catálogo [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) inclui uma propriedade chamada `is_inlineable`, que indica se uma UDF pode ser embutida ou não. Um valor de 1 indica que ele é pode ser embutido e 0 indica o contrário. Essa propriedade terá um valor de 1 para todos as TVFs embutidos também. Para todos os outros módulos, o valor será 0.
+> [!NOTE]
+> A propriedade `is_inlineable` é derivada dos constructos encontrados na definição da UDF. Ele não verifica se a UDF é, na verdade, embutível em tempo de compilação. Para obter mais informações, consulte abaixo as condições para embutimento.
 
->[!NOTE]
->Se uma UDF escalar puder ser embutida, isso não implica que ele sempre será embutido. O SQL Server decidirá qual (por consulta, por UDF) se embutirá uma UDF ou não. Por exemplo, se a definição da UDF for executada em milhares de linhas de código, o SQL Server poderá optar por não embuti-la. Outro exemplo é uma UDF em uma cláusula `GROUP BY` – que não será embutida. Essa decisão é tomada quando a consulta que referencia uma UDF escalar é compilada.
+Um valor de 1 indica que ele é pode ser embutido e 0 indica o contrário. Essa propriedade terá um valor de 1 para todos as TVFs embutidos também. Para todos os outros módulos, o valor será 0.
+
+Se uma UDF escalar puder ser embutida, isso não implica que ele sempre será embutido. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] decidirá qual (por consulta, por UDF) se embutirá uma UDF ou não. Alguns exemplos de quando um UDF não pode ser embutido incluem:
+
+-  Se a definição da UDF for executada em milhares de linhas de código, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderá optar por não embuti-la. 
+-  Uma invocação de UDF em uma cláusula `GROUP BY` não será embutida. Essa decisão é tomada quando a consulta que referencia uma UDF escalar é compilada.
+-  Se a UDF for assinada com um certificado. Como as assinaturas podem ser adicionadas e descartadas após a criação de uma UDF, a decisão de embutir ou não é feita quando a consulta que faz referência a uma UDF escalar é compilada. Por exemplo, as funções do sistema normalmente são assinadas com um certificado. Você pode usar [sys. crypt_properties](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md) para localizar quais objetos são assinados. 
+
+   ```sql
+   SELECT * 
+   FROM sys.crypt_properties AS cp
+   INNER JOIN sys.objects AS o ON cp.major_id = o.object_id;
+   ```
 
 ### <a name="checking-whether-inlining-has-happened-or-not"></a>Verificar se embutimento ocorreu ou não
-
-Se todas as pré-condições forem atendidas e o SQL Server decidir executar embutimento, ele transformará a UDF em uma expressão relacional. Do plano de consulta, é fácil descobrir se embutimento ocorreu ou não:
+Se todas as pré-condições forem atendidas e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] decidir executar embutimento, ele transformará a UDF em uma expressão relacional. Do plano de consulta, é fácil descobrir se embutimento ocorreu ou não:
 
 - O xml do plano não terá um nó xml `<UserDefinedFunction>` para uma UDF que tenha sido embutida com êxito. 
 - Determinados XEvents são emitidos.
 
 ## <a name="enabling-scalar-udf-inlining"></a>Como habilitar o embutimento de UDF escalar
-
-Você pode automaticamente qualificar as cargas de trabalho para inlining de UDF escalar habilitando o nível de compatibilidade 150 para o banco de dados.? Você pode definir isso usando o Transact-SQL.?Por exemplo:  
+Você pode qualificar automaticamente as cargas de trabalho para embutimento de UDF escalar habilitando o nível de compatibilidade 150 para o banco de dados. Você pode definir isso usando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por exemplo:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -190,8 +196,7 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 Além disso, não há nenhuma outra alteração que precise ser feita para consultas ou UDFs para aproveitar esse recurso.
 
-## <a name="disabling-scalar-udf-inlining-without-changing-the-compatibility-level"></a>Como desabilitar o embutimento de UDF Escalar sem alterar o nível de compatibilidade
-
+## <a name="disabling-scalar-udf-inlining-without-changing-the-compatibility-level"></a>Como desabilitar o embutimento de UDF escalar sem alterar o nível de compatibilidade
 O embutimento de UDF escalar pode ser desabilitado no escopo da UDF, da instrução ou do banco de dados enquanto ainda mantém o nível de compatibilidade do banco de dados 150 e superior. Para desabilitar o embutimento de UDF escalar no escopo do banco de dados, execute a seguinte instrução dentro do contexto do banco de dados aplicável: 
 
 ```sql
@@ -227,7 +232,7 @@ WITH INLINE = OFF
 AS
 BEGIN
     RETURN @price * (1 - @discount);
-END
+END;
 ```
 
 Depois que a declaração acima é executada, essa UDF nunca será embutida em nenhuma consulta que a invoque. Para habilitar novamente o embutimento para essa UDF, execute a seguinte instrução:
@@ -242,11 +247,10 @@ BEGIN
 END
 ```
 
->[!NOTE]
->A cláusula `INLINE` não é obrigatória. Se a cláusula `INLINE` não for especificada, ela será automaticamente definida como `ON`/`OFF` com base em se a UDF pode ser embutida. Se `INLINE=ON` for especificado, mas a UDF for considerada não qualificada para embutimento, um erro será gerado.
+> [!NOTE]
+> A cláusula `INLINE` não é obrigatória. Se a cláusula `INLINE` não for especificada, ela será automaticamente definida como `ON`/`OFF` com base em se a UDF pode ser embutida. Se `INLINE = ON` for especificado, mas a UDF for considerada não qualificada para embutimento, um erro será gerado.
 
 ## <a name="important-notes"></a>Observações importantes
-
 Conforme descrito neste artigo, o embutimento de UDF escalar transforma uma consulta com UDFs escalares em uma consulta com uma subconsulta escalar equivalente. Devido a essa transformação, os usuários podem observar algumas diferenças no comportamento nos seguintes cenários:
 
 1. O embutimento resultará em um hash de consulta diferente para o mesmo texto da consulta.
@@ -257,13 +261,8 @@ Conforme descrito neste artigo, o embutimento de UDF escalar transforma uma cons
 1. Se uma UDF fizer referência a funções internas, como `SCOPE_IDENTITY()`, o valor retornado pela função interna será alterado com o embutimento. Essa alteração no comportamento ocorre porque o embutimento altera o escopo das instruções dentro da UDF.
 
 ## <a name="see-also"></a>Consulte Também
-
-[Central de desempenho do Mecanismo de Banco de Dados do SQL Server e do Banco de Dados SQL do Azure](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
-
-[Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md)
-
-[Referência de operadores físicos e lógicos de plano de execução](../../relational-databases/showplan-logical-and-physical-operators-reference.md)
-
-[Junções](../../relational-databases/performance/joins.md)
-
-[Demonstrando o Processamento de Consulta Adaptável](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)
+[Central de desempenho do Mecanismo de Banco de Dados do SQL Server e do Banco de Dados SQL do Azure](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
+[Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md)     
+[Referência de operadores físicos e lógicos de plano de execução](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
+[Junções](../../relational-databases/performance/joins.md)     
+[Demonstrar o processamento de consulta inteligente](https://aka.ms/IQPDemos)      

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cef051bcd3e7de6f381bba3f15f4e2e720f2a254
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 0e6531e05a3f800bbd4c1563c53c4b4d18eb0eea
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807436"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659582"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Feature Pack do Azure para o Integration Services (SSIS)
 
@@ -101,11 +101,11 @@ Para usar o TLS 1.2, adicione um valor de `REG_DWORD` chamado `SchUseStrongCrypt
 ## <a name="dependency-on-java"></a>Dependência do Java
 
 O Java é obrigatório para usar formatos de arquivo ORC/Parquet com conectores de Azure Data Lake Storage/Arquivo simples.  
-A arquitetura (32/64 bits) do build Java deve corresponder àquela do tempo de execução do SSIS para usar.
+A arquitetura (32/64 bits) do build Java deve corresponder àquela do runtime do SSIS para usar.
 Os builds Java a seguir foram testados.
 
 - [OpenJDK 8u192 do Zulu](https://www.azul.com/downloads/zulu/zulu-windows/)
-- [Ambiente de Tempo de Execução Java do Oracle 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
+- [Ambiente de Runtime Java do Oracle 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
 
 ### <a name="set-up-zulus-openjdk"></a>Configurar o OpenJDK do Zulu
 
@@ -147,7 +147,7 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 [Environment]::SetEnvironmentVariable("JAVA_HOME", "C:\zulu8.33.0.1-jdk8.0.192-win_x64\jre", "Machine")
 ~~~
 
-### <a name="set-up-oracles-java-se-runtime-environment"></a>Configurar o Ambiente de Tempo de Execução Java SE do Oracle
+### <a name="set-up-oracles-java-se-runtime-environment"></a>Configurar o Ambiente de Runtime Java SE do Oracle
 
 1. Baixe e execute o instalador exe.
 2. Siga as instruções do instalador para concluir a instalação.
@@ -179,6 +179,12 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
   
 ## <a name="release-notes"></a>Notas de Versão
+
+### <a name="version-1160"></a>Versão 1.16.0
+
+#### <a name="bugfixes"></a>Correções de bugs
+
+1. Em determinados casos, a execução do pacote relata o "Erro: Não foi possível carregar o arquivo ou assembly ‘Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed’ ou uma de suas dependências."
 
 ### <a name="version-1150"></a>Versão 1.15.0
 

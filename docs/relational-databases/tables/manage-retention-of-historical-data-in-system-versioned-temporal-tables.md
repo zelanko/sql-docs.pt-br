@@ -1,6 +1,6 @@
 ---
-title: Gerenciar a retenção de dados históricos em tabelas temporais com controle de versão do sistema | Microsoft Docs
-ms.custom: ''
+title: Gerenciar dados históricos em Tabelas Temporais com Versão do Sistema
+ms.custom: seo-lt-2019
 ms.date: 05/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9066f82c01dede49307cd38565f40f263d7ae76f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 112a0ddd71ffb6b465c70eba1a296a97a760bf17
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909563"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73657620"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gerenciar a Retenção de Dados Históricos em Tabelas Temporais com Versão do Sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

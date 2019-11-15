@@ -1,68 +1,69 @@
 ---
-title: Tutorial para análise no banco de dados usando o R
-description: Saiba como inserir código de linguagem de programação R em SQL Server procedimentos armazenados e funções T-SQL.
+title: 'Tutorial de R + T-SQL: Desenvolver um modelo'
+description: Saiba como inserir código de programação R em procedimentos armazenados do SQL Server e funções do T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5b2629a50a73208181cc14fd843cd9ab9c0b05df
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
-ms.translationtype: MT
+ms.openlocfilehash: f0734203a5b5e49ad344b2c0440208c6b652c080
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69633602"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73725471"
 ---
-# <a name="tutorial-r-data-analytics-for-sql-developers"></a>Tutorial: Análise de dados do R para desenvolvedores do SQL
+# <a name="tutorial-r-data-analytics-for-sql-developers"></a>Tutorial: Análise de dados do R para desenvolvedores de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Neste tutorial para programadores do SQL, saiba mais sobre a integração do R criando e implantando uma solução de aprendizado de máquina baseada em R usando um banco de dados [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) no SQL Server. Você usará o T-SQL, SQL Server Management Studio e uma instância do mecanismo de banco de dados com [Serviços de Machine Learning] ([serviços de Machine Learning](../install/sql-machine-learning-services-windows-install.md) e o suporte à linguagem R
+Neste tutorial para programadores de SQL, saiba mais sobre a integração do R ao criar e implantar uma solução de aprendizado de máquina baseada em R usando um banco de dados [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) no SQL Server. Você usará o T-SQL, o SQL Server Management Studio e uma instância do mecanismo de banco de dados com os [Serviços de Machine Learning] ([Serviços de Machine Learning](../install/sql-machine-learning-services-windows-install.md) e o suporte à linguagem R
 
-Este tutorial apresenta as funções do R usadas em um fluxo de trabalho de modelagem de dados. As etapas incluem exploração de dados, criação e treinamento de um modelo de classificação binária e implantação de modelo. O modelo que você criará prevê se uma corrida provavelmente resultará em uma dica com base na hora do dia, distância viajada e local de seleção. 
+Este tutorial apresenta as funções do R usadas em um fluxo de trabalho de modelagem de dados. As etapas incluem exploração de dados, criação e treinamento de um modelo de classificação binária e implantação de modelo. O modelo que você criará prevê se uma corrida provavelmente resultará em uma gorjeta com base na hora do dia, na distância percorrida e na localização de embarque. 
 
 Todo o código R usado neste tutorial é encapsulado em procedimentos armazenados que você cria e executa no Management Studio.
 
-## <a name="background-for-sql-developers"></a>Plano de fundo para desenvolvedores do SQL
+## <a name="background-for-sql-developers"></a>Contexto para desenvolvedores de SQL
 
-O processo de criação de uma solução de aprendizado de máquina é complexo que pode envolver várias ferramentas e a coordenação de especialistas do assunto em várias fases:
+O processo de criação de uma solução de aprendizado de máquina é complexo, podendo envolver várias ferramentas e a coordenação de especialistas do assunto em várias fases:
 
-+ obtendo e limpando dados
-+ explorando os dados e criando recursos úteis para modelagem
-+ treinando e ajustando o modelo
++ obtenção e limpeza de dados
++ exploração de dados e criação de recursos úteis para modelagem
++ treinamento e ajuste do modelo
 + implantação para produção
 
-O desenvolvimento e o teste do código real são mais bem executados usando um ambiente de desenvolvimento de R dedicado. No entanto, depois que o script for totalmente testado, você poderá implantá [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - [!INCLUDE[tsql](../../includes/tsql-md.md)] lo facilmente no usando procedimentos armazenados no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ambiente familiar do.
+O desenvolvimento e teste do código do R real serão mais bem executados usando um ambiente de desenvolvimento R dedicado. No entanto, depois que o script estiver totalmente testado, você poderá implantá-lo com facilidade no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando os procedimentos armazenados do [!INCLUDE[tsql](../../includes/tsql-md.md)] no ambiente conhecido do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
-A finalidade deste tutorial de várias partes é uma introdução a um fluxo de trabalho típico para migrar "código R concluído" para SQL Server. 
+A finalidade deste tutorial de várias partes é uma introdução a um fluxo de trabalho típico para migrar "código R pronto" para o SQL Server. 
 
 - [Lição 1: Explorar e visualizar a forma e a distribuição de dados chamando funções do R em procedimentos armazenados](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-- [Lição 2: Criar recursos de dados usando o R em funções T-SQL](sqldev-create-data-features-using-t-sql.md)
+- [Lição 2: Criar recursos de dados usando o R em funções do T-SQL](sqldev-create-data-features-using-t-sql.md)
   
-- [Lição 3: Treinar e salvar um modelo de R usando funções e procedimentos armazenados](sqldev-train-and-save-a-model-using-t-sql.md)
+- [Lição 3: Treinar e salvar um modelo do R usando funções e procedimentos armazenados](sqldev-train-and-save-a-model-using-t-sql.md)
   
-- [Lição 4: Prever resultados potenciais usando um modelo de R em um procedimento armazenado](../tutorials/sqldev-operationalize-the-model.md)
+- [Lição 4: Prever os resultados potenciais usando um modelo do R em um procedimento armazenado](../tutorials/sqldev-operationalize-the-model.md)
 
-Depois que o modelo tiver sido salvo no banco de dados, chame o modelo para previsões [!INCLUDE[tsql](../../includes/tsql-md.md)] do usando procedimentos armazenados.
+Depois que o modelo for salvo no banco de dados, use procedimentos armazenados a fim de chamar o modelo para fazer previsões por meio do [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
-Todas as tarefas podem ser feitas [!INCLUDE[tsql](../../includes/tsql-md.md)] usando procedimentos armazenados [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]no.
+Todas as tarefas podem ser feitas usando procedimentos armazenados do [!INCLUDE[tsql](../../includes/tsql-md.md)] no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
-Este tutorial pressupõe familiaridade com operações básicas do banco de dados, como criar bancos de dados e tabelas, importar e escrever consultas SQL. Ele não pressupõe que você conhece o R. Como tal, todo o código R é fornecido. 
+Este tutorial pressupõe que você tem familiaridade com as operações de banco de dados, tais como criar bancos de dados e tabelas, importar dados e escrever consultas SQL. Ele não pressupõe que você conhece o R. Assim, todo o código R é fornecido. 
 
-+ [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) ou [SQL Server serviços de Machine Learning com R habilitado](../install/sql-machine-learning-services-windows-install.md#verify-installation)
++ [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) ou [Serviços de Machine Learning do SQL Server com o R habilitado](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
-+ [Bibliotecas de R](../package-management/r-package-information.md)
++ [Bibliotecas do R](../package-management/r-package-information.md)
 
 + [Permissões](../security/user-permission.md)
 
-+ [Banco de dados de demonstração do NYC táxi](demo-data-nyctaxi-in-sql.md)
++ [Banco de dados de demonstração de Táxi de Nova York](demo-data-nyctaxi-in-sql.md)
 
 
 ## <a name="next-steps"></a>Próximas etapas
 
 > [!div class="nextstepaction"]
-> [Explorar e Visualizar dados usando as funções do R em procedimentos armazenados](../tutorials/sqldev-explore-and-visualize-the-data.md)
+> [Explorar e visualizar dados usando as funções do R em procedimentos armazenados](../tutorials/sqldev-explore-and-visualize-the-data.md)

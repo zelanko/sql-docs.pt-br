@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653319"
@@ -20,7 +20,7 @@ ms.locfileid: "69653319"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este tutorial demonstra como usar o Transact-SQL para carregar dados no [pool de dados](concept-data-pool.md) de um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Com [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]o, os dados de uma variedade de fontes podem ser ingeridos e distribuídos entre as instâncias do pool de dados.
+Este tutorial demonstra como usar o Transact-SQL para carregar dados no [pool de dados](concept-data-pool.md) de um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Com [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], os dados de uma variedade de fontes podem ser ingeridos e distribuídos entre as instâncias do pool de dados.
 
 Neste tutorial, você aprenderá como:
 

@@ -1,7 +1,7 @@
 ---
 title: O que são Clusters de Big Data?
 titleSuffix: SQL Server Big Data Clusters
-description: Saiba mais sobre os [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versão prévia) que são executados no Kubernetes e fornecem opções de expansão para dados relacionais e do HDFS.
+description: Saiba mais sobre os Clusters de Big Data do SQL Server que são executados no Kubernetes e fornecem opções de expansão para dados relacionais e do HDFS.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 296a39a59521441a8f3cd5b95bd8e61710fa568a
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 6bbb185936b2a388014a16ae0a6ecc6c52c5d29a
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532508"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706662"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>O que são [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
@@ -56,7 +56,7 @@ Os [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 O gerenciamento e o monitoramento são fornecidos por meio de uma combinação de ferramentas de linha de comando, APIs, portais e exibições de gerenciamento dinâmico.
 
-Você pode usar o Azure Data Studio para executar uma variedade de tarefas no cluster de Big Data. Isso é habilitado pela nova **Extensão do SQL Server 2019 (versão prévia)** . Essa extensão fornece:
+Você pode usar o Azure Data Studio para executar uma variedade de tarefas no cluster de Big Data. Isso é habilitado pela nova **Extensão do SQL Server 2019**. Essa extensão fornece:
 
 - Snippets internos para tarefas comuns de gerenciamento.
 - Capacidade de navegar no HDFS, carregar arquivos, visualizar arquivos e criar diretórios.

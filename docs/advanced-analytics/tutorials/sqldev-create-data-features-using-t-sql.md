@@ -1,21 +1,22 @@
 ---
-title: Lição 2 criar recursos de dados usando as funções R e T-SQL
-description: Tutorial mostrando como adicionar cálculos a procedimentos armazenados para uso em modelos de aprendizado de máquina R.
+title: 'Tutorial de R + T-SQL: Recursos de dados'
+description: Tutorial mostrando como adicionar cálculos a procedimentos armazenados para uso em modelos de machine learning do R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c8bc2e66c68fc208ae3a97a6a27874600874336c
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 6970fd92fc1b655e0df66cdb548a044e3bdc746e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714723"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73725755"
 ---
-# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Lição 2: Criar recursos de dados usando R e T-SQL
+# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Lição 2: Criar recursos de dados usando o R e o T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Este artigo faz parte de um tutorial para desenvolvedores de SQL sobre como usar o R no SQL Server.
@@ -24,23 +25,23 @@ Nesta etapa, você aprenderá a criar recursos de dados brutos usando uma funç�
 
 ## <a name="about-feature-engineering"></a>Sobre a engenharia de recursos
 
-Após várias rodadas de exploração de dados, você reuniu algumas ideias sobre os dados e está pronto para passar para a *engenharia de recursos*. Esse processo de criação de recursos significativos dos dados brutos é uma etapa crítica na criação de modelos analíticos.
+Após várias rodadas de exploração de dados, você reuniu algumas ideias sobre os dados e está pronto para passar para a *engenharia de recursos*. Esse processo de criação de recursos significativos com base nos dados brutos é uma etapa crítica para a criação de modelos analíticos.
 
-Nesse conjunto de dados, os valores de distância são baseados na distância do medidor relatado e não representam necessariamente a distância geográfica ou a distância real viajada. Portanto, você precisará calcular a distância direta entre os pontos de embarque e desembarque de passageiros, usando as coordenadas disponíveis no conjunto de dados NYC Taxi de origem. Você pode fazer isso usando a [fórmula de Haversine](https://en.wikipedia.org/wiki/Haversine_formula) em uma função personalizada [!INCLUDE[tsql](../../includes/tsql-md.md)] .
+Neste conjunto de dados, os valores de distância baseiam-se na distância do medidor relatado e não representam necessariamente a distância geográfica nem a distância real percorrida. Portanto, você precisará calcular a distância direta entre os pontos de embarque e desembarque de passageiros, usando as coordenadas disponíveis no conjunto de dados NYC Taxi de origem. Você pode fazer isso usando a [fórmula de Haversine](https://en.wikipedia.org/wiki/Haversine_formula) em uma função personalizada [!INCLUDE[tsql](../../includes/tsql-md.md)] .
 
 Você usará uma função personalizada do T-SQL, _fnCalculateDistance_, para calcular a distância usando a fórmula de Haversine e usará uma segunda função personalizada do T-SQL, _fnEngineerFeatures_, para criar uma tabela que contém todos os recursos.
 
-O processo geral é o seguinte:
+Em linhas gerais, o processo é o seguinte:
 
 - Criar a função T-SQL que executa os cálculos
 
-- Chamar a função para gerar os dados do recurso
+- Chamar a função para gerar os dados de recurso
 
 - Salvar os dados de recurso em uma tabela
 
-## <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcular a distância de viagem usando fnCalculateDistance
+## <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcular a distância da corrida usando fnCalculateDistance
 
-A função _fnCalculateDistance_ deve ter sido baixada e registrada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parte da preparação para este tutorial. Reserve um minuto para examinar o código.
+A função _fnCalculateDistance_ deve ter sido baixada e registrada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parte da preparação para este tutorial. Reserve um minuto para examinar o código.
   
 1. No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expanda **Programação**, **Funções** e **Funções de valor escalar**.   
 
@@ -74,9 +75,9 @@ A função _fnCalculateDistance_ deve ter sido baixada e registrada [!INCLUDE[ss
   
     - Ela usa os valores de latitude e longitude como entradas, obtidos dos locais de embarque e desembarque de passageiros. A fórmula de Haversine converte locais em radianos e usa esses valores para calcular a distância direta em milhas entre os dois locais.
 
-## <a name="generate-the-features-using-fnengineerfeatures"></a>Gerar os recursos usando o _fnEngineerFeatures_
+## <a name="generate-the-features-using-_fnengineerfeatures_"></a>Gere os recursos usando _fnEngineerFeatures_
 
-Para adicionar os valores computados a uma tabela que pode ser usada para treinar o modelo, você usará outra função, _fnEngineerFeatures_. A nova função chama a função T-SQL criada anteriormente, _fnCalculateDistance_, para obter a distância direta entre os locais de recebimento e de retirada. 
+Para adicionar os valores calculados a uma tabela que pode ser usada para treinar o modelo, você usará outra função, _fnEngineerFeatures_. A nova função chama a função do T-SQL criada anteriormente, _fnCalculateDistance_, para obter a distância direta entre os locais de embarque e desembarque de passageiros. 
 
 1. Reserve um minuto para examinar a função personalizada do T-SQL no o código, _fnEngineerFeatures_, que deve ter sido criada como parte da preparação para esse passo a passo.
   
@@ -104,11 +105,11 @@ Para adicionar os valores computados a uma tabela que pode ser usada para treina
     GO
     ```
 
-    + Essa função com valor de tabela que usa várias colunas como entradas e gera uma tabela com várias colunas de recurso.
+    + Essa é uma função com valor de tabela que usa várias colunas como entradas e gerar uma tabela com várias colunas de recurso.
 
-    + A finalidade dessa função é criar novos recursos para uso na criação de um modelo.
+    + A finalidade dessa função é criar recursos para uso na criação de um modelo.
 
-2.  Para verificar se essa função funciona, use-a para calcular a distância geográfica das viagens em que a distância limitada era 0, mas os locais de seleção e retirada foram diferentes.
+2.  Para verificar se essa função funciona, é possível usá-la para calcular a distância geográfica dessas corridas em que a distância limitada era 0, mas os locais de embarque e desembarque de passageiros eram diferentes.
   
     ```sql
         SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
@@ -119,7 +120,7 @@ Para adicionar os valores computados a uma tabela que pode ser usada para treina
         ORDER BY trip_time_in_secs DESC
     ```
   
-    Como você pode ver, a distância relatada pelo medidor nem sempre corresponde à distância geográfica. Por isso a engenharia de recursos é tão importante. Você pode usar esses recursos de dados aprimorados para treinar um modelo de aprendizado de máquina usando o R.
+    Como você pode ver, a distância relatada pelo medidor nem sempre corresponde à distância geográfica. Por isso a engenharia de recursos é tão importante. É possível usar esses recursos de dados aprimorados para treinar um modelo de machine learning usando o R.
 
 ## <a name="next-lesson"></a>Próxima lição
 
@@ -127,4 +128,4 @@ Para adicionar os valores computados a uma tabela que pode ser usada para treina
 
 ## <a name="previous-lesson"></a>Lição anterior
 
-[Lição 1: Explorar e visualizar os dados usando o R e procedimentos armazenados](sqldev-explore-and-visualize-the-data.md)
+[Lição 1: Explorar e visualizar os dados usando o R e os procedimentos armazenados](sqldev-explore-and-visualize-the-data.md)

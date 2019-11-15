@@ -1,6 +1,6 @@
 ---
 title: Configuração do firewall
-description: Como configurar o firewall para conexões de saída de SQL Server Serviços de Machine Learning.
+description: Como configurar o firewall para conexões de saída dos Serviços de Machine Learning do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -10,34 +10,34 @@ ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: c55f68a1134fee6477c52182ad66b8705e363296
 ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/01/2019
 ms.locfileid: "68715591"
 ---
-# <a name="firewall-configuration-for-sql-server-machine-learning-services"></a>Configuração de firewall para SQL Server Serviços de Machine Learning
+# <a name="firewall-configuration-for-sql-server-machine-learning-services"></a>Configuração de firewall para os Serviços de Machine Learning do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Este artigo lista as considerações de configuração do firewall que o administrador ou o arquiteto deve ter em mente ao usar os serviços do Machine Learning.
+Este artigo lista as considerações de configuração do firewall que o administrador ou o arquiteto deve ter em mente ao usar os Serviços de Machine Learning.
 
 ## <a name="default-firewall-rules"></a>Regras de firewall padrão
 
 Por padrão, a instalação do SQL Server desabilita as conexões de saída criando regras de firewall.
 
-No SQL Server 2016 e 2017, essas regras são baseadas em contas de usuário local, em que a instalação criou uma regra de saída para **SQLRUserGroup** que negou acesso à rede para seus membros (cada conta de trabalho foi listada como um princípio local sujeito à regra. Para obter mais informações sobre SQLRUserGroup, consulte [visão geral de segurança para a estrutura de extensibilidade no SQL Server serviços de Machine Learning](../../advanced-analytics/concepts/security.md#sqlrusergroup).
+No SQL Server 2016 e 2017, essas regras se baseiam em contas de usuário local, em que a instalação criou uma regra de saída para **SQLRUserGroup** que negou acesso à rede para seus membros (cada conta de trabalho foi listada como uma entidade de princípio local para a regra). Para obter mais informações sobre SQLRUserGroup, confira [Visão geral de segurança para a estrutura de extensibilidade nos Serviços de Machine Learning do SQL Server](../../advanced-analytics/concepts/security.md#sqlrusergroup).
 
-No SQL Server 2019, como parte da mudança para AppContainers, há novas regras de firewall baseadas em SIDs de AppContainer: uma para cada um dos 20 AppContainers criados pela instalação do SQL Server. As convenções de nomenclatura para o nome da regra de firewall são **bloquear o acesso à rede para o appcontainer-00 na instância SQL Server MSSQLSERVER**, em que 00 é o número do appcontainer (00-20 por padrão) e MSSQLSERVER é o nome da instância de SQL Server.
+No SQL Server 2019, como parte da mudança para os AppContainers, há novas regras de firewall baseadas em SIDs de AppContainer: uma para cada um dos 20 AppContainers criados pela instalação do SQL Server. As convenções de nomenclatura para o nome da regra de firewall são **Bloquear o acesso à rede para o AppContainer-00 na instância MSSQLSERVER do SQL Server**, em que 00 é o número do AppContainer (00-20 por padrão) e MSSQLSERVER é o nome da instância do SQL Server.
 
 > [!Note]
-> Se forem necessárias chamadas de rede, você poderá desabilitar as regras de saída no firewall do Windows.
+> Se forem necessárias chamadas de rede, você poderá desabilitar as regras de saída no Firewall do Windows.
 
-## <a name="restrict-network-access"></a>Restringir o acesso à rede
+## <a name="restrict-network-access"></a>Restringir acesso à rede
 
-Em uma instalação padrão, uma regra de firewall do Windows é usada para bloquear todo o acesso de rede de saída de processos de tempo de execução externos. As regras de firewall devem ser criadas para impedir que os processos de tempo de execução externos baixem pacotes ou façam outras chamadas de rede que possam ser mal-intencionadas.
+Na instalação padrão, uma regra de Firewall do Windows é usada para bloquear todo o acesso à rede de saída dos processos de runtime externos. As regras de firewall devem ser criadas para impedir que o processo de runtime de externo baixe pacotes ou faça outras chamadas de rede que possam ser potencialmente mal-intencionadas.
 
-Se você estiver usando um programa de firewall diferente, também poderá criar regras para bloquear a conexão de rede de saída para tempos de execução externos, definindo regras para as contas de usuário local ou para o grupo representado pelo pool de contas de usuário.
+Se você estiver usando um programa de firewall diferente, também poderá criar regras para bloquear conexões de rede de saída para runtimes externos, definindo regras para as contas de usuário local ou para o grupo representado pelo pool de contas de usuário.
 
-É altamente recomendável que você ative o Firewall do Windows (ou outro firewall de sua escolha) para impedir o acesso irrestrito à rede pelos tempos de execução do R ou do Python.
+É altamente recomendável que você ative o Firewall do Windows (ou outro firewall de sua escolha) para evitar o acesso irrestrito à rede pelos runtimes de R ou Python.
 
 ## <a name="next-steps"></a>Próximas etapas
 

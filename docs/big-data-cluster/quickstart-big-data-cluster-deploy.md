@@ -1,7 +1,7 @@
 ---
 title: Implantar com um script Python
-titleSuffix: SQL Server big data clusters
-description: Saiba como usar um script de implantação para implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versão prévia) no AKS (Serviço Kubernetes do Azure).
+titleSuffix: SQL Server Big Data Clusters
+description: Saiba como usar um script de implantação para implantar Clusters de Big Data do SQL Server no AKS (Serviço Kubernetes do Azure).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3233ec8a266ea77fe0eb62f5cfcadde8f2949ff9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1b2a838f8ad386b8a236304401308d5be0f63ff1
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531925"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706349"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Usar um script Python para implantar um cluster de Big Data do SQL Server no AKS (Serviço de Kubernetes do Azure)
 
@@ -80,8 +80,6 @@ Use as etapas a seguir para executar o script de implantação. Esse script cria
    | **Nome do cluster** | O nome do cluster do AKS e do cluster de Big Data. O nome do cluster de Big Data deve ter apenas caracteres alfanuméricos minúsculos e nenhum espaço. (**sqlbigdata** padrão). |
    | **Senha** | Senha para o controlador, o gateway HDFS/Spark e a instância mestre (**MySQLBigData2019** padrão). |
    | **Nome de usuário** | Nome de usuário do controlador (padrão: **admin**). |
-
-Os seguintes parâmetros foram necessários para os participantes no programa de usuários pioneiros do cluster de Big Data do SQL Server 2019: **Nome de usuário** e **senha** do Docker. Do CTP 3.2 em diante, eles não são mais necessários.
 
    > [!IMPORTANT]
    > O tamanho padrão do computador **Standard_L8s** pode não estar disponível em todas as regiões do Azure. Se você selecionar um tamanho de computador diferente, verifique se o número total de discos que podem ser anexados entre os nós no cluster é maior ou igual a 24. Cada declaração de volume persistente no cluster requer um disco anexado. Atualmente, o cluster de Big Data requer 24 declarações de volume persistente. Por exemplo, o tamanho do computador [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) dá suporte a 32 discos anexados, portanto, você pode avaliar clusters de Big Data com um único nó desse tamanho de computador.

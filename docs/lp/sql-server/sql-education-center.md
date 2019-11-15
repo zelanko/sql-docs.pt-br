@@ -1,21 +1,23 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Documentação do Microsoft Azure
-description: Saiba como criar e gerenciar aplicativos poderosos usando serviços de nuvem do Microsoft Azure. Obtenha documentação, código de exemplo, tutoriais e muito mais.
+experimental: true
+experiment_id: 81ba5f65-59fb-4d
+title: Centro de educação do SQL Server
+description: Um resumo dos recursos que você pode usar para aprender sobre o SQL Server e o Banco de Dados SQL do Azure. De guias de início rápido e tutoriais ao Microsoft Learn e o LinkedIn Learning.
 ms.topic: hub-page
 ms.prod: sql
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 12/15/2018
+ms.date: 11/05/2019
 featureFlags:
 - clicktale
-ms.openlocfilehash: 4430d76ac8e848127e9936bb6ecf8aa8b08e9982
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: b05ebcd71bed887d711705b3dffa99bf6ecf05fc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176277"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637920"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -31,7 +33,7 @@ ms.locfileid: "70176277"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">Experimente o SQL Server 2019 (versão prévia)</span>
+                                    <span class="likeAnH3">Experimentar o SQL Server 2019 (versão prévia)</span>
                                 </div>
                             </div>
                         </div>

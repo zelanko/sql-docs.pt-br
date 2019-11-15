@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b09a5febe9bc67f04d70c4d5b7850ef26ebac750
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653723"
@@ -23,7 +23,7 @@ Saiba como usar as Ferramentas do Spark & Hive para Visual Studio Code para cria
 As Ferramentas do Spark & Hive podem ser instaladas em plataformas com suporte do Visual Studio Code, que incluem Windows, Linux e macOS. A seguir, você verá os pré-requisitos das diferentes plataformas.
 
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Os itens a seguir são necessários para concluir as etapas neste artigo:
 
@@ -53,9 +53,9 @@ Após concluir os pré-requisitos, você poderá instalar as Ferramentas do Spar
 
 Conclua as etapas a seguir para abrir uma pasta de trabalho e criar um arquivo no Visual Studio Code:
 
-1. Na barra de menus, navegue até **arquivo** > **abrir pasta..** . C:\SQLBDC\SQLBDCexample, em seguida, selecione o botão **Selecionar pasta** .  >  A pasta aparece no modo de exibição do **Explorer** à esquerda.
+1. Na barra de menus, navegue até **Arquivo** > **Abrir Pasta...**  > **C:\SQLBDC\SQLBDCexample**e, em seguida, selecione o botão **Selecionar Pasta**. A pasta aparece no modo de exibição do **Explorer** à esquerda.
 
-2. No modo de exibição do **Explorer** , selecione a pasta, **SQLBDCexample**, e o ícone **novo arquivo** ao lado da pasta de trabalho.
+2. No modo de exibição do **Explorer**, selecione a pasta **SQLBDCexample** e, em seguida, o ícone **Novo Arquivo** ao lado da pasta de trabalho.
 
    ![Novo arquivo](./media/spark-hive-tools-vscode/new-file.png)
 
@@ -116,7 +116,7 @@ Antes de enviar scripts para a seus clusters do Visual Studio Code, você precis
 
 ## <a name="set-default-cluster"></a>Definir cluster padrão
 
-1. Abra novamente a pasta **SQLBDCexample** criada [anteriormente](#open-work-folder) se fechada.  
+1. Abra novamente a pasta **SQLBDCexample** criada [anteriormente](#open-work-folder) se estiver fechada.  
 
 2. Selecione o arquivo **HelloWorld.py** criado [anteriormente](#open-work-folder) e ele será aberto no editor de scripts.
 
@@ -132,7 +132,7 @@ Antes de enviar scripts para a seus clusters do Visual Studio Code, você precis
 
 Você pode enviar consultas de PySpark interativas seguindo as etapas abaixo:
 
-1. Reabra a pasta **SQLBDCexample** criada [anteriormente](#open-work-folder) se fechada.  
+1. Abra novamente a pasta **SQLBDCexample** criada [anteriormente](#open-work-folder) se estiver fechada.  
 
 2. Selecione o arquivo **HelloWorld.py** criado [anteriormente](#open-work-folder) e ele será aberto no editor de scripts.
 
@@ -159,7 +159,7 @@ Você pode enviar consultas de PySpark interativas seguindo as etapas abaixo:
 
 ## <a name="submit-pyspark-batch-job"></a>Enviar trabalho em lotes PySpark
 
-1. Reabra a pasta **SQLBDCexample** criada [anteriormente](#open-work-folder) se fechada.  
+1. Abra novamente a pasta **SQLBDCexample** criada [anteriormente](#open-work-folder) se estiver fechada.  
 
 2. Selecione o arquivo **HelloWorld.py** criado [anteriormente](#open-work-folder) e ele será aberto no editor de scripts.
 
@@ -200,9 +200,9 @@ Envie um arquivo, observe que a pasta `.vscode` é adicionada automaticamente à
 
 **Corpo da solicitação**
 
-| name | description | type |
+| NAME | descrição | Tipo |
 | :- | :- | :- |
-| Arquivo | Arquivo que contém o aplicativo a ser executado | caminho (obrigatório) |
+| file | Arquivo que contém o aplicativo a ser executado | caminho (obrigatório) |
 | proxyUser | Usuário a representar ao executar o trabalho | cadeia de caracteres |
 | className | Classe principal de Java/Spark do aplicativo | cadeia de caracteres |
 | args | Argumentos de linha de comando para o aplicativo | lista de cadeias de caracteres |
@@ -210,22 +210,22 @@ Envie um arquivo, observe que a pasta `.vscode` é adicionada automaticamente à
 | pyFiles | Arquivos Python a serem usados nesta sessão | Lista de cadeias de caracteres |
 | files | arquivos a serem usados nesta sessão | Lista de cadeias de caracteres |
 | driverMemory | Quantidade de memória a ser usada para o processo do driver | cadeia de caracteres |
-| driverCores | Número de núcleos a serem usados para o processo do driver | int |
+| driverCores | Número de núcleos a serem usados para o processo do driver | INT |
 | executorMemory | Quantidade de memória a ser usada pelo processo de executor | cadeia de caracteres |
-| executorCores | Número de núcleos a serem usados para cada executor | int |
-| numExecutors | Número de executores a serem iniciados para esta sessão | int |
+| executorCores | Número de núcleos a serem usados para cada executor | INT |
+| numExecutors | Número de executores a serem iniciados para esta sessão | INT |
 | archives | Arquivos a serem usados nesta sessão | Lista de cadeias de caracteres |
-| queue | O nome da fila YARN para a qual foi enviado | cadeia de caracteres |
-| name | O nome desta sessão | cadeia de caracteres |
+| fila | O nome da fila YARN para a qual foi enviado | cadeia de caracteres |
+| NAME | O nome desta sessão | cadeia de caracteres |
 | conf | Propriedades de configuração do Spark | Mapa de chave = valor |
 
 #### <a name="response-body"></a>Corpo da resposta
 
 O objeto de lote criado.
 
-| name | description | type |
+| NAME | descrição | Tipo |
 | :- | :- | :- |
-| id | A ID da sessão | int |
+| id | A ID da sessão | INT |
 | appId | A ID do aplicativo desta sessão | Cadeia de caracteres |
 | appInfo | As informações detalhadas do aplicativo | Mapa de chave = valor |
 | log | As linhas de log | lista de cadeias de caracteres |
@@ -255,4 +255,4 @@ O Spark & Hive para Visual Studio Code tem suporte para os seguintes recursos:
 3. Examine a exibição **SAÍDA** para verificação.  
 
 ## <a name="next-steps"></a>Próximas etapas
-Para obter mais informações sobre SQL Server Big Data cluster e cenários relacionados, [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)consulte.
+Para obter mais informações sobre os clusters de Big Data do SQL Server e os cenários relacionados, confira [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).

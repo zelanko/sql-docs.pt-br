@@ -1,7 +1,7 @@
 ---
 title: Configurar o Kubernetes com kubeadm
-titleSuffix: SQL Server big data clusters
-description: Saiba como configurar o kubernetes em vários computadores Ubuntu 16, 4 ou 18, 4 (físico ou virtual) para [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] implantações.
+titleSuffix: SQL Server Big Data Clusters
+description: Saiba como configurar o Kubernetes em vários computadores com Ubuntu 16.04 ou 18.04 (físicos ou virtuais) para implantações do [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,24 +9,24 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 90c13c270b1e2fe64290603e256027e945d98b84
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
-ms.translationtype: MT
+ms.openlocfilehash: 0bec68e81eab8557e86bfcbd5db78e19c0ce2175
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71688305"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706371"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Configurar o Kubernetes em vários computadores para implantações de cluster de Big Data do SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este artigo fornece um exemplo de como usar o **kubeadm** para configurar o kubernetes em vários computadores [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] para implantações. Neste exemplo, vários computadores com Ubuntu 16.04 ou 18.04 LTS (físicos ou virtuais) são o destino. Se você estiver implantando em uma plataforma diferente do Linux, deverá alterar alguns dos comandos para corresponder ao seu sistema.  
+Este artigo fornece um exemplo de como usar **kubeadm** para configurar o Kubernetes em vários computadores para implantações do [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Neste exemplo, vários computadores com Ubuntu 16.04 ou 18.04 LTS (físicos ou virtuais) são o destino. Se você estiver implantando em uma plataforma diferente do Linux, deverá alterar alguns dos comandos para corresponder ao seu sistema.  
 
 > [!TIP] 
 > Para scripts de exemplo que configuram o Kubernetes, consulte [Criar um cluster do Kubernetes usando Kubeadm no Ubuntu 16.04 LTS ou 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm).
 Além disso, consulte [este](deployment-script-single-node-kubeadm.md) tópico para ver um script de exemplo que automatiza uma implantação de uma única implantação de kubeadm de nó único em uma VM e implanta uma configuração padrão de cluster de Big Data sobre ela.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Mínimo de três computadores físicos ou máquinas virtuais com Linux
 - Configuração recomendada por computador:
@@ -35,7 +35,7 @@ Além disso, consulte [este](deployment-script-single-node-kubeadm.md) tópico p
    - 100 GB de armazenamento
  
 > [!Important] 
-> Antes de iniciar a implantação de cluster Big Data, verifique se os relógios estão sincronizados em todos os nós kubernetes em que a implantação está direcionada. O cluster Big Data tem propriedades de integridade internas para vários serviços que são sensíveis ao tempo e as distorções de relógio podem resultar em status incorreto.
+> Antes de iniciar a implantação do cluster de Big Data, verifique se os relógios estão sincronizados em todos os nós do Kubernetes que serão destinos da implantação. Como o cluster de Big Data tem propriedades de integridade internas para vários serviços que são sensíveis ao tempo, distorções de relógio podem causar status incorretos.
 
 ## <a name="prepare-the-machines"></a>Preparar os computadores
 

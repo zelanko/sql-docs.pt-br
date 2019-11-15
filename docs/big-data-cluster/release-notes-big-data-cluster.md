@@ -1,7 +1,7 @@
 ---
 title: Notas sobre a versão de Clusters de Big Data do SQL Server
 titleSuffix: SQL Server big data clusters
-description: Este artigo descreve as atualizações mais recentes e os problemas conhecidos para [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versão prévia).
+description: Este artigo descreve as atualizações mais recentes e problemas conhecidos dos Clusters de Big Data do SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e868d5db99c3f0be141d28a881d8d8bc6f9c241e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: bc5928a7e3015545d36900b52ef01a42d9694cc0
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531639"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706176"
 ---
 # <a name="sql-server-big-data-clusters-release-notes"></a>Notas sobre a versão de Clusters de Big Data do SQL Server
 

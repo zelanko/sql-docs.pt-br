@@ -1,29 +1,28 @@
 ---
-title: 'Tutorial: Pesquisar uma cadeia de caracteres usando regex (expressões regulares) em Java'
-titleSuffix: SQL Server Language Extensions
-description: Este tutorial mostra como usar Extensões de Linguagem do SQL Server e executar código Java que pesquisa uma cadeia de caracteres com expressões regulares.
+title: 'Tutorial: Pesquisa de cadeia de caracteres Regex em Java'
+description: Este tutorial mostra como usar Extensões de Linguagem do SQL Server e executar código Java que pesquisa uma cadeia de caracteres com expressões regulares (regex).
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 746706c1ef1ee8f9ed393ac57497ffb570bef50c
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9740e8c93fbac0d7727ba9922342df96d9190e10
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589000"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658798"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>Tutorial: Pesquisar uma cadeia de caracteres usando regex (expressões regulares) em Java
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Este tutorial mostra como usar [Extensões de Linguagem do SQL Server](../language-extensions-overview.md) e criar uma classe Java que recebe duas colunas (ID e texto) do SQL Server e uma expressão regular como um parâmetro de entrada. A classe retorna duas colunas de volta para SQL Server (ID e texto).
+Este tutorial mostra como usar [Extensões de Linguagem do SQL Server](../language-extensions-overview.md) e criar uma classe Java que recebe duas colunas (ID e texto) do SQL Server e uma expressão regular (regex) como um parâmetro de entrada. A classe retorna duas colunas de volta para SQL Server (ID e texto).
 
 Para um determinado texto na coluna de texto enviado para a classe Java, o código verifica se determinada expressão regular é atendida e retorna esse texto com a ID original.
 
-Esse exemplo específico usa uma expressão regular que verifica se um texto contém a palavra “Java” ou “java”.
+Este código de exemplo usa uma expressão regular que verifica se um texto contém a palavra "Java" ou "java".
 
 ## <a name="prerequisites"></a>Prerequisites
 

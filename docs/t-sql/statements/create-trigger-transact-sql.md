@@ -1,7 +1,7 @@
 ---
 title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: mathoma
@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 245342ac9495e1e4331453f8869e2e6df46a1c1e
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 48335017cd45e713001a22941875f30c51148b62
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190369"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73168762"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ Os gatilhos de logon são disparados em resposta ao evento LOGON gerado quando a
 > [!NOTE]  
 >  A integração do CLR do .NET Framework ao SQL Server é discutida neste artigo. A integração CLR não se aplica ao Banco de Dados SQL do Azure.  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -206,9 +206,7 @@ Garante que as tabelas referenciadas por um gatilho não possam ser removidas ne
 Essa opção é obrigatória para gatilhos em tabelas com otimização de memória e não é compatível com gatilhos em tabelas tradicionais.  
   
 FOR | AFTER  
-AFTER especifica que o gatilho DML é disparado apenas quando todas as operações especificadas na instrução SQL de gatilho são iniciadas com êxito. Todas as verificações de restrição e ações referenciais em cascata também devem ter êxito para que esse gatilho seja disparado.  
-  
-AFTER é o padrão quando FOR é a única palavra-chave especificada.  
+FOR ou AFTER especifica que o gatilho DML é disparado apenas quando todas as operações especificadas na instrução SQL de gatilho foram iniciadas com êxito. Todas as verificações de restrição e ações referenciais em cascata também devem ter êxito para que esse gatilho seja disparado.  
   
 Não é possível definir gatilhos AFTER em exibições.  
   

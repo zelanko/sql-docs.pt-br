@@ -1,7 +1,7 @@
 ---
 title: Use a rotação para carregar dados no HDFS | Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: Use a rotação para carregar dados no HDFS em [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Usar curl para carregar dados no HDFS no [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,20 +9,20 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c65ce7fb6752240f0dd23a6dab195539146e7933
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MT
+ms.openlocfilehash: 970c4f51535395a940a9c47e77d864d00c1f403c
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049882"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706632"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Use a rotação para carregar dados no HDFS no [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Usar curl para carregar dados no HDFS no [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este artigo explica como usar a **rotação** para carregar dados no HDFS em [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versão prévia).
+Este artigo explica como usar **curl** para carregar dados no HDFS no [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-## <a id="prereqs"></a> Prerequisites
+## <a id="prereqs"></a> Pré-requisitos
 
 - [Carregar dados de exemplo em seu cluster de Big Data](tutorial-load-sample-data.md)
 
@@ -49,7 +49,7 @@ Por exemplo:
 
 ## <a name="list-a-file"></a>Listar um arquivo
 
-Para listar o arquivo em **HDFS:///product_review_data**, use o seguinte comando de ondulação:
+Para listar o arquivo em **hdfs:///product_review_data**, use o seguinte comando curl:
 
 ```bash
 curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
@@ -57,7 +57,7 @@ curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP extern
 
 ## <a name="put-a-local-file-into-hdfs"></a>Colocar um arquivo local no HDFS
 
-Para colocar um novo arquivo **Test. csv** do diretório local no diretório product_review_data, use o seguinte comando de rotação (o parâmetro **Content-Type** é necessário):
+Para colocar um novo arquivo **test.csv** do diretório local em product_review_data directory, use o seguinte comando curl (o parâmetro **Content-Type** é necessário):
 
 ```bash
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'

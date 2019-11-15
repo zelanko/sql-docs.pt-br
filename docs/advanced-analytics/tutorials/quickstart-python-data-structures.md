@@ -1,7 +1,7 @@
 ---
-title: Trabalhar com tipos e objetos de dados do Python e do SQL
+title: 'Início Rápido: Tipos de dados do Python'
 titleSuffix: SQL Server Machine Learning Services
-description: Neste guia de início rápido, saiba como trabalhar com tipos de dados e objetos de dados no Python e SQL Server com SQL Server Serviços de Machine Learning.
+description: Neste guia de início rápido, saiba como trabalhar com tipos de dados e objetos de dados no Python e no SQL Server com os Serviços de Machine Learning do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/04/2019
@@ -9,43 +9,44 @@ ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c09c9ad4625520054f2d3f103ec055c37764aed2
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
-ms.translationtype: MT
+ms.openlocfilehash: 1bac339105acdb7318b29426cd0bb4afdc2481e7
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72008434"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727021"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>Início Rápido: Manipular tipos de dados e objetos usando Python no SQL Server Serviços de Machine Learning
+# <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>Início Rápido: Manipular tipos de dados e objetos usando o Python nos Serviços de Machine Learning do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Este guia de início rápido mostra como usar estruturas de dados ao usar o Python no SQL Server Serviços de Machine Learning.
+Este início rápido mostra como usar estruturas de dados ao usar o Python nos Serviços de Machine Learning do SQL Server.
 
-SQL Server se baseia no pacote do Python **pandas** , que é ótimo para trabalhar com dados tabulares. No entanto, você não pode passar um escalar do Python para SQL Server e esperar que ele "simplesmente funcione". Neste guia de início rápido, você examinará algumas definições básicas de tipo de dados, para prepará-lo para problemas adicionais que você possa encontrar ao passar dados tabulares entre Python e SQL Server.
+O SQL Server se baseia no pacote **Pandas** do Python, que é ótimo para trabalhar usando dados tabulares. No entanto, você não pode passar um escalar do Python para SQL Server e esperar que ele "simplesmente funcione". Neste guia de início rápido, você examinará algumas definições básicas de tipo de dados, a fim de se preparar para problemas adicionais que pode enfrentar ao passar dados tabulares entre o Python e o SQL Server.
 
-Conceitos para conhecer o front include:
+Os conceitos que se deve conhecer de antemão incluem:
 
-- Um quadro de dados é uma tabela com _várias_ colunas.
-- Uma única coluna de um quadro de dados é um objeto como uma lista chamado série.
-- Um único valor de um quadro de dados é chamado de uma célula e é acessado pelo índice.
+- Uma estrutura de dados é uma tabela com _várias_ colunas.
+- Uma coluna única de uma estrutura de dados é um objeto semelhante a uma lista, chamado série.
+- Um valor único de uma estrutura de dados é chamado de célula e é acessado pelo índice.
 
-Como você exporia o único resultado de um cálculo como um quadro de dados, se um data. frame exigir uma estrutura de tabela? Uma resposta é representar o valor escalar único como uma série, que é facilmente convertida em um quadro de dados. 
+Como você faria para expor o único resultado de um cálculo como uma estrutura de dados, se uma variável data.frame exigisse uma estrutura de tabela? Uma resposta possível é representar o valor escalar único como uma série, que pode ser convertida facilmente em uma estrutura de dados. 
 
 > [!NOTE]
-> Ao retornar datas, o Python no SQL usa DATETIME que tem um intervalo de datas restrito de 1753-01-01 (-53690) a 9999-12-31 (2958463). 
+> Ao retornar datas, o Python no SQL usa DATETIME, que tem um intervalo de datas restrito de 1753-01-01(-53690) a 9999-12-31 (2958463). 
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
-- Este início rápido requer acesso a uma instância do SQL Server com [SQL Server serviços de Machine Learning](../install/sql-machine-learning-services-windows-install.md) com a linguagem Python instalada.
+- Este início rápido requer acesso a uma instância do SQL Server que tenha os [Serviços de Machine Learning do SQL Server](../install/sql-machine-learning-services-windows-install.md) com a linguagem Python instalada.
 
-- Você também precisa de uma ferramenta para executar consultas SQL que contêm scripts Python. Você pode executar esses scripts usando qualquer ferramenta de consulta ou gerenciamento de banco de dados, desde que ele possa se conectar a uma instância de SQL Server e executar uma consulta T-SQL ou um procedimento armazenado. Este início rápido usa o [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- Você também precisa de uma ferramenta para executar consultas SQL que contenham scripts Python. Você pode executar esses scripts usando qualquer ferramenta de consulta ou de gerenciamento de banco de dados, desde que ele possa se conectar a uma instância do SQL Server e executar uma consulta T-SQL ou um procedimento armazenado. Esse início rápido usa o [SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
 ## <a name="scalar-value-as-a-series"></a>Valor escalar como uma série
 
-Este exemplo faz uma matemática simples e converte um escalar em uma série.
+Este exemplo usa um pouco de matemática simples e converte um escalar em uma série.
 
-1. Uma série requer um índice, que você pode atribuir manualmente, como mostrado aqui ou programaticamente.
+1. Uma série requer um índice, que pode ser atribuído manualmente por você, conforme mostrado aqui, bem como programaticamente.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'Python'
@@ -59,7 +60,7 @@ Este exemplo faz uma matemática simples e converte um escalar em uma série.
    '
    ```
 
-   Como a série não foi convertida em um data. frame, os valores são retornados na janela mensagens, mas você pode ver que os resultados estão em um formato de tabela mais.
+   Já que a série não foi convertida em uma data.frame, os valores são retornados na janela mensagens, mas você pode ver que os resultados estão em um formato mais tabular.
 
    **Resultados**
 
@@ -84,7 +85,7 @@ Este exemplo faz uma matemática simples e converte um escalar em uma série.
    '
    ```
 
-   Se você não especificar um índice, será gerado um índice com valores começando com 0 e terminando com o comprimento da matriz.
+   Caso você não especifique um índice, um será gerado, com valores começando com 0 e terminando com o tamanho da matriz.
 
    **Resultados**
 
@@ -95,7 +96,7 @@ Este exemplo faz uma matemática simples e converte um escalar em uma série.
    dtype: float64
    ```
 
-1. Se você aumentar o número de valores de **índice** , mas não adicionar novos valores de **dados** , os valores de dados serão repetidos para preencher a série.
+1. Se você aumentar o número de valores de **índice** mas não adicionar novos valores de **dados**, os valores de dados serão repetidos para preencher a série.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'Python'
@@ -118,11 +119,11 @@ Este exemplo faz uma matemática simples e converte um escalar em uma série.
    dtype: float64
    ```
 
-## <a name="convert-series-to-data-frame"></a>Converter série em quadro de dados
+## <a name="convert-series-to-data-frame"></a>Converter série em estrutura de dados
 
-Depois de converter os resultados de matemática escalar em uma estrutura de tabela, você ainda precisa convertê-los em um formato que SQL Server possa manipular.
+Depois de converter os resultados de matemática escalar em uma estrutura de tabela, você ainda precisa convertê-los em um formato que o SQL Server possa manipular.
 
-1. Para converter uma série em um data. frame, chame o método pandas [dataframe](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) .
+1. Para converter uma série em um data.frame, chame o método [DataFrame](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) do Pandas.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'Python'
@@ -140,18 +141,18 @@ Depois de converter os resultados de matemática escalar em uma estrutura de tab
    WITH RESULT SETS((ResultValue FLOAT))
    ```
 
-   O resultado é mostrado abaixo. Mesmo que você use o índice para obter valores específicos do Data. frame, os valores de índice não fazem parte da saída.
+   O resultado é mostrado abaixo. Mesmo que você use o índice para obter valores específicos do data.frame, os valores de índice não fazem parte da saída.
 
    **Resultados**
 
-   |Resultadovalue|
+   |ResultValue|
    |------|
-   |0,5|
+   |0.5|
    |2|
 
-## <a name="output-values-into-dataframe"></a>Valores de saída em data. frame
+## <a name="output-values-into-dataframe"></a>Valores de saída em data.frame
 
-Agora, você produzirá valores específicos de duas séries de resultados matemáticos em um data. frame. O primeiro tem um índice de valores sequenciais gerados pelo Python. O segundo usa um índice arbitrário de valores de cadeia de caracteres.
+Agora, você produzirá valores específicos de duas séries de resultados matemáticos em um data.frame. A primeira tem um índice de valores sequenciais gerados pelo Python. A segunda usa um índice arbitrário de valores de cadeia de caracteres.
 
 1. O exemplo a seguir obtém um valor da série usando um índice de número inteiro.
 
@@ -173,13 +174,13 @@ Agora, você produzirá valores específicos de duas séries de resultados matem
 
    **Resultados**
 
-   |Resultadovalue|
+   |ResultValue|
    |------|
    |2.0|
 
    Lembre-se de que o índice gerado automaticamente começa em 0. Tente usar um valor de índice fora do intervalo e veja o que acontece.
 
-1. Agora, obtenha um único valor do outro quadro de dados usando um índice de cadeia de caracteres.
+1. Agora, obtenha um único valor da outra estrutura de dados usando um índice de cadeia de caracteres.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'Python'
@@ -198,20 +199,20 @@ Agora, você produzirá valores específicos de duas séries de resultados matem
 
    **Resultados**
 
-   |Resultadovalue|
+   |ResultValue|
    |------|
-   |0,5|
+   |0.5|
 
    Se você tentar usar um índice numérico para obter um valor dessa série, obterá um erro.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber mais sobre como escrever funções avançadas do Python no SQL Server, siga este guia de início rápido:
+Para saber mais sobre como escrever funções avançadas do Python no SQL Server, siga este início rápido:
 
 > [!div class="nextstepaction"]
-> [Escrever funções avançadas do Python com o SQL Server Serviços de Machine Learning](quickstart-python-functions.md)
+> [Escrever funções avançadas do Python com os Serviços de Machine Learning do SQL Server](quickstart-python-functions.md)
 
-Para obter mais informações sobre como usar o Python no SQL Server Serviços de Machine Learning, consulte os seguintes artigos:
+Para obter mais informações sobre como usar o Python nos Serviços de Machine Learning do SQL Server, confira os seguintes artigos:
 
-- [Criar e pontuar um modelo de previsão no Python](quickstart-python-train-score-model.md)
-- [O que é SQL Server Serviços de Machine Learning (Python e R)?](../what-is-sql-server-machine-learning.md)
+- [Criar e pontuar um modelo preditivo no Python](quickstart-python-train-score-model.md)
+- [O que são os Serviços de Machine Learning do SQL Server (Python e R)?](../what-is-sql-server-machine-learning.md)

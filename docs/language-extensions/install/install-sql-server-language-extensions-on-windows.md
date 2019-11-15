@@ -1,26 +1,26 @@
 ---
 title: Instalar Extensões de Linguagem do SQL Server no Windows
-titleSuffix: SQL Server Language Extensions
-description: Etapas de instalação das extensões de linguagem para SQL Server 2019 no Windows.
+titleSuffix: ''
+description: Saiba como instalar as Extensões de Linguagem do SQL Server no Windows.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bc9baf6f5360c82ec27a3c243b840b2d38ed1d56
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3e4f3a84e5001d7485ab590a66ee497522042824
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589060"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658843"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>Instalar Extensões de Linguagem do SQL Server no Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Do SQL Server 2019 em diante, são fornecidos o suporte a Java e as Extensões de Linguagem. Este artigo explica como instalar o componente Extensões de Linguagem executando o assistente de instalação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Saiba como instalar o componente de Extensões de Linguagem no SQL Server executando o assistente de instalação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Este artigo é para instalação das Extensões de Linguagem do SQL Server no Windows. Para Linux, confira [Instalar as Extensões de Linguagem do SQL Server 2019 (Java) no Linux](https://docs.microsoft.com/sql//linux/sql-server-linux-setup-language-extensions)
@@ -61,11 +61,8 @@ No SQL Server 2019 versão Release Candidate 1, há duas maneiras de instalar e 
     
 ## <a name="get-the-installation-media"></a>Obtenha a mídia de instalação
 
-A versão prévia do SQL Server 2019 está disponível no [site de instalação do SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019#Install).
-
-<!-- We can use this include statement, once SQL Server 2019 is in GA
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
--->
+
 ## <a name="run-setup"></a>Executar a instalação
 
 Para instalações locais, você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura e de execução no compartilhamento remoto.

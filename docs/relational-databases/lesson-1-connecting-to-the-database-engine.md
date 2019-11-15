@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b61761ff30a32d6781e61e988325fbfc40b5762e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 1bc950a7d0a576338bea9a614193ab3edaee7c96
+ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909756"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73033003"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conexão ao mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ Pelo menos uma conta de administrador foi selecionada quando o [!INCLUDE[ssNoVer
 Agora que você se conectou ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como um administrador, uma de suas primeiras tarefas é autorizar que outros usuários se conectem. Você faz isso criando um logon e autorizando esse logon para acessar um banco de dados como um usuário. Logons podem ser de autenticação do Windows, que usam credenciais do Windows ou logons de autenticação do SQL Server, que armazenam informações de autenticação no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e são independentes de suas credenciais do Windows. Use a autenticação do Windows sempre que possível.
 
 > [!TIP]
-> A maioria das organizações tem usuários de domínio e usará a Autenticação do Windows. Você pode experimentar por conta própria, criando usuários locais adicionais no computador. Os usuários locais serão autenticados pelo seu computador e, portanto, o domínio é o nome do computador. Por exemplo, se o cálculo é chamado `MyComputer` e você cria um usuário chamado `Test`, a descrição do Windows sobre o usuário é `Mycomputer\Test`.  
+> A maioria das organizações tem usuários de domínio e usará a Autenticação do Windows. Você pode experimentar por conta própria, criando usuários locais adicionais no computador. Os usuários locais serão autenticados pelo seu computador e, portanto, o domínio é o nome do computador. Por exemplo, se o nome do computador for `MyComputer` e você criar um usuário com o nome `Test`, a descrição do Windows para o usuário será `Mycomputer\Test`.  
 
 ##### <a name="create-a-windows-authentication-login"></a>Crie um logon de autenticação do Windows 
 

@@ -1,7 +1,7 @@
 ---
 title: DROP WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -14,22 +14,36 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - DROP WORKLOAD GROUP statement
-ms.assetid: 1cd68450-5b58-4106-a2bc-54197ced8616
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 37a714956b6d4e21fbbc5daaddf083656bdedcef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
+ms.openlocfilehash: 90622710b19ef3c2692cdcff62089cb7539fcf97
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072020"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632803"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+## <a name="click-a-product"></a>Clique em um produto!
+
+Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique exibe conteúdo diferente aqui nesta página da Web, apropriado para qualquer produto no qual você clicar.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> |||||
+> |---|---|---|---|
+> |**\* _SQL Server \*_** &nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+
+&nbsp;
+
+## <a name="sql-server-and-sql-database-managed-instance"></a>Instância gerenciada do SQL Server e do Banco de Dados SQL
+
 
   Descarta um grupo de carga de trabalho do Administrador de Recursos definido pelo usuário existente.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,10 +72,12 @@ DROP WORKLOAD GROUP group_name
   
 -   Em um cenário no qual você emitiu a instrução DROP WORKLOAD GROUP mas decide que não deseja parar sessões explicitamente para aplicar a mudança, é possível recriar o grupo usando o mesmo nome que ele tinha antes de você emitir a instrução DROP e depois mover o grupo para o pool de recursos original. Para aplicar as alterações, execute a instrução ALTER RESOURCE GOVERNOR RECONFIGURE.  
   
-## <a name="permissions"></a>Permissões  
+## <a name="permissions"></a>Permissões
+
  Requer a permissão CONTROL SERVER.  
   
-## <a name="examples"></a>Exemplos  
+## <a name="examples"></a>Exemplos
+
  O seguinte exemplo descarta o grupo de carga de trabalho denominado `adhoc`.  
   
 ```  
@@ -80,4 +96,54 @@ GO
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
-  
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> ||||
+> |---|---|---|
+> |[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)||[Instância gerenciada<br />do Banco de Dados SQL](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)||**_\* SQL Data<br />Warehouse \*_** &nbsp;||||
+
+&nbsp;
+
+## <a name="sql-data-warehouse-preview"></a>SQL Data Warehouse do Azure (versão prévia)
+
+Remove um grupo de carga de trabalho.  Quando a instrução for concluída, as configurações estarão em vigor.
+
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+
+## <a name="syntax"></a>Sintaxe
+
+```
+DROP WORKLOAD GROUP group_name  
+```
+
+## <a name="arguments"></a>Argumentos
+
+ *group_name*  
+ É o nome de um grupo de carga de trabalho definido pelo usuário existente.
+
+## <a name="remarks"></a>Remarks
+
+Um grupo de carga de trabalho não poderá ser removido se houver classificadores para ele.  Remova os classificadores para que o grupo de carga de trabalho seja descartado.  Se houver solicitações ativas usando recursos do grupo de carga de trabalho que está sendo removido, a instrução de remoção da carga de trabalho será bloqueada por trás delas.
+
+## <a name="examples"></a>Exemplos
+
+Use o exemplo de código a seguir para determinar quais classificadores precisam ser descartados para que o grupo de carga de trabalho possa ser removido.
+
+```sql
+SELECT c.name as classifier_name
+      ,'DROP WORKLOAD CLASSIFIER '+c.name as drop_command
+  FROM sys.workload_management_workload_classifiers c
+  JOIN sys.workload_management_workload_groups g
+    ON c.group_name = g.name
+  WHERE g.name = 'wgXYZ' --change the filter to the workload being dropped
+```
+
+## <a name="permissions"></a>Permissões
+
+Requer a permissão CONTROL DATABASE
+
+## <a name="see-also"></a>Confira também
+ [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
+ 
+::: moniker-end

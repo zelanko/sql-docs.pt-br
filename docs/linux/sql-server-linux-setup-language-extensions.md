@@ -1,27 +1,28 @@
 ---
-title: Instalar as Extensões de linguagem (Java) do SQL Server no Linux
-description: Saiba como instalar Extensões de linguagem (Java) do SQL Server no Red Hat, Ubuntu e SUSE.
+title: Instalar Extensões de Linguagem do SQL Server no Linux
+titleSuffix: ''
+description: Saiba como instalar Extensões de Linguagem do SQL Server no Red Hat, no Ubuntu e no SUSE.
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e86da652231a06cd28318096ada3ae3aed7526e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 2b5a8c83f827f574698d2e9b37a19cdb29e1ba80
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531230"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660776"
 ---
-# <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Instalar as Extensões de linguagem (Java) do SQL Server 2019 no Linux
+# <a name="install-sql-server-language-extensions-on-linux"></a>Instalar Extensões de Linguagem do SQL Server no Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-As Extensões de linguagem são um complemento ao mecanismo de banco de dados. Embora seja possível [instalar o mecanismo de banco de dados e as extensões de linguagem simultaneamente](#install-all) a melhor prática é instalar e configurar o mecanismo de banco de dados do SQL Server primeiro para que você possa resolver problemas antes de adicionar mais componentes. 
+As Extensões de Linguagem são um complemento ao mecanismo de banco de dados. Embora seja possível [instalar o mecanismo de banco de dados e as extensões de linguagem simultaneamente](#install-all) a melhor prática é instalar e configurar o mecanismo de banco de dados do SQL Server primeiro para que você possa resolver problemas antes de adicionar mais componentes. 
 
 Siga as etapas neste artigo para instalar a extensão de linguagem Java.
 

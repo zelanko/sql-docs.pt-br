@@ -1,6 +1,6 @@
 ---
-title: 'Tutorial: Preparar dados para categorizar os clientes em Python'
-description: Na parte dois desta série de tutoriais de quatro partes, você preparará os dados de um banco de dado SQL Server para executar o clustering em Python com SQL Server Serviços de Machine Learning.
+title: 'Tutorial do Python: preparar dados do cluster'
+description: Na parte dois desta série de tutoriais de quatro partes, você preparará os dados de um banco de dados do SQL Server para executar clustering em Python com os Serviços de Machine Learning do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -9,46 +9,47 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d91f3b9f1e3d1abe53d677d9f9058058d321d985
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
-ms.translationtype: MT
+ms.openlocfilehash: 11c24d5403e6540da52ec3557c64e1dc8fa57c78
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70294341"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727084"
 ---
-# <a name="tutorial-prepare-data-to-categorize-customers-in-python-with-sql-server-machine-learning-services"></a>Tutorial: Preparar dados para categorizar clientes em Python com SQL Server Serviços de Machine Learning
+# <a name="tutorial-prepare-data-to-categorize-customers-in-python-with-sql-server-machine-learning-services"></a>Tutorial: Preparar dados para categorizar clientes em Python com os Serviços de Machine Learning do SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Na parte dois desta série de tutoriais de quatro partes, você irá restaurar e preparar os dados de um banco de dados SQL usando o Python. Posteriormente nesta série, você usará esses dados para treinar e implantar um modelo de clustering em Python com SQL Server Serviços de Machine Learning.
+Na parte dois desta série de tutoriais de quatro partes, você restaurará e preparará os dados de um Banco de Dados SQL usando o Python. Posteriormente nesta série, você usará esses dados para treinar e implantar um modelo de clustering em Python com os Serviços de Machine Learning do SQL Server.
 
 Neste artigo, você aprenderá a:
 
 > [!div class="checklist"]
 > * Separar clientes ao longo de dimensões diferentes usando o Python
-> * Carregar os dados do banco de dados SQL em um quadro de dado do Python
+> * Carregar os dados do Banco de Dados SQL em um quadro de dados do Python
 
 Na [parte um](python-clustering-model.md), você instalou os pré-requisitos e restaurou o banco de dados de exemplo.
 
-Na [terceira parte](python-clustering-model-build.md), você aprenderá a criar e treinar um modelo de clustering K-means em Python.
+Na [parte três](python-clustering-model-build.md), você aprenderá a criar e treinar um modelo de cluster K-means em Python.
 
-Na [parte quatro](python-clustering-model-deploy.md), você aprenderá a criar um procedimento armazenado em um banco de dados SQL que pode executar o clustering em Python com base em novas informações.
+Na [parte quatro](python-clustering-model-deploy.md), você aprenderá a criar um procedimento armazenado em um Banco de Dados SQL que pode executar clusters em Python com base em novos dados.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
-* A parte dois deste tutorial pressupõe que você atende aos pré-requisitos da [**parte 1**](python-clustering-model.md).
+* A parte dois deste tutorial pressupõe que você cumpriu os pré-requisitos da [**parte um**](python-clustering-model.md).
 
-## <a name="separate-customers"></a>Clientes separados
+## <a name="separate-customers"></a>Separar os clientes
 
-Para se preparar para os clientes de clustering, você primeiro separará clientes ao longo das seguintes dimensões:
+Para se preparar para os clientes de clustering, primeiro você separará os clientes ao longo das seguintes dimensões:
 
-* **orderRatio** = taxa de ordem de retorno (número total de pedidos parcialmente ou totalmente retornados versus o número total de pedidos)
-* **itemsRatio** = taxa de itens de retorno (número total de itens retornados versus o número de itens comprados)
-* **monetaryRatio** = taxa de valor de retorno (valor monetário total de itens retornados versus o valor comprado)
-* **frequência** = frequência de retorno
+* **orderRatio** = taxa de devolução de pedidos (número total de pedidos parcialmente ou totalmente retornados em relação o número total de pedidos)
+* **itemsRatio** = taxa de devolução de itens (número total de itens retornados em relação ao número de itens comprados)
+* **monetaryRatio** = taxa de valores devolvidos (valor monetário total dos itens retornados em relação ao valor comprado)
+* **frequência** = frequência de devoluções
 
-Abra um novo bloco de anotações em Azure Data Studio e insira o script a seguir.
+Abra um novo notebook no Azure Data Studio e insira o script a seguir.
 
 Na cadeia de conexão, substitua os detalhes da conexão conforme necessário.
 
@@ -114,7 +115,7 @@ column_info = {
 
 ## <a name="load-the-data-into-a-data-frame"></a>Carregar os dados em um quadro de dados
 
-Os resultados da consulta são retornados para o Python usando a função revoscalepy **RxSqlServerData** . Como parte do processo, você usará as informações de coluna definidas no script anterior.
+Os resultados da consulta são retornados para o Python usando a função revoscalepy **RxSqlServerData**. Como parte do processo, você usará as informações de coluna definidas no script anterior.
 
 ```python
 data_source = revoscale.RxSqlServerData(sql_query=input_query, column_Info=column_info,
@@ -124,7 +125,7 @@ revoscale.RxInSqlServer(connection_string=conn_str, num_tasks=1, auto_cleanup=Fa
 customer_data = pd.DataFrame(revoscale.rx_import(data_source))
 ```
 
-Agora, exiba o início do quadro de dados para verificar se ele parece correto.
+Agora, exiba o início do quadro de dados para verificar se ela parece correta.
 
 ```python
 print("Data frame:", customer_data.head(n=5))
@@ -140,18 +141,18 @@ Data frame:     customer  orderRatio  itemsRatio  monetaryRatio  frequency
 4     2040.0    0.000000    0.000000       0.000000          0
 ```
 
-## <a name="clean-up-resources"></a>Limpar recursos
+## <a name="clean-up-resources"></a>Limpar os recursos
 
-Se você não for continuar com este tutorial, exclua o banco de dados tpcxbb_1gb de SQL Server.
+Se você não continuar com este tutorial, exclua o banco de dados tpcxbb_1gb do SQL Server.
 
 ## <a name="next-steps"></a>Próximas etapas
 
 Na parte dois desta série de tutoriais, você concluiu estas etapas:
 
 * Separar clientes ao longo de dimensões diferentes usando o Python
-* Carregar os dados do banco de dados SQL em um quadro de dado do Python
+* Carregar os dados do Banco de Dados SQL em um quadro de dados do Python
 
-Para criar um modelo de aprendizado de máquina que usa esses dados do cliente, siga a parte três desta série de tutoriais:
+Para criar um modelo de machine learning que usa esses dados do cliente, siga a parte três desta série de tutoriais:
 
 > [!div class="nextstepaction"]
-> [Tutorial: Criar um modelo de previsão em Python com SQL Server Serviços de Machine Learning](python-clustering-model-build.md)
+> [Tutorial: Criar um modelo de previsão em Python com os Serviços de Machine Learning do SQL Server](python-clustering-model-build.md)

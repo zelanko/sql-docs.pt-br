@@ -1,7 +1,7 @@
 ---
 title: O que é a Implantação de Aplicativos?
 titleSuffix: Big Data Clusters for SQL Server 2019
-description: Este artigo descreve a implantação de aplicativos em um cluster de Big data para o SQL Server 2019.
+description: Este artigo descreve a implantação de aplicativos em Clusters de Big Data do SQL Server 2019.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: da497f8d7c435a807ba530ae619ff91a6f2dff71
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653002"
@@ -61,12 +61,12 @@ Também é possível executar um aplicativo usando um serviço Web RESTful. Para
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber mais sobre como criar e executar aplicativos no [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consulte o seguinte:
+Para saber mais sobre como criar e executar aplicativos em [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], confira o seguinte:
 
 - [Implantar aplicativos usando o azdata](big-data-cluster-create-apps.md)
 - [Implantar aplicativos usando a extensão Implantação de Aplicativos](app-deployment-extension.md)
 - [Consumir aplicativos em clusters de Big Data](big-data-cluster-consume-apps.md)
 
-Para saber mais sobre o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consulte a seguinte visão geral:
+Para saber mais sobre o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], confira a visão geral a seguir:
 
-- [O que [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]são?](big-data-cluster-overview.md)
+- [O que são [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Extensão da linguagem de programação Python
+title: Extensão da linguagem Python
 description: Saiba mais sobre a execução de código Python e bibliotecas Python internas nos SQL Server R Services ou nos Serviços de Machine Learning do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,13 +7,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b1ada7d78cdacb88356b2148475e07d559f4ecbb
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 0445fb83a1ee4c4e2a991df8e698f24988454d19
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532643"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727679"
 ---
 # <a name="python-language-extension-in-sql-server"></a>Extensão da linguagem Python no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

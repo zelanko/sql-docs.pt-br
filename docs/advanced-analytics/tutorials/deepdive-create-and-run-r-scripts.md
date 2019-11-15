@@ -1,45 +1,46 @@
 ---
-title: Tutorial de RevoScaleR de estatísticas de Resumo de computação
-description: Tutorial explicativo sobre como computar estatísticas de resumo estatísticas usando a linguagem R no SQL Server.
+title: Estatísticas de resumo no RevoScaleR
+description: Tutorial passo a passo sobre como calcular estatísticas de resumo estatístico usando a linguagem R no SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 90a674057845427fe60fd3c62268bf0fb3d18688
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 4ece8cdac4f39cfd5d4b93484f18b0d415cc2291
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715569"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727300"
 ---
-# <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>Calcular estatísticas de resumo em R (tutorial de SQL Server e RevoScaleR)
+# <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>Calcular estatísticas de resumo no R (tutorial do SQL Server e do RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Esta lição faz parte do [tutorial do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com SQL Server.
+Esta lição faz parte do [tutorial do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
-Ele usa as fontes de dados estabelecidas e contextos de computação criados nas lições anteriores para executar scripts R de alta potência neste. Nesta lição, você usará contextos de computação de servidor local e remoto para as seguintes tarefas:
+Ela usa as fontes de dados estabelecidas e os contextos de computação criados nas lições anteriores para executar scripts R de alta potência nesta lição. Nesta lição, você usará contextos de computação de servidor local e remoto para as seguintes tarefas:
 
 > [!div class="checklist"]
-> * Alternar o contexto de computação para SQL Server
-> * Obter estatísticas de resumo sobre objetos de dados remotos
+> * Alternar o contexto de computação para o SQL Server
+> * Obter estatísticas de resumo em objetos de dados remotos
 > * Calcular um resumo local
 
-Se você concluiu as lições anteriores, deverá ter estes contextos de computação remota: SQLCOMPUTE e sqlComputeTrace. Avançando, você usará SQLCOMPUTE e o contexto de computação local nas lições subsequentes.
+Se você concluiu as lições anteriores, deve ter estes contextos de computação remota: sqlCompute e sqlComputeTrace. Mais adiante, você usará sqlCompute e o contexto de computação local nas lições seguintes.
 
-Use um R IDE ou **Rgui** para executar o script r nesta lição.
+Use um IDE do R ou o **Rgui** para executar o script R desta lição.
 
 ## <a name="compute-summary-statistics-on-remote-data"></a>Calcular estatísticas de resumo em dados remotos
 
-Antes de executar qualquer código do R remotamente, você precisa especificar o contexto de computação remota. Todos os cálculos subsequentes ocorrem no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computador especificado no parâmetro SQLCOMPUTE.
+Antes de executar qualquer código R remotamente, você precisa especificar o contexto de computação remota. Todos os cálculos seguintes ocorrem no computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificado no parâmetro *sqlCompute*.
 
-Um contexto de computação permanece ativo até você alterá-lo. No entanto, todos os scripts do R que *não podem* ser executados em um contexto de servidor remoto serão automaticamente executados localmente.
+Um contexto de computação permanece ativo até você alterá-lo. No entanto, os scripts R que *não* podem ser executados em um contexto de servidor remoto serão executados localmente de maneira automática.
 
 Para ver como funciona um contexto de computação, gere estatísticas de resumo na fonte de dados sqlFraudDS no SQL Server remoto. Esse objeto de fonte de dados foi criado na [lição dois](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) e representa a tabela ccFraudSmall no banco de dados RevoDeepDive. 
 
-1. Alterne o contexto de computação para SQLCOMPUTE criado na lição anterior:
+1. Alterne o contexto de computação para o sqlCompute criado na lição anterior:
   
     ```R
     rxSetComputeContext(sqlCompute)
@@ -51,7 +52,7 @@ Para ver como funciona um contexto de computação, gere estatísticas de resumo
     sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    A linguagem R fornece muitas funções de resumo, mas **rxSummary** no **RevoScaleR** dá suporte à execução em vários contextos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]computação remota, incluindo. Para obter informações sobre funções semelhantes, consulte resumos de [dados usando RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
+    A linguagem R fornece muitas funções de resumo, mas **rxSummary** no **RevoScaleR** dá suporte à execução em diversos contextos de computação remota, incluindo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter informações sobre funções semelhantes, confira [Resumos de dados usando o RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
   
 3. Imprima o conteúdo de sumOut no console.
   
@@ -92,7 +93,7 @@ Number of valid observations: 10000
     rxSetComputeContext ("local")
     ```
   
-2. Ao extrair dados de SQL Server, muitas vezes você pode obter melhor desempenho aumentando o número de linhas extraídas para cada leitura, supondo que o tamanho do bloco aumentado possa ser acomodado na memória. Execute o comando a seguir para aumentar o valor do parâmetro *rowsPerRead* na fonte de dados. Anteriormente, o valor de *rowsPerRead* estava definido como 5000.
+2. Ao extrair dados do SQL Server, muitas vezes, você pode obter um melhor desempenho aumentando o número de linhas extraídas para cada leitura, supondo que o tamanho do bloco aumentado possa ser acomodado na memória. Execute o comando a seguir para aumentar o valor do parâmetro *rowsPerRead* na fonte de dados. Anteriormente, o valor de *rowsPerRead* estava definido como 5000.
   
     ```R
     sqlServerDS1 <- RxSqlServerData(
@@ -110,7 +111,7 @@ Number of valid observations: 10000
   
    Os resultados reais devem ser iguais a quando você executa **rxSummary** no contexto do computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No entanto, a operação pode ser mais rápida ou mais lenta. Depende muito da conexão com seu banco de dados, pois os dados estão sendo transferidos para o computador local para análise.
 
-4. Volte para o contexto de computação remota para as próximas várias lições.
+4. Alterne novamente para o contexto de computação remota para as próximas várias lições.
 
     ```R
     rxSetComputeContext(sqlCompute)

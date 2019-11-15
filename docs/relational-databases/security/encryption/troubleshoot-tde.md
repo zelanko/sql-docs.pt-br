@@ -10,15 +10,15 @@ ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
-ms.date: 08/20/2019
+ms.date: 11/06/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f60f95f3fdd9ca31574e4e0052c83ae72bd8a9b4
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 308cc4189361c795115c061b871238aaba430279
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903617"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727770"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Erros comuns de Transparent Data Encryption com chaves gerenciadas pelo cliente no Azure Key Vault
 
@@ -26,14 +26,13 @@ ms.locfileid: "69903617"
 Este artigo descreve como identificar e resolver os problemas de acesso de chave do Azure Key Vault que fizeram com que um banco de dados configurado para usar [TDE (Transparent Data Encryption) com chaves gerenciadas pelo cliente no Azure Key Vault](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql) se torne inacessível.
 
 ## <a name="introduction"></a>Introdução
-Quando o TDE está configurado para usar uma chave gerenciada pelo cliente no Azure Key Vault, o acesso contínuo a esse protetor de TDE é necessário para que o banco de dados permaneça online.  Se o SQL Server lógico perder o acesso ao protetor de TDE gerenciado pelo cliente no Azure Key Vault, um banco de dados negará todas as conexões e aparecerá inacessível no portal do Azure.
+Quando o TDE está configurado para usar uma chave gerenciada pelo cliente no Azure Key Vault, o acesso contínuo a esse Protetor de TDE é necessário para que o banco de dados permaneça online.  Se o servidor SQL lógico perder o acesso ao protetor de TDE gerenciado pelo cliente no Azure Key Vault, um banco de dados começará a negar todas as conexões com a mensagem de erro adequada e alterará seu estado para *Inacessível* no portal do Azure.
 
-Durante as primeiras 48 horas, se o problema subjacente de acesso à chave do Azure Key Vault for resolvido, o banco de dados será reparado e colocado online automaticamente.  Isso significa que para todos os cenários de interrupção de rede intermitente e temporário não é necessária ação do usuário, e o banco de dados será colocado online automaticamente.  Na maioria dos casos, a ação do usuário é necessária para resolver o problema subjacente de acesso à chave do cofre de chaves. 
+Durante as primeiras 8 horas, se o problema subjacente de acesso à chave do Azure Key Vault for resolvido, o banco de dados será reparado e colocado online automaticamente. Isso significa que para todos os cenários de interrupção de rede intermitente e temporário não é necessária ação do usuário, e o banco de dados será colocado online automaticamente. Na maioria dos casos, a ação do usuário é necessária para resolver o problema subjacente de acesso à chave do cofre de chaves. 
 
-Se um banco de dados inacessível não for mais necessário, ele poderá ser excluído imediatamente para interromper os custos.  Todas as outras ações no banco de dados não são permitidas até que o acesso à chave de Azure Key Vault tenha sido restaurado e o banco de dados fique novamente online.   A alteração da opção TDE do cliente gerenciado para chaves de serviço gerenciadas no servidor também não tem suporte enquanto um banco de dados criptografado com chaves gerenciadas pelo cliente estiver inacessível. Isso é necessário para proteger os dados contra o acesso não autorizado, enquanto as permissões para o protetor de TDE foram revogadas. 
+Se um banco de dados inacessível não for mais necessário, ele poderá ser excluído imediatamente para interromper os custos. Todas as outras ações no banco de dados não são permitidas até que o acesso à chave do Azure Key Vault tenha sido restaurado e o banco de dados fique novamente online. A alteração da opção de TDE de chaves gerenciadas pelo cliente para chaves gerenciadas pelo servidor também não é possível enquanto um banco de dados criptografado com chaves gerenciadas pelo cliente está inacessível. Isso é necessário para proteger os dados contra o acesso não autorizado, enquanto as permissões para o protetor de TDE foram revogadas. 
 
-Depois que um banco de dados ficar inacessível por mais de 48 horas, ele não será mais reparado automaticamente.  Se o acesso necessário à chave do Azure Key Vault for restaurado, você deverá revalidar o acesso manualmente para colocar novamente o banco de dados online.  Colocar novamente o banco de dados online depois que ele ficar inacessível por mais de 48 horas pode demorar, dependendo do tamanho do banco de dados, e no momento precisa de um tíquete de suporte. Depois que o banco de dados estiver novamente online, as configurações definidas anteriormente, como o link geográfico, se o Geo-DR foi configurado, o histórico de PITR e as marcas serão perdidas.  Portanto, é recomendável implementar um sistema de notificação usando [Grupos de ação](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) que permitem tratar os problemas subjacentes do cofre de chaves dentro de 48 horas. 
-
+Depois que um banco de dados ficar inacessível por mais de 8 horas, ele não será mais reparado automaticamente. Se o acesso necessário à chave do Azure Key Vault for restaurado após esse período, você deverá revalidar o acesso manualmente para colocar novamente o banco de dados online. Nesse caso, colocar novamente o banco de dados online pode demorar, dependendo do tamanho do banco de dados e, no momento, requer a abertura de um tíquete de suporte. Depois que o banco de dados estiver novamente online, as configurações definidas anteriormente, como o link geográfico, se o Geo-DR foi configurado, o histórico de PITR e as marcas serão perdidas. Portanto, é recomendável implementar um sistema de notificação usando [Grupos de Ações](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) que permitem estar ciente e tratar os problemas subjacentes do cofre de chaves assim que possível. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Erros comuns que fazem com que os bancos de dados se tornem inacessíveis
 
@@ -176,13 +175,13 @@ Descrição: O banco de dados perdeu o acesso à chave do Azure Key Vault e agor
 
  
 
-**Evento quando o tempo de espera de 48 horas para a autorrecuperação começa** 
+**Evento quando o tempo de espera de 8 horas para a autorrecuperação começa** 
 
 EventName: MakeDatabaseInaccessible 
 
 Status: InProgress 
 
-Descrição: O banco de dados está aguardando o acesso à chave do Azure Key Vault ser restabelecido pelo usuário em até 48 horas.   
+Descrição: O banco de dados está aguardando o acesso à chave do Azure Key Vault ser restabelecido pelo usuário em até 8 horas.   
 
  
 
@@ -196,7 +195,7 @@ Descrição: O acesso ao banco de dados para a chave do Azure Key Vault foi rest
 
  
 
-**Evento quando o problema não foi resolvido dentro de 48 horas e o acesso à chave do Azure Key Vault precisa ser validado manualmente** 
+**Evento quando o problema não foi resolvido dentro de 8 horas e o acesso à chave do Azure Key Vault precisa ser validado manualmente** 
 
 EventName: MakeDatabaseInaccessible 
 

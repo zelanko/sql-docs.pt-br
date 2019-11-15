@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: c9f7578623c7ba86003e8e8d7c611fb4e82a9502
-ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
+ms.openlocfilehash: 03586e6ee255019a65528c98655b3cc7782624be
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890465"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729903"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL)
 
@@ -764,7 +764,7 @@ Determina o espaço emitido para o Repositório de Consultas. MAX_STORAGE_SIZE_M
 > Se o Repositório de Consultas tiver violado o limite de MAX_STORAGE_SIZE_MB entre as verificações de tamanho de armazenamento, ele passará para o modo somente leitura. Se SIZE_BASED_CLEANUP_MODE for habilitado, o mecanismo de limpeza para impor o limite de MAX_STORAGE_SIZE_MB também será disparado. 
 
 INTERVAL_LENGTH_MINUTES        
-Determina o intervalo de tempo em que os dados de estatísticas de execução do runtime são agregados no Repositório de Consultas. Para otimizar o uso de espaço, as estatísticas de execução de tempo de execução no repositório de estatísticas de tempo de execução são agregadas em uma janela de tempo fixo. Essa janela de tempo fixo é configurada usando o argumento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES é do tipo **bigint**.
+Determina o intervalo de tempo em que os dados de estatísticas de execução do runtime são agregados no Repositório de Consultas. Para otimizar o uso de espaço, as estatísticas de execução de runtime no repositório de estatísticas de runtime são agregadas em uma janela de tempo fixo. Essa janela de tempo fixo é configurada usando o argumento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES é do tipo **bigint**.
 
 SIZE_BASED_CLEANUP_MODE { **AUTO** | OFF }        
 Controla se a limpeza será ativada automaticamente quando a quantidade total de dados se aproximar do tamanho máximo.
@@ -1818,7 +1818,7 @@ MAX_STORAGE_SIZE_MB
 Determina o espaço alocado para o Repositório de Consultas. MAX_STORAGE_SIZE_MB é do tipo **bigint**.
 
 INTERVAL_LENGTH_MINUTES        
-Determina o intervalo de tempo em que os dados de estatísticas de execução do runtime são agregados no Repositório de Consultas. Para otimizar o uso de espaço, as estatísticas de execução de tempo de execução no repositório de estatísticas de tempo de execução são agregadas em uma janela de tempo fixo. Essa janela de tempo fixo é configurada usando o argumento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES é do tipo **bigint**.
+Determina o intervalo de tempo em que os dados de estatísticas de execução do runtime são agregados no Repositório de Consultas. Para otimizar o uso de espaço, as estatísticas de execução de runtime no repositório de estatísticas de runtime são agregadas em uma janela de tempo fixo. Essa janela de tempo fixo é configurada usando o argumento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES é do tipo **bigint**.
 
 SIZE_BASED_CLEANUP_MODE        
 Controla se a limpeza será ativada automaticamente quando a quantidade total de dados se aproximar do tamanho máximo.
@@ -2553,7 +2553,7 @@ MAX_STORAGE_SIZE_MB
 Determina o espaço alocado para o Repositório de Consultas. MAX_STORAGE_SIZE_MB é do tipo **bigint**.
 
 INTERVAL_LENGTH_MINUTES        
-Determina o intervalo de tempo em que os dados de estatísticas de execução do runtime são agregados no Repositório de Consultas. Para otimizar o uso de espaço, as estatísticas de execução de tempo de execução no repositório de estatísticas de tempo de execução são agregadas em uma janela de tempo fixo. Essa janela de tempo fixo é configurada usando o argumento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES é do tipo **bigint**.
+Determina o intervalo de tempo em que os dados de estatísticas de execução do runtime são agregados no Repositório de Consultas. Para otimizar o uso de espaço, as estatísticas de execução de runtime no repositório de estatísticas de runtime são agregadas em uma janela de tempo fixo. Essa janela de tempo fixo é configurada usando o argumento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES é do tipo **bigint**.
 
 SIZE_BASED_CLEANUP_MODE        
 Controla se a limpeza será ativada automaticamente quando a quantidade total de dados se aproximar do tamanho máximo.
@@ -3049,16 +3049,20 @@ Execute esse comando para verificar se uma consulta foi executada com uma perda 
 
 ```sql
 
-SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests 
+SELECT request_id, command, result_cache_hit FROM sys.dm_pdw_exec_requests 
 WHERE request_id = <'Your_Query_Request_ID'>
 
 ```
+> [!IMPORTANT]
+> As operações para criar o cache do conjunto de resultados e recuperar dados do cache acontecem no nó de controle de uma instância do data warehouse. Quando o cache do conjunto de resultados está ATIVADO, a execução de consultas que retornam um conjunto de resultados grande (por exemplo, mais de 1 milhão de linhas) pode causar alto uso da CPU no nó de controle e reduzir a resposta geral de consultas na instância. Normalmente, essas consultas são usadas normalmente durante a exploração de dados ou operações de ETL. Para evitar sobrecarregar o nó de controle e causar problemas de desempenho, os usuários devem DESATIVAR o cache do conjunto de resultados no banco de dados antes de executar esses tipos de consultas.  
+
+Para obter detalhes sobre o ajuste de desempenho com o cache do conjunto de resultados, confira [Diretrizes de ajuste de desempenho](/azure/sql-data-warehouse/performance-tuning-result-set-caching).
+
 ### <a name="permissions"></a>Permissões
 Para definir a opção RESULT_SET_CACHING, um usuário precisa do logon da entidade de segurança no nível do servidor (a criada pelo processo de provisionamento) ou ser um membro da função de banco de dados `dbmanager`.  
 
-
 **<snapshot_option> ::=**         
-**Aplica-se ao**: Azure SQL Data Warehouse (versão prévia)
+**Aplica-se ao**: Azure SQL Data Warehouse 
 
 Controla o nível de isolamento da transação de um banco de dados.
 
@@ -3115,7 +3119,6 @@ SET READ_COMMITTED_SNAPSHOT ON
 
 ## <a name="see-also"></a>Confira também
 
-- [Ajuste de desempenho com armazenamento em cache do conjunto de resultados](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

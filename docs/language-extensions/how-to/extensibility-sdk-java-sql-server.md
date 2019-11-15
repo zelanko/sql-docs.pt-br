@@ -1,25 +1,25 @@
 ---
-title: SDK de extensibilidade da Microsoft para Java para SQL Server
-description: Como implementar um programa Java para SQL Server usando o SDK de extensibilidade da Microsoft para Java.
+title: SDK de Extensibilidade da Microsoft para Java
+description: Saiba como implementar um programa Java para o SQL Server usando o SDK de Extensibilidade da Microsoft para Java. O SDK é uma interface para a extensão de linguagem Java que é usado para trocar dados com SQL Server e para executar código Java do SQL Server.
 ms.prod: sql
 ms.technology: language-extensions
-ms.date: 08/21/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f2c1e7eb5b5410ad0c12b8dec6f451b7572f0e36
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 66719e8a30b9e7f4e42eaba376c73af9eb9868b2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "73588790"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658850"
 ---
 # <a name="microsoft-extensibility-sdk-for-java-for-sql-server"></a>SDK de extensibilidade da Microsoft para Java para SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Este artigo descreve como implementar um programa Java para SQL Server usando o SDK de extensibilidade da Microsoft para Java. O SDK é uma interface para a extensão de linguagem Java que é usado para trocar dados com SQL Server e para executar código Java do SQL Server.
+Saiba como implementar um programa Java para o SQL Server usando o SDK de Extensibilidade da Microsoft para Java. O SDK é uma interface para a extensão de linguagem Java que é usado para trocar dados com SQL Server e para executar código Java do SQL Server.
 
 O SDK é instalado como parte do SQL Server 2019 versão Release Candidate 1 no Windows e no Linux:
 

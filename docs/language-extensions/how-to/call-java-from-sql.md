@@ -1,22 +1,22 @@
 ---
-title: Chamar Java do SQL Server
+title: Chamar o runtime Java
 titleSuffix: SQL Server Language Extensions
-description: Saiba como chamar classes Java de procedimentos armazenados do SQL Server usando a extensão da linguagem de programação Java no SQL Server 2019.
+description: Saiba como chamar classes Java de procedimentos armazenados do SQL Server usando a Extensão da Linguagem do SQL Server.
 author: dphansen
 ms.author: davidph
-ms.date: 08/21/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 34d8162961a9e6bbc850e8a80a96910e5aa41d7b
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: bdff924b63b11eda850378987498e8601367d3fe
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "73588800"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658892"
 ---
-# <a name="how-to-call-java-from-sql-server"></a>Como chamar Java do SQL Server
+# <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>Como chamar o runtime Java nas Extensões de Linguagem do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 As [Extensões de Linguagem do SQL Server](../language-extensions-overview.md) usam o procedimento armazenado do sistema [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) como a interface para chamar o runtime do Java. 

@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ca20922eb99354aa5f2a6bc97f238daf93724ff
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: 715541f066678807b5ef46b6697f32c5e1e233d2
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227148"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882389"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -105,7 +105,7 @@ Se você especificar LOCATION para que ele seja uma pasta, uma consulta do PolyB
 
 Neste exemplo, se 'LOCATION='/webdata/', uma consulta do PolyBase retornará linhas de mydata.txt e mydata2.txt. Ele não retorna mydata3.txt porque é uma subpasta de uma pasta oculta. E ele não retorna _hidden.txt porque é um arquivo oculto.
 
-![Dados recursivos para tabelas externas](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Recursive data for external tables")
+![Dados recursivos para tabelas externas](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Dados recursivos para tabelas externas")
 
 Para alterar o padrão e somente leitura da pasta raiz, defina o atributo \<polybase.recursive.traversal> como 'false' no arquivo de configuração core-site.xml. Esse arquivo está localizado em `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Por exemplo, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
@@ -580,9 +580,7 @@ WITH
 
 ## <a name="overview-azure-sql-database"></a>Visão geral: Banco de dados SQL do Azure
 
-No Banco de Dados SQL do Azure, crie uma tabela externa de [consultas elásticas](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) para usar com o Banco de Dados SQL do Microsoft Azure.
-
-Use uma tabela externa para criar uma tabela externa para uso com uma consulta elástica.
+No Banco de Dados SQL do Azure, cria uma tabela externa oara [consultas elásticas (em versão prévia)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).
 
 Confira também [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -661,7 +659,7 @@ Você pode criar várias tabelas externas que referenciam as mesmas fontes de da
 
 ## <a name="limitations-and-restrictions"></a>Limitações e Restrições
 
-Como os dados da tabela externa estão em outro Banco de Dados SQL, eles podem ser alterados ou removidos a qualquer momento. Por isso, não há garantia de que os resultados da consulta em uma tabela externa sejam determinísticos. A mesma consulta pode retornar resultados diferentes a cada vez que ela é executada em uma tabela externa. Da mesma forma, uma consulta pode falhar se os dados externos são removidos ou realocados.
+O acesso a dados por meio de uma tabela externa não adere à semântica de isolamento dentro do SQL Server. Isso significa que a consulta de uma tabela externa não impõe nenhum isolamento de bloqueio ou instantâneo e, portanto, o retorno de dados poderá ser alterado se os dados na fonte de dados externa estiverem sendo alterados.  A mesma consulta pode retornar resultados diferentes a cada vez que ela é executada em uma tabela externa. Da mesma forma, uma consulta pode falhar se os dados externos são removidos ou realocados.
 
 Você pode criar várias tabelas externas que referenciam fontes de dados externas diferentes.
 
@@ -674,6 +672,24 @@ Constructos e operações não compatíveis:
 
 - A restrição DEFAULT em colunas de tabela externa
 - Operações DML (linguagem de manipulação de dados) de exclusão, inserção e atualização
+
+Somente predicados literais definidos em uma consulta podem ser enviados por push para a fonte de dados externa. Isso é diferente de servidores vinculados e do acesso em que os predicados determinados durante a execução da consulta pode ser usado, ou seja, quando usados em conjunto com um loop aninhado em um plano de consulta. Geralmente, isso fará com que toda a tabela externa seja copiada localmente e, em seguida, unida.    
+
+```sql
+  \\ Assuming External.Orders is an external table and Customer is a local table. 
+  \\ This query  will copy the whole of the external locally as the predicate needed
+  \\ to filter isn't known at compile time. Its only known during execution of the query
+  
+  SELECT Orders.OrderId, Orders.OrderTotal 
+    FROM External.Orders
+   WHERE CustomerId in (SELECT TOP 1 CustomerId 
+                          FROM Customer 
+                         WHERE CustomerName = 'MyCompany')
+```
+
+O uso de Tabelas Externas impede o uso de paralelismo no plano de consulta.
+
+As tabelas externas são implementadas como Consulta Remota e, como tal, o número estimado de linhas retornadas geralmente é 1000; há outras regras com base no tipo de predicado usado para filtrar a tabela externa. Elas são estimativas baseadas em regras em vez de estimativas baseadas nos dados reais na tabela externa. O otimizador não acessa a fonte de dados remota para obter uma estimativa mais precisa.
 
 ## <a name="locking"></a>Bloqueio
 
@@ -761,7 +777,7 @@ Se você especificar LOCATION para que ele seja uma pasta, uma consulta do PolyB
 
 Neste exemplo, se 'LOCATION='/webdata/', uma consulta do PolyBase retornará linhas de mydata.txt e mydata2.txt. Ele não retorna mydata3.txt porque é uma subpasta de uma pasta oculta. E ele não retorna _hidden.txt porque é um arquivo oculto.
 
-![Dados recursivos para tabelas externas](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Recursive data for external tables")
+![Dados recursivos para tabelas externas](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Dados recursivos para tabelas externas")
 
 Para alterar o padrão e somente leitura da pasta raiz, defina o atributo \<polybase.recursive.traversal> como 'false' no arquivo de configuração core-site.xml. Esse arquivo está localizado em `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Por exemplo, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
@@ -986,7 +1002,7 @@ Se você especificar LOCATION para que ele seja uma pasta, uma consulta do PolyB
 
 Neste exemplo, se 'LOCATION='/webdata/', uma consulta do PolyBase retornará linhas de mydata.txt e mydata2.txt. Ele não retorna mydata3.txt porque é uma subpasta de uma pasta oculta. E ele não retorna _hidden.txt porque é um arquivo oculto.
 
-![Dados recursivos para tabelas externas](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Recursive data for external tables")
+![Dados recursivos para tabelas externas](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Dados recursivos para tabelas externas")
 
 Para alterar o padrão e somente leitura da pasta raiz, defina o atributo \<polybase.recursive.traversal> como 'false' no arquivo de configuração core-site.xml. Esse arquivo está localizado em `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Por exemplo, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
