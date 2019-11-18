@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9df5dab8f3ce74efeb9ba4c1d849e9f633c85004
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 23cd3f3b29db6d6c791b97b40401781fa3a3bbfc
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809714"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981799"
 ---
 # <a name="dta-utility"></a>utilitário dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ dta -d AdventureWorks2012 ...
 [Recomendações de índice columnstore no Orientador de Otimização do Mecanismo de Banco de Dados (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
-|**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.|  
 
   
  **-fk** _keep_existing_option_  
@@ -219,7 +219,7 @@ dta -d AdventureWorks2012 ...
  Especifica que o Repositório de Consultas ser usado como a carga de trabalho. Os principais eventos 1.000 do Repositório de Consultas para bancos de dados explicitamente selecionados são analisados. Esse valor pode ser alterado usando a opção **-n**.  Confira [Repositório de Consultas](../../relational-databases/performance/how-query-store-collects-data.md) e [Ajustando o banco de dados usando a carga de trabalho do Repositório de Consultas](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) para obter mais informações.
  ||  
 |-|  
-|**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.|  
      
   
  **-if** _workload_file_  
@@ -273,7 +273,7 @@ dta -iq -I 48
 Nesse caso, o DTA usará Repositório de Consultas como a origem da carga de trabalho e apenas considerar as consultas que foram executadas com as últimas 48 horas.  
   ||  
 |-|  
-|**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.|  
 
 
   
