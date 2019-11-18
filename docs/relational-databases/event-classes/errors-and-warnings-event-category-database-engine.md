@@ -1,6 +1,6 @@
 ---
-title: Categoria de eventos de erros e de avisos (Mecanismo de Banco de Dados) | Microsoft Docs
-ms.custom: ''
+title: Categoria de evento de erros e de avisos
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 249c19b5-af68-4433-80f6-337395176641
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1fd2ee391b2223c7c2db0d086d561594ebec1125
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4832910f00322875c334e16df77975a33106d214
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089552"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056420"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Categoria de eventos de erros e de avisos (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

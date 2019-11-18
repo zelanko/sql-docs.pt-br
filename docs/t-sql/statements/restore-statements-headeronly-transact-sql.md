@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 627d4c925129e0826fcbc9fd2a09121091d68501
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742967"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983028"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Instruções RESTORE – HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -38,7 +38,7 @@ ms.locfileid: "68742967"
 > [!NOTE]  
 >  Para obter as descrições dos argumentos, consulte [Argumentos de RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -145,7 +145,7 @@ FROM <backup_device>
 |**BackupTypeDescription**|**nvarchar(60)**|Tipo de backup como cadeia de caracteres, sendo:<br /><br /> DATABASE<br /><br /> TRANSACTION LOG<br /><br /> FILE OR FILEGROUP<br /><br /> DATABASE DIFFERENTIAL<br /><br /> FILE DIFFERENTIAL PARTIAL<br /><br /> PARTIAL DIFFERENTIAL|  
 |**BackupSetGUID**|**uniqueidentifier** NULL|Número de identificação exclusivo do conjunto de backup pelo qual ele é identificado na mídia.|  
 |**CompressedBackupSize**|**bigint**|Contagem de bytes do conjunto de backup. Para backups não compactados, esse valor é o mesmo de **BackupSize**.<br /><br /> Para calcular a taxa de compactação, use **CompressedBackupSize** e **BackupSize**.<br /><br /> Durante uma atualização do **msdb**, esse valor é definido para que corresponda ao valor da coluna **BackupSize**.|  
-|**containment**|**tinyint** não NULL|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica o status de contenção do banco de dados.<br /><br /> 0 = a contenção do banco de dados está desativada<br /><br /> 1 = o banco de dados está em contenção parcial|  
+|**containment**|**tinyint** não NULL|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> Indica o status de contenção do banco de dados.<br /><br /> 0 = a contenção do banco de dados está desativada<br /><br /> 1 = o banco de dados está em contenção parcial|  
 |**KeyAlgorithm**|**nvarchar(32)**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) até a versão atual.<br /><br /> O algoritmo de criptografia usado para criptografar o backup. NO_Encryption indica que o backup não foi criptografado. Quando não for possível determinar o valor correto, o valor deve ser NULL.|  
 |**EncryptorThumbprint**|**varbinary(20)**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) até a versão atual.<br /><br /> A impressão digital do criptografador que pode ser usada para localizar o certificado ou chave assimétrica no banco de dados. Quando o backup não tiver sido criptografado, esse valor é NULL.|  
 |**EncryptorType**|**nvarchar(32)**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) até a versão atual.<br /><br /> O tipo de criptografador usado: Certificado ou Chave Assimétrica. Quando o backup não tiver sido criptografado, esse valor é NULL.|  

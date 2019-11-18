@@ -20,19 +20,19 @@ ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a2731f569ecf602c4aaa21e233ec671596e16ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bfdfb5c3579b43ada97c9ef72b72dbaf3d29308
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024283"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982943"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna o índice nomeado ou valor de propriedade de estatísticas de um número de identificação de tabela, índice ou nome de estatísticas e nome de propriedade especificados. Retorna NULL para índices XML.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,14 +61,14 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsAutoStatistics**|Estatísticas foram geradas pela opção AUTO_CREATE_STATISTICS de ALTER DATABASE.|1 = True<br /><br /> 0 = False ou índice XML.|  
 |**IsClustered**|O índice é clusterizado.|1 = True<br /><br /> 0 = False ou índice XML.|  
 |**IsDisabled**|O índice está desabilitado.|1 = True<br /><br /> 0 = False<br /><br /> NULL = A entrada não é válida.|  
-|**IsFulltextKey**|O índice é o texto completo e a chave de indexação semântica de uma tabela.|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False ou índice XML.<br /><br /> NULL = A entrada não é válida.|  
+|**IsFulltextKey**|O índice é o texto completo e a chave de indexação semântica de uma tabela.|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> 1 = True<br /><br /> 0 = False ou índice XML.<br /><br /> NULL = A entrada não é válida.|  
 |**IsHypothetical**|O índice é hipotético e não pode ser usado diretamente como um caminho de acesso de dados. Os índices hipotéticos retêm estatísticas do nível de coluna e são mantidos e usados pelo Orientador de Otimização do Mecanismo de Banco de Dados.|1 = True<br /><br /> 0 = False ou índice XML<br /><br /> NULL = A entrada não é válida.|  
-|**IsPadIndex**|O índice especifica o espaço a ser deixado aberto em cada nó interior.|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False ou índice XML.|  
-|**IsPageLockDisallowed**|Valor de bloqueio de página definido pela opção ALLOW_PAGE_LOCKS de ALTER INDEX.|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = O bloqueio de página não é permitido.<br /><br /> 0 = O bloqueio de página é permitido.<br /><br /> NULL = A entrada não é válida.|  
-|**IsRowLockDisallowed**|Valor de bloqueio de linha definido pela opção ALLOW_ROW_LOCKS de ALTER INDEX.|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = O bloqueio de linha não é permitido.<br /><br /> 0 = O bloqueio de linha é permitido.<br /><br /> NULL = A entrada não é válida.|  
+|**IsPadIndex**|O índice especifica o espaço a ser deixado aberto em cada nó interior.|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> 1 = True<br /><br /> 0 = False ou índice XML.|  
+|**IsPageLockDisallowed**|Valor de bloqueio de página definido pela opção ALLOW_PAGE_LOCKS de ALTER INDEX.|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> 1 = O bloqueio de página não é permitido.<br /><br /> 0 = O bloqueio de página é permitido.<br /><br /> NULL = A entrada não é válida.|  
+|**IsRowLockDisallowed**|Valor de bloqueio de linha definido pela opção ALLOW_ROW_LOCKS de ALTER INDEX.|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> 1 = O bloqueio de linha não é permitido.<br /><br /> 0 = O bloqueio de linha é permitido.<br /><br /> NULL = A entrada não é válida.|  
 |**IsStatistics**|*index_or_statistics_name* são as estatísticas criadas pela instrução CREATE STATISTICS ou pela opção AUTO_CREATE_STATISTICS de ALTER DATABASE.|1 = True<br /><br /> 0 = False ou índice XML.|  
 |**IsUnique**|O índice é exclusivo.|1 = True<br /><br /> 0 = False ou índice XML.|  
-|**IsColumnstore**|Índice é um índice columnstore xVelocity de memória otimizada.|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False| 
+|**IsColumnstore**|Índice é um índice columnstore xVelocity de memória otimizada.|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> 1 = True<br /><br /> 0 = False| 
 |**IsOptimizedForSequentialKey**|O índice tem a otimização para inserções de última página habilitada.|**Aplica-se a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e posterior. <br><br>1 = True<br><br>0 = False| 
   
 ## <a name="return-types"></a>Tipos de retorno  

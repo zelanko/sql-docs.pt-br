@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 16d90e031f6892a132a2a64ad52aedfc34d39a08
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 32f7c238a08a7da31d455421ca9fc00d0f8d6bdb
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149977"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962371"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Instalar o SQL Server por meio do Assistente de Instalação (Instalação)
 
@@ -52,7 +52,7 @@ Antes de instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], c
 
 ###  <a name="bkmk_ga_instalpatch"></a> Instalar o requisito de patch
 
-A Microsoft identificou um problema com os binários de tempo de execução do Microsoft Visual C++ 2013, que são instalados como um pré-requisito pelo SQL Server 2016 e 2017. Uma atualização está disponível para correção deste problema. Se essa atualização para os binários de tempo de execução do Visual C++ não for instalada, o SQL Server poderá apresentar problemas de estabilidade em determinados cenários. Antes de instalar o SQL Server, siga as instruções das [Notas de versão do SQL Server](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) para ver se seu computador precisa de um patch para os binários de tempo de execução do Visual C++. 
+A Microsoft identificou um problema com os binários de runtime do Microsoft Visual C++ 2013, que são instalados como um pré-requisito pelo SQL Server 2016 e 2017. Uma atualização está disponível para correção deste problema. Se essa atualização para os binários de runtime do Visual C++ não for instalada, o SQL Server poderá apresentar problemas de estabilidade em determinados cenários. Antes de instalar o SQL Server, siga as instruções das [Notas de versão do SQL Server](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) para ver se seu computador precisa de um patch para os binários de runtime do Visual C++. 
 
 Isso não se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
 
@@ -317,12 +317,6 @@ Isso não se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]
      Para saber mais, leia a página [Configuração do Mecanismo de Banco de Dados – Diretórios de dados](../../sql-server/install/instance-configuration.md#datadir).
 
      Use a página **Configuração do Mecanismo de Banco de Dados – TempDB** para configurar o tamanho do arquivo, o número de arquivos, os diretórios de instalação não padrão e as configurações de ampliação de arquivo do **tempdb**. Para saber mais, veja a página [Configuração do Mecanismo de Banco de Dados – TempDB](../../sql-server/install/instance-configuration.md#tempdb).
-<<<<<<< CABEÇALHO
-  
-     Use a página **Configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)] – MaxDOP** para especificar o grau máximo de paralelismo. Essa configuração determina a quantidade de processadores que uma única instrução pode usar durante a execução. O valor recomendado é calculado automaticamente durante a instalação. Esta página só está disponível na Configuração a partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Para saber mais, veja a [página Configuração do Mecanismo de Banco de Dados – MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop). 
-
-     Use a página **Configuração do Mecanismo de Banco de Dados – Memória** para especificar os valores **memória mínima do servidor** e **memória máxima do servidor** que esta instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará após a inicialização. Use os valores padrão, os valores recomendados calculados ou especifique manualmente seus próprios valores, depois de escolher a opção **Recomendado**. Esta página só está disponível na Configuração a partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Para saber mais, veja a [página Configuração do Mecanismo de Banco de Dados – Memória](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
-=======
 
      Use a página **Configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)] – MaxDOP** para especificar o grau máximo de paralelismo. Essa configuração determina a quantidade de processadores que uma única instrução pode usar durante a execução. O valor recomendado é calculado automaticamente durante a instalação. 
      
@@ -337,9 +331,8 @@ Isso não se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]
     > Esta página só está disponível na Configuração a partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
     Para saber mais, veja a [página Configuração do Mecanismo de Banco de Dados – Memória](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
->>>>>>> 1d82c7efe18f86136247fb366df5030843199c19
 
-     Use the **Database Engine Configuration - FILESTREAM** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
+     Use a página **Configuração do Mecanismo de Banco de Dados – Fluxo de arquivos** para habilitar o fluxo de arquivos na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para saber mais, leia a página [Configuração do Mecanismo de Banco de Dados – Fluxo de arquivos](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   
 1. Use a página **Configuração do Analysis Services – Provisionamento de Conta** para especificar o modo de servidor e os usuários ou as contas que têm permissões de administrador no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O modo de servidor determina quais subsistemas de memória e de armazenamento são usados no servidor. Tipos de solução diferentes são executados em modos de servidor diferentes. Se você pretende executar bancos de dados de cubo multidimensionais no servidor, escolha a opção padrão do modo de servidor **Multidimensional e Mineração de Dados**.
 

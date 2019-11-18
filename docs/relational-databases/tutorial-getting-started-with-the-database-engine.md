@@ -1,6 +1,6 @@
 ---
-title: 'Tutorial: Introdução ao Mecanismo de Banco de Dados | Microsoft Docs'
-ms.custom: ''
+title: 'Tutorial: Introdução ao Mecanismo de Banco de Dados'
+ms.custom: seo-dt-2019
 ms.date: 06/21/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 535854f49dc1271d24af5718edb4258bc76566ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff27b763f5bbb658de2d5e762ecdecdaea7fc583
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075488"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095714"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Tutorial: Introdução ao Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

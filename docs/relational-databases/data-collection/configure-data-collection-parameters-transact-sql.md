@@ -1,6 +1,6 @@
 ---
-title: Configurar parâmetros de coleta de dados (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Configurar parâmetros de coleta de dados (T-SQL)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 850905b6-35d2-4ed1-ab51-de64daa832b2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 31d9f661908adc148fea48b020fa8b8b215c4755
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: b7d8d45273fc9ac79a5dd65cfb168868e76f55cd
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909696"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056458"
 ---
 # <a name="configure-data-collection-parameters-transact-sql"></a>Configurar parâmetros de coleta de dados (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

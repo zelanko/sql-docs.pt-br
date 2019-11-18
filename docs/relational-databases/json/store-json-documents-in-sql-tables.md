@@ -1,7 +1,6 @@
 ---
-title: Armazenar documentos JSON no SQL Server ou no Banco de Dados SQL | Microsoft Docs
+title: Armazenar documentos JSON no SQL Server ou no Banco de Dados SQL
 ms.description: This article describes why and how to store and index JSON documents in SQL Server or SQL Database, and how to optimize queries over the JSON documents.
-ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql
 ms.reviewer: genemi
@@ -9,12 +8,13 @@ ms.technology: ''
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
-ms.openlocfilehash: 7c389f6b7cb2df2d7f464dcc8fc5eeb110a7f4d5
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.custom: seo-dt-2019
+ms.openlocfilehash: ea43d88fea017c723177e4b83c86b5c8165b734b
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957452"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096022"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Armazenar documentos JSON no SQL Server ou no Banco de Dados SQL
 O SQL Server e o Banco de Dados SQL do Azure têm funções nativas do JSON que permitem analisar documentos JSON usando a linguagem SQL padrão. Você pode armazenar documentos JSON no SQL Server ou no Banco de Dados SQL e consultar os dados JSON em um banco de dados NoSQL. Este artigo descreve as opções para armazenar documentos JSON no SQL Server ou no Banco de Dados SQL.

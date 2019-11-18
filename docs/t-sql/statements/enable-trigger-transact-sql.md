@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 64dd9567588e3d3cc5dccf7ee1aef469a888c275
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.openlocfilehash: 369dd7ec16ee530d7612222ad7e77dd6faf66e14
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73064550"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73980942"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ DATABASE
 Para um gatilho DDL, indica que *trigger_name* foi criado ou modificado para ser executado com o escopo do banco de dados.  
   
 ALL SERVER  
-**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
   
 Para um gatilho DDL, indica que *trigger_name* foi criado ou modificado para ser executado com o escopo do servidor. ALL SERVER também é aplicado a gatilhos de logon.  
   
@@ -107,7 +107,7 @@ GO
 ### <a name="c-enabling-all-triggers-that-were-defined-with-the-same-scope"></a>C. Habilitando todos os gatilhos que foram definidos com o mesmo escopo  
 O exemplo a seguir habilita todos os disparadores DDL que foram criados no escopo do servidor.  
   
-**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
   
 ```sql  
 ENABLE Trigger ALL ON ALL SERVER;  

@@ -1,5 +1,6 @@
 ---
-title: Change Data Capture and Other SQL Server Features | Microsoft Docs
+title: Change Data Capture e outros recursos do SQL Server
+ms.custom: seo-dt-2019
 ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2eb827cbb971195a89a2cd5bdd26dad1bd9f196b
-ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
+ms.openlocfilehash: e29ad6de65172b08bb3f35aa89820ca817a9e1d3
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621792"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095293"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Change Data Capture e outros recursos do SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

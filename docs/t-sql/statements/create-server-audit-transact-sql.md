@@ -22,19 +22,19 @@ ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: aea91d8ed791809296a924d10aab176f16ebe82f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc6f7c3ad9dc10e46a7abd1b044bcf70ff86f92d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117138"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982998"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Cria um objeto de auditoria de servidor por meio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -89,7 +89,7 @@ CREATE SERVER AUDIT audit_name
  Especifica o número máximo de arquivos a serem retidos no sistema de arquivos além do arquivo atual. O valor *MAX_ROLLOVER_FILES* deve ser um inteiro ou UNLIMITED. O valor padrão é UNLIMITED. Este parâmetro é avaliado sempre que a auditoria é reiniciada (o que pode ocorrer quando a instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] é reiniciada ou quando a auditoria é desativada e, em seguida, reativada) ou quando um novo arquivo é necessário porque o valor máximo de MAXSIZE foi alcançado. Quando *MAX_ROLLOVER_FILES* é avaliado, se o número de arquivos excede a configuração de *MAX_ROLLOVER_FILES*, o arquivo mais antigo é excluído. Como resultado, quando a configuração de *MAX_ROLLOVER_FILES* é 0, um novo arquivo é criado sempre que a configuração de *MAX_ROLLOVER_FILES* é avaliada. Somente um arquivo é excluído automaticamente quando a configuração de *MAX_ROLLOVER_FILES* é avaliada. Portanto, quando o valor de *MAX_ROLLOVER_FILES* é reduzido, o número de arquivos não diminui, a menos que os arquivos antigos sejam excluídos manualmente. O número máximo de arquivos que pode ser especificado é 2.147.483.647.  
   
  MAX_FILES =*integer*  
- **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.  
   
  Especifica o número máximo de arquivos de auditoria que pode ser criado. Não substitui o primeiro arquivo quando o limite é atingido. Quando o limite de MAX_FILES é atingido, qualquer ação que causa a geração de eventos adicionais falha com um erro.  
   
@@ -110,18 +110,18 @@ Força a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
  FAIL_OPERATION  
  Haverá falha nas ações do banco de dados se elas provocarem eventos auditados. As ações que não causam eventos auditados podem continuar, mas nenhum evento auditado pode ocorrer. A auditoria continua tentando registrar eventos em log e retoma se a condição de falha é resolvida. Use essa opção, quando manter uma auditoria completa for mais importante do que o acesso total ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.
 
  AUDIT_GUID =*uniqueidentifier*  
  Para dar suporte a cenários, como espelhamento de banco de dados, uma auditoria precisa de um GUID específico que corresponda ao GUID encontrado no banco de dados espelhado. O GUID não pode ser modificado depois que a auditoria foi criada.  
   
  predicate_expression  
- **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.  
   
  Especifica a expressão de predicado usada para determinar se um evento deve ser processado ou não. As expressões de predicado são limitadas a 3.000 caracteres, o que limita os argumentos de cadeia de caracteres.  
   
  event_field_name  
- **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.  
   
  É o nome do campo de evento que identifica a origem do predicado. Campos de auditoria são descritos em [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). Todos os campos podem ser filtrados, exceto `file_name`, `audit_file_offset` e `event_time`.  
 
@@ -136,12 +136,12 @@ Força a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 
  number  
- **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.  
   
  É qualquer tipo numérico, incluindo **decimal**. Limitações são a falta de memória física disponível ou um número que é muito grande para ser representado como um inteiro de 64 bits.  
   
  ' string '  
- **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.  
   
  Uma cadeia de caracteres ANSI ou Unicode, conforme requerido pela comparação de predicado. Nenhuma conversão de tipo de cadeia de caracteres implícita é executada para as funções de comparação de predicado. A transferência do tipo incorreto resulta em um erro.  
   

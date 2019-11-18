@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 97043c1232dd3003ff5c7101403c53425d75bca5
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: a31be66b07c6d5c463f5220e6359942cd507849b
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843593"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981743"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
 ## <a name="arguments"></a>Argumentos  
  **'** *login* **'**  
-**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior
   
  É o nome de logon do usuário. *login* é **sysname**. *login*, que é opcional, pode ser um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um usuário ou grupo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Se *login* não for especificado, serão retornadas informações sobre o contexto de segurança atual. Se o parâmetro contiver a palavra NULL, retornará NULL.  
   
  *Param2*  
-**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior
   
  Especifica se o nome de logon é validado. *Param2* é do tipo **int** e é opcional. Quando *Param2* for 0, o nome de logon não será validado. Quando*Param2* não estiver especificado como 0, será verificado se o nome de logon do Windows é exatamente igual ao nome de logon armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -80,7 +80,7 @@ SELECT SUSER_SID();
 ### <a name="b-using-suser_sid-with-a-specific-login"></a>B. Usando SUSER_SID com um logon específico  
  O exemplo a seguir retorna o número de identificação de segurança para o logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa`.  
   
-**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior
   
 ```  
 SELECT SUSER_SID('sa');  
@@ -90,7 +90,7 @@ GO
 ### <a name="c-using-suser_sid-with-a-windows-user-name"></a>C. Usando SUSER_SID com um nome de usuário do Windows  
  O exemplo a seguir retorna o número de identificação de segurança para o usuário do Windows `London\Workstation1`.  
   
-**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior
   
 ```  
 SELECT SUSER_SID('London\Workstation1');  
@@ -118,7 +118,7 @@ GO
 ### <a name="e-comparing-the-windows-login-name-to-the-login-name-stored-in-sql-server"></a>E. Comparando o nome de logon do Windows ao nome de logon armazenado no SQL Server  
  O exemplo a seguir mostra como usar *Param2* para obter o SID do Windows e usa esse SID como uma entrada para a função `SUSER_SNAME`. O exemplo fornece o logon no formato em que está armazenado no Windows (`TestComputer\User`) e o retorna no formato em que está armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (`TESTCOMPUTER\User`).  
   
-**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior
   
 ```  
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  

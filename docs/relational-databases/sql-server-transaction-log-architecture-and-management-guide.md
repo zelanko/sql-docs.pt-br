@@ -1,5 +1,5 @@
 ---
-title: Guia de arquitetura e gerenciamento de log de transações do SQL Server | Microsoft Docs
+title: Guia de gerenciamento e arquitetura do log de transações
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7444659676f6f8270b5cc8013c872e492e0cd8c8
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.openlocfilehash: 82ee5bbda78f41796134a2d1ad3a639f76748bcd
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72916063"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095652"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guia de arquitetura e gerenciamento do log de transações do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

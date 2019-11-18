@@ -23,12 +23,12 @@ ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 71c2dc90dd54fa1f263de1d04915760dc7a34762
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.openlocfilehash: 276e7a88d7cd10f6ee98a6dde80d3f86c39b2c08
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73064615"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981982"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -169,7 +169,7 @@ As seguintes permissões necessárias para criar um assembly CLR quando o `CLR s
   
 ### <a name="example-a-creating-an-assembly-from-a-dll"></a>Exemplo A: criar um assembly com base em uma dll  
   
-**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
   
  O exemplo a seguir supõe que há exemplos do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instalados no local padrão do computador local e que o aplicativo de exemplo HelloWorld.csproj esteja compilado. Para obter mais informações, confira [Exemplo de Olá, Mundo](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).  
   
@@ -184,7 +184,7 @@ WITH PERMISSION_SET = SAFE;
   
 ### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Exemplo B: criar um assembly com base em bits do assembly  
   
-**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
   
  Substitua os bits de exemplo (que não são válidos ou não estão completos) pelos bits do assembly.  
   

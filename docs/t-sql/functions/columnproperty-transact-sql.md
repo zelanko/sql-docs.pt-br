@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6551eb61d22f69307f6fe671ba22cd4de06cdb67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff96377eac69c1596e0d2e2661714f82dd2cae9a
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064671"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983018"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Essa função retorna informações de coluna ou parâmetro.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,13 +54,13 @@ Para o argumento *id*, o argumento *propriedade* especifica o tipo de informaç�
 |**AllowsNull**|Permite valores nulos.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
 |**ColumnId**|Valor de ID da coluna que corresponde a **sys.columns.column_id**.|ID da coluna<br /><br /> **Observação:** Ao consultar várias colunas, podem aparecer lacunas na sequência de valores de ID da Coluna.|  
 |**FullTextTypeColumn**|A TYPE COLUMN na tabela contendo as informações de tipo de documento da *coluna*.|ID de TYPE COLUMN de texto completo da expressão de nome de coluna passada como segundo parâmetro dessa função.|  
-|**GeneratedAlwaysType**|O valor da coluna é gerado pelo sistema. Corresponde a **sys.columns.generated_always_type**|**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: não é gerado sempre<br /><br /> 1: gerado sempre no início da linha<br /><br /> 2: gerado sempre no fim da linha|  
+|**GeneratedAlwaysType**|O valor da coluna é gerado pelo sistema. Corresponde a **sys.columns.generated_always_type**|**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.<br /><br /> 0: não é gerado sempre<br /><br /> 1: gerado sempre no início da linha<br /><br /> 2: gerado sempre no fim da linha|  
 |**IsColumnSet**|A coluna é um conjunto de colunas. Para obter mais informações, veja [Usar conjuntos de colunas](../../relational-databases/tables/use-column-sets.md).|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
 |**IsComputed**|É uma coluna computada.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
 |**IsCursorType**|O parâmetro de procedimento é do tipo CURSOR.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
 |**IsDeterministic**|A coluna é determinística. Essa propriedade só se aplica a colunas computadas e colunas de exibição.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida. Não é uma coluna computada nem uma coluna de exibição.|  
 |**IsFulltextIndexed**|A coluna está registrada para indexação de texto completo.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
-|**IsHidden**|O valor da coluna é gerado pelo sistema. Corresponde a **sys.columns.is_hidden**|**Aplica-se a**: do [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: não oculto<br /><br /> 1: Hidden|  
+|**IsHidden**|O valor da coluna é gerado pelo sistema. Corresponde a **sys.columns.is_hidden**|**Aplica-se a**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] e posterior.<br /><br /> 0: não oculto<br /><br /> 1: Hidden|  
 |**IsIdentity**|A coluna usa a propriedade IDENTITY.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
 |**IsIdNotForRepl**|A coluna verifica a configuração de IDENTITY_INSERT.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
 |**IsIndexable**|A coluna pode ser indexada.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  

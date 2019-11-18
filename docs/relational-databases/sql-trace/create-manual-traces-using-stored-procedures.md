@@ -1,6 +1,6 @@
 ---
-title: Criar rastreamentos manuais usando procedimentos armazenados | Microsoft Docs
-ms.custom: ''
+title: Criar rastreamentos manuais usando procedimentos armazenados
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f6f47fa2-7c17-41d4-9f69-9be144d56832
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5c312ba10053bb81071f83629cb7266088f5c525
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d24b9300b5ce5d727d7e9b53c42cea4571ad066f
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909251"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095976"
 ---
 # <a name="create-manual-traces-using-stored-procedures"></a>Criar rastreamentos manuais usando procedimentos armazenados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

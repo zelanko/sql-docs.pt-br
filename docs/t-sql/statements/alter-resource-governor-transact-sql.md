@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 710604102132d3b50b328c80f12cf41cd66a1219
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2372b07e45e952003f18270995b52eb0f7338c64
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927218"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982020"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67927218"
   
 -   Define o máximo de operações de E/S por volume de disco.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -94,7 +94,7 @@ ALTER RESOURCE GOVERNOR
  Redefine as estatísticas em todos os grupos de carga de trabalho e pools de recursos. Para obter mais informações, consulte [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) e [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   
  MAX_OUTSTANDING_IO_PER_VOLUME = *value*  
- **Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.  
   
  Define o máximo de operações de E/S na fila por volume de disco. Essas operações de E/S podem ser leituras ou gravações de qualquer tamanho.  O valor máximo para MAX_OUTSTANDING_IO_PER_VOLUME é 100. Não é uma porcentagem. Essa configuração é criada para ajustar a administração do recurso de E/S às características de E/S de um volume de disco. Recomendamos fazer experiências com valores diferentes e considerar o uso de uma ferramenta de calibração como o IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) ou SQLIO (preterido) para identificar o valor máximo do subsistema de armazenamento. Essa configuração fornece uma verificação de segurança no nível do sistema que permite ao SQL Server atender ao mínimo de IOPS para pools de recursos mesmo se outros pools tiverem o MAX_IOPS_PER_VOLUME definido como ilimitado. Para obter mais informações sobre MAX_IOPS_PER_VOLUME, consulte [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md).  
   
@@ -178,7 +178,7 @@ GO
 ALTER RESOURCE GOVERNOR RESET STATISTICS;  
 ```  
   
-### <a name="e-setting-the-maxoutstandingiopervolume-option"></a>E. Definindo a opção de MAX_OUTSTANDING_IO_PER_VOLUME  
+### <a name="e-setting-the-max_outstanding_io_per_volume-option"></a>E. Definindo a opção de MAX_OUTSTANDING_IO_PER_VOLUME  
  O exemplo a seguir define a opção de MAX_OUTSTANDING_IO_PER_VOLUME para 20.  
   
 ```  

@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0f088f9340c0441b15eea7382ff49b1b87181479
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 613dc7c05707d9a432ec6f8f7eab7b8b3bce2cce
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902122"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982829"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "67902122"
   
  Para obter informações sobre os formatos de pesquisas de texto completo compatíveis com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Consulta com a pesquisa de texto completo](../../relational-databases/search/query-with-full-text-search.md).  
  
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -151,7 +151,7 @@ CONTAINS (
  Especifica que a consulta pesquisa todas as colunas indexadas de texto completo na tabela especificada na cláusula FROM para o critério de pesquisa especificado. As colunas na cláusula CONTAINS devem se originar de uma única tabela que tenha um índice de texto completo. A menos que *language_term* seja especificado, o idioma de todas as colunas da tabela precisará ser o mesmo.  
   
  PROPERTY ( *column_name* , '*property_name*')  
-**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior. 
   
  Especifica uma propriedade de documento na qual procurar o critério de pesquisa especificado.  
   
@@ -246,7 +246,7 @@ Especifica uma correspondência para uma palavra ou frase exata. Exemplos de ter
  Para obter mais informações sobre termos de proximidade genéricos, consulte [Pesquisar palavras próximas de outra palavra com NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
   
  \<custom_proximity_term>  
-**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.
   
  Especifica uma correspondência de palavras ou frases e, opcionalmente, a distância máxima permitida entre termos de pesquisa. você também pode especificar que os termos da pesquisa devem ser localizados na ordem exata em que você os especifica (\<match_order>).  
   
@@ -371,7 +371,7 @@ WHERE CONTAINS((Name, Color), 'Red');
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-contains-with-simpleterm"></a>A. Usando CONTAINS com \<simple_term>  
+### <a name="a-using-contains-with-simple_term"></a>A. Usando CONTAINS com \<simple_term>  
  O exemplo a seguir localiza todos os produtos com um preço de `$80.99` contendo a palavra `Mountain`.  
   
 ```sql  
@@ -384,7 +384,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### <a name="b-using-contains-and-phrase-with-simpleterm"></a>B. Usando CONTAINS e a frase com \<simple_term>  
+### <a name="b-using-contains-and-phrase-with-simple_term"></a>B. Usando CONTAINS e a frase com \<simple_term>  
  O exemplo a seguir retorna todos os produtos contendo a expressão `Mountain` ou `Road`.  
   
 ```sql  
@@ -396,7 +396,7 @@ WHERE CONTAINS(Name, ' Mountain OR Road ')
 GO  
 ```  
   
-### <a name="c-using-contains-with-prefixterm"></a>C. Usando CONTAINS com \<prefix_term>  
+### <a name="c-using-contains-with-prefix_term"></a>C. Usando CONTAINS com \<prefix_term>  
  O exemplo a seguir retorna todos os nomes de produtos com pelo menos uma palavra que comece com a cadeia de prefixos na coluna `Name`.  
   
 ```sql  
@@ -408,7 +408,7 @@ WHERE CONTAINS(Name, ' "Chain*" ');
 GO  
 ```  
   
-### <a name="d-using-contains-and-or-with-prefixterm"></a>D. Usando CONTAINS e OR com \<prefix_term>  
+### <a name="d-using-contains-and-or-with-prefix_term"></a>D. Usando CONTAINS e OR com \<prefix_term>  
  O exemplo a seguir retorna todas as descrições de categoria contendo cadeias de caracteres com prefixos de `chain` ou `full`.  
   
 ```sql  
@@ -420,9 +420,9 @@ WHERE CONTAINS(Name, '"chain*" OR "full*"');
 GO  
 ```  
   
-### <a name="e-using-contains-with-proximityterm"></a>E. Usando CONTAINS com \<proximity_term>  
+### <a name="e-using-contains-with-proximity_term"></a>E. Usando CONTAINS com \<proximity_term>  
   
-**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior. 
   
  O exemplo a seguir pesquisa a tabela `Production.ProductReview` em busca de todos os comentários que contêm a palavra `bike` em 10 termos da palavra "`control`" e na ordem especificada (ou seja, em que "`bike`" precede "`control`").  
   
@@ -435,7 +435,7 @@ WHERE CONTAINS(Comments , 'NEAR((bike,control), 10, TRUE)');
 GO  
 ```  
   
-### <a name="f-using-contains-with-generationterm"></a>F. Usando CONTAINS com \<generation_term>  
+### <a name="f-using-contains-with-generation_term"></a>F. Usando CONTAINS com \<generation_term>  
  O exemplo a seguir pesquisa todos os produtos com as palavras da forma `ride`: riding, ridden e assim por diante.  
   
 ```sql  
@@ -447,7 +447,7 @@ WHERE CONTAINS(Description, ' FORMSOF (INFLECTIONAL, ride) ');
 GO  
 ```  
   
-### <a name="g-using-contains-with-weightedterm"></a>G. Usando CONTAINS com \<weighted_term>  
+### <a name="g-using-contains-with-weighted_term"></a>G. Usando CONTAINS com \<weighted_term>  
  O exemplo a seguir pesquisa todos os nomes de produtos que contêm as palavras `performance`, `comfortable` ou `smooth`, e diferentes pesos são dados a cada palavra.  
   
 ```sql  
@@ -519,7 +519,7 @@ GO
   
 ### <a name="k-querying-on-a-document-property"></a>K. Consultando em uma propriedade de documento  
   
-**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior. 
   
  A consulta a seguir realiza pesquisa em uma propriedade indexada, `Title`, na coluna `Document` da tabela `Production.Document`. A consulta retorna apenas documentos cuja propriedade `Title` contém a cadeia de caracteres `Maintenance` ou `Repair`.  
   

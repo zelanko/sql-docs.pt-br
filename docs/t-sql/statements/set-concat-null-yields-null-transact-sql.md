@@ -23,14 +23,14 @@ ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdaa57594049ca9c7bd088120ae119ec7c58c151
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 33a6e32fead5e2c16a9b1c66d6de78d49adbee58
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041837"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962439"
 ---
-# <a name="set-concatnullyieldsnull-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
+# <a name="set-concat_null_yields_null-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Controla se os resultados de concatenação serão tratados como valores de cadeia de caracteres nulos ou vazios.  
@@ -38,17 +38,17 @@ ms.locfileid: "68041837"
 > [!IMPORTANT]  
 >  Em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], CONCAT_NULL_YIELDS_NULL sempre estará ON e quaisquer aplicativos que definam explicitamente a opção como OFF gerarão um erro. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```sql
 -- Syntax for SQL Server  
     
 SET CONCAT_NULL_YIELDS_NULL { ON | OFF }   
 ```  
   
-```  
+```sql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 SET CONCAT_NULL_YIELDS_NULL ON    
@@ -70,17 +70,16 @@ SET CONCAT_NULL_YIELDS_NULL deve estar como **ON** quando você criar ou alterar
   
  Para exibir a configuração atual dessa configuração, execute a consulta a seguir.  
   
-```  
-DECLARE @CONCAT_NULL_YIELDS_NULL VARCHAR(3) = 'OFF';  
-IF ( (4096 & @@OPTIONS) = 4096 ) SET @CONCAT_NULL_YIELDS_NULL = 'ON';  
-SELECT @CONCAT_NULL_YIELDS_NULL AS CONCAT_NULL_YIELDS_NULL;  
-  
+```sql
+DECLARE @CONCAT_SETTING VARCHAR(3) = 'OFF';  
+IF ( (4096 & @@OPTIONS) = 4096 ) SET @CONCAT_SETTING = 'ON';  
+SELECT @CONCAT_SETTING AS CONCAT_NULL_YIELDS_NULL; 
 ```  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra o uso das duas configurações `SET CONCAT_NULL_YIELDS_NULL`.  
   
-```  
+```sql
 PRINT 'Setting CONCAT_NULL_YIELDS_NULL ON';  
 GO  
 -- SET CONCAT_NULL_YIELDS_NULL ON and testing.  
