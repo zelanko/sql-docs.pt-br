@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2b1dae2be81524bba3cf1e28d5e64736d4e9078b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a39f9cf72f08e80face176412851778f1afec174
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141237"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982456"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Instruções RESTORE – argumentos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Este tópico documenta os argumentos descritos nas seções de Sintaxe da instrução RESTORE {DATABASE|LOG} e do conjunto associado de instruções auxiliares: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY e RESTORE VERIFYONLY. Há suporte para a maioria dos argumentos apenas por um subconjunto dessas seis instruções. O suporte a cada argumento é indicado na descrição do argumento.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
  Para obter a sintaxe, consulte os seguintes tópicos:  
@@ -218,7 +218,7 @@ LOADHISTORY
   
  Especifica que a operação de restauração carrega as informações nas tabelas de histórico do **msdb**. A opção LOADHISTORY carrega informações, do único conjunto de backup que está sendo verificado, sobre backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazenados no conjunto de mídias nas tabelas do histórico de backup e restauração no banco de dados **msdb**. Para obter mais informações sobre tabelas de histórico, consulte [Tabelas do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md).  
   
-#### <a name="generalwithoptions--n-"></a>\<general_WITH_options> [ ,...n ]  
+#### <a name="general_with_options--n-"></a>\<general_WITH_options> [ ,...n ]  
  Todas as opções gerais de WITH têm suporte nas instruções RESTORE DATABASE e RESTORE LOG. Algumas dessas opções também são compatíveis com uma ou mais instruções auxiliares, conforme indicado abaixo.  
   
 ##### <a name="restore-operation-options"></a>Opções da operação de restauração  
@@ -247,7 +247,7 @@ MOVE **'** _logical\_file\_name\_in\_backup_ **'** TO **'** _operating\_system\_
 CREDENTIAL  
  **Com suporte de:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) e [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
-**Aplica-se ao**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se ao**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 e posterior
   
  Usado apenas ao restaurar um backup do serviço de Armazenamento de Blobs do Microsoft Azure.  
   
@@ -394,7 +394,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  FILESTREAM ( DIRECTORY_NAME =*directory_name* )  
  **Com suporte de:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) e [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
-**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior
   
  Um nome de diretório compatível com o Windows. Esse nome deve ser exclusivo entre todos os nomes de diretórios FILESTREAM no nível de banco de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A comparação de exclusividade é feita sem diferenciar maiúsculas de minúsculas, independentemente das configurações de ordenação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -445,7 +445,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  NOUNLOAD  
  Especifica que depois da operação RESTORE, a fita permanece carregada na unidade de fita.  
   
-#### <a name="replicationwithoption"></a><replication_WITH_option>  
+#### <a name="replication_with_option"></a><replication_WITH_option>  
  Esta opção será relevante somente se o banco de dados foi replicado quando o backup foi criado.  
   
  KEEP_REPLICATION  
@@ -457,7 +457,7 @@ Use KEEP_REPLICATION ao configurar a replicação para trabalhar com envio de lo
   
 -   O servidor em espera passiva deve ser renomeado para usar o mesmo nome que o servidor primário.  
   
-#### <a name="changedatacapturewithoption"></a><change_data_capture_WITH_option>  
+#### <a name="change_data_capture_with_option"></a><change_data_capture_WITH_option>  
  Essa opção será relevante apenas se o banco de dados estiver habilitado para Change Data Capture quando o backup foi criado.  
   
  KEEP_CDC  
@@ -469,7 +469,7 @@ Use KEEP_REPLICATION ao configurar a replicação para trabalhar com envio de lo
   
  Para obter informações sobre como usar a captura de dados de alterações com o espelhamento de banco de dados, consulte [Change Data Capture e outros recursos do SQL Server](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md).  
   
-#### <a name="servicebrokerwithoptions"></a>\<service_broker_WITH_options>  
+#### <a name="service_broker_with_options"></a>\<service_broker_WITH_options>  
  Ativa ou desativa a entrega de mensagens do [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou define um novo identificador do [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Essa opção será relevante apenas se o [!INCLUDE[ssSB](../../includes/sssb-md.md)] estava habilitado (ativado) para o banco de dados quando o backup foi criado.  
   
  { ENABLE_BROKER | ERROR_BROKER_CONVERSATIONS | NEW_BROKER }  
@@ -484,7 +484,7 @@ Use KEEP_REPLICATION ao configurar a replicação para trabalhar com envio de lo
  NEW_BROKER  
  Especifica que o banco de dados seja atribuído a um novo identificador do Service Broker. Como o banco de dados é considerado um novo Service Broker, as conversas existentes nele são imediatamente removidas sem produzir mensagens de caixa de diálogo de término. Qualquer rota que referencia o antigo identificador do Service Broker deverá ser recriada com o novo identificador.  
   
-#### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options>  
+#### <a name="point_in_time_with_options"></a>\<point_in_time_WITH_options>  
  **Com suporte de:**  [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) e apenas para os modelos de recuperação bulk-logged ou completa.  
   
  Você pode restaurar um banco de dados para uma transação ou momento específico, especificando o ponto de recuperação de destino em uma cláusula STOPAT, STOPATMARK ou STOPBEFOREMARK. Uma transação ou momento especificado sempre é restaurado a partir de um backup de log. Em cada instrução RESTORE LOG da sequência de restauração, você deve especificar a transação ou o tempo de destino em uma cláusula STOPAT, STOPATMARK ou STOPBEFOREMARK idêntica.  

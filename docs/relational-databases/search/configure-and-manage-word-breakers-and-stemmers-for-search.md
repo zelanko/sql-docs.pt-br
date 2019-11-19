@@ -1,5 +1,5 @@
 ---
-title: Configurar e gerenciar separadores de palavras e lematizadores de pesquisa | Microsoft Docs
+title: Configurar e gerenciar separadores de palavras e lematizadores para pesquisa
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -20,14 +20,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3201e13c967906c624bee5be28b157a887155c7f
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388340"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056258"
 ---
-# <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Configurar e gerenciar separadores de palavras e lematizadores de pesquisa
+# <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>Configurar e gerenciar separadores de palavras e lematizadores para pesquisa (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Os separadores de palavras e os lematizadores executam a análise linguística em todos os dados indexados de texto completo. Análise linguística faz as duas coisas a seguir:
 
@@ -92,7 +93,7 @@ Para obter opções adicionais e mais informações, consulte [sys.fulltext_inde
 ##  <a name="tshoot"></a> Solucionar problemas de erros de tempo limite na separação de palavras  
  Um erro de tempo limite na separação de palavras pode ocorrer em diversas situações. ou informações sobre estas situações e o que fazer em cada uma delas, consulte [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md).
 
-### <a name="info-about-the-mssqlserver30053-error"></a>Informações sobre o erro MSSQLSERVER_30053
+### <a name="info-about-the-mssqlserver_30053-error"></a>Informações sobre o erro MSSQLSERVER_30053
   
 |Propriedade|Valor|
 |-|-|

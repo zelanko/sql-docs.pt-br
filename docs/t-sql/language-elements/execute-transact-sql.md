@@ -31,12 +31,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80723d2288ce628d4c39d174eefc3bf868314886
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122324"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981950"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ Executa uma cadeia de caracteres de comando, uma cadeia de caracteres em um lote
 > [!IMPORTANT]  
 >  Antes de chamar EXECUTE com uma cadeia de caracteres, valide a cadeia de caracteres. Nunca execute um comando construído por uma entrada de usuário que não foi validada.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -208,7 +208,7 @@ Execute a character string
  Um módulo que tenha sido criado em outro banco de dados poderá ser executado se o usuário que estiver executando o módulo for o proprietário ou se tiver permissão apropriada para executá-lo no referido banco de dados. Um módulo poderá ser executado em outro servidor que executa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se o usuário que estiver executando o módulo tiver a permissão apropriada para usar esse servidor (acesso remoto) e executar o módulo no referido banco de dados. Se você especificar um nome de servidor mas não especificar um nome de banco de dados, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] procurará o módulo no banco de dados padrão do usuário.  
   
  ;*number*  
-**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior
   
  É um inteiro opcional usado para agrupar procedimentos do mesmo nome. Esse parâmetro não é usado para procedimentos armazenados estendidos.  
   
@@ -267,7 +267,7 @@ Se você passar uma única palavra que não começa com `@` e que não está ent
  Especifica o contexto no qual a instrução é executada.  
   
  Logon  
-**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior
   
  Especifica que o contexto para ser representado é um logon. O escopo de personificação é o servidor.  
   
@@ -291,7 +291,7 @@ Se você passar uma única palavra que não começa com `@` e que não está ent
  Indica parâmetros para os quais valores são fornecidos em \<arg-list> de comandos de passagem usados em uma instrução EXEC('...', \<arg-list>) AT \<linkedsrv>.  
   
  AT *linked_server_name*  
-**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior
   
  Especifica que *command_string* é executada em *linked_server_name* e os resultados, se houver, são retornados ao cliente. *linked_server_name* deve referenciar uma definição de servidor vinculado existente no servidor local. Os servidores vinculados são definidos por meio de [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
@@ -301,11 +301,11 @@ Se você passar uma única palavra que não começa com `@` e que não está ent
 |Termo|Definição|  
 |----------|----------------|  
 |RECOMPILE|Força a compilação, a utilização e o descarte de um novo plano após a execução do módulo. Se houver um plano de consulta existente para o módulo, esse plano permanecerá no cache.<br /><br /> Use essa opção se o parâmetro sendo fornecido for atípico ou se os dados tiverem sido alterados significativamente. Ela não é usada para procedimentos armazenados estendidos. É aconselhável usar essa opção se realmente for necessário porque ela é expansiva.<br /><br /> **Observação:** Não é possível usar WITH RECOMPILE ao chamar um procedimento armazenado que usa a sintaxe OPENDATASOURCE. A opção WITH RECOMPILE será ignorada quando um nome de objeto de quatro partes for especificado.<br /><br /> **Observação:** RECOMPILE não é compatível com funções escalares definidas pelo usuário compiladas nativamente. Se precisar recompilar, use [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
-|**RESULT SETS UNDEFINED**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Esta opção não fornece nenhuma garantia de quais resultados, se houver, serão retornados. Além disso, não é fornecida nenhuma definição. A instrução é executada sem erro se algum resultado for retornado ou se nenhum resultado for retornado. RESULT SETS UNDEFINED será o comportamento padrão se não for fornecido result_sets_option.<br /><br /> Para funções escalares interpretadas definidas pelo usuário e funções escalares compiladas nativamente definidas pelo usuário, essa opção não funciona porque as funções nunca retornam um conjunto de resultados.|  
-|RESULT SETS NONE|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Garante que a instrução execute não retornará nenhum resultado. Se algum resultado for retornado, o lote será anulado.<br /><br /> Para funções escalares interpretadas definidas pelo usuário e funções escalares compiladas nativamente definidas pelo usuário, essa opção não funciona porque as funções nunca retornam um conjunto de resultados.|  
-|*\<result_sets_definition>*|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Fornece uma garantia de que o resultado voltará como especificado em result_sets_definition. Para instruções que retornam vários conjuntos de resultados, forneça várias seções de *result_sets_definition*. Coloque cada *result_sets_definition* entre parênteses, separada por vírgulas. Para obter mais informações, consulte \<result_sets_definition > mais adiante neste tópico.<br /><br /> Essa opção sempre resulta em um erro para funções escalares definidas pelo usuário compiladas nativamente, porque as funções não retornam um conjunto de resultados.|
+|**RESULT SETS UNDEFINED**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Esta opção não fornece nenhuma garantia de quais resultados, se houver, serão retornados. Além disso, não é fornecida nenhuma definição. A instrução é executada sem erro se algum resultado for retornado ou se nenhum resultado for retornado. RESULT SETS UNDEFINED será o comportamento padrão se não for fornecido result_sets_option.<br /><br /> Para funções escalares interpretadas definidas pelo usuário e funções escalares compiladas nativamente definidas pelo usuário, essa opção não funciona porque as funções nunca retornam um conjunto de resultados.|  
+|RESULT SETS NONE|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Garante que a instrução execute não retornará nenhum resultado. Se algum resultado for retornado, o lote será anulado.<br /><br /> Para funções escalares interpretadas definidas pelo usuário e funções escalares compiladas nativamente definidas pelo usuário, essa opção não funciona porque as funções nunca retornam um conjunto de resultados.|  
+|*\<result_sets_definition>*|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Fornece uma garantia de que o resultado voltará como especificado em result_sets_definition. Para instruções que retornam vários conjuntos de resultados, forneça várias seções de *result_sets_definition*. Coloque cada *result_sets_definition* entre parênteses, separada por vírgulas. Para obter mais informações, consulte \<result_sets_definition > mais adiante neste tópico.<br /><br /> Essa opção sempre resulta em um erro para funções escalares definidas pelo usuário compiladas nativamente, porque as funções não retornam um conjunto de resultados.|
   
-\<result_sets_definition> **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+\<result_sets_definition> **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Descreve os conjuntos de resultados retornados pelas instruções executadas. As cláusulas de result_sets_definition têm o seguinte significado  
   
@@ -455,7 +455,7 @@ GO
 ### <a name="d-using-execute-with-a-remote-stored-procedure"></a>D. Usando EXECUTE com um procedimento armazenado remoto  
  O exemplo a seguir executa o procedimento `uspGetEmployeeManagers` armazenado no servidor remoto `SQLSERVER1` e armazena o status de retorno que indica o êxito ou a falha em `@retstat`.  
   
-**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior
   
 ```  
 DECLARE @retstat int;  
@@ -514,7 +514,7 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
 ### <a name="g-using-execute-with-at-linked_server_name"></a>G. Usando EXECUTE com AT linked_server_name  
  O exemplo seguinte envia uma cadeia de caracteres de comando a um servidor remoto. Ele cria um servidor vinculado `SeattleSales` que aponta para outra instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e executa uma instrução DDL (`CREATE TABLE`) nesse servidor vinculado.  
   
-**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior
   
 ```  
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
@@ -546,7 +546,7 @@ GO
 ### <a name="j-using-execute-to-query-an-oracle-database-on-a-linked-server"></a>J. Usando EXECUTE para consultar um banco de dados Oracle em um servidor vinculado  
  O exemplo a seguir executa várias instruções `SELECT` no servidor remoto Oracle. O exemplo começa adicionando o servidor Oracle como um servidor vinculado e criando o logon de servidor vinculado.  
   
-**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior
   
 ```  
 -- Setup the linked server.  
@@ -589,7 +589,7 @@ GO
 ### <a name="l-using-a-parameter-with-execute-and-at-linked_server_name"></a>L. Usando um parâmetro com EXECUTE e AT linked_server_name  
  O exemplo a seguir envia uma cadeia de caracteres de comando a um servidor remoto usando um ponto de interrogação (`?`) como espaço reservado de um parâmetro. O exemplo cria um servidor vinculado `SeattleSales` que aponta para outra instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e executa uma instrução `SELECT` nesse servidor vinculado. A instrução `SELECT` usa o ponto de interrogação como um espaço reservado para o parâmetro `ProductID` (`952`), fornecido após a instrução.  
   
-**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior
   
 ```  
 -- Setup the linked server.  
@@ -605,7 +605,7 @@ GO
 ### <a name="m-using-execute-to-redefine-a-single-result-set"></a>M. Usando EXECUTE para redefinir um único conjunto de resultados  
  Alguns dos exemplos anteriores executaram `EXEC dbo.uspGetEmployeeManagers 6;` que retornou 7 colunas. O exemplo a seguir demonstra o uso da sintaxe `WITH RESULT SET` para alterar os nomes e tipos de dados do conjunto de resultados retornado.  
   
-**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ```  
 EXEC uspGetEmployeeManagers 16  
@@ -625,7 +625,7 @@ WITH RESULT SETS
 ### <a name="n-using-execute-to-redefine-a-two-result-sets"></a>N. Usando EXECUTE para redefinir dois conjuntos de resultados  
  Ao executar uma instrução que retorna mais de um conjunto de resultados, defina cada conjunto de resultados esperado. O exemplo a seguir em [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] cria um procedimento armazenado que retorna dois conjuntos de resultados. Em seguida, o procedimento é executado com a cláusula **WITH RESULT SETS** e com a especificação definições de dois conjuntos de resultados.  
   
-**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ```  
 --Create the procedure  
@@ -667,7 +667,7 @@ WITH RESULT SETS
 EXEC proc1;  
 ```  
   
- Chamando um procedimento armazenado com um nome determinado em tempo de execução:  
+ Chamando um procedimento armazenado com um nome determinado em runtime:  
   
 ```  
 EXEC ('EXEC ' + @var);  

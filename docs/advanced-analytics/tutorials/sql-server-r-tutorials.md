@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 94572fb70e511cb99fc19deb77a86b4efb69673a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 7c71ebfbda37e66050f868fa7676d0247e84840e
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725923"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119231"
 ---
 # <a name="sql-server-r-language-tutorials"></a>Tutoriais da linguagem R do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ Este artigo descreve os tutoriais da linguagem R para análises internas no banc
 | [Início Rápido: Criar e executar scripts simples do R](quickstart-r-create-script.md) | Primeiro de vários guias de início rápido, com este ilustrando a sintaxe básica para chamar uma função do R usando um editor de consultas T-SQL, tal como o SQL Server Management Studio. |
 | [Tutorial: Análise de R interna no banco de dados para cientistas de dados](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | Para desenvolvedores de R não familiarizados com o SQL Server, este tutorial explica como executar tarefas comuns de ciência de dados no SQL Server. Carregue e visualize dados, treine e salve um modelo para SQL Server e use o modelo para análise preditiva. |
 | [Tutorial: Análise de R interna no banco de dados para desenvolvedores de SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) | Crie e implante uma solução do R completa, usando apenas as ferramentas do [!INCLUDE[tsql](../../includes/tsql-md.md)]. Concentra-se em mover uma solução para produção. Você aprenderá a encapsular o código R em um procedimento armazenado, salvar um modelo do R em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fazer chamadas parametrizadas para o modelo do R para previsão. |
-| [Tutorial: Aprofundamento no RevoScalepR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) | Saiba como usar as funções dos pacotes RevoScaleR. Mova dados entre o R e o SQL Server e alterne entre contextos de computação para se adequar a uma tarefa específica. Crie modelos e gráficos e mova-os entre o ambiente de desenvolvimento e o servidor de banco de dados. |
+| [Tutorial: Aprofundamento no RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) | Saiba como usar as funções dos pacotes RevoScaleR. Mova dados entre o R e o SQL Server e alterne entre contextos de computação para se adequar a uma tarefa específica. Crie modelos e gráficos e mova-os entre o ambiente de desenvolvimento e o servidor de banco de dados. |
 
 <a name ="bkmk_samples"></a>
 

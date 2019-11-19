@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 900a5b469fec529c351e290c76fd380dbb917710
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: b5713ab6b86675b5fbdcd450f1617445ea7bfd2f
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680784"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982818"
 ---
 # <a name="collation-and-unicode-support"></a>Suporte a ordenações e Unicode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -458,7 +458,7 @@ Ao usar apenas colunas de caracteres e páginas de código, você deve tomar cui
 É difícil selecionar uma página de código para tipos de dados de caractere que dará suporte a todos os caracteres necessários para um público-alvo mundial. A maneira mais fácil de gerenciar dados de caractere em bancos de dados internacionais é sempre usar um tipo de dados com suporte a Unicode. 
 
 ### <a name="unicode-data-types"></a>Tipos de dados Unicode
-Se você armazenar dados de caracteres que refletem vários idiomas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), use tipos de dados Unicode (**nchar**, **nvarchar** e **ntext**) em vez de tipos de dados não Unicode (**char**, **varchar** e **text**). 
+Se você armazenar dados de caractere que refletem várias linguagens no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e posterior), use tipos de dados Unicode (**nchar**, **nvarchar** e **ntext**) em vez de tipos de dados não Unicode (**char**, **varchar** e **text**). 
 
 > [!NOTE]
 > No caso dos tipos de dados Unicode, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] poderá representar até 65.535 caracteres usando o UCS-2 ou o intervalo completo de Unicode (1.114.111 caracteres) se caracteres suplementares forem usados. Para obter mais informações sobre como habilitar caracteres suplementares, confira [Caracteres suplementares](#Supplementary_Characters).
@@ -473,7 +473,7 @@ Quando você move dados de um servidor para um cliente, a ordenação do servido
 > [!TIP]
 > Você também pode tentar usar uma ordenação diferente para os dados no servidor. Escolha uma ordenação que mapeia para uma página de código no cliente.    
 >
-> Para usar as ordenações UTF-16 disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) visando melhorar a pesquisa e a classificação de alguns caracteres Unicode (somente ordenações do Windows), selecione uma das ordenações de caracteres suplementares (\_SC) ou uma das ordenações da versão 140.    
+> Para usar as ordenações UTF-16 disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior) visando melhorar a pesquisa e a classificação de alguns caracteres Unicode (somente ordenações do Windows), selecione uma das ordenações de caracteres suplementares (\_SC) ou uma das ordenações da versão 140.    
  
 Para usar as ordenações UTF-8 disponíveis no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e melhorar a pesquisa e a classificação de alguns caracteres Unicode (somente ordenações do Windows), você precisará selecionar ordenações habilitadas para codificação UTF-8 (\_UTF8).
  
@@ -599,8 +599,8 @@ A seguinte tabela lista os bytes de armazenamento de codificação para cada int
 |Intervalo de códigos (hexadecimal)|Intervalo de códigos (decimal)|Bytes de armazenamento<sup>1</sup> com UTF-8|Bytes de armazenamento<sup>1</sup> com UTF-16|    
 |---------------------------------|---------------------------------|--------------------------|-----------------------------|   
 |000000–00007F|0–127|1|2|
-|000080–00009F<br />0000A0–0003FF<br />000400–0007FF|128–159<br />160–1.023<br />1.024–2.047|2|2|
-|000800–003FFF<br />004000–00FFFF|2.048–16.383<br />16.384–65.535|3|2|
+|000080–00009F<br />0000A0–0003FF<br />000400–0007FF|128–159<br />160–1.023<br />1\.024–2.047|2|2|
+|000800–003FFF<br />004000–00FFFF|2\.048–16.383<br />16.384–65.535|3|2|
 |010000–03FFFF<sup>2</sup><br /><br />040000–10FFFF<sup>2</sup>|65.536–262.143<sup>2</sup><br /><br />262.144–1.114.111<sup>2</sup>|4|4|
 
 <sup>1</sup> *Bytes de armazenamento* se referem ao tamanho do byte codificado e não ao tamanho do armazenamento em disco do tipo de dados. Para saber mais sobre tamanhos de armazenamento em disco, confira os tipos de dados [nchar e nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) e [char e varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md).

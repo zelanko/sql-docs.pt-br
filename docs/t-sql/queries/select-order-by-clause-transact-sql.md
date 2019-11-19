@@ -39,12 +39,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11aac623d6648fb08e65cff12cdfcf3beaaa2499
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419634"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981716"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT – Cláusula ORDER BY (Transact-SQL)
 
@@ -56,7 +56,7 @@ ms.locfileid: "68419634"
   
 -   Determine a ordem na qual os valores da [função de classificação](../../t-sql/functions/ranking-functions-transact-sql.md) serão aplicados ao conjunto de resultados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
 >  ORDER BY não é compatível com as instruções SELECT/INTO ou CREATE TABLE AS SELECT (CTAS) no [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] nem no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
@@ -116,7 +116,7 @@ ORDER BY SchemaName + ''; -- wrong
  OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  Especifica o número de linhas que devem ser ignoradas antes de começar a retornar linhas da expressão de consulta. O valor pode ser uma expressão ou constante inteira que seja maior que ou igual a zero.  
   
-**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  *offset_row_count_expression* pode ser uma subconsulta escalar de constante, parâmetro ou variável. Quando uma subconsulta é usada, ela não pode referenciar nenhuma coluna definida no escopo de consulta externa. Ou seja, ela não pode ser correlacionada com a consulta externa.  
   
@@ -127,7 +127,7 @@ ORDER BY SchemaName + ''; -- wrong
  FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
  Especifica o número de linhas que devem ser retornadas depois que a cláusula OFFSET for processada. O valor pode ser uma expressão ou constante inteira que seja maior que ou igual a um.  
   
-**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  *fetch_row_count_expression* pode ser uma subconsulta escalar de constante, parâmetro ou variável. Quando uma subconsulta é usada, ela não pode referenciar nenhuma coluna definida no escopo de consulta externa. Ou seja, ela não pode ser correlacionada com a consulta externa.  
   
@@ -364,7 +364,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ###  <a name="Offset"></a> Limitando o número de linhas retornadas  
  Os exemplos as seguir usam OFFSET e FETCH para limitar o número de linhas retornadas por uma consulta.  
   
-**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. Especificando constantes inteiras para valores de OFFSET e FETCH  
  O exemplo a seguir especifica uma constante inteira como o valor das cláusulas OFFSET e FETCH. A primeira consulta retorna todas as linhas classificadas pela coluna `DepartmentID`. Compare os resultados retornados por essa consulta com os resultados das duas consultas seguintes. A próxima consulta usa a cláusula `OFFSET 5 ROWS` para ignorar as cinco primeiras linhas e retornar todas as linhas restantes. A consulta final usa a cláusula `OFFSET 0 ROWS` para iniciar com a primeira linha e depois usa `FETCH NEXT 10 ROWS ONLY` para limitar as linhas retornadas a 10 linhas do conjunto de resultados classificado.  

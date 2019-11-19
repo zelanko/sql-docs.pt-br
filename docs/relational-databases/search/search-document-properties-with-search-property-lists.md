@@ -1,5 +1,5 @@
 ---
-title: Pesquisar propriedades de documento com listas de propriedades de pesquisa | Microsoft Docs
+title: Pesquisar propriedades de documento com listas de propriedades de pesquisa
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -18,12 +18,13 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f105b175cf2a9673fff0626fba726d6b7f68b50e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: b4251879180966f3e40d2e1d070be04c5f8e5547
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912982"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056105"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Pesquisar propriedades de documento com listas de propriedades de pesquisa
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "67912982"
   
  A ilustração a seguir mostra uma exibição lógica de uma lista de propriedades de pesquisa que especifica duas propriedades, Title e Keywords. O nome da lista de propriedades para Keywords é "Tags". Essas propriedades pertencem ao mesmo conjunto de propriedades, cujo GUID é F29F85E0-4FF9-1068-AB91-08002B27B3D9. Os identificadores de inteiro da propriedade são 2 para Title e 5 para Tags (Keywords). O Mecanismo de Texto Completo mapeia arbitrariamente cada propriedade para uma ID de propriedade interna que é exclusiva à lista de propriedades de pesquisa. A ID de propriedade interna para a propriedade Title é 1 e a ID de propriedade interna para a propriedade Tags é 2.  
   
- ![Mapeamento da lista de propriedades de pesquisa para tabela interna](../../relational-databases/search/media/ifts-spl-w-title-and-keywords.gif "Mapeamento da lista de propriedades de pesquisa para tabela interna")  
+ ![Mapeamento da lista de propriedades de pesquisa para uma tabela interna](../../relational-databases/search/media/ifts-spl-w-title-and-keywords.gif "Mapeamento da lista de propriedades de pesquisa para uma tabela interna")  
   
  A ID de propriedade interna provavelmente será diferente do identificador de inteiro da propriedade. Se uma determinada propriedade for registrada para várias listas de propriedades de pesquisa, uma ID de propriedade interna diferente poderá ser atribuída para cada lista de propriedades de pesquisa. Por exemplo, a ID de propriedade interna poderia ser 4 em uma lista de propriedades de pesquisa, 1 em outra, 3 em outra, e assim por diante. Em contrapartida, o identificador de inteiro de propriedade é intrínseco à propriedade e permanece o mesmo onde quer que a propriedade seja usada.  
   
@@ -225,6 +226,6 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
- [Configurar e gerenciar filtros para pesquisa](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
+ [Configurar e gerenciar filtros de pesquisa](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   
   

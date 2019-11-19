@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5af6e4703e4e7a776eca47ea43bb41f96105b341
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17ae607e02838e4598dce82f6f022208238aefaa
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017613"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119209"
 ---
 # <a name="select-examples-transact-sql"></a>Exemplos de SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,12 +78,14 @@ ms.locfileid: "68017613"
   
  [!code-sql[Select#SelectExamples8](../../t-sql/queries/codesnippet/tsql/select-examples-transact_8.sql)]  
   
-## <a name="e-using-correlated-subqueries"></a>E. Usando subconsultas correlacionadas  
+## <a name="e-using-correlated-subqueries"></a>E. Usando subconsultas correlacionadas
+Uma subconsulta correlacionada é uma consulta que depende da consulta externa para obter os valores. Essa consulta pode ser executada repetidamente, uma vez para cada linha que possa ser selecionada pela consulta externa.
+
  O exemplo a seguir mostra consultas semanticamente equivalentes e ilustra a diferença entre o uso da palavra-chave `EXISTS` e da palavra-chave `IN`. Ambos são exemplos de uma subconsulta válida que recupera uma instância de cada nome de produto para o qual o modelo do produto é uma camisa de marca de manga longa e os números de `ProductModelID` são correspondentes entre as tabelas `Product` e `ProductModel`.  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
- O exemplo a seguir usa `IN` em uma subconsulta correlata ou repetitiva. Trata-se de uma consulta que depende da consulta externa para obter seus valores. A consulta é executada repetidamente, uma vez para cada linha que pode ser selecionada pela consulta externa. Essa consulta recupera uma instância do nome e sobrenome de cada funcionário para os quais o bônus da tabela `SalesPerson` seja `5000.00` e para os quais existam números de identificação de funcionário correspondentes nas tabelas `Employee` e `SalesPerson`.  
+ O próximo exemplo usa `IN` e recupera uma instância do nome e do sobrenome de cada funcionário para os quais o bônus da tabela `SalesPerson` é `5000.00` e para os quais existam números de identificação de funcionário correspondentes nas tabelas `Employee` e `SalesPerson`.  
   
  [!code-sql[Select#SelectExamples10](../../t-sql/queries/codesnippet/tsql/select-examples-transact_10.sql)]  
   

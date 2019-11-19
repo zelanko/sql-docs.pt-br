@@ -1,6 +1,5 @@
 ---
-title: Formatar os resultados da consulta como JSON com o FOR JSON (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Formatar os resultados da consulta como JSON com FOR JSON
 ms.date: 06/06/2019
 ms.prod: sql
 ms.reviewer: genemi
@@ -13,13 +12,14 @@ helpviewer_keywords:
 ms.assetid: 15b56365-58c2-496c-9d4b-aa2600eab09a
 author: jovanpop-msft
 ms.author: jovanpop
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a8746b0d63b4c16776244cbb953cf91dd2fa7b3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 43e9b416885a5cbd1239b0694ffc3613b7509186
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908717"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095820"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Formatar os resultados da consulta como JSON com o FOR JSON (SQL Server)
 

@@ -13,12 +13,12 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e26d8a84a93c5164fa10894bc444cfbac999a22f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e2245de7cf96e7635098fff57013010e143e6a9
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129373"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095584"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Permissões: GRANT, DENY, REVOKE (SQL Data Warehouse do Azure, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68129373"
   
 -   **REVOKE** remove as permissões **GRANT** ou **DENY** existentes.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -243,7 +243,7 @@ REVOKE
   
  ![Cartaz de permissões de segurança do APS](../../t-sql/statements/media/aps-security-perms-poster.png "Cartaz de permissões de segurança do APS")  
   
- Para baixar uma versão completa desse cartaz, confira [Permissões do SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=244249) na seção de arquivos do site Yammer do APS (ou solicite enviando um email para **apsdoc@microsoft.com** .  
+ Para baixar uma versão completa desse cartaz, confira [Permissões do SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=244249) na seção de arquivos do site do Yammer do APS (ou solicite-a enviando um email para **apsdoc\@microsoft.com**).  
   
 ## <a name="default-permissions"></a>Permissões padrão  
  A lista a seguir descreve as permissões padrão:  

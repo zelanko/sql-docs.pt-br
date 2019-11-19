@@ -34,12 +34,12 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89e1a4d6a9d55caa910a0a7de5349dd06dd60269
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 23c27d4d8eafac26b33af45f95377ced5dd0f7ec
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122283"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981919"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ Encerra um processo de usuário baseado na ID da sessão ou na UOW (unidade de t
   
 KILL encerra uma conexão normal que, internamente, interrompe as transações que estão associadas à ID de sessão especificada. Às vezes, o Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MS DTC) pode estar em uso. Se o MS DTC estiver em uso, você também poderá usar a instrução para encerrar transações distribuídas órfãs e incertas.  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -78,7 +78,7 @@ JOIN sys.dm_exec_connections AS conn
 ```  
   
 _UOW_  
-**Aplica-se a**: (do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior)
   
 Identifica a ID da UOW (Unidade de Trabalho) de transações distribuídas. _UOW_ é um GUID que pode ser obtido na coluna request_owner_guid da exibição de gerenciamento dinâmico sys.dm_tran_locks. _UOW_ também pode ser obtido no log de erros ou por meio do monitor do MS DTC. Para obter mais informações sobre como monitorar transações distribuídas, consulte a documentação do MS DTC.  
   

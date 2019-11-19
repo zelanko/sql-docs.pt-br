@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0437a637ef199fbef5b1914c65c6506533d906e9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 818ffbb7a8957fbcec67e6686b12a731397b6501
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532045"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127379"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Como implantar o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no Kubernetes
 
@@ -68,6 +68,12 @@ kubectl config view
 > Se estiver implantando em um cluster do Kuberntes com vários nós que você inicializou usando `kubeadm`, antes de iniciar a implantação do cluster de Big Data, verifique se os relógios estão sincronizados em todos os nós do Kubernetes que serão destinos da implantação. Como o cluster de Big Data tem propriedades de integridade internas para vários serviços que são sensíveis ao tempo, distorções de relógio podem causar status incorretos.
 
 Depois de configurar o cluster do Kubernetes, você pode prosseguir com a implantação de um novo cluster de Big Data do SQL Server. Se você estiver atualizando de uma versão anterior, confira [Como atualizar o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a name="ensure-you-have-storage-configured"></a>Verifique se você tem o armazenamento configurado
+
+Para que a maioria das implantações de cluster de Big Data tenham armazenamento persistente. Neste momento, você precisa verificar se tem um plano de como fornecerá o armazenamento persistente no cluster do Kubernetes antes de implantar o BDC.
+
+Se você fizer a implantação no AKS, nenhuma configuração de armazenamento será necessária. O AKS fornece classes de armazenamento internas com provisionamento dinâmico. Personalize a classe de armazenamento (`default` ou `managed-premium`) no arquivo de configuração de implantação. Os perfis internos usam uma classe de armazenamento `default`. Se você estiver fazendo a implantação em um cluster do Kubernetes implantado com `kubeadm`, precisará garantir que tem armazenamento suficiente para um cluster da escala desejada disponível e configurado para uso. Caso deseje personalizar como o armazenamento é usado, faça isto antes de continuar. Confira [Persistência de dados com o cluster de Big Data do SQL Server no Kubernetes](concept-data-persistence.md).
 
 ## <a id="deploy"></a> Visão geral da implantação
 

@@ -15,18 +15,18 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 7dad5124f08435532c1fd0cf299e54db66c5be05
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.openlocfilehash: 90aa97c7a5dc2f21007c52ac8ebfc6d100e6d178
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "73882422"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926045"
 ---
 # <a name="scalar-udf-inlining"></a>Embutimento de UDF escalar
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Este artigo apresenta o embutimento de UDF escalar, um recurso sob o conjunto de recursos de [Processamento de Consulta Inteligente](../../relational-databases/performance/intelligent-query-processing.md). Esse recurso melhora o desempenho das consultas que invocam UDFs escalares em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+Este artigo apresenta o embutimento de UDF escalar, um recurso sob o conjunto de recursos de [Processamento de Consulta Inteligente](../../relational-databases/performance/intelligent-query-processing.md). Esse recurso melhora o desempenho das consultas que invocam UDFs escalares em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>Funções escalares definidas pelo usuário T-SQL
 UDFs (funções definidas pelo usuário) implementadas no [!INCLUDE[tsql](../../includes/tsql-md.md)] e que retornam um valor de dados único são chamadas de Funções Definidas pelo Usuário Escalares T-SQL. UDFs do T-SQL são uma maneira elegante de obter reutilização e modularidade de código em consultas [!INCLUDE[tsql](../../includes/tsql-md.md)]. Alguns cálculos (como regras de negócios complexas) são mais fáceis de expressar no formulário de UDF imperativa. UDFs ajudam na criação de uma lógica complexa sem exigir experiência em escrever consultas SQL complexas.
@@ -134,7 +134,7 @@ Como mencionado anteriormente, o plano de consulta não tem mais um operador de 
 Dependendo da complexidade da lógica na UDF, o plano de consulta resultante também poderá ficar maior e mais complexo. Como podemos ver, as operações dentro da UDF agora não são mais uma caixa preta e, portanto, o otimizador de consulta é capaz de calcular o custo e otimizar essas operações. Além disso, uma vez que a UDF não está mais no plano, invocação da UDF iterativa é substituída por um plano que evita completamente a sobrecarga de chamada de função.
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>Requisitos de UDFs escalares que podem ser embutidas
-Uma UDF T-SQL escalar poderá ser embutida se todas as seguintes condições forem verdadeiras:
+<a name="requirements"></a> Uma UDF T-SQL escalar poderá ser embutida se todas as seguintes condições forem verdadeiras:
 
 - A UDF é escrita usando as seguintes construções:
     - `DECLARE`, `SET`: Declaração de variável e atribuições.
@@ -165,7 +165,7 @@ Uma UDF T-SQL escalar poderá ser embutida se todas as seguintes condições for
 Para cada UDF escalar do T-SQL, a exibição de catálogo [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) inclui uma propriedade chamada `is_inlineable`, que indica se uma UDF pode ser embutida ou não. 
 
 > [!NOTE]
-> A propriedade `is_inlineable` é derivada dos constructos encontrados na definição da UDF. Ele não verifica se a UDF é, na verdade, embutível em tempo de compilação. Para obter mais informações, consulte abaixo as condições para embutimento.
+> A propriedade `is_inlineable` é derivada dos constructos encontrados na definição da UDF. Ele não verifica se a UDF é, na verdade, embutível em tempo de compilação. Para obter mais informações, confira as [condições de inlining](#requirements).
 
 Um valor de 1 indica que ele é pode ser embutido e 0 indica o contrário. Essa propriedade terá um valor de 1 para todos as TVFs embutidos também. Para todos os outros módulos, o valor será 0.
 
@@ -258,7 +258,7 @@ Conforme descrito neste artigo, o embutimento de UDF escalar transforma uma cons
 1. Dicas de junção no nível da consulta talvez não sejam válidas, pois o embutimento pode introduzir novas junções. Dicas de junção local precisarão ser usadas em vez disso.
 1. Exibições que referenciam UDFs embutidos escalares não podem ser indexadas. Se você precisar criar um índice nessas exibições, desabilite embutimento para UDFs referenciadas.
 1. Pode haver algumas diferenças no comportamento de [Máscara de Dados Dinâmicos](../security/dynamic-data-masking.md) com embutimento de UDF. Em certas situações (dependendo da lógica na UDF), embutimento pode ser mais conservador no que diz respeito ao mascaramento de colunas de saída. Em cenários em que as colunas referenciadas em uma UDF não são colunas de saída, elas não são mascaradas. 
-1. Se uma UDF fizer referência a funções internas, como `SCOPE_IDENTITY()`, o valor retornado pela função interna será alterado com o embutimento. Essa alteração no comportamento ocorre porque o embutimento altera o escopo das instruções dentro da UDF.
+1. Se uma UDF referenciar funções internas, como `SCOPE_IDENTITY()`, `@@ROWCOUNT` ou `@@ERROR`, o valor retornado pela função interna será alterado com o inlining. Essa alteração no comportamento ocorre porque o embutimento altera o escopo das instruções dentro da UDF.
 
 ## <a name="see-also"></a>Consulte Também
 [Central de desempenho do Mecanismo de Banco de Dados do SQL Server e do Banco de Dados SQL do Azure](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 96b7659d84ce548ee95ae23bc437f60575df5e35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 724eb513c3a48916e1083e3ce5bb50251896d381
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051886"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983248"
 ---
 # <a name="live-query-statistics"></a>Estatísticas de Consulta ao Vivo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68051886"
 > [!NOTE]
 > Internamente, estatísticas de consulta em tempo real aproveitam o DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior).  
   
 > [!WARNING]  
 > Este recurso é usado principalmente para a solução de problemas. O uso desse recurso pode diminuir moderadamente o desempenho geral da consulta, especialmente em [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Para obter mais informações, confira [Infraestrutura de Criação de Perfil de Consulta](../../relational-databases/performance/query-profiling-infrastructure.md).  
@@ -42,21 +42,21 @@ ms.locfileid: "68051886"
   
 1.  Para exibir o plano de execução de consulta ao vivo, no menu Ferramentas, clique no ícone **Incluir Estatísticas de Consulta em Tempo Real**.  
   
-     ![Botão Estatísticas de Consulta Dinâmica na barra de ferramentas](../../relational-databases/performance/media/livequerystatstoolbar.png "Botão Estatísticas de Consulta Dinâmica na barra de ferramentas")  
+     ![Botão de Estatísticas de Consultas Dinâmicas na barra de ferramentas](../../relational-databases/performance/media/livequerystatstoolbar.png "Botão de Estatísticas de Consultas Dinâmicas na barra de ferramentas")  
   
      Também é possível acessar o plano de execução de consulta dinâmica clicando com o botão direito do mouse em uma consulta selecionada no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e, em seguida, clicando em **Incluir Estatísticas de Consulta Dinâmica**.  
   
-     ![Botão Estatísticas de Consulta Dinâmica no menu pop-up](../../relational-databases/performance/media/livequerystatsmenu.png "Botão Estatísticas de Consulta Dinâmica no menu pop-up")  
+     ![Botão de Estatísticas de Consultas Dinâmicas no menu pop-up](../../relational-databases/performance/media/livequerystatsmenu.png "Botão de Estatísticas de Consultas Dinâmicas no menu pop-up")  
   
 2.  Agora execute a consulta. O plano de consulta dinâmico exibe o progresso geral da consulta e as estatísticas de tempo de execução (por exemplo, tempo decorrido, progresso, etc.) dos operadores do plano de consulta. As informações de andamento da consulta e as estatísticas de execução são atualizadas periodicamente enquanto a execução da consulta está em andamento. Use essas informações para entender o processo de execução geral da consulta e depurar consultas de longa execução, consultas executadas indefinidamente, consultas que causam estouro de tempdb e problemas de tempo limite.  
   
-     ![Botão Estatísticas de Consulta Dinâmica no plano de execução](../../relational-databases/performance/media/livequerystatsplan.png "Botão Estatísticas de Consulta Dinâmica no plano de execução")  
+     ![Botão de Estatísticas de Consultas Dinâmicas no plano de execução](../../relational-databases/performance/media/livequerystatsplan.png "Botão de Estatísticas de Consultas Dinâmicas no plano de execução")  
   
 ## <a name="to-view-live-query-statistics-for-any-query"></a>Para exibir estatísticas de consulta em tempo real para qualquer consulta 
 
 O plano de execução em tempo real também pode ser acessado pelo **[Monitor de Atividades](../../relational-databases/performance-monitor/activity-monitor.md)** clicando com o botão direito do mouse em qualquer consulta na tabela **Processos** ou **Consultas Dispendiosas Ativas**.  
   
- ![Botão Estatísticas de Consulta Dinâmica no Monitor de Atividade](../../relational-databases/performance/media/livequerystatsactmon.png "Botão Estatísticas de Consulta Dinâmica no Monitor de Atividade")  
+ ![Botão de Estatísticas de Consultas Dinâmicas no Monitor de Atividade](../../relational-databases/performance/media/livequerystatsactmon.png "Botão de Estatísticas de Consultas Dinâmicas no Monitor de Atividade")  
   
 ## <a name="remarks"></a>Remarks  
  A infraestrutura do perfil de estatísticas deve ser habilitada antes que as estatísticas de consulta ao vivo possam capturar informações sobre o andamento das consultas. Dependendo da versão, a sobrecarga pode ser significativa. Para obter mais informações sobre essa sobrecarga, confira [Infraestrutura de criação de perfil de consulta](../../relational-databases/performance/query-profiling-infrastructure.md).

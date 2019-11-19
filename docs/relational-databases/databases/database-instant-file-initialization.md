@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c36c745e6b54feb27da2ae4f36834a40c79cbfe5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 87257431940b527fda01bc1704a519b37b6d4e05
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909074"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982445"
 ---
 # <a name="database-file-initialization"></a>Inicialização de arquivos de bancos de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ Para conceder a permissão `Perform volume maintenance tasks` a uma conta:
 > A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], essa permissão pode ser concedida à conta de serviço no momento da instalação. Se estiver usando a [instalação do prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), adicione o argumento /SQLSVCINSTANTFILEINIT ou marque a caixa *Conceder privilégio Realizar Tarefa de Manutenção de Volume para o Serviço de Mecanismo de Banco de Dados do SQL Server* no [assistente de instalação](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).
 
 > [!NOTE]
-> A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 e do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], a coluna *instant_file_initialization_enabled* na DMV [sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) pode ser usada para identificar se a inicialização instantânea de arquivo está habilitada.
+> No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 em diante e no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e posterior, a coluna *instant_file_initialization_enabled* na DMV [sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) poderá ser usada para identificar se a Inicialização Instantânea de Arquivo está habilitada.
 
 ## <a name="remarks"></a>Remarks
 Se a conta de inicialização de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] receber *SE_MANAGE_VOLUME_NAME*, uma mensagem informativa semelhante à seguinte será registrada no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante a inicialização: 
@@ -78,7 +78,7 @@ Se a conta de inicialização de serviço do [!INCLUDE[ssNoVersion](../../includ
 
 `Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 em diante, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior)
 
 ## <a name="security-considerations"></a>Considerações sobre segurança  
 Ao usar a IFI (Inicialização Instantânea de Arquivo), como o conteúdo excluído do disco é substituído somente à medida que novos dados são gravados nos arquivos, o conteúdo excluído poderá ser acessado por uma entidade de segurança não autorizada, até que outros dados sejam gravados nessa área específica do arquivo de dados. Embora o arquivo de banco de dados esteja associado à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esse risco de divulgação de informações é reduzido pela DACL (lista de controle de acesso discricionário) no arquivo. Essa DACL permite acesso de arquivo somente à conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ao administrador local. Porém, quando o arquivo é desassociado, ele pode ser acessado por um usuário ou serviço que não tenha *SE_MANAGE_VOLUME_NAME*. Existe uma consideração similar quando é feito o backup do banco de dados: se o arquivo de backup não estiver protegido com uma DACL adequada, o conteúdo excluído poderá ficar disponível para um usuário ou um serviço não autorizado.  

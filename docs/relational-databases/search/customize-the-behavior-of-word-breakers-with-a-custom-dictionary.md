@@ -1,6 +1,6 @@
 ---
-title: Personalizar o comportamento de separadores de palavras com um dicionário personalizado | Microsoft Docs
-ms.custom: ''
+title: Personalizar o comportamento de separadores de palavras com um dicionário personalizado
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -11,14 +11,14 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 548072483f4a6c8ea0669fce13aaab0595ec4c97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 806d2f7aa35fc3299f22dbd1c3423834aaa8936f
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082937"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056240"
 ---
-# <a name="customize-the-behavior-of-word-breakers-with-a-custom-dictionary"></a>Personalizar o comportamento de separadores de palavras com um dicionário personalizado
+# <a name="customize-behavior-of-word-breakers-with-a-custom-dictionary-sql-server-search"></a>Personalizar o comportamento de separadores de palavras com um dicionário personalizado (Pesquisa do SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Você pode personalizar o comportamento do separador de palavras por um idioma específico criando um arquivo de dicionário personalizado específico do idioma. Por exemplo, você pode impedir que o separador de palavras quebre certas condições ou padrões.  
   

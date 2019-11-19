@@ -10,25 +10,25 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ae6962d52c40053256117f2e20227f39ed1fd4f8
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 56a055c0528bea03419c1a56dd89efb5fbfa1753
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149984"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056749"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Escolher um método de upgrade do mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Há várias abordagens a serem consideradas quando você está planejando fazer upgrade do [!INCLUDE[ssDE](../../includes/ssde-md.md)] de uma versão anterior do SQL Server, a fim de minimizar o tempo de inatividade e o risco. Você pode executar uma atualização in-loco, migrar para uma nova instalação ou executar uma atualização sem interrupção. O diagrama a seguir ajudará você a escolher entre essas abordagens. Cada uma das abordagens no diagrama também são discutidas abaixo. Para ajudá-lo com os pontos de decisão no diagrama, veja também [planejar e testar o Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
- ![Árvore de decisão do método de upgrade do Mecanismo de Banco de Dados](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Árvore de decisão do método de upgrade do Mecanismo de Banco de Dados")  
+ ![Árvore de decisão do método de atualização do mecanismo de banco de dados](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Árvore de decisão do método de atualização do mecanismo de banco de dados")  
   
  **Download**  
   
--   Para baixar o [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], acesse o  **[Centro de Avaliação](https://www.microsoft.com/evalcenter/evaluate-sql-server)**.  
+-   Para baixar o [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], acesse o  **[Centro de Avaliação](https://www.microsoft.com/evalcenter/evaluate-sql-server)** .  
   
--   Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** para criar uma Máquina Virtual com o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition já instalado.  
+-   Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=overview)** para criar uma Máquina Virtual com o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition já instalado.  
   
 > [!NOTE]  
 >  Você também pode atualizar o banco de dados do SQL Azure ou virtualizar seu ambiente SQL Server como parte de seu plano de atualização. Estes artigos estão fora do escopo deste artigo, mas veja abaixo alguns links:
@@ -57,7 +57,7 @@ Há várias abordagens a serem consideradas quando você está planejando fazer 
   
  O diagrama a seguir fornece uma visão geral de alto nível das etapas necessárias para uma atualização in-loco do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- ![Upgrade do Mecanismo de Banco de Dados Atualização in-loco não HA](../../database-engine/install-windows/media/database-engine-upgrade-non-ha-in-place-upgrade.png "Upgrade do Mecanismo de Banco de Dados Atualização in-loco não HA")  
+ ![Atualização in-loco não HA da atualização do mecanismo de banco de dados](../../database-engine/install-windows/media/database-engine-upgrade-non-ha-in-place-upgrade.png "Atualização in-loco não HA da atualização do mecanismo de banco de dados")  
   
  Para obter etapas detalhadas, consulte [Fazer upgrade do SQL Server usando o Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
@@ -95,11 +95,11 @@ As etapas necessárias para a atualização de uma nova instalação variam um p
   
 -   **Ambiente de armazenamento anexado:** se você tiver um ambiente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa o armazenamento anexado, o diagrama a seguir e os links do diagrama orientarão você pelas etapas necessárias para a atualização de uma nova instalação do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-     ![Método de upgrade de nova instalação usando backup e restauração para o armazenamento anexado](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "Método de upgrade de nova instalação usando backup e restauração para o armazenamento anexado")  
+     ![Novo método de atualização de instalação usando backup e restauração para armazenamento anexado](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "Novo método de atualização de instalação usando backup e restauração para armazenamento anexado")  
   
 -   **Ambiente de armazenamento SAN:**  se você tiver um ambiente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa o armazenamento SAN, o diagrama a seguir e os links do diagrama orientarão você pelas etapas necessárias para a atualização de uma nova instalação do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-     ![Método de upgrade de nova instalação usando desanexar e anexar para o armazenamento da rede SAN](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "Método de upgrade de nova instalação usando desanexar e anexar para o armazenamento da rede SAN")  
+     ![Novo método de atualização de instalação usando desanexação e anexação para armazenamento SAN](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "Novo método de atualização de instalação usando desanexação e anexação para armazenamento SAN")  
   
 ## <a name="rolling-upgrade"></a>Atualização sem interrupção  
  É necessária uma atualização sem interrupção em ambientes de solução do SQL Server que envolvem várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que devam ser atualizadas em uma determinada ordem para maximizar o tempo de atividade, minimizar os riscos e preservar a funcionalidade. Uma atualização sem interrupção é, em essência, a atualização de várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma ordem específica, com a atualização in-loco de cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou com a atualização de uma nova instalação para facilitar a atualização de hardware e/ou do sistema operacional como parte do projeto de atualização. Há várias situações em que a abordagem de atualização sem interrupção é necessária. Essas situações são documentadas nos seguintes artigos:  

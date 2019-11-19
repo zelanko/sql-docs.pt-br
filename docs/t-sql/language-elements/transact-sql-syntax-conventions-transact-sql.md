@@ -28,12 +28,12 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdc1e80e6363be923d65c07b5550772c8d16f2af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7b42f9f9db95954509c6e47c28b317eab0626c4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121598"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981907"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenções da sintaxe Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -110,9 +110,9 @@ A maioria dos exemplos de código na Referência do [!INCLUDE[tsql](../../includ
 Muitos exemplos de código incluem um prefixo em constantes de cadeia de caracteres Unicode com a letra **N**. Sem o prefixo **N**, a cadeia de caracteres é convertida na página de código padrão do banco de dados. Essa página de código padrão pode não reconhecer certos caracteres.  
   
 ## <a name="applies-to-references"></a>Referências de "Aplica-se a"  
-A referência [!INCLUDE[tsql](../../includes/tsql-md.md)] inclui artigos relacionados a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], (do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
+A referência [!INCLUDE[tsql](../../includes/tsql-md.md)] inclui artigos relacionados ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
 
-Existe uma seção na parte superior de cada artigo indicando quais produtos são compatíveis com o assunto do artigo. Se um produto for omitido, o recurso descrito pelo artigo não estará disponível para esse produto. Por exemplo, os grupos de disponibilidade foram introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. O artigo **CRIAR GRUPO DE DISPONIBILIDADE** indica que ele se aplica ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), pois não se aplica ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], ao [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e nem ao [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+Existe uma seção na parte superior de cada artigo indicando quais produtos são compatíveis com o assunto do artigo. Se um produto for omitido, o recurso descrito pelo artigo não estará disponível para esse produto. Por exemplo, os grupos de disponibilidade foram introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. O artigo **CREATE AVAILABILITY GROUP** indica que ele se aplica ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior), pois não se aplica ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], ao [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] nem ao [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 O assunto geral do artigo pode ser usado em um produto, mas em alguns casos não há suporte para todos os argumentos. Por exemplo, os usuários do banco de dados independente foram introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Use a instrução **CREATE USER** em qualquer produto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; no entanto, a sintaxe **WITH PASSWORD** não pode ser usada com versões anteriores. As seções **Aplica-se a** adicionais são inseridas em descrições de argumento apropriadas no corpo do artigo.  
   

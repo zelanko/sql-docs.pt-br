@@ -1,7 +1,7 @@
 ---
 title: APPROX_COUNT_DISTINCT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/17/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,22 +14,19 @@ dev_langs:
 author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de42757543ebc09a63de250178cc1c2e00aa8a74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9f5a9846ddc19320b3299893929c7ebf11ca0269
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019794"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962337"
 ---
-# <a name="approxcountdistinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
+# <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
 [!INCLUDE[appliesto-xx-asdb-asdw-pdw-md](../../includes/appliesto-xx-asdb-asdw-pdw-md.md)]
 
 Essa função retorna o número aproximado de valores não nulos exclusivos em um grupo. 
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
-
-> [!NOTE]
-> APPROX_COUNT_DISTINCT é um recurso em versão prévia pública.  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,11 +55,11 @@ A implementação da função garante uma taxa de erro de até %2 em uma probabi
 `APPROX_COUNT_DISTINCT` requer menos memória do que uma operação COUNT DISTINCT exaustiva.  Dado o volume de memória menor, `APPROX_COUNT_DISTINCT` apresenta menos probabilidade de despejo de memória em disco comparado com uma operação COUNT DISTINCT precisa. Saiba mais sobre o algoritmo usado para conseguir isso em [HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog).
 
 > [!NOTE]
-> Com cadeias de caracteres confidenciais de ordenação, a versão prévia pública do APPROX_COUNT_DISTINCT usa uma correspondência binária e gera resultados que teriam sido gerados na presença de ordenações BIN, e não de BIN2. 
+> Com as cadeias de caracteres confidenciais de ordenação, APPROX_COUNT_DISTINCT usa uma correspondência binária e fornece resultados que teriam sido gerados na presença de ordenações BIN, não BIN2. 
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-approxcountdistinct"></a>A. Usar APPROX_COUNT_DISTINCT 
+### <a name="a-using-approx_count_distinct"></a>A. Usar APPROX_COUNT_DISTINCT 
 Este exemplo retorna o número aproximado de chaves de ordem diferentes da tabela ordens.
   
 ```sql
@@ -78,7 +75,7 @@ Approx_Distinct_OrderKey
 15164704
 ```
   
-### <a name="b-using-approxcountdistinct-with-group-by"></a>B. Usar APPROX_COUNT_DISTINCT com GROUP BY 
+### <a name="b-using-approx_count_distinct-with-group-by"></a>B. Usar APPROX_COUNT_DISTINCT com GROUP BY 
 Este exemplo retorna o número aproximado de chaves de ordem diferentes por status da ordem da tabela ordens. 
   
 ```sql

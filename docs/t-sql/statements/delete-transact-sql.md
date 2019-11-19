@@ -26,19 +26,19 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0296995906f7f359a065d7ae4f61877a89a409b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ca3a44c1829cc05eac5a412a2b2292e84d3d1bc1
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948053"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983235"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Remove uma ou mais linhas de uma tabela ou exibição no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -104,7 +104,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  O alias especificado na cláusula FROM *table_source* que representa a tabela ou exibição na qual as linhas devem ser excluídas.  
   
  *server_name*  
- **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
   
  O nome do servidor (que usa um nome de servidor vinculado ou a função [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) como nome do servidor) no qual a tabela ou exibição está localizada. Se *server_name* for especificado, *database_name* e *schema_name* serão necessários.  
   
@@ -122,7 +122,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  A exibição referenciada por *table_or_view_name* deve ser atualizável e referenciar exatamente uma tabela base na cláusula FROM da definição de exibição. Para obter mais informações sobre exibições atualizáveis, consulte [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
- **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
   
  A função [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) ou [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md), sujeita às funcionalidades do provedor.  
   
@@ -248,7 +248,7 @@ WHERE StandardCost > 1000.00;
 GO  
 ```  
   
- O exemplo a seguir mostra uma cláusula WHERE mais complexa. A cláusula WHERE define duas condições que devem ser atendidas para determinar as linhas a serem excluídas. O valor na coluna `StandardCost` deve ser entre `12.00` e `14.00` , e o valor na coluna `SellEndDate` deve ser nulo. O exemplo também imprime o valor da função **@@ROWCOUNT** para retornar o número de linhas excluídas.  
+ O exemplo a seguir mostra uma cláusula WHERE mais complexa. A cláusula WHERE define duas condições que devem ser atendidas para determinar as linhas a serem excluídas. O valor na coluna `StandardCost` deve ser entre `12.00` e `14.00` , e o valor na coluna `SellEndDate` deve ser nulo. O exemplo também imprime o valor da função **\@\@ROWCOUNT** para retornar o número de linhas excluídas.  
   
 ```sql
 DELETE Production.ProductCostHistory  
@@ -337,7 +337,7 @@ GO
 ###  <a name="RemoteTables"></a> Excluindo linhas de uma tabela remota  
  Os exemplos nesta seção demonstram como excluir linhas de uma tabela de remota usando um [servidor vinculado](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ou uma [função de conjunto de linhas](../../t-sql/functions/rowset-functions-transact-sql.md) para referenciar a tabela remota. Uma tabela remota existe em um servidor diferente ou em uma instância do SQL Server.  
   
-**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. Excluindo dados de uma tabela remota por meio de um servidor vinculado  
  O exemplo a seguir exclui uma linhas de uma tabela remota. O exemplo começa criando um link com a fonte de dados remota usando [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). O nome do servidor vinculado, `MyLinkServer`, é especificado, em seguida, como parte do nome de objeto de quatro partes no formulário *server.catalog.schema.object*.  
@@ -402,7 +402,7 @@ WHERE ShoppingCartID = 20621;
 GO  
 ```  
   
-#### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. Usando OUTPUT com <do_nome_da_tabela> em uma instrução DELETE  
+#### <a name="j-using-output-with-from_table_name-in-a-delete-statement"></a>J. Usando OUTPUT com <do_nome_da_tabela> em uma instrução DELETE  
  O exemplo a seguir exclui linhas da tabela `ProductProductPhoto` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] com base em critérios de pesquisa definidos na cláusula `FROM` da instrução `DELETE`. A cláusula `OUTPUT` retorna colunas da tabela que está sendo excluída, `DELETED.ProductID`, `DELETED.ProductPhotoID`, e colunas da tabela `Product` . É usada na cláusula `FROM` para especificar as linhas a serem excluídas.  
   
 ```sql

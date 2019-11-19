@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: fc26cc0862c7dfb02276738d9424b860d98644e7
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.openlocfilehash: 24cfced04b8d2d0366d2058c81bcedfd9b00d2f9
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "73882411"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055140"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (versão prévia)
 
@@ -131,7 +131,7 @@ Vários locais de arquivo só podem ser especificados na mesma conta de armazena
 Ao autenticar usando o AAD ou uma conta de armazenamento pública, o valor de CREDENTIAL não precisa ser especificado. 
 
 - Autenticação com SAS (Assinaturas de Acesso Compartilhado) *IDENTITY: Uma constante com um valor de “Assinatura de Acesso Compartilhado”* 
-  *SECRET: A *[*assinatura de acesso compartilhado*](/azure/storage/common/storage-sas-overview#what-is-a-shared-access-signature)* fornece acesso delegado aos recursos em sua conta de armazenamento.*
+  *SECRET: A *[*assinatura de acesso compartilhado*](/azure/storage/common/storage-sas-overview)* fornece acesso delegado aos recursos em sua conta de armazenamento.*
   Permissões mínimas necessárias: READ e LIST
 
 - Autenticação com [*Entidades de Serviço*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -164,7 +164,7 @@ Se ERRORFILE tiver o caminho completo da conta de armazenamento definido, a ERRO
   
 - Autenticação com SAS (Assinaturas de Acesso Compartilhado)
   - *IDENTITY: uma constante com um valor de “Assinatura de Acesso Compartilhado”*
-  - *SECRET: A* [*assinatura de acesso compartilhado*](/azure/storage/common/storage-dotnet-shared-access-signature-part-1#what-is-a-shared-access-signature) *fornece acesso delegado aos recursos em sua conta de armazenamento.*
+  - *SECRET: A* [*assinatura de acesso compartilhado*](/azure/storage/common/storage-sas-overview) *fornece acesso delegado aos recursos em sua conta de armazenamento.*
   - Permissões mínimas necessárias: READ, LIST, WRITE, CREATE, DELETE
   
 - Autenticação com [*Entidades de Serviço*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -277,7 +277,7 @@ Os valores padrão do comando COPY são:
 - ROWTERMINATOR = ‘\n'
 
 > [!IMPORTANT]
-> COPY trata '\n' como '\r\n' internamente. Para obter mais informações, confira a seção [ROWTERMINATOR]().
+> COPY trata '\n' como '\r\n' internamente. Para obter mais informações, confira a seção ROWTERMINATOR.
 
 - FIRSTROW = 1
 
@@ -360,4 +360,4 @@ WITH (
 
 ## <a name="see-also"></a>Confira também  
 
- [Visão geral do carregamento com o SQL Data Warehouse](/azure/sql-data-warehouse/design-elt-data-loading>) 
+ [Visão geral do carregamento com o SQL Data Warehouse](/azure/sql-data-warehouse/design-elt-data-loading)

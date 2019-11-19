@@ -1,7 +1,7 @@
 ---
-title: Funcionalidade descontinuada do Mecanismo de Banco de Dados no SQL Server | Microsoft Docs
+title: Funcionalidades descontinuadas do mecanismo de banco de dados no SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/02/2017
+ms.date: 11/13/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -35,12 +35,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a708aad1d483eaf28d559ff04424e515ec9f6aa7
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: 0cafdaecf454d3726538f3f297d05566f6cb5b4a
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816668"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095214"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,12 @@ Para obter as opções de configuração atuais, confira [ALTER DATABASE SCOPED 
 
 - [Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
 
-## <a name="see-also"></a>Consulte Também
+### <a name="see-also"></a>Confira também
 
-- [Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)
+- [Recursos preteridos do mecanismo de banco de dados no SQL Server 2019](deprecated-database-engine-features-in-sql-server-version-15.md)
+- [Recursos preteridos do mecanismo de banco de dados no SQL Server 2017](deprecated-database-engine-features-in-sql-server-2017.md)
+- [Recursos preteridos do mecanismo de banco de dados no SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)
+- [Alterações da falha em recursos do mecanismo de banco de dados no SQL Server 2019](breaking-changes-to-database-engine-features-in-sql-server-version-15.md)
+- [Alterações da falha em recursos do mecanismo de banco de dados no SQL Server 2017](breaking-changes-to-database-engine-features-in-sql-server-2017.md)
+- [Alterações da falha em recursos do mecanismo de banco de dados no SQL Server 2016](breaking-changes-to-database-engine-features-in-sql-server-2016.md)
 - [Recursos preteridos na Replicação do SQL Server](../relational-databases/replication/deprecated-features-in-sql-server-replication.md)

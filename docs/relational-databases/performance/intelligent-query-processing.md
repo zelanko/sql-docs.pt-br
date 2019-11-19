@@ -2,7 +2,7 @@
 title: Processamento inteligente de consultas em bancos de dados Microsoft SQL | Microsoft Docs
 description: Recursos de processamento inteligente de consulta para melhorar o desempenho da consulta no SQL Server e no Banco de Dados SQL do Azure.
 ms.custom: ''
-ms.date: 07/22/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: be17617a400f760d0c5cd5eaa98124d066f19a4c
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: f18367446b3d36e4e95373f1789509e08082a403
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713223"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962425"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Processamento inteligente de consultas em bancos de dados SQL
 
@@ -37,14 +37,14 @@ A tabela a seguir detalha todos os recursos de processamento de consulta intelig
 
 | **Recurso IQP** | **Com suporte no Banco de Dados SQL do Azure** | **Com suporte no SQL Server** |**Descrição** |
 | --- | --- | --- |--- |
-| [Junções adaptáveis (Modo de Lote)](#batch-mode-adaptive-joins) | Sim, no nível de compatibilidade 140| Sim, começando no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] no nível de compatibilidade 140|As junções adaptáveis selecionam automaticamente um tipo de junção durante o tempo de execução com base nas linhas de entrada reais.|
-| [Distinção de contagem aproximada](#approximate-query-processing) | Sim, versão prévia pública| Sim, começando no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0|Forneça o COUNT DISTINCT aproximado para cenários de big data com o benefício de alto desempenho e baixo volume de memória. |
-| [Modo de Lote no Rowstore](#batch-mode-on-rowstore) | Sim, no nível de compatibilidade 150, versão prévia pública| Sim, começando no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 no nível de compatibilidade 150, versão prévia pública|Forneça o modo de lote para cargas de trabalho de DW relacionais vinculados à CPU sem exigir índices columnstore.  | 
+| [Junções adaptáveis (Modo de Lote)](#batch-mode-adaptive-joins) | Sim, no nível de compatibilidade 140| Sim, começando no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] no nível de compatibilidade 140|As junções adaptáveis selecionam automaticamente um tipo de junção durante o runtime com base nas linhas de entrada reais.|
+| [Distinção de contagem aproximada](#approximate-query-processing) | Sim| Sim, no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] em diante|Forneça o COUNT DISTINCT aproximado para cenários de big data com o benefício de alto desempenho e baixo volume de memória. |
+| [Modo de Lote no Rowstore](#batch-mode-on-rowstore) | Sim, no nível de compatibilidade 150| Sim, no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] em diante no nível de compatibilidade 150|Forneça o modo de lote para cargas de trabalho de DW relacionais vinculados à CPU sem exigir índices columnstore.  | 
 | [Execução intercalada](#interleaved-execution-for-mstvfs) | Sim, no nível de compatibilidade 140| Sim, começando no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] no nível de compatibilidade 140|Use a cardinalidade real da função com valor de tabela de várias instruções encontrada na primeira compilação em vez de uma estimativa fixa.|
 | [Comentários de concessão de memória (Modo de Lote)](#batch-mode-memory-grant-feedback) | Sim, no nível de compatibilidade 140| Sim, começando no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] no nível de compatibilidade 140|Se uma consulta de modo de lote tiver operações que são despejadas no disco, aumente a memória para execuções consecutivas. Se uma consulta desperdiçar mais de 50% da memória alocada para ela, reduza o lado de concessão de memória para execuções consecutivas.|
-| [Comentários de concessão de memória (Modo de Lote)](#row-mode-memory-grant-feedback) | Sim, no nível de compatibilidade 150, versão prévia pública| Sim, começando no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 no nível de compatibilidade 150, versão prévia pública|Se uma consulta de modo de linha tiver operações que são despejadas no disco, aumente a memória para execuções consecutivas. Se uma consulta desperdiçar mais de 50% da memória alocada para ela, reduza o lado de concessão de memória para execuções consecutivas.|
-| [Inlining de UDF escalar](#scalar-udf-inlining) | Não | Sim, começando no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.1 no nível de compatibilidade 150, versão prévia pública|Os UDFs escalares são transformados em expressões relacionais equivalentes que são "embutidas" na consulta que fez a chamada, geralmente resultando em ganhos significativos de desempenho.|
-| [Compilação Adiada de Variável da Tabela](#table-variable-deferred-compilation) | Sim, no nível de compatibilidade 150, versão prévia pública| Sim, começando no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 no nível de compatibilidade 150, versão prévia pública|Use a cardinalidade real da variável de tabela encontrada na primeira compilação em vez de uma estimativa fixa.|
+| [Comentários de concessão de memória (Modo de Lote)](#row-mode-memory-grant-feedback) | Sim, no nível de compatibilidade 150| Sim, no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] em diante no nível de compatibilidade 150|Se uma consulta de modo de linha tiver operações que são despejadas no disco, aumente a memória para execuções consecutivas. Se uma consulta desperdiçar mais de 50% da memória alocada para ela, reduza o lado de concessão de memória para execuções consecutivas.|
+| [Inlining de UDF escalar](#scalar-udf-inlining) | Não | Sim, no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] em diante no nível de compatibilidade 150|Os UDFs escalares são transformados em expressões relacionais equivalentes que são "embutidas" na consulta que fez a chamada, geralmente resultando em ganhos significativos de desempenho.|
+| [Compilação Adiada de Variável da Tabela](#table-variable-deferred-compilation) | Sim, no nível de compatibilidade 150| Sim, no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] em diante no nível de compatibilidade 150|Use a cardinalidade real da variável de tabela encontrada na primeira compilação em vez de uma estimativa fixa.|
 
 ## <a name="batch-mode-adaptive-joins"></a>Junções adaptáveis de modo de lote
 O recurso de Junções Adaptáveis de modo de lote permite que a escolha de um método de [Junção hash ou de Junção de loops aninhados](../../relational-databases/performance/joins.md) seja adiada até **depois** que a primeira entrada for verificada, usando um único plano em cache. O operador de Junção Adaptável define um limite que é usado para decidir quando mudar para um plano de Loops aninhados. Seu plano, portanto, pode alternar dinamicamente para uma estratégia de junção melhor durante a execução.
@@ -123,14 +123,11 @@ Uma dica de consulta USE HINT tem precedência sobre uma configuração de escop
 
 ## <a name="row-mode-memory-grant-feedback"></a>Comentários de concessão de memória do modo de linha
 
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (versão prévia pública)
-
-> [!NOTE]
-> Feedback de concessão de memória do modo de linha é uma versão prévia pública do recurso.  
+**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] em diante), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 Os comentários de concessão de memória de modo de linha expande o recurso de comentários de concessão de memória do modo de lote, ajustando os tamanhos de concessão de memória para operadores de modo de lote e de linha.  
 
-Para habilitar a versão prévia pública dos comentários de concessão de memória em modo de linha no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], habilite o nível de compatibilidade do banco de dados 150 para o banco de dados ao qual você está conectado ao executar a consulta.
+Para habilitar os comentários de concessão de memória em modo de linha no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], habilite o nível de compatibilidade do banco de dados 150 para o banco de dados ao qual você está conectado ao executar a consulta.
 
 A atividade de comentários de concessão de memória de modo de linha ficará visível por meio do XEvent **memory_grant_updated_by_feedback**. 
 
@@ -145,9 +142,6 @@ Começando com comentários de concessão de memória no modo de linha, serão e
 | Não: Comentários desabilitados | Se os comentários de concessão de memória forem acionados continuamente e flutuarem entre as operações de aumento de memória e redução de memória, desabilitaremos os comentários de concessão de memória para a instrução. |
 | Sim: Ajuste | Os comentários de concessão de memória foram aplicados e podem ser ainda mais ajustados para a próxima execução. |
 | Sim: Estável | Os comentários de concessão de memória foram aplicados e a memória concedida está estável, ou seja, o que foi concedido para a execução anterior é o mesmo que foi concedido para a execução atual. |
-
-> [!NOTE]
-> Os atributos do plano de comentários de concessão de memória do modo de linha da versão prévia pública estão visíveis nos planos de execução de consulta gráfica do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nas versões 17.9 e superiores. 
 
 ### <a name="disabling-row-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>Desabilitar comentários de concessão de memória de modo de linha sem alterar o nível de compatibilidade
 Comentários de concessão de memória de modo de linha podem ser desabilitados no escopo do banco de dados ou da instrução, mantendo o nível de compatibilidade do banco de dados como 150 e superior. Para desabilitar os comentários de concessão de memória em modo de linha para todas as execuções de consulta originadas do banco de dados, execute o seguinte dentro do contexto do banco de dados aplicável:
@@ -195,7 +189,7 @@ Compare o plano anterior com o plano real gerado com a execução intercalada ha
 1. Além disso, observe que não há mais avisos de despejo necessários, pois estamos concedendo mais memória com base na contagem verdadeira de linhas que passam da verificação da tabela de MSTVF.
 
 ### <a name="interleaved-execution-eligible-statements"></a>Instruções qualificadas para execução intercalada
-A MSTVF que referencia instruções em execução intercalada deve estar somente leitura e não fazer parte de uma operação de modificação de dados. Além disso, MSTVFs não serão qualificados para execução intercalada se não usarem constantes em tempo de execução.
+A MSTVF que referencia instruções em execução intercalada deve estar somente leitura e não fazer parte de uma operação de modificação de dados. Além disso, MSTVFs não serão qualificados para execução intercalada se não usarem constantes em runtime.
 
 ### <a name="interleaved-execution-benefits"></a>Benefícios de execução intercalada
 Em geral, quanto maior a distorção entre o número de linhas real e estimado, juntamente com o número de operações do plano de downstream, maior o impacto no desempenho.
@@ -280,19 +274,19 @@ Uma dica de consulta USE HINT tem precedência sobre uma configuração de escop
 
 ## <a name="table-variable-deferred-compilation"></a>Compilação adiada de variável da tabela
 
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (versão prévia pública)
+**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] em diante), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 A compilação adiada de variável da tabela melhora a qualidade do plano e o desempenho geral para consultas que fazem referência a variáveis de tabela. Durante a otimização e compilação inicial, esse recurso propaga estimativas de cardinalidade com base nas contagens reais de linha de variável de tabela. Essas informações de contagem de linha precisas otimizam as operações de plano de downstream.
 
 A compilação adiada de variável de tabela adia a compilação de uma instrução que faz referência a uma variável de tabela até a primeira execução real da instrução. Esse comportamento de compilação adiada é igual ao das tabelas temporárias. Essa alteração resulta no uso de cardinalidade real em vez da estimativa original de uma linha. 
 
-Você pode ativar a versão prévia pública da compilação adiada de variável de tabela no Banco de Dados SQL do Azure. Para isso, habilite o nível de compatibilidade 150 do banco de dados ao qual você está conectado ao executar a consulta.
+Habilite a compilação adiada de variável de tabela no Banco de Dados SQL do Azure. Para isso, habilite o nível de compatibilidade 150 do banco de dados ao qual você está conectado ao executar a consulta.
 
 Para saber mais, veja [Compilação adiada de variável da tabela](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).
 
 ## <a name="scalar-udf-inlining"></a>Embutimento de UDF escalar
 
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (versão prévia pública)
+**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 O inlining da UDF escalar transforma automaticamente [UDFs escalares](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) em expressões relacionais. Ele as incorpora à chamada da consulta SQL. Essa transformação melhora o desempenho de cargas de trabalho que aproveitam as UDFs escalares. O inlining da UDF escalar facilita a otimização baseada em custo de operações das UDFs. Os resultados são eficientes, orientados para conjunto e paralelos, em vez de planos de execução ineficientes, iterativos e seriais. Esse recurso é habilitado por padrão no nível de compatibilidade do banco de dados 150.
 
@@ -300,7 +294,7 @@ Para saber mais, confira [Scalar UDF Inlining](../user-defined-functions/scalar-
 
 ## <a name="approximate-query-processing"></a>Processamento de consulta aproximada
 
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (versão prévia pública)
+**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] em diante), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 O processamento de consulta aproximado é uma nova família de recursos. Ele agrega grandes conjuntos de dados nos quais a capacidade de resposta é mais importante do que a precisão absoluta. Um exemplo é o cálculo de **COUNT(DISTINCT())** entre 10 bilhões de linhas para a exibição em um painel. Nesse caso, o que é importante não é a precisão absoluta, mas a capacidade de resposta que é essencial. A nova função de agregação **APPROX_COUNT_DISTINCT** retorna o número aproximado de valores não nulos exclusivos em um grupo.
 
@@ -308,7 +302,7 @@ Para saber mais, confira [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-sql/func
 
 ## <a name="batch-mode-on-rowstore"></a>Modo de Lote no Rowstore 
 
-**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (versão prévia pública) 
+**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] em diante), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 O modo de lote em rowstore permite que a execução em modo de lote para cargas de trabalho analíticas sem a necessidade de índices columnstore.  Esse recurso dá suporte a filtros de bitmap e à execução do modo de lote para em disco heaps e índices de árvore B. O modo de lote em rowstore habilita o suporte para todos os operadores habilitados para o modo de lote existente.
 

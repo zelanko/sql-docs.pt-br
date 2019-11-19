@@ -1,6 +1,6 @@
 ---
-title: Atualizar um banco de dados utilizando Desanexar e Anexar (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Atualizar um banco de dados usando desanexação e anexação (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 11/26/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a0df5b572fe7c26f250c2172e5fa87b9fd01da85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8e26f678ae13fac11c39569d15e26c0e79e46deb
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127128"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095534"
 ---
-# <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Atualizar um banco de dados utilizando Desanexar e Anexar (Transact-SQL)
+# <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Atualizar um banco de dados usando desanexação e anexação (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Este tópico descreve como usar operações de desanexação e anexação para atualizar um banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Depois de ser anexado ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados estará disponível imediatamente e, em seguida, será atualizado. Isso impede que o banco de dados seja usado com uma versão anterior da [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. No entanto, a atualização de metadados não afeta a configuração de [nível de compatibilidade do banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) de um banco de dados. Veja mais informações em [Nível de compatibilidade do banco de dados após a atualização](#dbcompat) mais adiante neste tópico.  
   

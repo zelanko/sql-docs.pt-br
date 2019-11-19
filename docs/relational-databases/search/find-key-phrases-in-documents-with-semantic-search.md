@@ -1,5 +1,5 @@
 ---
-title: Localizar frases chave em documentos com pesquisa semântica | Microsoft Docs
+title: Localizar frases-chave em documentos com a pesquisa semântica
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -11,12 +11,13 @@ ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 97ec2ae45c173660c4c18b36d3c20210614c2df6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 64060ae1662d9d1448695426da9e555afbf6869a
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082887"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056195"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>Localizar frases chave em documentos com pesquisa semântica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

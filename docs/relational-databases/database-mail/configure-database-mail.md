@@ -39,12 +39,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c10388d5becdbcfbe32f3247855e3e421ea7eaa7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: fb7ea877ba1a3beaabb6cbab8854b4f37a5f6558
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909494"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095709"
 ---
 # <a name="configure-database-mail"></a>Configurar o Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -195,13 +195,13 @@ ms.locfileid: "72909494"
  Exiba ou atualize a descrição da conta. A descrição é opcional.  
   
  **Endereço de email**  
- Exiba ou atualize o nome do endereço de email da conta. Este é o endereço de email da conta que o enviou. Por exemplo, uma conta do Microsoft SQL Server Agent pode enviar email do endereço **SqlAgent@Adventure-Works.com** .  
+ Exiba ou atualize o nome do endereço de email da conta. Este é o endereço de email da conta que o enviou. Por exemplo, uma conta do Microsoft SQL Server Agent pode enviar emails do endereço **SqlAgent\@Adventure-Works.com**.  
   
  **Nome para exibição**  
  Exiba ou atualize o nome a ser exibido em mensagens de email enviadas desta conta. O nome para exibição é opcional. Este é o nome exibido em mensagens enviadas desta conta. Por exemplo, uma conta do SQL Server Agent pode exibir o nome **SQL Server Agent Automated Mailer** em mensagens de email.  
   
  **Email de resposta**  
- Exiba ou atualize o endereço de email que será usado em respostas a mensagens de email enviadas desta conta. O email de resposta é opcional. Por exemplo, respostas a uma conta do SQL Server Agent podem ir para o administrador de banco de dados, **danw@Adventure-Works.com** .  
+ Exiba ou atualize o endereço de email que será usado em respostas a mensagens de email enviadas desta conta. O email de resposta é opcional. Por exemplo, as respostas para uma conta do SQL Server Agent podem ser direcionadas ao administrador de banco de dados, **danw\@Adventure-Works.com**.  
   
  **Nome do servidor**  
  Exibe ou atualiza o nome do servidor SMTP que a conta usa para enviar email. Geralmente, está em um formato semelhante a **smtp.<your_company>.com**. Para obter mais ajuda sobre isso, consulte o administrador de mail.  

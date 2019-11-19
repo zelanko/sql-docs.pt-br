@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd6ab74a1009862be44950bd77bd105acf76b6d5
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: c7727d197e8a0ecb1009ea33c04311f3b63e5ff4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798413"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982559"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -131,11 +131,11 @@ Quando for **ON**, as estatísticas reterão o percentual de amostragem definido
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) e [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) expõem o valor de percentual de amostra persistente para a estatística selecionada.
  
- **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (começando pelo [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
+ **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 em diante) e posterior (no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 em diante).  
  
  ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] Força as estatísticas no nível folha que abrangem as partições especificadas na cláusula ON PARTITIONS a serem recalculadas e, em seguida, mescladas para criar as estatísticas globais. WITH RESAMPLE é necessário porque as estatísticas de partições criadas com taxas de amostragem diferentes não podem ser mescladas em conjunto.  
   
-**Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior
   
  ALL | COLUMNS | INDEX  
  Atualize todas as estatísticas existentes, as estatísticas criadas em uma ou mais colunas ou as estatísticas criadas para índices. Se nenhuma das opções for especificada, a instrução UPDATE STATISTICS atualizará todas as estatísticas na tabela ou na exibição indexada.  
@@ -163,7 +163,7 @@ Quando for **ON**, as estatísticas reterão o percentual de amostragem definido
 -   Estatísticas criadas em tabelas internas.  
 -   Estatísticas criadas com índices espaciais ou índices XML.  
   
-**Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior
 
 MAXDOP = *max_degree_of_parallelism*  
 **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  

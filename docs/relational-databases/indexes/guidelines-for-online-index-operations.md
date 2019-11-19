@@ -1,7 +1,7 @@
 ---
 title: Diretrizes para operações de índice online | Microsoft Docs
 ms.custom: ''
-ms.date: 01/14/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a2266a83d8fb041f4d18c5938e87bf31433b70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32f1363901d06e8e3551c8f161c38d48fc190921
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909796"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981794"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Diretrizes para operações de índice online
 
@@ -93,7 +93,7 @@ As operações de índice em larga escala, executadas offline ou online, podem g
 ## <a name="resumable-index-considerations"></a>Considerações de índice retomável
 
 > [!NOTE]
-> A opção de índice retomável aplica-se ao SQL Server (começando com o SQL Server 2017) (somente a recompilação de índice) e o Banco de Dados SQL (criação de índice e recompilação de índice). Consulte [Criar Índice](../../t-sql/statements/create-index-transact-sql.md) (no momento, em versão prévia pública para [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]) e [Alterar Índice](../../t-sql/statements/alter-index-transact-sql.md).
+> A opção de índice retomável para create index e index rebuild aplica-se ao SQL Server (também há suporte para a recompilação de índice no SQL Server 2017 em diante com create index no SQL Server 2019) e no Banco de Dados SQL. Consulte [Criar índice](../../t-sql/statements/create-index-transact-sql.md) e [Alterar índice](../../t-sql/statements/alter-index-transact-sql.md).
 
 Quando você executa a criação ou a recriação de índice online retomável, as seguintes diretrizes se aplicam:
 

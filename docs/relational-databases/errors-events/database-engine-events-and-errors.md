@@ -1,24 +1,24 @@
 ---
-title: Eventos e erros do Mecanismo de Banco de Dados | Microsoft Docs
+title: Eventos e erros do mecanismo de banco de dados
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9a12e327f9537ea25d84ec0db3e1d76381eb5f03
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.openlocfilehash: 78fff1f1a5f1e68989338a9d5b0274899267fd42
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71127365"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119435"
 ---
-# <a name="database-engine-errors"></a>Erros do Mecanismo de Banco de Dados
+# <a name="database-engine-errors"></a>Erros do mecanismo de banco de dados
 
-As tabelas contêm os números da mensagem de erro e a descrição, que é o texto da mensagem de erro da exibição sys.messages.message_id.
+As tabelas contêm os números da mensagem de erro e a descrição, que é o texto da mensagem de erro da exibição sys.messages.message_id. Quando aplicável, o número do erro é um link para informações adicionais.
 
 ## <a name="errors--2-to-999"></a>Erros de -2 a 999
 
@@ -2873,7 +2873,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   6524    |   16  |   Não  |   Não é possível usar coluna computada na tabela de resultados de uma função de fluxo definida pelo usuário (coluna '%.*ls').   |
 |   6525    |   16  |   Não  |   Não é possível usar a restrição '%s' na tabela de resultados de uma função de fluxo definida pelo usuário.    |
 |   6526    |   16  |   Não  |   Não é possível usar a restrição '%s' na tabela de resultados de uma função de fluxo definida pelo usuário (coluna '%.*ls').   |
-|   6527    |   10  |   Sim |   Tempo de execução do .NET Framework interrompido.    |
+|   6527    |   10  |   Sim |   runtime do .NET Framework interrompido.    |
 |   6528    |   16  |   Não  |   O assembly '%.*ls' não foi encontrado no catálogo SQL do banco de dados '%.* ls'.  |
 |   6529    |   16  |   Não  |   Falha em ALTER ASSEMBLY porque a identidade do assembly referenciado '%.*ls' foi alterada. Verifique se a versão, o nome e a chave pública foram alterados.    |
 |   6530    |   16  |   Não  |   Não é possível efetuar uma alteração em '%.*ls' porque este é um tipo de objeto incompatível.  |

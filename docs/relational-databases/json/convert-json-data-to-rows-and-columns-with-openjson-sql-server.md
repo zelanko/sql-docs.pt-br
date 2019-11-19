@@ -1,6 +1,5 @@
 ---
-title: Analisar e transformar dados JSON com OPENJSON (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Analisar e transformar dados JSON com OPENJSON
 ms.date: 07/18/2017
 ms.prod: sql
 ms.reviewer: genemi
@@ -13,13 +12,14 @@ helpviewer_keywords:
 ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
 author: jovanpop-msft
 ms.author: jovanpop
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e09a24d4f75c0b559a247176a7d57516cf75e43e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: feac4a3e00164837373f9b3024c322dbf7c49818
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909446"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095821"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>Analisar e transformar dados JSON com OPENJSON (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

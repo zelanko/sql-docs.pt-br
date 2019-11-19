@@ -1,23 +1,23 @@
 ---
-title: Depurador Transact-SQL | Microsoft Docs
+title: Depurador do Transact-SQL
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
+helpviewer_keywords:
+- Transact-SQL debugger, introduction
+ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/04/2019
-helpviewer_keywords:
-- Transact-SQL debugger, introduction
-ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: e56f44c53591472279f23b8c3d9d68f67ec30fb6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 6677e6ddebdbf613f3b4ee5c3c2eb02de2cba98a
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637991"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097930"
 ---
 # <a name="transact-sql-debugger"></a>Depurador do Transact-SQL
 
@@ -25,7 +25,9 @@ ms.locfileid: "73637991"
 
 O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] ajuda a localizar erros em códigos [!INCLUDE[tsql](../../includes/tsql-md.md)] investigando o comportamento do código em tempo real. Depois de definir a janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para modo de depuração, você pode pausar a execução em linhas específicas do código e inspecionar informações e dados que são usados por essas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] ou retornadas por elas.
 
-## <a name="stepping-through-transact-sql-code"></a>Percorrendo código Transact-SQL
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## <a name="stepping-through-transact-sql-code"></a>Como executar o código Transact-SQL em etapas
 
 O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] fornece as seguintes opções, que você pode usar para navegar pelo código [!INCLUDE[tsql](../../includes/tsql-md.md)] quando a janela Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] está em modo de depuração:
 
@@ -45,7 +47,7 @@ O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] fornece as seguintes op�
 
 Para obter mais informações sobre como o depurador permite navegar pelo código, veja [Percorrer código Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md).  
 
-## <a name="viewing-debugger-information"></a>Exibindo informações do depurador
+## <a name="viewing-debugger-information"></a>Como exibir informações do depurador
 
 Toda vez que o depurador pausa a execução em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, você pode usar as seguintes janelas do depurador para exibir o estado de execução atual:  
 
@@ -61,7 +63,7 @@ Toda vez que o depurador pausa a execução em uma instrução [!INCLUDE[tsql](.
 
 - **Resultados** e **Mensagens.** Essas guias da janela Editor de Consultas exibem os resultados de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas anteriormente.  
 
-## <a name="transact-sql-debugger-tasks"></a>Tarefas do depurador Transact-SQL  
+## <a name="transact-sql-debugger-tasks"></a>Tarefas do depurador do Transact-SQL  
 
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
@@ -70,6 +72,6 @@ Toda vez que o depurador pausa a execução em uma instrução [!INCLUDE[tsql](.
 |Descreve como usar o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] para percorrer o código.|[Percorrer código Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
 |Descreve como usar o depurador para exibir dados [!INCLUDE[tsql](../../includes/tsql-md.md)] , como, por exemplo, parâmetros e variáveis e informações do sistema.|[Informações do depurador Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira também
 
 [Editores de consultas e de texto &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)
