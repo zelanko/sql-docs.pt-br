@@ -1,5 +1,5 @@
 ---
-title: sys. sensitivity_classifications (Transact-SQL) | Microsoft Docs
+title: sys.sensitivity_classifications (Transact-SQL) | Microsoft Docs
 ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
@@ -23,24 +23,24 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b95dec6d4d867e54c3ccf0d1108a7f6b1cfa8f3c
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 5a49d68b486a6bb812ea91d518145e1f639ef991
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73757466"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164935"
 ---
-# <a name="syssensitivity_classifications-transact-sql"></a>sys. sensitivity_classifications (Transact-SQL)
+# <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 Retorna uma linha para cada item classificado no banco de dados.
 
-|Nome da coluna|Tipo de dados|Descrição|
+|Nome da coluna|Data type|Descrição|
 |-----------------|---------------|-----------------|  
-|**class**|**int**|Identifica a classe do item no qual a classificação existe|  
-|**class_desc**|**varchar (16)**|Uma descrição da classe do item no qual a classificação existe|  
-|**major_id**|**int**|ID do item no qual a classificação existe.<br><br>Se a classe for 0, major_id será sempre 0.<br>Se a classe for 1, 2 ou 7, major_id será object_id.|  
-|**minor_id**|**int**|ID secundária do item no qual a classificação existe, interpretada de acordo com sua classe.<br><br>Se Class = 1, minor_id for o column_id (if Column), Else 0 (if Object).<br>Se class = 2, minor_id será parameter_id.<br>Se Class = 7, minor_id será a index_id. |  
+|**class**|**int**|Identifica a classe do item no qual a classificação existe. Sempre terá o valor 1 (representando uma coluna)|  
+|**class_desc**|**varchar(16)**|Uma descrição da classe do item no qual a classificação existe. sempre terá o valor *OBJECT_OR_COLUMN*|  
+|**major_id**|**int**|Representa a ID da tabela que contém a coluna classificada, correspondente a sys. all_objects. object_id|  
+|**minor_id**|**int**|Representa a ID da coluna na qual a classificação existe, correspondente a sys. all_columns. column_id|   
 |**label**|**sysname**|O rótulo (legível por humanos) atribuído para a classificação de sensibilidade|  
 |**label_id**|**sysname**|Uma ID associada ao rótulo, que pode ser usada por um sistema de proteção de informações, como a proteção de informações do Azure (AIP)|  
 |**information_type**|**sysname**|O tipo de informação (legível humana) atribuído para a classificação de sensibilidade|  
@@ -49,15 +49,11 @@ Retorna uma linha para cada item classificado no banco de dados.
 |**rank_desc**|**sysname**|Representação textual da classificação:  <br><br>NENHUM, BAIXO, MÉDIO, ALTO, CRÍTICO|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 
 - Essa exibição fornece visibilidade do estado de classificação do banco de dados. Ele pode ser usado para gerenciar as classificações de banco de dados, bem como para gerar relatórios.
-- Atualmente, há suporte apenas para a classificação de colunas de banco de dados. Consequente
-    - **classe** -sempre terá o valor 1 (representando uma coluna)
-    - **class_desc** -sempre terá o valor *OBJECT_OR_COLUMN*
-    - **major_id** -representa a ID da tabela que contém a coluna classificada, correspondente a sys. all_objects. object_id
-    - **minor_id** -representa a ID da coluna na qual a classificação existe, correspondente com sys. all_columns. column_id
-
+- Atualmente, há suporte apenas para a classificação de colunas de banco de dados.
+ 
 ## <a name="examples"></a>Exemplos
 
 ### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. Listando todas as colunas classificadas e sua classificação correspondente

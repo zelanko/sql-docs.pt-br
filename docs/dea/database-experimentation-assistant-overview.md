@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: bb942a7754235fe5e1bc3c72f60ffa1f2f0f61d1
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 79caf961208287e1482efe780d2d0e335bbdd16d
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127373"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165556"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Visão geral do Assistente para Experimentos de Banco de Dados
 
@@ -61,7 +61,7 @@ DEA conecta-se a servidores de banco de dados usando a autenticação do Windows
 
 Capturar um rastreamento requer que:
 
-- O usuário que está executando o DEA pode se conectar ao servidor de banco de dados de origem usando a autenticação do Windows.
+- O usuário que executa o DEA pode se conectar ao servidor de banco de dados de origem usando a autenticação do Windows.
 - O usuário que executa o DEA tem direitos de sysadmin no servidor de banco de dados de origem.
 - A conta de serviço que executa o servidor de banco de dados de origem tem acesso de gravação ao caminho da pasta de rastreamento.
 
@@ -71,7 +71,7 @@ Para obter mais informações, consulte perguntas frequentes [sobre a captura de
 
 Repetir um rastreamento requer que:
 
-- O usuário que está executando o DEA pode se conectar ao servidor de banco de dados de destino usando a autenticação do Windows.
+- O usuário que executa o DEA pode se conectar ao servidor de banco de dados de destino usando a autenticação do Windows.
 - O usuário que executa o DEA tem direitos sysadmin no servidor de banco de dados de destino.
 - A conta de serviço que executa os servidores de banco de dados de destino tem acesso de gravação ao caminho da pasta de rastreamento.
 - A conta de serviço que executa Distributed Replay clientes pode se conectar ao servidor de banco de dados de destino usando a autenticação do Windows.
@@ -83,7 +83,7 @@ Para obter mais informações, consulte perguntas frequentes [sobre a reproduç�
 
 A execução da análise requer que:
 
-- O usuário que está executando o DEA pode se conectar ao servidor de banco de dados de análise usando a autenticação do Windows.
+- O usuário que executa o DEA pode se conectar ao servidor de banco de dados de análise usando a autenticação do Windows.
 - O usuário que executa o DEA tem direitos de sysadmin no servidor de banco de dados de origem.
 
 Para obter mais informações, consulte perguntas frequentes [sobre relatórios de análise](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)
@@ -102,13 +102,13 @@ Os dados de telemetria podem ser coletados em quatro tipos de eventos:
 A coleta e o envio de dados de telemetria são opcionais. Para especificar quais eventos são coletados e se os eventos coletados são enviados à Microsoft, use as seguintes etapas:
 
 1. Vá para o local em que o DEA está instalado (por exemplo, C:\\arquivos de programas (x86)\\Microsoft Corporation\\Assistente para Experimentos de Banco de Dados).
-2. Abra e modifique os dois arquivos. config **DEA. exe. config** (para o aplicativo) e **DEACmd. exe. config** (para a CLI) da seguinte maneira:
+2. Abra e modifique os arquivos. config **DEA. exe. config** (para o aplicativo) e **DEACmd. exe. config** (para a CLI) para tratar do seu cenário, conforme apropriado:
     - Para interromper a coleta de um tipo de evento, defina o valor de *Event* (por exemplo, **TraceEvent**) como **false**. Para começar a coletar o evento novamente, defina o valor como **true**.
     - Para interromper o salvamento de cópias locais de eventos, defina o valor de **TraceLoggerEnabled** como **false**. Para começar a salvar cópias locais novamente, defina o valor como **true**.
     - Para interromper o envio de eventos à Microsoft, defina o valor de **AppInsightsLoggerEnabled** como **false**. Para começar a enviar eventos para a Microsoft novamente, defina o valor como **true**.
 
 O DEA é regido pela [política de privacidade da Microsoft](https://aka.ms/dea-privacy).
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="see-also"></a>Confira também
 
-[Introdução](database-experimentation-assistant-get-started.md) orienta as etapas necessárias para capturar, reproduzir e analisar um rastreamento.
+[Visão geral do processo de comparação de carga de trabalho](database-experimentation-assistant-get-started.md), que explica o processo envolvido na comparação de cargas de trabalho em dois ambientes.

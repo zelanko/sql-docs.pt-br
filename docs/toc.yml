@@ -5818,7 +5818,7 @@
           href: dea/database-experimentation-assistant-replay-trace.md
         - name: Criar relatórios
           href: dea/database-experimentation-assistant-create-report.md
-        - name: Exibir relatórios
+        - name: Revisar relatórios
           href: dea/database-experimentation-assistant-view-report.md
         - name: Executar no prompt de comando
           href: dea/database-experimentation-assistant-run-command-prompt.md

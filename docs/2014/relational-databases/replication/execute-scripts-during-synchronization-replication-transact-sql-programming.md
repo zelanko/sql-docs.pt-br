@@ -16,12 +16,12 @@ ms.assetid: b58a0877-4e43-4fab-a281-24e6022d3fb1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2739e301baf843f61c62e72e7ce7520d0445b73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2565eb2be68c1e964b82d46d9aa8fc9f39a01f70
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721259"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165018"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>Executar scripts durante a sincronização (Programação Transact-SQL de replicação)
   A replicação dá suporte à execução de scripts sob demanda para Assinantes para publicações transacionais e de mesclagem. Essa funcionalidade copia o script no diretório que executa a replicação e usa **sqlcmd** para aplicar o script no Assinante. Por padrão, se houver uma falha ao aplicar o script para uma assinatura em uma publicação transacional, o Agente de Distribuição se deterá. Você pode especificar um script [!INCLUDE[tsql](../../includes/tsql-md.md)] para ser executado programaticamente usando procedimentos armazenados de replicação.  
@@ -32,7 +32,7 @@ ms.locfileid: "62721259"
   
 2.  Salve o arquivo de script em um local em que possa ser acessado pelo Snapshot Agent para a publicação.  
   
-3.  No Publicador no banco de dados de publicação, execute [sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql). Especifique **@publication**, o nome do arquivo do script com caminho UNC completo criado na etapa 2 para **@scriptfile**e um dos seguintes valores para **@skiperror**:  
+3.  No Publicador no banco de dados de publicação, execute [sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql). Especifique **\@publicação**, o nome do arquivo de script com caminho UNC completo criado na etapa 2 para **\@scriptfile**e um dos seguintes valores para **\@skiperror**:  
   
     -   **0** - o agente deixará de executar o script se um erro for encontrado.  
   
