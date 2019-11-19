@@ -109,7 +109,7 @@ ms.locfileid: "72798121"
   
 6.  Em **servidor de banco de dados**, escolha um servidor de banco de dados no qual criar o banco de dados do aplicativo de serviço. O valor padrão é a instância de Mecanismo de Banco de Dados do SQL Server que hospeda os bancos de dados de configuração de farm.  
   
-7.  No **nome do banco de dados**, o valor padrão é PowerPivotServiceApplication1_\<GUID >. O nome do banco de dados padrão corresponde ao nome padrão do aplicativo de serviço. Se você inseriu um nome de aplicativo de serviço exclusivo, siga uma convenção de nomenclatura semelhante para seu nome de banco de dados de forma que você possa gerenciá-los em conjunto.  
+7.  Em **nome do banco de dados**, o valor padrão é PowerPivotServiceApplication1_\<GUID >. O nome do banco de dados padrão corresponde ao nome padrão do aplicativo de serviço. Se você inseriu um nome de aplicativo de serviço exclusivo, siga uma convenção de nomenclatura semelhante para seu nome de banco de dados de forma que você possa gerenciá-los em conjunto.  
   
 8.  Em **Autenticação de Banco de dados**, o padrão é Autenticação do Windows. Se você escolher **Autenticação SQL**, consulte o guia de práticas recomendadas do administrador do SharePoint para saber como usar esse tipo de autenticação em uma implantação do SharePoint.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "72798121"
   
      Se um aplicativo de serviço PowerPivot já estiver listado no grupo de conexões padrão, não adicione um segundo aplicativo de serviço a esse grupo. A adição de dois aplicativos de serviço do mesmo tipo do grupo de conexões padrão não é uma configuração com suporte. Para obter mais informações sobre como usar aplicativos de serviço adicionais em um grupo de conexões, consulte [conectar um aplicativo de serviço PowerPivot a um aplicativo Web do SharePoint na administração central](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca).  
   
-10. Clique em **OK.** O serviço aparecerá ao lado de outros serviços gerenciados na lista de aplicativos de serviço do farm.  
+10. Clique em **OK**. O serviço aparecerá ao lado de outros serviços gerenciados na lista de aplicativos de serviço do farm.  
   
 ##  <a name="ExcelServ"></a>Etapa 4: habilitar os serviços do Excel  
  O PowerPivot para SharePoint exige os Serviços do Excel para dar suporte ao acesso a dados PowerPivot no farm. Você pode determinar se os Serviços do Excel já estão habilitados confirmando se o Aplicativo de Serviços do Excel aparece na lista de aplicativos de serviço na Administração Central. Se os Serviços do Excel não estiverem listados, siga estas etapas para habilitá-los agora.  
@@ -195,7 +195,7 @@ ms.locfileid: "72798121"
 ##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>Parte 3: configurar a conta autônoma de atualização de dados PowerPivot  
  Em geral, é necessário criar uma conta autônoma de atualização de dados para o acesso a dados PowerPivot para o acesso a dados externo durante a atualização de dados. Por exemplo, se o Kerberos não estiver habilitado, você deverá criar uma conta autônoma que o serviço PowerPivot possa usar para se conectar a fontes de dados externas.  
   
- Para obter instruções sobre como criar a conta autônoma de atualização de dados PowerPivot ou outras credenciais armazenadas que são usadas na atualização de dados, consulte [Configurar a conta &#40;de atualização de dados autônoma do PowerPivot PowerPivot para SharePoint&#41; ](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) e [configurar credenciais armazenadas para PowerPivot para SharePoint &#40;&#41;de atualização de dados PowerPivot](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+ Para obter instruções sobre como criar a conta autônoma de atualização de dados PowerPivot ou outras credenciais armazenadas que são usadas na atualização de dados, consulte [Configurar a conta &#40;autônoma de atualização de dados PowerPivot&#41; PowerPivot para SharePoint](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) e [configurar credenciais armazenadas para a atualização &#40;de&#41;dados do PowerPivot PowerPivot para SharePoint](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
 ##  <a name="Usage"></a>Etapa 6: habilitar a coleta de dados de uso  
  O PowerPivot para SharePoint usa a infraestrutura da coleção de dados de uso do SharePoint para obter informações sobre o uso do PowerPivot em todo o farm. Embora os dados de uso sempre façam parte de uma instalação do SharePoint, talvez seja necessário habilitá-los para que possam ser usados. Para obter instruções, consulte [Configurar coleta de dados &#40;de uso para PowerPivot para SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint).  
@@ -292,8 +292,8 @@ ms.locfileid: "72798121"
   
  Com o tempo, se você determinar a necessidade de armazenamento de dados e recursos de processamento adicionais, poderá adicionar uma segunda instância do servidor PowerPivot para SharePoint ao farm. O processo de instalação é quase idêntico às etapas que você seguiu para adicionar o primeiro servidor, com exceção dos requisitos sobre como especificar nomes de instância e informações de conta de serviço. Para obter instruções, consulte [lista de verificação de implantação: expansão adicionando servidores PowerPivot a um farm do SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
   
-## <a name="see-also"></a>Consulte Também  
- [Recursos com suporte nas edições do SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)    
+## <a name="see-also"></a>Consulte também  
+ [Recursos com suporte nas edições do SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Configurar contas de serviço PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
  [Criar e configurar um aplicativo de serviço PowerPivot na Administração Central](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca)   
  [Implantar soluções do PowerPivot no SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint)   

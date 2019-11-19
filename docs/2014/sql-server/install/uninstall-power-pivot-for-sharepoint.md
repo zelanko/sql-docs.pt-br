@@ -38,7 +38,7 @@ ms.locfileid: "72798126"
   
 -   [Etapa 6: lista de verificação pós-desinstalação](#bkmk_post)  
   
-##  <a name="prereq"></a> Prerequisites  
+##  <a name="prereq"></a> Pré-requisitos  
   
 -   Você deve ser administrador de farm do SharePoint ou administrador de aplicativo de serviço para desinstalar recursos e soluções no farm.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "72798126"
   
 6.  Clique em **Validar** para verificar se cada ação é válida. Se **Validar** não estiver disponível, isso indicará que todas as ações são válidas para o sistema.  
   
-7.  Clique em **Executar** para executar todas as ações válidas para esta tarefa. **Executar** estará disponível apenas depois que a verificação da validação tiver sido aprovada. Quando você clica em **Executar**, o seguinte aviso é exibido, lembrando a você que as ações são processadas em modo de lote: "Todos os parâmetros da configuração sinalizados como válidos na ferramenta serão aplicados ao farm do SharePoint. Deseja continuar?”  
+7.  Clique em **Executar** para executar todas as ações válidas para esta tarefa. **Executar** estará disponível apenas depois que a verificação da validação tiver sido aprovada. Quando você clica em **Executar**, o seguinte aviso é exibido, lembrando a você que as ações são processadas em modo de lote: “Todos os parâmetros da configuração sinalizados como válidos na ferramenta serão aplicados ao farm do SharePoint. Deseja continuar?”  
   
 8.  Clique em **Sim** para continuar.  
   
@@ -120,7 +120,7 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
     stsadm -o enumdeployments  
     ```  
   
-3.  Reveja as implantações existentes em busca das seguintes informações: **Tipo** é retração ou implantação, **Arquivo** é powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
+3.  Reveja as implantações existentes para obter as seguintes informações: **Tipo** é Retração ou Implantação, **Arquivo** é powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
   
 4.  Para implantações ou retração relacionadas a soluções PowerPivot, copie o valor de GUID para **JobID** e cole-o no comando a seguir (use os comandos marcar, copiar e colar no menu Editar do Shell para copiar o GUID):  
   
@@ -181,12 +181,12 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
   
      Por outro lado, os aplicativos de destino individuais que foram gerados automaticamente pelo Serviço de Sistema PowerPivot serão excluídos automaticamente quando o PowerPivot for desinstalado.  
   
-4.  No Painel de Controle, clique em **Programas**e em **Desinstalar um programa** Desinstale qualquer biblioteca cliente do Analysis Services que não estiver mais sendo usada. O Analysis Services ADOMD.NET e os Objetos de Gerenciamento de Análise do Microsoft SQL Server não são removidos quando você desinstala o PowerPivot para SharePoint. Como as bibliotecas podem ser usadas por outro programa que utiliza dados do Analysis Services, a Instalação do SQL Server não as desinstala automaticamente. Você deverá desinstalar essas bibliotecas de cliente individualmente se não precisar mais delas.  
+4.  No Painel de Controle, clique em **Programas**e em **Desinstalar um programa** . Desinstale qualquer biblioteca cliente do Analysis Services que não estiver mais sendo usada. O Analysis Services ADOMD.NET e os Objetos de Gerenciamento de Análise do Microsoft SQL Server não são removidos quando você desinstala o PowerPivot para SharePoint. Como as bibliotecas podem ser usadas por outro programa que utiliza dados do Analysis Services, a Instalação do SQL Server não as desinstala automaticamente. Você deverá desinstalar essas bibliotecas de cliente individualmente se não precisar mais delas.  
   
      Não desinstale o Suplemento do SQL Server Reporting Services SharePoint 2010 a menos que esteja seguindo instruções de solução de problemas ou de instalação que o instruem especificamente a desinstalá-lo. O Suplemento Reporting Services é usado pelo Access Services. É instalado pela ferramenta Preparação de Produtos do SharePoint 2010 e deve permanecer no sistema para oferecer suporte à funcionalidade exigida pelo SharePoint.  
   
      Não instale o provedor OLE DB do Analysis Services. O SharePoint instala o provedor OLE DB como pré-requisito para as pastas de trabalho do Excel que se conectam a bancos de dados do Analysis Services. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instala uma versão mais recente, mas essa versão é compatível com versões anteriores para você deixar o sistema encarregado de evitar problemas com conexão de dados mais tarde.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Instalar ou desinstalar o suplemento PowerPivot para SharePoint do &#40;SharePoint 2013&#41; ](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
  [Ferramentas de Configuração do PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
