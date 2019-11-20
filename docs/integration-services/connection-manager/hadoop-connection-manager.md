@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aff15237e3763818123e0f74febf8523cb6174d3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 4b07af028cd0f2385c447c99192ccc50b65c4925
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298532"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096125"
 ---
 # <a name="hadoop-connection-manager"></a>Gerenciador de conexões do Hadoop
 
@@ -40,9 +40,9 @@ ms.locfileid: "71298532"
   
     3.  Escolha o método de **Autenticação** para acessar o serviço WebHCat. Os valores disponíveis são **Básico** e **Kerberos**.  
   
-         ![Captura de tela do Editor de Gerenciador de Conexões do Hadoop com a autenticação básica](../../integration-services/connection-manager/media/hadoop-cm-basic.png "Editor de gerenciador de conexões do Hadoop com a autenticação básica")  
+         ![Captura de tela do Editor do Gerenciador de Conexões do Hadoop com autenticação básica](../../integration-services/connection-manager/media/hadoop-cm-basic.png "Editor do gerenciador de conexões do Hadoop com autenticação básica")  
   
-         ![Captura de tela do Editor de Gerenciador de Conexões do Hadoop com a autenticação Kerberos](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Editor de gerenciador de conexões do Hadoop com a autenticação Kerberos")  
+         ![Captura de tela do Editor do Gerenciador de Conexões do Hadoop com autenticação Kerberos](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Editor do gerenciador de conexões do Hadoop com autenticação Kerberos")  
   
     4.  Para o **Usuário WebHCat**, insira o **Usuário** autorizado a acessar o WebHCat.  
   
@@ -152,7 +152,7 @@ No servidor do KDC:
 
     Reinicie o serviço do KDC após a configuração.
 
-2.  Prepare uma entidade de segurança nomeada **krbtgt/REALM.COM@AD.COM** no servidor do KDC. Use o seguinte comando:
+2.  Prepare uma entidade de segurança chamada **krbtgt/REALM.COM\@AD.COM** no servidor KDC. Use o seguinte comando:
 
     `Kadmin> addprinc krbtgt/REALM.COM@AD.COM`
 
@@ -167,7 +167,7 @@ No controlador de domínio:
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
 
-2.  Estabeleça a confiança do domínio do Windows para o realm do Kerberos. No exemplo a seguir, `[password]` é a senha para a entidade de segurança **krbtgt/REALM.COM@AD.COM** .
+2.  Estabeleça a confiança do domínio do Windows para o realm do Kerberos. No exemplo a seguir, `[password]` é a senha para a entidade de segurança **krbtgt/REALM.COM\@AD.COM**.
 
     `C:> netdom trust REALM.COM /Domain: AD.COM /add /realm /password:[password]`
 
