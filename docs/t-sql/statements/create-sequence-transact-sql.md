@@ -64,7 +64,7 @@ Uma sequência pode ser definida como qualquer tipo de inteiro. Os seguintes tip
 -   **tinyint** – intervalo de 0 a 255  
 -   **smallint** – intervalo de -32.768 a 32.767  
 -   **int** – intervalo de -2.147.483.648 a 2.147.483.647  
--   **bigint** – intervalo 9.223.372.036.854.775.808 a 9.223.372.036.854.775.807  
+-   **bigint** – intervalo -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807  
 -   **decimal** e **numeric** com uma escala de 0.  
 -   Qualquer tipo de dados definido pelo usuário (tipo de alias) que seja baseado em um dos tipos permitidos.  
   
