@@ -5808,7 +5808,7 @@
     - name: DEA (Assistente para Experimentos de Banco de Dados)
       href: dea/database-experimentation-assistant-overview.md
       items:
-        - name: Introdução
+        - name: Visão geral da comparação de cargas de trabalho
           href: dea/database-experimentation-assistant-get-started.md
         - name: Capturar o rastreamento
           href: dea/database-experimentation-assistant-capture-trace.md
