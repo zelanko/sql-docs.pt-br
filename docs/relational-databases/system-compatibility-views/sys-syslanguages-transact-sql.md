@@ -37,13 +37,13 @@ ms.locfileid: "70874873"
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|ID exclusiva de idioma.|  
 |dateformat|**nchar(3)**|Ordem de data, por exemplo, DMA.|  
-|datefirst|**tinyint**|Primeiro dia da semana: 1 para segunda-feira, 2 para terça-feira e assim por diante até 7 para domingo.|  
-|upgrade|**int**|Reservado para uso do sistema.|  
+|datefirst|**tinyint**|Primeiro dia da semana: 1 para segunda-feira, 2 para terça-feira e assim por diante, até 7 para domingo.|  
+|atualização|**int**|Reservado para uso do sistema.|  
 |name|**sysname**|Nome oficial do idioma, por exemplo, francês.|  
 |alias|**sysname**|Nome de idioma alternativo, por exemplo, francês.|  
 |months|**nvarchar(372)**|Lista de nomes de meses completos separados por vírgula, de janeiro a dezembro, com cada nome contendo até 20 caracteres.|  
 |shortmonths|**nvarchar(132)**|Lista de nomes de meses abreviados separados por vírgula, de janeiro a dezembro, com cada nome contendo até 9 caracteres.|  
-|days|**nvarchar(217)**|Lista de nomes de dias separados por vírgula, de segunda-feira a domingo, com cada nome contendo até 30 caracteres.|  
+|dias|**nvarchar(217)**|Lista de nomes de dias separados por vírgula, de segunda-feira a domingo, com cada nome contendo até 30 caracteres.|  
 |lcid|**int**|ID de localidade do [!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows para o idioma.|  
 |msglangid|**smallint**|ID do grupo de mensagens do [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
   
@@ -51,42 +51,42 @@ ms.locfileid: "70874873"
   
 |Nome em inglês|LCID do Windows|ID do grupo de mensagens do [!INCLUDE[ssDE](../../includes/ssde-md.md)]|  
 |---------------------|------------------|-----------------------------------------|  
-|Inglês|1046|1046|  
+|English|1046|1046|  
 |German|1031|1031|  
-|Francês|1036|1036|  
-|Japonês|1041|1041|  
-|Danish|1030|1030|  
-|Espanhol|3082|3082|  
-|Italiano|1040|1040|  
-|Holandês|1043|1043|  
+|French|1036|1036|  
+|Japanese|1041|1041|  
+|Dinamarquês|1030|1030|  
+|Spanish|3082|3082|  
+|Italian|1040|1040|  
+|Dutch|1043|1043|  
 |Norueguês|2068|2068|  
 |Português|2070|2070|  
 |Finlandês|1035|1035|  
-|Sueco|1053|1053|  
+|Swedish|1053|1053|  
 |Czech|1029|1029|  
 |Húngaro|1038|1038|  
-|Polonês|1045|1045|  
-|Romeno|1048|1048|  
-|Croata|1050|1050|  
-|Eslovaco|1051|1051|  
+|Polish|1045|1045|  
+|Romanian|1048|1048|  
+|Croatian|1050|1050|  
+|Slovak|1051|1051|  
 |Slovene|1060|1060|  
-|Grego|1032|1032|  
-|Búlgaro|1026|1026|  
-|Russo|1049|1049|  
-|Turco|1055|1055|  
+|Greek|1032|1032|  
+|Bulgarian|1026|1026|  
+|Russian|1049|1049|  
+|Turkish|1055|1055|  
 |British English|2057|1046|  
 |Estoniano|1061|1061|  
-|Letão|1062|1062|  
-|Lituano|1063|1063|  
-|Português (Brasil)|1046|1046|  
-|Chinês tradicional|1028|1028|  
-|Coreano|1042|1042|  
-|Chinês simplificado|2052|2052|  
-|Árabe|1025|1025|  
-|Tailandês|1054|1054|  
+|Latvian|1062|1062|  
+|Lithuanian|1063|1063|  
+|Portuguese (Brazil)|1046|1046|  
+|Traditional Chinese|1028|1028|  
+|Korean|1042|1042|  
+|Simplified Chinese|2052|2052|  
+|Arabic|1025|1025|  
+|Thai|1054|1054|  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições &#40;de compatibilidade TRANSACT-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+   [de &#40;exibições de&#41; compatibilidade Transact-SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
  [Mapeando tabelas do sistema para &#40;exibições do sistema TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

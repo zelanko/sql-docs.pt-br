@@ -36,7 +36,7 @@ ms.locfileid: "73775511"
   
 -   ICommand::Execute  
   
- Se a propriedade DBPROP_ACCESSORDER (no grupo de propriedades conjunto de linhas) for definida como um dos valores DBPROPVAL_AO_SEQUENTIAL ou DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, o consumidor deverá buscar apenas uma única linha de dados em uma chamada para o método **GetNextRows** Porque os dados de BLOB não são armazenados em buffer. Se o valor de DBPROP_ACCESSORDER for definido como DBPROPVAL_AO_RANDOM, o consumidor poderá buscar várias linhas de dados em **GetNextRows**.  
+ Se a propriedade DBPROP_ACCESSORDER (no grupo de propriedades Rowset) for definida como um dos valores DBPROPVAL_AO_SEQUENTIAL ou DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, o consumidor deverá buscar apenas uma única linha de dados em uma chamada para o método **GetNextRows** porque os dados do BLOB não serão armazenados em buffer. Se o valor de DBPROP_ACCESSORDER for definido como DBPROPVAL_AO_RANDOM, o consumidor poderá buscar várias linhas de dados em **GetNextRows**.  
   
  O provedor de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativo do cliente não recupera dados grandes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] até que ele seja solicitado pelo consumidor. O consumidor deve associar todos os dados curtos em um acessador e usar um ou mais acessadores temporários para recuperar valores de dados grandes conforme necessário.  
   

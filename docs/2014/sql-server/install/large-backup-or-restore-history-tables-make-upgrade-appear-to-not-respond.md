@@ -52,7 +52,7 @@ ms.locfileid: "70874604"
 >  Você pode atualizar um banco de dados cujas tabelas de histórico de restauração e backup tenham mais de 10.000 linhas. Mas a atualização pode parecer estar parada enquanto essas tabelas grandes estiverem sendo alteradas. Quanto maior a tabela, mais tempo a Instalação levará para ser concluída.  
   
 ## <a name="see-also"></a>Consulte também  
- [Problemas de atualização do Mecanismo de Banco de Dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Mecanismo de banco de dados problemas de atualização](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Novo supervisor &#91;de atualização do SQL Server 2014&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

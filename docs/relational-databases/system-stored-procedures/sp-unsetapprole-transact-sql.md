@@ -40,7 +40,7 @@ sp_unsetapprole @cookie
   
 ## <a name="arguments"></a>Argumentos  
  **\@cookie**  
- Especifica o cookie criado quando a função de aplicativo foi ativada. O cookie é criado pelo [Transact &#40;-SQL&#41;sp_setapprole](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary (8000)** .  
+ Especifica o cookie criado quando a função de aplicativo foi ativada. O cookie é criado por [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary (8000)** .  
   
 > [!NOTE]  
 >  O parâmetro **OUTPUT** de cookie para **sp_setapprole** está documentado atualmente como **varbinary(8000)** , que tem o tamanho máximo correto. No entanto, a implementação atual retorna **varbinary(50)** . Os aplicativos devem continuar a reservar **varbinary (8000)** para que o aplicativo continue a funcionar corretamente se o tamanho de retorno do cookie aumentar em uma versão futura.  
@@ -48,7 +48,7 @@ sp_unsetapprole @cookie
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) e 1 (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Depois que uma função de aplicativo é ativada usando **sp_setapprole**, a função permanece ativa até que o usuário seja desconectado do servidor ou execute **sp_unsetapprole**.  
   
  Para obter uma visão geral das funções de aplicativo, consulte [funções de aplicativo](../../relational-databases/security/authentication-access/application-roles.md).  

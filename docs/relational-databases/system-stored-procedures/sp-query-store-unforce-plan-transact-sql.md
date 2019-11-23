@@ -42,14 +42,14 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @query_id = ] query_id`É a ID da consulta. *query_id* é um **bigint**, sem padrão.  
+`[ @query_id = ] query_id` é a ID da consulta. *query_id* é um **bigint**, sem padrão.  
   
-`[ @plan_id = ] plan_id`É a ID do plano de consulta que não será mais imposta. *plan_id* é um **bigint**, sem padrão.  
+`[ @plan_id = ] plan_id` é a ID do plano de consulta que não será mais imposta. *plan_id* é um **bigint**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão **ALTER** no banco de dados.
@@ -66,7 +66,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Depois de identificar o query_id e o plan_id que você deseja não forçar, use o exemplo a seguir para não forçar o plano.  
+ Depois de identificar o query_id e plan_id que você deseja não forçar, use o exemplo a seguir para não forçar o plano.  
   
 ```sql  
 EXEC sp_query_store_unforce_plan 3, 3;  
@@ -78,7 +78,7 @@ EXEC sp_query_store_unforce_plan 3, 3;
  [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
  [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
- [Exibições de Catálogo do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
+ [Exibições de catálogo do repositório de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Monitorando o desempenho usando o Repositório de Consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [Melhor prática com o Repositório de Consultas](../../relational-databases/performance/best-practice-with-the-query-store.md#CheckForced)     
   
