@@ -25,7 +25,7 @@ ms.locfileid: "73729699"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], altere o nome da versão para personalizá-la para sua organização.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Gerenciamento de Versões** .  

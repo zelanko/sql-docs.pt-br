@@ -29,14 +29,14 @@ ms.locfileid: "72988218"
 > [!NOTE]  
 >  O procedimento descrito neste tópico exige que a propriedade DelayValidation da tarefa Fluxo de Dados e de qualquer objeto pai seja definida com seu valor padrão **False**.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  Esse procedimento demonstra como desenvolver um aplicativo cliente em código gerenciado que carrega a saída de um pacote com um destino do DataReader diretamente da memória. As etapas resumidas aqui são demonstradas no código de exemplo que segue.  
   
 #### <a name="to-load-data-package-output-into-a-client-application"></a>Para carregar a saída de pacote de dados em um aplicativo cliente  
   
 1.  No pacote, configure um destino do DataReader para receber a saída que você quer ler no aplicativo cliente. Dê ao destino do DataReader um nome descritivo, pois você usará esse nome em seu aplicativo cliente posteriormente. Anote o nome do destino do DataReader.  
   
-2.  No projeto de desenvolvimento, defina uma referência para o namespace `Microsoft.SqlServer.Dts.DtsClient` localizando o assembly **Microsoft. SqlServer. Dts. DtsClient. dll**. Por padrão, esse assembly é instalado em **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**. Importe o namespace para seu código usando o C#`Using`ou a instrução[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]`Imports`.  
+2.  No projeto de desenvolvimento, defina uma referência para o namespace `Microsoft.SqlServer.Dts.DtsClient` localizando o assembly **Microsoft. SqlServer. Dts. DtsClient. dll**. Por padrão, esse assembly é instalado em **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**. Importe o namespace para seu código usando o C# `Using` ou a instrução [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports`.  
   
 3.  Em seu código, crie um objeto do tipo `DtsClient.DtsConnection` com uma cadeia de conexão que contenha os parâmetros de linha de comando exigidos por **dtexec. exe** para executar o pacote. Para obter mais informações, consulte [dtexec Utility](../packages/dtexec-utility.md). Em seguida, abra a conexão com essa cadeia de conexão. Também use o utilitário **dtexecui** para criar a cadeia de conexão necessária visualmente.  
   
@@ -295,7 +295,7 @@ namespace DtsClientWParamCS
   
 ![Ícone de Integration Services (pequeno)](../media/dts-16.gif "Ícone de Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Compreender as diferenças entre execução local e remota](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Carregando e executando um pacote local de forma programática](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Carregar e executar um pacote remoto programaticamente](../run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  

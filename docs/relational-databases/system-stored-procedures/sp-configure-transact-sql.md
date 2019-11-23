@@ -74,7 +74,7 @@ RECONFIGURE
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Quando executado sem parâmetros, **sp_configure** retorna um conjunto de resultados com cinco colunas e ordena as opções alfabeticamente em ordem crescente, conforme mostrado na tabela a seguir.  
   
- Os valores para **config_value** e **run_value** não são equivalentes automaticamente. Depois de atualizar um parâmetro de configuração usando **sp_configure**, o administrador do sistema deve atualizar o valor de configuração em execução usando RECONFIGURE ou RECONFIGURE com override. Para obter mais informações, consulte a seção Comentários.  
+ Os valores para **config_value** e **run_value** não são equivalentes automaticamente. Depois de atualizar uma definição de configuração usando **sp_configure**, o administrador do sistema deve atualizar o valor de configuração em execução usando RECONFIGURE ou RECONFIGURE com override. Para obter mais informações, consulte a seção Comentários.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -84,7 +84,7 @@ RECONFIGURE
 |**config_value**|**int**|Valor para o qual a opção de configuração foi definida usando **sp_configure** (valor em **Sys. Configurations. Value**). Para obter mais informações sobre essas opções, consulte [opções &#40;de configuração&#41; do servidor SQL Server](../../database-engine/configure-windows/server-configuration-options-sql-server.md) e [ &#40;sys. Configurations Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
 |**run_value**|**int**|Valor em execução no momento da opção de configuração (valor em **Sys. Configurations. value_in_use**).<br /><br /> Para obter mais informações, consulte [Sys. &#40;Configurations&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Use **sp_configure** para exibir ou alterar as configurações de nível de servidor. Para alterar configurações de nível de banco de dados, use ALTER DATABASE. Para alterar configurações que afetam somente a sessão do usuário atual, use a instrução SET.  
   
 ### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
@@ -101,12 +101,12 @@ RECONFIGURE
   
  A instrução RECONFIGURE atualiza algumas opções dinamicamente, outras opções requerem a parada do servidor e reinicialização. Por exemplo, as opções de memória **mínima** do servidor e memória **máxima** do servidor são atualizadas dinamicamente no [!INCLUDE[ssDE](../../includes/ssde-md.md)]; Portanto, você pode alterá-los sem reiniciar o servidor. Por outro lado, a reconfiguração do valor em execução da opção **fator de preenchimento** requer a reinicialização do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- Depois de executar RECONFIGURE em uma opção de configuração, você pode ver se a opção foi atualizada dinamicamente executando **sp_configure '***option_name***'** . Os valores nas colunas **run_value** e **config_value** devem corresponder a uma opção atualizada dinamicamente. Você também pode verificar quais opções são dinâmicas examinando a coluna **is_dynamic** da exibição do catálogo **Sys. Configurations** .  
+ Depois de executar RECONFIGURE em uma opção de configuração, você pode ver se a opção foi atualizada dinamicamente executando **sp_configure '***option_name***'** . Os valores nas colunas **run_value** e **config_value** devem corresponder a uma opção atualizada dinamicamente. Você também pode verificar para ver quais opções são dinâmicas examinando a coluna **is_dynamic** da exibição do catálogo **Sys. Configurations** .  
  
  A alteração também é gravada no log de erros do SQL Server.
   
 > [!NOTE]  
->  Se um *valor* especificado for muito alto para uma opção, a coluna **run_value** refletirá o fato de que a [!INCLUDE[ssDE](../../includes/ssde-md.md)] tem como padrão a memória dinâmica em vez de usar uma configuração que não é válida.  
+>  Se um *valor* especificado for muito alto para uma opção, a coluna **run_value** refletirá o fato de que a [!INCLUDE[ssDE](../../includes/ssde-md.md)] tem como padrão a memória dinâmica, em vez de usar uma configuração que não seja válida.  
   
  Para obter mais informações, consulte [reconfigure &#40;Transact-&#41;SQL](../../t-sql/language-elements/reconfigure-transact-sql.md).  
   

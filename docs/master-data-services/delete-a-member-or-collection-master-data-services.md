@@ -32,7 +32,7 @@ ms.locfileid: "73729378"
 > [!NOTE]  
 >  Você não poderá excluir um membro se ele for usado como um valor de atributo baseado em domínio de outro membro.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional do **Gerenciador** .  
@@ -43,7 +43,7 @@ ms.locfileid: "73729378"
   
 ### <a name="to-delete-a-member-or-collection"></a>Para excluir um membro ou uma coleção  
   
-1.  Na página inicial do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , na lista **Modelo** , selecione um modelo.  
+1.  Na home page do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , na lista **Modelo** , selecione um modelo.  
   
 2.  Na lista **Versão** , selecione uma versão.  
   

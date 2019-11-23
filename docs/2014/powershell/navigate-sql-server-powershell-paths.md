@@ -25,7 +25,7 @@ ms.locfileid: "72797806"
   
  O provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementa um subconjunto de cmdlets do provedor, mostrados na tabela a seguir:  
   
-|Cmdlet|Alias canônico|Alias de cmd|Alias de shell do UNIX|Description|  
+|Cmdlet|Alias canônico|Alias de cmd|Alias de shell do UNIX|Descrição|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|Obtém o nó atual.|  
 |`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|Altera o nó atual.|  
@@ -130,7 +130,7 @@ New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\Adventur
 Set-Location AWDB:\Tables\Purchasing.Vendor  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Provedor do SQL Server PowerShell](sql-server-powershell-provider.md)   
  [Trabalhar com caminhos do SQL Server PowerShell](work-with-sql-server-powershell-paths.md)   
  [Converter URNs em caminhos de provedor SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   

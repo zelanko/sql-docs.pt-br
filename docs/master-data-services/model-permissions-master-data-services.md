@@ -31,9 +31,9 @@ ms.locfileid: "73728970"
   
 |Permissão|Descrição|  
 |----------------|-----------------|  
-|**Leitura**|O usuário pode ler membros, atributos, associações de hierarquia ou hierarquias de coleção.|  
+|**leitura**|O usuário pode ler membros, atributos, associações de hierarquia ou hierarquias de coleção.|  
 |**Criar**|O usuário pode criar membros e atribuir valores de atributo durante a criação.|  
-|**Update (atualizar)**|O usuário pode atualizar membros, atributos, associações de hierarquia ou hierarquias de coleção.|  
+|**Atualizar**|O usuário pode atualizar membros, atributos, associações de hierarquia ou hierarquias de coleção.|  
 |**Delete (excluir)**|O usuário pode excluir membros.|  
 |**Deny**|Nega todo o acesso ao modelo|  
 |**Admin**|Permissão de administrador no modelo. A permissão de administrador está disponível somente no nível do modelo.|  

@@ -1,5 +1,5 @@
 ---
-title: sys. dm _operation_status (banco de dados SQL do Azure) | Microsoft Docs
+title: sys. dm_operation_status (banco de dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/05/2017
 ms.service: sql-database
@@ -32,7 +32,7 @@ ms.locfileid: "70911206"
 
   Retorna informações sobre as operações executadas em bancos de dados em um servidor do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Column Name|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|Identificador da operação. Não nulo.|  
 |resource_type|**int**|Indica o tipo de recurso no qual a operação é executada. Não nulo. Na versão atual, essa exibição controla as operações executadas no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] somente, e o valor inteiro correspondente é 0.|  
@@ -53,8 +53,8 @@ ms.locfileid: "70911206"
 ## <a name="permissions"></a>Permissões  
  Essa exibição só está disponível no banco de dados **mestre** para o logon da entidade de segurança no nível do servidor.  
   
-## <a name="remarks"></a>Comentários  
- Para usar essa exibição, você deve estar conectado ao banco de dados **mestre** . Use a `sys.dm_operation_status` exibição no banco de dados **mestre** do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] servidor para acompanhar o status das seguintes operações executadas em um [!INCLUDE[ssSDS](../../includes/sssds-md.md)]:  
+## <a name="remarks"></a>Remarks  
+ Para usar essa exibição, você deve estar conectado ao banco de dados **mestre** . Use a exibição `sys.dm_operation_status` no banco de dados **mestre** do servidor [!INCLUDE[ssSDS](../../includes/sssds-md.md)] para acompanhar o status das seguintes operações executadas em uma [!INCLUDE[ssSDS](../../includes/sssds-md.md)]:  
   
 -   Criar banco de dados  
   
@@ -84,9 +84,9 @@ SELECT * FROM sys.dm_operation_status
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções &#40;e exibições de gerenciamento dinâmico de replicação geográfica do banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
- [sys. dm _geo_replication_link_status &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [sys. Geo _replication_links &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [Funções &#40;e exibições de gerenciamento dinâmico da replicação geográfica &#41; do banco de dados SQL do Azure](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
+ [Sys. dm_geo_replication_link_status &#40;banco de dados&#41; SQL do Azure](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
+ [Sys. geo_replication_links &#40;banco de dados&#41; SQL do Azure](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
  [ALTER DATABASE &#40;Banco de Dados SQL do Azure&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
   
   

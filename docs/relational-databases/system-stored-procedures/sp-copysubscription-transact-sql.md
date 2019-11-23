@@ -45,19 +45,19 @@ sp_copysubscription [ @filename = ] 'file_name'
 ## <a name="arguments"></a>Argumentos  
 `[ @filename = ] 'file_name'` é a cadeia de caracteres que especifica o caminho completo, incluindo o nome do arquivo, para o qual uma cópia do arquivo de dados (. MDF) é salva. o *nome do arquivo* é **nvarchar (260)** , sem padrão.  
   
-`[ @temp_dir = ] 'temp_dir'` é o nome do diretório que contém os arquivos temporários. *temp_dir* é **nvarchar (260)** , com um padrão de NULL. Se for NULL, o diretório de dados padrão [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será usado. O diretório deve ter bastante espaço suficiente para conter um arquivo do tamanho de todos os arquivos de banco de dados de assinante combinados.  
+`[ @temp_dir = ] 'temp_dir'` é o nome do diretório que contém os arquivos temporários. *temp_dir* é **nvarchar (260)** , com um padrão de NULL. Se for NULL, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diretório de dados padrão será usado. O diretório deve ter bastante espaço suficiente para conter um arquivo do tamanho de todos os arquivos de banco de dados de assinante combinados.  
   
 `[ @overwrite_existing_file = ] 'overwrite_existing_file'` é um sinalizador booliano opcional que especifica se deve ou não substituir um arquivo existente com o mesmo nome especificado em **\@filename**. *overwrite_existing_file*é **bit**, com um padrão de **0**. Se for **1**, ele substituirá o arquivo especificado por **\@filename**, se existir. Se **0**, o procedimento armazenado falhará se o arquivo existir e o arquivo não for substituído.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_copysubscription** é usado em todos os tipos de replicação para copiar um banco de dados de assinatura para um arquivo como uma alternativa para aplicar um instantâneo no Assinante. O banco de dados deve ser configurado para oferecer suporte somente a assinaturas pull. Usuários com permissões apropriadas podem fazer cópias do banco de dados de assinatura e enviar por email, copiar ou transportar o arquivo de assinatura (.msf) para outro Assinante, onde poderá ser anexado a uma assinatura.  
   
  O tamanho do banco de dados de assinatura copiado deve ser menor de 2 gigabytes (GB).  
   
- o **sp_copysubscription** só tem suporte para bancos de dados com assinaturas de cliente e não pode ser executado quando o banco de dados tiver assinaturas de servidor.  
+ Só há suporte para **sp_copysubscription** para bancos de dados com assinaturas de cliente e não pode ser executado quando o banco de dados tem assinaturas de servidor.  
   
 ## <a name="permissions"></a>Permissões  
  Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_copysubscription**.  

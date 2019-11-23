@@ -27,7 +27,7 @@ ms.locfileid: "73786974"
   O Gerenciador de Driver ODBC retorna todas as cadeias de caracteres de especificação do atributo **SQLDrivers** . Para obter mais informações sobre a definição de valores e da cadeia de caracteres do atributo, consulte o [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink/?LinkId=4173), ou você pode exibir [ODBC Programmer's Reference](https://go.microsoft.com/fwlink/?LinkId=45250) online.  
   
 ## <a name="see-also"></a>Consulte também  
-   de [Sqldrives](https://go.microsoft.com/fwlink/?LinkId=59341)  
+ [SQLDrivers](https://go.microsoft.com/fwlink/?LinkId=59341)   
  [Detalhes da implementação da API do ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

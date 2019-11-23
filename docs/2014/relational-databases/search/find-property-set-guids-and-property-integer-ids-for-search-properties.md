@@ -41,8 +41,8 @@ ms.locfileid: "73637890"
 |Nome conhecido|Nome canônico no Windows.|GUID do conjunto de propriedades|ID de inteiro|Descrição|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Autores|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|Autor ou autores de um determinado item.|  
-|Marcas|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Conjunto de palavras-chave (também conhecidas como marcas) atribuído ao item.|  
-|Tipo|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Tipo de arquivo percebido com base em seu tipo canônico.|  
+|tags|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Conjunto de palavras-chave (também conhecidas como marcas) atribuído ao item.|  
+|Type|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Tipo de arquivo percebido com base em seu tipo canônico.|  
 |Título|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Título do item. Por exemplo, o título de um documento, o assunto de uma mensagem, a legenda de uma fotografia ou o nome de uma música.|  
   
  Para encorajar a consistência entre formatos de arquivos, a Microsoft identificou subconjuntos de propriedades de documento frequentemente usadas e de alta prioridade para várias categorias de documentos. Estas incluem comunicações, contatos, documentos, arquivos de música, imagens e vídeos. Para obter mais informações sobre as principais propriedades classificadas para cada categoria, veja [Propriedades definidas pelo sistema para formatos de arquivos personalizados](https://go.microsoft.com/fwlink/?LinkId=144336) na documentação do Windows Search.  
@@ -103,6 +103,6 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Pesquisar propriedades de documento com listas de propriedades de pesquisa](search-document-properties-with-search-property-lists.md)   
- [Configurar e gerenciar filtros para pesquisa](configure-and-manage-filters-for-search.md)  
+ [Configurar e gerenciar filtros de pesquisa](configure-and-manage-filters-for-search.md)  
   
   

@@ -17,14 +17,14 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/15/2019
 ms.locfileid: "72313650"
 ---
-# <a name="task-4-manaing-and-viewing-results"></a>Tarefa 4: Manaing e exibindo resultados
+# <a name="task-4-manaing-and-viewing-results"></a>Tarefa 4: Gerenciando e exibindo resultados
   Nesta tarefa, você revisará os resultados da limpeza auxiliada por computador, além de executar a limpeza interativa nos dados do fornecedor. Consulte [estágio de limpeza interativa](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) para obter mais detalhes.  
   
 1.  Selecione **contato** de domínio de email na lista de domínios.  
   
-2.  Alterne para a guia **inválido** no painel direito. Observe que dois endereços de email que estavam com caracteres ' s ausentes no final. Esses dois emails que foram considerados inválidos pela regra de domínio que exigem que todos os endereços de email terminem com **\@adventure-Works.com** (com '). O DQS usa a regra de domínio enquanto faz a limpeza para determinar se um email é válido ou não. Essa guia exibe os valores de domínio que foram marcados como inválidos na base de dados de conhecimento ou que não estavam de acordo com uma regra de domínio. Nesse caso, esses valores não estavam em conformidade com a regra de domínio (Email Validation).  
+2.  Alterne para a guia **inválido** no painel direito. Observe que dois endereços de email que estavam com caracteres ' s ausentes no final. Esses dois emails que foram considerados inválidos pela regra de domínio que exigem que todos os endereços de email terminem com **\@Adventure-Works.com** (com '). O DQS usa a regra de domínio enquanto faz a limpeza para determinar se um email é válido ou não. Essa guia exibe os valores de domínio que foram marcados como inválidos na base de dados de conhecimento ou que não estavam de acordo com uma regra de domínio. Nesse caso, esses valores não estavam em conformidade com a regra de domínio (Email Validation).  
   
-3.  Na coluna **corrigir para** , digite o endereço de email correto que termina com **\@adventure-Works.com** (com ' ').  
+3.  Na coluna **corrigir para** , digite o endereço de email correto que termina com **\@Adventure-Works.com** (com ').  
   
      ![Correções de correções de regras de validação de email](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "da regra de validação de email")  
   
@@ -32,7 +32,7 @@ ms.locfileid: "72313650"
   
 5.  Alterne para a **nova** guia no painel direito. Os valores dessa guia são os valores para os quais o DQS ainda não tem informações suficientes na base de dados de conhecimento para determinar se eles estão corretos. Consequentemente, ele não pode modificar nem sugerir alterações para os valores de domínio.  
   
-6.  Examine os valores para confirmar se todos os emails terminam com **\@adventure-Works.com** e clique em **aprovar todos os termos** na barra de ferramentas. Os valores aprovados dessa guia se movem para a guia **correta** .  
+6.  Examine os valores para confirmar se todos os emails terminam com **\@Adventure-Works.com** e clique em **aprovar todos os termos** na barra de ferramentas. Os valores aprovados dessa guia se movem para a guia **correta** .  
   
 7.  Selecione o domínio **país** na lista de domínios.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "72313650"
   
      ![Nomes do]fornecedor corrigidos nomes de(../../2014/tutorials/media/et-managingandviewingresults-03.jpg "fornecedores corrigidos")  
   
-    1.  Observe que **a a. Datum Corp.** é corrigida para a **a. Datum Corporation** e o **motivo** é definido como @no__t relação com base em 3Term. A. Datum Corporation @ no__t-0 é um valor de domínio conhecido para o DQS porque foi descoberto durante o processo de descoberta do conhecimento. Portanto, o DQS tem **100% de confiança** sobre essa correção.  
+    1.  Observe que **a. Datum Corp.** é corrigida para a **a. Datum Corporation** e o **motivo** é definido como **relação baseada em termos. A. Datum Corporation** é um valor de domínio conhecido para o DQS, pois ele foi descoberto durante o processo de descoberta do conhecimento. Portanto, o DQS tem **100% de confiança** sobre essa correção.  
   
     2.  Observe que **o Storex de país lento** é corrigido para o **repositório de país lento**, o **nível de confiança** é definido como **100%** e o **motivo** é definido como **valor de domínio**. Durante o processo de descoberta da base de dados de conhecimento, você define o **Storex do país lento** como um erro com o **repositório de país lento** como a **correção**; portanto, o DQS é de **100% confiante** em fazer essa correção.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "72313650"
   
 22. Observe que o botão de opção **aprovar** já está selecionado para este item na lista. Esse é o comportamento padrão para itens na guia **corrigido** .  
   
-23. Alterne para a guia **sugerida** . Examine as alterações sugeridas pelo serviço de **verificação de endereço de dados Melissa** .  
+23. Alterne para a guia **sugerida** . revise as alterações sugeridas pelo serviço de **verificação de endereço de dados Melissa** .  
   
 24. **Clique em aprovar todos os termos** no botão da barra de ferramentas e clique em **OK** na caixa de mensagem de **confirmação** .  
   
@@ -87,6 +87,6 @@ ms.locfileid: "72313650"
 25. Clique em **Avançar** para alternar para a página **Exportar** .  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Task 5: Exportando resultados de limpeza para um arquivo do Excel @ no__t-0  
+ [Tarefa 5: Exportando os resultados da limpeza para um arquivo do Excel](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
   
   

@@ -20,15 +20,15 @@ ms.locfileid: "72890496"
 
   A tabela a seguir lista as instruções que integram a DML (Data Manipulation Language) da mineração de dados em DMX (Data Mining Extensions).  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[EXCLUIR &#40;DMX&#41;](../dmx/delete-dmx.md)|Desmarca o conteúdo treinado de um modelo de mineração.|  
-|[INSERIR no &#40;DMX&#41;](../dmx/insert-into-dmx.md)|Treina modelos de mineração|  
-|[SELECIONAR &#40;DMX&#41;](../dmx/select-dmx.md)|Pesquisa modelos de mineração.|  
+|[INSERIR NO &#40;DMX&#41;](../dmx/insert-into-dmx.md)|Treina modelos de mineração|  
+|[SELECIONE &#40;DMX&#41;](../dmx/select-dmx.md)|Pesquisa modelos de mineração.|  
 |[&#60;consulta de dados de origem&#62;](../dmx/source-data-query.md)|Consulta fontes de dados para as instruções **INSERT INTO** e **Select** .|  
-|[ATUALIZAR &#40;DMX&#41;](../dmx/update-dmx.md)|Altera conteúdos no modelo de mineração|  
+|[ATUALIZAÇÃO &#40;DMX&#41;](../dmx/update-dmx.md)|Altera conteúdos no modelo de mineração|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Instruções de definição &#40;de&#41; dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
  [Referência de instruções de DMX &#40extensões DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   

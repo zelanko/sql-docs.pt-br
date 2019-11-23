@@ -36,7 +36,7 @@ ms.locfileid: "72251319"
   
 1.  Chame [catalog.deploy_project &#40;Banco de Dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) para implantar o projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contém o pacote para o servidor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
-     Para recuperar o conteúdo binário do arquivo de implantação do projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], para o parâmetro *\@project_stream* , use uma instrução SELECT com a função OPENROWSET e o provedor de conjunto de linhas em massa. O conjuntos de linhas BULK permite a você ler dados de um arquivo. O argumento SINGLE_BLOB do provedor de conjuntos de linhas BULK retorna o conteúdo do arquivo de dados como uma única linha, um conjunto de linhas de coluna única do tipo varbinary(max). Para obter mais informações, consulte [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
+     Para recuperar o conteúdo binário do arquivo de implantação de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projeto, para o parâmetro *\@project_stream* , use uma instrução SELECT com a função OPENROWSET e o provedor de conjunto de linhas em massa. O conjuntos de linhas BULK permite a você ler dados de um arquivo. O argumento SINGLE_BLOB do provedor de conjuntos de linhas BULK retorna o conteúdo do arquivo de dados como uma única linha, um conjunto de linhas de coluna única do tipo varbinary(max). Para obter mais informações, consulte [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
      No exemplo a seguir, o projeto SSISPackages_ProjectDeployment é implantado na pasta Pacotes SSIS no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Os dados binários são lidos do arquivo de projeto (SSISPackage_ProjectDeployment. ispac) e armazenados no parâmetro *\@ProjectBinary* do tipo varbinary (max). O valor do parâmetro *\@ProjectBinary* é atribuído ao parâmetro *\@project_stream*.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72251319"
   
     ```  
   
-2.  Chame [catalog.create_execution &#40;Banco de Dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database) para criar uma instância da execução do pacote e, opcionalmente, chame [catalog.set_execution_parameter_value &#40;Banco de Dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database) Para definir valores de parâmetro de tempo de execução.  
+2.  Chame [catalog.create_execution &amp;#40;Banco de Dados SSISDB&amp;#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database) para criar uma instância da execução do pacote e, opcionalmente, chame [catalog.set_execution_parameter_value &amp;#40;Banco de Dados SSISDB&amp;#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database) Para definir valores de parâmetro de runtime.  
   
      No exemplo a seguir, catalog.create_execution cria uma instância de execução para package.dtsx que está contida no projeto SSISPackage_ProjectDeployment. O projeto está localizado na pasta Pacotes SSIS. A execution_id retornada pelo procedimento armazenado é usado na chamada para catalog.set_execution_parameter_value. Esse segundo procedimento armazenado define o parâmetro LOGGING_LEVEL como 3 (log detalhado) e define um parâmetro de pacote denominado Parameter1 com um valor de 1.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "72251319"
   
 -   Crie um objeto de servidor vinculado. Para obter mais informações, consulte [Criar servidores vinculados &#40;Mecanismo de Banco de Dados do SQL Server&#41;](../database-engine/sql-server-database-engine-overview.md).  
   
-     Na página **Opções do Servidor** da caixa de diálogo **Propriedades do Servidor Vinculado**, defina **RPC** e **RPC Out** como **True**. Além disso, defina **Habilitar Promoção de Transações Distribuídas para RPC** como **False**.  
+     Na página **Opções do Servidor** da caixa de diálogo **Propriedades do Servidor Vinculado** , defina **RPC** e **RPC Out** como **True**. Além disso, defina **Habilitar Promoção de Transações Distribuídas para RPC** como **False**.  
   
 -   Habilite parâmetros dinâmicos para o provedor selecionado para o servidor vinculado expandindo o nó **Provedores** sob **Servidores Vinculados** no Pesquisador de Objetos, clicando com o botão direito do mouse no provedor e clicando em **Propriedades**. Selecione **Habilitar** ao lado de **Parâmetro dinâmico**.  
   

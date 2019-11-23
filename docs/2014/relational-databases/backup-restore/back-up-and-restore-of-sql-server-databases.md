@@ -30,17 +30,17 @@ ms.lasthandoff: 08/30/2019
 ms.locfileid: "70176029"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Fazer backup e restaurar bancos de dados do SQL Server
-  Este tópico descreve os benefícios do backup dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bancos de dados, as condições de backup e restauração básicas, apresenta estratégias de backup e restauração para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e considerações de segurança sobre backup e restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Este tópico descreve os benefícios do backup dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bancos de dados, as condições de backup e restauração básicas, apresenta estratégias de backup e restauração para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e considerações de segurança sobre backup e restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  O componente de backup e restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece uma proteção essencial para dados críticos armazenados em bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para minimizar o risco de perda de dados catastrófica, você precisa fazer backup dos bancos de dados para preservar as modificações feitas nos dados regularmente. Uma estratégia de backup e restauração bem-planejada ajuda a proteger bancos de dados contra perda de dados causada por várias falhas. Teste sua estratégia restaurando um conjunto de backups e recuperando depois seu banco de dados para se preparar para responder com eficiência a um desastre.  
   
- Além do armazenamento local para armazenar os backups, SQL Server também dá suporte a backup e restauração a partir do serviço de armazenamento de BLOBs do Azure. Para obter mais informações, consulte [SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Além do armazenamento local para guardar os backups, o SQL Server também oferece suporte ao backup e à restauração no serviço de Armazenamento de Blobs do Azure. Para obter mais informações, consulte [SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 
   
 ##  <a name="Benefits"></a> Benefícios  
   
--   O backup dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a execução de procedimentos de restauração de teste nos backups e o armazenamento de cópias de backups em um local externo seguro evita a perda de dados potencialmente catastrófica.  
+-   O backup dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a execução de procedimentos de restauração de teste nos backups e o armazenamento de cópias de backups em um local externo seguro evita a perda de dados potencialmente catastrófica.  
   
     > [!IMPORTANT]  
     >  Essa é a única maneira de proteger os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma confiável.  
@@ -53,7 +53,7 @@ ms.locfileid: "70176029"
   
     -   Por exemplo, problemas de hardware, uma unidade de disco danificada ou perda permanente de um servidor.  
   
-    -   Desastres naturais. Ao usar SQL Server Backup para o serviço de armazenamento de BLOBs do Azure, você pode criar um backup fora do local em uma região diferente da sua localização local, para usar no caso de um desastre natural que afete sua localização no local.  
+    -   Desastres naturais. Ao usar o Backup do SQL Server para serviço de Armazenamento de Blobs do Azure, é possível criar um backup externo em uma região diferente daquela do seu local, para usar caso um desastre natural afete seu local.  
   
 -   Além disso, os backups de um banco de dados são úteis para fins administrativos rotineiros, como copiar um banco de dados de um servidor para outro, configurar o espelhamento do banco de dados ou [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] e fazer arquivamento.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "70176029"
  Uma cópia dos dados que podem ser usados para restaurar e recuperar os dados após uma falha. Os backups de um banco de dados também podem ser usados para restaurar uma cópia do banco de dados em um novo local.  
   
  dispositivo de backup  
- Um disco ou dispositivo de fita no qual os backups do SQL Server serão gravados e nos quais eles poderão ser restaurados. SQL Server backups também podem ser gravados em um serviço de armazenamento de BLOBs do Azure, e o formato de **URL** é usado para especificar o destino e o nome do arquivo de backup.. Para obter mais informações, consulte [SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Um disco ou dispositivo de fita no qual os backups do SQL Server serão gravados e nos quais eles poderão ser restaurados. Os backups do SQL Server também podem ser gravados em um serviço de Armazenamento de Blobs do Azure. O formato de **URL** é usado para especificar o destino e o nome do arquivo de backup. Para obter mais informações, consulte [SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  mídia de backup  
  Uma ou mais fitas ou arquivos de disco nos quais um ou mais backups foram gravados.  
@@ -109,7 +109,7 @@ ms.locfileid: "70176029"
   
  Uma estratégia de backup e restauração contém uma parte de backup e uma parte de restauração. A parte de backup da estratégia define o tipo e a frequência dos backups, a natureza e velocidade do hardware exigido para eles, como os backups serão testados, e onde e como a mídia de backup deve ser armazenada (incluindo considerações de segurança). A parte de restauração da estratégia define quem é responsável pela execução da restauração e como a restauração deve ser executada para atender às metas de disponibilidade do banco de dados e minimizar perda de dados. Recomendamos que você documente seus procedimentos de backup e restauração e mantenha uma cópia da documentação em seu livro de execuções.  
   
- O design de uma estratégia de backup e restauração eficaz requer planejamento, implementação e teste cuidadosos. O teste é obrigatório. Não existirá uma estratégia de backup até que você tenha restaurado com êxito os backups em todas as combinações incluídas na estratégia de restauração. Você deve considerar uma variedade de fatores. Eles incluem o seguinte:  
+ O design de uma estratégia de backup e restauração eficaz requer planejamento, implementação e teste cuidadosos. O teste é obrigatório. Não existirá uma estratégia de backup até que você tenha restaurado com êxito os backups em todas as combinações incluídas na estratégia de restauração. Você deve considerar uma variedade de fatores. Entre elas estão as seguintes:  
   
 -   As metas de produção de sua organização para os bancos de dados, especialmente os requisitos para disponibilidade e proteção contra perda de dados.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "70176029"
  A execução do backup tem um efeito mínimo sobre as transações em andamento; portanto, as operações de backup podem ser realizadas durante a operação regular. Você pode executar um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com um efeito mínimo sobre as cargas de trabalho de produção.  
   
 > [!NOTE]  
->  Para obter informações sobre restrições de simultaneidade durante o backup, consulte [Visão geral do backup &#40;SQL Server&#41;](backup-overview-sql-server.md).  
+>  Para obter informações sobre restrições de simultaneidade durante o backup, consulte [Visão geral de backup &#40;SQL Server&#41;](backup-overview-sql-server.md).  
   
  Depois de decidir os tipos de backups necessários e a frequência de execução de cada tipo, recomendamos que você agende backups regulares como parte de um plano de manutenção de banco de dados para o banco de dados. Para obter informações sobre planos de manutenção e como criá-los para fazer backups de banco de dados e backups de log, consulte [Use the Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
@@ -170,7 +170,7 @@ ms.locfileid: "70176029"
   
 ### <a name="scheduling-backup-jobs"></a>Agendando trabalhos de backup  
   
--   [Criar um Plano de Manutenção](../maintenance-plans/create-a-maintenance-plan.md)  
+-   [Criar um plano de manutenção](../maintenance-plans/create-a-maintenance-plan.md)  
   
 -   [Criar um trabalho](../../ssms/agent/create-a-job.md)  
   
@@ -255,11 +255,11 @@ ms.locfileid: "70176029"
   
 -   [Restaurar um backup de log de transações &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
--   [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [Restaurar um banco de dados SQL Server em um ponto no tempo &#40;modelo de recuperação completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
  **Usando Transact-SQL**  
   
--   [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [Restaurar um banco de dados SQL Server em um ponto no tempo &#40;modelo de recuperação completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 
   

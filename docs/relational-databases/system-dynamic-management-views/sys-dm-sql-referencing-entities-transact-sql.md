@@ -40,7 +40,7 @@ ms.locfileid: "73982347"
   
 -   Gatilhos DDL no nível do servidor  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior) [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -153,7 +153,7 @@ FROM sys.dm_sql_referencing_entities ('Production.Product', 'OBJECT');
 GO  
 ```  
   
-### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>b. Retornando as entidades que fazem referência a um determinado tipo  
+### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. Retornando as entidades que fazem referência a um determinado tipo  
  O exemplo a seguir retorna as entidades que referenciam o tipo de alias `dbo.Flag`. O conjunto de resultados mostra que dois procedimentos armazenados usam esse tipo. O tipo de `dbo.Flag` também é usado na definição de várias colunas na tabela `HumanResources.Employee`; no entanto, como o tipo não está na definição de uma coluna computada, restrição de verificação ou restrição padrão na tabela, nenhuma linha é retornada para a tabela de `HumanResources.Employee`.  
   
 ```sql  

@@ -98,7 +98,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-changing-a-capture-job"></a>A. Alterando um trabalho de captura  
- O exemplo a seguir atualiza os parâmetros `@job_type`, `@maxscans` e `@maxtrans` de um trabalho de captura no banco de dados `AdventureWorks2012`. Os outros parâmetros válidos para um trabalho de captura, `@continuous` e `@pollinginterval`, são omitidos; seus valores não são modificados.  
+ O exemplo a seguir atualiza os parâmetros `@job_type`, `@maxscans`e `@maxtrans` de um trabalho de captura no banco de dados `AdventureWorks2012`. Os outros parâmetros válidos para um trabalho de captura, `@continuous` e `@pollinginterval`, são omitidos; seus valores não são modificados.  
   
 ```  
 USE AdventureWorks2012;  
@@ -110,7 +110,7 @@ EXECUTE sys.sp_cdc_change_job
 GO  
 ```  
   
-### <a name="b-changing-a-cleanup-job"></a>b. Alterando um trabalho de limpeza  
+### <a name="b-changing-a-cleanup-job"></a>B. Alterando um trabalho de limpeza  
  O exemplo a seguir atualiza um trabalho de limpeza no banco de dados `AdventureWorks2012`. Todos os parâmetros válidos para esse tipo de trabalho, exceto **\@limite**, são especificados. O valor do **limite de\@** não é modificado.  
   
 ```  

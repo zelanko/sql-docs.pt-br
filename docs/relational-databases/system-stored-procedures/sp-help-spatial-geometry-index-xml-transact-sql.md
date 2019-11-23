@@ -47,17 +47,17 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="arguments"></a>Argumentos  
  Consulte [argumentos e propriedades de procedimentos armazenados de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>Propriedades  
  Consulte [argumentos e propriedades de procedimentos armazenados de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="permissions"></a>Permissões  
  O usuário deve ser um membro da função **pública** . Requer permissão READ ACCESS no servidor e no objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As propriedades que contêm valores NULL não são incluídas no conjunto de retorno de XML.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa `sp_help_spatial_geometry_index_xml` para investigar o índice espacial **SIndx_SpatialTable_geometry_col2** definido na tabela **geometry_col** para o exemplo de consulta fornecido em **\@qs**. Este exemplo retorna as propriedades principais do índice especificado em um fragmento XML que exibe o nome e valor das propriedades selecionadas.  
+ O exemplo a seguir usa `sp_help_spatial_geometry_index_xml` para investigar o índice espacial **SIndx_SpatialTable_geometry_col2** definido na tabela **geometry_col** para o exemplo de consulta fornecido em **\@QS**. Este exemplo retorna as propriedades principais do índice especificado em um fragmento XML que exibe o nome e valor das propriedades selecionadas.  
   
  Em seguida, um [XQuery](../../xquery/xquery-basics.md) é executado no conjunto de resultados, retornando uma propriedade específica.  
   

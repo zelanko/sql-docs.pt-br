@@ -33,7 +33,7 @@ ms.locfileid: "71952631"
   
 -   Configurar um servidor de relatório para usar um banco de dados do servidor de relatório diferente.  
   
--   Alterar a conta ou a senha do usuário usadas para a conexão do banco de dados. Você só precisa atualizar a conexão do banco de dados quando as informações da conta estiverem armazenadas no arquivo RSReportServer.config. Se estiver usando a conta de serviço para a conexão (que usa a segurança integrada do Windows como o tipo de credencial) a senha não será armazenada, eliminando a necessidade de atualizar as informações da conexão. Para obter mais informações sobre como alterar contas, veja [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
+-   Alterar a conta ou a senha do usuário usadas para a conexão do banco de dados. Você só precisa atualizar a conexão do banco de dados quando as informações da conta estiverem armazenadas no arquivo RSReportServer.config. Se estiver usando a conta de serviço para a conexão (que usa a segurança integrada do Windows como o tipo de credencial) a senha não será armazenada, eliminando a necessidade de atualizar as informações da conexão. Para obter mais informações sobre como alterar contas, veja [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
 -   Configurar uma implantação em expansão do servidor de relatório. A configuração de uma implantação em expansão requer que você crie várias conexões com um banco de dados do servidor de relatório. Para obter mais informações sobre como executar esta operação de várias etapas, veja [Configurar uma implantação em expansão do servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "71952631"
   
 -   Nome da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que hospeda o banco de dados do servidor de relatório.  
   
--   Nome do banco de dados do servidor de relatório. Ao criar uma conexão pela primeira vez, é possível criar um novo banco de dados do servidor de relatório ou selecionar um banco de dados existente. Para obter mais informações, veja [Criar um banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md).  
+-   Nome do banco de dados do servidor de relatório. Ao criar uma conexão pela primeira vez, é possível criar um novo banco de dados do servidor de relatório ou selecionar um banco de dados existente. Para obter mais informações, veja [Create a Report Server Database  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md).  
   
 -   Tipo de credencial. Você pode usar as contas de serviço, uma conta de domínio do Windows ou um logon de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -64,7 +64,7 @@ ms.locfileid: "71952631"
 ### <a name="storing-database-connection-information"></a>Armazenando informações de conexão do banco de dados  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena e criptografa as informações de conexão nas seguintes configurações do RSreportserver.config. Você deve usar a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou o utilitário rsconfig para criar valores criptografados para essas configurações.  
   
- Nem todos os valores são definidos para todo tipo de conexão. Se você configurar a conexão usando os valores padrão (ou seja, usando as contas de serviço para estabelecer a conexão), < `LogonUser` >, < `LogonDomain` > e < `LogonCred` > estarão vazias, da seguinte maneira:  
+ Nem todos os valores são definidos para todo tipo de conexão. Se você configurar a conexão usando os valores padrão (ou seja, usando as contas de serviço para estabelecer a conexão), <`LogonUser`>, <`LogonDomain`> e <`LogonCred`> estarão vazias, da seguinte maneira:  
   
 ```  
 <Dsn></Dsn>  
@@ -116,14 +116,14 @@ ms.locfileid: "71952631"
  Use a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para determinar qual banco de dados do servidor de relatório é usado por uma instância específica do servidor de relatório. Para localizar o nome, conecte-se à instância do servidor de relatório e abra a página Configuração do Banco de Dados.  
   
 ## <a name="using-a-different-report-server-database-or-moving-a-report-server-database"></a>Usando um banco de dados do servidor de relatório diferente ou movendo um banco de dados do servidor de relatório  
- Você pode configurar uma instância do servidor de relatório para usar um banco de dados do servidor de relatório diferente alterando as informações de conexão. Um caso comum para a alternância de bancos de dados é quando você implanta um servidor de relatório de produção. Normalmente, os servidores de produção são distribuídos por meio da alternância de um banco de dados do servidor de relatório de teste para um banco de dados do servidor de relatório de produção. Você também pode mover um banco de dados do servidor de relatório para outro computador. Para obter mais informações, veja [Atualizar e migrar o Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Você pode configurar uma instância do servidor de relatório para usar um banco de dados do servidor de relatório diferente alterando as informações de conexão. Um caso comum para a alternância de bancos de dados é quando você implanta um servidor de relatório de produção. A alternância de um banco de dados de servidor de relatório de teste para um banco de dados de servidor de relatório de produção é normalmente como os servidores de produção são distribuídos. Você também pode mover um banco de dados do servidor de relatório para outro computador. Para obter mais informações, veja [Atualizar e migrar o Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="configuring-multiple-reports-servers-to-use-the-same-report-server-database"></a>Configurando vários servidores de relatório para usar o mesmo banco de dados do servidor de relatório  
  Você pode configurar vários servidores de relatório para usar o mesmo banco de dados do servidor de relatório. Essa configuração de implantação é chamada de implantação em expansão. Essa configuração será um pré-requisito se você deseja executar vários servidores de relatório em um cluster de servidores. Entretanto, você também pode usar essa configuração para segmentar aplicativos de serviço ou para testar a instalação e as configurações de uma nova instância do servidor de relatório a fim de compará-la com a instalação de um servidor de relatório existente. Para obter mais informações, veja [Configurar uma implantação em expansão do servidor de relatório em modo nativo &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar um banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [Gerenciar um servidor de relatório de modo nativo do Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
+ [Gerenciar um servidor de relatórios de modo nativo do Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
   
   

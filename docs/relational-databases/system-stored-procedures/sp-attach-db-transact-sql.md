@@ -30,7 +30,7 @@ ms.locfileid: "72305267"
   Anexa um banco de dados a um servidor.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] recomendamos que você use CREATE DATABASE *database_name* para Attach em vez disso. Para obter mais informações, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] recomendamos que você use criar *database_name* de banco de dados para anexar em vez disso. Para obter mais informações, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 > [!NOTE]  
 >  Para recompilar vários arquivos de log quando um ou mais têm um novo local, use CREATE DATABASE *database_name* for ATTACH_REBUILD_LOG.  
@@ -49,7 +49,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>Argumentos  
 `[ @dbname = ] 'dbnam_ '` é o nome do banco de dados a ser anexado ao servidor. O nome deve ser exclusivo. *dbname* é **sysname**, com um padrão de NULL.  
   
-`[ @filename1 = ] 'filename_n'` é o nome físico, incluindo o caminho, de um arquivo de banco de dados. *filename_n* é **nvarchar (260)** , com um padrão de NULL. Podem ser especificados até 16 nomes de arquivo. Os nomes de parâmetro começam em **\@filename1** e incrementam para **\@filename16**. A lista de nomes de arquivo deve incluir, pelo menos, o arquivo primário. O arquivo primário contém as tabelas de sistema que apontam para outros arquivos no banco de dados. A lista também deve incluir quaisquer arquivos que tenham sido movidos depois que o banco de dados foi desanexado.  
+`[ @filename1 = ] 'filename_n'` é o nome físico, incluindo o caminho, de um arquivo de banco de dados. *filename_n* é **nvarchar (260)** , com um padrão de NULL. Podem ser especificados até 16 nomes de arquivo. Os nomes de parâmetro começam em **\@arquivo1** e incrementam para **\@filename16**. A lista de nomes de arquivo deve incluir, pelo menos, o arquivo primário. O arquivo primário contém as tabelas de sistema que apontam para outros arquivos no banco de dados. A lista também deve incluir quaisquer arquivos que tenham sido movidos depois que o banco de dados foi desanexado.  
   
 > [!NOTE]  
 >  Este argumento mapeia para o parâmetro FILENAME da instrução CREATE DATABASE. Para obter mais informações, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
@@ -60,10 +60,10 @@ sp_attach_db [ @dbname= ] 'dbname'
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhum  
+ Nenhum.  
   
-## <a name="remarks"></a>Comentários  
- O procedimento armazenado **sp_attach_db** só deve ser executado em bancos de dados que foram desanexados anteriormente do servidor de banco de dados usando uma operação **sp_detach_db** explícita ou em bancos de dados copiados. Se você precisar especificar mais de 16 arquivos, use CREATE DATABASE *database_name* para Attach ou CREATE DATABASE *database_name* FOR_ATTACH_REBUILD_LOG. Para obter mais informações, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ O procedimento armazenado **sp_attach_db** só deve ser executado em bancos de dados que foram desanexados anteriormente do servidor de banco de dados usando uma operação **sp_detach_db** explícita ou em bancos de dados copiados. Se você precisar especificar mais de 16 arquivos, use criar *database_name* de banco de dados para anexar ou criar banco de dados *database_name* FOR_ATTACH_REBUILD_LOG. Para obter mais informações, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
  Considera-se que todo arquivo não especificado esteja em seu último local conhecido. Para usar um arquivo em um local diferente, você deve especificar o novo local.  
   

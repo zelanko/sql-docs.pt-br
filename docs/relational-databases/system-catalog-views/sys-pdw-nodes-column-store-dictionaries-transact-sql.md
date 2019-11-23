@@ -14,7 +14,7 @@ ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 618a92cfd0f1602753b9fcfd61ac232eff5cecd4
 ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/14/2019
 ms.locfileid: "72305188"
@@ -31,11 +31,11 @@ ms.locfileid: "72305188"
 |**column_id**|**int**|ID da coluna columnstore.|  
 |**dictionary_id**|**int**|ID do dicionário.|  
 |**version**|**int**|Versão de formato do dicionário.|  
-|**type**|**int**|Tipo de dicionário:<br /><br /> 1-dicionário de hash contendo valores **int**<br /><br /> 2-não usado<br /><br /> 3-dicionário de hash contendo valores de cadeia de caracteres<br /><br /> 4-dicionário de hash que contém valores **float**|  
+|**tipo**|**int**|Tipo de dicionário:<br /><br /> 1-dicionário de hash contendo valores **int**<br /><br /> 2-não usado<br /><br /> 3-dicionário de hash contendo valores de cadeia de caracteres<br /><br /> 4-dicionário de hash que contém valores **float**|  
 |**last_id**|**int**|O último id de dados no dicionário.|  
 |**entry_count**|**bigint**|Número de entradas no dicionário.|  
 |**on_disc_size**|**bigint**|Tamanho do dicionário em bytes.|  
-|**pdw_node_id**|**int**|Identificador exclusivo de um nó [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|  
+|**pdw_node_id**|**int**|Identificador exclusivo de um nó de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão `VIEW SERVER STATE`.  

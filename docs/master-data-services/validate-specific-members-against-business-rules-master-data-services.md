@@ -29,7 +29,7 @@ ms.locfileid: "73728852"
 > [!NOTE]  
 >  Se você deseja aplicar regras de negócio a todos os membros em uma versão de um modelo, consulte [Validate a Version against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md).  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional do **Gerenciador** .  

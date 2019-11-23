@@ -35,7 +35,7 @@ ms.locfileid: "73789617"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Nenhuma outra operação pode ser chamada na interface [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) depois de chamar o método **BCPDone** . A única possibilidade é chamar o método [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) para iniciar uma nova operação de cópia em massa. Isso é semelhante a chamar o método [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) .  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

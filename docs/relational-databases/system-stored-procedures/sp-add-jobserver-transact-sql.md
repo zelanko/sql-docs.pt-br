@@ -45,18 +45,18 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 `[ @job_name = ] 'job_name'` o nome do trabalho. *job_name* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  *Job_id* ou *job_name* devem ser especificados, mas ambos não podem ser especificados.  
+>  *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados.  
   
-`[ @server_name = ] 'server'` o nome do servidor no qual o trabalho será direcionado. o *servidor* é **nvarchar (30)** , com um padrão de N ' (local) '. o *servidor* pode ser **(local)** para um servidor local ou o nome de um servidor de destino existente.  
+`[ @server_name = ] 'server'` o nome do servidor no qual direcionar o trabalho. o *servidor* é **nvarchar (30)** , com um padrão de N ' (local) '. o *servidor* pode ser **(local)** para um servidor local ou o nome de um servidor de destino existente.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhum  
+ Nenhum.  
   
-## <a name="remarks"></a>Comentários  
- **\@automatic_post** existe em **sp_add_jobserver**, mas não está listado em argumentos. **\@automatic_post** é reservado para uso interno.  
+## <a name="remarks"></a>Remarks  
+ **\@automatic_post** existe no **sp_add_jobserver**, mas não está listado em argumentos. **\@automatic_post** está reservado para uso interno.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] gerencia trabalhos de forma fácil e com representação gráfica. Além disso, ele é recomendado para criar e gerenciar a infraestrutura de trabalhos.  
   
@@ -79,7 +79,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  O exemplo a seguir atribui o trabalho `NightlyBackups` para ser executado no servidor local.  
   
 > [!NOTE]  
->  Este exemplo supõe que o trabalho `NightlyBackups` já existe.  
+>  Este exemplo supõe que o trabalho de `NightlyBackups` já existe.  
   
 ```  
 USE msdb ;  

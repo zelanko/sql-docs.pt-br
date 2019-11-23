@@ -21,7 +21,7 @@ ms.locfileid: "70874479"
   A Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é uma biblioteca de documentos do SharePoint, com finalidade especial, que fornece visualização avançada e gerenciamento de documentos das pastas de trabalho do Excel publicadas e relatórios dos Reporting Services que contêm dados PowerPivot.  
   
 > [!NOTE]  
->  Dependendo de como seu servidor está configurado, talvez você veja mensagens de erro ou aviso na área de visualização para documentos específicos. As mensagens podem ser exibidas quando uma pasta de trabalho do Excel estiver definida para atualizar automaticamente os dados sempre que for aberta. As mensagens de aviso de atualização de dados serão exibidas como a imagem de visualização se os Serviços do Excel forem configurados para mostrar mensagens de erro Aviso em atualização de dados. Os administradores de farm ou serviço podem modificar parâmetros de configuração para permitir que uma visualização da planilha real seja exibida. Para obter mais informações, consulte [criar um local confiável para sites do PowerPivot na Administração Central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+>  Dependendo de como seu servidor está configurado, talvez você veja mensagens de erro ou aviso na área de visualização para documentos específicos. As mensagens podem ser exibidas quando uma pasta de trabalho do Excel estiver definida para atualizar automaticamente os dados sempre que for aberta. As mensagens de aviso de atualização de dados serão exibidas como a imagem de visualização se os Serviços do Excel forem configurados para mostrar mensagens de erro Aviso em atualização de dados. Os administradores de farm ou serviço podem modificar parâmetros de configuração para permitir que uma visualização da planilha real seja exibida. Para obter mais informações, consulte [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ##  <a name="bkmk_top"></a> Neste tópico  
   
@@ -49,7 +49,7 @@ ms.locfileid: "70874479"
 >  A Galeria do PowerPivot requer o Microsoft Silverlight.  O navegador Microsoft Edge não dá suporte ao Silverlight.   
 > Para exibir o conteúdo da biblioteca no Microsoft Edge, clique na guia **biblioteca** na Galeria Power pivot e altere a exibição da biblioteca de documentos para **todos os documentos**.    
 > Para alterar a exibição padrão, clique na guia **Biblioteca** e depois clique em Modificar exibição. Clique em "Fazer desta a exibição padrão" e, em seguida, clique em OK para salvar a exibição padrão.  
->  Para obter mais informações sobre o que o Microsoft Edge dá suporte, consulte [o blog do Windows, um intervalo do passado, parte 2: Dizendo adeus ao ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  Para obter mais informações sobre o que o Microsoft Edge dá suporte, consulte o blog do Windows, [um intervalo do passado, parte 2: dizendo adeus ao ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  Para obter uma lista completa de pré-requisitos, consulte [criar e personalizar a Galeria PowerPivot](create-and-customize-power-pivot-gallery.md).  
   
@@ -69,13 +69,13 @@ ms.locfileid: "70874479"
   
 1.  Salve o arquivo.  
   
-2.  1.  **Excel 2010:** No menu arquivo, clique em **salvar & enviar**.  
+2.  1.  **Excel 2010:** no menu Arquivo, clique em **Salvar e Enviar**.  
   
     2.  Clique em **Salvar no SharePoint**.  
   
     3.  Clique em **Opções de Publicação** se desejar usar Opções de Serviços do Excel para selecionar folhas ou parâmetros individuais a serem publicados. Por exemplo, a guia Parâmetros em Opções de Serviços do Excel permite escolher quais slicers aparecem na pasta de trabalho publicada.  
   
-    1.  **Excel 2013:**  No menu arquivo, clique em **salvar**.  
+    1.  **Excel 2013:**  no menu Arquivo do Excel, clique em **Salvar**  
   
     2.  Clique em **Opções de Exibição do Navegador** se desejar usar Opções de Serviços do Excel para selecionar folhas ou parâmetros individuais a serem publicados. Por exemplo, a guia Parâmetros em Opções de Serviços do Excel permite escolher quais slicers aparecem na pasta de trabalho publicada.  
   
@@ -161,9 +161,9 @@ ms.locfileid: "70874479"
  O tipo de conteúdo do **Documento de Galeria PowerPivot** não é adicionado automaticamente nas bibliotecas de documentos. Você não encontrará esse problema, a menos que habilite manualmente o tipo de conteúdo sem suporte.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar um local confiável para sites do PowerPivot na administração central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Excluir Galeria PowerPivot](delete-power-pivot-gallery.md)   
- [Criar e personalizar a galeria do PowerPivot](create-and-customize-power-pivot-gallery.md)   
+ [Criar um local confiável para sites do PowerPivot na Administração Central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [Excluir  da Galeria PowerPivot](delete-power-pivot-gallery.md)  
+ [Criar e personalizar a Galeria PowerPivot](create-and-customize-power-pivot-gallery.md)   
  [Agendar uma atualização &#40;de dados PowerPivot para SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
   
   

@@ -188,7 +188,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 ##  <a name="step7"></a> 7. Adicionar o publicador original ao Replication Monitor  
  Em cada réplica de grupo de disponibilidade, adicione o publicador original ao Replication Monitor.  
   
-##  <a name="RelatedTasks"></a> Tarefas Relacionadas  
+##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Replicação**  
   
 -   [Mantendo um banco de dados &#40;de publicação AlwaysOn SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
@@ -219,8 +219,8 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41; ](prereqs-restrictions-recommendations-always-on-availability.md)   
- [Visão geral do &#40;grupos de disponibilidade AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
+ [Visão geral do &#40;grupos de disponibilidade AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
  [Grupos de disponibilidade AlwaysOn: interoperabilidade (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [Replicação do SQL Server](../../../relational-databases/replication/sql-server-replication.md)  

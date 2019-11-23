@@ -47,7 +47,7 @@ $MyArray = "MyVar1 = 'String1'", "MyVar2 = 'String2'"
 Invoke-Sqlcmd -Query "SELECT `$(MyVar1) AS Var1, `$(MyVar2) AS Var2;" -Variable $MyArray  
 ```  
   
- Este é um exemplo do uso do provedor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] do Windows PowerShell para navegar por uma instância do [!INCLUDE[ssDE](../includes/ssde-md.md)]e, em seguida, usar o cmdlet **Get-Item** do Windows PowerShell para recuperar o objeto Servidor SMO da instância e passá-lo para o **Invoke-Sqlcmd**:  
+ Este é um exemplo do uso do provedor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] do Windows PowerShell para navegar por uma instância do [!INCLUDE[ssDE](../includes/ssde-md.md)] e, em seguida, usar o cmdlet **Get-Item** do Windows PowerShell para recuperar o objeto Servidor SMO da instância e passá-lo para o **Invoke-Sqlcmd**:  
   
 ```powershell
 Set-Location SQLSERVER:\SQL\MyComputer\MyInstance  
@@ -103,7 +103,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
   
  Nem todos os parâmetros **sqlcmd** são necessários em um ambiente do PowerShell. Por exemplo, o Windows PowerShell formata todas as saídas dos cmdlets, de modo que as opções de formatação de especificação de parâmetros **sqlcmd** não sejam implementadas no **Invoke-Sqlcmd**. A tabela a seguir mostra o relacionamento entre os parâmetros **Invoke-Sqlcmd** e as opções **sqlcmd** :  
   
-|Description|Opção sqlcmd|Parâmetro Invoke-Sqlcmd|  
+|Descrição|Opção sqlcmd|Parâmetro Invoke-Sqlcmd|  
 |-----------------|-------------------|------------------------------|  
 |Nome do servidor e da instância.|-S|-ServerInstance|  
 |O banco de dados inicial a ser usado.|-d|-Database|  
@@ -114,12 +114,12 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Intervalo de tempo limite da consulta.|-T|-QueryTimeout|  
 |Interromper a execução em um erro|-b|-AbortOnError|  
 |Conexão de Administrador Dedicada.|-a|-DedicatedAdministratorConnection|  
-|Desabilitar comandos interativos, script de inicialização e variáveis de ambiente.|-X|-DisableCommands|  
-|Desabilitar substituição de variável.|-X|-DisableVariables|  
+|Desabilitar comandos interativos, script de inicialização e variáveis de ambiente.|-x|-DisableCommands|  
+|Desabilitar substituição de variável.|-x|-DisableVariables|  
 |Nível de severidade mínimo a ser informado.|-v|-SeverityLevel|  
-|Nível de erro mínimo a ser informado.|-M|-ErrorLevel|  
+|Nível de erro mínimo a ser informado.|-m|-ErrorLevel|  
 |Intervalo de tempo limite de logon.|-l|-ConnectionTimeout|  
-|Hostname.|-H|-HostName|  
+|Hostname.|-h|-HostName|  
 |Alterar senha e sair.|-Z|-NewPassword|  
 |Arquivo de entrada que contém uma consulta|-i|-InputFile|  
 |Comprimento máximo de saída de caracteres.|-w|-MaxCharLength|  
@@ -128,25 +128,25 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Exibir erros|Sem parâmetros|-OutputSqlErrors|  
 |Produzir mensagens para stderr.|-r|Sem parâmetros|  
 |Usar configurações regionais do cliente|-r|Sem parâmetros|  
-|Executar a consulta especificada e continuar executando.|-Q|Sem parâmetros|  
+|Executar a consulta especificada e continuar executando.|-q|Sem parâmetros|  
 |Página de código a ser usada para obter dados de saída.|-f|Sem parâmetros|  
 |Alterar uma senha e continuar executando.|-Z|Sem parâmetros|  
-|Tamanho do pacote|-A|Sem parâmetros|  
-|Separador de coluna|-S|Sem parâmetros|  
+|Tamanho do pacote|-a|Sem parâmetros|  
+|Separador de coluna|-s|Sem parâmetros|  
 |Cabeçalhos de saída de controle|-H|Sem parâmetros|  
 |Especificar caracteres de controle|-k|Sem parâmetros|  
-|Largura da exibição de comprimento fixo|-y|Sem parâmetros|  
-|Largura da exibição de comprimento variável|-y|Sem parâmetros|  
+|Largura da exibição de comprimento fixo|-Y|Sem parâmetros|  
+|Largura da exibição de comprimento variável|-Y|Sem parâmetros|  
 |Entrada de eco|-E|Sem parâmetros|  
-|Habilitar identificadores entres aspas|-i|Sem parâmetros|  
-|Remover espaços à direita|-w|Sem parâmetros|  
-|Listar instâncias|-l|Sem parâmetros|  
-|Formatar saída como Unicode|-U|Sem parâmetros|  
-|Imprimir estatísticas|-P|Sem parâmetros|  
+|Habilitar identificadores entres aspas|-I|Sem parâmetros|  
+|Remover espaços à direita|-W|Sem parâmetros|  
+|Listar instâncias|-L|Sem parâmetros|  
+|Formatar saída como Unicode|-u|Sem parâmetros|  
+|Imprimir estatísticas|-p|Sem parâmetros|  
 |Término de comando|-c|Sem parâmetros|  
-|Conectar usando a Autenticação do Windows|-E|Sem parâmetros|  
+|Conectar usando a Autenticação do Windows|-e|Sem parâmetros|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Usar cmdlets do Mecanismo de Banco de Dados](../../2014/database-engine/use-the-database-engine-cmdlets.md)   
- [sqlcmd Utility](../tools/sqlcmd-utility.md)   
+ [Utilitário sqlcmd](../tools/sqlcmd-utility.md)   
  [Usar o utilitário sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)  

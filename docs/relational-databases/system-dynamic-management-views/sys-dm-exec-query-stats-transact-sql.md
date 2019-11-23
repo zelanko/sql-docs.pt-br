@@ -153,7 +153,7 @@ GROUP BY query_stats.query_hash
 ORDER BY 2 DESC;  
 ```  
   
-### <a name="b-returning-row-count-aggregates-for-a-query"></a>b. Retornando agregações de contagem de linhas para uma consulta  
+### <a name="b-returning-row-count-aggregates-for-a-query"></a>B. Retornando agregações de contagem de linhas para uma consulta  
  O exemplo a seguir retorna informações de agregações de contagem de linhas (total de linhas, mínimo de linhas, máximo de linhas e últimas linhas) para consultas.  
   
 ```sql  

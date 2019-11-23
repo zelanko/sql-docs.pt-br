@@ -28,7 +28,7 @@ ms.locfileid: "73728794"
 > [!NOTE]  
 >  Não é possível excluir anotações.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   Para anotar as transações criadas, você deve ter permissões para acessar a área funcional **Explorer** e ter, no mínimo, a permissão **Atualizar** no objeto do modelo que você deseja anotar.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73728794"
   
 ### <a name="to-annotate-a-transaction-in-explorer"></a>Para anotar uma transação no Explorer  
   
-1.  Na página inicial do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , na lista **Modelo** , selecione um modelo.  
+1.  Na home page do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , na lista **Modelo** , selecione um modelo.  
   
 2.  Na lista **Versão** , selecione uma versão.  
   

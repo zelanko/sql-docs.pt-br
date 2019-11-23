@@ -89,7 +89,7 @@ ms.locfileid: "72798224"
   
  Opcionalmente, você pode abrir um arquivo [!INCLUDE[tsql](../../includes/tsql-md.md)] existente na forma de um comando para a etapa de trabalho.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] Etapas de trabalho não usam proxies do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Em vez disso, a etapa de trabalho é executada como o seu proprietário ou como a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, caso o proprietário da etapa de trabalho seja membro da função de servidor fixa sysadmin. Os membros da função de servidor fixa sysadmin também podem especificar que as etapas de trabalho [!INCLUDE[tsql](../../includes/tsql-md.md)] sejam executadas sob o contexto de outro usuário através do parâmetro *database_user_name* do procedimento armazenado sp_add_jobstep. Para obter mais informações, [consulte &#40;Transact-SQL&#41;sp_add_jobstep](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] Etapas de trabalho não usam proxies do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Em vez disso, a etapa de trabalho é executada como o seu proprietário ou como a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, caso o proprietário da etapa de trabalho seja membro da função de servidor fixa sysadmin. Os membros da função de servidor fixa sysadmin também podem especificar que as etapas de trabalho [!INCLUDE[tsql](../../includes/tsql-md.md)] sejam executadas sob o contexto de outro usuário através do parâmetro *database_user_name* do procedimento armazenado sp_add_jobstep. Para obter mais informações, [consulte &#40;SP_ADD_JOBSTEP Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
 > [!NOTE]  
 >  Uma única etapa de trabalho [!INCLUDE[tsql](../../includes/tsql-md.md)] pode conter vários lotes. [!INCLUDE[tsql](../../includes/tsql-md.md)] As etapas de trabalho podem conter comandos GO inseridos.  
@@ -190,7 +190,7 @@ Set oServer = nothing
   
 -   Adicionar ou modificar opções de linha de comando.  
   
- Observe que, se você implantar o pacote no Catálogo do SSIS e especificar o **Catálogo do SSIS** como a origem do pacote, grande parte dessas informações de configuração será obtida automaticamente do pacote. Na guia **Configuração** , você pode especificar o ambiente, valores de parâmetros, valores de gerenciadores de conexões, substituições de propriedade e se o pacote é executado em um ambiente de tempo de execução de 32 bits.  
+ Observe que, se você implantar o pacote no Catálogo do SSIS e especificar o **Catálogo do SSIS** como a origem do pacote, grande parte dessas informações de configuração será obtida automaticamente do pacote. Na guia **Configuração** , você pode especificar o ambiente, valores de parâmetros, valores de gerenciadores de conexões, substituições de propriedade e se o pacote é executado em um ambiente de runtime de 32 bits.  
   
  Para obter mais informações sobre como criar etapas de trabalho que executam pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consulte [Trabalhos do SQL Server Agent para pacotes](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
   
@@ -198,18 +198,18 @@ Set oServer = nothing
   
 |||  
 |-|-|  
-|**Description**|**Tópico**|  
+|**Descrição**|**Tópico**|  
 |Descreve como criar uma etapa de trabalho com um programa executável.|[Criar uma etapa de trabalho CmdExec](create-a-cmdexec-job-step.md)|  
 |Descreve como redefinir permissões no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Configurar um usuário para criar e gerenciar trabalhos do SQL Server Agent](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
-|Descreve como criar uma etapa de trabalho do [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
-|Descreve como definir opções para etapas de trabalho Transact-SQL no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Definir opções de etapa de trabalho Transact-SQL](define-transact-sql-job-step-options.md)|  
-|Descreve como criar e executar uma etapa de trabalho do script ActiveX.|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
-|Descreve como criar e definir etapas de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que executem comandos e consultas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Criar uma etapa de trabalho do Analysis Services](create-an-analysis-services-job-step.md)|  
-|Descreve qual ação o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve realizar se uma falha ocorrer durante a execução do trabalho.|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
-|Descreve como exibir detalhes de etapa de trabalho na caixa de diálogo Propriedades da Etapa de Trabalho.|[Exibir informações de etapa de trabalho](view-job-step-information.md)|  
-|Descreve como excluir um log de etapa de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Excluir um log de etapa de trabalho](delete-a-job-step-log.md)|  
+|Descreve como criar uma etapa de trabalho do [!INCLUDE[tsql](../../includes/tsql-md.md)].|[Criar uma etapa de trabalho Transact-SQL](create-a-transact-sql-job-step.md)|  
+|Descreve como definir opções para etapas de trabalho Transact-SQL no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
+|Descreve como criar e executar uma etapa de trabalho do script ActiveX.|[Criar uma etapa de trabalho de script ActiveX](create-an-activex-script-job-step.md)|  
+|Descreve como criar e definir etapas de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que executem comandos e consultas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Create an Analysis Services Job Step](create-an-analysis-services-job-step.md)|  
+|Descreve qual ação o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve realizar se uma falha ocorrer durante a execução do trabalho.|[Definir o fluxo da etapa de trabalho segundo o êxito ou falha](set-job-step-success-or-failure-flow.md)|  
+|Descreve como exibir detalhes de etapa de trabalho na caixa de diálogo Propriedades da Etapa de Trabalho.|[Exibir informações de etapas de trabalho](view-job-step-information.md)|  
+|Descreve como excluir um log de etapa de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
-## <a name="see-also"></a>Consulte Também  
-  [de Transact &#40;-SQL&#41; de dbo. sysjobstepslogs](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)  
+## <a name="see-also"></a>Consulte também  
+   [de Transact &#40;-SQL&#41; de dbo. sysjobstepslogs](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)  
  [Criar trabalhos](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  

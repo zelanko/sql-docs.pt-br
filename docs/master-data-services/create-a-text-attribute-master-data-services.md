@@ -26,7 +26,7 @@ ms.locfileid: "73728458"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um atributo de texto quando desejar que os usuários insiram uma cadeia de caracteres de texto como um valor de atributo.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
@@ -38,10 +38,10 @@ ms.locfileid: "73728458"
 ## <a name="attribute-information"></a>Informações de Atributo  
  Para cada atributo criado, uma linha com sete colunas é adicionada à grade. A tabela a seguir descreve as colunas.  
   
-|Coluna|Descrição|  
+|Column|Descrição|  
 |------------|-----------------|  
 |Status|O status do atributo.<br /><br /> Quando você clica em salvar, o ![ícone para atualizar a imagem de status](../master-data-services/media/mds-statusicon-updating.png "Icon para atualizar o status ") é exibido, indicando que o atributo está sendo atualizado.<br /><br /> Se houver erros ao criar ou editar um atributo, a imagem ![ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Icon para status de erro ") será exibida.<br /><br /> Caso contrário, o status é OK e o ![ícone para a imagem de status OK](../master-data-services/media/mds-statusicon-ok.png "Icon status OK ") é exibido.|  
-|Nome|O nome do atributo.|  
+|NAME|O nome do atributo.|  
 |Nome de Exibição|O nome de exibição do atributo.|  
 |Descrição|A descrição do atributo.|  
 |Exibir Largura em Pixels|A largura do atributo.|  
@@ -56,13 +56,13 @@ ms.locfileid: "73728458"
   
 -   **Atualizado Por**: o nome do usuário que atualizou o atributo pela última vez.  
   
--   **Em**: a data e hora em que o atributo foi atualizado pela última vez.  
+-   **Em**: a data e a hora em que o atributo foi atualizado pela última vez.  
   
 ### <a name="to-create-a-text-attribute"></a>Para criar um atributo de texto  
   
 1.  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], clique em **Administração do Sistema**.  
   
-2.  Na página **Gerenciar Modelo** , selecione um modelo na grade e clique em **Entidades**.  
+2.  Na página **Gerenciar Modelo** , escolha um modelo na grade e clique em **Entidades**.  
   
 3.  Na página **Gerenciar Entidade** , selecione a linha da entidade para a qual deseja criar um atributo.  
   

@@ -39,9 +39,9 @@ ms.locfileid: "73729240"
   
 |Permissão|Descrição|  
 |----------------|-----------------|  
-|**Leitura**|Os membros são exibidos.<br /><br /> <br /><br /> Observação: se você atribuir apenas a permissão **Leitura** a **Raiz**, os membros sob **Raiz** serão somente leitura; porém, em hierarquias explícitas e coleções, o usuário poderá mover os membros para **Raiz** e adicionar novos membros a **Raiz**.|  
+|**leitura**|Os membros são exibidos.<br /><br /> <br /><br /> Observação: se você atribuir apenas a permissão **Leitura** a **Raiz**, os membros sob **Raiz** serão somente leitura; porém, em hierarquias explícitas e coleções, o usuário poderá mover os membros para **Raiz** e adicionar novos membros a **Raiz**.|  
 |**Criar**|A permissão Criar não está disponível na permissão de membro da hierarquia.|  
-|**Update (atualizar)**|Os membros são exibidos e o usuário pode alterá-los. O usuário também pode mover os membros em qualquer hierarquia explícita ou coleções a que os membros pertencem.|  
+|**Atualizar**|Os membros são exibidos e o usuário pode alterá-los. O usuário também pode mover os membros em qualquer hierarquia explícita ou coleções a que os membros pertencem.|  
 |**Delete (excluir)**|Os membros são exibidos e o usuário pode excluí-los.|  
 |**Deny**|Os membros não são exibidos.|  
   
@@ -60,7 +60,7 @@ ms.locfileid: "73729240"
   
 -   Se as permissões **Atualizar** e **Criar** forem atribuídas a um nó da hierarquia e outro receber as permissões **Atualizar** e **Excluir** , então os membros do nó poderão ser atualizados.  
   
--   Se uma combinação de permissões **Criar**/**Ler**/**Atualizar**/**Excluir** for atribuída a um nó de hierarquia e outro nó receber permissões **Negar** , o acesso aos membros do nó será negado.  
+-   Se qualquer combinação de permissões **Criar**/**leitura**/**Update (atualizar)** /**Delete (excluir)** for atribuída a um nó de hierarquia e outro nó receber permissões **Deny** , o acesso a membros do nó será negado.  
   
 ## <a name="external-resources"></a>Recursos externos  
  Postagem do blog, [Aprimoramentos de Segurança](https://go.microsoft.com/fwlink/p/?LinkId=615376), em msdn.com.  

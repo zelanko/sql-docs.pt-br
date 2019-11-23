@@ -190,7 +190,7 @@ SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green') ORDER BY RANK DESC;
 SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green or Black') ORDER BY RANK DESC;  
 ```  
   
-### <a name="b-returning-rank-values"></a>b. Retornando valores de classificação  
+### <a name="b-returning-rank-values"></a>B. Retornando valores de classificação  
  O exemplo a seguir pesquisa todos os nomes de produtos que contêm as palavras "frame," "wheel" ou "tire", e diferentes pesos são dados a cada uma. Para cada linha retornada correspondente a esses critérios de pesquisa, a proximidade relativa (valor de classificação) da correspondência é mostrada. Além disso, as linhas com classificação mais alta serão retornadas primeiro.  
   
 ```  

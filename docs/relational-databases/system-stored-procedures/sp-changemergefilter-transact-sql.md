@@ -55,7 +55,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  Essa tabela descreve as propriedades de artigos e os valores dessas propriedades.  
   
-|Propriedade|Valor|Descrição|  
+|propriedade|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|Filtro de junção.<br /><br /> Essa opção é requerida para suporte a Assinantes [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 ||**2**|Relação de registro lógico.|  
@@ -66,13 +66,13 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_unique_key**|**true**|A junção está em uma chave exclusiva|  
 ||**false**|A junção não está em uma chave exclusiva.|  
   
-o `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` reconhece que a ação executada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` reconhece que a ação executada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
   
  **0** especifica que as alterações no artigo de mesclagem não fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
   
  **1** significa que as alterações no artigo de mesclagem podem fazer com que o instantâneo seja inválido e, se houver assinaturas existentes que exijam um novo instantâneo, dará permissão para que o instantâneo existente seja marcado como obsoleto e um novo instantâneo gerado.  
   
-o `[ @force_reinit_subscription = ] force_reinit_subscription` reconhece que a ação executada por esse procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit** com um padrão de **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` reconhece que a ação executada por esse procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit** com um padrão de **0**.  
   
  **0** especifica que as alterações no artigo de mesclagem não fazem com que a assinatura seja reinicializada. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas existentes para ser reiniciada, ocorrerá um erro e nenhuma alteração será feita.  
   
@@ -81,7 +81,7 @@ o `[ @force_reinit_subscription = ] force_reinit_subscription` reconhece que a a
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_changemergefilter** é usado na replicação de mesclagem.  
   
  A alteração do filtro em um artigo de mesclagem requer que o instantâneo, se existir, seja recriado. Isso é executado definindo o **\@force_invalidate_snapshot** como **1**. Além disso, se houver assinaturas para este artigo, elas deverão ser reiniciadas. Isso é feito definindo o **\@force_reinit_subscription** como **1**.  
@@ -89,7 +89,7 @@ o `[ @force_reinit_subscription = ] force_reinit_subscription` reconhece que a a
  Para usar registros lógicos, a publicação e os artigos devem atender a vários requisitos. Para obter mais informações, consulte [Agrupar alterações a linhas relacionadas com registros lógicos](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_changemergefilter**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_changemergefilter**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Alterar propriedades da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   

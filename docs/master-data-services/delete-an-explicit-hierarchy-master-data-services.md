@@ -29,7 +29,7 @@ ms.locfileid: "73728329"
 > [!WARNING]  
 >  Quando você excluir uma hierarquia explícita, todos os membros consolidados na hierarquia também serão excluídos. Se você excluir todas as hierarquias explícitas de uma entidade, serão excluídas também todas as coleções na entidade, que deixará de estar habilitada para hierarquias explícitas e coleções.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
@@ -40,7 +40,7 @@ ms.locfileid: "73728329"
   
 1.  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], clique em **Administração do Sistema**.  
   
-2.  Na página **Gerenciar Modelo** , selecione um modelo na grade e clique em **Entidades**.  
+2.  Na página **Gerenciar Modelo** , escolha um modelo na grade e clique em **Entidades**.  
   
 3.  Na página **Gerenciar Entidade** , na grade, selecione a linha da entidade que contém a hierarquia explícita que você deseja excluir.  
   

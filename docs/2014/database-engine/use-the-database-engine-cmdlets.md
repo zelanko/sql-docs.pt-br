@@ -38,7 +38,7 @@ ms.locfileid: "72783107"
  A maioria dos scripts do Windows PowerShell funcionam com o [!INCLUDE[ssDE](../includes/ssde-md.md)] usando o provedor do SQL Server PowerShell e os modelos de objeto de gerenciamento do SQL Server. Para saber mais, confira [SQL Server PowerShell](../powershell/sql-server-powershell.md).  
   
 ### <a name="get-cmdlet-help"></a>Obter a ajuda do cmdlet  
- No ambiente Windows PowerShell, o cmdlet **Get-Help** fornece informações de ajuda para cada cmdlet. O**Get-Help** retorna informações como sintaxe, definições de parâmetro, tipos de entrada e saída e uma descrição da ação executada pelo cmdlet. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+ No ambiente Windows PowerShell, o cmdlet **Get-Help** fornece informações de ajuda para cada cmdlet. O**Get-Help** retorna informações como sintaxe, definições de parâmetro, tipos de entrada e saída e uma descrição da ação executada pelo cmdlet. Para saber mais, confira [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
   
 ### <a name="partial-parameter-names"></a>Nomes de parâmetro parciais  
  Você não tem que especificar o nome inteiro de um parâmetro cmdlet. Você só tem que especificar uma parte suficiente do nome para separá-lo exclusivamente dos outros parâmetros que são suportados pelo cmdlet. Por exemplo, estes exemplos mostram três modos de especificar o parâmetro **Invoke-Sqlcmd -QueryTimeout** :  
@@ -58,7 +58,7 @@ Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3
 |Descreve o uso de `Encode-Sqlname` e `Decode-Sqlname` para tratar identificadores SQL Server que contêm caracteres sem suporte em caminhos do Windows PowerShell.|[Codificar e decodificar identificadores do SQL Server](../powershell/encode-and-decode-sql-server-identifiers.md)|  
 |Descreve o uso de `Convert-UrnToPath` para converter um URN (Nome de Recurso Uniforme) de Objeto de Gerenciamento SQL Server no caminho de provedor SQL Server equivalente.|[Converter URNs em caminhos do Provedor do SQL Server](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md)|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Provedor do SQL Server PowerShell](../powershell/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
  [Visão geral dos cmdlets do PowerShell &#40;para grupos de disponibilidade AlwaysOn SQL Server&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  

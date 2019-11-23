@@ -29,7 +29,7 @@ ms.locfileid: "72909863"
 
   Este procedimento armazenado remove o envio de logs do banco de dados primário, incluindo tarefas de backup, assim como o histórico local e remoto. Use esse procedimento armazenado somente depois de remover os bancos de dados secundários usando **sp_delete_log_shipping_primary_secondary**.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,13 +49,13 @@ sp_delete_log_shipping_primary_database
  Nenhuma.  
   
 ## <a name="remarks"></a>Remarks  
- **sp_delete_log_shipping_primary_database** deve ser executado a partir do banco de dados **mestre** no servidor primário. Esse procedimento armazenado faz o seguinte:  
+ **sp_delete_log_shipping_primary_database** deve ser executado do banco de dados **mestre** no servidor primário. Esse procedimento armazenado faz o seguinte:  
   
 1.  Exclui o trabalho de backup do banco de dados primário especificado.  
   
 2.  Remove o registro de monitor local em **log_shipping_monitor_primary** no servidor primário.  
   
-3.  Remove as entradas correspondentes em **log_shipping_monitor_history_detail** e **log_shipping_monitor_error_detail**.  
+3.  Remove entradas correspondentes em **log_shipping_monitor_history_detail** e **log_shipping_monitor_error_detail**.  
   
 4.  Se o servidor monitor for diferente do servidor primário, o removerá o registro do monitor em **log_shipping_monitor_primary** no servidor monitor.  
   
@@ -76,7 +76,7 @@ EXEC master.dbo.sp_delete_log_shipping_primary_database @database = N'AdventureW
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

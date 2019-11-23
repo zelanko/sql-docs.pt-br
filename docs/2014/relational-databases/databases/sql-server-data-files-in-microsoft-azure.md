@@ -175,5 +175,5 @@ ON
   
     4.  Defina o banco de dados como online.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Tutorial: SQL Server arquivos de dados no serviço de armazenamento do Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  

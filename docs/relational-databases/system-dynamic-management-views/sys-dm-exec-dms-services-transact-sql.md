@@ -1,5 +1,5 @@
 ---
-title: sys. dm _exec_dms_services (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_dms_services (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -29,15 +29,15 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532933"
 ---
-# <a name="sysdm_exec_dms_services-transact-sql"></a>sys. dm _exec_dms_services (Transact-SQL)
+# <a name="sysdm_exec_dms_services-transact-sql"></a>sys.dm_exec_dms_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Contém informações sobre todos os serviços DMS em execução nos nós de computação do polybase. Ele lista uma linha por instância de serviço.  
   
-|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
+|Column Name|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |dms_core_id|`int`|ID numérica exclusiva associada ao núcleo DMS. Chave para esta exibição.|ID exclusiva.|  
-|compute_node_id|`int`|ID do nó no qual este serviço DMS está em execução|Consulte *compute_node_id* em [Sys. dm _EXEC_COMPUTE_NODES &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|compute_node_id|`int`|ID do nó no qual este serviço DMS está em execução|Consulte *compute_node_id* em [Sys. DM_EXEC_COMPUTE_NODES &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |status|`nvarchar(32)`|Status atual do serviço DMS||
 |compute_pool_id|`int`|Identificador exclusivo do pool.|
 

@@ -38,7 +38,7 @@ ms.locfileid: "72783167"
   
 
   
-##  <a name="bkmk_prereq"></a> Prerequisites  
+##  <a name="bkmk_prereq"></a> Pré-requisitos  
  **Permissões**  
   
 -   Você deve ser um administrador do farm para atualizar a instalação do PowerPivot para SharePoint. Você deve ser um administrador local para executar a Instalação do SQL Server.  
@@ -82,7 +82,7 @@ ms.locfileid: "72783167"
   
          ![duas ferramentas de Configuration do PowerPivot](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-configtools-bothicons.gif "duas ferramentas de Configuration do PowerPivot")  
   
-         ou  
+         Ou  
   
          No menu **Iniciar** , aponte para **Todos os Programas**, clique em [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], em **Ferramentas de Configuração**e em **Ferramenta de Configuração do PowerPivot para SharePoint 2013**. Observe que essa ferramenta será listada apenas quando o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] estiver instalado no servidor local.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "72783167"
   
     5.  Opcionalmente, revise as informações detalhadas na guia **Script** ou na guia **Saída** .  
   
-         A guia Saída é um resumo das ações que serão executadas pela ferramenta. Essas informações são salvas nos arquivos de log em `C:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools\SPAddinConfiguration\Log`.  
+         A guia Saída é um resumo das ações que serão executadas pela ferramenta. Essas informações são salvas em arquivos de log em `C:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools\SPAddinConfiguration\Log`.  
   
          A guia Script mostra os cmdlets PowerShell ou referencia os arquivos de script PowerShell que serão executados pela ferramenta.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "72783167"
   
     6.  Opcionalmente, revise as informações detalhadas na guia **Saída** ou na guia **Script** .  
   
-         A guia Saída é um resumo das ações que serão executadas pela ferramenta. Essas informações são salvas nos arquivos de log em `c:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools\ConfigurationTool\Log`.  
+         A guia Saída é um resumo das ações que serão executadas pela ferramenta. Essas informações são salvas em arquivos de log em `c:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools\ConfigurationTool\Log`.  
   
          A guia Script mostra os cmdlets PowerShell ou referencia os arquivos de script PowerShell que serão executados pela ferramenta.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "72783167"
         > [!IMPORTANT]  
         >  A primeira ação, **Atualizar Solução de Farm**, sempre deve ser processada primeiro. Ela registra os cmdlets PowerShell que são usados para configurar o servidor. Se você obtiver um erro nessa ação, não continue. Em vez disso, use as informações fornecidas pelo erro para diagnosticar e resolver o problema antes de processar ações adicionais na lista de tarefas.  
   
-    8.  Clique em **Executar** para executar todas as ações válidas para esta tarefa. **Executar** estará disponível apenas depois que a verificação da validação tiver sido aprovada. Quando você clica em **Executar**, o seguinte aviso é exibido, lembrando a você que as ações são processadas em modo de lote: "Todos os parâmetros da configuração sinalizados como válidos na ferramenta serão aplicados ao farm do SharePoint. Deseja continuar?”  
+    8.  Clique em **Executar** para executar todas as ações válidas para esta tarefa. **Executar** estará disponível apenas depois que a verificação da validação tiver sido aprovada. Quando você clica em **Executar**, o seguinte aviso é exibido, lembrando a você que as ações são processadas em modo de lote: “Todos os parâmetros da configuração sinalizados como válidos na ferramenta serão aplicados ao farm do SharePoint. Deseja continuar?”  
   
     9. Clique em **Sim** para continuar.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "72783167"
         stsadm -o enumdeployments  
         ```  
   
-    2.  Reveja as implantações existentes em busca das seguintes informações: **Tipo** é retração ou implantação, **Arquivo** é powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
+    2.  Reveja as implantações existentes para obter as seguintes informações: **Tipo** é Retração ou Implantação, **Arquivo** é powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
   
     3.  Para implantações ou retração relacionadas a soluções PowerPivot, copie o valor de GUID para **JobID** e cole-o no comando a seguir (use os comandos marcar, copiar e colar no menu Editar do Shell para copiar o GUID):  
   
@@ -237,7 +237,7 @@ ms.locfileid: "72783167"
 Get-PowerPivotSystemService  
 ```  
   
- Verifique a **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é a versão 12,0. \<major > de Build. \<minor Build >  
+ Verifique a **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é a versão 12,0.\<> de compilação principal.\<de Build secundário >  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>Verificar a versão do serviço Windows do Analysis Services  
  Se você só atualizou alguns dos servidores do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] em um farm do SharePoint 2010, a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em servidores não atualizados será mais antiga do que a versão esperada no farm. Você precisará atualizar todos os seus servidores para a mesma versão para que eles sejam utilizáveis. Use um dos métodos a seguir para verificar a versão do serviço Windows do SQL Server Analysis Services (PowerPivot) em cada computador.  
@@ -250,7 +250,7 @@ Get-PowerPivotSystemService
   
 3.  Clique em **Detalhes**.  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] versão do arquivo deve ser 12, 0. \<major > de Build. \<minor > de Build.  
+4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] versão do arquivo deve ser 12, 0.\<> de compilação principal.\<> de compilação secundária.  
   
 5.  Verifique se esse número é idêntico à versão da solução do PowerPivot e do serviço do sistema.  
   
@@ -289,7 +289,7 @@ Get-PowerPivotSystemService
   
 3.  Clique em **Provedores de Dados Confiáveis**. Você deverá ver o MSOLAP.5 (Provedor Microsoft OLE DB para OLAP Services 11.0). Se você tiver atualizado sua instalação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , também verá o MSOLAP.4 da versão anterior.  
   
-4.  Para obter mais informações, consulte [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services).  
+4.  Para obter mais informações, consulte [Adicionar MSOLAP.5 como um provedor de dados confiável em Serviços do Excel](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services).  
   
  O MSOLAP.4 é descrito como o Microsoft OLE DB Provider para OLAP Services 10.0. Essa versão pode ser a versão padrão do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] que é instalada com os Serviços do Excel ou pode ser a versão [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] . A versão padrão que o SharePoint instala não dá suporte ao acesso a dados PowerPivot. Você deve ter a versão [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] versão ou posterior para se conectar a pastas de trabalho PowerPivot no SharePoint. Para verificar se você tem a versão [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , siga as instruções na seção anterior que explicam como verificar a versão exibindo as propriedades do arquivo.  
   
@@ -300,7 +300,7 @@ Get-PowerPivotSystemService
   
 2.  Classifique por nome do assembly e localize **Microsoft.Analysis Services.Adomd.Client**.  
   
-3.  Verifique se você tem a versão 12,0. número de \<build >.  
+3.  Verifique se você tem a versão 12,0.\<número de Build >.  
   
 
 ##  <a name="geminifarm"></a>Atualizando vários servidores PowerPivot para SharePoint em um farm do SharePoint  
@@ -349,6 +349,6 @@ Get-PowerPivotSystemService
   
  Para obter instruções detalhadas que guiam você por todas as tarefas de configuração pós-instalação, consulte [ &#40;configuração inicial PowerPivot para SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).  
 
-## <a name="see-also"></a>Consulte Também  
- [Recursos com suporte nas edições do SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)    
+## <a name="see-also"></a>Consulte também  
+ [Recursos com suporte nas edições do SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Instalação do PowerPivot para SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  

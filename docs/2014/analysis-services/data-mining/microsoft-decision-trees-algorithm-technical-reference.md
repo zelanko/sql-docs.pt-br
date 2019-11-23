@@ -66,7 +66,7 @@ ms.locfileid: "73637522"
   
 |Algoritmo|Método de análise|Comentários|  
 |---------------|------------------------|--------------|  
-|Árvores de decisão|Pontuação de interesse<br /><br /> entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Se qualquer coluna contiver valores contínuos não binários, a pontuação de interesse será usada em todas as colunas para garantir a consistência. Caso contrário, será usado o método padrão ou o especificado.|  
+|Árvores de decisão|Pontuação de interesse<br /><br /> Entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Se qualquer coluna contiver valores contínuos não binários, a pontuação de interesse será usada em todas as colunas para garantir a consistência. Caso contrário, será usado o método padrão ou o especificado.|  
 |Regressão Linear|Pontuação de interesse|A Regressão Linear usa apenas o interesse, pois suporta apenas colunas contínuas.|  
   
 ### <a name="scalability-and-performance"></a>Escalabilidade e desempenho  
@@ -149,7 +149,7 @@ ms.locfileid: "73637522"
  *SCORE_METHOD*  
  Determina o método usado para calcular a pontuação da divisão. As seguintes opções estão disponíveis:  
   
-|ID|Nome|  
+|ID|NAME|  
 |--------|----------|  
 |1|Entropia|  
 |3|Bayesian com K2 a priori|  
@@ -162,7 +162,7 @@ ms.locfileid: "73637522"
  *SPLIT_METHOD*  
  Determina o método usado para dividir o nó. As seguintes opções estão disponíveis:  
   
-|ID|Nome|  
+|ID|NAME|  
 |--------|----------|  
 |1|**Binary:** Indica que, independentemente do número real de valores do atributo, a árvore deverá ser dividida em duas ramificações.|  
 |2|**Complete:** Indica que a árvore pode criar tantas divisões quanto há valores de atributo.|  
@@ -193,7 +193,7 @@ ms.locfileid: "73637522"
 ### <a name="input-and-predictable-columns"></a>Colunas de entrada e colunas previsíveis  
  O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] oferece suporte a colunas de entrada e colunas previsíveis específicas que são listadas na tabela a seguir. Para obter mais informações sobre o significado dos tipos de conteúdo quando usados em um modelo de mineração, consulte [Tipos de conteúdo &#40;Mineração de dados&#41;](content-types-data-mining.md).  
   
-|Coluna|Tipos de conteúdo|  
+|Column|Tipos de conteúdo|  
 |------------|-------------------|  
 |Atributo de entrada|Contínuo, cíclico, discreto, diferenciado, chave, ordenado, tabela|  
 |Atributo previsível|Contínuo, cíclico, discreto, diferenciado, ordenado, tabela|  

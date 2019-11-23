@@ -26,11 +26,11 @@ ms.locfileid: "71952361"
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- Para abrir essa página, inicie o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e clique em **URL do Serviço Web** no painel de navegação. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Para abrir essa página, inicie o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e clique em **URL do Serviço Web** no painel de navegação. Para obter mais informações, consulte [Gerenciador de Configurações do Reporting Services &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
  Essa página fornece valores que são geralmente usados em URLs de servidor de relatório. Para criar URLs adicionais, usar cabeçalhos de host ou especificar o endereço IP em um formato específico, clique em **Avançado**.  
   
- Um link para o serviço Web aparecerá nessa página depois que você clicar em **Aplicar**. Se você clicar nesse link antes que o banco de dados do servidor de relatório seja criado, poderá esperar que apareça um erro "Página Não Encontrada". Esse erro não mais aparecerá depois que o banco de dados for configurado. Para obter mais informações, consulte [Criar um banco de dados de servidor de relatório no modo nativo &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+ Um link para o serviço Web aparecerá nessa página depois que você clicar em **Aplicar**. Se você clicar nesse link antes que o banco de dados do servidor de relatório seja criado, poderá esperar que apareça um erro "Página Não Encontrada". Esse erro não mais aparecerá depois que o banco de dados for configurado. Para obter mais informações, veja [Criar um banco de dados de servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
  Se você reinstalou o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e descobriu que obtém erros quando tenta usar o valor de endereço IP padrão Todos Atribuídos e a porta 80, normalmente poderá resolver o erro recriando a URL depois de reiniciar o serviço.  
   
@@ -41,13 +41,13 @@ ms.locfileid: "71952361"
  **Endereço IP**  
  Identifica o computador do servidor de relatório em uma rede TCP/IP. Os valores válidos incluem:  
   
--   **Todos Atribuídos** especifica que qualquer um dos endereços IP atribuídos ao computador podem ser usados em uma URL que aponta para um aplicativo do servidor de relatório. Esse valor também abrange nomes de host amigáveis (como nomes de computadores) que podem ser resolvidos por um servidor de nome de domínio para um endereço IP que é atribuído ao computador. Esse é o valor padrão para uma URL do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+-   **Todos Atribuídos** especifica que qualquer um dos endereços IP atribuídos ao computador podem ser usados em uma URL que aponta para um aplicativo para servidores de relatório. Esse valor também abrange nomes de host amigáveis (como nomes de computadores) que podem ser resolvidos por um servidor de nome de domínio para um endereço IP que é atribuído ao computador. Esse é o valor padrão para uma URL do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 -   **Nenhum Atribuído** especifica que o servidor de relatório aceitará qualquer solicitação que não tenha uma correspondência exata para o endereço IP ou o nome do host. Não use esse valor se outro aplicativo Web já o estiver usando. Se isso for feito, você interromperá o serviço para o outro aplicativo.  
   
 -   **127.0.0.1** é usado para acessar localhost. Ele dá suporte à administração local no computador do servidor de relatório. Se você selecionar apenas esse valor, somente os usuários que fizerem logon localmente no computador do servidor de relatório terão acesso ao aplicativo.  
   
--   *Nnn.nnn.nnn.nnn* é o endereço IPv4 de uma placa de adaptador de rede em seu computador. Se sua rede usar endereçamento IPv6, o endereço IP será um valor de 128 bits de campos de 8 4 bytes semelhante ao seguinte formato: \<header >:*nnnn: nnnn: nnnn: nnnn*  
+-   *Nnn.nnn.nnn.nnn* é o endereço IPv4 de uma placa de adaptador de rede em seu computador. Se sua rede usar o endereçamento IPv6, o endereço IP será um valor de 128 bits de campos de 8 4 bytes semelhante ao seguinte formato: \<cabeçalho >:*nnnn: nnnn: nnnn: nnnn*  
   
      Se você tiver várias placas, verá um endereço IP para cada uma. Se você selecionar apenas esse valor, isso limitará o acesso do aplicativo somente ao endereço IP (e qualquer nome de host que um servidor de nome de domínio mapear para esse endereço). Você não pode usar localhost para acessar um servidor de relatório e não pode usar os endereços IP de outras placas de adaptador de rede que estejam instaladas no computador do servidor de relatório.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "71952361"
 >  Para corrigir o problema, exclua todas as associações e crie novas associações com configurações exclusivas ou configure os registros de URL do Reporting Services com curingas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciador de configurações do Reporting Services F1 tópicos &#40;de ajuda sobre o&#41;modo nativo do SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Gerenciador de configurações do Reporting Services F1 tópicos &#40;de ajuda do modo&#41; nativo do SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

@@ -25,7 +25,7 @@ ms.locfileid: "72783153"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modo nativo|  
   
  Em Minhas Assinaturas, você pode classificar assinaturas por pasta, relatório, descrição, gatilho, data da última execução ou status. Todos os valores são classificados por ordem alfabética, exceto Data da Última Execução, que está em ordem cronológica.  
   
@@ -52,7 +52,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 #$subscriptions
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [Data-Driven Subscriptions](data-driven-subscriptions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Assinaturas controladas por dados](data-driven-subscriptions.md)   
  [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Criar e gerenciar assinaturas de servidores de relatório no modo Nativo](../create-manage-subscriptions-native-mode-report-servers.md)  

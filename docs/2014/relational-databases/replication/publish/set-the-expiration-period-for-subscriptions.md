@@ -50,7 +50,7 @@ ms.locfileid: "73882174"
     -   É possível especificar para que as assinaturas nunca expirem, mas recomendamos não usar este valor, pois os metadados não poderão ser limpos.  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- Defina o período de expiração da assinatura na página **Geral** da caixa de diálogo **Propriedades de Publicação – \<Publicação>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
+ Defina o período de expiração da assinatura na página **Geral** da caixa de diálogo **Propriedades de Publicação – \<Publicação>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de publicação](view-and-modify-publication-properties.md).  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>Para definir o período de validade da assinatura  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73882174"
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Para definir o período de validade de uma assinatura de um instantâneo ou publicação transacional  
   
-1.  No Publicador, execute [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Especifique o período de validade de assinatura desejado, em horas, em **\@retention**. O período de validade padrão é de 336 horas. Para obter mais informações, consulte [Create a Publication](create-a-publication.md).  
+1.  No Publicador, execute [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Especifique o período de validade de assinatura desejado, em horas, em **\@retention**. O período de validade padrão é de 336 horas. Para obter mais informações, consulte [Criar uma assinatura](create-a-publication.md).  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>Para definir o período de validade para uma assinatura de uma publicação de mesclagem  
   
@@ -75,7 +75,7 @@ ms.locfileid: "73882174"
   
     -   **3** = ano  
   
-     O período de validade padrão é de 14 dias. Para obter mais informações, consulte [Create a Publication](create-a-publication.md).  
+     O período de validade padrão é de 14 dias. Para obter mais informações, consulte [Criar uma assinatura](create-a-publication.md).  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Para alterar o período de validade de uma assinatura de um instantâneo ou publicação transacional  
   
@@ -98,7 +98,7 @@ ms.locfileid: "73882174"
 3.  (Opcional) No Editor, execute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Especifique **retention_period_unit** em **\@property** e uma nova unidade para o período de validade da assinatura em **\@value**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [Conceitos dos procedimentos armazenados no sistema de replicação](../concepts/replication-system-stored-procedures-concepts.md)   
  [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)  
   
   

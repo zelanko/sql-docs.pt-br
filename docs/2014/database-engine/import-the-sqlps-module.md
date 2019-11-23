@@ -12,7 +12,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34859c0c516c61a73e31dbf752ab274188c6343a
 ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797874"
@@ -20,9 +20,9 @@ ms.locfileid: "72797874"
 # <a name="import-the-sqlps-module"></a>Importar o módulo SQLPS
   A maneira recomendada para gerenciar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no PowerShell é importar o módulo `sqlps` para um ambiente do Windows PowerShell 2.0. O módulo carrega e registra os snap-ins do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e assemblies de capacidade de gerenciamento.  
   
-1.  **Before You Begin:**  [Security](#Security)  
+1.  **Antes de começar:**  [Segurança](#Security)  
   
-2.  **Para carregar o módulo:**  [Carregar o módulo sqlps](#LoadSqlps)  
+2.  **To load the module:**  [Load the sqlps Module](#LoadSqlps)  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  Depois de importar o módulo `sqlps` no Windows PowerShell, você poderá:  
@@ -33,9 +33,9 @@ ms.locfileid: "72797874"
   
 -   Executar cmdlets do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
--   Usar os caminhos de provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para navegar pela hierarquia dos objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+-   Usar os caminhos de provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para navegar pela hierarquia dos objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   Usar os modelos de objeto de gerenciamento do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (como Microsoft.SqlServer.Management.Smo) para gerenciar objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+-   Usar os modelos de objeto de gerenciamento do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (como Microsoft.SqlServer.Management.Smo) para gerenciar objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  Os verbos usados nos nomes de dois cmdlets de SQL Server (`Encode-Sqlname` e `Decode-Sqlname`) não correspondem aos verbos aprovados para o Windows PowerShell 2.0. Isso não tem efeito na sua operação, mas o Windows PowerShell gera um aviso quando o módulo `sqlps` é importado para uma sessão.  
@@ -60,7 +60,7 @@ ms.locfileid: "72797874"
 Import-Module "sqlps" -DisableNameChecking  
 ```  
 
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
  [Provedor do SQL Server PowerShell](../powershell/sql-server-powershell-provider.md)   
  [Usar cmdlets do Mecanismo de Banco de Dados](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

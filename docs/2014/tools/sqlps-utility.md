@@ -66,7 +66,7 @@ ms.locfileid: "72798139"
  **-Command-** especifica que o utilitário de `sqlps` ler a entrada da entrada padrão.  
   
  *script_block* [ **-args**_argument_array_ ]  
- Especifica um bloco de comandos de PowerShell para executar. O bloco deve ficar entre chaves: {}. *Script_block* só pode ser especificado quando o utilitário `sqlps` é chamado do **PowerShell** ou de outra sessão do utilitário `sqlps`. O *argument_array* é uma matriz de variáveis do PowerShell que contêm os argumentos para os comandos do PowerShell em *script_block*.  
+ Especifica um bloco de comandos de PowerShell para executar. O bloco deve ficar entre chaves: {}. *Script_block* só pode ser especificado quando o utilitário `sqlps` é chamado do **PowerShell** ou de outra sessão de utilitário `sqlps`. O *argument_array* é uma matriz de variáveis do PowerShell que contêm os argumentos para os comandos do PowerShell em *script_block*.  
   
  *string* [ *command_parameters* ]  
  Especifica que uma cadeia de caracteres contendo os comandos do PowerShell seja executada. Use o formato **"& { *`command`* }"** . As aspas indicam uma cadeia de caracteres e o operador Invoke (&) faz com que o utilitário `sqlps` execute o comando.  
@@ -93,7 +93,7 @@ ms.locfileid: "72798139"
   
 -   Executar cmdlets do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
--   Usar os caminhos de provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para navegar pela hierarquia dos objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+-   Usar os caminhos de provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para navegar pela hierarquia dos objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Por padrão, o utilitário `sqlps` é executado com a política de execução de script definida como **Restricted**. Isso impede a execução de quaisquer scripts do PowerShell. Você pode usar o cmdlet **Set-ExecutionPolicy** a fim de habilitar a execução de scripts assinados ou de qualquer script. Execute apenas scripts de fontes confiáveis e proteja todos os arquivos de entrada e saída usando as permissões NTFS adequadas. Para obter mais informações sobre como habilitar scripts do PowerShell, consulte [Running Windows PowerShell Scripts](https://www.tech-recipes.com/rx/2513/powershell_enable_script_support/)(a página pode estar em inglês).  
   
@@ -107,7 +107,7 @@ ms.locfileid: "72798139"
 sqlps -NoLogo  
 ```  
   
-### <a name="b-run-a-sql-server-powershell-script-from-the-command-prompt"></a>b. Executar um script do SQL Server PowerShell no prompt de comando
+### <a name="b-run-a-sql-server-powershell-script-from-the-command-prompt"></a>B. Executar um script do SQL Server PowerShell no prompt de comando
   
 ```cmd
 sqlps -Command "&{.\MyFolder.MyScript.ps1}"  
@@ -119,6 +119,6 @@ sqlps -Command "&{.\MyFolder.MyScript.ps1}"
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Habilitar ou desabilitar um protocolo de rede de servidor](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)  

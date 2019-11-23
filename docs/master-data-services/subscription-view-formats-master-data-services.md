@@ -25,7 +25,7 @@ ms.locfileid: "73728891"
   
 ## <a name="subscription-view-formats"></a>Formatos de exibição da assinatura  
   
-|Nome|Descrição|  
+|NAME|Descrição|  
 |----------|-----------------|  
 |**Membros folha**|Contém membros folha e seus valores de atributo associados.|  
 |**Histórico de Membros Folha**|Contém dados históricos de membros folha e seus valores de atributo associados. O formato de exibição é Dimensão de Alteração Lenta Tipo 4.|  

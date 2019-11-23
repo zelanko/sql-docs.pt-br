@@ -20,7 +20,7 @@ ms.locfileid: "72890523"
 
   A tabela a seguir lista as instruções que integram a DDL (Data Definition Language) da mineração de dados em DMX (Data Mining Extensions).  
   
-|de|Description|  
+|de|Descrição|  
 |---------------|-----------------|  
 |[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)|Cria uma estrutura de mineração nova no banco de dados.|  
 |[ALTERAR a estrutura &#40;de mineração DMX&#41;](../dmx/alter-mining-structure-dmx.md)|Adiciona um modelo de mineração a uma estrutura de mineração existente|  
@@ -29,9 +29,9 @@ ms.locfileid: "72890523"
 |[REMOVER a estrutura &#40;de mineração DMX&#41;](../dmx/drop-mining-structure-dmx.md)|Exclui uma estrutura de mineração do banco de dados.|  
 |[EXPORT &#40;DMX&#41;](../dmx/export-dmx.md)|Exporta um modelo de mineração ou estrutura de mineração e objetos associados em um arquivo .abf.|  
 |[IMPORT &#40;DMX&#41;](../dmx/import-dmx.md)|Importa um modelo de mineração ou estrutura de mineração e objetos associados de um arquivo .abf.|  
-|[SELECIONAR no &#40;DMX&#41;](../dmx/select-into-dmx.md)|Cria uma cópia de um modelo de mineração existente.|  
+|[SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)|Cria uma cópia de um modelo de mineração existente.|  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Instruções de manipulação &#40;de&#41; dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-manipulation.md)   
  [Referência de instruções de DMX &#40extensões DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   

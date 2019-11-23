@@ -44,7 +44,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
  O nome do computador que hospeda o nó de cabeçalho de SQL Server do grupo de escala horizontal do polybase. *\@head_node_address* é nvarchar (255).  
   
  *\@dms_control_channel_port* = dms_control_channel_port  
- A porta em que o canal de controle para o nó de cabeçalho Movimentação de Dados PolyBase serviço está em execução. *\@dms_control_channel_port* é um __int16 não assinado. O padrão é **16450**.  
+ A porta em que o canal de controle para o nó de cabeçalho Movimentação de Dados PolyBase serviço está em execução. *\@dms_control_channel_port* é uma __int16 não assinada. O padrão é **16450**.  
   
  *\@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
  O nome do nó de cabeçalho SQL Server instância no grupo de escala horizontal do polybase. *\@head_node_sql_server_instance_name* é nvarchar (16).  
@@ -55,8 +55,8 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ## <a name="permissions"></a>Permissões  
  Requer a permissão CONTROL SERVER.  
   
-## <a name="remarks"></a>Comentários  
- Depois de executar o procedimento armazenado, desligue o mecanismo do polybase e reinicie o serviço de Movimentação de Dados PolyBase no computador. Para verificar, execute o seguinte DMV no nó principal: **Sys. dm _exec_compute_nodes**.  
+## <a name="remarks"></a>Remarks  
+ Depois de executar o procedimento armazenado, desligue o mecanismo do polybase e reinicie o serviço de Movimentação de Dados PolyBase no computador. Para verificar, execute o seguinte DMV no nó principal: **Sys. dm_exec_compute_nodes**.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo une o computador atual como um nó de computação a um grupo do polybase.  O nome do nó de cabeçalho é **HST01** e o nome da instância de SQL Server no nó de cabeçalho é **MSSQLSERVER**.  

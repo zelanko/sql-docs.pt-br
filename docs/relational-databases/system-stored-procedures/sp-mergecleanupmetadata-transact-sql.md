@@ -25,9 +25,9 @@ ms.locfileid: "72907332"
 # <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Deve ser usado somente em topologias de replicação que incluem servidores que executam versões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1. o **sp_mergecleanupmetadata** permite que os administradores limpem os metadados nas tabelas do sistema **MSmerge_genhistory**, **MSmerge_contents** e **MSmerge_tombstone** . Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
+  Deve ser usado somente em topologias de replicação que incluem servidores que executam versões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1. **sp_mergecleanupmetadata** permite que os administradores limpem os metadados nas tabelas do sistema **MSmerge_genhistory**, **MSmerge_contents** e **MSmerge_tombstone** . Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,11 +52,11 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 >  Depois que **sp_mergecleanupmetadata** é executado, por padrão, todas as assinaturas nos assinantes de publicações que têm metadados armazenados em **MSmerge_genhistory**, **MSmerge_contents** e **MSmerge_tombstone** são marcadas para reinicialização, todas as alterações pendentes no Assinante são perdidas e o instantâneo atual é marcado como obsoleto.  
 > 
 > [!NOTE]
->  Se houver várias publicações em um banco de dados e qualquer uma dessas publicações usar um período de retenção de publicação infinita ( **\@retenção**=**0**), executar **sp_mergecleanupmetadata** não limpará a mesclagem metadados de controle de alterações de replicação para o banco de dados. Por esse motivo, use a retenção de publicação infinita com precaução.  
+>  Se houver várias publicações em um banco de dados e qualquer uma dessas publicações usar um período de retenção de publicação infinita ( **\@retenção**=**0**), a execução **sp_mergecleanupmetadata** não limpará os metadados de controle de alterações da replicação de mesclagem do banco de dados. Por esse motivo, use a retenção de publicação infinita com precaução.  
   
- Ao executar esse procedimento armazenado, você pode escolher se deseja reinicializar os assinantes definindo o parâmetro **\@reinitialize_subscriber** como **true** (o padrão) ou **false**. Se **sp_mergecleanupmetadata** for executado com o parâmetro **\@Reinitialize_subscriber** definido como **true**, um instantâneo será reaplicado no Assinante, mesmo que a assinatura tenha sido criada sem um instantâneo inicial (por exemplo, se os dados e o esquema do instantâneo foram aplicados manualmente ou já existiam no Assinante). Definir o parâmetro como **false** deve ser usado com cautela, porque se a publicação não for reinicializada, você deverá garantir que os dados no Publicador e no Assinante sejam sincronizados.  
+ Ao executar esse procedimento armazenado, você pode escolher se deseja reinicializar os assinantes definindo o parâmetro **\@reinitialize_subscriber** como **true** (o padrão) ou **false**. Se **sp_mergecleanupmetadata** for executado com o parâmetro **\@Reinitialize_subscriber** definido como **true**, um instantâneo será reaplicado no Assinante, mesmo que a assinatura tenha sido criada sem um instantâneo inicial (por exemplo, se os dados do instantâneo e o esquema tiverem sido aplicados manualmente ou já existirem no Assinante). Definir o parâmetro como **false** deve ser usado com cautela, porque se a publicação não for reinicializada, você deverá garantir que os dados no Publicador e no Assinante sejam sincronizados.  
   
- Independentemente do valor de **\@reinitialize_subscriber**, **sp_mergecleanupmetadata** falhará se houver processos de mesclagem em andamento que estejam tentando carregar alterações em um Publicador ou em um assinante de republicação no momento em que o armazenamento procedimento é invocado.  
+ Independentemente do valor de **\@reinitialize_subscriber**, **sp_mergecleanupmetadata** falhará se houver processos de mesclagem em andamento que estejam tentando carregar alterações em um Publicador ou em um assinante de republicação no momento em que o procedimento armazenado for invocado.  
   
  **Executando sp_mergecleanupmetadata com \@reinitialize_subscriber = TRUE:**  
   
@@ -66,7 +66,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 3.  Depois que todas as mesclagens forem concluídas, execute **sp_mergecleanupmetadata**.  
   
-4.  Execute **sp_reinitmergepullsubscription** em todos os assinantes usando a assinatura de pull nomeada ou anônima para garantir a convergência de dados.  
+4.  Execute **sp_reinitmergepullsubscription** em todos os assinantes usando assinatura pull nomeada ou anônima para garantir a convergência de dados.  
   
 5.  Se você estiver executando mesclagens de modo contínuo, consulte *considerações especiais para mesclagens de modo contínuo* mais adiante nesta seção.  
   
@@ -100,7 +100,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
     EXEC central..sp_changemergepublication @publication = 'dynpart_pubn', @property = 'status', @value = 'inactive'  
     ```  
   
- Quando você concluiu a etapa 3 da execução do **sp_mergecleanupmetadata**, retome as mesclagens do modo contínuo com base em como elas foram interrompidas. Ou:  
+ Quando você concluiu a etapa 3 da execução de **sp_mergecleanupmetadata**, retome as mesclagens de modo contínuo com base em como elas foram interrompidas. Ou:  
   
 -   Adicione o parâmetro **-Continuous** de volta para o agente de mesclagem.  
   
@@ -111,13 +111,13 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
     ```  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_mergecleanupmetadata**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_mergecleanupmetadata**.  
   
  Para usar esse procedimento armazenado, o Publicador deve estar executando o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Os assinantes devem estar executando [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0, Service Pack 2.  
   
-## <a name="see-also"></a>Consulte Também  
- [ &#40;Transact-SQL&#41; MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)  
- [ &#40;MSmerge_contents Transact-&#41; SQL](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)  
- [Transact &#40;-SQL MSmerge_tombstone&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
+## <a name="see-also"></a>Consulte também  
+ [MSmerge_genhistory &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
+ [MSmerge_contents &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
+ [MSmerge_tombstone &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
   
   

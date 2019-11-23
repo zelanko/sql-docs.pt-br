@@ -25,7 +25,7 @@ ms.locfileid: "73786934"
 
   Se o atributo de instrução SQL_SOPT_SS_PARAM_FOCUS não estiver definido como 0, SQLExecute retornará SQL_ERROR e gerará um registro de diagnóstico com SQLSTATE = HY024 e a mensagem "valor de atributo inválido SQL_SOPT_SS_PARAM_FOCUS (deve ser zero em tempo de execução)". Para obter mais informações sobre SQL_SPOT_SS_PARAM_FOCUS, consulte [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros &#40;com valor&#41;de tabela ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  

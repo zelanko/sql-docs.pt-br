@@ -165,7 +165,7 @@ ms.locfileid: "72906097"
 </ROOT>  
 ```  
   
-### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>b. Limitar os resultados com base em um valor de desconto de dados de tipos reais  
+### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>B. Limitar os resultados com base em um valor de desconto de dados de tipos reais  
  Neste exemplo, um banco de dados contém duas tabelas:  
   
 -   Orders (OrderID)  
@@ -306,9 +306,9 @@ ms.locfileid: "72906097"
     </root>  
     ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [float e real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
-  de [Transact &#40;-SQL&#41; de nchar e nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
+   de [Transact &#40;-SQL&#41; de nchar e nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
  [Instalando o SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
  [Usando esquemas XSD anotados em consultas &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   

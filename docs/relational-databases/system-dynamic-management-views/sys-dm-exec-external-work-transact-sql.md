@@ -1,5 +1,5 @@
 ---
-title: sys. dm _exec_external_work (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_external_work (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -29,25 +29,25 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532947"
 ---
-# <a name="sysdm_exec_external_work-transact-sql"></a>sys. dm _exec_external_work (Transact-SQL)
+# <a name="sysdm_exec_external_work-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Retorna informações sobre a carga de trabalho por trabalhador, em cada nó de computação.  
   
- Consulte sys. dm _exec_external_work para identificar o trabalho girado para se comunicar com a fonte de dados externa (por exemplo, Hadoop ou SQL Server externo).  
+ Consulte sys. dm_exec_external_work para identificar o trabalho girado para se comunicar com a fonte de dados externa (por exemplo, Hadoop ou SQL Server externo).  
   
-|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
+|Column Name|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|`nvarchar(32)`|Identificador exclusivo para a consulta do polybase associado.|Consulte *request_ID* em [Sys. dm _EXEC_REQUESTS &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|step_index|`int`|A solicitação que esse trabalho está executando.|Consulte *step_index* em [Sys. dm _EXEC_REQUESTS &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|dms_step_index|`int`|Etapa no plano DMS que esse trabalho está executando.|Consulte [Sys. dm _exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
-|compute_node_id|`int`|O nó no qual o trabalho está sendo executado.|Consulte [Sys. dm _exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
-|tipo|`nvarchar(60)`|O tipo de trabalho externo.|' Divisão de arquivo '|  
+|execution_id|`nvarchar(32)`|Identificador exclusivo para a consulta do polybase associado.|Consulte *request_ID* em [Sys. DM_EXEC_REQUESTS &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|step_index|`int`|A solicitação que esse trabalho está executando.|Consulte *step_index* em [Sys. DM_EXEC_REQUESTS &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|dms_step_index|`int`|Etapa no plano DMS que esse trabalho está executando.|Consulte [Sys. dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
+|compute_node_id|`int`|O nó no qual o trabalho está sendo executado.|Consulte [Sys. dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|Tipo|`nvarchar(60)`|O tipo de trabalho externo.|' Divisão de arquivo '|  
 |work_id|`int`|ID da divisão real.|Maior ou igual a 0.|  
 |input_name|`nvarchar(4000)`|Nome da entrada a ser lida|Nome do arquivo ao usar o Hadoop.|  
 |read_location|`bigint`|Deslocamento ou local de leitura.|Deslocamento do arquivo a ser lido.|  
 |bytes_processed|`bigint`|Total de bytes processados por este trabalhador.|Maior ou igual a 0.|  
-|comprimento|`bigint`|Comprimento do bloco Split ou HDFS no caso do Hadoop|Definido pelo usuário. O padrão é o 64M|  
+|length|`bigint`|Comprimento do bloco Split ou HDFS no caso do Hadoop|Definido pelo usuário. O padrão é o 64M|  
 |status|`nvarchar(32)`|Status do trabalhador|Pendente, processando, concluído, com falha, anulado|  
 |start_time|`datetime`|Início do trabalho||  
 |end_time|`datetime`|Fim do trabalho||  

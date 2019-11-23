@@ -21,7 +21,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797880"
 ---
-# <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
+# <a name="get-help-sql-server-powershell"></a>Obter Ajuda do SQL Server PowerShell
   Há várias origens de informações sobre como usar o provedor e os cmdlets do provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para Windows PowerShell. Isso inclui a ajuda que está disponível no ambiente Windows PowerShell.  
   
 ## <a name="before-you-begin"></a>Antes de começar  
@@ -122,6 +122,6 @@ $MyVar = New-Object Microsoft.SqlServer.Management.SMO.Table
 $MyVar | Get-Member -Type Properties  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Provedor do SQL Server PowerShell](../powershell/sql-server-powershell-provider.md)   
  [Usar cmdlets do Mecanismo de Banco de Dados](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

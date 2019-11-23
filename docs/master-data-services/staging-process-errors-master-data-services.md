@@ -25,7 +25,7 @@ ms.locfileid: "73728925"
 
   Quando o processo de preparo é concluído, todos os registros processados nas tabelas de preparo têm um valor na coluna ErrorCode. Esses valores são listados na tabela a seguir.  
   
-|Código|Erro|Quando ocorre/detalhes|Aplica-se à tabela|  
+|Code|Error|Quando ocorre/detalhes|Aplica-se à tabela|  
 |----------|-----------|--------------------------|----------------------|  
 |210001|O mesmo código de membro existe várias vezes na tabela de preparo.|Seu lote de preparo inclui o mesmo código de membro várias vezes. Nenhum membro é criado ou atualizado.|Folha<br /><br /> Consolidado<br /><br /> Relação|  
 |210003|Os valores de atributos fazem referência a um membro que não existe ou está inativo.|Quando você prepara atributos baseados em domínio, deve usar o código, em lugar do nome. Aplica-se a **ImportType0**, **1**e **2**.|Folha<br /><br /> Consolidado|  

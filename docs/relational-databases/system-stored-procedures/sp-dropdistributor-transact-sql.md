@@ -38,7 +38,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @no_checks = ] no_checks` indica se deve-se verificar se há objetos dependentes antes de descartar o distribuidor. *no_checks* é **bit**, com um padrão de 0.  
+`[ @no_checks = ] no_checks` indica se deve verificar se há objetos dependentes antes de descartar o distribuidor. *no_checks* é **bit**, com um padrão de 0.  
   
  Se for **0**, o **sp_dropdistributor** verificará se todos os objetos de publicação e distribuição além do distribuidor foram descartados.  
   
@@ -46,14 +46,14 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
   
 `[ @ignore_distributor = ] ignore_distributor` indica se este procedimento armazenado é executado sem se conectar ao distribuidor. *ignore_distributor* é **bit**, com um padrão de **0**.  
   
- Se for **0**, **sp_dropdistributor** se conectará ao distribuidor e removerá todos os objetos de replicação. Se **sp_dropdistributor** não puder se conectar ao distribuidor, o procedimento armazenado falhará.  
+ Se **0**, **sp_dropdistributor** se conectar ao distribuidor e remover todos os objetos de replicação. Se **sp_dropdistributor** não puder se conectar ao distribuidor, o procedimento armazenado falhará.  
   
  Se for **1**, nenhuma conexão será feita ao distribuidor e os objetos de replicação não serão removidos. Será usado se o Distribuidor estiver sendo desinstalado ou estiver permanentemente offline. Os objetos desse Publicador no Distribuidor não serão removidos até que o Distribuidor seja reinstalado futuramente.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_dropdistributor** é usado em todos os tipos de replicação.  
   
  Se houver outro Publicador ou objetos de distribuição no servidor, **sp_dropdistributor** falhará, a menos que **\@no_checks** seja definido como **1**.  

@@ -21,9 +21,9 @@ ms.locfileid: "73728908"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Use o **Assistente para Atualizar Banco de Dados** para atualizar um banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
+  Use o **Assistente para Atualizar Banco de Dados** para atualizar um banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
-## <a name="action"></a>Ação  
+## <a name="action"></a>Action  
  Essa é a página de introdução do assistente. Clique em **Avançar** para iniciar o processo de atualização do banco de dados.  
   
 ## <a name="upgrade-review"></a>Análise da atualização  

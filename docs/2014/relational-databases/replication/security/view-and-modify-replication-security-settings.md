@@ -62,13 +62,13 @@ ms.locfileid: "73912803"
   
 1.  A caixa de diálogo **Atualizar Senhas de Replicação** que está disponível na pasta **Replicação** do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Se você alterar a senha para uma conta do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou uma conta do Windows no servidor em uma topologia de replicação, use essa caixa de diálogo ao invés de atualizar a senha para cada agente que usa essa conta. Se agentes em mais de um servidor usam a mesma conta, você deverá conectar-se a cada servidor e alterar a senha. A senha será atualizada em todos os lugares em que a replicação usa a senha. A senha não é atualizada em outros lugares, como servidores vinculados.  
   
-2.  A página **Segurança do Agente** da caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](../publish/view-and-modify-publication-properties.md).  
+2.  A página **Segurança do Agente** da caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de publicação](../publish/view-and-modify-publication-properties.md).  
   
-3.  A caixa de diálogo **Propriedades da Assinatura – \<Assinatura>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) e [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md).  
+3.  A caixa de diálogo **Propriedades da Assinatura – \<Assinatura>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de assinatura push](../view-and-modify-push-subscription-properties.md) e [Exibir e modificar propriedades de assinatura pull](../view-and-modify-pull-subscription-properties.md).  
   
-4.  As caixas de diálogo **Propriedades do Distribuidor – \<Distribuidor>** e **Propriedades do Banco de Dados de Distribuição – \<Banco de Dados>** . Para obter mais informações sobre como acessar essas caixas de diálogo, consulte [View and Modify Distributor and Publisher Properties](../view-and-modify-distributor-and-publisher-properties.md).  
+4.  As caixas de diálogo **Propriedades do Distribuidor – \<Distribuidor>** e **Propriedades do Banco de Dados de Distribuição – \<Banco de Dados>** . Para obter mais informações sobre como acessar essas caixas de diálogo, consulte [Exibir e modificar as propriedades do Distribuidor e do Publicador](../view-and-modify-distributor-and-publisher-properties.md).  
   
-5.  A caixa de diálogo **Propriedades do Publicador – \<Publisher>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Distributor and Publisher Properties](../view-and-modify-distributor-and-publisher-properties.md).  
+5.  A caixa de diálogo **Propriedades do Publicador – \<Publisher>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de Publicador e Distribuidor](../view-and-modify-distributor-and-publisher-properties.md).  
   
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>Para alterar a senha para uma conta usada por um ou mais agentes  
   
@@ -415,7 +415,7 @@ ms.locfileid: "73912803"
 ##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
   
 > [!IMPORTANT]  
->  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework do Windows.  
+>  Quando possível, solicite que os usuários insiram as credenciais de segurança em runtime. Se for preciso armazenar credenciais, use os serviços [criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework do Windows.  
   
 #### <a name="to-change-all-instances-of-a-password-stored-on-a-replication-server"></a>Para alterar todas as instâncias de uma senha armazenada em um servidor de replicação  
   
@@ -432,7 +432,7 @@ ms.locfileid: "73912803"
     -   *password* - o novo valor de senha.  
   
         > [!IMPORTANT]  
-        >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os [serviços criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo Windows .NET Framework.  
+        >  Quando possível, solicite que os usuários insiram as credenciais de segurança em runtime. Se for preciso armazenar credenciais, use os [serviços criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo Windows .NET Framework.  
   
         > [!NOTE]  
         >  Só um membro da `sysadmin` função de servidor fixa pode chamar este método.  

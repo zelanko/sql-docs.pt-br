@@ -66,7 +66,7 @@ sp_describe_parameter_encryption
 |**database_id**|**int**|ID do banco de dados.|  
 |**column_encryption_key_id**|**int**|A ID da chave de criptografia da coluna. Observação: essa ID denota uma linha na exibição de catálogo do [Transact- &#40;SQL&#41; sys. column_encryption_keys](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) .|  
 |**column_encryption_key_version**|**int**|Reservado para uso futuro. Atualmente, sempre contém 1.|  
-|**column_encryption_key_metadata_version**|**binário (8)**|Um carimbo de data/hora que representa o horário de criação da chave de criptografia da coluna.|  
+|**column_encryption_key_metadata_version**|**binary(8)**|Um carimbo de data/hora que representa o horário de criação da chave de criptografia da coluna.|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|O valor criptografado da chave de criptografia da coluna.|  
 |**column_master_key_store_provider_name**|**sysname**|O nome do provedor para o repositório de chaves que contém a chave mestra de coluna, que foi usada para produzir o valor criptografado da chave de criptografia de coluna.|  
 |**column_master_key_path**|**nvarchar(4000)**|O caminho de chave da chave mestra de coluna, que foi usada para produzir o valor criptografado da chave de criptografia de coluna.|  
@@ -83,7 +83,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|Código da linha no primeiro conjunto de resultados. A linha referenciada descreve a chave de criptografia de coluna configurada para a coluna, o parâmetro corresponde a.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Número de versão do algoritmo de normalização de tipo.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver de cliente, com suporte a Always Encrypted, chama automaticamente **sp_describe_parameter_encryption** para recuperar metadados de criptografia para consultas parametrizadas, emitidas pelo aplicativo. Subsequentemente, o driver usa os metadados de criptografia para criptografar os valores dos parâmetros que correspondem às colunas de banco de dados protegidas com Always Encrypted e substitui os valores de parâmetro de texto não criptografado, enviados pelo aplicativo, com o valores de parâmetro, antes de enviar a consulta para o mecanismo de banco de dados.  
   
 ## <a name="permissions"></a>Permissões  

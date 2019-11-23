@@ -29,7 +29,7 @@ ms.locfileid: "73728369"
 > [!NOTE]  
 >  A exclusão de uma hierarquia derivada não tem qualquer efeito sobre as relações de atributo em que essa hierarquia é fundamentada.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  

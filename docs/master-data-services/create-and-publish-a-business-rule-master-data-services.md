@@ -26,7 +26,7 @@ ms.locfileid: "73729446"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie uma regra de negócio para garantir a exatidão de seus dados mestres. Depois de ser criada, uma regra deve ser publicada para poder ser aplicada aos dados.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
@@ -43,13 +43,13 @@ ms.locfileid: "73729446"
   
 4.  Na lista suspensa **Entidade** , escolha uma entidade.  
   
-5.  Na lista suspensa **Tipo de Membro** , selecione um tipo de membro para aplicar a regra de negócio.  
+5.  Na lista suspensa **Tipos de Membro** , selecione um tipo de membro ao qual a regra de negócio será aplicada.  
   
 6.  Clique em **Adicionar**.  
   
 7.  Na caixa **Nome** , digite um nome para a regra de negócios.  
   
-8.  Opcionalmente, no campo **Descrição** , digite a descrição da regra de negócios.  
+8.  Opcionalmente, no campo **Descrição** , digite a descrição da regra de negócio.  
   
 9. Opcionalmente, marque a opção **Enviar Notificações** e, na lista suspensa, selecione um usuário ou grupo ao qual a notificação por email será enviada.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "73729446"
     > [!TIP]  
     >  Você pode excluir itens da regra de negócio clicando com o botão direito do mouse em cada item e escolhendo **Excluir**.  
   
-15. Opcionalmente, adicione várias condições à regra. Para obter mais informações, veja [Add Multiple Conditions to a Business Rule &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
+15. Opcionalmente, adicione várias condições à regra. Para obter mais informações, veja [Adicionar várias condições a uma regra de negócio &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
   
 16. Sob o bloco **Então** , clique em **Adicionar** . Um painel será exibido.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73729446"
   
 19. Preencha quaisquer campos obrigatórios.  
   
-20. Clique em **Salvar**. A nova linha será adicionada à grade **Então** .  
+20. Clique em **Salvar**. Uma nova linha será adicionada à grade **Então** .  
   
 21. Opcionalmente, para adicionar a ação **Senão** , conclua as etapas a seguir.  
   
@@ -102,16 +102,16 @@ ms.locfileid: "73729446"
 ## <a name="grid-columns"></a>Colunas da grade  
  Para cada regra de negócio criada, uma linha com seis colunas é adicionada à grade. A seguir estão as colunas.  
   
-|Nome|Descrição|  
+|NAME|Descrição|  
 |----------|-----------------|  
 |Status|Quando você clica em **Salvar** , a imagem a seguir é exibida indicando que a regra de negócio está sendo atualizada.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh ")<br /><br /> Se houver erros ao criar ou editar uma regra de negócio, a imagem a seguir será exibida.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error ")<br /><br /> Se o status for OK, a imagem a seguir será exibida.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success ")|  
-|Nome|O nome da regra de negócio.|  
+|NAME|O nome da regra de negócio.|  
 |Descrição|A descrição da regra de negócio.|  
 |Estado da Regra de Negócio|Um dos seguintes status de regra de negócio: Regra não definida, Ativa, Excluída, Alterações pendentes, Exclusão pendente e Exclusão pendente.|  
 |Excluído|Especifica se a regra de negócio é ou não excluída.|  
 |Notification|Especifica o usuário ou grupo selecionado para o qual enviar a notificação por email.|  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
   
 -   Aplique regras de negócio a dados seguindo um destes procedimentos:  
   
@@ -122,6 +122,6 @@ ms.locfileid: "73729446"
 ## <a name="see-also"></a>Consulte também  
  [Configurar regras de negócio para enviar notificações &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [Alterar o nome de uma regra de negócio &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
- [Adicionar várias condições a uma regra de negócios &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
+ [Adicionar várias condições a uma regra de negócio &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
   
   

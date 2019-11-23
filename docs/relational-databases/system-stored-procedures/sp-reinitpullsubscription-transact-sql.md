@@ -48,14 +48,14 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_reinitpullsubscription** é usado na replicação transacional.  
   
- **sp_reinitpullsubscription** não tem suporte para replicação transacional ponto a ponto.  
+ Não há suporte para **sp_reinitpullsubscription** para replicação transacional ponto a ponto.  
   
  **sp_reinitpullsubscription** pode ser chamado do assinante para reinicializar a assinatura, durante a próxima execução do agente de distribuição.  
   
- As assinaturas para publicações criadas com um valor de **false** para **\@immediate_sync** não podem ser reinicializadas a partir do Assinante.  
+ As assinaturas para publicações criadas com um valor de **false** para **\@immediate_sync** não podem ser reinicializadas do Assinante.  
   
  Você pode reinicializar uma assinatura pull executando **sp_reinitpullsubscription** no Assinante ou **sp_reinitsubscription** no Publicador.  
   
@@ -63,7 +63,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_reinitpullsubscription**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou a função de banco de dados fixa **db_owner** podem ser executados **sp_reinitpullsubscription**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Reinicializar uma assinatura](../../relational-databases/replication/reinitialize-a-subscription.md)   

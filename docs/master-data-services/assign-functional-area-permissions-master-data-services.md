@@ -26,7 +26,7 @@ ms.locfileid: "73728762"
 
   Atribuir permissão de área funcional para conceder a usuários ou grupos o acesso às areas funcionais do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Permissões de Usuário e Grupo** .  
@@ -47,7 +47,7 @@ ms.locfileid: "73728762"
   
 7.  Quando terminar, clique em **Salvar**.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   

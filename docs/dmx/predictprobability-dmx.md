@@ -33,8 +33,8 @@ PredictProbability(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>Tipo de retorno  
  Valor escalar.  
   
-## <a name="remarks"></a>Comentários  
- Se o estado previsto for omitido, o estado que tiver a mais alta probabilidade será usado, excluindo-se o bucket de estados ausentes. Para incluir o Bucket de Estados ausentes, \<defina o estado previsto > como **INCLUDE_NULL**. Para retornar a probabilidade para os Estados ausentes, defina \<o estado previsto > como nulo.  
+## <a name="remarks"></a>Remarks  
+ Se o estado previsto for omitido, o estado que tiver a mais alta probabilidade será usado, excluindo-se o bucket de estados ausentes. Para incluir o Bucket de Estados ausentes, defina o \<estado previsto > como **INCLUDE_NULL**. Para retornar a probabilidade para os Estados ausentes, defina o \<estado previsto > como nulo.  
   
 > [!NOTE]  
 >  Alguns modelos de mineração não fornecem valores de probabilidade e, portanto, não podem usar esta função. Além disso, os valores de probabilidade de qualquer valor de destino em particular são calculados de modo diferente ou podem ter uma interpretação diferente dependendo do tipo de modelo que você está consultando. Para obter mais informações sobre como a probabilidade é calculada para um tipo de modelo específico, consulte o tópico algoritmo individual em [conteúdo &#40;do modelo&#41;de mineração Analysis Services-Mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
@@ -63,8 +63,8 @@ NATURAL PREDICTION JOIN
 |1|0.867074195848097|0.132755556974282|  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência da função &#40;DMX&#41; das extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
+   de [referência &#40;de&#41; função DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ [Funções &#40;DMX&#41; ](../dmx/functions-dmx.md)   
  [Funções &#40;de previsão gerais DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

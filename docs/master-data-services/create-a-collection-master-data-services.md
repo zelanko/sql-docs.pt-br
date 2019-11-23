@@ -26,7 +26,7 @@ ms.locfileid: "73728526"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie uma coleção quando desejar criar listas simples de membros folha e consolidados. Coleções não precisam incluir todos os membros da entidade.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional do **Gerenciador** .  
@@ -35,7 +35,7 @@ ms.locfileid: "73728526"
   
 ### <a name="to-create-a-collection"></a>Para criar uma coleção  
   
-1.  Na página inicial do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , na lista **Modelo** , selecione um modelo.  
+1.  Na home page do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , na lista **Modelo** , selecione um modelo.  
   
 2.  Na lista **Versão** , selecione uma versão.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "73728526"
   
 9. Clique em **OK**.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Adicionar membros a uma coleção &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)  
   

@@ -24,7 +24,7 @@ ms.locfileid: "73729041"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  O banco de dados contém todas as informações do sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Ele é fundamental para uma implantação do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . O banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] :  
+  O banco de dados contém todas as informações do sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Ele é fundamental para uma implantação do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . O banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] :  
   
 -   Armazena as configurações, os objetos de banco de dados e os dados necessários ao sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   

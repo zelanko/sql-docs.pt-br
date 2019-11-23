@@ -42,10 +42,10 @@ sp_delete_firewall_rule [@name =] 'name'
 ## <a name="arguments"></a>Argumentos  
  O argumento do procedimento armazenado é:  
   
- [@name =] '*Name*'  
+ [@name =] '*name*'  
  O nome da configuração de firewall de nível de servidor que será removida. *nome* é **nvarchar (128)** sem padrão.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)], dados de logon necessários para autenticar uma conexão e as regras de firewall no nível de servidor são armazenados em cache temporariamente em cada banco de dados. Esse cache é atualizado periodicamente. Para forçar uma atualização do cache de autenticação e garantir que um banco de dados tenha a versão mais recente da tabela de logons, execute [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  

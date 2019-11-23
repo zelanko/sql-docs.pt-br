@@ -28,7 +28,7 @@ ms.locfileid: "72907397"
   Os objetos de banco de dados gerenciado, como os procedimentos armazenados ou gatilhos, são compilados e implantados em unidades chamadas de assembly. Os assemblies DLL gerenciados devem ser registrados em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antes da funcionalidade que o assembly fornece pode ser usado. Para registrar um assembly em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], use a instrução CREATE ASSEMBLY. Este tópico trata sobre como registrar um assembly em um banco de dados usando a instrução CREATE ASSEMBLY e como especificar as configurações de segurança do assembly.  
   
 ## <a name="the-create-assembly-statement"></a>A instrução CREATE ASSEMBLY  
- A instrução CREATE ASSEMBLY é usada para criar um assembly em um banco de dados. A seguir está um exemplo:  
+ A instrução CREATE ASSEMBLY é usada para criar um assembly em um banco de dados. Veja um exemplo:  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -70,7 +70,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
  Quando o código em um assembly é executado sob o conjunto de permissões **seguro** , ele só pode fazer computação e acesso a dados no servidor por meio do provedor gerenciado em processo.  
   
 ### <a name="creating-external_access-and-unsafe-assemblies"></a>Criando assemblies EXTERNAL_ACCESS e UNSAFE  
- O **EXTERNAL_ACCESS** aborda cenários nos quais o código precisa acessar recursos fora do servidor, como arquivos, rede, registro e variáveis de ambiente. Sempre que o servidor acessa um recurso externo, ele representa o contexto de segurança do usuário que chama o código gerenciado.  
+ **EXTERNAL_ACCESS** trata dos cenários nos quais o código precisa acessar recursos fora do servidor, como arquivos, rede, registro e variáveis de ambiente. Sempre que o servidor acessa um recurso externo, ele representa o contexto de segurança do usuário que chama o código gerenciado.  
   
  A permissão de código **inseguro** é para essas situações em que um assembly não é verificamente seguro ou requer acesso adicional a recursos restritos, como o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] API do Win32.  
   
@@ -78,13 +78,13 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
 1.  O assembly é assinado com nome forte ou com Authenticode usando um certificado. Esse nome forte (ou certificado) é criado dentro de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como uma chave assimétrica (ou certificado) e tem um logon correspondente com permissão de **assembly de acesso externo** (para assemblies de acesso externo) ou permissão de **assembly não segura** (para assemblies não seguros).  
   
-2.  O proprietário do banco de dados (DBO) tem o **assembly de acesso externo** (para ASSEMBLIES de **acesso externo** ) ou a permissão de **assembly não seguro** (para assemblies **não seguros** ) e o banco de dados tem a [propriedade de banco de dados TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md) definida como  **EM**.  
+2.  O proprietário do banco de dados (DBO) tem o **assembly de acesso externo** (para ASSEMBLIES de **acesso externo** ) ou a permissão de **assembly não seguro** (para assemblies **não seguros** ) e o banco de dados tem a [propriedade de banco de dados TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md) definida como **on**.  
 
  As duas condições listadas acima também são verificadas na hora do carregamento do assembly (que inclui a execução). Pelo menos um das condições precisa ser cumprida para carregar o assembly.  
   
  Recomendamos que a [propriedade de banco](../../../relational-databases/security/trustworthy-database-property.md) de dados TRUSTWORTHY em um banco de dados não seja definida como **on** somente para executar o código Common Language Runtime (CLR) no processo do servidor. Em vez disso, recomendamos que seja criada uma chave assimétrica do arquivo de assembly no banco de dados mestre. Um logon mapeado para essa chave assimétrica deve ser criado, e o logon deve receber o **assembly de acesso externo** ou a permissão de **assembly não segura** .  
   
- As instruções de [!INCLUDE[tsql](../../../includes/tsql-md.md)] a seguir executam as etapas necessárias para criar uma chave assimétrica, mapear um logon para essa chave e conceder a permissão **EXTERNAL_ACCESS** ao logon. Você deve executar as instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] a seguir antes de executar a instrução CREATE ASSEMBLY.  
+ As instruções de [!INCLUDE[tsql](../../../includes/tsql-md.md)] a seguir executam as etapas necessárias para criar uma chave assimétrica, mapear um logon para essa chave e conceder **EXTERNAL_ACCESS** permissão para o logon. Você deve executar as instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] a seguir antes de executar a instrução CREATE ASSEMBLY.  
   
 ```  
 USE master;   
@@ -129,12 +129,12 @@ WITH PERMISSION_SET = UNSAFE;
   
  Para obter mais detalhes sobre as permissões para cada uma das configurações, consulte [segurança da integração CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md).  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Gerenciando assemblies de integração CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [Alterando um  de assembly](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)  
  [Descartando um Assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
    de [segurança de acesso a código de integração CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
- [Propriedade de banco de dados TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md)   
+ [propriedade TRUSTWORTHY do banco de dados](../../../relational-databases/security/trustworthy-database-property.md)   
  [Permitindo chamadores parcialmente confiáveis](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   
   

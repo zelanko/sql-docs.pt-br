@@ -36,10 +36,10 @@ ms.locfileid: "71326143"
   
  Use essa DMV para ver a lista de todos os nós no cluster de expansão com sua função, o nome e o endereço IP.  
   
-|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
+|Column Name|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|ID numérica exclusiva associada ao nó. Chave para esta exibição.|Exclusivo entre o cluster de escala horizontal, independentemente do tipo.|  
-|type|**nvarchar(32)**|Tipo do nó.|"COMPUTE", "HEAD"|  
+|Tipo|**nvarchar(32)**|Tipo do nó.|"COMPUTE", "HEAD"|  
 |name|**nvarchar(32)**|Nome lógico do nó.|Qualquer cadeia de caracteres de comprimento apropriado.|  
 |address|**nvarchar(32)**|Endereço IP deste nó.|Intervalo de endereços IP|  
   

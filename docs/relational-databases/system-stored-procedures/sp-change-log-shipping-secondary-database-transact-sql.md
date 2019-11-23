@@ -29,7 +29,7 @@ ms.locfileid: "72909561"
 
   Altera as configurações do banco de dados secundário.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @restore_delay = ] 'restore_delay'` o período de tempo, em minutos, que o servidor secundário aguarda antes de restaurar um determinado arquivo de backup. *restore_delay* é **int** e não pode ser nulo. O valor padrão é 0.  
+`[ @restore_delay = ] 'restore_delay'` o período de tempo, em minutos, que o servidor secundário aguarda antes de restaurar um determinado arquivo de backup. *restore_delay* é **int** e não pode ser NULL. O valor padrão é 0.  
   
 `[ @restore_all = ] 'restore_all'` se definido como 1, o servidor secundário restaura todos os backups de log de transações disponíveis quando o trabalho de restauração é executado. Caso contrário, ele parará após a restauração de um arquivo. *restore_all* é **bit** e não pode ser nulo.  
   
@@ -71,7 +71,7 @@ sp_change_log_shipping_secondary_database
   
 `[ @max_transfer_size = ] 'max_transfer_size'` o tamanho, em bytes, da solicitação máxima de entrada ou saída emitida pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o dispositivo de backup. *max_transfersize* é **int** e pode ser NULL.  
   
-`[ @restore_threshold = ] 'restore_threshold'` o número de minutos permitido para decorrer entre as operações de restauração antes de um alerta ser gerado. *restore_threshold* é **int** e não pode ser nulo.  
+`[ @restore_threshold = ] 'restore_threshold'` o número de minutos permitido para decorrer entre as operações de restauração antes de um alerta ser gerado. *restore_threshold* é **int** e não pode ser NULL.  
   
 `[ @threshold_alert = ] 'threshold_alert'` é o alerta a ser gerado quando o limite de restauração é excedido. *threshold_alert* é **int**, com um padrão de 14420.  
   
@@ -83,12 +83,12 @@ sp_change_log_shipping_secondary_database
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum.  
   
 ## <a name="remarks"></a>Remarks  
- **sp_change_log_shipping_secondary_database** deve ser executado a partir do banco de dados **mestre** no servidor secundário. Esse procedimento armazenado faz o seguinte:  
+ **sp_change_log_shipping_secondary_database** deve ser executado do banco de dados **mestre** no servidor secundário. Esse procedimento armazenado faz o seguinte:  
   
-1.  Altera as configurações nos registros **log_shipping_secondary_database** , conforme necessário.  
+1.  Altera as configurações na **log_shipping_secondary_database** registros conforme necessário.  
   
 2.  Altera o registro de monitor local em **log_shipping_monitor_secondary** no servidor secundário usando argumentos fornecidos, se necessário.  
 
@@ -110,7 +110,7 @@ EXEC master.dbo.sp_change_log_shipping_secondary_database
 ,  @history_retention_period = 14420;  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

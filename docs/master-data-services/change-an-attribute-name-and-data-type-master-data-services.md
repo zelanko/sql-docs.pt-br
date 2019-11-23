@@ -26,7 +26,7 @@ ms.locfileid: "73729673"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode alterar o nome de um atributo.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
@@ -37,7 +37,7 @@ ms.locfileid: "73729673"
   
 1.  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], clique em **Administração do Sistema**.  
   
-2.  Na página **Gerenciar Modelo** , selecione um modelo na grade e clique em **Entidades**.  
+2.  Na página **Gerenciar Modelo** , escolha um modelo na grade e clique em **Entidades**.  
   
 3.  Na página **Gerenciar Entidade** , selecione a linha da entidade para a qual deseja criar um atributo.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "73729673"
   
 6.  Selecione a linha do atributo que deseja editar e clique em **Editar**.  
   
-7.  Na caixa **Nome** , digite o nome atualizado do atributo. Para obter uma lista de palavras que não devem ser usadas como nomes de atributo, consulte [Palavras reservadas &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md).  
+7.  Na caixa **Nome**, digite o nome atualizado do atributo. Para obter uma lista de palavras que não devem ser usadas como nomes de atributo, consulte [Palavras reservadas &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md).  
   
-8.  Na lista **Tipo de atributo** , selecione outro tipo.  
+8.  Na lista **Tipo de atributo**, selecione outro tipo.  
   
 9. Clique em **Salvar**.  
   

@@ -33,7 +33,7 @@ ms.locfileid: "70154028"
 3.  No **Editor de Destino ADO NET**, clique em **Gerenciador de Conexões**.  
   
 ## <a name="static-options"></a>Opções estáticas  
- **Connection manager**  
+ **Gerenciador de Conexões**  
  Selecione um gerenciador de conexões existente na lista ou crie uma nova conexão clicando em **Nova**.  
   
  **Nova**  
@@ -66,7 +66,7 @@ ms.locfileid: "70154028"
 >  Para obter mais informações, consulte [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-identity-insert-transact-sql) e [IDENTITY &#40;Propriedade&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property).  
   
 ## <a name="external-resources"></a>Recursos externos  
- Artigo técnico, [carregamento de dados para o Azure SQL Database da maneira rápida](https://go.microsoft.com/fwlink/?LinkId=244333), em sqlcat.com  
+ Artigo técnico: [Carregamento rápido de dados no Banco de Dados SQL do Azure](https://go.microsoft.com/fwlink/?LinkId=244333); em sqlcat.com  
   
 ## <a name="see-also"></a>Consulte também  
  [Editor de Destino ADO NET &#40;página Mapeamentos&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   

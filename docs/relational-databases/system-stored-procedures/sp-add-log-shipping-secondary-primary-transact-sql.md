@@ -29,7 +29,7 @@ ms.locfileid: "72909692"
 
   Configura as informações primárias, adiciona links de monitor local e remoto e cria trabalhos de cópia e restauração no servidor secundário para o banco de dados primário especificado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,9 +57,9 @@ sp_add_log_shipping_secondary_primary
   
 `[ @primary_database = ] 'primary_database'` é o nome do banco de dados no servidor primário. *primary_database* é **sysname**, sem padrão.  
   
-`[ @backup_source_directory = ] 'backup_source_directory'` o diretório em que os arquivos de backup de log de transações do servidor primário estão armazenados. *backup_source_directory* é **nvarchar (500)** e não pode ser nulo.  
+`[ @backup_source_directory = ] 'backup_source_directory'` o diretório em que os arquivos de backup de log de transações do servidor primário estão armazenados. *backup_source_directory* é **nvarchar (500)** e não pode ser NULL.  
   
-`[ @backup_destination_directory = ] 'backup_destination_directory'` o diretório no servidor secundário para onde os arquivos de backup são copiados. *backup_destination_directory* é **nvarchar (500)** e não pode ser nulo.  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` o diretório no servidor secundário para onde os arquivos de backup são copiados. *backup_destination_directory* é **nvarchar (500)** e não pode ser NULL.  
   
 `[ @copy_job_name = ] 'copy_job_name'` o nome a ser usado para o trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que está sendo criado para copiar backups de log de transações para o servidor secundário. *copy_job_name* é **sysname** e não pode ser nulo.  
   
@@ -81,20 +81,20 @@ sp_add_log_shipping_secondary_primary
   
 `[ @monitor_server_password = ] 'monitor_server_password'` é a senha da conta usada para acessar o servidor monitor.  
   
-`[ @copy_job_id = ] 'copy_job_id' OUTPUT` a ID associada ao trabalho de cópia no servidor secundário. *copy_job_id* é **uniqueidentifier** e não pode ser nulo.  
+`[ @copy_job_id = ] 'copy_job_id' OUTPUT` a ID associada ao trabalho de cópia no servidor secundário. *copy_job_id* é **uniqueidentifier** e não pode ser NULL.  
   
-`[ @restore_job_id = ] 'restore_job_id' OUTPUT` a ID associada ao trabalho de restauração no servidor secundário. *restore_job_id* é **uniqueidentifier** e não pode ser nulo.  
+`[ @restore_job_id = ] 'restore_job_id' OUTPUT` a ID associada ao trabalho de restauração no servidor secundário. *restore_job_id* é **uniqueidentifier** e não pode ser NULL.  
   
-`[ @secondary_id = ] 'secondary_id' OUTPUT` a ID do servidor secundário na configuração de envio de logs. *secondary_id* é **uniqueidentifier** e não pode ser nulo.  
+`[ @secondary_id = ] 'secondary_id' OUTPUT` a ID do servidor secundário na configuração de envio de logs. *secondary_id* é **uniqueidentifier** e não pode ser NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum.  
   
 ## <a name="remarks"></a>Remarks  
- **sp_add_log_shipping_secondary_primary** deve ser executado a partir do banco de dados **mestre** no servidor secundário. Esse procedimento armazenado faz o seguinte:  
+ **sp_add_log_shipping_secondary_primary** deve ser executado do banco de dados **mestre** no servidor secundário. Esse procedimento armazenado faz o seguinte:  
   
 1.  Gera uma ID secundária para o servidor primário especificado e o banco de dados primário.  
   
@@ -104,11 +104,11 @@ sp_add_log_shipping_secondary_primary
   
     2.  Cria um trabalho de cópia para a ID secundária que é desabilitada.  
   
-    3.  Define a ID do trabalho de cópia na entrada **log_shipping_secondary** para a ID de trabalho do trabalho de cópia.  
+    3.  Define a ID do trabalho de cópia na entrada de **log_shipping_secondary** para a ID de trabalho do trabalho de cópia.  
   
     4.  Cria um trabalho de restauração para a ID secundária que é desabilitada.  
   
-    5.  Defina a ID do trabalho de restauração na entrada **log_shipping_secondary** como a ID do trabalho de restauração.  
+    5.  Defina a ID do trabalho de restauração na entrada **log_shipping_secondary** para a ID do trabalho de restauração.  
   
 ## <a name="permissions"></a>Permissões  
  Somente os membros da função de servidor fixa **sysadmin** podem executar esse procedimento.  
@@ -133,7 +133,7 @@ EXEC master.dbo.sp_add_log_shipping_secondary_primary
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

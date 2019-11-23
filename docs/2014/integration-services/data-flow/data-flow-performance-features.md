@@ -118,7 +118,7 @@ ms.locfileid: "73637827"
   
 ### <a name="sources"></a>Origens  
   
-#### <a name="ole-db-source"></a>Origem de OLE DB  
+#### <a name="ole-db-source"></a>Fonte OLE DB  
  Ao usar uma origem de OLE DB para recuperar os dados de uma exibição, selecione "Comando SQL" como o modo de acesso aos dados e insira uma instrução SELECT. Acessar os dados usando uma instrução SELECT faz com que a "Tabela ou Exibição" selecionada seja executada melhor no modo de acesso de dados.  
   
 ### <a name="transformations"></a>Transformações  
@@ -132,13 +132,13 @@ ms.locfileid: "73637827"
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Transformações Pesquisa Difusa e Agrupamento Difuso  
  Para obter informações mais detalhadas sobre as transformações Pesquisa Difusa e Agrupamento Difuso, consulte a documentação [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(em inglês).  
   
-#### <a name="lookup-transformation"></a>Transformação Pesquisa  
+#### <a name="lookup-transformation"></a>Lookup Transformation  
  Minimize o tamanho dos dados de referência na memória usando uma instrução SELECT que seja capaz de pesquisar somente as colunas necessárias. Esta é uma opção melhor do que selecionar uma tabela ou exibição inteira, que retorna uma quantidade grande de dados desnecessários.  
   
 #### <a name="merge-join-transformation"></a>Transformação Junção de Mesclagem  
  Não é mais preciso configurar o valor da propriedade `MaxBuffersPerInput`, pois a Microsoft fez alterações que reduzem o risco de a transformação Junção de Mesclagem consumir memória excessiva. Esse problema algumas vezes ocorria quando as várias entradas da Junção de Mesclagem geravam dados a taxas irregulares.  
   
-#### <a name="slowly-changing-dimension-transformation"></a>transformação Dimensão de Alteração Lenta  
+#### <a name="slowly-changing-dimension-transformation"></a>Transformação Dimensão de Alteração Lenta  
  O Assistente para Dimensão Alteração Lenta e a transformação Dimensão Alteração Lenta são ferramentas de uso geral que atendem às necessidades da maioria dos usuários. Entretanto, o fluxo de dados gerado pelo assistente não é otimizado para o desempenho.  
   
  Normalmente, os componentes mais lentos na transformação Dimensão Alteração Lenta são as transformações Comando de OLE DB que executam UPDATEs (atualizações) em apenas uma linha por vez. Portanto, a forma mais eficaz de melhorar o desempenho da transformação Dimensão Alteração Lenta é substituir as transformações Comando de OLE DB. Essas transformações podem ser substituídas por componentes de destino que salvam todas as linhas que serão atualizadas para uma tabela de preparação. Por isso, é possível adicionar uma tarefa Executar SQL que desenvolva uma única instrução UPDATE Transact-SQL com base no conjunto em todas as linhas ao mesmo tempo.  
@@ -159,7 +159,7 @@ ms.locfileid: "73637827"
   
  Para habilitar ou desabilitar a exibição de mensagens na guia **Progresso** , marque ou desmarque a opção **Depurar Relatório do Progresso** no menu **SSIS** . Desabilitar o relatório do progresso pode ajudar a melhorar o desempenho durante a execução de um pacote complexo no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
@@ -198,6 +198,6 @@ ms.locfileid: "73637827"
   
 ## <a name="see-also"></a>Consulte também  
  [Solucionando problemas de ferramentas para desenvolvimento de pacotes](../troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Solucionando problemas de ferramentas para execução de pacotes](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Ferramentas de solução de problemas de execução de pacote](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

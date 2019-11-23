@@ -26,7 +26,7 @@ ms.locfileid: "73728467"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie uma entidade para conter os membros e seus atributos.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
@@ -62,17 +62,17 @@ ms.locfileid: "73728467"
   
 8.  Opcional. Marque a caixa de seleção **Criar valores de códigos automaticamente** . Para obter mais informações, consulte [Criação automática de código &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md).  
   
-9. Opcional. Marque a caixa de seleção **Habilitar a Compactação de Dados** . A compactação de linha é ativada por padrão. Para obter mais informações, consulte [Data Compression](../relational-databases/data-compression/data-compression.md).  
+9. Opcional. Marque a caixa de seleção **Habilitar a Compactação de Dados** . Por padrão, a compactação de linha está ativada. Para obter mais informações, consulte [Data Compression](../relational-databases/data-compression/data-compression.md).  
   
 10. Clique em **Salvar**.  
   
 ## <a name="grid-columns"></a>Colunas da grade  
  Para cada entidade criada, uma linha com treze colunas é adicionada à grade. A seguir estão as colunas.  
   
-|Nome|Descrição|  
+|NAME|Descrição|  
 |----------|-----------------|  
 |Status|O status da entidade. Quando você clica em **Salvar** , a imagem a seguir é exibida, indicando que a entidade está atualizando.<br /><br /> ![Ícone para atualizar o status](../master-data-services/media/mds-statusicon-updating.png "Icon para atualizar o status ")<br /><br /> Se houver erros ao criar ou editar uma entidade, a imagem a seguir será exibida.<br /><br /> ![Ícone para status de erro](../master-data-services/media/mds-statusicon-error.png "Icon para status de erro ")<br /><br /> Se o status for OK, a imagem a seguir será exibida.<br /><br /> ![Ícone para status OK](../master-data-services/media/mds-statusicon-ok.png "Icon status OK ")|  
-|Nome|O nome da entidade.|  
+|NAME|O nome da entidade.|  
 |Descrição|A descrição da entidade.|  
 |Tabela de preparo|Nome do prefixo da tabela usado para armazenar dados.|  
 |Tipo de Log de transações|O tipo de log de transações da entidade.|  
@@ -85,7 +85,7 @@ ms.locfileid: "73728467"
 |Atualizado por|O nome do usuário que atualizou a entidade pela última vez.|  
 |Atualizado em|A data e a hora em que a entidade foi atualizada pela última vez.|  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Criar um atributo de texto &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   

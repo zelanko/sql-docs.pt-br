@@ -30,7 +30,7 @@ ms.locfileid: "72908324"
 
   Retorna um conjunto de resultados que contém metadados sobre parâmetros não declarados em um [!INCLUDE[tsql](../../includes/tsql-md.md)] lote. Considera cada parâmetro usado no lote **\@TSQL** , mas não declarado em **parâmetros\@** . Um conjunto de resultados que contém uma linha para cada um desses parâmetros é retornado com as informações de tipo deduzidas para esse parâmetro. O procedimento retornará um conjunto de resultados vazio se o lote de entrada de **\@TSQL** não tiver parâmetros, exceto aqueles declarados em **\@params**.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,18 +52,18 @@ sp_describe_undeclared_parameters
  O tipo de dados do parâmetro.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- **sp_describe_undeclared_parameters** sempre retorna o status de retorno de zero em caso de êxito. Se o procedimento lançar um erro e o procedimento for chamado como um RPC, o status de retorno será preenchido pelo tipo de erro, conforme descrito na coluna error_type de sys. dm _exec_describe_first_result_set. Se o procedimento for chamado de [!INCLUDE[tsql](../../includes/tsql-md.md)], o valor de retorno sempre será zero, até mesmo em casos de erro.  
+ **sp_describe_undeclared_parameters** sempre retorna o status de retorno de zero em caso de êxito. Se o procedimento lançar um erro e o procedimento for chamado como um RPC, o status de retorno será preenchido pelo tipo de erro, conforme descrito na coluna error_type de sys. dm_exec_describe_first_result_set. Se o procedimento for chamado de [!INCLUDE[tsql](../../includes/tsql-md.md)], o valor de retorno sempre será zero, até mesmo em casos de erro.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_describe_undeclared_parameters** retorna o seguinte conjunto de resultados.  
   
-|Nome da coluna|Tipo de Dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int não nulo**|Contém a posição ordinal do parâmetro no conjunto de resultados. A posição do primeiro parâmetro será especificada como 1.|  
 |**name**|**sysname não nulo**|Contém o nome do parâmetro.|  
-|**suggested_system_type_id**|**int não nulo**|Contém o **system_type_id** do tipo de dados do parâmetro, conforme especificado em sys. Types.<br /><br /> Para tipos CLR, embora a coluna **system_type_name** retorne NULL, essa coluna retornará o valor 240.|  
+|**suggested_system_type_id**|**int não nulo**|Contém a **system_type_id** do tipo de dados do parâmetro, conforme especificado em sys. Types.<br /><br /> Para tipos CLR, embora a coluna **system_type_name** retornará NULL, essa coluna retornará o valor 240.|  
 |**suggested_system_type_name**|**nvarchar (256) NULL**|Contém o nome do tipo de dados. Inclui argumentos (como comprimento, precisão, escala) especificados para o tipo de dados do parâmetro. Se o tipo de dados for um tipo de alias definido pelo usuário, o tipo de sistema subjacente será especificado aqui. Se for um tipo de dados CLR definido pelo usuário, NULL será retornado nessa coluna. Se não for possível deduzir o tipo de parâmetro, NULL será retornado.|  
-|**suggested_max_length**|**smallint não nulo**|Consulte sys. Columns. para a descrição da coluna **max_length** .|  
+|**suggested_max_length**|**smallint não nulo**|Consulte sys. Columns. para **max_length** descrição da coluna.|  
 |**suggested_precision**|**tinyint não nulo**|Consulte sys. Columns. para obter a descrição da coluna de precisão.|  
 |**suggested_scale**|**tinyint não nulo**|Consulte sys. Columns. para obter a descrição da coluna de escala.|  
 |**suggested_user_type_id**|**int NULL**|Para tipos de CLR e alias, contém o user_type_id do tipo de dados da coluna como especificado em sys.types. Caso contrário, é NULL.|  
@@ -71,7 +71,7 @@ sp_describe_undeclared_parameters
 |**suggested_user_type_schema**|**sysname nulo**|Para tipos de CLR e de alias, contém o nome do esquema no qual o tipo é definido. Caso contrário, é NULL.|  
 |**suggested_user_type_name**|**sysname nulo**|Para tipos de CLR e de alias, contém o nome do tipo. Caso contrário, é NULL.|  
 |**suggested_assembly_qualified_type_name**|**nvarchar (4000) NULL**|Para tipos CLR, retorna o nome do assembly e a classe que define o tipo. Caso contrário, é NULL.|  
-|**suggested_xml_collection_id**|**int NULL**|Contém o xml_collection_id do tipo de dados do parâmetro, conforme especificado em sys. Columns. Esta coluna retornará NULL se o tipo retornado não estiver associado a uma coleção de esquema XML.|  
+|**suggested_xml_collection_id**|**int NULL**|Contém a xml_collection_id do tipo de dados do parâmetro, conforme especificado em sys. Columns. Esta coluna retornará NULL se o tipo retornado não estiver associado a uma coleção de esquema XML.|  
 |**suggested_xml_collection_database**|**sysname nulo**|Contém o banco de dados no qual a coleção de esquemas XML associada a esse tipo está definida. Esta coluna retornará NULL se o tipo retornado não estiver associado a uma coleção de esquema XML.|  
 |**suggested_xml_collection_schema**|**sysname nulo**|Contém o esquema no qual a coleção de esquemas XML associada a esse tipo está definida. Esta coluna retornará NULL se o tipo retornado não estiver associado a uma coleção de esquema XML.|  
 |**suggested_xml_collection_name**|**sysname nulo**|Contém o nome da coleção de esquemas XML associada a esse tipo. Esta coluna retornará NULL se o tipo retornado não estiver associado a uma coleção de esquema XML.|  
@@ -89,7 +89,7 @@ sp_describe_undeclared_parameters
   
  O uso mais comum é quando um aplicativo recebe uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que pode conter parâmetros e precisa processá-los de algum modo. Um exemplo é uma interface do usuário (como ODBCTest ou RowsetViewer) em que o usuário fornece uma consulta com a sintaxe de parâmetro ODBC. O aplicativo deve descobrir o número de parâmetros dinamicamente e deve solicitar cada parâmetro ao usuário.  
   
- Outro exemplo ocorre quando, sem entrada do usuário, um aplicativo precisa executar um loop dos parâmetros e obter os dados para eles de algum outro local (como uma tabela). Nesse caso, o aplicativo não tem que transmitir todas as informações de parâmetro de uma vez. Em vez disso, o aplicativo pode obter todas as informações de parâmetros do provedor e pode obter os próprios dados na tabela. O código que usa **sp_describe_undeclared_parameters** é mais genérico e tem menos probabilidade de exigir modificações se a estrutura de dados for alterada posteriormente.  
+ Outro exemplo ocorre quando, sem entrada do usuário, um aplicativo precisa executar um loop dos parâmetros e obter os dados para eles de algum outro local (como uma tabela). Nesse caso, o aplicativo não tem que transmitir todas as informações de parâmetro de uma vez. Em vez disso, o aplicativo pode obter todas as informações de parâmetros do provedor e pode obter os próprios dados na tabela. O código usando **sp_describe_undeclared_parameters** é mais genérico e é menos provável que exija modificação se a estrutura de dados for alterada posteriormente.  
   
  **sp_describe_undeclared_parameters** retorna um erro em qualquer um dos casos a seguir.  
   
@@ -158,7 +158,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  Por exemplo, considere a consulta `SELECT * FROM t WHERE @p1 = dbo.tbl(@p2 + c1)`. Em seguida, E (\@P1) = \@P1, E (\@P2) = \@P2 + C1, TT (\@P1) é o tipo de dados de retorno declarado de dbo. tbl e TT (\@P2) é o tipo de dados de parâmetro declarado para dbo. tbl.  
   
- Se \@p não estiver contido em nenhuma expressão listada no início da etapa 2, o algoritmo de dedução de tipo determinará que E (\@p) é a maior expressão escalar que contém \@p e o algoritmo de dedução de tipo não computa os dados de destino Digite TT (\@p) para E (\@p). Por exemplo, se a consulta for selecionada `@p + 2` E (\@p) = \@p + 2 e não houver TT (\@p).  
+ Se \@p não estiver contido em nenhuma expressão listada no início da etapa 2, o algoritmo de dedução de tipo determinará que E (\@p) é a maior expressão escalar que contém \@p e o algoritmo de dedução de tipo não computa um tipo de dados de destino TT (\@p) para E (\@p). Por exemplo, se a consulta for selecionada `@p + 2` E (\@p) = \@p + 2 e não houver TT (\@p).  
   
  **Etapa 3**  
   
@@ -273,7 +273,7 @@ WHERE object_id = @id OR NAME = @name',
   
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [ &#40;Transact-SQL&#41; sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)  
-  [de Transact- &#40;SQL&#41; sys. dm _exec_describe_first_result_set](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
- [sys. dm _exec_describe_first_result_set_for_object &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+## <a name="see-also"></a>Consulte também  
+ [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

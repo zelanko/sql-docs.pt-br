@@ -23,7 +23,7 @@ ms.locfileid: "73728766"
 
   Um conjunto de alterações é uma coleção de alterações pendentes nos dados mestre. Se as alterações de entidade exigirem aprovação do administrador e se um conjunto de alterações for enviado para aprovação, você poderá examinar e então aprovar ou rejeitar o conjunto de alterações.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   Você deve ter permissão para acessar a área funcional do **Gerenciador** . Para obter mais informações, consulte [Permissões de área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73728766"
   
 ## <a name="to-approve-or-reject-a-changeset"></a>Para aprovar ou rejeitar um conjunto de alterações  
   
-1.  Na home page do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , selecione o modelo e a versão e depois clique em **Explorer**.  
+1.  Na home page do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , escolha o modelo e a versão e, em seguida, clique em **Explorer**.  
   
 2.  Clique em uma entidade no menu **Entidades** .  
   

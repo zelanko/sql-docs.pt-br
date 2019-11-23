@@ -61,7 +61,7 @@ ms.locfileid: "70212400"
 ## <a name="see-also"></a>Consulte também  
  [Instalando o .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [Arquitetura da integração CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
- [Acesso a dados de objetos de banco de dado CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
+ [Acesso a dados de objetos de banco de dados CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [Introdução à integração CLR](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
   
   

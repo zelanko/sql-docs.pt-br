@@ -25,7 +25,7 @@ ms.locfileid: "73728933"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], os administradores podem inverter uma transação quando uma ação precisar ser desfeita. Exemplos de transações são alterações de valor de atributo, movimentos de hierarquia ou exclusões de membro. Este tópico se aplica somente a transações de entidades com o tipo de log de transações “Atributo”. Vá para a página do gerenciador de entidade para exibir o histórico de transações das entidades com o tipo de log de transações “Membro”.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   Você deve ter permissão para acessar a área funcional **Gerenciamento de Versões** .  
   

@@ -44,8 +44,8 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Solicitar o nome do caminho para uma coluna de qualquer outro tipo de dados ou para um columnthat **varbinary (max)** não tem o atributo de armazenamento FileStream causará um erro de tempo de compilação de consulta.  
   
- *\@option*  
- Uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de inteiro que define como o componente de servidor do caminho deve ser formatado. *\@option* pode ser um dos valores a seguir. O padrão é 0.  
+ *opção \@*  
+ Uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de inteiro que define como o componente de servidor do caminho deve ser formatado. *\@opção* pode ser um dos valores a seguir. O padrão é 0.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -69,10 +69,10 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-type"></a>Tipo de retorno  
  **nvarchar(max)**  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  O valor retornado é o caminho lógico qualificado global ou NETBIOS do BLOB. PathName não retorna um endereço IP. NULL é retornado quando o FILESTREAM BLOB não foi criado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A coluna ROWGUID deve estar visível em qualquer consulta que chama PathName.  
   
  Um FILESTREAM BLOB só pode ser criado usando [!INCLUDE[tsql](../../includes/tsql-md.md)].  

@@ -1,5 +1,5 @@
 ---
-title: sys. dm _exec_dms_workers (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_dms_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -29,22 +29,22 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532938"
 ---
-# <a name="sysdm_exec_dms_workers-transact-sql"></a>sys. dm _exec_dms_workers (Transact-SQL)
+# <a name="sysdm_exec_dms_workers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Contém informações sobre todos os trabalhos concluindo as etapas de DMS.  
   
  Esta exibição mostra os dados das últimas 1000 solicitações e solicitações ativas; as solicitações ativas sempre têm os dados presentes nessa exibição.  
   
-|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
+|Column Name|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|`nvarchar(32)`|Consulte se esse trabalho DMS faz parte de. request_id, step_index e dms_step_index formam a chave para essa exibição.||  
-|step_index|`int`|Etapa de consulta para a qual este trabalho DMS faz parte.|Consulte índice de etapa em [Sys. dm &#40;_EXEC_DISTRIBUTED_REQUEST_STEPS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
-|dms_step_index|`int`|Etapa no plano DMS que esse trabalho está executando.|Consulte [Sys. dm _exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
-|compute_node_id|`int`|Nó no qual o trabalho está sendo executado.|Consulte [Sys. dm _exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|step_index|`int`|Etapa de consulta para a qual este trabalho DMS faz parte.|Consulte índice de etapa em [Sys. &#40;DM_EXEC_DISTRIBUTED_REQUEST_STEPS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
+|dms_step_index|`int`|Etapa no plano DMS que esse trabalho está executando.|Consulte [Sys. dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
+|compute_node_id|`int`|Nó no qual o trabalho está sendo executado.|Consulte [Sys. dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|`int`|||  
-|tipo|`nvarcha(32)`|||  
-|status|`nvarchar(32)`|Status desta etapa|' Pendente ', ' em execução ', ' Concluído ', ' falha ', ' UndoFailed ', ' PendingCancel ', ' cancelado ', ' desfeito ', ' anulado '|  
+|Tipo|`nvarcha(32)`|||  
+|status|`nvarchar(32)`|Status desta etapa|'Pending', 'Running', 'Complete', 'Failed', 'UndoFailed', 'PendingCancel', 'Cancelled', 'Undone', 'Aborted'|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  
 |rows_processed|`bigint`|||  

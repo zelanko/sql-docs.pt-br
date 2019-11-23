@@ -36,13 +36,13 @@ object.ProtocolOrder [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  A [classe ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) que representa o protocolo de rede usado pelo cliente do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor **uint32** que especifica o número de pedido do protocolo de rede do cliente atualmente referenciado como definido pelo método **OrderValue** . Se o protocolo de rede de cliente estiver desabilitado, esse valor será zero.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)   

@@ -70,14 +70,14 @@ CREATE PROCEDURE [usr].[YourAction]
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional Administração do Sistema.  
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, consulte [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
--   Scripts definidos pelo usuário foram adicionados ao banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+-   Scripts definidos pelo usuário foram adicionados ao banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
 ## <a name="create-a-business-rule-to-take-a-user-defined-script-as-a-condition-or-as-an-action"></a>Criar uma regra de negócio para tirar o script definido pelo usuário ou como uma ação  
   
@@ -89,7 +89,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 4.  Na lista suspensa **Entidade** , escolha uma entidade.  
   
-5.  Na lista suspensa **Tipo de Membro** , selecione um tipo de membro para aplicar a regra de negócio.  
+5.  Na lista suspensa **Tipos de Membro** , selecione um tipo de membro ao qual a regra de negócio será aplicada.  
   
 6.  Clique em **Adicionar**.  
   

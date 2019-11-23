@@ -32,15 +32,15 @@ ms.locfileid: "72783069"
 # <a name="deploy-a-data-tier-application"></a>Implantar um aplicativo da camada de dados
   Você pode implantar um DAC (aplicativo da camada de dados) de um pacote de DAC para uma instância existente do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] usando um assistente ou um script do PowerShell. O processo de implantação registra uma instância do DAC armazenando a definição do DAC no banco de dados do sistema **msdb** (**master** em [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), cria um banco de dados e o preenche com todos os objetos de banco de dados definidos no DAC.  
   
--   **Antes de começar:**  [Utilitário do SQL Server](#SQLUtility), [Opções de banco de dados e configurações](#DBOptSettings), [limitações e restrições](#LimitationsRestrictions), [pré-requisitos](#Prerequisites), [segurança](#Security), [permissões](#Permissions)  
+-   **Antes de começar:**  [Utilitário do SQL Server](#SQLUtility), [Opções e configurações do banco de dados](#DBOptSettings), [Limitações e restrições](#LimitationsRestrictions), [Pré-requisitos](#Prerequisites), [Segurança](#Security), [Permissões](#Permissions)  
   
--   **Para implantar um DAC, usando:**  [O assistente para implantar aplicativo da camada de dados](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
+-   **Para implantar um DAC, usando:**  [O Assistente para Implantar o Aplicativo da Camada de Dados](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
   
 ##  <a name="BeforeBegin"></a> Antes de começar  
  O mesmo pacote de DAC pode ser implantado várias vezes em uma única instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , porém as implantações devem ser executadas uma de cada vez. O nome de instância do DAC especificado para cada implantação deve ser exclusivo dentro da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ###  <a name="SQLUtility"></a>Utilitário do SQL Server  
- Se você implantar um DAC para uma instância gerenciada do Mecanismo de Banco de Dados, o DAC implantado será incorporado no Utilitário do SQL Server na próxima vez que o conjunto de coleta do utilitário for enviado da instância para o ponto de controle de utilitário. O DAC estará presente no nó **Aplicativos da Camada de Dados Implantados** do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicativos da Camada de Dados Implantados** details page.  
+ Se você implantar um DAC para uma instância gerenciada do Mecanismo de Banco de Dados, o DAC implantado será incorporado no Utilitário do SQL Server na próxima vez que o conjunto de coleta do utilitário for enviado da instância para o ponto de controle de utilitário. O DAC estará então presente no nó **Aplicativos da Camada de Dados Implantados** do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **do** e será relatado na página de detalhes **Aplicativos da Camada de Dados Implantados** .  
   
 ###  <a name="DBOptSettings"></a> Opções e configurações de banco de dados  
  Por padrão, o banco de dados criado durante a implantação terá todas as configurações padrão da instrução CREATE DATABASE, exceto:  
@@ -87,7 +87,7 @@ ms.locfileid: "72783069"
 ##  <a name="Introduction"></a> Página de Introdução  
  Esta página descreve as etapas para implantar um aplicativo da camada de dados.  
   
- **Não mostrar esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página no futuro.  
+ **Não exibir esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página no futuro.  
   
  **Avançar >** – Segue para a página **Selecionar Pacote de DAC**.  
   
@@ -232,6 +232,6 @@ $fileStream.Close()
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Aplicativos da Camada de Dados](data-tier-applications.md)   
+ [Aplicativos da camada de dados](data-tier-applications.md)   
  [Extrair um DAC de um banco de dados](extract-a-dac-from-a-database.md)   
  [Identificadores de banco de dados](../databases/database-identifiers.md)  

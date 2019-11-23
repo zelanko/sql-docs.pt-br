@@ -29,7 +29,7 @@ ms.locfileid: "73728936"
 > [!NOTE]  
 >  Os membros que não possuírem valores de atributos baseados em domínio não serão exibidos em hierarquias derivadas baseadas nessas relações.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
@@ -46,13 +46,13 @@ ms.locfileid: "73728936"
   
 4.  Na lista suspensa **Entidade** , escolha uma entidade.  
   
-5.  Na lista suspensa **Tipo de Membro** , selecione um tipo de membro para aplicar a regra de negócio.  
+5.  Na lista suspensa **Tipos de Membro** , selecione um tipo de membro ao qual a regra de negócio será aplicada.  
   
 6.  Clique em **Adicionar**.  
   
 7.  Na caixa **Nome** , digite um nome para a regra de negócios.  
   
-8.  Opcionalmente, no campo **Descrição** , digite a descrição da regra de negócios.  
+8.  Opcionalmente, no campo **Descrição** , digite a descrição da regra de negócio.  
   
 9. Abaixo do bloco **Então** , clique em **Adicionar**. Um painel será exibido.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "73728936"
   
 11. Na lista suspensa **Atributo** , selecione um atributo.  
   
-12. Clique em **Salvar**. A nova linha será adicionada à grade **Então** .  
+12. Clique em **Salvar**. Uma nova linha será adicionada à grade **Então** .  
   
 13. Clique em **Salvar**.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "73728936"
   
 15. Na caixa de diálogo de confirmação, clique em **OK**. O valor da coluna **Estado da Regra de Negócio** é **Ativa**.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
   
 -   Aplique regras de negócio a dados seguindo um destes procedimentos:  
   

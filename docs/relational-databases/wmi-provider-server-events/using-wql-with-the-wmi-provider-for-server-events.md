@@ -66,7 +66,7 @@ WHERE where_condition
  *event_property*  
  É uma propriedade de um evento. Os exemplos incluem a **hora**, **SPID**e **LoginName**. Pesquise cada evento listado no [provedor WMI para classes de eventos de servidor e propriedades](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md) para determinar quais propriedades ele contém. Por exemplo, o evento DDL_DATABASE_LEVEL_EVENTS mantém as propriedades **DatabaseName** e **username** . Ele também herda as propriedades **SQLInstance**, **LoginName**, **TimeTime**, **SPID**e **ComputerName** de seus eventos pai.  
   
- **,** *... n*  
+ **,** *...n*  
  Indica que *event_property* pode ser consultada várias vezes, separadas por vírgulas.  
   
  \*  
@@ -83,7 +83,7 @@ WHERE where_condition
   
  Somente o operando `=` pode ser usado junto com **DatabaseName**, **SchemaName**e **objectname**. Não é possível usar outras expressões com essas propriedades de eventos.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O *where_condition* da sintaxe do provedor WMI para eventos de servidor determina o seguinte:  
   
 -   O escopo pelo qual o provedor tenta recuperar o *event_type*especificado: nível de servidor, nível de banco de dados ou nível de objeto (o único objeto com suporte no momento é a fila). Por fim, esse escopo determina o tipo de notificação de eventos criado no banco de dados de destino. Esse processo chamou o registro de notificação de eventos.  

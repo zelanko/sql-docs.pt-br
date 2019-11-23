@@ -23,7 +23,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797930"
 ---
-# <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows (Transact-SQL)
+# <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Create a Database Mirroring Endpoint for Windows Authentication (Transact-SQL)
   Este tópico descreve como criar um ponto de extremidade de espelhamento de banco de dados que usa a Autenticação do Windows no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para oferecer suporte ao espelhamento de banco de dados ou ao [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exige um ponto de extremidade de espelhamento de banco de dados. Uma instância do servidor só pode ter em um ponto de extremidade do espelhamento de banco de dados, que tem uma porta única. Um ponto de extremidade do espelhamento de banco de dados poderá usar qualquer porta que estiver disponível no sistema local quando o ponto de extremidade for criado. Todas as sessões de espelhamento de banco de dados em uma instância do servidor escutam aquela porta e todas as conexões que chegam para o espelhamento de banco de dados usam aquela porta.  
   
 > [!IMPORTANT]  
@@ -33,7 +33,7 @@ ms.locfileid: "72797930"
   
 -   **Before you begin:**  [Security](#Security)  
   
--   **Para criar um ponto de extremidade do espelhamento de banco de dados, usando:** [Transact-SQL](#TsqlProcedure)  
+-   **Para criar um ponto de extremidade do espelhamento de banco de dados, usando:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -44,7 +44,7 @@ ms.locfileid: "72797930"
 >  O algoritmo RC4 é preterido. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Recomendamos usar AES.  
   
 ####  <a name="Permissions"></a> Permissões  
- Exige a permissão CREATE ENDPOINT ou a associação na função de servidor fixa sysadmin. Para obter mais informações, consulte [Permissões GRANT do ponto de extremidade &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
+ Exige a permissão CREATE ENDPOINT ou a associação na função de servidor fixa sysadmin. Para obter mais informações, veja [Permissões GRANT do ponto de extremidade &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
@@ -110,7 +110,7 @@ ms.locfileid: "72797930"
   
     -   ENCRYPTION é definido como REQUIRED por padrão. Isso especifica que todas as conexões para esse ponto de extremidade devem usar criptografia. Porém, você pode desabilitar a criptografia ou deixá-la opcional em um ponto de extremidade. As alternativas são como segue:  
   
-        |Value|Definição|  
+        |Valor|Definição|  
         |-----------|----------------|  
         |DISABLED|Especifica que os dados enviados em uma conexão não estão criptografados.|  
         |SUPPORTED|Especifica que os dados só serão criptografados se o ponto de extremidade oposto especificar SUPPORTED ou REQUIRED.|  
@@ -177,7 +177,7 @@ CREATE ENDPOINT endpoint_mirroring
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Tarefas Relacionadas  
+##  <a name="RelatedTasks"></a> Tarefas relacionadas  
 
 ### <a name="to-configure-a-database-mirroring-endpoint"></a>Para configurar um ponto de extremidade de espelhamento de banco de dados
   
@@ -197,7 +197,7 @@ GO
   
 -   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [Escolher um algoritmo de criptografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   

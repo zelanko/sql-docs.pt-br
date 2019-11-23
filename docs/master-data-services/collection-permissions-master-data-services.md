@@ -31,9 +31,9 @@ ms.locfileid: "73729632"
   
 |Permissão|Descrição|  
 |----------------|-----------------|  
-|**Leitura**|O usuário pode ler membros da coleção e os atributos de membro.|  
+|**leitura**|O usuário pode ler membros da coleção e os atributos de membro.|  
 |**Criar**|O usuário pode criar membros da coleção e atribuir valores de atributo.|  
-|**Update (atualizar)**|O usuário pode atualizar membros da coleção, atributos e relacionamentos|  
+|**Atualizar**|O usuário pode atualizar membros da coleção, atributos e relacionamentos|  
 |**Delete (excluir)**|O usuário pode excluir os membros da coleção.|  
 |**Deny**|Negar todo acesso aos membros da coleção.|  
   
