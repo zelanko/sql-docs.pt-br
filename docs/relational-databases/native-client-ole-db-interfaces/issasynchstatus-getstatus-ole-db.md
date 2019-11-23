@@ -48,7 +48,7 @@ HRESULT GetStatus(
  *eOperation*[in]  
  A operação cujo status assíncrono está sendo solicitado. O valor desse argumento deveria ser o seguinte:  
   
- DBASYNCHOP_OPEN – o consumidor solicita informações sobre a abertura ou população assíncrona de um conjunto de linhas ou sobre a inicialização assíncrona de um objeto de fonte de dados. Se o provedor estiver em conformidade com OLE DB 2.5 e der suporte a associação direta de URL, o consumidor solicitará informações sobre a abertura ou população assíncrona de uma fonte de dados, conjunto de linhas, linha ou objeto de fluxo.  
+ DBASYNCHOP_OPEN – o consumidor solicita informações sobre a abertura ou população assíncrona de um conjunto de linhas ou sobre a inicialização assíncrona de um objeto de fonte de dados. Se o provedor for compatível com OLE DB 2.5 e der suporte a associação direta de URL, o consumidor solicitará informações sobre a abertura ou população assíncrona de uma fonte de dados, conjunto de linhas, linha ou objeto de fluxo.  
   
  *pulProgress*[out]  
  Um ponteiro de memória no qual retornar o progresso atual da operação assíncrona em relação ao valor máximo esperado do parâmetro *pulProgressMax* . Para obter mais informações sobre o significado de *pulProgress*, consulte a descrição de *peAsynchPhase*.  
@@ -108,8 +108,8 @@ HRESULT GetStatus(
  E_FAIL  
  Ocorreu um erro específico de provedor.  
   
-## <a name="remarks"></a>Comentários  
- O método **ISSAsynchStatus::GetStatus** comporta-se exatamente como o método **IDBAsynchStatus::GetStatus**, a não ser pelo fato de que se a inicialização de um objeto de fonte de dados for anulada, E_UNEXPECTED será retornado em vez de DB_E_CANCELED (embora [ISSAsynchStatus::WaitForAsynchCompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) retorne DB_E_CANCELED). Isso acontece porque o objeto de fonte de dados não é deixado no estado normal de zumbi que segue uma operação de anulação, para que outras operações futuras de inicialização possam ser tentadas.  
+## <a name="remarks"></a>Remarks  
+ O método **ISSAsynchStatus::GetStatus** comporta-se exatamente como o método **IDBAsynchStatus::GetStatus** a não ser pelo fato de que se a inicialização de um objeto de fonte de dados for cancelada, E_UNEXPECTED será retornado em vez de DB_E_CANCELED (embora [ISSAsynchStatus::WaitForAsynchCompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) retorne DB_E_CANCELED). Isso acontece porque o objeto de fonte de dados não é deixado no estado normal de zumbi que segue uma operação de anulação, para que outras operações futuras de inicialização possam ser tentadas.  
   
  Se o conjunto de linhas for inicializado ou populado de forma assíncrona, deverá dar suporte a este método.  
   

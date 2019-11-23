@@ -42,7 +42,7 @@ ms.locfileid: "73882299"
   
 -   Se você selecionar outros tipos de publicação, o gerenciamento de intervalo de identidade deve ser definido como manual.  
   
- Modifique os intervalos e limites de identidade na guia **Propriedades** de **Propriedades do Artigo –\<Artigo>** , que está disponível na caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
+ Modifique os intervalos e limites de identidade na guia **Propriedades** de **Propriedades do Artigo –\<Artigo>** , que está disponível na caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de publicação](view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-an-identity-column-management-option"></a>Para especificar uma opção de gerenciamento de coluna de identidade  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73882299"
   
 5.  Se você selecionou **Automático** ou **Verdadeiro** na etapa 4, digite valores para as opções na tabela a seguir. Para obter mais informações sobre como essas configurações são usadas, consulte a seção “Atribuindo intervalos de identidade” de [Replicar colunas de identidade](replicate-identity-columns.md).  
   
-    |Opção|Value|Descrição|  
+    |Opção|Valor|Descrição|  
     |------------|-----------|-----------------|  
     |**Tamanho do intervalo do Publicador**|Valor inteiro para o tamanho do intervalo (por exemplo, 20000).|Consulte a seção “Atribuindo intervalos de identidade” em [Replicar colunas de identidade](replicate-identity-columns.md).|  
     |**Tamanho do intervalo do assinante**|Valor inteiro para tamanho de intervalo (por exemplo, 10000).|Consulte a seção “Atribuindo intervalos de identidade” em [Replicar colunas de identidade](replicate-identity-columns.md).|  
@@ -137,8 +137,8 @@ ms.locfileid: "73882299"
     -   Para desabilitar o gerenciamento automático de intervalo de identidade, execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) no Publicador do banco de dados de publicação. Especifique um valor igual a **identityrangemanagementoption** em **\@property** e **manual** ou **none** em **\@value**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Replicação transacional ponto a ponto](../transactional/peer-to-peer-transactional-replication.md)   
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [Peer-to-Peer Transactional Replication](../transactional/peer-to-peer-transactional-replication.md)   
+ [Conceitos dos procedimentos armazenados no sistema de replicação](../concepts/replication-system-stored-procedures-concepts.md)   
  [Replicar colunas de identidade](replicate-identity-columns.md)  
   
   

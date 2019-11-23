@@ -26,7 +26,7 @@ ms.locfileid: "73729383"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], exclua uma exibição de assinatura quando ela não for mais necessária. A exclusão de uma exibição de assinatura no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] remove a exibição do banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Você também pode editar uma exibição de assinatura.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Gerenciamento de Integração** . Para obter mais informações, consulte [Permissões de área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  

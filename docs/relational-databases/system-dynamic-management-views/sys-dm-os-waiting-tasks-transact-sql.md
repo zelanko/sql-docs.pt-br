@@ -33,7 +33,7 @@ ms.locfileid: "72260384"
   Retorna informações sobre a fila de espera de tarefas que estão esperando algum recurso. Para obter mais informações sobre tarefas, consulte o [Guia de arquitetura de threads e tarefas](../../relational-databases/thread-and-task-architecture-guide.md).
    
 > [!NOTE]  
->  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **Sys. dm _pdw_nodes_os_waiting_tasks**.  
+>  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **Sys. dm_pdw_nodes_os_waiting_tasks**.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "72260384"
   
  **Proprietário do recurso do pool de threads:**  
   
--   ID do ThreadPool = Scheduler @ no__t-0hex-address >  
+-   ID do ThreadPool = Agendador\<endereço Hex >  
   
  **Proprietário do recurso de consulta paralela:**  
   
@@ -78,39 +78,39 @@ ms.locfileid: "72260384"
   
  **Bloquear proprietário do recurso:**  
   
--   \<type-específico-Descrição > ID = Lock @ no__t-1lock-hex-address > Mode = \<mode > associatedObjectId = \<associated-obj-ID >  
+-   \<tipo-específico-Descrição > ID = bloquear\<bloqueio-endereço-Hex > Mode =\<modo > associatedObjectId =\<associado-obj-ID >  
   
-     **os > de descrição \<type-specific podem ser:**  
+     **\<> de descrição específica de tipo pode ser:**  
   
-    -   Para o banco de dados: databaselock subresource = \<databaselock-subresource > DBID = \<dB-ID >  
+    -   Para o banco de dados: databaselock de subrecurso =\<databaselock-subresource > DBID =\<DB-ID >  
   
-    -   Para o arquivo: filelock FileID = \<file-ID > subresource = \<filelock-subresource > DBID = \<dB-ID >  
+    -   Para o arquivo: filelock FileID =\<ID do arquivo > o subrecurso =\<filelock-subresource > DBID =\<DB-ID >  
   
-    -   Para o objeto: objectlock lockPartition = \<lock-Partition-ID > objID = \<obj-ID > subresource = \<objectlock-subresource > DBID = \<dB-ID >  
+    -   Para objeto: objectlock lockPartition =\<bloquear-Partition-ID > objID =\<obj-ID > subresource =\<objectlock-subresource > DBID =\<DB-ID >  
   
-    -   Para a página: PageLock FileID = \<file-ID > PageId = \<Page-ID > DBID = \<dB-ID > underresource = \<pagelock-subresource >  
+    -   Para a página: PageLock FileID =\<ID do arquivo > PageId =\<página-ID > DBID =\<DB-ID > subresource =\<PageLock-subresource >  
   
-    -   Para a chave: Keylock hobtid = \<hobt-ID > DBID = \<dB-ID >  
+    -   Para a chave: Keylock hobtid =\<HoBT-ID > DBID =\<DB-ID >  
   
-    -   Para extensão: extentlock FileID = \<file-ID > PageId = \<Page-ID > DBID = \<dB-ID >  
+    -   Para extensão: extentlock FileID =\<ID do arquivo > PageId =\<Page-ID > DBID =\<DB-ID >  
   
-    -   Para RID: ridlock FileID = \<file-ID > PageId = \<Page-ID > DBID = \<dB-ID >  
+    -   Para RID: ridlock FileID =\<ID do arquivo > PageId =\<Page-ID > DBID =\<DB-ID >  
   
-    -   Para o aplicativo: applicationlock hash = \<hash > databasePrincipalId = \<role-ID > DBID = \<dB-ID >  
+    -   Para APPLICATION: applicationlock hash =\<hash > databasePrincipalId =\<role-ID > DBID =\<DB-ID >  
   
-    -   Para metadados: metadatalock subresource = \<metadata-subresource > ClassID = \<metadatalock-Description > DBID = \<dB-ID >  
+    -   Para metadados: metadatalock subresource =\<metadados-subresource > ClassID =\<metadatalock-Description > DBID =\<DB-ID >  
   
-    -   Para HOBT: hobtlock hobtid = \<hobt-ID > subresource = \<hobt-subresource > DBID = \<dB-ID >  
+    -   Para HOBT: hobtlock hobtid =\<HoBT-ID > subresource =\<HoBT-subresource > DBID =\<DB-ID >  
   
-    -   Para ALLOCATION_UNIT: allocunitlock hobtid = \<hobt-ID > subresource = \<alloc-Unit-subresource > DBID = \<dB-ID >  
+    -   Para ALLOCATION_UNIT: allocunitlock hobtid =\<HoBT-ID > subresource =\<Alloc-Unit-subresource > DBID =\<DB-ID >  
   
-     **\<mode > pode ser:**  
+     **o modo de \<> pode ser:**  
   
      Sch-S, Sch-M, S, U, X, IS, IU, IX, SIU, SIX, UIX, BU, RangeS-S, RangeS-U, RangeI-N, RangeI-S, RangeI-U, RangeI-X, RangeX-, RangeX-U, RangeX-X  
   
  **Proprietário do recurso externo:**  
   
--   ExternalResource externo = @no__t-tipo de 0wait >  
+-   ExternalResource externo =\<tipo de espera >  
   
  **Proprietário do recurso genérico:**  
   
@@ -137,10 +137,10 @@ ms.locfileid: "72260384"
 ## <a name="permissions"></a>Permissões
 
 No [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer a permissão `VIEW SERVER STATE`.   
-Nas camadas Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], o requer a permissão `VIEW DATABASE STATE` no banco de dados. Nas camadas Standard e Basic [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a permissão `VIEW DATABASE STATE` no banco de dados. Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
  
 ## <a name="example"></a>Exemplo
-Este exemplo identificará as sessões bloqueadas. Execute a consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+Este exemplo identificará as sessões bloqueadas. Execute a consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
 ```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
@@ -148,7 +148,7 @@ WHERE blocking_session_id IS NOT NULL;
 ``` 
   
 ## <a name="see-also"></a>Consulte também  
-[SQL Server exibições &#40;&#41;de gerenciamento dinâmico relacionadas ao sistema operacional](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)      
+[SQL Server exibições &#40;de&#41; gerenciamento dinâmico relacionadas ao sistema operacional](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)      
 [Guia de arquitetura de thread e tarefa](../../relational-databases/thread-and-task-architecture-guide.md)     
    
  

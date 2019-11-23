@@ -48,7 +48,7 @@ ms.locfileid: "70154508"
   
 3.  Na tela **Nova base de dados de conhecimento** , digite um nome para a nova base de dados de conhecimento, clique na atividade **Gerenciamento de Domínio** e clique em **Criar**.  
   
-4.  Na tela **Gerenciamento de Domínio** , clique no ícone **Criar um domínio** para criar um domínio. Crie os quatro arquivos a seguir: **Linha de endereço**, **Cidade**, **Estado** e **CEP**.  
+4.  Na tela **Gerenciamento de Domínio** , clique no ícone **Criar um domínio** para criar um domínio. Crie os quatro domínios a seguir: **Linha de Endereço**, **Cidade**, **Estado**e **CEP**.  
   
 5.  Clique no ícone **Criar um domínio composto** para criar um domínio composto. Na caixa de diálogo **Criar um domínio composto** , digite **Verificação de Endereço** na caixa **Nome de Domínio Composto** e inclua todos os domínios criados na etapa 3 no domínio composto. Clique em **OK**.  
   
@@ -67,15 +67,15 @@ ms.locfileid: "70154508"
          ![Caixa de diálogo Catálogo de Provedores de Dados de Referência Online](../../2014/data-quality-services/media/dqs-onlinereferencedataproviderscatalog.gif "Caixa de diálogo Catálogo de Provedores de Dados de Referência Online")  
   
         > [!NOTE]  
-        >  -   Na caixa de diálogo **Catálogo de provedores de dados de referência online** , o nó **Data Quality Services** do DataMarket exibe todos os provedores de serviço de dados de referência que você assinou no Azure Marketplace. Se você tiver configurado provedores diretos de serviço de dados de referência online terceirizados no DQS, eles aparecerão em outro nó chamado **Provedores Online Diretos Terceirizados** (não disponível agora, pois nenhum provedor direto de serviço de dados de referência online terceirizado está configurado no DQS).  
+        >  -   Na caixa de diálogo **Catálogo de provedores de dados de referência online** , o nó **Data Quality Services do DataMarket** exibe todos os provedores de serviço de dados de referência que você assinou no Azure Marketplace. Se você tiver configurado provedores diretos de serviço de dados de referência online terceirizados no DQS, eles aparecerão em outro nó chamado **Provedores Online Diretos Terceirizados** (não disponível agora, pois nenhum provedor direto de serviço de dados de referência online terceirizado está configurado no DQS).  
   
-9. Você retornará à guia **Dados de Referência** . Na área **Configurações de Provedor**, altere os valores das seguintes caixas, se necessário:  
+9. Você retornará à guia **dados de referência** . Na área **configurações do provedor** , altere os valores nas seguintes caixas, se necessário:  
   
-    -   **Limite de Correção Automática**: As correções do serviço de dados de referência com nível de confiança acima desses valores de limite serão feitas automaticamente. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,9 para 90%.  
+    -   **Limite de Correção Automática**: as correções do serviço de dados de referência com nível de confiança acima desses valores de limite serão feitas automaticamente. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,9 para 90%.  
   
-    -   **Candidatos Sugeridos**: O número de candidatos sugeridos a serem exibidos pelo serviço de dados de referência.  
+    -   **Candidatos Sugeridos**: número de candidatos sugeridos a serem exibidos pelo serviço de dados de referência.  
   
-    -   **Confiança Mínima**: As sugestões do serviço de dados de referência com nível de confiança inferior a esse valor serão ignoradas. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,6 para 60%.  
+    -   **Confiança Mínima**: as sugestões do serviço de dados de referência com nível de confiança inferior a esse valor serão ignoradas. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,6 para 60%.  
   
 10. Clique em **Concluir** para publicar a base de dados de conhecimento. Uma mensagem de confirmação aparece depois que a base de dados de conhecimento é publicada com êxito.  
   

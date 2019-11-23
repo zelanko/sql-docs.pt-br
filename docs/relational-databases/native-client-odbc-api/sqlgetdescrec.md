@@ -49,7 +49,7 @@ ms.locfileid: "73787292"
   
 ||*TypePtr*|*SubTypePtr*|*LengthPtr*|*PrecisionPtr*|*ScalePtr*|  
 |-|---------------|------------------|-----------------|--------------------|----------------|  
-|datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
+|Datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
 |date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
 |time|SQL_SS_TIME2|0|10|0..7|0..7|  
@@ -62,7 +62,7 @@ ms.locfileid: "73787292"
  O **SQLGetDescRec** dá suporte a UDTs (tipos definidos pelo usuário) CLR grandes. Para obter mais informações, consulte [ &#40;ODBC&#41;grandes tipos de CLR definidos pelo usuário](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
-   [SQLGetDescRec](https://go.microsoft.com/fwlink/?LinkId=80707)  
+ [SQLGetDescRec](https://go.microsoft.com/fwlink/?LinkId=80707)   
  [Detalhes da implementação da API do ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

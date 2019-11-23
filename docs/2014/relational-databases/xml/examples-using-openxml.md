@@ -1,5 +1,5 @@
 ---
-title: 'Exemplos: Usando OPENXML | Microsoft Docs'
+title: 'Exemplos: usando OPENXML | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -33,7 +33,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 09/10/2019
 ms.locfileid: "70874693"
 ---
-# <a name="examples-using-openxml"></a>Exemplos: uso do OPENXML
+# <a name="examples-using-openxml"></a>Exemplos: usando OPENXML
   Os exemplos neste tópico mostram como o OPENXML é usado para criar uma exibição de conjunto de linhas de um documento XML. Para obter informações sobre a sintaxe do OPENXML, veja [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql). Os exemplos mostram todos os aspectos do OPENXML, mas não especificam metapropriedades no OPENXML. Para obter mais informações sobre como especificar metapropriedades no OPENXML, veja [Especificar metapropriedades no OPENXML](specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Exemplos  
@@ -84,7 +84,7 @@ FROM OPENXML (@DocHandle, '/ROOT/Customer',1)
 EXEC sp_xml_removedocument @DocHandle  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 CustomerID ContactName            
@@ -129,7 +129,7 @@ FROM      OPENXML (@XmlDocumentHandle, '/ROOT/Customer',2)
 EXEC sp_xml_removedocument @XmlDocumentHandle  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 CustomerID ContactName            
@@ -192,7 +192,7 @@ WITH (OrderID     int         '../@OrderID',
 EXEC sp_xml_removedocument @XmlDocumentHandle  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 OrderID CustomerID        OrderDate          ProdID    Qty  
@@ -329,7 +329,7 @@ FROM OPENXML (@docHandle, '/root/Customer/Order', 1)
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 oid   amount        comment  
@@ -389,7 +389,7 @@ FROM OPENXML (@docHandle, '/root/Customer/Order', 1)
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 oid   date                        amount  
@@ -512,7 +512,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer/Order/OrderDetail/@ProductID')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 ProdID      Qty         OID  
@@ -578,7 +578,7 @@ EXEC sp_xml_removedocument @h
   
  Especificamente, você está passando uma variável de tipo **xml** (\@x) para a função **sp_xml_preparedocument()** .  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 id  lname   xmlname                   OverFlow  
@@ -610,11 +610,11 @@ id  lname   xmlname                   OverFlow
   
 -   \<Student>  
   
-     Os atributos **id** (ID do estudante), **name**e **attends** . O atributo **attends** é um atributo com vários valores.  
+     Os atributos **id** (ID do estudante), **name**e **attends**. O atributo **attends** é um atributo com vários valores.  
   
 -   \<Class>  
   
-     Os atributos **id** (ID da aula), **name**e **attendedBy** . O atributo **attendedBy** é um atributo com vários valores.  
+     Os atributos **id** (ID da aula), **name** e **attendedBy**. O atributo **attendedBy** é um atributo com vários valores.  
   
  O atributo **attends** em \<Student> e o atributo **attendedBy** em \<Class> representam uma relação **m:n** entre as tabelas Student e Class. Um estudante pode assistir muitas aulas e uma aula pode ter muitos estudantes.  
   

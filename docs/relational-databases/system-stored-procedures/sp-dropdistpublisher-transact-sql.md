@@ -41,11 +41,11 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## <a name="arguments"></a>Argumentos  
 `[ @publisher = ] 'publisher'` é o Publicador a ser solto. o *Publicador* é **sysname**, sem padrão.  
   
-`[ @no_checks = ] no_checks` especifica se o **sp_dropdistpublisher** verifica se o Publicador desinstalou o servidor como o distribuidor. *no_checks* é **bit**, com um padrão de **0**.  
+`[ @no_checks = ] no_checks` especifica se **sp_dropdistpublisher** verifica se o Publicador desinstalou o servidor como o distribuidor. *no_checks* é **bit**, com um padrão de **0**.  
   
  Se **0**, a replicação verifica se o Publicador remoto desinstalou o servidor local como o distribuidor. Se o Publicador for local, a replicação verificará se não há objetos de publicação ou distribuição restantes no servidor local.  
   
- Se **1**, todos os objetos de replicação associados ao Publicador de distribuição serão removidos mesmo que um Publicador remoto não possa ser acessado. Depois de fazer isso, o Publicador remoto deve desinstalar a replicação usando o [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) com o **\@ignore_distributor** = **1**.  
+ Se **1**, todos os objetos de replicação associados ao Publicador de distribuição serão removidos mesmo que um Publicador remoto não possa ser acessado. Depois de fazer isso, o Publicador remoto deve desinstalar a replicação usando [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) com **\@ignore_distributor** = **1**.  
   
 `[ @ignore_distributor = ] ignore_distributor` especifica se os objetos de distribuição são deixados no distribuidor quando o Publicador é removido. *ignore_distributor* é **bit** e pode ser um destes valores:  
   
@@ -56,10 +56,10 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_dropdistpublisher** é usado em todos os tipos de replicação.  
   
- Ao remover um Publicador Oracle, se não for possível descartar o Publicador, o **sp_dropdistpublisher** retornará um erro e os objetos do distribuidor para o Publicador serão removidos.  
+ Ao remover um Publicador Oracle, se não for possível descartar o Publicador **sp_dropdistpublisher** retornará um erro e os objetos do distribuidor para o Publicador serão removidos.  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistpublisher-tra_1.sql)]  

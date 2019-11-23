@@ -45,7 +45,7 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @class = ] 'class'`A classe da categoria a ser adicionada. a *classe* é **varchar (8)** com um valor padrão de trabalho e pode ser um desses valores.  
+`[ @class = ] 'class'` a classe da categoria a ser adicionada. a *classe* é **varchar (8)** com um valor padrão de trabalho e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -53,23 +53,23 @@ sp_add_category
 |ALERT|Adiciona uma categoria de alerta.|  
 |OPERATOR|Adiciona uma categoria de operador.|  
   
-`[ @type = ] 'type'`O tipo de categoria a ser adicionado. o *tipo* é **varchar (12)** , com um valor padrão de **local**e pode ser um desses valores.  
+`[ @type = ] 'type'` o tipo de categoria a ser adicionado. o *tipo* é **varchar (12)** , com um valor padrão de **local**e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |LOCAL|Uma categoria de trabalho local.|  
 |VÁRIOS SERVIDORES|Uma categoria de trabalho multisservidor.|  
-|Nenhuma|Uma categoria para uma classe que não seja trabalho **.**|  
+|NONE|Uma categoria para uma classe que não seja trabalho **.**|  
   
-`[ @name = ] 'name'`O nome da categoria a ser adicionada. O nome deve ser exclusivo na classe especificada. o *nome* é **sysname**, sem padrão.  
+`[ @name = ] 'name'` o nome da categoria a ser adicionada. O nome deve ser exclusivo na classe especificada. o *nome* é **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhum  
+ Nenhum.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_add_category** deve ser executado do banco de dados **msdb** .  
   
 ## <a name="permissions"></a>Permissões  

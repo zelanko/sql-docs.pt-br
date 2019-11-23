@@ -39,7 +39,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @account_id = ] account_id` a ID da conta da qual listar informações. *account_id* é **int**, com um padrão de NULL.  
+`[ @account_id = ] account_id` a ID da conta para a qual listar informações. *account_id* é **int**, com um padrão de NULL.  
   
 `[ @account_name = ] 'account_name'` o nome da conta para a qual listar informações. *account_name* é **sysname**, com um padrão de NULL.  
   
@@ -62,11 +62,11 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**servername**|**sysname**|O nome do servidor de email da conta.|  
 |**port**|**int**|O número da porta usada pelo servidor de email.|  
 |**username**|**nvarchar(128)**|O nome de usuário a ser usado para fazer logon no servidor de email, se o servidor de email usar autenticação. Quando **username** é nulo, Database Mail não usa a autenticação para essa conta.|  
-|**use_default_credentials**|**bit**|Especifica se o email deve ser enviado ao servidor SMTP com as credenciais do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** é bit, sem padrão. Quando este parâmetro for 1, o Database Mail usa as credenciais do serviço [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Quando esse parâmetro é 0, Database Mail usa o **\@username** e **\@password** para autenticação no servidor SMTP. Se **\@username** e **\@password** forem nulos, Database Mail usará a autenticação anônima. Consulte o administrador do SMTP antes de especificar esse parâmetro.|  
+|**use_default_credentials**|**bit**|Especifica se o email deve ser enviado ao servidor SMTP com as credenciais do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** é bit, sem padrão. Quando este parâmetro for 1, o Database Mail usa as credenciais do serviço [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Quando esse parâmetro for 0, Database Mail usará o **nome de usuário\@** e a **senha de\@** para autenticação no servidor SMTP. Se **\@nome de usuário** e a **senha de\@** forem nulos, Database Mail usará a autenticação anônima. Consulte o administrador do SMTP antes de especificar esse parâmetro.|  
 |**enable_ssl**|**bit**|Especifica se o Database Mail criptografa a comunicação usando o Protocolo SSL. Use esta opção se o SSL for exigido em seu servidor SMTP. **Enable_ssl** é bit, sem padrão. 1 indica que o Database Mail criptografa a comunicação usando SSL. 0 indica que o Database Mail envia o email sem criptografia SSL.|  
   
-## <a name="remarks"></a>Comentários  
- Quando nenhum *account_id* ou *account_name* é fornecido, o **sysmail_help_account** lista informações sobre todas as contas de Database Mail na instância de Microsoft SQL Server.  
+## <a name="remarks"></a>Remarks  
+ Quando nenhum *account_id* ou *account_name* é fornecido, **sysmail_help_account** lista informações sobre todas as contas de Database Mail na instância de Microsoft SQL Server.  
   
  O procedimento armazenado **sysmail_help_account_sp** está no banco de dados **msdb** e pertence ao esquema **dbo** . O procedimento deve ser executado com um nome de três partes se o banco de dados atual não for **msdb**.  
   
@@ -74,7 +74,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
  As permissões de execução para este procedimento assumem como padrão os membros da função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
- **A. Listando as informações para todas as contas @ no__t-0  
+ **A. Listando as informações de todas as contas**  
   
  O exemplo a seguir mostra a lista de informações de conta para todas as contas na instância.  
   
@@ -91,7 +91,7 @@ account_id  name                         description                            
 149         Audit Account                Account for audit e-mail.               audit@Adventure-Works.com Automated Mailer (Audit)         NULL            SMTP       smtp.Adventure-Works.com  25          NULL 0                          0        
 ```  
   
- **B. Listando as informações de uma conta específica @ no__t-0  
+ **B. Listando as informações de uma conta específica**  
   
  O exemplo a seguir mostra a lista de informações de conta para a conta denominada `AdventureWorks Administrator`.  
   

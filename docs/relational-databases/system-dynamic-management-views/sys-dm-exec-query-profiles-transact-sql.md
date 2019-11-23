@@ -35,7 +35,7 @@ Monitora o progresso da consulta em tempo real, enquanto a consulta está em exe
 ## <a name="table-returned"></a>Tabela retornada  
 Os contadores retornados são por operador por thread. Os resultados são dinâmicos e não correspondem aos resultados das opções existentes, como `SET STATISTICS XML ON` que só criam a saída quando a consulta é concluída.  
   
-|Nome da coluna|Data type|Descrição|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifica a sessão na qual esta consulta é executada. Referencia dm_exec_sessions.session_id.|  
 |request_id|**int**|Identifica a solicitação de destino. Referencia dm_exec_sessions.request_id.|  

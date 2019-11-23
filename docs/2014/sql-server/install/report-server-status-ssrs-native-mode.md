@@ -27,9 +27,9 @@ ms.locfileid: "71952464"
  Para abrir essa página, inicie o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e conecte-se à instância do servidor de relatórios. Para obter mais informações, [consulte &#40;Gerenciador de configurações do Reporting Services&#41;del](reporting-services-configuration-manager-native-mode.md).  
   
 > [!TIP]  
->  O Configuration Manager @ no__t-0 (RSConfigTool. exe) é instalado com um nível de privilégio de "highestAvailable". Este comportamento ocorre por design. O Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exige a comunicação com APIs do WMI do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Algumas comunicações de WMI do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exigem um nível mais alto ou administrativo de privilégios.  
+>  O Configuration Manager de[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (RSConfigTool. exe) é instalado com um nível de privilégio de "highestAvailable". Este comportamento ocorre por design. O Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exige a comunicação com APIs do WMI do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Algumas comunicações de WMI do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exigem um nível mais alto ou administrativo de privilégios.  
   
- Se você estabelecer conexão com o servidor de relatórios e todos os links da página estiverem esmaecidos, verifique se o serviço Servidor de Relatórios foi iniciado. O **status do serviço de relatório:** Deve ser "iniciado". Você também pode usar o aplicativo de console Serviços em Ferramentas do Administrador para verificar o status do serviço.  
+ Se você estabelecer conexão com o servidor de relatórios e todos os links da página estiverem esmaecidos, verifique se o serviço Servidor de Relatórios foi iniciado. O **status do serviço de relatório:** deve ser "iniciado". Você também pode usar o aplicativo de console Serviços em Ferramentas do Administrador para verificar o status do serviço.  
   
 ## <a name="options"></a>Opções  
  **Instância de SQL Server**  
@@ -71,8 +71,8 @@ ms.locfileid: "71952464"
  Para o serviço Servidor de Relatórios. Parar o serviço faz com que o servidor de relatórios pare de funcionar. Para obter mais informações, consulte [Iniciar e parar o serviço servidor de relatório](../../reporting-services/report-server/start-and-stop-the-report-server-service.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciador de configurações do Reporting Services F1 tópicos &#40;de ajuda sobre o&#41;modo nativo do SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Gerenciador de configurações do Reporting Services &#40;del&#41;](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
+ [Gerenciador de configurações do Reporting Services F1 tópicos &#40;de ajuda do modo&#41; nativo do SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Gerenciador de configurações do Reporting Services &#40;del&#41; ](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
  [Inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

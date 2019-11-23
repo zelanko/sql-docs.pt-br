@@ -32,7 +32,7 @@ ms.locfileid: "72278176"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|O nome do artigo.|  
-|**type**|**tinyint**|Indica o tipo do artigo, que pode ser um dos seguintes:<br /><br /> **10** = tabela.<br /><br /> **32** = somente esquema proc.<br /><br /> **64** = somente esquema de exibição ou somente esquema de exibição indexada.<br /><br /> **128** = somente esquema de função.<br /><br /> **160** = somente esquema sinônimo.|  
+|**tipo**|**tinyint**|Indica o tipo do artigo, que pode ser um dos seguintes:<br /><br /> **10** = tabela.<br /><br /> **32** = somente esquema proc.<br /><br /> **64** = somente esquema de exibição ou somente esquema de exibição indexada.<br /><br /> **128** = somente esquema de função.<br /><br /> **160** = somente esquema sinônimo.|  
 |**objid**|**int**|Identificador para o objeto de publicador.|  
 |**sync_objid**|**int**|Identificador da exibição que representa o conjunto de dados sincronizado.|  
 |**view_type**|**tinyint**|O tipo da exibição.<br /><br /> **0** = não é uma exibição; Use todos os objetos base.<br /><br /> **1** = exibição permanente.<br /><br /> **2** = exibição temporária.|  
@@ -51,7 +51,7 @@ ms.locfileid: "72278176"
 |**insert_proc**|**sysname**|O procedimento usado pelo resolvedor de conflitos padrão para inserir linhas durante a sincronização.|  
 |**update_proc**|**sysname**|O procedimento usado pelo resolvedor de conflitos padrão para atualizar linhas durante a sincronização.|  
 |**select_proc**|**sysname**|O nome de um procedimento armazenado gerado automaticamente usado pelo Merge Agent para efetuar bloqueio e localizar colunas e linhas para um artigo.|  
-|**schema_option**|**binary(8)**|Para obter os valores com suporte de *schema_option*, consulte [Transact &#40;-&#41;SQL sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
+|**schema_option**|**binary(8)**|Para obter os valores com suporte de *schema_option*, consulte [SP_ADDMERGEARTICLE &#40;Transact&#41;-SQL](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 |**destination_object**|**sysname**|O nome da tabela criada no Assinante.|  
 |**resolver_clsid**|**nvarchar(50)**|A ID do resolvedor de conflitos personalizado.|  
 |**subset_filterclause**|**nvarchar(1000)**|A cláusula de filtro para este artigo.|  
@@ -79,8 +79,8 @@ ms.locfileid: "72278176"
 |**lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**delete_proc**|**sysname**|O procedimento usado pelo resolvedor de conflitos padrão para excluir linhas durante a sincronização.|  
 |**before_upd_view_objid**|**int**|A ID de exibição de uma tabela antes das atualizações.|  
-|**delete_tracking**|**bit**|Indica se as exclusões são replicadas.<br /><br /> **0** = as exclusões não são replicadas.<br /><br /> **1** = as exclusões são replicadas, que é o comportamento padrão para replicação de mesclagem.<br /><br /> Quando o valor de *delete_tracking* é **0**, as linhas excluídas no Assinante devem ser removidas manualmente no Publicador e as linhas excluídas no Publicador devem ser manualmente removidas no Assinante.<br /><br /> Observação: Um valor de **0** resulta em não convergência.|  
-|**compensate_for_errors**|**bit**|Indica se ações de compensação são executadas quando são encontrados erros durante a sincronização.<br /><br /> **0** = ações de compensação estão desabilitadas.<br /><br /> **1** = alterações que não podem ser aplicadas em um assinante ou Publicador sempre levam a ações de compensação para desfazer essas alterações, que é o comportamento padrão para replicação de mesclagem.<br /><br /> Observação: Um valor de **0** resulta em não convergência.|  
+|**delete_tracking**|**bit**|Indica se as exclusões são replicadas.<br /><br /> **0** = as exclusões não são replicadas.<br /><br /> **1** = as exclusões são replicadas, que é o comportamento padrão para replicação de mesclagem.<br /><br /> Quando o valor de *delete_tracking* for **0**, as linhas excluídas no Assinante deverão ser removidas manualmente no Publicador e as linhas excluídas no Publicador deverão ser removidas manualmente no Assinante.<br /><br /> Observação: um valor de **0** resulta em não convergência.|  
+|**compensate_for_errors**|**bit**|Indica se ações de compensação são executadas quando são encontrados erros durante a sincronização.<br /><br /> **0** = ações de compensação estão desabilitadas.<br /><br /> **1** = alterações que não podem ser aplicadas em um assinante ou Publicador sempre levam a ações de compensação para desfazer essas alterações, que é o comportamento padrão para replicação de mesclagem.<br /><br /> Observação: um valor de **0** resulta em não convergência.|  
 |**pub_range**|**bigint**|O tamanho do intervalo de identidade do publicador.|  
 |**range**|**bigint**|O tamanho dos valores de identidade consecutivos que seria atribuído a assinantes em um ajuste.|  
 |**threshold**|**int**|A porcentagem de limite do intervalo de identidade.|  
@@ -89,8 +89,8 @@ ms.locfileid: "72278176"
 |**preserve_rowguidcol**|**bit**|Indica se a replicação usa uma coluna rowguid existente. Um valor de **1** significa que uma coluna ROWGUIDCOL existente é usada. **0** significa que a replicação adicionou a coluna ROWGUIDCOL.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Tabelas &#40;de replicação Transact-&#41;SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Exibições &#40;de replicação Transact&#41;-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
+   [de &#40;Transact-SQL&#41; de tabelas de replicação](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
+   [de &#40;exibições de&#41; replicação Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   

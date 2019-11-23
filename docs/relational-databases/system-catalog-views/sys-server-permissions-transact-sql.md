@@ -35,12 +35,12 @@ ms.locfileid: "71163927"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|Identifica a classe na qual a permissão existe.<br /><br /> 100 = Servidor<br /><br /> 101 = Principal de servidor<br /><br /> 105 = Ponto de extremidade|  
-|**class_desc**|**nvarchar(60)**|Descrição de classe na qual a permissão existe. Um dos seguintes valores:<br /><br /> **SERVIDOR**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**class_desc**|**nvarchar(60)**|Descrição de classe na qual a permissão existe. Um dos valores seguintes:<br /><br /> **SERVIDOR**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
 |**major_id**|**int**|ID do protegível no qual a permissão existe, interpretada de acordo com a classe. Em geral, é o tipo de ID que se aplica àquilo que a classe representa. A interpretação para sem-padrão é a seguinte:<br /><br /> 100 = sempre 0|  
 |**minor_id**|**int**|ID secundária na qual a permissão existe, interpretada de acordo com a classe.|  
 |**grantee_principal_id**|**int**|ID do principal de servidor para a qual as permissões são concedidas.|  
 |**grantor_principal_id**|**int**|ID do principal de servidor do concessor dessas permissões.|  
-|**type**|**char(4)**|Tipo de permissão de servidor. Para obter uma lista de tipos de permissão, consulte a próxima tabela.|  
+|**tipo**|**char(4)**|Tipo de permissão de servidor. Para obter uma lista de tipos de permissão, consulte a próxima tabela.|  
 |**permission_name**|**nvarchar(128)**|Nome de permissão.|  
 |**state**|**char(1)**|Estado de permissão:<br /><br /> D = Negar<br /><br /> R = Revogar<br /><br /> G = Conceder<br /><br /> W = Grant com a opção Grant|  
 |**state_desc**|**nvarchar(60)**|Descrição do estado da permissão:<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  

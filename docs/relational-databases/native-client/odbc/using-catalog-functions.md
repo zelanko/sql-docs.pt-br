@@ -34,7 +34,7 @@ ms.locfileid: "73760329"
   
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a consultas distribuídas nas quais dados de várias fontes de dados OLE DB heterogêneas são acessadas em uma única consulta. Um dos métodos para acessar uma fonte de dados OLE DB remota é definir a fonte de dados como um servidor vinculado. Isso pode ser feito usando [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Depois que o servidor vinculado foi definido, é possível referenciar objetos nesse servidor em instruções Transact-SQL usando um nome de quatro partes:  
   
- *linked_server_name. Catalog. Schema. object_name*.  
+ *linked_server_name.catalog.schema.object_name*.  
   
  O driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client dá suporte a duas funções específicas do driver que ajudam a obter informações de catálogo de servidores vinculados:  
   
@@ -78,11 +78,11 @@ ms.locfileid: "73760329"
   
 ## <a name="see-also"></a>Consulte também  
  [  &#40;SQL Server Native Client&#41; ODBC](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
-   [SQLColumnPrivileges](../../../relational-databases/native-client-odbc-api/sqlcolumnprivileges.md)  
- [Hipercolunas](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)   
- [Sqlprimarykeys](../../../relational-databases/native-client-odbc-api/sqlprimarykeys.md)   
-   [SQLTablePrivileges](../../../relational-databases/native-client-odbc-api/sqltableprivileges.md)  
-   [SQLTables](../../../relational-databases/native-client-odbc-api/sqltables.md)  
+ [SQLColumnPrivileges](../../../relational-databases/native-client-odbc-api/sqlcolumnprivileges.md)   
+ [SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)   
+ [SQLPrimaryKeys](../../../relational-databases/native-client-odbc-api/sqlprimarykeys.md)   
+ [SQLTablePrivileges](../../../relational-databases/native-client-odbc-api/sqltableprivileges.md)   
+ [SQLTables](../../../relational-databases/native-client-odbc-api/sqltables.md)   
  [SQLStatistics](../../../relational-databases/native-client-odbc-api/sqlstatistics.md)  
   
   

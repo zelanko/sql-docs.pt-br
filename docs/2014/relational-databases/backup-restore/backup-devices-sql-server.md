@@ -61,7 +61,7 @@ ms.locfileid: "70155053"
  dispositivo de backup físico  
  Uma unidade de fita ou um arquivo de disco é fornecido pelo sistema operacional. Um backup pode ser gravado em 1 a 64 dispositivos de backup. Se um backup exigir vários dispositivos de backup, todos os dispositivos deverão corresponder a um único tipo de dispositivo (disco ou fita).  
   
- SQL Server backups também podem ser gravados no serviço de armazenamento de BLOBs do Azure, além de disco ou fita.  
+ Os backups do SQL Server podem ser gravados no serviço de Armazenamento Blobs do Azure, bem como em disco ou fita.  
   
 ##  <a name="DiskBackups"></a>Usando dispositivos de backup em disco  
  **Nesta seção:**  
@@ -110,7 +110,7 @@ RESTORE DATABASE AdventureWorks2012
 ```  
   
 ###  <a name="BackupFileDiskPath"></a>Especificando o caminho de um arquivo de backup em disco  
- Ao especificar um arquivo de backup, você deve digitar seu caminho completo e o nome do arquivo. Se você especificar somente o nome de arquivo ou um caminho relativo ao fazer o backup de um arquivo, o arquivo de backup será armazenado no diretório de backup padrão. O diretório de backup padrão é C:\Arquivos de Programas\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, em que *n* é o número da instância do servidor. Portanto, para a instância de servidor padrão, o diretório de backup padrão é: C:\Arquivos de Programas\microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\Backup.  
+ Ao especificar um arquivo de backup, você deve digitar seu caminho completo e o nome do arquivo. Se você especificar somente o nome de arquivo ou um caminho relativo ao fazer o backup de um arquivo, o arquivo de backup será armazenado no diretório de backup padrão. O diretório de backup padrão é C:\Arquivos de Programas\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, onde *n* é o número da instância do servidor. Portanto, para a instância de servidor padrão, o diretório de backup padrão é: C:\Arquivos de Programas\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup.  
   
  Para evitar ambiguidade, especialmente em scripts, é recomendável especificar explicitamente o caminho do diretório de backup em cada cláusula DISK. Porém, isto é menos importante quando você está usando o Editor de Consultas. Nesse caso, se você tiver certeza de que o arquivo de backup reside no diretório de backup padrão, pode-se omitir o caminho da cláusula DISK. Por exemplo, a instrução `BACKUP` a seguir faz o backup do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] no diretório de backup padrão.  
   
@@ -207,17 +207,17 @@ GO
 ###  <a name="OpenTapes"></a>Gerenciando fitas abertas  
  Para exibir uma lista de dispositivos de fitas abertas e o status das solicitações de montagem, consulte a exibição de gerenciamento dinâmico [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) . Esta exibição mostra todas as fitas abertas. Elas incluem fitas em uso que estão temporariamente inativas enquanto esperam a próxima operação de BACKUP ou RESTAURAÇÃO.  
   
- Se uma fita for deixada aberta acidentalmente, a maneira mais rápida de liberá-la será usar o seguinte comando: RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Para obter mais informações, consulte [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
+ Se uma fita foi acidentalmente deixada aberta, o modo mais rápido de liberá-la é usando o seguinte comando: RESTORE REWINDONLY FROM TAPE **=** _nome_dispositivo_backup_. Para obter mais informações, consulte [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
   
 ## <a name="using-the-azure-blob-storage-service"></a>Usando o serviço de armazenamento de BLOBs do Azure  
- SQL Server backups podem ser gravados no serviço de armazenamento de BLOBs do Azure.  Para obter mais informações sobre como usar o serviço de armazenamento de BLOBs do Azure para seus backups, consulte [SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Os backups do SQL Server podem ser gravados no serviço de Armazenamento de Blobs do Azure.  Para obter mais informações sobre como usar o serviço de armazenamento de BLOBs do Azure para seus backups, consulte [SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ##  <a name="LogicalBackupDevice"></a>Usando um dispositivo de backup lógico  
  Um *dispositivo de backup lógico* é um nome opcional definido pelo usuário que aponta para um dispositivo de backup físico específico (um arquivo de disco ou uma unidade de fita). Um dispositivo de backup lógico permite que você use nomes indiretos ao fazer referência ao dispositivo de backup físico correspondente.  
   
  Definir um dispositivo de backup lógico envolve a atribuição de um nome lógico a um dispositivo físico. Por exemplo, um dispositivo lógico, AdventureWorksBackups, pode ser definido para apontar para o arquivo Z:\SQLServerBackups\AdventureWorks2012.bak ou a unidade de fita \\\\.\tape0. Os comandos de backup e restauração podem especificar o AdventureWorksBackups como o dispositivo de backup, em vez de DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' ou TAPE = '\\\\.\tape0'.  
   
- O nome de dispositivo lógico deve ser exclusivo entre todos os dispositivos de backup lógicos na instância do servidor. Para exibir os nomes de dispositivo lógicos existentes, consulte a exibição do catálogo [sys.backup_devices](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql) . Essa exibição mostra o nome de cada dispositivo de backup lógico e descreve o tipo e o nome de arquivo físico ou caminho do dispositivo de backup físico correspondente.  
+ O nome de dispositivo lógico deve ser exclusivo entre todos os dispositivos de backup lógicos na instância do servidor. Para exibir os nomes de dispositivo lógicos existentes, consulte a exibição de catálogo [sys.backup_devices](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql) . Essa exibição mostra o nome de cada dispositivo de backup lógico e descreve o tipo e o nome de arquivo físico ou caminho do dispositivo de backup físico correspondente.  
   
  Depois que um dispositivo de backup lógico é definido, em um comando de BACKUP ou RESTAURAÇÃO, é possível especificar o dispositivo de backup lógico em vez do nome físico do dispositivo. Por exemplo, a instrução seguinte faz backup do banco de dados `AdventureWorks2012` no dispositivo de backup lógico `AdventureWorksBackups` .  
   
@@ -245,7 +245,7 @@ GO
 >  Os conjuntos de mídias de backup espelhados oferecem suporte somente em [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] e versões posteriores.  
   
 ##  <a name="Archiving"></a>Arquivando backups de SQL Server  
- Recomendamos que você use um utilitário de backup do sistema de arquivos para arquivar os backups de disco e que armazene os arquivos externamente. Usar um disco tem a vantagem de usar a rede para gravar os backups arquivados em um disco externo. O serviço de armazenamento de BLOBs do Azure pode ser usado como opção de arquivamento fora do site.  Você pode carregar os backups de disco ou gravar os backups diretamente no serviço de armazenamento de BLOBs do Azure.  
+ Recomendamos que você use um utilitário de backup do sistema de arquivos para arquivar os backups de disco e que armazene os arquivos externamente. Usar um disco tem a vantagem de usar a rede para gravar os backups arquivados em um disco externo. O serviço de Armazenamento de Blobs do Azure pode ser usado como a opção de arquivamento fora do site.  Você pode carregar seus backups em disco ou gravar diretamente os backups no serviço de Armazenamento de Blobs do Azure.  
   
  Outra abordagem de arquivamento comum é gravar os backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um disco de backup local, arquivá-los em uma fita e, em seguida, armazenar as fitas externamente.  
   

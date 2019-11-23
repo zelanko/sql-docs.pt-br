@@ -25,7 +25,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 09/10/2019
 ms.locfileid: "70874505"
 ---
-# <a name="possible-failures-during-database-mirroring"></a>Possíveis falhas durante espelhamento de banco de dados
+# <a name="possible-failures-during-database-mirroring"></a>Possíveis falhas durante o espelhamento de banco de dados
   Problemas físicos, do sistema operacional ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem causar uma falha em uma sessão de espelhamento de banco de dados. O espelhamento de banco de dados não verifica regularmente os componentes dos quais o Sqlservr.exe depende para verificar se estão funcionando corretamente ou se houve falha. Porém, para alguns tipos de falhas, o componente afetado informa um erro ao Sqlservr.exe. Um erro informado por outro componente é chamado um *erro de hardware*. Para detectar outras falhas que de outra forma passariam despercebidas, o espelhamento de banco de dados implementa seu próprio mecanismo de tempo limite. Quando ocorre um tempo limite de espelhamento, o espelhamento de banco de dados assume que ocorreu uma falha e declara um *erro de software*. Porém, algumas falhas que acontecem no nível da instância do SQL Server não causam espelhamento para tempo limite e podem não ser detectadas.  
   
 > [!IMPORTANT]  
@@ -90,7 +90,7 @@ ms.locfileid: "70874505"
   
  Para manter uma conexão aberta, uma instância do servidor deve receber um ping naquela conexão dentro do período de tempo-limite definido, mais o tempo necessário para enviar um ou mais pings. A recepção de um ping durante o período de tempo-limite indica que a conexão ainda está aberta e que as instâncias do servidor estão se comunicando por ela. Ao receber um ping, uma instância do servidor reajusta seu contador de tempo-limite naquela conexão.  
   
- Se nenhum ping for recebido em uma conexão durante o período de tempo-limite, uma instância do servidor considera que a conexão esgotou seu tempo limite. A instância do servidor encerra a conexão cujo tempo-limite está esgotado e controla o evento com tempo-limite esgotado de acordo com o estado e o modo de operação da sessão.  
+ Se nenhum ping for recebido em uma conexão durante o período de tempo limite, uma instância de servidor considerará que a conexão atingiu o tempo limite. A instância de servidor fecha a conexão expirada e manipula o evento de tempo limite de acordo com o estado e o modo de operação da sessão.  
   
  Até mesmo se o outro servidor estiver de fato procedendo corretamente, um tempo-limite será considerado uma falha. Se o valor do tempo-limite de uma sessão for muito pequeno para uma capacidade de resposta regular de um dos parceiros, podem ocorrer falsas falhas. Uma falsa falha ocorre quando uma instância do servidor contata com êxito outra instância cujo tempo de resposta é tão lento que seus pings não são recebidos antes da expiração do período de tempo-limite.  
   

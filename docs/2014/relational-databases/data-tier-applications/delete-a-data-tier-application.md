@@ -30,9 +30,9 @@ ms.locfileid: "72782741"
 # <a name="delete-a-data-tier-application"></a>Excluir um Aplicativo da Camada de Dados
   Você poderá excluir um aplicativo da camada de dados usando o Assistente para Excluir Aplicativo da Camada de Dados ou um script do Windows PowerShell. É possível especificar se o banco de dados associado será retido, desanexado ou removido.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Antes de começar:**  [Limitações e restrições](#LimitationsRestrictions), [Permissões](#Permissions)  
   
--   **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
+-   **Para atualizar um DAC, usando o:**  [Assistente para Registrar o Aplicativo da Camada de Dados](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  Ao excluir uma instância de DAC (aplicativo da camada de dados), você escolhe uma das três opções que especificam o que será feito com o banco de dados associado ao aplicativo da camada de dados. Todas as três opções excluem os metadados da definição do DAC. As opções diferem no que fazem com o banco de dados associado ao aplicativo da camada de dados. O assistente não exclui nenhum dos objetos do nível de instância associados ao DAC ou banco de dados, como logons.  
@@ -43,7 +43,7 @@ ms.locfileid: "72782741"
 |Desanexar banco de dados|O banco de dados associado é desanexado. A instância do Mecanismo de Banco de Dados não pode fazer referência ao banco de dados, mas os dados e os arquivos de log estão intatos.|  
 |Excluir banco de dados|O banco de dados associado é removido. Os dados e os arquivos de log são excluídos.|  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
  Não há nenhum mecanismo automático para restaurar os metadados da definição do DAC ou o banco de dados depois que um DAC é excluído. A maneira como a instância do DAC pode ser recriada manualmente depende da opção de exclusão.  
   
 |Opção|Como recriar a instância do DAC|  
@@ -86,7 +86,7 @@ ms.locfileid: "72782741"
   
  **Avançar >** : continua para a página **Escolher Método**.  
   
- **Cancelar** : finaliza o assistente sem excluir um aplicativo da camada de dados ou banco de dados.  
+ **Cancelar**: finaliza o assistente sem excluir um aplicativo da camada de dados ou banco de dados.  
   
 ##  <a name="Choose_method"></a> Página Escolher Método  
  Use esta página para especificar a opção que tratará o banco de dados associado ao DAC que será excluído.  
@@ -105,7 +105,7 @@ ms.locfileid: "72782741"
   
  **Avançar >** : continua para a página **Resumo**.  
   
- **Cancelar** : finaliza o assistente sem excluir o DAC ou o banco de dados.  
+ **Cancelar**: finaliza o assistente sem excluir o DAC ou o banco de dados.  
   
 ##  <a name="Summary"></a> Página de Resumo  
  Use esta página para examinar as ações que o assistente tomará ao excluir a instância do DAC.  
@@ -116,7 +116,7 @@ ms.locfileid: "72782741"
   
  **Avançar >** : exclui a instância de DAC usando o método escolhido na página anterior e continua para a página **Excluir Aplicativo da Camada de Dados**.  
   
- **Cancelar** : finaliza o assistente sem excluir a instância de DAC.  
+ **Cancelar**: finaliza o assistente sem excluir a instância de DAC.  
   
 ##  <a name="Delete_datatier_application"></a> Página Excluir Aplicativo da Camada de Dados  
  Esta página relata o êxito ou a falha da operação de exclusão.  
@@ -125,7 +125,7 @@ ms.locfileid: "72782741"
   
  **Salvar Relatório** : selecione esse botão para salvar o relatório de exclusão em um arquivo HTML. O arquivo relata o status de cada ação, inclusive todos os erros gerados por qualquer uma das ações. A pasta padrão é SQL Server Management Studio\DAC Packages na pasta Documents da conta do Windows.  
   
- **Concluir** : finaliza o assistente.  
+ **Concluir**: finaliza o assistente.  
   
 ##  <a name="DeleteDACPowerShell"></a> Excluir um DAC usando o PowerShell  
  **Para excluir um DAC usando o script do PowerShell**  
@@ -218,10 +218,10 @@ $dacName  = "MyApplication"
 ## $dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DropDatabase)  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [Aplicativos da Camada de Dados](data-tier-applications.md)   
- [Aplicativos da Camada de Dados](data-tier-applications.md)   
+## <a name="see-also"></a>Consulte também  
+ [Aplicativos da camada de dados](data-tier-applications.md)   
+ [Aplicativos da camada de dados](data-tier-applications.md)   
  [Implantar um aplicativo da camada de dados](deploy-a-data-tier-application.md)   
  [Registrar um banco de dados como um DAC](register-a-database-as-a-dac.md)   
- [Fazer backup e restaurar bancos de dados do SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Database Detach and Attach &#40;SQL Server&#41; [Anexar e desanexar banco de dados (SQL Server)]](../databases/database-detach-and-attach-sql-server.md)  
+ [Backup e Restauração de bancos de dados do SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)  

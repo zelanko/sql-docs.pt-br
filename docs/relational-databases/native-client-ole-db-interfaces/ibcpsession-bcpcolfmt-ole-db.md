@@ -42,8 +42,8 @@ HRESULT BCPColFmt(
       DBORDINAL idxServerCol);  
 ```  
   
-## <a name="remarks"></a>Comentários  
- O método **BCPColFmt** é usado para criar uma associação entre campos de arquivo de dados BCP e colunas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele usa o comprimento, o tipo, o terminador e o comprimento do prefixo de uma coluna como parâmetros e define cada uma dessas propriedades para arquivos individuais.  
+## <a name="remarks"></a>Remarks  
+ O método **BCPColFmt** é usado para criar uma associação entre campos de arquivo de dados BCP e colunas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ele usa o comprimento, o tipo, o terminador e o comprimento do prefixo de uma coluna como parâmetros e define cada uma dessas propriedades para arquivos individuais.  
   
  Caso o usuário opte pelo modo interativo, esse método é chamado duas vezes: uma para definir o formato da coluna de acordo com os valores padrão (que dependem do tipo de coluna do servidor) e outra para definir o formato de acordo com o tipo de coluna da opção feita pelo cliente durante o modo interativo em cada coluna.  
   
@@ -91,7 +91,7 @@ HRESULT BCPColFmt(
   
  Definir **cbUserData** como BCP_LENGTH_NULL indica que todos os valores nos campos de arquivo de dados são, ou deveriam ser, definidos como NULL. Definir **cbUserData** como BCP_LENGTH_VARIABLE indica que o sistema deve determinar o comprimento dos de cada campo. Para alguns campos, isso poderia significar que um indicador de comprimento/nulidade é gerado para preceder dados de uma cópia do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou que o indicador é esperado nos dados copiados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para tipos de dados binários e de caractere do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **cbUserData** pode ser BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 ou um valor positivo. Caso **cbUserData** seja BCP_LENGTH_VARIABLE, o sistema usa o indicador de comprimento, se presente, ou uma sequência de terminador para determinar o comprimento dos dados. Se forem fornecidos um indicador de comprimento e uma sequência de terminador, a cópia em massa usará aquele que resultar na menor quantidade de dados sendo copiados. Se **cbUserData** for BCP_LENGTH_VARIABLE, o tipo de dados for um caractere ou um tipo binário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um indicador de tamanho nem uma sequência de terminador forem especificados, o sistema retornará uma mensagem de erro.  
+ Para tipos de dados binários e de caractere do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **cbUserData** pode ser BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 ou algum valor positivo. Caso **cbUserData** seja BCP_LENGTH_VARIABLE, o sistema usa o indicador de comprimento, se presente, ou uma sequência de terminador para determinar o comprimento dos dados. Se forem fornecidos um indicador de comprimento e uma sequência de terminador, a cópia em massa usará aquele que resultar na menor quantidade de dados sendo copiados. Caso **cbUserData** seja BCP_LENGTH_VARIABLE, o tipo de dados é um caractere ou tipo binário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e caso nem um indicador de comprimento nem uma sequência de terminador sejam especificados, o sistema retornar uma mensagem de erro.  
   
  Se **cbUserData** for 0 ou um valor positivo, o sistema usará **cbUserData** como o comprimento de dados máximo. Entretanto, se, além de um **cbUserData**positivo, for fornecido um indicador de comprimento ou uma sequência de terminador, o sistema determinará o comprimento dos dados usando o método que resulta na menor quantidade de dados sendo copiados.  
   
@@ -117,7 +117,7 @@ HRESULT BCPColFmt(
  O método foi bem-sucedido.  
   
  E_FAIL  
- Erro específico do provedor. Para obter informações detalhadas, use a interface [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).  
+ Ocorreu um erro específico do provedor. Para obter informações detalhadas, use a interface [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
   
  E_UNEXPECTED  
  A chamada para o método era inesperada. Por exemplo, o método [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) não foi chamado antes de esse método ser chamado.  

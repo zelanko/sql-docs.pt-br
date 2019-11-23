@@ -57,7 +57,7 @@ sp_validatemergesubscription [@publication=] 'publication'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_validatemergesubscription** é usado na replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
@@ -66,6 +66,6 @@ sp_validatemergesubscription [@publication=] 'publication'
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Validar  de dados replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
- [sp_validatemergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)  
+ [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)  
   
   

@@ -22,7 +22,7 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e274375177859d456592a6e1879d7f528d1cb724
 ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/13/2019
 ms.locfileid: "73983089"
@@ -944,7 +944,7 @@ Esse comando redefine todos os contadores como 0.
 |WAIT_XTP_CKPT_CLOSE |Ocorre ao aguardar a conclusão de um ponto de verificação. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
 |WAIT_XTP_CKPT_ENABLED |Ocorre quando o ponto de verificação está desabilitado e aguardando a habilitação do ponto de verificação., <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
 |WAIT_XTP_CKPT_STATE_LOCK |Ocorre ao sincronizar a verificação do estado do ponto de verificação. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
-|WAIT_XTP_COMPILE_WAIT |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e posterior.| 
+|WAIT_XTP_COMPILE_WAIT |Somente para uso interno. <br /> **APLICA-SE A**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e posterior.| 
 |WAIT_XTP_GUEST |Ocorre quando o alocador de memória do banco de dados precisa parar de receber notificações de baixa memória. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |WAIT_XTP_HOST_WAIT |Ocorre quando as esperas são disparadas pelo mecanismo de banco de dados e implementadas pelo host. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 

@@ -43,7 +43,7 @@ ms.locfileid: "73843893"
 |função|**tinyint**|Função de replicação geográfica, uma das:<br /><br /> 0 = primário. O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.<br /><br /> 1 = secundário.  O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|O tipo secundário, um de:<br /><br /> 0 = nenhuma conexão direta é permitida para o banco de dados secundário e o banco de dados não está disponível para acesso de leitura.<br /><br /> 2 = todas as conexões são permitidas para o banco de dados no repl secundário; vo para acesso somente leitura.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|Não<br /><br /> Todos|  
+|secondary_allow_connections_desc|**nvarchar(256)**|Não<br /><br /> Todas|  
 |last_commit|**datetimeoffset**|A hora da última transação confirmada no banco de dados. Se for recuperado no banco de dados primário, ele indica a hora da última confirmação no banco de dados primário. Se for recuperado no banco de dados secundário, ele indica a hora da última confirmação no banco de dados secundário. Se for recuperado no banco de dados secundário quando o primário do link de replicação estiver inativo, ele indicará até que ponto o secundário foi pego.|
   
 > [!NOTE]  

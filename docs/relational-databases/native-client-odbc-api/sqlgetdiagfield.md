@@ -38,7 +38,7 @@ ms.locfileid: "73786476"
   
  O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client informa os códigos de função dinâmicos adicionais a seguir que identificam a última instrução do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tentada. O código de função dinâmico é retornado no cabeçalho (record 0) do registro de diagnóstico definido e, portanto, está disponível em cada execução (bem-sucedida ou não).  
   
-|Código de função dinâmico|Origem|  
+|Código de função dinâmico|Source|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|instrução ALTER DATABASE|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|Instrução CHECKPOINT|  

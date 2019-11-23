@@ -28,7 +28,7 @@ ms.locfileid: "72782886"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> Pré-requisitos  
   
 -   Você deve estar conectado à instância do servidor que hospeda a réplica primária.  
   
@@ -98,11 +98,11 @@ ms.locfileid: "72782886"
     ```  
   
     > [!NOTE]  
-    >  Para exibir a sintaxe de um cmdlet, use o cmdlet `Get-Help` no ambiente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para exibir a sintaxe de um cmdlet, use o cmdlet `Get-Help` no ambiente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para saber mais, confira [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 Para configurar e usar o provedor de SQL Server PowerShell, consulte [provedor de SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md).
   
-## <a name="see-also"></a>Consulte Também  
- [Visão geral do &#40;grupos de disponibilidade AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
- [Modos de disponibilidade (grupos de disponibilidade AlwaysOn)](availability-modes-always-on-availability-groups.md)    
+## <a name="see-also"></a>Consulte também  
+ [Visão geral do &#40;grupos de disponibilidade AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
+ [Modos de disponibilidade (grupos de disponibilidade AlwaysOn)](availability-modes-always-on-availability-groups.md)   
  [Failover e modos &#40;de failover grupos de disponibilidade AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)  

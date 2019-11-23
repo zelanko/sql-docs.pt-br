@@ -72,7 +72,7 @@ ms.locfileid: "73882260"
   
 1.  Execute [sp_get_distributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-get-distributor-transact-sql) para determinar se o servidor já está configurado como um Distribuidor.  
   
-    -   Se o valor **installed** no resultado definido for **0**, execute [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) no Distribuidor no banco de dados mestre. Especifique uma senha forte para **\@senha**. Essa senha para a conta **distributor_admin** será usada pelo Publicador ao se conectar ao Editor.  
+    -   Se o valor **installed** no resultado definido for **0**, execute [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) no Distribuidor no banco de dados mestre. Especifique uma senha forte para **\@senha**. Essa senha para a conta **distributor_admin** será usada pelo Publicador ao se conectar ao Distribuidor.  
   
     -   Se o valor **bd de distribuição instalado** no resultado definido for **0**, execute [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) no Distribuidor no banco de dados mestre. Especifique o nome do banco de dados de distribuição para **\@banco de dados**. Opcionalmente, você pode especificar o período máximo de retenção transacional para **\@max_distretention** e o período de retenção do histórico para **\@history_retention**. Se um banco de dados novo estiver sendo criado, especifique os parâmetros de propriedade de banco de dados desejados.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "73882260"
   
 ## <a name="see-also"></a>Consulte também  
  [Exibir e modificar propriedades de Publicador e Distribuidor](view-and-modify-distributor-and-publisher-properties.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
+ [Conceitos dos procedimentos armazenados no sistema de replicação](concepts/replication-system-stored-procedures-concepts.md)   
  [Configurar Distribuição](configure-distribution.md)   
  [Conceitos de objetos de gerenciamento de replicação](concepts/replication-management-objects-concepts.md)   
  [Configurar a replicação para &#40;grupos de disponibilidade AlwaysOn SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 

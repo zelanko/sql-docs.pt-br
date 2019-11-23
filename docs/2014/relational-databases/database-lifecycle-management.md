@@ -37,17 +37,17 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 08/29/2019
 ms.locfileid: "70154549"
 ---
-# <a name="database-lifecycle-management"></a>Gerenciamento de ciclo de vida do banco de dados
+# <a name="database-lifecycle-management"></a>Gerenciamento de ciclo de vida de banco de dados
   O gerenciamento de ciclo de vida de banco de dados (DLM) é uma abordagem baseado em política que gerenciar ativos de dados e bancos de dados. O DLM não é um produto, mas uma abordagem abrangente para gerenciar o esquema de banco de dados, os dados e os metadados de um aplicativo de banco de dados. Uma abordagem ponderada e pró-ativa do DLM permite que uma organização gerencie recursos de dados de acordo com os níveis apropriadas de desempenho, proteção, disponibilidade e custo.  
   
  O DLM começa com a discussão sobre o design e a intenção do projeto, continua com o desenvolvimento, o teste, a compilação, a implantação, a manutenção, o monitoramento e as atividades de backup do banco de dados, e termina com o arquivamento dos dados. Este tópico fornece uma visão geral das fases do DLM, que começam com o desenvolvimento e o progresso do banco de dados ao longo das ações de compilação, implantação e monitoramento (Figura 1). Também são incluídas as atividades de gerenciamento de dados e as operações de portabilidade de dados, como importação/exportação, backup, migração e sincronização.  
   
- Para ler o tópico completo, veja [DLM (Gerenciamento de Ciclo de Vida de Banco de Dados)](https://go.microsoft.com/fwlink/?LinkId=276949).  
+ Para ler o tópico completo, consulte [Gerenciamento de ciclo de vida de banco de dados (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
 ## <a name="see-also"></a>Consulte também  
- [Home Page do Azure](http://www.windowsazure.com/)   
- [Centro de desenvolvimento do Azure](http://www.windowsazure.com/develop/overview/)   
- [Centro de gerenciamento do Azure](http://www.windowsazure.com/manage/overview/)   
+ [Página inicial do Azure](http://www.windowsazure.com/)   
+ [Central de Desenvolvedores do Azure](http://www.windowsazure.com/develop/overview/)   
+ [Centro de Gerenciamento do Azure](http://www.windowsazure.com/manage/overview/)   
  [Blog da equipe do Azure](http://www.windowsazure.com/community/blog/)   
  [Opções de suporte do Azure](http://www.windowsazure.com/support/contact/)  
   

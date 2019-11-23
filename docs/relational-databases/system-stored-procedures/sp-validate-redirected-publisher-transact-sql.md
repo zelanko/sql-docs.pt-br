@@ -50,9 +50,9 @@ ms.locfileid: "72252055"
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- nenhuma.  
+ Nenhuma.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Se não existir nenhuma entrada para o Publicador e o banco de dados de publicação, **sp_validate_redirected_publisher** retornará NULL no parâmetro de saída *\@redirected_publisher*. Se uma entrada existir, ela será retornada no parâmetro de saída nos casos de êxito e de falha.  
   
  Se a validação for bem-sucedida, **sp_validate_redirected_publisher** retornará uma indicação de êxito.  
@@ -60,7 +60,7 @@ ms.locfileid: "72252055"
  Se a validação falhar, ocorrerão erros descrevendo a falha.  
   
 ## <a name="permissions"></a>Permissões  
- O chamador deve ser membro da função de servidor fixa **sysadmin** , da função de banco de dados fixa **db_owner** para o banco de dados de distribuição ou de um membro de uma lista de acesso à publicação para uma publicação definida associada ao banco de dados Publicador.  
+ O chamador deve ser um membro da função de servidor fixa **sysadmin** , a **db_owner** função fixa de banco de dados para o banco de dados de distribuição ou um membro de uma lista de acesso à publicação para uma publicação definida associada ao banco de dados Publicador.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

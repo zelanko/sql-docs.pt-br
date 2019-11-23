@@ -66,7 +66,7 @@ sp_help_category [ [ @class = ] 'class' ]
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Quando **\@suffix** for **0**, **sp_help_category** retornará o seguinte conjunto de resultados:  
+ Quando **\@sufixo** é **0**, **sp_help_category** retorna o seguinte conjunto de resultados:  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -74,7 +74,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|Tipo de categoria:<br /><br /> **1** = Local<br /><br /> **2** = multisservidor<br /><br /> **3** = nenhum|  
 |**name**|**sysname**|Nome da categoria|  
   
- Quando **\@suffix** é **1**, **sp_help_category** retorna o seguinte conjunto de resultados:  
+ Quando **\@sufixo** é **1**, **sp_help_category** retorna o seguinte conjunto de resultados:  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -82,7 +82,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**sysname**|Tipo de categoria. Um dos **locais**, **vários servidores**ou **nenhum**|  
 |**name**|**sysname**|Nome da categoria|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_help_category** deve ser executado do banco de dados **msdb** .  
   
  Se nenhum parâmetro for especificado, o conjunto de resultados fornecerá informações sobre todas as categorias de trabalho.  

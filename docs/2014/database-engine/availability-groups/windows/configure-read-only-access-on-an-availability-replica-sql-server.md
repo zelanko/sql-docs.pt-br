@@ -42,7 +42,7 @@ ms.locfileid: "72797741"
   
 |Tarefa|Permissões|  
 |----------|-----------------|  
-|Para configurar réplicas ao criar um grupo de disponibilidade|Requer associação na função de servidor fixa **sysadmin** e a permissão de servidor CREATE AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou CONTROL SERVER.|  
+|Para configurar réplicas ao criar um grupo de disponibilidade|Requer a associação na função de servidor fixa **sysadmin** e a permissão de servidor CREATE AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.|  
 |Para modificar uma réplica de disponibilidade|Requer a permissão ALTER AVAILABILITY GROUP no grupo de disponibilidade, a permissão CONTROL AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.|  
   
   
@@ -163,7 +163,7 @@ GO
          Todas as conexões são permitidas com os bancos de dados na réplica primária. Essa é a configuração padrão.  
   
     > [!NOTE]  
-    >  Para exibir a sintaxe de um cmdlet, use o cmdlet `Get-Help` no ambiente do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para exibir a sintaxe de um cmdlet, use o cmdlet `Get-Help` no ambiente do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell. Para saber mais, confira [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 Para configurar e usar o provedor de SQL Server PowerShell, consulte [provedor de SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md).
   
@@ -188,8 +188,8 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
   
     ||Pré-requisito|Link|  
     |-|------------------|----------|  
-    |![Verificação](../../media/checkboxemptycenterxtraspacetopandright.gif "verificação")|Verifique se o grupo de disponibilidade tem um ouvinte.|[Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
-    |![Verificação](../../media/checkboxemptycenterxtraspacetopandright.gif "verificação")|Configurar o roteamento somente leitura para o grupo de disponibilidade.|[Configurar o roteamento somente leitura para um grupo de disponibilidade &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
+    |![Verificação](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Verifique se o grupo de disponibilidade tem um ouvinte.|[Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
+    |![Verificação](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Configurar o roteamento somente leitura para o grupo de disponibilidade.|[Configurar o roteamento somente leitura para um grupo de disponibilidade &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
   
  **Fatores que podem afetar gatilhos e trabalhos depois de um failover**  
   
@@ -202,7 +202,7 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
  Para identificar um banco de dados leitura/gravação, especifique READ_WRITE como o valor.  
   
   
-##  <a name="RelatedTasks"></a> Tarefas Relacionadas  
+##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Configurar o roteamento somente leitura para um grupo de disponibilidade &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
@@ -232,7 +232,7 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
 -   [AlwaysOn: secundária legível e latência de dados](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx)  
   
   
-## <a name="see-also"></a>Consulte Também  
- [Visão geral do &#40;grupos de disponibilidade AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
+## <a name="see-also"></a>Consulte também  
+ [Visão geral do &#40;grupos de disponibilidade AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
  [Secundárias ativas: réplicas secundárias legíveis &#40;grupos de disponibilidade AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
  [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)  

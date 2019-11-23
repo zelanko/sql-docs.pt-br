@@ -20,30 +20,30 @@ ms.lasthandoff: 10/21/2019
 ms.locfileid: "72688661"
 ---
 # <a name="call-stored-procedures-odbc"></a>Chamar procedimentos armazenados (ODBC)
-  Quando uma instrução SQL chama um procedimento armazenado usando a cláusula ODBC CALL escape, o driver Microsoft SQL Server envia o procedimento para SQL Server usando o mecanismo RPC (chamada de procedimento armazenado remoto). As solicitações RPC ignoram grande parte da análise de instrução e do processamento de parâmetros em SQL Server e são mais rápidas do que usar a instrução Transact-SQL EXECUTE.  
+  Quando uma instrução SQL chama um procedimento armazenado usando a cláusula ODBC CALL escape, o driver Microsoft SQL Server envia o procedimento para SQL Server usando o mecanismo RPC (chamada de procedimento armazenado remoto). As solicitações de RPC ignoram grande parte da análise de instruções e do processamento de parâmetros no SQL Server e são mais rápidas do que a instrução EXECUTE do Transact-SQL.  
   
  Para obter um aplicativo de exemplo que demonstra esse recurso, consulte [processar códigos de retorno &#40;e&#41;parâmetros de saída ODBC](running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
 ### <a name="to-run-a-procedure-as-an-rpc"></a>Para executar um procedimento como um RPC  
   
-1.  Construa uma instrução SQL que usa a sequência de escape de chamada ODBC. A instrução usa marcadores de parâmetro para cada entrada, entrada/saída e parâmetro de saída e para o valor de retorno do procedimento (se houver):  
+1.  Crie uma instrução SQL que use a sequência de escape ODBC CALL. A instrução usa marcadores de parâmetro para cada parâmetro de entrada, entrada/saída e saída, e para o valor de retorno do procedimento (se houver):  
   
     ```  
     {? = CALL procname (?,?)}  
     ```  
   
-2.  Chame [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) para cada entrada, entrada/saída e parâmetro de saída e para o valor de retorno do procedimento (se houver).  
+2.  Chame [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) para cada entrada, entrada/saída e parâmetro de saída e obter o valor de retorno de procedimento (se houver algum).  
   
 3.  Execute a instrução com [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399).  
   
 > [!NOTE]  
->  Se um aplicativo enviar um procedimento usando a sintaxe executar do Transact-SQL (em oposição à sequência de escape de chamada ODBC), o driver ODBC SQL Server passará a chamada de procedimento para SQL Server como uma instrução SQL em vez de um RPC. Além disso, os parâmetros de saída não serão retornados se a instrução Transact-SQL EXECUTE for usada.  
+>  Se um aplicativo enviar um procedimento usando a sintaxe EXECUTE Transact-SQL (em oposição à sequência de escape ODBC CALL), o driver ODBC SQL Server passará a chamada de procedimento para o SQL Server como uma instrução SQL, em vez de como um RPC. Além disso, os parâmetros de saída não serão retornados se a instrução EXECUTE Transact-SQL for usada.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tópicos &#40;de instruções de procedimentos armazenados em execução&#41; ODBC](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)    
- [Processamento em lote de chamadas de procedimento armazenado](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)    
- [Executando procedimentos armazenados](../native-client-odbc-stored-procedures/running-stored-procedures.md)    
- [Chamando um procedimento armazenado](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)    
- [Aos](../native-client-odbc-queries/executing-statements/procedures.md)  
+ [Tópicos &#40;de instruções de procedimentos armazenados em execução&#41; ODBC](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
+ [Processamento em lote de chamadas de procedimento armazenado](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
+ [Executando procedimentos armazenados](../native-client-odbc-stored-procedures/running-stored-procedures.md)   
+ [Chamando um procedimento armazenado](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
+ [Procedimentos](../native-client-odbc-queries/executing-statements/procedures.md)  
   
   

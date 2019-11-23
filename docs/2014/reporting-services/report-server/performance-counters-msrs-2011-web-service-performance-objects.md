@@ -30,9 +30,9 @@ ms.locfileid: "72782817"
 > [!NOTE]  
 >  Esses objetos de desempenho monitoram eventos no servidor de relatório local. Se você estiver executando um servidor de relatório em uma implantação em expansão, as contagens aplicam-se ao servidor atual e não à implantação em expansão.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modo nativo  
   
- Os objetos de desempenho estão disponíveis no Monitor de Desempenho do Windows (**Perfmon.exe**). Para saber mais, veja a documentação do Windows, [Criação de perfil em tempo de execução](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
+ Os objetos de desempenho estão disponíveis no Monitor de Desempenho do Windows (**Perfmon.exe**). Para saber mais, veja a documentação do Windows, [Criação de perfil em runtime](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  Para obter informações relacionadas aos contadores de desempenho do modo do SharePoint, consulte [contadores de desempenho para o modo do SharePoint do serviço Web msrs 2014 e o modo &#40;do SharePoint&#41;do serviço do Windows MSRS 2014 modo SharePoint de objetos de desempenho](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md).  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72782817"
   
  A tabela a seguir lista os contadores que são incluídos com o objeto de desempenho do `MSRS 2014 Web Service`.  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |`Active Sessions`|Número de sessões ativas. Este contador fornece uma contagem cumulativa de todas as sessões de navegador geradas a partir de execuções de relatórios, independentemente de estarem ativas ou não.<br /><br /> O contador é reduzido à medida que os registros de sessão são removidos. Por padrão, as sessões são removidas após dez minutos de inatividade.|  
 |`Cache Hits/Sec`|Número de solicitações por segundo para relatórios armazenados em cache. As solicitações são para relatórios re-renderizados e não solicitações para relatórios processados diretamente do cache. (Consulte `Total Cache Hits` mais adiante neste tópico.)|  
@@ -79,7 +79,7 @@ ms.locfileid: "72782817"
   
  A tabela a seguir lista os contadores incluídos no objeto de desempenho `MSRS 2014 Windows Service`.  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |`Active Sessions`|Número de sessões ativas armazenadas no banco de dados do servidor de relatório. Esse contador fornece uma contagem cumulativa de todas as sessões de navegador utilizáveis geradas a partir de assinaturas de relatórios, independentemente de estarem ativas ou não.|  
 |`Cache Flushes/Sec`|Número de liberações de cache por segundo.|  
@@ -126,7 +126,7 @@ Get-Counter -ListSet msr*
 (Get-Counter -ListSet "MSRS 2014 Windows Service").Paths  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Monitorando o desempenho do servidor de relatório](monitoring-report-server-performance.md)   
- [Contadores de desempenho para o modo do SharePoint do serviço Web MSRS 2014 e os objetos &#40;de desempenho do modo SharePoint&#41; do serviço Windows MSRS 2014   do modo SharePoint](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
- [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects](performance-counters-reportserver-service-performance-objects.md)  
+ [Contadores de desempenho para o modo do SharePoint do serviço Web MSRS 2014 e os objetos &#40;de desempenho do modo SharePoint&#41; do serviço Windows MSRS 2014  do modo SharePoint](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
+ [Contadores de desempenho para os objetos de desempenho ReportServer:Service e ReportServerSharePoint:Service](performance-counters-reportserver-service-performance-objects.md)  

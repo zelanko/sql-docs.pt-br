@@ -49,7 +49,7 @@ sp_help_fulltext_system_components
   
 -   **wordbreaker**  
   
--   **filter**  
+-   **filtro**  
   
 -   **manipulador de protocolo**  
   
@@ -67,7 +67,7 @@ sp_help_fulltext_system_components
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**componenttype**|**sysname**|Tipo de componente. Um dos seguintes:<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
+|**componenttype**|**sysname**|Tipo de componente. Um dos seguintes:<br /><br /> filtro<br /><br /> protocol handler<br /><br /> wordbreaker|  
 |**componentname**|**sysname**|O nome do componente.|  
 |**clsid**|**uniqueidentifier**|Identificador de classe do componente.|  
 |**fullpath**|**nvarchar(256)**|Caminho até a localização do componente.<br /><br /> NULL = o chamador não é um membro da função de servidor fixa **ServerAdmin** .|  
@@ -84,7 +84,7 @@ sp_help_fulltext_system_components
 ## <a name="permissions"></a>Permissões  
  Requer associação na função **pública** ; no entanto, os usuários só podem ver informações sobre os catálogos de texto completo para os quais têm permissão VIEW DEFINITION. Somente os membros da função fixa **serveradmin** podem ver os valores na coluna **fullpath** .  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Este método é importante na preparação para uma atualização. Execute o procedimento armazenado em um determinado banco de dados e use a saída para determinar se um catálogo específico será afetado pela atualização.  
   
 ## <a name="examples"></a>Exemplos  
@@ -136,7 +136,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibir ou alterar filtros registrados e](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)separadores de palavras    
+ [Exibir ou alterar filtros registrados e](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md) separadores de palavras   
  [Configurar e gerenciar separadores de palavras e lematizadores de pesquisa](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurar e gerenciar filtros para pesquisa](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [Pesquisa de texto completo e procedimentos &#40;armazenados de pesquisa semântica TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  

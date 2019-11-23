@@ -51,23 +51,23 @@ sp_update_proxy
   
 `[ @proxy_name = ] 'proxy_name'` o nome do proxy a ser alterado. O *proxy_name* é **sysname**, com um padrão de NULL.  
   
-`[ @credential_name = ] 'credential_name'` o nome da nova credencial para o proxy. O *credential_name* é **sysname**, com um padrão de NULL. O *credential_name* ou o *credential_id* podem ser especificados.  
+`[ @credential_name = ] 'credential_name'` o nome da nova credencial para o proxy. O *credential_name* é **sysname**, com um padrão de NULL. *Credential_name* ou *credential_id* pode ser especificado.  
   
-`[ @credential_id = ] credential_id` o número de identificação da nova credencial para o proxy. O *credential_id* é **int**, com um padrão de NULL. O *credential_name* ou o *credential_id* podem ser especificados.  
+`[ @credential_id = ] credential_id` o número de identificação da nova credencial para o proxy. O *credential_id* é **int**, com um padrão de NULL. *Credential_name* ou *credential_id* pode ser especificado.  
   
 `[ @new_name = ] 'new_name'` o novo nome do proxy. O *new_name* é **sysname**, com um padrão de NULL. Quando fornecido, o procedimento altera o nome do proxy para *new_name*. Quando esse argumento for NULL, o nome do proxy permanecerá inalterado.  
   
-`[ @enabled = ] is_enabled` é se o proxy está habilitado. O sinalizador *is_enabled* é **tinyint**, com um padrão de NULL. Quando *is_enabled* é **0**, o proxy não é habilitado e não pode ser usado por uma etapa de trabalho. Quando esse argumento for NULL, o status do proxy permanecerá inalterado.  
+`[ @enabled = ] is_enabled` se o proxy está habilitado. O sinalizador *is_enabled* é **tinyint**, com um padrão de NULL. Quando *is_enabled* é **0**, o proxy não é habilitado e não pode ser usado por uma etapa de trabalho. Quando esse argumento for NULL, o status do proxy permanecerá inalterado.  
   
 `[ @description = ] 'description'` a nova descrição do proxy. A *Descrição* é **nvarchar (512)** , com um padrão de NULL. Quando esse argumento for NULL, a descrição do proxy permanecerá inalterada.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
- É necessário especificar **\@proxy_name** ou **\@proxy_id** . Se os dois argumentos forem especificados, eles deverão se referir ao mesmo proxy, caso contrário o procedimento armazenado falhará.  
+## <a name="remarks"></a>Remarks  
+ **\@proxy_name** ou **\@proxy_id** deve ser especificado. Se os dois argumentos forem especificados, eles deverão se referir ao mesmo proxy, caso contrário o procedimento armazenado falhará.  
   
- É necessário especificar **\@credential_name** ou **\@credential_id** para alterar a credencial do proxy. Se os dois argumentos forem especificados, eles deverão se referir à mesma credencial, caso contrário o procedimento armazenado falhará.  
+ **\@credential_name** ou **\@credential_id** deve ser especificado para alterar a credencial do proxy. Se os dois argumentos forem especificados, eles deverão se referir à mesma credencial, caso contrário o procedimento armazenado falhará.  
   
  Esse procedimento altera o proxy, mas não altera o acesso a ele. Para alterar o acesso a um proxy, use **sp_grant_login_to_proxy** e **sp_revoke_login_from_proxy**.  
   
@@ -88,8 +88,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [SQL Server Agent procedimentos &#40;armazenados Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [Implementar SQL Server Agent segurança](../../ssms/agent/implement-sql-server-agent-security.md)   
+ [SQL Server Agent procedimentos &#40;armazenados  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [Implementar](../../ssms/agent/implement-sql-server-agent-security.md)  de segurança de SQL Server Agent  
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   

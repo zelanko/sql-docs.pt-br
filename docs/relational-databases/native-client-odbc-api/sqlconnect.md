@@ -25,7 +25,7 @@ ms.locfileid: "73787455"
   Quando uma conexão é aberta, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client define SQL_COPT_SS_MUTUALLY_AUTHENTICATED e SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD como o método de autenticação usado para abrir a conexão. Para obter mais informações sobre SPNs, [ &#40;consulte SPNs&#41; de nomes de entidade de &#40;serviço&#41;em conexões de cliente ODBC](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="sqlconnect-support-for-high-availability-disaster-recovery"></a>Suporte do SQLConnect à alta disponibilidade e recuperação de desastre  
- Para obter mais informações sobre como usar o **SQLConnect** para se conectar a um cluster [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], consulte [suporte a SQL Server Native Client para alta disponibilidade e recuperação de desastres](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Para obter mais informações sobre como usar **SQLConnect** para se conectar a um [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] cluster, consulte [Suporte do SQL Server Native Client à alta disponibilidade e recuperação de desastre](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Função SQLConnect](https://go.microsoft.com/fwlink/?LinkId=101541)   

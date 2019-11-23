@@ -35,7 +35,7 @@ ms.locfileid: "73787786"
  Para tipos de dados de valor grande, se o buffer fornecido pelo usuário não for grande o suficiente para manter o valor inteiro da coluna, **SQL_SUCCESS_WITH_INFO** será retornado e os "dados de cadeia de caracteres; truncamento à direita "o aviso é emitido. O argumento **StrLen_or_IndPtr** conterá o número de chars/bytes armazenados no buffer.  
   
 ## <a name="sqlbindcol-support-for-enhanced-date-and-time-features"></a>Suporte de SQLBindCol a recursos aprimorados de data e hora  
- Os valores de coluna de resultado de tipos de data/hora são convertidos conforme descrito em [conversões de SQL para C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md). Observe que para recuperar as colunas time e DateTimeOffset como suas estruturas correspondentes (**SQL_SS_TIME2_STRUCT** e **SQL_SS_TIMESTAMPOFFSET_STRUCT**), *TargetType* deve ser especificado como **SQL_C_DEFAULT** ou **SQL_C_BINARY** .  
+ Os valores de coluna de resultado de tipos de data/hora são convertidos conforme descrito em [conversões de SQL para C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md). Observe que para recuperar as colunas time e DateTimeOffset como suas estruturas correspondentes (**SQL_SS_TIME2_STRUCT** e **SQL_SS_TIMESTAMPOFFSET_STRUCT**), *TargetType* deve ser especificado como **SQL_C_DEFAULT** ou **SQL_C_BINARY**.  
   
  Para obter mais informações, consulte [melhorias &#40;de data e&#41;hora em ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   

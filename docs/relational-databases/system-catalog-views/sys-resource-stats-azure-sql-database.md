@@ -40,7 +40,7 @@ ms.locfileid: "70911103"
 |start_time|**datetime**|Hora UTC indicando o início do intervalo de relatórios de cinco minutos.|  
 |end_time|**datetime**|Hora UTC indicando o final do intervalo de relatórios de cinco minutos.|  
 |database_name|**nvarchar(128)**|Nome do banco de dados do usuário.|  
-|sku|**nvarchar(128)**|Camada de serviço do banco de dados. O valores possíveis são os seguintes:<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />Uso Geral<br /><br />Comercialmente Crítica|  
+|sku|**nvarchar(128)**|Camada de serviço do banco de dados. O valores possíveis são os seguintes:<br /><br /> Básica<br /><br /> Standard<br /><br /> Premium<br /><br />Uso Geral<br /><br />Comercialmente Crítica|  
 |storage_in_megabytes|**float**|O tamanho máximo de armazenamento em megabytes para o período de tempo, incluindo dados do banco de dados, índices, procedimentos armazenados e metadados.|  
 |avg_cpu_percent|**decimal(5,2)**|Utilização média de computação, em porcentagem, do limite da camada de serviço.|  
 |avg_data_io_percent|**decimal(5,2)**|Utilização média de E/S em percentagem com base no limite da camada de serviço.|  
@@ -49,11 +49,11 @@ ms.locfileid: "70911103"
 |max_session_percent|**decimal(5,2)**|Máximo de sessões simultâneas em porcentagem com base no limite da camada de serviço do banco de dados.<br /><br /> No momento, o máximo é calculado para o intervalo de cinco minutos com base nas amostras de 15 segundos de contagens de sessão simultâneas.|  
 |dtu_limit|**int**|Configuração de DTU máxima do banco de dados atual para este banco de dados durante esse intervalo. |
 |xtp_storage_percent|**decimal (5,2)**|Utilização de armazenamento para OLTP na memória em porcentagem do limite da camada de serviço (no final do intervalo de relatórios). Isso inclui a memória usada para o armazenamento dos seguintes objetos OLTP na memória: tabelas com otimização de memória, índices e variáveis de tabela. Ele também inclui a memória usada para processar operações ALTER TABLE.<br /><br /> Retornará 0 se o OLTP na memória não for usado no banco de dados.|
-|avg_login_rate_percent|**decimal (5,2)**|Identificado apenas para fins informativos. Não compatível. A compatibilidade futura não está garantida.|
+|avg_login_rate_percent|**decimal (5,2)**|Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.|
 |avg_instance_cpu_percent|**decimal (5,2)**|Uso médio de CPU do banco de dados como uma porcentagem do processo do BD SQL.|
 |avg_instance_memory_percent|**decimal (5,2)**|Uso médio de memória do banco de dados como uma porcentagem do processo do BD SQL.|
 |cpu_limit|**decimal (5,2)**|Número de vCores para este banco de dados durante esse intervalo. Para bancos de dados que usam o modelo baseado em DTU, essa coluna é nula.|
-|allocated_storage_in_megabytes|**float**|A quantidade de espaço de arquivo formatado em MB disponibilizada para armazenar dados de banco de dados. O espaço de arquivo formatado também é conhecido como espaço de dados alocado.  Para obter mais informações, consulte: [Gerenciamento de espaço de arquivo no banco de BD SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
+|allocated_storage_in_megabytes|**float**|A quantidade de espaço de arquivo formatado em MB disponibilizada para armazenar dados de banco de dados. O espaço de arquivo formatado também é conhecido como espaço de dados alocado.  Para obter mais informações, consulte: [Gerenciamento de espaço de arquivo no banco de dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  Para obter mais contexto sobre esses limites e camadas de serviço, consulte as [camadas de serviço](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)de tópicos.  
@@ -61,12 +61,12 @@ ms.locfileid: "70911103"
 ## <a name="permissions"></a>Permissões  
  Essa exibição está disponível para todas as funções de usuário com permissões para se conectar ao banco de dados **mestre** virtual.  
   
-## <a name="remarks"></a>Comentários  
- Os dados retornados por **Sys. resource_stats** são expressos como uma porcentagem dos limites máximos permitidos para a camada de serviço/nível de desempenho que você está executando.  
+## <a name="remarks"></a>Remarks  
+ Os dados retornados por **Sys. resource_stats** são expressos como uma porcentagem do limite máximo permitido para a camada de serviço/nível de desempenho que você está executando.  
   
  Quando um banco de dados é membro de um pool elástico, as estatísticas de recursos apresentadas como valores percentuais são expressas como a porcentagem do limite máximo para os bancos de dados, conforme definido na configuração do pool elástico.  
   
- Para obter uma exibição mais granular desses dados, use a exibição de gerenciamento dinâmico **Sys. dm _db_resource_stats** em um banco de dados de usuário. Essa visualização captura dados a cada 15 segundos e mantém dados históricos por 1 hora.  Para obter mais informações, consulte [Sys. dm &#40;_Db_resource_stats banco de&#41;dados SQL do Azure](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
+ Para obter uma exibição mais granular desses dados, use **Sys. dm_db_resource_stats** exibição de gerenciamento dinâmico em um banco de dados de usuário. Essa visualização captura dados a cada 15 segundos e mantém dados históricos por 1 hora.  Para obter mais informações, consulte [Sys. &#40;Dm_db_resource_stats banco de&#41;dados SQL do Azure](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
 
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna todos os bancos de dados que estão com média de pelo menos 80% de utilização de computação durante a última semana.  

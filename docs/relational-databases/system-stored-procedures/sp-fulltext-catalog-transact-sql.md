@@ -54,7 +54,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**Criar**|Cria um novo catálogo de texto completo vazio no sistema de arquivos e adiciona uma linha associada em **sysfulltextcatalogs** com *fulltext_catalog_name* e *root_directory*, se presente, valores. *fulltext_catalog_name* deve ser exclusivo no banco de dados.|  
+|**Criar**|Cria um novo catálogo de texto completo vazio no sistema de arquivos e adiciona uma linha associada em **sysfulltextcatalogs** com o *fulltext_catalog_name* e *root_directory*, se estiverem presentes, valores. *fulltext_catalog_name* deve ser exclusivo no banco de dados.|  
 |**Drop**|Descarta *fulltext_catalog_name* removendo-o do sistema de arquivos e excluindo a linha associada em **sysfulltextcatalogs**. Haverá falha nessa ação se esse catálogo contiver índices para uma ou mais tabelas. **sp_fulltext_table** '*table_name*', ' drop ' deve ser executado para descartar as tabelas do catálogo.<br /><br /> Um erro será exibido se o catálogo não existir.|  
 |**start_incremental**|Inicia uma população incremental para *fulltext_catalog_name*. Um erro será exibido se o catálogo não existir. Se uma população de índice de texto completo já estiver ativa, um aviso será exibido, mas nenhuma ação de população ocorrerá. Com a população incremental, somente as linhas alteradas são recuperadas para indexação de texto completo, desde que haja uma coluna de **carimbo de data/hora** presente na tabela sendo indexada com texto completo.|  
 |**start_full**|Inicia uma população completa para *fulltext_catalog_name*. Todas as linhas de todas as tabelas associadas a esse catálogo de texto completo são recuperadas para a indexação de texto completo, mesmo que já tenham sido indexadas.|  
@@ -63,7 +63,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
   
 `[ @path = ] 'root_directory'` é o diretório raiz (não o caminho físico completo) para uma ação de **criação** . *root_directory* é **nvarchar (100)** e tem um valor padrão de NULL, que indica o uso do local padrão especificado na instalação. Esse é o subdiretório FTDATA no diretório MSSQL; por exemplo, C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. O diretório raiz especificado deve residir em uma unidade no mesmo computador, deve consistir em mais informações além da letra da unidade e não pode ser um caminho relativo. Unidades de rede, unidades removíveis, discos flexíveis e caminhos UNC não têm suporte. Os catálogos de texto completo devem ser criados em um disco rígido local associado a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **\@path** é válido somente quando a *ação* é **criada**. Para ações diferentes de **criar** (**parar**, **Recompilar**e assim por diante), **\@path** deve ser nulo ou omitido.  
+ **\@caminho** é válido somente quando a *ação* é **criada**. Para ações diferentes de **criar** (**parar**, **Recompilar**e assim por diante), **\@caminho** deve ser nulo ou omitido.  
   
  Se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for um servidor virtual em um cluster, o diretório de catálogo especificado precisará estar em uma unidade de disco compartilhada da qual o recurso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja dependente. Se @path não for especificado, o local do diretório de catálogo padrão estará na unidade de disco compartilhada, no diretório que foi especificado quando o servidor virtual foi instalado.  
   
@@ -71,15 +71,15 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhum  
+ Nenhum.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A ação **start_full** é usada para criar um instantâneo completo dos dados de texto completo no *fulltext_catalog_name*. A ação **start_incremental** é usada para reindexar apenas as linhas alteradas no banco de dados. A população incremental só poderá ser aplicada se a tabela tiver uma coluna do tipo **timestamp**. Se uma tabela no catálogo de texto completo não contiver uma coluna do tipo **timestamp**, a tabela passará por uma população completa.  
   
- Os dados do catálogo de texto completo e do índice são armazenados em arquivos criados em um diretório de catálogo de texto completo. O diretório de catálogo de texto completo é criado como um subdiretório do diretório especificado em **\@path** ou no diretório de catálogo de texto completo padrão do servidor se **\@path** não for especificado. O nome do diretório de catálogo de texto completo é criado de uma forma que garante que ele será exclusivo no servidor. Portanto, todos os diretórios de catálogo de texto completo em um servidor podem compartilhar o mesmo caminho.  
+ Os dados do catálogo de texto completo e do índice são armazenados em arquivos criados em um diretório de catálogo de texto completo. O diretório de catálogo de texto completo é criado como um subdiretório do diretório especificado em **\@caminho** ou no diretório de catálogo de texto completo padrão do servidor se **\@caminho** não for especificado. O nome do diretório de catálogo de texto completo é criado de uma forma que garante que ele será exclusivo no servidor. Portanto, todos os diretórios de catálogo de texto completo em um servidor podem compartilhar o mesmo caminho.  
   
 ## <a name="permissions"></a>Permissões  
- O chamador deve ser membro da função **db_owner** . Dependendo da ação solicitada, o chamador não deve ser negado às permissões ALTER ou CONTROL (que **db_owner** tem) no catálogo de texto completo de destino.  
+ O chamador deve ser membro da função de **db_owner** . Dependendo da ação solicitada, o chamador não deve ser negado às permissões ALTER ou CONTROL (que **db_owner** tem) no catálogo de texto completo de destino.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -104,7 +104,7 @@ GO
 ```  
   
 ### <a name="c-start-the-population-of-a-full-text-catalog"></a>C. Iniciar a população de um catálogo de texto completo  
- Este exemplo inicia uma população completa do catálogo **Cat_Desc** .  
+ Este exemplo inicia uma população completa do catálogo de **Cat_Desc** .  
   
 ```  
 USE AdventureWorks2012;  
@@ -114,7 +114,7 @@ GO
 ```  
   
 ### <a name="d-stop-the-population-of-a-full-text-catalog"></a>D. Interromper a população de um catálogo de texto completo  
- Este exemplo interrompe a população do catálogo **Cat_Desc** .  
+ Este exemplo interrompe a população do catálogo de **Cat_Desc** .  
   
 ```  
 USE AdventureWorks2012;  

@@ -22,7 +22,7 @@ ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 88ce0a3899bc637de6d94cce7dad71e47247a67f
 ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/13/2019
 ms.locfileid: "73982626"
@@ -124,7 +124,7 @@ SELECT * FROM sys.dm_exec_sql_text(< copied sql_handle >);
 GO  
 ```
 
-### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>b. Localizando todos os bloqueios que estão sendo mantidos por um lote em execução
+### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. Localizando todos os bloqueios que estão sendo mantidos por um lote em execução
 
 O exemplo a seguir consulta **Sys. dm_exec_requests** para localizar o lote interessante e copiar seu `transaction_id` da saída.
 

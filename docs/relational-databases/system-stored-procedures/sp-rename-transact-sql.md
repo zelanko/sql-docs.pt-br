@@ -99,7 +99,7 @@ EXEC sp_rename 'Sales.SalesTerritory', 'SalesTerr';
 GO  
 ```  
   
-### <a name="b-renaming-a-column"></a>b. Renomeando uma coluna  
+### <a name="b-renaming-a-column"></a>B. Renomeando uma coluna  
  O exemplo a seguir renomeia a coluna `TerritoryID` na tabela `SalesTerritory` como `TerrID`.  
   
 ```  

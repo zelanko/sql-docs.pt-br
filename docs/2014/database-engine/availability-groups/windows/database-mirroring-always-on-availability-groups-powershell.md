@@ -38,7 +38,7 @@ ms.locfileid: "72782987"
 >  O algoritmo RC4 é preterido. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Recomendamos usar AES.  
   
 ####  <a name="Permissions"></a> Permissões  
- Exige a permissão CREATE ENDPOINT ou a associação na função de servidor fixa sysadmin. Para obter mais informações, consulte [Permissões GRANT do ponto de extremidade &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
+ Exige a permissão CREATE ENDPOINT ou a associação na função de servidor fixa sysadmin. Para obter mais informações, veja [Permissões GRANT do ponto de extremidade &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
   
 ##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
  **Para criar um ponto de extremidade de espelhamento de banco de dados**  
@@ -61,7 +61,7 @@ $endpoint = New-SqlHadrEndpoint MyMirroringEndpoint -Port 5022 -Path SQLSERVER:\
 Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
 ```  
   
-##  <a name="RelatedTasks"></a> Tarefas Relacionadas  
+##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para configurar um ponto de extremidade de espelhamento de banco de dados**  
   
 -   [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
@@ -80,6 +80,6 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
   
 -   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Criar um grupo de disponibilidade &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)   
  [Visão geral do &#40;grupos de disponibilidade AlwaysOn SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  

@@ -48,7 +48,7 @@ ms.locfileid: "73758323"
   
 2.  Defina as propriedades no grupo de propriedades DBPROPSET_ROWSET para que o conjunto de linhas seja atualizável.  
   
-3.  Crie um conjunto de associações (uma de cada coluna) usando uma matriz de estruturas DBBINDING. Defina o elemento *wType* na estrutura DBBINDING como DBTYPE_IUNKNOWN e o elemento *pObject* para que ele aponte para a estrutura DBOBJECT criada.  
+3.  Crie um conjunto de associações (uma de cada coluna) usando uma matriz de estruturas DBBINDING. Defina o elemento *wType* na estrutura DBBINDING como DBTYPE_IUNKNOWN e o elemento *pObject* para apontar para a estrutura DBOBJECT que você criou.  
   
 4.  Crie um acessador que usa as informações de associação na matriz de estruturas DBBINDINGS.  
   

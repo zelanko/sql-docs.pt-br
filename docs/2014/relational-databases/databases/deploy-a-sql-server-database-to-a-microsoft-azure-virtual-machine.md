@@ -50,7 +50,7 @@ ms.lasthandoff: 08/30/2019
 ms.locfileid: "70175732"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Implantar um banco de dados do SQL Server em uma máquina virtual do Microsoft Azure
-  Use o assistente **para implantar um banco de dados SQL Server em uma VM do Azure** para implantar um banco de [!INCLUDE[ssDE](../../includes/ssde-md.md)] dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma instância do para em uma VM (máquina virtual) do Azure. O assistente utiliza uma operação de backup completo de banco de dados, de modo que sempre copia o esquema de banco de dados completo e os dados de um banco de dados de usuário do SQL Server. O assistente também faz toda a configuração da VM do Azure para você, de modo que nenhuma configuração prévia de VM é necessária.  
+  Use o assistente **para implantar um banco de dados SQL Server em uma VM do Azure** para implantar um banco de dados de uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma VM (máquina virtual) do Azure. O assistente utiliza uma operação de backup completo de banco de dados, de modo que sempre copia o esquema de banco de dados completo e os dados de um banco de dados de usuário do SQL Server. O assistente também faz toda a configuração da VM do Azure para você, de modo que nenhuma configuração prévia de VM é necessária.  
   
  Você não pode usar o assistente para backups diferenciais porque o assistente não substituirá um banco de dados existente que tenha o mesmo nome. Para substituir um banco de dados existente na VM, você deverá primeiro remover o banco de dados existente ou alterar o nome dele. Se houver um conflito de nomeação entre o nome do banco de dados de uma operação de implantação em curso e um banco de dados existente na VM, o assistente sugerirá um nome de banco de dados anexado para que o banco de dados em curso permita que você conclua a operação.  
   
@@ -88,9 +88,9 @@ ms.locfileid: "70175732"
   
  Em computadores que executam sistemas operacionais do Windows Server, você deverá usar os seguintes parâmetros de configuração para executar esse assistente:  
   
--   Desligar a configuração de segurança avançada:  Use Gerenciador do Servidor > servidor local para definir a configuração de segurança aprimorada (ESC) do Internet Explorer como **desativado**.  
+-   Desative a Configuração de Segurança Avançada: use o Gerenciador do Servidor > Servidor Local para definir a ESC (Configuração de Segurança Avançada) do Internet Explorer como **OFF**.  
   
--   Habilitar JavaScript:  Internet Explorer > opções de Internet > segurança > script de > de nível de cliente > script ativo: **Habilitar**.  
+-   Habilite o JavaScript: Internet Explorer > Opções da Internet > Segurança > Nível do Cliente > Scripts > Scripts Ativos: **Habilitar**.  
   
 ###  <a name="limitations"></a> Limitações e restrições  
  A limitação de tamanho do banco de dados para essa operação é de 1 TB.  
@@ -124,7 +124,7 @@ ms.locfileid: "70175732"
   
 -   O recurso de implantação não pode implantar um banco de dados habilitado para FILESTREAM em uma nova VM. Se FILESTREAM não estiver habilitado na VM antes da execução do assistente, a operação de restauração do banco de dados falhará e a operação do assistente não poderá ser concluída com êxito. Para implantar com êxito um banco de dados que usa FILESTREAM, habilite-o na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na VM do host antes de iniciar o assistente. Para obter mais informações, veja [FILESTREAM (SQL Server)](https://msdn.microsoft.com/library/gg471497.aspx).  
   
--   Se seu banco de dados utiliza OLTP na memória, você pode implantar o banco de dados na VM do Azure sem modificações no banco de dados. Para obter mais informações, veja [OLTP in-memory (otimização na memória)](https://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx).  
+-   Se seu banco de dados utiliza OLTP na memória, você pode implantar o banco de dados na VM do Azure sem modificações no banco de dados. Para obter mais informações, consulte [OLTP na memória (otimização na memória)](https://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx).  
   
 ###  <a name="geography"></a> Considerações sobre a distribuição geográfica de recursos  
  Observe que os seguintes recursos devem estar localizados na mesma região geográfica:  
@@ -140,7 +140,7 @@ ms.locfileid: "70175732"
 ###  <a name="configuration_settings"></a> Parâmetros de configuração do assistente  
  Use os detalhes de configuração a seguir para modificar as configurações de uma implantação de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uma VM do Azure.  
   
--   **Caminho padrão para o arquivo de configuração** – %LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM\DeploymentSettings.xml  
+-   **Caminho padrão para o arquivo de configuração** - %LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM\DeploymentSettings.xml  
   
 -   **Estrutura do arquivo de configuração**  
   
@@ -152,7 +152,7 @@ ms.locfileid: "70175732"
   
             -   BackupPath="\\\\[server name]\\[volume]\\" \<!!-- O caminho usado para o último backup. Usado como o padrão no assistente. -->  
   
-            -   CleanupDisabled = false/> \<o assistente de!--não excluirá arquivos intermediários e objetos do Azure (VM, cs, SA). -->  
+            -   CleanupDisabled = false/> \<!--assistente não excluirá arquivos intermediários e objetos do Azure (VM, CS, SA). -->  
   
         -   <PublishProfile \<! -- As informações de perfil de publicação usadas pela última vez. -->  
   
@@ -187,7 +187,7 @@ ms.locfileid: "70175732"
   
  **Opções**  
   
--   **Não mostrar esta página novamente.** - Clique nesta caixa de seleção para não exibir mais a página Introdução no futuro.  
+-   **Não exibir esta página novamente.** - Clique nesta caixa de seleção para não exibir mais a página Introdução no futuro.  
   
 -   **Avançar** - continua na página **Configurações de Origem** .  
   
@@ -200,7 +200,7 @@ ms.locfileid: "70175732"
   
  **Opções**  
   
--   Clique em **conectar...** e especifique os detalhes da conexão para a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância do que hospeda o banco de dados a ser implantado.  
+-   Clique em **conectar...** e especifique os detalhes da conexão para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados a ser implantado.  
   
 -   Use a lista suspensa **Selecionar Banco de Dados** para especificar o banco de dados a ser implantado.  
   

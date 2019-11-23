@@ -39,7 +39,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [@mode =] *\@mode*  
+ [@mode =] *modo de\@*  
  É um dos valores a seguir.  
   
 -   **Desabilitado** Todas as consultas em tabelas habilitadas para Stretch falham.  
@@ -48,21 +48,21 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
 -   **LOCAL_AND_REMOTE** As consultas em tabelas habilitadas para Stretch retornam dados locais e remotos. Esse é o comportamento padrão.  
   
- [@force =]  *\@force*  
+ [@force =]  *\@forçar*  
  É um valor de bit opcional que você pode definir como 1 se desejar alterar o modo de consulta sem validação.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou > 0 (falha)  
   
 ## <a name="permissions"></a>Permissões  
- Requer permissões db_owner.  
+ Requer db_owner permissões.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Os procedimentos armazenados estendidos a seguir também definem o modo de consulta para um banco de dados habilitado para Stretch.  
   
 -   **sp_rda_deauthorize_db**  
   
-     Depois de executar o **sp_rda_deauthorize_db** , todas as consultas em bancos de dados e tabelas habilitadas para Stretch falham. Ou seja, o modo de consulta é definido como DESABILITAdo. Para sair desse modo, execute uma das ações a seguir.  
+     Depois de executar **sp_rda_deauthorize_db** , todas as consultas em bancos de dados e tabelas habilitadas para Stretch falham. Ou seja, o modo de consulta é definido como DESABILITAdo. Para sair desse modo, execute uma das ações a seguir.  
   
     -   Execute [Sys. sp_rda_reauthorize_db &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para se reconectar ao banco de dados remoto do Azure. Esta operação redefine automaticamente o modo de consulta para LOCAL_AND_REMOTE, que é o comportamento padrão para Stretch Database. Ou seja, as consultas retornam resultados de dados locais e remotos.  
   

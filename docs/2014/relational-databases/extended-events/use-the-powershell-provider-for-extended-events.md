@@ -33,16 +33,16 @@ ms.locfileid: "72782913"
     > [!NOTE]  
     >  Você pode iniciar o PowerShell em qualquer nó sob **Eventos Estendidos**. Por exemplo, você pode clicar com o botão direito do mouse em **Sessões**e clicar em **Iniciar PowerShell**. Isso inicia o PowerShell um nível mais profundo na pasta de Sessões.  
   
- Você pode procurar a árvore de pastas XEvent para exibir sessões existentes de Eventos Estendidos e os eventos, destinos e predicados correspondentes associados. Por exemplo, da PS SQLSERVER: \ XEvent \\*servername* \\*InstanceName*> caminho, se você digitar `cd sessions`, pressione Enter, digite `dir` e pressione Enter, você poderá ver a lista de sessões que estão armazenadas nessa instância. Você também pode exibir se a sessão está em execução (e nesse caso, há quanto tempo), e se a sessão está configurada para ser iniciada quando a instância for iniciada.  
+ Você pode procurar a árvore de pastas XEvent para exibir sessões existentes de Eventos Estendidos e os eventos, destinos e predicados correspondentes associados. Por exemplo, da PS SQLSERVER: \ XEvent\\*servername*\\*InstanceName*> caminho, se você digitar `cd sessions`, pressione Enter, digite `dir`e pressione Enter, você poderá ver a lista de sessões que estão armazenadas nessa instância. Você também pode exibir se a sessão está em execução (e nesse caso, há quanto tempo), e se a sessão está configurada para ser iniciada quando a instância for iniciada.  
   
- Para exibir os eventos, os predicados e os destinos correspondentes associados a uma sessão, você pode alterar diretórios para o nome da sessão e exibir as pastas de eventos ou de destinos. Por exemplo, para exibir os eventos e seus predicados associados à sessão de integridade do sistema padrão, do PS SQLSERVER: \ XEvent \\*servername* \\*InstanceName*\Sessions > caminho, digite `cd system_health\events,` pressione Enter, digite @no __t_5 e pressione ENTER.  
+ Para exibir os eventos, os predicados e os destinos correspondentes associados a uma sessão, você pode alterar diretórios para o nome da sessão e exibir as pastas de eventos ou de destinos. Por exemplo, para exibir os eventos e seus predicados associados à sessão de integridade do sistema padrão, do PS SQLSERVER: \ XEvent\\*servername*\\*InstanceName*\Sessions > caminho, digite `cd system_health\events,` pressione Enter, digite `dir`e pressione Enter.  
   
  O provedor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell é uma ferramenta avançada que pode ser usada para criar, alterar e gerenciar sessões de Eventos Estendidos. A seção a seguir fornece alguns exemplos básicos do uso de scripts do PowerShell com Eventos Estendidos.  
   
 ## <a name="examples"></a>Exemplos  
  Nos exemplos a seguir, observe o seguinte:  
   
--   Os scripts devem ser executados no prompt PS SQLSERVER: \\ > (disponível digitando `sqlps` em um prompt de comando).  
+-   Os scripts devem ser executados no prompt PS SQLSERVER:\\> (disponível digitando `sqlps` em um prompt de comando).  
   
 -   Os scripts usam a instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -109,7 +109,7 @@ $session.Create()
 ## <a name="security"></a>Segurança  
  Para criar, alterar ou cancelar uma sessão de Eventos Estendidos, você deve ter a permissão ALTER ANY EVENT SESSION.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)   
- [Usar a sessão de system_health](use-the-ssms-xe-profiler.md)   
- [Ferramentas de Eventos Estendidos](extended-events-tools.md)  
+ [Usar a sessão system_health](use-the-ssms-xe-profiler.md)   
+ [Ferramentas de eventos estendidos](extended-events-tools.md)  

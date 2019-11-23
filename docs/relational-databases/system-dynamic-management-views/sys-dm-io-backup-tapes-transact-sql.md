@@ -1,5 +1,5 @@
 ---
-title: sys. dm _io_backup_tapes (Transact-SQL) | Microsoft Docs
+title: sys. dm_io_backup_tapes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -33,7 +33,7 @@ ms.locfileid: "70874151"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**physical_device_name**|**nvarchar(520)**|Nome do dispositivo físico atual no qual um backup pode ser realizado. Não permite valor nulo.|  
-|**logical_device_name**|**nvarchar(256)**|Nome especificado pelo usuário para a unidade (de **Sys. backup_devices**). NULL se nenhum nome especificado pelo usuário estiver disponível. Permite valor nulo.|  
+|**logical_device_name**|**nvarchar(256)**|Nome especificado pelo usuário para a unidade (a partir de **Sys. backup_devices**). NULL se nenhum nome especificado pelo usuário estiver disponível. Permite valor nulo.|  
 |**status**|**int**|Status da fita.<br /><br /> 1 = Aberta, disponível para uso<br /><br /> 2 = Montagem pendente<br /><br /> 3 = Em uso<br /><br /> 4 = Carregando<br /><br /> **Observação:** Enquanto uma fita está sendo carregada (**status = 4**), o rótulo de mídia ainda não é lido. Colunas que copiam valores de rótulo de mídia, como **media_sequence_number**, mostram valores previstos, que podem ser diferentes dos valores reais na fita. Depois que o rótulo tiver sido lido, o **status** será alterado para **3** (em uso) e as colunas de rótulo de mídia refletirão a fita real que é carregada.<br /><br /> Não permite valor nulo.|  
 |**status_desc**|**nvarchar(520)**|Descrição do status da fita:<br /><br /> AVAILABLE<br /><br /> MOUNT PENDING<br /><br /> IN USE<br /><br /> LOADING MEDIA<br /><br /> Não permite valor nulo.|  
 |**mount_request_time**|**datetime**|Hora em que a montagem foi solicitada. NULL se nenhuma montagem estiver pendente (**status! = 2**). Permite valor nulo.|  
@@ -48,7 +48,7 @@ ms.locfileid: "70874151"
 |**media_sequence_number**|**int**|Índice de volume em uma família de mídia (1. *.. n*). Permite valor nulo.|  
 |**tape_operation**|**int**|Operação de fita que está sendo executada:<br /><br /> 1 = Leitura<br /><br /> 2 = Formato<br /><br /> 3 = Inicialização<br /><br /> 4 = Acréscimo<br /><br /> Permite valor nulo.|  
 |**tape_operation_desc**|**nvarchar(120)**|Operação de fita que está sendo executada:<br /><br /> READ<br /><br /> FORMAT<br /><br /> INIT<br /><br /> APPEND<br /><br /> Permite valor nulo.|  
-|**mount_request_type**|**int**|Tipo de pedido de montagem:<br /><br /> 1 = Fita específica. A fita identificada pelos **campos\* media_** é necessária.<br /><br /> 2 = Próxima família de mídias. A família de mídia seguinte ainda não restaurada é solicitada. Isso é usado ao restaurar com um número menor de dispositivos do que há de famílias de mídia.<br /><br /> 3 = Fita de continuação. A família de mídia está sendo estendida, e uma fita de continuação é solicitada.<br /><br /> Permite valor nulo.|  
+|**mount_request_type**|**int**|Tipo de pedido de montagem:<br /><br /> 1 = Fita específica. A fita identificada pelo **media_\*** campos é necessário.<br /><br /> 2 = Próxima família de mídias. A família de mídia seguinte ainda não restaurada é solicitada. Isso é usado ao restaurar com um número menor de dispositivos do que há de famílias de mídia.<br /><br /> 3 = Fita de continuação. A família de mídia está sendo estendida, e uma fita de continuação é solicitada.<br /><br /> Permite valor nulo.|  
 |**mount_request_type_desc**|**nvarchar(120)**|Tipo de pedido de montagem:<br /><br /> SPECIFIC TAPE<br /><br /> NEXT MEDIA FAMILY<br /><br /> CONTINUATION VOLUME<br /><br /> Permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  

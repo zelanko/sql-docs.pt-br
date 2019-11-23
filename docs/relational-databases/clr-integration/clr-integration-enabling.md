@@ -29,13 +29,13 @@ RECONFIGURE;
 GO  
 ```  
   
- Você pode desabilitar a integração CLR definindo a opção **CLR Enabled** como 0. Quando você desabilita a integração CLR, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para de executar todas as rotinas CLR definidas pelo usuário e descarrega todos os domínios de aplicativo. Recursos que dependem do CLR, como o tipo de dados **hierarchyid** , a função `FORMAT`, a replicação e o gerenciamento baseado em políticas, não são afetados por essa configuração e continuarão a funcionar.
+ Você pode desabilitar a integração CLR definindo a opção **CLR Enabled** como 0. Quando você desabilita a integração CLR, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para de executar todas as rotinas CLR definidas pelo usuário e descarrega todos os domínios de aplicativo. Recursos que dependem do CLR, como o tipo de dados **hierarchyid** , a função `FORMAT`, a replicação e o gerenciamento baseado em políticas, não são afetados por essa configuração e continuarão a funcionar.
   
 > [!NOTE]  
 >  Para habilitar a integração CLR, você deve ter a permissão ALTER SETTINGS no nível do servidor, que é mantida implicitamente por membros das funções de servidor fixas **sysadmin** e **ServerAdmin** .  
   
 > [!NOTE]  
->  Computadores configurados com grandes quantidades de memória e um número grande de processadores podem falhar ao carregar o recurso de integração CLR do SQL Server na inicialização do servidor. Para resolver esse problema, inicie o servidor usando a opção de inicialização de serviço **-gmemory_to_reserve**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e especifique um valor de memória grande o suficiente. Para obter mais informações, consulte [Opções de inicialização do serviço Mecanismo de Banco de Dados](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+>  Computadores configurados com grandes quantidades de memória e um número grande de processadores podem falhar ao carregar o recurso de integração CLR do SQL Server na inicialização do servidor. Para resolver esse problema, inicie o servidor usando a opção de inicialização de serviço **-gmemory_to_reserve**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e especifique um valor de memória grande o suficiente. Para obter mais informações, consulte [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
 > [!NOTE]  
 >  Não há suporte para a execução de CLR (common language runtime) com lightweight pooling. Antes de habilitar integração CLR, você deve desabilitar o lightweight pooling. Para saber mais, veja [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md).  

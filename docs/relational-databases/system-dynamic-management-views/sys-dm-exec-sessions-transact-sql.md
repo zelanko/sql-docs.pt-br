@@ -133,7 +133,7 @@ FROM sys.dm_exec_sessions
 GROUP BY login_name;  
 ```  
   
-### <a name="b-finding-long-running-cursors"></a>b. Localizando cursores demorados  
+### <a name="b-finding-long-running-cursors"></a>B. Localizando cursores demorados  
  O exemplo a seguir localiza os cursores abertos para mais um intervalo de tempo especificado, que criou os cursores e em qual sessão os cursores estão.  
   
 ```sql  

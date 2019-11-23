@@ -38,7 +38,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **\@publication =** ] **'***publicação***'**  
+ [ **publicação\@=** ] **'***publicação***'**  
  É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
 `[ @level = ] level` é o tipo de validação a ser executada. o *nível* é **tinyint**, sem padrão. O nível pode ser um destes valores:  
@@ -46,13 +46,13 @@ sp_validatemergepublication [@publication=] 'publication'
 |Valor de nível|Descrição|  
 |-----------------|-----------------|  
 |**1**|Validação só de número de linhas.|  
-|**2**|Validação de número de linhas e soma de verificação. Para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Subscribers, isso é definido automaticamente como **3**.|  
+|**2**|Validação de número de linhas e soma de verificação. Para assinantes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], isso é definido automaticamente como **3**.|  
 |**3**|Esse é o valor recomendado.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_validatemergepublication** é usado na replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
@@ -60,7 +60,7 @@ sp_validatemergepublication [@publication=] 'publication'
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Validar dados replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
+ [Validar  de dados replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
  [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
   
   

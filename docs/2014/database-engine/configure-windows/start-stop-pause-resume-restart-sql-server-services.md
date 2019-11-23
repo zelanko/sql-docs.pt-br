@@ -47,8 +47,8 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797946"
 ---
-# <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço SQL Server Browser
-  Este tópico descreve como iniciar, parar, pausar, retomar ou reiniciar o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], o agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o serviço navegador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], comandos **net** em um prompt de comando, [!INCLUDE[tsql](../../includes/tsql-md.md)]ou PowerShell.  
+# <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service
+  Este tópico descreve como iniciar, parar, pausar, retomar ou reiniciar o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], o agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o serviço navegador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], **net** Commands de um prompt de comando, [!INCLUDE[tsql](../../includes/tsql-md.md)]ou PowerShell.  
   
 -   **Antes de começar:**  
   
@@ -123,7 +123,7 @@ ms.locfileid: "72797946"
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-an-instance-of-the-includessdenoversionincludesssdenoversion-mdmd"></a>Para iniciar, parar, pausar, retomar ou reiniciar a instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
   
-1.  No menu **Iniciar** , aponte para **Todos os Programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], aponte para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
+1.  No menu **Iniciar** , aponte para **Todos os Programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]e para **Ferramentas de Configuração**. Em seguida, clique em **SQL Server Configuration Manager**.  
   
 2.  (Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, clique em **Sim**.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "72797946"
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-includessnoversionincludesssnoversion-mdmd-browser-or-an-instance-of-the-includessnoversionincludesssnoversion-mdmd-agent"></a>Para iniciar, parar, pausar, retomar ou reiniciar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser ou uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
-1.  No menu **Iniciar** , aponte para **Todos os Programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], aponte para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
+1.  No menu **Iniciar** , aponte para **Todos os Programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]e para **Ferramentas de Configuração**. Em seguida, clique em **SQL Server Configuration Manager**.  
   
 2.  (Se a caixa de diálogo **Controle de Conta de Usuário** aparecer, clique em **Sim**.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "72797946"
 5.  Clique em **OK** para fechar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Não é possível pausar o Agent.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ##  <a name="SSMSProcedure"></a> Usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio  
   
@@ -245,7 +245,7 @@ ms.locfileid: "72797946"
   
     -   Para pausar um serviço, substitua **net start** por **net pause**.  
   
-    -   Para pausar um serviço, substitua **net start** com **net pause**.  
+    -   Para parar um serviço, substitua **net start** por **net stop**.  
   
 ##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
  O [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode ser parado com a instrução `SHUTDOWN`.  
@@ -337,6 +337,6 @@ ms.locfileid: "72797946"
     $DfltInstance  
     ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Iniciar o SQL Server com configuração mínima](start-sql-server-with-minimal-configuration.md)   
  [Recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  

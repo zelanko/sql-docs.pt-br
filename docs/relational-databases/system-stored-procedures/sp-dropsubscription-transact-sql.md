@@ -42,13 +42,13 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação associada. a *publicação* é **sysname**, com um padrão de NULL. Se **todas**, todas as assinaturas de todas as publicações para o assinante especificado serão canceladas. a *publicação* é um parâmetro necessário.  
+`[ @publication = ] 'publication'` é o nome da publicação associada. a *publicação* é **sysname**, com um padrão de NULL. Se **todas**, todas as assinaturas de todas as publicações para o assinante especificado serão canceladas. a *publicação* é um parâmetro necessário.  
   
-`[ @article = ] 'article'`É o nome do artigo. o *artigo* é **sysname**, com um valor padrão de NULL. Se **todas as**assinaturas, todos os artigos de cada publicação e assinante especificados forem removidos. Use **tudo** para publicações que permitem atualização imediata.  
+`[ @article = ] 'article'` é o nome do artigo. o *artigo* é **sysname**, com um valor padrão de NULL. Se **todas as**assinaturas, todos os artigos de cada publicação e assinante especificados forem removidos. Use **tudo** para publicações que permitem atualização imediata.  
   
-`[ @subscriber = ] 'subscriber'`É o nome do Assinante que terá suas assinaturas descartadas. o assinante é **sysname**, sem padrão. Se **todas**, todas as assinaturas de todos os assinantes forem descartadas.  
+`[ @subscriber = ] 'subscriber'` é o nome do Assinante que terá suas assinaturas descartadas. o *assinante* é **sysname**, sem padrão. Se **todas**, todas as assinaturas de todos os assinantes forem descartadas.  
   
-`[ @destination_db = ] 'destination_db'`É o nome do banco de dados de destino. *destination_db* é **sysname**, com um padrão de NULL. Se for NULL, todas as assinaturas daquele Assinante serão descartadas.  
+`[ @destination_db = ] 'destination_db'` é o nome do banco de dados de destino. *destination_db* é **sysname**, com um padrão de NULL. Se for NULL, todas as assinaturas daquele Assinante serão descartadas.  
   
 `[ @ignore_distributor = ] ignore_distributor`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -59,7 +59,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_dropsubscription** é usado em instantâneo e replicação transacional.  
   
  Se você descartar a assinatura de um artigo em uma publicação de sincronização imediata, não poderá adicioná-la novamente, exceto se descartar as assinaturas em todos os artigos de publicação e os adicionar novamente, todos de uma vez.  
@@ -71,7 +71,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
  Somente os membros da função de servidor fixa **sysadmin** , a função de banco de dados fixa **db_owner** ou o usuário que criou a assinatura podem executar **sp_dropsubscription**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Excluir uma assinatura push](../../relational-databases/replication/delete-a-push-subscription.md)   
+ [Excluir uma assinatura Push](../../relational-databases/replication/delete-a-push-subscription.md)   
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  

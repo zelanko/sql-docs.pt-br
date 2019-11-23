@@ -62,11 +62,11 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
- o **sp_setreplfailovermode** é usado na replicação de instantâneo ou na replicação transacional para a qual as assinaturas estão habilitadas, para atualização em fila com failover para atualização imediata ou para atualização imediata com failover para atualização em fila.  
+## <a name="remarks"></a>Remarks  
+ o **sp_setreplfailovermode** é usado na replicação de instantâneo ou na replicação transacional para as quais as assinaturas estão habilitadas, para atualização em fila com failover para atualização imediata ou para atualização imediata com failover para atualização em fila.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_setreplfailovermode**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_setreplfailovermode**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Alternar entre modos de atualização para uma assinatura transacional atualizável](../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)   

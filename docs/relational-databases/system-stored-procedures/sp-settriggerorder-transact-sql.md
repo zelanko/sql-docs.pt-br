@@ -117,7 +117,7 @@ GO
 sp_settriggerorder @triggername= 'Sales.uSalesOrderHeader', @order='First', @stmttype = 'UPDATE';  
 ```  
   
-### <a name="b-setting-the-firing-order-for-a-ddl-trigger"></a>b. Definindo a ordem de acionamento para um disparador DDL  
+### <a name="b-setting-the-firing-order-for-a-ddl-trigger"></a>B. Definindo a ordem de acionamento para um disparador DDL  
  O exemplo a seguir especifica que o disparador `ddlDatabaseTriggerLog` será o primeiro disparador a ser acionado depois que um evento `ALTER_TABLE` ocorrer no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  

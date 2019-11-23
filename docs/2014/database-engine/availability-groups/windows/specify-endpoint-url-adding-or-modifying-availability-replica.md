@@ -82,7 +82,7 @@ ms.locfileid: "72797972"
   
  `TCP://SYSTEM46:7022`  
   
-#### <a name="b-using-a-fully-qualified-domain-name"></a>b. Usando um nome de domínio completamente qualificado  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>B. Usando um nome de domínio completamente qualificado  
  A URL de ponto de extremidade a seguir especifica um nome de domínio completamente qualificado, `DBSERVER8.manufacturing.Adventure-Works.com`e a porta `7024`.  
   
  `TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024`  
@@ -119,7 +119,7 @@ ms.locfileid: "72797972"
 > [!NOTE]  
 >  Se você precisar de mais informações sobre um nome de domínio completamente qualificado, consulte seu administrador de sistema.  
   
-##  <a name="RelatedTasks"></a> Tarefas Relacionadas  
+##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para configurar um ponto de extremidade de espelhamento de banco de dados**  
   
 -   [Criar um ponto de extremidade de espelhamento &#40;de banco de dados para grupos de disponibilidade AlwaysOn SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
@@ -150,7 +150,7 @@ ms.locfileid: "72797972"
   
 -   [Guia de soluções do Microsoft SQL Server AlwaysOn para alta disponibilidade e recuperação de desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Criação e configuração de grupos de disponibilidade &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [Visão geral do &#40;grupos de disponibilidade AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
+ [Visão geral do &#40;grupos de disponibilidade AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  

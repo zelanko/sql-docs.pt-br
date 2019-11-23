@@ -42,7 +42,7 @@ ms.locfileid: "71952167"
 > [!IMPORTANT]  
 >  A ação de excluir e recriar a chave simétrica não pode ser invertida ou desfeita. Excluir ou recriar a chave simétrica pode ter ramificações importantes em sua instalação atual. Se você excluir a chave, quaisquer dados existentes criptografados pela chave simétrica também serão excluídos. Os dados excluídos incluem cadeias de caracteres de conexão a fontes de dados de relatório externas, cadeias de caracteres de conexões armazenadas e algumas informações de assinatura.  
   
- Para abrir essa página, inicie o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selecione o link no painel de navegação. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Para abrir essa página, inicie o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selecione o link no painel de navegação. Para obter mais informações, consulte [Gerenciador de Configurações do Reporting Services &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opções  
  **Backup**  
@@ -60,7 +60,7 @@ ms.locfileid: "71952167"
   
  Observe que a regeneração da chave simétrica pode ser um processo longo se você tiver muitas fontes de dados e assinaturas.  
   
- **Excluir**  
+ **Delete (excluir)**  
  Exclui a chave simétrica e todo o conteúdo criptografado, incluindo cadeias de caracteres de conexão e credenciais armazenadas. Você somente deve excluir a chave simétrica se não puder restaurá-la.  
   
  Depois de excluir a chave simétrica, você deve inserir novamente as cadeias de caracteres de conexão e credenciais armazenadas ausentes nos relatórios e fontes de dados compartilhadas que não mais tenham esses valores. Você também deve atualizar todas as assinaturas que usam extensões de entrega que armazenam dados criptografados. Isso inclui a extensão de entrega de compartilhamento de arquivo e qualquer extensão de entrega de terceiros que usem valor criptografado.  
@@ -68,10 +68,10 @@ ms.locfileid: "71952167"
  Não há nenhum modo automatizado para atualizar essas informações. Cada relatório, assinatura e fonte de dados compartilhada que use credenciais armazenadas e cadeias de caracteres de conexão deve ser atualizado individualmente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciador de configurações do Reporting Services F1 tópicos &#40;de ajuda sobre o&#41;modo nativo do SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Gerenciador de configurações do Reporting Services F1 tópicos &#40;de ajuda do modo&#41; nativo do SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Fazer backup e restaurar as chave de criptografia do Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [Excluir e recriar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Inicializar um servidor de relatório &#40; Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [Inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Armazenar dados criptografados do servidor de relatório &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

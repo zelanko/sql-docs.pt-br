@@ -43,7 +43,7 @@ ms.locfileid: "71952408"
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar uma URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [URLs em arquivos &#40;de configuração SSRS&#41;Configuration Manager](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)   
+ [URLs em arquivos &#40;de configuração Configuration Manager&#41; SSRS](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)   
  [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

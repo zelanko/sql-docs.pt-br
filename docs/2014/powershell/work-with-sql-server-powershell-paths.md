@@ -22,7 +22,7 @@ ms.locfileid: "72782726"
   
 1.  [Antes de começar](#BeforeYouBegin)  
   
-2.  **To work on a path node:**  [Listing Methods and Properties](#ListPropMeth), [Using Methods and Properties](#UsePropMeth)  
+2.  **Para trabalhar em um nó de caminho:**  [Listando métodos e propriedades](#ListPropMeth), [Usando métodos e propriedades](#UsePropMeth)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
  Depois de navegar até um nó em um caminho do provedor do [!INCLUDE[ssDE](../includes/ssde-md.md)] , você poderá executar dois tipos de ações:  
@@ -93,7 +93,7 @@ $MyDBVar.Create()
 $MyDBVar.State  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Provedor do SQL Server PowerShell](sql-server-powershell-provider.md)   
  [Navegar em caminhos do SQL Server PowerShell](navigate-sql-server-powershell-paths.md)   
  [Converter URNs em caminhos de provedor SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   

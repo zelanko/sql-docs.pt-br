@@ -48,7 +48,7 @@ ms.locfileid: "73882304"
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   Como estes filtros são estáticos, todos os assinantes receberão o mesmo subconjunto de dados. Se você precisa filtrar dinamicamente linhas em um artigo de tabela pertencente a uma publicação de mesclagem para que cada assinante receba uma partição diferente dos dados, consulte [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). A replicação de mesclagem também permite que você filtre linhas relacionadas com base em um filtro de linha existente. Para obter mais informações, consulte [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
+-   Como estes filtros são estáticos, todos os assinantes receberão o mesmo subconjunto de dados. Se você precisa filtrar dinamicamente linhas em um artigo de tabela pertencente a uma publicação de mesclagem para que cada assinante receba uma partição diferente dos dados, consulte [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). A replicação de mesclagem também permite que você filtre linhas relacionadas com base em um filtro de linha existente. Para obter mais informações, consulte [Definir e modificar um filtro de junção entre artigos de mesclagem](define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Defina, modifique e exclua filtros de linhas estático na página **Filtrar Linhas da Tabela** no Assistente para Nova Publicação ou na página **Filtrar Linhas** da caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma publicação](create-a-publication.md) e [Exibir e modificar as propriedades da publicação](view-and-modify-publication-properties.md).  
@@ -111,7 +111,7 @@ ms.locfileid: "73882304"
   
 2.  No Publicador no banco de dados de publicação, execute o [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql). Especifique o nome do artigo em **\@article**, o nome da publicação em **\@publication**, um nome para o filtro em **\@filter_name** e a cláusula de filtragem em **\@filter_clause** (não incluindo `WHERE`).  
   
-3.  Se um filtro de coluna ainda precisa ser definido, consulte [Definir e modificar um filtro de colunas](define-and-modify-a-column-filter.md). Caso contrário, execute [sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Especifique o nome da publicação em **\@publication**, o nome do artigo filtrado em **\@article** e a cláusula de filtro especificada na etapa 2 em **\@filter_clause**. Isto cria os objetos de sincronização para o artigo filtrado.  
+3.  Se um filtro de coluna ainda precisa ser definido, consulte [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). Caso contrário, execute [sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Especifique o nome da publicação em **\@publication**, o nome do artigo filtrado em **\@article** e a cláusula de filtro especificada na etapa 2 em **\@filter_clause**. Isto cria os objetos de sincronização para o artigo filtrado.  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Para modificar um filtro de linhas estático para um instantâneo ou publicação transacional  
   
@@ -135,7 +135,7 @@ ms.locfileid: "73882304"
   
 1.  No Publicador no banco de dados de publicação, execute o [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Especifique a cláusula de filtragem em **\@subset_filterclause** (não incluindo `WHERE`). Para obter mais informações, consulte [Define an Article](define-an-article.md).  
   
-2.  Se um filtro de coluna ainda precisa ser definido, consulte [Definir e modificar um filtro de colunas](define-and-modify-a-column-filter.md).  
+2.  Se um filtro de coluna ainda precisa ser definido, consulte [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
 #### <a name="to-modify-a-static-row-filter-for-a-merge-publication"></a>Modificar um filtro de linhas estático para uma publicação de mesclagem  
   
@@ -150,12 +150,12 @@ ms.locfileid: "73882304"
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranarticle)]  
   
- Neste exemplo de replicação de mesclagem, os artigos são filtrados horizontalmente para retornar apenas linhas que pertencem ao vendedor especificado. Um filtro de junção também é usado. Para obter mais informações, consulte [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
+ Neste exemplo de replicação de mesclagem, os artigos são filtrados horizontalmente para retornar apenas linhas que pertencem ao vendedor especificado. Um filtro de junção também é usado. Para obter mais informações, consulte [Definir e modificar um filtro de junção entre artigos de mesclagem](define-and-modify-a-join-filter-between-merge-articles.md).  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir e modificar um filtro de linha com parâmetros para um artigo de mesclagem](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [Definir e modificar um filtro de linha parametrizado para um artigo de mesclagem](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md)   
  [Filtrar os dados publicados](filter-published-data.md)   
  [Filtrar dados publicados para a replicação de mesclagem](../merge/filter-published-data-for-merge-replication.md)  

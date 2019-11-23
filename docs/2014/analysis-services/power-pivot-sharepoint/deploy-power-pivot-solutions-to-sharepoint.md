@@ -142,12 +142,12 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  A solução do aplicativo Web é implantada inicialmente na Administração Central, seguida por implantações subsequentes da solução em qualquer aplicativo Web adicional que dará suporte a solicitações para dados PowerPivot. Para implantar a solução de aplicativo Web da Administração Central, você deve usar a Ferramenta de Configuração do PowerPivot ou cmdlet do PowerShell. Para todos os outros aplicativos Web, você pode implantar a solução de aplicativo Web manualmente usando a Administração Central ou PowerShell.  
   
-|Solução|Description|  
+|Solução|Descrição|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|Adiciona o Microsoft.AnalysisServices.SharePoint.Integration.dll ao assembly global.<br /><br /> Adiciona o Microsoft.AnalysisServices.ChannelTransport.dll ao assembly global.<br /><br /> Instala recursos e arquivos de recurso e registra tipos de conteúdo.<br /><br /> Adiciona modelos de biblioteca para bibliotecas da Galeria PowerPivot e do Feed de Dados.<br /><br /> Adiciona páginas de aplicativos para configuração de aplicativos de serviço, Painel de Gerenciamento PowerPivot, atualização de dados e Galeria PowerPivot.|  
 |Powerpivotwebapp.wsp|Adiciona arquivos de recursos Microsoft.AnalysisServices.SharePoint.Integration.dll à pasta de extensões no servidor Web front-end.<br /><br /> Adiciona serviço Web do PowerPivot ao front-end Web.<br /><br /> Adiciona geração de imagens em miniatura para Galeria PowerPivot.|  
   
-## <a name="see-also"></a>Consulte Também  
- [Atualizar PowerPivot para SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)    
- [Administração e configuração do servidor PowerPivot na   de administração central](power-pivot-server-administration-and-configuration-in-central-administration.md)  
+## <a name="see-also"></a>Consulte também  
+ [Atualizar PowerPivot para SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
+ [Administração e configuração do servidor PowerPivot na  de administração central](power-pivot-server-administration-and-configuration-in-central-administration.md)  
  [Configuração do PowerPivot usando o Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  

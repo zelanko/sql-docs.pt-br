@@ -41,7 +41,7 @@ ms.locfileid: "70152573"
   
  Você pode abrir uma base de dados de conhecimento bloqueada e editá-la somente se você a bloqueou. Nesse caso, a base de dados de conhecimento será aberta no estado em que estava quando foi fechada, indicado em parênteses. Se uma base de conhecimento estiver bloqueada, e você não a tiver bloqueado, você só poderá abri-la como somente leitura.  
   
-### <a name="data-quality-projects"></a>Projetos de qualidade de dados  
+### <a name="data-quality-projects"></a>Data Quality Projects  
  Um projeto de qualidade de dados é o processo no qual o DQS executa a limpeza de dados ou correspondência de dados, por meio de correção de dados assistida por computador e limpeza de dados interativa.  
   
  **Novo projeto de qualidade de dados**  

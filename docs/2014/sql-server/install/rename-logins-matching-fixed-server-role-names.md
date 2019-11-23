@@ -60,10 +60,10 @@ ms.locfileid: "72278211"
   
 2.  Descarte os logons.  
   
-3.  Use o procedimento do sistema **sp_addlogin** para criar novos logons. Especifique o SID retornado na etapa 1 no parâmetro **\@sid** para cada logon correspondente.  
+3.  Use o procedimento do sistema **sp_addlogin** para criar novos logons. Especifique o SID retornado na etapa 1 no parâmetro **\@Sid** para cada logon correspondente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Problemas de atualização do Mecanismo de Banco de Dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Mecanismo de banco de dados problemas de atualização](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Novo supervisor &#91;de atualização do SQL Server 2014&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -86,7 +86,7 @@ ms.locfileid: "70175988"
  **Termos e definições de mídia de backup**  
   
  [dispositivo de backup](backup-devices-sql-server.md)  
- Um disco ou dispositivo de fita no qual são gravados backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nos quais eles podem ser restaurados. SQL Server backups também podem ser gravados em um serviço de armazenamento de BLOBs do Azure, e o formato de **URL** é usado para especificar o destino e o nome do arquivo de backup.. Para obter mais informações, consulte [SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Um disco ou dispositivo de fita no qual são gravados backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nos quais eles podem ser restaurados. Os backups do SQL Server também podem ser gravados em um serviço de Armazenamento de Blobs do Azure. O formato de **URL** é usado para especificar o destino e o nome do arquivo de backup. Para obter mais informações, consulte [SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  [mídia de backup](media-sets-media-families-and-backup-sets-sql-server.md)  
  Uma ou mais fitas ou arquivos de disco nos quais um ou mais backups foram gravados.  
@@ -133,7 +133,7 @@ ms.locfileid: "70175988"
   
 -   Se você tentar criar ou excluir um arquivo de banco de dados enquanto houver uma operação de backup em andamento, a operação de criação ou exclusão falhará.  
   
- Se uma operação de backup for sobreposta por uma operação de gerenciamento de arquivos ou de redução, ocorrerá um conflito. Independentemente de qual operação conflitante começou primeiro, a segunda operação aguardará até que o bloqueio definido para a primeira operação seja esgotado. (O tempo limite é controlado por uma configuração de tempo limite da sessão.) Se o bloqueio for liberado durante o período de tempo limite, a segunda operação continuará. Se o tempo limite do bloqueio for esgotado, a segunda operação falhará.  
+ Se uma operação de backup for sobreposta por uma operação de gerenciamento de arquivos ou de redução, ocorrerá um conflito. Independentemente de qual operação conflitante começou primeiro, a segunda operação aguarda o bloqueio definido pela primeira operação para atingir o tempo limite. (O período de tempo-limite é controlado por uma configuração de tempo limite de sessão.) Se o bloqueio for liberado durante o período de tempo limite, a segunda operação continuará. Se o tempo limite do bloqueio for esgotado, a segunda operação falhará.  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para trabalhar com dispositivos de backup e mídia de backup**  
@@ -182,7 +182,7 @@ ms.locfileid: "70175988"
 -   [Tutorial: SQL Server Backup e restauração para o serviço de armazenamento de BLOBs do Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Fazer backup e restaurar bancos de dados do SQL Server](back-up-and-restore-of-sql-server-databases.md)   
+ [Backup e Restauração de bancos de dados do SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Visão geral de restauração e recuperação &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [Planos de manutenção](../maintenance-plans/maintenance-plans.md)   
  [O log de transações &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   

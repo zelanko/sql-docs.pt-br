@@ -36,7 +36,7 @@ ms.locfileid: "73882122"
   
     -   **logbased** - um artigo de tabela baseado em log que é o padrão para replicação transacional e de instantâneo. A replicação gera automaticamente o procedimento armazenado usado para filtragem horizontal e a exibição que define um artigo filtrado verticalmente.  
   
-    -   **logbased manualfilter** -um artigo filtrado horizontalmente, baseado em log, em que o procedimento armazenado usado para filtragem horizontal é criado manualmente e definido pelo usuário e especificado para **\@filtro**. Para obter mais informações, consulte [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
+    -   **logbased manualfilter** -um artigo filtrado horizontalmente, baseado em log, em que o procedimento armazenado usado para filtragem horizontal é criado manualmente e definido pelo usuário e especificado para **\@filtro**. Para obter mais informações, consulte [Definir e modificar um filtro de linha estático](define-and-modify-a-static-row-filter.md).  
   
     -   **logbased manualview** -um artigo filtrado verticalmente, baseado em log, em que a exibição que define o artigo filtrado verticalmente é criada e definida pelo usuário e especificada para **\@sync_object**. Para obter mais informações, consulte [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) e [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73882122"
   
      Isso define um novo artigo para a publicação. Para obter mais informações, consulte [Define an Article](define-an-article.md).  
   
-2.  Para artigos **logbased manualboth** e **logbased manualfilter** , execute [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) para gerar o procedimento armazenado de filtragem para um artigo filtrado horizontalmente. Para obter mais informações, consulte [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
+2.  Para artigos **logbased manualboth** e **logbased manualfilter** , execute [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) para gerar o procedimento armazenado de filtragem para um artigo filtrado horizontalmente. Para obter mais informações, consulte [Definir e modificar um filtro de linha estático](define-and-modify-a-static-row-filter.md).  
   
 3.  Para artigos **logbased manualboth**, **logbased manualview**e **logbased manualfilter** , execute [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) para gerar a exibição que define o artigo filtrado verticalmente. Para obter mais informações, consulte [Definir e modificar um filtro de colunas](define-and-modify-a-column-filter.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73882122"
   
     -   **indexed view schema only** - um artigo de exibição indexada somente de esquema. A tabela base também deve ser replicada.  
   
-    -   **indexed view logbased manualfilter** -um artigo de exibição indexada, filtrado horizontalmente, baseado em log, em que o procedimento armazenado usado para filtragem horizontal é criado manualmente e definido pelo usuário e especificado para **\@filtro**. Para obter mais informações, consulte [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
+    -   **indexed view logbased manualfilter** -um artigo de exibição indexada, filtrado horizontalmente, baseado em log, em que o procedimento armazenado usado para filtragem horizontal é criado manualmente e definido pelo usuário e especificado para **\@filtro**. Para obter mais informações, consulte [Definir e modificar um filtro de linha estático](define-and-modify-a-static-row-filter.md).  
   
     -   **indexed view logbased manualview** -um artigo de exibição indexada, filtrado, baseado em log, em que a exibição que define um artigo filtrado verticalmente é criada e definida pelo usuário e especificada para **\@sync_object**. Para obter mais informações, consulte [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) e [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "73882122"
   
      Isso define um novo artigo para a publicação. Para obter mais informações, consulte [Define an Article](define-an-article.md).  
   
-2.  Para artigos **logbased manualboth** e **logbased manualfilter** , execute [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) para gerar o procedimento armazenado de filtragem para um artigo filtrado horizontalmente. Para obter mais informações, consulte [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
+2.  Para artigos **logbased manualboth** e **logbased manualfilter** , execute [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) para gerar o procedimento armazenado de filtragem para um artigo filtrado horizontalmente. Para obter mais informações, consulte [Definir e modificar um filtro de linha estático](define-and-modify-a-static-row-filter.md).  
   
 3.  Para artigos **logbased manualboth**, **logbased manualview**e **logbased manualfilter** , execute [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) para gerar a exibição que define o artigo filtrado verticalmente. Para obter mais informações, consulte [Definir e modificar um filtro de colunas](define-and-modify-a-column-filter.md).  
   
@@ -107,7 +107,7 @@ ms.locfileid: "73882122"
      Isso define um novo artigo para a publicação. Para obter mais informações, consulte [Define an Article](define-an-article.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [Conceitos dos procedimentos armazenados no sistema de replicação](../concepts/replication-system-stored-procedures-concepts.md)   
  [Publicar dados e objetos de banco de dados](publish-data-and-database-objects.md)  
   
   

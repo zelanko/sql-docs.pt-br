@@ -120,7 +120,7 @@ SELECT @range_first_value_output AS FirstNumber ;
   
 ```  
   
-### <a name="b-returning-all-output-parameters"></a>b. Retornando todos os parâmetros de saída  
+### <a name="b-returning-all-output-parameters"></a>B. Retornando todos os parâmetros de saída  
  O exemplo a seguir retorna todos os valores de saída do procedimento sp_sequence_get_range.  
   
 ```  

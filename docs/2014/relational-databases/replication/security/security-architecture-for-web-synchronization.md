@@ -37,7 +37,7 @@ ms.locfileid: "73912812"
 |Conta de serviço do Windows para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent|Gerenciador de Configurações do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |Aplicativo autônomo|O Merge Agent executa sob o contexto do usuário do Windows que estiver executando o aplicativo.|  
   
-## <a name="b-connection-to-the-subscriber"></a>b. Conexão com o Assinante  
+## <a name="b-connection-to-the-subscriber"></a>B. Conexão com o Assinante  
  O Merge Agent conecta-se com Assinante usando a Autenticação do Windows ou a ou Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O usuário do Windows ou o logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que você especificar deve ser associado a um usuário de banco de dados que seja membro da função de banco de dados fixa **dbowner** , no banco de dados de assinatura.  
   
 > [!NOTE]  

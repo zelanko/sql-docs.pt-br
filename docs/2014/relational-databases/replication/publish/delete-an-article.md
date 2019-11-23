@@ -26,7 +26,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882279"
 ---
-# <a name="delete-an-article"></a>Excluir um artigo
+# <a name="delete-an-article"></a>Delete an Article
   Este tópico descreve como excluir um artigo no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou RMO (Replication Management Objects). Para obter informações sobre as condições nas quais os artigos podem ser removidos e se a remoção de um artigo requer um novo instantâneo ou a reinicialização de assinaturas, consulte [Adicionar e remover artigos de publicações existentes](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
   

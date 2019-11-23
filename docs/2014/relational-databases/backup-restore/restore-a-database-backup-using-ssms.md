@@ -30,9 +30,9 @@ ms.locfileid: "70154785"
   Este tópico explica como restaurar um backup de banco de dados completo.  
   
 > [!IMPORTANT]  
->  No modelo de recuperação completo ou bulk-logged, antes de poder restaurar um banco de dados no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], é necessário fazer backup do log de transações ativas (conhecido como a parte final do log). Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)). Para restaurar um banco de dados criptografado, é necessário ter acesso ao certificado ou à chave assimétrica usada para criptografar o banco de dados. Sem o certificado ou a chave assimétrica, o banco de dados não pode ser restaurado. Como resultado, o certificado usado para criptografar a chave de criptografia do banco de dados deverá ser retido enquanto o backup for necessário. Para obter mais informações, consulte [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
+>  No modelo de recuperação completo ou bulk-logged, antes de poder restaurar um banco de dados no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], é necessário fazer backup do log de transações ativas (conhecido como a parte final do log). Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md). Para restaurar um banco de dados criptografado, é necessário ter acesso ao certificado ou à chave assimétrica usada para criptografar o banco de dados. Sem o certificado ou a chave assimétrica, o banco de dados não pode ser restaurado. Como resultado, o certificado usado para criptografar a chave de criptografia do banco de dados deverá ser retido enquanto o backup for necessário. Para obter mais informações, consulte [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
   
- Observe que se você restaurar um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou superior no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados será atualizado automaticamente. Normalmente, o banco de dados se torna disponível imediatamente. No entanto, se o banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices, dependendo da configuração da propriedade de servidor **Opção de Atualização de Texto Completo** . Se a opção de atualização for definida como **Importar** ou **Recriar**, os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação poderá levar várias horas e a recriação poderá ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida como **Importar**, se não houver um catálogo de texto completo disponível, os índices de texto completo associados serão recompilados. Para obter informações sobre como exibir ou alterar a configuração da propriedade **Full-Text Upgrade Option** , veja [Gerenciar e monitorar a pesquisa de texto completo para uma instância de servidor](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+ Observe que se você restaurar um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou superior no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados será atualizado automaticamente. Normalmente, o banco de dados se torna disponível imediatamente. No entanto, se o banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices, dependendo da configuração da propriedade de servidor **Opção de Atualização de Texto Completo** . Se a opção de atualização for definida como **Importar** ou **Recriar**, os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação poderá levar várias horas e a recriação poderá ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida como **Importar**, se não houver um catálogo de texto completo disponível, os índices de texto completo associados serão recompilados. Para obter informações sobre como exibir ou alterar a configuração da propriedade **Full-Text Upgrade Option**, veja [Gerenciar e monitorar a pesquisa de texto completo para uma instância de servidor](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
 ### <a name="to-restore-a-full-database-backup"></a>Para restaurar um backup de banco de dados completo  
   
@@ -44,7 +44,7 @@ ms.locfileid: "70154785"
   
 4.  Na página **Geral** , use a seção **Origem** para especificar a origem e o local dos conjuntos de backup a serem restaurados. Selecione uma das opções a seguir:  
   
-    -   **Backup de banco de dados**  
+    -   **Banco de dados**  
   
          Selecione o banco de dados a ser restaurado na lista suspensa. A lista contém apenas os bancos de dados dos quais foi feito um backup de acordo com o histórico de backup do **msdb** .  
   
@@ -53,17 +53,17 @@ ms.locfileid: "70154785"
   
     -   **Dispositivo**  
   
-         Clique no botão Procurar ( **...** ) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Na caixa **Tipo de mídia de backup** , selecione um dos tipos de dispositivo listados. Para selecionar um ou mais dispositivos da caixa **Mídia de backup** , clique em **Adicionar**.  
+         Clique no botão Procurar ( **...** ) para abrir a caixa de diálogo **Selecione dispositivos de backup**. Na caixa **Tipo de mídia de backup** , selecione um dos tipos de dispositivo listados. Para selecionar um ou mais dispositivos da caixa **Mídia de backup** , clique em **Adicionar**.  
   
          Após adicionar os dispositivos desejados à caixa de listagem **Mídia de backup** , clique em **OK** para voltar à página **Geral** .  
   
-         Na caixa de listagem **Fonte: Dispositivo: Banco de Dados**, selecione o nome do banco de dados que deve ser restaurado.  
+         Na caixa de listagem **Origem: Dispositivo: Banco de Dados** , selecione o nome do banco de dados que deve ser restaurado.  
   
         > [!NOTE]  
         >  Essa lista estará disponível apenas quando **Dispositivo** for selecionado. Apenas os bancos de dados que têm backups no dispositivo selecionado estarão disponíveis.  
   
          **Mídia de backup**  
-         Selecione o meio para a operação de restauração: **Arquivo**, **fita**, **URL**ou **dispositivo de backup**. A opção **Fita** só aparece se houver uma unidade de fita montada no computador, e a opção **Dispositivo de backup** só aparece se houver, no mínimo, um dispositivo de backup.  
+         Selecione o meio para a operação de restauração: **arquivo**, **fita**, **URL**ou **dispositivo de backup**. A opção **Fita** só aparece se houver uma unidade de fita montada no computador, e a opção **Dispositivo de backup** só aparece se houver, no mínimo, um dispositivo de backup.  
   
          **Local do backup**  
          Exibir, adicionar ou remover mídia para a operação de restauração. A lista pode conter até 64 arquivos, fitas ou dispositivos de backup.  
@@ -74,8 +74,8 @@ ms.locfileid: "70154785"
         |Típo de mídia|Caixa de diálogo|Descrição|  
         |----------------|----------------|-----------------|  
         |**Arquivo**|**Localizar o arquivo de backup**|Nessa caixa de diálogo, você pode selecionar um arquivo local da árvore ou pode especificar um arquivo remoto que use o seu nome totalmente qualificado da UNC (Convenção Universal de Nomenclatura). Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
-        |**Dispositivo**|**Selecionar Dispositivo de Backup**|Nessa caixa de diálogo você pode selecionar em uma lista de dispositivos lógicos de backup, definida na instância de servidor.|  
-        |**Fita**|**Selecionar fita de backup**|Nessa caixa de diálogo você pode selecionar em uma lista de unidades de fita conectadas fisicamente ao computador que executa a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+        |**Dispositivo**|**Selecionar dispositivo de backup**|Nessa caixa de diálogo você pode selecionar em uma lista de dispositivos lógicos de backup, definida na instância de servidor.|  
+        |**Tape**|**Selecionar fita de backup**|Nessa caixa de diálogo você pode selecionar em uma lista de unidades de fita conectadas fisicamente ao computador que executa a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
         |**URL**|Isso inicia duas caixas de diálogo na seguinte ordem:<br /><br /> 1) **conectar-se ao armazenamento do Azure**<br /><br /> 2) **localizar arquivo de backup no Azure**|Na caixa de diálogo **conectar ao armazenamento do Azure** , selecione uma credencial SQL existente que armazena o nome da conta de armazenamento do Azure e informações de chave de acesso, ou crie uma nova credencial do SQL especificando o nome da conta de armazenamento e informações de chave de acesso de armazenamento. Para obter mais informações, consulte [conectar-se &#40;à&#41;restauração do armazenamento do Azure](connect-to-microsoft-azure-storage-restore.md).<br /><br /> Na caixa de diálogo de **Localizar Arquivo de Backup** , você pode selecionar um arquivo da lista de contêineres exibidos no quadro esquerdo.|  
   
          Se a lista estiver cheia, o botão **Adicionar** ficará indisponível.  
@@ -90,7 +90,7 @@ ms.locfileid: "70154785"
   
 6.  Na caixa **Restaurar para** , deixe o padrão como **Para o último backup obtido** ou clique em **Linha do tempo** para acessar a caixa de diálogo **Linha do Tempo de Backup** para selecionar manualmente um momento determinado a fim de interromper a ação de recuperação. Para obter mais informações sobre como designar um momento específico, consulte [Backup Timeline](backup-timeline.md).  
   
-7.  Na grade **Conjuntos de backup a serem restaurados** , selecione os backups a serem restaurados. Essa grade exibe os backups disponíveis para o local especificado. Por padrão, um plano de recuperação é sugerido. Para substituir o plano de recuperação sugerido, você pode alterar as seleções na grade. Backups que dependem da restauração de um backup anterior têm a seleção automaticamente cancelada quando a seleção do backup anterior é cancelada. Para obter informações sobre as colunas da grade **Conjuntos de backup a serem restaurados** , veja [Restaurar banco de dados &#40;página Geral&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)).  
+7.  Na grade **Conjuntos de backup a serem restaurados** , selecione os backups a serem restaurados. Essa grade exibe os backups disponíveis para o local especificado. Por padrão, um plano de recuperação é sugerido. Para substituir o plano de recuperação sugerido, você pode alterar as seleções na grade. Backups que dependem da restauração de um backup anterior têm a seleção automaticamente cancelada quando a seleção do backup anterior é cancelada. Para obter informações sobre as colunas da grade **Selecionar os conjuntos de backup a serem restaurados**, veja [Restaurar banco de dados &#40;Página Geral&#41;](../../integration-services/general-page-of-integration-services-designers-options.md).  
   
 8.  Opcionalmente, clique em **Arquivos** no painel **Selecionar uma página** para acessar a caixa de diálogo **Arquivos de Banco de Dados** . Daqui, você pode restaurar o banco de dados em um novo local, com a especificação de um novo destino de restauração para cada arquivo na grade **Restaurar os arquivos de banco de dados como** . Para obter mais informações sobre essa grade, veja [Restaurar banco de dados &#40;Página Arquivos&#41;](restore-database-files-page.md).  
   
@@ -118,7 +118,7 @@ ms.locfileid: "70154785"
   
     5.  Selecione **Perguntar antes de restaurar cada backup** para que você seja solicitado entre cada operação de restauração. Isso normalmente só é necessário quando o banco de dados é grande e você deseja monitorar o status da operação de restauração.  
   
-     Para obter mais informações sobre essas opções de restauração, veja [Restaurar banco de dados &#40;página Opções&#41;](restore-database-options-page.md)).  
+     Para obter mais informações sobre essas opções de restauração, veja [Restaurar banco de dados &#40;Página Opções&#41;](restore-database-options-page.md).  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

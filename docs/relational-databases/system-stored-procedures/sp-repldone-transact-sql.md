@@ -28,9 +28,9 @@ ms.locfileid: "72798394"
   Atualiza o registro que identifica a última transação distribuída do servidor. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
 > [!CAUTION]  
->  Se você executar o **sp_repldone** manualmente, poderá invalidar a ordem e a consistência das transações entregues. **sp_repldone** só deve ser usado para solucionar problemas de replicação, conforme indicado por um profissional de suporte de replicação experiente.  
+>  Se você executar **sp_repldone** manualmente, poderá invalidar a ordem e a consistência das transações entregues. **sp_repldone** só deve ser usado para solucionar problemas de replicação, conforme indicado por um profissional de suporte de replicação experiente.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,14 +59,14 @@ sp_repldone [ @xactid= ] xactid
 ## <a name="remarks"></a>Remarks  
  **sp_repldone** é usado na replicação transacional.  
   
- **sp_repldone** é usado pelo processo de leitor de log para controlar quais transações foram distribuídas.  
+ **sp_repldone** é usado pelo processo do leitor de log para controlar quais transações foram distribuídas.  
   
  Com o **sp_repldone**, você pode informar manualmente ao servidor que uma transação foi replicada (enviada para o distribuidor). Ele também permite alterar a transação marcada como a próxima a ser replicada. Você pode avançar ou retroceder na lista de transações replicadas. (Todas as transações menores ou iguais àquela transação serão marcadas como distribuídas.)  
   
  Os parâmetros necessários *xactid* e *xact_seqno* podem ser obtidos usando **sp_repltrans** ou **sp_replcmds**.  
   
 ## <a name="permissions"></a>Permissões  
- Os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_repldone**.  
+ Os membros da função de servidor fixa **sysadmin** ou a função de banco de dados fixa **db_owner** podem ser executados **sp_repldone**.  
   
 ## <a name="examples"></a>Exemplos  
  Quando *xactid* é nulo, *xact_seqno* é nulo e *Reset* é **1**, todas as transações replicadas no log são marcadas como distribuídas. Isso é útil quando há transações replicadas no log de transações que não são mais válidas e você quer truncar o log, por exemplo:  
@@ -78,8 +78,8 @@ EXEC sp_repldone @xactid = NULL, @xact_seqno = NULL, @numtrans = 0, @time = 0, @
 > [!CAUTION]  
 >  Esse procedimento pode ser usado em situações emergenciais para permitir o truncamento do log de transações quando houver replicação pendente de transações.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [ &#40;Transact-SQL&#41; sp_replflush](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)  
- [ &#40;Transact-SQL&#41; sp_repltrans](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)  
+ [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -37,12 +37,12 @@ ms.locfileid: "71952269"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
   
 > [!NOTE]  
->  Observação: Algumas das etapas de configuração podem mudar ou podem não funcionar em determinadas topologias de farm. Por exemplo, uma única instalação de servidor não oferece suporte aos serviços Windows Identity Foundation c2WTS; portanto, cenários de delegação de declarações para token do windows não são possíveis com esta configuração de farm.  
+>  Observação: Algumas das etapas de configuração podem mudar ou não funcionar em certas topologias de farm. Por exemplo, uma única instalação de servidor não oferece suporte aos serviços Windows Identity Foundation C2WTS; portanto, reivindicações assim a janelas cenários de delegação simbólicos não são possíveis com esta configuração de farm.  
   
-### <a name="basic-steps-needed-to-configure-c2wts"></a>Etapas básicas necessárias para configurar o c2WTS  
+### <a name="basic-steps-needed-to-configure-c2wts"></a>Etapas básicas necessárias para configurar o C2WTS  
   
 1.  Configure a conta de serviço do c2WTS. Adicione a conta de serviço ao grupo de Administradores local em cada servidor de aplicativos executando c2WTS. Além disso, verifique se a conta tem os seguintes direitos de política de segurança local:  
   
@@ -96,10 +96,10 @@ ms.locfileid: "71952269"
   
     2.  Altere o tipo de inicialização para "**automático**" e inicie o serviço.  
   
-4.  Inicie o SharePoint ' claims to Windows token Service ': Inicie as Declarações para Serviço de Token do Windows pela Administração Central do SharePoint na página **Gerenciar Serviços no Servidor**. O serviço deverá ser iniciado no servidor que estará executando a ação. Por exemplo, se você tiver um servidor que é um WFE e outro servidor que é um Servidor de aplicativos com o serviço compartilhado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] shared service running, you only need to start c2WTS on the Application Server. O c2WTS não é necessário no WFE.  
+4.  Inicie o SharePoint ' claims to Windows token Service ': Inicie o claims to Windows token Service por meio da administração central do SharePoint na página **gerenciar serviços no servidor** . O serviço deverá ser iniciado no servidor que estará executando a ação. Por exemplo, se você tiver um servidor que é um WFE e outro servidor que é um Servidor de aplicativos com o serviço compartilhado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] shared service running, you only need to start c2WTS on the Application Server. O C2WTS não é necessário no WFE.  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral do claims to Windows token Service (c2WTS) (https://msdn.microsoft.com/library/ee517278.aspx)](https://msdn.microsoft.com/library/ee517278.aspx)   
+ [Visão geral do c2WTS (claims to Windows token Service) (https://msdn.microsoft.com/library/ee517278.aspx)](https://msdn.microsoft.com/library/ee517278.aspx)   
  [Visão geral da autenticação Kerberos para produtos do Microsoft SharePoint 2010 (https://technet.microsoft.com/library/gg502594.aspx)](https://technet.microsoft.com/library/gg502594.aspx)  
   
   

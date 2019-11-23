@@ -49,7 +49,7 @@ ms.locfileid: "73788238"
   
  Os aplicativos de codificação para programadores que usam funções de cópia em massa deveriam seguir as regras gerais para garantir o bom desempenho dessas funções. Para obter mais informações sobre o suporte para operações de cópia em massa no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [importação e &#40;exportação&#41;em massa de SQL Server de dados](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   
-## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Um UDT (tipo definido pelo usuário) CLR deve ser associado como dados binários. Mesmo se um arquivo de formato especificar SQLCHAR como o tipo de dados para uma coluna UDT de destino, o utilitário BCP interpretará os dados como binários.  
   
  Não use SET FMTONLY OFF com operações de cópia em massa. SET FMTONLY OFF pode fazer sua operação de cópia em massa falhar ou gerar resultados inesperados.  

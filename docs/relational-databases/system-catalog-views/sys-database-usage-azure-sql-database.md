@@ -30,22 +30,22 @@ ms.locfileid: "70155541"
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **Observação: Isso se aplica somente ao banco de dados SQL do Azure v11.**  
+  **Observação: isso se aplica somente ao banco de dados SQL do Azure v11.**  
   
- Lista o número, o tipo e a duração dos bancos de dados no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] servidor.  
+ Lista o número, o tipo e a duração dos bancos de dados no servidor de [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  A exibição **Sys. database_usage** contém as colunas a seguir.  
   
-|Nome da coluna|Descrição|  
+|Column Name|Descrição|  
 |-----------------|-----------------|  
 |time|A data em que os eventos de uso ocorreram.|  
-|sku|O tipo de camada de serviço para o banco de dados: **Web**, **negócios**, **básico**, **Standard**, **Premium**|  
+|sku|O tipo de camada de serviço para o banco de dados: **Web**, **Business**, **Basic**, **Standard**, **Premium**|  
 |quantity|O número máximo de bancos de dados de um tipo de SKU que existiu durante o dia.|  
   
 ## <a name="permissions"></a>Permissões  
  O acesso somente leitura a essa exibição está disponível para todos os usuários com permissões para se conectar ao banco de dados **mestre** .  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A exibição **Sys. database_usage** retorna uma linha para cada dia da sua assinatura.  
   
 ## <a name="see-also"></a>Consulte também  

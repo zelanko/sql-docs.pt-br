@@ -95,7 +95,7 @@ ms.locfileid: "73788037"
 |Função|Descrição|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|A lista de servidores retornada por **SQLBrowseConnect** não incluirá VNNs. Você consultará apenas uma lista de servidores sem nenhuma indicação se o servidor for autônomo, ou um servidor primário ou secundário em um cluster WSFC (Windows Server Failover Clustering) que contenha duas ou mais instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] habilitadas para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Se você se conectar a um servidor e obtiver uma falha, talvez isso aconteça porque você se conectou a um servidor e a configuração de **ApplicationIntent** não é compatível com a configuração de servidor.<br /><br /> Como **SQLBrowseConnect** não reconhece servidores em um cluster WSFC (Windows Server Failover Clustering) que contém duas ou mais instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] habilitadas para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], o **SQLBrowseConnect** ignora a palavra-chave de cadeia de conexão **MultiSubnetFailover**.|  
-|[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|O**SQLConnect** oferece suporte a **ApplicationIntent** e **MultiSubnetFailover** por meio de um nome de fonte de dados (DSN) ou propriedades da conexão.|  
+|[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|O **SQLConnect** dá suporte a **ApplicationIntent** e **MultiSubnetFailover** por meio de um nome de fonte de dados (DSN) ou propriedades da conexão.|  
 |[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)|O**SQLDriverConnect** oferece suporte a **ApplicationIntent** e **MultiSubnetFailover** por meio de palavras-chave de cadeia de conexão, propriedades de conexão ou DSN.|  
   
 ## <a name="ole-db"></a>OLE DB  
@@ -123,7 +123,7 @@ ms.locfileid: "73788037"
  **IDataInitialize::GetDataSource**  
  **IDataInitialize::GetDataSource** usa uma cadeia de conexão de entrada que pode conter a palavra-chave **Application Intent**.  
   
- **IDBProperties:: GetProperties**  
+ **IDBProperties::GetProperties**  
  **IDBProperties::GetProperties** recupera o valor da propriedade atualmente definida na fonte de dados.  Você pode recuperar o valor de **Application Intent** através das propriedades _INIT_PROVIDERSTRING e SSPROP_INIT_APPLICATIONINTENT.  
   
  **IDBProperties::SetProperties**  

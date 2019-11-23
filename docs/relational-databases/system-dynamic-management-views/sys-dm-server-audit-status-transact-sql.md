@@ -37,7 +37,7 @@ ms.locfileid: "72313684"
 |**status**|**smallint**|Status numérico da auditoria de servidor:<br /><br /> 0 = não iniciado<br /><br /> 1 =<br />        Started (iniciado)<br /><br /> 2 =<br />      Falha no tempo de execução<br /><br /> 3 = falha ao criar destino<br /><br /> 4 = desligando|  
 |**status_desc**|**nvarchar(256)**|Cadeia de caracteres que mostra o status da auditoria de servidor:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Carimbo de data e hora em UTC da última alteração de status da auditoria.|  
-|**event_session_address**|**varbinary(8)**|Endereço da sessão de Eventos Estendidos associada à auditoria. Relacionado à exibição de catálogo **Sys. dm _xe_sessions. Address** .|  
+|**event_session_address**|**varbinary(8)**|Endereço da sessão de Eventos Estendidos associada à auditoria. Relacionado à exibição do catálogo **Sys. dm_xe_sessions. Address** .|  
 |**audit_file_path**|**nvarchar(256)**|Caminho completo e nome de arquivo do destino do arquivo de auditoria que está sendo usado no momento. Populado somente para auditorias de arquivos.|  
 |**audit_file_size**|**bigint**|Tamanho aproximado do arquivo de auditoria, em bytes. Populado somente para auditorias de arquivos.|  
   
@@ -48,8 +48,8 @@ ms.locfileid: "72313684"
   
 ## <a name="see-also"></a>Consulte também  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
- [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
+ [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
  [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
  [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   

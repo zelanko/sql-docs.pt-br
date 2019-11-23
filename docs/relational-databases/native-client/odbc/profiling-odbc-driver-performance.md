@@ -71,7 +71,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Rede  
   
--   Hora  
+-   time  
   
  Na tabela a seguir, as descrições dos campos na estrutura de dados SQLPERF também se aplicam às estatísticas registradas no arquivo de log de desempenho.  
   

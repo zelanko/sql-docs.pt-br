@@ -33,7 +33,7 @@ ms.locfileid: "71207717"
 
   Permite forçar um plano específico para uma determinada consulta.  
   
- Quando um plano é forçado para uma determinada consulta, toda vez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que o encontra a consulta, ele tenta forçar o plano no otimizador de consulta. Se a imposição de plano falhar, um evento estendido será acionado e o otimizador de consulta será instruído a otimizar de forma normal.  
+ Quando um plano é forçado para uma determinada consulta, toda vez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontra a consulta, ele tenta forçar o plano no otimizador de consulta. Se a imposição de plano falhar, um evento estendido será acionado e o otimizador de consulta será instruído a otimizar de forma normal.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,14 +44,14 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @query_id = ] query_id`É a ID da consulta. *query_id* é um **bigint**, sem padrão.  
+`[ @query_id = ] query_id` é a ID da consulta. *query_id* é um **bigint**, sem padrão.  
   
-`[ @plan_id = ] plan_id`É a ID do plano de consulta a ser forçado. *plan_id* é um **bigint**, sem padrão.  
+`[ @plan_id = ] plan_id` é a ID do plano de consulta a ser forçado. *plan_id* é um **bigint**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão **ALTER** no banco de dados.
@@ -68,7 +68,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Depois de identificar o query_id e o plan_id que você deseja forçar, use o exemplo a seguir para forçar a consulta a usar um plano.  
+ Depois de identificar o query_id e plan_id que você deseja forçar, use o exemplo a seguir para forçar a consulta a usar um plano.  
   
 ```sql  
 EXEC sp_query_store_force_plan 3, 3;  
@@ -78,7 +78,7 @@ EXEC sp_query_store_force_plan 3, 3;
  [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
- [Exibições de Catálogo do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
+ [Exibições de catálogo do repositório de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Monitorando o desempenho usando o Repositório de Consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
  [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)       

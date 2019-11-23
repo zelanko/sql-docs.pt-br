@@ -137,7 +137,7 @@ FROM (
 WHERE Q.LastNode = 'Alice'
  ```
 
- ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>b.  Localize o caminho mais curto de um determinado nó para todos os outros nós no grafo. 
+ ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>B.  Localize o caminho mais curto de um determinado nó para todos os outros nós no grafo. 
  O exemplo a seguir localiza todas as pessoas às quais o Jacob está conectado no grafo e o caminho mais curto, começando de Jacob a todas essas pessoas. 
 
  ```

@@ -33,7 +33,7 @@ ms.locfileid: "73983168"
 
   Retorna as opções de Repositório de Consultas para este banco de dados.  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior) [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  

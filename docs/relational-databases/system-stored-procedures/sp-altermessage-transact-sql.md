@@ -44,21 +44,21 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
  [ **@message_id =** ] *message_number*  
  É o número do erro da mensagem a ser alterado de **Sys. messages**. *message_number* é **int** sem valor padrão.  
   
-`[ @parameter = ] 'write\_to\_log_'` é usado com **\@parameter_value** para indicar que a mensagem deve ser gravada no log de aplicativos do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)]. *write_to_log* é **sysname** sem valor padrão. *write_to_log* deve ser definido como WITH_LOG ou NULL. Se *write_to_log* for definido como WITH_LOG ou NULL e o valor de **\@parameter_value** for **true**, a mensagem será gravada no log de aplicativos do Windows. Se *write_to_log* for definido como WITH_LOG ou NULL e o valor de **\@parameter_value** for **false**, a mensagem nem sempre será gravada no log de aplicativos do Windows, mas poderá ser gravada dependendo de como o erro foi gerado. Se *write_to_log* for especificado, o valor de **\@parameter_value** também deverá ser especificado.  
+`[ @parameter = ] 'write\_to\_log_'` é usado com **\@parameter_value** para indicar que a mensagem deve ser gravada no log do aplicativo do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)]. *write_to_log* é **sysname** sem valor padrão. *write_to_log* deve ser definido como WITH_LOG ou nulo. Se *write_to_log* for definido como WITH_LOG ou NULL e o valor de **\@parameter_value** for **true**, a mensagem será gravada no log de aplicativos do Windows. Se *write_to_log* for definido como WITH_LOG ou NULL e o valor de **\@parameter_value** for **false**, a mensagem nem sempre será gravada no log de aplicativos do Windows, mas poderá ser gravada dependendo de como o erro foi gerado. Se *write_to_log* for especificado, o valor para **\@parameter_value** também deverá ser especificado.  
   
 > [!NOTE]  
 >  Se uma mensagem for gravada no log do aplicativo do Windows, ela também será gravada no arquivo de log de erros do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-`[ @parameter_value = ]'value_'` é usado com **\@parameter** para indicar que o erro deve ser gravado no log do aplicativo do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)]. o *valor* é **varchar (5)** , sem valor padrão. Se **for true**, o erro será sempre gravado no log de aplicativos do Windows. Se **for false**, o erro nem sempre será gravado no log de aplicativos do Windows, mas poderá ser gravado dependendo de como o erro foi gerado. Se *Value* for especificado, *write_to_log* para **\@parameter** também deverá ser especificado.  
+`[ @parameter_value = ]'value_'` é usado com **\@parâmetro** para indicar que o erro deve ser gravado no log do aplicativo do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)]. o *valor* é **varchar (5)** , sem valor padrão. Se **for true**, o erro será sempre gravado no log de aplicativos do Windows. Se **for false**, o erro nem sempre será gravado no log de aplicativos do Windows, mas poderá ser gravado dependendo de como o erro foi gerado. Se *Value* for especificado, *write_to_log* para **\@parâmetro** também deverá ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhum  
+ Nenhum.  
   
-## <a name="remarks"></a>Comentários  
- O efeito de **sp_altermessage** com a opção with_log é semelhante ao do parâmetro RAISERROR with log, exceto que **sp_altermessage** altera o comportamento de log de uma mensagem existente. Se uma mensagem foi alterada para ser WITH_LOG, ela sempre será gravada no log de aplicativos do Windows, independentemente de como um usuário invocar o erro. Até mesmo se RAISERROR for executado sem a opção WITH_LOG, o erro será gravado no log de aplicativos do Windows.  
+## <a name="remarks"></a>Remarks  
+ O efeito de **sp_altermessage** com a opção with_log é semelhante ao do parâmetro RAISERROR com log, exceto que **sp_altermessage** altera o comportamento de log de uma mensagem existente. Se uma mensagem foi alterada para ser WITH_LOG, ela sempre será gravada no log de aplicativos do Windows, independentemente de como um usuário invocar o erro. Até mesmo se RAISERROR for executado sem a opção WITH_LOG, o erro será gravado no log de aplicativos do Windows.  
   
  As mensagens do sistema podem ser modificadas usando **sp_altermessage**.  
   

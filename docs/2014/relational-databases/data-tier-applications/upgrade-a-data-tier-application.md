@@ -52,13 +52,13 @@ ms.locfileid: "72797984"
   
 -   **Ignorar validação de política** -se `True`, a política de seleção de servidor DAC não será avaliada. Se `False`, a política será avaliada e a atualização finalizará se houver um erro de validação. A configuração padrão é `False`.  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
  Só podem ser executados uprades de DAC em [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> Pré-requisitos  
  Convém fazer um backup completo do banco de dados antes de iniciar a atualização. Se uma atualização encontrar um erro e não puder reverter todas as suas alterações, talvez seja preciso restaurar o backup.  
   
- Antes de iniciar a atualização, há várias ações a serem adotadas para validar o pacote de DAC e as ações de atualização. Para obter mais informações sobre como executar essas verificações, consulte [Validar um pacote de DAC](validate-a-dac-package.md).  
+ Antes de iniciar a atualização, há várias ações a serem adotadas para validar o pacote de DAC e as ações de atualização. Para obter mais informações sobre como executar essas verificações, consulte [Validate a DAC Package](validate-a-dac-package.md).  
   
 -   É recomendável não atualizar usando um pacote de DAC de origens desconhecidas ou não confiáveis. Esses pacotes podem conter código mal-intencionado que possivelmente executarão códigos Transact-SQL inesperados ou provocarão erros ao modificar o esquema. Antes de usar um pacote de uma origem desconhecida ou não confiável, desempacote o DAC e examine o código, como procedimentos armazenados ou outro código definido pelo usuário.  
   
@@ -284,6 +284,6 @@ $dacstore.IncrementalUpgrade($dacName, $dacType, $upgradeProperties)
 $fileStream.Close()  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
- [Aplicativos da Camada de Dados](data-tier-applications.md)   
+## <a name="see-also"></a>Consulte também  
+ [Aplicativos da camada de dados](data-tier-applications.md)   
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  

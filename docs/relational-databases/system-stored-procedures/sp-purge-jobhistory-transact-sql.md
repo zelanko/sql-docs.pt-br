@@ -43,23 +43,23 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_name = ] 'job_name'` o nome do trabalho para o qual excluir os registros de histórico. *job_name*é **sysname**, com um padrão de NULL. *Job_id* ou *job_name* devem ser especificados, mas ambos não podem ser especificados.  
+`[ @job_name = ] 'job_name'` o nome do trabalho para o qual excluir os registros de histórico. *job_name*é **sysname**, com um padrão de NULL. *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados.  
   
 > [!NOTE]  
->  Os membros da função de servidor fixa **sysadmin** ou os membros da função de banco de dados fixa **SQLAgentOperatorRole** podem executar **sp_purge_jobhistory** sem especificar um *job_name* ou *job_id*. Quando os usuários do **sysadmin** não especificam esses argumentos, o histórico de trabalhos de todos os trabalhos locais e multisservidor é excluído dentro do tempo especificado por *oldest_date*. Quando os usuários do **SQLAgentOperatorRole** não especificam esses argumentos, o histórico de trabalhos de todos os trabalhos locais é excluído dentro do tempo especificado pelo *oldest_date*.  
+>  Os membros da função de servidor fixa **sysadmin** ou os membros da função de banco de dados fixa **SQLAgentOperatorRole** podem executar **sp_purge_jobhistory** sem especificar um *job_name* ou *job_id*. Quando os usuários do **sysadmin** não especificam esses argumentos, o histórico de trabalhos de todos os trabalhos locais e multisservidor é excluído dentro do tempo especificado pelo *oldest_date*. Quando os usuários do **SQLAgentOperatorRole** não especificam esses argumentos, o histórico de trabalhos de todos os trabalhos locais é excluído dentro do tempo especificado pelo *oldest_date*.  
   
-`[ @job_id = ] job_id` o número de identificação do trabalho para os registros a serem excluídos. *job_id* é **uniqueidentifier**, com um padrão de NULL. *Job_id* ou *job_name* devem ser especificados, mas ambos não podem ser especificados. Consulte a observação na descrição de **\@job_name** para obter informações sobre como os usuários **sysadmin** ou **SQLAgentOperatorRole** podem usar esse argumento.  
+`[ @job_id = ] job_id` o número de identificação do trabalho para os registros a serem excluídos. *job_id* é **uniqueidentifier**, com um padrão de NULL. *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados. Consulte a observação na descrição de **\@job_name** para obter informações sobre como os usuários **sysadmin** ou **SQLAgentOperatorRole** podem usar esse argumento.  
   
-`[ @oldest_date = ] oldest_date` o registro mais antigo a ser retido no histórico. *oldest_date* é **DateTime**, com um padrão de NULL. Quando *oldest_date* é especificado, o **sp_purge_jobhistory** remove somente os registros que são mais antigos que o valor especificado.  
+`[ @oldest_date = ] oldest_date` o registro mais antigo a ser mantido no histórico. *oldest_date* é **DateTime**, com um padrão de NULL. Quando *oldest_date* é especificado, **sp_purge_jobhistory** remove apenas os registros que são mais antigos que o valor especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhum  
+ Nenhum.  
   
-## <a name="remarks"></a>Comentários  
- Quando o **sp_purge_jobhistory** é concluído com êxito, uma mensagem é retornada.  
+## <a name="remarks"></a>Remarks  
+ Quando **sp_purge_jobhistory** for concluída com êxito, uma mensagem será retornada.  
   
 ## <a name="permissions"></a>Permissões  
  Por padrão, somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **SQLAgentOperatorRole** podem executar esse procedimento armazenado. Os membros do **sysadmin** podem limpar o histórico de trabalhos para todos os trabalhos locais e multisservidor. Os membros de **SQLAgentOperatorRole** podem limpar o histórico de trabalhos somente para todos os trabalhos locais.  

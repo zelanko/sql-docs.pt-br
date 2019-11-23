@@ -35,7 +35,7 @@ ms.locfileid: "74164902"
 > [!NOTE]  
 > Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **Sys. dm_pdw_nodes_os_tasks**.  
   
-|Nome da coluna|Data type|Descrição|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary(8)**|Endereço de memória do objeto.|  
 |**task_state**|**nvarchar(60)**|O estado da tarefa. Pode ser um dos seguintes:<br /><br /> PENDING: Esperando por um thread de trabalho.<br /><br /> RUNNABLE: Executável, mas esperando receber um quantum.<br /><br /> RUNNING: Atualmente em execução no agendador.<br /><br /> SUSPENDED: Tem um trabalhador, mas está esperando por um evento.<br /><br /> DONE: Concluído.<br /><br /> SPINLOOP: Preso em um spinlock.|  
@@ -82,7 +82,7 @@ SELECT
   ORDER BY session_id, request_id;  
 ```  
   
-### <a name="b-associating-session-ids-with-windows-threads"></a>b. Associando IDs de sessão a threads do Windows  
+### <a name="b-associating-session-ids-with-windows-threads"></a>B. Associando IDs de sessão a threads do Windows  
  Você pode usar a consulta a seguir para associar um valor de ID de sessão a um ID de thread do Windows. Depois, poderá monitorar o desempenho do thread no Monitor de Desempenho do Windows. A consulta a seguir não retorna informações de sessões que estão suspensas.  
   
 ```  

@@ -67,7 +67,7 @@ ms.locfileid: "70212385"
  Descreve casos de uso e exemplos de códigos que usam objetos CLR.  
   
 ## <a name="see-also"></a>Consulte também  
- [Assemblies &#40;mecanismo de banco de dados&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Assemblies &#40;mecanismo de banco de dados&#41; ](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Instalando o SDK do .NET Framework](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

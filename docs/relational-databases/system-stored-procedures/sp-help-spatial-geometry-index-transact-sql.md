@@ -50,11 +50,11 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Permissões  
  O usuário deve ter uma função PUBLIC atribuída a ele para acessar o procedimento. Requer permissão READ ACCESS no servidor e no objeto.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  As propriedades que contêm valores NULL não são incluídas no conjunto de retorno.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa `sp_help_spatial_geometry_index` para investigar o índice espacial **SIndx_SpatialTable_geometry_col2** definido na tabela **geometry_col** para o exemplo de consulta fornecido em **\@qs**. Este exemplo retorna apenas as propriedades principais do índice especificado.  
+ O exemplo a seguir usa `sp_help_spatial_geometry_index` para investigar o índice espacial **SIndx_SpatialTable_geometry_col2** definido na tabela **geometry_col** para o exemplo de consulta fornecido em **\@QS**. Este exemplo retorna apenas as propriedades principais do índice especificado.  
   
 ```  
 declare @qs geometry  

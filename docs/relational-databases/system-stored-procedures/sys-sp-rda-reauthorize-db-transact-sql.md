@@ -38,7 +38,7 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- @credential = *\@credential*  
+ @credential = *\@credencial*  
  É a credencial no escopo do banco de dados associada ao banco de dados local habilitado para Stretch.  
   
  @with_copy = *\@with_copy*  
@@ -54,10 +54,10 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
  0 (êxito) ou > 0 (falha)  
   
 ## <a name="permissions"></a>Permissões  
- Requer permissões db_owner.  
+ Requer db_owner permissões.  
   
-## <a name="remarks"></a>Comentários  
- Quando você executa [Sys. sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para se reconectar ao banco de dados remoto do Azure, essa operação redefine automaticamente o modo de consulta para LOCAL_AND_REMOTE, que é o comportamento padrão para Stretch Database. Ou seja, as consultas retornam resultados de dados locais e remotos.  
+## <a name="remarks"></a>Remarks  
+ Quando você executa [Sys. sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para se reconectar ao banco de dados remoto do Azure, essa operação redefine automaticamente o modo de consulta como LOCAL_AND_REMOTE, que é o comportamento padrão para Stretch Database. Ou seja, as consultas retornam resultados de dados locais e remotos.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir restaura a conexão autenticada entre um banco de dados local habilitado para Stretch e o banco de dados remoto. Ele faz uma cópia dos dados remotos (recomendado) e conecta-se à nova cópia.  

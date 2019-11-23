@@ -22,7 +22,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882162"
 ---
-# <a name="specify-schema-options"></a>Especificar opções de esquema
+# <a name="specify-schema-options"></a>Specify Schema Options
   Este tópico descreve como especificar opções de esquema no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Ao publicar uma tabela ou exibição, você pode controlar as opções de criação de objeto que são replicadas para o objeto publicado. Você pode definir esta opção quando o artigo é criado, e você também pode alterá-los mais tarde. Se você não especificar essas opções explicitamente para um artigo, um conjunto padrão de opções será definido.  
   
 > [!NOTE]  

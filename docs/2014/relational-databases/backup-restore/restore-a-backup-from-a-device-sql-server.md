@@ -69,7 +69,7 @@ ms.locfileid: "70154742"
   
 8.  Na caixa de texto **Dispositivo de backup** , selecione o dispositivo a ser usado para restaurar a operação.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
   
 #### <a name="to-restore-a-backup-from-a-device"></a>Para restaurar um backup de um dispositivo  
   
@@ -91,7 +91,7 @@ RESTORE DATABASE AdventureWorks2012
  [RESTORE LABELONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
  [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)   
  [Restaurar um backup de banco de dados no modelo de recuperação simples &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)   
- [Restaurar um backup &#40;de banco de dados SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
+ [Restaurar um SQL Server Management Studio&#41; de &#40;backup de banco de dados](restore-a-database-backup-using-ssms.md)   
  [Restaurar um backup de banco de dados diferencial &#40;SQL Server&#41;](restore-a-differential-database-backup-sql-server.md)   
  [Restaurar um banco de dados em um novo local &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)   
  [Fazer backup de arquivos e de grupos de arquivos &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   

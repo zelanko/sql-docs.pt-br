@@ -24,7 +24,7 @@ ms.locfileid: "73785749"
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  As restrições a seguir se aplicam ao usar o SQLPutData para enviar mais de 65.535 bytes de dados (para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 4.21 a) ou 400 KB de dados (para SQL Server versão 6,0 e posterior) para um SQL_LONGVARCHAR (**Text**), SQL_WLONGVARCHAR (**ntext**) ou SQL_ Coluna LONGVARBINARY (**imagem**):  
+  As restrições a seguir se aplicam ao usar o SQLPutData para enviar mais de 65.535 bytes de dados (para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 4.21 a) ou 400 KB de dados (para SQL Server versão 6,0 e posterior) para uma coluna SQL_LONGVARCHAR (**texto**), SQL_WLONGVARCHAR (**ntext**) ou SQL_LONGVARBINARY (**imagem**):  
   
 -   O parâmetro referenciado pode ser o *insert_value* em uma instrução INSERT.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73785749"
 ## <a name="diagnostics"></a>Diagnóstico  
  Há uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQLSTATE específico do cliente nativo para SQLPutData:  
   
-|SQLSTATE|Erro|Descrição|  
+|SQLSTATE|Error|Descrição|  
 |--------------|-----------|-----------------|  
 |22026|Incompatibilidade de comprimento de dados String|Se o comprimento dos dados em bytes a ser enviado tiver sido especificado por um aplicativo, por exemplo, com SQL_LEN_DATA_AT_EXEC (*n*) em que *n* é maior que 0, o número total de bytes fornecidos pelo aplicativo via SQLPutData deve corresponder ao comprimento especificado.|  
   

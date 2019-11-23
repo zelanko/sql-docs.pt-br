@@ -41,7 +41,7 @@ ms.locfileid: "73882144"
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   Quando você usar filtros com parâmetros, será possível controlar como os filtros serão processados pela replicação de mesclagem, especificando a opção **use partition groups** ou a opção **keep partition changes** ao criar uma publicação. Essas opções melhoram o desempenho de sincronização para publicações com artigos filtrados, armazenando metadados adicionais no banco de dados de publicação. Você pode controlar como os dados serão compartilhados entre Assinantes definindo as **opções de partição** ao criar um artigo. Para obter mais informações sobre esses requisitos, consulte [filtros de linha com parâmetros](../merge/parameterized-filters-parameterized-row-filters.md).  
+-   Quando você usar filtros com parâmetros, será possível controlar como os filtros serão processados pela replicação de mesclagem, especificando a opção **use partition groups** ou a opção **keep partition changes** ao criar uma publicação. Essas opções melhoram o desempenho de sincronização para publicações com artigos filtrados, armazenando metadados adicionais no banco de dados de publicação. Você pode controlar como os dados serão compartilhados entre Assinantes definindo as **opções de partição** ao criar um artigo. Para obter mais informações sobre esses requisitos, consulte [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
      Com os assinantes do [!INCLUDE[ssEW](../../../includes/ssew-md.md)]SQL Server Compact, keep_partition_changes deve ser definido como true para assegurar que as exclusões sejam propagadas corretamente. Quando definido como falso, o assinante pode ter mais linhas do que o esperado.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "73882144"
   
     -   **Sem-sobreposição, compartilhados entre assinaturas**  
   
-     Para obter mais informações sobre essas opções e sobre como estão relacionadas às opções disponíveis nas caixas de diálogo **Adicionar Filtro** e **Editar Filtro** , consulte a seção "Definindo as opções de partição'" em [filtros de linha com parâmetros](../merge/parameterized-filters-parameterized-row-filters.md).  
+     Para obter mais informações sobre essas opções e sobre como estão relacionadas às opções disponíveis nas caixas de diálogo **Adicionar Filtro** e **Editar Filtro** , consulte a seção "Definindo as opções de partição'" em [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -142,7 +142,7 @@ ms.locfileid: "73882144"
   
 4.  Repita a etapa 3 para cada artigo na publicação.  
   
-5.  (Opcional) No Assinante do banco de dados de publicação, execute [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) para definir um filtro de junção entre dois artigos. Para obter mais informações, consulte [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
+5.  (Opcional) No Assinante do banco de dados de publicação, execute [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) para definir um filtro de junção entre dois artigos. Para obter mais informações, consulte [Definir e modificar um filtro de junção entre artigos de mesclagem](define-and-modify-a-join-filter-between-merge-articles.md).  
   
 #### <a name="to-view-and-modify-merge-filter-behaviors-for-an-existing-publication"></a>Para visualizar e modificar comportamentos de filtro de mesclagem para uma publicação existente  
   
@@ -161,7 +161,7 @@ ms.locfileid: "73882144"
   
 ## <a name="see-also"></a>Consulte também  
  [Gerar automaticamente um conjunto de filtros de junção entre artigos de mesclagem &#40;SQL Server Management Studio&#41;](automatically-generate-join-filters-between-merge-articles.md)   
- [Definir e modificar um filtro de linha com parâmetros para um artigo de mesclagem](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
- [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)  
+ [Definir e modificar um filtro de linha parametrizado para um artigo de mesclagem](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [Filtros de linha com parâmetros](../merge/parameterized-filters-parameterized-row-filters.md)  
   
   

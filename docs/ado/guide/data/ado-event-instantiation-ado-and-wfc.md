@@ -40,7 +40,7 @@ O ADO para Windows Foundation classes (ADO/WFC) se baseia no modelo de evento AD
   
      O primeiro argumento do construtor **ConnectionEventHandler** é uma referência à classe que contém o manipulador de eventos chamado no segundo argumento.  
   
-3.  Adicione seu manipulador de eventos a uma lista de manipuladores designados para processar um determinado tipo de evento. Use o método com um nome como EventName (*manipulador*) de **addOn**.  
+3.  Adicione seu manipulador de eventos a uma lista de manipuladores designados para processar um determinado tipo de evento. Use o método com um nome como_EventName_(*manipulador*) de **addOn**.  
   
 4.  O ADO/WFC implementa internamente todos os manipuladores de eventos do ADO. Portanto, um evento causado por uma **conexão** ou operação de **conjunto de registros** é interceptado por um manipulador de eventos ADO/wfc.  
   
@@ -61,8 +61,8 @@ O ADO para Windows Foundation classes (ADO/WFC) se baseia no modelo de evento AD
 7.  Quando você terminar de processar, remova seu manipulador da lista de manipuladores de eventos ADO/WFC. Use o método com um nome como **remover**_EventName_(*manipulador*).  
   
 ## <a name="see-also"></a>Consulte também  
- [Resumo do manipulador de eventos do ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
+   de [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)  
  [Índice de sintaxe ADO-WFC](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
- [Parâmetros do evento](../../../ado/guide/data/event-parameters.md)   
+   de [parâmetros de evento](../../../ado/guide/data/event-parameters.md)  
  [Como os manipuladores de eventos funcionam juntos](../../../ado/guide/data/how-event-handlers-work-together.md)   
  [Tipos de eventos](../../../ado/guide/data/types-of-events.md)

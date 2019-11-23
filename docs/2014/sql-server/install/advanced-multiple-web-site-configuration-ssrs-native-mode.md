@@ -34,13 +34,13 @@ ms.locfileid: "71952675"
  **Endereço IP**  
  Identifica o computador do servidor de relatório em uma rede TCP/IP. Os valores válidos incluem:  
   
--   **Todos Atribuídos** especifica que qualquer um dos endereços IP atribuídos ao computador podem ser usados em uma URL que aponta para um aplicativo do servidor de relatório. Esse valor também abrange nomes de host amigáveis (como nomes de computadores) que podem ser resolvidos por um servidor de nome de domínio para um endereço IP que é atribuído ao computador. Esse é o valor padrão para uma URL do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+-   **Todos Atribuídos** especifica que qualquer um dos endereços IP atribuídos ao computador podem ser usados em uma URL que aponta para um aplicativo para servidores de relatório. Esse valor também abrange nomes de host amigáveis (como nomes de computadores) que podem ser resolvidos por um servidor de nome de domínio para um endereço IP que é atribuído ao computador. Esse é o valor padrão para uma URL do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 -   **Nenhum Atribuído** especifica que o servidor de relatório aceitará qualquer solicitação que não tenha uma correspondência exata para o endereço IP ou o nome do host. Não use esse valor se outro aplicativo Web já o estiver usando. Se isso for feito, você interromperá o serviço para o outro aplicativo.  
   
 -   **127.0.0.1** é usado para acessar localhost. Ele dá suporte à administração local no computador do servidor de relatório. Se você selecionar apenas esse valor, somente os usuários que fizerem logon localmente no computador do servidor de relatório terão acesso ao aplicativo.  
   
--   *Nnn.nnn.nnn.nnn* é o endereço IPv4 de uma placa de adaptador de rede em seu computador. Se sua rede usar endereçamento IPv6, o endereço IP será um valor de 128 bits de campos de 8 4 bytes semelhante ao seguinte formato: \<header >:*nnnn: nnnn: nnnn: nnnn*.  
+-   *Nnn.nnn.nnn.nnn* é o endereço IPv4 de uma placa de adaptador de rede em seu computador. Se sua rede usar endereçamento IPv6, o endereço IP será um valor de 128 bits de campos de 8 4 bytes semelhante ao seguinte formato: \<cabeçalho >:*nnnn: nnnn: nnnn: nnnn*.  
   
      Se você tiver várias placas, verá um endereço IP para cada uma. Se você selecionar apenas esse valor, isso limitará o acesso do aplicativo somente ao endereço IP (e qualquer nome de host que um servidor de nome de domínio mapear para esse endereço). Você não pode usar localhost para acessar um servidor de relatório e não pode usar os endereços IP de outras placas de adaptador de rede que estejam instaladas no computador do servidor de relatório.  
   
@@ -68,10 +68,10 @@ ms.locfileid: "71952675"
  **Adicionar**  
  Defina uma URL adicional.  
   
- **Editar**  
+ **Editarar**  
  Modifique qualquer parte da sintaxe da URL.  
   
- **Remover**  
+ **Removerr**  
  Desmarque uma entrada de URL da lista.  
   
 ## <a name="see-also"></a>Consulte também  

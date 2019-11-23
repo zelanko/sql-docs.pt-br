@@ -41,7 +41,7 @@ ms.locfileid: "73784083"
   
  Esta é uma comparação de como scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] e aplicativos ODBC funcionam com cursores.  
   
-|Ação|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
+|Action|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
 |------------|------------------------|----------|  
 |Definir o comportamento do cursor|Especifique por meio de parâmetros DECLARE CURSOR|Definir atributos de cursor usando [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)|  
 |Abrir um cursor|DECLARAR CURSOR aberto *cursor_name*|**SQLExecDirect** ou **SQLExecute**|  

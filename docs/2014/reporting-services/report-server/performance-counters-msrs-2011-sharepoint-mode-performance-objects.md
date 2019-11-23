@@ -32,7 +32,7 @@ ms.locfileid: "72782842"
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modo do SharePoint  
   
- Os objetos de desempenho estão disponíveis no Monitor de Desempenho do Windows (**Perfmon.exe**). Para obter mais informações, consulte a documentação do Windows. [Criação de perfis de tempo de execução](https://msdn.microsoft.com/library/w4bz2147.aspx).  
+ Os objetos de desempenho estão disponíveis no Monitor de Desempenho do Windows (**Perfmon.exe**). Para obter mais informações, consulte a documentação do Windows. [Criação de perfis de runtime](https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  **Neste tópico:**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72782842"
   
  A tabela a seguir lista os contadores que são incluídos com o objeto de desempenho do `MSRS 2014 Web Service SharePoint Mode`.  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |`Active Sessions`|Número de sessões ativas. Este contador fornece uma contagem cumulativa de todas as sessões de navegador geradas a partir de execuções de relatórios, independentemente de estarem ativas ou não.<br /><br /> O contador é reduzido à medida que os registros de sessão são removidos. Por padrão, as sessões são removidas após dez minutos de inatividade.|  
 |`Cache Hits/Sec`|Número de solicitações por segundo para relatórios armazenados em cache. Essas são solicitações para relatórios re-renderizados e não solicitações para relatórios processados diretamente do cache. (Consulte `Total Cache Hits` mais adiante neste tópico.)|  
@@ -77,7 +77,7 @@ ms.locfileid: "72782842"
   
  A tabela a seguir lista os contadores incluídos no objeto de desempenho `MSRS 2014 Windows Service SharePoint mode`.  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |`Active Sessions`|Número de sessões ativas armazenadas no banco de dados do servidor de relatório. Esse contador fornece uma contagem cumulativa de todas as sessões de navegador utilizáveis geradas a partir de assinaturas de relatórios, independentemente de estarem ativas ou não.|  
 |`Alerting: event queue length`||  
@@ -139,6 +139,6 @@ CounterSetName     : MSRS 2014 Web Service SharePoint Mode
 (Get-Counter -ListSet "MSRS 2014 Windows Service SharePoint Mode").Paths  
 ```  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Monitorando o desempenho do servidor de relatório](monitoring-report-server-performance.md)   
  [Contadores de desempenho para o serviço Web MSRS 2014 e o modo nativo dos objetos &#40;de desempenho do serviço Windows MSRS 2014&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  

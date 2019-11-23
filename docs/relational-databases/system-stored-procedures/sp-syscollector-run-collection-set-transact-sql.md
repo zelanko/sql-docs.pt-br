@@ -48,12 +48,12 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ## <a name="arguments"></a>Argumentos  
 `[ @collection_set_id = ] collection_set_id` é o identificador local exclusivo para o conjunto de coleta. *collection_set_id* é **int** e deve ter um valor se *Name* for NULL.  
   
-`[ @name = ] 'name'` é o nome do conjunto de coleta. o *nome* é **sysname** e deve ter um valor se *collection_set_id* for nulo.  
+`[ @name = ] 'name'` é o nome do conjunto de coleta. o *nome* é **sysname** e deve ter um valor se *collection_set_id* for NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O *collection_set_id* ou o *nome* deve ter um valor, ambos não podem ser nulos.  
   
  Este procedimento iniciará a coleta e carregará trabalhos para o conjunto de coleta especificado e iniciará imediatamente o trabalho do agente de coleta se o conjunto de coleta tiver seu **\@collection_mode** definido como não armazenado em cache (1). Para obter mais informações, [consulte &#40;SP_SYSCOLLECTOR_CREATE_COLLECTION_SET Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
@@ -74,6 +74,6 @@ EXEC sp_syscollector_run_collection_set @collection_set_id = 1;
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)  
+ [Coleta de dados](../../relational-databases/data-collection/data-collection.md)  
   
   

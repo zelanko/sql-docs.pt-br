@@ -31,7 +31,7 @@ ms.locfileid: "73844404"
   
 ||  
 |-|  
-|**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,10 +41,10 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [@target_server =] ' server_name '  
+ [ @target_server = ] 'server_name'  
  O nome do servidor do Banco de Dados SQL que hospeda o banco de dados secundário ativo. server_name é sysname, sem padrão.  
   
- [@target_database =] ' database_name '  
+ [ @target_database = ] 'database_name'  
  O nome do banco de dados secundário ativo. database_name é sysname, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -61,7 +61,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ## <a name="permissions"></a>Permissões  
  Qualquer usuário no banco de dados primário pode chamar este procedimento armazenado do sistema. O logon deve ser um usuário nos bancos de dados primário e secundário ativo.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Todas as transações confirmadas antes de uma chamada de **sp_wait_for_database_copy_sync** são enviadas para o banco de dados secundário ativo.  
   
 ## <a name="examples"></a>Exemplos  

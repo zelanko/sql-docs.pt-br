@@ -39,9 +39,9 @@ ms.locfileid: "73728081"
   
 |Permissão|Descrição|  
 |----------------|-----------------|  
-|**Leitura**|O usuário pode ler membros folha e atributos.|  
+|**leitura**|O usuário pode ler membros folha e atributos.|  
 |**Criar**|O usuário pode criar membros folha e atribuir valores de atributo durante a criação.|  
-|**Update (atualizar)**|O usuário pode atualizar membros folha e atributos.|  
+|**Atualizar**|O usuário pode atualizar membros folha e atributos.|  
 |**Delete (excluir)**|O usuário pode excluir membros folha.|  
 |**Deny**|Nega todo o acesso aos membros folha.|  
   
@@ -52,16 +52,16 @@ ms.locfileid: "73728081"
   
 |Permissão|Descrição|  
 |----------------|-----------------|  
-|**Leitura**|O usuário pode ler atributos.|  
+|**leitura**|O usuário pode ler atributos.|  
 |**Criar**|O usuário pode atribuir valores ao criar membros.|  
-|**Update (atualizar)**|O usuário pode atualizar atributos.|  
+|**Atualizar**|O usuário pode atualizar atributos.|  
 |**Delete (excluir)**|Nenhum efeito.|  
 |**Deny**|O atributo não é exibido.<br /><br /> Observação: você não pode negar acesso explicitamente para os atributos Name e Code.|  
   
 ### <a name="example"></a>Exemplo  
  Para a entidade Product, atribua a permissão **Atualizar** ao atributo Subcategory. Negue permissão a todos os demais atributos.  
   
-|Nome|Código|Subcategory (atualizar)|  
+|NAME|Code|Subcategory (atualizar)|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|Bicicletas de Mountain {5}|  
 |Mountain-100|BK-M201|Bicicletas de Mountain {5}|  

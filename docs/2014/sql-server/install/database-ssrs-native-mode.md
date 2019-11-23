@@ -26,9 +26,9 @@ ms.locfileid: "71952316"
   
  A criação de um banco de dados de servidor de relatório e a configuração da conexão são um processo de várias etapas. Para orientá-lo pelas etapas, esta página fornece Assistentes para cada tipo de tarefa. As permissões e logons são criados ou atualizados para você. Você pode monitorar o status de cada etapa na página Progresso. Se ocorrer um erro, você poderá clicar no erro para obter informações sobre como resolvê-lo.  
   
- Um banco de dados de servidor de relatório deve dar suporte a um modo de servidor específico. O modo padrão é o modo nativo, mas você também pode criar um banco de dados de servidor de relatório para o modo integrado do SharePoint se estiver executando um servidor de relatório em uma implantação maior de um produto ou tecnologia do SharePoint. Para obter mais informações, consulte [Criar um banco de dados de servidor de relatório no modo nativo &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+ Um banco de dados de servidor de relatório deve dar suporte a um modo de servidor específico. O modo padrão é o modo nativo, mas você também pode criar um banco de dados de servidor de relatório para o modo integrado do SharePoint se estiver executando um servidor de relatório em uma implantação maior de um produto ou tecnologia do SharePoint. Para obter mais informações, veja [Criar um banco de dados de servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
- Para abrir essa página, inicie o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e clique em **Banco de Dados** no painel de navegação. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Para abrir essa página, inicie o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e clique em **Banco de Dados** no painel de navegação. Para obter mais informações, consulte [Gerenciador de Configurações do Reporting Services &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opções  
  **Nome do SQL Server**  
@@ -47,7 +47,7 @@ ms.locfileid: "71952316"
  Especifica credenciais que o servidor de relatório usa para conectar-se ao banco de dados do servidor de relatório. Os tipos de credencial que podem ser especificados incluem a conta de serviço, um usuário de domínio do Windows, o usuário local do Windows ou o logon do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre como selecionar credenciais, consulte [Configurar uma conexão &#40;de banco de&#41;dados do servidor de relatório SSRS Configuration Manager](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Nome do Usuário**  
- Especifica uma conta de usuário de domínio se você estiver usando credenciais do Windows, ou um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se você estiver usando credenciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se você estiver usando credenciais do Windows, especifique-as neste formato: *\<domain > \\ < conta @ no__t-3*.  
+ Especifica uma conta de usuário de domínio se você estiver usando credenciais do Windows, ou um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se você estiver usando credenciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se você estiver usando credenciais do Windows, especifique-as neste formato: *\<domínio >\\< conta\>* .  
   
  **Senha**  
  Especifica a senha para a conta.  
@@ -57,7 +57,7 @@ ms.locfileid: "71952316"
   
 ## <a name="see-also"></a>Consulte também  
  [Criar um banco de dados de servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Gerenciador de configurações do Reporting Services F1 tópicos &#40;de ajuda sobre o&#41;modo nativo do SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Gerenciador de configurações do Reporting Services F1 tópicos &#40;de ajuda do modo&#41; nativo do SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   

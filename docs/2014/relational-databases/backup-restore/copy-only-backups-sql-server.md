@@ -22,7 +22,7 @@ ms.lasthandoff: 10/23/2019
 ms.locfileid: "72798012"
 ---
 # <a name="copy-only-backups-sql-server"></a>Backups somente cópia (SQL Server)
-  Um *backup somente cópia* é um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não depende da sequência de backups convencionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Geralmente, um backup altera o banco de dados e afeta a forma de restauração dos backups posteriores. Contudo, ocasionalmente, é útil fazer um backup para uma finalidade especial sem afetar o backup global e os procedimentos de restauração do banco de dados. Backups de cópia servem para essa finalidade.  
+  Um *backup somente cópia* é um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não depende da sequência de backups convencionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Geralmente, um backup altera o banco de dados e afeta a forma de restauração dos backups posteriores. Contudo, ocasionalmente, é útil fazer um backup para uma finalidade especial sem afetar o backup global e os procedimentos de restauração do banco de dados. Backups de cópia servem para essa finalidade.  
   
  Os tipos de backups somente cópia são:  
   
@@ -38,10 +38,10 @@ ms.locfileid: "72798012"
   
      O log de transações nunca é truncado após um backup somente cópia.  
   
- Backups somente cópia são registrados na coluna **is_copy_only** da tabela [backupset](/sql/relational-databases/system-tables/backupset-transact-sql) .  
+ Backups somente cópia são registrados na coluna **is_copy_only** da tabela [backupset](/sql/relational-databases/system-tables/backupset-transact-sql).  
   
 ## <a name="to-create-a-copy-only-backup"></a>Para criar um backup somente cópia  
- Você pode criar um backup somente cópia usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou PowerShell.  
+ Você pode criar um backup somente cópia usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou PowerShell.  
   
 ###  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
@@ -52,20 +52,20 @@ ms.locfileid: "72798012"
   
 -   Para um backup completo somente cópia:  
   
-     *Database_name* do banco de dados de BACKUP para \<backup_device *>* ... COM COPY_ONLY...  
+     *Database_name* de banco de dados de BACKUP para \<backup_device *>* ... COM COPY_ONLY...  
   
     > [!NOTE]  
     >  COPY_ONLY não tem nenhum efeito quando é especificado com a opção DIFFERENTIAL.  
   
 -   Para um backup de log somente cópia:  
   
-     *Database_name* do log de BACKUP para *\<* backup_device *>* ... COM COPY_ONLY...  
+     *Database_name* de log de BACKUP para *\<* backup_device *>* ... COM COPY_ONLY...  
   
 ###  <a name="PowerShellProcedure"></a> Usando o PowerShell  
   
 Use o cmdlet `Backup-SqlDatabase` com o parâmetro `-CopyOnly`.  
   
-##  <a name="RelatedTasks"></a> Tarefas Relacionadas  
+##  <a name="RelatedTasks"></a> Tarefas relacionadas  
 
 ### <a name="to-create-a-full-or-log-backup"></a>Para criar um backup completo ou de log
   
@@ -81,7 +81,7 @@ Use o cmdlet `Backup-SqlDatabase` com o parâmetro `-CopyOnly`.
   
 -   [Provedor do SQL Server PowerShell](../../powershell/sql-server-powershell-provider.md)  
 
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Visão geral do backup &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Modelos de recuperação &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [Copiar bancos de dados com backup e restauração](../databases/copy-databases-with-backup-and-restore.md)   

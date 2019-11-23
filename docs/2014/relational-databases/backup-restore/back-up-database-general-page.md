@@ -42,10 +42,10 @@ ms.locfileid: "70155082"
   
 ## <a name="options"></a>Opções  
   
-### <a name="source"></a>Origem  
+### <a name="source"></a>Source  
  As opções do painel **Origem** identificam o banco de dados e especificam o tipo de backup e o componente para a operação de backup.  
   
- **Backup de banco de dados**  
+ **Banco de dados**  
  Selecione o banco de dados do qual fazer backup.  
   
  **Modelo de recuperação**  
@@ -56,7 +56,7 @@ ms.locfileid: "70155082"
   
 |Tipo de backup|Disponível para|Restrições|  
 |-----------------|-------------------|------------------|  
-|Completo|Bancos de dados, arquivos e grupos de arquivos|No banco de dados **mestre** , só backups completos são possíveis.<br /><br /> No Modelo de Recuperação Simples, backups de arquivos e grupos de arquivos estão disponíveis apenas para grupos de arquivos somente leitura.|  
+|Full|Bancos de dados, arquivos e grupos de arquivos|No banco de dados **mestre** , só backups completos são possíveis.<br /><br /> No Modelo de Recuperação Simples, backups de arquivos e grupos de arquivos estão disponíveis apenas para grupos de arquivos somente leitura.|  
 |Diferencial|Bancos de dados, arquivos e grupos de arquivos|No Modelo de Recuperação Simples, backups de arquivos e grupos de arquivos estão disponíveis apenas para grupos de arquivos somente leitura.|  
 |Log de Transações|Logs de transações|Os backups de log de transações não estão disponíveis no Modelo de Recuperação Simples.|  
   
@@ -73,7 +73,7 @@ ms.locfileid: "70155082"
   
 |||  
 |-|-|  
-|**Backup de banco de dados**|Especifica que seja feito backup do banco de dados inteiro.|  
+|**Banco de dados**|Especifica que seja feito backup do banco de dados inteiro.|  
 |**Arquivos e grupos de arquivos**|Especifica que seja feito backup dos arquivos e/ou grupos de arquivos especificados.<br /><br /> Selecione essa opção para abrir a caixa de diálogo **Selecionar Arquivos e Grupos de Arquivos** . Após selecionar os grupos de arquivos ou arquivos dos quais deseja fazer backup e clicar em **Ok**, suas seleções serão exibidas na caixa **Arquivos e grupos de arquivos** .|  
   
 ### <a name="destination"></a>Destino  
@@ -88,7 +88,7 @@ ms.locfileid: "70155082"
 |||  
 |-|-|  
 |**Disco**|Faz o backup em disco. Pode ser um arquivo de sistema ou um dispositivo de backup lógico baseado em disco criado para o banco de dados. Os discos atualmente selecionados são exibidos na lista **Backup em** . Você pode selecionar até 64 dispositivos de disco para a operação de backup.|  
-|**Tape**|Faz o backup em fita. Pode ser uma unidade de fita local ou um dispositivo de backup lógico baseado em fita criado para o banco de dados. As fitas atualmente selecionadas são exibidas na lista **Backup em** . O número máximo é 64. Se não houver nenhum dispositivo de fita anexado ao servidor, essa opção será desativada. As fitas selecionadas são incluídas na lista **Backup em** .<br /><br /> Observação: O suporte a dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
+|**Tape**|Faz o backup em fita. Pode ser uma unidade de fita local ou um dispositivo de backup lógico baseado em fita criado para o banco de dados. As fitas atualmente selecionadas são exibidas na lista **Backup em** . O número máximo é 64. Se não houver nenhum dispositivo de fita anexado ao servidor, essa opção será desativada. As fitas selecionadas são incluídas na lista **Backup em** .<br /><br /> Observação: o suporte para dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
 |**URL**|Faz backup no armazenamento de BLOBs do Azure.|  
   
  O próximo conjunto de opções exibido depende do tipo de destino selecionado. Se você selecionar Disco ou Fita, as opções a seguir são exibidas.  
@@ -96,7 +96,7 @@ ms.locfileid: "70155082"
  **Adicionar**  
  Adiciona um arquivo ou dispositivo à lista **Fazer backup em** . Você pode fazer backup em até 64 dispositivos simultaneamente em um disco local ou remoto. Para especificar um arquivo em um disco remoto, use o nome UNC totalmente qualificado. Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md).  
   
- **Remover**  
+ **Removerr**  
  Remove um ou mais dispositivos atualmente selecionados na lista **Fazer backup em** .  
   
  **Conteúdo**  
@@ -111,10 +111,10 @@ ms.locfileid: "70155082"
  Selecione uma credencial do SQL usada para autenticar no armazenamento do Azure. Se você não tiver uma Credencial existente do SQL que possa usar, clique no botão **Criar** para criar uma nova Credencial do SQL.  
   
 > [!IMPORTANT]  
->  A caixa de diálogo que é aberta quando você clica em **Criar** exige um certificado de gerenciamento ou o perfil da publicação para a assinatura. Se você não tiver acesso ao certificado de gerenciamento ou perfil de publicação, poderá criar uma credencial de SQL especificando o nome da conta de armazenamento e as informações da chave de acesso usando Transact-SQL ou SQL Server Management Studio. Consulte o código de exemplo no no [para criar um](../security/authentication-access/create-a-credential.md#Credential) tópico de credencial para criar uma credencial usando o TRANSACT-SQL. Como alternativa, usando o SQL Server Management Studio, na instância do mecanismo de banco de dados, clique com o botão direito do mouse em **Segurança**, selecione **Novo**e **Credencial**. Especifique o nome da conta de armazenamento para **Identidade** e a chave de acesso no campo **Senha** .  
+>  A caixa de diálogo que é aberta quando você clica em **Criar** exige um certificado de gerenciamento ou o perfil da publicação para a assinatura. Se você não tiver acesso ao certificado de gerenciamento ou perfil de publicação, poderá criar uma credencial de SQL especificando o nome da conta de armazenamento e as informações da chave de acesso usando Transact-SQL ou SQL Server Management Studio. Consulte o código de exemplo no no [para criar um tópico de credencial](../security/authentication-access/create-a-credential.md#Credential) para criar uma credencial usando o TRANSACT-SQL. Como alternativa, usando o SQL Server Management Studio, na instância do mecanismo de banco de dados, clique com o botão direito do mouse em **Segurança**, selecione **Novo**e **Credencial**. Especifique o nome da conta de armazenamento para **Identidade** e a chave de acesso no campo **Senha** .  
   
  **Contêiner de armazenamento do Azure**  
- Especifique o nome do contêiner de armazenamento do Azure  
+ Especifique o nome do contêiner de Armazenamento do Microsoft Azure  
   
  **Prefixo da URL:**  
  Gerado automaticamente com base nas informações da conta de armazenamento armazenadas na Credencial do SQL e o nome do contêiner de armazenamento do Azure que você especificou. É recomendável não editar as informações neste campo, a menos que você esteja usando um domínio que use um formato diferente de **\<conta de armazenamento>.blob.core.windows.net**.  

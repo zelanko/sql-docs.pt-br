@@ -44,11 +44,11 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @login_name = ] 'login_name'` o nome de logon ao qual conceder acesso. O *login_name* é **nvarchar (256)** , com um padrão de NULL. Um dos **\@login_name**, **\@fixed_server_role**ou **\@msdb_role** deve ser especificado ou o procedimento armazenado falha.  
+`[ @login_name = ] 'login_name'` o nome de logon para conceder acesso ao. O *login_name* é **nvarchar (256)** , com um padrão de NULL. Um dos **\@login_name**, **\@fixed_server_role**ou **\@** msdb_role deve ser especificado ou o procedimento armazenado falhará.  
   
-`[ @fixed_server_role = ] 'fixed_server_role'` a função de servidor fixa à qual conceder acesso. O *fixed_server_role* é **nvarchar (256)** , com um padrão de NULL. Um dos **\@login_name**, **\@fixed_server_role**ou **\@msdb_role** deve ser especificado ou o procedimento armazenado falha.  
+`[ @fixed_server_role = ] 'fixed_server_role'` a função de servidor fixa para conceder acesso ao. O *fixed_server_role* é **nvarchar (256)** , com um padrão de NULL. Um dos **\@login_name**, **\@fixed_server_role**ou **\@** msdb_role deve ser especificado ou o procedimento armazenado falhará.  
   
-`[ @msdb_role = ] 'msdb_role'` a função de banco de dados no banco de dados **msdb** para conceder acesso. O *msdb_role* é **nvarchar (256)** , com um padrão de NULL. Um dos **\@login_name**, **\@fixed_server_role**ou **\@msdb_role** deve ser especificado ou o procedimento armazenado falha.  
+`[ @msdb_role = ] 'msdb_role'` a função de banco de dados no banco de dados **msdb** para conceder acesso ao. O *msdb_role* é **nvarchar (256)** , com um padrão de NULL. Um dos **\@login_name**, **\@fixed_server_role**ou **\@** msdb_role deve ser especificado ou o procedimento armazenado falhará.  
   
 `[ @proxy_id = ] id` o identificador do proxy para o qual conceder acesso. A *ID* é **int**, com um padrão de NULL. Um dos **\@proxy_id** ou **\@proxy_name** deve ser especificado ou o procedimento armazenado falha.  
   
@@ -57,7 +57,7 @@ sp_grant_login_to_proxy
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  **sp_grant_login_to_proxy** deve ser executado do banco de dados **msdb** .  
   
 ## <a name="permissions"></a>Permissões  

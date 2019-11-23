@@ -34,7 +34,7 @@ ms.locfileid: "71952425"
   
  Para configurar uma implantação de expansão, inicie com duas ou mais instâncias do servidor de relatório que estejam conectadas ao mesmo banco de dados do servidor de relatório. Depois que todas as instâncias estiverem instaladas, conecte-se ao primeiro servidor de relatório e use a página Implantação de Expansão para associar cada instância adicional. Apenas um servidor de relatório que já esteja inicializado para usar um banco de dados pode inicializar nós adicionais.  
   
- Para abrir essa página, inicie o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selecione **Implantação de Expansão** no painel de navegação. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Para abrir essa página, inicie o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selecione **Implantação de Expansão** no painel de navegação. Para obter mais informações, consulte [Gerenciador de Configurações do Reporting Services &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opções  
  **Nome do SQL Server**  
@@ -68,7 +68,7 @@ ms.locfileid: "71952425"
   
  Uma instância de servidor de relatório estará disponível somente se você configurou anteriormente uma conexão com o banco de dados do servidor de relatório compartilhado. Além disso, é necessário executar a inicialização a partir de um servidor de relatório que já esteja inicializado para usar o banco de dados do servidor de relatório.  
   
- **Remover**  
+ **Removerr**  
  Clique em **Remover** para remover do banco de dados do servidor de relatório as chaves de criptografia da instância selecionada do servidor de relatório. Você pode remover chaves para remover um servidor de relatório de uma implantação de expansão ou para solucionar um problema de migração ou instalação. Com esta opção, apenas as chaves de criptografia da instância especificada do servidor de relatório são removidas. Os dados criptografados do banco de dados do servidor de relatório não são afetados.  
   
  Como precaução, certifique-se de criar uma cópia de backup da chave simétrica antes de removê-la. Depois de remover as chaves de criptografia do último servidor de relatório na lista, introduza novos requisitos para qualquer inicialização subsequente do servidor de relatório para esse banco de dados. O novo requisito consiste em que, depois de inicializar um servidor de relatório, você deve restaurar uma cópia de backup da chave simétrica. A restauração da chave simétrica será necessária se você deseja acessar os dados criptografados que estejam atualmente no banco de dados do servidor de relatório.  
@@ -76,7 +76,7 @@ ms.locfileid: "71952425"
  Se os dados criptografados não mais forem necessários ou se você não tiver uma cópia de backup da chave, você deverá excluir os dados criptografados. Para obter mais informações, consulte [chaves &#40;de criptografia modo&#41;nativo do SSRS](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Inicializar um servidor de relatório &#40; Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [Inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [Configurar uma implantação de expansão do servidor de relatório no modo nativo &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   

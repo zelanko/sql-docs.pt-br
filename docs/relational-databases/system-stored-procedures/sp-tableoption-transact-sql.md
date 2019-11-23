@@ -117,7 +117,7 @@ GO
 EXEC sp_tableoption 'HumanResources.JobCandidate', 'large value types out of row', 1;  
 ```  
   
-### <a name="b-enabling-vardecimal-storage-format-on-a-table"></a>b. Habilitando o formato de armazenamento vardecimal em uma tabela  
+### <a name="b-enabling-vardecimal-storage-format-on-a-table"></a>B. Habilitando o formato de armazenamento vardecimal em uma tabela  
  O exemplo a seguir modifica a tabela `Production.WorkOrderRouting` para armazenar o tipo de dados `decimal` no formato de armazenamento `vardecimal`.  
 
 ```sql  

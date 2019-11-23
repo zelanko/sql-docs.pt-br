@@ -96,7 +96,7 @@ ORDER BY modify_date;
 GO  
 ```  
   
-### <a name="b-returning-the-parameters-for-a-specified-stored-procedure-or-function"></a>b. Retornando os parâmetros para uma função ou procedimento armazenado especificado  
+### <a name="b-returning-the-parameters-for-a-specified-stored-procedure-or-function"></a>B. Retornando os parâmetros para uma função ou procedimento armazenado especificado  
  Antes de executar a consulta a seguir, substitua `<database_name>` e `<schema_name.object_name>` por nomes válidos.  
   
 ```sql  

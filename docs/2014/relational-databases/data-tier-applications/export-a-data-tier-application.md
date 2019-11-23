@@ -82,7 +82,7 @@ ms.locfileid: "70175978"
   
  **Opções**  
   
- **Não mostrar esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página de Introdução no futuro.  
+ **Não exibir esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página de Introdução no futuro.  
   
  **Avançar** – Segue para a página **Selecionar Pacote de DAC** .  
   
@@ -93,7 +93,7 @@ ms.locfileid: "70175978"
   
 -   **Salvar no disco local** – Cria um arquivo BACPAC em um diretório no computador local. Clique em **Procurar...** para navegar no computador local ou especifique o caminho no espaço fornecido. O nome do caminho deve incluir um nome de arquivo e a extensão .bacpac.  
   
--   **Salvar no Azure** – cria um arquivo BACPAC em um contêiner do Azure. Você deve se conectar a um contêiner do Azure para validar essa opção. Observe que esta opção também exige que você especifique um diretório local para o arquivo temporário. Observe que o arquivo temporário será criado no local especificado e permanecerá lá depois que a operação for concluída.  
+-   **Salvar no Azure**: cria um arquivo BACPAC em um contêiner do Azure. Você precisa se conectar a um contêiner do Azure para validar essa opção. Observe que esta opção também exige que você especifique um diretório local para o arquivo temporário. Observe que o arquivo temporário será criado no local especificado e permanecerá lá depois que a operação for concluída.  
   
  Para especificar um subconjunto de tabelas a serem exportadas, use a opção **Avançado** .  
   
@@ -125,7 +125,7 @@ ms.locfileid: "70175978"
 3.  Use o método `Export` do tipo `Microsoft.SqlServer.Management.Dac.DacStore` para exportar o DAC. Especifique o nome do DAC a ser exportado e o caminho para a pasta onde o arquivo de exportação será colocado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Aplicativos da Camada de Dados](data-tier-applications.md)   
+ [Aplicativos da camada de dados](data-tier-applications.md)   
  [Extrair um DAC de um banco de dados](extract-a-dac-from-a-database.md)  
   
   

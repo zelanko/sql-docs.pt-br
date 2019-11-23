@@ -6,4 +6,4 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/16/2019
 ms.locfileid: "68191120"
 ---
-SQL Server 2014 Reporting Services \(SSRS @ no__t-1
+SQL Server 2014 Reporting Services \(SSRS\)

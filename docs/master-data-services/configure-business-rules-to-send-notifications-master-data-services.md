@@ -27,7 +27,7 @@ ms.locfileid: "73728559"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], configure regras de negócios para enviar notificações quando você desejar notificar os usuários sobre alterações de valor de atributo.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar as áreas funcionais **Administração do Sistema** e **Permissões de Usuário e de Grupo** . Se você não tiver permissão para a área funcional **Permissões de Usuário e de Grupo** , não poderá exibir a lista de usuários e grupos para a qual enviar notificações.  
@@ -62,7 +62,7 @@ ms.locfileid: "73728559"
   
 10. Na caixa de diálogo de confirmação, clique em **OK**. O valor na coluna **Estado da Regra de Negócios** mudou para **Ativo** e a coluna **Notificação** mostra o usuário ou grupo selecionado ao qual enviar a notificação.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
   
 -   Aplique regras de negócio a dados seguindo um destes procedimentos:  
   

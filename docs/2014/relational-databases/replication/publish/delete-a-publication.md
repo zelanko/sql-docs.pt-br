@@ -40,7 +40,7 @@ ms.locfileid: "73882286"
   
 #### <a name="to-delete-a-publication"></a>Para excluir uma publicação  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]e expanda o nó do servidor.  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]e expanda o nó de servidor.  
   
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .  
   
@@ -156,7 +156,7 @@ ms.locfileid: "73882286"
  [!code-vb[HowTo#rmo_vb_DropMergePub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropmergepub)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [Conceitos dos procedimentos armazenados no sistema de replicação](../concepts/replication-system-stored-procedures-concepts.md)   
  [Publicar dados e objetos de banco de dados](publish-data-and-database-objects.md)  
   
   

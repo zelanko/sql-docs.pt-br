@@ -25,7 +25,7 @@ ms.locfileid: "70154604"
 # <a name="sp_copysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Copia a pasta de instantâneo da publicação especificada para a pasta listada no  **\@destination_folder**. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador. Esse procedimento armazenado é útil para copiar um instantâneo em mídia removível, como CD-ROM.  
+  Copia a pasta de instantâneo da publicação especificada para a pasta listada no **destination_folder de\@** . Esse procedimento armazenado é executado no Publicador, no banco de dados publicador. Esse procedimento armazenado é útil para copiar um instantâneo em mídia removível, como CD-ROM.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,22 +39,22 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação cujo conteúdo do instantâneo deve ser copiado. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` é o nome da publicação cujo conteúdo do instantâneo deve ser copiado. a *publicação* é **sysname**, sem padrão.  
   
-`[ @destination_folder = ] 'destination_folder'`É o nome da pasta em que o conteúdo do instantâneo de publicação deve ser copiado. *destination_folder*é **nvarchar (255)** , sem padrão. O *destination_folder* pode ser um local alternativo, como em outro servidor, em uma unidade de rede ou em mídia removível (como CD-ROMs ou discos removíveis).  
+`[ @destination_folder = ] 'destination_folder'` é o nome da pasta onde o conteúdo do instantâneo de publicação deve ser copiado. *destination_folder*é **nvarchar (255)** , sem padrão. O *destination_folder* pode ser um local alternativo, como em outro servidor, em uma unidade de rede ou em mídia removível (como CD-ROMs ou discos removíveis).  
   
-`[ @subscriber = ] 'subscriber'`É o nome do Assinante. o assinante é sysname, com um padrão de NULL.  
+`[ @subscriber = ] 'subscriber'` é o nome do Assinante. o *assinante* é sysname, com um padrão de NULL.  
   
-`[ @subscriber_db = ] 'subscriber_db'`É o nome do banco de dados de assinatura. *subscriber_db* é sysname, com um padrão de NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` é o nome do banco de dados de assinatura. *subscriber_db* é sysname, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Comentários  
- **sp_copysnapshot** é usado em todos os tipos de replicação. Os assinantes que executam [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a versão 7,0 e anteriores não podem usar o local de instantâneo alternativo.  
+## <a name="remarks"></a>Remarks  
+ **sp_copysnapshot** é usado em todos os tipos de replicação. Os assinantes que executam o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7,0 e anteriores não podem usar o local de instantâneo alternativo.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_copysnapshot**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_copysnapshot**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Locais da pasta de instantâneos alternativos](../../relational-databases/replication/snapshot-options.md)   

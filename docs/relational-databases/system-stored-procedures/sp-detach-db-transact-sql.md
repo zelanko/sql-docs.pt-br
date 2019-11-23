@@ -45,7 +45,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'database_name'` é o nome do banco de dados a ser desanexado. *database_name* é um valor **sysname** , com um valor padrão de NULL.  
+`[ @dbname = ] 'database_name'` é o nome do banco de dados a ser desanexado. *database_name* é um valor de **sysname** , com um valor padrão de NULL.  
   
 `[ @skipchecks = ] 'skipchecks'` especifica se a estatística de atualização deve ser ignorada ou executada. *skipchecks* é um valor **nvarchar (10)** , com um valor padrão de NULL. Para ignorar as estatísticas de atualização, especifique **true**. Para executar explicitamente UPDATE STATISTICs, especifique **false**.  
   
@@ -60,13 +60,13 @@ sp_detach_db [ @dbname= ] 'database_name'
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhum  
+ Nenhum.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  Quando um banco de dados é desanexado, todos os metadados são descartados. Se o banco de dados for o banco de dados padrão de qualquer conta de logon, o **mestre** se tornará seu banco de dados padrão.  
   
 > [!NOTE]  
->  Para obter informações sobre como exibir o banco de dados padrão de todas as contas de logon, consulte [Transact-SQL &#40;&#41;sp_helplogins](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Se você tiver as permissões necessárias, poderá usar [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) para atribuir um novo banco de dados padrão a um logon.  
+>  Para obter informações sobre como exibir o banco de dados padrão de todas as contas de logon, consulte [ &#40;SP_HELPLOGINS&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Se você tiver as permissões necessárias, poderá usar [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) para atribuir um novo banco de dados padrão a um logon.  
   
 ## <a name="restrictions"></a>Restrições  
  Um banco de dados não pode ser desanexado se algum dos seguintes fatores for verdadeiro:  
@@ -82,7 +82,7 @@ sp_detach_db [ @dbname= ] 'database_name'
   
 -   Há um instantâneo do banco de dados no banco de dados.  
   
-     Antes de poder desanexar o banco de dados, você deve descartar todos os seus instantâneos. Para obter mais informações, veja [Remover um instantâneo do banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
+     Antes de poder desanexar o banco de dados, você deve descartar todos os seus instantâneos. Para obter mais informações, veja [Remover um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
     > [!NOTE]  
     >  Um instantâneo do banco de dados não pode ser desanexado ou anexado.  
@@ -112,13 +112,13 @@ GO
 ```  
   
 > [!NOTE]  
->  Para forçar os usuários atuais do banco de dados imediatamente ou dentro de um determinado número de segundos, use também a opção de reversão: ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+>  Para forçar os usuários atuais do banco de dados imediatamente ou dentro de um determinado número de segundos, use também a opção de reversão: ALTER DATABASE *database_name* SET SINGLE_USER com reversão *rollback_option*. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="reattaching-a-database"></a>Reanexando um banco de dados  
  Os arquivos desanexados permanecem e podem ser anexados novamente com o uso de CREATE DATABASE (com a opção FOR ATTACH ou FOR ATTACH_REBUILD_LOG). Os arquivos podem ser movidos para outro servidor, onde podem ser anexados.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a associação à função de servidor fixa **sysadmin** ou à associação na função **db_owner** do banco de dados.  
+ Requer associação na função de servidor fixa **sysadmin** ou associação na função de **db_owner** do banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir desanexa o banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] com *skipchecks* definido como true.  

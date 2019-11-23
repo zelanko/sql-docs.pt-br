@@ -54,7 +54,7 @@ ms.locfileid: "73882241"
 -   A instrução ALTER TABLE... A instrução DROP COLUMN sempre é replicada para todos os assinantes cuja assinatura contém as colunas que estão sendo descartadas, mesmo se você desabilitar a replicação de alterações de esquema.  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- Se você não deseja replicar as alterações de esquema de uma publicação, desabilite a replicação de alterações de esquema na caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
+ Se você não deseja replicar as alterações de esquema de uma publicação, desabilite a replicação de alterações de esquema na caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de publicação](view-and-modify-publication-properties.md).  
   
 #### <a name="to-disable-replication-of-schema-changes"></a>Para desabilitar a replicação de alterações de esquema  
   
@@ -69,11 +69,11 @@ ms.locfileid: "73882241"
   
 #### <a name="to-create-a-snapshot-or-transactional-publication-that-does-not-replicate-schema-changes"></a>Para criar um instantâneo ou publicação transacional que não replicam alterações de esquema  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_addpublication &#40;Transact&#41;-SQL](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql), especificando um valor de **0** para **\@replicate_ddl**. Para obter mais informações, consulte [Create a Publication](create-a-publication.md).  
+1.  No Publicador do banco de dados de publicação, execute [sp_addpublication &#40;Transact&#41;-SQL](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql), especificando um valor de **0** para **\@replicate_ddl**. Para obter mais informações, consulte [Criar uma assinatura](create-a-publication.md).  
   
 #### <a name="to-create-a-merge-publication-that-does-not-replicate-schema-changes"></a>Para criar uma publicação de mesclagem que não reproduz alterações de esquema  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_addmergepublication &#40;Transact&#41;-SQL](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), especificando um valor de **0** para **\@replicate_ddl**. Para obter mais informações, consulte [Create a Publication](create-a-publication.md).  
+1.  No Publicador do banco de dados de publicação, execute [sp_addmergepublication &#40;Transact&#41;-SQL](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), especificando um valor de **0** para **\@replicate_ddl**. Para obter mais informações, consulte [Criar uma assinatura](create-a-publication.md).  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-snapshot-or-transactional-publication"></a>Para desabilitar temporariamente a replicação das alterações de esquema para um instantâneo ou publicação transacional  
   

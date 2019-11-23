@@ -34,7 +34,7 @@ ms.locfileid: "73786718"
 > [!NOTE]  
 >  O atributo de conexão ODBC padrão SQL_ATTR_CONNECTION_DEAD retorna o estado mais recente da conexão. Esse talvez não seja o estado da conexão atual.  
   
-|Value|Descrição|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|A conexão com o servidor foi perdida.|  
 |SQL_CD_FALSE|A conexão está aberta e disponível ao processamento de instrução.|  
@@ -50,7 +50,7 @@ ms.locfileid: "73786718"
   
  Para obter mais informações, consulte [Acessando informações de diagnóstico no log de eventos estendidos](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-|Value|Descrição|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |SQL_ERROR|Falha na conexão.|  
 |SQL_SUCCESS|A conexão foi bem-sucedida. A ID de conexão de cliente será localizada no buffer de saída.|  
@@ -58,7 +58,7 @@ ms.locfileid: "73786718"
 ## <a name="sql_copt_ss_perf_data"></a>SQL_COPT_SS_PERF_DATA  
  O atributo SQL_COPT_SS_PERF_DATA retorna um ponteiro para uma estrutura SQLPERF que contém as estatísticas de desempenho do driver atuais. **SQLGetConnectAttr** retornará NULL se registro em log do desempenho não for habilitado. As estatísticas na estrutura SQLPERF não são atualizadas dinamicamente pelo driver. Chame **SQLGetConnectAttr** sempre que as estatísticas de desempenho precisarem ser atualizadas.  
   
-|Value|Descrição|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |NULL|O registro em log de desempenho não está habilitado.|  
 |Qualquer outro valor|Um ponteiro para uma estrutura SQLPERF.|  
@@ -69,7 +69,7 @@ ms.locfileid: "73786718"
 ## <a name="sql_copt_ss_user_data"></a>SQL_COPT_SS_USER_DATA  
  O atributo SQL_COPT_SS_USER_DATA recupera o ponteiro dos dados de usuário. Os dados de usuário são armazenados na memória do cliente e registrados por conexão. Caso o ponteiro de dados do usuário não seja definido, SQL_UD_NOTSET, um ponteiro NULL, é retornado.  
   
-|Value|Descrição|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|Nenhum ponteiro de dados do usuário é definido.|  
 |Qualquer outro valor|Um ponteiro para os dados do usuário.|  
@@ -89,6 +89,6 @@ ms.locfileid: "73786718"
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
- [DEFINIR ANSI_WARNINGS &#40;TRANSACT-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
+ [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
   
   

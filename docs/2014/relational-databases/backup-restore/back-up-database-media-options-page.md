@@ -21,7 +21,7 @@ ms.lasthandoff: 08/29/2019
 ms.locfileid: "70154834"
 ---
 # <a name="back-up-database-media-options-page"></a>Backup de Banco de Dados (página Opções de Mídia)
-  Use a página  **Opções de Mídia** da caixa de diálogo **Fazer Backup de Banco de Dados** para exibir ou modificar opções de mídia de banco de dados.  
+  Use a página **Opções de Mídia** da caixa de diálogo **Fazer Backup de Banco de Dados** para exibir ou modificar opções de mídia de banco de dados.  
   
  **Para criar um backup usando o SQL Server Management Studio**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "70154834"
 ## <a name="options"></a>Opções  
   
 ### <a name="overwrite-media"></a>Substituir mídia  
- As opções do painel **Substituir mídia** controlam como o backup é gravado na mídia. Se você selecionou URL (armazenamento do Azure) como o destino de backup na página Geral da caixa de diálogo backup de banco de dados, as opções na seção substituir mídia serão desabilitadas. Você pode substituir um backup usando a instrução Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Para saber mais, confira [SQL Server Backup to URL](sql-server-backup-to-url.md).  
+ As opções do painel **Substituir mídia** controlam como o backup é gravado na mídia. SE você selecionou a URL (Armazenamento do Microsoft Azure) como destino de backup na página Geral da caixa de diálogo Backup de Banco de Dados, as opções na seção Substituir mídia serão desabilitadas. Você pode substituir um backup usando a instrução Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Para obter mais informações, consulte [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
  Há suporte somente para a opção **Fazer backup em um novo conjunto de mídias e apagar todos os conjuntos de backup existentes** nas opções de criptografia. Se você selecionar as opções na seção **Fazer backup na mídia existente**, as opções de criptografias na página **Opções de Backup** serão desabilitadas.  
   

@@ -143,7 +143,7 @@ SELECT dbo.to_upper('abcdefgh');
 GO  
 ```  
   
-### <a name="b-refreshing-a-database-level-ddl-trigger"></a>b. Atualizando um gatilho DDL de nível de banco de dados  
+### <a name="b-refreshing-a-database-level-ddl-trigger"></a>B. Atualizando um gatilho DDL de nível de banco de dados  
  O exemplo a seguir atualiza um gatilho DDL de nível de banco de dados.  
   
 ```  

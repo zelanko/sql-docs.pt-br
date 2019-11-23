@@ -26,7 +26,7 @@ ms.locfileid: "73728445"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie grupos de atributos quando você desejar exibir atributos em guias individuais na grade do **Gerenciador** .  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
@@ -39,7 +39,7 @@ ms.locfileid: "73728445"
   
 1.  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], clique em **Administração do Sistema**.  
   
-2.  Na página **Gerenciar Modelo** , selecione um modelo na grade e clique em **Entidades**.  
+2.  Na página **Gerenciar Modelo** , escolha um modelo na grade e clique em **Entidades**.  
   
 3.  Na página **Gerenciar Entidade** , na grade, selecione a linha para a entidade para a qual você deseja criar o grupo de atributos.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "73728445"
   
 12. Clique em **Salvar**.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Tornar um grupo de atributos visível para os usuários &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
   

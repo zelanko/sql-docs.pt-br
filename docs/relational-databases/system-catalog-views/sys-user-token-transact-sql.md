@@ -41,7 +41,7 @@ ms.locfileid: "70160746"
 |**principal_id**|**int**|ID do principal. O valor é exclusivo no banco de dados.|  
 |**sid**|**varbinary(85)**|Identificador de segurança do principal se o principal for definido fora do banco de dados. Por exemplo, pode ser um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], logon do Windows, logon de grupo do Windows ou um logon mapeado para um certificado, caso contrário, esse valor será NULL.|  
 |**name**|**nvarchar (128)**|Nome do principal. O valor é exclusivo no banco de dados.|  
-|**type**|**nvarchar (128)**|Descrição do tipo de principal. Todos os tipos são mapeados para **Sid**. O valor pode ser um dos seguintes:<br /><br /> SQL USER<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> ROLE<br /><br /> APPLICATION ROLE<br /><br /> DATABASE ROLE<br /><br /> USER MAPPED TO CERTIFICATE<br /><br /> USER MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
+|**tipo**|**nvarchar (128)**|Descrição do tipo de principal. Todos os tipos são mapeados para **Sid**. O valor pode ser um dos seguintes:<br /><br /> SQL USER<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> Função<br /><br /> APPLICATION ROLE<br /><br /> DATABASE ROLE<br /><br /> USER MAPPED TO CERTIFICATE<br /><br /> USER MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
 |**usos**|**nvarchar (128)**|Indica que o principal participa da avaliação de permissões GRANT ou DENY ou serve como um autenticador.<br /><br /> Este valor pode ser um dos seguintes:<br /><br /> GRANT OR DENY<br /><br /> DENY ONLY<br /><br /> AUTHENTICATOR|  
   
 ## <a name="see-also"></a>Consulte também  

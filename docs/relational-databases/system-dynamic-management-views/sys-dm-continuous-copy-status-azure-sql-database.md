@@ -35,7 +35,7 @@ ms.locfileid: "73844497"
 Se você estiver usando o banco de dados SQL V12, deverá usar [Sys. dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (porque *Sys. dm_continuous_copy_status* só se aplica a v11).
 
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Column Name|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**copy_guid**|**uniqueidentifier**|ID exclusiva do banco de dados de réplica.|  
 |**partner_server**|**sysname**|Nome do servidor do Banco de Dados SQL vinculado.|  
@@ -51,7 +51,7 @@ Se você estiver usando o banco de dados SQL V12, deverá usar [Sys. dm_geo_repl
 ## <a name="permissions"></a>Permissões  
  Para recuperar dados, o requer a associação na função de banco **db_owner** dados. O usuário dbo, os membros da função de banco de dados **DBManager** e o logon SA também podem consultar essa exibição.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  A exibição **Sys. dm_continuous_copy_status** é criada no banco de dados de **recursos** e fica visível em todos os bancos, incluindo o mestre lógico. No entanto, a consulta dessa exibição no mestre lógico retorna um conjunto vazio.  
   
  Se a relação de cópia contínua for encerrada em um banco de dados, a linha desse banco de dados na exibição **Sys. dm_continuous_copy_status** desaparecerá.  

@@ -37,7 +37,7 @@ ms.locfileid: "72782878"
     > [!IMPORTANT]  
     >  Se o quorum for recuperado naturalmente em vez de ser forçado, as réplicas de disponibilidade passarão pelo processo de recuperação normal. Se a réplica primária ainda não estiver disponível após o quorum ser recuperado, será possível executar um failover manual planejado em uma réplica secundária sincronizada.  
   
-     Para obter mais informações sobre como forçar o quórum, consulte [Recuperação de desastres do WSFC por meio de quorum forçado &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md). Para obter informações sobre por que é necessário forçar um failover após forçar o quórum, consulte [Failover e modos de failover &#40;Grupos de disponibilidade AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
+     Para obter mais informações sobre como forçar o quórum, consulte [Recuperação de desastre do WSFC por meio de quórum forçado &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md). Para obter informações sobre por que é necessário forçar um failover após forçar o quórum, consulte [Failover e modos de failover &#40;Grupos de disponibilidade AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
 -   Se a réplica primária ficar indisponível enquanto o cluster WSFC tiver um quorum íntegro, você poderá forçar o failover (com possível perda de dados) em qualquer réplica cuja função esteja no estado SECONDARY ou RESOLVING. Se possível, force o failover em uma réplica secundária de confirmação síncrona que foi sincronizada quando a réplica primária foi perdida.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "72782878"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   A única vez que você não pode executar um failover forçado é quando o cluster WSFC (Windows Server Failover Clustering) não tem quorum.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "72782878"
     > [!NOTE]  
     >  Não há suporte para transações entre bancos de dados e transações distribuídas no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para obter mais informações, consulte [Transações envolvendo todos os bancos de dados sem suporte para espelhamento de banco de dados ou Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md).  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> Pré-requisitos  
   
--   O cluster WSFC tem quorum. Se o cluster não tiver quórum, consulte [Recuperação de desastres do WSFC por meio de quorum forçado &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
+-   O cluster WSFC tem quorum. Se o cluster não tiver quórum, consulte [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
 -   É necessário poder se conectar a uma instância de servidor que hospede uma réplica cuja função esteja no estado SECONDARY ou RESOLVING.  
   
@@ -123,9 +123,9 @@ ms.locfileid: "72782878"
   
 2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade** .  
   
-3.  Clique com o botão direito do mouse no grupo de disponibilidade do qual fazer failover e selecione o comando **Failover** .  
+3.  Clique com o botão direito do mouse no grupo de disponibilidade do qual fazer failover e selecione o comando **Failover**.  
   
-4.  Isso inicia o Assistente de Grupo de Disponibilidade de Failover. Para obter mais informações, consulte [Usar o Assistente de Grupo de Disponibilidade de Failover &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
+4.  Isso inicia o Assistente de Grupo de Disponibilidade de Failover. Para obter mais informações, veja [Usar o Assistente para Executar Failover de Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
 5.  Depois de forçar um failover do grupo de disponibilidade, conclua as etapas de acompanhamento necessárias. Para obter mais informações, consulte [Acompanhamento: tarefas essenciais depois de um failover forçado](#FollowUp), mais adiante neste tópico.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "72782878"
         ```  
   
     > [!NOTE]  
-    >  Para exibir a sintaxe de um cmdlet, use o cmdlet `Get-Help` no ambiente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para exibir a sintaxe de um cmdlet, use o cmdlet `Get-Help` no ambiente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para saber mais, confira [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 3.  Depois de forçar um failover do grupo de disponibilidade, conclua as etapas de acompanhamento necessárias. Para obter mais informações, consulte [Acompanhamento: tarefas essenciais depois de um failover forçado](#FollowUp), mais adiante neste tópico.  
   
@@ -195,9 +195,9 @@ ms.locfileid: "72782878"
   
          **Para ajustar votos de quorum**  
   
-        -   [Exibir configurações de NodeWeight de quorum do cluster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
+        -   [Exibir configurações de NodeWeight de quorum de cluster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
-        -   [Definir configurações de NodeWeight de quorum do cluster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
+        -   [Definir configurações de NodeWeight de quorum de cluster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
         -   [Forçar um Cluster WSFC a Iniciar Sem um Quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -273,7 +273,7 @@ ms.locfileid: "72782878"
  A figura a seguir ilustra a série de ações que retornam o grupo de disponibilidade a sua topologia original depois que o data center principal volta a ficar online e os nós WSFC restabelecem comunicação com o cluster WSFC.  
   
 > [!IMPORTANT]  
->  Se o quorum do cluster WSFC tiver sido forçado, quando os nós offline reiniciarem, eles poderão formar um novo quorum se as duas condições a seguir existirem: (a) não há nenhuma conectividade de rede entre qualquer nó no conjunto de quorum forçado e (b) os nós de reinicialização são a maioria dos nós de cluster. Isso resulta em uma condição de divisão de dados, na qual o grupo de disponibilidade teria duas réplicas primárias independentes, uma em cada data center. Antes de forçar o quórum para criar um conjunto de quórum minoritário, consulte [Recuperação de desastres do WSFC por meio de quorum forçado &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
+>  Se o quorum do cluster WSFC tiver sido forçado, quando os nós offline reiniciarem, eles poderão formar um novo quorum se as duas condições a seguir existirem: (a) não há nenhuma conectividade de rede entre qualquer nó no conjunto de quorum forçado e (b) os nós de reinicialização são a maioria dos nós de cluster. Isso resulta em uma condição de divisão de dados, na qual o grupo de disponibilidade teria duas réplicas primárias independentes, uma em cada data center. Antes de forçar o quórum para criar um conjunto de quórum minoritário, consulte [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
  ![Etapas para retornar o grupo à sua topologia original](../../media/aoag-failurerecovery-actions-part2.gif "Etapas para retornar o grupo à sua topologia original")  
   
@@ -286,12 +286,12 @@ ms.locfileid: "72782878"
 |**3.**|Quando a réplica secundária de confirmação síncrona no **Nó 03** (a réplica primária original) insere o estado de sincronização HEALTHY, o DBA executa um failover manual planejado para essa réplica, para que ele se torne novamente a réplica primária. A réplica no **Nó 04** volta a ser uma réplica secundária.|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)<br /><br /> [Use políticas AlwaysOn para exibir a integridade de um grupo &#40;de disponibilidade SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [Executar um failover manual planejado de um grupo de disponibilidade &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)|  
 |**4.**|O DBA conecta-se à nova réplica primária e:<br /><br /> 1) Altera a réplica primária antiga (no centro remoto) de volta para o modo de confirmação assíncrona.<br />2) Altera a réplica secundária de confirmação assíncrona no data center principal de volta para o modo de confirmação síncrona.|[Alterar o modo de disponibilidade de uma réplica de disponibilidade &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
   
-##  <a name="RelatedTasks"></a> Tarefas Relacionadas  
+##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para ajustar votos de quorum**  
   
--   [Exibir configurações de NodeWeight de quorum do cluster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
+-   [Exibir configurações de NodeWeight de quorum de cluster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
--   [Definir configurações de NodeWeight de quorum do cluster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
+-   [Definir configurações de NodeWeight de quorum de cluster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
 -   [Forçar um Cluster WSFC a Iniciar Sem um Quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -315,7 +315,7 @@ ms.locfileid: "72782878"
   
      [Blogs dos engenheiros do CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
--   **Whitepapers:**  
+-   **White papers:**  
   
      [Guia de soluções do Microsoft SQL Server AlwaysOn para alta disponibilidade e recuperação de desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
@@ -323,10 +323,10 @@ ms.locfileid: "72782878"
   
      [White papers da equipe de consultoria do cliente do SQL Server](http://sqlcat.com/)  
   
-## <a name="see-also"></a>Consulte Também  
- [Visão geral do &#40;grupos de disponibilidade AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
- [ &#40;Modos de disponibilidade&#41; grupos de disponibilidade AlwaysOn](availability-modes-always-on-availability-groups.md)    
- [Failover e modos &#40;de failover&#41; grupos de disponibilidade AlwaysOn](failover-and-failover-modes-always-on-availability-groups.md)    
+## <a name="see-also"></a>Consulte também  
+ [Visão geral do &#40;grupos de disponibilidade AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
+ [ &#40;Modos de disponibilidade&#41; grupos de disponibilidade AlwaysOn](availability-modes-always-on-availability-groups.md)   
+ [Failover e modos &#40;de failover&#41; grupos de disponibilidade AlwaysOn](failover-and-failover-modes-always-on-availability-groups.md)   
  [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Monitoramento de grupos de disponibilidade &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [WSFC &#40;Windows Server Failover Clustering&#41; com o SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  

@@ -29,9 +29,9 @@ ms.locfileid: "72782665"
   
 1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
   
-2.  **Para atualizar um DAC, usando:**  [Exibir o Conteúdo de um DAC](#ViewDACContents), [Exibir Alterações no Banco de Dados](#ViewDBChanges), [Exibir Ações de Atualização](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
+2.  **Para atualizar um DAC, usando:**  [Exibir o Conteúdo de um DAC](#ViewDACContents), [Exibir Alterações no Banco de Dados](#ViewDBChanges), [Exibir Ações de Atualização](#ViewUpgradeActions), [Comparar DACs](#CompareDACs)  
   
-##  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> Pré-requisitos  
  Recomendamos não implantar um pacote de DAC de origens desconhecidas ou não confiáveis. Como os DACs podem conter código mal-intencionado que pode executar código [!INCLUDE[tsql](../../includes/tsql-md.md)] sem finalidade ou provocar erros modificando o esquema. Antes de usar um DAC de uma origem desconhecida ou não confiável, implante-o em uma instância de teste isolada do [!INCLUDE[ssDE](../../includes/ssde-md.md)], execute [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) no banco de dados. Além disso, examine o código, como procedimentos armazenados ou outro código definido pelo usuário, no banco de dados.  
   
 ##  <a name="ViewDACContents"></a> Exibir o Conteúdo de um DAC  
@@ -168,7 +168,7 @@ $fileStream.Close()
   
  Outra alternativa é desempacotar os DACs em pastas separadas. Você pode usar uma ferramenta de diferenças, como o utilitário WinDiff, para analisar as diferenças.  
   
-## <a name="see-also"></a>Consulte Também  
- [Aplicativos da Camada de Dados](data-tier-applications.md)   
+## <a name="see-also"></a>Consulte também  
+ [Aplicativos da camada de dados](data-tier-applications.md)   
  [Implantar um aplicativo da camada de dados](deploy-a-data-tier-application.md)   
  [Atualizar um aplicativo da camada de dados](upgrade-a-data-tier-application.md)  

@@ -20,12 +20,12 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797467"
 ---
-# <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forçar um cluster WSFC para iniciar sem um quorum
+# <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forçar um Cluster WSFC a Iniciar Sem um Quorum
   Este tópico descreve como forçar um nó de cluster WSFC (Windows Server Failover Clustering) a iniciar sem um quorum.  Talvez isso seja necessário na recuperação de desastre e em cenários com várias sub-redes para recuperar dados e restabelecer totalmente a alta disponibilidade para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e instâncias de cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   **Antes de iniciar:**  [Recomendações](#Recommendations), [Segurança](#Security)  
   
--   **Para forçar um cluster a iniciar sem um quorum usando:**  [Usando o Gerenciador de Cluster de Failover](#FailoverClusterManagerProcedure), [Usando o Powershell](#PowerShellProcedure), [Usando Net.exe](#CommandPromptProcedure)  
+-   **Para forçar um cluster a iniciar sem um quorum usando:**  [Using Failover Cluster Manager](#FailoverClusterManagerProcedure), [usando o Powershell](#PowerShellProcedure), [Net.exe usando](#CommandPromptProcedure)  
   
 -   **Acompanhamento:**  [Acompanhamento: depois de forçar o cluster a iniciar sem um quorum](#FollowUp)  
   
@@ -125,7 +125,7 @@ net.exe start clussvc /forcequorum
   
 -   [Cluster de failover Get-ClusterLog do cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [Recuperação de desastres do WSFC por meio de quorum forçado &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [Definir configurações de NodeWeight de quorum de cluster](configure-cluster-quorum-nodeweight-settings.md)   
  [Cmdlets de cluster de failover no Windows PowerShell listados por foco de tarefa](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  

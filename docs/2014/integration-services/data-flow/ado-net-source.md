@@ -28,7 +28,7 @@ ms.locfileid: "70153965"
 # <a name="ado-net-source"></a>Origem do ADO NET
   A origem do ADO NET recebe dados de um provedor de .NET e os disponibiliza para o fluxo de dados.  
   
- Você pode usar a fonte ADO.NET para se conectar ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Não há suporte para a conexão ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)] com o uso do OLE DB. Para obter mais informações [!INCLUDE[ssSDS](../../includes/sssds-md.md)]sobre o, consulte [diretrizes gerais e limitações (banco de dados SQL do Azure)](https://go.microsoft.com/fwlink/?LinkId=248228).  
+ Você pode usar a fonte ADO.NET para se conectar ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Não há suporte para a conexão ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)] com o uso do OLE DB. Para obter mais informações sobre [!INCLUDE[ssSDS](../../includes/sssds-md.md)], confira [Diretrizes gerais e limitações (Banco de dados SQL do Azure)](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="data-type-support"></a>Suporte do tipo de dados  
  A fonte converte qualquer tipo de dados que não é mapeado para um tipo de dados específico do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em um tipo de dados DT_NTEXT do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Essa conversão ocorre mesmo que o tipo de dados seja `System.Object`.  
