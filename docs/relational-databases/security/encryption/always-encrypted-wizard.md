@@ -26,11 +26,11 @@ ms.locfileid: "73594501"
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Configurar a criptografia de coluna usando o Assistente do Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-O Assistente do Always Encrypted é uma ferramenta poderosa que permite que você defina a configuração do [Always Encrypted](always-encrypted-database-engine.md) desejada para as colunas do banco de dados selecionadas. Dependendo da configuração atual e da configuração de destino desejada, o assistente pode criptografar uma coluna, descriptografá-la (remover a criptografia) ou criptografá-la novamente (por exemplo, usando uma nova chave de criptografia de coluna ou um tipo de criptografia diferente do tipo atual, configurado para a coluna). É possível configurar várias colunas em uma única execução do assistente.
+O Assistente do Always Encrypted é uma ferramenta avançada que permite a você definir a configuração desejada do [Always Encrypted](always-encrypted-database-engine.md) para as colunas selecionadas do banco de dados. Dependendo da configuração atual e da configuração de destino desejada, o assistente pode criptografar uma coluna, descriptografá-la ou recriptografá-la (por exemplo, usando uma nova chave de criptografia de coluna ou um tipo de criptografia diferente do tipo atual, configurado para a coluna). É possível configurar várias colunas em uma única execução do assistente.
 
 O assistente permite criptografar colunas com chaves de criptografia de coluna existentes. Você também pode optar por gerar uma nova chave de criptografia de coluna ou, ainda, uma nova chave de criptografia de coluna e uma nova chave mestra de coluna. 
 
-O assistente funciona movendo dados para fora do banco de dados e executando operações criptográficas no processo do SSMS. O assistente cria uma nova tabela (ou tabelas) com a configuração de criptografia desejada no banco de dados, carrega todos os dados das tabelas originais, executa as operações de criptografia solicitadas, carrega os dados nas novas tabelas e, em seguida, troca as tabelas originais pelas novas tabelas.
+O assistente funciona movendo dados para fora do banco de dados e executando operações criptográficas no processo do SSMS. O assistente cria uma ou mais tabelas com a configuração de criptografia desejada no banco de dados, carrega todos os dados das tabelas originais, executa as operações de criptografia solicitadas, carrega os dados nas novas tabelas e troca as tabelas originais pelas novas.
 
 > [!NOTE]
 > A execução de operações criptográficas pode levar muito tempo. Durante esse tempo, o banco de dados não estará disponível para gravar transações. O PowerShell é uma ferramenta recomendada para operações criptográficas em tabelas maiores. Confira [Configurar a criptografia de coluna usando o Always Encrypted com o PowerShell](configure-column-encryption-using-powershell.md).
@@ -38,13 +38,13 @@ O assistente funciona movendo dados para fora do banco de dados e executando ope
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> Se estiver usando [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] e sua instância do SQL Server estiver configurada com um enclave seguro, você poderá executar operações criptográficas in-loco, sem mover os dados para fora do banco de dados. Confira [Configurar a criptografia de coluna in-loco usando o Always Encrypted com enclaves seguros](always-encrypted-enclaves-configure-encryption.md). Observe que o assistente não dá suporte à criptografia in-loco.
+> Se estiver usando [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] e sua instância do SQL Server estiver configurada com um enclave seguro, você poderá executar operações criptográficas in-loco, sem mover os dados para fora do banco de dados. Confira [Configurar a criptografia de coluna in-loco usando o Always Encrypted com enclaves seguros](always-encrypted-enclaves-configure-encryption.md). Note que o assistente não dá suporte à criptografia in-loco.
 
 ::: moniker-end
 
 Usar o PowerShell é recomendado 
 
- - Para ter uma explicação passo a passo e de ponta a ponta que mostra como configurar o Always Encrypted com o assistente e usá-lo em um aplicativo cliente, confira os seguintes tutoriais sobre o Banco de Dados SQL do Azure:
+ - Para um passo a passo que mostra como configurar o Always Encrypted com o assistente e usá-lo em um aplicativo cliente, confira os seguintes tutoriais sobre o Banco de Dados SQL do Azure:
     - [Proteger dados confidenciais no Banco de Dados SQL do Azure com Always Encrypted e chaves mestras de coluna no repositório de certificados do Windows](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
     - [Proteger dados confidenciais no Banco de Dados SQL do Azure com Always Encrypted e chaves mestras de coluna no Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
 
@@ -59,7 +59,7 @@ Para executar operações criptográficas usando o assistente, você precisa ter
 - **Provedor do Repositório de Chaves (CNG)** : a permissão e as credenciais necessárias poderão ser solicitadas quando você usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do KSP.
 - **Provedor de Serviços de Criptografia (CAPI)** : a permissão e as credenciais necessárias poderão ser solicitadas quando você usar um repositório de chaves ou uma chave, dependendo do repositório e da configuração do CSP.
 
-Além disso, se estiver criando novas chaves usando o assistente, você deverá ter as permissões adicionais listadas em [Provisionar chaves mestras de coluna com a caixa de diálogo Nova Chave Mestra da Coluna](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog) e [Provisionar chaves de criptografia de coluna com a caixa de diálogo Nova Chave de Criptografia da Coluna](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog).
+Além disso, se estiver criando chaves usando o assistente, você deverá ter as permissões adicionais listadas em [Provisionar chaves mestras de coluna com a caixa de diálogo Nova Chave Mestra da Coluna](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog) e [Provisionar chaves de criptografia de coluna com a caixa de diálogo Nova Chave de Criptografia da Coluna](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog).
 
 ## <a name="open-the-always-encrypted-wizard"></a>Abrir o Assistente do Always Encrypted
 Você pode iniciar o assistente em três níveis diferentes: 
@@ -70,20 +70,20 @@ Você pode iniciar o assistente em três níveis diferentes:
  1. Conecte-se ao seu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o componente do Pesquisador de objetos do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
    
  2. Para criptografar:
-     1. Várias colunas localizadas em tabelas diferentes em um banco de dados, clique com o botão direito do mouse no banco de dados, aponte para **Tarefas** e, em seguida, selecione **Criptografar Colunas**.
+     1. Várias colunas localizadas em tabelas diferentes em um banco de dados, clique com o botão direito do mouse no banco de dados, aponte para **Tarefas** e selecione **Criptografar Colunas**.
      1. Várias colunas localizadas na mesma tabela, navegue até a tabela, clique nela com o botão direito do mouse e selecione **Criptografar Colunas**.
-     1. Uma coluna individual, navegue até a coluna, clique nela com o botão direito do mouse e, em seguida, selecione **Criptografar Colunas**.
+     1. Uma coluna individual, navegue até a coluna, clique nela com o botão direito do mouse e selecione **Criptografar Colunas**.
 
 
    
  ## <a name="column-selection-page"></a>Página de seleção de coluna
-Nessa página, você seleciona as colunas que deseja criptografar, criptografar novamente ou descriptografar e define a configuração de criptografia de destino para as colunas selecionadas.
+Nessa página, você seleciona as colunas que deseja criptografar, recriptografar ou descriptografar e define a configuração de criptografia de destino para as colunas selecionadas.
 
-Para criptografar uma coluna de texto não criptografado (uma coluna que não está criptografada), selecione um tipo de criptografia (**Determinística** ou **Aleatória**) e uma chave de criptografia para a coluna. 
+Para criptografar uma coluna de texto não criptografado, selecione um tipo de criptografia (**Determinística** ou **Aleatória**) e uma chave de criptografia para a coluna. 
 
 Para alterar um tipo de criptografia ou girar (alterar) uma chave de criptografia de coluna para uma coluna já criptografada, selecione o tipo de criptografia desejado e a chave. 
 
-Se quiser que o assistente criptografe ou criptografe novamente uma ou mais colunas usando uma nova chave de criptografia de coluna, escolha uma chave que contenha **(Novo)** no nome. O assistente gerará a chave.
+Se quiser que o assistente criptografe ou recriptografe uma ou mais colunas usando uma nova chave de criptografia de coluna, escolha uma chave que contenha **(Novo)** no nome. O assistente gerará a chave.
 
 Para descriptografar uma coluna criptografada, selecione **Texto não criptografado** para o tipo de criptografia.
 
@@ -92,7 +92,7 @@ Para descriptografar uma coluna criptografada, selecione **Texto não criptograf
 > O assistente não dá suporte a operações criptográficas em tabelas temporais e na memória. Você pode criar tabelas temporais ou na memória vazias usando Transact-SQL e inserir dados usando seu aplicativo.
 
 ## <a name="master-key-configuration-page"></a>Página de configuração de chave mestra
-Se tiver selecionado uma chave de criptografia de coluna gerada automaticamente para qualquer coluna na página anterior, nesta página, você precisará selecionar uma chave mestra de coluna existente ou configurar uma nova chave mestra de coluna que criptografará a chave de criptografia de coluna. 
+Se tiver selecionado uma chave de criptografia de coluna gerada automaticamente para alguma coluna na página anterior, nessa página, você precisará selecionar uma chave mestra de coluna ou configurar uma nova chave mestra de coluna que criptografará a chave de criptografia de coluna. 
 
 Ao configurar uma nova chave mestra de coluna, você pode escolher uma chave existente no Repositório de Certificados do Windows ou no Azure Key Vault e fazer com que o assistente crie apenas um objeto de metadados para a chave no banco de dados ou pode optar por gerar a chave e o objeto de metadados que descreve a chave no banco de dados. 
 
