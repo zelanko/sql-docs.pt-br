@@ -21,16 +21,15 @@ ms.assetid: 742ddcd2-232b-4aa1-9212-027df120ad35
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ac0e2585398eb3e3d47edea769c75d512bc4d2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 06a19a173fdd6f70b19e9a63c214616909708eec
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134100"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784735"
 ---
 # <a name="cursor-behaviors"></a>Comportamentos de cursor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   O ODBC dá suporte às opções ISO para especificar o comportamento de cursores por meio da definição de sua rolagem e sensibilidade. Esses comportamentos são especificados definindo as opções SQL_ATTR_CURSOR_SCROLLABLE e SQL_ATTR_CURSOR_SENSITIVITY em uma chamada para [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md). O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client implementa essas opções solicitando cursores de servidor com as características a seguir.  
   
@@ -43,15 +42,15 @@ ms.locfileid: "68134100"
 |SQL_NONSCROLLABLE e SQL_INSENSITIVE|Conjunto de resultados padrão (somente avanço, somente leitura)|  
 |SQL_NONSCROLLABLE e SQL_UNSPECIFIED|Conjunto de resultados padrão (somente avanço, somente leitura)|  
   
- Simultaneidade otimista baseada em versão exige uma **carimbo de hora** coluna na tabela subjacente. Se o controle de simultaneidade otimista baseada em versão for solicitado em uma tabela que não tem um **carimbo de hora** coluna, a servidor usa com base em valores a simultaneidade otimista.  
+ A simultaneidade otimista baseada em versão requer uma coluna **timestamp** na tabela subjacente. Se o controle de simultaneidade otimista baseado em versão for solicitado em uma tabela que não tem uma coluna **timestamp** , o servidor usará a simultaneidade otimista com base em valores.  
   
 ## <a name="scrollability"></a>Rolagem  
- Quando SQL_ATTR_CURSOR_SCROLLABLE é definido como SQL_SCROLLABLE, o cursor dá suporte a todos os valores diferentes para o *FetchOrientation* parâmetro do [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). Quando SQL_ATTR_CURSOR_SCROLLABLE é definido como SQL_NONSCROLLABLE, o cursor dá suporte apenas a um *FetchOrientation* valor SQL_FETCH_NEXT.  
+ Quando SQL_ATTR_CURSOR_SCROLLABLE é definido como SQL_SCROLLABLE, o cursor dá suporte a todos os valores diferentes para o parâmetro *FetchOrientation* de [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). Quando SQL_ATTR_CURSOR_SCROLLABLE é definido como SQL_NONSCROLLABLE, o cursor só dá suporte a um valor de *FetchOrientation* de SQL_FETCH_NEXT.  
   
 ## <a name="sensitivity"></a>Sensibilidade  
  Quando SQL_ATTR_CURSOR_SENSITIVITY é definido como SQL_SENSITIVE, o cursor reflete as modificações de dados feitas pelo usuário atual ou confirmadas por outros usuários. Quando SQL_ATTR_CURSOR_SENSITIVITY é definido como SQL_INSENSITIVE, o cursor não reflete as modificações de dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Usando cursores (ODBC)](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md) [propriedades do Cursor](properties/cursor-properties.md) 
+ [Usando [propriedades de cursor](properties/cursor-properties.md) de cursor (ODBC)](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md) 
   
   
