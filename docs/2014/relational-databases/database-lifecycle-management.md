@@ -30,25 +30,24 @@ ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a1a82d94e1a2dbf3f2155a93c8a3e8c46383dbde
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: b0d61f3262d68bcc14abc6b03f83c53ed3a8ba95
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154549"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232088"
 ---
-# <a name="database-lifecycle-management"></a>Gerenciamento de ciclo de vida de banco de dados
+# <a name="database-lifecycle-management"></a>Gerenciamento de ciclo de vida do banco de dados
   O gerenciamento de ciclo de vida de banco de dados (DLM) é uma abordagem baseado em política que gerenciar ativos de dados e bancos de dados. O DLM não é um produto, mas uma abordagem abrangente para gerenciar o esquema de banco de dados, os dados e os metadados de um aplicativo de banco de dados. Uma abordagem ponderada e pró-ativa do DLM permite que uma organização gerencie recursos de dados de acordo com os níveis apropriadas de desempenho, proteção, disponibilidade e custo.  
   
  O DLM começa com a discussão sobre o design e a intenção do projeto, continua com o desenvolvimento, o teste, a compilação, a implantação, a manutenção, o monitoramento e as atividades de backup do banco de dados, e termina com o arquivamento dos dados. Este tópico fornece uma visão geral das fases do DLM, que começam com o desenvolvimento e o progresso do banco de dados ao longo das ações de compilação, implantação e monitoramento (Figura 1). Também são incluídas as atividades de gerenciamento de dados e as operações de portabilidade de dados, como importação/exportação, backup, migração e sincronização.  
   
- Para ler o tópico completo, consulte [Gerenciamento de ciclo de vida de banco de dados (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949).  
+ Para ler o tópico completo, veja [DLM (Gerenciamento de Ciclo de Vida de Banco de Dados)](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
-## <a name="see-also"></a>Consulte também  
- [Página inicial do Azure](http://www.windowsazure.com/)   
- [Central de Desenvolvedores do Azure](http://www.windowsazure.com/develop/overview/)   
- [Centro de Gerenciamento do Azure](http://www.windowsazure.com/manage/overview/)   
- [Blog da equipe do Azure](http://www.windowsazure.com/community/blog/)   
- [Opções de suporte do Azure](http://www.windowsazure.com/support/contact/)  
-  
+## <a name="see-also"></a>Consulte Também  
+ [Home Page do Azure](https://www.windowsazure.com/)   
+ [Centro de desenvolvimento do Azure](https://www.windowsazure.com/develop/overview/)   
+ [Centro de gerenciamento do Azure](https://www.windowsazure.com/manage/overview/)   
+ [Blog da equipe do Azure](https://www.windowsazure.com/community/blog/)   
+ [Opções de suporte do Azure](https://www.windowsazure.com/support/contact/)  
   

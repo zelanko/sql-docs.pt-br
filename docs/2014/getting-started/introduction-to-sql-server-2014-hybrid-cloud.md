@@ -10,12 +10,12 @@ ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b253c99b0fbdc0ff4e4651a981da80b9935a7184
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 711d9d5bf7a3268b400eae4b1b117b4034133f5c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176035"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228068"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>Introdução à nuvem híbrida do SQL Server 2014
  A maioria dos aplicativos têm alguns desafios principais, como a alta eficiência, valor comercial, configurações de hardware complexas, picos maciços sob demanda, e a conformidade com a indústria e os regulamentos corporativos. Considerando que todos esses fatores e a criação de uma tecnologia a nível empresarial possam ser muito desafiadores. A estratégia de nuvem híbrida da Microsoft oferece suporte para a nuvem tradicional, nuvem particular, nuvem pública, e os ambientes de nuvem híbridos para superar esses desafios fundamentais. 
@@ -27,7 +27,7 @@ ms.locfileid: "70176035"
 ## <a name="sql-server-azure-and-hybrid-cloud"></a>SQL Server, Azure e nuvem híbrida 
  Usando as tecnologias da Microsoft, você pode executar o código localmente ou na nuvem, executar na nuvem usando dados locais, ou executar totalmente na nuvem usando mais de um data center. Portanto, você pode mover seus aplicativos para a nuvem em seu próprio local enquanto preserva o valor dos investimentos de TI herdade. 
  
- Neste artigo, nos concentraremos nos cenários de nuvem híbrida que se estendem do SQL Server local para ofertas de nuvem pública do Azure: [SQL Server nas máquinas virtuais do Azure e no](https://msdn.microsoft.com/library/azure/jj823132.aspx) [armazenamento do Azure](http://www.azure.com/documentation/services/storage/). Especificamente, discutiremos os seguintes cenários: 
+ Neste artigo, nos concentraremos nos cenários de nuvem híbrida que se estendem do SQL Server local para ofertas de nuvem pública do Azure: [SQL Server em máquinas virtuais do Azure](https://msdn.microsoft.com/library/azure/jj823132.aspx) e [armazenamento do Azure](https://www.azure.com/documentation/services/storage/). Especificamente, discutiremos os seguintes cenários: 
  
 -  [Fazer backup e restaurar bancos de dados de/para o armazenamento do Azure](../../2014/getting-started/introduction-to-sql-server-2014-hybrid-cloud.md#backup) 
  
@@ -58,9 +58,9 @@ ms.locfileid: "70176035"
  
 -  O recurso de [criptografia de backup](../relational-databases/backup-restore/backup-encryption.md) permite que você criptografe os dados ao criar um backup para seus destinos de armazenamento: local e armazenamento do Azure. 
  
--  O recurso de compactação de [backup (SQL Server)](../relational-databases/backup-restore/backup-compression-sql-server.md) permite que você crie um backup, que é menor do que um backup descompactado dos mesmos dados. A compactação de um backup precisa de menos operações de E/S do dispositivo e, em virtude disso, normalmente aumenta significativamente a velocidade. Isso pode trazer grandes benefícios ao armazenar arquivos de backup no armazenamento do Azure. 
+-  O recurso de [compactação de backup (SQL Server)](../relational-databases/backup-restore/backup-compression-sql-server.md) permite que você crie um backup, que é menor do que um backup descompactado dos mesmos dados. A compactação de um backup precisa de menos operações de E/S do dispositivo e, em virtude disso, normalmente aumenta significativamente a velocidade. Isso pode trazer grandes benefícios ao armazenar arquivos de backup no armazenamento do Azure. 
  
--  O recurso [backup gerenciado SQL Server para o Azure](https://msdn.microsoft.com/library/dn606152(v=sql.120).aspx) permite que você faça o backup automático de bancos de dados SQL Server no [armazenamento do Azure](http://www.azure.com/documentation/services/storage/). Com este recurso, você pode configurar o SQL Server para gerenciar a estratégia de backup e agendar backups para um único banco de dados ou vários bancos de dados, ou defina valores padrão no nível da instância. 
+-  O recurso [backup gerenciado SQL Server para o Azure](https://msdn.microsoft.com/library/dn606152(v=sql.120).aspx) permite que você faça o backup automático de bancos de dados SQL Server no [armazenamento do Azure](https://www.azure.com/documentation/services/storage/). Com este recurso, você pode configurar o SQL Server para gerenciar a estratégia de backup e agendar backups para um único banco de dados ou vários bancos de dados, ou defina valores padrão no nível da instância. 
  
 -  A [ferramenta SQL Server Backup para o Azure](https://www.microsoft.com/download/details.aspx?id=40740) permite o backup no armazenamento de BLOBs do Azure e criptografa e compacta SQL Server backups armazenados localmente ou na nuvem. Essa ferramenta habilita uma estratégia de backup de nuvem única para várias versões do SQL Server, como o SQL Server 2005, 2008, 2008 R2, e 2014. 
  
@@ -105,12 +105,11 @@ ms.locfileid: "70176035"
  
 -  **Movendo a máquina virtual inteira:** Você pode colocar seu próprio SQL Server máquinas virtuais no Azure ou criar uma usando a imagem da plataforma. Em seguida, você pode carregar e anexar um disco de dados que já contém dados à máquina virtual, ou anexar um disco vazio à máquina. Ter uma SQL Server instância de dados em máquinas virtuais do Azure com discos de dados anexados fornece outro armazenamento persistente para seus arquivos de dados e dados de aplicativo. Para obter informações abrangentes e instruções, consulte [SQL Server implantação em máquinas virtuais do Azure](https://msdn.microsoft.com/library/dn133141.aspx). 
  
- Se você planeja mover as camadas de aplicativo (como a camada de apresentação, a camada de negócios e a camada de banco de dados) para as máquinas virtuais do Azure, recomendamos que você revise as recomendações fornecidas nos [padrões de aplicativo e estratégias de desenvolvimento para SQL Servidor no artigo máquinas virtuais do Azure](https://msdn.microsoft.com/library/dn574746.aspx) . O objetivo deste artigo é fornecer aos arquitetos e desenvolvedores de soluções uma base para uma boa arquitetura e design de aplicativos, que eles podem seguir ao migrar aplicativos existentes para o Azure, bem como desenvolver novos aplicativos no Azure. Para cada padrão do aplicativo, o artigo descreve um cenário local, sua respectiva solução de nuvem habilitada, e as técnicas e recomendações relacionadas. Além disso, o artigo discute estratégias de desenvolvimento específicas do Azure para que você possa projetar seus aplicativos corretamente. 
+ Se você planeja mover as camadas de aplicativo (como a camada de apresentação, a camada de negócios e a camada de banco de dados) para as máquinas virtuais do Azure, recomendamos que você examine as recomendações fornecidas nos [padrões de aplicativo e nas estratégias de desenvolvimento para SQL Server no artigo de máquinas virtuais do Azure](https://msdn.microsoft.com/library/dn574746.aspx) . O objetivo deste artigo é fornecer aos desenvolvedores e arquitetos de soluções a base para uma boa arquitetura e design de aplicativos que eles possam seguir ao migrar aplicativos existentes para o Azure, bem como ao desenvolver novos aplicativos no Azure. Para cada padrão do aplicativo, o artigo descreve um cenário local, sua respectiva solução de nuvem habilitada, e as técnicas e recomendações relacionadas. Além disso, o artigo discute estratégias de desenvolvimento específicas do Azure para que você possa criar seus aplicativos corretamente. 
  
-## <a name="see-also"></a>Confira também 
- [Guia do produto SQL Server CTP2 2014](https://www.microsoft.com/download/details.aspx?id=39269)  
+## <a name="see-also"></a>Consulte também 
+ [Guia de produto do SQL Server 2014 CTP2](https://www.microsoft.com/download/details.aspx?id=39269)  
  [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
- [Série de Blogs de nuvem híbrida Microsoft SQL Server](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
+ [Série de blogs de nuvem híbridos do Microsoft SQL Server](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
  [Migrando aplicativos centrados em dados para o Azure](https://azure.microsoft.com/blog/cloud-services-series-migrating-data-centric-applications-to-windows-azure/) 
- 
  

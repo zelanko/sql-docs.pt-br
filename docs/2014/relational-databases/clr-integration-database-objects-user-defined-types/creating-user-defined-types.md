@@ -15,12 +15,12 @@ ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1b52eb9ecab5dd75e7f483bead1ef523b6b02360
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06418c7fd1a9b465a78d01a8739912565b1459f5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62919608"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232224"
 ---
 # <a name="creating-a-user-defined-type"></a>Criar um tipo definido pelo usuário
   Para criar um tipo definido pelo usuário (UDT) que possa ser instalado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], primeiro crie uma classe em uma das linguagens de programação .NET Framework com suporte, como Visual C# ou Visual Basic, que esteja de acordo com as especificações para criação de UDTs. A classe poderá, então, ser compilada como uma DLL (Dynamic-Link Library), que poderá ser carregada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você também poderá criar e implantar UDTs com o Visual Studio.  
@@ -36,13 +36,13 @@ Reconfigure
  [Requisitos do tipo definido pelo usuário](creating-user-defined-types-requirements.md)  
  Descreve os requisitos para codificar tipos definidos pelo usuário.  
   
- [Codificando tipos definidos pelo usuário](creating-user-defined-types-coding.md)  
+ [codificando tipos definidos pelo usuário](creating-user-defined-types-coding.md)  
  Demonstra as técnicas de codificação envolvidas na criação de tipos definidos pelo usuário.  
   
 ## <a name="example"></a>Exemplo  
- A listagem de código a seguir define o UDT Point, que é descrito detalhadamente no [Codificando tipos](creating-user-defined-types-coding.md).  
+ A listagem de código a seguir define o ponto UDT, que é descrito em detalhes na [codificação de tipos definidos pelo usuário](creating-user-defined-types-coding.md).  
   
- As listagens de código completas para os outros exemplos abordados nesta seção podem ser obtidas mediante a instalação dos exemplos de CLR. Para obter instruções sobre como instalar esses exemplos, consulte [exemplos do mecanismo de banco de dados do SQL Server](http://msftengprodsamples.codeplex.com/).  
+ As listagens de código completas para os outros exemplos abordados nesta seção podem ser obtidas mediante a instalação dos exemplos de CLR. Para obter instruções sobre como instalar esses exemplos, consulte [SQL Server mecanismo de banco de dados exemplos](https://msftengprodsamples.codeplex.com/).  
   
  C#  
   
@@ -330,7 +330,6 @@ Imports System.Text
 End Structure  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos definidos pelo usuário do CLR](clr-user-defined-types.md)  
-  
+## <a name="see-also"></a>Consulte Também  
+ [Tipos CLR definidos pelo usuário](clr-user-defined-types.md)  
   

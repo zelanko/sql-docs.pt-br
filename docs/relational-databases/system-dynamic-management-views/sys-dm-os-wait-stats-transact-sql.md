@@ -1,7 +1,7 @@
 ---
-title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/16/2019
+ms.date: 11/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,34 +20,34 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e274375177859d456592a6e1879d7f528d1cb724
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
-ms.translationtype: HT
+ms.openlocfilehash: f0abc089809e6b811f0ff64684bdaeed742ebcae
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983089"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190345"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Retorna informações sobre todas as esperas encontradas por threads executados. É possível usar essa exibição agregada para diagnosticar problemas de desempenho com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e também com consultas e lotes específicos. [Sys. dm_exec_session_wait_stats &#40;o Transact-&#41; SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) fornece informações semelhantes por sessão.  
+Retorna informações sobre todas as esperas encontradas por threads executados. É possível usar essa exibição agregada para diagnosticar problemas de desempenho com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e também com consultas e lotes específicos. o [Sys. dm_exec_session_wait_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) fornece informações semelhantes por sessão.  
   
 > [!NOTE] 
-> Para chamá-lo de **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** , use o nome **Sys. dm_pdw_nodes_os_wait_stats**.  
+> Para chamá-lo ** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou **, use o nome **Sys. dm_pdw_nodes_os_wait_stats**.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar(60)**|Nome do tipo de espera. Para obter mais informações, consulte [tipos de esperas](#WaitTypes), mais adiante neste tópico.|  
+|wait_type|**nvarchar (60)**|Nome do tipo de espera. Para obter mais informações, consulte [Tipos de espera](#WaitTypes) mais adiante neste tópico.|  
 |waiting_tasks_count|**bigint**|Número de esperas nesse tipo de espera. O contador é incrementado no início de cada espera.|  
 |wait_time_ms|**bigint**|Tempo de espera total para esse tipo de espera em milissegundos. Essa hora é inclusiva de signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Tempo de espera máximo neste tipo de espera.|  
 |signal_wait_time_ms|**bigint**|Diferença entre a hora em que o thread de espera foi sinalizado e quando ele começou a ser executado.|  
-|pdw_node_id|**int**|O identificador do nó em que essa distribuição está. <br/> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**inteiro**|O identificador do nó em que essa distribuição está. <br/> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>Permissões
 
-No [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer a permissão `VIEW SERVER STATE`.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a permissão `VIEW DATABASE STATE` no banco de dados. Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
 
 ##  <a name="WaitTypes"></a>Tipos de esperas  
  **Esperas de recursos** As esperas de recurso ocorrem quando um trabalho solicita acesso a um recurso que não está disponível porque o recurso está sendo usado por algum outro operador ou ainda não está disponível. Exemplos de esperas de recurso são bloqueios, travas, rede e esperas de E/S de disco. Bloqueio e trava são esperas em objetos de sincronização  
@@ -58,7 +58,8 @@ Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a 
  **Esperas externas**  
  As esperas externas ocorrem quando um trabalhador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está aguardando um evento externo, como uma chamada de procedimento armazenado estendido ou consulta de servidor vinculada, terminar Quando você diagnostica os problemas de bloqueio, lembre-se de que as esperas externas nem sempre indicam que o trabalhador está ocioso, porque ele pode estar ativamente executando algum código externo.  
   
- `sys.dm_os_wait_stats` mostra a hora das esperas concluídas. Essa exibição de gerenciamento dinâmico não mostra esperas atuais.  
+ 
+  `sys.dm_os_wait_stats` mostra a hora das esperas concluídas. Essa exibição de gerenciamento dinâmico não mostra esperas atuais.  
   
  Não será considerado que um thread de trabalho [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esteja sendo esperado se qualquer um dos seguintes for verdadeiro:  
   
@@ -70,7 +71,7 @@ Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a 
   
  Embora o thread já não esteja mais aguardando, ele não precisa iniciar a execução imediatamente. Isso ocorre porque esse thread é colocado primeiro na fila de trabalhadores executáveis e deve aguardar a execução de um quantum no agendador.  
   
- Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os contadores de tempo de espera são valores **bigint** e, portanto, não são tão propensos à substituição de contador como os contadores equivalentes em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contadores de tempo de espera são valores **bigint** e, portanto, não são tão propensos à substituição de contador como os contadores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]equivalentes em versões anteriores do.  
   
  Tipos específicos de horas de espera durante execução de consulta podem indicar gargalos ou pontos de pausa dentro da consulta. Da mesma forma, os tempos de espera altos ou as contagens de espera em todo o servidor podem indicar gargalos nas interações de consulta de interação na instância do servidor. Por exemplo, as esperas de bloqueio indicam a contenção de dados por consultas; as esperas de trava de ES de página indicam tempos de resposta de ES lentos; as esperas de atualização de trava de página indicam layout de arquivo incorreto.  
   
@@ -88,9 +89,9 @@ Esse comando redefine todos os contadores como 0.
   
  A tabela a seguir lista os tipos de espera encontrados por tarefas.  
 
-|Tipo |Descrição| 
+|tipo |Descrição| 
 |-------------------------- |--------------------------| 
-|ABR |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| | 
+|ABR |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| | 
 |AM_INDBUILD_ALLOCATION |Somente para uso interno. <br />**Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |AM_SCHEMAMGR_UNSHARED_CACHE |Somente para uso interno. <br />**Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |ASSEMBLY_FILTER_HASHTABLE |Somente para uso interno. <br />**Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
@@ -107,17 +108,17 @@ Esse comando redefine todos os contadores como 0.
 |AUDIT_ON_DEMAND_TARGET_LOCK |Ocorre quando há uma espera em um bloqueio que é usado para garantir a inicialização única dos destinos do Evento Estendido relacionados à auditoria.| 
 |AUDIT_XE_SESSION_MGR |Ocorre quando há uma espera em um bloqueio que é usado para sincronizar o início e a interrupção de sessões de Eventos Estendidos relacionadas à auditoria.| 
 |BACKUP |Ocorre quando uma tarefa é bloqueada como parte do processamento do backup.| 
-|BACKUP_OPERATOR |Ocorre quando uma tarefa está aguardando uma montagem de fita. Para exibir o status da fita, consulte sys. dm_io_backup_tapes. Se uma operação de montagem não estiver pendente, esse tipo de espera poderá indicar um problema de hardware na unidade de fita.| 
+|BACKUP_OPERATOR |Ocorre quando uma tarefa está aguardando uma montagem de fita. Para exibir o status da fita, consulte sys.dm_io_backup_tapes. Se uma operação de montagem não estiver pendente, esse tipo de espera poderá indicar um problema de hardware na unidade de fita.| 
 |BACKUPBUFFER |Ocorre quando uma tarefa de backup estiver aguardando dados ou um buffer para armazenar dados nele. Esse tipo não é comum, exceto quando uma tarefa estiver aguardando uma montagem de fita.| 
 |BACKUPIO |Ocorre quando uma tarefa de backup estiver aguardando dados ou um buffer para armazenar dados nele. Esse tipo não é comum, exceto quando uma tarefa estiver aguardando uma montagem de fita.| 
 |BACKUPTHREAD |Ocorre quando uma tarefa estiver esperando a conclusão da tarefa de backup. Os tempos de espera podem ser longos, de alguns minutos até várias horas. Se a tarefa sendo aguardada estiver em um processo de E/S, esse tipo não indicará um problema.| 
 |BAD_PAGE_PROCESS |Ocorre quando o registrador de página suspeita em segundo plano estiver tentando evitar a execução mais que cada cinco segundos. Páginas suspeitas em excesso causam a execução frequente do registrador.| 
 |BLOB_METADATA |Somente para uso interno. <br />**Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
-|BMPALLOCATION |Ocorre durante a sincronização de threads que entram em diferentes estágios de processamento dentro de um operador de modo de lote. <br />**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
-|BMPBUILD |Ocorre durante a sincronização de threads que entram em diferentes estágios de processamento dentro de um operador de modo de lote. <br />**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
-|BMPREPARTITION |Ocorre durante a sincronização de threads que entram em diferentes estágios de processamento dentro de um operador de modo de lote. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
-|BMPREPLICATION |Ocorre durante a sincronização de threads que entram em diferentes estágios de processamento dentro de um operador de modo de lote. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
-|BPSORT |Ocorre durante a sincronização de threads que entram em diferentes estágios de processamento dentro de um operador de modo de lote. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
+|BMPALLOCATION |Ocorre com planos paralelos de modo de lote ao sincronizar a alocação de um filtro de bitmap grande. Se a espera for excessiva e não puder ser reduzida ajustando a consulta (como adicionando índices), ajuste o limite de custo para paralelismo ou reduza o grau de paralelismo.<br />**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
+|BMPBUILD |Ocorre com planos paralelos de modo de lote ao sincronizar a compilação de um filtro de bitmap grande. Se a espera for excessiva e não puder ser reduzida ajustando a consulta (como adicionando índices), ajuste o limite de custo para paralelismo ou reduza o grau de paralelismo. <br />**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
+|BMPREPARTITION |Ocorre com planos paralelos de modo de lote ao sincronizar o reparticionamento de um filtro de bitmap grande. Se a espera for excessiva e não puder ser reduzida ajustando a consulta (como adicionando índices), ajuste o limite de custo para paralelismo ou reduza o grau de paralelismo. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
+|BMPREPLICATION |Ocorre com planos paralelos de modo de lote ao sincronizar a replicação de um filtro de bitmap grande entre threads de trabalho. Se a espera for excessiva e não puder ser reduzida ajustando a consulta (como adicionando índices), ajuste o limite de custo para paralelismo ou reduza o grau de paralelismo. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
+|BPSORT |Ocorre com planos paralelos de modo de lote ao sincronizar a classificação de um conjunto de um DataSet entre vários threads. Se a espera for excessiva e não puder ser reduzida ajustando a consulta (como adicionando índices), ajuste o limite de custo para paralelismo ou reduza o grau de paralelismo. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |BROKER_CONNECTION_RECEIVE_TASK |Ocorre ao aguardar o acesso para receber uma mensagem em um ponto de extremidade de conexão. O acesso de recepção para o ponto de extremidade é serializado.| 
 |BROKER_DISPATCHER |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |BROKER_ENDPOINT_STATE_MUTEX |Ocorre quando há contenção para acessar o estado de um ponto de extremidade de conexão Service Broker. O acesso ao estado das alterações é serializado.| 
@@ -140,7 +141,7 @@ Esse comando redefine todos os contadores como 0.
 |BROKER_TRANSMITTER |Ocorre quando o transmissor de Service Broker está aguardando trabalho. Service Broker tem um componente conhecido como transmissor que agenda mensagens de várias caixas de diálogo a serem enviadas pela conexão por um ou mais pontos de extremidade de conexão. O transmissor tem 2 threads dedicados para essa finalidade. Esse tipo de espera é cobrado quando esses threads de transmissor estão aguardando que as mensagens de caixa de diálogo sejam enviadas usando as conexões de transporte. Valores altos de waiting_tasks_count para esse tipo de espera apontam para o trabalho intermitente para esses threads de transmissor e não são indicações de nenhum problema de desempenho. Se o Service Broker não for usado, waiting_tasks_count deve ser 2 (para os dois threads de transmissor) e wait_time_ms deve ser duas vezes a duração desde a inicialização da instância. Consulte [Estatísticas de espera do Service Broker](https://blogs.msdn.microsoft.com/sql_service_broker/2008/12/01/service-broker-wait-types).|
 |BUILTIN_HASHKEY_MUTEX |Pode ocorrer depois de inicialização de instância, enquanto as estruturas de dados internos estiverem sendo inicializadas. Não ocorrerá antes que as estruturas de dados tiverem inicializado.| 
 |CHANGE_TRACKING_WAITFORCHANGES |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
-|CHECK_PRINT_RECORD |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|CHECK_PRINT_RECORD |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |CHECK_SCANNER_MUTEX |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |CHECK_TABLES_INITIALIZATION |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |CHECK_TABLES_SINGLE_SCAN |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
@@ -167,13 +168,13 @@ Esse comando redefine todos os contadores como 0.
 |CONNECTION_ENDPOINT_LOCK |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |COUNTRECOVERYMGR |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |CREATE_DATINISERVICE |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
-|CXCONSUMER |Ocorre com planos de consulta paralelos quando um thread de consumidor aguarda um thread de produtor enviar linhas. Essa é uma parte normal da execução de consulta paralela. <br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |Ocorre com planos de consulta paralelos ao sincronizar o iterador de troca do processador de consultas e ao produzir e consumir linhas. Se a espera for excessiva e não puder ser reduzida ajustando a consulta (como adicionando índices), ajuste o limite de custo para paralelismo ou reduza o grau de paralelismo.<br /> **Observação:** A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e [!INCLUDE[ssSDS](../../includes/sssds-md.md)], o ESPERAS CXPACKET se refere apenas à sincronização do iterador de troca do processador de consultas e à produção de linhas para threads de consumidor. Os threads de consumidor são rastreados separadamente no tipo de espera CXCONSUMER.| 
+|CXCONSUMER |Ocorre com planos de consulta paralelos quando um thread de consumidor aguarda um thread de produtor enviar linhas. Essa é uma parte normal da execução de consulta paralela. <br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] o SP2, Cu3),[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |Ocorre com planos de consulta paralelos ao sincronizar o iterador de troca do processador de consultas e ao produzir e consumir linhas. Se a espera for excessiva e não puder ser reduzida ajustando a consulta (como adicionando índices), ajuste o limite de custo para paralelismo ou reduza o grau de paralelismo.<br /> **Observação:** Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] o SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] , o Cu3 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]e o esperas cxpacket se refere apenas à sincronização do iterador de troca do processador de consultas e à produção de linhas para threads de consumidor. Os threads de consumidor são rastreados separadamente no tipo de espera CXCONSUMER.| 
 |CXROWSET_SYNC |Ocorre durante um exame de intervalo paralelo.| 
 |DAC_INIT |Ocorre enquanto a conexão de administrador dedicada estiver inicializando.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
-|DBMIRROR_DBM_EVENT |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
-|DBMIRROR_DBM_MUTEX |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|DBMIRROR_DBM_EVENT |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
+|DBMIRROR_DBM_MUTEX |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |DBMIRROR_EVENTS_QUEUE |Ocorre quando o espelhamento de banco de dados aguarda o processamento de eventos.| 
 |DBMIRROR_SEND |Ocorre quando uma tarefa aguarda que os registros acumulados de comunicações na camada de rede a serem apagados possam enviar mensagens. Indica que a camada de comunicações está começando a ser sobrecarregada e a afetar a taxa de transferência de dados de espelhamento de banco de dados.| 
 |DBMIRROR_WORKER_QUEUE |Indica que a tarefa de trabalhador de espelhamento de banco de dados está aguardando mais trabalho.| 
@@ -209,8 +210,8 @@ Esse comando redefine todos os contadores como 0.
 |DTCPNTSYNC |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |DUMP_LOG_COORDINATOR |Ocorre quando uma tarefa principal está esperando uma subtarefa gerar dados. Em geral, esse estado não ocorre. Uma espera longa indica um bloqueio inesperado. A subtarefa deve ser investigada.| 
 |DUMP_LOG_COORDINATOR_QUEUE |Somente para uso interno.| 
-|DUMPTRIGGER |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
-|EC |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|DUMPTRIGGER |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
+|EC |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |EE_PMOLOCK |Ocorre durante a sincronização de certos tipos de alocações de memória durante execução de instrução.| 
 |EE_SPECPROC_MAP_INIT |Ocorre durante sincronização da criação de tabela de hash de procedimento interno. Essa espera só pode ocorrer durante o acesso inicial da tabela de hash depois que a instância de SQL Server é iniciada.| 
 |ENABLE_EMPTY_VERSIONING |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
@@ -220,7 +221,7 @@ Esse comando redefine todos os contadores como 0.
 |EXECSYNC |Ocorre durante consultas paralelas durante a sincronização em processador de consulta em áreas não relacionadas ao iterador de troca. Exemplos dessas áreas são bitmaps, LOBs (objetos binários grandes) e o iterador de spool. Os LOBs podem usar esse estado de espera frequentemente.| 
 |EXECUTION_PIPE_EVENT_INTERNAL |Ocorre durante a sincronização entre o produtor e partes do consumidor de execução em lotes que são enviados por meio do contexto da conexão.| 
 |EXTERNAL_RG_UPDATE |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
-|EXTERNAL_SCRIPT_NETWORK_IO |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] por meio do atual.| 
+|EXTERNAL_SCRIPT_NETWORK_IO |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] até atual.| 
 |EXTERNAL_SCRIPT_PREPARE_SERVICE |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |EXTERNAL_SCRIPT_SHUTDOWN |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |EXTERNAL_WAIT_ON_LAUNCHER, |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
@@ -230,7 +231,7 @@ Esse comando redefine todos os contadores como 0.
 |FABRIC_REPLICA_PUBLISHER_EVENT_PUBLISH |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
 |FABRIC_REPLICA_PUBLISHER_SUBSCRIBER_LIST |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
 |FABRIC_WAIT_FOR_BUILD_REPLICA_EVENT_PROCESSING |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
-|FAILPOINT |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|FAILPOINT |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |FCB_REPLICA_READ |Ocorre quando as leituras de um arquivo esparso de instantâneo (ou um instantâneo temporário criado por DBCC) são sincronizadas.| 
 |FCB_REPLICA_WRITE |Ocorre quando o envio ou a remoção de uma página de um arquivo esparso de instantâneo (ou de um instantâneo temporário criado por DBCC) é sincronizado.| 
 |FEATURE_SWITCHES_UPDATE |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
@@ -259,7 +260,7 @@ Esse comando redefine todos os contadores como 0.
 |FILESTREAM_FILE_OBJECT |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |FILESTREAM_WORKITEM_QUEUE |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |FILETABLE_SHUTDOWN |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
-|FOREIGN_REDO |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] por meio do atual.| 
+|FOREIGN_REDO |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] até atual.| 
 |FORWARDER_TRANSITION |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |FS_FC_RWLOCK |Ocorre quando há uma espera pelo coletor de lixo do FILESTREAM para proceder de uma das seguintes maneiras:| 
 |FS_GARBAGE_COLLECTOR_SHUTDOWN |Ocorre quando o coletor de lixo do FILESTREAM está aguardando que tarefas de limpeza sejam concluídas.| 
@@ -269,14 +270,14 @@ Esse comando redefine todos os contadores como 0.
 |FSAGENT |Ocorre quando uma operação de E/S de arquivo FILESTREAM está aguardando um recurso do agente do FILESTREAM que está sendo usado por outra operação de E/S de arquivo.| 
 |FSTR_CONFIG_MUTEX |Ocorre quando há uma espera para que outra reconfiguração de recurso do FILESTREAM seja concluída.| 
 |FSTR_CONFIG_RWLOCK |Ocorre quando há uma espera para serializar o acesso aos parâmetros de configuração do FILESTREAM.| 
-|FT_COMPROWSET_RWLOCK |O texto completo está pendente na operação de metadados de fragmento. Documentado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
-|FT_IFTS_RWLOCK |O texto completo está pendente na sincronização interna. Documentado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|FT_COMPROWSET_RWLOCK |O texto completo está pendente na operação de metadados de fragmento. Documentado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
+|FT_IFTS_RWLOCK |O texto completo está pendente na sincronização interna. Documentado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |FT_IFTS_SCHEDULER_IDLE_WAIT |Tipo de espera de suspensão do agendador de texto completo. O agendador está ocioso.| 
-|FT_IFTSHC_MUTEX |O texto completo está pendente em uma operação de controle fdhost. Documentado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
-|FT_IFTSISM_MUTEX |O texto completo está pendente na operação de comunicação. Documentado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
-|FT_MASTER_MERGE |O texto completo está pendente na operação de mesclagem mestre. Documentado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|FT_IFTSHC_MUTEX |O texto completo está pendente em uma operação de controle fdhost. Documentado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
+|FT_IFTSISM_MUTEX |O texto completo está pendente na operação de comunicação. Documentado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
+|FT_MASTER_MERGE |O texto completo está pendente na operação de mesclagem mestre. Documentado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |FT_MASTER_MERGE_COORDINATOR |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
-|FT_METADATA_MUTEX |Documentado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|FT_METADATA_MUTEX |Documentado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |FT_PROPERTYLIST_CACHE |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |FT_RESTART_CRAWL |Ocorre quando um rastreamento de texto completo precisa ser reiniciado a partir do último ponto conhecido bom para recuperação de uma falha momentânea. A espera deixa as tarefas do trabalhador em execução na população para concluir a etapa atual ou sair dela.| 
 |FULLTEXT GATHERER |Ocorre durante a sincronização de operações de texto completo.| 
@@ -289,7 +290,7 @@ Esse comando redefine todos os contadores como 0.
 |GLOBAL_QUERY_PRODUCER |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e posterior.| 
 |GLOBAL_TRAN_CREATE |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |GLOBAL_TRAN_UCS_SESSION |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
-|GUARDIAN |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|GUARDIAN |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |HADR_AG_MUTEX |Ocorre quando uma instrução DDL Always On ou o comando Windows Server failover clustering está aguardando acesso de leitura/gravação exclusivo para a configuração de um grupo de disponibilidade. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |HADR_AR_CRITICAL_SECTION_ENTRY |Ocorre quando uma instrução DDL Always On ou o comando Windows Server failover clustering está aguardando o acesso de leitura/gravação exclusivo para o estado de tempo de execução da réplica local do grupo de disponibilidade associado. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |HADR_AR_MANAGER_MUTEX |Ocorre quando um desligamento da réplica de disponibilidade está aguardando a inicialização ser concluída ou uma inicialização de réplica de disponibilidade está aguardando o desligamento ser concluído. Somente uso interno., <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
@@ -360,32 +361,32 @@ Esse comando redefine todos os contadores como 0.
 |HK_RESTORE_FILEMAP |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |HKCS_PARALLEL_MIGRATION |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |HKCS_PARALLEL_RECOVERY |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
-|HTBUILD |Ocorre durante a sincronização de threads que entram em diferentes estágios de processamento dentro de um operador de modo de lote. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
-|HTDELETE |Ocorre durante a sincronização de threads que entram em diferentes estágios de processamento dentro de um operador de modo de lote. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
-|HTMEMO |Ocorre durante a sincronização de threads que entram em diferentes estágios de processamento dentro de um operador de modo de lote. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
-|HTREINIT |Ocorre durante a sincronização de threads que entram em diferentes estágios de processamento dentro de um operador de modo de lote. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
-|HTREPARTITION |Ocorre durante a sincronização de threads que entram em diferentes estágios de processamento dentro de um operador de modo de lote. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
+|HTBUILD |Ocorre com planos paralelos de modo de lote ao sincronizar a compilação da tabela de hash no lado de entrada de uma junção/agregação hash. Se a espera for excessiva e não puder ser reduzida ajustando a consulta (como adicionando índices), ajuste o limite de custo para paralelismo ou reduza o grau de paralelismo. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
+|HTDELETE |Ocorre com planos paralelos de modo de lote ao sincronizar no final de uma junção/agregação hash. Se a espera for excessiva e não puder ser reduzida ajustando a consulta (como adicionando índices), ajuste o limite de custo para paralelismo ou reduza o grau de paralelismo. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
+|HTMEMO |Ocorre com planos paralelos de modo de lote ao sincronizar antes de examinar a tabela de hash para correspondências/não correspondências na junção/agregação hash. Se a espera for excessiva e não puder ser reduzida ajustando a consulta (como adicionando índices), ajuste o limite de custo para paralelismo ou reduza o grau de paralelismo. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
+|HTREINIT |Ocorre com planos paralelos de modo de lote ao sincronizar antes de redefinir uma junção/agregação hash para a próxima junção parcial. Se a espera for excessiva e não puder ser reduzida ajustando a consulta (como adicionando índices), ajuste o limite de custo para paralelismo ou reduza o grau de paralelismo. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
+|HTREPARTITION |Ocorre com planos paralelos de modo de lote ao sincronizar o reparticionamento da tabela de hash no lado de entrada de uma junção/agregação hash. Se a espera for excessiva e não puder ser reduzida ajustando a consulta (como adicionando índices), ajuste o limite de custo para paralelismo ou reduza o grau de paralelismo.<br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |HTTP_ENUMERATION |Ocorre na inicialização para enumerar os pontos de extremidade de HTTP para iniciar o HTTP.| 
 |HTTP_START |Ocorre quando uma conexão está esperando que o HTTP conclua a inicialização.| 
 |HTTP_STORAGE_CONNECTION |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
 |IMPPROV_IOWAIT |Ocorre quando SQL Server aguarda a conclusão de uma e/s de carregamento em massa.| 
 |INSTANCE_LOG_RATE_GOVERNOR |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
-|INTERNAL_TESTING |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|INTERNAL_TESTING |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |IO_AUDIT_MUTEX |Ocorre durante a sincronização de buffers de evento de rastreamento.| 
-|IO_COMPLETION |Ocorre enquanto se espera as operações de E/S serem concluídas. Esse tipo de espera geralmente representa E/Ss de página sem-dados. As esperas de conclusão de e/s de página de dados aparecem como PAGEIOLATCH\_\* espera.| 
+|IO_COMPLETION |Ocorre enquanto se espera as operações de E/S serem concluídas. Esse tipo de espera geralmente representa E/Ss de página sem-dados. As esperas de conclusão de e/s de página\_ \* de dados aparecem como esperas de PAGEIOLATCH.| 
 |IO_QUEUE_LIMIT |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |IO_RETRY |Ocorre quando uma operação de E/S, como uma leitura ou uma gravação no disco, falha devido a recursos insuficientes, e é tentada novamente.| 
-|IOAFF_RANGE_QUEUE |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|IOAFF_RANGE_QUEUE |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |KSOURCE_WAKEUP |Usado pela tarefa de controle de serviço ao aguardar solicitações do Gerenciador de Controle de Serviços. Esperas longas estão previstas e não indicam um problema.| 
-|KTM_ENLISTMENT |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
-|KTM_RECOVERY_MANAGER |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
-|KTM_RECOVERY_RESOLUTION |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
-|LATCH_DT |Ocorre ao esperar uma trava de DT (destruir). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de\_de trava \* esperas está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
-|LATCH_EX |Ocorre ao esperar uma trava de EX (exclusivo). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de\_de trava \* esperas está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
-|LATCH_KP |Ocorre ao esperar uma trava de KP (manutenção). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de\_de trava \* esperas está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
-|LATCH_NL |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
-|LATCH_SH |Ocorre ao esperar uma trava de SH (compartilhamento). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de\_de trava \* esperas está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
-|LATCH_UP |Ocorre ao esperar uma trava de UP (atualização). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de\_de trava \* esperas está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
+|KTM_ENLISTMENT |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
+|KTM_RECOVERY_MANAGER |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
+|KTM_RECOVERY_RESOLUTION |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
+|LATCH_DT |Ocorre ao esperar uma trava de DT (destruir). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de esperas de trava\_ \* está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
+|LATCH_EX |Ocorre ao esperar uma trava de EX (exclusivo). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de esperas de trava\_ \* está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
+|LATCH_KP |Ocorre ao esperar uma trava de KP (manutenção). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de esperas de trava\_ \* está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
+|LATCH_NL |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
+|LATCH_SH |Ocorre ao esperar uma trava de SH (compartilhamento). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de esperas de trava\_ \* está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
+|LATCH_UP |Ocorre ao esperar uma trava de UP (atualização). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de esperas de trava\_ \* está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
 |LAZYWRITER_SLEEP |Ocorre quando as tarefas de gravador lentas são suspensas. É uma medição do tempo gasto por tarefas em segundo plano em espera. Não considere esse estado quando você estiver procurando pausas de usuário.| 
 |LCK_M_BU |Ocorre quando uma tarefa está esperando para adquirir um bloqueio Atualização em Massa (BU).| 
 |LCK_M_BU_ABORT_BLOCKERS |Ocorre quando uma tarefa está esperando para adquirir um bloqueio BU (Atualização em Massa) com Bloqueadores de Anulação. (Relacionado à opção de espera de baixa prioridade de ALTER TABLE e ALTER INDEX.) <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
@@ -454,9 +455,9 @@ Esse comando redefine todos os contadores como 0.
 |LOG_RATE_GOVERNOR |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |LOGBUFFER |Ocorre quando uma tarefa está esperando espaço no buffer de log para armazenar um registro de log. Consistentemente, valores altos podem indicar que os dispositivos de log não podem acompanhar a quantidade de log que está sendo gerada pelo servidor.| 
 |LOGCAPTURE_LOGPOOLTRUNCPOINT |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
-|LOGGENERATION |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|LOGGENERATION |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |LOGMGR |Ocorre quando uma tarefa está aguardando que qualquer E/S de log pendente seja concluída antes de desativar o log durante o fechamento do banco de dados.| 
-|LOGMGR_FLUSH |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|LOGMGR_FLUSH |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |LOGMGR_PMM_LOG |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |LOGMGR_QUEUE |Ocorre enquanto a tarefa de gravador de log aguarda solicitações de trabalho.| 
 |LOGMGR_RESERVE_APPEND |Ocorre quando uma tarefa está esperando para verificar se o truncamento de log libera espaço para logs, para que a tarefa possa gravar um novo registro de log. Considere aumentar o tamanho do(s) arquivo(s) de log para o banco de dados afetado para reduzir essa espera.| 
@@ -472,10 +473,10 @@ Esse comando redefine todos os contadores como 0.
 |MD_LAZYCACHE_RWLOCK |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |MEMORY_ALLOCATION_EXT |Ocorre ao alocar memória do pool de memória interno SQL Server ou do sistema operacional. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |MEMORY_GRANT_UPDATE |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e posterior.| 
-|METADATA_LAZYCACHE_RWLOCK |Somente para uso interno. <br /> **Aplica-se a**: somente [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]. |  
+|METADATA_LAZYCACHE_RWLOCK |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] somente. |  
 |MIGRATIONBUFFER |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e posterior.| 
-|MISCELLANEOUS |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
-|MISCELLANEOUS |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|MISCELLANEOUS |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
+|MISCELLANEOUS |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |MSQL_DQ |Ocorre quando uma tarefa está aguardando que uma operação de consulta distribuída seja concluída. Isso é usado para detectar deadlocks de aplicativo MARS (Vários Conjuntos de Resultados Ativos) potenciais. A espera termina quando a chamada de consulta distribuída é concluída.| 
 |MSQL_XACT_MGR_MUTEX |Ocorre quando uma tarefa está aguardando para obter a propriedade do gerenciador de transações de sessão para executar uma operação de transação em nível de sessão.| 
 |MSQL_XACT_MUTEX |Ocorre durante sincronização de uso de transação. Uma solicitação deve adquirir o mutex antes de usar a transação.| 
@@ -489,13 +490,13 @@ Esse comando redefine todos os contadores como 0.
 |PAGEIOLATCH_DT |Ocorre quando uma tarefa está esperando em uma trava por um buffer que está em uma solicitação de E/S. A solicitação de trava está no modo Destruição. Esperas longas podem indicar problemas no subsistema de disco.| 
 |PAGEIOLATCH_EX |Ocorre quando uma tarefa está esperando em uma trava por um buffer que está em uma solicitação de E/S. A solicitação de trava está em modo Exclusivo. Esperas longas podem indicar problemas no subsistema de disco.| 
 |PAGEIOLATCH_KP |Ocorre quando uma tarefa está esperando em uma trava por um buffer que está em uma solicitação de E/S. A solicitação de trava está no modo Manutenção. Esperas longas podem indicar problemas no subsistema de disco.| 
-|PAGEIOLATCH_NL |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|PAGEIOLATCH_NL |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |PAGEIOLATCH_SH |Ocorre quando uma tarefa está esperando em uma trava por um buffer que está em uma solicitação de E/S. A solicitação de trava está no modo Compartilhado. Esperas longas podem indicar problemas no subsistema de disco.| 
 |PAGEIOLATCH_UP |Ocorre quando uma tarefa está esperando em uma trava por um buffer que está em uma solicitação de E/S. A solicitação de trava está no modo Atualização. Esperas longas podem indicar problemas no subsistema de disco.| 
 |PAGELATCH_DT |Ocorre quando uma tarefa está esperando em uma trava por um buffer que não está em uma solicitação de E/S. A solicitação de trava está no modo Destruição.| 
 |PAGELATCH_EX |Ocorre quando uma tarefa está esperando em uma trava por um buffer que não está em uma solicitação de E/S. A solicitação de trava está em modo Exclusivo.| 
 |PAGELATCH_KP |Ocorre quando uma tarefa está esperando em uma trava por um buffer que não está em uma solicitação de E/S. A solicitação de trava está no modo Manutenção.| 
-|PAGELATCH_NL |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|PAGELATCH_NL |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |PAGELATCH_SH |Ocorre quando uma tarefa está esperando em uma trava por um buffer que não está em uma solicitação de E/S. A solicitação de trava está no modo Compartilhado.| 
 |PAGELATCH_UP |Ocorre quando uma tarefa está esperando em uma trava por um buffer que não está em uma solicitação de E/S. A solicitação de trava está no modo Atualização.| 
 |PARALLEL_BACKUP_QUEUE |Ocorre ao serializar a saída produzida por RESTORE HEADERONLY, RESTORE FILELISTONLY ou RESTORE LABELONLY.| 
@@ -509,9 +510,9 @@ Esse comando redefine todos os contadores como 0.
 |PERFORMANCE_COUNTERS_RWLOCK |Somente para uso interno.| 
 |PHYSICAL_SEEDING_DMV |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
 |POOL_LOG_RATE_GOVERNOR |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
-|PREEMPTIVE_ABR |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
-|PREEMPTIVE_AUDIT_ACCESS_EVENTLOG |Ocorre quando o agendador de Sistema operacional (SQLOS) [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] alterna para o modo preemptivo para gravar um evento de auditoria para o log de eventos do Windows. <br /> **Aplica-se a**: somente [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]. |  
-|PREEMPTIVE_AUDIT_ACCESS_SECLOG |Ocorre quando o agendador de Sistema operacional (SQLOS) alterna para o modo preemptivo para gravar um evento de auditoria para o log de segurança do Windows. <br /> **Aplica-se a**: somente [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]. |  
+|PREEMPTIVE_ABR |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
+|PREEMPTIVE_AUDIT_ACCESS_EVENTLOG |Ocorre quando o agendador de Sistema operacional (SQLOS) [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] alterna para o modo preemptivo para gravar um evento de auditoria para o log de eventos do Windows. <br /> **Aplica-se a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] somente. |  
+|PREEMPTIVE_AUDIT_ACCESS_SECLOG |Ocorre quando o agendador de Sistema operacional (SQLOS) alterna para o modo preemptivo para gravar um evento de auditoria para o log de segurança do Windows. <br /> **Aplica-se a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] somente. |  
 |PREEMPTIVE_CLOSEBACKUPMEDIA |Ocorre quando o agendador de SQLOS alterna para o modo preventivo para fechar a mídia de backup.| 
 |PREEMPTIVE_CLOSEBACKUPTAPE |Ocorre quando o agendador de SQLOS alterna para o modo preemptivo para fechar um dispositivo de backup em fita.| 
 |PREEMPTIVE_CLOSEBACKUPVDIDEVICE |Ocorre quando o agendador de SQLOS alterna para o modo preemptivo para fechar um dispositivo de backup virtual.| 
@@ -668,7 +669,7 @@ Esse comando redefine todos os contadores como 0.
 |PREEMPTIVE_OS_SETFILEVALIDDATA |Somente para uso interno.| 
 |PREEMPTIVE_OS_SETNAMEDSECURITYINFO |Somente para uso interno.| 
 |PREEMPTIVE_OS_SQLCLROPS |Somente para uso interno.| 
-|PREEMPTIVE_OS_SQMLAUNCH |Somente para uso interno. <br /> **Aplica-se a**: do [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] ao [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
+|PREEMPTIVE_OS_SQMLAUNCH |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] a [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
 |PREEMPTIVE_OS_VERIFYSIGNATURE |Somente para uso interno.| 
 |PREEMPTIVE_OS_VERIFYTRUST |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |PREEMPTIVE_OS_VSSOPS |Somente para uso interno.| 
@@ -687,13 +688,13 @@ Esse comando redefine todos os contadores como 0.
 |PREEMPTIVE_SHAREDMEM_GETDATA |Somente para uso interno.| 
 |PREEMPTIVE_SNIOPEN |Somente para uso interno.| 
 |PREEMPTIVE_SOSHOST |Somente para uso interno.| 
-|PREEMPTIVE_SOSTESTING |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|PREEMPTIVE_SOSTESTING |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |PREEMPTIVE_SP_SERVER_DIAGNOSTICS |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |PREEMPTIVE_STARTRM |Somente para uso interno.| 
 |PREEMPTIVE_STREAMFCB_CHECKPOINT |Somente para uso interno.| 
 |PREEMPTIVE_STREAMFCB_RECOVER |Somente para uso interno.| 
-|PREEMPTIVE_STRESSDRIVER |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
-|PREEMPTIVE_TESTING |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|PREEMPTIVE_STRESSDRIVER |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
+|PREEMPTIVE_TESTING |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |PREEMPTIVE_TRANSIMPORT |Somente para uso interno.| 
 |PREEMPTIVE_UNMARSHALPROPAGATIONTOKEN |Somente para uso interno.| 
 |PREEMPTIVE_VSS_CREATESNAPSHOT |Somente para uso interno.| 
@@ -708,8 +709,8 @@ Esse comando redefine todos os contadores como 0.
 |PREEMPTIVE_XE_TARGETFINALIZE |Somente para uso interno.| 
 |PREEMPTIVE_XE_TARGETINIT |Somente para uso interno.| 
 |PREEMPTIVE_XE_TIMERRUN |Somente para uso interno.| 
-|PREEMPTIVE_XETESTING |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
-|PRINT_ROLLBACK_PROGRESS |Usado para aguardar enquanto os processos do usuário são finalizados em um banco de dados que passou por transição usando a cláusula de término ALTER DATABASE. Para obter mais informações, consulte ALTER DATABASE (Transact-SQL).| 
+|PREEMPTIVE_XETESTING |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
+|PRINT_ROLLBACK_PROGRESS |Usado para aguardar enquanto os processos do usuário são finalizados em um banco de dados que passou por transição usando a cláusula de término ALTER DATABASE. Para obter mais informações, veja ALTER DATABASE (Transact-SQL).| 
 |PRU_ROLLBACK_DEFERRED |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |PWAIT_ALL_COMPONENTS_INITIALIZED |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |PWAIT_COOP_SCAN |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
@@ -767,16 +768,16 @@ Esse comando redefine todos os contadores como 0.
 |QRY_MEM_GRANT_INFO_MUTEX |Ocorre quando o gerenciamento de memória de execução de consulta tenta controlar o acesso à lista de informações de concessão estáticas. Esse estado lista informações sobre as solicitações de memória em espera e concedidas atuais. É um estado de controle de acesso simples. Nunca deverá haver uma espera longa nesse estado. Se o mutex não for liberado, todas as novas consultas que usam memória deixarão de responder.| 
 |QRY_PARALLEL_THREAD_MUTEX |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |QRY_PROFILE_LIST_MUTEX |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
-|QUERY_ERRHDL_SERVICE_DONE |Identificado apenas para fins informativos. Não há suporte. <br /> **Aplica-se a**: somente [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]. |  
-|QUERY_WAIT_ERRHDL_SERVICE |Identificado apenas para fins informativos.  Não há suporte. <br /> **Aplica-se a**: somente [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)].  |  
+|QUERY_ERRHDL_SERVICE_DONE |Identificado apenas para fins informativos. Sem suporte. <br /> **Aplica-se a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] somente. |  
+|QUERY_WAIT_ERRHDL_SERVICE |Identificado apenas para fins informativos.  Sem suporte. <br /> **Aplica-se a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] somente.  |  
 |QUERY_EXECUTION_INDEX_SORT_EVENT_OPEN |Ocorre em determinados casos quando a criação de índice offline é executada em paralelo, e os diferentes threads de trabalho que estão classificando sincronizam o acesso aos arquivos de classificação.| 
 |QUERY_NOTIFICATION_MGR_MUTEX |Ocorre durante a sincronização da fila de coleta de lixo do gerenciador de notificação de consulta.| 
 |QUERY_NOTIFICATION_SUBSCRIPTION_MUTEX |Ocorre durante a sincronização de estado para transações em notificações de consulta.| 
 |QUERY_NOTIFICATION_TABLE_MGR_MUTEX |Ocorre durante sincronização interna no gerenciador de notificação de consulta.| 
-|QUERY_NOTIFICATION_UNITTEST_MUTEX |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|QUERY_NOTIFICATION_UNITTEST_MUTEX |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |QUERY_OPTIMIZER_PRINT_MUTEX |Ocorre durante sincronização de produção de saída de diagnóstico do otimizador de consulta. Esse tipo de espera só ocorrerá se as configurações de diagnóstico tiverem sido habilitadas na direção do suporte a produtos da Microsoft.| 
 |QUERY_TASK_ENQUEUE_MUTEX |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
-|QUERY_TRACEOUT |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|QUERY_TRACEOUT |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |RBIO_WAIT_VLF |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e posterior.| 
 |RBIO_RG_STORAGE |Ocorre quando um nó de computação de banco de dados de hiperescala está sendo limitado devido ao consumo de log atrasado no (s) servidor (es) de páginas. <br /> **Aplica-se a**: hiperescala do banco de dados SQL do Azure.|
 |RBIO_RG_DESTAGE |Ocorre quando um nó de computação de banco de dados de hiperescala está sendo limitado devido ao consumo de log atrasado pelo armazenamento de log de longo prazo. <br /> **Aplica-se a**: hiperescala do banco de dados SQL do Azure.|
@@ -806,7 +807,7 @@ Esse comando redefine todos os contadores como 0.
 |RESOURCE_SEMAPHORE |Ocorre quando uma solicitação de memória de consulta não pode ser concedida imediatamente devido a outras consultas simultâneas. Esperas e tempos de espera longos podem indicar número excessivo de consultas simultâneas ou valores de solicitação de memória excessivos.| 
 |RESOURCE_SEMAPHORE_MUTEX |Ocorre enquanto uma consulta aguarda a sua solicitação de uma reserva de thread ser atendida. Também ocorre durante a sincronização de solicitações de compilação de consulta e concessão de memória.| 
 |RESOURCE_SEMAPHORE_QUERY_COMPILE |Ocorre quando o número de compilações de consulta simultâneas atinge um limite de estrangulamento. Esperas e tempos de espera longos podem indicar compilações excessivas, recompilações ou planos que não sejam para cache.| 
-|RESOURCE_SEMAPHORE_SMALL_QUERY |Ocorre quando uma solicitação de memória por meio de uma pequena consulta não pode ser concedida imediatamente devido a outras consultas simultâneas. O tempo de espera não deve exceder mais do que alguns segundos porque o servidor transfere a solicitação ao pool de memória de consulta principal se ele falhar ao conceder a memória solicitada dentro de alguns segundos. Esperas longas podem indicar número excessivo de pequenas consultas simultâneas enquanto o pool de memória principal está sendo bloqueado por consultas em espera. <br /> **Aplica-se a**: somente [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]. |  
+|RESOURCE_SEMAPHORE_SMALL_QUERY |Ocorre quando uma solicitação de memória por meio de uma pequena consulta não pode ser concedida imediatamente devido a outras consultas simultâneas. O tempo de espera não deve exceder mais do que alguns segundos porque o servidor transfere a solicitação ao pool de memória de consulta principal se ele falhar ao conceder a memória solicitada dentro de alguns segundos. Esperas longas podem indicar número excessivo de pequenas consultas simultâneas enquanto o pool de memória principal está sendo bloqueado por consultas em espera. <br /> **Aplica-se a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] somente. |  
 |RESTORE_FILEHANDLECACHE_ENTRYLOCK |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |RESTORE_FILEHANDLECACHE_LOCK |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |RG_RECONFIG |Somente para uso interno.| 
@@ -862,13 +863,13 @@ Esse comando redefine todos os contadores como 0.
 |SOCKETDUPLICATEQUEUE_CLEANUP |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |SOS_CALLBACK_REMOVAL |Ocorre enquanto executa a sincronização em uma lista de retorno de chamada para remover um retorno de chamada. Não se espera que esse contador seja alterado depois que a inicialização do servidor é concluída.| 
 |SOS_DISPATCHER_MUTEX |Ocorre durante a sincronização interna do pool de dispatchers. Isto inclui o período de ajuste do pool.| 
-|SOS_LOCALALLOCATORLIST |Ocorre durante a sincronização interna no gerenciador de memória do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. <br /> **Aplica-se a**: somente [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]. |  
+|SOS_LOCALALLOCATORLIST |Ocorre durante a sincronização interna no gerenciador de memória do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. <br /> **Aplica-se a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] somente. |  
 |SOS_MEMORY_TOPLEVELBLOCKALLOCATOR |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |SOS_MEMORY_USAGE_ADJUSTMENT |Ocorre quando o uso de memória está sendo ajustado entre pools.| 
 |SOS_OBJECT_STORE_DESTROY_MUTEX |Ocorre durante sincronização interna em pools de memória na destruição de objetos do pool.| 
 |SOS_PHYS_PAGE_CACHE |Contabiliza o tempo que um thread aguarda para obter o mutex necessário antes de alocar páginas físicas ou antes de retornar essas páginas para o sistema operacional. As esperas nesse tipo só aparecerão se a instância do SQL Server usar memória AWE., <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |SOS_PROCESS_AFFINITY_MUTEX |Ocorre durante a sincronização de acesso para processar configurações de afinidade.| 
-|SOS_RESERVEDMEMBLOCKLIST |Ocorre durante a sincronização interna no Gerenciador de memória SQL Server. <br /> **Aplica-se a**: somente [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]. |  
+|SOS_RESERVEDMEMBLOCKLIST |Ocorre durante a sincronização interna no Gerenciador de memória SQL Server. <br /> **Aplica-se a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] somente. |  
 |SOS_SCHEDULER_YIELD |Ocorre quando uma tarefa cede o agendador para a execução de outras tarefas. Durante essa espera, a tarefa espera que seu quantum seja renovado.| 
 |SOS_SMALL_PAGE_ALLOC |Ocorre durante a alocação e a liberação de memória que é gerenciada por alguns objetos de memória.| 
 |SOS_STACKSTORE_INIT_MUTEX |Ocorre durante a sincronização da inicialização do repositório interno.| 
@@ -892,12 +893,12 @@ Esse comando redefine todos os contadores como 0.
 |SQLCLR_QUANTUM_PUNISHMENT |Ocorre quando uma tarefa CLR é estrangulada porque excedeu seu quantum de execução. Esse estrangulamento é feito para reduzir o efeito dessa tarefa com muitos recursos em outras tarefas.| 
 |SQLSORT_NORMMUTEX |Ocorre durante sincronização interna na inicialização das estruturas de classificação internas.| 
 |SQLSORT_SORTMUTEX |Ocorre durante sincronização interna na inicialização das estruturas de classificação internas.| 
-|SQLTRACE_BUFFER_FLUSH |Ocorre quando uma tarefa espera que, uma tarefa em segundo plano, libere buffers de rastreamento para o disco a cada quatro segundos. <br /> **Aplica-se a**: somente [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]. |  
+|SQLTRACE_BUFFER_FLUSH |Ocorre quando uma tarefa espera que, uma tarefa em segundo plano, libere buffers de rastreamento para o disco a cada quatro segundos. <br /> **Aplica-se a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] somente. |  
 |SQLTRACE_FILE_BUFFER |Ocorre durante a sincronização em buffers de rastreamento durante um rastreamento de arquivo. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |SQLTRACE_FILE_READ_IO_COMPLETION |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |SQLTRACE_FILE_WRITE_IO_COMPLETION |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |SQLTRACE_INCREMENTAL_FLUSH_SLEEP |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
-|SQLTRACE_LOCK |Somente para uso interno. <br /> **Aplica-se a**: somente [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]. |  
+|SQLTRACE_LOCK |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] somente. |  
 |SQLTRACE_PENDING_BUFFER_WRITERS |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |SQLTRACE_SHUTDOWN |Ocorre enquanto o desligamento de rastreamento aguarda a conclusão dos eventos de rastreamento pendentes.| 
 |SQLTRACE_WAIT_ENTRIES |Ocorre enquanto uma fila de eventos do Rastreamento do SQL aguarda a chegada de pacotes na fila.| 
@@ -916,7 +917,7 @@ Esse comando redefine todos os contadores como 0.
 |TRAN_MARKLATCH_DT |Ocorre ao esperar uma trava de modo de destruição em uma destruição de marcação de transação. Essas travas são usadas para sincronização de confirmações com transações marcadas.| 
 |TRAN_MARKLATCH_EX |Ocorre ao esperar uma trava de modo exclusiva em uma transação marcada. Essas travas são usadas para sincronização de confirmações com transações marcadas.| 
 |TRAN_MARKLATCH_KP |Ocorre ao esperar uma trava de modo de manutenção em uma transação marcada. Essas travas são usadas para sincronização de confirmações com transações marcadas.| 
-|TRAN_MARKLATCH_NL |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|TRAN_MARKLATCH_NL |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |TRAN_MARKLATCH_SH |Ocorre ao esperar uma trava de modo compartilhado em uma transação marcada. Essas travas são usadas para sincronização de confirmações com transações marcadas.| 
 |TRAN_MARKLATCH_UP |Ocorre ao esperar uma trava de modo de atualização em uma transação marcada. Essas travas são usadas para sincronização de confirmações com transações marcadas.| 
 |TRANSACTION_MUTEX |Ocorre durante a sincronização de acesso a uma transação por meio de vários lotes.| 
@@ -935,7 +936,7 @@ Esse comando redefine todos os contadores como 0.
 |VIA_ACCEPT |Ocorre quando uma conexão do provedor Virtual Interface Adapter (VIA) é concluída durante a inicialização.| 
 |VIEW_DEFINITION_MUTEX |Ocorre durante a sincronização no acesso às definições de exibição em cache.| 
 |WAIT_FOR_RESULTS |Ocorre ao esperar a ativação de uma notificação de consulta.| 
-|WAIT_ON_SYNC_STATISTICS_REFRESH |Ocorre ao aguardar a conclusão da atualização de estatísticas síncrona antes da compilação da consulta e a execução ser retomada.<br /> **Aplica-se a:** começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
+|WAIT_ON_SYNC_STATISTICS_REFRESH |Ocorre ao aguardar a conclusão da atualização de estatísticas síncrona antes da compilação da consulta e a execução ser retomada.<br /> **Aplica-se a: a**partir de[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
 |WAIT_XLOGREAD_SIGNAL |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e posterior.| 
@@ -944,7 +945,7 @@ Esse comando redefine todos os contadores como 0.
 |WAIT_XTP_CKPT_CLOSE |Ocorre ao aguardar a conclusão de um ponto de verificação. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
 |WAIT_XTP_CKPT_ENABLED |Ocorre quando o ponto de verificação está desabilitado e aguardando a habilitação do ponto de verificação., <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
 |WAIT_XTP_CKPT_STATE_LOCK |Ocorre ao sincronizar a verificação do estado do ponto de verificação. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
-|WAIT_XTP_COMPILE_WAIT |Somente para uso interno. <br /> **APLICA-SE A**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e posterior.| 
+|WAIT_XTP_COMPILE_WAIT |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e posterior.| 
 |WAIT_XTP_GUEST |Ocorre quando o alocador de memória do banco de dados precisa parar de receber notificações de baixa memória. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |WAIT_XTP_HOST_WAIT |Ocorre quando as esperas são disparadas pelo mecanismo de banco de dados e implementadas pelo host. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
@@ -958,9 +959,9 @@ Esse comando redefine todos os contadores como 0.
 |WAIT_XTP_TRAN_DEPENDENCY |Ocorre ao aguardar dependências de transação., <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
 |WAITFOR |Ocorre como resultado de uma instrução WAITFOR Transact-SQL. A duração da espera é determinada pelos parâmetros da instrução. Essa é uma espera iniciada pelo usuário.| 
 |WAITFOR_PER_QUEUE |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
-|WAITFOR_TASKSHUTDOWN |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|WAITFOR_TASKSHUTDOWN |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |WAITSTAT_MUTEX |Ocorre durante a sincronização de acesso à coleção de estatísticas usadas para popular sys.dm_os_wait_stats.| 
-|WCC |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
+|WCC |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |WINDOW_AGGREGATES_MULTIPASS |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |WINFAB_API_CALL |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
 |WINFAB_REPLICA_BUILD_OPERATION |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
@@ -986,9 +987,9 @@ Esse comando redefine todos os contadores como 0.
 |XE_DISPATCHER_WAIT |Ocorre quando um thread em segundo plano que é usado para sessões de Eventos Estendidos está esperando o processamento de buffers de evento.| 
 |XE_FILE_TARGET_TVF |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |XE_LIVE_TARGET_TVF |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
-|XE_MODULEMGR_SYNC |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
-|XE_OLS_LOCK |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
-|XE_PACKAGE_LOCK_BACKOFF |Identificado apenas para fins informativos. Não há suporte. <br /> **Aplica-se a**: somente [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]. |  
+|XE_MODULEMGR_SYNC |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
+|XE_OLS_LOCK |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
+|XE_PACKAGE_LOCK_BACKOFF |Identificado apenas para fins informativos. Sem suporte. <br /> **Aplica-se a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] somente. |  
 |XE_SERVICES_EVENTMANUAL |Somente para uso interno.| 
 |XE_SERVICES_MUTEX |Somente para uso interno.| 
 |XE_SERVICES_RWLOCK |Somente para uso interno.| 
@@ -1015,7 +1016,7 @@ Esse comando redefine todos os contadores como 0.
 |XTPPROC_PARTITIONED_STACK_CREATE |Ocorre ao alocar estruturas de cache de procedimento armazenado compiladas nativamente por nó NUMA (deve ser feito com um único thread) para um determinado procedimento. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.|
 
   
- Os XEvents a seguir estão relacionados à **opção** de partição e à recompilação de índice online. Para obter informações sobre a sintaxe, consulte [ALTER TABLE &#40;Transact&#41; -SQL](../../t-sql/statements/alter-table-transact-sql.md) e [ALTER INDEX &#40;Transact&#41;-SQL](../../t-sql/statements/alter-index-transact-sql.md).  
+ Os XEvents a seguir estão relacionados à **opção** de partição e à recompilação de índice online. Para obter informações sobre a sintaxe, consulte [ALTER TABLE &#40;Transact-sql&#41;](../../t-sql/statements/alter-table-transact-sql.md) e [ALTER INDEX &#40;&#41;do Transact-SQL ](../../t-sql/statements/alter-index-transact-sql.md).  
   
 -   lock_request_priority_state  
   
@@ -1023,12 +1024,12 @@ Esse comando redefine todos os contadores como 0.
   
 -   ddl_with_wait_at_low_priority  
   
- Para obter uma matriz de compatibilidade de bloqueio, consulte [Sys. &#40;DM_TRAN_LOCKS&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
+ Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
-## <a name="see-also"></a>Confira também  
+## <a name="see-also"></a>Consulte também  
     
- [SQL Server exibições &#40;de&#41; gerenciamento dinâmico relacionadas ao sistema operacional](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
+ [SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [sys. dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
  [sys. dm_db_wait_stats &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   
   

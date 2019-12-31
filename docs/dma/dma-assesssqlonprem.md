@@ -3,7 +3,7 @@ title: Executar uma avaliação de migração SQL Server
 titleSuffix: Data Migration Assistant
 description: Saiba como usar Assistente de Migração de Dados para avaliar um SQL Server local antes de migrar para outro SQL Server ou para o banco de dados SQL do Azure
 ms.custom: seo-lt-2019
-ms.date: 08/08/2019
+ms.date: 12/10/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,16 +15,19 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: b2ec2f0f7030db2928a2a1e1c4f39ec62ed830ad
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: b6d9fd3f31885641451b3ade2f0f4543d9f44455
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056629"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75001901"
 ---
-# <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Executar uma avaliação de migração SQL Server com Assistente de Migração de Dados
+# <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Realizar uma avaliação de migração do SQL Server com o Assistente de Migração de Dados
 
 As instruções passo a passo a seguir ajudam a executar sua primeira avaliação para migrar para SQL Server locais, SQL Server em execução em uma VM do Azure ou banco de dados SQL do Azure, usando Assistente de Migração de Dados.
+
+   > [!NOTE]
+   > O Assistente de Migração de Dados v 5.0 apresenta suporte para analisar a conectividade de banco de dados e consultas SQL inseridas no código do aplicativo. Para obter mais informações, consulte a postagem de blog [usando assistente de migração de dados para avaliar a camada de acesso a dados de um aplicativo](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
 
 ## <a name="create-an-assessment"></a>Criar uma avaliação
 
@@ -53,8 +56,8 @@ As instruções passo a passo a seguir ajudam a executar sua primeira avaliaçã
 
    Ao avaliar sua instância de SQL Server de origem para migrar para o banco de dados SQL do Azure, você pode escolher um ou ambos os tipos de relatório de avaliação a seguir:
 
-    - **Verificar compatibilidade de banco de dados**
-    - **Verificar paridade de recurso**
+    - **Determinar compatibilidade do banco de dados**
+    - **Verificação de paridade de recursos**
 
     ![Selecionar tipo de relatório de avaliação para destino do banco de dados SQL](../dma/media/dma-assesssqlonprem/assessment-types-azure.png)
 
@@ -111,7 +114,7 @@ As instruções passo a passo a seguir ajudam a executar sua primeira avaliaçã
 
     ![Adicionar fontes e iniciar a avaliação](../dma/media/dma-assesssqlonprem/select-database1.png)
 
-## <a name="view-results"></a>Exibir os resultados
+## <a name="view-results"></a>Exibir resultados
 
 A duração da avaliação depende do número de bancos de dados adicionados e do tamanho do esquema de cada banco de dados. Os resultados são exibidos para cada banco de dados assim que estiverem disponíveis.
 
@@ -129,13 +132,13 @@ As recomendações de recursos abrangem diferentes tipos de recursos, como OLTP 
 
 ![Exibir recomendações de recursos](../dma/media/dma-assesssqlonprem/feature-recommendations.png)
 
-Para o banco de dados SQL do Azure, as avaliações fornecem problemas de bloqueio de migração e problemas de paridade de recursos. Examine os resultados de ambas as categorias selecionando as opções específicas.
+Para o banco de dados SQL do Azure, as avaliações fornecem problemas de bloqueio de migração e problemas de paridade de recursos.Examine os resultados de ambas as categorias selecionando as opções específicas.
 
 - A categoria de **paridade de recursos SQL Server** fornece um conjunto abrangente de recomendações, abordagens alternativas disponíveis no Azure e etapas de mitigação. Ele ajuda a planejar esse esforço em seus projetos de migração.
 
   ![Exibir informações para SQL Server paridade de recurso](../dma/media/dma-assesssqlonprem/sql-feature-parity.png)
 
-- A categoria de **problemas de compatibilidade** fornece recursos com suporte parcial ou sem suporte que bloqueiam a migração de bancos de dados de SQL Server locais para bancos de dados SQL do Azure. Em seguida, ele fornece recomendações para ajudá-lo a resolver esses problemas.
+- A categoria de **problemas de compatibilidade** fornece recursos com suporte parcial ou sem suporte que bloqueiam a migração de bancos de dados de SQL Server locais para bancos de dados SQL do Azure.Em seguida, ele fornece recomendações para ajudá-lo a resolver esses problemas.
 
   ![Exibir problemas de compatibilidade](../dma/media/dma-assesssqlonprem/compatibility-issues.png)
 
@@ -153,4 +156,4 @@ As diretrizes detalhadas passo a passo para avaliações de prontidão de destin
 
 Depois que todos os bancos de dados concluírem a avaliação, selecione **Exportar relatório** para exportar os resultados para um arquivo JSON ou um arquivo CSV. Em seguida, você pode analisar os dados por sua própria conveniência.
 
-Você pode executar várias avaliações simultaneamente e exibir o estado das avaliações abrindo a página **todas as avaliações** .
+Você pode executar várias avaliações simultaneamente e exibir o estado das avaliações abrindo a página **Todas as Avaliações**.

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], importing
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 8cd45bd5a03cd50053ffe436fbf62d01019c2ae7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b05177fb6cf11d6224d760f2d301212d58307d9
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011556"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957150"
 ---
 # <a name="restore-a-database-master-key"></a>Restaurar uma chave mestra de banco de dados
   Este tópico descreve como restaurar a chave mestra de banco de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -30,11 +30,11 @@ ms.locfileid: "63011556"
   
      [Segurança](#Security)  
   
--   [Para restaurar a chave mestra de banco de dados usando o Transact-SQL](#SSMSProcedure)  
+-   [Para restaurar a chave mestra do banco de dados usando Transact-SQL](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="BeforeYouBegin"></a>Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="Restrictions"></a>Limitações e restrições  
   
 -   Quando a chave mestra é restaurada, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] descriptografa todas as chaves atualmente criptografadas com a chave mestra ativa e criptografa essas chaves com a chave mestra restaurada. Essa operação de uso intensivo de recursos deve ser agendada em um período de baixa demanda. Se a chave mestra de banco de dados atual não for aberta ou não puder ser aberta, ou se qualquer chave criptografada com ela não puder ser descriptografada, a operação de restauração falhará.  
   
@@ -44,12 +44,12 @@ ms.locfileid: "63011556"
   
 -   Se não houver nenhuma chave mestra no banco de dados atual, RESTORE MASTER KEY criará uma chave mestra. A nova chave mestra não será criptografada automaticamente com a chave mestra de serviço.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="Security"></a>Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="Permissions"></a>Permissões  
  Exige a permissão CONTROL no banco de dados.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio com o Transact-SQL  
+##  <a name="SSMSProcedure"></a>Usando SQL Server Management Studio com Transact-SQL  
   
 #### <a name="to-restore-the-database-master-key"></a>Para restaurar a chave mestra de banco de dados  
   
@@ -57,9 +57,9 @@ ms.locfileid: "63011556"
   
 2.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-3.  Na barra Padrão, clique em **Nova Consulta**.  
+3.  Na barra Padrão , clique em **Nova Consulta**.  
   
-4.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
+4.  Copie e cole o exemplo a seguir na janela de consulta e clique em **executar**.  
   
     ```  
     -- Restores the database master key of the AdventureWorks2012 database.  

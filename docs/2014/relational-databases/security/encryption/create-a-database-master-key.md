@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], creating
 ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 757b6c62d63da2b8f1fa33e5d704d7a2c4fabd38
-ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
+ms.openlocfilehash: 86f74710e99079d0acd28db09bcf1e4ba7c57865
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70978374"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957240"
 ---
 # <a name="create-a-database-master-key"></a>Criar uma chave mestra de banco de dados
 
@@ -29,24 +29,24 @@ Este tópico descreve como criar uma chave mestra de banco de dados `master` no 
 
   [Segurança](#Security)
 
-- [Para criar uma chave mestra do banco de dados usando o Transact-SQL](#TsqlProcedure)
+- [Para criar uma chave mestra de banco de dados usando Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> Antes de começar
+## <a name="BeforeYouBegin"></a>Antes de começar
 
-### <a name="Security"></a> Segurança
+### <a name="Security"></a>Segurança
 
-#### <a name="Permissions"></a> Permissões
+#### <a name="Permissions"></a>Permissões
 
 Exige a permissão CONTROL no banco de dados.
 
-## <a name="TsqlProcedure"></a> Usando o Transact-SQL
+## <a name="TsqlProcedure"></a>Usando o Transact-SQL
 
 ### <a name="to-create-a-database-master-key"></a>Criar uma chave mestra de banco de dados
 
 1. Escolha uma senha por criptografar a cópia da chave mestra que será armazenada no banco de dados.
 2. No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].
-3. Expanda **bancos de dados do sistema**, clique `master` com o botão direito do mouse e clique em **nova consulta**.
-4. Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.
+3. Expanda **Bancos de Dados do Sistema**, clique com o botão direito do mouse `master` e clique em **Nova Consulta**.
+4. Copie e cole o exemplo a seguir na janela de consulta e clique em **executar**.
 
   ```sql
   -- Creates the master key.

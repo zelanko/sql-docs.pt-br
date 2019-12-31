@@ -1,5 +1,5 @@
 ---
-title: Alterar uma senha de usuário de autenticação do SQL Server (OLE DB) | Microsoft Docs
+title: Senha do usuário de autenticação do SQL (OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b157b95fe7175fb36bf7f1e064eca2179f571e38
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 768aff63d6b1faeecc0bba555fad0f598c9015a6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73790148"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75226174"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>Alterar uma senha de usuário de Autenticação do SQL Server (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "73790148"
   Este exemplo mostra como usar OLE DB para alterar a senha de uma conta do usuário na Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se você precisar manter as credenciais, deverá criptografá-las com a [API de criptografia do Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Exemplo  
  Antes de compilar, atualize o código do C++ para especificar a ID de usuário, a senha antiga e a nova senha.  
@@ -37,7 +37,7 @@ ms.locfileid: "73790148"
   
  O servidor onde este exemplo será executado deve ter pelo menos um logon habilitado para a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O servidor também deve estar habilitado para permitir logons na Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 void InitializeAndEstablishConnection();  
   

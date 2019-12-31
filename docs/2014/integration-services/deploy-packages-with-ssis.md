@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial do SSIS: Implantando pacotes | Microsoft Docs'
+title: 'Tutorial do SSIS: implantando pacotes | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3752c7e0f99a62534a670743c0ee7deb3c2e07a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 89db7def474b26ffd25da1495e3efaf0e1af43dd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62899004"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232690"
 ---
-# <a name="ssis-tutorial-deploying-packages"></a>Tutorial do SSIS: Como implantar pacotes
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece ferramentas que facilitam a implantação de pacotes em outro computador. As ferramentas de implantação também gerenciam qualquer dependência, como configurações e arquivos que o pacote precisa. Neste tutorial, você aprenderá a usar essas ferramentas para instalar pacotes e suas dependências em um computador de destino.  
+# <a name="ssis-tutorial-deploying-packages"></a>Tutorial SSIS: implantando pacotes
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece ferramentas que facilitam a implantação de pacotes em outro [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] computador. As ferramentas de implantação também gerenciam qualquer dependência, como configurações e arquivos que o pacote precisa. Neste tutorial, você aprenderá a usar essas ferramentas para instalar pacotes e suas dependências em um computador de destino.  
   
  Primeiro, você executará as tarefas para preparar a implantação. Você criará um novo projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e adicionará pacotes e arquivos de dados existentes ao projeto. Você não criará nenhum pacote a partir do zero; em vez disso, apenas trabalhará com pacotes concluídos criados apenas para este tutorial. Você não modificará a funcionalidade dos pacotes neste tutorial; porém, após adicionar os pacotes ao projeto, poderá achar útil abrir os pacotes no Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] e revisar o conteúdo de cada pacote. Ao examinar os pacotes, aprenderá sobre as dependências dos pacotes, como arquivos de log, e sobre outros recursos interessantes dos pacotes.  
   
@@ -43,14 +43,14 @@ ms.locfileid: "62899004"
  O objetivo deste tutorial é simular a complexidade dos problemas reais de implantação que você poderá encontrar. Porém, se não for possível implantar os pacotes em um computador diferente, você ainda poderá executar este tutorial instalando os pacotes no banco de dados msdb em uma instância local do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e depois executar os pacotes do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] na mesma instância.  
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
- O melhor modo de se familiarizar com as novas ferramentas, controles e recursos disponíveis no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é utilizando-os. Este tutorial guia você através das etapas para criar um projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e adicionar pacotes e outros arquivos necessários ao projeto. Após a conclusão do projeto, você criará um grupo de implantação, copiará o grupo para o computador de destino e instalará os pacotes no computador de destino.  
+ A melhor maneira de se familiarizar com as novas ferramentas, controles e recursos disponíveis no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é usá-las. Este tutorial guia você através das etapas para criar um projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e adicionar pacotes e outros arquivos necessários ao projeto. Após a conclusão do projeto, você criará um grupo de implantação, copiará o grupo para o computador de destino e instalará os pacotes no computador de destino.  
   
 ## <a name="requirements"></a>Requisitos  
- Este tutorial destina-se a usuários que já estão familiarizados com as operações básicas do sistema de arquivos, mas que tiveram pouca exposição aos novos recursos disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para entender melhor básica [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] conceitos que serão usados neste tutorial, você talvez ache útil completar primeiro os seguintes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tutoriais: [Executar o SQL Server de importação e exportação do assistente](import-export-data/start-the-sql-server-import-and-export-wizard.md) e [Tutorial do SSIS: Criando um pacote ETL simples](../integration-services/ssis-how-to-create-an-etl-package.md).  
+ Este tutorial destina-se a usuários que já estão familiarizados com operações fundamentais do sistema de arquivos, mas que têm exposição limitada aos novos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]recursos disponíveis no. Para entender melhor os [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] conceitos básicos que você colocará para usar neste tutorial, talvez seja útil primeiro concluir os seguintes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tutoriais: [Execute o assistente de SQL Server importação e exportação](import-export-data/start-the-sql-server-import-and-export-wizard.md) e o tutorial do [SSIS: Criando um pacote ETL simples](../integration-services/ssis-how-to-create-an-etl-package.md).  
   
  **Computador de origem.** O computador no qual você criará o pacote de implantação deve ter os seguintes componentes instalados:  
   
--   O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com o banco de dados AdventureWorks. Para reforçar a segurança, os bancos de dados de exemplo não são instalados por padrão. Você pode baixar o banco de dados de exemplo [CodePlex](http://msftdbprodsamples.codeplex.com/releases/view/125550).  
+-   O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com o banco de dados AdventureWorks. Para reforçar a segurança, os bancos de dados de exemplo não são instalados por padrão. Você pode baixar o banco de dados de exemplo do [codeplex](https://msftdbprodsamples.codeplex.com/releases/view/125550).  
   
 -   Você deve ter permissão para criar e cancelar tabelas no AdventureWorks.  
   
@@ -68,22 +68,21 @@ ms.locfileid: "62899004"
   
 -   Você deve ter permissão para criar e remover tabelas do AdventureWorks e executar pacotes no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
--   Você deve ter lido e permissão de gravação na tabela sysssispackages no msdb[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] banco de dados do sistema.  
+-   Você deve ter permissão de leitura e gravação na tabela sysssispackages no banco de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dados do sistema msdb.  
   
  Se você planeja implantar pacotes no mesmo computador em que criará o grupo de implantação, esse computador deverá atender aos requisitos dos computadores de origem e de destino.  
   
  **Tempo estimado para concluir este tutorial:** 2 horas  
   
 ## <a name="lessons-in-this-tutorial"></a>Lições neste tutorial  
- [Lição 1: Preparando para criar o pacote de implantação](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
+ [Lição 1: preparando-se para criar o pacote de implantação](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
  Nesta lição, você irá se preparar para implantar uma solução ETL criando um novo projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e adicionando os pacotes e outros arquivos necessários ao projeto.  
   
- [Lição 2: Criando o pacote de implantação](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+ [Lição 2: criando o pacote de implantação](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
  Nesta lição, você compilará um utilitário de implantação e verificará se o grupo de implantação inclui os arquivos necessários.  
   
  [Lição 3: Instalando pacotes](../integration-services/lesson-3-install-ssis-package.md)  
  Nesta lição, você copiará o grupo de implantação para o computador de destino, instalará os pacotes e executará os pacotes.  
   
-![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
-  
+![Ícone de Integration Services (pequeno)](media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   

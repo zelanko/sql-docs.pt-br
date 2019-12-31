@@ -10,12 +10,12 @@ ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c9efb23d15b4f72375077f4bbf1450d8c47fddf4
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 80bd9c253adfcf1d1a677953fef183d9109534ef
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153842"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75231820"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>Lição 2. Criar uma política no contêiner e gerenciar uma chave SAS (assinatura de acesso compartilhado)
   Nesta lição, você aprenderá a criar uma política no contêiner do Blob e também gerará uma chave de SAS.  
@@ -24,7 +24,7 @@ ms.locfileid: "70153842"
   
  Você pode criar uma política e uma assinatura de acesso compartilhado usando um destes métodos:  
   
--   Operações da API REST do Azure: [Criar contêiner](https://msdn.microsoft.com/library/azure/dd179468.aspx), [definir ACL de contêiner](https://msdn.microsoft.com/library/azure/dd179391.aspx)e [obter ACL de contêiner](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
+-   Operações da API REST do Azure: [criar contêiner](https://msdn.microsoft.com/library/azure/dd179468.aspx), [definir ACL de contêiner](https://msdn.microsoft.com/library/azure/dd179391.aspx)e [obter ACL de contêiner](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
   
 -   [Método CloudBlobContainer. GetSharedAccessSignature](https://docs.microsoft.com/dotnet/api/microsoft.azure.storage.blob.cloudblobcontainer.getsharedaccesssignature) no SDK do Azure.  
   
@@ -40,10 +40,9 @@ ms.locfileid: "70153842"
   
     ```  
   
--   Uma ferramenta de terceiros do Azure Explorer, como [Gerenciador de armazenamento do Azure](http://azurestorageexplorer.codeplex.com/).  
+-   Uma ferramenta de terceiros do Azure Explorer, como [Gerenciador de armazenamento do Azure](https://azurestorageexplorer.codeplex.com/).  
   
  **Próxima lição:**  
   
- [Lição 3: Criar uma credencial de SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
-  
+ [Lição 3: criar uma credencial de SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   

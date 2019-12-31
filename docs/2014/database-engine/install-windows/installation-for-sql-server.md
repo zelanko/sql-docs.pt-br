@@ -16,16 +16,16 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e5a7e72b429789477a9ae1245be30b18965560ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96afef098b711c65e1bcb46d5f687c95061f2c94
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62775354"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228408"
 ---
 # <a name="installation-for-sql-server-2014"></a>Instalação para SQL Server 2014
- ## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[Baixe o SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
-  **Agradecemos aos [Scott Hanselman](http://www.hanselman.com/) para coletar todos os links do pacote do instalador em um único lugar!**
+ ## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[Baixar o SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+  **Obrigado a [Scott Hanselman](http://www.hanselman.com/) para coletar todos os links do pacote do instalador em um só lugar!**
   
   O Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma única árvore de recurso para instalar todos os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
@@ -45,11 +45,11 @@ ms.locfileid: "62775354"
   
 -   Componentes de conectividade  
   
- Você pode instalar cada componente individualmente ou selecionar uma combinação dos componentes listados acima. Para fazer a melhor escolha entre as edições e componentes disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [edições e componentes do SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) e [recursos compatíveis com as edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] está disponível em edições de 32 e 64 bits.
+ Você pode instalar cada componente individualmente ou selecionar uma combinação dos componentes listados acima. Para fazer a melhor escolha entre as edições e os componentes disponíveis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no, consulte [edições e componentes do SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) e [recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] está disponível em edições de 32 e 64 bits.
  
  **Experimente:**  
   
--   Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** para criar uma máquina Virtual com o SQL Server 2014 Service Pack 1 (SP1) já instalado. Para obter mais informações sobre o SQL Server 2014 (SP1), consulte [informações de versão do SQL Server 2014 Service Pack 1](https://support.microsoft.com/en-us/kb/3058865).  
+-   Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** para criar uma máquina virtual com o SQL Server 2014 Service Pack 1 (SP1) já instalado. Para obter mais informações sobre o SQL Server 2014 (SP1), consulte [informações de versão do SQL Server 2014 Service Pack 1](https://support.microsoft.com/kb/3058865).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  Independentemente de você usar o Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o prompt de comando para instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a Instalação envolve as seguintes etapas:  
@@ -72,24 +72,24 @@ ms.locfileid: "62775354"
  [Desinstalar o SQL Server 2014](../../sql-server/install/uninstall-sql-server.md)  
  Descreve procedimentos para desinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
- [Instalação do cluster de failover do SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
+ [SQL Server instalação do cluster de failover](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
  Esta seção da documentação da Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explica como instalar e configurar o cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- [Instalar os recursos de BI do SQL Server 2014](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recursos que são parte da plataforma Microsoft BI e que incluem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e vários aplicativos cliente usados para criação ou funcionamento com dados analíticos. Esta seção da documentação da Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explica como instalar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ [Install SQL Server 2014 BI Features](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recursos que são parte da plataforma Microsoft BI e que incluem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e vários aplicativos cliente usados para criação ou funcionamento com dados analíticos. Esta seção da documentação da Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explica como instalar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Tópicos de instruções sobre a instalação](../../sql-server/install/installation-how-to-topics.md)  
  Fornece links para tópicos de procedimentos para instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do assistente de instalação, no prompt de comando, usando arquivos de configuração e o SysPrep.  
   
- [Instalar recursos de BI do SQL Server com o SharePoint &#40;PowerPivot e Reporting Services&#41;](../../sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
+ [Instalar SQL Server recursos do BI com o SharePoint &#40;PowerPivot e Reporting Services&#41;](../../sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
  Esta seção explica como instalar recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um ambiente do SharePoint. Ela identifica quais recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão disponíveis para uma versão e uma edição específicas do SharePoint. Ela também inclui procedimentos de instalação de PowerPivot para SharePoint e de Reporting Services no modo do SharePoint.  
   
- [Instalando exemplos do SQL Server e bancos de dados de exemplo](http://sqlserversamples.codeplex.com/)  
+ [Instalando exemplos e bancos de dados de exemplo do SQL Server](https://sqlserversamples.codeplex.com/)  
  Descreve como instalar e configurar os exemplos e bancos de dados de exemplo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
- [Novidades na instalação do SQL Server](../../sql-server/install/what-s-new-in-sql-server-installation.md)   
+## <a name="see-also"></a>Consulte Também  
+ [O que há de novo na instalação do SQL Server](../../sql-server/install/what-s-new-in-sql-server-installation.md)   
  [Requisitos de hardware e software para a instalação do SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
-  
   

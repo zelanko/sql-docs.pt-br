@@ -1,5 +1,5 @@
 ---
-title: 'Lição 6: Migrar um banco de dados de um computador de origem local para um computador de destino no Azure | Microsoft Docs'
+title: 'Lição 6: migrar um banco de dados de um computador de origem local para um computador de destino no Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3c91512bcc254a1ff778606726d54a9cdff7f67f
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 689c3a734a5b4eb424511da52032dc348b5757ea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70175568"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75231803"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Lição 6: Migrar um banco de dados de um computador de origem local para um computador de destino no Azure
-  Esta lição pressupõe que você já tem outra SQL Server, que pode residir em outro computador local ou em uma máquina virtual no Azure. Para obter informações sobre como criar uma máquina virtual SQL Server no Azure, consulte [Provisionando uma máquina virtual SQL Server no Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Depois de provisionar uma máquina virtual SQL Server no Azure, verifique se você pode se conectar a uma instância do SQL Server nessa máquina virtual por meio de SQL Server Management Studio em outro computador.  
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Lição 6: migrar um banco de dados de um computador de origem local para um computador de destino no Azure
+  Esta lição pressupõe que você já tem outra SQL Server, que pode residir em outro computador local ou em uma máquina virtual no Azure. Para obter informações sobre como criar uma máquina virtual SQL Server no Azure, consulte [Provisionando uma máquina virtual SQL Server no Azure](https://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Depois de provisionar uma máquina virtual SQL Server no Azure, verifique se você pode se conectar a uma instância do SQL Server nessa máquina virtual por meio de SQL Server Management Studio em outro computador.  
   
  Esta lição supõe também que você já concluiu as seguintes etapas:  
   
@@ -48,7 +48,7 @@ ms.locfileid: "70175568"
   
         1.  Conecte-se ao computador de destino por meio do SQL Server Management Studio no computador de origem.  Ou, inicie o SQL Server Management Studio no computador de destino diretamente.  
   
-        2.  Na barra de ferramentas padrão, clique em **nova consulta**.  
+        2.  Na barra de ferramentas Padrão , clique em **Nova Consulta**.  
   
         3.  Copie e cole o exemplo a seguir na janela de consulta, e modifique conforme necessário. A instrução a seguir cria uma credencial SQL Server para armazenar o certificado de acesso compartilhado do seu contêiner de armazenamento.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "70175568"
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.  
   
-2.  Clique com o botão direito do mouse em **Bancos de Dados**e clique em **Novo Banco de Dados**. Em seguida, clique com o botão direito do mouse em TestDB1. Clique em Tarefas e, em seguida, clique em Desanexar. Na janela da caixa de diálogo Desanexar, marque Descartar Conexões. Clique em **OK**.  
+2.  Clique com o botão direito do mouse em **bancos**de **dados**e clique em novo. Em seguida, clique com o botão direito do mouse em TestDB1. Clique em Tarefas e, em seguida, clique em Desanexar. Na janela da caixa de diálogo Desanexar, marque Descartar Conexões. Clique em **OK**.  
   
 3.  Conecte-se ao computador de destino, que tem o SQL Server CTP2 2014 ou posterior. Para preparar seu computador de destino, é necessário criar uma credencial do SQL Server no computador de destino que aponte para o mesmo contêiner em que você colocou TestDB1. Se você pretende anexar novamente no mesmo computador, não será necessário criar outra credencial.  
   
@@ -146,6 +146,5 @@ ms.locfileid: "70175568"
   
  **Próxima lição:**  
   
- [Lição 7: Mover seus arquivos de dados para o armazenamento do Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
-  
+ [Lição 7: mover seus arquivos de dados para o armazenamento do Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   

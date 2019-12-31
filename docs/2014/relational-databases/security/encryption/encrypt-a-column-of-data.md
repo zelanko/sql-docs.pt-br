@@ -10,15 +10,15 @@ helpviewer_keywords:
 - encryption [SQL Server], columns
 - cryptography [SQL Server], columns
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: c6615baf7d9a5bf228b75a0e8cf520f86bf2109c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd0b5824abfc36923909ce37866b221c0bc830d5
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011661"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957194"
 ---
 # <a name="encrypt-a-column-of-data"></a>Criptografar uma coluna de dados
   Este tópico descreve como criptografar uma coluna de dados usando a criptografia simétrica no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -29,13 +29,13 @@ ms.locfileid: "63011661"
   
      [Segurança](#Security)  
   
--   [Para criptografar uma coluna de dados usando o Transact-SQL](#TsqlProcedure)  
+-   [Para criptografar uma coluna de dados, usando Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="BeforeYouBegin"></a>Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="Security"></a>Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="Permissions"></a>Permissões  
  As permissões a seguir são necessárias para executar as etapas abaixo:  
   
 -   Permissão CONTROL no banco de dados.  
@@ -46,15 +46,15 @@ ms.locfileid: "63011661"
   
 -   Alguma permissão na chave, e não deve ter a permissão VIEW DEFINITION negada.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="TsqlProcedure"></a>Usando o Transact-SQL  
   
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Para criptografar uma coluna de dados usando uma criptografia simétrica simples  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2.  Na barra Padrão, clique em **Nova Consulta**.  
+2.  Na barra Padrão , clique em **Nova Consulta**.  
   
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **executar**.  
   
     ```  
     USE AdventureWorks2012;  
@@ -115,9 +115,9 @@ ms.locfileid: "63011661"
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2.  Na barra Padrão, clique em **Nova Consulta**.  
+2.  Na barra Padrão , clique em **Nova Consulta**.  
   
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **executar**.  
   
     ```  
     USE AdventureWorks2012;  
@@ -174,14 +174,14 @@ ms.locfileid: "63011661"
     GO  
     ```  
   
- Para obter mais informações, consulte o seguinte:  
+ Para saber mais, consulte o seguinte:   
   
--   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [CRIAR certificado &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
+-   [CRIAR chave simétrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
   
 -   [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
   
--   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
+-   [ABRIR chave simétrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
   
   
