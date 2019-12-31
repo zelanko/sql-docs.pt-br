@@ -1,6 +1,5 @@
 ---
-title: Criar um domínio | Microsoft Docs
-ms.custom: ''
+title: Criar um domínio
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 83de355138f694c6c0414362f41676012817d497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: d39f86d2efa18c385f2aafd8b3e4cb7de9975b06
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992323"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252257"
 ---
 # <a name="create-a-domain"></a>Criar um domínio
 
@@ -27,19 +26,19 @@ ms.locfileid: "67992323"
   
  Há duas maneiras de criar um novo domínio. A primeira é durante a etapa Mapear da atividade de descoberta da base de dados de conhecimento, quando você está no processo de analisar um exemplo de dados para adicionar conhecimento a uma base de dados de conhecimento nova ou existente. A segunda é durante a atividade de gerenciamento de domínio, quando, em vez de alterar um domínio existente, você cria um novo domínio.  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="BeforeYouBegin"></a>Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="Prerequisites"></a>Pré-requisitos  
  Para criar um domínio, você precisa ter criado e aberto uma base de dados de conhecimento.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="Security"></a>Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="Permissions"></a>Permissões  
  Você deve ter a função dqs_kb_editor ou o dqs_administrator no banco de dados DQS_MAIN para criar um domínio.  
   
-##  <a name="Discovery"></a> Criar um domínio na atividade Descoberta da Base de Dados de Conhecimento  
+##  <a name="Discovery"></a>Criar um domínio na atividade de descoberta da base de dados de conhecimento  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , clique em **Abrir base de dados de conhecimento** e selecione uma base de dados de conhecimento ou clique em **Nova base de dados de conhecimento** e insira propriedades para a nova base de dados de conhecimento.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "67992323"
   
 5.  Na tabela **Mapeamentos** , selecione uma coluna de origem na lista suspensa da coluna **Coluna de Origem** de uma linha vazia. Se não existir um domínio correspondente, clique no ícone **Criar um Domínio** .  
   
-##  <a name="DomainManagement"></a> Criar um domínio na atividade Gerenciamento de Domínio  
+##  <a name="DomainManagement"></a>Criar um domínio na atividade de gerenciamento de domínio  
   
 1.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , clique em **Abrir base de dados de conhecimento** e selecione uma base de dados de conhecimento ou clique em **Nova base de dados de conhecimento** e insira propriedades para a nova base de dados de conhecimento.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "67992323"
   
 3.  Na página **Gerenciamento de Domínio** , clique no ícone **Criar um Domínio** acima da lista de domínios.  
   
-##  <a name="Properties"></a> Definir propriedades do domínio  
+##  <a name="Properties"></a>Definir propriedades de domínio  
   
 1.  Na caixa de diálogo **Criar Domínio** , insira um nome que seja exclusivo da base de dados de conhecimento e uma descrição de até 256 caracteres.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "67992323"
   
 10. Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a> Acompanhamento: Depois de criar um domínio  
+##  <a name="FollowUp"></a>Acompanhamento: depois de criar um domínio  
  Depois que você criar um domínio, poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
   

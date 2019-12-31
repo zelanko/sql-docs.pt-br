@@ -19,18 +19,19 @@ helpviewer_keywords:
 ms.assetid: badc6d36-8a87-42b5-b28c-9c4f5ded8552
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a427a9bb28a472c7450b3bbcac3a1a3b10161c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: 5f81904fd930e22857bfa51584c2eefda813e7e7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005560"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253540"
 ---
-# <a name="srvparamtype-extended-stored-procedure-api"></a>srv_paramtype (API de procedimento armazenado estendido)
+# <a name="srv_paramtype-extended-stored-procedure-api"></a>srv_paramtype (API de procedimento armazenado estendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
   
  Retorna o tipo de dados de um parâmetro de chamada de procedimento armazenado remoto.  
   
@@ -51,15 +52,15 @@ n
  *srvproc*  
  É um ponteiro para a estrutura SRV_PROC que identifica uma conexão de cliente específica (nesse caso, o identificador que recebeu a chamada do procedimento armazenado remoto). A estrutura contém informações que a biblioteca de APIs de procedimento armazenado estendido usa para gerenciar a comunicação e os dados entre o aplicativo e o cliente.  
   
- *n*  
+ *p*  
  Indica o número do parâmetro. O primeiro parâmetro é 1.  
   
 ## <a name="returns"></a>Retorna  
  Um valor de token para o tipo de dados do parâmetro. Para obter informações sobre tipos de dados, consulte [Tipos de dados &#40;API de Procedimento Armazenado Estendido&#41;](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md). Se não houver *n*-ésimo parâmetro nem procedimento armazenado remoto, o valor retornado será -1.  
   
- Essa função retornará os valores a seguir se o parâmetro for um dos tipos de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+ Essa função retornará os valores a seguir, se o parâmetro for um dos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tipos de dados.  
   
-|Novos tipos de dados|Valor retornado|  
+|Novos tipos de dados|Retornar valor|  
 |--------------------|------------------|  
 |**BITN**|SRVBIT|  
 |**BIGVARCHAR**|VARCHAR|  
@@ -70,14 +71,14 @@ n
 |**NVARCHAR**|VARCHAR|  
 |**NTEXT**|-1|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando uma chamada de procedimento armazenado remoto é feita com parâmetros, os parâmetros podem ser passados pelo nome ou pela posição (sem-nome). Se a chamada de procedimento armazenado remoto for feita com alguns parâmetros transmitidos pelo nome e outros pela posição, ocorrerá um erro. O manipulador SRV_RPC ainda O manipulador SRV_RPC ainda é chamado, mas aparece como se não houvesse parâmetros e **srv_rpcparams** retorna 0.  
   
 > [!IMPORTANT]  
->  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](https://www.microsoft.com/en-us/msrc?rtc=1).  
+>  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](https://www.microsoft.com/msrc?rtc=1).  
   
 ## <a name="see-also"></a>Consulte Também  
- [srv_paraminfo &#40;API de Procedimento Armazenado Estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-paraminfo-extended-stored-procedure-api.md)   
- [srv_rpcparams &#40;API de Procedimento Armazenado Estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
+ [srv_paraminfo &#40;API de procedimento armazenado estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-paraminfo-extended-stored-procedure-api.md)   
+ [srv_rpcparams &#40;API de procedimento armazenado estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: Criando objetos de banco de dados com integração Common Language Runtime (CLR) | Microsoft Docs
-ms.custom: ''
+title: Objetos de banco de dados de compilação CLR (Common Language Runtime)
+description: Crie objetos de banco de dados usando a integração de SQL Server com o CLR (.NET Framework Common Language Runtime).
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -16,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7037105391425632dba0af3646635305e510f207
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 902685dcf1f8c743453285820faa67bb70830614
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138673"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258352"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Criando objetos de banco de dados com integração CLR (Common Language Runtime)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Você pode compilar objetos de banco de dados que usam a integração do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o CLR do .NET Framework. Código gerenciado executado dentro de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é conhecido como "rotina CLR". Essas rotinas incluem:  
+  Você pode compilar objetos de banco de dados que usam a integração do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o CLR do .NET Framework. O código gerenciado executado dentro do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é chamado de "rotina do CLR". Essas rotinas incluem:  
   
 -   Funções definidas pelo usuário com valor escalar (UDFs escalares)  
   
@@ -50,7 +51,7 @@ ms.locfileid: "68138673"
  [Bibliotecas do .NET Framework compatíveis](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)  
  Fornece informações sobre as bibliotecas do .NET Framework suportadas pela integração CLR.  
   
- [Restrições do modelo de programação da integração CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)  
+ [Restrições do modelo de programação da Integração CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)  
  Fornece informações sobre restrições de modelo de programação de integração CLR.  
   
  [Tipos de dados do SQL Server no .NET Framework](../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
@@ -59,10 +60,10 @@ ms.locfileid: "68138673"
  [Visão geral dos atributos personalizados da integração CLR](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)  
  Fornece informações sobre atributos personalizados de integração CLR.  
   
- [Funções do CLR definidas pelo usuário](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
+ [Funções CLR definidas pelo usuário](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
  Descreve como implementar e usar os vários tipos de funções CLR: com valor de tabela, escalares e funções de agregação definida pelo usuário.  
   
- [Tipos definidos pelo usuário do CLR](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Tipos CLR definidos pelo usuário](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  Descreve como implementar e usar tipos definidos pelo usuário CLR.  
   
  [Procedimentos armazenados CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
@@ -71,7 +72,7 @@ ms.locfileid: "68138673"
  [Gatilhos CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
  Descreve como implementar e usar gatilhos CLR.  
   
-## <a name="see-also"></a>Consulte também  
- [Common Language Runtime &#40;CLR&#41; visão geral da integração](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Visão geral da integração do CLR&#41; &#40;Common Language Runtime](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Determinando as características de um conjunto de resultados (ODBC) | Microsoft Docs
+title: Características de um conjunto de resultados (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,19 +19,19 @@ ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1319bf3f4004b9fcb398f71099ac738086692b2a
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: e580cd7bcb4b84f72d7523cdc57a6424861a589e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73779257"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258510"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>Determinando as características de um conjunto de resultados (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Metadados são dados que descrevem outros dados. Por exemplo, os metadados de conjunto de resultados descrevem as características de um conjunto de resultados, como o número de colunas no conjunto de resultados, os tipos de dados dessas colunas, seus nomes, precisão e nulidade.  
   
- ODBC fornece metadados a aplicativos por meio de suas funções de API de catálogo. O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client implementa muitas das funções do catálogo de API do ODBC como chamadas para um procedimento de catálogo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondente.  
+ ODBC fornece metadados a aplicativos por meio de suas funções de API de catálogo. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client implementa muitas das funções do catálogo de API do ODBC como chamadas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um procedimento de catálogo correspondente.  
   
  Os aplicativos exigem metadados para a maioria das operações de conjunto de resultados. Por exemplo, o aplicativo usa o tipo de dados de uma coluna para determinar que tipo de variável associar a essa coluna. Usa o comprimento de byte de uma coluna de caractere para determinar a quantidade de espaço necessária para exibir dados dessa coluna. Como um aplicativo determina os metadados para uma coluna depende do tipo do aplicativo.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73779257"
   
  Se um aplicativo utilizar um conjunto específico de metadados mais de uma vez, ele provavelmente será beneficiado pelo armazenamento em cache das informações em variáveis particulares quando for obtido pela primeira vez. Isto impede chamadas em atraso para as funções de catálogo ODBC das mesmas informações, o que força o driver a fazer viagens de ida e volta ao servidor.  
   
-## <a name="see-also"></a>Consulte também  
- [Processando &#40;resultados ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Processando resultados &#40;&#41;ODBC](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

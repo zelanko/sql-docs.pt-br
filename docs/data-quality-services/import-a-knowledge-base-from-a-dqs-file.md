@@ -1,6 +1,5 @@
 ---
-title: Importar uma base de dados de conhecimento de um arquivo .dqs | Microsoft Docs
-ms.custom: ''
+title: Importar uma base de dados de conhecimento de um arquivo .dqs
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 807c3f30a23b9629cf8dcbc68555a66176654c2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: cd001817ccb5906905db1b0623d2491dd0463c07
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935289"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251570"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>Importar uma base de dados de conhecimento de um arquivo .dqs
 
@@ -29,19 +28,19 @@ ms.locfileid: "67935289"
   
  Quando você importa uma base de dados de conhecimento, pode usar o mesmo nome, a menos que o nome da base de dados de conhecimento já exista no aplicativo cliente; nesse caso, você deverá renomeá-la.  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="BeforeYouBegin"></a>Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="Prerequisites"></a>Pré-requisitos  
  Para importar uma base de dados de conhecimento de um arquivo .dqs, é necessário já ter exportado a base de dados de conhecimento para o arquivo .dqs.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="Security"></a>Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="Permissions"></a>Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para importar uma base de dados de conhecimento de um arquivo de dados .dqs.  
   
-##  <a name="Import"></a> Importar uma base de dados de conhecimento de um arquivo .dqs  
+##  <a name="Import"></a>Importar uma base de dados de conhecimento de um arquivo. DQS  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , clique em **Nova base de dados de conhecimento**.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "67935289"
   
 13. Na home page do Data Quality Services, verifique se a base de dados de conhecimento está listada em **Bases de dados de conhecimento recentes**.  
   
-##  <a name="FollowUp"></a> Acompanhamento: após importar uma base de dados de conhecimento de um arquivo .dqs  
+##  <a name="FollowUp"></a>Acompanhamento: depois de importar uma base de dados de conhecimento de um arquivo. DQS  
  Após importar uma base de dados de conhecimento de um arquivo .dqs, você poderá adicionar o conhecimento à base de dados de conhecimento ou usar a base de dados de conhecimento em um projeto de limpeza ou de correspondência, de acordo com o conteúdo da base de dados de conhecimento. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md), [Gerenciando um domínio de composição](../data-quality-services/managing-a-composite-domain.md), [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md), [Limpeza de dados](../data-quality-services/data-cleansing.md) ou [Correspondência de dados](../data-quality-services/data-matching.md).  
   
   

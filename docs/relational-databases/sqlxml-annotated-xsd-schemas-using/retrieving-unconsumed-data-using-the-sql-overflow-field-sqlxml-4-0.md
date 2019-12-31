@@ -1,6 +1,5 @@
 ---
-title: 'Recuperando dados não consumidos usando o campo SQL: overflow-field (SQLXML 4,0) | Microsoft Docs'
-ms.custom: ''
+title: 'Obter dados não consumidos com SQL: overflow-field (SQLXML)'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,17 +16,18 @@ ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6714940fe14e2f7a1182a24c37f0d7c58b4d3e72
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 35abd64e0c7e492f114164447ec3e258242d3765
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907165"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257401"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Recuperando dados não consumidos usando sql:overflow-field (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Quando forem inseridos registros em um banco de dados a partir de um documento XML usando a função OPENXML do [!INCLUDE[tsql](../../includes/tsql-md.md)], todos os dados não consumidos no documento XML de origem poderão ser armazenados em uma coluna. Ao recuperar dados de um banco de dado usando esquemas anotados, você pode especificar o atributo **SQL: overflow-field** para identificar a coluna na tabela na qual os dados de estouro são armazenados. O atributo **SQL: overflow-field** pode ser especificado no **elemento\<** .  
+  Quando forem inseridos registros em um banco de dados a partir de um documento XML usando a função OPENXML do [!INCLUDE[tsql](../../includes/tsql-md.md)], todos os dados não consumidos no documento XML de origem poderão ser armazenados em uma coluna. Ao recuperar dados de um banco de dado usando esquemas anotados, você pode especificar o atributo **SQL: overflow-field** para identificar a coluna na tabela na qual os dados de estouro são armazenados. O atributo **SQL: overflow-field** pode ser especificado no ** \<elemento>**.  
   
  Em seguida, esses dados são recuperados destas formas:  
   
@@ -38,7 +38,7 @@ ms.locfileid: "72907165"
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqloverflow-field-for-an-element"></a>A. Especificando sql:overflow-field para um elemento  
+### <a name="a-specifying-sqloverflow-field-for-an-element"></a>R. Especificando sql:overflow-field para um elemento  
  Este exemplo presume que o seguinte script foi executado de forma que existe uma tabela chamada Customers2 no banco de dados tempdb:  
   
 ```  

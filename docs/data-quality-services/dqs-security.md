@@ -1,6 +1,5 @@
 ---
-title: Segurança do DQS | Microsoft Docs
-ms.custom: ''
+title: Segurança do DQS
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: c732645c526b2179265a6669055d005e944ee114
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 33d8ecce0aaba4826e20783bbe63aee44f63b4b1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992098"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251636"
 ---
 # <a name="dqs-security"></a>Segurança do DQS
 
@@ -34,10 +33,10 @@ ms.locfileid: "67992098"
   
 -   O **DQS KB Operador** (função dqs_kb_operator) pode editar e executar um projeto. Eles não podem executar qualquer tipo de gerenciamento de conhecimento; eles não podem criar ou alterar uma base de dados de conhecimento. Eles podem consultar os dados de monitoramento de atividades, mas não podem finalizar uma atividade ou executar tarefas administrativas.  
   
-## <a name="user-management"></a>Gerenciamento de usuário  
+## <a name="user-management"></a>Gerenciamento de Usuários  
  O DBA (administrador de banco de dados) cria os usuários DQS e associa-os a funções DQS no SQL Server Management Studio. O DBA gerencia suas permissões, adicionando Logons do SQL como usuários do banco de dados DQS_MAIN e associando cada usuário a uma das funções do DQS. Cada função recebe permissões a um conjunto de procedimentos armazenados no banco de dados DQS_MAIN. As três funções DQS não estão disponíveis para os bancos de dados DQS_PROJECTS e DQS_STAGING_DATA.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

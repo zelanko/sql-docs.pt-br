@@ -1,6 +1,5 @@
 ---
-title: Em massa de considerações de segurança de carga (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Considerações de segurança de carregamento em massa (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0087a8846935905574a8666186de5e025a16494e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 817c8c4d0ff2a140033e99879c0720a63f81e5f4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027002"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252533"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>Considerações sobre segurança de carregamento em massa (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Estas são as diretrizes de segurança para o uso do carregamento em massa XML:  
   
--   Quando você especifica que o carregamento em massa de operação deve ser executado como uma transação, use o **TempFilePath** propriedade para especificar uma pasta na qual criar os arquivos temporários.  
+-   Quando você especifica que a operação de carregamento em massa deve ser executada como uma transação, use a propriedade **TempFilePath** para especificar uma pasta na qual os arquivos temporários serão criados.  
   
      O processo de carregamento em massa cria esses arquivos temporários com as seguintes permissões:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68027002"
   
 -   Caso o usuário defina um arquivo de log de erros do SQLXML no qual gravar os erros, sempre que o carregamento em massa é executado, o arquivo é substituído com dados do processo de carregamento em massa mais recente.  
   
-## <a name="see-also"></a>Consulte também  
- [Executar o carregamento em massa de dados XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Executando o carregamento em massa de dados XML &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

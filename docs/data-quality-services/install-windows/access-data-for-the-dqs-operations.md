@@ -1,6 +1,5 @@
 ---
-title: Acessar dados para as operações do DQS | Microsoft Docs
-ms.custom: ''
+title: Acessar dados para as operações do DQS
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 846eec4cb8ac678b5636bc436acce62dc7e2ecf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 2eae5415e6f6bb93501dfc7989fe180e581ae387
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935233"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254788"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Acessar dados para as operações do DQS
 
@@ -33,7 +32,7 @@ ms.locfileid: "67935233"
   
 -   Sua conta de usuário do Windows deve ser um membro da função de servidor fixa apropriada (como securityadmin, serveradmin ou sysadmin) na instância do mecanismo de banco de dados para conceder/modificar o acesso ao logon do SQL em bancos de dados.  
   
-### <a name="to-grant-readwrite-access-to-a-user-on-the-dqsstagingdata-database"></a>Para conceder acesso de leitura/gravação a um Usuário no banco de dados DQS_STAGING_DATA  
+### <a name="to-grant-readwrite-access-to-a-user-on-the-dqs_staging_data-database"></a>Para conceder acesso de leitura/gravação a um Usuário no banco de dados DQS_STAGING_DATA  
   
 1.  Inicie o Microsoft SQL Server Management Studio.  
   
@@ -43,11 +42,11 @@ ms.locfileid: "67935233"
   
 4.  Na caixa de diálogo **Propriedades de Logon** , clique na página **Mapeamento de Usuário** no painel esquerdo.  
   
-5.  No painel direito, marque a caixa de seleção na coluna **Mapa** do banco de dados **DQS_STAGING_DATA** e selecione as seguintes funções no painel **Associação à função de banco de dados para: DQS_STAGING_DATA**:  
+5.  No painel direito, marque a caixa de seleção na coluna **Mapa** do banco de dados **DQS_STAGING_DATA** e selecione as seguintes funções no painel **Associação à função de banco de dados para: DQS_STAGING_DATA** :  
   
     -   **db_datareader**: ler dados de tabelas/exibições.  
   
-    -   **db_datawriter**: adicionar, excluir ou alterar dados em tabelas.  
+    -   **db_datawriter**: Adicionar, excluir ou alterar dados em tabelas.  
   
     -   **db_ddladmin**: criar, modificar ou excluir tabelas/exibições.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "67935233"
 ## <a name="next-steps"></a>Próximas etapas  
  Tente realizar operações do DQS que acessam o banco de dados como fonte de dados para a operação DQS e, em seguida, exportam os dados processados para o banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instalar o Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)  
   
   

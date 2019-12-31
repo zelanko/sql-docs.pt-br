@@ -1,6 +1,7 @@
 ---
-title: Extensões específicas do SQL Server em processo para o ADO.NET | Microsoft Docs
-ms.custom: ''
+title: SQL Server extensões em processo para ADO.NET
+description: Links para artigos sobre as quatro principais extensões funcionais para ADO.NET que são especificamente para uso em processo.
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 781b812e-eb14-472a-85fa-aa4cdb929bee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b1ed0cf58c34506ce12dd04bf529a80d44a03d2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3c1729d216a1456551da3699c286385694e558a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951684"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258175"
 ---
 # <a name="sql-server-in-process-specific-extensions-to-adonet"></a>Extensões específicas em processo do SQL Server para o ADO.NET
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

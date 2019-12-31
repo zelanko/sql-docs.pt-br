@@ -1,6 +1,5 @@
 ---
-title: Limpeza de dados | Microsoft Docs
-ms.custom: ''
+title: Data Cleansing
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 18bda14c90441375d59f6057f1cdfedac85bdaa0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 46ca0fe453548cab780d1e2b32c6a8d98a32de11
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935443"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251771"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
@@ -37,9 +36,9 @@ ms.locfileid: "67935443"
   
  A ilustração seguinte mostra como a limpeza de dados é feita no DQS:  
   
- ![Processo de limpeza de dados no DQS](../data-quality-services/media/dqs-cleansingprocess.gif "Data Cleansing Process in DQS")  
+ ![Processo de Limpeza de Dados do DQS](../data-quality-services/media/dqs-cleansingprocess.gif "Processo de Limpeza de Dados do DQS")  
   
-##  <a name="ComputerAssisted"></a> Limpeza auxiliada por computador  
+##  <a name="ComputerAssisted"></a>Limpeza auxiliada por computador  
  O processo de limpeza de dados do DQS aplica a base de conhecimento aos dados a serem limpos e propõe alterações nos dados. O administrador de dados tem acesso a cada alteração proposta, o que permite que ele avalie e corrija as alterações. Para executar a limpeza de dados, o administrador de dados procede da seguinte maneira:  
   
 1.  Crie um projeto de qualidade de dados, selecione uma base de dados de conhecimento na qual você deseja analisar e limpar seus dados de origem e selecione a atividade **Limpeza** . Vários projetos de qualidade de dados podem usar a mesma base de dados de conhecimento.  
@@ -63,18 +62,18 @@ ms.locfileid: "67935443"
   
  Qualquer valor com um nível de confiança debaixo do valor de limite de sugestão automática é deixado como está pelo DQS, a menos que o administrador de dados especifique uma alteração.  
   
-##  <a name="Interactive"></a> Limpeza interativa  
+##  <a name="Interactive"></a>Limpeza interativa  
  Com base no processo de limpeza auxiliada por computador, o DQS fornece ao administrador de dados as informações necessárias para que ele tome uma decisão sobre a alteração dos dados. O DQS categoriza os dados sob estas cinco guias:  
   
--   **Sugerido**: valores para os quais o DQS encontrou sugestões com um nível de confiança superior ao valor de *limite de sugestão automática*, mas inferior ao valor do *limite de correção automática*. Você deve revisar esses valores e aprovar ou rejeitar conforme apropriado.  
+-   **Sugerido**: valores para os quais o DQS encontrou sugestões que têm um nível de confiança maior que o valor de *limite de sugestão automática* , mas inferior ao valor de *limite de correção automática* . Você deve revisar esses valores e aprovar ou rejeitar conforme apropriado.  
   
--   **Novo**: valores válidos para os quais o DQS não tem informações suficientes (sugestão) e, portanto, não podem ser mapeados para nenhuma outra guia. Posteriormente, essa guia também conterá valores que tenham um nível de confiança inferior ao valor de *limite de sugestão automática* , porém alto o suficiente para ser marcado como válido.  
+-   **Novo**: valores válidos para os quais o DQS não tem informações suficientes (sugestão) e, portanto, não podem ser mapeados para nenhuma outra guia. Além disso, essa guia também contém valores que têm nível de confiança menor que o valor de *limite de sugestão automática* , mas alta o suficiente para ser marcado como válido.  
   
--   **Inválido**: valores que foram marcados como inválidos no domínio na base de dados de conhecimento ou os valores que falharam em uma regra de domínio ou em dados de referência. Esta guia também conterá valores rejeitados pelo usuário em quaisquer das outras quatro guias durante o processo de limpeza interativo.  
+-   **Inválido**: valores que foram marcados como inválidos no domínio na base de dados de conhecimento ou valores que falharam em uma regra de domínio ou dados de referência. Esta guia também conterá valores rejeitados pelo usuário em quaisquer das outras quatro guias durante o processo de limpeza interativo.  
   
--   **Corrigido**: valores corrigidos pelo DQS durante o processo de limpeza automatizada uma vez que o DQS localizou uma correção para o valor com um nível de confiança acima do valor do *limite de correção automática*. Esta guia também conterá valores para os quais o usuário especificou um valor correto na coluna **Corrigir para** durante a limpeza interativa e então aprovou clicando no botão de opção na coluna **Aprovar** em quaisquer das outras quatro guias.  
+-   **Corrigido**: os valores que são corrigidos pelo DQS durante o processo de limpeza automatizado como o DQS encontraram uma correção para o valor com o nível de confiança acima do valor de *limite de correção automática* . Esta guia também conterá valores para os quais o usuário especificou um valor correto na coluna **Corrigir para** durante a limpeza interativa e então aprovou clicando no botão de opção na coluna **Aprovar** em quaisquer das outras quatro guias.  
   
--   **Correto**: valores avaliados como corretos. Por exemplo, o valor correspondeu a um valor de domínio. Se preciso for, você poderá anular a limpeza do DQS ao rejeitar valores desta guia ou especificando uma palavra alternativa na coluna **Corrigir para** e depois clicando no botão de opção da coluna **Aceitar** . Essa guia também contém os valores que foram aprovados pelo usuário durante a limpeza interativa clicando no botão de opção na coluna **Aprovar** nas guias **Novo** ou **Inválido** .  
+-   **Correto**: valores que foram encontrados corretos. Por exemplo, o valor correspondeu a um valor de domínio. Se preciso for, você poderá anular a limpeza do DQS ao rejeitar valores desta guia ou especificando uma palavra alternativa na coluna **Corrigir para** e depois clicando no botão de opção da coluna **Aceitar** . Essa guia também contém os valores que foram aprovados pelo usuário durante a limpeza interativa clicando no botão de opção na coluna **Aprovar** nas guias **Novo** ou **Inválido** .  
   
 > [!NOTE]  
 >  Nas guias **Sugerido**, **Corrigido**e **Correto** , o DQS exibe o valor principal para um domínio, se aplicável, no coluna **Corrigir para** em relação ao respectivo valor de domínio.  
@@ -87,27 +86,27 @@ ms.locfileid: "67935443"
   
  A ilustração a seguir mostra como a limpeza de dados é feita usando o aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] :  
   
- ![Limpeza de dados no Data Quality Client](../data-quality-services/media/dqs-cleansingindqsclient.gif "Data Cleansing in Data Quality Client")  
+ ![Limpeza de Dados no Cliente Data Quality](../data-quality-services/media/dqs-cleansingindqsclient.gif "Limpeza de Dados no Cliente Data Quality")  
   
-##  <a name="Leading"></a> Correção de valor principal  
+##  <a name="Leading"></a>Correção de valor principal  
  A correção do valor principal se aplica a valores de domínio que possuem sinônimos, e o usuário deseja usar um dos valores de sinônimo como o valor principal, em vez de outros para a representação consistente do valor. Por exemplo, "Rio de Janeiro", "RJ" e "cidade maravilhosa" são sinônimos e o usuário deseja usar "Rio de Janeiro" como o valor principal em vez de "RJ" e "Cidade Maravilhosa". O DQS oferece suporte à correção do valor principal durante o processo de limpeza para ajudar você a padronizar seus dados. A correção de valor principal só será feita se o domínio tiver sido habilitado para o mesmo ao ser criado. Por padrão, todos os domínios são habilitados para a correção de valor principal, a menos que você tenha desmarcado a caixa de seleção **Usar Valores Principais** durante a criação de um domínio. Para obter mais informações sobre essa caixa de seleção, consulte [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
   
-##  <a name="Standardize"></a> Padronizar dados limpos  
+##  <a name="Standardize"></a>Padronizar dados limpos  
  É possível optar por exportar os dados limpos no formato padronizado com base no formato de saída definido para domínios. Durante a criação de um domínio, você poderá selecionar a formatação que será aplicada quando forem gerados os valores de dados no domínio. Para obter mais informações sobre como especificar formatos de saída de um domínio, consulte a lista **Saída de Formato para** em [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
   
  Durante a exportação dos dados limpos na página **Exportar** no assistente de projeto de qualidade de dados de limpeza, especifique se deseja que os dados limpos sejam exportados no formato padronizado marcando a caixa de seleção **Padronizar Saída** . Por padrão, os dados limpos são exportados no formato unificado, ou seja, a caixa de seleção está marcada. Para obter mais informações sobre como exportar os dados limpos, consulte [Limpar dados usando o conhecimento do DQS &#40;interno&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
   
-##  <a name="Related"></a> Tarefas relacionadas  
+##  <a name="Related"></a>Tarefas relacionadas  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Descreve como configurar valores de limites para a atividade de limpeza.|[Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
-|Descreve como limpar dados usando conhecimento criado no DQS.|[Limpar dados usando o conhecimento &#40;interno&#41; do DQS](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
-|Descreve como limpar dados usando conhecimento do serviço de dados de referência.|[Limpar dados usando o conhecimento &#40;externo&#41; dos dados de referência](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
-|Descreve como limpar um domínio composto.|[Limpar dados em um domínio de composição](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
+|Descreve como configurar valores de limites para a atividade de limpeza.|[Configurar valores de limite para limpeza e correspondência](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
+|Descreve como limpar dados usando conhecimento criado no DQS.|[Limpar dados usando o conhecimento de&#41; interno do DQS &#40;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
+|Descreve como limpar dados usando conhecimento do serviço de dados de referência.|[Limpar dados usando dados de referência &#40;conhecimento de&#41; externo](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
+|Descreve como limpar um domínio composto.|[Limpar dados em um domínio composto](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
-## <a name="see-also"></a>Consulte também  
- [Projetos de qualidade de dados &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Projetos de qualidade de dados &#40;o DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [Correspondência de dados](../data-quality-services/data-matching.md)  
   
   

@@ -1,6 +1,5 @@
 ---
-title: 'Especificando relações usando SQL: Relationship (SQLXML 4.0) | Microsoft Docs'
-ms.custom: ''
+title: 'Definir relações com SQL: relationship (SQLXML)'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -28,21 +27,22 @@ ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7a1d6dc5c678d4f0e523a757eabc89d18d85944
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 02872a037e60fa3af58a70d3599b03c61d0cfb5e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066943"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257345"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Especificando relações usando sql:relationship (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Os elementos em um documento XML podem ser relacionados. Eles podem ser aninhados hierarquicamente e as relações ID, IDREF ou IDREFS entre os elementos podem ser especificadas.  
   
- Por exemplo, em um esquema XSD, uma  **\<cliente >** elemento contém  **\<Order >** elementos filho. Quando o esquema é mapeado para o banco de dados AdventureWorks, o  **\<cliente >** elemento é mapeado para a tabela Sales. Customer e o  **\<Order >** elemento é mapeado para o Tabela Sales. SalesOrderHeader. Essas tabelas subjacentes, Sales. Customer e Sales. SalesOrderHeader, estão relacionadas porque os clientes fazem pedidos. O elemento CustomerID na tabela Sales.SalesOrderHeader é uma chave estrangeira que se refere à chave primária CustomerID na tabela Sales.Customer. Você pode estabelecer estas relações entre elementos de esquema de mapeamento usando o **SQL: Relationship** anotação.  
+ Por exemplo, em um esquema XSD, um elemento de ** \<>de cliente** contém ** \<** elementos filho de ordem>. Quando o esquema é mapeado para o banco de dados AdventureWorks, o elemento ** \<>do cliente** é mapeado para a tabela Sales. Customer e o ** \<elemento Order>** é mapeado para a tabela Sales. SalesOrderHeader. Essas tabelas subjacentes, Sales. Customer e Sales. SalesOrderHeader, estão relacionadas porque os clientes colocam pedidos. O elemento CustomerID na tabela Sales.SalesOrderHeader é uma chave estrangeira que se refere à chave primária CustomerID na tabela Sales.Customer. Você pode estabelecer essas relações entre elementos de esquema de mapeamento usando a anotação **SQL: relationship** .  
   
- No esquema XSD anotado, o **SQL: Relationship** anotação é usada para aninhar os elementos de esquema hierarquicamente, com base na chave primária e chave estrangeira entre as tabelas subjacentes para o qual os elementos do mapa. Especificar o **SQL: Relationship** anotação, você deve identificar o seguinte:  
+ No esquema XSD anotado, a anotação **SQL: relationship** é usada para aninhar os elementos de esquema hierarquicamente, com base nas relações de chave primária e de chave estrangeira entre as tabelas subjacentes nas quais os elementos são mapeados. Ao especificar a anotação **SQL: relationship** , você deve identificar o seguinte:  
   
 -   A tabela pai (Sales.Customer) e a tabela filha (Sales.SalesOrderHeader).  
   
@@ -50,39 +50,39 @@ ms.locfileid: "68066943"
   
  Estas informações são usadas para gerar a hierarquia adequada.  
   
- Para fornecer os nomes de tabela e as informações de junção necessárias, os seguintes atributos são especificados na **SQL: Relationship** anotação. Esses atributos são válidos somente com o  **\<SQL: Relationship >** elemento:  
+ Para fornecer os nomes de tabela e as informações de junção necessárias, os seguintes atributos são especificados na anotação **SQL: relationship** . Esses atributos são válidos somente com o ** \<elemento SQL: relationship>** :  
   
- **Name**  
+ **Nomes**  
  Especifica o nome exclusivo da relação.  
   
- **Parent**  
- Especifica a relação pai (tabela). Este é um atributo opcional. Se o atributo não for especificado, o nome da tabela pai será obtido das informações na hierarquia filha no documento. Se o esquema especificar duas hierarquias pai-filho que usam os mesmos  **\<SQL: Relationship >** mas elementos pai diferente, você não especificar o atributo pai em  **\<sql: relação >** . Essas informações são obtidas da hierarquia no esquema.  
+ **Primária**  
+ Especifica a relação pai (tabela). Este é um atributo opcional. Se o atributo não for especificado, o nome da tabela pai será obtido das informações na hierarquia filha no documento. Se o esquema especificar duas hierarquias pai-filho que usam o mesmo ** \<SQL: relationship>** mas elementos pai diferentes, você não especificará o atributo pai em ** \<SQL: relationship>**. Essas informações são obtidas da hierarquia no esquema.  
   
  **parent-key**  
  Especifica a chave pai do pai. Se a chave pai for composta por várias colunas, os valores serão especificados com um espaço entre eles. Há um mapeamento posicional entre os valores que são especificados para a chave de várias colunas e para a chave filha correspondente.  
   
- **filho**  
+ **Filho**  
  Especifica a relação de filho (tabela).  
   
  **child-key**  
  Especifica a chave filha no filho que se refere à parent-key no pai. Se a chave filha for composta por vários atributos (colunas), os valores de child-key serão especificados com um espaço entre eles. Há um mapeamento posicional entre os valores que são especificados para a chave de várias colunas e para a chave pai correspondente.  
   
- **Inverso**  
- Este atributo especificado em  **\<SQL: Relationship >** é usado por diagramas de atualização. Para obter mais informações, consulte [especificando o atributo SQL: Inverse em SQL: Relationship](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
+ **Inverse**  
+ Este atributo especificado em ** \<SQL: a relação>** é usada por Updategrams. Para obter mais informações, consulte [especificando o atributo SQL: inverso em SQL: relationship](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
- O **SQL: Key-campos** anotação deve ser especificada em um elemento que contém um elemento filho, que tem um  **\<SQL: Relationship >** definida entre o elemento e o filho, e ele faz Forneça a chave primária da tabela especificada no elemento pai. Mesmo se o esquema não especificar  **\<SQL: Relationship >** , você deve especificar **SQL: Key-campos** para gerar a hierarquia adequada. Para obter mais informações, consulte [Identificando colunas-chave usando o SQL: Key-campos](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md).  
+ A anotação **SQL: key-fields** deve ser especificada em um elemento que contém um elemento filho, que tem uma ** \<relação de SQL:>** definida entre o elemento e o filho, e isso não fornece a chave primária da tabela especificada no elemento pai. Mesmo que o esquema não especifique ** \<SQL: relationship>**, você deve especificar **SQL: key-fields** para produzir a hierarquia apropriada. Para obter mais informações, consulte [identificando colunas de chave usando SQL: key-fields](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md).  
   
- Para produzir o aninhamento adequado no resultado, é recomendável que **SQL: Key-campos** são especificados em todos os esquemas.  
+ Para produzir um aninhamento adequado no resultado, é recomendável que **SQL: campos-chave** sejam especificados em todos os esquemas.  
   
 ## <a name="examples"></a>Exemplos  
- Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [requisitos para executar exemplos do SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. Especificando uma anotação sql:relationship em um elemento  
- Inclui o seguinte esquema XSD anotado  **\<cliente >** e  **\<Order >** elementos. O  **\<ordem >** é um elemento filho do  **\<cliente >** elemento.  
+### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>R. Especificando uma anotação sql:relationship em um elemento  
+ O seguinte esquema XSD anotado inclui ** \<** os elementos de>do cliente e de ** \<ordem>** . O ** \<elemento Order>** é um elemento filho do elemento ** \<Customer>** .  
   
- No esquema, o **SQL: Relationship** anotação é especificada na  **\<ordem >** elemento filho. A própria relação é definida na  **\<xsd:appinfo >** elemento.  
+ No esquema, a anotação **SQL: relationship** é especificada no elemento ** \<Order>** filho. A relação em si é definida no elemento ** \<xsd: appinfo>** .  
   
- O  **\<relação >** elemento identifica CustomerID na tabela Sales. SalesOrderHeader como uma chave estrangeira que faz referência à chave primária CustomerID na tabela Sales. Customer. Portanto, os pedidos que pertencem a um cliente aparecem como um elemento filho do que  **\<cliente >** elemento.  
+ O elemento de ** \<>de relação** identifica CustomerID na tabela Sales. SalesOrderHeader como uma chave estrangeira que se refere à chave primária CustomerID na tabela Sales. Customer. Portanto, os pedidos que pertencem a um cliente aparecem como um elemento filho desse elemento de ** \<>do cliente** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -171,7 +171,7 @@ ms.locfileid: "68066943"
   
 3.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Este é o conjunto de resultados:  
   
@@ -198,11 +198,11 @@ ms.locfileid: "68066943"
 ...  
 ```  
   
- Para cada pedido na tabela Sales. SalesOrderHeader, o documento XML tem uma  **\<ordem >** elemento. E cada  **\<ordem >** elemento tem uma lista de  **\<produto >** elementos filho, um para cada produto solicitado no pedido.  
+ Para cada pedido na tabela Sales. SalesOrderHeader, o documento XML tem um ** \<** elemento de>de ordem. E cada ** \<elemento Order>** tem uma lista de ** \<produtos>** elementos filho, um para cada produto solicitado na ordem.  
   
  Para especificar um esquema XSD que gerará esta hierarquia, você deve especificar duas relações: OrderOD e ODProduct. A relação OrderOD especifica a relação pai-filho entre as tabelas Sales.SalesOrderHeader e Sales.SalesOrderDetail. A relação ODProduct especifica a relação entre as tabelas Sales.SalesOrderDetail e Production.Product.  
   
- No esquema a seguir, o **msdata:relationship** anotação sob o  **\<produto >** elemento especifica dois valores: OrderOD e ODProduct. A ordem em que esses valores são especificados é importante.  
+ No esquema a seguir, a anotação **MSDATA: relationship** no elemento ** \<>do produto** especifica dois valores: OrderOD e ODProduct. A ordem em que esses valores são especificados é importante.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -240,7 +240,7 @@ ms.locfileid: "68066943"
 </xsd:schema>  
 ```  
   
- Em vez de especificar uma relação nomeada, você pode especificar uma relação anônima. Nesse caso, todo o conteúdo do  **\<anotação >** ...  **\</annotation >** , que descreve as duas relações, aparecem como um elemento filho do  **\<produto >** .  
+ Em vez de especificar uma relação nomeada, você pode especificar uma relação anônima. Nesse caso, todo o conteúdo da ** \<anotação>**... /Annotation>, que descreve as duas relações, aparecem como um elemento filho do ** \<produto>**. ** \< **  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -300,7 +300,7 @@ ms.locfileid: "68066943"
   
 3.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Este é o conjunto de resultados:  
   
@@ -319,7 +319,7 @@ ms.locfileid: "68066943"
 ```  
   
 ### <a name="c-specifying-the-relationship-annotation-on-an-attribute"></a>C. Especificando a anotação de relação em um atributo  
- O esquema neste exemplo inclui um \<Customer > elemento com um \<CustomerID > elemento filho e um atributo OrderIDList do tipo IDREFS. O \<Customer > elemento é mapeado para a tabela Sales. Customer no banco de dados AdventureWorks. Por padrão, o escopo desse mapeamento se aplica a todos os elementos filho ou atributos, a menos que **Relation** é especificado no elemento filho ou atributo, caso em que a relação adequada de primary key/foreign key deve ser definido usando o \<relação > elemento. E o elemento filho ou atributo, que especifica a tabela diferente usando o **relação** anotação, deverá especificar também a **relação** anotação.  
+ O esquema neste exemplo inclui um \<elemento de> de cliente com \<um elemento filho de CustomerID> e um atributo OrderIDList do tipo IDREFS. O \<elemento> do cliente é mapeado para a tabela Sales. Customer no banco de dados AdventureWorks. Por padrão, o escopo desse mapeamento se aplica a todos os elementos filho ou atributos, a menos que **SQL: relation** seja especificado no elemento ou atributo filho; nesse caso, a relação de chave primária/chave estrangeira apropriada deve ser definida usando o \<elemento de> de relação. E o elemento ou atributo filho, que especifica a tabela diferente usando a anotação de **relação** , também deve especificar a anotação de **relação** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -371,7 +371,7 @@ ms.locfileid: "68066943"
   
 3.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Este é o conjunto de resultados:  
   
@@ -384,11 +384,11 @@ ms.locfileid: "68066943"
 ```  
   
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D. Especificando sql:relationship em vários elementos  
- Neste exemplo, o esquema XSD anotado contém o  **\<cliente >** ,  **\<Order >** , e  **\<OrderDetail >** elementos.  
+ Neste exemplo, o esquema XSD anotado contém os elementos do ** \<cliente>**, ** \<Order>** e ** \<OrderDetail>** .  
   
- O  **\<ordem >** é um elemento filho do  **\<cliente >** elemento. **\<SQL: Relationship >** for especificado em de  **\<ordem >** elemento filho; portanto, os pedidos que pertencem a um cliente aparecem como elementos filho do  **\<cliente >** .  
+ O ** \<elemento Order>** é um elemento filho do elemento ** \<Customer>** . **SQL: a relação>é especificada na ordem>elemento filho; \<** ** \<** Portanto, os pedidos que pertencem a um cliente aparecem como elementos filho de ** \<>do cliente **.  
   
- O  **\<ordem >** elemento inclui o  **\<OrderDetail >** elemento filho. **\<SQL: Relationship >** for especificado em  **\<OrderDetail >** elemento filho, portanto, os detalhes do pedido que pertençam a um pedido apareçam como elementos filho que **\<ordem >** elemento.  
+ O ** \<elemento Order>** inclui o ** \<elemento filho OrderDetail>** . SQL: a relação>é especificada em ** \<OrderDetail>** elemento filho, portanto, os detalhes do pedido que pertencem a um pedido aparecem como elementos filho do elemento ** \<Order>** . ** \<**  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -461,7 +461,7 @@ ms.locfileid: "68066943"
   
 3.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Este é o conjunto de resultados:  
   
@@ -484,15 +484,15 @@ ms.locfileid: "68066943"
 </ROOT>  
 ```  
   
-### <a name="e-specifying-the-sqlrelationship-without-the-parent-attribute"></a>E. Especificando o \<SQL: Relationship > sem o atributo pai  
- Este exemplo ilustra especificando o  **\<SQL: Relationship >** sem a **pai** atributo. Por exemplo, pressuponha que você tenha as seguintes tabelas de funcionário:  
+### <a name="e-specifying-the-sqlrelationship-without-the-parent-attribute"></a>E. Especificando a \<relação de sql:> sem o atributo pai  
+ Este exemplo ilustra a especificação do ** \<SQL: relationship>** sem o atributo **pai** . Por exemplo, pressuponha que você tenha as seguintes tabelas de funcionário:  
   
 ```  
 Emp1(SalesPersonID, FirstName, LastName, ReportsTo)  
 Emp2(SalesPersonID, FirstName, LastName, ReportsTo)  
 ```  
   
- A seguinte exibição XML tem o  **\<Emp1 >** e  **\<Emp2 >** elementos de mapeamento de tabelas do Sales.Emp1 e Sales.Emp2:  
+ O seguinte modo de exibição XML tem os ** \<elementos emp1>** e ** \<Emp2>** mapeados para as tabelas Sales. emp1 e Sales. Emp2:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -526,7 +526,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- No esquema, tanto a  **\<Emp1 >** elemento e  **\<Emp2 >** elemento são do tipo **EmpType**. O tipo **EmpType** descreve uma  **\<ordem >** elemento filho e correspondente  **\<SQL: Relationship >** . Nesse caso, não há nenhum pai único que pode ser identificado no  **\<SQL: Relationship >** usando o **pai** atributo. Nessa situação, você não especificar o **pai** atributo no  **\<SQL: Relationship >** ; o **pai** informações de atributo são obtidas das hierarquia no esquema.  
+ No esquema, o elemento de ** \<>emp1** e ** \<o elemento Emp2>** são do tipo **EmpType**. O tipo **EmpType** descreve uma ** \<ordem>** elemento filho e a ** \<relação SQL:>relationship **correspondente. Nesse caso, não há um único pai que possa ser identificado em ** \<SQL: relationship>** usando o atributo **pai** . Nessa situação, você não especifica o atributo **pai** em ** \<SQL: relationship>**; as informações de atributo **pai** são obtidas da hierarquia no esquema.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para testar uma consulta XPath de exemplo com relação ao esquema  
   
@@ -562,7 +562,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
   
 3.  Copie o código de esquema acima e cole-o em um arquivo de texto. Salve o arquivo como relationship-noparent.xml.  
   
-4.  Copie o modelo a seguir e cole-o em um arquivo de texto. Salve o arquivo como relationship-noparentT.xml no mesmo diretório em que você salvou relationship-noparent.xml. A consulta no modelo seleciona todos os \<Emp1 > elementos (portanto, o pai é Emp1).  
+4.  Copie o modelo a seguir e cole-o em um arquivo de texto. Salve o arquivo como relationship-noparentT.xml no mesmo diretório em que você salvou relationship-noparent.xml. A consulta no modelo seleciona todos os elementos \<de> emp1 (portanto, o pai é emp1).  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -580,7 +580,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
   
 5.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Aqui está um conjunto de resultados parciais:  
   

@@ -1,7 +1,7 @@
 ---
-title: Usando o ADO para executar o SQLXML 4.0 consultas | Microsoft Docs
+title: Usando o ADO para executar consultas do SQLXML 4.0
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 12/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xml
@@ -16,12 +16,12 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2a8f5cdb74385852a0feef0f9de0d760eb57f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02dfe2bfe1a5893a2ef121f279648c5962d6cce9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66012144"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251412"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Usando o ADO para executar consultas do SQLXML 4.0
   Nas versões anteriores do SQLXML, o suporte à execução de consultas baseadas em HTTP era oferecido por meio de diretórios virtuais IIS SQLXML e do filtro ISAPI SQLXML. No SQLXML 4.0, esses componentes foram removidos já que uma funcionalidade semelhante é fornecida com os XML Web Services nativos introduzidos no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
@@ -35,9 +35,9 @@ ms.locfileid: "66012144"
   
 #### <a name="to-create-the-sqlxml-40-query-tester-using-ado-vbscript"></a>Para criar o testador de consulta do SQLXML 4.0 usando ADO (VBScript).  
   
-1.  Copie o código abaixo e cole-o em um arquivo de texto. Salve o arquivo como Sqlxml4test.vbs.  
+1.  Copie o código VBScript abaixo e cole-o em um arquivo de texto. Salve o arquivo como Sqlxml4test.vbs.  
   
-    ```  
+    ```vb
     WScript.Echo "Query process may take a few seconds to complete. Please be patient."  
   
     ' Note that for SQL Server Native Client to be used as the data provider,  
@@ -108,20 +108,20 @@ ms.locfileid: "66012144"
 ## <a name="using-the-sqlxml-40-test-script"></a>Usando o script de teste SQLXML 4.0  
  O procedimento a seguir descreve como usar os arquivos Sqlxml4test.vbs para testar as consultas de exemplo fornecidas nesta documentação.  
   
-#### <a name="to-use-the-sqlxml-40-query-tester"></a>Para usar o testador de consulta do SQLXML 4.0  
+#### <a name="to-use-the-sqlxml-40-query-tester"></a>Para usar o testador de consulta do SQLXML 4.0   
   
 1.  Verifique se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client está instalado, da seguinte maneira:  
   
-    1.  Dos **inicie** , aponte para **configurações**e, em seguida, clique em **painel de controle**.  
+    1.  No menu **Iniciar** , aponte para **configurações**e clique em painel de **controle**.  
   
-    2.  No painel de controle, abra **adicionar ou remover programas**  
+    2.  No painel de controle, abra **Adicionar ou remover programas**  
   
-    3.  Na lista de programas instalados, verifique **Microsoft SQL Server Native Client** aparece na lista.  
+    3.  Na lista de programas atualmente instalados, verifique se **Microsoft SQL Server cliente nativo** aparece na lista.  
   
         > [!NOTE]  
-        >  Se você precisar instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, consulte [instalar o SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  
+        >  Se você precisar instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Native Client, consulte [instalando SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  
   
-2.  Verifique se a versão do MDAC instalada no computador cliente é a 2.6 ou mais recente. Se você precisar obter informações sobre a versão do MDAC, poderá usar a ferramenta Component Checker do MDAC, fornecida gratuitamente no site da Microsoft (www.microsoft.com). Para obter mais informações, pesquise em "MDAC Component Checker" no site da Microsoft.  
+2.  Verifique se a versão do MDAC instalada no computador cliente é a 2.6 ou mais recente. Se precisar verificar as informações de versão do MDAC, você poderá usar a ferramenta Verificador de componentes do MDAC, que é fornecida como download gratuito no [https://www.microsoft.com/](https://www.microsoft.com/)site da Microsoft. Para obter mais informações, pesquise "verificador de componentes do MDAC" no site da Microsoft.  
   
 3.  Execute o script.  
   

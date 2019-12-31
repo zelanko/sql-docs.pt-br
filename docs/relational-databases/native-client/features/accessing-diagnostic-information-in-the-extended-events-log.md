@@ -1,5 +1,5 @@
 ---
-title: Acessando informações de diagnóstico no log de eventos estendidos | Microsoft Docs
+title: Informações de diagnóstico no log de eventos estendidos
 ms.date: 03/14/2017
 ms.reviewer: ''
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15891abf565a6b0c30c7e5b0cf2b3355ff831bc4
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 3f8840d746dec7dbcc4fc87d827a85cbe9c3af65
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73788384"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258734"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Acessar informações de diagnóstico nos logs de eventos estendidos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -212,7 +212,7 @@ class Bid2Etw_SQLNCLI11_1_Trace_TextW : Bid2Etw_SQLNCLI11_1_Trace
 };  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Tratando de erros e mensagens](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Manipulando erros e mensagens](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

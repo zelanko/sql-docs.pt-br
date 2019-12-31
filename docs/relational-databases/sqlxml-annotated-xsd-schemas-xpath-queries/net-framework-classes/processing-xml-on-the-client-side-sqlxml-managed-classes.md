@@ -1,6 +1,5 @@
 ---
-title: Processando XML no lado do cliente (classes gerenciadas SQLXML) | Microsoft Docs
-ms.custom: ''
+title: Processando XML no lado do cliente (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,13 +15,14 @@ helpviewer_keywords:
 ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6133cbedb01dce5cb4d868e79e52e236e773f4b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 54063c371489aaf8928a4c3cad290e4a0961c229
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909164"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251483"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>Processando XML no cliente (classes gerenciadas SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- Esse C# aplicativo executa o procedimento armazenado e especifica a opção for XML auto na especificação do valor CommandText. No aplicativo, a propriedade ClientSideXml do objeto SqlXmlCommand é definida como true. Isto permite executar procedimentos armazenados pré-existentes que retornam um conjunto de linhas e aplicam uma transformação XML a ele no cliente.  
+ Este aplicativo C# executa o procedimento armazenado e especifica a opção FOR XML AUTO ao especificar o valor CommandText. No aplicativo, a propriedade ClientSideXml do objeto SqlXmlCommand é definida como true. Isto permite executar procedimentos armazenados pré-existentes que retornam um conjunto de linhas e aplicam uma transformação XML a ele no cliente.  
   
 > [!NOTE]  
 >  No código, é necessário fornecer o nome da instância do Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na cadeia de conexão.  

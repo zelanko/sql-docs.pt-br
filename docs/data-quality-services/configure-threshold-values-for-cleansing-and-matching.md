@@ -1,6 +1,5 @@
 ---
-title: Configurar valores de limite para limpeza e correspondência | Microsoft Docs
-ms.custom: ''
+title: Configurar valores de limite para limpeza e correspondência
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -14,14 +13,14 @@ helpviewer_keywords:
 - cleansing threshold values
 - matching,threshold value
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 1cf5a91891323083266ac76bb041485bf0104234
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: d31066ff172b0677e83e7a5dbe68f5d70e7136c8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992314"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255632"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching"></a>Configurar valores de limite para limpeza e correspondência
 
@@ -29,26 +28,26 @@ ms.locfileid: "67992314"
 
   Este tópico descreve como configurar valores de limite que serão usados durante a limpeza auxiliada por computador e as atividades correspondentes no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="BeforeYouBegin"></a>Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="Security"></a>Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="Permissions"></a>Permissões  
  É necessário ter a função dqs_administrator no banco de dados DQS_MAIN para configurar esses valores de limite.  
   
-##  <a name="Configure"></a> Configurando os valores de limite  
+##  <a name="Configure"></a>Configurando os valores de limite  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , clique em **Configuração**.  
   
-3.  Em seguida, clique na guia **Configurações Gerais** . Essa guia permite a você especificar os valores de limite para a limpeza, bem como as atividades de correspondência.  
+3.  Em seguida, clique na guia **configurações gerais** . Esta guia permite que você especifique valores de limite para limpeza, bem como atividades correspondentes.  
   
 4.  Para especificar valores de limote para a atividade de limpeza, especifique os valores apropriados nas seguintes caixas na área **Limpeza Interativa** :  
   
-    -   **Pontuação mínima para sugestões**: A pontuação mínima ou o nível de confiança que será usado pelo DQS para sugerir substitutos para um valor durante o processo de limpeza auxiliada por computador. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, digite 0,75 para 75%. Esse valor deve ser inferior ou igual ao valor especificado na caixa **Pontuação mínima para correções automáticas** . O valor padrão é 0,7.  
+    -   **Pontuação mínima para sugestões**: a pontuação mínima ou o nível de confiança que será usado pelo DQS para sugerir substituições para um valor durante o processo de limpeza auxiliado por computador. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, digite 0,75 para 75%. Esse valor deve ser inferior ou igual ao valor especificado na caixa **Pontuação mínima para correções automáticas** . O valor padrão é 0,7.  
   
-    -   **Pontuação mínima para correções automáticas**: A pontuação mínima ou o nível de confiança que será usado pelo DQS para automaticamente corrigir para um valor durante o processo de limpeza auxiliada por computador. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,9 para 90%. O valor padrão é 0,8.  
+    -   **Pontuação mínima para correções automáticas**: a pontuação mínima ou o nível de confiança que será usado pelo DQS para corrigir automaticamente um valor durante o processo de limpeza auxiliado por computador. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,9 para 90%. O valor padrão é 0,8.  
   
 5.  Para especificar um valor de limite para a atividade de correspondência, especifique um valor na caixa **Pontuação mínima de registro** na área **Correspondência** . Esse valor significa a pontuação mínima para um registro a ser considerado como uma correspondência para outro registro. O valor padrão é 80%.  
   

@@ -1,6 +1,5 @@
 ---
-title: Formatação de XML do lado do servidor (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Formatação XML do lado do servidor (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,13 +12,14 @@ helpviewer_keywords:
 ms.assetid: ae9ea068-0857-4505-a3b2-f53d256b644c
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70771bcb9256b53f4bb8ca459bd7e3836dfcea5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec84fdfad468124f59cefde73486d5b19a5a4110
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005215"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255896"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>Formatação XML do lado do servidor (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68005215"
   
  No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], você pode armazenar e recuperar documentos XML para e de tabelas de banco de dados. Para recuperar um documento XML, use a extensão de consulta FOR XML em uma consulta SELECT.  
   
- Por exemplo, suponha que um aplicativo cliente executa um comando em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que consiste no seguinte [!INCLUDE[tsql](../../../includes/tsql-md.md)] consulta:  
+ Por exemplo, suponha que um aplicativo cliente execute um comando em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] relação ao que consiste na [!INCLUDE[tsql](../../../includes/tsql-md.md)] seguinte consulta:  
   
 ```  
 SELECT FirstName, LastName  
@@ -52,11 +52,11 @@ FROM   Person.Contact
   
 -   EXPLICIT  
   
- Para obter mais informações sobre a cláusula FOR XML, consulte [construindo XML usando FOR XML](../../../relational-databases/xml/for-xml-sql-server.md).  
+ Para obter mais informações sobre a cláusula FOR XML, consulte [construindo XML Using for XML](../../../relational-databases/xml/for-xml-sql-server.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Arquitetura de formatação de XML do lado do cliente e servidor &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
- [Formatação XML do lado do cliente &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Arquitetura da formatação XML do lado do cliente e do servidor &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
+ [Formatação XML do lado do cliente &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
  [FOR XML &#40;SQL Server&#41;](../../../relational-databases/xml/for-xml-sql-server.md)  
   
   

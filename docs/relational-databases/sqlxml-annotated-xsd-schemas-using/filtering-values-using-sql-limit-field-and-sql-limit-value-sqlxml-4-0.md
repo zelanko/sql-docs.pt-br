@@ -1,6 +1,5 @@
 ---
-title: 'Filtrando valores usando SQL: limit-field e SQL: limit-value (SQLXML 4,0) | Microsoft Docs'
-ms.custom: ''
+title: 'Filtrar com SQL: limit-field e SQL: limit-value (SQLXML)'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,13 +17,14 @@ ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65c26209ed058e5d93663bae9587f8cf5d59abdf
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0304b2113e6112f5c2777478ae03436d9f24cfb1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906097"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257415"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrando valores usando sql:limit-field e sql:limit-value (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "72906097"
   
  Nestes exemplos, são usados modelos para especificar consultas XPath com base no esquema XSD de mapeamento.  
   
-### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>A. Limitar os endereços de cliente retornados para um tipo de endereço específico  
+### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>R. Limitar os endereços de cliente retornados para um tipo de endereço específico  
  Neste exemplo, um banco de dados contém duas tabelas:  
   
 -   Customer (CustomerID, CompanyName)  
@@ -306,9 +306,9 @@ ms.locfileid: "72906097"
     </root>  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [float e real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
-   de [Transact &#40;-SQL&#41; de nchar e nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#41;de Transact-SQL de &#40;flutuante e real](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [nchar e nvarchar &#40;&#41;de Transact-SQL](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [Instalando o SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
  [Usando esquemas XSD anotados em consultas &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   

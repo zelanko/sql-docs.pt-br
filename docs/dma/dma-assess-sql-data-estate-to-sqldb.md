@@ -2,7 +2,7 @@
 title: Avaliar SQL Server prontidão para migrar para o banco de dados SQL do Azure
 titleSuffix: Data Migration Assistant
 description: Saiba como usar Assistente de Migração de Dados para migrar um espaço de dados de SQL Server para a migração para o Azure SQL Database
-ms.date: 07/16/2019
+ms.date: 12/19/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: HJToland3
 ms.author: rajpo
 manager: jroth
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8261b38d57502584efbeee8d6bbcd0b1823d3786
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 6f9d3d97d939586683015f38ab17c00dd03ca122
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056687"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253507"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Avaliar a prontidão de um SQL Server banco de dados migrando para o Azure SQL usando o Assistente de Migração de Dados
 
@@ -29,7 +29,7 @@ A migração de centenas de instâncias de SQL Server e de milhares de bancos de
 
 Este artigo fornece instruções passo a passo para aproveitar os [Assistente de migração de dados](https://docs.microsoft.com/sql/dma/dma-overview?view=sql-server-2017) para resumir os resultados de preparação e Surface-los no Hub de [migrações para Azure](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) .
 
-
+>
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="create-a-project-and-add-a-tool"></a>Criar um projeto e adicionar uma ferramenta
@@ -39,7 +39,7 @@ Configure um novo projeto de migrações para Azure em uma assinatura do Azure e
 Um projeto de migrações para Azure é usado para armazenar metadados de descoberta, avaliação e migração coletados do ambiente que você está avaliando ou migrando. Você também usa um projeto para acompanhar os ativos descobertos e orquestrar a avaliação e a migração.
 
 1. Entre no portal do Azure, selecione **todos os serviços**e, em seguida, procure migrações para Azure.
-2. Em **Serviços**, selecione **migrações para Azure**.
+2. Em **Serviços**, selecione **Migrações para Azure**.
 
    ![Migrações para Azure – selecionar serviço](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-services.png)
 
@@ -56,16 +56,16 @@ Um projeto de migrações para Azure é usado para armazenar metadados de descob
 
     ![Migrações para Azure – adicionar uma caixa de diálogo de ferramenta](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-add-tool-dialog.png)
 
-    Você pode criar um projeto de migrações para Azure em qualquer uma dessas regiões.
+    Você pode criar um projeto de Migrações para Azure em qualquer uma dessas regiões.
 
-    | **Geografia**  | **Região do local de armazenamento** |
+    | **Gráfico**  | **Região do local de armazenamento** |
     | ------------- | ------------- |
-    | Ásia | Sudeste da Ásia ou Ásia Oriental |
-    | Europe | Sul da Europa ou Europa Ocidental |
-    | United Kingdom | Sul do Reino Unido ou Oeste do Reino Unido |
+    | Ásia | Sudeste Asiático ou Ásia Oriental |
+    | Europa | Sul da Europa ou Europa Ocidental |
+    | Reino Unido | Sul do Reino Unido ou Oeste do Reino Unido |
     | Estados Unidos | EUA Central ou oeste dos EUA 2 |
 
-    A geografia especificada para o projeto é usada somente para armazenar os metadados coletados de VMs locais. Você pode selecionar qualquer região de destino para a migração real.
+    A localização geográfica especificada para o projeto só é usada para armazenar os metadados coletados das VMs locais. Você pode selecionar qualquer região de destino para a migração real.
 
 7. Selecione **Avançar**e, em seguida, adicionar uma ferramenta de avaliação.
 
@@ -97,7 +97,7 @@ Depois de criar com êxito um projeto de migração, em **ferramentas de avalia�
 
 ### <a name="create-an-assessment"></a>Criar uma avaliação
 
-1. À esquerda, selecione o ícone de **+** e, em seguida, selecione o **tipo de projeto** de avaliação
+1. À esquerda, selecione o **+** ícone e, em seguida, selecione o **tipo de projeto** de avaliação
 2. Especifique o nome do projeto e, em seguida, selecione o servidor de origem e os tipos de servidor de destino.
 
     Se você estiver atualizando sua instância de SQL Server local para uma versão posterior do SQL Server ou para SQL Server hospedada em uma VM do Azure, defina o tipo de servidor de origem e de destino como **SQL Server**. Defina o tipo de servidor de destino como **instância gerenciada do banco de dados SQL do Azure** para uma avaliação de prontidão de destino do banco de dados SQL do Azure (PaaS).
@@ -111,8 +111,8 @@ Depois de criar com êxito um projeto de migração, em **ferramentas de avalia�
 1. Selecione o tipo de relatório.
 
     Você pode escolher um ou os dois tipos de relatório a seguir:
-    * Verificar compatibilidade de banco de dados
-    * Verificar paridade de recurso
+    * Determinar compatibilidade do banco de dados
+    * Verificação de paridade de recursos
 
    ![Migração do Azure – tela de opções de Assistente de Migração de Dados de avaliação](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-options-screen.png)
 
@@ -135,7 +135,7 @@ Depois de criar com êxito um projeto de migração, em **ferramentas de avalia�
 
    ![Migração do Azure-tela de resultados de Assistente de Migração de Dados de análise](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
 
-6. Entre no portal do Azure.
+6. Entre no Portal do Azure.
 
    ![Migração do Azure-tela de resultados de Assistente de Migração de Dados de análise](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
 
@@ -179,7 +179,7 @@ Depois de criar com êxito um projeto de migração, em **ferramentas de avalia�
 
    ![Migrações para Azure – examinar bloqueadores de migração](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-migration-blockers.png)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 * [Assistente de Migração de Dados (DMA)](../dma/dma-overview.md)
 * [Assistente de Migração de Dados: definições de configuração](../dma/dma-configurationsettings.md)

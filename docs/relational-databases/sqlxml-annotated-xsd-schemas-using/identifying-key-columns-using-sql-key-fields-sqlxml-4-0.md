@@ -1,6 +1,5 @@
 ---
-title: 'Identificando colunas de chave usando SQL: Key-Fields (SQLXML 4,0) | Microsoft Docs'
-ms.custom: ''
+title: 'Identificar colunas de chave usando SQL: campos de chave (SQLXML)'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,13 +20,14 @@ ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d17e47f86060871ea7dd3f2b0b1e9ed2e06c241
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 71d42f9f3f819dc12964ea0f13de92dfc8db5663
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905894"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257388"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identificando colunas de chave usando campos sql:key (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,19 +38,19 @@ ms.locfileid: "72905894"
   
  O valor de **SQL: key-fields** identifica as colunas que identificam exclusivamente as linhas na relação. Se mais de uma coluna for necessária para identificar uma linha de forma exclusiva, os valores de coluna serão delimitados por espaços.  
   
- Você deve usar a anotação **SQL: key-fields** quando um elemento contém um **\<sql: relationship >** que é definido entre o elemento e um elemento filho, mas não fornece a chave primária da tabela que é especificada no elemento pai .  
+ Você deve usar a anotação **SQL: key-fields** quando um elemento contiver uma ** \<relação SQL:>** definida entre o elemento e um elemento filho, mas não fornecer a chave primária da tabela especificada no elemento pai.  
   
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Produzindo o aninhamento apropriado quando \<SQL: relationship > não fornece informações suficientes  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>R. Produzindo o aninhamento apropriado \<quando o SQL: relationship> não fornece informações suficientes  
  Este exemplo mostra onde **SQL: campos de chave** devem ser especificados.  
   
- Considere o esquema a seguir. O esquema especifica uma hierarquia entre o **\<order >** e **\<elementos > do cliente** em que o elemento\<**Order >** é o pai e o elemento\<**Customer >** é um filho.  
+ Considere o esquema a seguir. O esquema especifica uma hierarquia entre o ** \<>de pedidos** e ** \<** os elementos de>do cliente nos quais o ** \<elemento Order>** é o pai e o elemento ** \<>do cliente** é um filho.  
   
- A marca **\<SQL: relationship >** é usada para especificar a relação pai-filho. Ela identifica CustomerID na tabela Sales.SalesOrderHeader como a chave pai que faz referência à chave filho CustomerID na tabela Sales.Customer. As informações fornecidas em **\<SQL: relationship >** não é suficiente para identificar exclusivamente as linhas na tabela pai (Sales. SalesOrderHeader). Portanto, sem a anotação **SQL: key-fields** , a hierarquia gerada é imprecisa.  
+ A ** \<marca SQL: relationship>** é usada para especificar a relação pai-filho. Ela identifica CustomerID na tabela Sales.SalesOrderHeader como a chave pai que faz referência à chave filho CustomerID na tabela Sales.Customer. As informações fornecidas no ** \<SQL: relationship>** não é suficiente para identificar exclusivamente as linhas na tabela pai (Sales. SalesOrderHeader). Portanto, sem a anotação **SQL: key-fields** , a hierarquia gerada é imprecisa.  
   
- Com **SQL: key-fields** especificado em **\<Order >** , a anotação identifica exclusivamente as linhas na tabela pai (Sales. SalesOrderHeader) e seus elementos filho aparecem abaixo de seu pai.  
+ Com **SQL: key-fields** especificado na ** \<ordem>**, a anotação identifica exclusivamente as linhas na tabela pai (Sales. SalesOrderHeader) e seus elementos filho aparecem abaixo de seu pai.  
   
  Este é o esquema:  
   
@@ -89,7 +89,7 @@ ms.locfileid: "72905894"
   
 1.  Copie o código de esquema acima e cole-o em um arquivo de texto. Salve o arquivo como KeyFields1.xml.  
   
-2.  Copie o modelo a seguir e cole-o em um arquivo de texto. Salve o arquivo como KeyFields1T.xml no mesmo diretório em que você salvou KeyFields1.xml. A consulta XPath no modelo retorna todos os **\<ordem >** elementos com um CustomerID de menos de 3.  
+2.  Copie o modelo a seguir e cole-o em um arquivo de texto. Salve o arquivo como KeyFields1T.xml no mesmo diretório em que você salvou KeyFields1.xml. A consulta XPath no modelo retorna todos os elementos de ** \<>de ordem** com um CustomerID de menos de 3.  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -126,8 +126,8 @@ ms.locfileid: "72905894"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>b. Especificar sql:key-fields para produzir o aninhamento adequado no resultado  
- No esquema a seguir, não há nenhuma hierarquia especificada usando **\<SQL: relationship >** . O esquema ainda requer a especificação da anotação **SQL: key-fields** para identificar exclusivamente os funcionários na tabela HumanResources. Employee.  
+### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. Especificar sql:key-fields para produzir o aninhamento adequado no resultado  
+ No esquema a seguir, não há nenhuma hierarquia especificada usando ** \<SQL: relationship>**. O esquema ainda requer a especificação da anotação **SQL: key-fields** para identificar exclusivamente os funcionários na tabela HumanResources. Employee.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -154,7 +154,7 @@ ms.locfileid: "72905894"
   
 1.  Copie o código de esquema acima e cole-o em um arquivo de texto. Salve o arquivo como KeyFields2.xml.  
   
-2.  Copie o modelo a seguir e cole-o em um arquivo de texto. Salve o arquivo como KeyFields2T.xml no mesmo diretório em que você salvou KeyFields2.xml. A consulta XPath no modelo retorna todos os elementos **\<HumanResources. Employee >** :  
+2.  Copie o modelo a seguir e cole-o em um arquivo de texto. Salve o arquivo como KeyFields2T.xml no mesmo diretório em que você salvou KeyFields2.xml. A consulta XPath no modelo retorna todos os ** \<elementos HumanResources. Employee>** :  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

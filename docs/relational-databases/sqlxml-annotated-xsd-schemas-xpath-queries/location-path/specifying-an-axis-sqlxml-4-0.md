@@ -1,6 +1,5 @@
 ---
-title: Especificando um eixo (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Especificando um eixo (SQLXML)
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,13 +19,14 @@ helpviewer_keywords:
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29d97b92f6979a7e5bbc67185f6e5a47ff82af68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a219c2093832b979171584d5559da359b574552e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073279"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253061"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Especificando um eixo (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,41 +35,43 @@ ms.locfileid: "68073279"
   
      Contém o filho do nó de contexto.  
   
-     A seguinte expressão XPath (caminho do local) seleciona do nó de contexto atual todos os  **\<cliente >** filhos:  
+     A seguinte expressão XPath (caminho de localização) seleciona no nó de contexto atual todos os>filhos do ** \<cliente** :  
   
     ```  
     child::Customer  
     ```  
   
-     Na consulta XPath a seguir, `child` é o eixo. `Customer` é o teste de nó.  
+     Na consulta XPath a seguir, `child` é o eixo. 
+  `Customer` é o teste de nó.  
   
--   **parent**  
+-   **primária**  
   
      Contém o pai do nó de contexto.  
   
-     A seguinte expressão XPath seleciona todos os  **\<cliente >** pais da  **\<ordem >** filhos:  
+     A expressão XPath a seguir seleciona todos os ** \<clientes>** pais da ** \<ordem>** filhos:  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
     ```  
   
-     Isso corresponde à especificação de `child::Customer`. Nesta consulta XPath, `child` e `parent` são os eixos. `Customer` e `Order` são os testes de nó.  
+     Isso corresponde à especificação de `child::Customer`. Nesta consulta XPath, `child` e `parent` são os eixos. 
+  `Customer` e `Order` são os testes de nó.  
   
--   **attribute**  
+-   **Attribute**  
   
      Contém o atributo do nó de contexto.  
   
-     A seguinte expressão XPath seleciona os **CustomerID** atributo do nó de contexto:  
+     A expressão XPath a seguir seleciona o atributo **CustomerID** do nó de contexto:  
   
     ```  
     attribute::CustomerID  
     ```  
   
--   **self**  
+-   **auto-restauração**  
   
      Contém o próprio nó de contexto.  
   
-     A seguinte expressão XPath seleciona o nó atual se ele for o  **\<ordem >** nó:  
+     A expressão XPath a seguir selecionará o nó atual se for o nó de ** \<>de ordem** :  
   
     ```  
     self::Order  

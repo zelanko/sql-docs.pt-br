@@ -1,5 +1,5 @@
 ---
-title: Requisitos para executar exemplos do SQLXML | Microsoft Docs
+title: Requisitos para executar exemplos do SQLXML
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac7d7d953b072d7bed43c69814f48043c5ff30c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3c3c04eccdae6f9c5bb1bd2da0272f8878f9d2d2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079535"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257569"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>Requisitos para executar exemplos do SQLXML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  O [programação do SQLXML 4.0](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) seção fornece vários exemplos. Este tópico lista os requisitos para criar exemplos funcionais.  
+  A seção de [programação SQLXML 4,0](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) fornece inúmeros exemplos. Este tópico lista os requisitos para criar exemplos funcionais.  
   
  Para criar os exemplos funcionais a partir de exemplos do SQLXML 4.0, você precisa ter estes programas instalados:  
   
@@ -35,6 +35,6 @@ ms.locfileid: "68079535"
   
 -   MDAC 2.6 ou posterior  
   
- Em muitos exemplos, são usados modelos para especificar consultas XPath com relação ao esquema XSD de mapeamento. Para obter mais informações, consulte [usando esquemas de XSD anotados em consultas &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md).  
+ Em muitos exemplos, são usados modelos para especificar consultas XPath com relação ao esquema XSD de mapeamento. Para obter mais informações, consulte [usando esquemas XSD anotados em consultas &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md).  
   
   

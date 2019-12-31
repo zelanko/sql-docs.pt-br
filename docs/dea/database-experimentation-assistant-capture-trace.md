@@ -2,7 +2,7 @@
 title: Capturar um rastreamento para atualizações de SQL Server
 description: Capturar um rastreamento no Assistente para Experimentos de Banco de Dados para atualizações de SQL Server
 ms.custom: seo-lt-2019
-ms.date: 10/22/2018
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,66 +10,75 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: ajaykar
+ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 6c24632875d09125efcd043ae907e87a21847fe9
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 999fd3f6caca13ecd768a9560915c53c732af27c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056599"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258529"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capturar um rastreamento no Assistente para Experimentos de Banco de Dados
 
-Você pode usar uma captura de rastreamento no Assistente para Experimentos de Banco de Dados (DEA) para criar um arquivo de rastreamento que tenha um log de eventos de servidor capturados. Um evento de servidor capturado é um evento que ocorre em um servidor específico durante um período de tempo específico. Uma captura de rastreamento deve ser executada uma vez por servidor.
+Você pode usar Assistente para Experimentos de Banco de Dados (DEA) para criar um arquivo de rastreamento com um log de eventos de servidor capturados. Um evento de servidor capturado é um evento que ocorre em um servidor específico durante um período de tempo específico. Uma captura de rastreamento deve ser executada uma vez por servidor.
 
 Antes de iniciar uma captura de rastreamento, certifique-se de fazer backup de todos os bancos de dados de destino.
 
 O cache de consulta no SQL Server pode afetar os resultados da avaliação. Recomendamos que você reinicie o serviço de SQL Server (MSSQLSERVER) no aplicativo de serviços para melhorar a consistência dos resultados da avaliação.
 
-## <a name="create-a-trace-capture"></a>Criar uma captura de rastreamento
+## <a name="configure-a-trace-capture"></a>Configurar uma captura de rastreamento
 
-1. No DEA, selecione o ícone de menu no menu à esquerda. No menu expandido, selecione **rastreamentos de captura** ao lado do ícone da câmera.
+1. No DEA, na barra de navegação à esquerda, selecione o ícone da câmera e, em seguida, na página **todas as capturas** , selecione **nova captura**.
 
-    ![Selecionar rastreamentos de captura no menu](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-capture.png)
+    ![Criar uma captura no DEA](./media/database-experimentation-assistant-capture-trace/dea-initiate-capture.png)
 
-1. Em **nova captura**, insira ou selecione as seguintes informações:
+2. Na página **nova captura** , em **detalhes da captura**, insira ou selecione as seguintes informações:
 
-    - **Nome da instância do SQL Server**: Insira um nome para o computador que está executando SQL Server no qual você deseja capturar um rastreamento de servidor.
+    - **Nome da captura**: Insira um nome para o arquivo de rastreamento para a captura.
+    - **Formato**: especifique o formato (Trace ou XEvents) para a captura.
+    - **Duração**: selecione o período de tempo (em minutos) que você deseja que a captura de rastreamento seja executada.
+    - **Local de captura**: selecione o caminho de destino para o arquivo de rastreamento.
+
+        > [!NOTE]
+        > O caminho do arquivo para o arquivo de rastreamento deve estar no computador que está executando o SQL Server. Se o serviço de SQL Server não estiver definido para uma conta específica, o serviço poderá precisar de permissões de gravação para a pasta especificada para que o arquivo de rastreamento seja gravado.
+
+3. Verifique se você fez um backup selecionando **Sim, fiz o backup manualmente...** .
+
+4. Em **detalhes da captura**, insira ou selecione as seguintes informações:
+
+    - **Tipo de servidor**: especifique o tipo do SQL Server (**SqlServer**, **AzureSqlDb**, **AzureSqlManagedInstance**).
+    - **Nome do servidor**: especifique o nome do servidor ou o endereço IP do seu SQL Server.
+    - **Tipo de autenticação**: para o tipo de autenticação, selecione **Windows**.
     - **Nome do banco de dados**: Insira um nome para um banco de dados no qual iniciar um rastreamento de banco de dados. Se você não especificar um banco de dados, o rastreamento será capturado em todos os bancos no servidor.
-    - **Nome do arquivo de rastreamento**: Insira um nome para o arquivo de rastreamento para a captura.
-    - **Tamanho máximo do arquivo (MB)** : selecione o tamanho da sobreposição dos arquivos. Um novo arquivo é criado conforme necessário no tamanho do arquivo selecionado. O tamanho de substituição recomendado é 200 MB.
-    - **Duração (em min)** : selecione o período de tempo (em minutos) que você deseja que a captura de rastreamento seja executada.
-    - **Caminho para armazenar o arquivo de rastreamento de saída**: selecione o caminho de destino para o arquivo de rastreamento. 
 
-    > [!NOTE]
-    > O caminho do arquivo para o arquivo de rastreamento deve estar no computador que está executando o SQL Server. Se o serviço de SQL Server não estiver definido para uma conta específica, o serviço poderá precisar de permissões de gravação para a pasta especificada para que o arquivo de rastreamento seja gravado.
-    >
-    >
+5. Marque ou desmarque as caixas de seleção **criptografar conexão** e **certificado do servidor confiável** , conforme apropriado para seu cenário.
 
-    ![Nova página de captura](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-inputs.png)
+    ![Nova página de captura](./media/database-experimentation-assistant-capture-trace/dea-new-capture.png)
 
 ## <a name="start-the-trace-capture"></a>Iniciar a captura de rastreamento
 
-Depois de inserir ou selecionar as informações necessárias, selecione **Iniciar** para iniciar a captura de rastreamentos. Se as informações inseridas forem válidas, o processo de captura de rastreamento será iniciado. Caso contrário, as caixas de texto com entradas inválidas serão realçadas com vermelho. 
+1. Depois de inserir ou selecionar as informações necessárias, selecione **Iniciar** para iniciar a captura de rastreamento.
 
-Verifique se os valores selecionados ou inseridos estão corretos e, em seguida, selecione **Iniciar**.
+    Se as informações inseridas forem válidas, o processo de captura de rastreamento será iniciado. Caso contrário, as caixas de texto com entradas inválidas serão realçadas em vermelho. Se você encontrar erros, corrija as entradas necessárias e, em seguida, selecione **Iniciar** novamente.
 
-Quando a captura de rastreamento for concluída, localize o novo arquivo de rastreamento no local do arquivo que você especificou no **caminho para armazenar o arquivo de rastreamento de saída**. Selecione o ícone de sino na parte inferior do menu à esquerda para monitorar o progresso da captura.
+    Enquanto a captura de rastreamento está em execução, em **detalhes da captura**, o status e o progresso do processo de captura de rastreamento são exibidos.
 
-![Progresso dos rastreamentos de captura](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-progress.png)
+    ![Monitorar o progresso da captura](./media/database-experimentation-assistant-capture-trace/dea-capture-running.png)
 
-### <a name="trace-file"></a>Arquivo de rastreamento
+2. Quando a captura de rastreamento for concluída em execução, o novo arquivo de rastreamento (. trc) será salvo no **local de captura** específico durante a configuração inicial.
 
-A captura de rastreamento grava um arquivo. trc no local especificado. O arquivo de rastreamento inclui resultados de rastreamento da atividade de um banco de dados SQL Server. Os arquivos TRC são projetados para fornecer mais informações sobre erros detectados e relatados pelo SQL Server.
+    ![Captura de rastreamento concluída](./media/database-experimentation-assistant-capture-trace/dea-capture-complete.png)
+
+    O arquivo de rastreamento inclui resultados de rastreamento da atividade de um banco de dados SQL Server. arquivos. trc são projetados para fornecer mais informações sobre erros detectados e relatados pelo SQL Server.
 
 ## <a name="frequently-asked-questions-about-trace-capture"></a>Perguntas frequentes sobre a captura de rastreamento
 
 A seguir, algumas perguntas frequentes sobre a captura de rastreamento no DEA.
 
-### <a name="what-events-are-captured-when-i-run-a-trace-capture-on-a-production-database"></a>Quais eventos são capturados quando executo uma captura de rastreamento em um banco de dados de produção?
+**P: quais eventos são capturados quando executo uma captura de rastreamento em um banco de dados de produção?**
 
-A tabela a seguir fornece a lista de eventos e os dados de coluna correspondentes que coletamos para rastreamentos:
+A tabela a seguir lista os eventos e os dados de coluna correspondentes que o DEA coleta para rastreamentos:
   
 |Nome do evento|Dados de texto (1)|Dados binários (2)|ID do banco de dados (3)|Nome do host (8)|Nome do aplicativo (10)|Nome de logon (11)|SPID (12)|Hora de início (14)|Hora de término (15)|Nome do banco de dados (35)|Sequência de eventos (51)|IsSystem (60)|  
 |---|---|---|---|---|---|---|---|---|---|---|---|---|  
@@ -89,43 +98,43 @@ A tabela a seguir fornece a lista de eventos e os dados de coluna correspondente
 |**CursorUnprepare (77)**|*||*|*|*|*|*|*||*|*|*|  
 |**CursorClose (78)**|*||*|*|*|*|*|*||*|*|*|  
 
-### <a name="is-there-a-performance-effect-on-my-production-server-when-trace-capture-is-running"></a>Há um efeito de desempenho no meu servidor de produção quando a captura de rastreamento está em execução?
-    
+**P: há um efeito de desempenho no meu servidor de produção quando a captura de rastreamento está em execução?**
+
 Sim, há um mínimo de efeito de desempenho durante a coleta de rastreamento. Em nossos testes, encontramos cerca de 3% de pressão de memória.
-    
-### <a name="what-kind-of-permissions-are-required-for-capturing-traces-on-a-production-workload"></a>Que tipo de permissões são necessárias para capturar rastreamentos em uma carga de trabalho de produção?
-    
+
+**P: que tipo de permissões são necessárias para capturar rastreamentos em uma carga de trabalho de produção?**
+
 - O usuário do Windows que executa a operação de rastreamento no aplicativo DEA deve ter direitos sysadmin no computador que está executando o SQL Server.
 - A conta de serviço usada no computador que executa o SQL Server deve ter acesso de gravação ao caminho do arquivo de rastreamento especificado.
 
-### <a name="can-i-capture-traces-for-the-entire-server-or-only-on-a-single-database"></a>Posso capturar rastreamentos para todo o servidor ou apenas em um único banco de dados?
-    
+**P: posso capturar rastreamentos para todo o servidor ou apenas em um único banco de dados?**
+
 Você pode usar o DEA para capturar rastreamentos para todos os bancos de dados no servidor ou para um único banco.
-    
-### <a name="i-have-a-linked-server-configured-in-my-production-environment-do-those-queries-show-up-in-the-traces"></a>Tenho um servidor vinculado configurado em meu ambiente de produção. Essas consultas aparecem nos rastreamentos?
-    
+
+**P: tenho um servidor vinculado configurado em meu ambiente de produção. Essas consultas aparecem nos rastreamentos?**
+
 Se você estiver executando uma captura de rastreamento para todo o servidor, o rastreamento capturará todas as consultas, incluindo as consultas de servidor vinculado. Para executar uma captura de rastreamento para todo o servidor, deixe a caixa **nome do banco de dados** em **nova captura** vazia.
-    
-### <a name="whats-the-minimum-recommended-time-for-production-workload-traces"></a>Qual é o tempo mínimo recomendado para rastreamentos de carga de trabalho de produção?
-    
+
+**P: Qual é o tempo mínimo recomendado para rastreamentos de carga de trabalho de produção?**
+
 Recomendamos que você escolha um horário que melhor represente todo o tempo de sua carga de trabalho. Dessa forma, a análise é executada em todas as consultas em sua carga de trabalho.
-    
-### <a name="how-important-is-to-take-a-database-backup-right-before-i-start-a-trace-capture"></a>Qual é a importância de fazer um backup de banco de dados logo antes de iniciar uma captura de rastreamento?
-    
+
+**P: Qual é a importância de fazer um backup de banco de dados imediatamente antes de iniciar uma captura de rastreamento?**
+
 Antes de iniciar uma captura de rastreamento, certifique-se de fazer backup de todos os seus bancos de dados de destino. O rastreamento capturado no destino 1 e no destino 2 é repetido. Se o estado do banco de dados não for o mesmo, os resultados da experimentação serão distorcidos.
 
-### <a name="can-i-collect-xevents-instead-of-traces-and-can-i-replay-xevents"></a>Posso coletar XEvents em vez de rastreamentos e posso reproduzir o XEvents?
-    
+**P: posso coletar XEvents em vez de rastreamentos e posso reproduzir o XEvents?**
+
 Sim. DEA dá suporte a XEvents. Baixe a versão mais recente do DEA e experimente.
 
 ## <a name="troubleshoot-trace-captures"></a>Solucionar problemas de capturas de rastreamento
 
-Se você vir um erro ao executar uma captura de rastreamento, examine os seguintes pré-requisitos:
+Se você vir um erro ao executar uma captura de rastreamento, confirme se:
 
-- Confirme se o nome do computador que executa o SQL Server é válido. Para confirmar, tente se conectar ao computador que executa o SQL Server usando o SQL Server Management Studio (SSMS).
-- Confirme se a configuração do firewall não bloqueia conexões com o computador que executa o SQL Server.
-- Confirme se o usuário tem as permissões listadas nas [perguntas frequentes sobre reprodução](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)de postagem de blog.
-- Confirme se o nome do rastreamento não segue a Convenção de substituição padrão (captura\_1). Em vez disso, tente rastrear nomes como Capture\_1A ou Capture1.
+- O nome do computador que executa o SQL Server é válido. Para confirmar, tente se conectar ao computador que executa o SQL Server usando o SQL Server Management Studio (SSMS).
+- A configuração do firewall não bloqueia conexões com o computador que executa o SQL Server.
+- O usuário tem as permissões listadas nas [perguntas frequentes sobre reprodução](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)de postagem no blog.
+- O nome do rastreamento não segue a Convenção de substituição padrão\_(captura 1). Em vez disso, tente rastrear nomes\_como captura 1a ou Capture1.
 
 A seguir estão alguns erros possíveis que você pode ver e soluções para solucioná-los:
 
@@ -138,10 +147,6 @@ A seguir estão alguns erros possíveis que você pode ver e soluções para sol
 
 Se você vir quaisquer outros erros rotulados como *código de erro SQL*, consulte [mecanismo de banco de dados erros](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors) para obter descrições detalhadas.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="see-also"></a>Consulte também
 
-- Para saber como configurar as ferramentas de Distributed Replay no SQL Server antes de reproduzir um rastreamento capturado, consulte [Configurar reprodução](database-experimentation-assistant-configure-replay.md).
-
-- Para uma introdução de 19 minutos ao DEA e à demonstração, Assista ao vídeo a seguir:
-
-  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]
+- Para saber como configurar as ferramentas de Distributed Replay no SQL Server antes de reproduzir um rastreamento capturado, consulte [configurar Distributed Replay para assistente para experimentos de banco de dados](database-experimentation-assistant-configure-replay.md).

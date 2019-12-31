@@ -1,6 +1,5 @@
 ---
-title: Criar relações baseadas em termos | Microsoft Docs
-ms.custom: ''
+title: Criar relações baseadas em termos
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: e0bec04d00222ca0dd11854b41c5ec6b4bf705a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: a982279e06a1968cf80335cd16dd9eb74e458c3e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992253"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251773"
 ---
 # <a name="create-term-based-relations"></a>Criar relações baseadas em termos
 
@@ -45,7 +44,7 @@ ms.locfileid: "67992253"
   
 -   Se um valor, conforme tiver sido alterado por uma relação baseada em termos, estiver no domínio, mas o valor for Erro/Inválido sem correção, o valor aparecerá sob a guia Inválido com a razão Valor de Domínio.  
   
- **Relações baseadas em termos e descoberta da base de dados de conhecimento**  
+ **Relações baseadas em termos e descoberta de conhecimento**  
   
  Quando você aplicar uma relação baseada em termos e em seguida executar o processo de descoberta da base de dados de conhecimento, qualquer valor compatível com o TBR permanecerá igual e será identificado como um valor correto. Qualquer valor que for alterado por um TBR será importado como um valor correto e será identificado como um sinônimo para um valor compatível com o TBR.  
   
@@ -53,19 +52,19 @@ ms.locfileid: "67992253"
   
  Se você importar uma base de conhecimento de qualidade de dados coletada durante o processo de limpeza para um domínio, um valor que é alterado por um TBR será importado como um valor correto.  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="BeforeYouBegin"></a>Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="Prerequisites"></a>Pré-requisitos  
  Para criar relações baseadas em termos, você deve ter um domínio aberto na atividade Gerenciamento de Domínio.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="Security"></a>Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="Permissions"></a>Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para criar relações baseadas em termos.  
   
-##  <a name="Create"></a> Criar relações baseadas em termos  
+##  <a name="Create"></a>Criar relações baseadas em termos  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra ou crie uma base de dados de conhecimento. Selecione **Gerenciamento de Domínio** como a atividade e, depois, clique em **Abrir** ou **Criar**. Para obter mais informações, consulte [Criar uma base de dados de conhecimento](../data-quality-services/create-a-knowledge-base.md) ou [Abrir uma base de dados de conhecimento](../data-quality-services/open-a-knowledge-base.md).  
   
@@ -93,7 +92,7 @@ ms.locfileid: "67992253"
   
     6.  Localize um valor na tabela Relações inserindo um ou mais dígitos na caixa de texto **Localizar** . Correspondências para a cadeia de caracteres serão realçadas. Use as setas para cima e para baixo para se mover para instâncias diferentes da cadeia de caracteres na tabela.  
   
-    7.  **Verificador ortográfico**: se um valor na coluna **Valor** ou **Corrigir para** tiver um sublinhado vermelho ondulado, o Verificador ortográfico sugerirá uma correção para o valor. Clique com o botão direito do mouse no valor com sublinhado e selecione um dos valores propostos pelo Verificador Ortográfico. Como alternativa, você pode clicar em **Adicionar** no menu de atalho para continuar com o valor original. Para obter mais informações, consulte [Usar o verificador ortográfico DQS](../data-quality-services/use-the-dqs-speller.md) e [Definir propriedades de domínio](../data-quality-services/set-domain-properties.md).  
+    7.  **Verificador ortográfico**: se um valor na coluna **valor** ou **corrigir para** tiver um sublinhado vermelho ondulado, o verificador ortográfico está sugerindo uma correção para o valor. Clique com o botão direito do mouse no valor com sublinhado e selecione um dos valores propostos pelo Verificador Ortográfico. Como alternativa, você pode clicar em **Adicionar** no menu de atalho para continuar com o valor original. Para obter mais informações, consulte [Usar o verificador ortográfico DQS](../data-quality-services/use-the-dqs-speller.md) e [Definir propriedades de domínio](../data-quality-services/set-domain-properties.md).  
   
         > [!NOTE]  
         >  Para usar o Verificador Ortográfico, você pode habilitá-lo na página **Propriedades de Domínio** ou, se ele estiver desabilitado na página **Propriedades de Domínio** , você poderá clicar no ícone **Habilitar/Desabilitar o Verificador Ortográfico** na página **Relações Baseadas em Termos** para habilitá-lo nessa página.  
@@ -102,7 +101,7 @@ ms.locfileid: "67992253"
   
 7.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a> Acompanhamento: após criar relações baseadas em termos  
+##  <a name="FollowUp"></a>Acompanhamento: depois de criar relações baseadas em termos  
  Depois de criar relações baseadas em termos, você poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
   

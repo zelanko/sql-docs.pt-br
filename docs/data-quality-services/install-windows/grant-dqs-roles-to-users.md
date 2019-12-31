@@ -1,6 +1,5 @@
 ---
-title: Conceder funções DQS a usuários | Microsoft Docs
-ms.custom: ''
+title: Conceder funções DQS a usuários
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: ab6554acd249e119c054754f5b6b6f5196071322
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: d5ceef0a129989eedf75d79429e8d38c999f4257
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935210"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254765"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Conceder funções DQS a usuários
 
@@ -41,7 +40,7 @@ ms.locfileid: "67935210"
   
 5.  Depois que o usuário for validado, clique na página **Mapeamento de Usuário** no painel esquerdo.  
   
-6.  No painel direito, marque a caixa de seleção na coluna **Mapa** do banco de dados **DQS_MAIN** e, depois, marque a caixa de seleção **dqs_administrator**, **dqs_kb_editor** ou **dqs_kb_operator** no painel **Associação à função de banco de dados para: DQS_MAIN**, dependendo do nível de acesso necessário para o usuário. Para obter mais informações sobre as três funções DQS, consulte [Segurança DQS](../../data-quality-services/dqs-security.md).  
+6.  No painel direito, marque a caixa de seleção sob a coluna **Mapa** do banco de dados **DQS_MAIN** e marque a caixa de seleção **dqs_administrator**, **dqs_kb_editor**ou **dqs_kb_operator** no painel **Associação à função de banco de dados para: DQS_MAIN** , dependendo do nível de acesso necessário ao usuário. Para obter mais informações sobre as três funções DQS, consulte [Segurança DQS](../../data-quality-services/dqs-security.md).  
   
 7.  Na caixa de diálogo **Logon – Novo**, clique em **OK** para aplicar as alterações.  
   
@@ -51,8 +50,8 @@ ms.locfileid: "67935210"
 ## <a name="next-steps"></a>Próximas etapas  
  Tente fazer logon no [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] usando a conta de usuário do Windows para a qual você acabou de criar o logon SQL e à qual concedeu uma função DQS.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instalar o Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [Crie um logon](../../relational-databases/security/authentication-access/create-a-login.md)  
+ [Criar um logon](../../relational-databases/security/authentication-access/create-a-login.md)  
   
   

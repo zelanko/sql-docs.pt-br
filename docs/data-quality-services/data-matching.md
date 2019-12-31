@@ -1,6 +1,5 @@
 ---
-title: Correspondência de dados | Microsoft Docs
-ms.custom: ''
+title: Correspondência de dados
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: c2aede1654f993feba951d2053d9a0ae5e31011b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 4a34828900a90d3c01814c77a76d78e7b657d6f6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992241"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251755"
 ---
 # <a name="data-matching"></a>Correspondência de dados
 
@@ -39,16 +38,16 @@ ms.locfileid: "67992241"
   
  A ilustração seguinte mostra como a correspondência de dados é feita no DQS:  
   
- ![Processo de correspondência no DQS](../data-quality-services/media/dqs-matchingprocess.gif "Matching Process in DQS")  
+ ![Processo de Correspondência no DQS](../data-quality-services/media/dqs-matchingprocess.gif "Processo de Correspondência no DQS")  
   
-##  <a name="How"></a> Como executar a correspondência de dados  
+##  <a name="How"></a>Como executar a correspondência de dados  
  Assim como acontece com outros processos de qualidade de dados no DQS, você executa a correspondência ao criar uma base de dados de conhecimento e ao executar uma atividade de correspondência em um projeto de qualidade de dados nas seguintes etapas:  
   
 1.  Criar uma política de correspondência na base de dados de conhecimento  
   
 2.  Executar um processo de eliminação de duplicação em uma atividade de correspondência que faça parte de um projeto de qualidade de dados.  
   
-###  <a name="Policy"></a> Criando uma política de correspondência  
+###  <a name="Policy"></a>Criando uma política de correspondência  
  Você prepara a base de dados de conhecimento para executar a correspondência ao criar uma política de correspondência na base de dados de conhecimento para definir como o DQS atribui a probabilidade de correspondência. Uma política de correspondência consiste em uma ou mais regras de correspondência que identificam que domínios serão usados quando o DQS avaliar o grau de correspondência entre dois registros e que especificam o peso carregado por cada valor de domínio na avaliação de correspondência. Você especifica na regra se os valores do domínio precisam ser uma correspondência exata ou se podem ser apenas semelhantes, e com que grau de semelhança. Você também especifica se a correspondência de domínio é um pré-requisito.  
   
  A atividade de política de correspondência do assistente de Gerenciamento de Base de Conhecimento analisa dados de exemplo ao aplicar cada regra de correspondência para comparar dois registros por vez no intervalo de registros. Os registros cujas pontuações de correspondência sejam maiores do que um mínimo especificado são agrupados em clusters nos resultados correspondentes. Esses resultados correspondentes não são adicionados à base de dados de conhecimento; são utilizados para o ajuste das regras de correspondência. A criação de uma política de correspondência pode ser um processo iterativo no qual você modifica regras de correspondência com base nos resultados correspondentes ou nas estatísticas de criação de perfis.  
@@ -62,7 +61,7 @@ ms.locfileid: "67992241"
   
  Cada regra de correspondência é salva na base de dados de conhecimento quando criada. Entretanto, uma base de dados de conhecimento só estará disponível para uso em um projeto de qualidade de dados quando for publicada. Além disso, até que a base de dados de conhecimento seja publicada, as regras de correspondência contidas nela não poderão ser alteradas por um usuário diferente da pessoa que a criou.  
   
-###  <a name="Project"></a> Executando um projeto de correspondência  
+###  <a name="Project"></a>Executando um projeto de correspondência  
  O DQS executa a eliminação de duplicação de dados ao comparar cada linha dos dados de origem a todas as outras linhas, usando a política de correspondência definida na base de dados de conhecimento e gerando uma probabilidade de que as linhas sejam uma correspondência. Isso é feito em um projeto de qualidade de dados com um tipo de Correspondência. A correspondência é uma das principais etapas de um projeto de qualidade de dados. Ela é mais bem executada após a limpeza de dados, de forma que os dados a serem correspondidos estejam livres de erros. Antes de executar um processo de correspondência, você pode exportar os resultados do projeto de limpeza para uma tabela de dados ou para um arquivo .csv e então criar um projeto de correspondência no qual serão mapeados os resultados da limpeza para os domínios do projeto de correspondência.  
   
  Um projeto de correspondência de dados consiste em um processo auxiliado por computador e em um processo interativo. O projeto de correspondência aplica as regras de correspondência da política de correspondência à fonte de dados a ser avaliada. Esse processo avalia a probabilidade de quaisquer duas linhas serem correspondências em uma pontuação de correspondência. Somente os registros com uma probabilidade de correspondência maior do que um valor definido pelo administrador de dados na política de correspondência serão considerados como uma correspondência.  

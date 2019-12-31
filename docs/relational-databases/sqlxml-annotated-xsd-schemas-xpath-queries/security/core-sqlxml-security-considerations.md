@@ -1,5 +1,5 @@
 ---
-title: Principais considerações de segurança do SQLXML | Microsoft Docs
+title: Principais considerações de segurança do SQLXML
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d739eb3d4a9a1466a9eef441d683aa0acd81d0a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d897d81f0f2079e06c481d62f069e4626126da1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026927"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252516"
 ---
 # <a name="core-sqlxml-security-considerations"></a>Principais considerações de segurança do SQLXML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   A seguir, encontram-se diretrizes de segurança para o uso do SQLXML para acessar dados.  
   
--   O provedor SQLXMLOLEDB expõe um **StreamFlags** propriedade que permite que você defina sinalizadores para indicar qual funcionalidade do SQLXML deve ser habilitada ou desabilitada para cada instância específica. Você pode usar essa propriedade para personalizar o uso do SQLXML e ter certeza de que apenas os que você deseja estão habilitados. Para obter mais informações, consulte [provedor SQLXMLOLEDB &#40;SQLXML 4.0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110).  
+-   O provedor SQLXMLOLEDB expõe uma propriedade **StreamFlags** que permite que você defina sinalizadores indicando qual funcionalidade do SQLXML deve ser habilitada ou desabilitada para cada instância específica. Você pode usar essa propriedade para personalizar o uso do SQLXML e ter certeza de que apenas os que você deseja estão habilitados. Para obter mais informações, consulte [SQLXMLOLEDB Provider &#40;SQLXML 4,0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110).  
   
 -   Quando erros de SQLXML ocorrem e são retornados, eles podem conter informações sobre o esquema de banco de dados, como nomes de tabela, nomes de colunas ou informações sobre tipo. Você deve ter cuidado ao tratar esses erros, para que as informações sobre a instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não sejam facilmente descobertas por usuários não autorizados.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68026927"
   
 -   Ao receber resultados de consulta, o SQLXML não executa nenhuma ação com base no conteúdo dos dados que recebe. Nenhum processamento adicional é feito baseado no tipo ou no conteúdo dos dados. Os dados nunca são tratados como código com o qual as ações serão executadas.  
   
--   Ao executar modelos XML, o SQLXML converte as consultas XPath e DBObject contidas no modelo enviado em comandos de [!INCLUDE[tsql](../../../includes/tsql-md.md)] que são, por sua vez, executados no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esses comandos só afetam os dados existentes. Os comandos gerados pelo SQLXML nunca alterarão a estrutura do banco de dados. Os usuários devem executar comandos explícitos para alterar a estrutura do banco de dados. Por exemplo, ao incluí-los em um **sql:query** bloco de um modelo.  
+-   Ao executar modelos XML, o SQLXML converte as consultas XPath e DBObject contidas no modelo enviado em comandos de [!INCLUDE[tsql](../../../includes/tsql-md.md)] que são, por sua vez, executados no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esses comandos só afetam os dados existentes. Os comandos gerados pelo SQLXML nunca alterarão a estrutura do banco de dados. Os usuários devem executar comandos explícitos para alterar a estrutura do banco de dados. Por exemplo, incluindo-os em um bloco **SQL: Query** de um modelo.  
   
 -   Ao executar consultas DBObject e instruções XPath em arquivos de mapeamento, o SQLXML não alterará os dados no banco de dados.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "68026927"
   
 -   O SQLXML permite que os usuários executem qualquer consulta SQL que queiram no banco de dados. Essa funcionalidade nunca deve ser exposta para uma fonte não segura ou não controlada, já que ela está abrindo o banco de dados SQL para qualquer usuário.  
   
--   Ao executar diagramas de atualização, o SQLXML converte o **updg:sync** blocos de comandos INSERT, UPDATE e DELETE em relação a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância. Esses comandos só afetam os dados existentes. Os comandos gerados pelo SQLXML nunca alterarão o banco de dados. Os usuários devem executar comandos explícitos para alterar a estrutura do banco de dados. Por exemplo, ao incluí-los em um **sql:query** bloco de um modelo.  
+-   Ao executar Updategrams, o SQLXML traduz os blocos **updg: Sync** nos comandos delete, Update e Insert em relação à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância. Esses comandos só afetam os dados existentes. Os comandos gerados pelo SQLXML nunca alterarão o banco de dados. Os usuários devem executar comandos explícitos para alterar a estrutura do banco de dados. Por exemplo, incluindo-os em um bloco **SQL: Query** de um modelo.  
   
--   Ao executar diagramas de atualização, o SQLXML converte o diagrama em comandos DELETE, UPDATE e INSERT na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esses comandos só afetam os dados existentes. Os comandos gerados pelo SQLXML nunca alterarão o banco de dados. Os usuários devem executar comandos explícitos para alterar a estrutura do banco de dados. Por exemplo, ao incluí-los em um **sql:query** bloco de um modelo.  
+-   Ao executar diagramas de atualização, o SQLXML converte o diagrama em comandos DELETE, UPDATE e INSERT na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esses comandos só afetam os dados existentes. Os comandos gerados pelo SQLXML nunca alterarão o banco de dados. Os usuários devem executar comandos explícitos para alterar a estrutura do banco de dados. Por exemplo, incluindo-os em um bloco **SQL: Query** de um modelo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Considerações de segurança do SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  
   
   

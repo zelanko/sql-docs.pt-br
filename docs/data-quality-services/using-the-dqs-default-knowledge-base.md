@@ -1,5 +1,5 @@
 ---
-title: Usando a base de dados de conhecimento padrão do DQS | Microsoft Docs
+title: Usando a base de dados de conhecimento padrão do DQS
 ms.custom: ''
 ms.date: 07/31/2012
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: a07b2c32c205af10c65e42b290dc7187376871ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 2696a911edeefecc1dc34efeb77351acbaafc0d8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991717"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257742"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>Usando a base de dados de conhecimento padrão do DQS
 
@@ -23,34 +23,34 @@ ms.locfileid: "67991717"
 
   Este tópico descreve a base de dados de conhecimento padrão, os **Dados do DQS**que são instalados com o [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Esta é uma base de conhecimento padrão pré-criada que contém os seguintes domínios:  
   
--   **País/região**: contêm os nomes convencionais longos (nome oficial conforme designado pelo país/região) e nomes curtos (nome comum usado em listas, mapas, etc.), abreviação de duas letras, abreviação de três letras e código de três dígitos para cada local.  O valor principal é definido como o nome longo do país.  
+-   **País/região**: contém o longo convencional (nome oficial conforme designado pelo país/região) e nomes curtos (nome comum usado em listas, mapas, etc.), abreviação de duas letras, abreviação de três letras e código de três dígitos para cada local.  O valor principal é definido como o nome longo do país.  
   
--   **País/região (início com três letras)** : contêm os nomes convencionais longos (nome oficial conforme designado pelo país/região) e nomes curtos (nome comum usado em listas, mapas e assim por diante), abreviação de duas letras, abreviação de três letras e código de três dígitos para cada local.  Os valores principais são definidos como uma abreviação de três letras do Município.  
+-   **País/região (entrelinha de três letras)**: contém o longo convencional (nome oficial conforme designado pelo país/região) e nomes curtos (nome comum usado em listas, mapas e assim por diante), abreviação de duas letras, abreviação de três letras e código de três dígitos para cada local.  Os valores principais são definidos como uma abreviação de três letras do Município.  
   
--   **País/região (início com duas letras)** : contêm os nomes convencionais longos (nome oficial conforme designado pelo país/região) e nomes curtos (nome comum usado em listas, mapas, etc.), abreviação de duas letras, abreviação de três letras e código de três dígitos para cada local.  O valor principal é definido como uma abreviação de duas letras do País.  
+-   **País/região (entrelinha de duas letras)**: contém o longo convencional (nome oficial conforme designado pelo país/região) e nomes curtos (nome comum usado em listas, mapas, etc.), abreviação de duas letras, abreviação de três letras e código de três dígitos para cada local.  O valor principal é definido como uma abreviação de duas letras do País.  
   
--   **EUA – Municípios**: contém uma lista de municípios dos EUA.  
+-   **US-Counts**: contém uma lista de contagens dos EUA.  
   
--   **EUA – Sobrenome**: contém uma lista de sobrenomes que ocorreram 100 ou mais vezes no Censo 2000.  
+-   **US-Last Name**: contém uma lista de sobrenomes (sobrenomes) que ocorrem 100 ou mais vezes no censo 2000.  
   
--   **EUA – Locais**: contém uma lista de locais para os 50 estados, o Distrito de Colúmbia e Porto Rico extraídos do Censo 2010.  
+-   **US-Places**: contém uma lista de locais para os Estados 50, o distrito de Columbia e Porto Rico extraído do censo 2010.  
   
--   **EUA – Estado**: contém o nome convencional longo (oficial) e a abreviação de duas letras para cada estado nos EUA. O valor principal é definido como o nome convencional do estado.  
+-   Estados **Unidos**: contém o nome convencional longo (oficial) e a abreviação de duas letras para cada Estado nos EUA. O valor principal é definido como o nome convencional do estado.  
   
--   **EUA – Estado (título com duas letras)** : contém o nome convencional longo (oficial) e a abreviação de duas letras para cada estado nos EUA. O valor principal é definido como um nome de estado com abreviação de duas letras.  
+-   Estados **Unidos (cabeçalho de 2 letras)**: contém o nome convencional longo (oficial) e a abreviação de duas letras para cada Estado nos EUA. O valor principal é definido como um nome de estado com abreviação de duas letras.  
   
 ## <a name="using-the-default-knowledge-base"></a>Usando a base de dados de conhecimento padrão  
  Você pode usar a base de dados de conhecimento padrão do DQS, os Dados do DQS, das seguintes formas:  
   
 -   Inicie e execute rapidamente um projeto de qualidade de dados de limpeza usando a base de dados de conhecimento padrão sem ter que primeiro criar uma nova base de dados de conhecimento em DQS.  
   
--   Execute o Gerenciamento de Domínio, a Descoberta de Conhecimento ou as atividades de Política de Correspondência na base de dados de conhecimento padrão. Para fazer isso, clique em **Abrir Base de Dados de Conhecimento** na [Data Quality Client Home Screen](../data-quality-services/data-quality-client-home-screen.md), selecione a base de dados de conhecimento **Dados do DQS** na tela **Abrir Base de Dados de Conhecimento** e, em seguida, selecione a atividade na área **Selecionar Atividade** . Clique em **Avançar** para continuar.  
+-   Execute o Gerenciamento de Domínio, a Descoberta de Conhecimento ou as atividades de Política de Correspondência na base de dados de conhecimento padrão. Para fazer isso, clique em **Abrir Base de Dados de Conhecimento** na [Data Quality Client Home Screen](../data-quality-services/data-quality-client-home-screen.md), selecione a base de dados de conhecimento **Dados do DQS** na tela **Abrir Base de Dados de Conhecimento** e, em seguida, selecione a atividade na área **Selecionar Atividade** . Clique em **Próximo** para continuar.  
   
 -   Crie uma nova base de dados de conhecimento usando a base de dados de conhecimento padrão. Para criar uma base de dados de conhecimento de uma base de conhecimento existente, consulte [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md).  
   
 -   Use-a no [Componente de limpeza DQS no Integration Services](https://go.microsoft.com/fwlink/?LinkId=238830) e [Suplemento do Master Data Services para Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Bases de Dados de Conhecimento DQS e domínios](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Bases de dados de conhecimento e domínios do DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

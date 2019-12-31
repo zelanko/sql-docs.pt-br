@@ -1,6 +1,5 @@
 ---
-title: Objeto SqlXmlAdapter (Classes gerenciadas SQLXML) | Microsoft Docs
-ms.custom: ''
+title: Objeto SqlXmlAdapter (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,27 +15,28 @@ helpviewer_keywords:
 ms.assetid: 0a16eddf-fc26-4d92-82d4-359b5fb905d5
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 761a3be11c75844d7e7e014339cfa03bc2196ad3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f1361babe25e8546b120bed352e31c7fa87d133
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119628"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251394"
 ---
 # <a name="sqlxml-managed-classes---sqlxmladapter-object"></a>Classes gerenciadas SQLXML – Objeto SqlXmlAdapter
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Este objeto fornece métodos que facilitam a interação com o conjunto de dados no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Para obter um exemplo funcional, consulte [acessando a funcionalidade SQLXML no ambiente .NET](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
+  Este objeto fornece métodos que facilitam a interação com o conjunto de dados no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Para obter um exemplo funcional, consulte [acessando a funcionalidade SQLXML no ambiente .net](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
  O objeto SqlXmlAdapter dá suporte a esses métodos:  
   
- void Fill (DataSet ds)  
+ void Fill (DataSet DS)  
  Preenche o conjunto de dados no .NET Framework com os dados XML recuperados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- void Update (DataSet ds)  
+ anular atualização (DataSet DS)  
  Aplica atualizações a registros no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a partir dos dados do conjunto de dados.  
   
- O objeto SqlXmlAdapter dá suporte a estes construtores:  
+ O objeto SqlXmlAdapter dá suporte a esses construtores:  
   
 ```  
 public SqlXmlAdapter(SqlXmlCommand  cmd)   
@@ -54,8 +54,8 @@ public SqlXmlAdapter(
                      )   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Objeto SqlXmlCommand &#40;Classes gerenciadas SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
- [Objeto SqlXmlParameter &#40;Classes gerenciadas SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlparameter-object.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Objeto SqlXmlCommand &#40;classes gerenciadas SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
+ [Objeto SqlXmlParameter &#40;classes gerenciadas SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlparameter-object.md)  
   
   

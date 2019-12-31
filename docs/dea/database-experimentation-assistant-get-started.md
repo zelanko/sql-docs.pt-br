@@ -1,7 +1,7 @@
 ---
 title: Visão geral do processo de comparação de carga de trabalho
 description: O Assistente para Experimentos de Banco de Dados (DEA) é uma solução de teste A/B para alterações em ambientes SQL Server, como atualizações ou novos índices.
-ms.date: 11/16/2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -9,15 +9,15 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: jtoland
+ms.author: rajsell
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 18cba7abf0d73197c248a62283d52126873169a3
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.openlocfilehash: 36e36060e16ff85ba2b1fa58d9d900231cf6581f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74165753"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258517"
 ---
 # <a name="overview-of-the-workload-comparison-process"></a>Visão geral do processo de comparação de carga de trabalho
 
@@ -31,13 +31,13 @@ Este artigo fornece uma visão geral desse processo.
 
 ## <a name="capturing-a-workload-trace"></a>Capturando um rastreamento de carga de trabalho
 
-O primeiro estágio do teste SQL Server A/B é capturar um rastreamento no servidor de origem. O servidor de origem geralmente é o servidor de produção. Os arquivos de rastreamento capturam toda a carga de trabalho de consulta nesse servidor, incluindo carimbos de data/hora.
+O primeiro estágio do teste SQL Server A/B é capturar um rastreamento no servidor de origem. O servidor de origem é geralmente o servidor de produção. Os arquivos de rastreamento capturam toda a carga de trabalho de consulta nesse servidor, incluindo carimbos de data/hora.
 
 Considerações:
 
-- Antes de começar a capturar o rastreamento de carga de trabalho, certifique-se de fazer backup dos bancos de dados dos quais você está capturando o rastreamento.
-- Um usuário do DEA deve ser configurado para se conectar ao banco de dados usando a autenticação do Windows.
-- Uma conta de serviço SQL Server requer acesso ao caminho do arquivo de rastreamento de origem.
+- Antes de começar, certifique-se de fazer backup dos bancos de dados dos quais você capturará o rastreamento.
+- O usuário DEA deve ser capaz de se conectar ao banco de dados usando a autenticação do Windows.
+- Uma conta de serviço de SQL Server deve ser capaz de acessar o caminho do arquivo de rastreamento de origem.
 - Para DEA determinar se o desempenho de uma consulta foi melhorado ou degradado, essa consulta deve ser executada pelo menos 15 vezes durante o período de captura.
 
 ## <a name="replaying-a-workload-trace"></a>Reprodução de um rastreamento de carga de trabalho
@@ -46,7 +46,7 @@ O segundo estágio do teste SQL Server A/B é reproduzir o arquivo de rastreamen
 
 Destino 1, que imita o destino do servidor de origem 2, que imita seu ambiente de destino proposto.
 
-As configurações de hardware do destino 1 e do destino 2 devem ser tão parecidas quanto possível, de modo que SQL Server possa analisar com precisão o efeito de desempenho de suas alterações propostas.
+As configurações de hardware do destino 1 e do destino 2 devem ser as mais semelhantes possíveis para que SQL Server possa analisar com precisão o efeito de desempenho de suas alterações propostas.
 
 Considerações:
 
@@ -56,13 +56,13 @@ Considerações:
 
 ## <a name="analyzing-the-replayed-workload-traces"></a>Analisando os rastreamentos de carga de trabalho reproduzidos
 
-O estágio final do processo é gerar um relatório de análise usando os rastreamentos de reprodução. Em seguida, você pode examinar o relatório de análise para obter informações sobre as possíveis implicações de desempenho da alteração proposta.
+O estágio final do processo é gerar um relatório de análise usando os rastreamentos de reprodução e revisar o relatório para obter informações sobre as possíveis implicações de desempenho da alteração proposta.
 
 Considerações:
 
 - Se um ou mais componentes estiverem ausentes, uma página pré-requisitos com links para downloads será exibida quando você tentar gerar um novo relatório de análise (conexão com a Internet necessária).
-- Para exibir um relatório que foi gerado em uma versão anterior da ferramenta, você deve primeiro atualizar o esquema.
+- Para exibir um relatório gerado em uma versão anterior da ferramenta, você deve primeiro atualizar o esquema.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- Para saber como produzir um arquivo de rastreamento com um log de eventos que ocorrem em um servidor, consulte [capturar rastreamento](database-experimentation-assistant-capture-trace.md).
+- Para saber como produzir um arquivo de rastreamento com um log de eventos que ocorrem em um servidor, consulte o artigo [capturar um rastreamento em Assistente para experimentos de banco de dados](database-experimentation-assistant-capture-trace.md).

@@ -1,6 +1,5 @@
 ---
-title: Especificando variáveis XPath em consultas XPath (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Especificando variáveis XPath em consultas XPath (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,22 +12,23 @@ helpviewer_keywords:
 ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1036b6e1255013fac79e10b31f5870436344c36c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f73bb6880fb19f3e49387d9d3d0bb57100ffdf42
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027043"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252535"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>Especificando variáveis XPath em consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Os exemplos a seguir mostram como as variáveis XPath são passadas em consultas XPath. As consultas XPath nesses exemplos são especificadas com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre esse esquema de exemplo, consulte [anotado de exemplo de esquema XSD para exemplos de XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Os exemplos a seguir mostram como as variáveis XPath são passadas em consultas XPath. As consultas XPath nesses exemplos são especificadas com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre este esquema de exemplo, consulte [exemplo de esquema XSD anotado para exemplos de XPath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-use-the-xpath-variables"></a>A. Usar as variáveis XPath  
- Um modelo de exemplo consiste em duas consultas XPath. Cada uma das consultas XPath assume um parâmetro. O modelo também especifica valores padrão para esses parâmetros. Serão usados os valores padrão se não forem especificados valores dos parâmetros. Dois parâmetros com valores padrão são especificados em  **\<sql:header >** .  
+### <a name="a-use-the-xpath-variables"></a>R. Usar as variáveis XPath  
+ Um modelo de exemplo consiste em duas consultas XPath. Cada uma das consultas XPath assume um parâmetro. O modelo também especifica valores padrão para esses parâmetros. Serão usados os valores padrão se não forem especificados valores dos parâmetros. Dois parâmetros com valores padrão são especificados em ** \<SQL: header>**.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -47,7 +47,7 @@ ms.locfileid: "68027043"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para testar a consulta XPath com relação ao esquema de mapeamento  
   
-1.  Cópia de [exemplos de código de esquema](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
+1.  Copie o [código do esquema de exemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
   
 2.  Crie o modelo seguinte (XPathVariables.xml) e salve-o no diretório onde:  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68027043"
     mapping-schema="C:\MyDir\SampleSchema1.xml"  
     ```  
   
-3.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo. Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+3.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo. Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 > [!NOTE]  
 >  Neste exemplo, nenhum parâmetro é passado. Por isso, são usados os valores de parâmetro padrão.  

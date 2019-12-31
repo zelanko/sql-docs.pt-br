@@ -1,6 +1,5 @@
 ---
-title: Acessando a funcionalidade SQLXML no ambiente .NET | Microsoft Docs
-ms.custom: ''
+title: Acessar a funcionalidade do SQLXML no ambiente .NET
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,23 +14,24 @@ helpviewer_keywords:
 ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 848d37521d786173e595cf3616a25530c80c77a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9a5edd3555c2d57cf9d615b7158d034571987cb5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073261"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251512"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>Acessando a funcionalidade SQLXML no ambiente .NET
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Este exemplo mostra:  
   
--   Como usar [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Classes gerenciadas SQLXML (Microsoft.Data.SqlXml) para acessar o Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ambiente .NET Framework.  
+-   Como usar [!INCLUDE[msCoName](../../../includes/msconame-md.md)] classes gerenciadas SQLXML (Microsoft. Data. SQLXML) para acessar a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Microsoft no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ambiente de .NET Framework.  
   
 -   Como os DiffGrams que são gerados no ambiente .NET Framework podem aplicar atualizações de dados a tabelas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Neste aplicativo, uma consulta XPath é executada em um esquema XSD. A execução da consulta XPath retorna um documento XML que consiste em dados de contato (**FirstName**, **Sobrenome**). O aplicativo carrega o documento XML no conjunto de dados no ambiente .NET Framework. Os dados no conjunto de dados são modificados: o nome do contato é alterado para "Susan", para o primeiro contato no conjunto de dados. O DiffGram é gerado a partir do conjunto de dados, e a atualização que é especificada no DiffGram (a alteração do nome do funcionário) é então aplicada à tabela Person.Contact.  
+ Neste aplicativo, uma consulta XPath é executada em um esquema XSD. A execução da consulta XPath retorna um documento XML que consiste em dados de contato (**FirstName**, **LastName**). O aplicativo carrega o documento XML no conjunto de dados no ambiente .NET Framework. Os dados no conjunto de dados são modificados: o nome do contato é alterado para "Susan", para o primeiro contato no conjunto de dados. O DiffGram é gerado a partir do conjunto de dados, e a atualização que é especificada no DiffGram (a alteração do nome do funcionário) é então aplicada à tabela Person.Contact.  
   
 > [!NOTE]  
 >  No código, é necessário fornecer o nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na cadeia de conexão.  

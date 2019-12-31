@@ -1,7 +1,7 @@
 ---
-title: Criar um aplicativo Web Master Data Manager
-ms.custom: ''
-ms.date: 03/01/2017
+title: Criar aplicativo Web Master Data Manager
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 384cf7989f41dce541afcfdd44b2831c79fde31e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0c0bf0cacc1fa1a1d042633531840ba46d1fae2b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729452"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253073"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>Criar um aplicativo Web do Master Data Manager (Master Data Services)
 
@@ -47,7 +47,7 @@ ms.locfileid: "73729452"
   
 #### <a name="to-create-a-master-data-manager-web-application-in-a-new-website"></a>Para criar um aplicativo Web do Master Data Manager em um novo site  
   
-1.  Abra o [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+1.  Abra [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
 2.  No painel esquerdo, clique em **Configuração da Web**.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "73729452"
   
 #### <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>Para criar um aplicativo Web do Master Data Manager em um site existente  
   
-1.  Abra o [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+1.  Abra [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
 2.  No painel esquerdo, clique em **Configuração da Web**.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "73729452"
   
 -   Opcionalmente, configure o site que hospeda o aplicativo Web do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] para usar uma associação de HTTPS se quiser criptografar o conteúdo usando o protocolo SSL. Você deverá usar uma ferramenta do IIS (Serviço de Informações da Internet), como o Gerenciador do IIS, para configurar o certificado do servidor para o servidor Web e para configurar uma associação de HTTPS e as configurações de SSL do site. Para obter mais informações, consulte [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Instalar o Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Instalar Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

@@ -1,6 +1,5 @@
 ---
-title: Especificando eixos em consultas XPath (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Especificando eixos em consultas XPath (SQLXML)
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,30 +17,31 @@ helpviewer_keywords:
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3fd00cae14d5dd3f00a848edc166b7fbe8c4b7c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8b582b9f31245c13ec2c20e91736f794f19efd53
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102408"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252596"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Especificando eixos em consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Os seguintes exemplos mostram como os eixos são especificados em consultas XPath.  
   
- As consultas XPath nesses exemplos são especificadas com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre esse esquema de exemplo, consulte [anotado de exemplo de esquema XSD para exemplos de XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+ As consultas XPath nesses exemplos são especificadas com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre este esquema de exemplo, consulte [exemplo de esquema XSD anotado para exemplos de XPath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-retrieve-child-elements-of-the-context-node"></a>A. Recuperar elementos filho do nó de contexto  
- A seguinte consulta XPath seleciona todos os  **\<contato >** elementos filho do nó de contexto:  
+### <a name="a-retrieve-child-elements-of-the-context-node"></a>R. Recuperar elementos filho do nó de contexto  
+ A consulta XPath a seguir seleciona todos ** \<** os elementos filho de contato>do nó de contexto:  
   
 ```  
 /child::Contact  
 ```  
   
- Na consulta, `child` é o eixo e `Contact` é o teste de nó (TRUE se `Contact` é uma  **\<elemento >** nó, pois \<elemento > é o tipo de nó primário associado a `child` eixo).  
+ Na consulta `child` , é o eixo e `Contact` é o teste de nó (verdadeiro se `Contact` for um ** \<elemento>** nó, porque \<o elemento> é o tipo de nó primário associado `child` ao eixo).  
   
  O eixo `child` é o padrão. Portanto, a consulta pode ser escrita da seguinte forma:  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68102408"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para testar a consulta XPath com relação ao esquema de mapeamento  
   
-1.  Cópia de [exemplos de código de esquema](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
+1.  Copie o [código do esquema de exemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
   
 2.  Crie o seguinte modelo (XPathAxesSampleA.xml) e salve-o no diretório onde SampleSchema1.xml foi salvo.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68102408"
   
 3.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Aqui está o conjunto de resultados parcial da execução do modelo:  
   
@@ -86,15 +86,15 @@ ms.locfileid: "68102408"
 ```  
   
 ### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. Recuperar os netos do nó de contexto  
- A seguinte consulta XPath seleciona todos os as  **\<ordem >** filhos do elemento a  **\<cliente >** elementos filhos do nó de contexto:  
+ A consulta XPath a seguir seleciona todos ** \<** os elementos de>de ordem dos filhos do elemento ** \<>do cliente** do nó de contexto:  
   
 ```  
 /child::Customer/child::Order  
 ```  
   
- Na consulta, `child` é o eixo e `Customer` e `Order` são os testes de nó (estes testes de nó são TRUE se Customer e Order forem  **\<elemento >** nós, porque o  **\<elemento >** nó é o nó principal para o **filho** eixo). Para cada nó que corresponde  **\<cliente >** , os nós que correspondem  **\<pedidos >** são adicionados ao resultado. Somente  **\<ordem >** é retornado no conjunto de resultados.  
+ Na `child` consulta, é o eixo e `Customer` e `Order` são os testes de nó (esses testes de nó são verdadeiros se Customer e Order são ** \<elementos>** Nodes, porque o ** \<elemento>** nó é o nó primário para o eixo **filho** ). Para cada nó correspondente ** \<>do cliente **, os nós que correspondem ** \<aos pedidos>** são adicionados ao resultado. Somente ** \<Order>** é retornado no conjunto de resultados.  
   
- O **filho** eixo é o padrão. Assim, a consulta pode ser especificada como:  
+ O eixo **filho** é o padrão. Assim, a consulta pode ser especificada como:  
   
 ```  
 /Customer/Order  
@@ -102,7 +102,7 @@ ms.locfileid: "68102408"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para testar a consulta XPath com relação ao esquema de mapeamento  
   
-1.  Cópia de [exemplos de código de esquema](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
+1.  Copie o [código do esquema de exemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
   
 2.  Crie o seguinte modelo (XPathAxesSampleB.xml) e salve-o no diretório onde:  
   
@@ -122,7 +122,7 @@ ms.locfileid: "68102408"
   
 3.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Aqui está o conjunto de resultados parcial da execução do modelo:  
   
@@ -161,16 +161,16 @@ ms.locfileid: "68102408"
 </ROOT>  
 ```  
   
- Se a consulta XPath é especificada como `Customer/Order/OrderDetail`, de cada nó que corresponde  **\<cliente >** a consulta navegará para sua  **\<Order >** elementos. E para cada nó que corresponde  **\<ordem >** , a consulta adiciona nós  **\<OrderDetail >** ao resultado. Somente  **\<OrderDetail >** é retornado no conjunto de resultados.  
+ Se a consulta XPath for especificada como `Customer/Order/OrderDetail`, de cada nó correspondente ** \<ao cliente>** a consulta navegará para o ** \<pedido>** elementos. E para cada nó que corresponde ** \<a Order>**, a consulta adiciona os nós ** \<>a OrderDetail** para o resultado. Somente ** \<>OrderDetail** é retornado no conjunto de resultados.  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. Usar . para especificar o eixo pai  
- A consulta a seguir recupera todos os  **\<ordem >** elementos com um pai  **\<cliente >** elemento com um **CustomerID** atributo valor de 1. A consulta usa o **filho** eixo no predicado para localizar o pai do  **\<ordem >** elemento.  
+ A consulta a seguir recupera todos os elementos de ** \<>de ordem** com um elemento de ** \<>de cliente** pai com um valor de atributo **CustomerID** de 1. A consulta usa o eixo **filho** no predicado para localizar o pai do elemento ** \<Order>** .  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
 ```  
   
- O **filho** eixo é o eixo padrão. Assim, a consulta pode ser especificada como:  
+ O eixo **filho** é o eixo padrão. Assim, a consulta pode ser especificada como:  
   
 ```  
 /Customer/Order[../@CustomerID="1"]  
@@ -183,11 +183,11 @@ ms.locfileid: "68102408"
 ```  
   
 > [!NOTE]  
->  A consulta XPath `/Order[../@CustomerID="1"]` retornará um erro porque não há nenhum pai de  **\<ordem >** . Embora possa haver elementos no esquema de mapeamento que contêm  **\<ordem >** , o XPath não começou em qualquer um deles; Consequentemente,  **\<Order >** é considerado o tipo de elemento de nível superior no documento.  
+>  A consulta `/Order[../@CustomerID="1"]` XPath retornará um erro porque não há nenhum pai de ** \<>de ordem **. Embora possa haver elementos no esquema de mapeamento que contenham ** \<Order>**, o XPath não começou em nenhum deles; Consequentemente, ** \<Order>** é considerado um tipo de elemento de nível superior no documento.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para testar a consulta XPath com relação ao esquema de mapeamento  
   
-1.  Cópia de [exemplos de código de esquema](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
+1.  Copie o [código do esquema de exemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
   
 2.  Crie o seguinte modelo (XPathAxesSampleC.xml) e salve-o no diretório onde:  
   
@@ -207,7 +207,7 @@ ms.locfileid: "68102408"
   
 3.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Aqui está o conjunto de resultados parcial da execução do modelo:  
   
@@ -248,13 +248,13 @@ ms.locfileid: "68102408"
 ```  
   
 ### <a name="d-specify-the-attribute-axis"></a>D. Especificar o eixo de atributo  
- A seguinte consulta XPath seleciona todos os as  **\<cliente >** elementos filho do nó de contexto com um **CustomerID** valor de 1 atributo:  
+ A consulta XPath a seguir seleciona todos os **** ** \<** elementos filho do cliente>do nó de contexto com um valor de atributo CustomerId de 1:  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  
 ```  
   
- No predicado `attribute::CustomerID`, `attribute` é o eixo e `CustomerID` é o teste de nó (se `CustomerID` é um atributo que o teste de nó será TRUE, pois o  **\<atributo >** nó é o nó principal o `attribute` eixo).  
+ No `attribute::CustomerID`predicado `attribute` , é o eixo `CustomerID` e é o teste de nó `CustomerID` (se for um atributo que o teste de nó é verdadeiro, porque o ** \<atributo>** nó é o `attribute` nó primário do eixo).  
   
  Um atalho para o eixo `attribute` (@) pode ser especificado e, como o eixo `child` é o padrão, ele pode ser omitido da consulta:  
   
@@ -264,7 +264,7 @@ ms.locfileid: "68102408"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para testar a consulta XPath com relação ao esquema de mapeamento  
   
-1.  Cópia de [exemplos de código de esquema](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
+1.  Copie o [código do esquema de exemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
   
 2.  Crie seguinte o modelo (XPathAxesSampleD.xml) e salve-o no diretório onde SampleSchema1.xml foi salvo.  
   
@@ -284,7 +284,7 @@ ms.locfileid: "68102408"
   
 3.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Aqui está o conjunto de resultados parcial da execução do modelo:  
   

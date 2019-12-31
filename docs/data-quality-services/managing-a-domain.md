@@ -1,6 +1,5 @@
 ---
-title: Gerenciando um domínio | Microsoft Docs
-ms.custom: ''
+title: Gerenciando um domínio
 ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 4fff10431e020ad7092a82ff18ae55e3c85ab2df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 40482e599244f0e5102195cd0e34c3718a06d149
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991916"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258438"
 ---
 # <a name="managing-a-domain"></a>Gerenciando um domínio
 
@@ -49,18 +48,18 @@ ms.locfileid: "67991916"
 |-|-|  
 |Criar uma representação semântica de um campo de dados com um tipo de dados específico, especificar como o domínio é populado e formatar a saída do domínio|[Criar um domínio](../data-quality-services/create-a-domain.md)|  
 |Vincular um domínio a outro, permitindo o compartilhamento das mesmas configurações e valores|[Criar um domínio vinculado](../data-quality-services/create-a-linked-domain.md)|  
-|Associar um serviço de dados de referência a um domínio único ou composto|[Anexar domínio ou domínio de composição para dados de referência](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
+|Associar um serviço de dados de referência a um domínio único ou composto|[Anexar domínio ou domínio composto a dados de referência](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
 |Alterar ou aumentar os valores em uma base de dados de conhecimento|[Alterar valores de domínio](../data-quality-services/change-domain-values.md)|  
 |Usar regras de validação e padronização|[Criar uma regra de domínio](../data-quality-services/create-a-domain-rule.md)|  
 |Usar relações para corrigir um termo que faz parte de um valor em um domínio|[Criar relações baseadas em termos](../data-quality-services/create-term-based-relations.md)|  
-|Concluir, fechar ou cancelar a atividade de gerenciamento de domínio|[Encerrar a atividade Gerenciamento de Domínio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
+|Concluir, fechar ou cancelar a atividade de gerenciamento de domínio|[Encerrar a atividade de gerenciamento de domínio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Criar uma base de dados de conhecimento executando a descoberta da base de dados de conhecimento e gerenciando o conhecimento de modo interativo|[Criar uma base de dados de conhecimento](../data-quality-services/building-a-knowledge-base.md)|  
-|Importar ou exportar conhecimento para/de uma base de dados de conhecimento.|[Importar e exportar conhecimento](../data-quality-services/importing-and-exporting-knowledge.md)|  
-|Criar um domínio composto e adicionar conhecimento ao domínio.|[Gerenciar um domínio de composição](../data-quality-services/managing-a-composite-domain.md)|  
+|Criar uma base de dados de conhecimento executando a descoberta da base de dados de conhecimento e gerenciando o conhecimento de modo interativo|[Criando uma base de dados de conhecimento](../data-quality-services/building-a-knowledge-base.md)|  
+|Importar ou exportar conhecimento para/de uma base de dados de conhecimento.|[Importando e exportando conhecimento](../data-quality-services/importing-and-exporting-knowledge.md)|  
+|Criar um domínio composto e adicionar conhecimento ao domínio.|[Gerenciando um domínio composto](../data-quality-services/managing-a-composite-domain.md)|  
   
   

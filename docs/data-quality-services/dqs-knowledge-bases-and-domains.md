@@ -1,6 +1,5 @@
 ---
-title: Bases de dados de conhecimento e domínios do DQS | Microsoft Docs
-ms.custom: ''
+title: Bases de Dados de Conhecimento DQS e domínios
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: d0eb69992a6a22a86eae3038a405eb2dd77bcfc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: b84c1cee7dd805e68e0742c72980d7fb8a55c54b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935310"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251645"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Bases de Dados de Conhecimento DQS e domínios
 
@@ -39,24 +38,24 @@ ms.locfileid: "67935310"
   
  A ilustração a seguir exibe vários componentes em uma base de dados de conhecimento e um domínio no DQS:  
   
- ![Base de dados de conhecimento e domínios no DQS](../data-quality-services/media/dqs-knowledgebasesanddomains.gif "Knowledge Base and Domains in DQS")  
+ ![Base de Dados de Conhecimento e Domínios do DQS](../data-quality-services/media/dqs-knowledgebasesanddomains.gif "Base de Dados de Conhecimento e Domínios do DQS")  
   
-##  <a name="How"></a> Como criar e compilar uma base de dados de conhecimento do DQS  
+##  <a name="How"></a>Como criar e compilar uma base de dados de conhecimento do DQS  
  Criar uma base de dados de conhecimento do DQS envolve os processos e componentes a seguir:  
   
- **Descoberta da Base de Dados de Conhecimento**  
+ **Descoberta de conhecimento**  
  Um processo assistido por computador que cria conhecimento em uma base de dados de conhecimento processando um exemplo de dados  
   
- **Gerenciamento de Domínio**  
+ **Gerenciamento de domínio**  
  Um processo interativo que permite que o administrador de dados verifique e modifique o conhecimento que existe em domínios de base de dados de conhecimento, cada um dos quais associados a um campo de dados. Isto pode incluir configurar as propriedades de campo, criando regras, alterando valores específicos, usando serviços de dados de referência ou configurando relacionamentos baseados em termos ou entre campos.  
   
  **Serviços de Dados de Referência**  
  Um processo de gerenciamento de domínio que permite validar seus dados em relação a dados mantidos e garantidos por um provedor de dados de referência.  
   
- **Política de Correspondência**  
+ **Política de correspondência**  
  Uma política que define como o DQS processa registros para identificar duplicatas potenciais e não correspondências, que se integra à base de dados de conhecimento em um processo interativo e assistido por computador.  
   
-##  <a name="Discovery"></a> Descoberta da Base de Dados de Conhecimento  
+##  <a name="Discovery"></a>Descoberta de conhecimento  
  A criação da base de dados de conhecimento é inicialmente um processo guiado por computador. A atividade de descoberta de conhecimento cria uma base de dados de conhecimento analisando um exemplo de dados por meio de critérios de qualidade de dados, com a procura de inconsistências de dados e erros de sintaxe, e a proposição de alterações nos dados. Esta análise é baseada em algoritmos criados no DQS.  
   
  O administrador de dados prepara o processo com a vinculação de uma base de conhecimento a uma tabela ou exibição de banco de dados do SQL Server que contêm dados de exemplo similares aos dados que a base de conhecimento será usada para analisar. Em seguida, o administrador de dados mapeia um domínio da base de conhecimento para cada coluna dos dados de exemplo a serem analisados. Um domínio pode ser um domínio único que é mapeado para um campo único ou pode ser um domínio composto que consiste em vários domínios únicos, cada um dos quais mapeado para parte dos dados em um único campo (consulte "Domínios Compostos" abaixo). Quando você executa a descoberta da base de dados de conhecimento, o DQS extrai informações de qualidade de dados dos dados de exemplo nos domínios da base de conhecimento. Quando você tiver executado a análise de descoberta de conhecimento, terá uma base de dados de conhecimento com a qual será possível realizar a correção de dados.  
@@ -70,7 +69,7 @@ ms.locfileid: "67935310"
   
  No entanto, você pode controlar as letras maiúsculas e minúsculas de valores que você exporta nos resultados da limpeza. Faça isso configurando a propriedade de domínio **Formatar Saída para** (consulte [Definir propriedades de domínio](../data-quality-services/set-domain-properties.md)) e usando a caixa de seleção **Padronizar Saída** ao exportar os resultados da limpeza (consulte [Limpar dados usando o conhecimento &#40;interno&#41; do DQS](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)).  
   
-##  <a name="Domains"></a> Gerenciamento de Domínio  
+##  <a name="Domains"></a>Gerenciamento de domínio  
  O gerenciamento de domínio permite que o administrador de dados altere e aumente interativamente os metadados que são gerados pela atividade de descoberta da base de dados de conhecimento assistida por computador. Cada alteração que você faz é para um domínio da base de dados de conhecimento. Na atividade de gerenciamento de domínio, você pode fazer o seguinte:  
   
 -   Criar um novo domínio. O novo domínio pode ser vinculado ou copiado de um domínio existente.  
@@ -139,7 +138,7 @@ ms.locfileid: "67935310"
   
  A correspondência pode ser executada nos domínios únicos que compõem o domínio composto, mas não no próprio domínio composto.  
   
-##  <a name="Matching"></a> Correspondência de dados  
+##  <a name="Matching"></a>Correspondência de dados  
  Além de fazer alterações manuais a uma base de dados de conhecimento por meio do gerenciamento de domínio, você poderá adicionar conhecimento correspondente a uma base de dados de conhecimento. Para preparar o DQS para o processo de eliminação de duplicação de dados, você deverá criar uma política compatível que o DQS usará para calcular a probabilidade de uma correspondência. A política inclui uma ou mais regras correspondentes que o administrador de dados cria para identificar como o DQS deve comparar linhas de dados. O administrador de dados determina quais campos de dados na linha devem ser comparados e quanto peso cada campo deve ter na comparação. O administrador de dados também determinará quanto de probabilidade será considerada uma correspondência. O DQS adiciona as regras de correspondência à base de dados de conhecimento para serem usadas para executar a atividade de correspondência no projeto de qualidade de dados.  
   
  Para obter mais informações sobre a base de dados de conhecimento e a correspondência de dados, consulte [Correspondência de dados](../data-quality-services/data-matching.md).  
@@ -149,10 +148,10 @@ ms.locfileid: "67935310"
   
 |||  
 |-|-|  
-|Crie, abra, adicione conhecimento para e execute descoberta em uma base de dados de conhecimento|[Criar uma base de dados de conhecimento](../data-quality-services/building-a-knowledge-base.md)|  
-|Realize operações de importação e exportação em domínios e bases de dados de conhecimento|[Importar e exportar conhecimento](../data-quality-services/importing-and-exporting-knowledge.md)|  
-|Crie um único domínio, uma regra de domínio, relações baseadas em termos e altere os valores de domínio|[Gerenciar um domínio](../data-quality-services/managing-a-domain.md)|  
-|Crie um domínio composto, crie uma regra de domínio cruzado e use relações de valor|[Gerenciar um domínio de composição](../data-quality-services/managing-a-composite-domain.md)|  
+|Crie, abra, adicione conhecimento para e execute descoberta em uma base de dados de conhecimento|[Criando uma base de dados de conhecimento](../data-quality-services/building-a-knowledge-base.md)|  
+|Realize operações de importação e exportação em domínios e bases de dados de conhecimento|[Importando e exportando conhecimento](../data-quality-services/importing-and-exporting-knowledge.md)|  
+|Crie um único domínio, uma regra de domínio, relações baseadas em termos e altere os valores de domínio|[Gerenciando um domínio](../data-quality-services/managing-a-domain.md)|  
+|Crie um domínio composto, crie uma regra de domínio cruzado e use relações de valor|[Gerenciando um domínio composto](../data-quality-services/managing-a-composite-domain.md)|  
 |Usar a base de dados de conhecimento de dados do DQS criada no DQS|[Usando a base de dados de conhecimento padrão do DQS](../data-quality-services/using-the-dqs-default-knowledge-base.md)|  
   
   

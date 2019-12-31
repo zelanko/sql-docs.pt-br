@@ -1,6 +1,5 @@
 ---
-title: Exportar um domínio para um arquivo .dqs | Microsoft Docs
-ms.custom: ''
+title: Exportar um domínio para um arquivo .dqs
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: a3722234ec1e82431bbefae355391a614c7e980a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 518b393b296425c1aaf54229a8a843576c6a628a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992072"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251613"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>Exportar um domínio para um arquivo .dqs
 
@@ -29,20 +28,20 @@ ms.locfileid: "67992072"
   
  O arquivo de dados .dqs criado pelo processo de exportação é criptografado; portanto, o conteúdo não pode ser exibido.  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="BeforeYouBegin"></a>Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="Prerequisites"></a>Pré-requisitos  
  Para exportar um domínio para um arquivo .dqs, você deve ter criado e selecionado um domínio único ou um domínio composto contendo vários domínios únicos. Você não precisa ter um arquivo .dqs para exportação; um arquivo será criado para você.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="Security"></a>Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="Permissions"></a>Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para poder exportar um domínio para um arquivo de dados .dqs.  
   
-##  <a name="Export"></a> Export a domain to a .dqs file  
+##  <a name="Export"></a>Exportar um domínio para um arquivo. DQS  
  Você pode exportar de qualquer página Gerenciamento de Domínio. O comando de exportação está disponível de um controle na interface do usuário e de um comando no menu de contexto do painel Lista de Domínios.  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra uma base de dados de conhecimento na atividade Gerenciamento de Domínio.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "67992072"
   
 6.  Na caixa de diálogo **Exportar Domínio** , verifique se a linha de status indica que a exportação foi concluída. Clique em **OK**.  
   
-##  <a name="FollowUp"></a> Acompanhamento: Após exportar um domínio para um arquivo .dqs  
+##  <a name="FollowUp"></a>Acompanhamento: depois de exportar um domínio para um arquivo. DQS  
  Depois que você exportar um domínio para um arquivo .dqs, poderá importar o domínio para outra base de dados de conhecimento.  
   
   

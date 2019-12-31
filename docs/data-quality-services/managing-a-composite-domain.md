@@ -1,6 +1,5 @@
 ---
-title: Gerenciando um domínio de composição | Microsoft Docs
-ms.custom: ''
+title: Gerenciando um domínio composto
 ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: fac57f53242fa7445820aaed5a39694a7277653c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: bbffbbda18da28be0623c31f4608f5b25f21d2ea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935076"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258449"
 ---
 # <a name="managing-a-composite-domain"></a>Gerenciando um domínio composto
 
@@ -32,18 +31,18 @@ ms.locfileid: "67935076"
   
 |||  
 |-|-|  
-|Crie uma representação semântica para um campo de dados que consiste em vários termos relacionados que não são analisados|[Criar um domínio de composição](../data-quality-services/create-a-composite-domain.md)|  
-|Quando você estiver mapeando dados complexos para um domínio composto, poderá analisar os dados com base no conhecimento, além de analisar um delimitador. O DQS tentará primeiro usar seu conhecimento sobre domínios únicos para determinar como as partes da cadeia de caracteres complexa pertencerão aos domínios únicos.|[Criar um domínio de composição](../data-quality-services/create-a-composite-domain.md)|  
-|Anexe um serviço de dados de referência, como o que lida com os dados de endereço, a um domínio composto.|[Anexar domínio ou domínio de composição para dados de referência](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
+|Crie uma representação semântica para um campo de dados que consiste em vários termos relacionados que não são analisados|[Criar um domínio composto](../data-quality-services/create-a-composite-domain.md)|  
+|Quando você estiver mapeando dados complexos para um domínio composto, poderá analisar os dados com base no conhecimento, além de analisar um delimitador. O DQS tentará primeiro usar seu conhecimento sobre domínios únicos para determinar como as partes da cadeia de caracteres complexa pertencerão aos domínios únicos.|[Criar um domínio composto](../data-quality-services/create-a-composite-domain.md)|  
+|Anexe um serviço de dados de referência, como o que lida com os dados de endereço, a um domínio composto.|[Anexar domínio ou domínio composto a dados de referência](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
 |Crie uma regra de domínio cruzado quando o valor de um domínio em um domínio composto afetar o valor de outro.|[Criar uma regra de domínio cruzado](../data-quality-services/create-a-cross-domain-rule.md)|  
-|Identifique as combinações de valor para que o DQS possa relatar sua frequência.|[Usar relações de valor em um domínio de composição](../data-quality-services/use-value-relations-in-a-composite-domain.md)|  
+|Identifique as combinações de valor para que o DQS possa relatar sua frequência.|[Usar relações de valor em um domínio composto](../data-quality-services/use-value-relations-in-a-composite-domain.md)|  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Criar uma base de dados de conhecimento executando a descoberta da base de dados de conhecimento e gerenciando o conhecimento de modo interativo|[Criar uma base de dados de conhecimento](../data-quality-services/building-a-knowledge-base.md)|  
-|Importar ou exportar conhecimento para/de uma base de dados de conhecimento.|[Importar e exportar conhecimento](../data-quality-services/importing-and-exporting-knowledge.md)|  
-|Criar um domínio único e adicionar conhecimento ao domínio.|[Gerenciar um domínio](../data-quality-services/managing-a-domain.md)|  
+|Criar uma base de dados de conhecimento executando a descoberta da base de dados de conhecimento e gerenciando o conhecimento de modo interativo|[Criando uma base de dados de conhecimento](../data-quality-services/building-a-knowledge-base.md)|  
+|Importar ou exportar conhecimento para/de uma base de dados de conhecimento.|[Importando e exportando conhecimento](../data-quality-services/importing-and-exporting-knowledge.md)|  
+|Criar um domínio único e adicionar conhecimento ao domínio.|[Gerenciando um domínio](../data-quality-services/managing-a-domain.md)|  
   
   

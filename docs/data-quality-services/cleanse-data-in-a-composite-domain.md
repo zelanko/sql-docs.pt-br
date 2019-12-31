@@ -1,6 +1,5 @@
 ---
-title: Limpar dados em um domínio de composição | Microsoft Docs
-ms.custom: ''
+title: Limpar dados em um domínio composto
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 5f771148193eba6fbdbe44f224fc4d30820920f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 6d8bdf65a4225bbb915c5596db641f4635775953
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992424"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255685"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Limpar dados em um domínio composto
 
@@ -23,7 +22,7 @@ ms.locfileid: "67992424"
 
   Este tópico fornece informações sobre como limpar domínios compostos no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Um domínio composto consiste em dois ou mais domínios únicos, e é mapeado para um campo de dados que consiste em vários termos relacionados. Os domínios individuais em um domínio composto devem ter uma área comum de conhecimento. Para obter informações detalhadas sobre domínios compostos, consulte [Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md).  
   
-##  <a name="Mapping"></a> Mapeando um domínio composto para os dados de origem  
+##  <a name="Mapping"></a>Mapeando um domínio composto para os dados de origem  
  Há dois modos para mapear seus dados de origem para um domínio composto:  
   
 -   Os dados de origem são um único campo (digamos Nome Completo), que é mapeado para um domínio composto.  
@@ -36,7 +35,7 @@ ms.locfileid: "67992424"
   
  Para obter um exemplo de como mapear domínios de composição para dados de origem, consulte [Anexar um domínio ou um domínio de composição aos dados de referência](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
-##  <a name="CDCorrection"></a> Correção de dados usando regras de domínio cruzado definitivas  
+##  <a name="CDCorrection"></a>Correção de dados usando regras de domínio cruzado definitivas  
  As regras do domínio cruzado no domínio composto permitem que você crie regras que indicam a relação entre domínios individuais em um domínio composto. As regras do domínio cruzado são levadas em conta quando você executa a atividade de limpeza em seus dados de origem envolvendo domínios compostos. Além de informá-lo sobre a validade de uma regra de domínio cruzado, a regra de domínio cruzado *Then* , **Valor é igual a**, também corrige os dados durante a atividade de limpeza de dados.  
   
  Considere o seguinte exemplo: há um domínio composto, Product, com três domínios individuais: ProductName, CompanyName e ProductVersion. Crie a seguinte regra de domínio cruzado definitiva:  
@@ -57,12 +56,12 @@ ms.locfileid: "67992424"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- Quando você testa a regra de domínio cruzado *Then* definitiva, **Valor é igual a**, a caixa de diálogo **Testar Regra de Domínio Composto** contém uma nova coluna, **Corrigir para**, que exibe os dados corretos. Em um projeto de qualidade de dados de limpeza, essa regra de domínio cruzado definitiva altera os dados com 100% de confiança e a coluna **Motivo** exibe a seguinte mensagem: Corrigido pela regra ' *\<Nome da regra de domínio cruzado>* '. Para obter mais informações sobre regras de domínio cruzado, consulte [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md).  
+ Quando você testa a regra de domínio cruzado *Then* definitiva, **Valor é igual a**, a caixa de diálogo **Testar Regra de Domínio Composto** contém uma nova coluna, **Corrigir para**, que exibe os dados corretos. Em um projeto de qualidade de dados de limpeza, essa regra de domínio cruzado definitiva altera os dados com 100% de confiança e a coluna **Motivo** exibe a seguinte mensagem: Corrigido pela regra ‘*\<Nome da regra de domínio cruzado>*’. Para obter mais informações sobre regras de domínio cruzado, consulte [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  A regra do domínio cruzado definitiva não funcionará para domínios compostos que estão anexados ao serviço de dados de referência.  
   
-##  <a name="DataProfiling"></a> Criação de perfis de dados para domínios compostos  
+##  <a name="DataProfiling"></a>Criação de perfil de dados para domínios compostos  
  A criação de perfil do DQS fornece duas dimensões de qualidade de dados: *integridade* (até que ponto os dados estão presentes) e *exatidão* (até que ponto os dados podem ser empregados para o uso pretendido) durante a atividade de limpeza. A criação de perfil talvez não forneça estatísticas confiáveis de integridade para domínios compostos. Se você precisar de estatísticas de integridade, use domínios únicos, em vez de domínios compostos. Para utilizar domínios compostos, talvez você queira criar uma base de dados de conhecimento com domínios únicos para a criação de perfil, a fim de determinar a integridade e criar outro domínio com um domínio composto para a atividade de limpeza. Por exemplo, a criação de perfil pode mostrar 95% de integridade para registros de endereço usando um domínio composto, mas pode haver um nível muito mais alto de não integridade para uma das colunas, por exemplo, uma coluna de CEP. Neste exemplo, talvez você queira medir a integridade da coluna de CEP com um domínio único.  
   
  A criação de perfil provavelmente fornecerá estatísticas de exatidão confiáveis para domínios compostos, pois é possível medir a exatidão para várias colunas juntas. O valor desses dados está na agregação composta, de modo que talvez você queira medir a exatidão com um domínio composto.  

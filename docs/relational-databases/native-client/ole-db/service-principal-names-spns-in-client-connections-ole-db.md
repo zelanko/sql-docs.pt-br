@@ -1,5 +1,5 @@
 ---
-title: SPNs (Nomes da Entidade de Serviço) em conexões de cliente (OLE DB) | Microsoft Docs
+title: OLE DB conexões de nomes de entidade de serviço
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ ms.assetid: e212010e-a5b6-4ad1-a3c0-575327d3ffd3
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83356cd14155daba742f78fe37ba7c903226e5cf
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 974e5e6c03c32b0457295b749604323e7f1b870e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73759520"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254621"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>SPNs (Nomes da Entidade de Serviço) em conexões de cliente (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Este tópico descreve as propriedades OLE DB e as funções de membro que dão suporte a SPNs (nomes da entidade de serviço) em aplicativos clientes. Para obter mais informações sobre SPNs em aplicativos cliente, confira [Nome da entidade de serviço &#40;SPN&#41; Suporte em conexões de cliente](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md). Para obter um exemplo, consulte [autenticação &#40;Kerberos integrada&#41;OLE DB](../../../relational-databases/native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md).  
+  Este tópico descreve as propriedades OLE DB e as funções de membro que dão suporte a SPNs (nomes da entidade de serviço) em aplicativos clientes. Para obter mais informações sobre SPNs em aplicativos cliente, confira [Nome da entidade de serviço &#40;SPN&#41; Suporte em conexões de cliente](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md). Para obter um exemplo, consulte [autenticação Kerberos integrada &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md).  
   
 ## <a name="provider-initialization-string-keywords"></a>Palavras-chave da cadeia de caracteres de inicialização do provedor  
  As palavras-chave da cadeia de caracteres de inicialização de provedor a seguir dão suporte a SPNs em aplicativos OLE DB. Na tabela a seguir, os valores na coluna de palavra-chave são usados para a cadeia de caracteres do provedor de IDBInitialize::Initialize. Os valores na coluna de descrição são usados em cadeias de inicialização na conexão usando o ADO ou IDataInitialize::GetDataSource.  
   
-|Palavra-chave|Descrição|Value|  
+|Palavra-chave|Descrição|Valor|  
 |-------------|-----------------|-----------|  
 |ServerSPN|SPN do servidor|O SPN do servidor. O valor padrão é uma cadeia de caracteres vazia, que faz com que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client use o SPN padrão gerado pelo provedor.|  
 |FailoverPartnerSPN|SPN do parceiro de failover:|O SPN do parceiro de failover. O valor padrão é uma cadeia de caracteres vazia, que faz com que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client use o SPN padrão gerado pelo provedor.|  
@@ -59,7 +59,7 @@ ms.locfileid: "73759520"
 |IDBProperties::GetPropertyInfo|IdbProperties::GetPropertyInfo incluirá as novas propriedades de inicialização da fonte de dados SSPROP_INIT_SERVERSPN e SSPROP_INIT_FAILOVERPARTNERSPN, ou as novas propriedades da fonte de dados SSPROP_AUTHENTICATION_METHOD e SSPROP_MUTUALLYAUTHENTICATED.|  
 |IDBProperties::SetProperties|IDBProperties::SetProperties pode ser chamado para definir os valores das novas propriedades de inicialização da fonte de dados SSPROP_INITSERVERSPN e SSPROP_INIT_FAILOVERPARTNERSPN.<br /><br /> Essas propriedades podem ser definidas a qualquer momento, mas se a fonte de dados já estiver aberta, o erro a seguir será retornado:DB_E_ERRORSOCCURRED, "Operação de várias etapas do OLE DB gerou erros. Verifique todos os valores de status do OLE DB, se disponíveis. Não foram executados trabalhos."|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

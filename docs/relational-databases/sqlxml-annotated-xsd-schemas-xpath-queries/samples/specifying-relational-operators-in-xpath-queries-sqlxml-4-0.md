@@ -1,6 +1,5 @@
 ---
-title: Especificando operadores relacionais em consultas XPath (SQLXML 4,0) | Microsoft Docs
-ms.custom: ''
+title: Usar operadores relacionais em consultas XPath (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,28 +14,29 @@ helpviewer_keywords:
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 180962ac5afae577625415d94cb9beda65f9537a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 1961cc90c303e789c4bfbb847cea5e0eb80049ff
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909436"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252548"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Especificando operadores relacionais em consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Os seguintes exemplos mostram como operadores relacionais são especificados em consultas XPath. As consultas XPath nesses exemplos são especificadas com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre este esquema de exemplo, consulte [exemplo de esquema XSD anotado &#40;para exemplos&#41;de XPath 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Os seguintes exemplos mostram como operadores relacionais são especificados em consultas XPath. As consultas XPath nesses exemplos são especificadas com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre este esquema de exemplo, consulte [exemplo de esquema XSD anotado para exemplos de XPath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-specify-relational-operator"></a>A. Especifique operador relacional  
- Essa consulta XPath retorna os elementos filho do elemento **\<cliente >** em que o valor do atributo **CustomerID** é "1" e onde qualquer **\<de ordem filho >** elementos contém um **\<OrderDetail >** filho com um atributo **OrderQty** com um valor maior que 3:  
+### <a name="a-specify-relational-operator"></a>R. Especifique operador relacional  
+ Essa consulta XPath retorna os elementos filho do elemento de ** \<>do cliente** , em que o valor do atributo **CustomerID** é "1" e onde qualquer ** \<ordem filho>** elementos contêm um ** \<OrderDetail>** filho com um atributo **OrderQty** com um valor maior que 3:  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- O predicado especificado nos colchetes filtra o\<elementos de **> do cliente** . Somente os elementos **\<cliente >** que têm pelo menos um **\<OrderDetail >** o neto com um valor de atributo OrderQty maior que 3 são retornados.  
+ O predicado especificado nos colchetes filtra os elementos de ** \<>do cliente** . Somente os elementos de ** \<>do cliente** que têm pelo menos um ** \<OrderDetail>** neto com um valor de atributo OrderQty maior que 3 são retornados.  
   
  O eixo **filho** é o padrão. Assim, a consulta pode ser especificada como:  
   
@@ -80,8 +80,8 @@ ms.locfileid: "72909436"
 </ROOT>  
 ```  
   
-### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>b. Especifique o operador relacional na consulta XPath e use a função Booliano para comparar o resultado  
- Essa consulta retorna todos os **\<ordem >** elementos filho do nó de contexto que têm um valor de atributo **vendedorid** menor que 270:  
+### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Especifique o operador relacional na consulta XPath e use a função Booliano para comparar o resultado  
+ Essa consulta retorna todos os ** \<** elementos de>de ordem dos filhos do nó de contexto que têm um valor de atributo **vendedorid** inferior a 270:  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  

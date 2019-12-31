@@ -1,6 +1,5 @@
 ---
-title: Executando consultas SQL usando o método ExecuteXMLReader | Microsoft Docs
-ms.custom: ''
+title: Executar consultas SQL com o método ExecuteXMLReader
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99f3ae8c26af7d3aa3dd876cbf0f81d4fa269ff0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 23b28209db43753b7185a87311ec6d338bcaccbd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934293"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251525"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>Executando consultas SQL usando o método ExecuteXMLReader
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Em vez de usar o método ExecuteToStream, você pode usar o método ExecuteXmlReader do objeto SqlXmlCommand para executar comandos. Esse método retorna um objeto XmlReader que pode ser usado para processamento adicional do resultado (que, neste exemplo está imprimindo os nomes de elemento ou atributo e os valores).  
+  Em vez de usar o método ExecuteToStream, você pode usar o método ExecuteXmlReader do objeto SqlXmlCommand para executar comandos. Esse método retorna um objeto XmlReader que pode ser usado para processamento adicional do resultado (que neste exemplo é imprimir os nomes de elemento ou atributo e os valores).  
   
 > [!NOTE]  
 >  No código, é necessário fornecer o nome da instância do Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na cadeia de conexão.  
@@ -71,7 +71,7 @@ using System.Xml;
   
 1.  Verifique se você tem o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework instalado em seu computador.  
   
-2.  Salve o código c# (DocSample.cs) fornecido neste tópico em uma pasta.  
+2.  Salve o código C# (DocSample.cs) fornecido neste tópico em uma pasta.  
   
 3.  Compile o código. Para compilar o código no prompt de comando, use:  
   
