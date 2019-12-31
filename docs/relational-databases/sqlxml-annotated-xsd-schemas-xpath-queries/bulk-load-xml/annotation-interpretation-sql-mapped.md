@@ -1,6 +1,5 @@
 ---
-title: 'SQL: mapeado (SQLXML 4,0) | Microsoft Docs'
-ms.custom: ''
+title: 'SQL: mapeado (SQLXML)'
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,19 +16,20 @@ helpviewer_keywords:
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7711386722d618b35a8d957b680244243b4de5d5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 055b4d25b6c501e9cf3afdf99460cd54ca7e720c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907133"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246777"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>Interpretação de anotação – sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  A carga em massa de XML processa a anotação **SQL: mapeada** no esquema XSD como esperado – ou seja, se o esquema de mapeamento especificar **SQL: mapeou = "false"** para qualquer elemento ou atributo, o carregamento em massa de XML não tentará armazenar os dados associados no coluna correspondente.  
+  A carga em massa de XML processa a anotação **SQL: mapeada** no esquema XSD como esperado – ou seja, se o esquema de mapeamento especificar **SQL: mapeou = "false"** para qualquer elemento ou atributo, o carregamento em massa de XML não tentará armazenar os dados associados na coluna correspondente.  
   
- O carregamento em massa de XML ignora elementos e atributos que não estão mapeados (porque eles não estão descritos no esquema ou porque eles são anotados no esquema XSD com **SQL: mapeou = "false"** ). Todos os dados não mapeados entrarão na coluna de estouro, se essa coluna for especificada usando **SQL: overflow-field**.  
+ O carregamento em massa de XML ignora elementos e atributos que não estão mapeados (porque eles não estão descritos no esquema ou porque eles são anotados no esquema XSD com **SQL: mapeou = "false"**). Todos os dados não mapeados entrarão na coluna de estouro, se essa coluna for especificada usando **SQL: overflow-field**.  
   
  Por exemplo, considere este esquema XSD:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "72907133"
 </xsd:schema>  
 ```  
   
- Como o atributo **HomePhone** especifica **SQL: mapeou = "false"** , o carregamento em massa de XML não mapeia esse atributo para a coluna correspondente. O esquema XSD identifica uma coluna de estouro (**OverflowColumn**) na qual o carregamento em massa de XML armazena esses dados não consumidos.  
+ Como o atributo **HomePhone** especifica **SQL: mapeou = "false"**, o carregamento em massa de XML não mapeia esse atributo para a coluna correspondente. O esquema XSD identifica uma coluna de estouro (**OverflowColumn**) na qual o carregamento em massa de XML armazena esses dados não consumidos.  
   
 ### <a name="to-test-a-working-sample"></a>Para testar um exemplo de funcionamento  
   

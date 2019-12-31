@@ -1,6 +1,6 @@
 ---
-title: Concluir snippets Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Concluir snippets Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: a8316a58-bb57-485e-845f-84c23360314c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 103b8c23dba7119dde28a8d6e87b963400eaf0c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98c72aad94c34f40538670a7a7c8df945a9c4970
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090593"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244933"
 ---
 # <a name="complete-transact-sql-snippets"></a>Concluir snippets Transact-SQL
   Quando um snippet de código [!INCLUDE[tsql](../../includes/tsql-md.md)] foi inserido em um script, você edita o conteúdo do snippet para compilar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] completa.  
@@ -37,8 +37,8 @@ ms.locfileid: "66090593"
   
 3.  Selecione um item da lista ou digite uma substituição de sua escolha.  
   
-## <a name="see-also"></a>Consulte também  
- [Inserir snippets Transact-SQL](insert-transact-sql-snippets.md)   
- [Inserir snippets Transact-SQL com Surround](insert-surround-with-transact-sql-snippets.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Inserir trechos Transact-SQL](insert-transact-sql-snippets.md)   
+ [Inserir trechos Transact-SQL com surround](insert-surround-with-transact-sql-snippets.md)  
   
   

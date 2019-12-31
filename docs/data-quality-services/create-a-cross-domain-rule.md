@@ -1,6 +1,5 @@
 ---
-title: Criar uma regra de domínio cruzado | Microsoft Docs
-ms.custom: ''
+title: Criar uma regra de domínio cruzado
 ms.date: 11/22/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -11,14 +10,14 @@ f1_keywords:
 - sql13.dqs.dm.testcdrule.f1
 - sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 45222a4ae99578c40ce14870433fb929c1127f51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 070ef5db87ac28b59f01e3927f876f9c757e6caa
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992334"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245470"
 ---
 # <a name="create-a-cross-domain-rule"></a>Criar uma regra de domínio cruzado
 
@@ -28,25 +27,25 @@ ms.locfileid: "67992334"
   
  As cláusulas If e Then de uma regra de domínio cruzado são definidas para um dos domínios únicos do domínio composto. Cada cláusula deve ser definida para um único domínio diferente. Uma regra de domínio cruzado deve se relacionar a vários domínios únicos; você não pode definir uma regra de domínio simples (destinada a um domínio único) para um domínio composto. Você faria isso definindo uma regra de domínio para um domínio único. As cláusulas If e Then podem contar uma ou mais condições cada uma.  
   
- Uma regra de domínio cruzado que tem condições definitivas aplicará a lógica de regras a sinônimos do valor nas condições, bem como os próprios valores. As condições definitivas das cláusulas If e Then são Valor é igual a, Valor não é igual a, Valor está em ou Valor não está em. Por exemplo, suponha que você tem a seguinte regra de domínio cruzado para um domínio composto: Se para 'Cidade' o valor for igual a 'Los Angeles', o valor para 'Estado' será igual a 'CA'. "Se 'Los Angeles' e 'LA' forem sinônimos, esta regra retornará correto para 'Los Angeles CA' e 'LA CA' e com erro para 'Los Angeles WA' e 'LA WA'.  
+ Uma regra de domínio cruzado que tem condições definitivas aplicará a lógica de regras a sinônimos do valor nas condições, bem como os próprios valores. As condições definitivas das cláusulas If e Then são Valor é igual a, Valor não é igual a, Valor está em ou Valor não está em. Por exemplo, suponhamos que você tenha a seguinte regra de domínio cruzado para um domínio composto: "Para ‘Cidade’, se Valor é igual a ‘Los Angeles’, então para ‘Estado’, Valor é igual a ‘CA’. "Se 'Los Angeles' e 'LA' forem sinônimos, esta regra retornará correto para 'Los Angeles CA' e 'LA CA' e com erro para 'Los Angeles WA' e 'LA WA'.  
   
  Além de informar você sobre a validade de uma regra de domínio cruzado, a cláusula *Then* definitiva em uma regra de domínio cruzado, **Valor é igual a**, também corrige os dados durante a atividade de limpeza de dados. Para obter mais informações, consulte [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) em [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md).  
   
  As regras de domínio cruzado são levadas em consideração depois de todas as regras simples que afetam apenas um domínio único. Apenas se um valor estiver de acordo com as regras de domínio único (caso elas existam), a regra de domínio cruzado será aplicada. O domínio composto e os domínios únicos nos quais uma regra é executada devem ser definidos para que a regra possa ser executada.  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="BeforeYouBegin"></a>Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="Prerequisites"></a>Pré-requisitos  
  Para criar uma regra de domínio cruzado, você deve criar e abrir um domínio composto.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="Security"></a>Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="Permissions"></a>Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para criar uma regra de domínio cruzado.  
   
-##  <a name="Create"></a> Criar regras de domínio cruzado  
+##  <a name="Create"></a>Criar regras entre domínios  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra ou crie uma base de dados de conhecimento. Selecione **Gerenciamento de Domínio** como a atividade e, depois, clique em **Abrir** ou **Criar**. Para obter mais informações, consulte [Criar uma base de dados de conhecimento](../data-quality-services/create-a-knowledge-base.md) ou [Abrir uma base de dados de conhecimento](../data-quality-services/open-a-knowledge-base.md).  
   
@@ -79,7 +78,7 @@ ms.locfileid: "67992334"
   
 9. Continue o procedimento de teste a seguir.  
   
-##  <a name="Test"></a> Testar regras de domínio cruzado  
+##  <a name="Test"></a>Testar regras de domínio cruzado  
   
 1.  Teste a regra de domínio cruzado da seguinte maneira:  
   
@@ -97,7 +96,7 @@ ms.locfileid: "67992334"
   
 2.  Quando você concluído as regras de domínio cruzado, clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a> Acompanhamento: Após a criação de uma regra de domínio cruzado  
+##  <a name="FollowUp"></a>Acompanhamento: depois de criar uma regra de domínio cruzado  
  Após criar uma regra de domínio cruzado, você poderá executar outras tarefas de gerenciamento de domínio no domínio, poderá executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou poderá adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
   

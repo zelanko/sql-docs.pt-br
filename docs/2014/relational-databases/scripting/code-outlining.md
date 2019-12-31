@@ -1,6 +1,6 @@
 ---
-title: Estrutura de tópicos de código | Microsoft Docs
-ms.custom: ''
+title: Estruturação do código
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf35412efc66e971332b97ac2a0d77725a1d0cd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ec36d2d6f38a1213a91d3c7f7aa1753d519ac5d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090626"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244968"
 ---
 # <a name="code-outlining"></a>Estruturação do código
   Você pode usar o recurso de estrutura de tópicos nos editores de consultas do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para ocultar código, de forma seletiva, ao editar consultas. Isso permite exibir com mais facilidade o código em que você está trabalhando, principalmente em arquivos de consulta grandes.  
@@ -38,19 +38,19 @@ ms.locfileid: "66090626"
   
  Quando você clica no sinal de subtração na linha \<InnerTag>, apenas a InnerTag é recolhida, conforme é mostrado na ilustração a seguir.  
   
- ![Código XML com nó interno ocultado](../../database-engine/media/editoutlinexmlinnercol.gif "Código XML com nó interno ocultado")  
+ ![Código XML com nó interno oculto](../../database-engine/media/editoutlinexmlinnercol.gif "Código XML com nó interno oculto")  
   
  Quando você move o ponteiro sobre a caixa com os três pontos, o código da região recolhida é exibido em uma dica de ferramenta, como mostra a ilustração a seguir.  
   
- ![Código XML com dica de ferramenta mostrando o código oculto](../../database-engine/media/editoutlinexmlmouse.gif "Código XML com dica de ferramenta mostrando o código oculto")  
+ ![Código XML com dica de ferramenta que mostra código oculto](../../database-engine/media/editoutlinexmlmouse.gif "Código XML com dica de ferramenta que mostra código oculto")  
   
  Quando você clica no sinal de subtração na linha \<MiddleTag>, tanto a MiddleTag e quanto a InnerTag são recolhidas, como é mostrado na ilustração a seguir.  
   
- ![Código XML com as marcas interna e central ocultadas](../../database-engine/media/editoutlinexmlmiddlecol.gif "Código XML com as marcas interna e central ocultadas")  
+ ![Código XML com as marcas interna e central ocultas](../../database-engine/media/editoutlinexmlmiddlecol.gif "Código XML com as marcas interna e central ocultas")  
   
  Quando você clica no sinal de menos na linha \<OuterTag>, todas as três linhas são recolhidas, como mostra a ilustração a seguir.  
   
- ![Código XML que mostra todas as três marcas ocultadas](../../database-engine/media/editoutlinexmloutercol.gif "Código XML que mostra todas as três marcas ocultadas")  
+ ![Código XML que mostra todas as três marcas ocultas](../../database-engine/media/editoutlinexmloutercol.gif "Código XML que mostra todas as três marcas ocultas")  
   
 ### <a name="database-engine-query-editor-regions"></a>Regiões do Editor de Consultas do Mecanismo de Banco de Dados  
  O Editor de Consultas do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] gera regiões de estrutura de tópicos para cada elemento na seguinte hierarquia:  

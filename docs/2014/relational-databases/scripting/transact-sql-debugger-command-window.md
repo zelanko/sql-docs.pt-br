@@ -1,6 +1,6 @@
 ---
-title: Janela Comando | Microsoft Docs
-ms.custom: ''
+title: Janela Comando
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,32 +12,32 @@ ms.assetid: e567ebf9-0793-451b-92c7-26193a02d9da
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a66709cc090f39a41e5bee5b52a779b8d2f6764
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26306f8ad2adf01ebdcbf1b52169f1c2ec964920
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063534"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243076"
 ---
 # <a name="command-window"></a>Janela Comando
-  Use a **Janela Comando** para executar comandos como de depuração e edição na janela do Editor de Consultas do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que está atualmente em depuração. É necessário estar no modo de depuração para usar a **Janela Comando**. O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] dá suporte a muitos dos comandos que também têm suporte na janela [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Command** window. Para obter mais informações, veja [Janela Comando do Visual Studio](https://go.microsoft.com/fwlink/?LinkId=112007).  
+  Use o **janela comando** para executar comandos, como comandos debug e Edit, em relação ao código na janela [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] do editor de consultas que está sendo depurada no momento. É necessário estar no modo de depuração para usar a **Janela Comando**. O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] dá suporte a muitos dos comandos que também têm suporte na janela [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Command** window. Para obter mais informações, veja [Janela Comando do Visual Studio](https://go.microsoft.com/fwlink/?LinkId=112007).  
   
 ## <a name="task-list"></a>Lista de Tarefas  
- **Para acessar a Janela de Comando**  
+ **Para acessar a janela de comando**  
   
 -   No menu **Depurar** , clique em **Iniciar Depuração**.  
   
  **Para imprimir o valor de uma variável**  
   
--   No **CommandWindow**, digite **Debug.Print \<VariableName>** e pressione ENTER.  
+-   No **janela comando**, digite **debug. Print \<variávelname>** e pressione Enter.  
   
- **Para listar as informações sobre a thread atual**  
+ **Para listar informações sobre o thread atual**  
   
--   No **CommandWindow**, digite `Debug.ListThread`, e pressione ENTER.  
+-   No **janela comando**, digite `Debug.ListThread`e pressione Enter.  
   
- **Para adicionar uma variável à janela QuickWatch.**  
+ **Para adicionar uma variável à janela QuickWatch**  
   
--   Na **CommandWindow**, digite **Debug.QuickWatch \<VariableName>** e pressione ENTER.  
+-   No **janela comando**, digite **debug. QuickWatch \<VariableName>** e pressione Enter.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Depurador do Transact-SQL](transact-sql-debugger.md)  

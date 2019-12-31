@@ -1,6 +1,6 @@
 ---
-title: Percorrer código Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Percorrer código Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e79a92bc1756003341cbb9e0581ade42a2bcee8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66c7e777c2970677616bbd81ac4a9d7f633742a2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090004"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243164"
 ---
 # <a name="step-through-transact-sql-code"></a>Percorrer código Transact-SQL
   O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] permite que você controle quais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] são executadas em uma janela Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Você pode pausar o depurador em instruções individuais e exibir o estado dos elementos de código nesse ponto.  
@@ -51,13 +51,13 @@ ms.locfileid: "66090004"
   
 |Ação|Procedimento|  
 |------------|---------------|  
-|Executar todas as instruções da instrução atual para o próximo ponto de interrupção|Sobre o **Debug** menu, clique em **continuar**.<br /><br /> Sobre o **depurar** barra de ferramentas, clique no **continuar** botão.|  
-|Avançar para a próxima instrução ou módulo|Sobre o **Debug** menu, clique em **intervir**.<br /><br /> Sobre o **depurar** barra de ferramentas, clique no **intervir** botão.<br /><br /> Pressione F11.|  
-|Passar pela próxima instrução ou módulo|Sobre o **Debug** menu, clique em **Step Over**.<br /><br /> Sobre o **depurar** barra de ferramentas, clique no **Step Over** botão.<br /><br /> Pressione F10.|  
-|Sair de um módulo|Sobre o **Debug** menu, clique em **depuração circular**.<br /><br /> Sobre o **depurar** barra de ferramentas, clique no **depuração circular** botão.<br /><br /> Pressione SHIFT+F11.|  
+|Executar todas as instruções da instrução atual para o próximo ponto de interrupção|No menu **depurar** , clique em **continuar**.<br /><br /> Na barra de ferramentas **depurar** , clique no botão **continuar** .|  
+|Avançar para a próxima instrução ou módulo|No menu **depurar** , clique em **depuração em**.<br /><br /> Na barra de ferramentas **depurar** , clique no botão **entrar em** .<br /><br /> Pressione F11.|  
+|Passar pela próxima instrução ou módulo|No menu **depurar** **, clique em depuração.**<br /><br /> Na barra de ferramentas **depurar** , clique no botão **passar sobre** .<br /><br /> Pressione F10.|  
+|Sair de um módulo|No menu **depurar** , clique em **sair**.<br /><br /> Na barra de ferramentas **depurar** , clique no botão **sair** .<br /><br /> Pressione SHIFT+F11.|  
 |Executar para o local do cursor atual|Clique com o botão direito do mouse na janela Editor de Consultas e então clique em **Executar até o Cursor**.<br /><br /> Pressione CTRL+F10.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Informações do depurador Transact-SQL](transact-sql-debugger-information.md)  
   
   

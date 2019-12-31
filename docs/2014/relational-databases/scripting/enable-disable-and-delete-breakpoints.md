@@ -1,6 +1,6 @@
 ---
-title: Habilitar, desabilitar e excluir pontos de interrupção | Microsoft Docs
-ms.custom: ''
+title: Habilitar, desabilitar e excluir pontos de interrupção
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edc19f948689fafea8cde0fb4ae2fd5f79de3242
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2242511b34c2fc5e588318362b504358b330a30
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064056"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245144"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Habilitar, desabilitar e excluir pontos de interrupção
-  Para exibir e gerenciar todos os pontos de interrupção abertos, você pode usar a janela **Pontos de Interrupção** . Use a janela para exibir informações de ponto de interrupção e executar ações como excluir, desabilitar ou habilitar pontos de interrupção.  
+  Para exibir e gerenciar todos os pontos de interrupção abertos, você pode usar a janela **pontos de interrupção** . Use a janela para exibir informações de ponto de interrupção e executar ações como excluir, desabilitar ou habilitar pontos de interrupção.  
   
 ## <a name="the-breakpoints-window"></a>Janela Pontos de Interrupção  
  A janela **Pontos de Interrupção** lista informações como a linha de código em que o ponto de interrupção é localizado. Na janela **Pontos de Interrupção** , você também pode excluir, desabilitar e habilitar pontos de interrupção. Para obter mais informações sobre a janela **Pontos de Interrupção** , consulte [Pontos de Interrupção Window](transact-sql-debugger-breakpoints-window.md).  
@@ -26,7 +26,7 @@ ms.locfileid: "66064056"
  A desabilitação de um ponto de interrupção impede a pausa da execução, mas deixa a definição no local caso você deseje habilitar o ponto de interrupção mais tarde. A exclusão de um ponto de interrupção remove isso permanentemente. Você deve alternar um novo ponto de interrupção para pausar execução na instrução.  
   
 ## <a name="to-open-the-breakpoints-window"></a>Para abrir a janela Pontos de Interrupção  
- **To open the Breakpoints window**  
+ **Para abrir a janela pontos de interrupção**  
   
  Você pode abrir a janela **Pontos de Interrupção** de uma das seguintes maneiras:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66064056"
 -   Pressione CTRL+ALT+B.  
   
 ## <a name="to-disable-a-single-breakpoint"></a>Para desabilitar um único ponto de interrupção  
- **To disable a single breakpoint**  
+ **Para desabilitar um único ponto de interrupção**  
   
  Você pode desabilitar um único ponto de interrupção de uma das seguintes maneiras:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66064056"
 -   Na janela Pontos de Interrupção, desmarque a caixa de seleção à esquerda do ponto de interrupção.  
   
 ## <a name="to-disable-all-breakpoints"></a>Para desabilitar todos os pontos de interrupção  
- **To disable all breakpoints**  
+ **Para desabilitar todos os pontos de interrupção**  
   
  Você pode desabilitar todos os pontos de interrupção de uma das seguintes maneiras:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66064056"
 -   Na barra de ferramentas da janela **Pontos de Interrupção** , clique no botão **Desabilitar Todos os Pontos de Interrupção** .  
   
 ## <a name="to-enable-a-single-breakpoint"></a>Para habilitar um único ponto de interrupção  
- **To enable a single breakpoint**  
+ **Para habilitar um único ponto de interrupção**  
   
  Você pode habilitar um único ponto de interrupção de uma das seguintes maneiras:  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66064056"
 -   Na janela Pontos de Interrupção, clique na caixa à esquerda do ponto de interrupção.  
   
 ## <a name="to-enable-all-breakpoints"></a>Para habilitar todos os pontos de interrupção  
- **To enable all breakpoints**  
+ **Para habilitar todos os pontos de interrupção**  
   
  Você pode habilitar todos os pontos de interrupção de uma das seguintes maneiras:  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66064056"
 -   Na barra de ferramentas da janela **Pontos de Interrupção** , clique no botão **Habilitar Todos os Pontos de Interrupção** .  
   
 ## <a name="to-delete-a-single-breakpoint"></a>Para excluir um único ponto de interrupção  
- **To delete a single breakpoint**  
+ **Para excluir um único ponto de interrupção**  
   
  Você pode excluir um único ponto de interrupção de uma das seguintes maneiras:  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66064056"
 -   Na janela Pontos de Interrupção, selecione o ponto de interrupção e pressione DELETE.  
   
 ## <a name="to-delete-all-breakpoints"></a>Para excluir todos os pontos de interrupção  
- **To delete all breakpoints**  
+ **Para excluir todos os pontos de interrupção**  
   
  Você pode excluir todos os pontos de interrupção de uma das seguintes maneiras:  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66064056"
   
 -   Na barra de ferramentas da janela **Pontos de Interrupção** , clique no botão **Excluir Todos os Pontos de Interrupção** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Alternar um ponto de interrupção](../spatial/point.md)  
   
   

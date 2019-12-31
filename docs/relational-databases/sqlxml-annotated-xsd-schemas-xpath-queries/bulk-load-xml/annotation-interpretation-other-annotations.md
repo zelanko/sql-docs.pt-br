@@ -1,6 +1,5 @@
 ---
-title: Outras anotações (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Outras anotações (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,13 +20,14 @@ helpviewer_keywords:
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9a965ee5772ea3c2855a08d838c1d89da343e9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7eb01a084ec968adbd9fe8ff86623bcca5f9eb26
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066857"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246827"
 ---
 # <a name="annotation-interpretation---other-annotations"></a>Interpretação de anotação – Outras anotações
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "68066857"
  **sql:key-fields**  
  O carregamento em massa de XML sempre ignora esta anotação.  
   
-## <a name="see-also"></a>Consulte também  
- [Interpretação de anotação &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Interpretação de anotação &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
   
   

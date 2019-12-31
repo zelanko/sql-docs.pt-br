@@ -1,6 +1,6 @@
 ---
-title: Alterar a cor, o tamanho e o estilo da fonte | Microsoft Docs
-ms.custom: ''
+title: Alterar cor, tamanho e estilo da fonte
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4f7f2e80afd3f5f879813eeb5e19ce6eaa6e979
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa6753b0e49e898476f4138c5e445ea75918aa17
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064177"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244992"
 ---
 # <a name="change-font-color-size-and-style"></a>Alterar cor, tamanho e estilo da fonte
   Você pode personalizar o modo em que o texto aparece no Editor, assim como em outros lugares no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -42,8 +42,8 @@ ms.locfileid: "66064177"
   
  As configurações para cor de texto e tipo de fonte são globais para todos os tipos de elementos de texto, como comentários, cadeia de caracteres etc.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Imprimir código e resultados](print-code-and-results.md)   
- [Codificação por cores no Editor de Consultas](color-coding-in-query-editors.md)  
+ [Codificação por cores em editores de consulta](color-coding-in-query-editors.md)  
   
   

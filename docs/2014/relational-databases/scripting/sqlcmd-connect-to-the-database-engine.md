@@ -1,6 +1,6 @@
 ---
-title: Conectar-se ao Mecanismo de Banco de Dados com sqlcmd | Microsoft Docs
-ms.custom: ''
+title: Conectar-se ao Mecanismo de Banco de Dados com sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -18,17 +18,17 @@ ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 441a2ebc1f147e71a0bfa3bce20daf9fd67d09f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 94025942a6e06f4dfb7b0eeab43487e4a6308e4f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090097"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243258"
 ---
 # <a name="connect-to-the-database-engine-with-sqlcmd"></a>Conectar-se ao Mecanismo de Banco de Dados com sqlcmd
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à comunicação de cliente com o protocolo de rede TCP/IP (padrão) e o protocolo de pipes nomeados. O protocolo de memória compartilhada também estará disponível se o cliente estiver se conectando a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no mesmo computador. Há três métodos comuns de selecionar o protocolo. O protocolo usado pelo utilitário **sqlcmd** é determinado na seguinte ordem:  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dá suporte à comunicação do cliente com o protocolo de rede TCP/IP (o padrão) e o protocolo de pipes nomeados. O protocolo de memória compartilhada também estará disponível se o cliente estiver se conectando a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no mesmo computador. Há três métodos comuns de selecionar o protocolo. O protocolo usado pelo utilitário **sqlcmd** é determinado na seguinte ordem:  
   
--   O**sqlcmd** usa o protocolo especificado como parte da cadeia de conexão, conforme a descrição abaixo.  
+-   o **sqlcmd** usa o protocolo especificado como parte da cadeia de conexão, conforme descrito abaixo.  
   
 -   Se nenhum protocolo for especificado como parte da cadeia de conexão, o **sqlcmd** usará o protocolo definido como parte do alias ao qual ele está se conectando. Para configurar **sqlcmd** para usar um protocolo de rede específico criando um alias, veja [Criar ou excluir um alias de servidor para ser usado por um cliente &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md).  
   

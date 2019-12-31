@@ -1,6 +1,6 @@
 ---
-title: Editar scripts SQLCMD com o Editor de Consultas | Microsoft Docs
-ms.custom: ''
+title: Editar scripts SQLCMD com o Editor de Consultas
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0d7d34da4f26211075de05e19e223bafd0e9429
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 224fcd5f6b4c15a492be6aa6d893a4a4e5625b08
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064107"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245177"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Editar scripts SQLCMD com o Editor de Consultas
   Com o Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , você pode gravar e editar consultas como scripts SQLCMD. Você usa scripts SQLCMD quando precisa processar comandos de Sistema do Windows e instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] no mesmo script.  
@@ -76,7 +76,8 @@ ms.locfileid: "66064107"
   
     -   (6 linha(s) afetada(s))  
   
-    -   \<As informações do diretório>  
+    -   
+  \<As informações do diretório>  
   
     -   (4 linha(s) afetada(s))  
   
@@ -110,7 +111,8 @@ ms.locfileid: "66064107"
 -   O Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] dá suporte para variáveis de ambiente e variáveis definidas como parte de um script SQLCMD, mas não dá suporte para variáveis SQLCMD internas ou **osql** . O processamento SQLCMD feito pelo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] diferencia maiúsculas de minúsculas para variáveis. Por exemplo, PRINT '$ (COMPUTERNAME)' produz o resultado correto, mas PRINT '$(ComputerName)' retorna um erro.  
   
 > [!CAUTION]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa o [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient para a execução em modo regular e SQLCMD. Quando executado na linha de comando, o SQLCMD usa o provedor OLE DB. Devido às diferentes opções padrão que podem ser aplicadas, é possível observar um comportamento diferente ao executar a mesma consulta no Modo SQLCMD do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e no utilitário SQLCMD.  
+>  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa o [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient para a execução em modo regular e SQLCMD. Quando executado na linha de comando, o SQLCMD usa o provedor OLE DB. Devido às diferentes opções padrão que podem ser aplicadas, é possível observar um comportamento diferente ao executar a mesma consulta no Modo SQLCMD do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e no utilitário SQLCMD.  
   
 ## <a name="supported-sqlcmd-syntax"></a>Sintaxe SQLCMD com suporte  
  O Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] oferece suporte às seguintes palavras-chave do script SQLCMD:  
@@ -138,7 +140,7 @@ ms.locfileid: "66064107"
 > [!NOTE]  
 >  Para `:error` e `:out`, `stderr` e `stdout` envia a saída à guia de mensagens.  
   
- O Editor de Consultas não oferece suporte aos comandos SQLCMD não listados acima. Na execução de um script que contém palavras-chave SQLCMD sem suporte, o Editor de Consultas enviará uma mensagem "Ignorando comando *\<comando ignorado*>" para o destino de cada palavra-chave sem suporte. O script será executado com êxito, mas os comandos sem suporte serão ignorados.  
+ O Editor de Consultas não oferece suporte aos comandos SQLCMD não listados acima. Quando um script que contém palavras-chave SQLCMD sem suporte é executado, o editor de consultas enviará uma mensagem "ignorando comando * \<ignorado pelo comando*>" para o destino de cada palavra-chave sem suporte. O script será executado com êxito, mas os comandos sem suporte serão ignorados.  
   
 > [!CAUTION]  
 >  Como você não está iniciando o SQLCMD na linha de comando, existem algumas limitações na execução do Editor de Consultas no Modo SQLCMD. Você não pode passar parâmetros de linha de comando como variáveis e, como o Editor de Consultas não tem a capacidade para responder a prompts do sistema operacional, tenha cuidado para não executar instruções interativas.  
@@ -158,7 +160,7 @@ SELECT @@SERVERNAME AS 'Server Name'
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Utilitário sqlcmd](../../tools/sqlcmd-utility.md)  
   
   

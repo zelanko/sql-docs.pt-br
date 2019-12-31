@@ -1,6 +1,6 @@
 ---
-title: Exportar informações de servidor registrado (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Exportar informações de servidor registrado
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - exporting registered server information
 - transferring registered server information
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67a5dce0e92f9d9b90f5af3b6e638112b92d450b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 2d5dcbaf6f478d3cb637c72ada8bee2bb2a088d2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298107"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244603"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Exportar informações de servidor registrado (SQL Server Management Studio)
   Este tópico descreve como salvar e exportar informações de servidor registrado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]e distribuí-las para outros empregados ou servidores. É possível usar esse recurso de exportação para apresentar uma interface com o usuário consistente em computadores múltiplos.  
@@ -42,21 +42,21 @@ ms.locfileid: "63298107"
   
 2.  Na caixa de diálogo **Exportar Servidores Registrados** , faça as seguintes seleções:  
   
-     **Grupo de servidor**  
+     **Grupo de servidores**  
      Especifique o grupo de servidor que será exportado. Exporte todos os servidores registrados, servidores registrados em um grupo de servidores específicos ou um único servidor registrado para o arquivo de exportação. A funcionalidade de exportação é recursiva; por exemplo, se o grupo de servidores A contiver o grupo de servidores B, e o grupo de servidores B contiver os grupos de servidores C e D, a exportação do grupo de servidores A exportará todas as entradas em A, B, C e D.  
   
      O grupo de servidores exibe somente os grupos da árvore atual de servidores registrados.  
   
-     **Arquivo de exportação**  
-     Digite o nome do arquivo de exportação na caixa de texto ou use o botão Procurar ( **...** ) para localizar um arquivo de exportação no computador cliente. Se você selecionar um arquivo existente, a informação de servidor registrado será anexada ao arquivo. Use a extensão .regsrvr. Se você quiser que as informações do servidor registrado estejam disponíveis para outros usuários ou outro computador, você poderá salvar o arquivo na rede. Outros usuários podem acessar o arquivo e podem importar parte ou todas as informações do servidor registrado. Se você selecionar um arquivo existente como o arquivo de exportação, o conteúdo do arquivo será substituído pelas informações de registro do servidor.  
+     **Exportar arquivo**  
+     Digite o nome do arquivo de exportação na caixa de texto ou use o botão Procurar (**...**) para localizar um arquivo de exportação no computador cliente. Se você selecionar um arquivo existente, a informação de servidor registrado será anexada ao arquivo. Use a extensão .regsrvr. Se você quiser que as informações do servidor registrado estejam disponíveis para outros usuários ou outro computador, você poderá salvar o arquivo na rede. Outros usuários podem acessar o arquivo e podem importar parte ou todas as informações do servidor registrado. Se você selecionar um arquivo existente como o arquivo de exportação, o conteúdo do arquivo será substituído pelas informações de registro do servidor.  
   
-     **Não inclua nomes de usuário e senhas no arquivo de exportação**  
+     **Não incluir nomes de usuário e senhas no arquivo de exportação**  
      Exclua nomes de usuário ao exportar o arquivo.  
   
     > [!IMPORTANT]  
     >  Embora os arquivos de exportação sejam criptografados, se nomes de usuários e senhas da autenticação do SQL Server forem incluídas no arquivo, o acesso ao arquivo deve ser cuidadosamente controlado. Portanto, os nomes de usuários e senhas são excluídos do arquivo de exportação por padrão.  
   
-## <a name="see-also"></a>Consulte também  
- [Importar informações de servidor registrado &#40;SQL Server Management Studio&#41; ](import-registered-server-information-sql-server-management-studio.md) [criar um novo servidor registrado &#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Importar informações do servidor registrado &#40;SQL Server Management Studio&#41;](import-registered-server-information-sql-server-management-studio.md) [criar um novo servidor registrado &#40;SQL Server Management Studio](create-a-new-registered-server-sql-server-management-studio.md)&#41;  
   
   

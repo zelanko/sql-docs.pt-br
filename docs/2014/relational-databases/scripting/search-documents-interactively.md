@@ -1,6 +1,6 @@
 ---
-title: Pesquisar documentos interativamente | Microsoft Docs
-ms.custom: ''
+title: Pesquisar documentos interativamente
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,15 +14,15 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 858724b4447c6602db14980a27225b3b8fe69eef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac2a15bae8fde50315ab6c7c41f2e3e57973061f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063793"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243290"
 ---
 # <a name="search-documents-interactively"></a>Pesquisar documentos interativamente
-  Usando a caixa de diálogo **Localizar e Substituir** , você pode pesquisar um ou mais arquivos ou janelas abertas, e navegar pelos resultados da pesquisa um a um. Essa técnica permite a revisão de cada correspondência individual da pesquisa no contexto do texto da correspondência. Você também tem a opção de executar operações de localização em massa e revisar correspondências da pesquisa no formato de relatório usando a caixa de diálogo **Localizar e Substituir** .  
+  Usando a caixa de diálogo **Localizar e substituir** , você pode pesquisar um ou mais arquivos abertos ou janelas e percorrer a pesquisa corresponde a um por um. Essa técnica permite a revisão de cada correspondência individual da pesquisa no contexto do texto da correspondência. Você também tem a opção de executar operações de localização em massa e revisar correspondências da pesquisa no formato de relatório usando a caixa de diálogo **Localizar e Substituir** .  
   
 ### <a name="to-search-all-open-documents"></a>Para pesquisar todos os documentos abertos  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66063793"
   
  O comando **Substituir Tudo** substitui todas as correspondências da pesquisa, inclusive aquelas ignoradas com o botão **Localizar Próximo** . Para cancelar **Substituir Tudo**, clique em **Desfazer** no menu **Editar** antes de fechar qualquer arquivo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Pesquisar um documento ativo de forma incremental](search-an-active-document-incrementally.md)   
  [Pesquisar e substituir](search-and-replace.md)   
  [Pesquisar documentos usando listas de resultados](search-documents-using-results-lists.md)   

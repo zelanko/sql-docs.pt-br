@@ -1,6 +1,6 @@
 ---
-title: Editor de Consultas do Mecanismo de Banco de Dados (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Editor de Consultas do Mecanismo de Banco de Dados
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 48a2fc741a13a0565ab49d1974b9c2798ad7b9ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ec7e26daa91723e5633a9640b99003ebc844d31
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064102"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244940"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Editor de Consultas do Mecanismo de Banco de Dados (SQL Server Management Studio)
   Use o Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para criar e executar scripts que contenham instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] . O editor também dá suporte à execução de scripts que contêm comandos do **sqlcmd** .  
@@ -56,31 +56,31 @@ ms.locfileid: "66064102"
  **Connect**  
  Abra a caixa de diálogo **Conectar ao Servidor** . Use esta caixa de diálogo para estabelecer uma conexão a um servidor.  
   
- **Desconectar**  
+ **Desligar**  
  Desconecta o Editor de Consultas do servidor.  
   
- **Alterar Conexão**  
+ **Alterar conexão**  
  Abra a caixa de diálogo **Conectar ao Servidor** . Use esta caixa de diálogo para estabelecer uma conexão a um servidor diferente.  
   
- **Nova Consulta com Conexão Atual**  
+ **Nova consulta com a conexão atual**  
  Abre uma nova janela do Editor de Consultas e usa as informações de conexão da janela atual do Editor de Consultas.  
   
- **Bancos de Dados Disponíveis**  
+ **Bancos de dados disponíveis**  
  Alteram a conexão com um banco de dados diferente do mesmo servidor.  
   
- **Execute (executar)**  
+ **Executados**  
  Executa o código selecionado ou, se nenhum código estiver selecionado, executa todo o código no Editor de Consultas.  
   
- **Depurador**  
+ **Verificação**  
  Habilita o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] . Este depurador dá suporte a ações de depuração, como definir pontos de interrupção, detectar variáveis e depurar através de código.  
   
- **Cancelar Consulta de Execução**  
+ **Cancelar execução de consulta**  
  Envia uma solicitação de cancelamento ao servidor. Algumas consultas não podem ser canceladas imediatamente, mas precisam esperar por uma condição de cancelamento satisfatória. Quando transações são canceladas, podem ocorrer atrasos enquanto as transações são revertidas.  
   
- **Analisar**  
+ **Passar**  
  Verifica a sintaxe do código selecionado. Se nenhum código estiver selecionado, esta opção verificará a sintaxe de todo o código na janela Editor de Consultas.  
   
- **Exibir Plano de Execução Estimado**  
+ **Exibir plano de execução estimado**  
  Solicita um plano de execução de consulta do processador de consultas sem executar realmente a consulta e exibe o plano na janela **Plano de execução** . Esse plano usa estatísticas de índice como uma estimativa do número de linhas que se espera que retornem durante cada parte da execução da consulta. O plano de consulta real que é usado pode ser diferente do plano de execução estimado. Isso pode ocorrer se o número de linhas retornadas for consideravelmente diferente da estimativa e o processador de consultas alterar o plano para torná-lo mais eficiente.  
   
  **Opções de consulta**  
@@ -89,34 +89,34 @@ ms.locfileid: "66064102"
  **IntelliSense habilitado**  
  Especifica se a funcionalidade IntelliSense está disponível no Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
- **Incluir Plano de Execução Atual**  
+ **Incluir plano de execução real**  
  Executa a consulta e retorna os resultados da consulta e o plano de execução usado para a consulta. Estes aparecem como um plano de consulta gráfica na janela **Plano de Execução** .  
   
- **Incluir Estatísticas do Cliente**  
+ **Incluir estatísticas do cliente**  
  Inclui a janela **Estatísticas do Cliente** com estatísticas sobre a consulta e sobre os pacotes de rede, além do tempo decorrido da consulta.  
   
- **Resultados em Texto**  
+ **Resultados em texto**  
  Retorna os resultados da consulta como texto na janela **Resultados** .  
   
- **Resultados em Grade**  
+ **Resultados em grade**  
  Retorna os resultados da consulta como uma ou mais grades na janela **Resultados** .  
   
- **Resultados em Arquivo**  
+ **Resultados em arquivo**  
  Quando a consulta é executada, a caixa de diálogo **Salvar Resultados** é exibida. Em **Salvar em**, selecione a pasta na qual você deseja salvar o arquivo. Em **Nome do arquivo**, digite o nome do arquivo e clique em **Salvar** para salvar os resultados da consulta como um arquivo de **Relatório** com a extensão .rpt. Para opções avançadas, clique na seta para baixo no botão **Salvar** e clique em **Salvar com Codificação**.  
   
- **Comentário de seleção**  
+ **Seleção de comentário**  
  Transforma a linha atual em um comentário adicionando um operador de comentário (--) no começo da linha.  
   
- **Remover comentário de seleção**  
+ **Remover comentário da seleção**  
  Transforma a linha atual em uma instrução de fonte ativa ao remover um operador de comentário (--) do começo da linha.  
   
- **Diminuir Recuo de Linha**  
+ **Diminuir recuo de linha**  
  Move o texto da linha para a esquerda ao remover espaços em branco no começo da linha.  
   
- **Aumentar Recuo de Linha**  
+ **Aumentar recuo de linha**  
  Move o texto da linha para a direita ao adicionar espaços em branco no começo da linha.  
   
- **Especificar Valores para Parâmetros de Modelo**  
+ **Especificar valores para parâmetros de modelo**  
  Abre uma caixa de diálogo que você pode usar para especificar valores para parâmetros em procedimentos e funções armazenados.  
   
  Você também pode adicionar a barra de ferramentas Editor de Consultas selecionando o menu **Exibir** , **Barras de Ferramentas**e, em seguida, **Editor SQL**. Se você adicionar a barra de ferramentas do SQL Editor quando nenhuma janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] estiver aberta, todos os botões ficarão indisponíveis.  
@@ -124,31 +124,31 @@ ms.locfileid: "66064102"
 ## <a name="sql-editor-toolbar"></a>Barra de ferramentas do Editor SQL  
  Quando uma janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] está aberta, você também pode adicionar a barra de ferramentas Depurar selecionando o menu **Exibir** , **Barras de Ferramentas**e, em seguida, **Depurar**. Se você adicionar a barra de ferramentas Depurar quando nenhuma janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] estiver aberta, todos os botões ficarão indisponíveis.  
   
- **Continue**  
+ **Continua**  
  Executa o código na janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] até encontrar um ponto de interrupção.  
   
  **Interromper Tudo**  
  Define o depurador para interromper todos os processos aos quais o depurador está anexado quando ocorrer uma interrupção.  
   
- **Parar Depuração**  
+ **Parar depuração**  
  Retira a janela selecionada do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] do modo de depuração e restaura o modo de execução padrão.  
   
- **Mostrar Próxima Instrução**  
+ **Mostrar próxima instrução**  
  Move o cursor para a próxima instrução a ser executada.  
   
- **Depuração Completa**  
+ **Intervir**  
  A próxima instrução é executada. Se a próxima instrução chamar um procedimento armazenado, uma função ou um gatilho Transact-SQL, o depurador exibirá uma nova janela do **Editor de Consultas** que contém o código do módulo. A janela está no modo de depuração e a execução pausa na primeira instrução do módulo. Você pode mover-se pelo módulo, por exemplo, definindo pontos de interrupção ou percorrendo o código.  
   
- **Depuração Parcial**  
+ **Depurar**  
  A próxima instrução é executada. Se a instrução chamar um procedimento armazenado, uma função ou um gatilho Transact-SQL, o módulo será executado até o fim, e os resultados serão retornados ao código de chamada. Se você tiver certeza de que não há erros no módulo, poderá passar por ele. A execução pausa na instrução que segue a chamada para o módulo.  
   
- **Depuração Circular**  
+ **Sair**  
  Retorna para o próximo nível de chamada mais alto (função, procedimento armazenado ou gatilho). A execução pausa na instrução que segue a chamada do procedimento armazenado, da função ou do gatilho.  
   
  **Windows**  
  Abre a janela **Ponto de Interrupção** ou a janela **Imediato** .  
   
-## <a name="see-also"></a>Consulte também  
- [Atalhos de teclado do SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+## <a name="see-also"></a>Consulte Também  
+ [SQL Server Management Studio atalhos de teclado](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

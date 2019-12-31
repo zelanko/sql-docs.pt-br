@@ -1,6 +1,6 @@
 ---
-title: Sintaxe Transact-SQL com suporte no IntelliSense | Microsoft Docs
-ms.custom: ''
+title: Sintaxe Transact-SQL com suporte do IntelliSense
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6db4de99458ced7471414540bc46704cfab928fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2db2ac49f1caa455c8c05529437a385d360ecaf6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063325"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242998"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintaxe Transact-SQL com suporte do IntelliSense
   Este tópico descreve as instruções e os elementos de sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] aos quais o IntelliSense dá suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "66063325"
   
 |||  
 |-|-|  
-|SELECT|WHERE|  
+|SELECIONAR|WHERE|  
 |FROM|ORDER BY|  
 |HAVING|UNION|  
 |FOR|GROUP BY|  
@@ -47,17 +47,17 @@ ms.locfileid: "66063325"
   
 |Instrução Transact-SQL|Sintaxe com suporte|  
 |-----------------------------|----------------------|  
-|[INSERT](/sql/t-sql/statements/insert-transact-sql)|Toda a sintaxe, exceto a cláusula *execute_statement* .|  
-|[UPDATE](/sql/t-sql/queries/update-transact-sql)|Toda a sintaxe.|  
-|[DELETE](/sql/t-sql/statements/delete-transact-sql)|Toda a sintaxe.|  
-|[DECLARE @local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|Toda a sintaxe.|  
-|[SET @local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|Toda a sintaxe.|  
-|[EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)|Execução de procedimentos armazenados definidos pelo usuário, procedimentos armazenados do sistema, funções definidas pelo usuário e funções do sistema.|  
+|[INSERIDO](/sql/t-sql/statements/insert-transact-sql)|Toda a sintaxe, exceto a cláusula *execute_statement* .|  
+|[CUMULATIVO](/sql/t-sql/queries/update-transact-sql)|Toda a sintaxe.|  
+|[APAGAR](/sql/t-sql/statements/delete-transact-sql)|Toda a sintaxe.|  
+|[Claro@local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|Toda a sintaxe.|  
+|[Definição@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|Toda a sintaxe.|  
+|[EXECUTADOS](/sql/t-sql/language-elements/execute-transact-sql)|Execução de procedimentos armazenados definidos pelo usuário, procedimentos armazenados do sistema, funções definidas pelo usuário e funções do sistema.|  
 |[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|Toda a sintaxe.|  
-|[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|Toda a sintaxe.|  
-|[CREATE PROCEDURE](/sql/t-sql/statements/create-procedure-transact-sql)|Toda a sintaxe, com as seguintes exceções:<br /><br /> Não há suporte do IntelliSense para a cláusula EXTERNAL NAME.<br /><br /> Na cláusula AS, o IntelliSense dá suporte apenas às instruções e à sintaxe listadas neste tópico.|  
-|[ALTER PROCEDURE](/sql/t-sql/statements/alter-procedure-transact-sql)|Toda a sintaxe, com as seguintes exceções:<br /><br /> Não há suporte do IntelliSense para a cláusula EXTERNAL NAME.<br /><br /> Na cláusula AS, o IntelliSense dá suporte apenas às instruções e à sintaxe listadas neste tópico.|  
-|[USE](/sql/t-sql/language-elements/use-transact-sql)|Toda a sintaxe.|  
+|[CRIAR MODO DE EXIBIÇÃO](/sql/t-sql/statements/create-view-transact-sql)|Toda a sintaxe.|  
+|[CRIAR PROCEDIMENTO](/sql/t-sql/statements/create-procedure-transact-sql)|Toda a sintaxe, com as seguintes exceções:<br /><br /> Não há suporte do IntelliSense para a cláusula EXTERNAL NAME.<br /><br /> Na cláusula AS, o IntelliSense dá suporte apenas às instruções e à sintaxe listadas neste tópico.|  
+|[ALTERAR PROCEDIMENTO](/sql/t-sql/statements/alter-procedure-transact-sql)|Toda a sintaxe, com as seguintes exceções:<br /><br /> Não há suporte do IntelliSense para a cláusula EXTERNAL NAME.<br /><br /> Na cláusula AS, o IntelliSense dá suporte apenas às instruções e à sintaxe listadas neste tópico.|  
+|[UTILIZÁ](/sql/t-sql/language-elements/use-transact-sql)|Toda a sintaxe.|  
   
 ## <a name="intellisense-in-supported-statements"></a>IntelliSense em instruções com suporte  
  No Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , o IntelliSense dá suporte aos seguintes elementos de sintaxe, quando usados em uma das instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] com suporte:  

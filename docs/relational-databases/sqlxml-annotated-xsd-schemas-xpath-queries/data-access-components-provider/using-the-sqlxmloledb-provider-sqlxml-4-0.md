@@ -1,6 +1,5 @@
 ---
-title: Usando o provedor SQLXMLOLEDB (SQLXML 4,0) | Microsoft Docs
-ms.custom: ''
+title: Usando o provedor SQLXMLOLEDB (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,13 +13,14 @@ helpviewer_keywords:
 ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bc5e79f52f3aabbe157065db86e8d0968537ef7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2a2a24cd7ced3430f3ba59da6489e557f32bf7c4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909360"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246637"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>Usando o provedor SQLXMLOLEDB (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,22 +42,22 @@ ms.locfileid: "72909360"
      Para obter mais informações, consulte [conceitos de programação do SQLXML 4,0](../../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) e [instalando SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Executando o provedor &#40;SQLXMLOLEDB de consultas SQL&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)  
+ [Executando consultas SQL &#40;provedor de SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)  
  Ilustra o uso das propriedades raiz ClientSideXML e XML para executar consultas SQL.  
   
- [Executando modelos que contêm o provedor &#40;SQLXMLOLEDB de consultas SQL&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)  
+ [Executando modelos que contêm consultas SQL &#40;provedor SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)  
  Ilustra o uso da propriedade ClientSideXML.  
   
- [Executando o provedor &#40;de SQLXMLOLEDB de consultas XPath&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)  
+ [Executando consultas XPath &#40;provedor SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)  
  Ilustra o uso das propriedades de esquema ClientSideXML, caminho base e mapeamento.  
   
  [Executando consultas XPath com namespaces &#40;provedor SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)  
  Ilustra como consultar esquemas qualificados para namespaces.  
   
- [Executando modelos que contêm o provedor &#40;SQLXMLOLEDB de consultas XPath&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md)  
+ [Executando modelos que contêm consultas XPath &#40;provedor SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md)  
  Ilustra como executar modelos com consultas SQL usando as propriedades de esquema ClientSideXML, caminho base e mapeamento.  
   
- [Aplicando um &#40;provedor de SQLXMLOLEDB de XSL Transformation&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/applying-an-xsl-transformation-sqlxmloledb-provider.md)  
+ [Aplicando um provedor XSL Transformation &#40;SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/applying-an-xsl-transformation-sqlxmloledb-provider.md)  
  Ilustra o uso das propriedades ClientSideXML e XSL na aplicação de uma transformação XSL.  
   
 ## <a name="see-also"></a>Consulte Também  

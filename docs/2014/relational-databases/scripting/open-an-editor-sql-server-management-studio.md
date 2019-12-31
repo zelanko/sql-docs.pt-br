@@ -1,6 +1,6 @@
 ---
-title: Abrir um editor (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Abrir um editor
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,58 +10,60 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a6ba0d74b07c21234d7e0f20cb7d9664ee7157f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 443ff4762fe653850af8ba23166bd880298bae52
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090298"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242026"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Abrir um editor (SQL Server Management Studio)
   Este tópico descreve como abrir o editor [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query, MDX, DMX ou XML/A no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Quando aberta, cada janela de editor aparece como uma guia no painel central do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="before-you-begin"></a>Antes de começar  
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dá suporte a quatro editores: o Editor de Consulta do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para editar scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , os editores DMX e MDX para editar scripts que usam essas linguagens e o editor XML/A para editar scripts XML/A ou arquivos XML. Quaisquer dos editores também podem ser usados para editar arquivos de texto.  
+ 
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dá suporte a quatro editores: o Editor de Consulta do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para editar scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , os editores DMX e MDX para editar scripts que usam essas linguagens e o editor XML/A para editar scripts XML/A ou arquivos XML. Quaisquer dos editores também podem ser usados para editar arquivos de texto.  
   
-### <a name="limitations-and-restrictions"></a>Limitações e Restrições  
+### <a name="limitations-and-restrictions"></a>Limitações e restrições  
  Se você compartilhar arquivos com usuários em outros locais que usam páginas de código distintas, salve o arquivo com a página de código Unicode apropriada para evitar erros na leitura do arquivo. Além disso, ao salvar arquivos para UNIX ou Macintosh, verifique se salvou seus arquivos no formato de documento apropriado. No menu **Arquivo** , clique em **Salvar Como**, **Salvar com Codificação** na seta para baixo próxima ao botão **Salvar** e escolha **Unix** ou **Macintosh** em **Terminações de Linha**.  
   
 ### <a name="permissions"></a>Permissões  
  Operações que você executa em um editor de códigos estão sujeitas às permissões concedidas à conta de autenticação usada no logon. Por exemplo, se você abrir uma janela Editor de Consulta [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a Autenticação do Windows, não poderá executar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que referenciam objetos os quais sua conta de logon do Windows não tem permissões para acessar.  
   
-## <a name="how-to-open-editors"></a>Como fazer: Abrir Editores  
+## <a name="how-to-open-editors"></a>Como abrir editores  
  Esta seção explica como abrir os vários editores no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="using-the-filenew-menu"></a>Usando o menu Arquivo/novo  
  No menu **Arquivo** , clique em **Novo**e selecione uma das opções do editor de consulta:  
   
--   **Consultar com a Conexão Atual** – abre uma nova janela do editor do tipo associado à conexão atual no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. A janela de editor usa as mesmas informações de autenticação que a conexão atual. Por exemplo, se você selecionar uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em Pesquisador de Objetos, e usar **Consulta com Conexão Atual**, o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abrirá um Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)] conectado à mesma instância usando as mesmas informações de autenticação.  
+-   **Consulta com conexão atual** – abre uma nova janela do editor do tipo associado à conexão atual no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. A janela de editor usa as mesmas informações de autenticação que a conexão atual. Por exemplo [!INCLUDE[ssDE](../../includes/ssde-md.md)] , se você selecionar uma instância do no Pesquisador de objetos e, em seguida, usar a **consulta com a conexão atual**, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o abrirá um [!INCLUDE[ssDE](../../includes/ssde-md.md)] editor de consultas conectado à mesma instância usando as mesmas informações de autenticação.  
   
--   **Consulta do Mecanismo de Banco de Dados** – abre um novo Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e uma caixa de diálogo para obter as informações necessárias para conectar a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   **Mecanismo de banco de dados consulta** – abre um novo [!INCLUDE[ssDE](../../includes/ssde-md.md)] editor de consultas e uma caixa de diálogo para obter as informações necessárias para se conectar a [!INCLUDE[ssDE](../../includes/ssde-md.md)]uma instância do.  
   
--   **Consulta MDX do Analysis Services** – Abre um novo Editor de Consultas MDX do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e uma caixa de diálogo para obter as informações necessárias para se conectar a uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   **Analysis Services consulta MDX** – abre um novo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] editor de consultas MDX e uma caixa de diálogo para obter as informações necessárias para se conectar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]a uma instância do.  
   
--   **Consulta DMX do Analysis Services** – Abre um novo Editor de Consultas DMX do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e uma caixa de diálogo para obter as informações necessárias para se conectar a uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   **Analysis Services consulta DMX** – abre um novo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] editor de consultas DMX e uma caixa de diálogo para obter as informações necessárias para se conectar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]a uma instância do.  
   
--   **Consulta XML/A do Analysis Services** – Abre um novo Editor de Consultas XML/A do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e uma caixa de diálogo para obter as informações necessárias para se conectar a uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   **Analysis Services consulta XML/a** -abre um novo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] editor de consultas XML/a e uma caixa de diálogo para obter as informações necessárias para se conectar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]a uma instância do.  
   
 ### <a name="using-the-fileopen-menu"></a>Usando o menu Arquivo/Abrir  
- No menu **Arquivo** , clique em **Abrir**, navegue até um arquivo e abra-o. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre o tipo apropriado de editor para a extensão de arquivo, copia o conteúdo do arquivo na janela de editor e também abre uma caixa de diálogo de conexão, se necessário. Por exemplo, se você abrir um arquivo com extensão .sql, o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abrirá uma janela de Editor de Consulta [!INCLUDE[ssDE](../../includes/ssde-md.md)] , copiará o conteúdo do arquivo .sql e abrirá uma caixa de diálogo de conexão. Se você abrir um arquivo com uma extensão não associada a um editor específico, o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abrirá a janela do editor e copiará o conteúdo do arquivo.  
+ No menu **Arquivo** , clique em **Abrir**, navegue até um arquivo e abra-o. 
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre o tipo apropriado de editor para a extensão de arquivo, copia o conteúdo do arquivo na janela de editor e também abre uma caixa de diálogo de conexão, se necessário. Por exemplo, se você abrir um arquivo com extensão .sql, o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abrirá uma janela de Editor de Consulta [!INCLUDE[ssDE](../../includes/ssde-md.md)] , copiará o conteúdo do arquivo .sql e abrirá uma caixa de diálogo de conexão. Se você abrir um arquivo com uma extensão não associada a um editor específico, o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abrirá a janela do editor e copiará o conteúdo do arquivo.  
   
  Para obter mais informações, veja [Associar extensões de arquivo a um Editor de Códigos](associate-file-extensions-to-a-code-editor.md).  
   
 ### <a name="using-the-toolbar"></a>Usando a barra de ferramentas  
  Na barra de ferramentas **Padrão** , clique em um dos seguintes botões:  
   
--   **Nova Consulta** – abre uma nova janela do editor do tipo associado à conexão atual no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. A janela de editor usa as mesmas informações de autenticação que a conexão atual. Por exemplo, se você selecionar uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em Pesquisador de Objetos, e clicar no botão **Nova Consulta** , o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abrirá um Editor de Consulta [!INCLUDE[ssDE](../../includes/ssde-md.md)] conectado à mesma instância usando as mesmas informações de autenticação.  
+-   **Nova consulta** – abre uma nova janela do editor do tipo associado à conexão atual no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. A janela de editor usa as mesmas informações de autenticação que a conexão atual. Por exemplo, se você selecionar uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em Pesquisador de Objetos, e clicar no botão **Nova Consulta** , o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abrirá um Editor de Consulta [!INCLUDE[ssDE](../../includes/ssde-md.md)] conectado à mesma instância usando as mesmas informações de autenticação.  
   
--   **Consulta do Mecanismo de Banco de Dados** – abre um novo Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e uma caixa de diálogo para obter as informações necessárias para conectar a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   **Mecanismo de banco de dados consulta** – abre um novo [!INCLUDE[ssDE](../../includes/ssde-md.md)] editor de consultas e uma caixa de diálogo para obter as informações necessárias para se conectar a [!INCLUDE[ssDE](../../includes/ssde-md.md)]uma instância do.  
   
--   **Consulta MDX do Analysis Services** – Abre um novo Editor de Consultas MDX do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e uma caixa de diálogo para obter as informações necessárias para se conectar a uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   **Analysis Services consulta MDX** – abre um novo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] editor de consultas MDX e uma caixa de diálogo para obter as informações necessárias para se conectar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]a uma instância do.  
   
--   **Consulta DMX do Analysis Services** – Abre um novo Editor de Consultas DMX do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e uma caixa de diálogo para obter as informações necessárias para se conectar a uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   **Analysis Services consulta DMX** – abre um novo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] editor de consultas DMX e uma caixa de diálogo para obter as informações necessárias para se conectar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]a uma instância do.  
   
--   **Consulta XML/A do Analysis Services** – Abre um novo Editor de Consultas XML/A do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e uma caixa de diálogo para obter as informações necessárias para se conectar a uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   **Analysis Services consulta XML/a** -abre um novo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] editor de consultas XML/a e uma caixa de diálogo para obter as informações necessárias para se conectar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]a uma instância do.  
   
 ### <a name="using-object-explorer"></a>Usando o Pesquisador de Objetos  
  No **Pesquisador de Objetos**:  

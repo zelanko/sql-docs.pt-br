@@ -1,5 +1,5 @@
 ---
-title: Executar o procedimento armazenado com ODBC CALL e a saída do processo | Microsoft Docs
+title: Procedimento armazenado, chamada ODBC, saída
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d82fa15999c56824f31fb4172969cdbc744a7bc8
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: d0d61d50f7ff79da77dab15b654ec1720b1ee3b4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73789870"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244490"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Executar o procedimento armazenado com ODBC CALL e a saída do processo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "73789870"
   
 2.  Crie um conjunto de associações (um para cada criador de parâmetro) usando uma matriz de estrutura DBBINDING.  
   
-3.  Crie um acessador para os parâmetros definidos usando o método **IAccessor:: Createaccesser** . **CreateAccessor** cria um acessador com base em um conjunto de associações.  
+3.  Crie um acessador para os parâmetros definidos usando o método **IAccessor:: Createaccesser** . O **Createaccesser** cria um acessador de um conjunto de associações.  
   
 4.  Preencha a estrutura DBPARAMS.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73789870"
   
  Execute a terceira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para excluir o procedimento armazenado usado pelo aplicativo.  
   
-```  
+```sql
 USE AdventureWorks  
 if exists (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[myProc]'))  
    DROP PROCEDURE myProc  
@@ -78,7 +78,7 @@ ELSE
 GO  
 ```  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 void InitializeAndEstablishConnection();  
   
@@ -350,13 +350,13 @@ void InitializeAndEstablishConnection() {
 }  
 ```  
   
-```  
+```sql
 USE AdventureWorks  
 DROP PROCEDURE myProc  
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções sobre o processamento de resultados &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

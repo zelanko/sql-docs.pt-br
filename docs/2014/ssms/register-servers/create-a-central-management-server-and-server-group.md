@@ -1,6 +1,6 @@
 ---
-title: Criar um servidor de gerenciamento Central e grupo de servidores (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Criar um grupo e um servidor de gerenciamento central
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - configuration server
 ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 783654f312590d64c57c1c47481886c865d203c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 17c1e63789e9c2069d8fdecd8bd62b64bf8a886d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68188159"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244655"
 ---
 # <a name="create-a-central-management-server-and-server-group-sql-server-management-studio"></a>Criar um servidor de gerenciamento central e um grupo de servidores (SQL Server Management Studio)
   Este tópico descreve como designar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como servidor central de gerenciamento no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Os servidores de gerenciamento central armazenam uma lista de instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é organizada em um ou mais grupos de servidores de gerenciamento Central. As ações executadas com um grupo de servidores de gerenciamento central afetarão todos os servidores do grupo. Isso inclui a conexão a servidores usando o Pesquisador de Objetos e a execução de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] e de políticas de Gerenciamento Baseado em Política em vários servidores ao mesmo tempo.  
@@ -31,20 +31,20 @@ ms.locfileid: "68188159"
   
      [Segurança](#Security)  
   
--   **Para criar um Servidor Central de Gerenciamento e um Grupo de Servidores, usando:**  
+-   **Para criar um servidor de gerenciamento central e um grupo de servidores, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="BeforeYouBegin"></a>Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="Security"></a>Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="Permissions"></a>Permissões  
  Duas funções no banco de dados msdb concedem acesso aos servidores de gerenciamento central. Somente os membros da função ServerGroupAdministratorRole podem administrar o servidor de gerenciamento central. A associação à função ServerGroupReaderRole é necessária para conectar a um servidor de gerenciamento central.  
   
  Como as conexões mantidas por um servidor de gerenciamento central são executadas no contexto do usuário com o uso da Autenticação do Windows, as permissões efetivas nos servidores registrados podem variar. Por exemplo, o usuário pode ser membro da função de servidor fixa sysadmin na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A, mas pode ter permissões limitadas na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] B.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a>Usando SQL Server Management Studio  
  Os procedimentos a seguir descrevem como executar as seguintes etapas.  
   
 1.  Crie um servidor central de gerenciamento.  
@@ -81,7 +81,7 @@ ms.locfileid: "68188159"
   
 -   Depois de criar um servidor de gerenciamento central, um ou mais grupos de servidores e um ou mais servidores registrados, você poderá executar consultas simultâneas no grupo inteiro. Para obter mais informações sobre como executar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] nos servidores em um grupo de servidores ao mesmo tempo, consulte [Executar instruções em vários servidores simultaneamente &#40;SQL Server Management Studio&#41;](execute-statements-against-multiple-servers-simultaneously.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Administrar vários servidores usando os Servidores Centrais de Gerenciamento](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Administrar vários servidores usando servidores de gerenciamento central](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Informações do depurador Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Informações do depurador Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 354b3fa047fb1fd0effc4f92f18c011d85fcb1e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41d215d4d6e288b74e69e0ea8266c442a0726220
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063428"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243067"
 ---
 # <a name="transact-sql-debugger-information"></a>Informações do depurador Transact-SQL
   Toda vez que o depurador pausa a execução em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, você pode usar as várias janelas do depurador para exibir o estado de execução atual.  
@@ -40,7 +40,7 @@ ms.locfileid: "66063428"
 -   Na barra de ferramentas de **Depurar** , clique em **Pontos de Interrupção**e selecione a janela desejada.  
   
 ## <a name="transact-sql-expressions"></a>Expressões Transact-SQL  
- Expressões são cláusulas [!INCLUDE[tsql](../../includes/tsql-md.md)] que são avaliadas como um valor escalar simples, como, por exemplo, variáveis ou parâmetros. A janela esquerda do depurador pode exibir os valores dos dados que são atribuídos no momento a expressões em até cinco guias ou janelas: **Locais, Inspecionar 1**, **Inspecionar 2**, **Inspecionar 3** e **Inspecionar 4**.  
+ Expressões são cláusulas [!INCLUDE[tsql](../../includes/tsql-md.md)] que são avaliadas como um valor escalar simples, como, por exemplo, variáveis ou parâmetros. A janela esquerda do depurador pode exibir os valores dos dados que são atribuídos no momento a expressões em até cinco guias ou janelas: **Locais, Inspecionar 1**, **Inspecionar 2**, **Inspecionar 3**e **Inspecionar 4**.  
   
  A janela **Locais** exibe informações sobre os variáveis locais no escopo atual do depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] . O conjunto de expressões listadas na janela **Locais** é alterado à medida que o depurador é executado por meio de partes diferentes do código.  
   
@@ -95,14 +95,14 @@ ms.locfileid: "66063428"
   
  Em modo de depuração, as guias **Resultados** e **Mensagens** ainda ficam ativas no Editor de Consultas. A guia **Resultados** continua a exibir os conjuntos de resultados das instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que são executados durante uma sessão de depuração. A guia **Mensagens** continua a exibir mensagens de sistema, como, por exemplo, *xx* Linhas Afetadas e a saída de instruções PRINT e RAISERROR.  
   
-## <a name="see-also"></a>Consulte também  
- [Janela Locais](transact-sql-debugger-locals-window.md)   
- [Janela de Observação](transact-sql-debugger-watch-window.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Janela locais](transact-sql-debugger-locals-window.md)   
+ [Janela de inspeção](transact-sql-debugger-watch-window.md)   
  [Caixa de diálogo QuickWatch](transact-sql-debugger-quickwatch-dialog-box.md)   
- [Janela Pontos de Interrupção](transact-sql-debugger-breakpoints-window.md)   
- [Janela Pilha de Chamadas](transact-sql-debugger-call-stack-window.md)   
- [Janela Threads](transact-sql-debugger-threads-window.md)   
- [Janela Saída](transact-sql-debugger-output-window.md)   
+ [Janela pontos de interrupção](transact-sql-debugger-breakpoints-window.md)   
+ [Janela pilha de chamadas](transact-sql-debugger-call-stack-window.md)   
+ [Janela threads](transact-sql-debugger-threads-window.md)   
+ [Janela de Saída](transact-sql-debugger-output-window.md)   
  [Depurador do Transact-SQL](transact-sql-debugger.md)  
   
   

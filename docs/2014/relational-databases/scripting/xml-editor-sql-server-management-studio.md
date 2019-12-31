@@ -1,6 +1,6 @@
 ---
-title: Editor XML (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Editor de XML
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28d0de4233147ae0a0dd5f0874d281a4697d93d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4fc4e1b0f0340d579b1f6ee22db888417089352
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063196"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242937"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Editor XML (SQL Server Management Studio)
   Fornece um conjunto de ferramentas visuais para trabalhar com Esquemas XML, conjuntos de dados ADO.NET e documentos XML. O XML Designer oferece suporte para a linguagem de definição de esquema XML (XSD) definida pelo World Wide Web Consortium (WC3). O designer não oferece suporte para DTDs (definições de tipo de documento) ou outras linguagens de esquema XML, como XDR (XML-Data Reduced).  
@@ -34,12 +34,12 @@ ms.locfileid: "66063196"
   
  O designer fornece as três exibições (ou modos) a seguir, para se trabalhar em arquivos XML, esquemas XML e conjuntos de dados:  
   
-|Exibição|Descrição|Tipos de arquivos com suporte|  
+|Visualizar|Descrição|Tipos de arquivos com suporte|  
 |----------|-----------------|--------------------------|  
 |**Esquema**|Para criar visualmente e modificar esquemas XML e conjuntos de dados ADO.NET.|.xsd|  
 |**Dados**|Para modificar visualmente arquivos de dados XML em uma grade de dados estruturada.|.xml|  
 |**XML**|Para editar XML; o editor de fonte fornece codificação de cor e IntelliSense, incluindo Complete Word e List Members.|.xml .xsd .xslt .wsdl.web.resx.tdl.wsf.hta.disco.vsdisco.config|  
-|**Plano de Execução**|Exibe planos de consulta xml criados, usando-se a opção SET SHOWPLAN_XML ON.|.showplan|  
+|**Plano**|Exibe planos de consulta xml criados, usando-se a opção SET SHOWPLAN_XML ON.|.showplan|  
   
 ## <a name="schema-view"></a>Exibição de esquema  
  A exibição de esquema fornece uma representação visual dos elementos, atributos, tipos e assim por diante, que compõem o conjunto de esquemas XML e ADO.NET.  
@@ -81,10 +81,10 @@ ms.locfileid: "66063196"
 ## <a name="data-view"></a>Exibição de dados  
  Exibição de dados fornece uma grade de dados que pode ser usada para modificar arquivos .xml. Somente o conteúdo (mas não as marcas e estrutura) em um arquivo XML pode ser editado em exibição de dados.  
   
- Há duas áreas separadas na exibição de dados: **Tabelas de Dados** e **Dados**. A área **Tabela de Dados** é uma lista de relações definidas no arquivo XML, na ordem de seu aninhamento (do mais externo para o mais interno). A área **Dados** é uma grade de dados que exibe dados com base na seleção na área tabela de dados.  
+ Há duas áreas separadas na Exibição de Dados: **Tabelas de Dados** e **Dados**. A área **Tabela de Dados** é uma lista de relações definidas no arquivo XML, na ordem de seu aninhamento (do mais externo para o mais interno). A área **Dados** é uma grade de dados que exibe dados com base na seleção na área tabela de dados.  
   
 > [!NOTE]  
->  Arquivos XML recentemente criados não contêm nenhum dado e, assim, não podem ser exibidos na exibição de Dados. Há também algumas instâncias de documentos XML nas quais a exibição de dados não pode ser invocada. Embora o XML seja considerado bem formado, se ele não estiver estruturado, os dados que tentarem alternar para a exibição de dados gerarão a seguinte mensagem: "Embora esse documento seja bem formado, ele contém uma estrutura que não é possível exibir na exibição de dados."  
+>  Arquivos XML recentemente criados não contêm nenhum dado e, assim, não podem ser exibidos na exibição de Dados. Há também algumas instâncias de documentos XML nas quais a exibição de dados não pode ser invocada. Embora o XML seja considerado bem formado, se não for estruturado dados tentando mudar para exibição de dados irão gerar a seguinte mensagem: "Embora esse documento seja bem formado, ele contém estrutura que a exibição de dados não pode exibir".  
   
  Na exibição de Dados você pode:  
   
@@ -95,15 +95,16 @@ ms.locfileid: "66063196"
 -   Gerar um esquema XML a partir de um documento XML  
   
 ## <a name="xml-view"></a>Exibição XML  
- A exibição XML fornece um editor para edição de XML bruto e, ainda, codificação IntelliSense e de cores. A conclusão de instrução está disponível ao se trabalhar em arquivos .xsd e arquivos .xml que tenham um esquema associado. Tipo \< iniciar uma marca e você verá uma lista de elementos que são válidos nesse local. Depois de digitar o nome do elemento e pressionar SPACEBAR, você terá uma lista de atributos para os quais os elementos oferecem suporte.   
+ A exibição XML fornece um editor para edição de XML bruto e, ainda, codificação IntelliSense e de cores. A conclusão de instrução está disponível ao se trabalhar em arquivos .xsd e arquivos .xml que tenham um esquema associado. Digite \< para iniciar uma marca e será apresentada uma lista de elementos que são válidos nesse local. Depois de digitar o nome do elemento e pressionar SPACEBAR, você terá uma lista de atributos para os quais os elementos oferecem suporte.   
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense não estão disponíveis na barra de ferramentas. Quando estiver no Editor de XML, clique em **IntelliSense** no menu **Editar**para acessar as opções.  
+>  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense não estão disponíveis na barra de ferramentas. Quando estiver no Editor de XML, clique em **IntelliSense** no menu **Editar**para acessar as opções.  
   
 ## <a name="showplan-view"></a>Exibição de SHOWPLAN  
  Planos de consulta podem ser salvos em formato XML quando forem criados usando-se a opção SET SHOWPLAN_XML ON. Clique duas vezes em um arquivo com a extensão .showplan para abrir o plano de consulta.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Salvar um plano de execução em formato XML](../performance/save-an-execution-plan-in-xml-format.md)  
   
   

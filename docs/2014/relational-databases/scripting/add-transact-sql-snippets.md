@@ -1,6 +1,6 @@
 ---
-title: Adicionar snippets de Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Adicionar snippets de Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d79989e37483342e5cc1624a0529f9df98ae980
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27070cc125ca0443ae833854e721c6f72c7ce832
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064288"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244819"
 ---
 # <a name="add-transact-sql-snippets"></a>Adicionar snippets de Transact-SQL
   Você pode adicionar seus próprios snippets de código Transact-SQL ao conjunto de snippets predefinidos incluídos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "66064288"
   
 2.  Selecione o menu **Ferramentas** e clique em **Gerenciador de Snippets de Código**.  
   
-3.  Clique no botão **Adicionar** .  
+3.  Clique no botão **Adicionar**.  
   
 4.  Navegue até a pasta que contém seus snippets de código e clique no botão **Selecionar Pasta** .  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66064288"
   
 2.  Selecione o menu **Ferramentas** e clique em **Gerenciador de Snippets de Código**.  
   
-3.  Clique no botão **Importar** .  
+3.  Clique no botão **Importar**.  
   
 4.  Navegue até a pasta que contém seu trecho, clique no arquivo .snippet e clique em **Abrir** .  
   
@@ -102,15 +102,15 @@ ms.locfileid: "66064288"
     </CodeSnippets>  
     ```  
   
-2.  Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+2.  Abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 3.  Selecione o menu **Ferramentas** e clique em **Gerenciador de Snippets de Código**.  
   
-4.  Clique no botão **Importar** .  
+4.  Clique no botão **Importar**.  
   
 5.  Navegue até a pasta que contém TryCatch.snippet, clique no arquivo TryCatch.snippet e clique em **Abrir** . Você não deve ter um snippet TryCatch na pasta **Meus Snippets de Código** .  
   
-## <a name="see-also"></a>Consulte também  
- [Inserir snippets Transact-SQL com Surround](insert-surround-with-transact-sql-snippets.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Inserir trechos Transact-SQL com surround](insert-surround-with-transact-sql-snippets.md)  
   
   

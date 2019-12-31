@@ -1,6 +1,6 @@
 ---
-title: Especificar uma condição de ponto de interrupção | Microsoft Docs
-ms.custom: ''
+title: Especificar uma condição de ponto de interrupção
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,18 +12,18 @@ ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e331c8dfd533a99d2938633fe7dae5654f5c0ce3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c27ed8abfd66cb896182cd5a795965163e5c8618
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063736"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243227"
 ---
 # <a name="specify-a-breakpoint-condition"></a>Especificar uma condição de ponto de interrupção
   Uma condição de ponto de interrupção é uma expressão [!INCLUDE[tsql](../../includes/tsql-md.md)] que é avaliada pelo depurador ao atingir o ponto de interrupção. Se a condição for atendida e qualquer contagem de ocorrências especificada for atingida, o depurador será interrompido ou executará a ação especificada para o ponto de interrupção.  
   
 ## <a name="specifying-conditions"></a>Especificando condições  
- A expressão especificada deve ser uma expressão Transact-SQL válida que seja avaliada como um valor Booliano. Para obter mais informações, veja [Expressões &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql).  
+ A expressão especificada deve ser uma expressão Transact-SQL válida que seja avaliada como um valor Booliano. Para obter mais informações, consulte [expressões &#40;&#41;Transact-SQL ](/sql/t-sql/language-elements/expressions-transact-sql).  
   
  Se você especificar uma condição de ponto de interrupção com sintaxe inválida, será exibida uma mensagem de aviso imediatamente. Se você especificar uma condição com sintaxe válida, mas semântica inválidas, será exibida uma mensagem de aviso da primeira vez que o ponto de interrupção for atingido. Em qualquer um dos casos, o depurador interromperá a execução quando o ponto de interrupção inválido for atingido.  
   
@@ -37,11 +37,11 @@ ms.locfileid: "66063736"
   
 2.  Na caixa de diálogo **Condição de Ponto de Interrupção** , insira uma expressão Booliana válida na caixa **Condição** .  
   
-3.  Escolher **vale** se quiser interromper quando a expressão é avaliada como `true`, ou escolha **mudou** se você quiser interromper quando o valor da expressão for alterado.  
+3.  Escolher **será verdadeiro** se você quiser interromper quando a expressão for avaliada `true`ou se escolher **tiver mudado** se desejar interromper quando o valor da expressão for alterado.  
   
     > [!NOTE]  
     >  O depurador não avalia a expressão Booliana até a primeira vez que o ponto de interrupção é atingido. Se você escolher **Has changed**, o depurador não considerará a primeira avaliação como uma alteração, então o depurador não interromperá na primeira avaliação.  
   
-## <a name="see-also"></a>Consulte também  
- [Especificar uma contagem de ocorrências](specify-a-hit-count.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Especificar uma contagem de acesso](specify-a-hit-count.md)   
  [Especificar uma ação de ponto de interrupção](specify-a-breakpoint-action.md)  

@@ -1,6 +1,6 @@
 ---
-title: Pesquisar texto com expressões regulares | Microsoft Docs
-ms.custom: ''
+title: Pesquisar texto com expressões regulares
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81df6d31819594611933d3187f1a6f6bcbda46cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d7554953c430ae58ead88aa77cb0865f74f7a12
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063766"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243318"
 ---
 # <a name="search-text-with-regular-expressions"></a>Pesquisar texto com expressões regulares
   As expressões regulares são notação concisa e flexível para pesquisa e substituição de padrões de texto. Um conjunto específico de expressões regulares pode ser usado no campo **Localizar** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
@@ -37,7 +37,7 @@ ms.locfileid: "66063766"
   
  A tabela a seguir descreve as expressões regulares disponíveis na **Lista de Referências**.  
   
-|Expression|Sintaxe|Descrição|  
+|Expressão|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
 |Qualquer caractere|.|Faz a correspondência de qualquer caractere único menos uma quebra de linha.|  
 |Zero ou mais|*|Faz a correspondência de zero ou mais ocorrências da expressão precedente, com todas as correspondentes possíveis.|  
@@ -50,24 +50,25 @@ ms.locfileid: "66063766"
 |Qualquer caractere no conjunto|[]|Faz a correspondência de qualquer um dos caracteres dentro de []. Para especificar um intervalo de caracteres, relacione o caractere de início e término separado por um traço (-), como em [a-z].|  
 |Qualquer caractere que não faz parte do conjunto|[^...]|Faz a correspondência de qualquer caractere que não pertence ao conjunto de caracteres depois de ^.|  
 |Ou|&#124;|Faz a correspondência da expressão antes ou depois do símbolo OR (&#124;). Usada principalmente dentro de grupos. Por exemplo, banho (esponja&#124;lama) corresponde a “banho de esponja” e “banho de lama”.|  
-|Escape|\|Faz a correspondência do caractere que segue a barra invertida (\\) como um literal. Isso permite que você encontre os caracteres usados em notação de expressão regular, como { e ^. Por exemplo, \\^ pesquisa pelo caractere ^.|  
+|Escape|\|Corresponde ao caractere que segue a barra invertida\\() como um literal. Isso permite que você encontre os caracteres usados em notação de expressão regular, como { e ^. Por exemplo, \\^ pesquisa pelo caractere ^.|  
 |Expressão marcada|{}|Corresponde o texto marcado com a expressão anexada.|  
 |Identificador do C/C++|:i|Faz a correspondência da expressão ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
 |Cadeia de caracteres entre aspas|:q|Faz a correspondência da expressão (("[^"]*")&#124;('[^']\*')).|  
 |Espaço ou tabulação|:b|Faz a correspondência de caracteres de espaço ou de tabulação.|  
-|Integer|:z|Faz a correspondência da expressão ([0-9]+).|  
+|Número inteiro|:z|Faz a correspondência da expressão ([0-9]+).|  
   
  A lista de todas as expressões regulares válidas em operações **Localizar e Substituir** é mais longa do que pode ser exibido na **Lista de Referências**. Você também pode inserir qualquer uma das seguintes expressões regulares em uma cadeia de caracteres **Localizar** :  
   
-|Expression|Sintaxe|Descrição|  
+|Expressão|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
 |Mínimo – zero ou mais|@|Faz a correspondência de zero ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
 |Mínimo – um ou mais|#|Faz a correspondência de uma ou mais ocorrências da expressão precedente, correspondendo o mínimo de caracteres possível.|  
 |Repetir n vezes|^n|Faz a correspondência de n ocorrências da expressão precedente. Por exemplo, [0-9]^4 corresponde a qualquer sequência de quatro dígitos.|  
 |Agrupamento|()|Agrupa uma subexpressão.|  
 |Enésimo texto marcado|\n|Em uma expressão **Localizar e Substituir** , indica o texto correspondente da enésima expressão marcada, em que n é um número de 1 a 9.<br /><br /> Em uma expressão **Substituir** , \0 insere o texto inteiro correspondente.|  
-|Campo justificado à direita|\\(w,n)|Em uma expressão **Substituir** , justifica a enésima expressão marcada à direita em um campo de, pelo menos, *w* caracteres de largura.|  
-|Campo justificado à esquerda|\\(-w,n)|Em uma expressão **Substituir** , justifica a enésima expressão marcada à esquerda em um campo de, pelo menos, *w* caracteres de largura.|  
+|Campo justificado à direita|\\(w, n)|Em uma expressão **Substituir** , justifica a enésima expressão marcada à direita em um campo de, pelo menos, *w* caracteres de largura.|  
+|Campo justificado à esquerda|
+  \\(-w,n)|Em uma expressão **Substituir** , justifica a enésima expressão marcada à esquerda em um campo de, pelo menos, *w* caracteres de largura.|  
 |Evitar correspondência|~(X)|Evita a correspondência quando X é exibido em um certo ponto da expressão. Por exemplo, real~(ity) faz a correspondência de "real" em "realty" e "really", mas não "real" em "reality".|  
 |Caractere alfanumérico|:a|Faz a correspondência da expressão ([a-zA-Z0-9]).|  
 |Caractere alfabético|:c|Faz a correspondência da expressão ([a-zA-Z]).|  
@@ -83,7 +84,7 @@ ms.locfileid: "66063766"
   
  A tabela a seguir relaciona a sintaxe para correspondência por propriedades de caracteres Unicode padrão. A abreviação de duas letras é igual à relacionada no banco de dados de propriedades de caractere Unicode. Elas podem ser especificadas como parte de um conjunto de caracteres. Por exemplo, a expressão [:Nd:Nl:No] faz a correspondência de qualquer tipo de dígito.  
   
-|Expression|Sintaxe|Descrição|  
+|Expressão|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
 |Letra maiúscula|:Lu|Faz a correspondência de qualquer letra maiúscula. Por exemplo, Luhe faz a correspondência de "The" mas não "the".|  
 |Letra minúscula|:Ll|Faz a correspondência de qualquer letra minúscula. Por exemplo, Llhe faz a correspondência de "the" mas não "The".|  
@@ -118,10 +119,10 @@ ms.locfileid: "66063766"
   
  Além das propriedades de caracteres Unicode padrão, as propriedades adicionais a seguir podem ser especificadas como parte de um conjunto de caracteres.  
   
-|Expression|Sintaxe|Descrição|  
+|Expressão|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
-|Alfa|:Al|Faz a correspondência de qualquer caractere. Por exemplo: Alhe faz a correspondência de palavras como "The", "then", e "reached".|  
-|Numeric|:Nu|Faz a correspondência de qualquer número ou dígito.|  
+|Alpha|:Al|Faz a correspondência de qualquer caractere. Por exemplo: Alhe faz a correspondência de palavras como "The", "then", e "reached".|  
+|Numérico|:Nu|Faz a correspondência de qualquer número ou dígito.|  
 |Pontuação|:Pu|Faz a correspondência de qualquer marca de pontuação, como?, @, ' etc.|  
 |Espaço em branco|:Wh|Faz a correspondência de todos os tipos de espaço em branco, inclusive espaços de publicação e ideográficos.|  
 |Bidi|:Bi|Faz a correspondência de caracteres de scripts da direita para esquerda, como árabe e hebreu.|  
@@ -130,6 +131,6 @@ ms.locfileid: "66063766"
 |Katakana|:Ka|Faz a correspondência de caracteres de katakana.|  
 |Han/Kanji/Ideográfico|:Id|Faz a correspondência de caracteres ideográficos, como Han e Kanji.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Pesquisar e substituir](search-and-replace.md)   
  [Pesquisar texto com curingas](search-text-with-wildcards.md)  

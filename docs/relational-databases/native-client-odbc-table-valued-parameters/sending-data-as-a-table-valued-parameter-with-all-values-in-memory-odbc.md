@@ -1,5 +1,5 @@
 ---
-title: Enviando dados como um parâmetro com valor de tabela com todos os valores na memória (ODBC) | Microsoft Docs
+title: Parâmetro com valor de tabela, valores na memória (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,22 +13,22 @@ ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca993b0074f13c6a3c5cfd167f533a408cd21530
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: f6530c3b558f26e3f75f5cff63f33f2e58c119c6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73790799"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246386"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Enviando dados como um parâmetro com valor de tabela com todos os valores na memória (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Este tópico descreve como enviar dados a um procedimento armazenado como um parâmetro com valor de tabela quando todos os valores estão na memória. Para outro exemplo que demonstra parâmetros com valor de tabela, consulte [usar parâmetros &#40;com valor de&#41;tabela ODBC](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+  Este tópico descreve como enviar dados a um procedimento armazenado como um parâmetro com valor de tabela quando todos os valores estão na memória. Para outro exemplo que demonstra parâmetros com valor de tabela, consulte [usar parâmetros com valor de tabela &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="prerequisite"></a>Pré-requisito  
  Esse procedimento supõe que o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] tenha sido executado no servidor:  
   
-```  
+```sql
 create type TVParam as table(ProdCode integer, Qty integer)  
 create procedure TVPOrderEntry(@CustCode varchar(5), @Items TVPParam,   
             @OrdNo integer output, @OrdDate datetime output)  
@@ -46,7 +46,7 @@ from @Items
   
 1.  Declare variáveis para os parâmetros SQL. Neste caso, o valor de tabela é mantido completamente na memória e, dessa forma, os valores para as colunas do valor de tabela são declarados como matrizes.  
   
-    ```  
+    ```cpp
     SQLRETURN r;  
     // Variables for SQL parameters.  
     #define ITEM_ARRAY_SIZE 20  
@@ -63,7 +63,7 @@ from @Items
   
 2.  Associe os parâmetros. A associação de parâmetros é um processo de dois estágios quando são usados parâmetros com valor de tabela. No primeiro estágio, os parâmetros das etapas para o procedimento armazenado são associados de maneira normal, como a seguir.  
   
-    ```  
+    ```cpp
     // Bind parameters for call to TVPOrderEntryDirect.  
     // 1 - Custcode input  
     r = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT,SQL_VARCHAR, SQL_C_CHAR, 5, 0, CustCode, sizeof(CustCode), &cbCustCode);  
@@ -91,7 +91,7 @@ from @Items
   
 3.  O segundo estágio da associação de parâmetros é associar as colunas para o parâmetro com valor de tabela. O foco do parâmetro é definido primeiro para o ordinal do parâmetro com valor de tabela. Em seguida, as colunas do valor da tabela são associadas usando SQLBindParameter da mesma maneira como seriam se fossem parâmetros do procedimento armazenado, mas com ordinais de coluna para ParameterNumber. Se houvesse mais parâmetros com valor de tabela, nós definiríamos o foco para cada um deles sucessivamente e associaríamos suas colunas. Finalmente, o foco de parâmetro é redefinido para 0.  
   
-    ```  
+    ```cpp
     // Bind columns for the table-valued parameter (param 2).  
     // First set focus on param 2.  
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 2, SQL_IS_INTEGER);  
@@ -105,9 +105,10 @@ from @Items
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 0, SQL_IS_INTEGER);  
     ```  
   
-4.  Popule os buffers de parâmetro. `cbTVP` é definido como o número de linhas a serem enviadas ao servidor.  
+4.  Popule os buffers de parâmetro. 
+  `cbTVP` é definido como o número de linhas a serem enviadas ao servidor.  
   
-    ```  
+    ```cpp
     // Populate parameters.  
     cbTVP = 0; // Number of rows available for input.  
     strcpy_s((char *) CustCode, sizeof(CustCode), "CUST1"); cbCustCode = SQL_NTS;  
@@ -123,12 +124,12 @@ from @Items
   
 5.  Chame o procedimento:  
 
-    ```  
+    ```cpp
     // Call the procedure.  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplos de programação de parâmetros com valor de tabela (ODBC)](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
   
   

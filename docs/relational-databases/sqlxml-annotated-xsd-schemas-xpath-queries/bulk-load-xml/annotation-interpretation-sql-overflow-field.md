@@ -1,6 +1,5 @@
 ---
-title: 'SQL: overflow-field (SQLXML 4.0) | Microsoft Docs'
-ms.custom: ''
+title: 'SQL: overflow-field (SQLXML)'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,23 +14,24 @@ helpviewer_keywords:
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f82c80f2374b9d7cbbbe00b1b3cfe8202e382bb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5757ce66dd0905f6c381d05caa99c6bb664021e9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902230"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246807"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>Interpretação de anotação – sql:overflow-field
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Em um esquema, você pode identificar uma coluna de estouro para receber todos os dados não consumidos do documento XML. Esta coluna é especificada no esquema usando o **SQL: overflow-campo** anotação. É possível ter várias colunas de estouro.  
+  Em um esquema, você pode identificar uma coluna de estouro para receber todos os dados não consumidos do documento XML. Essa coluna é especificada no esquema usando a anotação **SQL: overflow-field** . É possível ter várias colunas de estouro.  
   
- Sempre que um nó XML (elemento ou atributo) para os quais um **SQL: overflow-campo** anotação definida entra no escopo, a coluna de estouro será ativada e receberá os dados não consumidos. Quando o nó sair do escopo, a coluna de estouro não ficará mais ativa e o XML Bulk Load tornará o campo de estouro anterior (se houver) ativo.  
+ Sempre que um nó XML (elemento ou atributo) para o qual há uma anotação **SQL: overflow-field** definida entra no escopo, a coluna Overflow é ativada e recebe dados não consumidos. Quando o nó sair do escopo, a coluna de estouro não ficará mais ativa e o XML Bulk Load tornará o campo de estouro anterior (se houver) ativo.  
   
- Conforme ele armazena dados na coluna de estouro, o XML Bulk Load também armazena as marcas de abertura e fechamento do elemento pai para o qual **SQL: overflow-campo** é definido.  
+ Como ele armazena dados na coluna Overflow, o carregamento em massa de XML também armazena as marcas de abertura e fechamento do elemento pai para o qual **SQL: overflow-field** é definido.  
   
- Por exemplo, o esquema a seguir descreve o  **\<clientes >** e  **\<CustOrder >** elementos. Cada um destes elementos identifica uma coluna de estouro:  
+ Por exemplo, o esquema a seguir descreve os ** \<elementos Customers>** e ** \<CustOrder>** . Cada um destes elementos identifica uma coluna de estouro:  
   
 ```  
 <?xml version="1.0" ?>  
@@ -75,9 +75,9 @@ ms.locfileid: "67902230"
 </xsd:schema>  
 ```  
   
- No esquema, o  **\<cliente >** elemento é mapeado para a tabela Cust e o  **\<Order >** elemento é mapeado para a tabela CustOrder.  
+ No esquema, o elemento ** \<>do cliente** é mapeado para a tabela Cust e o ** \<elemento Order>** é mapeado para a tabela CustOrder.  
   
- Os dois os  **\<cliente >** e  **\<Order >** elementos identificam uma coluna de estouro. Assim, o XML Bulk Load salva todos os filhos não consumidos elementos e atributos do  **\<cliente >** elemento na coluna de estouro da tabela Cust e todos os elementos filho não consumido e atributos dos  **\<Ordem >** elemento na coluna de estouro da tabela CustOrder.  
+ Os elementos ** \<>do cliente** e ** \<ordem>** identificam uma coluna de estouro. Assim, o carregamento em massa de XML salva todos os elementos filho e atributos não consumidos do elemento ** \<>do cliente** na coluna Overflow da tabela Cust e todos os elementos filho e atributos não consumidos do elemento ** \<Order>** na coluna Overflow da tabela CustOrder.  
   
 ### <a name="to-test-a-working-sample"></a>Para testar um exemplo de funcionamento  
   

@@ -1,5 +1,5 @@
 ---
-title: Enviando dados como um parâmetro com valor de tabela usando dados em execução (ODBC) | Microsoft Docs
+title: Parâmetro com valor de tabela, dados em execução (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fa7998cf156adc94f13f22887a595408144fad8
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: cea7295b67cd53844b29e876e8a0635de9cad46a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73775907"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246370"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Enviando dados como um parâmetro com valor de tabela usando dados em execução (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Isso é semelhante ao procedimento [All in Memory](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) , mas usa dados em execução para o parâmetro com valor de tabela.  
   
- Para outro exemplo que demonstra parâmetros com valor de tabela, consulte [usar parâmetros &#40;com valor de&#41;tabela ODBC](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Para outro exemplo que demonstra parâmetros com valor de tabela, consulte [usar parâmetros com valor de tabela &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
  Neste exemplo, quando SQLExecute ou SQLExecDirect é chamado, o driver retorna SQL_NEED_DATA. O aplicativo então chama SQLParamData repetidamente até que o driver retorne um valor diferente de SQL_NEED_DATA. O driver retorna *ParameterValuePtr* para informar ao aplicativo qual parâmetro ele está solicitando dados. O aplicativo chama SQLPutData para fornecer dados de parâmetro antes da próxima chamada para SQLParamData. Para um parâmetro com valor de tabela, a chamada para SQLPutData indica quantas linhas ele preparou para o driver (neste exemplo, sempre 1). Quando todas as linhas do valor de tabela tiverem sido passadas para o driver, SQLPutData será chamado para indicar que 0 linhas estão disponíveis.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73775907"
 ## <a name="prerequisite"></a>Pré-requisito  
  Esse procedimento supõe que o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] tenha sido executado no servidor:  
   
-```  
+```sql
 create type TVParam as table(ProdCode integer, Qty integer)  
 create procedure TVPOrderEntry(@CustCode varchar(5), @Items TVPParam,   
             @OrdNo integer output, @OrdDate datetime output)  
@@ -53,7 +53,7 @@ from @Items
   
 1.  Declare as variáveis para os parâmetros SQL. Os buffers para parâmetros com valor de tabela não têm que ser matrizes neste exemplo; o exemplo passa uma linha de cada vez.  
   
-    ```  
+    ```cpp
     SQLRETURN r;  
   
     // Variables for SQL parameters:  
@@ -72,7 +72,7 @@ from @Items
   
 2.  Associe os parâmetros. *Colunasize* é 1, o que significa que no máximo uma linha é passada por vez.  
   
-    ```  
+    ```sql
     // Bind parameters for call to TVPOrderEntryByRow.  
     r = SQLBindParameter(hstmt, 1, SQL_C_CHAR, SQL_PARAM_INPUT,SQL_VARCHAR, 5, 0, CustCode, sizeof(CustCode), &cbCustCode);  
   
@@ -99,7 +99,7 @@ from @Items
   
 3.  Associe as colunas para o parâmetro com valor de tabela.  
   
-    ```  
+    ```cpp
     // Bind the table-valued parameter columns.  
     // First set focus on param 2  
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 2, SQL_IS_INTEGER);  
@@ -117,7 +117,7 @@ from @Items
   
 4.  Inicialize os parâmetros. Este exemplo define o tamanho do parâmetro com valor de tabela como SQL_DATA_AT_EXEC, em vez de defini-lo como uma contagem de linhas.  
   
-    ```  
+    ```cpp
     // Initialze the TVP for row streaming.  
     cbTVP = SQL_DATA_AT_EXEC;  
   
@@ -127,14 +127,14 @@ from @Items
   
 5.  Chame o procedimento. SQLExecDirect retornará SQL_NEED_DATA, pois o parâmetro com valor de tabela é um parâmetro de dados em execução.  
   
-    ```  
+    ```cpp
     // Call the procedure  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
 6.  Forneça dados de parâmetro de dados em execução. Quando SQLParamData retorna o *ParameterValuePtr* para um parâmetro com valor de tabela, o aplicativo deve preparar as colunas para a próxima linha ou linhas do valor de tabela. Em seguida, o aplicativo chama SQLPutData com *DataPtr* definido como o número de linhas disponíveis (neste exemplo, 1) e *StrLen_or_IndPtr* definido como 0.  
   
-    ```  
+    ```cpp
     // Check if parameter data is required, and get the first parameter ID token  
     if (r == SQL_NEED_DATA) {  
         r = SQLParamData(hstmt, &ParamId);  
@@ -193,7 +193,7 @@ from @Items
   
  Este exemplo usa o banco de dados padrão. Antes de executá-lo, execute os seguintes comandos no banco de dados que você usará:  
   
-```  
+```sql
 create table MCLOG (  
    biSeqNo bigint,   
    iSeries int,   
@@ -216,7 +216,7 @@ go
   
 ### <a name="code"></a>Código  
   
-```  
+```cpp
 #define UNICODE  
 #define _UNICODE  
 #define _SQLNCLI_ODBC_  
@@ -381,7 +381,7 @@ EXIT:
   
  Este exemplo usa o banco de dados padrão. Antes de executá-lo, execute os seguintes comandos no banco de dados que você usará:  
   
-```  
+```sql
 create table MCLOG (  
    biSeqNo bigint,   
    iSeries int,   
@@ -404,7 +404,7 @@ go
   
 ### <a name="code"></a>Código  
   
-```  
+```cpp
 #define UNICODE  
 #define _UNICODE  
 #define _SQLNCLI_ODBC_  
@@ -580,7 +580,7 @@ EXIT:
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplos de programação de parâmetros com valor de tabela (ODBC)](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
   
   

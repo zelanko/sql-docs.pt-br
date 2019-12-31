@@ -1,6 +1,6 @@
 ---
-title: Janela Inspeção | Microsoft Docs
-ms.custom: ''
+title: Janela de Observação
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,18 +12,18 @@ ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 081b149bc4f7927d17ac18895bc901f133545e9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d6f0d0335b07be83d7b34895c08e8ff01dcd67a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063367"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242994"
 ---
 # <a name="watch-window"></a>Janela de Observação
-  A janela **Inspecionar** exibe informações sobre as expressões que você selecionou. Pode haver até quatro janelas Inspeção: **Inspeção 1**, **Inspeção 2, Inspeção 3** e **Inspeção 4**. As expressões são avaliadas dentro do escopo do quadro de pilha de chamadas atual selecionada na janela **Pilha de Chamadas** . Você deve estar no modo de depuração para inspecionar variáveis e expressões.  
+  A janela **Watch** exibe informações sobre as expressões que você selecionou. Pode haver até quatro janelas Inspecionar: **Inspecionar 1**, **Inspecionar 2, Inspecionar 3**e **Inspecionar 4**. As expressões são avaliadas dentro do escopo do quadro de pilha de chamadas atual selecionada na janela **Pilha de Chamadas** . Você deve estar no modo de depuração para inspecionar variáveis e expressões.  
   
 ## <a name="task-list"></a>Lista de Tarefas  
- **Para acessar as janelas Inspecionar**  
+ **Para acessar as janelas de inspeção**  
   
 -   No menu **Depurar** , clique em **Janelas**, clique em **Inspecionar**e depois em **Inspecionar 1**, **Inspecionar 2, Inspecionar 3**ou **Inspecionar 4**.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66063367"
 -   Clique com o botão direito do mouse na expressão e selecione **Editar Valor**.  
   
 ## <a name="columns"></a>Colunas  
- **Nome**  
+ **Nomes**  
  São as expressões listadas pelo depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] . Há suporte para as seguintes expressões:  
   
 -   Variáveis.  
@@ -43,22 +43,22 @@ ms.locfileid: "66063367"
   
 -   Expressões criadas pela aplicação de operadores a uma ou mais variáveis, parâmetros ou funções do sistema, como @IntegerCounter + 1 ou FirstName + LastName.  
   
--   As instruções Transact-SQL que retornam um único valor, como: SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
+-   Instruções Transact-SQL que retornam um único valor, como: SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
   
- **Value**  
+ **Valor**  
  Exibe o valor retornado depois que o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] avalia a expressão especificada em **Nome**.  
   
  Se o comprimento de uma expressão for maior do que a largura da coluna **Valor** , uma dica de ferramenta exibe o valor total quando o ponteiro passa sobre a célula **Valor** daquela expressão.  
   
  Um ícone de lupa em uma célula **Valor** indica que o visualizador de depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] está disponível. Na lista, você pode especificar **Visualizador de Texto**, **Visualizador de XML**ou **Visualizador de HTML**. Para iniciar um visualizador de depurador, clique no ícone de lupa. O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] abre uma caixa de diálogo que exibe os dados em um formato apropriado para o tipo dos dados.  
   
- **Tipo**  
+ **Escreva**  
  Exibe o tipo de dados da expressão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Depurador do Transact-SQL](transact-sql-debugger.md)   
  [Informações do depurador Transact-SQL](transact-sql-debugger-information.md)   
- [Janela Locais](transact-sql-debugger-locals-window.md)   
- [Janela Pilha de Chamadas](transact-sql-debugger-call-stack-window.md)   
+ [Janela locais](transact-sql-debugger-locals-window.md)   
+ [Janela pilha de chamadas](transact-sql-debugger-call-stack-window.md)   
  [Caixa de diálogo QuickWatch](transact-sql-debugger-quickwatch-dialog-box.md)   
- [Expressões &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
+ [Expressões &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/expressions-transact-sql)  

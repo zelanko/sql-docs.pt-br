@@ -1,6 +1,5 @@
 ---
-title: Executando consultas XPath (provedor SQLXMLOLEDB) | Microsoft Docs
-ms.custom: ''
+title: Executando consultas XPath (provedor SQLXMLOLEDB)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +16,12 @@ ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c086c70541cf7a5a8140dfb38795b404e247c466
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cbed0ee01fbe2f2a632f81265e0722eb1ad32727
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895126"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246627"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>Executando consultas XPath (provedor SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "67895126"
   
 -   **Esquema de mapeamento**  
   
- Neste aplicativo de exemplo do ADO, uma consulta XPath (raiz) é especificada em um esquema de mapeamento XSD (MySchema.xml). O esquema tem um  **\<contatos >** elemento com **ContactID**, **FirstName**, e **LastName** atributos. No esquema, ocorre o mapeamento padrão: um nome de elemento é mapeado para a tabela com o mesmo nome, e os atributos do tipo simples, para as colunas com os mesmos nomes.  
+ Neste aplicativo de exemplo do ADO, uma consulta XPath (raiz) é especificada em um esquema de mapeamento XSD (MySchema.xml). O esquema tem um ** \<elemento Contacts>** com os atributos **ContactID**, **FirstName**e **LastName** . No esquema, ocorre o mapeamento padrão: um nome de elemento é mapeado para a tabela com o mesmo nome, e os atributos do tipo simples, para as colunas com os mesmos nomes.  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
@@ -56,14 +55,14 @@ ms.locfileid: "67895126"
 </xsd:schema>  
 ```  
   
- A propriedade de esquema de mapeamento fornece o esquema de mapeamento com relação à qual a consulta XPath é executada. O esquema de mapeamento pode ser um esquema XSD ou XDR. A propriedade de caminho de Base fornece o caminho do arquivo para o esquema de mapeamento.  
+ A propriedade esquema de mapeamento fornece o esquema de mapeamento no qual a consulta XPath é executada. O esquema de mapeamento pode ser um esquema XSD ou XDR. A propriedade caminho base fornece o caminho do arquivo para o esquema de mapeamento.  
   
- A propriedade ClientSideXML é definida como True. Assim, o documento XML é gerado no cliente.  
+ A propriedade ClientSideXML é definida como true. Assim, o documento XML é gerado no cliente.  
   
  No aplicativo, uma consulta XPath é especificada diretamente. Por isso, o dialeto XPath {ec2a4293-e898-11d2-b1b7-00c04f680c56} deve ser incluído.  
   
 > [!NOTE]  
->  No código, é necessário fornecer o nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na cadeia de conexão. Além disso, este exemplo especifica o uso do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) para o provedor de dados que requer o software de cliente de rede adicionais a serem instalados. Para obter mais informações, consulte [requisitos de sistema do SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
+>  No código, é necessário fornecer o nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na cadeia de conexão. Além disso, este exemplo especifica o uso do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente nativo (SQLNCLI11) para o provedor de dados que requer a instalação de um software cliente de rede adicional. Para obter mais informações, consulte [requisitos do sistema para SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

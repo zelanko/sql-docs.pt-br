@@ -1,6 +1,6 @@
 ---
-title: Desconectar-se de um servidor registrado (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Desconectar de um servidor registrado
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], disconnecting
 - disconnecting registered servers [SQL Server]
 ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 216e0182c9226306fb2feafe9dee6e8fb13562ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 328d795f692597689628f6fa189d597f73fbb76a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298467"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244617"
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>Desconectar-se de um Servidor Registrado (SQL Server Management Studio)
   Este tópico descreve como desconectar o Pesquisador de Objetos de um servidor a qualquer momento no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. A desconexão do Pesquisador de Objetos não desconecta outros componentes do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , como o Editor SQL.  

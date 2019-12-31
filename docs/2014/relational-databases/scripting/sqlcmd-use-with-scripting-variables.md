@@ -1,6 +1,6 @@
 ---
-title: Usar sqlcmd com variáveis de script | Microsoft Docs
-ms.custom: ''
+title: Usar sqlcmd com variáveis de script
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b394e91c01e4607c74f73d90630095af2e912941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090057"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243173"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Usar sqlcmd com variáveis de script
   As variáveis usadas em scripts normalmente são chamadas de variáveis de script. As variáveis de script habilitam um script ser usado em vários cenários. Por exemplo, se você desejar executar um script em vários servidores, em vez de modificar o script para cada servidor, pode usar uma variável de script para o nome do servidor. Alterando o nome do servidor fornecido para a variável de script, o mesmo script pode ser executado em diferentes servidores.  
@@ -44,9 +44,9 @@ ms.locfileid: "66090057"
   
 3.  Shell de comando (**SET X=Y**) definido no prompt de comando antes de iniciar o **sqlcmd**  
   
-4.  **sqlcmd-v** X=Y  
+4.  **sqlcmd-v** X = Y  
   
-5.  **:Setvar** X Y  
+5.  **: Setvar** X Y  
   
 > [!NOTE]  
 >  Para exibir as variáveis ambientais, no **Painel de Controle**, abra **Sistema**e clique na guia **Avançado** .  
@@ -64,7 +64,7 @@ ms.locfileid: "66090057"
   
  `FROM Person.Person x`  
   
- `WHERE c.`BusinessEntityID `< 5;`  
+ `WHERE c.`BusinessEntityID`< 5;`  
   
  Assim você pode especificar o nome da coluna que deseja que retorne usando a opção `-v` :  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66090057"
   
 -   Os nomes das variáveis não devem conter caracteres de espaços em brancos ou aspas.  
   
--   Os nomes das variáveis não devem ter a mesma forma que uma expressão variável, como *$(var)* .  
+-   Os nomes das variáveis não devem ter a mesma forma que uma expressão variável, como *$(var)*.  
   
 -   Variáveis de script não diferenciam maiúsculas de minúsculas.  
   
@@ -110,18 +110,18 @@ ms.locfileid: "66090057"
 |SQLCMDWORKSTATION|-H|R|"ComputerName"|  
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|R/W|"8" (segundos)|  
-|SQLCMDSTATTIMEOUT|-T|R/W|"0" = espere indefinidamente|  
-|SQLCMDHEADERS|-H|R/W|"0"|  
-|SQLCMDCOLSEP|-S|R/W|" "|  
+|SQLCMDSTATTIMEOUT|-t|R/W|"0" = espere indefinidamente|  
+|SQLCMDHEADERS|-h|R/W|"0"|  
+|SQLCMDCOLSEP|-s|R/W|" "|  
 |SQLCMDCOLWIDTH|-w|R/W|"0"|  
-|SQLCMDPACKETSIZE|-A|R|"4096"|  
-|SQLCMDERRORLEVEL|-M|R/W|"0"|  
+|SQLCMDPACKETSIZE|-a|R|"4096"|  
+|SQLCMDERRORLEVEL|-m|R/W|"0"|  
 |SQLCMDMAXVARTYPEWIDTH|-y|R/W|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|R/W|"0" = ilimitado|  
 |SQLCMDEDITOR||R/W|"edit.com"|  
 |SQLCMDINI||R|""|  
   
- \* SQLCMDUSER, SQLCMDPASSWORD e SQLCMDSERVER são definidos ao usar **:Connect** .  
+ \*SQLCMDUSER, SQLCMDPASSWORD e SQLCMDSERVER são definidos quando **: Connect** é usado.  
   
  R indica que o valor pode ser definido apenas uma vez durante a inicialização do programa.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "66090057"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-the-setvar-command-in-a-script"></a>A. Usando o comando setvar em um script  
+### <a name="a-using-the-setvar-command-in-a-script"></a>R. Usando o comando setvar em um script  
  Muitas opções do **sqlcmd** podem ser controladas em um script usando o comando **setvar** . No exemplo a seguir, o script `test.sql` é criado e nele a variável `SQLCMDLOGINTIMEOUT` é definida como `60` segundos e outra variável de script, `server`, é definida como `testserver`. O código a seguir está em `test.sql`.  
   
  `:setvar SQLCMDLOGINTIMEOUT 60`  
@@ -340,9 +340,9 @@ ms.locfileid: "66090057"
   
  `>2 GO`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar o utilitário sqlcmd](sqlcmd-use-the-utility.md)   
  [Utilitário sqlcmd](../../tools/sqlcmd-utility.md)   
- [Referência de utilitários de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [Referência do utilitário de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

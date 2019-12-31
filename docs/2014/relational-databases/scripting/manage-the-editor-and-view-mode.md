@@ -1,6 +1,6 @@
 ---
-title: Gerenciar o Editor e o modo de exibição | Microsoft Docs
-ms.custom: ''
+title: Gerenciar o editor e o modo de exibição
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -20,18 +20,18 @@ ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3333b41a4ff1c341f0ae0290f838cd2c76c6254e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 67ca649678fcc099a2abf1b50866263d6494bec7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063949"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242039"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Gerenciar o editor e o modo de exibição
   O Editor fornece várias maneiras para controlar a exibição do código.  
   
 ## <a name="changing-the-view-mode"></a>Alterando o modo de exibição  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] possui um modo de exibição denominado **Documentos com Guias**, que permite abrir vários editores e documentos simultaneamente e acessá-los por guias no topo do editor. Como alternativa, você pode abrir o ambiente do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] no modo interface de documentos múltiplos (MDI), que une as janelas sem guias e permite organizar as janelas lado a lado, minimizá-las etc.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]apresenta um modo de exibição chamado **documentos com guias**, que permite abrir vários editores e documentos simultaneamente e acessá-los por meio de guias na parte superior do editor. Como alternativa, você pode abrir o ambiente do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] no modo interface de documentos múltiplos (MDI), que une as janelas sem guias e permite organizar as janelas lado a lado, minimizá-las etc.  
   
 #### <a name="to-switch-between-view-modes"></a>Para alternar entre modos de exibição  
   

@@ -1,6 +1,6 @@
 ---
-title: Pesquisar texto com curingas | Microsoft Docs
-ms.custom: ''
+title: Pesquisar texto com curingas
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -16,15 +16,15 @@ ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5c3efcef4eade7c6ad2b5a5d52a1fa26a4c4ffd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caeda52d612f4df6672f686e06834de6fef0cc67
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090237"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243283"
 ---
 # <a name="search-text-with-wildcards"></a>Pesquisar texto com curingas
-  As expressões a seguir podem substituir caracteres ou dígitos no campo **Localizar** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **do** .  
+  As expressões a seguir podem substituir caracteres ou dígitos no campo **Localizar** da caixa de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] diálogo **Localizar e substituir** .  
   
 #### <a name="to-search-using-wildcards"></a>Para pesquisar usando curingas  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66090237"
   
  A tabela a seguir descreve os curingas disponíveis na **Lista de Referências**.  
   
-|Expression|Sintaxe|Descrição|  
+|Expressão|Sintaxe|Descrição|  
 |----------------|------------|-----------------|  
 |Qualquer caractere único|?|Corresponde a qualquer caractere único.|  
 |Qualquer dígito único|#|Corresponde a qualquer dígito único. Por exemplo, 7# corresponde a números que incluem 7 seguidos por outro número, como 71, mas não 17.|  
@@ -42,6 +42,6 @@ ms.locfileid: "66090237"
 |Um ou mais caracteres|*|Corresponde a qualquer um ou mais caracteres. Por exemplo, new* corresponde a qualquer texto que inclui "new", como newfile.txt.|  
 |Conjunto de caracteres|[ ]|Corresponde a qualquer um dos caracteres especificados no conjunto.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Pesquisar e substituir](search-and-replace.md)   
  [Pesquisar texto com expressões regulares](search-text-with-regular-expressions.md)  

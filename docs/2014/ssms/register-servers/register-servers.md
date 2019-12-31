@@ -1,6 +1,6 @@
 ---
-title: Registrar servidores | Microsoft Docs
-ms.custom: ''
+title: Registrar servidores
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - server management [SQL Server], registering servers
 - server registration [SQL Server]
 ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10cf7256c5190f9ba94dff70118f43f0ad926aa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: abc12a642343e2c9bf259142680bf101cebf3e8b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049312"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241316"
 ---
 # <a name="register-servers"></a>Registrar servidores
   O registro de um servidor no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] lhe permite armazenar as informações de conexão de servidor para conexões futuras. Há três modos de registrar um servidor no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -66,13 +66,13 @@ ms.locfileid: "63049312"
 |---------------------|---------------|  
 |Registrar instâncias do servidor local|[Registrar um servidor conectado &#40;SQL Server Management Studio&#41;](register-a-connected-server-sql-server-management-studio.md)|  
 |Registrar um servidor|[Criar um novo servidor registrado &#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)|  
-|Exibir servidores registrados|[Exibir Servidores Registrados no SQL Server Management Studio](view-registered-servers-in-sql-server-management-studio.md)|  
+|Exibir servidores registrados|[Exibir servidores registrados no SQL Server Management Studio](view-registered-servers-in-sql-server-management-studio.md)|  
 |Remover um servidor registrado|[Remover um servidor registrado &#40;SQL Server Management Studio&#41;](remove-a-registered-server-sql-server-management-studio.md)|  
-|Alterar um registro de servidor|[Alterar um registro do servidor &#40;SQL Server Management Studio&#41;](change-a-server-s-registration-sql-server-management-studio.md)|  
+|Alterar um registro de servidor|[Alterar o registro de um servidor &#40;SQL Server Management Studio&#41;](change-a-server-s-registration-sql-server-management-studio.md)|  
 |Conectar-se com um servidor registrado|[Conectar-se a um servidor registrado &#40;SQL Server Management Studio&#41;](connect-to-a-registered-server-sql-server-management-studio.md)|  
-|Desconectar de um servidor registrado|[Desconectar-se de um Servidor Registrado &#40;SQL Server Management Studio&#41;](disconnect-from-a-registered-server-sql-server-management-studio.md)|  
-|Mover um servidor registrado ou grupo de servidores|[Mover um servidor registrado ou um grupo de Servidores Registrados &#40;SQL Server Management Studio&#41;](move-a-registered-server-or-registered-server-group.md)|  
-|Altere o nome de um servidor registrado ou grupo de servidores|[Alterar o nome de um Servidor Registrado ou de um grupo de Servidores Registrados &#40;SQL Server Management Studio&#41;](change-the-name-of-registered-server-or-registered-server-group.md)|  
+|Desconectar de um servidor registrado|[Desconectar de um servidor registrado &#40;SQL Server Management Studio&#41;](disconnect-from-a-registered-server-sql-server-management-studio.md)|  
+|Mover um servidor registrado ou grupo de servidores|[Mover um servidor registrado ou um grupo de servidores registrados &#40;SQL Server Management Studio&#41;](move-a-registered-server-or-registered-server-group.md)|  
+|Altere o nome de um servidor registrado ou grupo de servidores|[Alterar o nome de um servidor registrado ou de um grupo de servidores registrados &#40;SQL Server Management Studio&#41;](change-the-name-of-registered-server-or-registered-server-group.md)|  
 |Criar ou editar um grupo de servidor|[Criar ou editar um grupo de servidores &#40;SQL Server Management Studio&#41;](create-or-edit-a-server-group-sql-server-management-studio.md)|  
 |Remover um grupo de servidor|[Remover um grupo de servidores &#40;SQL Server Management Studio&#41;](remove-a-server-group-sql-server-management-studio.md)|  
 |Exportar informações de servidor registrado|[Exportar informações de servidor registrado &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)|  
@@ -80,7 +80,7 @@ ms.locfileid: "63049312"
 |Criar um servidor de gerenciamento central e grupo de servidor|[Criar um servidor de gerenciamento central e um grupo de servidores &#40;SQL Server Management Studio&#41;](create-a-central-management-server-and-server-group.md)|  
 |Executar instruções em vários servidores simultaneamente|[Executar instruções em vários servidores simultaneamente &#40;SQL Server Management Studio&#41;](execute-statements-against-multiple-servers-simultaneously.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Servidores remotos](../../database-engine/configure-windows/remote-servers.md)  
   
   

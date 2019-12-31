@@ -1,6 +1,6 @@
 ---
-title: Editar um local de ponto de interrupção | Microsoft Docs
-ms.custom: ''
+title: Editar um local de ponto de interrupção
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ade5926b8a63c3e5b5bf54dcb02c95260942264b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2b5bb55452333014aa3ccf5a797d19667dca753
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090464"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244894"
 ---
 # <a name="edit-a-breakpoint-location"></a>Editar um local de ponto de interrupção
   O local do ponto de interrupção especifica a linha e o caractere em que o ponto de interrupção reside em um arquivo de script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Você pode editar o local do ponto de interrupção para movê-lo para outro local no script ou para outro script.  
@@ -37,8 +37,8 @@ ms.locfileid: "66090464"
   
      A opção **Permitir que o código-fonte seja diferente da versão original** não tem efeito durante a depuração de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
- [Especificar uma contagem de ocorrências](specify-a-hit-count.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Especificar uma contagem de acesso](specify-a-hit-count.md)   
  [Especificar uma ação de ponto de interrupção](specify-a-breakpoint-action.md)   
  [Especificar uma condição de ponto de interrupção](specify-a-breakpoint-condition.md)   
  [Especificar um filtro de ponto de interrupção](specify-a-breakpoint-filter.md)  

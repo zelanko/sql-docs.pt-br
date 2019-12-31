@@ -1,6 +1,6 @@
 ---
-title: Inserir snippets Transact-SQL com Surround | Microsoft Docs
-ms.custom: ''
+title: Inserir snippets Transact-SQL com Surround
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2afb9294fa75926b6f6a78ec8b889a2e38a851a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fde81304117befec38844c28b6d0c434ab3606e8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090335"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242094"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>Inserir snippets Transact-SQL com Surround
   Um snippet com surround é um modelo que você pode usar como ponto de partida ao colocar um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um bloco BEGIN, IF ou WHILE.  
@@ -43,7 +43,7 @@ ms.locfileid: "66090335"
   
 3.  Selecione o nome do snippet (BEGIN, IF ou WHILE) na lista usando o mouse ou digitando-o e pressionando TAB ou ENTER.  
   
-## <a name="see-also"></a>Consulte também  
- [Inserir snippets Transact-SQL](insert-transact-sql-snippets.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Inserir trechos Transact-SQL](insert-transact-sql-snippets.md)  
   
   

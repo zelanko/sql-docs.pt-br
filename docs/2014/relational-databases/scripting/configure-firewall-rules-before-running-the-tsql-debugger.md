@@ -1,6 +1,6 @@
 ---
-title: Configurar o depurador do Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Configurar o Depurador Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ec17b61d0ea5d3f44967b517ea3e60c6b6785c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60d5af2752a426faca3069541deeae3a6aa4f495
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064185"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245185"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Configurar o Depurador Transact-SQL
   As regras do Firewall do Windows devem ser configuradas para habilitar a depuração do [!INCLUDE[tsql](../../includes/tsql-md.md)] quando conectado a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que esteja em execução em outro computador que não o do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -56,7 +56,7 @@ ms.locfileid: "66064185"
   
     2.  Na caixa de diálogo **Tipo de Regra** , selecione **Programa**e clique em **Avançar**.  
   
-    3.  Na caixa de diálogo **Programa** , selecione **Este caminho de programa:** e insira o caminho completo para sqlservr.exe dessa instância. Por padrão, sqlservr.exe é instalado em C:\Program Files\Microsoft SQL Server\MSSQL12. *Nome_da_instância*\MSSQL\Binn, onde *InstanceName* é MSSQLSERVER para a instância padrão e o nome de instância para qualquer instância nomeada.  
+    3.  Na caixa de diálogo **Programa** , selecione **Este caminho de programa:** e insira o caminho completo para sqlservr.exe dessa instância. Por padrão, o sqlservr. exe é instalado em C:\Program Files\Microsoft SQL Server\MSSQL12. *InstanceName*\MSSQL\Binn, em que *InstanceName* é MSSQLSERVER para a instância padrão e o nome da instância para qualquer instância nomeada.  
   
     4.  Na caixa de diálogo **Ação** , selecione **Permitir a conexão**e clique em **Avançar**.  
   
@@ -150,19 +150,20 @@ ms.locfileid: "66064185"
 ## <a name="requirements-for-starting-the-debugger"></a>Requisitos para iniciar o depurador  
  Todas as tentativas de iniciar o depurador do [!INCLUDE[tsql](../../includes/tsql-md.md)] também devem atender aos seguintes requisitos:  
   
-* [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] deve estar sendo executado em uma conta do Windows que seja membro da função de servidor fixa sysadmin.  
+* 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] deve estar sendo executado em uma conta do Windows que seja membro da função de servidor fixa sysadmin.  
   
 * A janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve ser conectada usando um logon de Autenticação do Windows ou Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que seja um membro da função de servidor fixa sysadmin.  
   
 * A janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve estar conectada a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) ou posterior. Não é possível executar o depurador quando a janela do Editor de Consultas está conectada a uma instância que está no modo de usuário único.
 
-* O servidor precisa se comunicar com o cliente via RPC. A conta sob a qual o serviço está em execução do SQL Server deve ter permissões o cliente de autenticação.  
+* O servidor precisa se comunicar com o cliente via RPC. A conta sob a qual o serviço de SQL Server está em execução deve ter permissões de autenticação para o cliente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Depurador do Transact-SQL](transact-sql-debugger.md)   
  [Executar o depurador Transact-SQL](run-the-transact-sql-debugger.md)   
  [Percorrer código Transact-SQL](step-through-transact-sql-code.md)   
  [Informações do depurador Transact-SQL](transact-sql-debugger-information.md)   
- [Editor de Consultas do Mecanismo de Banco de Dados &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
+ [&#40;SQL Server Management Studio do editor de consultas do Mecanismo de Banco de Dados&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

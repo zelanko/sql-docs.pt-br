@@ -1,6 +1,6 @@
 ---
-title: Janelas Localizar Resultados | Microsoft Docs
-ms.custom: ''
+title: Janelas Localizar Resultados
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,15 +14,15 @@ ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2b5561ce30a638ed526d2a807820222a156c6e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88fb0cda002694d87cad94dd8032811f6451f1cd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090503"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245134"
 ---
 # <a name="find-results-windows"></a>Janelas Localizar Resultados
-  As duas janelas Localizar Resultados exibem correspondências encontradas usando a guia **Localizar em Arquivos** ou **Substituir em Arquivos** de caixa de diálogo **Localizar e Substituir** . O comando **Opções de Resultados** para **Localizar em Arquivos** e **Substituir em Arquivos** permite que você escolha a janela Localizar Resultados onde serão listadas as correspondências encontradas.  
+  As duas janelas localizar resultados exibem correspondências encontradas usando as guias **localizar nos arquivos** ou **substituir em arquivos** da caixa de diálogo **Localizar e substituir** . O comando **Opções de Resultados** para **Localizar em Arquivos** e **Substituir em Arquivos** permite que você escolha a janela Localizar Resultados onde serão listadas as correspondências encontradas.  
   
  A janela Localizar Resultados selecionada abre automaticamente sempre que são encontradas correspondências. Para exibir uma janela Localizar Resultados manualmente, clique em **Outras Janelas** no menu **Exibir** e clique em **Localizar Resultados 1** ou **Localizar Resultados 2**.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66090503"
  **página + seta para a direita**  
  Vá para a linha da próxima correspondência.  
   
- **Limpar tudo**  
+ **Apagar tudo**  
  Remova todas as correspondências da lista de **Resultados** .  
   
 ## <a name="shortcut-keys"></a>Teclas de atalho  

@@ -1,6 +1,6 @@
 ---
-title: Criar ou editar um grupo de servidores (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Criar ou editar um grupo de servidor
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - server groups [SQL Server]
 - groups [SQL Server], server
 ms.assetid: d4a942bd-2dd1-42db-ad0e-e9a9ae5b856d
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 32c91f7b3186543a5a5a053c1aa410648caf0fb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: ae7d1e66d4cbd9b74ad8e58d3ac59c7ddda920a7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297597"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244605"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>Criar ou editar um grupo de servidores (SQL Server Management Studio)
   Este tópico descreve como organizar os servidores em Servidores Registrados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] criando grupos de servidores e colocando os servidores nesses grupos. Você pode criar grupos de servidores a qualquer hora em Servidores Registrados ou você pode criar grupos de servidores quando você registra servidores.  
@@ -44,7 +44,7 @@ ms.locfileid: "63297597"
     > [!NOTE]  
     >  Você também pode criar um novo grupo de servidores enquanto registra um servidor clicando em **Novo Grupo**e preenchendo a caixa de diálogo **Novo Grupo** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Registrar servidores](register-servers.md)  
   
   

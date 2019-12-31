@@ -1,5 +1,5 @@
 ---
-title: Criando um aplicativo de provedor de OLE DB de SQL Server Native Client | Microsoft Docs
+title: SQL Native Client aplicativo de provedor de OLE DB
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4b872d8b12ed73079f28a0b0daff15afcc642eb
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 84a920320860512dcc0cdd80619cd7aa671c96a7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73789243"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247128"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>Criando um aplicativo provedor OLE DB do SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  A criação de um aplicativo de provedor de OLE DB de cliente nativo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envolve estas etapas:  
+  A criação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um aplicativo de provedor de OLE DB de cliente nativo envolve estas etapas:  
   
 1.  Estabelecimento de uma conexão a uma fonte de dados.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "73789243"
   
 -   [Sobre propriedades OLE DB](../../relational-databases/native-client-ole-db-provider/about-ole-db-properties.md)  
   
--   [Usando a cláusula OUTPUT com OLE DB no SQL Server Native Client](../../relational-databases/native-client-ole-db-provider/using-the-output-clause-with-ole-db-in-sql-server-native-client.md)  
+-   [Usando a cláusula OUTPUT com OLE DB em SQL Server Native Client](../../relational-databases/native-client-ole-db-provider/using-the-output-clause-with-ole-db-in-sql-server-native-client.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

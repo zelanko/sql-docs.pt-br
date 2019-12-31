@@ -1,6 +1,6 @@
 ---
-title: Especificar uma ação de ponto de interrupção | Microsoft Docs
-ms.custom: ''
+title: Especificar uma ação de ponto de interrupção
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,17 +13,17 @@ ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97454a06f4b03b3148984697e0056aa87dff1200
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 08df1a4c00bf3b019cf45f168aeeaaf27fdb751c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090147"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243239"
 ---
 # <a name="specify-a-breakpoint-action"></a>Especificar uma ação de ponto de interrupção
-  Uma ação de ponto de interrupção **Quando Atingido** especifica uma tarefa personalizada que o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] executa para um ponto de interrupção. Se a contagem de ocorrências especificada for atingida, e qualquer condição de ponto de interrupção especificada for atendida, o depurador executará a ação especificada para o ponto de interrupção.  
+  Uma ação de ponto de interrupção **quando atingido** especifica uma tarefa [!INCLUDE[tsql](../../includes/tsql-md.md)] personalizada que o depurador executa para um ponto de interrupção. Se a contagem de ocorrências especificada for atingida, e qualquer condição de ponto de interrupção especificada for atendida, o depurador executará a ação especificada para o ponto de interrupção.  
   
-##  <a name="BKMK_ActionConsiderations"></a> Considerações sobre a ação  
+##  <a name="BKMK_ActionConsiderations"></a>Considerações sobre a ação  
  A ação padrão de um ponto de interrupção é interromper a execução quando a contagem de ocorrências e a condição de ponto de interrupção são atendidas. O principal uso de uma ação **Quando Atingido** no depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] é imprimir informações na janela **Saída** do depurador especificando uma mensagem de impressão.  
   
  Uma mensagem de impressão é especificada na opção **Imprimir uma Mensagem** e como uma cadeia de caracteres de texto que inclui expressões que contêm informações do [!INCLUDE[tsql](../../includes/tsql-md.md)] que está sendo depurado. As expressões incluem:  
@@ -64,6 +64,6 @@ ms.locfileid: "66090147"
   
 3.  Clique em **OK** para implementar as alterações ou em **Cancelar** para sair sem aplicar as alterações.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Especificar uma condição de ponto de interrupção](specify-a-breakpoint-condition.md)   
- [Especificar uma contagem de ocorrências](specify-a-hit-count.md)  
+ [Especificar uma contagem de acesso](specify-a-hit-count.md)  

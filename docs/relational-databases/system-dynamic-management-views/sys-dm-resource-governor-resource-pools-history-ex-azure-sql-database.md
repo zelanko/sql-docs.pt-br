@@ -1,5 +1,5 @@
 ---
-title: sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs
+title: sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -20,14 +20,14 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: f94cc3ccd0278a3ae2f46707f2680f8d198db58a
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: ae34c89fd570921bec26d8a11537c58b6bba2302
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70873922"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247306"
 ---
-# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm _resource_governor_resource_pools_history_ex (Transact-SQL)
+# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
@@ -36,7 +36,7 @@ Retorna o instantâneo em um intervalo de 20 segundos para os últimos 32 minuto
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|int|ID do pool de recursos. Não permite valor nulo.
-|**name**|sysname|O nome do pool de recursos. Não permite valor nulo.|
+|**nomes**|sysname|O nome do pool de recursos. Não permite valor nulo.|
 |**snapshot_time**|datetime2|DateTime do instantâneo de estatísticas do pool de recursos tirado|
 |**duration_ms**|int|Duração entre o instantâneo atual e o anterior|
 |**statistics_start_time**|datetime2|O momento em que as estatísticas deste pool foram redefinidas. Não permite valor nulo.|
@@ -80,23 +80,23 @@ Retorna o instantâneo em um intervalo de 20 segundos para os últimos 32 minuto
 |**min_cpu_percent**|int|A configuração atual de largura de banda de CPU garantida para todas as solicitações no pool de recursos quando houver contenção de CPU. Não permite valor nulo.|
 |**max_cpu_percent**|int|A configuração atual do máximo de largura de banda de CPU média permitida para todas as solicitações no pool de recursos quando houver contenção de CPU. Não permite valor nulo.|
 |**cap_cpu_percent**|int|Extremidade rígida na largura de banda de CPU que todas as solicitações no pool de recursos receberão. Limita o nível de largura de banda máxima de CPU ao nível especificado. O intervalo permitido para o valor é de 1 a 100. Não permite valor nulo.|
-|**min_vcores**|decimal(5,2)|A configuração atual de largura de banda de CPU garantida para todas as solicitações no pool de recursos quando houver contenção de CPU.  Em unidades de vCores|
-|**max_vcores**|decimal(5,2)|A configuração atual do máximo de largura de banda de CPU média permitida para todas as solicitações no pool de recursos quando houver contenção de CPU.  Na unidade de vCores|
-|**cap_vcores**|decimal(5,2)|Extremidade rígida na largura de banda de CPU que todas as solicitações no pool de recursos receberão.  Na unidade em vCores|
+|**min_vcores**|decimal (5, 2)|A configuração atual de largura de banda de CPU garantida para todas as solicitações no pool de recursos quando houver contenção de CPU.  Em unidades de vCores|
+|**max_vcores**|decimal (5, 2)|A configuração atual do máximo de largura de banda de CPU média permitida para todas as solicitações no pool de recursos quando houver contenção de CPU.  Na unidade de vCores|
+|**cap_vcores**|decimal (5, 2)|Extremidade rígida na largura de banda de CPU que todas as solicitações no pool de recursos receberão.  Na unidade em vCores|
 |**instance_cpu_count**|int|Número de CPU configurada para a instância|
-|**instance_cpu_percent|decimal(5,2)|Porcentagem de CPU configurada para a instância|
-|**instance_vcores**|decimal(5,2)|Número de vCores configuradas para a instância|
-|**delta_log_bytes_used**|decimal(5,2)|Geração de log total (em bytes) no nível do pool desde o último instantâneo|
-|**avg_login_rate_percent**|decimal(5,2)|Número de logons desde o último instantâneo, em comparação com o limite de logon|
-|**delta_vcores_used**|decimal(5,2)|Utilização de computação na contagem de vCores desde o último instantâneo.|
-|**cap_vcores_used_percent**|decimal(5,2)|Média de utilização de computação em porcentagem do limite do pool.|
-|**instance_vcores_used_percent**|decimal(5,2)|Média de utilização de computação em porcentagem do limite da instância do SQL.|
-|**avg_data_io_percent**|decimal(5,2)|Média de utilização de e/s em porcentagem com base no limite do pool.|
-|**avg_log_write_percent**|decimal(5,2)|Média de utilização de recursos de gravação em porcentagem do limite do pool.|
-|**avg_storage_percent**|decimal(5,2)|Utilização média de armazenamento em porcentagem do limite de armazenamento do pool.|
-|**avg_allocated_storage_percent**|decimal(5,2)|A porcentagem de espaço de dados alocada por todos os bancos de dado no pool elástico. Esta é a taxa de espaço de dados alocada para o tamanho máximo de dados para o pool elástico. Para obter mais informações, consulte: Gerenciamento de espaço de arquivo no banco de BD SQL|
-|**max_worker_percent**|decimal(5,2)|Máximo de trabalhos simultâneos (solicitações) em porcentagem com base no limite do pool.|
-|**max_session_percent**|decimal(5,2)|Máximo de sessões simultâneas em porcentagem com base no limite do pool.|
+|**instance_cpu_percent**|decimal (5, 2)|Porcentagem de CPU configurada para a instância|
+|**instance_vcores**|decimal (5, 2)|Número de vCores configuradas para a instância|
+|**delta_log_bytes_used**|decimal (5, 2)|Geração de log total (em bytes) no nível do pool desde o último instantâneo|
+|**avg_login_rate_percent**|decimal (5, 2)|Número de logons desde o último instantâneo, em comparação com o limite de logon|
+|**delta_vcores_used**|decimal (5, 2)|Utilização de computação na contagem de vCores desde o último instantâneo.|
+|**cap_vcores_used_percent**|decimal (5, 2)|Média de utilização da computação em percentual do limite do pool.|
+|**instance_vcores_used_percent**|decimal (5, 2)|Média de utilização de computação em porcentagem do limite da instância do SQL.|
+|**avg_data_io_percent**|decimal (5, 2)|Média de utilização de E/S em percentual do limite do pool.|
+|**avg_log_write_percent**|decimal (5, 2)|Média de utilização dos recursos de gravação em percentual do limite do pool.|
+|**avg_storage_percent**|decimal (5, 2)|Média de utilização do armazenamento em percentual do limite de armazenamento do pool.|
+|**avg_allocated_storage_percent**|decimal (5, 2)|A porcentagem de espaço de dados alocada por todos os bancos de dado no pool elástico. Esta é a taxa de espaço de dados alocada para o tamanho máximo de dados para o pool elástico. Para obter mais informações, consulte: gerenciamento de espaço de arquivo no banco de dados SQL|
+|**max_worker_percent**|decimal (5, 2)|Máximo de trabalhos (solicitações) simultâneos em percentual, com base no limite do pool.|
+|**max_session_percent**|decimal (5, 2)|Número máximo de sessões simultâneas em percentual, com base no limite do pool.|
 |||
 
 ## <a name="permissions"></a>Permissões
@@ -132,7 +132,7 @@ select snapshot_time, name, cap_vcores_used_percent,
     from sys.dm_resource_governor_resource_pools_history_ex where name like 'UserPool%' order by snapshot_time desc
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 - [Governança de taxa de log de tradução](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
 - [Limites de recursos de DTU do pool elástico](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)

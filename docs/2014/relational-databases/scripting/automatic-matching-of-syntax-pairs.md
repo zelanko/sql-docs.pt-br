@@ -1,6 +1,6 @@
 ---
-title: Correspondência automática de pares de sintaxe | Microsoft Docs
-ms.custom: ''
+title: Correspondência automática de pares de sintaxe
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 530747edf03e9790c2f728ec5485d305da046d08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49b121f776ec6a9d363236fab03a1da2228311a6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064146"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244796"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Correspondência automática de pares de sintaxe
   A correspondência automática de pares de sintaxe informa imediatamente se os elementos de sintaxe que devem ser codificados em pares estão formando pares corretos. Isso é conhecido como correspondência de delimitadores no Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , correspondência de colchetes no Editor de Consultas XMLA do Analysis Services e correspondência de parênteses nos editores MDX e DMX.  
@@ -36,9 +36,9 @@ ms.locfileid: "66064146"
 |Delimitador inicial|Delimitador de fechamento|  
 |--------------------|-----------------------|  
 |**(**|**)**|  
-|**BEGIN**|**END**|  
-|**BEGIN TRY**|**END TRY**|  
-|**BEGIN CATCH**|**END CATCH**|  
+|**Comece**|**COMPLETO**|  
+|**INICIAR TENTATIVA**|**TERMINAR TENTATIVA**|  
+|**INICIAR CAPTURA**|**ENCERRAR CATCH**|  
   
  A correspondência automática de delimitadores não reconhece os delimitadores de identificadores entre colchetes ([ObjectName]) ou identificadores entre aspas ("ObjectName"). A correspondência de pares não faz a correspondência dos delimitadores aspas simples de literais de cadeia de caracteres ('cadeia de caracteres') porque a codificação por cores já indica visualmente se a cadeia de caracteres foi delimitada ou não.  
   

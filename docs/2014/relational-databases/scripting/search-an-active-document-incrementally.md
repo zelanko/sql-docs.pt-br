@@ -1,6 +1,6 @@
 ---
-title: Pesquisar um documento ativo de forma incremental | Microsoft Docs
-ms.custom: ''
+title: Pesquisar um documento ativo de forma incremental
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ce3f1265f33da943b7db2b3f951fd9aa6504f81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9334e4d44663f5d0637d6933eb7a72eae74d4a84
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063827"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243646"
 ---
 # <a name="search-an-active-document-incrementally"></a>Pesquisar um documento ativo de forma incremental
   É possível pesquisar um único documento ou janela de forma incremental digitando texto. A operação de pesquisa realça o primeiro conjunto de caracteres que corresponde aos caracteres digitados durante a pesquisa incremental no documento ou na janela. A pesquisa incremental pesquisa automaticamente todo o texto dentro de um documento ou de uma janela, com exceção de texto oculto.  
@@ -30,7 +30,7 @@ ms.locfileid: "66063827"
   
 1.  Abra o arquivo ou a janela que você deseja pesquisar.  
   
-2.  No menu **Editar** , aponte para **Avançado**e clique em **Pesquisa Incremental**.  
+2.  No menu **Editar**, aponte para **Avançado** e clique em **Pesquisa Incremental**.  
   
      O ícone de cursor muda para um binóculo com uma seta, indicando a direção de pesquisa e a barra de status exibe "Pesquisa Incremental".  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66063827"
 > [!NOTE]  
 >  Para obter uma lista completa de teclas de atalho do teclado, consulte [Atalhos de teclado do SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Pesquisar e substituir](search-and-replace.md)   
  [Pesquisar documentos interativamente](search-documents-interactively.md)   
  [Pesquisar documentos usando listas de resultados](search-documents-using-results-lists.md)   

@@ -1,6 +1,6 @@
 ---
-title: Usar a janela Propriedades no Management Studio | Microsoft Docs
-ms.custom: ''
+title: Usar a janela Propriedades no Management Studio
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9095bb81099c2e84d087cb92991c0a1757376ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ddcb099e81ef99ff3a2f0d0cf7bbf23adc0bc16b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063248"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242968"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Usar a janela Propriedades no Management Studio
   A janela Propriedades descreve o estado de um item no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], como uma conexão ou um operador de plano de execução, e informações sobre objetos de banco de dados, como tabelas, exibições e designers.  
@@ -50,7 +50,7 @@ ms.locfileid: "66063248"
   
 4.  Na guia **Plano de execução** do Editor de Consultas SQL, clique nos ícones dos operadores para exibir informações sobre os operadores na janela Propriedades.  
   
-## <a name="see-also"></a>Consulte também  
- [Janela Propriedades &#40;Management Studio&#41;](../../ssms/properties-window-management-studio.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Janela de propriedades &#40;Management Studio&#41;](../../ssms/properties-window-management-studio.md)  
   
   

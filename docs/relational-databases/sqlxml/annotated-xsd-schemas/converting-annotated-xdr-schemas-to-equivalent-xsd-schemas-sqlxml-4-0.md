@@ -1,6 +1,5 @@
 ---
-title: Convertendo esquemas XDR anotados a esquemas XSD equivalentes (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Converter esquemas XDR anotados em XSD (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,13 +17,14 @@ helpviewer_keywords:
 ms.assetid: 151c94a8-66d3-4c46-a5ff-a22df456940a
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85483de3a30699829a22be4f0fc57d2806e127ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 10c85b4c4f2e08518703a67256bd169afb2d0455
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041097"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247069"
 ---
 # <a name="converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-40"></a>Convertendo esquemas XDR anotados a esquemas XSD equivalentes (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ ms.locfileid: "68041097"
 cvtschema XDRFileName, [-y], [-w] [-?]  
 ```  
   
- Sendo que:  
+ Em que:  
   
  XDRFileName  
- É o nome do arquivo XDR a ser convertido em XSD. A ferramenta lê o arquivo XDR de entrada e cria um arquivo de saída XSD no diretório funcional atual. Caso o arquivo de entrada tenha uma extensão .xdr ou .xml, o arquivo XSD de saída é criado com o mesmo nome, mas com uma extensão .xsd. Se a extensão de nome de arquivo de entrada é diferente de. XML ou. XDR (ou se a extensão esteja ausente), o arquivo de saída é criado com o mesmo nome e a extensão. xsd é acrescentada ao nome do arquivo de entrada. Por exemplo, caso o nome de arquivo XDR de entrada seja SampleFile.abc, o XSD resultante é salvo como SampleFile.abc.xsd.  
+ É o nome do arquivo XDR a ser convertido em XSD. A ferramenta lê o arquivo XDR de entrada e cria um arquivo de saída XSD no diretório funcional atual. Caso o arquivo de entrada tenha uma extensão .xdr ou .xml, o arquivo XSD de saída é criado com o mesmo nome, mas com uma extensão .xsd. Se a extensão de nome de arquivo de entrada for diferente de. xml ou. XDR (ou se a extensão estiver ausente), o arquivo de saída será criado com o mesmo nome e a extensão. xsd será anexada ao nome do arquivo de entrada. Por exemplo, caso o nome de arquivo XDR de entrada seja SampleFile.abc, o XSD resultante é salvo como SampleFile.abc.xsd.  
   
  -y  
  (Opcional) Substitui o arquivo XSD existente pelo arquivo XSD gerado pela ferramenta de conversão. Caso o sinalizador não seja especificado, a ferramenta pede para que você opte por substituir o arquivo existente XSD e lhe dá a opção de alterar o nome do arquivo de saída.  
@@ -57,8 +57,8 @@ cvtschema XDRFileName, [-y], [-w] [-?]
  -?  
  Retorna uma lista de opções que você pode especificar com **cvtschema**, juntamente com uma explicação.  
   
-## <a name="see-also"></a>Consulte também  
- [Mapeando tipos de dados XSD para tipos de dados XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)   
- [Anotações XSD &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Mapeando tipos de dados XSD para tipos de dados XPath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)   
+ [Anotações XSD &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
   
   
