@@ -1,6 +1,5 @@
 ---
-title: Fazendo backup e restaurando bancos de dados do DQS | Microsoft Docs
-ms.custom: ''
+title: Fazendo backup e restaurando banco de dados do DQS
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: afee6a476407744d237ebf2c0069d37f7e9c3137
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 94b2529323e5a075b6fd423fd8c69ece7a0535c0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992432"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258855"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Fazendo backup e restaurando banco de dados do DQS
 
@@ -23,9 +22,9 @@ ms.locfileid: "67992432"
 
   Este tópico descreve como fazer backup e restaurar os bancos de dados do DQS.  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="BeforeYouBegin"></a>Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="Prerequisites"></a>Pré-requisitos  
   
 -   Você deve saber ou se lembrar da senha da chave mestra do banco de dados que forneceu durante a instalação do servidor DQS.  
   
@@ -33,15 +32,15 @@ ms.locfileid: "67992432"
   
 -   Verifique se não há usuários conectados no servidor DQS.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="Security"></a>Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="Permissions"></a>Permissões  
   
 -   Sua conta de usuário do Windows deve ser um membro da função de servidor fixa sysadmin na instância do SQL Server para executar as operações de backup e restauração.  
   
 -   Você deve ter a função dqs_administrator no banco de dados DQS_MAIN para terminar as atividades em execução ou interromper os processos em execução no DQS.  
   
-##  <a name="BackupRestore"></a> Backup e restauração de bancos de dados do DQS  
+##  <a name="BackupRestore"></a>Fazer backup e restaurar bancos de dados do DQS  
   
 1.  Inicie o Microsoft SQL Server Management Studio e conecte-se à instância apropriada do SQL Server.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "67992432"
   
 10. No Pesquisador de Objetos, clique com o botão direito do mouse no servidor e, depois, clique em **Nova Consulta**.  
   
-11. Na janela Editor de Consultas, copie as seguintes instruções SQL e substitua *\<PASSWORD>* pela senha fornecida durante a instalação do DQS para a chave mestra do banco de dados:  
+11. Na janela Editor de consultas, copie as seguintes instruções SQL e substitua * \<a senha>* pela senha que você forneceu durante a instalação do DQS para a chave mestra do banco de dados:  
   
     ```  
     USE [DQS_MAIN]  
@@ -73,9 +72,9 @@ ms.locfileid: "67992432"
   
     ```  
   
-12. Pressione F5 para executar as instruções. Consulte o painel **Resultados** para verificar se as instruções foram executadas com êxito.  
+12. Pressione F5 para executar as instruções. Verifique o painel **resultados** para verificar se as instruções foram executadas com êxito.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciar bancos de dados do DQS](../data-quality-services/manage-dqs-databases.md)  
   
   

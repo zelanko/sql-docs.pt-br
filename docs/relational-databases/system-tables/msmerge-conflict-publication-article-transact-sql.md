@@ -1,6 +1,7 @@
 ---
-title: Publicação&lt;MSmerge_conflict__&lt;artigo(&gt; Transact-SQL) |&gt; Microsoft Docs
-ms.custom: ''
+title: MSmerge_conflict_publication_article (T-SQL)
+description: Descreve o MSmerge_conflict_publication_article procedimento armazenado que contém informações sobre linhas que foram desfeitas em conflito ou alterações de linha que não foram feitas para obter a convergência de dados.
+ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,27 +18,27 @@ helpviewer_keywords:
 ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 342b0f51fb4f68945f6ab8c4b511c5299acfba49
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 8d2c324f032f9cdd3206f6f2bed77fba74c2c0f5
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893583"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322107"
 ---
-# <a name="msmerge_conflict_ltpublicationgt_ltarticlegt-transact-sql"></a>Artigo\_&lt;\_depublicação&lt;de conflitos do MSmerge (Transact-SQL)&gt;\_&gt;
+# <a name="msmerge_conflict_publication_article-transact-sql"></a>MSmerge_conflict_publication_article (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  A **tabela\_do\__artigo_ depublicação\_de conflitos do MSmerge** contém informações sobre linhas conflitantes ou para alterações de linha que foram desfeitas para obter a convergência de dados. Existe uma tabela de conflitos para cada tabela replicada na publicação, onde o nome da tabela de conflitos é anexada com o nome da publicação e do artigo. Essas tabelas de conflitos específicas do artigo existem no banco de dados usado para registro de conflito, geralmente o banco de dados de publicação, mas pode ser o banco de dados de assinatura se houver log de conflitos descentralizado.  
+  A tabela **MSmerge_conflict_publication_article** contém informações sobre linhas que foram desfeitas em conflito ou alterações de linha que não foram realizadas para obter a convergência de dados. Existe uma tabela de conflitos para cada tabela replicada na publicação, onde o nome da tabela de conflitos é anexada com o nome da publicação e do artigo. Essas tabelas de conflitos específicas do artigo existem no banco de dados usado para registro de conflito, geralmente o banco de dados de publicação, mas pode ser o banco de dados de assinatura se houver log de conflitos descentralizado.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**_nome\_da\_coluna do artigo_**|**variable**|Representa uma coluna em uma tabela replicada. Essa tabela do sistema contém uma coluna para cada coluna no artigo de tabela.|  
+|**_nome\_da\_coluna do artigo_**|**Ela**|Representa uma coluna em uma tabela replicada. Essa tabela do sistema contém uma coluna para cada coluna no artigo de tabela.|  
 |**rowguid**|**uniqueidentifier**|O identificador de linha para o conflito de exclusão.|  
-|**ModifiedDate**|**datetime**|A hora em que o conflito ocorreu.|  
+|**ModifiedDate**|**horário**|A hora em que o conflito ocorreu.|  
 |**ID\_da\_fonte de origem**|**uniqueidentifier**|A assinatura para a qual a alteração de linha foi desfeita ou perdeu o conflito.|  
   
-## <a name="see-also"></a>Consulte também  
- [Transact- &#40;SQL de tabelas de replicação&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Exibições de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

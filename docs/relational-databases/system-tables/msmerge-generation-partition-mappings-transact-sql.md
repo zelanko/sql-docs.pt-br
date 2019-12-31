@@ -1,6 +1,7 @@
 ---
-title: MSmerge_generation_partition_mappings (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: MSmerge_generation_partition_mappings (T-SQL)
+description: Descreve o MSmerge_generation_partition_mappings procedimento armazenado usado para controlar as alterações em partições em uma publicação de mesclagem.
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,27 +18,27 @@ helpviewer_keywords:
 ms.assetid: 443a4024-ce48-4772-9ee5-95bd6fb6476b
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c5998348b599ceaad73790f581cde56763ab0ab7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a43f4b3fac5f237904d0160ccfbde4b88f9a3616
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101377"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322101"
 ---
-# <a name="msmergegenerationpartitionmappings-transact-sql"></a>MSmerge_generation_partition_mappings (Transact-SQL)
+# <a name="msmerge_generation_partition_mappings-transact-sql"></a>MSmerge_generation_partition_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **MSmerge_generation_partition_mappings** tabela é usada para controlar alterações em partições em uma publicação de mesclagem. Essa tabela é armazenada nos bancos de dados da publicação e scubscription.  
+  A tabela **MSmerge_generation_partition_mappings** é usada para controlar as alterações em partições em uma publicação de mesclagem. Essa tabela é armazenada nos bancos de dados de publicação e scubscription.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|Identifica a publicação de mesclagem.|  
 |**geração**|**bigint**|O valor de geração.|  
-|**partition_id**|**int**|Identifica a partição.|  
-|**changecount**|**int**|O número de vezes que a partição foi alterada.|  
+|**partition_id**|**inteiro**|Identifica a partição.|  
+|**changecount**|**inteiro**|O número de vezes que a partição foi alterada.|  
   
-## <a name="see-also"></a>Consulte também  
- [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Exibições de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

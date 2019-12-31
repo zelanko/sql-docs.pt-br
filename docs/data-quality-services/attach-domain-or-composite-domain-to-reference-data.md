@@ -1,6 +1,5 @@
 ---
-title: Anexar um domínio ou um domínio de composição aos dados de referência | Microsoft Docs
-ms.custom: ''
+title: Anexar domínio ou domínio composto para dados de referência
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -11,14 +10,14 @@ f1_keywords:
 - sql13.dqs.dm.refdata.f1
 - sql13.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: d8aed52e248a61b5d10fc58977854b49837ebfad
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: dbd64575acaf5ddf2f57e99b010a8a3b1555780e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152779"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258870"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Anexar domínio ou domínio composto para dados de referência
 
@@ -38,17 +37,17 @@ ms.locfileid: "70152779"
   
 ## <a name="before-you-begin"></a>Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="Prerequisites"></a>Pré-requisitos  
  Você deve configurar o [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) para usar serviços de dados de referência. Consulte [Configurar o DQS para usar dados de referência](../data-quality-services/configure-dqs-to-use-reference-data.md).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="Security"></a>Segurança  
   
 #### <a name="permissions"></a>Permissões  
  Você deve ter a função dqs_kb_editor no banco de dados DQS_MAIN para mapear domínios para os dados de referência.  
   
-##  <a name="Map"></a> Mapear domínios para os dados de referência de Melissa Data  
+##  <a name="Map"></a>Mapear domínios para dados de referência de Melissa data  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , em **Gerenciamento da Base de Dados de Conhecimento**, clique em **Nova base de dados de conhecimento**.  
   
@@ -77,21 +76,21 @@ ms.locfileid: "70152779"
   
 9. Você retornará à guia **dados de referência** . Na área **configurações do provedor** , altere os valores nas seguintes caixas, se necessário:  
   
-    -   **Limite de Correção Automática**: as correções do serviço de dados de referência com nível de confiança acima desses valores de limite serão feitas automaticamente. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,9 para 90%.  
+    -   **Limite de correção automática**: as correções do serviço de dados de referência com o nível de confiança acima desses valores de limite serão feitas automaticamente. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,9 para 90%.  
   
-    -   **Candidatos Sugeridos**: número de candidatos sugeridos a serem exibidos pelo serviço de dados de referência.  
+    -   **Candidatos sugeridos**: número de candidatos sugeridos para exibição do serviço de dados de referência.  
   
-    -   **Confiança Mínima**: as sugestões do serviço de dados de referência com nível de confiança inferior a esse valor serão ignoradas. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,6 para 60%.  
+    -   **Confiança mínima**: as sugestões do serviço de dados de referência com nível de confiança inferior a esse valor serão ignoradas. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,6 para 60%.  
   
 10. Clique em **Concluir** para publicar a base de dados de conhecimento. Uma mensagem de confirmação aparece depois que a base de dados de conhecimento é publicada com êxito.  
   
  Agora você pode usar essa base de dados de conhecimento para a atividade de limpeza em um projeto de qualidade de dados para padronizar e limpar os endereços dos EUA em seus dados de origem com base no conhecimento fornecido por Melissa data por meio do Azure Marketplace.  
   
-##  <a name="FollowUp"></a> Acompanhamento: Após mapear um domínio para os dados de referência  
+##  <a name="FollowUp"></a>Acompanhamento: depois de mapear um domínio para dados de referência  
  Crie um projeto de qualidade de dados e execute a atividade de limpeza na fonte de dados que contém endereços americanos, comparando-a com a base de dados de conhecimento criada neste tópico. Consulte [Limpar dados usando o conhecimento &#40;externo&#41; dos dados de referência](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Serviços de Dados de Referência no DQS](../data-quality-services/reference-data-services-in-dqs.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Serviços de dados de referência no DQS](../data-quality-services/reference-data-services-in-dqs.md)   
  [Limpeza de dados](../data-quality-services/data-cleansing.md)  
   
   
